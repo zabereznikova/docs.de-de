@@ -2,12 +2,12 @@
 title: System.TimeSpan-Methoden
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: ab4519f480dfeca0a35da50a80bd878b7db0960d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a3f3c82f9f8db4b72588f165ed4d897b974eb076
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539908"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan-Methoden
 Die Elementunterstützung für <xref:System.TimeSpan?displayProperty=nameWithType> ist stark abhängig von den verwendeten Versionen von .NET Framework und Microsoft SQL Server.  
@@ -36,8 +36,8 @@ Die Elementunterstützung für <xref:System.TimeSpan?displayProperty=nameWithTyp
 ### <a name="addition-and-subtraction"></a>Addition und Subtraktion  
  Vom CLR-<xref:System.TimeSpan?displayProperty=nameWithType>-Typ werden Additionen und Subtraktionen unterstützt, vom SQL-`TIME`-Typ jedoch nicht. Ihre LINQ to SQL-Abfragen werden bei Additionen und Subtraktionen daher Fehler verursachen, wenn sie dem SQL-`TIME`-Typ zugeordnet sind. Sie finden weitere Informationen zum Arbeiten mit SQL Datums- und Uhrzeittypen in [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Erstellen des Objektmodells](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [SQL-CLR-Typenzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Erstellen des Objektmodells](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
+- [SQL-CLR-Typenzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+- [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

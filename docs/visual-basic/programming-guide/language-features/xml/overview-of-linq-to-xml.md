@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 65df48112834be04dc8d3b62b8b163316b06c4a6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 13997b8588e11eb3600a6fd838e0514069d0e62a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539024"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Übersicht über LINQ to XML in Visual Basic
 Visual Basic bietet Unterstützung für [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] über XML-Literale und XML-Achseneigenschaften. Dadurch können Sie eine vertraute, bequeme Syntax für die Arbeit mit XML in Visual Basic-Code verwenden. *XML-Literale* ermöglichen es Ihnen, XML direkt in Ihrem Code enthalten. *XML-Achseneigenschaften* ermöglichen Ihnen Zugriff auf untergeordnete Knoten untergeordneten Knoten und Attribute eines XML-Literals. Weitere Informationen finden Sie unter [Übersicht über die XML-Literale](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md) und [den Zugriff auf XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md).  
@@ -61,8 +61,8 @@ Visual Basic bietet Unterstützung für [!INCLUDE[sqltecxlinq](~/includes/sqltec
   
  [!code-vb[VbXMLSamples#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/overview-of-linq-to-xml_6.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Zugreifen auf XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
- [Bearbeiten von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+## <a name="see-also"></a>Siehe auch
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Zugreifen auf XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [Bearbeiten von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)

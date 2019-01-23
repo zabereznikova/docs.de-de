@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d741e8df8f2b8c6d90a1d867c73495a2ffd1304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d05f9c727672c4f249e388a32b1101aaafd2f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538259"
 ---
 # <a name="ltmethodinstantiationgt-element-net-native"></a>&lt;MethodInstantiation&gt; Element (.NET Native)
 Wendet eine Laufzeitreflektionsrichtlinie auf eine konstruierte generische Methode an.  
@@ -74,8 +74,8 @@ Wendet eine Laufzeitreflektionsrichtlinie auf eine konstruierte generische Metho
 ## <a name="remarks"></a>Hinweise  
  Das `<MethodInstantiation>`-Element überschreibt die Laufzeitreflektionsrichtlinie der entsprechenden offenen generischen Methode.  
   
-## <a name="see-also"></a>Siehe auch  
- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [\<Method> Element (Element <Method>)](../../../docs/framework/net-native/method-element-net-native.md)
+## <a name="see-also"></a>Siehe auch
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [\<Method> Element (Element <Method>)](../../../docs/framework/net-native/method-element-net-native.md)

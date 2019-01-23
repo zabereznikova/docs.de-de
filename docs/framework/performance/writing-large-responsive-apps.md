@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540662"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Schreiben großer, reaktionsfähiger .NET Framework-Apps
 In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Framework-Apps oder Apps bereitgestellt, die großen Datenmengen wie Dateien oder Datenbanken verarbeiten. Die Tipps stammen aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code, und dieser Artikel enthält mehrere reale Beispiele aus dem C#-Compiler. 
@@ -197,7 +197,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
   
  Die erste Version von `WriteFormattedDocComment()` hat ein Array, mehrere untergeordnete Zeichenfolgen und eine abgeschnittene Zeichenfolge zusammen mit einem leeren `params`-Array zugeordnet. Er überprüft auch für "/ / /". Der überarbeitete Code verwendet nur die Indizierung und ordnet nichts zu. Findet das erste Zeichen, das keine Leerzeichen und prüft dann Zeichen für Zeichen um festzustellen, ob die Zeichenfolge beginnt mit "/ / /". Der neue Code verwendet `IndexOfFirstNonWhiteSpaceChar` anstelle von <xref:System.String.TrimStart%2A> um den ersten Index (nach einem angegebenen Startindex) zurückzugeben, in dem ein nicht-Leerzeichen auftritt. Die Korrektur ist nicht vollständig, aber Sie können sehen, wie Sie ähnliche Korrekturen für eine vollständige Lösung anwenden können. Durch Anwendung dieses Ansatzes im gesamten Code können Sie alle Zuordnungen in `WriteFormattedDocComment()` entfernen. 
   
- **Beispiel 4: "StringBuilder"**  
+ **Beispiel 4: StringBuilder**  
   
  In diesem Beispiel wird ein <xref:System.Text.StringBuilder>-Objekt verwendet. Die folgende Funktion generiert einen vollständigen Typnamen für generische Typen:  
   
@@ -463,12 +463,12 @@ class Compilation { /*...*/
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Video der Präsentation zu diesem Thema](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
-- [Einführung in die Leistungsprofilerstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
-- [Leistung](../../../docs/framework/performance/index.md)  
-- [Leistungstipps für .NET](https://msdn.microsoft.com/library/ms973839.aspx)  
-- [Windows Phone-Leistungsanalysetools](https://msdn.microsoft.com/magazine/hh781024.aspx)  
-- [Aufspüren von Anwendungsengpässen mit Visual Studio-Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)  
-- [Channel 9 PerfView-tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial)  
+- [Video der Präsentation zu diesem Thema](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
+- [Einführung in die Leistungsprofilerstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)
+- [Leistung](../../../docs/framework/performance/index.md)
+- [Leistungstipps für .NET](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Windows Phone-Leistungsanalysetools](https://msdn.microsoft.com/magazine/hh781024.aspx)
+- [Aufspüren von Anwendungsengpässen mit Visual Studio-Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)
+- [Channel 9 PerfView-tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [Das .NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
 - [Dotnet/Roslyn-Repositorys auf GitHub](https://github.com/dotnet/roslyn)

@@ -7,29 +7,29 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 40b64b8d2b6306d458b7a9cc657c5b7dc4270eb2
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 9a1dcf159f007f1587030057885122c036b99aac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537212"
 ---
 # <a name="private-visual-basic"></a>Private (Visual Basic)
-Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur aus ihrem Deklarationskontext einschließlich alle darin enthaltenen Typen aus zugegriffen werden.  
+Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur aus ihrem Deklarationskontext einschließlich aus in alle enthaltenen Typen zugegriffen werden kann.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn ein Programmierelement proprietäre Funktionalität darstellt oder vertrauliche Daten enthält, sollten Sie in der Regel den Zugriff darauf so stark wie möglich einschränken. Sie erreichen die maximale Beschränkung, nur das Modul, Klasse oder Struktur, die definiert, wenn Sie darauf zugreifen können. Um den Zugriff auf ein Element auf diese Weise beschränken möchten, deklarieren Sie es mit `Private`.  
+ Wenn ein Programmierelement proprietäre Funktionalität darstellt, oder vertrauliche Daten enthält, möchten Sie in der Regel den Zugriff darauf so stark wie möglich einschränken. Sie erreichen die Beschränkung auf maximal ermöglicht nur die Module, Klasse oder Struktur, die definiert, um darauf zuzugreifen. Um den Zugriff auf ein Element auf diese Weise beschränken, deklarieren Sie es mit `Private`.  
 
 > [!NOTE]
-> Sie können auch die [Private geschützte](private-protected.md) Zugriffsmodifizierer, wodurch ein Element aus zugegriffen werden, in der betreffenden Klasse und von abgeleiteten Klassen, die sich in der enthaltenden Assembly befinden.
+> Sie können auch die [Private Protected](private-protected.md) Zugriffsmodifizierer, dadurch wird ein Element aus zugegriffen werden, in der betreffenden Klasse und von abgeleiteten Klassen, die sich in der enthaltenden Assembly befinden.
 
 ## <a name="rules"></a>Regeln  
 
--   **Deklarationskontext.** Sie können `Private` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `Private` Element ein Modul, Klasse oder Struktur, und eine Quelldatei, Namespace, Schnittstelle oder Prozedur nicht möglich.  
+-   **Deklarationskontext.** Sie können `Private` nur auf Modulebene verwenden. Dies bedeutet, dass der Deklarationskontext für eine `Private` Element muss ein Modul, Klasse oder Struktur sein, und eine Quelldatei, Namespace, Schnittstelle oder Prozedur nicht möglich.  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Zugriffsebene.** Der gesamte Code in einem Deklarationskontext erreichen die `Private` Elemente. Dies schließt Code innerhalb eines enthaltenen Typs, z. B. eine geschachtelte Klasse oder ein Zuweisungsausdruck in einer Enumeration. Kein Code außerhalb der Deklarationskontext erreichen die `Private` Elemente.  
+-   **Zugriffsebene.** Sämtlichen Code innerhalb einer Deklarationskontext kann Zugriff auf seine `Private` Elemente. Dies schließt Code innerhalb eines enthaltenen Typs, z. B. eine geschachtelte Klasse oder eines Zuweisungsausdrucks in einer Enumeration. Kein Code außerhalb der Deklarationskontext kann Zugriff auf seine `Private` Elemente.  
   
 -   **Zugriffsmodifizierer.** Die Schlüsselwörter, die Zugriffsebene angeben heißen *Zugriffsmodifizierer*. Einen Vergleich der Zugriffsmodifizierer, finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -59,12 +59,12 @@ Gibt an, dass eine oder mehrere deklarierte Programmierelemente nur aus ihrem De
   
  [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Geschützt privat](./private-protected.md)   
- [Protected Friend](./protected-friend.md)[Zugriffsebenen in Visual Basic    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Strukturen](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+- [Private Protected](./private-protected.md)
+- [Protected Friend](./protected-friend.md)[Zugriffsebenen in Visual Basic    ](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Strukturen](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

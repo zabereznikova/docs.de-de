@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60145611981b53d4778e7c52c6138b6a9b58a592
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 557b8a91c969a4c7e7b7a10c2117659a75ef9008
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394633"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537290"
 ---
 # <a name="ltapplicationgt-element-net-native"></a>&lt;Anwendung&gt; Element (.NET Native)
 Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zur Laufzeit für die Reflektion verfügbar sind, und wendet Laufzeitreflektionsrichtlinien auf alle Programmelemente in einer App an.  
@@ -85,8 +85,8 @@ Dient als Container für anwendungsweite Typen und Typmember, deren Metadaten zu
   
 -   Als ein Element, das anwendungsweite Richtlinien für Reflektion, Serialisierung und Interop festlegt. Die Attribute des `<Application>`-Elements definieren eine anwendungsweite Richtlinie, die von den durch das `<Application>`- oder [\<Library>](../../../docs/framework/net-native/library-element-net-native.md)-Element definierten untergeordneten Elementen überschrieben werden kann.  
   
-## <a name="see-also"></a>Siehe auch  
- [\<Bibliothek > Element](../../../docs/framework/net-native/library-element-net-native.md)  
- [\<Richtlinien > Element](../../../docs/framework/net-native/directives-element-net-native.md)  
- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Siehe auch
+- [\<Library >-Element](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<Directives >-Element](../../../docs/framework/net-native/directives-element-net-native.md)
+- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

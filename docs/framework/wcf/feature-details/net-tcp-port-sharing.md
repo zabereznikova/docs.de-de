@@ -5,15 +5,15 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: 37c3d7580b48552b841823933958267cea815fab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e191dc62368fc9c16bd58efd30dd1a3769d2bb88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540311"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP-Anschlussfreigabe
-Windows Communication Foundation (WCF) bietet eine neue TCP-basiertes Netzwerkprotokoll (net.tcp://) für hochleistungskommunikation. WCF führt außerdem eine neue Systemkomponente, die Net.TCP-Portfreigabedienst, mit der net.tcp-Ports für mehrfache Benutzervorgänge freigegeben werden können.  
+Windows Communication Foundation (WCF) bietet ein neue TCP-basiertes Netzwerkprotokoll (net.tcp://) für hochleistungskommunikation. WCF stellt auch eine neue Systemkomponente, die Net.TCP-Portfreigabedienst, mit dem net.tcp-Ports für mehrfache Benutzervorgänge freigegeben werden können.  
   
 ## <a name="background-and-motivation"></a>Hintergrund und Motivation  
  Als das TCP/IP-Protokoll erstmals eingeführt wurde, wurde es nur von einer geringen Anzahl von Anwendungsprotokollen verwendet. TCP/IP verwendete Anschlussnummern, um zwischen Anwendungen zu unterscheiden, indem es jedem Anwendungsprotokoll eine eindeutige 16-bit-Anschlussnummer zuwies. HTTP-Verkehr verwendet heute beispielsweise standardmäßig den TCP-Anschluss 80, SMTP verwendet den TCP-Anschluss 25, und FTP verwendet die TCP-Anschlüsse 20 und 21. Andere Anwendungen, die TCP als Transport verwenden, können eine weitere verfügbare Anschlussnummer wählen, entweder durch Konventionen oder durch formale Standardisierung.  
@@ -27,29 +27,29 @@ Windows Communication Foundation (WCF) bietet eine neue TCP-basiertes Netzwerkpr
 ## <a name="port-sharing-architecture"></a>Architektur der Anschlussfreigabe  
  Die anschlussfreigabearchitektur in WCF umfasst drei Hauptkomponenten:  
   
--   Ein Arbeitsprozess: Ein beliebiger Prozess, der mithilfe freigegebener Anschlüsse über net.tcp:// kommuniziert.  
+-   Ein Arbeitsprozess: Jeder Prozess über freigegebener Anschlüsse über net.tcp:// kommuniziert.  
   
--   Der WCF-TCP-Transport: implementiert das net.tcp://-Protokoll.  
+-   Der WCF-TCP-Transport: Implementiert das net.tcp://-Protokoll.  
   
--   Der Net.TCP-Portfreigabedienst: Ermöglicht mehreren Arbeitsprozessen, den gleichen TCP-Anschluss zu verwenden.  
+-   Der Net.TCP-Portfreigabedienst: Ermöglicht mehreren Arbeitsprozessen, die den gleichen TCP-Port verwenden.  
   
  Der Net.TCP-Portfreigabedienst ist ein Windows-Dienst im Benutzermodus, der net.tcp://-Verbindungen im Namen von Arbeitsprozessen akzeptiert, die sich über ihn verbinden. Wenn eine Socketverbindung ankommt, untersucht der Portfreigabedienst den eingehenden Nachrichtenstrom, um dessen Zieladresse zu erhalten. Basierend auf dieser Adresse kann der Portfreigabedienst den Datenstrom zu der Anwendung weiterleiten, die ihn letztendlich verarbeitet.  
   
- Wenn ein WCF-Dienst, der net.tcp:// anschlussfreigabedienst öffnet verwendet, wird der WCF-TCP-Transportinfrastruktur einen TCP-Socket nicht direkt im Anwendungsprozess geöffnet. Stattdessen registriert die Transportinfrastruktur den Basisadressen-URI (Uniform Resource Identifier) des Dienstes mit dem Net.TCP-Portfreigabedienst und wartet darauf, dass der Portfreigabedienst in ihrem Namen den Eingang von Nachrichten abhört.  Der Portfreigabedienst leitet an den Anwendungsdienst adressierte Nachrichten bei Eingang weiter.  
+ Wenn ein WCF-Dienst, der net.tcp:// anschlussfreigabedienst wird verwendet, ist der WCF-TCP-Transportinfrastruktur nicht direkt einen TCP-Socket im Anwendungsprozess geöffnet werden. Stattdessen registriert die Transportinfrastruktur den Basisadressen-URI (Uniform Resource Identifier) des Dienstes mit dem Net.TCP-Portfreigabedienst und wartet darauf, dass der Portfreigabedienst in ihrem Namen den Eingang von Nachrichten abhört.  Der Portfreigabedienst leitet an den Anwendungsdienst adressierte Nachrichten bei Eingang weiter.  
   
 ## <a name="installing-port-sharing"></a>Installieren der Anschlussfreigabe  
- Der Net.TCP-Portfreigabedienst steht auf allen Betriebssystemen, die [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] unterstützen zur Verfügung, aber der Dienst ist nicht standardmäßig aktiviert. Als Sicherheitsmaßnahme muss der Net.TCP-Portfreigabedienst vor der ersten Verwendung manuell von einem Administrator aktiviert werden. Der Net.TCP-Portfreigabedienst stellt Konfigurationsoptionen zur Verfügung, mit denen Sie einige Merkmale der dem Portfreigabedienst gehörenden Netzwerksockets ändern können. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren Sie den Net.TCP-Portfreigabedienst](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+ Der Net.TCP-Portfreigabedienst steht auf allen Betriebssystemen, die [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] unterstützen zur Verfügung, aber der Dienst ist nicht standardmäßig aktiviert. Als Sicherheitsmaßnahme muss der Net.TCP-Portfreigabedienst vor der ersten Verwendung manuell von einem Administrator aktiviert werden. Der Net.TCP-Portfreigabedienst stellt Konfigurationsoptionen zur Verfügung, mit denen Sie einige Merkmale der dem Portfreigabedienst gehörenden Netzwerksockets ändern können. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>Verwenden der Net.tcp-Anschlussfreigabe in einer Anwendung  
- Die einfachste Möglichkeit zum net.tcp://-Anschlussfreigabe in die WCF-Anwendung zu verwenden ist, um einen Dienst mit verfügbar zu machen die <xref:System.ServiceModel.NetTcpBinding> und dann so aktivieren Sie die Net.TCP-Portfreigabedienst mithilfe der <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> Eigenschaft.  
+ Die einfachste Möglichkeit zum net.tcp://-Anschlussfreigabe in der WCF-Anwendung zu verwenden ist, einen Dienst mit verfügbar machen die <xref:System.ServiceModel.NetTcpBinding> und die anschließende Aktivieren des Net.TCP-Portfreigabedienst mithilfe der <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> Eigenschaft.  
   
- Weitere Informationen hierzu finden Sie unter [Vorgehensweise: Konfigurieren eines WCF-Diensts, um die Portfreigabe verwenden](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ Weitere Informationen hierzu finden Sie unter [Vorgehensweise: Konfigurieren ein WCF-Diensts für die Portfreigabe](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
 ## <a name="security-implications-of-port-sharing"></a>Sicherheitsauswirkungen der Anschlussfreigabe  
  Obwohl der Net.TCP-Portfreigabedienst eine Verarbeitungsschicht zwischen Anwendungen und dem Netzwerk bereitstellt, sollten Anwendungen, die die Anschlussfreigabe nutzen, zusätzlich so gesichert werden, als würden sie das Netzwerk direkt überwachen. Insbesondere sollten Anwendungen, die die Anschlussfreigabe nutzen, die Prozessprivilegien auswerten, unter denen sie ausgeführt werden. Ziehen Sie in Betracht, die Anwendung unter dem integrierten Netzwerkdienstkonto auszuführen, das mit der minimalen Gruppe der zur Netzwerkkommunikation erforderlichen Privilegien ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
- [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [Vorgehensweise: Konfigurieren eines WCF-Diensts für die Portfreigabe](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
- [Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+## <a name="see-also"></a>Siehe auch
+- [Konfigurieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+- [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Vorgehensweise: Konfigurieren eines WCF-Diensts für die Portfreigabe](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
+- [Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

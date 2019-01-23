@@ -8,20 +8,20 @@ helpviewer_keywords:
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: d6f741f4ecd3ea52dacc9f981024690a0031a533
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a824e958a2b75b28aa66a15212e0276d6c127739
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536528"
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;NamedCaches&gt; -Element (Cacheeinstellungen)
 Gibt eine Auflistung von Konfigurationseinstellungen für den benannten <xref:System.Runtime.Caching.MemoryCache> Instanzen. Die <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> -Eigenschaft verweist auf die Auflistung der Konfigurationseinstellungen von einer oder mehreren `namedCaches` Elemente der Konfigurationsdatei.  
   
  \<configuration>  
-\< System.Runtime.Caching >  
+\< system.runtime.caching>  
 \<memoryCache>  
-\<NamedCaches >  
+\<namedCaches>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -89,5 +89,5 @@ Gibt eine Auflistung von Konfigurationseinstellungen für den benannten <xref:Sy
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 - [\<MemoryCache >-Element (Cacheeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

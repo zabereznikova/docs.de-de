@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: a0a42f72d94adf1c10865374017fa61e833df40f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: d4b2f73f8955b103e70e240e714e2b31d6198438
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535532"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Nullbasierter und 1-basierter Zeichenfolgenzugriff in Visual Basic
 Dieses Thema vergleicht, wie Visual Basic und die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ermöglichen den Zugriff auf die Zeichen in einer Zeichenfolge. Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] stellt immer nullbasierte Zugriff auf die Zeichen in einer Zeichenfolge bereit, während Visual Basic nullbasierter und 1-basierte Zugriff, abhängig von der Funktion zur Verfügung stellt.  
@@ -20,9 +20,9 @@ Dieses Thema vergleicht, wie Visual Basic und die [!INCLUDE[dnprdnshort](~/inclu
 ## <a name="zero-based"></a>Nullbasierte  
  Erwägen Sie für ein Beispiel für eine nullbasierte Visual Basic-Funktion, die `Split` Funktion. Es unterteilt eine Zeichenfolge und gibt ein Array mit Teilzeichenfolgen zurück. Die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.String.Split%2A?displayProperty=nameWithType> Methode auch unterteilt eine Zeichenfolge und gibt ein Array mit Teilzeichenfolgen zurück. Da die `Split` Funktion und <xref:System.String.Split%2A> -Methodenrückgabe [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Arrays, müssen sie nullbasiert sein.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Strings.Mid%2A>  
- <xref:Microsoft.VisualBasic.Strings.Split%2A>  
- <xref:System.String.Substring%2A>  
- <xref:System.String.Split%2A>  
- [Einführung in Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.Strings.Mid%2A>
+- <xref:Microsoft.VisualBasic.Strings.Split%2A>
+- <xref:System.String.Substring%2A>
+- <xref:System.String.Split%2A>
+- [Einführung in Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

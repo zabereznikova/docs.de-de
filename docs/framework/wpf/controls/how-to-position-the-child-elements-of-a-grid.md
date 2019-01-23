@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Positionieren der untergeordneten Elemente eines Rasters'
+title: 'Vorgehensweise: Positionieren der untergeordneten Elemente eines Rasters'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: 5ccdcb3d166e1b703faff1dc8046e61ee213d12a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a1b567356588d6798bae5d73d3d410882d087986
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538673"
 ---
-# <a name="how-to-position-the-child-elements-of-a-grid"></a>Gewusst wie: Positionieren der untergeordneten Elemente eines Rasters
+# <a name="how-to-position-the-child-elements-of-a-grid"></a>Vorgehensweise: Positionieren der untergeordneten Elemente eines Rasters
 Dieses Beispiel zeigt, wie Get und set-Methoden, die auf definiert sind <xref:System.Windows.Controls.Grid> zum Positionieren der untergeordneten Elemente.  
   
 ## <a name="example"></a>Beispiel  
@@ -30,6 +30,6 @@ Dieses Beispiel zeigt, wie Get und set-Methoden, die auf definiert sind <xref:Sy
  
  ![ein Screenshot zeigt eine WPF-Benutzeroberfläche mit zwei Spalten, die rechte Seite ist eine 3 x 3-Raster und der linken Seite verfügt über die Schaltflächen, um ein farbiges Rechteck zwischen den Spalten und Zeilen des Rasters zu verschieben.](./media/grid-methods-sample.png) 
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.Grid>  
- [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Controls.Grid>
+- [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)

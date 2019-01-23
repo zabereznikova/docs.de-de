@@ -8,27 +8,27 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497025"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540561"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
-Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche Entitäten berechtigt sind, eine Computerressource zu ändern, anzuzeigen oder anderweitig darauf zuzugreifen. In einem Unternehmen sind beispielsweise nur Manager berechtigt, auf die Dateien ihrer Mitarbeiter zuzugreifen. Windows Communication Foundation (WCF) unterstützt zwei Mechanismen für den Autorisierungsprozess. Der erste Mechanismus ermöglicht Ihnen, die Autorisierung mit vorhandenen CLR-Konstrukten (Common Language Runtime) zu kontrollieren. Das zweite ist ein anspruchsbasiertes Modell als bezeichnet den *Identitätsmodell*. WCF verwendet das Identitätsmodell zum Erstellen von Ansprüchen aus eingehenden Nachrichten. Modellklassen Identität können zur Unterstützung neuer Anspruchstypen für benutzerdefinierte Autorisierungsschemas erweitert werden. Dieses Thema bietet eine Übersicht über die wichtigsten Programmierkonzepte der Identitätsmodellfunktion sowie eine Auflistung der wichtigsten von dieser Funktion verwendeten Klassen.  
+Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche Entitäten berechtigt sind, eine Computerressource zu ändern, anzuzeigen oder anderweitig darauf zuzugreifen. In einem Unternehmen sind beispielsweise nur Manager berechtigt, auf die Dateien ihrer Mitarbeiter zuzugreifen. Windows Communication Foundation (WCF) unterstützt zwei Mechanismen für den Autorisierungsprozess. Der erste Mechanismus ermöglicht Ihnen, die Autorisierung mit vorhandenen CLR-Konstrukten (Common Language Runtime) zu kontrollieren. Die zweite ist ein anspruchsbasiertes Modell, bekannt als die *Identitätsmodell*. WCF verwendet das Identitätsmodell zum Erstellen von Ansprüchen aus eingehenden Nachrichten. Modellklassen für die Identität können zur Unterstützung neuer Anspruchstypen für benutzerdefinierte Autorisierungsschemas erweitert werden. Dieses Thema bietet eine Übersicht über die wichtigsten Programmierkonzepte der Identitätsmodellfunktion sowie eine Auflistung der wichtigsten von dieser Funktion verwendeten Klassen.  
   
 ## <a name="identity-model-scenarios"></a>Identitätsmodellszenarien  
  Die folgenden Szenarien stellen die Verwendung des Identitätsmodells dar.  
   
-### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>Szenario 1: Unterstützung der Ansprüche Identität, Rolle und Gruppe  
+### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>Szenario 1: Unterstützung von Identity Rollen- und Gruppenansprüche  
  Benutzer senden Nachrichten an einen Webdienst. Für die Anforderungen der Zugriffssteuerung des Webdiensts werden Identität, Rollen und Gruppen verwendet. Der Absender der Nachricht wird einer Reihe von Rollen oder Gruppen zugeordnet. Mit Rollen- oder Gruppeninformationen werden Zugriffsprüfungen ausgeführt.  
   
 ### <a name="scenario-2-supporting-rich-claims"></a>Szenario 2: Unterstützung umfangreicher Ansprüche  
  Benutzer senden Nachrichten an einen Webdienst. Für die Anforderungen der Zugriffssteuerung des Webdiensts ist ein umfangreicheres Modell als Identität, Rollen oder Gruppen erforderlich. Der Webdienst bestimmt anhand des umfangreichen anspruchsbasierten Modells, ob ein bestimmter Benutzer Zugriff auf eine bestimmte geschützte Ressource hat. Ein Benutzer kann beispielsweise berechtigt sein, bestimmte Informationen, wie Gehaltsinformationen, zu lesen, während andere Benutzer keinen Zugriff auf diese Informationen haben.  
   
-### <a name="scenario-3-mapping-disparate-claims"></a>Szenario 3: Zuordnen von ungleichartigen Ansprüchen  
- Ein Benutzer sendet eine Nachricht an einen Webdienst. Der Benutzer kann seine Benutzerinformationen auf verschiedene Weisen angeben: X.509-Zertifikat, Benutzernamentoken oder Kerberos-Token. Der Webdienst muss unabhängig vom Typ der Benutzeranmeldeinformationen die gleichen Zugriffsteuerungsprüfungen durchführen. Werden im Laufe der Zeit zusätzliche Anmeldeinformationstypen unterstützt, sollte das System entsprechend weiterentwickelt werden.  
+### <a name="scenario-3-mapping-disparate-claims"></a>Szenario 3: Zuordnen von Ungleichartigen Ansprüchen  
+ Ein Benutzer sendet eine Nachricht an einen Webdienst. Der Benutzer möglicherweise seine Anmeldeinformationen in einer Reihe von Möglichkeiten angeben: X. 509-Zertifikat, Benutzernamentoken oder Kerberos-Token. Der Webdienst muss unabhängig vom Typ der Benutzeranmeldeinformationen die gleichen Zugriffsteuerungsprüfungen durchführen. Werden im Laufe der Zeit zusätzliche Anmeldeinformationstypen unterstützt, sollte das System entsprechend weiterentwickelt werden.  
   
 ### <a name="scenario-4-determining-access-to-multiple-resources"></a>Szenario 4: Bestimmen des Zugriffs auf mehrere Ressourcen  
  Ein Webdienst versucht, auf mehrere Ressourcen zuzugreifen. Der Webdienst bestimmt, auf welche geschützten Ressourcen ein bestimmter Benutzer Zugriff hat, indem die mit dem Benutzer verbundenen Ansprüche mit den Ansprüchen verglichen werden, die für den Zugriff auf die Ressource erforderlich sind.  
@@ -80,7 +80,7 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
  Obwohl verschiedene Anspruchstypen und Rechte im Rahmen des Identitätsmodells definiert werden, ist das System erweiterbar und ermöglicht verschiedenen Systemen, die auf die Identitätsmodellinfrastruktur aufsetzen, bei Bedarf zusätzliche Anspruchstypen und Rechte zu definieren.  
   
 ### <a name="identity-claims"></a>Identitätsansprüche  
- Ein besonderes Recht stellt die Identität dar. Ansprüche, die dieses Recht besitzen, sagen etwas über die Identität der Entität aus. Angenommen, ein Anspruch des Typs "Benutzerprinzipalname" (UPN) mit einem Wert von "someone@example.com" und dem Recht Identität gibt eine bestimmte Identität in einer bestimmten Domäne an.  
+ Ein besonderes Recht stellt die Identität dar. Ansprüche, die dieses Recht besitzen, sagen etwas über die Identität der Entität aus. Beispielsweise einen Anspruch des Typs "Benutzerprinzipalname" (UPN) mit einem Wert von "someone@example.com" und ein Recht Identität gibt eine bestimmte Identität in einer bestimmten Domäne an.  
   
 #### <a name="system-identity-claim"></a>Systemidentitätsanspruch  
  Das Identitätsmodell definiert einen Identitätsanspruch: System. Der Identitätsanspruch "System" gibt an, dass eine Entität der aktuellen Anwendung oder dem aktuellen System entspricht.  
@@ -125,7 +125,7 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
  ![Verwalten von Ansprüchen und Autorisierung](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "Xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF und Identitätsmodell  
- WCF verwendet die identitätsmodellinfrastruktur als Basis für die Durchführung der Autorisierung. In WCF die <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> -Klasse ermöglicht Ihnen die Angabe *Autorisierung* Richtlinien als Teil eines Diensts. Solche Autorisierungsrichtlinien werden als bezeichnet *externe Autorisierungsrichtlinien*, und sie können die anspruchsverarbeitung basiert auf lokale Richtlinie oder die Interaktion mit einem Remotedienst durchführen. Der Autorisierungs-Manager, dargestellt durch die <xref:System.ServiceModel.ServiceAuthorizationManager> -Klasse wertet externe Autorisierungsrichtlinien zusammen mit Autorisierungsrichtlinien, die erkennen, die verschiedene Anmeldeinformationstypen (Token) und füllt den so genannten ein  *Autorisierungskontext* mit der auf eine eingehende Nachricht geeigneten Ansprüchen auf. Der Autorisierungskontext wird durch die <xref:System.IdentityModel.Policy.AuthorizationContext>-Klasse dargestellt.  
+ WCF verwendet die identitätsmodellinfrastruktur als Basis für die Durchführung der Autorisierung. In WCF die <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Klasse ermöglicht Ihnen die Angabe *Autorisierung* Richtlinien als Teil eines Diensts. Solche Autorisierungsrichtlinien werden als bezeichnet *externe Autorisierungsrichtlinien*, und sie können die anspruchsverarbeitung auf Basis lokaler Richtlinien oder durch Interaktion mit einem Remotedienst durchführen. Der Autorisierungs-Manager, dargestellt durch die <xref:System.ServiceModel.ServiceAuthorizationManager> Klasse wertet externe Autorisierungsrichtlinien zusammen mit Autorisierungsrichtlinien, die erkennt, die verschiedene Anmeldeinformationstypen (Token) aus und füllt den so genannten ein  *Autorisierungskontext* mit den auf eine eingehende Nachricht geeigneten Ansprüchen. Der Autorisierungskontext wird durch die <xref:System.IdentityModel.Policy.AuthorizationContext>-Klasse dargestellt.  
   
 ## <a name="identity-model-programming"></a>Programmierung des Identitätsmodells  
  In der folgenden Tabelle wird das Objektmodell beschrieben, mit dem Identitätsmodellerweiterungen programmiert werden. Diese Klassen sind alle entweder im <xref:System.IdentityModel.Policy>-Namespace oder im <xref:System.IdentityModel.Claims>-Namespace enthalten.  
@@ -133,13 +133,13 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
 |Klasse|Beschreibung|  
 |-----------|-----------------|  
 |Autorisierungskomponente|Eine Identitätsmodellklasse, die die <xref:System.IdentityModel.Policy.IAuthorizationComponent>-Schnittstelle implementiert.|  
-|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Eine Schnittstelle, die eine einzige schreibgeschützte Zeichenfolgeneigenschaft bietet: ID. Der Wert dieser Eigenschaft ist für jede Instanz im System, das diese Schnittstelle implementiert, eindeutig.|  
-|<xref:System.IdentityModel.Policy.AuthorizationContext>|Ein *autorisierungskomponente* , enthält eine Reihe von `ClaimSet` Instanzen mit 0 (null) oder mehrere Eigenschaften; das Ergebnis der Auswertung von einem oder mehreren Autorisierungsrichtlinien.|  
+|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Eine Schnittstelle, die eine einzelne schreibgeschützte Zeichenfolgeneigenschaft bietet: Id. Der Wert dieser Eigenschaft ist für jede Instanz im System, das diese Schnittstelle implementiert, eindeutig.|  
+|<xref:System.IdentityModel.Policy.AuthorizationContext>|Ein *autorisierungskomponente* , enthält eine Reihe von `ClaimSet` -Instanzen mit NULL oder mehr Eigenschaften; das Ergebnis der Auswertung von einem oder mehreren Autorisierungsrichtlinien.|  
 |<xref:System.IdentityModel.Claims.Claim>|Eine Kombination aus Anspruchstyp, Recht und Wert. Die Bestandteile Recht und Wert werden durch den Anspruchstyp beschränkt.|  
 |<xref:System.IdentityModel.Claims.ClaimSet>|Eine abstrakte Basisklasse. Eine Auflistung von `Claim`-Instanzen.|  
 |<xref:System.IdentityModel.Claims.DefaultClaimSet>|Eine versiegelte Klasse. Eine Implementierung der `ClaimSet`-Klasse.|  
 |<xref:System.IdentityModel.Policy.EvaluationContext>|Eine abstrakte Basisklasse. Wird bei der Richtlinienevaluierung an eine Autorisierungsrichtlinie weitergegeben.|  
-|<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|Eine Schnittstelle abgeleitet `IAuthorizationComponent` und vom autorisierungsrichtlinienklassen implementiert werden.|  
+|<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|Eine Schnittstelle, die von abgeleiteten `IAuthorizationComponent` und von den autorisierungsrichtlinienklassen implementiert.|  
 |<xref:System.IdentityModel.Claims.Rights>|Eine statische Klasse, die vordefinierte "Recht"-Werte enthält.|  
   
  Die folgenden Klassen werden ebenfalls für die Programmierung des Identitätsmodells verwendet, sind jedoch nicht im <xref:System.IdentityModel.Policy>-Namespace oder im <xref:System.IdentityModel.Claims>-Namespace vorhanden.  
@@ -155,27 +155,27 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Abgeleitete Klassen implementieren diese Methode zur Durchführung von anspruchsbasierten Zugriffsprüfungen, bevor Vorgänge in einem Dienst ausgeführt werden. Alle Informationen im bereitgestellten <xref:System.ServiceModel.OperationContext> oder anderswo können untersucht werden, wenn die Zugriffsprüfungsentscheidung getroffen wird. Wenn <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>`true` zurückgibt, wird der Zugriff erteilt und der Vorgang darf ausgeführt werden. Gibt `CheckAccessCore` `false` zurück, wird der Zugriff verweigert und der Vorgang wird nicht ausgeführt. Ein Beispiel finden Sie unter [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Abgeleitete Klassen implementieren diese Methode zur Durchführung von anspruchsbasierten Zugriffsprüfungen, bevor Vorgänge in einem Dienst ausgeführt werden. Alle Informationen im bereitgestellten <xref:System.ServiceModel.OperationContext> oder anderswo können untersucht werden, wenn die Zugriffsprüfungsentscheidung getroffen wird. Wenn <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>`true` zurückgibt, wird der Zugriff erteilt und der Vorgang darf ausgeführt werden. Gibt `CheckAccessCore` `false` zurück, wird der Zugriff verweigert und der Vorgang wird nicht ausgeführt. Ein Beispiel finden Sie unter [Gewusst wie: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|Gibt den <xref:System.ServiceModel.ServiceAuthorizationManager> für den Dienst zurück. Der <xref:System.ServiceModel.ServiceAuthorizationManager> ist für Autorisierungsentscheidungen verantwortlich.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|Die Sammlung benutzerdefinierter Autorisierungsrichtlinien, die für den Dienst angegeben sind. Diese Richtlinien werden zusätzlich zu den Richtlinien evaluiert, die mit den Anmeldeinformationen in eingehenden Nachrichten verbunden sind.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IdentityModel.Policy.AuthorizationContext>  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Policy.EvaluationContext>  
- <xref:System.IdentityModel.Policy.IAuthorizationComponent>  
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims>  
- <xref:System.IdentityModel.Policy>  
- <xref:System.IdentityModel.Tokens>  
- <xref:System.IdentityModel.Selectors>  
- [Ansprüche und Token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [Ansprüche und das Verweigern des Zugriffs auf Ressourcen](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
- [Erstellen von Ansprüchen und Ressourcenwerte](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [Vorgehensweise: Vergleichen von Ansprüchen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [Vorgehensweise: Erstellen einer benutzerdefinierten Autorisierungsrichtlinie](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.IdentityModel.Policy.AuthorizationContext>
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Policy.EvaluationContext>
+- <xref:System.IdentityModel.Policy.IAuthorizationComponent>
+- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims>
+- <xref:System.IdentityModel.Policy>
+- <xref:System.IdentityModel.Tokens>
+- <xref:System.IdentityModel.Selectors>
+- [Ansprüche und Token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
+- [Ansprüche und das Verweigern des Zugriffs auf Ressourcen](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
+- [Erstellen von Ansprüchen und Ressourcenwerte](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Vorgehensweise: Ansprüche vergleichen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Vorgehensweise: Erstellen Sie eine benutzerdefinierte Autorisierungsrichtlinie](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 529a65285203ac831e1bcab9dc1bea69ac28a282
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 115a998f8be233c38efac1a301b4b24b7d861662
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540181"
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue-Methode
-Setzt die Ausführung des verwalteten Threads nach einem Aufruf von [stoppen Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).  
+Setzt die Ausführung von verwalteten Threads nach einem Aufruf von [Methode beenden](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,19 +37,19 @@ HRESULT Continue (
   
 #### <a name="parameters"></a>Parameter  
  `fIsOutOfBand`  
- [in] Legen Sie auf `true` Wenn von einem Out-of-Band-Ereignis; Sie den Vorgang fortsetzen, andernfalls legen Sie auf `false`.  
+ [in] Legen Sie auf `true` , wenn Sie von einem Out-of-Band-Ereignis, den Vorgang fortsetzen, andernfalls legen Sie auf `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- `Continue` wird der Prozess fortgesetzt wird, nach einem Aufruf von der `ICorDebugController::Stop` Methode.  
+ `Continue` wird der Prozess fortgesetzt wird, nach einem Aufruf der `ICorDebugController::Stop` Methode.  
   
- Rufen Sie beim Debuggen im gemischten Modus verwenden führen, `Continue` auf die Win32-Ereignis thread auf, wenn Sie von einem Out-of-Band-Ereignis fortsetzen möchten.  
+ Beim Debuggen im gemischten Modus, rufen Sie nicht `Continue` auf die Win32 Ereignis thread, es sei denn, Sie von einem Out-of-Band-Ereignis fortsetzen möchten.  
   
- Ein *in-Band-Ereignis* ist ein verwaltetes Ereignis oder ein normaler nicht verwaltetes Ereignis während der der Debugger die Interaktion mit dem verwalteten Zustand des Prozesses unterstützt. In diesem Fall empfängt der Debugger die [ICorDebugUnmanagedCallback:: DebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md) Rückruf mit seiner `fOutOfBand` Parametersatz auf `false`.  
+ Ein *in-Band-Ereignis* ist entweder ein verwaltetes Ereignis oder ein normaler nicht verwaltetes Ereignis während der der Debugger die Interaktion mit den verwalteten Zustand des Prozesses unterstützt. In diesem Fall empfängt der Debugger die [ICorDebugUnmanagedCallback:: DebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md) Rückruffunktion mit der `fOutOfBand` Parametersatz zu `false`.  
   
- Ein *Out-of-Band-Ereignis* ist ein nicht verwaltetes Ereignis bei der Interaktion mit dem verwalteten Zustand des Prozesses ist nicht möglich, während der Prozess aufgrund des Ereignisses beendet wird. In diesem Fall empfängt der Debugger die `ICorDebugUnmanagedCallback::DebugEvent` Rückruf mit seiner `fOutOfBand` Parametersatz auf `true`.  
+ Ein *Out-of-Band-Ereignis* ist ein nicht verwaltetes Ereignis während der Interaktion mit den verwalteten Zustand des Prozesses nicht möglich, ist während der Prozess, aufgrund des Ereignisses beendet wird. In diesem Fall empfängt der Debugger die `ICorDebugUnmanagedCallback::DebugEvent` Rückruffunktion mit der `fOutOfBand` Parametersatz zu `true`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -57,5 +57,5 @@ HRESULT Continue (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+

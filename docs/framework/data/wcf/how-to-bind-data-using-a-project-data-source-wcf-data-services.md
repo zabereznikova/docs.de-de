@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 62a7e3bf7caf60c6a532dbffeb8aac8b6c59deb9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540753"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Vorgehensweise: Binden von Daten mit einer Projektdatenquelle (WCF Data Services)
 
@@ -23,7 +23,7 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Verwenden Sie eine Projektdatenquelle in einem WPF-Fenster
 
-1.  Fügen Sie einen Verweis auf die Northwind-Datendienst in Visual Studio in einem WPF-Projekt hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen eines Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1.  Fügen Sie einen Verweis auf die Northwind-Datendienst in Visual Studio in einem WPF-Projekt hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen ein Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
 2.  In der **Datenquellen** Fenster, erweitern Sie die `Customers` Knoten in der **NorthwindEntities** Projektdatenquelle.
 

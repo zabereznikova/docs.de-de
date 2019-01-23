@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aeb0415395a59e59b4d5dc78c11d8b8f0902bad8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04c4e1db35b59748067b76cc037c0def6437c531
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536645"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT-ETW-Ablaufverfolgungsereignisse
 <a name="top"></a> Diese Ereignisse sammeln Informationen über den Erfolg oder Misserfolg des Just-In-Time (JIT)-Inlining und der JIT-Endaufrufe.  
@@ -84,7 +84,7 @@ ms.locfileid: "33397558"
 |InlineeNameSignature|win:UnicodeString|Die Signatur des Inlinees:|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="jit_tail_call_events"></a>   
 ## <a name="jit-tail-call-events"></a>JIT-Endaufrufereignisse  
@@ -149,5 +149,5 @@ ms.locfileid: "33397558"
 |TailCallType|win:UnicodeString|Der Typ des Endaufrufs.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Siehe auch
+- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

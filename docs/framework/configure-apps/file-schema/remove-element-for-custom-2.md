@@ -1,5 +1,5 @@
 ---
-title: '&lt;Entfernen Sie&gt; NameValueSectionHandler und DictionarySectionHandler-Element'
+title: '&lt;Entfernen Sie&gt; -Element für NameValueSectionHandler und DictionarySectionHandler'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 61f1c98d3f12b5aa1d25595ca28328602683b073
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ece76f06f5ecbf47302b62a5e546cc13298106bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535579"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Entfernen Sie >-Element für NameValueSectionHandler und DictionarySectionHandler
 
-Entfernt eine zuvor definierte Einstellung an.
+Entfernt eine zuvor definierte Einstellung.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<SectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Entfernen >**
+&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,27 +34,27 @@ Entfernt eine zuvor definierte Einstellung an.
 
 |           | Beschreibung |
 | --------- | ----------- |
-| **key**   | Erforderliches Attribut.<br><br>Gibt den Namen der Einstellung entfernen. |
+| **key**   | Erforderliches Attribut.<br><br>Gibt den Namen der Einstellung, um Sie zu entfernen. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
 | Element | Beschreibung |
 | ------- | ------------|
-| [**\<SectionName >** Element](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definiert die Einstellungen für benutzerdefinierte Konfigurationsabschnitte, mit denen die <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> Klassen. |
+| [**\<sectionName>** Element](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Definiert die Einstellungen für die benutzerdefinierten Konfigurationsabschnitte, mit denen die <xref:System.Configuration.NameValueSectionHandler> und <xref:System.Configuration.DictionarySectionHandler> Klassen. |
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
 
 ## <a name="remarks"></a>Hinweise
 
-Sie können die  **\<entfernen >** Element So entfernen Sie die Einstellungen aus Ihrer Anwendung, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden.
+Sie können die  **\<entfernen >** Elements, das Einstellungen entfernt, von der Anwendung, die auf einer höheren Ebene in der Hierarchie der Konfigurationsdatei definiert wurden.
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel zeigt, wie Sie die  **\<entfernen >** Element in einer Anwendungskonfigurationsdatei So entfernen Sie die Einstellungen, die zuvor in der Computerkonfigurationsdatei definiert.
+Das folgende Beispiel zeigt, wie Sie mit der  **\<entfernen >** Element in einer Anwendungskonfigurationsdatei, entfernen Sie die Einstellungen, die zuvor in der Computerkonfigurationsdatei definiert.
 
-Der folgende Konfigurationscode Datei Computer deklariert Abschnitt  **\<MySection >** und fügt zwei Einstellungen `key1` und `key2`, darauf:
+Der folgende Konfigurationscode Datei Computer deklariert Abschnitt  **\<MySection >** und fügt zwei Einstellungen `key1` und `key2`, damit:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Der folgende Konfigurationscode Datei Computer deklariert Abschnitt  **\<MySecti
 </configuration>
 ```
 
-Der folgende Code für eine Anwendungskonfigurationsdatei entfernt die `key2` Festlegen von  **\<MySection >**:
+Der folgende Code für eine Anwendungskonfigurationsdatei entfernt die `key2` aus  **\<MySection >**:
 
 ```xml
 <!--Application configuration file -->
@@ -82,8 +82,8 @@ Der folgende Code für eine Anwendungskonfigurationsdatei entfernt die `key2` Fe
 
 ## <a name="configuration-file"></a>Konfigurationsdatei
 
-Dieses Element kann in der Anwendungskonfigurationsdatei Computerkonfigurationsdatei verwendet werden (*"Machine.config"*), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
+Dieses Element kann in der Anwendungskonfigurationsdatei, Konfigurationsdatei des Computers verwendet werden (*"Machine.config"*), und *"Web.config"* Dateien, die nicht auf Anwendungsebene Verzeichnis sind.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Konfigurationsdateischema für .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

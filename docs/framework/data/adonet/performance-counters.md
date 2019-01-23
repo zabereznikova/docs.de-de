@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 3e66e4f34afcf8cba03c60c92b5b69d8ca01961b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: a17d0b2382f105bb6299386e45a6746e05c39feb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539063"
 ---
 # <a name="performance-counters-in-adonet"></a>Leistungsindikatoren in ADO.NET
 Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren. Dazu gehört auch die Unterstützung für <xref:System.Data.SqlClient> und <xref:System.Data.OracleClient>. Die in früheren ADO.NET-Versionen verfügbaren <xref:System.Data.SqlClient>-Leistungsindikatoren wurden durch neue Leistungsindikatoren ersetzt, die in diesem Thema beschrieben werden. Mit den ADO.NET-Leistungsindikatoren können Sie den Status Ihrer Anwendung und die Verbindungsressourcen überwachen, die die Anwendung verwendet. Für die Überwachung der Leistungsindikatoren kann der Windows-Leistungsmonitor verwendet werden, und die <xref:System.Diagnostics.PerformanceCounter>-Klasse im <xref:System.Diagnostics>-Namespace ermöglicht den programmgesteuerten Zugriff auf diese Indikatoren.  
@@ -24,16 +24,16 @@ Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren.
 |`HardDisconnectsPerSecond`|Anzahl der Verbindungen mit einem Datenbankserver, die pro Sekunde getrennt wurden|  
 |`NumberOfActiveConnectionPoolGroups`|Anzahl der eindeutigen Verbindungspoolgruppen, die aktiv sind. Dieser Indikator wird von der Anzahl der eindeutigen Verbindungszeichenfolgen gesteuert, die in der Anwendungsdomäne (AppDomain) gefunden werden.|  
 |`NumberOfActiveConnectionPools`|Gesamtzahl der Verbindungspools|  
-|`NumberOfActiveConnections`|Anzahl der aktiven Verbindungen, die gerade genutzt werden **Hinweis:** dieser Leistungsindikator ist standardmäßig nicht aktiviert. Um diesen Leistungsindikator aktivieren zu können, finden Sie unter [deaktiviert standardmäßig Leistungsindikatoren aktivieren](#ActivatingOffByDefault).|  
-|`NumberOfFreeConnections`|Anzahl der Verbindungen, die für die Verwendung in den Verbindungspools verfügbar sind **Hinweis:** dieser Leistungsindikator ist standardmäßig nicht aktiviert. Um diesen Leistungsindikator aktivieren zu können, finden Sie unter [deaktiviert standardmäßig Leistungsindikatoren aktivieren](#ActivatingOffByDefault).|  
+|`NumberOfActiveConnections`|Anzahl der aktiven Verbindungen, die gerade genutzt werden **Hinweis**:  Dieser Leistungsindikator ist standardmäßig nicht aktiviert. Um diesen Leistungsindikator aktivieren zu können, finden Sie unter [deaktiviert standardmäßig Leistungsindikatoren aktivieren](#ActivatingOffByDefault).|  
+|`NumberOfFreeConnections`|Anzahl der Verbindungen, die für die Verwendung in den Verbindungspools verfügbar sind **Hinweis**:  Dieser Leistungsindikator ist standardmäßig nicht aktiviert. Um diesen Leistungsindikator aktivieren zu können, finden Sie unter [deaktiviert standardmäßig Leistungsindikatoren aktivieren](#ActivatingOffByDefault).|  
 |`NumberOfInactiveConnectionPoolGroups`|Anzahl der eindeutigen Verbindungspoolgruppen, die zum Löschen gekennzeichnet sind. Dieser Indikator wird von der Anzahl der eindeutigen Verbindungszeichenfolgen gesteuert, die in der Anwendungsdomäne (AppDomain) gefunden werden.|  
 |`NumberOfInactiveConnectionPools`|Anzahl der inaktiven Verbindungspools, die in letzter Zeit keine Aktivitäten zu verzeichnen hatten und darauf warten, gelöscht zu werden|  
 |`NumberOfNonPooledConnections`|Anzahl der aktiven Verbindungen, die sich nicht in einem Pool befinden|  
 |`NumberOfPooledConnections`|Anzahl der aktiven Verbindungen, die von der Verbindungspooling-Infrastruktur verwaltet werden|  
 |`NumberOfReclaimedConnections`|Anzahl der Verbindungen, die durch die Garbage Collection (automatische Speicherbereinigung) wieder verfügbar gemacht wurden, bei denen die Anwendung weder `Close` noch `Dispose` aufgerufen hat. Nicht mehr benötigte Verbindungen, die weiterbestehen, weil sie nicht explizit geschlossen oder gelöscht wurden, beeinträchtigen die Arbeitsgeschwindigkeit.|  
 |`NumberOfStasisConnections`|Anzahl der Verbindungen, die derzeit den Abschluss einer Aktion erwarten und die daher für die Verwendung durch Ihre Anwendung nicht zur Verfügung stehen|  
-|`SoftConnectsPerSecond`|Anzahl der aktiven Verbindungen, die aus dem Verbindungspool herausgezogen werden. **Hinweis:** dieser Leistungsindikator ist standardmäßig nicht aktiviert. Um diesen Leistungsindikator aktivieren zu können, finden Sie unter [deaktiviert standardmäßig Leistungsindikatoren aktivieren](#ActivatingOffByDefault).|  
-|`SoftDisconnectsPerSecond`|Anzahl der aktiven Verbindungen, die an den Verbindungspool zurückgegeben werden **Hinweis:** dieser Leistungsindikator ist standardmäßig nicht aktiviert. Um diesen Leistungsindikator aktivieren zu können, finden Sie unter [deaktiviert standardmäßig Leistungsindikatoren aktivieren](#ActivatingOffByDefault).|  
+|`SoftConnectsPerSecond`|Anzahl der aktiven Verbindungen, die aus dem Verbindungspool herausgezogen werden. **Hinweis**:  Dieser Leistungsindikator ist standardmäßig nicht aktiviert. Um diesen Leistungsindikator aktivieren zu können, finden Sie unter [deaktiviert standardmäßig Leistungsindikatoren aktivieren](#ActivatingOffByDefault).|  
+|`SoftDisconnectsPerSecond`|Anzahl der aktiven Verbindungen, die an den Verbindungspool zurückgegeben werden **Hinweis**:  Dieser Leistungsindikator ist standardmäßig nicht aktiviert. Um diesen Leistungsindikator aktivieren zu können, finden Sie unter [deaktiviert standardmäßig Leistungsindikatoren aktivieren](#ActivatingOffByDefault).|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>Verbindungspoolgruppen und Verbindungspools  
  Bei der Verwendung der Windows-Authentifizierung (integrierte Sicherheit) müssen die folgenden beiden Leistungsindikatoren überwacht werden: `NumberOfActiveConnectionPoolGroups` und `NumberOfActiveConnectionPools`. Dies liegt daran, dass Verbindungspoolgruppen eindeutigen Verbindungszeichenfolgen zugeordnet werden. Bei Verwendung der integrierten Sicherheit werden die Verbindungspools den Verbindungszeichenfolgen zugeordnet, und zusätzlich werden separate Pools für einzelne Windows-Identitäten erstellt. Wenn Fred und Julie z. B. innerhalb derselben Anwendungsdomäne beide die `"Data Source=MySqlServer;Integrated Security=true"`-Verbindungszeichenfolge verwenden, wird für die Verbindungszeichenfolge eine Verbindungspoolgruppe erstellt, und es werden zwei zusätzliche Pools erstellt: einer für Fred und einer für Julie. Wenn John und Martha eine Verbindungszeichenfolge mit einer identischen SQL Server-Anmeldung verwenden `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`, nur ein einzigen Pool erstellt werden, für die **LowPrivUser** Identität.  
@@ -394,10 +394,10 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- [OLE DB-, ODBC- und Oracle-Verbindungspooling](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [Leistungsindikatoren für ASP.NET](https://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)  
- [Laufzeit-Profilerstellung](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)  
- [Einführung in die Überwachung von Leistungsschwellenwerten](https://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [OLE DB-, ODBC- und Oracle-Verbindungspooling](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Leistungsindikatoren für ASP.NET](https://msdn.microsoft.com/library/1e122fcb-05c0-4f9f-bef1-f47023fa1ac6)
+- [Laufzeit-Profilerstellung](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [Einführung in die Überwachung von Leistungsschwellenwerten](https://msdn.microsoft.com/library/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

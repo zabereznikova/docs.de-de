@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5869eb16bd768d58a6f27a83f2d8d51914a8aed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ab94bf7c55d4c19a4f3672ed86808575b8a2239
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443114"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54536914"
 ---
 # <a name="corpekind-enumeration"></a>CorPEKind-Enumeration
-Enthält Werte, die eine PE (portable Executable)-Datei wird beschrieben, wie von einem Aufruf zurückgegebene [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+Enthält Werte, die beschreiben, eine Datei (portable Executable)-Datei von einem Aufruf zurückgegeben [IMetaDataImport2:: GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,22 +45,22 @@ typedef enum CorPEKind {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`peNot`|Gibt an, dass dies keiner PE-Datei ist.|  
-|`peILOnly`|Gibt an, dass diese PE-Datei nur verwalteten Code enthält.|  
-|`pe32BitRequired`|Gibt an, dass diese PE-Datei Win32 aufgerufen wird.|  
+|`peNot`|Gibt an, dass es sich nicht um eine PE-Datei handelt.|  
+|`peILOnly`|Gibt an, dass diese PE-Datei enthält nur verwalteten Code.|  
+|`pe32BitRequired`|Gibt an, dass diese PE-Datei mit Win32-Aufrufe ausführt.|  
 |`pe32Plus`|Gibt an, dass diese PE-Datei auf einer 64-Bit-Plattform ausgeführt wird.|  
 |`pe32Unmanaged`|Gibt an, dass diese PE-Datei mit systemeigenem Code ist.|  
-|pe32BitPreferred|Gibt an, dass diese PE-Datei plattformunabhängiges ist verwendet und ob in einer 32-Bit-Umgebung geladen werden soll.|  
+|pe32BitPreferred|Gibt an, dass diese PE-Datei plattformunabhängig ist und zieht es vor, die in einer 32-Bit-Umgebung geladen werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Werte können in bitweisen Kombinationen verwendet werden.  
+ Diese Werte können in bitweise Kombinationen verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

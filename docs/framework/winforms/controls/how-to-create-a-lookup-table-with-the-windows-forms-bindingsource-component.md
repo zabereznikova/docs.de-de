@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen einer Suchtabelle mit der BindingSource-Komponente in Windows Forms'
+title: 'Vorgehensweise: Erstellen einer Suchtabelle mit der BindingSource-Komponente in Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 83a34c9d1a4b3d1c2e9950d3c5427567022326b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539895"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Gewusst wie: Erstellen einer Suchtabelle mit der BindingSource-Komponente in Windows Forms
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Vorgehensweise: Erstellen einer Suchtabelle mit der BindingSource-Komponente in Windows Forms
 Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datensätzen einer verknüpften Tabelle in einer Spalte dargestellt werden. In den folgenden Verfahren wird ein <xref:System.Windows.Forms.ComboBox>-Steuerelement für die Anzeige des Felds mit der Fremdschlüsselbeziehung von der übergeordneten zur untergeordneten Tabelle verwendet.  
   
  Zur Visualisierung dieser beiden Tabellen und dieser Beziehung finden Sie hier ein Beispiel einer über- und untergeordneten Tabelle:  
@@ -49,7 +49,7 @@ Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datens�
   
 ### <a name="to-create-the-user-interface"></a>So erstellen Sie die Benutzeroberfläche  
   
-1.  Aus der **ToolBox**, ziehen Sie eine <xref:System.Windows.Forms.ComboBox> -Steuerelement auf das Formular.  
+1.  Von der **ToolBox**, ziehen Sie eine <xref:System.Windows.Forms.ComboBox> -Steuerelement auf das Formular.  
   
      Dieses Steuerelement zeigt die Spalte aus der übergeordneten Tabelle an.  
   
@@ -91,8 +91,8 @@ Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datens�
   
 8.  Binden Sie die Steuerelement außer <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Forms.BindingNavigator> an das Feld "Details" aus der <xref:System.Windows.Forms.BindingSource> der untergeordneten Tabelle (z. B. `OrdersBindingSource`), die Sie anzeigen möchten.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.BindingSource>  
- [BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [ComboBox-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
- [Binden von Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.BindingSource>
+- [BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [ComboBox-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [Binden von Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

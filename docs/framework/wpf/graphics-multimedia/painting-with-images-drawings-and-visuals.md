@@ -12,19 +12,19 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: 0d860062814a447830e1237f4fc2c1ae0d223e9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d226ecb6e168a044cd9802b4278c25084d8c84fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537750"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Zeichnen mit Bildern, Zeichnungen und visuellen Elementen
 In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, und <xref:System.Windows.Media.VisualBrush> Objekte zum Zeichnen eines Bereichs mit einem Bild, ein <xref:System.Windows.Media.Drawing>, oder ein <xref:System.Windows.Media.Visual>.  
     
   
 <a name="prereqs"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Als Voraussetzung für dieses Thema sollten Sie mit den von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bereitgestellten unterschiedlichen Pinseltypen und ihren grundlegenden Funktionen vertraut sein. Eine Einführung finden Sie unter [Übersicht über WPF-Pinsel](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md).  
   
 <a name="image"></a>   
@@ -90,9 +90,9 @@ Von einem DrawingBrush gezeichnete Objekte
   
  Es gibt zwei Möglichkeiten zum Angeben der <xref:System.Windows.Media.VisualBrush.Visual%2A> Inhalt von einem <xref:System.Windows.Media.VisualBrush>.  
   
--   Erstellen Sie ein neues <xref:System.Windows.Media.Visual> und verwenden sie zum Festlegen der <xref:System.Windows.Media.VisualBrush.Visual%2A> Eigenschaft der <xref:System.Windows.Media.VisualBrush>. Ein Beispiel finden Sie unter [Beispiel: Zeichnen eines Objekts mit einem visuellen Element](#examplevisualbrush1) im folgenden Abschnitt.  
+-   Erstellen Sie ein neues <xref:System.Windows.Media.Visual> und verwenden sie zum Festlegen der <xref:System.Windows.Media.VisualBrush.Visual%2A> Eigenschaft der <xref:System.Windows.Media.VisualBrush>. Ein Beispiel finden Sie unter den [Beispiel: Zeichnen eines Objekts mit einem visuellen Element](#examplevisualbrush1) im folgenden Abschnitt.  
   
--   Verwenden Sie ein vorhandenes <xref:System.Windows.Media.Visual>, wodurch ein Bildduplikat vom Ziel erstellt <xref:System.Windows.Media.Visual>. Anschließend können Sie die <xref:System.Windows.Media.VisualBrush> interessante Effekte, z.B. Reflektion und Vergrößerung zu erstellen. Ein Beispiel finden Sie unter [Beispiel: Erstellen einer Reflektion](#examplevisualbrush2).  
+-   Verwenden Sie ein vorhandenes <xref:System.Windows.Media.Visual>, wodurch ein Bildduplikat vom Ziel erstellt <xref:System.Windows.Media.Visual>. Anschließend können Sie die <xref:System.Windows.Media.VisualBrush> interessante Effekte, z.B. Reflektion und Vergrößerung zu erstellen. Ein Beispiel finden Sie unter den [Beispiel: Erstellen einer Reflektion](#examplevisualbrush2) Abschnitt.  
   
  Beim Definieren einer neuen <xref:System.Windows.Media.VisualBrush.Visual%2A> für eine <xref:System.Windows.Media.VisualBrush> und <xref:System.Windows.Media.Visual> ist eine <xref:System.Windows.UIElement> (z. B. ein Bereich oder Steuerelement), der das Layoutsystem führt auf der <xref:System.Windows.UIElement> und seine untergeordneten Elemente bei der <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> -Eigenschaftensatz auf `true`. Jedoch den Stamm <xref:System.Windows.UIElement> ist im Grunde vom Rest des Systems isoliert: Stile und externes Layout können diese Abgrenzung nicht durchdringen. Daher sollten Sie explizit die Größe des Stamms angeben <xref:System.Windows.UIElement>, da nur das übergeordnete Element ist die <xref:System.Windows.Media.VisualBrush> und sich daher nicht automatisch auf den gezeichneten Bereich anpassen kann. Weitere Informationen zum Layout in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] finden Sie unter [Layout](../../../../docs/framework/wpf/advanced/layout.md).  
   
@@ -134,16 +134,16 @@ Komponente eines TileBrush mit mehreren Kacheln
   
  Weitere Informationen über das Kacheln von <xref:System.Windows.Media.TileBrush> Objekten finden Sie die [Übersicht über TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [Übersicht über TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [Übersicht über WPF-Pinsel](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [Übersicht über die Bildverarbeitung](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Übersicht über Zeichnungsobjekte](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [Übersicht über Durchlässigkeitsmasken](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [Übersicht über TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)
+- [Übersicht über WPF-Pinsel](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)
+- [Übersicht über die Bildverarbeitung](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Übersicht über Zeichnungsobjekte](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+- [Übersicht über Durchlässigkeitsmasken](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)
+- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)

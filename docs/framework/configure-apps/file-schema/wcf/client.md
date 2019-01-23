@@ -1,22 +1,22 @@
 ---
-title: '&lt;Client&gt;'
+title: '&lt;client&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 24defe7e01603f1b1be3023d07854091335d6c60
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 32fcd9792f674d4ded466f26641690c8ae4328b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148642"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540402"
 ---
-# <a name="ltclientgt"></a>&lt;Client&gt;
+# <a name="ltclientgt"></a>&lt;client&gt;
 Das `client`-Element definiert eine Liste der Endpunkte, mit denen ein Client eine Verbindung herstellen kann.  
   
  \<system.ServiceModel>  
-\<Client >  
+\<client>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,8 +41,8 @@ Das `client`-Element definiert eine Liste der Endpunkte, mit denen ein Client ei
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Endpunkt >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Enthält eine Auflistung der Endpunktelemente, die die Endpunkte angeben, mit denen dieser Client eine Verbindung herstellen kann.|  
-|[\<Metadaten >](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Enthält Einstellungen zum Verarbeiten von Metadaten.|  
+|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Enthält eine Auflistung der Endpunktelemente, die die Endpunkte angeben, mit denen dieser Client eine Verbindung herstellen kann.|  
+|[\<metadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Enthält Einstellungen zum Verarbeiten von Metadaten.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -72,8 +72,8 @@ Das `client`-Element definiert eine Liste der Endpunkte, mit denen ein Client ei
 </client>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.ClientSection>  
- <xref:System.ServiceModel.Configuration.MetadataElement>  
- [WCF-Clientkonfiguration](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [Clients](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.ClientSection>
+- <xref:System.ServiceModel.Configuration.MetadataElement>
+- [WCF-Clientkonfiguration](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
+- [Clients](../../../../../docs/framework/wcf/feature-details/clients.md)

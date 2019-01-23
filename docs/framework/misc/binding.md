@@ -1,16 +1,16 @@
 ---
-title: '&lt;Bindung&gt;'
+title: '&lt;binding&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 666183d6-4d1f-45c7-ac64-bdf93ee8f36f
-ms.openlocfilehash: d72b3a34e0696df944b2338c89f167c8bfa06400
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb4fafda31205e2ce5efd01ab265fcacfa70bdf6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539193"
 ---
-# <a name="ltbindinggt"></a>&lt;Bindung&gt;
+# <a name="ltbindinggt"></a>&lt;binding&gt;
 Sie können das `binding`-Element zum Konfigurieren verschiedener Typen von vordefinierten Bindungen verwenden, die von Windows Communication Foundation (WCF) bereitgestellt werden.  
   
 ## <a name="system-provided-binding"></a>Vom System bereitgestellte Bindung  
@@ -37,10 +37,10 @@ Sie können das `binding`-Element zum Konfigurieren verschiedener Typen von vord
   
  Benutzerdefinierte Bindungen werden durch ihr `name`-Attribut identifiziert.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.BindingsSection>  
- <xref:System.ServiceModel.Channels.Binding>  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [Bindungen](../../../docs/framework/wcf/bindings.md)  
- [Benutzerdefinierte Bindungen](../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.BindingsSection>
+- <xref:System.ServiceModel.Channels.Binding>
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [Bindungen](../../../docs/framework/wcf/bindings.md)
+- [Benutzerdefinierte Bindungen](../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
