@@ -1,14 +1,6 @@
 ---
 title: ICorProfilerCallback::ExceptionSearchFilterLeave-Methode
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.ExceptionSearchFilterLeave
 api_location:
@@ -23,36 +15,33 @@ helpviewer_keywords:
 ms.assetid: c28a2a82-dd11-4385-843f-b509fb61753b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e0bbde11a2b9c346cbda73ee29da20140524b51
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3fcbd225acd3f4f24311d08b04c971e2550b8ef5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54533571"
 ---
-# <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a><span data-ttu-id="c3441-102">ICorProfilerCallback::ExceptionSearchFilterLeave-Methode</span><span class="sxs-lookup"><span data-stu-id="c3441-102">ICorProfilerCallback::ExceptionSearchFilterLeave Method</span></span>
-<span data-ttu-id="c3441-103">Benachrichtigt den Profiler, dass ein Benutzerfilter gerade beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="c3441-103">Notifies the profiler that a user filter has just finished executing.</span></span>  
+# <a name="icorprofilercallbackexceptionsearchfilterleave-method"></a><span data-ttu-id="36505-102">ICorProfilerCallback::ExceptionSearchFilterLeave-Methode</span><span class="sxs-lookup"><span data-stu-id="36505-102">ICorProfilerCallback::ExceptionSearchFilterLeave Method</span></span>
+<span data-ttu-id="36505-103">Benachrichtigt den Profiler, dass ein Benutzerfilter gerade beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="36505-103">Notifies the profiler that a user filter has just finished executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3441-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c3441-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="36505-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="36505-104">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionSearchFilterLeave();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c3441-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c3441-105">Requirements</span></span>  
- <span data-ttu-id="c3441-106">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3441-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="36505-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="36505-105">Requirements</span></span>  
+ <span data-ttu-id="36505-106">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36505-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3441-107">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c3441-107">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="36505-107">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="36505-107">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c3441-108">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3441-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="36505-108">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="36505-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c3441-109">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3441-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="36505-109">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="36505-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3441-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c3441-110">See Also</span></span>  
- [<span data-ttu-id="c3441-111">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c3441-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [<span data-ttu-id="c3441-112">ExceptionSearchFilterEnter-Methode</span><span class="sxs-lookup"><span data-stu-id="c3441-112">ExceptionSearchFilterEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)
+## <a name="see-also"></a><span data-ttu-id="36505-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="36505-110">See also</span></span>
+- [<span data-ttu-id="36505-111">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="36505-111">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="36505-112">ExceptionSearchFilterEnter-Methode</span><span class="sxs-lookup"><span data-stu-id="36505-112">ExceptionSearchFilterEnter Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)
