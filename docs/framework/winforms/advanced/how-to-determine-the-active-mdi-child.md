@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements'
+title: 'Vorgehensweise: Bestimmen des aktiven untergeordneten MDI-Elements'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 0b084d204361764af1b36b154acfc5b360fc977e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 581fbb839d06aebc6487bb7b4933f0c1e39af3e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512553"
 ---
-# <a name="how-to-determine-the-active-mdi-child"></a>Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements
-In manchen Fällen sollten Sie einen Befehl, der ausgeführt wird auf das Steuerelement bereitstellen, auf dem derzeit aktiven untergeordneten Formular den Fokus besitzt. Nehmen Sie z. B. an, dass Sie den ausgewählten Text aus dem Textfeld des untergeordneten Formulars in die Zwischenablage kopieren möchten. Erstellen Sie eine Prozedur, die ausgewählten Text in die Zwischenablage verwenden kopiert die <xref:System.Windows.Forms.Control.Click> -Ereignis des Menüelements kopieren im Standardmenü bearbeiten.  
+# <a name="how-to-determine-the-active-mdi-child"></a>Vorgehensweise: Bestimmen des aktiven untergeordneten MDI-Elements
+Gelegentlich möchten Sie einen Befehl, der ausgeführt wird auf dem Steuerelement bereitstellen, auf dem derzeit aktiven untergeordneten Formular den Fokus besitzt. Nehmen wir beispielsweise an, dass Sie den markierten Text aus des untergeordneten Formulars-Textfeld in die Zwischenablage kopieren möchten. Erstellen Sie eine Prozedur, die ausgewählten Text in die Zwischenablage mithilfe kopiert die <xref:System.Windows.Forms.Control.Click> Ereignis von der Menübefehl zum Kopieren auf die standardmäßige Menü "Bearbeiten".  
   
- Da eine MDI-Anwendung viele Instanzen des gleichen untergeordneten Formulars verfügen kann, muss die Prozedur wissen, welches Formular verwendet. Um das richtige Format anzugeben, verwenden Sie die <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> -Eigenschaft, die das untergeordnete Formular zurückgibt, die den Fokus besitzt, oder, die zuletzt aktiv war.  
+ Da MDI-Anwendung viele Instanzen der gleichen untergeordneten Formulars verfügen kann, muss die Prozedur wissen, welches Formular verwendet. Um die richtige Form anzugeben, verwenden die <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> -Eigenschaft, wodurch das untergeordnete Formular, das den Fokus besitzt, oder das zuletzt aktiv war.  
   
- Wenn Sie mehrere Steuerelemente in einem Formular verfügen, müssen Sie auch angeben, welches Steuerelement aktiv ist. Wie die <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> -Eigenschaft, die <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> Eigenschaft gibt das Steuerelement mit Fokus auf das aktive untergeordnete Formular. Das folgende Verfahren veranschaulicht eine Kopierprozedur, die von einem Menü untergeordnete Formular eines Menüs für MDI-Formulars oder einer Symbolleisten-Schaltfläche aufgerufen werden kann.  
+ Wenn Sie mehrere Steuerelemente in einem Formular haben, müssen Sie auch angeben, welches Steuerelement aktiv ist. Wie die <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> -Eigenschaft, die <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> Eigenschaft gibt das Steuerelement mit Fokus auf dem aktiven untergeordneten Formular zurück. Das folgende Verfahren veranschaulicht eine Kopierprozedur, die von einem untergeordneten Formularmenü, ein Menü für das MDI-Formular oder eine Symbolleisten-Schaltfläche aufgerufen werden kann.  
   
-### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Bestimmen von aktiven untergeordneten MDI-Fensters (um den Text in die Zwischenablage zu kopieren)  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Bestimmen des aktive untergeordneten MDI-Fensters (um den Text in die Zwischenablage kopieren)  
   
-1.  Kopieren Sie den Text, der das zum aktiven Steuerelement des aktiven untergeordneten Formulars innerhalb einer Methode in die Zwischenablage.  
+1.  Kopieren Sie den Text zum aktiven Steuerelement des aktiven untergeordneten Formulars innerhalb einer Methode in die Zwischenablage.  
   
     > [!NOTE]
-    >  In diesem Beispiel wird vorausgesetzt, es ist ein übergeordnetes MDI-Formular (`Form1`), besitzt eine oder mehrere untergeordnete MDI-Fenster mit einem <xref:System.Windows.Forms.RichTextBox> Steuerelement. Weitere Informationen finden Sie unter [Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  In diesem Beispiel geht davon aus, es ist ein übergeordnetes MDI-Formular (`Form1`), die eine oder mehrere untergeordnete MDI-Fenster mit wurde ein <xref:System.Windows.Forms.RichTextBox> Steuerelement. Weitere Informationen finden Sie unter [Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -83,9 +83,9 @@ In manchen Fällen sollten Sie einen Befehl, der ausgeführt wird auf das Steuer
     }  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDI-Anwendungen (Multiple Document Interface)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- [Gewusst wie: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Gewusst wie: Senden von Daten an das aktive untergeordnete MDI-Element](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
- [Gewusst wie: Anordnen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a>Siehe auch
+- [MDI-Anwendungen (Multiple Document Interface)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
+- [Vorgehensweise: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [Vorgehensweise: Senden von Daten an das aktive untergeordnete MDI-Element](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
+- [Vorgehensweise: Anordnen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

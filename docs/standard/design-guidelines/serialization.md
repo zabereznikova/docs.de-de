@@ -4,19 +4,19 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
-ms.openlocfilehash: 3e21251710a44764bd06fbce83f97288b6925bc2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c2a5a69186e41642abf77357db8b04e2611a43f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155105"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513134"
 ---
 # <a name="serialization"></a>Serialisierung
 Serialisierung ist der Prozess der Konvertierung eines Objekts in ein Format, das sofort erhalten oder transportiert werden kann. Sie können z. B. ein Objekt serialisieren, über das Internet mithilfe von HTTP und deserialisiert, es auf dem Zielcomputer transportieren.  
   
  .NET Framework bietet drei wichtige Serialisierungstechnologien, die für verschiedene serialisierungsszenarios optimiert. In der folgenden Tabelle werden diese Technologien und die zugehörigen Framework-Haupttypen für die jeweilige Technologie beschrieben.  
   
-|**Technologiename**|**Haupttypen**|**Szenarien**|  
+|**Technology Name**|**Haupttypen**|**Szenarien**|  
 |-------------------------|--------------------|-------------------|  
 |**Datenvertragsserialisierung**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|Allgemeine Persistenz<br />Webdienste<br />JSON|  
 |**XML-Serialisierung**|<xref:System.Xml.Serialization.XmlSerializer>|XML-Format mit vollständiger Kontrolle über die XML-Form|  
@@ -103,5 +103,5 @@ public class Person : ISerializable {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Verwendungsrichtlinien](../../../docs/standard/design-guidelines/usage-guidelines.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d3a7168ce0ee3484384ae0e2d10ca00367fc9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2e00bc95dd9b54d5451da65cefbfff13395e467f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511958"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID-Funktion
 Ruft die entsprechende Version zur common Language Runtime (CLR) für die Klasse mit dem angegebenen `CLSID`.  
@@ -45,7 +45,7 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  [in]  Die `CLSID` der Komponente.  
   
  `pVersion`  
- [out]  Ein Puffer, der nach dem erfolgreichen Abschluss die Versionsnummernzeichenfolge enthält.  
+ [out]  Ein Puffer, der die Versionsnummer-Zeichenfolge nach dem erfolgreichen Abschluss enthält.  
   
  `cchBuffer`  
  [in]  Die Größe in Breitzeichen, der die `pVersion` Puffer.  
@@ -56,26 +56,26 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
  `dwResolutionFlags`  
  [in]  Einer der CLSID_RESOLUTION_FLAGS-Werte. Die folgenden Werte werden unterstützt:  
   
--   CLSID_RESOLUTION_DEFAULT: (0 x 0) gibt an, die das Interop-Standardverhalten sollten werden verwendet.  
+-   CLSID_RESOLUTION_DEFAULT: (0 x 0) gibt an, dass die Interop-Standardverhalten verwendet werden soll.  
   
--   CLSID_RESOLUTION_REGISTERED: (0 x 1) gibt an, dass die Registrierung durchsucht werden soll, und shim-Richtlinie sollte angewendet.  
+-   CLSID_RESOLUTION_REGISTERED: (0 x 1) gibt an, die die Registrierung durchsucht werden soll, und Shimrichtlinie angewendet werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Funktion wurde erfolgreich zurückgegeben.|  
-|E_INVALIDARG|Einer der Parameter weist einen ungültigen Typ oder Format.|  
+|E_INVALIDARG|Einer der Parameter hat einen ungültigen Typ oder Format.|  
 |ERROR_INSUFFICIENT_BUFFER|Die `pVersion` Puffer ist nicht groß genug für die gesamte Versionszeichenfolge.|  
 |REGDB_E_CLASSNOTREG|Es gibt keine Klasse, die mit dem angegebenen registriert `CLSID`.|  
-|E_POINTER|`dwLength` ist null, oder `cchBuffer` ist groß genug für die Versionszeichenfolge jedoch `pVersion` ist null.|  
+|E_POINTER|`dwLength` null ist, oder `cchBuffer` ist groß genug für die Versionszeichenfolge, aber `pVersion` ist null.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

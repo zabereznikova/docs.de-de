@@ -2,21 +2,15 @@
 title: Prozeduren in Visual Basic
 ms.date: 04/28/2017
 helpviewer_keywords:
-- procedures [Visual Basic], structured code
-- Visual Basic code, procedures
-- procedures [Visual Basic], types of
-- structured code [Visual Basic], procedures
-- procedures
+  - 'procedures [Visual Basic], structured code'
+  - 'Visual Basic code, procedures'
+  - 'procedures [Visual Basic], types of'
+  - 'structured code [Visual Basic], procedures'
+  - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: a4a168fd1fad75f5038044d49886782f391ceb1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655131"
 ---
 # <a name="procedures-in-visual-basic"></a>Prozeduren in Visual Basic
-Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklarationsanweisung eingeschlossen (`Function`, `Sub`, `Operator`, `Get`, `Set`) und ein entsprechender `End` Deklaration. Alle ausführbaren Anweisungen in Visual Basic müssen innerhalb einer Prozedur sein.  
+Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklarationsanweisung eingeschlossen (`Function`, `Sub`, `Operator`, `Get`, `Set`) und eine entsprechende `End` Deklaration. Alle ausführbare Anweisungen in Visual Basic müssen in einer Prozedur sein.  
   
 ## <a name="calling-a-procedure"></a>Aufrufen einer Prozedur  
  Sie rufen eine Prozedur an einer anderen Stelle im Code auf. Dies wird als *Prozeduraufruf* bezeichnet. Wenn die Ausführung der Prozedur abgeschlossen ist, übergibt die Prozedur die Kontrolle wieder an den Code, von dem sie aufgerufen wurde. Dieser Code wird als *aufrufender Code* bezeichnet. Der aufrufende Code ist eine Anweisung, oder ein Ausdruck in einer Anweisung, die die Prozedur mit einem Namen angibt und dieser die Kontrolle übergibt.  
@@ -34,7 +28,7 @@ Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklara
  In den meisten Fällen muss eine Prozedur bei jedem Aufruf unterschiedliche Daten verarbeiten. Diese Informationen können Sie im Rahmen eines Prozeduraufrufs an die Prozedur übergeben. Die Prozedur definiert keine oder mehrere *Parameter*. Diese Parameter stellen jeweils einen Wert dar, der von der Prozedur erwartet wird. Jedem Parameter in der Definition der Prozedur entspricht ein *Argument* im Prozeduraufruf. Ein Argument stellt einen Wert dar, den Sie an den entsprechenden Parameter in einem gegebenen Prozeduraufruf übergeben.  
   
 ## <a name="types-of-procedures"></a>Prozedurtypen  
- Visual Basic verwendet mehrere Typen von Prozeduren:  
+ Visual Basic verwendet mehrere Prozedurtypen:  
   
 -   [Sub-Prozeduren](./sub-procedures.md) führen Aktionen aus, geben jedoch keinen Wert an den aufrufenden Code zurück.  
   
@@ -61,14 +55,14 @@ Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklara
   
 -   Nachdem Sie Prozeduren für ein Programm entwickelt haben, können Sie diese auch in anderen Programmen einsetzen, und das oft mit wenigen bis gar keinen Änderungen. So können Sie Codeduplikate vermeiden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Erstellen einer Prozedur](./how-to-create-a-procedure.md)  
- [Sub-Prozeduren](./sub-procedures.md)  
- [Function-Prozeduren](./function-procedures.md)  
- [Eigenschaftenprozeduren](./property-procedures.md)  
- [Operatorprozeduren](./operator-procedures.md)  
- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
- [Rekursive Prozeduren](./recursive-procedures.md)  
- [Prozedurüberladung](./procedure-overloading.md)  
- [Generische Prozeduren in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Erstellen Sie eine Prozedur](./how-to-create-a-procedure.md)
+- [Sub-Prozeduren](./sub-procedures.md)
+- [Function-Prozeduren](./function-procedures.md)
+- [Eigenschaftenprozeduren](./property-procedures.md)
+- [Operatorprozeduren](./operator-procedures.md)
+- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
+- [Rekursive Prozeduren](./recursive-procedures.md)
+- [Prozedurüberladung](./procedure-overloading.md)
+- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: bb345b3106895a75c00a0d80b8665a0e9239598f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 40c98d17a52643f451ec01bc8b97c60f2b011b36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498972"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Vorgehensweise: Ändern des Kryptografieanbieters für ein x. 509-Zertifikat&#39;s privaten Schlüssel
 In diesem Thema wird gezeigt, wie so ändern Sie den Kryptografieanbieter verwendet, um private Schlüssel eines x. 509-Zertifikats bereitzustellen und den Anbieter in das Windows Communication Foundation (WCF)-Sicherheitsframework zu integrieren. Weitere Informationen zur Verwendung von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -33,9 +33,9 @@ In diesem Thema wird gezeigt, wie so ändern Sie den Kryptografieanbieter verwen
   
 2.  Überschreiben Sie die schreibgeschützte <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A>-Eigenschaft. Diese Eigenschaft gibt die tatsächliche Schlüsselgröße für das Paar aus öffentlichem und privatem Schlüssel des Zertifikats zurück.  
   
-3.  Überschreiben Sie die <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>-Methode. Diese Methode wird von der WCF-Sicherheitsframework zum Entschlüsseln eines symmetrischen Schlüssels mit dem privaten Schlüssel des Zertifikats aufgerufen. (Der Schlüssel wurde vorher mit dem öffentlichen Schlüssel des Zertifikats verschlüsselt.)  
+3.  Überschreiben Sie die <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> -Methode. Diese Methode wird von der WCF-Sicherheitsframework zum Entschlüsseln eines symmetrischen Schlüssels mit dem privaten Schlüssel des Zertifikats aufgerufen. (Der Schlüssel wurde vorher mit dem öffentlichen Schlüssel des Zertifikats verschlüsselt.)  
   
-4.  Überschreiben Sie die <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>-Methode. Diese Methode wird aufgerufen, durch die WCF-Sicherheitsframework zum Abrufen einer Instanz von der <xref:System.Security.Cryptography.AsymmetricAlgorithm> Klasse, die den Kryptografieanbieter für entweder das Zertifikat der privaten oder öffentlichen Schlüssel, abhängig von den Parametern darstellt, die an die Methode übergeben.  
+4.  Überschreiben Sie die <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> -Methode. Diese Methode wird aufgerufen, durch die WCF-Sicherheitsframework zum Abrufen einer Instanz von der <xref:System.Security.Cryptography.AsymmetricAlgorithm> Klasse, die den Kryptografieanbieter für entweder das Zertifikat der privaten oder öffentlichen Schlüssel, abhängig von den Parametern darstellt, die an die Methode übergeben.  
   
 5.  Dies ist optional. Überschreiben Sie die <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>-Methode. Überschreiben Sie diese Methode, wenn eine andere Implementierung der <xref:System.Security.Cryptography.HashAlgorithm>-Klasse erforderlich ist.  
   
@@ -76,15 +76,15 @@ In diesem Thema wird gezeigt, wie so ändern Sie den Kryptografieanbieter verwen
      [!code-csharp[c_CustomX509Token#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#7)]
      [!code-vb[c_CustomX509Token#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#7)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey>  
- <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey>  
- <xref:System.IdentityModel.Tokens.SecurityKey>  
- <xref:System.Security.Cryptography.AsymmetricAlgorithm>  
- <xref:System.Security.Cryptography.HashAlgorithm>  
- <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>  
- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenanbieters](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
- [Vorgehensweise: Erstellen eines benutzerdefinierten Tokens](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
- [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey>
+- <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey>
+- <xref:System.IdentityModel.Tokens.SecurityKey>
+- <xref:System.Security.Cryptography.AsymmetricAlgorithm>
+- <xref:System.Security.Cryptography.HashAlgorithm>
+- <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>
+- [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Authentifikator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Anbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Tokens](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

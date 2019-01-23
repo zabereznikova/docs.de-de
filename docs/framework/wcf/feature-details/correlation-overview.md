@@ -2,12 +2,12 @@
 title: Übersicht über die Korrelation
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: cc165bb4b74c70b740632c5cb873ed200b2283bb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7128ff531bb81fb6de526092513d5525ca138735
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185861"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512774"
 ---
 # <a name="correlation-overview"></a>Übersicht über die Korrelation
 Die Korrelation ist der Mechanismus zum Verknüpfen von Workflowdienstnachrichten miteinander oder mit dem Anwendungsinstanzzustand. Dies kann z. B. eine Antwort auf eine ursprüngliche Anforderung oder eine bestimmte Bestell-ID mit dem beibehaltenen Zustand eines Workflows zur Bestellverarbeitung sein. Dieses Thema enthält eine Übersicht über die Korrelation: Die anderen Themen in diesem Abschnitt enthalten weitere Informationen zu den einzelnen Korrelationstypen.  
@@ -27,6 +27,6 @@ Weitere Informationen zu Protokoll Korrelation, finden Sie unter [permanenter Du
 
 Bei der inhaltsbasierten Korrelation wird ein bestimmtes Informationselement in der Nachricht verwendet, um diese einer bestimmten Instanz zuzuordnen. Im Gegensatz zur protokollbasierten Korrelation erfordert die inhaltsbasierte Korrelation es, dass der Anwendungsautor explizit angibt, wo sich diese Daten in den einzelnen verknüpften Nachrichten befinden. Aktivitäten, die die inhaltsbasierte Korrelation verwenden, geben diese Nachrichtendaten mit einem <xref:System.ServiceModel.MessageQuerySet>-Objekt an. Die inhaltsbasierte Korrelation ist bei der Kommunikation mit Diensten nützlich, die keine Kontextbindung verwenden, z. B. <xref:System.ServiceModel.BasicHttpContextBinding>.
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 
 - [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

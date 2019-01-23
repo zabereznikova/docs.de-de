@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2c3a542d5db2557d351227f12276f61593787ba3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5070403cea88fb9c4a5b5d6140fe4d5a5218c636
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512164"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementieren des Transformieren-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Richtlinien und Konventionen für das Implementieren von <xref:System.Windows.Automation.Provider.ITransformProvider>, einschließlich Informationen über Eigenschaften, Methoden und Ereignissen. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.  
   
@@ -41,12 +41,12 @@ ms.locfileid: "47200748"
   
 |Erforderliche Member|Memberart|Hinweise|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Methode|Keiner|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Methode|Keine|  
   
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "47200748"
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> -If die <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> ist "false".|  
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -If die <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> ist "false".|  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
