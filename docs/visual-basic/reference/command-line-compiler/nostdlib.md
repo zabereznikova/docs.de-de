@@ -1,19 +1,19 @@
 ---
-title: -Nostdlib (Visual Basic)
+title: -nostdlib (Visual Basic)
 ms.date: 03/13/2018
 helpviewer_keywords:
 - nostdlib compiler option [Visual Basic]
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 957eca6066a316a4f4daf7e6de972df98082c26c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32a5b0531851e9f8b4280e8d2908bfe2d011bf90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183294"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54547722"
 ---
-# <a name="-nostdlib-visual-basic"></a>-Nostdlib (Visual Basic)
+# <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 Bewirkt, dass den Compiler nicht automatisch auf die Standardbibliotheken verweisen.  
   
 ## <a name="syntax"></a>Syntax  
@@ -38,8 +38,8 @@ Bewirkt, dass den Compiler nicht automatisch auf die Standardbibliotheken verwei
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Anpassen der verfügbaren Objekte in „My“](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+## <a name="see-also"></a>Siehe auch
+- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Anpassen der verfügbaren Objekte in „My“](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

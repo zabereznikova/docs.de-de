@@ -1,5 +1,5 @@
 ---
-title: '&lt;GcAllowVeryLargeObjects&gt; Element'
+title: '&lt;gcAllowVeryLargeObjects&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - gcAllowVeryLargeObjects element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5e0a443f86848a446a7233a2c2e80f693cae9be
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 16a6b497136b6cffabeb4151e54bec8d80928b5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549108"
 ---
-# <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;GcAllowVeryLargeObjects&gt; Element
+# <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt; Element
 Ermöglicht auf 64-Bit-Plattformen Arrays mit einer Gesamtgröße von mehr als 2 Gigabyte (GB).  
   
  \<Configuration >-Element  
 \<Common Language Runtime >-Element  
-\<GcAllowVeryLargeObjects >-Element  
+\<gcAllowVeryLargeObjects> Element  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -77,6 +77,6 @@ Ermöglicht auf 64-Bit-Plattformen Arrays mit einer Gesamtgröße von mehr als 2
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+## <a name="see-also"></a>Siehe auch
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

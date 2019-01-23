@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID393
 ms.assetid: b527c5a8-3f24-42e9-871f-e6305c9f514b
-ms.openlocfilehash: b3d8de20d393e52d7d14236dff436faf2e35eb99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb0fe206e5ddda645bbaae60469de2d764b3650
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549586"
 ---
 # <a name="get-not-supported-at-run-time"></a>'Get' wird zur Laufzeit nicht unterstützt.
 Sie haben versucht, eine Eigenschaft zur Laufzeit zu lesen, auf die nur zur Entwurfszeit zugegriffen werden kann.  
@@ -20,5 +20,5 @@ Sie haben versucht, eine Eigenschaft zur Laufzeit zu lesen, auf die nur zur Entw
   
 2.  Entfernen Sie den Verweis auf die Eigenschaft.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a>Siehe auch
+- [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fdace527194228dd6004a991950a80d23275650
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 74b9ef2cdd48c403eb5a50d357a673eee3102106
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548243"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription-Methode
-Ruft eine Zeichenfolge, enthält die Beschreibung der der Assistent für verwaltetes Debuggen (MDA) dargestellte [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Ruft eine Zeichenfolge, enthält die Beschreibung des managed debugging Assistant (MDA) durch dargestellt [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,19 +40,19 @@ HRESULT GetDescription (
   
 #### <a name="parameters"></a>Parameter  
  `cchName`  
- [in] Die Größe des Zeichenfolgenpuffers, in denen die Beschreibung gespeichert wird.  
+ [in] Die Größe des Zeichenfolgenpuffers, die die Beschreibung gespeichert werden sollen.  
   
  `pcchName`  
- [out] Ein Zeiger auf die Anzahl der Bytes im Zeichenfolgenpuffer zurückgegeben.  
+ [out] Ein Zeiger auf die Anzahl der Bytes in den Puffer zurückgegeben.  
   
  `szName`  
- [out] Einen Zeichenfolgenpuffer, enthält die Beschreibung des MDA.  
+ [out] Einen Zeichenfolgenpuffer, der mit der Beschreibung des MDA.  
   
 ## <a name="remarks"></a>Hinweise  
  Die Zeichenfolge kann 0 (null) lang sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -60,6 +60,6 @@ HRESULT GetDescription (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugMDA-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugMDA-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

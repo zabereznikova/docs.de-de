@@ -2,18 +2,18 @@
 title: Erkennen einer Transaktionsanwendung
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: 4fa85fea0651d7a31c5a50bbc9c1226421b976b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4cc42e7ac6847d8320b96fce5198d55df303de2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496999"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550278"
 ---
 # <a name="diagnosing-transactional-applications"></a>Erkennen einer Transaktionsanwendung
-In diesem Thema wird beschrieben, wie die Windows Communication Foundation (WCF)-Verwaltungs- und Diagnosefunktion transaktionsanwendung mit.  
+Dieses Thema beschreibt, wie Sie die Windows Communication Foundation (WCF)-Verwaltung und die Diagnosefunktion zu verwenden, um einer transaktionsanwendung zu beheben.  
   
 ## <a name="performance-counters"></a>Leistungsindikatoren  
- WCF bietet einen Standardsatz von Leistungsindikatoren für die Leistung der transaktionsanwendung messen. Weitere Informationen finden Sie unter [Leistungsindikatoren](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
+ WCF bietet einen Standardsatz von Leistungsindikatoren für den Sie transaktionale die Leistung Ihrer Anwendung zu messen. Weitere Informationen finden Sie unter [Leistungsindikatoren](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md).  
   
  Leistungsindikatoren werden in drei verschiedene Stufen unterteilt: Dienst, Endpunkt und Vorgang, gemäß folgender Tabellen.  
   
@@ -45,7 +45,7 @@ In diesem Thema wird beschrieben, wie die Windows Communication Foundation (WCF)
 |Übergegangene Transaktionen pro Sekunde|Die Anzahl der Transaktionen, die innerhalb von einer Sekunde an diesem Endpunkt in Vorgänge übergegangen sind. Dieser Indikator wird jedes Mal gesteigert, wenn eine Nachricht, die an den Endpunkt gesendet wird, eine Transaktion enthält.|  
   
 ## <a name="windows-management-instrumentation"></a>Windows-Verwaltungsinstrumentierung (Windows Management Instrumentation)  
- WCF macht inspektionsdaten eines Diensts zur Laufzeit über einen WCF (Windows Management Instrumentation, WMI)-Anbieter verfügbar. Weitere Informationen zum Zugreifen auf WMI-Daten finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ WCF macht inspektionsdaten eines Diensts zur Laufzeit über einen WCF (Windows Management Instrumentation, WMI) Anbieter verfügbar. Weitere Informationen zum Zugreifen auf WMI-Daten finden Sie unter [mithilfe von Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
  Einige schreibgeschützte WMI-Eigenschaften geben die angewendeten Transaktionseinstellungen für einen Dienst an. In der folgenden Tabelle sind alle diese Einstellungen aufgeführt.  
   
@@ -118,9 +118,9 @@ In diesem Thema wird beschrieben, wie die Windows Communication Foundation (WCF)
     </configuration>  
     ```  
   
-     Dies aktiviert außerdem die WCF-Ablaufverfolgung als auch WCF nutzt die <xref:System.Transactions> Infrastruktur.  
+     Dies aktiviert außerdem die WCF-Ablaufverfolgung, wie WCF außerdem verwendet die <xref:System.Transactions> Infrastruktur.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwaltung und Diagnose](../../../../docs/framework/wcf/diagnostics/index.md)  
- [Konfigurieren der Ablaufverfolgung](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwaltung und Diagnose](../../../../docs/framework/wcf/diagnostics/index.md)
+- [Konfigurieren der Ablaufverfolgung](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

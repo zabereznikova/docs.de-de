@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 343ee168809fc63ef63559eda0fd018abde684e7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 186238d8e823f028caaed2e2618d882d21e1358f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548949"
 ---
 # <a name="declare-statement"></a>Declare Statement
 Deklariert einen Verweis auf eine Prozedur in einer externen Datei implementiert.  
@@ -54,7 +54,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |Begriff|Definition|  
 |---|---|  
 |`attributelist`|Dies ist optional. Finden Sie unter [Liste](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Dies ist optional. Einer der folgenden Werte ist möglich:<br /><br /> -   [Öffentliche](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [geschützt](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Privat geschützt](../../language-reference/modifiers/private-protected.md)<br /><br /> Finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`accessmodifier`|Dies ist optional. Einer der folgenden Werte ist möglich:<br /><br /> -   [Öffentliche](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [geschützt](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br />- [Privat geschützt](../../language-reference/modifiers/private-protected.md)<br /><br /> Siehe [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Dies ist optional. Finden Sie unter [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`charsetmodifier`|Dies ist optional. Gibt an, Zeichensätze und Informationen zu suchen. Einer der folgenden Werte ist möglich:<br /><br /> -   [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md) (Standard)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|Optional, doch entweder `Sub` oder `Function` muss angezeigt werden. Gibt an, dass die externe Prozedur keinen Wert zurückgibt.|  
@@ -110,7 +110,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **Bereich.** Ein externer Verweis ist der Gültigkeitsbereich der Klasse, Struktur oder Moduls.  
   
--   **Lebensdauer.** Ein externer Verweis verfügt über die gleiche Lebensdauer wie die Klasse, Struktur oder Modul, in dem sie deklariert ist.  
+-   **Lifetime.** Ein externer Verweis verfügt über die gleiche Lebensdauer wie die Klasse, Struktur oder Modul, in dem sie deklariert ist.  
   
 -   **Aufrufen einer externen Prozedur an.** Sie rufen eine externe Prozedur auf die gleiche Weise, die Sie aufrufen eine `Function` oder `Sub` Prozedur – indem Sie diesen in einem Ausdruck verwenden, wenn es sich um einen Wert zurückgibt, oder durch Angabe in einer [Call-Anweisung](../../../visual-basic/language-reference/statements/call-statement.md) , wenn sie keinen Wert zurückgibt.  
   
@@ -141,12 +141,12 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Call-Anweisung](../../../visual-basic/language-reference/statements/call-statement.md)  
- [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>
+- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [AddressOf-Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Parameterliste](../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Call-Anweisung](../../../visual-basic/language-reference/statements/call-statement.md)
+- [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

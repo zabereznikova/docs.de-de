@@ -5,57 +5,57 @@ helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-ms.openlocfilehash: 2782ae483d673f8f1eccab10876aca858737260a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96168c197771cbfebf3a090ac236b21e487cb3a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551851"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Zusammenführen von Menüelementen im MenuStrip-Steuerelement von Windows Forms
-Wenn Sie eine Anwendung Multiple Document Interface (MDI) verfügen, können Sie Menüelemente oder ganze Menüs des untergeordneten Formulars in den Menüs des übergeordneten Formulars zusammenführen.  
+Wenn Sie eine Anwendung für die Multiple Document Interface (MDI) verfügen, können Sie Menüelemente oder ganze Menüs aus dem untergeordnete Formular in den Menüs des übergeordneten Formulars zusammenführen.  
   
  Dieses Thema beschreibt die grundlegenden Konzepte, Zusammenführen von Menüelementen in einer MDI-Anwendung zugeordnet.  
   
 ## <a name="general-concepts"></a>Allgemeine Konzepte  
- Zusammenführen von Prozeduren umfassen ein Ziel und ein Datenquellen-Steuerelement:  
+ Das Zusammenführen von Prozeduren umfassen sowohl ein Ziel und ein Datenquellen-Steuerelement:  
   
--   Das Ziel ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement im Hauptformular oder übergeordneten MDI-Formulars, in dem Sie Menüelemente zusammengeführt werden.  
+-   Das Ziel ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement im Hauptformular oder das übergeordnete MDI-Formular, in dem Sie Menüelemente zusammengeführt werden.  
   
--   Die Quelle ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement untergeordnetes MDI-Formular, das die Menüelemente enthält im Ziel zusammengeführt werden sollen.  
+-   Die Quelle ist die <xref:System.Windows.Forms.MenuStrip> Steuerelement die untergeordneten MDI-Formulars, das die Menüelemente enthält, in dem Menü "Ziel" zusammenzuführen.  
   
- Die <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> Eigenschaft identifiziert das Menüelement, deren Dropdown-Liste, füllen Sie die Titel der aktuellen MDI, übergeordneten Formulars untergeordnete MDI-Elemente. Angenommen, Sie untergeordnete MDI-Fenster, die derzeit geöffnet sind in der Regel Auflisten der **Fenster** Menü.  
+ Die <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> identifiziert das Menüelement, deren Dropdown-Listenfeld, füllen Sie die Titel der aktuellen MDI, übergeordnete Formular des untergeordneten MDI-Objekte. Angenommen, Sie untergeordnete MDI-Fenster, die derzeit geöffnet sind in der Regel Auflisten der **Fenster** Menü.  
   
- Die <xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A> Eigenschaft wird angegeben, welche die Menüelemente stammen eine <xref:System.Windows.Forms.MenuStrip> auf ein untergeordnetes MDI-Formular.  
+ Die <xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A> Eigenschaft identifiziert, welche die Menüelemente stammen eine <xref:System.Windows.Forms.MenuStrip> auf ein untergeordnetes MDI-Formular.  
   
- Sie können Menüelemente manuell oder automatisch zusammenführen. Die Menüelemente merge für beide Methoden die gleiche Weise, jedoch die Zusammenführung ist anders, wie in den Abschnitten "Manuell zusammenführen" und "Automatische zusammenführen" weiter unten in diesem Thema erläutert wird aktiviert. Manuelles und automatisches Zusammenführen, jeden Merge-Aktion wirkt sich auf die nächste mergeaktion.  
+ Sie können Menüelemente manuell oder automatisch zusammenführen. Die Menüelemente zusammenzuführen, auf die gleiche Weise bei beiden Methoden, aber die Zusammenführung ist anders, wie in den Abschnitten "Manuell zusammenführen" und "Automatische Zusammenführung wird durch" weiter unten in diesem Thema erläutert aktiviert. Manueller und automatischer zusammengeführt, jeder Zusammenführungsvorgang wirkt sich auf die nächste Aktion für die Mergereplikation.  
   
- <xref:System.Windows.Forms.MenuStrip> Zusammenführen von Menüelementen aus einem verschiebt <xref:System.Windows.Forms.ToolStrip> in eine andere statt klonen, wie dies bei der Fall war <xref:System.Windows.Forms.MainMenu>.  
+ <xref:System.Windows.Forms.MenuStrip> Zusammenführen von Menüelementen aus einem verschiebt <xref:System.Windows.Forms.ToolStrip> in ein anderes anstatt zu klonen, wie bei der Fall war <xref:System.Windows.Forms.MainMenu>.  
   
 ## <a name="mergeaction-values"></a>MergeAction-Werte  
- Setzen Sie die mergeaktion auf Menüelemente in der Quelle <xref:System.Windows.Forms.MenuStrip> mithilfe der <xref:System.Windows.Forms.MergeAction> Eigenschaft.  
+ Festlegen der Merge-Aktion auf Menüelemente in der Quelle <xref:System.Windows.Forms.MenuStrip> mithilfe der <xref:System.Windows.Forms.MergeAction> Eigenschaft.  
   
  Die folgende Tabelle beschreibt die Bedeutung und die typische Verwendung der verfügbaren Merge Aktionen.  
   
 |MergeAction-Wert|Beschreibung|Typische Verwendung|  
 |-----------------------|-----------------|-----------------|  
-|<xref:System.Windows.Forms.MergeAction.Append>|(Standard) Fügt das Quellelement bis zum Ende der Auflistung des Zielelements an.|Hinzufügen von Menüelementen am Ende des Menüs, wenn ein Teil der Anwendung aktiviert wird.|  
-|<xref:System.Windows.Forms.MergeAction.Insert>|Fügt das Quellelement des Zielelements-Auflistung, in dem durch angegebenen Speicherort der <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> Eigenschaft für das Quellelement festgelegt.|Hinzufügen von Menüelementen in der Mitte oder den Anfang des Menüs, wenn ein Teil der Anwendung aktiviert wird.<br /><br /> Wenn der Wert der <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> entspricht dem für beide Menüelemente sie in umgekehrter Reihenfolge hinzugefügt werden. Legen Sie <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> entsprechend um die ursprüngliche Reihenfolge beizubehalten.|  
-|<xref:System.Windows.Forms.MergeAction.Replace>|Findet eine Übereinstimmung Text oder verwendet den <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> -Wert, wenn keine Übereinstimmung Text gefunden wird, und dann das entsprechende Ziel-Menüelement mit dem Menüelement Quelle ersetzt.|Ersetzen ein Ziel-Menüelement mit einer Quelle Menüelement mit dem gleichen Namen, das etwas anderes durchführt.|  
-|<xref:System.Windows.Forms.MergeAction.MatchOnly>|Findet eine Übereinstimmung Text oder verwendet den <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> -Wert, wenn keine Übereinstimmung Text gefunden wird, und dann alle Dropdown-Elemente aus der Quelle zum Ziel fügt.|Erstellen einer Menüstruktur, fügt ein Untermenü Menüelemente fügt oder Menüelemente aus einem Untermenü entfernt. Sie können z. B. ein Menüelement aus untergeordnetes MDI-Fenster hinzufügen, für "Main" eine <xref:System.Windows.Forms.MenuStrip> **speichern unter** Menü.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly> ermöglicht Ihnen die Menüstruktur navigieren, ohne eine Aktion auszuführen. Er bietet eine Möglichkeit zum Auswerten der nachfolgenden Elemente.|  
-|<xref:System.Windows.Forms.MergeAction.Remove>|Findet eine Übereinstimmung Text oder verwendet den <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> -Wert, wenn keine Übereinstimmung Text gefunden wird, und klicken Sie dann das Element aus der Zieldatenbank entfernt.|Entfernen eines Menüelements aus dem Ziel <xref:System.Windows.Forms.MenuStrip>.|  
+|<xref:System.Windows.Forms.MergeAction.Append>|(Standard) Hinzugefügt am Ende der Auflistung für das Zielelement das Quellelement zu.|Hinzufügen von Menüelementen an das Ende des Menüs, wenn ein Teil des Programms aktiviert ist.|  
+|<xref:System.Windows.Forms.MergeAction.Insert>|Fügt das Quellelement das Zielelement-Auflistung, an dem vom angegebenen Speicherort der <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> -Eigenschaft festgelegt wird, auf das Quellelement.|Hinzufügen von Menüelementen in die Mitte oder am Anfang des Menüs ein, wenn ein Teil des Programms aktiviert ist.<br /><br /> Wenn der Wert des <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> ist identisch für beide Menüelemente werden sie hinzugefügt, in umgekehrter Reihenfolge. Legen Sie <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> entsprechend um die ursprüngliche Reihenfolge beizubehalten.|  
+|<xref:System.Windows.Forms.MergeAction.Replace>|Findet eine Übereinstimmung von Text oder verwendet den <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> -Wert, wenn keine Übereinstimmung von Text gefunden wird, und dann das entsprechende Ziel-Menüelement mit dem Menüelement Quelle ersetzt.|Ersetzen ein Ziel-Menüelement mit einem Menüelement "Source" mit dem gleichen Namen, die etwas anderes ist.|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|Findet eine Übereinstimmung von Text oder verwendet den <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> -Wert, wenn keine Übereinstimmung von Text gefunden wird, und dann alle Dropdown-Elemente aus der Quelle zum Ziel fügt.|Erstellen mit einer Menüstruktur, fügt Menüelemente in einem Untermenü hinzugefügt oder entfernt Elemente aus einem Untermenü. Sie können z. B. ein Menüelement eines untergeordneten MDI-hinzufügen, um ein <xref:System.Windows.Forms.MenuStrip> **speichern** Menü.<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly> können Sie Sie durch die Menüstruktur zu navigieren, ohne dass eine Aktion aus. Es bietet eine Möglichkeit zum Auswerten der nachfolgenden Elemente.|  
+|<xref:System.Windows.Forms.MergeAction.Remove>|Findet eine Übereinstimmung von Text oder verwendet den <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> -Wert, wenn keine Übereinstimmung von Text gefunden wird, und klicken Sie dann das Element aus der Zieldatenbank entfernt.|Entfernen ein Menüelement aus dem Ziel <xref:System.Windows.Forms.MenuStrip>.|  
   
 ## <a name="manual-merging"></a>Manuelles Zusammenführen  
- Nur <xref:System.Windows.Forms.MenuStrip> Steuerelemente automatische Zusammenführen teilnehmen. Kombinieren Sie die Elemente anderer Steuerelemente wie z. B. <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.StatusStrip> Steuerelemente, Sie müssen diese manuell zusammengeführt, durch Aufrufen der <xref:System.Windows.Forms.ToolStripManager.Merge%2A> und <xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A> Methoden im Code nach Bedarf.  
+ Nur <xref:System.Windows.Forms.MenuStrip> automatische Zusammenführung wird durch Steuerelemente zu teilnehmen. Kombinieren Sie die Elemente von anderen Steuerelementen, z. B. <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.StatusStrip> -Steuerelemente, Sie müssen diese manuell zusammengeführt, durch den Aufruf der <xref:System.Windows.Forms.ToolStripManager.Merge%2A> und <xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A> Methoden im Code nach Bedarf.  
   
 ## <a name="automatic-merging"></a>Automatisches zusammenführen  
- Sie können die automatische Zusammenführen für MDI-Anwendungen durch Aktivierung der Source-Format verwenden. Verwenden einer <xref:System.Windows.Forms.MenuStrip> legen Sie in einer MDI-Anwendung, die <xref:System.Windows.Forms.Form.MainMenuStrip%2A> Eigenschaft, um das Ziel <xref:System.Windows.Forms.MenuStrip> , damit das Zusammenführen von Aktionen für die Datenquelle ausgeführt <xref:System.Windows.Forms.MenuStrip> im Ziel wiedergegeben werden <xref:System.Windows.Forms.MenuStrip>.  
+ Sie können die automatische Zusammenführung für MDI-Anwendungen durch Aktivieren der Quellform verwenden. Verwenden einer <xref:System.Windows.Forms.MenuStrip> legen Sie in einer MDI-Anwendung, die <xref:System.Windows.Forms.Form.MainMenuStrip%2A> die Zieleigenschaft <xref:System.Windows.Forms.MenuStrip> , damit das Zusammenführen von Aktionen für die Datenquelle ausgeführt <xref:System.Windows.Forms.MenuStrip> im Ziel wiedergegeben werden <xref:System.Windows.Forms.MenuStrip>.  
   
- Sie können das automatische zusammenführen, indem Sie aktivieren Auslösen der <xref:System.Windows.Forms.MenuStrip> der MDI-Quelle. Nach der Aktivierung der Quelle <xref:System.Windows.Forms.MenuStrip> MDI-Ziel zusammengeführt wird. Wird ein neues Formular aktiv ist, wird die Zusammenführung im letzten Formular zurückgesetzt und auf das neue Formular ausgelöst. Sie können dieses Verhalten steuern, durch Festlegen der <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> Eigenschaft nach Bedarf auf jedem <xref:System.Windows.Forms.ToolStripItem>, festlegen und die <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> Eigenschaft auf jedem <xref:System.Windows.Forms.MenuStrip>.  
+ Sie können die automatische Zusammenführung durch Aktivierung Auslösen der <xref:System.Windows.Forms.MenuStrip> der MDI-Quelle. Nach der Aktivierung der Quelle <xref:System.Windows.Forms.MenuStrip> mit dem MDI-Ziel zusammengeführt wird. Wird ein neues Formular aktiv ist, ist die Zusammenführung auf das letzte Formular zurückgesetzt und für das neue Formular ausgelöst. Sie können dieses Verhalten steuern, durch Festlegen der <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> Eigenschaft nach Bedarf auf den einzelnen <xref:System.Windows.Forms.ToolStripItem>, und durch Festlegen der <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> Eigenschaft auf den einzelnen <xref:System.Windows.Forms.MenuStrip>.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ToolStripManager>  
- <xref:System.Windows.Forms.MenuStrip>  
- [MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
- [Gewusst wie: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
- [Gewusst wie: Einrichten des automatischem Zusammenführens von Menüs für MDI-Anwendungen (Multiple Document Interface)](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ToolStripManager>
+- <xref:System.Windows.Forms.MenuStrip>
+- [MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+- [Vorgehensweise: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [Vorgehensweise: Richten Sie automatische Zusammenführen von Menüs für MDI-Anwendungen](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

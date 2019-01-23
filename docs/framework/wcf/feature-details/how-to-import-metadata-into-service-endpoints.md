@@ -2,15 +2,15 @@
 title: 'Vorgehensweise: Importieren von Metadaten in Dienstendpunkte'
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: 88b48b95a62c000d88b302589ebc489089e77602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a6375f0a0b0f657401a1ac2254be942d4e618aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492543"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548676"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>Vorgehensweise: Importieren von Metadaten in Dienstendpunkte
-In diesem Thema wird erläutert, wie zum Importieren von Metadaten in eine Auflistung von Dienstendpunkten und verwenden Sie den Dienst definiert, der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). Im Thema wird gezeigt, wie Sie eine Clientanwendung erstellen, die Metadaten aus dem Dienst importiert und anschließend die`Add`-Methode für den Dienst aufruft.  
+In diesem Thema wird erläutert, wie zum Importieren von Metadaten in einer Auflistung von Dienstendpunkten und Verwenden des Diensts definiert, der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). Im Thema wird gezeigt, wie Sie eine Clientanwendung erstellen, die Metadaten aus dem Dienst importiert und anschließend die`Add`-Methode für den Dienst aufruft.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>So importieren Sie Metadaten in Dienstendpunkte  
   
@@ -27,7 +27,7 @@ In diesem Thema wird erläutert, wie zum Importieren von Metadaten in eine Aufli
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
     > [!NOTE]
-    >  Nachdem Sie die Metadaten importiert haben, können Sie keinen Clientkanal mehr erstellen oder die Metadaten exportieren. Dies liegt daran, dass an diesem Punkt keine Typinformationen verfügbar sind. Typinformationen sind erforderlich, um direkt mit dem Dienst zu interagieren oder Metadaten zu exportieren. Um die Typinformationen zu erzeugen, müssen Sie den in den Schritten 4 und 5 gezeigten Code generieren. Alternativ dazu können Sie auch die <xref:System.ServiceModel.Description.MetadataResolver>-Hilfsklasse verwenden. Weitere Informationen finden Sie unter [wie: Verwenden von MetadataResolver, erhalten Dynamisches Binden von Metadaten](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
+    >  Nachdem Sie die Metadaten importiert haben, können Sie keinen Clientkanal mehr erstellen oder die Metadaten exportieren. Dies liegt daran, dass an diesem Punkt keine Typinformationen verfügbar sind. Typinformationen sind erforderlich, um direkt mit dem Dienst zu interagieren oder Metadaten zu exportieren. Um die Typinformationen zu erzeugen, müssen Sie den in den Schritten 4 und 5 gezeigten Code generieren. Alternativ dazu können Sie auch die <xref:System.ServiceModel.Description.MetadataResolver>-Hilfsklasse verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden von MetadataResolver, um Bindungsmetadaten dynamisch zu erhalten](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
   
 4.  Generieren Sie Typinformationen für jeden Vertrag.  
   
@@ -37,6 +37,6 @@ In diesem Thema wird erläutert, wie zum Importieren von Metadaten in eine Aufli
   
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadaten](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadaten](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md)

@@ -2,11 +2,12 @@
 title: Zuordnen von CLR-Methoden zu kanonischen Funktionen
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 07d488eb8caba8309857ef7fba42e67e155363e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 31e6bfaf86ffb6721491a8d6681d713075a628f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551578"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Zuordnen von CLR-Methoden zu kanonischen Funktionen
 Das Entity Framework stellt einen Satz kanonischer Funktionen bereit, die eine auf vielen Datenbanksystemen verbreitete Funktionalität implementieren, z. B. Zeichenfolgenbearbeitung und mathematische Funktionen. Dadurch können Entwickler für einen großen Bereich von Datenbanksystemen entwickeln. Beim Aufrufen aus einer Abfragetechnologie wie LINQ to Entities werden diese kanonischen Funktionen in die entsprechenden Speicherfunktionen des verwendeten Anbieters übersetzt. Dadurch können Funktionsaufrufe für verschiedene Datenquellen in einer allgemeinen Form ausgedrückt werden, und es werden konsistente datenquellenübergreifende Abfragemöglichkeiten bereitgestellt. Weiterhin werden die bitweisen Operatoren AND, OR, NOT und XOR kanonischen Funktionen zugeordnet, wenn der Operand ein numerischer Typ ist. Bei booleschen Operanden werden durch die bitweisen Operatoren AND, OR, NOT und XOR die logischen Operationen AND, OR, NOT und XOR ihrer Operanden berechnet. Weitere Informationen finden Sie unter [kanonische Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -45,8 +46,8 @@ Das Entity Framework stellt einen Satz kanonischer Funktionen bereit, die eine a
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||  
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||  
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||  
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (Teilzeichenfolge (`this`, 1, `startIndex`), Substring (`this`, `startIndex`  +  `count` + 1, Länge (`this`)-(`startIndex` + `count`)))|Remove(`startIndex`, `count`) wird nur unterstützt, wenn `count` eine ganze Zahl größer oder gleich 0 (null) ist.|  
-Betriebssystem. Replace String (Zeichenfolge `oldValue`, Zeichenfolge `newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (Teilzeichenfolge (`this`, "1" `startIndex`), Substring (`this`, `startIndex`  +  `count` + 1, Länge (`this`) – (`startIndex` + `count`)))|Remove(`startIndex`, `count`) wird nur unterstützt, wenn `count` eine ganze Zahl größer oder gleich 0 (null) ist.|  
+Ystem. Ersetzen Sie dies eine Zeichenfolge (String `oldValue`, Zeichenfolge `newValue`)|Replace(`this`, `oldValue`, `newValue`)||  
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||  
 |System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring (`this`, `startIndex` + 1, `length`)||  
 |System.String ToLower()|ToLower(`this`)||  
@@ -69,11 +70,11 @@ Betriebssystem. Replace String (Zeichenfolge `oldValue`, Zeichenfolge `newValue`
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!=-Operator||  
 |Boolesche Op_LessThan ("DateTime" `t1`, "DateTime" `t2`)|<-Operator||  
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|<=-Operator||  
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` als DateInterval, \_<br /><br /> ByVal `DateValue` als "DateTime", \_<br /><br /> Optionale ByVal `FirstDayOfWeekValue` als "FirstDayOfWeek" = VbSunday, \_<br /><br /> Optionale ByVal `FirstWeekOfYearValue` als FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||Weitere Informationen finden Sie im Abschnitt über die DatePart-Funktion.|  
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` As DateInterval, \_<br /><br /> ByVal `DateValue` As DateTime, \_<br /><br /> Optional ByVal `FirstDayOfWeekValue` As FirstDayOfWeek = VbSunday, \_<br /><br /> Optionale ByVal `FirstWeekOfYearValue` als FirstWeekOfYear VbFirstJan1 = \_<br /><br /> ) As Integer||Weitere Informationen finden Sie im Abschnitt über die DatePart-Funktion.|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  
-Icrosoft. VisualBasic.DateAndTime.Day ("DateTime" `TimeValue`)|Day()||  
+icrosoft.VisualBasic.DateAndTime.Day(DateTime `TimeValue`)|Day()||  
 |Microsoft.VisualBasic.DateAndTime.Hour(DateTime `TimeValue`)|Hour()||  
 |Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)|Minute()||  
 |Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)|Second()||  
@@ -195,5 +196,5 @@ Icrosoft. VisualBasic.DateAndTime.Day ("DateTime" `TimeValue`)|Day()||
 |------------|------------------------|  
 |Guid.NewGuid()|NewGuid()|  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>Siehe auch
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

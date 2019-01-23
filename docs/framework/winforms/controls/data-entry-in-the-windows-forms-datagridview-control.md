@@ -6,31 +6,31 @@ helpviewer_keywords:
 - data entry [Windows Forms], dataGridView control
 - data grids [Windows Forms], data entry
 ms.assetid: 4a6d4676-d4e7-4b0e-9c22-50ce65ffe0d6
-ms.openlocfilehash: f5870b3cedd18d605426c7e27981303adc9beb5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f0dbb99b1005cfea165439f4c08db64ecb18fed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550343"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Dateneingabe im DataGridView-Steuerelement in Windows Forms
-Die `DataGridView` Steuerelement stellt mehrere Funktionen bereit, mit denen Sie ändern, wie Benutzer hinzufügen oder Ändern von Daten im Steuerelement. Beispielsweise können Sie Dateneingabe effizienter gestalten, indem Sie Standardwerte für neue Zeilen bereitstellen und warnen der Benutzer bei Auftreten eines Fehlers.  
+Die `DataGridView` Steuerelement bietet verschiedene Funktionen, mit denen Sie ändern, wie Benutzer hinzufügen oder Ändern von Daten in das Steuerelement. Beispielsweise können Sie die Dateneingabe effizienter gestalten indem Standardwerte für neue Zeilen und warnen Benutzer aus, wenn Fehler auftreten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie die Art ändern, beginnen die Benutzer mit Zellen bearbeiten.  
+ [Vorgehensweise: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie Benutzer starten, bearbeiten die Zellen ändern.  
   
- [Gewusst wie: Angeben von Standardwerten für neue Zeilen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
- Beschreibt, wie die Zeile für neue Datensätze Dateneingabe Zeit zu sparen vorab aufzufüllen.  
+ [Vorgehensweise: Angeben von Standardwerten für neue Zeilen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/specify-default-values-for-new-rows-in-the-datagrid.md)  
+ Beschreibt, wie mit die Zeile für neue Datensätze zur Dateneingabe Zeit zu sparen, vorab aufgefüllt wird.  
   
  [Verwenden der Zeile für neue Datensätze im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Zeile für neue Datensätze im Detail, einschließlich Informationen zum Ausblenden, zum Anpassen der Darstellung und im Zusammenhang mit der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung.  
+ Die Zeile für neue Datensätze im Detail, einschließlich Informationen zum Ausblenden, zum Anpassen der Darstellung, und in welcher dieser Beziehung beschreibt die <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung.  
   
- [Exemplarische Vorgehensweise: Validieren von Daten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
- Beschreibt das Überprüfen von Benutzereingaben, um die Dateneingabe Formatierungsfehler zu verhindern.  
+ [Exemplarische Vorgehensweise: Überprüfen von Daten in das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt das Überprüfen von Benutzereingaben, um die Dateneingabe-Formatierungsfehler zu verhindern.  
   
- [Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
- Beschreibt die Dateneingabe Fehler zu behandeln, die aus der Datenquelle stammen, wenn der Benutzer versucht, einen neuen Wert zu übernehmen.  
+ [Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement von Windows Forms auftreten](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+ Beschreibt die Dateneingabe Fehler zu behandeln, die aus der Datenquelle stammen, wenn der Benutzer versucht, einen neuen Wert zu bestätigen.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DataGridView>  
@@ -50,8 +50,8 @@ Die `DataGridView` Steuerelement stellt mehrere Funktionen bereit, mit denen Sie
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- Enthält Themen, die beschreiben, wie das Steuerelement mit Daten entweder manuell oder von einer externen Datenquelle gefüllt.  
+ Enthält Themen, die beschreiben, wie das Steuerelement mit Daten gefüllt wird, entweder manuell oder von einer externen Datenquelle.  
   
-## <a name="see-also"></a>Siehe auch  
- [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Spaltentypen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch
+- [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Spaltentypen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

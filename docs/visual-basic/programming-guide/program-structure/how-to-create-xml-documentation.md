@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Erstellen einer XML-Dokumentation in Visual Basic'
+title: 'Vorgehensweise: Erstellen von XML-Dokumentation in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 3dfec94a3dd1b8da5d371529b91b47f018bb3843
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d67724aad6cd3e7af30531328d85e89937390dd1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551370"
 ---
-# <a name="how-to-create-xml-documentation-in-visual-basic"></a>Gewusst wie: Erstellen einer XML-Dokumentation in Visual Basic
+# <a name="how-to-create-xml-documentation-in-visual-basic"></a>Vorgehensweise: Erstellen von XML-Dokumentation in Visual Basic
 Dieses Beispiel zeigt, wie Sie XML-Dokumentationskommentare zu Ihrem Code hinzufügen.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -36,7 +36,7 @@ Dieses Beispiel zeigt, wie Sie XML-Dokumentationskommentare zu Ihrem Code hinzuf
   
 5.  Kompilieren Sie den Code zum Generieren einer XML-Datei, die die Dokumentationskommentare enthält. Weitere Informationen finden Sie unter [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Dokumentieren von Code mit XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)  
- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)  
- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+## <a name="see-also"></a>Siehe auch
+- [Dokumentieren von Code mit XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)
+- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)

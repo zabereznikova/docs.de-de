@@ -2,15 +2,15 @@
 title: Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-ms.openlocfilehash: 2f0a32ca2e76122aa13e4ad44c4b69838af26cdb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49a0b9d70022ee655d87b34a3bb044e1f60b308d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549677"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)
-Einige der häufiger verwendeten Standardabfrageoperatoren dedizierte Schlüsselwortsyntax Visual Basic-Sprache an, die sie als Teil des aufgerufen werden kann eine *-Abfrageausdruck*. Mit einem Abfrageausdruck kann eine Abfrage besser lesbar ausgedrückt werden als mit dessen *methodenbasierter* Entsprechung. Die Abfrageausdrucksklauseln werden bei der Kompilierung in Aufrufe der Abfragemethoden übersetzt.  
+Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von Visual Basic, die ihnen ermöglicht, die als Teil des aufzurufenden eine *Abfrageausdruck*. Mit einem Abfrageausdruck kann eine Abfrage besser lesbar ausgedrückt werden als mit dessen *methodenbasierter* Entsprechung. Die Abfrageausdrucksklauseln werden bei der Kompilierung in Aufrufe der Abfragemethoden übersetzt.  
   
 ## <a name="query-expression-syntax-table"></a>Tabelle: Abfrageausdruckssyntax  
  In der folgenden Tabelle finden Sie eine Liste von Standardabfrageoperatoren, die über äquivalente Abfrageausdrucksklauseln verfügen.  
@@ -37,13 +37,13 @@ Einige der häufiger verwendeten Standardabfrageoperatoren dedizierte Schlüssel
 |<xref:System.Linq.Enumerable.SkipWhile%2A>|`Skip While`<br /><br /> (Weitere Informationen finden Sie unter [Skip While-Klausel](../../../../visual-basic/language-reference/queries/skip-while-clause.md).)|  
 |<xref:System.Linq.Enumerable.Sum%2A>|`Aggregate … In … Into Sum()`<br /><br /> (Weitere Informationen finden Sie unter [Aggregate-Klausel](../../../../visual-basic/language-reference/queries/aggregate-clause.md).)|  
 |<xref:System.Linq.Enumerable.Take%2A>|`Take`<br /><br /> (Weitere Informationen finden Sie unter [Take-Klausel](../../../../visual-basic/language-reference/queries/take-clause.md).)|  
-|<xref:System.Linq.Enumerable.TakeWhile%2A>|`Take While`<br /><br /> (Weitere Informationen finden Sie unter [Take While Clause](../../../../visual-basic/language-reference/queries/take-while-clause.md).)|  
+|<xref:System.Linq.Enumerable.TakeWhile%2A>|`Take While`<br /><br /> (Weitere Informationen finden Sie unter [dauern While-Klausel](../../../../visual-basic/language-reference/queries/take-while-clause.md).)|  
 |<xref:System.Linq.Enumerable.ThenBy%60%602%28System.Linq.IOrderedEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>|`Order By …, …`<br /><br /> (Weitere Informationen finden Sie unter [Order By-Klausel](../../../../visual-basic/language-reference/queries/order-by-clause.md).)|  
 |<xref:System.Linq.Enumerable.ThenByDescending%60%602%28System.Linq.IOrderedEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>|`Order By …, … Descending`<br /><br /> (Weitere Informationen finden Sie unter [Order By-Klausel](../../../../visual-basic/language-reference/queries/order-by-clause.md).)|  
 |<xref:System.Linq.Enumerable.Where%2A>|`Where`<br /><br /> (Weitere Informationen finden Sie unter [Where-Klausel](../../../../visual-basic/language-reference/queries/where-clause.md).)|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)

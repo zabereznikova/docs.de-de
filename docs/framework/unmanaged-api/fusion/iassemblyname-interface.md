@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa12252c4f2a8e710a4a880af103aa324f8118ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 22276e543e8eeb9c6cf9aeee7a9af92c503d3a7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432399"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549014"
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName-Schnittstelle
-Stellt Methoden zum Beschreiben und Arbeiten mit eindeutige Identität einer Assembly bereit.  
+Stellt Methoden zum Beschreiben von und Arbeiten mit der Identität einer Assembly eindeutig.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |[Clone-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|Erstellt eine flache Kopie dieses `IAssemblyName` Objekt.|  
-|[Finalize-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|Dies ermöglicht `IAssemblyName` -Objekt, Ressourcen freizugeben und andere Bereinigungen durchzuführen, bevor der Destruktor aufgerufen wird.|  
+|[Finalize-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|Dadurch können `IAssemblyName` Objekt, das Freigeben von Ressourcen und andere Bereinigungen durchzuführen, bevor der Destruktor aufgerufen wird.|  
 |[GetDisplayName-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|Ruft den lesbaren Namen der Assembly verwiesen wird, von diesem `IAssemblyName` Objekt.|  
-|[GetName-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|Ruft den einfachen, unverschlüsselten Namen der Assemblyklasse von diesem `IAssemblyName` Objekt.|  
+|[GetName-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|Ruft ab, die einfache nicht verschlüsselte Name der Assembly verwiesen wird, von diesem `IAssemblyName` Objekt.|  
 |[GetProperty-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|Ruft einen Zeiger auf die verwiesen wird, mit der angegebenen Eigenschaft `PropertyId`.|  
 |[GetVersion-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getversion-method.md)|Ruft die Versionsinformationen für die Assembly verwiesen wird, von diesem `IAssemblyName` Objekt.|  
-|[IsEqual-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|Bestimmt, ob ein angegebener `IAssemblyName` Objekt gleich diesem `IAssemblyName`basierend auf den angegebenen Vergleichsflags.|  
-|[SetProperty-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|Legt den Wert der Eigenschaft verwiesen wird, durch das angegebene `PropertyId`.|  
+|[IsEqual-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|Bestimmt, ob ein angegebener `IAssemblyName` Objekt gleich diesem ist `IAssemblyName`basierend auf den angegebenen Vergleichsflags.|  
+|[SetProperty-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|Legt den Wert der Eigenschaft verwiesen wird, mit dem angegebenen `PropertyId`.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Fusion.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IAssemblyEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IAssemblyEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

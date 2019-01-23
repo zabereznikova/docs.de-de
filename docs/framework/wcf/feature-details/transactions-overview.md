@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: 63f3826215f24a4bab6d84709c2f9da6a9c8f4f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c58a5ebc033f75413a975e6b1de4ed71d23a141b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498555"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548481"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Übersicht über Windows-Kommunikationfoundation-Transaktionen
 Transaktionen stellen eine Möglichkeit dar, mehrere Aktionen oder Vorgänge in eine einzelne unteilbare Ausführungseinheit zu gruppieren. Eine Transaktion ist eine Auflistung von Vorgängen mit den folgenden Eigenschaften:  
@@ -26,7 +26,7 @@ Transaktionen stellen eine Möglichkeit dar, mehrere Aktionen oder Vorgänge in 
   
  Windows Communication Foundation (WCF) bietet einen umfangreichen Satz von Funktionen, mit die Sie verteilte Transaktionen in Ihrer Webdienstanwendung erstellen können.  
   
- WCF implementiert die Unterstützung für das WS-AtomicTransaction (WS-AT)-Protokoll, das WCF-Anwendungen, Transaktionen zu interoperablen Anwendungen ausführen können, z. B. mithilfe von drittanbietertechnologie erstellten interoperablen Webdiensten ermöglicht. WCF implementiert auch Unterstützung für das OLE Transactions-Protokoll, die in Szenarien verwendet werden können, benötigen Sie keine Interop-Funktionalität zum Aktivieren des Transaktionsflusses.  
+ WCF implementiert die Unterstützung für das WS-AtomicTransaction (WS-AT)-Protokoll, das WCF-Anwendungen, Transaktionen zu interoperablen Anwendungen ausführen können, z. B. interoperabler Webdienste, die mithilfe von drittanbietertechnologie erstellt werden können. WCF implementiert auch Unterstützung für das OLE Transactions-Protokoll, die in Szenarien, in denen keine interop-Funktionalität zum Aktivieren des Transaktionsflusses benötigen Sie verwendet werden können.  
   
  Sie können eine Anwendungskonfigurationsdatei verwenden, um Bindungen für das Aktivieren bzw. Deaktivieren des Transaktionsflusses zu konfigurieren sowie das gewünschte Transaktionsprotokoll auf einer Bindung festzulegen. Außerdem können Sie mit der Konfigurationsdatei Transaktionstimeouts auf Dienstebene festlegen. Weitere Informationen finden Sie unter [Transaktionsfluss aktivieren](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
   
@@ -40,6 +40,6 @@ Transaktionen stellen eine Möglichkeit dar, mehrere Aktionen oder Vorgänge in 
   
  Weitere Informationen finden Sie unter [ServiceModel-Transaktionsattribute](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [ServiceModel-Transaktionsattribute](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
- [Aktivieren des Transaktionsdatenflusses](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+## <a name="see-also"></a>Siehe auch
+- [ServiceModel-Transaktionsattribute](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
+- [Aktivieren des Transaktionsdatenflusses](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
