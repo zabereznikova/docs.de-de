@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 343cedcf26112f0f2bcc7943ea5ee9f302329a15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60a9ba78211cd02300cccc7d150bb08fa68b0604
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556180"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs-Methode
-Ruft die `FunctionID` einer Funktion mit dem angegebenen Metadaten-Token, mit der Klasse, und `ClassID` Werte eines beliebigen Typargumente.  
+Ruft die `FunctionID` einer Funktion mit dem angegebenen Metadaten-Token, mit der Klasse, und `ClassID` Werte aller Typargumente.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,20 +53,20 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  [in] Die Anzahl der Typparameter für die angegebene Funktion. Dieser Wert muss 0 (null) für nicht generische Funktionen sein.  
   
  `typeArgs`  
- [in] Ein Array von `ClassID` Werten, von denen jeder ein Argument der Funktion. Der Wert der `typeArgs` kann NULL sein, wenn `cTypeArgs` auf 0 (null) festgelegt ist.  
+ [in] Ein Array von `ClassID` Werten, von denen jeder ein Argument der Funktion. Der Wert des `typeArgs` kann NULL sein, wenn `cTypeArgs` auf 0 (null) festgelegt ist.  
   
  `pFunctionID`  
  [out] Ein Zeiger auf die `FunctionID` der angegebenen Funktion.  
   
 ## <a name="remarks"></a>Hinweise  
- Aufrufen der `GetFunctionFromTokenAndTypeArgs` Methode mit einer `mdMethodRef` Metadaten anstelle von einer `mdMethodDef` Metadatentoken kann unvorhersehbare Folgen haben. Aufrufer sollten Auflösen der `mdMethodRef` auf eine `mdMethodDef` bei der Übergabe.  
+ Aufrufen der `GetFunctionFromTokenAndTypeArgs` -Methode mit einer `mdMethodRef` Metadaten anstelle von einer `mdMethodDef` Metadatentoken unvorhersehbare Ergebnisse haben. Aufrufer sollten Auflösen der `mdMethodRef` auf eine `mdMethodDef` bei der Übergabe.  
   
- Wenn die Funktion nicht bereits geladen wurde, Aufrufen `GetFunctionFromTokenAndTypeArgs` führt dazu, dass Laden auftreten, die in vielen Kontexten einen gefährlichen Vorgang ist. Beispielsweise kann beim Aufrufen dieser Methode beim Laden von Modulen oder Typen zu einer Endlosschleife führen wie die Laufzeitumgebung versucht, Ladevorgänge zirkulär durchzuführen.  
+ Wenn die Funktion nicht bereits geladen ist, wird beim Aufrufen `GetFunctionFromTokenAndTypeArgs` bewirkt, dass beim Laden auftreten, handelt es sich in vielen Kontexten einen gefährlichen Vorgang. Beispielsweise kann das Aufrufen dieser Methode während des Ladens von Modulen oder Typen zu einer Endlosschleife führen wie die Laufzeit versucht, die Ladevorgänge zirkulär durchzuführen.  
   
- Verwenden Sie im Allgemeinen von `GetFunctionFromTokenAndTypeArgs` wird abgeraten. Wenn der Profiler-Ereignisse für eine bestimmte Funktion interessiert sind, speichern sie die `ModuleID` und `mdMethodDef` dieser Funktion und Verwendung [ICorProfilerInfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) zu überprüfen, ob eine angegebenen `FunctionID` ist der die gewünschte Funktion.  
+ Im Allgemeinen die Verwendung von `GetFunctionFromTokenAndTypeArgs` wird abgeraten. Wenn der Profiler-Ereignisse für eine bestimmte Funktion interessiert sind, sollten sie speichern die `ModuleID` und `mdMethodDef` von dieser Funktion und Verwendung [ICorProfilerInfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) um zu überprüfen, ob eine angegebene `FunctionID` ist mit der gewünschten Funktion.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -74,6 +74,6 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

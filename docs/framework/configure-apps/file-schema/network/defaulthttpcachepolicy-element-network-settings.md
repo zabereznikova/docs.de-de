@@ -8,20 +8,20 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: d88d99b663b0aaeb0ae432cf02675a45c4c8bc1f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b71942380b750cd654c2d4c248bf5c93d82112e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555088"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;DefaultHttpCachePolicy&gt; -Element (Netzwerkeinstellungen)
 Beschreibt, ob HTTP-Zwischenspeicherung aktiv ist und die Standardcachingrichtlinie beschreibt.  
   
  \<configuration>  
 \<system.net>  
-\<RequestCaching >  
-\<DefaultHttpCachePolicy >  
+\<requestCaching>  
+\<defaultHttpCachePolicy>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -80,8 +80,8 @@ Beschreibt, ob HTTP-Zwischenspeicherung aktiv ist und die Standardcachingrichtli
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- <xref:System.Net.Cache>  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.Cache.RequestCacheLevel>  
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.Cache>
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.Cache.RequestCacheLevel>
 - [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

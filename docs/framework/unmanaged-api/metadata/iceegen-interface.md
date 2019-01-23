@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e3e70749a768377ea470bc44a66b9fdabbb1f93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5dadbe757464b24ef532fdd8abe5457fa995348
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555062"
 ---
 # <a name="iceegen-interface"></a>ICeeGen-Schnittstelle
 Stellt Methoden zur dynamischen Codekompilierung bereit.  
@@ -31,30 +32,30 @@ Stellt Methoden zur dynamischen Codekompilierung bereit.
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[AddSectionReloc-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Veraltet. Die CodeBase hinzugefügt eine .reloc-Anweisung.|  
-|[AllocateMethodBuffer-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|Veraltet. Erstellt einen Puffer der angegebenen Größe für eine Methode und ruft die relative virtuelle Adresse der Methode ab.|  
+|[AddSectionReloc-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Veraltet. Fügt eine .reloc-Anweisung in die Codebasis.|  
+|[AllocateMethodBuffer-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|Veraltet. Erstellt einen Puffer mit der angegebenen Größe für eine Methode und ruft die relative virtuelle Adresse der Methode.|  
 |[ComputePointer-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-computepointer-method.md)|Veraltet. Bestimmt den Puffer für den angegebenen Codeabschnitt.|  
-|[EmitString-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|Veraltet. Gibt die angegebene Zeichenfolge in die CodeBase aus.|  
-|[GenerateCeeFile-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Veraltet. Generiert eine Codebasis Datei, die gegenwärtig in diese geladenen Codebasis enthält `ICeeGen`.|  
-|[GenerateCeeMemoryImage-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|Veraltet. Generiert ein Image im Arbeitsspeicher für die CodeBase.|  
-|[GetIlSection-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|Veraltet. Ruft den Abschnitt der Codebasis intermediate Language auf dem angegebenen Handle verweist.|  
+|[EmitString-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|Veraltet. Gibt die angegebene Zeichenfolge in die CodeBase.|  
+|[GenerateCeeFile-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Veraltet. Generiert eine Codebasis-Datei, die derzeit geladene, in die Codebasis enthält `ICeeGen`.|  
+|[GenerateCeeMemoryImage-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|Veraltet. Generiert ein Image im Arbeitsspeicher für die Codebasis.|  
+|[GetIlSection-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|Veraltet. Ruft ab, der Teil der Zwischensprache Codebasis auf das angegebene Handle verweist.|  
 |[GetIMapTokenIface-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getimaptokeniface-method.md)|Veraltet. Ruft die Schnittstelle, die durch das angegebene Token verwiesen wird.|  
-|[GetMethodBuffer-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Veraltet. Ruft einen Puffer, der die geeignete Größe für die Methode an der angegebenen relativen virtuellen Adresse ab.|  
-|[GetSectionBlock-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|Veraltet. Ruft einen Abschnittsblock der CodeBase ab.|  
-|[GetSectionCreate-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|Veraltet. Wird generiert, und ruft einen Codeabschnitt, der mit dem angegebenen Namen und Flagwerte.|  
-|[GetSectionDataLen-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|Veraltet. Ruft die Länge des angegebenen Abschnitts ab.|  
+|[GetMethodBuffer-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Veraltet. Ruft einen Puffer von geeigneter Größe für die Methode an der angegebenen relativen virtuellen Adresse an.|  
+|[GetSectionBlock-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|Veraltet. Ruft einen Abschnittsblock im des Codes ab.|  
+|[GetSectionCreate-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|Veraltet. Wird generiert, und ruft einen Codeabschnitt, der mit dem angegebenen Namen und der Flagwerte.|  
+|[GetSectionDataLen-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|Veraltet. Ruft die Länge des angegebenen Abschnitts.|  
 |[GetString-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstring-method.md)|Veraltet. Ruft die Zeichenfolge, die an der angegebenen relativen virtuellen Adresse gespeichert.|  
-|[GetStringSection-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstringsection-method.md)|Veraltet. Ruft eine Zeichenfolgendarstellung der Codeabschnitt, der dem angegebenen Handle verweist.|  
-|[TruncateSection-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|Veraltet. Schneidet die im Abschnitt angegebenen Code anhand der angegebenen Länge ab.|  
+|[GetStringSection-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstringsection-method.md)|Veraltet. Ruft eine Zeichenfolgendarstellung der Codeabschnitt, der auf die verwiesen wird durch das angegebene Handle ab.|  
+|[TruncateSection-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|Veraltet. Schneidet den angegebenen Codeabschnitt durch die angegebene Länge ab.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

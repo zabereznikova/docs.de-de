@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; von &lt;netTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: 8416701ce4e787a49ee0a4bdd4829c6592cde94c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7372b94bde8325ec00116ee7022739f1b17a1ac9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555491"
 ---
 # <a name="lttransportgt-of-ltnettcpbindinggt"></a>&lt;transport&gt; von &lt;netTcpBinding&gt;
 Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen Endpunkt konfiguriert, mit der [ \<NetTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -16,8 +16,8 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
 \<bindings>  
 \<netTcpBinding>  
 \<binding>  
-\<Sicherheit >  
-\<Transport >  
+\<security>  
+\<transport>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -79,13 +79,13 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
 ## <a name="remarks"></a>Hinweise  
  Verwenden Sie Transportsicherheit für die Integrität und Vertraulichkeit der SOAP-Nachricht und für gegenseitige Authentifizierung. Wurde dieser Sicherheitsmodus für eine Bindung ausgewählt, wird der Kanalstapel mit einem geschützten Transport konfiguriert, und die SOAP-Nachrichten werden mit Transportsicherheit geschützt, wie zum Beispiel Windows (Aushandeln) oder SSL über TCP.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.TcpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.TcpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -16,16 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebd7ef3b329eae8e35b680f3d8c74864e2a0f4d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be2edd5b217466a58aa9c478dadc10004ebda721
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556141"
 ---
 # <a name="corimageunloading-function"></a>_CorImageUnloading-Funktion
 Benachrichtigt das Ladeprogramm, wenn die Images des verwalteten Moduls entladen werden.  
   
- Diese Funktion ist nicht implementiert. Wenn Sie aufgerufen wird, wird E_NOTIMPL zurückgegeben.  
+ Diese Funktion ist nicht implementiert. Wird aufgerufen, gibt E_NOTIMPL zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,16 +38,16 @@ STDAPI (VOID) _CorImageUnloading(
   
 #### <a name="parameters"></a>Parameter  
  `ImageBase`  
- [in] Ein Zeiger auf die Anfangsposition des Abbilds, das entladen.  
+ [in] Ein Zeiger auf den Anfangsort des Bildes, das nicht entladen werden soll.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Globale statische Metadatenfunktionen](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Globale statische Metadatenfunktionen](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

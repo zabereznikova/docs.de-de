@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac90699cf217aff926003aa545b9cceb11bf58d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4bc72b9c5687654c17a01ee9b4fa9d31dcf50b56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54556115"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion-Enumeration
 Legt eine Schnittstelle fest, eine Version des .NET Frameworks oder eine Version des .NET Frameworks, in dem eine Schnittstelle eingeführt wurde.  
@@ -222,7 +222,7 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugLatestVersion`|Die Version von .NET Frameworks einschließlich sämtlicher Service Packs ist die neueste Version.|-|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden eines Debuggers kann die `CorDebugInterfaceVersion` Aufzählung der in der [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) Funktion, um die höchste Version von .NET Framework anzugeben, die der Debugger unterstützt.  
+ Ein Debugger können die `CorDebugInterfaceVersion` -Enumeration in die [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) Funktion, um die höchste Version von .NET Framework anzugeben, die der Debugger unterstützt.  
   
 ## <a name="interface-names"></a>Schnittstellennamen  
  Der Name, der am Ende der Schnittstellennamen in der Debugging-API enthalten ist (z. B. die "3" in `ICorDebugThread3`) legt die Version der Schnittstelle fest, nicht die des .NET Frameworks. Alle Schnittstellennamen in der Debugging-API enthalten Versionsnummern; ausgenommen sind Schnittstellen, die im .NET Framework Version 1 eingeführt wurden. Sämtliche Übereinstimmungen zwischen den Schnittstellenversionsnummern und .NET Framework-Versionsnummern sind zufällig.  
@@ -235,10 +235,10 @@ typedef enum CorDebugInterfaceVersion {
   
 -   Die .NET Framework-Versionen 3.0 und 3.5 verwenden die vorhandenen Schnittstellen des .NET Framework 2.0 und führen keine neuen Schnittstellen ein.  
   
--   Die [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] führt eine Mischung von Schnittstellenversionen. Zum Beispiel erscheinen sowohl `ICorDebugThread3` als auch `ICorDebugThread4` als die dritte und vierte Version der `ICorDebugThread`-Schnittstelle. Die [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] führt außerdem die erste Version der `ICorDebugStackWalk` Schnittstelle und die zweite Version der der `ICorDebugNativeFrame` Schnittstelle (`ICorDebugNativeFrame2`).  
+-   Die [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] führt eine Mischung von Schnittstellenversionen. Zum Beispiel erscheinen sowohl `ICorDebugThread3` als auch `ICorDebugThread4` als die dritte und vierte Version der `ICorDebugThread`-Schnittstelle. Die [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] führt außerdem die erste Version von der `ICorDebugStackWalk` Schnittstelle und die zweite Version der `ICorDebugNativeFrame` Schnittstelle (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -246,5 +246,5 @@ typedef enum CorDebugInterfaceVersion {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
