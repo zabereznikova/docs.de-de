@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAssembly2 Schnittstelle1
+title: ICorDebugAssembly2-Schnittstelle1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssembly2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90ad74a3b9dd26d0a6e390a777e862f4274f86d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3746717bdf62c59103374f74bbabdb3a7ae1ad61
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554022"
 ---
-# <a name="icordebugassembly2-interface1"></a>ICorDebugAssembly2 Schnittstelle1
+# <a name="icordebugassembly2-interface1"></a>ICorDebugAssembly2-Schnittstelle1
 Stellt eine Assembly dar. Diese Schnittstelle ist eine Erweiterung der ICorDebugAssembly-Schnittstelle.  
   
 ## <a name="methods"></a>Methoden  
@@ -38,7 +38,7 @@ Stellt eine Assembly dar. Diese Schnittstelle ist eine Erweiterung der ICorDebug
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -46,5 +46,5 @@ Stellt eine Assembly dar. Diese Schnittstelle ist eine Erweiterung der ICorDebug
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
