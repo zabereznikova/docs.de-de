@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a88f8b2ad1ac59cf7044ca5d7ace5a468510b6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3492cac305370c8b9aa969dbb0a88e1d9c45af34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550655"
 ---
-# <a name="idebugautoattach-interface"></a><span data-ttu-id="91d2d-102">IDebugAutoAttach-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="91d2d-102">IDebugAutoAttach Interface</span></span>
-<span data-ttu-id="91d2d-103">Definiert die Schnittstelle für das AutoAttach Debuggers.</span><span class="sxs-lookup"><span data-stu-id="91d2d-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattach-interface"></a><span data-ttu-id="19bf1-102">IDebugAutoAttach-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="19bf1-102">IDebugAutoAttach Interface</span></span>
+<span data-ttu-id="19bf1-103">Definiert die Schnittstelle an, für AutoAttach-Debuggers.</span><span class="sxs-lookup"><span data-stu-id="19bf1-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="91d2d-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="91d2d-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="19bf1-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="19bf1-104">Methods</span></span>  
   
-|<span data-ttu-id="91d2d-105">Methode</span><span class="sxs-lookup"><span data-stu-id="91d2d-105">Method</span></span>|<span data-ttu-id="91d2d-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="91d2d-106">Description</span></span>|  
+|<span data-ttu-id="19bf1-105">Methode</span><span class="sxs-lookup"><span data-stu-id="19bf1-105">Method</span></span>|<span data-ttu-id="19bf1-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="19bf1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="91d2d-107">AutoAttach-Methode</span><span class="sxs-lookup"><span data-stu-id="91d2d-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="91d2d-108">AutoAttach Debuggers führt anfügen.</span><span class="sxs-lookup"><span data-stu-id="91d2d-108">Performs server-invoked debugger auto attach.</span></span>|  
+|[<span data-ttu-id="19bf1-107">AutoAttach-Methode</span><span class="sxs-lookup"><span data-stu-id="19bf1-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="19bf1-108">AutoAttach Debuggers führt anfügen.</span><span class="sxs-lookup"><span data-stu-id="19bf1-108">Performs server-invoked debugger auto attach.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="91d2d-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="91d2d-109">Requirements</span></span>  
- <span data-ttu-id="91d2d-110">**Header:** DbgAutoAttach.idl</span><span class="sxs-lookup"><span data-stu-id="91d2d-110">**Header:** DbgAutoAttach.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="19bf1-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="19bf1-109">Requirements</span></span>  
+ <span data-ttu-id="19bf1-110">**Header:** DbgAutoAttach.idl</span><span class="sxs-lookup"><span data-stu-id="19bf1-110">**Header:** DbgAutoAttach.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="91d2d-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="91d2d-111">See Also</span></span>  
- [<span data-ttu-id="91d2d-112">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="91d2d-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="19bf1-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="19bf1-111">See also</span></span>
+- [<span data-ttu-id="19bf1-112">Diagnosesymbolspeicher-Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="19bf1-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
