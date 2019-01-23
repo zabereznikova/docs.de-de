@@ -9,27 +9,27 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 26b4f062c120bf543a5e597fc8c734e8cc336bd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9eab78695db128c0538914c5364aaa54c135403
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509960"
 ---
 # <a name="user-drawn-controls"></a>Benutzerdefinierte Steuerelemente
-.NET Framework bietet die Möglichkeit, eigene Steuerelemente entwickeln. Können Sie ein Benutzersteuerelement, das einen Satz von Standardsteuerelementen zusammen in Code vorgesehen ist, erstellen, oder Sie können ein eigenes Steuerelement von Grund auf neu entwerfen, einrichten. Sie können sogar Vererbung verwenden, erstellen ein Steuerelement, das von einem vorhandenen Steuerelement erbt und dessen implementierte Funktionalität hinzufügen. Welchen Ansatz Sie verwenden, stellt .NET Framework die Funktionalität, um eine benutzerdefinierte grafische Benutzeroberfläche für jedes Steuerelement gezeichnet werden soll, die Sie erstellen.  
+.NET Framework bietet die Möglichkeit, eigene Steuerelemente problemlos zu entwickeln. Können Sie ein Benutzersteuerelement, das einen Satz der Standardsteuerelemente, die zusammen mit Code gebunden ist, erstellen, oder Sie können Ihr eigenes Steuerelement von Grund auf neu entwerfen, einrichten. Sie können auch die Vererbung verwenden, erstellen ein Steuerelement, das von einem vorhandenen Steuerelement erbt und die gesamte Funktionalität hinzufügen. Für welchen Ansatz Sie verwenden, bietet .NET Framework-Funktionen um eine benutzerdefinierte grafische Benutzeroberfläche für jedes Steuerelement zu zeichnen, die Sie erstellen.  
   
- Zeichnen eines Steuerelements wird erreicht, indem die Ausführung von Code in des Steuerelements <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Das Argument der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode ist ein <xref:System.Windows.Forms.PaintEventArgs> Objekt, das alle Informationen und zum Rendern des Steuerelements erforderliche Funktionalität bereitstellt. Die <xref:System.Windows.Forms.PaintEventArgs> zwei principal-Objekte, die beim Rendern des Steuerelements verwendet werden, als Eigenschaften bereitgestellt:  
+ Zeichnen eines Steuerelements wird erreicht, indem die Ausführung von Code in des Steuerelements <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Einzelnes Argument des der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode ist eine <xref:System.Windows.Forms.PaintEventArgs> Objekt, das alle Informationen und zum Rendern des Steuerelements erforderliche Funktionalität bereitstellt. Die <xref:System.Windows.Forms.PaintEventArgs> zwei principal-Objekten, die beim Rendern des Steuerelements verwendet wird, als Eigenschaften bereitgestellt:  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Objekt – das Rechteck, das den Teil des Steuerelements darstellt, die gezeichnet wird. Dies kann das gesamte Steuerelement oder einen Teil des Steuerelements abhängig davon, wie das Steuerelement gezeichnet wird.  
+-   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> -Objekt ist das Rechteck, das den Teil des Steuerelements darstellt, die gezeichnet wird. Dies kann sein, dass das gesamte Steuerelement oder einen Teil des Steuerelements je nachdem, wie das Steuerelement gezeichnet wird.  
   
--   <xref:System.Drawing.Graphics> Objekt - kapselt mehrere Graphics-orientierten Objekte und Methoden, die zum Zeichnen des Steuerelements erforderliche Funktionen bereitstellen.  
+-   <xref:System.Drawing.Graphics> Objekt - kapselt mehrere Graphics-orientierten Objekten und Methoden, die zum Zeichnen des Steuerelements erforderliche Funktionen bereitstellen.  
   
- Weitere Informationen zu den <xref:System.Drawing.Graphics> -Objekt und zum verwenden, finden Sie unter [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
+ Weitere Informationen zu den <xref:System.Drawing.Graphics> -Objekt und verwendet werden, finden Sie unter [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
   
- Die <xref:System.Windows.Forms.Control.OnPaint%2A> Ereignis wird ausgelöst, wenn das Steuerelement gezeichnet oder auf dem Bildschirm aktualisiert wird und die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Objekt darstellt, das Rechteck, in dem gezeichnet werden stattfinden. Wenn das gesamte Steuerelement aktualisiert werden, werden muss die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> wird die Größe des gesamten Steuerelements darstellen. Wenn nur ein Teil des Steuerelements muss aktualisiert werden, werden jedoch die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Objekt repräsentiert nur den Bereich mit der neu gezeichnet werden muss. Ein Beispiel der Fall wäre, wenn ein Steuerelement von einem anderen Steuerelement oder ein Formular in der Benutzeroberfläche teilweise verdeckt werden wurde.  
+ Die <xref:System.Windows.Forms.Control.OnPaint%2A> Ereignis wird ausgelöst, wenn das Steuerelement gezeichnet oder auf dem Bildschirm aktualisiert wird und die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Objekt darstellt, das Rechteck in der Darstellung wird durchgeführt. Wenn das gesamte Steuerelement aktualisiert werden, werden muss die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> die Größe des gesamten Steuerelements darstellt. Wenn nur ein Teil des Steuerelements muss aktualisiert werden jedoch die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Objekt wird nur in die Region, die zu zeichnenden darstellen. Ein Beispiel der Fall wäre, wenn ein Steuerelement durch ein anderes Steuerelement oder Formular in der Benutzeroberfläche teilweise verdeckt wurde.  
   
- Beim Erben von der <xref:System.Windows.Forms.Control> -Klasse, die Sie überschreiben müssen die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, und geben Sie Code zum Rendern der Grafiken. Wenn Sie eine benutzerdefinierte grafische Benutzeroberfläche für ein benutzerdefiniertes Steuerelement oder ein geerbtes Steuerelement bereitstellen möchten, können Sie auch dies tun durch Überschreiben der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Ein Beispiel ist unten dargestellt:  
+ Beim Erben von der <xref:System.Windows.Forms.Control> -Klasse, die Sie überschreiben müssen die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, und geben Sie Code zum Rendern der Grafiken. Wenn Sie eine benutzerdefinierte grafische Oberfläche zum ein Benutzersteuerelement oder ein geerbtes Steuerelement bereitstellen möchten, Sie können auch dazu überschreiben die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Ein Beispiel ist unten dargestellt:  
   
 ```vb  
 Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)  
@@ -60,9 +60,9 @@ protected override void OnPaint(PaintEventArgs e)
 }  
 ```  
   
- Im vorherige Beispiel veranschaulicht, wie ein Steuerelement mit einer sehr einfachen grafischen Darstellung gerendert wird. Aufruft der <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode der Basisklasse er erstellt eine <xref:System.Drawing.Pen> -Objekt mit dem gezeichnet werden soll, und schließlich zeichnet eine Ellipse, die in dem Rechteck, bestimmt durch die <xref:System.Windows.Forms.Control.Location%2A> und <xref:System.Windows.Forms.Control.Size%2A> des Steuerelements. Obwohl die meisten Renderingcodes deutlich komplizierter als das sein wird, wird dieses Beispiel veranschaulicht die Verwendung von der <xref:System.Drawing.Graphics> Objekt in der <xref:System.Windows.Forms.PaintEventArgs> Objekt. Beachten Sie, dass, wenn Sie von einer Klasse erben, die bereits eine grafische Darstellung, wie z. B. <xref:System.Windows.Forms.UserControl> oder <xref:System.Windows.Forms.Button>, und Sie nicht diese Darstellung in das Rendering integrieren möchten, rufen Sie nicht die Basisklasse <xref:System.Windows.Forms.Control.OnPaint%2A> Methode.  
+ Im vorherige Beispiel veranschaulicht, wie ein Steuerelement mit einer einfachen grafischen Darstellung gerendert wird. Ruft die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode der Basisklasse, erstellt eine <xref:System.Drawing.Pen> Objekt mit dem gezeichnet werden soll, und schließlich zeichnet eine Ellipse, in dem Rechteck aus, die durch bestimmt die <xref:System.Windows.Forms.Control.Location%2A> und <xref:System.Windows.Forms.Control.Size%2A> des Steuerelements. Obwohl die meisten Renderingcode deutlich komplizierter ist als dieser sein wird, wird in diesem Beispiel veranschaulicht die Verwendung der der <xref:System.Drawing.Graphics> Objekt in der <xref:System.Windows.Forms.PaintEventArgs> Objekt. Beachten Sie, dass, wenn Sie von einer Klasse erben, die bereits eine grafische Darstellung, wie z. B. <xref:System.Windows.Forms.UserControl> oder <xref:System.Windows.Forms.Button>, und Sie nicht diese Darstellung in das Rendering integrieren möchten, sollten Sie nicht Ihre Basisklasse aufrufen <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode.  
   
- Der Code in der <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode des Steuerelements wird ausgeführt, wenn das Steuerelement zuerst gezeichnet wird, und wenn sie aktualisiert wird. Um sicherzustellen, dass das Steuerelement neu gezeichnet wird jedes Mal, wenn er geändert wird, fügen Sie an den Konstruktor des Steuerelements die folgende Zeile hinzu:  
+ Der Code in die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode des Steuerelements wird ausgeführt, wenn das Steuerelement zuerst gezeichnet wird, und wenn sie aktualisiert werden. Um sicherzustellen, dass das Steuerelement neu gezeichnet wird, jedes Mal, wenn sie die Größe geändert wird, fügen Sie an den Konstruktor des Steuerelements die folgende Zeile hinzu:  
   
 ```vb  
 SetStyle(ControlStyles.ResizeRedraw, True)  
@@ -73,14 +73,14 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 ```  
   
 > [!NOTE]
->  Verwenden der <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> Eigenschaft, um ein viereckig Steuerelement zu implementieren.  
+>  Verwenden der <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> Eigenschaft, um ein nicht rechteckiges Steuerelement zu implementieren.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.Control.Region%2A>  
- <xref:System.Windows.Forms.ControlStyles>  
- <xref:System.Drawing.Graphics>  
- <xref:System.Windows.Forms.Control.OnPaint%2A>  
- <xref:System.Windows.Forms.PaintEventArgs>  
- [Gewusst wie: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
- [Konstituierende Steuerelemente](../../../../docs/framework/winforms/controls/constituent-controls.md)  
- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.Control.Region%2A>
+- <xref:System.Windows.Forms.ControlStyles>
+- <xref:System.Drawing.Graphics>
+- <xref:System.Windows.Forms.Control.OnPaint%2A>
+- <xref:System.Windows.Forms.PaintEventArgs>
+- [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Konstituierende Steuerelemente](../../../../docs/framework/winforms/controls/constituent-controls.md)
+- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

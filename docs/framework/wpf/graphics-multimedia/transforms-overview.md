@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9e28f95b58481a5cb7b2fbf92fd20545a3f0fdc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503118"
 ---
 # <a name="transforms-overview"></a>Übersicht über Transformationen
 In diesem Thema wird beschrieben, wie Sie mit der [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> Klassen zu drehen, skalieren, verschieben (übersetzen) und Neigen <xref:System.Windows.FrameworkElement> Objekte.  
@@ -36,9 +36,9 @@ In diesem Thema wird beschrieben, wie Sie mit der [!INCLUDE[TLA#tla_2d](../../..
   
 ||||  
 |-|-|-|  
-|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Standard: 1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Standard: 0.0|0.0|  
-|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Standard: 0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Standard: 1.0|0.0|  
-|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Standard: 0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Standard: 0.0|1.0|  
+|<xref:System.Windows.Media.Matrix.M11%2A><br /><br /> Standardeinstellung: 1.0|<xref:System.Windows.Media.Matrix.M12%2A><br /><br /> Standardeinstellung: 0.0|0.0|  
+|<xref:System.Windows.Media.Matrix.M21%2A><br /><br /> Standardeinstellung: 0.0|<xref:System.Windows.Media.Matrix.M22%2A><br /><br /> Standardeinstellung: 1.0|0.0|  
+|<xref:System.Windows.Media.Matrix.OffsetX%2A><br /><br /> Standardeinstellung: 0.0|<xref:System.Windows.Media.Matrix.OffsetY%2A><br /><br /> Standardeinstellung: 0.0|1.0|  
   
  Durch Bearbeiten der Matrixwerte können Sie ein Objekt drehen, skalieren, neigen und verschieben (übersetzen). Angenommen, Sie ändern, dass den Wert in der ersten Spalte der dritten Zeile (die <xref:System.Windows.Media.Matrix.OffsetX%2A> Wert) auf 100 erhöht, können Sie sie ein Objekt 100 Einheiten entlang der x-Achse verschieben. Wenn Sie den Wert in der zweiten Spalte der zweiten Zeile in 3 ändern, können Sie ein Objekt um das Dreifache seiner aktuellen Höhe strecken. Wenn Sie beide Werte ändern, wird das Objekt 100 Einheiten entlang der x-Achse verschoben und seine Höhe wird um den Faktor 3 gestreckt. Da Windows Presentation Foundation (WPF) nur affine Transformationen unterstützt, sind die Werte in der rechten Spalte immer 0, 0, 1.  
   
@@ -149,8 +149,8 @@ LayoutTransform wird zum Drehen der Schaltfläche verwendet
 ## <a name="freezable-features"></a>Funktionen von Freezable-Objekten  
  Da es erbt die <xref:System.Windows.Freezable> -Klasse, die <xref:System.Windows.Media.Transform> Klasse mehrere spezielle Features bereit: <xref:System.Windows.Media.Transform> als Objekte deklariert werden [Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md), von mehreren Objekten, die schreibgeschützt zur Verbesserung der freigegebenen Leistung, geklont und threadsicher gemacht. Weitere Informationen zu den verschiedenen Funktionen, die von bereitgestellten <xref:System.Windows.Freezable> Objekten finden Sie die [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Matrix>  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
- [Beispiel für 2D-Transformationen](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Matrix>
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Beispiel für 2D-Transformationen](https://go.microsoft.com/fwlink/?LinkID=158252)

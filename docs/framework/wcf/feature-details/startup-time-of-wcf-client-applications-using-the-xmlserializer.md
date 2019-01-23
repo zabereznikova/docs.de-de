@@ -1,21 +1,21 @@
 ---
-title: 'Vorgehensweise: Verbessern der Startzeit von WCF-Clientanwendungen mit dem XmlSerializer'
+title: 'Vorgehensweise: Verbessern der Startzeit von WCF-Client Clientanwendungen mit dem XmlSerializer'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: 6f61c57998cfc21b66f278a1a2381407ec2c39ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb98919fe6d0ec67e5fea8c483e4993f2632267f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500128"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503130"
 ---
-# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Vorgehensweise: Verbessern der Startzeit von WCF-Clientanwendungen mit dem XmlSerializer
+# <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Vorgehensweise: Verbessern der Startzeit von WCF-Client Clientanwendungen mit dem XmlSerializer
 Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:System.Xml.Serialization.XmlSerializer> serialisiert werden können, generieren und kompilieren für diese Datentypen während der Laufzeit Code, was zu einem verlangsamten Start führen kann.  
   
 > [!NOTE]
 >  Vorab generierter Serialisierungscode kann nur in Clientanwendungen verwendet werden und nicht in Diensten.  
   
- Die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) können startleistung für diese Anwendungen durch Generieren der erforderlichen Serialisierungscode aus den kompilierten Assemblys für die Anwendung zu verbessern. Svcutil.exe generiert Serialisierungscode für alle Datentypen, die in Dienstverträgen in der kompilierten Anwendungsassembly verwendet werden und die mit <xref:System.Xml.Serialization.XmlSerializer> serialisiert werden können. Dienst- und Vorgangsverträge, die <xref:System.Xml.Serialization.XmlSerializer> verwenden, werden mit <xref:System.ServiceModel.XmlSerializerFormatAttribute> gekennzeichnet.  
+ Die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) können startleistung für diese Anwendungen verbessern, indem der erforderliche Serialisierungscode aus den kompilierten Assemblys für die Anwendung generiert. Svcutil.exe generiert Serialisierungscode für alle Datentypen, die in Dienstverträgen in der kompilierten Anwendungsassembly verwendet werden und die mit <xref:System.Xml.Serialization.XmlSerializer> serialisiert werden können. Dienst- und Vorgangsverträge, die <xref:System.Xml.Serialization.XmlSerializer> verwenden, werden mit <xref:System.ServiceModel.XmlSerializerFormatAttribute> gekennzeichnet.  
   
 ### <a name="to-generate-xmlserializer-serialization-code"></a>So generieren Sie XmlSerializer-Serialisierungscode  
   
@@ -45,21 +45,21 @@ Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:Syste
   
 ### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Zum Generieren von XmlSerializer-Serialisierungscode in Visual Studio  
   
-1.  Erstellen Sie die WCF-Dienst und Client Projekte in Visual Studio. Anschließend fügen Sie einen Dienstverweis auf das Clientprojekt hinzu.  
+1.  Erstellen Sie den WCF-Dienst und Client Projekte in Visual Studio. Anschließend fügen Sie einen Dienstverweis auf das Clientprojekt hinzu.  
   
-2.  Hinzufügen einer <xref:System.ServiceModel.XmlSerializerFormatAttribute> auf den Dienstvertrag in der *reference.cs* Datei im Client-app-Projekt unter **ServiceReference** -> **"Reference.SVCMAP"** . Beachten Sie, dass Sie alle Dateien in anzeigen müssen **Projektmappen-Explorer** auf diese Dateien finden Sie unter.  
+2.  Hinzufügen einer <xref:System.ServiceModel.XmlSerializerFormatAttribute> auf den Dienstvertrag in der *reference.cs* -Datei in das Client-app-Projekt unter **ServiceReference** -> **"Reference.SVCMAP"** . Beachten Sie, dass Sie alle Dateien in anzeigen müssen **Projektmappen-Explorer** auf diese Dateien finden Sie unter.  
   
 3.  Erstellen Sie die Client-app.  
   
-4.  Verwenden der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Erstellen eines Serialisierungsprogramms vorgenerierten *cs* Datei mithilfe des Befehls:  
+4.  Verwenden der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Erstellen einer vorab generierte Serialisierungsmodul *cs* Datei mithilfe des Befehls:  
   
     ```  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
-     Das AssemblyPath-Argument gibt den Pfad zu den WCF-Clientassembly.  
+     Das AssemblyPath-Argument gibt den Pfad zu die WCF-Clientassembly.  
   
-     Als:  
+     Z. B.:  
   
     ```  
     svcutil.exe /t:xmlSerializer wcfclient.exe  
@@ -67,7 +67,7 @@ Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:Syste
   
      Die *WCFClient.XmlSerializers.dll.cs* Datei generiert werden.  
   
-5.  Kompilieren Sie die vorgenerierten Serialisierungsassembly.  
+5.  Kompilieren Sie die vorab generierte Serialisierungsassembly.  
   
      Basierend auf dem Beispiel im vorherigen Schritt, würde der Compile-Befehl kann Folgendes sein:  
   
@@ -75,7 +75,7 @@ Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:Syste
     csc /r:wcfclient.exe /out:WCFClient.XmlSerializers.dll /t:library WCFClient.XmlSerializers.dll.cs  
     ```  
   
-     Stellen Sie sicher, dass die generierte *WCFClient.XmlSerializers.dll* befindet sich im selben Verzeichnis wie die Client-app ist *WCFClient.exe* in diesem Fall.  
+     Stellen Sie sicher, dass die generierte *WCFClient.XmlSerializers.dll* befindet sich im gleichen Verzeichnis wie die Client-app, d.h. *WCFClient.exe* in diesem Fall.  
   
 6.  Führen Sie die Client-app wie gewohnt. Der vorgenerierten Serialisierungsassembly wird verwendet.  
   
@@ -86,5 +86,5 @@ Dienste und Clientanwendungen, die Datentypen verwenden, die mit dem <xref:Syste
 svcutil /t:xmlserializer myContractLibrary.exe  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+## <a name="see-also"></a>Siehe auch
+- [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

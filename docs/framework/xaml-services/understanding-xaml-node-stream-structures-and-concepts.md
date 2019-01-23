@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d237aa83a6bd1c6c68f96aa4fa58a88cfa23c2c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510142"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten
 Die in .NET Framework-XAML-Diensten implementierten XAML-Reader und XAML-Writer basieren auf dem Entwurfskonzept eines XAML-Knotenstreams. Der XAML-Knotenstream ist eine Konzeptualisierung eines Satzes von XAML-Knoten. In dieser Konzeptualisierung arbeitet ein XAML-Prozessor die Struktur der Knotenbeziehungen in der XAML einzeln ab. Dabei ist immer nur ein aktueller Datensatz oder eine aktuelle Position in einem geöffneten XAML-Knotenstream vorhanden, und viele Aspekte der APIs melden nur die von dieser Position verfügbaren Informationen. Der aktuelle Knoten in einem XAML-Knotenstream kann als Objekt, Member oder Wert beschrieben werden. Indem Sie XAML als einen XAML-Knotenstream behandeln, können XAML-Reader mit XAML-Writern kommunizieren und ein Programm aktivieren, um die Inhalte eines XAML-Knotenstreams während eines Ladepfad- oder Speicherpfadvorgangs, an dem XAML beteiligt ist, anzuzeigen, mit diesen zu interagieren oder sie zu verändern. Der API-Entwurf von XAML-Readern und -Writern und das Konzept des XAML-Knotenstreams ähneln früheren verwandten Reader- und Writerentwürfen und -konzepten, z. B. dem [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] und den <xref:System.Xml.XmlReader> - und <xref:System.Xml.XmlWriter> -Klassen. In diesem Thema werden XAML-Knotenstreamkonzepte erläutert, und es wird beschrieben, wie Sie Routinen schreiben können, die mit XAML-Darstellungen auf XAML-Knotenebene interagieren.  
@@ -194,9 +194,9 @@ public class GameBoard {
   
  In der folgenden Liste sind alle Fälle aufgeführt, in denen ein XAML-Reader voraussichtlich einen XAML-Memberknoten für eine Direktive einfügt, und es wird beschrieben, wie dieser Memberknoten in den .NET Framework-XAML-Dienstimplementierungen identifiziert wird.  
   
--   **Initialisierungstext für einen Objektknoten:** Der Name dieses Memberknotens ist `_Initialization`. Er stellt eine XAML-Direktive dar und ist im XAML-Namespace der XAML-Sprache definiert. Eine entsprechende statische Entität kann aus <xref:System.Xaml.XamlLanguage.Initialization%2A>abgerufen werden.  
+-   **Initialisierungstext für einen Objektknoten:** Der Name dieses Memberknotens ist `_Initialization`, er stellt eine XAML-Direktive dar und ist im XAML-Namespace XAML-Sprache definiert. Eine entsprechende statische Entität kann aus <xref:System.Xaml.XamlLanguage.Initialization%2A>abgerufen werden.  
   
--   **Positionsparameter für eine Markuperweiterung:** Der Name dieses Memberknotens ist `_PositionalParameters`, und er ist im XAML-Namespace der XAML-Sprache definiert. Er enthält immer eine generische Liste von Objekten, bei denen es sich um Positionsparameter handelt, die durch Trennung bei dem im Eingabe-XAML angegebenen `,` -Trennzeichen vorab getrennt werden. Eine statische Entität für die Positionsparameterdirektive kann aus <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>abgerufen werden.  
+-   **Positionsparameter für eine Markuperweiterung:** Der Name dieses Memberknotens ist `_PositionalParameters`, und er ist im XAML-Namespace XAML-Sprache definiert. Er enthält immer eine generische Liste von Objekten, bei denen es sich um Positionsparameter handelt, die durch Trennung bei dem im Eingabe-XAML angegebenen `,` -Trennzeichen vorab getrennt werden. Eine statische Entität für die Positionsparameterdirektive kann aus <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>abgerufen werden.  
   
 -   **Unbekannter Inhalt:** Der Name dieses Memberknotens ist `_UnknownContent`. Streng genommen handelt es sich um ein <xref:System.Xaml.XamlDirective>-Element und ist im XAML-Namespace der XAML-Sprache definiert. Diese Direktive wird als Sentinel für Fälle verwendet, in denen ein XAML-Objektelement im Quell-XAML Inhalt aufweist, aber keine Inhaltseigenschaft im aktuell verfügbaren XAML-Schemakontext ermittelt werden kann. Sie können diesen Fall in einem XAML-Knotenstream erkennen, indem Sie ihn auf Member mit dem Namen `_UnknownContent` prüfen. Falls keine andere Aktion in einem Ladepfad-XAML-Knotenstream ausgeführt wird, wird der standardmäßige <xref:System.Xaml.XamlObjectWriter> bei versuchtem `WriteEndObject` ausgelöst, wenn der `_UnknownContent` -Member für ein Objekt gefunden wird. Der standardmäßige <xref:System.Xaml.XamlXmlWriter> wird nicht ausgelöst, und der Member wird als implizit behandelt. Sie können eine statische Entität für `_UnknownContent` von <xref:System.Xaml.XamlLanguage.UnknownContent%2A>abrufen.  
   
@@ -204,7 +204,7 @@ public class GameBoard {
   
      Beachten Sie, dass ein XAML-Knotenstream eine Items-Eigenschaft mit Elementen enthalten kann, die auf Grundlage der Unterstützungstypauflösung und des XAML-Schemakontexts nicht analysiert werden können. Ein auf ein Objekt angewendeter  
   
--   **In XML definierte Member:** Die in XML definierten Member `xml:base`, `xml:lang` und `xml:space` werden als XAML-Direktiven mit den Namen `base`, `lang`und `space` in den .NET Framework-XAML-Dienstimplementierungen gemeldet. Der Namespace hierfür ist der XML-Namespace `http://www.w3.org/XML/1998/namespace`. Konstanten für jedes dieser Elemente können von <xref:System.Xaml.XamlLanguage>abgerufen werden.  
+-   **In XML definierte Member:** Die in XML definierten `xml:base`, `xml:lang` und `xml:space` Elemente werden als XAML-Direktiven, die mit dem Namen gemeldet `base`, `lang`, und `space` in den Implementierungen von .NET Framework-XAML-Dienste. Der Namespace hierfür ist der XML-Namespace `http://www.w3.org/XML/1998/namespace`. Konstanten für jedes dieser Elemente können von <xref:System.Xaml.XamlLanguage>abgerufen werden.  
   
 ## <a name="node-order"></a>Knotenreihenfolge  
  In einigen Fällen ändert der <xref:System.Xaml.XamlXmlReader> die Reihenfolge von XAML-Knoten im XAML-Knotenstream gegenüber der Reihenfolge, in der die Knoten bei der Anzeige im Markup oder der Verarbeitung als XML angezeigt werden. Dies geschieht, damit die Knoten so sortiert werden, dass ein <xref:System.Xaml.XamlObjectWriter> den Knotenstream nur vorwärts verarbeiten kann.  In den .NET Framework-XAML-Diensten ordnet der XAML-Reader Knoten neu, anstatt diese Aufgabe dem XAML-Writer zu überlassen. Dies dient zur Leistungsoptimierung für XAML-Objektwriterconsumer des Knotenstreams.  
@@ -217,7 +217,7 @@ public class GameBoard {
 ### <a name="getobject"></a>GetObject  
  `GetObject` stellt einen XAML-Knoten dar, in dem ein XAML-Objektwriter den Wert der enthaltenden Eigenschaft des Objekts abrufen soll, anstatt ein neues Objekt zu erstellen. Ein typischer Fall, in dem ein `GetObject` -Knoten in einem XAML-Knotenstream vorkommt, ist ein Auflistungs- oder Wörterbuchobjekt, bei dem die enthaltende Eigenschaft im Objektmodell des Unterstützungstyps bewusst schreibgeschützt ist. In diesem Szenario wird die Auflistung oder das Wörterbuch häufig durch die Initialisierungslogik eines übergeordneten Typs erstellt und initialisiert (normalerweise leer).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xaml.XamlObjectReader>  
- [XAML Services](../../../docs/framework/xaml-services/index.md) (XAML-Dienste)  
- [XAML-Namespaces](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Xaml.XamlObjectReader>
+- [XAML Services](../../../docs/framework/xaml-services/index.md) (XAML-Dienste)
+- [XAML-Namespaces](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)

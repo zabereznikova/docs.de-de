@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0bcb0efab3b61f55bd5fdd3405799c7ac78ee521
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68f2cc471a33d2c0ea92ceab59d5ba9ecb86e7f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424650"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509580"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments-Methode
 Gibt ein Array aller im Symbolspeicher definierten Dokumente.  
@@ -42,7 +42,7 @@ HRESULT GetDocuments (
  [in] Die Größe des `pDocs`-Arrays.  
   
  `pcDocs`  
- [out] Ein Zeiger auf eine Variable, die Arraylänge empfängt.  
+ [out] Ein Zeiger auf eine Variable, die Länge des Arrays empfängt.  
   
  `pDocs`  
  [out] Ein Zeiger auf eine Variable, die das Dokumentarray empfangen wird.  
@@ -53,5 +53,5 @@ HRESULT GetDocuments (
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

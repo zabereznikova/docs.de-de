@@ -6,12 +6,12 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: 233da06a2bfb422a1184e8fe44004615b4bc6fde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c2a48e99f99e3e00aca61fdcf688798affa214f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507303"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Verzeichnisse und Dateien: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  
@@ -33,10 +33,10 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Zurückgeben des Dateinamens oder der Volumebezeichnung|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
 |Festlegen von Attributinformationen für eine Datei|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)  
- [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)  
- [Lesen aus Dateien](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [Schreiben in Dateien](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- [Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- [Analysieren von Textdateien mit dem TextFieldParser-Objekt](../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+## <a name="see-also"></a>Siehe auch
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Lesen aus Dateien](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [Schreiben in Dateien](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+- [Analysieren von Textdateien mit dem TextFieldParser-Objekt](../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Skalieren eines Elements'
+title: 'Vorgehensweise: Skalieren eines Elements'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 44c638b58d828e5beb0b9de5c7bb0b67c8e82d87
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e95a5ed091621d27a462bc691e62a5f00bab49ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609121"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54504313"
 ---
-# <a name="how-to-scale-an-element"></a>Gewusst wie: Skalieren eines Elements
+# <a name="how-to-scale-an-element"></a>Vorgehensweise: Skalieren eines Elements
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.ScaleTransform> ein Element skalieren.  
   
  Verwenden der <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> und <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> Eigenschaften zum Ändern der Größe des Elements durch der Faktor für die Sie angeben. Z. B. eine <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> Wert von 1,5 wird das Element auf 150 Prozent der ursprünglichen Breite gestreckt. Ein <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> Wert von 0,5 verringert sich die Höhe eines Elements um 50 Prozent.  
@@ -37,8 +37,8 @@ Zwei ScaleTransform-Vorgänge mit identischen ScaleX- und ScaleY-Werten aber unt
   
  Das vollständige Beispiel finden Sie im [Beispiel einer 2D-Transformation](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.ScaleTransform>  
- [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.ScaleTransform>
+- [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

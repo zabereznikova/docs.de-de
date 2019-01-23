@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac278a4a3b06e0611e1cf57d079516a1dccf606b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c74a130c078077d9f692fbf6107e9d5aefc16b9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397948"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505938"
 ---
 # <a name="securing-wrapper-code"></a>Sichern von Wrappercode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -47,14 +47,14 @@ ms.locfileid: "33397948"
 ## <a name="link-demands-and-wrappers"></a>Verknüpfungsaufrufe und Wrapper  
  In der Sicherheitsinfrastruktur wurde ein besonderer Schutzmechanismus mit Verknüpfungsaufrufen verstärkt. Dies stellt jedoch noch immer eine Quelle für potenzielle Schwachstellen in Ihrem Code dar.  
   
- Wenn vollständig vertrauenswürdiger Code eine Eigenschaft, Ereignis oder geschützte Methode aufruft eine [LinkDemand](../../../docs/framework/misc/link-demands.md), der Aufruf erfolgreich, wenn die **LinkDemand** berechtigungsüberprüfung für den Aufrufer erfüllt wird. Darüber hinaus, wenn der vollständig vertrauenswürdige Code eine Klasse bereitstellt, akzeptiert den Namen einer Eigenschaft und die Aufrufe der **abrufen** -Zugriffsmethode, die zum Aufrufen der **abrufen** Accessors erfolgreich, obwohl der Benutzercode wird verfügen Sie nicht das Recht zum Zugriff auf diese Eigenschaft. Grund hierfür ist die **LinkDemand** nur den unmittelbaren Aufrufer überprüft, also den voll vertrauenswürdigen Code. Im Wesentlichen nimmt der vollständig vertrauenswürdige Code einen privilegierten Aufruf im Auftrag von Benutzercode vor, ohne sicherzustellen, dass der Code über die Berechtigung zum Ausführen dieses Aufrufs verfügt.  
+ Wenn vollständig vertrauenswürdiger Code eine Eigenschaft, Ereignis oder geschützte Methode aufruft. ein [LinkDemand](../../../docs/framework/misc/link-demands.md), der Aufruf erfolgreich ist, wenn die **LinkDemand** berechtigungsüberprüfung für den Aufrufer erfüllt wird. Darüber hinaus, wenn der vollständig vertrauenswürdige Code eine Klasse verfügbar gemacht hat, die den Namen einer Eigenschaft und Aufrufe der **erhalten** Accessor mithilfe von Reflektion, die zum Aufrufen der **erhalten** -Zugriffsmethode erfolgreich, obwohl der Benutzercode wird haben Sie nicht das Recht, diese Eigenschaft zuzugreifen. Grund hierfür ist die **LinkDemand** überprüft nur den unmittelbaren Aufrufer, der vollständig vertrauenswürdige Code handelt. Im Wesentlichen nimmt der vollständig vertrauenswürdige Code einen privilegierten Aufruf im Auftrag von Benutzercode vor, ohne sicherzustellen, dass der Code über die Berechtigung zum Ausführen dieses Aufrufs verfügt.  
   
- Zur Vermeidung solcher Sicherheitslücken erweitert die common Language Runtime die Überprüfung in eine vollständige stapelforderung für jeden indirekten Aufruf an eine Methode, Konstruktor, Eigenschaft oder Ereignis geschützt durch eine **LinkDemand**. Dieser Schutz geht zu Lasten der Leistung und ändert die Semantik der Sicherheitsüberprüfung. Für die vollständige Stapelforderung kann ein Fehler auftreten, der bei der schnelleren Überprüfung einer Ebene nicht auftreten würde.  
+ Zur Vermeidung solcher Sicherheitslücken erweitert die common Language Runtime die Überprüfung in eine vollständige stapelforderung für jeden indirekten Aufruf einer Methode, Konstruktor, Eigenschaft oder das Ereignis durch geschützte eine **LinkDemand**. Dieser Schutz geht zu Lasten der Leistung und ändert die Semantik der Sicherheitsüberprüfung. Für die vollständige Stapelforderung kann ein Fehler auftreten, der bei der schnelleren Überprüfung einer Ebene nicht auftreten würde.  
   
 ## <a name="assembly-loading-wrappers"></a>Wrapper zum Laden von Assemblys  
  Mehrere Methoden werden zum Laden von verwaltetem Code verwendet, z. B. <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>. Dabei werden Assemblys mit dem Beweis des Aufrufers geladen. Wenn Sie eine dieser Methoden in einen Wrapper einschließen, könnte das Sicherheitssystem die Berechtigung Ihres Codes anstelle der Berechtigungen des Aufrufers Ihres Wrappers zum Laden von Assemblys verwenden. Sie sollten nicht zulassen, dass wenig vertrauenswürdiger Code anderen Code laden kann, dem höhere Berechtigungen als dem Aufrufer Ihres Wrappers gewährt wurden.  
   
- Jeglicher Code, der eine vollständige Vertrauensstellung oder eine höhere Vertrauensstellung als ein möglicher Aufrufer (einschließlich eines Aufrufers mit Berechtigungen auf Internetebene) aufweist, kann die Sicherheit auf diese Weise herabsetzen. Wenn Ihr Code eine öffentliche Methode, die ein Bytearray annimmt und übergibt es an **Assembly.Load**, wodurch eine Assembly in Auftrag des Aufrufers erstellt, sie können zur funktionsunfähigkeit von Sicherheit.  
+ Jeglicher Code, der eine vollständige Vertrauensstellung oder eine höhere Vertrauensstellung als ein möglicher Aufrufer (einschließlich eines Aufrufers mit Berechtigungen auf Internetebene) aufweist, kann die Sicherheit auf diese Weise herabsetzen. Wenn Ihr Code eine öffentliche Methode, die ein Bytearray annimmt und übergibt es an **Assembly.Load**, und erstellen eine Assembly, auf den Namen des Aufrufers erstellt, sie können zur funktionsunfähigkeit von Sicherheit.  
   
  Dieses Problem betrifft die folgenden API-Elemente:  
   
@@ -71,27 +71,27 @@ ms.locfileid: "33397948"
   
  Die deklarative Sicherheit bietet die folgenden Sicherheitsüberprüfungen:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> gibt den Stackwalk für die Codezugriffssicherheit an. Alle Aufrufer für den Stapel benötigen die angegebene Berechtigung oder Identität, um die Überprüfung zu bestehen. **Bei Bedarf** tritt bei jedem Aufruf auf, da der Stapel ggf. verschiedene Aufrufer enthält. Wenn Sie eine Methode wiederholt aufrufen, tritt diese Sicherheitsüberprüfung jedes Mal auf. **Bei Bedarf** zuverlässigen Schutz vor Lockangriffen dar; wird nicht autorisierter Code, der versucht zu durchbrechen erkannt.  
+-   <xref:System.Security.Permissions.SecurityAction.Demand> gibt den Stackwalk für die Codezugriffssicherheit an. Alle Aufrufer für den Stapel benötigen die angegebene Berechtigung oder Identität, um die Überprüfung zu bestehen. **Bei Bedarf** tritt bei jedem Aufruf, da der Stapel ggf. verschiedene Aufrufer enthält. Wenn Sie eine Methode wiederholt aufrufen, tritt diese Sicherheitsüberprüfung jedes Mal auf. **Bei Bedarf** ist ein guter Schutz vor Lockangriffen dar; nicht autorisierter Code, von dem zu durchbrechen erkannt.  
   
--   [LinkDemand](../../../docs/framework/misc/link-demands.md) erfolgt zur Kompilierungszeit für Just-in-Time (JIT) und überprüft nur den unmittelbaren Aufrufer. Diese Sicherheitsüberprüfung überprüft nicht den Aufrufer des Aufrufers. Nachdem diese Überprüfung erfolgreich war, werden unabhängig von der Anzahl der Aufrufe durch den Aufrufer keine weiteren Sicherheitsmaßnahmen ergriffen. Es besteht jedoch auch kein Schutz vor Lockangriffen. Mit **LinkDemand**, jeglicher Code, der den Test besteht und kann auf Ihren Code verweisen kann zu schwerwiegenden Fehlern führen Sicherheit von bösartigem Code ein Aufruf mithilfe des autorisierten Codes ermöglicht. Verwenden Sie deshalb nicht **LinkDemand** es sei denn, alle potenziellen Risiken vermieden werden können.  
+-   [LinkDemand](../../../docs/framework/misc/link-demands.md) erfolgt zur Kompilierungszeit für just-in-Time (JIT) und nur den unmittelbaren Aufrufer überprüft. Diese Sicherheitsüberprüfung überprüft nicht den Aufrufer des Aufrufers. Nachdem diese Überprüfung erfolgreich war, werden unabhängig von der Anzahl der Aufrufe durch den Aufrufer keine weiteren Sicherheitsmaßnahmen ergriffen. Es besteht jedoch auch kein Schutz vor Lockangriffen. Mit **LinkDemand**, jeglicher Code, der den Test besteht und kann auf Ihren Code verweisen kann zu schwerwiegenden Fehlern führen Sicherheit von bösartigem Code rufen Sie mithilfe des autorisierten Codes ermöglicht. Aus diesem Grund verwenden Sie keine **LinkDemand** es sei denn, alle potenziellen Risiken ausdrücklich vermieden werden können.  
   
     > [!NOTE]
-    >  In der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], wurden Verknüpfungsaufrufe durch ersetzt die <xref:System.Security.SecurityCriticalAttribute> -Attribut im <xref:System.Security.SecurityRuleSet.Level2> Assemblys. Die <xref:System.Security.SecurityCriticalAttribute> entspricht einem Verknüpfungsaufruf für volle Vertrauenswürdigkeit; allerdings es wirkt sich auch auf Vererbungsregeln. Weitere Informationen zu dieser Änderung finden Sie unter [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    >  In der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], wurden Verknüpfungsaufrufe durch ersetzt die <xref:System.Security.SecurityCriticalAttribute> -Attribut im <xref:System.Security.SecurityRuleSet.Level2> Assemblys. Die <xref:System.Security.SecurityCriticalAttribute> entspricht einem Verknüpfungsaufruf für volle Vertrauenswürdigkeit; allerdings auch auf die Vererbungsregeln angewendet. Weitere Informationen zu dieser Änderung finden Sie unter [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
- Die zusätzlichen Vorsichtsmaßnahmen bei Verwendung **LinkDemand** müssen einzeln programmiert werden; das sicherheitssytem kann bei Sie Ihrer Durchsetzung unterstützen. Jeder Fehler stellt ein Sicherheitsrisiko dar. Der gesamte autorisierte Code, der Ihren Code verwendet, muss für die Implementierung zusätzlicher Sicherheit verantwortlich sein, indem die folgenden Maßnahmen ergriffen werden:  
+ Bei Verwendung der zusätzlichen Vorsichtsmaßnahmen **LinkDemand** müssen einzeln programmiert werden; das sicherheitssytem kann bei der Erzwingung helfen. Jeder Fehler stellt ein Sicherheitsrisiko dar. Der gesamte autorisierte Code, der Ihren Code verwendet, muss für die Implementierung zusätzlicher Sicherheit verantwortlich sein, indem die folgenden Maßnahmen ergriffen werden:  
   
 -   Einschränken des Zugriffs des aufrufenden Codes auf die Klasse oder Assembly.  
   
--   Verwenden der gleichen Sicherheitsüberprüfungen für den aufrufenden Code, die für den Code verwendet werden, der aufgerufen wird, und Verpflichten seiner Aufrufer zu dieser Überprüfung. Z. B. Wenn Sie Code schreiben, der eine Methode, die aufruft mit geschützt ist ein **LinkDemand** für die <xref:System.Security.Permissions.SecurityPermission> mit der <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> Flag angegeben ist, stellen Sie die Methode sollte außerdem ein **LinkDemand** (oder **Bedarf**, der stärker ist) für diese Berechtigung. Die Ausnahme ist, wenn im Code verwendet die **LinkDemand**-geschützte Methode auf eingeschränkte Weise, die Sie entscheiden können ruhig, andere Schutzmechanismen (z. B. Forderungen) im Code. In diesem Ausnahmefall übernimmt der Aufrufer die Verantwortung für die Herabsetzung des Sicherheitsschutzes des zugrunde liegenden Codes.  
+-   Verwenden der gleichen Sicherheitsüberprüfungen für den aufrufenden Code, die für den Code verwendet werden, der aufgerufen wird, und Verpflichten seiner Aufrufer zu dieser Überprüfung. Z. B. Wenn Sie Code schreiben, die eine Methode aufruft, ist geschützt, mit einem **LinkDemand** für die <xref:System.Security.Permissions.SecurityPermission> mit der <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> Flag angegeben ist, stellen Sie die Methode sollte außerdem eine **LinkDemand** (oder **Bedarf**, der stärker ist) für diese Berechtigung. Die Ausnahme ist, wenn der Code verwendet die **LinkDemand**-geschützte Methode auf eingeschränkte Weise, die Sie möchten sicher ist, erhält der andere transportsicherheitsschutzmechanismen (z. B. Forderungen) in Ihrem Code. In diesem Ausnahmefall übernimmt der Aufrufer die Verantwortung für die Herabsetzung des Sicherheitsschutzes des zugrunde liegenden Codes.  
   
 -   Sicherstellen, dass die Aufrufer Ihres Codes den Code nicht veranlassen können, den geschützten Code in ihrem Auftrag aufzurufen. Dies bedeutet, dass Aufrufer den autorisierten Code nicht zwingen können, bestimmte Parameter an den geschützten Code zu übergeben oder Ergebnisse aus ihm abzurufen.  
   
 ### <a name="interfaces-and-link-demands"></a>Schnittstellen und Verknüpfungsaufrufe  
- Wenn eine virtuelle Methode, eine Eigenschaft oder ein Ereignis "mit" **LinkDemand** eine Basisklassenmethode überschreibt die Basisklassenmethode zudem müssen die gleiche **LinkDemand** für die überschriebene Methode, um effizient zu sein. Es ist möglich, dass bösartiger Code eine erneute Umwandlung in den Basistyp ausführt und die Methode der Basisklasse aufruft. Beachten Sie außerdem, dass Verknüpfungsaufrufe Assemblys implizit hinzugefügt werden können, für die das Attribut <xref:System.Security.AllowPartiallyTrustedCallersAttribute> nicht auf Assemblyebene festgelegt ist.  
+ Wenn eine virtuelle Methode, Eigenschaft oder das Ereignis mit **LinkDemand** eine Basisklassenmethode überschreibt die Basisklassenmethode müssen auch die gleichen **LinkDemand** für die überschriebene Methode, um effektiv zu sein. Es ist möglich, dass bösartiger Code eine erneute Umwandlung in den Basistyp ausführt und die Methode der Basisklasse aufruft. Beachten Sie außerdem, dass Verknüpfungsaufrufe Assemblys implizit hinzugefügt werden können, für die das Attribut <xref:System.Security.AllowPartiallyTrustedCallersAttribute> nicht auf Assemblyebene festgelegt ist.  
   
  Eine bewährte Methode besteht darin, Methodenimplementierungen durch Verknüpfungsaufrufen zu schützen, wenn Schnittstellenmethoden ebenfalls Verknüpfungsaufrufe aufweisen. Beachten Sie hinsichtlich der Verwendung von Verknüpfungsaufrufen mit Schnittstellen Folgendes:  
   
--   Setzen Sie eine **LinkDemand** für eine öffentliche Methode einer Klasse, die eine Schnittstellenmethode implementiert die **LinkDemand** werden nicht erzwungen werden, wenn Sie anschließend in der Schnittstelle umwandeln, und rufen Sie die Methode. In diesem Fall, da Sie mit der Schnittstelle nur verknüpft die **LinkDemand** für die Schnittstelle berücksichtigt wird.  
+-   Setzen Sie ein **LinkDemand** für eine öffentliche Methode einer Klasse, die eine Schnittstellenmethode implementiert die **LinkDemand** wird nicht erzwungen werden, wenn Sie anschließend in der Schnittstelle umgewandelt, und rufen Sie die Methode. In diesem Fall, da Sie mit der Schnittstelle nur verknüpft die **LinkDemand** für die Schnittstelle berücksichtigt wird.  
   
  Überprüfen Sie die folgenden Elemente auf Sicherheitsprobleme:  
   
@@ -101,5 +101,5 @@ ms.locfileid: "33397948"
   
 -   Typen und Schnittstellen, die sie implementieren. Diese sollten Verknüpfungsaufrufe einheitlich verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Siehe auch
+- [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)

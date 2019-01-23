@@ -7,15 +7,15 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 4efd6ea1ee5987efcabb038152fca7f1ed90c8f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6571ee16b54c7b22d65567c8d3347cfe4a7936fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561962"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510428"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Gewusst-wie-Themen zur Keyframe-Animation
-Die Themen in diesem Abschnitt veranschaulichen, wie Sie Keyframes Animationen, um mehr als zwei Eigenschaftswerte und Steuerung der Interpolation animieren.  
+Die Themen in diesem Abschnitt veranschaulichen das Keyframe-Animationen verwenden, um mehr als zwei Werte und Steuerung der Interpolation zu animieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Animieren eines Objekts mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
@@ -37,7 +37,7 @@ Die Themen in diesem Abschnitt veranschaulichen, wie Sie Keyframes Animationen, 
   
  <xref:System.Windows.Media.Animation.KeyTime>  
   
-## <a name="see-also"></a>Siehe auch  
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

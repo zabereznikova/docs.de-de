@@ -2,23 +2,17 @@
 title: Schema für Ablaufverfolgungs- und Debugeinstellungen
 ms.date: 03/30/2017
 helpviewer_keywords:
-- tracing [.NET Framework], trace and debug settings schema
-- configuration schema [.NET Framework], trace and debug settings
-- configuration settings [.NET Framework], tracing
-- schema configuration settings
-- configuration settings [.NET Framework], debugging
-- trace listeners, trace and debug settings schema
-- configuration sections [.NET Framework]
-- elements [.NET Framework], trace and debug settings
+  - 'tracing [.NET Framework], trace and debug settings schema'
+  - 'configuration schema [.NET Framework], trace and debug settings'
+  - 'configuration settings [.NET Framework], tracing'
+  - schema configuration settings
+  - 'configuration settings [.NET Framework], debugging'
+  - 'trace listeners, trace and debug settings schema'
+  - 'configuration sections [.NET Framework]'
+  - 'elements [.NET Framework], trace and debug settings'
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9927ad0e853577abb19750d54ba9e852a4e7ec51
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397945"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Schema für Ablaufverfolgungs- und Debugeinstellungen
 Ablaufverfolgungs- und Debugeinstellungen geben Ablaufverfolgungslistener an, die Nachrichten sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.  
@@ -49,8 +43,8 @@ Ablaufverfolgungs- und Debugeinstellungen geben Ablaufverfolgungslistener an, di
 |[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
 |[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Diagnostics.Trace>  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.Debug>  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Diagnostics.Trace>
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.Debug>
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

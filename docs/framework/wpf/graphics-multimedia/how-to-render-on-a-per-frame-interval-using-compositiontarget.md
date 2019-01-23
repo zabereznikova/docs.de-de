@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Rendern in Pro-Frame-Intervallen mit CompositionTarget'
+title: 'Vorgehensweise: Rendern in Pro-Frame-Intervallen mit CompositionTarget'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: cc043e6d225ad3dbe57a0924593fac0f68af7eb1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: afbaf6652351e056fb0ce31ffd9e69cf98a90e85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511224"
 ---
-# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Gewusst wie: Rendern in Pro-Frame-Intervallen mit CompositionTarget
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Vorgehensweise: Rendern in Pro-Frame-Intervallen mit CompositionTarget
 Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animations-Engine stellt zahlreiche Funktionen zum Erstellen framebasierter Animationen bereit. In manchen Anwendungsszenarios müssen Sie das Rendering jedoch pro Frame detaillierter steuern können. Die <xref:System.Windows.Media.CompositionTarget> Objekt bietet die Möglichkeit, benutzerdefinierte Animationen, die basierend auf einer pro-Frame-Rückruf zu erstellen.  
   
  <xref:System.Windows.Media.CompositionTarget> ist eine statische Klasse, die Anzeigeoberfläche darstellt, auf der Ihre Anwendung gezeichnet wird. Die <xref:System.Windows.Media.CompositionTarget.Rendering> Ereignis wird ausgelöst, dass jedes Mal die Szene der Anwendung gezeichnet wird. Die Renderingbildfrequenz gibt an, wie häufig die Szene pro Sekunde gezeichnet wird.  
@@ -40,6 +40,6 @@ Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md
   
  Hinzufügen oder entfernen ein Rendering <xref:System.EventHandler> -Delegaten wird während der Auslösung erst nach Abschluss des Ereignisses verzögert ausgelöst. Dies ist konsistent mit dem <xref:System.MulticastDelegate>-Basis-Ereignisse in der Common Language Runtime (CLR) behandelt. Beachten Sie außerdem, dass die Reihenfolge, in der die Renderingereignisse aufgerufen werden, nicht festgelegt werden kann. Wenn mehrere <xref:System.EventHandler> Delegaten, die abhängig von einer bestimmten Reihenfolge, registrieren Sie ein einzelnes <xref:System.Windows.Media.CompositionTarget.Rendering> Ereignis, und bündeln Sie die Delegaten in der richtigen selbst Reihenfolge.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.CompositionTarget>  
- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.CompositionTarget>
+- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

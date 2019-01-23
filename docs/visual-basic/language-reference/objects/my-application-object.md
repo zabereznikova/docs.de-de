@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
-ms.openlocfilehash: 6eaf0c580c86b60db76cc6630f210b7c1474c681
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9c4073260fa0f43339c6f139b6dce92964c27db2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084242"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507396"
 ---
 # <a name="myapplication-object"></a>My.Application-Objekt
 Enthält Eigenschaften, Methoden und Ereignisse im Zusammenhang mit der aktuellen Anwendung.  
@@ -28,8 +28,8 @@ Enthält Eigenschaften, Methoden und Ereignisse im Zusammenhang mit der aktuelle
   
  **-Klasse:** <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> (die Basisklasse <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> stellt Elemente in konsolenanwendungen und seiner Basisklasse <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> enthält die Elemente, die in allen Projekten verfügbar sind)  
   
- **Assembly:** Visual Basic-Laufzeitbibliothek (in "Microsoft.VisualBasic.dll")  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>Siehe auch  
- [My.Application.Info-Objekt](../../../visual-basic/language-reference/objects/my-application-info-object.md)  
- [My.Application.Log-Objekt](../../../visual-basic/language-reference/objects/my-application-log-object.md)
+## <a name="see-also"></a>Siehe auch
+- [My.Application.Info-Objekt](../../../visual-basic/language-reference/objects/my-application-info-object.md)
+- [My.Application.Log-Objekt](../../../visual-basic/language-reference/objects/my-application-log-object.md)

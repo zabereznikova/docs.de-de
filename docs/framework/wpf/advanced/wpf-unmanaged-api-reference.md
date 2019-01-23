@@ -1,16 +1,16 @@
 ---
-title: WPF-API-Referenz zur nicht verwalteten
+title: WPF nicht verwaltete API-Referenz
 ms.date: 03/30/2017
 ms.assetid: 2a2e8274-6556-46a2-80d3-a1812903cbcf
-ms.openlocfilehash: cf1832005daa8aaf7511073c8136dce7cea32e79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ae359e7a23f0a81f3e96e8dd707933f6e1e6966
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546656"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508405"
 ---
-# <a name="wpf-unmanaged-api-reference"></a>WPF-API-Referenz zur nicht verwalteten
-Windows Presentation Foundation (WPF)-Bibliotheken verfügbar machen eine Reihe von nicht verwalteten Funktionen, die nur zur internen Verwendung bestimmt sind. Sie sollten nicht von Benutzercode aufgerufen werden.  
+# <a name="wpf-unmanaged-api-reference"></a>WPF nicht verwaltete API-Referenz
+Windows Presentation Foundation (WPF)-Bibliotheken verfügbar machen, eine Reihe von nicht verwalteten Funktionen, die nur zur internen Verwendung bestimmt sind. Sie sollten nicht vom Benutzercode aufgerufen werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Activate Function](../../../../docs/framework/wpf/advanced/activate-function-wpf-unmanaged-api-reference.md) (Activate-Funktion)  
@@ -22,5 +22,5 @@ Windows Presentation Foundation (WPF)-Bibliotheken verfügbar machen eine Reihe 
  [SaveToHistory Function](../../../../docs/framework/wpf/advanced/savetohistory-function-wpf-unmanaged-api-reference.md) (SaveToHistory-Funktion)  
  [SetFakeActiveWindow Function](../../../../docs/framework/wpf/advanced/setfakeactivewindow-function-wpf-unmanaged-api-reference.md) (SetFakeActiveWindow-Funktion)  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweitert](../../../../docs/framework/wpf/advanced/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Erweitert](../../../../docs/framework/wpf/advanced/index.md)

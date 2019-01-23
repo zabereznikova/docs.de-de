@@ -2,12 +2,12 @@
 title: '&lt;allowAccounts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: 61310d530cfec2862fb64155777cd0e88132f748
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c1c4630e6191dbbe02688a4e4a9db9e18b8d36d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508417"
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
 Enthält eine Auflistung von Konfigurationselementen, die angeben, Benutzerkonten für Prozesse, die dem Host Windows Communication Foundation (WCF)-Dienste, und denen Verbindungszugriff auf den Freigabedienst gewährt wurde.  
@@ -38,10 +38,10 @@ Enthält eine Auflistung von Konfigurationselementen, die angeben, Benutzerkonte
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<NET.Pipe >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md) oder [ \<net.tcp >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)|Gibt die Konfigurationseinstellungen für den Freigabedienst Net Pipe oder TCP an.|  
+|[\<net.pipe>](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md) or [\<net.tcp>](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)|Gibt die Konfigurationseinstellungen für den Freigabedienst Net Pipe oder TCP an.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>  
- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>  
- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>  
- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElement>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>
+- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>
+- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>
+- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElement>

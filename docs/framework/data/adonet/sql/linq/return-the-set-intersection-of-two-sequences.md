@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d09c344e-3548-4944-a3ed-051880e3f5b8
-ms.openlocfilehash: 9fd2a5dc435829d08594ea3c2f1c129328386250
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb1785b12df2e8a835ba49ae59d0448fbebf794c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506822"
 ---
 # <a name="return-the-set-intersection-of-two-sequences"></a>Zurückgeben der Schnittmenge von zwei Sequenzen
 Verwenden Sie den <xref:System.Linq.Queryable.Intersect%2A>-Operator, um die Schnittmenge von zwei Sequenzen zurückzugeben.  
@@ -23,6 +23,6 @@ Verwenden Sie den <xref:System.Linq.Queryable.Intersect%2A>-Operator, um die Sch
   
  In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wird die <xref:System.Linq.Queryable.Intersect%2A>-Operation nur für Sätze gut definiert. Die Semantik für Multisets ist nicht definiert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfragebeispiele](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Übersetzen von Standardabfrageoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>Siehe auch
+- [Abfragebeispiele](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Übersetzen von Standardabfrageoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

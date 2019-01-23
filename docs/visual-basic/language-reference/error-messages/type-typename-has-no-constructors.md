@@ -1,5 +1,5 @@
 ---
-title: Typ &#39; &lt;Typename&gt; &#39; verfügt über keine Konstruktoren
+title: Typ &#39; &lt;Typename&gt; &#39; hat keine Konstruktoren
 ms.date: 07/20/2015
 f1_keywords:
 - bc30251
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 16b64365ecd5dcfe592c47745dcb66878c2ee5a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a13451956b8afb1bf733c6faa218eadf4255495
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511103"
 ---
-# <a name="type-39lttypenamegt39-has-no-constructors"></a>Typ &#39; &lt;Typename&gt; &#39; verfügt über keine Konstruktoren
+# <a name="type-39lttypenamegt39-has-no-constructors"></a>Typ &#39; &lt;Typename&gt; &#39; hat keine Konstruktoren
 Ein Typ unterstützt nicht den Aufruf von `Sub New()`. Eine mögliche Ursache ist ein beschädigter Compiler oder eine fehlerhafte Binärdatei.  
   
  **Fehler-ID:** BC30251  
@@ -25,10 +25,10 @@ Ein Typ unterstützt nicht den Aufruf von `Sub New()`. Eine mögliche Ursache is
   
 2.  Wenn sich der Typ im gleichen Projekt befindet, kompilieren Sie die Assembly mit dem Typ neu.  
   
-3.  Wenn der Fehler erneut auftritt, installieren Sie Visual Basic-Compiler.  
+3.  Wenn der Fehler erneut auftritt, installieren Sie Visual Basic-Compiler neu.  
   
 4.  Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.  
   
-## <a name="see-also"></a>Siehe auch  
- [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Siehe auch
+- [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

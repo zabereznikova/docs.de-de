@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: 5a3bbd1d4d75c84dda741d382c8dd7568dbb474b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ef55549b43ecbef539d7e84a7281fa704a328938
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507589"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier-Anweisung
 Ändert die XAML-Kompilierungsverhalten beim `x:Class` wird ebenfalls bereitgestellt. Insbesondere statt einer partiellen `class` , bei dem ein `Public` Zugriffsebene (Standard), der bereitgestellten `x:Class` wird erstellt, mit einer `NotPublic` Zugriffsebene. Dieses Verhalten wirkt sich auf die Zugriffsebene für die Klasse in der generierten Assemblys.  
@@ -53,9 +53,9 @@ ms.locfileid: "45749920"
 ## <a name="security-notes"></a>Sicherheitshinweise  
  Die Zugriffsebene, die gemäß der Deklaration in `x:ClassModifier` interpretiert wird, weiterhin von bestimmten Frameworks und ihre Funktionen. WPF enthält Funktionen zum Laden und Instanziieren von Typen, in denen `x:ClassModifier` ist `internal`, wenn die Klasse aus einer WPF-Ressource über einen Paket-URI-Verweis verwiesen wird. Als Folge dieses Falls und potenziell andere wie es von anderen Frameworks implementiert, verlassen Sie sich nicht ausschließlich auf `x:ClassModifier` versucht, alle möglichen Instanziierung zu blockieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [x:Class-Anweisung](../../../docs/framework/xaml-services/x-class-directive.md)  
- [Code-Behind und XAML in WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [x:FieldModifier-Anweisung](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)  
- [Sicherheit (WPF)](../../../docs/framework/wpf/security-wpf.md)  
- [Aus WPF zu System.Xaml migrierte Typen](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a>Siehe auch
+- [x:Class-Anweisung](../../../docs/framework/xaml-services/x-class-directive.md)
+- [Code-Behind und XAML in WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [x:FieldModifier-Anweisung](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)
+- [Sicherheit (WPF)](../../../docs/framework/wpf/security-wpf.md)
+- [Aus WPF zu System.Xaml migrierte Typen](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

@@ -2,12 +2,12 @@
 title: WCF-Diensthost (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6f719756688af066a42c3f73a860038dad1e5a53
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54505639"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF-Diensthost (WcfSvcHost.exe)
 Windows Communication Foundation (WCF)-Diensthost (WcfSvcHost.exe) können Sie zum Starten von Visual Studio-Debugger (F5), um automatisch zu hosten und Testen einen Dienst, den Sie implementiert haben. Anschließend können Sie den Dienst mithilfe von WCF-Testclient (WcfTestClient.exe) oder Ihre eigenen-Clients zum Suchen und beheben potenzielle Fehler testen.  
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF)-Diensthost (WcfSvcHost.exe) können Sie z
 >  WCF-Diensthost unterstützt teilweiser Vertrauenswürdigkeit nicht. Wenn Sie einen WCF-Dienst bei teilweiser Vertrauenswürdigkeit verwenden möchten, verwenden Sie nicht die WCF-Dienstbibliotheksprojekt-Vorlage in Visual Studio zur Erstellung des Diensts. Erstellen Sie stattdessen eine neue WebSite in Visual Studio durch Auswählen der Vorlage für WCF-Service-WebSite, die der Dienst auf einem WebServer hosten kann auf denen WCF teilweise Vertrauenswürdigkeit unterstützt wird.  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>Vom WCF-Diensthost gehostete Projekttypen  
- WCF-Diensthost kann die folgenden WCF-Dienst-Bibliothek Projekttypen hosten: WCF-Dienstbibliothek, sequenzielle Workflowdienstbibliothek, Status-Workflowdienstbibliothek und Syndication-Dienstbibliothek. WCF-Diensthost kann auch hosten, die Dienste, die einem Dienstbibliotheksprojekt mit hinzugefügt werden können die **Element hinzufügen** Funktionalität. Dies schließt die WCF-Dienst, WF-Zustandsautomatdienst, Sequenzieller WF-Dienst, XAML-WF-Zustandsautomatdienst und sequenzieller XAML-WF-Dienst.  
+ WCF-Diensthost kann die folgenden WCF-Dienst-Bibliothek Projekttypen hosten: WCF-Dienstbibliothek, sequenzielle Workflowdienstbibliothek, Zustandsautomat-Workflowdienstbibliothek und Syndication-Dienstbibliothek. WCF-Diensthost kann auch hosten, die Dienste, die einem Dienstbibliotheksprojekt mit hinzugefügt werden können die **Element hinzufügen** Funktionalität. Dies schließt die WCF-Dienst, WF-Zustandsautomatdienst, Sequenzieller WF-Dienst, XAML-WF-Zustandsautomatdienst und sequenzieller XAML-WF-Dienst.  
   
  Beachten Sie jedoch, dass Sie mit dem Tool den Host nicht konfigurieren können. Zur Konfiguration müssen Sie die Datei App.config manuell bearbeiten. Mit dem Tool können Sie auch nicht benutzerdefinierte Konfigurationsdateien validieren.  
   
@@ -72,15 +72,15 @@ Windows Communication Foundation (WCF)-Diensthost (WcfSvcHost.exe) können Sie z
   
  Die **WCF-Diensthost** Hauptfenster umfasst zwei Menüs:  
   
--   **Datei**: enthält die **schließen** und **beenden** Befehle. Beim Klicken auf **schließen**, **WCF-Diensthost** Dialogfeld wird geschlossen, aber der Dienst wird weiterhin gehostet werden. Beim Klicken auf **beenden**, WCF-Diensthost wird heruntergefahren. Dadurch werden auch alle gehosteten Dienste gestoppt.  
+-   **Datei**: Enthält die **schließen** und **beenden** Befehle. Beim Klicken auf **schließen**, **WCF-Diensthost** Dialogfeld wird geschlossen, aber der Dienst wird weiterhin gehostet werden. Beim Klicken auf **beenden**, WCF-Diensthost wird heruntergefahren. Dadurch werden auch alle gehosteten Dienste gestoppt.  
   
--   **Hilfe**: enthält die **zu** -Befehl, der Versionsinformationen enthält. Es enthält auch die **Hilfe** -Befehl, der eine Hilfedatei öffnen kann.  
+-   **Hilfe**: Enthält die **zu** -Befehl, der Versionsinformationen enthält. Es enthält auch die **Hilfe** -Befehl, der eine Hilfedatei öffnen kann.  
   
  Die Main **WCF-Diensthost** umfasst zwei Bereiche:  
   
 -   Der erste Bereich ist **Service**. Er enthält eine Liste mit grundlegenden Informationen zu allen Diensten. Zu diesen Informationen zählen:  
   
-    -   **Dienst**: Listet alle Dienste.  
+    -   **Dienst:** Listet alle Dienste an.  
   
     -   **Status**: Listet den Status des Diensts. Gültige Werte sind "Gestartet", "Beendet" und "Error".  
   
@@ -110,5 +110,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  Weitere Informationen zum netsh.exe, finden Sie unter "[wie mit dem Netsh.exe-Tool und die Befehlszeilenoptionen](https://go.microsoft.com/fwlink/?LinkId=97877)".  
   
-## <a name="see-also"></a>Siehe auch  
- [WCF-Testclient (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+## <a name="see-also"></a>Siehe auch
+- [WCF-Testclient (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

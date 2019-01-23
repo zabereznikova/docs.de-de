@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155092"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507368"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms hinzufügen Konfigurationselement
 
@@ -109,6 +109,6 @@ Ab .NET Framework 4.7, lösen Windows Forms-Steuerelemente eine Anzahl von Ereig
 Skalieren von einzelnen oder mehreren Pass beeinflusst die wahrgenommene Reaktionsfähigkeit der Benutzeroberfläche und die visuelle Darstellung der Elemente der Benutzeroberfläche, wie sie skaliert werden. Ab .NET Framework 4.7, verwendet Windows Forms die einzelnen Durchlauf zu skalieren. In früheren Versionen von .NET Framework Skalierung über mehrere Durchläufe, erfolgt die verursacht einige Steuerelemente skaliert werden, mehr als notwendig war. Skalierung der einzelnen Durchläufen sollte nur deaktiviert werden, wenn Ihre app das alte Verhalten abhängig ist.  
 
 ## <a name="see-also"></a>Siehe auch
- 
-[Konfigurationsabschnitt für Windows Forms](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)   
-[High DPI Support in Windows Forms (Unterstützung für hohe DPI-Werte in Windows Forms)](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)
+
+- [Windows Forms Configuration Section (Konfigurationsabschnitt für Windows Forms)](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md)
+- [High DPI Support in Windows Forms (Unterstützung für hohe DPI-Werte in Windows Forms)](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)

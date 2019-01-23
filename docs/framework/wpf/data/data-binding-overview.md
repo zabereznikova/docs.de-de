@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 1b34b3369e5a045f45251d3285f10bf74b6f0d33
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4cce0d56a629ca01e0174235b1e84291e9fa2f57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503208"
 ---
 # <a name="data-binding-overview"></a>Übersicht über die Datenbindung
 Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung bietet für Anwendungen eine einfache und konsistente Möglichkeit, Daten darzustellen und mit ihnen zu interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Objekten und [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] gebunden werden. <xref:System.Windows.Controls.ContentControl>s wie z. B. <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.ItemsControl>s wie z. B. <xref:System.Windows.Controls.ListBox> und <xref:System.Windows.Controls.ListView> verfügen über integrierte Funktionen, um flexible Formatierung von einzelnen Datenelementen oder Auflistungen von Datenelementen zu aktivieren. Sortier-, Filter- und Gruppenansichten können übergreifend für die Daten generiert werden.  
@@ -83,13 +83,13 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
   
  ![Datenfluss bei der Datenbindung](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> Bindung bewirkt, dass Änderungen an der Quelleigenschaft die Zieleigenschaft automatisch aktualisiert, aber Änderungen an der Zieleigenschaft nicht zurück an die Quelleigenschaft weitergegeben werden. Dieser Bindungstyp empfiehlt sich, wenn das gebundene Steuerelement implizit als schreibgeschützt festgelegt wurde. Sie können beispielsweise eine Bindung an eine Quelle wie einen Börsenticker erstellen, oder möglicherweise ist für die Zieleigenschaft keine Steuerungsoberfläche verfügbar, um Änderungen vorzunehmen, z. B. an der datengebundenen Hintergrundfarbe einer Tabelle. Ist nicht erforderlich, die Änderungen der Zieleigenschaft nicht überwacht, mithilfe der <xref:System.Windows.Data.BindingMode.OneWay> -Bindungsmodus den Mehraufwand der <xref:System.Windows.Data.BindingMode.TwoWay> Bindungsmodus.  
+-   <xref:System.Windows.Data.BindingMode.OneWay> Bindung bewirkt, dass Änderungen an der Quelleigenschaft die Zieleigenschaft automatisch aktualisiert, aber Änderungen an der Zieleigenschaft nicht zurück an die Quelleigenschaft weitergegeben werden. Dieser Bindungstyp empfiehlt sich, wenn das gebundene Steuerelement implizit als schreibgeschützt festgelegt wurde. Sie können beispielsweise eine Bindung an eine Quelle wie einen Börsenticker erstellen, oder möglicherweise ist für die Zieleigenschaft keine Steuerungsoberfläche verfügbar, um Änderungen vorzunehmen, z. B. an der datengebundenen Hintergrundfarbe einer Tabelle. Wenn die Änderungen der Zieleigenschaft nicht überwacht werden müssen, vermeiden Sie mit dem <xref:System.Windows.Data.BindingMode.OneWay>-Bindungsmodus den Mehraufwand des <xref:System.Windows.Data.BindingMode.TwoWay>-Bindungsmodus.  
   
 -   <xref:System.Windows.Data.BindingMode.TwoWay> Bindung bewirkt, dass Änderungen auf die Quelleigenschaft oder der Zieleigenschaft die jeweils andere automatisch aktualisiert. Dieser Typ von Bindung ist für bearbeitbare Formulare und sonstige vollständig interaktive [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Szenarien geeignet. Die meisten Eigenschaften standardmäßig <xref:System.Windows.Data.BindingMode.OneWay> Bindung, aber einige Abhängigkeitseigenschaften (meistens Eigenschaften von vom Benutzer bearbeitbare Steuerelemente wie z. B. die <xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> Eigenschaft <xref:System.Windows.Controls.CheckBox>) standardmäßig <xref:System.Windows.Data.BindingMode.TwoWay> Bindung. Eine programmgesteuerte Methode zum Bestimmen, ob eine Abhängigkeitseigenschaft standardmäßig uni- oder bidirektional bindet, besteht darin, die Metadaten der Eigenschaft mit <xref:System.Windows.DependencyProperty.GetMetadata%2A> abzurufen und dann den booleschen Wert der <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>-Eigenschaft zu überprüfen.  
   
 -   <xref:System.Windows.Data.BindingMode.OneWayToSource> Stellt die Umkehrung der <xref:System.Windows.Data.BindingMode.OneWay> Bindung; er aktualisiert die Quelleigenschaft, wenn die Zieleigenschaft ändert. Ein Beispielszenario besteht darin, einfach den Quellwert von der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] neu zu bewerten.  
   
--   In der Abbildung nicht dargestellt ist <xref:System.Windows.Data.BindingMode.OneTime> Bindung, die bewirkt, dass der Quelleigenschaft die Zieleigenschaft initialisiert, aber nachfolgende Änderungen werden nicht weitergegeben. Wenn sich also der Datenkontext oder das Objekt im Datenkontext ändert, wird die Änderung in der Zieleigenschaft nicht angezeigt. Dieser Bindungstyp empfiehlt sich, wenn Sie Daten verwenden, bei denen eine Momentaufnahme des aktuellen Zustands verwendet werden kann oder die Daten tatsächlich statisch sind. Dieser Bindungstyp ist auch hilfreich, wenn die Zieleigenschaft mit einem bestimmten Wert der Quelleigenschaft initialisiert werden soll und der Datenkontext vorab nicht bekannt ist. Dies ist eine wesentlich einfachere Form der <xref:System.Windows.Data.BindingMode.OneWay> Bindung, bietet eine bessere Leistung in Fällen, in denen der Quellwert nicht ändert sich.  
+-   In der Abbildung nicht dargestellt ist <xref:System.Windows.Data.BindingMode.OneTime> Bindung, die bewirkt, dass der Quelleigenschaft die Zieleigenschaft initialisiert, aber nachfolgende Änderungen werden nicht weitergegeben. Wenn sich also der Datenkontext oder das Objekt im Datenkontext ändert, wird die Änderung in der Zieleigenschaft nicht angezeigt. Dieser Bindungstyp empfiehlt sich, wenn Sie Daten verwenden, bei denen eine Momentaufnahme des aktuellen Zustands verwendet werden kann oder die Daten tatsächlich statisch sind. Dieser Bindungstyp ist auch hilfreich, wenn die Zieleigenschaft mit einem bestimmten Wert der Quelleigenschaft initialisiert werden soll und der Datenkontext vorab nicht bekannt ist. Dies ist eine wesentlich einfachere Form der <xref:System.Windows.Data.BindingMode.OneWay>-Bindung, die eine bessere Leistung in Situationen bietet, in denen sich der Quellwert nicht ändert.  
   
  Beachten Sie, dass zum Erkennen von quelländerungen (gilt für <xref:System.Windows.Data.BindingMode.OneWay> und <xref:System.Windows.Data.BindingMode.TwoWay> Bindungen), muss die Quelle einen Änderungsbenachrichtigungsmechanismus von geeigneten wie z. B. implementieren <xref:System.ComponentModel.INotifyPropertyChanged>. Finden Sie unter [bei Eigenschaftenänderungen implementieren](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md) ein Beispiel für eine <xref:System.ComponentModel.INotifyPropertyChanged> Implementierung.  
   
@@ -429,11 +429,11 @@ Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
 ## <a name="debugging-mechanism"></a>Debugverfahren  
  Sie können die angefügte Eigenschaft festlegen <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> für ein Objekt Datenbindung, um Informationen über den Status einer bestimmten Bindung zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.DataErrorValidationRule>  
- [Neues in WPF Version 4.5](../../../../docs/framework/wpf/getting-started/whats-new.md)  
- [Binden an die Ergebnisse einer LINQ-Abfrage](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
- [Datenbindung](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Demo der Datenbindung](https://go.microsoft.com/fwlink/?LinkID=163703)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [Binden an eine ADO.NET-Datenquelle](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Controls.DataErrorValidationRule>
+- [Neues in WPF Version 4.5](../../../../docs/framework/wpf/getting-started/whats-new.md)
+- [Binden an die Ergebnisse einer LINQ-Abfrage](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
+- [Datenbindung](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [Demo der Datenbindung](https://go.microsoft.com/fwlink/?LinkID=163703)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Binden an eine ADO.NET-Datenquelle](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

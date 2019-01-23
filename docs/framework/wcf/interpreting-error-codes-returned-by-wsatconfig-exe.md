@@ -2,12 +2,12 @@
 title: Interpretieren von Fehlercodes, die von wsatConfig.exe zurückgegeben werden
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 9df059618b45ae65ffb3e6e31a87d5531c79d947
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510025"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretieren von Fehlercodes, die von wsatConfig.exe zurückgegeben werden
 In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe) generierten Fehlercodes und die empfohlenen Maßnahmen aufgelistet.  
@@ -16,7 +16,7 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
   
 |Fehlercode|Beschreibung|Empfohlene Aktion|  
 |----------------|-----------------|------------------------------------|  
-|0|Der Vorgang war erfolgreich.|Keiner|  
+|0|Der Vorgang war erfolgreich.|Keine|  
 |1|Unerwarteter Fehler|Wenden Sie sich an Microsoft|  
 |2|Ein unerwarteter Fehler ist aufgetreten, als versucht wurde, Sicherheitseinstellungen von MSDTC abzurufen.|Stellen Sie sicher, dass der MSDTC-Dienst nicht deaktiviert ist, und beheben Sie alle Probleme, die in der zurückgegebenen Ausnahmemeldung aufgelistet sind.|  
 |3|Das Konto, unter dem WsatConfig.exe ausgeführt wurde, hat keine ausreichenden Berechtigungen zum Lesen der Netzwerksicherheitseinstellungen.|Führen Sie WsatConfig.exe über ein Administratorbenutzerkonto aus.|  
@@ -44,7 +44,7 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
 |28|Die `-network`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-network`-Befehlszeilenoption, um "enable" oder "disable" ordnungsgemäß anzugeben.|  
 |29|Die `-maxTimeout`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-maxTimeout`-Befehlszeilenoption wie angegeben.|  
 |30|Die `-timeout`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-timeout`-Befehlszeilenoption wie angegeben.|  
-|31|Die `-traceLevel`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceLevel`-Befehlszeilenoption, um einen der folgenden gültigen Werte anzugeben:<br /><br /> -Deaktiviert<br />-Fehler<br />- Kritisch<br />-Warnung<br />-Informationen<br />-Verbose<br />-Alle|  
+|31|Die `-traceLevel`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceLevel`-Befehlszeilenoption, um einen der folgenden gültigen Werte anzugeben:<br /><br /> -Deaktiviert<br />-Fehler<br />- Kritisch<br />-Warnung<br />– Informationen<br />-Verbose<br />– Alle|  
 |32|Die `-traceActivity`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceActivity`-Befehlszeilenoption, um "enable" oder "disable" anzugeben.|  
 |33|Die `-traceProp`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-traceProp`-Befehlszeilenoption, um "enable" oder "disable" anzugeben.|  
 |34|Die `-tracePII`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-tracePII`-Befehlszeilenoption, um "enable" oder "disable" anzugeben.|  
@@ -55,7 +55,7 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
 |41|Entweder es wurde keine Installation von [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] gefunden oder die gefundene Version kann nicht vom Tool konfiguriert werden.|Stellen Sie sicher, dass [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] korrekt installiert ist, und verwenden Sie nur das WsatConfig.exe-Tool zum Konfigurieren von WS-AT, das mit dieser Version von [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] geliefert wurde.|  
 |42|Ein Argument wurde mehr als einmal in der Befehlszeile angegeben.|Geben Sie jedes Argument nur einmal an, wenn Sie WsatConfig.exe ausführen.|  
 |43|WsatConfig.exe kann keine WS-AT-Einstellungen aktualisieren, wenn WS-AT nicht aktiviert ist.|Geben Sie `-network:enable` als zusätzliches Befehlszeilenargument an.|  
-|44|Ein erforderlicher Hotfix fehlt, und WS-AT kann erst konfiguriert werden, wenn der Hotfix installiert ist.|Anweisungen zum Installieren des erforderlichen Hotfixes finden Sie in den Anmerkungen zu dieser [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]-Version.|  
+|44|Ein erforderlicher Hotfix fehlt, und WS-AT kann erst konfiguriert werden, wenn der Hotfix installiert ist.|Anweisungen zum Installieren des erforderlichen Hotfixes finden Sie in den Anmerkungen zu diesem [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]-Release.|  
 |45|Die `-virtualServer`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `-virtualServer`-Befehlszeilenoption durch Angabe des Netzwerknamens der Clusterressource, in der die Konfiguration vorgenommen werden soll.|  
 |46|Ein unerwarteter Fehler ist aufgetreten, als versucht wurde, die ETW-Ablaufverfolgungssitzung zu starten.|Verwenden Sie den zurückgegebenen Fehlercode zum Zuweisen des entsprechenden Systemfehlers.|  
 |47|Der Prozess oder der Benutzer hat keine ausreichenden Berechtigungen zum Aktivieren der ETW-Ablaufverfolgungssitzung.|Führen Sie WsatConfig.exe über ein Administratorbenutzerkonto aus.|  
@@ -67,5 +67,5 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
 |55|Ein unerwarteter Fehler ist aufgetreten, als versucht wurde, die ETW-Ablaufverfolgungssitzung zu starten.|Wenden Sie sich an Microsoft.|  
 |56|Ein unerwarteter Fehler ist aufgetreten, als versucht wurde, die ETW-Ablaufverfolgungssitzung zu starten.|Wenden Sie sich an Microsoft.|  
   
-## <a name="see-also"></a>Siehe auch  
- [WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+## <a name="see-also"></a>Siehe auch
+- [WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 6f457756d2266a84c4f241a1cea167af194d8b81
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ac44f58d5cf6edfc2010d8a878f22abcec0fe57f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507576"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Mausereignisse in Windows Forms
 Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Mauszeigers und den Zustand der Maustasten kennen. Dieses Thema enthält Details zum Abrufen dieser Informationen von Mausereignissen und erörtert die Reihenfolge, in der Mausklickereignisse in Windows Forms-Steuerelementen ausgelöst werden. Eine Liste und Beschreibung aller von den Mausereignissen, finden Sie unter [Maus Funktionsweise in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Siehe auch [Übersicht über Ereignishandler (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Events Overview (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
@@ -60,9 +60,9 @@ Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Maus
   
 7.  <xref:System.Windows.Forms.Control.MouseDoubleClick>-Ereignis.  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp>-Ereignis.  
+8.  <xref:System.Windows.Forms.Control.MouseUp> -Ereignis.  
   
- Klicken Sie auf Ereignisse, ein Codebeispiel, das die Reihenfolge der Mausklickereignisse veranschaulicht, finden Sie unter [wie: Behandeln von Benutzereingabeereignissen in Windows Forms-Steuerelemente](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
+ Klicken Sie auf Ereignisse, ein Codebeispiel, das die Reihenfolge der Mausklickereignisse veranschaulicht, finden Sie unter [Vorgehensweise: Behandeln von Benutzereingabeereignissen in Windows Forms-Steuerelementen](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
 ### <a name="individual-controls"></a>Einzelne Steuerelemente  
  Die folgenden Steuerelemente weisen nicht das Standardverhalten bei Mausklickereignissen auf:  
@@ -74,11 +74,11 @@ Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Maus
   
     -   Klick mit der linken Maustaste: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Klick mit der rechten Maustaste: Es werden keine Click-Ereignisse ausgelöst.  
+    -   Klicken Sie auf rechts: Keine Click-Ereignisse ausgelöst  
   
     -   Doppelklick mit der linken Maustaste: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Doppelklick mit der rechten Maustaste: Es werden keine Click-Ereignisse ausgelöst.  
+    -   Doppelklicken Sie auf rechts: Keine Click-Ereignisse ausgelöst  
   
 -   <xref:System.Windows.Forms.TextBox>-Steuerelement, <xref:System.Windows.Forms.RichTextBox>-Steuerelement, <xref:System.Windows.Forms.ListBox>-Steuerelement, <xref:System.Windows.Forms.MaskedTextBox>-Steuerelement und <xref:System.Windows.Forms.CheckedListBox>-Steuerelement  
   
@@ -87,11 +87,11 @@ Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Maus
   
     -   Klick mit der linken Maustaste: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>  
   
-    -   Klick mit der rechten Maustaste: Es werden keine Click-Ereignisse ausgelöst.  
+    -   Klicken Sie auf rechts: Keine Click-Ereignisse ausgelöst  
   
     -   Doppelklick mit der linken Maustaste: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
-    -   Doppelklick mit der rechten Maustaste: Es werden keine Click-Ereignisse ausgelöst.  
+    -   Doppelklicken Sie auf rechts: Keine Click-Ereignisse ausgelöst  
   
 -   <xref:System.Windows.Forms.ListView>-Steuerelement  
   
@@ -141,5 +141,5 @@ Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Maus
     > [!NOTE]
     >  Wenn der Benutzer den Mauszeiger bei gedrückter Maustaste aus dem umschaltbaren Steuerelement bewegt (z. B. wenn er die Maus bei gedrückter Maustaste vom <xref:System.Windows.Forms.Button>-Steuerelement weg bewegt), zeichnet das umschaltbare Steuerelement im erhöhten Zustand, und es tritt nur das <xref:System.Windows.Forms.Control.MouseUp>-Ereignis auf. Das <xref:System.Windows.Forms.Control.Click>-Ereignis oder das <xref:System.Windows.Forms.Control.MouseClick>-Ereignis tritt in dieser Situation nicht auf.  
   
-## <a name="see-also"></a>Siehe auch  
- [Mauseingabe in einer Windows Forms-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>Siehe auch
+- [Mauseingabe in einer Windows Forms-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

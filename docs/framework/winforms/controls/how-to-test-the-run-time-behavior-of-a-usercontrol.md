@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Testen des Laufzeitverhaltens eines UserControl'
+title: 'Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 40ec136a86b52dcb007d15d5a2917212745961f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506367"
 ---
-# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Gewusst wie: Testen des Laufzeitverhaltens eines UserControl
+# <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl
 Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie dessen Laufzeitverhalten zu testen. Können einen separaten Windows-basiertes Anwendungsprojekt zu erstellen und das Steuerelement auf einem Testformular, aber dieses Verfahren ist unpraktisch. Eine schnellere und einfachere Möglichkeit ist die Verwendung der **UserControl-Testcontainer** von Visual Studio bereitgestellt. Dieser Testcontainer, die direkt über das Windows-Steuerelementbibliothek-Projekt wird gestartet.  
   
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie d
   
 6.  Schließen Sie den Testcontainer.  
   
-7.  Fügen Sie einen anderen benutzerdefinierten Steuerelements, sodass die **TestContainerExample** Projekt. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen von vorhandenen Elementen zu einem Projekt](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Fügen Sie einen anderen benutzerdefinierten Steuerelements, sodass die **TestContainerExample** Projekt. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen vorhandener Elemente zu einem Projekt](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
 8.  In der **Windows Forms-Designer**, ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf der Entwurfsoberfläche des Steuerelements.  
   
@@ -66,9 +66,9 @@ Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie d
   
 6.  Verwenden der **Benutzersteuerelement auswählen** <xref:System.Windows.Forms.ComboBox> zum Wechseln zwischen den beiden Steuerelementen aus der **TestContainerExample** Projekt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.UserControl>  
- [Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [Benutzersteuerelement-Designer](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.UserControl>
+- [Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
+- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit visuellen ElementC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Benutzersteuerelement-Designer](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)

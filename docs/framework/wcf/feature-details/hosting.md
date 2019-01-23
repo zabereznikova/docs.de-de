@@ -2,12 +2,12 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 9237518f5bfa48401e60e47ccc40e4ee303dec35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 3216b578ffed23091a27c4449abfe1aa6a2a97c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503008"
 ---
 # <a name="hosting"></a>Hosting
 In den Themen dieses Abschnitts wird das Diensthosting beschrieben. Ein Dienst kann von Internet Information Services (IIS), Windows Process Activation Service (WAS), Windows Server AppFabric, einem Windows-Dienst oder einer verwalteten Anwendung gehostet werden – diese Option wird häufig als bezeichnet *Self-hosting*.  
@@ -33,6 +33,6 @@ In den Themen dieses Abschnitts wird das Diensthosting beschrieben. Ein Dienst k
  [Unterstützen mehrerer IIS-Sitebindungen](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
  Beschreibt, wie Sie mehrere Basisadressen für einen Dienst angeben, indem Sie auf einer Website das gleiche URI-Schema verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosting-Dienste](../../../../docs/framework/wcf/hosting-services.md)  
- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Siehe auch
+- [Hosting-Dienste](../../../../docs/framework/wcf/hosting-services.md)
+- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)

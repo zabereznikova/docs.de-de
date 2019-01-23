@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a491a87c896c76fa62f1702d1ef0e99fc404607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54510116"
 ---
 # <a name="security-transparent-code"></a>Sicherheitstransparenter Code
 <a name="top"></a>
@@ -21,7 +21,7 @@ ms.locfileid: "33392888"
  Sicherheit schließt drei interagierende Elemente ein: Sandkasten, Berechtigungen und Erzwingung. Unter einem Sandkasten versteht man das Erstellen isolierter Domänen, in denen bestimmter Code als vollständig vertrauenswürdig und sonstiger Code auf die Berechtigungen im Berechtigungssatz für den Sandkasten beschränkt ist. Der Anwendungscode, der innerhalb des Berechtigungssatzes des Sandkastens ausgeführt wird, wird als transparent betrachtet, das heißt, es können keine Vorgänge ausgeführt werden, die sich auf die Sicherheit auswirken können. Der Berechtigungssatz für den Sandkasten wird durch Beweis bestimmt (<xref:System.Security.Policy.Evidence>-Klasse). Beweise geben Aufschluss darüber, welche bestimmten Berechtigungen von Sandkästen benötigt werden, und welche Arten von Sandkästen erstellt werden. Erzwingung bedeutet, dass transparenter Code nur innerhalb seines Berechtigungssatzes ausgeführt werden darf.  
   
 > [!IMPORTANT]
->  Die Sicherheitsrichtlinie war ein Schlüsselelement in früheren Versionen von .NET Framework. Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Sicherheitsrichtlinie ist veraltet. Die Beseitigung der Sicherheitsrichtlinie geschieht getrennt von der Sicherheitstransparenz. Informationen zu den Auswirkungen dieser Änderung finden Sie unter [Code Access Security Policy Kompatibilität und Migration von](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).  
+>  Die Sicherheitsrichtlinie war ein Schlüsselelement in früheren Versionen von .NET Framework. Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Sicherheitsrichtlinie ist veraltet. Die Beseitigung der Sicherheitsrichtlinie geschieht getrennt von der Sicherheitstransparenz. Weitere Informationen zu den Auswirkungen dieser Änderung finden Sie unter [Code Access Security Policy Kompatibilität und Migration von](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).  
   
  In diesem Thema wird das Transparenzmodell genauer beschrieben. Es enthält die folgenden Abschnitte:  
   
@@ -43,9 +43,9 @@ ms.locfileid: "33392888"
  Transparenz wurde in .NET Framework, Version 2.0, eingeführt, um das Sicherheitsmodell zu vereinfachen und das Schreiben und Bereitstellen von sicheren Bibliotheken und Anwendungen zu erleichtern. Transparenter Code wird auch in Microsoft Silverlight verwendet, um die Entwicklung von teilweise vertrauenswürdigen Anwendungen zu vereinfachen.  
   
 > [!NOTE]
->  Wenn Sie eine teilweise vertrauenswürdige Anwendung entwickeln, beachten Sie die Berechtigungsanforderungen für die Zielhosts. Sie können eine Anwendung entwickeln, die Ressourcen verwendet, die von einigen Hosts nicht zugelassen werden. Diese Anwendung wird ohne Fehler kompiliert, schlägt jedoch fehl, wenn sie in die gehostete Umgebung geladen wird. Wenn Sie die Anwendung mit Visual Studio entwickelt haben, können Sie in der Entwicklungsumgebung das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aktivieren. Weitere Informationen finden Sie unter [Gewusst wie: Debuggen eine ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). Die für ClickOnce-Anwendungen bereitgestellte Funktion zur Berechnung von Berechtigungen ist auch für jede beliebige teilweise vertrauenswürdige Anwendung verfügbar.  
+>  Wenn Sie eine teilweise vertrauenswürdige Anwendung entwickeln, beachten Sie die Berechtigungsanforderungen für die Zielhosts. Sie können eine Anwendung entwickeln, die Ressourcen verwendet, die von einigen Hosts nicht zugelassen werden. Diese Anwendung wird ohne Fehler kompiliert, schlägt jedoch fehl, wenn sie in die gehostete Umgebung geladen wird. Wenn Sie die Anwendung mit Visual Studio entwickelt haben, können Sie in der Entwicklungsumgebung das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aktivieren. Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). Die für ClickOnce-Anwendungen bereitgestellte Funktion zur Berechnung von Berechtigungen ist auch für jede beliebige teilweise vertrauenswürdige Anwendung verfügbar.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="level"></a>   
 ## <a name="specifying-the-transparency-level"></a>Angeben der Transparenzebene  
@@ -100,12 +100,12 @@ ms.locfileid: "33392888"
   
 -   Es besteht die Möglichkeit, dass durch transparenten Code schädliche Vorgänge ausgeführt werden, wenn er mit voller Vertrauenswürdigkeit ausgeführt wird.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="enforcement"></a>   
 ## <a name="transparency-enforcement"></a>Transparenzerzwingung  
  Transparenzregeln werden erst erzwungen, wenn Transparenz berechnet wird. Zu diesem Zeitpunkt wird eine <xref:System.InvalidOperationException> ausgelöst, wenn gegen eine Transparenzregel verstoßen wird. Die Zeit zur Berechnung der Transparenz hängt von mehreren Faktoren ab und kann nicht vorhergesagt werden. Sie wird so spät wie möglich berechnet. In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] erfolgt die Berechnung der Transparenz auf Assemblyebene früher als in .NET Framework 2.0. Es ist nur garantiert, dass die Transparenzberechnung ausgeführt wird, wenn sie benötigt wird. Dies ist vergleichbar mit der Änderung des Punkts durch den Just-In-Time-Compiler, an dem eine Methode kompiliert wird und Fehler in dieser Methode erkannt werden. Die Transparenzberechnung ist unsichtbar, wenn der Code keine Transparenzfehler enthält.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheitstransparenter Code, Ebene 1](../../../docs/framework/misc/security-transparent-code-level-1.md)  
- [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+## <a name="see-also"></a>Siehe auch
+- [Sicherheitstransparenter Code, Ebene 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
+- [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

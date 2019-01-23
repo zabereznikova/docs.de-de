@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: 201dd8cfc76191fefb45ff01dd42f26fd8454f20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c521c5c5d4ecb2b20954b5b6e303bbbda0a26418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54508639"
 ---
 # <a name="richtextbox"></a>RichTextBox
-Die <xref:System.Windows.Controls.RichTextBox> Element definiert ein Bearbeitungssteuerelement mit integrierter Unterstützung für Funktionen wie Ausschneiden und einfügen, Dokumentpräsentation und Inhaltsauswahl.  
+Die <xref:System.Windows.Controls.RichTextBox> -Element definiert ein Bearbeitungssteuerelement mit integrierter Unterstützung für Features wie z. B. Ausschneiden und einfügen, Dokumentpräsentation und Inhaltsauswahl.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
  [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.TextBox>  
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Controls.TextBox>
+- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
