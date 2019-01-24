@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 4492b92268828943d222fbf624781bc0b9ce7901
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 481d19ca8a7222f26b8d22864c790031c14ffa8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842787"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592587"
 ---
 # <a name="input-overview"></a>Übersicht über die Eingabe
 <a name="introduction"></a> Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Subsystem bietet eine leistungsstarke [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] zum Abrufen von Eingabe aus einer Vielzahl von Geräten, einschließlich der Maus, Tastatur, Touch- und Stift. In diesem Thema werden die Dienste beschrieben, die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bereitgestellt werden sowie die Architektur des Eingabesystems.
@@ -243,7 +243,7 @@ ms.locfileid: "48842787"
 
  Wenn Sie Objekte dazu bringen, auf Manipulationen anzusprechen, können Sie erreichen, dass das Objekt verzögert wird. Dadurch kann Ihr Objekt die physische Welt simulieren. Wenn Sie z.B. ein Buch über einen Tisch schieben, dann bewegt sich das Buch nach dem Loslassen weiter voran, wenn Sie nur kräftig genug anschieben. Mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie dieses Verhalten übernehmen, indem Sie Bearbeitungsereignisse auslösen,nachdem der Benutzer das Objekt losgelassen hat.
 
- Informationen dazu, wie Sie eine Anwendung erstellen, mit der ein Benutzer ein Objekt bewegen, drehen und dessen Größe verändern kann, finden Sie unter [Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
+ Weitere Informationen zum Erstellen einer Anwendung, die den Benutzer verschieben, skalieren und Drehen eines Objekts ermöglicht, finden Sie unter [Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md).
 
  Die <xref:System.Windows.UIElement> definiert folgende Bearbeitungsereignisse.
 
@@ -391,4 +391,8 @@ ms.locfileid: "48842787"
  Es gibt zusätzliche Ressourcen, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Frameworkelemente und das Ereignisrouting detaillierter beschreiben. In den folgenden Übersichten finden Sie weitere Informationen: [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md), [Fokus – Übersicht](../../../../docs/framework/wpf/advanced/focus-overview.md), [Übersicht über Basiselemente](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [Strukturen in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md) und [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md).
 
 ## <a name="see-also"></a>Siehe auch
- [Fokus-Übersicht](../../../../docs/framework/wpf/advanced/focus-overview.md) [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md) [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md) [Basis-Übersicht über](../../../../docs/framework/wpf/advanced/base-elements-overview.md) [Eigenschaften](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+- [Fokus - Übersicht](../../../../docs/framework/wpf/advanced/focus-overview.md)
+- [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md)
+- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Übersicht über Basiselemente](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Eigenschaften](../../../../docs/framework/wpf/advanced/properties-wpf.md)

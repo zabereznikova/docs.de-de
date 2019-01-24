@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: babd7d87f1bb6f238c347d68814a3ecdaef64b40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c1541c6fa2b1d307fc8e854a67b7cc3068b7bb4d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580719"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType-Enumeration
-Enthält Werte, um den Typ der beeinflussen `reloc` Anweisung ausgegeben, in einem Aufruf von [ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
+Enthält Werte, um den Typ der beeinflussen `reloc` Anweisung ausgegeben wird, in einem Aufruf von [ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,32 +54,32 @@ typedef enum  {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`srRelocAbsolute`|Generiert nur ein Abschnitt-relativer `reloc`und sendet nichts in einen .reloc-Abschnitt.|  
+|`srRelocAbsolute`|Generiert nur ein Abschnitt relativen `reloc`und sendet nichts in einen .reloc-Abschnitt.|  
 |`srRelocHighLow`|Generiert eine `reloc` für einen Standort mit Zeigergröße. Dies ist abhängig von der Plattform in BASED_HIGHLOW oder BASED_DIR64 transformiert.|  
-|`srRelocHighAdj`|Generiert eine `reloc` für die oberen 16 Bits einer 32-Bit-Zahl, deren unteren 16 Bits in das nächste Wort in den .reloc-Tabelle enthalten sind.|  
-|`srRelocMapToken`|Generiert eine token Zuordnung Umsetzung sendet nichts in einen .reloc-Abschnitt.|  
+|`srRelocHighAdj`|Generiert eine `reloc` für den oberen 16 Bits des einer 32-Bit-Zahl, die, in dem die unteren 16 Bits in das nächste Wort in der .reloc-Tabelle enthalten sind.|  
+|`srRelocMapToken`|Generiert eine tokenzuordnung Umsetzung "nothing" in einen .reloc-Abschnitt zu senden.|  
 |`srRelocRelative`|Gibt an, dass der Wert eine Korrektur relative Adresse ist.|  
-|`srRelocFilePos`|Generiert nur ein Abschnitt-relativer `reloc`und sendet nichts in einen .reloc-Abschnitt. Dies `reloc` ist relativ zur Dateiposition des Abschnitts, nicht im Abschnitt virtuelle Adresse.|  
-|`srRelocCodeRelative`|Gibt einen Fixup Code Relative Adresse an.|  
+|`srRelocFilePos`|Generiert nur ein Abschnitt relativen `reloc`und sendet nichts in einen .reloc-Abschnitt. Dies `reloc` ist relativ zur Dateiposition des Abschnitts, nicht virtuelle Adresse des Abschnitts der.|  
+|`srRelocCodeRelative`|Gibt ein Fixup Code Relative Adresse an.|  
 |`srRelocIA64Imm64`|Generiert eine `reloc` für eine 64-Bit-Adresse in einer ia64 `movl` Anweisung.|  
 |`srRelocDir64`|Generiert eine `reloc` für eine 64-Bit-Adresse.|  
-|`srRelocIA64PcRel25`|Generieren einer `reloc` für ein 25-Bit-PC-Relative Adresse in einer ia64 `br.call` Anweisung.|  
+|`srRelocIA64PcRel25`|Generieren einer `reloc` für eine 25-Bit-PC-Relative Adresse in einer ia64 `br.call` Anweisung.|  
 |`srRelocIA64PcRel64`|Generiert eine `reloc` für eine 64-Bit-PC-Relative Adresse in einer ia64 `brl.call` Anweisung.|  
-|`srRelocAbsoluteTagged`|Generiert eine 30-Bit-Abschnitt-Relative `reloc`für markierte Zeigerwerte, verwendet.|  
-|`srRelocSentinel`|Ein Sentinelwert, um sicherzustellen, dass alle Ergänzungen für diese Enumeration sind reflektiert, um das interne `reloc` Namen Array.|  
-|`srNoBaseReloc`|Gibt an, nicht um eine Basis ausgeben `reloc`.|  
-|`srRelocPtr`|Ein Wert, der angibt, dass der Pre-Fixup-Inhalt des Arbeitsspeichers einen Zeiger anstelle von einem Abschnitt Offset.|  
+|`srRelocAbsoluteTagged`|Generiert eine 30-Bit-Abschnitt bezogene `reloc`, die für die markierte Zeigerwerte verwendet.|  
+|`srRelocSentinel`|Einen Sentinelwert, um sicherzustellen, dass alle Hinzufügungen zu dieser Enumeration werden reflektiert, um die interne `reloc` Array von Namen.|  
+|`srNoBaseReloc`|Gibt an, nicht, dass eine Basis ausgeben `reloc`.|  
+|`srRelocPtr`|Ein Wert, der angibt, dass den Pre-Fixup-Inhalt des Arbeitsspeichers auf einen Zeiger anstelle eines Abschnitts sind Offset.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)  
- [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
- [AddSectionReloc-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [AddSectionReloc-Methode](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Deserialisieren eines Objekts'
+title: 'Vorgehensweise: Deserialisieren eines Objekts'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: 6da8ec2b78066cd251e4ad492afd2d9d37f7b965
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d0b953e4f570f349edeb80fc2316530494905ec0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583310"
 ---
-# <a name="how-to-deserialize-an-object"></a>Gewusst wie: Deserialisieren eines Objekts
+# <a name="how-to-deserialize-an-object"></a>Vorgehensweise: Deserialisieren eines Objekts
 Beim Deserialisieren eines Objekts wird durch das Transportformat festgelegt, ob ein Stream- oder ein Dateiobjekt erstellt wird. Nachdem das Transportformat festgelegt wurde, können Sie je nach Bedarf die <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A>-Methode oder <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>-Methode aufrufen.  
   
 ### <a name="to-deserialize-an-object"></a>So deserialisieren Sie ein Objekt  
@@ -53,5 +53,5 @@ Beim Deserialisieren eines Objekts wird durch das Transportformat festgelegt, ob
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Einführung in die XML-Serialisierung](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [Einführung in die XML-Serialisierung](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Vorgehensweise: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)

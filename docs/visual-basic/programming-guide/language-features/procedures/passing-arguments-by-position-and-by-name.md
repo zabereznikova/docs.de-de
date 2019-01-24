@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 78c5303461ecf25a1487e072f4f6be25bde98dca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151309"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587462"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Übergeben von Argumenten nach Position und Name (Visual Basic)
 Beim Aufruf einer `Sub` oder `Function` Verfahren können Sie Argumente übergeben *anhand der Position* – in der Reihenfolge, in dem sie in der Definition der Prozedur angezeigt werden, oder Sie übergeben diese *anhand des Namens*, ohne Bezug zum Positionieren.  
@@ -94,12 +94,12 @@ Argumente können nicht anhand des Namens nicht eingeben müssen die erforderlic
   
 Sie können nicht anhand des Namens ein Parameterarray übergeben. Dies ist daran, dass wenn Sie die Prozedur aufrufen, eine unbestimmte Anzahl von kommagetrennten Argumenten für das Parameterarray bereitgestellt, und der Compiler kann nicht mehr als ein Argument mit einem einzigen Namen zuordnen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verfahren](./index.md)  
- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
- [So wird es gemacht: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)  
- [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)  
- [Optionale Parameter](./optional-parameters.md)  
- [Parameterarrays](./parameter-arrays.md)  
- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>Siehe auch
+- [Verfahren](./index.md)
+- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
+- [Vorgehensweise: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)
+- [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)
+- [Optionale Parameter](./optional-parameters.md)
+- [Parameterarrays](./parameter-arrays.md)
+- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

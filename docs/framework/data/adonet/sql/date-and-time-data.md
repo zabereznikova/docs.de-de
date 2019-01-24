@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 1b7d5aca6b2c992e4f1d6bdef2a687d1ff43bf71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584544"
 ---
 # <a name="date-and-time-data"></a>Datums- und Zeitdaten
 SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeitinformationen. Die neuen Datentypen beinhalten separate Typen für Datum und Uhrzeit sowie erweiterte Datentypen mit einem größerem Bereich, höherer Präzision und Zeitzonenermittlung. Ab .NET Framework Version 3.5 Service Pack (SP) 1 bietet der .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) vollständige Unterstützung für alle neuen Funktionen des SQL Server 2008-Datenbankmoduls. Sie müssen .NET Framework 3.5 SP1 (oder höher) installieren, um diese neuen Funktionen mit SqlClient zu verwenden.  
@@ -88,7 +88,7 @@ Sie können angeben, den den Datentyp des einen <xref:System.Data.SqlClient.SqlP
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Ruft ab oder legt fest, ob ein NULL-Wert zulässig ist. Wenn Sie einen NULL-Parameterwert an den Server senden, müssen Sie <xref:System.DBNull> und nicht `null` (in Visual Basic `Nothing`) angeben. Weitere Informationen zu Datenbank-Nullen, finden Sie unter [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Ruft ab oder legt fest, ob ein NULL-Wert zulässig ist. Wenn Sie einen NULL-Parameterwert an den Server senden, müssen Sie <xref:System.DBNull> und nicht `null` (in Visual Basic `Nothing`) angeben. Weitere Informationen zu NULL-Werten bei Datenbanken finden Sie unter [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Legt die maximale Anzahl von Ziffern fest, die zur Darstellung des Werts verwendet werden, oder ruft diese ab. Diese Einstellung wird für Datums- und Uhrzeitdatentypen ignoriert.|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Übernimmt oder bestimmt die Anzahl der Dezimalstellen, der Uhrzeitteil des Werts für aufgelöst wird `Time`, `DateTime2`, und `DateTimeOffset`. Der Standardwert ist 0, d. h., dass die tatsächliche Skalierung aus dem Wert hergeleitet und an den Server gesendet wird.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Dies wird für Datums- und Uhrzeitdatentypen ignoriert.|  
@@ -237,10 +237,10 @@ command.Parameters.AddWithValue( _
 |-----------|-----------------|  
 |[Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Bietet eine Übersicht über alle Transact-SQL-Datentypen und -Funktionen zur Angabe des Datums und der Uhrzeit.|  
 |[Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkId=98361)|Enthält Informationen zu den Datentypen und Funktionen zur Angabe des Datums und der Uhrzeit sowie Beispiele für deren Verwendung.|  
-|[Datentypen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Beschreibt die Systemdatentypen in SQL Server 2008.|  
+|[Data Types (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Beschreibt die Systemdatentypen in SQL Server 2008.|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
+- [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
+- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

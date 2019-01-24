@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: c09d009a8cc90e050f6cfb1a8d2abd5c61c5b19f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63cac0bcca0d9ce8e9f69aa8c9986cb5fa597a56
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590341"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource-Markuperweiterung
-Stellt einen Wert für eine beliebige [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Property-Attribut von bereit, um einen Verweis auf eine Ressource definiert werden. Suchverhalten für diese Ressource ist analog zur Laufzeit-Suche.  
+Gibt einen Wert für alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Eigenschaftsattribut, das von bereit, um einen Verweis auf eine Ressource definiert werden. Das Suchverhalten für diese Ressource ist analog zur Laufzeit-Suche.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
   
@@ -38,27 +38,27 @@ Stellt einen Wert für eine beliebige [!INCLUDE[TLA2#tla_xaml](../../../../inclu
   
 |||  
 |-|-|  
-|`key`|Der Schlüssel für die angeforderte Ressource. Dieser Schlüssel wurde ursprünglich zugewiesen, durch die [X: Key-Anweisung](../../../../docs/framework/xaml-services/x-key-directive.md) Wenn eine Ressource, die im Markup erstellt wurde, oder als bereitgestellt wurde die `key` -Parameter beim Aufrufen von <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> , wenn die Ressource im Code erstellt wurde.|  
+|`key`|Der Schlüssel für die angeforderte Ressource. Dieser Schlüssel wurde ursprünglich zugewiesen, durch die [X: Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md) , wenn eine Ressource, die im Markup erstellt wurde, oder es bereitgestellt wurde die `key` -Parameter beim Aufrufen von <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> , wenn die Ressource im Code erstellt wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein `DynamicResource` erstellt einen temporären Ausdruck bei der ersten Kompilierung und somit Suche nach Ressourcen verzögern, bis der Wert für die angeforderte Ressource tatsächlich erforderlich, um ein Objekt zu erstellen ist. Dies kann möglicherweise nach der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite wird geladen. Der Ressourcenwert wird basierend auf für alle aktiven Ressourcenverzeichnis, beginnend mit der aktuellen Seitenbereich gefunden werden und für den Platzhalterausdruck von der Kompilierung ersetzt wird.  
+ Ein `DynamicResource` erstellt während der erstmaligen Kompilierung einen temporären Ausdruck und Suche nach Ressourcen daher verzögert, bis der Wert für die angeforderte Ressource tatsächlich erforderlich ist, um ein Objekt zu erstellen ist. Dies kann potenziell sein, nach der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Seite wird geladen. Der Ressourcenwert basierend auf wichtige Suche für alle aktiven Ressourcenwörterbüchern aus dem aktuellen Seitenbereich befindet und für den Platzhalterausdruck aus der Kompilierung ersetzt wird.  
   
 > [!IMPORTANT]
->  Im Hinblick auf Vorrangs einer Abhängigkeitseigenschaft eine `DynamicResource` Ausdruck entspricht der Position der dynamischen Ressourcenverweis wird angewendet. Wenn Sie einen lokalen Wert für eine Eigenschaft festlegen, die zuvor bereits profitierten eine `DynamicResource` Ausdruck als den lokalen Wert der `DynamicResource` wird vollständig entfernt. Weitere Informationen finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+>  Im Hinblick auf haben Abhängigkeitseigenschaften eine `DynamicResource` Ausdruck ist identisch mit die Position der dynamischen Ressourcenverweis wird angewendet. Wenn Sie einen lokalen Wert einer Eigenschaft festlegen, die bisher ein `DynamicResource` Ausdruck als lokalen Wert, der `DynamicResource` vollständig entfernt. Weitere Informationen finden Sie unter [Priorität von Abhängigkeitseigenschaftswerten](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
   
- Bestimmte Szenarien der Ressource eignen sich besonders für `DynamicResource` im Gegensatz zu einer [StaticResource Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md). Finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md) Nähere Informationen über die relativen Vorteile und Leistungseinbußen bei der `DynamicResource` und `StaticResource`.  
+ Bestimmte eignen sich besonders für `DynamicResource` im Gegensatz zu einem [StaticResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md). Finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md) für eine Diskussion über die Vorteile und die Auswirkungen auf die Leistung der `DynamicResource` und `StaticResource`.  
   
- Das angegebene <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> sollte entsprechen, eine vorhandene Ressource bestimmt, indem die [X: Key-Anweisung](../../../../docs/framework/xaml-services/x-key-directive.md) auf einer bestimmten Ebene in der Seite, Anwendung, die verfügbare Steuerelementdesigns und externe Ressourcen oder Systemressourcen, und die der Ressourcensuche erfolgt in dieser Reihenfolge. Weitere Informationen zur Ressourcensuche für statische und dynamische Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Das angegebene <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> sollte entsprechen, eine vorhandene Ressource bestimmt, indem die [X: Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md) auf einer bestimmten Ebene in Ihrer Seite, Anwendung, die verfügbaren Steuerelementdesigns und externe Ressourcen oder Systemressourcen, und die die Ressourcensuche wird in dieser Reihenfolge ausgeführt. Weitere Informationen zur Ressourcensuche für statische und dynamische Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
- Ein Ressourcenschlüssel möglicherweise auf eine beliebige Zeichenfolge, die definiert, der [XamlName-Grammatik](../../../../docs/framework/xaml-services/xamlname-grammar.md). Ein Ressourcenschlüssel möglicherweise auch andere Objekttypen, z. B. eine <xref:System.Type>. Ein <xref:System.Type> Schlüssel ist grundlegend, wie Steuerelemente mithilfe von Designs formatiert werden können. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ Ein Ressourcenschlüssel möglicherweise eine beliebige Zeichenfolge, die definiert, der [XamlName-Grammatik](../../../../docs/framework/xaml-services/xamlname-grammar.md). Ein Ressourcenschlüssel möglicherweise auch andere Objekttypen, z. B. eine <xref:System.Type>. Ein <xref:System.Type> Schlüssel ist wesentlich, wie Steuerelemente mithilfe von Designs formatiert werden können. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
   
- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] für die Suche nach Ressourcenwerten z. B. <xref:System.Windows.FrameworkElement.FindResource%2A>, befolgen Sie die gleiche Logik Ressourcensuche vom verwendete `DynamicResource`.  
+ [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] für die Suche von Ressourcenwerte wie z. B. <xref:System.Windows.FrameworkElement.FindResource%2A>, befolgen Sie die Suchlogik der gleichen Ressource vom verwendete `DynamicResource`.  
   
- Die alternative deklaratives Mittel für verweisen auf eine Ressource wird als eine [StaticResource Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+ Die alternative deklaratives Mittel für die verweisen auf eine Ressource ist als eine [StaticResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
   
  Die Attributsyntax ist die mit dieser Markuperweiterung am häufigsten verwendete Syntax. Das Zeichenfolgentoken, das auf die `DynamicResource`-Bezeichnerzeichenfolge folgt, wird als <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>-Wert der zugrunde liegenden <xref:System.Windows.DynamicResourceExtension>-Erweiterungsklasse zugeordnet.  
   
- `DynamicResource` kann in der Syntax der Object-Element verwendet werden. In diesem Fall geben Sie den Wert der <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> ist eine erforderliche Eigenschaft.  
+ `DynamicResource` kann in Objektelementsyntax verwendet werden. In diesem Fall geben Sie den Wert der <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> Eigenschaft ist erforderlich.  
   
  `DynamicResource` kann zudem in einer ausführlichen Attributverwendung verwendet werden, die die <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>-Eigenschaft als Eigenschaft=Wert-Paar angibt:  
   
@@ -68,15 +68,15 @@ Stellt einen Wert für eine beliebige [!INCLUDE[TLA2#tla_xaml](../../../../inclu
   
  Die ausführliche Verwendung ist häufig hilfreich, wenn für eine Erweiterung mehr als eine Eigenschaft festgelegt werden kann oder wenn bestimmte Eigenschaften optional sind. Da für `DynamicResource` nur eine (erforderliche) Eigenschaft festgelegt werden kann, ist diese ausführliche Verwendung unüblich.  
   
- In der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung, die Handhabung für diese Markuperweiterung wird definiert, indem die <xref:System.Windows.DynamicResourceExtension> Klasse.  
+ In der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung wird die Handhabung dieser Markuperweiterung wird definiert, indem die <xref:System.Windows.DynamicResourceExtension> Klasse.  
   
  `DynamicResource` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markuperweiterungen in XAML verwenden die Zeichen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in der Attributsyntax. Dies ist die Konvention, anhand der ein XAML-Prozessor erkennt, dass das Attribut von einer Markuperweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Ressourcen und Code](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [x:Key-Anweisung](../../../../docs/framework/xaml-services/x-key-directive.md)  
- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [StaticResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>Siehe auch
+- [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+- [Ressourcen und Code](../../../../docs/framework/wpf/advanced/resources-and-code.md)
+- [x:Key-Anweisung](../../../../docs/framework/xaml-services/x-key-directive.md)
+- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [StaticResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+- [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

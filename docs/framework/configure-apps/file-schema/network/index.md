@@ -2,22 +2,16 @@
 title: Netzwerkeinstellungsschema
 ms.date: 03/30/2017
 helpviewer_keywords:
-- elements [.NET Framework], network configuration elements
-- sending data, network configuration elements
-- receiving data, network configuration elements
-- configuration settings [.NET Framework], networks
-- Internet, network configuration elements
-- network configuration elements
-- network settings
-- connections [.NET Framework], network configuration elements
-- network resources, network configuration elements
+  - 'elements [.NET Framework], network configuration elements'
+  - 'sending data, network configuration elements'
+  - 'receiving data, network configuration elements'
+  - 'configuration settings [.NET Framework], networks'
+  - 'Internet, network configuration elements'
+  - network configuration elements
+  - network settings
+  - 'connections [.NET Framework], network configuration elements'
+  - 'network resources, network configuration elements'
 ms.assetid: f1de5a0f-76c5-4833-819f-5222b8146340
-ms.openlocfilehash: 93248823284389a865111f9ab47cdac026be55b4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143206"
 ---
 # <a name="network-settings-schema"></a>Netzwerkeinstellungsschema
 Netzwerkeinstellungen geben an, wie Verbindungen zwischen .NET Framework und dem Internet hergestellt werden. Die folgende Tabelle beschreibt die Funktion der einzelnen untergeordneten Konfigurationselemente des [\<system.Net>-Elements (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md).  
@@ -39,6 +33,6 @@ Netzwerkeinstellungen geben an, wie Verbindungen zwischen .NET Framework und dem
 |[\<iriParsing>-Element (URI-Einstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International Resource Identifier, IRI) auf <xref:System.Uri> angewendet wird und ob die IRI-Analyseregeln angewendet werden sollen.|  
 |[\<schemeSettings>-Element (URI-Einstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
   
-## <a name="see-also"></a>Siehe auch  
-- [Konfigurieren von Internetanwendungen](../../../../../docs/framework/network-programming/configuring-internet-applications.md)  
+## <a name="see-also"></a>Siehe auch
+- [Konfigurieren von Internetanwendungen](../../../../../docs/framework/network-programming/configuring-internet-applications.md)
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

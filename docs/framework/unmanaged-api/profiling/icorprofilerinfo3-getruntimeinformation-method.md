@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67e1d20f7faf38fa37083f1a5b1cc0c1060b7a32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5262ba6ef0d2d36372326df24b519072e2aa6fc6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587514"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation-Methode
 Bietet Informationen über die common Language Runtime (CLR), die ein Profil erstellt wird.  
@@ -45,10 +45,10 @@ HRESULT GetRuntimeInformation(
   
 #### <a name="parameters"></a>Parameter  
  `pClrInstanceId`  
- [out] Die Mitarbeiter-ID einer laufenden Instanz von CLR in einem Prozess. Dies ist identisch mit der `ClrInstanceID` von Event Tracing for Windows (ETW) Startup-Ereignis gemeldet.  
+ [out] Die Mitarbeiter-ID einer laufenden Instanz von CLR in einem Prozess. Dies ist identisch mit der `ClrInstanceID` , dass die ereignisablaufverfolgung für Windows (ETW)-Startup-Ereignis meldet.  
   
  `pRuntimeType`  
- [out] Die Common Language Runtime-Typ. Dieser Parameter gibt `COR_PRF_DESKTOP_CLR` für die Desktopversion von CLR oder `COR_PRF_CORE_CLR` für die Core-Version der CLR, die in Silverlight verwendet.  
+ [out] Der Common Language Runtime-Typ. Dieser Parameter gibt `COR_PRF_DESKTOP_CLR` für die desktop-Version der CLR oder `COR_PRF_CORE_CLR` für die Core-Version der CLR in Silverlight verwendet.  
   
  `pMajorVersion`  
  [out] Die Hauptversionsnummer der CLR.  
@@ -66,16 +66,16 @@ HRESULT GetRuntimeInformation(
  [in] Die Länge des Puffers in Zeichen, die `szVersionString` verweist auf.  
   
  `pcchVersionString`  
- [out] Die Länge in Zeichen, d. h. der `szVersionString`.  
+ [out] Die Länge in Zeichen des `szVersionString`.  
   
  `szVersionString`  
  [out] Die CLR-Versionszeichenfolge.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können null für die einzelnen Parameter übergeben. Allerdings `pcchVersionString` darf nicht null sein, wenn `szVersionString` ist ebenfalls null.  
+ Sie können für jeden Parameter null übergeben. Allerdings `pcchVersionString` darf nicht null sein, wenn `szVersionString` ist ebenfalls null.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -83,7 +83,7 @@ HRESULT GetRuntimeInformation(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo3-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo3-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcfb584fc2380a7ae1567d3d4d6203b537676220
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca2d7fe73fc749296f76e18ecce75b7fdd0795d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585590"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty-Methode
-Legt den Wert der Eigenschaft, die vom Bezeichner angegebene Eigenschaft verwiesen wird.  
+Legt den Wert der Eigenschaft durch den Bezeichner für die angegebene Eigenschaft verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,17 +42,17 @@ HRESULT SetProperty (
  [in] Der eindeutige Bezeichner der Eigenschaft, deren Wert festgelegt wird.  
   
  `pvProperty`  
- [in] Der Wert, der zum Festlegen der Eigenschaft verweist `PropertyId`.  
+ [in] Der Wert, der zum Festlegen der Eigenschaft, verweist `PropertyId`.  
   
  `cbProperty`  
- [in] Die Größe in Bytes, der `pvProperty`.  
+ [in] Die Größe in Bytes, des `pvProperty`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Fusion.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

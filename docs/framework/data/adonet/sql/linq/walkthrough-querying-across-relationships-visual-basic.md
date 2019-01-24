@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa98a823a5d97d86144ea2f76953e990cde8edec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2246ad1f9f36af2f8f4383647ccb97ee7be3b64b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585470"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (Visual Basic)
-Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *Zuordnungen* , Fremdschlüssel-Beziehungen in der Datenbank darzustellen.  
+Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *Zuordnungen* um fremdschlüsselbeziehungen in der Datenbank darzustellen.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Diese exemplarische Vorgehensweise wurde mithilfe von Visual Basic-Entwicklungseinstellungen geschrieben.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
- Müssen Sie zunächst [Exemplarische Vorgehensweise: einfaches Objektmodell und Abfrage (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). Diese exemplarische Vorgehensweise basiert auf diesem Schritt und erfordert die Datei northwnd.mdf im Verzeichnis c:\linqtest.  
+## <a name="prerequisites"></a>Vorraussetzungen  
+ Sie müssen abgeschlossen haben [Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). Diese exemplarische Vorgehensweise basiert auf diesem Schritt und erfordert die Datei northwnd.mdf im Verzeichnis c:\linqtest.  
   
 ## <a name="overview"></a>Übersicht  
  Diese exemplarische Vorgehensweise umfasst drei Hauptaufgaben:  
@@ -49,7 +49,7 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Erstellen und Ausführen einer Abfrage über die Customer-Order-Beziehung hinweg  
- Sie können nun direkt auf die `Order`-Objekte zugreifen, und zwar von den `Customer`-Objekten aus oder in umgekehrter Richtung. Sie ist nicht notwendig, eine explizite *Join* zwischen Customers und Orders.  
+ Sie können nun direkt auf die `Order`-Objekte zugreifen, und zwar von den `Customer`-Objekten aus oder in umgekehrter Richtung. Sie brauchen nicht in der eine explizite *Join* zwischen Kunden und Bestellungen.  
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>So greifen Sie mithilfe von Customer-Objekten auf Order-Objekte zu  
   
@@ -86,10 +86,10 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
   
 4.  Drücken Sie die EINGABETASTE im Konsolenfenster, um die Anwendung zu schließen.  
   
-5.  Auf der **Datei** Menü klicken Sie auf **alle speichern** , wenn Sie diese Anwendung speichern möchten.  
+5.  Auf der **Datei** Menü klicken Sie auf **Alles speichern** , wenn Sie diese Anwendung speichern möchten.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Die nächste exemplarische Vorgehensweise ([Exemplarische Vorgehensweise: Bearbeiten von Daten (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) wird veranschaulicht, wie Daten zu bearbeiten. Diese exemplarische Vorgehensweise setzt nicht voraus, dass Sie die beiden in dieser Serie abgeschlossenen exemplarischen Vorgehensweisen speichern.  
+ Die nächste exemplarische Vorgehensweise ([Exemplarische Vorgehensweise: Bearbeiten von Daten (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) wird veranschaulicht, wie Daten bearbeiten können. Diese exemplarische Vorgehensweise setzt nicht voraus, dass Sie die beiden in dieser Serie abgeschlossenen exemplarischen Vorgehensweisen speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Siehe auch
+- [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: fcc3329d6e02a77bf54b5b9f08fddba1bc95ff54
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 33327a8d5e7ce7676ffda6245f3e4f9cccc8b1fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573308"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Konstanten und Enumerationen (Visual Basic)
 Visual Basic stellt eine Reihe vordefinierter Konstanten und Enumerationen für Entwickler bereit. Konstanten speichern Werte, die während der Ausführung einer Anwendung konstant bleiben. Durch Enumerationen wird ein bequemer Weg bereitgestellt, um mit Sätzen verknüpfter Konstanten zu arbeiten, und um konstanten Werten Namen zuzuweisen.  
@@ -77,8 +77,8 @@ Visual Basic stellt eine Reihe vordefinierter Konstanten und Enumerationen für 
 |<xref:Microsoft.VisualBasic.VariantType>|Gibt den Typ eines variant-Objekts, vom dem <xref:Microsoft.VisualBasic.Information.VarType%2A> Funktion.|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|Gibt an, welche Art der Konvertierung beim Aufruf der <xref:Microsoft.VisualBasic.Strings.StrConv%2A>-Funktion ausgeführt werden soll.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)  
- [Visual Basic](../../visual-basic/index.md)  
- [Übersicht über Konstanten](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Übersicht über Enumerationen](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Sprachreferenz zu Visual Basic](../../visual-basic/language-reference/index.md)
+- [Visual Basic](../../visual-basic/index.md)
+- [Übersicht über Konstanten](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
+- [Übersicht über Enumerationen](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

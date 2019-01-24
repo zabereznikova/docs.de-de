@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 5c1f4ec53831662bd25f1f15dc1973440067b32c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c6bd35965c3e7f0e92ecdf98d4aa9052ebb9e35b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573512"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel
 Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst entsprechend neu anordnet, wenn sich die Größe des Formulars oder des Inhalts ändert. Wenn Sie ein dynamisches Layout benötigen und <xref:System.Windows.Forms.Control.Layout> -Ereignisse nicht explizit im Code verarbeiten möchten, ziehen Sie die Verwendung eines Layoutbereichs in Erwägung.  
@@ -124,7 +124,7 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
   
 1.  Ändern Sie den Wert der <xref:System.Windows.Forms.FlowLayoutPanel> -Eigenschaft des <xref:System.Windows.Forms.Control.Dock%2A> -Steuerelements in <xref:System.Windows.Forms.DockStyle.Fill>. Wenn das Formular groß genug ist, werden die <xref:System.Windows.Forms.Button> -Steuerelemente in die erste Spalte des <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelements verschoben.  
   
-2.  Ändern Sie den Wert der <xref:System.Windows.Forms.FlowLayoutPanel> -Eigenschaft des <xref:System.Windows.Forms.Control.Padding%2A> -Steuerelements, indem Sie im <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaftenfenster **den Eintrag** erweitern und die <xref:System.Windows.Forms.Padding.All%2A> -Eigenschaft auf **20**festlegen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von, Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md). Beachten Sie, dass die untergeordneten Steuerelemente zur Mitte des <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelements verschoben werden. Durch den höheren Wert für die <xref:System.Windows.Forms.Control.Padding%2A> -Eigenschaft werden die untergeordneten Steuerelemente von den Kanten des <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelements weg verschoben.  
+2.  Ändern Sie den Wert der <xref:System.Windows.Forms.FlowLayoutPanel> -Eigenschaft des <xref:System.Windows.Forms.Control.Padding%2A> -Steuerelements, indem Sie im <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaftenfenster **den Eintrag** erweitern und die <xref:System.Windows.Forms.Padding.All%2A> -Eigenschaft auf **20**festlegen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md). Beachten Sie, dass die untergeordneten Steuerelemente zur Mitte des <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelements verschoben werden. Durch den höheren Wert für die <xref:System.Windows.Forms.Control.Padding%2A> -Eigenschaft werden die untergeordneten Steuerelemente von den Kanten des <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelements weg verschoben.  
   
 3.  Wählen Sie alle <xref:System.Windows.Forms.Button> -Steuerelemente im <xref:System.Windows.Forms.FlowLayoutPanel> aus, und legen Sie den Wert der <xref:System.Windows.Forms.Control.Margin%2A> -Eigenschaft auf **20**fest. Beachten Sie, dass sich der Abstand zwischen den <xref:System.Windows.Forms.Button> -Steuerelementen vergrößert, sodass sie weiter auseinander gerückt werden. Möglicherweise müssen Sie die Größe des <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelements erhöhen, damit Sie alle untergeordneten Steuerelemente sehen können.  
   
@@ -187,13 +187,13 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
   
 -   Legen Sie die <xref:System.Windows.Forms.Control.Visible%2A> -Eigenschaft eines der Steuerelemente auf `false` fest, und beobachten Sie, wie das <xref:System.Windows.Forms.FlowLayoutPanel> als Antwort darauf einen neuen Umbruch durchführt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.FlowLayoutPanel>  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Microsoft Windows-Benutzererfahrung, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
- [Übersicht über die AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
- [Gewusst wie: Andocken von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
- [Gewusst wie: Verankern von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
- [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.FlowLayoutPanel>
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Microsoft Windows-Benutzererfahrung, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [Übersicht über die AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
+- [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
+- [Vorgehensweise: Verankern von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)
+- [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

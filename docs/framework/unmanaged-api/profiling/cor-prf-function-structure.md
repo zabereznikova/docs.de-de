@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1bc8d588641163ccf98054fdf1930a72a04c770c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 098aaca8ec318b08c87e30c2a9558b7e64494a4c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582001"
 ---
 # <a name="corprffunction-structure"></a>COR_PRF_FUNCTION-Struktur
 Bietet eine eindeutige Darstellung einer Funktion aus der Kombination ihrer ID mit der ID der neu kompilierten Version.  
@@ -37,12 +37,12 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`functionId`|Die ID der Funktion.|  
-|`reJitId`|Die ID der erneut kompilierten Funktion. Der Wert 0 (null) darstellt, die ursprüngliche Version der Funktion.|  
+|`reJitId`|Die ID der erneut kompilierten Funktion. Der Wert 0 (null) stellt die ursprüngliche Version der Funktion dar.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl  
   
@@ -50,5 +50,5 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsstrukturen](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsstrukturen](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576014"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr-Enumeration
 Enthält Werte, die die Metadaten über ein Feld beschreiben.  
@@ -62,32 +62,32 @@ typedef enum CorFieldAttr {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Gibt Informationen über Eingabehilfen an.|  
+|`fdFieldAccessMask`|Gibt Informationen zur Barrierefreiheit an.|  
 |`fdPrivateScope`|Gibt an, dass auf das Feld nicht verwiesen werden kann.|  
-|`fdPrivate`|Gibt an, dass das Feld nur einen übergeordneten Typ zugänglich ist.|  
+|`fdPrivate`|Gibt an, dass das Feld nur von übergeordneten Typs zugegriffen werden kann.|  
 |`fdFamANDAssem`|Gibt an, dass das Feld von abgeleiteten Klassen in seiner Assembly zugegriffen werden kann.|  
 |`fdAssembly`|Gibt an, dass das Feld von allen Typen in seiner Assembly zugegriffen werden kann.|  
-|`fdFamily`|Gibt an, dass das Feld nur anhand des Typs zugegriffen werden kann und Klassen abgeleitete.|  
-|`fdFamORAssem`|Gibt an, dass das Feld von abgeleiteten Klassen und alle Typen in seiner Assembly zugegriffen werden.|  
-|`fdPublic`|Gibt an, dass das Feld alle Typen mit Sichtbarkeit dieses Bereichs zugänglich ist.|  
-|`fdStatic`|Gibt an, dass das Feld ein Member dieses Typs statt einen Instanzmember ist.|  
-|`fdInitOnly`|Gibt an, dass das Feld nach der Initialisierung nicht geändert werden kann.|  
+|`fdFamily`|Gibt an, dass das Feld nur über den Typ ist und den abgeleiteten Klassen.|  
+|`fdFamORAssem`|Gibt an, dass das Feld von abgeleiteten Klassen und alle Typen in der Assembly zugegriffen werden.|  
+|`fdPublic`|Gibt an, dass das Feld von allen Typen mit Sichtbarkeit dieses Bereichs zugegriffen werden kann.|  
+|`fdStatic`|Gibt an, dass das Feld ein Member dieses Typs kein Instanzmember.|  
+|`fdInitOnly`|Gibt an, dass das Feld kann nicht geändert werden, nach der Initialisierung.|  
 |`fdLiteral`|Gibt an, dass der Wert des Felds eine Kompilierzeitkonstante.|  
-|`fdNotSerialized`|Gibt an, dass das Feld nicht serialisiert wird, wenn dessen Typ Remote ausgeführt wird.|  
-|`fdSpecialName`|Gibt an, dass das Feld besondere und seinen Namen wird beschrieben, wie.|  
-|`fdPinvokeImpl`|Gibt an, dass die Implementierung des Felds über PInvoke weitergeleitet wird.|  
-|`fdReservedMask`|Reserviert für interne Verwendung durch die common Language Runtime.|  
-|`fdRTSpecialName`|Gibt an, dass die common Language Runtime-Metadaten über interne APIs überprüfen soll, die die Codierung des Namens.|  
-|`fdHasFieldMarshal`|Gibt an, dass das Feld Marshallinginformationen enthält.|  
+|`fdNotSerialized`|Gibt an, dass das Feld nicht serialisiert wird, wenn der Typ Remote übergeben wird.|  
+|`fdSpecialName`|Gibt an, dass das Feld spezielle ist und seinen Namen wird beschrieben, wie.|  
+|`fdPinvokeImpl`|Gibt an, dass die Feld-Implementierung über PInvoke weitergeleitet wird.|  
+|`fdReservedMask`|Durch die common Language Runtime können Sie für die interne Verwendung reserviert.|  
+|`fdRTSpecialName`|Gibt an, dass die common Language Runtime-Metadaten über interne APIs überprüfen soll, die die Codierung mit dem Namen.|  
+|`fdHasFieldMarshal`|Gibt an, dass das Feld über Marshallinginformationen enthält.|  
 |`fdHasDefault`|Gibt an, dass das Feld einen Standardwert besitzt.|  
-|`fdHasFieldRVA`|Gibt an, dass das Feld eine relative virtuelle Adresse verfügt.|  
+|`fdHasFieldRVA`|Gibt an, dass das Feld eine relative virtuelle Adresse.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

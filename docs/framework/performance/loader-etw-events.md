@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579003"
 ---
 # <a name="loader-etw-events"></a>ETW-Ladeprogrammereignisse
 <a name="top"></a> In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungsdomänen, Assemblys und Modulen erfasst.  
@@ -55,12 +55,12 @@ ms.locfileid: "33397428"
 |Feldname|Datentyp|Beschreibung|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|Der eindeutige Bezeichner für eine Anwendungsdomäne.|  
-|AppDomainFlags|win:UInt32|0x1: Standarddomäne.<br /><br /> 0x2: Ausführbare Datei.<br /><br /> 0x4: Anwendungsdomäne, Bit 28-31: Freigaberichtlinie für diese Domäne.<br /><br /> 0: Eine freigegebene Domäne.|  
+|AppDomainFlags|win:UInt32|0x1: Standard-Domäne.<br /><br /> 0x2: Ausführbare Datei.<br /><br /> 0x4: Anwendungsdomäne, bit 28-31: Freigaberichtlinie für diese Domäne.<br /><br /> 0: Eine freigegebene Domäne.|  
 |AppDomainName|win:UnicodeString|Anzeigename der Anwendungsdomäne. Kann sich während der Lebensdauer des Prozesses ändern.|  
 |AppDomainIndex|win:UInt32|Der Index dieser Anwendungsdomäne.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="clr_loader_assembly_events"></a>   
 ## <a name="clr-loader-assembly-events"></a>CLR-Ladeprogramm-Assemblyereignisse  
@@ -88,11 +88,11 @@ ms.locfileid: "33397428"
 |AssemblyID|win:UInt64|Eindeutige ID für die Assembly.|  
 |AppDomainID|win:UInt64|ID der Domäne dieser Assembly.|  
 |BindingID|win:UInt64|ID, die die Assemblybindung eindeutig kennzeichnet.|  
-|AssemblyFlags|win:UInt32|0x1: Domänenneutrale Assembly.<br /><br /> 0x2: Dynamische Assembly.<br /><br /> 0x4: Die Assembly verfügt über ein systemeigenes Image.<br /><br /> 0x8: Entladbare Assembly.|  
+|AssemblyFlags|win:UInt32|0x1: Domänenneutrale Assembly.<br /><br /> 0x2: Dynamische Assembly.<br /><br /> 0x4: Assembly verfügt über ein systemeigenes Image.<br /><br /> 0x8: Entladbare Assembly.|  
 |AssemblyName|win:UnicodeString|Vollqualifizierter Assemblyname.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="module_events"></a>   
 ## <a name="module-events"></a>Modulereignisse  
@@ -120,7 +120,7 @@ ms.locfileid: "33397428"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|Eindeutige ID für das Modul.|  
 |AssemblyID|win:UInt64|ID der Assembly, in der sich das Modul befindet.|  
-|ModuleFlags|win:UInt32|0x1: Domänenneutrales Modul.<br /><br /> 0x2: Das Modul verfügt über ein systemeigenes Image.<br /><br /> 0x4: Dynamisches Modul.<br /><br /> 0x8: Manifestmodul.|  
+|ModuleFlags|win:UInt32|0x1: Domänenneutrales Modul.<br /><br /> 0x2: Modul verfügt über ein systemeigenes Image.<br /><br /> 0x4: Dynamisches Modul.<br /><br /> 0x8: Das Manifestmodul.|  
 |Reserved1|win:UInt32|Reserviertes Feld.|  
 |ModuleILPath|win:UnicodeString|Der Pfad des MSIL (Microsoft Intermediate Language)-Images für das Modul oder der dynamische Modulname, wenn es sich um eine dynamische (auf null endende) Assembly handelt.|  
 |ModuleNativePath|win:UnicodeString|Pfad des systemeigenen Images für das Modul, sofern vorhanden (auf null endend).|  
@@ -140,7 +140,7 @@ ms.locfileid: "33397428"
   
 -   Die Feldnamen, die mit "NativePdb" beginnen, verweisen auf die NGen-PDB, die durch Aufrufen von `NGEN createPDB`generiert wurde. Diese PDB verwendet das systemeigene PDB-Format und beschreibt, wie Elemente im ursprünglichen verwalteten Quellcode, z. B. Dateien, Zeilennummern und Symbolnamen, systemeigenen Elementen zugeordnet werden, die in das NGen-Modul kompiliert werden.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="clr_domain_module_events"></a>   
 ## <a name="clr-domain-module-events"></a>CLR-Domänenmodulereignisse  
@@ -167,13 +167,13 @@ ms.locfileid: "33397428"
 |ModuleID|win:UInt64|Kennzeichnet die Assembly, zu der dieses Modul gehört.|  
 |AssemblyID|win:UInt64|ID der Assembly, in der sich das Modul befindet.|  
 |AppDomainID|win:UInt64|ID der Anwendungsdomäne, in der dieses Modul verwendet wird.|  
-|ModuleFlags|win:UInt32|0x1: Domänenneutrales Modul.<br /><br /> 0x2: Das Modul verfügt über ein systemeigenes Image.<br /><br /> 0x4: Dynamisches Modul.<br /><br /> 0x8: Manifestmodul.|  
+|ModuleFlags|win:UInt32|0x1: Domänenneutrales Modul.<br /><br /> 0x2: Modul verfügt über ein systemeigenes Image.<br /><br /> 0x4: Dynamisches Modul.<br /><br /> 0x8: Das Manifestmodul.|  
 |Reserved1|win:UInt32|Reserviertes Feld.|  
 |ModuleILPath|win:UnicodeString|Der Pfad des MSIL-Images für das Modul oder der dynamische Modulname, wenn es sich um eine dynamische (auf null endende) Assembly handelt.|  
 |ModuleNativePath|win:UnicodeString|Pfad des systemeigenen Images für das Modul, sofern vorhanden (auf null endend).|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="module_range_events"></a>   
 ## <a name="module-range-events"></a>Modulbereichereignisse  
@@ -212,5 +212,5 @@ ms.locfileid: "33397428"
   
  Modulbereichereignisse werden bei jeder ETW-Ebene größer oder gleich 4 ausgelöst und werden als Informationsereignisse klassifiziert.  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Siehe auch
+- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

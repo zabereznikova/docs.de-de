@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9721d88c8ce138b19c98f113d9eb034c5e1c55dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dd48fae74665f079100b128990656f3a6d002d43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586526"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>ICorDebugManagedCallback::CreateThread-Methode
-Benachrichtigt den Debugger, dass eine Threadausführung begonnen hat, verwalteten Code ausführt.  
+Benachrichtigt den Debugger an, dass ein Thread die Ausführung von verwaltetem Code gestartet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,10 +44,10 @@ HRESULT CreateThread (
  [in] Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Thread wird bei der ersten verwalteten Code-Anweisung auszuführende positioniert werden.  
+ Der Thread wird positioniert werden, an der ersten Anweisung für verwalteten Code ausgeführt werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -55,5 +55,5 @@ HRESULT CreateThread (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

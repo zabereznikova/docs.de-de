@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: adb7668b6a818b2042a38f9458685a6f93085dc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 729ff2a9cbeacaefdf0452a6c5868c229a8d05b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582525"
 ---
 # <a name="goto-statement"></a>GoTo-Anweisung
 Brancht ohne Bedingungen in eine angegebene Zeile in einer Prozedur.  
@@ -34,7 +34,7 @@ GoTo line
  Erforderlich. Alle zeilenbezeichnungen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GoTo` -Anweisung kann nur für Zeilen in der Prozedur, die in der es auftritt verzweigen. Die Zeile benötigen eine Zeile, die Bezeichnung `GoTo` können zu verweisen. Weitere Informationen finden Sie unter [wie: Label-Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ Die `GoTo` -Anweisung kann nur für Zeilen in der Prozedur, die in der es auftritt verzweigen. Die Zeile benötigen eine Zeile, die Bezeichnung `GoTo` können zu verweisen. Weitere Informationen finden Sie unter [Vorgehensweise: Bezeichnen von Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
 >  `GoTo` -Anweisungen können, dass Code schwierig zu lesen und zu verwalten. Wann immer möglich, verwenden Sie stattdessen eine Steuerelement-Struktur. Weitere Informationen finden Sie unter [Ablaufsteuerung](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
@@ -62,12 +62,12 @@ Gültige und ungültige Branches in Try-Konstrukten
   
  [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Do...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
- [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [For Each...Next-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [If...Then...Else-Anweisung](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
- [Select...Case-Anweisung](../../../visual-basic/language-reference/statements/select-case-statement.md)  
- [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
- [While...End While-Anweisung](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
- [With...End With-Anweisung](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>Siehe auch
+- [Do...Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md)
+- [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [For Each...Next-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [If...Then...Else-Anweisung](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Select...Case-Anweisung](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [While...End While-Anweisung](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
+- [With...End With-Anweisung](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

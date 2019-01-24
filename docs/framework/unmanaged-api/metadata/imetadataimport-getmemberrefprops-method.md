@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d62b9be1bef16014e2870c15a232bb46d4daf10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5ac0d77b1d8d35a7753d3a501f147bd5ac53750c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448748"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583729"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps-Methode
 Ruft Metadaten ab, die dem Element zugeordnet sind, auf das durch das angegebene Token verwiesen wird.  
@@ -46,10 +46,10 @@ HRESULT GetMemberRefProps (
  [in] Das MemberRef-Token für die zugeordneten Metadaten zurückgegeben werden soll.  
   
  `ptk`  
- [out] Eine TypeDef oder TypeRef-Token oder TypeSpec-Token, das die Klasse, die deklariert wird darstellt, das Element oder ein ModuleRef-Token, die Module-Klasse darstellt, die deklariert wird, das Element oder ein MethodDef, der das Element darstellt.  
+ [out] Eine TypeDef oder TypeRef oder TypeSpec-Token, die die Klasse, die deklariert darstellt, das Element oder ein ModuleRef-Token, das die Modulklasse darstellt, die deklariert, das Element oder ein MethodDef, der den Member darstellt.  
   
  `szMember`  
- [out] Einen Zeichenfolgenpuffer für der Name des Elements.  
+ [out] Einen Zeichenfolgenpuffer für den Namen des Mitglieds.  
   
  `cchMember`  
  [in] Die angeforderte Größe in Breitzeichen `szMember`.  
@@ -61,17 +61,17 @@ HRESULT GetMemberRefProps (
  [out] Ein Zeiger auf die binäre Metadatensignatur für das Element.  
   
  `pbSig`  
- [out] Die Größe in Bytes des `ppvSigBlob`.  
+ [out] Die Größe in Bytes der `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

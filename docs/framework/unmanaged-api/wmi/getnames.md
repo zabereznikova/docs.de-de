@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583560"
 ---
 # <a name="getnames-function"></a>GetNames-Funktion
 Ruft eine Teilmenge oder alle Namen der Eigenschaften eines Objekts ab. 
@@ -67,8 +67,8 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Eine oder mehrere Parameter sind ungültig, oder es wurde eine falsche Kombination von Flags und Parameter angegeben. |
+|`WBEM_E_FAILED` | 0x80041001 | Es wurde ein allgemeiner Fehler. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Eine oder mehrere Parameter sind ungültig, oder es wurde eine falsche Kombination von Flags und Parameter angegeben. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
@@ -92,24 +92,24 @@ Die Flags, die als übergeben werden können die `lEnumFlags` Argument sind Bitf
 
 | Gruppe 2-flags |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0 x 4 | Zurückgeben Sie, nur die Namen der Eigenschaften, die die Schlüssel zu definieren. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Zurückgeben Sie, nur die Namen der Eigenschaften, die die Schlüssel zu definieren. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Rückgabe nur Eigenschaftennamen, die Objektverweise sind. |
 
 | Gruppe 3-flags |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Zurückgeben von nur für den Eigenschaftennamen, die am stärksten abgeleitete Klasse angehören. Ausschließen von Eigenschaften aus der übergeordneten Klassen. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Zurückgeben von nur für den Eigenschaftennamen, die die übergeordneten Klassen angehören. |
-|`WBEM_FLAG_SYSTEM_ONLY` | 0 x 30 | Geben Sie nur die Namen der Systemeigenschaften zurück. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0 x 40 | Geben Sie nur die Namen der Eigenschaften, die nicht zum System zurück. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Geben Sie nur die Namen der Systemeigenschaften zurück. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Geben Sie nur die Namen der Eigenschaften, die nicht zum System zurück. |
 
 Die Funktion weist immer einen neuen `SAFEARRAY` zurückgegeben `WBEM_S_NO_ERROR`, und `pstrNames` ist immer festgelegt, um darauf zu verweisen. Das zurückgegebene Array kann 0 Elemente verfügen, wenn keine Eigenschaften mit den angegebenen Filtern übereinstimmen. Wenn die Funktion einen Wert zurückgibt, die als `WBM_S_NO_ERROR`, ein neues `SAFEARRAY` Struktur wird nicht zurückgegeben.
  
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

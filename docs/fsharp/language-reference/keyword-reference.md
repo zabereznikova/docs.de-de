@@ -2,12 +2,12 @@
 title: Schlüsselwortreferenz
 description: Hier finden Sie Links zu Informationen über alle der F# Programmiersprachen-Schlüsselwörter.
 ms.date: 05/16/2016
-ms.openlocfilehash: 75adc609dc6feeda2be9aa76bbb50b47b3d738ea
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
+ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579837"
 ---
 # <a name="keyword-reference"></a>Schlüsselwortreferenz
 
@@ -20,7 +20,7 @@ Die folgende Tabelle zeigt alle F# Schlüsselwörter in alphabetischer Reihenfol
 |Stichwort|Link|Beschreibung|
 |-------|----|-----------|
 |`abstract`|[Mitglieder](members/index.md)<br /><br />[Abstrakte Klassen](abstract-classes.md)|Gibt eine Methode, die entweder verfügt über keine Implementierung des Typs in der sie deklariert wird, oder ist virtuell und verfügt über eine Standardimplementierung.|
-|`and`|[`let` Bindungen](functions/let-bindings.md)<br /><br />[Mitglieder](members/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|In der sich gegenseitig rekursiver Bindungen, Eigenschaftendeklarationen und mehrere Einschränkungen für generische Parameter verwendet.|
+|`and`|[`let` Bindungen](functions/let-bindings.md)<br /><br />[Datensätze](records.md)<br /><br />[Mitglieder](members/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|Verwendet, sich gegenseitig rekursiver Bindungen und Datensätze in Eigenschaftendeklarationen sowie mehrere Einschränkungen für generische Parameter.|
 |`as`|[Klassen](classes.md)<br /><br />[Mustervergleich](Pattern-Matching.md)|Verwendet, um dem aktuelle Klassenobjekt ein Objekt benennen. Auch verwendet zum Benennen einer gesamten Muster in einem Mustervergleich.|
 |`assert`|[Assertionen](assertions.md)|Zum Überprüfen von Code während des Debuggens verwendet.|
 |`base`|[Klassen](classes.md)<br /><br />[Vererbung](inheritance.md)|Als Name des Objekts Basisklasse verwendet.|

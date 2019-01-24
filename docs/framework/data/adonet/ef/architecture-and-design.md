@@ -2,12 +2,12 @@
 title: Architektur und Entwurf
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576329"
 ---
 # <a name="architecture-and-design"></a>Architektur und Entwurf
 Das SQL-Generierungsmodul im der [Beispielanbieter](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) wird implementiert, als Besucher für die Ausdrucksbaumstruktur, die die Befehlsstruktur darstellt. Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.  
@@ -18,7 +18,7 @@ Das SQL-Generierungsmodul im der [Beispielanbieter](https://code.msdn.microsoft.
   
 -   Um Aliase umzubenennen, müssen Sie alle verwendeten Aliase identifizieren, sodass Konflikte während der Umbenennung vermieden werden. Wenn Sie die Umbenennungsoptionen in SqlBuilder verzögern möchten, können Sie Symbolobjekte verwenden, um die Spalten darzustellen, die für die Umbenennung infrage kommen.  
   
- ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
  In der ersten Phase während des Zugriffs auf die Ausdrucksbaumstruktur werden Ausdrücke in SqlSelectStatements gruppiert sowie Joins und Joinaliase vereinfacht. Während dieses Durchgangs stellen Symbolobjekte Spalten oder Eingabealiase dar, die möglicherweise umbenannt werden.  
   
@@ -414,5 +414,5 @@ IsEmpty(inut) = Not Exists(input)
   
  Um eindeutige Namen sowohl für Blockaliase als auch für Spalten zu generieren, müssen Sie <existing_name>_n verwenden, wobei n der kleinste Alias ist, der noch nicht verwendet wurde. Die globale Liste aller Aliase erhöht den Bedarf an wiederholten Umbenennungen.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL-Generierung im Beispielanbieter](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)
+## <a name="see-also"></a>Siehe auch
+- [SQL-Generierung im Beispielanbieter](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

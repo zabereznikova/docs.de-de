@@ -12,19 +12,19 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4170ca53252fef3afda026393300e34b99e9d018
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583083"
 ---
 # <a name="array-conversions-visual-basic"></a>Arraykonvertierungen (Visual Basic)
 Sie können einen Arraytyp in einen anderen Arraytyp konvertieren, sofern Sie die folgenden Bedingungen erfüllen:  
   
 -   **Gleich Rang.** Die Zahl der die beiden Arrays müssen identisch sein, also verfügen, müssen die gleiche Anzahl von Dimensionen. Die Länge der jeweiligen Dimensionen müssen allerdings nicht identisch sein.  
   
--   **Datentyp des Elements.** Die Datentypen der Elemente beider Arrays müssen Referenztypen sein. Sie können nicht konvertiert werden ein `Integer` array an eine `Long` array oder sogar um eine `Object` array, da mindestens ein Werttyp ist. Weitere Informationen finden Sie unter [Werttypen und Referenztypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+-   **Datentyp des Elements.** Die Datentypen der Elemente beider Arrays müssen Referenztypen sein. Sie können nicht konvertiert werden ein `Integer` array an eine `Long` array oder sogar um eine `Object` array, da mindestens ein Werttyp ist. Weitere Informationen finden Sie unter [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
 -   **Die Konvertierung.** Eine Konvertierung, erweiternd oder einschränkend, muss zwischen den Elementtypen der beiden Arrays sein. Ein Beispiel, das diese Anforderung nicht erfüllt, wird ein Versuch einer Konvertierung zwischen einem `String` Array und einem Array von einer Klasse abgeleitet <xref:System.Attribute?displayProperty=nameWithType>. Diese beiden Typen haben nichts gemeinsam, und keine Konvertierung jeglicher Art, die zwischen ihnen vorhanden ist.  
   
@@ -59,12 +59,12 @@ students = New Student(3) {}
 students = names  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Vorgehensweise: Konvertieren eines Objekts in einen anderen Typ in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)  
- [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Konvertierungen zwischen Zeichenfolgen und anderen Typen](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
+- [Vorgehensweise: Konvertieren eines Objekts in einen anderen Typ in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)
+- [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

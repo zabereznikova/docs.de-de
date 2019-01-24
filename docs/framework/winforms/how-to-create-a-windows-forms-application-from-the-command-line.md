@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: erstellen eine Windows Forms-Anwendung über die Befehlszeile'
+title: 'Vorgehensweise: Erstellen einer Windows Forms-Anwendung über die Befehlszeile'
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b37c57093662c94f5ad20bf9d01c63223b5901fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43804788"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54581981"
 ---
-# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Gewusst wie: erstellen eine Windows Forms-Anwendung über die Befehlszeile
-In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen. Visual Studio bietet umfassende Unterstützung für diese Verfahren.  Siehe auch [Exemplarische Vorgehensweise: Erstellen eines einfachen Windows-Formulars](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
+# <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Vorgehensweise: Erstellen einer Windows Forms-Anwendung über die Befehlszeile
+In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen. Visual Studio bietet umfassende Unterstützung für diese Verfahren.  Siehe auch [Exemplarische Vorgehensweise: Erstellen eines einfachen Windows Forms](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
   
 ## <a name="procedure"></a>Prozedur  
   
@@ -113,9 +113,9 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
 -   Um den Code zu kompilieren, führen Sie die Anweisungen aus dem vorangehenden Verfahren aus, in denen beschrieben ist, wie die Anwendung zu kompilieren und auszuführen ist.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Control>  
- [Ändern der Darstellung von Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
- [Erweitern von Windows Forms-Anwendungen](../../../docs/framework/winforms/advanced/index.md)  
- [Erste Schritte mit Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Control>
+- [Ändern der Darstellung von Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
+- [Erweitern von Windows Forms-Anwendungen](../../../docs/framework/winforms/advanced/index.md)
+- [Erste Schritte mit Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

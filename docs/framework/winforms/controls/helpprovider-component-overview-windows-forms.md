@@ -10,31 +10,31 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: 5ad74b862c09734f3490210cb6898945a3c787fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d6360358b08dc0602cbdfe352bb69caee25c7bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528618"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591976"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>Übersicht über die HelpProvider-Komponente (Windows Forms)
-Windows Forms [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) Komponente wird verwendet, um eine HTML Help 1.x-Hilfedatei (entweder eine mit HTML Help Workshop erstellte CHM-Datei oder eine HTM-Datei) der Windows-Anwendung zuzuordnen. Sie können die Hilfe in verschiedene Arten angeben:  
+Die Windows-Formulare [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) Komponente verwendet, um eine HTML Help 1.x-Hilfedatei (entweder eine mit HTML Help Workshop erstellte CHM-Datei oder eine HTM-Datei) mit der Windows-Anwendung zuzuordnen. Sie können die Hilfe in einer Vielzahl von Methoden angeben:  
   
--   Geben Sie kontextbezogene Hilfe für Steuerelemente in Windows Forms.  
+-   Geben Sie kontextbezogene Hilfe für in Windows Forms-Steuerelemente.  
   
--   Geben Sie kontextbezogene Hilfe auf einem bestimmten Dialogfeld oder für bestimmte Steuerelemente in einem Dialogfeld an.  
+-   Bereitstellen Sie kontextbezogener Hilfe auf einem bestimmten Dialogfeld oder für bestimmte Steuerelemente in einem Dialogfeld an.  
   
--   Öffnen Sie eine Hilfedatei, die bestimmten Bereichen, z. B. ein Inhaltsverzeichnis, den Index oder eine Suchfunktion die Hauptseite angezeigt.  
+-   Öffnen Sie eine Hilfe zu bestimmten Bereichen, z. B. die Hauptseite der Inhaltsverzeichnis, den Index oder eine Suchfunktion.  
   
 ## <a name="using-the-help-provider"></a>Verwenden des Hilfeanbieters  
- Hinzufügen einer <xref:System.Windows.Forms.HelpProvider> Komponente zu einem Windows Form kann die anderen Steuerelemente im Formular an den Hilfe-Eigenschaften verfügbar machen die <xref:System.Windows.Forms.HelpProvider> Komponente. Dadurch können Sie die Steuerelemente auf dem Windows-Formular Hilfe bereit. Sie können eine Hilfedatei zuordnen der <xref:System.Windows.Forms.HelpProvider> Komponente mit der <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> Eigenschaft. Geben Sie die bereitgestellten, durch Aufrufen von Hilfe <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> und einen Wert aus der <xref:System.Windows.Forms.HelpNavigator> Enumeration für das angegebene Steuerelement. Sie geben das Schlüsselwort oder ein Thema Hilfestellung bei der durch Aufrufen der <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> Methode.  
+ Hinzufügen einer <xref:System.Windows.Forms.HelpProvider> Komponente zu Ihrem Windows-Formular können Sie die anderen Steuerelemente im Formular aus, um die Hilfeeigenschaften verfügbar zu machen die <xref:System.Windows.Forms.HelpProvider> Komponente. Dadurch können Sie die Steuerelemente auf dem Windows-Formular Hilfe bereit. Sie können eine Textdatei mit Zuordnen der <xref:System.Windows.Forms.HelpProvider> -Komponente mithilfe der <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> Eigenschaft. Sie geben den Typ der bereitgestellten durch Aufrufen von Hilfe <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> und einen Wert aus der <xref:System.Windows.Forms.HelpNavigator> Enumeration für das angegebene Steuerelement. Sie bieten das Schlüsselwort oder ein Thema Hilfe durch Aufrufen der <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> Methode.  
   
- Um ein anderes Steuerelement eine bestimmte Hilfezeichenfolge zuzuordnen, verwenden Sie optional die <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> Methode. Die Zeichenfolge, die Sie Zuordnen eines Steuerelements, das mit dieser Methode wird in einem Popupfenster angezeigt, wenn der Benutzer die F1-Taste drückt, während das Steuerelement den Fokus besitzt.  
+ Um eine bestimmte Hilfezeichenfolge mit einem anderen Steuerelement zuzuordnen, verwenden Sie optional die <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> Methode. Die Zeichenfolge, die Sie zuordnen, dass ein Steuerelement, das mit dieser Methode wird in einem Popupfenster angezeigt, wenn der Benutzer die F1-Taste drückt, während das Steuerelement den Fokus besitzt.  
   
- Wenn <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> wurde nicht festgelegt ist, verwenden Sie <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> den Hilfetext bereitstellen. Wenn Sie beide festgelegt haben <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> und den Hilfetext Hilfe basierend auf <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> Vorrang.  
+ Wenn <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> wurde nicht festgelegt ist, verwenden Sie <xref:System.Windows.Forms.HelpProvider.SetHelpString%2A> den Hilfetext bereitstellen. Wenn Sie beide festgelegt haben <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> und die Hilfezeichenfolge Hilfe auf Grundlage <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> Vorrang.  
   
 > [!NOTE]
->  Treten möglicherweise Probleme bei der Verwendung des relativen Pfads bei der Angabe den Pfad zur Hilfedatei in der <xref:System.Windows.Forms.Help.ShowHelp%2A> Methode oder <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> Eigenschaft von der <xref:System.Windows.Forms.HelpProvider> Steuerelement. Achten Sie daher darauf, den absoluten Dateipfad verwenden, um die Hilfe-Datei anzugeben.  
+>  Treten möglicherweise Probleme bei der Verwendung des relativen Pfads bei der Angabe den Pfad zur Hilfedatei in der <xref:System.Windows.Forms.Help.ShowHelp%2A> Methode oder <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> Eigenschaft der <xref:System.Windows.Forms.HelpProvider> Steuerelement. Daher werden Sie sicher, dass den absolute Dateipfad zu verwenden, um die Hilfedatei anzugeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hilfesysteme in Windows Forms-Anwendungen](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)
+## <a name="see-also"></a>Siehe auch
+- [Hilfesysteme in Windows Forms-Anwendungen](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-ms.openlocfilehash: d0c0ea819741f80e30e55a960b1187699898a3bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbfdd471a5241234780c05c0f1a045db2476f773
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604106"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570776"
 ---
 # <a name="gtgt-operator-visual-basic"></a>&gt;&gt;=-Operator (Visual Basic)
-Führt eine arithmetische Verschiebung nach rechts auf den Wert einer Variablen oder Eigenschaft und weist das Ergebnis der Variablen oder Eigenschaft an.  
+Führt eine arithmetische rechtsverschiebung den Wert einer Variable oder eine Eigenschaft und weist das Ergebnis der Variablen oder Eigenschaft an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -28,30 +28,30 @@ variableorproperty >>= amount
   
 ## <a name="parts"></a>Teile  
  `variableorproperty`  
- Erforderlich. Variable oder eine Eigenschaft eines ganzzahligen Typs (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, oder `ULong`).  
+ Erforderlich. Variable oder eine Eigenschaft, ein ganzzahliger Typ (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, oder `ULong`).  
   
  `amount`  
- Erforderlich. Numerische Ausdruck eines Datentyps, die erweitert `Integer`.  
+ Erforderlich. Numerischer Ausdruck eines Datentyps, die erweitert werden kann, `Integer`.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Element auf der linken Seite von der `>>=` Operator kann eine einfache Skalarvariable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ Das Element auf der linken Seite von der `>>=` Operator kann eine einfache skalare Variable, eine Eigenschaft oder ein Element eines Arrays sein. Die Variable oder Eigenschaft kann nicht [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Die `>>=` -Operator führt eine arithmetische rechtsverschiebung zuerst auf den Wert der Variablen oder Eigenschaft. Der Operator weist das Ergebnis dieses Vorgangs dann der Variablen oder Eigenschaft an.  
+ Die `>>=` -Operator führt eine arithmetische rechtsverschiebung zuerst auf dem Wert der Variablen oder Eigenschaft. Der Operator weist das Ergebnis des Vorgangs klicken Sie dann die Variable oder Eigenschaft an.  
   
- Arithmetische Schichten sind nicht zirkulär, d. h. die Bits verschobene ein Ende des Resultsets nicht am anderen Ende wieder hinzugefügt werden. Klicken Sie in eine arithmetische Verschiebung nach rechts die Bits hinter Bit ganz rechts verschoben werden verworfen, und wird das Bit ganz links auf der linken Seite frei gewordene Bitpositionen weitergegeben. Dies bedeutet, dass bei `variableorproperty` hat einen negativen Wert die frei werdenden Positionen auf 1 gesetzt werden. Wenn `variableorproperty` positiv ist, oder wenn der Datentyp ein Typ ohne Vorzeichen ist, werden die frei werdenden Positionen auf 0 (null) festgelegt.  
+ Arithmetische Verschiebungen sind nicht zirkuläre, was bedeutet die Bits verschoben aus einem Ende des Resultsets nicht am anderen Ende wieder eingeführt werden. In eine arithmetische Verschiebung nach rechts die Bits, die hinter der äußere rechte Bit stellt Position verschoben werden verworfen und das Bit ganz links in der Bitpositionen, die auf der linken Seite weitergegeben wird. Dies bedeutet, dass bei `variableorproperty` hat einen negativen Wert an, die frei werdenden Positionen auf 1 gesetzt werden. Wenn `variableorproperty` positiv ist, oder wenn der Datentyp ein Typ ohne Vorzeichen ist, werden die frei werdenden Stellen 0 (null) festgelegt.  
   
 ## <a name="overloading"></a>Überladen  
- Die [>> Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der betreffenden Klasse oder Struktur hat. Überladen der `>>` Operator wirkt sich auf das Verhalten der `>>=` Operator. Wenn im Code verwendet `>>=` auf eine Klasse oder Struktur, die Überladungen `>>`, achten Sie verstehen, dass ihr neu definierten Verhalten. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Die [>> Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md) kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Das Überladen der `>>` Operator beeinflusst das Verhalten von der `>>=` Operator. Wenn Ihr Code verwendet `>>=` für eine Klasse oder Struktur, die Überladungen `>>`, werden Sie sicher, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die `>>=` Operator, um das Bitmuster der UMSCHALTTASTE ein `Integer` Variablen nach rechts, um den angegebenen Betrag und das Ergebnis der Variablen zuzuweisen.  
+ Im folgenden Beispiel wird die `>>=` Operator, um das Bitmuster verschoben ein `Integer` Variable, um den angegebenen Betrag und Zuweisen des Ergebnisses, auf die Variable nach rechts.  
   
  [!code-vb[VbVbalrOperators#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-assignment-operator_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [>>-Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md)  
- [Zuweisungsoperatoren](../../../visual-basic/language-reference/operators/assignment-operators.md)  
- [Bitverschiebungsoperatoren](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Siehe auch
+- [>>-Operator](../../../visual-basic/language-reference/operators/right-shift-operator.md)
+- [Zuweisungsoperatoren](../../../visual-basic/language-reference/operators/assignment-operators.md)
+- [Bitverschiebungsoperatoren](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
+- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)

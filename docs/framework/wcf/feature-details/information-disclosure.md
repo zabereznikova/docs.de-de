@@ -2,12 +2,12 @@
 title: Veröffentlichung von Informationen
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 057984dada86019cd8e0a619523d717d0045062f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 267e0dc656e05ed6f95eef1c75e40c07108a164e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508009"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588244"
 ---
 # <a name="information-disclosure"></a>Veröffentlichung von Informationen
 Die Veröffentlichung von Informationen ermöglicht Angreifern, an wertvolle Informationen über ein System zu gelangen. Daher sollten Sie immer genau überlegen, welche Informationen offengelegt werden und ob sie von anderen Personen böswillig missbraucht werden könnten. Im Folgenden finden Sie eine Übersicht über mögliche Angriffe auf veröffentlichte Informationen mit den entsprechenden Entschärfungen.  
@@ -56,10 +56,10 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  Falls bei Verwendung der Funktion für die Endpunktidentität zwar eine Domäne, jedoch ein ungültiger Dienstprinzipalname angegeben wird, wird NTLM verwendet. Weitere Informationen dazu, wie die Identität des Endpunkts angegeben wird, finden Sie unter [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+## <a name="see-also"></a>Siehe auch
+- [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

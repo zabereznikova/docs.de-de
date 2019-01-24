@@ -5,21 +5,21 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 6b7c13355fe46d4b768699555bbaf522e3b49c73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d1d3530bfd8bc85d6ae2d6741cbe6d48b381f69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566573"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570017"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Übersicht über Markuperweiterungen für XAML
 Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen eines Werts, der weder ein primitiver noch ein spezifischer XAML-Typ ist. Für die Attributverwendung verwenden Markuperweiterungen die bekannte Zeichensequenz einer öffnenden geschweiften Klammer `{` für den Anfang des Markuperweiterungsbereichs und eine schließende geschweifte Klammer `}` zum Beenden. Beim Verwenden von .NET Framework-XAML-Diensten können Sie einige der vordefinierten XAML-Sprachmarkuperweiterungen aus der Assembly „System.Xaml“ verwenden. Sie können zudem in „System.Xaml“ definierte Subklassen aus der Klasse <xref:System.Windows.Markup.MarkupExtension> verwenden und Ihre eigenen Markuperweiterungen definieren. Alternativ können Sie durch ein bestimmtes Framework definierte Markuperweiterungen verwenden, wenn Sie dieses Framework bereits referenzieren.  
   
- Wenn auf eine Markuperweiterungsverwendung zugegriffen wird, kann der XAML-Objekt-Writer Dienste für eine benutzerdefinierte <xref:System.Windows.Markup.MarkupExtension>-Klasse über einen Dienstverbindungspunkt in der <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType>-Überschreibung bereitstellen. Die Dienste können zum Abrufen des Kontexts über die Verwendung, spezifische Funktionalitäten des Objekt-Writers, den XAML-Schemakontext usw. verwendet werden.  
+ Wenn auf eine Markuperweiterungsverwendung zugegriffen wird, kann der XAML-Objekt-Writer Dienste für eine benutzerdefinierte <xref:System.Windows.Markup.MarkupExtension> -Klasse über einen Dienstverbindungspunkt in der <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A?displayProperty=nameWithType> -Überschreibung bereitstellen. Die Dienste können zum Abrufen des Kontexts über die Verwendung, spezifische Funktionalitäten des Objekt-Writers, den XAML-Schemakontext usw. verwendet werden.  
   
 <a name="XAML_Defined_Markup_Extensions"></a>   
 ## <a name="xaml-defined-markup-extensions"></a>XAML-definierte Markuperweiterungen  
- Zwecks XAML-Sprachunterstützung werden verschiedene Markuperweiterungen durch die .NET Framework-XAML-Dienste implementiert. Diese Markuperweiterungen entsprechen Teilen der Spezifikation von XAML als Sprache. Diese lassen sich für gewöhnlich durch das `x:`-Präfix in der Syntax bestimmen, wie dies unter der häufigen Verwendung zu sehen ist. Die .NET Framework-XAML-Dienstimplementierungen für diese XAML-Sprachelemente werden alle von der  <xref:System.Windows.Markup.MarkupExtension> -Basisklasse abgeleitet.  
+ Zwecks XAML-Sprachunterstützung werden verschiedene Markuperweiterungen durch die .NET Framework-XAML-Dienste implementiert. Diese Markuperweiterungen entsprechen Teilen der Spezifikation von XAML als Sprache. Diese lassen sich für gewöhnlich durch das `x:` -Präfix in der Syntax bestimmen, wie dies unter der häufigen Verwendung zu sehen ist. Die .NET Framework-XAML-Dienstimplementierungen für diese XAML-Sprachelemente werden alle von der  <xref:System.Windows.Markup.MarkupExtension> -Basisklasse abgeleitet.  
   
 > [!NOTE]
 >  Das Präfix `x:` wird für die typische XAML-Namespacezuordnung des XAML-Sprachnamespace im Stammelement einer XAML-Produktion verwendet. Beispielsweise initiieren die Visual Studio-Projekt- und-Seitenvorlagen für verschiedene spezifische Frameworks eine XAML-Datei, die mithilfe dieser `x:` Zuordnung. Sie können ein anderes Präfixtoken in Ihrer XAML-Namespacezuordnung auswählen. In dieser Dokumentation wird jedoch von der standardmäßigen `x:` -Zuordnung im Zuge der Ermittlung dieser Entitäten ausgegangen, die im Gegensatz zum standardmäßigen XAML-Namespace eines bestimmten Frameworks oder anderer willkürlicher CLR- oder XML-Namespaces ein definierter Bestandteil des XAML-Sprachennamespace sind.  
@@ -39,8 +39,8 @@ Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen ei
 ### <a name="xreference"></a>x:Reference  
  `x:Reference` ist ein Bestandteil von XAML 2009. Hierbei handelt es sich um eine Erweiterung des ursprünglichen (2006) Sprachsatzes. `x:Reference` repräsentiert einen Verweis auf ein anderes vorhandenes Objekt in einem Objektdiagramm. Dieses Objekt wird anhand seiner `x:Name`bestimmt. Weitere Informationen finden Sie unter [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md).  
   
-### <a name="other-x-constructs"></a>Andere x:-Konstrukte  
- Es sind weitere `x:` -Konstrukte für die Unterstützung von XAML-Sprachfeatures vorhanden. Diese sind jedoch nicht als Markuperweiterungen implementiert. Weitere Informationen finden Sie unter [XAML Namespace (x:) Language Features](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
+### <a name="other-x-constructs"></a>Andere x: Erstellt  
+ Es sind weitere `x:` -Konstrukte für die Unterstützung von XAML-Sprachfeatures vorhanden. Diese sind jedoch nicht als Markuperweiterungen implementiert. Weitere Informationen finden Sie unter [XAML-Namespace (x:)) Sprachfunktionen](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md).  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>Die MarkupExtension-Basisklasse  
@@ -122,7 +122,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="attributing-for-a-custom-markup-extension"></a>Attributierung für eine benutzerdefinierte Markuperweiterung  
  Zum Unterstützen von Entwurfsumgebungen und bestimmten XAML-Objekt-Writer-Szenarien sollten Sie einen Markup-Erweiterungsunterstützungstyp mit verschiedenen CLR-Attributen mit Attributen versehen. Diese Attribute melden die vorgesehene Markuperweiterungsverwendung.  
   
- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> meldet die <xref:System.Type> -Informationen für den Objekttyp, den <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> zurückgibt. Anhand seiner reinen Signatur gibt <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> <xref:System.Object>zurück. Verschiedene Verbraucher benötigen möglicherweise genauere Rückgabetypinformationen.  Dies umfasst Folgendes:  
+ <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> meldet die <xref:System.Type> -Informationen für den Objekttyp, den <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> zurückgibt. Anhand seiner reinen Signatur gibt <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> <xref:System.Object>zurück. Verschiedene Verbraucher benötigen möglicherweise genauere Rückgabetypinformationen. Dies umfasst Folgendes:  
   
 -   Designer und IDEs, die möglicherweise in der Lage sind, eine typenkompatible Unterstützung für Markuperweiterungsverwendungen bereitzustellen.  
   
@@ -154,7 +154,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  Wenn Sie einen XAML-Knotenstream auf einem Speicherpfad verwenden, steht für gewöhnlich nichts in einer Objektdiagrammdarstellung zur Verfügung, was Sie darüber informieren könnte, dass das zu serialisierende Objekt ursprünglich durch eine Markuperweiterungsverwendung und ein `ProvideValue` -Ergebnis bereitgestellt wurde. Szenarien, die Markuperweiterungsverwendungen für 1 beibehalten und gleichzeitig andere Änderungen im Objektdiagramm erfassen müssen, müssen ihre eigenen Techniken für das Beibehalten der Informationen einer Markuperweiterungsverwendung aus der ursprünglichen XAML-Eingabe entwickeln. Beispielsweise müssen Sie zum Wiederherstellen der Markuperweiterungsverwendungen mit dem Knotenstream auf dem Speicherpfad arbeiten, um Markuperweiterungsverwendungen wiederherzustellen, oder einen Zusammenführungstyp zwischen der ursprünglichen  XAML und der Roundtrip-XAML ausführen. Einige XAML-Implementierungsframeworks wie WPF verwenden Zwischentypen (Ausdrücke), um das Darstellen von Fällen zu unterstützen, in denen Markuperweiterungsverwendungen die Werte bereitstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Markup.MarkupExtension>  
- [Typkonverter und Markuperweiterungen für XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [Markuperweiterungen und WPF-XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Markup.MarkupExtension>
+- [Typkonverter und Markuperweiterungen für XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
+- [Markuperweiterungen und WPF-XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

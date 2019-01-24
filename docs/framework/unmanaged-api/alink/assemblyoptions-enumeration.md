@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3926a0d49b2db02cf52a3cc943b05edc4cc36a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 939e815f4d3adc5f6e1c8b8fc85c9f4b89372501
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406273"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571482"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions-Enumeration
 Listet die Assemblyoptionen.  
@@ -58,31 +58,31 @@ typedef enum _AssemblyOptions {
   
 |Feld|Beschreibung|  
 |-----------|-----------------|  
-|optAssemTitle|Zeichenfolge – der Assemblytitel darstellt.|  
-|optAssemDescription|Zeichenfolge – enthält die Beschreibung der Assembly.|  
+|optAssemTitle|Zeichenfolge – den Assemblytitel darstellt.|  
+|optAssemDescription|Zeichenfolge – die Beschreibung der Assembly enthält.|  
 |optAssemConfig|Zeichenfolge – enthält die Assemblykonfiguration.|  
 |optAssemOS|-Codierte Zeichenfolge: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
 |optAssemLocale|Zeichenfolge – das Gebietsschema der Assembly enthält.|  
-|optAssemVersion|-Codierte Zeichenfolge: "Major.Minor.Build.Revision".|  
-|optAssemCompany|Zeichenfolge – enthält das Unternehmen.|  
+|optAssemVersion|Zeichenfolge – gibt an, codiert als: "Major.Minor.Build.Revision".|  
+|optAssemCompany|Zeichenfolge – das Unternehmen enthält.|  
 |optAssemProduct|Zeichenfolge – der Name des Produkts enthält.|  
 |optAssemProductVersion|Zeichenfolge (auch bekannt als InformationalVersion bezeichnet).|  
-|optAssemCopyright|Zeichenfolge – enthält die copyright-Informationen.|  
-|optAssemTrademark|Zeichenfolge – enthält die Markeninformationen.|  
+|optAssemCopyright|Zeichenfolge – die copyright-Informationen enthält.|  
+|optAssemTrademark|Zeichenfolge – die Markeninformationen enthält.|  
 |optAssemKeyFile|Zeichenfolge (Dateiname).|  
-|optAssemKeyName|Zeichenfolge (Schlüsselname).|  
+|optAssemKeyName|Zeichenfolge (wichtigsten Name).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (auch als DelaySign bezeichnet).|  
-|optAssemFileVersion|Codierte "Major.Minor.Build.Revision"--identisch mit ProductVersion - Zeichenfolge.|  
-|optAssemSatelliteVer|Zeichenfolge – codiert als "Major.Minor.Build.Revision".|  
-|optLastAssemOption|Ein Leistungsindikator, der die Anzahl von Elementen.|  
+|optAssemHalfSign|"Bool" (auch als DelaySign bezeichnet).|  
+|optAssemFileVersion|Zeichenfolge – als "Hauptversion.Nebenversion.Build.Revision"--identisch mit ProductVersion codiert.|  
+|optAssemSatelliteVer|Zeichenfolge – als "Hauptversion.Nebenversion.Build.Revision" codiert.|  
+|optLastAssemOption|Ein Zähler, der die Anzahl der Elemente.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** alink.h  
   
  **Bibliothek**: alink.dll  
   
-## <a name="see-also"></a>Siehe auch  
- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Siehe auch
+- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

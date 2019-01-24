@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588573"
 ---
 # <a name="standard-query-operator-translation"></a>Übersetzen von Standardabfrageoperatoren
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt Standardabfrageoperatoren in SQL-Befehle. Der Abfrageprozessor der Datenbank bestimmt die Ausführungssemantik der SQL-Übersetzung an.  
@@ -225,10 +225,10 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## <a name="see-also"></a>Siehe auch  
- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Zurückgeben oder Überspringen von Elementen in einer Sequenz](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
- [Verketten von zwei Sequenzen](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  
- [Zurückgeben der Unterschiedsmenge zwischen zwei Sequenzen](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)  
- [Zurückgeben der Schnittmenge von zwei Sequenzen](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)  
- [Zurückgeben der Vereinigungsmenge von zwei Sequenzen](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+## <a name="see-also"></a>Siehe auch
+- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Zurückgeben oder Überspringen von Elementen in einer Sequenz](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
+- [Verketten von zwei Sequenzen](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
+- [Zurückgeben der Unterschiedsmenge zwischen zwei Sequenzen](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
+- [Zurückgeben der Schnittmenge von zwei Sequenzen](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
+- [Zurückgeben der Vereinigungsmenge von zwei Sequenzen](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)

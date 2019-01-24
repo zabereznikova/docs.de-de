@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dcb45fcc987952ec5e84cc468dda8d8ede38bdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c23c52108c5c6534f5b8e8b41517ed2129590466
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451310"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574832"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated-Methode
-Benachrichtigt den Profiler, dass eine COM-Interop-Vtable für die angegebene IID und Klasse erstellt wurde.  
+Benachrichtigt den Profiler an, eine COM-Interop-Vtable für die angegebene IID und Klasse erstellt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,24 +39,24 @@ HRESULT COMClassicVTableCreated(
   
 #### <a name="parameters"></a>Parameter  
  `wrappedClasId`  
- [in] Die ID der Klasse für die Vtable erstellt wurde.  
+ [in] Die ID der Klasse für die die Vtable erstellt wurde.  
   
  `implementedIID`  
- [in] Die ID der Schnittstelle, die von der Klasse implementiert. Dieser Wert kann NULL sein, wenn die Schnittstelle nur intern verfügbar ist.  
+ [in] Die ID der von der Klasse implementierten Schnittstelle. Dieser Wert kann NULL sein, wenn die Schnittstelle ausschließlich intern verwendet wird.  
   
  `pVTable`  
- [in] Ein Zeiger auf den Anfang des Vtable.  
+ [in] Ein Zeiger auf den Anfang der Vtable.  
   
  `cSlots`  
- [in] Die Anzahl der Steckplätze, die im Vtable sind.  
+ [in] Die Anzahl der Steckplätze, die in der Vtable sind.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Profiler sollte in ihrer Implementierung dieser Methode nicht blockieren, da der Stapel nicht in einem Zustand ist, die Garbagecollection zulässt, und deshalb Präemptive Garbagecollection nicht aktiviert werden kann. Wenn der Profiler hier blockiert und Garbagecollection wird versucht, die Laufzeit blockiert, bis dieser Rückruf zurückgegeben.  
+ Der Profiler sollte die Implementierung dieser Methode nicht blockieren, da der Stapel nicht in einem Zustand handeln, der Garbagecollection zulässt, und daher die Präemptive Garbagecollection kann nicht aktiviert werden kann. Wenn der Profiler hier blockiert und Garbagecollection wird versucht, die Laufzeit blockiert, bis dieser Rückruf zurückgegeben.  
   
- Der Profiler Implementierung dieser Methode sollten nicht in verwaltetem Code oder in einer verwalteten Speicher reservieren aufrufen.  
+ Der Profiler Implementierung dieser Methode sollte nicht in verwaltetem Code oder in einer verwalteten Speicher reservieren aufrufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -64,6 +64,6 @@ HRESULT COMClassicVTableCreated(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [COMClassicVTableDestroyed-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [COMClassicVTableDestroyed-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: 27dad8b2fbfbc8d17090df201bf36eb080966f51
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c34175a90c2c9c247a37ac186a415a585d1d7e97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582255"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Merkmale deklarierter Elemente (Visual Basic)
 Ein *Merkmal* eines deklarierten Elements ist ein Aspekt dieses Elements, die betroffen sind, wie Code mit ihm interagieren kann. Jedem deklariertes Element verfügt über eine oder mehrere der folgenden Eigenschaften zugeordnet:  
@@ -27,9 +27,9 @@ Ein *Merkmal* eines deklarierten Elements ist ein Aspekt dieses Elements, die be
   
 -   *Lebensdauer* – den Zeitraum der Ausführungszeit, die in dem das Element für die Verwendung verfügbar ist. Weitere Informationen finden Sie unter [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
--   *Bereich* – die Anzahl sämtlicher Code, der auf das Element ohne Angabe ihres Namens verweisen kann. Weitere Informationen finden Sie unter [wie: Steuern des Gültigkeitsbereichs einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+-   *Bereich* – die Anzahl sämtlicher Code, der auf das Element ohne Angabe ihres Namens verweisen kann. Weitere Informationen finden Sie unter [Vorgehensweise: Steuern des Gültigkeitsbereichs einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
--   *Zugriffsebene* – die Berechtigung für Code, um, des Elements verwenden. Weitere Informationen finden Sie unter [wie: Steuern der Verfügbarkeit einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+-   *Zugriffsebene* – die Berechtigung für Code, um, des Elements verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Steuern der Verfügbarkeit einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
 ## <a name="characteristics-of-the-elements"></a>Eigenschaften der Elemente  
  Die folgende Tabelle zeigt die deklarierte Elemente und die Eigenschaften, die für jede gelten.  
@@ -53,12 +53,12 @@ Ein *Merkmal* eines deklarierten Elements ist ein Aspekt dieses Elements, die be
   
  <sup>1</sup> Bereich wird manchmal als bezeichnet *Sichtbarkeit*.  
   
-## <a name="see-also"></a>Siehe auch  
- [Deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>Siehe auch
+- [Deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
+- [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

@@ -14,21 +14,21 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 1dc19da76b73d5b8e5d66851b539a7d1829fc938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c39be1bdcc9c91f4822b7e168f16cb51c51d6c60
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580823"
 ---
 # <a name="shapes"></a>Formen
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet Unterstützung für das Zeichnen von grundlegenden Formen mithilfe der <xref:System.Windows.Shapes.Shape> Klasse. Shape-Objekte ableiten <xref:System.Windows.FrameworkElement> und daher das Layoutsystem beteiligt und kann einfach mit gezeichnet werden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet Unterstützung für das Zeichnen von grundlegenden Formen mithilfe der <xref:System.Windows.Shapes.Shape> Klasse. Ableiten von Shape-Objekte <xref:System.Windows.FrameworkElement> und daher das Layoutsystem beteiligt und kann mithilfe der gezeichnet werden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Shapes.Shape>  
- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Shapes.Shape>
+- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

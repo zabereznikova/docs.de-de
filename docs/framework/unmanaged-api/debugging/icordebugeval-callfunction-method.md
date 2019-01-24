@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86d48461c601b53d4461331a11a0e0ac7ddc6e7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 493b4850436b3724287210878992d1d8ce8fe168
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412546"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589398"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction-Methode
 Richtet einen Aufruf der angegebenen Funktion.  
   
- Diese Methode ist veraltet in .NET Framework, Version 2.0. Verwendung [ICorDebugEval2:: CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) stattdessen.  
+ Diese Methode ist in .NET Framework, Version 2.0, veraltet. Verwendung [ICorDebugEval2:: CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) stattdessen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,16 +41,16 @@ HRESULT CallFunction (
   
 #### <a name="parameters"></a>Parameter  
  `pFunction`  
- [in] Ein Zeiger auf ein ICorDebugFunction-Objekt, das die aufzurufende Funktion angibt.  
+ [in] Zeiger auf ein ICorDebugFunction-Objekt, das die aufzurufende Funktion angibt.  
   
  `nArgs`  
- [in] Die Anzahl von Argumenten für die Funktion.  
+ [in] Die Anzahl der Argumente für die Funktion.  
   
  `ppArgs`  
- [in] Ein Array von Zeigern, von denen jedes auf ICorDebugValue-Objekts verweist, der angibt, ein Argument an die Funktion übergeben werden.  
+ [in] Ein Array von Zeigern, von denen jeder zu einem ICorDebugValue-Objekt verweist, der angibt, ein Argument an die Funktion übergeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Funktion virtuell ist, wird `CallFunction` virtuellen Dispatch führt. Wenn die Funktion in einer anderen Anwendungsdomäne ist, wird ein Übergang erfolgen, solange alle Argumente in der Anwendungsdomäne ebenfalls enthalten sind.  
+ Wenn die Funktion virtuell, `CallFunction` virtuellen Dispatch führt. Wenn die Funktion in einer anderen Anwendungsdomäne ist, wird ein Übergang erfolgen, solange alle Argumente in dieser Anwendungsdomäne ebenfalls enthalten sind.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** WindowSee [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -61,5 +61,5 @@ HRESULT CallFunction (
   
  **.NET Framework-Versionen:** 1.1, 1.0  
   
-## <a name="see-also"></a>Siehe auch  
- [CallParameterizedFunction-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)
+## <a name="see-also"></a>Siehe auch
+- [CallParameterizedFunction-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)

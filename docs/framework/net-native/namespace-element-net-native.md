@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 108c27747e0b823f2315a914f8db3c8711fbb698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f89c9edf47edcb5089e094529b8e8108271518d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590573"
 ---
 # <a name="ltnamespacegt-element-net-native"></a>&lt;Namespace&gt; Element (.NET Native)
 Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Namespace an.  
@@ -19,7 +19,7 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Nam
 ```xml  
 <Namespace Name="namespace_name"   
            Activate="policy_type"   
-           Browse="policy_type" />  
+           Browse="policy_type"  
            Dynamic="policy_setting"  
            Serialize="policy_setting"  
            DataContractSerializer="policy_setting"  
@@ -83,7 +83,7 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Nam
   
  Wenn es sich um ein untergeordnetes Element des [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)-Elements handelt, überschreibt das `<Namespace>`-Element die Laufzeitreflektionsrichtlinie, die vom [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)-Element definiert wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a>Siehe auch
+- [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)

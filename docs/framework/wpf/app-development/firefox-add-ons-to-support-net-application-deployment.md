@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: e8f6947a0fe39998d9dc229ad7b95bfd2d426f6c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31c6313adb24cd1a2cfca319ac5e243fcdf2b6a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583258"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Firefox-Add-Ons zur Unterstützung der .NET-Anwendungsbereitstellung
 Aktivieren Sie das Windows Presentation Foundation-Plug-Ins für Firefox und .NET Framework Assistant für Firefox (WPF) [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], lose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], und der ClickOnce-Anwendungen arbeiten mit den Mozilla Firefox-Browser.  
@@ -33,7 +33,7 @@ Aktivieren Sie das Windows Presentation Foundation-Plug-Ins für Firefox und .NE
   
  .NET Framework Assistant für Firefox ist im Lieferumfang der [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]. Informationen zum Entfernen von .NET Framework Assistant für Firefox, finden Sie unter [Gewusst wie: Entfernen von .NET Framework Assistant für Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
   
-## <a name="see-also"></a>Siehe auch  
- [Bereitstellen von WPF-Anwendungen](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Übersicht über WPF-XAML-Browseranwendungen](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
- [Erkennen einer Installation des WPF-Plug-Ins für Firefox](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)
+## <a name="see-also"></a>Siehe auch
+- [Bereitstellen von WPF-Anwendungen](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Übersicht über WPF-XAML-Browseranwendungen](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)
+- [Erkennen einer Installation des WPF-Plug-Ins für Firefox](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

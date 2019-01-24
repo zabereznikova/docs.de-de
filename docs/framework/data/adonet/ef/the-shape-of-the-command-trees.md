@@ -2,12 +2,12 @@
 title: Form der Befehlsstrukturen
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 9084e2616ac4ea540bdf755afd011d67a5c991fa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b859dfaa6350341b4b90753fd5dda3339e6bb584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573025"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Form der Befehlsstrukturen
 Das SQL-Generierungsmodul generiert anhand eines angegebenen Eingabeabfragebefehlsstruktur-Ausdrucks eine Back-End-spezifische SQL-Abfrage. In diesem Abschnitt werden die Merkmale, die Eigenschaften und die Struktur der Abfragebefehlsstrukturen erläutert.  
@@ -69,9 +69,9 @@ Das SQL-Generierungsmodul generiert anhand eines angegebenen Eingabeabfragebefeh
   
 -   Benutzerdefinierte Funktionen.  
   
- Kanonische Funktionen (finden Sie unter [kanonische Funktionen](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) für Weitere Informationen) angegeben sind, als Teil der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], und Anbieter sollten die Implementierungen für kanonische Funktionen, die basierend auf diesen Spezifikationen angeben. Speicherfunktionen beruhen auf den Spezifikationen des entsprechenden Anbietermanifests. Benutzerdefinierte Funktionen beruhen auf den SSDL-Spezifikationen.  
+ Kanonische Funktionen (finden Sie unter [kanonische Funktionen](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) für Weitere Informationen) angegeben sind, als Teil der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], und die Anbieter sollten die Implementierungen für kanonische Funktionen, die anhand dieser Angaben bereitstellen. Speicherfunktionen beruhen auf den Spezifikationen des entsprechenden Anbietermanifests. Benutzerdefinierte Funktionen beruhen auf den SSDL-Spezifikationen.  
   
- Zudem verfügen Funktionen mit dem NiladicFunction-Attribut nicht über Argumente und sollten ohne die Klammer am Ende übersetzt werden.  Das heißt,  *\<Funktionsname >* anstelle von  *\<FunctionName > ()*.  
+ Zudem verfügen Funktionen mit dem NiladicFunction-Attribut nicht über Argumente und sollten ohne die Klammer am Ende übersetzt werden.  Das heißt,  *\<FunctionName >* anstelle von  *\<FunctionName > ()*.  
   
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  "DbNewInstanceExpression" kann nur in den folgenden beiden Fällen auftreten:  
@@ -96,14 +96,14 @@ Das SQL-Generierungsmodul generiert anhand eines angegebenen Eingabeabfragebefeh
 #### <a name="dbscanexpression"></a>DbScanExpression  
  Bei der Verwendung in Ausgabebefehlsstrukturen entspricht „DbScanExpression“ effektiv einer Tabellensuche, einer Sicht oder einer Speicherabfrage, die mit „EnitySetBase::Target“ dargestellt wird.  
   
- Wenn die Metadateneigenschaft "Defining Query" des Ziels nicht Null ist, es sich um eine Abfrage darstellt wird, wird der Text der Abfrage für die in dieser Metadateneigenschaft in der jeweiligen anbietersprache (oder Dialekten verarbeitet), wie in der Speicherschemadefinition angegeben bereitgestellt.  
+ Wenn die Metadateneigenschaft "Defining Query" des Ziels nicht Null ist, ist, und es sich um eine Abfrage darstellt, wird der Text der Abfrage für die in dieser Metadateneigenschaft in der jeweiligen anbietersprache (oder -Dialekt) wie in der Speicherschemadefinition angegeben bereitgestellt.  
   
- Andernfalls entspricht das Ziel einer Tabelle oder Sicht. Das Schemapräfix befindet sich entweder in der Metadateneigenschaft "Schema", wenn nicht null, ist sonst Name des Entitätencontainers.  Namen der Tabelle oder Sicht ist entweder der Metadateneigenschaft "Table", sofern diese nicht Null, andernfalls die Name-Eigenschaft der Entität Basis festgelegt.  
+ Andernfalls entspricht das Ziel einer Tabelle oder Sicht. Das Schemapräfix befindet sich entweder in die Metadateneigenschaft "Schema", wenn nicht null ist, andernfalls des Namens des Entitätscontainers.  Namen der Tabelle oder Sicht ist entweder die Metadateneigenschaft "Table", wenn nicht Null ist, andernfalls der Name-Eigenschaft der Entität Basis festgelegt.  
   
  All diese Eigenschaften beruhen auf der Definition des entsprechenden "EntitySet" in der Speicherschema-Definitionsdatei (SSDL).  
   
 ### <a name="using-primitive-types"></a>Verwenden primitiver Typen  
  Wenn in Ausgabebefehlsstrukturen auf primitive Typen verwiesen wird, erfolgt der Verweis in der Regel anhand der primitiven Typen des konzeptionellen Modells. Für bestimmte Ausdrücke benötigen die Anbieter jedoch den entsprechenden primitiven Speichertyp. Beispiele für solche Ausdrücke sind "DbCastExpression" und möglicherweise "DbNullExpression", sofern der Anbieter für den entsprechenden Typ NULL umwandeln muss. In solchen Fällen sollten Anbieter die Zuordnung zum Anbietertyp anhand der Art des primitiven Typs und dessen Facets vornehmen.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL-Generierung](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Siehe auch
+- [SQL-Generierung](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

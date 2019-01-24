@@ -10,12 +10,12 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: 44c8814362ebb490d5e7676496309b2124782b78
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5c716c07fabe5b93f13c86f8d347e4fd4d058145
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800887"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569953"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Übersicht über Alignment, Margin und Padding
 Die <xref:System.Windows.FrameworkElement> Klasse macht mehrere Eigenschaften, die verwendet werden, um die untergeordneten Elemente präzise positionieren. In diesem Thema wird erläutert, vier der wichtigsten Eigenschaften: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, und <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Es ist wichtig, die Auswirkungen dieser Eigenschaften zu verstehen, da Sie die Grundlage für das Steuern der Position von Elementen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen bieten.  
@@ -141,11 +141,11 @@ Die <xref:System.Windows.FrameworkElement> Klasse macht mehrere Eigenschaften, d
   
  Zusätzliche Ressourcen sind verfügbar, die das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Layout ausführlicher erläutern. Die [Panels Overview](../../../../docs/framework/wpf/controls/panels-overview.md) Thema enthält weitere Details zu den verschiedenen <xref:System.Windows.Controls.Panel> Elemente. Das Thema [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) stellt erweiterte Techniken, mit denen Layoutelemente Komponenten positionieren und ihre Aktionen an Datenquellen binden.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
- <xref:System.Windows.FrameworkElement.Margin%2A>  
- [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
- [Beispiel für einen WPF-Layoutkatalog](https://go.microsoft.com/fwlink/?LinkID=160054)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
+- <xref:System.Windows.FrameworkElement.Margin%2A>
+- [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+- [Beispiel für einen WPF-Layoutkatalog](https://go.microsoft.com/fwlink/?LinkID=160054)

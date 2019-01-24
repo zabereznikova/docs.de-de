@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8283139566050b1858a003316dc46581822a9bbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15bd3ed8f1642e44ecf9c4df49feebd72eeac8c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590132"
 ---
 # <a name="corprfgcgeneration-enumeration"></a>COR_PRF_GC_GENERATION-Enumeration
-Identifiziert eine Garbage Collection-Generierung.  
+Identifiziert eine Garbage Collection-Generation.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,17 +44,17 @@ typedef enum {
 |`COR_PRF_GC_GEN_0`|Das Objekt wird als Generation 0 gespeichert.|  
 |`COR_PRF_GC_GEN_1`|Das Objekt wird als Generation 1 gespeichert.|  
 |`COR_PRF_GC_GEN_2`|Das Objekt wird als Generation 2 gespeichert.|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|Das Objekt wird in den großen Objektheap gespeichert.|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|Das Objekt befindet sich im Heap für große Objekte.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Garbage Collector verbessert die Leistung der Speicher-Management von Division Objekten in Generationen basierend auf dem Alter. Der Garbage Collector verwendet derzeit drei Generationen: 0, 1 und 2 sowie einem besonderen Heap-Segment, das für große Objekte verwendet wird. Objekte, deren Größe einen bestimmten Wert übersteigt, werden in den großen Objektheap gespeichert. Andere zugeordnete Objekte Anfangs gehören zu Generation 0. Alle Objekte, die nach Garbagecollection in Generation 0 tritt vorhanden sind, werden auf Generation 1 höher gestuft. Objekte, die nach dem Auftreten einer Garbagecollection in Generation 1 vorhanden, die in Generation 2 verschoben werden.  
+ Der Garbage Collector verbessert die speicherleistung für die Verwaltung durch Division Objekte in Generationen, die basierend auf dem Alter. Der Garbage Collector verwendet derzeit drei Generationen: 0, 1 und 2 sowie einem besonderen Heap-Segment, das für große Objekte verwendet wird. Objekte, deren Größe einen bestimmten Wert übersteigt, werden in den großen Objektheap gespeichert. Andere zugeordneten Objekte beginnen, die Sie die Generation 0 gehören. Alle Objekte, die vorhanden sind, nachdem die Garbagecollection in Generation 0 tritt werden auf Generation 1 höher gestuft. Objekte, die vorhanden sind, nachdem die Garbagecollection in Generation 1 tritt, in Generation 2 verschieben.  
   
- Die Verwendung von Generationen bedeutet, dass der Garbage Collector hat jeweils nur eine Teilmenge von zugeordneten Objekten arbeiten.  
+ Die Verwendung von Generationen bedeutet, dass der Garbage Collector zu jedem Zeitpunkt nur eine Teilmenge der zugeordneten Objekte zusammenarbeiten.  
   
  Die `COR_PRF_GC_GENERATION` Enumeration wird verwendet, durch die [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) Struktur.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -62,5 +62,5 @@ typedef enum {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

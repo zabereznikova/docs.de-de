@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ändern der Canvas-Größe mithilfe eines Ziehpunkts'
+title: 'Vorgehensweise: Ändern der Canvas-Größe mithilfe eines Ziehpunkts'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: be267e832180b49686079f426dfa5c30ffdd81b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d0873656e71df928ac3bd5a767b5e15d2f2c7836
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54591457"
 ---
-# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Gewusst wie: Ändern der Canvas-Größe mithilfe eines Ziehpunkts
+# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>Vorgehensweise: Ändern der Canvas-Größe mithilfe eines Ziehpunkts
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Controls.Primitives.Thumb> Steuerelement zum Ändern der Größe einer <xref:System.Windows.Controls.Canvas> Steuerelement.  
   
 ## <a name="example"></a>Beispiel  
@@ -46,8 +46,8 @@ Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Controls.Primitive
   
  Das vollständige Beispiel finden Sie unter [Beispiel für das Thumb-Steuerelement ziehen](https://go.microsoft.com/fwlink/?LinkID=160042).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.Primitives.Thumb>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Controls.Primitives.Thumb>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>

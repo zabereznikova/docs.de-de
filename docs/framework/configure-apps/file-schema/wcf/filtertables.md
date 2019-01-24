@@ -2,19 +2,19 @@
 title: '&lt;filterTables&gt;'
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: 2b537619a276f32c50576561aea03b5fbbb58e7d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d73a3c25dbb4d2de41007149ef5864fcf37ad883
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573058"
 ---
 # <a name="ltfiltertablesgt"></a>&lt;filterTables&gt;
 Stellt einen Konfigurationsabschnitt zum Definieren von Routingtabellen dar, die Zuordnungen zwischen den Routingfiltern und den Zielendpunkten enthalten, an die bei Filterübereinstimmung Nachrichten gesendet werden.  
   
  \<system.serviceModel>  
-\<Routing >  
-\<RoutingTables >  
+\<routing>  
+\<routingTables>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,14 +43,14 @@ Stellt einen Konfigurationsabschnitt zum Definieren von Routingtabellen dar, die
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Filter >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Eine Routingtabelle, die Zuordnungen zwischen den Routingfiltern und den Zielendpunkten enthält, an die bei Filterübereinstimmung Nachrichten gesendet werden.|  
+|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Eine Routingtabelle, die Zuordnungen zwischen den Routingfiltern und den Zielendpunkten enthält, an die bei Filterübereinstimmung Nachrichten gesendet werden.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Ein Konfigurationsabschnitt, der Routingfilter und Routingtabellen enthält.|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Ein Konfigurationsabschnitt, der Routingfilter und Routingtabellen enthält.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>       
- <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>    
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>

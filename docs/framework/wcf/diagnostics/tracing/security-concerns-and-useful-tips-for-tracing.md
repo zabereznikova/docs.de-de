@@ -2,12 +2,12 @@
 title: Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 439484cf5df6311bef56be0e28e5949c79d9a8f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0dadf89ecbd7623735debe37355761aea3d62db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184845"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580394"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung
 Dieses Thema beschreibt, wie Sie vertrauliche Informationen davor schützen, verfügbar gemacht zu werden, sowie nützliche Tipps zur Verwendung von WebHost.  
@@ -90,5 +90,5 @@ Dieses Thema beschreibt, wie Sie vertrauliche Informationen davor schützen, ver
   
  Außerdem wird die IP-Adresse des Nachrichtenabsenders einmal pro Verbindung bei verbindungsorientierten Transporten und einmal pro Nachricht bei anderen Übertragungen protokolliert. Dies geschieht ohne Bestätigung durch den Absender. Diese Protokollierung erfolgt jedoch nur auf den Ablaufverfolgungsebenen "Information" oder "Ausführlich", die nicht die Standard- oder empfohlenen Ablaufverfolgungsebenen für die Produktion sind, außer für das Livedebuggen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

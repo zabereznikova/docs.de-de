@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: 2fefdf81ab25d2e109f265f0c895a3415ad5673d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e5c94cce8b16649854050855800ac1bf2fc6572
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656005"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580576"
 ---
 # <a name="-addmodule"></a>-addmodule
 Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, sämtliche Typinformationen aus den angegebenen Dateien bereitstellt.  
@@ -24,19 +24,19 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, sämtliche 
   
 ## <a name="arguments"></a>Argumente  
  `fileList`  
- Erforderlich. Durch Trennzeichen getrennte Liste der Dateien, die Metadaten enthalten, jedoch werden keine Assemblymanifeste. Dateinamen mit Leerzeichen sollten in Anführungszeichen eingeschlossen sein ("").  
+ Erforderlich. Durch Trennzeichen getrennte Liste von Dateien, die Metadaten enthalten, aber Manifesten nicht enthalten. Dateinamen mit Leerzeichen müssen in Anführungszeichen eingeschlossen werden ("").  
   
 ## <a name="remarks"></a>Hinweise  
- Durch aufgelisteten Dateien der `fileList` Parameter muss erstellt werden, mit der `-target:module` -Option oder mit einem anderen Compiler entspricht `-target:module`.  
+ Die Dateien sortiert nach der `fileList` Parameter muss erstellt werden, mit der `-target:module` Option oder mit einem anderen Compiler entspricht `-target:module`.  
   
- Alle Module mit hinzugefügt `-addmodule` muss sich im selben Verzeichnis wie die Ausgabedatei zur Laufzeit. D. h. Sie können ein Modul in einem beliebigen Verzeichnis angeben, zum Zeitpunkt der Kompilierung, aber das Modul muss zur Laufzeit im Anwendungsverzeichnis sein. Wenn sie nicht der Fall ist, erhalten Sie eine <xref:System.TypeLoadException> Fehler.  
+ Alle Module mit hinzugefügten `-addmodule` zur Laufzeit im gleichen Verzeichnis wie die Ausgabedatei muss. D. h. Sie können ein Modul in einem Verzeichnis angeben, zum Zeitpunkt der Kompilierung, aber das Modul muss zur Laufzeit im Anwendungsverzeichnis sein. Wenn sie nicht der Fall ist, erhalten Sie eine <xref:System.TypeLoadException> Fehler.  
   
- Bei Angabe von (implizit oder explizit) alle[-Ziel (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) option außer `-target:module` mit `-addmodule`, die Dateien, die Sie übergeben `-addmodule` werden Teil der Assembly des Projekts. Eine Assembly ist erforderlich, um eine Ausgabedatei ausführen, die einen oder mehrere Dateien hinzugefügt, mit `-addmodule`.  
+ Bei Angabe von (implizit oder explizit) alle[-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) option, die nicht `-target:module` mit `-addmodule`, übergeben Sie an, Dateien `-addmodule` Teil der Assembly des Projekts. Eine Assembly ist erforderlich, um eine Ausgabedatei ausführen, die eine oder mehrere Dateien hinzugefügt, mit `-addmodule`.  
   
- Verwendung [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) zum Importieren von Metadaten aus einer Datei, die eine Assembly enthält.  
+ Verwendung [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) um Metadaten aus einer Datei zu importieren, die eine Assembly enthält.  
   
 > [!NOTE]
->  Die `-addmodule` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar; er ist nur bei verfügbar über die Befehlszeile kompilieren.  
+>  Die `-addmodule` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code erstellt ein Modul.  
@@ -47,10 +47,10 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, sämtliche 
   
  [!code-vb[VbVbalrCompiler#48](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
   
- Bei der Ausführung `t1`, gibt sie konsistent `802`.  
+ Beim Ausführen von `t1`, es gibt `802`.  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-Ziel (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [-Verweis (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Siehe auch
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Referenz (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: b412655695c49d1e12a02e005fccfd37d2956787
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b4b09469a3f22b5e5c7faa98d5db7b3522ed236
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586474"
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a>Modul &lt;Schlüsselwort&gt; (Visual Basic)
 Gibt an, dass ein Attribut am Anfang einer Quelldatei für das aktuelle Assemblymodul gilt.  
   
 ## <a name="remarks"></a>Hinweise  
- Viele Attribute beziehen sich auf ein einzelnes Programmierelement, z. B. eine Klasse oder eine Eigenschaft. Sie solches Attribut anwenden, indem anfügen Attributblocks in spitzen Klammern (`< >`), direkt in der deklarationsanweisung.  
+ Viele Attribute beziehen sich auf ein bestimmtes Programmierelement, z. B. eine Klasse oder Eigenschaft. Sie ein solches Attribut anwenden, durch Anfügen des Attributblocks in spitzen Klammern (`< >`), direkt in der deklarationsanweisung.  
   
- Wenn ein Attribut nicht nur das folgende Element, sondern das aktuelle Assemblymodul gilt, Sie platzieren Sie den Attributblock am Anfang der Quelldatei und identifizieren Sie das Attribut mit dem `Module` Schlüsselwort. Wenn sie für die gesamte Assembly angewendet wird, verwenden Sie die [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) Schlüsselwort.  
+ Wenn ein Attribut nicht nur auf das folgende Element, sondern um das aktuelle Assemblymodul betrifft, Sie platzieren Sie den Attributblock am Anfang der Quelldatei und identifizieren Sie das Attribut mit dem `Module` Schlüsselwort. Wenn es für die gesamte Assembly gilt, verwenden Sie die [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) Schlüsselwort.  
   
- Die `Module` Modifizierer ist nicht identisch mit der [Modulanweisung](../../../visual-basic/language-reference/statements/module-statement.md).  
+ Die `Module` Modifizierer ist nicht identisch mit der [Module-Anweisung](../../../visual-basic/language-reference/statements/module-statement.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Module-Anweisung](../../../visual-basic/language-reference/statements/module-statement.md)  
- [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Module-Anweisung](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 

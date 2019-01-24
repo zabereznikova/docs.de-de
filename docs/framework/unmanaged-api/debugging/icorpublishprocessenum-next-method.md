@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19a10a527c37d93d00bec799fdaa12bb0ad3fdbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e427c3919e8b714146fbe630a7e151dff10703de
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582409"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next-Methode
-Ruft die angegebene Anzahl von Prozessen aus der Auflistung, beginnend mit der aktuellen Cursorposition ab.  
+Ruft die angegebene Anzahl von Prozessen aus der Auflistung, beginnend ab der aktuellen Cursorposition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,13 +43,13 @@ HRESULT Next (
  [in] Die Anzahl der Prozesse abgerufen werden sollen.  
   
  `objects`  
- [out] Ein Zeiger zum Array der abgerufenen [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) Objekte, von denen jedes einen Prozess darstellt.  
+ [out] Ein Zeiger auf das Array der abgerufenen [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) Objekte, von denen jede einen Prozess darstellt.  
   
  `pceltFetched`  
- [out] Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Prozesse. Dieser Wert kann null sein, wenn `celt` ist ein.  
+ [out] Zeiger auf die Anzahl der tatsächlich zurückgegebenen Prozesse. Dieser Wert kann null sein, wenn `celt` ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorPub.idl, CorPub.h  
   
@@ -57,5 +57,5 @@ HRESULT Next (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorPublishProcessEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorPublishProcessEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8332eba909c3ebe475e3f364f81a676733e4e3d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d45a8bdebb296a33862f018308a7ef876e0cd64c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397061"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572356"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR-ETW-Schlüsselwörter und -Ebenen
 <a name="top"></a> ETW (Event Tracing for Windows, Ereignisablaufverfolgung für Windows)-Ereignisse können nach Kategorie und Ebene gefiltert werden. Ereignis- [CLR-ETW-Schlüsselwörter](#keywords) ermöglichen das Filtern von Ereignissen nach Kategorie. Sie werden in Kombination für die Runtime- und die Rundownanbieter verwendet. Die [Ereignisebenen](#levels) werden durch Flags gekennzeichnet.  
@@ -52,11 +52,11 @@ ms.locfileid: "33397061"
 |`ContentionKeyword`|0x00004000|Ermöglicht das Sammeln von [Konfliktereignissen](../../../docs/framework/performance/contention-etw-events.md).|  
 |`ExceptionKeyword`|0x00008000|Ermöglicht das Sammeln von [Ausnahmeereignissen](../../../docs/framework/performance/exception-thrown-v1-etw-event.md).|  
 |`ThreadingKeyword`|0x00010000|Ermöglicht das Sammeln von [Threadpoolereignissen](../../../docs/framework/performance/thread-pool-etw-events.md).|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Verfügbar in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und höher.) Unterdrückt das aufwendige `NGenKeyword`-Schlüsselwort und verhindert die Generierung von Ereignissen für Methoden, die in NGen-Modulen enthalten sind. Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sollten Profilerstellungstools `OverrideAndSuppressNGenEventsKeyword` und `NGenKeyword` zusammen verwenden, um die Generierung von Ereignissen für Methoden in NGen-Modulen zu unterdrücken. Dies ermöglicht dem Profilerstellungstool eine effizientere Verwendung von NGen-PDBs, um Informationen über Methoden in NGen-Modulen abzurufen. Die CLR in .NET Framework 4 und früheren Versionen unterstützt nicht die Erstellung von NGen-PDBs. Bei diesen älteren Versionen erkennt CLR keine `OverrideAndSuppressNGenEventsKeyword` und verarbeitet `NGenKeyword` , um Ereignisse für Methoden in NGen-Modulen zu generieren.|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(Verfügbar in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und höher.) Unterdrückt das aufwendige `NGenKeyword`-Schlüsselwort und verhindert die Generierung von Ereignissen für Methoden, die in NGen-Modulen enthalten sind. Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]sollten Profilerstellungstools `OverrideAndSuppressNGenEventsKeyword` und `NGenKeyword` zusammen verwenden, um die Generierung von Ereignissen für Methoden in NGen-Modulen zu unterdrücken. Dies ermöglicht dem Profilerstellungstool eine effizientere Verwendung von NGen-PDBs, um Informationen über Methoden in NGen-Modulen abzurufen. Die CLR in .NET Framework 4 und früheren Versionen unterstützt nicht die Erstellung von NGen-PDBs. Bei diesen älteren Versionen erkennt CLR keine `OverrideAndSuppressNGenEventsKeyword` und verarbeitet `NGenKeyword` , um Ereignisse für Methoden in NGen-Modulen zu generieren.|  
 |`PerfTrackKeyWord`|0x2000000|Aktiviert das Sammeln von `ModuleLoad` - und `ModuleRange` -Ereignissen.|  
 |`StackKeyword`|0x40000000|Ermöglicht das Sammeln von CLR- [Stapelüberwachungsereignissen](../../../docs/framework/performance/stack-etw-event.md).|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="rundown"></a>   
 ### <a name="clr-etw-rundown-keywords"></a>CLR-ETW-Rundownschlüsselwörter  
@@ -71,10 +71,10 @@ ms.locfileid: "33397061"
 |`EndRundownKeyword`|0x00000100|Ermöglicht die Enumeration des Systemzustands während eines Endrundowns.|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|Ermöglicht das Sammeln von Ereignissen für die Ressourcenüberwachung auf einer <xref:System.AppDomain> -Ebene bei Verwendung mit `StartRundownKeyword` oder `EndRundownKeyword`.|  
 |`ThreadingKeyword`|0x00010000|Ermöglicht das Sammeln von Threadpoolereignissen.|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Verfügbar in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und höher.) Unterdrückt das aufwendige `NGenRundownKeyword`-Schlüsselwort und verhindert die Generierung von Ereignissen für Methoden, die in NGen-Modulen enthalten sind. Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sollten Profilerstellungstools `OverrideAndSuppressNGenEventsRundownKeyword` und `NGenRundownKeyword` zusammen verwenden, um die Generierung von Ereignissen für Methoden in NGen-Modulen zu unterdrücken. Dies ermöglicht dem Profilerstellungstool eine effizientere Verwendung von NGen-PDBs, um Informationen über Methoden in NGen-Modulen abzurufen. Die CLR in .NET Framework 4 und früheren Versionen unterstützt nicht die Erstellung von NGen-PDBs. Bei diesen älteren Versionen erkennt CLR keine `OverrideAndSuppressNGenEventsRundownKeyword` und verarbeitet `NGenRundownKeyword` , um Ereignisse für Methoden in NGen-Modulen zu generieren.|  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(Verfügbar in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und höher.) Unterdrückt das aufwendige `NGenRundownKeyword`-Schlüsselwort und verhindert die Generierung von Ereignissen für Methoden, die in NGen-Modulen enthalten sind. Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]sollten Profilerstellungstools `OverrideAndSuppressNGenEventsRundownKeyword` und `NGenRundownKeyword` zusammen verwenden, um die Generierung von Ereignissen für Methoden in NGen-Modulen zu unterdrücken. Dies ermöglicht dem Profilerstellungstool eine effizientere Verwendung von NGen-PDBs, um Informationen über Methoden in NGen-Modulen abzurufen. Die CLR in .NET Framework 4 und früheren Versionen unterstützt nicht die Erstellung von NGen-PDBs. Bei diesen älteren Versionen erkennt CLR keine `OverrideAndSuppressNGenEventsRundownKeyword` und verarbeitet `NGenRundownKeyword` , um Ereignisse für Methoden in NGen-Modulen zu generieren.|  
 |`PerfTrackKeyWord`|0x2000000|Aktiviert das Sammeln von `ModuleDCStart`-, `ModuleDCEnd`-, `ModuleRangeDCStart`- und `ModuleRangeDCEnd` -Ereignissen.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="runtime_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a>Schlüsselwortkombinationen zur Symbolauflösung für den Laufzeitanbieter  
@@ -88,7 +88,7 @@ ms.locfileid: "33397061"
 |`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Keine|Ladeereignisse|Nicht zutreffend.|  
 |`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Keine|Entladeereignisse|Nicht zutreffend.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="rundown_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>Schlüsselwortkombinationen zur Symbolauflösung für den Rundownanbieter  
@@ -102,7 +102,7 @@ ms.locfileid: "33397061"
 |`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Keine|`DCStart` -Ereignisse|  
 |`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Keine|`DCEnd` -Ereignisse|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="levels"></a>   
 ## <a name="etw-event-levels"></a>ETW-Ereignisebenen  
@@ -122,7 +122,7 @@ ms.locfileid: "33397061"
   
  0x0 – LogAlways  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR ETW Providers (CLR-ETW-Anbieter)](../../../docs/framework/performance/clr-etw-providers.md)  
- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)  
- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+## <a name="see-also"></a>Siehe auch
+- [CLR ETW Providers (CLR-ETW-Anbieter)](../../../docs/framework/performance/clr-etw-providers.md)
+- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

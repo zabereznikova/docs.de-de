@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7884d53630ca13a30d7b4efd55d46684a9dd7d30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a404448c45a37d50794ceae9a9bf8ff6af08eeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574572"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal-Co-Klasse
-Stellt Schnittstellen für die Verwaltung, das das Marshalling von Schnittstellenzeigern bereit.  
+Stellt Schnittstellen zum Verwalten von das Marshalling der Schnittstellenzeiger bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +38,16 @@ coclass ComCallUnmarshal {
   
 |Interface|Beschreibung|  
 |---------------|-----------------|  
-|`IMarshal`|Stellt Methoden zum Erstellen, initialisieren und Verwalten eines Proxys in einem Clientprozess bereit.|  
+|`IMarshal`|Stellt Methoden zum Erstellen, initialisieren und verwalten einen Proxy in einen Clientprozess.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.idl  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

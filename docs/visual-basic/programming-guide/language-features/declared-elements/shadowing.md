@@ -18,48 +18,48 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: fde6259b67a8d963ed8c30b87c94029fb2658664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580862"
 ---
 # <a name="shadowing-in-visual-basic"></a>Shadowing in Visual Basic
-Wenn zwei Programmierelemente denselben Namen tragen, eine von ihnen kann auszublenden, oder *Schatten*, eine andere. In einer solchen Situation ist nicht das Shadowing-Element als Referenz verfügbar; Stattdessen, wenn Ihr Code den Elementnamen verwendet wird, löst Visual Basic-Compiler es in das shadowing-Element.  
+Wenn zwei Programmierelemente mit demselben Namen gemeinsam nutzen, eine davon kann auszublenden, oder *Schatten*, der andere Controller. In diesem Fall ist das Shadowing-Element nicht als Referenz verfügbar; Stattdessen löst, wenn Ihr Code den Elementnamen verwendet, die Visual Basic-Compiler es auf das shadowing-Element.  
   
 ## <a name="purpose"></a>Zweck  
- Die Hauptaufgabe des shadowings ist die Definition von Klassenmembern zu schützen. Die Basisklasse kann eine Änderung unterzogen werden, die ein Element mit dem gleichen Namen wie eine erstellt, die Sie bereits definiert haben. In diesem Fall die `Shadows` Modifizierer erzwingt, dass Verweise über die Klasse, um auf den Member aufgelöst werden Sie definiert, statt in das neue Element der Basisklasse.  
+ Der Hauptzweck des shadowings ist die Definition von Klassenmembern zu schützen. Die Basisklasse kann eine Änderung durchlaufen, die ein Element mit dem gleichen Namen wie eine erstellt wird, die Sie bereits definiert haben. In diesem Fall die `Shadows` Modifizierer erzwingt, dass Verweise über die Klasse, um der Member aufgelöst werden Sie definiert, statt auf das neue Element der Basisklasse.  
   
-## <a name="types-of-shadowing"></a>Typen von Shadowing  
- Ein Element kann ein anderes Element auf zwei unterschiedliche Arten überschatten. Das shadowing-Element deklariert werden kann, innerhalb eines Unterbereichs des Bereichs, enthält das Shadowing-Element, in dem Fall das shadowing erfolgt *über den Gültigkeitsbereich*. Oder Sie können in eine abgeleitete Klasse einen Member einer Basisklasse, in dem Fall das shadowing erfolgt neu definieren *durch Vererbung*.  
+## <a name="types-of-shadowing"></a>Typen des Shadowings  
+ Ein Element kann ein anderes Element auf zwei unterschiedliche Arten spiegeln. Das shadowing-Element deklariert werden kann, innerhalb eines Unterbereichs des Bereichs, enthält das Shadowing-Element, in dem Fall, die das shadowing erfolgt *über den Gültigkeitsbereich*. Oder Sie können in eine abgeleitete Klasse ein Member einer Basisklasse, in dem Fall, die das shadowing erfolgt neu definieren *durch Vererbung*.  
   
-### <a name="shadowing-through-scope"></a>Shadowing über den Gültigkeitsbereich  
- Es ist möglich, von Programmierelementen im Modul, Klasse oder Struktur, die den gleichen Namen, aber unterschiedlichen Gültigkeitsbereichen zu haben. Wenn zwei Elemente auf diese Weise deklariert werden, und der Code verweist auf den Namen, die sie gemeinsam verwenden, führt das Element mit dem engeren Bereich Shadowing für das andere Element (Blockbereich ist die engste).  
+### <a name="shadowing-through-scope"></a>Shadowings über den Gültigkeitsbereich  
+ Es ist möglich, für die Programmierung von Elementen in der gleichen-Modul, Klasse oder Struktur, um den gleichen Namen aber unterschiedlichen Gültigkeitsbereichen zu erhalten. Wenn zwei Elemente auf diese Weise deklariert wurden, und der Code verweist auf den gemeinsamen Namen, spiegelt das Element mit der engeren Bereich definiert das andere Element (Blockbereich ist die geringstmögliche).  
   
- Ein Modul kann definieren, z. B. eine `Public` Variable mit dem Namen `temp`, und einer Prozedur innerhalb des Moduls deklariert eine lokale Variable namens auch `temp`. Verweise auf `temp` innerhalb der Prozedur greifen auf die lokale Variable, während Verweise auf `temp` von außerhalb der Prozedur greifen auf die `Public` Variable. In diesem Fall die Prozedurvariable `temp` führt Shadowing für die Modulvariable `temp`.  
+ Ein Modul kann definieren, z. B. eine `Public` Variable mit dem Namen `temp`, und eine Prozedur innerhalb des Moduls kann eine lokale Variable, die auch mit dem Namen deklarieren `temp`. Verweise auf `temp` innerhalb die Prozedur Zugriff auf die lokale Variable, während Verweise auf `temp` von außerhalb der Prozedur greifen auf die `Public` Variable. In diesem Fall die Prozedurvariable `temp` führt Shadowing für die Modulvariable `temp`.  
   
- Die folgende Abbildung zeigt zwei Variablen, die beiden benannten `temp`. Die lokale Variable `temp` führt Shadowing für die Membervariable `temp` bei einem Zugriff vom innerhalb ihrer eigenen Prozedur `p`. Allerdings die `MyClass` Schlüsselwort umgeht das shadowing und greift auf die Membervariable.  
+ Die folgende Abbildung zeigt zwei Variablen, die sowohl für benannte `temp`. Die lokale Variable `temp` führt Shadowing für die Membervariable `temp` Wenn der Zugriff innerhalb ihrer eigenen Prozedur `p`. Allerdings die `MyClass` Schlüsselwort umgeht das shadowing und greift auf die Membervariable.  
   
  ![Grafisches Diagramm des shadowings über den Gültigkeitsbereich](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-Shadowing über den Gültigkeitsbereich  
+Shadowings über den Gültigkeitsbereich  
   
- Ein Beispiel des shadowings über den Bereich finden Sie unter [wie: Ausblenden einer Variablen mit dem gleichen Namen wie Ihre Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
+ Ein Beispiel des shadowings über den Bereich finden Sie unter [Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
 ### <a name="shadowing-through-inheritance"></a>Shadowings durch Vererbung  
- Wenn ein Programmierelement, die von einer Basisklasse geerbt von eine abgeleitete Klasse neu definiert, führt Shadowing für das ursprüngliche Element das redefine-Element. Sie können jede Art von deklarierter Elemente oder Satz überladener Elemente mit einem beliebigen anderen Typ vornehmen. Z. B. ein `Integer` Variablen kann Shadowing für eine `Function` Prozedur. Wenn Sie eine Prozedur mit einer anderen Prozedur vornehmen, können Sie eine andere Parameterliste und einen anderen Rückgabetyp aufweisen.  
+ Wenn eine abgeleitete Klasse neu definiert ein Programmierelement, das von einer Basisklasse geerbt wird, führt Shadowing für das ursprüngliche Element das redefine-Element. Ein Typ des deklarierten Elements oder Satz überladener Elemente kann mit keinem anderen Typ Shadowing durchführen. Z. B. eine `Integer` Variablen kann Shadowing für eine `Function` Verfahren. Wenn Sie eine Prozedur mit einer anderen Prozedur spiegeln, können Sie eine andere Parameterliste und einen anderen Rückgabetyp.  
   
- Die folgende Abbildung zeigt eine Basisklasse `b` und eine abgeleitete Klasse `d` von erbt `b`. Die Basisklasse definiert eine Prozedur namens `proc`, und die abgeleitete Klasse Shadowing mit einer anderen Prozedur mit demselben Namen. Die erste `Call` Anweisung greift auf das shadowing `proc` in der abgeleiteten Klasse. Allerdings die `MyBase` Schlüsselwort umgeht das shadowing und greift auf die die Prozedur in der Basisklasse.  
+ Die folgende Abbildung zeigt eine Basisklasse `b` und eine abgeleitete Klasse `d` von erbt `b`. Die Basisklasse der Klasse definiert eine Prozedur namens `proc`, und die abgeleitete Klasse mit einer anderen Prozedur mit demselben Namen Shadowing für Sie. Die erste `Call` Anweisung greift auf das shadowing `proc` in der abgeleiteten Klasse. Allerdings die `MyBase` Schlüsselwort umgeht das shadowing und greift auf die Prozedur Shadowing durchgeführt wurde, in der Basisklasse.  
   
  ![Grafisches Diagramm des shadowings durch Vererbung](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
 Shadowings durch Vererbung  
   
- Ein Beispiel des shadowings durch Vererbung finden Sie unter [wie: Ausblenden einer Variablen mit dem gleichen Namen wie Ihre Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) und [wie: Ausblenden einer geerbten Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
+ Ein Beispiel des shadowings durch Vererbung, finden Sie unter [Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) und [Vorgehensweise: Ausblenden einer geerbten Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   
 #### <a name="shadowing-and-access-level"></a>Shadowing und Zugriffsebene  
- Das shadowing-Element ist nicht immer aus dem Code, der mit der abgeleiteten Klasse zugegriffen werden kann. Beispielsweise kann deklariert werden `Private`. In diesem Fall erfolgt kein shadowing und der Compiler löst alle Verweise auf dasselbe Element er hätte gab es keine shadowing. Dieses Element ist das zugegriffen werden kann, die wenigsten Ableitungsschritte Schritte rückwärts von der Klasse Shadowing, Element. Wenn schattierte Element eine Prozedur ist, wird die Auflösung darin, die die nächste Version mit dem gleichen Namen, die Parameterliste, und Rückgabetyp.  
+ Das shadowing-Element ist nicht immer aus dem Code, mit der abgeleiteten Klasse zugegriffen werden kann. Zum Beispiel kann deklariert werden `Private`. In diesem Fall erfolgt kein shadowing und der Compiler löst alle Verweise auf dasselbe Element mussten gab es kein shadowing. Dieses Element ist das barrierefreie Element gilt Ableitungsschritte Schritte rückwärts von den shadowing-Klasse. Ist das Shadowing-Element eine Prozedur, die Lösung besteht darin, die die nächste Version mit dem gleichen Namen, die Parameterliste, und den Rückgabetyp.  
   
- Das folgende Beispiel zeigt eine Vererbungshierarchie von drei Klassen. Jede Klasse definiert ein `Sub` Prozedur `display`, und jede abgeleitete Klasse Schatten der `display` Prozedur in der Basisklasse.  
+ Das folgende Beispiel zeigt eine Vererbungshierarchie von drei Klassen. Jede Klasse definiert eine `Sub` Prozedur `display`, und jede abgeleitete Klasse Schatten der `display` Prozedur in der Basisklasse.  
   
 ```  
 Public Class firstClass  
@@ -94,23 +94,23 @@ Module callDisplay
 End Module  
 ```  
   
- Im vorherigen Beispiel, die abgeleitete Klasse `secondClass` Schatten `display` mit einem `Private` Prozedur. Beim Modul `callDisplay` Aufrufe `display` in `secondClass`, der aufrufende Code liegt außerhalb des `secondClass` und daher nicht den privaten verfügbar `display` Prozedur. Es erfolgt kein Shadowing und löst der Compiler den Verweis auf die Basisklasse `display` Prozedur.  
+ Im vorherigen Beispiel, die abgeleitete Klasse `secondClass` Shadows `display` mit einem `Private` Verfahren. Beim Modul `callDisplay` Aufrufe `display` in `secondClass`, befindet sich außerhalb der aufrufende Code `secondClass` und daher nicht den privaten verfügbar `display` Verfahren. Es erfolgt kein Shadowing und der Compiler löst den Verweis auf die Basisklasse `display` Verfahren.  
   
- Jedoch stärker abgeleiteten Klasse `thirdClass` deklariert `display` als `Public`, sodass der Code in `callDisplay` darauf zugreifen können.  
+ Aber die weitere abgeleitete Klasse `thirdClass` deklariert `display` als `Public`, sodass der Code in `callDisplay` darauf zugreifen können.  
   
 ## <a name="shadowing-and-overriding"></a>Shadowing und überschreiben  
- Verwechseln Sie shadowing und Überschreiben nicht. Beide werden verwendet, wenn eine abgeleitete Klasse, die von einer Basisklasse erbt, und beide ein deklariertes Element mit einem anderen neu definieren. Es gibt jedoch bedeutende Unterschiede zwischen den beiden. Einen Vergleich finden Sie unter [Unterschiede zwischen Shadowing und überschreiben](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md).  
+ Ist nicht zu verwechseln shadowing und überschreiben. Beide werden verwendet, wenn eine abgeleitete Klasse, die von einer Basisklasse erbt, und beide einen deklariertes Element mit einem anderen neu definieren. Es gibt jedoch bedeutende Unterschiede zwischen den beiden. Einen Vergleich finden Sie unter [Unterschiede zwischen Shadowing und überschreiben](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md).  
   
 ## <a name="shadowing-and-overloading"></a>Shadowing und Überladung  
- Wenn Sie das gleiche Basisklassenelement mit mehr als ein Element in die abgeleitete Klasse vornehmen, werden die shadowing Elemente überladene Versionen des jeweiligen Elements. Weitere Informationen finden Sie unter [Prozedurüberladung](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
+ Wenn Sie das gleiche Element der Basisklasse mit mehr als ein Element in der abgeleiteten Klasse spiegeln, werden die shadowing Elemente überladenen Versionen dieses Elements. Weitere Informationen finden Sie unter [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md).  
   
 ## <a name="accessing-a-shadowed-element"></a>Zugreifen auf ein schattiertes Element  
- Wenn Sie ein Element aus einer abgeleiteten Klasse zugreifen, normalerweise dazu über der aktuellen Instanz der abgeleiteten Klasse, qualifizieren den Elementnamen mit der `Me` Schlüsselwort. Wenn die abgeleitete Klasse, die in der Basisklasse überschattet, können Sie Element der Basisklasse aufrufen, durch die Qualifizierung mit dem `MyBase` Schlüsselwort.  
+ Wenn Sie ein Element aus einer abgeleiteten Klasse zugreifen, erfolgt dies gewöhnlich über die aktuelle Instanz der abgeleiteten Klasse und durch die Qualifizierung der Elementname mit dem `Me` Schlüsselwort. Wenn die abgeleitete Klasse das Element in der Basisklasse überschattet, können Sie das Element der Basisklasse aufrufen, durch die Qualifizierung mit dem `MyBase` Schlüsselwort.  
   
- Ein Beispiel für den Zugriff auf ein schattiertes Element finden Sie unter [Vorgehensweise: Zugriff auf eine Variable Hidden durch eine abgeleitete Klasse](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
+ Ein Beispiel für den Zugriff auf ein schattiertes Element finden Sie unter [Vorgehensweise: Zugreifen auf eine Variable, die von einer abgeleiteten Klasse ausgeblendet](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
   
-### <a name="declaration-of-the-object-variable"></a>Deklaration von Objektvariablen  
- Erstellen der Object-Variablen kann auch beeinflussen, an, ob die abgeleitete Klasse shadowing-Element oder das Shadowing-Element zugreift. Das folgende Beispiel erstellt zwei Objekte durch eine abgeleitete Klasse, aber ein Objekt ist als die Basisklasse und die andere als die abgeleitete Klasse deklariert.  
+### <a name="declaration-of-the-object-variable"></a>Deklaration der Objektvariablen  
+ Erstellen Sie die Objektvariable kann auch beeinflussen, ob die abgeleitete Klasse ein shadowing-Element oder das gespiegelte Element zugreift. Das folgende Beispiel erstellt zwei Objekte aus einer abgeleiteten Klasse, aber ein einzelnes Objekt ist als die Basisklasse und die andere als die abgeleitete Klasse deklariert.  
   
 ```  
 Public Class baseCls  
@@ -137,13 +137,13 @@ Public Class useClasses
 End Class  
 ```  
   
- Im vorherigen Beispiel, die Variable `basObj` als Basisklasse deklariert ist. Zuweisen einer `dervCls` Objekt eine erweiternde Konvertierung und ist daher ungültig. Jedoch nicht die Basisklasse die shadowing-Version der Variablen zugreifen `z` in der abgeleiteten Klasse, sodass der Compiler löst `basObj.z` auf den ursprünglichen Wert der Basisklasse.  
+ Im vorherigen Beispiel, die Variable `basObj` ist als die Basisklasse der Klasse deklariert. Zuweisen einer `dervCls` Objekt eine erweiternde Konvertierung und ist daher gültig. Jedoch nicht die Basisklasse die shadowing-Version der Variablen zugreifen `z` in der abgeleiteten Klasse, sodass der Compiler löst `basObj.z` auf den ursprünglichen Wert der Basisklasse.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)  
- [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- [Grundlagen der Vererbung](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+## <a name="see-also"></a>Siehe auch
+- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
+- [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Grundlagen der Vererbung](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

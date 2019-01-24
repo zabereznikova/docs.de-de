@@ -2,12 +2,12 @@
 title: Interoperable Objektverweise
 ms.date: 03/30/2017
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: eeedd39ec14a6758395aee1f4c3b8ab26a0c2ffd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d2f7d93544cafab7cfe5d8dcbb8a4c5d5c5b576
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582422"
 ---
 # <a name="interoperable-object-references"></a>Interoperable Objektverweise
 Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContractSerializer> Objekte anhand des Werts. Mithilfe der <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>-Eigenschaft können Sie den Datenvertragsserialisierer anweisen, die Objektverweise beim Serialisieren von Objekten des Typs beizubehalten.  
@@ -94,8 +94,8 @@ public class SomeClass
   
  Durch die Verwendung von `IsReference` wird die Kompatibilität für Nachrichten-Roundtrips gewährleistet. Wird dieses Element nicht verwendet, wird beim Erstellen eines Typs aus dem Schema nicht unbedingt eine XML für diesen Typ zurückgesendet, die mit dem ursprünglich angenommenen Schema kompatibel ist. Mit anderen Worten: Obgleich das `id`- und das `ref`-Attribut serialisiert wurden, wurde durch das ursprüngliche Schema möglicherweise verhindert, dass diese Attribute (oder alle Attribute) in der XML erscheinen. Wurde `IsReference` auf einen Datenmember angewendet, gilt der Member bei Roundtrips auch weiterhin als "verweisbar".  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>  
- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference%2A>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute.IsReference%2A>
