@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Senden von Daten an das aktive untergeordnete MDI-Element'
+title: 'Vorgehensweise: Senden von Daten an das aktive untergeordnete MDI-Element'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 301e8975f9b0b12275b51b2c7626e22412243b25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dab72d64cdd013125ae7c302ccf297ecdc0c98b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589925"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>Gewusst wie: Senden von Daten an das aktive untergeordnete MDI-Element
-Häufig innerhalb des Kontexts [Multiple Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), müssen Sie zum Senden von Daten an das aktive untergeordnete Fenster, z. B. wenn der Benutzer Daten aus der Zwischenablage in eine MDI-Anwendung eingefügt.  
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>Vorgehensweise: Senden von Daten an das aktive untergeordnete MDI-Element
+Häufig innerhalb des Kontexts [Multiple Document Interface (MDI) Applications](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), Senden von Daten an das aktive untergeordnete Fenster, z. B. wenn der Benutzer Daten aus der Zwischenablage in einer MDI-Anwendung eingefügt werden sollen.  
   
 > [!NOTE]
->  Weitere Informationen zu überprüfen, welche untergeordnetes Fenster den Fokus besitzt, und senden seinen Inhalt in die Zwischenablage, finden Sie unter [bestimmen von aktiven untergeordneten MDI-Fensters](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).  
+>  Weitere Informationen zu überprüfen, welches untergeordnete Fenster den Fokus besitzt und dessen Inhalt in die Zwischenablage senden, finden Sie unter [Bestimmen des aktiven untergeordneten MDI-Fensters](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md).  
   
-### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Um Daten an das aktive untergeordnete MDI-Fenster aus der Zwischenablage zu senden.  
+### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Zum Senden von Daten auf dem aktiven untergeordneten MDI-Fensters aus der Zwischenablage  
   
-1.  Innerhalb einer Methode kopieren Sie den Text in der Zwischenablage in das aktive Steuerelement des aktiven untergeordneten Formulars ein.  
+1.  Kopieren Sie den Text in der Zwischenablage in das aktive Steuerelement des aktiven untergeordneten Formulars, in einer Methode.  
   
     > [!NOTE]
-    >  In diesem Beispiel wird vorausgesetzt, es ist ein übergeordnetes MDI-Formular (`Form1`), besitzt eine oder mehrere untergeordnete MDI-Fenster mit einem <xref:System.Windows.Forms.RichTextBox> Steuerelement. Weitere Informationen finden Sie unter [Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
+    >  In diesem Beispiel geht davon aus, es ist ein übergeordnetes MDI-Formular (`Form1`), die eine oder mehrere untergeordnete MDI-Fenster mit wurde ein <xref:System.Windows.Forms.RichTextBox> Steuerelement. Weitere Informationen finden Sie unter [Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniPaste_Click(ByVal sender As Object, _  
@@ -91,9 +91,9 @@ Häufig innerhalb des Kontexts [Multiple Document Interface (MDI) Applications](
     }  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDI-Anwendungen (Multiple Document Interface)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)  
- [Gewusst wie: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- [Gewusst wie: Anordnen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+## <a name="see-also"></a>Siehe auch
+- [MDI-Anwendungen (Multiple Document Interface)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
+- [Vorgehensweise: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [Vorgehensweise: Bestimmen des aktiven untergeordneten MDI-Elements](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)
+- [Vorgehensweise: Anordnen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)

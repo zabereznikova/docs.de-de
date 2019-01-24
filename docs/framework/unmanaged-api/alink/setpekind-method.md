@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b985aeb97621e552e9e97581e67cae029d019ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fe770ffc5a9c187e9069e8a66553976f9a53b2f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709883"
 ---
 # <a name="setpekind-method"></a>SetPEKind-Methode
-Bestimmt den portable ausführbare Typ, computerspezifischen oder Unabhängigkeit von der Maschine.  
+Bestimmt den portable ausführbare Typ, entweder computerspezifischen oder Computer agnostisch.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,22 +42,22 @@ HRESULT SetPEKind(
  Die ID der Assembly.  
   
  `FileToken`  
- Datei für das Token ist der PE-Typ festgelegt werden soll. Kann NULL sein, wenn `AssemblyID` einen ungebundenen NETMODULE-Datei nicht an.  
+ Token der Datei, die für die PE-Typ ist, festgelegt werden. Kann NULL sein, wenn `AssemblyID` gibt nicht an eine nicht gebundene NETMODULE-Datei.  
   
  `dwPEKind`  
- Der Typ des PE, durch die [CorPEKind-Enumeration](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md).  
+ Der Typ von PE, wie durch die [CorPEKind-Enumeration](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md).  
   
  `dwMachine`  
  Die Architektur des Zielcomputers, wie in der NT-Header angegeben.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h.  
+ Erfordert alink.h an.  
   
-## <a name="see-also"></a>Siehe auch  
- [GetPEKind-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [GetPEKind-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

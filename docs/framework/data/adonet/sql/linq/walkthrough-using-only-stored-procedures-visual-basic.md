@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 8bb4ad3dd544f90c479e696e29499242c22920a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c696d24dd84aee568706200389839dea080d7b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577393"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (Visual Basic)
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Szenario für den Datenzugriff mithilfe von gespeicherten Prozeduren bereit. Dieser Ansatz wird oft von Datenbankadministratoren verwendet, um den Zugriff auf den Datenspeicher einzuschränken.  
@@ -17,15 +17,15 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE
 > [!NOTE]
 >  Sie können gespeicherte Prozeduren außerdem in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendungen verwenden, um das Standardverhalten zu überschreiben. Dies gilt vor allem für die Prozesse `Create`, `Update` und `Delete`. Weitere Informationen finden Sie unter [Anpassen von INSERT-, Update- und Delete-Operationen](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
   
- Im Rahmen dieser exemplarischen Vorgehensweise verwenden Sie zwei Methoden, die in der Beispieldatenbank Northwind gespeicherten Prozeduren zugeordnet wurden: CustOrdersDetail und CustOrderHist. Die Zuordnung tritt auf, wenn Sie das SqlMetal-Befehlszeilentool zum Generieren von Visual Basic-Datei ausführen. Weitere Informationen finden Sie im Abschnitt zu Voraussetzungen weiter unten in dieser exemplarischen Vorgehensweise.  
+ Für die Zwecke dieser exemplarischen Vorgehensweise verwenden Sie zwei Methoden, die von gespeicherten Prozeduren in der Northwind-Beispieldatenbank zugeordnet wurden: CustOrdersDetail und CustOrderHist. Die Zuordnung tritt auf, wenn Sie das Befehlszeilentool SqlMetal verwenden, generiert Visual Basic-Datei ausführen. Weitere Informationen finden Sie im Abschnitt zu Voraussetzungen weiter unten in dieser exemplarischen Vorgehensweise.  
   
- Diese exemplarische Vorgehensweise basiert nicht auf [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Entwickler, die mit Visual Studio können auch die [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] zum Implementieren der Funktionalität einer gespeicherten Prozedur. Finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Diese exemplarische Vorgehensweise basiert nicht auf [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Entwickler, die mit Visual Studio können auch die [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] Funktionalität einer gespeicherten Prozedur zu implementieren. Finden Sie unter [LINQ to SQL-Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Diese exemplarische Vorgehensweise wurde mithilfe von Visual Basic-Entwicklungseinstellungen geschrieben.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Für diese exemplarische Vorgehensweise wird Folgendes vorausgesetzt:  
   
 -   Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest3") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.  
@@ -58,7 +58,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE
 -   Ausführen und Testen der Anwendung.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Erstellen einer LINQ to SQL-Lösung  
- In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projektmappe, enthält die erforderlichen Verweise zur Erstellung und Ausführung, einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt.  
+ In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projektmappe, die die erforderlichen Verweise zur Erstellung und Ausführung enthält eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>So erstellen Sie eine LINQ to SQL-Lösung  
   
@@ -83,7 +83,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE
   
 2.  In **Projektmappen-Explorer**, mit der rechten Maustaste **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.  
   
-3.  In der **Verweis hinzufügen** (Dialogfeld), klicken Sie auf **.NET**, klicken Sie auf die System.Data.Linq-Assembly, und klicken Sie dann auf **OK**.  
+3.  In der **Verweis hinzufügen** Dialogfeld klicken Sie auf **.NET**, klicken Sie auf die System.Data.Linq-Assembly, und klicken Sie dann auf **OK**.  
   
      Dem Projekt wird die Assembly hinzugefügt.  
   
@@ -94,7 +94,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE
   
 1.  Auf der **Projekt** Menü klicken Sie auf **vorhandenes Element hinzufügen**.  
   
-2.  In der **vorhandenes Element hinzufügen** c:\linqtest3\northwind.vb ANS (Dialogfeld), und klicken Sie dann auf **hinzufügen**.  
+2.  In der **vorhandenes Element hinzufügen** Dialogfeld zu c:\linqtest3\northwind.vb verschieben, und klicken Sie dann auf **hinzufügen**.  
   
      Die Datei northwind.vb wird dem Projekt hinzugefügt.  
   
@@ -103,7 +103,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE
   
 #### <a name="to-create-the-database-connection"></a>So erstellen Sie die Datenbankverbindung  
   
-1.  In **Projektmappen-Explorer**, mit der rechten Maustaste **"Form1.vb"**, und klicken Sie dann auf **Code anzeigen**.  
+1.  In **Projektmappen-Explorer**, mit der rechten Maustaste **Form1.vb**, und klicken Sie dann auf **Ansichtscode**.  
   
      `Class Form1` erscheint im Code-Editor.  
   
@@ -116,40 +116,40 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE
   
 #### <a name="to-set-up-the-user-interface"></a>So richten Sie die Benutzeroberfläche ein  
   
-1.  Zurück zu den Windows Forms-Designer (**Form1.vb]**).  
+1.  Wechseln Sie zurück zur der Windows Forms-Designer (**Form1.vb]**).  
   
 2.  Klicken Sie im Menü **Ansicht** auf **Toolbox**.  
   
      Die Toolbox wird geöffnet.  
   
     > [!NOTE]
-    >  Klicken Sie auf die **Taskleisten** PIN Toolbox geöffnet zu lassen, während Sie die folgenden Schritte in diesem Abschnitt.  
+    >  Klicken Sie auf die **automatisch im Hintergrund** PIN, die Toolbox geöffnet zu lassen, während der folgenden Schritte in diesem Abschnitt.  
   
-3.  Ziehen Sie zwei Schaltflächen, zwei Textfelder und zwei Bezeichnungen von der Toolbox auf **Form1**.  
+3.  Ziehen Sie zwei Schaltflächen, zwei Textfelder und zwei Bezeichnungen aus der Toolbox auf **Form1**.  
   
-     Ordnen Sie die Steuerelemente wie in der Abbildung an. Erweitern Sie **Form1** , damit die Steuerelemente problemlos angepasst.  
+     Ordnen Sie die Steuerelemente wie in der Abbildung an. Erweitern Sie **Form1** , damit die Steuerelemente platziert.  
   
 4.  Mit der rechten Maustaste **Label1**, und klicken Sie dann auf **Eigenschaften**.  
   
-5.  Ändern der **Text** Eigenschaft von **Label1** auf **Enter OrderID:**.  
+5.  Ändern der **Text** Eigenschaft **Label1** zu **Enter OrderID:**.  
   
-6.  Auf die gleiche Weise für **Label2**, ändern Sie die **Text** Eigenschaft von **Label2** zu **Enter CustomerID:**.  
+6.  Für die gleiche Weise **Label2**, ändern Sie die **Text** Eigenschaft aus **Label2** zu **Enter CustomerID:**.  
   
-7.  Ändern Sie auf die gleiche Weise die **Text** -Eigenschaft für **Button1** auf **Bestelldetails**.  
+7.  Ändern Sie in die gleiche Weise die **Text** -Eigenschaft für **"Button1"** zu **Bestelldetails**.  
   
-8.  Ändern der **Text** -Eigenschaft für **Button2** auf **Bestellverlauf**.  
+8.  Ändern der **Text** -Eigenschaft für **Button2** zu **Bestellverlauf**.  
   
      Erweitern Sie die Schaltflächen-Steuerelemente, damit der gesamte Text sichtbar ist.  
   
 #### <a name="to-handle-button-clicks"></a>Verarbeitung von Mausklicks auf die Schaltflächen  
   
-1.  Doppelklicken Sie auf **Bestelldetails** auf **Form1** zum Erstellen der `Button1` -Ereignishandler und das Codeeditor zu öffnen.  
+1.  Doppelklicken Sie auf **Bestelldetails** auf **Form1** zum Erstellen der `Button1` -Ereignishandler und den Codeeditor zu öffnen.  
   
 2.  Geben Sie den folgenden Code in den `Button1`-Ereignishandler ein.  
   
      [!code-vb[DLinqWalk4VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#2)]  
   
-3.  Doppelklicken Sie jetzt auf **Button2** auf Form1 für das Erstellen der `Button2` -Ereignishandler und das Codeeditor zu öffnen.  
+3.  Doppelklicken Sie jetzt auf **Button2** auf Form1 für das Erstellen der `Button2` -Ereignishandler und den Codeeditor zu öffnen.  
   
 4.  Geben Sie den folgenden Code in den `Button2`-Ereignishandler ein.  
   
@@ -168,29 +168,29 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE
   
      Ein Meldungsfeld listet die in Bestellung 10249 enthaltenen Produkte auf.  
   
-     Klicken Sie auf **OK** um das Dialogfeld zu schließen.  
+     Klicken Sie auf **OK** um das Meldungsfeld zu schließen.  
   
 3.  In der **Enter CustomerID** geben `ALFKI`, und klicken Sie dann auf **Bestellverlauf**.  
   
      Ein Meldungsfeld mit der Bestellhistorie für Kunde ALFKI wird angezeigt.  
   
-     Klicken Sie auf **OK** um das Dialogfeld zu schließen.  
+     Klicken Sie auf **OK** um das Meldungsfeld zu schließen.  
   
 4.  In der **Enter OrderID** geben `123`, und klicken Sie dann auf **Bestelldetails**.  
   
      Ein Meldungsfeld zeigt "Keine Ergebnisse" an.  
   
-     Klicken Sie auf **OK** um das Dialogfeld zu schließen.  
+     Klicken Sie auf **OK** um das Meldungsfeld zu schließen.  
   
 5.  Auf der **Debuggen** Menü klicken Sie auf **Beenden des Debuggens**.  
   
      Die Debugsitzung schließt.  
   
-6.  Wenn Sie Ihre Versuche abgeschlossen haben, können Sie klicken **Projekt schließen** auf die **Datei** Menü, und speichern Sie das Projekt aus, wenn Sie aufgefordert werden.  
+6.  Wenn Sie mit dem Experimentieren fertig sind, können Sie klicken **Projekt schließen** auf die **Datei** Menü, und speichern Sie das Projekt aus, wenn Sie aufgefordert werden.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie können dieses Projekt mit einigen Änderungen erweitern. Sie können beispielsweise die verfügbaren gespeicherten Prozeduren in einem Listenfeld aufführen, sodass der Benutzer diese auswählen kann. Sie könnten auch die Ausgabe von Berichten in eine Textdatei umleiten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)  
- [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+## <a name="see-also"></a>Siehe auch
+- [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

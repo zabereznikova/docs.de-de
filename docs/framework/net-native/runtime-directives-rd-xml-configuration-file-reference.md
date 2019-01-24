@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 009d70423a3eb29c97f3279a288c37623dac927e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fed8097c472be487256840f289c1d8252d978a93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637106"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz
 Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die angibt, ob bestimmte Programmelemente für die Reflektion verfügbar sind. Im Folgenden ist ein Beispiel einer Laufzeitdirektivendatei angegeben:  
@@ -33,7 +33,7 @@ Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die ang
 ```  
   
 ## <a name="the-structure-of-a-runtime-directives-file"></a>Die Struktur einer Laufzeitdirektivendatei  
- Die Laufzeitdirektivendatei verwendet den Namespace `http://schemas.microsoft.com/netfx/2013/01/metadata`.  
+ Die Laufzeitanweisungsdatei verwendet den Namespace `http://schemas.microsoft.com/netfx/2013/01/metadata`.  
   
  Das Stammelement ist [Directives](../../../docs/framework/net-native/directives-element-net-native.md). Wie in der folgenden Struktur dargestellt, kann es null oder mehr [Library](../../../docs/framework/net-native/library-element-net-native.md)-Elemente und null oder ein [Application](../../../docs/framework/net-native/application-element-net-native.md)-Element enthalten. Die Attribute des [Application](../../../docs/framework/net-native/application-element-net-native.md)-Elements können eine anwendungsweite Laufzeitreflektionsrichtlinie definieren oder als Container für untergeordnete Elemente dienen. Das [Library](../../../docs/framework/net-native/library-element-net-native.md)-Element hingegen ist lediglich ein Container. Die untergeordneten Elemente der Elemente [Application](../../../docs/framework/net-native/application-element-net-native.md) und [Library](../../../docs/framework/net-native/library-element-net-native.md) definieren die Typen, Methoden, Felder, Eigenschaften und Ereignisse, die für die Reflektion verfügbar sind.  
   
@@ -149,43 +149,43 @@ Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die ang
 ### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Festlegen von Richtlinien für Assemblys, Namespaces und Typen  
  Die Elemente [Application](../../../docs/framework/net-native/application-element-net-native.md), [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md), [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) und [Type](../../../docs/framework/net-native/type-element-net-native.md) unterstützen folgende Richtlinientypen:  
   
--   `Activate` Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.  
+-   `Activate`. Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.  
   
--   `Browse` Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.  
+-   `Browse`. Steuert das Abfragen von Informationen über Programmelemente, ermöglicht jedoch keinen Laufzeitzugriff.  
   
--   `Dynamic` Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.  
+-   `Dynamic`. Steuert den Laufzeitzugriff auf alle Typmember, einschließlich Konstruktoren, Methoden, Felder, Eigenschaften und Ereignisse, um die dynamische Programmierung zu ermöglichen.  
   
--   `Serialize` Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken von Drittanbietern wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.  
+-   `Serialize`. Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um Serialisierung und Deserialisierung von Typinstanzen durch Bibliotheken von Drittanbietern wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.  
   
--   `DataContractSerializer` Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.  
+-   `DataContractSerializer`. Steuert die Richtlinie für die Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.  
   
--   `DataContractJsonSerializer` Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.  
+-   `DataContractJsonSerializer`. Steuert die Richtlinie für die JSON-Serialisierung, die die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>-Klasse verwendet.  
   
--   `XmlSerializer` Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>-Klasse verwendet.  
+-   `XmlSerializer`. Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>-Klasse verwendet.  
   
--   `MarshalObject` Steuert die Richtlinie für das Marshalling von Verweistypen zu WinRT und COM.  
+-   `MarshalObject`. Steuert die Richtlinie für das Marshalling von Verweistypen zu WinRT und COM.  
   
--   `MarshalDelegate` Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.  
+-   `MarshalDelegate`. Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.  
   
 -   `MarshalStructure` . Steuert die Richtlinie für das Marshalling von Strukturen zu systemeigenem Code.  
   
  Die Einstellungen für diese Richtlinientypen sind:  
   
--   `All` Aktiviert die Richtlinie für alle Typen und Member, die die Toolkette nicht entfernt.  
+-   `All`. Aktiviert die Richtlinie für alle Typen und Member, die die Toolkette nicht entfernt.  
   
--   `Auto` Verwendet das Standardverhalten. (Fehlende Angabe einer Richtlinie entspricht dem Festlegen der Richtlinie auf `Auto`, sofern die Richtlinie nicht, beispielsweise durch ein übergeordnetes Element, überschrieben wird.)  
+-   `Auto`. Verwendet das Standardverhalten. (Fehlende Angabe einer Richtlinie entspricht dem Festlegen der Richtlinie auf `Auto`, sofern die Richtlinie nicht, beispielsweise durch ein übergeordnetes Element, überschrieben wird.)  
   
--   `Excluded` Deaktiviert die Richtlinie für das Programmelement.  
+-   `Excluded`. Deaktiviert die Richtlinie für das Programmelement.  
   
--   `Public` Aktiviert die Richtlinie für öffentliche Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Member unnötig ist und daher entfernt wird. (In letzterem Fall müssen Sie `Required Public` verwenden, um sicherzustellen, dass der Member beibehalten wird und über Reflektionsfunktionen verfügt.)  
+-   `Public`. Aktiviert die Richtlinie für öffentliche Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Member unnötig ist und daher entfernt wird. (In letzterem Fall müssen Sie `Required Public` verwenden, um sicherzustellen, dass der Member beibehalten wird und über Reflektionsfunktionen verfügt.)  
   
--   `PublicAndInternal` Aktiviert die Richtlinie für öffentliche und interne Typen oder Member, sofern die Toolkette diese nicht entfernt.  
+-   `PublicAndInternal`. Aktiviert die Richtlinie für öffentliche und interne Typen oder Member, sofern die Toolkette diese nicht entfernt.  
   
--   `Required Public` Fordert, dass die Toolkette öffentliche Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
+-   `Required Public`. Fordert, dass die Toolkette öffentliche Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
   
--   `Required PublicAndInternal` Fordert, dass die Toolkette öffentliche und interne Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
+-   `Required PublicAndInternal`. Fordert, dass die Toolkette öffentliche und interne Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
   
--   `Required All` Fordert, dass die Toolkette alle Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
+-   `Required All`. Fordert, dass die Toolkette alle Typen und Member unabhängig von ihrer Verwendung beibehält und die Richtlinie für sie aktiviert.  
   
  Die folgende Laufzeitdirektivendatei definiert z. B. die Richtlinie für alle Typen und Member in der Assembly DataClasses.dll. Sie aktiviert die Reflektion für die Serialisierung aller öffentlichen Eigenschaften, ermöglicht das Durchsuchen nach allen Typen und Typmembern (aufgrund des `Dynamic`-Attributs) und aktiviert die Reflektion für alle öffentlichen Typen und Member.  
   
@@ -290,7 +290,7 @@ Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die ang
 ```  
   
 ### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a>Wenn offene generische Typen und instanziierte Elemente denselben Richtlinientyp anwenden  
- Im folgenden Beispiel wird `Dictionary<int,int>` die `Browse`-Richtlinie nur dann zugewiesen, wenn das Modul einen anderen Grund hat, ihm die `Browse`-Richtlinie zuzuweisen (was sonst das Standardverhalten wäre). In jeder anderen Instanziierung von <xref:System.Collections.Generic.Dictionary%602> sind alle Member durchsuchbar.  
+ Im folgenden Beispiel wird `Dictionary<int,int>` die `Browse`-Richtlinie nur dann zugewiesen, wenn die Engine einen anderen Grund hat, ihm die `Browse`-Richtlinie zuzuweisen (was sonst das Standardverhalten wäre). In jeder anderen Instanziierung von <xref:System.Collections.Generic.Dictionary%602> sind alle Member durchsuchbar.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -453,12 +453,12 @@ Eine Laufzeitanweisungsdatei (.rd.xml) ist eine XML-Konfigurationsdatei, die ang
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserialier-policies"></a>Auswirkungen der Richtlinien XmlSerializer, DataContractSerializer und DataContractJsonSerializer  
  Im Gegensatz zur `Serialize`-Richtlinie, die für reflektionsbasierte Serialisierungsprogramme gedacht ist, werden die Richtlinien `XmlSerializer`, `DataContractSerializer` und `DataContractJsonSerializer` verwendet, um eine Reihe von Serialisierungsprogrammen zu aktivieren, die der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette bekannt sind. Diese Serialisierungsprogramme werden nicht mithilfe von Reflektion implementiert, aber der Satz von Typen, die zur Laufzeit serialisiert werden können, wird auf ähnliche Weise wie reflektierbare Typen bestimmt.  
   
- Die Anwendung einer dieser Richtlinien auf einen Typ ermöglicht die Serialisierung des Typs mit dem entsprechenden Serialisierungsprogramm. Außerdem können alle Typen, von denen das Serialisierungsmodul statisch bestimmen kann, dass für sie Serialisierung erforderlich ist, serialisierbar sein.  
+ Die Anwendung einer dieser Richtlinien auf einen Typ ermöglicht die Serialisierung des Typs mit dem entsprechenden Serialisierungsprogramm. Außerdem können alle Typen, von denen die Serialisierungs-Engine statisch bestimmen kann, dass für sie Serialisierung erforderlich ist, serialisierbar sein.  
   
  Diese Richtlinien wirken sich nicht auf Methoden oder Felder aus.  
   
  Weitere Informationen finden Sie im Abschnitt „Unterschiede in den Serialisierungsprogrammen“ [Migrieren Ihrer Windows Store-App auf .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Reflection and .NET Native (Reflektion und .NET Native)](../../../docs/framework/net-native/reflection-and-net-native.md)
+## <a name="see-also"></a>Siehe auch
+- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [Reflection and .NET Native (Reflektion und .NET Native)](../../../docs/framework/net-native/reflection-and-net-native.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ändern der angezeigten Daten im DataGrid-Steuerelement in Windows Forms zur Laufzeit'
+title: 'Vorgehensweise: Ändern der angezeigten Daten zur Laufzeit in das DataGrid-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 1059f774ae8d2c203d7a4f5c02c597b4686304f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc0fe47d728a196de81f7bf099e3a25ac2bb9211
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605564"
 ---
-# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Gewusst wie: Ändern der angezeigten Daten im DataGrid-Steuerelement in Windows Forms zur Laufzeit
+# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Vorgehensweise: Ändern der angezeigten Daten zur Laufzeit in das DataGrid-Steuerelement in Windows Forms
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Nach der Erstellung einer Windows Forms <xref:System.Windows.Forms.DataGrid> mit den Funktionen zur Entwurfszeit können Sie möglicherweise auch dynamisch Elemente ändern möchten die <xref:System.Data.DataSet> Objekt des Rasters zur Laufzeit. Dazu kann Änderungen an der Tabelle entweder einzelne Werte oder ändern die Datenquelle gebunden ist, um die <xref:System.Windows.Forms.DataGrid> Steuerelement. Änderungen an einzelnen Werte erfolgen über die <xref:System.Data.DataSet> -Objekt und nicht die <xref:System.Windows.Forms.DataGrid> Steuerelement.  
+ Nach der Erstellung einer Windows Forms <xref:System.Windows.Forms.DataGrid> mit den Funktionen zur Entwurfszeit können Sie auch den Elemente dynamisch ändern der <xref:System.Data.DataSet> Objekt des Rasters zur Laufzeit. Dies kann Änderungen an der Tabelle entweder einzelne Werte einschließen, oder ändern die Datenquelle gebunden ist, um die <xref:System.Windows.Forms.DataGrid> Steuerelement. Änderungen an einzelnen Werten werden stets die <xref:System.Data.DataSet> -Objekt und nicht die <xref:System.Windows.Forms.DataGrid> Steuerelement.  
   
 ### <a name="to-change-data-programmatically"></a>Programmgesteuertes Ändern von Daten  
   
-1.  Geben Sie die gewünschte Tabelle aus der <xref:System.Data.DataSet> Objekt und die gewünschte Zeile und Feld aus der Tabelle, und legen Sie die Zelle auf den neuen Wert.  
+1.  Geben Sie die gewünschte Tabelle aus der <xref:System.Data.DataSet> Objekt und die gewünschte Zeile, und das Feld aus der Tabelle, und legen Sie die Zelle auf den neuen Wert.  
   
     > [!NOTE]
-    >  Die erste Tabelle der an die <xref:System.Data.DataSet> oder die erste Zeile der Tabelle, verwenden Sie 0.  
+    >  Der ersten Tabelle des an den <xref:System.Data.DataSet> oder die erste Zeile der Tabelle, verwenden Sie 0.  
   
-     Das folgende Beispiel zeigt, wie den zweiten Eintrag der ersten Zeile der ersten Tabelle eines Datasets ändern, indem Sie auf `Button1`. Die <xref:System.Data.DataSet> (`ds`) und Tabellen (`0` und `1`) wurden zuvor erstellt haben.  
+     Das folgende Beispiel zeigt, wie Sie durch Klicken auf den zweiten Eintrag in der ersten Zeile der ersten Tabelle eines Datasets zu ändern `Button1`. Die <xref:System.Data.DataSet> (`ds`) und Tabellen (`0` und `1`) waren zuvor erstellt haben.  
   
     ```vb  
     Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -53,7 +53,7 @@ ms.locfileid: "33526913"
        }  
     ```  
   
-     (Visual c# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) fügen Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual c# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -70,7 +70,7 @@ ms.locfileid: "33526913"
   
 1.  Legen Sie die <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode, um den Namen der Datenquelle und der Tabelle, die Sie binden möchten.  
   
-     Im folgende Beispiel wird gezeigt, wie so ändern Sie die Datenquelle mithilfe der <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode, um eine [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Datensteuerelement (adoPubsAuthors gebunden), die mit der Tabelle "Authors" in der Pubs-Datenbank verbunden ist.  
+     Das folgende Beispiel zeigt, wie Sie die Datenquelle mithilfe der <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode, um eine [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Datensteuerelement (adoPubsAuthors gebunden), die mit der Autorentabelle in der Pubs-Datenbank verbunden ist.  
   
     ```vb  
     Private Sub ResetSource()  
@@ -93,8 +93,8 @@ ms.locfileid: "33526913"
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO.NET-DataSets](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
- [Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [Gewusst wie: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- [Gewusst wie: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+## <a name="see-also"></a>Siehe auch
+- [ADO.NET-DataSets](../../../../docs/framework/data/adonet/ado-net-datasets.md)
+- [Vorgehensweise: Löschen oder Ausblenden von Spalten im DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

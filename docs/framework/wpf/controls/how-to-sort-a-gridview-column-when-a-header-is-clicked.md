@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Sortieren einer GridView-Spalte beim Klicken auf einen Header'
+title: 'Vorgehensweise: Sortieren einer GridView-Spalte beim Klicken auf einen Header'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 30bcbd8b7cdd4c184560aaa4a2799137da51fc8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694086"
 ---
-# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Gewusst wie: Sortieren einer GridView-Spalte beim Klicken auf einen Header
-In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Controls.ListView> -Steuerelement, implementiert eine <xref:System.Windows.Controls.GridView> anzeigen, Modus und sortiert die Daten zu Inhalten, wenn ein Benutzer auf einen Spaltenheader klickt.  
+# <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Vorgehensweise: Sortieren einer GridView-Spalte beim Klicken auf einen Header
+Dieses Beispiel zeigt, wie Sie erstellen eine <xref:System.Windows.Controls.ListView> -Steuerelement, implementiert eine <xref:System.Windows.Controls.GridView> anzeigen, Modus und Sortierungen, die die Daten zu Inhalt, wenn ein Benutzer einen Spaltenheader klickt.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel definiert eine <xref:System.Windows.Controls.GridView> mit drei Spalten, die zum Binden der <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, und <xref:System.DateTime.Day%2A>, Eigenschaften der <xref:System.DateTime> Struktur.  
@@ -69,7 +69,7 @@ In diesem Beispiel wird gezeigt, wie zum Erstellen einer <xref:System.Windows.Co
     xmlns:p="clr-namespace:System;assembly=mscorlib">  
 ```  
   
- Um die Daten gemäß den Inhalt einer Spalte zu sortieren, im Beispiel definiert einen Ereignishandler zur Behandlung der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> das Ereignis tritt bei der Sie die Spalte-Header-Taste drücken. Im folgende Beispiel wird gezeigt, wie an einen Ereignishandler für das <xref:System.Windows.Controls.GridViewColumnHeader> Steuerelement.  
+ Um die Daten entsprechend den Inhalten einer Spalte zu sortieren, das Beispiel definiert einen Ereignishandler zur Behandlung der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis tritt auf, wenn Sie die Schaltfläche "Spaltenüberschrift" drücken. Das folgende Beispiel zeigt, wie einen Ereignishandler für die <xref:System.Windows.Controls.GridViewColumnHeader> Steuerelement.  
   
 ```xaml  
 <ListView x:Name='lv' Height="150" HorizontalAlignment="Center"   
@@ -223,9 +223,9 @@ Private Sub Sort(ByVal sortBy As String, ByVal direction As ListSortDirection)
 End Sub  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.GridView>  
- [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.GridView>
+- [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

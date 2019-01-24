@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Suchen von Assemblys mit DEVPATH'
+title: 'Vorgehensweise: Suchen von Assemblys mit DEVPATH'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 3a9ae9c60ad7de80d04f16984b3b2fb048421cc2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 11ed84b01adf57eb526eaa1e71c6968e48c64cc2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627542"
 ---
-# <a name="how-to-locate-assemblies-by-using-devpath"></a>Gewusst wie: Suchen von Assemblys mit DEVPATH
+# <a name="how-to-locate-assemblies-by-using-devpath"></a>Vorgehensweise: Suchen von Assemblys mit DEVPATH
 Entwickler sollten sicherstellen, dass eine freigegebene Assembly, die sie erstellen mit mehreren Anwendungen funktioniert. Anstatt kontinuierlich platzieren die Assembly im globalen Assemblycache während des Entwicklungszyklus, kann Entwickler eine DEVPATH-Umgebungsvariable erstellen, die in das Ausgabeverzeichnis des Builds für die Assembly verweist.  
   
  Nehmen wir beispielsweise an, dass Sie eine freigegebene Assembly, die mit dem Namen MySharedAssembly erstellen und das Ausgabeverzeichnis C:\MySharedAssembly\Debug ist. Sie können in der Variablen DEVPATH C:\MySharedAssembly\Debug einbinden. Sie müssen angeben, die [ \<DevelopmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md) Element in der Computerkonfigurationsdatei. Dieses Element weist die common Language Runtime DEVPATH verwenden, um Assemblys zu suchen.  
@@ -45,5 +45,5 @@ Entwickler sollten sicherstellen, dass eine freigegebene Assembly, die sie erste
 > [!NOTE]
 >  Verwenden Sie diese Einstellung nur zum Zeitpunkt der Entwicklung. Die Runtime überprüft nicht die Versionen auf Assemblys mit starkem Namen finden Sie in die DEVPATH. Sie verwendet einfach die erste Assembly gefundenen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von .NET Framework-Apps](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a>Siehe auch
+- [Konfigurieren von .NET Framework-Apps](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

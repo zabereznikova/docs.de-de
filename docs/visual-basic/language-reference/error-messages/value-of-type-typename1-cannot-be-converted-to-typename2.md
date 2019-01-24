@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 9b3c029ed7bf73ff92dba65438d797b27fa135f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00ce143eecefbdf2f1b9e204ae2005be4bb81e39
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627602"
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>Wert des Typs &#39; &lt;Typname1&gt; &#39; kann nicht konvertiert werden, um &#39; &lt;Typname2&gt;&#39;
-Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 > ". Typenkonflikt möglicherweise zurückzuführen. das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly '\<Assemblyname >'. Ersetzen Sie den Dateiverweis auf "\<Filepath >" in Projekt "\<projektname1 >" mit einem Projektverweis auf "\<projektname2 >".  
+Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 >'. {Typenkonflikt beim wird möglicherweise durch das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly '\<Assemblyname >'. Den Dateiverweis, ersetzen Sie die "\<" FilePath ">" in Projekt "\<projektnamen1 >' mit einem Projektverweis auf"\<projektname2 > ".  
   
- In einer Situation, in denen ein Projekt einen Projektverweis und ein Dateiverweis erstellt, kann der Compiler nicht garantieren, einem Typ in einen anderen konvertiert werden kann.  
+ In einer Situation, in denen ein Projekt sowohl einen Projektverweis als auch ein Dateiverweis erstellt, garantiert der Compiler nicht, dass es sich bei einem Typ in einen anderen konvertiert werden kann.  
   
- Der folgende Pseudocode veranschaulicht eine Situation, die dieser Fehler generiert werden kann.  
+ Der folgende Pseudocode veranschaulicht eine Situation, die diesen Fehler verursachen kann.  
   
  `' ================ Visual Basic project P1 ================`  
   
@@ -47,19 +47,19 @@ Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 > ". Ty
   
  `End Class`  
   
- Projekt `P1` macht einen indirekten Projektverweis über Projekt `P2` Projekt `P3`, und auch einen direkten Dateiverweis auf `P3`. Die Deklaration von `commonObject` verwendet den Dateiverweis auf `P3`, während im Aufruf von `P2.getCommonClass` verwendet den Projektverweis `P3`.  
+ Projekt `P1` indirekte Projekt verweist auf Projekt `P2` Projekt `P3`, und auch einen direkten Verweis auf `P3`. Die Deklaration von `commonObject` verwendet den Dateiverweis auf `P3`, während im Aufruf von `P2.getCommonClass` verwendet den Projektverweis `P3`.  
   
- Das Problem in diesem Fall ist, dass das Projekt einen Dateipfad und einen Namen für die Ausgabedatei gibt `P3` (normalerweise p3.dll), während das Projekt verweist auf das Quellprojekt ermitteln (`P3`) durch den Namen des Projekts. Aus diesem Grund der Compiler nicht garantieren, dass den Typ `P3.commonClass` stammen aus dem gleichen Quellcode über zwei unterschiedliche Verweise.  
+ Das Problem in diesem Fall ist, dass es sich bei der Dateiverweis gibt an, einen Pfad und Namen für die Ausgabedatei `P3` (normalerweise p3.dll), während die Projektverweise auf das Quellprojekt ermitteln (`P3`) nach Projektname. Aus diesem Grund der Compiler nicht garantieren, dass den Typ `P3.commonClass` stammt aus der gleiche Quellcode über zwei unterschiedliche Verweise.  
   
- Diese Situation tritt in der Regel auf, wenn Projektverweise und Dateiverweise gemischt werden. In der vorherigen Abbildung sind das Problem würde nicht auftreten, wenn `P1` mit einen direkten Projektverweis vorgenommen `P3` anstelle eines Dateiverweises.  
+ Diese Situation tritt in der Regel auf, wenn Projektverweise und Dateiverweise kombiniert werden. In der vorhergehenden Abbildung können das Problem würde nicht auftreten, wenn `P1` vorgenommen einen direkten Projektverweis auf `P3` anstelle eines Dateiverweises.  
   
  **Fehler-ID:** BC30955  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Den Dateiverweis auf einen Projektverweis zu ändern.  
+-   Den Dateiverweis, einen Projektverweis zu ändern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konvertierungen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project)  
- 
+## <a name="see-also"></a>Siehe auch
+- [Typkonvertierung in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project)
+

@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: badab8200a4b10fdc13987dfe39ebfebd4d1f7cf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 19983e4d17ac2843385685a6b8b247d16f4cc081
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700460"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;OidMap&gt; Element
 Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.  
   
  \<configuration>  
-\<"mscorlib" >  
-\<CryptographySettings >  
-\<OidMap >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<oidMap>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<OidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Ordnet einen ASN. 1-Objektbezeichner in einen Anzeigenamen an.|  
+|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|Ordnet einen ASN. 1-Objektbezeichner in einen Anzeigenamen an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -75,9 +75,9 @@ Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
-- [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+## <a name="see-also"></a>Siehe auch
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

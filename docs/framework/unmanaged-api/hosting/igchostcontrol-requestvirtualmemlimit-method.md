@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2df33e3edebbf558bf78986e737c4f7bb9b2f0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db1572c035242a4a143ee435957409e5d16fca1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437156"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607172"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>IGCHostControl::RequestVirtualMemLimit-Methode
-Fordert den Host zum Ändern der Grenzen des virtuellen Arbeitsspeichers.  
+Fordert den Host zum Ändern der Grenzen des virtuellen Speichers an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,19 +38,19 @@ HRESULT RequestVirtualMemLimit (
   
 #### <a name="parameters"></a>Parameter  
  `sztMaxVirtualMemMB`  
- [in] Die angeforderte Größe des Arbeitsspeichers zugeordnet werden soll.  
+ [in] Die angeforderte Größe des Arbeitsspeichers, die zugeordnet werden.  
   
  `psztNewMaxVirtualMemMB`  
  [in, out] Ein Zeiger auf die tatsächliche Größe des belegten Arbeitsspeichers.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IGCHostControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IGCHostControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)

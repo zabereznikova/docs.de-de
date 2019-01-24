@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 816b4138f395298e2fbf8b4de4cac63c0794657b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730944"
 ---
 # <a name="endpoint-addresses"></a>Endpunktadressen
 Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können. Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier (URI), der den Speicherort des Endpunkts angibt. Die Adresse des Endpunkts wird dargestellt, in der Windows Communication Foundation (WCF)-Programmiermodell von der <xref:System.ServiceModel.EndpointAddress> -Klasse, die ein optionales enthält <xref:System.ServiceModel.EndpointAddress.Identity%2A> -Eigenschaft, die die Authentifizierung des Endpunkts durch andere Endpunkte ermöglicht, austauschen, mit denen er Meldungen und einen Satz Optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A> Eigenschaften, die alle anderen zum Erreichen des Diensts erforderlichen SOAP-Header festlegen. Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren. Die Adresse eines Endpunkts wird während der Übertragung als WS-Adressierungsendpunktverweis (Endpoint Reference, EPR) dargestellt.  
@@ -46,7 +46,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
  Das folgende Beispiel zeigt die Komponenten, die in einer IIS-Bindung enthalten sein können:  
   
--   Bindungsprotokoll: HTTP  
+-   Das Bindungsprotokoll: HTTP  
   
 -   Bindungsinformationen: IP-Adresse, Anschluss, Hostheader  
   
@@ -82,7 +82,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
  Die von IIS angegebenen Basisadressen verfügen möglicherweise über Adressen, die an andere, nicht in der `baseAddressPrefixFilters`-Liste vorhandene Schemas gebunden sind. Diese Adressen werden nicht herausgefiltert.  
   
 ## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>Unterstützung für mehrere IIS-Bindungen in .NET Framework 4 und höher  
- Ab .NET 4 können Sie die Unterstützung für mehrere Bindungen in IIS aktivieren, ohne eine Basisadresse auswählen zu müssen. Legen Sie dazu die Einstellung <xref:System.ServiceModel.ServiceHostingEnvironment> von <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> auf True fest. Die Unterstützung ist auf HTTP-Protokollschemas begrenzt.  
+ Ab .NET 4 können Sie die Unterstützung für mehrere Bindungen in IIS aktivieren, ohne eine Basisadresse auswählen zu müssen. Legen Sie dazu die Einstellung <xref:System.ServiceModel.ServiceHostingEnvironment> von <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> auf TRUE fest. Die Unterstützung ist auf HTTP-Protokollschemas begrenzt.  
   
  Folgendes ist ein Beispiel für Konfigurationscode, der MultipleSiteBindingsEnabled verwendet [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
   
@@ -137,6 +137,6 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
  In einigen Szenarien empfängt ein Endpunkt alle Nachrichten, die mit dem zugrunde liegenden Transport ankommen, und nicht nur die mit dem entsprechenden `To`-Header. Um dies zu aktivieren, kann der Benutzer die <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>-Klasse verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+## <a name="see-also"></a>Siehe auch
+- [Angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

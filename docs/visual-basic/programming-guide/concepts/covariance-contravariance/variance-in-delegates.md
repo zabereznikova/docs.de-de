@@ -2,15 +2,15 @@
 title: Varianz in Delegaten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-ms.openlocfilehash: d857f120be0fe810489ba69edb55af9cc0dd6940
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 350f8d6b317f6a82d5b5a718a3d49a4b9ee3e4b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631541"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>Varianz in Delegaten (Visual Basic)
-.NET Framework 3.5 führte die Unterstützung der Varianz für den Abgleich von Methodensignaturen mit Delegattypen in allen Delegaten in c# und Visual Basic. Das bedeutet, dass Sie Delegaten nicht nur Methoden mit übereinstimmenden Signaturen zuweisen können, sondern auch Methoden, die mehrere abgeleitete Typen zurückgeben (Kovarianz) oder die Parameter akzeptieren, die über weniger abgeleitete Typen verfügen, als durch den Delegattyp angegeben wurde (Kontravarianz). Dies umfasst generische und nicht generische Delegaten.  
+Seit .NET Framework 3.5-Unterstützung von Varianz für Methodensignaturen und Delegattypen in allen Delegaten in C# und Visual Basic. Das bedeutet, dass Sie Delegaten nicht nur Methoden mit übereinstimmenden Signaturen zuweisen können, sondern auch Methoden, die mehrere abgeleitete Typen zurückgeben (Kovarianz) oder die Parameter akzeptieren, die über weniger abgeleitete Typen verfügen, als durch den Delegattyp angegeben wurde (Kontravarianz). Dies umfasst generische und nicht generische Delegaten.  
   
  Betrachten Sie beispielsweise folgenden Code, der zwei Klassen und zwei Delegaten aufweist: generisch und nicht generisch.  
   
@@ -75,10 +75,10 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond  
 ```  
   
- Weitere Beispiele finden Sie unter [Verwenden von Varianz in Delegaten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) und [Verwenden von Varianz für Func und Action generische Delegaten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Weitere Beispiele finden Sie unter [Verwenden von Varianz in Delegaten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) und [Verwenden von Varianz für Delegaten Func und Action Generic (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
 ## <a name="variance-in-generic-type-parameters"></a>Varianz in generischen Typparametern  
- In .NET Framework 4 und höher, können Sie implizite Konvertierung zwischen Delegaten aktivieren, sodass generische Delegaten, die verschiedene Arten von generischen Typparametern angegeben haben zu "other" zugewiesen werden können, wenn die Typen von einander gemäß geerbt werden Varianz.  
+ In .NET Framework 4 und höher, können Sie implizite Konvertierung zwischen Delegaten aktivieren, damit, dass generische Delegaten, die verschiedene Typen von generischen Typparametern angegeben haben, zugewiesen werden können, wenn die Typen voneinander, wie erforderlich geerbt werden Varianz.  
   
  Sie müssen einen generischen Parameter in einem Delegaten mithilfe der Schlüsselwörter `in` oder `out` explizit als kovariant oder kontravariant deklarieren, um die implizite Konvertierung zu aktivieren.  
   
@@ -97,7 +97,7 @@ End Sub
   
  Wenn Sie die Unterstützung von Varianz nur verwenden, um Methodensignaturen mit Delegaten zu vergleichen und nicht die Schlüsselwörter `in` und `out` verwenden, kann es möglicherweise passieren, dass Sie zwar Delegate mit identischen Lambdaausdrücken oder -Methoden instanziieren, aber keinen Delegaten einem anderen zuweisen können.  
   
- Im folgenden Codebeispiel `SampleGenericDelegate(Of String)` kann nicht explizit konvertiert werden, um `SampleGenericDelegate(Of Object)`, obwohl `String` erbt `Object`. Sie können dieses Problem beheben, indem Sie den generischen Parameter `T` mit dem Schlüsselwort `out` markieren.  
+ Das folgende Codebeispiel zeigt `SampleGenericDelegate(Of String)` nicht explizit in konvertiert werden `SampleGenericDelegate(Of Object)`, obwohl `String` erbt `Object`. Sie können dieses Problem beheben, indem Sie den generischen Parameter `T` mit dem Schlüsselwort `out` markieren.  
   
 ```vb  
 Public Delegate Function SampleGenericDelegate(Of T)() As T  
@@ -130,7 +130,7 @@ End Sub
   
 -   Der <xref:System.Converter%602>-Delegat.  
   
- Weitere Informationen und Beispiele finden Sie unter [Verwenden von Varianz für Func und Action generische Delegaten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
+ Weitere Informationen und Beispiele finden Sie unter [Verwenden von Varianz für Delegaten Func und Action Generic (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>Angeben varianter Typparameter in generischen Delegaten  
  Wenn ein generischer Delegat über kovariante oder kontravariante generische Typparameter verfügt, kann er als *varianter generischer Delegat* bezeichnet werden.  
@@ -148,7 +148,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 ```  
   
 > [!IMPORTANT]
->  `ByRef` -Parameter in Visual Basic können nicht als Variante markiert werden.  
+>  `ByRef` -Parametern in Visual Basic können nicht als Variant markiert werden.  
   
  Es ist auch möglich, Varianz und Kovarianz im gleichen Delegaten, aber für verschiedene Typparameter, zu unterstützen. Dies wird im folgenden Beispiel gezeigt.  
   
@@ -165,7 +165,7 @@ dvariant("test")
 ```  
   
 ### <a name="combining-variant-generic-delegates"></a>Kombinieren von varianten generischen Delegaten  
- Variante Delegaten sollten nicht kombiniert werden. Die Methode <xref:System.Delegate.Combine%2A> unterstützt keine Konvertierung von varianten Delegaten und erwartet, dass Delegaten vom exakt gleichen Typ sind. Dies kann zu einer Laufzeitausnahme führen, beim Kombinieren von Delegaten, die entweder mithilfe der <xref:System.Delegate.Combine%2A> -Methode (in c# und Visual Basic) oder mithilfe der `+` -Operator (in c#), wie im folgenden Codebeispiel wird gezeigt.  
+ Variante Delegaten sollten nicht kombiniert werden. Die Methode <xref:System.Delegate.Combine%2A> unterstützt keine Konvertierung von varianten Delegaten und erwartet, dass Delegaten vom exakt gleichen Typ sind. Dies kann zu einer Laufzeitausnahme führen, beim Kombinieren von Delegaten entweder mit der <xref:System.Delegate.Combine%2A> Methode (in C# und Visual Basic) oder mithilfe der `+` Operator (in C#), wie im folgenden Codebeispiel gezeigt.  
   
 ```vb  
 Dim actObj As Action(Of Object) = Sub(x) Console.WriteLine("object: {0}", x)  
@@ -176,7 +176,7 @@ Dim actStr As Action(Of String) = Sub(x) Console.WriteLine("string: {0}", x)
 ```  
   
 ## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>Varianz in generischen Typparametern für Wert- und Referenztypen  
- Varianz für generische Typparameter wird nur für Referenztypen unterstützt. Beispielsweise `DVariant(Of Int)`kann nicht implizit konvertiert werden, um `DVariant(Of Object)` oder `DVariant(Of Long)`, da ganze Zahl ein Werttyp ist.  
+ Varianz für generische Typparameter wird nur für Referenztypen unterstützt. Z. B. `DVariant(Of Int)`kann nicht implizit konvertiert `DVariant(Of Object)` oder `DVariant(Of Long)`, da ganze Zahl einen Werttyp handelt.  
   
  Das folgende Beispiel veranschaulicht, dass Varianz in generischen Typparametern für Werttypen nicht unterstützt wird.  
   
@@ -201,8 +201,8 @@ End Sub
 ```  
   
 ## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Gelockerte Delegatenkonvertierung in Visual Basic  
- Gelockerte delegatenkonvertierung ermöglicht mehr Flexibilität bei der Zuordnung von Methodensignaturen mit Delegattypen. Beispielsweise können Sie die Parameterspezifikationen und Rückgabewerten der Funktion weglassen, wenn Sie eine Methode einen Delegaten zuweisen. Weitere Informationen finden Sie unter [gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ Gelockerte delegatenkonvertierung ermöglicht eine höhere Flexibilität in Methodensignaturen und Delegattypen zu vergleichen. Angenommen, können dass Sie die Parameterspezifikationen und Rückgabewerte zu verzichten, wenn Sie eine Methode einem Delegaten zuweisen. Weitere Informationen finden Sie unter [gelockerte Delegatenkonvertierung](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Generika](~/docs/standard/generics/index.md)  
- [Using Variance for Func and Action Generic Delegates (Visual Basic) (Verwenden von Varianz für die generischen Delegaten Func und Action (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a>Siehe auch
+- [Generika](~/docs/standard/generics/index.md)
+- [Using Variance for Func and Action Generic Delegates (Visual Basic) (Verwenden von Varianz für die generischen Delegaten Func und Action (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

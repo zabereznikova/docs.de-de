@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: a7f3a13d05b8a3c4554810655bbda670efb2b3fd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0f33fb559bb4bf47beebc836a093f4b784559609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674813"
 ---
 # <a name="accessibility-best-practices"></a>Bewährte Methoden für Eingabehilfen
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Durch Implementieren der folgenden bewährten Methoden in Steuerelementen oder Anwendungen wird die Barrierefreiheit für Personen verbessert, die [!INCLUDE[TLA#tla_at](../../../includes/tlasharptla-at-md.md)] -Geräte verwenden. Viele dieser bewährten Methoden konzentrieren sich auf einen guten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Entwurf. Jede bewährte Methode umfasst Implementierungsinformationen für [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] -Steuerelemente oder -Anwendungen. In vielen Fällen enthalten die [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Steuerelemente bereits die Funktionen, um diese bewährten Methoden zu erfüllen.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "50191076"
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>Verwenden von Standardeingabe-APIs mit geräteunabhängigen Aufrufen  
  Geräteunabhängige Aufrufe stellen die Gleichwertigkeit zwischen Tastatur- und Mausfunktionen sicher, während für [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] die erforderlichen Informationen über die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]bereitgestellt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Automation.Peers>  
- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
- [Richtlinien zur Gestaltung einer tastaturgesteuerten Benutzeroberfläche](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Automation.Peers>
+- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)
+- [Richtlinien zur Gestaltung einer tastaturgesteuerten Benutzeroberfläche](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

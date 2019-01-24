@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Speichern von Zeitzonen in einer eingebetteten Ressource'
+title: 'Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 921874e774d18751c29db495dac1bc53d10cc8ad
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592873"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Gewusst wie: Speichern von Zeitzonen in einer eingebetteten Ressource
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Vorgehensweise: Speichern von Zeitzonen in einer eingebetteten Ressource
 
 Eine Zeitzonen unterstützende Anwendung häufig erfordert das Vorhandensein einer bestimmten Zeitzone. Aber da die Verfügbarkeit der einzelnen <xref:System.TimeZoneInfo> -Objekten hängt von Informationen, die in der Registrierung des lokalen Systems gespeichert, normalerweise auch vorhandene Zeitzonen ist ggf. nicht vorhanden. Darüber hinaus Informationen über benutzerdefinierte Zeitzonen instanziiert werden, indem die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode ist nicht mit anderen Informationen zur Zeitzone, in der Registrierung gespeichert. Um sicherzustellen, dass diese Zeitzonen verfügbar sind, wenn sie benötigt werden, können Sie speichern, indem sie serialisieren und diese später wiederherstellen, indem sie deserialisieren.
 
@@ -37,7 +37,7 @@ Zusätzlich zu einer Ressourcendatei, die mit der Anwendung kompiliert wird, kö
 
 1. Rufen Sie eine vorhandene Zeitzone aus, oder erstellen Sie eine neue Zeitzone.
 
-   Um eine vorhandene Zeitzone abzurufen, finden Sie unter [Vorgehensweise: Zugreifen auf die vordefinierte UTC und lokale Zeitzonenobjekte](../../../docs/standard/datetime/access-utc-and-local.md) und [wie: instanziieren ein TimeZoneInfo-Objekts](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+   Um eine vorhandene Zeitzone abzurufen, finden Sie unter [Vorgehensweise: Zugreifen auf die vordefinierte UTC und lokale Zeitzonenobjekte](../../../docs/standard/datetime/access-utc-and-local.md) und [Vorgehensweise: Instanziieren ein TimeZoneInfo-Objekts](../../../docs/standard/datetime/instantiate-time-zone-info.md).
 
    Um eine neue Zeitzone zu erstellen, rufen Sie eine der Überladungen der <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) und [Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
 
@@ -85,6 +85,6 @@ Für dieses Beispiel benötigen Sie Folgendes:
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
-* [Übersicht über Zeitzonen](../../../docs/standard/datetime/time-zone-overview.md)
-* [Vorgehensweise: Wiederherstellen von Zeitzonen aus einer eingebetteten Ressource](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)
+- [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
+- [Übersicht über Zeitzonen](../../../docs/standard/datetime/time-zone-overview.md)
+- [Vorgehensweise: Wiederherstellen von Zeitzonen aus einer eingebetteten Ressource](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

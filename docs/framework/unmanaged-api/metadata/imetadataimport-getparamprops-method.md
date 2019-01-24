@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95850448504fd863f2726a7fb7574436476a6dc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685528"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps-Methode
 Ruft Metadatenwerte für den Parameter ab, auf den durch das angegebene ParamDef-Token verwiesen wird.  
@@ -46,13 +46,13 @@ HRESULT GetParamProps (
   
 #### <a name="parameters"></a>Parameter  
  `tk`  
- [in] Ein ParamDef-Token, die Metadaten für die zurückzugebenden Parameters darstellt.  
+ [in] Ein ParamDef-Token, das die Parameter für die Metadaten zurückgegeben darstellt.  
   
  `pmd`  
  [out] Ein Zeiger auf ein MethodDef-Token, das die Methode, die den Parameter akzeptiert darstellt.  
   
  `pulSequence`  
- [out] Die Ordnungsposition des Parameters in der Argumentliste der Methode.  
+ [out] Die Ordnungsposition des Parameters in der Argumentliste für die Methode.  
   
  `szName`  
  [out] Ein Puffer, der den Namen des Parameters enthält.  
@@ -64,26 +64,26 @@ HRESULT GetParamProps (
  [out] Die zurückgegebene Größe in Breitzeichen `szName`.  
   
  `pdwAttr`  
- [out] Ein Zeiger auf Attributflags, die dem Parameter zugeordnet.  
+ [out] Ein Zeiger auf die Attributflags, die dem Parameter zugeordnet.  
   
  `pdwCPlusTypeFlag`  
- [out] Ein Zeiger auf ein Flag, das angibt, die der Parameter ist ein <xref:System.ValueType>.  
+ [out] Ein Zeiger auf ein Flag, der angibt, der Parameter ist, ein <xref:System.ValueType>.  
   
  `ppValue`  
  [out] Ein Zeiger auf eine Konstante Zeichenfolge, die durch den Parameter zurückgegeben.  
   
  `pcchValue`  
- [out] Die Größe des `ppValue` in Breitzeichen oder 0 (null), wenn `ppValue` errichtet keine Zeichenfolge.  
+ [out] Die Größe des `ppValue` in Breitzeichen oder NULL, wenn `ppValue` errichtet keine Zeichenfolge.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -2,19 +2,19 @@
 title: 'Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
-ms.openlocfilehash: bc8f7585964bdd60bac5d5a466f6276fab288c78
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e5b94c190a77f6877c9a3d37f310aa527083a26a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722776"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (Visual Basic)
 Wenn Sie Typinformationen in eine Anwendung einbetten, die auf COM-Objekte verweist, ist die Verwendung einer primären Interopassembly (PIA) nicht mehr erforderlich. Darüber hinaus wird die Anwendung durch die eingebetteten Typinformationen versionsunabhängig. Ihr Programm kann daher für Typen aus unterschiedlichen Versionen einer COM-Bibliothek geschrieben werden; eine versionsspezifische PIA ist nicht erforderlich. Dies ist ein allgemeines Szenario für Anwendungen, die Objekte aus Microsoft Office-Bibliotheken verwenden. Mithilfe von eingebetteten Typinformationen kann ein Build eines Programms verschiedene Versionen von Microsoft Office auf unterschiedlichen Computern verwenden, ohne dass das Programm oder die PIA für jede Version von Microsoft Office erneut bereitgestellt werden müssen.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Für diese exemplarische Vorgehensweise wird Folgendes vorausgesetzt:  
   
 -   Ein Computer, auf dem Visual Studio und Microsoft Excel installiert sind.  
@@ -95,7 +95,7 @@ Wenn Sie Typinformationen in eine Anwendung einbetten, die auf COM-Objekte verwe
   
 8.  Speichern Sie das Projekt.  
   
-9. Drücken Sie STRG+F5, um das Projekt zu erstellen und auszuführen. Überprüfen Sie, ob eine Excel-Arbeitsmappe an dem Speicherort erstellt wurde, der im Beispielcode angegebenen ist: C:\SampleFolder\SampleWorkbook.xls.  
+9. Drücken Sie STRG+F5, um das Projekt zu erstellen und auszuführen. Stellen Sie sicher, dass eine Excel-Arbeitsmappe an dem im Beispielcode angegebenen Speicherort erstellt wurde: C:\SampleFolder\SampleWorkbook.xls.  
   
 ##  <a name="BKMK_publishapp"></a> So veröffentlichen Sie die Anwendung auf einem Computer, auf dem eine andere Version von Microsoft Office installiert ist  
   
@@ -107,9 +107,9 @@ Wenn Sie Typinformationen in eine Anwendung einbetten, die auf COM-Objekte verwe
   
 4.  Führen Sie das installierte Programm aus, sobald die Installation abgeschlossen ist.  
   
-5.  Überprüfen Sie, ob eine Excel-Arbeitsmappe an dem Speicherort erstellt wurde, der im Beispielcode angegebenen ist: C:\SampleFolder\SampleWorkbook.xls.  
+5.  Stellen Sie sicher, dass eine Excel-Arbeitsmappe an dem im Code angegebenen Speicherort erstellt wurde: C:\SampleFolder\SampleWorkbook.xls.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
+- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [/link (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/link.md)

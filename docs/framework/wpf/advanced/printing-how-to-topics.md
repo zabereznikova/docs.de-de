@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0bf581155bb32951a4614818edb50837f608939e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837114"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726441"
 ---
 # <a name="printing-how-to-topics"></a>Gewusst-wie-Themen zum Drucken
 Die Themen in diesem Abschnitt veranschaulichen, wie das Drucken und Drucksystem-Management-Funktionen enthalten, mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sowie den neuen [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] -Druckpfad.  
@@ -31,7 +31,7 @@ Die Themen in diesem Abschnitt veranschaulichen, wie das Drucken und Drucksystem
  [Auflisten einer Teilmenge von Druckwarteschlangen](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Anweisungen zum Generieren einer Liste der Drucker mit bestimmten Eigenschaften.  
   
- [Nicht im Build: Vorgehensweise: Erweitern Sie das Druckschema und erstellen Sie neue Drucksystem-Klassen](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NICHT IM BUILD: Vorgehensweise: Erweitern Sie das Druckschema und erstellen Sie neue Drucksystem-Klassen](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Längere Diskussion wie verwalteter Code Programmierer Druckschemas Specialty drucken Geräte bzw. auf Druckern mit neuen oder ungewöhnlich, dass Funktionen erweitern können.  
   
  [Abrufen von Drucksystemobjekt-Eigenschaften ohne Reflektion](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
@@ -46,10 +46,10 @@ Die Themen in diesem Abschnitt veranschaulichen, wie das Drucken und Drucksystem
  [Überprüfen und Zusammenführen von PrintTickets](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
  Anweisungen für die Überprüfung, dass ein Druckticket gültig ist und dass es keine nichts anfordert, die vom Drucker nicht unterstützt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Printing>  
- <xref:System.Printing.IndexedProperties>  
- <xref:System.Printing.Interop>  
- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [XPS](https://www.microsoft.com/xps)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Printing>
+- <xref:System.Printing.IndexedProperties>
+- <xref:System.Printing.Interop>
+- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [XPS](https://www.microsoft.com/xps)

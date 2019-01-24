@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6b01abc16334dbe091e7586efcce1c3e390a64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b552ef39c7f73aaa5cfeae4a313e329b267abf98
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426974"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643389"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter-Methode
-Definiert einen einzelnen Parameter in der aktuellen Methode. Der Parametertyp stammt von der Position des Parameters (Sequenz) in der Signatur der Methode.  
+Definiert einen einzelnen Parameter in der aktuellen Methode. Der Parametertyp stammt aus der die Position des Parameters (Sequenz) in der Signatur der Methode.  
   
- Wenn in den Metadaten für eine bestimmte Methode Parameter definiert sind, müssen Sie nicht erneut mit dieser Methode definieren. Die Symbolreader müssen die normale Metadaten für die Parameter überprüfen, bevor Sie den Symbolspeicher überprüfen.  
+ Wenn Parameter in den Metadaten für eine bestimmte Methode definiert sind, müssen Sie nicht erneut mit dieser Methode definieren. Die Symbolreader müssen den normalen Metadaten für die Parameter vor dem Überprüfen des Symbolspeichers überprüfen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,13 +56,13 @@ HRESULT DefineParameter(
  [in] Der Adresstyp.  
   
  `addr1`  
- [in] Die erste Adresse für die Parameterspezifikation.  
+ [in] Die erste Adresse für die Parameterangabe.  
   
  `addr2`  
- [in] Die zweite Adresse für die Parameterspezifikation.  
+ [in] Die zweite Adresse für die Parameterangabe.  
   
  `addr3`  
- [in] Die dritte Adresse für die Parameterspezifikation.  
+ [in] Die dritte Adresse für die Parameterangabe.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -70,5 +70,5 @@ HRESULT DefineParameter(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

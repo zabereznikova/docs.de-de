@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7d62b1b6031f6ebdd5327626f42de38b18b3fa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1c777a2512306c41413377530576fbe8ad8e7ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582283"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated-Methode
-Benachrichtigt den Profiler, der Speicher im Heap für ein Objekt zugewiesen wurde.  
+Benachrichtigt den Profiler, die für ein Objekt Speicher im Heap belegt wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,16 +37,16 @@ HRESULT ObjectAllocated(
   
 #### <a name="parameters"></a>Parameter  
  `objectId`  
- [in] Die ID des Objekts für den Speicher belegt wurde.  
+ [in] Die ID des Objekts für den Arbeitsspeicher zugewiesen wurde.  
   
  `classId`  
  [in] Die ID der Klasse, von der das Objekt eine Instanz ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ObjectedAllocated` Methode wird nicht für Zuordnungen aus dem Stapel oder nicht verwalteten Speicher aufgerufen. Die `classId` Parameter kann verweisen auf eine Klasse in verwaltetem Code, die noch nicht geladen wurde. Empfängt der Profiler einen Klasse laden Rückruf für diese Klasse direkt nach der `ObjectAllocated` Rückruf.  
+ Die `ObjectedAllocated` Methode wird nicht für Zuordnungen der Stapel oder in nicht verwalteten Speicher aufgerufen. Die `classId` Parameter kann verweisen auf eine Klasse in verwalteten Code, der noch nicht geladen wurde. Empfängt der Profiler einen-Klasse Last-Rückruf für diese Klasse unmittelbar nach der `ObjectAllocated` Rückruf.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -54,7 +54,7 @@ HRESULT ObjectAllocated(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ClassLoadStarted-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)  
- [ClassLoadFinished-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ClassLoadStarted-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+- [ClassLoadFinished-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)

@@ -2,17 +2,17 @@
 title: WSDL und Richtlinie
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501094"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741430"
 ---
 # <a name="wsdl-and-policy"></a>WSDL und Richtlinie
-Dieses Thema enthält Windows Communication Foundation (WCF)-WSDL 1.1, WS-Policy und WS-PolicyAttachment Implementierungsdetails sowie zusätzliche WS-Policy-Assertionen und WSDL 1.1-Erweiterungen, die von WCF eingeführt.  
+Dieses Thema behandelt die Windows Communication Foundation (WCF)-WSDL 1.1, WS-Policy und WS-PolicyAttachment-Implementierungsdetails, sowie zusätzliche WS-Richtlinienassertionen und WSDL 1.1-Erweiterungen, die von WCF eingeführt.  
   
- WCF implementiert die WS-Policy und WS-PolicyAttachment-Spezifikationen, die mit den in diesem Dokument beschriebenen Einschränkungen und klarstellungen an W3C gesendet.  
+ WCF implementiert die WS-Policy und WS-PolicyAttachment-Spezifikationen, die mit der in diesem Dokument beschriebenen Einschränkungen und klarstellungen an W3C gesendet.  
   
  Dieses Dokument verwendet die in der folgenden Tabelle angeführten Präfixe und Namespaces.  
   
@@ -31,16 +31,16 @@ Dieses Thema enthält Windows Communication Foundation (WCF)-WSDL 1.1, WS-Policy
  WCF verwendet die folgenden WSDL 1.1-Erweiterungen um zu beschreiben.  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs: Boolean, gibt an, dass dieser Vorgang eine WCF-Sitzung initiiert. Der Standardwert ist `false`.  
+ xs: Boolean, gibt an, dass es sich bei diesem Vorgang eine WCF-Sitzung initiiert; Der Standardwert ist `false`.  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs: Boolean, gibt an, dass dieser Vorgang eine WCF-Sitzung beendet wird. Der Standardwert ist `false`.  
+ xs: Boolean, gibt an, dass es sich bei diesem Vorgang eine WCF-Sitzung beendet wird; Der Standardwert ist `false`.  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean, gibt an, dass dieser Vertrag zum Erstellen eine Sitzung erfordert.  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTP-Bindungstransport-URIs  
- WCF verwendet die folgenden URIs zum Angeben von Transporten für WSDL 1.1-, SOAP 1.1- und SOAP 1.2-bindungserweiterungselemente.  
+ WCF verwendet die folgenden URIs Transporten für WSDL 1.1-, SOAP 1.1- und SOAP 1.2-bindungserweiterungselemente verwendet werden soll.  
   
 |Transport|URI|  
 |---------------|---------|  
@@ -50,7 +50,7 @@ Dieses Thema enthält Windows Communication Foundation (WCF)-WSDL 1.1, WS-Policy
 |Benannte Pipes|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>Von WCF implementierte Richtlinienassertionen  
- Zusätzlich zu Richtlinienassertionen eingeführt, die in den Webdienstspezifikationen (ws-*) und in anderen Abschnitten dieses Dokuments erwähnten, WCF implementiert die folgenden Richtlinienassertionen.  
+ Zusätzlich zu Richtlinienassertionen eingeführt, die in den Webdienstspezifikationen (ws-*) und in anderen Abschnitten dieses Handbuchs erwähnt, implementiert WCF die folgenden Richtlinienassertionen.  
   
 |Richtlinienassertion|Richtliniensubjekt|Beschreibung|  
 |----------------------|--------------------|-----------------|  
@@ -72,7 +72,7 @@ Dieses Thema enthält Windows Communication Foundation (WCF)-WSDL 1.1, WS-Policy
 |mssp:MustNotSendCancel|Geschachtelt|Gibt eine Anforderung an, dass Anforderungssicherheitstoken (Request Security Token, RST)-Anforderungsnachrichten [WS-Trust], die die Cancel-Bindung [WS-Trust, WS-SC] verwenden, nicht an den Aussteller eines bestimmten SecurityContextToken gesendet werden. Wenn diese Assertion vorhanden ist, dürfen solche Anforderungsnachrichten nicht an den Aussteller gesendet werden. Wenn diese Assertion nicht vorhanden ist, können solche Anforderungsnachrichten an den Aussteller gesendet werden.|  
 |mssp:RequireClientCertificate|Geschachtelt|Dieses optionale Element gibt die Anforderung an, dass ein Clientzertifikat als Teil des TLSNEGO-Protokolls bereitgestellt wird. Wenn diese Assertion vorhanden ist, muss ein Clientzertifikat bereitgestellt werden. Wenn diese Assertion nicht vorhanden ist, darf kein Clientzertifikat bereitgestellt werden. Diese Assertion darf nicht außerhalb von mssp:SslContextToken verwendet werden.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Benutzerdefinierte WSDL-Veröffentlichung](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [Vorgehensweise: Exportieren von benutzerdefinierter WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Vorgehensweise: Importieren von benutzerdefinierter WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a>Siehe auch
+- [Benutzerdefinierte WSDL-Veröffentlichung](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+- [Vorgehensweise: Exportieren von benutzerdefinierter WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Vorgehensweise: Benutzerdefinierte WSDL importieren](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

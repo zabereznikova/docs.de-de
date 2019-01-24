@@ -2,19 +2,19 @@
 title: '&lt;transportConfigurationTypes&gt;'
 ms.date: 03/30/2017
 ms.assetid: 929c8b0a-5460-4f66-a098-2cb8d4e10b69
-ms.openlocfilehash: 5a51450d198ea395098f8a6a38d9104d0fe8538b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 37ce20c5fb0791596264bb7b6c03d5d0f2cc2388
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145470"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704916"
 ---
 # <a name="lttransportconfigurationtypesgt"></a>&lt;transportConfigurationTypes&gt;
 Stellt eine Auflistung von Konfigurationselementen dar, die den Typ eines bestimmten Transports identifizieren. Diese kann verwendet werden, um benutzerdefinierte WAS-Protokolle hinzuzufügen.  
   
  \<system.ServiceModel>  
-\<ServiceHostingEnvironment >  
-\<TransportConfigurationTypes >  
+\<ServiceHostingEnvironment>  
+\<transportConfigurationTypes>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,10 +47,10 @@ Stellt eine Auflistung von Konfigurationselementen dar, die den Typ eines bestim
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<ServiceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Definiert den Typ, der von der Diensthostumgebung für einen besonderen Transport instanziiert wird.|  
+|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Definiert den Typ, der von der Diensthostumgebung für einen besonderen Transport instanziiert wird.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>  
- <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElementCollection>  
- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>
+- <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElementCollection>
+- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)

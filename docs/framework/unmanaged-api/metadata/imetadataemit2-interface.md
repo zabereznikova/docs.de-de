@@ -16,38 +16,38 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 418e5287852b1a8d69d310d2ba71e4f2a3b5d7bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9e0477adb4958a53289cd0a64f39259403fa7dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656933"
 ---
 # <a name="imetadataemit2-interface"></a>IMetaDataEmit2-Schnittstelle
-Erweitert die [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) Schnittstelle in erster Linie und die Arbeit mit generischen Typen ermöglicht.  
+Erweitert die [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) Schnittstelle, in erster Linie um die Möglichkeit bieten, die Arbeit mit generischen Typen.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |[DefineGenericParam-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)|Erstellt eine Definition für einen generischen Typparameter, und ruft ein Token an den generischen Typparameter ab.|  
-|[DefineMethodSpec-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md)|Erstellt eine generische Instanz einer Methode und ruft ein Token für die Definition.|  
+|[DefineMethodSpec-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definemethodspec-method.md)|Erstellt eine generische Instanz einer Methode und ruft ein Token an der Definition ab.|  
 |[GetDeltaSaveSize-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)|Ruft einen Wert, der angibt, des Unterschied in der Größe der Daten, die erforderlich sind, um die Änderungen für die aktuelle Sitzung mit bearbeiten und Fortfahren auszudrücken.|  
-|[ResetENCLog-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md)|Setzt das Bearbeiten und Fortfahren-Protokoll zurück und startet eine neue Sitzung.|  
+|[ResetENCLog-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md)|Setzt das Bearbeiten und Fortfahren-Protokoll, und startet eine neue Sitzung.|  
 |[SaveDelta-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedelta-method.md)|Speichert Änderungen aus der aktuellen Sitzung mit bearbeiten und fortfahren, in der angegebenen Datei.|  
 |[SaveDeltaToMemory-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)|Speichert Änderungen am Speicher aus der aktuellen Sitzung mit bearbeiten und fortfahren.|  
-|[SaveDeltaToStream-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatostream-method.md)|Speichert Änderungen aus der aktuellen Sitzung mit bearbeiten und Fortfahren im angegebenen Stream.|  
-|[SetGenericParamProps-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-setgenericparamprops-method.md)|Legt Eigenschaftswerte für die Definition der generischen Parameter durch das angegebene Token verwiesen wird.|  
+|[SaveDeltaToStream-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatostream-method.md)|Speichert Änderungen aus der aktuellen Sitzung mit bearbeiten und fortfahren, in den angegebenen Stream.|  
+|[SetGenericParamProps-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-setgenericparamprops-method.md)|Legt Eigenschaftswerte für die generischen Parameter-Definition, die auf die verwiesen wird durch das angegebene Token fest.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

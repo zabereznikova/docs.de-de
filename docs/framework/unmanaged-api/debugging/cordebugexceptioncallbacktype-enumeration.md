@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc0919a7c05bfcbfb4b54dd0b618564f019f3fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0e9a3b0320ac0be785f0823afef1819ab8a35eb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407819"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585548"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType-Enumeration
-Gibt den Typ des Rückrufs an, die aus wird ein [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) Ereignis.  
+Gibt den Typ der Rückruf, der von erfolgt eine [ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) Ereignis.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,12 +42,12 @@ typedef enum CorDebugExceptionCallbackType {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_FIRST_CHANCE`|Es wurde eine Ausnahme ausgelöst.|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|Der Ausnahmeabschlussprozess Benutzercode.|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|Der Ausnahmeabschlussprozess gefunden eine `catch` im Benutzercode blockieren.|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|Die Ausnahmeabschlussprozess Benutzercode.|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|Der Ausnahmeabschlussprozess finden Sie eine `catch` im Benutzercode blockiert.|  
 |`DEBUG_EXCEPTION_UNHANDLED`|Die Ausnahme wurde nicht behandelt.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -55,5 +55,5 @@ typedef enum CorDebugExceptionCallbackType {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -2,16 +2,16 @@
 title: Erste Schritte mit F# in Visual Studio für Mac
 description: Erfahren Sie, wie F# in Visual Studio für Mac verwenden.
 ms.date: 07/03/2018
-ms.openlocfilehash: 6aceec299c29e04aecd7999cd1dda6a56dd2779a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: e37600b2ca8f845ec1068a55ff1f9964d2527742
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44042323"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604162"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Erste Schritte mit F# in Visual Studio für Mac
 
-F# und Visual F#-Tools werden in der Visual Studio für Mac-IDE unterstützt. Stellen Sie sicher, dass man [Visual Studio für Mac installiert](install-fsharp.md#install-f-with-visual-studio-for-mac).
+F#und das visuelle F# Tools in Visual Studio für Mac-IDE unterstützt werden. Stellen Sie sicher, dass man [Visual Studio für Mac installiert](install-fsharp.md#install-f-with-visual-studio-for-mac).
 
 ## <a name="creating-a-console-application"></a>Erstellen einer Konsolenanwendung
 
@@ -33,17 +33,17 @@ Erste Schritte zunächst, Code zu schreiben.  Stellen Sie sicher, dass die `Prog
 
 [!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-Im vorherigen Beispiel, eine Funktion `square` wurde der Eingabe mit dem Namen akzeptiert definiert `x` und von sich selbst multipliziert.  Da F# verwendet [Typrückschluss](../language-reference/type-inference.md), den Typ des `x` muss nicht angegeben werden.  F#-Compiler erkennt die Typen, in denen Multiplikation gültig ist, und weist einen Typ `x` basieren, wie `square` aufgerufen wird.  Wenn Sie darauf zeigen `square`, sollte Folgendes angezeigt:
+Im vorherigen Beispiel, eine Funktion `square` wurde der Eingabe mit dem Namen akzeptiert definiert `x` und von sich selbst multipliziert.  Da F# verwendet [Typrückschluss](../language-reference/type-inference.md), den Typ des `x` muss nicht angegeben werden.  Die F# Compiler versteht die Typen, in denen Multiplikation gültig ist, und weist einen Typ `x` basieren, wie `square` aufgerufen wird.  Wenn Sie darauf zeigen `square`, sollte Folgendes angezeigt:
 
 ```
 val square: x:int -> int
 ```
 
-Dies ist als die Signatur der Funktion Typ bezeichnet wird.  Sie können wie folgt gelesen werden: "Quadrat ist eine Funktion, die eine ganze Zahl, die mit dem Namen akzeptiert x und erzeugt eine ganze Zahl".  Beachten Sie, die der Compiler hat `square` der `int` Typ vorerst - Dies liegt daran Multiplikation nicht für generische *alle* Typen, aber stattdessen über einen vollständigen Satz von Typen ist generisch.  Der F#-Compiler übernommen `int` an diesem Punkt, aber es passt die Datentyp-Signatur Aufrufen `square` mit einem anderen Eingabetyp, z. B. eine `float`.
+Dies ist als die Signatur der Funktion Typ bezeichnet wird.  Sie können wie folgt gelesen werden: "Quadrat ist eine Funktion, die nimmt eine ganze Zahl, die mit dem Namen X und erzeugt eine ganze Zahl".  Beachten Sie, die der Compiler hat `square` der `int` Typ vorerst - Dies liegt daran Multiplikation nicht für generische *alle* Typen, aber stattdessen über einen vollständigen Satz von Typen ist generisch.  Die F# Compiler ausgewählt `int` an diesem Punkt, aber es passt die Datentyp-Signatur Aufrufen `square` mit einem anderen Eingabetyp, z. B. eine `float`.
 
-Eine andere Funktion, `main`, definiert ist, wird die ergänzt, mit der `EntryPoint` Attribut, um dem F#-Compiler diese Ausführung des Programms sollte dort beginnen.  Dabei wird die gleiche Konvention wie andere [Programmiersprachen C-Stil](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), in dem Befehlszeilenargumente an diese Funktion übergeben werden können und ein ganzzahligen Code wird zurückgegeben (in der Regel `0`).
+Eine andere Funktion, `main`, definiert ist, wird die ergänzt, mit der `EntryPoint` Attribut Teilen der F# Compiler, mit dem Programm Ausführung sollte es starten.  Dabei wird die gleiche Konvention wie andere [Programmiersprachen C-Stil](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), in dem Befehlszeilenargumente an diese Funktion übergeben werden können und ein ganzzahligen Code wird zurückgegeben (in der Regel `0`).
 
-Es ist in dieser Funktion, die wir Aufrufen der `square` Funktion mit dem Argument `12`.  F#-Compiler weist dann den Typ des `square` sein `int -> int` (, also eine Funktion, die nimmt eine `int` und erzeugt eine `int`).  Der Aufruf von `printfn` ist eine formatierte drucken Funktion, die eine Formatzeichenfolge, die Programmiersprachen C-Stil, Parameter ähnelt, verwendet die in der Formatzeichenfolge angegeben entsprechen, und gibt dann das Ergebnis und eine neue Zeile.
+Es ist in dieser Funktion, die wir Aufrufen der `square` Funktion mit dem Argument `12`.  Die F# Compiler weist dann den Typ des `square` sein `int -> int` (, also eine Funktion, die nimmt eine `int` und erzeugt eine `int`).  Der Aufruf von `printfn` ist eine formatierte drucken Funktion, die eine Formatzeichenfolge, die Programmiersprachen C-Stil, Parameter ähnelt, verwendet die in der Formatzeichenfolge angegeben entsprechen, und gibt dann das Ergebnis und eine neue Zeile.
 
 ## <a name="running-your-code"></a>Ausführen des Codes
 
@@ -55,13 +55,13 @@ Sie sollten jetzt sehen, dass die folgenden im Konsolenfenster anzuzeigen, die V
 12 squared is 144!
 ```
 
-Herzlichen Glückwunsch!  Sie haben Ihr erste F#-Projekt in Visual Studio für Mac erstellten, geschrieben, dass eine F#-Funktion die Ergebnisse des Aufrufs dieser Funktion ausgegeben und führen Sie das Projekt aus, um einige Ergebnisse anzuzeigen.
+Herzlichen Glückwunsch!  Sie haben Ihre erste erstellt F# Projekt in Visual Studio für Mac, geschrieben ein F# Funktion ausgegeben, die Ergebnisse des Aufrufs, die Funktion, und führen Sie das Projekt aus, um einige Ergebnisse anzuzeigen.
 
 ## <a name="using-f-interactive"></a>Verwenden von F# Interactive
 
 Eine der besten Features von der Visual F#-Tools in Visual Studio für Mac ist die F# Interactive-Fenster.  Sie können Code über an einen Prozess zu senden, können Sie rufen diesen Code und zeigen Sie das Ergebnis interaktiv.
 
-Um mit der Nutzung beginnen, markieren Sie die `square` Funktion, die in Ihrem Code definiert.  Klicken Sie anschließend auf **bearbeiten** Menü der obersten Ebene.  Wählen Sie als Nächstes **Auswahl an F# Interactive senden**.  Dadurch wird den Code in die F# Interactive-Fenster ausgeführt.  Alternativ können Sie klicken Sie mit der rechten Maustaste auf die Auswahl und wählen Sie **Auswahl an F# Interactive senden**.  F# Interactive-Fenster mit den folgenden darin angezeigt werden sollte:
+Um mit der Nutzung beginnen, markieren Sie die `square` Funktion, die in Ihrem Code definiert.  Klicken Sie anschließend auf **bearbeiten** Menü der obersten Ebene.  Wählen Sie als Nächstes **Auswahl an F# Interactive senden**.  Dadurch wird den Code in die F# Interactive-Fenster ausgeführt.  Alternativ können Sie klicken Sie mit der rechten Maustaste auf die Auswahl und wählen Sie **Auswahl an F# Interactive senden**.  Daraufhin sollte die F# Interactive-Fenster mit den folgenden darin angezeigt:
 
 ```
 >
@@ -115,8 +115,8 @@ Wenn Sie nicht bereits getan haben, sehen Sie sich die [Einführung in F#](../to
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual F#](../index.md)  
-- [Einführung in F#](../tour.md)  
-- [F#-Sprachreferenz](../language-reference/index.md)  
-- [Typrückschluss](../language-reference/type-inference.md)  
-- [Symbol und dem Operator-Referenz](../language-reference/symbol-and-operator-reference/index.md)  
+- [Visual F#](../index.md)
+- [Einführung in F#](../tour.md)
+- [F#Referenz zur Abfragesprache](../language-reference/index.md)
+- [Typrückschluss](../language-reference/type-inference.md)
+- [Symbol und dem Operator-Referenz](../language-reference/symbol-and-operator-reference/index.md)

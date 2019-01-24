@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Aktivieren des Streamingmodus'
+title: 'Vorgehensweise: Aktivieren des Streamens'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: b28764c4bad88511096ab09fd71cc2a73c735096
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2521b6ac237a76cac64cebca91bbaa792bba2c67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54627654"
 ---
-# <a name="how-to-enable-streaming"></a>Vorgehensweise: Aktivieren des Streamingmodus
-Windows Communication Foundation (WCF) können mit der gepufferten oder der gestreamte Nachrichten senden. Im voreingestellten gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streamingmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
+# <a name="how-to-enable-streaming"></a>Vorgehensweise: Aktivieren des Streamens
+Windows Communication Foundation (WCF) kann Nachrichten, die mit der gepufferten oder der Streamingübertragung Übertragung senden. Im voreingestellten gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streamingmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
   
  Um den Streamingmodus zu aktivieren, definieren Sie den `OperationContract` angemessen, und aktivieren Sie den Streamingmodus auf Transportebene.  
   
@@ -44,7 +44,7 @@ Windows Communication Foundation (WCF) können mit der gepufferten oder der gest
   
      Die `BasicHttpBinding`-Bindung macht die `TransferMode`-Eigenschaft für die Bindung verfügbar. Dies gilt ebenso für `NetTcpBinding` und `NetNamedPipeBinding`. Die `TransferMode`-Eigenschaft kann auch für das Transportbindungselement festgelegt und in einer benutzerdefinierten Bindung verwendet werden.  
   
-     In den folgenden Beispielen wird gezeigt, wie `TransferMode` im Code und durch Ändern der Konfigurationsdatei festgelegt wird. In beiden Beispielen wird zudem die `maxReceivedMessageSize`-Eigenschaft auf 64&amp;#160;MB festgelegt und damit die maximal zulässige Größe für den Empfang von Nachrichten beschränkt. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist. Legen Sie diese Größeneinstellung, abhängig von der maximalen Größe der Nachrichten, die von der Anwendung empfangen werden sollen, auf einen geeigneten Wert fest. Beachten Sie außerdem, dass die `maxBufferSize`-Einstellung die maximale Puffergröße angibt, und legen Sie diese Eigenschaft auf einen angemessenen Wert fest.  
+     In den folgenden Beispielen wird gezeigt, wie `TransferMode` im Code und durch Ändern der Konfigurationsdatei festgelegt wird. In beiden Beispielen wird zudem die `maxReceivedMessageSize`-Eigenschaft auf 64&#160;MB festgelegt und damit die maximal zulässige Größe für den Empfang von Nachrichten beschränkt. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist. Legen Sie diese Größeneinstellung, abhängig von der maximalen Größe der Nachrichten, die von der Anwendung empfangen werden sollen, auf einen geeigneten Wert fest. Beachten Sie außerdem, dass die `maxBufferSize`-Einstellung die maximale Puffergröße angibt, und legen Sie diese Eigenschaft auf einen angemessenen Wert fest.  
   
     1.  Der folgende Ausschnitt aus der Konfiguration des Beispiel zeigt, wie die `TransferMode`-Eigenschaft für `basicHttpBinding` und eine benutzerdefinierte HTTP-Bindung auf den Streamingmodus festgelegt wird.  
   
@@ -74,6 +74,6 @@ Windows Communication Foundation (WCF) können mit der gepufferten oder der gest
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
- [Stream](../../../../docs/framework/wcf/samples/stream.md)
+## <a name="see-also"></a>Siehe auch
+- [Umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+- [Stream](../../../../docs/framework/wcf/samples/stream.md)

@@ -2,18 +2,18 @@
 title: N-Schicht-LINQ to SQL mit Webdiensten
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: bf13c34a058d33d240e780cb1ce0e665bd1322d2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: caa7105e4f64cce78c34237279fd357fdfe92d55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623611"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N-Schicht-LINQ to SQL mit Webdiensten
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dient speziell zur Verwendung auf der mittleren Ebene in einer lose gekoppelten Datenzugriffsebene (DAL) wie z. B. einen Webdienst. Wenn es sich bei der Präsentationsebene um eine ASP.NET-Webseite handelt, können Sie die Datenübertragung zwischen der Benutzeroberfläche und <xref:System.Web.UI.WebControls.LinqDataSource> auf der mittleren Ebene mithilfe des [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Webserversteuerelements verwalten. Wenn es sich bei der Präsentationsebene nicht um eine ASP.NET-Seite handelt, müssen sowohl die mittlere Ebene als auch die Präsentationsebene zusätzliche Arbeit leisten, um die Serialisierung und Deserialisierung von Daten zu verwalten.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Einrichten von LINQ to SQL auf der mittleren Ebene  
- In einem Webdienst oder einer N-Tier-Anwendung enthält die mittlere Ebene den Datenkontext und die Entitätsklassen. Sie können diese Klassen manuell erstellen, indem Sie entweder SQLMetal.exe oder [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], wie an anderer Stelle in der Dokumentation beschrieben, verwenden. Zur Entwurfszeit können Sie die Entitätsklassen serialisierbar machen. Weitere Informationen finden Sie unter [Vorgehensweise: serialisierbare Entitäten stellen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Eine weitere Möglichkeit besteht darin, eine separate Gruppe von Klassen zu erstellen, die die zu serialisierenden Daten kapseln, und dann bei der Rückgabe von Daten in den [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Abfragen in diese serialisierbaren Typen zu projizieren.  
+ In einem Webdienst oder einer N-Tier-Anwendung enthält die mittlere Ebene den Datenkontext und die Entitätsklassen. Sie können diese Klassen manuell erstellen, indem Sie entweder SQLMetal.exe oder [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], wie an anderer Stelle in der Dokumentation beschrieben, verwenden. Zur Entwurfszeit können Sie die Entitätsklassen serialisierbar machen. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Eine weitere Möglichkeit besteht darin, eine separate Gruppe von Klassen zu erstellen, die die zu serialisierenden Daten kapseln, und dann bei der Rückgabe von Daten in den [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Abfragen in diese serialisierbaren Typen zu projizieren.  
   
  Anschließend definieren Sie die Schnittstelle mithilfe der Methoden, die von Clients zum Abrufen, Einfügen und Aktualisieren von Daten aufgerufen werden. Die Schnittstellenmethoden umschließen die [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Abfragen. Sie können einen beliebigen Serialisierungsmechanismus verwenden, um Remotemethodenaufrufe und die Serialisierung von Daten zu behandeln. Wenn Sie in Ihrem Objektmodell über zyklische oder bidirektionale Beziehungen verfügen, z. B. Beziehungen zwischen Customers und Orders im standardmäßigen Northwind-Objektmodell, besteht die einzige Anforderung darin, einen Serialisierer zu verwenden, der das Modell unterstützt. Die Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt im Unterschied zum XmlSerializer, der mit Nicht-WCF-Webdiensten verwendet wird, bidirektionale Beziehungen. Wenn Sie den XmlSerializer verwenden möchten, müssen Sie sicherstellen, dass das Objektmodell keine zyklischen Beziehungen aufweist.  
   
@@ -32,10 +32,10 @@ ms.locfileid: "43862237"
 ## <a name="tracking-changes-for-updates-and-deletes"></a>Nachverfolgen von Änderungen für Update- und Löschvorgänge  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt vollständige Parallelität auf der Basis von Timestamps (auch als RowVersions bezeichnet) und ursprünglichen Werten. Wenn die Datenbanktabellen über Timestamps verfügen, ist auf der mittleren oder Präsentationsebene wenig zusätzliche Arbeit für Update- und Löschvorgänge erforderlich. Wenn Sie für Überprüfungen auf vollständige Parallelität jedoch Originalwerte verwenden müssen, ist die Präsentationsebene dafür verantwortlich, diese Werte zu verfolgen und sie bei der Ausführung von Updates zurückzusenden. Dies liegt daran, dass Änderungen, die an Entitäten auf der Präsentationsebene vorgenommen wurden, nicht auf der mittleren Ebene verfolgt werden. Tatsächlich werden das ursprüngliche Abrufen einer Entität und das endgültig vorgenommene Update normalerweise von zwei vollständig getrennten <xref:System.Data.Linq.DataContext>-Instanzen ausgeführt.  
   
- Je größer die Anzahl der Änderungen ist, die von der Präsentationsebene vorgenommen werden, desto komplexer ist das Verfolgen dieser Änderungen und das Zurückpacken auf die mittlere Ebene. Die Implementierung eines Mechanismus zum Kommunizieren von Änderungen liegt vollständig in der Zuständigkeit der Anwendung. Die einzige Voraussetzung besteht darin, dass die ursprünglichen Werte, die für Überprüfungen auf vollständige Parallelität erforderlich sind, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zur Verfügung gestellt werden müssen.  
+ Je größer die Anzahl der Änderungen ist, die von der Präsentationsebene vorgenommen werden, desto komplexer ist das Verfolgen dieser Änderungen und das Zurückpacken auf die mittlere Ebene. Die Implementierung eines Mechanismus zum Kommunizieren von Änderungen liegt vollständig in der Zuständigkeit der Anwendung. Die einzige Anforderung besteht darin, dass die ursprünglichen Werte, die für Überprüfungen auf vollständige Parallelität erforderlich sind, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zur Verfügung gestellt werden müssen.  
   
  Weitere Informationen finden Sie unter [Datenabruf und CUD-Vorgänge in N-Tier-Anwendungen (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [N-schichtige Anwendungen und Remoteanwendungen mit LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
- [NIB: LinqDataSource-Web-Übersicht über den Server-Steuerelement](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)
+## <a name="see-also"></a>Siehe auch
+- [N-schichtige Anwendungen und Remoteanwendungen mit LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
+- [NIB: Übersicht über LinqDataSource Webserver-Steuerelement](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)

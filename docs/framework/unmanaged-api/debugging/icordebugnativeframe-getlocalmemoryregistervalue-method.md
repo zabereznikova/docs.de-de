@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44f220f12f72ca8d0be6a9fc50b363c9bccb85fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c36e9e38acf1d183bcc5af5284e194c994c16749
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706708"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue-Methode
-Ruft den Wert eines Arguments oder einer lokalen Variablen, von denen die niedrige Word und hohe Word in den angegebenen Register und die Speicheradresse, bzw. für diese systemeigenen Rahmen gespeichert sind.  
+Ruft den Wert eines Arguments oder lokale Variable, von denen das niedrige Word und das hohe Word in der angegebenen Register und den Speicherort, für diesen Frame native gespeichert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,22 +41,22 @@ HRESULT GetLocalMemoryRegisterValue (
   
 #### <a name="parameters"></a>Parameter  
  `highWordAddress`  
- [in] Ein `CORDB_ADDRESS` Wert, der angibt, die Speicheradresse, die das hohe Word des Werts enthält.  
+ [in] Ein `CORDB_ADDRESS` -Wert, die Speicheradresse aus, das hohe Word des Werts angibt.  
   
  `lowWordRegister`  
  [in] Der Wert der "CorDebugRegister"-Enumeration, die angibt, die Registrierung, die das niedrige Word des Werts enthält.  
   
  `cbSigBlob`  
- [in] Eine ganze Zahl, die die Größe der binäre Metadatensignatur gibt an, welche die verweist die `pvSigBlob` Parameter.  
+ [in] Eine ganze Zahl, die die Größe der die binäre Metadatensignatur gibt an, welche die verweist die `pvSigBlob` Parameter.  
   
  `pvSigBlob`  
- [in] Ein `PCCOR_SIGNATURE` Wert, der auf die binäre Metadatensignatur der Typ des Werts verweist.  
+ [in] Ein `PCCOR_SIGNATURE` Wert, der auf die binäre Metadatensignatur der der Typ des Werts verweist.  
   
  `ppValue`  
- [out] Ein Zeiger auf die Adresse eines Objekts "ICorDebugValue", die den abgerufenen Wert, der in der angegebenen Register und den angegebenen Speicherort gespeichert ist darstellt.  
+ [out] Ein Zeiger auf die Adresse eines "ICorDebugValue"-Objekts, die den abgerufenen Wert, der in der angegebenen registrieren und den angegebenen Speicherort gespeichert wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -64,5 +64,5 @@ HRESULT GetLocalMemoryRegisterValue (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+

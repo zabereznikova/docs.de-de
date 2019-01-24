@@ -2,12 +2,12 @@
 title: '&lt;pnrpPeerResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: 882974ea29804c7218d4c6c21da2b9ddd7551c54
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: cefd46d7810149264f9c431a212da0f3f51f8186
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577645"
 ---
 # <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
 Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver verwendet werden soll. Dieses Element ist optional, da das PNRP der Standardresolver ist.  
@@ -16,7 +16,7 @@ Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver ve
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<PnrpResolver >  
+\<pnrpResolver>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,12 +48,12 @@ Gibt an, dass der PNRP (Peer Name Resolution-Protokoll)-Resolver als Resolver ve
 <pnrpResolver resolverType="String" />
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>  
- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Peerresolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>
+- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Peerresolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

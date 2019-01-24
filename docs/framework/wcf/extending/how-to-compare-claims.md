@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: 1ef957efcb4cc9330c1c273a1c953afc5b7dd240
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b375251e1ff083a527249da51dfe12ae9165dd55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489078"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720248"
 ---
 # <a name="how-to-compare-claims"></a>Vorgehensweise: Ansprüche vergleichen
 Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) wird verwendet, um die autorisierungsüberprüfung auszuführen. Eine gängige Aufgabe besteht darin, die Ansprüche im Autorisierungskontext mit den Ansprüchen zu vergleichen, die erforderlich sind, um die angeforderte Aktion auszuführen oder auf die angeforderte Ressource zuzugreifen. In diesem Thema wird beschrieben, wie Ansprüche verglichen werden, einschließlich integrierter und benutzerdefinierter Anspruchstypen. Weitere Informationen über die identitätsmodellinfrastruktur finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -30,7 +30,7 @@ Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) wir
  [!code-csharp[c_CustomClaimComparison#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#4)]
  [!code-vb[c_CustomClaimComparison#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#4)]  
   
- der Vergleichscode in der <xref:System.IdentityModel.Claims.Claim.Equals%2A> -Methode zurückkehrt `true`davon ausgegangen, dass `example\someone` identifiziert den gleiche Domänenbenutzer als "someone@example.com".  
+ der Vergleichscode in der <xref:System.IdentityModel.Claims.Claim.Equals%2A> Methodenrückgabe `true`, dass `example\someone` die denselben Domänenbenutzer identifiziert wie "someone@example.com".  
   
  Benutzerdefinierte Anspruchstypen können auch mit der <xref:System.IdentityModel.Claims.Claim.Equals%2A>-Methode verglichen werden. In Fällen, in denen der von der <xref:System.IdentityModel.Claims.Claim.Resource%2A>-Eigenschaft des Anspruchs zurückgegebene Typ kein primitiver Typ ist, gibt <xref:System.IdentityModel.Claims.Claim.Equals%2A> nur `true` zurück, wenn die von den `Resource`-Eigenschaften zurückgegebenen Werte laut der <xref:System.IdentityModel.Claims.Claim.Equals%2A>-Methode identisch sind. In Fällen, in denen dies nicht zutrifft, überschreibt der von der `Resource`-Eigenschaft zurückgegebene benutzerdefinierte Typ die <xref:System.IdentityModel.Claims.Claim.Equals%2A>-Methode und die <xref:System.Object.GetHashCode%2A>-Methode, um die erforderliche benutzerdefinierte Verarbeitung auszuführen.  
   
@@ -70,6 +70,6 @@ Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) wir
  [!code-csharp[c_CustomClaimComparison#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#0)]
  [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
- [Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

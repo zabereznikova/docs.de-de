@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e888b2359336c68ea6fdf52f798145fda12002e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 06c9119a2b842a0efcd4af752ba72dbfda03bf13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440868"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653859"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType-Enumeration
-Enthält Werte, die angeben, die Ursache eines Stack Overflow-Ereignisses.  
+Enthält Werte, die angeben, die zugrunde liegende Ursache für ein Stack Overflow-Ereignis.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,21 +40,21 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`SO_ClrEngine`|Der Stapelüberlauf wurde durch das Ausführungsmodul verursacht.|  
-|`SO_Managed`|Der Stapelüberlauf wurde von verwaltetem Code verursacht.|  
-|`SO_Other`|Der Stapelüberlauf wurde von nicht verwaltetem Code verursacht.|  
+|`SO_ClrEngine`|Der Stapelüberlauf wurde durch die ausführungs-Engine ausgelöst.|  
+|`SO_Managed`|Der Stapelüberlauf verursachte von verwaltetem Code.|  
+|`SO_Other`|Der Stapelüberlauf verursachte von nicht verwaltetem Code.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Informationen werden an den Host übergeben, durch einen Aufruf der [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) Methode.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1a11c0b697a32b184a2c4a60c2f2c88a4b47aaf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea250cd413836796e8e6a3438ac7d6933035091e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451535"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714281"
 ---
 # <a name="imetadatatables-interface"></a>IMetaDataTables-Schnittstelle
 Stellt Methoden zum Speichern und Abrufen von Metadateninformationen in Tabellen bereit.  
@@ -30,35 +30,35 @@ Stellt Methoden zum Speichern und Abrufen von Metadateninformationen in Tabellen
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetBlob-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|Ruft einen Zeiger auf das binary large Object (BLOB) am angegebenen Spaltenindex.|  
+|[GetBlob-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblob-method.md)|Ruft einen Zeiger auf das binary large Object (BLOB) am Index angegebene Spalte ab.|  
 |[GetBlobHeapSize-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getblobheapsize-method.md)|Ruft die Größe des BLOB-Heap in Bytes ab.|  
-|[GetCodedTokenInfo-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Ruft einen Zeiger auf ein Array von Token, die der Index der angegebenen Zeile zugeordnet.|  
-|[GetColumn-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Ruft einen Zeiger auf die Werte in der Spalte an der angegebenen Spaltenindex in der Tabelle am angegebenen Index ab.|  
+|[GetCodedTokenInfo-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcodedtokeninfo-method.md)|Ruft einen Zeiger auf ein Array von Token mit dem angegebenen Zeilenindex verknüpft ist.|  
+|[GetColumn-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumn-method.md)|Ruft einen Zeiger auf die Werte in der Spalte auf den angegebenen Spaltenindex in der Tabelle auf den Index der angegebenen Tabelle enthalten sind.|  
 |[GetColumnInfo-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getcolumninfo-method.md)|Ruft Daten über die angegebene Spalte in der angegebenen Tabelle ab.|  
 |[GetGuid-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguid-method.md)|Ruft eine GUID aus der Zeile am angegebenen Index ab.|  
-|[GetGuidHeapSize-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|Ruft die Größe in Bytes der GUID-Heap.|  
+|[GetGuidHeapSize-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getguidheapsize-method.md)|Ruft die Größe in Bytes der GUID-Heap an.|  
 |[GetNextBlob-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextblob-method.md)|Ruft den Index des nächsten BLOBs in der Tabelle ab.|  
-|[GetNextGuid-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|Ruft den Index des nächsten GUID-Wert in der aktuellen Spalte ab.|  
+|[GetNextGuid-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextguid-method.md)|Ruft den Index der nächsten GUID-Wert in der aktuellen Spalte ab.|  
 |[GetNextString-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextstring-method.md)|Ruft den Index der nächsten Zeichenfolge in der aktuellen Spalte ab.|  
-|[GetNextUserString-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Ruft den Index der Zeile, die die nächste hartcodierte Zeichenfolge in der aktuellen Spalte enthält.|  
+|[GetNextUserString-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnextuserstring-method.md)|Ruft den Index der Zeile, die die nächste hartcodierten Zeichenfolge in der aktuellen Spalte enthält.|  
 |[GetNumTables-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getnumtables-method.md)|Ruft die Anzahl der Tabellen im Bereich des aktuellen `IMetaDataTables` Instanz.|  
-|[GetRow-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Ruft die Zeile im angegebenen Zeilenindex, in der Tabelle am angegebenen Index ab.|  
-|[GetString-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Ruft die Zeichenfolge am angegebenen Index aus der Tabellenspalte im aktuellen Verweisbereich.|  
-|[GetStringHeapSize-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Ruft die Größe des dem String-Heap in Bytes ab.|  
+|[GetRow-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getrow-method.md)|Ruft die Zeile am angegebenen Zeilenindex, in der Tabelle auf den Index der angegebenen Tabelle.|  
+|[GetString-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstring-method.md)|Ruft die Zeichenfolge am angegebenen Index aus der Tabellenspalte in den Gültigkeitsbereich des aktuellen ab.|  
+|[GetStringHeapSize-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getstringheapsize-method.md)|Ruft die Größe in Bytes, der dem String-Heap an.|  
 |[GetTableIndex-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableindex-method.md)|Ruft den Index für die Tabelle, die durch das angegebene Token verwiesen wird.|  
-|[GetTableInfo-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Ruft den Namen, Zeilengröße, Anzahl der Zeilen, die Anzahl der Spalten und Schlüssel Spaltenindex der Tabelle am angegebenen Index ab.|  
-|[GetUserString-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Ruft die hartcodierte Zeichenfolge am angegebenen Index in der Zeichenfolgenspalte im aktuellen Bereich ab.|  
-|[GetUserStringHeapSize-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|Ruft die Größe des dem Benutzer String-Heap in Bytes ab.|  
+|[GetTableInfo-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-gettableinfo-method.md)|Ruft Name, Größe, Anzahl der Zeilen, die Anzahl der Spalten und Schlüssel Spaltenindex der Tabelle vom Index angegebenen Tabelle ab.|  
+|[GetUserString-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstring-method.md)|Ruft die hartcodierten Zeichenfolge am angegebenen Index in die Zeichenfolgenspalte im aktuellen Bereich ab.|  
+|[GetUserStringHeapSize-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-getuserstringheapsize-method.md)|Ruft die Größe in Bytes, der dem Benutzer String-Heap an.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [IMetaDataTables2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [IMetaDataTables2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

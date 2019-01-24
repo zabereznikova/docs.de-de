@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b8de4fd8a130f93b2ed3e14701c442a65c9ffcd8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712469"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;Hinzufügen&gt; -Element für &lt;SharedListeners&gt;
 Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` eine Sammlung von Listenern, die von jedem ist [ \<Quelle >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oder [ \<Ablaufverfolgung >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) verweisen können.  Standardmäßig werden von Listenern in der `sharedListeners` Auflistung befinden sich keine `Listeners` Auflistung. Sie müssen hinzugefügt werden, anhand des Namens der [ \<Quelle >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oder [ \<Ablaufverfolgung >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Es ist nicht möglich, um die Listener in der `sharedListeners` Auflistung im Code zur Laufzeit.  
   
  \<configuration>  
-&nbsp;&nbsp;\<System.Diagnostics >  
+&nbsp;&nbsp;\<system.diagnostics>  
 &nbsp;&nbsp;&nbsp;&nbsp;\<SharedListeners >-Element  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<Hinzufügen >  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<add>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -110,8 +110,8 @@ Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` 
 </configuration>   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a51d88af20b3abbbe2f80134473ec1ba1b7a4b17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99f9162cc01d68d25304aed5cb8102b6cc21f7a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454547"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727091"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2-Methode
 Ruft die Adresse des angegebenen threadstatischen Felds im Bereich des angegebenen Threads und der Anwendungsdomäne ab.  
@@ -43,30 +43,30 @@ HRESULT GetThreadStaticAddress2(
  [in] Die ID der Klasse, die das angeforderte threadstatische Feld enthält.  
   
  `fieldToken`  
- [in] Das Metadatentoken für die angeforderte threadstatische Feld.  
+ [in] Das Metadatentoken für das angeforderte threadstatischen Feld.  
   
  `appDomainId`  
  [in] Die ID der Anwendungsdomäne.  
   
  `threadId`  
- [in] Die ID des Threads, die den Bereich für die angeforderten statischen Felds ist.  
+ [in] Die ID des Threads, der den Bereich für den angeforderten statischen Feld ist.  
   
  `ppAddress`  
- [out] Ein Zeiger auf die Adresse des statischen Felds, das innerhalb des angegebenen Threads ist.  
+ [out] Ein Zeiger auf die Adresse eines statischen Felds, das in den angegebenen Thread ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetThreadStaticAddress2` Methode kann einen der folgenden zurück:  
+ Die `GetThreadStaticAddress2` Methode gibt möglicherweise einen der folgenden zurück:  
   
--   Ein CORPROF_E_DATAINCOMPLETE-HRESULT, wenn das angegebene statische Feld eine Adresse im angegebenen Kontext nicht zugewiesen wurde.  
+-   Ein HRESULT CORPROF_E_DATAINCOMPLETE, wenn das angegebene statische Feld eine Adresse im angegebenen Kontext nicht zugewiesen wurde.  
   
--   Die Adressen von Objekten, die möglicherweise im Garbage Collection-Heap. Diese Adressen möglicherweise nach der Garbagecollection, ungültig werden, damit nach der Garbagecollection Profiler nicht annehmen soll, dass sie gültig sind.  
+-   Die Adressen von Objekten, die möglicherweise in die Garbage Collection-Heap. Diese Adressen können nach der Garbagecollection, ungültig werden. daher nach der Garbagecollection, Profiler nicht davon auszugehen, dass sie gültig sind.  
   
- Vor dem Abschluss einer Klasse Klassenkonstruktor `GetThreadStaticAddress2` wird CORPROF_E_DATAINCOMPLETE für alle seine statischen Felder zurück, obwohl einige statische Felder möglicherweise bereits initialisiert und rooting Garbage Collection-Objekten.  
+ Vor dem Abschluss einer Klasse Klassenkonstruktor `GetThreadStaticAddress2` CORPROF_E_DATAINCOMPLETE zurück für alle seine statische Felder, obwohl einige der statischen Felder bereits initialisiert werden kann und rooting-Garbage Collection-Objekten.  
   
- Die [ICorProfilerInfo2:: GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) Methode ist vergleichbar mit der `GetThreadStaticAddress2` -Methode, aber keine Anwendung Domäne Argument akzeptiert.  
+ Die [ICorProfilerInfo2:: GetThreadStaticAddress](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getthreadstaticaddress-method.md) Methode ähnelt der `GetThreadStaticAddress2` -Methode, jedoch keine Anwendung domänenargument akzeptiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -74,7 +74,7 @@ HRESULT GetThreadStaticAddress2(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo3-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo3-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)

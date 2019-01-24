@@ -30,63 +30,63 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 932b38d97b36292e66bfad91a9a3799459d3b73c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1541ac1793c9f3c082b688fecd4eb82fb5b59590
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726727"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Sonderzeichen in Code (Visual Basic)
-In einigen Fällen müssen Sie Sonderzeichen in Ihrem Code, d. h. Zeichen verwenden, die nicht alphabetisch oder numerisch sind. Interpunktion und Sonderzeichen in der Visual Basic-Zeichensatz haben verschiedene Funktionen, reichen von der Strukturierung Programmtext zur Definition der Aufgaben, die der Compiler oder das kompilierte Programm ausführt. Sie legen keine auszuführende Operation fest.  
+Manchmal müssen Sie Sonderzeichen in Ihrem Code, d. h. Zeichen verwenden, die nicht alphabetisch oder numerisch sind. Die Interpunktions- und Sonderzeichen in der Visual Basic-Zeichensatz haben verschiedene Programmtexts zum Definieren der Aufgaben, die der Compiler oder das kompilierte Programm ausführt. Sie legen keine auszuführende Operation fest.  
   
 ## <a name="parentheses"></a>Klammern  
- Verwenden Sie Klammern, wenn Sie eine Prozedur, wie z. B. definieren eine `Sub` oder `Function`. Sie müssen alle Prozedur Argumentlisten in Klammern einschließen. Sie verwenden auch Klammern für das zusammensetzen von Variablen oder Argumente in logischen Gruppen, insbesondere, um die Standardreihenfolge der Rangfolge von Operatoren in einem komplexen Ausdruck zu überschreiben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Verwenden Sie Klammern, wenn Sie eine Prozedur, wie z. B. definieren eine `Sub` oder `Function`. Sie müssen alle Prozedur Argumentlisten in Klammern einschließen. Können Sie auch Klammern zum Einfügen von Variablen oder Argumente in logischen Gruppen, die insbesondere um die Standardreihenfolge der Operatorrangfolge in einem komplexen Ausdruck außer Kraft zu setzen. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
  [!code-vb[VbVbcnConventions#11](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_1.vb)]  
   
- Nach der Ausführung des vorherigen Code den Wert der `d` "8.225" und der Wert des `e` ist 3. Die Berechnung von `d` verwendet der Standardvorrang gilt der `/` über `+` und entspricht dem `d = b + (c / a)`. Die Klammern in die Berechnung von `e` außer Kraft setzen der Standardvorrang gilt.  
+ Nach der Ausführung des vorherigen Code den Wert der `d` "8.225" und der Wert des `e` ist 3. Die Berechnung für `d` verwendet die standardmäßige Rangfolge `/` über `+` entspricht `d = b + (c / a)`. Die Klammern in die Berechnung für `e` außer Kraft setzen der Standardvorrang gilt.  
   
 ## <a name="separators"></a>Trennzeichen  
- Trennzeichen sind, was ihre Name schon sagt: Trennen Sie Abschnitte des Codes. In Visual Basic ist das Trennzeichen der Doppelpunkt (`:`). Verwenden Sie als Trennzeichen, wenn mehrere Anweisungen in einer einzelnen Zeile anstelle von separaten Zeilen enthalten sein sollen. Dies spart Platz und verbessert die Lesbarkeit des Codes. Das folgende Beispiel zeigt drei Anweisungen, die durch Doppelpunkte getrennt werden.  
+ Trennzeichen sind, was ihr Name besagt: Trennen Sie Abschnitte des Codes. In Visual Basic ist das Trennzeichen der Doppelpunkt (`:`). Verwenden Sie Trennzeichen, wenn mehrere Anweisungen in einer einzelnen Zeile anstelle von separaten Zeilen enthalten sein sollen. Dies spart Platz und verbessert die Lesbarkeit des Codes. Das folgende Beispiel zeigt drei Anweisungen, die durch Doppelpunkte getrennt sind.  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   
- Weitere Informationen finden Sie unter [wie: unterbrechen und Kombinieren von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
- Der Doppelpunkt (`:`)-Zeichen wird auch verwendet, um eine anweisungsbezeichnung zu identifizieren. Weitere Informationen finden Sie unter [wie: Label-Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
+ Der Doppelpunkt (`:`)-Zeichen wird auch verwendet, um eine anweisungsbezeichnung zu identifizieren. Weitere Informationen finden Sie unter [Vorgehensweise: Bezeichnen von Anweisungen](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 ## <a name="concatenation"></a>Verkettung  
- Verwenden der `&` Operator für *Verkettung*, oder Zeichenfolgen miteinander zu verknüpfen. Verwechseln sie nicht die `+` -Operator, der numerische Werte addiert. Bei Verwendung der `+` Operator zum Verketten, wenn numerische Werte bearbeitet werden kann, falsche Ergebnisse zu erhalten. Dies wird im folgenden Beispiel veranschaulicht:  
+ Verwenden der `&` Operator für *Verkettung*, oder Zeichenfolgen miteinander zu verknüpfen. Ist nicht zu verwechseln mit der `+` -Operator, der numerische Werte addiert. Bei Verwendung der `+` Operator zum Verketten, wenn Sie numerische Werte arbeiten Sie erhalten falsche Ergebnisse. Dies wird im folgenden Beispiel veranschaulicht:  
   
  [!code-vb[VbVbcnConventions#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_3.vb)]  
   
- Nach der Ausführung des vorherigen Code den Wert der `resultA` 21.01 und der Wert des `resultB` "10.0111".  
+ Nach der Ausführung des vorherigen Code den Wert der `resultA` 21.01 und den Wert der `resultB` "10.0111".  
   
 ## <a name="member-access-operators"></a>Operatoren für den Memberzugriff  
- Zugriff auf einen Member eines Typs, verwenden Sie den Punkt (`.`) oder ein Ausrufezeichen (`!`)-Operator zwischen den vollständigen Typnamen und den Elementnamen.  
+ Für den Zugriff auf einen Member eines Typs, die Sie verwenden des Punkts (`.`) oder ein Ausrufezeichen (`!`)-Operator zwischen den Typnamen und den Namen des Members.  
   
 ### <a name="dot--operator"></a>Punkt (.) Operator  
- Verwenden der `.` Operator auf eine Klasse, Struktur, Schnittstelle oder Enumeration als Operator für den Memberzugriff. Das Element kann ein Feld, Eigenschaft, Ereignis oder Methode sein. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Verwenden der `.` Operator auf eine Klasse, Struktur, Schnittstelle oder Enumeration als ein Memberzugriffsoperator. Das Element kann ein Feld, Eigenschaft, Ereignis oder Methode sein. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
  [!code-vb[VbVbcnConventions#14](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_4.vb)]  
   
 ### <a name="exclamation-point--operator"></a>Ausrufezeichen (!) Operator  
- Verwenden der `!` Operator nur auf eine Klasse oder Schnittstelle wie ein wörterbuchzugriffsoperator. Die Klasse oder Schnittstelle benötigen eine Standardeigenschaft, die ein einzelnes akzeptiert `String` Argument. Der Bezeichner, der unmittelbar nach der `!` Operator wird der Wert des Arguments an die Standardeigenschaft als Zeichenfolge übergeben. Dies wird im folgenden Beispiel veranschaulicht:  
+ Verwenden der `!` -Operator nur auf eine Klasse oder Schnittstelle wie ein wörterbuchzugriffsoperator. Die Klasse oder Schnittstelle benötigen eine Standardeigenschaft, die akzeptiert ein einzelnes `String` Argument. Der Bezeichner sofort nach der `!` Operator wird der Wert des Arguments an die Standardeigenschaft als Zeichenfolge übergeben. Dies wird im folgenden Beispiel veranschaulicht:  
   
  [!code-vb[VbVbcnConventions#15](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_5.vb)]  
   
- Die drei Zeilen der Ausgabe `MsgBox` alle zeigt den Wert `32856`. Die erste Zeile verwendet den herkömmlichen Zugriff auf die Eigenschaft `index`, die zweite nutzt die Tatsache, `index` ist die Standardeigenschaft der Klasse `hasDefault`, und die dritte verwendet Wörterbuchzugriff auf die Klasse.  
+ Die drei Zeilen der Ausgabe `MsgBox` alle zeigt den Wert `32856`. Die erste Zeile verwendet die herkömmlichen Zugriff auf Eigenschaft `index`, die zweite nutzt die Tatsache, `index` ist die Standardeigenschaft der Klasse `hasDefault`, und das dritte verwendet Wörterbuchzugriff auf die Klasse.  
   
- Beachten Sie, dass der zweite Operand, der die `!` Operator muss ein gültiger Visual Basic-Bezeichner, die nicht in doppelte Anführungszeichen eingeschlossen sein (`" "`). Sie können nicht mit anderen Worten, ein Zeichenfolgenliteral oder eine Zeichenfolgenvariable verwenden. Änderungen an den folgenden zur letzten Zeile der `MsgBox` Aufruf wird ein Fehler generiert, da `"X"` ist ein eingeschlossenen Zeichenfolgenliteral.  
+ Beachten Sie, dass der zweite Operand, der die `!` Operator muss ein gültiger Visual Basic-Bezeichner, die nicht in doppelte Anführungszeichen eingeschlossen sein (`" "`). Sie können nicht in anderen Worten, ein Zeichenfolgenliteral oder eine String-Variable verwenden. Änderungen an den folgenden auf die letzte Zeile der `MsgBox` Aufruf wird ein Fehler generiert, da `"X"` ist eine eingeschlossene Zeichenfolgenliteral.  
   
  `"Dictionary access returns " & hD!"X")`  
   
 > [!NOTE]
->  Verweise auf die Standardsammlungen müssen explizit sein. Insbesondere können Sie keine der `!` Operator auf eine spät gebundene Variable.  
+>  Verweise auf die Standardsammlungen müssen explizit sein. Insbesondere können keine der `!` Operator für eine spät gebundene Variable.  
   
- Die `!` Zeichen dient auch als die `Single` Zeichen eingeben.  
+ Die `!` Zeichen dient auch als die `Single` Typzeichen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [Typzeichen](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Typzeichen](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

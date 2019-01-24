@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584911"
 ---
 # <a name="configuring-tracing"></a>Konfigurieren der Ablaufverfolgung
 In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung, das Konfigurieren von Ablaufverfolgungsquellen zum Ausgeben von Ablaufverfolgungen, das Festlegen von Ablaufverfolgungsebenen, das Festlegen der Aktivitätsablaufverfolgung und -weitergabe zur Unterstützung der End-to-End-Ablaufverfolgungskorrelation sowie das Festlegen von Ablaufverfolgungslistenern für den Zugriff auf Ablaufverfolgungen.  
@@ -66,9 +66,9 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
 -   System.ServiceModel.Activation.  
   
--   System.IO.Log: Protokollierung für die .NET Framework-Schnittstelle im gemeinsamen Protokolldateisystem (Common Log File System, CLFS).  
+-   System.IO.Log: Die Protokollierung für die .NET Framework-Schnittstelle, die Common Log File System (CLFS).  
   
--   System.Runtime.Serialization: Protokolliert das Lesen oder Schreiben von Objekten.  
+-   System.Runtime.Serialization: Protokolliert, wenn Objekte gelesen oder geschrieben werden.  
   
 -   CardSpace.  
   
@@ -142,7 +142,7 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
  Sie können einen benutzerdefinierten Ablaufverfolgungslistener konfigurieren, um Ablaufverfolgungen zu übertragen, z. B. an eine Remotedatenbank. Stellen Sie beim Bereitstellen von Anwendungen eine ordnungsgemäße Zugriffsteuerung für die Protokolle auf dem Remotecomputer sicher.  
   
- Sie können einen Ablaufverfolgungslistener auch programmgesteuert konfigurieren. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern](https://go.microsoft.com/fwlink/?LinkId=94648) und [erstellen einen benutzerdefinierten TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239).  
+ Sie können einen Ablaufverfolgungslistener auch programmgesteuert konfigurieren. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern](https://go.microsoft.com/fwlink/?LinkId=94648) und [Erstellen eines benutzerdefinierten TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Da `System.Diagnostics.XmlWriterTraceListener` nicht threadsicher ist, werden Ressourcen durch die Ablaufverfolgungsquelle bei der Ausgabe von Ablaufverfolgungen möglicherweise exklusiv gesperrt. Wenn viele Threads Ablaufverfolgungen an eine Ablaufverfolgungsquelle ausgeben, die für die Verwendung dieses Listeners konfiguriert ist, treten möglicherweise Ressourcenkonflikte auf. Das kann die Leistung erheblich beeinträchtigen. Implementieren Sie einen threadsicheren benutzerdefinierten Listener, um dieses Problem zu beheben.  
@@ -180,8 +180,8 @@ In diesem Thema wird Folgendes beschrieben: das Aktivieren der Ablaufverfolgung,
   
  Das `propagateActivity`-Attribut kann nicht bei benutzerdefinierten Ablaufverfolgungsquellen verwendet werden. Stellen Sie bei der Aktivitäts-ID-Weitergabe in Benutzercode sicher, dass Sie `ActivityTracing` von ServiceModel nicht festlegen, während das `propagateActivity`-Attribute von ServiceModel noch auf `true` festgelegt ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern](https://go.microsoft.com/fwlink/?LinkId=94648)  
- [Erstellen eines benutzerdefinierten TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)
+## <a name="see-also"></a>Siehe auch
+- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [Verwaltung und Diagnose](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Erstellen eines benutzerdefinierten TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)

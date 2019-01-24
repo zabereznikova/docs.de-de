@@ -1,20 +1,21 @@
 ---
-title: 'Vorgehensweise: Parsen einer Zeichenfolge (Visual Basic)'
+title: 'Vorgehensweise: Analysiert eine Zeichenfolge (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: da12ec98e03acceae375bbed4fc6ad4c2a71ec2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 513a82cbed796be42eb8e531ec71221ef0ac267f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652448"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Vorgehensweise: Parsen einer Zeichenfolge (Visual Basic)
-In diesem Thema wird das Erstellen einer XML-Struktur in c# veranschaulicht.  
+# <a name="how-to-parse-a-string-visual-basic"></a>Vorgehensweise: Analysiert eine Zeichenfolge (Visual Basic)
+In diesem Thema wird gezeigt, wie zum Erstellen einer XML-Struktur in C#.  
   
 ## <a name="example"></a>Beispiel  
  Sie können eine Zeichenfolge in Visual Basic analysieren, mit der `XElement.Parse` Methode. Es ist aber dennoch effizienter, XML-Literale zu verwenden (siehe folgender Code), da XML-Literale nicht dieselben Leistungseinbußen zur Folge haben wie dies beim Analysieren von XML aus einer Zeichenfolge der Fall ist.  
   
- Mithilfe von XML-Literalen können Sie einfach kopieren und fügen Sie den XML-Code in Visual Basic-Programms.  
+ Sie können mithilfe von XML-Literale können einfach kopieren und fügen Sie der XML-Code in Visual Basic-Programms.  
   
 > [!NOTE]
 >  Das Analysieren von Text oder das Laden eines XML-Dokuments aus einer Textdatei ist weniger effizient als die funktionale Konstruktion. Wenn Sie eine XML-Struktur aus Code initialisieren, verbraucht die funktionale Konstruktion weniger Verarbeitungszeit als das Analysieren des Textes.  
@@ -48,5 +49,5 @@ Dim contacts as XElement = _
     </Contacts>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysieren von XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Siehe auch
+- [Analysieren von XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

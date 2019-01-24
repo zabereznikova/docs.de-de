@@ -2,12 +2,12 @@
 title: '&lt;msmqTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: a0406ae6e91755707656e10c75cbd25dd68d07c2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 523f2fd030f40a6d55080a48773159ab4b5887ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147914"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660579"
 ---
 # <a name="ltmsmqtransportgt"></a>&lt;msmqTransport&gt;
 Führt dazu, dass ein Kanal Nachrichten in der MSMQ-Sitzung überträgt, wenn er in einer benutzerdefinierten Bindung enthalten ist.  
@@ -16,7 +16,7 @@ Führt dazu, dass ein Kanal Nachrichten in der MSMQ-Sitzung überträgt, wenn er
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<MsmqIntegration >  
+\<msmqIntegration>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -73,7 +73,7 @@ Führt dazu, dass ein Kanal Nachrichten in der MSMQ-Sitzung überträgt, wenn er
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<MsmqTransportSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Gibt Transportsicherheitseinstellungen für diese Bindung an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
+|[\<msmqTransportSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqtransportsecurity.md)|Gibt Transportsicherheitseinstellungen für diese Bindung an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -86,15 +86,15 @@ Führt dazu, dass ein Kanal Nachrichten in der MSMQ-Sitzung überträgt, wenn er
   
  Dieses Bindungselement ist das Standardbindungselement für die Message Queuing-Standardbindung (`netMsmqBinding`).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.MsmqTransportElement>  
- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Warteschlangen in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.MsmqTransportElement>
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Warteschlangen in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

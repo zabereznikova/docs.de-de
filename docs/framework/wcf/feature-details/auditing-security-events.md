@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622597"
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
 Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mit der Überwachungsfunktion Sicherheitsereignisse (Erfolg, Fehler, oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
@@ -98,12 +98,12 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mi
 |Überwachungsrichtlinienverwaltung|Nicht zutreffend.|Das Sicherheitsprotokoll wird nicht nur über die Konfiguration, sondern auch über die Richtlinie der lokalen Sicherheitsautorität (LSA) gesteuert. Darüber hinaus muss die Kategorie "Objektzugriffsversuche überwachen" aktiviert sein.|  
 |Standardmäßige Benutzerfreundlichkeit|Alle authentifizierten Benutzer können in das Anwendungsprotokoll schreiben, es sind also für Anwendungsprozesse keine weiteren Berechtigungsschritte erforderlich.|Der Anwendungsprozess (Kontext) muss über die `SeAuditPrivilege`-Berechtigung verfügen.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
- <xref:System.ServiceModel.AuditLogLocation>  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
- [\<ServiceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
- [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+- <xref:System.ServiceModel.AuditLogLocation>
+- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
+- [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13f7e935ab999ccc3cd3ea1e308e8d686bed4171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685216"
 ---
 # <a name="garbage-collection-etw-events"></a>Garbage Collection-ETW-Ereignisse
 <a name="top"></a> Diese Ereignisse sammeln Informationen, die die Garbage Collection betreffen. Sie helfen beim Analysieren und Debuggen, einschließlich der Ermittlung, wie oft die Garbage Collection durchgeführt wurde, wie viel Arbeitsspeicher während der Garbage Collection freigegeben wurde usw.  
@@ -72,7 +72,7 @@ ms.locfileid: "33396934"
 |Typ|win:UInt32|0x0 – Blockieren der Garbage Collection außerhalb der Garbage Collection im Hintergrund aufgetreten.<br /><br /> 0x1 – Garbage Collection im Hintergrund.<br /><br /> 0x2 – Blockieren der Garbage Collection während der Garbage Collection im Hintergrund aufgetreten.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gcend_v1_event"></a>   
 ## <a name="gcendv1-event"></a>GCEnd_V1-Ereignis  
@@ -96,7 +96,7 @@ ms.locfileid: "33396934"
 |Tiefe|win:UInt32|Die Generation, die erfasst wurde.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gcheapstats_v1_event"></a>   
 ## <a name="gcheapstatsv1-event"></a>GCHeapStats_V1-Ereignis  
@@ -131,7 +131,7 @@ ms.locfileid: "33396934"
 |GCHandleCount|win:UInt32|Die Anzahl der verwendeten Garbage Collection-Handles.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gccreatesegment_v1_event"></a>   
 ## <a name="gccreatesegmentv1-event"></a>GCCreateSegment_V1-Ereignis  
@@ -158,7 +158,7 @@ ms.locfileid: "33396934"
   
  Beachten Sie, dass die Größe der Segmente, die vom Garbage Collector zugeordnet werden, implementierungsspezifisch ist und jederzeit, auch in regelmäßigen Updates, geändert werden kann. Für eine Anwendung darf weder eine bestimmte Segmentgröße vorausgesetzt werden, noch darf sie von einer bestimmten Segmentgröße abhängen noch darf in ihr versucht werden, die Menge des für Segmentbelegungen verfügbaren Speichers zu konfigurieren.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gcfreesegment_v1_event"></a>   
 ## <a name="gcfreesegmentv1-event"></a>GCFreeSegment_V1-Ereignis  
@@ -181,7 +181,7 @@ ms.locfileid: "33396934"
 |Adresse|win:UInt64|Die Adresse des Segments.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gcrestarteebegin_v1_event"></a>   
 ## <a name="gcrestarteebeginv1-event"></a>GCRestartEEBegin_V1-Ereignis  
@@ -199,7 +199,7 @@ ms.locfileid: "33396934"
   
  Keine Ereignisdaten.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gcrestarteeend_v1_event"></a>   
 ## <a name="gcrestarteeendv1-event"></a>GCRestartEEEnd_V1-Ereignis  
@@ -217,7 +217,7 @@ ms.locfileid: "33396934"
   
  Keine Ereignisdaten.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gcsuspendee_v1_event"></a>   
 ## <a name="gcsuspendeev1-event"></a>GCSuspendEE_V1-Ereignis  
@@ -231,7 +231,7 @@ ms.locfileid: "33396934"
   
 |Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
-|`GCSuspendEE_V1`|9|Die Unterbrechung des Ausführungsmoduls für die Garbage Collection gestartet wurde.|  
+|`GCSuspendEE_V1`|9|Die Unterbrechung der Ausführungs-Engine für die Garbage Collection gestartet wurde.|  
   
  Die folgende Tabelle zeigt die Ereignisdaten an.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "33396934"
 |Anzahl|win:UInt32|Die Anzahl der GCs zu diesem Zeitpunkt. Normalerweise würde Ihnen danach ein nachfolgender GC-Start angezeigt werden. Diese Anzahl würde dabei um 1 erhöht werden, da der GC-Index während der Garbage Collection erhöht wird.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gcsuspendeeend_v1_event"></a>   
 ## <a name="gcsuspendeeendv1-event"></a>GCSuspendEEEnd_V1-Ereignis  
@@ -255,11 +255,11 @@ ms.locfileid: "33396934"
   
 |Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
-|`GCSuspendEEEnd_V1`|8|Die Unterbrechung des Ausführungsmoduls für die Garbage Collection beendet wurde.|  
+|`GCSuspendEEEnd_V1`|8|Die Unterbrechung der Ausführungs-Engine für die Garbage Collection beendet wurde.|  
   
  Keine Ereignisdaten.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gcallocationtick_v2_event"></a>   
 ## <a name="gcallocationtickv2-event"></a>GCAllocationTick_V2-Ereignis  
@@ -287,7 +287,7 @@ ms.locfileid: "33396934"
 |TypeName|win:UnicodeString|Der Name des zugeordneten Typs. Wenn es verschiedene Typen von Objekten gibt, die während dieses Ereignisses zugeordnet wurden, ist dies der Typ des zuletzt zugeordneten Objekts (das Objekt, das den Schwellenwert von 100 KB überschritten hat).|  
 |HeapIndex|win:UInt32|Der Heap, auf dem das Objekt zugeordnet wurde. Dieser Wert ist 0 (null), wenn die Ausführung mit Garbage Collection für die Arbeitsstation erfolgt.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gcfinalizersbegin_v1_event"></a>   
 ## <a name="gcfinalizersbeginv1-event"></a>GCFinalizersBegin_V1-Ereignis  
@@ -305,7 +305,7 @@ ms.locfileid: "33396934"
   
  Keine Ereignisdaten.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gcfinalizersend_v1_event"></a>   
 ## <a name="gcfinalizersendv1-event"></a>GCFinalizersEnd_V1-Ereignis  
@@ -328,7 +328,7 @@ ms.locfileid: "33396934"
 |Anzahl|win:UInt32|Die Anzahl der ausgeführten Finalizer.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gccreateconcurrentthread_v1_event"></a>   
 ## <a name="gccreateconcurrentthreadv1-event"></a>GCCreateConcurrentThread_V1-Ereignis  
@@ -347,7 +347,7 @@ ms.locfileid: "33396934"
   
  Keine Ereignisdaten.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="gcterminateconcurrentthread_v1_event"></a>   
 ## <a name="gcterminateconcurrentthreadv1-event"></a>GCTerminateConcurrentThread_V1-Ereignis  
@@ -366,5 +366,5 @@ ms.locfileid: "33396934"
   
  Keine Ereignisdaten.  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Siehe auch
+- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

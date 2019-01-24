@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1874b5bea465eb31bcaad2d912b90d35cfc711b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 67ec3bf10638538b49f1ec44ff583bdf4ba4ef9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572252"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>ICorProfilerCallback::RemotingServerReceivingMessage-Methode
-Benachrichtigt den Profiler, dass der Prozess eine remote-Methode aufrufen oder die Aktivierung der Anforderung empfangen hat.  
+Benachrichtigt den Profiler, dass der Prozess eine Remotemethode aufrufen oder die Aktivierung der Anforderung erhalten hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,24 +37,24 @@ HRESULT RemotingClientSendingMessage(
   
 #### <a name="parameters"></a>Parameter  
  `pCookie`  
- [in] Ein Wert, der entsprechen, wird mit dem Wert im bereitgestellten [ICorProfilerCallback:: RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) unter diesen Bedingungen:  
+ [in] Ein Wert, der entspricht, mit dem Wert im bereitgestellten [ICorProfilerCallback:: RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) unter diesen Bedingungen:  
   
 -   Remoting-GUID-Cookies sind aktiv.  
   
--   Der Kanal kann erfolgreich sendet die Nachricht.  
+-   Der Kanal ist erfolgreich, bei der Übermittlung der Nachricht.  
   
--   GUID-Cookies werden auf der Clientseite Prozess aktiv.  
+-   GUID-Cookies sind bei der clientseitigen aktiv.  
   
- Dies ermöglicht eine einfache Verbindung Remoteaufrufe und die Erstellung einer logischen Aufrufliste.  
+ Dies ermöglicht die einfache Kopplung der Remotingaufrufe und die Erstellung einer logischen Aufrufliste.  
   
  `fIsAsync`  
- [in] Ein Wert, `true` Wenn der Aufruf asynchron, andernfalls ist `false`.  
+ [in] Ein Wert, `true` , wenn der Aufruf asynchron; andernfalls ist `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die nachrichtenanforderung asynchron ist, kann die Anforderung von jedem beliebigen Thread bedient werden.  
+ Wenn die nachrichtenanforderung asynchron ist, kann die Anforderung von einem beliebigen Thread bedient werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -62,5 +62,5 @@ HRESULT RemotingClientSendingMessage(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

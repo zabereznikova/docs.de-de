@@ -14,18 +14,18 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 36370eb54e75df9bf2bf8eb9e073bbbee995e287
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 7a7a8cc13a48b453b157443039f11c548756b0fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588651"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
 Windows Presentation Foundation (WPF) bietet eine Reihe von Diensten, die zum Erweitern der Funktionalität einer [Eigenschaft](../../../standard/base-types/common-type-system.md#Properties) eines Typs verwendet werden können. Zusammen werden diese Dienste normalerweise als WPF-Eigenschaftensystem bezeichnet. Eine Eigenschaft, die von der WPF-Eigenschaft unterstützt wird, wird als Abhängigkeitseigenschaft bezeichnet. In dieser Übersicht wird das WPF-Eigenschaftensystem und die Funktionen einer Abhängigkeitseigenschaft beschrieben. Dies schließt die Verwendung vorhandener Abhängigkeitseigenschaften in XAML und Code ein. In dieser Übersicht werden auch spezielle Aspekte von Abhängigkeitseigenschaften wie die Metadaten von Abhängigkeitseigenschaften sowie die Erstellung einer eigenen Abhängigkeitseigenschaft in einer benutzerdefinierten Klasse eingeführt.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 In diesem Thema wird vorausgesetzt, dass Sie über einige grundlegende Kenntnisse zum Typsystem von .NET und die objektorientierte Programmierung verfügen. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem XAML verstehen und wissen, wie WPF-Anwendungen geschrieben werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="dependency-properties-and-clr-properties"></a>Abhängigkeitseigenschaften und CLR-Eigenschaften
@@ -40,11 +40,11 @@ Abhängigkeitseigenschaften und das WPF-Eigenschaftensystem erweitern die Funkti
 
 Nachfolgend ist die Terminologie aufgeführt, die mit Abhängigkeitseigenschaften verwendet wird:
 
-- **Abhängigkeitseigenschaft:** Eine Eigenschaft, die von einer <xref:System.Windows.DependencyProperty>-Klasse gesichert wird.
+- **Abhängigkeitseigenschaft:** Eine Eigenschaft, die von unterstützt wird eine <xref:System.Windows.DependencyProperty>.
 
-- **Abhängigkeitseigenschaftenbezeichner:** Eine <xref:System.Windows.DependencyProperty>-Instanz, die als Rückgabewert beim Registrieren einer Abhängigkeitseigenschaft abgerufen und dann als statischer Member einer Klasse gespeichert wird. Dieser Bezeichner wird als Parameter für viele der APIs verwendet, die mit dem WPF-Eigenschaftenssystem interagieren.
+- **Bezeichner der Abhängigkeitseigenschaft:** Ein <xref:System.Windows.DependencyProperty> -Instanz, die als Rückgabewert abgerufen werden, wenn Sie eine Abhängigkeitseigenschaft registrieren, und dann als ein statischer Member einer Klasse gespeichert. Dieser Bezeichner wird als Parameter für viele der APIs verwendet, die mit dem WPF-Eigenschaftenssystem interagieren.
 
-- **CLR-Wrapper:** Die tatsächlichen Implementierungen zum Abrufen und Festlegen für die Eigenschaft. Diese Implementierungen beinhalten den Abhängigkeitseigenschaftenbezeichner, indem sie diesen in den Aufrufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> verwenden und so die Sicherung für die Eigenschaft über das WPF-Eigenschaftensystem bereitstellen.
+- **CLR "wrapper":** Die tatsächliche Abrufen und Festlegen von Implementierungen für die Eigenschaft. Diese Implementierungen beinhalten den Abhängigkeitseigenschaftenbezeichner, indem sie diesen in den Aufrufen <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> verwenden und so die Sicherung für die Eigenschaft über das WPF-Eigenschaftensystem bereitstellen.
 
 Das folgende Beispiel definiert die `IsSpinning`-Abhängigkeitseigenschaft und zeigt die Beziehung zwischen dem <xref:System.Windows.DependencyProperty>-Bezeichner zur Eigenschaft, die er unterstützt.
 
@@ -197,7 +197,7 @@ In der Regel sollen Stile nicht immer gelten und sogar einen lokal festgelegten 
 - Abhängigkeitseigenschaften sollten im Allgemeinen als öffentliches Eigentum gelten, das zugänglich oder zumindest für alle Aufrufer mit Zugriff auf eine Instanz erkennbar sein. Weitere Informationen finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-security.md).
 
 ## <a name="see-also"></a>Siehe auch
- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Schreibgeschützte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [WPF-Architektur](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Schreibgeschützte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
+- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [WPF-Architektur](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

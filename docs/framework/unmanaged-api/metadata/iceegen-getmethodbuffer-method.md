@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a093b18f72cc99c53951b3dc588ce0cff3c7fefd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 324d8ce19f202cb6e9d0e4378ca61cf2a956d70e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648762"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer-Methode
-Ruft einen Puffer, der die geeignete Größe für die Methode an der angegebenen relativen virtuellen Adresse ab.  
+Ruft einen Puffer von geeigneter Größe für die Methode an der angegebenen relativen virtuellen Adresse an.  
   
  Diese Methode ist veraltet und sollte nicht verwendet werden.  
   
@@ -40,19 +40,19 @@ HRESULT GetMethodBuffer (
   
 #### <a name="parameters"></a>Parameter  
  `RVA`  
- [in] Die relative virtuelle Adresse der Methode für die einen Puffer zurückgegeben.  
+ [in] Die relative virtuelle Adresse der Methode für den Puffer zurückgegeben werden sollen.  
   
  `lpBuffer`  
  [out] Ein Zeiger auf die zurückgegebene Puffer.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICeeGen-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cebf5f1101abed29bc325cec2390b4fd13056e4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64382f0d405e84b2be78aac982b085fec35cb37b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675096"
 ---
 # <a name="icorprofilerinfo4getcodeinfo3-method"></a>ICorProfilerInfo4::GetCodeInfo3-Methode
 Ruft die Erweiterungen des nativen Codes ab, die der JIT-kompilierten Version der angegebenen Funktion zugeordnet sind.  
@@ -50,25 +50,25 @@ HRESULT GetCodeInfo3(
  [in] Die Größe des `codeInfos`-Arrays.  
   
  `pcCodeInfos`  
- [out] Ein Zeiger auf die Gesamtzahl der [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) Strukturen verfügbar.  
+ [out] Ein Zeiger auf die Gesamtanzahl der [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) verfügbar sind.  
   
  `codeInfos`  
- [out] Ein vom Aufrufer bereitgestellter Puffer. Nach dem Ausführen enthält die Methode ein Array aus `COR_PRF_CODE_INFO`-Strukturen, von denen jede einen Block des systemeigenen Codes beschreibt.  
+ [out] Ein vom Aufrufer bereitgestellter Puffer. Nach dem Ausführen enthält die Methode ein Array aus `COR_PRF_CODE_INFO`-Strukturen, von denen jede einen Block des nativen Codes beschreibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetCodeInfo3` Methode ist vergleichbar mit [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md), außer dass die JIT-kompilierten ID der Funktion abgerufen werden sollen, die die angegebene IP-Adresse enthält.  
+ Die `GetCodeInfo3` -Methode ist vergleichbar mit [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md), außer dass der erneut JIT-kompilierte ID der Funktion abgerufen werden sollen, die die angegebene IP-Adresse enthält.  
   
 > [!NOTE]
->  `GetCodeInfo3` kann eine Garbagecollection auslösen, wohingegen [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) geschieht dies nicht. Weitere Informationen finden Sie unter der [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) HRESULT.  
+>  `GetCodeInfo3` kann eine Garbagecollection auslösen, während [GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) nicht der Fall ist. Weitere Informationen finden Sie unter den [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md) HRESULT.  
   
  Die Wertebereiche sind in aufsteigender Reihenfolge des CIL-Offsets (Common Intermediate Language) sortiert.  
   
- Nach dem `GetCodeInfo3` zurückgegeben wird, müssen Sie sicherstellen, dass die `codeInfos` -Puffer groß genug ist, um alle enthalten war die [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) Strukturen. Vergleichen Sie zu diesem Zweck den Wert von `cCodeInfos` mit dem Wert des `cchName`-Parameters. Wenn `cCodeInfos` dividiert durch die Größe einer [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) -Struktur kleiner ist als `pcCodeInfos`, weisen Sie einen größeren `codeInfos` -Puffer zu, aktualisieren `cCodeInfos` mit der neuen Größe, und rufen `GetCodeInfo3` erneut aus.  
+ Nach dem `GetCodeInfo3` zurückgegeben wird, müssen Sie sicherstellen, dass die `codeInfos` -Puffer groß genug, um alle enthalten war die [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) Strukturen. Vergleichen Sie zu diesem Zweck den Wert von `cCodeInfos` mit dem Wert des `cchName`-Parameters. Wenn `cCodeInfos` dividiert durch die Größe einer [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) -Struktur kleiner ist als `pcCodeInfos`, weisen Sie einen größeren `codeInfos` -Puffer zu, aktualisieren `cCodeInfos` mit der neuen Größe, und rufen `GetCodeInfo3` erneut aus.  
   
- Alternativ können Sie zuerst `GetCodeInfo3` mit einem `codeInfos`-Puffer der Länge 0 aufrufen, um die richtige Puffergröße zu ermitteln. Legen Sie Sie dann die `codeInfos` -Puffers auf den zurückgegebenen Wert `pcCodeInfos`multipliziert mit der Größe des eine [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) -Struktur, und rufen `GetCodeInfo3` erneut aus.  
+ Alternativ können Sie zuerst `GetCodeInfo3` mit einem `codeInfos`-Puffer der Länge 0 aufrufen, um die richtige Puffergröße zu ermitteln. Sie können dann Festlegen der `codeInfos` -Puffers auf den Rückgabewert `pcCodeInfos`multipliziert mit der Größe der eine [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) -Struktur, und rufen `GetCodeInfo3` erneut.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -76,8 +76,8 @@ HRESULT GetCodeInfo3(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [GetCodeInfo2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)  
- [ICorProfilerInfo4-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Siehe auch
+- [GetCodeInfo2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md)
+- [ICorProfilerInfo4-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)

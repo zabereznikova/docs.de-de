@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd3c19bbbcb5b1a5f0e89b9df86f87beca32cd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0dfc1535338f45ac812c089203f2ae13a500ceec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689168"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem-Schnittstelle
 Stellt ein Element im globalen Assemblycache installiert.  
@@ -30,15 +30,15 @@ Stellt ein Element im globalen Assemblycache installiert.
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetReference-Methode](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|Ruft einen Zeiger auf die `FUSION_INSTALL_REFERENCE` Struktur dargestellt, die von diesem `IInstallReferenceItem`.|  
+|[GetReference-Methode](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|Ruft einen Zeiger auf die `FUSION_INSTALL_REFERENCE` dargestellt durch diese Struktur `IInstallReferenceItem`.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Fusion.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [FUSION_INSTALL_REFERENCE-Struktur](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+## <a name="see-also"></a>Siehe auch
+- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [FUSION_INSTALL_REFERENCE-Struktur](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
