@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
-ms.openlocfilehash: 365ce6ece1d964d3fac2a44f7ed4c1e16f44c95d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3cb61a40e4522695b876d85f67dac1a109d3c3e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586398"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595863"
 ---
-# <a name="derived-classes-cannot-raise-base-class-events"></a><span data-ttu-id="f0a9a-102">Abgeleitete Klassen können keine Basisklassenereignisse auslösen.</span><span class="sxs-lookup"><span data-stu-id="f0a9a-102">Derived classes cannot raise base class events</span></span>
-<span data-ttu-id="f0a9a-103">Ein Ereignis kann nur vom Deklarationsabschnitt ausgelöst werden, in der sie deklariert ist.</span><span class="sxs-lookup"><span data-stu-id="f0a9a-103">An event can be raised only from the declaration space in which it is declared.</span></span> <span data-ttu-id="f0a9a-104">Aus diesem Grund kann keine Klasse von einer anderen Klasse, eine Auslösen von Ereignissen von der sie abgeleitet ist.</span><span class="sxs-lookup"><span data-stu-id="f0a9a-104">Therefore, a class cannot raise events from any other class, even one from which it is derived.</span></span>  
+# <a name="derived-classes-cannot-raise-base-class-events"></a><span data-ttu-id="e72f8-102">Abgeleitete Klassen können keine Basisklassenereignisse auslösen.</span><span class="sxs-lookup"><span data-stu-id="e72f8-102">Derived classes cannot raise base class events</span></span>
+<span data-ttu-id="e72f8-103">Ein Ereignis kann nur aus der Deklaration ausgelöst werden, in dem sie deklariert ist.</span><span class="sxs-lookup"><span data-stu-id="e72f8-103">An event can be raised only from the declaration space in which it is declared.</span></span> <span data-ttu-id="e72f8-104">Eine Klasse kann nicht aus diesem Grund Ereignisse aus einer beliebigen anderen Klasse, selbst eine auslösen, von dem er abgeleitet ist.</span><span class="sxs-lookup"><span data-stu-id="e72f8-104">Therefore, a class cannot raise events from any other class, even one from which it is derived.</span></span>  
   
- <span data-ttu-id="f0a9a-105">**Fehler-ID:** BC30029</span><span class="sxs-lookup"><span data-stu-id="f0a9a-105">**Error ID:** BC30029</span></span>  
+ <span data-ttu-id="e72f8-105">**Fehler-ID:** BC30029</span><span class="sxs-lookup"><span data-stu-id="e72f8-105">**Error ID:** BC30029</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f0a9a-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="f0a9a-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e72f8-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="e72f8-106">To correct this error</span></span>  
   
--   <span data-ttu-id="f0a9a-107">Verschieben der `Event` Anweisung oder der `RaiseEvent` Anweisung, sodass sie sich in derselben Klasse befinden.</span><span class="sxs-lookup"><span data-stu-id="f0a9a-107">Move the `Event` statement or the `RaiseEvent` statement so they are in the same class.</span></span>  
+-   <span data-ttu-id="e72f8-107">Verschieben der `Event` Anweisung oder der `RaiseEvent` Anweisung, sodass sie sich in derselben Klasse befinden.</span><span class="sxs-lookup"><span data-stu-id="e72f8-107">Move the `Event` statement or the `RaiseEvent` statement so they are in the same class.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0a9a-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f0a9a-108">See Also</span></span>  
- [<span data-ttu-id="f0a9a-109">Event-Anweisung</span><span class="sxs-lookup"><span data-stu-id="f0a9a-109">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
- [<span data-ttu-id="f0a9a-110">RaiseEvent-Anweisung</span><span class="sxs-lookup"><span data-stu-id="f0a9a-110">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+## <a name="see-also"></a><span data-ttu-id="e72f8-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e72f8-108">See also</span></span>
+- [<span data-ttu-id="e72f8-109">Event-Anweisung</span><span class="sxs-lookup"><span data-stu-id="e72f8-109">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="e72f8-110">RaiseEvent-Anweisung</span><span class="sxs-lookup"><span data-stu-id="e72f8-110">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
