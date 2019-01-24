@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Verwenden des Windows Communication Foundation-Dienstmonikers ohne Registrierung'
+title: 'Vorgehensweise: Verwenden des Windows Communication Foundation-Dienstmonikers ohne Registrierung'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: fd61528770b16b13430be3691aef19c1cc743e9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497970"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615273"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Gewusst wie: Verwenden des Windows Communication Foundation-Dienstmonikers ohne Registrierung
-Um eine Verbindung mit herstellen und mit einem Windows Communication Foundation (WCF)-Dienst kommunizieren, benötigen eine WCF-Clientanwendung die Details der Adresse des Diensts, der Bindungskonfiguration und die den Dienstvertrag.  
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Vorgehensweise: Verwenden des Windows Communication Foundation-Dienstmonikers ohne Registrierung
+Um eine Verbindung mit herstellen und mit einem Windows Communication Foundation (WCF)-Dienst kommunizieren, benötigen eine WCF-Clientanwendung die Details der Adresse des Diensts, die Bindungskonfiguration und die den Dienstvertrag.  
   
  Der WCF-Dienstmoniker ruft in der Regel den erforderlichen Vertrag über vorherige Registrierung der erforderlichen Attributtypen ab, aber es gibt möglicherweise Fälle, in denen dies nicht möglich ist. Anstelle der Registrierung kann der Moniker die Definition des Vertrags in Form eines Web Services Definition Language (WSDL)-Dokuments abrufen. Dies geschieht durch Verwendung des `wsdl`-Parameters, durch Metadatenaustausch oder durch Verwendung des `mexAddress`-Parameters.  
   
@@ -43,7 +43,7 @@ public interface IAffiliate
 }  
 ```  
   
- Zum Zweck der Erstellung eines WCF-Clients für den Remotedienst folgende beispielmonikerzeichenfolge können verwendet werden.  
+ Zum Erstellen eines WCF-Clients für den Remotedienst die folgende beispielmonikerzeichenfolge können verwendet werden.  
   
 ```  
 service4:mexAddress="http://servername/Affiliates/service.svc/mex",  
@@ -52,10 +52,10 @@ contract=IAffiliate, contractNamespace=http://Microsoft.ServiceModel.Demo,
 binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/  
 ```  
   
- Während der Ausführung der Clientanwendung führt der Client `WS-MetadataExchange` mit der bereitgestellten `mexAddress` aus. Dabei werden unter Umständen Adresse, Bindung und Vertragsdetails für eine Reihe von Diensten zurückgegeben. Der `address`-Parameter, der `contract`-Parameter, der `contractNamespace`-Parameter, der `binding`-Parameter und der `bindingNamespace`-Parameter werden zum Identifizieren des gewünschten Diensts verwendet. Nach dem Abgleich dieser Parameter erstellt der Moniker einen WCF-Client mit der erforderlichen Vertragsdefinition und kann dann aufgerufen werden mithilfe des WCF-Clients, wie mit dem typisierten Vertrag.  
+ Während der Ausführung der Clientanwendung führt der Client `WS-MetadataExchange` mit der bereitgestellten `mexAddress` aus. Dabei werden unter Umständen Adresse, Bindung und Vertragsdetails für eine Reihe von Diensten zurückgegeben. Der `address`-Parameter, der `contract`-Parameter, der `contractNamespace`-Parameter, der `binding`-Parameter und der `bindingNamespace`-Parameter werden zum Identifizieren des gewünschten Diensts verwendet. Wenn dieser Parameter abgeglichen wurden, erstellt der Moniker ein WCF-Client mit der erforderlichen Vertragsdefinition und kann dann aufgerufen werden mithilfe des WCF-Clients wie bei den typisierten Vertrag.  
   
 > [!NOTE]
 >  Ist der Moniker nicht ordnungsgemäß formatiert oder der Dienst nicht verfügbar, wird nach dem `GetObject`-Aufruf ein Syntaxfehler zurückgegeben. Vergewissern Sie sich bei Auftreten dieses Fehlers, dass der verwendete Moniker korrekt und der Dienst verfügbar ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Registrieren und Konfigurieren eines Dienstmonikers](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Registrieren und Konfigurieren eines Dienstmonikers](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

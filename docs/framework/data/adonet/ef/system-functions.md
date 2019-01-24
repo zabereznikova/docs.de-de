@@ -2,12 +2,12 @@
 title: Systemfunktionen
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
-ms.openlocfilehash: 277f2f9c69610b134f3f95787f065f65b01712d2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9ab9298214813e7dd3af31f224d84a00040fbf01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597410"
 ---
 # <a name="system-functions"></a>Systemfunktionen
 Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt die folgenden Systemfunktionen zur Verfügung:  
@@ -30,6 +30,6 @@ Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt die folgende
 |---------------------|---------------------|---------------------|  
 |[System Funktionen Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[System Funktionen Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[Systemfunktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Entity SQL Language (Entity SQL-Sprache)](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [SqlClient für Entity Framework-Funktionen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Entity SQL Language (Entity SQL-Sprache)](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [SqlClient für Entity Framework-Funktionen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

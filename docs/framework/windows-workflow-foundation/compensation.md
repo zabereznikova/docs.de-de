@@ -2,12 +2,12 @@
 title: Kompensierung
 ms.date: 03/30/2017
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
-ms.openlocfilehash: 840730acd9289fd394906c49186846e3204c4a99
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
+ms.openlocfilehash: e8a7140e677b553d07014d0ac5a77dd1c7488f53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47863467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607604"
 ---
 # <a name="compensation"></a>Kompensierung
 Kompensierung in Windows Workflow Foundation (WF) ist der Mechanismus, mit dem zuvor Abgeschlossene Arbeitsaufgaben rückgängig gemacht bzw. kompensiert (gemäß der von der Anwendung definierten Logik) werden kann, wenn nachfolgend ein Fehler auftritt. In diesem Abschnitt wird beschrieben, wie die Kompensation in Workflows verwendet wird.  
@@ -48,9 +48,9 @@ Kompensierung in Windows Workflow Foundation (WF) ist der Mechanismus, mit dem z
  Wenn der Workflow aufgerufen wird, wird die folgende Ausgabe in der Konsole angezeigt.  
   
  **ReserveFlight: Ticket wird reserviert.**  
-**ManagerApproval: Genehmigung erhalten.**   
+**ManagerApproval: Manager-Genehmigung erhalten.**   
 **PurchaseFlight: Ticket wird gekauft.**   
-**Workflow wurde erfolgreich abgeschlossen, mit dem Status: geschlossen.**    
+**Workflow wurde erfolgreich abgeschlossen, mit dem Status: Geschlossen.**    
 > [!NOTE]
 >  Die Beispielaktivitäten in diesem Thema z. B. `ReserveFlight` geben ihren Namen und Zweck auf der Konsole an, um die Reihenfolge zu veranschaulichen, in der die Aktivitäten ausgeführt werden, wenn eine Kompensation auftritt.  
   
@@ -94,9 +94,9 @@ Kompensierung in Windows Workflow Foundation (WF) ist der Mechanismus, mit dem z
  **ReserveFlight: Ticket wird reserviert.**  
 **SimulatedErrorCondition: Auslösen von ApplicationException.**   
 **Nicht behandelte Workflowausnahme:**   
-**System.ApplicationException: Simulierte fehlerbedingung im Workflow an.**   
+**System.ApplicationException: Simulierte fehlerbedingung im Workflow.**   
 **CancelFlight: Ticket wird storniert.**   
-**Workflow wurde erfolgreich abgeschlossen, mit dem Status: abgebrochen.**    
+**Workflow wurde erfolgreich abgeschlossen, mit dem Status: Wurde abgebrochen.**    
 ### <a name="cancellation-and-compensableactivity"></a>Abbruch und CompensableActivity  
  Wenn die Aktivitäten in <xref:System.Activities.Statements.CompensableActivity.Body%2A> eines <xref:System.Activities.Statements.CompensableActivity>-Objekts nicht abgeschlossen wurden und die Aktivität abgebrochen wird, werden die Aktivitäten in <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> ausgeführt.  
   
@@ -161,12 +161,12 @@ Activity wf = new Sequence()
   
  Wenn der Workflow aufgerufen wird, wird die simulierte Fehlerbedingungsausnahme von der Hostanwendung in <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> behandelt, der Workflow wird abgebrochen, und die Abbruchlogik von <xref:System.Activities.Statements.CompensableActivity> wird aufgerufen. In diesem Beispiel haben die Kompensationslogik und die Abbruchlogik unterschiedliche Ziele. Wenn <xref:System.Activities.Statements.CompensableActivity.Body%2A> erfolgreich abgeschlossen wurde, bedeutet dies, dass die Kreditkarte belastet und der Flug gebucht wurde. Somit sollten von der Kompensation beide Schritte rückgängig gemacht werden. (In diesem Beispiel wird durch den stornierten Flug automatisch die Kreditkartenbelastung storniert.) Wenn jedoch <xref:System.Activities.Statements.CompensableActivity> abgebrochen wird, bedeutet dies, dass <xref:System.Activities.Statements.CompensableActivity.Body%2A> nicht abgeschlossen wurde und damit die Logik von <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> in der Lage sein muss, zu bestimmen, wie der Abbruch am besten verarbeitet wird. In diesem Beispiel wird die Kreditkartenbelastung durch <xref:System.Activities.Statements.CompensableActivity.CancellationHandler%2A> storniert. Da `ReserveFlight` jedoch die letzte Aktivität in <xref:System.Activities.Statements.CompensableActivity.Body%2A> war, wird nicht versucht, den Flug zu stornieren. `ReserveFlight` war die letzte Aktivität in <xref:System.Activities.Statements.CompensableActivity.Body%2A>. Wenn diese erfolgreich abgeschlossen worden wäre, wäre <xref:System.Activities.Statements.CompensableActivity.Body%2A> abgeschlossen worden und kein Abbruch möglich gewesen.  
   
- **ChargeCreditCard: Kreditkarte für Flug.**  
+ **ChargeCreditCard: Belastung der Kreditkarte für Flug.**  
 **SimulatedErrorCondition: Auslösen von ApplicationException.**   
 **Nicht behandelte Workflowausnahme:**   
-**System.ApplicationException: Simulierte fehlerbedingung im Workflow an.**   
+**System.ApplicationException: Simulierte fehlerbedingung im Workflow.**   
 **CancelCreditCard: Stornieren Sie kreditkartenbelastung.**   
-**Workflow wurde erfolgreich abgeschlossen, mit dem Status: abgebrochen.**  Weitere Informationen über Abbrüche finden Sie unter [Abbruch](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
+**Workflow wurde erfolgreich abgeschlossen, mit dem Status: Wurde abgebrochen.**  Weitere Informationen über Abbrüche finden Sie unter [Abbruch](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md).  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>Explizite Kompensation mit Verwendung der Compensate-Aktivität  
  Im vorherigen Abschnitt wurde die implizite Kompensation behandelt. Eine implizite Kompensation eignet sich für einfache Szenarien. Wenn jedoch mehr explizite Steuerungsmöglichkeiten für das Planen der Kompensationsbehandlung erforderlich sind, kann die <xref:System.Activities.Statements.Compensate>-Aktivität verwendet werden. Um den Kompensationsprozess mit der <xref:System.Activities.Statements.Compensate>-Aktivität zu initiieren, wird das <xref:System.Activities.Statements.CompensationToken>-Objekt des <xref:System.Activities.Statements.CompensableActivity>-Objekts verwendet, für das eine Kompensation möglich sein soll. Mit der <xref:System.Activities.Statements.Compensate>-Aktivität kann eine Kompensation für ein beliebiges abgeschlossenes <xref:System.Activities.Statements.CompensableActivity>-Objekt initiiert werden, solange dieses nicht bestätigt oder kompensiert wurde. Beispielsweise kann eine <xref:System.Activities.Statements.Compensate>-Aktivität im Abschnitt <xref:System.Activities.Statements.TryCatch.Catches%2A> einer <xref:System.Activities.Statements.TryCatch>-Aktivität oder jederzeit nach Abschluss von <xref:System.Activities.Statements.CompensableActivity> verwendet werden. In diesem Beispiel wird die <xref:System.Activities.Statements.Compensate>-Aktivität im Abschnitt <xref:System.Activities.Statements.TryCatch.Catches%2A> einer <xref:System.Activities.Statements.TryCatch>-Aktivität dazu verwendet, die Aktion von <xref:System.Activities.Statements.CompensableActivity> rückgängig zu machen.  
@@ -247,7 +247,7 @@ Activity wf = new Sequence()
  **ReserveFlight: Ticket wird reserviert.**  
 **SimulatedErrorCondition: Auslösen von ApplicationException.**   
 **CancelFlight: Ticket wird storniert.**   
-**Workflow wurde erfolgreich abgeschlossen, mit dem Status: geschlossen.**    
+**Workflow wurde erfolgreich abgeschlossen, mit dem Status: Geschlossen.**    
 ### <a name="confirming-compensation"></a>Bestätigen einer Kompensation  
  Standardmäßig können kompensierbare Aktivitäten jederzeit kompensiert werden, nachdem sie abgeschlossen wurden. Für einige Szenarien eignet sich diese Vorgehensweise möglicherweise nicht. Im vorherigen Beispiel bestand die Kompensation bei der Reservierung des Tickets darin, den Reservierungsvorgang abzubrechen. Nachdem der Flug jedoch stattgefunden hat, ist dieser Kompensationsschritt nicht mehr gültig. Bei der Bestätigung der kompensierbaren Aktivität wird die Aktivität aufgerufen, die von <xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A> angegeben wird. Eine Verwendungsmöglichkeit dafür besteht darin, alle Ressourcen freizugeben, die für die Durchführung der Kompensation erforderlich sind. Nachdem eine kompensierbare Aktivität bestätigt wurde, kann sie nicht mehr kompensiert werden. Falls dies dennoch versucht wird, wird eine <xref:System.InvalidOperationException>-Ausnahme ausgelöst. Wenn ein Workflow erfolgreich abgeschlossen wird, werden alle nicht bestätigten und nicht kompensierbaren Aktivitäten, die erfolgreich abgeschlossen wurden, in umgekehrter Reihenfolge Ihres Abschlusses bestätigt. In diesem Beispiel wird der Flug reserviert, gebucht und abgeschlossen, und dann wird die kompensierbare Aktivität bestätigt. Um ein <xref:System.Activities.Statements.CompensableActivity>-Objekt zu bestätigen, verwenden Sie die <xref:System.Activities.Statements.Confirm>-Aktivität, und geben Sie das <xref:System.Activities.Statements.CompensationToken>-Objekt des <xref:System.Activities.Statements.CompensableActivity>-Objekts an, das bestätigt werden soll.  
   
@@ -314,11 +314,11 @@ Activity wf = new Sequence()
 Wenn der Workflow aufgerufen wird, wird die folgende Ausgabe in der Konsole angezeigt.  
   
 **ReserveFlight: Ticket wird reserviert.**  
-**ManagerApproval: Genehmigung erhalten.**   
+**ManagerApproval: Manager-Genehmigung erhalten.**   
 **PurchaseFlight: Ticket wird gekauft.**   
 **TakeFlight: Flug wird abgeschlossen.**   
 **ConfirmFlight: Flug wurde angetreten, keine Kompensation möglich.**   
-**Workflow wurde erfolgreich abgeschlossen, mit dem Status: geschlossen.**   
+**Workflow wurde erfolgreich abgeschlossen, mit dem Status: Geschlossen.**   
 
 ## <a name="nesting-compensation-activities"></a>Schachteln von Kompensationsaktivitäten  
 
@@ -326,7 +326,7 @@ Ein <xref:System.Activities.Statements.CompensableActivity>-Objekt kann in den A
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Activities.Statements.CompensableActivity>  
-- <xref:System.Activities.Statements.Compensate>  
-- <xref:System.Activities.Statements.Confirm>  
+- <xref:System.Activities.Statements.CompensableActivity>
+- <xref:System.Activities.Statements.Compensate>
+- <xref:System.Activities.Statements.Confirm>
 - <xref:System.Activities.Statements.CompensationToken>

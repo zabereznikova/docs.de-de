@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Dynamisches Erstellen einer neuen Datenbank'
+title: 'Vorgehensweise: Dynamisches Erstellen einer Datenbank'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: 122eb705838da00fedd77a01a5d8c4bd3b5f774e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a73efb334fddc7e0bbfbaca53f0d5026105dd22c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597033"
 ---
-# <a name="how-to-dynamically-create-a-database"></a>Gewusst wie: Dynamisches Erstellen einer neuen Datenbank
+# <a name="how-to-dynamically-create-a-database"></a>Vorgehensweise: Dynamisches Erstellen einer Datenbank
 In LINQ to SQL wird einer relationalen Datenbank ein Objektmodell zugeordnet. Das Mapping wird durch attributbasiertes Mapping oder eine externe Mappingdatei zur Beschreibung der Struktur der relationalen Datenbank ermöglicht. In beiden Szenarien sind genügend Informationen über die relationale Datenbank vorhanden, dass mithilfe der <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode eine neue Instanz der Datenbank erstellt werden kann.  
   
  Die <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>-Methode erstellt nur in dem Umfang ein Replikat der Datenbank, in dem Informationen im Objektmodell codiert sind. Mappingdateien und -attribute aus dem Objektmodell können möglicherweise nicht alle Informationen zur Struktur einer vorhandenen Datenbank codieren. Mappinginformationen stellen nicht den Inhalt von benutzerdefinierten Funktionen, gespeicherten Prozeduren, Triggern und CHECK-Einschränkungen dar. Dieses Verhalten ist für eine Vielzahl von Datenbanken ausreichend.  
@@ -48,9 +48,9 @@ In LINQ to SQL wird einer relationalen Datenbank ein Objektmodell zugeordnet. Da
  [!code-csharp[DLinqSubmittingChanges#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#7)]
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [External Mapping (Externe Zuordnung)](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [SQL-CLR-Typenzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Vornehmen und Übergeben von Datenänderungen](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+## <a name="see-also"></a>Siehe auch
+- [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [External Mapping (Externe Zuordnung)](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [SQL-CLR-Typenzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Vornehmen und Übergeben von Datenänderungen](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

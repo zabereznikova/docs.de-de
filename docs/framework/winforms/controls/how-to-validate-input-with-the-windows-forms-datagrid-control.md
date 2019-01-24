@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Überprüfen von Eingaben mit dem DataGrid-Steuerelement von Windows Forms'
+title: 'Vorgehensweise: Überprüfen von Eingaben mit dem DataGrid-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: a01cb90b7cba596dafa56963dcf9c489deb3e21a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55de6fc1ef4fdf94495ddb07f3329ef9d46b5818
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609485"
 ---
-# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Gewusst wie: Überprüfen von Eingaben mit dem DataGrid-Steuerelement von Windows Forms
+# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Vorgehensweise: Überprüfen von Eingaben mit dem DataGrid-Steuerelement in Windows Forms
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Es gibt zwei Arten der Validierung von Benutzereingaben für Windows Forms verfügbar <xref:System.Windows.Forms.DataGrid> Steuerelement. Wenn der Benutzer versucht, einen Wert eingeben, der einen unzulässigen Datentyp für die Zelle, z. B. eine Zeichenfolge in eine ganze Zahl ist, wird der neue Wert für die ungültige mit den alten Wert ersetzt. Diese Art von Validierung von Benutzereingaben wird automatisch ausgeführt und kann nicht angepasst werden.  
+ Es stehen zwei Arten der Validierung von Benutzereingaben für die Windows-Formulare <xref:System.Windows.Forms.DataGrid> Steuerelement. Wenn der Benutzer versucht, einen Wert eingeben, der den unzulässigen Datentyp für die Zelle, z. B. eine Zeichenfolge in eine ganze Zahl, wird der neue Wert für die ungültige mit dem alten Wert ersetzt. Diese Art der Validierung von Benutzereingaben erfolgt automatisch und kann nicht angepasst werden.  
   
- Unzulässigen Daten, z. B. einen 0-Wert in einem Feld ablehnen, die größer als oder gleich 1 oder eine Zeichenfolge, nicht geeignet sein muss, kann die andere Art von Validierung von Benutzereingaben verwendet werden. Dies erfolgt im Dataset durch Schreiben von einem Ereignishandler für das <xref:System.Data.DataTable.ColumnChanging> oder <xref:System.Data.DataTable.RowChanging> Ereignis. Im folgenden Beispiel wird die <xref:System.Data.DataTable.ColumnChanging> Ereignis, da der unzulässige Wert insbesondere für die Spalte "Product" ungeeignet ist. Sie können die <xref:System.Data.DataTable.RowChanging> Ereignis für die Überprüfung, dass der Wert einer Spalte "Enddatum" höher als die Spalte "Startdatum" in der gleichen Zeile.  
+ Die andere Art von Validierung von Benutzereingaben kann verwendet werden, um alle unzulässigen Daten, z. B. einen 0-Wert in einem Feld abzulehnen, die größer als oder gleich 1 oder eine Zeichenfolge, nicht geeignet sein muss. Dies erfolgt im Dataset durch das Schreiben eines ereignishandlers für das <xref:System.Data.DataTable.ColumnChanging> oder <xref:System.Data.DataTable.RowChanging> Ereignis. Im folgenden Beispiel wird die <xref:System.Data.DataTable.ColumnChanging> Ereignis, da der unzulässige Wert insbesondere für die Spalte "Product" ungeeignet ist. Sie können die <xref:System.Data.DataTable.RowChanging> Ereignis, um sicherzustellen, dass der Wert einer Spalte "Enddatum" höher als die Spalte "Startdatum" in der gleichen Zeile ist.  
   
 ### <a name="to-validate-user-input"></a>Zum Überprüfen von Benutzereingaben  
   
-1.  Schreiben Sie Code für die Behandlung der <xref:System.Data.DataTable.ColumnChanging> Ereignis für die entsprechende Tabelle. Wenn unzulässige Eingabe erkannt wird, rufen Sie die <xref:System.Data.DataRow.SetColumnError%2A> Methode der <xref:System.Data.DataRow> Objekt.  
+1.  Schreiben Sie Code zum Behandeln der <xref:System.Data.DataTable.ColumnChanging> Ereignis für die entsprechende Tabelle. Wenn unzulässige Eingabe erkannt wird, rufen Sie die <xref:System.Data.DataRow.SetColumnError%2A> Methode der <xref:System.Data.DataRow> Objekt.  
   
     ```vb  
     Private Sub Customers_ColumnChanging(ByVal sender As Object, _  
@@ -65,9 +65,9 @@ ms.locfileid: "33535892"
     }  
     ```  
   
-2.  Verbinden Sie den Ereignishandler an das Ereignis.  
+2.  Verbinden Sie den Ereignishandler an das Ereignis an.  
   
-     Fügen Sie den folgenden code innerhalb des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis oder der Konstruktor.  
+     Fügen Sie den folgenden code innerhalb des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis oder den Konstruktor.  
   
     ```vb  
     ' Assumes the grid is bound to a dataset called customersDataSet1  
@@ -83,8 +83,8 @@ ms.locfileid: "33535892"
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.DataGrid>  
- <xref:System.Data.DataTable.ColumnChanging>  
- <xref:System.Data.DataRow.SetColumnError%2A>  
- [DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.DataGrid>
+- <xref:System.Data.DataTable.ColumnChanging>
+- <xref:System.Data.DataRow.SetColumnError%2A>
+- [DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

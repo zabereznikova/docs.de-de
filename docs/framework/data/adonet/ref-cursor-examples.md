@@ -2,12 +2,12 @@
 title: REF CURSOR-Beispiele
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: 7edb9cd41c7949dba6c4a5c24179c30d01309214
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 00e1cd1b9c13514979ee22b32996d35e1bd1c3e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127952"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615347"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR-Beispiele
 Die REF CURSOR-Beispiele umfassen die folgenden drei Microsoft Visual Basic-Beispiele, mit denen die Verwendung von REF CURSOR veranschaulicht wird.  
@@ -79,6 +79,6 @@ END CURSPKG;
 /  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Oracle-REF CURSORs](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Oracle-REF CURSORs](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

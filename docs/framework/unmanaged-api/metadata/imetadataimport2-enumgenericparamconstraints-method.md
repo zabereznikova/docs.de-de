@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd5d35cb13bb55fc73e160089cbc1050cb3d5c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e7a51d1ddf7a5a65ce8713161c53c1c54a5d8861
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617693"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints-Methode
-Ruft einen Enumerator für ein Array mit Einschränkungen für generische Typparameter durch das angegebene Token dargestellten generischen Parameter zugeordnet.  
+Ruft einen Enumerator für ein Array von generischen Parameter-Einschränkungen, die durch das angegebene Token dargestellten generischen Parameter zugeordnet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ HRESULT EnumGenericParamConstraints (
  [out] Das Array von Einschränkungen für generische Typparameter aufgelistet werden.  
   
  `cMax`  
- [in]   Die angeforderte maximale Anzahl von Token zu versehen `rGenericParamConstraints`.  
+ [in]   Die angeforderte maximale Anzahl von Token in platzieren `rGenericParamConstraints`.  
   
  `pcGenericParamConstraints`  
  [out] Ein Zeiger auf die Anzahl der Token in platziert `rGenericParamConstraints`.  
@@ -60,17 +60,17 @@ HRESULT EnumGenericParamConstraints (
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumGenericParameterConstraints` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|`phEnum` verfügt über keine Memberelemente. In diesem Fall `pcGenericParameterConstraints` auf 0 (null) festgelegt ist.|  
+|`S_FALSE`|`phEnum` enthält keine Memberelemente. In diesem Fall `pcGenericParameterConstraints` auf 0 (null) festgelegt ist.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

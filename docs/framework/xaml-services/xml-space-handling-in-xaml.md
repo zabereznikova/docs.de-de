@@ -7,12 +7,12 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: 051cb6b3a314509e9593ee570fd659098670e88b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a7c3775f2e49a80eabc61f24d086a94fcadfd574
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617576"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>xml:space-Behandlung in XAML
 Die `xml:space` -Attribut ist ein XML-definiertes Attribut, das das Verhalten der Verarbeitung von signifikanten Leerzeichen in einem Objektelement deklariert. Dieses Verhalten gilt für den gesamten Inhalt (inneren Text), die im Element enthalten, in denen `xml:space` wird deklariert, und auch Bereiche von untergeordneten Elementen.  
@@ -40,6 +40,6 @@ Die `xml:space` -Attribut ist ein XML-definiertes Attribut, das das Verhalten de
   
  Eine vollständige Erläuterung der Leerzeichen in XAML verarbeitet, finden Sie unter [White-Space-Verarbeitung in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Leerzeichen in XAML verarbeitet](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Siehe auch
+- [Leerzeichen in XAML verarbeitet](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

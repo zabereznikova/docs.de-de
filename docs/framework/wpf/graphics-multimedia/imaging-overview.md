@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 10cdf5b8cf475c95e086b447b36a569da2173fa9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fa23595359bc210edfd1d55486158a71420699c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195672"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615071"
 ---
 # <a name="imaging-overview"></a>Übersicht über die Bildverarbeitung
 Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] ermöglicht es Entwicklern, Bilder anzuzeigen, zu transformieren und zu formatieren.  
@@ -133,7 +133,7 @@ Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../..
 #### <a name="stretching-images"></a>Dehnen von Bildern  
  Die <xref:System.Windows.Controls.Image.Stretch%2A> -Eigenschaft steuert, wie ein Bild auf den Füllbereich seines Containers ausgedehnt wird. Die <xref:System.Windows.Controls.Image.Stretch%2A> Eigenschaft akzeptiert die folgenden Werte, die von definiert die <xref:System.Windows.Media.Stretch> Enumeration:  
   
--   <xref:System.Windows.Media.Stretch.None>: Das Bild nicht gestreckt, um den Ausgabebereich auszufüllen. Wenn das Bild größer als der Ausgabebereich ist, wird das Bild in den Ausgabebereich gezogen, und alle überstehenden Bereiche werden abgeschnitten.  
+-   <xref:System.Windows.Media.Stretch.None>: Das Bild wird nicht gestreckt, um den Ausgabebereich auszufüllen. Wenn das Bild größer als der Ausgabebereich ist, wird das Bild in den Ausgabebereich gezogen, und alle überstehenden Bereiche werden abgeschnitten.  
   
 -   <xref:System.Windows.Media.Stretch.Fill>: Das Bild wird skaliert, um die Größe des Ausgabebereichs. Da Höhe und Breite des Bilds unabhängig voneinander skaliert werden, wird das ursprüngliche Seitenverhältnis des Bilds möglicherweise nicht beibehalten. Dies bedeutet, dass das Bild möglicherweise verzerrt wird, um den Ausgabecontainer vollständig auszufüllen.  
   
@@ -189,10 +189,10 @@ Bildpinsel können Formen, Steuerelemente, Text usw. füllen.
 > [!NOTE]
 >  Der Codec muss digital signiert werden, damit das System ihn erkennt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Imaging.BitmapSource>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Controls.Image>  
- <xref:System.Windows.Media.Imaging.BitmapMetadata>  
- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Win32 Sample Codec](https://go.microsoft.com/fwlink/?LinkID=160052)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Imaging.BitmapSource>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Controls.Image>
+- <xref:System.Windows.Media.Imaging.BitmapMetadata>
+- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Win32 Sample Codec](https://go.microsoft.com/fwlink/?LinkID=160052)

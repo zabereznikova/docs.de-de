@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: acf3ba12a9a7e6ba9a8e378892098f5f265a23d9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f6709cad76ff05c3134c8430b36d5f34019b03ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606581"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>XAML- und benutzerdefinierte Klassen für WPF
 Die Implementierung von XAML in [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Frameworks unterstützt die Möglichkeit zum Definieren einer benutzerdefinierten Klasse oder Struktur in einer beliebigen [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Sprache und den anschließenden Zugriff auf diese Klasse unter Verwendung von XAML-Markup. Sie können eine Mischung aus [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Typen und ihren benutzerdefinierten Typen innerhalb derselben Markupdatei verwenden. Die übliche Vorgehensweise hierbei ist, Ihren benutzerdefinierten Typen ein XAML-Namespace-Präfix zuzuordnen. Dieses Thema beschreibt die Anforderungen, die eine benutzerdefinierte Klasse erfüllen muss, um als XAML-Element verwendet werden zu können.  
@@ -79,7 +79,7 @@ Die Implementierung von XAML in [!INCLUDE[TLA#tla_clr](../../../../includes/tlas
   
 -   Das Objekt, das das Auflistungsobjekt darstellt, muss nicht in Objektelementsyntax angegeben werden. Dieses Auflistungstyps ist implizit dann vorhanden, wenn Sie eine Eigenschaft in XAML angeben, die einen Auflistungstyp annimmt.  
   
--   Untergeordnete Elemente der Auflistungseigenschaft im Markup werden so verarbeitet, dass sie Mitglieder der Auflistung werden. Normalerweise erfolgt der Codezugriff auf die Mitglieder einer Auflistung über Listen- bzw. Wörterbuch-Methoden wie z.B. `Add`, oder über einen Indexer. XAML-Syntax unterstützt jedoch weder Methoden noch Indexer (Ausnahme: XAML 2009 kann Methoden unterstützen, aber die Verwendungen von XAML 2009 schränkt die Verwendungsmöglichkeiten mit WPF ein; siehe [XAML 2009-Sprachfunktionen](../../../../docs/framework/xaml-services/xaml-2009-language-features.md)). Auflistungen sind offensichtlich eine durchaus übliche Anforderung beim Erstellen einer Struktur von Elementen, und Sie benötigen eine Methode zum Befüllen dieser Auflistungen im deklarativen XAML-Code. Aus diesem Grund werden untergeordnete Elemente einer Auflistungseigenschaft verarbeitet, indem sie der Auflistung hinzugefügt werden, die dem Typwert der Auflistungseigenschaft entspricht.  
+-   Untergeordnete Elemente der Auflistungseigenschaft im Markup werden so verarbeitet, dass sie Mitglieder der Auflistung werden. Normalerweise erfolgt der Codezugriff auf die Mitglieder einer Auflistung über Listen- bzw. Wörterbuch-Methoden wie z.B. `Add`, oder über einen Indexer. XAML-Syntax unterstützt jedoch keine Methoden noch Indexer (Ausnahme: XAML 2009 kann Methoden unterstützen, jedoch mit XAML 2009 schränkt die möglichen Verwendungen von WPF. finden Sie unter [XAML 2009-Sprachfunktionen](../../../../docs/framework/xaml-services/xaml-2009-language-features.md)). Auflistungen sind offensichtlich eine durchaus übliche Anforderung beim Erstellen einer Struktur von Elementen, und Sie benötigen eine Methode zum Befüllen dieser Auflistungen im deklarativen XAML-Code. Aus diesem Grund werden untergeordnete Elemente einer Auflistungseigenschaft verarbeitet, indem sie der Auflistung hinzugefügt werden, die dem Typwert der Auflistungseigenschaft entspricht.  
   
  Die Implementierung von .NET Framework-XAML-Diensten und somit der WPF XAML-Prozessor verwenden die folgende Definition für eine Auflistungseigenschaft. Die Eigenschaftentyp der Eigenschaft muss einen der folgenden implementieren:  
   
@@ -112,9 +112,9 @@ Die Implementierung von XAML in [!INCLUDE[TLA#tla_clr](../../../../includes/tlas
 ## <a name="serializing-xaml"></a>Serialisieren von XAML  
  Für bestimmte Szenarios, z.B. Wenn Sie Autor eines Steuerelements sind, möchten Sie möglicherweise auch sicherstellen, dass jede Objektdarstellung, die in XAML instanziiert werden kann, auch wieder zurück in das entsprechende XAML-Markup serialisiert werden kann. Serialisierungsanforderungen werden in diesem Thema nicht beschrieben. Informationen hierzu finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md) und [Elementstruktur und Serialisierung](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Übersicht über Basiselemente](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Laden von XAML und Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Übersicht über Basiselemente](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+- [Laden von XAML und Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)

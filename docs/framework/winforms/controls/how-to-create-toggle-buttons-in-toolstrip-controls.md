@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen von Umschaltflächen in ToolStrip-Steuerelementen'
+title: 'Vorgehensweise: Erstellen von Umschaltflächen in ToolStrip-Steuerelementen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: a04d531433273328c2d8eb0c5ef614f08c33952a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 723916eb0c1e242df301c49bf0716e0262a3ba42
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530379"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614977"
 ---
-# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Gewusst wie: Erstellen von Umschaltflächen in ToolStrip-Steuerelementen
-Wenn ein Benutzer eine Umschaltfläche klickt, vertieft angezeigt, die abgesenkt beibehalten, bis der Benutzer erneut auf die Schaltfläche klickt.  
+# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Vorgehensweise: Erstellen von Umschaltflächen in ToolStrip-Steuerelementen
+Wenn ein Benutzer eine Umschaltfläche klickt, wird abgesenkt dargestellt und behält die abgesenkt dargestellt, bis der Benutzer erneut auf die Schaltfläche klickt.  
   
-### <a name="to-create-a-toggling-toolstripbutton"></a>So erstellen eine ToolStripButton  
+### <a name="to-create-a-toggling-toolstripbutton"></a>Erstellen Sie eine ToolStripButton  
   
--   Verwenden Sie Code wie im folgenden Codebeispiel wird ein. Mit diesem Code wird davon ausgegangen, dass das Formular enthält ein <xref:System.Windows.Forms.ToolStrip> -Steuerelement, und dass seine <xref:System.Windows.Forms.ToolStrip.Items%2A> Auflistung enthält ein <xref:System.Windows.Forms.ToolStripButton> aufgerufen `toolStripButton1`. Außerdem wird angenommen, dass Sie einen Ereignishandler aufgerufen haben `toolStripButton1_CheckedChanged`.  
+-   Verwenden Sie Code wie im folgenden Codebeispiel wird ein. Dieser Code setzt voraus, dass das Formular enthält ein <xref:System.Windows.Forms.ToolStrip> -Steuerelement, und dass die <xref:System.Windows.Forms.ToolStrip.Items%2A> Auflistung enthält ein <xref:System.Windows.Forms.ToolStripButton> namens `toolStripButton1`. Außerdem wird angenommen, dass Sie einen Ereignishandler mit dem Namen haben `toolStripButton1_CheckedChanged`.  
   
     ```vb  
     toolStripButton1.CheckOnClick = True  
@@ -35,6 +35,6 @@ Wenn ein Benutzer eine Umschaltfläche klickt, vertieft angezeigt, die abgesenkt
     EventHandler(toolStripButton1_CheckedChanged);  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ToolStripButton>  
- [Übersicht über das ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ToolStripButton>
+- [Übersicht über das ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1d76dcd581b54d54d6b44505e09476993b2930c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a7761c2f15cd51bff798e1b12c3a5824930b344d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617719"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>IMetaDataImport2::GetGenericParamConstraintProps-Methode
-Ruft die Einschränkung des generischen Parameters, durch die angegebene Einschränkung-Token dargestellt wird zugeordneten Metadaten ab.  
+Ruft die Einschränkung des generischen Parameters, durch das Token der angegebenen Einschränkung dargestellt zugeordneten Metadaten ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,23 +39,23 @@ HRESULT GetGenericParamConstraintProps (
   
 #### <a name="parameters"></a>Parameter  
  `gpc`  
- [in] Das Token für die Einschränkung der generischen Parameter für die die Metadaten zurückgegeben werden sollen.  
+ [in] Das Token für die Einschränkung der generischen Parameter für die die Metadaten zurückgegeben werden soll.  
   
  `ptGenericParam`  
- [out] Ein Zeiger auf das Token, das den generischen Parameter darstellt, der eingeschränkt wird.  
+ [out] Ein Zeiger auf das Token, das den generischen Parameter darstellt, der beschränkt ist.  
   
  `ptkConstraintType`  
- [out] Ein Zeiger auf eine TypeDef, TypeRef-Token oder TypeSpec-Token, die eine Einschränkung auf darstellt `ptGenericParam`.  
+ [out] Ein Zeiger auf eine TypeDef, TypeRef oder TypeSpec-Token, die eine Einschränkung darstellt `ptGenericParam`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

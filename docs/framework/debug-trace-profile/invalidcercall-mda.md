@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15f41ebd961f25979fe569fd89dd2135a0a6cd41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3cccb94268264217a1e6a1b5def71c6c433b820
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614782"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall-MDA
 Der `invalidCERCall`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein Aufruf innerhalb des Diagramms des eingeschränkten Ausführungsbereichs (CER) an eine Methode stattfindet, die keinen Zuverlässigkeitsvertrag oder einen übermäßig schwachen Vertrag besitzt. Ein schwacher Vertrag ist ein Vertrag, der deklariert, dass die schlimmste Zustandsbeschädigung einen größeren Umfang hat als die an den Aufruf übergebene Instanz. <xref:System.AppDomain> oder der Prozessstatus werden also möglicherweise beschädigt oder das Ergebnis bei einem Aufruf innerhalb eines CER kann nicht immer deterministisch berechnet werden.  
@@ -39,7 +39,7 @@ Der `invalidCERCall`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, w
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Der Aufruf eines schwachen Vertrags aus einem CER führt möglicherweise dazu, dass der CER seine Vorgänge nicht vollständig ausführen kann. Dies kann zu einer Beschädigung des <xref:System.AppDomain>-Prozesszustands führen.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Im Folgenden finden Sie eine Beispielausgabe dieses MDAs.  
   
  `Method 'MethodWithCer', while executing within a constrained execution region, makes a call at IL offset 0x000C to 'MethodWithWeakContract', which does not have a sufficiently strong reliability contract and might cause non-deterministic results.`  
@@ -54,7 +54,7 @@ Der `invalidCERCall`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, w
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
- <xref:System.Runtime.ConstrainedExecution>  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
+- <xref:System.Runtime.ConstrainedExecution>
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

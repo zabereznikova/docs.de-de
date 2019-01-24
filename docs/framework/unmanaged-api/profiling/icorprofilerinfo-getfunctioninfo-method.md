@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19736d177639b00c9563462f10e33e4c122297c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 00b20134c0134aa30d2056b634c8525f66ed8cf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456012"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602455"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo-Methode
-Ruft die übergeordnete Klasse und die Metadaten für die angegebene Funktion.  
+Ruft die übergeordnete Klasse und die Metadaten token für die angegebene Funktion stellen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,7 +39,7 @@ HRESULT GetFunctionInfo(
   
 #### <a name="parameters"></a>Parameter  
  `functionId`  
- [in] Die ID der Funktion, für die die übergeordnete Klasse und das Metadatentoken abgerufen.  
+ [in] Die ID der Funktion für die die übergeordnete Klasse und die Metadaten token abgerufen werden soll.  
   
  `pClassId`  
  [out] Ein Zeiger auf die übergeordnete Klasse der Funktion.  
@@ -51,12 +51,12 @@ HRESULT GetFunctionInfo(
  [out] Ein Zeiger auf das Metadatentoken für die Funktion.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Profilercode kann Aufrufen [ICorProfilerInfo:: GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) auf eine Metadatenschnittstelle für ein bestimmtes Modul zu erhalten. Das Metadatentoken, das an den Speicherort zurückgegeben wird, auf den durch `pToken` verwiesen wird, kann anschließend für den Zugriff auf die Metadaten für die Funktion verwendet werden.  
+ Der Profilercode kann Aufrufen [ICorProfilerInfo:: GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) um eine Schnittstelle für die Metadaten für ein bestimmtes Modul zu erhalten. Das Metadatentoken, das an den Speicherort zurückgegeben wird, auf den durch `pToken` verwiesen wird, kann anschließend für den Zugriff auf die Metadaten für die Funktion verwendet werden.  
   
- Die `ClassID` einer Funktion in einer generischen Klasse möglicherweise nicht ohne weitere Kontextinformationen für die Verwendung der Funktion erhältlich. In diesem Fall `pClassId` wird "0" sein. Zu verwendende Profilercode [ICorProfilerInfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) mit einem COR_PRF_FRAME_INFO-Wert, um mehr Kontext bereitzustellen.  
+ Die `ClassID` einer Funktion in einer generischen Klasse kann es sein, ohne weitere Kontextinformationen über die Verwendung der Funktion. In diesem Fall `pClassId` 0. Profiler-Code verwenden sollte [ICorProfilerInfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) mit einem COR_PRF_FRAME_INFO-Wert, um mehr Kontext bereitzustellen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -64,5 +64,5 @@ HRESULT GetFunctionInfo(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Drucken einer mehrseitigen Textdatei in Windows Forms'
+title: 'Vorgehensweise: Drucken einer mehrseitigen Textdatei in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: b8cfba338bb318139bedf5595df8bad666c201bd
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 149f0ca6df60931f8bb567ef5e4876c779825f1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604368"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Gewusst wie: Drucken einer mehrseitigen Textdatei in Windows Forms
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Vorgehensweise: Drucken einer mehrseitigen Textdatei in Windows Forms
 Texte werden in Windows-basierten Anwendungen häufig gedruckt. Die <xref:System.Drawing.Graphics>-Klasse stellt Methoden bereit, mit denen Objekte (Grafik oder Text) auf einem Gerät, z. B. auf einem Bildschirm oder Drucker, gezeichnet werden können.  
   
 > [!NOTE]
@@ -58,9 +58,9 @@ Texte werden in Windows-basierten Anwendungen häufig gedruckt. Die <xref:System
   
 -   Verweise auf die Assemblys "System", "System.Windows.Forms" und "System.Drawing".  
   
--   Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch: [Vorgehensweise Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+-   Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Kompilieren und Ausführen einer vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Drawing.Graphics>  
- <xref:System.Drawing.Brush>  
- [Druckunterstützung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Drawing.Graphics>
+- <xref:System.Drawing.Brush>
+- [Druckunterstützung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f34fee19c796f65d315fcbd26d55e1d5322303a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c131c5531d52f5ee81c70bddb67e8bc6071f39e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599662"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass-Methode
-Bestimmt, ob die angegebene Klasse eine Array-Klasse.  
+Bestimmt, ob die angegebene Klasse ein Array-Klasse ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,22 +39,22 @@ HRESULT IsArrayClass(
   
 #### <a name="parameters"></a>Parameter  
  `classId`  
- [in] Die ID der Klasse untersucht werden.  
+ [in] Die ID der Klasse, die untersucht werden.  
   
  `pBaseElemType`  
  [out] Ein Zeiger auf einen Wert der CorElementType-Enumeration, die den Typ der Elemente des Arrays angibt.  
   
  `pBaseClassId`  
- [out] Ein Zeiger auf die Klassen-ID der Arrayelemente, falls verfügbar.  
+ [out] Ein Zeiger auf die Klassen-ID der Arrayelemente, sofern verfügbar.  
   
  `pcRank`  
  [out] Ein Zeiger auf eine ganze Zahl, die den Rang (d. h. die Anzahl der Dimensionen) des Arrays angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die angegebene Klasse eine Array-Klasse, ist die `IsArrayClass` Methodenrückgabe ein S_OK HRESULT und Werte für alle nicht-Null-Output-Parameter. Andernfalls wird "S_FALSE" zurückgegeben.  
+ Wenn die angegebene Klasse ein Array-Klasse, ist die `IsArrayClass` Methodenrückgabe ein S_OK HRESULT und die Werte für alle nicht-Null Ausgabeparameter. Wird zurückgegeben, andernfalls S_FALSE.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -61,5 +62,5 @@ HRESULT IsArrayClass(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

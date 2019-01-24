@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e3cdbff5054ec990c40c333ed4bd4029a91f12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eb085cc486c307a308258709f4c58619597bc202
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608387"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx-Methode
 Startet einen Prozess auf einem Remotecomputer unter dem Debugger.  
@@ -43,26 +43,26 @@ HRESULT DebugActiveProcessEx (
  [in] Zeiger auf eine [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Dieser Parameter wird verwendet, um den Computer zu ermitteln, auf dem der Prozess ausgeführt wird.  
   
  `id`  
- [in] Die ID des Prozesses, zu dem der Debugger angefügt werden kann.  
+ [in] Die ID des Prozesses, für die der Debugger wird angefügt werden.  
   
  `win32Attach`  
- [in] `true` , wenn der Debugger sollte sich so wie die Win32-Debugger für den Prozess Verhalten und die nicht verwalteten Rückrufe; anderenfalls `false`.  
+ [in] `true` Wenn der Debugger sollte sich so wie Win32-Debugger für den Prozess Verhalten und die nicht verwalteten Rückrufe; anderenfalls `false`.  
   
  `ppProcess`  
- [out] Ein Zeiger auf die Adresse eines Objekts "ICorDebugProcess", das den Prozess darstellt, an dem der Debugger angefügt wurde.  
+ [out] Ein Zeiger auf die Adresse ein "ICorDebugProcess"-Objekt, das den Prozess darstellt, an dem der Debugger angefügt wurde.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK  
- An den Prozess auf dem Remotecomputer wurde erfolgreich angefügt.  
+ Erfolgreich an den Prozess auf dem Remotecomputer angefügt.  
   
  E_FAIL (oder andere E_-Rückgabecodes)  
- Anfügen an den Prozess auf dem Remotecomputer ist nicht möglich.  
+ Anfügen an den Prozess auf dem Remotecomputer nicht möglich.  
   
 ## <a name="remarks"></a>Hinweise  
- Debuggen im gemischten Modus ist in Silverlight nicht unterstützt.  
+ Debuggen im gemischten Modus wird in Silverlight nicht unterstützt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -70,8 +70,8 @@ HRESULT DebugActiveProcessEx (
   
  **.NET Framework-Versionen:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugRemote-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)  
- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugRemote-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

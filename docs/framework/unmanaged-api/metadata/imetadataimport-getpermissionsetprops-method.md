@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be9b2fa3037dc00bce52d9ff89291d1c02cffc38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bdee4df6964097f1c333a8fe96756a8898f7c1cc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598931"
 ---
 # <a name="imetadataimportgetpermissionsetprops-method"></a>IMetaDataImport::GetPermissionSetProps-Methode
-Ruft die zugeordneten Metadaten den <xref:System.Security.PermissionSet?displayProperty=nameWithType> durch das angegebene Berechtigungstoken dargestellt wird.  
+Ruft ab, die zugeordneten Metadaten den <xref:System.Security.PermissionSet?displayProperty=nameWithType> durch das angegebene Berechtigungstoken dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,27 +40,27 @@ HRESULT GetPermissionSetProps (
   
 #### <a name="parameters"></a>Parameter  
  `pm`  
- [in] Das Metadatentoken, das die Berechtigung zum Abrufen der Metadateneigenschaften für darstellt.  
+ [in] Das Metadatentoken, das die Berechtigungen zum Abrufen der Metadateneigenschaften für darstellt.  
   
  `pdwAction`  
- [out] Ein Zeiger auf den Berechtigungssatz.  
+ [out] Ein Zeiger auf den Berechtigungssatz auf.  
   
  `ppvPermission`  
  [out] Ein Zeiger auf die binäre Metadatensignatur des Berechtigungssatzes.  
   
  `pcbPermission`  
- [out] Die Größe in Bytes des `ppvPermission`.  
+ [out] Die Größe in Bytes der `ppvPermission`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Security.PermissionSet>  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Security.PermissionSet>
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

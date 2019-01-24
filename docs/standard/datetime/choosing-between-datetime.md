@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54392ce12ca93d3a7979b1d0bbc78132773f88ce
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0ed41d7739822d531986d65faa820ab7100c6651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227713"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600114"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"
 
@@ -47,7 +47,7 @@ ms.locfileid: "44227713"
 
 ## <a name="the-datetime-structure"></a>Die DateTime-Struktur
 
-Ein <xref:System.DateTime> -Wert definiert ein bestimmtes Datum und eine Uhrzeit. Es enthält eine <xref:System.DateTime.Kind%2A> -Eigenschaft, bietet die eingeschränkte Informationen über die Zeitzone, zu der dieses Datum und die Uhrzeit gehören. Die <xref:System.DateTimeKind> von zurückgegebene Wert die <xref:System.DateTime.Kind%2A> Eigenschaft gibt an, ob die <xref:System.DateTime> -Wert die lokale Uhrzeit darstellt (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), Coordinated Universal Time (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), oder eine unspezifische Uhrzeit (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
+Ein <xref:System.DateTime> -Wert definiert ein bestimmtes Datum und eine Uhrzeit. Es enthält eine <xref:System.DateTime.Kind%2A> -Eigenschaft, bietet die eingeschränkte Informationen über die Zeitzone, zu der dieses Datum und die Uhrzeit gehören. Der von der <xref:System.DateTimeKind> -Eigenschaft zurückgegebene <xref:System.DateTime.Kind%2A> Wert zeigt an, ob der <xref:System.DateTime> -Wert eine lokale Uhrzeit darstellt (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>), eine Zeit im UTC-Format (Coordinated Universal Time) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>) oder eine unspezifische Uhrzeit (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>).
 
 Die <xref:System.DateTime> -Struktur eignet sich für Anwendungen, die Folgendes können:
 
@@ -68,7 +68,7 @@ Die <xref:System.DateTime> -Struktur eignet sich für Anwendungen, die Folgendes
 Wenn nicht ein bestimmter <xref:System.DateTime> -Wert UTC darstellt, ist dieser Datums- und Uhrzeitwert häufig mehrdeutig oder in seiner Portierbarkeit eingeschränkt. Wenn z. B. ein <xref:System.DateTime> -Wert die lokale Uhrzeit darstellt, ist er innerhalb dieser lokalen Zeitzone portierbar (d. h., wenn der Wert auf einem anderen System in derselben Zeitzone deserialisiert wird, identifiziert dieser Wert immer noch eindeutig einen einzigen Zeitpunkt). Außerhalb der lokalen Zeitzone kann dieser <xref:System.DateTime> -Wert über mehrere Interpretationen verfügen. Wenn die <xref:System.DateTime.Kind%2A>-Eigenschaft des Werts <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> ist, ist er sogar noch weniger portierbar: Er ist jetzt innerhalb derselben Zeitzone mehrdeutig und möglicherweise sogar auf dem selben System, auf dem er erstmalig serialisiert wurde. Nur wenn ein <xref:System.DateTime> -Wert eine UTC-Zeit darstellt, identifiziert dieser Wert eindeutig einen einzigen Zeitpunkt, unabhängig vom System oder der Zeitzone, in der der Wert verwendet wird.
 
 > [!IMPORTANT]
-> Beim Speichern oder Freigeben von <xref:System.DateTime>-Daten sollte UTC verwendet werden, und die <xref:System.DateTime>-<xref:System.DateTime.Kind%2A>-Eigenschaft des Werts sollte auf <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> festgelegt werden.
+> Beim Speichern oder Freigeben von <xref:System.DateTime>-Daten sollte UTC verwendet werden, und die <xref:System.DateTime>-<xref:System.DateTime.Kind%2A>-Eigenschaft des Werts sollte auf <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>festgelegt werden.
 
 ## <a name="the-datetimeoffset-structure"></a>Die DateTimeOffset-Struktur
 
@@ -122,4 +122,4 @@ Die Zeitzonenunterstützung in .NET kann nur genutzt werden, wenn die Zeitzone, 
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
+- [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)

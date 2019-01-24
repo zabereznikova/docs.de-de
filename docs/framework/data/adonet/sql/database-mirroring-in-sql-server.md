@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 90357b96d570ec1b2f80f8809ccfde69977bbc25
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e70624a43945d29c1690fbed6e39da4f8da6cfe4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599984"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Datenbankspiegelungen in SQL Server
 Mithilfe der Datenbankspiegelung in SQL Server können Sie eine Kopie, oder auch ein Spiegelbild, einer SQL Server-Datenbank auf einem Standbyserver speichern. Durch das Spiegeln wird sichergestellt, dass jederzeit zwei separate Kopien der Daten vorhanden sind. Dies gewährleistet Hochverfügbarkeit und vollständige Datenredundanz. Der .NET-Datenanbieter für SQL Server stellt implizite Unterstützung für die Datenbankspiegelung bereit. Daher muss der Entwickler keine weiteren Schritte ausführen oder Code programmieren, nachdem die Spiegelung für eine SQL Server-Datenbank konfiguriert wurde. Außerdem unterstützt das <xref:System.Data.SqlClient.SqlConnection>-Objekt einen expliziten Verbindungsmodus, über den der Name eines Failover-Partnerservers im <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> angegeben werden kann.  
@@ -63,5 +63,5 @@ string activeServer = connection.DataSource;
 |--------------|-----------------|  
 |[Die Datenbankspiegelung](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Beschreibt, wie die Spiegelung in SQL Server eingerichtet und konfiguriert wird.|  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

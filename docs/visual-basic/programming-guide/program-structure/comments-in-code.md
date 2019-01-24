@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: fafc80cc4847e9ec05f19fc7f3d31d2d5b11197a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 92aadfe851514dcba713455664cf8f7b0aa1c17b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44194579"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597540"
 ---
 # <a name="comments-in-code-visual-basic"></a>Kommentare in Code (Visual Basic)
 Wenn Sie die Codebeispiele lesen, werden Sie oft auf das Kommentarsymbol (`'`) stoßen. Dieses Symbol weist Visual Basic-Compiler ignoriert den darauf folgenden Text, oder die *Kommentar*. Kommentare sind kurze, erläuternde Hinweise, die dem Code zum Zwecke der besseren Verständlichkeit hinzugefügt werden.  
@@ -59,9 +59,9 @@ Wenn Sie die Codebeispiele lesen, werden Sie oft auf das Kommentarsymbol (`'`) s
 > [!NOTE]
 >  Sie können Code auch Kommentare hinzufügen, indem Sie vor dem betreffenden Text das `REM`-Schlüsselwort einfügen. Allerdings die `'` Symbol und die **Kommentar**/**Auswahlkommentar löschen** Schaltflächen sind einfacher zu verwenden und erfordern weniger Speicherplatz und Arbeitsspeicher.  
   
-## <a name="see-also"></a>Siehe auch  
- [Dokumentieren von Code mit XML-Kommentaren](https://msdn.microsoft.com/magazine/dd722812.aspx)  
- [Gewusst wie: Erstellen einer XML-Dokumentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)  
- [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [REM-Anweisung](../../../visual-basic/language-reference/statements/rem-statement.md)
+## <a name="see-also"></a>Siehe auch
+- [Dokumentieren von Code mit XML-Kommentaren](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Vorgehensweise: Erstellen von XML-Dokumentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)
+- [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [REM-Anweisung](../../../visual-basic/language-reference/statements/rem-statement.md)

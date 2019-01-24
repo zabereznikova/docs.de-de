@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3536184fa7798ac8eabe851221ec692c126460b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5206b7cd07acd76237ab72268b492782ac6e49ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616718"
 ---
 # <a name="icorpublishenum-interface"></a>ICorPublishEnum-Schnittstelle
-Dient als abstrakte Basisschnittstelle für die Enumeratoren, die die Veröffentlichung von Informationen über Prozesse und Anwendungsdomänen verwendet werden.  
+Dient als abstrakte Basisschnittstelle für die Enumeratoren, die die Veröffentlichung von Informationen zu Prozessen und Anwendungsdomänen verwendet werden.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Clone-Methode](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|Erstellt eine Kopie dieser `ICorPublishEnum` Objekt.|  
+|[Clone-Methode](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-clone-method.md)|Erstellt eine Kopie dieses `ICorPublishEnum` Objekt.|  
 |[GetCount-Methode](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-getcount-method.md)|Ruft die Anzahl der Elemente in der Enumeration.|  
 |[Reset-Methode](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-reset-method.md)|Verschiebt den Cursor auf den Anfang der Enumeration.|  
-|[Skip-Methode](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|Verschiebt den Cursor in der Enumeration, um die angegebene Anzahl von Elementen.|  
+|[Skip-Methode](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-skip-method.md)|Verschiebt den Cursor vorwärts in der Enumeration, um die angegebene Anzahl von Elementen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die folgenden Enumeratoren leiten sich von `ICorPublishEnum`:  
+ Leiten Sie die folgenden Enumeratoren von `ICorPublishEnum`:  
   
 -   [ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)  
   
 -   [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorPub.idl, CorPub.h  
   
@@ -51,6 +51,6 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die die Veröffent
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [CorpubPublish-Co-Klasse](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [CorpubPublish-Co-Klasse](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

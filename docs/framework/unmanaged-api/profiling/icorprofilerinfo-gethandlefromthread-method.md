@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9658ad8a1963d3747fb7c23dce84790a30b17db3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8f1eb2354536a436bd6ae41cf70bf11549982d5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453221"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612592"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread-Methode
-Ordnet die ID eines Threads an ein Win32-Thread-Handle.  
+Ordnet die ID eines Threads ein Win32-Thread-Handle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,16 +37,16 @@ HRESULT GetHandleFromThread(
   
 #### <a name="parameters"></a>Parameter  
  `threadId`  
- [in] Die Thread-ID zugeordnet werden.  
+ [in] Die Thread-ID zugeordnet werden soll.  
   
  `phThread`  
  [out] Ein Zeiger auf ein Win32-Thread-Handle.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Profiler muss die Win32 Aufrufen `DuplicateHandle` Funktion auf das Handle, bevor Sie ihn verwenden.  
+ Der Profiler muss die Win32 Aufrufen `DuplicateHandle` Funktion auf den Ziehpunkt, bevor Sie ihn verwenden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -54,5 +54,5 @@ HRESULT GetHandleFromThread(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

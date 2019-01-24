@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f40b99c0a81bf0f2b622c7d23157dbb5736df1ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: abc5f9350342af0439cb83f1df14979cfabcdb3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403291"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601540"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob-Methode
-Ruft die Win32-Ressource Blob ab. Rufen Sie diese Methode nach dem Festlegen der Assemblyoptionen.  
+Ruft die Win32-Ressourcen-Blob ab. Rufen Sie diese Methode nach dem Festlegen von Assemblyoptionen für die an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,27 +44,27 @@ HRESULT GetWin32ResBlob(
  Die ID der Assembly.  
   
  `FileToken`  
- Datei-Token verwendet, um den Dateinamen verwendet werden, beim Erstellen der Win32-Versionsressource abzurufen.  
+ Datei-Token verwendet, um den Namen der Datei, die beim Erstellen der Versionsressource der Win32-verwendet werden  
   
  `fDll`  
- "True", wenn die Datei eine DLL für eine EXE-Datei "false" ist.  
+ TRUE, wenn die Datei eine DLL, eine EXE-Datei "false" ist.  
   
  `pszIconFile`  
- Symbol "optional" So fügen Sie die Ressourcen-Blob.  
+ Symbol "optional" zum Einfügen in das Ressourcen-Blob.  
   
  `ppResBlob`  
  Empfängt die Ressourcen-Blob.  
   
  `pcbResBlob`  
- Die Größe des BLOBs empfängt.  
+ Empfängt die Größe des BLOBs.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  Erfordert alink.h  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

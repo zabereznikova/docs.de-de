@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: b6303f765d1cc4a17fe19261c7326d8961ac1080
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 93084b34e5795ef35e8c433f50646e5da088adfd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600517"
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;SupportedRuntime&gt; Element
 
@@ -63,9 +63,9 @@ Die `runtime` Attribut gibt an, die Common Language Runtime (CLR)-Version, die f
 |----------------------------|-------------------------|  
 |1.0|"v1.0.3705"|  
 |1.1|"v1.1.4322"|  
-|2,0|"v2.0.50727"|  
-|3,0|"v2.0.50727"|  
-|3,5|"v2.0.50727"|  
+|2.0|"v2.0.50727"|  
+|3.0|"v2.0.50727"|  
+|3.5|"v2.0.50727"|  
 |4.0-4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
@@ -77,21 +77,21 @@ Die `sku` Attribut einen Zielframework-Moniker (TFM) verwendet, um die Version v
 |----------------------------|---------------------|  
 |4.0|".NETFramework,Version=v4.0"|  
 |4.0, Clientprofil|".NETFramework,Version=v4.0,Profile=Client"|  
-|4.0, Plattformupdate 1|". NETFramework, Version 4.0.1 = "|  
+|4.0, Plattformupdate 1|".NETFramework,Version=v4.0.1"|  
 |4.0, Clientprofil, Update 1|". NETFramework, Version 4.0.1, Profil = = Client "|  
-|4.0, Plattformupdate 2|". NETFramework, Version = V4.0.2 "|  
+|4.0, Plattformupdate 2|".NETFramework,Version=v4.0.2"|  
 |4.0, Clientprofil, Update 2|". NETFramework, Version = V4.0.2, Profil = Client "|  
-|4.0, Plattformupdate 3|". NETFramework, Version = Verze 4.0.3 "|  
+|4.0, Plattformupdate 3|".NETFramework,Version=v4.0.3"|  
 |4.0, Clientprofil, Update 3|". NETFramework, Version = Verze 4.0.3, Profil = Client "|  
 |4.5|".NETFramework,Version=v4.5"|  
 |4.5.1|".NETFramework,Version=v4.5.1"|  
 |4.5.2|".NETFramework,Version=v4.5.2"|  
 |4.6|".NETFramework,Version=v4.6"|  
 |4.6.1|".NETFramework,Version=v4.6.1"|  
-|4.6.2|". NETFramework, Version = V4.6.2 "|  
-|4.7|". NETFramework, Version = v4. 7 "|
-|4.7.1|". NETFramework, Version = V4.7.1 "|
-|4.7.2|". NETFramework, Version = V4.7.2 "|
+|4.6.2|".NETFramework,Version=v4.6.2"|  
+|4.7|".NETFramework,Version=v4.7"|
+|4.7.1|".NETFramework,Version=v4.7.1"|
+|4.7.2|".NETFramework,Version=v4.7.2"|
 
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht, wie Sie die unterstützte Laufzeitversion in einer Konfigurationsdatei angeben. Die Konfigurationsdatei gibt an, dass die app auf .NET Framework 4.7 ausgerichtet ist.  
@@ -110,6 +110,6 @@ Dieses Element kann in der Anwendungskonfigurationsdatei verwendet werden.
 
 ## <a name="see-also"></a>Siehe auch
 
- [Startup Settings Schema (Schema für Starteinstellungen)](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Prozessinterne parallele Ausführung](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)  
+- [Startup Settings Schema (Schema für Starteinstellungen)](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Prozessinterne parallele Ausführung](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

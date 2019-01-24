@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Auslösen von Menüereignissen für Symbolleisten-Schaltflächen'
+title: 'Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 1aa0a31b5825006cc2d6111ab151f05bf240b920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6459c61e49a49001d490d5213f23ff652d4a1939
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609589"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Gewusst wie: Auslösen von Menüereignissen für Symbolleisten-Schaltflächen
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
- Wenn Ihre Windows Forms-Features eine <xref:System.Windows.Forms.ToolBar> Steuerelement mit Schaltflächen der Symbolleiste, sollten Sie wissen, welche Schaltfläche der Benutzer klickt.  
+ Wenn Ihr Windows Form-Funktionen eine <xref:System.Windows.Forms.ToolBar> Steuerelement mit Schaltflächen der Symbolleiste, sollten Sie wissen, welche Schaltfläche der Benutzer klickt.  
   
- Auf der <xref:System.Windows.Forms.ToolBar.ButtonClick> -Ereignis für die <xref:System.Windows.Forms.ToolBar> -Steuerelement, können Sie Auswerten der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft von der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> Klasse. Im folgenden Beispiel wird ein Meldungsfeld angezeigt, das angibt, auf welche Schaltfläche geklickt wurde. Ausführliche Informationen finden Sie unter <xref:System.Windows.Forms.MessageBox>.  
+ Auf der <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignis die <xref:System.Windows.Forms.ToolBar> -Steuerelement, können Sie bewerten der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> Klasse. Im folgenden Beispiel wird ein Meldungsfeld angezeigt, das angibt, auf welche Schaltfläche geklickt wurde. Ausführliche Informationen finden Sie unter <xref:System.Windows.Forms.MessageBox>.  
   
- Das folgende Beispiel geht davon aus einem <xref:System.Windows.Forms.ToolBar> -Steuerelement zu einem Windows-Formular hinzugefügt wurde.  
+ Im folgenden Beispiel geht davon aus einem <xref:System.Windows.Forms.ToolBar> -Steuerelement zu einem Windows-Formular hinzugefügt wurde.  
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>So behandeln Sie das Click-Ereignis für eine Symbolleiste  
   
-1.  Fügen Sie in einer Prozedur Schaltflächen der Symbolleiste auf die <xref:System.Windows.Forms.ToolBar> Steuerelement.  
+1.  Fügen Sie in einer Prozedur Symbolleistenschaltflächen, die <xref:System.Windows.Forms.ToolBar> Steuerelement.  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,7 +70,7 @@ ms.locfileid: "33535196"
        }  
     ```  
   
-2.  Fügen Sie einen Ereignishandler für das <xref:System.Windows.Forms.ToolBar> des Steuerelements <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignis. Anwendungsfall Switch-Anweisung und die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> Klasse, um die Symbolleisten-Schaltfläche zu bestimmen, die auf die geklickt wurde. Zeigen Sie basierend darauf ein entsprechendes Meldungsfenster an.  
+2.  Hinzufügen eines ereignishandlers für das <xref:System.Windows.Forms.ToolBar> des Steuerelements <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignis. Mit einer case / switch-Anweisung und die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> -Klasse die Symbolleistenschaltfläche bestimmen, auf die geklickt wurde. Zeigen Sie basierend darauf ein entsprechendes Meldungsfenster an.  
   
     > [!NOTE]
     >  Im vorliegenden Beispiel wird ein Meldungsfenster lediglich als Platzhalter verwendet. Sie können bei Bedarf weiteren, nach dem Klicken auf eine Schaltfläche auszuführenden Code hinzufügen.  
@@ -134,8 +134,8 @@ ms.locfileid: "33535196"
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ToolBar>  
- [Gewusst wie: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
- [Gewusst wie: Definieren eines Symbols für eine Symbolleistenschaltfläche](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ToolBar>
+- [Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)
+- [Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

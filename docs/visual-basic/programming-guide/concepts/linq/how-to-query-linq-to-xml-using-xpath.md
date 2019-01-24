@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Abfragen von LINQ to XML mit XPath (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e1f69a20-1efa-452d-9089-c472fa84b3d5
-ms.openlocfilehash: d8f23bd8417c3f59377e5e677b08e403ecc1122d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 754b3c4d1f14f2f78b5688f13ab679bc01798a6c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615989"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>Vorgehensweise: Abfragen von LINQ to XML mit XPath (Visual Basic)
 Dieses Thema führt Sie in die Erweiterungsmethoden ein, mit denen Sie zum Abfragen einer XML-Struktur XPath verwenden können. Ausführliche Informationen zum Verwenden dieser Erweiterungsmethoden finden Sie unter <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
@@ -42,5 +42,5 @@ Next
 <Child2>6</Child2>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Siehe auch
+- [Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: 21868f808a6d39c935b612f745d720180df2dd73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 06666e069f20bc06f303c4e829d1c69c185a8a84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602480"
 ---
 # <a name="the-load-method"></a>Load-Methode
 Mithilfe der <xref:System.Data.DataTable.Load%2A>-Methode kann eine <xref:System.Data.DataTable> mit Zeilen aus einer Datenquelle geladen werden. Dies ist eine überladene Methode, die in ihrer einfachsten Form einen einzelnen Parameter akzeptiert eine **DataReader**. Bei dieser Form lädt sie einfach die **DataTable** mit Zeilen. Optional können Sie angeben der **LoadOption** Parameter, um zu steuern, wie Daten hinzugefügt werden die **DataTable**.  
@@ -68,6 +68,6 @@ Private Sub LoadBirthdays(ByVal connectionString As String)
 End Sub  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0d105679a749b8c87099af871bdb42874d440b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee8e0dec469c7389a69c70567d7b2cb98d3404e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603910"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType-Methode
-Erstellt die Metadatensignatur einer Typdefinition ist, wird ein `mdTypeDef` token für diesen Typ und gibt an, dass der definierte Typ ein Member des Typs verweist die `tdEncloser` Parameter.  
+Erstellt die Metadatensignatur einer Typdefinition ist, wird ein `mdTypeDef` ein Sicherheitstoken für diesen Typ, und gibt an, dass der definierte Typ ein Member des Typs verwiesen wird, durch die `tdEncloser` Parameter.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,7 +48,7 @@ HRESULT DefineNestedType (
  [in] `TypeDef` Attribute. Dies ist eine Bitmaske der `CorTypeAttr` Werte.  
   
  `tkExtends`  
- [in] Das Token der Basisklasse. Dies liegt entweder an einem `mdTypeDef` oder ein `mdTypeRef` token.  
+ [in] Das Token der Basisklasse. Dies ist entweder ein `mdTypeDef` oder `mdTypeRef` token.  
   
  `rtkImplements`[]  
  [in] Ein Array von Token, die die Schnittstellen anzugeben, die diese Klasse oder Schnittstelle implementiert.  
@@ -57,17 +57,17 @@ HRESULT DefineNestedType (
  [in] Das Token des einschließenden Typs. Das letzte Element des Arrays muss `mdTokenNil`.  
   
  `ptd`  
- [out] Die `mdTypeDef` Token zugewiesen.  
+ [out] Die `mdTypeDef` zugewiesene Token.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

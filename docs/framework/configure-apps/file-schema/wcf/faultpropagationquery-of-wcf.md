@@ -2,12 +2,12 @@
 title: '&lt;faultPropagationQuery&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
-ms.openlocfilehash: cf582fce4e899e62daa4f34f193a0232ec19a135
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1da2a95d27756296aab5a205a90fb028508c4b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54601804"
 ---
 # <a name="ltfaultpropagationquerygt-of-wcf"></a>&lt;faultPropagationQuery&gt; von WCF
 
@@ -16,12 +16,12 @@ Stellt eine Abfrage dar, die verwendet wird, um die Behandlung von Fehlern zu ve
 Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
-\<Nachverfolgen von >  
-\<Profile >  
+\<tracking>  
+\<profiles>  
 \<trackingProfile>  
-\<Workflow >  
-\<FaultPropagationQueries >  
-\<FaultPropagationQuery >  
+\<workflow>  
+\<faultPropagationQueries>  
+\<faultPropagationQuery>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,8 +61,8 @@ Keine
 |-------------|-----------------|  
 |[\<faultPropagationQueries>](faultpropagationqueries-of-wcf.md)|Stellt eine Liste von Konfigurationselementen dar, die verwendet werden, um die Behandlung der Fehler zu verfolgen, die in einer Aktivität auftreten.  Dieses Ereignis tritt jedes Mal auf, wenn ein FaultHandler einen Fehler verarbeitet.|
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
 - [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

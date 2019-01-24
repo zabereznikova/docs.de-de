@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3a9cdb49c1a44dbc68cd4b7ccf4d4781ce5c539
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 071c9c9cbdb47372903ef418a4f21450d8071f8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614064"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable-Methode
-Ruft ein Array von Bytes, die eine Bitmap mit den verfügbaren Registern bereitstellt.  
+Ruft ein Array von Bytes, die eine Bitmap der die verfügbaren Register bereitstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,21 +41,21 @@ HRESULT GetRegistersAvailable (
  [in] Die Größe des `availableRegChunks`-Arrays.  
   
  `availableRegChunks`  
- [out] Ein Array von Bytes, von denen jedes Bit eines Registers entspricht. Wenn ein Registers verfügbar ist, wird die Registrierung entsprechende Bit festgelegt.  
+ [out] Ein Array von Bytes, von denen jedes Bit eines Registers entspricht. Wenn ein Register verfügbar ist, wird die entsprechende Bit des Registers festgelegt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Werte der CorDebugRegister-Enumeration angeben die Register anderer Mikroprozessoren. Die oberen fünf Bits Anteil jedes einzelnen Werts sind der Index in der `availableRegChunks` Bytearray. Die unteren drei Bits der einzelnen Werte identifizieren die Bitposition innerhalb des indizierten Byte. Erhält eine `CorDebugRegister` Wert, der angibt, ein bestimmtes Register, die Position des Registers in der Maske wird wie folgt bestimmt:  
+ Die Werte der CorDebugRegister-Enumeration angeben, die Register anderer Mikroprozessoren wird. Die oberen fünf Bits der einzelnen Werte werden der Index der `availableRegChunks` Bytearray. Die unteren drei Bits der einzelnen Werte identifizieren die Bitposition innerhalb des indizierten Byte. Erhält eine `CorDebugRegister` Wert, der angibt, ein bestimmtes Register, die Position des Registers in der Maske wird wie folgt bestimmt:  
   
 1.  Extrahieren Sie Index benötigt Zugriff auf die richtige Byte in den `availableRegChunks` Array:  
   
      `CorDebugRegister` Wert >> 3  
   
-2.  Extrahieren Sie die Bitposition innerhalb des indizierten Byte, in dem das niederwertigste Bit von Bit 0 (null) ist:  
+2.  Extrahieren Sie die Bitposition innerhalb des indizierten Byte, wobei das niederwertigste Bit von Bit 0 (null) ist:  
   
      `CorDebugRegister` Wert & 7  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -63,6 +63,6 @@ HRESULT GetRegistersAvailable (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugRegisterSet2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)  
- [ICorDebugRegisterSet-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugRegisterSet2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)

@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; von &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 0fa793212665951906cf1ac9524a63d3c7273b85
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b98f6940c39fe8450f5c58ddd8d35d8829fc26b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150330"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602493"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transport&gt; von &lt;basicHttpBinding&gt;
 Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport steuern.  
@@ -16,8 +16,8 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport
 \<bindings>  
 \<basicHttpBinding>  
 \<binding>  
-\<Sicherheit >  
-\<Transport >  
+\<security>  
+\<transport>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -117,13 +117,13 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -2,12 +2,12 @@
 title: '&lt;message&gt; von &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: 4159642ee3e972e94f645a70b948a168bc4253c5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4a07989b0ffd19c62d3269924220382f56d92177
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145587"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600322"
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;message&gt; von &lt;netHttpBinding&gt;
 Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<BasicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -16,8 +16,8 @@ Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<Ba
 \<bindings>  
 \<netHttpBinding>  
 \<binding>  
-\<Sicherheit >  
-\<Meldung >  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -119,9 +119,9 @@ Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<Ba
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

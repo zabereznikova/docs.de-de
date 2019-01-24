@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: 09b0162068bc068bd77612816626897ec4a151d9
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f641f3dbcba32c77bcf73b14a9ac890d1ade5a2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911966"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611916"
 ---
 # <a name="char-data-type-visual-basic"></a>Char-Datentyp (Visual Basic)
 Enthält unsignierten 16-Bit (2-Byte) Codepunkte im Bereich von 0 bis 65535. Jede *Codepunkt*, oder Zeichencode ein einzelnes Unicodezeichens darstellt.  
@@ -57,15 +57,15 @@ charVar = "Z"C
   
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Char?displayProperty=nameWithType>-Struktur.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Char?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Strings.Asc%2A>  
- <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
- <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  
- [String-Datentyp](../../../visual-basic/language-reference/data-types/string-data-type.md)  
- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Char?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
+- [String-Datentyp](../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Vorgehensweise: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

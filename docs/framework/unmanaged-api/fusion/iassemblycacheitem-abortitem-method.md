@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b7b0d5ec61ddf81c39e2d58dc972db119b06417
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b39728865e3c6fc676673a634cf16710f37652ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618239"
 ---
 # <a name="iassemblycacheitemabortitem-method"></a>IAssemblyCacheItem::AbortItem-Methode
-Ermöglicht es, die Assembly im globalen Assemblycache Bereinigungsvorgänge durchzuführen, bevor er freigegeben wird.  
+Können Sie die Assembly im globalen Assemblycache Bereinigungsvorgänge ausgeführt werden, bevor er freigegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,11 +34,11 @@ HRESULT AbortItem ();
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Fusion.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IAssemblyCacheItem-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IAssemblyCacheItem-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

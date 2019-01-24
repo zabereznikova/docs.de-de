@@ -8,18 +8,18 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: 0f795ad00823e7b1c37221f7417b09d3982c4c18
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 610ef2721bef18e1cb1e87500a9dc9cf2729c867
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614249"
 ---
 # <a name="path-animations-overview"></a>Übersicht über Pfadanimationen
 <a name="introduction"></a> In diesem Thema werden Pfadanimationen beschrieben, die Ihnen ermöglichen, mithilfe eines geometrischen Pfads Ausgabewerte zu generieren. Pfadanimationen eignen sich zum Verschieben und Drehen von Objekten auf komplexen Pfaden.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Um dieses Thema zu verstehen, sollten Sie mit vertraut sein [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Animationsfunktionen. Eine Einführung in Animationsfunktionen, finden Sie unter den [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md).  
   
  Da Sie verwenden eine <xref:System.Windows.Media.PathGeometry> Objekt um eine Pfadanimation zu definieren. Sie sollten auch mit vertraut sein <xref:System.Windows.Media.PathGeometry> und die verschiedenen Typen von <xref:System.Windows.Media.PathSegment> Objekte. Weitere Informationen finden Sie unter den [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
@@ -89,9 +89,9 @@ ms.locfileid: "48266831"
   
  Weitere Informationen zur Pfadsyntax, die verwendet wird die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Beispiel finden Sie unter der [Pfadmarkupsyntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md) Übersicht.  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Pfadmarkupsyntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Übersicht über die Verfahren zur Animation von Eigenschaften](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Pfadmarkupsyntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)
+- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Übersicht über die Verfahren zur Animation von Eigenschaften](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

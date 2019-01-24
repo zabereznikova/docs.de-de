@@ -1,5 +1,5 @@
 ---
-title: '&lt;OidEntry&gt; Element'
+title: '&lt;oidEntry&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/oidMap/oidEntry
@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 1729ad4d07fdc0d3dbb31c2bfc29edce647373d4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c891b5d67c7f2ef46682233ad555a1276f8e027d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606899"
 ---
-# <a name="ltoidentrygt-element"></a>&lt;OidEntry&gt; Element
+# <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; Element
 Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.  
   
  \<configuration>  
-\<"mscorlib" >  
-\<CryptographySettings >  
-\<OidMap >  
-\<OidEntry >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<oidMap>  
+\<oidEntry>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -80,9 +80,9 @@ Ordnet einen ASN.1-Objektbezeichner (OID) einem Anzeigenamen zu.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
-- [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+## <a name="see-also"></a>Siehe auch
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
 - [Zuordnen von Objektbezeichnern zu kryptografischen Algorithmen](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

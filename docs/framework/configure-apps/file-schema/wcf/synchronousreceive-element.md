@@ -2,12 +2,12 @@
 title: '&lt;synchronousReceive&gt;-Element'
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: bc89470900e50e4d3e522682b39b20e21a66b284
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dedbe156dea79c78f05acdb3a044c9080665675a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598894"
 ---
 # <a name="ltsynchronousreceivegt-element"></a>&lt;synchronousReceive&gt;-Element
 Dieses Konfigurationselement wird zum Angeben des Laufzeitverhaltens für das Empfangen von Nachrichten in einem Dienst oder einer Clientanwendung verwendet. Es enthält keine Attribute oder untergeordnete Elemente.  
@@ -15,8 +15,8 @@ Dieses Konfigurationselement wird zum Angeben des Laufzeitverhaltens für das Em
  \<system.ServiceModel>  
 \<behaviors>  
 \<endpointBehaviors>  
-\<Verhalten >  
-\<SynchronousReceive >  
+\<behavior>  
+\<synchronousReceive>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,6 +42,6 @@ Dieses Konfigurationselement wird zum Angeben des Laufzeitverhaltens für das Em
 ## <a name="remarks"></a>Hinweise  
  Hiermit weisen Sie den Kanallistener an, anstatt der Standardeinstellung (asynchroner Empfang) einen synchronen Empfang zu verwenden. Windows Communication Foundation (WCF) gibt einen neuen Thread zur Weiterleitung für jeden akzeptierten Kanal. Bei einer großen Anzahl von Kanälen besteht die Gefahr, dass nicht genügend Threads verfügbar sind.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>  
- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>

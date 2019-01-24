@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verschieben eines Objekts auf einem Pfad (DoubleAnimation)'
+title: 'Vorgehensweise: Verschieben eines Objekts auf einem Pfad (DoubleAnimation)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (double animation)
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
-ms.openlocfilehash: 3dcdf6cfe8631ae0b7b1472e22d027cf9288a1db
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: a57b21e3f05f90e756c46c167bb419b5bc9068f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600411"
 ---
-# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Gewusst wie: Verschieben eines Objekts auf einem Pfad (DoubleAnimation)
+# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Vorgehensweise: Verschieben eines Objekts auf einem Pfad (DoubleAnimation)
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> Klasse, um ein Objekt entlang eines Pfads durch Verschieben einer <xref:System.Windows.Media.PathGeometry>.  
   
 ## <a name="example"></a>Beispiel  
@@ -34,6 +34,6 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.Doub
   
  Eine weitere Möglichkeit zum Verschieben eines Objekts mithilfe eines geometrischen Pfads ist die Verwendung einer <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> Objekt. Ein Beispiel finden Sie unter [animieren Sie ein Objekt auf einem Pfad (Matrixanimation)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

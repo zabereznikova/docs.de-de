@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-ms.openlocfilehash: b67c1ec1ec737976e4e50b80b42f34e508dc0224
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8b85eef0f2c3bbb2d0d4a5548f5cbb4a66b0431d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609563"
 ---
 # <a name="ltsystemxmlserializationgt-element"></a>&lt;system.xml.serialization&gt;-Element
 Das Element der obersten Ebene zur Steuerung der XML-Serialisierung. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurationsdateienschema](../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -64,9 +64,9 @@ Das Element der obersten Ebene zur Steuerung der XML-Serialisierung. Weitere Inf
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Xml.Serialization.XmlSchemaImporter>  
-- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
-- [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)  
-- [\<dateTimeSerialization>-Element](../../../docs/standard/serialization/datetimeserialization-element.md)  
-- [\<schemaImporterExtensions>-Element](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
+- <xref:System.Xml.Serialization.XmlSchemaImporter>
+- <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
+- [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)
+- [\<dateTimeSerialization>-Element](../../../docs/standard/serialization/datetimeserialization-element.md)
+- [\<schemaImporterExtensions>-Element](../../../docs/standard/serialization/schemaimporterextensions-element.md)
 - [\<Hinzufügen >-Element für \<SchemaImporterExtensions >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)

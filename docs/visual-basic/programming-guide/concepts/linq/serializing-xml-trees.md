@@ -2,12 +2,12 @@
 title: Serialisieren von XML-Strukturen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2c340695-a726-4030-85be-6975d8a149cf
-ms.openlocfilehash: 009bd3e229ad6debb0f4176c18fc9cb712154197
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54591438b49005f9016560fcc2f314d6a947d485
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645342"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616757"
 ---
 # <a name="serializing-xml-trees-visual-basic"></a>Serialisieren von XML-Strukturen (Visual Basic)
 Beim Serialisieren einer XML-Struktur wird aus der XML-Struktur XML generiert. Eine Serialisierung kann in eine Datei, in eine konkrete Implementierung der <xref:System.IO.TextWriter>-Klasse oder in eine konkrete Implementierung eines <xref:System.Xml.XmlWriter> erfolgen.  
@@ -23,5 +23,5 @@ Beim Serialisieren einer XML-Struktur wird aus der XML-Struktur XML generiert. E
 |[Serialisieren in Dateien, TextWriters und XmlWriters](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|Beschreibt, wie Sie ein Dokument in eine <xref:System.IO.File>, in einen <xref:System.IO.TextWriter> oder in einen <xref:System.Xml.XmlWriter> serialisieren können.|  
 |[Serialisieren in einen XmlReader (XSLT aufrufen) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Beschreibt, wie Sie einen <xref:System.Xml.XmlReader> erstellen können, der einem anderen Modul das Lesen des Inhalts einer XML-Struktur ermöglicht.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmierhandbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmierhandbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

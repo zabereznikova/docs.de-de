@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 7e43d423109ea39a725a4bfa8b9d2b22a25cfb5c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 69eb1490c61cc7187d11c776fe95c659271750b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087335"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608481"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Verwenden eines "DataSet" von einem XML-Webdienst aus
 Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstellt. Auf diese Art und Weise wird z. B. eine komfortable Übertragung von Daten über das Internet ermöglicht. Die **DataSet** ist "serializable" insofern, als Eingabe für angegeben werden oder Ausgabe aus XML-Webdiensten, ohne eine zusätzliche Codierung erforderlich, um den Inhalt der Streamen der **DataSet** aus einem XML-Webdienst zu einem Client und zurück. Die **DataSet** implizit in einen XML-Stream mit dem DiffGram-Format konvertiert, über das Netzwerk gesendet und dann aus der XML-Stream rekonstruiert eine **DataSet** auf der Empfangsseite. Dadurch steht Ihnen eine sehr einfache und flexible Methode zum Übertragen und Zurückübertragen von relationalen Daten mithilfe von XML-Webdiensten zur Verfügung. Weitere Informationen zum DiffGram-Format finden Sie unter [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -26,7 +26,7 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
   
      Im Beispiel wird ein XML-Webdienst erstellt, die Daten in diesem Fall eine Liste der Kunden zurückgibt der **Northwind** Datenbank, und empfängt eine **DataSet** mit Updates, die die Daten, die den XML-Webdienst Löst in der ursprünglichen Datenquelle zurück.  
   
-     Die XML-Webdienst macht zwei Methoden verfügbar: **GetCustomers**, um die Liste der Kunden zurückzugeben und **UpdateCustomers**, um Updates in der Datenquelle abzugleichen. Der XML-Webdienst wird in einer Datei auf dem Webserver mit dem Namen "DataSetSample.asmx" gespeichert. Im folgenden Code wird der Inhalt von "DataSetSample.asmx" dargestellt.  
+     Der XML-Webdienst macht zwei Methoden verfügbar: **GetCustomers**, um die Liste der Kunden zurückzugeben und **UpdateCustomers**, um Updates in der Datenquelle abzugleichen. Der XML-Webdienst wird in einer Datei auf dem Webserver mit dem Namen "DataSetSample.asmx" gespeichert. Im folgenden Code wird der Inhalt von "DataSetSample.asmx" dargestellt.  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -259,12 +259,12 @@ Das <xref:System.Data.DataSet> wurde mit einer nicht verbundenen Struktur erstel
     csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [Populating a DataSet from a DataAdapter (Auffüllen eines DataSets durch einen DataAdapter)](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
- [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
- [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [Web Services Description Language Tool (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
+- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [Populating a DataSet from a DataAdapter (Auffüllen eines DataSets durch einen DataAdapter)](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
+- [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [Web Services Description Language Tool (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

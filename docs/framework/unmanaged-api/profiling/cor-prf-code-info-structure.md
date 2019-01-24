@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 852e6cbd666441b92afb583b15b72d50d26eff8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e83dbb234cf1cacc0e18d4e42bccb427eb54f14c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449783"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617251"
 ---
 # <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO-Struktur
 Stellt einen zusammenhängenden Block von im Speicher befindlichem nativen Code dar.  
@@ -39,11 +39,11 @@ typedef struct _COR_PRF_CODE_INFO {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`startAddress`|Die Startadresse des zusammenhängenden Block von Code.|  
+|`startAddress`|Die Startadresse des zusammenhängenden Blocks von Code.|  
 |`size`|Die Größe des Blocks.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl  
   
@@ -51,5 +51,5 @@ typedef struct _COR_PRF_CODE_INFO {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsstrukturen](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsstrukturen](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

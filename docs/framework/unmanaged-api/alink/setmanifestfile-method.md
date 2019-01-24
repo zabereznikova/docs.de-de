@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f8398c16b27836b772e8ac56ee1f7e8494f4be0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a253503f3046c004cc7109a31b5aa8fd8e8dc195
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618050"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile-Methode
-Ermöglicht es Ihnen, festzulegen, oder setzen Sie die Manifestdatei, die vom Linker beim Erstellen der Assemblys verwendet zurück.  
+Können Sie angeben oder Zurücksetzen der Manifestdatei, die der Linker beim Erstellen der Assembly verwendet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,19 +37,19 @@ HRESULT SetManifestFile(
 #### <a name="parameters"></a>Parameter  
  `pszFile`  
   
- Der Name der Manifestdatei an, deren Inhalt in der Win32-Ressourcen-Blob gespeichert werden.  
+ Der Name der Manifestdatei, deren Inhalt in der Win32-Ressourcen-Blob abgelegt werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Rufen Sie diese, bevor Sie die Win32ResBlob angefordert werden. Der Wert, der die `pszFile` Parameter ist der Name der Manifestdatei an, deren Inhalt gelesen und in der Win32-Ressourcen mit der ID von RT_MANIFEST. Bei Aufruf mit einem Parameter NULL ist zuvor gelesenen Manifest deaktiviert. Dies ermöglicht Ihnen, den Zustand des Linkers an der Initialisierung des zurückzusetzen.  
+ Rufen Sie diese, bevor Sie die Win32ResBlob aufgefordert. Der Wert des der `pszFile` Parameter ist der Name der Manifestdatei, deren Inhalt werden gelesen und in die Win32-Ressourcen mit der ID von RT_MANIFEST. Wenn mit einem NULL-Parameter aufgerufen, wird zuvor gelesenen Manifest gelöscht. Dies ermöglicht Ihnen, den Status des Linkers der Initialisierungszeit zurückzusetzen.  
   
 ## <a name="requirements"></a>Anforderungen  
  Erfordert aLink.h  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink3-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink3-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
