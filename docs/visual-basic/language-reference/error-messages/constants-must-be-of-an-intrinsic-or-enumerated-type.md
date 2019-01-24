@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: 4d635d289ed99aed48c296c278bc546971af51da
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0f4cb04558bf9768de22f432a1c59203643aba6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083921"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595839"
 ---
-# <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a><span data-ttu-id="a6930-102">Konstanten müssen einen systeminternen oder enumerierten Typ aufweisen, keinen Klassen-, Struktur-, Typparameter- oder Arraytyp.</span><span class="sxs-lookup"><span data-stu-id="a6930-102">Constants must be of an intrinsic or enumerated type, not a class, structure, type parameter, or array type</span></span>
-<span data-ttu-id="a6930-103">Sie haben versucht, eine Konstante als eine Klasse, Struktur oder Arraytyp oder als eine von einem enthaltenden generischen Typ definierten Typparameter deklarieren.</span><span class="sxs-lookup"><span data-stu-id="a6930-103">You have attempted to declare a constant as a class, structure, or array type, or as a type parameter defined by a containing generic type.</span></span>  
+# <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a><span data-ttu-id="152c6-102">Konstanten müssen einen systeminternen oder enumerierten Typ aufweisen, keinen Klassen-, Struktur-, Typparameter- oder Arraytyp.</span><span class="sxs-lookup"><span data-stu-id="152c6-102">Constants must be of an intrinsic or enumerated type, not a class, structure, type parameter, or array type</span></span>
+<span data-ttu-id="152c6-103">Sie haben versucht, eine Konstante als eine Klasse, Struktur oder Arraytyp oder als eine von einem enthaltenden generischen Typ definierten Typparameter deklarieren.</span><span class="sxs-lookup"><span data-stu-id="152c6-103">You have attempted to declare a constant as a class, structure, or array type, or as a type parameter defined by a containing generic type.</span></span>  
   
- <span data-ttu-id="a6930-104">Konstanten müssen einen systeminternen Typ sein (`Boolean`, `Byte`, `Date`, `Decimal`, `Double`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, oder `UShort`), oder ein `Enum` Typ basierend auf einer ganzzahligen Typen.</span><span class="sxs-lookup"><span data-stu-id="a6930-104">Constants must be of an intrinsic type (`Boolean`, `Byte`, `Date`, `Decimal`, `Double`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, or `UShort`), or an `Enum` type based on one of the integral types.</span></span>  
+ <span data-ttu-id="152c6-104">Konstanten müssen einen systeminternen Typ sein (`Boolean`, `Byte`, `Date`, `Decimal`, `Double`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, oder `UShort`), oder ein `Enum` Typ basierend auf einer ganzzahligen Typen.</span><span class="sxs-lookup"><span data-stu-id="152c6-104">Constants must be of an intrinsic type (`Boolean`, `Byte`, `Date`, `Decimal`, `Double`, `Integer`, `Long`, `Object`, `SByte`, `Short`, `Single`, `String`, `UInteger`, `ULong`, or `UShort`), or an `Enum` type based on one of the integral types.</span></span>  
   
- <span data-ttu-id="a6930-105">**Fehler-ID:** BC30424</span><span class="sxs-lookup"><span data-stu-id="a6930-105">**Error ID:** BC30424</span></span>  
+ <span data-ttu-id="152c6-105">**Fehler-ID:** BC30424</span><span class="sxs-lookup"><span data-stu-id="152c6-105">**Error ID:** BC30424</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a6930-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="a6930-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="152c6-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="152c6-106">To correct this error</span></span>  
   
-1.  <span data-ttu-id="a6930-107">Deklarieren Sie die Konstante als systeminterne Funktion oder `Enum` Typ.</span><span class="sxs-lookup"><span data-stu-id="a6930-107">Declare the constant as an intrinsic or `Enum` type.</span></span>  
+1.  <span data-ttu-id="152c6-107">Deklarieren Sie die Konstante als systeminterne Funktion oder `Enum` Typ.</span><span class="sxs-lookup"><span data-stu-id="152c6-107">Declare the constant as an intrinsic or `Enum` type.</span></span>  
   
-2.  <span data-ttu-id="a6930-108">Eine Konstante kann auch sein ein spezieller Wert wie z. B. `True`, `False`, oder `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="a6930-108">A constant can also be a special value such as `True`, `False`, or `Nothing`.</span></span> <span data-ttu-id="a6930-109">Der Compiler betrachtet diese vordefinierten Werte von den entsprechenden systeminternen Typ sein.</span><span class="sxs-lookup"><span data-stu-id="a6930-109">The compiler considers these predefined values to be of the appropriate intrinsic type.</span></span>  
+2.  <span data-ttu-id="152c6-108">Eine Konstante kann auch sein ein spezieller Wert wie z. B. `True`, `False`, oder `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="152c6-108">A constant can also be a special value such as `True`, `False`, or `Nothing`.</span></span> <span data-ttu-id="152c6-109">Der Compiler betrachtet diese vordefinierten Werte von den entsprechenden systeminternen Typ sein.</span><span class="sxs-lookup"><span data-stu-id="152c6-109">The compiler considers these predefined values to be of the appropriate intrinsic type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a6930-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a6930-110">See Also</span></span>  
- [<span data-ttu-id="a6930-111">Konstanten und Enumerationen</span><span class="sxs-lookup"><span data-stu-id="a6930-111">Constants and Enumerations</span></span>](../../../visual-basic/language-reference/constants-and-enumerations.md)  
- [<span data-ttu-id="a6930-112">Datentypen</span><span class="sxs-lookup"><span data-stu-id="a6930-112">Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [<span data-ttu-id="a6930-113">Datentypen</span><span class="sxs-lookup"><span data-stu-id="a6930-113">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
+## <a name="see-also"></a><span data-ttu-id="152c6-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="152c6-110">See also</span></span>
+- [<span data-ttu-id="152c6-111">Konstanten und Enumerationen</span><span class="sxs-lookup"><span data-stu-id="152c6-111">Constants and Enumerations</span></span>](../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [<span data-ttu-id="152c6-112">Datentypen</span><span class="sxs-lookup"><span data-stu-id="152c6-112">Data Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [<span data-ttu-id="152c6-113">Datentypen</span><span class="sxs-lookup"><span data-stu-id="152c6-113">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)
