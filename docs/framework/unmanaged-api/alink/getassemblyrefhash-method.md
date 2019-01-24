@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ccf60d067af356dda1870a2fb1dcca21966f16a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e5698e5555e82fd8f64fd029f78cda361a367ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401485"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585223"
 ---
-# <a name="getassemblyrefhash-method"></a><span data-ttu-id="93c91-102">GetAssemblyRefHash-Methode</span><span class="sxs-lookup"><span data-stu-id="93c91-102">GetAssemblyRefHash Method</span></span>
-<span data-ttu-id="93c91-103">Ruft ein Hash-Blob für eine bestimmte Assembly ab.</span><span class="sxs-lookup"><span data-stu-id="93c91-103">Retrieves a hash blob for a given assembly.</span></span>  
+# <a name="getassemblyrefhash-method"></a><span data-ttu-id="02fb9-102">GetAssemblyRefHash-Methode</span><span class="sxs-lookup"><span data-stu-id="02fb9-102">GetAssemblyRefHash Method</span></span>
+<span data-ttu-id="02fb9-103">Ruft einen Hash-Blob für eine bestimmte Assembly ab.</span><span class="sxs-lookup"><span data-stu-id="02fb9-103">Retrieves a hash blob for a given assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93c91-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="93c91-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02fb9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="02fb9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyRefHash(  
@@ -36,23 +36,23 @@ HRESULT GetAssemblyRefHash(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="93c91-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="93c91-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="02fb9-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="02fb9-105">Parameters</span></span>  
  `FileToken`  
- <span data-ttu-id="93c91-106">ID der Assembly, auf die der Hashwert verweisen wird.</span><span class="sxs-lookup"><span data-stu-id="93c91-106">ID of assembly to which the hash will refer.</span></span>  
+ <span data-ttu-id="02fb9-106">ID der Assembly, der der Hash bezeichnet werden.</span><span class="sxs-lookup"><span data-stu-id="02fb9-106">ID of assembly to which the hash will refer.</span></span>  
   
  `ppvHash`  
- <span data-ttu-id="93c91-107">Erhält die resultierende Hash-Blob.</span><span class="sxs-lookup"><span data-stu-id="93c91-107">Receives the resulting hash blob.</span></span>  
+ <span data-ttu-id="02fb9-107">Erhält die resultierende Hash-Blob.</span><span class="sxs-lookup"><span data-stu-id="02fb9-107">Receives the resulting hash blob.</span></span>  
   
  `pcbHash`  
- <span data-ttu-id="93c91-108">Größe, wird der Hash-Blob in Bytes empfängt.</span><span class="sxs-lookup"><span data-stu-id="93c91-108">Receives size, in bytes, of hash blob.</span></span>  
+ <span data-ttu-id="02fb9-108">Größe, wird der Hash-Blob in Bytes empfängt.</span><span class="sxs-lookup"><span data-stu-id="02fb9-108">Receives size, in bytes, of hash blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="93c91-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="93c91-109">Return Value</span></span>  
- <span data-ttu-id="93c91-110">Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="93c91-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="02fb9-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="02fb9-109">Return Value</span></span>  
+ <span data-ttu-id="02fb9-110">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="02fb9-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="93c91-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="93c91-111">Requirements</span></span>  
- <span data-ttu-id="93c91-112">Erfordert alink.h</span><span class="sxs-lookup"><span data-stu-id="93c91-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02fb9-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="02fb9-111">Requirements</span></span>  
+ <span data-ttu-id="02fb9-112">Erfordert alink.h</span><span class="sxs-lookup"><span data-stu-id="02fb9-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93c91-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="93c91-113">See Also</span></span>  
- [<span data-ttu-id="93c91-114">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="93c91-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="93c91-115">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="93c91-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="93c91-116">Alink-API</span><span class="sxs-lookup"><span data-stu-id="93c91-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="02fb9-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="02fb9-113">See also</span></span>
+- [<span data-ttu-id="02fb9-114">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="02fb9-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="02fb9-115">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="02fb9-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="02fb9-116">Alink-API</span><span class="sxs-lookup"><span data-stu-id="02fb9-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
