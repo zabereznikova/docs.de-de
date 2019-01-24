@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Anpassen der Teilstriche auf einem Schieberegler'
+title: 'Vorgehensweise: Anpassen der Teilstriche auf einem Schieberegler'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TickBar [WPF]
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
-ms.openlocfilehash: 045a2f540a37cdea84d2bf2f3ed1e74e122bdbb5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b6ade07b0b4c04578d2523d6d8ba992b8b2d31f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696671"
 ---
-# <a name="how-to-customize-the-ticks-on-a-slider"></a>Gewusst wie: Anpassen der Teilstriche auf einem Schieberegler
+# <a name="how-to-customize-the-ticks-on-a-slider"></a>Vorgehensweise: Anpassen der Teilstriche auf einem Schieberegler
 Dieses Beispiel zeigt, wie Sie erstellen eine <xref:System.Windows.Controls.Slider> -Steuerelement mit Teilstrichen.  
   
 ## <a name="example"></a>Beispiel  
@@ -24,8 +24,8 @@ Dieses Beispiel zeigt, wie Sie erstellen eine <xref:System.Windows.Controls.Slid
   
  [!code-xaml[Slider#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.Slider>  
- <xref:System.Windows.Controls.Primitives.TickBar>  
- <xref:System.Windows.Controls.Slider.TickPlacement%2A>  
- [Slider How-to Topics (Vorgehensweisen für Schieberegler)](https://msdn.microsoft.com/library/534be86c-afb2-425d-8186-631278a9925e)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Controls.Slider>
+- <xref:System.Windows.Controls.Primitives.TickBar>
+- <xref:System.Windows.Controls.Slider.TickPlacement%2A>
+- [Slider How-to Topics (Vorgehensweisen für Schieberegler)](https://msdn.microsoft.com/library/534be86c-afb2-425d-8186-631278a9925e)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d4e07fb3d0988838fde662f4bb7d4719cc2d50f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b905d3b5de39057cba384ea7bca917bc3476623f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700649"
 ---
 # <a name="cortypeid-structure"></a>COR_TYPEID-Struktur
 Enthält einen Typbezeichner.  
@@ -43,12 +43,12 @@ typedef struct COR_TYPEID{
 |`token2`|Das zweite-Token.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `COR_TYPEID` Struktur zurückgegeben wird, um eine Anzahl von debugging-Methoden, die Informationen zu Objekten, das speicherbereinigt werden soll. Sie können dann als Argument an anderen Debuggen-Methoden übergeben werden, die zusätzliche Informationen zu dem Element bereitstellen. Z. B. durch aufzählen einer [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) -Objekt, Sie können einzelne abrufen [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Objekte, die einzelnen Objekte im verwalteten Heap darstellen. Sie können dann übergeben der `COR_TYPEID` Wert aus der `COR_HEAPOBJECT.type` -Feld der [icordebugprocess5:: Gettypefortypeid](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) Methode, um ein ICorDebugType abzurufen, die zu dem Objekt bereitstellt.  
+ Die `COR_TYPEID` Struktur wird zurückgegeben, um eine Anzahl von debugging-Methoden, die Informationen zu Objekten, das speicherbereinigt werden soll. Sie können dann als Argument an andere debugging-Methoden übergeben werden, die zusätzliche Informationen zu diesem Element bereitstellen. Z. B. durch die Enumeration eine [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) Objekt ist, können Sie einzelne abrufen [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) Objekte, die einzelnen Objekte im verwalteten Heap darstellen. Anschließend können Sie übergeben die `COR_TYPEID` Wert aus der `COR_HEAPOBJECT.type` Feld der [icordebugprocess5:: Gettypefortypeid](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) Methode zum Abrufen eines ICorDebugType-Objekts, das Informationen über das Objekt bereitstellt.  
   
- Ein `COR_TYPEID` -Objekt ist dazu gedacht, nicht transparent sein. Die einzelne Felder sollten nicht zugegriffen oder bearbeitet werden sollen. Die alleinige Verwendung wird als ein Bezeichner, der als bereitgestellt wird ein `out` Parameter im Aufruf einer Methode und diese kann wiederum weitere Methoden zum Bereitstellen zusätzlicher Informationen übergeben.  
+ Ein `COR_TYPEID` Objekt ist nicht transparent sein soll. Die einzelnen Felder sollten nicht zugegriffen oder bearbeitet werden. Die alleinige Verwendung ist ein Bezeichner, der als bereitgestellt wird ein `out` Parameter im Aufruf einer Methode und diese kann wiederum übergeben werden andere Methoden, um zusätzliche Informationen bereitzustellen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -56,6 +56,6 @@ typedef struct COR_TYPEID{
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

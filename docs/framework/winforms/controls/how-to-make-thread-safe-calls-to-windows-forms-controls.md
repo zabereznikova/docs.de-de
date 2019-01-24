@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Threadsicheres Aufrufen von Windows Forms-Steuerelementen'
+title: 'Vorgehensweise: Threadsichere Aufrufe von Windows Forms-Steuerelementen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 60a71aefbf6d180ffe8d68f54d438e5b58a603fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710468"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Gewusst wie: Threadsicheres Aufrufen von Windows Forms-Steuerelementen
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Vorgehensweise: Threadsichere Aufrufe von Windows Forms-Steuerelementen
 
 Bei Verwendung von Multithreading zur Verbesserung der Leistung von Windows Forms-Anwendungen müssen Sie sicherstellen, dass Sie die Steuerelemente auf threadsichere Weise aufrufen.
 
@@ -278,7 +278,7 @@ private:
     }
 ```
 
-## <a name="making-thread-safe-calls-by-using-backgroundworker"></a>threadsichere Aufrufe mit BackgroundWorker
+## <a name="making-thread-safe-calls-by-using-backgroundworker"></a>Threadsichere Aufrufe mit BackgroundWorker
  Das bevorzugte Verfahren zum Implementieren von Multithreading in der Anwendung ist die Verwendung der <xref:System.ComponentModel.BackgroundWorker> -Komponente. Die <xref:System.ComponentModel.BackgroundWorker> -Komponente verwendet ein ereignisgesteuertes Modell für Multithreading. Der Hintergrundthread führt den <xref:System.ComponentModel.BackgroundWorker.DoWork> -Ereignishandler aus, und der Thread, der die Steuerelemente erstellt, führt die <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> - und <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> -Ereignishandler aus. Sie können die Steuerelemente von den <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> - und <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> -Ereignishandlern aus aufrufen.
 
 #### <a name="to-make-thread-safe-calls-by-using-backgroundworker"></a>So führen Sie threadsichere Aufrufe mit BackgroundWorker durch
@@ -406,7 +406,7 @@ private:
  Das folgende Codebeispiel stellt eine vollständige Windows Forms-Anwendung dar, die aus einem Formular mit drei Schaltflächen und einem Textfeld besteht. Die erste Schaltfläche zeigt den unsicheren threadübergreifenden Zugriff, die zweite Schaltfläche zeigt den sicheren Zugriff mithilfe von <xref:System.Windows.Forms.Control.Invoke%2A>, und die dritte Schaltfläche zeigt den sicheren Zugriff mithilfe von <xref:System.ComponentModel.BackgroundWorker>.
 
 > [!NOTE]
-> Anleitungen zum Ausführen des Beispiels finden Sie unter [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Dieses Beispiel erfordert Verweise auf die Assemblys "System.Drawing" und "System.Windows.Forms".
+> Anweisungen zum Ausführen des Beispiels, finden Sie unter [Vorgehensweise: Kompilieren und Ausführen einer vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Dieses Beispiel erfordert Verweise auf die Assemblys "System.Drawing" und "System.Windows.Forms".
 
 ```csharp
 using System;
@@ -1046,12 +1046,12 @@ Wenn Sie die Anwendung ausführen und auf die Schaltfläche **Unsafe Call** klic
 ## <a name="robust-programming"></a>Stabile Programmierung
 
 > [!CAUTION]
-> Wenn Sie eine beliebige Art von Multithreading verwenden, kann Ihr Code sehr ernsthaften und komplexen Fehlern ausgesetzt sein. Weitere Informationen finden Sie unter [Empfohlene Vorgehensweise für das verwaltete Threading](../../../../docs/standard/threading/managed-threading-best-practices.md), bevor Sie eine Lösung implementieren, die Multithreading verwendet.
+> Wenn Sie eine beliebige Art von Multithreading verwenden, kann Ihr Code sehr ernsthaften und komplexen Fehlern ausgesetzt sein. Weitere Informationen finden Sie unter [Managed Threading Best Practices](../../../../docs/standard/threading/managed-threading-best-practices.md) , bevor Sie eine Lösung implementieren, die Multithreading verwendet.
 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Vorgehensweise: Ausführen eines Vorgangs im Hintergrund](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
 - [Windows Forms und nicht verwaltete Anwendungen](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

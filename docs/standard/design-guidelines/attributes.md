@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
 author: KrzysztofCwalina
-ms.openlocfilehash: 332917e5d31c2299f7d68a8fe6716d28ed08759d
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: 6d4cc6615b7f7346e9c8fc2a7264025f318c8a3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698881"
 ---
 # <a name="attributes"></a>Attribute
 <xref:System.Attribute?displayProperty=nameWithType> eine Basisklasse wird zum Definieren von benutzerdefinierter Attributen verwendet werden.  
@@ -51,5 +51,5 @@ ms.locfileid: "53451169"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Verwendungsrichtlinien](../../../docs/standard/design-guidelines/usage-guidelines.md)

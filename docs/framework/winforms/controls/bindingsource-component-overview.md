@@ -7,18 +7,18 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 047df677ade3837e167845ace2bdc6ca14738c3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fbd089cef6f014979cf8bbdf376b2f76ac9bcf9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529603"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686945"
 ---
 # <a name="bindingsource-component-overview"></a>Übersicht über die BindingSource-Komponente
 Die <xref:System.Windows.Forms.BindingSource>-Komponente vereinfacht den Bindungsvorgang von Steuerelementen an eine zugrunde liegende Datenquelle. Die <xref:System.Windows.Forms.BindingSource>-Komponente fungiert als Kanal sowie als Datenquelle für andere Steuerelemente, an die eine Bindung erfolgen soll. Sie stellt eine Abstraktion der Datenverbindung Ihres Formulars bereit, während Befehle an die zugrunde liegende Liste der Daten übergeben werden. Außerdem können Sie Daten direkt hinzufügen. Die Komponente selbst fungiert daher als Datenquelle.  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>BindingSource-Komponente als Zwischenelement  
- Die <xref:System.Windows.Forms.BindingSource>-Komponente fungiert als Datenquelle für einige oder alle Steuerelemente im Formular. In Visual Studio die <xref:System.Windows.Forms.BindingSource> gebunden werden kann, an ein Steuerelement von der die `DataBindings` -Eigenschaft, die aus zugänglich ist die **Eigenschaften** Fenster. Siehe auch [Vorgehensweise: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md).  
+ Die <xref:System.Windows.Forms.BindingSource>-Komponente fungiert als Datenquelle für einige oder alle Steuerelemente im Formular. In Visual Studio die <xref:System.Windows.Forms.BindingSource> gebunden werden kann, auf ein Steuerelement von der `DataBindings` Eigenschaft, die über die **Eigenschaften** Fenster. Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Binden von Windows Forms-Steuerelementen mithilfe der BindingSource-Komponente, die mithilfe des Designers](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md).  
   
  Sie können die <xref:System.Windows.Forms.BindingSource>-Komponente an einfache Datenquellen (etwa eine einzelne Eigenschaft eines Objekts oder eine Basisauflistung wie <xref:System.Collections.ArrayList>) und komplexe Datenquellen (etwa eine Datenbanktabelle) binden. Die <xref:System.Windows.Forms.BindingSource>-Komponente fungiert als Zwischenelement, das Bindungs- und Währungsverwaltungsdienste bereitstellt. Sie können eine <xref:System.Windows.Forms.BindingSource>-Komponente zur Entwurfszeit oder zur Laufzeit an eine komplexe Datenquelle durch Festlegen der Eigenschaften <xref:System.Windows.Forms.BindingSource.DataSource%2A> und <xref:System.Windows.Forms.BindingSource.DataMember%2A> an die Datenbank bzw. die Tabelle binden. Die folgende Abbildung zeigt, wie sich die <xref:System.Windows.Forms.BindingSource>-Komponente in die vorhandene Datenbindungsarchitektur einfügt.  
   
@@ -57,11 +57,11 @@ Die <xref:System.Windows.Forms.BindingSource>-Komponente vereinfacht den Bindung
 |<xref:System.Windows.Forms.BindingSource.Sort%2A>-Eigenschaft|Wenn die Datenquelle eine <xref:System.ComponentModel.IBindingList> ist, wird ein Spaltenname abgerufen oder festgelegt, der für das Sortieren und für Informationen zur Sortierreihenfolge verwendet wird. Wenn die Datenquelle eine <xref:System.ComponentModel.IBindingListView> ist und erweiterte Sortierung unterstützt, werden mehrere Spaltennamen abgerufen, die für das Sortieren und für Informationen zur Sortierreihenfolge verwendet werden.|  
 |<xref:System.Windows.Forms.BindingSource.Filter%2A>-Eigenschaft|Wenn die Datenquelle eine <xref:System.ComponentModel.IBindingListView> ist, wird der Ausdruck abgerufen, der zum Filtern der anzuzeigenden Zeilen verwendet wird, oder dieser Ausdruck wird festgelegt.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.BindingNavigator>  
- [Architektur der BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)  
- [BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [BindingNavigator-Steuerelement](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Windows Forms-Datenbindung](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.BindingNavigator>
+- [Architektur der BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)
+- [BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component.md)
+- [BindingNavigator-Steuerelement](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [Windows Forms-Datenbindung](../../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

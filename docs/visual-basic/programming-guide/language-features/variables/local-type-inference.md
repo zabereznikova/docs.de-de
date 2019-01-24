@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f4edc879af9539a40269336bed97fe206920992a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959951"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706747"
 ---
 # <a name="local-type-inference-visual-basic"></a>Lokaler Typrückschluss (Visual Basic)
 Visual Basic-Compiler verwendet *Typrückschluss* um zu bestimmen, die die Datentypen für lokale Variablen deklariert, ohne eine `As` Klausel. Der Compiler leitet den Typ der Variablen vom Typ des Initialisierungsausdrucks ab. Dadurch können Sie Variablen zu deklarieren, ohne explizit einen Typ, wie im folgenden Beispiel gezeigt. Als Ergebnis die Deklarationen sowohl `num1` und `num2` sind stark typisiert, als ganze Zahlen.  
@@ -71,11 +71,11 @@ Visual Basic-Compiler verwendet *Typrückschluss* um zu bestimmen, die die Daten
   
  Weitere Informationen finden Sie unter [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md) und [Seite "Kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
-## <a name="see-also"></a>Siehe auch  
- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Frühes und spätes Binden](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [For Each...Next-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [For...Next-Anweisung](../../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>Siehe auch
+- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Frühes und spätes Binden](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
+- [For Each...Next-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For...Next-Anweisung](../../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

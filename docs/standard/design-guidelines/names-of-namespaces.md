@@ -9,12 +9,12 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
-ms.openlocfilehash: 64efdc46583a0931df9f57c32424ca4233bf2b82
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143440"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665135"
 ---
 # <a name="names-of-namespaces"></a>Namen von Namespaces
 Wie wird mit anderen Benennungsrichtlinien, das Ziel bei der Benennung von Namespaces erstellt ausreichend Klarheit für den Programmierer mit dem Framework sofort wissen, was der Inhalt des Namespace wahrscheinlich ist. Die folgende Vorlage gibt die allgemeine Regel für die Benennung von Namespaces an:  
@@ -36,7 +36,7 @@ Wie wird mit anderen Benennungsrichtlinien, das Ziel bei der Benennung von Names
   
  **✓ CONSIDER** plural Namespacenamen verwenden, falls zutreffend.  
   
- Verwenden Sie z. B. `System.Collections` anstelle von `System.Collection`. Markennamen und Akronyme sind jedoch Ausnahmen von dieser Regel. Verwenden Sie z. B. `System.IO` anstelle von `System.IOs`.  
+ Verwenden Sie z. B. `System.Collections` statt `System.Collection`. Markennamen und Akronyme sind jedoch Ausnahmen von dieser Regel. Verwenden Sie z. B. `System.IO` statt `System.IOs`.  
   
  **X DO NOT** denselben Namen für einen Namespace und einen Typ in diesem Namespace verwenden.  
   
@@ -86,5 +86,5 @@ Wie wird mit anderen Benennungsrichtlinien, das Ziel bei der Benennung von Names
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)

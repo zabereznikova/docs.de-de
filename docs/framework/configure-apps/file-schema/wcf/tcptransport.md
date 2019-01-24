@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 21b63ab0b4546dc2f4d46c40b02c55fb639320f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7f38d0c0ff42e75067b06835e7e6613f8fa4adcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660650"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachrichten für eine benutzerdefinierte Bindung verwendet werden kann.  
@@ -56,7 +56,7 @@ Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachricht
 |manualAddressing|Ruft einen Wert ab, der angibt, ob eine manuelle Adressierung der Nachricht erforderlich ist, oder legt diesen fest.|  
 |maxBufferPoolSize|Ruft die maximale Größe von Pufferpools ab, die vom Transport verwendet werden, oder legt diese fest.|  
 |maxBufferSize|Ruft die maximale Größe des zu verwendenden Puffers ab oder legt diese fest. Bei Streamingnachrichten sollte dieser Wert mindestens die maximale Größe der Nachrichten-Header aufweisen, die im gepufferten Modus gelesen werden.|  
-|MaxOutputDelay|Ruft das maximale Zeitintervall ab, oder legt das maximale Zeitintervall fest, das als Teil einer Nachricht oder als vollständige Nachricht im Arbeitsspeicher gepuffert bleiben kann, bevor sie versendet wird.|  
+|maxOutputDelay|Ruft das maximale Zeitintervall ab, oder legt das maximale Zeitintervall fest, das als Teil einer Nachricht oder als vollständige Nachricht im Arbeitsspeicher gepuffert bleiben kann, bevor sie versendet wird.|  
 |maxPendingAccepts|Ruft die maximale Anzahl ausstehender asynchroner Annahmevorgänge ab, die für die Verarbeitung beim Dienst eingehender Verbindungen zur Verfügung stehen, oder legt die maximale Anzahl fest.|  
 |maxPendingConnections|Ruft die maximale Anzahl an Verbindungen ab, die zum Verteilen auf dem Dienst bereitstehen, oder legt sie fest.|  
 |maxReceivedMessageSize|Ruft die maximal zulässige Größe der Nachrichten ab, die empfangen werden können, und legt diese fest.|  
@@ -79,14 +79,14 @@ Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachricht
   
  Das `tcpTransport`-Element stellt den Startpunkt für das Erstellen einer benutzerdefinierten Bindung dar, die das TCP-Transportprotokoll implementiert. Dieser Transport ist für die Kommunikation zwischen WCF und WCF optimiert.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.TcpTransportElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.TcpTransportElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

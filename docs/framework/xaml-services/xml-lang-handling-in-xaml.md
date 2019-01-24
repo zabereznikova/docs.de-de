@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 025e4b2865fe3938e5f1454f87e90bae7a85bcfd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 508c1151b1b196a84b7c3a576e18d10c0a706fad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747969"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692397"
 ---
 # <a name="xmllang-handling-in-xaml"></a>xml:lang-Behandlung in XAML
 Das `xml:lang` -Attribut ist ein [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]-definiertes Attribut, das die Informationen zur Sprache und Kultur für ein Element in XML deklariert. Das Attribut weist in XAML dieselbe Bedeutung auf, es müssen jedoch einige zusätzliche Aspekte berücksichtigt werden.  
@@ -27,7 +27,7 @@ Das `xml:lang` -Attribut ist ein [!INCLUDE[TLA2#tla_xml](../../../includes/tla2s
   
 |||  
 |-|-|  
-|*rfc3066lang*|Eine Zeichenfolge, die von abgeleitet ist die [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) standard und identifiziert entweder eine Sprache oder eine Sprache-Region. In letzterem Fall werden Sprache und Region durch einen einzelnen Bindestrich getrennt. Weitere Informationen zu den Werten und zum Format finden Sie unter <xref:System.Windows.Markup.XmlLanguage> .|  
+|*rfc3066lang*|Eine vom [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) -Standard abgeleitete Zeichenfolge, die entweder eine Sprache oder eine Kombination von Sprache-Region kennzeichnet. In letzterem Fall werden Sprache und Region durch einen einzelnen Bindestrich getrennt. Weitere Informationen zu den Werten und zum Format finden Sie unter <xref:System.Windows.Markup.XmlLanguage> .|  
   
 ## <a name="remarks"></a>Hinweise  
  Die Definition für das `xml:lang` -Attribut in [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] ist von `xml:lang` abgeleitet, das vom [!INCLUDE[TLA#tla_w3c](../../../includes/tlasharptla-w3c-md.md)] für [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]als „spezielles Attribut“ definiert ist. Informationen zu Sprache und Kultur werden von Elementen je nach deren Implementierung möglicherweise unterschiedlich verarbeitet. Es gibt jedoch keine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] -Standardverarbeitung für das `xml:lang` -Attribut.  
@@ -43,5 +43,5 @@ Das `xml:lang` -Attribut ist ein [!INCLUDE[TLA2#tla_xml](../../../includes/tla2s
 ## <a name="wpf-usage-nodes"></a>Hinweise zur WPF-Verwendung  
  Für Elemente, die abgeleitete Klassen von <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>darstellen, können Sie die entsprechende <xref:System.Windows.FrameworkElement.Language%2A> -Abhängigkeitseigenschaft anstelle des `xml:lang` -Attributs verwenden. Die <xref:System.Windows.FrameworkElement.Language%2A> -Eigenschaft verwendet standardmäßig „en-US“, wenn sie nicht anderweitig festgelegt wird. Dies erfolgt entweder über die Eigenschaft oder durch die Verarbeitung des `xml:lang` -Attributs.  
   
-## <a name="see-also"></a>Siehe auch  
- [Globalisierung für WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>Siehe auch
+- [Globalisierung für WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)

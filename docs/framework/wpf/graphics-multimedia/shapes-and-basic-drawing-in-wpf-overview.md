@@ -12,12 +12,12 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 47df352c3b001f088f34ea057b34698efc4f4b53
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: e3a18d1cf788dfa8f2a9b05077b30af7eeabe584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086803"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665902"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF
 Dieses Thema bietet eine Übersicht über das Zeichnen mit <xref:System.Windows.Shapes.Shape> Objekte. Ein <xref:System.Windows.Shapes.Shape> ist eine Art von <xref:System.Windows.UIElement> , mit der Sie eine Form auf dem Bildschirm zu zeichnen. Da sie UI-Elemente sind <xref:System.Windows.Shapes.Shape> Objekte können verwendet werden, in <xref:System.Windows.Controls.Panel> Elemente und die meisten Steuerelemente.  
@@ -31,7 +31,7 @@ Dieses Thema bietet eine Übersicht über das Zeichnen mit <xref:System.Windows.
   
 -   <xref:System.Windows.Shapes.Shape.Stroke%2A>: Beschreibt, wie der Form gezeichnet wird.  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Beschreibt die Stärke der Form.  
+-   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>: Beschreibt die Stärke der Form an.  
   
 -   <xref:System.Windows.Shapes.Shape.Fill%2A>: Beschreibt, wie das Innere der Form gezeichnet wird.  
   
@@ -155,13 +155,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Die Stretch-Eigenschaft nimmt einen der folgenden Werte an:  
   
--   <xref:System.Windows.Media.Stretch.None>: Der <xref:System.Windows.Shapes.Shape> Inhalt des Objekts werden nicht gestreckt.  
+-   <xref:System.Windows.Media.Stretch.None>: Die <xref:System.Windows.Shapes.Shape> Inhalt des Objekts werden nicht gestreckt.  
   
--   <xref:System.Windows.Media.Stretch.Fill>: Der <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, um den Layoutbereich auszufüllen.  Das Seitenverhältnis wird nicht beibehalten.  
+-   <xref:System.Windows.Media.Stretch.Fill>: Die <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, um den Layoutbereich auszufüllen.  Das Seitenverhältnis wird nicht beibehalten.  
   
--   <xref:System.Windows.Media.Stretch.Uniform>: Der <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, so weit wie möglich ist, um den Layoutbereich auszufüllen und gleichzeitig die ursprünglichen Seitenverhältnisse beizubehalten.  
+-   <xref:System.Windows.Media.Stretch.Uniform>: Die <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, so weit wie möglich ist, um den Layoutbereich auszufüllen und gleichzeitig die ursprünglichen Seitenverhältnisse beizubehalten.  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>: Der <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, um den Layoutbereich vollständig auszufüllen, während gleichzeitig die ursprünglichen Seitenverhältnisse beizubehalten.  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>: Die <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, um den Layoutbereich vollständig auszufüllen, während gleichzeitig die ursprünglichen Seitenverhältnisse beizubehalten.  
   
  Beachten Sie, dass bei einem <xref:System.Windows.Shapes.Shape> Inhalte des-Objekts werden gestreckt, die <xref:System.Windows.Shapes.Shape> -Objekts nach dem Strecken gezeichnet wird.  
   
@@ -214,9 +214,9 @@ myPolygon.StrokeThickness = 2;
   
  In den vorherigen Beispielen wurde eine einzelne Transformation auf jedes Shape-Objekt angewendet. Verwenden Sie zum Anwenden mehrerer Transformationen auf eine Form (oder andere Elemente der Benutzeroberfläche) eine <xref:System.Windows.Media.TransformGroup>.  
   
-## <a name="see-also"></a>Siehe auch  
- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Übersicht über Geometrien](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Übersicht über Geometrien](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

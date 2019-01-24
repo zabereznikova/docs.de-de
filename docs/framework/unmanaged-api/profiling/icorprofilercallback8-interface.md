@@ -10,32 +10,32 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b92120cc5948efca696d922448da215601f9e6b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3bdf79582619777a22c80caac5b4e90d603f3a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675014"
 ---
 # <a name="icorprofilercallback8-interface"></a>ICorProfilerCallback8-Schnittstelle
-[Wird nur in .NET Framework 4.7 und höheren Versionen unterstützt]  
+[Wird nur in der .NET Framework 4.7 und höheren Versionen unterstützt]  
 
- Eine Unterklasse von [ICorProfilerCallback7](icorprofilercallback7-interface.md) Rückrufmethoden, die von der common Language Runtime verwendet werden, um den Profiler zu benachrichtigen, die gestartet und beendet JIT-Kompilierung einer dynamischen Methode bereitstellt. 
+ Eine Unterklasse von [ICorProfilerCallback7](icorprofilercallback7-interface.md) , die Rückrufmethoden, die von der common Language Runtime verwendet wird, um den Profiler zu benachrichtigen, die JIT-Kompilierung einer dynamischen Methode gestartet und beendet bereitstellt. 
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[DynamicMethodJITCompilationStarted-Methode](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|Benachrichtigt den Profiler, dass JIT-Kompilierung einer dynamischen Methode gestartet wurde.|  
-|[DynamicMethodJITCompilationFinished-Methode](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|Benachrichtigt den Profiler, dass JIT-Kompilierung einer dynamischen Methode abgeschlossen ist.|  
+|[DynamicMethodJITCompilationStarted-Methode](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)|Benachrichtigt den Profiler an, dass JIT-Kompilierung einer dynamischen Methode gestartet wurde.|  
+|[DynamicMethodJITCompilationStarted-Methode](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)|Benachrichtigt den Profiler an, die JIT-Kompilierung einer dynamischen Methode abgeschlossen wurde.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>Siehe auch  
-[Profilerstellungsschnittstellen](profiling-interfaces.md)   
-[ICorProfilerCallback9-Schnittstelle](icorprofilercallback9-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsschnittstellen](profiling-interfaces.md)
+- [ICorProfilerCallback9-Schnittstelle](icorprofilercallback9-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25482ee81d5210e5ab69007767aecf01435602d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 191a6e4fcfe340ed43e85a9aa90f8a2ec0931730
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671654"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps-Methode
-Ruft die zugeordneten Metadaten den <xref:System.Type> durch das angegebene TypeRef-Token verwiesen wird.  
+Ruft ab, die zugeordneten Metadaten den <xref:System.Type> durch das angegebene TypeRef-Token verwiesen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,13 +41,13 @@ HRESULT GetTypeRefProps (
   
 #### <a name="parameters"></a>Parameter  
  `tr`  
- [in] Das TypeRef-Token, das den zurückzugebenden Metadaten darstellt.  
+ [in] Die TypeRef-Token, das die den zurückzugebenden Metadaten darstellt.  
   
  `ptkResolutionScope`  
- [out] Ein Zeiger auf den Bereich, in dem sich der Verweis erfolgt. Dieser Wert ist ein AssemblyRef oder ModuleRef-Token.  
+ [out] Ein Zeiger auf den Bereich, in dem der Verweis erfolgt ist. Dieser Wert ist ein AssemblyRef oder ModuleRef-Token.  
   
  `szName`  
- [out] Ein Puffer, der den Typnamen enthält.  
+ [out] Ein Puffer, die den Typnamen enthält.  
   
  `cchName`  
  [in] Die angeforderte Größe in Breitzeichen `szName`.  
@@ -56,14 +56,14 @@ HRESULT GetTypeRefProps (
  [out] Die zurückgegebene Größe in Breitzeichen `szName`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

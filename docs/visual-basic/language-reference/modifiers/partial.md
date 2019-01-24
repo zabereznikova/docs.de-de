@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: c94c3bf1a1e3e4c724f90690f52e97e8216cb9a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f8e7e992ce312f7f7bf2c9dbad4d14fbb095de1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604613"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690708"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Gibt an, dass eine Typdeklaration eine partielle Definition des Typs ist.  
@@ -46,13 +46,13 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |Begriff|Definition|  
 |---|---|  
 |`attrlist`|Dies ist optional. Liste der Attribute, die für diesen Typ gelten. Setzen Sie die [Attributliste](../../../visual-basic/language-reference/statements/attribute-list.md) in spitzen Klammern (`< >`).|  
-|`accessmodifier`|Dies ist optional. Gibt an, welcher Code auf diesen Typ zugreifen kann. Finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Dies ist optional. Finden Sie unter [Schatten](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`accessmodifier`|Dies ist optional. Gibt an, welcher Code auf diesen Typ zugreifen kann. Siehe [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Dies ist optional. Finden Sie unter [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`MustInherit`|Dies ist optional. Finden Sie unter [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
 |`NotInheritable`|Dies ist optional. Finden Sie unter [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
 |`name`|Erforderlich. Der Name dieses Typs. Muss mit dem Namen übereinstimmen, der in allen anderen partiellen Deklarationen desselben Typs definiert ist.|  
 |`Of`|Dies ist optional. Gibt an, dass dies ein generischer Typ ist. Finden Sie unter [generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
-|`typelist`|Erforderlich, wenn Sie verwenden [von](../../../visual-basic/language-reference/statements/of-clause.md). Finden Sie unter [geben Liste](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`typelist`|Erforderlich, wenn Sie [von](../../../visual-basic/language-reference/statements/of-clause.md). Finden Sie unter [Liste](../../../visual-basic/language-reference/statements/type-list.md).|  
 |`Inherits`|Dies ist optional. Finden Sie unter [Inherits-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
 |`classname`|Erforderlich, wenn Sie `Inherits` verwenden. Der Name der Klasse oder Schnittstelle, von der diese Klasse abgeleitet wird.|  
 |`Implements`|Dies ist optional. Finden Sie unter [Anweisung implementiert](../../../visual-basic/language-reference/statements/implements-statement.md).|  
@@ -74,7 +74,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Union von Deklarationen.** Der Compiler behandelt den Typ als die Union all seiner partiellen Deklarationen. Jeder Modifizierer aus jeder partiellen Definition wird auf den gesamten Typ angewendet, und jeder Member aus jeder partiellen Definition steht dem gesamten Typ zur Verfügung.  
+-   **Die Union von Deklarationen.** Der Compiler behandelt den Typ als die Union all seiner partiellen Deklarationen. Jeder Modifizierer aus jeder partiellen Definition wird auf den gesamten Typ angewendet, und jeder Member aus jeder partiellen Definition steht dem gesamten Typ zur Verfügung.  
   
 -   **Typerweiterung nicht zulässig für partielle Typen in Modulen.** Wenn eine partielle Definition in einem Modul enthalten ist, ist automatisch keine Typerweiterung für diesen Typ möglich. In einem solchen Fall kann eine Reihe partieller Definitionen zu unerwarteten Ergebnissen und sogar zu Compilerfehlern führen. Weitere Informationen finden Sie unter [Typerweiterung](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
@@ -93,10 +93,10 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
  Die beiden partiellen Definitionen aus dem vorhergehenden Beispiel können in derselben Quelldatei oder in zwei unterschiedlichen Quelldateien enthalten sein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
- [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Typerweiterung](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Partielle Methoden](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+## <a name="see-also"></a>Siehe auch
+- [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Typerweiterung](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Partielle Methoden](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

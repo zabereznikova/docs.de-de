@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Einfügen eines MenuStrip in ein MDI-Dropdownmenü (Windows Forms)'
+title: 'Vorgehensweise: Einfügen eines MenuStrip in ein MDI-Dropdownmenü (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], merging
 - MDI [Windows Forms], merging menu items
 ms.assetid: 0fad444e-26d9-49af-8860-044d9c10d608
-ms.openlocfilehash: 64e7e7875a635bcd4fbafb62d3ee7b7018214ee4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b12199d049808fcf735002fee3715fe7be966030
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47115021"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695698"
 ---
-# <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Gewusst wie: Einfügen eines MenuStrip in ein MDI-Dropdownmenü (Windows Forms)
+# <a name="how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms"></a>Vorgehensweise: Einfügen eines MenuStrip in ein MDI-Dropdownmenü (Windows Forms)
 In einigen Anwendungen kann sich die Art eines untergeordneten MDI-Fensters (Multiple-Document Interface) von der des übergeordneten MDI-Fensters unterscheiden. Beispielsweise könnte das übergeordnete MDI-Fenster eine Kalkulationstabelle und das untergeordnete MDI-Fenster ein Diagramm enthalten. In diesem Fall möchten Sie möglicherweise den Inhalt des Menüs des übergeordneten MDI-Fensters mit dem Inhalt des Menüs des untergeordneten MDI-Fensters aktualisieren, da untergeordnete MDI-Fenster unterschiedlicher Arten aktiviert werden.  
   
  Im folgenden Verfahren wird die <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, und <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> Eigenschaften zum Einfügen von einer Gruppenstatus von Menüelementen aus dem untergeordneten MDI-Menü in der Dropdownbereich des übergeordneten MDI-Menüs. Schließen die untergeordneten MDI-Fensters entfernt die eingefügten Elemente von übergeordneten MDI-Fensters.  
@@ -95,7 +95,7 @@ In einigen Anwendungen kann sich die Art eines untergeordneten MDI-Fensters (Mul
   
 -   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Übersicht über das MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [Übersicht über das MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

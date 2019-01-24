@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Zeichnen von Formen mit dem OvalShape-Steuerelement und dem RectangleShape-Steuerelement (Visual Studio)'
+title: 'Vorgehensweise: Zeichnen von Formen mit dem OvalShape-Steuerelement und dem RectangleShape-Steuerelement (Visual Studio)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - shapes, drawing
 - RectangleShape control [Visual Basic]
 ms.assetid: 0275b4c6-7a13-46c8-90f3-61db308c6b5d
-ms.openlocfilehash: f87865ba3aebe5739b87d6ae6bfeaa957af726d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe937236332591f6065e618c49ca5cf2c54b987c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701221"
 ---
-# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Gewusst wie: Zeichnen von Formen mit dem OvalShape-Steuerelement und dem RectangleShape-Steuerelement (Visual Studio)
+# <a name="how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls-visual-studio"></a>Vorgehensweise: Zeichnen von Formen mit dem OvalShape-Steuerelement und dem RectangleShape-Steuerelement (Visual Studio)
 Sie können das <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Steuerelement nutzen, um Kreise und Ovale auf einem Formular oder Container zu zeichnen, sowohl zur Entwurfszeit als auch zur Laufzeit. Sie können das <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> Steuerelement nutzen, um Quadrate, Rechtecke oder Rechtecke mit abgerundeten Ecken auf einem Formular oder Container zu zeichnen. Sie können dieses Steuerelement nutzen, um sowohl zur Entwurfszeit als auch zur Laufzeit Formen zu zeichnen.  
   
  Sie können die Darstellung einer Form durch Ändern der Breite, Farbe und Format des Rahmens anpassen. Der Hintergrund einer Form ist standardmäßig transparent; Sie können den Hintergrund zum Anzeigen einer durchgängigen Farbe, eines Musters, eines Farbverlaufs (Übergang von einer Farbe zu einer anderen) oder eines Bildes anpassen.  
@@ -29,9 +29,9 @@ Sie können das <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> Steuerelement 
   
      Sie können auch die Größe und position der Form durch Ändern der `Size` und `Position` Eigenschaften in der **Eigenschaften** Fenster.  
   
-     Um ein Rechteck mit abgerundeten Ecken zu erstellen, wählen Sie die `CornerRadius` Eigenschaft in der **Eigenschaften** Fenster, und legen Sie es auf ein Wert, der größer als 0 ist.  
+     Um ein Rechteck mit abgerundeten Ecken zu erstellen, wählen Sie die `CornerRadius` -Eigenschaft in der **Eigenschaften** Fenster, und legen Sie ihn auf ein Wert, der größer als 0 ist.  
   
-3.  In der **Eigenschaften** Fenster weitere Eigenschaften optional so ändern Sie die Darstellung der Form fest.  
+3.  In der **Eigenschaften** optional weitere Eigenschaften fest, ändern Sie die Darstellung der Form-Fenster.  
   
 ### <a name="to-draw-a-simple-shape-at-run-time"></a>Zeichnen einer einfachen Form zur Laufzeit  
   
@@ -71,9 +71,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-custom-border"></a>Zeichnen eines Kreises mit einem benutzerdefinierten Rahmen  
   
-1.  Ziehen Sie die `OvalShape` -Steuerelement aus der **Visual Basic PowerPacks** Registerkarte der **Toolbox** in einem Formular oder Containersteuerelement.  
+1.  Ziehen Sie die `OvalShape` -Steuerelement aus der **Visual Basic PowerPacks** Registerkarte die **Toolbox** in ein Formular oder Containersteuerelement.  
   
-2.  In der **Eigenschaften** Fenster, in der `Size` Eigenschaftensatz, `Height` und `Width` gleichen Werte fest.  
+2.  In der **Eigenschaften** Fenster in der `Size` Eigenschaftensatz, `Height` und `Width` auf die gleichen Werte.  
   
 3.  Legen Sie bei der Eigenschaft `BorderColor` die gewünschte Farbe fest.  
   
@@ -83,9 +83,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-solid-fill"></a>Zeichnen eines Kreises mit einer einfarbigen Füllung  
   
-1.  Ziehen Sie die `OvalShape` -Steuerelement aus der **Visual Basic PowerPacks** Registerkarte der **Toolbox** in einem Formular oder Containersteuerelement.  
+1.  Ziehen Sie die `OvalShape` -Steuerelement aus der **Visual Basic PowerPacks** Registerkarte die **Toolbox** in ein Formular oder Containersteuerelement.  
   
-2.  In der **Eigenschaften** Fenster, in der `Size` Eigenschaftensatz, `Height` und `Width` gleichen Werte fest.  
+2.  In der **Eigenschaften** Fenster in der `Size` Eigenschaftensatz, `Height` und `Width` auf die gleichen Werte.  
   
 3.  Legen Sie bei der Eigenschaft `BackColor` die gewünschte Farbe fest.  
   
@@ -93,9 +93,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-patterned-fill"></a>Zeichnen eines Kreises mit einer gemusterten Füllung  
   
-1.  Ziehen Sie die `OvalShape` -Steuerelement aus der **Visual Basic PowerPacks** Registerkarte der **Toolbox** in einem Formular oder Containersteuerelement.  
+1.  Ziehen Sie die `OvalShape` -Steuerelement aus der **Visual Basic PowerPacks** Registerkarte die **Toolbox** in ein Formular oder Containersteuerelement.  
   
-2.  In der **Eigenschaften** Fenster, in der `Size` Eigenschaftensatz, `Height` und `Width` gleichen Werte fest.  
+2.  In der **Eigenschaften** Fenster in der `Size` Eigenschaftensatz, `Height` und `Width` auf die gleichen Werte.  
   
 3.  Legen Sie für die `BackColor`-Eigenschaft die Farbe fest, die Sie für den Hintergrund verwenden möchten.  
   
@@ -107,9 +107,9 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-has-a-gradient-fill"></a>Zeichnen eines Kreises mit gradueller Füllung  
   
-1.  Ziehen Sie die `OvalShape` -Steuerelement aus der **Visual Basic PowerPacks** Registerkarte der **Toolbox** in einem Formular oder Containersteuerelement.  
+1.  Ziehen Sie die `OvalShape` -Steuerelement aus der **Visual Basic PowerPacks** Registerkarte die **Toolbox** in ein Formular oder Containersteuerelement.  
   
-2.  In der **Eigenschaften** Fenster, in der `Size` Eigenschaftensatz, `Height` und `Width` gleichen Werte fest.  
+2.  In der **Eigenschaften** Fenster in der `Size` Eigenschaftensatz, `Height` und `Width` auf die gleichen Werte.  
   
 3.  Legen Sie für die `FillColor`-Eigenschaft die als Anfangsfarbe gewünschte Farbe fest.  
   
@@ -119,18 +119,18 @@ using Microsoft.VisualBasic.PowerPacks;
   
 #### <a name="to-draw-a-circle-that-is-filled-with-an-image"></a>Zeichnen eines Kreises, der mit einem Bild gefüllt ist  
   
-1.  Ziehen Sie die `OvalShape` -Steuerelement aus der **Visual Basic PowerPacks** Registerkarte der **Toolbox** in einem Formular oder Containersteuerelement.  
+1.  Ziehen Sie die `OvalShape` -Steuerelement aus der **Visual Basic PowerPacks** Registerkarte die **Toolbox** in ein Formular oder Containersteuerelement.  
   
-2.  In der **Eigenschaften** Fenster, in der `Size` Eigenschaftensatz, `Height` und `Width` gleichen Werte fest.  
+2.  In der **Eigenschaften** Fenster in der `Size` Eigenschaftensatz, `Height` und `Width` auf die gleichen Werte.  
   
-3.  Wählen Sie die `BackgroundImage` -Eigenschaft, und klicken Sie auf die **Auslassungszeichen** Schaltfläche (...).  
+3.  Wählen Sie die `BackgroundImage` -Eigenschaft, und klicken Sie auf die **Auslassungspunkte** Schaltfläche (…).  
   
-4.  In der **Ressource auswählen** (Dialogfeld), wählen Sie ein Bild angezeigt. Wenn keine Bildressourcen aufgeführt sind, klicken Sie auf **Import** , um den Speicherort einer Bilddatei zu suchen.  
+4.  In der **Ressource auswählen** (Dialogfeld), wählen Sie eine anzuzeigende Bild. Wenn keine Bildressourcen aufgeführt sind, klicken Sie auf **Import** , um den Speicherort eines Bilds zu suchen.  
   
 5.  Klicken Sie auf **OK** um das Bild einzufügen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>  
- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>  
- [Einführung in das Line-Steuerelement und das Shape-Steuerelement](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
- [Gewusst wie: Zeichnen von Linien mit dem LineShape-Steuerelement](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>
+- <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>
+- [Einführung in das Line-Steuerelement und das Shape-Steuerelement](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
+- [Vorgehensweise: Zeichnen von Linien mit dem LineShape-Steuerelement](../../../visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)

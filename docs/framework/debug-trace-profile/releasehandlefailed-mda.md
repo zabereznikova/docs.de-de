@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 155cf7138d4074467195bdc1302e28c0789f93cf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 69dea1adb2d751b44f6c8bc529353ff78cad60ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673045"
 ---
 # <a name="releasehandlefailed-mda"></a>ReleaseHandleFailed-MDA
 Der `releaseHandleFailed`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, um einen Entwickler zu benachrichtigen, wenn die <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Methode einer Klasse, die aus <xref:System.Runtime.InteropServices.SafeHandle> oder <xref:System.Runtime.InteropServices.CriticalHandle> abgeleitet wurde, `false` zurückgibt.  
@@ -90,7 +90,7 @@ bool ReleaseHandle()
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)

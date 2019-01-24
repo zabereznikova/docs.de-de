@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Verwenden mehrerer Sicherheitstokens desselben Typs'
+title: 'Vorgehensweise: Verwenden Sie mehrerer Sicherheitstokens desselben Typs'
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: b8daf8a2cecfc6a7b17911bb50ad292d481188c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 40fc95c905f8923b8aaf2c97fb9dc2b937dfb06f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691346"
 ---
-# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Vorgehensweise: Verwenden mehrerer Sicherheitstokens desselben Typs
+# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Vorgehensweise: Verwenden Sie mehrerer Sicherheitstokens desselben Typs
 -   In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]&#160;3.0 enthielt eine Clientnachricht nur ein Token eines beliebigen angegebenen Typs. Jetzt können Clientnachrichten mehrere Token eines Typs enthalten. In diesem Thema wird das Einfügen mehrerer Token desselben Typs in eine Clientnachricht erläutert.  
   
 -   Ein Dienst kann nicht auf diese Weise konfiguriert werden, da ein Dienst lediglich ein einzelnes unterstützendes Token enthalten kann.  
@@ -49,5 +49,5 @@ ms.locfileid: "50184260"
   
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Siehe auch
+- [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

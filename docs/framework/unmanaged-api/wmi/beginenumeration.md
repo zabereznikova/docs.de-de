@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 08406f7d93671b406b3c7cd8719a7a0e5e423184
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 65e1ed604084fa61c8e47f0bb468b6a6d100778c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523501"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695724"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration-Funktion
 Setzt einen Enumerator zurück zum Anfang der Enumeration zurück.  
@@ -54,7 +54,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Die Kombination von Flags in `lEnumFlags` ist ungültig oder ein ungültiges Argument wurde angegeben. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Die Kombination von Flags in `lEnumFlags` ist ungültig oder ein ungültiges Argument wurde angegeben. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Einen zweiten Aufruf von `BeginEnumeration` wurde ohne einen zwischenzeitlichen Aufruf versucht [ `EndEnumeration` ](endenumeration.md). |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher zur Verfügung, um eine neue Enumeration beginnen. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
@@ -69,22 +69,22 @@ Die Flags, die als übergeben werden können die `lEnumFlags` Argument definiert
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0 x 4 | Enthalten Sie die Eigenschaften, die nur den Schlüssel zu bilden. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Enthalten Sie die Eigenschaften, die nur den Schlüssel zu bilden. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Enthalten Sie die Eigenschaften, die nur die Objektverweise sind. |
 
 **Gruppe 2**
 
 Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_FLAG_SYSTEM_ONLY` | 0 x 30 | Die Enumeration, die nur die Systemeigenschaften zu beschränken. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0 x 40 | Lokale und verteilte Eigenschaften enthalten, aber Ausschließen von Eigenschaften aus der Enumeration. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Die Enumeration, die nur die Systemeigenschaften zu beschränken. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Lokale und verteilte Eigenschaften enthalten, aber Ausschließen von Eigenschaften aus der Enumeration. |
 
 Für Klassen:
 
 Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0 x 100 | Beschränken Sie die Enumeration, die Eigenschaften, die in der Definition der Klasse überschrieben. |
-|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0 x 100 | Beschränken Sie die Enumeration, die den Eigenschaften, die in der Definition der aktuellen Klasse überschrieben und den neuen Eigenschaften, die in der Klasse definiert. |
+|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Beschränken Sie die Enumeration, die Eigenschaften, die in der Definition der Klasse überschrieben. |
+|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Beschränken Sie die Enumeration, die den Eigenschaften, die in der Definition der aktuellen Klasse überschrieben und den neuen Eigenschaften, die in der Klasse definiert. |
 | `WBEM_MASK_CLASS_CONDITION` | 0x300 | Ein zu maskieren (anstatt ein Flag) vor dem Anwenden einer `lEnumFlags` Wert entweder überprüft, ob `WBEM_FLAG_CLASS_OVERRIDES_ONLY` oder `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` festgelegt ist. |
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Beschränken Sie die Enumeration auf Eigenschaften, die definiert, oder in der Klasse selbst geändert werden. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Beschränken Sie die Enumeration auf Eigenschaften, die von Klassen geerbt werden. |
@@ -98,11 +98,11 @@ Konstante  |Wert  |Beschreibung  |
 
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

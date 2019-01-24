@@ -2,12 +2,12 @@
 title: FILESTREAM-Daten
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4002f95e47b3c1ac7d8415d590b8c4c8a5d95a91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197027"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701091"
 ---
 # <a name="filestream-data"></a>FILESTREAM-Daten
 Das FILESTREAM-Speicherattribut wird für Binärdaten (BLOBs) verwendet, die in einer varbinary(max)-Spalte gespeichert sind. Vor FILESTREAM erforderte das Speichern von Binärdaten besondere Maßnahmen. Unstrukturierte Daten wie z. B. Textdokumente, Bilder und Videos werden häufig außerhalb der Datenbank gespeichert und sind daher schwieriger zu verwalten.  
@@ -37,7 +37,7 @@ Values(1, 0x00, default)
 GO  
 ```  
   
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Beispiel: Lesen, Überschreiben und Einfügen von FILESTREAM-Daten  
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>Beispiel: Lesen, überschreiben und Einfügen von Filestreamdaten  
  Im folgenden Beispiel wird veranschaulicht, wie Daten aus einem FILESTREAM gelesen werden. Der Code ruft den logischen Pfad der Datei ab, wobei `FileAccess` auf `Read` und `FileOptions` auf `SequentialScan` gesetzt wird. Anschließend liest der Code die Bytes vom SqlFileStream in den Puffer. Die Bytes werden ins Konsolenfenster geschrieben.  
   
  Das Beispiel zeigt auch, wie Daten in einen FILESTREAM geschrieben werden, wobei alle vorhandenen Daten überschrieben werden. Der Code ruft den logischen Pfad der Datei ab und erstellt den `SqlFileStream`, wobei `FileAccess` auf `Write` und `FileOptions` auf `SequentialScan` gesetzt werden. Ein einzelnes Byte wird in den `SqlFileStream` geschrieben und ersetzt alle Daten in der Datei.  
@@ -178,9 +178,9 @@ namespace FileStreamTest
 |[Erstellen von Clientanwendungen für FILESTREAM-Daten](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Beschreibt die Win32 API-Funktionen zum Arbeiten mit FILESTREAM-Daten.|  
 |[FILESTREAM und andere SQL Server-Funktionen](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Enthält Überlegungen, Richtlinien und Einschränkungen zur Verwendung von FILESTREAM-Daten mit anderen Funktionen von SQL Server.|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Codezugriffssicherheit und ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
- [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Übersicht über ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Codezugriffssicherheit und ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
+- [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Übersicht über ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)

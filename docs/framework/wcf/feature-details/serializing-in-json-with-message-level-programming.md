@@ -2,12 +2,12 @@
 title: Serialisieren in Json mit Programmierung auf Nachrichtenebene
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-ms.openlocfilehash: 2652b13cc350049cf96716eb754101001d08c64c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 39e6eaf138ee4f4946a876f492457831cbbbf80a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186985"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663049"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>Serialisieren in Json mit Programmierung auf Nachrichtenebene
 WCF unterstützt die Serialisierung von Daten im JSON-Format. In diesem Thema wird beschrieben, wie WCF angewiesen wird, Typen mit dem <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> zu serialisieren.  
@@ -31,7 +31,7 @@ WCF unterstützt die Serialisierung von Daten im JSON-Format. In diesem Thema wi
                     new WebBodyFormatMessageProperty(WebContentFormat.Json)); // Use JSON format  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [AJAX-Integration und JSON-Unterstützung](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
- [Eigenständige JSON-Serialisierung.](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
- [JSON-Serialisierung](../../../../docs/framework/wcf/samples/json-serialization.md)
+## <a name="see-also"></a>Siehe auch
+- [AJAX-Integration und JSON-Unterstützung](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
+- [Eigenständige JSON-Serialisierung.](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)
+- [JSON-Serialisierung](../../../../docs/framework/wcf/samples/json-serialization.md)

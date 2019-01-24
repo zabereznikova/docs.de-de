@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-ms.openlocfilehash: 80cab35b14dd3b7663405038f2afdea362cdb792
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7636d7013c236e0c51e5326a84ae47f2f98e283
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490772"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693622"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Vorgehensweise: Erstellen eines unidirektionalen Vertrags
-Dieses Thema zeigt die grundlegenden Schritte zum Erstellen von Methoden, die einen unidirektionalen Vertrag verwenden. Solche Methoden rufen Vorgänge für einen Windows Communication Foundation (WCF)-Dienst von einem Client aber erwarten nicht, dass eine Antwort. Dieser Vertragstyp kann verwendet werden, um z.&#160;B. Benachrichtigungen für viele Abonnenten zu veröffentlichen. Sie können unidirektionale Verträge auch beim Erstellen eines Duplexvertrags (bidirektionalen Vertrags) verwenden. Dies ermöglicht eine unabhängige Kommunikation zwischen Clients und Servern, sodass beide Aufrufe des jeweils anderen initiieren können. So wird insbesondere dem Server ermöglicht, unidirektionale Aufrufe an den Client durchzuführen, die der Client als Ereignisse behandeln kann. Ausführliche Informationen zum Angeben von unidirektionalen Methoden finden Sie in der Beschreibung zur <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>-Methode und zur <xref:System.ServiceModel.OperationContractAttribute>-Klasse.  
+Dieses Thema zeigt die grundlegenden Schritte zum Erstellen von Methoden, die einen unidirektionalen Vertrag verwenden. Solche Methoden rufen Vorgänge für einen Windows Communication Foundation (WCF)-Dienst von einem Client jedoch erwarten nicht, dass eine Antwort. Dieser Vertragstyp kann verwendet werden, um z.&#160;B. Benachrichtigungen für viele Abonnenten zu veröffentlichen. Sie können unidirektionale Verträge auch beim Erstellen eines Duplexvertrags (bidirektionalen Vertrags) verwenden. Dies ermöglicht eine unabhängige Kommunikation zwischen Clients und Servern, sodass beide Aufrufe des jeweils anderen initiieren können. So wird insbesondere dem Server ermöglicht, unidirektionale Aufrufe an den Client durchzuführen, die der Client als Ereignisse behandeln kann. Ausführliche Informationen zum Angeben von unidirektionalen Methoden finden Sie in der Beschreibung zur <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>-Methode und zur <xref:System.ServiceModel.OperationContractAttribute>-Klasse.  
   
- Weitere Informationen zum Erstellen von einer Clientanwendung für einen Duplexvertrag, finden Sie unter [Vorgehensweise: Access Services mit unidirektionalen und Anforderung-Antwort-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Ein funktionierendes Beispiel finden Sie unter der [unidirektionale](../../../../docs/framework/wcf/samples/one-way.md) Beispiel.  
+ Weitere Informationen zum Erstellen einer Clientanwendung für einen Duplexvertrag finden Sie unter [Vorgehensweise: Zugreifen auf Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Ein Arbeitsbeispiel finden Sie unter den [unidirektionale](../../../../docs/framework/wcf/samples/one-way.md) Beispiel.  
   
 ### <a name="to-create-a-one-way-contract"></a>So erstellen Sie einen unidirektionalen Vertrag  
   
@@ -31,10 +31,10 @@ Dieses Thema zeigt die grundlegenden Schritte zum Erstellen von Methoden, die ei
  [!code-csharp[S_Service_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_service_session/cs/service.cs#1)]
  [!code-vb[S_Service_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.ServiceContractAttribute>  
- <xref:System.ServiceModel.OperationContractAttribute>  
- [Entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
- [Vorgehensweise: Definieren eines Dienstvertrags](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
- [Sitzung](../../../../docs/framework/wcf/samples/session.md)  
- [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.ServiceContractAttribute>
+- <xref:System.ServiceModel.OperationContractAttribute>
+- [Entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md)
+- [Vorgehensweise: Definieren eines Dienstvertrags](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [Sitzung](../../../../docs/framework/wcf/samples/session.md)
+- [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)

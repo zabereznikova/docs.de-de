@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b7f70162ae368934e1383683672fed86f9ce18c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e88dd0053ec7562d6223c18479f4a4fadc68c12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701793"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr-Enumeration
-Enthält Werte, die Attribute eines Abschnitts zur Verwendung durch Angeben der [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) Schnittstelle.  
+Enthält Werte, die Attribute eines Abschnitts für die Verwendung durch Angeben der [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,19 +43,19 @@ typedef enum  {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`sdNone`|Abschnitt weist keine Attribute.|  
-|`sdReadOnly`|Abschnitt enthält initialisierte Daten, die nur können nicht aktualisiert gelesen werden werden.|  
-|`sdReadWrite`|Abschnitt enthält initialisierte Daten, die gelesen oder aktualisiert werden können.|  
-|`sdExecute`|Abschnitt enthält ausführbaren Code, der gelesen und ausgeführt werden darf.|  
+|`sdNone`|Abschnitt besitzt keine Attribute.|  
+|`sdReadOnly`|Abschnitt initialisierte Daten enthält, die nur können nicht aktualisiert gelesen werden.|  
+|`sdReadWrite`|Abschnitt initialisierte Daten enthält, die gelesen oder aktualisiert werden können.|  
+|`sdExecute`|Abschnitt enthält die ausführbaren Code, der gelesen und ausgeführt werden darf.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

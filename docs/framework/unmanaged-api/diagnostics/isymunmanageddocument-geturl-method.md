@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a447de2bb01e7bbf838ef5443e3ae7951bf8226
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9a93ef073d4dd2eaf58c057d4cdf25fa39082e14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431366"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706325"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL-Methode
 Gibt die URL (uniform Resource Locator) für dieses Dokument zurück.  
@@ -44,10 +44,10 @@ HRESULT GetURL(
  [out] Ein Zeiger auf eine Variable, die Größe der URL, einschließlich der null-Terminierung empfängt.  
   
  `szUrl`  
- [out] Der Puffer, der die URL.  
+ [out] Der Puffer mit der URL.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls ein Fehlercode.  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedDocument-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedDocument-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

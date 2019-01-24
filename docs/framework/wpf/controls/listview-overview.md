@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 42573304d6f3d6d145887fa7289f9b5ec019f521
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701546"
 ---
 # <a name="listview-overview"></a>Übersicht über ListView
 Die <xref:System.Windows.Controls.ListView> Steuerelement bietet die Infrastruktur, um einen Satz von Datenelementen in verschiedenen Layouts oder Ansichten anzuzeigen. Benutzer können damit z.B. die Datenelemente in einer Tabelle anzeigen und die Spalten sortieren.  
@@ -81,11 +81,11 @@ Die <xref:System.Windows.Controls.ListView> Steuerelement bietet die Infrastrukt
 ## <a name="creating-a-custom-view-mode"></a>Erstellen eines benutzerdefinierten Ansichtsmodus  
  Angepasste Ansichten wie <xref:System.Windows.Controls.GridView> stammen von der <xref:System.Windows.Controls.ViewBase> abstrakte Klasse, die stellt die Tools zum Anzeigen von Datenelementen, die als dargestellt werden <xref:System.Windows.Controls.ListViewItem> Objekte.    
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.GridView>  
- <xref:System.Windows.Controls.ListView>  
- <xref:System.Windows.Controls.ListViewItem>  
- <xref:System.Windows.Data.Binding>  
- [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [Steuerelemente](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Controls.GridView>
+- <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListViewItem>
+- <xref:System.Windows.Data.Binding>
+- [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Steuerelemente](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

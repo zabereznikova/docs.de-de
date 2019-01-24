@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e577413ea6807ea5ff8be4d668aa82f0acbb007d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c55c6ffea0f3688fc7c3c3283701b4e35f1fcbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451833"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651980"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread-Methode
-Benachrichtigt den Profiler, dass ein verwalteter Thread mit einem bestimmten Betriebssystemthread implementiert wird.  
+Benachrichtigt den Profiler an, ein verwalteter Thread mit einem bestimmten Betriebssystemthread implementiert wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,13 +40,13 @@ HRESULT ThreadAssignedToOSThread(
  [in] Der Bezeichner des verwalteten Threads.  
   
  `osThreadId`  
- [in] Der Bezeichner des Betriebssystemthreads.  
+ [in] Der Bezeichner des Threads Betriebssystem.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ThreadAssignedToOSThread` Rückruf vorhanden ist, damit der Profiler eine genaue Zuordnung für Fibers Betriebssystem Threads für die verwaltete Threads verwalten kann.  
+ Die `ThreadAssignedToOSThread` Rückruf vorhanden ist, damit der Profiler die genaue Zuordnung für Fibers von Betriebssystemthreads an verwaltete Threads verwalten kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -54,5 +54,5 @@ HRESULT ThreadAssignedToOSThread(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

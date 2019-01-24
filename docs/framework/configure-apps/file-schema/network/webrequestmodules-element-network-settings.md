@@ -8,12 +8,12 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: 1d421009e8b2e0d4074679939092180c6037a0c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e2a37f6829341b33475f91796e8671d867ac151
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200443"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699791"
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;WebRequestModules&gt; -Element (Netzwerkeinstellungen)
 Gibt die Module zu verwenden, um Informationen aus der Hosts im Netzwerk anzufordern.  
@@ -47,7 +47,7 @@ Gibt die Module zu verwenden, um Informationen aus der Hosts im Netzwerk anzufor
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
+|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Enthält Einstellungen, die festlegen, wie Verbindungen zwischen .NET Framework und dem Netzwerk hergestellt werden.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `webRequestModules` Element registriert Nachfolger der <xref:System.Net.WebRequest> -Klasse zur Verarbeitung von Anforderungen an die Hosts im Netzwerk. Webanforderungsmodule müssen implementieren die <xref:System.Net.IWebRequestCreate> Schnittstelle.  
@@ -73,7 +73,7 @@ Gibt die Module zu verwenden, um Informationen aus der Hosts im Netzwerk anzufor
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- <xref:System.Net.WebRequest>  
-- <xref:System.Net.IWebRequestCreate>  
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.IWebRequestCreate>
 - [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

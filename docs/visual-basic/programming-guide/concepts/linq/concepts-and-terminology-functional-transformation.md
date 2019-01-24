@@ -2,12 +2,12 @@
 title: Konzepte und Terminologie (funktionale Transformation) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: 67986e36333ac9a1aba7bec3c1b6c248b4faf55f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e98e24bb60dd2a5b6e84195120429fac0b8832e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644419"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651863"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Konzepte und Terminologie (funktionale Transformation) (Visual Basic)
 Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mit reinen funktionalen Transformationen verwendet werden. Bei Verwendung der funktionalen Transformation zum Transformieren von Daten erhalten Sie Code, der häufig schneller programmiert werden kann, ausdrucksstärker ist und einfacher von Fehlern bereinigt und verwaltet werden kann als Code, der auf die herkömmliche imperative Methode zurückzuführen ist.  
@@ -24,14 +24,14 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
 > [!IMPORTANT]
 >  Im übrigen Teil dieses Lernprogramms wird der Begriff „reine Funktion“ allgemein als Bezeichnung für einen Programmieransatz und nicht als Bezeichnung für eine bestimmte Sprachfunktion verwendet.  
 >   
->  Beachten Sie, dass reine Funktionen als Funktionen in Visual Basic implementiert werden müssen.  
+>  Beachten Sie, dass reine Funktionen, die als Funktionen in Visual Basic implementiert werden müssen.  
 >   
 >  Verwechseln Sie bitte auch nicht die reinen Funktionen mit den reinen virtuellen Methoden in C++. Die reinen virtuellen Methoden in C++ geben an, dass die enthaltene Klasse abstrakt ist und dass kein Methodentext angegeben wird.  
   
 ### <a name="functional-programming"></a>Funktionale Programmierung  
  Die *funktionale Programmierung* (FP) ist ein Programmieransatz, der die reine funktionale Transformation direkt unterstützt.  
   
- In der Vergangenheit standen Allzwecksprachen zur funktionalen Programmierung, wie ML, Scheme, Haskell und F#, im Mittelpunkt des wissenschaftlichen Interesses. Es zwar immer möglich, die in Visual Basic reine funktionale Transformationen schreiben, machte die Schwierigkeit besteht also keine attraktive Option für die meisten Programmierer es. Mit höheren Versionen von Visual Basic können jedoch Sprachkonstrukte neue, z. B. Lambdaausdrücke und typableitung funktionale Programmierung wesentlich einfacher und produktiver zu vereinfachen.  
+ In der Vergangenheit standen Allzwecksprachen zur funktionalen Programmierung, wie ML, Scheme, Haskell und F#, im Mittelpunkt des wissenschaftlichen Interesses. Es war, zwar immer möglich, die in Visual Basic reine funktionale Transformationen schreiben ist die Schwierigkeit der dadurch also keine interessante Option für die meisten Programmierer vereinfacht. Mit höheren Versionen von Visual Basic stehen jedoch neue Sprachkonstrukte, z. B. Lambda-Ausdrücke und typableitung funktionale Programmierung wesentlich einfacher und produktiver erleichtern.  
   
  Weitere Informationen zum funktionalen Programmieren finden Sie unter [Funktionale Programmierung und Imperative Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md).  
   
@@ -42,9 +42,9 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
  Im Folgenden finden Sie Definitionen für eine Reihe von Begriffen, die im Zusammenhang mit der funktionalen Transformation verwendet werden:  
   
  Funktion höherer Ordnung (Funktion erster Ordnung)  
- Funktion, die als programmgesteuertes Objekt behandelt werden kann. So kann eine Funktion höherer Ordnung z. B. an andere Funktionen übergeben oder von anderen Funktionen zurückgegeben werden. In Visual Basic, gehören Delegate und Lambdaausdrücke Sprachfunktionen, die Funktionen höherer Ordnung unterstützen. Beim Schreiben einer Funktion höherer Ordnung deklarieren Sie für mindestens ein Argument, das diese Delegate akzeptiert, und beim Aufrufen einer solchen Funktion verwenden Sie häufig Lambdaausdrücke. Viele der Standardabfrageoperatoren sind Funktionen höherer Ordnung.  
+ Funktion, die als programmgesteuertes Objekt behandelt werden kann. So kann eine Funktion höherer Ordnung z. B. an andere Funktionen übergeben oder von anderen Funktionen zurückgegeben werden. In Visual Basic sind Delegate und Lambdaausdrücke-Sprachfunktionen, die Funktionen höherer Ordnung unterstützen. Beim Schreiben einer Funktion höherer Ordnung deklarieren Sie für mindestens ein Argument, das diese Delegate akzeptiert, und beim Aufrufen einer solchen Funktion verwenden Sie häufig Lambdaausdrücke. Viele der Standardabfrageoperatoren sind Funktionen höherer Ordnung.  
   
- Weitere Informationen finden Sie unter [Standard Übersicht über Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Weitere Informationen finden Sie unter [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  Lambdaausdruck  
  Im Wesentlichen eine anonyme Inlinefunktion, die überall dort verwendet werden kann, wo ein Delegattyp erwartet wird. Dies ist zwar eine vereinfachte Definition für Lambdaausdrücke, im Rahmen dieses Lernprogramms reicht sie aber aus.  
@@ -62,15 +62,15 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
  Typableitung (implizite Typisierung)  
  Fähigkeit eines Compilers, den Typ einer Variablen in Abwesenheit einer expliziten Typdeklaration zu bestimmen.  
   
- Weitere Informationen finden Sie unter [lokalen Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+ Weitere Informationen finden Sie unter [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
  Verzögerte Ausführung und verzögerte Auswertung  
  Bei der verzögerten Auswertung (Lazy Evaluation) eines Ausdrucks wird mit der Auswertung so lange gewartet, bis der aufgelöste Wert tatsächlich benötigt wird. Die verzögerte Ausführung (Deferred Execution) wird in Auflistungen unterstützt.  
   
- Weitere Informationen finden Sie unter [Grundlegende Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) und [verzögerte Ausführung und verzögerter Auswertung in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Weitere Informationen finden Sie unter [Grundlegende Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) und [verzögerte Ausführung und Auswertung in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
  Diese Sprachfunktionen werden in Codebeispielen im gesamten Abschnitt verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Funktionale Programmierung und Imperative Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Funktionale Programmierung und Imperative Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

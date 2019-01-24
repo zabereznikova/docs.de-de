@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Zuschneiden und Skalieren von Bildern'
+title: 'Vorgehensweise: Zuschneiden und Skalieren von Bildern'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: d5acda50a1aa0f0cae6e77a748b011908fcc8c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f6d721edc4f889c2da8ece63f262c7fb55192bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707699"
 ---
-# <a name="how-to-crop-and-scale-images"></a>Gewusst wie: Zuschneiden und Skalieren von Bildern
-Die <xref:System.Drawing.Graphics> Klasse stellt mehrere <xref:System.Drawing.Graphics.DrawImage%2A> Methoden, von denen einige Quell- und Zielschemas Rechteck Parameter haben, die zum Zuschneiden und Skalieren von Bildern verwendet werden können.  
+# <a name="how-to-crop-and-scale-images"></a>Vorgehensweise: Zuschneiden und Skalieren von Bildern
+Die <xref:System.Drawing.Graphics> Klasse bietet mehrere <xref:System.Drawing.Graphics.DrawImage%2A> Methoden, von denen einige über die Parameter für Quell- und Ziel, die Sie zum Zuschneiden und Skalieren von Bildern verwenden können.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine <xref:System.Drawing.Image> Objekt aus der Datenträgerdatei Apple.gif. Der Code zeichnet das gesamte Apple-Bild in seiner ursprünglichen Größe an. Der Code ruft dann die <xref:System.Drawing.Graphics.DrawImage%2A> Methode von einer <xref:System.Drawing.Graphics> Objekt, das einen Teil der Apple-Bildes in ein Zielrechteck zu zeichnen, die größer als das ursprüngliche Apple-Image ist.  
+ Das folgende Beispiel erstellt eine <xref:System.Drawing.Image> Objekt aus der Datenträgerdatei Apple.gif. Der Code zeichnet das gesamte Apple-Bild in seiner ursprünglichen Größe. Der Code ruft dann die <xref:System.Drawing.Graphics.DrawImage%2A> Methode eine <xref:System.Drawing.Graphics> Objekt, das einen Teil des Apple-Images in einem Zielrechteck zu zeichnen, die größer als das Originalbild von Apple.  
   
- Die <xref:System.Drawing.Graphics.DrawImage%2A> Methode bestimmt, welcher Teil der Apple gezogen werden unter Verwendung des fünften und sechsten Argumente suchen soll. In diesem Fall wird die Apple 75 Prozent der Breite und 75 Prozent der Höhe zugeschnitten.  
+ Die <xref:System.Drawing.Graphics.DrawImage%2A> Methode bestimmt, welcher Teil der Apple zu zeichnenden unter Verwendung des fünften und sechsten Argumente. In diesem Fall wird die Apple 75 Prozent der Breite und 75 Prozent seiner Höhe zugeschnitten.  
   
- Die <xref:System.Drawing.Graphics.DrawImage%2A> Methode bestimmt, wo Sie zugeschnittene Apple gezeichnet werden soll und wie groß die zugeschnittenen Apfels anhand des Zielrechtecks, dies ist durch das zweite Argument angegeben. In diesem Fall ist das Zielrechteck 30 Prozent breiter und 30 Prozent höher als das ursprüngliche Image.  
+ Die <xref:System.Drawing.Graphics.DrawImage%2A> -Methode bestimmt, wo Sie zugeschnittene Apple gezeichnet werden soll und wie groß, um die zugeschnittenen Apfels anhand des Zielrechtecks, dies ist durch das zweite Argument angegeben. In diesem Fall ist das Zielrechteck, 30 Prozent breiter und 30 Prozent höher als das Originalbild.  
   
- Die folgende Abbildung zeigt die ursprüngliche Apple und die skalierte Apple zugeschnitten.  
+ Die folgende Abbildung zeigt die ursprünglichen Apple und die skalierte Apple zugeschnitten.  
   
  ![Zuschneiden und skalieren](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")  
   
@@ -33,8 +33,8 @@ Die <xref:System.Drawing.Graphics> Klasse stellt mehrere <xref:System.Drawing.Gr
  [!code-vb[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Achten Sie darauf, ersetzen Sie `Apple.gif` mit einem Dateinamen und Pfad, die auf Ihrem System gültig sind.  
+ Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Achten Sie darauf, ersetzen Sie dies `Apple.gif` mit einer Bilddateinamen und den Pfad, die auf Ihrem System gültig sind.  
   
-## <a name="see-also"></a>Siehe auch  
- [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>Siehe auch
+- [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

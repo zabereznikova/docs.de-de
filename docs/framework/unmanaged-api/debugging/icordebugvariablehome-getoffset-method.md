@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a2ea7273fec62654c168d6786d3644b184ff7f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 687c3bb441c2a12529c873b4fa5f9283b9326a40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659068"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome::GetOffset-Methode
-Ruft den Offset von der Basisregister für eine Variable ab.  
+Ruft den Offset aus dem Basis-Register für eine Variable ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,15 +40,15 @@ HRESULT GetOffset(
  [out] Der Offset aus dem Basis-Register.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die Methode gibt die folgenden Werte zurück:  
+ Die Methode gibt die folgenden Werte:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`S_OK`|Die Variable ist in eine Register-Relative Speicheradresse.|  
-|`E_FAIL`|Die Variable ist nicht in eine Register-Relative Speicheradresse.|  
+|`S_OK`|Die Variable ist in einem Register bezogene-Speicherort.|  
+|`E_FAIL`|Die Variable ist nicht in einem Register bezogene-Speicherort.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -56,5 +56,5 @@ HRESULT GetOffset(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugVariableHome-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugVariableHome-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

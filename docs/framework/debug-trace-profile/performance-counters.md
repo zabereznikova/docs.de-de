@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39472662cd26799e9adbbbd199129e2c83dd0d93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c9bf5d138be250d1dfeee012368153bac96b067
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672395"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in .NET Framework
 Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Windows Performance Monitor](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
@@ -251,6 +251,6 @@ for (int i = 0; i < Array.Length; i++)
 |**Stackwalktiefe**|Zeigt die Tiefe des Stapels während der letzten Sicherheitsüberprüfung für den Laufzeitcode-Zugriff an. Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff werden durch das Durchlaufen des Stapels (Stackwalk) durchgeführt. Dieser Indikator ist kein Durchschnittswert. Er zeigt nur den letzten erfassten Wert an.|  
 |**Laufzeitüberprüfungen gesamt**|Zeigt die Gesamtzahl der seit dem Anwendungsstart durchgeführten Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff an. Sicherheitsüberprüfungen für den Laufzeitcode-Zugriff werden ausgeführt, wenn ein Aufrufer eine bestimmte Berechtigung anfordert. Die Sicherheitsüberprüfung wird bei jedem Aufruf durch den Aufrufer ausgeführt, und sie untersucht den aktuellen Threadstapel des Aufrufers. Bei Verwendung zusammen mit dem Indikator **Stackwalktiefe**, zeigt dieser Indikator die Leistungseinbuße an, die bei Sicherheitsüberprüfungen auftritt.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Leistungsindikatoren](../../../docs/framework/debug-trace-profile/performance-counters.md)  
- [Laufzeit-Profilerstellung](../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+## <a name="see-also"></a>Siehe auch
+- [Leistungsindikatoren](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [Laufzeit-Profilerstellung](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

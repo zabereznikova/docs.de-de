@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: 93eea5d539e943c57ed7c6236caa854486ac238e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b7e339764e5baee93ccac64cb41d7fba43438476
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505108"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660358"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Gibt die von einer Abfrage zurückgegebenen Elemente an.  
@@ -32,14 +32,14 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  Ermöglicht die Angabe nur eines Elements, und fügt keinen Zeilen-Wrapper hinzu.  
   
  `topSubclause`  
- Jeder gültige Ausdruck, der die Anzahl der von der Form der Abfrage zurückzugebenden Ergebnisse angibt `top(expr)`.  
+ Jeder gültige Ausdruck von der Form `top(expr)`, der die Anzahl der von der Abfrage zurückzugebenden Ergebnisse angibt.  
   
  Die LIMIT-Parameter, der die [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) -Operators können ebenfalls die ersten n Elemente im Resultset zu wählen.  
   
  `aliasedExpr`  
  Ein Ausdruck der Form:  
   
- `expr` als `identifier`&#124; `expr`  
+ `expr` as `identifier` &#124; `expr`  
   
  `expr`  
  Ein Literal oder ein Ausdruck.  
@@ -94,13 +94,13 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>Beispiel  
  In der folgenden Entity SQL-Abfrage wird der SELECT-Operator verwendet, um die von einer Abfrage zurückzugebenden Elemente anzugeben. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1.  Verwenden Sie das Verfahren unter [Gewusst wie: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfrageausdrücke](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+## <a name="see-also"></a>Siehe auch
+- [Abfrageausdrücke](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

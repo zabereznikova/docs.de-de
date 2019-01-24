@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d057201c7d7bec3070027bb1d9de62735d583cf6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40d05ee60d0183337e67b1f36722dff29ae9beaf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429001"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663543"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange-Methode
-Gibt "true" Anfang und Ende einer Methode innerhalb einer Quelldatei. Verwenden Sie diese Methode, um das Ausmaß der eine Methode unabhängig von der Sequenzpunkte anzugeben, die innerhalb der Methode vorhanden sein.  
+Gibt an, den tatsächlichen Anfang und Ende einer Methode innerhalb einer Quelldatei. Verwenden Sie diese Methode, um die Reichweite einer Methode unabhängig von der Sequenzpunkte anzugeben, die innerhalb der Methode vorhanden sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ HRESULT SetMethodSourceRange(
   
 #### <a name="parameters"></a>Parameter  
  `startDoc`  
- [in] Ein Zeiger auf das Dokument, das die Startposition enthält.  
+ [in] Ein Zeiger auf das Dokument, das die Anfangsposition enthält.  
   
  `startLine`  
  [in] Die Nummer der Anfangszeile.  
@@ -53,10 +53,10 @@ HRESULT SetMethodSourceRange(
  [in] Ein Zeiger auf das Dokument, das die Endposition enthält.  
   
  `endLine`  
- [in] Die letzte Zeilennummer.  
+ [in] Die Nummer der Endzeile.  
   
  `endColumn`  
- [in] Die Nummer der letzten.  
+ [in] Die Nummer der Endspalte.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -64,5 +64,5 @@ HRESULT SetMethodSourceRange(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

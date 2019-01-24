@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53f02499bbc64f1502951ff9fbf16a848e77f0ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e0ce6a207f2a7862b0b49f1e68cda9528aa03ca7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667530"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2-Methode
-Definiert eine einzelne Variable im aktuellen lexikalischen Gültigkeitsbereich. Diese Methode kann mehrmals für eine Variable mit dem gleichen Namen aufgerufen werden, die mehrfach in einem Bereich aufweist. In diesem Fall jedoch die Werte der `startOffset` und `endOffset` Parameter dürfen sich nicht überschneiden.  
+Definiert eine einzelne Variable im aktuellen lexikalischen Gültigkeitsbereich. Diese Methode kann mehrmals für eine Variable mit dem gleichen Namen aufgerufen werden, die mehrfach in einem Bereich verfügt. In diesem Fall jedoch die Werte der `startOffset` und `endOffset` Parameter dürfen sich nicht überschneiden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,19 +56,19 @@ HRESULT DefineLocalVariable2(
  [in] Der Adresstyp.  
   
  `addr1`  
- [in] Die erste Adresse für die Parameterspezifikation.  
+ [in] Die erste Adresse für die Parameterangabe.  
   
  `addr2`  
- [in] Die zweite Adresse für die Parameterspezifikation.  
+ [in] Die zweite Adresse für die Parameterangabe.  
   
  `addr3`  
- [in] Die dritte Adresse für die Parameterspezifikation.  
+ [in] Die dritte Adresse für die Parameterangabe.  
   
  `startOffset`  
- [in] Der Anfangsoffset für die Variable. Dieser Parameter ist optional. Ist er 0, wird dieser Parameter wird ignoriert, und die Variable den gesamten Gültigkeitsbereich definiert ist. Wenn sie einen Wert ungleich NULL ist, fällt die Variable innerhalb der Offsets des aktuellen Gültigkeitsbereichs.  
+ [in] Der Anfangsoffset der Variablen. Dieser Parameter ist optional. Wenn dies 0 ist, wird dieser Parameter wird ignoriert, und die Variable ist im gesamten Gültigkeitsbereich definiert. Wenn es sich um einen Wert ungleich NULL ist, fällt die Variable, in die Offsets des aktuellen Gültigkeitsbereichs.  
   
  `endOffset`  
- [in] Der Endoffset für die Variable. Dieser Parameter ist optional. Ist er 0, wird dieser Parameter wird ignoriert, und die Variable den gesamten Gültigkeitsbereich definiert ist. Wenn sie einen Wert ungleich NULL ist, fällt die Variable innerhalb der Offsets des aktuellen Gültigkeitsbereichs.  
+ [in] Der Endoffset der Variablen. Dieser Parameter ist optional. Wenn dies 0 ist, wird dieser Parameter wird ignoriert, und die Variable ist im gesamten Gültigkeitsbereich definiert. Wenn es sich um einen Wert ungleich NULL ist, fällt die Variable, in die Offsets des aktuellen Gültigkeitsbereichs.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -76,6 +76,6 @@ HRESULT DefineLocalVariable2(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedWriter2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)  
- [DefineLocalVariable-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedWriter2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [DefineLocalVariable-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)

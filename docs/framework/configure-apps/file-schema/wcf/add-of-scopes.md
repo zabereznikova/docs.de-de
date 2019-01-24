@@ -2,12 +2,12 @@
 title: '&lt;add&gt; von &lt;scopes&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: e2bf649259d6ccb0e55428ab3619fe561d051ff7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 961fb3e388e3ae756bd7511ea6c65df6dd2a1486
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705572"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a>&lt;add&gt; von &lt;scopes&gt;
 Fügt einen benutzerdefinierten Bereichs-URI hinzu, der verwendet werden kann, um Dienstendpunkte während der Abfrage zu filtern.  
@@ -15,9 +15,9 @@ Fügt einen benutzerdefinierten Bereichs-URI hinzu, der verwendet werden kann, u
 \<system.ServiceModel>  
 \<behaviors>  
 \<endpointBehaviors>  
-\<Verhalten >  
-\<EndpointDiscovery >  
-\<Bereiche >  
+\<behavior>  
+\<endpointDiscovery>  
+\<scopes>  
 \<add>  
   
 ## <a name="syntax"></a>Syntax  
@@ -52,7 +52,7 @@ Fügt einen benutzerdefinierten Bereichs-URI hinzu, der verwendet werden kann, u
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Bereiche >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Enthält eine Auflistung von Konfigurationselementen, die benutzerdefinierte Bereichs-URIs angeben, die verwendet werden können, um Dienstendpunkte während der Abfrage zu filtern.|  
+|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Enthält eine Auflistung von Konfigurationselementen, die benutzerdefinierte Bereichs-URIs angeben, die verwendet werden können, um Dienstendpunkte während der Abfrage zu filtern.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>

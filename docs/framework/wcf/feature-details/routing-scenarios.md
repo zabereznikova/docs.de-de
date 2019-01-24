@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699596"
 ---
 # <a name="routing-scenarios"></a>Routingszenarien
 Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein, beim Erstellen einer völlig neuen Konfiguration eine effiziente Routinglogik zu entwerfen.  Es gibt jedoch einige allgemeine Szenarios, auf denen die meisten Routingdienstkonfigurationen basieren. Auch wenn diese Szenarios ggf. nicht genau mit Ihrer jeweiligen Konfiguration übereinstimmen, trägt es zum Verständnis des Routingdiensts bei, wenn Sie wissen, wie dieser in bestimmten Szenarios konfiguriert werden kann.  
@@ -63,16 +63,16 @@ Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein,
   
  Der Routingdienst versucht, dieses Szenario zu beheben, indem er robuste Fehlerbehandlungsfunktionen für Nachrichten bereitstellt, für die Netzwerk- oder Kommunikationsfehler auftreten. Wenn Sie eine Liste möglicher Zielendpunkte erstellen und diese Liste jedem Nachrichtenfilter zuordnen, beseitigen Sie die Fehlerquelle (Single Point of Failure), deren Ursache die Verwendung von nur einem möglichen Ziel ist. Bei einem Fehler versucht der Routingdienst, die Nachricht an den nächsten Endpunkt in der Liste zu übermitteln, bis die Nachricht übermittelt wurde, ein anderer Fehler als ein Kommunikationsfehler aufgetreten ist oder alle Endpunkte abgearbeitet wurden.  
   
- Die Schritte zum Konfigurieren der Fehlerbehandlung verwendet wird, finden Sie unter [so wird's gemacht: Error Handling](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
+ Die Schritte zum Konfigurieren der Fehlerbehandlung verwendet wird, finden Sie unter [so wird's gemacht: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Dienstversionskontrolle](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [How To: Dienstversionsverwaltung](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Vorgehensweise: Dienstdatenpartitionierung](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [How To: Dienstdatenpartitionierung](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Vorgehensweise: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [How To: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Vorgehensweise: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [How To: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

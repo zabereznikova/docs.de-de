@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8a87fb05a49c2813cf4d299c3663419be1640b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cb31da8b3fb9148bb41cf7216b44e7cbf610eaee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450829"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671615"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter-Methode
-Benachrichtigt den Profiler, der in das entsprechende Steuerelement übergeben wird `catch` Block.  
+Benachrichtigt den Profiler, das Steuerelement an den entsprechenden übergebenen `catch` Block.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,20 +37,20 @@ HRESULT ExceptionCatcherEnter(
   
 #### <a name="parameters"></a>Parameter  
  `functionId`  
- [in] Der Bezeichner von die Funktion mit dem `catch` Block.  
+ [in] Der Bezeichner der Funktion mit dem `catch` Block.  
   
  `objectId`  
- [in] Der Bezeichner für die Ausnahme verarbeitet wird.  
+ [in] Der Bezeichner der Ausnahme behandelt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ExceptionCatcherEnter` Methode wird nur aufgerufen, wenn der Catch-Punkt im Code mit der Just-in-Time (JIT)-Compiler kompiliert wird. Eine Ausnahme, die in nicht verwaltetem Code oder im internen Code der Laufzeit abgefangen wird wird diese Benachrichtigung nicht aufgerufen werden. Die `objectId` erneut Wert übergeben wird, da eine Garbagecollection verschoben haben, das Objekt seit konnte die `ExceptionThrown` Benachrichtigung.  
+ Die `ExceptionCatcherEnter` Methode wird aufgerufen, nur dann, wenn der Catch-Punkt im Code, der mit dem Compiler just-in-Time (JIT) kompiliert ist. Kein Aufruf eine Ausnahme, die in nicht verwaltetem Code oder in den internen Code der Laufzeit abgefangen wird diese Benachrichtigung. Die `objectId` erneut Wert übergeben wird, da eine Garbagecollection verschoben wurden, das Objekt seit konnte die `ExceptionThrown` Benachrichtigung.  
   
- Der Profiler sollte in ihrer Implementierung dieser Methode nicht blockieren, da der Stapel nicht in einem Zustand ist, die Garbagecollection zulässt, und deshalb Präemptive Garbagecollection nicht aktiviert werden kann. Wenn der Profiler hier blockiert und Garbagecollection wird versucht, die Laufzeit blockiert, bis dieser Rückruf zurückgegeben.  
+ Der Profiler sollte die Implementierung dieser Methode nicht blockieren, da der Stapel nicht in einem Zustand handeln, der Garbagecollection zulässt, und daher die Präemptive Garbagecollection kann nicht aktiviert werden kann. Wenn der Profiler hier blockiert und Garbagecollection wird versucht, die Laufzeit blockiert, bis dieser Rückruf zurückgegeben.  
   
- Der Profiler Implementierung dieser Methode sollten nicht in verwaltetem Code oder in einer verwalteten Speicher reservieren aufrufen.  
+ Der Profiler Implementierung dieser Methode sollte nicht in verwaltetem Code oder in einer verwalteten Speicher reservieren aufrufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -58,6 +58,6 @@ HRESULT ExceptionCatcherEnter(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ExceptionCatcherLeave-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ExceptionCatcherLeave-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)

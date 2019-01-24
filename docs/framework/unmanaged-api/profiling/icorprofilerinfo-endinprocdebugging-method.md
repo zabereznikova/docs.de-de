@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cbf7e2e7de54b065f25f3a1873d760ab5051cc91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea9acdb20392e1ded8695bc4d64ef87c6d0af9e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452610"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706666"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>ICorProfilerInfo::EndInprocDebugging-Methode
-Fährt eine Debugsitzung für in-Process. Diese Methode ist veraltet in .NET Framework, Version 2.0.  
+Eine in-Process-Debugsitzung wird heruntergefahren. Diese Methode ist in .NET Framework, Version 2.0, veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,21 +36,21 @@ HRESULT EndInprocDebugging(
   
 #### <a name="parameters"></a>Parameter  
  `dwProfilerContext`  
- [in] Ein Wert, der die Debugsitzung identifiziert. Dieser Wert muss identisch, die innerhalb der [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) Methode.  
+ [in] Ein Wert, der die Debugsitzung identifiziert. Dieser Wert muss der identisch sein, die empfangen werden, der [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) Methode.  
   
 ## <a name="remarks"></a>Hinweise  
- Rufen Sie [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) und `EndInprocDebugging` innerhalb der gleichen Rückrufmethode.  
+ Rufen Sie [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) und `EndInprocDebugging` in die gleiche Rückrufmethode.  
   
- Die CLR-Debugdiensten unterstützt beschränkt prozessinternes Debuggen in .NET Framework, Version 1.0 und 1.1. Prozessinternes Debuggen aktiviert einen Profiler an die Inspektionsteile der Debug-API verwenden. Jedoch aufgrund von Kundenfeedback wurde prozessinternes Debuggen von .NET Framework Version 2.0 entfernt, und durch eine Reihe von Funktionen, die mehrere im Einklang mit den die profilerstellungs-API ersetzt.  
+ Die Debugdiensten der CLR unterstützt eingeschränkte prozessinternen Debuggens in .NET Framework, Version 1.0 und 1.1. In-Process-Debuggen aktiviert einen Profiler, die Prüfung Teile der Debug-API zu verwenden. Jedoch aufgrund von Kundenfeedback hat prozessinternen Debuggens wurden entfernt von .NET Framework Version 2.0, und mit einem Satz von Funktionen, die enger an die profilerstellungs-API ersetzt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Version:** 1.0  
+ **.NET Framework Version:** 1.0  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

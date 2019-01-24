@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92c4f488dcdc5712dcd2632f489fb0cd65d05ee6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 80503d180da835f1e5e17538b90883ca8cba4a86
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668508"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>ICorDebugManagedCallback2::ExceptionUnwind-Methode
-Stellt eine Benachrichtigung zum Status während des Entladungsprozesses Ausnahme bereit.  
+Stellt eine Benachrichtigung zum Status während des endladungsprozesses Ausnahme bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,24 +40,24 @@ HRESULT ExceptionUnwind (
   
 #### <a name="parameters"></a>Parameter  
  `pAppDomain`  
- [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne mit dem Thread, der der Ausnahme darstellt.  
+ [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das mit dem Thread, der auf dem die Ausnahme ausgelöst wurde der Anwendungsdomäne darstellt.  
   
  `pThread`  
  [in] Ein Zeiger auf ein ICorDebugThread-Objekt, das den Thread darstellt, auf dem die Ausnahme ausgelöst wurde.  
   
  `dwEventType`  
- [in] Der Wert der CorDebugExceptionUnwindCallbackType-Enumeration, die das Ereignis angibt, das durch den Rückruf während der Entladephase signalisiert wird.  
+ [in] Der Wert der CorDebugExceptionUnwindCallbackType-Enumeration, der das Ereignis gibt an, das durch den Rückruf während der Entladephase signalisiert wird.  
   
  `dwFlags`  
- [in] Der Wert der [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) Enumeration, die zusätzliche Informationen über die Ausnahme angibt.  
+ [in] Der Wert der [CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) -Enumeration, die zusätzliche Informationen über die Ausnahme angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- `ExceptionUnwind` an verschiedenen Punkten wird während der Entladephase des Prozesses für die Ausnahmebehandlung aufgerufen. `ExceptionUnwind` kann mehrmals aufgerufen werden, während der Entladung einer einzelnen Ausnahme.  
+ `ExceptionUnwind` an verschiedenen Punkten wird während der Entladephase des Prozesses für die Ausnahmebehandlung aufgerufen. `ExceptionUnwind` kann mehrere Male während der stapelentladung einer Ausnahme aufgerufen werden.  
   
- Wenn `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, befindet sich der Anweisungszeiger im Endframe des Threads, an dem Sequenzpunkt vor dem werden (dies möglicherweise mehrere Anweisungen vor) der Anweisung, die zu der Ausnahme geführt hat.  
+ Wenn `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED, befindet sich der Anweisungszeiger werden in Endframe des Threads, an dem Sequenzpunkt (Dies kann mehrere Anweisungen vor sein) die Anweisung, die auf die Ausnahme geführt hat.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -65,6 +65,6 @@ HRESULT ExceptionUnwind (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugManagedCallback2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugManagedCallback2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

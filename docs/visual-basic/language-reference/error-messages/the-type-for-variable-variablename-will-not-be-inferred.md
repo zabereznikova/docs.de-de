@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: cb423e8dcced6956eb86d484607915030c91412b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6adcc1c2a449c9192e488a5d714e1c3271568be0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672382"
 ---
 # <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>Der Typ für die Variable &#39; &lt;Variablename&gt; &#39; wird nicht abgeleitet werden, da er auf ein Feld in einem einschließenden Bereich gebunden ist
-Der Typ für die Variable "\<Variablename >' wird nicht abgeleitet werden, da er auf ein Feld in einem einschließenden Bereich gebunden ist. Ändern Sie entweder den Namen des "\<Variablename >', oder verwenden Sie den vollqualifizierten Namen (z. B. 'Me.Variablenname' oder 'MyBase.Variablenname').  
+Der Typ für die Variable "\<Variablenname >' wird nicht abgeleitet werden, da er auf ein Feld in einem einschließenden Bereich gebunden ist. Ändern Sie den Namen des "\<Variablenname >', oder verwenden Sie den vollqualifizierten Namen (z. B. 'Me.Variablenname' oder 'MyBase.Variablenname').  
   
  Eine Schleifensteuerungsvariable im Code hat den gleichen Namen wie ein Feld der Klasse oder andere einschließende Bereiche. Da die Steuerelementvariable ohne eine `As`-Klausel verwendet wird, ist sie an das Feld im einschließenden Bereich gebunden, und der Compiler erstellt weder eine neue Variable für sie noch leitet er ihren Typ ab.  
   
@@ -38,7 +38,7 @@ Class Customer
 End Class  
 ```  
   
- Standardmäßig ist diese Meldung eine Warnung. Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen und zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Fehler-ID:** BC42110  
   
@@ -81,10 +81,10 @@ Class Customer
 End Class  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [For Each...Next-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
- [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)  
- [Gewusst wie: Verweisen auf die aktuelle Instanz eines Objekts](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)  
- [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Me, My, MyBase und MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Siehe auch
+- [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [For Each...Next-Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [Vorgehensweise: Verweisen Sie auf die aktuelle Instanz eines Objekts](../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Me, My, MyBase und MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

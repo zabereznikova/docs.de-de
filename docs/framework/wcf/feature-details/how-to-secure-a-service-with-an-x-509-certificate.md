@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat'
+title: 'Vorgehensweise: Sichern eines Diensts mit einem x. 509-Zertifikat'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 1db4ebff194a63552f54d1a3011099d28cbbf659
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d96897b9b11419bba8a6ef9d3c9579a62e19ee20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686490"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Vorgehensweise: Sichern eines Diensts mit einem x. 509-Zertifikat
 Absichern eines Diensts mit einem x. 509-Zertifikat ist eine grundlegende Technik, die meisten Bindungen in der Windows Communication Foundation (WCF) verwenden. Dieses Thema führt durch die Schritte der Konfiguration eines selbst gehosteten Diensts mit einem X.509-Zertifikat.  
   
  Eine Voraussetzung ist ein gültiges Zertifikat, das zur Authentifizierung des Diensts verwendet werden kann. Das Zertifikat muss von einer vertrauenswürdigen Zertifizierungsstelle zum Server ausgegeben werden. Wenn das Zertifikat ungültig ist, vertrauen die Clients, die versuchen, den Dienst zu verwenden, dem Dienst nicht, und es wird keine Verbindung aufgebaut. Weitere Informationen zur Verwendung von Zertifikaten finden Sie unter [arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -82,5 +82,5 @@ Absichern eines Diensts mit einem x. 509-Zertifikat ist eine grundlegende Techni
   
 -   <xref:System.Runtime.Serialization>  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+## <a name="see-also"></a>Siehe auch
+- [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

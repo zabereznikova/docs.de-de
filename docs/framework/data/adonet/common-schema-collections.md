@@ -2,12 +2,12 @@
 title: Allgemeine Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-ms.openlocfilehash: 157330304ac656ddbdbb18408ca5144566746808
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: dfd1e28a117ca71cac6c792058c1aeb17a0c4f69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700961"
 ---
 # <a name="common-schema-collections"></a>Allgemeine Schemaauflistungen
 Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbietern für .NET Framework implementierten Schemaauflistungen. Sie können einen verwalteten .NET Framework-Datenanbieter, um die Liste der unterstützten schemaauflistungen zu ermitteln, durch Aufrufen von Abfragen die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben. In diesen Auflistungen werden alle erforderlichen Spalten beschrieben. Anbieter können ggf. zusätzliche Spalten hinzufügen. So fügen beispielsweise `SqlClient` und `OracleClient` der Auflistung der Einschränkungen "ParameterName" hinzu.  
@@ -94,7 +94,7 @@ Die allgemeine Schemaauflistung enthält die von den einzelnen verwalteten Anbie
 |----------------|--------------|-----------------|  
 |ReservedWord|Zeichenfolge|Anbieterspezifische reservierte Wort.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [GetSchema und Schemasammlungen](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [GetSchema und Schemasammlungen](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

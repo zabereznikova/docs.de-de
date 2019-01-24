@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eeff8aa0336c0c497e306825c6c77f4f8745ca7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65910745aa6291f93fd42d8f99a0e84dc1e38fdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686685"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException-Enumeration
-Beschreibt die verfügbaren Optionen zum Verwalten von Ausnahmen, die nicht vom Benutzercode behandelt werden.  
+Beschreibt die verfügbaren Optionen für die Verwaltung von Ausnahmen, die in Benutzercode nicht behandelt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,25 +39,25 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`eRuntimeDeterminedPolicy`|Gibt an, dass das Standardverhalten erfolgt. Der Prozess wird abgebrochen.|  
-|`eHostDeterminedPolicy`|Gibt an, dass die common Language Runtime (CLR) nicht behandelte Ausnahmen ignoriert und kann der Host weiteren Aktionen zu ermitteln.|  
+|`eRuntimeDeterminedPolicy`|Gibt an, dass das Standardverhalten auftritt. Der Prozess wird abgebrochen.|  
+|`eHostDeterminedPolicy`|Gibt an, dass die common Language Runtime (CLR) nicht behandelte Ausnahmen ignoriert und kann der Host weitere Aktion zu bestimmen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden, um anzugeben, dass die CLR Verhalten sich wie frühere Versionen der `eHostDeterminedPolicy` Member.  
+ Verwenden, um anzugeben, dass die CLR verhält sich wie frühere Versionen der `eHostDeterminedPolicy` Member.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [EClrFailure-Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
- [EClrOperation-Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  
- [ICLRPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [SetUnhandledExceptionPolicy-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)  
- [IHostPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)  
- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [EClrFailure-Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
+- [EClrOperation-Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
+- [ICLRPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [SetUnhandledExceptionPolicy-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md)
+- [IHostPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

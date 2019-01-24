@@ -2,12 +2,12 @@
 title: Verteilte Transaktionen
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 1f45f572b4336e52f7eee224ec80d9b7f423f991
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486326"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660332"
 ---
 # <a name="distributed-transactions"></a>Verteilte Transaktionen
 Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgaben, die entweder in ihrer Gesamtheit erfolgreich abgeschlossen werden (Commit) oder nicht (Abort). Ein *verteilte Transaktion* ist eine Transaktion, die sich auf verschiedene Ressourcen auswirkt. Damit ein Commit einer verteilten Transaktion erfolgreich ausgeführt werden kann, müssen alle Beteiligten gewährleisten, dass jede vorgenommene Datenänderung dauerhaft ist. Änderungen müssen auch im Fall von Systemausfällen oder anderen unvorhergesehenen Ereignissen dauerhaft sein. Sobald auch nur ein Beteiligter dies nicht gewährleisten kann, kann die gesamte Transaktion nicht ausgeführt werden, und sämtliche im Zuge der Transaktion durchgeführten Datenänderungen werden in einem Rollback zurückgenommen.  
@@ -47,7 +47,7 @@ Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgabe
 ## <a name="configuring-distributed-transactions"></a>Konfigurieren von verteilten Transaktionen  
  Möglicherweise müssen Sie MS DTC über das Netzwerk aktivieren, um verteilte Transaktionen zu verwenden. Wenn die Windows-Firewall aktiviert ist, müssen Sie dem MS DTC-Dienst die Erlaubnis erteilen, das Netzwerk zu verwenden, oder den MS DTC-Port öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

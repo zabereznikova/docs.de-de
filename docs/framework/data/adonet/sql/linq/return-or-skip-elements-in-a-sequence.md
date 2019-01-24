@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 228de9f3b92d45866c98976be08b84988a2db8d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84dcc6471ad37bfda90f58c748c99ff514f7eb3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359877"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668976"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Zurückgeben oder Überspringen von Elementen in einer Sequenz
 Verwenden Sie den <xref:System.Linq.Queryable.Take%2A>-Operator, um eine bestimmte Anzahl von Elementen in einer Sequenz zurückzugeben und den Rest zu überspringen.  
@@ -18,9 +18,9 @@ Verwenden Sie den <xref:System.Linq.Queryable.Take%2A>-Operator, um eine bestimm
  Verwenden Sie den <xref:System.Linq.Queryable.Skip%2A>-Operator um eine bestimmte Anzahl von Elementen in einer Sequenz zu überspringen und den Rest zurückzugeben.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> weisen bestimmte Einschränkungen auf, wenn sie für Abfragen in SQL Server 2000 verwendet werden. Weitere Informationen finden Sie unter dem Eintrag "Überspringen und Behandeln von Ausnahmen in SQLServer 2000" in [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> weisen bestimmte Einschränkungen auf, wenn sie für Abfragen in SQL Server 2000 verwendet werden. Weitere Informationen finden Sie im Eintrag "Überspringen und Behandeln von Ausnahmen in SQLServer 2000" in [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt <xref:System.Linq.Queryable.Skip%2A> mithilfe einer Unterabfrage mit dem SQL- `NOT EXISTS` Klausel. Diese Übersetzung weist die folgenden Einschränkungen auf:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt <xref:System.Linq.Queryable.Skip%2A> mithilfe einer Unterabfrage mit SQL `NOT EXISTS` Klausel. Diese Übersetzung weist die folgenden Einschränkungen auf:  
   
 -   Das Argument muss ein Satz sein. Multisets werden nicht unterstützt, auch dann nicht, wenn diese geordnet sind.  
   
@@ -78,6 +78,6 @@ ORDER BY [t0].[CustomerID]
   
  Für nicht negative, konstante, ganzzahlige Argumente auf Grundlage der SQL-Spezifikation sind <xref:System.Linq.Queryable.Take%2A> und <xref:System.Linq.Queryable.Skip%2A> klar definiert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfragebeispiele](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Übersetzen von Standardabfrageoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>Siehe auch
+- [Abfragebeispiele](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Übersetzen von Standardabfrageoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

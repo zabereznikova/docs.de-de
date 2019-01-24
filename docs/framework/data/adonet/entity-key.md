@@ -2,21 +2,21 @@
 title: Entitätsschlüssel
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 6b4e3c6876aa3de1661d680d79caa3116550e073
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 02b877efb463e47f9147239c895c482f2d716714
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664014"
 ---
 # <a name="entity-key"></a>Entitätsschlüssel
-Ein *Entitätsschlüssel* ist eine [Eigenschaft](../../../../docs/framework/data/adonet/property.md) oder einen Satz von Eigenschaften einer [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) zum Ermitteln der Identität verwendet werden. Die Eigenschaften, die einen Entitätsschlüssel bilden, werden zur Entwurfszeit ausgewählt. Die Werte von entitätsschlüsseleigenschaften müssen Identifizierung eine Entitätstypinstanz innerhalb einer [Entitätenmenge](../../../../docs/framework/data/adonet/entity-set.md) zur Laufzeit. Die Eigenschaften, die einen Entitätsschlüssel bilden, sollten so ausgewählt werden, dass die Eindeutigkeit von Instanzen in einem Entitätssatz gewährleistet ist.  
+Ein *Entitätsschlüssel* ist eine [Eigenschaft](../../../../docs/framework/data/adonet/property.md) oder einen Satz von Eigenschaften einer [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) , mit denen die Identität zu ermitteln. Die Eigenschaften, die einen Entitätsschlüssel bilden, werden zur Entwurfszeit ausgewählt. Die Werte von entitätsschlüsseleigenschaften müssen eindeutig identifiziert eine Instanz eines Entitätstyps innerhalb einer [Entitätenmenge](../../../../docs/framework/data/adonet/entity-set.md) zur Laufzeit. Die Eigenschaften, die einen Entitätsschlüssel bilden, sollten so ausgewählt werden, dass die Eindeutigkeit von Instanzen in einem Entitätssatz gewährleistet ist.  
   
  Nachfolgend werden die Voraussetzungen für eine Reihe von Eigenschaften für einen Entitätsschlüssel gezeigt:  
   
 -   Zwei Entitätsschlüssel innerhalb einer Entitätenmenge können nicht identisch sein. Dies bedeutet, dass für zwei Entitäten innerhalb einer Entitätenmenge die Werte für alle Eigenschaften, die einen Schlüssel bilden, nicht gleich sein können. Allerdings können einige (aber nicht alle) Werte, die eine Entitätsschlüssel bilden, gleich sein.  
   
--   Ein Entitätsschlüssel muss einen Satz von NULL-Werte zulässt, unveränderliche bestehen [primitiven Typeigenschaften](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
+-   Ein Entitätsschlüssel muss eine Reihe von NULL-Werte zulässt, unveränderlichen bestehen [primitiven Typeigenschaften](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
   
 -   Die Eigenschaften, die einen Entitätsschlüssel für einen bestimmten Entitätstyp bilden, können sich nicht ändern. Sie können nicht mehr als einen möglichen Entitätsschlüssel für einen bestimmte Entitätstyp zulassen. Ersatzschlüssel werden nicht unterstützt.  
   
@@ -27,7 +27,7 @@ Ein *Entitätsschlüssel* ist eine [Eigenschaft](../../../../docs/framework/data
   
  ![Beispielmodell](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
   
- Die [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) verwendet eine domänenspezifische Sprache (DSL) Bezeichnung konzeptionelle Schemadefinitionssprache ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) um konzeptionelle Modelle zu definieren. Die nachfolgende CSDL definiert den in der Abbildung oben gezeigten `Book`-Entitätstyp. Der Entitätsschlüssel wird definiert, indem auf die `ISBN`-Eigenschaft des Entitätstyps verwiesen wird.  
+ Die [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) verwendet eine domänenspezifische Sprache (DSL) Bezeichnung konzeptionelle Schemadefinitionssprache ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)), konzeptionelle Modelle zu definieren. Die nachfolgende CSDL definiert den in der Abbildung oben gezeigten `Book`-Entitätstyp. Der Entitätsschlüssel wird definiert, indem auf die `ISBN`-Eigenschaft des Entitätstyps verwiesen wird.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
@@ -39,6 +39,6 @@ Ein *Entitätsschlüssel* ist eine [Eigenschaft](../../../../docs/framework/data
   
  Die Verwendung von `Name` und `Address` für den Entitätsschlüssel ist empfehlenswert, da zwei Autoren mit demselben Namen sehr wahrscheinlich nicht die gleiche Adresse besitzen. Dieser Entitätsschlüssel garantiert jedoch nicht absolut eindeutige Entitätsschlüssel in einem Entitätssatz. In diesem Fall wäre das Hinzufügen einer Eigenschaft, z. B. `AuthorId`, zur eindeutigen Identifikation eines Autors empfehlenswert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Siehe auch
+- [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

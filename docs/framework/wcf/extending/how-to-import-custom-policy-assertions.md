@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: b6155296e264bb3ae90aac2ee6b83797e632962e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491152"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674780"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Vorgehensweise: Importieren von benutzerdefinierten Richtlinienassertionen
 Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienstendpunkts.  Clientanwendungen können Richtlinienassertionen in Dienstmetadaten nutzen, um die Clientbindung zu konfigurieren oder den Dienstvertrag für einen Dienstendpunkt anzupassen.  
@@ -44,7 +44,7 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>So fügen Sie das benutzerdefinierte Richtlinienimportprogramm mit einer Konfigurationsdatei ins Metadatensystem ein  
   
-1.  Fügen Sie den Importer-Tool, das `<extensions>` Element innerhalb der [ \<PolicyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Element in der Clientkonfigurationsdatei.  
+1.  Typ des Importprogramms zum Hinzufügen der `<extensions>` Element innerhalb der [ \<PolicyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Element in der Clientkonfigurationsdatei.  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,16 +55,16 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>So fügen Sie das benutzerdefinierte Richtlinienimportprogramm mithilfe der Datei Svcutil.exe ins Metadatensystem ein  
   
-1.  Fügen Sie den Importer-Tool, das `<extensions>` Element innerhalb der [ \<PolicyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Element in der Konfigurationsdatei "svcutil.exe.config". Über die Option `/svcutilConfig` können Sie Svcutil.exe darüber hinaus dazu bringen, Typen von Richtlinienprogrammen zu laden, die in einer anderen Konfigurationsdatei gespeichert sind.  
+1.  Typ des Importprogramms zum Hinzufügen der `<extensions>` Element innerhalb der [ \<PolicyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) Element in der Datei "svcutil.exe.config". Über die Option `/svcutilConfig` können Sie Svcutil.exe darüber hinaus dazu bringen, Typen von Richtlinienprogrammen zu laden, die in einer anderen Konfigurationsdatei gespeichert sind.  
   
-2.  Verwendung [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Importieren von Metadaten und den Importer-Tool werden automatisch aufgerufen.  
+2.  Verwendung [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) zum Importieren von Metadaten und das Importprogramm werden daraufhin automatisch ausgelöst.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>So fügen Sie das benutzerdefinierte Richtlinienimportprogramm programmgesteuert ins Metadatensystem ein  
   
 1.  Fügen Sie vor dem Import der Metadaten das Importprogramm zur <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType>-Eigenschaft hinzu (beispielsweise, wenn Sie <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> verwenden).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
- [Erweitern des Metadatensystems](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
+- [Erweitern des Metadatensystems](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

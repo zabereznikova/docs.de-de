@@ -2,12 +2,12 @@
 title: PeerTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 40bf6be2-8087-4cb3-a66c-408d53eb9269
-ms.openlocfilehash: 58bf07b0429ca2435b5aae3683ef69951a10003e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 437ccc0446e3cc05596ab12b7908177b7f78e431
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185182"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670653"
 ---
 # <a name="peertransportbindingelement"></a>PeerTransportBindingElement
 PeerTransportBindingElement  
@@ -56,5 +56,5 @@ class PeerTransportBindingElement : TransportBindingElement
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>

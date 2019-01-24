@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Überprüfen mit XSD (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-ms.openlocfilehash: fa607cea999ec484ccdd47829d4b96b2d73b060a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e4250ac1da4b25ce3f1644b38ff0e71693ecc57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645375"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691215"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Vorgehensweise: Überprüfen mit XSD (LINQ to XML) (Visual Basic)
 Der <xref:System.Xml.Schema>-Namespace enthält Erweiterungsmethoden, die ein einfaches Validieren von XML-Strukturen anhand von XSD-Dateien ermöglichen. Weitere Informationen finden Sie in der Dokumentation zur <xref:System.Xml.Schema.Extensions.Validate%2A>-Methode.  
@@ -77,11 +77,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>Beispiel  
- In dem folgenden Beispiel wird überprüft, ob das XML-Dokument aus [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) laut dem Schema aus [Beispiel-XSD-Datei: Kunden und Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) gültig ist. Anschließend ändert das Beispiel das XML-Quelldokument. Dabei wird das `CustomerID`-Attribut für den ersten Kunden geändert. Nach der Änderung verweisen die Aufträge auf einen Kunden, der nicht existiert, sodass das XML-Dokument nicht mehr als gültig angesehen wird.  
+ Im folgenden Beispiel wird überprüft, dass das XML-Dokument aus [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) ist gültig, laut dem Schema aus [XSD-Beispieldatei: Customers und Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md). Anschließend ändert das Beispiel das XML-Quelldokument. Dabei wird das `CustomerID`-Attribut für den ersten Kunden geändert. Nach der Änderung verweisen die Aufträge auf einen Kunden, der nicht existiert, sodass das XML-Dokument nicht mehr als gültig angesehen wird.  
   
- In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ In diesem Beispiel wird die folgende XML-Dokument verwendet: [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
- In diesem Beispiel wird das folgende XSD-Schema verwendet: [Beispiel-XSD-Datei: Kunden und Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
+ Dieses Beispiel verwendet das folgende XSD-Schema: [XSD-Beispieldatei: Customers und Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md).  
   
 ```vb  
 Dim errors As Boolean = False  
@@ -122,6 +122,6 @@ The key sequence 'AAAAA' in Keyref fails to refer to some key.
 custOrdDoc did not validate  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Schema.Extensions.Validate%2A>  
- [Erstellen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Xml.Schema.Extensions.Validate%2A>
+- [Erstellen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

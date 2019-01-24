@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Laden von Dateien in das RichTextBox-Steuerelement von Windows Forms'
+title: 'Vorgehensweise: Laden von Dateien in das RichTextBox-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 4d43536cab7806b8cf2de3d63b2d9f7f10024c71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99f869cd5fd3ffc35a58d3d4e7f12161cab3a7ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666045"
 ---
-# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Gewusst wie: Laden von Dateien in das RichTextBox-Steuerelement von Windows Forms
+# <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Laden von Dateien in das RichTextBox-Steuerelement in Windows Forms
 Das <xref:System.Windows.Forms.RichTextBox> -Steuerelement von Windows Forms kann eine Nur-Text-, Unicode-Nur-Text- oder Rich-Text-Format-Datei (RTF) anzeigen. Rufen Sie dazu die <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> -Methode auf. Sie können die <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> -Methode auch zum Laden von Daten aus einem Stream verwenden. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>So laden Sie eine Datei in das RichTextBox-Steuerelement  
@@ -66,7 +66,7 @@ Das <xref:System.Windows.Forms.RichTextBox> -Steuerelement von Windows Forms kan
        }  
     ```  
   
-     (Visual c# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) fügen Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual c# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.btnOpenFile.Click += new System.EventHandler(this. btnOpenFile_Click);  
@@ -78,10 +78,10 @@ Das <xref:System.Windows.Forms.RichTextBox> -Steuerelement von Windows Forms kan
     ```  
   
     > [!IMPORTANT]
-    >  Die Assembly benötigt zum Ausführen dieses Prozesses möglicherweise eine von der <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>-Klasse gewährte Berechtigungsebene. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../../../docs/framework/misc/code-access-security-basics.md).  
+    >  Die Assembly benötigt zum Ausführen dieses Prozesses möglicherweise eine von der <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> -Klasse gewährte Berechtigungsebene. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../../../docs/framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox-Steuerelement](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.RichTextBox.LoadFile%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.RichTextBox>
+- [RichTextBox-Steuerelement](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
+- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

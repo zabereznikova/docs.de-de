@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 977f63b58ccbc709fb9383acf64686fc92808da4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4cdcee35f92fb79177caf7d00a99027fa179334e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651524"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion-Funktion
-Ruft die Versionsnummer der von der angegebenen Anwendung angefordert der common Language Runtime (CLR) ab. Wenn diese Version nicht installiert ist, wird die letzte installierte Version vor der angeforderten Version abgerufen.  
+Ruft die Versionsnummer der von der angegebenen Anwendung angeforderten die common Language Runtime (CLR) ab. Wenn diese Version nicht installiert ist, wird die letzte installierte Version vor der angeforderten Version abgerufen.  
   
  Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
   
@@ -45,33 +45,33 @@ HRESULT GetRequestedRuntimeVersion (
  [in] Der Name der Anwendung.  
   
  `pVersion`  
- [out] Ein Puffer, der nach dem erfolgreichen Abschluss die Versionsnummernzeichenfolge enthält.  
+ [out] Ein Puffer, der die Versionsnummer-Zeichenfolge nach dem erfolgreichen Abschluss enthält.  
   
  `cchBuffer`  
  [in] Die Länge des Versionspuffers.  
   
  `pdwLength`  
- [out] Ein Zeiger auf die Länge der Versionsnummernzeichenfolge.  
+ [out] Ein Zeiger auf die Länge der die Versionsnummer-Zeichenfolge.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt Component Object Model (COM) Standardfehlercodes in WinError.h definiert, zusätzlich zu den folgenden Werten zurück.  
+ Diese Methode gibt Component Object Model (COM) Standardfehlercodes in "Winerror.h", zusätzlich zu den folgenden Werten definiert.  
   
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|ERROR_INSUFFICIENT_BUFFER|Die Version Puffer ist nicht groß genug zum Speichern der Versionszeichenfolge.|  
+|ERROR_INSUFFICIENT_BUFFER|Die Version-Puffer ist nicht groß genug zum Speichern der Versionszeichenfolge.|  
 |E_POINTER|`pdwLength` ist NULL.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [GetRequestedRuntimeInfo-Funktion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
- [GetVersionFromProcess-Funktion](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)  
- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [GetRequestedRuntimeInfo-Funktion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [GetVersionFromProcess-Funktion](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
+- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

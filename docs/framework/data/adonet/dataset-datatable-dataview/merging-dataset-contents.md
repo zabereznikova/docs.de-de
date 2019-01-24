@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 0cba481770708ae11aee9cb4e192019c733eba5d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702586"
 ---
 # <a name="merging-dataset-contents"></a>Zusammenführen von DataSet-Inhalten
 Sie können die <xref:System.Data.DataSet.Merge%2A>-Methode verwenden, um den Inhalt eines <xref:System.Data.DataSet>-, <xref:System.Data.DataTable>- oder <xref:System.Data.DataRow>-Arrays in einem vorhandenen `DataSet` zusammenzuführen. Wie die neuen Daten in einem vorhandenen `DataSet` zusammengeführt werden, hängt von mehreren Faktoren und Optionen ab.  
@@ -78,10 +78,10 @@ Sie können die <xref:System.Data.DataSet.Merge%2A>-Methode verwenden, um den In
  [!code-csharp[DataWorks DataSet.MergeAcceptChanges#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/CS/source.cs#2)]
  [!code-vb[DataWorks DataSet.MergeAcceptChanges#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/VB/source.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch  
- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- [DataAdapters und DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Abrufen von Identity- oder Autonumber-Werten](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Zeilenstatus und Zeilenversionen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
+- [DataAdapters und DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Abrufen von Identity- oder Autonumber-Werten](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

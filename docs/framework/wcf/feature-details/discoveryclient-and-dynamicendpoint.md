@@ -2,12 +2,12 @@
 title: DiscoveryClient und DynamicEndpoint
 ms.date: 03/30/2017
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-ms.openlocfilehash: ff8cc071b13123a8d04162a2c52a8c3fb486d6db
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6e7b1cf13309ba6fc1da424649c667efe255278e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709987"
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient und DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> und <xref:System.ServiceModel.Discovery.DynamicEndpoint> sind zwei Klassen, die auf der Clientseite zum Suchen nach Diensten verwendet werden. <xref:System.ServiceModel.Discovery.DiscoveryClient> stellt eine Liste der Dienste bereit, die bestimmten Kriterien entsprechen, und ermöglicht Ihnen das Herstellen einer Verbindung mit den Diensten. <xref:System.ServiceModel.Discovery.DynamicEndpoint> führt den gleichen Vorgang aus und stellt zusätzlich eine Verbindung mit einem der gefundenen Dienste her. Jeder Endpunkt kann als <xref:System.ServiceModel.Discovery.DynamicEndpoint> festgelegt werden, und die Suchkriterien können auch in der Konfiguration hinzugefügt werden. <xref:System.ServiceModel.Discovery.DynamicEndpoint> ist hilfreich, wenn Sie die Suche in der Projektmappe benötigen, die Clientlogik jedoch nicht ändern möchten – Sie müssen nur die Endpunkte ändern. <xref:System.ServiceModel.Discovery.DiscoveryClient> bietet Ihnen jedoch eine präzisere Steuerung des Suchvorgangs. Die Verwendungsmöglichkeiten und Vorteile der Klassen werden unten näher beschrieben.  
@@ -105,6 +105,6 @@ double result = client.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Suche mit Bereichen](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Standard](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a>Siehe auch
+- [Suche mit Bereichen](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
+- [Standard](../../../../docs/framework/wcf/samples/basic-sample.md)

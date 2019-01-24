@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden eines benutzerdefinierten Benutzernamens und eines Kennwort-Validierungssteuerelements'
+title: 'Vorgehensweise: Verwenden Sie einen benutzerdefinierten Benutzernamen und das Kennwort-Validierungssteuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: a7573e14d224e2ec861b301816d6d886fd147180
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 619d3e80a8206ae3ceef2d7ff822dc3bfa8f65be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085013"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700532"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Vorgehensweise: Verwenden eines benutzerdefinierten Benutzernamens und eines Kennwort-Validierungssteuerelements
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Vorgehensweise: Verwenden Sie einen benutzerdefinierten Benutzernamen und das Kennwort-Validierungssteuerelement
 Wenn einen Benutzernamen und ein Kennwort für die Authentifizierung verwendet wird, verwendet Windows Communication Foundation (WCF) standardmäßig Windows um den Benutzernamen und das Kennwort zu überprüfen. WCF ermöglicht jedoch für die benutzerdefinierten Benutzernamen- und Kennwort-Authentifizierungsschemas, auch bekannt als *Validierungssteuerelemente*. Zum Verwenden eines benutzerdefinierten Benutzernamen- und Kennwort-Validierungssteuerelements erstellen und konfigurieren Sie eine Klasse, die sich von <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ableitet.  
   
  Eine beispielanwendung finden Sie unter [Benutzernamen-und Kennwort-Validierungssteuerelement](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
@@ -51,7 +51,7 @@ Wenn einen Benutzernamen und ein Kennwort für die Authentifizierung verwendet w
   
     1.  In der Konfigurationsdatei unter dem [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) -Element, Hinzufügen einer [ \<Bindungen >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Element.  
   
-    2.  Hinzufügen einer [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) oder [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element im Abschnitt über Bindungen. Weitere Informationen zum Erstellen einer WCF-Bindungselements finden Sie unter [Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+    2.  Hinzufügen einer [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) oder [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element im Abschnitt über Bindungen. Weitere Informationen zum Erstellen einer WCF-Bindungselements finden Sie unter [Vorgehensweise: Angeben eine Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
     3.  Festlegen der `mode` Attribut der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md) oder [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) zu `Message`, `Transport`, oder `TransportWithMessageCredential`.  
   
@@ -64,7 +64,7 @@ Wenn einen Benutzernamen und ein Kennwort für die Authentifizierung verwendet w
         > [!NOTE]
         >  Wenn ein WCF-Dienst in IIS (Internetinformationsdienste) mit Sicherheit auf Transportebene gehostet wird und die <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> -Eigenschaftensatz auf <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom>, das benutzerdefinierte Authentifizierungsschema einer Teilmenge der Windows-Authentifizierung. Das ist da in diesem Szenario IIS führt die Windows-Authentifizierung vor WCF, die den benutzerdefinierten Authentifizierer aufruft.  
   
-     Weitere Informationen zum Erstellen einer WCF-Bindungselements finden Sie unter [Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+     Weitere Informationen zum Erstellen einer WCF-Bindungselements finden Sie unter [Vorgehensweise: Angeben eine Dienstbindung in einer Konfiguration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
      Das folgende Beispiel zeigt den Konfigurationscode für die Bindung.  
   
@@ -117,7 +117,7 @@ Wenn einen Benutzernamen und ein Kennwort für die Authentifizierung verwendet w
 [!code-csharp[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#2)]
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>  
- [Vorgehensweise: Verwenden des ASP.NET-Mitgliedschaftsanbieters](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
- [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
+- [Vorgehensweise: Verwenden des ASP.NET-Mitgliedschaftsanbieters](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

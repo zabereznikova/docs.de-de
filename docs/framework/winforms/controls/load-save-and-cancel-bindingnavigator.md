@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Hinzufügen der laden, speichern und Abbrechen von Schaltflächen auf der Windows Forms BindingNavigator-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 97be77b6591e4b7fa3db8176222dcb1feb3481bc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671108"
 ---
-# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Gewusst wie: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms
+# <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Vorgehensweise: Hinzufügen der laden, speichern und Abbrechen von Schaltflächen auf der Windows Forms BindingNavigator-Steuerelement
 Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgebundene <xref:System.Windows.Forms.ToolStrip> -Steuerelement, das zum Navigieren und Bearbeiten von Steuerelementen im Formular, das an Daten gebunden werden soll.  
   
  Da es ist eine <xref:System.Windows.Forms.ToolStrip> -Steuerelement, das <xref:System.Windows.Forms.BindingNavigator> Komponente kann problemlos geändert werden, um zusätzliche oder andere Befehle für den Benutzer bereitzustellen.  
@@ -109,9 +109,9 @@ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgeb
     > [!NOTE]
     >  Die <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> Methode bezieht sich auf die Zeile der Daten. Speichern Sie alle Änderungen, die Sie vornehmen, während der Anzeige dieser einzelnen Datensätze vor der Navigation zum nächsten Datensatz.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.BindingNavigator>  
- <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.ToolStrip>  
- [BindingNavigator-Steuerelement](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Übersicht über die BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.BindingNavigator>
+- <xref:System.Windows.Forms.BindingSource>
+- <xref:System.Windows.Forms.ToolStrip>
+- [BindingNavigator-Steuerelement](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [Übersicht über die BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)

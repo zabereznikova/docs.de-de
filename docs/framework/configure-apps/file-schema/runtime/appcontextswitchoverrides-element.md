@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5498874661f36ee4e96e6d2d58e3076bb8abbcce
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: cc68ba1d87a6dcb638eae5bfa041baeaf0846800
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699934"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; Element
 Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse für die Bereitstellung eines Mechanismus zum Deaktivieren neuer Funktionen verwendet wird.  
   
  \<configuration>  
- \<Common Language Runtime >  
+ \<runtime>  
 \<AppContextSwitchOverrides>  
   
 ## <a name="syntax"></a>Syntax  
@@ -161,7 +161,7 @@ Im folgenden Beispiel wird die `<add>` Element zum Hinzufügen von zwei Einstell
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- <xref:System.AppContext?displayProperty=nameWithType>  
-- [\<Common Language Runtime >-Element](runtime-element.md)  
+## <a name="see-also"></a>Siehe auch
+- <xref:System.AppContext?displayProperty=nameWithType>
+- [\<Common Language Runtime >-Element](runtime-element.md)
 - [\<configuration> Element](../configuration-element.md)

@@ -2,12 +2,12 @@
 title: LINQ to XML Programming Overview (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a7c07d0a-1fae-4610-ae51-56dd7075cc14
-ms.openlocfilehash: 18e32a855ebaebf8c5adf852be7f746894018132
-ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
+ms.openlocfilehash: ba13482df74f3e371f4b79899464cb31144ae0cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "42754151"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693343"
 ---
 # <a name="linq-to-xml-programming-overview-visual-basic"></a>LINQ to XML Programming Overview (Visual Basic)
 Diese Themen enthalten allgemeine Informationen zu den [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen sowie detaillierte Informationen zu drei der wichtigsten Klassen.  
@@ -23,5 +23,5 @@ Diese Themen enthalten allgemeine Informationen zu den [!INCLUDE[sqltecxlinq](~/
 |[Übersicht über die XDocument-Klasse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md)|Enthält eine Einführung in die <xref:System.Xml.Linq.XDocument>-Klasse, die XML-Dokumente darstellt.|  
 |[Vorgehensweise: Erstellen von LINQ to XML-Beispiele (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|Enthält die `Imports` -Anweisungen, die zum Erstellen der LINQ to XML-Beispiele erforderlich sind.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmierhandbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmierhandbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

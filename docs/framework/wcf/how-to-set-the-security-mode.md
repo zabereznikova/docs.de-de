@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 9f4f83502016fb749c75776dd6c2dc2bd01476e6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c5e6d26fd665fa750b5608002d7abc938075a6ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663036"
 ---
 # <a name="how-to-set-the-security-mode"></a>Vorgehensweise: Festlegen des Sicherheitsmodus
 Windows Communication Foundation (WCF)-Sicherheit verfügt über drei allgemeine Sicherheitsmodi, die auf den meisten vordefinierten Bindungen vorhanden sind: Transport, Nachricht und "Transport mit nachrichtenanmeldeinformationen". Zwei weitere Modi sind bindungsspezifisch: „TransportCredentialOnly“ ist nur in der <xref:System.ServiceModel.BasicHttpBinding> und „Both“ nur in der <xref:System.ServiceModel.NetMsmqBinding> verfügbar. In diesem Thema werden jedoch die drei allgemeinen Sicherheitsmodi behandelt: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> und <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -113,13 +113,13 @@ Windows Communication Foundation (WCF)-Sicherheit verfügt über drei allgemeine
   
  Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Konfigurieren eines Ports mit einem SSL-Zertifikat](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
- [Transportsicherheit](../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Nachrichtensicherheit](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Vom System bereitgestellte Bindungen](../../../docs/framework/wcf/system-provided-bindings.md)  
- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)  
- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)  
- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Transportsicherheit](../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Nachrichtensicherheit](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vom System bereitgestellte Bindungen](../../../docs/framework/wcf/system-provided-bindings.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b2e1b08d1091e482c6b02fe015a58219ff80768
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517560"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694138"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put-Funktion
 Schreibt den benannten Qualifizierer und den Wert. Der neue Qualifizierer wird den vorherigen Wert mit dem gleichen Namen überschrieben. Wenn Sie der Qualifizierer nicht vorhanden ist, wird es erstellt. 
@@ -60,8 +60,8 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Der Qualifizierer kann in einer abgeleiteten Klasse oder Instanz überschrieben werden. **Dies ist der Standardwert.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Der Qualifizierer wird an Instanzen weitergegeben. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Der Qualifizierer wird auf die abgeleitete Klassen weitergegeben. |
-| "WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Der Qualifizierer kann in einer abgeleiteten Klasse oder Instanz nicht überschrieben werden. |
-| "WBEM_FLAVOR_AMENDED | 0x80 | Der Qualifizierer wurde lokalisiert. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Der Qualifizierer kann in einer abgeleiteten Klasse oder Instanz nicht überschrieben werden. |
+| `WBEM_FLAVOR_AMENDED | 0x80 | Der Qualifizierer wurde lokalisiert. |
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -70,7 +70,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Es wurde ein unzulässiger Versuch unternommen, an die **Schlüssel** Qualifizierer für eine Eigenschaft, die kein Schlüssel sein kann. Die Schlüssel werden angegeben. der c-Om; Ass-Definition für ein Objekt und können nicht individuell pro Instanz geändert werden. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | Die `pVal` Parameter ist nicht vom zulässiger Qualifizierertyp. |
 | `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Es ist nicht möglich, zum Aufrufen der `QualifierSet_Put` Methode für den Qualifizierer überschreibt, da das besitzende Objekt nicht zulässig ist. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
@@ -80,11 +80,11 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 Diese Funktion umschließt einen Aufruf der [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) Methode.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

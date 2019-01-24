@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 9957b937dd59f82a5d1962fee33593d7a0c1b7c1
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: 66aa257c0d7f0e66e69d83ddeba48c33ea7a5ff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664015"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Wesentliche Windows Communication Foundation-Begriffe
 Dieses Dokument bietet einen allgemeinen Überblick über die Windows Communication Foundation (WCF)-Architektur. Es ist dafür vorgesehen, Hauptkonzepte zu erklären und zu erläutern, wie diese zusammenpassen. Ein Tutorial zum Erstellen der einfachsten Version eines WCF-Dienst und Client finden Sie unter [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). WCF-Programmierung finden Sie unter [Basis-WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -152,7 +152,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  Kurzform für die ständig steigende Zahl von Web Service (WS)-Spezifikationen wie WS-Sicherheit, WS-ReliableMessaging usw., die in WCF implementiert sind.  
   
-## <a name="see-also"></a>Siehe auch  
- [Was ist die Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)  
- [Windows Communication Foundation-Architektur](../../../docs/framework/wcf/architecture.md)  
- [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a>Siehe auch
+- [Was ist die Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation-Architektur](../../../docs/framework/wcf/architecture.md)
+- [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

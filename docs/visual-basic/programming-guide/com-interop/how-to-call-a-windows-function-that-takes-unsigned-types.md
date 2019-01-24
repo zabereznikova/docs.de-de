@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert (Visual Basic)'
+title: 'Vorgehensweise: Rufen Sie eine Windows-Funktion, die vorzeichenlose Typen (Visual Basic) akzeptiert'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: d66b74f06abe6b337c24859c444f7a8c2aa52c13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669314"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert (Visual Basic)
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Vorgehensweise: Rufen Sie eine Windows-Funktion, die vorzeichenlose Typen (Visual Basic) akzeptiert
 Wenn Sie eine Klasse, Modul oder der Struktur, die Mitglieder von Ganzzahltypen ohne Vorzeichen enthält verwenden, können Sie diese Mitglieder mit Visual Basic zugreifen.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Eine Windows-Funktion aufrufen, die einen Typ ohne Vorzeichen akzeptiert.  
@@ -77,9 +77,9 @@ Wenn Sie eine Klasse, Modul oder der Struktur, die Mitglieder von Ganzzahltypen 
     > [!IMPORTANT]
     >  Die Windows-API aufruft, erfordert eine Berechtigung nicht verwalteten Code die Ausführung in teilweise vertrauenswürdigen Umgebungen auswirken. Weitere Informationen finden Sie unter <xref:System.Security.Permissions.SecurityPermission> und [Codezugriffsberechtigungen](https://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
-## <a name="see-also"></a>Siehe auch  
- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  
- [Integer-Datentyp](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [UInteger-Datentyp](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>Siehe auch
+- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
+- [Integer-Datentyp](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [UInteger-Datentyp](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
+- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

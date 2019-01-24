@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2efa46abf5a1fcedee4a4055331f7a59963be794
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803329"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709155"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Anwendungsszenarios (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt einen Kernsatz von Szenarien zum Verfügbarmachen und Nutzen von Daten als [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] -feeds. Dieses Thema verweist auf die für diese Szenarios relevanten Themen.  
@@ -25,7 +25,7 @@ ms.locfileid: "43803329"
  Machen Sie beliebige CLR-Datenklassen als [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed verfügbar.  
  -   [Verfügbarmachen der Daten als Dienst](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
   
--   [: Erstellen eines Datendiensts mit dem Reflektionsanbieter](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
+-   [Vorgehensweise: Erstellen eines Datendiensts mit dem Reflektionsanbieter](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
   
 -   [Datendienstanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "43803329"
   
 -   [OData: URI-Konventionen](https://go.microsoft.com/fwlink/?LinkId=185564)  
   
--   [OData: Format JavaScript Object Notation (JSON)](https://go.microsoft.com/fwlink/?LinkId=185790)  
+-   [OData: Format von JavaScript Object Notation (JSON)](https://go.microsoft.com/fwlink/?LinkId=185790)  
   
  Erstellen Sie eine End-to-End-datenprojektmappe, die verwendet [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zur Datenübertragung zwischen Client und Server.  
  -   [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
@@ -86,6 +86,6 @@ ms.locfileid: "43803329"
   
 -   [Dienstvorgänge](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
- [Ressourcen](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+## <a name="see-also"></a>Siehe auch
+- [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Ressourcen](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

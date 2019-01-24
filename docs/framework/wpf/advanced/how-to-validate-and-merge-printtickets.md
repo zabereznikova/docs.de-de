@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Überprüfen und Zusammenführen von PrintTickets'
+title: 'Vorgehensweise: Überprüfen und Zusammenführen von PrintTickets'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 37a1c0600b8429158336968507ddc8cfb6d8f98b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0b9f7b101ea4f06c86f66f8e4e16d1ffeabaa9e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485637"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671940"
 ---
-# <a name="how-to-validate-and-merge-printtickets"></a>Gewusst wie: Überprüfen und Zusammenführen von PrintTickets
+# <a name="how-to-validate-and-merge-printtickets"></a>Vorgehensweise: Überprüfen und Zusammenführen von PrintTickets
 Die [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Druckschema](https://go.microsoft.com/fwlink/?LinkId=186397) enthält, die flexible und erweiterbare <xref:System.Printing.PrintCapabilities> und <xref:System.Printing.PrintTicket> Elemente. Ersteres aufführt, die Funktionen von einem Druckgerät und letzterer angibt, wie das Gerät auf diese Funktionen in Bezug auf eine bestimmte Sequenz von Dokumenten, einzelnes Dokument oder einzelne Seite verwenden soll.  
   
  Eine typische Sequenz von Aufgaben für eine Anwendung, die Drucken unterstützt würde wie folgt lauten.  
@@ -56,14 +56,14 @@ Die [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Drucksc
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Printing.PrintCapabilities>  
- <xref:System.Printing.PrintTicket>  
- <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
- <xref:System.Printing.PrintServer>  
- <xref:System.Printing.EnumeratedPrintQueueTypes>  
- <xref:System.Printing.PrintQueue>  
- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Druckschema](https://go.microsoft.com/fwlink/?LinkId=186397)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Printing.PrintCapabilities>
+- <xref:System.Printing.PrintTicket>
+- <xref:System.Printing.PrintServer.GetPrintQueues%2A>
+- <xref:System.Printing.PrintServer>
+- <xref:System.Printing.EnumeratedPrintQueueTypes>
+- <xref:System.Printing.PrintQueue>
+- <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
+- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Druckschema](https://go.microsoft.com/fwlink/?LinkId=186397)

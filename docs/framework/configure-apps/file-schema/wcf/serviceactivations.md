@@ -2,19 +2,19 @@
 title: '&lt;serviceActivations&gt;'
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: 82422716482eafe996534e3bf1a94b4c7a604a6d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 5da05c7b6a9685b9e34b3181ce8e0bd31ccd052b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145119"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704955"
 ---
 # <a name="ltserviceactivationsgt"></a>&lt;serviceActivations&gt;
 Ein Konfigurationselement mit dem Sie Einstellungen hinzufügen, die virtuelle dienstaktivierungseinstellungen zu definieren, die die Windows Communication Foundation (WCF) Diensttypen zugeordnet. Auf diese Weise können Sie in WAS/IIS gehostete Dienste ohne eine SVC-Datei aktivieren.  
   
  \<system.ServiceModel>  
-\<ServiceHostingEnvironment >  
-\<ServiceActivations >  
+\<serviceHostingEnvironment>  
+\<serviceActivations>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ Ein Konfigurationselement mit dem Sie Einstellungen hinzufügen, die virtuelle d
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<ServiceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Definiert den Typ, der von der Diensthostumgebung für einen besonderen Transport instanziiert wird.|  
+|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Definiert den Typ, der von der Diensthostumgebung für einen besonderen Transport instanziiert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
  Im folgenden Beispiel wird gezeigt, wie Aktivierungseinstellungen innerhalb der Datei web.config konfiguriert werden.  
@@ -66,7 +66,7 @@ Ein Konfigurationselement mit dem Sie Einstellungen hinzufügen, die virtuelle d
   
  Die konfigurationsbasierte Aktivierung unterstützt sowohl die Aktivierung über http als auch über ein anderes Protokoll. Sie erfordert Erweiterungen im relatativeAddress-Element, z. B. .svc, .xoml oder .xamlx. Sie können den bekannten buildProviders eigene Erweiterungen zuordnen, die Ihnen dann ermöglichen, den Dienst über eine beliebige Erweiterung zu aktivieren. Bei einem Konflikt überschreibt der Abschnitt `<serviceActivations>` die SVC-Registrierungen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>  
- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
- <xref:System.ServiceModel.ServiceHostingEnvironment>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>
+- <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
+- <xref:System.ServiceModel.ServiceHostingEnvironment>

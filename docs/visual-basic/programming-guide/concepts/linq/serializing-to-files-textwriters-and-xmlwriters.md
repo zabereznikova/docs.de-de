@@ -2,12 +2,12 @@
 title: Serialisieren in Dateien, TextWriters und XmlWriters3
 ms.date: 07/20/2015
 ms.assetid: 7a0c24df-79ef-41a0-87f5-e6cf79382da9
-ms.openlocfilehash: ff877e3c800bd1409d796fb68d651175d3602e34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9908f04e2621da15f065a86feccc5af5cdac96d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658990"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Serialisieren in Dateien, TextWriters und XmlWriters
 Sie können XML-Strukturen in eine <xref:System.IO.File>, in einen <xref:System.IO.TextWriter> oder in einen <xref:System.Xml.XmlWriter> serialisieren.  
@@ -30,5 +30,5 @@ Sie können XML-Strukturen in eine <xref:System.IO.File>, in einen <xref:System.
   
  Beispiele finden Sie im entsprechenden Referenzthema.  
   
-## <a name="see-also"></a>Siehe auch  
- [Serialisieren von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>Siehe auch
+- [Serialisieren von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

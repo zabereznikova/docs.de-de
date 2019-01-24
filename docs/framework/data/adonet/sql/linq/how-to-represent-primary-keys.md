@@ -1,16 +1,16 @@
 ---
-title: 'Gewusst wie: Darstellen von Primärschlüsseln'
+title: 'Vorgehensweise: Darstellen von Primärschlüsseln'
 ms.date: 03/30/2017
 ms.assetid: 63c65289-6539-42b2-8493-891c232018fa
-ms.openlocfilehash: dae8603a18318f45182c7148b10b8194e67fd017
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7cea40b30243c6b15da0500a59ba801f2c8da68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352589"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687426"
 ---
-# <a name="how-to-represent-primary-keys"></a>Gewusst wie: Darstellen von Primärschlüsseln
-Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> Eigenschaft auf die <xref:System.Data.Linq.Mapping.ColumnAttribute> Attribut um eine Eigenschaft oder ein Feld zur Darstellung des Primärschlüssels für eine Datenbankspalte zu kennzeichnen.  
+# <a name="how-to-represent-primary-keys"></a>Vorgehensweise: Darstellen von Primärschlüsseln
+Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> Eigenschaft für die <xref:System.Data.Linq.Mapping.ColumnAttribute> Attribut, um eine Eigenschaft oder ein Feld zur Darstellung des primären Schlüssels für eine Datenbankspalte zu kennzeichnen.  
   
  Codebeispiele finden Sie unter <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>.  
   
@@ -23,6 +23,6 @@ Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)
   
 2.  Geben Sie den Wert als `true` an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a>Siehe auch
+- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -1,21 +1,21 @@
 ---
-title: 'Vorgehensweise: Asynchrones Aufrufen von Vorgängen mit einer Kanalfactory'
+title: 'Vorgehensweise: Aufrufen von Vorgängen, die asynchron mit einer Kanalfactory'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: a45ba48408fd98c89db8664aec679a437ce8af24
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c57b5ccd81a8a2123ac2269adbd75a3a656ba51e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695711"
 ---
-# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Vorgehensweise: Asynchrones Aufrufen von Vorgängen mit einer Kanalfactory
-In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchron zugreifen kann, wenn eine auf <xref:System.ServiceModel.ChannelFactory%601> basierende Clientanwendung verwendet wird. (Wenn Sie ein <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>-Objekt verwenden, um einen Dienst aufzurufen, können Sie das ereignisgesteuerte asynchrone Aufrufmodell verwenden. Weitere Informationen finden Sie unter [wie: Service-Vorgänge asynchron aufrufen](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Weitere Informationen über den ereignisbasierten asynchronen aufrufmodells finden Sie unter [das ereignisbasierte asynchrone Muster (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
+# <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Vorgehensweise: Aufrufen von Vorgängen, die asynchron mit einer Kanalfactory
+In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchron zugreifen kann, wenn eine auf <xref:System.ServiceModel.ChannelFactory%601> basierende Clientanwendung verwendet wird. (Wenn Sie ein <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>-Objekt verwenden, um einen Dienst aufzurufen, können Sie das ereignisgesteuerte asynchrone Aufrufmodell verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Weitere Informationen über den ereignisbasierten asynchronen aufrufmodells finden Sie unter [das ereignisbasierte asynchrone Muster (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
   
- Der in diesem Thema behandelte Dienst implementiert die `ICalculator`-Schnittstelle. Der Client kann die Vorgänge an dieser Schnittstelle asynchron aufrufen. Dies bedeutet, dass Vorgänge wie `Add` in zwei Methoden aufgeteilt werden, `BeginAdd` und `EndAdd`, wobei die erste den Aufruf einleitet und die zweite das Ergebnis abruft, wenn der Vorgang abgeschlossen ist. Ein Beispiel zeigt, wie asynchrone Implementieren eines Vorgangs in einem Dienst finden Sie unter [Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Weitere Informationen zu synchronen und asynchronen Vorgängen finden Sie unter [synchrone und asynchrone Vorgänge](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+ Der in diesem Thema behandelte Dienst implementiert die `ICalculator`-Schnittstelle. Der Client kann die Vorgänge an dieser Schnittstelle asynchron aufrufen. Dies bedeutet, dass Vorgänge wie `Add` in zwei Methoden aufgeteilt werden, `BeginAdd` und `EndAdd`, wobei die erste den Aufruf einleitet und die zweite das Ergebnis abruft, wenn der Vorgang abgeschlossen ist. Ein Beispiel zeigt, wie asynchrone Implementieren eines Vorgangs in einem Dienst finden Sie unter [Vorgehensweise: Implementieren ein asynchronen Dienstvorgangs](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Weitere Informationen zu synchronen und asynchronen Vorgängen finden Sie unter [synchrone und asynchrone Vorgänge](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 ## <a name="procedure"></a>Prozedur  
   
@@ -47,5 +47,5 @@ In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchr
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Dienstvertrag: Asynchrone Beispiel](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)
+## <a name="see-also"></a>Siehe auch
+- [Dienstvertrag: Asynchrone Beispiel](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen eines WCF-Diensts, das über WebSockets kommuniziert'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: bd9b1be3751d499ee3c6ee38ff4cee0e12046e6a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: d578b58f6613fb48f1bfceb8929ec51b8e025de1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030580"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689151"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Vorgehensweise: Erstellen eines WCF-Diensts, das über WebSockets kommuniziert
 WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-Bindung verwenden, um über WebSockets zu kommunizieren.  WebSockets werden verwendet, wenn die <xref:System.ServiceModel.NetHttpBinding> bestimmt, dass der Dienstvertrag einen Rückrufvertrag definiert. In diesem Thema wird das Implementieren eines WCF-Diensts und -Clients beschrieben, die mithilfe der <xref:System.ServiceModel.NetHttpBinding> über WebSockets kommunizieren.  
@@ -318,6 +318,6 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Synchrone und asynchrone Vorgänge](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
- [Verwenden von NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
+## <a name="see-also"></a>Siehe auch
+- [Synchrone und asynchrone Vorgänge](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
+- [Verwenden von NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

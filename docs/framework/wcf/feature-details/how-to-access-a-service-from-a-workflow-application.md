@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: e9158f91d8df74cc9fd871567d854d32353d16e1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5ce2c4839d4b59fdc0f5fcd55ffe91d3adbcadcc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653696"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung
 In diesem Thema wird beschrieben, wie Sie einen Workflowdienst in einer Workflowkonsolenanwendung aufrufen. Es setzt das Ende der [Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) Thema. Obwohl in diesem Thema wird beschrieben, wie Sie einen Workflowdienst aus einer workflowanwendung aufrufen, können die gleichen Methoden verwendet werden, um einen Windows Communication Foundation (WCF)-Dienst aus einer workflowanwendung aufrufen.

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7d280cd20b8ff76efe977983e3e9f6da32990c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a886d8ab8f2d59bb9c9b0b3ff00fd89f7c931ff8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413958"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692820"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip-Methode
-Verschiebt den Cursor in der Enumeration, um die angegebene Anzahl von Elementen.  
+Verschiebt den Cursor vorwärts in der Enumeration, um die angegebene Anzahl von Elementen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +37,10 @@ HRESULT Skip (
   
 #### <a name="parameters"></a>Parameter  
  `celt`  
- [in] Die Anzahl von Elementen, die den Cursor vorwärts zu bewegen.  
+ [in] Die Anzahl von Elementen, die den Cursor vorwärts bewegen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -48,5 +48,5 @@ HRESULT Skip (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugEnum-Schnittstelle1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugEnum-Schnittstelle1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

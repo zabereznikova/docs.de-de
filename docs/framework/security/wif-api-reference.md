@@ -3,12 +3,12 @@ title: WIF-API-Verweis
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: 0cd373ae3fd5acb1650f0d8614b34c5d19cf9016
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21b294a58efcad6c3eb7c74e643a2ac3e0ea23fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195475"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663595"
 ---
 # <a name="wif-api-reference"></a>WIF-API-Verweis
 Windows Identity Foundation-Klassen (WIF) werden in folgende Assemblys unterteilt: `mscorlib` (mscorlib.dll), `System.IdentityModel` (System.IdentityModel.dll), `System.IdentityModel.Services` (System.IdentityModel.Services.dll) und `System.ServiceModel` (System.ServiceModel.dll). Dieses Thema enthält Links zu den WIF-Namespaces und kurze Erläuterungen zu den Klassen, die jeder Namespace enthält.  
@@ -46,6 +46,6 @@ Windows Identity Foundation-Klassen (WIF) werden in folgende Assemblys unterteil
  <xref:System.ServiceModel.Security?displayProperty=nameWithType>  
  Enthält Klassen, die WCF-Verträge, Kanäle, Diensthosts und andere Artefakte darstellen, die in aktiven (WS-Trust)-Szenarios verwendet werden. Dieser Namespace enthält außerdem Klassen, die spezifisch für Windows Communication Foundation (WCF) sind und nicht von WIF verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Referenz zur WIF-Konfiguration](../../../docs/framework/security/wif-configuration-reference.md)  
- [Namespacezuordnung zwischen WIF 3.5 und WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
+## <a name="see-also"></a>Siehe auch
+- [Referenz zur WIF-Konfiguration](../../../docs/framework/security/wif-configuration-reference.md)
+- [Namespacezuordnung zwischen WIF 3.5 und WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)

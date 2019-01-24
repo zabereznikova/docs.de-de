@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: afc041896615e906ac49eed9a7be139dff217463
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71251af116fc8d634b822e1daa49d90e91fec6f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648822"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData-Methode
 Gibt die Quelldaten für die Server für das Modul zurück. Der Aufrufer muss Ressourcen freigeben, mithilfe von `CoTaskMemFree`.  
@@ -37,7 +37,7 @@ HRESULT GetSourceServerData(
   
 #### <a name="parameters"></a>Parameter  
  `pDataByteCount`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe in Bytes, der die Quelldaten für den Server.  
+ [out] Ein Zeiger auf eine `ULONG32` , der die Größe in Bytes der Source Server-Daten empfängt.  
   
  `ppData`  
  [out] Ein Zeiger auf das zurückgegebene `pDataByteCount` Wert.  
@@ -48,5 +48,5 @@ HRESULT GetSourceServerData(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedSourceServerModule-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedSourceServerModule-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsourceservermodule-interface.md)

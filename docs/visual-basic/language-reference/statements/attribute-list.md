@@ -5,12 +5,12 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: 23f2004a34f5d6dc27c8263f6e66642dd32c6a5f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 9ab55187fef11fba9c794ff0266656860bea3d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672109"
 ---
 # <a name="attribute-list-visual-basic"></a>Attributliste (Visual Basic)
 Gibt die Attribute, die auf ein deklariertes Programmierelement ein Element angewendet werden. Mehrere Attribute werden durch Kommas getrennt. Es folgt die Syntax für ein Attribut.  
@@ -53,8 +53,8 @@ Gibt die Attribute, die auf ein deklariertes Programmierelement ein Element ange
   
  <xref:System.Runtime.InteropServices.DllImportAttribute> Gibt an, dass die attributierte Prozedur einen Einstiegspunkt in eine nicht verwaltete Dynamic Link Library (DLL) darstellt. Das Attribut stellt den Namen der DLL als ein Positionsargument und die anderen Informationen als Variableninitialisierern bereit.  
   
-## <a name="see-also"></a>Siehe auch  
- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  
- [Module \<<schlüsselwort>](../../../visual-basic/language-reference/modifiers/module-keyword.md)  
- [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+## <a name="see-also"></a>Siehe auch
+- [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)
+- [Module \<<schlüsselwort>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
+- [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

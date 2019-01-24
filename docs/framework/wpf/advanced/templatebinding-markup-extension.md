@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 7c076172424baab4553a277baab2faca634c1e87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3ae17dc98137bd417d2468fb0415fb2078acf20f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686022"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding-Markuperweiterung
 Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage so, dass er der Wert einer anderen Eigenschaft des Steuerelements mit Vorlagen ist.  
@@ -35,7 +35,7 @@ Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage so, dass er 
 |||  
 |-|-|  
 |`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> der Eigenschaft, der in der Setter-Syntax festgelegt wird.|  
-|`sourceProperty`|Eine weitere Abhängigkeitseigenschaft für den auf Vorlagen basierenden Typ, die durch ihren <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> angegeben wird.<br /><br /> - oder -<br /><br /> Ein Eigenschaftenname in Punktnotation, der durch einen anderen Typ als den auf Vorlagen basierenden Zieltyp definiert wird. Hierbei handelt es sich eigentlich um einen <xref:System.Windows.PropertyPath>. Finden Sie unter ["PropertyPath"-XAML-Syntax](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md).|  
+|`sourceProperty`|Eine weitere Abhängigkeitseigenschaft für den auf Vorlagen basierenden Typ, die durch ihren <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> angegeben wird.<br /><br /> - oder -<br /><br /> Ein Eigenschaftenname in Punktnotation, der durch einen anderen Typ als den auf Vorlagen basierenden Zieltyp definiert wird. Hierbei handelt es sich eigentlich um einen <xref:System.Windows.PropertyPath>. Finden Sie unter ["PropertyPath"-XAML-Syntax](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md).|  
   
 ## <a name="remarks"></a>Hinweise  
  Ein `TemplateBinding` ist eine optimierte Form der eine [Bindung](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) für Vorlagenszenarios, analog zu einem `Binding` mit erstellt `{Binding RelativeSource={RelativeSource TemplatedParent}}`. Eine `TemplateBinding` ist immer eine unidirektionale Bindung, auch wenn die betroffenen Eigenschaften standardmäßig bidirektionale Bindungen sind. Beide betroffenen Eigenschaften müssen Abhängigkeitseigenschaften sein. Um zu erreichen bidirektionale Bindung an einem vorlagenbasierten übergeordneten Element stattdessen die folgende bindungsanweisung `{Binding RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay, Path=MyDependencyProperty}`. 
@@ -60,11 +60,11 @@ Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage so, dass er 
   
  `TemplateBinding` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markuperweiterungen in XAML verwenden die `{` und `}` Zeichen in der Attributsyntax, dies ist die Konvention mit dem ein XAML-Prozessor erkannt wird, dass das Attribut von eine Markuperweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Style>  
- <xref:System.Windows.Controls.ControlTemplate>  
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [RelativeSource-Markuperweiterung](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
- [Bindung als Markuperweiterung](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Style>
+- <xref:System.Windows.Controls.ControlTemplate>
+- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [RelativeSource-Markuperweiterung](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)
+- [Bindung als Markuperweiterung](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)

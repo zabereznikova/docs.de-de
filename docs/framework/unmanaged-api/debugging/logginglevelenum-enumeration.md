@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 331065d4aae82c66b9ebd82e99427501c3ba8a98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e72654dc62020e05f18c4d7d4d528617a0cd0c9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675241"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum-Enumeration
 Gibt den Schweregrad einer beschreibenden Meldung an, die in das Ereignisprotokoll geschrieben wird, wenn ein verwalteter Thread ein Ereignis protokolliert.  
@@ -50,25 +50,25 @@ typedef enum LoggingLevelEnum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`LTraceLevel0`|Die Nachricht ist eine andere Ablaufverfolgungsebene 0.|  
-|`LTraceLevel1`|Die Nachricht ist eine andere Ablaufverfolgungsebene 1.|  
-|`LTraceLevel2`|Die Nachricht ist eine andere Ablaufverfolgungsebene 2.|  
-|`LTraceLevel3`|Die Nachricht ist eine andere Ablaufverfolgungsebene 3.|  
-|`LTraceLevel4`|Die Nachricht ist eine andere Ablaufverfolgungsebene 4.|  
+|`LTraceLevel0`|Die Meldung ist ein Trace-Ebene-0.|  
+|`LTraceLevel1`|Die Meldung ist ein Trace-Ebene-1.|  
+|`LTraceLevel2`|Die Meldung ist ein Trace-Ebene-2.|  
+|`LTraceLevel3`|Die Meldung ist ein 3-Ablaufverfolgungsebene.|  
+|`LTraceLevel4`|Die Meldung ist ein 4-Ablaufverfolgungsebene.|  
 |`LStatusLevel0`|Die Nachricht ist, den Status der Ebene 0.|  
 |`LStatusLevel1`|Die Nachricht ist, den Status der Ebene 1.|  
 |`LStatusLevel2`|Die Nachricht ist, den Status der Ebene 2.|  
 |`LStatusLevel3`|Die Nachricht ist, den Status der Ebene 3.|  
 |`LStatusLevel4`|Die Nachricht ist, den Status der Ebene 4.|  
 |`LWarningLevel`|Die Meldung ist eine Warnstufe erreicht.|  
-|`LErrorLevel`|Die Meldung ist eine Fehlerstufe erreicht.|  
-|`LPanicLevel`|Die Meldung ist ein panic auf.|  
+|`LErrorLevel`|Die Meldung ist ein Fehler auf.|  
+|`LPanicLevel`|Die Meldung ist eine panic Ebene.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ruft die common Language Runtime (CLR) die [ICorDebugManagedCallback:: LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) Methode, um den Debugger zu benachrichtigen, dass ein verwalteter Thread ein Ereignis protokolliert hat. Die CLR übergibt einen Wert, der die `LoggingLevelEnum` Enumeration an, den Schweregrad der Meldung, die der verwaltete Thread in das Ereignisprotokoll geschrieben hat.  
+ Ruft die common Language Runtime (CLR) die [ICorDebugManagedCallback:: LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) Methode, um den Debugger zu benachrichtigen, dass ein verwalteter Thread ein Ereignis protokolliert hat. Die CLR übergibt den Wert der `LoggingLevelEnum` Enumeration an, dass der Schweregrad der Meldung, die der verwaltete Thread in das Ereignisprotokoll geschrieben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -76,6 +76,6 @@ typedef enum LoggingLevelEnum {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Diagnostics.EventLog>  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Diagnostics.EventLog>
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

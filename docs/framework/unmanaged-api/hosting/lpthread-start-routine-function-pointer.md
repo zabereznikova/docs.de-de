@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5025b75106b2cb0853047a09ca263f795d99633f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 395ba0eb2c47b52192d8058cc5020e45c00148e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689928"
 ---
 # <a name="lpthreadstartroutine-function-pointer"></a>LPTHREAD_START_ROUTINE-Funktionszeiger
 Zeigt auf eine Funktion, die den Host benachrichtigt, dass eine Threadausführung begonnen hat.  
   
- Diese Funktionszeiger ist veraltet die [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Dieser Funktionszeiger ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,19 +38,19 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
   
 #### <a name="parameters"></a>Parameter  
  `lpThreadParameter`  
- [in] Ein Zeiger auf den Code, der Ausführung begonnen hat.  
+ [in] Ein Zeiger auf den Code, der Ausführung gestartet wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Funktion, die die `LPTHREAD_START_ROUTINE` Punkt ist eine Rückruffunktion und muss vom Writer der Hostinganwendung implementiert werden.  
+ Die Funktion, die die `LPTHREAD_START_ROUTINE` ist eine Callback-Funktion und muss vom Writer der hostanwendung implementiert werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscorwks.dll"  
+ **Bibliothek:** MSCorWks.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

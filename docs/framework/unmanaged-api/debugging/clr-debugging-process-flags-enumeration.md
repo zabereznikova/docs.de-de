@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dff6b245c80050a5e85561b8bba6aa9ba8199ba8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 609bb050bb9c5addb5250f65a059a70d3ce32428
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407065"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662243"
 ---
 # <a name="clrdebuggingprocessflags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS-Enumeration
 Enthält Werte, mit denen, die [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) Methode.  
@@ -40,16 +40,16 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Diese Laufzeit ist ein verwalteter Debugger Catch-nach-oben-Ereignis zu senden. Finden Sie im Abschnitt "Hinweise" für die Unterscheidung zwischen hervorgehobene und Catch-nach-oben-Ereignissen.|  
+|`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Diese Laufzeit ist ein verwalteter Debugger Catch-nach-oben-Ereignis senden. Finden Sie im Abschnitt "Hinweise" für die Unterscheidung zwischen sich und nicht-Catch-Up-Ereignissen.|  
 |`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|Das verwaltete Ereignis aussteht ist eine <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> Anforderung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Synchronisieren von Ereignissen enthalten Prozess, die Anwendungsdomäne, Assembly, Modul und Thread Erstellung Benachrichtigungen, die den Debugger bis zu den aktuellen Zustand zu bringen, nach dem Anfügen an einen Prozess hat. Nicht-Catch-Up-Ereignisse, die ersichtlich sind die `CLR_DEBUGGING_MANAGED_EVENT_PENDING` kennzeichnen, schließen Sie alle anderen Debugger-Ereignissen, z. B. Ausnahmen und managed debugging Assistant, Assistent für (verwaltetes Debuggen MDA) Benachrichtigungen.  
+ Synchronisieren von Ereignissen enthalten Prozess, die Anwendungsdomäne, Assembly, Modul und Thread Erstellung Benachrichtigungen, die den Debugger bis zu den aktuellen Zustand zu bringen, nach dem Anfügen an einen Prozess hat. Nicht-Catch-Up-Ereignisse, die angegeben wurden die `CLR_DEBUGGING_MANAGED_EVENT_PENDING` kennzeichnen, umfassen alle anderen Debugger-Ereignisse, z. B. Ausnahmen und managed debugging Assistant, Assistent für (verwaltetes Debuggen MDA) Benachrichtigungen.  
   
- Die `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` Flag kann die Laufzeit eine abschließende Ausnahme und eine Anforderung an einen verwalteten Debugger anfügen, die abgebrochen werden kann, unterscheiden.  
+ Die `CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH` Flag kann die Laufzeit unterscheiden, der eine abschließende Ausnahme und Sie werden aufgefordert, einen verwalteten Debugger anzufügen, die abgebrochen werden kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Metahost.idl, Metahost.h  
   
@@ -57,6 +57,6 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

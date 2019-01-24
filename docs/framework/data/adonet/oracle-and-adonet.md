@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 9a60499674f0192bb7589f227bffb6f907f682d9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: cec371c414d6945386816703232abbc642633070
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661841"
 ---
 # <a name="oracle-and-adonet"></a>Oracle und ADO.NET
 > [!NOTE]
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Systemanforderungen](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- Benennt die Voraussetzungen, die für die Verwendung des [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieters für Oracle erfüllt sein müssen, und beschreibt eine Reihe von Punkten, die bei dessen Verwendung zu beachten sind.  
+ Benennt die Anforderungen, die für die Verwendung des [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieters für Oracle erfüllt sein müssen, und beschreibt eine Reihe von Punkten, die bei dessen Verwendung zu beachten sind.  
   
  [Oracle-BFILEs](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Beschreibt die <xref:System.Data.OracleClient.OracleBFile>-Klasse, die zum Arbeiten mit dem BFILE-Datentyp von Oracle verwendet wird.  
@@ -77,6 +77,6 @@ csc /r:System.Data.OracleClient.dll
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  Beschreibt generische Klassen, mit deren Hilfe in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] anbieterunabhängiger Code geschrieben werden kann.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

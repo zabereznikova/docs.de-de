@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
-ms.openlocfilehash: 1f13240df9879f656d986845552e8e93a74ade8f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 104ccfd0370eff48312372a2391031575b53b3bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660228"
 ---
 # <a name="toolstrippanel-control-overview"></a>Übersicht über das ToolStripPanel-Steuerelement
 Ein <xref:System.Windows.Forms.ToolStripPanel> bietet einen einzelnen Bereich zum Positionieren und rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, und <xref:System.Windows.Forms.StatusStrip> Steuerelemente. Mehrere <xref:System.Windows.Forms.ToolStrip> Steuerelemente vertikal oder horizontal gestapelt je die <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> von der <xref:System.Windows.Forms.ToolStripPanel>.  
@@ -28,7 +28,7 @@ Ein <xref:System.Windows.Forms.ToolStripPanel> bietet einen einzelnen Bereich zu
 |<xref:System.Windows.Forms.ToolStripPanel.Rows%2A>|Ruft die <xref:System.Windows.Forms.ToolStripPanelRow> in diesem <xref:System.Windows.Forms.ToolStripPanel>.|  
 |<xref:System.Windows.Forms.ToolStripPanel.Join%2A>|Fügt einer <xref:System.Windows.Forms.ToolStripPanel> eine <xref:System.Windows.Forms.ToolStrip> hinzu.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ToolStripContainer>  
- <xref:System.Windows.Forms.ToolStripContentPanel>  
- [ToolStrip-Beispiel](https://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ToolStripContainer>
+- <xref:System.Windows.Forms.ToolStripContentPanel>
+- [ToolStrip-Beispiel](https://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)

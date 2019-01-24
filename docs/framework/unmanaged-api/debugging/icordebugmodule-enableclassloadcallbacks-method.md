@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 950790b246094c71900a5fb4da7d92be7d24aba2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a5bb3ab2eafa3465dba82b5326f663635e2b3e64
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421615"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655217"
 ---
 # <a name="icordebugmoduleenableclassloadcallbacks-method"></a>ICorDebugModule::EnableClassLoadCallbacks-Methode
-Steuert, ob die [ICorDebugManagedCallback:: LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) und [ICorDebugManagedCallback:: UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) Rückrufe für dieses Modul aufgerufen werden.  
+Steuerelemente, ob die [ICorDebugManagedCallback:: LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) und [ICorDebugManagedCallback:: UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md) Rückrufe für dieses Modul aufgerufen werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,15 +37,15 @@ HRESULT EnableClassLoadCallbacks(
   
 #### <a name="parameters"></a>Parameter  
  `bClassLoadCallbacks`  
- [in] Legen Sie diesen Wert auf `true` So aktivieren Sie die common Language Runtime (CLR) aufrufen, die `ICorDebugManagedCallback::LoadClass` und `ICorDebugManagedCallback::UnloadClass` Methoden, wenn die zugeordneten Ereignisse auftreten.  
+ [in] Legen Sie diesen Wert auf `true` So aktivieren Sie die common Language Runtime (CLR) zum Aufrufen der `ICorDebugManagedCallback::LoadClass` und `ICorDebugManagedCallback::UnloadClass` Methoden ein, wenn die zugeordneten Ereignisse auftreten.  
   
- Der Standardwert ist `false` für nicht-dynamische Module. Der Wert ist immer `true` bei dynamischen Modulen kann nicht geändert werden.  
+ Der Standardwert ist `false` für nicht dynamische Module. Der Wert ist immer `true` bei dynamischen Modulen kann nicht geändert werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `ICorDebugManagedCallback::LoadClass` und `ICorDebugManagedCallback::UnloadClass` Rückrufe werden für dynamische Module immer aktiviert und kann nicht deaktiviert werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -53,6 +53,6 @@ HRESULT EnableClassLoadCallbacks(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-    
- 
+## <a name="see-also"></a>Siehe auch
+
+

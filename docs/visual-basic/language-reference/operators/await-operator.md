@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: 2094ba308ba384feb8542e896cb1eafcf645947c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eb6e2c0e59ae0c29937fb5542e3b4638dd2b7b8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524465"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671446"
 ---
 # <a name="await-operator-visual-basic"></a>Await-Operator (Visual Basic)
-Sie wenden den Operator `Await` auf einen Operanden in einer asynchronen Methode oder einem Lambda-Ausdruck an, um die Ausführung der Methode anzuhalten, bis die erwartete Aufgabe ausgeführt wurde. Die Aufgabe stellt derzeit ausgeführte Arbeit dar.  
+Sie wenden den Operator `Await` auf einen Operanden in einer asynchronen Methode oder einem Lambdaausdruck an, um die Ausführung der Methode anzuhalten, bis die erwartete Aufgabe ausgeführt wurde. Die Aufgabe stellt derzeit ausgeführte Arbeit dar.  
   
  Die Methode in der `Await` wird verwendet, muss ein [Async](../../../visual-basic/language-reference/modifiers/async.md) Modifizierer. Eine solche mit dem `Async`-Modifizierer definierte Methode, die in der Regel mindestens einen `Await`-Ausdruck enthält, wird als *async-Methode* bezeichnet.  
   
@@ -57,7 +57,7 @@ Await AsyncMethodThatReturnsTask()
   
  Ein `Await`-Ausdruck oder eine Await-Anweisung blockiert nicht den Thread, auf dem sie ausgeführt wird. Stattdessen wird damit verursacht, dass der Compiler den Rest der asynchronen Methode nach dem `Await`-Ausdruck als Fortsetzung der erwarteten Aufgabe registriert. Die Steuerung wird dann wieder an den Aufrufer der Async-Methode übergeben. Wenn die Aufgabe abgeschlossen ist, löst sie ihre Fortsetzung aus, und die Ausführung der asynchronen Methode wird da fortgesetzt, wo sie angehalten wurde.  
   
- Ein `Await`-Ausdruck kann nur im Text einer unmittelbar einschließenden Methode oder eines Lambda-Ausdrucks auftreten, die oder der durch einen `Async`-Modifizierer gekennzeichnet ist. Der Begriff *"await"* dient als Schlüsselwort nur in diesem Kontext. In anderen Kontexten wird er als Bezeichner interpretiert. In der asynchronen Methode oder einen Lambda-Ausdruck ein `Await` Ausdruck kann nicht in einem Abfrageausdruck auftreten, der `catch` oder `finally` -Block eine [versuchen Sie es... Catch... Schließlich](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) -Anweisung, in der Steuerelement-Schleifenausdruck der ein `For` oder `For Each` Schleife oder im Text einer [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) Anweisung.  
+ Ein `Await`-Ausdruck kann nur im Text einer unmittelbar einschließenden Methode oder eines Lambdaausdrucks auftreten, die oder der durch einen `Async`-Modifizierer gekennzeichnet ist. Der Begriff *"await"* dient als Schlüsselwort nur in diesem Kontext. In anderen Kontexten wird er als Bezeichner interpretiert. In der asynchronen Methode oder einen Lambda-Ausdruck ein `Await` Ausdruck kann nicht in einem Abfrageausdruck auftreten, der `catch` oder `finally` -Block eine [versuchen Sie es... Catch... Schließlich](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) -Anweisung, in der Steuerelement-Schleifenausdruck der ein `For` oder `For Each` Schleife oder im Text einer [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) Anweisung.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  Die meisten asynchronen Methoden geben einen <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> zurück. Die Eigenschaften der zurückgegebenen Aufgabe enthalten Informationen über den Status und Verlauf, z. B. ob die Aufgabe abgeschlossen ist, ob die asynchrone Methode eine Ausnahme verursacht hat oder abgebrochen wurde, und was das Endergebnis ist. Der Operator `Await` greift auf diese Eigenschaften zu.  
@@ -103,7 +103,7 @@ Public Async Function WaitSynchronously() As Task(Of String)
 End Function  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Asynchrone Programmierung mit Async und Await](../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Async](../../../visual-basic/language-reference/modifiers/async.md)
+## <a name="see-also"></a>Siehe auch
+- [Asynchrone Programmierung mit Async und Await](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async](../../../visual-basic/language-reference/modifiers/async.md)

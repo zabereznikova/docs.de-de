@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 433d5dfd4bb3af9b6fbd0dfc951bb0448eb7efcd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183139"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704653"
 ---
 # <a name="access-levels-in-visual-basic"></a>Zugriffsebenen in Visual Basic
 Die *Zugriffsebene* eines deklarierten Elements wird das Ausmaß der Fähigkeit, darauf zuzugreifen, d. h., welcher Code hat über die Berechtigung zum Lesen oder darin schreiben. Dies wird bestimmt, nicht nur durch, wie Sie das Element selbst deklarieren, sondern auch von der Zugriffsebene des Containers von des Elements. Code, der nicht auf ein einschließenden Element zugreifen kann: Dabei kann auf keinen der enthaltenen Elemente zugreifen, auch wenn diese als deklariert `Public`. Z. B. eine `Public` -Variable in eine `Private` Struktur kann aus zugegriffen werden, in der Klasse, die die Struktur enthält, jedoch nicht von außerhalb der Klasse.  
@@ -107,20 +107,20 @@ Weitere Informationen finden Sie unter [Festlegen der Sprache Visual Basic-Versi
 |Zugriffsmodifizierer|Gewährte Zugriffsebene|Elemente können Sie mit dieser Zugriffsebene deklarieren.|Deklarationskontext, in dem dieser Modifizierer verwendet werden können|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  
 |`Public`|Unrestricted:<br /><br /> Jeglicher Code, der ein öffentliches Element sehen kann darauf zugreifen.|Schnittstellen<br /><br /> Module<br /><br /> Klassen<br /><br /> Strukturen<br /><br /> Strukturmember<br /><br /> Verfahren<br /><br /> Eigenschaften<br /><br /> Membervariablen<br /><br /> Konstanten<br /><br /> Enumerationen<br /><br /> Ereignisse<br /><br /> Externe Deklarationen<br /><br /> Delegaten|Quelldatei<br /><br /> Namespace<br /><br /> Interface<br /><br /> Modul<br /><br /> Klasse<br /><br /> Struktur|  
-|`Protected`|Ableitungsschritte:<br /><br /> Programmieren Sie in der Klasse, die deklariert, dass ein geschütztes Element oder einer Klasse abgeleitet ist, auf das Element zugreifen können|Schnittstellen<br /><br /> Klassen<br /><br /> Strukturen<br /><br /> Verfahren<br /><br /> Eigenschaften<br /><br /> Membervariablen<br /><br /> Konstanten<br /><br /> Enumerationen<br /><br /> Ereignisse<br /><br /> Externe Deklarationen<br /><br /> Delegaten|Klasse|  
+|`Protected`|Derivational:<br /><br /> Programmieren Sie in der Klasse, die deklariert, dass ein geschütztes Element oder einer Klasse abgeleitet ist, auf das Element zugreifen können|Schnittstellen<br /><br /> Klassen<br /><br /> Strukturen<br /><br /> Verfahren<br /><br /> Eigenschaften<br /><br /> Membervariablen<br /><br /> Konstanten<br /><br /> Enumerationen<br /><br /> Ereignisse<br /><br /> Externe Deklarationen<br /><br /> Delegaten|Klasse|  
 |`Friend`|Assembly:<br /><br /> Programmieren Sie in der Assembly, die deklariert, dass ein Friend-Element, die darauf zugreifen können|Schnittstellen<br /><br /> Module<br /><br /> Klassen<br /><br /> Strukturen<br /><br /> Strukturmember<br /><br /> Verfahren<br /><br /> Eigenschaften<br /><br /> Membervariablen<br /><br /> Konstanten<br /><br /> Enumerationen<br /><br /> Ereignisse<br /><br /> Externe Deklarationen<br /><br /> Delegaten|Quelldatei<br /><br /> Namespace<br /><br /> Interface<br /><br /> Modul<br /><br /> Klasse<br /><br /> Struktur|  
 |`Protected` `Friend`|Der Union `Protected` und `Friend`:<br /><br /> Programmieren Sie in der gleichen Klasse oder derselben Assembly als protected Friend-Element oder innerhalb einer Klasse, die von der Elements-Klasse abgeleitet wurde, können sie darauf zugreifen|Schnittstellen<br /><br /> Klassen<br /><br /> Strukturen<br /><br /> Verfahren<br /><br /> Eigenschaften<br /><br /> Membervariablen<br /><br /> Konstanten<br /><br /> Enumerationen<br /><br /> Ereignisse<br /><br /> Externe Deklarationen<br /><br /> Delegaten|Klasse|  
 |`Private`|Deklarationskontext:<br /><br /> Code in den Typ, der ein privates Element einschließlich Code innerhalb von enthaltenen Typen deklariert, kann das Element zugreifen.|Schnittstellen<br /><br /> Klassen<br /><br /> Strukturen<br /><br /> Strukturmember<br /><br /> Verfahren<br /><br /> Eigenschaften<br /><br /> Membervariablen<br /><br /> Konstanten<br /><br /> Enumerationen<br /><br /> Ereignisse<br /><br /> Externe Deklarationen<br /><br /> Delegaten|Modul<br /><br /> Klasse<br /><br /> Struktur|
 |`Private Protected`|Code in der Klasse, die ein privates geschütztes Element deklariert, oder Code in einer abgeleiteten Klasse finden Sie in der gleichen Assembly wie die Bas-Klasse.|Schnittstellen<br /><br /> Klassen<br /><br /> Strukturen<br /><br /> Verfahren<br /><br /> Eigenschaften<br /><br /> Membervariablen<br /><br /> Konstanten<br /><br /> Enumerationen<br /><br /> Ereignisse<br /><br /> Externe Deklarationen<br /><br /> Delegaten|Klasse|
   
-## <a name="see-also"></a>Siehe auch  
- [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
- [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
- [Gewusst wie: Steuern der Verfügbarkeit einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)  
- [Variablen](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a>Siehe auch
+- [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+- [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Vorgehensweise: Steuern der Verfügbarkeit einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)
+- [Variablen](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

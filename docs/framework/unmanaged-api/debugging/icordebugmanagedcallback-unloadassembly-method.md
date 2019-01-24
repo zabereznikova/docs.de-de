@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a892012e872dcf44512adbe0d6890812d84ed899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93d44006dd6652a8d34c23209eb957b23064f976
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704003"
 ---
 # <a name="icordebugmanagedcallbackunloadassembly-method"></a>ICorDebugManagedCallback::UnloadAssembly-Methode
 Benachrichtigt den Debugger, dass eine common Language Runtime-Assembly entladen wurde.  
@@ -38,16 +38,16 @@ HRESULT UnloadAssembly (
   
 #### <a name="parameters"></a>Parameter  
  `pAppDomain`  
- [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die die Assembly enthalten.  
+ [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die Assembly enthält.  
   
  `pAssembly`  
  [in] Ein Zeiger auf ein ICorDebugAssembly-Objekt, das die Assembly darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Assembly sollte nach diesem Rückruf nicht verwendet werden.  
+ Die Assembly sollte nach dieser Rückruf nicht verwendet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -55,6 +55,6 @@ HRESULT UnloadAssembly (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [LoadAssembly-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)  
- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [LoadAssembly-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)
+- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

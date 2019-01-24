@@ -6,18 +6,18 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: f163b71d7a33aa115a2a4600cac08b7e4b2e80e7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5891887ea0df4addc828dd617c9fce63bb9096ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517405"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661593"
 ---
 # <a name="key-frame-animations-overview"></a>Übersicht über Keyframe-Animationen
 Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Animationen können Sie bei Animationen mehr als zwei Zielwerte animieren und die Interpolationsmethode einer Animation steuern.  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Für diese Übersicht sollten Sie mit Animationen und Zeitachsen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] vertraut sein. Eine Einführung zu Animationen finden Sie unter [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Kenntnisse in From/To/By-Animationen sind ebenfalls hilfreich. Weitere Informationen finden Sie unter „Übersicht über From/To/by-Animationen“.  
   
 <a name="whatisakeyframeanimation"></a>   
@@ -283,13 +283,13 @@ Ein Spline für Keyframes mit den Kontrollpunkten (0,25, 0,5) und (0,75, 1,0)
   
 8.  Sortieren Sie die Keyframes in der Reihenfolge der aufgelösten Zeit (Primärschlüssel), und die Reihenfolge der Deklaration (Sekundärschlüssel), d. h., verwenden Sie eine stabile Sortierung basierend auf den aufgelösten Keyframe <xref:System.Windows.Media.Animation.KeyTime> Werte.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Animation.KeyTime>  
- <xref:System.Windows.Media.Animation.KeySpline>  
- <xref:System.Windows.Media.Animation.Timeline>  
- [Beispiel für die Animation von Splines für Keyframes](https://go.microsoft.com/fwlink/?LinkID=160011)  
- [Beispiel für KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012)  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
- [Übersicht über Zeitsteuerungsverhalten](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Animation.KeyTime>
+- <xref:System.Windows.Media.Animation.KeySpline>
+- <xref:System.Windows.Media.Animation.Timeline>
+- [Beispiel für die Animation von Splines für Keyframes](https://go.microsoft.com/fwlink/?LinkID=160011)
+- [Beispiel für KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012)
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Übersicht über Zeitsteuerungsverhalten](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

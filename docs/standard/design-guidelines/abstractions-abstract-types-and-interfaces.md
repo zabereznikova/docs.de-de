@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
 author: KrzysztofCwalina
-ms.openlocfilehash: 4ff79af968c8a0a360cade687b8c60cdd71de192
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fcf566c24677630fdbb1fcd0eb7628f830b3be2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702937"
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Abstraktionen (abstrakte Typen und Schnittstellen)
 Eine Abstraktion ist ein Typ, der beschreibt einen Vertrag, aber keine vollständige Implementierung des Vertrags bereitstellt. Abstraktionen sind in der Regel als abstrakten Klassen oder Schnittstellen implementiert, und sie verfügen über einen genau definierten Satz von Dokumentation beschreiben die erforderliche Semantik der Typen, die den Vertrag implementiert. Einige der wichtigsten Abstraktionen in .NET Framework sind <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, und <xref:System.Object>.  
@@ -39,5 +39,5 @@ Eine Abstraktion ist ein Typ, der beschreibt einen Vertrag, aber keine vollstän
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Entwerfen für Erweiterbarkeit](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

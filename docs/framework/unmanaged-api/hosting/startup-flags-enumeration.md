@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 6a4a9bda348ce4c0dfd1e41d4154cad88d4966a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702971"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701754"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS-Enumeration
 Enthält Werte, die das Startverhalten der Common Language Runtime (CLR) angeben. Standardmäßig erfolgt die Garbage Collection nicht gleichzeitig, und nur die Basisklassenbibliothek wird in den domänenneutralen Bereich geladen.  
@@ -57,7 +57,7 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|Gibt an, dass die gleichzeitige Garbage Collection verwendet werden soll. Wenn der Aufrufer den Serverbuild und die gleichzeitige Garbage Collection auf einem Computer mit nur einem Prozessor anfordert, werden stattdessen der Arbeitsstationsbuild und die nicht gleichzeitige Garbage Collection ausgeführt. **Hinweis:** gleichzeitige Garbagecollection wird nicht unterstützt, in Anwendungen, die den WOW64 ausgeführt werden X86 Emulator auf 64-Bit-Systemen, die Implementierung der Intel Itanium-Architektur (früher als IA-64 bezeichnet). Weitere Informationen zur Verwendung von WOW64 auf 64-Bit-Windows-Systemen finden Sie unter [Ausführen von 32-Bit-Anwendungen](/windows/desktop/WinProg64/running-32-bit-applications).|  
+|`STARTUP_CONCURRENT_GC`|Gibt an, dass die gleichzeitige Garbage Collection verwendet werden soll. Wenn der Aufrufer den Serverbuild und die gleichzeitige Garbage Collection auf einem Computer mit nur einem Prozessor anfordert, werden stattdessen der Arbeitsstationsbuild und die nicht gleichzeitige Garbage Collection ausgeführt. **Hinweis**:  Die gleichzeitige Garbage Collection wird nicht in Anwendungen unterstützt, die den WOW64 x86-Emulator auf 64-Bit-Systemen mit einer Implementierung der Intel Itanium-Architektur (früher als IA-64 bezeichnet) ausführen. Weitere Informationen zur Verwendung von WOW64 auf 64-Bit-Windows-Systemen finden Sie unter [Ausführen von 32-Bit-Anwendungen](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Gibt an, dass eine Ladeprogrammoptimierung stattfinden soll.|  
 |`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Gibt an, dass keine Assemblys als domänenneutral geladen werden.|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Gibt an, dass alle Assemblys als domänenneutral geladen werden.|  
@@ -75,13 +75,13 @@ typedef enum {
 |`STARTUP_ARM`|Gibt an, dass die Ressourcenüberwachung der Anwendungsdomäne aktiviert ist. Finden Sie unter den <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> Eigenschaft und [ \<AppDomainResourceMonitoring >-Element](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

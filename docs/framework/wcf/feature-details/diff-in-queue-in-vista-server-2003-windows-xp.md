@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: d956a72c9413384176c10effefc0307b09744c4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bbae7e54160923e973ff6a8adb655587adf1002
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708830"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Unterschiede zwischen den Warteschlangenfunktionen in Windows Vista, Windows Server 2003 und Windows XP
 In diesem Thema werden die Unterschiede in der Windows Communication Foundation (WCF)-Warteschlangenfunktion zwischen zusammengefasst [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], und [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -30,11 +30,11 @@ In diesem Thema werden die Unterschiede in der Windows Communication Foundation 
   
 -   MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt die negative Bestätigung, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] hingegen nicht. Eine negative Bestätigung vom empfangenden Warteschlangen-Manager bewirkt, dass der sendende Warteschlangen-Manager die abgelehnte Nachricht in die Warteschlange für unzustellbare Nachrichten einstellt. Damit ist `ReceiveErrorHandling.Reject` in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht zulässig.  
   
--   MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt eine Nachrichteneigenschaft, die zählt, wie oft die Nachrichtenzustellung versucht wird. Diese Abbruchanzahleigenschaft ist in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht verfügbar. WCF verwaltet die abbruchanzahl im Arbeitsspeicher, daher ist es möglich, dass diese Eigenschaft nicht auf einen genauen Wert enthalten kann, wenn dieselbe Nachricht von mehr als ein WCF-Dienst in einer Webfarm gelesen wird.  
+-   MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt eine Nachrichteneigenschaft, die zählt, wie oft die Nachrichtenzustellung versucht wird. Diese Abbruchanzahleigenschaft ist in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht verfügbar. WCF verwaltet die abbruchanzahl im Arbeitsspeicher, sodass es möglich, dass diese Eigenschaft nicht auf einen genauen Wert enthalten kann, wenn dieselbe Nachricht von mehr als ein WCF-Dienst in einer Webfarm gelesen wird.  
   
 ## <a name="remote-transactional-read"></a>Remote transaktional durchgeführte Lesevorgänge  
  MSMQ in [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt remote durchgeführte Lesevorgänge. Dabei kann eine Anwendung, die aus einer Warteschlange liest, auf einem anderen Computer ausgeführt werden als dem Computer, auf dem die Warteschlange gehostet wird. Dies ermöglicht, dass eine Dienstefarm aus einer zentralen Warteschlange lesen kann, was den Gesamtdurchsatz im System erhöht. Darüber hinaus wird sichergestellt, dass im Fall eines Fehlers während des Lesens oder Verarbeitens einer Nachricht ein Rollback der Transaktion erfolgt und die Nachricht zur späteren Verarbeitung in der Warteschlange verbleibt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
- [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

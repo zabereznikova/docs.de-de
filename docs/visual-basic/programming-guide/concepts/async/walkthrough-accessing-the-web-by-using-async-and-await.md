@@ -1,22 +1,22 @@
 ---
-title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await ( Visual Basic)'
+title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 8998ed715306402f4d8cc98be82cbb8e4aac3f8e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 51fb2a90a7398da5334e2fd4508f90d4594e5dc7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709493"
 ---
-# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await ( Visual Basic)
+# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)
 Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher und intuitiver schreiben. Sie können asynchronen Code schreiben, der wie synchroner Code aussieht und veranlassen, dass der Compiler die komplizierten Rückruffunktionen und Fortsetzungen verarbeitet, die durch den asynchronen Code für gewöhnlich verursacht werden.  
   
  Weitere Informationen über die Funktion Async finden Sie unter [asynchrone Programmierung mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Diese exemplarische Vorgehensweise beginnt mit einer synchronen WPF-Anwendung (Windows Presentation Foundation), die die Anzahl der Bytes in einer Liste von Websites summiert. In der exemplarischen Vorgehensweise wird die Anwendung dann mithilfe der neuen Funktionen in eine asynchrone Lösung umgewandelt.  
   
- Wenn Sie die Anwendungen nicht selbst erstellen möchten, können Sie das „Thema mit einem asynchronen Beispiel für die exemplarische Vorgehensweise für den Internetzugriff (C# und Visual Basic)“ in englischer Sprache über [Entwickler-Codebeispiele](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) herunterladen.  
+ Wenn Sie nicht die Anwendungen selbst erstellen möchten, können Sie "Async Sample: Accessing the Web Walkthrough (C# und Visual Basic) "von [Codebeispiele für Entwickler](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
  Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:  
   
@@ -282,7 +282,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
      Durch den Aufruf von `webReq.GetResponseAsync` wird `Task(Of WebResponse)` oder `Task<WebResponse>` zurückgegeben. Ein `Await` Operator angewendet wird, um den Vorgang zum Abrufen der `WebResponse` Wert.  
   
-     Wenn Ihre asynchrone Methode Aktionen vornehmen muss, die nicht von der Fertigstellung der Aufgabe abhängen, kann die Methode diese Aktionen zwischen zwei Anweisungen fortsetzen, und zwar nach dem Aufruf der asynchronen Methode und vor dem Anwenden des await-Operators. Beispiele finden Sie in [Vorgehensweise: Stellen mehrerer Webanforderungen mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) und [Vorgehensweise: Erweitern der asynchronen Walkthrough mit Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+     Wenn Ihre asynchrone Methode Aktionen vornehmen muss, die nicht von der Fertigstellung der Aufgabe abhängen, kann die Methode diese Aktionen zwischen zwei Anweisungen fortsetzen, und zwar nach dem Aufruf der asynchronen Methode und vor dem Anwenden des await-Operators. Beispiele hierzu finden Sie unter [Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) und [Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
 3.  Da Sie den Operator `Await` im vorherigen Schritt hinzugefügt haben, tritt ein Compilerfehler auf. Der Operator kann verwendet werden, nur in Methoden, die mit markiert sind die [Async](../../../../visual-basic/language-reference/modifiers/async.md) Modifizierer. Ignorieren Sie den Fehler, während Sie die Konvertierungsschritte zum Ersetzen des Aufrufs von `CopyTo` mit einem Aufruf von `CopyToAsync` wiederholen.  
   
@@ -673,12 +673,12 @@ Class MainWindow
 End Class  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic) (Asynchrones Beispiel: Webzugriff – Exemplarische Vorgehensweise (C# und Visual Basic))](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
- [Await-Operator](../../../../visual-basic/language-reference/operators/await-operator.md)  
- [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Asynchrone Rückgabetypen (Visual Basic))  
- [Task-based Asynchronous Programming (TAP) (Aufgabenbasiertes asynchrones Programmieren (TAP))](https://go.microsoft.com/fwlink/?LinkId=204847)  
- [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Gewusst wie: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic))  
- [How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Gewusst wie: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (Visual Basic))
+## <a name="see-also"></a>Siehe auch
+- [Async Sample: Accessing the Web Walkthrough (C# und Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Await-Operator](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
+- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Asynchrone Rückgabetypen (Visual Basic))
+- [Task-based Asynchronous Programming (TAP) (Aufgabenbasiertes asynchrones Programmieren (TAP))](https://go.microsoft.com/fwlink/?LinkId=204847)
+- [Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

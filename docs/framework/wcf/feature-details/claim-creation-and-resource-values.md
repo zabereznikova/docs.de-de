@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], creation and resource values
 ms.assetid: 30431f76-cbe7-4bad-bad7-8e43e23a82d4
-ms.openlocfilehash: cfa697023ca9d4c0b6f43c90c382816993dccc5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca1bb8ccbc77e2b026a65a9cef56118e8b86dbb3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488051"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704068"
 ---
 # <a name="claim-creation-and-resource-values"></a>Erstellen von Ansprüchen und Ressourcenwerte
 Die <xref:System.IdentityModel.Claims.Claim>-Klasse bietet mehrere Methoden zum Erstellen von Instanzen von integrierten Anspruchstypen. Von diesen Methoden führen die folgenden keine semantische Prüfung oder Formatüberprüfung für die angegebene Ressource aus:  
@@ -42,7 +42,7 @@ Die <xref:System.IdentityModel.Claims.Claim>-Klasse bietet mehrere Methoden zum 
   
 -   <xref:System.IdentityModel.Claims.Claim.CreateX500DistinguishedNameClaim%2A>  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Claims.ClaimSet>  
- [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Claims.ClaimSet>
+- [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

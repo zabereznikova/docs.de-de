@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 07c33aa49e6fc8f78acd86a92cf555ae389e200c
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662737"
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
 <a name="Introduction"></a> .NET Framework enthält eine Add-In-Modell, mit denen Entwickler Anwendungen erstellen, die Add-in-Erweiterbarkeit zu unterstützen. Dieses Add-In-Modell ermöglicht die Erstellung von Add-Ins, die in die Anwendungsfunktionalität integriert werden und diese erweitern. In einigen Szenarien müssen Anwendungen auch von Benutzeroberflächen anzeigen, die von Add-Ins bereitgestellt werden. In diesem Thema wird gezeigt, wie das .NET Framework-add-in-Modell zum Aktivieren dieser Szenarien, in der Architektur hinter, dessen Vorteile und Einschränkungen von WPF erweitert.  
@@ -48,7 +48,7 @@ ms.locfileid: "53397032"
   
  Damit Add-Ins verwendet werden können, müssen sie von Hostanwendungen gefunden und zur Laufzeit geladen werden. Daher sind Anwendungen, die Add-Ins unterstützen, zusätzlich für folgende Aufgaben verantwortlich:  
   
--   **Ermittlung**: Suchen von Add-Ins, die von hostanwendungen unterstützte Verträge einhalten.  
+-   **Discovery**: Suchen von Add-Ins, die von hostanwendungen unterstützte Verträge einhalten.  
   
 -   **Aktivierung**: Laden, ausführen und beim Herstellen der Kommunikation mit add-ins.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "53397032"
   
 -   **Verwaltung der Lebensdauer**: Laden und Entladen von Anwendungsdomänen und Prozesse in eine klare, vorhersehbare Weise (finden Sie unter [Anwendungsdomänen](../../../../docs/framework/app-domains/application-domains.md)).  
   
--   **Versionsverwaltung**: Sicherstellen, dass hostanwendungen und Add-Ins trotzdem kommunizieren können, wenn neue Versionen erstellt werden.  
+-   **Versioning**: Sicherstellen, dass hostanwendungen und Add-Ins trotzdem kommunizieren können, wenn neue Versionen erstellt werden.  
   
  Letztlich ist es eine wichtige Aufgabe, ein stabiles Add-In-Modell zu entwickeln. Aus diesem Grund stellt .NET Framework eine Infrastruktur zum Erstellen von Add-in-Modellen.  
   
@@ -282,10 +282,10 @@ ms.locfileid: "53397032"
 ## <a name="performance-optimization"></a>Leistungsoptimierung  
  Standardmäßig Wenn mehrere Anwendungsdomänen verwendet werden, werden verschiedenen .NET Framework-Assemblys, die von jeder Anwendung benötigt werden alle in die Domäne dieser Anwendung geladen. Aufgrund der Zeit, die zum Erstellen neuer Anwendungsdomänen und für das Starten der darin enthaltenen Anwendungen erforderlich ist, kann die Leistung beeinträchtigt werden. .NET Framework bietet jedoch eine Möglichkeit, Startzeiten zu verkürzen von Anwendungen angewiesen, Assemblys in Anwendungsdomänen gemeinsam nutzen, wenn sie bereits geladen sind. Verwenden Sie hierzu die <xref:System.LoaderOptimizationAttribute> -Attribut, das auf die Einstiegspunktmethode angewendet werden muss (`Main`). In diesem Fall müssen Sie lediglich zum Implementieren Ihrer Anwendungsdefinition Code verwenden (siehe [Übersicht über die Anwendungsverwaltung](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.LoaderOptimizationAttribute>  
- [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))  
- [Anwendungsdomänen](../../../../docs/framework/app-domains/application-domains.md)  
- [Übersicht über .NET Framework-Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Erstellen Remotefähiger Objekte](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.LoaderOptimizationAttribute>
+- [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
+- [Anwendungsdomänen](../../../../docs/framework/app-domains/application-domains.md)
+- [Übersicht über .NET Framework-Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
+- [Erstellen Remotefähiger Objekte](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/app-development/how-to-topics.md)

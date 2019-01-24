@@ -1,16 +1,16 @@
 ---
-title: 'Gewusst wie: Darstellen von Spalten als Zeitstempel- oder Versionsspalten'
+title: 'Vorgehensweise: Darstellen von Spalten als Zeitstempel oder Versionsspalten'
 ms.date: 03/30/2017
 ms.assetid: 5afd5ce8-1d20-4bc3-a34f-49d95449f493
-ms.openlocfilehash: 2fc8aaf260dc3657e33e539939fdf58ad8224c93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa9ffe01c45df3ce0342b62e12007ddf88ee412d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361238"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674569"
 ---
-# <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>Gewusst wie: Darstellen von Spalten als Zeitstempel- oder Versionsspalten
-Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> Eigenschaft von der <xref:System.Data.Linq.Mapping.ColumnAttribute> Attribut so kennzeichnen Sie ein Feld oder eine Eigenschaft, die eine Datenbankspalte, die Datenbank-Timestamps oder-Versionsnummern enthält darstellt.  
+# <a name="how-to-represent-columns-as-timestamp-or-version-columns"></a>Vorgehensweise: Darstellen von Spalten als Zeitstempel oder Versionsspalten
+Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> Eigenschaft der <xref:System.Data.Linq.Mapping.ColumnAttribute> Attribut so kennzeichnen Sie ein Feld oder Eigenschaft Darstellung einer Datenbankspalte, die Datenbank-Timestamps oder-Versionsnummern enthält.  
   
  Codebeispiele finden Sie unter <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
   
@@ -20,7 +20,7 @@ Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)
   
 2.  Legen Sie den <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>-Eigenschaftswert auf `true` fest.  
   
-## <a name="see-also"></a>Siehe auch  
- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [Vorgehensweise: Angeben, welche Member auf Parallelitätskonflikte getestet werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)  
- [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+## <a name="see-also"></a>Siehe auch
+- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Vorgehensweise: Geben Sie die-Member auf Parallelitätskonflikte getestet werden](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)
+- [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9afc2ecc34131f62f1f8e8e86ca73f8b8b0126b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b05c9a75bf870dd3b2316d2df7c50932b26894f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702742"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName-Methode
 Ruft einen Zeiger auf die Manifestressource mit dem angegebenen Namen ab.  
@@ -41,20 +41,20 @@ HRESULT FindManifestResourceByName (
  [in] Der Name der Ressource.  
   
  `ptkManifestResource`  
- [out] Das Array zum Speichern der `mdManifestResource` Metadatentoken, von denen jedes eine Manifestressource darstellt.  
+ [out] Das Array zum Speichern der `mdManifestResource` Metadatentoken verwendet, von denen jede eine Manifestressource darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `FindManifestResourceByName` Methode verwendet die Standardregeln, die von der common Language Runtime zum Auflösen von verweisen.  
+ Die `FindManifestResourceByName` -Methode verwendet die Standardregeln, die von der common Language Runtime zum Auflösen von verweisen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattform:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [So sucht Common Language Runtime nach Assemblys](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [So sucht Common Language Runtime nach Assemblys](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

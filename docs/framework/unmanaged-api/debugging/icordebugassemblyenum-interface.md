@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAssemblyEnum Schnittstelle1
+title: ICorDebugAssemblyEnum-Schnittstelle1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAssemblyEnum
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6b8fa9304296765fcdb6ebe42db5523e5ff387d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97a5cad5902324a4999648553ab92ee1df11dde5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686725"
 ---
-# <a name="icordebugassemblyenum-interface1"></a>ICorDebugAssemblyEnum Schnittstelle1
+# <a name="icordebugassemblyenum-interface1"></a>ICorDebugAssemblyEnum-Schnittstelle1
 ICorDebugEnum-Methoden implementiert, und listet ICorDebugAssembly-Arrays.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugAssembly` Instanzen in der Enumeration, die von der aktuellen Position ab.|  
+|[Next-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-next-method.md)|Ruft die angegebene Anzahl von `ICorDebugAssembly` -Instanzen in der Enumeration, die von der aktuellen Position ab.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -38,7 +38,7 @@ ICorDebugEnum-Methoden implementiert, und listet ICorDebugAssembly-Arrays.
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -46,5 +46,5 @@ ICorDebugEnum-Methoden implementiert, und listet ICorDebugAssembly-Arrays.
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

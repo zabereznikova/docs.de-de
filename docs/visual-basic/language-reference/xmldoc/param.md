@@ -1,18 +1,18 @@
 ---
-title: '&lt;Param&gt; (Visual Basic)'
+title: '&lt;param&gt; (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 4cb3de06d574f8b9abb3e3e11641a6ada750b56a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cc9ceccef8123d49d6267276e9dcb7be84f78a01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670679"
 ---
-# <a name="ltparamgt-visual-basic"></a>&lt;Param&gt; (Visual Basic)
+# <a name="ltparamgt-visual-basic"></a>&lt;param&gt; (Visual Basic)
 Definiert einen Namen und eine Beschreibung an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -44,5 +44,5 @@ Definiert einen Namen und eine Beschreibung an.
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>Siehe auch
+- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: b46c763e7cddfc7617c9a6a23428f83a54955ba0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1cd6962a02a50ecd9f9b634148eeb38ad0a45e05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664043"
 ---
 # <a name="sql-xml-column-values"></a>SQL-XML-Spaltenwerte
 SQL Server unterstützt die `xml` -Datentyp, und Entwickler können Abrufen von Resultsets, die diesen Typ mithilfe des Standardverhaltens der einschließen, die <xref:System.Data.SqlClient.SqlCommand> Klasse. Eine `xml`-Spalte kann auf die gleiche Weise abgerufen werden wie jede andere Spalte auch (z. B. in einem <xref:System.Data.SqlClient.SqlDataReader>). Wenn Sie jedoch mit dem Inhalt der Spalte in Form von XML-Daten arbeiten möchten, müssen Sie einen <xref:System.Xml.XmlReader> verwenden.  
@@ -24,7 +24,7 @@ SQL Server unterstützt die `xml` -Datentyp, und Entwickler können Abrufen von 
  [!code-csharp[DataWorks SqlClient.GetXmlDataReader#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetXmlDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Data.SqlTypes.SqlXml>  
- [XML-Daten in SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Data.SqlTypes.SqlXml>
+- [XML-Daten in SQL Server](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

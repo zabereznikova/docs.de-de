@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verwenden von Datenschutz'
+title: 'Vorgehensweise: Verwenden Sie den Schutz von Daten'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698391"
 ---
-# <a name="how-to-use-data-protection"></a>Gewusst wie: Verwenden von Datenschutz
+# <a name="how-to-use-data-protection"></a>Vorgehensweise: Verwenden Sie den Schutz von Daten
 .NET Framework bietet Zugriff auf die Datenschutz-API, die es Ihnen ermöglicht, Daten mithilfe von Informationen vom aktuellen Benutzerkonto oder Computer zu verschlüsseln.  Wenn Sie die Datenschutz-API verwenden, umgehen Sie die schwierige Aufgabe, einen kryptografischen Schlüssel explizit zu generieren und zu speichern.  
   
  Verwenden Sie die <xref:System.Security.Cryptography.ProtectedMemory>-Klasse, um ein Array aus In-Memory-Bytes zu verschlüsseln.  Diese Funktionalität ist ab Microsoft Windows XP verfügbar.  Sie können angeben, dass der durch den aktuellen Prozess verschlüsselte Speicher nur durch den aktuellen Prozess, durch alle Prozesse oder von demselben Benutzerkontext entschlüsselt werden kann.  In der <xref:System.Security.Cryptography.MemoryProtectionScope>-Enumeration finden Sie eine ausführliche Beschreibung der <xref:System.Security.Cryptography.ProtectedMemory>-Optionen.  
@@ -68,5 +68,5 @@ ms.locfileid: "49086621"
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Security.Cryptography.ProtectedMemory>  
+- <xref:System.Security.Cryptography.ProtectedMemory>
 - <xref:System.Security.Cryptography.ProtectedData>

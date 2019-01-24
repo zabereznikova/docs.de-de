@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f1542cf9d0568fe2ec35c046c358b7249231d42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3908663a12f0e4edd8024c7f53f21b2e82bb8dbd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665395"
 ---
 # <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie-MDA
 Der `invalidGCHandleCookie`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine Konvertierung von einem ungültigen <xref:System.IntPtr>-Cookie in ein <xref:System.Runtime.InteropServices.GCHandle> versucht wird.  
@@ -32,7 +32,7 @@ Der `invalidGCHandleCookie`-MDA (Assistent für verwaltetes Debuggen) wird aktiv
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Wenn dieser MDA aktiviert ist, kann der Debugger die Stämme nicht länger zu ihren Objekten zurückverfolgen, da die zurückgegebenen Cookiewerte sich von denjenigen unterscheiden, die zurückgegeben werden, wenn der MDA nicht aktiviert ist.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Der ungültige <xref:System.IntPtr>-Cookiewert wird gemeldet.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -45,7 +45,7 @@ Der `invalidGCHandleCookie`-MDA (Assistent für verwaltetes Debuggen) wird aktiv
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>  
- <xref:System.Runtime.InteropServices.GCHandle>  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
+- <xref:System.Runtime.InteropServices.GCHandle>
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 578aed02d5d44ae94763b6a254420a4976320f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e18d64bdc67bfa5dce01c9125ee2e8585ab7db9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671953"
 ---
 # <a name="method-etw-events"></a>ETW-Methodenereignisse
 <a name="top"></a> Diese Ereignisse sammeln Informationen, die für Methoden spezifisch sind. Die Nutzlast dieser Ereignisse ist für die Symbolauflösung erforderlich. Darüber hinaus bieten diese Ereignisse hilfreiche Informationen, beispielsweise, wie oft eine Methode aufgerufen wurde.  
@@ -60,10 +60,10 @@ ms.locfileid: "33398104"
 |MethodStartAddress|win:UInt64|Die Startadresse der Methode.|  
 |MethodSize|win:UInt32|Die Größe der Methode.|  
 |MethodToken|win:UInt32|0 für dynamische Methoden und JIT-Hilfen.|  
-|MethodFlags|win:UInt32|0x1: Dynamische Methode.<br /><br /> 0x2: Generische Methode<br /><br /> 0x4: JIT-kompilierte Codemethode (andernfalls systemeigener NGEN-Imagecode).<br /><br /> 0x8: Hilfsmethode.|  
+|MethodFlags|win:UInt32|0x1: Dynamische Methode.<br /><br /> 0x2: Generische Methode.<br /><br /> 0x4: JIT-kompiliertem Code-Methode (andernfalls NGEN systemeigene Imagecode).<br /><br /> 0x8: Hilfsmethode.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="clr_method_marker_events"></a>   
 ## <a name="clr-method-marker-events"></a>CLR-Methodenmarkerereignisse  
@@ -92,7 +92,7 @@ ms.locfileid: "33398104"
 |----------------|---------------|-----------------|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="clr_method_verbose_events"></a>   
 ## <a name="clr-method-verbose-events"></a>Ausführliche CLR-Methodenereignisse  
@@ -123,13 +123,13 @@ ms.locfileid: "33398104"
 |MethodStartAddress|win:UInt64|Die Startadresse.|  
 |MethodSize|win:UInt32|Die Länge der Methode.|  
 |MethodToken|win:UInt32|0 für dynamische Methoden und JIT-Hilfen.|  
-|MethodFlags|win:UInt32|0x1: Dynamische Methode.<br /><br /> 0x2: Generische Methode<br /><br /> 0x4: JIT-kompilierte Methode (andernfalls von NGen.exe generiert)<br /><br /> 0x8: Hilfsmethode.|  
+|MethodFlags|win:UInt32|0x1: Dynamische Methode.<br /><br /> 0x2: Generische Methode.<br /><br /> 0x4: JIT-kompilierte Methode (andernfalls von NGen.exe generiert)<br /><br /> 0x8: Hilfsmethode.|  
 |MethodNameSpace|win:UnicodeString|Der vollständige Namespacename, der der Methode zugeordnet ist.|  
 |MethodName|win:UnicodeString|Der vollständige Klassenname, der der Methode zugeordnet ist.|  
 |MethodSignature|win:UnicodeString|Die Signatur der Methode (durch Trennzeichen getrennte Liste der Typnamen).|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="methodjittingstarted_event"></a>   
 ## <a name="methodjittingstarted-event"></a>MethodJittingStarted-Ereignis  
@@ -161,5 +161,5 @@ ms.locfileid: "33398104"
 |MethodSignature|win:UnicodeString|Die Signatur der Methode (durch Trennzeichen getrennte Liste der Typnamen).|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Siehe auch
+- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

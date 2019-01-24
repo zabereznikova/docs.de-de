@@ -2,12 +2,12 @@
 title: Formatieren von WCF-Web-HTTP
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 3a5164cb6271c8fd1d67b3c59fd35705d997f9fe
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e3db2be1a4f40bc0ae85c3d42faca20cef5308d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698738"
 ---
 # <a name="wcf-web-http-formatting"></a>Formatieren von WCF-Web-HTTP
 Mit dem WCF-Web-HTTP-Programmiermodell können Sie dynamisch das beste Format für einen Dienstvorgang bestimmen, in dem dieser seine Antwort zurückgibt. Es werden zwei Methoden zum Bestimmen eines entsprechenden Formats unterstützt: automatisch und explizit.  
@@ -163,10 +163,10 @@ public class Service : IService
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.UriTemplate>  
- <xref:System.UriTemplateMatch>  
- [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [UriTemplate und UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.UriTemplate>
+- <xref:System.UriTemplateMatch>
+- [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [UriTemplate und UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

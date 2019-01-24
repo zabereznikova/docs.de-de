@@ -7,18 +7,18 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: bad83378863cbc8b05fd3b74fe126e8147a20494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f58ebbb3f0876c8c1aa23bae04fb46573bc234f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551224"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653761"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
-Die <xref:System.Windows.Controls.FlowDocumentPageViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FlowDocument> regelmäßig pro Seite Inhalt. Im Gegensatz dazu die <xref:System.Windows.Controls.FlowDocumentScrollViewer>, zeigt <xref:System.Windows.Documents.FlowDocument> Inhalte in einem Bildlauf-Viewer.  
+Die <xref:System.Windows.Controls.FlowDocumentPageViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FlowDocument> von Inhalt auf einer Basis pro Seite. Vergleichen Sie mit der <xref:System.Windows.Controls.FlowDocumentScrollViewer>, welche zeigt <xref:System.Windows.Documents.FlowDocument> Inhalte in einem Bildlauf-Viewer.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Documents.FlowDocument>  
- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Documents.FlowDocument>
+- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)
+- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

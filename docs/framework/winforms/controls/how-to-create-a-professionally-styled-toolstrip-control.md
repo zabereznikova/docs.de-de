@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen eines professionellen ToolStrip-Steuerelements'
+title: 'Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - ToolStripRenderer class [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c208b2f6-8105-474b-9075-d582e1792870
-ms.openlocfilehash: 10799ad4db103fb50a25e600418fb8b5003c24ea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 1e6455ebabfa5b27301f98b89861348b28d415af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690201"
 ---
-# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Gewusst wie: Erstellen eines professionellen ToolStrip-Steuerelements
+# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a>Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements
 Sie können den <xref:System.Windows.Forms.ToolStrip>-Steuerelementen Ihrer Anwendung ein professionelles Aussehen und Verhalten ("Look and Feel") verleihen, indem Sie eine eigene Klasse schreiben, die vom Typ <xref:System.Windows.Forms.ToolStripProfessionalRenderer> abgeleitet ist.  
   
  Bietet umfassende Unterstützung für dieses Feature in Visual Studio.  
   
- Siehe [Exemplarische Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/walkthrough-creating-a-professionally-styled-toolstrip-control.md).  
+ Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/walkthrough-creating-a-professionally-styled-toolstrip-control.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit <xref:System.Windows.Forms.ToolStrip> Steuerelemente ein zusammengesetztes Steuerelements zu erstellen, die imitiert die **Navigationsbereich** von Microsoft® Outlook® bereitgestellten.  
@@ -37,9 +37,9 @@ Sie können den <xref:System.Windows.Forms.ToolStrip>-Steuerelementen Ihrer Anwe
   
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Exemplarische Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements](walkthrough-creating-a-professionally-styled-toolstrip-control.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.StatusStrip>  
- [ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.StatusStrip>
+- [ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)

@@ -3,12 +3,12 @@ title: Übersicht über das WSFederation-Authentifizierungsmodul
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: bff3875b5f2f3ac187796d89fcd6da31ba911362
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cebdb0e69ae151afd9a1cc422cf48a201176313a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216954"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703665"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Übersicht über das WSFederation-Authentifizierungsmodul
 Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NET-Anwendungen über das WS-Verbundauthentifizierungsmodul (WS-FAM). In diesem Thema wird beschrieben, wie Verbundauthentifizierung funktioniert und verwendet wird.  
@@ -35,7 +35,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
   
  Bei der Konfiguration des WS-FAM geben Sie den STS an, an den nicht authentifizierte Anforderungen umgeleitet werden sollen. Mit WIF können Sie einen Benutzer auf zwei Arten authentifizieren:  
   
-1.  Passive Umleitung: Wenn ein nicht authentifizierter Benutzer versucht, auf eine geschützte Ressource zuzugreifen, Sie den Benutzer aber einfach auf einen STS umleiten möchten, ohne eine Anmeldeseite zu benötigen, ist dies der richtige Ansatz. Der STS überprüft die Identität des Benutzers und gibt ein Sicherheitstoken aus, das die entsprechenden Ansprüche für diesen Benutzer enthält. Für diese Option muss das WS-FAM in der HTTP-Modulpipeline hinzugefügt werden. Mit dem Identitäts- und Zugriffs-Tool können Sie in Visual Studio 2012 die Konfigurationsdatei der Anwendung ändern, damit das WS-FAM verwendet und ein Verbund-STS erstellt wird. Weitere Informationen finden Sie unter [Identitäts- und Zugriffs-Tool für Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1.  Passive Umleitung: Wenn ein nicht authentifizierter Benutzer versucht, eine geschützte Ressource zuzugreifen, und Sie einfach diese an einen STS umleiten ohne eine Anmeldeseite möchten, ist dies der richtige Ansatz. Der STS überprüft die Identität des Benutzers und gibt ein Sicherheitstoken aus, das die entsprechenden Ansprüche für diesen Benutzer enthält. Für diese Option muss das WS-FAM in der HTTP-Modulpipeline hinzugefügt werden. Mit dem Identitäts- und Zugriffs-Tool können Sie in Visual Studio 2012 die Konfigurationsdatei der Anwendung ändern, damit das WS-FAM verwendet und ein Verbund-STS erstellt wird. Weitere Informationen finden Sie unter [Identitäts- und Zugriffs-Tool für Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
 2.  Sie können die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType>-Methode oder die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A>-Methode aus dem zugrunde liegenden Code einer Anmeldeseite in der Anwendung der vertrauenden Seiten aufrufen.  
   
@@ -139,7 +139,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.IdentityModel.Services.SessionAuthenticationModule>
+- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
+- [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)

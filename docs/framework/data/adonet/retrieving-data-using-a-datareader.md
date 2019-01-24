@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: c97c30d77551f519777afa6efd31d507b3f21851
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 134bb68b9cf60cc5082afefdd9eb87d991b6e0ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692755"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Abrufen von Daten, die mit "DataReader"
 Zum Abrufen von Daten mithilfe einer **DataReader**, erstellen Sie eine Instanz von der **Befehl** Objekt aus, und erstellen Sie eine **DataReader** durch Aufrufen von **Command.ExecuteReader**  um Zeilen aus einer Datenquelle abzurufen. Die **DataReader** enthält einen nicht gepufferten Datenstream, mit der prozeduralen Logik, die Ergebnisse aus einer Datenquelle effizient sequenziell zu verarbeiten zu können. Die **DataReader** ist eine gute Wahl, wenn Sie große Mengen von Daten abgerufen werden, da die Daten nicht im Arbeitsspeicher zwischengespeichert werden.
@@ -257,9 +257,9 @@ adapter.Fill(ds);
 > [!NOTE]
 >  Vermeiden einer **OverflowException**, es wird empfohlen, dass Sie auch jede Konvertierung von Oracle-Typ NUMBER in einen gültigen .NET Framework-Typ vor dem Speichern des Werts in behandeln eine <xref:System.Data.DataRow>. Sie können die <xref:System.Data.Common.DataAdapter.FillError> Ereignis, um zu bestimmen, ob ein **OverflowException** aufgetreten. Weitere Informationen zu den <xref:System.Data.Common.DataAdapter.FillError> Ereignis finden Sie unter [Behandeln von DataAdapter-Ereignissen](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit "DataReaders"](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Arbeiten mit "DataReaders"](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
+- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
+- [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

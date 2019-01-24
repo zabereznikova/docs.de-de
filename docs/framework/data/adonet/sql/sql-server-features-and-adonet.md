@@ -2,12 +2,12 @@
 title: SQL Server-Funktionen und ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 2747af4ee2937f5b5d26217df5eb45c806606ac5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9e6f9d0404108428375aa859fa3f0b0939da6a24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54705371"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server-Funktionen und ADO.NET
 In den Themen in diesem Abschnitt werden Funktionen von SQL Server für die Entwicklung von Datenbankanwendungen mit ADO.NET beschrieben.  
@@ -46,9 +46,9 @@ In den Themen in diesem Abschnitt werden Funktionen von SQL Server für die Entw
  [SqlClient-Unterstützung für LocalDB](../../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)  
  Beschreibt die SqlClient-Unterstützung für LocalDB-Datenbanken.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

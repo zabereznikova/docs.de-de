@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8215ddfd0f59f835d0b0dcd278b8cae9c12027d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7415e7b5ee03353e8e0e45cf46aa47c4266109af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422109"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704302"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException-Methode
 Gibt an, ob der Thread jemals eine nicht behandelte Ausnahme aufgetreten ist.  
@@ -48,10 +48,10 @@ HRESULT GetBlockingObjects (
 |S_FALSE|Der Thread ist nie eine nicht behandelte Ausnahme aufgetreten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode gibt an, ob der Thread jemals eine nicht behandelte Ausnahme aufgetreten ist. Nach der Zeit wird der Rückruf für nicht behandelte Ausnahme ausgelöst oder systemeigenes JIT-attach initiiert wird, diese Methode wird sichergestellt, dass S_OK zurückgegeben. Es gibt keine Garantie, die die [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) Methode gibt zurück, die nicht behandelte Ausnahme; allerdings es tritt ein, wenn der Prozess nicht noch nach Eingang des Ausnahmefehler Rückrufs oder nach fortgesetzt wurde systemeigenes JIT-attach. Außerdem ist es möglich (wenn auch unwahrscheinlich), haben mehrere Threads durch eine nicht behandelte Ausnahme, die zum Zeitpunkt der systemeigenen JIT-attach ausgelöst wird. In einem solchen Fall besteht keine Möglichkeit zu bestimmen, welche Ausnahme ausgelöst, die JIT-attach zur Verfügung.  
+ Diese Methode gibt an, ob der Thread jemals eine nicht behandelte Ausnahme aufgetreten ist. Mit der Zeit wird der Rückruf nicht behandelte Ausnahme ausgelöst oder systemeigenes JIT-attach initiiert wird, diese Methode wird immer S_OK zurück. Es gibt keine Garantie, die die [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) Methode gibt zurück, die nicht behandelte Ausnahme; allerdings es tritt ein, wenn der Prozess nicht noch fortgesetzt wurde nach dem Abrufen des nicht behandelten Ausnahmerückrufs oder nach systemeigenes JIT-attach. Außerdem ist es möglich (wenn auch unwahrscheinlich), sodass mehr als ein Thread mit einem Ausnahmefehler, die zum Zeitpunkt der nativen JIT-attach wird ausgelöst. In diesem Fall besteht keine Möglichkeit festzustellen, welche Ausnahme ausgelöst, der JIT-attach zur Verfügung.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -59,7 +59,7 @@ HRESULT GetBlockingObjects (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugThread4-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugThread4-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: f32308a17e2934b6884140307074f97e6b51f5f9
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: fea0a756a39a3325cc41003a784e0159595ae2fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664251"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Erstellen von interoperablen WS-I Basic Profile 1.1-Diensten
 So konfigurieren Sie einen WCF-Dienstendpunkt, um Interoperabilität mit [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Webdienstclients:  
@@ -41,5 +41,5 @@ So konfigurieren Sie einen WCF-Dienstendpunkt, um Interoperabilität mit [!INCLU
  [!code-vb[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/vb/program.vb#0)]  
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Interoperabilität mit ASP.NET-Webdiensten](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Interoperabilität mit ASP.NET-Webdiensten](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)

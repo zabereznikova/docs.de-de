@@ -2,12 +2,12 @@
 title: Sequenzoperatoren
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: 01807e48c06bce1d451961bb6204d1f8e49d53f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360286"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666162"
 ---
 # <a name="sequence-operators"></a>Sequenzoperatoren
 Im Allgemeinen unterstützt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] keine Sequenzoperatoren, die über eine oder mehrere der folgenden Qualitäten verfügen:  
@@ -45,5 +45,5 @@ Im Allgemeinen unterstützt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbt
 ## <a name="differences-from-net"></a>Unterschiede zu .NET  
  Alle unterstützten Sequenzoperatoren funktionieren in der Common Language Runtime (CLR) wie erwartet, außer `Average`. `Average` gibt einen Wert des Typs zurück, der dem Typ entspricht, dessen Durchschnitt ermittelt wird, wohingegen `Average` in der CLR entweder immer ein <xref:System.Double> oder ein <xref:System.Decimal> zurückgibt. Wird das Quellargument explizit in double/decimal oder wird der Selector in double/decimal umgewandelt, weist auch die resultierende SQL diese Umwandlung auf, und das Ergebnis entspricht den Erwartungen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

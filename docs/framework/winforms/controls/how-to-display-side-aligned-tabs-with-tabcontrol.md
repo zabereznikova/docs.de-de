@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Anzeigen von seitlich ausgerichteten Registerkarten mit TabControl'
+title: 'Vorgehensweise: Anzeigen von seitlich ausgerichteten Registerkarten mit TabControl-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: e145547ba4c8648a765e9507b7f35e50cb15fd82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b2d691cb41a48b51bb48291e321d763a9ff7e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650576"
 ---
-# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Gewusst wie: Anzeigen von seitlich ausgerichteten Registerkarten mit TabControl
+# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Vorgehensweise: Anzeigen von seitlich ausgerichteten Registerkarten mit TabControl-Steuerelement
 Die <xref:System.Windows.Forms.TabControl.Alignment%2A>-Eigenschaft des <xref:System.Windows.Forms.TabControl> unterstützt das vertikale Anzeigen von Registerkarten (entlang des linken oder rechten Rands des Steuerelements), im Gegensatz zu horizontal (am oberen oder unteren Rand des Steuerelements). Standardmäßig führt diese vertikale Anzeige zu einer wenig benutzerfreundlichen Oberfläche, weil die <xref:System.Windows.Forms.TabPage.Text%2A>-Eigenschaft des <xref:System.Windows.Forms.TabPage>-Objekts nicht auf der Registerkarte angezeigt wird, wenn visuelle Stile aktiviert sind. Es ist außerdem keine direkte Möglichkeit zur Steuerung der Richtung des Texts auf der Registerkarte. Sie können Ownerdrawn in <xref:System.Windows.Forms.TabControl> verwenden, um die Oberfläche zu verbessern.  
   
  Das folgende Verfahren zeigt, wie rechtsbündig ausgerichtete Registerkarten gerendert werden, wobei der Registerkartentext von links nach rechts verläuft, indem Sie die Funktion "Ownerdrawn" verwenden.  
@@ -40,5 +40,5 @@ Die <xref:System.Windows.Forms.TabControl.Alignment%2A>-Eigenschaft des <xref:Sy
      [!code-csharp[TabControl.RightAlignedTabs#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/TabControl.RightAlignedTabs/CS/Form1.cs#1)]
      [!code-vb[TabControl.RightAlignedTabs#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- [TabControl-Steuerelement](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- [TabControl-Steuerelement](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)

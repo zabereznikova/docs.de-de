@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erzwingen, dass ein Argument als Wert übergeben wird (Visual Basic)'
+title: 'Vorgehensweise: Erzwingen, dass ein Argument als Wert (Visual Basic) übergeben werden'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -14,52 +14,52 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: adc58c34150030eb0fc82050576bfecc453e21ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c4d6397d9a9ab1b95c4708c1e98741c01e9302e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706640"
 ---
-# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Gewusst wie: Erzwingen, dass ein Argument als Wert übergeben wird (Visual Basic)
-In der Prozedurdeklaration des Übergabemechanismus. Wenn ein deklarierter Parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic erwartet, dass das entsprechende Argument als Verweis zu übergeben. Dadurch wird das Verfahren zum Ändern des Werts, der das Programmierelement, die dem Argument im aufrufenden Code zugrunde liegt. Wenn Sie das zugrunde liegende Element gegen eine solche Änderung schützen möchten, können Sie überschreiben die `ByRef` Übergabemechanismus in der Prozedur aufrufen, indem der Name des Arguments in Klammern einschließen. Die Klammern sind zusätzlich zu der Klammern, die die Argumentliste im Aufruf einschließen.  
+# <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Vorgehensweise: Erzwingen, dass ein Argument als Wert (Visual Basic) übergeben werden
+Den Übergabemechanismus der Prozedurdeklaration. Wenn ein Parameter deklariert wird [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic geht davon aus, das entsprechende Argument als Verweis übergeben. Dadurch wird das Verfahren zum Ändern des Werts des zugrunde liegenden Arguments im aufrufenden Code Programmierelements. Wenn Sie das zugrunde liegende Element für eine solche Änderung schützen möchten, können Sie überschreiben die `ByRef` Übergabemechanismus in der Prozedur aufrufen, indem der Name des Arguments in Klammern einschließen. Diese Klammern sind zusätzlich zu den Klammern einschließen der Liste der Argumente im Aufruf.  
   
- Der aufrufende Code kann nicht überschrieben werden eine [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) Mechanismus.  
+ Der aufrufende Code kann nicht überschrieben. eine [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) Mechanismus.  
   
-### <a name="to-force-an-argument-to-be-passed-by-value"></a>So erzwingen ein Argument als Wert übergeben werden  
+### <a name="to-force-an-argument-to-be-passed-by-value"></a>Erzwingen Sie ein Argument als Wert übergeben werden  
   
--   Wenn der entsprechende Parameter deklariert wird `ByVal` in der Prozedur Sie brauchen keine zusätzlichen Schritte ausführen. Visual Basic erwartet bereits das Argument als Wert übergeben.  
+-   Wenn der entsprechende Parameter deklariert wird `ByVal` in der Prozedur, Sie müssen keine weiteren Schritte. Visual Basic erwartet, dass bereits das Argument als Wert übergeben.  
   
--   Wenn der entsprechende Parameter deklariert wird `ByRef` setzen Sie in der Prozedur das Argument in Klammern in dem Prozeduraufruf.  
+-   Wenn der entsprechende Parameter deklariert wird `ByRef` setzen Sie in der Prozedur das Argument im Aufruf Prozedur in Klammern.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird eine `ByRef` Parameterdeklaration. Im Aufruf erzwingt `ByVal`, beachten Sie die beiden Ebenen von Klammern.  
+ Im folgenden Beispiel wird eine `ByRef` Parameterdeklaration. Im Aufruf, die erzwingt, dass `ByVal`, beachten Sie die zwei Ebenen von Klammern.  
   
  [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
   
  [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
   
- Wenn `str` in der Argumentliste in zusätzlichen Klammern eingeschlossen ist der `setNewString` Prozedur dessen Wert in der aufrufende Code kann nicht geändert werden und `MsgBox` "Kann nicht ersetzt werden, wenn ByVal überschritten" angezeigt. Wenn `str` nicht gesetzt in zusätzlichen Klammern, die Prozedur kann ggf. geändert und `MsgBox` zeigt "This is einen neuen Wert für das Argument InString."  
+ Wenn `str` in der Argumentliste in zusätzlichen Klammern eingeschlossen ist die `setNewString` Prozedur Wert im aufrufenden Code nicht ändern kann und `MsgBox` zeigt "Kann nicht ersetzt werden, wenn ByVal übergeben". Wenn `str` ist nicht eingeschlossen in zusätzlichen Klammern kann die Prozedur ändern, und `MsgBox` zeigt "Dies ist es sich um einen neuen Wert für das Argument InString."  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Wenn Sie keine Variable nach Verweis übergeben, müssen Sie mithilfe der `ByRef` Schlüsselwort dieser Mechanismus angeben.  
+ Wenn Sie eine Variable als Verweis übergeben, müssen Sie verwenden die `ByRef` Schlüsselwort, um diesen Mechanismus angeben.  
   
- Der Standardwert in Visual Basic ist Argumenten als Wert übergeben. Allerdings ist es guter Programmierstil, entweder enthalten die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) -Schlüsselwort mit jeder deklarierte Parameter. Dadurch wird Ihr Code einfacher zu lesen.  
+ Der Standardwert in Visual Basic ist, Argumente als Wert übergeben. Allerdings ist es guter Programmierstil, auch die [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) Schlüsselwort für jeden deklarierten Parameter. Dadurch wird Ihr Code einfacher zu lesen.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- Wenn eine Prozedur einen Parameter deklariert [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), die korrekte Ausführung des Codes abhängen, wird das zugrunde liegende Element im aufrufenden Code ändern können. Wenn der aufrufende Code diese Aufrufmechanismus überschreibt, indem das Argument in Klammern einschließen oder übergibt ein Argument nicht veränderbaren, kann nicht das Verfahren der zugrunde liegenden Elemente ändern. Dies kann unerwartete Ergebnisse im aufrufenden Code erzeugen.  
+ Wenn eine Prozedur einen Parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), die richtige Ausführung des Codes abhängen, wird das zugrunde liegende Element im aufrufenden Code ändern können. Wenn der aufrufende Code diesen Mechanismus aufrufen, überschreibt indem Sie das Argument in Klammern einschließen, oder wenn ein nicht änderbarer Argument übergeben, kann die Prozedur nicht das zugrunde liegende Element ändern. Dies kann unerwartete Ergebnisse im aufrufenden Code erzeugen.  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
- In einer Prozedur zum Ändern des Werts, der ein Argument im aufrufenden Code zugrunde liegt, ist immer ein Sicherheitsrisiko dar. Stellen Sie sicher, dass Sie erwarten, dass dieser Wert geändert werden, und es auf Gültigkeit zu überprüfen, vor der Verwendung vorbereitet werden.  
+ Es ist immer ein potenzielles Risiko einer Prozedur zum Ändern des Werts, der ein Argument im aufrufenden Code zugrunde liegt. Stellen Sie sicher, dass Sie erwarten, dass dieser Wert geändert werden, und auf Gültigkeit überprüft werden vor der Verwendung vorbereitet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verfahren](./index.md)  
- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
- [Gewusst wie: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)  
- [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)  
- [Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten](./differences-between-modifiable-and-nonmodifiable-arguments.md)  
- [Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis](./differences-between-passing-an-argument-by-value-and-by-reference.md)  
- [Gewusst wie: Ändern des Werts eines Prozedurarguments](./how-to-change-the-value-of-a-procedure-argument.md)  
- [Gewusst wie: Schützen eines Prozedurarguments gegen Wertänderungen](./how-to-protect-a-procedure-argument-against-value-changes.md)  
- [Übergeben von Argumenten nach Position und Name](./passing-arguments-by-position-and-by-name.md)  
- [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+## <a name="see-also"></a>Siehe auch
+- [Verfahren](./index.md)
+- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
+- [Vorgehensweise: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)
+- [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)
+- [Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten](./differences-between-modifiable-and-nonmodifiable-arguments.md)
+- [Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis](./differences-between-passing-an-argument-by-value-and-by-reference.md)
+- [Vorgehensweise: Ändern des Werts eines Prozedurarguments](./how-to-change-the-value-of-a-procedure-argument.md)
+- [Vorgehensweise: Schützen eines Prozedurarguments gegen Wertänderungen](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Übergeben von Argumenten nach Position und Name](./passing-arguments-by-position-and-by-name.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

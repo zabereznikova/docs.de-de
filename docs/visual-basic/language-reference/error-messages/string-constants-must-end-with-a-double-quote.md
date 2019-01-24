@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
-ms.openlocfilehash: c195c6892097818f4292f0732c2444644fdcb96a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 499190a711e4092122dbee8c7edfc315daea5432
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700262"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>Zeichenfolgenliterale müssen mit einem doppelten Anführungszeichen enden.
 Zeichenfolgenkonstanten müssen beginnen und enden mit Anführungszeichen ein.  
   
- **Fehler-ID:** BC30648  
+ **ErrorID:** BC30648  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Stellen Sie sicher, dass das Zeichenfolgenliteral mit einem Anführungszeichen (") beendet. Wenn Sie Werte aus anderen Text-Editoren einfügen, stellen Sie sicher, das eingefügte Zeichen ein gültiges Anführungszeichen und nicht eines der Zeichen, die, wie z. B. "intelligenter" oder "geschweiften" Anführungszeichen ähneln ("oder") oder zwei einfache Anführungszeichen (").  
+-   Stellen Sie sicher, dass das Zeichenfolgenliteral mit einem Anführungszeichen (") endet. Wenn Sie Werte aus anderen Text-Editoren einfügen, stellen Sie sicher, dass das eingefügte Zeichen ein gültiges Anführungszeichen und nicht die Zeichen, die sie, wie z. B. "smart" oder "geschweifte" Anführungszeichen ähneln ("oder") oder zwei einfache Anführungszeichen (").  
   
-## <a name="see-also"></a>Siehe auch  
- [Zeichenfolgen](../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Zeichenfolgen](../../../visual-basic/programming-guide/language-features/strings/index.md)

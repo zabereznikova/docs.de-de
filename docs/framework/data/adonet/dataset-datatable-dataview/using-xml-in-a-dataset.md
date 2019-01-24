@@ -2,12 +2,12 @@
 title: Verwenden von XML in einem "DataSet"
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: cbdc6135a819e2141426f432d163cd49a7b78ac4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 245e893d052a67e79396fb3d9fc7062eea426215
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667049"
 ---
 # <a name="using-xml-in-a-dataset"></a>Verwenden von XML in einem "DataSet"
 Mit ADO.NET können Sie ein <xref:System.Data.DataSet> über einen XML-Stream oder ein XML-Dokument füllen. Die können den XML-Stream oder das XML-Dokument verwenden, um das <xref:System.Data.DataSet> mit Daten oder Schemainformationen oder mit beidem zu versorgen. Die vom XML-Stream oder vom XML-Dokument bereitgestellten Daten können mit vorhandenen Daten oder Schemainformationen kombiniert werden, die bereits im <xref:System.Data.DataSet> enthalten sind.  
@@ -46,6 +46,6 @@ Mit ADO.NET können Sie ein <xref:System.Data.DataSet> über einen XML-Stream od
  [Übersicht über ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  Beschreibt die ADO.NET-Architektur und -Komponenten und wie diese dazu verwendet werden, auf vorhandene Datenquellen zuzugreifen sowie Anwendungsdaten zu verwalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

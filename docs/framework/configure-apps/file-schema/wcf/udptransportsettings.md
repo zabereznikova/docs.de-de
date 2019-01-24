@@ -2,19 +2,19 @@
 title: '&lt;udpTransportSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: 9c7687e849650a57fca059d68157d1f2c032ee74
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 58931cb70f83378740093615adf89a437e32ff2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145730"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667192"
 ---
 # <a name="ltudptransportsettingsgt"></a>&lt;udpTransportSettings&gt;
 Dieses Konfigurationselement macht UDP-transporteinstellungen für [ \<UdpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md).  
   
 \<system.ServiceModel>  
-\<StandardEndpoints >  
-\<UdpDiscoveryEndpoint >  
+\<standardEndpoints>  
+\<udpDiscoveryEndpoint>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ Dieses Konfigurationselement macht UDP-transporteinstellungen für [ \<UdpDiscov
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<UdpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|Ein Standardendpunkt mit festem Ermittlungsvertrag und fester UDP-Transportbindung.|  
+|[\<udpDiscoveryEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|Ein Standardendpunkt mit festem Ermittlungsvertrag und fester UDP-Transportbindung.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Discovery.UdpTransportSettings>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Discovery.UdpTransportSettings>

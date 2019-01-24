@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 06601b1aa675dd9ecf023a9f83d881ba1591ac52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c30a666dcbac553d05cc5f54d5dbb326eb6a10e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706695"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>ICorProfilerInfo::ForceGC-Methode
 Erzwingt eine Garbagecollection in der common Language Runtime (CLR) ausgeführt.  
@@ -34,10 +34,10 @@ HRESULT ForceGC();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ForceGC` -Methode muss nur von einem Thread, die verwalteten Code wurde nie ausgeführt und verfügt nicht über die Profilerrückrufe für einen Stapel aufgerufen werden. Die einfachste Implementierung ist auf einen separaten Thread innerhalb des Profilers zu erstellen, die aufruft `ForceGC` signalisiert.  
+ Die `ForceGC` -Methode muss aufgerufen werden, nur von einem Thread, der nie verwalteten Code ausgeführt hat, und verfügt nicht über die Profilerrückrufe für seinen Stapel. Die einfachste Implementierung ist die Erstellung von einem separaten Thread innerhalb des Profilers, der aufruft `ForceGC` signalisiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -45,5 +45,5 @@ HRESULT ForceGC();
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

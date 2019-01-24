@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 78c511555065528d1ab34ee3ec9f8859a15bbc61
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 52077103277cdc4d32dfe3e44fcccffeec20295e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706864"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Übersicht über TextPattern und eingebettete Objekte
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Aktuelle Informationen zur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]finden Sie auf der Seite zur [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In dieser Übersicht wird beschrieben, wie von der [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] eingebettete Objekte oder untergeordnete Elemente innerhalb eines Textdokuments oder Containers verfügbar gemacht werden.  
   
@@ -140,7 +140,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> mit den Parametern (0,0)|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Inhalt der Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetItem` -Methode zurückgegebene Objekt ist.|Gibt den Bereich, der das Image umfasst ![Beispiel für eingebettetes Bild](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das von der vorherigen `RangeFromChild` -Methode zurückgegebene Objekt.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das die Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement, das TableItemPattern unterstützt.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das von der vorherigen `GetEnclosingElement`-Methode zurückgegebene Objekt.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das die Tabelle darstellt.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das von der vorherigen `GetEnclosingElement` -Methode zurückgegebene Objekt.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das die Tabelle darstellt.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das von der vorherigen `GetEnclosingElement` -Methode zurückgegebene Objekt.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Textanbieter darstellt.|  
   
  **Beispiel 2: Abrufen des Textinhalts einer Zelle**  
@@ -148,14 +148,14 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |Aufgerufene Methode|Ergebnis|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> mit den Parametern {1,1}.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Inhalt der Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>, wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetItem`-Methode zurückgegebene Objekt ist.|Gibt „Y“ zurück.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetItem` -Methode zurückgegebene Objekt ist.|Gibt „Y“ zurück.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Automation.TextPattern>  
- <xref:System.Windows.Automation.Text.TextPatternRange>  
- <xref:System.Windows.Automation.Provider.ITextProvider>  
- <xref:System.Windows.Automation.Provider.ITextRangeProvider>  
- [Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
- [Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
- [Durchlaufen von Text mit Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [TextPattern-Suche und Auswahl-Beispiel](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Automation.TextPattern>
+- <xref:System.Windows.Automation.Text.TextPatternRange>
+- <xref:System.Windows.Automation.Provider.ITextProvider>
+- <xref:System.Windows.Automation.Provider.ITextRangeProvider>
+- [Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+- [Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)
+- [Durchlaufen von Text mit Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)
+- [TextPattern-Suche und Auswahl-Beispiel](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

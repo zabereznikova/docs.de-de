@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7a4f60571fb4d30793f64c57317bf0b372ae4812
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701910"
 ---
 # <a name="application-settings-schema"></a>Schema für Anwendungseinstellungen
 
@@ -26,9 +26,9 @@ Die Anwendungseinstellungen definiert die folgenden Elemente als Teil der verwen
 
 | Element                    | Beschreibung                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<"ApplicationSettings" >** | Enthält alle  **\<Einstellung >** Tags, die spezifisch für die Anwendung.                         |
-| **\<UserSettings >**        | Enthält alle  **\<Einstellung >** Tags, die spezifisch für den aktuellen Benutzer.                        |
-| **\<Festlegen von >**             | Definiert eine Einstellung. Untergeordnetes Element des  **\<"ApplicationSettings" >** oder  **\<UserSettings >**. |
+| **\<applicationSettings>** | Enthält alle  **\<Einstellung >** Tags, die spezifisch für die Anwendung.                         |
+| **\<userSettings>**        | Enthält alle  **\<Einstellung >** Tags, die spezifisch für den aktuellen Benutzer.                        |
+| **\<setting>**             | Definiert eine Einstellung. Untergeordnetes Element des  **\<"ApplicationSettings" >** oder  **\<UserSettings >**. |
 | **\<value>**               | Der Wert einer Einstellung wird definiert. Untergeordnetes Element des  **\<Einstellung >**.                                   |
 
 ## <a name="applicationsettings-element"></a>\<"ApplicationSettings" >-Element
@@ -92,5 +92,5 @@ Das folgende Beispiel zeigt eine Datei mit den Anwendungseinstellungen, die zwei
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über Anwendungseinstellungen](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[Architektur der Anwendungseinstellungen](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Übersicht über Anwendungseinstellungen](~/docs/framework/winforms/advanced/application-settings-overview.md)
+- [Architektur der Anwendungseinstellungen](~/docs/framework/winforms/advanced/application-settings-architecture.md)

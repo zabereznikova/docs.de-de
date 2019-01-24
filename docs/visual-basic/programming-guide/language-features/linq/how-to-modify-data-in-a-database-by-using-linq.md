@@ -12,12 +12,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 1b957fb7524b7eaf46bf321713196e90bae66b6c
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: bcc56e1f7a36c705aec6750b76a4ad5d99fe7101
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415207"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658415"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Vorgehensweise: Ändern von Daten in einer Datenbank mit LINQ (Visual Basic)
 Language Integrated Query (LINQ) Abfragen erleichtern Ihnen den Zugriff auf Informationen und Ändern von Werten in der Datenbank.  
@@ -160,9 +160,9 @@ Language Integrated Query (LINQ) Abfragen erleichtern Ihnen den Zugriff auf Info
   
 7.  Drücken Sie F5, um das Projekt auszuführen. Klicken Sie auf **hinzufügen** um einen neuen Datensatz hinzuzufügen. Klicken Sie auf **Update** so ändern Sie den neuen Datensatz. Klicken Sie auf **löschen** auf den neuen Datensatz zu löschen.  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Abfragen](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Vorgehensweise: Zuweisen von gespeicherten Prozeduren zum Durchführen von Aktionen zum Aktualisieren, Einfügen und Löschen (O/R-Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+## <a name="see-also"></a>Siehe auch
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Abfragen](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+- [Vorgehensweise: Zuweisen von gespeicherten Prozeduren zum Durchführen von Aktionen zum Aktualisieren, Einfügen und Löschen (O/R-Designer)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

@@ -8,30 +8,30 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: a5e9161132ba6d571daa30ce82e1bfb1dd2b064f
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 062d6276ab91705a4554da2afa8459a26453906f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703613"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
-Gibt an, dass eine oder mehrere deklarierte Programmierelemente uneingeschränkt Zugriff haben.  
+Gibt an, dass eine oder mehrere deklarierte Programmierelemente über keine zugriffseinschränkungen verfügen.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie eine Komponente oder ein Satz von Komponenten, z. B. eine Klassenbibliothek, veröffentlichen möchten Sie in der Regel die Programmierelemente von jedem Code zugegriffen werden kann, die mit der Assembly interagiert. Um solche unbegrenzten Zugriff auf ein Element zu gewähren, deklarieren Sie ihn mit `Public`.  
+ Wenn Sie eine Komponente oder ein Satz von Komponenten, z. B. eine Klassenbibliothek, veröffentlichen möchten Sie in der Regel die Programmierelemente von jedem Code zugegriffen werden kann, die mit der Assembly interagiert. Um solche unbegrenzten Zugriff auf ein Element gewähren zu können, deklarieren Sie es mit `Public`.  
   
- Öffentlicher Zugriff ist der normale Ebene für ein Programmierelement, wenn Sie nicht benötigen, um den Zugriff darauf zu beschränken. Beachten Sie, dass die Zugriffsebene eines Elements innerhalb einer Schnittstelle, Modul, Klasse oder Struktur deklariert wird standardmäßig auf `Public` , wenn Sie es andernfalls nicht deklarieren.  
+ Öffentlicher Zugriff ist die normale Zugriffsebene für ein Programmierelement ein Element aus, wenn Sie nicht benötigen, um den Zugriff darauf einschränken. Beachten Sie, dass die Zugriffsebene eines Elements innerhalb einer Schnittstelle, Modul, Klasse oder Struktur deklariert ist standardmäßig `Public` , wenn Sie es andernfalls nicht deklarieren.  
   
 ## <a name="rules"></a>Regeln  
   
--   **Deklarationskontext.** Sie können `Public` nur auf Modul, Schnittstelle oder Namespace-Ebene. Dies bedeutet, dass der Deklarationskontext für eine `Public` Element muss eine Quelldatei, Namespace, Schnittstelle, Modul, Klasse oder Struktur sein und darf keine Prozedur sein.  
+-   **Deklarationskontext.** Sie können `Public` nur auf Modul, Schnittstelle oder Namespace-Ebene. Dies bedeutet, dass der Deklarationskontext für eine `Public` Element muss eine Quelldatei, Namespace, Schnittstelle, Modul, Klasse oder Struktur sein, und keine Prozedur sein.  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Zugriffsebene.** Der gesamte Code, der ein Modul, Klasse oder Struktur zugreifen kann erreichen die `Public` Elemente.  
+-   **Zugriffsebene.** Sämtlicher Code, der ein Modul, Klasse oder Struktur zugreifen kann kann Zugriff auf seine `Public` Elemente.  
   
--   **Der Standardzugriff.** Keine Zugriffsmodifizierer können keine lokale Variablen in einer Prozedur erhalten standardmäßig öffentlichen Zugriff, und Sie darauf.  
+-   **Der Standardzugriff.** Lokale Variablen in eine Prozedur verfügen standardmäßig die öffentlichen Zugriff, und Sie können keine Zugriffsmodifizierer auf diesen.  
   
 -   **Zugriffsmodifizierer.** Die Schlüsselwörter, die Zugriffsebene angeben heißen *Zugriffsmodifizierer*. Einen Vergleich der Zugriffsmodifizierer, finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -65,13 +65,13 @@ Gibt an, dass eine oder mehrere deklarierte Programmierelemente uneingeschränkt
   
  [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
- [Private](../../../visual-basic/language-reference/modifiers/private.md)  
- [Geschützt privat](private-protected.md)   
- [Protected Friend](protected-friend.md)   
- [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Strukturen](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private Protected](private-protected.md)
+- [Protected Friend](protected-friend.md)
+- [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Strukturen](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

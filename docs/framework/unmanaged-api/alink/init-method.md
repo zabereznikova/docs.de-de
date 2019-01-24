@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b512389078ab022208c4b163edc8501a900669ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 315ddf89d9c0653f357490dc31986dc302024622
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400363"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662646"
 ---
 # <a name="init-method"></a>Init-Methode
 Bereitet Objekte implementieren die [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) für die Verwendung.  
@@ -37,18 +37,18 @@ HRESULT Init(
   
 #### <a name="parameters"></a>Parameter  
  `pDispenser`  
- [IMetaDataDispenserEx-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) Zeiger auf die Metadatenverteiler.  
+ [IMetaDataDispenserEx-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) Zeiger auf den Metadatenverteiler.  
   
  `pErrorHandler`  
- [IMetaDataError-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) Zeiger auf eine optionale Schnittstelle der Fehlerbehandlung.  
+ [IMetaDataError-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) Zeiger auf eine optionale Schnittstelle die Fehlerbehandlung.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  Erfordert alink.h  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

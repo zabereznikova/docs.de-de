@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7312cbd31a04365801b0380d5914966f36679560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672057"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps-Methode
 Ruft die Metadaten für die Eigenschaft, die durch das angegebene Token dargestellt wird.  
@@ -55,37 +55,37 @@ HRESULT GetPropertyProps (
  [in] Ein Token, die die Metadaten für die zurückzugebende Eigenschaft darstellt.  
   
  `pClass`  
- [out] Ein Zeiger auf das TypeDef-Token, das den Typ darstellt, der die Eigenschaft implementiert.  
+ [out] Ein Zeiger auf das TypeDef-Token, das den Typ darstellt, der der Eigenschaft implementiert.  
   
  `szProperty`  
- [out] Ein Puffer, der den Eigenschaftennamen enthält.  
+ [out] Ein Puffer, die Namen der Eigenschaft enthalten soll.  
   
  `cchProperty`  
  [in] Die Größe in Breitzeichen `szProperty`.  
   
  `pchProperty`  
- [out] Die Anzahl der Breitzeichen, die im zurückgegebenen `szProperty`.  
+ [out] Die Anzahl der Breitzeichen, die in zurückgegebenen `szProperty`.  
   
  `pdwPropFlags`  
- [out] Ein Zeiger auf Attributflags, die auf die Eigenschaft angewendet. Dieser Wert ist eine Bitmaske aus der [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) Enumeration.  
+ [out] Ein Zeiger auf Attributflags auf die Eigenschaft angewendet werden soll. Dieser Wert ist eine Bitmaske aus der [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) Enumeration.  
   
  `ppvSig`  
- [out] Ein Zeiger auf die Metadatensignatur der Eigenschaft.  
+ [out] Ein Zeiger auf die Signatur für die Metadaten der Eigenschaft.  
   
  `pbSig`  
- [out] Die Anzahl der Bytes im zurückgegebenen `ppvSig`.  
+ [out] Die Anzahl der Bytes, die in zurückgegebenen `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] Ein Flag, das den Typ der Konstante, die der Standardwert der Eigenschaft angeben. Dieser Wert liegt zwischen CorElementType-Enumeration.  
+ [out] Ein Flag, das den Typ der Konstante, die der Standardwert der Eigenschaft angibt. Dieser Wert liegt zwischen CorElementType-Enumeration.  
   
  `ppDefaultValue`  
- [out] Ein Zeiger auf die Bytes, die den Standardwert für diese Eigenschaft zu speichern.  
+ [out] Ein Zeiger auf die Bytes, die der Standardwert für diese Eigenschaft zu speichern.  
   
  `pcchDefaultValue`  
- [out] Die Größe in Breitzeichen `ppDefaultValue`, wenn `pdwCPlusTypeFlag` ELEMENT_TYPE_STRING ist; dieser Wert ist, andernfalls nicht relevant. In diesem Fall wird die Länge des `ppDefaultValue` wird aus der vom angegebenen Typ abgeleitet, `pdwCPlusTypeFlag`.  
+ [out] Die Größe in Breitzeichen `ppDefaultValue`, wenn `pdwCPlusTypeFlag` ELEMENT_TYPE_STRING ist; andernfalls ist dieser Wert nicht relevant. In diesem Fall die Länge des `ppDefaultValue` wird aus der vom angegebenen Typ abgeleitet, `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
- [out] Ein Zeiger auf das MethodDef-Token, das die Set-Zugriffsmethode für die Eigenschaft darstellt.  
+ [out] Ein Zeiger auf das MethodDef-Token, das die Set-Accessor-Methode für die Eigenschaft darstellt.  
   
  `pmdGetter`  
  [out] Ein Zeiger auf das MethodDef-Token, das die Get-Accessor-Methode für die Eigenschaft darstellt.  
@@ -100,14 +100,14 @@ HRESULT GetPropertyProps (
  [out] Die Anzahl der zurückgegebenen MethodDef-Token `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

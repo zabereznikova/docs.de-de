@@ -2,12 +2,12 @@
 title: Übersicht über Windows-Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: af5ccd47dd7b3ff35dd283f8fe659ebef912d441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195445"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665161"
 ---
 # <a name="windows-workflow-overview"></a>Übersicht über Windows-Workflow
 Ein Workflow ist eine Reihe von elementaren Einheiten mit dem Namen *Aktivitäten* , die als Modell, das einen realen Vorgang beschreibt gespeichert sind. Mit Workflows können die Reihenfolge der Ausführung sowie abhängige Beziehungen zwischen kurz- und langfristiger Arbeit beschrieben werden. Diese Arbeit durchläuft das Modell vom Anfang bis zum Ende, und Aktivitäten werden unter Umständen von Personen oder Systemfunktionen ausgeführt.  
@@ -41,5 +41,5 @@ Workflowkomponenten im Hostprozess
   
 -   Eine benutzerdefinierte Aktivität, die von der abstrakten <xref:System.Activities.CodeActivity>-Klasse abgeleitet wird. <xref:System.Activities.CodeActivity> kann auf Laufzeitfunktionen (z. B. Nachverfolgung und Eigenschaften) mit dem <xref:System.Activities.CodeActivityContext> zugreifen, der als Parameter über die <xref:System.Activities.CodeActivity.Execute%2A>-Methode verfügbar ist. Weitere Informationen über diese Laufzeitfunktionen finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) und [Eigenschaften der Workflowausführung](../../../docs/framework/windows-workflow-foundation/workflow-execution-properties.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [BizTalk Server 2006 oder WF? Auswählen des richtigen Workflowtools für Ihr Projekt](https://go.microsoft.com/fwlink/?LinkId=154901)
+## <a name="see-also"></a>Siehe auch
+- [BizTalk Server 2006 oder WF? Auswählen des richtigen Workflowtools für Ihr Projekt](https://go.microsoft.com/fwlink/?LinkId=154901)

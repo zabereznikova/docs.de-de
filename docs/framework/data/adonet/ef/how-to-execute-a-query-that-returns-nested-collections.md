@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Ausführen einer Abfrage, die geschachtelte Auflistungen zurückgibt'
+title: 'Vorgehensweise: Ausführen einer Abfrage, die geschachtelte Auflistungen zurückgibt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f7f385f3-ffcf-4f3b-af35-de8818938e5f
-ms.openlocfilehash: 5e282bce5f2519592babad0afcf7f8a326cf936d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f429b8e8f546669fba64b9ee04222d399971936e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530567"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654515"
 ---
-# <a name="how-to-execute-a-query-that-returns-nested-collections"></a>Gewusst wie: Ausführen einer Abfrage, die geschachtelte Auflistungen zurückgibt
+# <a name="how-to-execute-a-query-that-returns-nested-collections"></a>Vorgehensweise: Ausführen einer Abfrage, die geschachtelte Auflistungen zurückgibt
 Dieses Beispiel zeigt die Ausführung eines Befehls für ein konzeptionelles Modell mit einem <xref:System.Data.EntityClient.EntityCommand>-Objekt und das Abrufen der Ergebnisse der geschachtelten Auflistung mithilfe eines <xref:System.Data.EntityClient.EntityDataReader>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>So führen Sie den Code in diesem Beispiel aus  
@@ -30,5 +30,5 @@ Dieses Beispiel zeigt die Ausführung eines Befehls für ein konzeptionelles Mod
  [!code-csharp[DP EntityServices Concepts#ReturnNestedCollectionWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#returnnestedcollectionwithentitycommand)]
  [!code-vb[DP EntityServices Concepts#ReturnNestedCollectionWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#returnnestedcollectionwithentitycommand)]  
   
-## <a name="see-also"></a>Siehe auch  
- [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
+## <a name="see-also"></a>Siehe auch
+- [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

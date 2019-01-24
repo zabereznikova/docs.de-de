@@ -7,18 +7,18 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 03f9c4f8156c5f14ff127dd47c7ade6f6ee22e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591931"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671264"
 ---
 # <a name="path-markup-syntax"></a>Pfadmarkupsyntax
 Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) und [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), jedoch in diesem Thema wird ausführlich die leistungsstarke und komplexe Minisprache Sie den Pfad angeben können Pfadgeometrien kompakter unter Verwendung [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Um dieses Thema zu verstehen, sollten Sie mit den grundlegenden Funktionen von vertraut sein <xref:System.Windows.Media.Geometry> Objekte. Weitere Informationen finden Sie unter den [Übersicht über die Geometrie](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md).  
   
 <a name="abouthisdocument"></a>   
@@ -40,7 +40,7 @@ Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](../.
 ### <a name="a-note-about-white-space"></a>Anmerkung zu Leerzeichen  
  Aus Platzgründen wird ein einzelnes Leerzeichen in den folgenden Syntaxabschnitten dargestellt, aber mehrere Leerzeichen sind überall dort zulässig, wo ein einzelnes Leerzeichen angezeigt wird.  
   
- Zwei Zahlen müssen nicht unbedingt durch ein Komma oder ein Leerzeichen getrennt werden, aber dies kann nur durchgeführt werden, wenn die resultierende Zeichenfolge eindeutig ist. Z. B. `2..3` besteht aus zwei Zahlen: "2". und „.3“. Auf ähnliche Weise `2-3` ist "2" und "-3". Auch vor oder nach Befehlen sind keine Leerzeichen erforderlich.  
+ Zwei Zahlen müssen nicht unbedingt durch ein Komma oder ein Leerzeichen getrennt werden, aber dies kann nur durchgeführt werden, wenn die resultierende Zeichenfolge eindeutig ist. Z. B. `2..3` besteht aus zwei Zahlen: "2." und „.3“. Auf ähnliche Weise `2-3` ist "2" und "-3". Auch vor oder nach Befehlen sind keine Leerzeichen erforderlich.  
   
 ### <a name="syntax"></a>Syntax  
  Die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Syntax für das Attribut ein <xref:System.Windows.Media.StreamGeometry> besteht aus einem optionalen <xref:System.Windows.Media.FillRule> Wert sowie Beschreibungen zu ermitteln.  
@@ -69,7 +69,7 @@ Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](../.
   
 |Syntax|  
 |------------|  
-|`M` *startPoint*<br /><br /> - oder -<br /><br /> `m` *startPoint*|  
+|`M` *startPoint*<br /><br /> - oder -<br /><br /> `m` *startPoint*|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -88,7 +88,7 @@ Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](../.
   
 |Syntax|  
 |------------|  
-|`L` *endPoint*<br /><br /> - oder -<br /><br /> `l` *endPoint*|  
+|`L` *endPoint*<br /><br /> - oder -<br /><br /> `l` *endPoint*|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -102,7 +102,7 @@ Ein großgeschriebenes `L` gibt an, dass `endPoint` ist ein absoluter Wert ist e
   
 |Syntax|  
 |------------|  
-|`H`  *x*<br /><br /> - oder -<br /><br /> `h`  *x*|  
+|`H`  *x*<br /><br /> - oder -<br /><br /> `h`  *x*|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -129,7 +129,7 @@ Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klei
   
 |Syntax|  
 |------------|  
-|`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> - oder -<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
+|`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> - oder -<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -142,7 +142,7 @@ Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klei
   
 |Syntax|  
 |------------|  
-|`Q` `controlPoint` `endPoint`<br /><br /> - oder -<br /><br /> `q` `controlPoint` `endPoint`|  
+|`Q` `controlPoint` `endPoint`<br /><br /> - oder -<br /><br /> `q` `controlPoint` `endPoint`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -154,7 +154,7 @@ Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klei
   
 |Syntax|  
 |------------|  
-|`S` `controlPoint`2`endPoint`<br /><br /> - oder -<br /><br /> `s` `controlPoint`2`endPoint`|  
+|`S` `controlPoint`2`endPoint`<br /><br /> - oder -<br /><br /> `s` `controlPoint`2`endPoint`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -166,7 +166,7 @@ Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klei
   
 |Syntax|  
 |------------|  
-|`T` `controlPoint` `endPoint`<br /><br /> - oder -<br /><br /> `t` `controlPoint` `endPoint`|  
+|`T` `controlPoint` `endPoint`<br /><br /> - oder -<br /><br /> `t` `controlPoint` `endPoint`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -178,7 +178,7 @@ Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klei
   
 |Syntax|  
 |------------|  
-|`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> - oder -<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
+|`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> - oder -<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -194,7 +194,7 @@ Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klei
   
 |Syntax|  
 |------------|  
-|`Z`<br /><br /> - oder -<br /><br /> `z`|  
+|`Z`<br /><br /> - oder -<br /><br /> `z`|  
 
 <a name="pointsyntax"></a>   
 ## <a name="point-syntax"></a>Punkt-Syntax  
@@ -202,7 +202,7 @@ Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klei
   
 |Syntax|  
 |------------|  
-|`x` `,` `y`<br /><br /> - oder -<br /><br /> `x` `y`|  
+|`x` `,` `y`<br /><br /> - oder -<br /><br /> `x` `y`|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -224,11 +224,11 @@ Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klei
   
  Sie können auch die wissenschaftliche Schreibweise verwenden. Z. B. `+1.e17` ist ein gültiger Wert.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Shapes.Path>  
- <xref:System.Windows.Media.StreamGeometry>  
- <xref:System.Windows.Media.PathGeometry>  
- <xref:System.Windows.Media.PathFigureCollection>  
- [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Übersicht über Geometrien](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Shapes.Path>
+- <xref:System.Windows.Media.StreamGeometry>
+- <xref:System.Windows.Media.PathGeometry>
+- <xref:System.Windows.Media.PathFigureCollection>
+- [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Übersicht über Geometrien](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)

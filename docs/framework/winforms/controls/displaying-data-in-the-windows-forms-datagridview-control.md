@@ -7,56 +7,56 @@ helpviewer_keywords:
 - displaying data [Windows Forms], data grids
 - DataGridView control [Windows Forms], displaying data
 ms.assetid: b170b52a-2ebd-4948-ac2f-e52d494cebb2
-ms.openlocfilehash: 06df9bbcb1e8b1b53d061dbd219a25378a311072
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39c5482c48f3728469e8952220eabc4daef1cbf6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665252"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms
-Die `DataGridView` Steuerelement wird verwendet, um Daten aus einer Vielzahl externer Datenquellen anzuzeigen. Alternativ können Sie Zeilen und Spalten zum Steuerelement hinzufügen und es manuell mit Daten aufgefüllt.  
+Die `DataGridView` Steuerelement zum Anzeigen von Daten aus einer Vielzahl von Daten aus externen Quellen verwendet wird. Alternativ können Sie Zeilen und Spalten zum Steuerelement hinzufügen und manuell mit Daten aufgefüllt wird.  
   
- Wenn Sie das Steuerelement an eine Datenquelle binden, können Sie die Spalten automatisch basierend auf dem Schema der Datenquelle generieren. Wenn diese Spalten nicht angezeigt werden, ebenso wie gewünscht, können Sie ausblenden, entfernen oder anordnen. Sie können auch hinzufügen ungebundene Spalten, um zusätzliche Daten anzeigen, die nicht aus der Datenquelle stammt.  
+ Wenn Sie das Steuerelement an eine Datenquelle binden, können Sie die Spalten automatisch basierend auf dem Schema der Datenquelle generieren. Wenn diese Spalten nicht angezeigt werden, genau wie gewünscht, können Sie ausblenden, entfernen oder anordnen. Sie können auch hinzufügen ungebundene Spalten, um zusätzliche Daten anzuzeigen, die nicht von der Datenquelle stammt.  
   
- Darüber hinaus können Sie Ihre Daten mithilfe von Standardformaten (z. B. Währungsformat) anzeigen, oder Sie können anpassen, die anzeigeformatierung, um Ihre Daten zu präsentieren, jedoch werden (z. B. Ändern der Hintergrundfarbe für negative Zahlen oder Zeichenfolgenwerte ersetzen müssen mit entsprechenden Bildern).  
+ Darüber hinaus können Sie Ihre Daten mithilfe von standard-Formate (z. B. Währungsformat) anzeigen, oder Sie können anpassen, die anzeigeformatierung, um Ihre Daten so darzustellen, müssen Sie allerdings auf (z. B. Ändern der Hintergrundfarbe für negative Zahlen oder Ersetzen von Zeichenfolgenwerten durch entsprechende Bilder).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)  
  Beschreibt die Optionen für das Steuerelement mit Daten auffüllen.  
   
  [Datenformatierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Optionen für die Formatierung der Zelle Anzeigewerte.  
+ Beschreibt die Optionen für die Formatierung der Zellenwerte.  
   
- [Exemplarische Vorgehensweise: Erstellen eines ungebundenen DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
+ [Exemplarische Vorgehensweise: Erstellen eine nicht gebundene Windows Forms-DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)  
  Beschreibt, wie Sie manuell das Steuerelement mit Daten aufgefüllt.  
   
- [Gewusst wie: Binden von Daten an das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie das Steuerelement mit Daten auffüllen, indem Sie ihn zum Binden einer `BindingSource` , die aus einer Datenbank abgerufene Informationen enthält.  
+ [Vorgehensweise: Binden von Daten an das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie Sie das Steuerelement mit Daten zu füllen, indem Sie ihn zum Binden einer `BindingSource` mit den Informationen aus einer Datenbank abgerufen.  
   
- [Gewusst wie: Automatisches Generieren von Spalten in einem datengebundenen DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
- Beschreibt, wie zum automatischen Generieren von Spalten, die auf eine gebundene Datenquelle basieren.  
+ [Vorgehensweise: Automatisches Generieren von Spalten in einem datengebundenen Windows Forms-DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
+ Automatisches Generieren von Spalten, die basierend auf einer gebundenen Datenquelle beschreibt.  
   
- [Gewusst wie: Entfernen von automatisch generierten Spalten aus einem DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
+ [Vorgehensweise: Entfernen von automatisch generierten Spalten aus einem DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/remove-autogenerated-columns-from-a-wf-datagridview-control.md)  
  Beschreibt das Ausblenden oder Löschen von Spalten aus einer gebundenen Datenquelle automatisch generiert.  
   
- [Gewusst wie: Ändern der Reihenfolge von Spalten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
+ [Vorgehensweise: Ändern Sie die Reihenfolge der Spalten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)  
  Beschreibt, wie aus einer gebundenen Datenquelle automatisch generierte Spalten neu anordnen.  
   
- [Gewusst wie: Hinzufügen einer ungebundenen Spalte zu einem datengebundenen DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
- Beschreibt, wie Daten aus einer Datenquelle gebundenen Daten, die durch die Anzeige zusätzlicher ungebundener Spalten ergänzen.  
+ [Vorgehensweise: Hinzufügen einer ungebundenen Spalte zu einem datengebundenen Windows Forms-DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/unbound-column-to-a-data-bound-datagridview.md)  
+ Beschreibt, wie Daten aus einer gebundenen Datenquelle, die durch das Anzeigen zusätzlicher ungebundener Spalten zu ergänzen.  
   
- [Vorgehensweise: Binden von Objekten an das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
- Beschreibt, wie zum Binden des Steuerelements an eine Auflistung beliebiger Objekte, sodass jedes Objekt in einer eigenen Zeile angezeigt wird.  
+ [Vorgehensweise: Binden von Objekten an Windows Forms-DataGridView-Steuerelementen](../../../../docs/framework/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+ Beschreibt, wie das Steuerelement an eine Auflistung von beliebigen Objekten zu binden, sodass jedes Objekt in einer eigenen Zeile angezeigt wird.  
   
- [Vorgehensweise: Aufrufen von Objekten, die an DataGridView-Zeilen in Windows Forms gebunden sind](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
- Beschreibt, wie ein Objekt, das an einer bestimmten Zeile des Steuerelements gebunden abzurufen.  
+ [Vorgehensweise: Zugreifen auf Objekte an in Windows Forms DataGridView-Zeilen gebunden.](../../../../docs/framework/winforms/controls/how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+ Beschreibt, wie zum Abrufen eines Objekts zu einer bestimmten Zeile des Steuerelements gebunden.  
   
- [Exemplarische Vorgehensweise: Erstellen eines Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagridviews.md)  
- Beschreibt, wie Daten aus zwei verknüpften Tabellen angezeigt, damit die Werte in einer `DataGridView` Steuerelement richten sich nach der ausgewählten Zeile in einem anderen Steuerelement.  
+ [Exemplarische Vorgehensweise: Erstellen eine Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/creating-a-master-detail-form-using-two-datagridviews.md)  
+ Beschreibt, wie Sie Daten aus zwei verknüpften Datenbanktabellen angezeigt, damit die Werte in einem `DataGridView` Steuerelement hängen von der aktuell ausgewählten Zeile in einem anderen Steuerelement.  
   
- [Gewusst wie: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
- Beschreibt das Behandeln der <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> Ereignis, um die Darstellung von Zellen abhängig von deren Werten geändert.  
+ [Vorgehensweise: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie Sie behandelt die <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> Ereignis, um die Darstellung von Zellen je nach ihren Werten ändern.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DataGridView>  
@@ -72,6 +72,6 @@ Die `DataGridView` Steuerelement wird verwendet, um Daten aus einer Vielzahl ext
  [Dateneingabe im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  
  Enthält Themen, in denen beschrieben wird, wie die Art und Weise geändert wird, in der Benutzer Daten im Steuerelement hinzufügen und diese ändern.  
   
-## <a name="see-also"></a>Siehe auch  
- [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Spaltentypen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch
+- [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Spaltentypen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

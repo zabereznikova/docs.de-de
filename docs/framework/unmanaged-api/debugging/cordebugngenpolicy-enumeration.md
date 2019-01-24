@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc5a06e6b3cc1e9338d860cdb110bf7d516080be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1ae40916807a86d1c9828080a6cb9e5c1d14c2ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404023"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671225"
 ---
 # <a name="cordebugngenpolicy-enumeration"></a>CorDebugNGenPolicy-Enumeration
 Stellt einen Wert bereit, der bestimmt, ob ein Debugger systemeigene Abbilder (NGen) aus dem Cache für systemeigene Abbilder lädt.  
@@ -40,13 +40,13 @@ enum CorDebugNGENPolicy {
   
 |Membername|Beschreibung|  
 |-----------------|-----------------|  
-|`DISABLE_LOCAL_NIC`|In einem [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] app, die Verwendung von Bildern aus dem lokalen systemeigenen Imagecache deaktiviert ist. In einer desktop-app hat diese Einstellung keine Auswirkungen.|  
+|`DISABLE_LOCAL_NIC`|In einem [!INCLUDE[win8_appname_long](../../../../includes/win8-appname-long-md.md)] -app, die Verwendung von Bildern aus dem lokalen nativen Imagecache deaktiviert ist. In einer desktop-app hat diese Einstellung keine Auswirkungen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CorDebugNGENPolicy` Enumeration wird verwendet, durch die [icordebugprocess5:: Enablengenpolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) Methode. Deaktivieren die Verwendung von Bildern aus dem lokalen systemeigenen Imagecache bietet eine konsistente Debugleistung erzielen, indem sichergestellt wird, dass der Debugger debugfähig JIT-kompilierten Bilder statt optimierte systemeigene Abbilder lädt.  
+ Die `CorDebugNGENPolicy` Enumeration wird verwendet, durch die [icordebugprocess5:: Enablengenpolicy](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md) Methode. Deaktivieren die Verwendung von Bildern aus dem lokalen nativen Imagecache bietet eine einheitliche Debugleistung erzielen Sie sicherstellen, dass der Debugger debuggt JIT-kompilierten Bilder statt optimierte systemeigene Abbilder lädt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -54,5 +54,5 @@ enum CorDebugNGENPolicy {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

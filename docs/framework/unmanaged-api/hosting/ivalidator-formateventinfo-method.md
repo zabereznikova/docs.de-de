@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 875052ed26e83de50807e33e9c74dcf89f7ee679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 17217146d8e5ed53feb8305ca4ac16c8f96ddeb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440644"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653856"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo-Methode
-Ruft die Fehlermeldung, die entsprechend des angegebenen Validierungsfehlers ab.  
+Ruft die Fehlermeldung, die für den angegebenen Validierungsfehler ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,10 +41,10 @@ HRESULT FormatEventInfo(
   
 #### <a name="parameters"></a>Parameter  
  `hVECode`  
- [in] Der HRESULT-Wert, der an den Fehlerhandler Überprüfung übergeben wurde.  
+ [in] Der HRESULT-Wert, der an den Fehlerhandler für die Überprüfung übergeben wurde.  
   
  `Context`  
- [in] Ein `VEContext` -Instanz, die Kontextinformationen zum valdierungsfehler enthält.  
+ [in] Ein `VEContext` -Instanz, die Kontextinformationen zum Validierungsfehler enthält.  
   
  `msg`  
  [in, out] Eine Zeichenfolge, die die zurückgegebene Fehlermeldung enthält.  
@@ -56,13 +56,13 @@ HRESULT FormatEventInfo(
  [in] Ein sicheres Array, das zusätzliche Parameter, die Beschreibung des Fehlers enthält.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** IValidator.idl, IValidator.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 330178e0-a375-4742-b662-b3080c89fa54
-ms.openlocfilehash: 6a42357e90cbed93106e28a35a7c8f082a42173d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc84ecf2bbbff1f213235750065ca17f9fcfef6d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603271"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660969"
 ---
 # <a name="arithmetic-operators-visual-basic"></a>Arithmetische Operatoren (Visual Basic)
-Es folgen die arithmetischen Operatoren in Visual Basic definiert.  
+Im folgenden sind die arithmetischen Operatoren in Visual Basic.  
   
  [^-Operator](../../../visual-basic/language-reference/operators/exponentiation-operator.md)  
   
@@ -30,6 +30,6 @@ Es folgen die arithmetischen Operatoren in Visual Basic definiert.
   
  [-Operator](../../../visual-basic/language-reference/operators/subtraction-operator.md) (Unär und binär)  
   
-## <a name="see-also"></a>Siehe auch  
- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Arithmetische Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a>Siehe auch
+- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Arithmetische Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

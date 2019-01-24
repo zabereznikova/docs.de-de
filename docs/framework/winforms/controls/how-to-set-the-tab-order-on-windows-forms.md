@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Festlegen der Aktivierreihenfolge in Windows Forms'
+title: 'Vorgehensweise: Festlegen der Aktivierreihenfolge in Windows Forms'
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 74244ae4e3692ed210b2a8f1513b035c85e98376
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675207"
 ---
-# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Gewusst wie: Festlegen der Aktivierreihenfolge in Windows Forms
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>Vorgehensweise: Festlegen der Aktivierreihenfolge in Windows Forms
 Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von einem Steuerelement zu einem anderen wechselt durch Drücken der TAB-Taste. Jedes Formular verfügt über eine eigene Aktivierreihenfolge. Standardmäßig entspricht die Aktivierreihenfolge der Reihenfolge, in der Sie die Steuerelemente erstellt. Aktivierreihenfolge Nummerierung beginnt mit 0 (null).  
   
 > [!NOTE]
@@ -54,8 +54,8 @@ Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von e
     > [!NOTE]
     >  Eine Gruppe von Optionsfeldern verfügt über eine einzelne Registerkarte, die zur Laufzeit zu beenden. Die ausgewählte Schaltfläche (, also auf die Schaltfläche mit der <xref:System.Windows.Forms.RadioButton.Checked%2A> -Eigenschaft auf festgelegt `true`) verfügt über seine <xref:System.Windows.Forms.Control.TabStop%2A> Eigenschaft automatisch festgelegt, um `true`, während die anderen Schaltflächen haben ihre <xref:System.Windows.Forms.Control.TabStop%2A> -Eigenschaft auf festgelegt `false`. Weitere Informationen zum Gruppieren <xref:System.Windows.Forms.RadioButton> Steuerelemente finden Sie [Gruppieren von Windows Forms RadioButton-Steuerelementen in als Satz](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  
- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+## <a name="see-also"></a>Siehe auch
+- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)
+- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

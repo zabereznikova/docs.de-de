@@ -3,22 +3,22 @@ title: '&lt;workflowInstanceQueries&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fe7ce85-cf9a-4dbf-a8f7-bc9b1fc2fe35
-ms.openlocfilehash: a165d6f55afbbf1489a7355d4207a74ac1f003ef
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8ee8c74e88f1605ae3858db787c38976de9cc976
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755590"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693703"
 ---
 # <a name="ltworkflowinstancequeriesgt"></a>&lt;workflowInstanceQueries&gt;
 Stellt eine Auflistung von Konfigurationselementen dar, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgen, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.  
   
- Weitere Informationen zu nachverfolgungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<Nachverfolgen von >  
+\<tracking>  
 \<trackingProfile>  
-\<Workflow >  
+\<workflow>  
 \<workflowInstanceQueries>  
   
 ## <a name="syntax"></a>Syntax  
@@ -83,8 +83,8 @@ Stellt eine Auflistung von Konfigurationselementen dar, die Änderungen im Leben
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

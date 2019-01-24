@@ -2,12 +2,12 @@
 title: Allgemeine Attribute (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690903"
 ---
 # <a name="common-attributes-visual-basic"></a>Allgemeine Attribute (Visual Basic)
 Dieses Thema beschreibt die Attribute, die am häufigsten in Visual Basic-Programmen verwendet werden.  
@@ -29,7 +29,7 @@ Dieses Thema beschreibt die Attribute, die am häufigsten in Visual Basic-Progra
 <Assembly: AssemblyVersion("1.0.0.0")>  
 ```  
   
- Globale Attribute befinden sich im Quellcode nach allen auf der obersten Ebene `Imports` Anweisungen und vor jeglichen Deklarationen geben, Modul oder Namespace. Globale Attribute können in mehreren Quelldateien auftreten, jedoch müssen die Dateien in einem einzigen Kompilierungsdurchlauf kompiliert werden. Für Visual Basic-Projekten werden globale Attribute in der Regel in der AssemblyInfo.vb-Datei abgelegt (die Datei wird automatisch erstellt, wenn Sie ein Projekt in Visual Studio erstellen).  
+ Globale Attribute befinden sich im Quellcode nach allen auf oberster Ebene `Imports` Anweisungen und vor jeglichen Deklarationen Typ-, Modul- oder -Namespace. Globale Attribute können in mehreren Quelldateien auftreten, jedoch müssen die Dateien in einem einzigen Kompilierungsdurchlauf kompiliert werden. Für Visual Basic-Projekten werden globale Attribute in der Regel in der AssemblyInfo.vb-Datei abgelegt (die Datei wird automatisch erstellt, wenn Sie ein Projekt in Visual Studio erstellen).  
   
  Assemblyattribute sind Werte, die Informationen zu einer Assembly bereitstellen. Sie werden in die folgenden Kategorien eingeteilt:  
   
@@ -220,26 +220,26 @@ End Class
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird|`Integer`|  
 |<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Der Methoden- oder Eigenschaftenname des Aufrufers Weitere Informationen finden Sie unter [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).|`String`|  
   
- Weitere Informationen zu den Aufrufer-Informationsattribute angegeben, finden Sie unter [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
+ Weitere Informationen zu den aufruferinformationsattributen finden Sie unter [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
 ##  <a name="VB"></a> Visual Basic-Attribute  
  Die folgende Tabelle enthält die Attribute, die in Visual Basic spezifisch sind.  
   
 |Attribut|Zweck|  
 |---------------|-------------|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Weist den Compiler an, dass die Klasse als COM-Objekt verfügbar gemacht werden soll.|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Ermöglicht die Modulmember zugegriffen werden nur die für das Modul erforderlichen Qualifikation verwenden.|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Gibt die Größe einer Zeichenfolge fester Länge in einer Struktur für die Verwendung mit der Datei, die ein- und Ausgabe Funktionen.|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Gibt die Größe von einem Array fester Größe in einer Struktur für die Verwendung mit ein- und Ausgabe-Datei Funktionen.|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Gibt der Compiler, dass die Klasse als COM-Objekt verfügbar gemacht werden soll.|  
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Ermöglicht die Modulmember zugegriffen werden nur die Zugriffsberechtigungen für das Modul benötigt.|  
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Gibt die Größe einer Zeichenfolge fester Länge in einer Struktur für die Verwendung mit ein- und Ausgabe-Datei an Funktionen.|  
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Gibt die Größe der ein Array fester Größe in einer Struktur für die Verwendung mit ein- und Ausgabe-Datei an Funktionen.|  
   
 ### <a name="comclassattribute"></a>COMClassAttribute  
- Verwendung `COMClassAttribute` vereinfachen das Erstellen von COM-Komponenten aus Visual Basic. COM-Objekte unterscheiden sich erheblich von .NET Framework-Assemblys und ohne `COMClassAttribute`, müssen Sie eine Reihe von Schritten, um ein COM-Objekt aus Visual Basic zu generieren. Für Klassen mit markiert `COMClassAttribute`, führt der Compiler viele dieser Schritte automatisch.  
+ Verwendung `COMClassAttribute` zum Vereinfachen der Erstellung von COM-Komponenten von Visual Basic. COM-Objekte unterscheiden sich erheblich von .NET Framework-Assemblys und ohne `COMClassAttribute`, müssen Sie eine Reihe von Schritten, um ein COM-Objekt in Visual Basic zu generieren. Für Klassen mit gekennzeichnet `COMClassAttribute`, der Compiler viele dieser Schritte automatisch durchführt.  
   
 ### <a name="hidemodulenameattribute"></a>HideModuleNameAttribute  
- Verwendung `HideModuleNameAttribute` auf die Modulmember zugegriffen werden, mithilfe der nur die für das Modul erforderlichen Qualifikation zulassen.  
+ Verwendung `HideModuleNameAttribute` können Modulmember zugegriffen werden kann, indem nur die Zugriffsberechtigungen für das Modul benötigt.  
   
 ### <a name="vbfixedstringattribute"></a>VBFixedStringAttribute  
- Verwendung `VBFixedStringAttribute` zu erzwingen, dass Visual Basic zum Erstellen einer Zeichenfolge fester Länge. Zeichenfolgen mit variabler Länge in der Standardeinstellung sind, und dieses Attribut ist hilfreich, wenn Sie Zeichenfolgen in Dateien zu speichern. Der folgende Code veranschaulicht dies:  
+ Verwendung `VBFixedStringAttribute` zu erzwingen, dass Visual Basic zum Erstellen einer Zeichenfolge fester Länge. Zeichenfolgen mit variabler Länge in der Standardeinstellung sind, und dieses Attribut ist nützlich, wenn Sie Zeichenfolgen in Dateien zu speichern. Der folgende Code veranschaulicht dies:  
   
 ```vb  
 Structure Worker  
@@ -252,12 +252,12 @@ End Structure
 ```  
   
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
- Verwendung `VBFixedArrayAttribute` Arrays deklarieren, die eine feste Größe sind. Sind z. B. Visual Basic-Zeichenfolgen Arrays standardmäßig eine Variable Länge. Dieses Attribut ist hilfreich beim Serialisieren und Schreiben von Daten in Dateien.  
+ Verwendung `VBFixedArrayAttribute` Arrays deklarieren, die eine feste Größe sind. Sind z. B. Visual Basic-Zeichenfolgen Arrays mit variabler Länge in der Standardeinstellung. Dieses Attribut ist nützlich, bei der Serialisierung oder Schreiben von Daten in Dateien.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)  
- [Attribute](../../../../standard/attributes/index.md)  
- [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)
+- [Attribute](../../../../standard/attributes/index.md)
+- [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md) (Zugreifen auf Attribute mithilfe der Reflektion (Visual Basic))

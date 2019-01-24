@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747056"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697347"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und Serialisieren von umfangreichen Binärdaten auf diese Weise die Leistung beeinträchtigen können die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu dem er gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.  
@@ -38,7 +38,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
 5.  Aktivieren Sie den Zugriff auf binäre Ressourcen auf dem Server oder in einer Datenquelle.  
   
- In die Beispielen in diesem Thema basieren auf einer Stichprobe streamingfotodienst, das ausführlich im Beitrag erläutert wird [Data Services Streaming Provider Series: Implementing a Streaming Provider (Part 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Der Quellcode für diesen Beispieldienst ist auf die [Streaming Photo Data Service Sample Seite](https://go.microsoft.com/fwlink/?LinkID=198988) in der MSDN Code Gallery.  
+ In die Beispielen in diesem Thema basieren auf einer Stichprobe streamingfotodienst, das ausführlich im Beitrag erläutert wird [Data Services Streaming Provider Series: Implementing a Streaming Provider (Teil 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Der Quellcode für diesen Beispieldienst ist auf die [Streaming Photo Data Service Sample Seite](https://go.microsoft.com/fwlink/?LinkID=198988) in der MSDN Code Gallery.  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definieren eines Medienlinkeintrags im Datenmodell  
  Der Datenquellenanbieter bestimmt die Methode, mit der eine Entität im Datenmodell als Medienlinkeintrag definiert wird.  
@@ -50,7 +50,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
  Sie müssen außerdem entweder der Entität oder dem Stamm der EDMX- oder CSDL-Datei, die das Datenmodell definiert, den Namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` hinzufügen.  
   
- Ein Beispiel für ein Data-Dienst, verwendet der [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Anbieter und eine Medienressource verfügbar macht finden Sie im Beitrag [Data Services Streaming Provider Series: Implementing a Streaming Provider (Part 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
+ Ein Beispiel für ein Data-Dienst, verwendet der [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Anbieter und eine Medienressource verfügbar macht finden Sie im Beitrag [Data Services Streaming Provider Series: Implementing a Streaming Provider (Teil 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Reflektionsanbieter**  
  Um anzugeben, dass eine Entität ein Medienlinkeintrag ist, fügen Sie der Klasse, die den Entitätstyp im Reflektionsanbieter definiert, <xref:System.Data.Services.Common.HasStreamAttribute> hinzu.  
@@ -129,7 +129,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
  Weitere Informationen finden Sie unter [Datendienst-Versionskontrolle](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Datendienstanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Benutzerdefinierte Datendienstanbieter](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
- [Arbeiten mit Binärdaten](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Datendienstanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [Benutzerdefinierte Datendienstanbieter](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+- [Arbeiten mit Binärdaten](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

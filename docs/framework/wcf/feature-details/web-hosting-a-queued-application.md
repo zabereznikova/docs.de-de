@@ -2,12 +2,12 @@
 title: Webhosting einer Anwendung mit Queuing
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: aa50b3b66230930f9553d6f0238b0a5f9178f7a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131351"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700207"
 ---
 # <a name="web-hosting-a-queued-application"></a>Webhosting einer Anwendung mit Queuing
 Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die Anwendungen, die Hostdienste Windows Communication Foundation (WCF) enthalten. Das WAS-Prozessmodell verallgemeinert das [!INCLUDE[iis601](../../../../includes/iis601-md.md)]-Prozessmodell für den HTTP-Server durch das Entfernen der Abhängigkeit von HTTP. Dadurch wird ein WCF-Diensten für die Verwendung von HTTP- und nicht-HTTP-Protokolle, z. B. net.msmq und msmq.formatname in einer hostumgebung, die Nachrichtenbasierte Aktivierung unterstützt und bietet die Möglichkeit, eine große Anzahl von Anwendungen auf einem Computer hosten.  
@@ -41,6 +41,6 @@ Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Leben
 ### <a name="subqueue-and-system-queue-caveat"></a>Einschränkung für Unterwarteschlangen und Systemwarteschlangen  
  Eine in WAS gehostete Anwendungen kann in einer Systemwarteschlange wie der systemweiten Warteschlange für unzustellbare Nachrichten oder in Unterwarteschlangen wie der Unterwarteschlange für potenziell schädliche Nachrichten nicht basierend auf Nachrichten aktiviert werden. Dies ist eine Einschränkung für diese Produktversion.  
   
-## <a name="see-also"></a>Siehe auch  
- [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
- [Dienstendpunkte und Adressieren von Warteschlangen](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+## <a name="see-also"></a>Siehe auch
+- [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Dienstendpunkte und Adressieren von Warteschlangen](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

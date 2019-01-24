@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: e6173916ad64a60d3727b5d35bb2a2302b881b38
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004483"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690409"
 ---
 # <a name="trees-in-wpf"></a>Strukturen in WPF
 In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur organisiert, in denen Entwickler die Objektknoten direkt in der Struktur bearbeiten, um das Rendering oder das Verhalten einer Anwendung zu beeinflussen. Außerdem verwendet [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mehrere Baumstrukturmetaphern, um Beziehungen zwischen Programmelementen festzulegen. Da die WPF-Entwickler meist eine Anwendung im Code erstellen können oder Teile der Anwendung in XAML festlegen, obwohl sie konzeptionell über die Baumstrukturobjektmetapher denken, rufen sie trotzdem eine bestimmte API auf oder verwenden bestimmte Markups, um dies zu tun, anstatt einige allgemeine API-Strukturobjektmanipulationen vorzunehmen, wie Sie sie möglicherweise im XML-DOM verwenden. WPF zeigt zwei hilfsprogrammklassen, die eine strukturmetapheransicht bereitstellen <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>. Die Begriffe „visuelle Struktur“ und „logische Struktur“ werden auch in der WPF-Dokumentation verwendet, da diese Strukturen für das Verstehen des Verhaltens bestimmter WPF-Schlüsselfunktionen hilfreich sind. In diesem Thema definiert, was die visuelle Struktur und die logische Struktur darstellen, wird erläutert, wie sich diese Strukturen auf ein allgemeines Objektstrukturkonzept beziehen und führt <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -86,9 +86,9 @@ In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur org
   
  Die Ressourcensuche kann jedoch auch über die unmittelbare logische Struktur hinaus erweitert werden. Bei Anwendungsmarkups kann die Ressourcensuche auf Anwendungsebene von Ressourcenwörterbüchern weitergeführt werden, und anschließend bei der Designunterstützung und den Systemwerten fortgesetzt werden, die als statische Eigenschaften oder Schlüssel referenziert werden. Designs selbst können auch auf Systemwerte außerhalb der logischen Struktur des Designs verweisen, wenn die Ressourcenverweise dynamisch sind. Weitere Informationen zu Ressourcenwörterbüchern und der Suchlogik, finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Initialisierung für Objektelemente außerhalb einer Objektstruktur](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [WPF-Architektur](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Initialisierung für Objektelemente außerhalb einer Objektstruktur](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)
+- [WPF-Architektur](../../../../docs/framework/wpf/advanced/wpf-architecture.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aa388ed3-7e3d-48ea-a0b5-c47ae19cec38
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5c54b8c2600dca1c7b24ac663a6ed506ca8ef24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a1d8aa391b546d02c813e1f719601b9bff198be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657232"
 ---
 # <a name="dirtycastandcalloninterface-mda"></a>dirtyCastAndCallOnInterface-MDA
 Der `dirtyCastAndCallOnInterface`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn für eine Klassenschnittstelle, die für ausschließlich späte Bindung gekennzeichnet ist, ein früh gebundener Aufruf über eine Vtable erfolgt.  
@@ -49,6 +49,6 @@ Der `dirtyCastAndCallOnInterface`-MDA (Managed Debugging Assistant, Assistent f�
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -2,12 +2,12 @@
 title: Verwalten von Parallelität mit DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 5bcf321c2c09411ddb720e2cb4be1ddb076bbe6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363203"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664459"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Verwalten von Parallelität mit DependentTransaction
 Das <xref:System.Transactions.Transaction>-Objekt wird mit der <xref:System.Transactions.Transaction.DependentClone%2A>-Methode erstellt. Sein einziger Zweck besteht darin, sicherzustellen, dass die Transaktion keinen Commit durchführen kann, während andere Codeteile (beispielsweise ein Arbeitsthread) noch Aktionen für die Transaktion ausführen. Wenn die Aktionen innerhalb der geklonten Transaktion abgeschlossen und für den Commit bereit sind, kann es den Ersteller der Transaktion mithilfe der <xref:System.Transactions.DependentTransaction.Complete%2A>-Methode informieren. Auf diese Weise können Sie Konsistenz und Richtigkeit der Daten bewahren.  
@@ -70,7 +70,7 @@ using(TransactionScope scope = new TransactionScope())
   
  Die `ThreadMethod`-Methode wird für den neuen Thread ausgeführt. Der Client startet einen neuen Thread und übergibt die abhängige Transaktion als `ThreadMethod`-Parameter.  
   
- Da die abhängige Transaktion mit <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> erstellt wird, haben Sie die Gewissheit, dass der Transaktionscommit nicht ausgeführt werden kann, bevor alle Transaktionsaufgaben für den zweiten Thread abgeschlossen sind und <xref:System.Transactions.DependentTransaction.Complete%2A> für die abhängige Transaktion aufgerufen wurde. Dies bedeutet, dass der Client-Bereich endet (wenn er versucht, das Transaktionsobjekt, das am Ende der verwerfen der **mit** Anweisung) vor der neue Thread ruft <xref:System.Transactions.DependentTransaction.Complete%2A> für die abhängige Transaktion Clientcode blockiert, bis <xref:System.Transactions.DependentTransaction.Complete%2A> für die abhängigen aufgerufen wird. Dann kann die Transaktion durch Commit oder Abbruch beendet werden.  
+ Da die abhängige Transaktion mit <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> erstellt wird, haben Sie die Gewissheit, dass der Transaktionscommit nicht ausgeführt werden kann, bevor alle Transaktionsaufgaben für den zweiten Thread abgeschlossen sind und <xref:System.Transactions.DependentTransaction.Complete%2A> für die abhängige Transaktion aufgerufen wurde. Dies bedeutet, dass der Clientbereich endet (wenn er versucht, das Transaktionsobjekt, das am Ende der verwerfen der **mit** Anweisung) vor der neue Thread ruft <xref:System.Transactions.DependentTransaction.Complete%2A> für die abhängige Transaktion blockiert der Clientcode bis <xref:System.Transactions.DependentTransaction.Complete%2A> für die abhängigen aufgerufen wird. Dann kann die Transaktion durch Commit oder Abbruch beendet werden.  
   
 ## <a name="concurrency-issues"></a>Parallelitätsprobleme  
  Es gibt noch einige weitere Parallelitätsaspekte, die Sie beachten müssen, wenn Sie die <xref:System.Transactions.DependentTransaction>-Klasse verwenden:  
@@ -81,5 +81,5 @@ using(TransactionScope scope = new TransactionScope())
   
 -   Wenn der Arbeitsthread einen neuen Arbeitsthread erzeugt, müssen Sie einen abhängigen Klon des abhängigen Klons erstellen und an den neuen Thread übergeben.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Transactions.DependentTransaction>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Transactions.DependentTransaction>

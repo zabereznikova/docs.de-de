@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 635cf7c4e8ff715096728414506b4a7e683727b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704211"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels-Enumeration
-Enthält Flags, um die Stufe der übernehmen oder Ändern der Assemblyrichtlinie für die anzugeben.  
+Stellt Flags bereit, die Ebene angegeben, übernehmen oder Ändern von Assemblyrichtlinie an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,24 +48,24 @@ typedef enum {
 |`ePolicyLevelAdmin`|Gibt an, dass die Richtlinie auf Administratorebene angewendet werden soll.|  
 |`ePolicyLevelApp`|Gibt an, dass die Richtlinie auf Anwendungsebene angewendet werden soll.|  
 |`ePolicyLevelHost`|Gibt an, dass die Richtlinie auf der Hostebene angewendet werden soll.|  
-|`ePolicyLevelNone`|Gibt keine Richtlinienebene Flags.|  
+|`ePolicyLevelNone`|Gibt keine Flags für die Richtlinie auf Serverebene an.|  
 |`ePolicyLevelPublisher`|Gibt an, dass die Richtlinie auf den Verleger angewendet werden soll.|  
 |`ePolicyLevelRetargetable`|Gibt an, dass die Richtlinie auf Variablen Ebenen angewendet werden soll.|  
-|`ePolicyPortability`|Gibt an, dass die Richtlinie für Portabilität zwischen Implementierungen von .NET Framework-Assembly unterstützt werden sollen. Finden Sie unter der [ \<SupportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) Element für Konfigurationsdateien.|  
-|`ePolicyUnifiedToCLR`|Gibt an, dass die Richtlinie, die common Language Runtime (CLR) vereinheitlicht werden sollte.|  
+|`ePolicyPortability`|Gibt an, dass die Richtlinie für Portabilität zwischen Implementierungen von .NET Framework-Assembly unterstützen soll. Finden Sie unter den [ \<SupportPortability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) Configuration File-Element.|  
+|`ePolicyUnifiedToCLR`|Gibt an, dass die Richtlinie mit der common Language Runtime (CLR) vereinheitlicht werden sollte.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Enumeration wird an Methoden übergeben der [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) Schnittstelle, um die Änderungen in Anwendungsrichtlinie angeben.  
+ Diese Enumeration wird zu Methoden zum Übergeben der [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) Schnittstelle, um die Änderungen in der Richtlinie für Anwendungen angeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRAssemblyIdentityManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRAssemblyIdentityManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

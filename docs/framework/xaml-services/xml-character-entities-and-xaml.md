@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 03ce1645b859e9c3ebe470131ae2aee578cb366f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33564747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661347"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML-Zeichenentitäten und XAML
 XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem Thema werden einige bestimmte Zeichenentitäten und allgemeine Überlegungen für andere XML-Konzepte in XAML beschrieben.  
@@ -62,8 +62,8 @@ XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem
 ## <a name="xml-processing-instructions"></a>XML-Verarbeitungsanweisungen  
  XAML behandelt XML-Verarbeitungsanweisungen gemäß den XML-Spezifikationen, die angeben, dass die Anweisungen übergeben werden müssen. XAML-Verarbeitung in .NET Framework-XAML-Dienste werden keine verarbeitungsanweisungen verwendet. Andere vorhandene Frameworks, die XAML verwenden, verwenden auch keine Verarbeitungsanweisungen von XAML.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Markuperweiterungen und WPF-XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [XamlName-Grammatik](../../../docs/framework/xaml-services/xamlname-grammar.md)  
- [Leerzeichen in XAML verarbeitet](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Markuperweiterungen und WPF-XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName-Grammatik](../../../docs/framework/xaml-services/xamlname-grammar.md)
+- [Leerzeichen in XAML verarbeitet](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
