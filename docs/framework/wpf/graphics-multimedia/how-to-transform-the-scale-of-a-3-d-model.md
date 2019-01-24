@@ -1,39 +1,28 @@
 ---
-title: 'Gewusst wie: Transformieren der Skalierung eines 3D-Modells'
-ms.custom: 
+title: 'Vorgehensweise: Transformieren der Skalierung eines 3D-Modells'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - scaling [WPF], 3-D objects
 - 3-D objects [WPF], scaling
 ms.assetid: f3fdfe33-f7dc-44b0-84a5-e43b89947f35
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 14f650d968ca715e47269e0765d791856b681237
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13f718451cb1b753a41304efde7db55360d3f687
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672890"
 ---
-# <a name="how-to-transform-the-scale-of-a-3-d-model"></a><span data-ttu-id="2ef7e-102">Gewusst wie: Transformieren der Skalierung eines 3D-Modells</span><span class="sxs-lookup"><span data-stu-id="2ef7e-102">How to: Transform the Scale of a 3-D Model</span></span>
-<span data-ttu-id="2ef7e-103">In diesem Beispiel wird gezeigt, wie ein 3D-Objekt skaliert wird.</span><span class="sxs-lookup"><span data-stu-id="2ef7e-103">This example shows how to scale a 3-D object.</span></span> <span data-ttu-id="2ef7e-104">Wenn ein 3D-Objekt skaliert werden sollen, verwenden Sie eine <xref:System.Windows.Media.Media3D.ScaleTransform3D>.</span><span class="sxs-lookup"><span data-stu-id="2ef7e-104">To scale a 3-D object, use a <xref:System.Windows.Media.Media3D.ScaleTransform3D>.</span></span> <span data-ttu-id="2ef7e-105">Die <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>, und <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> Eigenschaften Größe des Elements geändert, durch den Faktor, die Sie angeben.</span><span class="sxs-lookup"><span data-stu-id="2ef7e-105">The <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>, and <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> properties resize the element by the factor you specify.</span></span> <span data-ttu-id="2ef7e-106">Angenommen, ein <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> Wert von 1,5 gestreckt wird, ein Objekt auf 150 Prozent der ursprünglichen Breite.</span><span class="sxs-lookup"><span data-stu-id="2ef7e-106">For example, a <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> value of 1.5 stretches an object to 150 percent of its original width.</span></span> <span data-ttu-id="2ef7e-107">Ein <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> Wert von 0,5 verkleinert die Höhe eines Objekts um 50 Prozent.</span><span class="sxs-lookup"><span data-stu-id="2ef7e-107">A <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> value of 0.5 shrinks the height of an object by 50 percent.</span></span> <span data-ttu-id="2ef7e-108">Der folgende Code zeigt die Verwendung einer <xref:System.Windows.Media.Media3D.ScaleTransform3D> als Transformation für ein <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span><span class="sxs-lookup"><span data-stu-id="2ef7e-108">The code below shows using a <xref:System.Windows.Media.Media3D.ScaleTransform3D> as the transform for a <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
+# <a name="how-to-transform-the-scale-of-a-3-d-model"></a><span data-ttu-id="2944a-102">Vorgehensweise: Transformieren der Skalierung eines 3D-Modells</span><span class="sxs-lookup"><span data-stu-id="2944a-102">How to: Transform the Scale of a 3-D Model</span></span>
+<span data-ttu-id="2944a-103">Dieses Beispiel zeigt, wie Sie ein 3D-Objekt zu skalieren.</span><span class="sxs-lookup"><span data-stu-id="2944a-103">This example shows how to scale a 3-D object.</span></span> <span data-ttu-id="2944a-104">Um ein 3D-Objekt skalieren zu können, verwendet eine <xref:System.Windows.Media.Media3D.ScaleTransform3D>.</span><span class="sxs-lookup"><span data-stu-id="2944a-104">To scale a 3-D object, use a <xref:System.Windows.Media.Media3D.ScaleTransform3D>.</span></span> <span data-ttu-id="2944a-105">Die <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>, und <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> Eigenschaften Größe des Elements geändert, um den Faktor, die Sie angeben.</span><span class="sxs-lookup"><span data-stu-id="2944a-105">The <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>, and <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> properties resize the element by the factor you specify.</span></span> <span data-ttu-id="2944a-106">Z. B. eine <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> Wert von 1,5 wird ein Objekt auf 150 Prozent der ursprünglichen Breite gestreckt.</span><span class="sxs-lookup"><span data-stu-id="2944a-106">For example, a <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> value of 1.5 stretches an object to 150 percent of its original width.</span></span> <span data-ttu-id="2944a-107">Ein <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> Wert von 0,5 verringert sich die Höhe eines Objekts, aufgerufen werden, um 50 Prozent.</span><span class="sxs-lookup"><span data-stu-id="2944a-107">A <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> value of 0.5 shrinks the height of an object by 50 percent.</span></span> <span data-ttu-id="2944a-108">Der folgende Code zeigt die Verwendung einer <xref:System.Windows.Media.Media3D.ScaleTransform3D> als Transformation für einen <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span><span class="sxs-lookup"><span data-stu-id="2944a-108">The code below shows using a <xref:System.Windows.Media.Media3D.ScaleTransform3D> as the transform for a <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
   
  [!code-xaml[3DGallery_snip#ScaleTransform3DExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ScaleTransform3DExample.xaml#scaletransform3dexampleinline1)]  
   
-## <a name="example"></a><span data-ttu-id="2ef7e-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2ef7e-109">Example</span></span>  
- <span data-ttu-id="2ef7e-110">Der folgende Code zeigt das vollständige Beispiel.</span><span class="sxs-lookup"><span data-stu-id="2ef7e-110">The following code shows the entire sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="2944a-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2944a-109">Example</span></span>  
+ <span data-ttu-id="2944a-110">Der folgende Code zeigt das gesamte Beispiel.</span><span class="sxs-lookup"><span data-stu-id="2944a-110">The following code shows the entire sample.</span></span>  
   
  [!code-xaml[3DGallery_snip#ScaleTransform3DExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ScaleTransform3DExample.xaml#scaletransform3dexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="2ef7e-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2ef7e-111">See Also</span></span>  
- [<span data-ttu-id="2ef7e-112">Animieren von 3D-Übersetzungen</span><span class="sxs-lookup"><span data-stu-id="2ef7e-112">Animate 3-D Translations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
- [<span data-ttu-id="2ef7e-113">Erstellen einer 3D-Szene</span><span class="sxs-lookup"><span data-stu-id="2ef7e-113">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [<span data-ttu-id="2ef7e-114">Übersicht über 3D-Grafiken</span><span class="sxs-lookup"><span data-stu-id="2ef7e-114">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+## <a name="see-also"></a><span data-ttu-id="2944a-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2944a-111">See also</span></span>
+- [<span data-ttu-id="2944a-112">Animieren von 3D-Übersetzungen</span><span class="sxs-lookup"><span data-stu-id="2944a-112">Animate 3-D Translations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)
+- [<span data-ttu-id="2944a-113">Erstellen einer 3D-Szene</span><span class="sxs-lookup"><span data-stu-id="2944a-113">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)
+- [<span data-ttu-id="2944a-114">Übersicht über 3D-Grafiken</span><span class="sxs-lookup"><span data-stu-id="2944a-114">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad77aba02c819749794534ca2ecd478661bc363f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0e1975a5063217299ddbcdce6f625d5a1285d5b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642554"
 ---
-# <a name="imetadatafilter-interface"></a><span data-ttu-id="c89f9-102">IMetaDataFilter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c89f9-102">IMetaDataFilter Interface</span></span>
-<span data-ttu-id="c89f9-103">Stellt Methoden zum Markieren und Filtern von Metadatentoken bereit, um wiederkehrende Aktionen zu vermeiden, die bereits ausgeführt wurden.</span><span class="sxs-lookup"><span data-stu-id="c89f9-103">Provides methods for marking and filtering metadata tokens to avoid repeating actions that have already been taken.</span></span>  
+# <a name="imetadatafilter-interface"></a><span data-ttu-id="4238e-102">IMetaDataFilter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="4238e-102">IMetaDataFilter Interface</span></span>
+<span data-ttu-id="4238e-103">Stellt Methoden zum Markieren und Filtern von Metadatentoken bereit, um wiederkehrende Aktionen zu vermeiden, die bereits ausgeführt wurden.</span><span class="sxs-lookup"><span data-stu-id="4238e-103">Provides methods for marking and filtering metadata tokens to avoid repeating actions that have already been taken.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="c89f9-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="c89f9-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="4238e-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="4238e-104">Methods</span></span>  
   
-|<span data-ttu-id="c89f9-105">Methode</span><span class="sxs-lookup"><span data-stu-id="c89f9-105">Method</span></span>|<span data-ttu-id="c89f9-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c89f9-106">Description</span></span>|  
+|<span data-ttu-id="4238e-105">Methode</span><span class="sxs-lookup"><span data-stu-id="4238e-105">Method</span></span>|<span data-ttu-id="4238e-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4238e-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="c89f9-107">IsTokenMarked-Methode</span><span class="sxs-lookup"><span data-stu-id="c89f9-107">IsTokenMarked Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|<span data-ttu-id="c89f9-108">Ruft einen Wert, der angibt, ob das angegebene Metadatentoken verarbeitet wurde.</span><span class="sxs-lookup"><span data-stu-id="c89f9-108">Gets a value indicating whether the specified metadata token has been processed.</span></span>|  
-|[<span data-ttu-id="c89f9-109">MarkToken-Methode</span><span class="sxs-lookup"><span data-stu-id="c89f9-109">MarkToken Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|<span data-ttu-id="c89f9-110">Legt einen Wert, der angibt, dass das angegebene Metadatentoken verarbeitet wurde.</span><span class="sxs-lookup"><span data-stu-id="c89f9-110">Sets a value indicating that the specified metadata token has been processed.</span></span>|  
-|[<span data-ttu-id="c89f9-111">UnmarkAll-Methode</span><span class="sxs-lookup"><span data-stu-id="c89f9-111">UnmarkAll Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|<span data-ttu-id="c89f9-112">Entfernt die Markierungen für die Verarbeitung von allen Token im aktuellen Metadatenbereich.</span><span class="sxs-lookup"><span data-stu-id="c89f9-112">Removes the processing marks from all the tokens in the current metadata scope.</span></span>|  
+|[<span data-ttu-id="4238e-107">IsTokenMarked-Methode</span><span class="sxs-lookup"><span data-stu-id="4238e-107">IsTokenMarked Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|<span data-ttu-id="4238e-108">Ruft einen Wert, der angibt, ob das angegebene Metadatentoken verarbeitet wurde.</span><span class="sxs-lookup"><span data-stu-id="4238e-108">Gets a value indicating whether the specified metadata token has been processed.</span></span>|  
+|[<span data-ttu-id="4238e-109">MarkToken-Methode</span><span class="sxs-lookup"><span data-stu-id="4238e-109">MarkToken Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|<span data-ttu-id="4238e-110">Legt einen Wert, der angibt, dass das angegebene Metadatentoken verarbeitet wurde.</span><span class="sxs-lookup"><span data-stu-id="4238e-110">Sets a value indicating that the specified metadata token has been processed.</span></span>|  
+|[<span data-ttu-id="4238e-111">UnmarkAll-Methode</span><span class="sxs-lookup"><span data-stu-id="4238e-111">UnmarkAll Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|<span data-ttu-id="4238e-112">Entfernt die Markierungen für die Verarbeitung von allen Token im aktuellen Metadatenbereich.</span><span class="sxs-lookup"><span data-stu-id="4238e-112">Removes the processing marks from all the tokens in the current metadata scope.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c89f9-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c89f9-113">Requirements</span></span>  
- <span data-ttu-id="c89f9-114">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c89f9-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4238e-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4238e-113">Requirements</span></span>  
+ <span data-ttu-id="4238e-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4238e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c89f9-115">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c89f9-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4238e-115">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4238e-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c89f9-116">**Bibliothek:** als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="c89f9-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4238e-116">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="4238e-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c89f9-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c89f9-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4238e-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4238e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c89f9-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c89f9-118">See Also</span></span>  
- [<span data-ttu-id="c89f9-119">Metadatenschnittstellen</span><span class="sxs-lookup"><span data-stu-id="c89f9-119">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="4238e-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4238e-118">See also</span></span>
+- [<span data-ttu-id="4238e-119">Metadatenschnittstellen</span><span class="sxs-lookup"><span data-stu-id="4238e-119">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

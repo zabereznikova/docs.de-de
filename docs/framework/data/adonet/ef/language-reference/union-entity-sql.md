@@ -2,17 +2,17 @@
 title: UNION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: df98a4db-b00d-4c8b-bd74-0d285f27e1df
-ms.openlocfilehash: 52a7a332166250e8fa8084986fd0d89da6fdf42d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b7818866571fc362e56e8fdea3344f0888f1a2aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679837"
 ---
-# <a name="union-entity-sql"></a><span data-ttu-id="aec11-102">UNION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="aec11-102">UNION (Entity SQL)</span></span>
-<span data-ttu-id="aec11-103">Fasst die Ergebnisse von zwei oder mehr Abfragen in einer Auflistung zusammen.</span><span class="sxs-lookup"><span data-stu-id="aec11-103">Combines the results of two or more queries into a single collection.</span></span>  
+# <a name="union-entity-sql"></a><span data-ttu-id="93cc3-102">UNION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="93cc3-102">UNION (Entity SQL)</span></span>
+<span data-ttu-id="93cc3-103">Fasst die Ergebnisse von zwei oder mehr Abfragen in einer Auflistung zusammen.</span><span class="sxs-lookup"><span data-stu-id="93cc3-103">Combines the results of two or more queries into a single collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aec11-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="aec11-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="93cc3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="93cc3-104">Syntax</span></span>  
   
 ```  
 expression  
@@ -20,30 +20,30 @@ UNION [ ALL ]
 expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="aec11-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="aec11-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="93cc3-105">Argumente</span><span class="sxs-lookup"><span data-stu-id="93cc3-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="aec11-106">Jeder gültige Abfrageausdruck, der eine mit der Auflistung zusammenzufassende Auflistung zurückgibt. Alle Ausdrücke müssen vom selben Typ oder vom gleichen Basistyp bzw. abgeleiteten Typ wie `expression`sein.</span><span class="sxs-lookup"><span data-stu-id="aec11-106">Any valid query expression that returns a collection to combine with the collection All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  
+ <span data-ttu-id="93cc3-106">Jeder gültige Abfrageausdruck, der eine mit der Auflistung zusammenzufassende Auflistung zurückgibt. Alle Ausdrücke müssen vom selben Typ oder vom gleichen Basistyp bzw. abgeleiteten Typ wie `expression`sein.</span><span class="sxs-lookup"><span data-stu-id="93cc3-106">Any valid query expression that returns a collection to combine with the collection All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  
   
- <span data-ttu-id="aec11-107">UNION</span><span class="sxs-lookup"><span data-stu-id="aec11-107">UNION</span></span>  
- <span data-ttu-id="aec11-108">Gibt an, dass mehrere Auflistungen kombiniert und als einzelne Auflistung zurückgegeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="aec11-108">Specifies that multiple collections are to be combined and returned as a single collection.</span></span>  
+ <span data-ttu-id="93cc3-107">UNION</span><span class="sxs-lookup"><span data-stu-id="93cc3-107">UNION</span></span>  
+ <span data-ttu-id="93cc3-108">Gibt an, dass mehrere Auflistungen kombiniert und als einzelne Auflistung zurückgegeben werden sollen.</span><span class="sxs-lookup"><span data-stu-id="93cc3-108">Specifies that multiple collections are to be combined and returned as a single collection.</span></span>  
   
- <span data-ttu-id="aec11-109">ALL</span><span class="sxs-lookup"><span data-stu-id="aec11-109">ALL</span></span>  
- <span data-ttu-id="aec11-110">Gibt an, dass mehrere Auflistungen kombiniert und als einzelne Auflistung zurückgegeben werden sollen, wobei Duplikate erhalten bleiben.</span><span class="sxs-lookup"><span data-stu-id="aec11-110">Specifies that multiple collections are to be combined and returned as a single collection, including duplicates.</span></span> <span data-ttu-id="aec11-111">Wenn dies nicht angegeben wird, werden Duplikate aus der Ergebnisauflistung entfernt.</span><span class="sxs-lookup"><span data-stu-id="aec11-111">If not specified, duplicates are removed from the result collection.</span></span>  
+ <span data-ttu-id="93cc3-109">ALL</span><span class="sxs-lookup"><span data-stu-id="93cc3-109">ALL</span></span>  
+ <span data-ttu-id="93cc3-110">Gibt an, dass mehrere Auflistungen kombiniert und als einzelne Auflistung zurückgegeben werden sollen, wobei Duplikate erhalten bleiben.</span><span class="sxs-lookup"><span data-stu-id="93cc3-110">Specifies that multiple collections are to be combined and returned as a single collection, including duplicates.</span></span> <span data-ttu-id="93cc3-111">Wenn dies nicht angegeben wird, werden Duplikate aus der Ergebnisauflistung entfernt.</span><span class="sxs-lookup"><span data-stu-id="93cc3-111">If not specified, duplicates are removed from the result collection.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="aec11-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="aec11-112">Return Value</span></span>  
- <span data-ttu-id="aec11-113">Eine Auflistung vom selben Typ oder vom gleichen Basistyp bzw. abgeleiteten Typ wie `expression`.</span><span class="sxs-lookup"><span data-stu-id="aec11-113">A collection of the same type or of a common base or derived type as `expression`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="93cc3-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="93cc3-112">Return Value</span></span>  
+ <span data-ttu-id="93cc3-113">Eine Auflistung vom selben Typ oder vom gleichen Basistyp bzw. abgeleiteten Typ wie `expression`.</span><span class="sxs-lookup"><span data-stu-id="93cc3-113">A collection of the same type or of a common base or derived type as `expression`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="aec11-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="aec11-114">Remarks</span></span>  
- <span data-ttu-id="aec11-115">UNION ist einer der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren.</span><span class="sxs-lookup"><span data-stu-id="aec11-115">UNION is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="aec11-116">Alle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren werden von links nach rechts ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="aec11-116">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="aec11-117">Informationen zur Rangfolge der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Mengenoperatoren, finden Sie unter [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="aec11-117">For precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="93cc3-114">Hinweise</span><span class="sxs-lookup"><span data-stu-id="93cc3-114">Remarks</span></span>  
+ <span data-ttu-id="93cc3-115">UNION ist einer der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren.</span><span class="sxs-lookup"><span data-stu-id="93cc3-115">UNION is one of the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span> <span data-ttu-id="93cc3-116">Alle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren werden von links nach rechts ausgewertet.</span><span class="sxs-lookup"><span data-stu-id="93cc3-116">All [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators are evaluated from left to right.</span></span> <span data-ttu-id="93cc3-117">Informationen zur Rangfolge der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Mengenoperatoren, finden Sie unter [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="93cc3-117">For precedence information for the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators, see [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="aec11-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="aec11-118">Example</span></span>  
- <span data-ttu-id="aec11-119">Die folgende Entity SQL-Abfrage verwendet den UNION ALL-Operator, um die Ergebnisse von zwei Abfragen in einer Auflistung zusammenzufassen.</span><span class="sxs-lookup"><span data-stu-id="aec11-119">The following Entity SQL query uses the UNION ALL operator to combine the results of two queries into a single collection.</span></span> <span data-ttu-id="aec11-120">Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell.</span><span class="sxs-lookup"><span data-stu-id="aec11-120">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="aec11-121">Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:</span><span class="sxs-lookup"><span data-stu-id="aec11-121">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="93cc3-118">Beispiel</span><span class="sxs-lookup"><span data-stu-id="93cc3-118">Example</span></span>  
+ <span data-ttu-id="93cc3-119">Die folgende Entity SQL-Abfrage verwendet den UNION ALL-Operator, um die Ergebnisse von zwei Abfragen in einer Auflistung zusammenzufassen.</span><span class="sxs-lookup"><span data-stu-id="93cc3-119">The following Entity SQL query uses the UNION ALL operator to combine the results of two queries into a single collection.</span></span> <span data-ttu-id="93cc3-120">Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell.</span><span class="sxs-lookup"><span data-stu-id="93cc3-120">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="93cc3-121">Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:</span><span class="sxs-lookup"><span data-stu-id="93cc3-121">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="aec11-122">Verwenden Sie das Verfahren unter [Gewusst wie: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="aec11-122">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="93cc3-122">Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="93cc3-122">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="aec11-123">Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:</span><span class="sxs-lookup"><span data-stu-id="aec11-123">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="93cc3-123">Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:</span><span class="sxs-lookup"><span data-stu-id="93cc3-123">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#UNION](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#union)]  
   
-## <a name="see-also"></a><span data-ttu-id="aec11-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="aec11-124">See Also</span></span>  
- [<span data-ttu-id="aec11-125">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="aec11-125">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="93cc3-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="93cc3-124">See also</span></span>
+- [<span data-ttu-id="93cc3-125">Entity SQL-Referenz</span><span class="sxs-lookup"><span data-stu-id="93cc3-125">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

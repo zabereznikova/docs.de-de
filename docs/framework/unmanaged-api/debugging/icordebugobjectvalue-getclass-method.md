@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dff7a42cac7002e170e8da3c3505fe37bd5eb85f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0d403fe24f368a5cd05358cd589023a4c8710a37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418762"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587419"
 ---
-# <a name="icordebugobjectvaluegetclass-method"></a><span data-ttu-id="c5749-102">ICorDebugObjectValue::GetClass-Methode</span><span class="sxs-lookup"><span data-stu-id="c5749-102">ICorDebugObjectValue::GetClass Method</span></span>
-<span data-ttu-id="c5749-103">Ruft die Klasse für den Wert dieses Objekts ab.</span><span class="sxs-lookup"><span data-stu-id="c5749-103">Gets the class of this object value.</span></span>  
+# <a name="icordebugobjectvaluegetclass-method"></a><span data-ttu-id="a1547-102">ICorDebugObjectValue::GetClass-Methode</span><span class="sxs-lookup"><span data-stu-id="a1547-102">ICorDebugObjectValue::GetClass Method</span></span>
+<span data-ttu-id="a1547-103">Ruft die Klasse, der Wert dieses Objekts ab.</span><span class="sxs-lookup"><span data-stu-id="a1547-103">Gets the class of this object value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c5749-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c5749-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a1547-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a1547-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClass (  
@@ -35,22 +35,22 @@ HRESULT GetClass (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c5749-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c5749-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a1547-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a1547-105">Parameters</span></span>  
  `ppClass`  
- <span data-ttu-id="c5749-106">[out] Ein Zeiger auf die Adresse eines Objekts "ICorDebugClass", das die Klasse des Objektwerts dargestellt, die von diesem Objekt "ICorDebugObjectValue" darstellt.</span><span class="sxs-lookup"><span data-stu-id="c5749-106">[out] A pointer to the address of an "ICorDebugClass" object that represents the class of the object value represented by this "ICorDebugObjectValue" object.</span></span>  
+ <span data-ttu-id="a1547-106">[out] Ein Zeiger auf die Adresse ein "ICorDebugClass"-Objekt, das die Klasse des Objektwerts dargestellt, die von diesem Objekt "ICorDebugObjectValue" darstellt.</span><span class="sxs-lookup"><span data-stu-id="a1547-106">[out] A pointer to the address of an "ICorDebugClass" object that represents the class of the object value represented by this "ICorDebugObjectValue" object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c5749-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c5749-107">Remarks</span></span>  
- <span data-ttu-id="c5749-108">Die `GetClass` und [ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) Methoden geben jeweils Informationen über den Typ eines Werts zurückgeben. sie werden sowohl von der Generika-bewusste abgelöst [ICorDebugValue2:: GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md).</span><span class="sxs-lookup"><span data-stu-id="c5749-108">The `GetClass` and [ICorDebugValue::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) methods each return information about the type of a value; they are both superseded by the generics-aware [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a1547-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a1547-107">Remarks</span></span>  
+ <span data-ttu-id="a1547-108">Die `GetClass` und [ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) -Methode geben Informationen über den Typ eines Werts; sie werden beide ersetzt, durch die Generika-bewusste [ICorDebugValue2:: GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md).</span><span class="sxs-lookup"><span data-stu-id="a1547-108">The `GetClass` and [ICorDebugValue::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) methods each return information about the type of a value; they are both superseded by the generics-aware [ICorDebugValue2::GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c5749-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c5749-109">Requirements</span></span>  
- <span data-ttu-id="c5749-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c5749-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a1547-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a1547-109">Requirements</span></span>  
+ <span data-ttu-id="a1547-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a1547-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c5749-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c5749-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a1547-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a1547-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c5749-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c5749-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a1547-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a1547-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c5749-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5749-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a1547-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1547-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c5749-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c5749-114">See Also</span></span>  
-    
- 
+## <a name="see-also"></a><span data-ttu-id="a1547-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a1547-114">See also</span></span>
+
+

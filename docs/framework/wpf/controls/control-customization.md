@@ -7,22 +7,22 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: 938d95c97350a513873cf8f9c5791d66e7a17e72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e3acf3de082db5b2cd586bed06cdb782e52d543
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733401"
 ---
-# <a name="control-customization"></a><span data-ttu-id="8c10f-102">Anpassung von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="8c10f-102">Control Customization</span></span>
-<span data-ttu-id="8c10f-103">Diese Kategorie behandelt, die verschiedene Basisklassen, Schnittstellen und andere Elemente und bei der Erstellung eines voll funktionsfähigen verwendeten Konzepte [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="8c10f-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
+# <a name="control-customization"></a><span data-ttu-id="5279b-102">Anpassung von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="5279b-102">Control Customization</span></span>
+<span data-ttu-id="5279b-103">Diese Kategorie behandelt die verschiedenen Basisklassen, Schnittstellen und andere Elemente und bei der Erstellung eines voll funktionsfähigen verwendeten Konzepte [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="5279b-103">This category covers the various base classes, interfaces and other elements and concepts used in creating a fully functional [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8c10f-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="8c10f-104">In This Section</span></span>  
- [<span data-ttu-id="8c10f-105">Übersicht über das Erstellen von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="8c10f-105">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [<span data-ttu-id="8c10f-106">Richtlinien zum Entwerfen formatierbarer Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="8c10f-106">Guidelines for Designing Stylable Controls</span></span>](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
- [<span data-ttu-id="8c10f-107">Adorner</span><span class="sxs-lookup"><span data-stu-id="8c10f-107">Adorners</span></span>](../../../../docs/framework/wpf/controls/adorners.md)  
- [<span data-ttu-id="8c10f-108">Steuerelementformate und -vorlagen</span><span class="sxs-lookup"><span data-stu-id="8c10f-108">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [<span data-ttu-id="8c10f-109">Benutzeroberflächenautomatisierung eines benutzerdefinierten WPF-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="8c10f-109">UI Automation of a WPF Custom Control</span></span>](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5279b-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5279b-104">In This Section</span></span>  
+ [<span data-ttu-id="5279b-105">Übersicht über das Erstellen von Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="5279b-105">Control Authoring Overview</span></span>](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [<span data-ttu-id="5279b-106">Richtlinien zum Entwerfen formatierbarer Steuerelemente</span><span class="sxs-lookup"><span data-stu-id="5279b-106">Guidelines for Designing Stylable Controls</span></span>](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
+ [<span data-ttu-id="5279b-107">Adorner</span><span class="sxs-lookup"><span data-stu-id="5279b-107">Adorners</span></span>](../../../../docs/framework/wpf/controls/adorners.md)  
+ [<span data-ttu-id="5279b-108">Steuerelementformate und -vorlagen</span><span class="sxs-lookup"><span data-stu-id="5279b-108">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="5279b-109">Benutzeroberflächenautomatisierung eines benutzerdefinierten WPF-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="5279b-109">UI Automation of a WPF Custom Control</span></span>](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a><span data-ttu-id="8c10f-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8c10f-110">See Also</span></span>  
- [<span data-ttu-id="8c10f-111">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="8c10f-111">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a><span data-ttu-id="5279b-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5279b-110">See also</span></span>
+- [<span data-ttu-id="5279b-111">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="5279b-111">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)
