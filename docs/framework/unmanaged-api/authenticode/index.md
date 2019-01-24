@@ -4,12 +4,6 @@ ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78149d1f8fdad3c11fe693221888f115af84ada2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406421"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (Referenz zur nicht verwalteten API)
 Unterstützt das Authenticode XrML-Lizenterstellungs- und Überprüfungsmodul.  
@@ -42,5 +36,5 @@ Unterstützt das Authenticode XrML-Lizenterstellungs- und Überprüfungsmodul.
  [AXL_AUTHENTICODE_TIMESTAMPER_INFO-Struktur](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
  Definiert Informationen zum Ersteller des Zeitstempels für Authenticode.  
   
-## <a name="see-also"></a>Siehe auch  
- [Referenz zur nicht verwalteten API](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Referenz zur nicht verwalteten API](../../../../docs/framework/unmanaged-api/index.md)

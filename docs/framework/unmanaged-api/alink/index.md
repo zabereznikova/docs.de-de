@@ -2,18 +2,12 @@
 title: ALink-API (Verweis zur nicht verwalteten API)
 ms.date: 03/30/2017
 f1_keywords:
-- ALink
+  - ALink
 helpviewer_keywords:
-- ALink API
+  - ALink API
 ms.assetid: f4a84be2-309c-439c-b686-6facb85f4654
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a1056e1b8d544e514063c6c1ad20b447815960ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403954"
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>ALink-API (Verweis zur nicht verwalteten API)
 Unterstützt das Erstellen von .NET Framework-Assemblys und ungebundenen Modulen.  
@@ -39,5 +33,5 @@ Unterstützt das Erstellen von .NET Framework-Assemblys und ungebundenen Modulen
   
  [IALink3-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Referenz zur nicht verwalteten API](../../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Referenz zur nicht verwalteten API](../../../../docs/framework/unmanaged-api/index.md)
