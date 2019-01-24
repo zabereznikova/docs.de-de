@@ -18,38 +18,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0436991512713c05e60a3c10d6fbdaa17bb378c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 80891da7d61aa5114d5cc4d8aff4c7ce82020237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429826"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720092"
 ---
-# <a name="nukedownloadedcache-function"></a><span data-ttu-id="06d45-102">NukeDownloadedCache-Funktion</span><span class="sxs-lookup"><span data-stu-id="06d45-102">NukeDownloadedCache Function</span></span>
-<span data-ttu-id="06d45-103">Löscht den Downloadcache der common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="06d45-103">Deletes the common language runtime (CLR) download cache.</span></span>  
+# <a name="nukedownloadedcache-function"></a><span data-ttu-id="607da-102">NukeDownloadedCache-Funktion</span><span class="sxs-lookup"><span data-stu-id="607da-102">NukeDownloadedCache Function</span></span>
+<span data-ttu-id="607da-103">Löscht den Downloadcache der common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="607da-103">Deletes the common language runtime (CLR) download cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="06d45-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="06d45-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="607da-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="607da-104">Syntax</span></span>  
   
 ```  
 HRESULT NukeDownloadedCache();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="06d45-105">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="06d45-105">Return Value</span></span>  
- <span data-ttu-id="06d45-106">Diese Methode gibt COM-Standardfehlercodes in WinError.h definiert.</span><span class="sxs-lookup"><span data-stu-id="06d45-106">This method returns standard COM error codes, as defined in WinError.h.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="607da-105">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="607da-105">Return Value</span></span>  
+ <span data-ttu-id="607da-106">Diese Methode gibt die standard-COM-Fehlercodes, in WinError.h definiert.</span><span class="sxs-lookup"><span data-stu-id="607da-106">This method returns standard COM error codes, as defined in WinError.h.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="06d45-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="06d45-107">Remarks</span></span>  
- <span data-ttu-id="06d45-108">Der CLR-Downloadcache ist ein Bereich, in dem Assemblys mit starkem Namen, die von einer URL heruntergeladen werden für die mögliche Wiederverwendung gespeichert sind.</span><span class="sxs-lookup"><span data-stu-id="06d45-108">The CLR download cache is the area where strong-named assemblies that are downloaded from a URL are stored for possible reuse.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="607da-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="607da-107">Remarks</span></span>  
+ <span data-ttu-id="607da-108">Der CLR-Downloadcache ist der Bereich, in dem Assemblys mit starkem Namen, die von einer URL heruntergeladen werden für die mögliche Wiederverwendung gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="607da-108">The CLR download cache is the area where strong-named assemblies that are downloaded from a URL are stored for possible reuse.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="06d45-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="06d45-109">Requirements</span></span>  
- <span data-ttu-id="06d45-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="06d45-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="607da-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="607da-109">Requirements</span></span>  
+ <span data-ttu-id="607da-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="607da-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="06d45-111">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="06d45-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="607da-111">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="607da-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="06d45-112">**Bibliothek:** Fusion.dll und "Mscorwks.dll".</span><span class="sxs-lookup"><span data-stu-id="06d45-112">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="06d45-113">Verwenden Sie Fusion.dll anstelle von "Mscorwks.dll", um sicherzustellen, dass Sie die richtige Version von .NET Framework abzielen.</span><span class="sxs-lookup"><span data-stu-id="06d45-113">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
+ <span data-ttu-id="607da-112">**Bibliothek:** Fusion.dll und "Mscorwks.dll".</span><span class="sxs-lookup"><span data-stu-id="607da-112">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="607da-113">Verwenden Sie Fusion.dll anstelle von "Mscorwks.dll", um sicherzustellen, dass Sie die richtige Version von .NET Framework abzielen.</span><span class="sxs-lookup"><span data-stu-id="607da-113">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
   
- <span data-ttu-id="06d45-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="06d45-114">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ <span data-ttu-id="607da-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="607da-114">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="06d45-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="06d45-115">See Also</span></span>  
- [<span data-ttu-id="06d45-116">CreateHistoryReader-Funktion</span><span class="sxs-lookup"><span data-stu-id="06d45-116">CreateHistoryReader Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
- [<span data-ttu-id="06d45-117">GetHistoryFileDirectory-Funktion</span><span class="sxs-lookup"><span data-stu-id="06d45-117">GetHistoryFileDirectory Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)  
- [<span data-ttu-id="06d45-118">Fusion: Globale statistische Funktionen</span><span class="sxs-lookup"><span data-stu-id="06d45-118">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="607da-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="607da-115">See also</span></span>
+- [<span data-ttu-id="607da-116">CreateHistoryReader-Funktion</span><span class="sxs-lookup"><span data-stu-id="607da-116">CreateHistoryReader Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
+- [<span data-ttu-id="607da-117">GetHistoryFileDirectory-Funktion</span><span class="sxs-lookup"><span data-stu-id="607da-117">GetHistoryFileDirectory Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)
+- [<span data-ttu-id="607da-118">Fusion: Globale statistische Funktionen</span><span class="sxs-lookup"><span data-stu-id="607da-118">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

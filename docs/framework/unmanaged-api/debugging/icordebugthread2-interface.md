@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread2 Schnittstelle1
+title: ICorDebugThread2 Interface1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread2
@@ -16,39 +16,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c348cf28a6330523d1a490c136a3214e37d13f4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3826bfd16d3cf7534a6e920c516987908547b419
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716145"
 ---
-# <a name="icordebugthread2-interface1"></a><span data-ttu-id="73533-102">ICorDebugThread2 Schnittstelle1</span><span class="sxs-lookup"><span data-stu-id="73533-102">ICorDebugThread2 Interface1</span></span>
-<span data-ttu-id="73533-103">Fungiert als logische Erweiterung von ICorDebugThread-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="73533-103">Serves as a logical extension to the ICorDebugThread interface.</span></span>  
+# <a name="icordebugthread2-interface1"></a><span data-ttu-id="0dbbf-102">ICorDebugThread2 Interface1</span><span class="sxs-lookup"><span data-stu-id="0dbbf-102">ICorDebugThread2 Interface1</span></span>
+<span data-ttu-id="0dbbf-103">Fungiert als logische Erweiterung von der ICorDebugThread-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="0dbbf-103">Serves as a logical extension to the ICorDebugThread interface.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="73533-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="73533-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="0dbbf-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="0dbbf-104">Methods</span></span>  
   
-|<span data-ttu-id="73533-105">Methode</span><span class="sxs-lookup"><span data-stu-id="73533-105">Method</span></span>|<span data-ttu-id="73533-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="73533-106">Description</span></span>|  
+|<span data-ttu-id="0dbbf-105">Methode</span><span class="sxs-lookup"><span data-stu-id="0dbbf-105">Method</span></span>|<span data-ttu-id="0dbbf-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0dbbf-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="73533-107">GetActiveFunctions-Methode</span><span class="sxs-lookup"><span data-stu-id="73533-107">GetActiveFunctions Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)|<span data-ttu-id="73533-108">Ruft ein Array von COR_ACTIVE_FUNCTION-Instanzen, die Daten über die aktiven Funktionen im Rahmen eines Threads enthalten.</span><span class="sxs-lookup"><span data-stu-id="73533-108">Gets an array of COR_ACTIVE_FUNCTION instances that contain data about the active functions in a thread's frames.</span></span>|  
-|[<span data-ttu-id="73533-109">GetConnectionID-Methode</span><span class="sxs-lookup"><span data-stu-id="73533-109">GetConnectionID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|<span data-ttu-id="73533-110">Ruft einen Verbindungsbezeichner für `ICorDebugThread2`.</span><span class="sxs-lookup"><span data-stu-id="73533-110">Gets a connection identifier for this `ICorDebugThread2`.</span></span>|  
-|[<span data-ttu-id="73533-111">GetTaskID-Methode</span><span class="sxs-lookup"><span data-stu-id="73533-111">GetTaskID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|<span data-ttu-id="73533-112">Ruft einen Aufgabenbezeichner für `ICorDebugThread2`.</span><span class="sxs-lookup"><span data-stu-id="73533-112">Gets a task identifier for this `ICorDebugThread2`.</span></span>|  
-|[<span data-ttu-id="73533-113">GetVolatileOSThreadID-Methode</span><span class="sxs-lookup"><span data-stu-id="73533-113">GetVolatileOSThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|<span data-ttu-id="73533-114">Ruft den Threadbezeichner des Betriebssystems für `ICorDebugThread2`.</span><span class="sxs-lookup"><span data-stu-id="73533-114">Gets the operating system thread identifier for this `ICorDebugThread2`.</span></span>|  
-|[<span data-ttu-id="73533-115">InterceptCurrentException-Methode</span><span class="sxs-lookup"><span data-stu-id="73533-115">InterceptCurrentException Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)|<span data-ttu-id="73533-116">Einen Debugger ermöglicht, die aktuelle Ausnahme in einem Thread abfangen.</span><span class="sxs-lookup"><span data-stu-id="73533-116">Allows a debugger to intercept the current exception on a thread.</span></span>|  
+|[<span data-ttu-id="0dbbf-107">GetActiveFunctions-Methode</span><span class="sxs-lookup"><span data-stu-id="0dbbf-107">GetActiveFunctions Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)|<span data-ttu-id="0dbbf-108">Ruft ein Array von COR_ACTIVE_FUNCTION-Instanzen, die Daten über die aktiven Funktionen in den Rahmen eines Threads enthalten.</span><span class="sxs-lookup"><span data-stu-id="0dbbf-108">Gets an array of COR_ACTIVE_FUNCTION instances that contain data about the active functions in a thread's frames.</span></span>|  
+|[<span data-ttu-id="0dbbf-109">GetConnectionID-Methode</span><span class="sxs-lookup"><span data-stu-id="0dbbf-109">GetConnectionID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|<span data-ttu-id="0dbbf-110">Ruft einen Verbindungsbezeichner für diese `ICorDebugThread2`.</span><span class="sxs-lookup"><span data-stu-id="0dbbf-110">Gets a connection identifier for this `ICorDebugThread2`.</span></span>|  
+|[<span data-ttu-id="0dbbf-111">GetTaskID-Methode</span><span class="sxs-lookup"><span data-stu-id="0dbbf-111">GetTaskID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|<span data-ttu-id="0dbbf-112">Ruft einen Aufgabenbezeichner für diese `ICorDebugThread2`.</span><span class="sxs-lookup"><span data-stu-id="0dbbf-112">Gets a task identifier for this `ICorDebugThread2`.</span></span>|  
+|[<span data-ttu-id="0dbbf-113">GetVolatileOSThreadID-Methode</span><span class="sxs-lookup"><span data-stu-id="0dbbf-113">GetVolatileOSThreadID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|<span data-ttu-id="0dbbf-114">Ruft den Bezeichner des Threads für diese `ICorDebugThread2`.</span><span class="sxs-lookup"><span data-stu-id="0dbbf-114">Gets the operating system thread identifier for this `ICorDebugThread2`.</span></span>|  
+|[<span data-ttu-id="0dbbf-115">InterceptCurrentException-Methode</span><span class="sxs-lookup"><span data-stu-id="0dbbf-115">InterceptCurrentException Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)|<span data-ttu-id="0dbbf-116">Können Sie einen Debugger an die aktuelle Ausnahme in einem Thread abfangen.</span><span class="sxs-lookup"><span data-stu-id="0dbbf-116">Allows a debugger to intercept the current exception on a thread.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="73533-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="73533-117">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0dbbf-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0dbbf-117">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="73533-118">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="73533-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="0dbbf-118">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="0dbbf-118">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="73533-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="73533-119">Requirements</span></span>  
- <span data-ttu-id="73533-120">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="73533-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0dbbf-119">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0dbbf-119">Requirements</span></span>  
+ <span data-ttu-id="0dbbf-120">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0dbbf-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="73533-121">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="73533-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0dbbf-121">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0dbbf-121">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="73533-122">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="73533-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0dbbf-122">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0dbbf-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="73533-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="73533-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0dbbf-123">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0dbbf-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="73533-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="73533-124">See Also</span></span>  
- [<span data-ttu-id="73533-125">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="73533-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="0dbbf-124">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0dbbf-124">See also</span></span>
+- [<span data-ttu-id="0dbbf-125">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="0dbbf-125">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

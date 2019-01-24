@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Codieren und Decodieren eines WDP-Bilds'
+title: 'Vorgehensweise: Codieren und Decodieren eines WDP-Bilds'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,29 +13,29 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - encoding WDP images [WPF]
 ms.assetid: 911777d1-516b-49db-a87b-b54e31b18532
-ms.openlocfilehash: d2da0daa389f30cd976f74f3451609defadf4942
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed30adc668a2ba58544a33b88a89d779bd112921
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560126"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723523"
 ---
-# <a name="how-to-encode-and-decode-a-wdp-image"></a><span data-ttu-id="7a405-102">Gewusst wie: Codieren und Decodieren eines WDP-Bilds</span><span class="sxs-lookup"><span data-stu-id="7a405-102">How to: Encode and Decode a WDP Image</span></span>
-<span data-ttu-id="7a405-103">Die folgenden Beispiele zeigen, wie Sie decodieren und Codieren einer [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] -Bild mithilfe der spezifischen <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> und <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> Objekte.</span><span class="sxs-lookup"><span data-stu-id="7a405-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] image using the specific <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> and <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> objects.</span></span>  
+# <a name="how-to-encode-and-decode-a-wdp-image"></a><span data-ttu-id="3bf4e-102">Vorgehensweise: Codieren und Decodieren eines WDP-Bilds</span><span class="sxs-lookup"><span data-stu-id="3bf4e-102">How to: Encode and Decode a WDP Image</span></span>
+<span data-ttu-id="3bf4e-103">Die folgenden Beispiele zeigen, wie Sie decodieren und Codieren einer [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] -Bild mithilfe der spezifischen <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> und <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> Objekte.</span><span class="sxs-lookup"><span data-stu-id="3bf4e-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)] image using the specific <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> and <xref:System.Windows.Media.Imaging.WmpBitmapEncoder> objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7a405-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7a405-104">Example</span></span>  
- <span data-ttu-id="7a405-105">In diesem Beispiel wird veranschaulicht, wie die zu decodierende eine [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] image mit einer <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> aus einer <xref:System.Uri>.</span><span class="sxs-lookup"><span data-stu-id="7a405-105">This example demonstrates how to decode a [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] image using a <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> from a <xref:System.Uri>.</span></span>  
+## <a name="example"></a><span data-ttu-id="3bf4e-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3bf4e-104">Example</span></span>  
+ <span data-ttu-id="3bf4e-105">In diesem Beispiel wird veranschaulicht, wie zum Decodieren einer [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] -Bild mithilfe einer <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> aus einer <xref:System.Uri>.</span><span class="sxs-lookup"><span data-stu-id="3bf4e-105">This example demonstrates how to decode a [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] image using a <xref:System.Windows.Media.Imaging.WmpBitmapDecoder> from a <xref:System.Uri>.</span></span>  
   
  [!code-cpp[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CPP/WDPEncoderDecoder.cpp#1)]
  [!code-csharp[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CSharp/WDPEncoderDecoder.cs#1)]
  [!code-vb[WdpBitmapDecoderEncoder#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/VB/WDPEncoderDecoder.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="7a405-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7a405-106">Example</span></span>  
- <span data-ttu-id="7a405-107">In diesem Beispiel wird veranschaulicht, wie zum Codieren einer <xref:System.Windows.Media.Imaging.BitmapSource> in eine [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] image mit einer <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.</span><span class="sxs-lookup"><span data-stu-id="7a405-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] image using a <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.</span></span>  
+## <a name="example"></a><span data-ttu-id="3bf4e-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3bf4e-106">Example</span></span>  
+ <span data-ttu-id="3bf4e-107">In diesem Beispiel wird veranschaulicht, wie zum Codieren einer <xref:System.Windows.Media.Imaging.BitmapSource> in einer [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] -Bild mithilfe einer <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.</span><span class="sxs-lookup"><span data-stu-id="3bf4e-107">This example demonstrates how to encode a <xref:System.Windows.Media.Imaging.BitmapSource> into a [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)] image using a <xref:System.Windows.Media.Imaging.WmpBitmapEncoder>.</span></span>  
   
  [!code-cpp[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CPP/WDPEncoderDecoder.cpp#4)]
  [!code-csharp[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/CSharp/WDPEncoderDecoder.cs#4)]
  [!code-vb[WdpBitmapDecoderEncoder#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WdpBitmapDecoderEncoder/VB/WDPEncoderDecoder.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="7a405-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7a405-108">See Also</span></span>  
- [<span data-ttu-id="7a405-109">Übersicht über die Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="7a405-109">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a><span data-ttu-id="3bf4e-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3bf4e-108">See also</span></span>
+- [<span data-ttu-id="3bf4e-109">Übersicht über die Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="3bf4e-109">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

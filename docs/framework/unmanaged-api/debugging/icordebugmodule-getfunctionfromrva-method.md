@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db2f30001e050c1f312613c794388ffaa99d3b17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed9536280f64ae1400faff8d0029e5ccd51c90ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732439"
 ---
-# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="1b090-102">ICorDebugModule::GetFunctionFromRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="1b090-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
-<span data-ttu-id="1b090-103">Diese Methode wurde nicht in der aktuellen Version von .NET Framework implementiert wurde.</span><span class="sxs-lookup"><span data-stu-id="1b090-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugmodulegetfunctionfromrva-method"></a><span data-ttu-id="11da3-102">ICorDebugModule::GetFunctionFromRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="11da3-102">ICorDebugModule::GetFunctionFromRVA Method</span></span>
+<span data-ttu-id="11da3-103">Diese Methode wurde nicht in der aktuellen Version von .NET Framework implementiert.</span><span class="sxs-lookup"><span data-stu-id="11da3-103">This method has not been implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b090-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1b090-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11da3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="11da3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionFromRVA(  
@@ -36,9 +36,9 @@ HRESULT GetFunctionFromRVA(
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="1b090-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1b090-105">Requirements</span></span>  
- <span data-ttu-id="1b090-106">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1b090-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="11da3-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="11da3-105">Requirements</span></span>  
+ <span data-ttu-id="11da3-106">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="11da3-106">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b090-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1b090-107">See Also</span></span>  
-    
- 
+## <a name="see-also"></a><span data-ttu-id="11da3-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="11da3-107">See also</span></span>
+
+

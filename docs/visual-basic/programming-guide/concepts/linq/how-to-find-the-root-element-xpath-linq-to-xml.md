@@ -2,24 +2,24 @@
 title: 'Vorgehensweise: Suchen des Stammelements (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 72c3aed5-9522-4454-a876-2070aad13f2e
-ms.openlocfilehash: 112be85e8af8fbe31f62ef91db04de72a3793082
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6a08817c16bafb2ba1f91931f9718d6ef5053fb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687335"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="9dab0-102">Vorgehensweise: Suchen des Stammelements (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9dab0-102">How to: Find the Root Element (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="9dab0-103">In diesem Thema wird gezeigt, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] das Stammelement ermitteln können.</span><span class="sxs-lookup"><span data-stu-id="9dab0-103">This topic shows how to get the root element with XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="dfad8-102">Vorgehensweise: Suchen des Stammelements (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dfad8-102">How to: Find the Root Element (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="dfad8-103">In diesem Thema wird gezeigt, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] das Stammelement ermitteln können.</span><span class="sxs-lookup"><span data-stu-id="dfad8-103">This topic shows how to get the root element with XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span>  
   
- <span data-ttu-id="9dab0-104">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="9dab0-104">The XPath expression is:</span></span>  
+ <span data-ttu-id="dfad8-104">Der XPath-Ausdruck lautet:</span><span class="sxs-lookup"><span data-stu-id="dfad8-104">The XPath expression is:</span></span>  
   
  `/PurchaseOrders`  
   
-## <a name="example"></a><span data-ttu-id="9dab0-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9dab0-105">Example</span></span>  
- <span data-ttu-id="9dab0-106">Dieses Beispiel sucht nach dem Stammelement.</span><span class="sxs-lookup"><span data-stu-id="9dab0-106">This example finds the root element.</span></span>  
+## <a name="example"></a><span data-ttu-id="dfad8-105">Beispiel</span><span class="sxs-lookup"><span data-stu-id="dfad8-105">Example</span></span>  
+ <span data-ttu-id="dfad8-106">Dieses Beispiel sucht nach dem Stammelement.</span><span class="sxs-lookup"><span data-stu-id="dfad8-106">This example finds the root element.</span></span>  
   
- <span data-ttu-id="9dab0-107">Dieses Beispiel verwendet das folgende XML-Dokument: [Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="9dab0-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="dfad8-107">In diesem Beispiel wird die folgende XML-Dokument verwendet: [XML-Beispieldatei: Mehrere Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="dfad8-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -38,12 +38,12 @@ End If
 Console.WriteLine(el1.Name)  
 ```  
   
- <span data-ttu-id="9dab0-108">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="9dab0-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="dfad8-108">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="dfad8-108">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
 PurchaseOrders  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9dab0-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9dab0-109">See Also</span></span>  
- [<span data-ttu-id="9dab0-110">LINQ to XML für XPath-Benutzer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9dab0-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="dfad8-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dfad8-109">See also</span></span>
+- [<span data-ttu-id="dfad8-110">LINQ to XML für XPath-Benutzer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dfad8-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
