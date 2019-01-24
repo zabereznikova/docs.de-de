@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0d105679a749b8c87099af871bdb42874d440b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee8e0dec469c7389a69c70567d7b2cb98d3404e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603910"
 ---
-# <a name="imetadataemitdefinenestedtype-method"></a><span data-ttu-id="0b84d-102">IMetaDataEmit::DefineNestedType-Methode</span><span class="sxs-lookup"><span data-stu-id="0b84d-102">IMetaDataEmit::DefineNestedType Method</span></span>
-<span data-ttu-id="0b84d-103">Erstellt die Metadatensignatur einer Typdefinition ist, wird ein `mdTypeDef` token für diesen Typ und gibt an, dass der definierte Typ ein Member des Typs verweist die `tdEncloser` Parameter.</span><span class="sxs-lookup"><span data-stu-id="0b84d-103">Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.</span></span>  
+# <a name="imetadataemitdefinenestedtype-method"></a><span data-ttu-id="ec481-102">IMetaDataEmit::DefineNestedType-Methode</span><span class="sxs-lookup"><span data-stu-id="ec481-102">IMetaDataEmit::DefineNestedType Method</span></span>
+<span data-ttu-id="ec481-103">Erstellt die Metadatensignatur einer Typdefinition ist, wird ein `mdTypeDef` ein Sicherheitstoken für diesen Typ, und gibt an, dass der definierte Typ ein Member des Typs verwiesen wird, durch die `tdEncloser` Parameter.</span><span class="sxs-lookup"><span data-stu-id="ec481-103">Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b84d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0b84d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ec481-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ec481-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineNestedType (   
@@ -40,34 +40,34 @@ HRESULT DefineNestedType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0b84d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="0b84d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ec481-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ec481-105">Parameters</span></span>  
  `szTypeDef`  
- <span data-ttu-id="0b84d-106">[in] Der Name des Typs im Unicode-Format.</span><span class="sxs-lookup"><span data-stu-id="0b84d-106">[in] The name of the type in Unicode.</span></span>  
+ <span data-ttu-id="ec481-106">[in] Der Name des Typs im Unicode-Format.</span><span class="sxs-lookup"><span data-stu-id="ec481-106">[in] The name of the type in Unicode.</span></span>  
   
  `dwTypeDefFlags`  
- <span data-ttu-id="0b84d-107">[in] `TypeDef` Attribute.</span><span class="sxs-lookup"><span data-stu-id="0b84d-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="0b84d-108">Dies ist eine Bitmaske der `CorTypeAttr` Werte.</span><span class="sxs-lookup"><span data-stu-id="0b84d-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
+ <span data-ttu-id="ec481-107">[in] `TypeDef` Attribute.</span><span class="sxs-lookup"><span data-stu-id="ec481-107">[in] `TypeDef` attributes.</span></span> <span data-ttu-id="ec481-108">Dies ist eine Bitmaske der `CorTypeAttr` Werte.</span><span class="sxs-lookup"><span data-stu-id="ec481-108">This is a bitmask of `CorTypeAttr` values.</span></span>  
   
  `tkExtends`  
- <span data-ttu-id="0b84d-109">[in] Das Token der Basisklasse.</span><span class="sxs-lookup"><span data-stu-id="0b84d-109">[in] The token of the base class.</span></span> <span data-ttu-id="0b84d-110">Dies liegt entweder an einem `mdTypeDef` oder ein `mdTypeRef` token.</span><span class="sxs-lookup"><span data-stu-id="0b84d-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
+ <span data-ttu-id="ec481-109">[in] Das Token der Basisklasse.</span><span class="sxs-lookup"><span data-stu-id="ec481-109">[in] The token of the base class.</span></span> <span data-ttu-id="ec481-110">Dies ist entweder ein `mdTypeDef` oder `mdTypeRef` token.</span><span class="sxs-lookup"><span data-stu-id="ec481-110">This is either a `mdTypeDef` or a `mdTypeRef` token.</span></span>  
   
- <span data-ttu-id="0b84d-111">`rtkImplements`[]</span><span class="sxs-lookup"><span data-stu-id="0b84d-111">`rtkImplements`[]</span></span>  
- <span data-ttu-id="0b84d-112">[in] Ein Array von Token, die die Schnittstellen anzugeben, die diese Klasse oder Schnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="0b84d-112">[in] An array of tokens that specify the interfaces that this class or interface implements.</span></span>  
+ <span data-ttu-id="ec481-111">`rtkImplements`[]</span><span class="sxs-lookup"><span data-stu-id="ec481-111">`rtkImplements`[]</span></span>  
+ <span data-ttu-id="ec481-112">[in] Ein Array von Token, die die Schnittstellen anzugeben, die diese Klasse oder Schnittstelle implementiert.</span><span class="sxs-lookup"><span data-stu-id="ec481-112">[in] An array of tokens that specify the interfaces that this class or interface implements.</span></span>  
   
  `tdEncloser`  
- <span data-ttu-id="0b84d-113">[in] Das Token des einschließenden Typs.</span><span class="sxs-lookup"><span data-stu-id="0b84d-113">[in] The token of the enclosing type.</span></span> <span data-ttu-id="0b84d-114">Das letzte Element des Arrays muss `mdTokenNil`.</span><span class="sxs-lookup"><span data-stu-id="0b84d-114">The last element of the array must be `mdTokenNil`.</span></span>  
+ <span data-ttu-id="ec481-113">[in] Das Token des einschließenden Typs.</span><span class="sxs-lookup"><span data-stu-id="ec481-113">[in] The token of the enclosing type.</span></span> <span data-ttu-id="ec481-114">Das letzte Element des Arrays muss `mdTokenNil`.</span><span class="sxs-lookup"><span data-stu-id="ec481-114">The last element of the array must be `mdTokenNil`.</span></span>  
   
  `ptd`  
- <span data-ttu-id="0b84d-115">[out] Die `mdTypeDef` Token zugewiesen.</span><span class="sxs-lookup"><span data-stu-id="0b84d-115">[out] The `mdTypeDef` token assigned.</span></span>  
+ <span data-ttu-id="ec481-115">[out] Die `mdTypeDef` zugewiesene Token.</span><span class="sxs-lookup"><span data-stu-id="ec481-115">[out] The `mdTypeDef` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0b84d-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0b84d-116">Requirements</span></span>  
- <span data-ttu-id="0b84d-117">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0b84d-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ec481-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ec481-116">Requirements</span></span>  
+ <span data-ttu-id="ec481-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ec481-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b84d-118">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0b84d-118">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ec481-118">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ec481-118">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0b84d-119">**Bibliothek:** als Ressource in MSCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="0b84d-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ec481-119">**Bibliothek:** Als Ressource in MSCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="ec481-119">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0b84d-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b84d-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ec481-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec481-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b84d-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0b84d-121">See Also</span></span>  
- [<span data-ttu-id="0b84d-122">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0b84d-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="0b84d-123">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0b84d-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ec481-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ec481-121">See also</span></span>
+- [<span data-ttu-id="ec481-122">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ec481-122">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="ec481-123">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ec481-123">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
