@@ -1,17 +1,11 @@
 ---
-title: Namespaces – C#-Programmierhandbuch
+title: 'Namespaces – C#-Programmierhandbuch'
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-- C# language, namespaces
-- namespaces [C#]
+  - 'C# language, namespaces'
+  - 'namespaces [C#]'
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 4abdf8a0008ce50a89eb5f3ad3512a9579dc832a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236751"
 ---
 # <a name="namespaces-c-programming-guide"></a>Namespaces (C#-Programmierhandbuch)
 
@@ -51,9 +45,9 @@ Namespaces verfügen über die folgenden Eigenschaften:
 - [Using-Namespaces](using-namespaces.md)
 - [Vorgehensweise: Verwenden des globalen Namespacealias](how-to-use-the-global-namespace-alias.md)
 - [Vorgehensweise: Verwenden des My-Namespaces](how-to-use-the-my-namespace.md)
-- [C#-Programmierhandbuch](../index.md)  
+- [C#-Programmierhandbuch](../index.md)
 - [Bezeichnernamen](../inside-a-program/identifier-names.md)
-- [Namespaceschlüsselwörter](../../language-reference/keywords/namespace-keywords.md)  
-- [using-Direktive](../../language-reference/keywords/using-directive.md)  
-- [:: Operator](../../language-reference/operators/namespace-alias-qualifer.md)  
+- [Namespaceschlüsselwörter](../../language-reference/keywords/namespace-keywords.md)
+- [using-Direktive](../../language-reference/keywords/using-directive.md)
+- [:: Operator](../../language-reference/operators/namespace-alias-qualifer.md)
 - [. Operator](../../language-reference/operators/member-access-operator.md)
