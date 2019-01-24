@@ -1,16 +1,16 @@
 ---
 title: 'Vorgehensweise: Vergleichen von Zeichenfolgen – C#-Leitfaden'
 description: Lernen Sie, Zeichenfolgenwerte unter oder ohne Berücksichtigung der Groß-/Kleinschreibung und der Kultur zu vergleichen und zu sortieren.
-ms.date: 03/20/2018
+ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 5b62dd37474dc0afb186c65d1f55f7ccaf7266ec
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: 0eb8669e52099e35553d9e7842371045bd88a643
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334833"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415883"
 ---
 # <a name="how-to-compare-strings-in-c"></a>Vergleichen von Zeichenfolgen in C\#
 
@@ -29,7 +29,13 @@ Wenn Sie Zeichenfolgen vergleichen, definieren Sie für diese eine Reihenfolge. 
 
 ## <a name="default-ordinal-comparisons"></a>Standardordinalvergleich
 
-In den am häufigsten verwendeten Methoden, in denen auf Gleichheit getestet wird, <xref:System.String.Equals%2A?displayProperty=nameWithType> und <xref:System.String.op_Equality%2A?displayProperty=nameWithType>, wird ein Ordinalvergleich mit Beachtung der Groß-/Kleinschreibung verwendet. Die Ergebnisse der jeweiligen Methoden sind im folgenden Beispiel dargestellt:
+Die gängigsten Vorgänge sind:
+
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- <xref:System.String.Equals%2A?displayProperty=nameWithType>
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+
+ein Ordinalvergleich, ein Vergleich unter Berücksichtigung der Groß/-Kleinschreibung und Verwenden der aktuellen Kultur. Die Ergebnisse der jeweiligen Vorgänge sind im folgenden Beispiel dargestellt:
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 

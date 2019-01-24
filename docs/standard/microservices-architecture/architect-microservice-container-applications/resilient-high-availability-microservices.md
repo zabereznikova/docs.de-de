@@ -4,12 +4,12 @@ description: Microservices müssen so entworfen werden, dass sie vorübergehende
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 174e9881be50b8c2f8220960e93dce626e776b65
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745328"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362235"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienz und Hochverfügbarkeit bei Microservices
 
@@ -29,12 +29,12 @@ Es mag offensichtlich erscheinen und wird häufig übersehen, aber ein Microserv
 
 Integritätsprüfungen und Diagnosen sind nicht dasselbe. Bei der Integrität geht es darum, dass der Microservice seinen aktuellen Zustand meldet, damit entsprechende Maßnahmen ergriffen werden können. Ein gutes Beispiel hierfür ist die Verwendung von Upgrade- und Bereitstellungsmechanismen zur Gewährleistung der Verfügbarkeit. So kann ein Dienst beispielsweise aufgrund eines Prozessabsturzes oder aufgrund des Neustarts eines Computers vorübergehend fehlerhaft, aber dennoch funktionstüchtig sein. In diesem Fall würde die Ausführung eines Upgrades die Situation noch verschlimmern. Daher sollte am besten zunächst eine Untersuchung durchgeführt oder dem Microservice Zeit für die Wiederherstellung eingeräumt werden. Integritätsereignisse von einem Microservice helfen uns, fundierte Entscheidungen zu treffen und Services für die Selbstreparatur zu erstellen.
 
-Im Abschnitt [Implementieren von Integritätsprüfungen in ASP.NET Core-Diensten](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) in diesem Leitfaden wird erläutert, wie in den Microservices eine ASP.NET HealthChecks-Bibliothek so verwendet werden kann, dass die Microservices ihren Zustand an einen Überwachungsdienst senden, damit entsprechende Maßnahmen ergriffen werden können.
+Im Abschnitt [Implementieren von Integritätsprüfungen in ASP.NET Core-Diensten](../implement-resilient-applications/monitor-app-health.md#implement-health-checks-in-aspnet-core-services) in diesem Leitfaden wird erläutert, wie in den Microservices eine ASP.NET HealthChecks-Bibliothek so verwendet werden kann, dass die Microservices ihren Zustand an einen Überwachungsdienst senden, damit entsprechende Maßnahmen ergriffen werden können.
 
 Sie haben auch die Möglichkeit, eine ausgezeichnete Open Source-Bibliothek namens „Beat Pulse“ zu verwenden. Diese ist auf [GitHub](https://github.com/Xabaril/BeatPulse) und als [NuGet-Paket](https://www.nuget.org/packages/BeatPulse/) verfügbar. Diese Bibliothek führt ebenfalls Integritätsprüfungen durch. Jedoch gibt es einen kleinen Unterschied: sie führt zwei unterschiedliche Arten von Überprüfungen durch:
 
-- **Livetest:** Es wird überprüft, ob der Microservice aktiv ist, also ob er Anforderungen akzeptieren und auf diese reagieren kann. 
-- **Bereitschaft:** Es wird überprüft, ob die Abhängigkeiten des Microservices (Datenbank, Warteschlangendienste usw.) selbst bereit sind, damit der Microservice das tun kann, was er soll. 
+- **Livetest**: Es wird überprüft, ob der Microservice aktiv ist, also ob er Anforderungen akzeptieren und auf diese reagieren kann. 
+- **Bereitschaft**: Es wird überprüft, ob die Abhängigkeiten des Microservices (Datenbank, Warteschlangendienste usw.) selbst bereit sind, damit der Microservice das tun kann, was er soll. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Verwenden von Diagnose- und Protokollereignisdatenströmen
 
@@ -70,7 +70,7 @@ Unterschiedliche Orchestratoren können ähnlich klingen. Die Diagnosefunktionen
 - **Verbinden von Windows-Computern mit dem Log Analytics-Dienst in Azure** \
   [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
-- **Logging What You Mean: Using the Semantic Logging Application Block (Protokollieren: Verwenden des Semantic Logging Application Block)** \
+- **Protokollieren des Gemeinten: Verwenden des Semantic Logging Application Block** \
   [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 - Die offizielle Website von **Splunk**. \

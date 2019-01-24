@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 477921069411bb4b7ac32a5e93cc409bc7fbdec2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30836f7f1cbf742c621254ef92314d20a4fffd83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492124"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715067"
 ---
 # <a name="data-member-default-values"></a>Standardwerte der Datenelemente
 In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], besitzen Typen ein Konzept von *Standardwerte*. Für jeden Referenztyp ist der Standardwert beispielsweise  `null`, und für einen Integertyp ist er 0 (null). Von Zeit zu Zeit ist es empfehlenswert, ein Datenelement aus serialisierten Daten zu entfernen, wenn es auf seinen Standardwert festgelegt ist. Da das Element seinen Standardwert besitzt, braucht kein tatsächlicher Wert serialisiert werden; dies führt zu einem Leistungsvorteil.  
@@ -45,17 +45,17 @@ In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], besitzen
  Das Attribut `xsi:nil` ist ein Spezialattribut im XML-Schemainstanz-Namespace des World Wide Web Consortium (W3C), der eine interoperable Möglichkeit bietet, speziell einen Nullwert darzustellen. Bitte beachten Sie, dass es im XML keinerlei Informationen über die Datenelemente Position, Gehalt und Bonus gibt. Die Emfangsseite kann diese als `null`, Null bzw. `null` interpretieren. Es gibt keine Garantie, dass einem Fremdanbieterdeserialisierer eine korrekte Auslegung gelingt; daher wird dieses Muster nicht empfohlen. Die Klasse <xref:System.Runtime.Serialization.DataContractSerializer> wählt immer die richtige Auslegung für fehlende Werte.  
   
 ### <a name="interaction-with-isrequired"></a>Interaktion mit IsRequired  
- Entsprechend der Anleitung unter [Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md), <xref:System.Runtime.Serialization.DataMemberAttribute> Attribut hat eine <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Eigenschaft (die Standardeinstellung ist `false`). Die Eigenschaft gibt an, ob ein bestimmtes Datenelement in den serialisierten Daten vorliegen muss, wenn sie deserialisiert werden. Wenn `IsRequired` auf `true` (gibt an, dass ein Wert vorliegen muss) und <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> auf `false` festgelegt ist (gibt an, dass der Wert nicht vorliegen muss, wenn das Element auf den Standardwert festgelegt ist), können Standardwerte für dieses Datenelement nicht serialisiert werden, da die Ergebnisse widersprüchlich wären. Wenn ein derartiges Datenelement auf seinen Standardwert gesetzt ist (normalerweise `null` oder 0 (null)) und eine Serialisierung versucht wird, wird eine <xref:System.Runtime.Serialization.SerializationException> ausgelöst.  
+ Siehe [Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md), <xref:System.Runtime.Serialization.DataMemberAttribute> Attribut hat eine <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Eigenschaft (der Standardwert ist `false`). Die Eigenschaft gibt an, ob ein bestimmtes Datenelement in den serialisierten Daten vorliegen muss, wenn sie deserialisiert werden. Wenn `IsRequired` auf `true` (gibt an, dass ein Wert vorliegen muss) und <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> auf `false` festgelegt ist (gibt an, dass der Wert nicht vorliegen muss, wenn das Element auf den Standardwert festgelegt ist), können Standardwerte für dieses Datenelement nicht serialisiert werden, da die Ergebnisse widersprüchlich wären. Wenn ein derartiges Datenelement auf seinen Standardwert gesetzt ist (normalerweise `null` oder 0 (null)) und eine Serialisierung versucht wird, wird eine <xref:System.Runtime.Serialization.SerializationException> ausgelöst.  
   
 ### <a name="schema-representation"></a>Schemendarstellung  
- Die Details der XML Schema Definition Language (XSD) schemendarstellung des Datenmember bei der `EmitDefaultValue` -Eigenschaftensatz auf `false` finden Sie im Abschnitt [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Im Folgenden wird jedoch nur eine kurze Übersicht gegeben:  
+ Die Details der schemadarstellung von Datenelementen XML-Schema Definition Language (XSD) bei der `EmitDefaultValue` -Eigenschaftensatz auf `false` finden Sie im [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Im Folgenden wird jedoch nur eine kurze Übersicht gegeben:  
   
--   Wenn die <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> festgelegt ist, um `false`, wird im Schema als eine Anmerkung, die bestimmte zu Windows Communication Foundation (WCF) dargestellt. Es gibt keine interoperable Möglichkeit, diese Informationen darzustellen. Besonders das Attribut "default" wird in diesem Schema nicht für diesen Zweck verwendet; das Attribut `minOccurs` wird nur durch die Einstellung <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> beeinflusst und das Attribut `nillable` wird nur von dem Typ des Datenelements beeinflusst.  
+-   Wenn die <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> nastaven NA hodnotu `false`, es wird im Schema als eine Anmerkung, die spezifisch für Windows Communication Foundation (WCF) dargestellt. Es gibt keine interoperable Möglichkeit, diese Informationen darzustellen. Besonders das Attribut "default" wird in diesem Schema nicht für diesen Zweck verwendet; das Attribut `minOccurs` wird nur durch die Einstellung <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> beeinflusst und das Attribut `nillable` wird nur von dem Typ des Datenelements beeinflusst.  
   
 -   Den zu verwendenden tatsächlichen Standardwert gibt es in dem Schema nicht. Der empfangende Endpunkt ist dafür verantwortlich, ein fehlendes Element angemessen zu interpretieren.  
   
- Beim schemenimport der <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> -Eigenschaftensatz wird automatisch auf `false` immer die WCF-spezifische Anmerkung erwähnt zuvor erkannt wird. Außerdem wird sie für Referenztypen auf `false` festgelegt, deren Eigenschaft `nillable` auf  `false` festgelegt ist, um spezielle Interoperabilitätsszenarien zu unterstützen, die häufig bei der Nutzung von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdiensten auftreten.  
+ Beim schemenimport der <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> Eigenschaft wird automatisch festgelegt, um `false` jedes Mal, wenn die WCF-spezifische Anmerkung erwähnt zuvor erkannt wird. Außerdem wird sie für Referenztypen auf `false` festgelegt, deren Eigenschaft `nillable` auf  `false` festgelegt ist, um spezielle Interoperabilitätsszenarien zu unterstützen, die häufig bei der Nutzung von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdiensten auftreten.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>

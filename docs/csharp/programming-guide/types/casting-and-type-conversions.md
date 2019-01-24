@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: c7200f9d99eea8364d290b54efc514217f2b2dad
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8753e977007e46ea4227c8c0072671a2e9298645
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245466"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362131"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
 
@@ -36,7 +36,8 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 -   **Konvertierungen mit Hilfsklassen**: Für eine Konvertierung von nicht kompatiblen Typen, z.B. von ganzen Zahlen und <xref:System.DateTime?displayProperty=nameWithType>-Objekten, oder von Hexadezimalzeichenfolgen und Bytearrays können Sie die <xref:System.BitConverter?displayProperty=nameWithType>-Klasse, die <xref:System.Convert?displayProperty=nameWithType>-Klasse und die `Parse`-Methoden der integrierten numerischen Typen (z.B. <xref:System.Int32.Parse%2A?displayProperty=nameWithType>) verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ](../../../csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int.md), [Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md) und [Vorgehensweise: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).  
   
-## <a name="implicit-conversions"></a>Implizite Konvertierungen  
+## <a name="implicit-conversions"></a>Implizite Konvertierungen
+
  Eine implizite Konvertierung kann für integrierte numerische Typen durchgeführt werden, wenn der zu speichernde Wert in die Variable passt, ohne abgeschnitten oder abgerundet zu werden. Zum Beispiel kann eine Variable vom Typ [long](../../../csharp/language-reference/keywords/long.md) (64-Bit-Integer) jeden Wert speichern, den eine Variable vom Typ [int](../../../csharp/language-reference/keywords/int.md) (32-Bit-Integer) speichern kann. Im folgenden Beispiel konvertiert der Compiler den Wert von `num` auf der rechten Seite implizit in einen `long`-Typ, bevor er ihn `bigNum` zuweist.  
   
  [!code-csharp[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
@@ -50,7 +51,8 @@ Derived d = new Derived();
 Base b = d; // Always OK.  
 ```  
   
-## <a name="explicit-conversions"></a>Explizite Konvertierungen  
+## <a name="explicit-conversions"></a>Explizite Konvertierungen
+
  Wenn allerdings eine Konvertierung nicht ohne möglichen Informationsverlust durchgeführt werden kann, fordert der Compiler eine explizite Konvertierung; diese wird als *Umwandlung* bezeichnet. Eine Umwandlung bietet die Möglichkeit, den Compiler explizit zu verständigen, dass Sie eine Konvertierung vornehmen möchten, und dass es Ihnen bewusst ist, dass dies einen Datenverlust zur Folge haben kann. Wenn Sie eine Umwandlung durchführen möchten, geben Sie den Typ, in den umgewandelt werden soll, in Klammern am Anfang des zu konvertierenden Wertes oder der zu konvertierenden Variablen an. Das folgende Programm wandelt ein [double](../../../csharp/language-reference/keywords/double.md) in ein [int](../../../csharp/language-reference/keywords/int.md) um. Das Programm führt ohne die Umwandlung keine Kompilierung durch.  
   
  [!code-csharp[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
@@ -75,14 +77,16 @@ Giraffe g2 = (Giraffe) a;
   
  Ein Umwandlungsvorgang zwischen Verweistypen ändert nicht den Laufzeittypen des zugrunde liegenden Objekts; er ändert lediglich den Typ des Wertes, der als Verweis auf das Objekt verwendet wird. Weitere Informationen finden Sie unter [Polymorphie](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  
   
-## <a name="type-conversion-exceptions-at-run-time"></a>Typkonvertierungsausnahmen zur Laufzeit  
+## <a name="type-conversion-exceptions-at-run-time"></a>Typkonvertierungsausnahmen zur Laufzeit
+
  In manchen Verweistypkonvertierungen kann der Compiler nicht bestimmen, ob eine Umwandlung zulässig wäre. Es ist möglich, dass ein Umwandlungsvorgang, der ordnungsgemäß kompiliert, zur Laufzeit fehlschlägt. Eine fehlgeschlagene Typumwandlung zur Laufzeit löst wie in folgendem Beispiel dargestellt eine <xref:System.InvalidCastException> aus.  
   
  [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
  C# stellt die Operatoren [is](../../../csharp/language-reference/keywords/is.md) und [as](../../../csharp/language-reference/keywords/as.md) bereit, mit denen Sie vor einer Umwandlung auf Kompatibilität prüfen können. Weitere Informationen finden Sie unter [Vorgehensweise: Sicheres Umwandeln mit Musterabgleich und den Operatoren „as“ und „is“](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
 ## <a name="see-also"></a>Siehe auch

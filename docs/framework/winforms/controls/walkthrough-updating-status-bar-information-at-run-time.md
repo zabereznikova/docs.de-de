@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 49722d5dadf694e8ee3037646652b921ddda3e91
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3de554d4c8c3963948159bc6b8c2196f9ebc10ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746030"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745882"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Exemplarische Vorgehensweise: Aktualisieren von Statusleisteninformationen zur Laufzeit
 > [!IMPORTANT]
@@ -41,7 +41,7 @@ ms.locfileid: "45746030"
     > [!NOTE]
     >  Die Windows-Formulare <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> Komponente wurde für eine Windows Forms-Umgebung entwickelt. Wenn Sie einen für eine Serverumgebung geeigneten Timer benötigen, lesen Sie die Informationen unter [Introduction to Server-Based Timers (Einführung in serverbasierte Timer)](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
   
-6.  Legen Sie die <xref:System.Windows.Forms.Timer.Enabled%2A>-Eigenschaft auf `true` fest.  
+6.  Legen Sie die <xref:System.Windows.Forms.Timer.Enabled%2A> -Eigenschaft auf `true`fest.  
   
 7.  Legen Sie die <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft der <xref:System.Windows.Forms.Timer> auf 30000 fest.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "45746030"
     > [!NOTE]
     >  Es dauert ungefähr 30 Sekunden, bis die Uhr in der Statusleiste angezeigt wird. Dies ist die akkurateste mögliche Zeit. Im Gegensatz dazu, um die Uhr schneller angezeigt zu machen, können, verringern Sie den Wert von der <xref:System.Windows.Forms.Timer.Interval%2A> Eigenschaft, die Sie in Schritt 7 im vorherigen Verfahren festgelegt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.StatusBar>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [Vorgehensweise: Hinzufügen von Bereichen zu einem StatusBar-Steuerelement](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
- [Vorgehensweise: Bestimmen, auf welchen Bereich im StatusBar-Steuerelement in Windows Forms geklickt wurde](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
- [Übersicht über das StatusBar-Steuerelement](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.StatusBar>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- [Vorgehensweise: Hinzufügen von Bereichen zu einem StatusBar-Steuerelement](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)
+- [Vorgehensweise: Bestimmen Sie, welchen Bereich im StatusBar-Steuerelement von Windows Forms geklickt wurde](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Übersicht über das StatusBar-Steuerelement](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;CryptographySettings&gt; Element'
+title: '&lt;cryptographySettings&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings
@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 4bad1d15bc8e2fd40d42581220888f035e515162
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0d1dfe5cadf59122994f1a751f985e186c6cf5b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181380"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602506"
 ---
-# <a name="ltcryptographysettingsgt-element"></a>&lt;CryptographySettings&gt; Element
+# <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt; Element
 Enthält Kryptografieeinstellungen.  
   
  \<configuration>  
-\<"mscorlib" >  
-\<CryptographySettings >  
+\<mscorlib>  
+\<cryptographySettings>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,8 +41,8 @@ Enthält Kryptografieeinstellungen.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<CryptoNameMapping >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Enthält die Zuordnung von Klassen zu den Anzeigenamen.|  
-|[\<OidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.|  
+|[\<cryptoNameMapping>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|Enthält die Zuordnung von Klassen zu den Anzeigenamen.|  
+|[\<oidMap>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Enthält die ASN. 1-Objekt-ID (OID)-Zuordnungen zu Klassen.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -78,7 +78,7 @@ Enthält Kryptografieeinstellungen.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+## <a name="see-also"></a>Siehe auch
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: ef1b5262e8cb9906fb0e0d0e8cfef9257f1223a4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: eae8d290c25399170153bbebd0637539bc565584
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243196"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362872"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statische Klassen und statische Klassenmember (C#-Programmierhandbuch)
-Eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse ist im Grunde identisch mit einer nicht statischen Klasse, aber es gibt einen Unterschied: Eine statische Klasse kann nicht instanziiert werden. Das heißt, Sie können das Schlüsselwort [new](../../../csharp/language-reference/keywords/new.md) nicht verwenden, um eine Variable des Klassentyps zu erstellen. Da keine Instanzvariable vorhanden ist, greifen Sie auf die Member einer statischen Klasse mit dem Klassennamen selbst zu. Wenn Sie z.B: eine statische Klasse haben, die `UtilityClass` heißt, die eine öffentliche Methode mit dem Namen `MethodA` besitzt, rufen Sie die Methode auf, wie im folgenden Beispiel gezeigt wird:  
+Eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse ist im Grunde identisch mit einer nicht statischen Klasse, aber es gibt einen Unterschied: Eine statische Klasse kann nicht instanziiert werden. Das heißt, Sie können das Schlüsselwort [new](../../../csharp/language-reference/keywords/new.md) nicht verwenden, um eine Variable des Klassentyps zu erstellen. Da keine Instanzvariable vorhanden ist, greifen Sie auf die Member einer statischen Klasse mit dem Klassennamen selbst zu. Wenn Sie z.B. eine statische Klasse dem Namen `UtilityClass` haben, die eine öffentliche statische Methode mit dem Namen `MethodA` besitzt, rufen Sie die Methode wie im folgenden Beispiel gezeigt auf:  
   
 ```csharp  
 UtilityClass.MethodA();  

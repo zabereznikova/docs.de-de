@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Erstellen einer EntityConnection-Verbindungszeichenfolge'
+title: 'Vorgehensweise: Erstellen einer EntityConnection-Verbindungszeichenfolge'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
-ms.openlocfilehash: a35a0bf54d7850e4b10e59c259e4ee512bc93aad
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: a78d325b5a687a09ef1d1e627c5894808538aaa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632759"
 ---
-# <a name="how-to-build-an-entityconnection-connection-string"></a>Gewusst wie: Erstellen einer EntityConnection-Verbindungszeichenfolge
+# <a name="how-to-build-an-entityconnection-connection-string"></a>Vorgehensweise: Erstellen einer EntityConnection-Verbindungszeichenfolge
 In diesem Thema wird anhand eines Beispiels gezeigt, wie eine <xref:System.Data.EntityClient.EntityConnection> erstellt wird.  
   
 ### <a name="to-run-the-code-in-this-example"></a>So führen Sie den Code in diesem Beispiel aus  
@@ -30,6 +30,6 @@ In diesem Thema wird anhand eines Beispiels gezeigt, wie eine <xref:System.Data.
  [!code-csharp[DP EntityServices Concepts#BuildingConnectionStringWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#buildingconnectionstringwithentitycommand)]
  [!code-vb[DP EntityServices Concepts#BuildingConnectionStringWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#buildingconnectionstringwithentitycommand)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Verwenden von EntityConnection-Objekt mit einem Objektkontext](https://msdn.microsoft.com/library/2140fe7b-b88b-47c8-a749-d7f142eb1080)  
- [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Verwenden Sie EntityConnection-Objekt mit einem Objektkontext](https://msdn.microsoft.com/library/2140fe7b-b88b-47c8-a749-d7f142eb1080)
+- [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

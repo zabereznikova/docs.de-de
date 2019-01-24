@@ -1,22 +1,22 @@
 ---
-title: 'Vorgehensweise: Erstellen von nicht signierten Friend-Assemblys (C#)'
+title: 'Vorgehensweise: Erstellen von unsignierten Friend-Assemblys (C#)'
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 16699d827aa168f2392a78ddbc7556bc5af864e8
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44211800"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362144"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Vorgehensweise: Erstellen von nicht signierten Friend-Assemblys (C#)
+# <a name="how-to-create-unsigned-friend-assemblies-c"></a>Vorgehensweise: Erstellen von unsignierten Friend-Assemblys (C#)
 Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwenden.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>So erstellen Sie eine Assembly und eine Friend-Assembly  
   
 1.  Öffnen Sie eine Eingabeaufforderung.  
   
-2.  Erstellen Sie eine C#-Datei namens `friend_signed_A.` mit dem folgenden Code. Der Code verwendet das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, um „friend_signed_B“ als Friend-Assembly zu deklarieren.  
+2.  Erstellen Sie eine C#-Datei namens `friend_unsigned_A.` mit dem folgenden Code. Der Code verwendet das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, um „friend_unsigned_B“ als Friend-Assembly zu deklarieren.  
   
     ```csharp  
     // friend_unsigned_A.cs  
@@ -46,7 +46,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwe
     }  
     ```  
   
-3.  Kompilieren und signieren Sie friend_signed_A mithilfe des folgenden Befehls.  
+3.  Kompilieren und signieren Sie „friend_unsigned_A“ mithilfe des folgenden Befehls.  
   
     ```csharp  
     csc /target:library friend_unsigned_A.cs  
@@ -75,7 +75,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwe
     }  
     ```  
   
-5.  Kompilieren Sie friend_signed_B, indem Sie den folgenden Befehl verwenden.  
+5.  Kompilieren Sie „friend_unsigned_B“ mithilfe des folgenden Befehls.  
   
     ```csharp  
     csc /r:friend_unsigned_A.dll /out:friend_unsigned_B.exe friend_unsigned_B.cs  
@@ -83,7 +83,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwe
   
      Der Name der vom Compiler generierten Assembly muss mit dem Namen der Friend-Assembly übereinstimmen, die an das Attribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> übergeben wird. Sie müssen den Namen der Ausgabeassembly (EXE oder DLL) explizit mit der `/out`-Compileroption angeben. Weitere Informationen finden Sie unter [/out (C# Compiler Options)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-6.  Führen Sie die Datei „friend_signed_B.exe“ aus.  
+6.  Führen Sie die Datei „friend_unsigned_B.exe“ aus.  
   
      Das Programm druckt zwei Zeichenfolgen: „Class1.Test“ und „Class2.Test“.  
   
@@ -93,7 +93,7 @@ Dieses Beispiel zeigt, wie Sie Friend-Assemblys mit unsignierten Assemblys verwe
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
-- [Assemblies and the Global Assembly Cache (C#) (Assemblys und der globale Assemblycache (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Assemblys und der globale Assemblycache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
 - [Friend-Assemblys (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
 - [Vorgehensweise: Erstellen von signierten Friend-Assemblys (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
 - [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)

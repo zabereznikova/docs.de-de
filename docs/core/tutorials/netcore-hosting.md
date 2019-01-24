@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die.NET Core-Runtime vom nativen Code aus hos
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: d6ad3bc1b8f1795bfa3d83fbb83cb07120758f11
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: deeda8b166d8a22aac88be313d2555e4b9fa5a1c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249098"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415519"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Schreiben Sie einen benutzerdefinierten .NET Core-Host, um die .NET-Runtime über den systemeigenen Code zu steuern.
 
@@ -90,7 +90,7 @@ Anders als bei der Hosting-API „mscoree.h“ (siehe unten) starten die APIs vo
 
 ### <a name="step-5---run-managed-code"></a>Schritt 5: Ausführen von verwaltetem Code
 
-Wenn die Runtime gestartet wurde, kann der Host verwalteten Code abrufen. Dafür stehen verschiedene Möglichkeiten zur Auswahl. Im Beispielcode für dieses Tutorial wird die Funktion `coreclr_create_delegate` verwendet, um einen Delegaten für eine verwaltete statische Methode zu erstellen. Diese API akzeptiert den Assemblynamen, den namespacequalifizierten Typnamen und den Methodennamen als Eingabe und gibt einen Delegaten zurück, mit dem die Methode aufgerufen werden kann.
+Wenn die Runtime gestartet wurde, kann der Host verwalteten Code abrufen. Dafür stehen verschiedene Möglichkeiten zur Auswahl. Im Beispielcode für dieses Tutorial wird die Funktion `coreclr_create_delegate` verwendet, um einen Delegaten für eine verwaltete statische Methode zu erstellen. Diese API akzeptiert den [Assemblynamen](../../framework/app-domains/assembly-names.md), den namespacequalifizierten Typnamen und den Methodennamen als Eingabe und gibt einen Delegaten zurück, mit dem die Methode aufgerufen werden kann.
 
 [!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
@@ -184,7 +184,7 @@ Mit einer laufenden AppDomain kann der Host jetzt verwalteten Code ausführen. D
 
 [!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
 
-Wenn `ExecuteAssembly` nicht den Anforderungen Ihres Hosts entspricht, gibt es eine andere Option, bei der Sie `CreateDelegate` verwenden, um einen Funktionszeiger zu einer statisch verwalteten Methode zu erstellen. Dafür muss der Host die Signatur der Methode kennen, die er aufruft (um den Funktionszeigertyp zu erstellen), aber es gibt dem Host die Flexibilität, einen anderen Code als den Assemblyeingangspunkt aufzurufen.
+Wenn `ExecuteAssembly` nicht den Anforderungen Ihres Hosts entspricht, gibt es eine andere Option, bei der Sie `CreateDelegate` verwenden, um einen Funktionszeiger zu einer statisch verwalteten Methode zu erstellen. Dafür muss der Host die Signatur der Methode kennen, die er aufruft (um den Funktionszeigertyp zu erstellen), aber es gibt dem Host die Flexibilität, einen anderen Code als den Assemblyeingangspunkt aufzurufen. Der im zweiten Parameter angegebene Assemblyname ist der [vollständige verwaltete Assemblyname](../../framework/app-domains/assembly-names.md) der zu ladenden Bibliothek.
 
 ```C++
 void *pfnDelegate = NULL;

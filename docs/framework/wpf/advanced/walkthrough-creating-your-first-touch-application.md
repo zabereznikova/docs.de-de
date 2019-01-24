@@ -10,12 +10,12 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: 935999fd5ada93bedebb38462f9faa93b8ec923f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 34a534653455449233c2908f4226cdb3a9bb9867
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724238"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ermöglicht es Anwendungen, die auf berührungen reagieren. Angenommen, Sie können mit einer Anwendung interagieren, indem Sie eine oder mehrere Finger auf einem Gerät mit Berührungseingabe, z.B. ein Touchscreen, den in dieser exemplarischen Vorgehensweise eine Anwendung, die dem Benutzer ermöglicht erstellt, zu verschieben, Ändern der Größe oder drehen Sie ein einzelnes Objekt mithilfe von Touch.  
@@ -33,7 +33,7 @@ ms.locfileid: "49086725"
   
 #### <a name="to-create-the-application"></a>So erstellen Sie die Anwendung  
   
-1.  Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen `BasicManipulation`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines neuen WPF-Anwendungsprojekts](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen `BasicManipulation`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie ein neues WPF-Anwendungsprojekt](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
 2.  Ersetzen Sie den Inhalt der Datei "MainWindow.xaml" durch den folgenden XAML an.  
   

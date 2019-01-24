@@ -3,13 +3,13 @@ title: Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Ba
 description: Erfahren Sie, wie Sie HTTP-Fehler mit Polly und HttpClientFactory verarbeiten können.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/10/2018
-ms.openlocfilehash: 78de1440721e83459e455f5c31d10e52a1d3b1b6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143986"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362755"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit HttpClientFactory und Polly-Richtlinien
 
@@ -36,9 +36,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-Durch die Methode **AddPolicyHandler()** werden Richtlinien zum `HttpClient`-Objekt hinzugefügt, das Sie verwenden werden. In diesem Fall wird eine Polly-Richtlinie für HTTP-Wiederholungen mit exponentiellem Backoff hinzugefügt.
+Durch die Methode **AddPolicyHandler()** werden Richtlinien zu `HttpClient`-Objekten hinzugefügt, die Sie verwenden werden. In diesem Fall wird eine Polly-Richtlinie für HTTP-Wiederholungen mit exponentiellem Backoff hinzugefügt.
 
-Für einen modulareren Ansatz kann die HTTP-Wiederholungsrichtlinie in einer separaten Methoden innerhalb der ConfigureServices()-Methode definiert werden. Dies wird im folgenden Code veranschaulicht.
+Für einen modulareren Ansatz kann die HTTP-Wiederholungsrichtlinie in einer separaten Methode innerhalb der `Startup.cs`-Datei definiert werden. Dies wird im folgenden Code veranschaulicht:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -55,7 +55,7 @@ Mit Polly können Sie eine Wiederholungsrichtlinie definieren, die die Anzahl vo
 
 Es werden also sechs Versuche durchgeführt, und die Sekunden zwischen jeder Wiederholung steigen beginnend bei zwei Sekunden exponentiell.
 
-### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a>Hinzufügen einer Jitterstrategie zur Wiederholungsrichtlinie
+## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Hinzufügen einer Jitterstrategie zur Wiederholungsrichtlinie
 
 Eine reguläre Wiederholungsrichtlinie kann ein System negativ beeinflussen, falls hohe Parallelität, hohe Skalierbarkeit und ein hohes Konfliktpotenzial vorhanden sind. Um mit Spitzenlasten umgehen zu können, die bei ähnlichen Wiederholungsanforderungen von vielen Clients bei einem Teilausfall auftreten, empfiehlt es sich als Notlösung, den Wiederholungsalgorithmus oder die Wiederholungsrichtlinie um eine Jitterstrategie zu ergänzen. Wenn für den exponentiellen Backoff der Jitter zufällig festgelegt wird, kann dies die Gesamtleistung des End-to-End-Systems verbessern. Dadurch lassen sich beim Auftreten von Problemen Lastspitzen verteilen. Wenn Sie eine einfache Polly-Richtlinie verwenden, könnte der Code zum Implementieren des Jitters wie folgt aussehen:
 
@@ -71,19 +71,17 @@ Policy
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Retry pattern (Wiederholungsmuster)**
-    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- **Wiederholungsmuster**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/retry*](/azure/architecture/patterns/retry)
 
--   **Polly und HttpClientFactory**
-    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
+- **Polly und HttpClientFactory**\
+  [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
--   **Polly (.NET-Bibliothek zur Gewährleistung von Resilienz und zur Behandlung temporärer Fehler)**
+- **Polly (.NET-Bibliothek zur Gewährleistung von Resilienz und zur Behandlung temporärer Fehler)**\
+  [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
-
--   **Marc Brooker. Jitter: Making Things Better With Randomness (Jitter: Dinge durch Zufall verbessern)**
-
-    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
+- **Marc Brooker. Jitter: Dinge durch Zufall verbessern**\
+  [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
 >[!div class="step-by-step"]
 >[Zurück](explore-custom-http-call-retries-exponential-backoff.md)

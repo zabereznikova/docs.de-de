@@ -2,12 +2,12 @@
 title: WCF und internationale Domänennamen
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: a0d4a5b4fe5dd3bc7cf41c8c6ad320dd83861aec
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 83c6f3c2afec0f2b6b8fccca4bd8252e9ab35400
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54571586"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF und internationale Domänennamen
 Unterstützung für WCF-Dienste mit internationalisierten Domänennamen (Internationalized Domain Names, IDNs) wurde hinzugefügt. Ein internationalisierter Domänenname ist ein Domänenname, der Nicht-ASCII-Zeichen enthält. Diese Unterstützung umfasst die Fähigkeit zum Hosten eines WCF-Diensts mit einem IDN und zum Kommunizieren eines WCF-Clients mit einem Webdienst, der über einen IDN verfügt.  
@@ -41,5 +41,5 @@ Unterstützung für WCF-Dienste mit internationalisierten Domänennamen (Interna
 > [!WARNING]
 >  Wenn Sie applicationHost.exe.config Unicode-Zeichen hinzufügen, speichern Sie die Datei mit UTF-8-Codierung.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Uri?displayProperty=nameWithType>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Uri?displayProperty=nameWithType>

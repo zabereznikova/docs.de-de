@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2d7555d39b3aa92ca49368ca5ad59750e3603606
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194136"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415896"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -56,7 +56,7 @@ Fragen zu diesem Dokument können Sie im GitHub-Thema [Transport Layer Security 
 
 Für ASP.NET-Anwendungen überprüfen Sie das Element `<system.web><httpRuntime targetFramework>` von _web.config_, um sicherzustellen, dass Sie die beabsichtigte Version von .NET Framework verwenden.
 
-Informationen zu Windows Forms und anderen Anwendungen finden Sie unter [Gewusst wie: Erstellen von Projekten für eine bestimmte .NET Framework-Version](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+Für Windows Forms und andere Anwendungen lesen Sie [Vorgehensweise: Erstellen von Projekten für eine bestimmte .NET Framework-Version](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 Verwenden Sie die folgenden Abschnitte, um sicherzustellen, dass Sie keine bestimmte TLS- oder SSL-Version verwenden.
 
@@ -150,7 +150,7 @@ Die Switches haben den gleichen Effekt, unabhängig davon, ob Sie HTTP-Netzwerke
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-Der Wert `false` für `Switch.System.Net.DontEnableSchUseStrongCrypto` bewirkt, dass Ihre App starke Kryptographie verwendet. Durch den Wert `false` für `DontEnableSchUseStrongCrypto` werden sicherere Netzwerkprotokolle (TLS 1.2, TLS 1.1 und TLS 1.0) verwendet und nicht sichere Protokolle blockiert. Weitere Informationen finden Sie unter [Das Flag SCH_USE_STRONG_CRYPTO](#the-schusestrongcrypto-flag). Ein Wert `true` deaktiviert eine starke Kryptographie für Ihre App.
+Der Wert `false` für `Switch.System.Net.DontEnableSchUseStrongCrypto` bewirkt, dass Ihre App starke Kryptographie verwendet. Durch den Wert `false` für `DontEnableSchUseStrongCrypto` werden sicherere Netzwerkprotokolle (TLS 1.2, TLS 1.1 und TLS 1.0) verwendet und nicht sichere Protokolle blockiert. Weitere Informationen finden Sie unter [Das Flag SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag). Ein Wert `true` deaktiviert eine starke Kryptographie für Ihre App.
 
 Wenn Ihre App auf .NET Framework 4.6 oder höhere Versionen abzielt, wird dieser Switch standardmäßig auf `false` gesetzt. Das ist der empfohlene sichere Standard. Wenn Ihre App unter .NET Framework 4.6 ausgeführt wird, aber auf eine frühere Version abzielt, wird der Switch standardmäßig auf `true` gesetzt. In diesem Fall sollten Sie ihn explizit auf `false` setzen.
 
@@ -174,7 +174,7 @@ Der Wert `false` für `Switch.System.ServiceModel.DontEnableSystemDefaultTlsVers
 
 Für Anwendungen, die auf .NET Framework 4.7.1 und höhere Versionen abzielen, wird dieser Wert standardmäßig auf `false` festgelegt. Für Anwendungen, die auf .NET Framework 4.7 und frühere Versionen abzielen, wird dieser Wert standardmäßig auf `true` festgelegt.
 
-Weitere Informationen über TLS-Protokolle finden Sie unter [Migration: TLS-Protokolle](../migration-guide/mitigation-tls-protocols.md). Weitere Informationen über `AppContext`-Switches finden Sie unter [`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md).
+Weitere Informationen über TLS-Protokolle finden Sie unter [Entschärfung: TLS-Protokolle](../migration-guide/mitigation-tls-protocols.md). Weitere Informationen über `AppContext`-Switches finden Sie unter [`<AppContextSwitchOverrides> Element`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md).
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Konfigurieren der Sicherheit über die Windows-Registrierung
 
@@ -191,7 +191,7 @@ Alle unten beschriebenen Registrierungsschlüssel haben den gleichen Effekt, una
 
 ### <a name="schusestrongcrypto"></a>SchUseStrongCrypto
 
-Der Registrierungsschlüssel `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` hat einen Wert vom Typ DWORD. Der Wert 1 bewirkt, dass Ihre App eine starke Kryptographie verwendet. Bei der starken Kryptographie werden sicherere Netzwerkprotokolle (TLS 1.2, TLS 1.1 und TLS 1.0) verwendet und nicht sichere Protokolle blockiert. Der Wert 0 deaktiviert die starke Kryptographie. Weitere Informationen finden Sie unter [Das Flag SCH_USE_STRONG_CRYPTO](#the-schusestrongcrypto-flag).
+Der Registrierungsschlüssel `HKEY_LOCAL_MACHINE\SOFTWARE\[Wow6432Node\]Microsoft\.NETFramework\<VERSION>: SchUseStrongCrypto` hat einen Wert vom Typ DWORD. Der Wert 1 bewirkt, dass Ihre App eine starke Kryptographie verwendet. Bei der starken Kryptographie werden sicherere Netzwerkprotokolle (TLS 1.2, TLS 1.1 und TLS 1.0) verwendet und nicht sichere Protokolle blockiert. Der Wert 0 deaktiviert die starke Kryptographie. Weitere Informationen finden Sie unter [Das Flag SCH_USE_STRONG_CRYPTO](#the-sch_use_strong_crypto-flag).
 
 Wenn Ihre App unter .NET Framework 4.6 oder höhere Versionen abzielt, wird dieser Schlüssel standardmäßig auf 1 gesetzt. Das ist der empfohlene sichere Standard. Wenn Ihre App unter .NET Framework 4.6 ausgeführt wird, aber auf eine frühere Version abzielt, wird der Schlüssel standardmäßig auf 0 gesetzt. In diesem Fall sollten Sie dessen Wert explizit auf 1 setzen.
 
@@ -258,7 +258,7 @@ Um .NET Framework zu aktualisieren, damit das Betriebssystem die beste Version v
 Siehe auch:
 
 - [.NET Framework-Versionen und -Abhängigkeiten](../migration-guide/versions-and-dependencies.md)
-- [Gewusst wie: Bestimmen der installierten .NET Framework-Versionen](../migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Vorgehensweise: Determine Which .NET Framework Versions Are Installed](../migration-guide/how-to-determine-which-versions-are-installed.md) (Bestimmen der installierten .NET Framework-Versionen).
 
 ## <a name="support-for-tls-12"></a>Unterstützung für TLS 1.2
 
@@ -274,7 +274,7 @@ Um TLS 1.2 und/oder TLS 1.1 auf einem System, das sie unterstützt, zu aktiviere
 | Windows 8.1</br>Windows Server 2012 R2 | Unterstützt und standardmäßig aktiviert. |
 | Windows 8.0</br>Windows Server 2012 | Unterstützt und standardmäßig aktiviert. |
 | Windows 7 SP1</br>Windows Server 2008 R2 SP1 | Unterstützt und nicht standardmäßig aktiviert. Weitere Informationen zum Aktivieren von TLS 1.2 finden Sie auf der Webseite [Transport Layer Security (TLS)-Registrierungseinstellungen](/windows-server/security/tls/tls-registry-settings). |
-| Windows Server 2008 | Für Unterstützung für TLS 1.2 und TLS 1.1 ist ein Update erforderlich. Siehe [Update zum Hinzufügen der Unterstützung von TLS 1.1 und TLS 1.2 in Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
+| Windows Server 2008 | Für Unterstützung für TLS 1.2 und TLS 1.1 ist ein Update erforderlich. Siehe [Update zum Hinzufügen der Unterstützung von TLS 1.1 und TLS 1.2 in Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s). |
 | Windows Vista | Wird nicht unterstützt. |
 
 Informationen darüber, welche TLS/SSL-Protokolle auf den einzelnen Windows-Version standardmäßig aktiviert sind, finden Sie unter [Protokolle in TLS/SSL (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-).
@@ -289,7 +289,7 @@ Diese Tabelle zeigt das Betriebssystemupdate, das Sie benötigen, um TLS 1.2 mit
 | Windows 8.1</br>Windows Server 2012 R2 | [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 3.5 unter Windows 8.1 und Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows 8.0</br>Windows Server 2012 | [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 3.5 unter Windows Server 2012](https://support.microsoft.com/help/3154519/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows 7 SP1</br>Windows Server 2008 R2 SP1 | [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 3.5.1 unter Windows 7 SP1 und Windows Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) |
-| Windows Server 2008 | [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 2.0 SP2 unter Windows Vista SP2 und Windows Server 2008 SP2](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
+| Windows Server 2008 | [Unterstützung für Standardversionen des TLS-Systems im .NET Framework 2.0 SP2 unter Windows Vista SP2 und Windows Server 2008 SP2](https://support.microsoft.com/help/3154517/support-for-tls-system-default-versions-included-in-the--net-framework) |
 | Windows Vista | Nicht unterstützt |
 
 ## <a name="azure-cloud-services"></a>Azure Cloud Services

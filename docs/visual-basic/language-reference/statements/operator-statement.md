@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 69dea99cf71bd1e091116e54e244abfca291ffdb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9da2fc05824fa7e412c1c4802852fd00ba2709e0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658194"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Deklariert das Operatorsymbol, Operanden und Code, der eine Operatorprozedur für eine Klasse oder Struktur definieren.  
@@ -77,7 +77,7 @@ End Operator
 |Segment|Beschreibung|  
 |----------|-----------------|  
 |`ByVal`|Optional, doch dem Übergabemechanismus muss [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).|  
-|`operandname`|Erforderlich. Name der Variablen, die diesen Operanden darstellt. Finden Sie unter [deklarierte Elementnamen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`operandname`|Erforderlich. Name der Variablen, die diesen Operanden darstellt. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`operandtype`|Optional, wenn `Option Strict` ist `On`. Der Datentyp dieses Operanden.|  
   
  `type`  
@@ -170,14 +170,14 @@ End Operator
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IsFalse-Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)  
- [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)  
- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [Erweiternde und eingrenzende Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Gewusst wie: Definieren eines Operators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)  
- [Gewusst wie: Definieren eines Konvertierungsoperators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
- [Gewusst wie: Aufrufen einer Operatorprozedur](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)  
- [Gewusst wie: Verwenden einer Klasse, die Operatoren definiert](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
+## <a name="see-also"></a>Siehe auch
+- [IsFalse-Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)
+- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [Erweiternde und eingrenzende Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Vorgehensweise: Definieren eines Operators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Vorgehensweise: Definieren eines Konvertierungsoperators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Vorgehensweise: Aufrufen einer Operatorprozedur](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)
+- [Vorgehensweise: Verwenden Sie eine Klasse, die Operatoren definiert](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)

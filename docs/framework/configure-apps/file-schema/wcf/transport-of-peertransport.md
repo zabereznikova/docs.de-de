@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; von &lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: c82e91543920522f0ed6232036ec1b5a94189fa8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: d02bb1cb4c20ab7dc482001ea7ce21180394eee7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716582"
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a>&lt;transport&gt; von &lt;peerTransport&gt;
 Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet werden, die mit dieser Bindung konfiguriert sind.  
@@ -16,9 +16,9 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<PeerTransport >  
-\<Sicherheit >  
-\<Transport >  
+\<peerTransport>  
+\<security>  
+\<transport>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,15 +56,15 @@ Definiert den Transporttyp für gesicherte Nachrichten, die von Peers gesendet w
 ## <a name="remarks"></a>Hinweise  
  Dieses Element wird nur festgelegt, wenn das Mode-Attribut des [ \<Sicherheit >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) nastaven NA hodnotu `Transport` oder `TransportWithMessageCredential`.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>  
- <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>  
- <xref:System.ServiceModel.PeerTransportSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Transportsicherheit](../../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
+- <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
+- <xref:System.ServiceModel.PeerTransportSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Transportsicherheit](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

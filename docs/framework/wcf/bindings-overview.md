@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7d617400fe5c07e8c9754e322960f31a350f62e5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657414"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Übersicht über Windows Communication Foundation-Bindungen
 Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Verbindung mit dem Endpunkt eines Windows Communication Foundation (WCF)-Diensts erforderlich sind. Jeder Endpunkt in einem WCF-Dienst erfordert eine wohldefinierte Bindung. Dieses Thema beschreibt die Typen von Kommunikationsdetails, die die Bindungen definieren die Elemente einer Bindung, welche Bindungen in WCF enthalten sind und wie eine Bindung für einen Endpunkt angegeben werden kann.  
@@ -32,9 +32,9 @@ Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Ve
 ## <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen  
  Die Informationen in einer Bindung können komplex sein, und einige Einstellungen sind möglicherweise mit anderen nicht kompatibel. Aus diesem Grund enthält WCF eine Reihe von vom System bereitgestellten Bindungen. Diese Bindungen sind für die meisten Anwendungsanforderungen vorgesehen. Die folgenden Klassen stellen einige Beispiele für vom System bereitgestellte Bindungen dar:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Eine für Verbindungen zu Webdiensten geeignete HTTP-Protokollbindung, die der WS-I Basic Profile-Spezifikation entspricht (z. B. auf ASP.NET-Webdiensten basierte Dienste).  
+-   <xref:System.ServiceModel.BasicHttpBinding>: Ein HTTP-Protokoll für Verbindungen zu Webdiensten geeignete Bindung, die konform, die der WS-I Basic Profile-Spezifikation (z. B. ASP.NET Web Services-basierte Dienste).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: Eine für Verbindungen zu Endpunkten geeignete interoperable Bindung, die den WS-*-Protokollen entspricht.  
+-   <xref:System.ServiceModel.WSHttpBinding>: Eine interoperable Bindung, die für Verbindungen mit Endpunkten, die die WS - entsprechen, geeignete * Protokolle.  
   
 -   <xref:System.ServiceModel.NetNamedPipeBinding>: Verwendet die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zur Verbindung mit anderen WCF-Endpunkten auf demselben Computer.  
   
@@ -57,5 +57,5 @@ Bindungen sind Objekte, mit denen die Kommunikationsdetails angeben, die eine Ve
 ## <a name="code-and-configuration"></a>Code und Konfiguration  
  Sie können Bindungen mit zwei Methoden definieren: durch Code oder durch Konfiguration. Diese beiden Ansätze hängen nicht davon ab, ob Sie eine vom System bereitgestellte Bindung oder eine benutzerdefinierte Bindung verwenden. Im Allgemeinen gibt Ihnen die Verwendung von Code die vollständige Kontrolle über die Definition einer Bindung zur Entwurfszeit. Mit der Konfiguration ermöglicht andererseits, ein Systemadministrator oder der Benutzer einen WCF-Dienst oder Client, der Parameter einer Bindung zu ändern, ohne die dienstanwendung neu kompilieren. Diese Flexibilität ist häufig wünschenswert, da es keine Möglichkeit zur Vorhersage, für die spezifischen computeranforderungen eine WCF-Anwendung bereitgestellt werden. Das Ausschließen der Bindungsinformationen (und der Adressierungsinformationen) aus dem Code ermöglicht deren Änderung, ohne die Anwendung neu kompilieren oder erneut bereitstellen zu müssen. Beachten Sie, dass im Code definierte Bindungen nach in der Konfiguration angegebenen Bindungen erstellt werden, sodass die durch den Code definierten Bindungen alle durch die Konfiguration definierten Bindungen überschreiben können.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

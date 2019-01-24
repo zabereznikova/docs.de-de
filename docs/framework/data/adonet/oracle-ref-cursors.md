@@ -2,12 +2,12 @@
 title: Oracle-REF CURSORs
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: 5443c409bd3c73e91969db6424a4f86f1a16ed72
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4dd0a78fafe63197987938021195723e3eed0885
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740995"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle-REF CURSORs
 Die .NET Framework-Datenanbieter für Oracle unterstützt Oracle **REF CURSOR** -Datentyp. Wenn Sie beim Arbeiten mit Oracle-REF CUSORS diesen Datenanbieter verwenden, müssen Sie das jeweilige Verhalten berücksichtigen.  
@@ -42,6 +42,6 @@ Die .NET Framework-Datenanbieter für Oracle unterstützt Oracle **REF CURSOR** 
  [Auffüllen eines DataSets mit einem oder mehreren REF CURSORs](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
  Veranschaulicht das Ausführen einer gespeicherten PL/SQL-Prozedur, die zwei REF CURSOR-Parameter zurückgibt. Das <xref:System.Data.DataSet> wird mit den zurückgegebenen Zeilen aufgefüllt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Oracle und ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Oracle und ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

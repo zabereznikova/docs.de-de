@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2018
-ms.openlocfilehash: 3ca833031eb8bb0f43a334f833f2e0075842d57d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 26fb7cb25b9bf7f00f87059fbe1848763f7f175d
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156668"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415545"
 ---
 # <a name="whats-new-in-net-core-30-preview-1"></a>Neuerungen in .NET Core 3.0 (Vorschauversion 1)
 
@@ -30,15 +30,12 @@ Weitere Informationen finden Sie unter [Ankündigung zu .NET Core 3.0 Vorschauve
 
 ## <a name="default-executables"></a>Standardmäßig ausführbare Dateien
 
-.NET Core erstellt die ausführbaren Dateien jetzt standardmäßig. Dies ist neu für Anwendungen, die eine global installierte Version von .NET Core verwenden. Bis jetzt hatten nur [eigenständige Bereitstellungen](../deploying/index.md#self-contained-deployments-scd) ausführbare Dateien.
+.NET Core erstellt die [frameworkabhängigen ausführbaren Dateien](../deploying/index.md#framework-dependent-executables-fde) jetzt standardmäßig. Dies ist neu für Anwendungen, die eine global installierte Version von .NET Core verwenden. Bis jetzt produzierten nur [eigenständige Bereitstellungen](../deploying/index.md#self-contained-deployments-scd) eine ausführbare Datei.
 
 Während `dotnet build` oder `dotnet publish` wird eine ausführbare Datei erstellt, die der Umgebung und Plattform des von Ihnen verwendeten SDKs entspricht. Diese ausführbaren Dateien bieten Ihnen die gleichen Möglichkeiten wie andere native ausführbare Dateien, wie z.B.:
 
 * Sie können die ausführbare Datei doppelklicken.
 * Sie können die Anwendung direkt aus einer Eingabeaufforderung starten, z.B. `myapp.exe` unter Windows und `./myapp` unter Linux und MacOS.
-
-> [!NOTE]
-> Die Angabe einer bestimmten Runtime mit `dotnet publish -r`- oder `dotnet build -r`-Argumenten für andere Runtimeumgebungen wird nicht unterstützt.
 
 ## <a name="build-copies-dependencies"></a>Build kopiert Abhängigkeiten
 
@@ -122,7 +119,7 @@ Für sowohl globale als auch lokale Tools ist eine kompatible Version der Runtim
 
 Weitere Informationen finden Sie unter [Frühe Vorschaudokumentation für lokale Tools](https://github.com/dotnet/cli/issues/10288).
 
-## <a name="windows-desktop"></a>Windows Desktop
+## <a name="windows-desktop"></a>Windows-Desktop
 
 Ab .NET Core 3.0 Vorschauversion 1 können Sie Windows Desktop-Anwendungen mit WPF und Windows Forms erstellen. Diese Frameworks unterstützt auch die Verwendung moderner Steuerelemente und des Fluent-Stils aus der Windows-UI-XAML-Bibliothek (WinUI) über [XAML-Inseln](/windows/uwp/xaml-platform/xaml-host-controls).
 
@@ -175,7 +172,7 @@ Ihr Feedback in den [dotnet/winforms](https://github.com/dotnet/winforms/issues)
 
 Diese neue API umfasst die folgenden Komponenten:
 
-* In Vorschauversion 1: JSON-Leser (sequenzieller Zugriff)
+* In Vorschauversion 1: JSON-Reader (sequenzieller Zugriff)
 * Geplant: JSON-Writer, DOM (wahlfreier Zugriff), POCO-Serialisierungsprogramm, POCO-Deserialisierungsprogramm
 
 Hier ist eine einfache Leserschleife für den `Utf8JsonReader`, die als Startpunkt verwendet werden kann:

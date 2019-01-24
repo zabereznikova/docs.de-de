@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf4f3f582e417c5e7b814622986427f996796ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: def1c04064cc9fc98c108dcdad5c017c0c8e465b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655529"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel-Enumeration
-Enthält Werte, die die Auswirkungen eines Ausfalls angeben, wenn eine bestimmte speicherbelegung angefordert wurde, jedoch nicht erfüllt werden.  
+Enthält Werte, die die Auswirkungen eines Fehlers angeben, wenn eine bestimmte speicherbelegung angefordert wurde, aber nicht zufrieden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,22 +40,22 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`eAppDomainCritical`|Gibt an, dass die Zuordnung ist wichtig für die Ausführung von verwaltetem Code in der Domäne, die die Belegung angefordert hat. Wenn Speicher belegt werden kann, kann nicht die CLR zu gewährleisten, dass die Domäne immer noch verwendbar ist. Der Host entscheidet, welche Aktion soll, wenn die Zuordnung nicht erfüllt werden kann. Sie können die CLR anweisen der `AppDomain` automatisch, oder lassen sie Sie weiterhin ausgeführt, durch Aufrufen von Methoden für [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).|  
-|`eProcessCritical`|Gibt an, dass die Zuordnung für die Ausführung von verwaltetem Code im Prozess von entscheidender Bedeutung ist. Dieser Wert wird während des Starts und verwendet, wenn ein Finalizer ausgeführt wird. Wenn Speicher belegt werden kann, kann nicht die CLR im Prozess ausgeführt werden. Wenn die Zuordnung ein Fehler auftritt, ist die CLR effektiv deaktiviert. Alle nachfolgenden Aufrufe in die CLR schlagen mit HOST_E_CLRNOTAVAILABLE fehl.|  
-|`eTaskCritical`|Gibt an, dass die Zuordnung ist wichtig für die Ausführung der Aufgabe, die die Belegung angefordert hat. Wenn Speicher belegt werden kann, kann nicht die CLR zu gewährleisten, dass die Aufgabe ausgeführt werden kann. Fehler auftritt, löst die CLR eine <xref:System.Threading.ThreadAbortException> auf dem physischen Betriebssystemthread.|  
+|`eAppDomainCritical`|Gibt an, dass die Zuordnung ist wichtig für die Ausführung von verwaltetem Code in der Domäne, die die Zuordnung angefordert hat. Wenn Arbeitsspeicher zugeordnet werden kann, kann nicht die CLR nicht garantieren, dass die Domäne noch verwendbar ist. Der Host entscheidet, welche Aktion soll, wenn die Zuordnung nicht erfüllt werden kann. Sie können die CLR anweisen, zum Abbrechen der `AppDomain` automatisch, oder lassen sie Sie weiterhin ausgeführt, durch Aufrufen von Methoden für [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md).|  
+|`eProcessCritical`|Gibt an, dass die Zuordnung für die Ausführung von verwaltetem Code im Prozess wichtig ist. Dieser Wert wird während des Starts und bei der Ausführung von Finalizern verwendet. Wenn der Arbeitsspeicher nicht reserviert werden kann, kann nicht die CLR im Prozess ausgeführt werden. Wenn die Zuordnung fehlschlägt, wird die CLR deaktiviert. Alle nachfolgenden Aufrufe in die CLR schlagen mit HOST_E_CLRNOTAVAILABLE zurück.|  
+|`eTaskCritical`|Gibt an, dass die Zuordnung ist entscheidend für die Ausführung des Tasks, die die Zuordnung angefordert hat. Wenn Arbeitsspeicher zugeordnet werden kann, kann die CLR nicht gewährleisten, dass die Aufgabe ausgeführt werden kann. Bei einem Fehler löst die CLR eine <xref:System.Threading.ThreadAbortException> auf dem physischen Betriebssystemthread.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die Arbeitsspeicher-Zuordnung in definierten Methoden den [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md) und [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) Schnittstellen akzeptieren einen Parameter dieses Typs. Abhängig vom Schweregrad des Fehlers, kann ein Host entscheiden Sie, ob die zuordnungsanforderung sofort fehl, oder warten, bis er erfüllt werden kann.  
+ Die Speicher-Zuordnung in definierten Methoden den [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md) und [IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) Schnittstellen akzeptieren einen Parameter dieses Typs. Abhängig vom Schweregrad des Fehlers, kann ein Host entscheiden Sie, ob die zuordnungsanforderung sofort fehl, oder warten, bis es erfüllt werden kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRMemoryNotificationCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRMemoryNotificationCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)
+- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

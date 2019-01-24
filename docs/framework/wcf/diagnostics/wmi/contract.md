@@ -2,12 +2,12 @@
 title: Contract1
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 12e9cbf5232ebbad33ccc4fdca33233997d27357
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c602ea2b708fced37c5b309596fe2312be21e741
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194669"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603559"
 ---
 # <a name="contract"></a>Vertrag
 Vertrag  
@@ -43,7 +43,7 @@ class Contract
  Die Anwendungsdomänen-ID der Anwendungsdomäne, die den Vertrag hostet.  
   
 ### <a name="behaviors"></a>Verhalten  
- Datentyp: Behavior-Array  
+ Datentyp: Behavior-array  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -64,7 +64,7 @@ class Contract
  Der Namespace des `portType`-Elements in WSDL.  
   
 ### <a name="operations"></a>Vorgänge  
- Datentyp: Operation-Array  
+ Datentyp: Operation-array  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -78,7 +78,7 @@ class Contract
  Die Porzess-ID des Prozesses, der den Vertrag hostet.  
   
 ### <a name="ref"></a>ref  
- Datentyp: Contract  
+ Datentyp: Vertrag  
   
  Zugriffstyp: Schreibgeschützt  
   
@@ -104,5 +104,5 @@ class Contract
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Description.ContractDescription>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Description.ContractDescription>

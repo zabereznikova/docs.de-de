@@ -2,12 +2,12 @@
 title: '&lt;oneWay&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: 5f3d534ee98100347acaa485e60a3c74f82ee0b9
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c909bce5b54976a215a59ca8fd9f097f574acd80
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150577"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600296"
 ---
 # <a name="ltonewaygt"></a>&lt;oneWay&gt;
 Aktiviert Paketrouting und die Verwendung von unidirektionalen Methoden für eine benutzerdefinierte Bindung.  
@@ -16,7 +16,7 @@ Aktiviert Paketrouting und die Verwendung von unidirektionalen Methoden für ein
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<OneWay >  
+\<oneWay>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ Aktiviert Paketrouting und die Verwendung von unidirektionalen Methoden für ein
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<ChannelPoolSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/channelpoolsettings.md)|Ein <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>-Objekt, das Eigenschaften des Kanalpools für den aktuellen Kanal enthält.|  
+|[\<channelPoolSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/channelpoolsettings.md)|Ein <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>-Objekt, das Eigenschaften des Kanalpools für den aktuellen Kanal enthält.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -53,11 +53,11 @@ Aktiviert Paketrouting und die Verwendung von unidirektionalen Methoden für ein
 ## <a name="remarks"></a>Hinweise  
  Zum Aktivieren von Paketrouting ist eine unidirektionale Konvertierungsebene erforderlich, die von diesem Element bereitgestellt wird. Ein Benutzer kann eine benutzerdefinierte Bindung erstellen, die diese Bindung über einen sitzungsfähigen oder Anforderungs-/Antworttransport schichtet, damit er für das Paketrouting aktiviert ist. Das Element ist auch nützlich, wenn Sie unidirektionale Methoden auf systemeigenere Weise verfügbar machen möchten. Auf diese Schickt können weitere Transformationen angewendet werden, zum Beispiel Composite Duplex und Reliable Messaging.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Channels.OneWayBindingElement>  
- <xref:System.ServiceModel.Configuration.OneWayElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Channels.OneWayBindingElement>
+- <xref:System.ServiceModel.Configuration.OneWayElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

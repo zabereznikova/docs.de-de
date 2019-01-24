@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5304496da992b44c171ca3c6ffa3fffa35d6f9cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3e5f36e10fffebe89b805cee3cb57e88afd4df35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425365"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745299"
 ---
 # <a name="ibindingdisplay-interface"></a>IBindingDisplay-Schnittstelle
 Enthält Methoden, die aktuelle Bindungsinformationen über die ausgeführte Anwendung anzuzeigen.  
@@ -31,10 +31,10 @@ Enthält Methoden, die aktuelle Bindungsinformationen über die ausgeführte Anw
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |[GetCurrentDisplay-Methode](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Gibt die aktuelle Bindungsanzeigeinformationen zurück.|  
-|[InitializeForProcess-Methode](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|Initialisiert die `IBindingDisplay` Objekt.|  
+|[InitializeForProcess-Methode](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|Initialisiert das `IBindingDisplay`-Objekt.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** BindingDisplay.h  
   
@@ -42,5 +42,5 @@ Enthält Methoden, die aktuelle Bindungsinformationen über die ausgeführte Anw
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Diagnosesymbolspeicher-Schnittstellen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Diagnosesymbolspeicher-Schnittstellen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

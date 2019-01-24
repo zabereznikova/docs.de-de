@@ -6,26 +6,26 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: eb05627925534820544edc15e1fe06bf57f0ae84
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 260d79b7c6432c3dede5b593eaa3f1e52ed35c5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588300"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer-Steuerelement
 <xref:System.Windows.Forms.ToolStrip>-Steuerelemente bieten bei Verwendung von <xref:System.Windows.Forms.ToolStripContainer> Unterstützung für das integrierte Rafting (die gemeinsame Nutzung eines horizontalen oder vertikalen Bereichs innerhalb des Toolbereichs im angedockten Zustand).  
   
- In den Themen in diesem Abschnitt werden die Konzepte und Techniken beschrieben, die Sie verwenden können, um <xref:System.Windows.Forms.ToolStripContainer>-Features in Ihre Anwendungen einzubinden.  
+ In den Themen in diesem Abschnitt werden die Konzepte und Techniken beschrieben, die Sie verwenden können, um <xref:System.Windows.Forms.ToolStripContainer>-Funktionen in Ihre Anwendungen einzubinden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über das ToolStripContainer-Steuerelement](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
  Enthält Themen, in denen der Verwendungszweck und die wichtigsten Konzepte des <xref:System.Windows.Forms.ToolStripContainer>-Steuerelements in Windows Forms beschrieben werden.  
   
- [Gewusst wie: Hinzufügen von ToolStripContainer zu einem Formular](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [Vorgehensweise: Hinzufügen von ToolStripContainer zu einem Formular](../../../../docs/framework/winforms/controls/how-to-add-a-toolstripcontainer-to-a-form.md)  
  Erläutert, wie <xref:System.Windows.Forms.ToolStripContainer> einer Anwendung und ein Steuerelement einem bestimmten Bereich von <xref:System.Windows.Forms.ToolStripContainer> hinzugefügt wird.  
   
- [Gewusst wie: Hinzufügen eines Steuerelements zu ToolStripContentPanel](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ [Vorgehensweise: Hinzufügen eines Steuerelements zu ToolStripContentPanel](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  Erläutert, wie <xref:System.Windows.Forms.ToolStripContentPanel> ein Steuerelement hinzugefügt wird.  
   
 ## <a name="reference"></a>Referenz  
@@ -41,5 +41,5 @@ ms.locfileid: "44087176"
  <xref:System.Windows.Forms.ToolStripPanel>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.ToolStripPanel>-Steuerelement.  
   
-## <a name="see-also"></a>Siehe auch  
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83f6190872ecf4435688f3b7c82a61f5f15d9f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f988f95c28e6d2248882fb033b8d8c4d3c629229
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443325"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744192"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA-Struktur
-Enthält Informationen über die referenzierte Assembly, z. B. die Version und die Ebene der Unterstützung für Gebietsschemas, Prozessoren und Betriebssysteme an.  
+Enthält Informationen über die referenzierte Assembly, einschließlich Version und der Grad der Unterstützung für Gebietsschemas, Prozessoren und Betriebssysteme.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,27 +47,27 @@ typedef struct {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`usMajorVersion`|Die Hauptversionsnummer der Assembly, auf die verwiesen wird. Dieser Wert darf nicht 0 (null) sein. Wenn die Bits des `usMajorVersion` festgelegt ist, wird die Hauptversion nicht angegeben werden.|  
-|`usMinorVersion`|Die Nebenversionsnummer der Assembly, auf die verwiesen wird. Dieser Wert darf nicht 0 (null) sein. Wenn die Bits des `usMinorVersion` festgelegt ist, wird die Nebenversion nicht angegeben werden.|  
-|`usBuildNumber`|Die Buildnummer der Assembly, auf die verwiesen wird. Dieser Wert darf nicht 0 (null) sein. Wenn die Bits des `usBuildNumber` festgelegt ist, wird die Buildnummer nicht angegeben werden.|  
-|`usRevisionNumber`|Die Revisionsnummer der Assembly, auf die verwiesen wird. Dieser Wert darf nicht 0 (null) sein. Wenn die Bits des `usRevisionNumber` festgelegt ist, wird die Revisionsnummer nicht angegeben werden.|  
-|`szLocale`|Eine Liste der Gebietsschemanamen RFC1766-Spezifikation, die durch Semikolons getrennt, Angeben der zu unterstützenden Gebietsschemas durch die referenzierte Assembly unterstützt. Ein Nullwert zeigt Gebietsschemaunabhängigkeit an. **Hinweis:** In .NET Framework, Version 1.0, die Sie nicht mehr als ein Gebietsschema angeben.|  
+|`usMajorVersion`|Die Hauptversionsnummer der Assembly, auf die verwiesen wird. Dieser Wert darf nicht 0 (null) sein. Wenn alle Bits `usMajorVersion` festgelegt ist, wird die Version ist nicht angegeben werden.|  
+|`usMinorVersion`|Die Nebenversionsnummer der Assembly, auf die verwiesen wird. Dieser Wert darf nicht 0 (null) sein. Wenn alle Bits `usMinorVersion` festgelegt sind, werden die Nebenversion ist nicht angegeben.|  
+|`usBuildNumber`|Die Buildnummer der Assembly, auf die verwiesen wird. Dieser Wert darf nicht 0 (null) sein. Wenn alle Bits `usBuildNumber` festgelegt ist, wird die Build-Nummer nicht angegeben werden.|  
+|`usRevisionNumber`|Die Revisionsnummer der Assembly, auf die verwiesen wird. Dieser Wert darf nicht 0 (null) sein. Wenn alle Bits `usRevisionNumber` festgelegt ist, wird die Revisionsnummer nicht angegeben werden.|  
+|`szLocale`|Eine Liste der Gebietsschemanamen, die RFC1766-Spezifikation, getrennt durch ein Semikolon, unterstützt durch die Assembly verwiesen wird. Ein null-Wert gibt die Gebietsschemaunabhängigkeit von der an. **Hinweis**:  In .NET Framework, Version 1.0, die Sie nicht mehr als ein einzelnes Gebietsschema angeben können.|  
 |`cbLocale`|Die Größe in Breitzeichen `szLocale`.|  
-|`rdwProcessor`|Ein Array von Bezeichnern, gemäß der Definition in "Winnt.h", für die Prozessortypen, die durch die referenzierte Assembly unterstützt werden. Ein NULL-Wert gibt die Prozessorunabhängigkeit an.|  
+|`rdwProcessor`|Ein Array von Bezeichnern, wie in "Winnt.h", für die Prozessortypen definiert, die von der referenzierten Assembly unterstützt werden. Ein NULL-Wert gibt die Prozessorunabhängigkeit von der an.|  
 |`ulProcessor`|Die Länge der `rdwProcessor` Array.|  
-|`rOS`|Ein Array von [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) Instanzen angeben, die Betriebssysteme, die durch die referenzierte Assembly unterstützt werden. Ein NULL-Wert gibt die Unabhängigkeit des Betriebssystems an.|  
+|`rOS`|Ein Array von [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) Instanzen angeben, die die Betriebssysteme, die von der referenzierten Assembly unterstützt werden. Ein NULL-Wert gibt die Unabhängigkeit von der Betriebssystem-an.|  
 |`ulOS`|Die Länge der `rOS` Array.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenstrukturen](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)  
- [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- [OSINFO-Struktur](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenstrukturen](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+- [IMetaDataAssemblyEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [OSINFO-Struktur](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

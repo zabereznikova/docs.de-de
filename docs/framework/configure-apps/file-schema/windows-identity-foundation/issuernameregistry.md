@@ -1,23 +1,23 @@
 ---
-title: '&lt;"issuerNameRegistry"&gt;'
+title: '&lt;issuerNameRegistry&gt;'
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: de3ceb5d84d17307c69e9155834a0a584e6920a1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f23f0103e228bc23a06a3ff0e0c5c2a12bdae73f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748102"
 ---
-# <a name="ltissuernameregistrygt"></a>&lt;"issuerNameRegistry"&gt;
+# <a name="ltissuernameregistrygt"></a>&lt;issuerNameRegistry&gt;
 Konfiguriert die Ausstellernamen-Registrierung, die von Handlern in die Auflistung der Tokenhandler verwendet wird.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<SecurityTokenHandlers >  
-\<SecurityTokenHandlerConfiguration >  
-\<"issuerNameRegistry" >  
+\<securityTokenHandlers>  
+\<securityTokenHandlerConfiguration>  
+\<issuerNameRegistry>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,13 +48,13 @@ Konfiguriert die Ausstellernamen-Registrierung, die von Handlern in die Auflistu
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|Wenn die `type` Attribut gibt an, der konfigurationsbasierten ausstellernamenregistrierung (die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> Klasse), wird die [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) Element muss angegeben werden. Die [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) Element dauert `<add>`, `<clear>`, oder `<remove>` -Elemente als untergeordnete Elemente.|  
+|[\<trustedIssuers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|Wenn die `type` Attribut gibt an, der konfigurationsbasierten ausstellernamenregistrierung (die <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> Klasse), wird die [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) Element muss angegeben werden. Die [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) Element dauert `<add>`, `<clear>`, oder `<remove>` -Elemente als untergeordnete Elemente.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<SecurityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung der Tokenhandler.|  
+|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Stellt die Konfiguration für eine Auflistung der Tokenhandler.|  
   
 ## <a name="remarks"></a>Hinweise  
  Alle ausstellertoken werden überprüft, eine Ausstellernamen-Registrierung verwenden. Dies ist ein Objekt, das von abgeleitet ist die <xref:System.IdentityModel.Tokens.IssuerNameRegistry> Klasse. Die Ausstellernamen-Registrierung wird verwendet, um einen merknamen kryptografischen Informationen zuzuordnen, die benötigt werden, um zu überprüfen, ob die Signaturen von Token, die vom entsprechenden Aussteller erzeugt werden. Die Ausstellernamen-Registrierung verwaltet eine Liste der Zertifikataussteller, die die Anwendung der vertrauenden Seite (Relying Party, RP) vertraut. Der Typ, der die Ausstellernamen-Registrierung angegeben ist, mit der `type` Attribut. Die `<issuerNameRegistry>` -Element kann eine oder mehrere untergeordnete Elemente, die Konfiguration für den angegebenen Typ aufweisen. Geben Sie die Logik, die verarbeitet diese untergeordneten Elemente durch Überschreiben der <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> Methode.  
@@ -77,6 +77,6 @@ Konfiguriert die Ausstellernamen-Registrierung, die von Handlern in die Auflistu
 </issuerNameRegistry>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>  
- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>
+- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>

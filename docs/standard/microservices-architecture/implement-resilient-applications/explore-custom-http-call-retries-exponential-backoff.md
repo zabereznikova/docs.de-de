@@ -1,23 +1,23 @@
 ---
 title: Untersuchen benutzerdefinierter Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff
-description: Erfahren Sie, wie Sie Wiederholungen von HTTP-Aufrufen von Grund auf neu mit exponentiellem Backoff implementieren können, um mögliche HTTP-Fehlerszenarios zu verarbeiten.
+description: Erfahren Sie, wie Sie Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff von Grund auf neu implementieren können, um mögliche HTTP-Fehlerszenarios zu verarbeiten.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: b7aaad9199bb275f45fd088a6207d707e8e5751c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145097"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362248"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Untersuchen benutzerdefinierter Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff
 
 Sie müssen mögliche HTTP-Fehlerszenarios verarbeiten können, um robuste Microservices zu erstellen. Eine Möglichkeit, diese Fehler zu verarbeiten, die jedoch nicht empfohlen wird, ist das Erstellen einer eigenen Implementierung von Wiederholungen mit exponentiellem Backoff.
 
-**Wichtiger Hinweis:** In diesem Abschnitt wird veranschaulicht, wie Sie benutzerdefinierten Code erstellen können, um Wiederholungen von HTTP-Aufrufen zu implementieren. Es wird jedoch nicht empfohlen, dies selbst durchzuführen. Verwenden Sie leistungsfähigere und zuverlässigere Mechanismen wie `HttpClientFactory` mit Polly (verfügbar seit .NET Core 2.1), die zudem einfacher anzuwenden sind. Die empfohlenen Vorgehensweisen werden im nächsten Abschnitt beschrieben. 
+**Wichtiger Hinweis**: In diesem Abschnitt wird veranschaulicht, wie Sie benutzerdefinierten Code erstellen können, um Wiederholungen von HTTP-Aufrufen zu implementieren. Es wird jedoch nicht empfohlen, dies selbst durchzuführen. Verwenden Sie leistungsfähigere und zuverlässigere Mechanismen wie `HttpClientFactory` mit Polly (verfügbar seit .NET Core 2.1), die zudem einfacher anzuwenden sind. Die empfohlenen Vorgehensweisen werden im nächsten Abschnitt beschrieben.
 
-Zunächst können Sie eigenen Code wie in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) mit einer Hilfsklasse für exponentielle Backoffs sowie Code implementieren, der Folgendem entspricht (ebenfalls in diesem [GitHub-Repository](https://gist.github.com/CESARDELATORRE/d80c6423a1aebaffaf387469f5194f5b) verfügbar).
+Zunächst können Sie eigenen Code wie in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260) mit einer Hilfsklasse für exponentielle Backoffs sowie Code implementieren, der Folgendem entspricht.
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -113,8 +113,7 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-Bedenken Sie jedoch, dass dieser Code nur als Proof of Concept geeignet ist. Im nächsten Abschnitt wird erklärt, wie Sie optimierte und einfachere Ansätze (z.B. HttpClientFactory) verwenden können.
-HttpClientFactory ist seit .NET Core 2.1 verfügbar und enthält bewährte stabile Bibliotheken wie Polly. 
+Bedenken Sie jedoch, dass dieser Code nur als Proof of Concept geeignet ist. Im nächsten Abschnitt wird erklärt, wie Sie optimierte und einfachere Ansätze (z.B. HttpClientFactory) verwenden können. HttpClientFactory ist seit .NET Core 2.1 verfügbar und enthält bewährte stabile Bibliotheken wie Polly.
 
 >[!div class="step-by-step"]
 >[Zurück](implement-resilient-entity-framework-core-sql-connections.md)

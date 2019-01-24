@@ -2,15 +2,15 @@
 title: Facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 2b263a107eae7c75b035dcb4675725556e0f9c2b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9994aff7337dd842e1d70c22ea288d2fda5648d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762422"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648231"
 ---
 # <a name="facet"></a>Facet
-Ein *Facet* wird verwendet, um einer primitiven typeigenschaftendefinition Details hinzuzufügen. Ein [Eigenschaft](../../../../docs/framework/data/adonet/property.md) Definition enthält Informationen zum Eigenschaftentyp, oft ausführlicher ist jedoch erforderlich. Ein Entitätstyp in einem konzeptionellen Modell könnte z. B. über eine Eigenschaft vom Typ `String` verfügen, deren Wert nicht auf NULL festgelegt werden kann. Mit Facets können Sie diese Detailebene angeben.  
+Ein *Facet* wird verwendet, um einer primitiven typeigenschaftendefinition Details hinzuzufügen. Ein [Eigenschaft](../../../../docs/framework/data/adonet/property.md) Definition enthält Informationen zu den Eigenschaftentyp, oft detaillierter ist jedoch erforderlich. Ein Entitätstyp in einem konzeptionellen Modell könnte z. B. über eine Eigenschaft vom Typ `String` verfügen, deren Wert nicht auf NULL festgelegt werden kann. Mit Facets können Sie diese Detailebene angeben.  
   
  In der nachfolgenden Tabelle werden die im EDM unterstützten Facets beschrieben.  
   
@@ -30,10 +30,10 @@ Ein *Facet* wird verwendet, um einer primitiven typeigenschaftendefinition Detai
 |`Unicode`|Gibt an, ob der Eigenschaftswert als Unicode gespeichert wird.|`String`|  
   
 ## <a name="example"></a>Beispiel  
- Die [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) verwendet eine domänenspezifische Sprache (DSL) Bezeichnung konzeptionelle Schemadefinitionssprache ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) um konzeptionelle Modelle zu definieren. Die folgende CSDL definiert einen `Book`-Entitätstyp. Beachten Sie, dass Facets als XML-Attribute implementiert werden. Die Facetwerte geben an, dass keine Eigenschaft auf NULL festgelegt werden kann, und dass `Scale` und `Precision` der `Revision`-Eigenschaft jeweils auf 29 festgelegt werden.  
+ Die [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) verwendet eine domänenspezifische Sprache (DSL) Bezeichnung konzeptionelle Schemadefinitionssprache ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)), konzeptionelle Modelle zu definieren. Die folgende CSDL definiert einen `Book`-Entitätstyp. Beachten Sie, dass Facets als XML-Attribute implementiert werden. Die Facetwerte geben an, dass keine Eigenschaft auf NULL festgelegt werden kann, und dass `Scale` und `Precision` der `Revision`-Eigenschaft jeweils auf 29 festgelegt werden.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>Siehe auch
+- [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

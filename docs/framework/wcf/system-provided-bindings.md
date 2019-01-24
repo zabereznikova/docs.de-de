@@ -5,12 +5,12 @@ ms.date: 06/05/2018
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 6730238a73b41faa4409fdfc75af1de36f31d13e
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: 3c6c6b628d208aede8c547dcfa66fc189a26ae01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805645"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569601"
 ---
 # <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen
 
@@ -34,7 +34,7 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
 
 Die folgenden Bindungen sind im Lieferumfang von WCF enthalten.
 
-|Bindung|Konfigurationselement|description|
+|Bindung|Konfigurationselement|Beschreibung|
 |-------------|---------------------------|-----------------|
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md)|Eine Bindung, die sich für die Kommunikation mit Webdiensten eignet, die mit WS-Basic Profile kompatibel sind, beispielsweise auf ASP.NET-Webdiensten (ASMX) basierende Dienste. Diese Bindung verwendet HTTP als Transport und Text/XML als Standardnachrichtencodierung.|
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../configure-apps/file-schema/wcf/wshttpbinding.md)|Eine sichere und vollständig kompatible Bindung, die sich für Nicht-Duplexdienstverträge eignet.|
@@ -61,8 +61,8 @@ Die folgenden Bindungen sind im Lieferumfang von WCF enthalten.
 |<xref:System.ServiceModel.WSHttpBinding>|WS|Transport, (Nachricht), Gemischt|(Keine), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|n/v|(Text), MTOM|Nein|
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|(Nachricht), Keine|(Zuverlässige Sitzung), Sicherheitssitzung|(Keine), Ja|Ja|(Text), MTOM|Nein|
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|(Nachricht), Gemischt, Keine|(Keine), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|Nein|(Text), MTOM|Nein|
-|<xref:System.ServiceModel.NetHttpBinding>|.NET|(Keine), Transport, Nachricht, TransportWithMessageCredential, TransportCredentialOnly|Siehe den Hinweis unten.|Keiner|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja (gepuffert)|
-|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transport), TransportWithMessageCredential|Siehe den Hinweis unten.|Keiner|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja<br />(gepuffert)|
+|<xref:System.ServiceModel.NetHttpBinding>|.NET|(Keine), Transport, Nachricht, TransportWithMessageCredential, TransportCredentialOnly|Siehe den Hinweis unten.|Keine|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja (gepuffert)|
+|<xref:System.ServiceModel.NetHttpsBinding>|.NET|(Transport), TransportWithMessageCredential|Siehe den Hinweis unten.|Keine|Siehe den Hinweis unten.|(Binär), Text, MTOM|Ja<br />(gepuffert)|
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|(Transport), Nachricht, Keine, Gemischt|(Transport), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|Ja|Binär|Ja<br />(gepuffert)|
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|(Transport), Keine|Keine, (Transport)|(Keine), Ja|Ja|Binär|Ja<br />(gepuffert)|
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Nachricht, (Transport), Keine|Keine, (Transport)|Keine, (Ja)|Nein|Binär|Nein|
@@ -71,25 +71,25 @@ Die folgenden Bindungen sind im Lieferumfang von WCF enthalten.
 |<xref:System.ServiceModel.BasicHttpContextBinding>|Basic Profile 1.1|(Keine), Transport, Nachricht, Gemischt|(Keine)|(Keine)|n/v|Text, (MTOM)|Ja<br />(gepuffert)|
 |<xref:System.ServiceModel.NetTcpContextBinding>|.NET|(Transport), Nachricht, Keine, Gemischt|(Transport), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|Ja|Binär|Ja<br />(gepuffert)|
 |<xref:System.ServiceModel.WSHttpContextBinding>|WS|Transport, (Nachricht), Gemischt|(Keine), zuverlässige Sitzung, Sicherheitssitzung|(Keine), Ja|n/v|Text, (MTOM)|Nein|
-|<xref:System.ServiceModel.UdpBinding> <br /><br /> **Hinweis:** Interoperabilität lässt sich durch Implementieren der SOAP-über-UDP-Standardspezifikation erzielen, die von dieser Bindung implementiert wird.|.NET|(Keine)|(Keine)|(Keine)|n/v|(Text)|Nein|
+|<xref:System.ServiceModel.UdpBinding> <br /><br /> **Hinweis**:  Interoperabilität lässt sich durch Implementieren der SOAP-über-UDP-Standardspezifikation erzielen, die von dieser Bindung implementiert wird.|.NET|(Keine)|(Keine)|(Keine)|n/v|(Text)|Nein|
 
 > [!IMPORTANT]
-> <xref:System.ServiceModel.NetHttpBinding> ist eine für die Nutzung von HTTP- oder WebSocket-Diensten entwickelte Bindung, die standardmäßig die binäre Codierung verwendet. Die <xref:System.ServiceModel.NetHttpBinding> erkennt, ob sie mit einem Anforderung-Antwort-Vertrag oder einem Duplexvertrag verwendet wird, und ändert das Verhalten entsprechend, indem HTTP für Anforderung-Antwort und WebSockets für Duplex verwendet werden. Dieses Verhalten kann mithilfe der <xref:System.ServiceModel.Channels.WebSocketTransportUsage>-Bindungseinstellung überschrieben werden: „WhenDuplex“ ist der Standardwert, der das oben beschriebene Verhalten aufweist. Never: Verhindert die Verwendung von WebSockets. Der Versuch, einen Duplexvertrag mit dieser Einstellung zu verwenden, löst eine Ausnahme aus. Always: Erzwingt die Verwendung von WebSockets sogar für Anforderung-Antwort-Verträge. NetHttpBinding unterstützt zuverlässige Sitzungen im HTTP-Modus und WebSocket-Modus. Im WebSocket-Modus werden Sitzungen vom Transport bereitgestellt.
+> <xref:System.ServiceModel.NetHttpBinding> ist eine für die Nutzung von HTTP- oder WebSocket-Diensten entwickelte Bindung, die standardmäßig die binäre Codierung verwendet. Die <xref:System.ServiceModel.NetHttpBinding> erkennt, ob sie mit einem Anforderung-Antwort-Vertrag oder einem Duplexvertrag verwendet wird, und ändert das Verhalten entsprechend, indem HTTP für Anforderung-Antwort und WebSockets für Duplex verwendet werden. Dieses Verhalten kann überschrieben werden, mithilfe der <xref:System.ServiceModel.Channels.WebSocketTransportUsage> Bindung festlegen: WhenDuplex: Dies ist der Standardwert, der das oben beschriebene Verhalten aufweist. Never: Verhindert die Verwendung von WebSockets. Der Versuch, einen Duplexvertrag mit dieser Einstellung zu verwenden, löst eine Ausnahme aus. Always: Erzwingt die Verwendung von WebSockets sogar für Anforderung-Antwort-Verträge. NetHttpBinding unterstützt zuverlässige Sitzungen im HTTP-Modus und WebSocket-Modus. Im WebSocket-Modus werden Sitzungen vom Transport bereitgestellt.
 
  Die in der vorstehenden Tabelle aufgeführten Funktionen werden in der folgenden Tabelle erläutert.
 
-|Feature|description|
+|Feature|Beschreibung|
 |-------------|-----------------|
 |Interoperabilitätstyp|Benennt das Protokoll oder die Technologie, mit dem bzw. der in der Bindung die Zusammenarbeit sichergestellt wird.|
-|Sicherheit|Gibt an, wie der Kanal geschützt wird.<br />– Keine: Die SOAP-Nachricht wird nicht geschützt, und der Client wird nicht authentifiziert.<br />– Transport: Die Sicherheitsanforderungen werden auf der Transportebene erfüllt.<br />– Nachricht: Die Sicherheitsanforderungen werden auf der Nachrichtenebene erfüllt.<br />– Gemischt: Ansprüche werden in der Nachricht übermittelt, Anforderungen an Integrität und Vertraulichkeit werden auf der Transportebene erfüllt.|
+|Sicherheit|Gibt an, wie der Kanal geschützt wird.<br />– None: Die SOAP-Nachricht ist nicht gesichert, und der Client ist nicht authentifiziert.<br />-Transport: Sicherheitsanforderungen werden auf der Transportebene erfüllt.<br />-Meldung: Sicherheitsanforderungen werden auf der Nachrichtenebene erfüllt.<br />-Gemischt: Ansprüche werden in der Nachricht übertragen; Anforderungen an Integrität und Vertraulichkeit werden der Transportebene erfüllt.|
 |Sitzung|Gibt an, ob die betreffende Bindung Sitzungsverträge unterstützt.|
 |Transaktionen|Gibt an, ob Transaktionen ermöglicht werden.|
 |Duplex|Gibt an, ob Duplexverträge unterstützt werden. Beachten Sie, dass diese Funktion in der Bindung Unterstützung für Sitzungen erfordert.|
-|Codierung|Gibt das Übertragungsformat der Nachricht an. Zulässige Werte sind:<br />– Text: beispielsweise UTF-8.<br />– Binär<br />– MTOM (Message Transmission Optimization Mechanism): Eine Methode zur effizienten Codierung binärer XML-Elemente im Kontext eines SOAP-Umschlags.|
-|Streaming|Gibt an, ob Streaming für eingehende und ausgehende Nachrichten unterstützt wird. Der Wert wird mithilfe der `TransferMode`-Eigenschaft für die Bindung festgelegt. Zulässige Werte sind:<br />- <xref:System.ServiceModel.TransferMode.Buffered>: Sowohl Anforderungen als auch Antwortnachrichten werden gepuffert.<br />- <xref:System.ServiceModel.TransferMode.Streamed>: Sowohl Anforderungen als auch Antwortnachrichten werden per Stream übertragen.<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest>: Die Anforderungsnachricht wird als Stream übertragen, und die Antwortnachricht wird gepuffert.<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse>: Die Anforderungsnachricht wird gepuffert, und die Antwortnachricht wird als Stream übertragen.|
+|Codierung|Gibt das Übertragungsformat der Nachricht an. Zulässige Werte sind:<br />– Text: beispielsweise UTF-8.<br />– Binär<br />-Message Transmission Optimization Mechanism (MTOM): Eine Methode für die effiziente Codierung binärer XML-Elemente innerhalb des Kontexts eines SOAP-Umschlags.|
+|Streaming|Gibt an, ob Streaming für eingehende und ausgehende Nachrichten unterstützt wird. Der Wert wird mithilfe der `TransferMode`-Eigenschaft für die Bindung festgelegt. Zulässige Werte sind:<br />- <xref:System.ServiceModel.TransferMode.Buffered>: Die Anforderungs- und Antwortnachrichten werden gepuffert.<br />- <xref:System.ServiceModel.TransferMode.Streamed>: Die Anforderungs- und Antwortnachrichten werden per Stream übertragen.<br />- <xref:System.ServiceModel.TransferMode.StreamedRequest>: Die Anforderungsnachricht wird per Stream übertragen, und die Antwortnachricht wird gepuffert.<br />- <xref:System.ServiceModel.TransferMode.StreamedResponse>: Die Anforderungsnachricht wird gepuffert, und die Antwortnachricht wird per Stream übertragen.|
 
 ## <a name="see-also"></a>Siehe auch
 
-[Übersicht über die Endpunkterstellung](endpoint-creation-overview.md)  
-[Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](using-bindings-to-configure-services-and-clients.md)  
-[Einfache WCF-Programmierung](basic-wcf-programming.md)  
+- [Übersicht über die Endpunkterstellung](endpoint-creation-overview.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](using-bindings-to-configure-services-and-clients.md)
+- [Einfache WCF-Programmierung](basic-wcf-programming.md)

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: e9518dcf2a9facfdc46c2f6245184ea2da95b819
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ec3cafec49ae2e05c67d177ad1ea1fdd9b73bca
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239000"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362495"
 ---
 # <a name="operators-c-programming-guide"></a>Operatoren (C#-Programmierhandbuch)
+
 In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operanden* in einem Ausdruck oder einer Anweisung angewendet wird. Operatoren mit einem Operanden, z. B. der Inkrementoperator (`++`) oder `new`, werden als *unäre* Operatoren bezeichnet. Operatoren mit zwei Operanden, z. B. arithmetische Operatoren (`+`,`-`,`*`,`/`), werden als *binäre* Operatoren bezeichnet. Der bedingte Operator (`?:`) verfügt über drei Operanden. Er ist der einzige ternäre Operator in C#.  
   
  Die folgende C#-Anweisung enthält einen einzelnen unären Operator und einen einzigen Operanden. Der Inkrementoperator `++`ändert den Wert des Operanden `y`.  
@@ -25,7 +26,8 @@ In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operan
   
  [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>Operatoren, Evaluierung und Operatorrangfolge  
+## <a name="operators-evaluation-and-operator-precedence"></a>Operatoren, Auswertung und Operatorrangfolge
+
  Ein Operand kann ein gültiger Ausdruck sein, der aus beliebig langem Code zusammengesetzt ist, und kann eine beliebige Anzahl von Unterausdrücken enthalten. In einem Ausdruck mit mehreren Operatoren wird die Reihenfolge, in der die Operatoren angewendet werden, von der *Operatorrangfolge*, der *Assoziativität*und von Klammern bestimmt.  
   
  Jeder Operator verfügt über einen definierten Vorrang. In einem Ausdruck, der mehrere Operatoren mit verschiedenen Rangfolgenebenen enthält, bestimmt die Rangfolge der Operatoren die Reihenfolge, in der die Operatoren ausgewertet werden. Beispielsweise weist die folgende Anweisung `n1`3 zu.  
@@ -127,7 +129,8 @@ In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operan
 |x op= y|Verbundzuweisung. Unterstützt diese Operatoren: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|Anonyme Funktion (Lambda-Ausdruck)|  
   
-## <a name="associativity"></a>Assoziativität  
+## <a name="associativity"></a>Assoziativität
+
  Wenn ein Ausdruck zwei oder mehr Operatoren mit demselben Rang enthält, wird die Auswertungsreihenfolge anhand des Assoziativitätsgesetzes festgelegt. Linksassoziative Operatoren werden von links nach rechts ausgewertet. `x * y / z` wird beispielsweise als `(x * y) / z`ausgewertet. Rechtsassoziative Operatoren werden von rechts nach links ausgewertet. Beispielsweise ist der Zuweisungsoperator rechtsassoziativ. Falls nicht, würde der folgende Code zu einem Fehler führen.  
   
 ```csharp  
@@ -154,7 +157,8 @@ a = (b = c);
 |`a = b - c + d`|a, b, c, -, d, +, =|  
 |`a += b -= c`|a, b, c, -=, +=|  
   
-## <a name="adding-parentheses"></a>Hinzufügen von Klammern  
+## <a name="adding-parentheses"></a>Hinzufügen von Klammern
+
  Sie können die Reihenfolge ändern, die von Operatorenrangfolge und Assoziativität festgelegt wird, indem Sie Klammern verwenden. Beispielsweise wird `2 + 3 * 2` gewöhnlich als 8 ausgewertet, da Multiplikationsoperatoren Vorrang gegenüber additiven Operatoren besitzen. Wenn Sie jedoch den Ausdruck als `(2 + 3) * 2`schreiben, wird die Addition vor der Multiplikation ausgewertet, und das Ergebnis ist 10. Die folgenden Beispiele veranschaulichen die Auswertungsreihenfolge der in Klammern gesetzten Ausdrücke. Wie in den vorherigen Beispielen werden die Operanden ausgewertet, bevor der Operator angewendet wird.  
   
 |Anweisung|Reihenfolge der Auswertung|  
@@ -163,10 +167,12 @@ a = (b = c);
 |`a = b - (c + d)`|a, b, c, d, +, -, =|  
 |`a = (b + c) * (d - e)`|a, b, c, +, d, e, -, *, =|  
   
-## <a name="operator-overloading"></a>Operatorüberladung  
+## <a name="operator-overloading"></a>Überladen von Operatoren
+
  Sie können das Verhalten der Operatoren für benutzerdefinierte Klassen und Strukturen ändern. Dieser Prozess wird als *Operatorüberladung*bezeichnet. Weitere Informationen finden Sie unter [Überladbare Operatoren](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) und im Artikel zum Schlüsselwort [operator](../../../csharp/language-reference/keywords/operator.md).  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte
+
  Weitere Informationen finden Sie unter [Operatorschlüsselwörter](../../../csharp/language-reference/keywords/operator-keywords.md) und [C#-Operatoren](../../../csharp/language-reference/operators/index.md).  
   
 ## <a name="see-also"></a>Siehe auch

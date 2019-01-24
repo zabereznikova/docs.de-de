@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Strukturen in eine XSLT-Formatvorlage (Visual Basic)'
+title: 'Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Bäumen in eine XSLT-Formatvorlage (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: c19d290e5b7acdf2702e24383a176ed06c9c7a1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed31e00b6d67a6707a98977c58e4e7afe35c8ad7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746298"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Strukturen in eine XSLT-Formatvorlage (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Vorgehensweise: Verwenden von Anmerkungen zum Transformieren von LINQ to XML-Bäumen in eine XSLT-Formatvorlage (Visual Basic)
 Sie können Anmerkungen verwenden, um das Transformieren von XML-Strukturen zu ermöglichen.  
   
  Einige XML-Dokumente sind "dokumentorientiert mit gemischtem Inhalt". Bei solchen Dokumenten kennen Sie nicht unbedingt die Form der untergeordneten Knoten eines Elements. So könnte z. B. ein Knoten, der Text enthält, wie folgt aussehen:  
@@ -18,7 +18,7 @@ Sie können Anmerkungen verwenden, um das Transformieren von XML-Strukturen zu e
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>  
 ```  
   
- Pro vorhandenem Textknoten kann eine unbegrenzte Anzahl untergeordneter `<b>`-Elemente und `<i>`-Elemente vorhanden sein. Dieser Ansatz führt zu einer Reihe von anderen Situationen: z. B. Seiten, die eine Vielzahl von untergeordneten Elementen, z. B. normale Absätze, Absätze mit Aufzählungszeichen und Bitmaps enthalten kann. Zellen in einer Tabelle können Text, Dropdownlisten oder Bitmaps enthalten. Eine der wichtigsten Eigenschaften von dokumentorientiertem XML besteht darin, dass Sie nicht wissen, welche untergeordneten Elemente ein bestimmtes Element besitzen wird.  
+ Pro vorhandenem Textknoten kann eine unbegrenzte Anzahl untergeordneter `<b>`-Elemente und `<i>`-Elemente vorhanden sein. Dieser Ansatz führt zu einer Reihe anderer Situationen: z. B. Seiten, die eine Vielzahl von untergeordneten Elementen, z. B. normale Absätze, Absätze mit Aufzählungszeichen und Bitmaps enthalten können. Zellen in einer Tabelle können Text, Dropdownlisten oder Bitmaps enthalten. Eine der wichtigsten Eigenschaften von dokumentorientiertem XML besteht darin, dass Sie nicht wissen, welche untergeordneten Elemente ein bestimmtes Element besitzen wird.  
   
  Wenn Sie Elemente in einer Struktur transformieren möchten und nicht wirklich viel über die untergeordneten Elemente der Elemente wissen, die transformiert werden sollen, bietet sich die Verwendung von Anmerkungen als effektiver Ansatz an.  
   
@@ -34,7 +34,7 @@ Sie können Anmerkungen verwenden, um das Transformieren von XML-Strukturen zu e
   
 -   Das neue Element, das als Anmerkung hinzugefügt wird, kann neue untergeordnete Knoten enthalten, und es kann eine Teilstruktur jeder beliebigen Form bilden.  
   
--   Dabei gilt folgende spezielle Regel: Wenn sich ein untergeordneter Knoten des neuen Elements in einem anderen Namespace befindet, einem Namespace, der zu diesem Zweck erfunden wurde (in diesem Beispiel lautet der Namespace `http://www.microsoft.com/LinqToXmlTransform/2007`), wird dieses untergeordnete Element nicht in die neue Struktur kopiert. Stattdessen gilt: Wenn es sich bei dem Namespace um den oben erwähnten speziellen Namespace handelt und der lokale Name des Elements `ApplyTransforms` lautet, dann werden die untergeordneten Knoten des Elements in der ursprünglichen Struktur durchlaufen und in die neue Struktur kopiert (mit der Ausnahme, dass mit Anmerkungen versehene untergeordnete Elemente diesen Regeln entsprechend selbst transformiert werden).  
+-   Es ist eine spezielle Regel: Wenn ein untergeordneter Knoten des neuen Elements in einem anderen Namespace, einem Namespace ist, die für diesen Zweck besteht (in diesem Beispiel ist der Namespace ist `http://www.microsoft.com/LinqToXmlTransform/2007`), und klicken Sie dann dieses untergeordnete Element nicht in die neue Struktur kopiert wird. Stattdessen gilt: Wenn es sich bei dem Namespace um den oben erwähnten speziellen Namespace handelt und der lokale Name des Elements `ApplyTransforms` lautet, dann werden die untergeordneten Knoten des Elements in der ursprünglichen Struktur durchlaufen und in die neue Struktur kopiert (mit der Ausnahme, dass mit Anmerkungen versehene untergeordnete Elemente diesen Regeln entsprechend selbst transformiert werden).  
   
 -   Dies entspricht in gewissem Maße der Spezifikation von Transformationen in XSL. Die Abfrage, die einen Satz von Knoten auswählt, entspricht dem XPath-Ausdruck für eine Vorlage. Der Code zum Erstellen des neuen <xref:System.Xml.Linq.XElement>, das als Anmerkung gespeichert wird, entspricht dem Sequenzkonstruktor in XSL, und das `ApplyTransforms`-Element entspricht von seiner Funktion her dem `xsl:apply-templates`-Element in XSL.  
   
@@ -378,5 +378,5 @@ After Transform
 </Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>Siehe auch
+- [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

@@ -1,19 +1,19 @@
 ---
 title: Informationen zur Autorisierung in .NET-Microservices und Webanwendungen
-description: .NET Microservices-Architektur für .NET-Containeranwendungen | Informationen zur Autorisierung in .NET-Microservices und Webanwendungen
+description: 'Sicherheit in .NET-Microservices und Webanwendungen: Verschaffen Sie sich einen Überblick über die wichtigsten Autorisierungsoptionen in ASP.NET Core-Anwendungen – rollen- und richtlinienbasiert.'
 author: mjrousos
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 53202d0f890df040480b9f54c54aaefdd025dffa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/19/2018
+ms.openlocfilehash: 0c8f827d8e4d80a0bcd69af5ab39ea2b6269f2b6
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149561"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362456"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>Informationen zur Autorisierung in .NET-Microservices und Webanwendungen
 
-Nach der Authentifizierung müssen ASP.NET Core-Web-APIs den Zugriff autorisieren. Dieser Prozess ermöglicht einem Dienst die Zurverfügungstellung von APIs für einige authentifizierte Benutzer, jedoch nicht alle. Die [Autorisierung](https://docs.microsoft.com/aspnet/core/security/authorization/introduction) kann basierend auf Benutzerrollen oder basierend auf einer benutzerdefinierten Richtlinie erfolgen, welche die Überprüfung von Ansprüchen oder anderen Heuristiken umfassen kann.
+Nach der Authentifizierung müssen ASP.NET Core-Web-APIs den Zugriff autorisieren. Dieser Prozess ermöglicht einem Dienst die Zurverfügungstellung von APIs für einige authentifizierte Benutzer, jedoch nicht alle. Die [Autorisierung](/aspnet/core/security/authorization/introduction) kann basierend auf Benutzerrollen oder basierend auf einer benutzerdefinierten Richtlinie erfolgen, welche die Überprüfung von Ansprüchen oder anderen Heuristiken umfassen kann.
 
 Die Einschränkung des Zugriffs auf eine ASP.NET Core-MVC-Route ist so einfach wie die Anwendung eines Authorize-Attributs auf die Aktionsmethode (oder auf die Controllerklasse, wenn für sämtliche Controlleraktionen eine Autorisierung erforderlich ist). Siehe hierzu das folgende Beispiel:
 
@@ -33,11 +33,11 @@ public class AccountController : Controller
 
 Standardmäßig wird durch das Hinzufügen eines Authorize-Attributs ohne Parameter der Zugriff für diesen Controller oder diese Aktion auf authentifizierte Benutzer beschränkt. Wenn Sie eine API weiter beschränken möchten, sodass sie nur für bestimmte Benutzer verfügbar ist, kann das Attribut so erweitert werden, dass erforderliche Rollen oder Richtlinien angegeben werden, die von den Benutzern erfüllt werden müssen.
 
-## <a name="implementing-role-based-authorization"></a>Implementieren einer rollenbasierten Autorisierung
+## <a name="implement-role-based-authorization"></a>Implementieren einer rollenbasierten Autorisierung
 
-Die ASP.NET Core-Identität verfügt über ein integriertes Rollenkonzept. Neben Benutzern speichert die ASP.NET Core-Identität Informationen zu verschiedenen, von der Anwendung verwendeten Rollen und verfolgt mit, welche Benutzer welchen Rollen zugewiesen werden. Diese Zuweisungen können programmgesteuert mit dem RoleManager-Typ (der Rollen in persistentem Speicher aktualisiert) und dem UserManager-Typ (der Benutzern Rollen zuweisen und diese Zuweisungen wieder aufheben kann) geändert werden.
+Die ASP.NET Core-Identität verfügt über ein integriertes Rollenkonzept. Neben Benutzern speichert die ASP.NET Core-Identität Informationen zu verschiedenen, von der Anwendung verwendeten Rollen und verfolgt mit, welche Benutzer welchen Rollen zugewiesen werden. Diese Zuweisungen können programmgesteuert mit dem `RoleManager`-Typ geändert werden, der Rollen in persistentem Speicher aktualisiert, und dem `UserManager`-Typ, der Benutzern Rollen gewähren oder sie widerrufen kann.
 
-Wenn Sie eine Authentifizierung mit JWT-Bearertoken durchführen, füllt die Middleware für die Authentifizierung mit ASP.NET Core-JWT-Bearertoken die Rollen eines Benutzers basierend auf im Token gefundenen Rollenansprüchen auf. Wenn Sie den Zugriff auf eine MVC-Aktion oder einen MVC-Controller auf Benutzer in bestimmten Rollen beschränken möchten, können Sie, wie im folgenden Beispiel dargestellt, den Parameter „Roles“ im Header „Autorisieren“ einschließen:
+Wenn Sie eine Authentifizierung mit JWT-Bearertoken durchführen, füllt die Middleware für die Authentifizierung mit ASP.NET Core-JWT-Bearertoken die Rollen eines Benutzers basierend auf im Token gefundenen Rollenansprüchen auf. Wenn Sie den Zugriff auf eine MVC-Aktion oder einen MVC-Controller auf Benutzer in bestimmten Rollen beschränken möchten, können Sie, wie im folgenden Codefragment dargestellt, den Parameter „Roles“ in die Anmerkung (das Attribut) „Authorize“ einschließen:
 
 ```csharp
 [Authorize(Roles = "Administrator, PowerUser")]
@@ -69,15 +69,15 @@ public ActionResult API1 ()
 
 In diesem Beispiel muss ein Benutzer folgende Voraussetzungen erfüllen, damit API1 aufgerufen wird:
 
--   Er muss in der Rolle „Administrator“ *oder* „PowerUser“ sein, *und*
+- Er muss in der Rolle „Administrator“ *oder* „PowerUser“ sein, *und*
 
--   er muss in der Rolle „RemoteEmployee“ sein, *und*
+- er muss in der Rolle „RemoteEmployee“ sein, *und*
 
--   er muss die Bedingungen eines benutzerdefinierten Handlers für die CustomPolicy-Autorisierung erfüllen.
+- er muss die Bedingungen eines benutzerdefinierten Handlers für die CustomPolicy-Autorisierung erfüllen.
 
-## <a name="implementing-policy-based-authorization"></a>Implementieren einer richtlinienbasierten Autorisierung
+## <a name="implement-policy-based-authorization"></a>Implementieren einer richtlinienbasierten Autorisierung
 
-Benutzerdefinierte Autorisierungsregeln können auch mithilfe von [Autorisierungsrichtlinien](https://docs.asp.net/en/latest/security/authorization/policies.html) geschrieben werden. In diesem Abschnitt wird eine Übersicht bereitgestellt. Weitere Details finden Sie online unter [ASP.NET Authorization Workshop](https://github.com/blowdart/AspNetAuthorizationWorkshop) (Workshop zur ASP.NET-Autorisierung).
+Benutzerdefinierte Autorisierungsregeln können auch mithilfe von [Autorisierungsrichtlinien](https://docs.asp.net/en/latest/security/authorization/policies.html) geschrieben werden. Dieser Abschnitt enthält einen Überblick. Weitere Informationen finden Sie unter [ASP.NET Authorization Workshop (ASP.NET-Autorisierungsworkshop)](https://github.com/blowdart/AspNetAuthorizationWorkshop).
 
 Benutzerdefinierte Autorisierungsrichtlinien werden in der Startup.ConfigureServices-Methode mithilfe der service.AddAuthorization-Methode registriert. Diese Methode wählt einen Delegaten für die Konfiguration eines AuthorizationOptions-Arguments aus.
 
@@ -93,37 +93,37 @@ services.AddAuthorization(options =>
 });
 ```
 
-Wie im Beispiel dargestellt wird, können Richtlinien unterschiedliche Arten von Anforderungen zugeordnet werden. Nach der Registrierung der Richtlinien können diese auf eine Aktion oder einen Controller angewendet werden, indem der Name der jeweiligen Richtlinie als Richtlinienargument des Attributs „Authorize“ (z.B. \[Authorize(Policy="EmployeesOnly")\]) übergeben wird. Richtlinien können mehrere Anforderungen enthalten, nicht nur eine (wie in diesen Beispielen zu sehen ist).
+Wie im Beispiel dargestellt wird, können Richtlinien unterschiedliche Arten von Anforderungen zugeordnet werden. Nach der Registrierung der Richtlinien können diese auf eine Aktion oder einen Controller angewendet werden, indem der Name der jeweiligen Richtlinie als Argument „Policy“ des Attributs „Authorize“ (z.B. `[Authorize(Policy="EmployeesOnly")]`) übergeben wird. Richtlinien können mehrere Anforderungen enthalten, nicht nur eine (wie in diesen Beispielen zu sehen ist).
 
-Im vorherigen Beispiel stellt der Aufruf von „AddPolicy“ nur eine alternative Möglichkeit für die Autorisierung nach Rollen dar. Wenn \[Authorize(Policy="AdministratorsOnly")\] auf eine API angewendet wird, können nur Benutzer mit der Rolle „Administrator“ darauf zugreifen.
+Im vorherigen Beispiel stellt der Aufruf von „AddPolicy“ nur eine alternative Möglichkeit für die Autorisierung nach Rollen dar. Wenn `[Authorize(Policy="AdministratorsOnly")]` auf eine API angewendet wird, können nur Benutzer mit der Rolle „Administrator“ darauf zugreifen.
 
-Der zweite Aufruf von „AddPolicy“ veranschaulicht eine einfache Möglichkeit für die Anforderung, dass ein bestimmter Anspruch für den Benutzer vorhanden sein sollte. Bei der RequireClaim-Methode werden zudem optional erwartete Werte für den Anspruch übernommen. Wenn Werte angegeben sind, wird die Anforderung nur dann erfüllt, wenn der Benutzer sowohl über einen Anspruch des richtigen Typs als auch über einen der angegebenen Werte verfügt. Bei Verwendung der Middleware für die Authentifizierung mit JWT-Bearertoken stehen alle JWT-Eigenschaften als Benutzeransprüche zur Verfügung.
+Der zweite Aufruf von <xref:Microsoft.AspNetCore.Authorization.AuthorizationOptions.AddPolicy%2A> veranschaulicht eine einfache Möglichkeit für die Anforderung, dass ein bestimmter Anspruch für den Benutzer vorhanden sein sollte. Bei der <xref:Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder.RequireClaim%2A>-Methode werden zudem optional erwartete Werte für den Anspruch übernommen. Wenn Werte angegeben sind, wird die Anforderung nur dann erfüllt, wenn der Benutzer sowohl über einen Anspruch des richtigen Typs als auch über einen der angegebenen Werte verfügt. Bei Verwendung der Middleware für die Authentifizierung mit JWT-Bearertoken stehen alle JWT-Eigenschaften als Benutzeransprüche zur Verfügung.
 
-Die interessanteste der hier dargestellten Richtlinien ist die dritte AddPolicy-Methode, da diese eine benutzerdefinierte Autorisierungsanforderung verwendet. Durch die Verwendung von benutzerdefinierten Autorisierungsanforderungen verfügen Sie über sehr viel Kontrolle über die Vorgehensweise bei der Autorisierung. Damit dies funktioniert, müssen Sie folgende Typen implementieren:
+Die interessanteste der hier dargestellten Richtlinien ist die dritte `AddPolicy`-Methode, da diese eine benutzerdefinierte Autorisierungsanforderung verwendet. Durch die Verwendung von benutzerdefinierten Autorisierungsanforderungen verfügen Sie über sehr viel Kontrolle über die Vorgehensweise bei der Autorisierung. Damit dies funktioniert, müssen Sie folgende Typen implementieren:
 
--   Einen Anforderungstyp, der von IAuthorizationRequirement abgeleitet wird und Felder enthält, in denen die Anforderungsdetails angegeben sind. Im Beispiel handelt es sich hierbei um ein Altersfeld für den MinimumAgeRequirement-Samplingtyp.
+- Einen Anforderungstyp, der von <xref:Microsoft.AspNetCore.Authorization.IAuthorizationRequirement> abgeleitet wird und Felder enthält, in denen die Anforderungsdetails angegeben sind. Im Beispiel handelt es sich hierbei um ein Altersfeld für den `MinimumAgeRequirement`-Typ.
 
--   Einen Handler, der AuthorizationHandler&lt;T&gt; implementiert, wobei „T“ für den IAuthorizationRequirement-Typ steht, dessen Bedingungen der Handler erfüllen kann. Der Handler muss die HandleRequirementAsync-Methode implementieren, die überprüft, ob ein angegebener Kontext mit Informationen zum Benutzer die Anforderung erfüllt.
+- Ein Handler, der <xref:Microsoft.AspNetCore.Authorization.AuthorizationHandler%601> implementiert, wobei „T“ der Typ von <xref:Microsoft.AspNetCore.Authorization.IAuthorizationRequirement> ist, den der Handler bedienen kann. Der Handler muss die <xref:Microsoft.AspNetCore.Authorization.AuthorizationHandler%601.HandleRequirementAsync%2A>-Methode implementieren, die überprüft, ob ein angegebener Kontext mit Informationen zum Benutzer die Anforderung erfüllt.
 
-Wenn der Benutzer die Anforderung erfüllt, deutet ein Aufruf von „context.Succeed“ darauf hin, dass der Benutzer autorisiert wurde. Wenn es mehrere Möglichkeiten für die Erfüllung einer Autorisierungsanforderung durch einen Benutzer gibt, können mehrere Handler erstellt werden.
+Wenn der Benutzer die Anforderung erfüllt, deutet ein Aufruf von `context.Succeed` darauf hin, dass der Benutzer autorisiert wurde. Wenn es mehrere Möglichkeiten für die Erfüllung einer Autorisierungsanforderung durch einen Benutzer gibt, können mehrere Handler erstellt werden.
 
-Neben der Registrierung benutzerdefinierter Richtlinienanforderungen bei AddPolicy-Aufrufen müssen Sie auch über die Abhängigkeitsinjektion benutzerdefinierte Anforderungshandler registrieren (services.AddTransient&lt;IAuthorizationHandler, MinimumAgeHandler&gt;()).
+Neben der Registrierung benutzerdefinierter Richtlinienanforderungen mit `AddPolicy`-Aufrufen müssen Sie auch über die Abhängigkeitsinjektion benutzerdefinierte Anforderungshandler registrieren (`services.AddTransient<IAuthorizationHandler, MinimumAgeHandler>()`).
 
-Ein Beispiel für eine benutzerdefinierte Autorisierungsanforderung und einen Handler zur Überprüfung des Alters eines Benutzers (basierend auf einem „DateOfBirth“-Anspruch) ist in der Dokumentation zur [ASP.NET Core-Autorisierung](https://docs.asp.net/en/latest/security/authorization/policies.html) verfügbar.
+Ein Beispiel für eine benutzerdefinierte Autorisierungsanforderung und einen Handler zur Überprüfung des Alters eines Benutzers (basierend auf einem `DateOfBirth`-Anspruch) ist in der [Dokumentation](https://docs.asp.net/en/latest/security/authorization/policies.html) zur ASP.NET Core-Autorisierung verfügbar.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **ASP.NET Core Authentication (ASP.NET Core-Authentifizierung)**
-    [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
+- **ASP.NET Core-Authentifizierung** \
+  [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
 
--   **ASP.NET Core Authorization (ASP.NET Core-Autorisierung)**
-    [*https://docs.microsoft.com/aspnet/core/security/authorization/introduction*](https://docs.microsoft.com/aspnet/core/security/authorization/introduction)
+- **ASP.NET Core-Autorisierung** \
+  [*https://docs.microsoft.com/aspnet/core/security/authorization/introduction*](/aspnet/core/security/authorization/introduction)
 
--   **Role based Authorization (Rollenbasierte Autorisierung)**
-    [*https://docs.microsoft.com/aspnet/core/security/authorization/roles*](https://docs.microsoft.com/aspnet/core/security/authorization/roles)
+- **Rollenbasierte Autorisierung** \
+  [*https://docs.microsoft.com/aspnet/core/security/authorization/roles*](/aspnet/core/security/authorization/roles)
 
--   **Custom Policy-Based Authorization (Benutzerdefinierte, richtlinienbasierte Autorisierung)**
-    [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](https://docs.microsoft.com/aspnet/core/security/authorization/policies)
+- **Benutzerdefinierte richtlinienbasierte Autorisierung** \
+  [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](/aspnet/core/security/authorization/policies)
 
 >[!div class="step-by-step"]
 >[Zurück](index.md)

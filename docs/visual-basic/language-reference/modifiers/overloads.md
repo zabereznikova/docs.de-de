@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: b68c13d192845fc4bedf1b34a40165ccc1a5ff75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b20dbf20c580d08553ae22f6a62ee33a7354db74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624914"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur bzw. mehrere mit dem gleichen Namen neu deklariert.  
   
 ## <a name="remarks"></a>Hinweise  
- *Überladen von* wird die Bereitstellung von mehr als eine Definition für eine bestimmte Eigenschaft oder Prozedur Namen im selben Bereich. Durch das erneute Deklarieren einer Eigenschaft oder Prozedur mit einer anderen Signatur wird gelegentlich als bezeichnet *Ausblenden nach Signatur*.  
+ *Überladen von* wird die Bereitstellung von mehr als eine Definition für einen angegebenen Eigenschaft oder Prozedur im gleichen Bereich. Durch das erneute Deklarieren einer Eigenschaft oder Prozedur mit einer anderen Signatur wird gelegentlich aufgerufen *Ausblenden nach Signatur*.  
   
 ## <a name="rules"></a>Regeln  
   
 -   **Deklarationskontext.** Sie können `Overloads` nur in einer Eigenschaft oder einer Prozedurdeklarationsanweisung verwenden.  
   
--   **Kombinierte Modifizierer.** Sie können keine angeben `Overloads` zusammen mit [Schatten](../../../visual-basic/language-reference/modifiers/shadows.md) in derselben Prozedurdeklaration.  
+-   **Kombinierte Modifizierer.** Sie können keine angeben `Overloads` zusammen mit [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) in derselben Prozedurdeklaration.  
   
 -   **Erforderliche Unterschiede.** Die *Signatur* in dieser Deklaration muss sich von der Signatur jeder Eigenschaft oder Prozedur, die sie überlädt. Die Signatur besteht aus der Eigenschaft oder dem Prozedurnamen und dem Folgenden:  
   
@@ -73,9 +73,9 @@ Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur bzw.
   
  [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)  
- [Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)  
- [Gewusst wie: Definieren eines Konvertierungsoperators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+## <a name="see-also"></a>Siehe auch
+- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
+- [Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
+- [Vorgehensweise: Definieren eines Konvertierungsoperators](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

@@ -3,13 +3,13 @@ title: SourceLink und .NET-Bibliotheken
 description: Empfehlungen für bewährte Methoden zum Verwenden von SourceLink zur Verbesserung des Debuggens für .NET-Bibliotheken.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 3bc72e158a5773b656095f9ce58b442469f91e67
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/15/2019
+ms.openlocfilehash: be97f868e2fcfc6c45e4bbac45b033f8914f4d99
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128926"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333537"
 ---
 # <a name="sourcelink"></a>SourceLink
 
@@ -35,9 +35,9 @@ Sie können mit dem [NuGet-Paket-Explorer](https://github.com/NuGetPackageExplor
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> weist den Debugger an, schrittweise durch den Code zu laufen, anstatt ihn schrittweise auszuführen.
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> bestimmt, ob und wie ein Member in Debuggervariablenfenstern angezeigt wird.
 
-**✔️ Betten** Sie Symboldateien (`*.pdb`) in das NuGet-Paket ein.
+**✔️ ERWÄGEN SIE** das Veröffentlichen von Symboldateien (`*.pdb`).
 
-> Normalerweise werden Symboldateien in einem [Symbolpaket](./nuget.md#symbol-packages) veröffentlicht. Derzeit unterstützt der öffentliche Haupthost für Symbole nicht die portierbaren Symboldateien (`*.pdb`), die von SDK-Projekten erstellt wurden. Das bedeutet, Symbolpakete sind nicht nützlich.
+> Weitere Informationen zu Symboldateien und Symbolpaketen finden Sie unter [Symbolpakete](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
 >[Zurück](dependencies.md)
