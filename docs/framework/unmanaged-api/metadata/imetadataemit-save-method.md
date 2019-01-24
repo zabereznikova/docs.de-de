@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6d97d3e4a93985f9b2de3ed9785eff5f7f46c36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1a2be03e82d5be9bae64d7169709d16c40b66e37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444678"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54511877"
 ---
 # <a name="imetadataemitsave-method"></a>IMetaDataEmit::Save-Methode
-Speichert alle Metadaten im aktuellen Bereich für die Datei an der angegebenen Adresse an.  
+Speichert alle Metadaten im aktuellen Bereich in die Datei an der angegebenen Adresse an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,20 +38,20 @@ HRESULT Save (
   
 #### <a name="parameters"></a>Parameter  
  `wzFile`  
- [in] Der Name der Datei zu speichern. Wenn dieser Wert null ist, wird die Kopie im Arbeitsspeicher bis zum letzten Speicherort gespeichert, der verwendet wurde.  
+ [in] Der Name der Datei zu speichern. Wenn dieser Wert null ist, wird der in-Memory-Kopie mit dem letzten Speicherort gespeichert, der verwendet wurde.  
   
  `dwSaveFlags`  
- [in] Reserviert. NULL muss sein.  
+ [in]: Reserviert NULL muss sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

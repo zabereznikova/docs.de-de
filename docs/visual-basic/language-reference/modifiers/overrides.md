@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 81118b9e97f320bffdbb58e5e1a2859052c4cee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbcd0625cdbcd06affc495ca29972c6c183c10f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582098"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur mit dem gleichen Namen überschreibt, die von einer Basisklasse geerbt wurde.  
@@ -43,7 +43,7 @@ Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur mit 
   
 -   **Zusätzliche Übereinstimmung.** Diese Deklaration muss nicht nur in Bezug auf die Signatur, sondern auch in folgenden Punkten mit der Basisklassenversion übereinstimmen:  
   
-    -   Zugriffsebenenmodifizierer (z. B. [öffentlichen](../../../visual-basic/language-reference/modifiers/public.md))  
+    -   Zugriffsebenenmodifizierer (z. B. [öffentliche](../../../visual-basic/language-reference/modifiers/public.md))  
   
     -   Übergabemechanismus jedes Parameters ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) oder [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
   
@@ -61,11 +61,11 @@ Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur mit 
   
  [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)  
- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Typliste](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a>Siehe auch
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Typliste](../../../visual-basic/language-reference/statements/type-list.md)

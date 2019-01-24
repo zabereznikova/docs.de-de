@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb187719ff502abe61ac5deb69c6427a4a64ab44
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 74eb098ee68f57477c8b9115db2bce60919f0b12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580212"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance-Funktion
 Erstellt eine neue Instanz einer Klasse.    
@@ -47,7 +47,7 @@ HRESULT SpawnInstance (
 [in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `lFlags`  
-[in] Reserviert. Dieser Parameter muss 0 sein.
+[in]: Reserviert Dieser Parameter muss 0 sein.
 
 `ppNewInstance`  
 [out] Erhält der Zeiger auf die neue Instanz der Klasse. Wenn ein Fehler auftritt, ist ein neues Objekt nicht zurückgegeben, und `ppNewInstance` wird links unverändert.
@@ -60,7 +60,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` ist keine gültige Klassendefinition und können keine neue Instanzen erzeugen. Entweder ist es unvollständig, oder es wurde nicht registriert mit der Windows-Verwaltung durch den Aufruf [PutClassWmi](putclasswmi.md). |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `ppNewClass` ist `null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` ist `null`. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
@@ -75,11 +75,11 @@ Diese Funktion umschließt einen Aufruf der [IWbemClassObject::SpawnInstance](/w
 Das neue Objekt im zurückgegebenen `ppNewClass` wird automatisch eine Unterklasse des aktuellen Objekts. Dieses Verhalten kann nicht überschrieben werden. Es gibt keine andere Methode, die von der Unterklasse (abgeleitete Klassen) erstellt werden können.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
