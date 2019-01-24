@@ -1,18 +1,12 @@
 ---
-title: C#-Präprozessoranweisungen
+title: 'C#-Präprozessoranweisungen'
 ms.date: 07/20/2015
 f1_keywords:
-- cs.preprocessor
+  - cs.preprocessor
 helpviewer_keywords:
-- preprocessor directives [C#]
-- keywords [C#], preprocessor directives
+  - 'preprocessor directives [C#]'
+  - 'keywords [C#], preprocessor directives'
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036092"
 ---
 # <a name="c-preprocessor-directives"></a>C#-Präprozessoranweisungen
 Dieser Abschnitt enthält Informationen zu den folgenden C#-Präprozessoranweisungen:
@@ -40,5 +34,5 @@ Eine Präprozessordirektive muss die einzige Anweisung in einer Zeile sein.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Referenz](../../../csharp/language-reference/index.md)
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)

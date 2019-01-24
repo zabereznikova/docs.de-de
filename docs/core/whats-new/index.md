@@ -1,18 +1,12 @@
 ---
-title: Neuerungen in .NET Core
+title: Neuigkeiten in .NET Core
 description: Hier erhalten Sie Informationen zu den neuen Features in den verschiedenen .NET Core-Versionen.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: 0a61be99cf149985a75205b289a5bd42f70cc5e8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149197"
 ---
-# <a name="whats-new-in-net-core"></a>Neuerungen in .NET Core
+# <a name="whats-new-in-net-core"></a>Neuigkeiten in .NET Core
 
 Diese Seite stellt eine Zusammenfassung neuer Funktionen in jedem Release von .NET Core ab .NET Core 2.0 bereit. Die folgenden Links bieten ausführliche Informationen zu den wichtigsten Funktionen, die in jedem Release hinzugefügt wurden.
 
@@ -26,4 +20,4 @@ Diese Seite stellt eine Zusammenfassung neuer Funktionen in jedem Release von .N
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Neuerungen in ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
+- [What's new in ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0) (Neuigkeiten in ASP.NET Core 2.0)

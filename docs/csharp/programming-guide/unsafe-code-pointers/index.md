@@ -1,22 +1,16 @@
 ---
-title: Unsicherer Code und Zeiger – C#-Programmierhandbuch
+title: 'Unsicherer Code und Zeiger – C#-Programmierhandbuch'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- security [C#], type safety
-- C# language, unsafe code
-- type safety [C#]
-- unsafe keyword [C#]
-- unsafe code [C#]
-- C# language, pointers
-- pointers [C#], about pointers
+  - 'security [C#], type safety'
+  - 'C# language, unsafe code'
+  - 'type safety [C#]'
+  - 'unsafe keyword [C#]'
+  - 'unsafe code [C#]'
+  - 'C# language, pointers'
+  - 'pointers [C#], about pointers'
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 7d7371fb29f12a766ef6b78544f82d021dd8dceb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237908"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Unsicherer Code und Zeiger (C#-Programmierhandbuch)
 Um Typsicherheit und Sicherheit zu gewährleisten, unterstützt C# standardmäßig keine Zeigerarithmetik. Sie können jedoch das [unsafe](../../../csharp/language-reference/keywords/unsafe.md)-Schlüsselwort verwenden, um einen unsicheren Kontext zu definieren, in dem Zeiger verwendet werden können. Weitere Informationen über Zeiger finden Sie unter [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  

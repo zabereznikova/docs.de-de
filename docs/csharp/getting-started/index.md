@@ -1,18 +1,12 @@
 ---
-title: Erste Schritte – Leitfaden für C#
-description: Entdecken Sie kurze, einfache Tutorials, die Sie schnell in C#-Konzepte und das Schreiben von .NET Core-Anwendungen einführen.
+title: 'Erste Schritte – Leitfaden für C#'
+description: 'Entdecken Sie kurze, einfache Tutorials, die Sie schnell in C#-Konzepte und das Schreiben von .NET Core-Anwendungen einführen.'
 helpviewer_keywords:
-- Visual C#, getting started
-- getting started, Visual C#
+  - 'Visual C#, getting started'
+  - 'getting started, Visual C#'
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 73bf7ca1f05bd388239d970fcc6e33bf30810111
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837892"
 ---
 # <a name="get-started-with-c"></a>Erste Schritte mit C\#
 
@@ -64,4 +58,4 @@ Folgende Themen sind verfügbar:
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Erste Schritte mit Visual C# und Visual Basic in Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Erste Schritte mit Visual C# und Visual Basic in Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

@@ -1,16 +1,11 @@
 ---
 title: Erstellen von .NET Core aus einer Quelle
-description: Erfahren Sie, wie Sie .NET Core und .NET Core-CLI aus dem Quellcode erstellen.
+description: 'Erfahren Sie, wie Sie .NET Core und .NET Core-CLI aus dem Quellcode erstellen.'
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 036d7fb64d74c00b4ac0e3d34bacc834f3c3a198
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170066"
 ---
+
 # <a name="build-net-core-from-source"></a>Erstellen von .NET Core aus einer Quelle
 
 Die Möglichkeit, .NET Core aus dem Quellcode zu erstellen, ist auf verschiedene Weise wichtig: Es erleichtert das Portieren von .NET Core auf neue Plattformen, es ermöglicht Beiträge und Korrekturen des Produkts, und es ermöglicht das Erstellen von benutzerdefinierten Versionen von .NET.
@@ -101,6 +96,6 @@ Verwenden Sie die ausführbare Datei `dotnet` von *artifacts/{os}-{arch}/stage2*
 
 ## <a name="see-also"></a>Siehe auch
 
-* [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
-* [.NET Core CLI Developer Guide (Entwicklerhandbuch für .NET Core-CLI)](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
-* [.NET Core distribution packaging (Verpacken der Verteilung in .NET Core)](./distribution-packaging.md)
+- [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [.NET Core CLI Developer Guide (Entwicklerhandbuch für .NET Core-CLI)](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
+- [.NET Core distribution packaging (Verpacken der Verteilung in .NET Core)](./distribution-packaging.md)

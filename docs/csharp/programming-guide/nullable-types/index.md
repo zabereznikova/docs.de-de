@@ -1,19 +1,13 @@
 ---
-title: Nullable-Typen – C#-Programmierhandbuch
+title: 'Nullable-Typen – C#-Programmierhandbuch'
 ms.custom: seodec18
-description: Informationen zu Nullable-Typen in C# und der Verwendung dieser Typen
+description: 'Informationen zu Nullable-Typen in C# und der Verwendung dieser Typen'
 ms.date: 07/30/2018
 helpviewer_keywords:
-- nullable types [C#]
-- C# language, nullable types
-- types [C#], nullable
+  - 'nullable types [C#]'
+  - 'C# language, nullable types'
+  - 'types [C#], nullable'
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245122"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Nullable-Typen (C#-Programmierhandbuch)
 
@@ -57,10 +51,10 @@ Weitere Informationen finden Sie in den Themen [Verwenden von Nullable-Typen](us
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Nullable%601?displayProperty=nameWithType>  
-- <xref:System.Nullable?displayProperty=nameWithType>  
-- [?? Operator](../../language-reference/operators/null-coalescing-operator.md)  
-- [C#-Programmierhandbuch](../index.md)  
-- [Leitfaden für C#](../../index.md)  
-- [C#-Referenz](../../language-reference/index.md)  
-- [Auf NULL festlegbare Werttypen (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
+- <xref:System.Nullable%601?displayProperty=nameWithType>
+- <xref:System.Nullable?displayProperty=nameWithType>
+- [?? Operator](../../language-reference/operators/null-coalescing-operator.md)
+- [C#-Programmierhandbuch](../index.md)
+- [Leitfaden für C#](../../index.md)
+- [C#-Referenz](../../language-reference/index.md)
+- [Auf NULL festlegbare Werttypen (Visual Basic)](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

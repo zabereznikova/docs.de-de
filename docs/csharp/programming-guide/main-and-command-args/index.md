@@ -1,24 +1,18 @@
 ---
-title: Main() und Befehlszeilenargumente – C#-Programmierhandbuch
+title: 'Main() und Befehlszeilenargumente – C#-Programmierhandbuch'
 ms.custom: seodec18
 ms.date: 08/02/2017
 f1_keywords:
-- CS5001
-- main_CSharpKeyword
-- Main
+  - CS5001
+  - main_CSharpKeyword
+  - Main
 helpviewer_keywords:
-- Main method [C#]
-- C# language, command-line arguments
-- arguments [C#], command-line
-- command line [C#], arguments
-- command-line arguments [C#], Main method
+  - 'Main method [C#]'
+  - 'C# language, command-line arguments'
+  - 'arguments [C#], command-line'
+  - 'command line [C#], arguments'
+  - 'command-line arguments [C#], Main method'
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: e9fcee86f8a3daed73adebb1f4ce3e16f7ea2042
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237089"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() und Befehlszeilenargumente (C#-Programmierhandbuch)
 
@@ -44,7 +38,7 @@ Das Hinzufügen der `async`-Rückgabetypen `Task` und `Task<int>` vereinfacht de
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)  
+- [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)

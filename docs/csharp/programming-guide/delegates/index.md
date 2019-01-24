@@ -1,17 +1,11 @@
 ---
-title: Delegaten – C#-Programmierhandbuch
+title: 'Delegaten – C#-Programmierhandbuch'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, delegates
-- delegates [C#]
+  - 'C# language, delegates'
+  - 'delegates [C#]'
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 1352b7b6d2146f4cf043034b8b24d7a737f93c3b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240436"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp darstellt. Nach Instanziierung eines Delegaten können Sie die Instanz mit einer beliebigen Methode verknüpfen, die eine kompatible Signatur und einen kompatiblen Rückgabetyp aufweist. Sie können die Methode über die Delegatinstanz aufrufen.  
@@ -70,6 +64,6 @@ Weitere Informationen erhalten Sie unter [Delegaten](~/_csharplang/spec/delegate
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Delegate>  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- <xref:System.Delegate>
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [Ereignisse](../../../csharp/programming-guide/events/index.md)

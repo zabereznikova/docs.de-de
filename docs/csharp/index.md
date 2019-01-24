@@ -1,19 +1,13 @@
 ---
-title: Leitfaden für C#
-description: Erfahren Sie, wie der C#-Leitfaden Ihnen dabei helfen kann, Detailkenntnisse über C# zu erhalten, unabhängig davon, ob Sie ein neuer Entwickler oder ein Experte sind.
+title: 'Leitfaden für C#'
+description: 'Erfahren Sie, wie der C#-Leitfaden Ihnen dabei helfen kann, Detailkenntnisse über C# zu erhalten, unabhängig davon, ob Sie ein neuer Entwickler oder ein Experte sind.'
 ms.date: 01/30/2018
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
-- documentation [C#]
-- Help, Visual C# documentation
-- C# language
-- Visual C#
-ms.openlocfilehash: 5b0f3cc4a090e3479489285631a8d13b8b134c56
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145659"
+  - 'documentation [C#]'
+  - 'Help, Visual C# documentation'
+  - 'C# language'
+  - 'Visual C#'
 ---
 # <a name="c-guide"></a>Leitfaden für C#
 
@@ -66,6 +60,6 @@ Der Leitfaden für C# ist in mehrere Abschnitte unterteilt. Sie können diese na
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
-* [.NET Guide (Leitfaden für .NET)](../standard/index.md)  
-* [C#-Beispiele](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+- [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [.NET Guide (Leitfaden für .NET)](../standard/index.md)
+- [C#-Beispiele](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)

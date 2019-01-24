@@ -3,18 +3,13 @@ title: Erste Schritte mit .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
-- .NET Framework, getting started
-- getting started [.NET Framework]
+  - '.NET Framework, getting started'
+  - 'getting started [.NET Framework]'
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453134"
 ---
+
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
 
 .NET Framework ist eine Ausführungsumgebung für die Laufzeit, die Apps für .NET Framework verwaltet. Sie besteht aus der Common Language Runtime, die Speicherverwaltung und andere Systemdienste bereitstellt, und einer umfangreichen Klassenbibliothek, die Programmierern stabilen, zuverlässigen Code für alle wesentlichen Bereiche der App-Entwicklung zur Verfügung stellt.
@@ -77,7 +72,7 @@ Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgericht
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-| Titel | Beschreibung  |
+| Titel | Beschreibung |
 | ----- |------------ |
 | [Übersicht](../../../docs/framework/get-started/overview.md) | Enthält ausführliche Informationen für Entwickler, die Apps für .NET Framework erstellen. |
 | [Installationshandbuch](../../../docs/framework/install/index.md) | Stellt Informationen zum Installieren von .NET Framework bereit. |  
@@ -89,7 +84,7 @@ Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgericht
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Leitfaden für .NET Framework](../../../docs/framework/index.md)   
-- [Neuigkeiten](../../../docs/framework/whats-new/index.md)   
-- [.NET API-Browser](/dotnet/api/)   
+- [Leitfaden für .NET Framework](../../../docs/framework/index.md)
+- [Neuigkeiten](../../../docs/framework/whats-new/index.md)
+- [.NET API-Browser](/dotnet/api/)
 - [Entwicklungshandbuch](../../../docs/framework/development-guide.md)

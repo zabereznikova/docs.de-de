@@ -1,14 +1,8 @@
 ---
-title: Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI)
-description: Dies ist ein Überblick über die Tools und Funktionen der .NET Core-Befehlszeilenschnittstelle (Command-Line Interface, CLI).
+title: 'Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI)'
+description: 'Dies ist ein Überblick über die Tools und Funktionen der .NET Core-Befehlszeilenschnittstelle (Command-Line Interface, CLI).'
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170189"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Tools für die .NET Core-Befehlszeilenschnittstelle (command-line interface, CLI)
 
@@ -146,5 +140,5 @@ Wenn Sie Preview 2-Tools verwendet haben, um *project.json*-basierte Projekte zu
 
 ## <a name="see-also"></a>Siehe auch
 
-* [dotnet/CLI GitHub Repository (dotnet/CLI-GitHub-Repository)](https://github.com/dotnet/cli/)  
-* [.NET Core installation guide (.NET Core-Installationshandbuch)](https://aka.ms/dotnetcoregs)  
+- [dotnet/CLI GitHub Repository (dotnet/CLI-GitHub-Repository)](https://github.com/dotnet/cli/)
+- [.NET Core installation guide (.NET Core-Installationshandbuch)](https://aka.ms/dotnetcoregs)

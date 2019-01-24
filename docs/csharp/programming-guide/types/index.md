@@ -1,23 +1,17 @@
 ---
-title: Typen – C#-Programmierhandbuch
+title: 'Typen – C#-Programmierhandbuch'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- value types [C#]
-- reference types [C#]
-- types [C#]
-- C# language, data types
-- common type system [C#]
-- data types [C#]
-- C# language, types
-- strong typing [C#]
+  - 'value types [C#]'
+  - 'reference types [C#]'
+  - 'types [C#]'
+  - 'C# language, data types'
+  - 'common type system [C#]'
+  - 'data types [C#]'
+  - 'C# language, types'
+  - 'strong typing [C#]'
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 74362642a57bcdffc51a447ef044dc899cc83b71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237219"
 ---
 # <a name="types-c-programming-guide"></a>Typen (C#-Programmierhandbuch)
 ## <a name="types-variables-and-values"></a>Typen, Variablen und Werte  
@@ -186,7 +180,7 @@ stringList.Add(4);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Konvertierung von XML-Datentypen](../../../standard/data/xml/conversion-of-xml-data-types.md)  
+- [C#-Referenz](../../../csharp/language-reference/index.md)
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Konvertierung von XML-Datentypen](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)

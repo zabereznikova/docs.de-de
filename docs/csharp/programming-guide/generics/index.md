@@ -1,17 +1,11 @@
 ---
-title: Generika – C#-Programmierhandbuch
+title: 'Generika – C#-Programmierhandbuch'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, generics
-- generics [C#]
+  - 'C# language, generics'
+  - 'generics [C#]'
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 03a5a594db86f5286979dbe22a8841f0e7d4518c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240866"
 ---
 # <a name="generics-c-programming-guide"></a>Generika (C#-Programmierhandbuch)
 Generika wurden zur Version 2.0 der Sprache C# und der Common Language Runtime (CLR) hinzugefügt. Generika führen in .NET Framework das Konzept der Typparameter ein, wodurch Sie Klassen und Methoden entwerfen können, die die Spezialisierung einer oder mehr Typen verzögern können, bis die Klasse oder Methode vom Clientcode deklariert und instanziiert wird. Indem Sie z.B. einen generischen Parameter „T“ verwenden, können Sie eine einzelne Klasse schreiben, die anderer Clientcode verwenden kann, ohne die Kosten und Risiken von Umwandlungen zur Laufzeit oder Boxingvorgängen einzugehen, wie folgendermaßen gezeigt wird:  
@@ -62,9 +56,9 @@ Generika wurden zur Version 2.0 der Sprache C# und der Common Language Runtime (
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Collections.Generic>  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Typen](../../../csharp/programming-guide/types/index.md)  
-- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
-- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
-- [Generika in .NET](../../../standard/generics/index.md)  
+- <xref:System.Collections.Generic>
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Typen](../../../csharp/programming-guide/types/index.md)
+- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)
+- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+- [Generika in .NET](../../../standard/generics/index.md)

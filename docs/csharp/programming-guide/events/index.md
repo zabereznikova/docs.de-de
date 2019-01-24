@@ -1,18 +1,12 @@
 ---
-title: Ereignisse – C#-Programmierhandbuch
+title: 'Ereignisse – C#-Programmierhandbuch'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- classes [C#], events
-- C# language, events
-- events [C#]
+  - 'classes [C#], events'
+  - 'C# language, events'
+  - 'events [C#]'
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 55fe0e8f94d9b350305b634cabb90011e173b572
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451143"
 ---
 # <a name="events-c-programming-guide"></a>Ereignisse (C#-Programmierhandbuch)
 Ereignisse aktivieren eine [Klasse](../../../csharp/language-reference/keywords/class.md) oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet (oder *auslöst*), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen (oder *behandeln*), werden als *Abonnenten*bezeichnet.  
@@ -60,7 +54,7 @@ Weitere Informationen erhalten Sie unter [Ereignisse](~/_csharplang/spec/classes
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.EventHandler>  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
-- [Erstellen von Ereignishandlern in Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+- <xref:System.EventHandler>
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Delegaten](../../../csharp/programming-guide/delegates/index.md)
+- [Erstellen von Ereignishandlern in Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
