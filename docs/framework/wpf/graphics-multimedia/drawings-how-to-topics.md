@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 332c9fe35111b3fa7e4f604f4a2334694f0f89c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06891030228db9e41aa1865333c2d711df078058
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670315"
 ---
-# <a name="drawings-how-to-topics"></a><span data-ttu-id="e5613-102">Gewusst-wie-Themen zu Zeichnungen</span><span class="sxs-lookup"><span data-stu-id="e5613-102">Drawings How-to Topics</span></span>
-<span data-ttu-id="e5613-103">Die Themen in diesem Abschnitt wird beschrieben, wie mit <xref:System.Windows.Media.Drawing> Objekte zum Zeichnen von Formen, Bildern oder Text.</span><span class="sxs-lookup"><span data-stu-id="e5613-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
+# <a name="drawings-how-to-topics"></a><span data-ttu-id="0b66a-102">Gewusst-wie-Themen zu Zeichnungen</span><span class="sxs-lookup"><span data-stu-id="0b66a-102">Drawings How-to Topics</span></span>
+<span data-ttu-id="0b66a-103">Die Themen in diesem Abschnitt wird beschrieben, wie <xref:System.Windows.Media.Drawing> Objekte zum Zeichnen von Formen, Bildern oder Text.</span><span class="sxs-lookup"><span data-stu-id="0b66a-103">The topics in this section describe how to use <xref:System.Windows.Media.Drawing> objects to draw shapes, images, or text.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e5613-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="e5613-104">In This Section</span></span>  
- [<span data-ttu-id="e5613-105">Anwenden eines Führungsliniensatzes auf eine Zeichnung</span><span class="sxs-lookup"><span data-stu-id="e5613-105">Apply a GuidelineSet to a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [<span data-ttu-id="e5613-106">Erstellen einer zusammengesetzten Zeichnung</span><span class="sxs-lookup"><span data-stu-id="e5613-106">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
-  [<span data-ttu-id="e5613-107">Erstellen einer GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="e5613-107">Create a GeometryDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
-  [<span data-ttu-id="e5613-108">Zeichnen eines Bilds mit ImageDrawing</span><span class="sxs-lookup"><span data-stu-id="e5613-108">Draw an Image Using ImageDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
-  [<span data-ttu-id="e5613-109">Wiedergeben von Medien mit einer VideoDrawing</span><span class="sxs-lookup"><span data-stu-id="e5613-109">Play Media using a VideoDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
-  [<span data-ttu-id="e5613-110">Verwenden einer Zeichnung als Bildquelle</span><span class="sxs-lookup"><span data-stu-id="e5613-110">Use a Drawing as an Image Source</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
+## <a name="in-this-section"></a><span data-ttu-id="0b66a-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="0b66a-104">In This Section</span></span>  
+ [<span data-ttu-id="0b66a-105">Anwenden eines Führungsliniensatzes auf eine Zeichnung</span><span class="sxs-lookup"><span data-stu-id="0b66a-105">Apply a GuidelineSet to a Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [<span data-ttu-id="0b66a-106">Erstellen einer zusammengesetzten Zeichnung</span><span class="sxs-lookup"><span data-stu-id="0b66a-106">Create a Composite Drawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
+  [<span data-ttu-id="0b66a-107">Erstellen einer GeometryDrawing</span><span class="sxs-lookup"><span data-stu-id="0b66a-107">Create a GeometryDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
+  [<span data-ttu-id="0b66a-108">Zeichnen eines Bilds mit ImageDrawing</span><span class="sxs-lookup"><span data-stu-id="0b66a-108">Draw an Image Using ImageDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
+  [<span data-ttu-id="0b66a-109">Wiedergeben von Medien mit einer VideoDrawing</span><span class="sxs-lookup"><span data-stu-id="0b66a-109">Play Media using a VideoDrawing</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
+  [<span data-ttu-id="0b66a-110">Verwenden einer Zeichnung als Bildquelle</span><span class="sxs-lookup"><span data-stu-id="0b66a-110">Use a Drawing as an Image Source</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a><span data-ttu-id="e5613-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e5613-111">See Also</span></span>  
- <xref:System.Windows.Media.Drawing>  
- [<span data-ttu-id="e5613-112">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="e5613-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [<span data-ttu-id="e5613-113">Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF</span><span class="sxs-lookup"><span data-stu-id="e5613-113">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [<span data-ttu-id="e5613-114">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="e5613-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a><span data-ttu-id="0b66a-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0b66a-111">See also</span></span>
+- <xref:System.Windows.Media.Drawing>
+- [<span data-ttu-id="0b66a-112">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="0b66a-112">WPF Graphics Rendering Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="0b66a-113">Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF</span><span class="sxs-lookup"><span data-stu-id="0b66a-113">Shapes and Basic Drawing in WPF Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="0b66a-114">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="0b66a-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8e50a018016b885a3513cbd885b8e5115f18113
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f956ed33e0a168dca0c0e5de92d38ba32db3fb05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432920"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703457"
 ---
-# <a name="iclrruntimeinfogetprocaddress-method"></a><span data-ttu-id="5b913-102">ICLRRuntimeInfo::GetProcAddress-Methode</span><span class="sxs-lookup"><span data-stu-id="5b913-102">ICLRRuntimeInfo::GetProcAddress Method</span></span>
-<span data-ttu-id="5b913-103">Ruft die Adresse einer angegebenen Funktion, die von dieser Schnittstelle zugeordnet die common Language Runtime (CLR) exportiert wurden.</span><span class="sxs-lookup"><span data-stu-id="5b913-103">Gets the address of a specified function that was exported from the common language runtime (CLR) associated with this interface.</span></span>  
+# <a name="iclrruntimeinfogetprocaddress-method"></a><span data-ttu-id="9a575-102">ICLRRuntimeInfo::GetProcAddress-Methode</span><span class="sxs-lookup"><span data-stu-id="9a575-102">ICLRRuntimeInfo::GetProcAddress Method</span></span>
+<span data-ttu-id="9a575-103">Ruft die Adresse einer angegebenen Funktion, die von dieser Schnittstelle zugeordnet der common Language Runtime (CLR) exportiert wurde.</span><span class="sxs-lookup"><span data-stu-id="9a575-103">Gets the address of a specified function that was exported from the common language runtime (CLR) associated with this interface.</span></span>  
   
- <span data-ttu-id="5b913-104">Diese Methode hat Vorrang vor den [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="5b913-104">This method supersedes the [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) function.</span></span>  
+ <span data-ttu-id="9a575-104">Diese Methode ersetzt die [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="9a575-104">This method supersedes the [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5b913-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="5b913-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9a575-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="9a575-105">Syntax</span></span>  
   
 ```  
 HRESULT GetProcAddress(  
@@ -37,35 +37,35 @@ HRESULT GetProcAddress(
      [out, retval] LPVOID *ppProc);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5b913-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="5b913-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="9a575-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="9a575-106">Parameters</span></span>  
  `pszProcName`  
- <span data-ttu-id="5b913-107">[in] Der Name der exportierten Funktion.</span><span class="sxs-lookup"><span data-stu-id="5b913-107">[in] The name of the exported function.</span></span>  
+ <span data-ttu-id="9a575-107">[in] Der Name der exportierten Funktion.</span><span class="sxs-lookup"><span data-stu-id="9a575-107">[in] The name of the exported function.</span></span>  
   
  `ppProc`  
- <span data-ttu-id="5b913-108">[out] Die Adresse der exportierten Funktion.</span><span class="sxs-lookup"><span data-stu-id="5b913-108">[out] The address of the exported function.</span></span>  
+ <span data-ttu-id="9a575-108">[out] Die Adresse der exportierten Funktion.</span><span class="sxs-lookup"><span data-stu-id="9a575-108">[out] The address of the exported function.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5b913-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="5b913-109">Return Value</span></span>  
- <span data-ttu-id="5b913-110">Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.</span><span class="sxs-lookup"><span data-stu-id="5b913-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9a575-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="9a575-109">Return Value</span></span>  
+ <span data-ttu-id="9a575-110">Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.</span><span class="sxs-lookup"><span data-stu-id="9a575-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="5b913-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="5b913-111">HRESULT</span></span>|<span data-ttu-id="5b913-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="5b913-112">Description</span></span>|  
+|<span data-ttu-id="9a575-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9a575-111">HRESULT</span></span>|<span data-ttu-id="9a575-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9a575-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5b913-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="5b913-113">S_OK</span></span>|<span data-ttu-id="5b913-114">Die Methode wurde erfolgreich abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="5b913-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="5b913-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="5b913-115">E_POINTER</span></span>|<span data-ttu-id="5b913-116">`pszProcName` oder `ppProc` ist NULL.</span><span class="sxs-lookup"><span data-stu-id="5b913-116">`pszProcName` or `ppProc` is null.</span></span>|  
-|<span data-ttu-id="5b913-117">CLR_E_SHIM_RUNTIMEEXPORT</span><span class="sxs-lookup"><span data-stu-id="5b913-117">CLR_E_SHIM_RUNTIMEEXPORT</span></span>|<span data-ttu-id="5b913-118">Die angegebene Funktion ist keine exportierte Funktion.</span><span class="sxs-lookup"><span data-stu-id="5b913-118">The specified function is not an exported function.</span></span>|  
+|<span data-ttu-id="9a575-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="9a575-113">S_OK</span></span>|<span data-ttu-id="9a575-114">Die Methode wurde erfolgreich abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="9a575-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="9a575-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="9a575-115">E_POINTER</span></span>|<span data-ttu-id="9a575-116">`pszProcName` oder `ppProc` ist NULL.</span><span class="sxs-lookup"><span data-stu-id="9a575-116">`pszProcName` or `ppProc` is null.</span></span>|  
+|<span data-ttu-id="9a575-117">CLR_E_SHIM_RUNTIMEEXPORT</span><span class="sxs-lookup"><span data-stu-id="9a575-117">CLR_E_SHIM_RUNTIMEEXPORT</span></span>|<span data-ttu-id="9a575-118">Die angegebene Funktion ist keiner exportierten Funktion.</span><span class="sxs-lookup"><span data-stu-id="9a575-118">The specified function is not an exported function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5b913-119">Hinweise</span><span class="sxs-lookup"><span data-stu-id="5b913-119">Remarks</span></span>  
- <span data-ttu-id="5b913-120">Diese Methode bewirkt, dass die CLR geladen, aber nicht initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="5b913-120">This method causes the CLR to be loaded but not initialized.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9a575-119">Hinweise</span><span class="sxs-lookup"><span data-stu-id="9a575-119">Remarks</span></span>  
+ <span data-ttu-id="9a575-120">Diese Methode bewirkt, dass die CLR geladen, aber nicht initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="9a575-120">This method causes the CLR to be loaded but not initialized.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5b913-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5b913-121">Requirements</span></span>  
- <span data-ttu-id="5b913-122">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5b913-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9a575-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9a575-121">Requirements</span></span>  
+ <span data-ttu-id="9a575-122">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a575-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5b913-123">**Header:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="5b913-123">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="9a575-123">**Header:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="9a575-123">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="5b913-124">**Bibliothek:** als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="5b913-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9a575-124">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="9a575-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5b913-125">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5b913-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="9a575-125">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a575-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b913-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5b913-126">See Also</span></span>  
- [<span data-ttu-id="5b913-127">ICLRRuntimeInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5b913-127">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [<span data-ttu-id="5b913-128">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="5b913-128">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [<span data-ttu-id="5b913-129">Hosting</span><span class="sxs-lookup"><span data-stu-id="5b913-129">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="9a575-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9a575-126">See also</span></span>
+- [<span data-ttu-id="9a575-127">ICLRRuntimeInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9a575-127">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="9a575-128">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="9a575-128">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="9a575-129">Hosting</span><span class="sxs-lookup"><span data-stu-id="9a575-129">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

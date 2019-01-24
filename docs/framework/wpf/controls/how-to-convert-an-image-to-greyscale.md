@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Konvertieren eines Bilds in Graustufen'
+title: 'Vorgehensweise: Konvertieren eines Bilds in Graustufen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - converting [WPF], images to grayscale
 - grayscale [WPF], converting images to
 ms.assetid: 77935ff0-4500-4307-9710-96999dcf579f
-ms.openlocfilehash: a65d78462e7d2310ee4369a439e3adfbd43d7444
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e4e6f18c54f63493eb96f478a18c23bde433678
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550481"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649556"
 ---
-# <a name="how-to-convert-an-image-to-greyscale"></a><span data-ttu-id="e527e-102">Gewusst wie: Konvertieren eines Bilds in Graustufen</span><span class="sxs-lookup"><span data-stu-id="e527e-102">How to: Convert an Image to Greyscale</span></span>
-<span data-ttu-id="e527e-103">In diesem Beispiel wird gezeigt, wie ein Bild in Graustufen mit konvertiert <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="e527e-103">This example shows how to convert an image to grayscale using <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span>  
+# <a name="how-to-convert-an-image-to-greyscale"></a><span data-ttu-id="50c31-102">Vorgehensweise: Konvertieren eines Bilds in Graustufen</span><span class="sxs-lookup"><span data-stu-id="50c31-102">How to: Convert an Image to Greyscale</span></span>
+<span data-ttu-id="50c31-103">Dieses Beispiel zeigt, wie Sie ein Bild in Graustufen mit konvertieren <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="50c31-103">This example shows how to convert an image to grayscale using <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e527e-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e527e-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="50c31-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="50c31-104">Example</span></span>  
  [!code-xaml[ImagingSnippetGallery_snip#FormatConvertedBitmapXamlExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_snip/CS/FormatConvertedBitmapExample.xaml#formatconvertedbitmapxamlexamplewholepage)]  
   
  [!code-csharp[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/FormatConvertedBitmapExample.cs#formatconvertedbitmapcodeexamplewholepage)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample.vb#formatconvertedbitmapcodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="e527e-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e527e-105">See Also</span></span>  
- [<span data-ttu-id="e527e-106">Verwenden des Image-Elements</span><span class="sxs-lookup"><span data-stu-id="e527e-106">Use the Image Element</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
- [<span data-ttu-id="e527e-107">Zuschneiden eines Bilds</span><span class="sxs-lookup"><span data-stu-id="e527e-107">Crop an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
- [<span data-ttu-id="e527e-108">Drehen eines Bilds</span><span class="sxs-lookup"><span data-stu-id="e527e-108">Rotate an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)
+## <a name="see-also"></a><span data-ttu-id="50c31-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="50c31-105">See also</span></span>
+- [<span data-ttu-id="50c31-106">Verwenden des Image-Elements</span><span class="sxs-lookup"><span data-stu-id="50c31-106">Use the Image Element</span></span>](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)
+- [<span data-ttu-id="50c31-107">Zuschneiden eines Bilds</span><span class="sxs-lookup"><span data-stu-id="50c31-107">Crop an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)
+- [<span data-ttu-id="50c31-108">Drehen eines Bilds</span><span class="sxs-lookup"><span data-stu-id="50c31-108">Rotate an Image</span></span>](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)
