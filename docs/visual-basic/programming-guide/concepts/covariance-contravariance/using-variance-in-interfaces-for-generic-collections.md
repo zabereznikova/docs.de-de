@@ -2,12 +2,12 @@
 title: Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: 860c41e73aa2d45ca1a9adcb3031834545e2fb37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7265fc208b7538a2ab63822afbe63b09b0f34135
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735408"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic)
 Eine kovariante Schnittstelle ermöglicht den zugehörigen Methoden, mehr abgeleitete Typen zurückzugeben, als in der Schnittstelle angegeben sind. Eine kontravariante Schnittstelle ermöglicht den zugehörigen Methoden, Parameter von weniger abgeleiteten Typen anzunehmen, als in der Schnittstelle angegeben sind.  
@@ -109,5 +109,5 @@ Sub Main()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Variance in Generic Interfaces (Visual Basic) (Varianz in generischen Schnittstellen (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Variance in Generic Interfaces (Visual Basic) (Varianz in generischen Schnittstellen (Visual Basic))](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

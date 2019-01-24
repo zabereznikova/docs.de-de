@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 1c21ba1cc4c02336a204b1fe91b72e5f3e89228c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a0b3e75c6a93aebf979b8df758fe37460c046a15
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127133"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415935"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core 
 
@@ -33,7 +33,7 @@ Ein Aggregat bezieht sich auf einen Cluster von Domänenobjekten, die entspreche
 
 Der Begriff „Transaktionskonsistenz“ bedeutet, dass ein Aggregat am Ende einer geschäftlichen Transaktion garantiert konsistent und aktuell ist. Das Aggregat „Order“ aus dem Domänenmodell des Microservices für Bestellungen setzt sich wie in Abbildung 7-11 dargestellt zusammen.
 
-![Detailansicht des Ordners „OrderAggregate“: „Address.cs“ ist ein Wertobjekt, „IOrderRepository“ eine Repositoryschnittstelle, „Order.cs“ ein Aggregatstamm, „OrderItem.cs“ eine untergeordnete Entität und „OrderStatus.cs“ eine Enumerationsklasse.](./media/image12.png)
+![Detailansicht des Ordners OrderAggregate: „Address.cs“ ist ein Wertobjekt, „IOrderRepository“ eine Repositoryschnittstelle, „Order.cs“ ein Aggregatstamm, „OrderItem.cs“ eine untergeordnete Entität und „OrderStatus.cs“ eine Enumerationsklasse.](./media/image12.png)
 
 **Abbildung 7-11**. Das Aggregat „Order“ in einer Visual Studio-Projektmappe
 
@@ -172,7 +172,7 @@ Beispielsweise enthält das nachfolgende OrderAggregate-Codebeispiel mehrere pri
   [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
 - **Julie Lerman. Codierung für Domain-Driven Design: Tipps für Entwickler mit Datenschwerpunkt** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
+  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
 
 - **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen eines vollständig gekapselten Domänenmodells)** \
   [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)

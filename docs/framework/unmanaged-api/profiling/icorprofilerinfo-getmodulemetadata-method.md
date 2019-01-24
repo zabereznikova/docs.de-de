@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2491b700e8fac512f0d782a42e30ae3114e93c3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1663a36ab36980af709a861b3fb0666be6fecdfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607474"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>ICorProfilerInfo::GetModuleMetaData-Methode
-Ruft eine Instanz der Metadaten-Schnittstelle, die das angegebene Modul zugeordnet.  
+Ruft eine Instanz der Metadaten-Schnittstelle, die das angegebene Modul zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,21 +42,21 @@ HRESULT GetModuleMetaData(
  [in] Die ID des Moduls, der die Schnittstelleninstanz zugeordnet werden soll.  
   
  `dwOpenFlags`  
- [in] Der Wert der [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) -Enumeration, der den Modus zum Öffnen von Manifestdateien angibt. Nur die `ofRead`, `ofWrite` und `ofNoTransform` Bits sind gültig.  
+ [in] Der Wert der [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) -Enumeration, der den Modus für das Öffnen von Manifestdateien angibt. Nur die `ofRead`, `ofWrite` und `ofNoTransform` Bits sind gültig.  
   
  `riid`  
- [in] Der Verweis-ID (GUID) der Metadatenschnittstelle, deren Instanz abgerufen werden sollen. Finden Sie unter [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) eine Liste der Schnittstellen.  
+ [in] Der Verweis-ID (GUID) der Metadatenschnittstelle, deren Instanz abgerufen werden. Finden Sie unter [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) eine Liste der Schnittstellen.  
   
  `ppOut`  
- [out] Ein Zeiger auf die Adresse der Instanz der Metadaten.  
+ [out] Ein Zeiger auf die Adresse der Instanz der Schnittstelle.  
   
 ## <a name="remarks"></a>Hinweise  
- Sie Fragen sich vielleicht für die Metadaten in Lese-/Schreibmodus geöffnet werden, aber dies führt zu einer langsameren Metadaten Ausführung des Programms, da Änderungen kann nicht die Metadaten wie vom Compiler optimiert werden.  
+ Möglicherweise stellen Sie für die Metadaten in Lese-/Schreibmodus geöffnet werden, aber dies führt zu langsameren metadatenausführung des Programms, da Änderungen kann nicht die Metadaten wie vom Compiler optimiert werden.  
   
- Einige Module (z. B. Ressourcenmodule) verfügen über keine Metadaten. In diesen Fällen `GetModuleMetaData` zurück einen HRESULT-Wert von "S_FALSE" und ein NULL-Wert in *`ppOut`.  
+ Einige Module (z. B. Ressourcenmodule) verfügen über keine Metadaten. In diesen Fällen `GetModuleMetaData` gibt einen HRESULT-Wert von S_FALSE oder Null in *`ppOut`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -64,5 +64,5 @@ HRESULT GetModuleMetaData(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b37c30df6467439d04e367e13b0fc4ffff0ec6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a5f21855ce83f5c1fb68637e3eeb6d3c831bce2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745153"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next-Methode
-Ruft den relativen virtuellen Adresse (RVA) der angegebenen Anzahl von Objekten aus der Enumeration, beginnend mit der aktuellen Position ab.  
+Ruft den relativen virtuellen Adresse (RVA) der angegebenen Anzahl von Objekten aus der Enumeration ab, an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,13 +43,13 @@ HRESULT Next (
  [in] Die Anzahl der abzurufenden Objekte.  
   
  `objects`  
- [out] Ein Array von Zeigern, von denen jeder mit einem CORDB_ADDRESS-Objekt verweist.  
+ [out] Ein Array von Zeigern, von denen jedes auf ein CORDB_ADDRESS-Objekt verweist.  
   
  `pceltFetched`  
- [out] Zeiger auf die Anzahl der tatsächlich zurückgegebenen Objekte. Dieser Wert kann null sein, wenn `celt` ist ein.  
+ [out] Zeiger auf die Anzahl der tatsächlich zurückgegebenen Objekte. Dieser Wert kann null sein, wenn `celt` ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -57,5 +57,5 @@ HRESULT Next (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+

@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 33686dcfee90db2d0a99339a728eb6e2bd7139f5
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004324"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415714"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)
 Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbetten, können Sie Typen in einer Anwendung lose koppeln, um versionsunabhängig zu werden. Ihr Programm kann daher für Typen aus unterschiedlichen Versionen einer verwalteten Bibliothek geschrieben werden; eine erneute Kompilierung für jede Version ist nicht erforderlich.  
@@ -136,7 +136,7 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
                 p_UserInput = Console.ReadLine();  
             }  
         }  
-    )  
+    }  
     ```  
   
 9. Speichern Sie das Projekt.  
@@ -237,4 +237,4 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
 - [-link (C#-Compileroptionen)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
 - [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
 - [Programmieren mit Assemblys](../../../../framework/app-domains/programming-with-assemblies.md)  
-- [Assemblies and the Global Assembly Cache (C#) (Assemblys und der globale Assemblycache (C#))](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Assemblys und der globale Assemblycache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

@@ -2,12 +2,12 @@
 title: Analytische Ablaufverfolgung von WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6d4db9a8ec11e215ef18dcab6b7940526bc24927
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748141"
 ---
 # <a name="wcf-analytic-tracing"></a>Analytische Ablaufverfolgung von WCF
 In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen ablaufverfolgungen hinzufügen, die Windows Communication Foundation (WCF) in ETW in schreibt [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analytische Ablaufverfolgungen sollen die Dienste sichtbar machen, ohne die Leistung deutlich zu beeinträchtigen. Dieses Beispiel zeigt, wie Sie mit der <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs, um Ereignisse zu schreiben, die in WCF-Dienste integrieren.  
@@ -24,11 +24,11 @@ In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungse
   
 -   Wenn sich die Anwendung nicht im Stammverzeichnis befindet.  
   
-     \<SiteName >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
+     \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
 -   Wenn sich die Anwendung im Stammverzeichnis befindet.  
   
-     \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
+     \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
  Für selbst gehostete Dienste werden die analytischen ablaufverfolgungen von WCF nicht das Feld "HostReference" aufgefüllt. Die `WCFUserEventProvider`-Klasse in diesem Beispiel verhält sich konsistent, wenn sie von einem selbst gehosteten Dienst verwendet wird.  
   
@@ -117,5 +117,5 @@ In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungse
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>Siehe auch  
- [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Siehe auch
+- [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

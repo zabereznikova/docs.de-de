@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4244196a957c67a807cdb705f6d74ee2b41869d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb213ef4a335cf6784c2889cd9cf0214a1411da2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391601"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735713"
 ---
 # <a name="runtime-information-etw-events"></a>ETW-Laufzeitinformationsereignisse
 Diese ETW-Ereignisse erfassen Informationen über die Laufzeit, einschließlich der SKU, der Versionsnummer, der Art der Aktivierung der Laufzeit, der Befehlszeilenparameter, mit denen sie gestartet wurde, der GUID (wenn zutreffend) und weiterer wichtiger Informationen. Wenn innerhalb eines Prozesses mehrere Laufzeiten ausgeführt werden, helfen Ihnen die von diesen Ereignissen bereitgestellten Informationen dabei, die Laufzeiten eindeutig zu machen.  
@@ -44,5 +44,5 @@ Diese ETW-Ereignisse erfassen Informationen über die Laufzeit, einschließlich 
 |ComObjectGUID|win:GUID|Nur ungleich NULL, wenn StartupMode = 0x08|  
 |RuntimeDLLPath|win:UnicodeString|Pfad zur CLR-DLL-Datei, die in den Prozess geladen wurde|  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Siehe auch
+- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

@@ -2,12 +2,12 @@
 title: '&lt;security&gt; von &lt;netTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: 7a457bdcdee797195ed6bdae8cd377296f914b52
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8521f1cc7100759f57da4e02287179c1302fc6c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744998"
 ---
 # <a name="ltsecuritygt-of-ltnettcpbindinggt"></a>&lt;security&gt; von &lt;netTcpBinding&gt;
 Definiert die Sicherheitseinstellungen für eine Bindung.  
@@ -16,7 +16,7 @@ Definiert die Sicherheitseinstellungen für eine Bindung.
 \<bindings>  
 \<netTcpBinding>  
 \<binding>  
-\<Sicherheit >  
+\<security>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,7 +51,7 @@ Definiert die Sicherheitseinstellungen für eine Bindung.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|Definiert die Sicherheitseinstellungen für den Transport. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|Definiert die Sicherheitseinstellungen für den Transport. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|Definiert die Sicherheitseinstellungen für die Nachricht. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -67,13 +67,13 @@ Definiert die Sicherheitseinstellungen für eine Bindung.
   
  Dieses Konfigurationselement stellt die Sicherheitsspezifikationen für `netTcpBinding` bereit. Daraus ergibt sich eine sichere, zuverlässige und optimierte Bindung, die computerübergreifende Kommunikation unterstützt. Diese Bindung generiert standardmäßig einen Laufzeitkommunikationsstapel mit TCP für die Nachrichtenübertragung, Windows-Sicherheit für Nachrichtensicherheit und Authentifizierung, WS-Reliable-Messaging für Zuverlässigkeit sowie binäre Nachrichtencodierung.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.NetTcpSecurity>  
- <xref:System.ServiceModel.NetTcpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.NetTcpSecurity>
+- <xref:System.ServiceModel.NetTcpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

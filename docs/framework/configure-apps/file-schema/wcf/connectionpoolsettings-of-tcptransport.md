@@ -2,12 +2,12 @@
 title: '&lt;connectionPoolSettings&gt; von &lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 8780709a5713c0192d6be1139e3425747b0b07ca
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 188a71a0c270f5c0b28c22fb72b19e94376c5f1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145691"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732062"
 ---
 # <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a>&lt;connectionPoolSettings&gt; von &lt;tcpTransport&gt;
 Gibt zusätzliche Verbindungspooleinstellungen für einen TCP-Transport an.  
@@ -17,7 +17,7 @@ Gibt zusätzliche Verbindungspooleinstellungen für einen TCP-Transport an.
 \<customBinding>  
 \<binding>  
 \<tcpTransport>  
-\<ConnectionPoolSettings >  
+\<connectionPoolSettings>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,17 +47,17 @@ Gibt zusätzliche Verbindungspooleinstellungen für einen TCP-Transport an.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<NamedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Definiert einen Transport, der bewirkt, dass ein Kanal Nachrichten mithilfe von benannten Pipes überträgt.|  
+|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Definiert einen Transport, der bewirkt, dass ein Kanal Nachrichten mithilfe von benannten Pipes überträgt.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>  
- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.TcpConnectionPoolSettingsElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement.ConnectionPoolSettings%2A>
+- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

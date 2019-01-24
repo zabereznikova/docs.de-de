@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b848c30e824d45f6f619cfdb3d00a2d3cdc4573e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dadfabf1d2507b2bd719b5b73238bb38c9ae7563
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448712"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602428"
 ---
 # <a name="imetadataimportenumparams-method"></a>IMetaDataImport::EnumParams-Methode
 Zählt ParamDef-Token auf, die die Parameter der Methode darstellen, auf die vom angegebenen MethodDef-Token verwiesen wird.  
@@ -41,10 +41,10 @@ HRESULT EnumParams (
   
 #### <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dies muss für den ersten Aufruf dieser Methode NULL sein.  
+ [in, out] Ein Zeiger auf den Enumerator. Dies muss NULL sein, für den ersten Aufruf dieser Methode.  
   
  `mb`  
- [in] Ein MethodDef-Token, das die Methode mit den Parametern zum Aufzählen darstellt.  
+ [in] Ein MethodDef-Token, das die Methode mit den Parametern auflisten darstellt.  
   
  `rParams`  
  [out] Das Array zum Speichern der ParamDef-Token verwendet wird.  
@@ -60,17 +60,17 @@ HRESULT EnumParams (
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumParams` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine Token aufgelistet werden. In diesem Fall `pcTokens` 0 (null).|  
+|`S_FALSE`|Es gibt keine Token aufgelistet werden. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattform:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

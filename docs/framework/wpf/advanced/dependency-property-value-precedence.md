@@ -7,19 +7,19 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 25dfe63a65c3044837beb26ec6c4eaa772c1df1b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ad5bd74388ab1d4a20e496271fd992b1562587d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696792"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711274"
 ---
 # <a name="dependency-property-value-precedence"></a>Priorität von Abhängigkeitseigenschaftswerten
 <a name="introduction"></a> In diesem Thema wird erläutert, wie die Funktionsweise des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems den Wert einer Abhängigkeitseigenschaft beeinflussen kann. Außerdem wird die Rangfolge beschrieben, nach der Aspekte des Eigenschaftensystems auf den effektiven Wert einer Eigenschaft angewendet werden.  
     
   
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften aus Sicht eines Consumers vorhandener Abhängigkeitseigenschaften von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Klassen verstehen und die [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) gelesen haben. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] verstehen und wissen, wie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen geschrieben werden.  
   
 <a name="intro"></a>   
@@ -126,9 +126,9 @@ ms.locfileid: "46696792"
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue und Wertrangfolge  
  Die <xref:System.Windows.DependencyObject.ClearValue%2A> Methode bietet ein sinnvolles Mittel zum von lokal angewendeten Werten einer Abhängigkeitseigenschaft zu löschen, die für ein Element festgelegt ist. Das Aufrufen von jedoch <xref:System.Windows.DependencyObject.ClearValue%2A> ist keine Garantie, dass die Standardeinstellung, wie in den Metadaten eingerichtet, bei der Registrierung der den neuen gültigen Wert ist. Alle anderen Teilnehmer der Wertrangfolge sind noch immer aktiv. Nur der lokal festgelegte Wert wurde von der Rangfolgensequenz entfernt. Wenn Sie aufrufen, z. B. <xref:System.Windows.DependencyObject.ClearValue%2A> für eine Eigenschaft, in dem diese Eigenschaft auch durch einen Designstil festgelegt ist, wird der Designwert wird als der neue Wert statt auf die Standardwerte angewendet. Wenn Sie alle von eigenschaftswerteteilnehmer aus dem Prozess nehmen und den Wert in den registrierten Metadatenstandard festlegen möchten, erhalten Sie, dass Standardwert definitiv durch Abfragen der Metadaten für Abhängigkeitseigenschaften, und klicken Sie dann Sie den Standardwert, der lokal verwendet werden kann Legen Sie die Eigenschaft mit einem Aufruf von <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.DependencyObject>  
- <xref:System.Windows.DependencyProperty>  
- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Rückrufe und Validierung von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.DependencyObject>
+- <xref:System.Windows.DependencyProperty>
+- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Rückrufe und Validierung von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)

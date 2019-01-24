@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f5a4a6bc7b1e79068b11b099352cec64dd09f301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 990ae316a780af9be96f6b91900f33cbb2db4f36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727975"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread-Methode
-Initialisiert den aktuellen Thread im Vorfeld nachfolgende Profiler, die auf dem gleichen Thread-API-Aufrufe, sodass dieser Deadlock vermieden werden kann.  
+Initialisiert den aktuellen Thread im Voraus über nachfolgende Profiler, die auf dem gleichen Thread, API-Aufrufe, sodass dieser Deadlock vermieden werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,13 +34,13 @@ HRESULT InitializeCurrentThread ();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Es wird empfohlen, Sie rufen `InitializeCurrentThread` auf einen beliebigen Thread, der einen Profiler angerufen API sind Threads angehalten. Diese Methode wird von Profilern, die ihre eigenen Thread aufrufen, erstellen in der Regel verwendet die [ICorProfilerInfo2:: DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) Methode zum Ausführen der Stapel durchläuft, während der Zielthread angehalten ist. Durch Aufrufen von `InitializeCurrentThread` Sobald bei der Profiler zuerst die Stichproben-Thread erstellt, können Profilern sicherstellen die pro Thread verzögerte Initialisierung, die die CLR beim ersten Aufruf andernfalls ausführen würden `DoStackSnapshot` kann nun erfolgen sicher Wenn keine anderen Threads sind angehalten.  
+ Es wird empfohlen, die Sie aufrufen `InitializeCurrentThread` auf einem beliebigen Thread, der einen Profiler aufruft, API, die es zwar Threads angehalten. Diese Methode wird in der Regel von beispielprofilern, das Erstellen von eigenen Thread aufrufen, verwendet der [ICorProfilerInfo2:: DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) Methode zum Durchführen der Stapel führt während der Zielthread angehalten ist. Durch Aufrufen von `InitializeCurrentThread` , nachdem der Profiler Wenn zunächst den Sampling-Thread erstellt, Profiler können sicherstellen, dass die pro Thread verzögerte Initialisierung, die die CLR beim ersten Aufruf andernfalls ausführen würden `DoStackSnapshot` kann nun erfolgen sicher Wenn keine anderen Threads sind angehalten.  
   
 > [!NOTE]
->  `InitializeCurrentThread` führt die Initialisierung im voraus, um Aufgaben abgeschlossen sind, die Sperren und kann zu einem deadlock. Rufen Sie `InitializeCurrentThread` nur, wenn keine angehaltenen Threads vorhanden sind.  
+>  `InitializeCurrentThread` führt die Initialisierung im voraus, um Aufgaben abgeschlossen sind, die Sperren, und kann zu einem deadlock. Rufen Sie `InitializeCurrentThread` nur, wenn keine angehaltenen Threads vorhanden sind.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -48,7 +48,7 @@ HRESULT InitializeCurrentThread ();
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo4-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo4-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)

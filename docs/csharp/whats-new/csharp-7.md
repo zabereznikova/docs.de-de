@@ -3,12 +3,12 @@ title: Neues in C# 7.0 – C#-Leitfaden
 description: Erhalten Sie einen Überblick über die neuen Funktionen in der bevorstehenden Version 7 der C#-Sprache.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 08e9b9d1a991c6dd18477214dec60fba95afc6c9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155287"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415727"
 ---
 # <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
@@ -105,7 +105,7 @@ Sie können Namen für die Felder auf der linken und rechten Seite der Zuweisung
 
 Die Zeile oben generiert eine Warnung `CS8123`, die angibt, dass die Namen `Alpha` und `Beta` auf der rechten Seite der Zuweisung ignoriert werden, da sie mit den Namen `First` und `Second` auf der linken Seite im Konflikt stehen.
 
-Die Beispiele oben zeigen die grundlegende Syntax zum Deklarieren von Tupeln. Tupel sind am nützlichsten als Rückgabetypen für `private`- und `internal`-Methoden. Tupel bieten eine einfache Syntax für diese Methoden, um mehrere diskrete Werte zurückzugeben: Sie sparen sich die Arbeit, ein `class` oder ein `struct` zu erstellen, das den zurückgegebenen Typ definiert. Es ist nicht erforderlich, einen neuen Typ zu erstellen.
+Die Beispiele oben zeigen die grundlegende Syntax zum Deklarieren von Tupeln. Tupel sind am nützlichsten als Rückgabetypen für `private`- und `internal`-Methoden. Mit Tupeln können diese Methoden in einfacher Syntax mehrere diskrete Werte zurückgeben: Sie sparen sich die Arbeit, ein `class` oder ein `struct` zu erstellen, das den zurückgegebenen Typ definiert. Es ist nicht erforderlich, einen neuen Typ zu erstellen.
 
 Ein Tupel zu erstellen, ist effizienter und produktiver.
 Es ist eine einfachere Syntax, um eine Datenstruktur mit mehr als einem Wert zu definieren. Die folgende Beispielmethode gibt die minimalen und maximalen Werte in einer Sequenz von ganzen Zahlen zurück:
@@ -168,7 +168,7 @@ Mustervergleich unterstützt `is`-Ausdrücke und `switch`-Ausdrücke. Jeder davo
 
 ### <a name="is-expression"></a>`is`-Ausdruck
 
-Der Musterausdruck `is` erweitert den vertrauten `is`-Operator auf das Abfragen eines Objekts über den Typ hinaus.
+Der Musterausdruck `is` erweitert den vertrauten [`is`-Operator](../language-reference/keywords/is.md#pattern-matching-with-is), um ein Objekt über dessen Typ hinaus abzufragen.
 
 Beginnen wir mit einem einfachen Szenario. Wir fügen Funktionen für dieses Szenario hinzu, die veranschaulichen, wie Mustervergleichsausdrücke Algorithmen erstellen, die mit nicht verknüpften Typen einfach funktionieren. Wir beginnen mit einer Methode, die die Summe aller gewürfelten Augen bei mehreren Würfelvorgängen berechnet:
 
@@ -329,7 +329,7 @@ In C# 6 wurden [Ausdruckskörpermember](csharp-6.md#expression-bodied-function-m
 > [!NOTE]
 > In diesem Beispiel ist kein Finalizer erforderlich, aber damit soll die Syntax dargestellt werden. Sie sollten in Ihrer Klasse nur einen Finalizer implementieren, wenn es notwendig ist, nicht verwaltete Ressourcen freizugeben. Sie sollten auch die Verwendung der <xref:System.Runtime.InteropServices.SafeHandle>-Klasse in Betracht ziehen, anstatt nicht verwaltete Ressourcen direkt zu verwalten.
 
-Diese neuen Speicherorte für Ausdruckskörpermember sind ein wichtiger Meilenstein für C#: Diese Funktionen wurden von Community-Mitgliedern implementiert, die am Open-Source-Projekt [Roslyn](https://github.com/dotnet/Roslyn) arbeiten.
+Diese neuen Speicherorte für Member mit Ausdruckskörper sind ein wichtiger Meilenstein für die Sprache C#: Diese Features wurden von Community-Mitgliedern implementiert, die am Open Source-Projekt [Roslyn](https://github.com/dotnet/Roslyn) arbeiten.
 
 Das Ändern einer Methode in ein Ausdruckskörpermember ist eine [binärkompatible](version-update-considerations.md#binary-compatible-changes) Änderung.
 

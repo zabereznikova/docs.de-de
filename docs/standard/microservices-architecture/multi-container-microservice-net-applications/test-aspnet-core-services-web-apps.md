@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 67989dc9651745ce0bd9ee9bbcbde1af0b7bc452
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0f4b9a8461b4d14cd5b468a50af1783a340392e2
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148027"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362157"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
@@ -110,7 +110,7 @@ public class PrimeWebDefaultRequestShould
     [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
 -   **Komponententests in .NET Core mit dotnet-test** <br/>
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](~/docs/core/testing/unit-testing-with-dotnet-test.md)
 
 -   **xUnit.net**. Offizielle Website. <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
@@ -118,7 +118,7 @@ public class PrimeWebDefaultRequestShould
 -   **Grundlagen zum Komponententest** <br/>
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
--   **Moq**. GitHub repo (Scrutor. GitHub-Reporitory). <br/>
+-   **Moq**. GitHub-Repository. <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
 -   **NUnit**. Offizielle Website. <br/>

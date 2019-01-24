@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac4a8a0c13ba6aa0d5c65ec7fa1aa3b771c964eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b7f20dec86a85be85472037f58a2bd2002d9be1e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404858"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620392"
 ---
 # <a name="cordebugmdaflags-enumeration"></a>CorDebugMDAFlags-Enumeration
 Gibt den Status des Threads an, auf dem der Assistent für verwaltetes Debuggen (MDA) ausgelöst wird.  
@@ -38,13 +38,13 @@ typedef enum CorDebugMDAFlags {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`MDA_FLAG_SLIP`|Der Thread, auf dem der MDA ausgelöst wurde, verzögert ist seit dem Auslösen des MDA.|  
+|`MDA_FLAG_SLIP`|Der Thread, der auf dem der MDA ausgelöst wurde hat verschoben, da der MDA ausgelöst wurde.|  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Aufrufliste nicht mehr beschreibt, wo der MDA ursprünglich ausgelöst wurde, wird der Thread haben betrachtet *verlegt*. Dies ist ein ungewöhnlichen Situation durch die Ausführung einen ungültigen Vorgang beim Beenden des Threads gebracht.  
+ Wenn nicht mehr die Aufrufliste beschreibt, wo der MDA ursprünglich ausgelöst wurde, wird der Thread damit betrachtet *verlegt*. Dies ist eine ungewöhnliche Situation eingehen, die durch die Ausführung einen ungültigen Vorgang beim Beenden des Threads.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -52,5 +52,5 @@ typedef enum CorDebugMDAFlags {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

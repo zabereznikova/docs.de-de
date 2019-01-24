@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdea4c456f04911c37acd69ced65ba841f7959ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e4241f2057ce77713f91e969eda7765739613333
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732842"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport-Schnittstelle
 Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer portablen ausführbaren Datei (PE-Datei) oder einer anderen Quelle wie einer Typbibliothek oder einer eigenständigen Laufzeit-Metadatenbinärdatei bereit  
@@ -105,14 +105,14 @@ Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer p
 -   Die Get-Methoden wurden speziell dafür entwickelt, um einwertige Eigenschaften eines Metadatenelements zurückzugeben. Wenn die Eigenschaft ein Verweis auf ein anderes Element ist, wird ein Token für dieses Element zurückgegeben. Jeder Zeigereingabetyp kann NULL sein, um anzugeben, dass der betreffende Wert nicht angefordert wird. Verwenden Sie zum Abrufen von Eigenschaften, die im Wesentlichen Auflistungsobjekte sind (z. B. die Auflistung der Schnittstellen, die eine Klasse implementiert) die Enumerationsmethoden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

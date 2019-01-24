@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEnum Schnittstelle1
+title: ICorDebugEnum-Schnittstelle1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEnum
@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4659bbc9c2e3c71a6cf85e51a06bee4f789356b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97080f7d850e67d635f9a65ee85ad3ddddbb244d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732751"
 ---
-# <a name="icordebugenum-interface1"></a>ICorDebugEnum Schnittstelle1
-Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer Debuganwendung verwendet werden.  
+# <a name="icordebugenum-interface1"></a>ICorDebugEnum-Schnittstelle1
+Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer Anwendung Debuggen verwendet werden.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Clone-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Erstellt eine Kopie dieser `ICorDebugEnum` Objekt.|  
+|[Clone-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Erstellt eine Kopie dieses `ICorDebugEnum` Objekt.|  
 |[GetCount-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Ruft die Anzahl der Elemente in der Enumeration.|  
 |[Reset-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Verschiebt den Cursor auf den Anfang der Enumeration.|  
-|[Skip-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Verschiebt den Cursor in der Enumeration, um die angegebene Anzahl von Elementen.|  
+|[Skip-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Verschiebt den Cursor vorwärts in der Enumeration, um die angegebene Anzahl von Elementen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die folgenden Enumeratoren leiten sich von `ICorDebugEnum`:  
+ Leiten Sie die folgenden Enumeratoren von `ICorDebugEnum`:  
   
 -   "ICorDebugAppDomainEnum"  
   
@@ -84,7 +84,7 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer Debu
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -92,5 +92,5 @@ Dient als abstrakte Basisschnittstelle für die Enumeratoren, die von einer Debu
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

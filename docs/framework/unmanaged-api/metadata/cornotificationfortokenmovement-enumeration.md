@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96ab659e6ab6cc9601c0e9a1ab511da92905c242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 745ba18fd1a36789f06bcd3dd4d183c9b28b9875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650105"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement-Enumeration
-Gibt an, die Benachrichtigungen, die an den Metadaten-API-Client gesendet werden, wenn ein token neuzuordnung auftritt.  
+Gibt an, die Benachrichtigungen, die an den Metadaten-API-Client gesendet werden, wenn ein token neuzuordnung erfolgt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -66,8 +66,8 @@ typedef enum CorNotificationForTokenMovement {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`MDNotifyDefault`|Benachrichtigen, wenn `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, oder `mdFieldDef` Token verschieben.|  
-|`MDNotifyAll`|Benachrichtigen Sie, wenn ein beliebiges Token verschoben wird.|  
-|`MDNotifyNone`|Nicht benachrichtigen Sie, wenn Token verschieben.|  
+|`MDNotifyAll`|Benachrichtigen Sie, wenn jedes Token verschoben wird.|  
+|`MDNotifyNone`|Nicht benachrichtigen Sie, wenn das Token verschieben.|  
 |`MDNotifyMethodDef`|Benachrichtigen, wenn ein `mdMethodDef` -Token verschoben wird.|  
 |`MDNotifyMemberRef`|Benachrichtigen, wenn ein `mdMemberRef` -Token verschoben wird.|  
 |`MDNotifyFieldDef`|Benachrichtigen, wenn ein `mdFieldDef` -Token verschoben wird.|  
@@ -90,14 +90,14 @@ typedef enum CorNotificationForTokenMovement {
 |`MDNotifyResource`|Benachrichtigen, wenn ein `mdManifestResource` -Token verschoben wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Token möglicherweise erneut zugeordnet werden (die verschoben) beim Zusammenführen von Metadaten.  
+ Ein Token möglicherweise erneut zugeordnet werden (die verschoben wird) während eines Merge Metadaten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c34108b9eb53da77a48afb5d270dce9a32289c99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731113"
 ---
 # <a name="extension-methods-visual-basic"></a>Erweiterungsmethoden (Visual Basic)
-Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefinierten Funktionen, Datentypen, die bereits definiert sind, ohne dass einen neuen abgeleiteten Typ erstellt. Erweiterungsmethoden ermöglichen das Schreiben einer Methode, die aufgerufen werden können, als wäre sie eine des vorhandenen Typs Instanzenmethode.  
+Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefinierten Funktionen, Datentypen, die bereits definiert sind, ohne einen neuen abgeleiteten Typ zu erstellen. Erweiterungsmethoden ermöglichen das Schreiben eine Methode, die aufgerufen werden können, als handele es sich um eine Instanzenmethode des vorhandenen Typs.  
   
 ## <a name="remarks"></a>Hinweise  
  Eine Erweiterungsmethode kann ausschließlich eine `Sub`-Prozedur oder eine `Function`-Prozedur sein. Erweiterungseigenschaften, -felder oder -ereignisse können nicht definiert werden. Alle Erweiterungsmethoden müssen mit dem Erweiterungsattribut `<Extension()>` aus dem <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace markiert werden.  
@@ -141,7 +141,7 @@ End Module
   
  [!code-vb[VbVbalrExtensionMethods#6](./codesnippet/VisualBasic/extension-methods_7.vb)]  
   
- Dieses Mal ruft der Code in `Main` beide Male die Instanzmethode auf. Das liegt daran, dass sowohl `arg1` und `arg2` über eine Erweiterungskonvertierung zu `Long` verfügen, und die Instanzmethode in beiden Fällen Vorrang vor der Erweiterungsmethode hat.  
+ Dieses Mal ruft der Code in `Main` beide Male die Instanzmethode auf. Das liegt daran, dass sowohl `arg1` und `arg2` über eine erweiternde Konvertierung zu `Long` verfügen, und die Instanzmethode in beiden Fällen Vorrang vor der Erweiterungsmethode hat.  
   
  [!code-vb[VbVbalrExtensionMethods#7](./codesnippet/VisualBasic/extension-methods_8.vb)]  
   
@@ -174,13 +174,13 @@ End Module
   
  Wenn sich die Mehrdeutigkeit durch die Anwendung einer Rangfolge nicht auflösen lässt, können Sie den vollqualifizierten Namen zum Festlegen der aufgerufenen Methode verwenden. Wenn die `Print`-Methode aus dem vorherigen Beispiel in einem Modul mit dem Namen `StringExtensions` definiert wird, lautet der vollqualifizierte Name `StringExtensions.Print(example)` und nicht `example.Print()`.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.CompilerServices>  
- <xref:System.Runtime.CompilerServices.ExtensionAttribute>  
- [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
- [Module-Anweisung](../../../../visual-basic/language-reference/statements/module-statement.md)  
- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
- [Optionale Parameter](./optional-parameters.md)  
- [Parameterarrays](./parameter-arrays.md)  
- [Übersicht über Attribute](../../../../visual-basic/programming-guide/concepts/attributes/index.md)  
- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.CompilerServices>
+- <xref:System.Runtime.CompilerServices.ExtensionAttribute>
+- [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Module-Anweisung](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
+- [Optionale Parameter](./optional-parameters.md)
+- [Parameterarrays](./parameter-arrays.md)
+- [Übersicht über Attribute](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: 38f4fd0d10386476a5ca7b2ef6f1576cd5b69db9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f08fdb67611fe5fcee8b13f08162a62f6db59b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586489"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744985"
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a>Klasse &#39; &lt;Classname&gt; &#39; wurde nicht gefunden
-Klasse\<Klassenname >' kann nicht gefunden werden. Diese Bedingung ist in der Regel das Ergebnis einer falsch zugeordneten "Microsoft.VisualBasic.dll".  
+Klasse\<Klassenname >' wurde nicht gefunden. Diese Bedingung ist in der Regel das Ergebnis einer falsch zugeordneten "Microsoft.VisualBasic.dll".  
   
  Ein definierter Member wurde nicht gefunden.  
   
@@ -31,5 +31,5 @@ Klasse\<Klassenname >' kann nicht gefunden werden. Diese Bedingung ist in der Re
   
 4.  Wenn der Fehler auch nach der erneuten Installation auftritt, informieren Sie den Produktsupport von Microsoft.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Siehe auch
+- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

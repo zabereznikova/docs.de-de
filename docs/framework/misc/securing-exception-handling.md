@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe978930a9f84e0084f79f5fe585a1ecc3bf4eb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393041"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679382"
 ---
 # <a name="securing-exception-handling"></a>Sichern der Ausnahmebehandlung
-In Visual C++ und Visual Basic ein Filterausdruck weiter oben im Stapel ausgeführt wird, bevor eine **schließlich** Anweisung. Die **catch** Block zugeordnet diesen Filter ausgeführt wird, nachdem die **schließlich** Anweisung. Weitere Informationen finden Sie unter [Verwenden benutzergefilterter Ausnahmen](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). In diesem Abschnitt werden die Auswirkungen auf die Sicherheit der angegebenen Reihenfolge. Betrachten Sie die folgenden Pseudocodebeispiel zur Veranschaulichung der Reihenfolge, in welcher filteranweisungen und **schließlich** Anweisungen ausführen.  
+In Visual C++ und Visual Basic können ein Filterausdruck weiter oben im Stapel ausgeführt wird, vor allen **schließlich** Anweisung. Die **catch** Block zugeordnet ist, dass der Filter ausgeführt wird, nachdem die **schließlich** Anweisung. Weitere Informationen finden Sie unter [Verwenden benutzergefilterter Ausnahmen](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). In diesem Abschnitt werden die Sicherheitsaspekte bei der angegebenen Reihenfolge untersucht. Betrachten Sie das folgende Pseudocodebeispiel, die die Reihenfolge, in welche filteranweisungen veranschaulicht und **schließlich** Anweisungen ausführen.  
   
 ```cpp  
 void Main()   
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- Der Filter wird ausgeführt, bevor die **schließlich** Anweisung, damit Sicherheitsprobleme nichts ergeben können, die einen Zustand zu ändern, in dem Ausführung von anderem Code nutzen kann. Zum Beispiel:  
+ Der Filter ausgeführt wird, bevor die **schließlich** Anweisung, daher Sicherheitsprobleme von etwas eingeführt werden können, die einen Zustand zu ändern, wenn die Ausführung von anderem Code nutzen kann. Zum Beispiel:  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- Dieser Pseudocode ermöglicht einen Filter, die weiter oben im Stapel, beliebigen Code auszuführen. Weitere Beispiele für Vorgänge, die einen ähnlichen Effekt hätte sind temporäre Identitätswechsel von einer anderen Identität, die eine interne Flag, das einige sicherheitsüberprüfung umgeht festlegen oder Ändern der Kultur des Threads zugeordnet. Die empfohlene Lösung ist, einen Ausnahmehandler, um Änderungen des Codes zu Threadzustand von Aufrufern Filter-Blöcken zu isolieren einzuführen. Allerdings ist es wichtig, dass der Ausnahmehandler ordnungsgemäß eingeführt werden, oder wird dieses Problem nicht behoben werden. Das folgende Beispiel schaltet die Benutzeroberflächenkultur, aber jede Art von Änderung des Threads kann auf ähnliche Weise verfügbar gemacht werden.  
+ Dieser Pseudocode ermöglicht einen Filter, die weiter oben im Stapel, beliebigen Code auszuführen. Weitere Beispiele für Vorgänge, die eine ähnliche Wirkung hätte sind temporäre Identitätswechsel von einer anderen Identität, die ein internes Flag, das die umgeht einige sicherheitsüberprüfung festlegen oder Ändern der Kultur mit dem Thread zugeordnet. Die empfohlene Lösung ist einen Ausnahmehandler, um auf den Zustand des Threads des Codes Änderungen zu isolieren, vom Aufrufer Filter blockiert einführen. Allerdings es ist wichtig, dass der Ausnahmehandler ordnungsgemäß eingeführt werden, oder wird dieses Problem nicht behoben werden. Das folgende Beispiel schaltet die Kultur der Benutzeroberfläche, aber jede Art von Thread Zustandsänderung auf ähnliche Weise verfügbar gemacht werden.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Die richtige Lösung ist in diesem Fall die vorhandenen umschließen **versuchen**/**schließlich** -block in ein **versuchen**/**catch** Block. Einführung einfach in eine **Catch-Throw** Klausel in der vorhandenen **versuchen**/**schließlich** Block nicht das Problem beheben, wie im folgenden Beispiel gezeigt.  
+ Die richtige Lösung in diesem Fall ist, um die vorhandene umschließen **versuchen Sie es**/**schließlich** -block in eine **versuchen**/**catch** Block. Einführung einfach in eine **Catch-Throw** Klausel in der vorhandenen **versuchen Sie es**/**schließlich** Block nicht das Problem wird behoben, wie im folgenden Beispiel gezeigt.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- Wird dadurch das Problem nicht behoben, da die **schließlich** Anweisung wurde nicht ausgeführt, bevor die `FilterFunc` Ruft das Steuerelement ab.  
+ Dadurch wird das Problem nicht behoben, da die **schließlich** Anweisung nicht ausgeführt wurde, bevor Sie die `FilterFunc` ruft Steuerelement ab.  
   
- Im folgende Beispiel wird das Problem behebt, indem Sie sicherstellen, dass die **schließlich** -Klausel wurde ausgeführt, bevor eine Ausnahme des Aufrufers Filter Ausnahmeblöcke angeboten.  
+ Im folgende Beispiel wird das Problem behebt, indem sichergestellt wird, die die **schließlich** Klausel ausgeführt wurde, bevor eine Ausnahme des Aufrufers Ausnahme Filter wird angeboten.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -160,5 +160,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Siehe auch
+- [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)

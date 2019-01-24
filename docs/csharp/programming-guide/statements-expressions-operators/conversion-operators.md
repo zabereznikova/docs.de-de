@@ -8,19 +8,21 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: a55a2148ce161deca79d8ba8e64a217e474f0284
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 927640b63773d24be93cc90427668f9568a39652
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236816"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362729"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Konvertierungsoperatoren (C#-Programmierhandbuch)
+
 Mit C# können Programmierer Konvertierungen für Klassen oder Strukturen deklarieren, damit Klassen oder Strukturen in andere Klassen und Strukturen und Basistypen oder aus diesen konvertiert werden können. Konvertierungen werden wie Operatoren definiert und nach dem Typ benannt, in den Sie konvertiert werden. Entweder muss der Typ des zu konvertierenden Arguments oder der Typ des Konvertierungsergebnisses, aber nicht beide, der enthaltende Typ sein.  
   
  [!code-csharp[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
-## <a name="conversion-operators-overview"></a>Überblick über Konvertierungsoperatoren  
+## <a name="conversion-operators-overview"></a>Überblick über Konvertierungsoperatoren
+
  Konvertierungsoperatoren verfügen über folgende Eigenschaften:  
   
 -   Konvertierungen, die als `implicit` deklariert wurden, werden bei Bedarf automatisch durchgeführt.  
@@ -29,7 +31,8 @@ Mit C# können Programmierer Konvertierungen für Klassen oder Strukturen deklar
   
 -   Alle Konvertierungen müssen als `static` deklariert werden.  
   
-## <a name="related-sections"></a>Verwandte Abschnitte  
+## <a name="related-sections"></a>Verwandte Abschnitte
+
  Weitere Informationen finden Sie unter:   
   
 -   [Verwenden von Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  

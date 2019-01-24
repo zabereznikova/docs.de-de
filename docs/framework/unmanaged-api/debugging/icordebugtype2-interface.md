@@ -1,5 +1,5 @@
 ---
-title: ICorDebugType2-Schnittstelle
+title: ICorDebugType2 Interface
 ms.date: 03/30/2017
 api_name:
 - ICorDebugType2
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 038598e6fa8c0f7d47a161783d21f03b3c87af0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f61efdecfb87ed598dd9675c0b8804259849e64c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54706263"
 ---
-# <a name="icordebugtype2-interface"></a>ICorDebugType2-Schnittstelle
-ICorDebugType-Schnittstelle, die Typ-ID von einem Basistyp oder komplexen (Benutzerdefiniert) Typ abgerufen wird erweitert.  
+# <a name="icordebugtype2-interface"></a>ICorDebugType2 Interface
+Erweitert die Schnittstelle "ICorDebugType" die Typ-ID von einem Basistyp oder einen komplexen Typ auf (Benutzerdefiniert) abgerufen.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -33,13 +33,13 @@ ICorDebugType-Schnittstelle, die Typ-ID von einem Basistyp oder komplexen (Benut
 |[GetTypeID-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|Ruft eine [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) für diesen Typ.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle ist eine logische Erweiterung von ICorDebugType-Schnittstelle.  
+ Diese Schnittstelle ist eine logische Erweiterung der ICorDebugType-Schnittstelle.  
   
 > [!NOTE]
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codefragment veranschaulicht die Verwendung von der [ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) Methode.  
+ Das folgende Codefragment veranschaulicht die Verwendung von der [icordebugtype2:: GetTypeId](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) Methode.  
   
 ```  
 // (error checking omitted for brevity)  
@@ -55,7 +55,7 @@ pType2->GetTypeID(&id);
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -63,5 +63,5 @@ pType2->GetTypeID(&id);
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

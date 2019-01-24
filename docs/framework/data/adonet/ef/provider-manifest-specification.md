@@ -2,12 +2,12 @@
 title: Anbietermanifestspezifikation
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 592d435dd0da3a66fb3bbd278a53facb6cf08cb7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734051"
 ---
 # <a name="provider-manifest-specification"></a>Anbietermanifestspezifikation
 In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und Funktionen im Datenspeicher unterstützen kann.  
@@ -54,14 +54,14 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
   
  Sie schreiben eine XML-Datei mit zwei Abschnitten:  
   
--   Eine Liste von Anbietertypen in EDM-Begriffen sowie eine Definition der Zuordnung in beide Richtungen: EDM-Anbieter und Anbieter-EDM.  
+-   Eine Liste von Anbietertypen in EDM-Begriffen ausgedrückt, und definieren die Zuordnung für beide Richtungen: EDM-Anbieter und Anbieter-EDM.  
   
 -   Eine Liste der vom Anbieter unterstützen Funktionen, wobei die Parameter und Rückgabetypen mit EDM-Begriffen ausgedrückt werden.  
   
 ## <a name="provider-manifest-discoverability"></a>Ermittelbarkeit des Anbietermanifests  
  Das Manifest wird indirekt von mehreren Komponententypen der Entitätsdienste (z. B. Tools oder Abfrage) verwendet. Die direktere Nutzung erfolgt jedoch für die Metadaten mithilfe des Metadaten-Ladeprogramms des Datenspeichers.  
   
- ![dfb3d02b&#45;7a8c&#45;4D 51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  Anbieter können jedoch unterschiedliche Speicher oder unterschiedliche Versionen des gleichen Speichers unterstützen. Daher muss ein Anbieter für jeden unterstützten Datenspeicher ein anderes Manifest melden.  
   
@@ -77,7 +77,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
 ## <a name="provider-manifest-programming-model"></a>Programmiermodell für das Anbietermanifest  
  Anbieter werden von <xref:System.Data.Common.DbXmlEnabledProviderManifest> abgeleitet, sodass die Manifeste deklarativ angegeben werden können. In der folgenden Abbildung wird die Klassenhierarchie eines Anbieters dargestellt:  
   
- ![Keine](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>Ermittelbarkeits-API  
  Das Anbietermanifest wird vom Speichermetadaten-Ladeprogramm (StoreItemCollection) entweder über eine Datenspeicherverbindung oder mit einem Anbietermanifesttoken geladen.  
@@ -262,9 +262,9 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |ReturnType|Zeichenfolge|Nein|Void|Der EDM-Rückgabetyp der Funktion|  
 |Aggregat|Boolean|Nein|False|"True", wenn es sich bei der Funktion um eine Aggregatfunktion handelt.|  
 |BuiltIn|Boolean|Nein|True|"True", wenn die Funktion in den Datenspeicher integriert ist.|  
-|StoreFunctionName|Zeichenfolge|Nein|\<Name >|Funktionsname im Datenspeicher.  Ermöglicht eine Umleitungsebene für Funktionsnamen.|  
+|StoreFunctionName|Zeichenfolge|Nein|\<Name>|Funktionsname im Datenspeicher.  Ermöglicht eine Umleitungsebene für Funktionsnamen.|  
 |NiladicFunction|Boolean|Nein|False|"True", wenn die Funktion keine Parameter erfordert und ohne Parameter aufgerufen wird.|  
-|ParameterType<br /><br /> Semantik|ParameterSemantics|Nein|AllowImplicit<br /><br /> Conversion|Hiermit kann ausgewählt werden, wie die Abfragepipeline mit Parametertypersetzung umgehen soll:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|ParameterType<br /><br /> Semantik|ParameterSemantics|Nein|AllowImplicit<br /><br /> Conversion|Hiermit kann ausgewählt werden, wie die Abfragepipeline mit Parametertypersetzung umgehen soll:<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
  **Parameterknoten**  
   
@@ -279,5 +279,5 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ##### <a name="namespace-attribute"></a>Namespace-Attribut  
  Jeder Datenspeicheranbieter muss einen Namespace oder eine Gruppe von Namespaces für die im Manifest definierten Informationen definieren. Dieser Namespace kann in Entity SQL-Abfragen verwendet werden, um Namen von Funktionen und Typen aufzulösen. Zum Beispiel: SqlServer. Dieser Namespace muss sich vom kanonischen Namespace "EDM" unterscheiden, der von den Entitätsdiensten für Standardfunktionen definiert wird, die von Entity SQL-Abfragen unterstützt werden sollen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schreiben eines Entity Framework-Datenanbieters](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>Siehe auch
+- [Schreiben eines Entity Framework-Datenanbieters](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

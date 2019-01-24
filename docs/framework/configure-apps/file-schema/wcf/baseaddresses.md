@@ -1,22 +1,22 @@
 ---
-title: '&lt;BaseAddresses&gt;'
+title: '&lt;baseAddresses&gt;'
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 0af5dee41c6adf560c90874e6e9a44b62c5decc6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 34d400e74b24e9eb4140d1b43597b0217b23d80c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730125"
 ---
-# <a name="ltbaseaddressesgt"></a>&lt;BaseAddresses&gt;
+# <a name="ltbaseaddressesgt"></a>&lt;baseAddresses&gt;
 Stellt eine Auflistung von `baseAddress`-Elementen dar, bei denen es sich um Basisadressen für einen Diensthost in einer selbst gehosteten Umgebung handelt. Wenn eine Basisadresse vorhanden ist, können Endpunkte mit Adressen relativ zur Basisadresse konfiguriert werden.  
   
  \<system.ServiceModel>  
-\<Client >  
-\<Endpunkt >  
-\<Host >  
-\<BaseAddresses >  
+\<client>  
+\<endpoint>  
+\<host>  
+\<baseAddresses>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,10 +45,10 @@ Stellt eine Auflistung von `baseAddress`-Elementen dar, bei denen es sich um Bas
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Host >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Ein Konfigurationselement, das Einstellungen für einen Diensthost angibt.|  
+|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Ein Konfigurationselement, das Einstellungen für einen Diensthost angibt.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.HostElement>  
- <xref:System.ServiceModel.ServiceHost>  
- <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>  
- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.HostElement>
+- <xref:System.ServiceModel.ServiceHost>
+- <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>
+- [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)

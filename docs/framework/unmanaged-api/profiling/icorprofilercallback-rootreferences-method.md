@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 467d065ab4d47e698c7043697ebe2ccf5f98a3cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94b736a8e3250f4d208d4a9a46a022140b676318
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452584"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631352"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences-Methode
-Benachrichtigt den Profiler mit Informationen zu Stammverweisen nach der Garbagecollection.  
+Benachrichtigt den Profiler mit Informationen über Stammverweise nach der Garbagecollection.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,20 +37,20 @@ HRESULT RootReferences(
   
 #### <a name="parameters"></a>Parameter  
  `cRootRefs`  
- [in] Die Anzahl der Verweise in der `rootRefIds` Array.  
+ [in] Die Anzahl der Verweise in die `rootRefIds` Array.  
   
  `rootRefIds`  
- [in] Ein Array von Objekt-IDs, die kein statisches Objekt oder ein Objekt auf dem Stapel zu verweisen.  
+ [in] Ein Array von Objekt-IDs, die entweder ein statisches Objekt oder ein Objekt auf dem Stapel zu verweisen.  
   
 ## <a name="remarks"></a>Hinweise  
- Beide `RootReferences` und [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) werden aufgerufen, um den Profiler zu benachrichtigen. Profiler implementieren normalerweise eine oder andere, jedoch nicht beides, da die Informationen im übergeben `RootReferences2` ist eine Obermenge der übergebenen `RootReferences`.  
+ Beide `RootReferences` und [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) werden aufgerufen, um den Profiler zu benachrichtigen. Profiler implementieren normalerweise mindestens eine der anderen jedoch nicht beides, da die Informationen in übergeben `RootReferences2` ist eine Obermenge der, die übergebene `RootReferences`.  
   
- Es ist möglich, dass die `rootRefIds` Array kann ein null-Objekt enthalten. Beispielsweise alle Objektverweise, die auf dem Stapel deklariert werden als Stammelemente behandelt, durch den Garbage Collector und werden immer gemeldet werden.  
+ Es ist möglich, dass die `rootRefIds` Array kann ein null-Objekt enthalten. Beispielsweise werden alle Objektverweise, die auf dem Stapel deklariert werden als Stammelemente behandelt, durch den Garbage Collector und immer gemeldet.  
   
- Die Objekt-IDs zurückgegebenes `RootReferences` sind nicht während des Rückrufs selbst gültig, da die Garbagecollection in der Mitte Verschieben von Objekten von alten Adressen auf neue Adressen werden kann. Aus diesem Grund müssen Profiler nicht versuchen, Objekte beim Untersuchen einer `RootReferences` aufrufen. Wenn [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) wird aufgerufen, alle Objekte an die neuen Speicherorte verschoben wurden und können problemlos geprüft werden.  
+ Die Objekt-IDs von zurückgegebenen `RootReferences` sind nicht während des Rückrufs selbst gültig, da die Garbagecollection in der Mitte Verschieben von Objekten von alten Adressen auf neue Adressen werden kann. Aus diesem Grund müssen Profiler nicht versuchen, Objekte, die beim Überprüfen einer `RootReferences` aufrufen. Wenn [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) wird aufgerufen, alle Objekte an die neuen Speicherorte verschoben wurden und problemlos überprüft werden kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -58,5 +58,5 @@ HRESULT RootReferences(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

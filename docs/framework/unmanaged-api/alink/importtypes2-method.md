@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51c696679626a598be422376e9dc89b5add1773d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60f2057330f1a06cdd3e6ff5560f8ca7aeefe857
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725726"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2-Methode
-Initiiert den Import von Typen. Rufen Sie diese Methode, um zu beginnen, Importieren von Typen aus jedem Bereich über importiert [ImportFile-Methode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Startet den Import von Typen. Rufen Sie diese Methode zum Importieren von Typen aus jedem Bereich über importiert [ImportFile-Methode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,10 +44,10 @@ HRESULT ImportTypes2(
  ID der Assembly in die importiert werden soll.  
   
  `FileToken`  
- ID der Datei, aus denen importiert.  
+ Die ID der Datei, aus denen importiert.  
   
  `dwScope`  
- Nullbasierter Gültigkeitsbereich zum Importieren von.  
+ Nullbasierte Bereich aus der importiert werden.  
   
  `phEnum`  
  Empfängt Enumeratorhandle für die Typen im angegebenen Bereich.  
@@ -59,12 +59,12 @@ HRESULT ImportTypes2(
  Empfängt optional die Anzahl der Typen im angegebenen Bereich.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  Erfordert alink.h  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

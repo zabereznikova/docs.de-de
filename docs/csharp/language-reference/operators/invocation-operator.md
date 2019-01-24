@@ -1,7 +1,7 @@
 ---
 title: ()-Operator – C#-Referenz
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/15/2019
 f1_keywords:
 - ()_CSharpKeyword
 helpviewer_keywords:
@@ -9,38 +9,51 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 57c23dbd6ee95597514dba92e7217bdcc3e38f24
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3a0af33739c9cb4d090842219eba4ece9700ef89
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236452"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362781"
 ---
 # <a name="-operator-c-reference"></a>()-Operator (C#-Referenz)
-Zusätzlich zur Angabe der Reihenfolge von Vorgängen in einem Ausdruck werden Klammern verwendet, um folgende Aufgaben auszuführen:  
-  
-1.  Das Angeben von Umwandlungen oder Typkonvertierungen.  
-  
-     [!code-csharp[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
-  
-2.  Aufrufen von Methoden oder Delegaten.  
-  
-     [!code-csharp[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
-  
-## <a name="remarks"></a>Hinweise  
- Eine Umwandlung ruft implizit den Konvertierungsoperator von einem Typ in einen anderen auf; die Umwandlung schlägt fehl, wenn der Konvertierungsoperator nicht definiert ist. Weitere Informationen zu Konvertierungsoperatoren erhalten Sie unter [explizit](../../../csharp/language-reference/keywords/explicit.md) und [implizit](../../../csharp/language-reference/keywords/implicit.md).  
-  
- Operator `()` kann nicht überladen werden.  
-  
- Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
-  
- Weitere Informationen zu Methodenaufrufen finden Sie unter [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md).  
-  
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Klammern „`()`“ werden in der Regel für den Methoden- oder Delegataufruf oder in Cast-Ausdrücken verwendet.
+
+Mit Klammern geben Sie auch die Reihenfolge an, in der Vorgänge in einem Ausdruck ausgewertet werden sollen. Weitere Informationen finden Sie im Abschnitt [Hinzufügen von Klammern](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) des Artikels [Operatoren (C#-Programmierhandbuch)](../../programming-guide/statements-expressions-operators/operators.md). Die Liste der Operatoren ist nach der Rangfolge sortiert, siehe [C#-Operatoren](index.md).
+
+## <a name="method-invocation"></a>Methodenaufruf
+
+Im folgenden Beispiel wird der Aufruf einer Methode mit oder ohne Argumente sowie eines Delegaten veranschaulicht:
+
+[!code-csharp-interactive[use for invocation](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Invocation)]
+
+Klammern verwenden Sie auch beim Aufrufen eines [Konstruktors](../../programming-guide/classes-and-structs/constructors.md) mit einem [ `new` ](../keywords/new-operator.md)-Operator.
+
+Weitere Informationen über Methoden finden Sie unter [Methoden](../../programming-guide/classes-and-structs/methods.md). Weitere Informationen über Delegaten finden Sie unter [Delegaten](../../programming-guide/delegates/index.md).
+
+## <a name="cast-expression"></a>Cast-Ausdruck
+
+Ein Cast-Ausdruck der Form `(T)E` ruft einen Konvertierungsoperator zum Konvertieren des Werts des Ausdrucks `E` in Typ `T` auf. Wenn keine explizite Konvertierung von Typ `E` in Typ `T` möglich ist, tritt ein Fehler während der Kompilierung auf. Weitere Informationen zum Definieren von Konvertierungsoperatoren finden Sie in den Schlüsselwortartikeln [explicit (C#-Referenz)](../keywords/explicit.md) und [implicit (C#-Referenz)](../keywords/implicit.md).
+
+Das folgende Beispiel veranschaulicht die Typenkonvertierung zwischen numerischen Typen:
+
+[!code-csharp-interactive[use for cast](~/samples/snippets/csharp/language-reference/operators/InvocationOperatorExamples.cs#Cast)]
+
+Weitere Informationen zu vordefinierten expliziten Konvertierungen zwischen numerischen Typen finden Sie unter [Tabelle für explizite numerische Konvertierungen](../keywords/explicit-numeric-conversions-table.md).
+
+Weitere Informationen finden Sie unter [Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)](../../programming-guide/types/casting-and-type-conversions.md) und [Konvertierungsoperatoren (C#-Programmierhandbuch)](../../programming-guide/statements-expressions-operators/conversion-operators.md).
+
+## <a name="operator-overloadability"></a>Operatorüberladbarkeit
+
+Der Operator `()` kann nicht überladen werden.
+
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+Weitere Informationen finden Sie in den Abschnitten [Aufrufausdrücke](~/_csharplang/spec/expressions.md#invocation-expressions) und [CAST-Ausdrücke](~/_csharplang/spec/expressions.md#cast-expressions) der [C#-Sprachspezifikation](../language-specification/index.md).
+
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Operatoren](index.md)

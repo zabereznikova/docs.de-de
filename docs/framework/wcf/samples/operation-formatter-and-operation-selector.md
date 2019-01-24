@@ -2,12 +2,12 @@
 title: Vorgangsformatierer und Vorgangsauswahl
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: a814de7433f2d06491245dc1d6e6e637b514118a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5261c082f748877505701221668b61bf7097ef06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070891"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661255"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Vorgangsformatierer und Vorgangsauswahl
 Dieses Beispiel veranschaulicht, wie Erweiterungspunkte für Windows Communication Foundation (WCF) verwendet werden können, um Nachrichtendaten in einem anderen Format wie erwartet, WCF dass zu ermöglichen. Standardmäßig erwarten die WCF-Formatierer Methodenparameter unter aufgenommen werden die `soap:body` Element. Das Beispiel zeigt, wie ein benutzerdefinierter Vorgangsformatierer implementiert wird, der Parameterdaten aus einer HTTP-GET-Abfragezeichenfolge stattdessen analysiert und mit diesen Daten dann Methoden aufruft.  
@@ -142,7 +142,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 -   Die Clientimplementierung muss nicht geändert werden.  
   
--   Die App.config-Datei für den Client muss eine benutzerdefinierte POX-Bindung verwenden, die für das `messageVersion`-Attribut des `textMessageEncoding`-Elements `None` festlegt. Ein Unterschied zum Dienst besteht darin, dass der Client die manuelle Adressierung aktivieren muss, damit die Empfängeradresse der ausgehenden Nachricht geändert werden kann.  
+-   Die Datei „App.config“ für den Client muss eine benutzerdefinierte POX-Bindung verwenden, die für das `messageVersion`-Attribut des `textMessageEncoding`-Elements `None` festlegt. Ein Unterschied zum Dienst besteht darin, dass der Client die manuelle Adressierung aktivieren muss, damit die Empfängeradresse der ausgehenden Nachricht geändert werden kann.  
   
     ```xml  
     <bindings>  

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3249ad76c428752c91540e135bc978d3fe835de1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 69af794d5405894d24f0d7545613a0e85ca3ec6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574013"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps-Methode
-Ruft die Metadatensignatur der Methode verwiesen wird, vom angegebenen MethodSpec-token ab.  
+Ruft die Metadatensignatur der Methode verwiesen wird, vom angegebenen MethodSpec token ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,26 +40,26 @@ HRESULT GetMethodSpecProps (
   
 #### <a name="parameters"></a>Parameter  
  `mi`  
- [in] Ein MethodSpec-Token, die Instanziierung der Methode darstellt.  
+ [in] Ein MethodSpec-Token, das die Instanziierung der Methode darstellt.  
   
  `tkParent`  
- [out] Ein Zeiger auf das MethodDef oder MethodRef-Token, das die Methodendefinition darstellt.  
+ [out] Ein Zeiger auf das MethodDef oder MethodRef Token, das die Definition der Methode darstellt.  
   
  `ppvSigBlob`  
  [out] Ein Zeiger auf die binäre Metadatensignatur der Methode.  
   
  `pcbSigBlob`  
- [out] Die Größe in Bytes, der `ppvSigBlob`.  
+ [out] Die Größe in Bytes, des `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

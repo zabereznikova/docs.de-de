@@ -1,22 +1,22 @@
 ---
-title: Überprüfen die Kennwörter Komplexität (Visual Basic)
+title: Überprüfen die Komplexität der Kennwörter (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: acfc8ab958c8671ed7f1afd245d24a43ca12be29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd1cfa8c3391861b87e8aec718b63287c1225263
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733947"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Exemplarische Vorgehensweise: Überprüfen der Komplexität von Kennwörtern (Visual Basic)
-Diese Methode auf einige Eigenschaften sicheres Kennwort überprüft und aktualisiert einen Zeichenfolgenparameter mit Informationen darüber, welche das Kennwort überprüft ein Fehler auftritt.  
+Diese Methode überprüft, ob eine sichere Kennworteigenschaften gewählt und aktualisiert einen Zeichenfolgenparameter mit Informationen, die über die das Kennwort überprüft schlägt fehl.  
   
- Kennwörter können in einem sicheren System zum Autorisieren eines Benutzers verwendet werden. Allerdings müssen die Kennwörter für nicht autorisierte Benutzer zu erraten schwierig sein. Angreifer können einen *Wörterbuchangriff* Programm an, die alle Wörter in einem Wörterbuch (oder mehrere Wörterbücher in verschiedenen Sprachen) durchläuft und testet, ob eines der Wörter als das Kennwort eines Benutzers verwendet werden. Unsichere Kennwörter, z. B. "Yankees" oder "Mustang" können schnell ausspioniert werden. Sicherer Kennwörter, z. B. "? Sie "L1N3vaFiNdMeyeP@sSWerd!", sind sehr viel seltener zu erraten werden. Ein System kennwortgeschützte sollten sicherstellen, dass Benutzer sichere Kennwörter auswählen.  
+ Kennwörter können in einem sicheren System zum Autorisieren eines Benutzers verwendet werden. Allerdings müssen die Kennwörter für nicht autorisierte Benutzer schwierig zu erraten sein. Angreifer können einen *Wörterbuchangriff* Programm, das alle der Wörter in einem Wörterbuch (oder mehreren Wörterbüchern in verschiedenen Sprachen) durchlaufen und testet, ob alle der Wörter als das Kennwort eines Benutzers arbeiten. Schwache Kennwörter wie "Yankees" oder "Mustang" können schnell ausspioniert werden. Sicherere Kennwörter, z. B. "? Sie "L1N3vaFiNdMeyeP@sSWerd!", sehr viel weniger wahrscheinlich erraten werden. Ein Kennwort geschützt sind und sorgen dafür, dass Benutzer sichere Kennwörter wählen.  
   
- Ein sicheres Kennwort ist komplex (mit einer Mischung aus Großbuchstaben, Kleinbuchstaben, numerische und Sonderzeichen), ist es sich nicht um ein Wort. In diesem Beispiel wird veranschaulicht, wie Komplexität überprüft wird.  
+ Ein sicheres Kennwort ist komplex (enthält eine Mischung aus Großbuchstaben, Kleinbuchstaben, numerische und Sonderzeichen), und es ist kein Word. Dieses Beispiel zeigt, wie Sie Komplexität zu überprüfen.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -24,25 +24,25 @@ Diese Methode auf einige Eigenschaften sicheres Kennwort überprüft und aktuali
  [!code-vb[VbVbcnRegEx#1](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/walkthrough-validating-that-passwords-are-complex_1.vb)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Rufen Sie diese Methode, durch die Zeichenfolge, die das Kennwort enthält, zu übergeben.  
+ Rufen Sie diese Methode übergeben Sie die Zeichenfolge, die das Kennwort enthält, ein.  
   
  Für dieses Beispiel benötigen Sie Folgendes:  
   
 -   Zugriff auf die Member des <xref:System.Text.RegularExpressions>-Namespace Fügen Sie eine `Imports`-Anweisung hinzu, wenn Sie Membernamen in Ihrem Code nicht vollqualifizieren. Weitere Informationen finden Sie unter [Imports-Anweisung (.NET-Namespace und -typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Sicherheit  
- Wenn Sie das Kennwort über das Netzwerk verschieben, müssen Sie eine sichere Methode zum Übertragen von Daten verwenden. Weitere Informationen finden Sie unter [ASP.NET Web Application Security](https://msdn.microsoft.com/library/330a99hc).  
+ Wenn Sie das Kennwort über ein Netzwerk verschieben, müssen Sie eine sichere Methode zum Übertragen von Daten verwenden. Weitere Informationen finden Sie unter [ASP.NET Web Application Security](https://msdn.microsoft.com/library/330a99hc).  
   
- Sie können die Genauigkeit der verbessern die `ValidatePassword` Funktion durch Hinzufügen von zusätzlichen komplexitätsüberprüfungen:  
+ Sie können die Genauigkeit der verbessern die `ValidatePassword` Funktion durch Hinzufügen zusätzlicher komplexitätsüberprüfungen:  
   
--   Vergleichen Sie das Kennwort und seine Teilzeichenfolgen anhand des Benutzernamens, Benutzer-ID und ein Wörterbuch anwendungsdefinierte. Darüber hinaus behandeln Sie visuell ähnliche Zeichen als gleichwertig, wenn die Vergleiche ausführen. Behandeln Sie z. B. den Buchstaben "l" und "e" als gleichwertig mit der Zahlen "1" und "3".  
+-   Vergleichen Sie das Kennwort und die Teilzeichenfolgen vor den Namen des Benutzers, Benutzer-ID und ein Wörterbuch anwendungsdefinierte. Darüber hinaus visuell ähnliche Zeichen als gleichwertig behandelt, bei der die Vergleiche ausführen. Behandeln Sie z. B. den Buchstaben "l" und "e" als Entsprechung zu die Ziffern "1" und "3".  
   
 -   Ist nur ein Großbuchstabe, stellen Sie sicher, dass es sich nicht um das Kennwort des ersten Zeichens ist.  
   
 -   Stellen Sie sicher, dass die letzten beiden Zeichen des Kennworts Buchstaben sind.  
   
--   Gestatten Sie keine Kennwörter in denen alle Symbole aus oberste Zeile die Tastatur eingegeben werden.  
+-   Lassen Sie nicht die Kennwörter, die in denen alle Symbole, die von der Tastatur die oberste Zeile eingegeben werden.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Text.RegularExpressions.Regex>  
- [Sicherheit von ASP.NET-Webanwendungen](https://msdn.microsoft.com/library/330a99hc)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Text.RegularExpressions.Regex>
+- [Sicherheit von ASP.NET-Webanwendungen](https://msdn.microsoft.com/library/330a99hc)

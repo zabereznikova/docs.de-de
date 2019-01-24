@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a2c476280009a617573fb7989b2184cd9baa6a8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201937"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660683"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Zuweisen von Objektvariablen (Visual Basic)
 Sie verwenden eine normale Anweisung ein Objekt einer Objektvariablen zugewiesen. Sie können den Objektausdruck ein zuweisen oder die ["Nothing"](../../../../visual-basic/language-reference/nothing.md) -Schlüsselwort, wie im folgenden Beispiel veranschaulicht.  
@@ -75,10 +75,10 @@ End Sub
 addStandardText(Me)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Werte von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Vorgehensweise: Deklarieren einer Objektvariablen und Zuweisen eines entsprechenden Objekts in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)  
- [Gewusst wie: Entfernen aller Verweise einer Objektvariablen auf Instanzen](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)  
- [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+## <a name="see-also"></a>Siehe auch
+- [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Werte von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [Vorgehensweise: Deklarieren einer Objektvariablen und Zuweisen eines entsprechenden Objekts in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [Vorgehensweise: Einer Objektvariablen verweist nicht auf eine beliebige Instanz](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
+- [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

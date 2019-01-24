@@ -1,19 +1,19 @@
 ---
-title: '&lt;Filter&gt;'
+title: '&lt;filter&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-ms.openlocfilehash: f7224eab9f3c21bce9839298b50c52e9da08b6f7
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9fae9a599299fdd8cf1e996593514fc0ef38b6ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645508"
 ---
-# <a name="ltfiltergt"></a>&lt;Filter&gt;
+# <a name="ltfiltergt"></a>&lt;filter&gt;
 
 Definiert einen Routingfilter, der den Typ der Windows Communication Foundation (WCF) bestimmt<xref:System.ServiceModel.Dispatcher.MessageFilter> beim Auswerten eingehender Nachrichten als auch alle Daten oder Parameter, die den Filter erforderlichen verwendet werden.
 
-\<system.serviceModel > \<routing > \<Filter > \<Filter >
+\<system.serviceModel> \<routing> \<filters> \<filter>
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,10 +49,10 @@ Keine
 
 | Element | Beschreibung |
 | ------- | ----------- |
-| [\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Ein Konfigurationsabschnitt zum Definieren eines Satzes von routingfiltern, die den Typ der Windows Communication Foundation (WCF) bestimmen<xref:System.ServiceModel.Dispatcher.MessageFilter> beim Auswerten eingehender Nachrichten verwendet werden. |
+| [\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Ein Konfigurationsabschnitt zum Definieren eines Satzes von routingfiltern, die den Typ der Windows Communication Foundation (WCF) bestimmen<xref:System.ServiceModel.Dispatcher.MessageFilter> beim Auswerten eingehender Nachrichten verwendet werden. |
 
 ## <a name="see-also"></a>Siehe auch
 
-<xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>    
-<xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A?displayProperty=nameWithType>   
-<xref:System.ServiceModel.Routing.Configuration.FilterType?displayProperty=nameWithType>   
+- <xref:System.ServiceModel.Routing.Configuration.FilterElement?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.Routing.Configuration.FilterType?displayProperty=nameWithType>

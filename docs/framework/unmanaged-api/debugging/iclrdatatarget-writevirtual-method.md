@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e55bc18c7a41e235d1ba6274067c45c26dc7262a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 540f9d1a765ff46235f3c3d62f5da4a00b8ab85a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405452"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745479"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual-Methode
-Schreibt Daten aus dem angegebenen Puffer auf die angegebene virtuelle Speicheradresse.  
+Schreibt Daten aus dem angegebenen Puffer an die Adresse des angegebenen virtuellen Speicher an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,19 +41,19 @@ HRESULT WriteVirtual (
   
 #### <a name="parameters"></a>Parameter  
  `address`  
- [in] Eine CLRDATA_ADDRESS, die Adresse des virtuellen Arbeitsspeichers speichert.  
+ [in] Eine CLRDATA_ADDRESS, speichert die Adresse des virtuellen Arbeitsspeichers.  
   
  `buffer`  
- [in] Ein Zeiger auf einen Puffer, der die zu schreibenden Daten speichert.  
+ [in] Ein Zeiger auf einen Puffer, der den Datenspeicher geschrieben werden.  
   
  `bytesRequested`  
  [in] Die Anzahl der zu schreibenden Bytes.  
   
  `bytesWritten`  
- [out] Ein Zeiger auf die tatsächliche Anzahl von Bytes, die geschrieben wurden.  
+ [out] Ein Zeiger auf die tatsächliche Anzahl der Bytes, die geschrieben wurden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** ClrData.idl, ClrData.h  
   
@@ -61,5 +61,5 @@ HRESULT WriteVirtual (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

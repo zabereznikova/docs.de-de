@@ -1,15 +1,15 @@
 ---
 title: Implementieren des Trennschaltermusters
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Implementieren des Circuit Breaker-Musters als ergänzendes System für HTTP-Wiederholungen
+description: Erfahren Sie, wie das Circuit-Breaker-Muster als ergänzendes System zu HTTP-Wiederholungsversuchen implementieren können.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 07/03/2018
-ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: ca35214332b5ae0851a35d34aa329775206c2b66
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147261"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362807"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementieren des Circuit Breaker-Musters
 
@@ -25,7 +25,7 @@ Wenn Sie HTTP-Wiederholungen nicht sorgfältig verwenden, kann dies zu einem Den
 
 Deshalb benötigen Sie eine „Sicherung“, damit übermäßige Anforderungen beendet werden, wenn weitere Versuche überflüssig sind. Bei dieser Sicherung handelt es sich um den Circuit Breaker.
 
-Das Circuit Breaker-Muster hat einen anderen Zweck als das Wiederholungsmuster. Das Wiederholungsmuster ermöglicht es einer Anwendung, einen Vorgang erneut auszuführen, wobei davon ausgegangen wird, dass dieser irgendwann erfolgreich ist. Letzteres hindert eine Anwendung daran, einen Vorgang auszuführen, der vermutlich fehlschlagen wird. Eine Anwendung kann diese beiden Muster kombinieren. Die Wiederholungslogik sollte jedoch Ausnahmen behandeln können, die vom Circuit Breaker zurückgegeben werden, und auf Wiederholungsversuche verzichten, wenn der Circuit Breaker anzeigt, dass ein Fehler nicht temporär ist.
+Das Circuit Breaker-Muster hat einen anderen Zweck als das Wiederholungsmuster. Das Wiederholungsmuster ermöglicht es einer Anwendung, einen Vorgang erneut auszuführen, wobei davon ausgegangen wird, dass dieser irgendwann erfolgreich ist. Das Circuit Breaker-Muster hindert eine Anwendung daran, einen Vorgang auszuführen, bei dem vermutlich ein Fehler auftreten wird. Eine Anwendung kann diese beiden Muster kombinieren. Die Wiederholungslogik sollte jedoch Ausnahmen behandeln können, die vom Circuit Breaker zurückgegeben werden, und auf Wiederholungsversuche verzichten, wenn der Circuit Breaker anzeigt, dass ein Fehler nicht temporär ist.
 
 ## <a name="implement-circuit-breaker-pattern-with-httpclientfactory-and-polly"></a>Implementieren des Circuit Breaker-Musters mit HttpClientFactory und Polly
 
@@ -38,14 +38,15 @@ Der nachfolgende Code für Wiederholungen von HTTP-Aufrufen wird nur insofern ge
 ```csharp
 //ConfigureServices()  - Startup.cs
 services.AddHttpClient<IBasketService, BasketService>()
-        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to 5 minutes
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Sample. Default lifetime is 2 minutes
+        .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
         .AddPolicyHandler(GetRetryPolicy())
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-Durch die Methode `AddPolicyHandler()` werden Richtlinien zum HttpClient-Objekt hinzugefügt, das Sie verwenden werden. In diesem Fall wird eine Polly-Richtlinie für einen Circuit Breaker hinzugefügt.
+Durch die Methode `AddPolicyHandler()` werden dem `HttpClient`-Objekt, das Sie verwenden, Richtlinien hinzugefügt. In diesem Fall wird eine Polly-Richtlinie für einen Circuit Breaker hinzugefügt.
 
-Für einen modulareren Ansatz wird die Circuit Breaker-Richtlinie in einer separaten Methode namens „GetCircuitBreakerPolicy()“ definiert. Dies wird in folgendem Code veranschaulicht.
+Für einen modulareren Ansatz wird die Circuit Breaker-Richtlinie in einer separaten Methode namens `GetCircuitBreakerPolicy()` definiert, wie in folgendem Code veranschaulicht:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
@@ -56,51 +57,48 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-Im obigen Codebeispiel wird die Circuit Breaker-Richtlinie dafür konfiguriert, die Kommunikation zu unterbrechen oder fortzusetzen, wenn beim Wiederholen der HTTP-Anforderungen fünf aufeinanderfolgende Fehler aufgetreten sind. In diesem Fall wird der Schaltkreis 30 Sekunden lang unterbrochen: In diesem Zeitraum schlagen Aufrufe durch den Circuit Breaker sofort fehl, statt tatsächlich durchgeführt zu werden.  Die Richtlinie interpretiert [relevante Ausnahmen und HTTP-Statuscodes](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) automatisch als Fehler.  
+Im obigen Codebeispiel wird die Circuit Breaker-Richtlinie dafür konfiguriert, die Kommunikation zu unterbrechen oder fortzusetzen, wenn beim Wiederholen der HTTP-Anforderungen fünf aufeinanderfolgende Fehler aufgetreten sind. In diesem Fall wird der Schaltkreis 30 Sekunden lang unterbrochen: In diesem Zeitraum schlagen Aufrufe durch den Circuit Breaker sofort fehl, statt tatsächlich durchgeführt zu werden.  Die Richtlinie interpretiert [relevante Ausnahmen und HTTP-Statuscodes](/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) automatisch als Fehler.  
 
-Circuit Breakers sollten auch verwendet werden, um Anforderungen an eine Fallbackinfrastruktur umzuleiten, wenn Probleme bei einer bestimmten Ressource aufgetreten sind, die in einer anderen Umgebung als die Clientanwendung oder der Dienst bereitgestellt wird, die bzw. der den HTTP-Aufruf ausführt. Auf diese Weise kann die Clientanwendung bei einem Ausfall im Datencenter, der nur Back-End-Microservices, nicht aber Clientanwendungen betrifft, Anforderungen an Fallbackdienste umleiten. Für Polly wird aktuell eine Richtlinie zur Automatisierung dieses [Failoverrichtlinienszenarios](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) geplant. 
+Circuit Breakers sollten auch verwendet werden, um Anforderungen an eine Fallbackinfrastruktur umzuleiten, wenn Probleme bei einer bestimmten Ressource aufgetreten sind, die in einer anderen Umgebung als die Clientanwendung oder der Dienst bereitgestellt wird, die bzw. der den HTTP-Aufruf ausführt. Auf diese Weise kann die Clientanwendung bei einem Ausfall im Rechenzentrum, der nur Back-End-Microservices, nicht aber Clientanwendungen betrifft, Anforderungen an Fallbackdienste umleiten. Für Polly wird aktuell eine Richtlinie zur Automatisierung dieses [Failoverrichtlinienszenarios](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) geplant. 
 
 Die erwähnten Features sind nur für Fälle geeignet, in denen das Failover mit .NET Code und nicht automatisch von Azure unter Berücksichtigung von Speicherorttransparenz verwaltet wird. 
 
 Bei der Verwendung von HttpClient besteht aus Benutzerperspektive keine Notwendigkeit, neue Elemente hinzuzufügen, da der Code wie in den vorherigen Abschnitten dargestellt identisch mit dem ist, der bei HttpClient mit HttpClientFactory verwendet wird. 
 
-## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Testen von HTTP-Wiederholungen und Circuit Breakern in eShopOnContainers
+## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Testen von HTTP-Wiederholungen und Circuit Breakern in eShopOnContainers
 
-Sobald Sie die eShopOnContainers-Lösung in einem Docker-Host starten, müssen mehrere Container gestartet werden. Einige Container wie der SQL Server-Container werden langsamer gestartet und initialisiert. Dies ist v.a. dann der Fall, wenn Sie die eShopOnContainers-Anwendung zum ersten Mal in Docker bereitstellen, da die Images und die Datenbank eingerichtet werden müssen. Der langsamere Start einiger Container kann dazu führen, dass die anderen Dienste auch dann anfänglich HTTP-Ausnahmen auslösen, wenn Sie, wie in den vorherigen Abschnitten beschrieben, Abhängigkeiten zwischen Containern auf der docker-compose-Ebene festlegen. Diese docker-compose-Abhängigkeiten zwischen Containern befinden sich nur auf der Prozessebene. Auch wenn der Einstiegspunktprozess des Containers bereits gestartet wurde, ist SQL Server möglicherweise noch nicht für Abfragen bereit. Das Ergebnis können zahlreiche Fehler sein. Außerdem wird in der Anwendung möglicherweise eine Ausnahme angezeigt, wenn sie versucht, den Container zu verwenden. 
+Sobald Sie die eShopOnContainers-Lösung in einem Docker-Host starten, müssen mehrere Container gestartet werden. Einige Container wie der SQL Server-Container werden langsamer gestartet und initialisiert. Dies ist v.a. dann der Fall, wenn Sie die eShopOnContainers-Anwendung zum ersten Mal in Docker bereitstellen, da die Images und die Datenbank eingerichtet werden müssen. Der langsamere Start einiger Container kann dazu führen, dass die anderen Dienste auch dann anfänglich HTTP-Ausnahmen auslösen, wenn Sie, wie in den vorherigen Abschnitten beschrieben, Abhängigkeiten zwischen Containern auf der docker-compose-Ebene festlegen. Diese docker-compose-Abhängigkeiten zwischen Containern befinden sich nur auf der Prozessebene. Auch wenn der Einstiegspunktprozess des Containers bereits gestartet wurde, ist SQL Server möglicherweise noch nicht für Abfragen bereit. Das Ergebnis können zahlreiche Fehler sein. Außerdem wird in der Anwendung möglicherweise eine Ausnahme angezeigt, wenn sie versucht, den Container zu verwenden.
 
 Diese Art von Fehler kann auch beim Start angezeigt werden, wenn die Anwendung in der Cloud bereitgestellt wird. In diesem Fall können Orchestratoren einen Container zwischen Knoten oder virtuellen Computern hin- und herschieben (was dem Start neuer Instanzen entspricht), wenn die Anzahl der Container für Clusterknoten ausgeglichen wird.
 
 eShopOnContainers behebt diese Probleme beim Starten aller Container, indem das zuvor veranschaulichte Wiederholungsmuster verwendet wird. 
 
-### <a name="testing-the-circuit-breaker-in-eshoponcontainers"></a>Testen eines Trennschalters in eShopOnContainers
+### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>Testen des Circuit Breakers in eShopOnContainers
 
 Es gibt mehrere Möglichkeiten, die Kommunikation zu unterbrechen oder fortzusetzen und ihn auf diese Weise mit eShopOnContainers zu testen.
 
-Eine Option besteht darin, die zulässige Anzahl von Wiederholungen in der Trennschalterrichtlinie auf eins zu reduzieren und die gesamte Lösung erneut in Docker bereitzustellen. Bei einem einzelnen Neuversuch ist die Wahrscheinlichkeit hoch, dass die HTTP-Anforderung bei der Bereitstellung fehlschlägt, der Trennschalter geöffnet und eine Fehlermeldung angezeigt wird.
+Eine Option besteht darin, die zulässige Anzahl von Wiederholungen in der Trennschalterrichtlinie auf eins zu reduzieren und die gesamte Lösung erneut in Docker bereitzustellen. Bei einem einzelnen Neuversuch ist die Wahrscheinlichkeit hoch, dass die HTTP-Anforderung bei der Bereitstellung fehlschlägt, der Circuit Breaker geöffnet und eine Fehlermeldung angezeigt wird.
 
-Eine weitere Option besteht in der Verwendung benutzerdefinierter Middleware, die im Basket-Microservice implementiert wird. Wenn diese Middleware aktiviert ist, fängt sie alle HTTP-Anforderungen ab und gibt den Statuscode 500 zurück. Sie können die Middleware aktivieren, indem Sie eine GET-Anforderung an den URI stellen, der den Fehler auslöst. Dabei können Sie z.B. folgende Anforderungen verwenden:
+Eine weitere Option besteht in der Verwendung benutzerdefinierter Middleware, die im **Basket**-Microservice implementiert wird. Wenn diese Middleware aktiviert ist, fängt sie alle HTTP-Anforderungen ab und gibt den Statuscode 500 zurück. Sie können die Middleware aktivieren, indem Sie eine GET-Anforderung an den URI stellen, der den Fehler auslöst. Dabei können Sie z.B. folgende Anforderungen verwenden:
 
-- `GET http://localhost:5103/failing`
+- `GET http://localhost:5103/failing`\
+  Diese Anforderung gibt den aktuellen Status der Middleware zurück. Wenn die Middleware aktiviert ist, gibt die Anforderung den Statuscode 500 zurück. Wenn die Middleware deaktiviert ist, wird keine Antwort zurückgegeben.
 
-Diese Anforderung gibt den aktuellen Status der Middleware zurück. Wenn die Middleware aktiviert ist, gibt die Anforderung den Statuscode 500 zurück. Wenn die Middleware deaktiviert ist, wird keine Antwort zurückgegeben. 
+- `GET http://localhost:5103/failing?enable`\
+  Diese Anforderung aktiviert die Middleware.
 
-- `GET http://localhost:5103/failing?enable`
-
-Diese Anforderung aktiviert die Middleware. 
-
-- `GET http://localhost:5103/failing?disable`
-
-Diese Anforderung deaktiviert die Middleware. 
+- `GET http://localhost:5103/failing?disable`\
+  Diese Anforderung deaktiviert die Middleware.
 
 Sobald die Anwendung ausgeführt wird, können Sie z.B. die Middleware aktivieren, indem Sie mit dem unten aufgeführten URI in einem Browser eine Anforderung stellen. Beachten Sie, dass der Microservice für Bestellungen den Port 5103 verwendet.
 
 `http://localhost:5103/failing?enable` 
 
-Mit dem URI `http://localhost:5103/failing` können Sie anschließend wie in Abbildung 10–4 dargestellt den Status überprüfen.
+Mit dem URI `http://localhost:5103/failing` können Sie anschließend wie in Abbildung 8–5 dargestellt den Status überprüfen.
 
-![](./media/image4.png)
+![Browseransicht des Ergebnisses der Überprüfung des Status bei einem in der Middlewaresimulation auftretenden Fehler](./media/image4.png)
 
-**Abbildung 10-4.** Überprüfung des „Fehlerstatus“ der ASP.NET-Middleware (hier deaktiviert) 
+**Abbildung 8-5.** Überprüfung des „Fehlerstatus“ der ASP.NET-Middleware (hier deaktiviert)
 
 Der Warenkorbmicroservice antwortet bei Aufruf immer mit dem Statuscode 500.
 
@@ -115,7 +113,7 @@ public class CartController : Controller
     public async Task<IActionResult> Index()
     {
         try
-        {          
+        {
             var user = _appUserParser.Parse(HttpContext.User);
             //Http requests using the Typed Client (Service Agent)
             var vm = await _basketSvc.GetBasket(user);
@@ -123,11 +121,11 @@ public class CartController : Controller
         }
         catch (BrokenCircuitException)
         {
-            // Catches error when Basket.api is in circuit-opened mode                 
+            // Catches error when Basket.api is in circuit-opened mode
             HandleBrokenCircuitException();
         }
         return View();
-    }       
+    }
 
     private void HandleBrokenCircuitException()
     {
@@ -136,20 +134,20 @@ public class CartController : Controller
 }
 ```
 
-Die durch den Code ausgelösten Schritte werden im Folgenden kurz zusammengefasst. Die Wiederholungsrichtlinie versucht mehrmals, HTTP-Anforderungen zu stellen, was zu HTTP-Fehlern führt. Wenn die maximale Anzahl der Wiederholungen erreicht wird, die für die Circuit Breaker-Richtlinie festgelegt wurde (in diesem Fall 5), löst die Anwendung die Ausnahme „BrokenCircuitException“ aus. Das Ergebnis ist eine Benutzerbenachrichtigung (s. Abbildung 10-5).
+Die durch den Code ausgelösten Schritte werden im Folgenden kurz zusammengefasst. Die Wiederholungsrichtlinie versucht mehrmals, HTTP-Anforderungen zu stellen, was zu HTTP-Fehlern führt. Wenn die maximale Anzahl der Wiederholungen erreicht wird, die für die Circuit Breaker-Richtlinie festgelegt wurde (in diesem Fall 5), löst die Anwendung die Ausnahme „BrokenCircuitException“ aus. Das Ergebnis ist eine Benutzerbenachrichtigung (siehe Abbildung 8-6).
 
-![](./media/image5.png)
+![Browseransicht der MVC-Web-App mit einer von der Circuit Breaker-Richtlinie ausgelösten „basket service inoperative“-Meldung](./media/image5.png)
 
-**Abbildung 10-5.** Trennschalter, der einen Fehler zurückgibt, der auf der Benutzeroberfläche angezeigt wird
+**Abbildung 8-6.** Trennschalter, der einen Fehler zurückgibt, der auf der Benutzeroberfläche angezeigt wird
 
-Sie können unterschiedliche Logiken für das Fortsetzen oder Unterbrechen der Kommunikation festlegen. Alternativ können Sie auch eine HTTP-Anforderung an einen anderen Back-End-Microservice stellen, falls ein Fallbackdatencenter oder ein redundantes Back-End-System vorliegt. 
+Sie können unterschiedliche Logiken für das Fortsetzen oder Unterbrechen der Kommunikation festlegen. Alternativ können Sie auch eine HTTP-Anforderung an einen anderen Back-End-Microservice stellen, falls ein Fallbackrechenzentrum oder ein redundantes Back-End-System vorliegt. 
 
 Eine weitere Möglichkeit für `CircuitBreakerPolicy` ist die Verwendung von `Isolate` (dadurch wird das Fortsetzen der Kommunikation erzwungen und dafür gesorgt, dass diese bestehen bleibt) und `Reset` (dadurch wird die Kommunikation wieder unterbrochen). Diese können für die Erstellung eines Hilfs-HTTP-Endpunkts verwendet werden, der Isolate und Reset direkt in der Richtlinie aufruft.  Ein derartiger HTTP-Endpunkt kann auch, falls er entsprechend gesichert ist, in einer Produktionsumgebung verwendet werden, um ein Downstreamsystem beispielsweise bei einem Upgrade vorübergehend zu isolieren. Alternativ könnte er den Trennschalter manuell auslösen, um ein Downstreamsystem zu schützen, das möglicherweise fehlerhaft ist.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Circuit Breaker pattern (Muster „Trennschalter“)**
-    [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+- **Circuit Breaker-Muster**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
 >[Zurück](implement-http-call-retries-exponential-backoff-polly.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 61d966599d06c65690e317be0d514eba944beb77
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ae241e2a1f64c4480cea5e81dff1e62816fc31ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745661"
 ---
 # <a name="instancing"></a>Instanziierung
 Im Beispiel zur Instanziierung wird die Einstellung zum Instanziierungsverhalten veranschaulicht, die steuert, wie Instanzen einer Dienstklasse als Reaktion auf Clientanforderungen erstellt werden. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), implementiert die `ICalculator` Dienstvertrag. In diesem Beispiel wird ein neuer Vertrag (`ICalculatorInstance`) definiert, der von `ICalculator` erbt. Der von `ICalculatorInstance` angegebene Vertrag stellt drei zusätzliche Vorgänge zum Überprüfen des Zustands der Dienstinstanz bereit. Indem Sie die Einstellung für die Instanziierung ändern, können Sie Änderungen im Verhalten beobachten, wenn Sie den Client ausführen.  
@@ -22,11 +22,11 @@ Im Beispiel zur Instanziierung wird die Einstellung zum Instanziierungsverhalten
   
  Es stehen die folgenden Instanziierungsmodi zur Verfügung:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Für jede Clientanforderung wird eine neue Instanz erstellt.  
+-   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Eine neue Dienstinstanz wird für jede Clientanforderung erstellt.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Für jede neue Clientsitzung wird eine neue Instanz erstellt und für die Lebensdauer dieser Sitzung aufrechterhalten. Hierfür ist eine Bindung erforderlich, die Sitzungen unterstützt.  
+-   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Eine neue Instanz wird für jede neue Clientsitzung erstellt und verwaltet werden, für die Lebensdauer der Sitzung (erfordert eine Bindung, die Sitzung unterstützt).  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Alle Clientanforderungen werden während der Lebensdauer der Anwendung von einer Instanz der Dienstklasse verarbeitet.  
+-   <xref:System.ServiceModel.InstanceContextMode.Single>: Eine einzelne Instanz der Dienstklasse verarbeitet alle Clientanforderungen für die Lebensdauer der Anwendung.  
   
  Die Dienstklasse gibt das Instanziierungsverhalten mit dem `[ServiceBehavior(InstanceContextMode=<setting>)]`-Attribut an, wie im folgenden Beispielcode dargestellt. Indem Sie unterschiedliche Zeilen auskommentieren, können Sie das Verhalten der einzelnen Instanzmodi beobachten. Denken Sie daran, den Dienst nach dem Ändern des Instanziierungsmodus neu zu erstellen. Es gibt keine Einstellungen in Bezug auf die Instanziierung, die auf dem Client angegeben werden.  
   

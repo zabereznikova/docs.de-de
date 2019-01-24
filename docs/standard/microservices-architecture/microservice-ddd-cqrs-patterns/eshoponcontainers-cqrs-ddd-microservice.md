@@ -4,18 +4,20 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143635"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362842"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 
 Die Struktur des Microservices für Bestellungen in der Referenzanwendung „eShopOnContainers“ basiert auf CQRS-Prinzipien. Allerdings wird darin der einfachste Ansatz verwendet, bei dem Abfragen von Befehlen getrennt werden und dieselbe Datenbank für beide Aktionen dient.
 
-Das Wesentliche dieser Muster und der wichtige Punkt bestehen hier darin, dass Abfragen idempotent sind: unabhängig davon, wie oft Sie Abfragen an ein System richten, ändert sich der Status des entsprechenden Systems nicht. Sie könnten auch ein anderes „reads“-Datenmodell als das transaktionslogische „writes“-Domänenmodell verwenden, obwohl die Microservices für Bestellungen dieselbe Datenbank verwenden. Daher ist es ein vereinfachter CQRS-Ansatz.
+Das Wesentliche dieser Muster und der wichtige Punkt bestehen hier darin, dass Abfragen idempotent sind: unabhängig davon, wie oft Sie Abfragen an ein System richten, ändert sich der Status des entsprechenden Systems nicht. Das heißt, Abfragen haben keine Nebeneffekte.
+
+Darum könnten Sie auch ein anderes „reads“-Datenmodell als das transaktionslogische „writes“-Domänenmodell verwenden, obwohl die Microservices für Bestellungen dieselbe Datenbank verwenden. Daher ist es ein vereinfachter CQRS-Ansatz.
 
 Befehle, die Transaktionen und Datenupdates auslösen, ändern wiederum den Zustand im System. Mit Befehlen müssen Sie im Zusammenhang mit Komplexität und sich kontinuierlich ändernden Geschäftsregeln sorgfältig umgehen. An dieser Stelle können Sie DDD-Techniken anwenden, um das System besser zu modellieren.
 

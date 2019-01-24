@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 933694a6a033dbfe817e3848b9008f05b86f51f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 668c7298a9543cce93cce324672334c9ec1e8cd2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449011"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732816"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods-Methode
 Zählt MethodDef-Token auf, die Methoden des angegebenen Typs darstellen.  
@@ -41,16 +41,16 @@ HRESULT EnumMethods (
   
 #### <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dies muss für den ersten Aufruf dieser Methode NULL sein.  
+ [in, out] Ein Zeiger auf den Enumerator. Dies muss NULL sein, für den ersten Aufruf dieser Methode.  
   
  `cl`  
- [in] Eine TypeDef-Token, das den Typ mit den Methoden zum Aufzählen darstellt.  
+ [in] Eine TypeDef-Token, das mit den Methoden zum Aufzählen der Typ darstellt.  
   
  `rMethods`  
  [out] Das Array zum Speichern der MethodDef-Token.  
   
  `cMax`  
- [in] Die maximale Größe des MethodDef- `rMethods` Array.  
+ [in] Die maximale Größe der MethodDef `rMethods` Array.  
   
  `pcTokens`  
  [out] Die Anzahl der zurückgegebenen MethodDef-Token `rMethods`.  
@@ -60,17 +60,17 @@ HRESULT EnumMethods (
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethods` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine MethodDef-Token, aufgelistet werden. In diesem Fall `pcTokens` 0 (null).|  
+|`S_FALSE`|Es sind keine MethodDef-Token aufgelistet werden. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

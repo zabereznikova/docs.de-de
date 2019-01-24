@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4ce7b90b417e0126337283ff16790f136cb16fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5bac7e46bd499a680906e67b41175e099f96ecc3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604443"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext-Methode
 Ruft den aktuellen Ausführungskontext für den angegebenen Thread im Zielprozess. Diese Methode wird von den Datenzugriffsdiensten der common Language Runtime aufgerufen.  
@@ -44,21 +44,21 @@ HRESULT GetThreadContext (
  [in] Der Betriebssystem-Bezeichner eines Threads im Zielprozess.  
   
  `contextFlags`  
- [in] Flags, die angeben, welche Teile des Kontexts zurück. Die Implementierung gibt mindestens diese Teile des Kontexts zurück.  
+ [in] Flags, die angeben, welche Teile des Kontexts zurückgegeben. Die Implementierung gibt immer mindestens diese Teile des Kontexts zurück.  
   
  `contextSize`  
  [in] Die Größe des Kontexts.  
   
  `context`  
- [out] Ein Zeiger auf einen Puffer, in dem den Kontext platziert.  
+ [out] Zeiger auf einen Puffer, in dem Kontext platziert werden soll.  
   
- Die Daten in der `context` Puffer muss im Format der Win32- `CONTEXT` Struktur. Der Kontext gibt prozessorspezifische Registerdaten an, also die Definition der Win32- `CONTEXT` Struktur hängt von der Prozessorarchitektur. Finden Sie in der Headerdatei "Winnt.h" für die Definition der Win32- `CONTEXT` Struktur.  
+ Die Daten in die `context` Puffer muss im Format von Win32 `CONTEXT` Struktur. Den Kontext angibt, macht prozessorspezifische Registerdaten, also die Definition von Win32 `CONTEXT` Struktur hängt von der Prozessorarchitektur. Finden Sie in der Headerdatei "WinNT.h" für die Definition von Win32 `CONTEXT` Struktur.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** ClrData.idl, ClrData.h  
   
@@ -66,5 +66,5 @@ HRESULT GetThreadContext (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

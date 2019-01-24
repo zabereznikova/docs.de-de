@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc3a986326f9b47194558ca86bcbeabb61dbaeb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 832746b911e74790de246b00a364aaec4bda8f67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739977"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument-Methode
-Ruft Starten des kleinsten und größten End Linie für die Methode in einem bestimmten Dokument.  
+Ruft Starten des kleinsten und größten End Zeile für die Methode in einem bestimmten Dokument.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +44,7 @@ HRESULT GetSourceExtentInDocument(
  [out] Ein Zeiger auf eine `ULONG32` , empfängt die Startzeile.  
   
  `pendLine`  
- [out] Ein Zeiger auf eine `ULONG32` , die die Endzeile empfängt.  
+ [out] Ein Zeiger auf eine `ULONG32` , empfängt die letzte Zeile.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -51,5 +52,5 @@ HRESULT GetSourceExtentInDocument(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymENCUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymENCUnmanagedMethod-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

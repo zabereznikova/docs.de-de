@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 532f69afd949971fbb4f56a8fdbcc6eab159446f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1c214918b4a41ac989a3804c9146c4a54c5909f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427706"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738208"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument-Methode
-Definiert ein Quelldokument. GUIDs werden für bekannte Sprachen, Hersteller und Dokumenttypen bereitgestellt.  
+Definiert ein Quelldokument. GUIDs werden für bekannte Sprachen, Lieferanten und Dokumenttypen bereitgestellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,10 +43,10 @@ HRESULT DefineDocument(
  [in] Ein Zeiger auf eine `WCHAR` , definiert den uniform Resource Locator (URL), die das Dokument kennzeichnet.  
   
  `language`  
- [in] Ein Zeiger auf eine GUID, die die Dokumentsprache definiert.  
+ [in] Ein Zeiger auf eine GUID, die Sprache des Dokuments definiert.  
   
  `languageVendor`  
- [in] Ein Zeiger auf eine GUID, die die Identität des Herstellers für die Dokumentsprache definiert.  
+ [in] Ein Zeiger auf eine GUID, die Identität des Herstellers für die Sprache des Dokuments definiert.  
   
  `documentType`  
  [in] Ein Zeiger auf eine GUID, die den Typ des Dokuments definiert.  
@@ -60,5 +60,5 @@ HRESULT DefineDocument(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

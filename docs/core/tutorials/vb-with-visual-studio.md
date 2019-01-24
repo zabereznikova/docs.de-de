@@ -7,14 +7,14 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: de7a423bb3e9a288d17c86e9e0afc3b00f6fd80b
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170027"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362261"
 ---
-# <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit .NET Core in Visual Studio 2017
+# <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Erstellen einer „Hallo Welt“-Anwendung in Visual Basic mit dem .NET Core SDK in Visual Studio 2017
 
 Dieses Thema ist eine grundlegende Einführung in das Erstellen, Debuggen und Veröffentlichen einer einfachen .NET Core-Konsolenanwendung in Visual Basic mithilfe von Visual Studio 2017. Visual Studio 2017 bietet eine Entwicklungsumgebung mit vollem Funktionsumfang für die Erstellung von .NET Core-Anwendungen. Sofern die Anwendung keine plattformspezifischen Abhängigkeiten aufweist, kann sie auf jeder von .NET Core unterstützten Plattform und in jedem System mit installiertem .NET Core ausgeführt werden.
 
@@ -78,9 +78,9 @@ Erweitern Sie Ihre Anwendung, um die Benutzer aufzufordern, seinen oder ihren Na
 
 Sie haben Ihre Anwendung erstellt und ausgeführt. Wenn Sie professionelle Anwendungen erstellen möchten, führen Sie einige weitere Schritte aus, um Ihre Anwendung für die Veröffentlichung bereit zu machen:
 
-- Informationen zum Debuggen Ihrer Anwendung finden Sie unter [Debuggen Ihrer C#-Anwendung „Hello World“ mit Visual Studio 2017](debugging-with-visual-studio.md).
+- Informationen zum Debuggen Ihrer Anwendung finden Sie unter [Debuggen Ihrer .NET Core-Anwendung „Hallo Welt“ mit Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Informationen zum Entwickeln und Veröffentlichen einer bereitstellbaren Version Ihrer Anwendung finden Sie unter [Publishing your C# Hello World application with Visual Studio 2017 (Veröffentlichen Ihrer „Hallo Welt“-Anwendung in C# mit Visual Studio 2017)](publishing-with-visual-studio.md).
+- Informationen zum Veröffentlichen einer bereitstellbaren Version Ihrer Anwendung finden Sie unter [Veröffentlichen Ihrer „Hallo Welt“-Anwendung mit Visual Studio 2017](publishing-with-visual-studio.md).
 
 <!--
 ## Related topics

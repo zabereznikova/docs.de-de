@@ -2,47 +2,41 @@
 title: 'Datentyp: Zusammenfassung (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Boolean data type [Visual Basic], supported types in Visual Basic
-- storage [Visual Basic], order of storage
-- data types [Visual Basic], Visual Basic
-- Single data type [Visual Basic], supported types in Visual Basic
-- notation [Visual Basic], scientific
-- memory requirements, data types
-- user-defined data types [Visual Basic], Visual Basic
-- Date data type [Visual Basic], Visual Basic
-- Visual Basic, data types
-- storage [Visual Basic], allocation
-- Integer data type [Visual Basic], Visual Basic data types
-- storage [Visual Basic], space
-- Variant data types [Visual Basic], supported types in Visual Basic
-- Char data type [Visual Basic], Visual Basic data types
-- intrinsic data types [Visual Basic]
-- memory consumption [Visual Basic], data types
-- single-precision numbers
-- data types [Visual Basic], order of storage
-- Long data type [Visual Basic], supported types in Visual Basic
-- String data type [Visual Basic], Visual Basic data types
-- storage order, data types
-- StructLayoutAttribute class, Visual Basic data type storage
-- scientific notation
-- Double data type [Visual Basic], Visual Basic data types
-- Byte data type [Visual Basic], Visual Basic data types
-- Object data type [Visual Basic], supported types in Visual Basic
-- data types [Visual Basic], storage allocation
-- double-precision numbers
-- data types [Visual Basic], summary
-- dates [Visual Basic], data types
-- strings [Visual Basic], data types
-- memory consumption
-- storage order, controlling in Visual Basic
-- data types [Visual Basic], memory requirements
+  - 'Boolean data type [Visual Basic], supported types in Visual Basic'
+  - 'storage [Visual Basic], order of storage'
+  - 'data types [Visual Basic], Visual Basic'
+  - 'Single data type [Visual Basic], supported types in Visual Basic'
+  - 'notation [Visual Basic], scientific'
+  - 'memory requirements, data types'
+  - 'user-defined data types [Visual Basic], Visual Basic'
+  - 'Date data type [Visual Basic], Visual Basic'
+  - 'Visual Basic, data types'
+  - 'storage [Visual Basic], allocation'
+  - 'Integer data type [Visual Basic], Visual Basic data types'
+  - 'storage [Visual Basic], space'
+  - 'Variant data types [Visual Basic], supported types in Visual Basic'
+  - 'Char data type [Visual Basic], Visual Basic data types'
+  - 'intrinsic data types [Visual Basic]'
+  - 'memory consumption [Visual Basic], data types'
+  - single-precision numbers
+  - 'data types [Visual Basic], order of storage'
+  - 'Long data type [Visual Basic], supported types in Visual Basic'
+  - 'String data type [Visual Basic], Visual Basic data types'
+  - 'storage order, data types'
+  - 'StructLayoutAttribute class, Visual Basic data type storage'
+  - scientific notation
+  - 'Double data type [Visual Basic], Visual Basic data types'
+  - 'Byte data type [Visual Basic], Visual Basic data types'
+  - 'Object data type [Visual Basic], supported types in Visual Basic'
+  - 'data types [Visual Basic], storage allocation'
+  - double-precision numbers
+  - 'data types [Visual Basic], summary'
+  - 'dates [Visual Basic], data types'
+  - 'strings [Visual Basic], data types'
+  - memory consumption
+  - 'storage order, controlling in Visual Basic'
+  - 'data types [Visual Basic], memory requirements'
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925912"
 ---
 # <a name="data-type-summary-visual-basic"></a>Datentyp: Zusammenfassung (Visual Basic)
 Die folgende Tabelle zeigt die Visual Basic-Datentypen, die unterstützenden Typen common Language Runtime, die nominale Speicherzuordnung und ihre Wertebereiche.  
@@ -91,10 +85,10 @@ Die folgende Tabelle zeigt die Visual Basic-Datentypen, die unterstützenden Typ
 ### <a name="object-overhead"></a>Objekt-Mehraufwand  
  Ein `Object` verweisen auf alle elementaren oder zusammengesetzten Daten Typ verwendet 4 Bytes zusätzlich zu den Daten, die in den Datentyp enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Typzeichen](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.Strings.StrConv%2A>
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Typzeichen](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

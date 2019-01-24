@@ -1,37 +1,37 @@
 ---
-title: 'Gewusst wie: Gruppieren von Steuerelementen mit dem GroupBox-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Gruppieren von Steuerelementen mit dem GroupBox-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 718367e9da9efda20c79fbff3bd2f14f11c96ee1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44f0116511165c021f8e3dc35fb14e5cfb6f619e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686919"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Gewusst wie: Gruppieren von Steuerelementen mit dem GroupBox-Steuerelement in Windows Forms
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Vorgehensweise: Gruppieren von Steuerelementen mit dem GroupBox-Steuerelement in Windows Forms
 Windows Forms <xref:System.Windows.Forms.GroupBox> Steuerelemente werden verwendet, um die Gruppierung anderer Steuerelemente. Es gibt drei Gründe zum Gruppieren von Steuerelementen:  
   
--   Eine visuelle Gruppierung von verwandten Form-Elemente für eine klare Benutzeroberfläche zu erstellen.  
+-   Um eine visuelle Gruppierung von verwandten Form-Elemente für eine übersichtliche Benutzeroberfläche zu erstellen.  
   
--   Um die programmgesteuerte Gruppierung (Optionsfelder) erstellen.  
+-   Um programmgesteuerte Gruppierung (von Optionsfeldern an, z. B.) zu erstellen.  
   
--   Zum Verschieben von der Steuerelementen zur Entwurfszeit als eine Einheit.  
+-   Für das Verschieben von der Steuerelements zur Entwurfszeit als eine Einheit.  
   
-### <a name="to-create-a-group-of-controls"></a>So erstellen eine Gruppe von Steuerelementen  
+### <a name="to-create-a-group-of-controls"></a>Um eine Gruppe von Steuerelementen zu erstellen.  
   
-1.  Zeichnen einer <xref:System.Windows.Forms.GroupBox> Steuerelement eines Formulars.  
+1.  Zeichnen einer <xref:System.Windows.Forms.GroupBox> Steuerelement in einem Formular.  
   
-2.  Das Gruppenfeld, zeichnen in das Gruppenfeld fügen Sie andere Steuerelemente hinzu.  
+2.  Fügen Sie weitere Steuerelemente, dem Gruppenfeld, jede Gruppe im Feld zu zeichnen.  
   
-     Wenn Sie vorhandenen Steuerelemente verfügen, die Sie in einem Gruppenfeld einschließen möchten, können Sie wählen Sie alle Steuerelemente, Ausschneiden in die Zwischenablage, wählen Sie die <xref:System.Windows.Forms.GroupBox> steuern, und klicken Sie dann in das Gruppenfeld einfügen. Sie können auch in das Gruppenfeld ziehen.  
+     Wenn Sie vorhandene Steuerelemente verfügen, die Sie in einem Gruppenfeld einschließen möchten, können Sie wählen Sie alle Steuerelemente, verschieben Sie sie in die Zwischenablage, wählen Sie die <xref:System.Windows.Forms.GroupBox> steuern, und fügen Sie sie in das Gruppenfeld. Sie können auch in das Gruppenfeld ziehen.  
   
-3.  Legen Sie die <xref:System.Windows.Forms.GroupBox.Text%2A> Eigenschaft das Gruppenfeld eine geeignete Beschriftung.  
+3.  Legen Sie die <xref:System.Windows.Forms.GroupBox.Text%2A> Eigenschaft des Gruppenfelds eine geeignete Beschriftung.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.GroupBox>  
- [GroupBox-Steuerelement](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.GroupBox>
+- [GroupBox-Steuerelement](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)

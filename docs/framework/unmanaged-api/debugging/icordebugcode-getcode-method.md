@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d057032f2a46ef29a903ae21ab13af02f9d657f1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728764"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode-Methode
-Ruft den gesamten für die Disassembly formatierten Code für die angegebene Funktion ab. Diese Methode ist in .NET Framework, Version 2.0 veraltet. Verwendung [ICorDebugCode2:: GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) stattdessen.  
+Ruft den gesamten für die Disassembly formatierten Code für die angegebene Funktion ab. Diese Methode wurde in .NET Framework, Version 2.0 als veraltet markiert. Verwendung [ICorDebugCode2:: GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) stattdessen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,10 +57,10 @@ HRESULT GetCode (
  [out] Die Anzahl der Bytes, die zurückgegeben werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Code der Funktion in mehrere Blöcke aufgeteilt ist, werden sie in aufsteigender Reihenfolge des systemeigenen Offsets verkettet. Anweisungsgrenzen werden nicht überprüft.  
+ Wenn Sie den Code der Funktion in mehrere Blöcke aufgeteilt wurde, werden sie in der Reihenfolge zunehmender beim nativen Offset verkettet. Anweisungsgrenzen werden nicht überprüft.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -68,6 +68,6 @@ HRESULT GetCode (
   
  **.NET Framework-Versionen:** 1.1, 1.0  
   
-## <a name="see-also"></a>Siehe auch  
- [GetCodeChunks-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
- 
+## <a name="see-also"></a>Siehe auch
+- [GetCodeChunks-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
+
