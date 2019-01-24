@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: dd521e3afa7584cadb28829028a5ecfd1cb55a92
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ea860c185d68a24c31ec24de4a087b9b98fe791f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727806"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;Deaktivieren Sie&gt; -Element für &lt;NamedCaches&gt;
 Löscht alle `namedCache` Einträge in der `namedCaches` Auflistung für einen Speichercache.  
   
  \<system.runtime.caching>  
 \<memoryCache>  
-\<NamedCaches >  
+\<namedCaches>  
 \<add>  
   
 ## <a name="syntax"></a>Syntax  
@@ -52,5 +52,5 @@ Löscht alle `namedCache` Einträge in der `namedCaches` Auflistung für einen S
 ## <a name="remarks"></a>Hinweise  
  Die `clear` Element löscht alle `namedCache` Einträge in der Auflistung benannter Caches für einen Speichercache. Können Sie die `clear` Element vor der Verwendung der `add` Element um einen neuen Eintrag für den benannten Cache hinzufügen, um sicherzugehen, dass sich keine weiteren benannten Caches in der Auflistung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 - [\<NamedCaches >-Element (Cacheeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

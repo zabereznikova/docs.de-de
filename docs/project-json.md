@@ -4,12 +4,12 @@ description: Hier finden Sie die Dokumentation für Vorabtools für .NET Core un
 author: mairaw
 ms.author: mairaw
 ms.date: 03/08/2017
-ms.openlocfilehash: f5f4dd8f335d940d5c63baef73e83dd3d0eccf6e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ccdf897727ed52ccbed3e56b5a9a08cb45427d70
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47216616"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361962"
 ---
 # <a name="projectjson-and-visual-studio-2015-with-net-core"></a>„project.json“ und Visual Studio 2015 mit .NET Core
 
@@ -17,12 +17,9 @@ Die .NET Core- und ASP.NET Core-Dokumentation wurde am 7. März 2017 für das Re
 
 Die Version der Dokumentation vor dem Update am 7. März ist in einer PDF-Datei und in einem Branch im Dokumentationsrepository verfügbar.
 
-## <a name="pdf-files"></a>PDF-Dateien
+## <a name="pdf-documentation"></a>PDF-Dokumentation
 
-Diese PDF-Dateien sind die beste Quelle für die vorherige Dokumentation:
-
-* [.NET Core - PDF for project.json and Visual Studio 2015 (.NET Core: PDF-Datei zu „project.json“ und Visual Studio 2015)](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf)
-* [ASP.NET Core - PDF for project.json and Visual Studio 2015 (ASP.NET Core: PDF-Datei zu „project.json“ und Visual Studio 2015)](https://github.com/aspnet/Docs/blob/master/aspnetcore/common/_static/aspnet-core-project-json.pdf)
+Die beste Quelle für die frühere Dokumentation ist [.NET Core – PDF for project.json and Visual Studio 2015 (.NET Core-PDF-Datei für project.json und Visual Studio 2015)](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf).
 
 ## <a name="documentation-repository-branch"></a>Repositorybranch der Dokumentation
 

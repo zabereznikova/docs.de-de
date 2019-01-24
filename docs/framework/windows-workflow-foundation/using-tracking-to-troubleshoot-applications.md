@@ -2,12 +2,12 @@
 title: Verwenden der Nachverfolgung zum Beheben von Anwendungsfehlern
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-ms.openlocfilehash: f991533b61705c8d0a1a8e71b632dd53f24dd979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1ed95a26f682fcdb609b410251fdb3f8b647016a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734421"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Verwenden der Nachverfolgung zum Beheben von Anwendungsfehlern
 Windows Workflow Foundation (WF) ermöglicht Ihnen, workflowbezogene Informationen, um Details zur Ausführung eines Windows Workflow Foundation-Anwendung oder Dienst geben zu verfolgen. Windows Workflow Foundation-Hosts können Workflowereignisse während der Ausführung einer Workflowinstanz erfassen. Wenn der Workflow Fehler oder Ausnahmen generiert, können Sie die Windows Workflow Foundation, Nachverfolgen von Details für die Problembehandlung von der Verarbeitung.  
@@ -51,6 +51,6 @@ Windows Workflow Foundation (WF) ermöglicht Ihnen, workflowbezogene Information
   
  Wenn die Überwachung mit dem ETW-Überwachungsteilnehmer aktiviert wurde, werden die Fehlerereignisse an eine ETW-Sitzung ausgegeben. Die Ereignisse können mit der Ereignisanzeige angezeigt werden. Diese befindet sich unter dem Knoten **Ereignisanzeige -> Anwendungen und Dienstprotokolle > Microsoft -> Windows-Anwendungsserver-Anwendungen >** im analytischen Kanal.  
   
-## <a name="see-also"></a>Siehe auch  
- [Windows Server App Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [Überwachen von Anwendungen mit AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Siehe auch
+- [Windows Server App Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Überwachen von Anwendungen mit AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

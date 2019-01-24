@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 92a20e5fbe60c71ec3375ed35c919e1f88cf0a9c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1a43cabfd3ab22ad9035ecb30435b21b75040308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718792"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Variablendeklaration in Visual Basic
 Sie deklarieren eine Variable, die den Namen und Eigenschaften angeben. Die deklarationsanweisung für Variablen ist der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md). Bestimmen sein Speicherort und den Inhalt der Merkmale der Variablen.  
@@ -73,17 +73,17 @@ Dim l, m As Long, x, y As Single
 ## <a name="characteristics-of-declared-variables"></a>Merkmale der deklarierten Variablen  
  Die *Lebensdauer* einer Variablen ist der Zeitraum der sie verwendet werden kann. Im Allgemeinen ist eine Variable vorhanden, solange das Element, das ihn, (z. B. eine Prozedur oder die Zielklasse deklariert) ausgeführt wird, vorhanden sein. Wenn die Variable nicht weiter nach Ablauf der Lebensdauer von ihr enthaltendes Element vorhandenen muss, müssen Sie keine gar nichts Besonderes in der Deklaration. Wenn die Variable länger als ihr enthaltendes Element gespeichert bleiben muss, können Sie enthalten die `Static` oder `Shared` -Schlüsselwort in der `Dim` Anweisung. Weitere Informationen finden Sie unter [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
- Die *Bereich* einer Variablen ist die Menge des gesamten Codes, die darauf verweisen kann, ohne Angabe ihres Namens. Der Gültigkeitsbereich einer Variablen wird bestimmt, wo er deklariert wurde. Code befindet sich in einer bestimmten Region können die Variablen, die in dieser Region definiert werden, ohne ihren Namen zu qualifizieren. Weitere Informationen finden Sie unter [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ Die *Bereich* einer Variablen ist die Menge des gesamten Codes, die darauf verweisen kann, ohne Angabe ihres Namens. Der Gültigkeitsbereich einer Variablen wird bestimmt, wo er deklariert wurde. Code befindet sich in einer bestimmten Region können die Variablen, die in dieser Region definiert werden, ohne ihren Namen zu qualifizieren. Weitere Informationen finden Sie unter [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
  Einer Variablentyps des *Zugriffsebene* wird das Ausmaß der Code mit der Berechtigung, darauf zuzugreifen. Dies richtet sich nach den Zugriffsmodifizierer (wie z. B. [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md) oder [Private](../../../../visual-basic/language-reference/modifiers/private.md)), mit denen Sie der `Dim` Anweisung. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Erstellen einer neuen Variablen](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [Gewusst wie: Verschieben von Daten in und aus einer Variablen](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
- [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)  
- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
- [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Erstellen einer neuen Variablen](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Vorgehensweise: Verschieben von Daten in und aus einer Variablen](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)
+- [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)
+- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)
+- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+- [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

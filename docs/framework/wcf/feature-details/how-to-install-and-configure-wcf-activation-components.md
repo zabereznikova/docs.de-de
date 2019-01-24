@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten'
+title: 'Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088333"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726896"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Gewusst wie: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
 Dieses Thema beschreibt die erforderlichen Schritte zum Einrichten der Windows Process Activation Service (auch bekannt als "WAS") auf [!INCLUDE[wv](../../../../includes/wv-md.md)] zum Hosten von Windows Communication Foundation (WCF) Dienste, die nicht über HTTP kommunizieren die Netzwerkprotokolle. In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:  
   
 -   Installieren (oder bestätigen Sie die Installation von) die WCF-aktivierungskomponenten.  
@@ -100,8 +100,8 @@ Dieses Thema beschreibt die erforderlichen Schritte zum Einrichten der Windows P
     > [!NOTE]
     >  Dieser Befehl ist eine einzelne Textzeile.  
   
-## <a name="see-also"></a>Siehe auch  
- [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [MSMQ-Aktivierung](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- [NamedPipe-Aktivierung](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Siehe auch
+- [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md)
+- [MSMQ-Aktivierung](../../../../docs/framework/wcf/samples/msmq-activation.md)
+- [NamedPipe-Aktivierung](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
+- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)

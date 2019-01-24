@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 015116e96a2fa534ecf26845c5926ddfa179df0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: abdfdd4393609bb7821cfc44c0e46574d8724cfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730061"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory-Co-Klasse
-Stellt eine Schnittstelle für die Verwaltung der Deconstruction ein Typname.  
+Stellt eine Schnittstelle für die Verwaltung der dekonstruieren eines Typnamens an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,13 +41,13 @@ coclass TypeNameFactory {
 |[ITypeNameFactory-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|Diese Schnittstelle unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.idl  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

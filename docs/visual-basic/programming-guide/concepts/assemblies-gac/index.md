@@ -2,17 +2,11 @@
 title: Assemblys und der globale Assemblycache (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
-ms.openlocfilehash: 6d1692d6b62e1f1f3a8f979d3de242003f034ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644250"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Assemblys und der globale Assemblycache (Visual Basic)
 Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, die Wiederverwendung, die Festlegung des Aktivierungsumfangs und die Sicherheitsberechtigungen für eine .NET-basierte Anwendung. Assemblys sind ausführbare Dateien (EXE-Dateien) oder DLL-Dateien und bilden die Bausteine von .NET Framework. Sie stellen der Common Language Runtime die Informationen zur Verfügung, die sie zum Erkennen der Typimplementierungen benötigt. Sie können sich eine Assembly als Sammlung von Typen und Ressourcen vorstellen, die eine logische Funktionalitätseinheit bilden und zusammenarbeiten.  
   
- Assemblys können mindestens ein Modul enthalten. Beispiel: Größere Projekte können so geplant werden, dass verschiedene unabhängige Entwickler an verschiedenen Modulen arbeiten, die schließlich alle zusammen eine einzelne Assembly erstellen. Weitere Informationen zu Modulen finden Sie im Thema [Gewusst wie: Erstellen einer Mehrfachdateiassembly](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Assemblys können mindestens ein Modul enthalten. Beispiel: Größere Projekte können so geplant werden, dass verschiedene unabhängige Entwickler an verschiedenen Modulen arbeiten, die schließlich alle zusammen eine einzelne Assembly erstellen. Weitere Informationen zu Modulen finden Sie im Thema [Vorgehensweise: Erstellen einer Mehrfachdateiassembly](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Assemblys verfügen über folgende Eigenschaften:  
   
@@ -48,12 +42,12 @@ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, d
 > [!NOTE]
 >  Sie erstellen eine Assembly in Visual Studio, indem Sie im Menü **Build** die Option **Build** wählen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Assemblys in der Common Language Runtime (CLR)](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Friend-Assemblys (Visual Basic)](friend-assemblies.md)  
- [Vorgehensweise: Freigeben einer Assembly mit anderen Anwendungen (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
- [Vorgehensweise: Laden und Entladen von Assemblys (Visual Basic)](how-to-load-and-unload-assemblies.md)  
- [Vorgehensweise: bestimmen, ob eine Datei eine Assembly (Visual Basic) ist.](how-to-determine-if-a-file-is-an-assembly.md)  
- [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)  
- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
- [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+## <a name="see-also"></a>Siehe auch
+- [Assemblys in der Common Language Runtime (CLR)](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Friend-Assemblys (Visual Basic)](friend-assemblies.md)
+- [Vorgehensweise: Freigeben einer Assembly für andere Anwendungen (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)
+- [Vorgehensweise: Laden und Entladen von Assemblys (Visual Basic)](how-to-load-and-unload-assemblies.md)
+- [Vorgehensweise: Bestimmen Sie, ob eine Datei eine Assembly (Visual Basic) ist.](how-to-determine-if-a-file-is-an-assembly.md)
+- [Vorgehensweise: Erstellen und Verwenden von Assemblys über die Befehlszeile (Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)
+- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)

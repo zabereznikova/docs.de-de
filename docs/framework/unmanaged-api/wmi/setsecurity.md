@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fd354e1103832abee7f634eace3dd6defa8b646
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b3e8ddb34849611daae4dfa1d2762a25ac5cf82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721138"
 ---
 # <a name="setsecurity-function"></a>SetSecurity-Funktion
-Ruft das Identitätstoken des aktuellen Threads zugeordnet.   
+Ruft das Identitätswechseltoken ab, das dem aktuellen Thread zugeordnet ist.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -39,23 +39,23 @@ HRESULT SetSecurity (
 
 ## <a name="parameters"></a>Parameter
 
-`pNeedToReset` [out] Bei Rückgabe der Funktion enthält einen Zeiger auf eine `boolean` , der angibt, ob das Token soll, durch Aufrufen zurückgesetzt werden der [ResetSecurity](resetsecurity.md) Funktion.  
+`pNeedToReset` [out] Wenn die Funktion zurückgibt, enthält einen Zeiger auf eine `boolean` , der angibt, ob das Token soll, durch den Aufruf zurückgesetzt werden der [ResetSecurity](resetsecurity.md) Funktion.  
 
 `token`  
-[out] Wenn die Funktion zurückgibt, enthält einen Zeiger auf das Handle für das Identitätswechseltoken, das dem aktuellen Thread zugeordnet. Der Wert kann `null` Wenn kein Token, das dem aktuellen Thread zugeordnet ist. 
+[out] Wenn die Funktion zurückgibt, enthält einen Zeiger auf das Handle des Token für den Identitätswechsel des aktuellen Threads zugeordnet. Die Werte sind möglich `null` liegt kein Token, das den aktuellen Thread zugeordnet. 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert `S_OK` (0).
+Wenn die Funktion erfolgreich ist, wird der Rückgabewert ist `S_OK` (0).
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode ungleich 0 (null). Um erweiterte Fehlerinformationen abzurufen, rufen Sie die [GetErrorInfo](geterrorinfo.md) Funktion.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein NULL-Fehlercode. Um erweiterte Fehlerinformationen abzurufen, rufen Sie die [GetErrorInfo](geterrorinfo.md) Funktion.
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

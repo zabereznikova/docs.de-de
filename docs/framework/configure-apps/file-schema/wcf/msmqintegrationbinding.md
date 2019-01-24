@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 09ac3fe2ea86745b9c88ffe9ec999a4978b343fe
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 1517fcaf75ea24bd3bd4e6e90276753c4973d191
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744920"
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 Definiert eine Bindung, die eine Warteschlangenunterstützung bereitstellt, indem Nachrichten über MSMQ weitergeleitet werden.  
@@ -129,12 +129,12 @@ msmqIntegrationBinding
 </configuration>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [Warteschlangen in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Warteschlangen in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

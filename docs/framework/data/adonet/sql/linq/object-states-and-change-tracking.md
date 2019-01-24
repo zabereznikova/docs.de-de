@@ -2,33 +2,33 @@
 title: Objektzustände und Änderungsverfolgung
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 482299f90a92acec9307649ec04a89f8ce6be414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89e9f44a6cd3579a5ef9cc2078609ca26e0d2ae5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364254"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683309"
 ---
 # <a name="object-states-and-change-tracking"></a>Objektzustände und Änderungsverfolgung
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Objekte weisen stets einige *Zustand*. Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] z. B. ein neues Objekt erstellt, befindet sich dieses im `Unchanged`-Zustand. Ein neues Objekt, das Sie selbst erstellen, ist unbekannt, um die <xref:System.Data.Linq.DataContext> und befindet sich im `Untracked` Zustand. Nach der erfolgreichen Ausführung von <xref:System.Data.Linq.DataContext.SubmitChanges%2A> befinden sich alle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bekannten Objekte im `Unchanged`-Zustand. (Die einzige Ausnahme besteht in Objekten, die erfolgreich aus der Datenbank gelöscht wurden und sich im `Deleted`-Zustand befinden, weshalb sie für die <xref:System.Data.Linq.DataContext>-Instanz nicht nutzbar sind.)  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Objekte weisen stets in einigen *Zustand*. Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] z. B. ein neues Objekt erstellt, befindet sich dieses im `Unchanged`-Zustand. Ein neues Objekt, das Sie selbst erstellen, ist unbekannt, um die <xref:System.Data.Linq.DataContext> und befindet sich im `Untracked` Zustand. Nach der erfolgreichen Ausführung von <xref:System.Data.Linq.DataContext.SubmitChanges%2A> befinden sich alle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bekannten Objekte im `Unchanged`-Zustand. (Die einzige Ausnahme besteht in Objekten, die erfolgreich aus der Datenbank gelöscht wurden und sich im `Deleted`-Zustand befinden, weshalb sie für die <xref:System.Data.Linq.DataContext>-Instanz nicht nutzbar sind.)  
   
 ## <a name="object-states"></a>Objektzustände  
  In der folgenden Tabelle werden die möglichen Zustände für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objekte aufgelistet.  
   
 |Zustand|Beschreibung|  
 |-----------|-----------------|  
-|`Untracked`|Ein Objekt, das nicht von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verfolgt wird. Die Beispiele umfassen:<br /><br /> -Ein Objekt, das nicht über die aktuelle abgefragt <xref:System.Data.Linq.DataContext> (z. B. ein neu erstelltes Objekt).<br />-Ein durch Deserialisierung erstelltes Objekt<br />-Ein Objekt, das durch einen anderen abgefragt <xref:System.Data.Linq.DataContext>.|  
+|`Untracked`|Ein Objekt, das nicht von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verfolgt wird. Die Beispiele umfassen:<br /><br /> – Ein Objekt, das nicht über den aktuellen abgefragt <xref:System.Data.Linq.DataContext> (z. B. ein neu erstelltes Objekt).<br />: Ein durch Deserialisierung erstelltes Objekt<br />– Ein Objekt, das durch einen anderen abgefragt <xref:System.Data.Linq.DataContext>.|  
 |`Unchanged`|Ein Objekt, das mit dem aktuellen <xref:System.Data.Linq.DataContext> abgefragt wurde und von dem nicht bekannt ist, ob es seit der Erstellung verändert wurde.|  
-|`PossiblyModified`|Ein Objekt, das ist *angefügt* zu einem <xref:System.Data.Linq.DataContext>. Weitere Informationen finden Sie unter [Datenabruf und CUD-Operationen in N-Tier-Anwendungen (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).|  
+|`PossiblyModified`|Ein Objekt, das ist *angefügt* zu einem <xref:System.Data.Linq.DataContext>. Weitere Informationen finden Sie unter [Datenabruf und CUD-Vorgänge in N-Tier-Anwendungen (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).|  
 |`ToBeInserted`|Ein Objekt, das nicht vom aktuellen <xref:System.Data.Linq.DataContext> abgerufen wurde. Dies führt zu einem Datenbank-`INSERT` während <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|  
 |`ToBeUpdated`|Ein Objekt, von dem bekannt ist, dass es seit dem Abruf verändert wurde. Dies führt zu einem Datenbank-`UPDATE` während <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|  
 |`ToBeDeleted`|Ein zum Löschen markiertes Objekt, das zu einem Datenbank-`DELETE` während <xref:System.Data.Linq.DataContext.SubmitChanges%2A> führt.|  
 |`Deleted`|Ein Objekt, das in der Datenbank gelöscht wurde. Dieser Zustand ist endgültig und ermöglicht keine zusätzlichen Übergänge.|  
   
 ## <a name="inserting-objects"></a>Einfügen von Objekten  
- Sie können `Inserts` mithilfe von <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> explizit anfordern. Alternativ können Sie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ableiten können `Inserts` mit einer Suche nach Objekten verbunden auf einen bekannten Objekte, die aktualisiert werden müssen. Angenommen, Sie fügen ein `Untracked` -Objekt an eine <xref:System.Data.Linq.EntitySet%601> , oder legt eine <xref:System.Data.Linq.EntityRef%601> auf eine `Untracked` -Objekt festlegen, die `Untracked` -Objekt über verfolgte Objekte im Diagramm erreichbar. Beim Verarbeiten von <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] durchläuft die verfolgten Objekte und ermittelt alle erreichbaren vorhandenen Objekte, die nicht verfolgt werden. Solche Objekte sind Kandidaten für das Einfügen in die Datenbank.  
+ Sie können `Inserts` mithilfe von <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> explizit anfordern. Sie können auch [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ableiten kann `Inserts` durch Suchen der Objekte, die mit einer der bekannten Objekte, die aktualisiert werden müssen, verbunden sind. Angenommen, Sie fügen ein `Untracked` -Objekt ein <xref:System.Data.Linq.EntitySet%601> oder ein <xref:System.Data.Linq.EntityRef%601> zu ein `Untracked` Objekt ist, stellen Sie die `Untracked` -Objekt über verfolgte Objekte im Diagramm erreichbar. Während der Verarbeitung <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] durchläuft die verfolgten Objekte und ermittelt alle erreichbaren vorhandenen Objekte, die nicht nachverfolgt werden. Solche Objekte sind Kandidaten für das Einfügen in die Datenbank.  
   
- Für Klassen in einer Vererbungshierarchie <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>(`o`) setzt Sie den Wert des Elements als auch die *Unterscheidungseigenschaft* entsprechend den Typ des Objekts `o`. Entspricht ein Typ dem standardmäßigen Diskriminatorwert, wird durch diese Aktion der Diskriminatorwert mit dem Standardwert überschrieben. Weitere Informationen finden Sie unter [Unterstützung von Vererbung](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).  
+ Für Klassen in einer Vererbungshierarchie <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>(`o`) legt auch fest, der Wert des Members als die *Diskriminator* entsprechend den Typ des Objekts `o`. Entspricht ein Typ dem standardmäßigen Diskriminatorwert, wird durch diese Aktion der Diskriminatorwert mit dem Standardwert überschrieben. Weitere Informationen finden Sie unter [Unterstützung von Vererbung](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).  
   
 > [!IMPORTANT]
 >  Ein der `Table` hinzugefügtes Objekt befindet sich nicht im Identitäts-Cache. Der Identitäts-Cache enthält nur die Elemente, die aus der Datenbank abgerufen werden. Nach einem Aufruf von <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> erscheint die hinzugefügte Entität erst dann in den Abfragen für die Datenbank, wenn <xref:System.Data.Linq.DataContext.SubmitChanges%2A> erfolgreich abgeschlossen wurde.  
@@ -47,21 +47,21 @@ ms.locfileid: "33364254"
  Sie können <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> nur für ein Objekt aufrufen, das vom <xref:System.Data.Linq.DataContext> verfolgt wird. Bei einem `Untracked`-Objekt müssen Sie <xref:System.Data.Linq.Table%601.Attach%2A> vor <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> aufrufen. Der Aufruf von <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> für ein `Untracked`-Objekt löst eine Ausnahme aus.  
   
 > [!NOTE]
->  Entfernen eines Objekts aus einer Tabelle weist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generiert einen entsprechenden SQL `DELETE` -Befehl zum Zeitpunkt der <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Diese Aktion entfernt das Objekt nicht aus dem Cache und gibt das Löschen auch nicht an verwandte Objekte weiter.  
+>  Entfernen eines Objekts aus einer Tabelle weist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] auf einen entsprechenden SQL `DELETE` zum Zeitpunkt der Befehl <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Diese Aktion entfernt das Objekt nicht aus dem Cache und gibt das Löschen auch nicht an verwandte Objekte weiter.  
 >   
->  Um die `id` eines gelöschten Objekts freizugeben, verwenden Sie eine neue <xref:System.Data.Linq.DataContext>-Instanz. Zur Bereinigung verwandter Objekte, verwenden Sie die *kaskadierte Löschung* Funktion der Datenbank, oder manuell löschen der verknüpften Objekte.  
+>  Um die `id` eines gelöschten Objekts freizugeben, verwenden Sie eine neue <xref:System.Data.Linq.DataContext>-Instanz. Zur Bereinigung verwandter Objekte können Sie die *Löschweitergabe* Funktion der Datenbank, oder andernfalls manuell löschen der verknüpften Objekte.  
 >   
 >  Die verwandten Objekte müssen in keiner besonderen Reihenfolge gelöscht werden (im Gegensatz zur Datenbank).  
   
 ## <a name="updating-objects"></a>Aktualisieren von Objekten  
  Sie können `Updates` durch Überwachen der Änderungsmitteilungen erkennen. Benachrichtigungen werden durch das <xref:System.ComponentModel.INotifyPropertyChanging.PropertyChanging>-Ereignis in Eigenschaften-Settern bereitgestellt. Wird [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] über die erste Änderung an einem Objekt benachrichtigt, wird eine Kopie dieses Objekts erstellt, und das Objekt gilt als Kandidat zur Erzeugung einer `Update`-Anweisung.  
   
- Für Objekte, die keine implementieren <xref:System.ComponentModel.INotifyPropertyChanging>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterhält eine Kopie der Werte, Objekte bei der ersten Materialisierung aufwiesen. Beim Aufruf <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vergleicht die aktuellen und ursprünglichen Werte, um zu entscheiden, ob das Objekt geändert wurde.  
+ Für Objekte, die keine implementieren <xref:System.ComponentModel.INotifyPropertyChanging>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] behält eine Kopie der Werte, Objekte bei der ersten Materialisierung aufwiesen. Beim Aufruf <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vergleicht die aktuellen und ursprünglichen Werte, um zu entscheiden, ob das Objekt geändert wurde.  
   
  Bei Updates von Beziehungen gilt der Verweis vom unter- zum übergeordneten Element (der Verweis, der dem Fremdschlüssel entspricht) als Autorität. Der Verweis in die umgekehrte Richtung (d. h. vom übergeordneten zum untergeordneten Element) ist optional. Beziehungsklassen (<xref:System.Data.Linq.EntitySet%601> und <xref:System.Data.Linq.EntityRef%601>) stellen die Konsistenz bidirektionaler Verweise für 1:n-Beziehungen und 1:1-Beziehungen sicher. Verwendet das Objektmodel <xref:System.Data.Linq.EntitySet%601> oder <xref:System.Data.Linq.EntityRef%601> nicht und ist ein umgekehrter Verweis vorhanden, ist es Ihre Aufgabe, diesen beim Update der Beziehung mit dem vorwärts gerichteten Verweis konsistent zu halten.  
   
  Wenn Sie den erforderlichen Verweis und den entsprechenden Fremdschlüssel aktualisieren, müssen Sie deren Übereinstimmung sicherstellen. Eine <xref:System.InvalidOperationException>-Ausnahme wird ausgelöst, wenn die beiden Elemente zum Zeitpunkt des Aufrufs von <xref:System.Data.Linq.DataContext.SubmitChanges%2A> nicht synchron sind. Obwohl die Werte von Fremdschlüsseln für ein Update der zugrunde liegenden Zeile ausreichen, müssen Sie die Referenz ändern, um die Konnektivität des Objektgraphen und die bidirektionale Konsistenz von Beziehungen zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Insert-, Update- und Delete-Operationen](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+## <a name="see-also"></a>Siehe auch
+- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Insert-, Update- und Delete-Operationen](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

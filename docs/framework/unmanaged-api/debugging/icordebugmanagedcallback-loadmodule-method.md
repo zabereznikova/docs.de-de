@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbf538f066058b4f80d8cfd6cdf1a79683c79be9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 597c5071f9ea0ceacaf429ca10cc899f115772eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715633"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule-Methode
-Benachrichtigt den Debugger, dass eine common Language Runtime (CLR)-Modul erfolgreich geladen wurde.  
+Benachrichtigt den Debugger, dass ein common Language Runtime (CLR)-Modul wurde erfolgreich geladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,13 +41,13 @@ HRESULT LoadModule (
  [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der das Modul geladen wurde.  
   
  `pModule`  
- [in] Ein Zeiger auf ein ICorDebugModule-Objekt, das den CLR-Modul darstellt.  
+ [in] Ein Zeiger auf ein ICorDebugModule-Objekt, das CLR-Modul darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `LoadModule` Rückruf stellt einen geeigneten Zeitpunkt zum Überprüfen der Metadaten für das Modul Just-in-Time (JIT)-Compilerflags festgelegt oder aktivieren oder Deaktivieren von Rückrufen für das Modul beim Laden.  
+ Die `LoadModule` Rückruf stellt einen geeigneten Zeitpunkt zum Überprüfen der Metadaten für das Modul, Festlegen von just-in-Time (JIT) Compilerflags aktivieren oder Deaktivieren von Rückrufen für das Modul beim Laden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -55,6 +55,6 @@ HRESULT LoadModule (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [UnloadModule-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)  
- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [UnloadModule-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)
+- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

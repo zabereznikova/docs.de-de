@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2af0eacbff8220be7f2286f7f345f14126972261
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6962824551c108907929e19d75fc4a31f7001f03
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458522"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727156"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2-Methode
-Ruft das übergeordnete Modul und die Metadaten für die offene generische Definition der angegebenen Klasse token der `ClassID` der übergeordneten Klasse und die `ClassID` für jedes Typargument, falls vorhanden, der-Klasse.  
+Ruft das übergeordnete Modul und die Metadaten für die offene generische Methodendefinition der angegebenen Klasse token der `ClassID` der übergeordneten Klasse, und die `ClassID` für jedes Typargument, falls vorhanden, der-Klasse.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,10 +45,10 @@ HRESULT GetClassIDInfo2(
  [in] Die ID der Klasse, für die Informationen abgerufen werden sollen.  
   
  `pModuleId`  
- [out] Zeiger auf die ID des übergeordneten Moduls für die offene generische Definition der angegebenen Klasse.  
+ [out] Zeiger auf die ID des übergeordneten Moduls für die offenen generischen Definition der angegebenen Klasse.  
   
  `pTypeDefToken`  
- [out] Ein Zeiger auf das Metadatentoken für die offene generische Methodendefinition der angegebenen Klasse.  
+ [out] Zeiger auf das Metadatentoken für die offene generische Methodendefinition der angegebenen Klasse.  
   
  `pParentClassId`  
  [out] Der Zeiger auf die ID der übergeordneten Klasse.  
@@ -63,7 +63,7 @@ HRESULT GetClassIDInfo2(
  [out] Ein Array von `ClassID`-Werten, von denen jedes die ID eines Typarguments der Klasse darstellt. Wenn die Methode zurückkehrt, enthält `typeArgs` einige verfügbare oder alle verfügbaren `ClassID` Werte.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetClassIDInfo2` Methode ist vergleichbar mit der [ICorProfilerInfo:: GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) -Methode, aber `GetClassIDInfo2` zusätzliche Plattforminformationen zu einem generischen Typ.  
+ Die `GetClassIDInfo2` Methode ähnelt der [ICorProfilerInfo:: GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) -Methode, aber `GetClassIDInfo2` Ruft zusätzliche Informationen über einen generischen Typ ab.  
   
  Der Profilercode kann Aufrufen [ICorProfilerInfo:: GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) zum Abrufen einer [Metadaten](../../../../docs/framework/unmanaged-api/metadata/index.md) Schnittstelle für ein bestimmtes Modul. Das Metadatentoken, das an den Speicherort zurückgegeben wird, auf den durch `pTypeDefToken` verwiesen wird, kann anschließend für den Zugriff auf die Metadaten für die Klasse verwendet werden.  
   
@@ -72,7 +72,7 @@ HRESULT GetClassIDInfo2(
  Alternativ können Sie zuerst `GetClassIDInfo2` mit einem `typeArgs`-Puffer der Länge 0 (NULL) aufrufen, um die richtige Puffergröße zu ermitteln. Sie können die `typeArgs`Puffergröße dann auf den Wert festlegen, der von `pcNumTypeArgs` zurückgegeben wurde, und `GetClassIDInfo2` dann erneut aufrufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -80,8 +80,8 @@ HRESULT GetClassIDInfo2(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)

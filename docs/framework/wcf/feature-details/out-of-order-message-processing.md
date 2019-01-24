@@ -2,12 +2,12 @@
 title: Verarbeiten von Nachrichten außerhalb der normalen Reihenfolge
 ms.date: 03/30/2017
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
-ms.openlocfilehash: 3beca8d73788d177d07868d7169d8aea3ecd8e80
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 7d908be84f22835bea744de74d278689516f3185
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698010"
 ---
 # <a name="out-of-order-message-processing"></a>Verarbeiten von Nachrichten außerhalb der normalen Reihenfolge
 Workflowdienste können davon abhängig sein, dass Nachrichten in einer bestimmten Reihenfolge gesendet werden. Ein Workflowdienst enthält eine oder mehrere <xref:System.ServiceModel.Activities.Receive>-Aktivitäten, und jede <xref:System.ServiceModel.Activities.Receive>-Aktivität erwartet eine bestimmte Nachricht. Ohne bestimmte Transportübermittlungsgarantien kann es vorkommen, dass von Clients gesendete Nachrichten verzögert und in einer Reihenfolge gesendet werden, die der Workflowdienst ggf. nicht erwartet. Das Implementieren eines Workflowdiensts, der das Senden von Nachrichten in einer bestimmten Reihenfolge nicht erfordert, wird normalerweise mithilfe einer Parallel-Aktivität durchgeführt. Bei einem komplizierteren Anwendungsprotokoll würde der Workflow schnell sehr komplex werden.  Die Out-of-Order-Nachricht, die in Windows Communication Foundation (WCF)-Funktion verarbeitet wird, können Sie einen Workflow dieser Art ohne die Komplexität geschachtelter Parallel-Aktivitäten zu erstellen. Out-of-Order-Nachrichtenverarbeitung wird nur unterstützt, auf die Kanäle, unterstützen <xref:System.ServiceModel.Channels.ReceiveContext> wie z. B. die WCF-MSMQ-Bindungen.  
@@ -34,7 +34,7 @@ WorkflowService service = new WorkflowService
 </Sequence>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Channels.ReceiveContext>  
- [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Warteschlangen und zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Channels.ReceiveContext>
+- [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [Warteschlangen und zuverlässige Sitzungen](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)

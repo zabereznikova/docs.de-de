@@ -2,12 +2,12 @@
 title: Schützen von Verbindungsinformationen
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 6cd27f2bce1879301e80c7a8ec689971705a45b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4c96861afc47c67c8e8c1f3721b09672ca3f48ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662217"
 ---
 # <a name="protecting-connection-information"></a>Schützen von Verbindungsinformationen
 Eines der wichtigsten Ziele beim Sichern einer Anwendung besteht darin, den Zugriff auf die Datenquelle zu schützen. Eine Verbindungszeichenfolge stellt ein potenzielles Sicherheitsrisiko dar, wenn sie nicht gesichert wird. Das Speichern von Verbindungsinformationen als Klartext oder das Aufbewahren dieser Informationen im Arbeitsspeicher gefährdet Ihr gesamtes System. In Ihrem Quellcode eingebettete Verbindungszeichenfolgen können gelesen werden, mithilfe der [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) um Microsoft intermediate Language (MSIL) in einer kompilierten Assembly anzuzeigen.  
@@ -39,8 +39,8 @@ Eines der wichtigsten Ziele beim Sichern einer Anwendung besteht darin, den Zugr
 ## <a name="encrypt-configuration-files"></a>Verschlüsseln von Konfigurationsdateien  
  Sie können die Verbindungszeichenfolgen auch in Konfigurationsdateien speichern. Damit erübrigt sich die Notwendigkeit, die Verbindungszeichenfolgen in den Code Ihrer Anwendung einzubetten. Konfigurationsdateien sind Standard-XML-Dateien, für die .NET Framework einen allgemeinen Satz von Elementen definiert hat. Verbindungszeichenfolgen in Konfigurationsdateien befinden sich in der Regel innerhalb der  **\<ConnectionStrings >** Element in der **"App.config"** für eine Windows-Anwendung oder der  **"Web.config"** -Datei für eine ASP.NET-Anwendung. Weitere Informationen zu den Grundlagen der speichern, abrufen und Verschlüsseln von Verbindungszeichenfolgen in Konfigurationsdateien finden Sie unter [Verbindungszeichenfolgen und Konfigurationsdateien](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Verschlüsseln von Konfigurationsinformationen mithilfe der geschützten Konfiguration](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
- [PAVE Security in Native and .NET Framework Code (PAVE-Sicherheit in nativem und .NET Framework-Code)](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Verschlüsseln von Konfigurationsinformationen mithilfe der geschützten Konfiguration](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)
+- [PAVE Security in Native and .NET Framework Code (PAVE-Sicherheit in nativem und .NET Framework-Code)](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

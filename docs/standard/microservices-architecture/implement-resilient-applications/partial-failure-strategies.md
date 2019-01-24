@@ -1,17 +1,17 @@
 ---
 title: Strategien zum Beheben von Teilfehlern
-description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Strategien zum Beheben von Teilfehlern
+description: Lernen Sie verschiedene Strategien zum ordnungsgemäßen Behandeln von Teilfehlern kennen.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 06/08/2018
-ms.openlocfilehash: ba15258be8caa1a5ed800cef0ebe832aa7328252
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 10/16/2018
+ms.openlocfilehash: ad45e357c1656b9346b7bdb5f324bde5fa76eaba
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146117"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362768"
 ---
-# <a name="strategies-for-handling-partial-failure"></a>Strategien zum Beheben von Teilfehlern
+# <a name="strategies-to-handle-partial-failure"></a>Strategien zum Behandeln von Teilfehlern
 
 Zu den Strategien für den Umgang mit Teilfehlern zählen die folgenden:
 
@@ -25,24 +25,24 @@ Zu den Strategien für den Umgang mit Teilfehlern zählen die folgenden:
 
 **Fallbacks bereitstellen:** Bei diesem Ansatz führt der Clientprozess Fallbacklogik aus, wenn eine Anforderung fehlschlägt: Es werden z.B. zwischengespeicherte Daten oder ein Standardwert zurückgegeben. Dieser Ansatz eignet sich für Abfragen und ist bei Updates oder Befehlen komplexer.
 
-**Anzahl der Anforderungen in der Warteschlange begrenzen:** Clients sollten eine Obergrenze für die Anzahl der ausstehenden Anforderungen vorgeben, die ein Clientmicroservice an einen bestimmten Dienst senden kann. Wenn der Grenzwert erreicht wurde, sind weitere Anforderungen zwecklos, und diese Versuche lösen sofort einen Fehler aus. Im Hinblick auf die Implementierung kann diese Anforderung mithilfe der [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead)-Richtlinie aus Polly erfüllt werden. Dieser Ansatz ist im Wesentlichen eine Parallelisierungsdrosselung mit <xref:System.Threading.SemaphoreSlim> als Implementierung. Er lässt außerdem eine „Warteschlange“ außerhalb des Bulkheads zu. Sie können zu viele Ladevorgänge vor der Ausführung bereits proaktiv verhindern, z.B. wenn Kapazität ausgelastet ist. Die Antwort auf bestimmte Fehlerszenarios wird dann schneller gesendet, als ein Trennschalter reagieren würde, da ein Trennschalter auf Fehler wartet. Das BulkheadPolicy-Objekt in Polly gibt an, wie voll der Bulkhead und die Warteschlange sind, und bietet Überlaufereignisse an, damit er auch für die automatisierte horizontale Skalierung verwendet werden kann.
+**Anzahl der Anforderungen in der Warteschlange begrenzen:** Clients sollten eine Obergrenze für die Anzahl der ausstehenden Anforderungen vorgeben, die ein Clientmicroservice an einen bestimmten Dienst senden kann. Wenn der Grenzwert erreicht wurde, sind weitere Anforderungen zwecklos, und diese Versuche lösen sofort einen Fehler aus. Im Hinblick auf die Implementierung kann diese Anforderung mithilfe der [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead)-Richtlinie aus Polly erfüllt werden. Dieser Ansatz ist im Wesentlichen eine Parallelisierungsdrosselung mit <xref:System.Threading.SemaphoreSlim> als Implementierung. Er lässt außerdem eine „Warteschlange“ außerhalb des Bulkheads zu. Sie können zu viele Ladevorgänge vor der Ausführung bereits proaktiv verhindern, z.B. wenn Kapazität ausgelastet ist. Die Antwort auf bestimmte Fehlerszenarios wird dann schneller gesendet, als ein Trennschalter reagieren würde, da ein Trennschalter auf Fehler wartet. Das BulkheadPolicy-Objekt in [Polly](http://www.thepollyproject.org/) gibt an, wie voll der Bulkhead und die Warteschlange sind, und bietet Überlaufereignisse an, damit er auch für die automatisierte horizontale Skalierung verwendet werden kann.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Resiliency patterns (Resilienzmuster)**
-    [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
+- **Resilienzmuster**\
+  [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](/azure/architecture/patterns/category/resiliency)
 
--   **Adding Resilience and Optimizing Performance (Hinzufügen von Resilienz und Optimieren der Leistung)**
-    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
+- **Hinzufügen von Resilienz und Optimieren der Leistung**\
+  [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **Bulkhead:** GitHub-Repository. Implementierung mit Polly-Richtlinie
-    [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+- **Bulkhead:** GitHub-Repository. Implementierung mit Polly-Richtlinie
+  [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
--   **Designing resilient applications for Azure (Entwerfen von robusten Anwendungen für Azure)**
-    [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
+- **Entwerfen von robusten Anwendungen für Azure**\
+  [*https://docs.microsoft.com/azure/architecture/resiliency/*](/azure/architecture/resiliency/)
 
--   **Behandlung vorübergehender Fehler**
-    <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
+- **Behandlung vorübergehender Fehler**\
+  [*https://docs.microsoft.com/azure/architecture/best-practices/transient-faults*](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
 >[Zurück](handle-partial-failure.md)

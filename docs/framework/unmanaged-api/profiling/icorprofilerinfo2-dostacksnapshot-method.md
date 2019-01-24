@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d107653d34689814ae97ca4012d0fd2e2c4190dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969784"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727273"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot-Methode
 Durchläuft die verwalteten Frames im Stapel für den angegebenen Thread und sendet die Informationen an den Profiler in einem Rückruf.  
@@ -73,7 +73,7 @@ HRESULT DoStackSnapshot(
   
  Die Reihenfolge, in dem der Stapel durchgelaufen wird, ist die Umkehrung des wie die Frames auf dem Stapel abgelegt wurden: zuletzt Blattelemente der Frame (letzte verschoben) ersten, main (zuerst verschoben).  
   
- Weitere Informationen dazu, wie Sie den Profiler zum Durchlaufen verwalteter Stapel programmieren, finden Sie unter [Profiler Durchlaufen von Stapeln im .NET Framework 2.0: Basics and Beyond](https://go.microsoft.com/fwlink/?LinkId=73638).  
+ Weitere Informationen dazu, wie Sie den Profiler zum Durchlaufen verwalteter Stapel programmieren, finden Sie unter [Profiler Durchlaufen von Stapeln im .NET Framework 2.0: Grundlagen und mehr](https://go.microsoft.com/fwlink/?LinkId=73638).  
   
  Ein Stackwalk kann synchron oder asynchron sein, wie in den folgenden Abschnitten erläutert.  
   
@@ -100,7 +100,7 @@ HRESULT DoStackSnapshot(
  Es gibt auch Risiko eines Deadlocks Aufrufen `DoStackSnapshot` von einem Thread, der Ihr Profiler erstellt wurde, damit Sie den Stapel des einen separaten Zielthread zu durchlaufen können. Beim ersten erstellten Thread gibt bestimmte `ICorProfilerInfo*` Methoden (einschließlich `DoStackSnapshot`), die CLR wird pro Thread, CLR-spezifische-Initialisierung auf diesem Thread ausgeführt. Wenn Ihr Profiler den Zielthread angehalten hat, dessen Stapel, die Sie durchlaufen möchten, und Zielthread aufgetreten ist, eine Sperre für diese Initialisierung pro Thread durchführen besitzen, wird ein Deadlock auftreten. Um diese Deadlocks zu vermeiden, stellen Sie einen anfänglichen Aufruf in `DoStackSnapshot` aus Ihrem Profiler erstellte Thread durchlaufen ein separaten Thread, als Zielplattform halten den Zielthread nicht zuerst. Diese ersten Aufruf wird sichergestellt, dass die Initialisierung pro Thread ohne Deadlock durchführen kann. Wenn `DoStackSnapshot` erfolgreich ist, und meldet Sie mindestens einen Frame nach diesem Punkt, sie werden alle Zielthread und der Aufruf angehalten, Profiler erstellte Thread sicher `DoStackSnapshot` auf den Stapel Zielthread zu durchlaufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -108,6 +108,6 @@ HRESULT DoStackSnapshot(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

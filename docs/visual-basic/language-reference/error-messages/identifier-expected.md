@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: ddbb0481ed51d9daad1eedff72fbdb9f6b4a9a35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56d405bfe1079e9862d47bc64566fee62a573be0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586129"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731035"
 ---
 # <a name="identifier-expected"></a>Bezeichner erwartet.
-Ein Programmierelement, der keiner erkennbaren deklarierten Elementnamens ist tritt auf, in dem der Kontext ein Elementname erfordert. Eine mögliche Ursache ist, dass ein Attribut an einer beliebigen Stelle außer angegeben wurde am Anfang der Anweisung.  
+Ein Programmierelement, das nicht auf einem erkennbaren deklarierte Elementnamen ist auftritt, in dem der Kontext ein Elementname erfordert. Eine mögliche Ursache ist, dass ein Attribut nur an einer beliebigen Stelle angegeben wurde zu Beginn der Anweisung.  
   
  **Fehler-ID:** BC30203  
   
@@ -25,7 +25,7 @@ Ein Programmierelement, der keiner erkennbaren deklarierten Elementnamens ist tr
   
 -   Stellen Sie sicher, dass alle Elementnamen in der Anweisung richtig geschrieben sind.  
   
-## <a name="see-also"></a>Siehe auch  
- [Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)
- 
+## <a name="see-also"></a>Siehe auch
+- [Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Übersicht über Attribute](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ändern der Darstellung eines DataRepeater-Steuerelements (Visual Studio)'
+title: 'Vorgehensweise: Ändern der Darstellung eines DataRepeater-Steuerelements (Visual Studio)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - DataRepeater, customizing
 - DataRepeater, changing run time appearance
 ms.assetid: 2af6dfce-760b-489e-b863-8da967f315c3
-ms.openlocfilehash: 9863d9343ffcecc1e4aae7f6bc16dae39ef76385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5508329ba716b53eff0c9e1bfe13e190fa1fd85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590120"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716634"
 ---
-# <a name="how-to-change-the-appearance-of-a-datarepeater-control-visual-studio"></a>Gewusst wie: Ändern der Darstellung eines DataRepeater-Steuerelements (Visual Studio)
-Sie können die Darstellung der Ändern einer <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> -Steuerelements zur Entwurfszeit durch Festlegen von Eigenschaften oder zur Laufzeit durch Behandeln der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> Ereignis.  
+# <a name="how-to-change-the-appearance-of-a-datarepeater-control-visual-studio"></a>Vorgehensweise: Ändern der Darstellung eines DataRepeater-Steuerelements (Visual Studio)
+Sie können das Erscheinungsbild des eine <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement zur Entwurfszeit durch Festlegen von Eigenschaften oder zur Laufzeit durch Behandeln der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> Ereignis.  
   
- Eigenschaften, die zur Entwurfszeit festgelegt werden Wenn der Elementvorlagenbereich des Steuerelements aktiviert ist, werden für jede wiederholt werden <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> zur Laufzeit. Darstellungseigenschaften des der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement selbst werden zur Laufzeit nur, wenn ein Teil des Containers bleibt aufgedeckt angezeigt (z. B. wenn die <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft auf einen hohen Wert festgelegt ist).  
+ Eigenschaften, die Sie zur Entwurfszeit festlegen, wenn die Elementvorlagenbereich des Steuerelements ausgewählt ist, werden für jede wiederholt werden <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem> zur Laufzeit. Darstellungseigenschaften des der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> -Steuerelement selbst werden zur Laufzeit nur, wenn ein Teil des Containers bleibt im Detail angezeigt (z. B., wenn die <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft auf einen hohen Wert festgelegt ist).  
   
- Zur Laufzeit können Darstellungseigenschaften auf Bedingungen Basis festgelegt werden. Beispielsweise können in einer planungsanwendung Sie ändern die Farbe des Hintergrunds eines Elements, um Benutzer zu warnen, wenn ein Element überfällig ist. In der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> Ereignishandler, d. h. Wenn Sie eine Eigenschaft wie z. B. in einer bedingten Anweisung festlegen `If…Then`, müssen Sie auch verwenden eine `Else` -Klausel, um die Darstellung festzulegen, wenn die Bedingung nicht erfüllt wird.  
+ Zur Laufzeit können Darstellungseigenschaften basierend auf Bedingungen festgelegt werden. Beispielsweise können in einer Anwendung planen Sie ändern die Hintergrundfarbe eines Elements aus, um Benutzer zu warnen, wenn ein Element überfällig ist. In der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> -Ereignishandler, wenn Sie eine Eigenschaft wie z. B. in einer bedingten Anweisung festlegen `If…Then`, Sie müssen auch verwenden, ein `Else` -Klausel, um die Darstellung zu geben, wenn die Bedingung nicht erfüllt ist.  
   
 ### <a name="to-change-the-appearance-at-design-time"></a>So ändern Sie die Darstellung zur Entwurfszeit  
   
-1.  Wählen Sie in der Windows Forms-Designer den Elementvorlagenbereich (oberer Bereich) von der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement.  
+1.  Wählen Sie in der Windows Forms-Designer, den Elementvorlagenbereich (oberer Bereich) von der <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement.  
   
-2.  Klicken Sie im Eigenschaftenfenster wählen Sie eine Eigenschaft, und ändern Sie den Wert. Allgemeine Eigenschaften, die Darstellung beeinflussen enthalten <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Panel.BorderStyle%2A>, und <xref:System.Windows.Forms.Control.ForeColor%2A>.  
+2.  Klicken Sie im Fenster "Eigenschaften" Wählen Sie eine Eigenschaft, und ändern Sie den Wert. Allgemeine Eigenschaften, die Darstellung auswirken, gehören <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.BackgroundImage%2A>, <xref:System.Windows.Forms.Panel.BorderStyle%2A>, und <xref:System.Windows.Forms.Control.ForeColor%2A>.  
   
 ### <a name="to-change-the-appearance-at-run-time"></a>So ändern Sie die Darstellung zur Laufzeit  
   
@@ -38,18 +38,18 @@ Sie können die Darstellung der Ändern einer <xref:Microsoft.VisualBasic.PowerP
      [!code-vb[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.vb)]  
   
 ## <a name="example"></a>Beispiel  
- Einige allgemeine Anpassungen für die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement gehört das Anzeigen von Zeilen abwechselnde Farben und die Farbe eines Felds auf Grundlage einer Bedingung zu ändern. Das folgende Beispiel zeigt, wie diese Anpassungen ausführen. In diesem Beispiel wird davon ausgegangen, dass Sie haben eine <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement, das die Products-Tabelle in der Northwind-Datenbank gebunden ist.  
+ Einige häufige Anpassungen für die <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> Steuerelement gehört das Anzeigen von Zeilen in wechselnden Farben, und die Farbe eines Felds auf Grundlage einer Bedingung ändern. Das folgende Beispiel zeigt, wie Sie diese Anpassungen vornehmen. In diesem Beispiel wird davon ausgegangen, dass Sie haben eine <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> -Steuerelement, das in der Produkttabelle, in der Northwind-Datenbank gebunden ist.  
   
  [!code-vb[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.vb)]
  [!code-csharp[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.cs)]  
   
- Beachten Sie, dass für beide diese Anpassungen Sie Code zum Festlegen der Eigenschaften für beide Seiten der Bedingung angeben müssen. Wenn Sie keinen angeben der `Else` Bedingung, werden Sie zur Laufzeit unerwartete Ergebnisse angezeigt.  
+ Beachten Sie, dass für beide dieser Anpassungen Sie Code zum Festlegen der Eigenschaften für beide Seiten der Bedingung bereitstellen müssen. Wenn Sie keinen angeben der `Else` Bedingung, werden Sie zur Laufzeit unerwartete Ergebnisse angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>  
- [Einführung in das DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
- [Problembehandlung beim DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)  
- [Gewusst wie: Anzeigen von gebundenen Daten in einem DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
- [Gewusst wie: Anzeigen von nicht gebundenen Steuerelementen in einem DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
- [Gewusst wie: Anzeigen von Elementheadern in einem DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>
+- <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>
+- [Einführung in das DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
+- [Problembehandlung beim DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+- [Vorgehensweise: Anzeigen von gebundenen Daten in einem DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)
+- [Vorgehensweise: Display Unbound Controls in a DataRepeater Control](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)
+- [Vorgehensweise: Anzeigen von Elementheadern in einem DataRepeater-Steuerelement](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)

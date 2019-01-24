@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die Konzepte von Unittests in C# und .NET C
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 80c831a6d8ab9aa35435d0ff8f13334f7d169a3a
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 00be8c2fdef88861cc1119b1593155e027a3ade5
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169027"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307213"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Unittests für C# mit NUnit und .NET Core
 
@@ -109,10 +109,10 @@ Die folgende Gliederung zeigt das endgültige Projektmappenlayout:
         PrimeService.Tests.csproj
 ```
 
-Führen Sie im Verzeichnis *unit-testing-using-dotnet-test* den folgenden Befehl aus:
+Führen Sie im Verzeichnis *unit-testing-using-nunit* den folgenden Befehl aus:
 
 ```console
-dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
 ## <a name="creating-the-first-test"></a>Erstellen des ersten Tests

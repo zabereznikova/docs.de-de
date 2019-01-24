@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 749ec14af7bffee87afbe5c0705a6ddf68da5fd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 80ed86526c99c36254f2b9c71f00483095e771ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406493"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734350"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize-Methode
-Ruft die Größe in Bytes des Zeigertyps, die der Zielprozess verwendet. Diese Methode wird von den Datenzugriffsdiensten der common Language Runtime aufgerufen.  
+Ruft die Größe des Zeigertyps, mit denen das Ziel wird in Bytes ab. Diese Methode wird von den Datenzugriffsdiensten der common Language Runtime aufgerufen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +37,13 @@ HRESULT GetPointerSize (
   
 #### <a name="parameters"></a>Parameter  
  `pointerSize`  
- [out] Ein Zeiger auf einen ganzzahligen Wert, der die Größe in Bytes, der einen Zeiger auf den Zielprozess angibt.  
+ [out] Ein Zeiger auf einen ganzzahligen Wert, der angibt, die Größe in Bytes, der einen Zeiger auf den Zielprozess.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** ClrData.idl, ClrData.h  
   
@@ -51,5 +51,5 @@ HRESULT GetPointerSize (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - performance [WPF]
 - WPF [WPF], performance
 ms.assetid: c649a20f-8b7e-4a38-9b80-74839298d406
-ms.openlocfilehash: f2d4e155287850917a2f7ea11ac0914c3e98876e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c17d6dc697bd21682b9c5654305807596864af1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546083"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733817"
 ---
 # <a name="performance"></a>Leistung
-Vorüberlegungen im Anwendungsentwurf und einen Überblick über bewährte Methoden für eine optimale Leistung erzielen erfordert [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungsentwicklung. Die Themen in diesem Abschnitt enthalten zusätzliche Informationen zum Erstellen leistungsfähiger [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen.  
+Optimierung der Anwendungsleistung erzielen erfordert Vorüberlegungen im Anwendungsentwurf und einen Überblick über bewährte Methoden für die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungsentwicklung. Die Themen in diesem Abschnitt enthalten zusätzliche Informationen zum Erstellen von leistungsstarken [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Renderingebenen für Grafiken](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  
@@ -28,6 +28,6 @@ Vorüberlegungen im Anwendungsentwurf und einen Überblick über bewährte Metho
   
  <xref:System.Diagnostics.PresentationTraceSources>  
   
-## <a name="see-also"></a>Siehe auch  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
- [Tipps und Tricks zu Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+## <a name="see-also"></a>Siehe auch
+- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+- [Tipps und Tricks zu Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

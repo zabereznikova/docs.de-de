@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 830a65a4490b1d084e3bb301e89293ccb9424b32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe1d783017369a78074e5abf278ac2facf6ee32b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734064"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog-MDA
 Der `pInvokeLog`-MDA (Assistent für verwaltetes Debuggen) wird für jede eindeutige Plattformaufrufsignatur aktiviert, die während der Ausführung verwendet wird.  
@@ -24,7 +24,7 @@ Der `pInvokeLog`-MDA (Assistent für verwaltetes Debuggen) wird für jede eindeu
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Die Meldung, die die Plattformaufrufsignatur während der Ausführung angibt.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -43,6 +43,6 @@ Der `pInvokeLog`-MDA (Assistent für verwaltetes Debuggen) wird für jede eindeu
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Verwenden nicht verwalteter DLL-Funktionen](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Verwenden nicht verwalteter DLL-Funktionen](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)

@@ -3,12 +3,12 @@ title: Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio
 description: Die Syntaxschnellansicht bietet ein visuelles Tool, um die Modelle zu untersuchen, die das .NET Compiler Platform SDK für Code generiert.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143562"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307200"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Untersuchen von Code mit der Roslyn-Syntaxschnellansicht in Visual Studio Code
 
@@ -80,11 +80,11 @@ So sieht das Docking-Layout für die Verwendung mit dem Schnellansichts-Toolfens
 
 Bei einem Setup mit zwei Monitoren kann das Syntaxdiagramm auch auf einen zweiten Monitor gelegt werden.
 
-# <a name="inspecting-semantics"></a>Überprüfen der Semantik
+## <a name="inspecting-semantics"></a>Überprüfen der Semantik
 
 Die Syntaxschnellansicht ermöglicht die rudimentäre Überprüfung von Symbolen und semantischen Informationen. Geben Sie `double x = 1 + 1;` innerhalb von Main() im C#-Beispiel ein. Wählen Sie dann den Ausdruck `1 + 1` im Code-Editor-Fenster. Die Schnellansicht hebt den **AddExpression**-Knoten in der Schnellansicht hervor. Klicken Sie mit der rechten Maustaste auf **AddExpression**, und klicken Sie dann auf **View Symbol (if any)** (Symbol anzeigen (sofern vorhanden)). Beachten Sie, dass die meisten Menüelemente über den Qualifizierer „if any“ (sofern vorhanden) verfügen. Die Syntaxschnellansicht untersucht Eigenschaften eines Knotens, einschließlich Eigenschaften, die möglicherweise nicht bei allen Knoten vorhanden sind. 
 
-Das Eigenschaftenraster in der Schnellansicht wird wie in der folgenden Abbildung aktualisiert: Das Symbol für den Ausdruck ist ein **SynthesizedIntrinsicOperatorSymbol** mit **Art = Methode**.
+Das Eigenschaftenraster in der Schnellansicht wird wie in der folgenden Abbildung gezeigt aktualisiert: Das Symbol für den Ausdruck ist ein **SynthesizedIntrinsicOperatorSymbol** mit **Kind = Method**.
 
 ![Symboleigenschaften](media/syntax-visualizer/symbol-properties.png)
 

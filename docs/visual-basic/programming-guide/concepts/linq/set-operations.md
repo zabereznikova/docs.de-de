@@ -2,12 +2,12 @@
 title: Set-Vorgänge (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 2620fa02c8f1f07edbf149c3202af8ab1decc072
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1b515c7eee11f7aadc1d34223dbb4ea1367842d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652525"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741875"
 ---
 # <a name="set-operations-visual-basic"></a>Set-Vorgänge (Visual Basic)
 Mengenvorgänge in LINQ sind Abfrageoperationen, die ein Satz von Ergebnissen erzeugen, der auf der Existenz oder Abwesenheit äquivalenter Elemente in derselben oder in einer getrennten Auflistung (oder einem Satz) basiert.  
@@ -46,13 +46,13 @@ Mengenvorgänge in LINQ sind Abfrageoperationen, die ein Satz von Ergebnissen er
  ![Grafische Darstellung der Verbindung von zwei Sequenzen.](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
   
 ## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax  
- Im folgenden Beispiel wird die `Distinct` -Klausel in einer LINQ-Abfrage, um die eindeutigen Zahlen aus einer Liste von ganzen Zahlen zurückzugeben.  
+ Im folgenden Beispiel wird die `Distinct` -Klausel in einer LINQ-Abfrage, um die eindeutigen Nummern aus einer Liste von ganzen Zahlen zurückzugeben.  
   
  [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq>  
- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Distinct-Klausel](../../../../visual-basic/language-reference/queries/distinct-clause.md)  
- [Vorgehensweise: kombinieren und Vergleichen von Zeichenfolgenauflistungen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)  
- [Vorgehensweise: Suchen der festgelegten Differenz zwischen zwei Listen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Linq>
+- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Distinct-Klausel](../../../../visual-basic/language-reference/queries/distinct-clause.md)
+- [Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Vorgehensweise: Suchen der Unterschiedsmenge zwischen zwei Listen (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)

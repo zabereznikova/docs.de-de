@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: acd8e14e1d000f55f03017a4fee43347f50df3a7
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232845"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415922"
 ---
 # <a name="tour-of-net"></a>Einführung in .NET
 
@@ -27,7 +27,7 @@ Informationen zum Einrichten einer Entwicklungsumgebung zum Ausführen der Codeb
 
 .NET unterstützt mehrere Programmiersprachen. Die .NET-Implementierungen implementieren die [Common Language Infrastructure (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), die unter anderem eine sprachunabhängige Runtime und Spracheninteroperabilität angibt. Dies bedeutet, dass Sie zum Erstellen von Apps und Diensten in .NET eine beliebige .NET-Sprache auswählen können.
 
-Microsoft entwickelt aktiv drei .NET-Sprachen und unterstützt diese: C#, F# und Visual Basic (VB). 
+Microsoft entwickelt und unterstützt aktiv drei .NET-Sprachen: C#, F# und Visual Basic (VB). 
 
 * C# ist einfach, leistungsstark, typsicher und objektorientiert, behält aber gleichzeitig die Ausdruckskraft und Eleganz der C-Sprachen bei. Wer sich mit C und ähnlichen Sprachen auskennt, hat wenig Probleme bei der Verwendung von C#. Weitere Informationen zu C# finden Sie im [Leitfaden für C#](../csharp/index.md).
 
@@ -64,7 +64,7 @@ Sobald der `using`-Block abgeschlossen ist, ruft die .NET-Runtime automatisch di
 Weitere Einzelheiten dazu finden Sie in folgenden Themen:
 
 * Informationen zu C# finden Sie im Thema [using-Anweisung (C#-Referenz)](../csharp/language-reference/keywords/using-statement.md).
-* Informationen zu F# finden Sie unter [Ressourcenverwaltung: das use-Schlüsselwort](../fsharp/language-reference/resource-management-the-use-keyword.md).
+* Informationen zu F# finden Sie unter [Ressourcenverwaltung: Das Use-Schlüsselwort](../fsharp/language-reference/resource-management-the-use-keyword.md).
 * Informationen zu VB finden Sie im Thema [Using-Anweisung (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md).
 
 ## <a name="type-safety"></a>Typsicherheit
@@ -125,7 +125,7 @@ Die wichtigste Methode, um native Interoperabilität zu erreichen, erfolgt über
 
 Der Großteil der Interoperabilitätsunterstützung von Mono (und damit auch von Xamarin) für Java und Objective-C ist gleich aufgebaut, verwendet also die gleichen Prinzipien.
 
-Weitere Informationen dazu finden Sie im Thema [Native Interoperabilität](native-interop.md).
+Weitere Informationen zu nativer Interoperabilität finden Sie im Artikel [Native Interoperabilität](native-interop/index.md).
 
 ## <a name="unsafe-code"></a>Unsicherer Code
 

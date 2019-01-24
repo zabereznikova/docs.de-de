@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: d4f4de1fa12418bd56f9680e5414bfe7dd0aa128
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850217"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740839"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Zugreifen auf Datendienstressourcen (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] zum Verfügbarmachen von Daten als Feed mit Ressourcen, die mit URIs adressierbar sind. Diese Ressourcen werden entsprechend der entitätsbeziehungskonventionen des dargestellt die [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md). In diesem Modell stellen Entitäten Funktionsbausteine von Daten, die Datentypen sind, in einer Anwendungsdomäne dar, z. B. Kunden, Bestellungen, Artikel und Produkte. Das Zugreifen auf und Ändern von Entitätsdaten erfolgt mit der REST ( Representational State Transfer)-Semantik, speziell mit den Standard-HTTP-Verben GET, PUT, POST und DELETE.  
@@ -80,8 +80,8 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 |`$top`|Gibt die Anzahl der Entitäten an, die in den zurückgegebenen Feed eingeschlossen werden soll. Im folgenden Beispiel werden die ersten zehn Kunden übersprungen und die folgenden zehn zurückgegeben:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`<br /><br /> Weitere Informationen finden Sie unter [OData: Top System Query Option ($top)](https://go.microsoft.com/fwlink/?LinkId=186969).|  
 |`$skip`|Gibt die Anzahl der Entitäten an, die vor dem Beginn der Rückgabe der Entitäten im Feed übersprungen werden sollen. Im folgenden Beispiel werden die ersten zehn Kunden übersprungen und die folgenden zehn zurückgegeben:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$skip=10&$top=10`<br /><br /> Weitere Informationen finden Sie unter [OData: Skip System Query Option ($skip)](https://go.microsoft.com/fwlink/?LinkId=186971).|  
 |`$filter`|Definiert einen Ausdruck, der die im Feed zurückgegebenen Entitäten anhand bestimmter Kriterien filtert. Diese Abfrageoption unterstützt einen Satz logischer Vergleichsoperatoren, arithmetische Operatoren und vordefinierte Abfragefunktionen, die zur Auswertung des Filterausdrucks verwendet werden. Im folgenden Beispiel werden alle Bestellungen zurückgegeben, deren Postleitzahlen nicht mit "100" enden:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(ShipPostalCode,'100')`<br /><br /> Weitere Informationen finden Sie unter [OData: Filter System Query Option ($filter)](https://go.microsoft.com/fwlink/?LinkId=186972).|  
-|`$expand`|Gibt an, welche verknüpften Entitäten von der Abfrage zurückgegeben werden. Verknüpfte Entitäten sind entweder als Feed oder als Eintrag in der von der Abfrage zurückgegebenen Entität inline enthalten. Im folgenden Beispiel werden die Bestellungen des Kunden "ALFKI" zusammen mit den Artikeldetails der einzelnen Bestellungen zurückgegeben:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$expand=Order_Details`<br /><br /> Weitere Informationen finden Sie unter [OData: Expand System Query-Option (expand, $)](https://go.microsoft.com/fwlink/?LinkId=186973).|  
-|`$select`|Gibt eine Projektion an, die die Eigenschaften der Entität definiert, die in der Projektion zurückgegeben werden. In der Standardeinstellung werden alle Eigenschaften einer Entität in einem Feed zurückgegeben. Die folgende Abfrage gibt nur drei Eigenschaften der `Customer`-Entität zurück:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$select=CustomerID,CompanyName,City`<br /><br /> Weitere Informationen finden Sie unter [OData: Select System Query Option ($select)](https://go.microsoft.com/fwlink/?LinkID=186076).|  
+|`$expand`|Gibt an, welche verknüpften Entitäten von der Abfrage zurückgegeben werden. Verknüpfte Entitäten sind entweder als Feed oder als Eintrag in der von der Abfrage zurückgegebenen Entität inline enthalten. Im folgenden Beispiel werden die Bestellungen des Kunden "ALFKI" zusammen mit den Artikeldetails der einzelnen Bestellungen zurückgegeben:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$expand=Order_Details`<br /><br /> Weitere Informationen finden Sie unter [OData: Erweitern Sie System Query Option (expand, $)](https://go.microsoft.com/fwlink/?LinkId=186973).|  
+|`$select`|Gibt eine Projektion an, die die Eigenschaften der Entität definiert, die in der Projektion zurückgegeben werden. In der Standardeinstellung werden alle Eigenschaften einer Entität in einem Feed zurückgegeben. Die folgende Abfrage gibt nur drei Eigenschaften der `Customer`-Entität zurück:<br /><br /> `http://services.odata.org/Northwind/Northwind.svc/Customers?$select=CustomerID,CompanyName,City`<br /><br /> Weitere Informationen finden Sie unter [OData: Wählen Sie die System Query Option ($select)](https://go.microsoft.com/fwlink/?LinkID=186076).|  
 |`$inlinecount`|Fordert an, dass die Anzahl der im Feed zurückgegebenen Entitäten im Feed enthalten sein muss. Weitere Informationen finden Sie unter [OData: Inlinecount-Systemabfrageoption ($inlinecount)](https://go.microsoft.com/fwlink/?LinkId=186975).|  
   
 ## <a name="addressing-relationships"></a>Behandeln von Beziehungen  
@@ -91,10 +91,10 @@ http://services.odata.org/Northwind/Northwind.svc/Orders?$filter=not endswith(Sh
 http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper  
 ```  
   
- Weitere Informationen finden Sie unter [OData: Addressing Links between Entries](https://go.microsoft.com/fwlink/?LinkId=187351).  
+ Weitere Informationen finden Sie unter [OData: Adressieren von Links zwischen Einträgen](https://go.microsoft.com/fwlink/?LinkId=187351).  
   
 ## <a name="consuming-the-returned-feed"></a>Verwenden des zurückgegebenen Feeds  
  Der URI des ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Ressource ermöglicht es Ihnen, Entitätsdaten zu adressieren von dem Dienst verfügbar gemacht werden. Wenn Sie einen URI in das Adressfeld eines Webbrowsers eingeben einer [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeddarstellung der angeforderten Ressource zurückgegeben wird. Weitere Informationen finden Sie unter den [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Obwohl ein Webbrowser zum Testen der, dass eine datendienstressource die erwarteten Daten zurückgibt, Daten-Produktionsdienste, die können auch erstellen, aktualisieren und Löschen von Daten erfolgt in der Regel vom Anwendungscode oder Skriptsprachen auf einer Webseite hilfreich sein kann. Weitere Informationen finden Sie unter [Verwenden eines Datendiensts in einer Clientanwendung](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Open Data Protocol-Website](https://go.microsoft.com/fwlink/?LinkID=182204)
+## <a name="see-also"></a>Siehe auch
+- [Open Data Protocol-Website](https://go.microsoft.com/fwlink/?LinkID=182204)

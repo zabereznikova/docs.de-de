@@ -11,17 +11,17 @@ api_type:
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e662270fc8db3fb85e058e8d4f3346f58f79bb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64289ee7fbdc440a87df6c8e506317f23e780912
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722854"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>Icorprofilerinfo7:: Getinmemorysymbolslength-Methode
 [Wird nur in .NET Framework 4.6.1 und höheren Versionen unterstützt]  
   
- Gibt die Länge eines Datenstroms in-Memory-Symbols zurück.  
+ Gibt die Länge einer in-Memory symbolstream zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,24 +34,24 @@ HRESULT GetInMemorySymbolsLength(
   
 #### <a name="parameters"></a>Parameter  
  `moduleId`  
- [in] Der Bezeichner des Moduls, das in-Memory-Datenstrom enthält.  
+ [in] Der Bezeichner des Moduls mit den in-Memory-Datenstrom.  
   
  pCountSymbolBytes  
- [out] Ein Zeiger auf eine `DWORD` Wert, der, wenn der Rückgabewert dieser Methode die Länge des Streams in Bytes enthält.  
+ [out] Ein Zeiger auf eine `DWORD` Wert, der beim Beenden der Methode, die Länge des Streams in Bytes enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt die Methode `S_OK` , wenn die Länge des Streams Arbeitsspeicher bestimmt werden kann, auch wenn es auf 0 (null) ist.  
+ Gibt die Methode zurück `S_OK` Wenn die Länge des Streams, der Arbeitsspeicher bestimmt werden kann, auch wenn es sich um 0 (null) ist.  
   
- Gibt die Methode `CORPROF_E_MODULE_IS_DYNAMIC` , wenn die Methode erstellt wurde mit <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
+ Gibt die Methode zurück `CORPROF_E_MODULE_IS_DYNAMIC` wurde mit die Methode erstellt <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn in-Memory-Symbole für das Modul ist, wird die Länge des Streams platziert `pCountSymbolBytes`. Wenn das Modul in-Memory-Symbole, keine `*pCountSymbolBytes = 0`.  
+ Wenn das Modul in-Memory-Symbole wurden, befindet sich die Länge des Streams `pCountSymbolBytes`. Wenn das Modul in-Memory-Symbole, haben keine `*pCountSymbolBytes = 0`.  
   
 > [!NOTE]
->  Die aktuelle Implementierung unterstützt keine "Reflection.Emit". Wenn das Modul mithilfe von "Reflection.Emit" erstellt wurde, gibt die Methode `CORPROF_E_MODULE_IS_DYNAMIC`.  
+>  Die aktuelle Implementierung unterstützt keine Reflection.Emit. Wenn das Modul mithilfe von "Reflection.Emit" erstellt wurde, gibt die Methode `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -59,5 +59,5 @@ HRESULT GetInMemorySymbolsLength(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo7-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo7-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

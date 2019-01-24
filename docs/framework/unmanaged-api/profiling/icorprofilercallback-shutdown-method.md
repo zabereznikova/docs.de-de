@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83e32b2b69d53772f8a4ebaabe1c025b95d1da47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb2bfe927eddaf6812b0185a586135e76f649c1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33453726"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728121"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown-Methode
-Benachrichtigt den Profiler, dass die Anwendung heruntergefahren wird.  
+Benachrichtigt den Profiler an, dass die Anwendung heruntergefahren wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,14 +34,14 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Der Profilercode kann nicht sicher Aufrufen von Methoden der [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) Schnittstelle nach der `Shutdown` -Methode aufgerufen wird. Alle Aufrufe von `ICorProfilerInfo` Methoden zu nicht definiertem Verhalten nach der `Shutdown` -Methode zurückkehrt. Bestimmte unveränderliche Ereignisse können nach dem Herunterfahren weiterhin auftreten. der Profiler sollte zurückgeben, sofort, wenn in diesem Fall kümmern.  
+ Der Profilercode kann nicht sicher Methoden zum Aufrufen der [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) Schnittstelle nach der `Shutdown` Methode wird aufgerufen. Alle Aufrufe von `ICorProfilerInfo` Methoden zu nicht definiertem Verhalten nach der `Shutdown` Methodenrückgabe. Bestimmte unveränderliche Ereignisse können weiterhin nach dem Herunterfahren auftreten. der Profiler sollte sorgfältig und zurückgeben, sofort, wenn dies der Fall.  
   
- Die `Shutdown` Methode wird nur aufgerufen, wenn die verwaltete Anwendung, die ein Profil erstellt wird als verwalteter Code gestartet (d. h. der erste Frame auf dem Stapel Prozess verwaltet wird). Wenn die Anwendung als nicht verwalteter Code gestartet, jedoch später erfolgte ein in verwaltetem Code Sprung, wodurch eine Instanz von der common Language Runtime (CLR), klicken Sie dann `Shutdown` wird nicht aufgerufen werden. In diesen Fällen sollte der Profiler in der Bibliothek enthalten eine `DllMain` Routine, die die DLL_PROCESS_DETACH verwendet der Wert, der alle Ressourcen frei und führt eine Bereinigung Verarbeitung seiner Daten wie z. B. das leeren von ablaufverfolgungen und so weiter auf den Datenträger.  
+ Die `Shutdown` Methode wird nur aufgerufen, wenn die verwaltete Anwendung, die ein Profil erstellt wird als verwalteter Code gestartet wurde (d. h. der erste Frame im Stapel Prozess verwaltet wird). Wenn die Anwendung gestartet wird, als nicht verwalteter Code, aber später erfolgte ein in verwaltetem Code Sprung, wodurch eine Instanz von die common Language Runtime (CLR), klicken Sie dann `Shutdown` wird nicht aufgerufen werden. In diesen Fällen sollte der Profiler in der Bibliothek enthalten eine `DllMain` Routine, die das DLL_PROZESS_DETACH verwendet Wert, um alle Ressourcen freizugeben und verarbeiten Sie die Bereinigung seiner Daten, z.B. das Leeren der ablaufverfolgungen auf dem Datenträger und so weiter.  
   
- Im Allgemeinen muss der Profiler mit unerwartetem Herunterfahren bewältigen. Beispielsweise kann ein Prozess von einer Win32 angehalten `TerminateProcess` (deklariert in Winbase.h) Methode. In anderen Fällen wird die CLR bestimmte verwaltete Threads (Hintergrundthreads) angehalten, ohne ordnungsgemäßes Zerstörung Nachrichten für diese Bereitstellung verwendet wird.  
+ Im Allgemeinen muss der Profiler mit unerwartetem Herunterfahren umgehen können. Beispielsweise kann ein Prozess angehalten werden, von einer Win32 `TerminateProcess` Methode (deklariert in Winbase.h). In anderen Fällen wird die CLR bestimmte verwaltete Threads (Hintergrundthreads) angehalten, ohne die ordnungsgemäße Zerstörung Nachrichten für diese Bereitstellung verwendet wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -49,6 +49,6 @@ HRESULT Shutdown();
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [Initialize-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [Initialize-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)

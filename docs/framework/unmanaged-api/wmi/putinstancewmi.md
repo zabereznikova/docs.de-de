@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67abf017040b9e6bbe9b10e560c8d57c124ae84e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719975"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi-Funktion
 Erstellt oder aktualisiert eine Instanz einer vorhandenen Klasse. Die Instanz wird in das WMI-Repository geschrieben. 
@@ -49,7 +49,7 @@ HRESULT PutInstanceWmi (
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0 x 20000 | Wenn festgelegt, WMI keine keine Qualifizierer mit speichert die **Amended** Flavor. </br> Wenn dies nicht festgelegt ist, wird davon ausgegangen, dass dieses Objekt nicht lokalisiert ist und alle Qualifizierer Storedwith dieser Instanz. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Wenn festgelegt, WMI keine keine Qualifizierer mit speichert die **Amended** Flavor. </br> Wenn dies nicht festgelegt ist, wird davon ausgegangen, dass dieses Objekt nicht lokalisiert ist und alle Qualifizierer Storedwith dieser Instanz. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Erstellen Sie die Instanz aus, wenn er nicht vorhanden ist, oder überschrieben, falls sie bereits vorhanden ist. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Aktualisieren Sie die Instanz. Die Instanz muss vorhanden sein, der Aufruf erfolgreich ist. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Erstellen Sie die Instanz. Der Aufruf schlägt fehl, wenn die Instanz bereits vorhanden ist. |
@@ -67,12 +67,12 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0 x 80041003 | Der Benutzer nicht über die Berechtigung zum Aktualisieren einer Instanz der angegebenen Klasse. |
-| `WBEM_E_FAILED` | 0 x 80041001 | Ein Unbekannter Fehler aufgetreten. |
-| `WBEM_E_INVALID_CLASS` | 0 x 80041010 | Die Klasse, die Unterstützung von dieser Instanz ist ungültig. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | Der Benutzer nicht über die Berechtigung zum Aktualisieren einer Instanz der angegebenen Klasse. |
+| `WBEM_E_FAILED` | 0x80041001 | Ein Unbekannter Fehler aufgetreten. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | Die Klasse, die Unterstützung von dieser Instanz ist ungültig. |
 | `WBEM_E_ILLEGAL_NULL` | 0x80041028 | eine `null` wurde für eine Eigenschaft, die kann nicht angegeben `null`, z. B. ein, die gekennzeichnet ist, indem ein **indiziert** oder **Not_Null** Qualifizierer. |
 | `WBEM_E_INVALID_OBJECT` | 0x8004100f | Die angegebene Instanz ist ungültig. (Zum Beispiel der Aufruf `PutInstanceWmi` mit einer Klasse gibt diesen Wert zurück.) |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | Die `WBEM_FLAG_CREATE_ONLY` -Flag angegeben wurde, aber die Instanz bereits vorhanden ist. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` in wurde angegeben `lFlags`, aber die Instanz ist nicht vorhanden. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
@@ -96,11 +96,11 @@ Aufrufen von `PutInstanceWmi` auf einer Instanz einer abstrakten Klasse ist nich
 Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformationen abrufen, durch den Aufruf der [GetErrorInfo](geterrorinfo.md) Funktion.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

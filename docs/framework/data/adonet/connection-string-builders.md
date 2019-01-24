@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 1c65b0c2c9ae19aa008ecd8fb453d8e41b7c4167
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ab72fe5a22ca88b33a93d94d4b5e16bbc470a4da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43737502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733219"
 ---
 # <a name="connection-string-builders"></a>Verbindungszeichenfolgen-Generatoren
 In früheren Versionen von [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], Überprüfungen zur Kompilierzeit für Verbindungszeichenfolgen mit verketteten Zeichenfolge, die Werte nicht stattgefunden hat, sodass zur Laufzeit ein falsches Schlüsselwort generiert eine <xref:System.ArgumentException>. Jeder [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter unterstützte eine andere Syntax für Schlüsselwörter in Verbindungszeichenfolgen, was die manuelle Konstruktion gültiger Verbindungszeichenfolgen erschwerte. Zur Beseitigung dieses Problems wurden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 neue Verbindungszeichenfolgen-Generatoren für jeden [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter eingeführt. Alle Datenanbieter stellen eine stark typisierte Verbindungszeichenfolgen-Generatorklasse bereit, die von <xref:System.Data.Common.DbConnectionStringBuilder> erbt. In der folgenden Tabelle werden die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter und ihre jeweiligen Verbindungszeichenfolgen-Generatorklassen aufgelistet.  
@@ -79,7 +79,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-strings.md)  
- [Datenschutz und -sicherheit](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-strings.md)
+- [Datenschutz und -sicherheit](../../../../docs/framework/data/adonet/privacy-and-data-security.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

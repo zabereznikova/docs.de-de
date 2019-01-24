@@ -1,21 +1,21 @@
 ---
-title: Umgestalten mit einer reinen Funktion (Visual Basic)
+title: Refactoring mit reiner Funktion (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: fe1ad3b189891a1655e014dc49dac00c79507a7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3adaede7bce206d6018f1eb624d9ce04f53c04b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645014"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728280"
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a>Umgestalten mit einer reinen Funktion (Visual Basic)
-Im folgenden Beispiel wird umgestaltet, im vorherige Beispiel [Umgestalten mit einer Erweiterungsmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), um eine reine Funktion In diesem Beispiel den Code zu suchen, wird der Text eines Absatzes in die reinen statische Methode verschoben`ParagraphText`.  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a>Refactoring mit reiner Funktion (Visual Basic)
+Das folgende Beispiel gestaltet das vorherige Beispiel, [Refactoring mit einer Erweiterungsmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), um eine reine Funktion In diesem Beispiel ist der Code zum Suchen der Text eines Absatzes in die reine statische Methode verschoben`ParagraphText`.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel verarbeitet ein WordprocessingML-Dokument, indem es die Absatzknoten aus einem WordprocessingML-Dokument abruft. Außerdem ermittelt es für jeden Absatz die verwendete Formatvorlage. Das Beispiel baut auf den vorherigen Beispielen dieses Lernprogramms auf. Der umgestaltete Code wird im Code durch entsprechende Kommentare gekennzeichnet.  
   
- Anweisungen für das Quelldokument in diesem Beispiel erstellen, finden Sie unter [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Anweisungen zum Erstellen des Quelldokuments für dieses Beispiel finden Sie [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
@@ -172,7 +172,7 @@ StyleName:Code >Hello World<
   
 -   [Projektieren von XML in eine andere Form (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Lernprogramm: Bearbeiten von Inhalt in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [Umgestalten mit einer Erweiterungsmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
- [Umgestalten in reine Funktionen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refactoring mit einer Erweiterungsmethode (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
+- [Refactoring in reine Funktionen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

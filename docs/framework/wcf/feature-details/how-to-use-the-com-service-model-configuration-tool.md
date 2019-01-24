@@ -1,17 +1,17 @@
 ---
-title: 'Vorgehensweise: Verwenden des COM+-Dienstmodell-Konfigurationstools'
+title: 'Vorgehensweise: Verwenden Sie das COM+ Service Model Configuration-Tool'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: d26e3b127328a3de4df6bd58fb6015bee045f3c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496239"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736246"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Vorgehensweise: Verwenden des COM+-Dienstmodell-Konfigurationstools
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Vorgehensweise: Verwenden Sie das COM+ Service Model Configuration-Tool
 Nachdem Sie einen geeigneten Hosting-Modus ausgewählt haben, verwenden Sie das COM+-Dienstmodell-Konfigurations-Befehlszeilentool (ComSvcConfig.exe) zur Konfigurierung der Anwendungsschnittstellen, die als Webdienste verfügbar gemacht werden.  
   
 > [!NOTE]
@@ -19,7 +19,7 @@ Nachdem Sie einen geeigneten Hosting-Modus ausgewählt haben, verwenden Sie das 
   
  Wenn Sie ComSvcConfig.exe auf einem Windows 7-Computer verwenden, um einen Webdienst für die Verwendung der neuesten Dienstmodellversion (derzeit 4.5) zu konfigurieren, führen Sie folgende Schritte aus:  
   
-1.  Legen Sie den Registrierungsschlüssel `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` auf einen DWORD-Wert von 0 x 00000001  
+1.  Legen Sie den Registrierungsschlüssel `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` auf einen DWORD-Wert, der 0 x 00000001  
   
 2.  Führen Sie comsvcconfig.exe aus.  
   
@@ -29,7 +29,7 @@ Nachdem Sie einen geeigneten Hosting-Modus ausgewählt haben, verwenden Sie das 
 >  Es ist wichtig, diesen Registrierungsschlüssel wieder zurückzuversetzen, weil er einen Kompatibilitätsschlüssel darstellt. Wird diese Änderung nicht rückgängig gemacht, können Probleme mit anderen .NET-Anwendungen auftreten, die auf dem Computer ausgeführt werden).  
   
 > [!WARNING]
->  Bei Verwendung von ComSvcConfig.exe/install auf einem Windows 8-Computer ein Dialogfeld wird angezeigt, "eine app auf Ihrem PC benötigt die folgenden Windows-Funktion: .NET Framework 3.5 (umfasst .NET 2.0 und .NET 3.0", wenn .NET Framework 3.5 nicht installiert ist. Dieses Dialogfeld kann ignoriert werden. Alternativ können Sie den OnlyUseLatestCLR-Registrierungsschlüssel auf den DWORD-Wert 0x00000001 festlegen.  
+>  Bei Verwendung von ComSvcConfig.exe/install auf einem Windows 8-Computer ein Dialogfeld wird mit dem Hinweis angezeigt "eine app auf Ihrem PC benötigt die folgende Windows-Features: .NET Framework 3.5 (umfasst .NET 2.0 und .NET 3.0" Wenn .NET Framework 3.5 nicht installiert ist. Dieses Dialogfeld kann ignoriert werden. Alternativ können Sie den OnlyUseLatestCLR-Registrierungsschlüssel auf den DWORD-Wert 0x00000001 festlegen.  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Um mithilfe des COM+-Hostingmodus eine Schnittstelle zu der Gruppe von Schnittstellen hinzuzufügen, die als Webdienste verfügbar gemacht werden sollen.  
   
@@ -109,5 +109,5 @@ Nachdem Sie einen geeigneten Hosting-Modus ausgewählt haben, verwenden Sie das 
     ComSvcConfig.exe /?  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Integration von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über die Integration von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

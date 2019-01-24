@@ -2,12 +2,12 @@
 title: Zwischenspeichern von Abfrageplänen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 0e00d7f9382fca2af630a8e1d50a5cde5178da05
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 75c097d66ae23d32465b5a717ae627d35cdc003f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762035"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671134"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Zwischenspeichern von Abfrageplänen (Entity SQL)
 Bei jeder Ausführung einer Abfrage sucht die Abfragepipeline in ihrem Abfrageplancache, ob genau diese Abfrage bereits kompiliert und verfügbar ist. Wenn das der Fall ist, wird der zwischengespeicherte Plan erneut verwendet, statt einen neuen Plan zu erstellen. Wird keine Übereinstimmung im Abfrageplancache gefunden, wird die Abfrage kompiliert und zwischengespeichert. Eine Abfrage wird durch ihren [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Text und ihre Parameterauflistung (Namen und Typen) identifiziert. Bei allen Textvergleichen wird die Groß- und Kleinschreibung berücksichtigt.  
@@ -48,5 +48,5 @@ Bei jeder Ausführung einer Abfrage sucht die Abfragepipeline in ihrem Abfragepl
   
 -   Änderungen an Text in Kommentaren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 41c18160be9b546f8b525376fa06bc0eca6c117a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 943b9612a9217b90c19f34285e812c4e1cccf81a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603690"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691372"
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Wert des Typs &#39; &lt;Typname1&gt; &#39; kann nicht konvertiert werden, um &#39; &lt;Typname2&gt; &#39; (mehrere Dateiverweise)
-Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 > ". Typenkonflikt möglicherweise aufgrund eines Dateiverweises auf "\<dateipfad1 >' in-Projekt"\<projektname1 > "mit einem Dateiverweis auf"\<dateipfad2 >' in-Projekt "\<projektname2 >". Wenn die beiden Assemblys identisch sind, ersetzen Sie die beiden Verweise durch Verweise vom gleichen Speicherort.  
+Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 >'. Typenkonflikt möglicherweise aufgrund eines Dateiverweises auf '\<dateipfad1 >' im Projekt "\<projektname1 >" mit einem Dateiverweis auf "\<dateipfad2 >' im Projekt"\<projektname2 > ". Wenn die beiden Assemblys identisch sind, ersetzen Sie die beiden Verweise durch Verweise vom gleichen Speicherort.  
   
- In einer Situation, in denen ein Projekt mehr als einen Dateiverweis auf eine Assembly erstellt, wird, kann der Compiler nicht garantieren, einem Typ in einen anderen konvertiert werden kann.  
+ In einer Situation, in denen ein Projekt mehr als eine Datei auf eine Assembly verweist, garantiert der Compiler nicht, dass es sich bei einem Typ in einen anderen konvertiert werden kann.  
   
- Jeder Dateiverweis gibt einen Dateipfad und einen Namen für die Ausgabedatei eines Projekts (in der Regel eine DLL-Datei). Der Compiler kann nicht garantieren, dass die Ausgabedateien aus der gleichen Quelle stammen oder dass sie die gleiche Version derselben Assembly darstellen. Es kann keine somit sicherstellen, dass die Typen in den verschiedenen verweisen identisch sind, oder auch, dass eine in den anderen konvertiert werden kann.  
+ Jeder Dateiverweis gibt einen Pfad und Name der Ausgabedatei eines Projekts (i. d. r. eine DLL-Datei). Der Compiler garantieren nicht, dass die Ausgabedateien aus derselben Quelle stammen, oder, dass sie dieselbe Version derselben Assembly darstellen. Es kann nicht aus diesem Grund garantieren, dass die Typen in die verschiedenen Verweise desselben Typs, oder dass ein in den anderen konvertiert werden kann.  
   
- Wenn Sie wissen, dass die betreffenden Assemblys der gleichen Identität der Assembly, können Sie einen einzelnen Dateiverweis verwenden. Die *Identität der Assembly* enthält den Namen, die Version, ggf. den öffentlichen Schlüssel sowie die Kultur der Assembly. Diese Information kennzeichnet die Assembly eindeutig.  
+ Sie können einen Einzeldatei-Verweis verwenden, wenn Sie wissen, dass die referenzierten Assemblys über dieselbe Assemblyidentität verfügen. Die *Identität der Assembly* enthält den Namen, die Version, ggf. den öffentlichen Schlüssel sowie die Kultur der Assembly. Diese Information kennzeichnet die Assembly eindeutig.  
   
  **Fehler-ID:** BC30961  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Wenn die betreffenden Assemblys der gleichen Identität der Assembly verfügen, entfernen Sie oder Ersetzen Sie eines der Dateiverweise, sodass nur ein einzelne Dateiverweis vorhanden ist.  
+-   Wenn die referenzierten Assemblys über dieselbe Assemblyidentität verfügen, entfernen Sie oder Ersetzen Sie einen der Dateiverweise, sodass nur ein einzelne Dateiverweis vorhanden ist.  
   
--   Wenn die referenzierten Assemblys nicht die Identität der gleichen Assembly verfügen, ändern Sie den Code, damit er nicht versucht, einen Typ in einem auf einen Typ in den anderen zu konvertieren.  
+-   Wenn die referenzierten Assemblys nicht über dieselbe Assemblyidentität verfügen, ändern Sie den Code, damit es nicht versucht, einen Typ in einem auf einen Typ in der anderen zu konvertieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konvertierungen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project)  
- 
+## <a name="see-also"></a>Siehe auch
+- [Typkonvertierung in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project)
+

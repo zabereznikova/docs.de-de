@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1126842a30f19831cc845bcfccc0e08f4bf5f6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 306eee3c0ce4689d1d6295aba1ef7584841dcc72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731048"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext-Methode
 Gibt den Kontext für den aktuellen Frame in der [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) Objekt.  
@@ -38,13 +38,13 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 #### <a name="parameters"></a>Parameter  
  `contextFlags`  
- [in] Flags, die den angeforderten Inhalt, der den Kontextpuffer (in "Winnt.h" definiert) angeben.  
+ [in] Flags, die den angeforderten Inhalt des Kontextpuffers (definiert in "Winnt.h") angeben.  
   
  `contextBufSize`  
- [in] Die zugeordnete Größe des Kontextpuffers.  
+ [in] Die Größe der reservierten des Kontextpuffers.  
   
  `contextSize`  
- [out] Die tatsächliche Größe des Kontexts. Dieser Wert muss kleiner als oder gleich der Größe des Kontextpuffers sein.  
+ [out] Die tatsächliche Größe des Kontexts. Dieser Wert muss kleiner als oder gleich der Größe des Kontextpuffers.  
   
  `contextBuf`  
  [out] Der Kontextpuffer.  
@@ -62,10 +62,10 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- Da nur eine Teilmenge der Register, z. B. nicht flüchtigen Register, was die Entladung wiederhergestellt werden. möglicherweise der Kontext nicht genau dem registrierungszustand zum Zeitpunkt des Aufrufs überein.  
+ Da nur eine Teilmenge der Register, z. B. nicht flüchtigen Register, entladen wiederhergestellt werden. entspricht der Kontext möglicherweise nicht exakt dem registrierungszustand zum Zeitpunkt des Aufrufs.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -73,6 +73,6 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

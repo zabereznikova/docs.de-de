@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030528"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662581"
 ---
 # <a name="data-contract-schema-reference"></a>Datenvertrags-Schemareferenz
 In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime (CLR)-Typen für die XML-Serialisierung verwendete Teilmenge des XML-Schemas (XSD) beschrieben.  
@@ -50,7 +50,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`targetNamespace`|Unterstützt und wird dem Datenvertragsnamespace zugeordnet. Wenn dieses Attribut nicht angegeben ist, wird ein leerer Namespace verwendet. Nicht möglich, der reservierte Namespace `http://schemas.microsoft.com/2003/10/Serialization/`.|  
 |`version`|Ignoriert.|  
   
-### <a name="xsschema-contents"></a>\<xs: Schema >: Inhalt  
+### <a name="xsschema-contents"></a>\<xs:schema>: contents  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -70,7 +70,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 ### <a name="general-information"></a>Allgemeine Informationen  
  Jeder komplexe Typ \<xs: complexType > wird einem Datenvertrag zugeordnet.  
   
-### <a name="xscomplextype-attributes"></a>\<xs: complexType >: Attribute  
+### <a name="xscomplextype-attributes"></a>\<xs:complexType>: attributes  
   
 |Attribut|Schema|  
 |---------------|------------|  
@@ -81,7 +81,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`mixed`|Muss den Wert false aufweisen (Standardwert)|  
 |`name`|Unterstützt. Wird dem Namen des Datenvertrags zugeordnet. Wenn der Name Punkte enthält, wird versucht, den Typ einem inneren Typ zuzuordnen. Beispielsweise wird ein komplexer Typ namens `A.B` einem Datenvertragstyp zugeordnet, der ein innerer Typ mit dem Datenvertragsnamen `A`ist. Dies geschieht jedoch nur dann, wenn ein solcher Datenvertragstyp vorhanden ist. Es ist mehr als eine Verschachtelungsebene möglich: `A.B.C` z.&#160;B. kann ein innerer Typ sein, jedoch nur dann, wenn sowohl `A` als auch `A.B` vorhanden sind.|  
   
-### <a name="xscomplextype-contents"></a>\<xs: complexType >: Inhalt  
+### <a name="xscomplextype-contents"></a>\<xs:complexType>: contents  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -189,7 +189,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`substitutionGroup`|Unzulässig in zugeordneten GEDs.|  
 |`type`|Unterstützt. Muss dem zugeordneten Typ für zugeordnete GEDs entsprechen (außer wenn das Element einen anonymen Typ enthält).|  
   
-### <a name="xselement-contents"></a>\<xs: Element >: Inhalt  
+### <a name="xselement-contents"></a>\<xs:element>: contents  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -208,7 +208,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 -   Ist ein Datenvertrag mit diesem Namen bereits vorhanden, wird dem Namen&#160;"1", "2", "3" usw. angehängt, um ihn eindeutig zu machen.  
   
-## <a name="simple-types---xssimpletype"></a>Einfache Typen: \<simpleType >  
+## <a name="simple-types---xssimpletype"></a>Simple Types - \<xs:simpleType>  
   
 ### <a name="xssimpletype-attributes"></a>\<xs:simpleType>: attributes  
   
@@ -218,7 +218,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
 |`id`|Ignoriert.|  
 |`name`|Unterstützt, wird dem Namen des Datenvertrags zugeordnet.|  
   
-### <a name="xssimpletype-contents"></a>\<simpleType >: Inhalt  
+### <a name="xssimpletype-contents"></a>\<xs:simpleType>: contents  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -234,7 +234,7 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 -   Alle anderen einfachen Typeinschränkungen werden den Typen zugeordnet, die sie einschränken. Beispielsweise wird eine Einschränkung von `xs:int` einem Integer zugeordnet, wie es auch bei `xs:int` selbst der Fall ist. Weitere Informationen zum Zuordnen von primitiven Typ finden Sie in der Zuordnung von Typen zu primitivem.  
   
-### <a name="xsrestriction-attributes"></a>\<xs: restriction >: Attribute  
+### <a name="xsrestriction-attributes"></a>\<xs:restriction>: attributes  
   
 |Attribut|Schema|  
 |---------------|------------|  
@@ -331,14 +331,14 @@ public enum MyEnum
 ### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` ordnet mit `System.FlagsAttribute` markierte Enumerationstypen einer von `xs:list` abgeleiteten `xs:string`zu. Andere `xs:list` -Variationen werden nicht unterstützt.  
   
-### <a name="xslist-attributes"></a>\<xs: List >: Attribute  
+### <a name="xslist-attributes"></a>\<xs:list>: attributes  
   
 |Attribut|Schema|  
 |---------------|------------|  
 |`itemType`|Unzulässig.|  
 |`id`|Ignoriert.|  
   
-### <a name="xslist-contents"></a>\<xs: List >: Inhalt  
+### <a name="xslist-contents"></a>\<xs:list>: contents  
   
 |Inhalt|Schema|  
 |--------------|------------|  
@@ -674,16 +674,16 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
       <xs:sequence minOccurs="1" maxOccurs="1">  
          <xs:element name="DateTime" type="xs:dateTime"  
          minOccurs="1" maxOccurs="1" />  
-         <xs:elementname="OffsetMinutes" type="xs:short"  
+         <xs:element name="OffsetMinutes" type="xs:short"  
          minOccurs="1" maxOccurs="1" />  
       </xs:sequence>  
    </xs:complexType>  
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

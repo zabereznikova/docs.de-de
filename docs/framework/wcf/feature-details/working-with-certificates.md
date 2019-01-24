@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693609"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden häufig digitale X.509-Zertifikate zum Authentifizieren von Clients und Servern sowie zum Verschlüsseln und digitalen Signieren von Nachrichten verwendet. Dieser Artikel bietet einen Überblick über die Funktionen digitaler X.509-Zertifikate und ihre Verwendung in WCF und enthält Links zu Themen, in denen diese Konzepte näher beschrieben oder die Ausführung allgemeiner Aufgaben mit WCF und Zertifikaten erläutert werden.  
@@ -24,7 +24,7 @@ Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden h
  Zertifikate müssen von einer Zertifizierungsstelle ausgestellt werden, bei der es sich oft um einen Drittanbieter-Zertifikataussteller handelt. Windows-Domänen verfügen über eine Zertifizierungsstelle, von der Zertifikate für Computer in der Domäne ausgestellt werden können.  
   
 ## <a name="viewing-certificates"></a>Anzeigen von Zertifikaten  
- Bei der Verwendung von Zertifikaten ist es oft erforderlich, die Zertifikate anzuzeigen und ihre Eigenschaften zu überprüfen. Die einfachste Methode dazu ist das MMC (Microsoft Management Console)-Snap-In-Tool. Weitere Informationen finden Sie unter [How to: View Certificates with the MMC Snap-in (Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-In)](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Bei der Verwendung von Zertifikaten ist es oft erforderlich, die Zertifikate anzuzeigen und ihre Eigenschaften zu überprüfen. Die einfachste Methode dazu ist das MMC (Microsoft Management Console)-Snap-In-Tool. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Zertifikatspeicher  
  Zertifikate werden in Speichern abgelegt. Die zwei Hauptspeicherorte sind in weitere Unterspeicher unterteilt. Administratoren können beide Hauptspeicher mit dem MMC-Snap-In-Tool anzeigen. Alle anderen Benutzer können lediglich den Speicher des aktuellen Benutzers anzeigen.  
@@ -52,12 +52,12 @@ Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden h
 -   Wenn es sich beim Dienst oder Client um eine Anwendung handelt, die unter einem Benutzerkonto ausgeführt wird, wird der Speicher des **aktuellen Benutzers** verwendet.  
   
 ### <a name="accessing-stores"></a>Zugreifen auf Speicher  
- Speicher werden analog zu Ordnern auf einem Computer durch Zugriffssteuerungslisten (ACLs) geschützt. Beim Erstellen eines Diensts, der von Internet Information Services (IIS) gehostet wird, wird der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Prozess unter dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Konto ausgeführt. Dieses Konto muss über Zugriff auf den Speicher mit den Zertifikaten verfügen, die von einem Dienst verwendet werden. Die zentralen Speicher werden durch eine Standardzugriffssteuerungsliste geschützt, eine Änderung der Listen ist jedoch möglich. Wenn Sie eine separate Rolle für den Speicherzugriff erstellen, muss diese über die entsprechende Zugriffsberechtigung verfügen. Unter [How to: Create Temporary Certificates for Use During Development (Vorgehensweise: Erstellen temporärer Zertifikate zur Verwendung während der Entwicklung)](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md) erfahren Sie, wie Sie die Zugriffsliste mit dem Tool „WinHttpCertConfig.exe“ bearbeiten. Weitere Informationen zur Verwendung von Clientzertifikaten mit IIS finden Sie unter [Aufrufen eines Webdiensts mit einem Clientzertifikat zur Authentifizierung in einer ASP.NET-Webanwendung](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Speicher werden analog zu Ordnern auf einem Computer durch Zugriffssteuerungslisten (ACLs) geschützt. Beim Erstellen eines Diensts, der von Internet Information Services (IIS) gehostet wird, wird der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Prozess unter dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Konto ausgeführt. Dieses Konto muss über Zugriff auf den Speicher mit den Zertifikaten verfügen, die von einem Dienst verwendet werden. Die zentralen Speicher werden durch eine Standardzugriffssteuerungsliste geschützt, eine Änderung der Listen ist jedoch möglich. Wenn Sie eine separate Rolle für den Speicherzugriff erstellen, muss diese über die entsprechende Zugriffsberechtigung verfügen. Vorgehensweise: Ändern der Zugriffssteuerungsliste mit dem Tool WinHttpCertConfig.exe finden Sie unter [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Weitere Informationen zur Verwendung von Clientzertifikaten mit IIS finden Sie unter [Aufrufen eines Webdiensts mit einem Clientzertifikat zur Authentifizierung in einer ASP.NET-Webanwendung](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Vertrauensketten und Zertifizierungsstellen  
  Zertifikate werden in einer Hierarchie erstellt, in der jedes einzelne Zertifikat mit der Zertifizierungsstelle verknüpft ist, von der es ausgestellt wurde. Dieser Link verweist auf das Zertifikat der Zertifizierungsstelle. Der Zertifizierungsstelle das Zertifikat klicken Sie dann Links auf die Zertifizierungsstelle, die der ursprünglichen ZS-Zertifikat ausgestellt hat. Dieser Prozess wird wiederholt, bis das Zertifikat der Stammzertifizierungsstelle erreicht wird. Das Zertifikat der Stammzertifizierungsstelle ist grundsätzlich vertrauenswürdig.  
   
- Digitale Zertifikate werden verwendet, um eine Entität anhand dieser als *Zertifikatkette* bezeichneten Hierarchie zu authentifizieren. Sie können die Kette eines beliebigen Zertifikats mit dem MMC-Snap-In anzeigen, indem Sie auf das Zertifikat doppelklicken und anschließend auf die Registerkarte **Zertifikatpfad** klicken. Weitere Informationen zum Importieren von Zertifikatketten für eine Zertifizierungsstelle finden Sie unter [How to: Specify the Certificate Authority Certificate Chain Used to Verify Signatures (Vorgehensweise: Angeben der Zertifikatkette der Zertifizierungsstelle zum Überprüfen von Signaturen)](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
+ Digitale Zertifikate werden verwendet, um eine Entität anhand dieser als *Zertifikatkette* bezeichneten Hierarchie zu authentifizieren. Sie können die Kette eines beliebigen Zertifikats mit dem MMC-Snap-In anzeigen, indem Sie auf das Zertifikat doppelklicken und anschließend auf die Registerkarte **Zertifikatpfad** klicken. Weitere Informationen zum Importieren von Zertifikatketten für Zertifizierungsstellen finden Sie unter [Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, der zum Überprüfen von Signaturen](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   
 > [!NOTE]
 >  Sie können jeden Aussteller zu einer vertrauenswürdigen Stammzertifizierungsstelle machen, indem Sie das Zertifikat des Ausstellers im Zertifikatspeicher der Stammzertifizierungsstelle ablegen.  
@@ -96,7 +96,7 @@ Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden h
   
 3.  Importieren Sie das Zertifikat der Stammzertifizierungsstelle in den Speicher vertrauenswürdiger Stammzertifizierungsstellen.  
   
-4.  Anweisungen finden Sie unter [How to: Create Temporary Certificates for Use During Development (Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung)](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4.  Schrittweise Anweisungen finden Sie unter [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Welches Zertifikat soll verwendet werden?  
  Im Zusammenhang mit Zertifikaten wird häufig danach gefragt, welches Zertifikat und warum dieses verwendet werden soll. Die Antwort hängt davon ab, ob Sie einen Client oder einen Dienst programmieren. Die folgenden Informationen bieten eine allgemeine Orientierung und stellen keine erschöpfende Antwort auf diese Fragen dar.  
@@ -170,9 +170,9 @@ Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden h
   
  Im ersten Release von WCF erfolgt die Zuordnung ohne auf die Domänenrichtlinie zurückzugreifen. Möglicherweise tritt daher bei älteren Anwendungen, die mit dem ersten Release ausgeführt werden konnten, ein Fehler auf, wenn die Zuordnung aktiviert ist und die Anforderungen der Domänenrichtlinie vom X.509-Zertifikat nicht erfüllt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Channels>  
- <xref:System.ServiceModel.Security>  
- <xref:System.ServiceModel>  
- <xref:System.Security.Cryptography.X509Certificates.X509FindType>  
- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Channels>
+- <xref:System.ServiceModel.Security>
+- <xref:System.ServiceModel>
+- <xref:System.Security.Cryptography.X509Certificates.X509FindType>
+- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

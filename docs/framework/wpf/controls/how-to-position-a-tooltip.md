@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Positionieren einer QuickInfo'
+title: 'Vorgehensweise: Positionieren einer QuickInfo'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: e51be52301197a66ef49339245e60404d823b36c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 403b070e782a6f243fd5a420e569daa02044dbb1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727702"
 ---
-# <a name="how-to-position-a-tooltip"></a>Gewusst wie: Positionieren einer QuickInfo
+# <a name="how-to-position-a-tooltip"></a>Vorgehensweise: Positionieren einer QuickInfo
 Dieses Beispiel zeigt, wie Sie die Position einer QuickInfo auf dem Bildschirm angeben.  
   
 ## <a name="example"></a>Beispiel  
@@ -58,9 +58,9 @@ QuickInfo-Platzierung mithilfe der Platzierung und "PlacementRectangle" Offset-E
  [!code-csharp[ToolTipService#NoToolTipCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml.cs#notooltipcode)]
  [!code-vb[ToolTipService#NoToolTipCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#notooltipcode)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Controls.ToolTip>  
- <xref:System.Windows.Controls.ToolTipService>  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
- [Übersicht über QuickInfo](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
- [Verwenden Sie die ContextMenuService- und ToolTipService](https://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Controls.ToolTip>
+- <xref:System.Windows.Controls.ToolTipService>
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+- [Übersicht über QuickInfo](../../../../docs/framework/wpf/controls/tooltip-overview.md)
+- [Verwenden Sie die ContextMenuService- und ToolTipService](https://msdn.microsoft.com/library/809b0e9c-d612-4cda-b8af-1a698c68f4d1)

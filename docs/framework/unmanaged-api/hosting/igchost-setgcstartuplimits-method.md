@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbe94aa67c9cf9ac587b7fca9f5cbeca4870506b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 83a1c03c209d68035b3615c83ec0ee13b94eb549
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719949"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits-Methode
 Legt die Größe des Segments und die maximale Größe für Generation 0 fest.  
@@ -41,22 +41,22 @@ HRESULT SetGCStartupLimits (
   
 #### <a name="parameters"></a>Parameter  
  `SegmentSize`  
- [in] Die Größe des Segments durch die Garbage Collection-System verwendet werden soll.  
+ [in] Die Größe des Segments, die von der Garbage Collection-System verwendet werden soll.  
   
  `MaxGen0Size`  
  [in] Die maximale Größe für Generation 0.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `SetGCStartupLimits` -Methode nur einmal aufgerufen werden kann. Diese Werte können später nicht geändert werden.  
+ Die `SetGCStartupLimits` Methode nur einmal aufgerufen werden kann. Diese Werte können nicht später geändert werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** GCHost.idl, GCHost.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IGCHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IGCHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

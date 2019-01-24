@@ -2,23 +2,17 @@
 title: Schema für Compiler- und Sprachanbietereinstellungen
 ms.date: 03/30/2017
 helpviewer_keywords:
-- configuration settings [.NET Framework], compilers
-- compiler configuration elements, schema
-- compiler configuration elements
-- language providers
-- compiler configuration settings, schema
-- configuration schema [.NET Framework], compiler settings
-- language providers, settings schema
-- compiler configuration settings
+  - 'configuration settings [.NET Framework], compilers'
+  - 'compiler configuration elements, schema'
+  - compiler configuration elements
+  - language providers
+  - 'compiler configuration settings, schema'
+  - 'configuration schema [.NET Framework], compiler settings'
+  - 'language providers, settings schema'
+  - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8992c9e47e2b62e90191a67fc7353e138502ebf1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185666"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Schema für Compiler- und Sprachanbietereinstellungen
 Die Compiler- und Sprachanbietereinstellungen geben Compilerkonfigurationselemente für verfügbare Sprachanbieter an. Jedes Compilerkonfigurationselement gibt den Typnamen des Codeanbieters, Compilerparameter, unterstützte Sprachnamen und unterstützte Dateierweiterungen an.  
@@ -58,8 +52,8 @@ Die Compiler- und Sprachanbietereinstellungen geben Compilerkonfigurationselemen
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- <xref:System.CodeDom.Compiler.CompilerInfo>  
-- <xref:System.CodeDom.Compiler.CodeDomProvider>  
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Siehe auch
+- <xref:System.CodeDom.Compiler.CompilerInfo>
+- <xref:System.CodeDom.Compiler.CodeDomProvider>
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

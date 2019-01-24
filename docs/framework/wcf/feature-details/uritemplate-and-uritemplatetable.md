@@ -2,12 +2,12 @@
 title: UriTemplate und UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3fd60325d2264a2ddeaabef7b0998844ca8c8cd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722607"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate und UriTemplateTable
 Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu beschreiben, auf die ihre Dienste reagieren. Windows Communication Foundation (WCF) hinzugefügt, zwei neue Klassen zum Steuern der URIs Entwicklern. <xref:System.UriTemplate> und <xref:System.UriTemplateTable> bilden die Grundlage für die URI-basierten dispatchmoduls in WCF. Diese Klassen können auch auf ihre eigenen, ermöglicht Entwicklern das Nutzen von Vorlagen und der URI Mappingmechanismus verwendet werden, ohne die Implementierung eines WCF-Diensts.  
@@ -87,7 +87,7 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
   
 - "Schuh / {bootstouren} /\*"  
   
-- "Schuh/Boot? X = 2"  
+- "shoe/boat?x=2"  
   
 - "Schuh / {bootstouren}? x = {Bett}"  
   
@@ -129,7 +129,7 @@ Webentwickler müssen in der Lage sein, die Form und das Layout der URIs zu besc
 - /{Schuh}{Boot} – Variablen müssen durch einen Literalwert getrennt werden.  
   
 ### <a name="matching-and-compound-path-segments"></a>Zuordnung und zusammengesetzte Pfadsegmente  
- Zusammengesetzte Pfadsegmente ermöglichen Ihnen das Definieren einer UriTemplate mit mehreren Variablen in nur einem Pfadsegment. Z. B. in der Vorlagenzeichenfolge: "Adressen / {State}. {City} "sind zwei Variablen (State und City) in demselben Segment definiert. Diese Vorlage würde eine URL übereinstimmen, wie z. B. `http://example.com/Washington.Redmond` aber wird auch eine URL wie `http://example.com/Washington.Redmond.Microsoft`. In letzterem Fall enthält die State-Variable "Washington", und die City-Variable "Redmond.Microsoft" enthält. In diesem Fall entspricht jeder Text (mit Ausnahme von "/") der {city}-Variable. Wenn Sie eine Vorlage erstellen möchten, die nicht mit den "zusätzlichen" Text übereinstimmt, fügen Sie die Variable in einem separaten Vorlagensegment ein, z. B.: "Adressen / {Bundesland} / {Stadt}.  
+ Zusammengesetzte Pfadsegmente ermöglichen Ihnen das Definieren einer UriTemplate mit mehreren Variablen in nur einem Pfadsegment. Z. B. in der Vorlagenzeichenfolge: "-Adressen / {state}. {City} "sind zwei Variablen (State und City) in demselben Segment definiert. Diese Vorlage würde eine URL übereinstimmen, wie z. B. `http://example.com/Washington.Redmond` aber wird auch eine URL wie `http://example.com/Washington.Redmond.Microsoft`. In letzterem Fall enthält die State-Variable "Washington", und die City-Variable "Redmond.Microsoft" enthält. In diesem Fall entspricht jeder Text (mit Ausnahme von "/") der {city}-Variable. Wenn Sie eine Vorlage erstellen möchten, die nicht mit den "zusätzlichen" Text übereinstimmt, fügen Sie die Variable in einem separaten Vorlagensegment ein, z.B.: "-Adressen / {state} / {Stadt}.  
   
 ### <a name="named-wildcard-segments"></a>Benannte Platzhaltersegmente  
  Ein benanntes Platzhaltersegment ist beliebiges pfadvariablensegment, dessen Variablenname mit dem Platzhalterzeichen beginnt "\*". Die folgende Vorlagenzeichenfolge enthält ein benanntes Platzhaltersegment mit dem Namen "Schuh".  
@@ -328,9 +328,9 @@ Erhält eine Variable den Standardwert `null`, gelten einige zusätzliche Einsch
 > [!NOTE]
 > Die Zeichen "á" und "Á" gelten als unterschiedliche Zeichen, wenn sie als Teil eines URI-Pfads oder eines <xref:System.UriTemplate>-Pfadsegmentliterals verwendet werden. (Die Zeichen "a" und "A" gelten hingegen als gleich.) Die Zeichen á und Á gelten als gleiche Zeichen, wenn sie als Teil einer <xref:System.UriTemplate> {Variablenname} oder einer Abfragezeichenfolge erscheinen (a und A gelten ebenfalls als gleiche Zeichen).  
   
-## <a name="see-also"></a>Siehe auch  
- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
- [UriTemplate-Tabelle](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
- [UriTemplate-Tabellenverteiler](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+## <a name="see-also"></a>Siehe auch
+- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
+- [UriTemplate-Tabelle](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
+- [UriTemplate-Tabellenverteiler](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)

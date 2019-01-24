@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db2f30001e050c1f312613c794388ffaa99d3b17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed9536280f64ae1400faff8d0029e5ccd51c90ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414482"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732439"
 ---
 # <a name="icordebugmodulegetfunctionfromrva-method"></a>ICorDebugModule::GetFunctionFromRVA-Methode
-Diese Methode wurde nicht in der aktuellen Version von .NET Framework implementiert wurde.  
+Diese Methode wurde nicht in der aktuellen Version von .NET Framework implementiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,6 +39,6 @@ HRESULT GetFunctionFromRVA(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorDebug.idl, CorDebug.h  
   
-## <a name="see-also"></a>Siehe auch  
-    
- 
+## <a name="see-also"></a>Siehe auch
+
+

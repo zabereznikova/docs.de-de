@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b8968ab7c3b6fee1e29a7389020c26232e34c1e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567008"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi-Funktion
 Erstellt über DCOM eine Verbindung mit einem WMI-Namespace auf einem angegebenen Computer.  
@@ -58,7 +58,7 @@ HRESULT ConnectServerWmi (
 
 | Konstante  | Wert  | Beschreibung  |
 |---------|---------|---------|
-| `CONNECT_REPOSITORY_ONLY` | 0 x 40 | Für die interne Verwendung vorgesehen. Nicht verwenden. |
+| `CONNECT_REPOSITORY_ONLY` | 0x40 | Für die interne Verwendung vorgesehen. Nicht verwenden. |
 | `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` Gibt zurück, die innerhalb von zwei Minuten oder weniger. |
 
 `strAuthority` [in] Der Domänenname des Benutzers. Sie können die folgenden Werte aufweisen:
@@ -87,8 +87,8 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
+| `WBEM_E_FAILED` | 0x80041001 | Es wurde ein allgemeiner Fehler. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
@@ -102,11 +102,11 @@ Diese Funktion umschließt einen Aufruf der [IWbemLocator::ConnectServer](/windo
 
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

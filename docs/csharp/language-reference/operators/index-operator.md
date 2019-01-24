@@ -1,7 +1,7 @@
 ---
-title: '[]-Operator – C#-Referenz'
+title: '[]-Operator – C#-Referenz'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 01/10/2019
 f1_keywords:
 - '[]_CSharpKeyword'
 helpviewer_keywords:
@@ -10,52 +10,62 @@ helpviewer_keywords:
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-ms.openlocfilehash: 3e2ce5c4b74cbf79e00410791ffcc31368f78648
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 948ce238058307631cf0e5a7a5e3d72664233052
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243997"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333394"
 ---
-# <a name="-operator-c-reference"></a>[]-Operator (C#-Referenz)
-Eckige Klammern (`[]`) werden für Arrays, Indexer und Attribute verwendet. Sie können auch mit Zeigern verwendet werden.  
-  
-## <a name="remarks"></a>Hinweise  
- Auf einen Arraytyp folgt `[]`:  
-  
- [!code-csharp[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
-  
- Um auf ein Element eines Arrays zuzugreifen, wird der Index des gewünschten Elements in Klammern eingeschlossen:  
-  
- [!code-csharp[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
-  
- Eine Ausnahme wird ausgelöst, wenn ein Arrayindex außerhalb des gültigen Bereichs liegt.  
-  
- Der Arrayindizierungsoperator kann nicht überladen werden. Allerdings können Typen Indexer definieren, die einen oder mehrere Parameter annehmen. Indexerparameter werden wie Arrayindizes in rechteckige Klammern eingeschlossen, können aber als beliebiger Typ deklariert werden, während Arrayindizes ganzzahlig sein müssen.  
-  
- .NET Framework definiert z.B. einen `Hashtable`-Typ, der Schlüssel und Werte beliebigen Typs verknüpft:  
-  
- [!code-csharp[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
-  
- Rechteckigen Klammern werden auch zum Angeben von [Attributen](../../../csharp/programming-guide/concepts/attributes/index.md) verwendet:  
-  
- [!code-csharp[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
-  
- Sie können rechteckige Klammern verwenden, um einen Zeiger zu referenzieren:  
-  
- [!code-csharp[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
-  
- Es wird keine Überprüfung der Begrenzungen durchgeführt.  
-  
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+# <a name="-operator-c-reference"></a>[]-Operator (C#-Referenz)
+
+Eckige Klammern (`[]`) werden in der Regel für den Zugriff auf Arrays, Indexer oder Zeigerelemente verwendet.
+
+Weitere Informationen zum Zeigerelementzugriff finden Sie unter [Zugreifen auf ein Arrayelement mit einem Zeiger (C#-Programmierhandbuch)](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).
+
+Sie verwenden eckige Klammern auch, um [Attribute](../../programming-guide/concepts/attributes/index.md) anzugeben:
+
+```csharp
+[System.Diagnostics.Conditional("DEBUG")]
+void TraceMethod() {}
+```
+
+## <a name="array-access"></a>Arrayzugriff
+
+Im folgenden Beispiel wird der Zugriff auf Elemente des Arrays veranschaulicht:
+
+[!code-csharp-interactive[array access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Arrays)]
+
+Wenn ein Arrayindex sich außerhalb der Grenzen der entsprechenden Dimension eines Arrays befindet, wird eine <xref:System.IndexOutOfRangeException> ausgelöst.
+
+Wie im vorherigen Beispiel gezeigt, verwenden Sie eckige Klammern auch zur Deklaration eines Arraytyps und Instanziierung von Arrayinstanzen.
+
+Weitere Informationen zu Arrays finden Sie unter [Arrays](../../programming-guide/arrays/index.md).
+
+## <a name="indexer-access"></a>Indexerzugriff
+
+Im folgenden Beispiel wird der Indexerzugriff anhand des .NET <xref:System.Collections.Generic.Dictionary%602>-Typs veranschaulicht:
+
+[!code-csharp-interactive[indexer access](~/samples/snippets/csharp/language-reference/operators/IndexOperatorExamples.cs#Indexers)]
+
+Mit Indexern können Sie Instanzen eines benutzerdefinierten Typs auf ähnliche Weise wie ein Array indizieren. Im Gegensatz zu Arrayindizes, die ganze Zahlen sein müssen, können die Indexerargumente mit einem beliebigen Typ deklariert werden.
+
+Weitere Informationen über Indexer finden Sie unter [Indexer](../../programming-guide/indexers/index.md).
+
+## <a name="operator-overloadability"></a>Operatorüberladbarkeit
+
+Elementzugriff `[]` wird nicht als überladbarer Operator betrachtet. Verwenden Sie [Indexer](../../programming-guide/indexers/index.md) zur Unterstützung der Indizierung mit benutzerdefinierten Typen.
+
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+Weitere Informationen finden Sie in den Abschnitten [Elementzugriff](~/_csharplang/spec/expressions.md#element-access) und [Zeigerelementzugriff auf](~/_csharplang/spec/unsafe-code.md#pointer-element-access) der [C#-Sprachspezifikation](../language-specification/index.md).
+
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Operatoren](../../../csharp/language-reference/operators/index.md)  
-- [Arrays](../../../csharp/programming-guide/arrays/index.md)  
-- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Operatoren](index.md)
+- [Arrays](../../programming-guide/arrays/index.md)
+- [Indexer](../../programming-guide/indexers/index.md)
+- [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Attribute](../../programming-guide/concepts/attributes/index.md)

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: c696017c153b63ba6f2d485855c969b2b45ba0ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 82a9a3e6362538fc62b4afdb010ca784590b9db9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188531"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746337"
 ---
 # <a name="ltbypasslistgt-element-network-settings"></a>&lt;BypassList&gt; -Element (Netzwerkeinstellungen)
 Bietet eine Reihe von regulären Ausdrücken, die Adressen beschreiben, die einen Proxy nicht verwenden.  
   
  \<configuration>  
 \<system.net>  
-\<DefaultProxy >  
-\<BypassList >  
+\<defaultProxy>  
+\<bypasslist>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -76,6 +76,6 @@ Bietet eine Reihe von regulären Ausdrücken, die Adressen beschreiben, die eine
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

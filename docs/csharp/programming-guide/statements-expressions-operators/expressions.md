@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: b2975403c38dbb2b73c10b147a6903013a1e5573
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239289"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362313"
 ---
 # <a name="expressions-c-programming-guide"></a>Ausdrücke (C#-Programmierhandbuch)
 Ein *Ausdruck* ist eine Sequenz von einem oder mehr Operanden und null oder mehr Operatoren, die einen einzelnen Wert, ein Objekt, eine Methode oder ein Namespace annehmen können. Ausdrücke können einen literalen Wert, einen Methodenaufruf, einen Operator und die entsprechenden Operanden oder einen *einfachen Namen* enthalten. Einfache Namen können der Name einer Variablen, eines Typmembers, eines Methodenparameters, eines Namespaces oder eines Typs sein.  
@@ -25,7 +25,7 @@ System.Convert.ToInt32("35");
 ```  
   
 ## <a name="expression-values"></a>Ausdruckswerte  
- In den meisten Fällen, in denen Ausdrücke verwendet werden, z.B. in Ausdrücken oder Methodenparametern, wird erwartet, dass der Ausdruck einen Wert ergibt. Wenn x und y ganze Zahlen sind, ergibt der Ausdruck `x + y` einen numerischen Wert. Der Ausdruck `new MyClass()` ergibt einen Verweis auf einen neue Instanz eines `MyClass`-Objekts. Der Ausdruck `myClass.ToString()` ergibt eine Zeichenfolge, da dies der Rückgabetyp der Methode ist. Obwohl ein Namespacename jedoch als Ausdruck klassifiziert ist, ergibt er keinen Wert und kann deshalb nie das Endergebnis eines Ausdrucks sein. Sie können keinen Namespacenamen einem Methodenparameter übergeben oder ihn in einem neuen Ausdruck verwenden bzw. ihn einer Variable zuweisen. Sie können ihn nur als Unterausdruck in einem größeren Ausdruck verwenden. Das gleiche gilt auch für Typen (im Unterschied zu <xref:System.Type?displayProperty=nameWithType>-Objekten), Methodengruppennamen (im Unterschied zu bestimmten Methoden) und Ereignisaccessoren [add](../../../csharp/language-reference/keywords/add.md) und [remove](../../../csharp/language-reference/keywords/remove.md).  
+ In den meisten Fällen, in denen Ausdrücke verwendet werden, z.B. in Ausdrücken oder Methodenparametern, wird erwartet, dass der Ausdruck einen Wert ergibt. Wenn x und y ganze Zahlen sind, ergibt der Ausdruck `x + y` einen numerischen Wert. Der Ausdruck `new MyClass()` ergibt einen Verweis auf eine neue Instanz einer `MyClass`-Klasse. Der Ausdruck `myClass.ToString()` ergibt eine Zeichenfolge, da dies der Rückgabetyp der Methode ist. Obwohl ein Namespacename jedoch als Ausdruck klassifiziert ist, ergibt er keinen Wert und kann deshalb nie das Endergebnis eines Ausdrucks sein. Sie können keinen Namespacenamen einem Methodenparameter übergeben oder ihn in einem neuen Ausdruck verwenden bzw. ihn einer Variable zuweisen. Sie können ihn nur als Unterausdruck in einem größeren Ausdruck verwenden. Das gleiche gilt auch für Typen (im Unterschied zu <xref:System.Type?displayProperty=nameWithType>-Objekten), Methodengruppennamen (im Unterschied zu bestimmten Methoden) und Ereignisaccessoren [add](../../../csharp/language-reference/keywords/add.md) und [remove](../../../csharp/language-reference/keywords/remove.md).  
   
  Jeder Wert verfügt über einen zugeordneten Typ. Wenn z.B. x und y jeweils Variablen vom Typ `int` sind, wird der Wert des Ausdrucks `x + y` auch als `int` geschrieben. Wenn der Wert einer Variable eines anderen Typs zugewiesen ist oder wenn x und y unterschiedliche Typen sind, werden die Regeln der Typkonvertierung angewendet. Weitere Informationen darüber, wie Konvertierungen funktionieren, finden Sie unter [Umwandlung und Typkonvertierungen](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60e293ac8c9100876aa5a524bb5dda04e9f4183f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf9071f8b5c4569ace53b13f7b9b7282bf8e87c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711972"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Richtlinien für das Schreiben von sicherem, nicht verwaltetem Code
 Bestimmter Bibliothekscode muss nicht verwalteten Code aufrufen (z. B. APIs in systemeigenem Code, etwa Win32). Hierbei ist größte Vorsicht geboten, denn dies bedeutet, dass der Sicherheitsbereich für verwalteten Code verlassen wird. Wenn Ihr Code sicherheitsneutral ist, müssen sowohl Ihr Code als auch jeder Code, der Ihren Code aufruft, eine Berechtigung für nicht verwalteten Code haben (<xref:System.Security.Permissions.SecurityPermission> mit angegebenem <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> -Flag).  
@@ -51,5 +51,5 @@ Bestimmter Bibliothekscode muss nicht verwalteten Code aufrufen (z. B. APIs in s
 |**native**|Sicherheitsneutraler Code, d. h. nicht verwalteter Code, der von nicht verwaltetem Code eine Berechtigung zum Aufruf erfordert. Die Sicherheit wird überprüft, wodurch ein nicht berechtigter Aufrufer gestoppt wird.|  
 |**unsafe**|Einstiegspunkt mit unterdrückter Sicherheit für potenziell gefährlichen nicht verwalteten Code . Entwickler sollten äußerst vorsichtig sein, wenn solcher nicht verwalteter Code verwendet wird, und sie sollten sicherstellen, dass andere Schutzmechanismen greifen, damit ein Sicherheitsrisiko vermieden wird. Entwickler müssen überlegt vorgehen, denn dieses Schlüsselwort setzt das Sicherheitssystem außer Kraft.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Siehe auch
+- [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)

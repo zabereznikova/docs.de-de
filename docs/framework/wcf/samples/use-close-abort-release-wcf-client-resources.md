@@ -3,12 +3,12 @@ title: Verwenden Sie schließen "und" Abort um WCF-Client-Ressourcen freizugeben
 description: Dispose kann Fehler und Ausnahmen auslösen, wenn Netzwerkprobleme auftreten. Die kann unerwünschtes Verhalten führen. Stattdessen verwenden Sie, schließen, und abgebrochen Sie wird, um die Clientressourcen freigeben, wenn das Netzwerk ein Fehler aufgetreten ist.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: d37ad9d2277fea2656311a5a1f57d51343d10d89
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4996ccba955d7946bb76b8124b8b28d803b6f3e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147215"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736428"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Schließen und Abbruch Freigeben von Ressourcen sicher verwendet werden, wenn Netzwerkverbindungen gelöscht haben
 Dieses Beispiel veranschaulicht die Verwendung der `Close` und `Abort` Methoden zum Bereinigen von Ressourcen für die Verwendung eines typisierten Clients. Die `using` Anweisung Ausnahmen verursacht, wenn die Netzwerkverbindung nicht robust ist. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert. In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  

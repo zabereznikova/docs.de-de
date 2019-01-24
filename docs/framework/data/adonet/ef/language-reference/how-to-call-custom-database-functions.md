@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Aufrufen benutzerdefinierter Datenbankfunktionen'
+title: 'Vorgehensweise: Rufen benutzerdefinierter Datenbankfunktionen auf'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 4e7c94dce5b50fe93f00aaaa72206be3394faf62
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ea558e23b6b0c191244031560c0fcf4738604e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731100"
 ---
-# <a name="how-to-call-custom-database-functions"></a>Gewusst wie: Aufrufen benutzerdefinierter Datenbankfunktionen
+# <a name="how-to-call-custom-database-functions"></a>Vorgehensweise: Rufen benutzerdefinierter Datenbankfunktionen auf
 In diesem Thema wird das Aufrufen von benutzerdefinierten Funktionen beschrieben, die in der Datenbank in LINQ to Entities-Abfragen definiert werden.  
   
  Datenbankfunktionen, die von LINQ to Entities-Abfragen aufgerufen werden, werden in der Datenbank ausgeführt. Das Ausführen von Funktionen in der Datenbank kann die Anwendungsleistung verbessern.  
@@ -60,6 +60,6 @@ In diesem Thema wird das Aufrufen von benutzerdefinierten Funktionen beschrieben
  [!code-csharp[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/program.cs#4)]
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die EDMX-Datei](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
- [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über die EDMX-Datei](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
+- [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

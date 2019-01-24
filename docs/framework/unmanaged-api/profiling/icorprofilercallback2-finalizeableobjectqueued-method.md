@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4d10b313adc60e2b851d32aeea70e2993480b0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9b8a952bb2827d1946787f15151887fa25b8da52
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733726"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>ICorProfilerCallback2::FinalizeableObjectQueued-Methode
-Benachrichtigt den Profiler, dass ein Objekt mit einem Finalizer für im Finalizer-Thread für die Ausführung der in der Warteschlange wurde hat seine `Finalize` Methode.  
+Benachrichtigt Sie den Profiler, dass ein Objekt mit einem Finalizer an den Finalizerthread für die Ausführung von in die Warteschlange gestellt hat seine `Finalize` Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ HRESULT FinalizeableObjectQueued(
  [in] Die ID des Objekts, das in die Warteschlange gestellt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -51,6 +51,6 @@ HRESULT FinalizeableObjectQueued(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

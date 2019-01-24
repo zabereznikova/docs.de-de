@@ -15,12 +15,12 @@ helpviewer_keywords:
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: KrzysztofCwalina
-ms.openlocfilehash: 9febc7eed7d6dedad6655b51a96694b72b78711b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ae1b7ce83f6698cef470aabf07a12d89042ab8a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147280"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667686"
 ---
 # <a name="general-naming-conventions"></a>Allgemeine Benennungskonventionen
 Dieser Abschnitt beschreibt allgemeine Benennungskonventionen, die im Zusammenhang mit der Auswahl der Wörter, die Richtlinien zum Verwenden von Abkürzungen und Akronyme und Empfehlungen zum Vermeiden Sie sprachspezifische Namen.  
@@ -100,5 +100,5 @@ Dieser Abschnitt beschreibt allgemeine Benennungskonventionen, die im Zusammenha
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)

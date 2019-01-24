@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Signieren von XML-Dokumenten mit digitalen Signaturen'
+title: 'Vorgehensweise: Signieren von XML-Dokumenten mit digitalen Signaturen'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 49999ae8b66b01ca71c0027bdf43c13272fbe8a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622623"
 ---
-# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Gewusst wie: Signieren von XML-Dokumenten mit digitalen Signaturen
+# <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Vorgehensweise: Signieren von XML-Dokumenten mit digitalen Signaturen
 Um ein XML-Dokument teilweise oder vollständig mit einer digitalen Signatur zu versehen, können Sie die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden.  Über digitale XML-Signaturen (XMLDSIG) können Sie sich vergewissern, dass Daten nicht mehr geändert wurden, nachdem sie signiert wurden.  Weitere Informationen zum XMLDSIG-Standard finden Sie unter der Empfehlung des World Wide Web Consortium (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  
   
  Im Codebeispiel in dieser Vorgehensweise wird veranschaulicht, wie ein gesamtes XML-Dokument digital signiert und die Signatur dem Dokument in einem <`Signature`>-Element angefügt wird.  Im Beispiel wird ein RSA-Signaturschlüssel erstellt, wird der Schlüssel einem sicheren Schlüsselcontainer hinzugefügt und wird der Schlüssel dann verwendet, um ein XML-Dokument digital zu signieren.  Der Schlüssel kann danach abgerufen werden, um die digitale Signatur des XML-Dokuments zu überprüfen oder ein anderes XML-Dokument zu signieren.  
@@ -120,5 +120,5 @@ Um ein XML-Dokument teilweise oder vollständig mit einer digitalen Signatur zu 
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Vorgehensweise: Überprüfen der digitalen Signaturen von XML-Dokumenten](../../../docs/standard/security/how-to-verify-the-digital-signatures-of-xml-documents.md)
