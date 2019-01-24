@@ -2,12 +2,12 @@
 title: Erstellen eines BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: 5b7fd3e88fa12a66e086906de6f0d7d6a7d1aa17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8c4f3b4b3f9a3e4694ece814de691c07ef88ec5b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454459"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684878"
 ---
 # <a name="creating-a-bindingelement"></a>Erstellen eines BindingElement
 Bindungen und Bindungselemente (Objekte, die erweitern <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> und <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>bzw.) der Ort, in dem das Anwendungsmodell Windows Communication Foundation (WCF) mit kanalfactorys und Kanallistenern verknüpft ist, sind. Ohne Bindungen erfordern benutzerdefinierte Kanäle Programmierung auf Kanalebene wie beschrieben in [Programmieren auf Kanalebene von Dienst](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) und [Client Kanals auf Serverebene Programmierung](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). In diesem Thema wird erläutert, die Mindestanforderungen für die Aktivierung Ihres Kanals in die Entwicklung von WCF ein <xref:System.ServiceModel.Channels.BindingElement> für Ihren Kanal und Verwendung von der Anwendung, wie in Schritt 4 beschrieben aktivieren [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -71,7 +71,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  Nachdem Sie ein Bindungselement für den Kanal erstellt haben, zurück zu den [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md) Thema finden, ob Sie Unterstützung der Konfigurationsdatei zu Ihrem Bindungselement hinzufügen möchten wenn "und" Gewusst wie: Hinzufügen von metadatenunterstützung für Veröffentlichung, und ob und wie eine benutzerdefinierte Bindung erstellen, die Ihr Bindungselement verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Channels.BindingElement>  
- [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md)  
- [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Channels.BindingElement>
+- [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md)
+- [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

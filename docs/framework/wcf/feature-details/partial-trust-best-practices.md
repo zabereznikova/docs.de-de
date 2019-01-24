@@ -2,12 +2,12 @@
 title: Empfehlungen für eine teilweise vertrauenswürdige Umgebung
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: fca975ff4216384b970535273511eb07cd6ded68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640107"
 ---
 # <a name="partial-trust-best-practices"></a>Empfehlungen für eine teilweise vertrauenswürdige Umgebung
 Dieses Thema beschreibt bewährte Methoden bei der Ausführung von Windows Communication Foundation (WCF) in einer teilweise vertrauenswürdigen Umgebung.  
@@ -45,26 +45,26 @@ Dieses Thema beschreibt bewährte Methoden bei der Ausführung von Windows Commu
 -   Die Instanzmethoden, die die <xref:System.Xml.Serialization.IXmlSerializable>-Schnittstelle implementieren, müssen `public` sein.  
   
 ## <a name="using-wcf-from-fully-trusted-platform-code-that-allows-calls-from-partially-trusted-callers"></a>Verwenden von WCF aus vollständig vertrauenswürdigem Plattformcode, der Aufrufe teilweise vertrauenswürdiger Aufrufer zulässt  
- Das Sicherheitsmodell der WCF-teilweiser Vertrauenswürdigkeit wird davon ausgegangen, dass jeder Aufrufer einer öffentlichen WCF-Methode oder Eigenschaft im Code den Zugriff (CAS) Sicherheitskontext der hostanwendung ausgeführt wird. WCF auch geht davon aus, nur ein anwendungssicherheitskontext vorhanden ist, für die einzelnen <xref:System.AppDomain>, und die diesem Kontext wird an <xref:System.AppDomain> Zeitpunkt der Erstellung von einem vertrauenswürdigen Host (z. B. durch einen Aufruf von <xref:System.AppDomain.CreateDomain%2A> oder durch des ASP.NET-Anwendungs-Managers).).  
+ Das Sicherheitsmodell der WCF-teilweiser Vertrauenswürdigkeit wird davon ausgegangen, dass jeder Aufrufer einer öffentlichen WCF-Methode oder Eigenschaft im Kontext Code Access Security (CAS) der hostanwendung ausgeführt wird. WCF auch geht davon aus, nur ein anwendungssicherheitskontext für jede vorhanden <xref:System.AppDomain>, und die diesem Kontext wird an <xref:System.AppDomain> Zeitpunkt der Erstellung von einem vertrauenswürdigen Host (z. B. durch einen Aufruf von <xref:System.AppDomain.CreateDomain%2A> oder durch des ASP.NET-Anwendungs-Managers).).  
   
- Dieses Sicherheitsmodell gilt für Anwendungen, die vom Benutzer verfasst wurden und keine zusätzlichen CAS-Berechtigungen gewähren können, wie z.&#160;B. Benutzercode, der in einer ASP.NET-Anwendung mittlerer Vertrauenswürdigkeit ausgeführt wird. Vollständig vertrauenswürdigem Plattformcode (z. B. eine Drittanbieter-Assembly, die im globalen Assemblycache installiert ist und die Aufrufe von teilweise vertrauenswürdigem Code akzeptiert) muss jedoch explizite Sorgfalt vorgehen, wenn WCF im Auftrag einer teilweise vertrauenswürdigen Anwendung aufgerufen Vermeiden Sie die Einführung von Sicherheitsrisiken auf Anwendungsebene.  
+ Dieses Sicherheitsmodell gilt für Anwendungen, die vom Benutzer verfasst wurden und keine zusätzlichen CAS-Berechtigungen gewähren können, wie z.&#160;B. Benutzercode, der in einer ASP.NET-Anwendung mittlerer Vertrauenswürdigkeit ausgeführt wird. Vollständig vertrauenswürdigem Plattformcode (beispielsweise eine Drittanbieter-Assembly, die im globalen Assemblycache installiert ist und akzeptiert Aufrufe von teilweise vertrauenswürdigem Code) muss jedoch explizit Sorgfalt walten lassen beim Aufrufen von in WCF im Auftrag einer teilweise vertrauenswürdigen Anwendung Vermeiden Sie das Einführen von Sicherheitsrisiken auf Anwendungsebene.  
   
- Ändern des CAS-Berechtigungssatzes des aktuellen Threads ist voll vertrauenswürdigem Code vermeiden (durch Aufrufen von <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A>, oder <xref:System.Security.PermissionSet.Deny%2A>) vor dem Aufrufen von WCF-APIs im Namen von teilweise vertrauenswürdigem Code. Das Gewähren, Abweisen oder anderweitige Erstellen von threadspezifischem Berechtigungskontext, der unabhängig vom Sicherheitskontext der Anwendungsebene ist, kann zu unerwartetem Verhalten führen. Je nach Anwendung kann dieses Verhalten zu Sicherheitslücken auf Anwendungsebene führen.  
+ Voll vertrauenswürdigem Code vermeiden, ändern den CAS-Berechtigungssatz, der den aktuellen Thread (durch Aufrufen von <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A>, oder <xref:System.Security.PermissionSet.Deny%2A>) vor dem Aufrufen von WCF-APIs im Namen von teilweise vertrauenswürdigem Code. Das Gewähren, Abweisen oder anderweitige Erstellen von threadspezifischem Berechtigungskontext, der unabhängig vom Sicherheitskontext der Anwendungsebene ist, kann zu unerwartetem Verhalten führen. Je nach Anwendung kann dieses Verhalten zu Sicherheitslücken auf Anwendungsebene führen.  
   
- Code, der Aufrufe in WCF mit einem threadspezifischer Berechtigungskontext, der darauf vorbereitet sein müssen, um den folgenden Situationen zu behandeln, die auftreten können:  
+ Code, der Aufrufe in WCF über eine threadspezifischer Berechtigungskontext darauf vorbereitet sein müssen, um den folgenden Situationen zu behandeln, die auftreten können:  
   
 -   Der threadspezifische Sicherheitskontext kann möglicherweise nicht für die Dauer des Vorgangs aufrechterhalten werden, was zu potenziellen Sicherheitsausnahmen führt.  
   
--   Interne WCF-Code als auch für alle Benutzer bereitgestellte Rückrufe können in einem anderen Sicherheitskontext als dem, führen Sie unter denen der Aufruf ursprünglich initiiert wurde. Zu diesen Kontexten gehören:  
+-   Interne WCF-Code als auch für alle Benutzer bereitgestellte Rückrufe können in einem anderen Sicherheitskontext als dem Ausführen unter denen der Aufruf ursprünglich initiiert wurde. Zu diesen Kontexten gehören:  
   
     -   Der Berechtigungskontext der Anwendung  
   
     -   Alle threadspezifischer Berechtigungskontext, der zuvor erstellt haben, von anderen Benutzerthreads verwendet, um in WCF während der Lebensdauer der aktuell ausführenden aufzurufen <xref:System.AppDomain>.  
   
- WCF wird sichergestellt, dass teilweise vertrauenswürdiger Code voll vertrauenswürdige Berechtigungen erhalten kann, es sei denn, diese Berechtigungen von einer voll vertrauenswürdigen Komponente vor dem Aufrufen der öffentlichen WCF-APIs übergeben werden. Jedoch besteht dabei nicht die Garantie, dass die Gewährung voller Vertrauenswürdigkeit auf einen bestimmten Thread, Vorgang oder eine bestimmte Benutzeraktion beschränkt ist.  
+ WCF wird sichergestellt, dass teilweise vertrauenswürdiger Code voll vertrauenswürdige Berechtigungen abrufen kann, es sei denn, diese Berechtigungen von einer voll vertrauenswürdigen Komponente vor dem Aufruf der öffentlichen WCF-APIs übergeben werden. Jedoch besteht dabei nicht die Garantie, dass die Gewährung voller Vertrauenswürdigkeit auf einen bestimmten Thread, Vorgang oder eine bestimmte Benutzeraktion beschränkt ist.  
   
  Es empfiehlt sich daher, die Erstellung von threadspezifischem Berechtigungskontext durch Aufrufen von <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A> oder <xref:System.Security.PermissionSet.Deny%2A> zu vermeiden. Gewähren oder verweigern Sie stattdessen der Anwendung selbst die Berechtigung, damit <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.Deny%2A> oder <xref:System.Security.PermissionSet.PermitOnly%2A> nicht erforderlich ist.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Xml.Serialization.IXmlSerializable>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Xml.Serialization.IXmlSerializable>

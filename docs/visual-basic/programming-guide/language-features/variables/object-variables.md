@@ -7,24 +7,24 @@ helpviewer_keywords:
 - objects [Visual Basic], accessing
 - object variables [Visual Basic]
 ms.assetid: 6169a196-2b13-4ba5-a205-154bc1b87844
-ms.openlocfilehash: 8383261c1806732c4c8abea9834000f003a848a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 046119664fc0277a6a5305d0cf086b4438b13f9d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649112"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685463"
 ---
 # <a name="object-variables-in-visual-basic"></a>Objektvariablen in Visual Basic
-Zusätzlich zum Speichern von Werten direkt, kann eine Variable auf ein Objekt verweisen. Sie können eine Variable ein Objekt zuweisen, denselben Gründen, die Sie einen beliebigen Wert einer Variablen zuweisen:  
+Zusätzlich zum Speichern von Werten direkt aus, kann eine Variable auf ein Objekt verweisen. Sie können ein Objekt einer Variablen zuweisen, aus denselben Gründen, die Sie einen beliebigen Wert einer Variablen zuweisen:  
   
--   Ein Variablenname ist häufig kürzer und leichter merken als der vollständige Pfad der Methoden und Eigenschaften, die Zugriff auf das Objekt selbst erforderlich.  
+-   Ein Variablenname ist oftmals kürzer und leichter merken als den vollständigen Pfad der Methoden und Eigenschaften, die zum Zugriff auf das Objekt selbst.  
   
--   Verwenden eine Variable, die auf ein Objekt verweist, ist effizienter als wiederholt den Zugriff auf das Objekt selbst, über die erforderlichen Methoden oder Eigenschaften.  
+-   Verwenden eine Variable, die auf ein Objekt verweist, ist effizienter als die wiederholt den Zugriff auf das Objekt selbst, über die erforderlichen Methoden oder Eigenschaften.  
   
--   Sie können ändern, eine Variable, die auf andere Objekte verweisen, während Ihr Code ausgeführt wird.  
+-   Sie können ändern, dass eine Variable, die auf andere Objekte verweisen, während Ihr Code ausgeführt wird.  
   
 ## <a name="making-code-shorter"></a>Verkürzen des Codes  
- Sie können Objektvariablen verwenden, um den Code zu kürzen, den Sie eingeben müssen. Im folgenden Beispiel wird den vollständigen Pfad der Methoden und Eigenschaften den Zugriff auf eine <xref:System.Windows.Forms.Control> Objekt.  
+ Sie können Objektvariablen verwenden, um den Code zu verkürzen, den Sie eingeben müssen. Im folgenden Beispiel wird den vollständigen Pfad der Methoden und Eigenschaften den Zugriff auf eine <xref:System.Windows.Forms.Control> Objekt.  
   
 ```  
 ' Assume Me is a valid Form, or replace Me with a valid Form.  
@@ -33,7 +33,7 @@ Me.ActiveForm.ActiveControl.Location = New Point(100, 100)
 Me.ActiveForm.ActiveControl.Show()  
 ```  
   
- Sie können diesen Code kürzen, und Sie können Ausführung beschleunigt wird, wenn Sie eine Objektvariable für das Steuerelement verwendet. Sie sollten die Objektvariable mit der Klasse, die Sie zuweisen möchten deklarieren (`Control` in diesem Fall). Nachdem Sie die Variable ein Objekt zuweisen, können Sie sie genauso behandeln wie das Objekt zu behandeln, auf dem verwiesen. Festlegen oder Abrufen der Eigenschaften des Objekts, oder verwenden keine der Methoden. Im folgenden Beispiel wird eine Objektvariable, um den Code im vorhergehenden Beispiel zu vereinfachen.  
+ Sie können diesen Code zu verkürzen und Ausführung beschleunigt wird, wenn Sie eine Objektvariablen für das Steuerelement verwenden. Sie sollten deklarieren und mit der Klasse, die Sie zuweisen möchten (`Control` in diesem Fall). Nachdem Sie ein Objekt der Variablen zugewiesen haben, können Sie es genauso behandeln wie behandeln Sie das Objekt auf den er verweist. Sie können festlegen oder Abrufen der Eigenschaften des Objekts oder keine ihrer Methoden verwenden. Im folgenden Beispiel wird eine Objektvariable, um den Code im vorherigen Beispiel zu vereinfachen.  
   
 ```  
 Dim ctrlActv As System.Windows.Forms.Control = Me.ActiveForm.ActiveControl  
@@ -42,9 +42,9 @@ ctrlActv.Location = New Point(100, 100)
 ctrlActv.Show()  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Gewusst wie: Beschleunigen des Zugriffs auf ein Objekt mit langem Qualifizierungspfad](../../../../visual-basic/programming-guide/language-features/variables/how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md)  
- [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Zuweisen von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
- [Werte von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+## <a name="see-also"></a>Siehe auch
+- [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Vorgehensweise: Beschleunigen des Zugriffs auf ein Objekt mit langem Qualifizierungspfad](../../../../visual-basic/programming-guide/language-features/variables/how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md)
+- [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Zuweisen von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [Werte von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

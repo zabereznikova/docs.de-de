@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: f667c9c8aba3e4b2cc78e8875ed0cab2c3e34f07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00ad9b30a354794647f9b4c097732cd572c100b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566763"
 ---
 # <a name="error-creating-win32-resources-lterror-messagegt"></a>Fehler beim Erstellen von Win32-Ressourcen: &lt;Fehlermeldung&gt;
-Visual Basic-Compiler Ruft den Assemblylinker (Al.exe, auch bekannt als Alink) auf, um eine Assembly mit einem Manifest zu erstellen. Der Linker hat einen Fehler beim Erstellen einer speicherinternen Ressource gemeldet. Das kann ein Problem mit der Umgebung sein oder Ihr Computer hat wenig Arbeitsspeicher.  
+Visual Basic-Compiler Ruft die Assembly Linker (Al.exe, auch bekannt als Alink) aus, um eine Assembly mit einem Manifest zu generieren. Der Linker hat einen Fehler beim Erstellen einer speicherinternen Ressource gemeldet. Das kann ein Problem mit der Umgebung sein oder Ihr Computer hat wenig Arbeitsspeicher.  
   
  **Fehler-ID:** BC30136  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Überprüfen Sie die angegebene Fehlermeldung, und wenden Sie sich an das Thema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). für weitere erläuterungen und Hinweise zu erhalten.  
+1.  Überprüfen Sie die angegebene Fehlermeldung, und wenden Sie sich an das Thema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Um weitere erläuterungen und Hinweise.  
   
 2.  Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+
  [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
+- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

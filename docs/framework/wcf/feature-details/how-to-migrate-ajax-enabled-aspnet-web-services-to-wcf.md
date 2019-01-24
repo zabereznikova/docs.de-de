@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF'
+title: 'Vorgehensweise: Migrate AJAX-Enabled ASP.NET Web Services to WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: cd630fa8a583b5d1efdaefaf899cb6e345e7c7ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638287"
 ---
-# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF
+# <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Vorgehensweise: Migrate AJAX-Enabled ASP.NET Web Services to WCF
 Dieses Thema beschreibt Verfahren zum Migrieren von eines einfachen ASP.NET AJAX-Diensts mit einem entsprechenden AJAX-fähigen Windows Communication Foundation (WCF)-Dienst. Es zeigt, wie eine funktional der WCF-Version von ASP.NET AJAX-Dienst zu erstellen. Die beiden Dienste können dann parallel verwendet werden, oder der WCF-Dienst kann verwendet werden, um die ASP.NET AJAX-Dienst zu ersetzen.
 
  Migrieren einer vorhandenen ASP.NET AJAX bietet Service an einen WCF AJAX-Dienst die folgenden Vorteile:
@@ -22,7 +22,7 @@ Dieses Thema beschreibt Verfahren zum Migrieren von eines einfachen ASP.NET AJAX
 
  Der Code, der sich aus den hier besprochenen Verfahren ergibt, wird in dem Beispiel im Anschluss an das Verfahren bereitgestellt.
 
- Weitere Informationen zu einen WCF-Dienst über einen AJAX-aktivierten Endpunkt verfügbar zu machen, finden Sie unter den [Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) Thema.
+ Weitere Informationen zu einen WCF-Dienst über einen AJAX-aktivierten Endpunkt verfügbar zu machen, finden Sie unter den [Vorgehensweise: Verwenden Sie die Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) Thema.
 
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>So erstellen und testen Sie die ASP.NET-Webdienstanwendung
 
@@ -36,7 +36,7 @@ Dieses Thema beschreibt Verfahren zum Migrieren von eines einfachen ASP.NET AJAX
 
 5.  Von der **erstellen** , wählen Sie im Menü **Projektmappe**.
 
-6.  Von der **Debuggen** , wählen Sie im Menü **Starten ohne Debugging**.
+6.  Wählen Sie im Menü **Debuggen** die Option **Starten ohne Debuggen** aus.
 
 7.  Wählen Sie auf der generierten Webseite den Vorgang `HelloWorld` aus.
 
@@ -204,7 +204,7 @@ d.Add("two", 2);
 |Unterschiedskategorie|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |Deserialisieren des leeren Puffers (new byte[0]) in <xref:System.Object> (oder <xref:System.Uri> oder andere Klassen).|SerializationException|null|
-|Serialisierung von <xref:System.DBNull.Value>|{} (oder {"__type": "#System"})|Null|
+|Serialisierung von <xref:System.DBNull.Value>|{} (or {"__type":"#System"})|Null|
 |Serialisierung der privaten Member von [Serializable]-Typen.|serialisiert|nicht serialisiert|
 |Serialisierung der öffentlichen Eigenschaften von <xref:System.Runtime.Serialization.ISerializable>-Typen|nicht serialisiert|serialisiert|
 |"Erweiterungen" von JSON|Entspricht der JSON-Spezifikation, die erfordert, dass Objektmembernamen in Anführungszeichen gesetzt werden müssen ({"a":"hello"}).|Lässt Namen von Objektmembern ohne Anführungszeichen zu ({a:"hello"}).|
@@ -213,4 +213,4 @@ d.Add("two", 2);
 |Escapezeichen|Immer mit einem Schrägstrich (/) als Escapezeichen; lässt nie ungültige JSON-Zeichen ohne Escapezeichen wie "\n" zu.|Mit einem Schrägstrich (/) als Escapezeichen für DateTime-Werte.|
 
 ## <a name="see-also"></a>Siehe auch
- [Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Hinzufügen von Daten zur Zwischenablage'
+title: 'Vorgehensweise: Hinzufügen von Daten in die Zwischenablage'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,32 +8,32 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 6002acfadfd0e688ef432baacbdabffb83890cb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37e46c48be41d0b527e73b15bfff1f069924fa20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682809"
 ---
-# <a name="how-to-add-data-to-the-clipboard"></a>Gewusst wie: Hinzufügen von Daten zur Zwischenablage
-Die <xref:System.Windows.Forms.Clipboard> Klasse enthält Methoden, die Sie für die Interaktion mit der Zwischenablage-Feature des Windows-Betriebssystems verwenden können. Viele Anwendungen verwenden die Zwischenablage als temporäre Repository für Daten. Beispielsweise verwenden Textverarbeitungsprogramme Zwischenablage während Ausschneide- und Einfügevorgänge. Die Zwischenablage eignet sich auch zum Übertragen von Daten aus einer Anwendung in eine andere.  
+# <a name="how-to-add-data-to-the-clipboard"></a>Vorgehensweise: Hinzufügen von Daten in die Zwischenablage
+Die <xref:System.Windows.Forms.Clipboard> -Klasse bietet Methoden, die Sie für die Interaktion mit der Windows-Betriebssystem-Zwischenablage-Funktion verwenden können. Viele Anwendungen verwenden die Zwischenablage als temporäre Repository für Daten. Beispielsweise werden die Zwischenablage von Textverarbeitungsprogrammen während Ausschneiden und Einfügen-Vorgänge verwenden. Die Zwischenablage eignet sich auch zum Übertragen von Daten aus einer Anwendung in eine andere.  
   
- Wenn Sie Daten in die Zwischenablage hinzufügen, können Sie das Datenformat, die angeben, damit andere Anwendungen die Daten erkennen können, ob dieses Format verwendet werden kann. Sie können auch Daten hinzufügen, in die Zwischenablage in mehreren verschiedenen Formaten, um die Anzahl der anderen Anwendungen zu erhöhen, die möglicherweise die Daten verwenden können.  
+ Wenn Sie Daten in die Zwischenablage hinzufügen, können Sie das Format der Daten, die angeben, damit andere Anwendungen die Daten erkennen können, wenn sie dieses Format verwenden können. Sie können auch Daten hinzufügen, in die Zwischenablage in mehreren verschiedenen Formaten, um die Anzahl von anderen Anwendungen zu erhöhen, die möglicherweise die Daten verwenden können.  
   
- Ein Zwischenablageformat ist eine Zeichenfolge, die das Format identifiziert, damit eine Anwendung, die dieses Format wird verwendet, die zugehörigen Daten abrufen kann. Die <xref:System.Windows.Forms.DataFormats> Klasse bietet vordefinierte Formatnamen für Ihre Verwendung. Sie können auch eigene Formatnamen verwenden oder den Typ eines Objekts als Format.  
+ Ein Zwischenablageformat ist eine Zeichenfolge, die das Format identifiziert, so dass eine Anwendung, die dieses Format wird verwendet, die zugehörigen Daten abgerufen werden. Die <xref:System.Windows.Forms.DataFormats> Klasse stellt vordefinierte Formatnamen für Ihre Verwendung. Sie können auch eigene Formatnamen verwenden oder den Typ eines Objekts als Format.  
   
- Verwenden Sie zum Hinzufügen von Daten in einem oder mehreren Formaten in die Zwischenablage die <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> Methode. Sie können jedes Objekt an diese Methode übergeben, aber um Daten in mehreren Formaten hinzuzufügen, müssen Sie zuerst die Daten hinzufügen, auf ein separates Objekt dienen zum Arbeiten mit mehreren Formaten. In der Regel werden Sie Daten aus die Hinzufügen einer <xref:System.Windows.Forms.DataObject>, aber Sie können einen beliebigen Typ, der implementiert die <xref:System.Windows.Forms.IDataObject> Schnittstelle.  
+ Verwenden Sie zum Hinzufügen von Daten in einem oder mehreren Formaten in die Zwischenablage die <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> Methode. Sie können jedes beliebige Objekt an diese Methode übergeben, aber um die Daten in mehreren Formaten hinzufügen, müssen Sie zunächst die Daten hinzufügen, um ein separates Objekt mit mehreren Formaten funktionieren. In der Regel fügen Sie Ihre Daten in eine <xref:System.Windows.Forms.DataObject>, aber Sie können alle Typen, implementieren die <xref:System.Windows.Forms.IDataObject> Schnittstelle.  
   
- In [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], Sie können Daten direkt in die Zwischenablage hinzufügen, mit der neue Methoden, um grundlegende Aufgaben der Zwischenablage zu vereinfachen. Verwenden Sie diese Methoden, bei der Arbeit mit Daten in einem einzelnen, gemeinsamen Format, z. B. Text.  
+ In [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], Sie können Daten direkt in die Zwischenablage hinzufügen, mit der neuen Methoden entwickelt, um grundlegende Aufgaben der Zwischenablage zu vereinfachen. Verwenden Sie diese Methoden, bei der Arbeit mit Daten in einem einzelnen, gemeinsamen Format z. B. Text.  
   
 > [!NOTE]
->  Alle Windows-basierten Anwendungen Freigabe die Zwischenablage. Aus diesem Grund werden die Inhalte können geändert werden, beim Wechsel zu einer anderen Anwendung.  
+>  Alle Teilen Windows-basierten Anwendungen sich die Zwischenablage. Aus diesem Grund werden die Inhalte können geändert werden, wenn Sie in einer anderen Anwendung wechseln.  
 >   
->  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur verwendet werden, in Threads auf Singlethread-Apartment (STA) Modus festgelegt. Zum Verwenden dieser Klasse sicher, dass Ihre `Main` Methode markiert ist, mit der <xref:System.STAThreadAttribute> Attribut.  
+>  Die <xref:System.Windows.Forms.Clipboard> Klasse kann nur in Threads auf Singlethread-Apartment (STA) Modus verwendet werden. Um diese Klasse verwenden zu können, stellen sicher, dass Ihre `Main` Methode ist mit markiert die <xref:System.STAThreadAttribute> Attribut.  
 >   
->  Ein Objekt muss für ihn in die Zwischenablage zu versetzen serialisierbar sein. Um einen Typ serialisierbar zu machen, kennzeichnen Sie ihn mit der <xref:System.SerializableAttribute> Attribut. Wenn Sie ein nicht serialisierbares Objekt an eine Zwischenablage-Methode übergeben, wird die Methode fehl, ohne eine Ausnahme auszulösen. Weitere Informationen zur Serialisierung finden Sie unter <xref:System.Runtime.Serialization>.  
+>  Ein Objekt müssen Sie in der Zwischenablage abgelegt werden serialisierbar sein. Um einen Typ serialisierbar zu machen, markieren Sie sie mit der <xref:System.SerializableAttribute> Attribut. Wenn Sie ein nicht serialisierbares Objekt an eine Zwischenablage-Methode übergeben, wird die Methode fehlschlagen, ohne eine Ausnahme auszulösen. Weitere Informationen zur Serialisierung finden Sie unter <xref:System.Runtime.Serialization>.  
   
-### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Zum Hinzufügen von Daten in einem einzelnen, gemeinsamen-Format in die Zwischenablage  
+### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Zum Hinzufügen von Daten in einem einzelnen, gemeinsamen Format in die Zwischenablage  
   
 1.  Verwenden der <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, oder <xref:System.Windows.Forms.Clipboard.SetText%2A> Methode. Diese Methoden stehen nur in [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
@@ -42,24 +42,24 @@ Die <xref:System.Windows.Forms.Clipboard> Klasse enthält Methoden, die Sie für
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Zum Hinzufügen von Daten in einem benutzerdefinierten Format in die Zwischenablage  
   
-1.  Verwenden der <xref:System.Windows.Forms.Clipboard.SetData%2A> Methode mit einem benutzerdefinierten Formatnamen. Diese Methode ist nur in verfügbar [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1.  Verwenden der <xref:System.Windows.Forms.Clipboard.SetData%2A> Methode mit einem benutzerdefinierten Format-Namen. Diese Methode ist nur in verfügbar [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
-     Sie können auch die vordefinierten Formatnamen mit der <xref:System.Windows.Forms.Clipboard.SetData%2A> Methode. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DataFormats>.  
+     Sie können auch die Namen von vordefinierten Format mit der <xref:System.Windows.Forms.Clipboard.SetData%2A> Methode. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.DataFormats>.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Zum Hinzufügen von Daten in mehreren Formaten in die Zwischenablage  
+### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Zum Hinzufügen von Daten in die Zwischenablage in mehreren Formaten  
   
-1.  Verwenden der <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> Methode und übergeben einer <xref:System.Windows.Forms.DataObject> , die Ihre Daten enthält. Verwenden Sie diese Methode zum Hinzufügen von Daten in die Zwischenablage in Versionen vor [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1.  Verwenden der <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> -Methode und übergeben Sie einen <xref:System.Windows.Forms.DataObject> , die Ihre Daten enthält. Sie müssen diese Methode verwenden, zum Hinzufügen von Daten in die Zwischenablage auf Versionen vor [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)  
- [Gewusst wie: Abrufen von Daten aus der Zwischenablage](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
+## <a name="see-also"></a>Siehe auch
+- [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+- [Vorgehensweise: Abrufen von Daten aus der Zwischenablage](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2bf8848851dc99c60b8c151ed34cd536fa9a8fed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f946179fc31adebc8e8fc67c394e0b55a876f49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641329"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType-Enumeration
 Stellt Werte bereit, die den im nativen Code verknüpften Typ angeben.  
@@ -44,7 +44,7 @@ typedef enum
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`nltNone`|Gibt an, dass keines der Schlüsselwörter angegeben werden.|  
+|`nltNone`|Gibt an, dass keines der Schlüsselwörter angegeben sind.|  
 |`nltAnsi`|Gibt an, dass ein ANSI-Schlüsselwort angegeben ist.|  
 |`nltUnicode`|Gibt an, dass ein Unicode-Schlüsselwort angegeben wird|  
 |`nltAuto`|Gibt an, dass ein Schlüsselwort "Auto" angegeben ist.|  
@@ -52,13 +52,13 @@ typedef enum
 |`nltMaxValue`|Nicht verwendet.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

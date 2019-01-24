@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eba265b727d00690ab77c6ae831e954d59df7c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9e650b3435bffd8d40bba24100c13f5071fa5dc5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411609"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630839"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks-Methode
-Ruft einen Wert, der angibt, ob die verwalteten Rückrufe zurzeit für den angegebenen Thread in der Warteschlange befinden.  
+Ruft einen Wert, der angibt, ob die verwalteten Rückrufe derzeit für den angegebenen Thread in der Warteschlange befinden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,17 +41,17 @@ HRESULT HasQueuedCallbacks (
  [in] Ein Zeiger auf ein "ICorDebugThread"-Objekt, das den Thread darstellt.  
   
  `pbQueued`  
- [out] Ein Zeiger auf einen Wert, der `true` , wenn die verwalteten Rückrufe derzeit in der Warteschlange für den angegebenen Thread ist, andernfalls werden `false`.  
+ [out] Ein Zeiger auf einen Wert `true` , wenn die verwalteten Rückrufe aktuell, in der Warteschlange für den angegebenen Thread ist, andernfalls sind `false`.  
   
- Wenn Null, für angegeben wird die `pThread` Parameter `HasQueuedCallbacks` zurück `true` falls derzeit verwaltete Rückrufe in der Warteschlange für einen beliebigen Thread.  
+ Wenn Null, für angegeben wird die `pThread` Parameter `HasQueuedCallbacks` zurück `true` Wenn sind verwaltete Rückrufe in der Warteschlange für einen beliebigen Thread.  
   
 ## <a name="remarks"></a>Hinweise  
- Rückrufe werden verteilter einzeln nacheinander, jedes Mal [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) aufgerufen wird. Der Debugger kann dieses Flag überprüfen Sie, ob mehrere Debug-Ereignisse gemeldet, die gleichzeitig ausgeführt werden sollen.  
+ Rückrufe werden verteilten einzeln nacheinander, jedes Mal [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) aufgerufen wird. Der Debugger kann dieses Flag überprüfen, wenn sie mehrere Debug-Ereignisse melden, die gleichzeitig auftreten will.  
   
- Wenn Debug-Ereignisse in der Warteschlange befinden, sind sie bereits aufgetreten, sodass der Debugger die gesamte Warteschlange, um sicherzustellen, dass des Zustands der zu debuggenden Komponente ausgleichen muss. (Rufen `ICorDebugController::Continue` Ausgleich die Warteschlange.) Wenn die Warteschlange zwei Debugereignisse Thread enthält z. B. *X*, und der Debugger hält den Thread *X* nach der ersten Debug-Ereignis und ruft dann `ICorDebugController::Continue`, das zweite Debugereignis für Thread *X* wird weitergeleitet werden, obwohl der Thread angehalten wurde.  
+ Wenn Debugereignisse in der Warteschlange befinden, haben sie bereits erfolgt, damit der Debugger die gesamte Warteschlange aus, um sicherzustellen, dass des Zustands der zu debuggenden Komponente ausgleichen muss. (Rufen `ICorDebugController::Continue` an die Warteschlange zu leeren.) Wenn die Warteschlange zwei Debugereignisse Thread enthält z. B. *X*, und der Debugger hält die Threads *X* nach dem die erste Debug-Ereignis und ruft dann `ICorDebugController::Continue`, das zweite Debugereignis für Thread *X* wird weitergeleitet werden, auch wenn der Thread angehalten wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -59,5 +59,5 @@ HRESULT HasQueuedCallbacks (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+

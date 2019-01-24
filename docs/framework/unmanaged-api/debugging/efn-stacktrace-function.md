@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39a249108d10e5dc382775378e2d6b84bba87356
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28e270be8f16de9558e5d5440d621056a3114967
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636390"
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace-Funktion
 Stellt eine Textdarstellung einer verwalteten Stapelüberwachung und ein Array von `CONTEXT`-Datensätzen bereit, einen Datensatz für jeden Übergang zwischen nicht verwaltetem und verwaltetem Code.  
@@ -42,7 +42,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 #### <a name="parameters"></a>Parameter  
  `Client`  
- [in] Der Client, der debuggt wird.  
+ [in] Der Client, der gedebuggt wird.  
   
  `wszTextOut`  
  [out] Der Text-Darstellung der stapelüberwachung.  
@@ -51,29 +51,29 @@ HRESULT CALLBACK _EFN_StackTrace(
  [out] Ein Zeiger auf die Anzahl der Zeichen in `wszTextOut`.  
   
  `pTransitionContexts`  
- [out] Das Array von Übergangskontexten.  
+ [out] Das Array von Übergang Kontexte.  
   
  `puiTransitionContextCount`  
- [out] Ein Zeiger auf die Anzahl von Übergangskontexten im Array.  
+ [out] Ein Zeiger auf die Anzahl der von Übergangskontexten im Array.  
   
  `uiSizeOfContext`  
  [in] Die Größe der Context-Struktur.  
   
  `Flags`  
- [in] Festgelegt auf 0 oder SOS_STACKTRACE_SHOWADDRESSES (0 x 01) anzuzeigende EBP-Register und die EINGABETASTE Stack-Pointer (ESP) vor jeder `module!functionname` Zeile.  
+ [in] Auf 0 oder SOS_STACKTRACE_SHOWADDRESSES (0 x 01) festgelegt, um die EBP-Register und die EINGABETASTE Stack Pointer (ESP) vor jeder `module!functionname` Zeile.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `_EFN_StackTrace` Struktur kann von einem programmgesteuerten WinDbg-Schnittstelle aufgerufen werden. Parameter werden wie folgt verwendet:  
+ Die `_EFN_StackTrace` Struktur kann von einer programmgesteuerten Schnittstelle von WinDbg aufgerufen werden. Parameter werden wie folgt verwendet:  
   
--   Wenn `wszTextOut` ist null und `puiTextLength` ist ungleich null, die Funktion gibt die Länge der Zeichenfolge in `puiTextLength`.  
+-   Wenn `wszTextOut` ist null und `puiTextLength` ist nicht null ist, die Funktion gibt die Länge der Zeichenfolge in `puiTextLength`.  
   
--   Wenn `wszTextOut` ist nicht null ist, speichert die Funktion Text in `wszTextOut` bis zu dessen Speicherort vom `puiTextLength`. Es wurde erfolgreich ausgeführt, wenn ausreichend Platz im Puffer oder E_OUTOFMEMORY zurückgegeben wurde, wenn der Puffer nicht groß genug sind, wurde.  
+-   Wenn `wszTextOut` ist nicht null ist, speichert die Funktion Text in `wszTextOut` bis zu dessen Speicherort vom `puiTextLength`. Es zurückgegeben war es genügend Platz im Puffer oder E_OUTOFMEMORY zurückgegeben, wenn der Puffer nicht groß genug war erfolgreich.  
   
--   Der Übergangsteil der Funktion wird ignoriert, wenn `pTransitionContexts` und `puiTransitionContextCount` sind beide null. In diesem Fall stellt die Funktion Aufrufern nur die Funktionsnamen Textausgabe.  
+-   Der Übergangsteil der Funktion wird ignoriert, wenn `pTransitionContexts` und `puiTransitionContextCount` beide null sind. In diesem Fall stellt die Funktion Aufrufern nur die Funktionsnamen Textausgabe.  
   
--   Wenn `pTransitionContexts` ist null und `puiTransitionContextCount` ist ungleich null, die Funktion gibt die erforderliche Anzahl von Kontexteinträgen im `puiTransitionContextCount`.  
+-   Wenn `pTransitionContexts` ist null und `puiTransitionContextCount` ist nicht null ist, gibt die Funktion die erforderliche Anzahl von Kontext-Einträge im `puiTransitionContextCount`.  
   
--   Wenn `pTransitionContexts` ist nicht null ist, behandelt die Funktion sie als Array von Strukturen der Länge `puiTransitionContextCount`. Die Größe der Struktur erhält vom `uiSizeOfContext`, muss die Größe des [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) oder `CONTEXT` für die Architektur.  
+-   Wenn `pTransitionContexts` ist nicht null ist, die Funktion behandelt es als ein Array von Strukturen der Länge `puiTransitionContextCount`. Die Größe der Struktur erhält von `uiSizeOfContext`, muss die Größe des [SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md) oder `CONTEXT` für die Architektur.  
   
 -   `wszTextOut` Im folgenden Format geschrieben:  
   
@@ -84,22 +84,22 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   Wenn der Offset im Hexadezimalformat 0 x 0 ist, wird kein Offset geschrieben.  
+-   Wenn der Offset in hexadezimal 0 x 0 ist, wird kein Offset geschrieben.  
   
--   Es ist kein verwalteter Code auf dem Thread derzeit im Kontext, gibt die Funktion SOS_E_NOMANAGEDCODE zurück.  
+-   Es ist kein verwalteter Code für den Thread aktuell im Kontext, gibt die Funktion SOS_E_NOMANAGEDCODE zurück.  
   
--   Die `Flags` Parameter ist entweder 0 oder SOS_STACKTRACE_SHOWADDRESSES EBP und ESP vor jeder anzeigen `module!functionname` Zeile. Standardmäßig ist es 0.  
+-   Die `Flags` Parameter ist entweder 0 oder SOS_STACKTRACE_SHOWADDRESSES um EBP und ESP vor jeder `module!functionname` Zeile. Standardmäßig ist es 0.  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
     ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** SOS_Stacktrace.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

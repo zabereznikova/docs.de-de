@@ -7,12 +7,12 @@ helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d5909e6ee7436b7e4f7baa30bfe81eb8ba5441e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625748"
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (generischer Modifizierer) (Visual Basic)
 Das Schlüsselwort `In` gibt für generische Typparameter an, dass der Typparameter kontravariant ist.  
@@ -25,11 +25,11 @@ Das Schlüsselwort `In` gibt für generische Typparameter an, dass der Typparame
 ## <a name="rules"></a>Regeln  
  Sie können das `In`-Schlüsselwort in generischen Schnittstellen und Delegaten verwenden.  
   
- Ein Typparameter kann kontravariant in eine generische Schnittstelle oder ein Delegattyp deklariert werden, wenn er nicht als einen Methodenrückgabetyp verwendet und nur als eine Art von Methodenargumenten verwendet wird. `ByRef` nicht mit Parametern kovariant oder kontravariant.  
+ Ein Typparameter kann als kontravariant in einer generischen Schnittstelle oder Delegaten deklariert werden, wenn er das nicht als Methodenrückgabetyp verwendet und nur als Typ von Methodenargumenten verwendet wird. `ByRef` Parameter nicht möglich, kovariant oder kontravariant.  
   
  Kovarianz und Kontravarianz werden für Verweistypen unterstützt und für Werttypen nicht unterstützt.  
   
- In Visual Basic können Sie Ereignisse in Schnittstellen über Kontravariante deklarieren, ohne den Delegattyp angeben. Darüber hinaus kontravarianten Schnittstellen keine geschachtelten Klassen, Enumerationen und Strukturen, aber geschachtelte Schnittstellen.  
+ In Visual Basic können Sie Ereignisse in Schnittstellen mit kontravarianten deklarieren, ohne Typ des Delegaten angeben. Darüber hinaus kontravarianten Schnittstellen können keine Klassen, Enumerationen und Strukturen geschachtelte allerdings geschachtelte Schnittstellen.  
   
 ## <a name="behavior"></a>Verhalten  
  Mit einer Schnittstelle, die einen kontravarianten Typparameter hat, kann ihre Methode mehr abgeleitete Typen, als durch den Typparameter der Schnittstelle angegeben, akzeptieren. Da z.B. in .NET Framework 4 Typ T in der Schnittstelle <xref:System.Collections.Generic.IComparer%601> kontravariant ist, können Sie ein Objekt des `IComparer(Of Person)`-Typs an ein Objekt des `IComparer(Of Employee)`-Typs zuweisen, ohne besondere Konvertierungsmethoden zu verwenden, wenn `Person` von `Employee` erbt.  
@@ -46,6 +46,6 @@ Das Schlüsselwort `In` gibt für generische Typparameter an, dass der Typparame
   
  [!code-vb[vbVarianceKeywords#2](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/in-generic-modifier_2.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Varianz in generischen Schnittstellen](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>Siehe auch
+- [Varianz in generischen Schnittstellen](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

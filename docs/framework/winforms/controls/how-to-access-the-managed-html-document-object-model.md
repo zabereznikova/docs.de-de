@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Zugreifen auf das verwaltete HTML-Dokumentobjektmodell'
+title: 'Vorgehensweise: Zugriff auf das verwaltete HTML-Dokumentobjektmodell'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 175a29322fe2af13992e267b3fc3308b70212272
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8799ac9897771a7cdf5a1e473914f461e435c061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527660"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637150"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>Gewusst wie: Zugreifen auf das verwaltete HTML-Dokumentobjektmodell
+# <a name="how-to-access-the-managed-html-document-object-model"></a>Vorgehensweise: Zugriff auf das verwaltete HTML-Dokumentobjektmodell
 Sie können auf das verwaltete HTML-Dokumentobjektmodell (DOM) von zwei Anwendungsarten aus zugreifen:  
   
 -   Eine Windows Forms-Anwendung (EXE), die das verwaltete <xref:System.Windows.Forms.WebBrowser>-Steuerelement gehostet hat. Diese beiden Technologien ergänzen sich gegenseitig, wobei das <xref:System.Windows.Forms.WebBrowser>-Steuerelement dem Benutzer die Seite anzeigt und das HTML-DOM die logische Struktur des Dokuments darstellt.  
@@ -30,7 +30,7 @@ Sie können auf das verwaltete HTML-Dokumentobjektmodell (DOM) von zwei Anwendun
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>So greifen Sie von einem in Internet Explorer gehosteten UserControl auf das DOM zu  
   
-1.  Erstellen Sie Ihre eigene benutzerdefinierte abgeleitete Klasse der <xref:System.Windows.Forms.UserControl>-Klasse. Weitere Informationen finden Sie unter [Gewusst wie: Erstellen von zusammengesetzten Steuerelementen](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md).  
+1.  Erstellen Sie Ihre eigene benutzerdefinierte abgeleitete Klasse der <xref:System.Windows.Forms.UserControl>-Klasse. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md).  
   
 2.  Platzieren Sie den folgenden Code innerhalb des Load-Ereignishandlers für das <xref:System.Windows.Forms.UserControl>:  
   
@@ -45,5 +45,5 @@ Sie können auf das verwaltete HTML-Dokumentobjektmodell (DOM) von zwei Anwendun
   
 1.  Die Anwendung oder das <xref:System.Windows.Forms.UserControl> setzen volle Vertrauenswürdigkeit voraus, um auf das verwaltete HTML-DOM zuzugreifen. Wenn Sie eine Windows Forms-Anwendung mit [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] bereitstellen, können Sie volle Vertrauenswürdigkeit entweder über erweiterte Berechtigungen oder die Bereitstellung vertrauenswürdiger Anwendungen anfordern; ausführliche Informationen finden Sie unter [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications).  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden des verwalteten HTML-Dokumentobjektmodells](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwenden des verwalteten HTML-Dokumentobjektmodells](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

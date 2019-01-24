@@ -1,5 +1,5 @@
 ---
-title: '&amp; Operator (Visual Basic)'
+title: '&amp; -Operator (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-ms.openlocfilehash: 28d8cdb22974d77edf055ab9b2c6c767872e6783
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eac99ba38841f6972b5bdc8a01f816519af06288
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604301"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684670"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp; Operator (Visual Basic)
+# <a name="amp-operator-visual-basic"></a>&amp; -Operator (Visual Basic)
 Generiert eine zeichenfolgenverkettung aus zwei Ausdrücken.  
   
 ## <a name="syntax"></a>Syntax  
@@ -31,18 +31,18 @@ result = expression1 & expression2
  Erforderlich. Alle `String` oder `Object` Variable.  
   
  `expression1`  
- Erforderlich. Jeder Ausdruck mit einem Datentyp, der erweitert `String`.  
+ Erforderlich. Jeder Ausdruck mit einem Datentyp, der auf erweitert wird `String`.  
   
  `expression2`  
- Erforderlich. Jeder Ausdruck mit einem Datentyp, der erweitert `String`.  
+ Erforderlich. Jeder Ausdruck mit einem Datentyp, der auf erweitert wird `String`.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Datentyp des `expression1` oder `expression2` ist nicht `String` jedoch erweitert wird, um `String`, wird es in konvertiert `String`. Wenn entweder der Datentypen wird nicht erweitert werden, um `String`, generiert der Compiler einen Fehler.  
+ Wenn der Datentyp des `expression1` oder `expression2` nicht `String` jedoch erweitert, um `String`, wird eine Konvertierung in `String`. Wenn entweder der Datentypen ist nicht zu erweitert `String`, generiert der Compiler einen Fehler.  
   
- Der Datentyp des `result` ist `String`. Wenn einer oder beide Ausdrücke [nichts](../../../visual-basic/language-reference/nothing.md) oder einen Wert von <xref:System.DBNull.Value?displayProperty=nameWithType>, werden sie behandelt, als eine Zeichenfolge mit dem Wert "".  
+ Der Datentyp des `result` ist `String`. Wenn eine oder beide Ausdrücke [nichts](../../../visual-basic/language-reference/nothing.md) oder den Wert der <xref:System.DBNull.Value?displayProperty=nameWithType>, werden sie behandelt, als eine Zeichenfolge mit dem Wert "".  
   
 > [!NOTE]
->  Die `&` Operator kann *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der betreffenden Klasse oder Struktur hat. Wenn im Code dieser Operator auf eine solche Klasse oder Struktur verwendet, achten Sie darauf, dass Sie dessen neu definierten Verhalten verstehen. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+>  Die `&` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Wenn Ihr Code dieser Operator für diese eine Klasse oder Struktur verwendet, achten Sie darauf, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 > [!NOTE]
 >  Das kaufmännische und-Zeichen (&) können auch zum Identifizieren von Variablen als Typ verwendet werden `Long`. Weitere Informationen finden Sie unter [Typzeichen](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md).  
@@ -52,9 +52,9 @@ result = expression1 & expression2
   
  [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operator_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [&=-Operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
- [Verkettungsoperatoren](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Verkettungsoperatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+## <a name="see-also"></a>Siehe auch
+- [&=-Operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
+- [Verkettungsoperatoren](../../../visual-basic/language-reference/operators/concatenation-operators.md)
+- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Verkettungsoperatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)

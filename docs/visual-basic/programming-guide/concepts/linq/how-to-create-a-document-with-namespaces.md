@@ -1,15 +1,15 @@
 ---
-title: 'Gewusst wie: Erstellen eines Dokuments mit Namespaces (LINQ to XML) (Visual Basic)'
+title: 'Vorgehensweise: Erstellen eines Dokuments mit Namespaces (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e0f24b509cdac86f652fb41197c2594b4c474fbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631294"
 ---
-# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Gewusst wie: Erstellen eines Dokuments mit Namespaces (LINQ to XML) (Visual Basic)
+# <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Vorgehensweise: Erstellen eines Dokuments mit Namespaces (LINQ to XML) (Visual Basic)
 In diesem Thema wird das Erstellen eines Dokuments mit Namespaces in Visual Basic beschrieben.  
   
  Bei Verwendung von XML-Literalen in Visual Basic können Benutzer einen globalen XML-Standardnamespace definieren. Dieser Namespace ist der Standardnamespace für die XML-Literale und für die XML-Eigenschaften. Der XML-Standardnamespace kann auf Projekt- oder auf Dateiebene definiert werden. Bei Definition auf Dateiebene wird der auf der Projektebene definierte Standardnamespace außer Kraft gesetzt.  
@@ -114,5 +114,5 @@ End Module
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

@@ -2,12 +2,12 @@
 title: SQL Server-Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 7f710af5c05942d2ff1718c9d59d4d776f45c6e7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635038"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server-Schemaauflistungen
 Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben den allgemeinen Schemaauflistungen auch weitere Schemaauflistungen. Die Schemaauflistungen sind je nach verwendeter SQL Server-Version verschieden. Um die Liste der unterstützten schemaauflistungen zu ermitteln, rufen Sie die **GetSchema** -Methode ohne Argumente oder mit dem schemaauflistungsnamen "MetaDataCollections". Dadurch wird <xref:System.Data.DataTable> mit einer Liste der unterstützten Schemaauflistungen, der Anzahl der von diesen Schemaauflistungen unterstützten Einschränkungen und der Anzahl der von diesen Schemaauflistungen verwendeten Bezeichnerteilen zurückgegeben.  
@@ -17,7 +17,7 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
 |database_name|Zeichenfolge|Name der Datenbank.|  
-|DBID|Int16|Datenbank-ID.|  
+|dbid|Int16|Datenbank-ID.|  
 |create_date|DateTime|Erstellungsdatum der Datenbank.|  
   
 ## <a name="foreign-keys"></a>ForeignKeys  
@@ -51,7 +51,7 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
   
 |Spaltenname|DataType|Beschreibung|  
 |----------------|--------------|-----------------|  
-|type_desc|Zeichenfolge|Der Index weist einen der folgenden Typen auf:<br /><br /> -HEAP<br />-CLUSTER<br />-NICHT GRUPPIERTE<br />-XML<br />-RÄUMLICHE|  
+|type_desc|Zeichenfolge|Der Index weist einen der folgenden Typen auf:<br /><br /> -HEAP<br />-CLUSTER<br />-NICHT GRUPPIERTE<br />-   XML<br />-RÄUMLICHE|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -76,7 +76,7 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |SPECIFIC_SCHEMA|Zeichenfolge|Spezifischer Name des Schemas.|  
 |SPECIFIC_NAME|Zeichenfolge|Spezifischer Name des Katalogs.|  
 |ROUTINE_CATALOG|Zeichenfolge|Katalog, zu dem die gespeicherte Prozedur gehört.|  
-|FÜR ROUTINE_SCHEMA|Zeichenfolge|Schema, das die gespeicherte Prozedur enthält.|  
+|ROUTINE_SCHEMA|Zeichenfolge|Schema, das die gespeicherte Prozedur enthält.|  
 |ROUTINE_NAME|Zeichenfolge|Name der gespeicherten Prozedur.|  
 |ROUTINE_TYPE|Zeichenfolge|Gibt PROCEDURE für gespeicherte Prozeduren und FUNCTION für Funktionen zurück.|  
 |CREATED|DateTime|Zeitpunkt der Erstellung der Prozedur.|  
@@ -255,6 +255,6 @@ Der Microsoft .NET Framework-Datenanbieter für SQL Server unterstützt neben 
 |Create_Date|DateTime|Datum, an dem die Assembly erstellt/registriert wurde.|  
 |Permission_set_desc|Zeichenfolge|Der angezeigte Name für die Berechtigungen/Sicherheitsebene der Assembly.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

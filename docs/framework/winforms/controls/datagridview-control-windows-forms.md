@@ -13,19 +13,19 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 2ef387437befe3df67e261b719140456a3fde9dd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 14ba24b414de0732be418210ec44613f840136d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639119"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView-Steuerelement (Windows Forms)
 Das `DataGridView`-Steuerelement ermöglicht die flexible Anzeige von Daten in tabellarischer Form. Sie können das `DataGridView`-Steuerelement verwenden, um schreibgeschützte Ansichten mit kleinen Datenmengen anzuzeigen, oder Sie können es skalieren, um bearbeitbare Ansichten von sehr umfangreichen Datasets anzuzeigen.  
   
  Es gibt mehrere Möglichkeiten zum Erweitern des `DataGridView`-Steuerelements, um Ihre Anwendungen mit benutzerdefinierten Verhaltensweisen auszustatten. So können Sie beispielsweise programmgesteuert Ihre eigenen Sortieralgorithmen angeben und eigene Zelltypen erstellen. Die Darstellung des `DataGridView`-Steuerelements kann mithilfe mehrerer Eigenschaften ganz einfach angepasst werden. Als Datenquelle können viele Arten von Datenspeichern verwendet werden, oder das `DataGridView`-Steuerelement kann ohne eine hieran gebundene Datenquelle ausgeführt werden.  
   
- In den Themen in diesem Abschnitt werden die Konzepte und Techniken beschrieben, die Sie verwenden können, um `DataGridView`-Features in Ihre Anwendungen einzubinden.  
+ In den Themen in diesem Abschnitt werden die Konzepte und Techniken beschrieben, die Sie verwenden können, um `DataGridView`-Funktionen in Ihre Anwendungen einzubinden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über das DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
@@ -82,5 +82,5 @@ Das `DataGridView`-Steuerelement ermöglicht die flexible Anzeige von Daten in t
  <xref:System.Windows.Forms.BindingSource>  
  Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.BindingSource>-Komponente. Das <xref:System.Windows.Forms.DataGridView>-Steuerelement und die <xref:System.Windows.Forms.BindingSource>-Komponente sind auf eine enge Zusammenarbeit ausgelegt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Implementieren eines Suchproxys
 ms.date: 03/30/2017
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
-ms.openlocfilehash: 0c7086e0eecea6cc2d7494d6afda0abf056ba758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2f687912b966b03c17206f369b46ffd28d019d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634518"
 ---
 # <a name="implementing-a-discovery-proxy"></a>Implementieren eines Suchproxys
 In diesem Thema werden die Schritte beschrieben, die zum Implementieren eines Suchproxys erforderlich sind. Ein Suchproxy ist ein eigenständiger Dienst, der ein Repository mit Diensten enthält. Clients können einen Suchproxy abfragen, um nach erkennbaren Diensten, die für den Proxy verfügbar sind. Die Art und Weise, wie ein Proxy mit Diensten aufgefüllt wird, hängt von der Implementierung ab. Ein Suchproxy kann z. B. eine Verbindung zu einem vorhandenen Dienstrepository herstellen und diese Informationen erkennbar machen, ein Administrator kann einem Proxy erkennbare Dienste mithilfe einer Verwaltungs-API hinzufügen, oder ein Suchproxy kann seinen internen Cache mithilfe der Ankündigungsfunktionalität aktualisieren.  
@@ -20,7 +20,7 @@ In diesem Thema werden die Schritte beschrieben, die zum Implementieren eines Su
  [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
  Beschreibt, wie Sie einen Suchproxy implementieren.  
   
- [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ [Vorgehensweise: Implementieren eines ermittelbaren Diensts, das beim Suchproxy registriert.](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
  Beschreibt, wie einen WCF-Dienst erkennbaren zu implementieren, der beim suchproxy registriert.  
   
  [Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
@@ -29,6 +29,6 @@ In diesem Thema werden die Schritte beschrieben, die zum Implementieren eines Su
  [Vorgehensweise: Testen des Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)  
  Beschreibt, wie Sie den Code testen, den Sie in den vorherigen drei Themen geschrieben haben.  
   
-## <a name="see-also"></a>Siehe auch  
- [WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
- [Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)
+## <a name="see-also"></a>Siehe auch
+- [WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und Client](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue Schnittstelle1
+title: ICorDebugHeapValue-Schnittstelle1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c510912412f2344dfd92d6ab2c41c35c1f237ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a87790647ed8896f072aa8e943e31fa1980e3f62
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415700"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622857"
 ---
-# <a name="icordebugheapvalue-interface1"></a>ICorDebugHeapValue Schnittstelle1
+# <a name="icordebugheapvalue-interface1"></a>ICorDebugHeapValue-Schnittstelle1
 Eine Unterklasse von "ICorDebugValue", die ein Objekt darstellt, die von der Garbage Collector der common Language Runtime (CLR) gesammelt wurden.  
   
 ## <a name="methods"></a>Methoden  
@@ -31,7 +31,7 @@ Eine Unterklasse von "ICorDebugValue", die ein Objekt darstellt, die von der Gar
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |[CreateRelocBreakpoint-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|Nicht implementiert.|  
-|[IsValid-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Ruft einen Wert, der angibt, ob das Objekt von diesem dargestellt `ICorDebugHeapValue` ist ungültig oder wurde durch den Garbage Collector freigegeben wurde. Diese Methode ist in .NET Framework, Version 2.0 veraltet.|  
+|[IsValid-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Ruft einen Wert, der angibt, ob das Objekt von diesem dargestellt `ICorDebugHeapValue` ist ungültig, oder durch den Garbage Collector zurückgefordert wurde. Diese Methode wurde in .NET Framework, Version 2.0 als veraltet markiert.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -39,7 +39,7 @@ Eine Unterklasse von "ICorDebugValue", die ein Objekt darstellt, die von der Gar
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -47,8 +47,8 @@ Eine Unterklasse von "ICorDebugValue", die ein Objekt darstellt, die von der Gar
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-    
-    
-    
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+
+
+
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

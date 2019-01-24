@@ -12,12 +12,12 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: 955a3b6a2f7dc1d0e9823ed6d500ab7f7f9fe5b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa9a1942903dff6f673d87b67ebcad047a410425
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624781"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop-Anweisung (Visual Basic)
 Hält die Ausführung.  
@@ -29,17 +29,17 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Sie können platzieren `Stop` -Anweisungen an einer beliebigen Stelle in Prozeduren Ausführung zu unterbrechen. Mithilfe der `Stop` -Anweisung entspricht dem Festlegen eines Haltepunkts im Code.  
+ Sie können platzieren `Stop` -Anweisungen an einer beliebigen Stelle in Prozeduren, die Ausführung anzuhalten. Mithilfe der `Stop` -Anweisung entspricht dem Festlegen eines Haltepunkts im Code.  
   
- Die `Stop` Anweisung hält die Ausführung, aber im Gegensatz zu `End`, schließen Sie alle Dateien oder keine Variablen löschen, es sei denn, sie in eine kompilierte ausführbare Datei (.exe) entdeckt wird.  
+ Die `Stop` Anweisung hält die Ausführung, aber im Gegensatz zu `End`, keine Dateien schließen oder löschen Sie alle Variablen, es sei denn, es in eine kompilierte ausführbare Datei (.exe)-Datei gefunden wird.  
   
 > [!NOTE]
->  Wenn die `Stop` -Anweisung im Code, der außerhalb der integrierten Entwicklungsumgebung (IDE) ausgeführt wird, wird der Debugger aufgerufen. Dies gilt unabhängig davon, ob der Code im Debuggen "oder" Retail-Modus kompiliert wurde.  
+>  Wenn die `Stop` -Anweisung im Code, der außerhalb der integrierten Entwicklungsumgebung (IDE) ausgeführt wird, wird der Debugger aufgerufen. Dies gilt unabhängig davon, ob der Code im Debug-oder Retailmodus kompiliert wurde.  
   
 ## <a name="example"></a>Beispiel  
- Dieses Beispiel verwendet die `Stop` Anweisung Anhalten der Ausführung für jede Iteration durch die `For...Next` Schleife.  
+ Dieses Beispiel verwendet die `Stop` Anweisung, um die Ausführung bei jeder Iteration der `For...Next` Schleife.  
   
  [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/stop-statement_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [End-Anweisung](../../../visual-basic/language-reference/statements/end-statement.md)
+## <a name="see-also"></a>Siehe auch
+- [End-Anweisung](../../../visual-basic/language-reference/statements/end-statement.md)

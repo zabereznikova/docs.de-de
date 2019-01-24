@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5007e07340621fa76dc37a48eaf8c17bc048339
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 219b511662a2e59fb6e0e55b6630bd54015fcc79
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620096"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Kompatibilität und Migration von Richtlinien für die Codezugriffssicherheit
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Der Richtlinienteil für Codezugriffssicherheit (CAS) ist seit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] veraltet. Folglich Sie ggf. kompilierungswarnungen Laufzeitausnahmen Wenn Sie die veralteten Richtlinientypen und Elemente rufen [explizit](#explicit_use) oder [implizit](#implicit_use) (durch andere Typen oder Member).  
+ Der Richtlinienteil für Codezugriffssicherheit (CAS) ist seit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] veraltet. Daher treten ggf. compilerwarnungen und Runtime-Ausnahmen, wenn Sie die veralteten Richtlinientypen und Elemente aufrufen [explizit](#explicit_use) oder [implizit](#implicit_use) (über andere Typen und Member).  
   
  Sie können die Warnungen und Fehler folgendermaßen vermeiden:  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33393246"
   
      \- oder –  
   
--   Mithilfe der [< NetFx40_LegacySecurityPolicy >-Konfigurationselements](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) , die legacy-CAS-Richtlinienverhalten Verhalten zu aktivieren.  
+-   Mithilfe der [< NetFx40_LegacySecurityPolicy >-Konfigurationselement](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) in die legacy-CAS-Richtlinienverhalten deaktivieren.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
@@ -116,19 +116,19 @@ ms.locfileid: "33393246"
 -   <xref:System.AppDomain.IsFullyTrusted%2A?displayProperty=nameWithType>  
   
 ### <a name="application-domain-sandboxing"></a>Sandkasten für Anwendungsdomänen  
- Die Methode <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> wird in der Regel verwendet, um Assemblys in einer Anwendungsdomäne in einem Sandkasten auszuführen. Die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] stellt Elemente, die keine verwenden <xref:System.Security.Policy.PolicyLevel> für diesen Zweck. Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigen Code in einem Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
+ Die Methode <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> wird in der Regel verwendet, um Assemblys in einer Anwendungsdomäne in einem Sandkasten auszuführen. Die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] macht die Elemente, die keine verwenden <xref:System.Security.Policy.PolicyLevel> für diesen Zweck. Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
   
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Bestimmen eines sicheren oder geeigneten Berechtigungssatzes für teilweise vertrauenswürdigen Code  
- Hosts müssen häufig die Berechtigungen ermitteln, die für das Ausführen von gehostetem Code in einem Sandkasten geeignet sind. Bevor Sie die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], CAS-Richtlinie bereitgestellten eine Möglichkeit hierfür mit der <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> Methode. Als Ersatz [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] bietet die <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> -Methode, die einen sicheren Standardberechtigungssatz für die bereitgestellten Beweisinformationen zurückgibt.  
+ Hosts müssen häufig die Berechtigungen ermitteln, die für das Ausführen von gehostetem Code in einem Sandkasten geeignet sind. Vor der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], CAS-Richtlinie stellte eine Option bei der <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> Methode. Als Ersatz [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] bietet die <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> -Methode, die einen sicheren Standardberechtigungssatz für die bereitgestellten Beweisinformationen zurückgibt.  
   
-### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Szenarien ohne Sandkasten: Überladungen für das Laden von Assemblys  
- Der Grund für die Verwendung einer Überladung für das Laden einer Assembly kann die Verwendung von Parametern sein, die andernfalls nicht verfügbar sind, anstatt die Assembly in einem Sandkastens auszuführen. Beginnend mit der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Assembly-Load-Überladungen, die nicht erfordern eine <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> -Objekt als Parameter, z. B. <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, dieses Szenario zu aktivieren.  
+### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Szenarien ohne Sandkasten: Überladungen für Laden von Assemblys  
+ Der Grund für die Verwendung einer Überladung für das Laden einer Assembly kann die Verwendung von Parametern sein, die andernfalls nicht verfügbar sind, anstatt die Assembly in einem Sandkastens auszuführen. Ab der [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Assembly-Load-Überladungen, die nicht erfordern eine <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> -Objekt als Parameter, z. B. <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, dieses Szenario ermöglichen.  
   
  Wenn Sie einen Sandkasten für eine Assembly verwenden möchten, verwenden Sie die <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>-Überladung.  
   
 <a name="compatibility"></a>   
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Kompatibilität: Verwenden der CAS-Legacyrichtlinienoption  
- Die [< NetFx40_LegacySecurityPolicy >-Konfigurationselements](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) können Sie angeben, dass ein Prozess oder eine Bibliothek CAS-legacyrichtlinie verwendet. Wenn Sie dieses Element aktivieren, funktionieren die Richtlinien- und Beweisüberladungen wie in früheren Versionen des Frameworks.  
+ Die [< NetFx40_LegacySecurityPolicy >-Konfigurationselement](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) können Sie angeben, dass ein Prozess oder eine Bibliothek mit CAS-legacyrichtlinie verwendet. Wenn Sie dieses Element aktivieren, funktionieren die Richtlinien- und Beweisüberladungen wie in früheren Versionen des Frameworks.  
   
 > [!NOTE]
 >  Das CAS-Richtlinienverhalten wird auf der Grundlage einer Laufzeitversion angegeben. Das Ändern der CAS-Richtlinie für eine Laufzeitversion besitzt daher keine Auswirkungen auf die CAS-Richtlinie einer anderen Version.  
@@ -141,6 +141,6 @@ ms.locfileid: "33393246"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [How to: Run Partially Trusted Code in a Sandbox (Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten)](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
- [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Richtlinien für das Schreiben von sicherem Code](../../standard/security/secure-coding-guidelines.md)

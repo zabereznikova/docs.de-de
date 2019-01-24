@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c8c82b3ace19d4b1d79fbfd296ce239e6da99ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5aceed6fa662f090dfe360ddca51da1381b12a2b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409556"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631494"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs-Methode
-Ruft einen Enumerator ab, für die zwischengespeicherten [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen in einer Anwendungsdomäne basierend auf deren Schnittstellenbezeichner.  
+Ruft einen Enumerator ab, für die Zwischenspeicherung [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen in einer Anwendungsdomäne auf der Grundlage von deren Schnittstellenbezeichner.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,13 +42,13 @@ HRESULT GetCachedWinRTTypesForIIDs (
  [in] Die Anzahl der erforderlichen Typen.  
   
  `iidsToResolve`  
- [in] Ein Zeiger auf ein Array, das die verwalteten Darstellungen der entsprechenden Schnittstellenbezeichner enthält die [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen abgerufen werden sollen.  
+ [in] Ein Zeiger auf ein Array, das die verwaltete Darstellung der entsprechenden Schnittstellenbezeichner enthält den [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen abgerufen werden sollen.  
   
  `ppTypesEnum`  
- [out] Ein Zeiger auf die Adresse eines Schnittstellenobjekts "ICorDebugTypeEnum", die die zwischengespeicherten Enumeration ermöglicht verwaltete Darstellungen der [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen abgerufen, basierend auf den Schnittstellenbezeichner in `iidsToResolve`.  
+ [out] Ein Zeiger auf die Adresse einer "ICorDebugTypeEnum"-Schnittstellenobjekts, das ermöglicht die Enumeration, der die zwischengespeicherten verwaltete Darstellungen der [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typen abgerufen, die basierend auf den Schnittstellenbezeichner in `iidsToResolve`.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Methode, zum Abrufen von Informationen für eine bestimmte Schnittstelle-ID fehlschlägt, weist der zugehörige Eintrag in der Auflistung "ICorDebugTypeEnum" einen Typ von `ELEMENT_TYPE_END` nach Fehlern aufgrund von Problemen für Daten abrufen, oder `ELEMENT_TYPE_VOID` für unbekannte-Schnittstelle Bezeichner.  
+ Fällt die Methode zum Abrufen von Informationen für eine bestimmte Schnittstelle-ID, weist der entsprechende Eintrag in der Auflistung "ICorDebugTypeEnum" einen Typ von `ELEMENT_TYPE_END` nach Fehlern aufgrund von Datenproblemen abrufen, oder `ELEMENT_TYPE_VOID` für unbekannte-Schnittstelle Bezeichner.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
@@ -59,5 +59,5 @@ HRESULT GetCachedWinRTTypesForIIDs (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugAppDomain3-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugAppDomain3-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)

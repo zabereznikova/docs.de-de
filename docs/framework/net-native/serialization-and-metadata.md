@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e4db59da7a17e47b8e3df939ec64f5124e04454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78c778cc4bc1172763c2473b472d02dc7b19d545
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622870"
 ---
 # <a name="serialization-and-metadata"></a>Serialisierung und Metadaten
 Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglicherweise Einträge zur Laufzeitanweisungsdatei (.rd.xml) hinzufügen, um sicherzustellen, dass die erforderlichen Metadaten zur Laufzeit vorhanden sind. Es gibt zwei Kategorien von Serialisierungsprogrammen, und jedes erfordert eine andere Behandlung in der Laufzeitdirektivendatei:  
@@ -22,7 +22,7 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
 ## <a name="third-party-serializers"></a>Drittanbieter-Serialisierungsprogramme  
  Drittanbieter-Serialisierungsprogramme, einschließlich Newtonsoft.JSON, sind in der Regel reflektionsbasiert. Bei einem BLOB aus serialisierten Daten werden die Felder in den Daten einem konkreten Typ durch Suchen der Felder des Zieltyps nach dem Namen zugewiesen. Durch das Verwenden dieser Bibliotheken werden mindestens [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahmen für alle <xref:System.Type>-Objekte verursacht, die Sie in einer `List<Type>`-Auflistung serialisieren oder deserialisieren möchten.  
   
- Durch fehlende Metadaten für diese Serialisierungsprogramme verursachte Probleme können am einfachsten gelöst werden, indem Sie Typen auflisten, die bei der Serialisierung unter einem einzigen Namespace verwendet werden (z. B. `App.Models`) und eine `Serialize`-Metadatenrichtlinie darauf anwenden:  
+ Durch fehlende Metadaten für diese Serialisierungsprogramme verursachte Probleme können am einfachsten gelöst werden, indem Sie Typen auflisten, die bei der Serialisierung unter einem einzigen Namespace verwendet werden (z. B. `App.Models`) und eine `Serialize`-Metadatenanweisung darauf anwenden:  
   
 ```xml  
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
@@ -64,8 +64,8 @@ Wenn Ihre Anwendung Objekte serialisiert und deserialisiert, müssen Sie möglic
   
  Informationen zur im Beispiel verwendeten Syntax finden Sie unter [\<Type>-Element](../../../docs/framework/net-native/type-element-net-native.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [\<Type >-Element](../../../docs/framework/net-native/type-element-net-native.md)  
- [\<Namespace>-Element](../../../docs/framework/net-native/namespace-element-net-native.md)
+## <a name="see-also"></a>Siehe auch
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
+- [\<Type >-Element](../../../docs/framework/net-native/type-element-net-native.md)
+- [\<Namespace>-Element](../../../docs/framework/net-native/namespace-element-net-native.md)

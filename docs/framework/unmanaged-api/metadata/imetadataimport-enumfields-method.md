@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bd8a2d373b801bd8238d50eecb388ef511bc34bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c16f904251545b87426210a76c5107e93a27749
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446201"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639561"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields-Methode
 Zählt FieldDef-Token für den Typ auf, auf den durch das angegebene TypeDef-Token verwiesen wird.  
@@ -44,7 +44,7 @@ HRESULT EnumFields (
  [in, out] Ein Zeiger auf den Enumerator.  
   
  `cl`  
- [in] Das TypeDef-Token von der Klasse, deren Felder aufgelistet werden sollen.  
+ [in] Die TypeDef-Token von der Klasse, deren Felder aufgelistet werden sollen.  
   
  `rFields`  
  [out] Die Liste der FieldDef-Token.  
@@ -53,24 +53,24 @@ HRESULT EnumFields (
  [in] Die maximale Größe des `rFields`-Arrays.  
   
  `pcTokens`  
- [out] Die tatsächliche Anzahl der FieldDef-Token im zurückgegebenen `rFields`.  
+ [out] Die tatsächliche Anzahl der zurückgegebenen FieldDef-Token `rFields`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumFields` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine Felder aufgelistet werden. In diesem Fall `pcTokens` 0 (null).|  
+|`S_FALSE`|Es gibt keine Felder aufgelistet werden. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

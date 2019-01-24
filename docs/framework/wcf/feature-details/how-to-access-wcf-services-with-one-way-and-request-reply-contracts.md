@@ -2,15 +2,15 @@
 title: 'Vorgehensweise: Zugreifen auf WCF-Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f74f874d43698955cce0ae14791a9d6b748ef919
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494321"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639171"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>Vorgehensweise: Zugreifen auf WCF-Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen
-Im folgenden wird beschrieben, wie Zugriff auf einen Windows Communication Foundation (WCF)-Dienst, der einen unidirektionalen Vertrag und einen Anforderung-Antwort-Vertrag definiert und verwendet, der kein duplex-Kommunikationsmuster.  
+Im folgenden wird beschrieben, wie Zugriff auf einen Windows Communication Foundation (WCF)-Dienst, der einen unidirektionalen Vertrag und einem Anforderung-Antwort-Vertrag definiert und verwendet, die nicht der Duplexkommunikation.  
   
 ### <a name="to-define-the-service"></a>So definieren Sie den Dienst  
   
@@ -109,7 +109,7 @@ Im folgenden wird beschrieben, wie Zugriff auf einen Windows Communication Found
   
 ### <a name="to-access-the-service"></a>So greifen Sie auf den Dienst zu  
   
-1.  Führen Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) mit, dass der Exchange-metadatenendpunktadresse erstellen Sie die Clientklasse für den Dienst mithilfe der folgenden Befehlszeile: `Svcutil http://localhost:8000/Service` der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generiert einen Satz von Schnittstellen und Klassen, wie im folgenden Beispielcode gezeigt.  
+1.  Führen Sie die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) mit der Metadatenaustausch-Endpunktadresse, die um die Clientklasse für den Dienst mithilfe der folgenden Befehlszeile zu erstellen: `Svcutil http://localhost:8000/Service` Die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generiert einen Satz von Schnittstellen und Klassen, wie im folgenden Beispielcode gezeigt.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -400,5 +400,5 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Unidirektionale Dienste](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Unidirektionale Dienste](../../../../docs/framework/wcf/feature-details/one-way-services.md)

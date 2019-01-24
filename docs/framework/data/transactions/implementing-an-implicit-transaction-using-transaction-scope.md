@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365305"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645846"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementieren einer impliziten Transaktion mit Transaktionsbereich
 Mit der <xref:System.Transactions.TransactionScope>-Klasse lassen sich Codeblöcke einfach als an einer Transaktion beteiligte Codeblöcke markieren, ohne die Transaktion selbst bearbeiten zu müssen. Ein Transaktionsbereich kann die Ambient-Transaktion automatisch auswählen und verwalten. Wegen ihrer einfachen Verwendung und Effizienz wird empfohlen, die <xref:System.Transactions.TransactionScope>-Klasse zur Entwicklung von Transaktionsanwendungen zu verwenden.  
@@ -23,25 +23,25 @@ Mit der <xref:System.Transactions.TransactionScope>-Klasse lassen sich Codeblöc
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- Der Transaktionsbereich wird begonnen, sobald ein neues <xref:System.Transactions.TransactionScope>-Objekt erstellt wird.  Wie im Codebeispiel veranschaulicht, wird es empfohlen, das Erstellen von Bereichen mit einer **mit** Anweisung. Die **mit** -Anweisung ist sowohl in c# und Visual Basic verfügbar und funktioniert wie ein **try … schließlich** Block, um sicherzustellen, dass der Bereich der ordnungsgemäß freigegeben ist.  
+ Der Transaktionsbereich wird begonnen, sobald ein neues <xref:System.Transactions.TransactionScope>-Objekt erstellt wird.  Wie im Codebeispiel gezeigt, wird empfohlen, dass Sie Bereiche mit erstellen eine **mit** Anweisung. Die **mit** Anweisung steht in C# und in Visual Basic und funktioniert wie ein **try … schließlich** Block, um sicherzustellen, dass der Block ordnungsgemäß freigegeben wird.  
   
- Beim Instanziieren von <xref:System.Transactions.TransactionScope> bestimmt der Transaktions-Manager, an welcher Transaktion der Bereich beteiligt sein soll. Sobald er festgelegt wurde, ist der Bereich immer an dieser Transaktion beteiligt. Die Entscheidung hängt von zwei Faktoren ab: Gibt an, ob eine Ambiente-Transaktion vorhanden ist und der Wert der **TransactionScopeOption** -Parameters im Konstruktor. Die Ambient-Transaktion ist die Transaktion, in der der Code ausgeführt wird. Ein Verweis auf die Ambient-Transaktion kann durch einen Aufruf der statischen <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType>-Eigenschaft der <xref:System.Transactions.Transaction>-Klasse abgerufen werden. Weitere Informationen zur Verwendung dieses Parameters finden Sie unter der [Verwaltung mithilfe von TransactionScopeOption Transaktionsfluss](#ManageTxFlow) Abschnitt dieses Themas.  
+ Beim Instanziieren von <xref:System.Transactions.TransactionScope> bestimmt der Transaktions-Manager, an welcher Transaktion der Bereich beteiligt sein soll. Sobald er festgelegt wurde, ist der Bereich immer an dieser Transaktion beteiligt. Die Entscheidung hängt von zwei Faktoren ab: Gibt an, ob eine Ambiente-Transaktion vorhanden ist und der Wert des der **TransactionScopeOption** Parameter im Konstruktor. Die Ambient-Transaktion ist die Transaktion, in der der Code ausgeführt wird. Ein Verweis auf die Ambient-Transaktion kann durch einen Aufruf der statischen <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType>-Eigenschaft der <xref:System.Transactions.Transaction>-Klasse abgerufen werden. Weitere Informationen zur Verwendung dieses Parameters finden Sie unter den [Verwalten eines Transaktionsflusses mit TransactionScopeOption](#ManageTxFlow) Abschnitt dieses Themas.  
   
 ## <a name="completing-a-transaction-scope"></a>Vervollständigen eines Transaktionsbereichs  
  Nachdem die Anwendung alle in einer Transaktion auszuführenden Arbeiten abgeschlossen hat, sollten Sie die <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType>-Methode nur einmal aufrufen, um den Transaktions-Manager darüber zu benachrichtigen, dass für die Transaktion ein Commit ausgeführt werden kann. Es ist sehr empfiehlt sich, den Aufruf von put <xref:System.Transactions.TransactionScope.Complete%2A> als die letzte Anweisung in der **mit** Block.  
   
- Wegen eines Fehlers beim Aufrufen dieser Methode wird die Transaktion abgebrochen, da dies die Transaktions-Manager als Systemfehler oder eine Ausnahme ausgelöst wird, innerhalb des Bereichs der Transaktion entspricht interpretiert werden müssen. Ein Aufruf dieser Methode garantiert aber nicht, dass ein Commit für die Transaktion ausgeführt wird. Dies ist nur eine Möglichkeit, den Transaktions-Manager über den Status zu informieren. Nach dem Aufruf der <xref:System.Transactions.TransactionScope.Complete%2A>-Methode können Sie nicht mehr über die <xref:System.Transactions.Transaction.Current%2A>-Eigenschaft auf die Ambient-Transaktion zugreifen. Wenn Sie dies dennoch versuchen, wird eine Ausnahme ausgelöst.  
+ Fehler beim Aufrufen dieser Methode bricht die Transaktion ab, weil der Transaktions-Manager als Systemfehler oder eine Ausnahme innerhalb des Bereichs der Transaktion entspricht dies interpretiert. Ein Aufruf dieser Methode garantiert aber nicht, dass ein Commit für die Transaktion ausgeführt wird. Dies ist nur eine Möglichkeit, den Transaktions-Manager über den Status zu informieren. Nach dem Aufruf der <xref:System.Transactions.TransactionScope.Complete%2A>-Methode können Sie nicht mehr über die <xref:System.Transactions.Transaction.Current%2A>-Eigenschaft auf die Ambient-Transaktion zugreifen. Wenn Sie dies dennoch versuchen, wird eine Ausnahme ausgelöst.  
   
- Wenn die <xref:System.Transactions.TransactionScope> Objekt zu Beginn der Transaktion erstellt hat, der eigentlichen Commit der Transaktion vom Transaktions-Manager erfolgt nach der letzten Zeile des Codes in der **mit** Block. Wenn die Transaktion nicht erstellt wurde, wird der Commit ausgeführt, wenn <xref:System.Transactions.CommittableTransaction.Commit%2A> vom Besitzer des <xref:System.Transactions.CommittableTransaction>-Objekts aufgerufen wird. An diesem Punkt der Transaktions-Manager Ruft die Ressource-Manager und benachrichtigt sie, entweder ein Commit oder Rollback, abhängig davon, ob die <xref:System.Transactions.TransactionScope.Complete%2A> Methode wurde aufgerufen, auf die <xref:System.Transactions.TransactionScope> Objekt.  
+ Wenn die <xref:System.Transactions.TransactionScope> Objekt zunächst die Transaktion erstellt hat, die eigentliche Arbeit der Commit der Transaktion vom Transaktions-Manager tritt ein, nach der letzten Zeile des Codes in der **mit** Block. Wenn die Transaktion nicht erstellt wurde, wird der Commit ausgeführt, wenn <xref:System.Transactions.CommittableTransaction.Commit%2A> vom Besitzer des <xref:System.Transactions.CommittableTransaction>-Objekts aufgerufen wird. An dieser Stelle der Transaktions-Manager Ruft die Resource Manager und benachrichtigt sie, einen Commit oder Rollback, abhängig davon, ob die <xref:System.Transactions.TransactionScope.Complete%2A> Methode wurde aufgerufen, auf die <xref:System.Transactions.TransactionScope> Objekt.  
   
- Die **mit** Anweisung wird sichergestellt, dass die <xref:System.Transactions.TransactionScope.Dispose%2A> Methode der <xref:System.Transactions.TransactionScope> -Objekts aufgerufen wird, selbst wenn eine Ausnahme auftritt. Der Aufruf der <xref:System.Transactions.TransactionScope.Dispose%2A>-Methode kennzeichnet das Ende des Transaktionsbereichs. Ausnahmen, die nach dem Aufrufen dieser Methode eintreten, beeinflussen die Transaktion möglicherweise nicht. Diese Methode stellt auch den vorherigen Zustand der Ambient-Transaktion wieder her.  
+ Die **mit** Anweisung wird sichergestellt, dass die <xref:System.Transactions.TransactionScope.Dispose%2A> -Methode der der <xref:System.Transactions.TransactionScope> -Objekts aufgerufen wird, auch wenn eine Ausnahme auftritt. Der Aufruf der <xref:System.Transactions.TransactionScope.Dispose%2A>-Methode kennzeichnet das Ende des Transaktionsbereichs. Ausnahmen, die nach dem Aufrufen dieser Methode eintreten, beeinflussen die Transaktion möglicherweise nicht. Diese Methode stellt auch den vorherigen Zustand der Ambient-Transaktion wieder her.  
   
  Eine <xref:System.Transactions.TransactionAbortedException> wird ausgelöst, wenn eine vom Transaktionsbereich erstellte Transaktion abgebrochen wird. Eine <xref:System.Transactions.TransactionInDoubtException> wird ausgelöst, wenn der Transaktions-Manager nicht entscheiden kann, ob ein Commit ausgeführt werden soll. Wenn ein Commit für die Transaktion ausgeführt wird, wird keine Ausnahme ausgelöst.  
   
 ## <a name="rolling-back-a-transaction"></a>Rollback einer Transaktion  
  Wenn ein Rollback für eine Transaktion ausgeführt werden soll, dürfen Sie die <xref:System.Transactions.TransactionScope.Complete%2A>-Methode nicht im Transaktionsbereich aufrufen. Zum Beispiel können Sie eine Ausnahme im Bereich auslösen. Der Rollback wird für die Transaktion ausgeführt, die im Bereich liegt.  
   
-##  <a name="ManageTxFlow"></a> Verwalten von mithilfe von TransactionScopeOption Transaktionsfluss  
+##  <a name="ManageTxFlow"></a> Verwalten eines Transaktionsflusses mit TransactionScopeOption  
  Transaktionsbereiche können geschachtelt werden, indem eine Methode aufgerufen wird, die ein <xref:System.Transactions.TransactionScope>-Objekt innerhalb einer Methode verwendet, die ihren eigenen Bereich verwendet. Die `RootMethod`-Methode im folgenden Beispiel veranschaulicht dies.  
   
 ```csharp  
@@ -81,7 +81,7 @@ void SomeMethod()
   
  Wenn der Bereich mit <xref:System.Transactions.TransactionScopeOption.RequiresNew> instanziiert wird, ist er immer der Stammbereich. Er startet eine neue Transaktion, und seine Transaktion wird zur neuen Ambient-Transaktion im Bereich.  
   
- Wird der Bereich mit <xref:System.Transactions.TransactionScopeOption.Suppress> instanziiert, dann ist er nie an einer Transaktion beteiligt, unabhängig davon, ob eine Ambient-Transaktion vorhanden ist. Ein Bereich mit diesem Wert immer instanziiert haben **null** als ambient-Transaktion.  
+ Wird der Bereich mit <xref:System.Transactions.TransactionScopeOption.Suppress> instanziiert, dann ist er nie an einer Transaktion beteiligt, unabhängig davon, ob eine Ambient-Transaktion vorhanden ist. Einen Bereich immer mit diesem Wert instanziierten **null** als ambient-Transaktion.  
   
  Die obigen Optionen sind in der folgenden Tabelle zusammengefasst.  
   
@@ -166,8 +166,8 @@ using(TransactionScope scope1 = new TransactionScope())
  Beim Einsatz verschachtelter <xref:System.Transactions.TransactionScope>-Objekte muss für alle verschachtelten Bereiche die gleiche Isolationsstufe konfiguriert werden, wenn eine Verknüpfung mit der Ambient-Transaktion hergestellt werden soll Wenn verschachtelte <xref:System.Transactions.TransactionScope>-Objekte eine Verknüpfung mit der Ambient-Transaktion herzustellen versuchen und für diese eine andere Isolationsstufe festgelegt wurde, dann wird eine Ausnahme des Typs <xref:System.ArgumentException> ausgelöst.  
   
 ## <a name="interop-with-com"></a>Zusammenarbeit mit COM+  
- Wenn Sie eine neue <xref:System.Transactions.TransactionScope>-Instanz erstellen, können Sie die <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration in einem der Konstruktoren verwenden, um die Zusammenarbeit mit COM+ näher zu bestimmen. Weitere Informationen dazu finden Sie unter [Interoperabilität mit Enterprise Services und COM+-Transaktionen](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ Wenn Sie eine neue <xref:System.Transactions.TransactionScope>-Instanz erstellen, können Sie die <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration in einem der Konstruktoren verwenden, um die Zusammenarbeit mit COM+ näher zu bestimmen. Weitere Informationen hierzu finden Sie unter [Interoperabilität mit Enterprise Services und COM+-Transaktionen](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Transactions.Transaction.Clone%2A>  
- <xref:System.Transactions.TransactionScope>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Transactions.Transaction.Clone%2A>
+- <xref:System.Transactions.TransactionScope>

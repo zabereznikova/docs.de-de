@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes'
+title: 'Vorgehensweise: Das Bild angezeigt, die von einer Windows Forms-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 4870f9e2acc48a90e1e2193d514926fedee05f61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533740"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644923"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes
-Einige Windows Forms-Steuerelemente können Bilder anzuzeigen. Diese Bilder können Symbole, die Erläuterung des Zwecks des Steuerelements, wie z. B. ein Diskettensymbol auf eine Schaltfläche, werden die **speichern** Befehl. Alternativ kann die Symbole Hintergrundbilder zum Steuern der Darstellung und das gewünschte Verhalten.  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Vorgehensweise: Das Bild angezeigt, die von einer Windows Forms-Steuerelement
+Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Diese Images können Symbole, die Erläuterung des Zwecks des Steuerelements, z. B. ein Diskettensymbol auf eine Schaltfläche, werden die **speichern** Befehl. Alternativ können die Symbole Hintergrundbilder, um die Kontrolle zu haben, die Darstellung und das gewünschte Verhalten sein.  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Das von einem Steuerelement angezeigte Bild festlegen  
   
-1.  Legen Sie das Steuerelement `Image` oder `BackgroundImage` Eigenschaft, um ein Objekt vom Typ <xref:System.Drawing.Image>. Im Allgemeinen, laden Sie das Bild aus einer Datei mithilfe der <xref:System.Drawing.Image.FromFile%2A> Methode.  
+1.  Legen Sie die `Image` oder `BackgroundImage` Eigenschaft, um ein Objekt des Typs <xref:System.Drawing.Image>. In der Regel Laden Sie das Image aus einer Datei mithilfe der <xref:System.Drawing.Image.FromFile%2A> Methode.  
   
-     Im folgenden Codebeispiel legen der Pfad für der Speicherort des Bilds wird die **eigene Bilder** Ordner. Die meisten Computer das Windows-Betriebssystem ausgeführt wird, werden dieses Verzeichnis enthalten. Außerdem können Benutzer mit minimalen problemlos die Anwendung auszuführen. Das folgende Codebeispiel erfordert, dass Sie bereits ein Formular mit einem <xref:System.Windows.Forms.PictureBox> ein Steuerelement hinzugefügt wurde.  
+     Das folgende Codebeispiel zeigt der Pfad festgelegt, für der Speicherort des Images ist der **eigene Bilder** Ordner. Die meisten Computer, die das Windows-Betriebssystem ausgeführt wird, werden dieses Verzeichnis enthalten. Dies ermöglicht auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen. Das folgende Codebeispiel ist erforderlich, dass Sie bereits ein Formular mit einem <xref:System.Windows.Forms.PictureBox> Steuerelement hinzugefügt.  
   
     ```vb  
     ' Replace the image named below  
@@ -56,7 +56,7 @@ Einige Windows Forms-Steuerelemente können Bilder anzuzeigen. Diese Bilder kön
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Drawing.Image.FromFile%2A>  
- <xref:System.Drawing.Image>  
- <xref:System.Windows.Forms.Control.BackgroundImage%2A>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Drawing.Image.FromFile%2A>
+- <xref:System.Drawing.Image>
+- <xref:System.Windows.Forms.Control.BackgroundImage%2A>

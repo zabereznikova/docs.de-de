@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Zeichnen eines Bereichs mit einer Volltonfarbe'
+title: 'Vorgehensweise: Zeichnen eines Bereichs mit einer Volltonfarbe'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - solid colors [WPF], painting with
 - brushes [WPF], painting with solid colors
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
-ms.openlocfilehash: 017c685139979ec3aa411be6e6b5fdf0e91657de
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: db1ff6048ab30554767459863c0fd5e261851f59
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647815"
 ---
-# <a name="how-to-paint-an-area-with-a-solid-color"></a>Gewusst wie: Zeichnen eines Bereichs mit einer Volltonfarbe
+# <a name="how-to-paint-an-area-with-a-solid-color"></a>Vorgehensweise: Zeichnen eines Bereichs mit einer Volltonfarbe
 Um einen Bereich mit einer Volltonfarbe zu zeichnen, können Sie einen vordefinierten Systempinsel, z. B. <xref:System.Windows.Media.Brushes.Red%2A> oder <xref:System.Windows.Media.Brushes.Blue%2A>, oder Sie können ein neues erstellen <xref:System.Windows.Media.SolidColorBrush> und eine Beschreibung für die <xref:System.Windows.Media.SolidColorBrush.Color%2A> mit alpha, Rot, Grün und Blau-Werte. In XAML können Sie einen Bereich mit einer Volltonfarbe auch mit der Hexadezimalschreibweise zeichnen.  
   
  Im folgenden Beispiel wird jede der folgenden Methoden zum Zeichnen einer <xref:System.Windows.Shapes.Rectangle> Blau.  
@@ -49,5 +49,5 @@ Um einen Bereich mit einer Volltonfarbe zu zeichnen, können Sie einen vordefini
   
  Dieses Codebeispiel ist Teil eines umfangreicheren Beispiels für die <xref:System.Windows.Media.SolidColorBrush> Klasse. Das vollständige Beispiel finden Sie unter der [Beispiel für Pinsel](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Brushes>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Brushes>

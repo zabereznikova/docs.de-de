@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Bearbeiten von Daten (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: b9b19d4f9a1fb56ddabbf3584c1fb7bb29cd6d6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4346479337820f33cc908c0fd191ee7258a3db6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637306"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Exemplarische Vorgehensweise: Bearbeiten von Daten (C#)
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zum Hinzufügen, Ändern und Löschen von Daten in einer Datenbank bereit. Sie werden eine Kopie der Beispieldatenbank Northwind verwenden, um einen Kunden hinzuzufügen, den Namen des Kunden zu ändern und eine Bestellung zu löschen.  
@@ -16,7 +16,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
  Diese exemplarische Vorgehensweise wurde mithilfe von Visual C#-Entwicklungseinstellungen geschrieben.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Für diese exemplarische Vorgehensweise wird Folgendes vorausgesetzt:  
   
 -   Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest6") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.  
@@ -49,19 +49,19 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 -   Übergeben dieser Änderungen an der Datenbank Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Erstellen einer LINQ to SQL-Lösung  
- In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projektmappe, enthält die erforderlichen Verweise zur Erstellung und Ausführung, einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt.  
+ In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projektmappe, die die erforderlichen Verweise zur Erstellung und Ausführung enthält eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>So erstellen Sie eine LINQ to SQL-Lösung  
   
-1.  Visual Studio **Datei** Sie im Menü **neu**, und klicken Sie dann auf **Projekt**.  
+1.  Visual Studio **Datei** Startmenü **neu**, und klicken Sie dann auf **Projekt**.  
   
-2.  In der **-Projekttypen** im Bereich der **neues Projekt** (Dialogfeld), klicken Sie auf **Visual C#-**.  
+2.  In der **Projekttypen** im Bereich der **neues Projekt** Dialogfeld klicken Sie auf **Visual C#** .  
   
 3.  Klicken Sie im Bereich **Vorlagen** auf **Konsolenanwendung**.  
   
 4.  In der **Namen** geben **LinqDataManipulationApp**.  
   
-5.  In der **Speicherort** Vergewissern Sie sich, wo die Projektdateien gespeichert werden sollen.  
+5.  In der **Speicherort** Vergewissern Sie sich, in der Sie die Projektdateien speichern möchten.  
   
 6.  Klicken Sie auf **OK**.  
   
@@ -72,7 +72,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 1.  In **Projektmappen-Explorer**, mit der rechten Maustaste **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.  
   
-2.  In der **Verweis hinzufügen** (Dialogfeld), klicken Sie auf **.NET**, klicken Sie auf die System.Data.Linq-Assembly, und klicken Sie dann auf **OK**.  
+2.  In der **Verweis hinzufügen** Dialogfeld klicken Sie auf **.NET**, klicken Sie auf die System.Data.Linq-Assembly, und klicken Sie dann auf **OK**.  
   
      Dem Projekt wird die Assembly hinzugefügt.  
   
@@ -87,7 +87,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 1.  Auf der **Projekt** Menü klicken Sie auf **vorhandenes Element hinzufügen**.  
   
-2.  In der **vorhandenes Element hinzufügen** (Dialogfeld), navigieren Sie zu c:\linqtest6\northwind.cs, und klicken Sie dann auf **hinzufügen**.  
+2.  In der **vorhandenes Element hinzufügen** Dialogfeld, navigieren Sie zu c:\linqtest6\northwind.cs, und klicken Sie dann auf **hinzufügen**.  
   
      Die Datei northwind.cs wird dem Projekt hinzugefügt.  
   
@@ -104,7 +104,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
      Ein **Konsole** Fenster wird geöffnet.  
   
-     Schließen Sie die Anwendung durch Drücken der EINGABETASTE in der **Konsole** Fenster oder durch Klicken auf **Debuggen beenden** Visual Studio **Debuggen** Menü.  
+     Schließen Sie die Anwendung durch Drücken der EINGABETASTE in den **Konsole** Fenster oder durch Klicken auf **Debuggen beenden** auf der Visual Studio **Debuggen** Menü.  
   
 ## <a name="creating-a-new-entity"></a>Erstellen einer neuen Entität  
  Eine neue Entität zu erstellen, ist einfach. Sie können Objekte (z. B. `Customer`) erstellen, indem Sie das `new`-Schlüsselwort verwenden.  
@@ -119,7 +119,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 2.  Drücken Sie die Taste F5, um die Lösung zu Debuggen.  
   
-3.  Drücken Sie die EINGABETASTE in den **Konsole** Fenster aus, um den Debugvorgang unterbrechen und die exemplarische Vorgehensweise fortzusetzen.  
+3.  Drücken Sie die EINGABETASTE in den **Konsole** Fenster aus, um den Debugvorgang unterbrechen und Fortsetzen der exemplarischen Vorgehensweise.  
   
 ## <a name="updating-an-entity"></a>Aktualisieren einer Entität  
  In den folgenden Schritten rufen Sie ein `Customer`-Objekt ab und ändern eine seiner Eigenschaften.  
@@ -161,5 +161,5 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 > [!NOTE]
 >  Wenn Sie den neuen Kunden durch Übergeben der Änderungen hinzugefügt haben, können Sie diese Lösung nicht einfach wieder ausführen. Um die Lösung erneut auszuführen, ändern Sie den Namen und die ID des hinzuzufügenden Kunden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Siehe auch
+- [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen von Zeitzonen ohne Anpassungsregeln'
+title: 'Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e06232a4e262b13439516114e65c81c07ba24ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cb3ffc7b6f1f7baec7ce6beb5a50b706ff78bfa1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192963"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681715"
 ---
-# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Gewusst wie: Erstellen von Zeitzonen ohne Anpassungsregeln
+# <a name="how-to-create-time-zones-without-adjustment-rules"></a>Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln
 
 Die genaue Zeitzoneninformationen, die von einer Anwendung erforderlich sind möglicherweise nicht auf einem bestimmten System vorhanden, verschiedene Ursachen haben:
 
@@ -72,6 +72,6 @@ Für dieses Beispiel benötigen Sie Folgendes:
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
-* [Übersicht über Zeitzonen](../../../docs/standard/datetime/time-zone-overview.md)
-* [Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)
+- [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
+- [Übersicht über Zeitzonen](../../../docs/standard/datetime/time-zone-overview.md)
+- [Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)

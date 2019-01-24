@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f57385b930ce533de3ff12b0dbd363690f04082d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085148"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636013"
 ---
 # <a name="configuring-message-logging"></a>Konfigurieren der Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für verschiedene Szenarien konfigurieren können.  
@@ -83,11 +83,11 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
 ### <a name="other-options"></a>Weitere Optionen  
  Zusätzlich zu den Protokollierungsebenen kann der Benutzer die folgenden Optionen angeben:  
   
--   Gesamte Nachricht protokollieren (`logEntireMessage`-Attribut): Dieser Wert gibt an, ob die ganze Meldung (Nachrichtenheader und Text) protokolliert wird. Der Standardwert lautet `false`, das bedeutet, dass nur der Nachrichtenheader protokolliert wird. Diese Einstellung beeinflusst die Nachrichtenprotokollierung auf Dienst- und Transportebene.  
+-   Gesamte Nachricht protokollieren (`logEntireMessage` Attribut): Dieser Wert gibt an, ob die ganze Meldung (Nachrichtenkopf und Text) protokolliert wird. Der Standardwert lautet `false`, das bedeutet, dass nur der Nachrichtenheader protokolliert wird. Diese Einstellung beeinflusst die Nachrichtenprotokollierung auf Dienst- und Transportebene.  
   
--   Max. zu protokollierende Nachrichten (`maxMessagesToLog`-Attribut): Dieser Wert gibt die maximale Anzahl von zu protokollierenden Nachrichten an. Alle Nachrichten (Dienst, Transport und falsch formatierte Nachrichten) werden zu diesem Kontingent gezählt. Wenn das Kontingent erreicht wird, wird eine Ablaufverfolgung ausgegeben und keine weitere Nachricht protokolliert. Der Standardwert ist 10.000.  
+-   Max. zu protokollierende Nachrichten (`maxMessagesToLog` Attribut): Dieser Wert gibt die maximale Anzahl von zu protokollierenden Meldungen. Alle Nachrichten (Dienst, Transport und falsch formatierte Nachrichten) werden zu diesem Kontingent gezählt. Wenn das Kontingent erreicht wird, wird eine Ablaufverfolgung ausgegeben und keine weitere Nachricht protokolliert. Der Standardwert ist 10.000.  
   
--   Max. Größe der zu protokollierenden Nachrichten (`maxSizeOfMessageToLog`-Attribut): Dieser Wert gibt die maximale Größe einer zu protokollierenden Nachricht in Byte an. Nachrichten, die das Größenlimit überschreiten, werden nicht protokolliert, und für diese Nachricht werden keine weiteren Aktivitäten durchgeführt. Diese Einstellung wirkt sich auf alle Nachverfolgungsebenen aus. Wenn die ServiceModel-Ablaufverfolgung aktiviert ist, wird am ersten Protokollierungspunkt (ServiceModelSend* oder TransportReceive) zur Benachrichtigung des Benutzers eine Ablaufverfolgung auf Warnungsebene ausgegeben. Der Standardwert für Nachrichten auf Dienst- und auf Transportebene ist 256K, während der Standardwert für falsch formatierte Nachrichten 4K beträgt.  
+-   Maximale Größe einer zu protokollierenden Meldung (`maxSizeOfMessageToLog` Attribut): Dieser Wert gibt die maximale Größe von Nachrichten, melden Sie sich in Bytes. Nachrichten, die das Größenlimit überschreiten, werden nicht protokolliert, und für diese Nachricht werden keine weiteren Aktivitäten durchgeführt. Diese Einstellung wirkt sich auf alle Nachverfolgungsebenen aus. Wenn die ServiceModel-Ablaufverfolgung aktiviert ist, wird am ersten Protokollierungspunkt (ServiceModelSend* oder TransportReceive) zur Benachrichtigung des Benutzers eine Ablaufverfolgung auf Warnungsebene ausgegeben. Der Standardwert für Nachrichten auf Dienst- und auf Transportebene ist 256K, während der Standardwert für falsch formatierte Nachrichten 4K beträgt.  
   
     > [!CAUTION]
     >  Bei der Nachrichtengröße, die für den Vergleich mit `maxSizeOfMessageToLog` berechnet wird, handelt es sich um die Nachrichtengröße im Arbeitsspeicher vor der Serialisierung. Diese Größe kann von der tatsächlichen Länge der Nachrichtenzeichenfolge, die protokolliert wird, abweichen. In vielen Fällen überschreitet sie die tatsächliche Größe. Demzufolge werden Nachrichten möglicherweise nicht protokolliert. Um dieser Tatsache Rechnung zu tragen, können Sie das `maxSizeOfMessageToLog`-Attribut um 10 % größer angeben als die erwartete Nachrichtengröße. Wenn falsch formatierte Nachrichten protokolliert werden, kann die tatsächliche Festplattenspeichergröße, die von Nachrichtenprotokollen genutzt wird, die Größe des durch `maxSizeOfMessageToLog` angegebenen Werts um das Fünffache übersteigen.  
@@ -163,7 +163,7 @@ In diesem Thema wird beschrieben, wie Sie die Nachrichtenprotokollierung für ve
   
  Das `type`-Attribut sollte auf einen vollqualifizierten Assemblynamen festgelegt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [\<MessageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
- [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+## <a name="see-also"></a>Siehe auch
+- [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

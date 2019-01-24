@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen'
+title: 'Vorgehensweise: Geben Sie den Typ der Clientanmeldeinformationen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 5e1ff85d8a0bd45c87786f98c2cafe06472052b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fe999c4ee27d4a78bfad185fa3bcc065d74708a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643377"
 ---
-# <a name="how-to-specify-the-client-credential-type"></a>Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen
-Nach dem Festlegen eines Sicherheitsmodus (entweder Transport oder Nachricht) haben Sie die Möglichkeit, den Typ der Clientanmeldeinformationen anzugeben. Diese Eigenschaft gibt an, welchen Anmeldeinformationstyp der Client dem Dienst zur Authentifizierung bereitstellen muss. Weitere Informationen zum Festlegen des Sicherheitsmodus (ein notwendiger Schritt vor dem Festlegen des Client-Anmeldeinformationstyp) finden Sie unter [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+# <a name="how-to-specify-the-client-credential-type"></a>Vorgehensweise: Geben Sie den Typ der Clientanmeldeinformationen
+Nach dem Festlegen eines Sicherheitsmodus (entweder Transport oder Nachricht) haben Sie die Möglichkeit, den Typ der Clientanmeldeinformationen anzugeben. Diese Eigenschaft gibt an, welchen Anmeldeinformationstyp der Client dem Dienst zur Authentifizierung bereitstellen muss. Weitere Informationen zum Festlegen des Sicherheitsmodus (ein notwendiger Schritt vor dem Festlegen des Typ der Clientanmeldeinformationen) finden Sie unter [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>So legen Sie den Clientanmeldeinformationstyp in Code fest  
   
@@ -31,9 +31,9 @@ Nach dem Festlegen eines Sicherheitsmodus (entweder Transport oder Nachricht) ha
   
 ### <a name="to-set-the-client-credential-type-in-configuration"></a>So legen Sie den Clientanmeldeinformationstyp in der Konfiguration fest  
   
-1.  Hinzufügen einer [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Element der Konfigurationsdatei.  
+1.  Hinzufügen einer [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Element der Konfigurationsdatei hinzu.  
   
-2.  Als ein untergeordnetes Element: Hinzufügen einer [ \<Bindungen >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Element.  
+2.  Hinzufügen als ein untergeordnetes Element eine [ \<Bindungen >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Element.  
   
 3.  Fügen Sie eine entsprechende Bindung hinzu. Dieses Beispiel verwendet die [ \<WsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element.  
   
@@ -57,6 +57,6 @@ Nach dem Festlegen eines Sicherheitsmodus (entweder Transport oder Nachricht) ha
     </system.serviceModel>  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)  
- [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+## <a name="see-also"></a>Siehe auch
+- [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)
+- [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

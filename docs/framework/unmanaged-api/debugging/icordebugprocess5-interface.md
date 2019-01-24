@@ -16,41 +16,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3aed85e989313e4778e12a6f6bb789ccef49747
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a105ca8838820b62e81dae4c0149734339bed7a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620213"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5-Schnittstelle
-ICorDebugProcess-Schnittstelle, um Zugriff auf den verwalteten Heap an, um Informationen zum Garbagecollection verwalteten Objekte bereitzustellen unterstützen erweitert, und lädt bestimmen, ob ein Debugger Bilder vom lokalen systemeigenen Imagecache von Anwendung.  
+Erweitert die ICorDebugProcess-Schnittstelle, um Zugriff auf dem verwalteten Heap, Informationen zur Garbagecollection von verwalteten Objekten zu unterstützen, und lädt bestimmen, ob ein Debugger Bilder aus dem lokalen systemeigene Images.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[EnableNGENPolicy-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)|Legt einen Wert, der bestimmt, wie eine Anwendung während der Ausführung unter einem verwalteten Debugger systemeigene Abbilder lädt.|  
+|[EnableNGENPolicy-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enablengenpolicy-method.md)|Legt einen Wert, der bestimmt, wie eine Anwendung für systemeigene Images während der Ausführung unter einem verwalteten Debugger geladen.|  
 |[EnumerateGCReferences-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)|Ruft einen Enumerator für alle Objekte, die in einem Prozess speicherbereinigt werden soll.|  
 |[EnumerateHandles-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumeratehandles-method.md)|Ruft einen Enumerator für die Objekt-Handles in einem Prozess ab.|  
 |[EnumerateHeap-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md)|Ruft einen Enumerator für Objekte im verwalteten Heap.|  
-|[EnumerateHeapRegions-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md)|Ruft einen Enumerator für die Regionen des verwalteten Heaps.|  
+|[EnumerateHeapRegions-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md)|Ruft einen Enumerator für die Regionen des verwalteten Heaps ab.|  
 |[GetArrayLayout-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getarraylayout-method.md)|Ruft Informationen zum Layout eines Arrays im Arbeitsspeicher ab.|  
 |[GetGCHeapInformation-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)|Ruft einen Zeiger auf eine [COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md) -Struktur, die Informationen zu Objekten enthält, die Garbage Collection auf dem verwalteten Heap werden sollen.|  
-|[GetObject-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)|Ruft einen Zeiger auf ein Objekt ab, auf dem verwalteten Heap.|  
+|[GetObject-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md)|Ruft einen Zeiger auf ein Objekt, auf dem verwalteten Heap.|  
 |[GetTypeFields-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefields-method.md)|Ruft einen Zeiger auf ein Array, das Feldinformationen für einen Typ auf Grundlage seines Bezeichners Typ enthält.|  
-|[GetTypeForTypeID-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)|Ruft ein Objekt vom Typ, der Informationen zu einem Objekt basierend auf seiner Typenbezeichnern bereitstellt.|  
+|[GetTypeForTypeID-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md)|Ruft ein Typobjekt, das Informationen über ein Objekt, das basierend auf seiner Typ-IDs ab.|  
 |[GetTypeID-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypeid-method.md)|Ruft die Typ-ID für das Objekt an einer angegebenen Adresse an.|  
 |[GetTypeLayout-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypelayout-method.md)|Ruft Informationen zum Layout eines Objekts im Arbeitsspeicher auf Grundlage seines Bezeichners Typ ab.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Schnittstelle erweitert logisch die ICorDebugProcess ICorDebugProcess2, und [ICorDebugProcess3](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md) Schnittstellen.  
+ Diese Schnittstelle erweitert logisch die ICorDebugProcess, ICorDebugProcess2, und [ICorDebugProcess3](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md) Schnittstellen.  
   
 > [!NOTE]
->  Diese Schnittstelle unterstützt keine Remote aufgerufen werden, von einem anderen Computer oder einem anderen Prozess.  
+>  Diese Schnittstelle unterstützt nicht remote aufgerufen werden, entweder von einem anderen Computer oder einem anderen Prozess.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -58,6 +58,6 @@ ICorDebugProcess-Schnittstelle, um Zugriff auf den verwalteten Heap an, um Infor
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

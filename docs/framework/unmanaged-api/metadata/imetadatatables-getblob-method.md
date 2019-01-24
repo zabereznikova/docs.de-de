@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 743fb1c77e2dd74487a7498be25ea23b4919032a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa631721965123c4427a5d1ff2e0cec2a1ab2395
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447297"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637682"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob-Methode
-Ruft einen Zeiger auf das binary large Object (BLOB) am angegebenen Spaltenindex.  
+Ruft einen Zeiger auf das binary large Object (BLOB) am Index angegebene Spalte ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,20 +42,20 @@ HRESULT GetBlob (
  [in] Die Speicheradresse, von dem abzurufenden `ppData`.  
   
  `pcbData`  
- [out] Ein Zeiger auf die Größe in Bytes, der `ppData`.  
+ [out] Ein Zeiger auf die Größe in Bytes, des `ppData`.  
   
  `ppData`  
  [out] Ein Zeiger auf einen Zeiger auf die binären Daten abgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataTables-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataTables-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

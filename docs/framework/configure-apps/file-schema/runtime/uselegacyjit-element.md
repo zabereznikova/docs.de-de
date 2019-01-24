@@ -4,20 +4,20 @@ ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd4f9728338ecc66f84fe42b9bdbda9938ed518b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ecf4d805feeb27a7c3fa08d2ab6dd05b6fff693a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612191"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54648179"
 ---
 # <a name="ltuselegacyjitgt-element"></a>&lt;UseLegacyJit&gt; Element
 
 Legt fest, ob die Runtime den 64-Bit-JIT-Legacycompiler für die Just-in-Time-Kompilierung verwendet.  
   
 \<configuration>  
-\<Common Language Runtime >  
-\<UseLegacyJit >
+\<runtime>  
+\<useLegacyJit>
   
 ## <a name="syntax"></a>Syntax  
   
@@ -95,6 +95,6 @@ Die folgende Konfigurationsdatei deaktiviert die Kompilierung mit dem neuen 64-B
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<Common Language Runtime >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)   
-- [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)   
+- [\<Common Language Runtime >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
+- [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
 - [Entschärfung: Neue 64-Bit-JIT-Compiler](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)

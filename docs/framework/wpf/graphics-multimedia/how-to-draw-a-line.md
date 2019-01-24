@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Zeichnen einer Linie'
+title: 'Vorgehensweise: Zeichnen einer Linie'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], lines
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: bee343676175098493df347823a3bdbdf17b205f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 54152b6b68dd453c565afa2ffb23edfe8132a441
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45963769"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629019"
 ---
-# <a name="how-to-draw-a-line"></a>Gewusst wie: Zeichnen einer Linie
+# <a name="how-to-draw-a-line"></a>Vorgehensweise: Zeichnen einer Linie
 Dieses Beispiel zeigt, wie zum Zeichnen von Linien mit dem <xref:System.Windows.Shapes.Line> Element.  
   
  Um eine Linie zu zeichnen, erstellen eine <xref:System.Windows.Shapes.Line> Element. Verwenden Sie die <xref:System.Windows.Shapes.Line.X1%2A> und <xref:System.Windows.Shapes.Line.Y1%2A> Eigenschaften legen Sie dessen Start, zeigen Sie; und verwenden dessen <xref:System.Windows.Shapes.Line.X2%2A> und <xref:System.Windows.Shapes.Line.Y2%2A> Eigenschaften legen Sie seinen Endpunkt. Legen Sie schließlich die <xref:System.Windows.Shapes.Shape.Stroke%2A> und <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> da eine Zeile ohne einen Strich nicht sichtbar ist.  
@@ -27,6 +27,6 @@ Dieses Beispiel zeigt, wie zum Zeichnen von Linien mit dem <xref:System.Windows.
   
  Dieses Beispiel ist Teil eines umfangreicheren Beispiels. Das vollständige Beispiel finden Sie unter [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Shapes.Line>  
- [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Shapes.Line>
+- [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037)

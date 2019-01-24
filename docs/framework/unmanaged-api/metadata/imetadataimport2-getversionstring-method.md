@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 112ddcf51a5637bb89df9479850c2a4a70d2e1d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e041efed929255d4ce3af2d051a391bc4179cda
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630917"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>IMetaDataImport2::GetVersionString-Methode
-Ruft die Version der Laufzeit, die verwendet wurde, zum Erstellen der Assembly ab.  
+Ruft die Version der Laufzeit, die verwendet wurde, zur Erstellung der Assembly ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,20 +45,20 @@ HRESULT GetVersionString (
  [in] Die Größe in Breitzeichen, der die `pwzBuf` Array.  
   
  `pccBufSize`  
- [out] Die Anzahl der Breitzeichen, einschließlich eines null-Terminators zurückgegeben, der `pwzBuf` Array.  
+ [out] Die Anzahl von Breitzeichen, einschließlich eines null-Terminators zurückgegeben wird, der `pwzBuf` Array.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetVersionString` Methode ruft die für die Version des aktuellen Metadatenbereich ab. Wenn der Bereich nie gespeichert wurde, sind eine für die Version und eine leere Zeichenfolge zurückgegeben.  
+ Die `GetVersionString` Methode ruft die für die Version der im aktuellen Metadatenbereich ab. Wenn der Bereich nicht gespeichert wurde, hat keine für die Version, und eine leere Zeichenfolge zurückgegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

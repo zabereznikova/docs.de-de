@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54b0a02af7f22e775e3f9567de79664c9805b4e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 116ed60dab3365cac052d3b13ce7b056caca0452
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619677"
 ---
 # <a name="importfile-method"></a>ImportFile-Methode
-Imports-Assemblys und ungebundenen Modulen.  
+Assemblys und ungebundenen Modulen importiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,30 +41,30 @@ HRESULT ImportFile(
   
 #### <a name="parameters"></a>Parameter  
  `pszFilename`  
- Vollständig qualifizierte Name des zu importierenden Datei.  
+ Voll gekennzeichnete Name des zu importierenden Datei.  
   
  `pszTargetName`  
- Optionale Ausgabedateiname, der verwendet werden kann, um die Datei zu benennen, wie sie in der Assembly verknüpft ist.  
+ Optionale Ausgabedateinamen, die verwendet werden kann, um die Datei umzubenennen, da sie in der Assembly verknüpft ist.  
   
  `fSmartImport`  
- Bei "true", ImportTypes verwendet wird, andernfalls importieren muss manuell durchgeführt werden.  
+ True gibt an, ImportTypes wird verwendet, andernfalls importieren muss manuell durchgeführt werden.  
   
  `pImportToken`  
- Ein Zeiger auf das token, wo eine eindeutige Datei-ID gespeichert werden sollen. Die Datei kann es sich um eine Assembly oder eine Datei sein.  
+ Zeiger auf das token, wo eine eindeutige Datei-ID gespeichert werden sollen. Die Datei kann es sich um eine Assembly oder eine Datei sein.  
   
  `ppAssemblyScope`  
  Zeiger auf empfängt [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md). NULL kann sein, wenn die Datei keine Assembly ist.  
   
  `pdwCountOfScopes`  
- Ein Zeiger auf die Anzahl der Dateien und/oder Bereiche, die importiert wurden.  
+ Zeiger auf die Anzahl der Dateien bzw. Bereiche, die importiert wurden.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  Erfordert alink.h  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

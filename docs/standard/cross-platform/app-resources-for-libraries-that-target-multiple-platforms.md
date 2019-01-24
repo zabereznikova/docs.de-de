@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b57233457c697dbe35ab0f68d6ce3557cee9b5c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580088"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641147"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind
 Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) Projekttyp, um sicherzustellen, dass Ressourcen in den Klassenbibliotheken, die von mehreren Plattformen zugegriffen werden kann. Dieser Projekttyp ist in Visual Studio 2012 verfügbar und ist die portable Teilmenge der .NET Framework-Klassenbibliothek vorgesehen. Durch die Verwendung von [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] wird sichergestellt, dass von Desktop-Apps, Silverlight-Apps, Windows Phone-Apps und [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps auf die Bibliothek zugegriffen werden kann.
@@ -52,7 +52,7 @@ Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross
  Wenn das [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]-Projekt lokalisierte Ressourcen enthält, stellen Sie diese auf die gleiche Weise wie für eine Bibliothek in einer Desktop-App mithilfe des Hub-and-Spoke-Modells bereit. Um in der App im [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] die Hauptressourcendatei und ggf. lokalisierte Ressourcendateien zu verwenden, fügen Sie einen Verweis auf die Hauptassembly hinzu. Zur Kompilierzeit extrahiert Visual Studio die Ressource aus der Hauptressourcendatei und lokalisiert die Ressourcendateien in separate RESW-Dateien. Anschließend werden die RESW-Dateien in eine einzelne PRI-Datei kompiliert, auf die [!INCLUDE[wrt](../../../includes/wrt-md.md)] zur Laufzeit zugreift.
 
 <a name="NonLoc"></a>
-## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Beispiel: [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] ohne Lokalisierung
+## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Beispiel: Nicht lokalisierte [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  Im folgenden einfachen Beispiel für [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] ohne Lokalisierung werden Ressourcen verwendet, um die Namen von Spalten zu speichern und die Anzahl von Zeichen zu bestimmen, die für Tabellendaten reserviert werden sollen. Im Beispiel werden die in der folgenden Tabelle aufgeführten Zeichenfolgenressourcen in der Datei LibResources.resx gespeichert.
 
 |Ressourcenname|Ressourcenwert|
@@ -81,7 +81,7 @@ Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
-## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Beispiel: [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] mit Lokalisierung
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Beispiel: Lokalisierte [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
  Das folgende Beispiel für [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] mit Lokalisierung enthält Ressourcen für die Kulturen Französisch (Frankreich) und Englisch (USA). Kultur Englisch (Vereinigte Staaten) ist die Standardkultur der app. die Ressourcen werden angezeigt, in der Tabelle in der [vorherigen Abschnitt](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Die Ressourcendatei für die Kultur Französisch (Frankreich) hat den Namen LibResources.fr-FR.resx, und sie besteht aus den Zeichenfolgenressourcen in der folgenden Tabelle. Der Quellcode für die `UILibrary`-Klasse ist mit dem Quellcode im vorherigen Abschnitt identisch.
 
 |Ressourcenname|Ressourcenwert|
@@ -106,6 +106,6 @@ Sie können .NET Framework [Portable Class Library](../../../docs/standard/cross
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Resources.ResourceManager>  
-- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)  
+- <xref:System.Resources.ResourceManager>
+- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
 - [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

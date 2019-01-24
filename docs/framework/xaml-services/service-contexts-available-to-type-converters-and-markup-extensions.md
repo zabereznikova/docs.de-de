@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: b68f00724ecd3a3edc64ee1e3dd7d97bffa20a62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3417ed53131a695623ea6c365314ab2c5eedd37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629295"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Für Typkonverter und Markuperweiterungen verfügbare Dienstkontexte
 Autoren der Typen, die Typ-Konverter und Markuperweiterungsverwendungen erfordern häufig Kontextinformationen dazu, wo sich eine Verwendung im Markup oder in der umgebenden Objektdiagrammstruktur befindet. Informationen können erforderlich sein, damit das bereitgestellte Objekt ordnungsgemäß instanziiert wird oder Objektverweise zu vorhandenen Objekten im Objektdiagramm hergestellt werden können. Wenn Sie .NET Framework-XAML-Dienste verwenden, wird der Kontext, der möglicherweise als eine Reihe von Dienstschnittstellen verfügbar gemacht werden muss. Der Typkonverter oder der Markuperweiterungsunterstützungscode können eine Abfrage für einen Dienstkontext für Anbieter ausführen, die verfügbar ist und von <xref:System.Xaml.XamlObjectWriter> oder verwandten Typen übergeben wird. Der XAML-Schemakontext ist direkt über einen solchen Dienst verfügbar. In diesem Thema wird beschrieben, wie von einer Wertkonverterimplementierung auf Dienstkontexte zugegriffen werden kann, außerdem werden normalerweise verfügbare Dienste und ihre Rollen aufgeführt.  
@@ -20,7 +20,7 @@ Autoren der Typen, die Typ-Konverter und Markuperweiterungsverwendungen erforder
   
 <a name="services_for_a_markup_extension"></a>   
 ## <a name="services-for-a-markup-extension"></a>Dienste für eine Markuperweiterung  
- <xref:System.Windows.Markup.MarkupExtension> verfügt nur über eine virtuelle Methode, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Der Zweck des `serviceProvider`-Eingabeparameters besteht darin, zu definieren, wie die Dienste an Implementierungen kommuniziert werden, wenn die Markuperweiterung von einem XAML-Prozessor aufgerufen wird. Der folgende Pseudocode veranschaulicht, wie eine Markuperweiterungsimplementierung Dienste in <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>abfragen kann:  
+ <xref:System.Windows.Markup.MarkupExtension> verfügt nur über eine virtuelle Methode, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Der Zweck des `serviceProvider` -Eingabeparameters besteht darin, zu definieren, wie die Dienste an Implementierungen kommuniziert werden, wenn die Markuperweiterung von einem XAML-Prozessor aufgerufen wird. Der folgende Pseudocode veranschaulicht, wie eine Markuperweiterungsimplementierung Dienste in <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>abfragen kann:  
   
 ```  
 public override object ProvideValue(IServiceProvider serviceProvider)  
@@ -75,7 +75,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="iserviceprovider"></a>IServiceProvider  
  **Referenzdokumentation**: <xref:System.IServiceProvider>  
   
- **Relevant für:** grundlegende Vorgänge einer dienstbasierten Infrastruktur in .NET Framework, damit Sie aufrufen können <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>.  
+ **Relevant für:** Grundlegende Vorgänge einer dienstbasierten Infrastruktur in .NET Framework, damit Sie aufrufen können <xref:System.IServiceProvider.GetService%2A?displayProperty=nameWithType>.  
   
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **Referenzdokumentation**: <xref:System.ComponentModel.ITypeDescriptorContext>  
@@ -96,14 +96,14 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Dienst-API:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
- Kann die XAML-zu-CLR-Typzuordnung beeinflussen, die erforderlich ist, wenn der XAML-Writer ein CLR-Objekt in einem Objektdiagramm erstellt. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> verarbeitet eine potenziell durch ein Präfix qualifizierte Zeichenfolge, die einem XAML-Typnamen (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>) entspricht, und gibt eine CLR <xref:System.Type> zurück. Das Auflösen von Typen hängt in der Regel stark vom XAML-Schemakontext ab. Nur der XAML-Schemakontext beachtet Überlegungen wie z. B. welche Assemblys geladen werden und auf welche dieser Assemblys zur Typauflösung zugegriffen werden soll.  
+ Kann die XAML-zu-CLR-Typzuordnung beeinflussen, die erforderlich ist, wenn der XAML-Writer ein CLR-Objekt in einem Objektdiagramm erstellt. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> verarbeitet eine potenziell durch ein Präfix qualifizierte Zeichenfolge, die einem XAML-Typnamen (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>) entspricht, und gibt eine CLR <xref:System.Type>zurück. Das Auflösen von Typen hängt in der Regel stark vom XAML-Schemakontext ab. Nur der XAML-Schemakontext beachtet Überlegungen wie z. B. welche Assemblys geladen werden und auf welche dieser Assemblys zur Typauflösung zugegriffen werden soll.  
   
 ### <a name="iuricontext"></a>IUriContext  
  **Referenzdokumentation**: <xref:System.Windows.Markup.IUriContext>  
   
  **Definiert durch:**  <xref:System.Windows.Markup> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Verarbeitung des Ladepfads und Speicherpfads von Elementwerten, bei denen es sich um URIs oder `x:Uri` -Werte handelt.  
+ **Relevant für:** Ladepfads Verarbeitung und Speicherpfads von Elementwerten, bei denen es sich um URIs oder `x:Uri` Werte.  
   
  **Dienst-API:**  <xref:System.Windows.Markup.IUriContext.BaseUri%2A>  
   
@@ -114,7 +114,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Verarbeitung des Ladepfads und Typsuchen- Verzögerungen oder Optimierungen.  
+ **Relevant für:** Laden Sie Pfad Behandlung und typsuchen-Verzögerungen oder Optimierungen.  
   
  **Dienst-APIs:**  <xref:System.Xaml.IAmbientProvider.GetAllAmbientValues%2A>, 3 weitere.  
   
@@ -125,7 +125,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Ladepfad und Vorgänge, die einen XAML-Typ in einen Unterstützungstyp auflösen müssen.  
+ **Relevant für:** Ladepfad und Vorgänge, die einen XAML-Typ in einen Unterstützungstyp auflösen muss.  
   
  **Dienst-API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
@@ -169,7 +169,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Definiert durch:**  <xref:System.Xaml> System.Xaml-Assembly-Namespace  
   
- **Relevant für:** Definition des Ladepfadobjektdiagramms, Auflösen von durch `x:Name`, `x:Reference`oder Framework-spezifischen Techniken identifizierten Objekten.  
+ **Relevant für:** Laden Sie die Definition des Ladepfadobjektdiagramms, Auflösen identifizierte Objekte `x:Name`, `x:Reference`, oder Framework-spezifischen Techniken.  
   
  **Dienst-APIs:**  <xref:System.Xaml.IXamlNameResolver.Resolve%2A>; andere APIs für erweiterte Szenarios, z. B. den Umgang mit Vorwärtsverweisen.  
   
@@ -186,8 +186,8 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  Weitere Informationen finden Sie unter <xref:System.Xaml.IDestinationTypeProvider>.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Markup.MarkupExtension>  
- <xref:System.Xaml.XamlObjectWriter>  
- [Übersicht über Markuperweiterungen für XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  
- [Übersicht über Typkonverter für XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Markup.MarkupExtension>
+- <xref:System.Xaml.XamlObjectWriter>
+- [Übersicht über Markuperweiterungen für XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
+- [Übersicht über Typkonverter für XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 873ec2cfdf7e4b0c743a3bcf607abe8500ec4d3f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200991"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643051"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Momentaufnahmenisolation in SQL Server
 Die Momentaufnahmeisolation erweitert die Parallelität für OLTP-Anwendungen.  
@@ -141,7 +141,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
  Wenn eine Anwendung viele Konflikte aufweist, stellt die Snapshot-Isolation möglicherweise nicht die optimale Vorgehensweise dar. Hinweise sollten nur verwendet werden, wenn sie wirklich erforderlich sind. Eine Anwendung sollte nicht so erstellt werden, dass ihre Ausführung stets von Sperrhinweisen abhängt.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET Managed Provider und DataSet-Entwicklercenter](https://go.microsoft.com/fwlink/?LinkId=217917)      
- [Transaktionssperren Handbuch und Zeilenversionsverwaltung](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
+## <a name="see-also"></a>Siehe auch
+- [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Transaktionssperren Handbuch und Zeilenversionsverwaltung](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

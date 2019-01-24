@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStepper Schnittstelle1
+title: ICorDebugStepper-Schnittstelle1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepper
@@ -16,47 +16,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 339b823e5e9f38ffd175c79e379e28ccc3565c11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1f796e665a4e403d2d2b5a15837dd8bb8bf47ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631363"
 ---
-# <a name="icordebugstepper-interface1"></a>ICorDebugStepper Schnittstelle1
+# <a name="icordebugstepper-interface1"></a>ICorDebugStepper-Schnittstelle1
 Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgeführt wird, dient zwischen der Veröffentlichung und dem Abschluss eines Befehls als Bezeichner und ermöglicht das Abbrechen eines Schritts.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Deactivate-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Bewirkt, dass `ICorDebugStepper` mit dem letzten Schrittbefehl Abbrechen sie empfangen.|  
-|[IsActive-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Ruft einen Wert, der angibt, ob dies `ICorDebugStepper` wird derzeit von einem Schritt ausgeführt.|  
+|[Deactivate-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Bewirkt, dass dieser `ICorDebugStepper` , mit dem letzten Schrittbefehl abzubrechen, er empfangen.|  
+|[IsActive-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Ruft einen Wert, der angibt, ob dies `ICorDebugStepper` aktuell einen Schritt ausgeführt wird.|  
 |[SetInterceptMask-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Legt einen CorDebugIntercept-Wert, der angibt, die Typen von Code, der durchlaufen werden.|  
-|[SetRangeIL-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Legt einen Wert, der angibt, ob Aufrufe von [ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) übergeben Argumentwerte relativ zu den systemeigenen Code oder Microsoft intermediate Language (MSIL)-Code der Methode, die schrittweise durchlaufen wird.|  
-|[SetUnmappedStopMask-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Legt einen CorDebugUnmappedStop-Wert, der den Typ des nicht zugeordneten Codes angibt, in dem die Ausführung angehalten wird.|  
-|[Step-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Bewirkt, dass `ICorDebugStepper` , Schritt für Schritt durch den enthaltenden Thread und optional zu fortfahren schrittweises Durchlaufen von Funktionen, die in dem Thread aufgerufen werden.|  
-|[StepOut-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Bewirkt, dass `ICorDebugStepper` einstufiger über den enthaltenden Thread und beendet wird, wenn der aktuelle Rahmen ist die Steuerung an den aufrufenden Rahmen zurückgibt.|  
-|[StepRange-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Bewirkt, dass `ICorDebugStepper` , Schritt für Schritt durch den enthaltenden Thread und zurückzugeben, wenn er Code nach dem letzten von der angegebenen Bereiche erreicht hat.|  
+|[SetRangeIL-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Legt einen Wert, der angibt, ob Aufrufe von [ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) Argumentwerte, die relativ zu den systemeigenen Code oder Code für Microsoft intermediate Language (MSIL) der Methode, die schrittweise durchlaufen wird übergeben.|  
+|[SetUnmappedStopMask-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Legt einen CorDebugUnmappedStop-Wert, der den Typ von nicht zugeordnetem Code gibt an, in dem die Ausführung angehalten wird.|  
+|[Step-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Bewirkt, dass dieser `ICorDebugStepper` , Schritt für Schritt durch den enthaltenen Thread und (optional) um weiterhin schrittweises Durchlaufen von Funktionen, in dem Thread aufgerufen werden.|  
+|[StepOut-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Bewirkt, dass dieser `ICorDebugStepper` Schritt für Schritt durch den enthaltenen Thread und beendet wird, wenn der aktuelle Frame die steuerelementrückgabe an den aufrufenden Rahmen.|  
+|[StepRange-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Bewirkt, dass dieser `ICorDebugStepper` , Schritt für Schritt durch den enthaltenen Thread und zurückzugeben, wenn sie Code nach dem letzten von der angegebenen Bereiche erreicht.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ICorDebugStepper` Schnittstelle dient den folgenden Zwecken:  
+ Die `ICorDebugStepper` -Schnittstelle dient folgenden Zwecken:  
   
--   Sie fungiert als Bezeichner zwischen ein Schrittbefehl, der ausgegeben wird und dem Abschluss dieses Befehls.  
+-   Er fungiert als Bezeichner zwischen ein Schrittbefehl, der ausgegeben wird und dem Abschluss dieses Befehls.  
   
--   Es bietet eine zentrale Schnittstelle zum kapseln alle schrittweise ausgeführt werden kann.  
+-   Es bietet eine zentrale Schnittstelle zum kapseln alle das schrittweise durchlaufen, die ausgeführt werden können.  
   
 -   Es bietet eine Möglichkeit, einer schrittweisen Ausführung vorzeitig abbrechen.  
   
- Es können mehrere zugeordnetem pro Thread vorhanden sein. Beispielsweise kann ein Haltepunkt erreicht werden, während bei einem Prozedurschritt für eine Funktion, und der Benutzer eine neue schrittweisen Ausführung innerhalb der Funktion starten möchten. Es liegt im Ermessen des Debuggers bestimmen, wie diese Situation zu behandeln. Der Debugger möchte der ursprünglichen schrittweisen Ausführung abbrechen oder die zwei Vorgänge schachteln. Die `ICorDebugStepper` Schnittstelle unterstützt beide Optionen.  
+ Es können mehrere zugeordnetem pro Thread vorhanden sein. Z. B. ein Haltepunkt erreicht werden kann, während bei einem Prozedurschritt für eine Funktion, und der Benutzer eine neue schrittweisen Ausführung innerhalb dieser Funktion beginnen möchten. Es ist Aufgabe des Debuggers zu bestimmen, wie für diese Situation. Der Debugger sollten die ursprünglichen schrittweisen Ausführung abbrechen oder Schachteln von beiden Vorgänge. Die `ICorDebugStepper` Schnittstelle unterstützt beides.  
   
- Eine zugeordnetem kann zwischen Threads migriert werden, wenn die common Language Runtime (CLR) eine threadübergreifend, gemarshallte aufruft.  
+ Eine zugeordnetem kann zwischen Threads migrieren, wenn die common Language Runtime (CLR) Cross-Thread, gemarshallten aufruft.  
   
 > [!NOTE]
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -64,5 +64,5 @@ Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgefü
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
