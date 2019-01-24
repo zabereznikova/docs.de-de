@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 694fc95a1ad16b61e25a897b778b15ec41af2a01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714268"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps-Methode
 Ruft die Metadaten, die durch das angegebene Token dargestellten generischen Parameter zugeordnet.  
@@ -47,16 +47,16 @@ HRESULT GetGenericParamProps (
  [in] Das Token, das den generischen Parameter für die zurückzugebenden Metadaten darstellt.  
   
  `pulParamSeq`  
- [out] Die Ordnungsposition der `Type` Parameter in der übergeordneten Konstruktor oder eine Methode.  
+ [out] Die Ordnungsposition der `Type` Parameter in der übergeordneten Konstruktor oder die Methode.  
   
  `pdwParamFlags`  
- [out] Der Wert der [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) -Enumeration, die beschreibt, die `Type` für den generischen Parameter.  
+ [out] Der Wert der [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) Enumeration, die beschreibt die `Type` für den generischen Parameter.  
   
  `ptOwner`  
  [out] Eine TypeDef oder MethodDef-Token, das den Besitzer des Parameters darstellt.  
   
  `reserved`  
- [out] Für zukünftige Erweiterungen reserviert.  
+ [out] Reserviert für zukünftige Erweiterbarkeit.  
   
  `wzName`  
  [out] Der Name des generischen Parameters.  
@@ -65,17 +65,17 @@ HRESULT GetGenericParamProps (
  [in] Die Größe der `wzName` Puffer.  
   
  `pchName`  
- [out] Die zurückgegebene Größe des Namens in Breitzeichen.  
+ [out] Die zurückgegebene Größe mit dem Namen, in Breitzeichen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: e8347f1a82c70f1ce8aa7cc05841bc869abbcc33
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 03d0c5096876305f9a181cc28ff2158066e4d56f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787667"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577395"
 ---
 # <a name="advanced-text-formatting"></a>Erweiterte Textformatierung
 Die Windows Presentation Foundation (WPF) bietet eine Reihe zuverlässiger [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] zum Einschließen von Text in Ihrer Anwendung. Layout und [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], z. B. <xref:System.Windows.Controls.TextBlock>, geben Sie die häufigsten und allgemeinsten Elemente für die Textdarstellung. Zeichnen von [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], z. B. <xref:System.Windows.Media.GlyphRunDrawing> und <xref:System.Windows.Media.FormattedText>, bieten eine Möglichkeit zum Einschließen von formatierten Texts in Zeichnungen bereit. Auf der höchsten Ebene [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet eine erweiterbare textformatierungs-Engine, um jeden Aspekt der Textdarstellung an, wie z. B. Speicherverwaltung für Text, die formatierungsverwaltung des Lauftexts und die Verwaltung eingebetteter Objekte steuern.  
@@ -27,7 +27,7 @@ Die Windows Presentation Foundation (WPF) bietet eine Reihe zuverlässiger [!INC
 
   
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  In diesem Thema wird davon ausgegangen, dass Sie mit der höheren Ebene vertraut sind [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] für die Textdarstellung verwendet. Die meisten Benutzerszenarios erfordern nicht die erweiterten textformatierungs- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] in diesem Thema erläutert. Eine Einführung in die verschiedenen Text- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], finden Sie unter [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
   
 <a name="section1"></a>   
@@ -94,6 +94,6 @@ Interaktion zwischen Anwendung und TextFormatter
 ## <a name="specifying-formatting-properties"></a>Angeben von Formatierungseigenschaften  
  <xref:System.Windows.Media.TextFormatting.TextRun> Objekte werden mithilfe der im Textspeicher bereitgestellte Eigenschaften formatiert. Diese Eigenschaften sind in zwei Arten <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> und <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> Behandeln Sie die Eigenschaften, die z. B. <xref:System.Windows.TextAlignment> und <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties> Eigenschaften, die für jeden Lauftext mit einem Absatz ist, z.B. Vordergrundpinsel, unterschiedlich sein können <xref:System.Windows.Media.Typeface>, und den Schriftgrad. Um benutzerdefinierte Absatz- und Lauftext-Eigenschaftentypen zu implementieren, muss Ihre Anwendung zu erstellen von abgeleiteten Klassen <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> und <xref:System.Windows.Media.TextFormatting.TextRunProperties> bzw.  
   
-## <a name="see-also"></a>Siehe auch  
- [Typografie in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>Siehe auch
+- [Typografie in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

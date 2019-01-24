@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab2fbf6bb08a33158ea450f0f19eca50e280d8c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 71d267eedf621a11f8ad21cc7148e1810955521c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713430"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext-Methode
-Gibt den aktuellen Kontext des Threads für den angegebenen Thread zurück.  
+Gibt den Kontext des aktuellen Threads für den angegebenen Thread an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,22 +39,22 @@ HRESULT GetThreadContext(
   
 #### <a name="parameters"></a>Parameter  
  `dwThreadID`  
- [in] Der Bezeichner des Threads, dessen Kontext abgerufen werden. Der Bezeichner wird vom Betriebssystem definiert.  
+ [in] Der Bezeichner des Threads, dessen Kontext wird abgerufen werden sollen. Der Bezeichner wird vom Betriebssystem definiert.  
   
  `contextFlags`  
- [in] Eine bitweise Kombination von plattformabhängigen Flags, die angeben, welche Teile des Kontexts gelesen werden soll.  
+ [in] Eine bitweise Kombination der plattformabhängige-Flags, die angeben, welche Teile des Kontexts gelesen werden soll.  
   
  `contextSize`  
  [in] Die Größe des `pContext`.  
   
  `pContext`  
- [out] Der Puffer, in der Kontext des Threads gespeichert werden soll.  
+ [out] Der Puffer, in der Kontext des Threads gespeichert werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Auf Windows-Plattformen `pContext` muss ein `CONTEXT` -Struktur (in "Winnt.h" definiert), die für den Computertyp gemäß geeignet ist die [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) Methode. `contextFlags` benötigen Sie die gleichen Werte wie die `ContextFlags` Feld der `CONTEXT` Struktur. Die `CONTEXT` Struktur ist prozessorspezifische; die Datei "Winnt.h" Weitere Informationen finden Sie unter.  
+ Auf Windows-Plattformen `pContext` muss eine `CONTEXT` -Struktur (in "Winnt.h" definiert), die für die Computer den vom angegebenen geeignet ist die [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) Methode. `contextFlags` müssen die gleichen Werte wie die `ContextFlags` Feld der `CONTEXT` Struktur. Die `CONTEXT` Struktur ist, macht prozessorspezifische; die Datei "Winnt.h" Weitere Informationen finden Sie unter.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -62,7 +62,7 @@ HRESULT GetThreadContext(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

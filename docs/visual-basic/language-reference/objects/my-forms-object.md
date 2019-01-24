@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: d15765b7673f321d4362ceea0adb73959a7e7726
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17042f60eb27c41640ef5d8c927c7acc5bc73183
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712622"
 ---
 # <a name="myforms-object"></a>My.Forms-Objekt
 Stellt Eigenschaften bereit, für den Zugriff auf eine Instanz von jedem Windows-Formular, das im aktuellen Projekt deklariert.  
@@ -66,11 +66,11 @@ Stellt Eigenschaften bereit, für den Zugriff auf eine Instanz von jedem Windows
 |Windows-Dienst|Nein|  
 |Website|Nein|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
- <xref:System.Windows.Forms.Form>  
- <xref:System.Windows.Forms.Form.Close%2A>  
- [Objekte](../../../visual-basic/language-reference/objects/index.md)  
- [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot-Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Zugreifen auf Anwendungsformulare](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
+- <xref:System.Windows.Forms.Form>
+- <xref:System.Windows.Forms.Form.Close%2A>
+- [Objekte](../../../visual-basic/language-reference/objects/index.md)
+- [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot-Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Zugreifen auf Anwendungsformulare](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

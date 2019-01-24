@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be42fea034be4fe5d48874b00db86977a3039a34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 940d913b2b04a510e2ae0e33eaa78b07ba4237c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448219"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676795"
 ---
 # <a name="imetadataemitgettokenfromsig-method"></a>IMetaDataEmit::GetTokenFromSig-Methode
-Ruft ein Token für die angegebene Metadatensignatur ab.  
+Ruft ein Token für die angegebenen Metadaten-Signatur ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,23 +39,23 @@ HRESULT GetTokenFromSig (
   
 #### <a name="parameters"></a>Parameter  
  `pvSig`  
- [in] Die Signatur, die beibehalten werden und gespeichert werden.  
+ [in] Die Signatur, die beibehalten und gespeichert werden.  
   
  `cbSig`  
  [in] Die Anzahl der Bytes im `pvSig`.  
   
  `pmsig`  
- [out] Die `mdSignature` Token zugewiesen.  
+ [out] Die `mdSignature` zugewiesene Token.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

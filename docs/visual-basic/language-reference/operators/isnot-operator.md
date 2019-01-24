@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: babee364d350ca84a8379f675acc4b5c87f98303
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffafff915af8a94e9bc135246064e4c049d41838
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596461"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot-Operator (Visual Basic)
 Vergleicht zwei Objektverweisvariablen.  
@@ -27,28 +27,28 @@ result = object1 IsNot object2
  Erforderlich. Ein `Boolean`-Wert.  
   
  `object1`  
- Erforderlich. Alle `Object` Variable oder ein Ausdruck.  
+ Erforderlich. Alle `Object` Variable oder einen Ausdruck.  
   
  `object2`  
- Erforderlich. Alle `Object` Variable oder ein Ausdruck.  
+ Erforderlich. Alle `Object` Variable oder einen Ausdruck.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `IsNot` -Operator ermittelt, ob zwei Objektverweise auf unterschiedliche Objekte verweisen. Er führt jedoch keine Wertvergleiche. Wenn `object1` und `object2` beide verweisen auf genau dieselbe Objektinstanz, `result` ist `False`; Wenn sie keinen `result` ist `True`.  
+ Die `IsNot` -Operator ermittelt, ob zwei Objektverweise auf unterschiedliche Objekte verweisen. Er führt jedoch keine vergleichen. Wenn `object1` und `object2` beide verweisen auf genau dieselbe Objektinstanz, `result` ist `False`; Wenn dies nicht der Fall `result` ist `True`.  
   
- `IsNot` ist das Gegenteil von der `Is` Operator. Der Vorteil der `IsNot` ist, dass Sie vermeiden können, umständliche Syntax mit `Not` und `Is`, die schwer zu lesen sein können.  
+ `IsNot` ist das Gegenteil von dem `Is` Operator. Der Vorteil der `IsNot` besteht darin, dass Sie das umständlich Syntax mit vermeiden können `Not` und `Is`, die schwierig zu lesen sein können.  
   
- Sie können die `Is` und `IsNot` Operatoren, um früh gebundene und spät gebundene Objekte zu testen.  
+ Sie können die `Is` und `IsNot` Abfrageoperatoren, um sowohl früh gebundenen und spät gebundenen Objekte zu testen.  
   
 > [!NOTE]
->  Die `IsNot` Operator kann nicht verwendet werden, um das Vergleichen von Ausdrücken, die zurückgegeben werden, aus der `TypeOf` Operator. Stattdessen müssen Sie verwenden die `Not` und `Is` Operatoren.  
+>  Die `IsNot` Operator kann nicht verwendet werden, zum Vergleich von Ausdrücken, die zurückgegeben werden, aus der `TypeOf` Operator. Sie müssen stattdessen die `Not` und `Is` Operatoren.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel verwendet die `Is` Operator und die `IsNot` Operator, um denselben Vergleich zu erreichen.  
+ Das folgende Codebeispiel verwendet die `Is` Operator und die `IsNot` Operator, um denselben Vergleich.  
   
  [!code-vb[VbVbalrOperators#29](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/isnot-operator_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)  
- [TypeOf-Operator](../../../visual-basic/language-reference/operators/typeof-operator.md)  
- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Gewusst wie: Überprüfen, ob zwei Objekte identisch sind](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)
+## <a name="see-also"></a>Siehe auch
+- [Is-Operator](../../../visual-basic/language-reference/operators/is-operator.md)
+- [TypeOf-Operator](../../../visual-basic/language-reference/operators/typeof-operator.md)
+- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Vorgehensweise: Überprüfen Sie, ob zwei Objekte gleich sind.](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

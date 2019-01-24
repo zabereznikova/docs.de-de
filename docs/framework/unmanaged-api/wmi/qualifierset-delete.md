@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 860295a3d10acd67f5fb7665a7213dc90e4a4829
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713165"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete-Funktion
 Löscht einen angegebenen Qualifizierer anhand des Namens.  
@@ -55,7 +55,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Die `wszName` -Parameter ist ungültig. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Der `wszName`-Parameter ist ungültig. |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | Das Löschen dieses Qualifizierers ist nicht zulässig. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Der angegebene Qualifizierer wurde nicht gefunden. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
@@ -68,11 +68,11 @@ Diese Funktion umschließt einen Aufruf der [IWbemQualifierSet::Delete](/windows
 Aufgrund der Regeln zur Weitergabe Qualifizierer kann ein bestimmter Qualifizierer von einem anderen Objekt geerbt und wurden lediglich in die aktuelle Klasse oder Instanz überschrieben. In diesem Fall die `QualifierSet_Delete` Methode setzt den Qualifizierer auf den ursprünglichen geerbten Wert zurück. In diesem Fall die Funktion gibt den Statuscode zurück `WBEM_S_RESET_TO_DEFAULT`.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

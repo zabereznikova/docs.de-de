@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Deklarieren eines Objekts mithilfe eines Objektinitialisierers (Visual Basic)'
+title: 'Vorgehensweise: Deklarieren eines Objekts mithilfe eines Objektinitialisierers (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring objects using object initializer
@@ -7,27 +7,27 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 3a372ba91377b53c87c05976e416ca8ed55ccbbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eeaf3b4a611944395269fcae045bab00d25f0167
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561066"
 ---
-# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Gewusst wie: Deklarieren eines Objekts mithilfe eines Objektinitialisierers (Visual Basic)
-Objektinitialisierer ermöglichen es Ihnen, deklarieren und instanziieren Sie eine Instanz einer Klasse in einer einzelnen Anweisung. Darüber hinaus können Sie eine oder mehrere Member der Instanz zur gleichen Zeit initialisieren, ohne einen parametrisierten Konstruktor aufzurufen.  
+# <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Vorgehensweise: Deklarieren eines Objekts mithilfe eines Objektinitialisierers (Visual Basic)
+Objektinitialisierer ermöglichen Sie deklarieren und instanziieren Sie eine Instanz einer Klasse in einer einzigen Anweisung. Darüber hinaus können Sie eine oder mehrere Member der Instanz zur gleichen Zeit, initialisieren, ohne einen parametrisierten Konstruktor aufzurufen.  
   
- Wenn Sie einen Objektinitialisierer verwenden, um eine Instanz eines benannten Typs zu erstellen, ist der Standardkonstruktor für die Klasse aufgerufen, gefolgt von der Initialisierung der angegebenen Elemente in der Reihenfolge, die Sie angeben.  
+ Wenn Sie einen Objektinitialisierer verwenden, um eine Instanz eines benannten Typs erstellen, wird der Standardkonstruktor für die Klasse aufgerufen, gefolgt von der Initialisierung der angegebenen Member in der Reihenfolge, in die Sie angeben.  
   
- Das folgende Verfahren zeigt, wie zum Erstellen einer Instanz von einem `Student` Klasse auf drei verschiedene Arten. Die Klasse verfügt über Vorname, Nachname und Jahr von Klasseneigenschaften o. ä. Jede dieser drei Deklarationen erstellt eine neue Instanz der `Student`, mit der Eigenschaft `First` legen Sie auf "Michael,"-Eigenschaft `Last` auf "Tucker verbleibenden" und alle anderen Mitglieder auf ihre Standardwerte festgelegt. Das Ergebnis jeder Deklaration im Verfahren entspricht im folgenden Beispiel, das einen Objektinitialisierer nicht verwendet.  
+ Das folgende Verfahren zeigt, wie zum Erstellen einer Instanz von einem `Student` Klasse auf drei verschiedene Arten. Die Klasse verfügt über Vorname, Nachname und Jahr Klasseneigenschaften, u. a. Jede dieser drei Deklarationen erstellt eine neue Instanz der `Student`, mit der Eigenschaft `First` legen Sie auf "Michael,"-Eigenschaft `Last` "Tucker" festgelegt, und alle anderen Elemente auf ihre Standardwerte festgelegt. Das Ergebnis jeder Deklaration in der Prozedur entspricht im folgenden Beispiel, das einen Objektinitialisierer nicht verwendet.  
   
  [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
   
- Eine Implementierung der `Student` Klasse, finden Sie unter [Vorgehensweise: Erstellen Sie eine Liste der Elemente](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Kopieren Sie den Code aus diesem Thema richten Sie die Klasse, und erstellen eine Liste der `Student` Objekten arbeiten.  
+ Eine Implementierung der `Student` Klasse, finden Sie unter [Vorgehensweise: Erstellen Sie eine Liste von Elementen](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md). Kopieren Sie den Code in diesem Thema richten Sie die Klasse, und erstellen eine Liste der `Student` Objekte zusammenarbeiten.  
   
-### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>So erstellen ein Objekt einer benannten Klasse mithilfe eines Objektinitialisierers  
+### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>So erstellen Sie ein Objekt einer benannten Klasse mit einem Objektinitialisierer  
   
-1.  Beginnen Sie die Deklaration, als ob Sie einen Konstruktor verwenden geplant.  
+1.  Beginnen Sie die Deklaration, als ob Sie einen Konstruktor nutzen will.  
   
      `Dim student1 As New Student`  
   
@@ -35,13 +35,13 @@ Objektinitialisierer ermöglichen es Ihnen, deklarieren und instanziieren Sie ei
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3.  Verfügen Sie in der Initialisierungsliste über jede Eigenschaft, die Sie initialisieren und ihm einen Anfangswert zuweisen möchten. Der Name der Eigenschaft ist ein Punkt vorangestellt.  
+3.  Enthalten Sie in der Initialisierungsliste jede Eigenschaft, die Sie verwenden möchten, initialisieren und einen Anfangswert zuweisen. Der Name der Eigenschaft wird ein Punkt voranstehen.  
   
      [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
   
      Sie können eine oder mehrere Member der Klasse initialisieren.  
   
-4.  Alternativ können Sie eine neue Instanz der Klasse deklarieren, und klicken Sie dann einen Wert zuweisen. Deklarieren Sie zuerst eine Instanz von `Student`:  
+4.  Alternativ können Sie eine neue Instanz der Klasse deklarieren, und klicken Sie dann einen Wert zuzuweisen. Deklarieren Sie zuerst eine Instanz von `Student`:  
   
      `Dim student2 As Student`  
   
@@ -49,7 +49,7 @@ Objektinitialisierer ermöglichen es Ihnen, deklarieren und instanziieren Sie ei
   
      `Dim student2 As Student = New Student`  
   
-6.  Typ `With` , und klicken Sie dann mit einem Objektinitialisierer initialisiert werden, mindestens Mitglied der neuen Instanz.  
+6.  Typ `With` und klicken Sie dann einen Objektinitialisierer zum Initialisieren von Membern von ein oder mehrere der neuen Instanz.  
   
      [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
   
@@ -57,10 +57,10 @@ Objektinitialisierer ermöglichen es Ihnen, deklarieren und instanziieren Sie ei
   
      [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
   
-     Weitere Informationen finden Sie unter [lokalen Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+     Weitere Informationen finden Sie unter [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Gewusst wie: Erstellen einer Liste von Elementen](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)  
- [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+## <a name="see-also"></a>Siehe auch
+- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Vorgehensweise: Erstellen Sie eine Liste von Elementen](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

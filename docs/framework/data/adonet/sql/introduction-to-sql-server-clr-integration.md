@@ -2,12 +2,12 @@
 title: Einführung in die CLR-Integration in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: df5ead7d640446a3832b485ecf82cd4a2a11b1fb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 215230486cb3e1ebee4cb40280b91c8bf9f6c799
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523004"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714931"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Einführung in die CLR-Integration in SQL Server
 Die CLR-Komponente (Common Language Runtime) bildet das Kernstück von Microsoft .NET Framework und stellt die Ausführungsumgebung für den gesamten Code in .NET Framework bereit. In der CLR ausgeführter Code wird als verwalteter Code bezeichnet. Die CLR stellt verschiedene Funktionen und Dienste bereit, die für die Programmausführung erforderlich sind. Hierzu zählen z. B. JIT-Kompilierung (Just-In-Time), Zuordnung und Verwaltung des Arbeitsspeichers, Erzwingen von Typsicherheit, Ausnahmebehandlung, Threadverwaltung und Sicherheit.  
@@ -65,7 +65,7 @@ GO
   
 -   [Debuggen von CLR-Datenbankobjekten](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von SQL Server 2005-Objekte In verwaltetem Code](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [Codezugriffssicherheit und ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Erstellen von SQL Server 2005-Objekte In verwaltetem Code](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)
+- [Codezugriffssicherheit und ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

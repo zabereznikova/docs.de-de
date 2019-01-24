@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 6435f33489be1355313e43a046b0e3169e1eaea3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861972"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714892"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Exemplarische Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements
 Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.ToolStrip> steuert, ein professionelles Aussehen und Verhalten durch eine eigene Klasse abgeleitet schreiben die <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Typ.  
@@ -35,7 +35,7 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
 > [!NOTE]
 >  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Für die Durchführung dieser exemplarischen Vorgehensweise benötigen Sie Folgendes:  
   
 -   Berechtigt sind, können zum Erstellen und Ausführen von Windows Forms-Anwendungsprojekten auf dem Computer, auf dem Visual Studio installiert ist.  
@@ -49,7 +49,7 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
 2.  In **Projektmappen-Explorer**, löschen Sie Standardsteuerelement des Projekts, indem Sie die Quelldatei, die mit dem Namen "UserControl1.cs" oder "UserControl1.vb", abhängig von der Sprache Ihrer Wahl löschen.  
   
-     Weitere Informationen finden Sie unter [NIB: Vorgehensweise: entfernen, löschen und Ausschließen von Elementen](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Entfernen, löschen und Ausschließen von Elementen](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Fügen Sie einen neuen <xref:System.Windows.Forms.UserControl> Element für die **StackViewLibrary** Projekt. Weisen Sie der neuen Quelldatei Basisnamen `StackView`.  
   
@@ -102,7 +102,7 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
 1.  Wählen Sie in der Windows Forms-Designer die `StackView` Steuerelement.  
   
-2.  In der **Eigenschaften** Fenster, klicken Sie auf **Ereignisse**.  
+2.  Klicken Sie im Fenster **Eigenschaften** auf **Ereignisse**.  
   
 3.  Doppelklicken Sie auf das Load-Ereignis zum Generieren der `StackView_Load` -Ereignishandler.  
   
@@ -113,7 +113,7 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
 5.  Wählen Sie in der Windows Forms-Designer die `mailStackButton` Steuerelement.  
   
-6.  In der **Eigenschaften** Fenster, klicken Sie auf **Ereignisse**.  
+6.  Klicken Sie im Fenster **Eigenschaften** auf **Ereignisse**.  
   
 7.  Doppelklicken Sie auf das Click-Ereignis.  
   
@@ -167,7 +167,7 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
   
 ## <a name="testing-the-stackview-control"></a>Testen des Steuerelements StackView  
- Die `StackView` Steuerelement abgeleitet wird, aus der <xref:System.Windows.Forms.UserControl> Klasse. Aus diesem Grund können Sie testen, das Steuerelement mit dem **UserControl-Testcontainer**. Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Die `StackView` Steuerelement abgeleitet wird, aus der <xref:System.Windows.Forms.UserControl> Klasse. Aus diesem Grund können Sie testen, das Steuerelement mit dem **UserControl-Testcontainer**. Weitere Informationen finden Sie unter [Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-the-stackview-control"></a>So testen Sie die StackView-Steuerelement  
   
@@ -184,9 +184,9 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
 -   Erstellen Sie ein Formular für multiple Document Interface (MDI) mit andockbaren <xref:System.Windows.Forms.ToolStrip> Steuerelemente. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines MDI-Formulars mit das Zusammenführen von Menüs und ToolStrip-Steuerelemente](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStrip>  
- <xref:System.Windows.Forms.StatusStrip>  
- [ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStrip>
+- <xref:System.Windows.Forms.StatusStrip>
+- [ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStringValue Schnittstelle1
+title: ICorDebugStringValue-Schnittstelle1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStringValue
@@ -16,22 +16,22 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2814f6164f383c36bb5b8e20ce8996b30eef0f1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b9160b9013481de294e6c8dd032cfa2d0ebb405d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421699"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596838"
 ---
-# <a name="icordebugstringvalue-interface1"></a>ICorDebugStringValue Schnittstelle1
+# <a name="icordebugstringvalue-interface1"></a>ICorDebugStringValue-Schnittstelle1
 Eine Unterklasse von ICorDebugHeapValue, die für Zeichenfolgenwerte gilt.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[GetLength-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Ruft die Anzahl der Zeichen in der Zeichenfolge, die auf die verwiesen wird von diesem `ICorDebugStringValue`.|  
-|[GetString-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Ruft die Zeichenfolge, die auf die verwiesen wird von diesem `ICorDebugStringValue`.|  
+|[GetLength-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Ruft die Anzahl der Zeichen in der Zeichenfolge, die auf die dieses `ICorDebugStringValue`.|  
+|[GetString-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Ruft die Zeichenfolge, die auf die dieses `ICorDebugStringValue`.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -39,7 +39,7 @@ Eine Unterklasse von ICorDebugHeapValue, die für Zeichenfolgenwerte gilt.
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -47,5 +47,5 @@ Eine Unterklasse von ICorDebugHeapValue, die für Zeichenfolgenwerte gilt.
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

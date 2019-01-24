@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ed9e097dccd0fcb81ea9023cc9b84906589ccb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7ebb7fdbcf8c17991928df2dc621ec651b9cd4f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446257"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678719"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError-Methode
-Stellt eine Benachrichtigung von Fehlern, die auftreten, während das Zusammenführen von Metadaten bereit.  
+Stellt eine Benachrichtigung von Fehlern, während das Zusammenführen von Metadaten bereit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,19 +38,19 @@ HRESULT OnError (
   
 #### <a name="parameters"></a>Parameter  
  `hrError`  
- [in] Der HRESULT-Fehlerwert zurückgegeben, an die aufrufende Methode.  
+ [in] Der Wert des HRESULT-Fehlercodes, an die aufrufende Methode zurückgegeben.  
   
  `token`  
- [in] Das Metadatentoken des Codeobjekts, die zusammengeführt wurde, als der Fehler auftrat.  
+ [in] Das Metadatentoken des Codeobjekts, die beim Auftreten des Fehlers zusammengeführt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataError-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataError-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

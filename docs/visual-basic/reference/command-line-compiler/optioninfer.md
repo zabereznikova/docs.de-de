@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: e7dbc4d5f06096978c4d93ea20677dcb60bc3fcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82a8667c32c6396a868375555b003d0082ce1a73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655924"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709974"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen.  
@@ -34,13 +34,13 @@ Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen
 >  Sie können die `-noconfig` Option nutzen, um die internen Standardwerte des Compilers, anstelle der Werte in vbc.rsp, beizubehalten. Der Compilerstandardwert für diese Option ist `-optioninfer-`.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Quellcodedatei enthält eine [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md), überschreibt die Anweisung die `-optioninfer` Befehlszeilencompiler-Einstellung.  
+ Wenn die Quellcodedatei enthält einen [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md), überschreibt die Anweisung die `-optioninfer` Befehlszeilencompiler-Einstellung.  
   
-### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>-Optioninfer in der Visual Studio-IDE festlegen  
+### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>-Optioninfer in Visual Studio-IDE festlegen  
   
 1.  Wählen Sie ein Projekt in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
-2.  Auf der **Kompilieren** Registerkarte, ändern Sie den Wert in der **Option infer** Feld.  
+2.  Auf der **Kompilieren** Registerkarte, ändern Sie den Wert in der **Option infer-** Feld.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code kompiliert `test.vb` mit aktiviertem lokalen Typrückschluss.  
@@ -49,15 +49,15 @@ Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen
 vbc -optioninfer+ test.vb  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)  
- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [VB-Standard, Projekte, Dialogfeld „Optionen“](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)  
- [Seite „Kompilieren“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)  
- [Erstellen von der Befehlszeile aus](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)
+## <a name="see-also"></a>Siehe auch
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [VB-Standard, Projekte, Dialogfeld „Optionen“](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Seite „Kompilieren“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
+- [Erstellen von der Befehlszeile aus](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

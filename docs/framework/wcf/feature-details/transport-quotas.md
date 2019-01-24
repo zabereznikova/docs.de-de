@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33507754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54542768"
 ---
 # <a name="transport-quotas"></a>Transportkontingente
 Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann eine Verbindung übermäßige Ressourcen belegt. Ein Kontingent ist eine harte Grenze, die eine Nutzung zusätzlicher Ressourcen nach Überschreiten des Kontingentwerts verhindert. Transportkontingente verhindern entweder böswillige oder unbeabsichtigte Denial-of-Service-Angriffe.  
   
- Windows Communication Foundation (WCF)-Transporte haben Standardkontingentwerte, die auf einer konservativen Zuweisung von Ressourcen basieren. Diese Standardwerte sind für eine Entwicklungsumgebung und für kleine Installationsszenarien geeignet. Dienstadministratoren sollten Transportkontingente prüfen und individuelle Kontingentwerte anpassen, wenn einer Installation die Ressourcen ausgehen oder wenn Verbindungen eingeschränkt werden, obwohl zusätzliche Ressourcen zur Verfügung stehen.  
+ Windows Communication Foundation (WCF)-Transporte haben Standardkontingentwerte, die auf einer konservativen speicherbelegung von Ressourcen basieren. Diese Standardwerte sind für eine Entwicklungsumgebung und für kleine Installationsszenarien geeignet. Dienstadministratoren sollten Transportkontingente prüfen und individuelle Kontingentwerte anpassen, wenn einer Installation die Ressourcen ausgehen oder wenn Verbindungen eingeschränkt werden, obwohl zusätzliche Ressourcen zur Verfügung stehen.  
   
 ## <a name="types-of-transport-quotas"></a>Typen von Transportkontingenten  
  WCF-Transporte haben drei Typen von Kontingenten:  
   
--   *Timeouts* DOS-Angriffe, die Schwächung von Ressourcen für längere Zeit zu verringern.  
+-   *Timeouts* mindern Denial of Service-Angriffe, die abhängig sind, auf die Ressourcen für längere Zeit binden.  
   
--   *Speicherbelegungsgrenzen* zu verhindern, dass eine einzelne Verbindung Systemspeicher aufbraucht und einen Dienst zu anderen Verbindungen verweigert.  
+-   *Zuordnung des Arbeitsspeicherlimits* zu verhindern, dass eine einzelne Verbindung Systemspeicher für schwellenwertbenachrichtigungen und Dienst zu anderen Verbindungen verweigert.  
   
--   *Grenzwerte für sammlungsgröße* begrenzen den Verbrauch von Ressourcen, die indirekt Arbeitsspeicher belegen oder beschränkt zur Verfügung.  
+-   *Grenzwerte für sammlungsgröße* begrenzen den Verbrauch von Ressourcen, die Speicher indirekt Belegen oder beschränkt zur Verfügung sind.  
   
 ## <a name="transport-quota-descriptions"></a>Transportkontingentbeschreibungen  
- In diesem Abschnitt werden die transportkontingente beschrieben für die standard-WCF-Transporte zur Verfügung: http(s), TCP/IP und named Pipes. Benutzerdefinierte Transporte können eigene konfigurierbare Kontingente aufweisen, die nicht in dieser Liste enthalten sind. Weitere Informationen über diese Kontingente finden Sie in der Dokumentation zum benutzerdefinierten Transport.  
+ In diesem Abschnitt werden die transportkontingente beschrieben für die standard-WCF-Transporte zur Verfügung: HTTP (S), TCP/IP und named Pipes. Benutzerdefinierte Transporte können eigene konfigurierbare Kontingente aufweisen, die nicht in dieser Liste enthalten sind. Weitere Informationen über diese Kontingente finden Sie in der Dokumentation zum benutzerdefinierten Transport.  
   
  Jede Kontingenteinstellung verfügt über einen Typ, einen minimalen Wert und einen Standardwert. Der Maximalwert eines Kontingents wird von seinem Typ beschränkt. Aufgrund von Computereinschränkungen ist es nicht immer möglich, ein Kontingent auf seinen Maximalwert festzulegen.  
   
@@ -47,12 +47,12 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 |`MaxReceivedMessageSize`|Long|1|64 KB|Maximale Größe einer empfangenen Nachricht in Bytes, einschließlich der Header, bevor der Transport eine Ausnahme auslöst.|  
 |`OpenTimeout`|TimeSpan|0|1 Min.|Maximale Wartezeit für den Aufbau einer Verbindung, bevor der Transport eine Ausnahme auslöst.|  
 |`ReceiveTimeout`|TimeSpan|0|10 Min.|Maximale Wartezeit für den Abschluss eines Lesevorgangs, bevor der Transport eine Ausnahme auslöst.|  
-|`SendTimeout`|Timespan|0|1 Min.|Maximale Wartezeit für den Abschluss eines Schreibvorgangs, bevor der Transport eine Ausnahme auslöst.|  
+|`SendTimeout`|Timespan|0|1 Min.| Maximale Wartezeit für den Abschluss eines Schreibvorgangs, bevor der Transport eine Ausnahme auslöst.|  
   
  Die Transportkontingente `MaxPendingConnections` und `MaxOutboundConnectionsPerEndpoint` werden zu einem einzelnen Transportkontingent namens `MaxConnections` kombiniert, wenn dies durch die Bindung oder die Konfiguration eingerichtet ist. Nur das Bindungselement ermöglicht die einzelne Einrichtung dieser Kontingentwerte. Das `MaxConnections`-Transportkontingent verfügt über die gleichen Mindest- und Standardwerte.  
   
 ## <a name="setting-transport-quotas"></a>Festlegen von Transportkontingenten  
- Transportkontingente werden durch das Transportbindungselement, die Transportbindung, die Anwendungskonfiguration oder die Hostrichtlinie festgelegt. Dieses Dokument deckt nicht die Einrichtung von Transporten über die Hostrichtlinie ab. Informationen über die Einrichtung von Hostrichtlinienkontingenten finden Sie in der Dokumentation des zugrunde liegenden Transports. Die [Configuring HTTP and HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) Thema wird beschrieben, kontingenteinstellungen für die Http.sys-Treibers. Durchsuchen Sie die Microsoft Knowledge Base, um weitere Informationen über die Konfiguration von Windows-Beschränkungen auf HTTP-, TCP/IP- und Named Pipe-Verbindungen zu erhalten.  
+ Transportkontingente werden durch das Transportbindungselement, die Transportbindung, die Anwendungskonfiguration oder die Hostrichtlinie festgelegt. Dieses Dokument deckt nicht die Einrichtung von Transporten über die Hostrichtlinie ab. Informationen über die Einrichtung von Hostrichtlinienkontingenten finden Sie in der Dokumentation des zugrunde liegenden Transports. Die [Konfigurieren von HTTP und HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) Thema beschreibt die kontingenteinrichtung des Http.sys-Treibers. Durchsuchen Sie die Microsoft Knowledge Base, um weitere Informationen über die Konfiguration von Windows-Beschränkungen auf HTTP-, TCP/IP- und Named Pipe-Verbindungen zu erhalten.  
   
  Andere Typen von Kontingenten gelten indirekt für Transporte. Der Nachrichtenencoder, den der Transport nutzt, um eine Nachricht in Bytes zu transformieren, kann über eigene Kontingenteinstellungen verfügen. Allerdings sind diese Kontingente vom verwendeten Transporttyp unabhängig.  
   
@@ -107,10 +107,10 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 ### <a name="controlling-transport-quotas-from-configuration"></a>Kontrolle von Transportkontingenten von der Konfiguration  
  Die Anwendungskonfiguration kann die gleichen Transportkontingente festlegen, wie der direkte Zugriff auf Eigenschaften auf der Bindung . In Konfigurationsdateien beginnt der Name eines Transportkontingents immer mit einem Kleinbuchstaben. Beispielsweise entspricht die `CloseTimeout`-Eigenschaft auf einer Bindung der `closeTimeout`-Einstellung in der Konfiguration, und die `MaxConnections`-Eigenschaft auf einer Bindung entspricht der `maxConnections`-Einstellung in der Konfiguration.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>

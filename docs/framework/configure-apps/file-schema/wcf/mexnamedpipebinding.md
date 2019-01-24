@@ -2,19 +2,19 @@
 title: '&lt;mexNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
-ms.openlocfilehash: a5dac6c5b4409f71e8360c174061d4d12ffac5d2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 90e0a5afc1f1fa4315eab1cd8abdd8840bfe49b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677059"
 ---
 # <a name="ltmexnamedpipebindinggt"></a>&lt;mexNamedPipeBinding&gt;
 Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Nachrichtenaustausch (WS-MEX) über eine benannte Pipe verwendet wird.  
   
  \<system.ServiceModel>  
 \<bindings>  
-\<MexNamedPipeBinding >  
+\<mexNamedPipeBinding>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,13 +51,13 @@ Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Na
 |-------------|-----------------|  
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexNamedPipeBinding%2A>  
- <xref:System.ServiceModel.Configuration.MexNamedPipeBindingElement>  
- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [Veröffentlichen und Abrufen von Metadaten über eine benutzerdefinierte Bindung](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
- [Metadaten](../../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexNamedPipeBinding%2A>
+- <xref:System.ServiceModel.Configuration.MexNamedPipeBindingElement>
+- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Veröffentlichen und Abrufen von Metadaten über eine benutzerdefinierte Bindung](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
+- [Metadaten](../../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

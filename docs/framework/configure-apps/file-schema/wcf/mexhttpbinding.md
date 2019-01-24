@@ -2,12 +2,12 @@
 title: '&lt;mexHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
-ms.openlocfilehash: c60fcf5071d52d30c1b6b99a19640a0fdc1265f8
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f22ac3beb5ee90a543e65734bd89123293c2dd3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680413"
 ---
 # <a name="ltmexhttpbindinggt"></a>&lt;mexHttpBinding&gt;
 Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Nachrichtenaustausch (WS-MEX) über HTTP verwendet wird.  
@@ -54,13 +54,13 @@ Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Na
 ## <a name="remarks"></a>Hinweise  
  Diese Bindung ist im Grunde eine `WSHttpBinding`-Bindung mit deaktivierter Sicherheit. Sie unterstützt die meisten Metadatenanforderungen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>  
- <xref:System.ServiceModel.Configuration.MexHttpBindingElement>  
- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [Veröffentlichen und Abrufen von Metadaten über eine benutzerdefinierte Bindung](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
- [Metadaten](../../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>
+- <xref:System.ServiceModel.Configuration.MexHttpBindingElement>
+- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Veröffentlichen und Abrufen von Metadaten über eine benutzerdefinierte Bindung](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
+- [Metadaten](../../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

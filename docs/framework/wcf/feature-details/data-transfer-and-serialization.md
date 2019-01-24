@@ -5,15 +5,15 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5192030fa2eda45431dd8a3765603d3081b93fa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489205"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595317"
 ---
 # <a name="data-transfer-and-serialization"></a>Datenübertragung und Serialisierung
-In einem verbundenen System müssen Dienste und Clients Daten austauschen, um Aufgaben auszuführen. Als Entwickler eines Diensts oder Clients müssen Sie auch verstehen, wie Windows Communication Foundation (WCF) behandelt Daten und der Datenserialisierung verfährt um Anwendungen zu erstellen, die effizient und einfach zu verwalten sind.  
+In einem verbundenen System müssen Dienste und Clients Daten austauschen, um Aufgaben auszuführen. Als Entwickler eines Diensts oder Clients müssen Sie auch wissen, wie Windows Communication Foundation (WCF) verarbeitet Daten und der Datenserialisierung um Anwendungen zu erstellen, die effizient und leicht zu warten sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -60,6 +60,6 @@ In einem verbundenen System müssen Dienste und Clients Daten austauschen, um Au
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Erweitern von Encodern und Serialisierungsprogrammen](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Bewährte Methoden: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Dienstversionsverwaltung](../../../../docs/framework/wcf/service-versioning.md)
+## <a name="see-also"></a>Siehe auch
+- [Bewährte Methoden: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Dienstversionsverwaltung](../../../../docs/framework/wcf/service-versioning.md)

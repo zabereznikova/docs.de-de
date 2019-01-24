@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStepper2 Schnittstelle1
+title: ICorDebugStepper2-Schnittstelle1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepper2
@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4652bcb00d3437350b5fd3e1071b3c538403cfe3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b7e91430b970e8a14e0c126b1b7ae2cb123d4eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712875"
 ---
-# <a name="icordebugstepper2-interface1"></a>ICorDebugStepper2 Schnittstelle1
-Bietet Unterstützung für nur mein ("JMC") Codedebuggen.  
+# <a name="icordebugstepper2-interface1"></a>ICorDebugStepper2-Schnittstelle1
+Bietet Unterstützung für nur mein (JMC) Codedebuggen.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[SetJMC-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|Legt einen Wert, der angibt, ob dieser ICorDebugStepper nur Code verarbeitet, die von einem Anwendungsentwickler erstellt wird.|  
+|[SetJMC-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|Legt einen Wert, der angibt, ob diese ICorDebugStepper nur Code verarbeitet, die von einem Anwendungsentwickler erstellt wird.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -38,7 +38,7 @@ Bietet Unterstützung für nur mein ("JMC") Codedebuggen.
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -46,5 +46,5 @@ Bietet Unterstützung für nur mein ("JMC") Codedebuggen.
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

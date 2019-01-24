@@ -3,12 +3,12 @@ title: Identitäts- und Zugriffs-Tool für Visual Studio 2012
 ms.date: 03/30/2017
 ms.assetid: 87b8f8f2-4074-44fd-9fd6-08278e877390
 author: BrucePerlerMS
-ms.openlocfilehash: 1177048d8124c955220605e52dde539b84510cba
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a1b5456f9081d807a3c9e29e1010cbfbf91e637f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584160"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678550"
 ---
 # <a name="identity-and-access-tool-for-visual-studio-2012"></a>Identitäts- und Zugriffs-Tool für Visual Studio 2012
 In diesem Thema wird das neue Identitäts- und Zugriffs-Tool für Visual Studio 11 beschrieben. Sie können dieses Tool von folgender URL herunterladen: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) oder direkt aus Visual Studio 11 durch Suchen nach "Identität" direkt im Erweiterungs-Manager.  
@@ -25,7 +25,7 @@ In diesem Thema wird das neue Identitäts- und Zugriffs-Tool für Visual Studio 
   
 -   Sie können den Verbund mit Active Directory-Verbunddiensten (AD FS) 2.0 (oder mit anderen WS-Verbund-Anbietern) in nur einem Bildschirm erstellen.  
   
--   Das Tool verwendet Microsoft Azure-Zugriffssteuerungsdienst (ACS)-Funktionen mit einer einfachen Liste von Kontrollkästchen für alle Identitätsanbieter, die Sie verwenden möchten: Facebook, Google, Live ID, Yahoo!, OpenID-Anbieter und WS-Verbund-Anbieter. Wählen Sie die Identitätsanbieter aus, klicken Sie auf "OK", und drücken Sie F5. Daraufhin werden die Anwendung und ACS automatisch konfiguriert und die Testanwendung ist ACS-fähig.  
+-   Das Tool nutzt die Funktionen von Windows Azure Access Control Service (ACS) mit einer einfachen Liste mit Kontrollkästchen für alle Identitätsanbieter, die Sie verwenden möchten: Facebook, Google, Live ID, Yahoo!, OpenID-Anbieter und WS-Verbund-Anbieter. Wählen Sie die Identitätsanbieter aus, klicken Sie auf "OK", und drücken Sie F5. Daraufhin werden die Anwendung und ACS automatisch konfiguriert und die Testanwendung ist ACS-fähig.  
   
-## <a name="see-also"></a>Siehe auch  
- [WIF-Features](../../../docs/framework/security/wif-features.md)
+## <a name="see-also"></a>Siehe auch
+- [WIF-Features](../../../docs/framework/security/wif-features.md)

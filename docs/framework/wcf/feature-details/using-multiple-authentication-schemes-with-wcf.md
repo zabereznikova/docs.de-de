@@ -2,12 +2,12 @@
 title: Verwenden von mehreren Authentifizierungsschemen mit WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8aa593803354628354e5ed3bf02cbcea44505e5e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593809"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Verwenden von mehreren Authentifizierungsschemen mit WCF
 Mit WCF können Sie nun mehrere Authentifizierungsschemas für einen einzelnen Endpunkt angeben. Darüber hinaus können webgehostete Dienste ihre Authentifizierungseinstellungen direkt von IIS erben. Selbst gehostete Dienste können angeben, welche Authentifizierungsschemas verwendet werden können. Weitere Informationen zum Festlegen von Authentifizierungseinstellungen in IIS finden Sie unter [IIS-Authentifizierung](https://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -119,11 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [Endpunkte: Adressen, Bindungen und Verträge](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [Bindungen](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Bindungen](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>Siehe auch
+- [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Endpunkte: Adressen, Bindungen und Verträge](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Bindungen](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Bindungen](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)

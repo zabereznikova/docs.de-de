@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Programmgesteuertes Erstellen einer Tabelle'
+title: 'Vorgehensweise: Programmgesteuertes Erstellen einer Tabelle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,27 +7,27 @@ dev_langs:
 helpviewer_keywords:
 - tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
-ms.openlocfilehash: 74f16935a496e4315038cc7c5ea37efef3e5f2f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7eced80759f4c250cba5b4fb98ab33957b33de14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715503"
 ---
-# <a name="how-to-build-a-table-programmatically"></a>Gewusst wie: Programmgesteuertes Erstellen einer Tabelle
-Den folgenden Beispielen wird veranschaulicht, wie Sie programmgesteuert erstellen eine <xref:System.Windows.Documents.Table> und füllen sie mit dem Inhalt. Der Inhalt der Tabelle in fünf Zeilen aufgeteilt werden (dargestellte <xref:System.Windows.Documents.TableRow> enthaltenen Objekte eine <xref:System.Windows.Documents.Table.RowGroups%2A> Objekt) und sechs Spalten (dargestellt durch <xref:System.Windows.Documents.TableColumn> Objekte). Die Zeilen werden für die unterschiedlichen Präsentationszwecke verwendet, einschließlich einer Titelzeile für die Betitelung der gesamten Tabelle, einer Kopfzeile zur Beschreibung der Spalten in der Tabelle und einer Fußzeile mit Zusammenfassungsinformationen.  Beachten Sie, dass die Angabe der Zeilen „Titel“, „Kopf“ und „Fuß“ in der Tabelle nicht vorhanden ist. Hierbei handelt es sich nur um Zeilen mit unterschiedlichen Eigenschaften. Tabellenzellen enthalten den tatsächlichen Inhalt, der der Text, Bilder oder fast jeder beliebigen anderen bestehen kann [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Element.  
+# <a name="how-to-build-a-table-programmatically"></a>Vorgehensweise: Programmgesteuertes Erstellen einer Tabelle
+Die folgenden Beispiele zeigen, wie Sie programmgesteuert erstellen eine <xref:System.Windows.Documents.Table> und mit Inhalt füllen. Die Inhalte der Tabelle sind in fünf Zeilen aufgeteilt (dargestellt durch <xref:System.Windows.Documents.TableRow> in enthaltenen Objekte eine <xref:System.Windows.Documents.Table.RowGroups%2A> Objekt) und sechs Spalten (dargestellt durch <xref:System.Windows.Documents.TableColumn> Objekte). Die Zeilen werden für die unterschiedlichen Präsentationszwecke verwendet, einschließlich einer Titelzeile für die Betitelung der gesamten Tabelle, einer Kopfzeile zur Beschreibung der Spalten in der Tabelle und einer Fußzeile mit Zusammenfassungsinformationen.  Beachten Sie, dass die Angabe der Zeilen „Titel“, „Kopf“ und „Fuß“ in der Tabelle nicht vorhanden ist. Hierbei handelt es sich nur um Zeilen mit unterschiedlichen Eigenschaften. Tabellenzellen enthalten den eigentlichen Inhalt, der der Text, Bildern oder nahezu jedem anderen bestehen kann [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Element.  
   
 ## <a name="example"></a>Beispiel  
- Zuerst eine <xref:System.Windows.Documents.FlowDocument> wird erstellt, auf Host der <xref:System.Windows.Documents.Table>, und eine neue <xref:System.Windows.Documents.Table> erstellt und hinzugefügt werden, um den Inhalt des der <xref:System.Windows.Documents.FlowDocument>.  
+ Zuerst eine <xref:System.Windows.Documents.FlowDocument> wird erstellt, auf Host der <xref:System.Windows.Documents.Table>, und ein neues <xref:System.Windows.Documents.Table> wird erstellt und hinzugefügt werden, auf den Inhalt des der <xref:System.Windows.Documents.FlowDocument>.  
   
  [!code-csharp[TableSnippets#_TableCreate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
 ## <a name="example"></a>Beispiel  
- Als Nächstes sechs <xref:System.Windows.Documents.TableColumn> -Objekte erstellt und der Tabelle hinzugefügt <xref:System.Windows.Documents.Table.Columns%2A> -Auflistung, mit einigen Formatierung angewendet.  
+ Als Nächstes sechs <xref:System.Windows.Documents.TableColumn> Objekte erstellt und der Tabelle hinzugefügt werden <xref:System.Windows.Documents.Table.Columns%2A> Sammlung mit angewandter Formatierung.  
   
 > [!NOTE]
->  Beachten Sie, dass der Tabelle <xref:System.Windows.Documents.Table.Columns%2A> Auflistung verwendet standardmäßige nullbasierter Indizierung.  
+>  Beachten Sie, dass der tabellenspezifischen <xref:System.Windows.Documents.Table.Columns%2A> Auflistung standardmäßige nullbasierte Indizierung verwendet.  
   
  [!code-csharp[TableSnippets#_TableCreateColumns](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
  [!code-vb[TableSnippets#_TableCreateColumns](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
@@ -56,5 +56,5 @@ Den folgenden Beispielen wird veranschaulicht, wie Sie programmgesteuert erstell
  [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
  [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Tabellen](../../../../docs/framework/wpf/advanced/table-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Tabellen](../../../../docs/framework/wpf/advanced/table-overview.md)

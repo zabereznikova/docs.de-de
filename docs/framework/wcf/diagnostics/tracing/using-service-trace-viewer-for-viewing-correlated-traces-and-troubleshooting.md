@@ -2,12 +2,12 @@
 title: Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: b43c7f3d8018c119dbabf8f55ec115a00e1ac077
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594810"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
 In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung beschrieben. Dabei wird auch auf die Verwendung von Service Trace Viewer zur Problembehandlung in einer Anwendung eingegangen.  
@@ -119,7 +119,7 @@ In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung b
   
 -   Add-Aktion (Hinzufügen) verarbeitet.  
   
--   Set Up Secure Session (Sichere Sitzung einrichten) ausgeführt (nach erster Anforderung ERFOLGT) und drei Sicherheitsinfrastruktur-Antwortnachrichten verarbeitet: RST, RSTR, SCT (Process message 1, 2, 3; Nachricht 1, 2, 3 verarbeiten).  
+-   Einrichtung der Sicherheitssitzung (in diesem besteht bei der ersten Anforderung) und verarbeiteten drei Sicherheitsinfrastruktur-Antwortnachrichten an: RST, RSTR, SCT (Process Message 1, 2, 3).  
   
 -   Anforderungen Subtract, Multiply und Divide (Subtrahieren, Multiplizieren und Dividieren) verarbeitet.  
   
@@ -138,7 +138,7 @@ Liste der WCF-Clientaktivitäten nach Erstellungsdauer (linker Fensterbereich) u
  Wenn wir doppelklicken der Verarbeitungsaktion Add-Aktivität im linken Bereich klicken, sehen wir eine grafische Darstellung der WCF-Clientaktivitäten im Zusammenhang mit hinzufügen. Die erste Aktivität auf der linken Seite ist die Stammaktivität (0000), bei der es sich um die Standardaktivität handelt. WCF-überträgt aus der umgebungsaktivität heraus. Wenn dies nicht definiert ist, überträgt WCF aus 0000. Im vorliegenden Fall überträgt die zweite Aktivität, die Verarbeitungsaktion Add, aus 0 heraus. Dann wird Set Up Secure Session (Sichere Sitzung einrichten) angezeigt.  
   
  ![Verwenden von Trace Viewer](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-Diagrammansicht von WCF-Clientaktivitäten: Umgebungsaktivität (hier 0), Verarbeitungsaktion und Set Up Secure Session.  
+Diagrammansicht von WCF-Clientaktivitäten: Ambient-Aktivität (hier 0), Verarbeitungsaktion und Set Up Secure Session  
   
  Im oberen rechten Bereich sind alle Ablaufverfolgungen zu sehen, die mit der Process Action Add-Aktivität verknüpft sind. Das bedeutet, in ein und derselben Aktivität wurde die Anforderungsnachricht gesendet ("Sent a message over a channel", "Nachricht über einen Kanal gesendet") und die Antwort empfangen ("Received a message over a channel", "Nachricht über einen Kanal empfangen"). Dies wird im folgenden Diagramm dargestellt. Zur besseren Übersichtlichkeit ist die Set Up Secure Session-Aktivität im Diagramm reduziert.  
   
@@ -198,7 +198,7 @@ Erweitern von Aktivitäten zur Ermittlung der Grundursache eines Problems
  ![Verwenden von Trace Viewer](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 Um mit der Problembehandlung zu beginnen, können Sie auch eine rote oder gelbe Nachrichtenablaufverfolgung auswählen und darauf doppelklicken, um die Grundursache zu ermitteln.  
   
-## <a name="see-also"></a>Siehe auch  
- [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+## <a name="see-also"></a>Siehe auch
+- [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

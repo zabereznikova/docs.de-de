@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1dd657c004c58480ea2f603ad4494753463c79b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 920c768523e422220862b04fa069fc8cbea8960a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428444"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677705"
 ---
 # <a name="isymunmanagedwriterdefineglobalvariable-method"></a>ISymUnmanagedWriter::DefineGlobalVariable-Methode
 Definiert eine einzelne globale Variable.  
@@ -46,10 +46,10 @@ HRESULT DefineGlobalVariable(
  [in] Ein Zeiger auf eine `WCHAR` , der Name den globalen Variablen definiert.  
   
  `attributes`  
- [in] Die Attribute der globalen Variablen.  
+ [in] Der globalen Variablenattribute.  
   
  `cSig`  
- [in] Ein `ULONG32` gibt, die die Größe in Zeichen, d. h., der die `signature` Puffer.  
+ [in] Ein `ULONG32` , die Größe in Zeichen angibt, der die `signature` Puffer.  
   
  `signature`  
  [in] Die Signatur der globalen Variablen.  
@@ -58,13 +58,13 @@ HRESULT DefineGlobalVariable(
  [in] Der Adresstyp.  
   
  `addr1`  
- [in] Die erste Adresse für die Parameterspezifikation.  
+ [in] Die erste Adresse für die Parameterangabe.  
   
  `addr2`  
- [in] Die zweite Adresse für die Parameterspezifikation.  
+ [in] Die zweite Adresse für die Parameterangabe.  
   
  `addr3`  
- [in] Die dritte Adresse für die Parameterspezifikation.  
+ [in] Die dritte Adresse für die Parameterangabe.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -72,7 +72,7 @@ HRESULT DefineGlobalVariable(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [DefineLocalVariable-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)  
- [DefineGlobalVariable2-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [DefineLocalVariable-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-definelocalvariable-method.md)
+- [DefineGlobalVariable2-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-defineglobalvariable2-method.md)

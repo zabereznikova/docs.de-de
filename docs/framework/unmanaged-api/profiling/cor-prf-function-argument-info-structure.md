@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fbc41ca1366b412c37d6af09e90e3f1b042ba21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0bb92f9ba8ff0aed1c6eb1fa44fb4d7c9abc186a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714230"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO-Struktur
 Stellt die Argumente einer Funktion dar, in Reihenfolge von links nach rechts.  
@@ -40,19 +40,19 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`numRanges`|Die Anzahl der Blöcke von Argumenten. Dieser Wert ist, also die Anzahl der [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) Strukturen in den `ranges` Array.|  
+|`numRanges`|Die Anzahl der Blöcke der Argumente. Dieser Wert ist, also die Anzahl der [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) Strukturen in der `ranges` Array.|  
 |`totalArgumentSize`|Die Gesamtgröße aller Argumente. Das heißt, ist dieser Wert die Summe der Argumentlängen.|  
 |`ranges`|Ein Array von `COR_PRF_FUNCTION_ARGUMENT_RANGE` Strukturen, von denen jede einen Block von Funktionsargumenten darstellt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Funktion möglicherweise viele Argumente. Diese Argumente können nicht zusammenhängend im Arbeitsspeicher gespeichert werden. Sie können einen Speicherblock, der drei Argumente an einem Ort, einen Speicherblock, der zwei Argumente in einer anderen Stelle und eine abschließende Block eines Arguments in einem anderen Ort verfügen. Diese Argumente werden alle für die gleiche Funktion; Sie sind nur an unterschiedlichen Orten gespeichert.  
+ Eine Funktion möglicherweise viele Argumente. Diese Argumente können nicht im Arbeitsspeicher zusammenhängend gespeichert werden. Sie möglicherweise einen Block von drei Argumenten an einem Ort, einen Block, der zwei Argumente in einen anderen Speicherort und ein letzter Block eines Arguments in einer anderen Stelle. Diese Argumente werden alle für die gleiche Funktion; Sie können nur an verschiedenen Speicherorten gespeichert.  
   
- Die `COR_PRF_FUNCTION_ARGUMENT_INFO` -Struktur stellt alle Argumente einer einzelnen Funktion dar. Ein Array verwendet, um alle Blöcke von Funktionsargumenten zu verweisen. Für eine einzelne Funktion haben Sie daher eine einzelne `COR_PRF_FUNCTION_ARGUMENT_INFO` -Struktur, die mehrere verweist auf `COR_PRF_FUNCTION_ARGUMENT_RANGE` Strukturen, von denen jede auf eine oder mehrere Argumente der Funktion verweist.  
+ Die `COR_PRF_FUNCTION_ARGUMENT_INFO` Werttypstruktur alle Argumente eine einzelne Funktion. Er verwendet ein Array, um alle Blöcke der Argumente der Funktion zu verweisen. Für eine einzelne Funktion, Sie müssen daher eine einzelne `COR_PRF_FUNCTION_ARGUMENT_INFO` -Struktur, die mehrere verweist auf `COR_PRF_FUNCTION_ARGUMENT_RANGE` Strukturen, von denen jede auf eine oder mehrere Argumente der Funktion verweist.  
   
- Argumente, die in Registern gespeichert sind, werden in den Arbeitsspeicher zum Erstellen von Strukturen gefüllt.  
+ Argumente, die in Registern gespeichert werden, sind in den Arbeitsspeicher zum Erstellen von Strukturen überlaufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl  
   
@@ -60,5 +60,5 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsstrukturen](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsstrukturen](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

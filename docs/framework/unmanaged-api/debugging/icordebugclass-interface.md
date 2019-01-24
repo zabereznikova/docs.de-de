@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass Schnittstelle1
+title: ICorDebugClass-Schnittstelle1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bec35babec96da5ca5d527b19f853b4ce1c384e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d12d952fe540b2ec36d058ae2100f0cf5c8e6bcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406935"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710214"
 ---
-# <a name="icordebugclass-interface1"></a>ICorDebugClass Schnittstelle1
+# <a name="icordebugclass-interface1"></a>ICorDebugClass-Schnittstelle1
 Stellt einen Typ dar, der entweder grundlegend oder komplex (das heißt benutzerdefiniert) sein kann. Wenn der Typ generisch ist, stellt `ICorDebugClass` den nicht instanziierten generischen Typ dar.  
   
 ## <a name="methods"></a>Methoden  
@@ -35,7 +35,7 @@ Stellt einen Typ dar, der entweder grundlegend oder komplex (das heißt benutzer
 |[GetToken-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|Ruft die `TypeDef` Metadatentoken für diese Klasse.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ICorDebugClass` Schnittstelle stellt einen nicht instanziierten generischen Typ dar. ICorDebugType-Schnittstelle stellt einen instanziierten generischen Typ dar. Beispielsweise `Hashtable<K, V>` dargestellt werden würde `ICorDebugClass`, wohingegen `Hashtable<Int32, String>` dargestellt werden würde `ICorDebugType`.  
+ Die `ICorDebugClass` Schnittstelle stellt einen nicht instanziierten generischen Typ dar. ICorDebugType-Schnittstelle stellt einen instanziierten generischen Typ dar. Z. B. `Hashtable<K, V>` durch dargestellt werden würde `ICorDebugClass`hingegen `Hashtable<Int32, String>` durch dargestellt werden würde `ICorDebugType`.  
   
  Nicht generische Typen werden von beiden dargestellt `ICorDebugClass` und `ICorDebugType`. Die zweite Schnittstelle wurde in .NET Framework, Version 2.0 für den Umgang mit Typinstanziierung eingeführt.  
   
@@ -43,7 +43,7 @@ Stellt einen Typ dar, der entweder grundlegend oder komplex (das heißt benutzer
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -51,5 +51,5 @@ Stellt einen Typ dar, der entweder grundlegend oder komplex (das heißt benutzer
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

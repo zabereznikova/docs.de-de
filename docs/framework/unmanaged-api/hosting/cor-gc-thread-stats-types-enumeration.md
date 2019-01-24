@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74de8838d7f9ad1995bf7b15699b5589d13a0cab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 60cbc6f6649db28d06321b59c26c45668628d9ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428836"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712219"
 ---
 # <a name="corgcthreadstatstypes-enumeration"></a>COR_GC_THREAD_STATS_TYPES-Enumeration
-Gibt die Garbage Collection-Statistik für einen Thread an.  
+Gibt an, die Garbage Collection-Statistik für einen Thread.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,14 +38,14 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|Der Thread wurde Bytes, die in der letzten Garbagecollection heraufgestuft wurden.|  
+|`COR_GC_THREAD_HAS_PROMOTED_BYTES`|Der Thread hat Bytes, die in der letzten Garbagecollection höher gestuft wurden.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** GCHost.idl, GCHost.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

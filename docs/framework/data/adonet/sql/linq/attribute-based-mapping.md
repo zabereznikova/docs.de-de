@@ -2,19 +2,19 @@
 title: Attributbasiertes Zuordnen
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 81bbe8806694967d68c3e15da1d582092fb95e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713901"
 ---
 # <a name="attribute-based-mapping"></a>Attributbasiertes Zuordnen
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ordnet eine SQL Server-Datenbank eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objektmodell mithilfe von Attributen oder mit einer externen Zuordnungsdatei. Dieser Abschnitt befasst sich mit dem attributbasierten Ansatz.  
   
- In der einfachsten Form weist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Datenbank einem <xref:System.Data.Linq.DataContext>, eine Tabelle einer Klasse und Spalten/Beziehungen den Eigenschaften dieser Klassen zu. Sie können auch Attribute verwenden, um im Objektmodell eine Vererbungshierarchie zuzuordnen. Weitere Informationen finden Sie unter [wie: Generieren des Objektmodells in Visual Basic oder C#-](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ In der einfachsten Form weist [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine Datenbank einem <xref:System.Data.Linq.DataContext>, eine Tabelle einer Klasse und Spalten/Beziehungen den Eigenschaften dieser Klassen zu. Sie können auch Attribute verwenden, um im Objektmodell eine Vererbungshierarchie zuzuordnen. Weitere Informationen finden Sie unter [Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Entwickler, die in der Regel mithilfe von Visual Studio führen attributbasierte Zuordnung mithilfe der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Sie können auch das Befehlszeilentool SQLMetal verwenden, oder Sie können den Code für die Attribute selbst schreiben. Weitere Informationen finden Sie unter [wie: Generieren des Objektmodells in Visual Basic oder C#-](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Entwickler, die in der Regel mithilfe von Visual Studio führen attributbasiertes Mapping mithilfe der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Sie können auch das Befehlszeilentool SQLMetal verwenden, oder Sie können den Code für die Attribute selbst schreiben. Weitere Informationen finden Sie unter [Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
 >  Sie können die Zuordnung auch mit einer externen XML-Datei vornehmen. Weitere Informationen finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "33358179"
 |Eigenschaft|Typ|Standard|Beschreibung|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|Nie|Weist die Common Language Runtime (CLR) an, nach einer Einfügung oder einem Updatevorgang den Wert abzurufen.<br /><br /> Optionen: Always, Never, OnUpdate, OnInsert.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolean|`true`|Gibt an, dass eine Spalte NULL-Werte enthalten kann.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolesch|`true`|Gibt an, dass eine Spalte NULL-Werte enthalten kann.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|Zeichenfolge|Abgeleiteter Datenbankspaltentyp|Verwendet Datenbanktypen und Modifizierer, um den Typ der Datenbankspalte anzugeben.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|Zeichenfolge|Empty|Definiert eine berechnete Spalte in einer Datenbank.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boolean|`false`|Gibt an, dass eine Spalte Werte enthält, die die Datenbank automatisch generiert.|  
@@ -61,7 +61,7 @@ ms.locfileid: "33358179"
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 > [!NOTE]
->  Bei den "Storage"-Eigenschaftswerten "AssociationAttribute" und "ColumnAttribute" wird die Groß- und Kleinschreibung beachtet. Stellen Sie beispielsweise sicher, dass die im Attribut für die "AssociationAttribute.Storage"-Eigenschaft verwendeten Werte in der Schreibung mit den entsprechenden Eigenschaftsnamen an anderer Stelle im Code übereinstimmen. Dies gilt für alle .NET-Programmiersprachen,, auch solche, die nicht in der Regel Groß-/Kleinschreibung beachtet, z. B. Visual Basic sind. Weitere Informationen über die "Storage"-Eigenschaft finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  Bei den "Storage"-Eigenschaftswerten "AssociationAttribute" und "ColumnAttribute" wird die Groß- und Kleinschreibung beachtet. Stellen Sie beispielsweise sicher, dass die im Attribut für die "AssociationAttribute.Storage"-Eigenschaft verwendeten Werte in der Schreibung mit den entsprechenden Eigenschaftsnamen an anderer Stelle im Code übereinstimmen. Dies gilt für alle .NET Programmiersprachen, auch solche, die nicht in der Regel Groß-/Kleinschreibung beachtet, z. B. Visual Basic sind. Weitere Informationen über die "Storage"-Eigenschaft finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute-Attribut  
  Mit diesem Attribut legen Sie eine Eigenschaft für die Darstellung der Zuordnung in einer Datenbank dar, z. B. die Beziehung zwischen einem Fremdschlüssel und einem Primärschlüssel. Weitere Informationen zu Beziehungen finden Sie unter [Vorgehensweise: Zuordnen von Datenbankbeziehungen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
@@ -80,7 +80,7 @@ ms.locfileid: "33358179"
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
 > [!NOTE]
->  Bei den "Storage"-Eigenschaftswerten "AssociationAttribute" und "ColumnAttribute" wird die Groß- und Kleinschreibung beachtet. Stellen Sie beispielsweise sicher, dass die im Attribut für die "AssociationAttribute.Storage"-Eigenschaft verwendeten Werte in der Schreibung mit den entsprechenden Eigenschaftsnamen an anderer Stelle im Code übereinstimmen. Dies gilt für alle .NET-Programmiersprachen,, auch solche, die nicht in der Regel Groß-/Kleinschreibung beachtet, z. B. Visual Basic sind. Weitere Informationen über die "Storage"-Eigenschaft finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  Bei den "Storage"-Eigenschaftswerten "AssociationAttribute" und "ColumnAttribute" wird die Groß- und Kleinschreibung beachtet. Stellen Sie beispielsweise sicher, dass die im Attribut für die "AssociationAttribute.Storage"-Eigenschaft verwendeten Werte in der Schreibung mit den entsprechenden Eigenschaftsnamen an anderer Stelle im Code übereinstimmen. Dies gilt für alle .NET Programmiersprachen, auch solche, die nicht in der Regel Groß-/Kleinschreibung beachtet, z. B. Visual Basic sind. Weitere Informationen über die "Storage"-Eigenschaft finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>InheritanceMappingAttribute-Attribut  
  Verwenden Sie dieses Attribut, um eine Vererbungshierarchie zuzuordnen.  
@@ -142,5 +142,5 @@ ms.locfileid: "33358179"
   
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute>.  
   
-## <a name="see-also"></a>Siehe auch  
- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+## <a name="see-also"></a>Siehe auch
+- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

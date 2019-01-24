@@ -16,22 +16,22 @@ helpviewer_keywords:
 - methods [Visual Basic], sealed
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
-ms.openlocfilehash: 3fae1a4b587c379dbc459cbc973982851e713785
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2495e9d44a32e080d20deb4232ab27bfbd4051a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595811"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
-Gibt an, dass eine Eigenschaft oder Prozedur in einer abgeleiteten Klasse überschrieben werden kann.  
+Gibt an, dass eine Eigenschaft oder Prozedur kann nicht in einer abgeleiteten Klasse überschrieben werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `NotOverridable` Modifizierer verhindert, dass eine Eigenschaft oder Methode in einer abgeleiteten Klasse überschrieben wird.  Die [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) Modifizierer ermöglicht einer Eigenschaft oder Methode in einer Klasse in einer abgeleiteten Klasse überschrieben werden. Weitere Informationen finden Sie unter [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+ Die `NotOverridable` Modifizierer verhindert, dass eine Eigenschaft oder Methode in einer abgeleiteten Klasse überschrieben wird.  Die [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) Modifizierers können Sie eine Eigenschaft oder Methode in einer Klasse in einer abgeleiteten Klasse überschrieben werden. Weitere Informationen finden Sie unter [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- Wenn die `Overridable` oder `NotOverridable` Modifizierer nicht angegeben wird, hängt von der Standardeinstellung gibt an, ob die Eigenschaft oder Methode einer Basisklasse-Eigenschaft oder Methode überschreibt. Wenn die Eigenschaft oder Methode einer Basisklasse-Eigenschaft oder Methode überschreibt, die Standardeinstellung ist `Overridable`ist, andernfalls ist er `NotOverridable`.  
+ Wenn die `Overridable` oder `NotOverridable` Modifizierer ist nicht angegeben wird, hängt von der Standardeinstellung gibt an, ob die Eigenschaft oder Methode einer Basisklasse-Eigenschaft oder Methode überschreibt. Wenn die Eigenschaft oder Methode einer Basisklasse-Eigenschaft oder Methode überschreibt, die Standardeinstellung ist `Overridable`ist, andernfalls ist `NotOverridable`.  
   
- Ein Element, das nicht überschrieben werden kann, wird auch als bezeichnet. eine *versiegelten* Element.  
+ Ein Element, das nicht überschrieben werden bezeichnet ein *versiegelten* Element.  
   
  Sie können `NotOverridable` nur in einer Eigenschaft oder einer Prozedurdeklarationsanweisung verwenden. Sie können angeben, `NotOverridable` nur auf eine Eigenschaft oder Prozedur, die eine andere Eigenschaft oder Prozedur, d. h. nur in Kombination mit überschreibt `Overrides`.  
   
@@ -49,11 +49,11 @@ Gibt an, dass eine Eigenschaft oder Prozedur in einer abgeleiteten Klasse übers
   
  [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Modifizierer](../../../visual-basic/language-reference/modifiers/index.md)  
- [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)  
- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a>Siehe auch
+- [Modifizierer](../../../visual-basic/language-reference/modifiers/index.md)
+- [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

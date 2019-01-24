@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 0b504a9e368e5179d5f91faf7256445d7da47b1d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 696d14630240dce094ace7d595232e1a210ea78e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527145"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Untergeordnete XML-Achseneigenschaft (Visual Basic)
 Bietet Zugriff auf die untergeordneten Elemente eines <xref:System.Xml.Linq.XElement>-Objekts, eines <xref:System.Xml.Linq.XDocument>-Objekts, einer Auflistung von <xref:System.Xml.Linq.XElement>-Objekten oder einer Auflistung von <xref:System.Xml.Linq.XDocument>-Objekten.  
@@ -32,7 +32,7 @@ object.<child>
 |---|---|  
 |`object`|Erforderlich. Ein <xref:System.Xml.Linq.XElement>Objekt, ein <xref:System.Xml.Linq.XDocument>-Objekt, eine Auflistung von <xref:System.Xml.Linq.XElement>Objekten oder eine Auflistung von <xref:System.Xml.Linq.XDocument>-Objekten.|  
 |.<|Erforderlich. Gibt den Anfang einer untergeordneten Achseneigenschaft an.|  
-|`child`|Erforderlich. Name der untergeordneten Knoten des Formulars den Zugriff auf [`prefix``:`]`name`.<br /><br /> -   `Prefix` – Optional. XML-Namespacepräfix für den untergeordneten Knoten. Muss ein globaler XML-Namespace sein, der mit einer `Imports`-Anweisung definiert ist.<br />-   `Name` – Erforderlich. Lokaler Name des untergeordneten Knotens. Finden Sie unter [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`child`|Erforderlich. Name der untergeordneten Knoten des Formulars den Zugriff auf [`prefix``:`]`name`.<br /><br /> -   `Prefix` – Optional.  XML-Namespacepräfix für den untergeordneten Knoten. Muss ein globaler XML-Namespace sein, der mit einer `Imports`-Anweisung definiert ist.<br />-   `Name` – Erforderlich. Lokaler Name des untergeordneten Knotens. Finden Sie unter [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
 |>|Erforderlich. Gibt das Ende einer untergeordneten Achseneigenschaft an.|  
   
 ## <a name="return-value"></a>Rückgabewert  
@@ -73,9 +73,9 @@ object.<child>
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.Linq.XElement>  
- [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/index.md)  
- [XML-Literale](../../../visual-basic/language-reference/xml-literals/index.md)  
- [Erstellen von XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Xml.Linq.XElement>
+- [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/index.md)
+- [XML-Literale](../../../visual-basic/language-reference/xml-literals/index.md)
+- [Erstellen von XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

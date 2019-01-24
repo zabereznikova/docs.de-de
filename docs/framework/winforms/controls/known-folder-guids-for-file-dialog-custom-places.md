@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 69fa8837f616969e018e4ec7191f0b30a2df5b62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97d516e1c3ae99d639dea676f3f6798b6e7a849f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679395"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUIDs von bekannten Ordnern für benutzerdefinierte Speicherorte im Dateidialogfeld
-Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] bekannten Ordner beim Hinzufügen von Ordnern auf einer <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Auflistung. Bekannte Ordner-GUIDs wird die Groß-/ Kleinschreibung nicht und werden in der Datei KnownFolders.h definiert die [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
+Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] bekannten Ordner, wenn Sie Ordner Hinzufügen einer <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Auflistung. Bekannte Ordner-GUIDs wird die Groß-/ Kleinschreibung nicht und werden in der Datei "KnownFolders.h" definiert die [!INCLUDE[winSDK](../../../../includes/winsdk-md.md)].  
   
 > [!NOTE]
->  In einigen Fällen ein bekannter Ordner hinzugefügt der <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> wird nicht angezeigt werden, der **Linkfavoriten** Bereich. Wenn der angegebene bekannte Ordner nicht auf dem Computer vorhanden, die die Anwendung ausgeführt wird ist, wird der Ordner bezeichnet beispielsweise nicht angezeigt.  
+>  In einigen Fällen einen bekannten Ordner hinzugefügt werden, um die <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> wird nicht angezeigt werden, der **Linkfavoriten** Bereich. Wenn der angegebene bekannte Ordner nicht auf dem Computer vorhanden, die die Anwendung ausgeführt wird ist, wird z. B. die bekannten Ordner nicht angezeigt.  
   
 ## <a name="list-of-guids"></a>Liste von GUIDs  
  Die folgende Tabelle enthält [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] bekannte Ordner und ihre zugeordneten <xref:System.Guid>.  
@@ -145,7 +145,7 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  Profile  
  5E6C858F-0E22-4760-9AFE-EA3317B67173  
   
- "ProgramData"  
+ ProgramData  
  62AB5D82-FDC1-4DC3-A9DD-070D1D495D97  
   
  ProgramFiles  
@@ -247,7 +247,7 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  SidebarParts  
  A75D362E-50FC-4FB7-AC2C-A8BEAA314493  
   
- Wiederherstellt  
+ StartMenu  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
  Start  
@@ -274,7 +274,7 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  TreeProperties  
  5B3749AD-B49F-49C1-83EB-15370FBD4882  
   
- %Benutzerprofile%  
+ UserProfiles  
  0762D272-C50A-4BB0-A382-697DCD729B80  
   
  UsersFiles  
@@ -286,6 +286,6 @@ Sie verwenden eine <xref:System.Guid> an eine [!INCLUDE[wiprlhext](../../../../i
  Windows  
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.FileDialogCustomPlace>  
- [Gewusst wie: Hinzufügen eines benutzerdefinierten Speicherorts zum Dialogfeld „Datei“](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.FileDialogCustomPlace>
+- [How To: Hinzufügen eines benutzerdefinierten Speicherorts zum Dateidialogfeld](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)

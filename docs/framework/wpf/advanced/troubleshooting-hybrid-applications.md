@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: b43143fb3f27d127f93f5e8edd55b853ad604ef5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3e8b8d6f59525720def413b2d19f048d3cff329c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710117"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Problembehandlung für Hybridanwendungen
 <a name="introduction"></a>In diesem Thema werden einige der häufigsten Probleme aufgeführt, die beim Erstellen von Hybridanwendungen, die sowohl die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]- als auch die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Technologie verwenden, auftreten können,.  
@@ -114,13 +114,13 @@ ms.locfileid: "45972753"
 ## <a name="elementhost-and-ime"></a>ElementHost und IME  
  Gehostete WPF-Steuerelemente einem <xref:System.Windows.Forms.Integration.ElementHost> unterstützen derzeit nicht die <xref:System.Windows.Forms.Control.ImeMode%2A> Eigenschaft. Änderungen an <xref:System.Windows.Forms.Control.ImeMode%2A> werden von den gehosteten Steuerelementen ignoriert.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Interoperabilität im WPF-Designer](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)  
- [Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)  
- [Gewusst wie: Aktivieren von visuellen Stilen in einer Hybridanwendung](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)  
- [Überlegungen zum Layout für das WindowsFormsHost-Element](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)  
- [Eigenschaftenzuordnung von Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)  
- [Entwurfszeitfehler im Windows Forms-Designer](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)  
- [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Interoperabilität im WPF-Designer](https://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)
+- [Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
+- [Vorgehensweise: Aktivieren von visuellen Stilen in einer Hybridanwendung](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Überlegungen zum Layout für das WindowsFormsHost-Element](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
+- [Eigenschaftenzuordnung von Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Entwurfszeitfehler im Windows Forms-Designer](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

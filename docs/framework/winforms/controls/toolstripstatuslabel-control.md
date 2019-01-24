@@ -6,12 +6,12 @@ helpviewer_keywords:
 - status bars
 - ToolStrip control [Windows Forms], ToolStripStatusLabel
 ms.assetid: 099bc74a-a29f-4f15-af0d-7c517ef50c7e
-ms.openlocfilehash: f3d618260269a6913ecd289300df1de70c9dc40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e665b6e99d1c294d87130a6cceba76ca5bd7e522
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537959"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678576"
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel-Steuerelement
 Die <xref:System.Windows.Forms.ToolStripStatusLabel> bietet einen Anzeigebereich in eine <xref:System.Windows.Forms.StatusStrip> für Text, Bilder oder beides.  
@@ -30,5 +30,5 @@ Die <xref:System.Windows.Forms.ToolStripStatusLabel> bietet einen Anzeigebereich
  <xref:System.Windows.Forms.ToolStripProgressBar>  
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.ToolStripProgressBar>-Steuerelement.  
   
-## <a name="see-also"></a>Siehe auch  
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

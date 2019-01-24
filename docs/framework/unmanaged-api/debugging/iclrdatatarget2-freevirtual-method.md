@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7351dfb046653e4f3e20e0dc8a4bba8653ec36e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 02bba59a1c4445b3e432d5e44f2bccc4b72ce1da
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711654"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual-Methode
-Wird aufgerufen, von der common Language Runtime (CLR) Daten Access Services um Arbeitsspeicher freizugeben, der zuvor im Adressbereich des Zielprozesses belegt wurde.  
+Wird aufgerufen, durch die common Language Runtime (CLR) Datenzugriffsdiensten der um Arbeitsspeicher freizugeben, der zuvor im Adressbereich des Zielprozesses zugewiesen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,21 +39,21 @@ HRESULT FreeVirtual(
   
 #### <a name="parameters"></a>Parameter  
  `addr`  
- [in] Ein `CLRDATA_ADDRESS` Wert, der die Startadresse des freizugebenden Speichers angibt.  
+ [in] Ein `CLRDATA_ADDRESS` Wert, der angibt, die Startadresse des Arbeitsspeichers freigegeben werden.  
   
  `size`  
- [in] Die Größe in Bytes, des Arbeitsspeichers, der freigegeben werden.  
+ [in] Die Größe in Bytes, des Arbeitsspeichers freigegeben werden.  
   
  `typeFlags`  
  [in] Flags, die das Freigeben von Arbeitsspeicher zu steuern. Finden Sie unter Win32 `VirtualFree` Funktion.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `FreeVirtual` Methode dient als logischer Wrapper für die Win32- `VirtualFree` Funktion.  
+ Die `FreeVirtual` Methode dient als ein logischer Wrapper für die Win32- `VirtualFree` Funktion.  
   
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** ClrData.idl, ClrData.h  
   
@@ -61,6 +61,6 @@ HRESULT FreeVirtual(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRDataTarget2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)  
- [AllocVirtual-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRDataTarget2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
+- [AllocVirtual-Methode](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)

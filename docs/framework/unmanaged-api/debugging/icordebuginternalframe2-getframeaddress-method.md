@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d088aaaaa80ee3513a37ea0345d720832504c005
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab729bafdd8987a7c5a03145e02f5c8e5d441a3e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711615"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress-Methode
-Gibt die Stapeladresse des internen Frames zurück.  
+Gibt die Stack-Adresse des internen Frames zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,14 +43,14 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Adresse des internen Frames wurde erfolgreich zurückgegeben.|  
-|E_FAIL|Die Adresse des internen Frames konnte nicht zurückgegeben werden.|  
+|E_FAIL|Die Adresse des internen Frames kann nicht zurückgegeben werden.|  
 |E_INVALIDARG|`pAddress` ist `null`.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der zurückgegebene Wert in `pAddress` können verwendet werden, um die Position des internen Frames relativ zu anderen Frames auf dem Stapel zu bestimmen. Auch auf IA-64-basierten Computern internen Frames auf dem Stapel nur aktiv ist und keine entsprechenden Zeiger auf einen Sicherungsspeicher.  
+ Der zurückgegebene Wert in `pAddress` können verwendet werden, um die Position des internen Frames relativ zu anderen Frames im Stapel zu bestimmen. Auch auf IA-64-basierten Computern internen Frames befindet sich nur auf dem Stapel, und keine entsprechenden Zeiger in einen Sicherungsspeicher.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -58,7 +58,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugInternalFrame2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugInternalFrame2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

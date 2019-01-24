@@ -8,12 +8,12 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 445b57747bbcb04df0d6bc6b3e90743b8c9600f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ea0eba097505741aba31bce4f23e0cc9ca1d4608
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187075"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712482"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;PerformanceCounter&gt; -Element (Netzwerkeinstellungen)
 Aktiviert oder deaktiviert die Netzwerkleistungsindikatoren.  
@@ -73,8 +73,8 @@ Aktiviert oder deaktiviert die Netzwerkleistungsindikatoren.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
 - [Netzwerkleistungsindikatoren](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

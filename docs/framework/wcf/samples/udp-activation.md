@@ -2,12 +2,12 @@
 title: UDP-Aktivierung
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 09b208f88b456b6d98e45fc34db3857f8938cd6b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562348"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715516"
 ---
 # <a name="udp-activation"></a>UDP-Aktivierung
 Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel. Es erweitert die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel zur Unterstützung von prozessaktivierung mittels der Windows Process Activation Service (WAS).  
@@ -109,7 +109,7 @@ Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/
   
 -   Service.dll: Der Dienstcode. Diese wird in das Verzeichnis \bin der virtuellen Anwendung ServiceModelSamples kopiert. Die Dienstdatei ist Service.svc, und die Konfigurationsdatei ist Web.config. Nach dem Kompilieren werden sie an den folgenden Speicherort kopiert: %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples.  
   
--   WasNetActivator: Das UDP-Aktiviererprogramm.  
+-   WasNetActivator: Die UDP-aktiviererprogramm.  
   
 -   Stellen Sie sicher, dass alle erforderlichen Bestandteile ordnungsgemäß installiert sind. Die folgenden Schritte zeigen, wie das Beispiel ausgeführt wird:  
   

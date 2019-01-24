@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 179fb9773fde2631666498d54894037b2bbfd087
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cb03eab00033c3d08b51de7524e9489198d6d76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649619"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678400"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definition von anonymen Typen (Visual Basic)
 Als Antwort auf die Deklaration einer Instanz eines anonymen Typs erstellt der Compiler eine neue Klassendefinition, die die angegebenen Eigenschaften für den Typ enthält.  
@@ -19,7 +19,7 @@ Als Antwort auf die Deklaration einer Instanz eines anonymen Typs erstellt der C
   
  [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
   
- Definition der Klasse enthält die Eigenschaftsdefinitionen, die etwa wie folgt. Beachten Sie, dass es keine `Set` Methode für die Schlüsseleigenschaften. Die Werte der Eigenschaften sind schreibgeschützt.  
+ Die Definition der Klasse enthält die Eigenschaftsdefinitionen, die etwa wie folgt. Beachten Sie, dass es keine `Set` -Methode für die wichtigsten Eigenschaften. Die Werte der Eigenschaften sind schreibgeschützt.  
   
 ```vb  
 Public Class $Anonymous1  
@@ -50,37 +50,37 @@ Public Class $Anonymous1
 End Class  
 ```  
   
- Darüber hinaus enthalten Definitionen von anonymen Typ einen Standardkonstruktor. Konstruktoren, die Parameter erforderlich sind, sind nicht zulässig.  
+ Darüber hinaus enthalten die Definitionen von anonymen Typen einen standardmäßigen Konstruktor. Konstruktoren, die Parameter erfordern, sind nicht zulässig.  
   
- Wenn die Deklaration eines anonymen Typs mindestens eine Schlüsseleigenschaft enthält, überschreibt die Typdefinition drei von geerbte Membern <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, und <xref:System.Object.ToString%2A>. Wenn keine Schlüsseleigenschaften, nur deklariert werden <xref:System.Object.ToString%2A> überschrieben wird. Die Außerkraftsetzungen bieten die folgenden Funktionen:  
+ Wenn die Deklaration eines anonymen Typs mindestens eine Schlüsseleigenschaft enthält, überschreibt die Typdefinition drei von geerbte Member <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, und <xref:System.Object.ToString%2A>. Wenn keine Eigenschaften, nur deklariert werden <xref:System.Object.ToString%2A> überschrieben wird. Die Außerkraftsetzungen werden die folgenden Funktionen enthalten:  
   
 -   `Equals` Gibt `True` Wenn zwei Instanzen eines anonymen Typs dieselbe Instanz sind oder wenn sie die folgenden Bedingungen erfüllen:  
   
     -   Sie haben die gleiche Anzahl von Eigenschaften.  
   
-    -   Die Eigenschaften werden deklariert, in der gleichen Reihenfolge mit den gleichen Namen und denselben abgeleiteten Typen. Vergleichen des wird die Groß-und Kleinschreibung nicht berücksichtigt.  
+    -   Die Eigenschaften werden deklariert, in der gleichen Reihenfolge, mit dem gleichen Namen und denselben abgeleiteten Typen. Beim Vergleichen wird nicht beachtet werden.  
   
-    -   Mindestens eine der Eigenschaften ist eine wichtige Eigenschaft und die `Key` -Schlüsselwort auf die gleichen Eigenschaften angewendet wird.  
+    -   Mindestens eine der Eigenschaften ist eine wichtige Eigenschaft, und die `Key` -Schlüsselwort auf die gleichen Eigenschaften angewendet wird.  
   
-    -   Vergleich von jedes Paars von Schlüsseleigenschaften gibt `True`.  
+    -   Vergleich der einzelnen entsprechenden Schlüsseleigenschaften gibt `True`.  
   
-     Beispielsweise ist in den folgenden Beispielen wird `Equals` gibt `True` nur für `employee01` und `employee08`. Der Kommentar vor jeder Zeile gibt den Grund an, warum die neue Instanz stimmt nicht überein `employee01`.  
+     In den folgenden Beispielen wird z. B. `Equals` gibt `True` nur für `employee01` und `employee08`. Der Kommentar vor jeder Zeile gibt den Grund an, warum die neue Instanz stimmt nicht überein `employee01`.  
   
      [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
--   `GetHashcode` Stellt einen entsprechend eindeutigen GetHashCode-Algorithmus bereit. Der Algorithmus verwendet nur die wichtigsten Eigenschaften den Hashcode berechnet.  
+-   `GetHashcode` Stellt einen entsprechend eindeutigen GetHashCode-Algorithmus bereit. Der Algorithmus verwendet nur die wichtigsten Eigenschaften, um den Hash zu berechnen.  
   
--   `ToString` Gibt eine Zeichenfolge von verketteten Eigenschaftswerte zurück, wie im folgenden Beispiel gezeigt. Schlüssel und nicht schlüsselbezogene Eigenschaften sind enthalten.  
+-   `ToString` Gibt eine Zeichenfolge mit verketteten Eigenschaftswerte zurück, wie im folgenden Beispiel gezeigt. Sowohl Schlüssel als auch nicht schlüsselbezogene Eigenschaften sind enthalten.  
   
      [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   
- Explizit benannte Eigenschaften eines anonymen Typs können nicht mit diesen generierten Methoden in Konflikt stehen. D. h., Sie können keine `.Equals`, `.GetHashCode`, oder `.ToString` um eine Eigenschaft zu benennen.  
+ Explizit benannte Eigenschaften eines anonymen Typs können nicht in Konflikt mit diesen generierten Methoden stehen. D. h. Sie können keine `.Equals`, `.GetHashCode`, oder `.ToString` um eine Eigenschaft zu nennen.  
   
- Anonyme Typdefinitionen, die mindestens einen Schlüsseleigenschaft auch implementieren die <xref:System.IEquatable%601?displayProperty=nameWithType> -Schnittstelle, wobei `T` ist der Typ des anonymen Typs.  
+ Definitionen von anonymen Typen, die über mindestens einen Schlüsseleigenschaft auch implementieren die <xref:System.IEquatable%601?displayProperty=nameWithType> -Schnittstelle, in denen `T` ist der Typ des anonymen Typs.  
   
 > [!NOTE]
->  Deklarationen von anonymen Typen erstellen desselben anonymen Typs nur dann, wenn die Zeitpunkte in der gleichen Assembly, deren Eigenschaften, die denselben Namen haben und dieselben Typen abgeleiteten, die Eigenschaften in der gleichen Reihenfolge deklariert werden und die gleichen Eigenschaften als Schlüsseleigenschaften gekennzeichnet werden.  
+>  Deklarationen von anonymen Typen erstellen desselben anonymen Typs nur dann, wenn die Zeitpunkte in der gleichen Assembly, deren Eigenschaften die gleichen Namen haben und denselben Typen abgeleiteten, die Eigenschaften in der gleichen Reihenfolge deklariert werden und die gleichen Eigenschaften werden als Schlüsseleigenschaften gekennzeichnet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+## <a name="see-also"></a>Siehe auch
+- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Vorgehensweise: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

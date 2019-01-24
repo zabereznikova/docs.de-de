@@ -13,34 +13,34 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: a0a73494c3573973d88823a7b5a5a83d2672e7d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e61cf907ac2c5c04aa86c03a73bda7fcfcb8122d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656086"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710481"
 ---
 # <a name="property-procedures-visual-basic"></a>Eigenschaftenprozeduren (Visual Basic)
-Eine Eigenschaftenprozedur ist eine Reihe von Visual Basic-Anweisungen, die eine benutzerdefinierte Eigenschaft für ein Modul, eine Klasse oder eine Struktur zu bearbeiten. -Eigenschaftenprozeduren werden auch bekannt als *Eigenschaftenaccessoren*.  
+Eine Eigenschaftenprozedur ist eine Reihe von Visual Basic-Anweisungen, die eine benutzerdefinierte Eigenschaft in einem Modul, Klasse oder Struktur zu ändern. -Eigenschaftenprozeduren werden, auch bekannt als *Eigenschaftenaccessoren*.  
   
- Visual Basic bietet die folgenden Eigenschaftenprozeduren:  
+ Visual Basic bietet für die folgenden Verfahren für die Eigenschaft:  
   
--   Ein `Get` Prozedur gibt den Wert einer Eigenschaft zurück. Sie wird aufgerufen, wenn Sie Zugriff auf die Eigenschaft in einem Ausdruck.  
+-   Ein `Get` Prozedur gibt den Wert einer Eigenschaft zurück. Wird aufgerufen, wenn Sie die Eigenschaft in einem Ausdruck zugreifen.  
   
--   Ein `Set` Prozedur wird eine Eigenschaft auf einen Wert, z. B. einen Objektverweis. Sie wird aufgerufen, wenn Sie die Eigenschaft einen Wert zuweisen.  
+-   Ein `Set` Prozedur setzt eine Eigenschaft auf einen Wert fest. Wird aufgerufen, wenn Sie die Eigenschaft einen Wert zuweisen.  
   
- Sie definieren Eigenschaftenprozeduren in der Regel paarweise mit der `Get` und `Set` -Anweisungen, aber Sie können auch einzeln definiert, wenn die Eigenschaft schreibgeschützt ist ([Get-Anweisung](../../../../visual-basic/language-reference/statements/get-statement.md)) oder lesegeschützt ([festlegen Anweisung](../../../../visual-basic/language-reference/statements/set-statement.md)).  
+ Sie Eigenschaftenprozeduren in der Regel paarweise mit definieren die `Get` und `Set` -Anweisungen, aber Sie können auch einzeln definiert, wenn die Eigenschaft schreibgeschützt ist ([Get Statement](../../../../visual-basic/language-reference/statements/get-statement.md)) oder nur Schreibzugriff ([festlegen Anweisung](../../../../visual-basic/language-reference/statements/set-statement.md)).  
   
- Sie lassen die `Get` und `Set` Verfahren, wenn Sie eine automatisch implementierte Eigenschaft verwenden. Weitere Informationen finden Sie unter [Automatisch implementierte Eigenschaften](./auto-implemented-properties.md).  
+ Können Sie weglassen der `Get` und `Set` Verfahren, wenn Sie eine automatisch implementierte Eigenschaft zu verwenden. Weitere Informationen finden Sie unter [Automatisch implementierte Eigenschaften](./auto-implemented-properties.md).  
   
- Sie können Eigenschaften in Klassen, Strukturen und Module definieren. Eigenschaften sind `Public` standardmäßig, d. h. können von überall aus Anrufen in Ihrer Anwendung, die die Eigenschaft Container zugreifen können.  
+ Sie können Eigenschaften in Klassen, Strukturen und Module definieren. Eigenschaften sind `Public` standardmäßig die bedeutet, dass Sie von überall aus aufrufen können in Ihrer Anwendung, die Container der Eigenschaft zugreifen können.  
   
- Einen Vergleich von Eigenschaften und Variablen, finden Sie unter [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md).  
+ Einen Vergleich von Eigenschaften und Variablen finden Sie unter [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md).  
   
 ## <a name="declaration-syntax"></a>Deklarationssyntax  
- Eine Eigenschaft selbst wird durch einen Codeblock eingefasst definiert die [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md) und die `End Property` Anweisung. Innerhalb dieses Blocks erscheint jede-Eigenschaftenprozedur als interner Block, die in einer deklarationsanweisung eingeschlossen (`Get` oder `Set`) und die entsprechenden `End` Deklaration.  
+ Eine Eigenschaft selbst wird durch einen Codeblock eingefasst definiert die [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md) und `End Property` Anweisung. Innerhalb dieses Blocks an, die für jede Eigenschaftenprozedur als interner Block einer deklarationsanweisung angegeben eingefasst wird angezeigt (`Get` oder `Set`) und den entsprechenden `End` Deklaration.  
   
- Die Syntax zum Deklarieren einer Eigenschaft und die zugehörigen Prozeduren lautet wie folgt:  
+ Die Syntax zum Deklarieren einer Eigenschaft und die zugehörigen Prozeduren ist wie folgt aus:  
   
 ```  
 [Default] [Modifiers] Property PropertyName[(ParameterList)] [As DataType]  
@@ -59,60 +59,60 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]  
 ```  
   
- Die `Modifiers` festlegbaren Zugriffsebene und Informationen zum Überladen, überschreiben, freigeben und shadowing, sowie, ob die Eigenschaft schreibgeschützt oder lesegeschützt ist. Die `AccessLevel` auf die `Get` oder `Set` Prozedur kann auf jeder Ebene, die restriktiver ist als die Zugriffsebene für die Eigenschaft selbst angegeben ist. Weitere Informationen finden Sie unter [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md).  
+ Die `Modifiers` festlegbaren Zugriffsebene und Informationen zu überladen, überschreiben, freigeben und shadowing, sowie, ob die Eigenschaft schreibgeschützt oder lesegeschützt ist. Die `AccessLevel` auf die `Get` oder `Set` Prozedur kann jeder Ebene, die restriktiver ist als die Zugriffsebene für die Eigenschaft selbst angegeben sein. Weitere Informationen finden Sie unter [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md).  
   
 ### <a name="data-type"></a>Datentyp  
- Datentyp für eine Eigenschaft und die Zugriffsebene für Dienstprinzipalname werden definiert, der `Property` -Anweisung nicht in den Eigenschaftenprozeduren. Eine Eigenschaft kann nur einen Datentyp aufweisen. Sie können nicht angenommen, eine Eigenschaft zum Speichern von definieren eine `Decimal` Wert aber abrufen eine `Double` Wert.  
+ Der Datentyp einer Eigenschaft und der Dienstprinzipal Zugriff auf werden definiert, der `Property` -Anweisung nicht in der Eigenschaftenprozeduren. Eine Eigenschaft kann nur einen Datentyp verfügen. Angenommen, Sie eine Eigenschaft zum Speichern von definieren können kein `Decimal` Wert aber Abrufen einer `Double` Wert.  
   
 ### <a name="access-level"></a>Zugriffsebene  
- Allerdings können Sie definieren eine principal Zugriffsebene für eine Eigenschaft und die Zugriffsebene in einer der Eigenschaftenprozeduren weiter einschränken. Beispielsweise können Sie definieren eine `Public` Eigenschaft definieren und anschließend eine `Private Set` Prozedur. Die `Get` Prozedur bleibt `Public`. Sie können die Zugriffsebene in nur einem der Verfahren für eine Eigenschaft ändern können, und Sie nur diese restriktiver als die Zugriffsebene für Dienstprinzipalname. Weitere Informationen finden Sie unter [wie: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md).  
+ Allerdings können Sie definieren einen Dienstprinzipal Zugriff auf für eine Eigenschaft und die Zugriffsebene in einer der Eigenschaftenprozeduren weiter einzuschränken. Beispielsweise können Sie definieren eine `Public` Eigenschaft, und klicken Sie dann definieren Sie eine `Private Set` Verfahren. Die `Get` Prozedur bleibt `Public`. Sie können die Zugriffsebene in eine der Prozeduren für eine Eigenschaft ändern können, und Sie nur es restriktiver ist als die Zugriffsebene des dienstprinzipals. Weitere Informationen finden Sie unter [Vorgehensweise: Deklarieren Sie eine Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md).  
   
 ## <a name="parameter-declaration"></a>Parameterdeklaration  
- Deklarieren Sie jeden Parameter genauso wie Sie für [Sub-Prozeduren](./sub-procedures.md), außer dass der Übergabemechanismus Transportservers `ByVal`.  
+ Jeder Parameter deklariert die gleiche Weise für [Sub-Prozeduren](./sub-procedures.md), außer dass muss der Übergabemechanismus sein `ByVal`.  
   
- Die Syntax für jeden Parameter in der Parameterliste lautet wie folgt:  
+ Die Syntax für jeden Parameter in der Liste der Parameter lautet wie folgt aus:  
   
  `[Optional] ByVal [ParamArray] parametername As datatype`  
   
- Wenn der Parameter optional ist, müssen Sie auch einen Standardwert als Teil der Deklaration angeben. Die Syntax zum Angeben der Standardwert lautet wie folgt:  
+ Wenn der Parameter optional ist, müssen Sie auch einen Standardwert als Teil der Deklaration angeben. Die Syntax zum Angeben der Standardwert ist wie folgt aus:  
   
  `Optional ByVal parametername As datatype = defaultvalue`  
   
 ## <a name="property-value"></a>Eigenschaftswert  
- In einer `Get` Prozedur, den Rückgabewert mit dem aufrufenden Ausdruck wie den Wert der Eigenschaft angegeben wird.  
+ In einem `Get` Verfahren der Rückgabewert dem aufrufenden Ausdruck als Wert der Eigenschaft angegeben wird.  
   
- In einem `Set` Prozedur, der neue Eigenschaftswert wird auf den Parameter übergeben der `Set` Anweisung. Wenn Sie einen Parameter explizit deklarieren, müssen Sie es mit dem gleichen Datentyp wie die Eigenschaft deklarieren. Wenn Sie kein Parameter deklariert, verwendet der Compiler impliziten Parameter `Value` zur Darstellung der neue Wert der Eigenschaft zugewiesen werden soll.  
+ In einem `Set` Verfahren wird der neue Eigenschaftswert auf den Parameter übergeben die `Set` Anweisung. Wenn Sie einen Parameter explizit deklarieren, müssen Sie es mit dem gleichen Datentyp wie die Eigenschaft deklarieren. Wenn Sie keinen Parameter deklarieren, verwendet der Compiler die impliziten Parameter `Value` zur Darstellung des neuen Wert der Eigenschaft zugewiesen werden.  
   
-## <a name="calling-syntax"></a>Aufrufen der Syntax  
- Sie aufrufen eine Eigenschaftenprozedur implizit durch einen Verweis auf die Eigenschaft. Sie verwenden den Namen der Eigenschaft, die gleiche Weise wie den Namen einer Variablen mit dem Unterschied, dass Sie Werte für alle Argumente angeben müssen, die nicht optional sind, und müssen Sie die Argumentliste in Klammern einschließen. Wenn keine Argumente übergeben werden, können Sie die Klammern optional weglassen.  
+## <a name="calling-syntax"></a>Die Syntax aufrufen  
+ Sie aufrufen eine Eigenschaftenprozedur implizit durch einen Verweis auf die Eigenschaft. Sie verwenden den Namen der Eigenschaft, die gleiche Weise, die Sie verwenden den Namen einer Variablen mit dem Unterschied, dass Sie Werte für alle Argumente angeben müssen, die nicht optional sind, und müssen Sie die Argumentliste in Klammern einschließen. Wenn keine Argumente angegeben werden, können Sie die Klammern optional weglassen.  
   
- Die Syntax für einen impliziten Aufruf einer `Set` Prozedur lautet wie folgt:  
+ Die Syntax für einen impliziten Aufruf einer `Set` Verfahren lautet wie folgt:  
   
  `propertyname[(argumentlist)] = expression`  
   
- Die Syntax für einen impliziten Aufruf einer `Get` Prozedur lautet wie folgt:  
+ Die Syntax für einen impliziten Aufruf einer `Get` Verfahren lautet wie folgt:  
   
  `lvalue = propertyname[(argumentlist)]`  
   
  `Do While (propertyname[(argumentlist)] > expression)`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Abbildung der Deklaration und Aufruf  
- Die folgende Eigenschaft speichert einen vollständigen Namen als zwei konstituierende Namen, den Vornamen und den Nachnamen an. Wenn der aufrufende Code liest `fullName`die `Get` Prozedur kombiniert die beiden konstituierenden Namen und gibt den vollständigen Namen zurück. Wenn der aufrufende Code einen neuen vollständigen Name weist das `Set` Prozedur versucht, die sie in zwei konstituierende Namen aufzulösen. Wenn sie ein Leerzeichen nicht gefunden wird, wird er alle als den Vornamen gespeichert.  
+ Die folgende Eigenschaft speichert einen vollständigen Namen als zwei enthaltenen Namen, der Vorname und Nachname. Wenn der aufrufende Code liest `fullName`, `Get` Prozedur kombiniert die beiden zugehörigen Namen und gibt den vollständigen Namen zurück. Wenn der aufrufende Code einen neuen vollständigen Namen, weist der `Set` Prozedur versucht, die in zwei enthaltenen Namen aufzulösen. Wenn sie ein Leerzeichen nicht gefunden wird, es alle als den ersten Namen gespeichert.  
   
  [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
   
- Das folgende Beispiel zeigt typische Aufrufe der Eigenschaftenprozeduren `fullName`.  
+ Das folgende Beispiel zeigt die typischen Aufrufe an die Eigenschaftenprozeduren von `fullName`.  
   
  [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Verfahren](./index.md)  
- [Function-Prozeduren](./function-procedures.md)  
- [Operatorprozeduren](./operator-procedures.md)  
- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
- [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md)  
- [Gewusst wie: Erstellen einer Eigenschaft](./how-to-create-a-property.md)  
- [Gewusst wie: Aufrufen einer Eigenschaftenprozedur](./how-to-call-a-property-procedure.md)  
- [Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)  
- [Gewusst wie: Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md)  
- [Gewusst wie: Abrufen eines Werts aus einer Eigenschaft](./how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a>Siehe auch
+- [Verfahren](./index.md)
+- [Function-Prozeduren](./function-procedures.md)
+- [Operatorprozeduren](./operator-procedures.md)
+- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
+- [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md)
+- [Vorgehensweise: Erstellen Sie eine Eigenschaft](./how-to-create-a-property.md)
+- [Vorgehensweise: Aufrufen einer Eigenschaftenprozedur](./how-to-call-a-property-procedure.md)
+- [Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Vorgehensweise: Das Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md)
+- [Vorgehensweise: Abrufen eines Werts aus einer Eigenschaft](./how-to-get-a-value-from-a-property.md)

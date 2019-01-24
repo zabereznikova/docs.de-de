@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: bfcf96c553f85aeb0a40dfd6ea36667d504e8eee
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 20d6a0e221b7e9e1c2647098ef8bae25f7cd4d43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028000"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596825"
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;Listener&gt; -Element für &lt;Ablaufverfolgung&gt;
 Gibt an, einen Listener, der sammelt, speichert, und leitet Nachrichten. Listener leiten die Ablaufverfolgungsausgabe an ein entsprechendes Ziel.  
@@ -86,6 +86,6 @@ Gibt an, einen Listener, der sammelt, speichert, und leitet Nachrichten. Listene
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Diagnostics.TraceListener>  
- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Diagnostics.TraceListener>
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

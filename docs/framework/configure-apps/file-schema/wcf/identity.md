@@ -2,19 +2,19 @@
 title: '&lt;identity&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1d2ae56-e231-4a07-9c3f-9f13381dc0d8
-ms.openlocfilehash: 8d4074319a10abc1ce4aafe15e3b51381398c39c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 03e73f64090e0851b06ee67fe70c157b6145966c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677354"
 ---
 # <a name="ltidentitygt"></a>&lt;identity&gt;
 Mit dem Identitätselement kann ein Cliententwickler zur Entwurfszeit die erwartete Identität des Diensts angeben. Während des handshakevorgangs zwischen Client und Dienst die Windows Communication Foundation (WCF)-Infrastruktur stellt sicher, dass die Identität des erwarteten Diensts mit den Werten dieses Elements übereinstimmt, und daher kann authentifiziert werden kann. Weitere Informationen finden Sie unter [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  \<system.ServiceModel>  
-\<Client >  
-\<Endpunkt >  
+\<client>  
+\<endpoint>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,16 +54,16 @@ Mit dem Identitätselement kann ein Cliententwickler zur Entwurfszeit die erwart
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Benutzerdefinierte >](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Gibt einen benutzerdefinierten Peerresolver für eine netPeerTcpBinding an.|  
-|[\<Endpunkt >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Konfiguriert unterschiedliche Endpunkttypen.|  
+|[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Gibt einen benutzerdefinierten Peerresolver für eine netPeerTcpBinding an.|  
+|[\<endpoint>](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Konfiguriert unterschiedliche Endpunkttypen.|  
 |[\<issuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Gibt den Sicherheitstokendienst (STS) für den Verbunddienst an.|  
 |[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Gibt den Metadatenendpunkt für den Sicherheitstokendienst (STS) eines Verbunddiensts an.|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Definiert Parameter für ein ausgestelltes Token in einer benutzerdefinierten Bindung.|  
 |[\<localIssuer>](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Gibt einen lokalen Sicherheitstokendienst (STS) an.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.IdentityElement>  
- <xref:System.ServiceModel.EndpointAddress>  
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>  
- [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Endpunkte: Adressen, Bindungen und Verträge](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.IdentityElement>
+- <xref:System.ServiceModel.EndpointAddress>
+- <xref:System.ServiceModel.EndpointAddress.Identity%2A>
+- [Dienstidentität und Authentifizierung](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Endpunkte: Adressen, Bindungen und Verträge](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

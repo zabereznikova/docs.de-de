@@ -2,12 +2,12 @@
 title: Datentypen und Funktionen
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0a60c5f680937816cd97b4ef44ee7fd1ad510f73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711894"
 ---
 # <a name="data-types-and-functions"></a>Datentypen und Funktionen
 In den in der folgenden Tabelle aufgeführten Themen wird LINQ to SQL-Unterstützung für Member, Konstrukte und Umwandlungen der Common Language Runtime (CLR) beschrieben. Unterstützte Member und Konstrukte stehen zur Verwendung in LINQ to SQL-Abfragen zur Verfügung.  
@@ -31,7 +31,7 @@ In den in der folgenden Tabelle aufgeführten Themen wird LINQ to SQL-Unterstüt
 |[System.TimeSpan-Methoden](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|Beschreibt die LINQ to SQL-Unterstützung für Member der <xref:System.TimeSpan?displayProperty=nameWithType>-Struktur.|  
 |[Nicht unterstützte Funktionalität](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|Beschreibt Funktionen, die in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht unterstützt werden.|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL-CLR-Typenkonflikte](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [.NET Framework-Klassenbibliothek in Visual Studio](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)
+## <a name="see-also"></a>Siehe auch
+- [SQL-CLR-Typenkonflikte](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [.NET Framework-Klassenbibliothek in Visual Studio](https://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)
