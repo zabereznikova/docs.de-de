@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a4eb444967390492be33b25866de8a93a1698c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e5a2588023309867694f344041f62be53cab9c37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518292"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590119"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue-Funktion
 Schreibt eine angegebene Anzahl von Bytes in eine Eigenschaft, die durch ein Eigenschaftenhandle identifiziert wird.
@@ -63,7 +63,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 |`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Es ist ein Typenkonflikt aufgetreten. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
@@ -76,11 +76,11 @@ Mit dieser Funktion können Sie die Zeichenfolge "und" alle anderen nicht - fest
 Keine Zeichenfolge darstellen Eigenschaftswerte `lNumBytes` müssen die richtigen Datengröße des Eigenschaftentyps angegeben werden. Für Zeichenfolgen-Eigenschaftswerten `lNumBytes` muss die Länge der angegebenen Zeichenfolge in Bytes und die Zeichenfolge selbst muss ein sogar Länge in Bytes und eine Null-Terminierungszeichen folgen.
 
 ## <a name="requirements"></a>Anforderungen  
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

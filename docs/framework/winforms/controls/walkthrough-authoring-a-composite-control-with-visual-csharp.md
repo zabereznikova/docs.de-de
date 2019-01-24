@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 5f8384140b813400e106ad959684264304541c93
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6205bea2ccb75078cba507c09f1a4d65571e3418
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580822"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631697"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C# #
 Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefinierte grafische Schnittstellen erstellt und wiederverwendet werden können. Ein zusammengesetztes Steuerelement ist im wesentlichen eine Komponente mit visueller Darstellung. Daher können zusammengesetzte Steuerelemente aus einem oder mehr Windows Forms-Steuerelementen, Komponenten oder Codeblöcken bestehen. Diese erweitern die Funktionalität durch Validieren von Benutzereingaben, verändern Anzeigeeigenschaften oder führen andere vom Autor gewünschte Aufgaben aus. Zusammengesetzte Steuerelemente können genau wie andere Steuerelemente in Windows Forms platziert werden. Im ersten Teil dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches zusammengesetztes Steuerelement namens `ctlClock`. Im zweiten Teil der exemplarischen Vorgehensweise erweitern Sie die Funktionalität von `ctlClock` durch Vererbung.  
@@ -146,7 +146,7 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
 4.  Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.  
   
 ## <a name="testing-the-control"></a>Testen des Steuerelements  
- Steuerelemente sind keine eigenständigen Anwendungen. Sie müssen in einem Container gehostet werden. Testen Sie das Laufzeitverhalten Ihres Steuerelements, und überprüfen Sie die Eigenschaften im **UserControl-Testcontainer**. Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Steuerelemente sind keine eigenständigen Anwendungen. Sie müssen in einem Container gehostet werden. Testen Sie das Laufzeitverhalten Ihres Steuerelements, und überprüfen Sie die Eigenschaften im **UserControl-Testcontainer**. Weitere Informationen finden Sie unter [Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 #### <a name="to-test-your-control"></a>So testen Sie das Steuerelement  
   
@@ -341,7 +341,7 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
 5.  Klicken Sie im Menü **Datei** auf **Alles speichern**, um das Projekt zu speichern.  
   
 ### <a name="using-the-inherited-control-on-a-form"></a>Verwenden des geerbten Steuerelements in einem Formular  
- Sie können Ihr geerbtes Steuerelement so testen, wie Sie das `ctlClock`-Steuerelement der Basisklasse getestet haben: Drücken Sie F5, um das Projekt zu erstellen, und führen Sie das Steuerelement im **UserControl Testcontainer** aus. Weitere Informationen finden Sie unter [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+ Sie können Ihr geerbte Steuerelement die gleiche Weise, wie Sie das Steuerelement Basisklasse getestet testen `ctlClock`: Drücken Sie F5, um das Projekt zu erstellen, und führen Sie das Steuerelement im **UserControl-Testcontainer** aus. Weitere Informationen finden Sie unter [Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
  Sie müssen das Steuerelement auf einem Formular hosten, um es verwenden zu können. Wie standardmäßige zusammengesetzten Steuerelemente kann ein geerbtes zusammengesetztes Steuerelement nicht alleine stehen und muss in einem Formular oder einem anderen Container gehostet werden. Da `ctlAlarmClock` über eine tiefer gehende Funktionalität verfügt, wird zusätzlicher Code für das Testen benötigt. In dieser Vorgehensweise schreiben Sie ein einfaches Programm, um die Funktionalität von `ctlAlarmClock` zu testen. Sie schreiben Code zum Einstellen und Anzeigen der Eigenschaft `AlarmTime` von `ctlAlarmClock` und testen die geerbten Funktionen.  
   
@@ -404,9 +404,9 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
   
      In dieser exemplarischen Vorgehensweise wurden zahlreiche wichtige Konzepte behandelt. Sie haben gelernt, ein zusammengesetztes Steuerelement zu erstellen, indem Sie Steuerelemente und Komponenten in einem Container für zusammengesetzte Steuerelemente kombiniert haben. Sie haben gelernt, Eigenschaften zu Ihrem Steuerelement hinzuzufügen und Code für das Implementieren benutzerdefinierter Funktionalität zu schreiben. Im letzten Abschnitt haben Sie gelernt, die Funktionalität eines bestimmten zusammengesetzten Steuerelements durch Vererbung zu erweitern und die Funktionalität von Host-Methoden durch außer Kraft setzen dieser Methoden zu ändern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
- [Programmieren mit Komponenten](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
- [Exemplarische Vorgehensweise: Erstellen von Komponenten](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)  
- [Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+## <a name="see-also"></a>Siehe auch
+- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Programmieren mit Komponenten](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+- [Exemplarische Vorgehensweise: Erstellen von Komponenten](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+- [Vorgehensweise: Anzeigen eines Steuerelements in der Toolbox-Elemente-Dialogfeld "auswählen"](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit visuellen ElementC#](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

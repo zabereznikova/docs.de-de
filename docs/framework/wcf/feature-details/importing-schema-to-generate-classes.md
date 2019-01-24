@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197370"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620525"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importieren von Schemas zum Generieren von Klassen
 Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communication Foundation (WCF) verwendet werden, die <xref:System.Runtime.Serialization.XsdDataContractImporter> Klasse. In diesem Thema werden der Prozess und die Variationen beschrieben.  
@@ -42,7 +42,7 @@ Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communicat
     > [!NOTE]
     > Wenn beim Importieren ein Fehler auftritt, befindet sich die `CodeCompileUnit` in einem unvorhersehbaren Zustand. Wenn Sie eine `CodeCompileUnit` verwenden, die aus einem fehlgeschlagenen Import stammt, kann Sie dies ggf. anfällig für Sicherheitslücken machen.  
   
-5. Greifen Sie auf die `CodeCompileUnit` mithilfe der <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A>-Eigenschaft zu.  
+5. Greifen Sie auf die `CodeCompileUnit` mithilfe der <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A> -Eigenschaft zu.  
   
 ### <a name="import-options-customizing-the-generated-types"></a>Importoptionen: Anpassen der generierten Typen  
  Sie können die <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A>-Eigenschaft von <xref:System.Runtime.Serialization.XsdDataContractImporter> auf eine Instanz der <xref:System.Runtime.Serialization.ImportOptions>-Klasse festlegen, um verschiedene Aspekte des Importprozesses zu steuern. Verschiedene Optionen wirken sich direkt auf die generierten Typen aus.  
@@ -143,7 +143,7 @@ Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communicat
 > [!NOTE]
 >  Bei Verwendung von Svcutil.exe oder (in Visual Studio) die **Hinzufügen eines Dienstverweises** verwenden, sind alle Typen in der Datei MsCorLib.dll automatisch referenziert.  
   
-#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Importoptionen: Importieren von Nicht-DataContract-Schemas als IXmlSerializable-Typen  
+#### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Importoptionen: Importieren von nicht-DataContract-Schemas als IXmlSerializable-Typen  
  Der <xref:System.Runtime.Serialization.XsdDataContractImporter> unterstützt eine beschränkte Teilmenge des Schemas. Wenn nicht unterstützte Schemakonstrukte vorhanden sind (zum Beispiel XML-Attribute), schlägt der Importversuch mit einer Ausnahme fehl. Das Festlegen der <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>-Eigenschaft auf `true` erweitert jedoch den unterstützten Schemabereich. Wenn `true` festgelegt ist, generiert der <xref:System.Runtime.Serialization.XsdDataContractImporter> Typen, die die <xref:System.Xml.Serialization.IXmlSerializable>-Schnittstelle implementieren. Auf diese Weise wird der Direktzugriff auf die XML-Darstellung dieser Typen aktiviert.  
   
 ##### <a name="design-considerations"></a>Entwurfsüberlegungen  
@@ -179,13 +179,13 @@ Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communicat
   
 -   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>-Eigenschaft. Mit dieser Eigenschaft können Sie eine <xref:System.Runtime.Serialization.IDataContractSurrogate>-Implementierung angeben. <xref:System.Runtime.Serialization.IDataContractSurrogate> passt den Importprozess an. Weitere Informationen finden Sie unter [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.XsdDataContractImporter>  
- <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- <xref:System.Runtime.Serialization.ImportOptions>  
- [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)  
- [Import und Export von Schemas](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
- [Exportieren von Schemas aus Klassen](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)  
- [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.XsdDataContractImporter>
+- <xref:System.Runtime.Serialization.XsdDataContractExporter>
+- <xref:System.Runtime.Serialization.ImportOptions>
+- [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)
+- [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)
+- [Import und Export von Schemas](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [Exportieren von Schemas aus Klassen](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)

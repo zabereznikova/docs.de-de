@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: febfe7df52a0c1f44cb156faf2da310d317e01a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b3b29be2bab2d1b4cea5dcec89e31d4720be769
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576875"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3-Schnittstelle
-Stellt eine Methode, die erweitert "ICorDebugCode" und "ICorDebugCode2", um Informationen zu einem verwalteten Rückgabewert bereitzustellen.  
+Stellt eine Methode, die "ICorDebugCode" und "ICorDebugCode2", um Informationen zu einem verwalteten Rückgabewert bereitzustellen erweitert.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -38,7 +38,7 @@ Stellt eine Methode, die erweitert "ICorDebugCode" und "ICorDebugCode2", um Info
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -46,9 +46,9 @@ Stellt eine Methode, die erweitert "ICorDebugCode" und "ICorDebugCode2", um Info
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-    
-    
-    
- [ICorDebugILFrame3-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+
+
+
+- [ICorDebugILFrame3-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

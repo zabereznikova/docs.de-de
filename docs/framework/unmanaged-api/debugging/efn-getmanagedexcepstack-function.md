@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44f3604e3c12cd4b9781876d2d412d942353061e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1c1c05918965e40801757462ce53257bc36a5d8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587712"
 ---
 # <a name="efngetmanagedexcepstack-function"></a>_EFN_GetManagedExcepStack-Funktion
 Gibt bei Angabe der Adresse eines verwalteten Ausnahmeobjekts eine Zeichenfolgenversion der enthaltenen Stapelüberwachung zurück.  
@@ -39,7 +39,7 @@ HRESULT _EFN_GetManagedExcepStack(
   
 #### <a name="parameters"></a>Parameter  
  `Client`  
- [in] Der Client, der debuggt wird.  
+ [in] Der Client, der gedebuggt wird.  
   
  `StackObjAddr`  
  [in] Ein Zeiger des verwalteten Objekts abgeleitet <xref:System.Exception>.  
@@ -48,17 +48,17 @@ HRESULT _EFN_GetManagedExcepStack(
  [out] Die zurückgegebene Zeichenfolge.  
   
  `cbString`  
- [out] Die Anzahl der Zeichen im Zeichenfolgenpuffer verfügbar.  
+ [out] Die Anzahl der Zeichen in den Puffer verfügbar.  
   
 ## <a name="remarks"></a>Hinweise  
- Es ist kein verwalteter Code auf dem Thread derzeit im Kontext, gibt die Funktion HRESULT SOS_E_NOMANAGEDCODE mit einer Funktion 0xa0 und dem Fehlercode 0 x 1000 zurück.  
+ Es ist kein verwalteter Code für den Thread aktuell im Kontext, gibt die Funktion HRESULT SOS_E_NOMANAGEDCODE mit einer Funktion 0xa0 und Fehlercode 0 x 1000 zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** SOS_Stacktrace.h  
   
- **.NET Framework-Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 661aeff56955f729a5728f00f563bb2bef971a9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 579f925498f6ded83c5e90137d04020e610599b3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716712"
 ---
 # <a name="imaptoken-interface"></a>IMapToken-Schnittstelle
-Stellt Funktionen für die Zuordnung zwischen Assemblys bereit.  
+Bietet Funktionen für die Zuordnung zwischen den Assemblys.  
   
 > [!NOTE]
->  Die `IMapToken` -Schnittstelle muss vom Client implementiert werden.  
+>  Die `IMapToken` Schnittstelle muss durch den Client implementiert werden.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Map-Methode](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Ordnet eine Beziehung zwischen zwei Assemblys mithilfe von Metadatensignaturen an.|  
+|[Map-Methode](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Ordnet eine Beziehung zwischen zwei Assemblys mithilfe von Signaturen von Metadaten.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

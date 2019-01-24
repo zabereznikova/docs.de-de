@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: da0c6f492b068c9caa50468ead47cdc08559bfce
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576355"
 ---
 # <a name="-operator-visual-basic"></a>+-Operator (Visual Basic)
 Addiert zwei Zahlen ein, oder gibt den positiven Wert eines numerischen Ausdrucks zurück. Kann auch zum Verketten von zwei Ausdrücke verwendet werden.  
@@ -83,7 +83,7 @@ expression1 + expression2
 >  Bei Verwendung der `+` Operator an, Sie möglicherweise nicht bestimmen, ob die Additions- oder Zeichenfolge Verkettung erfolgt. Verwenden der `&` Operator zum Verketten, um Mehrdeutigkeit zu vermeiden und um selbst dokumentierender Code bereitzustellen.  
   
 ## <a name="overloading"></a>Überladen  
- Die `+` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Wenn Ihr Code dieser Operator für diese eine Klasse oder Struktur verwendet, achten Sie darauf, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Die `+` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Wenn Ihr Code dieser Operator für diese eine Klasse oder Struktur verwendet, achten Sie darauf, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `+` Operator zum Addieren von Zahlen. Wenn die Operanden numerisch sind, berechnet Visual Basic das arithmetische Ergebnis. Das Ergebnis der arithmetische stellt die Summe der beiden Operanden dar.  
@@ -108,11 +108,11 @@ expression1 + expression2
   
  Um Mehrdeutigkeiten zu vermeiden, verwenden Sie die `&` Operator anstelle des `+` für die Verkettung.  
   
-## <a name="see-also"></a>Siehe auch  
- [&-Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
- [Verkettungsoperatoren](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
- [Arithmetische Operatoren](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Arithmetische Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>Siehe auch
+- [&-Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)
+- [Verkettungsoperatoren](../../../visual-basic/language-reference/operators/concatenation-operators.md)
+- [Arithmetische Operatoren](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Arithmetische Operatoren in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)

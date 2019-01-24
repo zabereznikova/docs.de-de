@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573336b32040f44ff1b59fcbb75b59aa00976b5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70405d774d665e3add03c510f3b99a3280da4860
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625145"
 ---
 # <a name="corexemain2-function"></a>_CorExeMain2-Funktion
 Führt den Einstiegspunkt im angegebenen Speicherabbildcode aus. Diese Funktion wird vom Betriebssystemladeprogramm aufgerufen.  
@@ -40,10 +40,10 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
   
 #### <a name="parameters"></a>Parameter  
  `pUnmappedPE`  
- [in] Ein Zeiger auf den Speicherabbildcode.  
+ [in] Ein Zeiger auf den Speicher abgebildeten Code.  
   
  `cUnmappedPE`  
- [in] Die Anzahl der Elemente `pUnmappedPE` aufnehmen kann.  
+ [in] Die Anzahl der Elemente `pUnmappedPE` enthalten kann.  
   
  `pImageNameIn`  
  [in] Ein Zeiger auf den Namen des ausführbaren Images.  
@@ -55,13 +55,13 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  [in] Befehlszeilenparameter, sofern vorhanden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Globale statische Metadatenfunktionen](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Globale statische Metadatenfunktionen](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

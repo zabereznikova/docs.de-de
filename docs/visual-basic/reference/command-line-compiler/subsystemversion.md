@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 9c4b4d66ba002e58af87ef39ea82a7a23caa15ca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7519bb648a92cab78b4e4594a9c68a85aa932863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580915"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-Subsystemversion (Visual Basic)
 Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei ausführen kann. Dabei bestimmt sie die Version von Windows, auf der die ausführbare Datei ausgeführt werden kann. In den meisten Fällen stellt diese Option sicher, dass die ausführbare Datei bestimmte Sicherheitsfunktionen nutzt, die nicht in älteren Versionen von Windows verfügbar sind.  
@@ -41,7 +41,7 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
 |Windows Server 2003|5.02|  
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
-|Windows Server 2008|6.01|  
+|Windows Server 2008|6.01|  
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Standardwerte  
@@ -64,7 +64,7 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
   
 
   
-## <a name="see-also"></a>Siehe auch  
-[Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
 
-[MSBuild-Eigenschaften](/visualstudio/msbuild/msbuild-properties)
+- [MSBuild-Eigenschaften](/visualstudio/msbuild/msbuild-properties)

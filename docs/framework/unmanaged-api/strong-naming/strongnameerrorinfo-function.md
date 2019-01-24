@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a905840c471a268c6b106c5e25baca9c36f485d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731061"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo-Funktion
 Ruft den letzten Fehlercode ab, der von einer der Funktionen mit starkem Namen ausgelöst wurde.  
@@ -45,13 +45,13 @@ HRESULT StrongNameErrorInfo ();
  Die meisten Methoden mit starkem Namen zurückgeben, eine einfache `true` oder `false` Angabe für die erfolgreiche Ausführung. Verwenden der `StrongNameErrorInfo` Funktion, die einen HRESULT-Wert abzurufen, der angibt, den letzten Fehler, die von Funktionen mit starkem Namen generiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** StrongName.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Globale statische Funktionen für starke Namen](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+## <a name="see-also"></a>Siehe auch
+- [Globale statische Funktionen für starke Namen](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

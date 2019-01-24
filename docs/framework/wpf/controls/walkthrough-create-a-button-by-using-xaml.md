@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a28a027e3b804de8e40d8c7831e7556cc7f55188
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: d88eca573d09c0c40575718a125a65b2d13593d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606782"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit XAML
 Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine animierte Schaltfläche für die Verwendung in einer Windows Presentation Foundation (WPF)-Anwendung zu erstellen. In dieser exemplarischen Vorgehensweise verwendet und eine Vorlage zum Erstellen einer benutzerdefinierten Schaltflächenressource, die Wiederverwendung von Code und die Trennung von aus der Schaltflächendeklaration ermöglicht. In dieser exemplarischen Vorgehensweise wird ausschließlich in geschrieben [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -361,7 +361,7 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
      Drücken Sie F5, um die Anwendung auszuführen, und klicken auf eine der Schaltflächen. Beachten Sie, dass die Schaltfläche mit der hervorgehobenen bleibt, wenn Sie darauf klicken, da es immer noch den Fokus besitzt. Wenn Sie eine andere Schaltfläche klicken, erhält die neue Schaltfläche den Fokus, während die verliert.  
   
-4.  **Hinzufügen von Animationen für** <xref:System.Windows.UIElement.MouseEnter> **und** <xref:System.Windows.UIElement.MouseLeave> **:  ** Als Nächstes fügen wir einige Animationen für die Trigger hinzu. Fügen Sie das folgende Markup an einer beliebigen Stelle in der die `ControlTemplate.Triggers` Block.  
+4.  **Hinzufügen von Animationen für** <xref:System.Windows.UIElement.MouseEnter> **und** <xref:System.Windows.UIElement.MouseLeave> **:** Als Nächstes fügen wir einige Animationen für die Trigger hinzu. Fügen Sie das folgende Markup an einer beliebigen Stelle in der die `ControlTemplate.Triggers` Block.  
   
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -431,9 +431,9 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
   
 -   Anpassen des Verhaltens für die Schaltflächen als Reaktion auf Benutzeraktionen (z. B. <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, und <xref:System.Windows.Controls.Primitives.ButtonBase.Click>), die Animationseffekte enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Schaltfläche mit Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Übersicht über Bitmapeffekte](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Erstellen einer Schaltfläche mit Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
+- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Übersicht über Bitmapeffekte](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

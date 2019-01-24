@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 628d6fac45b046d9e8f26ad8777c38450da27a1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 86c28cdfe171b0b2bde1d28fa4c06ceaf7b26e18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667030"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfo-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfo-Methode
 Ruft die Symbolinformationen für die Suche ab.  
@@ -42,10 +42,10 @@ HRESULT GetSymbolSearchInfo(
  [in] Ein `ULONG32` , der angibt, dass der Größe des `rgpSearchInfo`.  
   
  `pcSearchInfo`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers benötigt, um die Suchinformationen aufzunehmen.  
+ [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers erforderlich, um die Suche Informationen enthalten.  
   
  `rgpSearchInfo`  
- [out] Ein Zeiger, der festgelegt wird, wird auf das zurückgegebene [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) Schnittstelle.  
+ [out] Ein Zeiger, der festgelegt ist auf das zurückgegebene [ISymUnmanagedSymbolSearchInfo](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedsymbolsearchinfo-interface.md) Schnittstelle.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -53,5 +53,5 @@ HRESULT GetSymbolSearchInfo(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedReaderSymbolSearchInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedReaderSymbolSearchInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreadersymbolsearchinfo-interface.md)

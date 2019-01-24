@@ -1,5 +1,5 @@
 ---
-title: ICorDebugType2::GetTypeID-Methode
+title: 'Icordebugtype2:: GetTypeId-Methode'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugType2.GetTypeID
@@ -17,14 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bc1407f8444b78154981619742bd0da188c4335
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 463838681ceaaeb2edab85a22dd979fb143b9248
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422070"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602883"
 ---
-# <a name="icordebugtype2gettypeid-method"></a>ICorDebugType2::GetTypeID-Methode
+# <a name="icordebugtype2gettypeid-method"></a>Icordebugtype2:: GetTypeId-Methode
 Ruft eine [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) für diesen Typ.  
   
 ## <a name="syntax"></a>Syntax  
@@ -40,7 +40,7 @@ HRESULT GetTypeID(
  [out] Ein Zeiger auf die [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) für ICorDebugType.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Der Rückgabewert ist `S_OK` bei Erfolg oder ein Fehler-`HRESULT`-Code bei einem Fehler. Die `HRESULT` Codes sind unter anderem folgende:  
+ Der Rückgabewert ist `S_OK` bei Erfolg oder ein Fehler-`HRESULT`-Code bei einem Fehler. Die `HRESULT` Codes umfassen Folgendes:  
   
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
@@ -49,12 +49,12 @@ HRESULT GetTypeID(
 |`CORDBG_E_UNSUPPORTED`|Der Typ wird nicht unterstützt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode ermöglicht eine Zuordnung zwischen den ICorDebugType, die einen Typ darstellt, auf denen oder kann nicht geladen in die Laufzeit zu einer [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), welche fungiert als ein nicht transparenter, verarbeiten identifiziert einen Typ, der in der Laufzeit geladen.  
+ Diese Methode ermöglicht eine Zuordnung zwischen der ICorDebugType, die einen Typ darstellt, die möglicherweise nicht wurde geladen in die Laufzeit, zu einem [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), welche fungiert als ein nicht transparenter, verarbeiten identifiziert einen Typ, der in der Laufzeit geladen.  
   
  Wenn der Typ, der ICorDebugType steht, noch nicht geladen wurde, gibt diese Methode zurück `CORDBG_E_CLASS_NOT_LOADED`.  Wenn der Typ nicht unterstützt wird, gibt es `CORDBG_E_UNSUPPORTED`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -62,5 +62,5 @@ HRESULT GetTypeID(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugType2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugType2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)

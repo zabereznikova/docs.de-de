@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9249e6f5ee7b15d55f5518263b0ac2e31b64e993
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14c505e4242f70ec839287056f8ab7685b856682
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714242"
 ---
 # <a name="icorprofilermoduleenumclone-method"></a>ICorProfilerModuleEnum::Clone-Methode
-Ruft einen Schnittstellenzeiger auf eine Kopie dieser [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) Schnittstelle.  
+Ruft einen Schnittstellenzeiger auf eine Kopie dieses [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,10 +35,10 @@ HRESULT Clone([out] ICorProfilerObjectEnum **ppEnum);
   
 #### <a name="parameters"></a>Parameter  
  `ppEnum`  
- [out] Ein Zeiger auf den Schnittstellenzeiger, der wiederum auf die Kopie dieser zeigt [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) Schnittstelle. Die Kopie des Enumerators behält ihren eigenen Enumerationszustand separat von diesem Enumerator. Allerdings ist die ursprüngliche Cursorposition der Kopie identisch mit der aktuellen Cursorposition des Enumerators.  
+ [out] Ein Zeiger auf den Schnittstellenzeiger, der wiederum auf die Kopie dieses zeigt [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) Schnittstelle. Die Kopie des Enumerators verwaltet einen eigenen Enumerationszustand getrennt von diesem Enumerator. Allerdings ist die Kopie in die ursprüngliche Cursorposition Cursorposition des Enumerators identisch.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -45,6 +46,6 @@ HRESULT Clone([out] ICorProfilerObjectEnum **ppEnum);
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerModuleEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  
- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerModuleEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
+- [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

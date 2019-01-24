@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7f000b6e944be7bd2e38f97e40176952cb19605
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f76a3cb232042ba6b91046d1f7b6e1d46ad6faef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450631"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634856"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished-Methode
-Benachrichtigt den Profiler, dass eine Assembly geladen wurde.  
+Benachrichtigt den Profiler an, dass eine Assembly geladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,15 +40,15 @@ HRESULT AssemblyLoadFinished(
  [in] Identifiziert die Assembly, die geladen wurde.  
   
  `hrStatus`  
- [in] Ein HRESULT, das angibt, ob die Assembly vollständig erfolgreich geladen.  
+ [in] Ein HRESULT, der angibt, ob die Assembly erfolgreich fertig geladen wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert der `assemblyId` gilt nicht für eine Anforderung Informationen, bis die `AssemblyLoadFinished` Methode wird aufgerufen.  
+ Der Wert des `assemblyId` gilt nicht für eine Anforderung von Informationen bis der `AssemblyLoadFinished` Methode wird aufgerufen.  
   
- Einige Teile der beim Laden der Assembly möglicherweise weiterhin nach dem `AssemblyLoadFinished` Rückruf. Fehler-HRESULT in `hrStatus` gibt einen Fehler. Allerdings ein Erfolgs-HRESULT in `hrStatus` bedeutet nur, dass der erste Teil, das Laden der Assembly erfolgreich war.  
+ Laden Sie die Assembly möglicherweise weiterhin nach den `AssemblyLoadFinished` Rückruf. Fehler-HRESULT in `hrStatus` gibt einen Fehler. Allerdings einen HRESULT-Erfolg in `hrStatus` gibt nur an, dass der erste Teil beim Laden der Assembly erfolgreich war.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -56,5 +56,5 @@ HRESULT AssemblyLoadFinished(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

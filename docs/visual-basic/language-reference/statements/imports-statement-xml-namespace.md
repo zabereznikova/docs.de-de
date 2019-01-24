@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e137b27ae5128e54eca466632cadad9908232045
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802391"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655984"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports-Anweisung (XML-Namespace)
 Importiert die XML-Namespacepräfixe für XML-Literale und XML-Achseneigenschaften.  
@@ -88,8 +88,8 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Elementliteral](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/index.md)  
- [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
- [GetXmlNamespace-Operator](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+## <a name="see-also"></a>Siehe auch
+- [XML-Elementliteral](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML-Achseneigenschaften](../../../visual-basic/language-reference/xml-axis/index.md)
+- [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [GetXmlNamespace-Operator](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

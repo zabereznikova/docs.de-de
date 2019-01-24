@@ -1,15 +1,15 @@
 ---
-title: 'Gewusst wie: Verwenden eines Dienstmonikers mit WSDL-Verträgen'
+title: 'Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: fc8e5d80ec0b1df699ebe9112f364dd69ca3faf6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266526"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726571"
 ---
-# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Gewusst wie: Verwenden eines Dienstmonikers mit WSDL-Verträgen
+# <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen
 Es gibt Situationen, in denen Sie sich möglicherweise einen vollständig unabhängigen COM Interop-Client wünschen. Der Dienst, den Sie aufrufen möchten, stellt vielleicht keinen MEX-Endpunkt bereit, oder die WCF-Client-DLL ist nicht für COM-Interop registriert. In diesen Fällen können Sie eine WSDL-Datei erstellen, die den Dienst beschreibt, und die Datei an den WCF-Dienstmoniker übergeben. In diesem Thema wird beschrieben, wie das Beispiel für Erste Schritte mit WCF zur Verwendung eines WSDL-Monikers in WCF aufgerufen wird.  
   
 ### <a name="using-the-wsdl-service-moniker"></a>Verwenden des WSDL-Dienstmonikers  
@@ -56,6 +56,6 @@ Es gibt Situationen, in denen Sie sich möglicherweise einen vollständig unabh�
   
 7.  Führen Sie die Visual Basic-Anwendung aus. Ein Meldungsfeld wird mit den Ergebnissen des Aufrufs Subtract(145, 76.54) angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [Übersicht über die Integration von COM-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [Übersicht über die Integration von COM-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

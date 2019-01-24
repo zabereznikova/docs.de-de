@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers'
+title: 'Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - user interface [Windows Forms], multipane
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 9c8cab952fd9d0c58380a308dd360dcedb2ea8f1
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 923f913d8dd44aeef5d0b661e9408c6c50acd98b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071266"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664225"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Gewusst wie: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers
 Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der ähnelt der Verwendung in Microsoft Outlook ist eine **Ordner** Liste eine **Nachrichten** Bereich und eine **Vorschau** Bereich. In dieser Anordnung erfolgt hauptsächlich durch Andocken von Steuerelementen mit dem Formular.  
   
  Wenn Sie ein Steuerelement andocken, legen Sie fest, welchen Rand des übergeordneten Containers ein Steuerelement angedockt ist. Folglich setzen Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Right>, dem rechten Rand des Steuerelements an den rechten Rand seines übergeordneten Steuerelements angedockt wird. Darüber hinaus wird der verankerte Rand des Steuerelements Größe des Containersteuerelements entsprechen. Weitere Informationen zur Funktionsweise des <xref:System.Windows.Forms.SplitContainer.Dock%2A> -Eigenschaft funktioniert, finden Sie unter [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).  
@@ -29,15 +29,15 @@ Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der
   
 1.  Erstellen Sie ein neues Windows-Anwendungsprojekt (**Datei** > **neu** > **Projekt** > **Visual C#-** oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).  
   
-2.  Ziehen Sie eine <xref:System.Windows.Forms.SplitContainer> -Steuerelement aus der **Toolbox** auf das Formular. In der **Eigenschaften** legen die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill>.  
+2.  Ziehen Sie eine <xref:System.Windows.Forms.SplitContainer> -Steuerelement aus der **Toolbox** auf das Formular. Legen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:System.Windows.Forms.SplitContainer.Dock%2A> auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
   
 3.  Ziehen Sie eine <xref:System.Windows.Forms.TreeView> -Steuerelement aus der **Toolbox** um im linken Bereich von der <xref:System.Windows.Forms.SplitContainer> Steuerelement. In der **Eigenschaften** legen die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Left> durch Klicken auf den linken Bereich im Wert-Editor angezeigt, wenn auf der Dropdownpfeil geklickt wird.  
   
 4.  Ziehen Sie ein weiteres <xref:System.Windows.Forms.SplitContainer> -Steuerelement aus der **Toolbox**; platzieren Sie es im rechten Bereich mit der <xref:System.Windows.Forms.SplitContainer> Kontrolle, die Sie dem Formular hinzugefügt. In der **Eigenschaften** legen die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill> und <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Eigenschaft <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
-5.  Ziehen Sie eine <xref:System.Windows.Forms.ListView> -Steuerelement aus der **Toolbox** in den oberen Bereich des zweiten <xref:System.Windows.Forms.SplitContainer> Kontrolle, die Sie dem Formular hinzugefügt. Legen Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A>-Eigenschaft des <xref:System.Windows.Forms.ListView>-Steuerelements auf <xref:System.Windows.Forms.DockStyle.Fill> fest.  
+5.  Ziehen Sie eine <xref:System.Windows.Forms.ListView> -Steuerelement aus der **Toolbox** in den oberen Bereich des zweiten <xref:System.Windows.Forms.SplitContainer> Kontrolle, die Sie dem Formular hinzugefügt. Legen Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A> -Eigenschaft des <xref:System.Windows.Forms.ListView> -Steuerelements auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
   
-6.  Ziehen Sie eine <xref:System.Windows.Forms.RichTextBox> -Steuerelement aus der **Toolbox** in den unteren Bereich des zweiten <xref:System.Windows.Forms.SplitContainer> Steuerelement. Legen Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A>-Eigenschaft des <xref:System.Windows.Forms.RichTextBox>-Steuerelements auf <xref:System.Windows.Forms.DockStyle.Fill> fest.  
+6.  Ziehen Sie eine <xref:System.Windows.Forms.RichTextBox> -Steuerelement aus der **Toolbox** in den unteren Bereich des zweiten <xref:System.Windows.Forms.SplitContainer> Steuerelement. Legen Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A> -Eigenschaft des <xref:System.Windows.Forms.RichTextBox> -Steuerelements auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
   
      Wenn Sie zum Ausführen der Anwendung F5 drücken, zeigt das Formular an diesem Punkt dreiteiligen Benutzeroberfläche, die von Microsoft Outlook ähnelt.  
   
@@ -46,6 +46,6 @@ Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der
   
      An diesem Punkt haben Sie bei der Entwicklung eine anspruchsvolle Benutzeroberfläche konzipiert. Der nächste Schritt ist Programmieren der Anwendung selbst, z. B. durch das Verbinden der <xref:System.Windows.Forms.TreeView> Steuerelement und <xref:System.Windows.Forms.ListView> Steuerelemente in eine Art der Datenquelle. Weitere Informationen zum Verbinden von Steuerelementen an Daten finden Sie unter [Datenbindung und Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer-Steuerelement](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

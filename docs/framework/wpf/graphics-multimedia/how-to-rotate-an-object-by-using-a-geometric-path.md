@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Drehen eines Objekts mithilfe eines geometrischen Pfads'
+title: 'Vorgehensweise: Drehen eines Objekts mithilfe eines geometrischen Pfads'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - geometric paths [WPF], rotating objects by
 - rotating objects by geometric paths [WPF]
 ms.assetid: cb31ca4d-f05a-4c6b-9a18-4b6faaf38d45
-ms.openlocfilehash: 6d6d21f3f7b609cb2933093a6990425deb39d4a6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: cd8aaee7563d684e70dc29f1c293b091c1e6cff9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398147"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661489"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Gewusst wie: Drehen eines Objekts mithilfe eines geometrischen Pfads
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Vorgehensweise: Drehen eines Objekts mithilfe eines geometrischen Pfads
 In diesem Beispiel wird gezeigt, wie zum Drehen ein Objekts entlang eines geometrischen Pfads, der durch definiert ist eine <xref:System.Windows.Media.PathGeometry> Objekt.  
   
 ## <a name="example"></a>Beispiel  
@@ -34,7 +34,7 @@ In diesem Beispiel wird gezeigt, wie zum Drehen ein Objekts entlang eines geomet
   
  Das vollständige Beispiel finden Sie unter [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028).  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

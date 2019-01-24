@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Festlegen der Höheneigenschaften eines Elements'
+title: 'Vorgehensweise: Festlegen der Höheneigenschaften eines Elements'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - height properties [WPF]
 - Panel control [WPF], height properties of elements
 ms.assetid: 5ab9e781-dbb8-469a-a3c8-cf38ce312647
-ms.openlocfilehash: 4d4aade743507001f825c19994e2f5feb1726ac4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be3235d4bf7b5e108420b5ed030157067cacdb8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525473"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637048"
 ---
-# <a name="how-to-set-the-height-properties-of-an-element"></a>Gewusst wie: Festlegen der Höheneigenschaften eines Elements
+# <a name="how-to-set-the-height-properties-of-an-element"></a>Vorgehensweise: Festlegen der Höheneigenschaften eines Elements
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt die Unterschiede im Renderingverhalten zwischen den vier Höhe-bezogene Eigenschaften im, visuell [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
@@ -33,13 +33,13 @@ ms.locfileid: "43525473"
   
  Das vollständige Beispiel finden Sie unter [Height-Eigenschaften-Beispiel](https://go.microsoft.com/fwlink/?LinkID=159993).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.FrameworkElement>  
- <xref:System.Windows.Controls.ListBox>  
- <xref:System.Windows.FrameworkElement.ActualHeight%2A>  
- <xref:System.Windows.FrameworkElement.MaxHeight%2A>  
- <xref:System.Windows.FrameworkElement.MinHeight%2A>  
- <xref:System.Windows.FrameworkElement.Height%2A>  
- [Festlegen der Breiteneigenschaften eines Elements](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
- [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Beispiel der Height-Eigenschaften](https://go.microsoft.com/fwlink/?LinkID=159993)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.FrameworkElement>
+- <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.FrameworkElement.ActualHeight%2A>
+- <xref:System.Windows.FrameworkElement.MaxHeight%2A>
+- <xref:System.Windows.FrameworkElement.MinHeight%2A>
+- <xref:System.Windows.FrameworkElement.Height%2A>
+- [Festlegen der Breiteneigenschaften eines Elements](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)
+- [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Beispiel der Height-Eigenschaften](https://go.microsoft.com/fwlink/?LinkID=159993)

@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement'
+title: 'Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7ca4987da8422c00e3fc34ff4605ddd13e4091b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ffaab4115edec1fc0115b27b8904970854f79d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193715"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600673"
 ---
-# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement
+# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement
 
 In dieser exemplarische Vorgehensweise wird veranschaulicht, wie man in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ein benutzerdefiniertes Steuerelement erstellt, das Drag & Drop-Datenübertragung unterstützt.
 
@@ -31,14 +31,14 @@ In dieser exemplarischen Vorgehensweise werden die folgenden Aufgaben veranschau
 
 -   Konfigurieren eines Panels, sodass es von dem Benutzersteuerelement abgelegte Daten empfangen kann.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
-Sie benötigen Visual Studio zum Durchführen dieser exemplarischen Vorgehensweise.
+Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 ## <a name="create-the-application-project"></a>Erstellen des Anwendungsprojekts
  In diesem Abschnitt erstellen Sie die Anwendungsstruktur, einschließlich eine Hauptseite mit zwei Panels und einer <xref:System.Windows.Controls.TextBox>.
 
-1.  Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen `DragDropExample`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines neuen WPF-Anwendungsprojekts](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
+1.  Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen `DragDropExample`. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie ein neues WPF-Anwendungsprojekt](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).
 
 2.  Öffnen Sie „MainWindow.xaml“.
 

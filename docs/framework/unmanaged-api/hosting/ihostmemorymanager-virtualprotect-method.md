@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bada01e910397adcf0fe59286d90774a0ab24ffa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c6ebba2f6d7f40c835b6ffdc479bdc9f2fdc354e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568061"
 ---
 # <a name="ihostmemorymanagervirtualprotect-method"></a>IHostMemoryManager::VirtualProtect-Methode
-Dient als logischer Wrapper für die entsprechenden Win32-Funktion. Die Win32-Implementierung von `VirtualProtect` ändert den Schutz für einen Bereich der Seiten im virtuellen Adressraum des aufrufenden Prozesses, die ein Commit ausgeführt wurde.  
+Dient als ein logischer Wrapper für die entsprechenden Win32-Funktion. Die Win32-Implementierung von `VirtualProtect` ändert den Schutz in einem Bereich der Seiten im virtuellen Adressraum des aufrufenden Prozesses, die ein Commit ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,13 +40,13 @@ HRESULT VirtualProtect (
   
 #### <a name="parameters"></a>Parameter  
  `lpAddress`  
- [in] Ein Zeiger auf die Basisadresse des virtuellen Speichers, dessen Schutzattribute werden geändert werden.  
+ [in] Ein Zeiger auf die Basisadresse des virtuellen Speichers, deren Schutzattribute sind geändert werden.  
   
  `dwSize`  
- [in] Die Größe in Bytes, des Bereichs der Seiten im Arbeitsspeicher geändert werden.  
+ [in] Die Größe in Bytes des Bereichs der Seiten im Arbeitsspeicher geändert werden.  
   
  `flNewProtect`  
- [in] Der Typ der Arbeitsspeicherschutz anwenden.  
+ [in] Der Typ des Speicherschutzes angewendet werden soll.  
   
  `pflOldProtect`  
  [out] Ein Zeiger auf den Wert des vorherigen Arbeitsspeichers Schutz.  
@@ -56,23 +56,23 @@ HRESULT VirtualProtect (
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|`VirtualProtect` wurde erfolgreich zurückgegeben.|  
-|HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
+|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierten Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler aufgetreten ist. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr verwendbar innerhalb des Prozesses. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
+|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Implementierung der `VirtualProtect` gibt einen HRESULT-Wert, während die Win32-Implementierung einen Wert ungleich 0 (null), um einen Erfolg zu melden zurückgibt und den Wert 0, um einen Fehler anzugeben. Weitere Informationen finden Sie in der Dokumentation zur Windows-Plattform.  
+ Diese Implementierung der `VirtualProtect` einen HRESULT-Wert, während die Win32-Implementierung einen Wert ungleich Null zum Erfolg zurückgibt und einen Nullwert, während ein Fehler zurückgegeben. Weitere Informationen finden Sie in der Dokumentation zur Windows-Plattform.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IHostMemoryManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IHostMemoryManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

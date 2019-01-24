@@ -2,12 +2,12 @@
 title: Gleitkommazahlen
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 2ab583a07c78cfa06ac597c369486f89e19ca66e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8f5985576e966f1a853c9ee8d7bfef4b9bf6fc40
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589372"
 ---
 # <a name="floating-point-numbers"></a>Gleitkommazahlen
 In diesem Thema werden einige der Probleme beschrieben, auf die Entwickler beim Arbeiten mit Gleitkommazahlen in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] häufig stoßen. Diese Probleme treten auf, wie Computer Gleitkommazahlen speichern, und gelten nicht für einen bestimmten Anbieter wie z. B. <xref:System.Data.SqlClient> oder <xref:System.Data.OracleClient>.  
@@ -18,6 +18,6 @@ In diesem Thema werden einige der Probleme beschrieben, auf die Entwickler beim 
   
  Wenn Sie Probleme mit Gleichheitsvergleichen umgehen möchten, überlegen Sie, ob Sie Ihre Anwendung nicht so programmieren können, dass Abweichungen bei den letzten gültigen Ziffern ignoriert werden. So können Sie z. B. statt zu vergleichen, ob zwei Zahlen gleich sind, eine Zahl von der anderen Zahl subtrahieren. Wenn die Differenz in einem akzeptablen Rundungsbereich liegt, kann Ihre Anwendung die Zahlen so behandeln, als wären sie gleich.  
   
-## <a name="see-also"></a>Siehe auch  
- [Warum Gleitkommazahlen an Genauigkeit verlieren können](https://msdn.microsoft.com/library/1acb1add-ac06-4134-a2fd-aff13d8c4c15)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Warum Gleitkommazahlen an Genauigkeit verlieren können](https://msdn.microsoft.com/library/1acb1add-ac06-4134-a2fd-aff13d8c4c15)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

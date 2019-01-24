@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 76accbccc1f65bb44b7e710f3f24dc2bae17eeda
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 872283f55ae6f085b2cdf5c64c229b9d459b71f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701273"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Nachrichtensicherheit über einen Benutzernamenclient
 Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst und Client mit Sicherheit auf Nachrichtenebene gesichert. Der Dienst wird über ein X.509-Zertifikat authentifiziert. Der Client wird über den Benutzernamen und das Kennwort authentifiziert.  
@@ -125,9 +125,9 @@ Die folgende Abbildung zeigt einen Windows Communication Foundation (WCF)-Dienst
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Nachrichtensicherheit – Benutzername](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
- [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Nachrichtensicherheit – Benutzername](../../../../docs/framework/wcf/samples/message-security-user-name.md)
+- [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

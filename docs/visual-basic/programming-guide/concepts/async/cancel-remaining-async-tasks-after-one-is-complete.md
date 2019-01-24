@@ -2,12 +2,12 @@
 title: Abbrechen der verbleibende asynchrone Aufgaben nach einer vollständigen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 2f784449f6a70bccb386cc268e7c33cefe8f9a14
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0edcc969caaeae46240f048e76fbe153041873e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645807"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Abbrechen der verbleibende asynchrone Aufgaben nach einer vollständigen (Visual Basic)
 Mit der <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>-Methode zusammen mit einem <xref:System.Threading.CancellationToken> können Sie alle verbleibenden Aufgaben abbrechen, wenn eine Aufgabe abgeschlossen wurde. Die `WhenAny`-Methode akzeptiert ein Argument, das eine Auflistung von Aufgaben ist. Die Methode startet alle Aufgaben und gibt eine einzelne Aufgabe zurück. Die einzelne Aufgabe ist abgeschlossen, wenn eine beliebige Aufgabe in der Auflistung abgeschlossen ist.  
@@ -18,13 +18,13 @@ Mit der <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithTyp
 >  Zum Ausführen der Beispiele müssen Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf dem Computer installiert sein.  
   
 ## <a name="downloading-the-example"></a>Herunterladen des Beispiels  
- Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und anschließend die folgenden Schritte ausführen.  
+ Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Feinabstimmung der Anwendung](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) und befolgen Sie dann die folgenden Schritte aus.  
   
 1.  Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.  
   
 2.  Klicken Sie in der Menüleiste auf **Datei**, dann auf **Öffnen**und **Projekt/Projektmappe**.  
   
-3.  In der **Open Project** Dialogfeld, öffnen Sie den Ordner, die von Ihnen dekomprimierten Beispielcode enthält, und öffnen Sie die Projektmappendatei (.sln) klicken Sie dann für AsyncFineTuningVB.  
+3.  Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen dekomprimierten Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (SLN-Datei) für AsyncFineTuningVB.  
   
 4.  Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das **CancelAfterOneTask**-Projekt, und wählen Sie dann **Als Startprojekt festlegen** aus.  
   
@@ -34,7 +34,7 @@ Mit der <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithTyp
   
 6.  Führen Sie das Programm mehrmals aus, um zu überprüfen, dass unterschiedliche Downloads als erste beendet werden.  
   
- Wenn Sie nicht das Projekt herunterladen möchten, können Sie die Datei "MainWindow.Xaml.vb" am Ende dieses Themas überprüfen.  
+ Wenn Sie das Projekt nicht herunterladen möchten, können Sie sich die Datei „MainWindow.xaml.vb“ am Ende dieses Themas anschauen.  
   
 ## <a name="building-the-example"></a>Erstellen des Beispiels  
  Im Beispiel in diesem Thema wird das Projekt, das in entwickelt wird hinzugefügt [eine asynchrone Aufgabe oder Aufgabenliste Abbrechen](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) um eine Liste von Aufgaben abzubrechen. Im Beispiel wird die gleiche UI verwendet, obwohl die Schaltfläche **Abbrechen** nicht explizit verwendet wird.  
@@ -107,7 +107,7 @@ resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:
   
  Beachten Sie, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.  
   
- Sie können das Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.  
+ Sie können das Projekt aus [Async Sample: Feinabstimmung der Anwendung](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -234,7 +234,7 @@ End Class
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Threading.Tasks.Task.WhenAny%2A>  
-- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Feinabstimmung der Async-Anwendung (Visual Basic))  
-- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
-- [Async Sample: Fine Tuning Your Application (Async-Beispiel: Feinabstimmung der Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- <xref:System.Threading.Tasks.Task.WhenAny%2A>
+- [Fine-Tuning Your Async Application (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) (Feinabstimmung der Async-Anwendung (Visual Basic))
+- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung Ihrer Anwendung)

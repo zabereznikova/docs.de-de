@@ -2,12 +2,12 @@
 title: XML Serializer Generator-Tool (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 2091c75f5aeef8b64ac9afa361f28dbe0b76530b
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: aa8671146c241c2867c373aacf3cd12f12aaeb1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058307"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743555"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML Serializer Generator-Tool (Sgen.exe)
 Der XML Serializer Generator erstellt eine XML-Serialisierungsassembly für die Typen in einer bestimmten Assembly, um die Startleistung von <xref:System.Xml.Serialization.XmlSerializer> beim Serialisieren oder Deserialisieren von Objekten der angegebenen Typen zu erhöhen.  
@@ -22,18 +22,18 @@ sgen [options]
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/ a\[Ssembly\]:**_Dateiname_|Generiert den Serialisierungscode für alle Typen, die in der durch *filename* angegebenen Assembly oder ausführbaren Datei enthalten sind. Nur ein Dateiname kann bereitgestellt werden. Bei Wiederholung dieses Arguments wird der letzte Dateiname verwendet.|  
-|**/ c\[Ompiler\]:**_Optionen_|Gibt die Optionen für die Übergabe an den C#-Compiler an. Bei Übergabe an den Compiler werden alle csc.exe-Optionen unterstützt. Damit kann angegeben werden, dass die Assembly signiert werden soll. Außerdem kann die Schlüsseldatei angegeben werden.|  
-|**/ d\[Ebug\]**|Generiert ein Image, das mit einem Debugger verwendet werden kann.|  
-|**/ f\[ustritt\]**|Erzwingt das Überschreiben einer vorhandenen, gleichnamigen Assembly. Der Standardwert ist **FALSE**.|  
+|**/a\[ssembly\]:**_filename_|Generiert den Serialisierungscode für alle Typen, die in der durch *filename* angegebenen Assembly oder ausführbaren Datei enthalten sind. Nur ein Dateiname kann bereitgestellt werden. Bei Wiederholung dieses Arguments wird der letzte Dateiname verwendet.|  
+|**/c\[ompiler\]:**_options_|Gibt die Optionen für die Übergabe an den C#-Compiler an. Bei Übergabe an den Compiler werden alle csc.exe-Optionen unterstützt. Damit kann angegeben werden, dass die Assembly signiert werden soll. Außerdem kann die Schlüsseldatei angegeben werden.|  
+|**/d\[ebug\]**|Generiert ein Image, das mit einem Debugger verwendet werden kann.|  
+|**/f\[orce\]**|Erzwingt das Überschreiben einer vorhandenen, gleichnamigen Assembly. Der Standardwert ist **FALSE**.|  
 |**/help oder /?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
 |**/ k\[eibehalten\]**|Unterdrückt das Löschen der generierten Quelldateien und anderer temporärer Dateien, nachdem sie in die Serialisierungsassembly kompiliert wurden. Damit kann ermittelt werden, ob das Tool für einen bestimmten Typ Serialisierungscode generiert.|  
-|**/ n\[Ologo\]**|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
+|**/n\[ologo\]**|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |**/ o\[Ut\]:**_Pfad_|Gibt das Verzeichnis an, in das die generierte Assembly gespeichert werden soll. **Hinweis**:  Der Name der generierten Assembly besteht aus dem Namen der Eingabeassembly plus "xmlSerializers.dll".|  
-|**/ p\[Roxytypes\]**|Generiert Serialisierungscode nur für die Proxytypen des XML-Webdiensts.|  
-|**/ r\[Eference\]:**_Assemblyfiles_|Gibt die Assemblys an, auf die von den Typen, die XML-Serialisierung erfordern, verwiesen wird. Akzeptiert mehrere Assemblydateien, die durch Kommas getrennt werden.|  
-|**/ s\[Ilent\]**|Unterdrückt die Anzeige von Erfolgsmeldungen.|  
-|**/ t /\[yp\]:**_Typ_|Generiert Serialisierungscode nur für den angegebenen Typ.|  
+|**/p\[roxytypes\]**|Generiert Serialisierungscode nur für die Proxytypen des XML-Webdiensts.|  
+|**/r\[eference\]:**_assemblyfiles_|Gibt die Assemblys an, auf die von den Typen, die XML-Serialisierung erfordern, verwiesen wird. Akzeptiert mehrere Assemblydateien, die durch Kommas getrennt werden.|  
+|**/s\[ilent\]**|Unterdrückt die Anzeige von Erfolgsmeldungen.|  
+|**/t\[ype\]:**_type_|Generiert Serialisierungscode nur für den angegebenen Typ.|  
 |**/ v\[Erbose\]**|Zeigt eine ausführliche Ausgabe für das Debuggen an. Listet Typen aus der Zielassembly auf, die nicht mit <xref:System.Xml.Serialization.XmlSerializer> serialisiert werden können.|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
@@ -57,6 +57,6 @@ sgen Data.dll
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Extras](../../../docs/framework/tools/index.md)  
-- [Übersicht über XML-Webdienste](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+- [Extras](../../../docs/framework/tools/index.md)
+- [Übersicht über XML-Webdienste](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

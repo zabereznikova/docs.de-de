@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eae17c2dbccb4296d7542c60a30b341f1ad67f88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1194ae12710ce9ef6d5f53e584493eec0541f3fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429565"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569715"
 ---
 # <a name="getidentityauthority-function"></a>GetIdentityAuthority-Funktion
-Ruft einen Zeiger auf eine [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) Instanz, die Schlüssel für Codeobjekte verwaltet.  
+Ruft einen Zeiger auf ein [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) -Instanz, die Schlüssel für die Codeobjekte verwaltet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,12 +40,12 @@ HRESULT GetIdentityAuthority (
  [out] Das zurückgegebene `IIdentityAuthority` Zeiger.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Isolation.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IIdentityAuthority-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)  
- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [IIdentityAuthority-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

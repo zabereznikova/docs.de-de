@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: c5c9b665b78c7c63c55292e38cc96ee8b2962a61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e776d3d08ff7d63b094a71e6990d87ea454a4428
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638430"
 ---
 # <a name="declaration-expected"></a>Deklaration erwartet.
-Eine nicht deklarierte-Anweisung, z. B. eine Zuordnung oder Loop-Anweisung befindet sich außerhalb einer Prozedur. Nur Deklarationen sind externe Prozeduren zulässig.  
+Eine nicht deklarierte-Anweisung, wie z. B. eine Zuweisung oder Schleifenanweisung, findet jede Prozedur ab. Nur Deklarationen sind externe Prozeduren zulässig.  
   
- Alternativ können Sie ein Programmierelement wurde ohne deklariert ein Deklarationsschlüsselwort wie z. B. `Dim` oder `Const`.  
+ Sie können auch ein Programmierelement wird deklariert ohne Deklarationsschlüsselwort wie z. B. `Dim` oder `Const`.  
   
  **Fehler-ID:** BC30188  
   
@@ -25,10 +25,10 @@ Eine nicht deklarierte-Anweisung, z. B. eine Zuordnung oder Loop-Anweisung befin
   
 -   Verschieben Sie die nicht deklarierte Anweisung in den Text einer Prozedur an.  
   
--   Beginnen Sie die Deklaration mit einem entsprechenden Deklarationsschlüsselwort.  
+-   Beginnen Sie mit der Deklaration mit einer entsprechenden Deklarationsschlüsselwort.  
   
 -   Stellen Sie sicher, dass ein Deklarationsschlüsselwort nicht falsch geschrieben ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>Siehe auch
+- [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)

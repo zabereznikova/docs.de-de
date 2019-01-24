@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79b7684d6dad5ffecaf9c359ac004d7ecc982f0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc01cf25000d4b5f3fa44ae96cb885b7cb67365b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437442"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737123"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool-Schnittstelle
-Stellt Methoden für den Zugriff auf den Threadpool bereit.  
+Stellt Methoden für den Zugriff auf den Threadpool.  
   
 > [!NOTE]
 >  Diese Schnittstelle ist nur zur internen Verwendung reserviert.  
@@ -46,13 +46,13 @@ Stellt Methoden für den Zugriff auf den Threadpool bereit.
 |[CorGetAvailableThreads-Methode](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|Nur für die interne Verwendung vorgesehen.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

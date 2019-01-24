@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: edb45c9ceefb242e5a72e8602dc93ecd39b2df09
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23a4c1aa25f269121dc602bbeb6b864b589318be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745959"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap-Enumeration
 Gibt Optionen für PInvoke-Aufrufs.  
@@ -70,32 +70,32 @@ typedef enum  CorPinvokeMap {
 |`pmNoMangle`|Verwenden Sie alle Elementnamen, wie angegeben.|  
 |`pmCharSetMask`|Reserviert.|  
 |`pmCharSetNotSpec`|Reserviert.|  
-|`pmCharSetAnsi`|Marshallen von Zeichenfolgen als Zeichenfolgen mit mehreren Byte-Zeichen.|  
-|`pmCharSetUnicode`|Marshallen von Zeichenfolgen als Unicode-2-Byte-Zeichen.|  
-|`pmCharSetAuto`|Zeichenfolgen für DSA zielbetriebsystem entsprechend automatisch zu marshallen. Der Standardwert ist Unicode unter Windows NT, Windows 2000, Windows XP und Windows Server 2003-Produktfamilie. Die Standardeinstellung ist, d. h. ANSI unter Windows 98 und Windows Me.|  
+|`pmCharSetAnsi`|Marshallt Zeichenfolgen als Zeichenfolgen mit mehreren Byte-Zeichen.|  
+|`pmCharSetUnicode`|Marshallt Zeichenfolgen als 2-Byte-Unicode-Zeichen.|  
+|`pmCharSetAuto`|Automatisch zu marshallen Zeichenfolgen entsprechend dem Zielbetriebssystem bereit. Der Standardwert ist Unicode unter Windows NT, Windows 2000, Windows XP und Windows Server 2003-Familie; Der Standardwert ist ANSI unter Windows 98 und Windows Me enthalten.|  
 |`pmBestFitUseAssem`|Reserviert.|  
-|`pmBestFitEnabled`|Führen Sie die Zuordnung mit ähnlichen Zeichen von Unicode-Zeichen, die eine genaue Übereinstimmung in der ANSI-Zeichensatz hat.|  
-|`pmBestFitDisabled`|Führen Sie keine Zuordnung mit ähnlichen Zeichen von Unicode-Zeichen. In diesem Fall werden alle zuzuordnenden Zeichen durch ersetzt ein "?".|  
+|`pmBestFitEnabled`|Führen Sie die Zuordnung mit ähnlichen Zeichen von Unicode-Zeichen, die eine genaue Übereinstimmung in die ANSI-Zeichensatz ausgewählt hat.|  
+|`pmBestFitDisabled`|Führen Sie die Zuordnung mit ähnlichen Zeichen von Unicode-Zeichen nicht zu. In diesem Fall alle nicht zuzuordnenden Zeichen ersetzt werden durch ein "?".|  
 |`pmBestFitMask`|Reserviert.|  
 |`pmThrowOnUnmappableCharUseAssem`|Reserviert.|  
-|`pmThrowOnUnmappableCharEnabled`|Eine Ausnahme stößt der Interop-Marshaller ein Zeichen nicht zugeordnet werden kann.|  
-|`pmThrowOnUnmappableCharDisabled`|Stößt der Interop-Marshaller ein zuzuordnendes Zeichen keine Ausnahme ausgelöst.|  
+|`pmThrowOnUnmappableCharEnabled`|Wenn es sich bei der Interop-Marshaller ein nicht zuzuordnendes Zeichen findet, wird eine Ausnahme ausgelöst.|  
+|`pmThrowOnUnmappableCharDisabled`|Keine Ausnahme ausgelöst, wenn der interop-Marshaller ein nicht zuzuordnendes Zeichen erkannt wird.|  
 |`pmThrowOnUnmappableCharMask`|Reserviert|  
-|`pmSupportsLastError`|Ermöglicht es dem aufgerufenen zum Aufrufen von Win32 `SetLastError` Funktion vor der Rückgabe von die attributierte Methode.|  
+|`pmSupportsLastError`|Ermöglicht es dem aufgerufenen die Win32-Aufrufen `SetLastError` vor dem Zurückgeben aus die attributierte Methode.|  
 |`pmCallConvMask`|Reserviert|  
-|`pmCallConvWinapi`|Verwenden Sie die Standardplattform Aufrufkonvention. Unter Windows ist die Standardeinstellung `StdCall` und auf Windows CE .NET ist `Cdecl`.|  
-|`pmCallConvCdecl`|Verwenden der `Cdecl` Aufrufkonvention. In diesem Fall löscht der Aufrufer den Stapel. Aufrufende von Funktionen mit dadurch `varargs` (d. h. Funktionen, die eine Variable Anzahl von Parametern akzeptieren).|  
-|`pmCallConvStdcall`|Verwenden der `StdCall` Aufrufkonvention. In diesem Fall entleert der aufgerufene den Stapel. Dies ist die Standardkonvention für das Aufrufen von nicht verwalteten Funktionen mit Plattformaufruf.|  
-|`pmCallConvThiscall`|Verwenden der `ThisCall` Aufrufkonvention. Der erste Parameter in diesem Fall ist die `this` Zeiger und in ECX-Register gespeichert ist. Andere Parameter werden auf dem Stapel abgelegt. Die `ThisCall` -Aufrufkonvention wird zum Aufrufen von Methoden für Klassen, die aus einer nicht verwalteten DLL exportiert.|  
+|`pmCallConvWinapi`|Verwenden Sie die Standardkonvention für Plattformaufrufe. Für Windows ist der Standardwert beispielsweise `StdCall` und auf Windows CE .NET ist `Cdecl`.|  
+|`pmCallConvCdecl`|Verwenden der `Cdecl` Aufrufkonvention. Der Aufrufer entleert in diesem Fall den Stapel. Dies aktiviert Aufruffunktionen mit `varargs` (d. h. Funktionen, die eine Variable Anzahl von Parametern akzeptieren).|  
+|`pmCallConvStdcall`|Verwenden der `StdCall` Aufrufkonvention. In diesem Fall entleert der aufgerufene den Stapel. Dies ist die Standardkonvention für das aufrufende nicht verwaltete Funktionen mit Plattformaufruf.|  
+|`pmCallConvThiscall`|Verwenden der `ThisCall` Aufrufkonvention. Der erste Parameter in diesem Fall ist die `this` Zeiger und wird im Register ECX gespeichert. Andere Parameter sind auf dem Stapel abgelegt. Die `ThisCall` Aufrufkonvention wird zum Aufrufen von Methoden für Klassen, die aus einer nicht verwalteten DLL exportiert wurden.|  
 |`pmCallConvFastcall`|Reserviert.|  
 |`pmMaxValue`|Reserviert.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Animieren eines Objekts entlang eines Pfads (PointAnimation)'
+title: 'Vorgehensweise: Animieren eines Objekts entlang eines Pfads (Punktanimation)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: d6dc79cd7a15aef2a4168fffb293c5e1f33cde08
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 521caa4411f1c0137769e7c221176b5693934ad0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259781"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610525"
 ---
-# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Gewusst wie: Animieren eines Objekts entlang eines Pfads (PointAnimation)
+# <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Vorgehensweise: Animieren eines Objekts entlang eines Pfads (Punktanimation)
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.Animation.PointAnimationUsingPath> zu animierende Objekt eine <xref:System.Windows.Point> entlang eines gekrümmten Pfads.  
   
 ## <a name="example"></a>Beispiel  
@@ -30,7 +30,7 @@ Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.Animation.Po
   
  Die Codeversion des vorhergehenden Beispiels verwendet eine <xref:System.Windows.Media.Animation.Storyboard> zum Animieren der <xref:System.Windows.Media.EllipseGeometry>, auch wenn nur eine einzige Animation angewendet wurde. Ein <xref:System.Windows.Media.Animation.Storyboard> ist häufig der einfachste Weg, mehrere Animationen anzuwenden, da diese vom selben gesteuert werden können <xref:System.Windows.Media.Animation.Storyboard>. Eine einfachere Möglichkeit, eine einzelne Animation auf eine Eigenschaft anwenden, wenn Sie Code verwenden jedoch ist die Verwendung der <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> Methode. Ein Beispiel finden Sie unter [Vorgehensweise: Animieren einer Eigenschaft ohne Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch
+- [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

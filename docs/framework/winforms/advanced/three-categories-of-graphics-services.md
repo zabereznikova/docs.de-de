@@ -8,38 +8,38 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: 5621a2c0bba2e922e62006feba9ca0381181c780
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c2ddc76faaf0c15cc56345c607678985b9c4656
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576381"
 ---
 # <a name="three-categories-of-graphics-services"></a>Drei Kategorien von Grafikdiensten
-Die Angebote Grafiken in Windows Forms werden in den folgenden drei allgemeine Kategorien fallen:  
+Die Grafik-Angebote im Windows Forms fallen in die folgenden drei Kategorien:  
   
--   Zweidimensionale (2D) Vektorgrafik  
+-   Vektorgrafiken für zweidimensionale (2D)  
   
--   Aufspielen eines Abbilds  
+-   Abbilderstellung  
   
 -   Typografie  
   
-## <a name="2-d-vector-graphics"></a>2D-Vektorgrafiken  
- Zweidimensionale Vektorgrafik handelt es sich um primitive Typen; z. B. Linien, Kurven und Formen; werden durch Gruppen von Punkten auf einem Koordinatensystem angegeben. Z. B. eine gerade Linie durch zwei Endpunkte angegeben wird, und ein Rechteck wird durch einen Punkt, erteilen den Speicherort der oberen linken Ecke und ein Paar von Zahlen, wobei die Breite und Höhe angegeben. Durch ein Array von Punkten, die durch gerade Linien verbunden sind, wird ein einfacher Pfad angegeben. Ein Bézier-Spline ist eine anspruchsvolle Kurve, die durch vier Steuerpunkte angegeben.  
+## <a name="2-d-vector-graphics"></a>2-D-Vektorgrafiken  
+ Zweidimensionale Vektorgrafik sind primitive Typen. wie Linien, Kurven und Abbildungen; durch Gruppen von Datenpunkten in einem Koordinatensystem angegeben werden. Z. B. eine gerade Linie von den beiden Endpunkten angegeben ist, und ein Rechteck wird durch einen Punkt, sodass den Speicherort der oberen linken Ecke und ein Paar von Zahlen, sodass die Breite und Höhe angegeben. Durch ein Array von Punkten, die durch gerade Linien miteinander verbunden sind, wird ein einfacher Pfad angegeben. Eine Béziersplinekurve ist eine anspruchsvolle Kurve, die durch vier Kontrollpunkten angegeben.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] enthält Klassen und Strukturen, die Informationen über die Grundelemente speichern, Klassen, in denen Informationen wie die primitiven gezeichnet werden gespeichert und Klassen, die den Zeichenvorgang ausführen. Z. B. die <xref:System.Drawing.Rectangle> -Struktur speichert die Position und Größe eines Rechtecks; die <xref:System.Drawing.Pen> Klasse speichert Informationen über die Linienfarbe und Linienstärke Linienart aus, und die <xref:System.Drawing.Graphics> -Klasse verfügt über Methoden zum Zeichnen von Linien, Rechtecke, Pfaden, und andere Zahlen. Es gibt auch mehrere <xref:System.Drawing.Brush> Klassen, die Informationen speichern geschlossene Formen und Pfade mit Farben oder Mustern ausgefüllt.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] enthält Klassen und Strukturen, die Informationen zu den primitiven selbst zu speichern, Klassen, in denen Informationen wie die primitiven gezeichnet werden gespeichert und Klassen, die den Zeichenvorgang ausführen. Z. B. die <xref:System.Drawing.Rectangle> -Struktur speichert die Position und Größe eines Rechtecks; die <xref:System.Drawing.Pen> Klasse speichert Informationen über die Linienfarbe und Linienstärke Linienart aus, und die <xref:System.Drawing.Graphics> -Klasse verfügt über Methoden zum Zeichnen von Linien, Rechtecke, Pfaden und andere Abbildungen. Es gibt auch mehrere <xref:System.Drawing.Brush> Klassen, die Informationen speichern geschlossene Formen und Pfade mit Farben oder Mustern gefüllt.  
   
- Ein Vektor-Image eine Sequenz von Graphics-Befehlen ist, können Sie in einer Metadatei aufzeichnen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Stellt die <xref:System.Drawing.Imaging.Metafile> Klasse zum Aufzeichnen, anzeigen und Speichern von Metadateien. Mit der <xref:System.Drawing.Imaging.MetafileHeader> und <xref:System.Drawing.Imaging.MetaHeader> Klassen, überprüfen Sie die Daten in einem Metadateiheader gespeichert.  
+ Ein Vektor-Image, das eine Sequenz von Graphics-Befehlen ist, können in einer Metadatei aufgezeichnet werden. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Stellt die <xref:System.Drawing.Imaging.Metafile> -Klasse für aufzeichnen, anzeigen und Speichern von Metadateien. Mit der <xref:System.Drawing.Imaging.MetafileHeader> und <xref:System.Drawing.Imaging.MetaHeader> Klassen, können Sie die Daten in einem Metafile-Header überprüfen.  
   
-## <a name="imaging"></a>Aufspielen eines Abbilds  
- Bestimmte Arten von Bildern sind schwer oder gar nicht mit den Techniken von Vektorgrafiken anzuzeigen. Beispielsweise sind die Bilder auf Symbolleisten-Schaltflächen und Bilder, die als Symbole angezeigt werden nur schwer als Auflistungen von Linien und Kurven. Ein hochauflösende digitale Foto des voll besetzten Fußballstadions ist auch schwieriger zu mit Vektor Techniken zu erstellen. Bilder dieses Typs werden als Bitmaps, gespeichert, die Arrays von Zahlen sind, die die Farben der einzelnen Punkte auf dem Bildschirm darstellen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Stellt die <xref:System.Drawing.Bitmap> Klasse zum Anzeigen, bearbeiten und Speichern von Bitmaps.  
+## <a name="imaging"></a>Abbilderstellung  
+ Bestimmte Arten von Bildern sind schwierig bis unmöglich, die mit den Methoden von Vektorgrafiken anzuzeigen. Beispielsweise sind die Bilder auf Symbolleisten-Schaltflächen und Bilder, die als Symbole angezeigt werden nur schwer festzumachen, als Auflistungen von Linien und Kurven. Eine mit hoher Auflösung, digitale Fotografie von einem hart umkämpften Baseball Stadion ist sogar noch schwieriger, um mit Vektor-Techniken zu erstellen. Images dieses Typs werden als Bitmaps gespeichert, die Arrays von Zahlen sind, die die Farben der einzelnen Punkte auf dem Bildschirm darstellen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Stellt die <xref:System.Drawing.Bitmap> anzeigen, bearbeiten und Speichern von Bitmaps-Klasse.  
   
 ## <a name="typography"></a>Typografie  
- Typografie ist die Anzeige von Text in einer Vielzahl von Schriftarten, Größen und Formate. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet umfassende Unterstützung für diese komplexe Aufgabe. Eine der neuen Funktionen in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] wird Subpixel Antialiasing (Antialiasing), die Text enthält gerendert auf einem Bildschirm LCD eine glattere Darstellung.  
+ Typografie ist die Anzeige von Text in einer Vielzahl von Schriftarten,-Größen und -Stilen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] bietet umfangreiche Unterstützung für diese komplexen Aufgaben. Eines der neuen Features in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Subpixel-Antialiasing, wodurch der Text gerendert wird auf einem LCD-Bildschirm weicher dargestellt.  
   
- Windows Forms bietet außerdem die Option zum Zeichnen von Text mit [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Funktionen in seiner <xref:System.Windows.Forms.TextRenderer> Klasse.  
+ Darüber hinaus bietet Windows Forms für die Option zum Zeichnen von Text mit [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Funktionen in der <xref:System.Windows.Forms.TextRenderer> Klasse.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Grafiken](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
- [Verwalteter Code in GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
- [Verwenden von verwalteten Grafikklassen](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Grafiken](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
+- [Verwalteter Code in GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)
+- [Verwenden von verwalteten Grafikklassen](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)

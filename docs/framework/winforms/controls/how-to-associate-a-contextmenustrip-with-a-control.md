@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Zuordnen eines ContextMenuStrip zu einem Steuerelement'
+title: 'Vorgehensweise: Ordnen Sie ein ContextMenuStrip zu einem Steuerelement zu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], associating with controls
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
-ms.openlocfilehash: 7776a5e5ed6e650aad82f7863a7fa1748006b3bc
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: e7bc66aa556738274d9bcba8e0db4e72f731cb57
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122620"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685138"
 ---
-# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>Gewusst wie: Zuordnen eines ContextMenuStrip zu einem Steuerelement
+# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>Vorgehensweise: Ordnen Sie ein ContextMenuStrip zu einem Steuerelement zu
 Nachdem Sie Ihre Steuerelemente und Kontextmenüs erstellt haben, verwenden Sie die folgenden Verfahren, um ein bestimmtes Kontextmenü anzuzeigen, wenn der Benutzer mit der rechten Maustaste auf das Steuerelement klickt. In diesen Verfahren wird eine <xref:System.Windows.Forms.ContextMenuStrip>-Instanz einem Windows Form-Objekt und einem <xref:System.Windows.Forms.ToolStrip>-Steuerelement zugeordnet.  
   
 ### <a name="to-associate-a-contextmenustrip-with-a-windows-form"></a>So ordnen Sie eine ContextMenuStrip-Instanz einem Windows Form-Objekt zu  
@@ -39,11 +39,11 @@ Nachdem Sie Ihre Steuerelemente und Kontextmenüs erstellt haben, verwenden Sie 
   
 -   Verweise auf die Assemblys "System", "System.Data", "System.Drawing" und "System.Windows.Forms".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Siehe auch [Gewusst wie: Kompilieren und Ausführen eines vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Kompilieren und Ausführen einer vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ContextMenuStrip>  
- <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>  
- <xref:System.Windows.Forms.ToolStrip>  
- [Vorgehensweise: Hinzufügen von Menüelementen zu einem ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)  
- [ContextMenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ContextMenuStrip>
+- <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>
+- <xref:System.Windows.Forms.ToolStrip>
+- [Vorgehensweise: Hinzufügen von Menüelementen zu einem ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)
+- [ContextMenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)

@@ -2,12 +2,12 @@
 title: Sicherheitsvalidierung
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 16a12a031845a8898c32ac43bbb2e2a44fd7c7ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190917"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699765"
 ---
 # <a name="security-validation"></a>Sicherheitsvalidierung
 Dieses Beispiel veranschaulicht die Verwendung eines benutzerdefinierten Verhaltens, mit dem Dienste auf einem Computer überprüft werden, um sicherzustellen, dass sie bestimmte Kriterien erfüllen. In diesem Beispiel werden Dienste vom benutzerdefinierten Verhalten überprüft, indem jeder Endpunkt im Dienst gescannt und dahingehend überprüft wird, ob er sichere Bindungselemente enthält. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -77,7 +77,7 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 >  Beim Hinzufügen von Verhalten zu allen Diensten wird empfohlen, vorher die Datei Machine.config zu sichern.  
   
- Führen Sie nun den Client aus dem Verzeichnis client\bin dieses Beispiels aus. Eine Ausnahme tritt auf, mit der folgenden Meldung: "der angeforderte Dienst"http://localhost/servicemodelsamples/service.svc' konnte nicht aktiviert werden. " Dies ist zu erwarten, da das Endpunktvalidierungsverhalten einen Endpunkt als unsicher betrachtet und verhindert, dass der Dienst startet. Außerdem löst das Verhalten eine interne Ausnahme aus, die beschreibt, welcher Endpunkt unsicher ist, und schreibt eine Nachricht für die Ereignisanzeige unter der Quelle "System.ServiceModel 4.0.0.0" und der Kategorie "WebHost". Es ist auch möglich, für den Dienst aus diesem Beispiel die Ablaufverfolgung einzuschalten. Dadurch wird dem Benutzer ermöglicht, die vom Endpunktvalidierungsverhalten ausgelösten Ausnahmen anzuzeigen, indem er die resultierenden Dienstablaufverfolgungen mit dem Service Trace Viewer öffnet.  
+ Führen Sie nun den Client aus dem Verzeichnis client\bin dieses Beispiels aus. Eine Ausnahme tritt auf, mit der folgenden Meldung: "Der angeforderte Dienst"http://localhost/servicemodelsamples/service.svc' konnte nicht aktiviert werden. " Dies ist zu erwarten, da das Endpunktvalidierungsverhalten einen Endpunkt als unsicher betrachtet und verhindert, dass der Dienst startet. Außerdem löst das Verhalten eine interne Ausnahme aus, die beschreibt, welcher Endpunkt unsicher ist, und schreibt eine Nachricht für die Ereignisanzeige unter der Quelle "System.ServiceModel 4.0.0.0" und der Kategorie "WebHost". Es ist auch möglich, für den Dienst aus diesem Beispiel die Ablaufverfolgung einzuschalten. Dadurch wird dem Benutzer ermöglicht, die vom Endpunktvalidierungsverhalten ausgelösten Ausnahmen anzuzeigen, indem er die resultierenden Dienstablaufverfolgungen mit dem Service Trace Viewer öffnet.  
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>So zeigen Sie Ausnahmemeldungen von fehlgeschlagenen Endpunktvalidierungen in der Ereignisanzeige an  
   
@@ -106,5 +106,5 @@ public void Validate(ServiceDescription serviceDescription,
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
-## <a name="see-also"></a>Siehe auch  
- [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Siehe auch
+- [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

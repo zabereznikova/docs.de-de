@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b031fc35a4687a8535e3cb5e9ef2a53bab9fe376
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 52136426be9e8f220d8eb5fc93659f588f007498
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625103"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout-Methode
 Ruft Layoutinformationen für die Klasse ab, auf die vom angegebenen TypeDef-Token verwiesen wird.  
@@ -45,7 +45,7 @@ HRESULT GetClassLayout  (
  [in] Die TypeDef-Token für die Klasse mit dem Layout zurückgegeben werden soll.  
   
  `pdwPackSize`  
- [out] Einer der Werte 1, 2, 4, 8 oder 16, Komprimierungsgröße der-Klasse.  
+ [out] Einer der Werte 1, 2, 4, 8 oder 16 ist, werden die Paketgröße der Klasse darstellt.  
   
  `rFieldOffset`  
  [out] Ein Array von [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) Werte.  
@@ -54,20 +54,20 @@ HRESULT GetClassLayout  (
  [in] Die maximale Größe des `rFieldOffset`-Arrays.  
   
  `pcFieldOffset`  
- [out] Die Anzahl der Elemente im zurückgegebenen `rFieldOffset`.  
+ [out] Die Anzahl der Elemente, die in zurückgegebenen `rFieldOffset`.  
   
  `pulClassSize`  
- [out] Die Größe in Byte der dargestellte Klasse `td`.  
+ [out] Die Größe in Bytes der durch dargestellten Klasse `td`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

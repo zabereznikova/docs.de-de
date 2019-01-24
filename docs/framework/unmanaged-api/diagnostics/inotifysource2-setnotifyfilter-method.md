@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7a2391527a7912c5def593438a71ed006955e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2c46f2636d397f7f71cf3c119b177f721c6fc091
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620944"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter-Methode
 Weist einen Benachrichtigungsfilter für die Verwendung mit dieser Quelle.  
@@ -42,7 +42,7 @@ HRESULT SetNotifyFilter
  [in] Eine bitweise Kombination der [NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md) Enumerationswerte, die Rückrufe für die Debugger-API zu identifizieren.  
   
  `in_pUserThreadFilter`  
- [in] Ein Zeiger auf eine [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) Struktur, die Threads für die Debugger-API bezeichnet.  
+ [in] Ein Zeiger auf eine [USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md) -Struktur, die Threads für die Debugger-API identifiziert.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist.  
@@ -50,7 +50,7 @@ HRESULT SetNotifyFilter
 ## <a name="requirements"></a>Anforderungen  
  **Header:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>Siehe auch  
- [INotifySource2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)  
- [INotifySink2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [INotifySource2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [INotifySink2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

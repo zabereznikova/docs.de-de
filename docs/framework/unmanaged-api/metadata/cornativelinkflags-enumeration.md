@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98a83a64a692955d5627e891e7fb3a3ef6f53476
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf0fdb1e46bfbd17505e255d539547a00eb4764c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694554"
 ---
 # <a name="cornativelinkflags-enumeration"></a>CorNativeLinkFlags-Enumeration
 Stellt Flagwerte bereit, die beim Verknüpfen von nativem Code vom Linker verwendet werden.  
@@ -48,13 +48,13 @@ typedef enum
 |`nlfMaxValue`|Nicht verwendet.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

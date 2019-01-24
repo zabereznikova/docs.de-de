@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9babd5e50166be2c2d1b7bc32a5fc11d1ad8ba9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 454391eb7a5f1821438837c8fb7e5f8bad6b5723
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086409"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651655"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName-Methode
 Ruft ein Array von Assemblys mit dem angegebenen `szAssemblyName` Parameters unter Verwendung von die Standardregeln, die von der common Language Runtime (CLR) zum Auflösen von verweisen.  
@@ -76,14 +76,14 @@ HRESULT FindAssembliesByName (
  `FindAssembliesByName` wird häufig durch einen Compiler verwendet, die versucht, eine referenzierte Assembly zum Zeitpunkt der Kompilierung zu finden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [So sucht Common Language Runtime nach Assemblys](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [So sucht Common Language Runtime nach Assemblys](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

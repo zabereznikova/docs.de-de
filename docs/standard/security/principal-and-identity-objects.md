@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c7616a3187cd5fa28f231dffd15b0bfeea4b7f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604400"
 ---
 # <a name="principal-and-identity-objects"></a>Principal- und Identitätsobjekte
 Verwalteter Code kann ermitteln, die Identität oder Rolle eines Prinzipals über ein <xref:System.Security.Principal.IPrincipal> -Objekt, das enthält einen Verweis auf ein <xref:System.Security.Principal.IIdentity> Objekt. Es kann hilfreich sein, Identity- und Principal-Objekte (Identitäts- und Prinzipalobjekte) mit vertrauten Konzepten wie Benutzer- und Gruppenkonten zu vergleichen. In den meisten Netzwerkumgebungen entsprechen Benutzerkonten Personen oder Programmen und Gruppenkonten bestimmten Kategorien von Benutzern sowie den Rechten, die diese haben. Ähnlich entsprechen Identitätsobjekte in .NET Framework Benutzern, während Rollen Mitgliedschaften und Sicherheitskontexten entsprechen. In .NET Framework kapselt das Prinzipalobjekt sowohl ein Identitätsobjekt als auch eine Rolle. .NET Framework-Anwendungen gewähren dem Prinzipal gemäß seiner Identität oder, dies ist häufiger der Fall, gemäß seiner Rolle bestimmte Rechte.  
@@ -44,9 +44,9 @@ Verwalteter Code kann ermitteln, die Identität oder Rolle eines Prinzipals übe
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Gewusst wie: Erstellen eines WindowsPrincipal-Objekts](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
-- [Gewusst wie: Erstellen von GenericPrincipal-Objekten und GenericIdentity-Objekten](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
-- [Ersetzen eines Principalobjekts](../../../docs/standard/security/replacing-a-principal-object.md)  
-- [Wechseln und Zurücksetzen der Identität](../../../docs/standard/security/impersonating-and-reverting.md)  
-- [Rollenbasierte Sicherheit](../../../docs/standard/security/role-based-security.md)  
+- [Vorgehensweise: Erstellen eines WindowsPrincipal-Objekts](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)
+- [Vorgehensweise: Erstellen von GenericPrincipal-Objekten und GenericIdentity-Objekten](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)
+- [Ersetzen eines Principalobjekts](../../../docs/standard/security/replacing-a-principal-object.md)
+- [Wechseln und Zurücksetzen der Identität](../../../docs/standard/security/impersonating-and-reverting.md)
+- [Rollenbasierte Sicherheit](../../../docs/standard/security/role-based-security.md)
 - [Schlüsselbegriffe der Sicherheit](../../../docs/standard/security/key-security-concepts.md)

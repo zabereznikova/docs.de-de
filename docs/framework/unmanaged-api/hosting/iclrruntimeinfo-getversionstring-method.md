@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b18323644220ffdce1caad966b8a0c2a7baddde2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dfbf543deb98661ab9116e9dfcb6cb534d3ff13b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608348"
 ---
 # <a name="iclrruntimeinfogetversionstring-method"></a>ICLRRuntimeInfo::GetVersionString-Methode
-Ruft die common Language Runtime (CLR)-Versionsinformationen zugeordneten ab einer angegebenen [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) Schnittstelle.  
+Ruft zur common Language Runtime (CLR) Version verknüpft ist, mit einer angegebenen [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) Schnittstelle.  
   
  Diese Methode ersetzt die folgenden Funktionen:  
   
@@ -43,15 +43,15 @@ HRESULT GetVersionString(
   
 #### <a name="parameters"></a>Parameter  
  `pwzBuffer`  
- [out] Die Version des .NET Framework-Kompilierung im Format "V*ein*. *B*[. *X*] ". *Ein*, *B*, und *X* sind Dezimalzahlen, die die Hauptversion, die Nebenversion und die Nummer des Builds entsprechen. *X* ist optional. Wenn *X* ist nicht vorhanden ist, kein Punkt vorhanden ist.  
+ [out] Die Version des .NET Framework-Kompilierung im Format "V*ein*. *B*[. *X*] ". *Ein*, *B*, und *X* sind Dezimalzahlen, die die Hauptversion, Nebenversion und die Nummer des Builds entsprechen. *X* ist optional. Wenn *X* ist nicht vorhanden ist, nicht mit einem Punkt vorhanden ist.  
   
 > [!NOTE]
->  Dieser Parameter muss mit den Namen des Verzeichnisses für die .NET Framework-Version unter C:\Windows\Microsoft.NET\Framework übereinstimmen.  
+>  Dieser Parameter muss den Verzeichnisnamen für die .NET Framework-Version übereinstimmen, wie er unter C:\Windows\Microsoft.NET\Framework angezeigt wird.  
   
- Beispielwerte sind "Version 1.0.3705", "v1.1.4322", "v2.0.50727" und "v4. 0. *x*", wobei *x* richtet sich nach die Buildnummer installiert. Beachten Sie, dass das Präfix "V" erforderlich ist.  
+ Beispielwerte sind "Version 1.0.3705", "v1.1.4322", "v2.0.50727" und "v4. 0. *x*", wobei *x* hängt von der Nummer des Builds installiert. Beachten Sie, dass das Präfix "V" erforderlich ist.  
   
  `pchBuffer`  
- [in, out] Gibt die Größe des `pwzBuffer` um Pufferüberläufe zu vermeiden. Wenn `pwzBuffer` ist `null`, `pchBuffer` gibt die erforderliche Größe des `pwzBuffer` um die Vorabbelegung zu ermöglichen.  
+ [in, out] Gibt die Größe des `pwzBuffer` um Pufferüberläufe zu vermeiden. Wenn `pwzBuffer` ist `null`, `pchBuffer` gibt zurück, die erforderliche Größe des `pwzBuffer` um die Vorabbelegung zu ermöglichen.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -62,16 +62,16 @@ HRESULT GetVersionString(
 |E_POINTER|`pwzBuffer` oder `pchBuffer` ist NULL.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRRuntimeInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [In .NET Framework 4 und 4.5 hinzugefügte CLR-Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRRuntimeInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [In .NET Framework 4 und 4.5 hinzugefügte CLR-Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

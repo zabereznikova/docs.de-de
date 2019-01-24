@@ -2,18 +2,18 @@
 title: '&lt;udpAnnoucementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: 8a6c874d7d2930b969f2cc9778534aa99eab78f5
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ab0e786ec4b21f25682c52fb7609d24e901f6eac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582434"
 ---
 # <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
 Dieses Konfigurationselement definiert einen Standardendpunkt, der von Diensten verwendet wird, um Ankündigungsnachrichten über eine UDP-Bindung zu senden. Es weist einen festen Vertrag auf und unterstützt zwei Suchversionen. Außerdem weist er eine feste UDP-Bindung und einen Standardadresswert gemäß WS-Discovery-Spezifikationen (WS-Discovery Version April 2005 oder Version 1.1) auf. Sie können die Multicastadresse angeben, die zum Senden und Empfangen der Ankündigungsnachrichten verwendet werden soll.  
   
 \<system.ServiceModel>  
-\<StandardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,13 +46,13 @@ Dieses Konfigurationselement definiert einen Standardendpunkt, der von Diensten 
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<UdpTransportSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Eine Auflistung von Einstellungen, mit denen Sie die UDP-Transporteinstellungen für den UDP-Endpunkt konfigurieren können.|  
+|[\<udpTransportSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Eine Auflistung von Einstellungen, mit denen Sie die UDP-Transporteinstellungen für den UDP-Endpunkt konfigurieren können.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<StandardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Eine Auflistung von Standardendpunkten, bei denen es sich um vordefinierte Endpunkte handelt, für die eine oder mehrere Eigenschaften (Adresse, Bindung, Vertrag) fest vorgegeben sind.|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Eine Auflistung von Standardendpunkten, bei denen es sich um vordefinierte Endpunkte handelt, für die eine oder mehrere Eigenschaften (Adresse, Bindung, Vertrag) fest vorgegeben sind.|  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Client veranschaulicht, der einen UDP-Multicasttransport mit Standardmulticastadresse auf Ankündigungen überwacht.  
@@ -79,5 +79,5 @@ Dieses Konfigurationselement definiert einen Standardendpunkt, der von Diensten 
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>

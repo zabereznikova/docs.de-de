@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 5926216135429d235593aaf77ee0d29b0bacd8fa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1d2621b43428fa249fb6ebb820885ebe0a2221f9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577257"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Vorgehensweise: Erstellen eines Sicherheitstokendiensts
 Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation definierte Protokoll. Dieses Protokoll definiert Meldungsformate und Meldungsaustauschmuster zum Herausgeben, Erneuern, Abbrechen und Überprüfen von Sicherheitstoken. Ein angegebener Sicherheitstokendienst stellt eine oder mehrere dieser Fähigkeiten zur Verfügung. Dieses Thema behandelt das am häufigsten verwendete Szenario: das Implementieren der Tokenausstellung.  
@@ -123,12 +123,12 @@ Ein Sicherheitstokendienst implementiert das in der WS-Trust-Spezifikation defin
 ## <a name="example"></a>Beispiel  
  Vollständiger Code für einen Security token Service, finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IdentityModel.Tokens.SigningCredentials>  
- <xref:System.IdentityModel.Tokens.SecurityKey>  
- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>  
- <xref:System.IdentityModel.Tokens.SamlSecurityToken>  
- <xref:System.IdentityModel.Tokens.SamlAssertion>  
- <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>  
- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>  
- [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.IdentityModel.Tokens.SigningCredentials>
+- <xref:System.IdentityModel.Tokens.SecurityKey>
+- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>
+- <xref:System.IdentityModel.Tokens.SamlSecurityToken>
+- <xref:System.IdentityModel.Tokens.SamlAssertion>
+- <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>
+- <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>
+- [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md)

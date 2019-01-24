@@ -1,20 +1,20 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF REST-Programmiermodells akzeptiert'
+title: 'Vorgehensweise: Erstellen Sie einen Dienst, akzeptiert der beliebige Daten mithilfe des WCF REST-Programmiermodells'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494162"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666997"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF REST-Programmiermodells akzeptiert
-Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienstvorgang zurückgeben muss, dass die Daten in einem Format ByWCF nicht unterstützt. In diesem Thema wird erläutert, mit den WCF REST-Programmiermodell zum Erstellen eines Diensts, das beliebige Daten empfängt.  
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Vorgehensweise: Erstellen Sie einen Dienst, akzeptiert der beliebige Daten mithilfe des WCF REST-Programmiermodells
+Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienstvorgang zurückgeben muss, Daten in einem Format ByWCF werden nicht unterstützt. In diesem Thema wird erläutert, mit den WCF REST-Programmiermodell zum Erstellen eines Diensts, das beliebige Daten empfangen.  
   
 ### <a name="to-implement-the-service-contract"></a>So implementieren Sie den Dienstvertrag  
   
-1.  Definieren Sie den Dienstvertrag. Der Vorgang, der die beliebigen Daten empfängt, muss über einen Parameter des Typs <xref:System.IO.Stream> verfügen. Außerdem muss es sich bei diesem Parameter um den einzigen Parameter handeln, der im Text der Anforderung übergeben wird. Der in diesem Beispiel beschriebene Vorgang nimmt auch einen Dateinamenparameter an. Dieser Parameter wird innerhalb der URL der Anforderung übergeben. Geben Sie zum Festlegen, dass ein Parameter innerhalb der URL übergeben wird, im <xref:System.UriTemplate> eine <xref:System.ServiceModel.Web.WebInvokeAttribute> an. In diesem Fall verwendeten URI aufrufen, wird diese Methode in "UploadFile/Beliebiger_dateiname" endet. Der Teil von "{Filename}" für die URI-Vorlage gibt an, dass der dateinameparameter für den Vorgang innerhalb des URI zum Aufrufen des Vorgangs übergeben wird.  
+1.  Definieren Sie den Dienstvertrag. Der Vorgang, der die beliebigen Daten empfängt, muss über einen Parameter des Typs <xref:System.IO.Stream> verfügen. Außerdem muss es sich bei diesem Parameter um den einzigen Parameter handeln, der im Text der Anforderung übergeben wird. Der in diesem Beispiel beschriebene Vorgang nimmt auch einen Dateinamenparameter an. Dieser Parameter wird innerhalb der URL der Anforderung übergeben. Geben Sie zum Festlegen, dass ein Parameter innerhalb der URL übergeben wird, im <xref:System.UriTemplate> eine <xref:System.ServiceModel.Web.WebInvokeAttribute> an. In diesem Fall verwendete URI aufrufen, beendet diese Methode in "UploadFile/Beliebiger_dateiname". Der Teil von "{Filename}" für die URI-Vorlage gibt an, dass der dateinameparameter für den Vorgang, in dem URI übergeben wird, um den Vorgang aufzurufen.  
   
     ```csharp  
      [ServiceContract]  
@@ -193,7 +193,7 @@ namespace ReceiveRawData
   
 -   Verweisen Sie beim Kompilieren des Codes auf "System.ServiceModel.dll" und "System.ServiceModel.Web.dll".  
   
-## <a name="see-also"></a>Siehe auch  
- [UriTemplate und UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [UriTemplate und UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
+- [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

@@ -2,12 +2,12 @@
 title: Zusammenstellen verschachtelter Entity SQL-Abfragen
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 8a0efa672a57a9255af2d90af1725b34be75600e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 87a9877b7c865fbe393d91365d03bab8f56377c1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528155"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589477"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Zusammenstellen verschachtelter Entity SQL-Abfragen
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist eine umfangreiche funktionale Sprache. Der Baustein von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist ein Ausdruck. Im Unterschied zu konventionellem SQL ist [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist nicht auf tabellarische Resultsets beschränkt: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt komplexe Ausdrücke, die Literale, Parameter oder geschachtelte Ausdrücke aufweisen können. Ein Wert im Ausdruck kann parametrisiert sein bestehend aus einem anderen Ausdruck.  
@@ -46,7 +46,7 @@ UNION ALL
 FROM … );  
 ```  
   
- Im folgende Beispiel wird veranschaulicht, wie Ausdrücke in ordnungsgemäß geschachtelt [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [wie: Sortieren Sie die Union der beiden Abfragen](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
+ Im folgende Beispiel wird veranschaulicht, wie Ausdrücke in ordnungsgemäß geschachtelt [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Vorgehensweise: Sortieren Sie die Union von zwei Abfragen](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313).  
   
 ## <a name="nested-queries-in-projection"></a>Geschachtelte Abfragen in Projektion  
  Geschachtelte Abfragen in der Projektklausel könnten auf dem Server in Abfragen des kartesischen Produkts übersetzt werden. Bei einigen Backendservern, einschließlich SLQ Server, kann hierdurch die TempDB-Tabelle sehr groß werden, was die Serverleistung beeinträchtigen kann.  
@@ -75,5 +75,5 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

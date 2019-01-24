@@ -9,24 +9,24 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: f595a214e807c2657ef5affd9e52fdf49aa24837
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 858adfca39d292dad4083b019e3d64e85f21017e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556054"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605798"
 ---
 # <a name="geometries"></a>Geometrien
-<xref:System.Windows.Media.Geometry> ist eine vielseitige Klasse, die zum Rendern verwendet [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] Grafiken, Treffertests für Objekte und Clipping Regionen definieren  
+<xref:System.Windows.Media.Geometry> ist eine vielseitige Klasse, die zum Rendern verwendet [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] Grafiken, Treffertests für Objekte, und definieren Ausschneidebereiche  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Pfadmarkupsyntax](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
  [Übersicht über Geometrien](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
  [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Brushes>  
- <xref:System.Windows.Shapes.Shape>  
- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Brushes>
+- <xref:System.Windows.Shapes.Shape>
+- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

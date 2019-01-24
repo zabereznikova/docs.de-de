@@ -1,13 +1,13 @@
 ---
-title: Formatvorlagenteil ein WordprocessingML "document2"
+title: Absatzformatteil ein WordprocessingML-Document2
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 58767c51595a5a2c4c262df133c393dc700e0b10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55ad04ba516482613d1abd86ce5feee007c0b98d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645953"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722789"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Absatzformatteil eines WordprocessingML-Dokuments
 In diesem Thema wird ein Beispiel für den Formatvorlagenteil des Office Open XML-WordprocessingML-Dokuments gezeigt.  
@@ -140,5 +140,5 @@ In diesem Thema wird ein Beispiel für den Formatvorlagenteil des Office Open XM
 </w:styles>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Details eines Office Open XML-WordprocessingML-Dokumenten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>Siehe auch
+- [Details eines Office Open XML-WordprocessingML-Dokumenten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

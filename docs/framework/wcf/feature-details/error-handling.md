@@ -2,12 +2,12 @@
 title: Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452848"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695555"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
 ## <a name="error-handling-in-windows-communication-foundation"></a>Fehlerbehandlung in Windows Communication Foundation  
@@ -67,5 +67,5 @@ ms.locfileid: "49452848"
   
  Ein Typkonvertierungs-Verteilungsfehler kann wie viele andere Typen von Verteilungsfehlern durch das Installieren eines Fehlerhandlers überprüft werden. Der "IErrorHandler"-Erweiterungspunkt wird aufgerufen, um auf Dienstebene aufgetretene Ausnahmen zu behandeln. Dort kann die an den Aufrufer zurückzusendende Antwort ausgewählt werden, und es lassen sich benutzerdefinierte Aufgaben ausführen und Berichte erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einfache WCF-Programmierung](../basic-wcf-programming.md)
+## <a name="see-also"></a>Siehe auch
+- [Einfache WCF-Programmierung](../basic-wcf-programming.md)

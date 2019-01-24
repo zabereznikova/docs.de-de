@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms'
+title: 'Vorgehensweise: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 70884051ba440c5d0f9d282b7edf189c8f52807e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e1f8f7fa1f3f351314ac1d454d591f46654d8f81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643597"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Gewusst wie: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Vorgehensweise: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms
 Wenn Daten in einer Windows Forms dargestellt <xref:System.Windows.Forms.CheckedListBox> -Steuerelement, Sie können entweder Durchlaufen der Auflistung gespeichert werden, der <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> -Eigenschaft, oder dem Durchlaufen der Liste mithilfe der <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Methode, um zu bestimmen, welche Elemente aktiviert sind. Die <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Methode akzeptiert eine Indexnummer des Elements als Argument und gibt `true` oder `false`. Im Gegensatz zum Ergebnis, was zu erwarten die <xref:System.Windows.Forms.ListBox.SelectedItems%2A> und <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> Eigenschaften sind nicht bestimmen, welche Elemente aktiviert sind; sie bestimmen, welche Elemente hervorgehoben werden.  
   
 ### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement  
@@ -111,5 +111,5 @@ Wenn Daten in einer Windows Forms dargestellt <xref:System.Windows.Forms.Checked
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Windows Forms-Steuerelemente zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Siehe auch
+- [Windows Forms-Steuerelemente zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

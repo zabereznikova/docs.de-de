@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fb7b800bca1957c8c324ddb9c11cb4eabb49cd24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192299"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628486"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod-Funktion
 Löscht die angegebene Methode aus der Definition einer CIM-Klasse.
@@ -66,11 +66,11 @@ Diese Funktion umschließt einen Aufruf der [IWbemClassObject::DeleteMethod](/wi
 Löschen der Methode wird nicht unterstützt, für die [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Zeigern, die auf das CIM-Instanzen verweisen.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

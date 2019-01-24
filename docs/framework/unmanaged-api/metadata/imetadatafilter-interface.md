@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad77aba02c819749794534ca2ecd478661bc363f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0e1975a5063217299ddbcdce6f625d5a1285d5b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444980"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642554"
 ---
 # <a name="imetadatafilter-interface"></a>IMetaDataFilter-Schnittstelle
 Stellt Methoden zum Markieren und Filtern von Metadatentoken bereit, um wiederkehrende Aktionen zu vermeiden, die bereits ausgeführt wurden.  
@@ -35,13 +35,13 @@ Stellt Methoden zum Markieren und Filtern von Metadatentoken bereit, um wiederke
 |[UnmarkAll-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Entfernt die Markierungen für die Verarbeitung von allen Token im aktuellen Metadatenbereich.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

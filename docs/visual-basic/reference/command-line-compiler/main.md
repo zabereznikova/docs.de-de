@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: eb9d38a7d6f74e5d8636f862c663c0ba0990baa5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 355267331eda73ab4c32ec27dbba1d82d729420f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638781"
 ---
 # <a name="-main"></a>-main
 Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.  
@@ -52,8 +52,8 @@ Gibt die Klasse oder das Modul mit dem Speicherort der `Sub Main`-Prozedur an.
 vbc t2.vb t3.vb -main:Test2  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+## <a name="see-also"></a>Siehe auch
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 7f4a5fada6c2c17563796ae634ee742285551160
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e8aa8d66e667036f09bd5670e779f14fa9401450
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181484"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643805"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Internet: Ungesicherter Client und Dienst
 Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherten Windows Communication Foundation (WCF)-Client und Dienst.  
@@ -109,7 +109,7 @@ Die folgende Abbildung zeigt ein Beispiel für einen öffentlichen, ungesicherte
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Siehe auch
+- [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
+- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

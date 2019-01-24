@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 572930022d44e6f0882ee02ecb837404c409f720
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2c010208075f0f6cb0ad0e24e05984bf6dc15aa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653774"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain-Schnittstelle
 Stellt Informationen zu einer Anwendungsdomäne dar und bereit.  
@@ -34,7 +34,7 @@ Stellt Informationen zu einer Anwendungsdomäne dar und bereit.
 |[GetName-Methode](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Ruft den Namen der Anwendungsdomäne verwiesen wird, von diesem `ICorPublishAppDomain`.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorPub.idl, CorPub.h  
   
@@ -42,6 +42,6 @@ Stellt Informationen zu einer Anwendungsdomäne dar und bereit.
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [CorpubPublish-Co-Klasse](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [CorpubPublish-Co-Klasse](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

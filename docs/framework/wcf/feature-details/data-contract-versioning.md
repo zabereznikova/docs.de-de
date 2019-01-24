@@ -9,15 +9,15 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520197"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646918"
 ---
 # <a name="data-contract-versioning"></a>Datenvertragsversionsverwaltung
-Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die Datenverträge ändern, die die Dienste verwenden. Dieses Thema erklärt, wie man die Versionsverwaltung von Datenverträgen durchführt. In diesem Thema werden die Datenvertragsversionsmechanismen beschrieben. Eine vollständige Übersicht und normative versionsverwaltungsanleitung finden Sie unter [bewährte Methoden: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die Datenverträge ändern, die die Dienste verwenden. Dieses Thema erklärt, wie man die Versionsverwaltung von Datenverträgen durchführt. In diesem Thema werden die Datenvertragsversionsmechanismen beschrieben. Eine vollständige Übersicht und normative versionsverwaltungsanleitung finden Sie unter [Best Practices: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
 ## <a name="breaking-vs-nonbreaking-changes"></a>Breaking Changes gegenüber Non-breaking Changes  
  Änderungen an einem Datenvertrag können "breaking" oder "non-breaking" sein. Wird ein Datenvertrag auf eine "non-breaking"-Art geändert, kann eine Anwendung, die die ältere Version des Vertrags verwendet, mit einer Anwendung kommunizieren, die die neuere Version verwendet; und eine Anwendung, die die neuere Version des Vertrags verwendet, kann mit einer Anwendung kommunizieren, die die ältere Version verwendet. Andererseits verhindert ein "Breaking Change" die Kommunikation in eine oder beide Richtungen.  
@@ -115,17 +115,17 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
  Die meisten Sammlungsänderungen sind "non-breaking", da die meisten Sammlungstypen im Datenvertragsmodell gegeneinander austauschbar sind. Eine nicht angepasste Sammlung angepasst zu machen oder umgekehrt ist jedoch ein "Breaking Change". Außerdem ist die Änderung der Anpassungseinstellungen der Sammlung ein "Breaking Change", d. h. eine Änderung des Namens und Namespace ihres Datenvertrags und eine Wiederholung des Elementnamens, des Schlüsselelementnamens und des Wertelementnamens. Weitere Informationen zur sammlungsanpassung finden Sie unter [Sammlungstypen in Datenverträgen](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
 Natürlich ist die Änderung des Datenvertrags der Inhalte einer Sammlung (z. B. die Änderung von einer Liste ganzer Zahlen zu einer Liste von Zeichenfolgen) ein "Breaking Change".  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.SerializationException>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- [Versionstolerante Serialisierungsrückrufe](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)  
- [Bewährte Methoden: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.SerializationException>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- [Versionstolerante Serialisierungsrückrufe](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [Bewährte Methoden: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ff378602fc7338263ef49aee6802d2138bab9d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9ff4f86105fd1dfbd12360c01046492f3a6dbdcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589893"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject-Methode
-Ordnet eine neue Objektinstanz und ruft die Methode des angegebenen Konstruktors.  
+Reserviert eine neue Objektinstanz, und der angegebene Konstruktor-Methode aufgerufen.  
   
- Diese Methode ist veraltet in .NET Framework, Version 2.0. Verwendung [ICorDebugEval2:: NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) stattdessen.  
+ Diese Methode ist in .NET Framework, Version 2.0, veraltet. Verwendung [ICorDebugEval2:: NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) stattdessen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,7 +41,7 @@ HRESULT NewObject (
   
 #### <a name="parameters"></a>Parameter  
  `pConstructor`  
- [in] Der Konstruktor aufgerufen werden.  
+ [in] Der Konstruktor aufgerufen werden soll.  
   
  `nArgs`  
  [in] Die Größe des `ppArgs`-Arrays.  
@@ -50,7 +50,7 @@ HRESULT NewObject (
  [in] Ein Array von ICorDebugValue-Objekten, von denen jeder ein Argument an den Konstruktor zu übergebenden darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -58,5 +58,5 @@ HRESULT NewObject (
   
  **.NET Framework-Versionen:** 1.1, 1.0  
   
-## <a name="see-also"></a>Siehe auch  
- [NewParameterizedObject-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)
+## <a name="see-also"></a>Siehe auch
+- [NewParameterizedObject-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)

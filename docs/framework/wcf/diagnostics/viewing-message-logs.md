@@ -2,12 +2,12 @@
 title: Anzeigen von Nachrichtenprotokollen
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 5d007efc9667ee5380b69349d6a960554ab0d4fe
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f368d4f8f2a214feaa24b732513a99edf2e28296
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603575"
 ---
 # <a name="viewing-message-logs"></a>Anzeigen von Nachrichtenprotokollen
 In diesem Thema wird beschrieben, wie Sie Nachrichtenprotokolle anzeigen können.  
@@ -60,7 +60,7 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
   
 -   Die Codierung wird für die Transformation in UTF-8 aktiviert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+## <a name="see-also"></a>Siehe auch
+- [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c25304bef4d240eedea749bb2829595056f9b74d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68cac76a83164e24c0810c9d19fa845c8580b1d2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449246"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637236"
 ---
 # <a name="imetadataimportgetcustomattributebyname-method"></a>IMetaDataImport::GetCustomAttributeByName-Methode
-Ruft das benutzerdefinierte Attribut mit dem angegebenen Namen und Besitzer ab.  
+Ruft das benutzerdefinierte Attribut, mit dem angegebenen Namen und Besitzer ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ HRESULT GetCustomAttributeByName (
   
 #### <a name="parameters"></a>Parameter  
  `tkObj`  
- [in] Ein Metadatentoken, das das Objekt, das das benutzerdefinierte Attribut besitzt darstellt.  
+ [in] Ein Metadatentoken, das das Objekt, das Besitzer des benutzerdefinierten Attributs darstellt.  
   
  `szName`  
  [in] Der Name des benutzerdefinierten Attributs.  
@@ -52,17 +52,17 @@ HRESULT GetCustomAttributeByName (
  [out] Die Größe in Bytes der Daten im zurückgegebenen *`ppData`.  
   
 ## <a name="remarks"></a>Hinweise  
- Es ist zulässig, mehrere benutzerdefinierte Attribute für den gleichen Besitzer zu definieren; Sie können auch die denselben Namen haben. Allerdings `GetCustomAttributeByName` gibt nur eine Instanz zurück. (`GetCustomAttributeByName` gibt die erste Instanz, die gefunden wird.) Um alle Instanzen eines benutzerdefinierten Attributs zu suchen, rufen die [IMetaDataImport:: EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) Methode.  
+ Es ist zulässig, mehrere benutzerdefinierte Attribute für den gleichen Besitzer zu definieren; Sie können auch den gleichen Namen haben. Allerdings `GetCustomAttributeByName` gibt nur eine Instanz zurück. (`GetCustomAttributeByName` gibt die erste Instanz, die es auftritt.) Um alle Instanzen eines benutzerdefinierten Attributs zu suchen, rufen die [IMetaDataImport:: EnumCustomAttributes](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md) Methode.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -2,12 +2,12 @@
 title: Mathematische Funktionen
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d8d766cb1416a9a07476175364fe568d81fd9b25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143674"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652266"
 ---
 # <a name="mathematical-functions"></a>Mathematische Funktionen
 
@@ -45,7 +45,7 @@ Ein `Double`.
 
 `SqlServer.ACOS(.9)`
 
-## <a name="asinexpression"></a>ASIN(Expression)
+## <a name="asinexpression"></a>ASIN(expression)
 
 Gibt den Arkussinuswert des angegebenen Ausdrucks zurück.
 
@@ -77,7 +77,7 @@ Ein `Double`.
 
 `SqlServer.ATAN(9)`
 
-## <a name="atn2expression-expression"></a>ATN2(Expression, Expression)
+## <a name="atn2expression-expression"></a>ATN2(expression, expression)
 
 Gibt den Winkel im Bogenmaß (Radiant) zurück, dessen Tangens zwischen den beiden angegebenen numerischen Ausdrücken liegt.
 
@@ -93,7 +93,7 @@ Ein `Double`.
 
 `SqlServer.ATN2(9, 8)`
  
-## <a name="ceilingexpression"></a>CEILING(Expression)
+## <a name="ceilingexpression"></a>CEILING(expression)
 
 Konvertiert den angegebenen Ausdruck zur kleinsten Ganzzahl, die größer als oder gleich dem Ausdruck ist.
 
@@ -205,7 +205,7 @@ Ein `Double`.
 
 `SqlServer.LOG(100)`
 
-## <a name="log10expression"></a>LOG10(Expression)
+## <a name="log10expression"></a>LOG10(expression)
 
 Gibt den Logarithmus zur Basis 10 des angegebenen `Double`-Ausdrucks zurück. 
 
@@ -221,7 +221,7 @@ Ein `Double`.
 
 `SqlServer.LOG10(100)`
 
-## <a name="pi"></a>PI)
+## <a name="pi"></a>PI()
 
 Gibt den konstanten Wert von Pi als `Double`-Typ zurück. 
 
@@ -233,7 +233,7 @@ Ein `Double`.
 
 `SqlServer.PI()`
 
-## <a name="powernumericexpression-powerexpression"></a>POWER (Numeric_expression, Power_expression)
+## <a name="powernumericexpression-powerexpression"></a>POWER(numeric_expression, power_expression)
 
 Berechnet den Wert eines angegebenen Ausdrucks in einer angegebenen Potenz.
 
@@ -252,7 +252,7 @@ Der Wert des angegebenen `numeric_expression` zur angegebenen `power_expression`
 
 `SqlServer.POWER(2,7)`
 
-## <a name="radiansexpression"></a>RADIANS(Expression)
+## <a name="radiansexpression"></a>RADIANS(expression)
 
 Konvertiert Grad- in Radiantwerte. 
 
@@ -284,7 +284,7 @@ Ein zufälliger `Double`-Wert zwischen 0 (null) und 1.
 
 `SqlServer.RAND()`
   
-## <a name="roundnumericexpression-lengthfunction"></a>Round(numeric_expression, Length[,Function])
+## <a name="roundnumericexpression-lengthfunction"></a>ROUND(numeric_expression, length[,function])
 
 Gibt einen numerischen Ausdruck zurück, der auf die angegebene Länge oder Genauigkeit gerundet wurde. 
 
@@ -320,7 +320,7 @@ Ein `Int32`, `Int64`, `Double`, oder `Decimal`.
 
 `SqlServer.SIGN(-10)`
 
-## <a name="sinexpression"></a>SIN(Expression)
+## <a name="sinexpression"></a>SIN(expression)
 
 Berechnet den trigonometrischen Sinus des angegebenen Winkels im Bogenmaß, und gibt einen `Double`-Ausdruck zurück. 
 
@@ -334,7 +334,7 @@ Ein `Double`.
 
 **Beispiel** `SqlServer.SIN(20)`
 
-## <a name="sqrtexpression"></a>Sqrt(Expression)
+## <a name="sqrtexpression"></a>SQRT(expression)
 
 Gibt die Quadratwurzel des angegebenen Ausdrucks zurück. 
 
@@ -364,7 +364,7 @@ Ein `Double`.
 
 `SqlServer.SQUARE(25)`
 
-## <a name="tanexpression"></a>TAN(Expression)
+## <a name="tanexpression"></a>TAN(expression)
 
 Berechnet den Tangens eines angegebenen Ausdrucks.
 
@@ -383,9 +383,9 @@ Berechnet den Tangens eines angegebenen Ausdrucks.
 ## <a name="see-also"></a>Siehe auch
 
 Weitere Informationen zu den von SqlClient unterstützten mathematischen Funktionen finden Sie in der Dokumentation für die SQL Server-Version, die im SqlClient-Anbietermanifest angegeben wurde:  
-  
-**SQLServer 2005:** [Mathematische Funktionen (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+
+**SQL Server 2005:** [Mathematische Funktionen (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
 **SQL Server 2008:** [Mathematische Funktionen (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
 **SQLServer 2012 und höher:** [Mathematische Funktionen (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
- [SqlClient für Entity Framework-Funktionen](sqlclient-for-ef-functions.md)
+- [SqlClient für Entity Framework-Funktionen](sqlclient-for-ef-functions.md)

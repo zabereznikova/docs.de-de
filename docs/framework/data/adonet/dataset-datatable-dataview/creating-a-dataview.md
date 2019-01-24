@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
-ms.openlocfilehash: b88df66ef2e065d1db8d4033eb1fb0e47ebdd189
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 0625d1005e6519b395ffd7ff0fb0c35583117875
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108714"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623052"
 ---
 # <a name="creating-a-dataview"></a>Erstellen eines "DataViews"
 Es gibt zwei Möglichkeiten zum Erstellen einer <xref:System.Data.DataView>: Können Sie die **DataView** -Konstruktor verwenden, oder Sie erstellen einen Verweis auf die <xref:System.Data.DataTable.DefaultView%2A> Eigenschaft der <xref:System.Data.DataTable>. Die **DataView** Konstruktor kann leer sein oder akzeptiert entweder eine **DataTable** als einzelnes Argument, oder ein **DataTable** zusammen mit Filterkriterien, Sortierkriterien und eine Zeile State-Filter. Weitere Informationen zu zusätzlichen Argumenten, die für die Verwendung mit der **DataView**, finden Sie unter [sortieren und Filtern von Daten](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
@@ -45,10 +45,10 @@ Dim custDV As DataView = custDS.Tables("Customers").DefaultView
 DataView custDV = custDS.Tables["Customers"].DefaultView;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Data.DataTable>  
- <xref:System.Data.DataView>  
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [Sortieren und Filtern von Daten](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Data.DataTable>
+- <xref:System.Data.DataView>
+- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [Sortieren und Filtern von Daten](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Sichere Clientanwendungen
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: a3b035d59a39ca20f6a81fbd40d39069a7cc43c2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4233ce4edc788f3129043c5a1ef1acb26dd1d899
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599612"
 ---
 # <a name="secure-client-applications"></a>Sichere Clientanwendungen
 Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werden müssen, dass keine Daten verloren gehen oder das System nicht anderweitig gefährdet wird. Durch das Erstellen sicherer Benutzeroberflächen lassen sich viele Probleme vermeiden, weil Angreifer damit bereits blockiert werden, bevor sie überhaupt auf Daten oder Systemressourcen zugreifen können.  
@@ -65,9 +65,9 @@ Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werd
 |[Sicherheit beim Remoting](https://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|Beschreibt die Authentifizierung und Verschlüsselung und enthält darüber hinaus weitere Sicherheitsthemen im Zusammenhang mit Remoting.|  
 |[Remoting Überlegungen zu Sicherheit und](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Beschreibt Sicherheitsprobleme mit geschützten Objekten und dem anwendungsdomänenübergreifenden Arbeiten.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Empfehlungen für Strategien für den Datenzugriff](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
- [Sichern von Anwendungen](/visualstudio/ide/securing-applications)  
- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Empfehlungen für Strategien für den Datenzugriff](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Sichern von Anwendungen](/visualstudio/ide/securing-applications)
+- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

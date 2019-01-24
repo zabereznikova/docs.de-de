@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 76be426049489bb58e50878822c03fa5cd5cca8e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911645"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731520"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Aufrufen einer Eigenschaft oder Methode mit einem Zeichenfolgennamen (Visual Basic)
 In den meisten Fällen können Sie ermitteln die Eigenschaften und Methoden eines Objekts zur Entwurfszeit und Schreiben von Code, damit sie verarbeitet. Jedoch in einigen Fällen Sie möglicherweise nicht über Eigenschaften und Methoden eines Objekts im Voraus kennen, oder die Flexibilität, Benutzer, geben Sie Eigenschaften oder Methoden zur Laufzeit ausführen kann auch sinnvoll sein.  
@@ -27,7 +27,7 @@ In den meisten Fällen können Sie ermitteln die Eigenschaften und Methoden eine
   
  Die `CallByName` -Funktion können Sie eine Zeichenfolge zu verwenden, um eine Eigenschaft oder Methode zur Laufzeit anzugeben. Die Signatur für die `CallByName` Funktion sieht wie folgt aus:  
   
- *Ergebnis* = `CallByName`(*Objekt*, *Prozedurname*, *CallType*, *Argumente*())  
+ *Result* = `CallByName`(*Object*, *ProcedureName*, *CallType*, *Arguments*())  
   
  Das erste Argument, *Objekt*, erhält den Namen des Objekts, auf die reagiert werden soll. Die *Prozedurname* Argument akzeptiert eine Zeichenfolge, die den Namen der aufzurufenden Methode oder Eigenschaft Prozedur enthält. Die *CallType* Argument akzeptiert eine Konstante, die den Typ des aufzurufenden Prozedur darstellt: eine Methode (`Microsoft.VisualBasic.CallType.Method`), eine Eigenschaft zu lesen (`Microsoft.VisualBasic.CallType.Get`), oder eine Eigenschaft festzulegen (`Microsoft.VisualBasic.CallType.Set`). Die *Argumente* -Argument, das optional ist, nimmt ein Array vom Typ `Object` , die keine Argumente an die Prozedur enthält.  
   
@@ -46,6 +46,6 @@ In den meisten Fällen können Sie ermitteln die Eigenschaften und Methoden eine
 > [!NOTE]
 >  Während der `CallByName` Funktion kann in einigen Fällen nützlich sein, müssen Sie die Zweckmäßigkeit mit Auswirkungen auf die Leistung abwägen – mit `CallByName` ist etwas langsamer als ein spät gebundenen Aufruf zum Aufrufen einer Prozedur. Wenn Sie eine Funktion aufrufen, die wiederholt, z. B. aufgerufen wird, wie in einer Schleife, `CallByName` kann eine schwerwiegende Auswirkungen auf die Leistung haben.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>  
- [Bestimmen des Objekttyps](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
+- [Bestimmen des Objekttyps](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)

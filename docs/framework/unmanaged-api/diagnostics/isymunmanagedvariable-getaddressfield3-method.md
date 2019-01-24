@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd474c7f149b8eff542b674c2ba6527b6a0cbcb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c2695fb6fcd0f4bba3576f2331c80961e9a444d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649179"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3-Methode
-Ruft das Feld für die dritte Adresse für diese Variable ab. Seiner Bedeutung hängt von der Art der Adresse ab.  
+Ruft das dritte Adressfeld für diese Variable ab. Die Bedeutung, hängt von der Art der Adresse ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ HRESULT GetAddressField3(
   
 #### <a name="parameters"></a>Parameter  
  `pRetVal`  
- [out] Ein Zeiger auf eine `ULONG32` , die Feld für die dritte Adresse empfängt.  
+ [out] Ein Zeiger auf eine `ULONG32` , das das dritte Adressfeld empfängt.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -44,8 +44,8 @@ HRESULT GetAddressField3(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedVariable-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)  
- [GetAddressField1-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)  
- [GetAddressField2-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)  
- [GetAddressKind-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedVariable-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+- [GetAddressField1-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield1-method.md)
+- [GetAddressField2-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddressfield2-method.md)
+- [GetAddressKind-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getaddresskind-method.md)

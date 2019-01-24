@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c2b590e7402bf29ffeb5bd14fc383edae41a04e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 057ee7a323a8a725ebf82ee9dbaea61a43c061ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674608"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate-Methode
 Beendet die `ICorDebug` Objekt.  
   
 > [!NOTE]
->  `Terminate` darf nicht aufgerufen werden, bis ein [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) Rückruf wurde für alle Prozesse gedebuggt wird empfangen.  
+>  `Terminate` sollte nicht aufgerufen werden, bis ein [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) Rückruf für alle im Debugmodus befindlichen Prozesse empfangen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +37,10 @@ HRESULT Terminate ();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- `Terminate` muss aufgerufen werden, wenn die `ICorDebug` Objekt nicht mehr benötigt werden.  
+ `Terminate` muss aufgerufen werden, wenn die `ICorDebug` Objekt ist nicht mehr benötigt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -48,5 +48,5 @@ HRESULT Terminate ();
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

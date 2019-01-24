@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)'
+title: 'Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,36 +21,36 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: 6bca3d62cb3e886ee08b9169d63d4c3a38247f3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b19c36018a0938b9b6546e5baefbbc3de1e5dd30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651017"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619914"
 ---
-# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Gewusst wie: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)
-Beim Schreiben von Code können Sie manchmal lange Anweisungen erstellen, die einer horizontalen Bildlauf im Code-Editor. Obwohl dies Einfluss auf die nicht der Code ausgeführt wird, es erschwert es für Sie oder andere Personen, den Code zu lesen, wie er auf dem Bildschirm angezeigt wird. In solchen Fällen sollten Sie erwägen, die lange Anweisung in mehrere Zeilen aufgeteilt.  
+# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code (Visual Basic)
+Wenn Ihr Code schreiben, können Sie gelegentlich lange Anweisungen erstellen, die erfordern, horizontalen Bildlauf im Code-Editor. Obwohl dies Einfluss auf die nicht Ihr Code ausgeführt wird, erleichtert es schwierig für Sie oder andere Personen Lesen des Codes, wie er auf dem Bildschirm angezeigt wird. In solchen Fällen sollten Sie erwägen, die lange Anweisung in mehrere Zeilen unterteilt.  
   
-### <a name="to-break-a-single-statement-into-multiple-lines"></a>Zu eine einzelne Anweisung mehrere Zeilen unterbrechen  
+### <a name="to-break-a-single-statement-into-multiple-lines"></a>Eine einzelne Anweisung in mehrere Zeilen aufteilen  
   
--   Verwenden Sie das Zeilenfortsetzungszeichen, also von einem Unterstrich (`_`), an dem Punkt, an dem Sie die Zeile umbrochen werden soll. Dem Unterstrich muss ein Leerzeichen direkt vorangestellt und ein Zeilenabschlusszeichen (Wagenrücklauf) direkt nachgestellt sein.  
+-   Verwenden Sie das Zeilenfortsetzungszeichen, wird ein Unterstrich (`_`), an dem Punkt, an dem die Zeile umbrochen werden soll. Dem Unterstrich muss ein Leerzeichen direkt vorangestellt und ein Zeilenabschlusszeichen (Wagenrücklauf) direkt nachgestellt sein.  
   
     > [!NOTE]
-    >  In einigen Fällen Wenn Sie das Zeilenfortsetzungszeichen weglassen wird Visual Basic-Compiler implizit die Anweisung in der nächsten Zeile des Codes fortgesetzt. Eine Liste der Syntaxelemente, die für die Sie das Zeilenfortsetzungszeichen weglassen können, finden Sie unter "Implizite Zeilenfortsetzung" in [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md).  
+    >  In einigen Fällen Wenn Sie das Zeilenfortsetzungszeichen weglassen wird Visual Basic-Compiler implizit die Anweisung in der nächsten Zeile des Codes fortgesetzt. Eine Liste der Syntaxelemente, die für die Sie dem Zeilenfortsetzungszeichen weglassen können, finden Sie unter "Implizite Zeilenfortsetzung" in [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md).  
   
      Im folgenden Beispiel wird die Anweisung in vier Zeilen mit Zeilenfortsetzungszeichen beendet alle jedoch die letzte Zeile aufgeteilt.  
   
      [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
   
-     Diese Sequenz können Code einfacher zu lesen, sowohl online als auch gedruckt.  
+     Verwenden diese Sequenz wird Ihr Code einfacher zu lesen, sowohl online als auch gedruckt.  
   
-     Das Zeilenfortsetzungszeichen muss das letzte Zeichen in einer Zeile sein. Sie dürfen nicht es mit etwas anderes in derselben Zeile folgen.  
+     Das Zeilenfortsetzungszeichen muss das letzte Zeichen in einer Zeile sein. Sie können nicht es mit anderen Elementen in der gleichen Zeile folgen.  
   
-     Einige Einschränkungen vorhanden, wo Sie das Zeilenfortsetzungszeichen verwenden können. Beispielsweise kann nicht in der Mitte ein Argumentname Verwendung. Sie können eine Argumentliste, mit dem Zeilenfortsetzungszeichen unterbrechen, während die individuellen Namen eines der Argumente müssen jedoch intakt bleiben.  
+     Einige Einschränkungen vorhanden, wo Sie das Zeilenfortsetzungszeichen verwenden können. Beispielsweise kann nicht in der Mitte ein Argumentname Verwendung. Sie können eine Argumentliste, mit dem Zeilenfortsetzungszeichen unterbrechen, aber die einzelnen Argumente müssen intakt bleiben.  
   
-     Einen Kommentar kann nicht fortgesetzt werden, mithilfe einer Zeilenfortsetzungszeichen. Der Compiler untersuchen nicht die Zeichen in einen Kommentar für eine besondere Bedeutung. Für einen mehrzeiligen Kommentar, wiederholen Sie das Kommentarsymbol (`'`) in jeder Zeile.  
+     Einen Kommentar kann nicht fortgesetzt werden, mithilfe einer Zeilenfortsetzungszeichen. Der Compiler überprüfen nicht Sie die Zeichen in einen Kommentar für eine besondere Bedeutung. Für einen mehrzeiligen Kommentar, wiederholen Sie das Kommentarsymbol (`'`) in jeder Zeile.  
   
- Obwohl jede Anweisung in einer eigenen Zeile platziert die empfohlene Methode ist, ermöglicht Visual Basic außerdem mehrere Anweisungen in der gleichen Zeile platziert.  
+ Obwohl jede Anweisung in einer eigenen Zeile platzieren die empfohlene Methode ist, ermöglicht Visual Basic auch Sie mehrere Anweisungen in der gleichen Zeile platzieren.  
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>Mehrere Anweisungen in der gleichen Zeile platzieren  
   
@@ -58,6 +58,6 @@ Beim Schreiben von Code können Sie manchmal lange Anweisungen erstellen, die ei
   
      [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)

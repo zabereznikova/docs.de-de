@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: 4717f7fe438f67a0d40c64724700f7ea78c4c887
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 120dec2511d9a17422c3db83bb0981b74f9eebdd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616107"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators"></a>Beispiele für die Abfrageausdruckssyntax: Aggregierungsoperatoren
 In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, und <xref:System.Linq.Enumerable.Sum%2A> Methoden zum Abfragen der [AdventureWorks Sales-Modell](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) mithilfe der Abfrageausdruckssyntax Abfragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
@@ -90,5 +90,5 @@ In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.Average%2
  [!code-csharp[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#sumgrouped_mq)]
  [!code-vb[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#sumgrouped_mq)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>Siehe auch
+- [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

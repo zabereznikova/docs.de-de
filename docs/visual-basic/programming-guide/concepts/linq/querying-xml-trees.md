@@ -2,12 +2,12 @@
 title: Querying XML Trees (Visual Basic) (Abfragen von XML-Strukturen (Visual Basic))
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-ms.openlocfilehash: e26ff23d5278bcaaeb2c8e26303c2380bbb1f1e9
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bb0024a6cfb93be5f1f78f33ad29c22f3400de48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253929"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671381"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>Querying XML Trees (Visual Basic) (Abfragen von XML-Strukturen (Visual Basic))
 Dieser Abschnitt enthält Beispiele für [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen.  
@@ -26,6 +26,6 @@ Dieser Abschnitt enthält Beispiele für [!INCLUDE[sqltecxlinq](~/includes/sqlte
 |[LINQ to XML für XPath-Benutzer (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)|Listet eine Reihe von XPath-Ausdrücken mit ihren [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Entsprechungen auf.|  
 |[Reine funktionale Transformationen von XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|Enthält ein kleines Lernprogramm zum Schreiben von Abfragen im Stil der funktionalen Programmierung.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmierhandbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmierhandbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

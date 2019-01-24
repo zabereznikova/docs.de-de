@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 34a10ac2-882c-4797-8369-f120e8e640c7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 103a37d7549d7ec18617b74c777506b3ad225a18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c084042aa79170d46d179928956bd39a0731ddb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714918"
 ---
 # <a name="icordebugprocess6-interface"></a>ICorDebugProcess6-Schnittstelle
-Erweitert logisch die ICorDebugProcess-Schnittstelle zum Aktivieren von Features wie z. B. der Decodierung verwalteter Debug-Ereignisse, die in systemeigenen Ausnahme-Debug-Ereignissen und Teilen virtueller Module codiert sind.  
+Erweitert logisch die ICorDebugProcess-Schnittstelle zum Aktivieren von Features wie z. B. der Decodierung verwalteter Debug-Ereignisse, die in systemeigenen Ausnahme-Debug-Ereignisse und das Teilen virtueller Module codiert sind.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -30,7 +31,7 @@ Erweitert logisch die ICorDebugProcess-Schnittstelle zum Aktivieren von Features
 >  Diese Schnittstelle ist nur in Verbindung mit .NET Native verfügbar. Bei dem Versuch, `QueryInterface` aufzurufen, um einen Schnittstellenzeiger abzurufen, wird für ICorDebug-Szenarien außerhalb von .NET Native `E_NOINTERFACE` zurückgegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -38,6 +39,6 @@ Erweitert logisch die ICorDebugProcess-Schnittstelle zum Aktivieren von Features
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

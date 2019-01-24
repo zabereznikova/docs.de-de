@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: 7b375c5a45998fc0bd06f7c075f23a30dd377295
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed406254435602dcd98bc97716cc88710a470ed1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679590"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Strukturen und andere Programmierelemente (Visual Basic)
-Sie können Strukturen in Verbindung mit Arrays, Objekten und Prozeduren sowie miteinander verwenden. Die Interaktionen verwenden dieselbe Syntax wie diese Elemente einzeln zu verwenden.  
+Sie können die Strukturen in Verbindung mit Arrays, Objekte und Verfahren sowie anderen verwenden. Die Interaktionen verwenden dieselbe Syntax wie diese Elemente einzeln verwenden.  
   
 > [!NOTE]
->  Sie können nicht der Struktur Elemente in der Strukturdeklaration initialisiert werden. Sie können nur auf Elemente in einer Variablen Werte zuweisen, die einen Strukturtyp deklariert wurde.  
+>  Alle Elemente der Struktur in der Strukturdeklaration kann nicht initialisiert werden. Sie können Werte nur für Elemente, die einer Variablen zuweisen, die auf einen Strukturtyp deklariert wurde.  
   
 ## <a name="structures-and-arrays"></a>Strukturen und Arrays  
- Eine Struktur kann es sich um ein Array als eine oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Eine Struktur kann es sich um ein Array als ein oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- Sie greifen die Werte eines Arrays in einer Struktur genau wie Sie eine Eigenschaft für ein Objekt zuzugreifen. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie Zugriff auf die Werte eines Arrays innerhalb einer Struktur, die gleiche Weise, die Sie Zugriff auf eine Eigenschaft eines Objekts. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -47,7 +47,7 @@ mySystem.diskDrives(0) = "1.44 MB"
 Dim allSystems(100) As systemInfo  
 ```  
   
- Sie gelten dieselben Regeln für den Zugriff auf die Komponenten dieser Daten-Architektur. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie gelten dieselben Regeln für den Zugriff auf die Komponenten dieser Data-Architektur. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -56,7 +56,7 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>Strukturen und Objekte  
- Eine Struktur kann es sich um ein Objekt als ein oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Eine Struktur kann es sich um ein Objekt als eine oder mehrere Elemente enthalten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Protected Structure userInput  
@@ -69,7 +69,7 @@ End Structure
  Verwenden Sie eine bestimmte Objektklasse in einer solchen Deklaration statt `Object`.  
   
 ## <a name="structures-and-procedures"></a>Strukturen und Prozeduren  
- Sie können eine Struktur wie eines Prozedurarguments übergeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie können eine Struktur als ein Prozedurargument übergeben. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- Das obige Beispiel übergibt die Struktur *Verweisübergabe*, dadurch wird die Prozedur seine Elemente zu ändern, sodass die Änderungen im aufrufenden Code wirksam. Wenn Sie eine Struktur für eine solche Änderung schützen möchten, als Wert übergeben.  
+ Im vorherige Beispiel übergibt der Struktur *als Verweis*, dadurch, dass die Prozedur die Elemente zu ändern, sodass die Änderungen im aufrufenden Code wirksam. Wenn Sie eine Struktur vor solchen Änderungen schützen möchten, können übergeben sie als Wert.  
   
- Sie können eine Struktur als auch Zurückgeben einer `Function` Prozedur. Dies wird anhand des folgenden Beispiels veranschaulicht.  
+ Sie können auch eine Struktur von Zurückgeben einer `Function` Verfahren. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -118,18 +118,18 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- Diese Technik können auch um eine Struktur, die in einem Modul in einer Struktur in einem anderen Modul definierten definierte zu kapseln.  
+ Sie können dieses Verfahren auch verwenden, zum Kapseln einer Struktur, die in einem Modul innerhalb einer Struktur, die definiert, die in einem anderen Modul definiert.  
   
  Strukturen können andere Strukturen in beliebiger Tiefe enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Strukturvariablen](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)  
- [Strukturen und Klassen](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>Siehe auch
+- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Vorgehensweise: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Strukturvariablen](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
+- [Strukturen und Klassen](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4302a73f9f077c2e1bf4f66c2b80ab025ae4a62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 157cc9f5f520f376c0c055ab49b116bc7961f421
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430582"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641069"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache-Schnittstelle
 Stellt den globalen Assemblycache für die Verwendung durch die Fusion-Technologie dar.  
@@ -31,18 +31,18 @@ Stellt den globalen Assemblycache für die Verwendung durch die Fusion-Technolog
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |[CreateAssemblyCacheItem-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|Ruft einen Verweis auf ein neues [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).|  
-|[CreateAssemblyScavenger-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|Reserviert für interne Verwendung durch die Fusion-Technologie.|  
+|[CreateAssemblyScavenger-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|Durch die Fusion-Technologie können Sie für die interne Verwendung reserviert.|  
 |[InstallAssembly-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|Wird die angegebene Assembly im globalen Assemblycache installiert.|  
 |[QueryAssemblyInfo-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|Ruft die angeforderten Daten über die angegebene Assembly ab.|  
-|[UninstallAssembly-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|Wird die angegebene Assembly aus dem globalen Assemblycache deinstalliert.|  
+|[UninstallAssembly-Methode](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|Deinstalliert die angegebene Assembly aus dem globalen Assemblycache.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Fusion.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [Globaler Assemblycache](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>Siehe auch
+- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Globaler Assemblycache](../../../../docs/framework/app-domains/gac.md)

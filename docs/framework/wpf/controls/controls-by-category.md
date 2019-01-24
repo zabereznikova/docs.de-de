@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 93512ab00fe05a4166125c5e319ce91a5cc04573
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b056f52879c4309db0cbb33ecc789d25439a8c68
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551998"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576849"
 ---
 # <a name="controls-by-category"></a>Kategorien von Steuerelementen
-Windows Presentation Foundation (WPF)-Steuerelemente können in verschiedene Kategorien gruppiert werden. Diese Kategorien können verwendet werden, um das entsprechende Steuerelement für das Szenario auszuwählen, indem Ihnen angezeigt wird, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.  
+Windows Presentation Foundation (WPF)-Steuerelemente können logisch in verschiedene Kategorien gruppiert werden. Diese Kategorien können verwendet werden, um das entsprechende Steuerelement für das Szenario auszuwählen, indem Ihnen angezeigt wird, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.  
   
 ## <a name="layout"></a>Layout  
  Layout-Steuerelemente werden zum Verwalten von Größe, Dimensionen, Position und Anordnung von untergeordneten Elementen verwendet.  
@@ -56,7 +56,7 @@ Windows Presentation Foundation (WPF)-Steuerelemente können in verschiedene Kat
 -   <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Schaltflächen  
- Schaltflächen sind eines der grundlegenden Steuerelemente der Benutzeroberfläche. Anwendungen in der Regel ausführen eine Aufgabe in der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis aus, wenn ein Benutzer darauf klickt.  
+ Schaltflächen sind eines der grundlegenden Steuerelemente der Benutzeroberfläche. Anwendungen führen in der Regel eine Aufgabe in der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis aus, wenn ein Benutzer darauf klickt.  
   
 -   <xref:System.Windows.Controls.Button>  
   
@@ -177,5 +177,5 @@ Windows Presentation Foundation (WPF)-Steuerelemente können in verschiedene Kat
   
 -   <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>Siehe auch  
- [Steuerelementbibliothek](../../../../docs/framework/wpf/controls/control-library.md)
+## <a name="see-also"></a>Siehe auch
+- [Steuerelementbibliothek](../../../../docs/framework/wpf/controls/control-library.md)

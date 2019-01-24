@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41679d4041a6a5a7b9b71a451a083c539d6b4c7b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: dd46266286687881956e5de31963ac5957dede84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196486"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641576"
 ---
 # <a name="getting-started-with-net-native"></a>Erste Schritte mit .NET Native
 Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder eine vorhandene Windows Store-App migrieren, können Sie dieselben Verfahren verwenden. Um eine [!INCLUDE[net_native](../../../includes/net-native-md.md)] -App zu erstellen, gehen Sie wie folgt vor:  
   
 1.  [Entwickeln Sie eine UWP-App (Universelle Windows-Plattform), die auf Windows 10 ausgerichtet ist](#Step1), und testen Sie die Debugbuilds der App, um sicherzustellen, dass sie ordnungsgemäß funktioniert.  
   
-2.  [Handle additional reflection and serialization usage (Behandeln Sie zusätzliche Verwendungen von Reflektion und Serialisierung)](#Step2).  
+2.  [Behandeln Sie zusätzliche Verwendungen von Reflektion und Serialisierung](#Step2).  
   
 3.  [Deploy and test the release builds of your app (Stellen Sie die Releasebuilds Ihrer App bereit, und testen Sie sie)](#Step3).  
   
-4.  [Manually resolve missing metadata (Beheben Sie fehlende Metadaten manuell)](#Step4), und wiederholen Sie [Schritt 3](#Step3), bis alle Probleme gelöst sind.  
+4.  [Beheben Sie fehlende Metadaten manuell](#Step4), und wiederholen Sie [Schritt 3](#Step3) , bis alle Probleme gelöst sind.  
   
 > [!NOTE]
 >  Wenn Sie eine vorhandene Windows Store-App zu [!INCLUDE[net_native](../../../includes/net-native-md.md)]migrieren, lesen Sie unbedingt auch [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
   
 <a name="Step1"></a>   
-## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Schritt 1: Entwickeln und Testen von Debugbuilds der UWP-App  
+## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Schritt 1: Entwickeln und Testen von Debugbuilds der UWP-app  
  Egal, ob Sie eine neue App entwickeln oder eine vorhandene migrieren, Sie verwenden immer dasselbe Verfahren wie für jede Windows-App.  
   
 1.  Erstellen Sie ein neues UWP-Projekt in Visual Studio mithilfe der Vorlage für universelle Windows-Apps für Visual C# oder Visual Basic. Standardmäßig sind alle UWP-Apps auf CoreCLR ausgerichtet und ihre Releasebuilds werden mithilfe der .NET Native-Toolkette kompiliert.  
@@ -41,7 +41,7 @@ Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder
  Standardmäßig werden Debugversionen mit JIT kompiliert, um eine schnelle F5-Bereitstellung zu ermöglichen, während endgültige Versionen mit der [!INCLUDE[net_native](../../../includes/net-native-md.md)] -Vorkompilierungstechnologie kompiliert werden. Das bedeutet, dass Sie die Debugbuilds Ihrer App erstellen und testen sollten, um sicherzustellen, dass sie ordnungsgemäß funktionieren, bevor sie mit der .NET Native-Toolkette kompiliert werden.  
   
 <a name="Step2"></a>   
-## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Schritt 2: Behandeln zusätzlicher Verwendungen von Reflektion und Serialisierung  
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Schritt 2: Behandeln Sie zusätzliche Nutzung von Reflektion und Serialisierung  
  Eine Laufzeitdirektivendatei, "Default.rd.xml", die beim Erstellen automatisch Ihrem Projekt hinzugefügt wird. Wenn Sie in C# entwickeln, finden Sie die Datei im **Eigenschaften** -Ordner Ihres Projekts. Wenn Sie in Visual Basic entwickeln, finden Sie die Datei im **Mein Projekt** -Ordner Ihres Projekts.  
   
 > [!NOTE]
@@ -63,7 +63,7 @@ Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder
   
 -   Die Methoden <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> und <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>  
   
--   Die <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>-Methode.  
+-   Die <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> -Methode.  
   
  Weitere Informationen finden Sie unter [APIs That Rely on Reflection](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).  
   
@@ -71,10 +71,10 @@ Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder
 >  In Laufzeitdirektivendateien verwendete Typnamen müssen vollqualifiziert sein. Beispielsweise muss in der Datei "System.String" anstelle von "String" angegeben sein.  
   
 <a name="Step3"></a>   
-## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Schritt 3: Bereitstellen und Testen der Releasebuilds Ihrer App  
+## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Schritt 3: Bereitstellen Sie und Testen Sie der Releasebuilds Ihrer App  
  Nachdem Sie die Laufzeitdirektivendatei aktualisiert haben, können Sie erneut Releasebuilds der App erstellen und bereitstellen. .NET Native-Binärdateien befinden sich im Unterverzeichnis ILC.out des Verzeichnisses, das im Textfeld **Buildausgabepfad** des Dialogfelds **Eigenschaften** des Projekts auf der Registerkarte **Kompilieren** angegeben ist. Binärdateien, die sich nicht in diesem Ordner befinden, wurden nicht mit .NET Native kompiliert. Testen Sie Ihre App gründlich, und testen Sie alle Szenarien, auch Ausfallszenarien, für sämtliche Zielplattformen.  
   
- Wenn Ihre App nicht ordnungsgemäß funktioniert (insbesondere in Fällen, in denen zur Laufzeit die Ausnahmen [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) oder [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) ausgelöst werden), folgen Sie den Anweisungen im nächsten Abschnitt, [Step 4: Manually resolve missing metadata (Schritt 4: Manuelles Beheben fehlender Metadaten)](#Step4). Das Aktivieren von Ausnahmen der ersten Chance kann hilfreich sein, um diese Fehler zu finden.  
+ Wenn Ihre app nicht ordnungsgemäß funktioniert (insbesondere in Fällen, in denen es [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) oder [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) Ausnahmen zur Laufzeit), befolgen Sie die Anweisungen in den nächsten Abschnitt [Schritt 4: Manuelles Beheben fehlender Metadaten](#Step4). Das Aktivieren von Ausnahmen der ersten Chance kann hilfreich sein, um diese Fehler zu finden.  
   
  Wenn Sie die Debugversionen der App getestet und debuggt haben und sicher sind, dass Sie die Ausnahmen [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) und [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) beseitigt haben, sollten Sie die App als optimierte [!INCLUDE[net_native](../../../includes/net-native-md.md)] -App testen. Zu diesem Zweck ändern Sie die aktive Projektkonfiguration von **Debug** in **Release**.  
   
@@ -106,17 +106,17 @@ Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder
   
  Einige spezifische Beispiele für das Behandeln von Ausnahmen und anderen Problemen beim Testen der App finden Sie unter:  
   
--   [Example: Handling Exceptions When Binding Data (Beispiel: Behandeln von Ausnahmen beim Binden von Daten)](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Anpassen von mit VSTU Behandeln von Ausnahmen beim Binden von Daten](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [Example: Troubleshooting Dynamic Programming (Beispiel: Problembehandlung bei dynamischer Programmierung)](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [Anpassen von mit VSTU Problembehandlung bei dynamischer Programmierung](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
 -   [Runtime Exceptions in .NET Native Apps (Laufzeitausnahmen in .NET Native-Apps)](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [NIB: .NET Native Einrichtung und Konfiguration](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
- [.NET Native and Compilation (.NET Native und Kompilierung)](../../../docs/framework/net-native/net-native-and-compilation.md)  
- [Reflection and .NET Native (Reflektion und .NET Native)](../../../docs/framework/net-native/reflection-and-net-native.md)  
- [APIs That Rely on Reflection (APIs, die die Reflektion benötigen)](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
- [Serialization and Metadata (Serialisierung und Metadaten)](../../../docs/framework/net-native/serialization-and-metadata.md)  
- [Migrieren der Windows Store-App zu .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+## <a name="see-also"></a>Siehe auch
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [NIB: .NET Native Einrichtung und Konfiguration](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)
+- [.NET Native and Compilation (.NET Native und Kompilierung)](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Reflection and .NET Native (Reflektion und .NET Native)](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [APIs That Rely on Reflection (APIs, die die Reflektion benötigen)](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
+- [Serialization and Metadata (Serialisierung und Metadaten)](../../../docs/framework/net-native/serialization-and-metadata.md)
+- [Migrieren der Windows Store-App zu .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

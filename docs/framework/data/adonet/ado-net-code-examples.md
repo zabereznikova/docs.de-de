@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5d3bc2b4e5fbb8cc36cf4688bd4fa5e4c0851dcf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597631"
 ---
 # <a name="adonet-code-examples"></a>Codebeispiele für ADO.NET
 In den Codeauflistungen in diesem Thema wird veranschaulicht, wie Daten mithilfe der folgenden ADO.NET-Technologien aus einer Datenbank abgerufen werden:
@@ -19,7 +19,7 @@ In den Codeauflistungen in diesem Thema wird veranschaulicht, wie Daten mithilfe
 
   - [SqlClient](#sqlclient) (`System.Data.SqlClient`)
 
-  - [OLE DB](#oledb) (`System.Data.OleDb`)
+  - [OleDb](#oledb) (`System.Data.OleDb`)
 
   - [Odbc](#odbc) (`System.Data.Odbc`)
 
@@ -29,7 +29,7 @@ In den Codeauflistungen in diesem Thema wird veranschaulicht, wie Daten mithilfe
 
   - [LINQ to Entities](#linq-to-entities)
 
-  - [Typisierte ObjectQuery](#typed-objectquery)
+  - [Typed ObjectQuery](#typed-objectquery)
 
   - [EntityClient](#entityclient) (`System.Data.EntityClient`)
 
@@ -344,9 +344,9 @@ End Class
 ```
 
 ## <a name="see-also"></a>Siehe auch
- [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Erstellen von Datenanwendungen](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
- [Abfragen eines Entity Data Model (Entity Framework-Aufgaben)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [So wird es gemacht: Ausführen einer Abfrage, die Objekte anonymer Typen zurückgibt](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)  
+- [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
+- [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Erstellen von Datenanwendungen](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)
+- [Abfragen eines Entity Data Model (Entity Framework-Aufgaben)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)
+- [Vorgehensweise: Ausführen einer Abfrage, die Objekte anonymer Typen zurückgibt](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

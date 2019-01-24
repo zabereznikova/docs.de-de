@@ -8,12 +8,12 @@ helpviewer_keywords:
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
 author: KrzysztofCwalina
-ms.openlocfilehash: d0332591be7659aafb5b3169f92c81d47d519dc2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dd30cdee0440553a9f955f0b3f4ee420e938b9ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698803"
 ---
 # <a name="arrays"></a>Arrays
 **✓ DO** lieber mithilfe von Sammlungen über Arrays in öffentlichen APIs. Die [Sammlungen](../../../docs/standard/design-guidelines/guidelines-for-collections.md) Abschnitt enthält ausführliche Informationen zur Wahl zwischen Auflistungen und Arrays.  
@@ -30,6 +30,6 @@ ms.locfileid: "53127562"
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Array>  
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- <xref:System.Array>
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Verwendungsrichtlinien](../../../docs/standard/design-guidelines/usage-guidelines.md)

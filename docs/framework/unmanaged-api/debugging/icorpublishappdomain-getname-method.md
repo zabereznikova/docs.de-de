@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 796f8ea42cc5cbe13729f7b92e15bc214d62734d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4afbc41e680d8a20166095aeb1afbc0de9bbacbc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423857"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631745"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName-Methode
 Ruft den Namen der Anwendungsdomäne, die von diesem dargestellt wird [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).  
@@ -43,18 +43,18 @@ HRESULT GetName (
  [in] Die Größe des `szName`-Arrays.  
   
  `pcchName`  
- [out] Ein Zeiger auf die Anzahl der Breitzeichen, einschließlich der Null-Zeichen im zurückgegebenen den `szName` Array.  
+ [out] Ein Zeiger auf die Anzahl der Breitzeichen, einschließlich des Null-Zeichen im zurückgegebenen den `szName` Array.  
   
  `szName`  
  [out] Ein Array, in dem Sie den Namen zu speichern.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn `szName` ungleich Null ist, wird die `GetName` -Methode kopiert bis zu `cchName` Zeichen (einschließlich der null-Terminator) in `szName`. Wenn eine Wert ungleich Null, in zurückgegeben wird `pcchName`, die tatsächliche Anzahl der Zeichen im Namen (einschließlich der null-Abschlusszeichen) befindet sich in der `szName` Array.  
+ Wenn `szName` nicht Null ist, wird die `GetName` -Methode kopiert bis zu `cchName` Zeichen betragen (einschließlich der null-Terminator) in `szName`. Wenn eine Wert ungleich Null, im zurückgegeben wird `pcchName`, die tatsächliche Anzahl der Zeichen im Namen (einschließlich der null-Terminator) befindet sich in der `szName` Array.  
   
- Die `GetName` Methode gibt ein HRESULT S_OK zurück, unabhängig davon, wie viele Zeichen kopiert wurden.  
+ Die `GetName` Methodenrückgabe ein S_OK HRESULT unabhängig davon, wie viele Zeichen kopiert wurden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorPub.idl, CorPub.h  
   
@@ -62,5 +62,5 @@ HRESULT GetName (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorPublishAppDomain-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorPublishAppDomain-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

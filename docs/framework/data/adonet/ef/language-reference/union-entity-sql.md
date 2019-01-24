@@ -2,12 +2,12 @@
 title: UNION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: df98a4db-b00d-4c8b-bd74-0d285f27e1df
-ms.openlocfilehash: 52a7a332166250e8fa8084986fd0d89da6fdf42d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b7818866571fc362e56e8fdea3344f0888f1a2aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679837"
 ---
 # <a name="union-entity-sql"></a>UNION (Entity SQL)
 Fasst die Ergebnisse von zwei oder mehr Abfragen in einer Auflistung zusammen.  
@@ -39,11 +39,11 @@ expression
 ## <a name="example"></a>Beispiel  
  Die folgende Entity SQL-Abfrage verwendet den UNION ALL-Operator, um die Ergebnisse von zwei Abfragen in einer Auflistung zusammenzufassen. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
   
-1.  Verwenden Sie das Verfahren unter [Gewusst wie: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Führen Sie die Verfahren in [Vorgehensweise: Ausführen einer Abfrage, die StructuralType-Ergebnisse zurückgibt](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Übergeben Sie die folgende Abfrage als Argument an die `ExecuteStructuralTypeQuery` -Methode:  
   
  [!code-csharp[DP EntityServices Concepts 2#UNION](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#union)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>Siehe auch
+- [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

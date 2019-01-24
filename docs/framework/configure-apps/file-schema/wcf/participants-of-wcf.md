@@ -2,12 +2,12 @@
 title: '&lt;participants&gt; von WCF'
 ms.date: 03/30/2017
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
-ms.openlocfilehash: 341e5492f7a45ca89c18d478766b8ebd369dbdf2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 892392454b9969e0c63e0ad7eb15f788466ad963
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630969"
 ---
 # <a name="ltparticipantsgt-of-wcf"></a>&lt;participants&gt; von WCF
 Konfiguriert eine Liste von Nachverfolgungsteilnehmern, die den direkt von der Laufzeit ausgegebenen Nachverfolgungsdatensätzen lauschen und sie entsprechend der Weise verarbeiten, wie sie konfiguriert wurden. Dies umfasst das Schreiben in ein bestimmtes Ausgabemedium (z. B. Datei, Konsole, ETW), das Verarbeiten/Aggregieren der Datensätze oder eine beliebige andere Kombination, die erforderlich sein könnte.  
@@ -15,8 +15,8 @@ Konfiguriert eine Liste von Nachverfolgungsteilnehmern, die den direkt von der L
  Weitere Informationen im Workflow-Überwachung und zu nachverfolgungsteilnehmern finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) und [Nachverfolgungsteilnehmer](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
   
  \<system.serviceModel>  
-\<Nachverfolgen von >  
-\<Teilnehmer >  
+\<tracking>  
+\<participants>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -85,8 +85,8 @@ Konfiguriert eine Liste von Nachverfolgungsteilnehmern, die den direkt von der L
 </configuration>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Überwachungsteilnehmer](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
+- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Überwachungsteilnehmer](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

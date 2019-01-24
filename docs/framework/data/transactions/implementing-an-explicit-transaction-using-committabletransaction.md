@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 1edcdefeaafbee3cfbc0810a47e64f38f9f97ddc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 078102da95222d45bec82269edf1eb8e40866408
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713133"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementieren einer expliziten Transaktion mit CommittableTransaction
 Die <xref:System.Transactions.CommittableTransaction>-Klasse ermöglicht es Anwendungen, Transaktionen explizit zu verwenden, anstatt die <xref:System.Transactions.TransactionScope>-Klasse implizit zu verwenden. Sie ist für Anwendungen nützlich, die dieselben Transaktionen über mehrere Funktionsaufrufe oder mehrere Threadaufrufe hinweg verwenden wollen. Im Unterschied zur <xref:System.Transactions.TransactionScope>-Klasse muss der Autor der Anwendung die <xref:System.Transactions.CommittableTransaction.Commit%2A>-Methode bzw. die <xref:System.Transactions.Transaction.Rollback%2A>-Methode aufrufen, um einen Commit der Transaktion auszuführen oder um sie abzubrechen.  
@@ -43,7 +43,7 @@ Die <xref:System.Transactions.CommittableTransaction>-Klasse ermöglicht es Anwe
   
  Sie können <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> aufrufen, um den zurückgehaltenen Commit an einen Thread aus dem Threadpool weiterzuleiten. Sie können zudem <xref:System.Transactions.CommittableTransaction.EndCommit%2A> aufrufen, um zu ermitteln, ob ein Commit für die Transaktion ausgeführt wurde. Wenn der Commit aus irgendeinem Grund nicht für die Transaktion ausgeführt wurde, löst <xref:System.Transactions.CommittableTransaction.EndCommit%2A> eine Transaktionsausnahme aus. Wurde der Transaktionscommit zum Zeitpunkt des Aufrufs von <xref:System.Transactions.CommittableTransaction.EndCommit%2A> noch nicht ausgeführt, wird der Aufrufer gesperrt, bis der Commit durchgeführt oder die Transaktion abgebrochen wurde.  
   
- Das einfachste Verfahren, einen asynchronen Commit auszuführen, besteht darin, eine Rückrufmethode einzurichten. Dann erfolgt bei Beendigung des Commit ein Rückruf. Jedoch müssen Sie die <xref:System.Transactions.CommittableTransaction.EndCommit%2A>-Methode für das ursprüngliche <xref:System.Transactions.CommittableTransaction>-Objekt aufrufen, das für den Aufruf verwendet wurde. Um dieses Objekt zu erhalten, können Sie Downcasting der *"IAsyncResult"* Parameter der Rückrufmethode darstellt, da die <xref:System.Transactions.CommittableTransaction> -Klasse implementiert <xref:System.IAsyncResult> Klasse.  
+ Das einfachste Verfahren, einen asynchronen Commit auszuführen, besteht darin, eine Rückrufmethode einzurichten. Dann erfolgt bei Beendigung des Commit ein Rückruf. Jedoch müssen Sie die <xref:System.Transactions.CommittableTransaction.EndCommit%2A>-Methode für das ursprüngliche <xref:System.Transactions.CommittableTransaction>-Objekt aufrufen, das für den Aufruf verwendet wurde. Um dieses Objekt zu erhalten, können Sie Typumwandlung der *IAsyncResult* Parameter der Rückrufmethode darstellt, da die <xref:System.Transactions.CommittableTransaction> -Klasse implementiert <xref:System.IAsyncResult> Klasse.  
   
  Das folgende Beispiel zeigt, wie ein asynchroner Commit ausgeführt werden kann.  
   
@@ -85,6 +85,6 @@ void OnCommitted(IAsyncResult asyncResult)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Implementieren einer impliziten Transaktion mit einem Transaktionsbereich](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
- [Transaction Processing (Verarbeiten von Transaktionen)](../../../../docs/framework/data/transactions/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Implementieren einer impliziten Transaktion mit einem Transaktionsbereich](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
+- [Transaction Processing (Verarbeiten von Transaktionen)](../../../../docs/framework/data/transactions/index.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;ShadowCopyVerifyByTimestamp&gt; Element'
+title: '&lt;shadowCopyVerifyByTimestamp&gt; Element'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <shadowCopyTimeStampVerification> element
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a97c8708c7d57d1a8f5335ef19e8e74cb6487276
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9a37e41aa653fb3cd5990b75f3c5467a88660113
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622259"
 ---
-# <a name="ltshadowcopyverifybytimestampgt-element"></a>&lt;ShadowCopyVerifyByTimestamp&gt; Element
+# <a name="ltshadowcopyverifybytimestampgt-element"></a>&lt;shadowCopyVerifyByTimestamp&gt; Element
 Gibt an, ob die Schattenkopiefunktion das in [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] eingeführte Standardstartverhalten verwendet oder auf das Startverhalten früherer Versionen von .NET Framework zurückgreift.  
   
  \<Configuration >-Element  
@@ -67,7 +67,7 @@ Gibt an, ob die Schattenkopiefunktion das in [!INCLUDE[net_v40_long](../../../..
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Siehe auch
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Erstellen von Schattenkopien von Assemblys](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)

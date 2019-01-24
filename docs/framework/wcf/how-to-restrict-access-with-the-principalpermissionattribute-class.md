@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 38e3c62aaf0e87860732bcb12c61da69b1c4346d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 4704a310e49246bdc8fff54abe6841f2e8482ed5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805771"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590567"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse
-Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren gehört zu den grundlegenden Sicherheitsaufgaben. So sollten zum Beispiel nur bestimmte Benutzer vertrauliche Daten wie Lohnlisten anzeigen können. In diesem Thema wird erklärt, wie Sie den Zugriff auf eine Methode beschränken können, indem Sie es zur Voraussetzung machen, dass die entsprechenden Benutzer einer vordefinierten Gruppe angehören. Ein funktionierendes Beispiel finden Sie unter [Zugriff auf Dienstvorgänge autorisieren](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
+Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren gehört zu den grundlegenden Sicherheitsaufgaben. So sollten zum Beispiel nur bestimmte Benutzer vertrauliche Daten wie Lohnlisten anzeigen können. In diesem Thema wird erklärt, wie Sie den Zugriff auf eine Methode beschränken können, indem Sie es zur Voraussetzung machen, dass die entsprechenden Benutzer einer vordefinierten Gruppe angehören. Ein Arbeitsbeispiel finden Sie unter [Zugriff auf Dienstvorgänge autorisieren](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
   
  Diese Aufgabe umfasst zwei separate Schritte. Zuerst wird die Gruppe erstellt und mit Benutzern gefüllt. Anschließend wird in einem zweiten Schritt die <xref:System.Security.Permissions.PrincipalPermissionAttribute>-Klasse angewendet, um die Gruppe anzugeben.  
   
@@ -31,15 +31,15 @@ Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren g
   
 4.  In der **Gruppenname** geben einen Namen für die neue Gruppe.  
   
-5.  In der **Beschreibung** Geben Sie eine Beschreibung der neuen Gruppe.  
+5.  In der **Beschreibung** geben eine Beschreibung der neuen Gruppe.  
   
-6.  Klicken Sie auf die **hinzufügen** Schaltfläche zum Hinzufügen von neuer Mitgliedern der Gruppe.  
+6.  Klicken Sie auf die **hinzufügen** Schaltfläche, um neue Mitglieder zur Gruppe hinzuzufügen.  
   
 7.  Falls Sie sich selbst zur Gruppe hinzugefügt haben und den folgenden Code testen möchten, müssen Sie sich vom Computer abmelden und dann wieder anmelden, damit Sie in die Gruppe aufgenommen werden.  
   
 ### <a name="to-demand-user-membership"></a>So fordern Sie die Benutzermitgliedschaft an  
   
-1.  Öffnen Sie die Windows Communication Foundation (WCF)-Codedatei, die den implementierten dienstvertragscode enthält. Weitere Informationen zu einen Vertrag implementieren, finden Sie unter [implementieren Dienstverträge](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1.  Öffnen Sie die Windows Communication Foundation (WCF)-Codedatei, die den implementierten dienstvertragscode enthält. Weitere Informationen zum Implementieren eines Vertrags finden Sie unter [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
 2.  Wenden Sie das <xref:System.Security.Permissions.PrincipalPermissionAttribute>-Attribut auf jede Methode an, die nur für eine bestimmte Gruppe zugelassen werden soll. Legen Sie für die <xref:System.Security.Permissions.SecurityAttribute.Action%2A>-Eigenschaft den Wert <xref:System.Security.Permissions.SecurityAction.Demand> fest, und setzen Sie die <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>-Eigenschaft auf den Namen der Gruppe. Zum Beispiel:  
   
@@ -52,7 +52,7 @@ Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren g
 ## <a name="using-a-certificate-to-control-access-to-a-method"></a>Steuern des Zugriffs auf eine Methode mithilfe eines Zertifikats  
  Sie können mit der `PrincipalPermissionAttribute`-Klasse auch dann den Zugriff auf eine Methode steuern, wenn es sich bei den Clientanmeldeinformationen um ein Zertifikat handelt. Hierfür müssen Sie den Antragsteller und den Fingerabdruck des Zertifikats kennen.  
   
- Um ein Zertifikat für die zugehörigen Eigenschaften untersuchen zu können, finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Den Fingerabdruckwert finden Sie unter [wie: Abrufen des Fingerabdrucks eines Zertifikats](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+ Um ein Zertifikat für seine Eigenschaften untersuchen zu können, finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Der Fingerabdruckwert finden Sie unter [Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
 #### <a name="to-control-access-using-a-certificate"></a>So steuern Sie den Zugriff mithilfe eines Zertifikats  
   
@@ -77,18 +77,18 @@ Den Zugriff auf Ressourcen auf einem Windows-Domänencomputer zu kontrollieren g
     </behaviors>  
     ```  
   
-     Durch den Wert `UseAspNetRoles` wird angegeben, dass mit der `Name`-Eigenschaft von `PrincipalPermissionAttribute` ein Zeichenfolgenvergleich durchgeführt wird. Wenn ein Zertifikat als Clientanmeldeinformationen verwendet wird, verkettet standardmäßig WCF gemeinsame Zertifikatsname und den Fingerabdruck mit einem Semikolon, um einen eindeutigen Wert für die primäre Identität des Clients zu erstellen. Sofern für den Dienst `UseAspNetRoles` als `PrincipalPermissionMode` gewählt wurde, wird dieser Wert für die primäre Identität mit dem Wert der `Name`-Eigenschaft verglichen, um die Zugriffsrechte des Benutzers zu ermitteln.  
+     Durch den Wert `UseAspNetRoles` wird angegeben, dass mit der `Name`-Eigenschaft von `PrincipalPermissionAttribute` ein Zeichenfolgenvergleich durchgeführt wird. Wenn ein Zertifikat als Clientanmeldeinformationen verwendet wird, verkettet werden standardmäßig WCF allgemeinen Namen des Zertifikats und den Fingerabdruck durch ein Semikolon, um einen eindeutigen Wert für die primäre Identität des Clients zu erstellen. Sofern für den Dienst `UseAspNetRoles` als `PrincipalPermissionMode` gewählt wurde, wird dieser Wert für die primäre Identität mit dem Wert der `Name`-Eigenschaft verglichen, um die Zugriffsrechte des Benutzers zu ermitteln.  
   
      Sie können alternativ wie im folgenden Beispiel auch die <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A>-Eigenschaft im Code festlegen, wenn Sie einen selbst gehosteten Dienst erstellen:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#3)]
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- <xref:System.Security.Permissions.SecurityAction.Demand>  
- <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>  
- [Zugriffsautorisierung für Dienstvorgänge](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute>
+- <xref:System.Security.Permissions.SecurityAction.Demand>
+- <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A>
+- [Zugriffsautorisierung für Dienstvorgänge](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
+- [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md)

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Abrufen eines einzelnes Attributs (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: e9e4dce95e9c3202b1cd2a53c186126deac0913c
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 73f5a252bd207edaa14aead42a6f122c3320423e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704679"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Vorgehensweise: Abrufen eines einzelnes Attributs (LINQ to XML) (Visual Basic)
 In diesem Thema wird die Vorgehensweise beim Abrufen eines einzelnen Attributs eines Elements anhand des Attributsnamens erläutert. Diese Vorgehensweise eignet sich für das Schreiben von Abfrageausdrücken, mit denen Sie nach einem Element mit einem bestimmten Attribut suchen möchten.  
@@ -92,5 +92,5 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to XML-Achsen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Siehe auch
+- [LINQ to XML-Achsen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

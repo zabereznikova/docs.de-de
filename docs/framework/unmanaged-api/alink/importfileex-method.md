@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fe73bef50a32c3ff03f2a2754f665cc95018a4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a0381ee61a0128a8ae303d44198f8d391b4531a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402993"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660618"
 ---
 # <a name="importfileex-method"></a>ImportFileEx-Methode
-Importe angegebene Assembly oder ein ungebundener Modul.  
+Importiert die angegebene Assembly oder ein ungebundenes Modul angegebene.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,33 +42,33 @@ HRESULT ImportFileEx(
   
 #### <a name="parameters"></a>Parameter  
  `pszFilename`  
- Vollständig qualifizierte Name der Datei, aus denen importiert.  
+ Voll gekennzeichnete Name der Datei, aus denen importiert.  
   
  `pszTargetName`  
- Optionale Name der Zieldatei.  
+ Optionaler Name der Zieldatei.  
   
  `fSmartImport`  
- Bei "true", ImportTypes verwendet wird, andernfalls importieren muss manuell durchgeführt werden.  
+ True gibt an, ImportTypes wird verwendet, andernfalls importieren muss manuell durchgeführt werden.  
   
  `dwOpenFlags`  
- Flags an, zu übergebende [OpenScope-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
+ Flags, die zu übergebende [OpenScope-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Empfängt die ID der zu importierenden Datei.  
+ Empfängt die ID der Datei importiert wird.  
   
  `ppAssemblyScope`  
- Empfängt Import assemblygültigkeitsbereich [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) Schnittstelle. Wird auf NULL festgelegt werden, wenn die Datei keine Assembly ist.  
+ Import Assemblybereich empfängt [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) Schnittstelle. Wird auf NULL festgelegt werden, wenn die Datei keine Assembly ist.  
   
  `pdwCountOfScopes`  
- Empfängt die Anzahl der importierten Dateien und/oder Bereiche.  
+ Empfängt die Anzahl der importierten Dateien bzw. Bereiche.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h.  
+ Erfordert alink.h an.  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

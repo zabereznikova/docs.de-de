@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c54ea70049544e5205613ab76eb810798513fab2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680217"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Anpassung von Feeds (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verwendet die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] , Daten als Feed verfügbar zu machen. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt sowohl Atom-als auch JavaScript Object Notation (JSON)-Formate für Datenfeeds. Bei Verwendung ein Atom-Feeds [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bietet eine Standardmethode zum Serialisieren von Daten, z. B. Entitäten und Beziehungen in einem XML-Format, das im Text der HTTP-Nachricht aufgenommen werden kann. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] definiert eine standardmäßige entitätseigenschaftszuordnung zwischen den Daten, die in Entitäten enthalten ist und Atom-Elementen. Weitere Informationen finden Sie unter [OData: Atom-Format](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -39,7 +39,7 @@ ms.locfileid: "44207487"
   
  [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
- Weitere Informationen finden Sie unter [wie: Anpassen von Feeds mit dem Entity Framework-Datenanbieter](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Feeds mit dem Entity Framework-Datenanbieter](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
 >  Da Erweiterungen des Datenmodells nicht vom Entity Designer unterstützt werden, müssen Sie die XML-Datei, die das Datenmodell enthält, manuell ändern. Weitere Informationen zu der EDMX-Datei, die vom generierten der [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] -Tools finden Sie unter [EDMX-Datei Übersicht](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
@@ -63,7 +63,7 @@ ms.locfileid: "44207487"
  Zum Anpassen von Feeds für ein mit dem Reflektionsanbieter implementiertes Datenmodell fügen Sie den Klassen, die Entitätstypen im Datenmodell darstellen, eine oder mehrere Instanzen des <xref:System.Data.Services.Common.EntityPropertyMappingAttribute>-Attributs hinzu. Die Eigenschaften der <xref:System.Data.Services.Common.EntityPropertyMappingAttribute>-Klasse entsprechen den Feedanpassungsattributen, die im vorherigen Abschnitt beschrieben werden. Nachfolgend ein Beispiel für die Deklaration des `Order`-Typs, wobei die benutzerdefinierte Feedzuordnung für beide Eigenschaften definiert ist.  
   
 > [!NOTE]
->  Das Datenmodell für dieses Beispiel ist im Thema definiert [Vorgehensweise: Erstellen eines Diensts mithilfe des Reflektionsanbieters](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
+>  Das Datenmodell für dieses Beispiel ist im Thema definiert [Vorgehensweise: Erstellen eines Datendiensts mit dem Reflektionsanbieter](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   
  [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria custom feeds/cs/orderitems.svc.cs#customorderfeed)]
  [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria custom feeds/vb/orderitems.svc.vb#customorderfeed)]  
@@ -72,7 +72,7 @@ ms.locfileid: "44207487"
   
  [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
- Weitere Informationen finden Sie unter [wie: Anpassen von Feeds mit dem Reflektionsanbieter](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Feeds mit dem Reflektionsanbieter](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-a-custom-data-service-provider"></a>Anpassen von Feeds mithilfe eines benutzerdefinierten Datendienstanbieters  
  Die Feedanpassung für ein Datenmodell, das durch die Verwendung eines benutzerdefinierten Datendienstanbieters definiert ist, wird für einen Ressourcentyp definiert, indem das <xref:System.Data.Services.Providers.ResourceType.AddEntityPropertyMappingAttribute%2A> auf dem <xref:System.Data.Services.Providers.ResourceType> aufgerufen wird, der einen Entitätstyp im Datenmodell darstellt. Weitere Informationen finden Sie unter [Benutzerdefinierte Datendienstanbieter](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).  
@@ -92,6 +92,6 @@ ms.locfileid: "44207487"
   
  Weitere Informationen finden Sie unter [Datendienst-Versionskontrolle](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Reflektionsanbieter](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
- [Entity Framework-Anbieter](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Reflektionsanbieter](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
+- [Entity Framework-Anbieter](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baff7dac7f1ddc8546bcb52627eeee992921a395
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: bbd8e15b7f708df628f75dc9812eca0f84f36434
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672993"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver-Schnittstelle
 Stellt die [ResolveTypeLib-Methode](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), der den Dateipfad einer Typbibliothek aufgelöst.  
@@ -33,14 +33,14 @@ Stellt die [ResolveTypeLib-Methode](../../../../docs/framework/unmanaged-api/tlb
 |[ResolveTypeLib-Methode](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|Löst den einfachen Namen einer Typbibliothek durch den vollständig qualifizierten Pfad zurückgeben.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** TlbRef.idl, TlbRef.h  
   
  **Bibliothek:** TlbRef.lib  
   
- **.NET Framework-Version:** 4, 3.5, 3.0 und 2.0  
+ **.NET Framework Version:** 4, 3.5, 3.0, 2.0  
   
-## <a name="see-also"></a>Siehe auch  
- [Tlbexp-Hilfsfunktionen](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx-Funktion](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+## <a name="see-also"></a>Siehe auch
+- [Tlbexp-Hilfsfunktionen](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [LoadTypeLibEx-Funktion](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

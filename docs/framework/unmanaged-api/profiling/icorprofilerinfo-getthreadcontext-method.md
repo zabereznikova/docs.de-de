@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: acb4d67f41b1434fe8052a74e976907f24fecd31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb686be625d0d38bcf0de496c192276ebaa3410d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629570"
 ---
 # <a name="icorprofilerinfogetthreadcontext-method"></a>ICorProfilerInfo::GetThreadContext-Methode
-Ruft die Kontextidentität, die derzeit zugewiesen ist, mit dem angegebenen Thread ab.  
+Ruft die Kontextidentität, die derzeit mit dem angegebenen Thread zugeordnet sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,10 +40,10 @@ HRESULT GetThreadContext(
  [in] Die ID des Threads.  
   
  `pContextId`  
- [out] Ein Zeiger auf die Kontext-ID, die derzeit mit dem angegebenen Thread zugewiesen ist. Wenn der Thread kein Kontext derzeit zugeordnet verfügt, wird diese Funktion CORPROF_E_DATAINCOMPLETE zurück.  
+ [out] Ein Zeiger auf die Kontext-ID, die derzeit mit dem angegebenen Thread zugeordnet sind. Wenn der Thread ohne Kontext aktuell zugeordnet verfügt, gibt diese Funktion CORPROF_E_DATAINCOMPLETE zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -50,5 +51,5 @@ HRESULT GetThreadContext(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

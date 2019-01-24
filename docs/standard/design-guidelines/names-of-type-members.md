@@ -13,12 +13,12 @@ helpviewer_keywords:
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: KrzysztofCwalina
-ms.openlocfilehash: 264627f49a3d2a083f8f46f23f71e8b34d042c8e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127575"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576940"
 ---
 # <a name="names-of-type-members"></a>Namen von Typmembern
 Typen bestehen aus Membern: Methoden, Eigenschaften, Ereignisse, Konstruktoren und Felder. In den folgenden Abschnitten werden die Richtlinien zum Benennen von Typmembern beschrieben.  
@@ -103,5 +103,5 @@ public class Control {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)

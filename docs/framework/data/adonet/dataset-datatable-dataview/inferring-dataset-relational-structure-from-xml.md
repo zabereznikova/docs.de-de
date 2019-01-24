@@ -2,12 +2,12 @@
 title: Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 13f63d416b76dbeaedbc007cd27eb2975f1efdef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f5cbbcd148f13a630398e870124803d482f63698
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515588"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587647"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema
 Die relationale Struktur bzw. das Schema eines <xref:System.Data.DataSet> besteht aus Tabellen, Spalten, Einschränkungen und Beziehungen. Beim Laden eines <xref:System.Data.DataSet> aus XML kann das Schema vordefiniert sein oder explizit bzw. durch Rückschluss aus dem geladenen XML erstellt werden. Für Weitere Informationen zum Laden des Schemas und Inhalts von einem <xref:System.Data.DataSet> aus XML finden Sie unter [Laden eines Datasets aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) und [Laden von DataSet-Schemainformationen aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  
@@ -47,5 +47,5 @@ Die relationale Struktur bzw. das Schema eines <xref:System.Data.DataSet> besteh
  [Übersicht über ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  Beschreibt die ADO.NET-Architektur und -Komponenten und wie diese verwendet werden, um auf vorhandene Datenquellen zuzugreifen und Anwendungsdaten zu verwalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

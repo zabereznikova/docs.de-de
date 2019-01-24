@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 2b2d487484f026be7637185ef759fb87db571b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8c5f94cb7f815e4aebef10d930843971219baef6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145805"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623117"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Abfragen in LINQ to DataSet
 Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in der Regel in einer speziellen Abfragesprache, wie SQL für relationale Datenbanken oder XQuery für XML, geschrieben. Deshalb mussten Entwickler bisher für jeden abzufragenden Datenquellentyp oder Datenformattyp eine neue Abfragesprache lernen. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] bietet ein einfacheres, konsistentes Modell zum Arbeiten mit Daten über verschiedene Arten von Datenquellen und Formate hinweg. In einer [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Programmierobjekten.  
@@ -59,8 +59,8 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmierhandbuch](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [Abfragen von DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [Erste Schritte mit LINQ in C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmierhandbuch](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [Abfragen von DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
+- [Erste Schritte mit LINQ in C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

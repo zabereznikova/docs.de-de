@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0d3a9039c6dc5d72ca740d6eaaf8a4d565e2647
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e5a6d69b121827c3ee4f55714dcf3d4628706ce2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737896"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Allgemeine Datentypen (Referenz zur nicht verwalteten API)
 In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs für .NET Framework verwenden und die über `typedef`-Argumente aus C/C++ definiert sind. Diese Datentypen sind meist Aliase für primitive Datentypen aus C/C++. Die Werte dieser Datentypen sind meist nicht transparent. Das bedeutet, sie werden von einer bestimmten Funktion oder Methode zurückgegeben, sodass sie ohne Änderungen an andere Funktionen oder Methoden übergeben werden können.  
@@ -37,5 +37,5 @@ In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs f�
 |AUFGABEN-ID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|Der Bezeichner des ein [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Instanz.|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Der Bezeichner eines verwalteten Threads.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 - [Referenz zur nicht verwalteten API](../../../docs/framework/unmanaged-api/index.md)

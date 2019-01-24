@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1dcb79c4130f6bd163cb807ff92b95db8360a185
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c0cc27bd6a5c0cb85f4822a4481d9588705b71bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575959"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationstarted-method"></a>ICorProfilerCallback::RemotingClientInvocationStarted-Methode
-Benachrichtigt den Profiler, ein Remotingaufruf gestartet hat.  
+Benachrichtigt den Profiler, dass ein Remoteaufrufs gestartet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,7 +36,7 @@ HRESULT RemotingClientInvocationStarted();
 ## <a name="remarks"></a>Hinweise  
  Dieses Ereignis ist für synchrone und asynchrone Aufrufe identisch.  
   
- Jedes der folgenden Paare von Rückrufen wird auf dem gleichen Thread auftreten:  
+ Jedes der folgenden Paare von Rückrufen wird auf dem gleichen Thread erfolgen:  
   
 -   `RemotingClientInvocationStarted` und [ICorProfilerCallback:: RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)  
   
@@ -46,12 +46,12 @@ HRESULT RemotingClientInvocationStarted();
   
  Sie sollten die folgenden Probleme mit den Remotingrückrufen bewusst sein:  
   
--   Ausführung einer Remotingfunktion wird vom Profiler-API nicht widergespiegelt, damit Benachrichtigungen für Funktionen, die vom Client aufgerufen und auf dem Server ausgeführt werden, nicht ordnungsgemäß empfangen wurden. Der eigentliche Aufruf erfolgt über einen Proxy-Objekt; der Profiler wird es angezeigt, dass bestimmte Funktionen JIT-kompiliert, aber nie verwendet werden.  
+-   Ausführung einer Remotingfunktion wird nicht widergespiegelt, durch den Profiler-API, damit Benachrichtigungen für Funktionen, die vom Client aufgerufen und ausgeführt wird, auf dem Server nicht ordnungsgemäß empfangen wurden. Der eigentliche Aufruf erfolgt über einen Proxy-Objekt; um den Profiler wird es angezeigt, dass bestimmte Funktionen JIT-kompiliert, aber nicht verwendet werden.  
   
--   Der Profiler empfängt keine genaue Benachrichtigungen für asynchrone Remoting-Ereignisse.  
+-   Der Profiler erhalten Sie keine genaue Benachrichtigungen für asynchrones Remoting-Ereignisse.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -59,5 +59,5 @@ HRESULT RemotingClientInvocationStarted();
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07237794ca45b16b1ae1ca95b1d62889f095350f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5bad338777db2097ed72ce327f42fde0f0db58e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448158"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693716"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps-Methode
-Ruft den Satz von Eigenschaften der Manifestressource mit der angegebenen Metadatensignatur ab.  
+Ruft den Satz von Eigenschaften der Manifestressource mit der angegebenen Metadaten-Signatur ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ HRESULT GetManifestResourceProps (
   
 #### <a name="parameters"></a>Parameter  
  `mdmr`  
- [in] Ein `mdManifestResource` Token, das die Ressource für das Abrufen der Eigenschaften darstellt.  
+ [in] Ein `mdManifestResource` Token, das die Ressource, für die zum Abrufen der Eigenschaften darstellt.  
   
  `szName`  
  [out] Der Name der Ressource.  
@@ -55,22 +55,22 @@ HRESULT GetManifestResourceProps (
  [out] Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Breitzeichen `szName`.  
   
  `ptkImplementation`  
- [out] Ein Zeiger auf ein `mdFile` token oder ein `mdAssemblyRef` Token, das die Datei bzw. die Assembly darstellt, die die Ressource enthält.  
+ [out] Ein Zeiger auf ein `mdFile` token oder ein `mdAssemblyRef` Token, die die Datei oder Assembly darstellt, die die Ressource enthält.  
   
  `pdwOffset`  
  [out] Ein Zeiger auf einen Wert, der den Offset vom Anfang der Ressource in der Datei angibt.  
   
  `pdwResourceFlags`  
- [out] Ein Zeiger auf die Flags, die auf eine Ressource angewendete Metadaten beschreiben. Der Wert des Flags ist eine Kombination aus einem oder mehreren [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) Werte.  
+ [out] Ein Zeiger auf Flags, die beschreiben, die Metadaten, die auf eine Ressource angewendet werden soll. Der Wert des Flags ist eine Kombination aus einem oder mehreren [CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md) Werte.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

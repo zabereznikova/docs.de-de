@@ -1,23 +1,23 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert'
+title: 'Vorgehensweise: Erstellen Sie einen Dienst, der Sitzungen erfordert'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-ms.openlocfilehash: c7bcd0c08d00122df86d6682888907712f224a30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa151d472dbd27a62f91cd3a43339c66787dc456
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492722"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615441"
 ---
-# <a name="how-to-create-a-service-that-requires-sessions"></a>Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert
-Sitzungen erstellen einen Freigabezustand zwischen zwei oder mehr Endpunkten, der nützliche Funktionen wie Rückrufe, Multi-Hop-Sicherheit und Zuordnungen zwischen Clients und Dienstinstanzen ermöglicht. Weitere Informationen zu Sitzungen in Windows Communication Foundation (WCF)-Anwendungen finden Sie unter [mit Sitzungen](../../../../docs/framework/wcf/using-sessions.md).  
+# <a name="how-to-create-a-service-that-requires-sessions"></a>Vorgehensweise: Erstellen Sie einen Dienst, der Sitzungen erfordert
+Sitzungen erstellen einen Freigabezustand zwischen zwei oder mehr Endpunkten, der nützliche Funktionen wie Rückrufe, Multi-Hop-Sicherheit und Zuordnungen zwischen Clients und Dienstinstanzen ermöglicht. Weitere Informationen zu Sitzungen in Windows Communication Foundation (WCF)-Anwendungen finden Sie unter [mithilfe von Sitzungen](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>So geben Sie an, dass die Bindung eines Vertrags Sitzungen unterstützen muss  
   
-1.  Erstellen Sie einen Dienstvertrag mit mindestens einem Vorgang. Ein Beispiel zum Erstellen eines Dienstvertrags finden Sie unter [wie: Definieren eines Dienstvertrags](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).  
+1.  Erstellen Sie einen Dienstvertrag mit mindestens einem Vorgang. Ein Beispiel zum Erstellen eines Dienstvertrags finden Sie unter [Vorgehensweise: Definieren eines Dienstvertrags](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md).  
   
 2.  Ändern Sie <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>, das den Vertrag deklariert, durch Festlegen der <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>-Eigenschaft auf einen der folgenden Werte:  
   
@@ -38,7 +38,7 @@ Sitzungen erstellen einen Freigabezustand zwischen zwei oder mehr Endpunkten, de
  [!code-vb[SCA.Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.session/vb/services.vb#1)]      
  [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]     
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>  
- <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>  
- <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>
+- <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>
+- <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType>

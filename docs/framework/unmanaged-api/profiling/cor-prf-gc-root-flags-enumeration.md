@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d5dcb089074b52fc87a0bb83c7e062e7ef07b46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4ce8fb8d9d941544982c8da852260b8018788a6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680743"
 ---
 # <a name="corprfgcrootflags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS-Enumeration
-Gibt eine Eigenschaft der Garbage Collection-Stamm.  
+Gibt eine Eigenschaft von einer Garbage Collection-Stamm.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,16 +41,16 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|Der Stamm wird verhindert, dass eine Garbagecollection, dass das Objekt verschoben werden.|  
-|`COR_PRF_GC_ROOT_WEAKREF`|Der Stamm verhindert keine Garbagecollection.|  
-|`COR_PRF_GC_ROOT_INTERIOR`|Der Stamm bezieht sich auf ein Feld des Objekts statt das Objekt selbst.|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|Der Stamm verhindert die Garbagecollection auf, wenn der Verweiszähler des Objekts einen bestimmten Wert ist.|  
+|`COR_PRF_GC_ROOT_PINNING`|Der Stamm wird verhindert, dass eine Garbagecollection von Verschieben des Objekts.|  
+|`COR_PRF_GC_ROOT_WEAKREF`|Der Stamm verhindert die automatische speicherbereinigung nicht.|  
+|`COR_PRF_GC_ROOT_INTERIOR`|Der Stamm bezieht sich auf ein Feld eines Objekts anstatt auf das Objekt selbst.|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|Der Stamm verhindert die Garbagecollection auf, wenn der Verweiszähler des Objekts auf einen bestimmten Wert ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- `COR_PRF_GC_ROOT_FLAGS` ist eine Bitmaske, die Weitere Informationen zu besonderen Stämmen bereitstellt. Allerdings sind nicht alle Stämme besondere. Beispielsweise sind einige Stämme nicht schwache Verweise, inneren Zeigern, die angeheftet oder mit verweiszählung. Für solche Stämme sind keine Flags zu vermitteln. Aus diesem Grund Methoden, die diese Enumeration, z. B. verwenden die [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) -Methode senden 0 für die Flags-Bitmaske, die angibt, dass alle flags deaktiviert werden.  
+ `COR_PRF_GC_ROOT_FLAGS` ist eine Bitmaske, die zusätzliche Informationen zu besonderen Stämmen bereitstellt. Nicht alle Stammzertifizierungsstellen sind jedoch spezielle. Beispielsweise sind einige Stämme nicht schwache Verweise, inneren Zeigern, angeheftete oder mit referenzzählung. Für solche Stämme sind keine Flags zu vermitteln. Aus diesem Grund Methoden, mit denen diese Enumeration, wie z. B. die [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) -Methode, senden Sie 0 für die Flags-Bitmaske, die angibt, dass alle flags deaktiviert werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -58,5 +58,5 @@ typedef enum {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

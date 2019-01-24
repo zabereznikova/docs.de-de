@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c942b9a94c83f5a3316cf3ae3ccbbad2b0ec69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ec8e5dfc92a818bfc23c28f3058086c3bd1a8ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597943"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx-Funktion
 Übersetzt einen HRESULT-Wert in eine entsprechende Fehlermeldung für die angegebene Kultur.  
@@ -43,13 +43,13 @@ HRESULT LoadStringRCEx (
   
 #### <a name="parameters"></a>Parameter  
  `lcid`  
- [in] Eine Kultur-ID. Übergeben Sie – 1 für `lcid` die Standardkultur verwenden.  
+ [in] Ein Kulturbezeichner. Übergeben Sie-1 für `lcid` die Standardkultur verwenden.  
   
  `iResourceID`  
  [in] Ein HRESULT.  
   
  `szBuffer`  
- [out] Ein Puffer, der nach dem erfolgreichen Abschluss die Fehlermeldung enthält.  
+ [out] Ein Puffer, der die Fehlermeldung nach dem erfolgreichen Abschluss enthält.  
   
  `iMax`  
  [in] Die Größe des Puffers für die Fehlermeldung.  
@@ -61,26 +61,26 @@ HRESULT LoadStringRCEx (
  [out] Ein Zeiger auf die Länge der Fehlermeldung.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Methode gibt COM-Standardfehlercodes in WinError.h definiert, zusätzlich zu den folgenden Werten zurück.  
+ Diese Methode gibt die standard-COM-Fehlercodes, zurück, wie in "Winerror.h", zusätzlich zu den folgenden Werten definiert.  
   
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_INVALIDARG|`szBuffer` ist null, oder `iMax` ist 0 (null).|  
+|E_INVALIDARG|`szBuffer` null ist, oder `iMax` ist 0 (null).|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn die Methode nicht erfolgreich abgeschlossen wird `szBuffer` enthält eine leere Zeichenfolge.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>  
- [LoadStringRC-Funktion](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)  
- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
+- [LoadStringRC-Funktion](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
+- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

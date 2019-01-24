@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 3e48c397cb97cdfeb476daaf09d997e9609b3467
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bd4e12a861207e5318e8f3f34b38204f6724e7b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201490"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652591"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Transportsicherheit mit Windows-Authentifizierung
 Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und Dienst, die durch die Windows-Sicherheit geschützt. Weitere Informationen zur Programmierung finden Sie unter [Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  
@@ -117,7 +117,7 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Vorgehensweise: Sichern eines Dienstes mit Windows-Anmeldeinformationen](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: d8fb10d1ad9218d8113c95a4c67dbb32cf87beb1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9cad6c798856fb77023bb52c528b9294f5f6d0bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131364"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656179"
 ---
 # <a name="local-transactions"></a>Lokale Transaktionen
 Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] verwendet, wenn mehrere Aufgaben miteinander verbunden werden sollen, damit sie als eine einzelne Verarbeitungseinheit ausgeführt werden können. Stellen Sie sich z.&#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zum einen aktualisiert sie eine Tabelle mit Bestellinformationen. Zum anderen aktualisiert sie eine Tabelle mit Bestandsinformationen und bucht die bestellten Artikel ab. Wenn der Task entweder ein Fehler auftritt, werden beide Aktualisierungen ein Rollback ausgeführt.  
@@ -47,8 +47,8 @@ Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Verteilte Transaktionen](../../../../docs/framework/data/adonet/distributed-transactions.md)  
- [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
+- [Verteilte Transaktionen](../../../../docs/framework/data/adonet/distributed-transactions.md)
+- [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

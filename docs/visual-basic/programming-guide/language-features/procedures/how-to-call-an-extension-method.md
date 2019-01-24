@@ -1,21 +1,21 @@
 ---
-title: 'Gewusst wie: Aufrufen einer Erweiterungsmethode (Visual Basic)'
+title: 'Vorgehensweise: Aufrufen einer Erweiterungsmethode (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 32691183bcd1632a82b1e9a2668790abbf8f80fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e9391a4c4a159cd5e198689bf7af7cd64c3a872
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648566"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620447"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a>Gewusst wie: Aufrufen einer Erweiterungsmethode (Visual Basic)
-Erweiterungsmethoden können Sie Methoden zur einer vorhandenen Klasse hinzugefügt. Nachdem eine Erweiterungsmethode deklariert und in den Gültigkeitsbereich eingebunden ist, können Sie es wie eine Instanzmethode des Typs aufrufen, die sie erweitert. Weitere Informationen über das Schreiben einer Erweiterungsmethode finden Sie unter [wie: Schreiben einer Erweiterungsmethode](./how-to-write-an-extension-method.md).  
+# <a name="how-to-call-an-extension-method-visual-basic"></a>Vorgehensweise: Aufrufen einer Erweiterungsmethode (Visual Basic)
+Erweiterungsmethoden können Sie einer vorhandenen Klasse Methoden hinzufügen. Nachdem eine Erweiterungsmethode deklariert und in den Gültigkeitsbereich eingebunden ist, können Sie es wie eine Instanzmethode des Typs aufrufen, die sie erweitert. Weitere Informationen dazu, wie Sie eine Erweiterungsmethode zu schreiben, finden Sie unter [Vorgehensweise: Schreiben einer Erweiterungsmethode](./how-to-write-an-extension-method.md).  
   
- Nachfolgend finden Sie unter Erweiterungsmethode `PrintAndPunctuate`, die die Zeichenfolgeninstanz angezeigt werden, die, gefolgt von den Wert, den aufgerufen, für den zweiten Parameter gesendet `punc`.  
+ Die folgenden Anweisungen beziehen sich auf Erweiterungsmethode `PrintAndPunctuate`, die die Zeichenfolgeninstanz angezeigt wird, der, gefolgt von den Wert, ruft Sie, für den zweiten Parameter gesendet `punc`.  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -32,21 +32,21 @@ End Module
   
  Die Methode muss im Gültigkeitsbereich sein, wenn sie aufgerufen wird.  
   
-### <a name="to-call-an-extension-method"></a>Aufrufen eine Erweiterungsmethode  
+### <a name="to-call-an-extension-method"></a>Zum Aufrufen einer Erweiterungsmethode  
   
-1.  Deklarieren Sie eine Variable, die den Datentyp des ersten Parameters der Erweiterungsmethode aufweist. Für `PrintAndPunctuate`, müssen Sie eine <xref:System.String> Variablen:  
+1.  Deklarieren Sie eine Variable, die den Datentyp des ersten Parameters der Erweiterungsmethode aufweist. Für `PrintAndPunctuate`, müssen Sie eine <xref:System.String> Variable:  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  Variable wird die Erweiterungsmethode aufgerufen, und sein Wert wird auf den ersten Parameter gebunden `aString`. Zeigt die folgenden aufrufanweisung `Ready?`.  
+2.  Auf den ersten Parameter, dessen Wert gebunden ist, dass Variablen wird die Erweiterungsmethode aufgerufen `aString`. Die folgende aufrufende Anweisung zeigt `Ready?`.  
   
     ```  
     example.PrintAndPunctuate("?")  
     ```  
   
-     Beachten Sie, die den Aufruf dieser Erweiterungsmethode nur aussieht wie einen Aufruf eines der <xref:System.String> Instanzmethoden, die einen Parameter erfordern:  
+     Beachten Sie, die den Aufruf dieser Erweiterungsmethode nur aussieht wie einen Aufruf eine von der <xref:System.String> Instanzmethoden, die einen Parameter erfordern:  
   
     ```  
     example.EndsWith("dy")  
@@ -94,7 +94,7 @@ End Module
 ' Goodbye?  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Schreiben einer Erweiterungsmethode](./how-to-write-an-extension-method.md)  
- [Erweiterungsmethoden](./extension-methods.md)  
- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Schreiben einer Erweiterungsmethode](./how-to-write-an-extension-method.md)
+- [Erweiterungsmethoden](./extension-methods.md)
+- [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

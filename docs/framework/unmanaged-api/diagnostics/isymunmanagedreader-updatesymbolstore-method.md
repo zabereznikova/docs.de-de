@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81f9db872e9904d2297221e266be710837d0fb66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3e5ae097314a935bc06272c0e8febfbaad620f13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427381"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667634"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore-Methode
-Aktualisiert den vorhandenen Symbolspeicher mit einem Deltasymbolspeicher. Diese Methode wird in bearbeiten und Fortfahren-Szenarien verwendet, um den Symbolspeicher Deltas mit der ursprünglichen portierbare ausführbare Datei (PE) Datei entsprechend zu aktualisieren.  
+Aktualisiert den vorhandenen Symbolspeicher mit einem Deltasymbolspeicher. Diese Methode wird in Szenarien mit bearbeiten und Fortfahren verwendet, um den Symbolspeicher Änderungen an der ursprünglichen übertragbaren ausführbaren Datei (PE) Datei entsprechend zu aktualisieren.  
   
 > [!NOTE]
->  Müssen Sie nur eine der angeben der `filename` oder `pIStream` Parameter, nicht beides. Wenn `filename` angegeben ist, wird mit den Symbolen in dieser Datei der Symbolspeicher aktualisiert. Wenn `pIStream` angegeben ist, wird der Speicher wird aktualisiert werden, mit den Daten aus der <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+>  Sie müssen nur eine der angeben der `filename` oder `pIStream` nicht beide Parameter. Wenn `filename` angegeben ist, wird für die Symbole in der Datei der Symbolspeicher aktualisiert werden. Wenn `pIStream` angegeben ist, wird mit den Daten aus der Speicher aktualisiert werden die <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ HRESULT UpdateSymbolStore (
  [in] Der Name der Datei, die den Symbolspeicher enthält.  
   
  `pIStream`  
- [in] Der Dateidatenstrom als Alternative zur verwendet die `filename` Parameter.  
+ [in] Als Alternative zu den Datei-Stream der `filename` Parameter.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.  
@@ -51,5 +51,5 @@ HRESULT UpdateSymbolStore (
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

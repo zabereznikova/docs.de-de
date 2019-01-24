@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: df4aa7f3bf046ec871333f665ab77fa460c4095c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6d79d3330154fff33abe5a401a70c6b9a20aad72
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842767"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660423"
 ---
 # <a name="animation-tips-and-tricks"></a>Tipps und Tricks zu Animationen
 Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], gibt es eine Reihe von Tipps und Tricks, die die Animationen vornehmen können, bieten eine bessere Leistung, und speichern Sie die Frustration.  
@@ -128,5 +128,5 @@ Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/t
   
  Weitere Informationen zu uhrobjekten finden Sie unter [Animation und zeitliche Steuerung Systemübersicht](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

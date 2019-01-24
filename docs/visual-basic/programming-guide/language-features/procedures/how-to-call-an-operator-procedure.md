@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Aufrufen einer Operatorprozedur (Visual Basic)'
+title: 'Vorgehensweise: Aufrufen einer Operatorprozedur (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: b1dc4477daa4ceb9dfc6a9a6ab3f041e68011acd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc658dd7ef001c8d3ef7761bd2a7889f70e9e4a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667582"
 ---
-# <a name="how-to-call-an-operator-procedure-visual-basic"></a>Gewusst wie: Aufrufen einer Operatorprozedur (Visual Basic)
-Sie aufrufen mit dem Symbol "Operator" in einem Ausdruck eine Operatorprozedur. Im Fall eines Konvertierungsoperators rufen Sie die [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) um einen Wert von einem Datentyp in einen anderen zu konvertieren.  
+# <a name="how-to-call-an-operator-procedure-visual-basic"></a>Vorgehensweise: Aufrufen einer Operatorprozedur (Visual Basic)
+Sie aufrufen mit dem Symbol "Operator" in einem Ausdruck eine Operatorprozedur. Im Falle eines Konvertierungsoperators rufen Sie die [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) zum Konvertieren eines Werts aus einem Datentyp in einen anderen.  
   
- Operatorprozeduren werden nicht explizit aufrufen. Verwenden Sie nur den Operator, oder die `CType` -Funktion in einer zuweisungsanweisung oder einen Ausdruck ein, die gleiche Weise, die Sie in der Regel einen Operator verwenden. Visual Basic führt der Aufruf die Operatorprozedur an.  
+ Sie Operatorprozeduren nicht explizit aufrufen. Sie verwenden einfach den Operator an, oder die `CType` -Funktion in einer zuweisungsanweisung oder ein Ausdruck, der die gleiche Weise, die Sie normalerweise einen Operator verwenden. Visual Basic ermöglicht den Aufruf an die Operatorprozedur an.  
   
- Definieren eines Operators in einer Klasse oder Struktur ist so genannte *überladen* den Operator.  
+ Definieren eines Operators in einer Klasse oder Struktur ist die Abkürzung *überladen* den Operator.  
   
-### <a name="to-call-an-operator-procedure"></a>Aufrufen eine Operatorprozedur  
+### <a name="to-call-an-operator-procedure"></a>Zum Aufrufen einer Operatorprozedur  
   
-1.  Verwenden Sie das Symbol "Operator" in einem Ausdruck auf die übliche Weise.  
+1.  Verwenden Sie das Symbol "Operator" in einem Ausdruck, auf die normale Weise.  
   
 2.  Achten Sie darauf, dass die Datentypen der Operanden für den Operator an, und in der richtigen Reihenfolge sind.  
   
-3.  Der Operator trägt dazu bei, den Wert des Ausdrucks wie erwartet.  
+3.  Der Operator unterstützt den Wert des Ausdrucks wie erwartet.  
   
 ### <a name="to-call-a-conversion-operator-procedure"></a>Eine Konvertierungsoperatorprozedur aufrufen  
   
@@ -39,28 +39,28 @@ Sie aufrufen mit dem Symbol "Operator" in einem Ausdruck eine Operatorprozedur. 
   
 2.  Achten Sie darauf, dass die Datentypen der Operanden für die Konvertierung an, und in der richtigen Reihenfolge sind.  
   
-3.  `CType` Ruft die Konvertierungsoperatorprozedur auf und gibt den konvertierten Wert zurück.  
+3.  `CType` Ruft die Konvertierungsoperatorprozedur und gibt den konvertierten Wert zurück.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt zwei <xref:System.TimeSpan> Strukturen, diese zusammenfügt und speichert das Ergebnis in einer dritten <xref:System.TimeSpan> Struktur. Die <xref:System.TimeSpan> Struktur definiert Operatorprozeduren mehrere Standardoperatoren überladen.  
   
  [!code-vb[VbVbcnProcedures#29](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
   
- Da <xref:System.TimeSpan> überlädt den Standard `+` -Operator, wird im vorherige Beispiel eine Operatorprozedur an, wenn den Wert des berechnet `combinedSpan`.  
+ Da <xref:System.TimeSpan> überlädt den Standard `+` -Operator, wird das vorherige Beispiel eine Operatorprozedur an, wenn den Wert des berechnet `combinedSpan`.  
   
- Ein Beispiel für eine Konvertierungsoperatorprozedur aufrufen, finden Sie unter [Vorgehensweise: Verwenden Sie eine Klasse, dass Operatoren definiert](./how-to-use-a-class-that-defines-operators.md).  
+ Ein Beispiel für eine Konvertierungsoperatorprozedur aufrufen, finden Sie unter [Vorgehensweise: Verwenden Sie eine Klasse, die Operatoren definiert](./how-to-use-a-class-that-defines-operators.md).  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Achten Sie darauf, dass die Klasse oder Struktur, die Sie verwenden den Operator definiert, die, den Sie verwenden möchten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Operatorprozeduren](./operator-procedures.md)  
- [Gewusst wie: Definieren eines Operators](./how-to-define-an-operator.md)  
- [Gewusst wie: Definieren eines Konvertierungsoperators](./how-to-define-a-conversion-operator.md)  
- [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)  
- [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)  
- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+## <a name="see-also"></a>Siehe auch
+- [Operatorprozeduren](./operator-procedures.md)
+- [Vorgehensweise: Definieren eines Operators](./how-to-define-an-operator.md)
+- [Vorgehensweise: Definieren eines Konvertierungsoperators](./how-to-define-a-conversion-operator.md)
+- [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
+- [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
+- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Vorgehensweise: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

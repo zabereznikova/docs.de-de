@@ -2,12 +2,12 @@
 title: Übersicht über WCF Syndication
 ms.date: 03/30/2017
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
-ms.openlocfilehash: cba14edc5743966c53f23b3dbf965c5472ed2702
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 82e8e1192b791dde1ca0ea7e030c7cfc82476b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718246"
 ---
 # <a name="wcf-syndication-overview"></a>Übersicht über WCF Syndication
 Windows Communication Foundation (WCF) bietet Unterstützung für das Verfügbarmachen von Syndication-Feeds von einem WCF-Dienst. Syndication ist ein Mechanismus der Anwendungsintegration, bei dem ein Server Anwendungsdaten in einem interoperablen, als Feed bezeichnetem Format verfügbar macht. Ein Feed ist eine Auflistung von Anwendungsdaten, die aus einigen feedeigenen Metadaten (Titel, Autor, URL und andere Metadaten) und einer Reihe von Feedelementen besteht. Innerhalb des Feeds sind die Feedelemente normalerweise in umgekehrter chronologischer Reihenfolge geordnet. Ein Feedelement besteht aus einem Standardsatz elementeigener Metadaten (Titel, URL, Erstellungsdatum, Kategorie und andere elementeigenen Metadaten) und einer beliebigen Anzahl anwendungsspezifischer Daten. Die beiden häufigsten Typen von Syndication-Feeds sind RSS Really Simple Syndication () 2.0 und Atom 1.0, die beide von WCF unterstützt werden.  
@@ -21,5 +21,5 @@ Windows Communication Foundation (WCF) bietet Unterstützung für das Verfügbar
 ## <a name="syndication-formats"></a>Syndication-Formate  
  Die WCF-Syndication-Plattform unterstützt RSS 2.0 und Atom 1.0.  
   
-## <a name="see-also"></a>Siehe auch  
- [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>Siehe auch
+- [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
