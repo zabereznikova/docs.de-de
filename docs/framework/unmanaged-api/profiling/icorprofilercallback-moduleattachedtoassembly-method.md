@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6b5281e30c48471131fa12e5106f7d0a6826e1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ff819ab67b258dbc7b5cec937863753852b1fcc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629318"
 ---
-# <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a><span data-ttu-id="663a0-102">ICorProfilerCallback::ModuleAttachedToAssembly-Methode</span><span class="sxs-lookup"><span data-stu-id="663a0-102">ICorProfilerCallback::ModuleAttachedToAssembly Method</span></span>
-<span data-ttu-id="663a0-103">Benachrichtigt den Profiler, dass ein Modul an seine übergeordnete Assembly verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="663a0-103">Notifies the profiler that a module is being attached to its parent assembly.</span></span>  
+# <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a><span data-ttu-id="f8068-102">ICorProfilerCallback::ModuleAttachedToAssembly-Methode</span><span class="sxs-lookup"><span data-stu-id="f8068-102">ICorProfilerCallback::ModuleAttachedToAssembly Method</span></span>
+<span data-ttu-id="f8068-103">Benachrichtigt den Profiler, dass ein Modul, dessen übergeordnete Assembly der angeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="f8068-103">Notifies the profiler that a module is being attached to its parent assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="663a0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="663a0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8068-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f8068-104">Syntax</span></span>  
   
 ```  
 HRESULT ModuleAttachedToAssembly(  
@@ -35,24 +35,24 @@ HRESULT ModuleAttachedToAssembly(
     [in] AssemblyID AssemblyId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="663a0-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="663a0-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f8068-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="f8068-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="663a0-106">[in] Die ID des Moduls, die angefügt wird.</span><span class="sxs-lookup"><span data-stu-id="663a0-106">[in] The ID of the module that is being attached.</span></span>  
+ <span data-ttu-id="f8068-106">[in] Die ID des Moduls, die angefügt wird.</span><span class="sxs-lookup"><span data-stu-id="f8068-106">[in] The ID of the module that is being attached.</span></span>  
   
  `AssemblyId`  
- <span data-ttu-id="663a0-107">[in] Die ID der übergeordneten Assembly, die das Modul angeschlossen ist.</span><span class="sxs-lookup"><span data-stu-id="663a0-107">[in] The ID of the parent assembly to which the module is attached.</span></span>  
+ <span data-ttu-id="f8068-107">[in] Die ID der übergeordneten Assembly, die das Modul zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="f8068-107">[in] The ID of the parent assembly to which the module is attached.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="663a0-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="663a0-108">Remarks</span></span>  
- <span data-ttu-id="663a0-109">Ein Modul kann durch eine Importadresstabelle (IAT), geladen werden, durch einen Aufruf von `LoadLibrary`, oder durch einen Metadatenverweis.</span><span class="sxs-lookup"><span data-stu-id="663a0-109">A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference.</span></span> <span data-ttu-id="663a0-110">Folglich weist das common Language Runtime (CLR)-Ladeprogramm mehrere Codepfade zur Bestimmung der Assembly, in der ein Modul aktiv ist.</span><span class="sxs-lookup"><span data-stu-id="663a0-110">As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives.</span></span> <span data-ttu-id="663a0-111">Daher ist es möglich, dass nach dem [ICorProfilerCallback:: ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) aufgerufen wird, wird das Modul weiß nicht, welche Assembly befindet sich im und Abrufen der übergeordneten Assembly-ID ist nicht möglich.</span><span class="sxs-lookup"><span data-stu-id="663a0-111">Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible.</span></span> <span data-ttu-id="663a0-112">Die `ModuleAttachedToAssembly` Methode wird aufgerufen, wenn das Modul, um die übergeordnete Assembly und der übergeordneten Assembly angeschlossen ist-ID abgerufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="663a0-112">The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f8068-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f8068-108">Remarks</span></span>  
+ <span data-ttu-id="f8068-109">Ein Modul kann durch eine Importadresstabelle (IAT), geladen werden, durch einen Aufruf von `LoadLibrary`, oder über einen Metadatenverweis.</span><span class="sxs-lookup"><span data-stu-id="f8068-109">A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference.</span></span> <span data-ttu-id="f8068-110">Daher hat das common Language Runtime (CLR)-Ladeprogramm mehrere Codepfade zur Bestimmung der Assembly, in der ein Modul befindet.</span><span class="sxs-lookup"><span data-stu-id="f8068-110">As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives.</span></span> <span data-ttu-id="f8068-111">Daher ist es möglich, dass Sie nach [ICorProfilerCallback:: ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) aufgerufen wird, wird das Modul ist nicht bekannt, welche Assembly ist, und die übergeordnete Assembly-ID ist nicht möglich.</span><span class="sxs-lookup"><span data-stu-id="f8068-111">Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible.</span></span> <span data-ttu-id="f8068-112">Die `ModuleAttachedToAssembly` Methode wird aufgerufen, wenn das Modul, um die übergeordnete Assembly und die übergeordnete Assembly angefügt wird-ID abgerufen werden kann.</span><span class="sxs-lookup"><span data-stu-id="f8068-112">The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="663a0-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="663a0-113">Requirements</span></span>  
- <span data-ttu-id="663a0-114">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="663a0-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8068-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f8068-113">Requirements</span></span>  
+ <span data-ttu-id="f8068-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8068-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="663a0-115">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="663a0-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f8068-115">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f8068-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="663a0-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="663a0-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f8068-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f8068-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="663a0-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="663a0-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f8068-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8068-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="663a0-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="663a0-118">See Also</span></span>  
- [<span data-ttu-id="663a0-119">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="663a0-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f8068-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f8068-118">See also</span></span>
+- [<span data-ttu-id="f8068-119">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f8068-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

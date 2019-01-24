@@ -1,27 +1,27 @@
 ---
-title: 'Gewusst wie: Anzeigen von LINQ to SQL-Befehlen'
+title: 'Vorgehensweise: Anzeigen von LINQ to SQL-Befehlen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: 2be4096f03fe73f417b4b1871ebfc3b4f0f67206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a70f1e0dd471e86afe2e744c157d4aed2a217deb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359890"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630826"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="512c5-102">Gewusst wie: Anzeigen von LINQ to SQL-Befehlen</span><span class="sxs-lookup"><span data-stu-id="512c5-102">How to: Display LINQ to SQL Commands</span></span>
-<span data-ttu-id="512c5-103">Verwenden Sie <xref:System.Data.Linq.DataContext.GetCommand%2A> zur Anzeige von SQL-Befehlen und anderen Informationen.</span><span class="sxs-lookup"><span data-stu-id="512c5-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
+# <a name="how-to-display-linq-to-sql-commands"></a><span data-ttu-id="2d507-102">Vorgehensweise: Anzeigen von LINQ to SQL-Befehlen</span><span class="sxs-lookup"><span data-stu-id="2d507-102">How to: Display LINQ to SQL Commands</span></span>
+<span data-ttu-id="2d507-103">Verwenden Sie <xref:System.Data.Linq.DataContext.GetCommand%2A> zur Anzeige von SQL-Befehlen und anderen Informationen.</span><span class="sxs-lookup"><span data-stu-id="2d507-103">Use <xref:System.Data.Linq.DataContext.GetCommand%2A> to display SQL commands and other information.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="512c5-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="512c5-104">Example</span></span>  
- <span data-ttu-id="512c5-105">Im folgenden Beispiel zeigt das Konsolenfenster die Ausgabe der Abfrage, gefolgt von den erzeugten SQL-Befehlen, den Befehlstypen und den Verbindungstypen an.</span><span class="sxs-lookup"><span data-stu-id="512c5-105">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
+## <a name="example"></a><span data-ttu-id="2d507-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="2d507-104">Example</span></span>  
+ <span data-ttu-id="2d507-105">Im folgenden Beispiel zeigt das Konsolenfenster die Ausgabe der Abfrage, gefolgt von den erzeugten SQL-Befehlen, den Befehlstypen und den Verbindungstypen an.</span><span class="sxs-lookup"><span data-stu-id="2d507-105">In the following example, the console window displays the output from the query, followed by the SQL commands that are generated, the type of commands, and the type of connection.</span></span>  
   
  [!code-csharp[DLinqDebuggingSupport#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#3)]
  [!code-vb[DLinqDebuggingSupport#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#3)]  
   
- <span data-ttu-id="512c5-106">Die Ausgabe erscheint wie folgt:</span><span class="sxs-lookup"><span data-stu-id="512c5-106">Output appears as follows:</span></span>  
+ <span data-ttu-id="2d507-106">Die Ausgabe erscheint wie folgt:</span><span class="sxs-lookup"><span data-stu-id="2d507-106">Output appears as follows:</span></span>  
   
 ```  
 Customers from London:  
@@ -48,5 +48,5 @@ Command Type: Text
 Connection: System.Data.SqlClient.SqlConnection  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="512c5-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="512c5-107">See Also</span></span>  
- [<span data-ttu-id="512c5-108">Debugunterstützung</span><span class="sxs-lookup"><span data-stu-id="512c5-108">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a><span data-ttu-id="2d507-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2d507-107">See also</span></span>
+- [<span data-ttu-id="2d507-108">Debugunterstützung</span><span class="sxs-lookup"><span data-stu-id="2d507-108">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)

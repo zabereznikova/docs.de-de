@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02ca9ed57e62d2c066de2d7c1a1e4b57094dbc0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 10f2b65b65a5e15239f731ddcb471ee7548e1631
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413354"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638058"
 ---
-# <a name="icordebugmanagedcallbackunloadmodule-method"></a><span data-ttu-id="b5f21-102">ICorDebugManagedCallback::UnloadModule-Methode</span><span class="sxs-lookup"><span data-stu-id="b5f21-102">ICorDebugManagedCallback::UnloadModule Method</span></span>
-<span data-ttu-id="b5f21-103">Benachrichtigt den Debugger, dass ein common Language Runtime-Modul (DLL) entladen wurde.</span><span class="sxs-lookup"><span data-stu-id="b5f21-103">Notifies the debugger that a common language runtime module (DLL) has been unloaded.</span></span>  
+# <a name="icordebugmanagedcallbackunloadmodule-method"></a><span data-ttu-id="2fb91-102">ICorDebugManagedCallback::UnloadModule-Methode</span><span class="sxs-lookup"><span data-stu-id="2fb91-102">ICorDebugManagedCallback::UnloadModule Method</span></span>
+<span data-ttu-id="2fb91-103">Benachrichtigt den Debugger, dass ein common Language Runtime-Modul (DLL) entladen wurde.</span><span class="sxs-lookup"><span data-stu-id="2fb91-103">Notifies the debugger that a common language runtime module (DLL) has been unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b5f21-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b5f21-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2fb91-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2fb91-104">Syntax</span></span>  
   
 ```  
 HRESULT UnloadModule (  
@@ -36,25 +36,25 @@ HRESULT UnloadModule (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b5f21-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="b5f21-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2fb91-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="2fb91-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="b5f21-106">[in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die das Modul enthält.</span><span class="sxs-lookup"><span data-stu-id="b5f21-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contained the module.</span></span>  
+ <span data-ttu-id="2fb91-106">[in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die das Modul enthält.</span><span class="sxs-lookup"><span data-stu-id="2fb91-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain that contained the module.</span></span>  
   
  `pModule`  
- <span data-ttu-id="b5f21-107">[in] Ein Zeiger auf ein ICorDebugModule-Objekt, das Modul darstellt.</span><span class="sxs-lookup"><span data-stu-id="b5f21-107">[in] A pointer to an ICorDebugModule object that represents the module.</span></span>  
+ <span data-ttu-id="2fb91-107">[in] Ein Zeiger auf ein ICorDebugModule-Objekt, das das Modul darstellt.</span><span class="sxs-lookup"><span data-stu-id="2fb91-107">[in] A pointer to an ICorDebugModule object that represents the module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b5f21-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b5f21-108">Remarks</span></span>  
- <span data-ttu-id="b5f21-109">Das Modul muss nach diesem Aufruf nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b5f21-109">The module should not be used after this call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2fb91-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2fb91-108">Remarks</span></span>  
+ <span data-ttu-id="2fb91-109">Das Modul sollte nach dem Aufruf nicht verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2fb91-109">The module should not be used after this call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b5f21-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b5f21-110">Requirements</span></span>  
- <span data-ttu-id="b5f21-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5f21-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2fb91-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2fb91-110">Requirements</span></span>  
+ <span data-ttu-id="2fb91-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2fb91-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b5f21-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b5f21-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2fb91-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2fb91-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b5f21-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b5f21-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2fb91-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2fb91-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b5f21-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5f21-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2fb91-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2fb91-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5f21-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b5f21-115">See Also</span></span>  
- [<span data-ttu-id="b5f21-116">LoadModule-Methode</span><span class="sxs-lookup"><span data-stu-id="b5f21-116">LoadModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)  
- [<span data-ttu-id="b5f21-117">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b5f21-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2fb91-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2fb91-115">See also</span></span>
+- [<span data-ttu-id="2fb91-116">LoadModule-Methode</span><span class="sxs-lookup"><span data-stu-id="2fb91-116">LoadModule Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)
+- [<span data-ttu-id="2fb91-117">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2fb91-117">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

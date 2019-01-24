@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9351738e979b49ec23b51a2fa554fc219e163541
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0a6c39989a37f46d684c3a467d5e099ea7167185
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624131"
 ---
-# <a name="imetadataconvertergettypelibfrommetadata-method"></a><span data-ttu-id="de2b9-102">IMetaDataConverter::GetTypeLibFromMetaData-Methode</span><span class="sxs-lookup"><span data-stu-id="de2b9-102">IMetaDataConverter::GetTypeLibFromMetaData Method</span></span>
-<span data-ttu-id="de2b9-103">Ruft einen Zeiger auf eine `ITypeLib` Instanz, die die Typbibliothek darstellt, die die angegebene Bibliothek und Module-Namen aufweist.</span><span class="sxs-lookup"><span data-stu-id="de2b9-103">Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.</span></span>  
+# <a name="imetadataconvertergettypelibfrommetadata-method"></a><span data-ttu-id="4f341-102">IMetaDataConverter::GetTypeLibFromMetaData-Methode</span><span class="sxs-lookup"><span data-stu-id="4f341-102">IMetaDataConverter::GetTypeLibFromMetaData Method</span></span>
+<span data-ttu-id="4f341-103">Ruft einen Zeiger auf ein `ITypeLib` -Instanz, die die Typbibliothek darstellt, die Namen der angegebenen Bibliothek "und"-Modul.</span><span class="sxs-lookup"><span data-stu-id="4f341-103">Gets a pointer to an `ITypeLib` instance that represents the type library that has the specified library and module names.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de2b9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="de2b9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4f341-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4f341-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeLibFromMetaData (  
@@ -37,24 +37,24 @@ HRESULT GetTypeLibFromMetaData (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="de2b9-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="de2b9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4f341-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="4f341-105">Parameters</span></span>  
  `strModule`  
- <span data-ttu-id="de2b9-106">[in] Der Name des Moduls der Typbibliothek.</span><span class="sxs-lookup"><span data-stu-id="de2b9-106">[in] The name of the type library's module.</span></span>  
+ <span data-ttu-id="4f341-106">[in] Der Name des Moduls für die Typbibliothek.</span><span class="sxs-lookup"><span data-stu-id="4f341-106">[in] The name of the type library's module.</span></span>  
   
  `strTlbName`  
- <span data-ttu-id="de2b9-107">[in] Der Name der Typbibliothek.</span><span class="sxs-lookup"><span data-stu-id="de2b9-107">[in] The name of the type library.</span></span>  
+ <span data-ttu-id="4f341-107">[in] Der Name der Typbibliothek.</span><span class="sxs-lookup"><span data-stu-id="4f341-107">[in] The name of the type library.</span></span>  
   
  `ppITL`  
- <span data-ttu-id="de2b9-108">[out] Ein Zeiger auf einen Speicherort, der die Adresse des empfängt die `ITypeLib` Instanz, die die Typbibliothek darstellt.</span><span class="sxs-lookup"><span data-stu-id="de2b9-108">[out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.</span></span>  
+ <span data-ttu-id="4f341-108">[out] Ein Zeiger auf einen Speicherort, die Adresse des empfängt, die `ITypeLib` -Instanz, die die Typbibliothek darstellt.</span><span class="sxs-lookup"><span data-stu-id="4f341-108">[out] A pointer to a location that receives the address of the `ITypeLib` instance that represents the type library.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="de2b9-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="de2b9-109">Requirements</span></span>  
- <span data-ttu-id="de2b9-110">**Plattform:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="de2b9-110">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4f341-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4f341-109">Requirements</span></span>  
+ <span data-ttu-id="4f341-110">**Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4f341-110">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="de2b9-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="de2b9-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="4f341-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="4f341-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="de2b9-112">**Bibliothek:** als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="de2b9-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="4f341-112">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="4f341-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="de2b9-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de2b9-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4f341-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f341-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de2b9-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="de2b9-114">See Also</span></span>  
- [<span data-ttu-id="de2b9-115">IMetaDataConverter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="de2b9-115">IMetaDataConverter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4f341-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4f341-114">See also</span></span>
+- [<span data-ttu-id="4f341-115">IMetaDataConverter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="4f341-115">IMetaDataConverter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)

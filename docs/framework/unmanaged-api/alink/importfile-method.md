@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54b0a02af7f22e775e3f9567de79664c9805b4e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 116ed60dab3365cac052d3b13ce7b056caca0452
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54619677"
 ---
-# <a name="importfile-method"></a><span data-ttu-id="a78ca-102">ImportFile-Methode</span><span class="sxs-lookup"><span data-stu-id="a78ca-102">ImportFile Method</span></span>
-<span data-ttu-id="a78ca-103">Imports-Assemblys und ungebundenen Modulen.</span><span class="sxs-lookup"><span data-stu-id="a78ca-103">Imports assemblies and unbound modules.</span></span>  
+# <a name="importfile-method"></a><span data-ttu-id="7579b-102">ImportFile-Methode</span><span class="sxs-lookup"><span data-stu-id="7579b-102">ImportFile Method</span></span>
+<span data-ttu-id="7579b-103">Assemblys und ungebundenen Modulen importiert.</span><span class="sxs-lookup"><span data-stu-id="7579b-103">Imports assemblies and unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a78ca-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a78ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7579b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7579b-104">Syntax</span></span>  
   
 ```  
 HRESULT ImportFile(  
@@ -39,32 +39,32 @@ HRESULT ImportFile(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a78ca-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a78ca-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7579b-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7579b-105">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="a78ca-106">Vollständig qualifizierte Name des zu importierenden Datei.</span><span class="sxs-lookup"><span data-stu-id="a78ca-106">Fully qualified name of file to be imported.</span></span>  
+ <span data-ttu-id="7579b-106">Voll gekennzeichnete Name des zu importierenden Datei.</span><span class="sxs-lookup"><span data-stu-id="7579b-106">Fully qualified name of file to be imported.</span></span>  
   
  `pszTargetName`  
- <span data-ttu-id="a78ca-107">Optionale Ausgabedateiname, der verwendet werden kann, um die Datei zu benennen, wie sie in der Assembly verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="a78ca-107">Optional output file name that can be used to rename the file as it is linked into the assembly.</span></span>  
+ <span data-ttu-id="7579b-107">Optionale Ausgabedateinamen, die verwendet werden kann, um die Datei umzubenennen, da sie in der Assembly verknüpft ist.</span><span class="sxs-lookup"><span data-stu-id="7579b-107">Optional output file name that can be used to rename the file as it is linked into the assembly.</span></span>  
   
  `fSmartImport`  
- <span data-ttu-id="a78ca-108">Bei "true", ImportTypes verwendet wird, andernfalls importieren muss manuell durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="a78ca-108">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
+ <span data-ttu-id="7579b-108">True gibt an, ImportTypes wird verwendet, andernfalls importieren muss manuell durchgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="7579b-108">If TRUE, ImportTypes is used, otherwise importing must be performed manually.</span></span>  
   
  `pImportToken`  
- <span data-ttu-id="a78ca-109">Ein Zeiger auf das token, wo eine eindeutige Datei-ID gespeichert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="a78ca-109">Pointer to token where a unique file ID will be stored.</span></span> <span data-ttu-id="a78ca-110">Die Datei kann es sich um eine Assembly oder eine Datei sein.</span><span class="sxs-lookup"><span data-stu-id="a78ca-110">The file can be an assembly or a file.</span></span>  
+ <span data-ttu-id="7579b-109">Zeiger auf das token, wo eine eindeutige Datei-ID gespeichert werden sollen.</span><span class="sxs-lookup"><span data-stu-id="7579b-109">Pointer to token where a unique file ID will be stored.</span></span> <span data-ttu-id="7579b-110">Die Datei kann es sich um eine Assembly oder eine Datei sein.</span><span class="sxs-lookup"><span data-stu-id="7579b-110">The file can be an assembly or a file.</span></span>  
   
  `ppAssemblyScope`  
- <span data-ttu-id="a78ca-111">Zeiger auf empfängt [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md).</span><span class="sxs-lookup"><span data-stu-id="a78ca-111">Receives pointer to [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md).</span></span> <span data-ttu-id="a78ca-112">NULL kann sein, wenn die Datei keine Assembly ist.</span><span class="sxs-lookup"><span data-stu-id="a78ca-112">Can be NULL if the file is not an assembly.</span></span>  
+ <span data-ttu-id="7579b-111">Zeiger auf empfängt [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md).</span><span class="sxs-lookup"><span data-stu-id="7579b-111">Receives pointer to [IMetaDataAssemblyImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md).</span></span> <span data-ttu-id="7579b-112">NULL kann sein, wenn die Datei keine Assembly ist.</span><span class="sxs-lookup"><span data-stu-id="7579b-112">Can be NULL if the file is not an assembly.</span></span>  
   
  `pdwCountOfScopes`  
- <span data-ttu-id="a78ca-113">Ein Zeiger auf die Anzahl der Dateien und/oder Bereiche, die importiert wurden.</span><span class="sxs-lookup"><span data-stu-id="a78ca-113">Pointer to the count of files and/or scopes that have been imported.</span></span>  
+ <span data-ttu-id="7579b-113">Zeiger auf die Anzahl der Dateien bzw. Bereiche, die importiert wurden.</span><span class="sxs-lookup"><span data-stu-id="7579b-113">Pointer to the count of files and/or scopes that have been imported.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a78ca-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="a78ca-114">Return Value</span></span>  
- <span data-ttu-id="a78ca-115">Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="a78ca-115">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7579b-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7579b-114">Return Value</span></span>  
+ <span data-ttu-id="7579b-115">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="7579b-115">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a78ca-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a78ca-116">Requirements</span></span>  
- <span data-ttu-id="a78ca-117">Erfordert alink.h</span><span class="sxs-lookup"><span data-stu-id="a78ca-117">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7579b-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7579b-116">Requirements</span></span>  
+ <span data-ttu-id="7579b-117">Erfordert alink.h</span><span class="sxs-lookup"><span data-stu-id="7579b-117">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a78ca-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a78ca-118">See Also</span></span>  
- [<span data-ttu-id="a78ca-119">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a78ca-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="a78ca-120">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a78ca-120">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="a78ca-121">Alink-API</span><span class="sxs-lookup"><span data-stu-id="a78ca-121">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="7579b-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7579b-118">See also</span></span>
+- [<span data-ttu-id="7579b-119">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7579b-119">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="7579b-120">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7579b-120">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="7579b-121">Alink-API</span><span class="sxs-lookup"><span data-stu-id="7579b-121">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
