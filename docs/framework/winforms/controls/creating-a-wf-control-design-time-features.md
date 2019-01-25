@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: cb102ec9b3a7eb4673f42c2ca5ad876e049ff59c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8c5ab9ac832ebf98584273bb8c4a7de12b3b8085
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595278"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das von Visual Studio-Entwurfszeitfunktionen nutzt
 Die zur Entwurfszeit für ein benutzerdefiniertes Steuerelement kann verbessert werden, indem Sie einen zugeordneten benutzerdefinierten Designer erstellen.  
@@ -583,7 +583,7 @@ private IWindowsFormsEditorService editorService;
   
 6.  Mit der rechten Maustaste die `DemoMarqueeControl` , und wählen Sie in der Verknüpfung im Menü der **Test ausführen** Option aus, um die Animation zu starten. Klicken Sie auf **Test beenden** die Animation beendet.  
   
-7.  Open **Form1** in der Entwurfsansicht.  
+7.  Öffnen Sie **Form1** in der Designansicht.  
   
 8.  Platzieren Sie zwei <xref:System.Windows.Forms.Button> Steuerelemente im Formular. Nennen Sie diese `startButton` und `stopButton`, und ändern Sie die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaftswerte **starten** und **beenden**bzw.  
   
@@ -638,9 +638,9 @@ private void stopButton_Click(object sender, System.EventArgs e)
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>
 - <xref:System.Windows.Forms.Design.DocumentDesigner>
 - <xref:System.ComponentModel.Design.IRootDesigner>
-- <xref:System.ComponentModel.Design.DesignerVerb> 
+- <xref:System.ComponentModel.Design.DesignerVerb>
 - <xref:System.Drawing.Design.UITypeEditor>
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
-- [Erweitern der Entwurfszeitunterstützung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) 
+- [Erweitern der Entwurfszeitunterstützung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Benutzerdefinierte Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

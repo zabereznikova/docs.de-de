@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: cd5a416c4eafa5b6260b49873fe2d4c2ed3a6af8
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f18d6e98e40c8517bbee32702f03dad57064051a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266798"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661335"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wann haben Sie jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Code möglich effektiver mindestens wiederverwenden Teil dieses Codes in Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung anstatt sie von Grund auf neu zu schreiben. Das häufigste Szenario ist, wenn Sie vorhandenen Windows Forms-Steuerelemente haben. In einigen Fällen können Sie vielleicht gar nicht mehr auf den Quellcode für diese Steuerelemente zugreifen. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet ein einfaches Verfahren zum Hosten solcher Steuerelemente in einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung. Beispielsweise können Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] für den Großteil der Programmierung beim Hosten Ihrer speziellen <xref:System.Windows.Forms.DataGridView> Steuerelemente.  
@@ -30,9 +30,9 @@ ms.locfileid: "48266798"
   
  Eine vollständige codeauflistung der Aufgaben in dieser exemplarischen Vorgehensweise veranschaulicht, finden Sie unter [Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF-Beispiel](https://go.microsoft.com/fwlink/?LinkID=159999).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
 
-Sie benötigen Visual Studio zum Durchführen dieser exemplarischen Vorgehensweise.
+Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Implementieren des zusammengesetzten Windows Forms-Steuerelements  
  In diesem Beispiel verwendeten zusammengesetzte Windows Forms-Steuerelement ist ein einfaches Dateneingabeformular. Dieses Formular erfasst den Namen und die Adresse des Benutzers und gibt diese Information unter Verwendung eines benutzerdefinierten Ereignisses an den Host zurück. Die folgende Abbildung zeigt das gerenderte Steuerelement.  
@@ -89,7 +89,7 @@ Zusammengesetztes Windows Forms-Steuerelement
 ### <a name="implementing-the-supporting-code"></a>Implementieren des unterstützenden Codes  
  Öffnen Sie das Formular in der Codeansicht. Das Steuerelement und gibt Sie die gesammelten Daten auf den Host durch Auslösen der benutzerdefiniertes `OnButtonClick` Ereignis. Die Daten sind im Ereignisargumentobjekt enthalten. Der folgende Code zeigt die Deklaration von Ereignis und Delegat.  
   
- Fügen Sie der `MyControl1`-Klasse folgenden Code hinzu.  
+ Fügen Sie der `MyControl1` -Klasse folgenden Code hinzu.  
   
  [!code-csharp[WpfHostingWindowsFormsControl#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/MyControls/MyControl1.cs#2)]
  [!code-vb[WpfHostingWindowsFormsControl#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/MyControls/MyControl1.vb#2)]
@@ -103,7 +103,7 @@ Zusammengesetztes Windows Forms-Steuerelement
 
  Klickt der Benutzer die **OK** oder **Abbrechen** Schaltfläche der <xref:System.Windows.Forms.Control.Click> -Ereignishandler zu erstellen einen `MyControlEventArgs` -Objekt, das die Daten enthält und löst die `OnButtonClick` Ereignis. Der einzige Unterschied zwischen den zwei Handler ist des Ereignisarguments `IsOK` Eigenschaft. Diese Eigenschaft ermöglicht es dem Host, zu bestimmen, auf welche Schaltfläche geklickt wurde. Wird festgelegt `true` für die **OK** Schaltfläche und `false` für die **Abbrechen** Schaltfläche. Der folgende Code zeigt die Handler der Schaltflächen.
 
- Fügen Sie der `MyControl1`-Klasse folgenden Code hinzu.
+ Fügen Sie der `MyControl1` -Klasse folgenden Code hinzu.
 
  [!code-csharp[WpfHostingWindowsFormsControl#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/MyControls/MyControl1.cs#4)]
  [!code-vb[WpfHostingWindowsFormsControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/MyControls/MyControl1.vb#4)]
@@ -218,7 +218,7 @@ using MyControls;
 #### <a name="handling-the-onbuttonclick-event"></a>Behandeln des OnButtonClick-Ereignisses
  `MyControl1` löst die `OnButtonClick` Ereignis aus, wenn der Benutzer auf eine der Schaltflächen des Steuerelements klickt.
 
- Fügen Sie der `MainWindow`-Klasse folgenden Code hinzu.
+ Fügen Sie der `MainWindow` -Klasse folgenden Code hinzu.
 
  [!code-csharp[WpfHostingWindowsFormsControl#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml.cs#12)]
  [!code-vb[WpfHostingWindowsFormsControl#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/WpfHost/Page1.xaml.vb#12)]
@@ -228,16 +228,16 @@ using MyControls;
 #### <a name="modifying-the-controls-properties"></a>Ändern der Eigenschaften des Steuerelements
  Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element macht mehrere Standardeigenschaften des gehosteten Steuerelements verfügbar. Daher können Sie die Darstellung des Steuerelements besser dem Format Ihrer Anwendung entsprechend anpassen. Die Gruppe von Optionsschaltflächen im linken Bereich erlauben es dem Benutzer, mehrere Farb- und Schriftart-Eigenschaften zu ändern. Jede Schaltflächengruppe besitzt einen Handler für die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis, das der Benutzer die Auswahl an Optionsschaltflächen ermittelt und die entsprechende Eigenschaft des Steuerelements ändert.
 
- Fügen Sie der `MainWindow`-Klasse folgenden Code hinzu.
+ Fügen Sie der `MainWindow` -Klasse folgenden Code hinzu.
 
  [!code-csharp[WpfHostingWindowsFormsControl#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/CSharp/WpfHost/Page1.xaml.cs#13)]
  [!code-vb[WpfHostingWindowsFormsControl#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfHostingWindowsFormsControl/VisualBasic/WpfHost/Page1.xaml.vb#13)]  
   
  Erstellen Sie die Anwendung, und führen Sie sie aus. Fügen Sie dem zusammengesetzten Windows Forms-Steuerelement etwas Text hinzu, und klicken Sie dann auf **OK**. Der Text wird in den Beschriftungen angezeigt. Klicken Sie auf die verschiedenen Optionsfelder, um die Auswirkung auf das Steuerelement zu sehen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)  
- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

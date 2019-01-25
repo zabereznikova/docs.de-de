@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fc610f4cc34b256867396a3390d5ccd0822f6454
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 34a2ca5b505c504115af47402c3d92a05ec0676f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737632"
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE-Enumeration
-Zeigt an, ob ein Feld statisch ist und, falls dies der Fall ist, ob die statische Qualität für das Feld gilt. Diese Werte können kombiniert werden, verwenden die bitweise OR-Operation, um anzugeben, dass das Feld mehrere verschiedene statische Qualitäten.  
+Zeigt an, ob ein Feld statisch ist und, falls dies der Fall ist, ob die statische Qualität für das Feld gilt. Diese Werte können kombiniert werden, die bitweise OR-Operation verwenden, um anzugeben, dass das Feld mehrere verschiedene statische Eigenschaften.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,13 +43,13 @@ typedef enum {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_NOT_A_STATIC`|Das Feld ist nicht statisch.|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|Das Feld ist Anwendung statische Domäne.|  
-|`COR_PRF_FIELD_THREAD_STATIC`|Das Feld ist threadstatische.|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|Das Feld ist statischen Kontext.|  
-|`COR_PRF_FIELD_RVA_STATIC`|Das Feld wird die relative virtuelle Adresse (RVA)-statisch.|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|Das Feld ist die Anwendung statischen Domäne.|  
+|`COR_PRF_FIELD_THREAD_STATIC`|Das Feld ist threadstatischen.|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|Das Feld ist kontextstatische.|  
+|`COR_PRF_FIELD_RVA_STATIC`|Das Feld ist die relative virtuelle Adresse (RVA) – statisch.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -57,5 +57,5 @@ typedef enum {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

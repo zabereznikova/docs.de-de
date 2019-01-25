@@ -12,12 +12,12 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: 240492590fab4579b9d984d5dce759f6d9f8cbab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153110"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646606"
 ---
 # <a name="struct-design"></a>Strukturentwurf
 Der allgemeine Typ wird meist als eine Struktur, die c#-Schlüsselwort bezeichnet. Dieser Abschnitt enthält Richtlinien für den Strukturentwurf von allgemeinen.  
@@ -48,6 +48,6 @@ Der allgemeine Typ wird meist als eine Struktur, die c#-Schlüsselwort bezeichne
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)  
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Richtlinien für den Entwurf von Typen](../../../docs/standard/design-guidelines/type.md)
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Auswählen zwischen Klasse und Struktur](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

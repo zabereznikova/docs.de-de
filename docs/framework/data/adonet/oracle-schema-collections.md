@@ -2,12 +2,12 @@
 title: Oracle-Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 80623a1abcaeee642b9206edc106d1a4ea74d63b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44217346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694463"
 ---
 # <a name="oracle-schema-collections"></a>Oracle-Schemaauflistungen
 Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den allgemeinen Schemaauflistungen die folgenden spezifischen Schemaauflistungen:  
@@ -107,7 +107,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |SECONDARY|Zeichenfolge|Gibt an, ob der Index ein sekundäres Objekt von der ODCIIndexCreate-Methode der Oracle9i Data Cartridge erstellt wurde (Y&#124;N).|  
 |BUFFER_POOL|Zeichenfolge|Name des Standardpufferpools, der für die Indexblöcke verwendet wird.|  
 |USER_STATS|Zeichenfolge|Gibt an, ob die Statistik direkt vom Benutzer eingegeben wurde.|  
-|DURATION|Zeichenfolge|Gibt die Dauer einer temporären Tabelle an: 1) SYS$SESSION: Die Zeilen werden für die Dauer der Sitzung beibehalten. 2) SYS$TRANSACTION: Die Zeilen werden nach dem COMMIT gelöscht. 3) NULL für eine dauerhafte Tabelle.|  
+|DURATION|Zeichenfolge|Gibt an, wie lange eine temporäre Tabelle vorhanden ist: (1) SYS$ SESSION: die Zeilen bleiben für die Dauer der Sitzung, (2) SYS$ TRANSACTION: die Zeilen werden nach dem COMMIT (3) Null für eine dauerhafte Tabelle gelöscht.|  
 |PCT_DIRECT_ACCESS|Decimal|Der prozentuale Anteil von Reihen mit dem geschätzten Wert VALID bei einem sekundären Index in einer nach dem Index sortierten Tabelle |  
 |ITYP_OWNER|Zeichenfolge|Der Besitzer des Indextyps eines Domänenindexes.|  
 |ITYP_NAME|Zeichenfolge|Der Name des Indextyps eines Domänenindexes.|  
@@ -115,7 +115,7 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |GLOBAL_STATS|Zeichenfolge|Gibt bei partitionierten Indizes an, ob Statistiken durch eine Analyse des gesamten Indexes erstellt wurden (YES) oder ob sie anhand von Statistiken zugrunde liegender Indexpartitionen und Unterpartitionen geschätzt wurden (NO).|  
 |DOMIDX_STATUS|Zeichenfolge|Gibt den Status des Domänenindexes an. NULL: Bei dem angegebenen Index handelt es sich nicht um einen Domänenindex. VALID: Bei dem Index handelt es sich um einen gültigen Domänenindex. IDXTYP_INVLD: Der Indextyp dieses Domänenindexes ist ungültig.|  
 |DOMIDX_OPSTATUS|Zeichenfolge|Gibt den Status eines Vorgangs an, der für einen Domänenindex durchgeführt wurde. NULL: Bei dem angegebenen Index handelt es sich nicht um einen Domänenindex. VALID: Der Vorgang wurde fehlerfrei durchgeführt. FAILED: Bei diesem Vorgang ist ein Fehler aufgetreten.|  
-|FUNCIDX_STATUS|Zeichenfolge|Gibt den Status eines funktionsbasierten Indexes an. NULL: Dies ist kein funktionsbasierter Index. ENABLED: Der funktionsbasierte Index ist aktiviert. DISABLED: Der funktionsbasierte Index ist deaktiviert.|  
+|FUNCIDX_STATUS|Zeichenfolge|Gibt den Status eines funktionsbasierten Indexes an. NULL: Dies ist kein funktionsbasierter index, ENABLED: der funktionsbasierte Index ist aktiviert, deaktiviert: der funktionsbasierte Index ist deaktiviert.|  
 |JOIN_INDEX|Zeichenfolge|Gibt an, ob es sich hierbei um einen Joinindex handelt oder nicht.|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
@@ -379,5 +379,5 @@ Der Microsoft .NET Framework-Datenanbieter für Oracle unterstützt außer den 
 |CHAR_LENGTH|Decimal|Zeichenbeschränkung für Daten des Typs string.|  
 |CHAR_USED|Zeichenfolge|Gibt an, ob für die Zeichenfolge eine Bytebeschränkung (B) oder eine Zeichenbeschränkung (C) gilt.|  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

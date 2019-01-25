@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c148ee0b2c96f2a387dac54eaff690ab3f05ebf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 34a6762618780b22bcd8be376209912390524578
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592013"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs-Methode
 Zählt MemberRef-Token auf, die Elemente des angegebenen Typs darstellen.  
@@ -44,7 +44,7 @@ HRESULT EnumMemberRefs (
  [in, out] Ein Zeiger auf den Enumerator.  
   
  `tkParent`  
- [in] Eine TypeDef, TypeRef-Token, MethodDef oder ModuleRef-Token für den Typ, dessen Member aufgelistet werden sollen.  
+ [in] Eine TypeDef, TypeRef, MethodDef oder ModuleRef-Token für den Typ, dessen Member aufgelistet werden sollen.  
   
  `rMemberRefs`  
  [out] Das Array zum Speichern von MemberRef-Token verwendet wird.  
@@ -60,17 +60,17 @@ HRESULT EnumMemberRefs (
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMemberRefs` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es gibt keine MemberRef-Token aufgelistet werden. In diesem Fall `pcTokens` auf 0 (null) ist.|  
+|`S_FALSE`|Es sind keine MemberRef-Token aufgelistet werden. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
