@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f86cc83936dd8150ca6b3f28c9b6a624278e2b36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b768c8f7880a2317d1b72878657158e839b731f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569728"
 ---
-# <a name="icordebugcanlaunchorattach-method"></a><span data-ttu-id="1e117-102">ICorDebug::CanLaunchOrAttach-Methode</span><span class="sxs-lookup"><span data-stu-id="1e117-102">ICorDebug::CanLaunchOrAttach Method</span></span>
-<span data-ttu-id="1e117-103">Gibt ein HRESULT, das angibt, ob ein neuer Prozess gestartet oder Anhängen an den angegebenen vorhandenen Prozess innerhalb des Kontexts der aktuellen Konfiguration für Computer und die Common Language Runtime möglich ist.</span><span class="sxs-lookup"><span data-stu-id="1e117-103">Returns an HRESULT that indicates whether launching a new process or attaching to the specified existing process is possible within the context of the current machine and runtime configuration.</span></span>  
+# <a name="icordebugcanlaunchorattach-method"></a><span data-ttu-id="4f268-102">ICorDebug::CanLaunchOrAttach-Methode</span><span class="sxs-lookup"><span data-stu-id="4f268-102">ICorDebug::CanLaunchOrAttach Method</span></span>
+<span data-ttu-id="4f268-103">Gibt ein HRESULT, der angibt, ob ein neuer Prozess gestartet oder an den angegebenen vorhandenen Prozess anfügen innerhalb des Kontexts der aktuellen Computer und -Runtime-Konfiguration möglich ist.</span><span class="sxs-lookup"><span data-stu-id="4f268-103">Returns an HRESULT that indicates whether launching a new process or attaching to the specified existing process is possible within the context of the current machine and runtime configuration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1e117-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1e117-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4f268-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4f268-104">Syntax</span></span>  
   
 ```  
 HRESULT CanLaunchOrAttach (  
@@ -36,37 +36,37 @@ HRESULT CanLaunchOrAttach (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1e117-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="1e117-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4f268-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="4f268-105">Parameters</span></span>  
  `dwProcessId`  
- <span data-ttu-id="1e117-106">[in] Die ID der eine vorhandene Prozessressource.</span><span class="sxs-lookup"><span data-stu-id="1e117-106">[in] The ID of an existing process.</span></span>  
+ <span data-ttu-id="4f268-106">[in] Die ID eines vorhandenen Prozesses.</span><span class="sxs-lookup"><span data-stu-id="4f268-106">[in] The ID of an existing process.</span></span>  
   
  `win32DebuggingEnabled`  
- <span data-ttu-id="1e117-107">[in] Übergeben Sie `true` , wenn Sie planen, mit aktiviertem Win32-Debuggen zu starten, oder übergeben Sie eine Verbindung mit der Win32-Debuggen aktiviert ist, andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="1e117-107">[in] Pass in `true` if you plan to launch with Win32 debugging enabled, or to attach with Win32 debugging enabled; otherwise, pass `false`.</span></span>  
+ <span data-ttu-id="4f268-107">[in] Übergeben Sie `true` , wenn Sie, starten Sie mit der Win32-Debuggen aktiviert möchten ist, oder übergeben Sie eine Verbindung mit der Win32-Debuggen aktiviert ist, andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="4f268-107">[in] Pass in `true` if you plan to launch with Win32 debugging enabled, or to attach with Win32 debugging enabled; otherwise, pass `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1e117-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="1e117-108">Return Value</span></span>  
- <span data-ttu-id="1e117-109">S_OK, wenn der Debugdienste bestimmen, die einen neuen Prozess starten oder Anhängen an den angegebenen Prozess ist möglich, die Informationen zur aktuellen Computer und zur Laufzeit angegeben.</span><span class="sxs-lookup"><span data-stu-id="1e117-109">S_OK if the debugging services determine that launching a new process or attaching to the given process is possible, given the information about the current machine and runtime configuration.</span></span> <span data-ttu-id="1e117-110">HRESULT Werte sind möglich:</span><span class="sxs-lookup"><span data-stu-id="1e117-110">Possible HRESULT values are:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4f268-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="4f268-108">Return Value</span></span>  
+ <span data-ttu-id="4f268-109">S_OK, wenn die Debuggen von Diensten, die ein neuer Prozess gestartet oder das Anfügen an den Prozess ermitteln kann, erhält die Informationen über die aktuelle Konfiguration für Computer und der Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="4f268-109">S_OK if the debugging services determine that launching a new process or attaching to the given process is possible, given the information about the current machine and runtime configuration.</span></span> <span data-ttu-id="4f268-110">HRESULT Werte sind möglich:</span><span class="sxs-lookup"><span data-stu-id="4f268-110">Possible HRESULT values are:</span></span>  
   
--   <span data-ttu-id="1e117-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="1e117-111">S_OK</span></span>  
+-   <span data-ttu-id="4f268-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="4f268-111">S_OK</span></span>  
   
--   <span data-ttu-id="1e117-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span><span class="sxs-lookup"><span data-stu-id="1e117-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span></span>  
+-   <span data-ttu-id="4f268-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span><span class="sxs-lookup"><span data-stu-id="4f268-112">CORDBG_E_DEBUGGING_NOT_POSSIBLE</span></span>  
   
--   <span data-ttu-id="1e117-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span><span class="sxs-lookup"><span data-stu-id="1e117-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span></span>  
+-   <span data-ttu-id="4f268-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span><span class="sxs-lookup"><span data-stu-id="4f268-113">CORDBG_E_KERNEL_DEBUGGER_PRESENT</span></span>  
   
--   <span data-ttu-id="1e117-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span><span class="sxs-lookup"><span data-stu-id="1e117-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span></span>  
+-   <span data-ttu-id="4f268-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span><span class="sxs-lookup"><span data-stu-id="4f268-114">CORDBG_E_KERNEL_DEBUGGER_ENABLED</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1e117-115">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1e117-115">Remarks</span></span>  
- <span data-ttu-id="1e117-116">Diese Methode ist ausschließlich zu Informationszwecken.</span><span class="sxs-lookup"><span data-stu-id="1e117-116">This method is purely informational.</span></span> <span data-ttu-id="1e117-117">Die Schnittstelle beenden Sie nicht starten oder Anfügen an einen Prozess, unabhängig vom Wert von zurückgegebenen `CanLaunchOrAttach`.</span><span class="sxs-lookup"><span data-stu-id="1e117-117">The interface will not stop you from launching or attaching to a process, regardless of the value returned by `CanLaunchOrAttach`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4f268-115">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4f268-115">Remarks</span></span>  
+ <span data-ttu-id="4f268-116">Diese Methode dient ausschließlich zu Informationszwecken.</span><span class="sxs-lookup"><span data-stu-id="4f268-116">This method is purely informational.</span></span> <span data-ttu-id="4f268-117">Die Schnittstelle beenden Sie nicht starten oder Anfügen an einen Prozess, unabhängig vom Wert von zurückgegebenen `CanLaunchOrAttach`.</span><span class="sxs-lookup"><span data-stu-id="4f268-117">The interface will not stop you from launching or attaching to a process, regardless of the value returned by `CanLaunchOrAttach`.</span></span>  
   
- <span data-ttu-id="1e117-118">Wenn Sie beabsichtigen, mit aktiviertem Win32-Debuggen starten oder Anhängen, mit der Win32-Debuggen aktiviert, übergeben Sie `true` für `win32DebuggingEnabled`.</span><span class="sxs-lookup"><span data-stu-id="1e117-118">If you plan to launch with Win32 debugging enabled or attach with Win32 debugging enabled, pass `true` for `win32DebuggingEnabled`.</span></span> <span data-ttu-id="1e117-119">Zurückgegebenes HRESULT `CanLaunchOrAttach` unterscheiden, wenn Sie diese Option verwenden.</span><span class="sxs-lookup"><span data-stu-id="1e117-119">The HRESULT returned by `CanLaunchOrAttach` might differ if you use this option.</span></span>  
+ <span data-ttu-id="4f268-118">Wenn Sie planen, starten Sie mit der Win32-Debuggen aktiviert oder Verbindung mit Win32-Debuggen aktiviert, übergeben Sie `true` für `win32DebuggingEnabled`.</span><span class="sxs-lookup"><span data-stu-id="4f268-118">If you plan to launch with Win32 debugging enabled or attach with Win32 debugging enabled, pass `true` for `win32DebuggingEnabled`.</span></span> <span data-ttu-id="4f268-119">Das HRESULT zurückgegeben wird, indem `CanLaunchOrAttach` können abweichen, wenn Sie diese Option verwenden.</span><span class="sxs-lookup"><span data-stu-id="4f268-119">The HRESULT returned by `CanLaunchOrAttach` might differ if you use this option.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1e117-120">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1e117-120">Requirements</span></span>  
- <span data-ttu-id="1e117-121">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1e117-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4f268-120">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4f268-120">Requirements</span></span>  
+ <span data-ttu-id="4f268-121">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4f268-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1e117-122">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1e117-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4f268-122">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4f268-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1e117-123">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1e117-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4f268-123">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4f268-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1e117-124">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1e117-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4f268-124">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f268-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1e117-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1e117-125">See Also</span></span>  
- [<span data-ttu-id="1e117-126">ICorDebug-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1e117-126">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4f268-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4f268-125">See also</span></span>
+- [<span data-ttu-id="4f268-126">ICorDebug-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="4f268-126">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
