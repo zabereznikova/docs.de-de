@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten'
+title: 'Vorgehensweise: Überprüfen der digitalen Signaturen von XML-Dokumenten'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ef87e2c1625ebdf88dc1d21444fbbf185d486c3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b8896f5c8501b757313cc8a549b187ecedcebe97
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670150"
 ---
-# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Gewusst wie: Überprüfen der digitalen Signaturen von XML-Dokumenten
+# <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Vorgehensweise: Überprüfen der digitalen Signaturen von XML-Dokumenten
 Um XML-Daten zu überprüfen, die mit einer digitalen Signatur signiert sind, können Sie die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden. Über digitale XML-Signaturen (XMLDSIG) können Sie sich vergewissern, dass Daten nicht mehr geändert wurden, nachdem sie signiert wurden. Weitere Informationen zum XMLDSIG-Standard finden Sie unter der World Wide Web Consortium (W3C)-Spezifikation unter <https://www.w3.org/TR/xmldsig-core/>.
   
  Das Codebeispiel in dieser Vorgehensweise veranschaulicht, wie eine digitale XML-Signatur überprüft wird, die in einem <`Signature`>-Element enthalten ist.   Im Beispiel wird ein öffentlicher RSA-Schlüssel aus einem Schlüsselcontainer abgerufen und anschließend zum Überprüfen der Signatur verwendet.   
@@ -68,7 +68,7 @@ Um XML-Daten zu überprüfen, die mit einer digitalen Signatur signiert sind, k�
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  
   
 ## <a name="example"></a>Beispiel  
- Für dieses Beispiel wird angenommen, dass eine Datei namens `"test.xml"` im selben Verzeichnis wie das kompilierte Programm vorhanden ist.  Die `"test.xml"` Datei muss signiert sein, mit den Verfahren, die in beschriebenen [wie: Signieren von XML-Dokumenten mit digitalen Signaturen](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
+ Für dieses Beispiel wird angenommen, dass eine Datei namens `"test.xml"` im selben Verzeichnis wie das kompilierte Programm vorhanden ist.  Die `"test.xml"` Datei muss signiert sein, mit den Verfahren, die in beschriebenen [Vorgehensweise: Signieren von XML-Dokumenten mit digitalen Signaturen](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md).  
   
  [!code-csharp[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#1)]
  [!code-vb[HowToVerifyXMLDocumentRSA#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#1)]  
@@ -86,5 +86,5 @@ Um XML-Daten zu überprüfen, die mit einer digitalen Signatur signiert sind, k�
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Gewusst wie: Signieren von XML-Dokumenten mit digitalen Signaturen](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Vorgehensweise: Signieren von XML-Dokumenten mit digitalen Signaturen](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

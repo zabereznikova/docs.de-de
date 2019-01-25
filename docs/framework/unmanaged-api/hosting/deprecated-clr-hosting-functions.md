@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d86f9b4903663604094895f6747b1407ff98c990
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 576b60293ed53448f3829fdcc9f89ad8508599af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580902"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>Veraltete CLR-Hostingfunktionen
 In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen beschrieben, die von früheren Versionen der Hosting-API verwendet wurden.  
@@ -29,7 +29,7 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  Veraltet. Um die common Language Runtime (CLR) zu initialisieren, verwenden Sie entweder [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) oder [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md).  
   
  [CoInitializeEE-Funktion](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md)  
- Veraltet. Stellt sicher, dass das CLR-Ausführungsmodul in einen Prozess geladen wird. Verwenden der [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) Methode stattdessen.  
+ Veraltet. Stellt sicher, dass die CLR-Ausführungs-Engine in einen Prozess geladen wird. Verwenden der [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) Methode stattdessen.  
   
  [CorBindToCurrentRuntime-Funktion](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  
  Veraltet. Lädt die Common Language Runtime (CLR) in einen Prozess, indem in einer XML-Datei gespeicherte Versionsinformationen verwendet werden.  
@@ -102,10 +102,10 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  Veraltet.  
   
  [CreateDebuggingInterfaceFromVersion-Funktion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)  
- Veraltet. Erstellt ein [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) -Objekt auf Grundlage der angegebenen Versionsinformationen.  
+ Veraltet. Erstellt eine [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) -Objekt auf Grundlage der angegebenen Versionsinformationen.  
   
  [CreateICeeFileGen-Funktion](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md)  
- Veraltet. Erstellt ein [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) Objekt.  
+ Veraltet. Erstellt eine [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) Objekt.  
   
  [DestroyICeeFileGen-Funktion](../../../../docs/framework/unmanaged-api/hosting/destroyiceefilegen-function.md)  
  Veraltet. Zerstört ein [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) Objekt.  
@@ -158,5 +158,5 @@ In diesem Abschnitt werden die nicht verwalteten globalen statischen Funktionen 
  [_CorValidateImage-Funktion](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)  
  Überprüft Images des verwalteten Moduls, und benachrichtigt das Betriebssystemladeprogramm, nachdem sie geladen wurden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten globaler statischer .NET Framework 4-Funktionen](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md) 
+## <a name="see-also"></a>Siehe auch
+- [Hosten globaler statischer .NET Framework 4-Funktionen](../../../../docs/framework/unmanaged-api/hosting/net-framework-4-hosting-global-static-functions.md)

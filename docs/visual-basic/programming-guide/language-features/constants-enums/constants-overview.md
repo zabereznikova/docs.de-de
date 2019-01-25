@@ -4,46 +4,46 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 2ec43254013df5444048b5197489c55217d5328a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f3dee4edba58375c5c84b579e39a8a29ebc1bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737688"
 ---
 # <a name="constants-overview-visual-basic"></a>Übersicht über Konstanten (Visual Basic)
-Eine Konstante ist, einen aussagekräftigen Namen, der anstelle einer Zahl oder eine Zeichenfolge, die nicht geändert wird. Konstanten speichern Werte, die, wie der Name schon sagt, während der Ausführung einer Anwendung unverändert bleiben. Sie können erheblich verbessern die Lesbarkeit des Codes und stellen die einfacher zu verwalten, bei dem Konstanten. In Code, der Werte enthält, die wieder zu verwenden, oder, abhängig ist, bestimmte Zahlen, die schwer zu merken, oder keine offensichtliche Bedeutung haben.  
+Eine Konstante ist, einen aussagekräftigen Namen, der nimmt den Platz einer Zahl oder Zeichenfolge, die nicht geändert wird. Konstanten speichern Werte, die, wie der Name schon sagt, während der Ausführung einer Anwendung unverändert bleiben. Sie können erheblich verbessern die Lesbarkeit des Codes und erleichtern es, beibehalten, indem Sie die Konstanten. In Code, der Werte enthält, die wieder verwenden, oder das hängt vom bestimmten Zahlen, die schwer zu merken oder keine offensichtliche Bedeutung haben.  
   
-## <a name="how-to-create-and-use-constants"></a>Gewusst wie: Erstellen und Verwenden von Konstanten  
- Visual Basic enthält eine Reihe vordefinierter Konstanten mit hauptsächlich zum Drucken und anzeigen. Sie können auch eigene Konstanten mit Erstellen der `Const` verwenden Sie dieselben Richtlinien zum Erstellen eines Variablennamens-Anweisung. Wenn `Option Strict` ist `On`, müssen Sie den Konstantentyp explizit deklarieren.  
+## <a name="how-to-create-and-use-constants"></a>Das Erstellen und verwenden Sie Konstanten  
+ Visual Basic enthält eine Reihe vordefinierter Konstanten verwenden vor allem zum Drucken und anzeigen. Sie können auch Ihre eigenen Konstanten mit erstellen die `Const` Anweisung, verwenden Sie dieselben Richtlinien für die Erstellung eines Variablennamens. Wenn `Option Strict` ist `On`, müssen Sie den Konstantentyp explizit deklarieren.  
   
- Der Gültigkeitsbereich einer Konstanten, d. h. die Menge des gesamten Codes, die darauf verweisen kann, ohne dessen Namen zu qualifizieren, ist dieselbe wie eine Variable deklariert, die am gleichen Speicherort. Um eine Konstante zu erstellen, die innerhalb des Bereichs einer bestimmten Prozedur vorhanden ist, deklarieren Sie es in dieser Prozedur aus. Um eine Konstante zu erstellen, die innerhalb der gesamten Anwendung verfügbar ist, deklarieren Sie sie mithilfe der `Public` Schlüsselwort im Deklarationsabschnitt der Klasse.  
+ Der Gültigkeitsbereich einer Konstanten, die den Satz des gesamten Codes ist, die darauf verweisen können, ohne Angabe ihres Namens, ist identisch mit einer Variablen, die sich am gleichen Standort deklariert. Um eine Konstante zu erstellen, die innerhalb des Bereichs einer bestimmten Prozedur vorhanden ist, deklarieren Sie sie in dieser Prozedur aus. Um eine Konstante zu erstellen, die in der gesamten Anwendung verfügbar ist, deklarieren Sie sie mithilfe der `Public` Schlüsselwort im Deklarationsabschnitt der Klasse.  
   
 > [!NOTE]
->  Obwohl Konstanten etwas Variablen ähneln, nicht ändern, oder weisen wie Variablen Sie können neue Werte zu werden.  
+>  Obwohl Konstanten etwas Variablen ähneln, nicht ändern oder neue Werte zuweisen, wie Sie Variablen können.  
   
- Die Konstanten, die Sie in Ihrem Code verwenden, können das Objektmodell für Steuerelemente oder Komponenten definiert werden, oder sie können eine benutzerdefinierte (d. h., die Sie selbst erstellen).  
+ Die Konstanten, die Sie in Ihrem Code verwenden definiert werden, indem das Objektmodell für Steuerelemente oder Komponenten, die Sie mit arbeiten, oder sie können benutzerdefiniert sein (d. h., die Sie selbst erstellen).  
   
-## <a name="compile-time-and-run-time-constants"></a>Zeitpunkt der Kompilierung und Laufzeit-Konstanten  
- Zum Zeitpunkt, den der Code kompiliert wird, während eine Konstante zur Laufzeit nur ermittelt werden kann, während die Anwendung ausgeführt wird, wird eine Kompilierzeitkonstante berechnet. Eine Kompilierzeitkonstante, den gleichen Wert jedes Mal haben, die eine Anwendung ausgeführt wird, während eine Konstante zur Laufzeit jedes Mal ändern kann. Kompilierungszeitskonstanten sind für Fälle, z. B. Arraygrenzen, Case-Ausdrücke oder Enumerator Initialisierer erforderlich.  
+## <a name="compile-time-and-run-time-constants"></a>Während der Kompilierung und Laufzeit-Konstanten  
+ Eine Kompilierzeitkonstante wird zur Zeit berechnet, die der Code kompiliert wird, obwohl nur eine Konstante zur Laufzeit berechnet werden kann, während die Anwendung ausgeführt wird, ist. Eine Kompilierzeitkonstante liefert den gleichen Wert jedes Mal ist eine Anwendung ausgeführt wird, während eine Konstante zur Laufzeit jedes Mal ändern kann. Kompilierzeitkonstanten sind für Fälle wie Arraygrenzen, Case-Ausdrücke oder Enumerator Initialisierer erforderlich.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 |Definition|Begriff|  
 |---|---|  
-|[Gewusst wie: Deklarieren einer Konstante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Erklärt, wie die `Const` -Anweisung zum Deklarieren einer Konstante mit dem Wert; durch Deklarieren einer Konstante, weisen Sie einen aussagekräftigen Namen, mit dem Wert.|  
-|[Benutzerdefinierte Konstanten](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Beschreibt, wie Ihre eigenen Konstanten, einschließlich Informationen über den Bereichsdefinition erstellt und wie, Zirkelverweise zu vermeiden.|  
-|[Konstanten und literale Datentypen](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Enthält Informationen wie die Visual Basic-Compiler Konstanten initialisiert, wenn `Option Explicit` ist deaktiviert.|  
-|[Gewusst wie: Gruppieren verwandter konstanter Werte](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Veranschaulicht, wie Konstante Werte gruppiert, die verknüpft sind.|  
+|[Vorgehensweise: Deklarieren einer Konstante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Erläutert, wie die `Const` Anweisung, um eine Konstante deklariert, und legen Sie dessen Wert; durch Deklarieren einer Konstante, weisen Sie einen aussagekräftigen Namen, mit dem Wert.|  
+|[Benutzerdefinierte Konstanten](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Beschreibt wie Sie Ihre eigenen Konstanten, die mit Informationen zum Gültigkeitsbereich zu erstellen und um Zirkelverweise zu vermeiden.|  
+|[Konstanten und literale Datentypen](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Erläutert, wie Visual Basic-Compiler Konstanten initialisiert, wenn `Option Explicit` ist deaktiviert.|  
+|[Vorgehensweise: Gruppieren verwandter konstanter Werte](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Veranschaulicht, wie Konstante Werte gruppiert, die verknüpft sind.|  
   
 ## <a name="reference"></a>Referenz  
   
 |Definition|Begriff|  
 |---|---|  
-|[Konstanten und Enumerationen](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Enthält die Konstanten, die vom Visual Basic vordefiniert.|  
-|[Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md)|Beschreibt die `Const` -Anweisung und dessen Verwendung.|  
-|[Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Beschreibt die `Option Strict` -Anweisung und dessen Verwendung.|  
+|[Konstanten und Enumerationen](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Enthält die Konstanten, die von Visual Basic vordefiniert.|  
+|[Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md)|Beschreibt die `Const` Anweisung und deren Verwendung.|  
+|[Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Beschreibt die `Option Strict` Anweisung und deren Verwendung.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Enumerationen](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
- [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md) (Gewusst wie: Initialisieren einer Arrayvariable in Visual Basic)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Enumerationen](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [Vorgehensweise: Initialisieren einer Arrayvariablen in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

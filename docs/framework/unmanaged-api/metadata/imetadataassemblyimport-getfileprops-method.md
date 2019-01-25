@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f147fef90d7a9033bdfd07b75e5c33efd2c6881f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59dad67db9f9f9184a139f848020cf866a3a6771
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716829"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps-Methode
-Ruft die Eigenschaften der Datei mit der angegebenen Metadatensignatur ab.  
+Ruft die Eigenschaften der Datei mit der angegebenen Metadaten-Signatur ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -58,19 +58,19 @@ HRESULT GetFileProps (
  [out] Ein Zeiger auf den Hashwert. Dies ist der Hash, mit dem SHA-1-Algorithmus, der Datei.  
   
  `pcbHashValue`  
- [out] Die Anzahl der Breitzeichen in den zurückgegebenen Hashwert.  
+ [out] Die Anzahl von Breitzeichen in den zurückgegebenen Hashwert.  
   
  `pdwFileFlags`  
  [out] Ein Zeiger auf die Flags, die auf eine Datei angewendete Metadaten beschreiben. Der Wert des Flags ist eine Kombination aus einem oder mehreren [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) Werte.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattform:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

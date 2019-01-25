@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 0909d1d10ab8932f27f7ca6cba6207d57fa4f4cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a10d9ac5718bf6b88a3a00902f90045c705f8431
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493747"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721788"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Endpunkte: Adressen, Bindungen und Verträge
-Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die Funktionalität, die von einem WCF-Dienst angeboten wird.  
+Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die von einem WCF-Dienst bereitgestellten Funktionen.  
   
  Jeder Endpunkt verfügt über vier Eigenschaften:  
   
@@ -26,12 +26,12 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
   
 -   Eine Gruppe von Verhaltensweisen, die lokale Implementierungsdetails des Endpunkts angeben.  
   
- In diesem Thema wird diese endpunktstruktur erläutert, und es wird erläutert, wie er im WCF-Objektmodell dargestellt wird.  
+ In diesem Thema wird diese endpunktstruktur erläutert, und es wird erläutert, wie sie in der WCF-Objektmodell dargestellt wird.  
   
 ## <a name="the-structure-of-an-endpoint"></a>Die Struktur eines Endpunkts  
  Jeder Endpunkt besteht aus Folgendem:  
   
--   Adresse: Die Adresse gewährleistet eine eindeutige Identifizierung des Endpunkts und teilt potenziellen Consumern des Diensts den Standort des Diensts mit. Es wird dargestellt, in dem WCF-Objektmodell durch die <xref:System.ServiceModel.EndpointAddress> Klasse. Eine <xref:System.ServiceModel.EndpointAddress>-Klasse enthält:  
+-   Adresse: Die Adresse eine eindeutige Identifikation des Endpunkts und teilt potenziellen Consumern des Diensts, in dem es gespeichert ist. Es wird dargestellt, in dem WCF-Objektmodell durch die <xref:System.ServiceModel.EndpointAddress> Klasse. Eine <xref:System.ServiceModel.EndpointAddress>-Klasse enthält:  
   
     -   Eine <xref:System.ServiceModel.EndpointAddress.Uri%2A>-Eigenschaft, die die Adresse des Diensts darstellt.  
   
@@ -47,9 +47,9 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
   
     -   Die erforderlichen Sicherheitsanforderungen (z.&#160;B. SSL- oder SOAP-Nachrichtensicherheit).  
   
-     Weitere Informationen finden Sie unter [WCF-Bindungsübersicht](../../../../docs/framework/wcf/bindings-overview.md). Eine Bindung wird in der WCF-Objektmodell dargestellt, durch die abstrakte Basisklasse <xref:System.ServiceModel.Channels.Binding>. Für die meisten Szenarien können Benutzer eine der vom System bereitgestellten Bindungen verwenden. Weitere Informationen finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Weitere Informationen finden Sie unter [WCF-Bindungsübersicht](../../../../docs/framework/wcf/bindings-overview.md). Eine Bindung wird durch die abstrakte Basisklasse im WCF-Objektmodell dargestellt <xref:System.ServiceModel.Channels.Binding>. Für die meisten Szenarien können Benutzer eine der vom System bereitgestellten Bindungen verwenden. Weitere Informationen finden Sie unter [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
--   Verträge: Der Dienstvertrag zeigt, welche Funktionen der Endpunkt dem Client zur Verfügung stellt. Ein Vertrag gibt Folgendes an:  
+-   Verträge: Der Dienstvertrag zeigt, welche Funktionen der Endpunkt, an den Client verfügbar macht. Ein Vertrag gibt Folgendes an:  
   
     -   Welche Vorgänge von einem Client aufgerufen werden können.  
   
@@ -59,9 +59,9 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
   
     -   Den Typ der Verarbeitung oder der Antwortnachricht, den der Client erwarten kann.  
   
-     Weitere Informationen zum Definieren eines Vertrags finden Sie unter [Entwerfen von Dienstverträgen](../../../../docs/framework/wcf/designing-service-contracts.md).  
+     Weitere Informationen zum Definieren eines Vertrags finden Sie unter [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
--   Verhaltensweisen: Sie können das lokale Verhalten des Dienstendpunkts mithilfe von Endpunktverhaltensweisen anpassen. Endpunktverhaltensweisen erreichen dies, indem Sie im Prozess der Erstellung einer WCFruntime an. Ein Beispiel für ein Endpunktverhalten ist die <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>-Eigenschaft, mit der Sie eine andere Listeningadresse als die SOAP- oder die WSDL-Adresse (WSDL = Web Services Description Language) angeben können. Weitere Informationen finden Sie unter [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
+-   Verhaltensweisen: Sie können die Endpunktverhalten verwenden, um das lokale Verhalten des Dienstendpunkts anzupassen. Endpunktverhaltensweisen erreichen dies, indem Sie im Prozess der Erstellung einer WCFruntime an. Ein Beispiel für ein Endpunktverhalten ist die <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A>-Eigenschaft, mit der Sie eine andere Listeningadresse als die SOAP- oder die WSDL-Adresse (WSDL = Web Services Description Language) angeben können. Weitere Informationen finden Sie unter ["ClientViaBehavior"](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md).  
   
 ## <a name="defining-endpoints"></a>Definieren von Endpunkten  
  Sie können den Endpunkt für einen Dienst entweder verbindlich durch Verwenden von Code oder deklarativ durch Konfiguration angeben. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md) und [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
@@ -78,15 +78,15 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
  [Verträge](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Beschreibt, wie Verträge die Methoden eines Diensts definieren.  
   
- [Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Beschreibt, wie Sie einen Dienstendpunkt in einer Konfiguration erstellen.  
   
  [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Beschreibt, wie Sie einen Dienstendpunkt im Code erstellen.  
   
- [Vorgehensweise: Verwenden von „Svcutil.exe“ zum Überprüfen von kompiliertem Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
- Beschreibt, wie zum Erkennen von Fehlern in dienstimplementierungen und Konfigurationen, ohne zu hosten, den Dienst mithilfe der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ [Vorgehensweise: Verwenden von Svcutil.exe zum Überprüfen von kompiliertem Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ Beschreibt, wie Sie Fehler in dienstimplementierungen und Konfigurationen zu erkennen, ohne zu hosten, den Dienst mithilfe der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Diensten](../../../../docs/framework/wcf/configuring-services.md)  
- [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md)
+## <a name="see-also"></a>Siehe auch
+- [Konfigurieren von Diensten](../../../../docs/framework/wcf/configuring-services.md)
+- [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2f4382c7fa85008de9e67ad21c467402bae4ac90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b40533553ccd7a3339a8a3ee0c8b47879efd38ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742460"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON-Enumeration
 Gibt den Grund, dass die Laufzeit angehalten wird.  
@@ -45,19 +45,19 @@ typedef enum {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|Die Laufzeit ist aus Unbekannter Ursache unterbrochen.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Die Common Language Runtime wird angehalten, um eine Garbage Collection-Anforderung zu bedienen.<br /><br /> Die Garbage Collection-bezogene Rückrufe treten zwischen den [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) und [ICorProfilerCallback:: RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) Rückrufe.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Die Common Language Runtime wird angehalten, damit ein `AppDomain` heruntergefahren werden kann.<br /><br /> Während die Laufzeit angehalten ist, die Common Language Runtime bestimmen, welche Threads in werden die `AppDomain` also heruntergefahren wird, und richten sie abgebrochen wird, wenn sie fortsetzen. Es gibt keine `AppDomain`-spezifische Rückrufe während diese Unterbrechung.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Die Common Language Runtime wird angehalten, sodass Codepitching auftreten kann.<br /><br /> Codepitching erfolgt nur, wenn der Just-in-Time (JIT)-Compiler aktiv ist und Codepitching aktiviert. Codepitchingrückrufe treten zwischen den `ICorProfilerCallback::RuntimeSuspendFinished` und `ICorProfilerCallback::RuntimeResumeStarted` Rückrufe. **Hinweis:** der CLR-JIT ist nicht der Verkaufspräsentation Funktionen in .NET Framework, Version 2.0, damit dieser Wert nicht in 2.0 verwendet wird.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Die Common Language Runtime wird angehalten, sodass er heruntergefahren werden kann. Sie müssen alle Threads zum Abschließen des Vorgangs anzuhalten.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Die Laufzeit wird für prozessinternes Debuggen angehalten.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Die Common Language Runtime wird angehalten, um für eine Garbagecollection vorzubereiten.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|Die Common Language Runtime ist für die JIT-Neukompilierung angehalten.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|Die Laufzeit wird angehalten, um eine Garbage Collection-Anforderung zu bedienen.<br /><br /> Die Rückrufe für die Garbage Collection-bezogene treten zwischen den [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) und [ICorProfilerCallback:: RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) Rückrufe.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|Die Laufzeit wird angehalten, damit ein `AppDomain` heruntergefahren werden kann.<br /><br /> Während die Laufzeit angehalten ist, die Laufzeit wird festzulegen, welche Threads im werden die `AppDomain` , heruntergefahren wird, und legen Sie sie Abbrechen, wenn sie fortsetzen. Es gibt keine `AppDomain`-spezifische Rückrufe während dieses Aussetzens.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|Die Laufzeit wird unterbrochen, sodass Codepitching auftreten kann.<br /><br /> Codepitching erfolgt nur, wenn der just-in-Time-Compiler (JIT) aktiv ist und Codepitching aktiviert. Codepitchingrückrufe treten zwischen den `ICorProfilerCallback::RuntimeSuspendFinished` und `ICorProfilerCallback::RuntimeResumeStarted` Rückrufe. **Hinweis**:  Die CLR-JIT ist nicht Funktionen in .NET Framework, Version 2.0, präsentieren, damit dieser Wert nicht in 2.0 verwendet wird.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|Die Laufzeit wird unterbrochen, sodass er heruntergefahren werden kann. Sie müssen alle Threads zum Abschließen des Vorgangs anzuhalten.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|Die Laufzeit wird für das prozessinterne Debuggen angehalten.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|Die Laufzeit wird angehalten, um für eine Garbagecollection vorzubereiten.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|Die Laufzeit wird für die JIT-Neukompilierung unterbrochen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Weiter ausgeführt wird, bis sie versuchen, die Laufzeit erneut eingeben, an welchem, die Punkt sie auch angehalten werden, bis die Laufzeit fortgesetzt wird, sind alle Common Language Runtime-Threads, die in nicht verwaltetem Code sind zulässig. Dies gilt auch für neue Threads, die die Common Language Runtime eingeben. Alle Threads in der Laufzeit sind entweder sofort angehalten, wenn der Code parallelisiert werden, oder aufgefordert, angehalten, wenn sie unterbrechbaren Code erreichen.  
+ Alle Threads mit Common Language Runtime, die in nicht verwaltetem Code dürfen weiterhin ausgeführt, bis sie versuchen, die Runtime erneut eingeben, an welcher, die Stelle sie auch angehalten werden, bis die Laufzeit fortgesetzt wird. Dies gilt auch für neue Threads, die die Laufzeit eingeben. Alle Threads in der Laufzeit sind entweder sofort angehalten, wenn sie in der unterbrechbare Code sind, oder aufgefordert, anhalten, wenn sie unterbrechbaren Code erreichen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -65,5 +65,5 @@ typedef enum {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

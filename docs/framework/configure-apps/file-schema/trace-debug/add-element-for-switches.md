@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 0a1a2c9ec34c43eb1b9559d90a8da0d70193c19e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b0ac45c9d2c5b7ff9630bbeaed4bfcee5ec46fcd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609990"
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;Hinzufügen&gt; -Element für &lt;Switches&gt;
 Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<Switches >  
+\<system.diagnostics>  
+\<switches>  
 \<add>  
   
 ## <a name="syntax"></a>Syntax  
@@ -69,8 +69,8 @@ Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Diagnostics.Switch>  
- <xref:System.Diagnostics.TraceSwitch>  
- <xref:System.Diagnostics.BooleanSwitch>  
- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Diagnostics.Switch>
+- <xref:System.Diagnostics.TraceSwitch>
+- <xref:System.Diagnostics.BooleanSwitch>
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

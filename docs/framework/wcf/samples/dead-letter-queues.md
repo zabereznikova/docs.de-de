@@ -2,12 +2,12 @@
 title: Warteschlangen für unzustellbare Meldungen
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: c6b3f059f1a1b11825b595346ed47f6a498078f1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 263c1fd399c8863154e0e53a1f79528d38022b78
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582605"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721294"
 ---
 # <a name="dead-letter-queues"></a>Warteschlangen für unzustellbare Meldungen
 Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung. Es basiert auf der [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
@@ -26,11 +26,11 @@ Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mi
 
 -   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>-Eigenschaft, um die vom Client benötigte Art der Warteschlange für unzustellbare Nachrichten auszudrücken. Diese Enumeration verfügt über folgende Werte:
 
--   `None`: Für den Client ist keine Warteschlange für unzustellbare Nachrichten erforderlich.
+-   `None`: Der Client ist keine Warteschlange für unzustellbare Nachrichten erforderlich.
 
 -   `System`: Die Systemwarteschlange für unzustellbare Nachrichten wird verwendet, um unzustellbare Nachrichten zu speichern. Die Systemwarteschlange für unzustellbare Nachrichten wird von allen Anwendungen verwendet, die auf dem Computer ausgeführt werden.
 
--   `Custom`: Die in der <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>-Eigenschaft angegebene benutzerdefinierte Warteschlange für unzustellbare Nachrichten wird verwendet, um unzustellbare Nachrichten zu speichern. Diese Funktion ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar. Dieser Wert wird verwendet, wenn die Anwendung ihre eigene Warteschlange für unzustellbare Nachrichten verwenden muss und diese nicht mit anderen Anwendungen auf dem gleichen Computer gemeinsam verwenden kann.
+-   `Custom`: Eine benutzerdefinierte Dead Letter-Warteschlange angegeben, mit der <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> Eigenschaft wird verwendet, um unzustellbare Nachrichten zu speichern. Diese Funktion ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar. Dieser Wert wird verwendet, wenn die Anwendung ihre eigene Warteschlange für unzustellbare Nachrichten verwenden muss und diese nicht mit anderen Anwendungen auf dem gleichen Computer gemeinsam verwenden kann.
 
 -   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>-Eigenschaft, um die spezifische Warteschlange für unzustellbare Nachrichten anzugeben. Diese ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.
 
@@ -350,7 +350,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     >  Das Festlegen von `security mode` auf `None` entspricht dem Festlegen von `MsmqAuthenticationMode`, `MsmqProtectionLevel` und der `Message`-Sicherheit auf `None`.
 
 ## <a name="comments"></a>Kommentare
- Standardmäßig wird mit der `netMsmqBinding`-Bindung die Transportsicherheit aktiviert. Der Typ der Transportsicherheit wird durch zwei Eigenschaften festgelegt: `MsmqAuthenticationMode` und `MsmqProtectionLevel`. Standardmäßig wird der Authentifizierungsmodus auf `Windows` festgelegt, und die Schutzebene wird auf `Sign` gesetzt. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es ein Teil einer Domäne sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der nicht Teil einer Domäne ist, wird folgende Fehlermeldung ausgegeben: "Das interne Message Queuing-Zertifikat für diesen Benutzer ist nicht vorhanden".
+ Standardmäßig wird mit der `netMsmqBinding`-Bindung die Transportsicherheit aktiviert. Der Typ der Transportsicherheit wird durch zwei Eigenschaften festgelegt: `MsmqAuthenticationMode` und `MsmqProtectionLevel`. Standardmäßig wird der Authentifizierungsmodus auf `Windows` festgelegt, und die Schutzebene wird auf `Sign` gesetzt. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es ein Teil einer Domäne sein. Wenn Sie in diesem Beispiel auf einem Computer, die nicht Teil einer Domäne ist ausführen, erhalten Sie den folgenden Fehler: "Des Benutzers interne Message Queuing-Zertifikat ist nicht vorhanden".
 
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

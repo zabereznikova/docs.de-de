@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Wiedergabe von Sound in Windows Forms'
+title: 'Vorgehensweise: Wiedergabe von Sound in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 853d0f78b4f6dba2dc84109270f79f4b010c27b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02b0cb2952e11946f994819bb09a55167781137c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607250"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>Gewusst wie: Wiedergabe von Sound in Windows Forms
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>Vorgehensweise: Wiedergabe von Sound in Windows Forms
 In diesem Beispiel wird zur Laufzeit ein Sound in einem bestimmten Pfad wiedergegeben.  
   
 ## <a name="example"></a>Beispiel  
@@ -42,7 +42,7 @@ private void playSimpleSound()
   
 -   Ersetzen Sie den Dateinamen `"c:\Windows\Media\chimes.wav"` durch einen gültigen Dateinamen.  
   
--   (C#) Ein Verweis auf die <xref:System.Media?displayProperty=nameWithType> Namespace.  
+-   (C#) Einen Verweis auf die <xref:System.Media?displayProperty=nameWithType> Namespace.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
  Dateivorgänge sollten in entsprechende strukturierte Ausnahmebehandlungsblöcke eingeschlossen sein.  
@@ -59,12 +59,12 @@ private void playSimpleSound()
   
 -   Der Pfad ist ungültig (<xref:System.IO.DirectoryNotFoundException>-Klasse).  
   
--   Der Pfad besteht nur aus einem Doppelpunkt ":" (<xref:System.NotSupportedException> Klasse).  
+-   Der Pfad ist nur aus einem Doppelpunkt ":" (<xref:System.NotSupportedException> Klasse).  
   
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens. Bei der Datei `Form1.vb` handelt es sich zum Beispiel nicht unbedingt um eine Visual Basic-Quelldatei. Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Media.SoundPlayer>  
- [Gewusst wie: Asynchrones Laden eines Sounds in einem Windows Form](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)  
- 
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Media.SoundPlayer>
+- [Vorgehensweise: Laden eines Sounds asynchron in einem Windows Form](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+

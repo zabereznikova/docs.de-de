@@ -2,12 +2,12 @@
 title: Beispiel zur Net.TCP-Portfreigabe
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 7ddfb3340c010b57b78fa913601451b6a2af3674
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6180e615d6ae363a4e6fe4bfca3fe0e60f403f58
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735489"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Beispiel zur Net.TCP-Portfreigabe
 Im TCP/IP-Protokoll wird mithilfe einer 16-stelligen Zahl (als Port bezeichnet) zwischen Verbindungen mit mehreren Netzwerkanwendungen unterschieden, die auf demselben Computer ausgeführt werden. Wenn eine Anwendung einen Port überwacht, wird der gesamte TCP-Verkehr für diesen Port an die entsprechende Anwendung geleitet. Andere Anwendungen können nicht gleichzeitig an diesem Port lauschen.  

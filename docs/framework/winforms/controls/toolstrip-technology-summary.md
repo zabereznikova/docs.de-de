@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: 26317fad5796989a58a48e4f26549805b279228a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a06b8831c862706f9607e95950b81a6bb6e8b7ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201100"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736014"
 ---
 # <a name="toolstrip-technology-summary"></a>Zusammenfassung der ToolStrip-Technologie
 In diesem Thema sind Informationen zum `ToolStrip`-Steuerelement und den Klassen zusammengefasst, die seine Verwendung unterstützen.  
@@ -87,7 +87,7 @@ In diesem Thema sind Informationen zum `ToolStrip`-Steuerelement und den Klassen
 ## <a name="hosting-controls"></a>Hosten von Steuerelementen  
  Die <xref:System.Windows.Forms.ToolStripControlHost>-Klasse bietet integrierte Wrapper für die Steuerelemente <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> und <xref:System.Windows.Forms.ToolStripProgressBar>. Sie können auch beliebige andere vorhandene Steuerelemente oder COM-Steuerelemente in einem <xref:System.Windows.Forms.ToolStripControlHost> hosten.  
   
- Ein Beispiel für das Steuerelement zu hosten, finden Sie unter [wie: Umschließen eines Windows Forms-Steuerelements ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
+ Ein Beispiel für das Steuerelement zu hosten, finden Sie unter [Vorgehensweise: Eine Windows Forms-Steuerelement ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
   
 ## <a name="rendering"></a>Rendern  
  <xref:System.Windows.Forms.ToolStrip>-Klassen implementieren ein Renderingschema, das sich von anderen Windows Forms-Steuerelementen erheblich unterscheidet. Mit diesem Schema können Formatvorlagen und Designs ganz einfach angewendet werden.  
@@ -96,7 +96,7 @@ In diesem Thema sind Informationen zum `ToolStrip`-Steuerelement und den Klassen
   
  Sie können dieselbe Formatvorlage auf mehrere <xref:System.Windows.Forms.ToolStrip>-Objekte in derselben Anwendung anwenden, indem Sie für <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> den Wert <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> und für die Eigenschaft <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A> oder <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> den gewünschten <xref:System.Windows.Forms.ToolStripManagerRenderMode>-Wert oder entsprechend den <xref:System.Windows.Forms.ToolStripRenderer>-Wert festlegen.  
   
- Beispiele zum Rendering finden Sie unter [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
+ Beispiele zum Rendering finden Sie unter [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers, für das ToolStrip-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md).  
   
 ## <a name="styles-and-themes"></a>Formatvorlagen und Designs  
  <xref:System.Windows.Forms.ToolStrip> und die zugehörigen Klassen bieten eine einfache Möglichkeit zur Unterstützung von visuellen Formatvorlagen und der benutzerdefinierten Darstellung, für die die <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A>-Methoden nicht für jedes Element außer Kraft gesetzt werden müssen. Verwenden Sie die Eigenschaften <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> und <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> und <xref:System.Windows.Forms.ToolStrip.Renderer%2A>.  
@@ -112,12 +112,12 @@ In diesem Thema sind Informationen zum `ToolStrip`-Steuerelement und den Klassen
   
  Der Vorteil des Raftings gegenüber dem Andocken ist, dass <xref:System.Windows.Forms.ToolStrip>-, <xref:System.Windows.Forms.MenuStrip>- und <xref:System.Windows.Forms.StatusStrip>-Steuerelemente den horizontalen oder vertikalen Bereich gemeinsam mit anderen Steuerelementen nutzen können.  
   
- Die meisten der <xref:System.Windows.Forms.ToolStrip>-Steuerelemente können wie andere Steuerelemente auf dem Formular angedockt werden, anstatt sie per Rafting anzudocken. Sie können zudem angeben, dass ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement auf dem Formular frei positioniert werden kann, indem Sie es aus seinem <xref:System.Windows.Forms.ToolStripContainer> entfernen und für seine `Dock`-Eigenschaft den Wert `None` festlegen. Sie können auch seine absolute Position angeben, indem Sie die entsprechende <xref:System.Windows.Forms.Control.Location%2A>-Eigenschaft festlegen. Finden Sie unter [Vorgehensweise: Verschieben eines ToolStrip aus einem ToolStripContainer auf ein Formular](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
+ Die meisten der <xref:System.Windows.Forms.ToolStrip>-Steuerelemente können wie andere Steuerelemente auf dem Formular angedockt werden, anstatt sie per Rafting anzudocken. Sie können zudem angeben, dass ein <xref:System.Windows.Forms.ToolStrip>-Steuerelement auf dem Formular frei positioniert werden kann, indem Sie es aus seinem <xref:System.Windows.Forms.ToolStripContainer> entfernen und für seine `Dock`-Eigenschaft den Wert `None` festlegen. Sie können auch seine absolute Position angeben, indem Sie die entsprechende <xref:System.Windows.Forms.Control.Location%2A>-Eigenschaft festlegen. Weitere Informationen finden Sie unter [How to: Verschieben eines ToolStrip aus einem ToolStripContainer auf ein Formular](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
   
  Verwenden Sie ein oder mehrere <xref:System.Windows.Forms.ToolStripPanel>-Steuerelemente zum Erhöhen der Flexibilität, insbesondere für MDI-Anwendungen (Multiple Document Interface), oder für den Fall, dass Sie kein <xref:System.Windows.Forms.ToolStripContainer> benötigen. Ein <xref:System.Windows.Forms.ToolStripPanel> stellt einen andockbaren Bereich für die Suche und das Rafting von <xref:System.Windows.Forms.ToolStrip>-Steuerelementen bereit. Herkömmliche Steuerelemente sind hiervon jedoch ausgeschlossen. Standardmäßig die <xref:System.Windows.Forms.ToolStripPanel> wird im Designer nicht angezeigt **Toolbox**, aber Sie können es dort ablegen, indem Sie mit der rechten Maustaste die **Toolbox**, und klicken Sie dann auf **Elemente auswählen**. Sie können auch wie bei jeder anderen Klasse programmgesteuert auf <xref:System.Windows.Forms.ToolStripPanel> zugreifen.  
   
  Bei <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> und <xref:System.Windows.Forms.StatusStrip> können Elemente überlaufen. Dies ist mit der Art und Weise vergleichbar, in der sich Elemente auf den Microsoft Office-Symbolleisten verhalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über das ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [Architektur des ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über das ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [Architektur des ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)

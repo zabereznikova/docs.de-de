@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e02274b63ddf7df42d26621791de0286df9655b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cd5e660778b852cfee84359bb4d7253ca8f118d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395511"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608075"
 ---
 # <a name="security-etw-events"></a>ETW-Sicherheitsereignisse
 <a name="top"></a> Sicherheitsereignisse werden während der Überprüfung mit starkem Namen und bei der Authenticodeüberprüfung ausgelöst.  
@@ -47,7 +47,7 @@ ms.locfileid: "33395511"
 |FullyQualifiedAssemblyName|win:UnicodeString|Der vollqualifizierte Assemblyname.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events"></a>   
 ## <a name="authenticodeverificationstartv1-and-authenticodeverificationstopv1-events"></a>AuthenticodeVerificationStart_V1-Ereignis und AuthenticodeVerificationStop_V1-Ereignis  
@@ -73,5 +73,5 @@ ms.locfileid: "33395511"
 |ModulePath|win:UnicodeString|Der Modulpfad.|  
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
-## <a name="see-also"></a>Siehe auch  
- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>Siehe auch
+- [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

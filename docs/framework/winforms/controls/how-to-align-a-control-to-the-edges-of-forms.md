@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ausrichten eines Steuerelements an Formularrändern'
+title: 'Vorgehensweise: Ausrichten eines Steuerelements an Formularrändern'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: a8571f668de2714511a8732772443a8897043cf2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ba5e9fc92f2805206f6c3796689898f3ff845896
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610408"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>Gewusst wie: Ausrichten eines Steuerelements an Formularrändern
+# <a name="how-to-align-a-control-to-the-edges-of-forms"></a>Vorgehensweise: Ausrichten eines Steuerelements an Formularrändern
 Sie können ein Steuerelement am Formularrand ausrichten, indem Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft festlegen. Diese Eigenschaft legt fest, wo auf dem Formular das Steuerelement sich befindet. Die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft kann auf einen der folgenden Werte festgelegt werden:  
   
 |Einstellung|Auswirkung auf das Steuerelement|  
@@ -49,10 +49,10 @@ Sie können ein Steuerelement am Formularrand ausrichten, indem Sie die <xref:Sy
     UserControl1.Dock = DockStyle.Top;  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>  
- [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Gewusst wie: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
- [Gewusst wie: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
- [Übersicht über die AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
+- [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Übersicht über die AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md)

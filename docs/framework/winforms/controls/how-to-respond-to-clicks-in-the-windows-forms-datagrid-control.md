@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Reagieren auf das Klicken in das DataGrid-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Reagieren Sie auf das Klicken in das DataGrid-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,21 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 3b89bab9370039e4089ad834c6ea1f528d7b6575
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be9c5c213f9bb52bf620b3d7edec95279220abdf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722906"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Gewusst wie: Reagieren auf das Klicken in das DataGrid-Steuerelement in Windows Forms
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Vorgehensweise: Reagieren Sie auf das Klicken in das DataGrid-Steuerelement in Windows Forms
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Nach der Windows Forms <xref:System.Windows.Forms.DataGrid> besteht in einer Datenbank können Sie überwachen, welche Zellen der Benutzer geklickt haben.  
+ Nach der Windows Forms <xref:System.Windows.Forms.DataGrid> besteht in einer Datenbank, können Sie überwachen, welche Zellen der Benutzer klicken.  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Erkennen, wenn der Benutzer des Datenrasters eine andere Zelle auswählt  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>Erkennen, wann der Benutzer wählt aus der das DataGrid-Steuerelement eine andere Zelle  
   
--   In der <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> -Ereignishandler, Schreiben Sie Code entsprechend reagieren.  
+-   In der <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> -Ereignishandler, Schreiben Sie Code angemessen reagieren.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
     }  
     ```  
   
-     (Visual c#) Fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual C#) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
@@ -55,9 +56,9 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>Um zu bestimmen, welcher Teil das DataGrid-Steuerelement der Benutzer geklickt hat.  
   
--   Rufen Sie die <xref:System.Windows.Forms.DataGrid.HitTest%2A> Methode in einem entsprechenden Ereignishandler, z. B. für die <xref:System.Windows.Forms.Control.MouseDown> oder <xref:System.Windows.Forms.Control.Click> Ereignis.  
+-   Rufen Sie die <xref:System.Windows.Forms.DataGrid.HitTest%2A> -Methode in einem geeigneten Ereignishandler, z.B. für die <xref:System.Windows.Forms.Control.MouseDown> oder <xref:System.Windows.Forms.Control.Click> Ereignis.  
   
-     Die <xref:System.Windows.Forms.DataGrid.HitTest%2A> Methode gibt ein <xref:System.Windows.Forms.DataGrid.HitTestInfo> -Objekt, das die Zeile und Spalte des Bereichs geklickt wurde enthält.  
+     Die <xref:System.Windows.Forms.DataGrid.HitTest%2A> Methode gibt eine <xref:System.Windows.Forms.DataGrid.HitTestInfo> -Objekt, das die Zeile und Spalte des Bereichs geklickt enthält.  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -131,7 +132,7 @@ ms.lasthandoff: 05/04/2018
     }  
     ```  
   
-     (Visual c#) Fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual C#) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -139,6 +140,6 @@ ms.lasthandoff: 05/04/2018
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Gewusst wie: Ändern der angezeigten Daten im DataGrid-Steuerelement in Windows Forms zur Laufzeit](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+## <a name="see-also"></a>Siehe auch
+- [DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [Vorgehensweise: Ändern der angezeigten Daten zur Laufzeit in das DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)

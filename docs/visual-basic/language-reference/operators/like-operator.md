@@ -22,12 +22,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: c5b26bd1d3ebae5136718833c124e3c6e575e9b7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b1621131b3f5e4669eb637c054be1548597cf252
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54703262"
 ---
 # <a name="like-operator-visual-basic"></a>Like-Operator (Visual Basic)
 Vergleicht eine Zeichenfolge mit einem Muster.  
@@ -43,7 +43,7 @@ result = string Like pattern
  Erforderlich. Alle `Boolean` Variable. Das Ergebnis ist eine `Boolean` Wert, der davon, ob die `string` erfüllt die `pattern`.  
   
  `string`  
- Erforderlich. Beliebiger `String`-Ausdruck.  
+ Erforderlich. Beliebiger `String` -Ausdruck.  
   
  `pattern`  
  Erforderlich. Alle `String` Ausdruck, beschriebenen Mustervergleichskonventionen entspricht der Mustervergleich in "Hinweise".  
@@ -73,7 +73,7 @@ result = string Like pattern
 ## <a name="special-characters"></a>Sonderzeichen  
  Entsprechend Sonderzeichen für die öffnende Klammer (`[`), Fragezeichen (`?`), Nummernzeichen (`#`), und das Sternchen (`*`), schließen Sie sie in Klammern. Die Rechte eckige Klammer (`]`) kann nicht innerhalb einer Gruppe verwendet werden, entsprechend selbst, aber es kann als ein einzelnes Zeichen außerhalb einer Gruppe verwendet werden.  
   
- Die Zeichensequenz `[]` gilt als eine Zeichenfolge der Länge 0 (null) (`""`). Es kann nicht jedoch, der ein Zeichen enthalten, die in eckige Klammern eingeschlossen sein. Sollten Sie prüfen, ob eine Position im `string` enthält mindestens ein von einer Gruppe von Zeichen oder keine Zeichen im Vorfeld für alle, können Sie `Like` zweimal. Ein Beispiel finden Sie unter [Vorgehensweise: Vergleichen einer Zeichenfolge mit einem Muster](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ Die Zeichensequenz `[]` gilt als eine Zeichenfolge der Länge 0 (null) (`""`). Es kann nicht jedoch, der ein Zeichen enthalten, die in eckige Klammern eingeschlossen sein. Sollten Sie prüfen, ob eine Position im `string` enthält mindestens ein von einer Gruppe von Zeichen oder keine Zeichen im Vorfeld für alle, können Sie `Like` zweimal. Ein Beispiel finden Sie unter [Gewusst wie: Vergleichen einer Zeichenfolge mit einem Muster](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
 ## <a name="character-ranges"></a>Zeichenbereiche  
  Mithilfe eines Bindestrichs (`–`) trennen Sie die untere und obere Grenze des Bereichs `charlist` können einen Bereich von Zeichen angeben. Z. B. `[A–Z]` ergibt eine Übereinstimmung, wenn die entsprechende in Zeichenposition `string` enthält alle Zeichen innerhalb des Bereichs `A`–`Z`, und `[!H–L]` ergibt eine Übereinstimmung, wenn das entsprechende Zeichen zu positionieren. beliebiges Zeichen außerhalb des Bereichs enthält `H`–`L`.  
@@ -95,19 +95,19 @@ result = string Like pattern
  Wenn eine Sprache, die ein Zeichen Digraph verwendet in die Einstellungen für das Gebietsschema angegeben wird, ein Vorkommen des Zeichens in einem einzelnen Digraph `pattern` oder `string` entspricht der entsprechende Sequenz von zwei Zeichen in die andere Zeichenfolge. Auf ähnliche Weise einen Digraph Zeichen in `pattern` in eckige Klammern eingeschlossen (allein in einer Liste oder in einem Bereich) entspricht in der entsprechenden zwei Zeichen bestehende Folge `string`.  
   
 ## <a name="overloading"></a>Überladen  
- Die `Like` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Wenn Ihr Code dieser Operator für diese eine Klasse oder Struktur verwendet, achten Sie darauf, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operatorprozeduren](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Die `Like` Operator möglich *überladen*, was bedeutet, dass eine Klasse oder Struktur sein Verhalten definieren kann, wenn ein Operand den Typ der Klasse oder Struktur hat. Wenn Ihr Code dieser Operator für diese eine Klasse oder Struktur verwendet, achten Sie darauf, dass Sie verstehen, dass das neu definierte Verhalten. Weitere Informationen finden Sie unter [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel verwendet die `Like` Operator zum Vergleichen von Zeichenfolgen mit verschiedenen Mustern. Die Ergebnisse werden in einem `Boolean` Variable, der angibt, ob jede Zeichenfolge dem Muster entspricht.  
   
  [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [Vergleichsoperatoren](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [Option Compare-Anweisung](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
- [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [Gewusst wie: Vergleichen einer Zeichenfolge mit einem Muster](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [Vergleichsoperatoren](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [Option Compare-Anweisung](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Vorgehensweise: Vergleichen einer Zeichenfolge mit einem Muster](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

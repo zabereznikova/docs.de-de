@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: bc104c4f51ebc64154bd3d9b39ac2bca13b2fab1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805355"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587176"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Angeben des Clientlaufzeitverhaltens
-Windows Communication Foundation (WCF)-Clients wie Windows Communication Foundation (WCF)-Dienste können konfiguriert werden, um das Laufzeitverhalten die Clientanwendung entsprechend ändern. Drei Attribute sind zum Angeben des Clientlaufzeitverhaltens verfügbar. Duplexclient-Rückrufobjekte können das <xref:System.ServiceModel.CallbackBehaviorAttribute>-Attribut und das <xref:System.ServiceModel.Description.CallbackDebugBehavior>-Attribut verwenden, um ihr Laufzeitverhalten zu ändern. Das andere Attribut, <xref:System.ServiceModel.Description.ClientViaBehavior>, kann verwendet werden, um das logische Ziel vom unmittelbaren Netzwerkziel zu trennen. Außerdem können Duplexclient-Rückruftypen Teile des Dienstseitenverhaltens verwenden. Weitere Informationen finden Sie unter [Run-Time-Dienstverhalten angeben](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+Windows Communication Foundation (WCF)-Clients, wie Windows Communication Foundation (WCF)-Dienste können konfiguriert werden, um das Laufzeitverhalten die Clientanwendung entsprechend zu ändern. Drei Attribute sind zum Angeben des Clientlaufzeitverhaltens verfügbar. Duplexclient-Rückrufobjekte können das <xref:System.ServiceModel.CallbackBehaviorAttribute>-Attribut und das <xref:System.ServiceModel.Description.CallbackDebugBehavior>-Attribut verwenden, um ihr Laufzeitverhalten zu ändern. Das andere Attribut, <xref:System.ServiceModel.Description.ClientViaBehavior>, kann verwendet werden, um das logische Ziel vom unmittelbaren Netzwerkziel zu trennen. Außerdem können Duplexclient-Rückruftypen Teile des Dienstseitenverhaltens verwenden. Weitere Informationen finden Sie unter [Run-Time-Dienstverhalten angeben](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>Verwenden des CallbackBehaviorAttribute  
  Sie können das Ausführungsverhalten einer Rückrufvertragsimplementierung in einer Clientanwendung mit der <xref:System.ServiceModel.CallbackBehaviorAttribute>-Klasse konfigurieren oder erweitern. Dieses Attribut führt eine ähnliche Funktion für die Rückrufklasse wie die <xref:System.ServiceModel.ServiceBehaviorAttribute>-Klasse aus, das Instanziieren von Verhaltens- und Transaktionseinstellungen ausgenommen.  
@@ -36,12 +36,12 @@ Windows Communication Foundation (WCF)-Clients wie Windows Communication Foundat
   
 -   Führen Sie diesen Vorgang nur in gesteuerten Debugszenarien aus.  
   
- Das folgende Codebeispiel zeigt einen Client-Konfigurationsdatei, der anweist, WCF, verwaltete Ausnahmeinformationen aus einem Client-Rückrufobjekt in SOAP-Nachrichten zurückzugeben.  
+ Im folgenden Codebeispiel wird ein Client-Konfigurationsdatei WCF weist an, die Informationen zu verwalteten Ausnahmen von einem Client-Rückrufobjekt in SOAP-Nachrichten zurück, die veranschaulicht.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  
 ## <a name="using-the-clientviabehavior-behavior"></a>Verwenden des ClientViaBehavior-Verhaltens  
  Sie können mit dem <xref:System.ServiceModel.Description.ClientViaBehavior>-Verhalten den URI (Uniform Resource Identifier) angeben, für den der Transportkanal erstellt werden soll. Verwenden Sie dieses Verhalten, wenn das unmittelbare Netzwerkziel nicht der gewünschte Prozessor der Nachricht ist. Dies ermöglicht Konversationen über mehrere Hops, wenn die aufrufende Anwendung das endgültige Ziel nicht unbedingt kennt oder wenn der `Via`-Header des Ziels keine Adresse ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Angeben des Dienstlaufzeitverhaltens](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+## <a name="see-also"></a>Siehe auch
+- [Angeben des Dienstlaufzeitverhaltens](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

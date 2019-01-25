@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen von Zeitzonen mit Anpassungsregeln'
+title: 'Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a5c04f7807638a4a8b114828083835f348ac08
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004113"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721174"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Gewusst wie: Erstellen von Zeitzonen mit Anpassungsregeln
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>Vorgehensweise: Erstellen von Zeitzonen mit Anpassungsregeln
 
 Die genaue Zeitzoneninformationen, die von einer Anwendung erforderlich sind möglicherweise nicht auf einem bestimmten System vorhanden, verschiedene Ursachen haben:
 
@@ -34,7 +34,7 @@ Sie können in diesen Fällen Aufrufen der <xref:System.TimeZoneInfo.CreateCusto
 > [!IMPORTANT]
 > Benutzerdefinierte Zeitzonen durch Aufrufen von erstellt die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methode werden nicht in der Registrierung hinzugefügt. Stattdessen können sie nur über das vom Objektverweis zugegriffen werden die <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> Methodenaufruf.
 
-In diesem Thema veranschaulicht, wie mit Anpassungsregeln eine Zeitzone zu erstellen. Um eine Zeitzone zu erstellen, die keine Anpassungsregeln für die Sommerzeit unterstützt, finden Sie unter [Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+In diesem Thema veranschaulicht, wie mit Anpassungsregeln eine Zeitzone zu erstellen. Um eine Zeitzone zu erstellen, die keine Anpassungsregeln für die Sommerzeit unterstützt, finden Sie unter [Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md).
 
 ### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>So erstellen eine Zeitzone mit bewegliche Anpassungsregeln
 
@@ -95,6 +95,6 @@ Für dieses Beispiel benötigen Sie Folgendes:
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
-* [Übersicht über Zeitzonen](../../../docs/standard/datetime/time-zone-overview.md)
-* [Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+- [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
+- [Übersicht über Zeitzonen](../../../docs/standard/datetime/time-zone-overview.md)
+- [Vorgehensweise: Erstellen von Zeitzonen ohne Anpassungsregeln](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)

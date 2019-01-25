@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst'
+title: 'Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000764"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54613823"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Gewusst wie: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst
 
 Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen eines Windows Communication Foundation (WCF)-Diensts, das von einem Windows-Dienst gehostet wird. Das Szenario wird durch die Hostingoption ist ein langer WCF-Dienst außerhalb von IIS (Internetinformationsdienste) gehostet, in einer sicheren Umgebung, die keine Nachricht aktiviert ist, die der verwalteten Windows-Dienst aktiviert. Die Lebensdauer des Diensts wird stattdessen vom Betriebssystem gesteuert. Diese Hostingoption ist in allen Windows-Versionen verfügbar.
 

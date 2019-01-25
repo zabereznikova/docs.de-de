@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip (Windows Forms)'
+title: 'Vorgehensweise: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: c87ffadaef2842f10d40f6fd84eb1c70c6dfe37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00f35fe872fc5702595108646e2605ed419823f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530821"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585307"
 ---
-# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Gewusst wie: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip (Windows Forms)
-Verwenden Sie die Multiple Document Interface (MDI) zum Erstellen von Anwendungen, die mehrere Dokumente öffnen, auf die gleiche Zeit, und kopieren und Einfügen von Inhalt aus einem Dokument in den anderen können.  
+# <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Vorgehensweise: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip (Windows Forms)
+Verwenden Sie zum Erstellen von Anwendungen, die mehrere Dokumente öffnen, zur gleichen Zeit und kopieren und Einfügen von Inhalt aus einem Dokument in den anderen können die Multiple Document Interface (MDI).  
   
- Dieses Verfahren wird gezeigt, wie eine Liste aller aktiven untergeordneten Formulare auf dem übergeordneten Menü "Fenster" zu erstellen.  
+ Dieses Verfahren zeigt, wie Sie eine Liste aller aktiven untergeordneten Formulare in Fenstermenü des übergeordneten Elements zu erstellen.  
   
-### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>Zum Erstellen einer MDI-Fensterliste auf einem MenuStrip  
+### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>Zum Erstellen einer MDI-Fensterliste in einem MenuStrip  
   
 1.  Erstellen Sie ein Formular, und legen Sie dessen <xref:System.Windows.Forms.Form.IsMdiContainer%2A>-Eigenschaft auf `true` fest.  
   
 2.  Fügen Sie dem Formular eine <xref:System.Windows.Forms.MenuStrip> hinzu.  
   
-3.  Fügen Sie zwei Menüelemente auf oberster Ebene auf die <xref:System.Windows.Forms.MenuStrip> und legen Sie ihre <xref:System.Windows.Forms.Control.Text%2A> Eigenschaften `&File` und `&Window`.  
+3.  Zwei Menüelemente der obersten Ebene zum Hinzufügen der <xref:System.Windows.Forms.MenuStrip> und legen Sie deren <xref:System.Windows.Forms.Control.Text%2A> Eigenschaften `&File` und `&Window`.  
   
 4.  Fügen Sie dem `&File`-Menüelement ein Untermenüelement hinzu, und legen Sie dessen <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf `&Open` fest.  
   
-5.  Festlegen der <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> Eigenschaft von der <xref:System.Windows.Forms.MenuStrip> auf die `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+5.  Legen Sie die <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> Eigenschaft der <xref:System.Windows.Forms.MenuStrip> auf der `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-6.  Das Projekt ein Formular hinzu, und fügen Sie das gewünschte Steuerelement hinzu, z. B. ein anderer <xref:System.Windows.Forms.MenuStrip>.  
+6.  Das Projekt ein Formular hinzu, und fügen Sie das gewünschte Steuerelement hinzu, z. B. einen anderen <xref:System.Windows.Forms.MenuStrip>.  
   
 7.  Erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.Control.Click>-Ereignis von `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-8.  Fügen Sie im Ereignishandler Code etwa wie folgt zu erstellen, und zeigen neue Instanzen eines `Form2` als untergeordnete MDI-Fenster von `Form1`.  
+8.  Fügen Sie Code, die etwa wie folgt zu erstellende und anzuzeigende neue Instanzen von innerhalb des ereignishandlers `Form2` als untergeordnete MDI-Fenster von `Form1`.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  
@@ -61,7 +61,7 @@ Verwenden Sie die Multiple Document Interface (MDI) zum Erstellen von Anwendunge
     }  
     ```  
   
-9. Fügen Sie Code wie folgt in die `&New` <xref:System.Windows.Forms.ToolStripMenuItem> an den Ereignishandler zu registrieren.  
+9. Fügen Sie Code wie den folgenden in das `&New` <xref:System.Windows.Forms.ToolStripMenuItem> um den Ereignishandler zu registrieren.  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
@@ -81,7 +81,7 @@ Verwenden Sie die Multiple Document Interface (MDI) zum Erstellen von Anwendunge
   
 -   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 9ece2fe051855d0fd39556f56a4343ead2c437bc
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e203e872ac0dce10fa7119388bae2472cb7e6b44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588238"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
 WCF Data Services (früher als "ADO.NET Data Services" bezeichnet) ist eine Komponente von .NET Framework, mit der Sie zum Erstellen von Diensten, mit denen, die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Verfügbarmachen und Verarbeiten von Daten über das Internet oder Intranet mit der Semantik der [ Rest (Representational State Transfer)](https://go.microsoft.com/fwlink/?LinkId=113919). OData macht Daten als durch URIs adressierbare Ressourcen verfügbar. Der Zugriff auf und die Änderung von Daten erfolgt mithilfe der Standard-HTTP-Befehle GET, PUT, POST und DELETE. OData verwendet die entitätsbeziehungskonventionen von der [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) Ressourcen als Sätze von Entitäten verfügbar zu machen, die durch Zuordnungen verknüpft sind.
 
-WCF Data Services verwendet das OData-Protokoll zum Adressieren und Aktualisieren von Ressourcen. Auf diese Weise können Sie diese Dienste von jedem Client aus zugreifen, die von OData unterstützt. OData ermöglicht es Ihnen, anfordern und Schreiben von Daten in Ressourcen mithilfe der folgenden bekannten Übertragungsformate: Atom, ein Satz von Standards zum Austauschen und Aktualisieren von Daten als XML- und JavaScript Object Notation (JSON), eine textbasierte Datenaustauschformat umfassend in AJAX die Anwendung.
+WCF Data Services verwendet das OData-Protokoll zum Adressieren und Aktualisieren von Ressourcen. Auf diese Weise können Sie diese Dienste von jedem Client aus zugreifen, die von OData unterstützt. OData können Sie anfordern, und Schreiben von Daten in Ressourcen mithilfe der folgenden bekannten Übertragungsformate: Atom, ein Satz von Standards zum Austauschen und Aktualisieren von Daten als XML- und JavaScript Object Notation (JSON), ein in AJAX-Anwendungen häufig verwendetes textbasiertes textbasierte Daten Exchange-Format.
 
 WCF Data Services kann Daten, die aus verschiedenen Quellen stammen, als OData-feeds verfügbar machen. Visual Studio-Tools erleichtern Ihnen die Erstellung einen OData-basierten Dienst mit einem ADO.NET Entity Framework-Datenmodell. Sie können auch den OData-Feeds auf Grundlage common Language Runtime (CLR)-Klassen und sogar spät gebundenen oder nicht typisierten Daten erstellen.
 

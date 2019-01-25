@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 97fca8758d9c21ac0b8f15bf9d5831750fbabe77
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 137e2fcd36d5d7618e0193461ebf7ca70b24d19f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737649"
 ---
 # <a name="ltremarksgt-visual-basic"></a>&lt;"Hinweise"&gt; (Visual Basic)
 Gibt einen Abschnitt "Hinweise" für das Element an.  
@@ -37,5 +37,5 @@ Gibt einen Abschnitt "Hinweise" für das Element an.
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>Siehe auch
+- [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)

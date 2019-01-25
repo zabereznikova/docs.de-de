@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f9f8925630933e2247726f92a93cac67bdc55ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c89a7671cde9e519d0fc66751ee8f95b34fe9039
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450488"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54669665"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished-Methode
-Benachrichtigt den Profiler, dass eine Anwendungsdomäne aus einem Prozess entladen wurde.  
+Benachrichtigt den Profiler an, eine Anwendungsdomäne von einem Prozess entladen wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,15 +40,15 @@ HRESULT AppDomainShutdownFinished(
  [in] Identifiziert die Domäne, in der die Assemblys der Anwendung gespeichert sind.  
   
  `hrStatus`  
- [in] Ein HRESULT, das angibt, ob die Anwendungsdomäne erfolgreich entladen wurde.  
+ [in] Ein HRESULT, der angibt, ob die Anwendungsdomäne erfolgreich entladen wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert der `appDomainId` gilt nicht für eine Anforderung Informationen nach der [ICorProfilerCallback:: AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) -Methode zurückkehrt.  
+ Der Wert des `appDomainId` gilt nicht für eine informationsanforderung nach der [ICorProfilerCallback:: AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) Methodenrückgabe.  
   
- Einige Teile der Entladen der Anwendungsdomäne möglicherweise weiterhin nach dem `AppDomainCreationFinished` Rückruf. Fehler-HRESULT in `hrStatus` gibt einen Fehler. Allerdings ein Erfolgs-HRESULT in `hrStatus` bedeutet nur, dass der erste Teil des Entladen der Anwendungsdomäne erfolgreich war.  
+ Das Entladen der Anwendungsdomäne möglicherweise weiterhin nach den `AppDomainCreationFinished` Rückruf. Fehler-HRESULT in `hrStatus` gibt einen Fehler. Allerdings einen HRESULT-Erfolg in `hrStatus` gibt nur an, dass der erste Teil des Entladen der Anwendungsdomäne erfolgreich war.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -56,5 +56,5 @@ HRESULT AppDomainShutdownFinished(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

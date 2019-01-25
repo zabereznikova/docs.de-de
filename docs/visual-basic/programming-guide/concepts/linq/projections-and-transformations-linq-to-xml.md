@@ -2,12 +2,12 @@
 title: Projektionen und Transformationen (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 297de224-b625-44cf-8c00-186b6189aa0e
-ms.openlocfilehash: 33be64420eb2c42ed1c8b680985609ceca241b4e
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 5fe02314d69fbce90231638efcc26175c351c9c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717587"
 ---
 # <a name="projections-and-transformations-linq-to-xml-visual-basic"></a>Projektionen und Transformationen (LINQ to XML) (Visual Basic)
 Dieser Abschnitt enthält Beispiele für [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Projektionen und -Transformationen.  
@@ -16,7 +16,7 @@ Dieser Abschnitt enthält Beispiele für [!INCLUDE[sqltecxlinq](~/includes/sqlte
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Vorgehensweise: Arbeiten mit Wörterbüchern unter Verwendung von LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md)|Zeigt, wie Sie Wörterbücher in XML und XML in Wörterbücher transformieren können.|  
+|[Vorgehensweise: Arbeiten Sie mit Wörterbüchern unter Verwendung von LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-work-with-dictionaries-using-linq-to-xml.md)|Zeigt, wie Sie Wörterbücher in XML und XML in Wörterbücher transformieren können.|  
 |[Vorgehensweise: Transformieren der Form einer XML-Struktur (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-transform-the-shape-of-an-xml-tree.md)|Zeigt, wie Sie die Form eines XML-Dokuments transformieren können.|  
 |[Vorgehensweise: Steuern des Typs einer Projektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md)|Zeigt, wie Sie den Typ einer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfrage steuern können.|  
 |[Vorgehensweise: Projektieren eines neuen Typs (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-project-a-new-type-linq-to-xml.md)|Zeigt, wie Sie eine Auflistung eines benutzerdefinierten Typs aus einer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfrage projizieren können.|  
@@ -25,5 +25,5 @@ Dieser Abschnitt enthält Beispiele für [!INCLUDE[sqltecxlinq](~/includes/sqlte
 |[Vorgehensweise: Generieren von Textdateien aus XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|Zeigt, wie Sie eine XML-Datei in eine Nicht-XML-Textdatei transformieren können.|  
 |[Vorgehensweise: Generieren von XML aus CSV-Dateien (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|Zeigt, wie Sie mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] eine CSV-Datei analysieren und XML daraus generieren können.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfragen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Siehe auch
+- [Abfragen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

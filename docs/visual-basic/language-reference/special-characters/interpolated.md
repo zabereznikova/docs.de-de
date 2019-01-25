@@ -1,12 +1,12 @@
 ---
 title: $ (Visual Basic-Referenz)
 ms.date: 10/31/2017
-ms.openlocfilehash: f4651849241ec0ccf8052cc012ae97babd299e62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 94c88b5f6d741bb35af775b56b1bab273bbf5b1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715425"
 ---
 # <a name="-visual-basic-reference"></a>$ (Visual Basic-Referenz)
 
@@ -18,6 +18,6 @@ Im folgenden Beispiel wird das `$`-Zeichen verwendet, um eine interpolierte Zeic
 
 Weitere Informationen zu interpolierten Zeichenfolgen finden Sie unter [Interpolierte Zeichenfolgen](../../programming-guide/language-features/strings/interpolated-strings.md).
 
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Referenz](../index.md)  
- [Visual Basic-Sonderzeichen](index.md)
+## <a name="see-also"></a>Siehe auch
+- [Visual Basic-Referenz](../index.md)
+- [Visual Basic-Sonderzeichen](index.md)

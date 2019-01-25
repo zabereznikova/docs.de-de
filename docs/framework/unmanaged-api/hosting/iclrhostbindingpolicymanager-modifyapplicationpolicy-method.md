@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a221b286ada97c3c03387556cb30ee6ddd2c453
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 45e0099ea60a338f0ea1ef414f4d2fa1c33c9d70
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436253"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726883"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy-Methode
-Ändert eine Bindungsrichtlinie für die für die angegebene Assembly und erstellt eine neue Version der Richtlinie.  
+Ändert die Richtlinie für die angegebene Assembly und erstellt eine neue Version der Richtlinie.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,22 +43,22 @@ HRESULT  ModifyApplicationPolicy (
   
 #### <a name="parameters"></a>Parameter  
  `pwzSourceAssemblyIdentity`  
- [in] Die Identität der Assembly zu ändern.  
+ [in] Die Identität der Assembly, zu ändern.  
   
  `pwzTargetAssemblyIdentity`  
- [in] Die neue Identität der geänderten Assembly.  
+ [in] Die neue Identität der Assembly geändert.  
   
  `pbApplicationPolicy`  
- [in] Ein Zeiger auf einen Puffer, der die Daten der Bindung für die zu ändernde Assembly enthält.  
+ [in] Ein Zeiger auf einen Puffer, der Daten der Bindung für den zu ändernden Assembly enthält.  
   
  `cbAppPolicySize`  
  [in] Die Größe der Bindungsrichtlinie ersetzt werden.  
   
  `dwPolicyModifyFlags`  
- [in] Eine logische OR-Kombination von [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) Werte, der Steuerung der Umleitung.  
+ [in] Eine logische OR-Kombination von [EHostBindingPolicyModifyFlags](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md) Werte, der Kontrolle über die Umleitung angibt.  
   
  `pbNewApplicationPolicy`  
- [out] Ein Zeiger auf einen Puffer, der die Daten der neuen Bindung enthält.  
+ [out] Ein Zeiger auf einen Puffer, der Daten der neuen Bindung enthält.  
   
  `pcbNewAppPolicySize`  
  [in, out] Ein Zeiger auf die Größe des Puffers Richtlinie neue Bindung.  
@@ -70,23 +70,23 @@ HRESULT  ModifyApplicationPolicy (
 |S_OK|Die Richtlinie wurde erfolgreich geändert.|  
 |E_INVALIDARG|`pwzSourceAssemblyIdentity` oder `pwzTargetAssemblyIdentity` wurde ein null-Verweis.|  
 |ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` ist zu klein.|  
-|HOST_E_CLRNOTAVAILABLE ZURÜCK|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen, oder die CLR wird in einem Zustand, in dem er nicht verwalteten Code ausführen oder den Aufruf erfolgreich verarbeitet werden.|  
+|HOST_E_CLRNOTAVAILABLE|Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.|  
 |HOST_E_TIMEOUT|Der Aufruf ist ein Timeout aufgetreten.|  
 |HOST_E_NOT_OWNER|Der Aufrufer ist nicht Besitzer der Sperre.|  
-|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während ein blockierten Thread oder eine Fiber darauf gewartet.|  
-|E_FAIL|Ein Unbekannter Schwerwiegender Fehler aufgetreten ist. Nachdem eine Methode E_FAIL zurückgegeben hat, ist die CLR nicht mehr verwendbar innerhalb des Prozesses. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
+|HOST_E_ABANDONED|Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.|  
+|E_FAIL|Ein Unbekannter Schwerwiegender Fehler ist aufgetreten. Wenn eine Methode E_FAIL zurückgegeben hat, ist die CLR nicht mehr im Prozess verwendet werden. Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ModifyApplicationPolicy` Methode zweimal aufgerufen werden kann. Der erste Aufruf sollte Geben Sie einen null-Wert für die `pbNewApplicationPolicy` Parameter. Dieser Aufruf wird zurückgegeben, mit den erforderlichen Wert für `pcbNewAppPolicySize`. Der zweite Aufruf sollte diesen Wert für bereit `pcbNewAppPolicySize`, und zeigen Sie auf einen Puffer der Größe für `pbNewApplicationPolicy`.  
+ Die `ModifyApplicationPolicy` -Methode zweimal aufgerufen werden kann. Geben Sie beim erste Aufruf sollte null-Wert für die `pbNewApplicationPolicy` Parameter. Dieser Aufruf gibt den erforderlichen Wert für `pcbNewAppPolicySize`. Der zweite Aufruf sollte diesen Wert für bereitstellen `pcbNewAppPolicySize`, und zeigen Sie auf einen Puffer dieser Größe für `pbNewApplicationPolicy`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRHostBindingPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRHostBindingPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

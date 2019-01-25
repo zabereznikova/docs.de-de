@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46ee8c62861a62ac044f295f7da082756d87347b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 88b8f874400d68110fa5e8fb66ca910b8e7231e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447632"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645963"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers-Methode
 Zählt MemberDef-Token auf, die Elemente des angegebenen Typs darstellen.  
@@ -44,36 +44,36 @@ HRESULT EnumMembers (
  [in, out] Ein Zeiger auf den Enumerator.  
   
  `cl`  
- [in] Eine TypeDef-Token, die den Typ, dessen Member aufzuzählenden darstellt.  
+ [in] Eine TypeDef-Token, das den Typ, dessen Member aufgelistet werden darstellt.  
   
  `rMembers`  
- [out] Das Array zum Speichern der MemberDef-Token verwendet.  
+ [out] Das Array, die MemberDef-Token enthalten.  
   
  `cMax`  
  [in] Die maximale Größe des `rMembers`-Arrays.  
   
  `pcTokens`  
- [out] Die tatsächliche Anzahl von MemberDef-Token im zurückgegebenen `rMembers`.  
+ [out] Die tatsächliche Anzahl der zurückgegebenen MemberDef-Token `rMembers`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMembers` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine MemberDef-Token, aufgelistet werden. In diesem Fall `pcTokens` 0 (null).|  
+|`S_FALSE`|Es gibt keine MemberDef-Token, die aufgelistet werden. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="remarks"></a>Hinweise  
- Beim Aufzählen von Auflistungen von Elementen für eine Klasse `EnumMembers` gibt nur Elemente, die direkt für die Klasse definiert. Es gibt keine Member, die die Klasse erbt, zurück, selbst wenn die Klasse eine Implementierung für diese geerbten Member bereitstellt. Um geerbte Member aufzulisten, muss der Aufrufer die Vererbungskette explizit durchlaufen. Beachten Sie, dass die Regeln für die Vererbungskette variiert je nach Sprache oder Compiler, die die ursprüngliche Metadaten ausgegeben.  
+ Beim Auflisten von Sammlungen von Elementen für eine Klasse von `EnumMembers` gibt nur die Elemente, die direkt in der Klasse definiert. Es gibt keine Member, die die Klasse erbt, zurück, auch wenn die Klasse eine Implementierung für diese geerbten Member bereitstellt. Um geerbte Member aufzulisten, muss der Aufrufer explizit die Vererbungskette geführt. Beachten Sie, dass die Regeln für die Vererbungskette variieren abhängig von der Sprache und Compiler, die die ursprüngliche Metadaten ausgegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 270267fa961e2d9420364bc11992be9eff03866b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 94e9c510f7f3c183bf6cbde31e2ead04cc66bfb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744114"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  In diesem Abschnitt wird beschrieben, wie ein serverseitiger Benutzeroberflächenautomatisierungs-Anbieter für ein benutzerdefiniertes Steuerelement implementiert wird.  
   
@@ -171,12 +171,12 @@ ms.locfileid: "48837374"
   
  Hierfür stellt der Fragmentstammanbieter für die Grundleiste einen Satz an untergeordneten Elementen zur Verfügung, die die Bänder repräsentieren. Jedes Band verfügt über einen einzelnen Anbieter, der Eigenschaften und Muster zur Verfügung stellen kann. In dessen Implementierung von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>gibt der Bandanbieter den Standardfensteranbieter für das Steuerelement-HWND zurück, den er unter Übergabe des Fensterhandles des Steuerelements mithilfe von <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>abruft. Abschließend implementiert der Fragmentstammanbieter für die Infoleiste die <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> -Schnittstelle, und gibt in seiner Implementierung von <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> den geeigneten Bandanbieter für das im angegebenen HWND enthaltene Steuerelement zurück.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [Verfügbarmachen eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)  
- [Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [Auslösen von Ereignissen aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
- [Aktivieren der Navigation in einem Benutzeroberflächenautomatisierungs-Fragmentanbieter](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Einfaches Beispiel](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
- [Beispiel für einen Fragmentanbieter](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
+- [Verfügbarmachen eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/expose-a-server-side-ui-automation-provider.md)
+- [Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [Auslösen von Ereignissen aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+- [Aktivieren der Navigation in einem Benutzeroberflächenautomatisierungs-Fragmentanbieter](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)
+- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Einfaches Beispiel](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)
+- [Beispiel für einen Fragmentanbieter](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

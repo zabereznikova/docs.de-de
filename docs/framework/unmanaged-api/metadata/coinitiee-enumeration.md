@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4d0ad0c8651fe10bd2a1c72a8a995846cc80a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 48f15cc08167baaadc61787b8b1f7167304f0cae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440777"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569478"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE-Enumeration
-Gibt Konstanten verwendet [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) beim Initialisieren der common Language Runtime.  
+Gibt Konstanten an, die von verwendet [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) beim Initialisieren der common Language Runtime.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,18 +40,18 @@ typedef enum tagCOINITEE {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COINITEE_DEFAULT`|Initialisierung-Standardmodus. Initialisiert die Laufzeit und erstellt die Standardeinstellung <xref:System.AppDomain>.|  
+|`COINITEE_DEFAULT`|Initialisierung-Standardmodus. Initialisiert die Laufzeit und erstellt die <xref:System.AppDomain>.|  
 |`COINITEE_DLL`|Führen Sie eine verwaltete DLL initialisiert.|  
-|`COINITEE_MAIN`|Führen Sie eine verwaltete EXE-Datei initialisiert. Dies initialisiert die Laufzeit, jedoch nicht die Standardeinstellung erstellt <xref:System.AppDomain>, die nach der Eingabe der Hauptroutine der EXE-Datei erstellt wird.|  
+|`COINITEE_MAIN`|Führen Sie eine verwaltete EXE-Datei initialisiert. Dies initialisiert die Laufzeit jedoch nicht die Standardeinstellung erstellt <xref:System.AppDomain>, das nach dem Eingeben der Hauptroutine der EXE-Datei erstellt wird.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

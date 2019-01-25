@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 28016763b2cef2e8b8954f486bbbdb6930b5364c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e7fb55cac1de747c620ea44f320ec9185bfbd3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612150"
 ---
 # <a name="namespace-statement"></a>Namespace-Anweisung
 Der Name eines Namespace deklariert und bewirkt, dass den Quellcode, der die Deklaration innerhalb dieses Namespace kompiliert werden.  
@@ -60,7 +60,7 @@ End Namespace
  Programmierelemente, die auf Namespace-Ebene, d. h. in einem Namespace, jedoch nicht in ein anderes Element deklariert haben `Public` oder `Friend` Zugriff. Falls nicht angegeben, verwendet die Zugriffsebene wie ein Element `Friend` standardmäßig. Elemente, die Sie auf Namespaceebene deklarieren enthalten Klassen, Strukturen, Module, Schnittstellen, Enumerationen und Delegaten. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
 ## <a name="root-namespace"></a>Stamm-Namespace  
- Alle Namespacenamen in Ihrem Projekt basieren auf einer *Stammnamespace*. Visual Studio weist den Projektnamen als den Standard-Stammnamespace für den gesamten Code des Projekts zu. Wenn Ihr Projekt beispielsweise den Namen `Payroll` hat, gehören die Programmierelemente zum Namespace `Payroll`. Wenn Sie deklarieren `Namespace funding`, ist der vollständige Name dieses Namespace `Payroll.funding`.  
+ Alle Namespacenamen in Ihrem Projekt basieren auf einer *Stammnamespace*. Visual Studio weist den Projektnamen als den Standard-Stammnamespace für den gesamten Code des Projekts zu. Wenn Ihr Projekt beispielsweise den Namen `Payroll`hat, gehören die Programmierelemente zum Namespace `Payroll`. Wenn Sie deklarieren `Namespace funding`, ist der vollständige Name dieses Namespace `Payroll.funding`.  
   
  Wenn Sie einen vorhandenen Namespace im angeben möchten einer `Namespace` -Anweisung, wie im Beispiel für die generische Liste, Sie Ihre Stamm-Namespace mit einem Nullwert festlegen können. Zu diesem Zweck klicken Sie auf **Projekteigenschaften** aus der **Projekt** Menü und deaktivieren Sie dann die **Stammnamespace** Eintrag so, dass das Feld leer ist. Visual Basic-Compiler würde dauern, wenn Sie dies im Beispiel für die generische Liste nicht, `System.Collections.Generic` als im Projekt einen neuen Namespace `Payroll`, durch den vollständigen Namen des `Payroll.System.Collections.Generic`.  
   
@@ -102,7 +102,7 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)

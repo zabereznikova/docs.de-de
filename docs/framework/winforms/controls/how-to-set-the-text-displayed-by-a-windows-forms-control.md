@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Textes'
+title: 'Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: d9c9bea26cfc3d5b2cfc4484173a7680ff2fc34d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 30cf71aa2a87ff99ccb965844b620ef08a20b69c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525034"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636445"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Gewusst wie: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Textes
-Windows Forms-Steuerelemente zeigen in der Regel Text an, der mit der Hauptfunktion des Steuerelements zusammenhängt. Beispielsweise verfügt ein <xref:System.Windows.Forms.Button>-Steuerelement üblicherweise über eine Beschriftung, die auf die beim Klicken der Schaltfläche ausgeführte Aktion hinweist. Bei allen Steuerelementen können Sie den Text mithilfe der <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft festlegen oder zurückgeben. Sie können die Schriftart ändern, indem Sie die <xref:System.Windows.Forms.Control.Font%2A>-Eigenschaft verwenden. Sie können den Text aber auch mithilfe des Designers festlegen.   Siehe auch [wie: Erstellen Access Keys für Windows Forms-Steuerelemente mithilfe des Designers](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [wie: Festlegen der Text angezeigt, die ein Windows Forms-Steuerelement mithilfe den Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [wie: Festlegen des Images Angezeigt wird, indem Sie eine Windows Forms-Steuerelement mithilfe des Designers](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement
+Windows Forms-Steuerelemente zeigen in der Regel Text an, der mit der Hauptfunktion des Steuerelements zusammenhängt. Beispielsweise verfügt ein <xref:System.Windows.Forms.Button>-Steuerelement üblicherweise über eine Beschriftung, die auf die beim Klicken der Schaltfläche ausgeführte Aktion hinweist. Bei allen Steuerelementen können Sie den Text mithilfe der <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft festlegen oder zurückgeben. Sie können die Schriftart ändern, indem Sie die <xref:System.Windows.Forms.Control.Font%2A>-Eigenschaft verwenden. Sie können den Text aber auch mithilfe des Designers festlegen.   Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente, die mithilfe des Designers](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement mithilfe des Designers](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [Vorgehensweise: Das Bild angezeigt, die von einer Windows Forms-Steuerelement mithilfe des Designers](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
   
 ### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>So legen Sie den von einem Steuerelement angezeigten Text programmgesteuert fest  
   
@@ -71,7 +71,7 @@ Windows Forms-Steuerelemente zeigen in der Regel Text an, der mit der Hauptfunkt
     mpMenuItem->Text = "&& Now For Something Completely Different";  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>  
- [Gewusst wie: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
- [Gewusst wie: Reagieren auf das Anklicken von Schaltflächen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
+- [Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)
+- [Vorgehensweise: Reagieren Sie auf eine Windows Forms-Schaltfläche geklickt](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)

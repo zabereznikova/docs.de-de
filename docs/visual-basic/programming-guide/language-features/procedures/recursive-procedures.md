@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 0bb89ac855d65d7677a062346db8665698dbb805
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1802785e38b58ce2c057d6ddbe1e54e73e079761
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660722"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Rekursive Prozeduren (Visual Basic)
 Ein *rekursive* Verfahren ist ein, der sich selbst aufruft. Im Allgemeinen ist dies nicht die effektivste Möglichkeit, Visual Basic-Code zu schreiben.  
@@ -37,15 +37,15 @@ Ein *rekursive* Verfahren ist ein, der sich selbst aufruft. Im Allgemeinen ist d
   
  **Testen von**. Wenn Sie eine rekursive Prozedur schreiben, sollten Sie sie sorgfältig testen, um sicherzustellen, dass es immer eine einschränkende Bedingung erfüllt. Sie sollten auch sicherstellen, dass Sie nicht genügend Arbeitsspeicher aufgrund zu viele rekursive Aufrufe nicht ausführen können.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.StackOverflowException>  
- [Verfahren](./index.md)  
- [Sub-Prozeduren](./sub-procedures.md)  
- [Function-Prozeduren](./function-procedures.md)  
- [Eigenschaftenprozeduren](./property-procedures.md)  
- [Operatorprozeduren](./operator-procedures.md)  
- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)  
- [Prozedurüberladung](./procedure-overloading.md)  
- [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)  
- [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [Problembehandlung bei Ausnahmen: System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.StackOverflowException>
+- [Verfahren](./index.md)
+- [Sub-Prozeduren](./sub-procedures.md)
+- [Function-Prozeduren](./function-procedures.md)
+- [Eigenschaftenprozeduren](./property-procedures.md)
+- [Operatorprozeduren](./operator-procedures.md)
+- [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
+- [Prozedurüberladung](./procedure-overloading.md)
+- [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)
+- [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Problembehandlung bei Ausnahmen: System.StackOverflowException](https://msdn.microsoft.com/library/51b71217-c507-4f5b-bc35-0236180d7968)

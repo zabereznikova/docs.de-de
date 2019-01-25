@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb37394799db39baa406ef332066d5ebb2dbf19d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 793d3996f9cbcb1a38a728ade06f775784166123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745895"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION-Enumeration
-Enthält Werte, die darauf, dass die Aktion eines Hosts durchführen soll, wenn ein Vorgang hinweisen, durch die common Language Runtime (CLR) Textblöcke angefordert.  
+Enthält Werte, die angeben, dass die Aktion eines Hosts durchführen soll, wenn ein Vorgang angefordert wird, durch die common Language Runtime (CLR) ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,20 +41,20 @@ typedef enum {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`WAIT_ALERTABLE`|Benachrichtigt den Host, dass die Aufgabe aktiviert werden soll, wenn die CLR ruft die [IHostTask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) Methode.|  
-|`WAIT_MSGPUMP`|Benachrichtigt den Host an, dass Nachrichten auf dem aktuellen Betriebssystemthread verteilt werden müssen, wenn der Thread blockiert wird. Die Common Language Runtime gibt diesen Wert nur auf eine <xref:System.Threading.ApartmentState.STA> Thread.|  
-|`WAIT_NOTINDEADLOCK`|Benachrichtigt den Host, dass die angegebenen synchronisierungsanforderung von einem Host aufgeteilt werden kann. Der Host kann nicht zurückkehren, d. h. `HOST_E_DEADLOCK`.|  
+|`WAIT_MSGPUMP`|Benachrichtigt den Host an, dass Nachrichten in der aktuellen BS-Thread verteilt werden müssen, wenn der Thread blockiert wird. Die Common Language Runtime gibt dieser Wert nur auf eine <xref:System.Threading.ApartmentState.STA> Thread.|  
+|`WAIT_NOTINDEADLOCK`|Benachrichtigt den Host, dass die angegebene synchronisierungsanforderung von einem Host aufgeteilt werden kann. Der Host kann nicht zurückkehren, d. h. `HOST_E_DEADLOCK`.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die [IHostTaskManager:: Sleep](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md) und [IHostTaskManager:: SwitchToTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md) beide Methoden akzeptieren einen Parameter dieses Typs.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 9bbc7f51de9899354184d051d8f1a584651dd030
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e67339beac42fe6dc32925c8733bec2889739733
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850373"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728069"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>Problembehandlung bei Datentypen (Visual Basic)
 Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei der Durchführung von Vorgängen für systeminterne Datentypen.  
@@ -112,11 +112,11 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
 ### <a name="meaningless-values"></a>Bedeutungslose Werte  
  Im allgemeinen `String` Werte sind ohne Bedeutung in andere Datentypen, und eine Konvertierung ist hochgradig theoretisch angelegt ist und gefährlich. Wann immer möglich, beschränken Sie die Verwendung von `String` Variablen auf die Zeichenfolgen, die für die sie entworfen werden. Sie sollten nie Code schreiben, die entsprechenden Werte in anderen Projekttypen verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Typzeichen](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)  
- [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Effiziente Verwendung von Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>Siehe auch
+- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Typzeichen](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)
+- [Typkonvertierungsfunktionen](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Effiziente Verwendung von Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

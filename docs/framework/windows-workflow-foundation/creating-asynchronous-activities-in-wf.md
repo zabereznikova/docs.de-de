@@ -2,12 +2,12 @@
 title: Erstellen von asynchronen Aktivitäten in WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 1b7fe1c5c998660f054d2ca060c108c758e36db7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266558"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650927"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Erstellen von asynchronen Aktivitäten in WF
 Das <xref:System.Activities.AsyncCodeActivity>-Objekt stellt eine Basisklasse für Aktivitätsautoren bereit, mit der abgeleitete Aktivitäten asynchrone Ausführungslogik implementieren können. Dies ist nützlich bei benutzerdefinierten Aktivitäten, die asynchrone Aufgaben ausführen müssen, ohne dass der Workflowplanerthread angehalten und Aktivitäten, die parallel ausgeführt werden, bockiert werden. Dieses Thema enthält eine Übersicht zum Erstellen von benutzerdefinierten asynchronen Aktivitäten mit <xref:System.Activities.AsyncCodeActivity>.  
@@ -44,9 +44,9 @@ Das <xref:System.Activities.AsyncCodeActivity>-Objekt stellt eine Basisklasse f�
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Planen von Aktionen oder untergeordneten Aktivitäten mithilfe von AsyncCodeActivity  
- Von <xref:System.Activities.AsyncCodeActivity> abgeleitete benutzerdefinierte Aktivitäten ermöglichen das asynchrone Arbeiten am Workflowthread, bieten aber keine Möglichkeit, untergeordnete Aktivitäten oder Aktionen zu planen. Das asynchrone Verhalten kann jedoch integriert werden, indem untergeordnete Aktivitäten bei der Zusammensetzung geplant werden. Eine asynchrone Aktivität kann erstellt und dann mit einer abgeleiteten <xref:System.Activities.Activity>-Aktivität oder <xref:System.Activities.NativeActivity>-Aktivität zusammengestellt werden, um Unterstützung für asynchrones Verhalten und die Planung untergeordneter Aktivitäten oder Aktionen bereitzustellen. Beispielsweise könnte eine Aktivität erstellt werden, die von <xref:System.Activities.Activity> abgeleitet ist und als Implementierung über <xref:System.Activities.Statements.Sequence> verfügt, die asynchrone Aktivität sowie die anderen Aktivitäten enthält, die die Logik der Aktivität implementieren. Weitere Beispiele für das Verfassen von Aktivitäten mit <xref:System.Activities.Activity> und <xref:System.Activities.NativeActivity>, finden Sie unter [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) und [Aktivitätsoptionen Authoring](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
+ Von <xref:System.Activities.AsyncCodeActivity> abgeleitete benutzerdefinierte Aktivitäten ermöglichen das asynchrone Arbeiten am Workflowthread, bieten aber keine Möglichkeit, untergeordnete Aktivitäten oder Aktionen zu planen. Das asynchrone Verhalten kann jedoch integriert werden, indem untergeordnete Aktivitäten bei der Zusammensetzung geplant werden. Eine asynchrone Aktivität kann erstellt und dann mit einer abgeleiteten <xref:System.Activities.Activity>-Aktivität oder <xref:System.Activities.NativeActivity>-Aktivität zusammengestellt werden, um Unterstützung für asynchrones Verhalten und die Planung untergeordneter Aktivitäten oder Aktionen bereitzustellen. Beispielsweise könnte eine Aktivität erstellt werden, die von <xref:System.Activities.Activity> abgeleitet ist und als Implementierung über <xref:System.Activities.Statements.Sequence> verfügt, die asynchrone Aktivität sowie die anderen Aktivitäten enthält, die die Logik der Aktivität implementieren. Weitere Beispiele für das Verfassen von Aktivitäten mit <xref:System.Activities.Activity> und <xref:System.Activities.NativeActivity>, finden Sie unter [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) und [Optionen Erstellung von Aktivitäten](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Action>  
-- <xref:System.Func%602>  
+- <xref:System.Action>
+- <xref:System.Func%602>

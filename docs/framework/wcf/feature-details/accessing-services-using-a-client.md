@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 1ac7acda0b9065fde4ab04c80e9d26a1ec23fa6e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130987"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583206"
 ---
 # <a name="accessing-services-using-a-client"></a>Zugreifen auf Dienste mithilfe eines Clients
 Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client- oder kanalobjekt-Objekte mit Diensten kommunizieren. Die [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) Thema bietet eine Übersicht über die Objekte und Schritte zum Erstellen von Objekten für grundlegende Client- und kanalobjekten und deren Verwendung.  
@@ -70,7 +70,7 @@ Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client-
   
  Große Datensegmente können die Clientverarbeitung verlangsamen, egal, welches Nachrichtenaustauschmuster verwendet wird. Informationen zur Behandlung dieser Probleme finden Sie unter [umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
- Wenn Ihre Anwendung mehr Arbeit ausführen muss, während ein Vorgang abgeschlossen ist, sollten Sie ein asynchrones Methodenpaar in der dienstvertragschnittstelle erstellen, die Ihre WCF-Client implementiert. Die einfachste Möglichkeit hierzu ist die Verwendung der `/async` Einschalten der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Ein Beispiel finden Sie unter [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Wenn Ihre Anwendung mehr Arbeit ausführen muss, während ein Vorgang abgeschlossen ist, sollten Sie ein asynchrones Methodenpaar in der dienstvertragschnittstelle erstellen, die Ihre WCF-Client implementiert. Die einfachste Möglichkeit hierzu ist die Verwendung der `/async` Einschalten der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Ein Beispiel finden Sie unter [Gewusst wie: Asynchrones Aufrufen von Dienstvorgängen](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
  Weitere Informationen über die zunehmende Leistung des Clients finden Sie unter [Clientanwendungen mittlerer Ebene](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   
@@ -93,11 +93,11 @@ Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client-
   
  Anwendungen, die den impliziten Ansatz verwenden, rufen die Initialisierer der Benutzeroberfläche auf, aber wenn der Benutzer nicht innerhalb des Sendetimeouts der Bindung antwortet, wird bei Zurückgeben der Benutzeroberfläche eine Ausnahme ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
- [Duplexdienste](../../../../docs/framework/wcf/feature-details/duplex-services.md)  
- [So wird es gemacht: Zugreifen auf Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [So wird es gemacht: Von Access Services mit einem Duplexvertrag](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [So wird es gemacht: Zugriff auf einen WSE 3.0 Service](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
- [So wird es gemacht: Verwenden von ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)  
- [So wird es gemacht: Asynchrones Aufrufen von Dienstvorgängen](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [Clientanwendungen der mittleren Schicht](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)
+## <a name="see-also"></a>Siehe auch
+- [Duplexdienste](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [Vorgehensweise: Zugreifen auf Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Vorgehensweise: Von Access Services mit einem Duplexvertrag](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Vorgehensweise: Zugriff auf einen WSE 3.0 Service](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Vorgehensweise: Verwenden von ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Clientanwendungen der mittleren Schicht](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

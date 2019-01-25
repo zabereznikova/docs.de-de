@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBoxValue Schnittstelle1
+title: ICorDebugBoxValue-Schnittstelle1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBoxValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b546d65e2c3cf498c80e19cc7236a6e424515577
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 549f3f782d544c967838206804640b577da2f877
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405925"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699011"
 ---
-# <a name="icordebugboxvalue-interface1"></a>ICorDebugBoxValue Schnittstelle1
+# <a name="icordebugboxvalue-interface1"></a>ICorDebugBoxValue-Schnittstelle1
 Eine Unterklasse von "ICorDebugHeapValue", die ein geschachteltes Wertklassenobjekt darstellt.  
   
 ## <a name="methods"></a>Methoden  
@@ -38,7 +38,7 @@ Eine Unterklasse von "ICorDebugHeapValue", die ein geschachteltes Wertklassenobj
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -46,5 +46,5 @@ Eine Unterklasse von "ICorDebugHeapValue", die ein geschachteltes Wertklassenobj
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

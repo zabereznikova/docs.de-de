@@ -24,15 +24,15 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: 5fbb07154fce27feb257b431c1726446b42fbfe0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd50435b7cbb5d3d25c0e30618e8733b4eddfe91
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605289"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655074"
 ---
 # <a name="type-list-visual-basic"></a>Typenliste (Visual Basic)
-Gibt an, die *Typparameter* für eine *generische* Programmierelement. Mehrere Parameter werden durch Kommas getrennt. Nachfolgend ist die Syntax für einen Typparameter.  
+Gibt an, die *Typparameter* für eine *generische* Programmierelement. Mehrere Parameter werden durch Kommas getrennt. Es folgt die Syntax für einen Typ-Parameter.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,46 +44,46 @@ Gibt an, die *Typparameter* für eine *generische* Programmierelement. Mehrere P
   
 |Begriff|Definition|  
 |---|---|  
-|`genericmodifier`|Dies ist optional. Kann nur in generischen Schnittstellen und Delegaten verwendet werden. Sie können einen Typ kovariant deklarieren, indem die [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) Schlüsselwort oder kontravariant mithilfe der [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) Schlüsselwort. Siehe [Kovarianz und Kontravarianz](../../programming-guide/concepts/covariance-contravariance/index.md).|  
-|`typename`|Erforderlich. Der Name des Typparameters. Dies ist ein Platzhalter, durch einen definierten, durch das entsprechende Typargument bereitgestellten Typ ersetzt werden.|  
-|`constraintlist`|Dies ist optional. Liste der Anforderungen, die den Datentyp zu beschränken, die für die angegeben werden können `typename`. Wenn Sie mehrere Einschränkungen verfügen, schließen Sie sie in geschweifte Klammern (`{ }`) und trennen Sie diese durch Kommas. Führen Sie die Einschränkungsliste mit dem [als](../../../visual-basic/language-reference/statements/as-clause.md) Schlüsselwort. Verwenden Sie `As` nur einmal am Anfang der Liste.|  
+|`genericmodifier`|Dies ist optional. Kann nur in generischen Schnittstellen und Delegaten verwendet werden. Sie können einen Typ als Kovariante deklarieren, mit der [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md) -Schlüsselwort oder kontravariant mithilfe der [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md) Schlüsselwort. Siehe [Kovarianz und Kontravarianz](../../programming-guide/concepts/covariance-contravariance/index.md).|  
+|`typename`|Erforderlich. Der Name des Typparameters. Dies ist ein Platzhalter, durch das entsprechende Typargument vom definierten Typ ersetzt werden.|  
+|`constraintlist`|Dies ist optional. Liste der Anforderungen, die den Datentyp, der für angegeben werden können, einschränken `typename`. Wenn Sie mehrere Einschränkungen verfügen, schließen Sie sie in geschweifte Klammern (`{ }`), und trennen Sie diese durch Kommas. Führen Sie die Einschränkungsliste mit dem [als](../../../visual-basic/language-reference/statements/as-clause.md) Schlüsselwort. Verwenden Sie `As` nur einmal am Anfang der Liste.|  
   
 ## <a name="remarks"></a>Hinweise  
- Jedes generische Programmierelement muss mindestens ein Typparameter akzeptieren. Ein Typparameter ist ein Platzhalter für einen bestimmten Typ (ein *konstruierte Element*), dass Clientcode gibt an, wenn er eine Instanz des generischen Typs erstellt. Sie können definieren Sie eine generische Klasse, Struktur, Schnittstelle, Prozedur, klicken oder delegieren.  
+ Jedes generische Programmierelement muss mindestens einen Typparameter ausführen. Ein Typparameter ist ein Platzhalter für einen bestimmten Typ (ein *konstruierte Element*), dass Clientcode gibt an, wenn sie eine Instanz des generischen Typs erstellt. Definieren Sie eine generische Klasse kann, Struktur, Schnittstelle, Prozedur oder delegieren.  
   
- Weitere Informationen dazu, wann einen generischen Typ definieren, finden Sie unter [generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md). Weitere Informationen zu Typparameternamen, finden Sie unter [deklarierte Elementnamen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Weitere Informationen dazu, wann Sie einen generischen Typ definieren, finden Sie unter [generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md). Weitere Informationen zu Typparameternamen, finden Sie unter [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 ## <a name="rules"></a>Regeln  
   
--   **Klammern.** Wenn Sie eine Typparameterliste angeben, Sie es in Klammern einschließen müssen und führen Sie die Liste mit den [von](../../../visual-basic/language-reference/statements/of-clause.md) Schlüsselwort. Verwenden Sie `Of` nur einmal am Anfang der Liste.  
+-   **Klammern.** Wenn Sie eine Liste der Parameter angeben, Sie es in Klammern einschließen müssen und führen Sie die Liste mit den [von](../../../visual-basic/language-reference/statements/of-clause.md) Schlüsselwort. Verwenden Sie `Of` nur einmal am Anfang der Liste.  
   
--   **Einschränkungen.** Eine Liste der *Einschränkungen* für einen Parameter die folgenden Elemente in beliebiger Kombination enthalten:  
+-   **Einschränkungen.** Eine Liste der *Einschränkungen* für einen Parameter die folgenden Elemente in beliebiger Kombination enthalten kann:  
   
-    -   Eine beliebige Anzahl von Schnittstellen. Der angegebene Typ muss in dieser Liste jede Schnittstelle implementieren.  
+    -   Eine beliebige Anzahl von Schnittstellen. Der angegebene Typ muss jeder Schnittstelle in der Liste implementieren.  
   
-    -   Höchstens einer Klasse. Der angegebene Typ muss von dieser Klasse erben.  
+    -   Höchstens eine Klasse. Der angegebene Typ muss von dieser Klasse erben.  
   
-    -   Das `New`-Schlüsselwort. Der angegebene Typ muss einen parameterlosen Konstruktor verfügbar machen, den der generische Typ zugreifen können. Dies ist hilfreich, wenn einen Typparameter durch eine oder mehrere Schnittstellen zu beschränken. Ein Typ, der Schnittstellen implementiert macht nicht unbedingt einen Konstruktor, und je nach den Zugriff für einen Konstruktor, der Code in den generischen Typ möglicherweise nicht darauf zugreifen.  
+    -   Das `New`-Schlüsselwort. Der angegebene Typ muss einen parameterlosen Konstruktor verfügbar machen, den der generische Typ zugreifen können. Dies ist hilfreich, wenn Sie einen Typparameter durch eine oder mehrere Schnittstellen einschränken. Ein Typ, der Schnittstellen implementiert ist nicht unbedingt einen Konstruktor verfügbar machen, und abhängig von die Zugriffsebene eines Konstruktors, der Code in den generischen Typ möglicherweise nicht darauf zugreifen können.  
   
-    -   Entweder die `Class` Schlüsselwort oder der `Structure` Schlüsselwort. Die `Class` -Schlüsselwort schränkt einen generischen Typparameter erforderlich ist, dass jedes übergebene Typargument ein Verweistyp, z. B. eine Zeichenfolge, Array oder Delegaten, oder ein Objekt aus einer Klasse erstellt. Die `Structure` -Schlüsselwort schränkt einen generischen Typparameter erforderlich ist, dass alle an sie übergebene Typargument ein Werttyp ist, werden z. B. eine Struktur, Enumeration oder ein elementarer Datentyp. Darf keine enthalten beide `Class` und `Structure` in der gleichen `constraintlist`.  
+    -   Entweder die `Class` Schlüsselwort oder `Structure` Schlüsselwort. Die `Class` -Schlüsselwort schränkt einen generischen Typparameter erforderlich ist, dass jedes Typargument übergeben, einen Verweistyp handelt, z. B. eine Zeichenfolge, Array oder Delegaten werden oder ein Objekt aus einer Klasse erstellt. Die `Structure` Schlüsselwort schränkt einen generischen Parameter anfordern, dass alle an sie übergebene Typargument ein Werttyp, ist beispielsweise eine Struktur, Enumeration oder elementarer Datentyp. Dürfen nicht zusammen `Class` und `Structure` in der gleichen `constraintlist`.  
   
-     Der angegebene Typ muss jede Anforderung, die Sie in einschließen erfüllen `constraintlist`.  
+     Der angegebene Typ muss jeder Anforderung, die Sie in einschließen genügen `constraintlist`.  
   
      Einschränkungen für jeden Typparameter sind unabhängig von Einschränkungen für andere Type-Parameter.  
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Zeitpunkt der Kompilierung Ersetzung.** Wenn Sie einen konstruierten Typ aus einem generischen Programmierelements erstellen, geben Sie einen definierten Typ für jeden Typparameter. Visual Basic-Compiler ersetzt für jedes Vorkommen eines angegebenen Typs `typename` innerhalb des generischen Elements.  
+-   **Während der Kompilierung Ersetzung.** Wenn Sie einen konstruierten Typ aus einer generischen Programmierelements erstellen, geben Sie keinen definierten Typ für jeden Typparameter an. Visual Basic-Compiler ersetzt diesen angegebenen Typ für jedes Vorkommen des `typename` innerhalb des generischen Elements.  
   
--   **Falls keine Einschränkungen vorliegen.** Wenn Sie keine Einschränkungen für einen Typparameter angeben, wird Code beschränkt auf die Operationen und Member, die von unterstützt die [Object-Datentyp](../../../visual-basic/language-reference/data-types/object-data-type.md) für den Typparameter.  
+-   **Die Abwesenheit von Einschränkungen.** Wenn Sie keine Einschränkungen für einen Typparameter angeben, ist Ihr Code die Operationen und Member, die von unterstützt werden auf die [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md) für den Typparameter.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die rumpfdefinition einer generischen Wörterbuch-Klasse, z. B. eine Skelette-Funktion um einen neuen Eintrag zum Wörterbuch hinzuzufügen.  
+ Im folgenden Beispiel wird die rumpfdefinition einer generischen Wörterbuch-Klasse, einschließlich eine Skelette-Funktion um einen neuen Eintrag zum Wörterbuch hinzuzufügen.  
   
  [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
   
 ## <a name="example"></a>Beispiel  
- Da `dictionary` ist generisch ist, der Code, die verwendet werden kann eine Vielzahl von Objekten daraus erstellen, jeweils die gleiche Funktionalität ist jedoch auf einen anderen Datentyp fungiert. Das folgende Beispiel zeigt eine Codezeile erstellt eine `dictionary` -Objekt mit `String` Einträge und `Integer` Schlüssel.  
+ Da `dictionary` ist generisch ist, der Code, der verwendet wird kann eine Vielzahl von Objekten aus erstellen, jeweils die gleiche Funktionalität müssen jedoch, die auf einen anderen Datentyp. Das folgende Beispiel zeigt eine einzige Zeile Code, der erstellt eine `dictionary` Objekt mit `String` Einträge und `Integer` Schlüssel.  
   
  [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
   
@@ -92,15 +92,15 @@ Gibt an, die *Typparameter* für eine *generische* Programmierelement. Mehrere P
   
  [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Of](../../../visual-basic/language-reference/statements/of-clause.md)  
- [New-Operator](../../../visual-basic/language-reference/operators/new-operator.md)  
- [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
- [Object-Datentyp](../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
- [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [Gewusst wie: Verwenden einer generischen Klasse](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Kovarianz und Kontravarianz](../../programming-guide/concepts/covariance-contravariance/index.md)  
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)  
- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+## <a name="see-also"></a>Siehe auch
+- [Of](../../../visual-basic/language-reference/statements/of-clause.md)
+- [New-Operator](../../../visual-basic/language-reference/operators/new-operator.md)
+- [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Object-Datentyp](../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Vorgehensweise: Verwenden einer generischen Klasse](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Kovarianz und Kontravarianz](../../programming-guide/concepts/covariance-contravariance/index.md)
+- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Out](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

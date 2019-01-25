@@ -3,12 +3,12 @@ title: '&lt;add&gt; von &lt;participants&gt;'
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
-ms.openlocfilehash: 6dbe8f6ca2bd797efc31e145ab1ca6cc82cee021
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc32b9b55ef8767be44cc69b9277c81d62a1944d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575894"
 ---
 # <a name="ltaddgt-of-ltparticipantsgt"></a>&lt;add&gt; von &lt;participants&gt;
 Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit ausgegebenen Nachverfolgungsdatensätzen lauscht und sie entsprechend der Weise verarbeitet, wie er konfiguriert wurde. Dies umfasst das Schreiben in ein bestimmtes Ausgabemedium (z. B. Datei, Konsole, ETW), das Verarbeiten/Aggregieren der Datensätze oder eine beliebige andere Kombination, die erforderlich sein könnte.  
@@ -16,8 +16,8 @@ Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit au
  Weitere Informationen im Workflow-Überwachung und zu nachverfolgungsteilnehmern finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) und [Nachverfolgungsteilnehmer](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md).  
   
 \<system.serviceModel>  
-\<Nachverfolgen von >  
-\<Teilnehmer >  
+\<tracking>  
+\<participants>  
 \<add>  
   
 ## <a name="syntax"></a>Syntax  
@@ -60,7 +60,7 @@ Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit au
 ## <a name="example"></a>Beispiel  
  In der folgenden Beispielkonfiguration wird der standardmäßige ETW-Nachverfolgungsteilnehmer gezeigt, der in der Datei Web.config konfiguriert ist.  
   
- Die Anbieter-Id, die ETW-Nachverfolgungsteilnehmer verwendet, für die Nachverfolgungsdatensätze an ETW wird definiert, der  **\<Diagnose >** Abschnitt. Dem Nachverfolgungsteilnehmer ist ein Profil zugeordnet, das die Nachverfolgungsdatensätze angibt, die er abonniert hat. Dies wird definiert, indem die **ProfileName** Attribut des der  **\<hinzufügen >** Element. Sobald alles definiert ist, wird der Nachverfolgungsteilnehmer hinzugefügt, um die  **\<EtwTracking >** -Dienstverhalten. Dadurch wird der ausgewählte Nachverfolgungsteilnehmer den Erweiterungen der Workflowinstanz hinzugefügt, die daraufhin die Nachverfolgungsdatensätze empfangen.  
+ Die Anbieter-Id, die ETW-Nachverfolgungsteilnehmer verwendet wird, für die Nachverfolgungsdatensätze an ETW, wird definiert, der  **\<Diagnose >** Abschnitt. Dem Nachverfolgungsteilnehmer ist ein Profil zugeordnet, das die Nachverfolgungsdatensätze angibt, die er abonniert hat. Dadurch wird definiert, indem die **ProfileName** Attribut der  **\<hinzufügen >** Element. Sobald alles definiert ist, wird der Nachverfolgungsteilnehmer hinzugefügt, um die  **\<EtwTracking >** -Dienstverhalten. Dadurch wird der ausgewählte Nachverfolgungsteilnehmer den Erweiterungen der Workflowinstanz hinzugefügt, die daraufhin die Nachverfolgungsdatensätze empfangen.  
   
 ```xml  
 <configuration>   
@@ -87,9 +87,9 @@ Konfiguriert einen Nachverfolgungsteilnehmer, der den direkt von der Laufzeit au
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>  
- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>  
- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Überwachungsteilnehmer](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
+- <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Überwachungsteilnehmer](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

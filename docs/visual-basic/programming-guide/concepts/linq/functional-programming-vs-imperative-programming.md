@@ -2,12 +2,12 @@
 title: Funktionale Programmierung und Imperative Programmierung (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 63d3801a393b242bce8b497e2c983534a6996c6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 762889717d2b20d5a06848ebaa41f3e066a8c061
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644276"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579809"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Funktionale Programmierung und Imperative Programmierung (Visual Basic)
 In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen Programmierung und der herkömmlichen imperativen (prozeduralen) Programmierung erläutert.  
@@ -25,12 +25,12 @@ In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen
 |Primäre Datenflusskontrolle|Schleifen, Bedingungen und Funktions- (Methoden-)Aufrufe|Funktionsaufrufe, einschließlich Rekursion|  
 |Primäre Manipulationseinheit|Instanzen von Strukturen oder Klassen|Funktionen als erstklassige Objekte und Datensammlungen|  
   
- Die meisten Sprachen unterstützen zwar ein bestimmtes Programmierparadigma, viele allgemeine Sprachen sind aber ausreichend flexibel, um mehrere Paradigmen zu unterstützen. So können z. B. die meisten Sprachen, die Funktionszeiger enthalten, zur glaubwürdigen Unterstützung der funktionalen Programmierung verwendet werden. Visual Basic verfügt darüber hinaus explizite spracherweiterungen zur Unterstützung der funktionalen Programmierung, darunter Lambda-Ausdrücke und typableitung. Eine Form der deklarativen, funktionalen Programmierung ist die LINQ-Technologie.  
+ Die meisten Sprachen unterstützen zwar ein bestimmtes Programmierparadigma, viele allgemeine Sprachen sind aber ausreichend flexibel, um mehrere Paradigmen zu unterstützen. So können z. B. die meisten Sprachen, die Funktionszeiger enthalten, zur glaubwürdigen Unterstützung der funktionalen Programmierung verwendet werden. Darüber hinaus enthält es sich bei Visual Basic um explizite spracherweiterungen zur Unterstützung der funktionalen Programmierung, darunter Lambda-Ausdrücke und typableitung. Eine Form der deklarativen, funktionalen Programmierung ist die LINQ-Technologie.  
   
 ## <a name="functional-programming-using-xslt"></a>Funktionale Programmierung mit XSLT  
  Viele XSLT-Entwickler sind mit dem reinen funktionalen Ansatz vertraut. Der effektivste Weg bei der Entwicklung eines XSLT-Stylesheets besteht darin, jede Vorlage als isolierte, zusammensetzbare Transformation zu behandeln. Die Reihenfolge der Ausführung ist dabei ohne jede Bedeutung. XSLT lässt keine Nebenwirkungen zu (lediglich die Escapemechanismen für die Ausführung von prozeduralem Code können Nebenwirkungen mit sich bringen, die zu funktionaler Unreinheit führen). XSLT ist zwar ein wirksames Tool, dennoch sind einige seiner Eigenschaften nicht optimal. So führt z. B. das Ausdrücken von Programmierkonstrukten in XML dazu, dass Code relativ weitschweifig und damit schwierig zu unterhalten ist. Auch die schwere Abhängigkeit von der Rekursion zur Flusssteuerung kann dazu führen, dass Code schwer lesbar ist. Weitere Informationen zu XSLT finden Sie unter [XSLT-Transformationen](../../../../standard/data/xml/xslt-transformations.md).  
   
- Dennoch hat XSLT bewiesen, dass die Verwendung eines reinen funktionalen Ansatzes bei der Transformierung von XML von einer Form in eine andere sinnvoll ist. Die reine funktionale Programmierung mit LINQ to XML ähnelt in vielerlei Hinsicht XSLT. Allerdings können mit die Programmierkonstrukten von LINQ to XML- und Visual Basic reine funktionale Transformationen schreiben, die besser lesbar und unterhaltbar als XSLT sind.  
+ Dennoch hat XSLT bewiesen, dass die Verwendung eines reinen funktionalen Ansatzes bei der Transformierung von XML von einer Form in eine andere sinnvoll ist. Die reine funktionale Programmierung mit LINQ to XML ähnelt in vielerlei Hinsicht XSLT. Allerdings können mit die Programmierkonstrukten von LINQ to XML und Visual Basic reine funktionale Transformationen schreiben, die besser lesbar und unterhaltbar als XSLT sind.  
   
 ## <a name="advantages-of-pure-functions"></a>Vorteile von reinen Funktionen  
  Der Hauptgrund für die Implementierung von funktionalen Transformationen als reinen Funktionen (Pure-Funktionen) besteht darin, dass reine Funktionen zusammenstellbar sind, d. h., sie sind in sich abgeschlossen und zustandslos. Diese Eigenschaften bieten u. a. die folgenden Vorteile:  
@@ -48,9 +48,9 @@ In diesem Thema werden die Gemeinsamkeiten und die Unterschiede der funktionalen
   
  Dagegen werden die Berechnungsprobleme bei der funktionalen Programmierung als Übung für die Auswertung reiner funktionaler Transformationen von Datensammlungen angesehen. Bei der funktionalen Programmierung werden Zustands- und änderbare Daten vermieden, stattdessen steht die Anwendung von Funktionen im Mittelpunkt.  
   
- Glücklicherweise erfordert Visual Basic den kompletten Umstieg auf die funktionale Programmierung, da sie sowohl den imperativen als auch den funktionalen Programmierungsansatz unterstützt. Der Entwickler kann daher selbst entscheiden, welcher Ansatz für ein bestimmtes Szenario am geeignetsten ist. Bei vielen Programme werden beide Ansätze häufig miteinander kombiniert.  
+ Zum Glück müssen nicht Visual Basic den kompletten Umstieg auf die funktionale Programmierung, da es sowohl den imperativen als auch den funktionalen Programmierungsansatz unterstützt. Der Entwickler kann daher selbst entscheiden, welcher Ansatz für ein bestimmtes Szenario am geeignetsten ist. Bei vielen Programme werden beide Ansätze häufig miteinander kombiniert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [XSLT Transformations (XSLT-Transformationen)](../../../../standard/data/xml/xslt-transformations.md)  
- [Umgestalten in reine Funktionen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [XSLT Transformations (XSLT-Transformationen)](../../../../standard/data/xml/xslt-transformations.md)
+- [Refactoring in reine Funktionen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: 72dae52c6d6b570831aefb54ca2843a92c5ad35a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48f846329d8463f9519a2a7654f9a42f6bca5384
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721900"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Gewusst-wie-Themen zu Drag & Drop
-In den folgenden Beispielen wird gezeigt, wie häufige Aufgaben mit der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Drag-and-Drop-Framework.  
+Die folgenden Beispiele veranschaulichen, wie Sie häufige Aufgaben mit der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Drag & Drop-Framework.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Öffnen einer Datei, die auf einem RichTextBox-Steuerelement abgelegt ist](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
@@ -24,5 +24,5 @@ In den folgenden Beispielen wird gezeigt, wie häufige Aufgaben mit der [!INCLUD
  [Abrufen von Daten in einem bestimmten Datenformat](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
  [Speichern von mehreren Datenformaten in einem Datenobjekt](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Drag & Drop](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Drag & Drop](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

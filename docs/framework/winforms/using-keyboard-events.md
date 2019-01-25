@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 05bd896dded0bc67510ccc45d6fd91bdc1c069f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786426"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614588"
 ---
 # <a name="using-keyboard-events"></a>Verwenden von Tastaturereignissen
 Die meisten Windows Forms-Programme verarbeiten Tastatureingaben, indem sie Tastaturereignisse behandeln. Dieses Thema enthält eine Übersicht über die Tastaturereignisse, einschließlich Details dazu, wann jedes Ereignis verwendet wird sowie zu den Daten, die für jedes Ereignis übergeben werden.  Siehe auch [Übersicht über Ereignishandler (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Events Overview (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
@@ -38,7 +38,7 @@ Die meisten Windows Forms-Programme verarbeiten Tastatureingaben, indem sie Tast
 |<xref:System.Windows.Forms.Control.KeyPress>|Dieses Ereignis wird ausgelöst, wenn der oder die Tastendrücke ein Zeichen bewirken. Wenn der Benutzer beispielsweise die Tasten UMSCHALT und kleines "a" drückt, wird das Zeichen "A" in Großbuchstaben angezeigt.|<xref:System.Windows.Forms.Control.KeyPress> wird nach <xref:System.Windows.Forms.Control.KeyDown> ausgelöst.<br /><br /> <ul><li>Der Handler für <xref:System.Windows.Forms.Control.KeyPress> erhält Folgendes:</li><li>Einen <xref:System.Windows.Forms.KeyPressEventArgs>-Parameter, der den Zeichencode der gedrückten Taste enthält. Dieser Zeichencode ist für jede Kombination aus Zeichentaste und Modifizierertaste eindeutig.<br /><br />     So generiert die Taste "A" beispielsweise:<br /><br /> <ul><li>Den Zeichencode 65 in Verbindung mit der UMSCHALT-TASTE, oder</li><li>97 in Verbindung mit der FESTSTELLTASTE, wenn diese allein gedrückt wird,</li><li>und 1, wenn sie zusammen mit der STRG-TASTE gedrückt wird.</li></ul></li></ul>|  
 |<xref:System.Windows.Forms.Control.KeyUp>|Dieses Ereignis wird ausgelöst, wenn der Benutzer eine Steuer- bzw. Funktionstaste loslässt.|Der Handler für <xref:System.Windows.Forms.Control.KeyUp> erhält Folgendes:<br /><br /> <ul><li>Einen <xref:System.Windows.Forms.KeyEventArgs>-Parameter.<br /><br /> <ul><li>Dieser stellt die <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A>-Eigenschaft bereit (womit eine Steuer- oder Funktionstaste angegeben wird).</li><li>Die <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A>-Eigenschaft (UMSCHALT, STRG oder ALT).</li><li>Die <xref:System.Globalization.SortKey.KeyData%2A>-Eigenschaft (wodurch der Tastencode und der Modifizierer kombiniert werden).</li></ul></li></ul>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Tastatureingaben in einer Windows Forms-Anwendung](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Funktionsweise von Tastatureingaben](../../../docs/framework/winforms/how-keyboard-input-works.md)  
- [Mauseingabe in einer Windows Forms-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>Siehe auch
+- [Tastatureingaben in einer Windows Forms-Anwendung](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
+- [Funktionsweise von Tastatureingaben](../../../docs/framework/winforms/how-keyboard-input-works.md)
+- [Mauseingabe in einer Windows Forms-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

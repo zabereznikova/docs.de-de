@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b63dbcaa54e03e5603e06545f8b4fec393d8268
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11a5eb01a3e354b4360bea59af1e63ffeb0576aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424608"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730112"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables-Methode
 Gibt alle Variablen, die im globalen Gültigkeitsbereich innerhalb dieses Namespace definiert.  
@@ -42,7 +42,7 @@ HRESULT GetVariables(
  [in] Ein `ULONG32` , der angibt, dass der Größe des der `pVars` Array.  
   
  `pcVars`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers erforderlich, um die Namespaces zu enthalten.  
+ [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers erforderlich, um die Namespaces enthalten.  
   
  `pVars`  
  [out] Ein Zeiger auf einen Puffer, der die Namespaces enthält.  
@@ -53,5 +53,5 @@ HRESULT GetVariables(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedNamespace-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedNamespace-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

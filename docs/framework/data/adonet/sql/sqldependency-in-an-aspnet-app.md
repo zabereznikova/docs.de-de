@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 5465238e4b9deaa13c76cb35122fcaded7acd7f7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e80d01c01ed0b2558c86aefea0f554926f40e509
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573662"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>"SqlDependency" in einer ASP.NET-Anwendung
 Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System.Data.SqlClient.SqlDependency> durch Verwendung des ASP.NET-<xref:System.Web.Caching.SqlCacheDependency>-Objekts. Das <xref:System.Web.Caching.SqlCacheDependency>-Objekt verwendet eine <xref:System.Data.SqlClient.SqlDependency>, um Benachrichtigungen zu empfangen und den Cache ordnungsgemäß zu aktualisieren.  
@@ -57,6 +57,6 @@ Das Beispiel in diesem Abschnitt zeigt die indirekte Verwendung von <xref:System
   
  Aktualisieren Sie jetzt die Daten in der Datenbank mit einem Transact-SQL-UPDATE-Befehl. Die angezeigte Uhrzeit gibt jetzt an, dass der Cache mit den neuen Daten aus der Datenbank aktualisiert wurde. Beachten Sie, dass der Cache zwar aktualisiert wurde, dass aber die auf der Seite angezeigte Uhrzeit sich erst ändert, wenn ein Postbackereignis eintritt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfragebenachrichtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Abfragebenachrichtigungen in SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

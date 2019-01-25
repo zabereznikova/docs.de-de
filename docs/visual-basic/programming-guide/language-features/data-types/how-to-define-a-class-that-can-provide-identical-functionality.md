@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann (Visual Basic)'
+title: 'Vorgehensweise: Definieren Sie eine Klasse, die gleiche Funktionalität, für unterschiedliche Datentypen (Visual Basic bereitstellen kann)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 3570a1c851bb8fead33f4cd208489c4ae087a68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f6faf7b9ba2338784fda2cec2efc2b3991d415e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650347"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667478"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Gewusst wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann (Visual Basic)
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Vorgehensweise: Definieren Sie eine Klasse, die gleiche Funktionalität, für unterschiedliche Datentypen (Visual Basic bereitstellen kann)
 Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen. Hierzu geben Sie in der Definition mindestens einen *Typparameter* an. Die Klasse kann dann als Vorlage für Objekte fungieren, für die verschiedene Datentypen verwendet werden. Eine in dieser Weise definierte Klasse wird als *generische Klasse*bezeichnet.  
   
  Der Vorteil des Definierens einer generischen Klasse besteht darin, dass Sie die Klasse nur einmal definieren müssen und diese in Ihrem Code verwenden können, um viele Objekte zu erstellen, für die unterschiedliche Datentypen verwendet werden. Dies führt zu einer besseren Leistung, als dies der Fall ist, wenn die Klasse mit dem `Object` -Typ definiert wird.  
@@ -74,11 +74,11 @@ Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die
   
      [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Generische Typen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../../../standard/language-independence-and-language-independent-components.md)  
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [Typliste](../../../../visual-basic/language-reference/statements/type-list.md)  
- [Gewusst wie: Verwenden einer generischen Klasse](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+## <a name="see-also"></a>Siehe auch
+- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../../../standard/language-independence-and-language-independent-components.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Typliste](../../../../visual-basic/language-reference/statements/type-list.md)
+- [Vorgehensweise: Verwenden einer generischen Klasse](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)

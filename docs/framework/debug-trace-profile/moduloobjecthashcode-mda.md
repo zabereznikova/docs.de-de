@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3c51dcb5e19f5fac5485a317d1d26884106cf51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a53f433d1b6caca98b2b0d564774820239320f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392943"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739666"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode-MDA
 Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das Verhalten der <xref:System.Object>-Klasse, um einen Modulo-Vorgang auf dem Hashcode auszuführen, der von der <xref:System.Object.GetHashCode%2A>-Methode zurückgegeben wurde. Der Standard-Modulo dieses MDA beträgt 1, wodurch <xref:System.Object.GetHashCode%2A> für alle Objekte 0 zurückgibt.  
@@ -46,7 +46,7 @@ Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Anwendungen werden langsamer ausgeführt, wenn dieser MDA aktiviert ist. Dieser MDA übernimmt lediglich den Hashcode, der zurückgegeben wurde und gibt stattdessen den Rest nach dem Dividieren durch einen Modulo zurück.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Es gibt keine Ausgabe für diesen MDA.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -60,7 +60,7 @@ Der `moduloObjectHashcode`-MDA (Assistent für verwaltetes Debuggen) ändert das
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>  
- <xref:System.Object.Equals%2A?displayProperty=nameWithType>  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
+- <xref:System.Object.Equals%2A?displayProperty=nameWithType>
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

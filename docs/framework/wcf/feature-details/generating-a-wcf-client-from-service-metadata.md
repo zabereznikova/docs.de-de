@@ -2,12 +2,12 @@
 title: Generieren eines WCF-Clients aus Dienstmetadaten
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 78804eb7f4139280e7d72c5a45aa0ae4cc3c2d77
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3bdb283e461076ffd5c1e77963933de0e5b4bb02
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570956"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generieren eines WCF-Clients aus Dienstmetadaten
 In diesem Thema wird beschrieben, wie die verschiedenen Schalter in Svcutil.exe verwendet werden, um aus Metadatendokumenten Clients zu generieren.  
@@ -20,7 +20,7 @@ In diesem Thema wird beschrieben, wie die verschiedenen Schalter in Svcutil.exe 
   
 -   DISCO-Anforderung (mit der [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) von ASP.NET-Webdiensten) an die angegebene Adresse.  
   
- Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL (Web Services Description Language)-Datei oder Richtliniendatei. Der Benutzerprinzipalname (UPN) wird generiert, durch die Verkettung von des mit dem namens "\@" und das anschließende hinzufügen einen vollständig qualifizierten Domänennamen (FQDN). Allerdings für Active Directory registrierte Benutzer dieses Format ist ungültig und der UPN, der das Tool generiert verursacht einen Fehler bei der Kerberos-Authentifizierung die folgende Fehlermeldung angezeigt: **der Anmeldeversuch ist fehlgeschlagen.** Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell berichtigen.  
+ Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL (Web Services Description Language)-Datei oder Richtliniendatei. Der Benutzerprinzipalname (UPN) wird generiert, durch die Verkettung von des mit dem namens "\@" und das anschließende hinzufügen einen vollständig qualifizierten Domänennamen (FQDN). Allerdings für Active Directory registrierte Benutzer dieses Format ist ungültig, und der UPN, der das Tool generiert verursacht einen Fehler bei der Kerberos-Authentifizierung die folgende Fehlermeldung angezeigt: **Der Anmeldeversuch ist fehlgeschlagen.** Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell berichtigen.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
@@ -38,7 +38,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |Option|Beschreibung|  
 |------------|-----------------|  
 |**/serializer:Auto**|Wählt die Serialisierung automatisch aus. Hierbei wird das `DataContract`-Serialisierungsmodul verwendet. Wenn dieser Versuch fehlschlägt, wird `XmlSerializer` verwendet.<br /><br /> Kurzform: `/ser:Auto`.|  
-|**/serializer:DataContractSerializer**|Generiert Datentypen, die das `DataContract`-Serilisierungsprogramm für die Serialisierung und die Deserialisierung verwenden.<br /><br /> Kurzform: `/ser:DataContractSerializer`.|  
+|**/serializer:DataContractSerializer**|Generiert Datentypen, die das `DataContract`-Serialisierungsprogramm für die Serialisierung und die Deserialisierung verwenden.<br /><br /> Kurzform: `/ser:DataContractSerializer`.|  
 |**/serializer:XmlSerializer**|Generiert Datentypen, die `XmlSerializer` für die Serialisierung und die Deserialisierung verwenden.<br /><br /> Kurzform: `/ser:XmlSerializer`.|  
 |**/importXmlTypes**|Das `DataContract`-Serialisierungsprogramm wird so konfiguriert, dass Typen, die keine `DataContract`-Typen sind, als `IXmlSerializable`-Typen importiert werden.<br /><br /> Kurzform: `/ixt`.|  
 |**/dataContractOnly**|Generiert nur Code für `DataContract`-Typen. `ServiceContract`-Typen werden generiert.<br /><br /> Sie sollten für diese Option nur lokale Metadatendateien angeben.<br /><br /> Kurzform: `/dconly`.|  
@@ -53,7 +53,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/ Namespace:\<Zeichenfolge, Zeichenfolge >**|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-`targetNamespace` zu einem CLR (Common Language Runtime)-Namespace an. Durch die Verwendung eines Platzhalters (*) für `targetNamespace` werden alle `targetNamespaces` ohne eine explizite Zuordnung diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit zwei Doppelpunkten (`::`) angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standard: Wird vom Zielnamespace des Schemadokuments für `DataContracts` abgeleitet. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n`.|  
+|**/namespace:\<string,string>**|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-`targetNamespace` zu einem CLR (Common Language Runtime)-Namespace an. Durch die Verwendung eines Platzhalters (*) für `targetNamespace` werden alle `targetNamespaces` ohne eine explizite Zuordnung diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit zwei Doppelpunkten (`::`) angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standardeinstellung: Abgeleitet aus dem Zielnamespace des Schemadokuments für `DataContracts`. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n`.|  
   
 ## <a name="choosing-a-data-binding"></a>Auswählen einer Datenbindung  
   
@@ -69,6 +69,6 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/mergeConfig**|Fügt die generierte Konfiguration in eine vorhandene Datei ein, statt die vorhandene Datei zu überschreiben.|  
 |**/noConfig**|Es werden keine Konfigurationsdateien generiert.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

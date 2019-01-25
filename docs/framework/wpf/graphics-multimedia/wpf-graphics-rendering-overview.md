@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: cbbaba8cbdaf6dfd7b7c18447d425298b4911e94
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 6323d27158855e5ded1698401835b35632bedebe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603836"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Übersicht über das WPF-Grafikrendering
 Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Schicht. Es konzentriert sich auf die Rolle der <xref:System.Windows.Media.Visual> Klasse zum Rendern der Unterstützung in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Modell.  
@@ -25,15 +25,15 @@ Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclien
   
  Die <xref:System.Windows.Media.Visual> Objekt ist ein zentrales [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Objekt, dessen primäre Rolle Unterstützung des Rendering ist. Steuerelemente der Benutzeroberfläche, z. B. <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.TextBox>, leiten Sie von der <xref:System.Windows.Media.Visual> Klasse, und verwenden sie zum Speichern ihrer Rendering-Daten. Die <xref:System.Windows.Media.Visual> -Objekt bietet Unterstützung für:  
   
--   Ausgabeanzeige: Rendern des persistenten, serialisierten Zeichnungsinhalts eines visuellen Objekts.  
+-   Ausgabeanzeige: Rendering der persistenten, serialisierten Zeichnungsinhalts eines visuellen Objekts.  
   
--   Transformationen: Ausführen von Transformationen auf einem visuellen Objekt.  
+-   Transformationen: Ausführen von Transformationen auf ein visuelles Element.  
   
--   Clipping: Bereitstellen der Clippingbereichsunterstützung für ein visuelles Objekt.  
+-   Clipping: Bereitstellen der clippingbereichsunterstützung für ein Visual.  
   
 -   Treffertests: Bestimmen, ob eine Koordinate oder eine Geometrie innerhalb der Grenzen eines visuellen Objekts enthalten ist.  
   
--   Berechnungen des Begrenzungsrahmens: Bestimmen des umschließenden Rechtecks eines visuellen Objekts.  
+-   Berechnungen für umgebende Felder: Bestimmen das umschließende Rechteck eines visuellen Objekts.  
   
  Allerdings die <xref:System.Windows.Media.Visual> Objekt bietet keine Unterstützung für Features außerhalb des Renderings, z.B.:  
   
@@ -68,7 +68,7 @@ Klassenhierarchie von visuellen Objekten
 |--------------------------|-----------------|  
 |Vektorgrafik|Stellt vector Graphics-Daten und alle zugehörigen <xref:System.Windows.Media.Brush> und <xref:System.Windows.Media.Pen> Informationen.|  
 |Bild|Stellt ein Bild innerhalb einer Region, definiert durch eine <xref:System.Windows.Rect>.|  
-|Symbol|Stellt eine Zeichnung, die rendert eine <xref:System.Windows.Media.GlyphRun>, dies ist eine Sequenz von Symbolen aus einer angegebenen schriftartenressource. So wird Text dargestellt.|  
+|Glyphe|Stellt eine Zeichnung, die rendert eine <xref:System.Windows.Media.GlyphRun>, dies ist eine Sequenz von Symbolen aus einer angegebenen schriftartenressource. So wird Text dargestellt.|  
 |Video|Stellt eine Zeichnung dar, die Video rendert.|  
   
  Die <xref:System.Windows.Media.DrawingContext> können Sie zum Auffüllen einer <xref:System.Windows.Media.Visual> mit visuellem Inhalt. Bei Verwendung einer <xref:System.Windows.Media.DrawingContext> des Objekts zeichnen-Befehle, speichern Sie einen Satz von Renderingdaten, die später vom Grafiksystem verwendet werden; Sie zeichnen nicht in Echtzeit auf dem Bildschirm.  
@@ -257,12 +257,12 @@ Grafiken und Text mit unterschiedlichen DPI-Einstellungen
  [!code-csharp[VisualsOverview#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Treffertests in der visuellen Ebene](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [Verwenden von DrawingVisual-Objekten](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Tutorial: Hosten von visuellen Objekten in einer Win32-Anwendung](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Treffertests in der visuellen Ebene](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+- [Verwenden von DrawingVisual-Objekten](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+- [Tutorial: Hosten von visuellen Objekten in einer Win32-Anwendung](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)

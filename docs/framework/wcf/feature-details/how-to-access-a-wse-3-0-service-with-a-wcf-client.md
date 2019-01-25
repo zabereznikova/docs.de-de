@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Zugriff auf einen WSE3.0-Dienst über einen WCF-Client'
+title: 'Vorgehensweise: Zugriff auf einen WSE 3.0-Dienst mit einem WCF-Client'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 3de4bb4546d3ee20e961ecf5a9d130e8e6c713a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d9824d4fdb7ffe78da8a8abaf3bac53d5c2e7ec2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193811"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580146"
 ---
-# <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Vorgehensweise: Zugriff auf einen WSE3.0-Dienst über einen WCF-Client
+# <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Vorgehensweise: Zugriff auf einen WSE 3.0-Dienst mit einem WCF-Client
 Windows Communication Foundation (WCF)-Clients sind auf niedriger Ebene kompatibel mit Web Services Enhancements (WSE) 3.0 für Microsoft .NET Services aus, wenn WCF-Clients konfiguriert werden, um die Version vom August 2004 von WS-Addressing-Spezifikation. WSE 3.0-Dienste unterstützen jedoch nicht des metadatenaustauschprotokolls (MEX), also bei Verwendung der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) um einen WCF-Clientklasse zu erstellen, die Sicherheitseinstellungen gelten nicht auf die generierte WCF-Client. Aus diesem Grund müssen Sie die Sicherheitseinstellungen angeben, dass der WSE 3.0-Dienst erforderlich ist, nachdem der WCF-Client generiert wurde.  
   
  Sie können diese Sicherheitseinstellungen anwenden, indem Sie mit einer benutzerdefinierten Bindung Anforderungen des WSE 3.0-Diensts und die interoperabilitätsanforderungen zwischen einem WSE 3.0-Dienst und einen WCF-Client in Betracht zu ziehen. Diese Interoperabilitätsanforderungen umfassen die zuvor genannte Verwendung der WS-Adressierungsspezifikation vom August 2004 und den WSE 3.0-Standardnachrichtenschutz von <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>. Der standardnachrichtenschutz für WCF ist <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. In diesem Thema wird erläutert, wie eine WCF-Bindung, die Interoperabilität mit einem WSE 3.0-Dienst erstellen. WCF bietet außerdem ein Beispiel, das diese Bindung enthält. Weitere Informationen zu diesem Beispiel finden Sie unter [Zusammenwirken mit ASMX-Webdiensten](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md).  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF)-Clients sind auf niedriger Ebene kompatib
   
      Für einen WSE 3.0-Webdienst wird ein WCF-Client erstellt. Da WSE 3.0 das MEX-Protokoll nicht unterstützt, können Sie das Tool nicht nutzen, um die Sicherheitsanforderungen für den Webdienst aufzurufen. Der Anwendungsentwickler muss die Sicherheitseinstellungen für den Client hinzufügen.  
   
-     Weitere Informationen zum Erstellen eines WCF-Clients finden Sie unter den [Vorgehensweise: Erstellen eines Clients](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+     Weitere Informationen zum Erstellen eines WCF-Clients finden Sie unter den [Vorgehensweise: Erstellen Sie einen Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Erstellen Sie eine Klasse, die eine Bindung darstellt, die mit WSE 3.0-Webdiensten kommunizieren kann.  
   
@@ -62,6 +62,6 @@ Windows Communication Foundation (WCF)-Clients sind auf niedriger Ebene kompatib
   
   
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Channels.Binding>  
- [Interoperieren mit WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Channels.Binding>
+- [Interoperieren mit WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

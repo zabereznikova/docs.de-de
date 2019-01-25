@@ -2,12 +2,12 @@
 title: Unterstützte Bereitstellungsszenarien
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 605521cb91945812db178db3a82883b4d13bc636
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614483"
 ---
 # <a name="supported-deployment-scenarios"></a>Unterstützte Bereitstellungsszenarien
 Die Teilmenge der Windows Communication Foundation (WCF)-Funktionen, die für die Verwendung in teilweise vertrauenswürdigen Anwendungen unterstützt soll die Anforderungen der einige, aber nicht alle Szenarien für die Verwendung von WCF. Auf dem Server, freigegebenen WCF erfüllt die Anforderungen der internetweite Hostinganbieter, die Anwendung eines Drittanbieters ausführen in den [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] mittlere Vertrauenswürdigkeit Berechtigungssatz aus Sicherheitsgründen. Auf dem Client, Unterstützung von teilweiser Vertrauenswürdigkeit WCF soll die Anforderungen von bereitstellungstechnologien erfüllen zu können, wie etwa [ClickOnce-Bereitstellung](https://go.microsoft.com/fwlink/?LinkId=83712) oder [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]der XAML Browser Application-Technologie, die nahtlose und sichere zulassen Bereitstellung von desktopanwendungen von nicht vertrauenswürdigen Sites.  
@@ -35,12 +35,12 @@ Die Teilmenge der Windows Communication Foundation (WCF)-Funktionen, die für di
  Weitere Informationen finden Sie unter [Vorgehensweise: Verwenden der mittleren Vertrauensebene in ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=84603).  
   
 ## <a name="partial-trust-on-the-client"></a>Teilweise Vertrauenswürdigkeit auf dem Client  
- Bestimmte Sicherheitsvorkehrungen müssen getroffen werden, wenn Code von nicht vertrauenswürdigen Internetsites heruntergeladen oder ausgeführt wird. Beide [ClickOnce-Bereitstellung](https://go.microsoft.com/fwlink/?LinkId=83712) und [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]des XAML-Browseranwendung (XBAP) Technologie teilweise Vertrauenswürdigkeit verwendet, um nicht vertrauenswürdigem Code eingeschränkte Berechtigungen (Zone "Internet") gewähren.  
+ Bestimmte Sicherheitsvorkehrungen müssen getroffen werden, wenn Code von nicht vertrauenswürdigen Internetsites heruntergeladen oder ausgeführt wird. Sowohl bei der [ClickOnce-Bereitstellung](https://go.microsoft.com/fwlink/?LinkId=83712) als auch der XBAP-Technologie (XAML Browser Application) von [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]wird teilweise Vertrauenswürdigkeit verwendet, um nicht vertrauenswürdigem Code eingeschränkte Berechtigungen zu erteilen.  
   
  WCF kann verwendet werden, um die Kommunikation mit Remoteservern von teilweise vertrauenswürdigen Anwendungen bereitgestellt, indem entweder [ClickOnce-Bereitstellung](https://go.microsoft.com/fwlink/?LinkId=83712) oder XBAP. Der Berechtigungssatz der Internetzone umfasst <xref:System.Net.WebPermission> für den Ausgangshost Dies ermöglicht es diesen Anwendungen für die Kommunikation mit ihrem Ursprungsserver, die mit einer der unterstützten WCF-Bindungen, die in beschriebenen [Partial Trust Feature Compatibility ](../../../../docs/framework/wcf/feature-details/partial-trust-feature-compatibility.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Codezugriffssicherheit](https://go.microsoft.com/fwlink/?LinkId=83717)  
- [Übersicht über die im Browser gehostete Anwendungen von Windows Presentation Foundation](https://go.microsoft.com/fwlink/?LinkId=98397)  
- [Teilweise Vertrauenswürdigkeit](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- [Mittlere Vertrauensebene in ASP.Net](https://go.microsoft.com/fwlink/?LinkId=69328)
+## <a name="see-also"></a>Siehe auch
+- [Codezugriffssicherheit](https://go.microsoft.com/fwlink/?LinkId=83717)
+- [Übersicht über die im Browser gehostete Anwendungen von Windows Presentation Foundation](https://go.microsoft.com/fwlink/?LinkId=98397)
+- [Teilweise Vertrauenswürdigkeit](../../../../docs/framework/wcf/feature-details/partial-trust.md)
+- [Mittlere Vertrauensebene in ASP.Net](https://go.microsoft.com/fwlink/?LinkId=69328)

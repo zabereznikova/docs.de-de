@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d1e0f0d57440f0074a7ca179955a7a13e41f5d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4f87724bda78c1948ae7e1ddfa3d586fe5b7e14e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575735"
 ---
 # <a name="icordebugmodulegettoken-method"></a>ICorDebugModule::GetToken-Methode
-Ruft das Token für den Tabelleneintrag für dieses Modul an.  
+Ruft das Token für den Tabelleneintrag für dieses Modul ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,13 +37,13 @@ HRESULT GetToken(
   
 #### <a name="parameters"></a>Parameter  
  `pToken`  
- [out] Ein Zeiger auf die `mdModule` Token, das Modul Metadaten verweist.  
+ [out] Ein Zeiger auf die `mdModule` -Token, die Metadaten des Moduls verweist.  
   
 ## <a name="remarks"></a>Hinweise  
  Das Token übergeben werden kann, um die [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), [IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md), und [IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) Schnittstellen zum Importieren von Metadaten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -51,5 +51,5 @@ HRESULT GetToken(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadaten](../../../../docs/framework/unmanaged-api/metadata/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadaten](../../../../docs/framework/unmanaged-api/metadata/index.md)

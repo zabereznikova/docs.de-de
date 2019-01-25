@@ -2,15 +2,15 @@
 title: Beispiel zur schwach typisierten JSON-Serialisierung
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 07166b89729fed7911cb842313269e420ae401b7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 212a5ea362600e833303711b750d1c7a0f7252b6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857666"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676054"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Beispiel zur schwach typisierten JSON-Serialisierung
-Beim Serialisieren eines benutzerdefinierten Typs in ein bestimmtes Übertragungsformat oder beim Deserialisieren eines Übertragungsformats zurück in einen benutzerdefinierten Typ muss der jeweilige benutzerdefinierte Typ für den Dienst und den Client verfügbar sein. Hierzu wird normalerweise das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut auf diese benutzerdefinierten Typen angewendet, und das <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut wird auf ihre Member angewendet. Dieser Mechanismus wird auch beim Arbeiten mit JavaScript Object Notation (JSON)-Objekten verwendet, wie im Thema [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)beschrieben.  
+Beim Serialisieren eines benutzerdefinierten Typs in ein bestimmtes Übertragungsformat oder beim Deserialisieren eines Übertragungsformats zurück in einen benutzerdefinierten Typ muss der jeweilige benutzerdefinierte Typ für den Dienst und den Client verfügbar sein. Hierzu wird normalerweise das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut auf diese benutzerdefinierten Typen angewendet, und das <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut wird auf ihre Member angewendet. Dieser Mechanismus gilt auch beim Arbeiten mit JavaScript Object Notation (JSON)-Objekten, wie beschrieben im Thema [Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
   
  In einigen Szenarien muss einen Windows Communication Foundation (WCF)-Dienst oder Client Zugriff auf JSON-Objekte, die von einem Dienst oder Client, der außerhalb der Kontrolle des Entwicklers ist generiert. Da immer mehr Webdienste JSON-APIs öffentlich verfügbar machen, kann es unpraktisch, für den WCF-Entwickler zum Erstellen von lokaler, benutzerdefinierten Typen in dem beliebige JSON-Objekte deserialisiert werden. Dieses Beispiel bietet einen Mechanismus, der WCF-Entwickler mit deserialisierten, beliebigen JSON-Objekten arbeiten, ohne benutzerdefinierte Typen erstellen kann. Dies wird als *schwach typisierte Deserialisierung* von JSON-Objekten bezeichnet, da der Typ, in den ein JSON-Objekt deserialisiert wird, zum Zeitpunkt der Kompilierung nicht bekannt ist.  
   

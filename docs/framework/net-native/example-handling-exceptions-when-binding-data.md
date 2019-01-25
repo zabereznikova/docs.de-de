@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a861da011898c3648c66b6a0ea0f97cdb26ff288
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 9610eb6088a59e4f577ea6dfe679130b44988645
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725713"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Beispiel: Behandeln von Ausnahmen beim Binden von Daten
 > [!NOTE]
@@ -59,6 +59,6 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
  Es gibt jedoch Möglichkeiten zum Angeben des `ViewModel` auf der XAML-Seite, damit die Toolkette Eigenschaftenbindungen zur Kompilierungszeit den korrekten Typ zuordnen und die Metadaten ohne Verwendung einer Laufzeitdirektive beibehalten kann.  Sie können z. B. Anwenden der <xref:Windows.UI.Xaml.Data.BindableAttribute?displayProperty=nameWithType> Attribut auf Eigenschaften. Dies bewirkt, dass der XAML-Compiler die erforderlichen Nachschlageinformationen generiert, und vermeidet die Erfordernis einer Laufzeitanweisung in der Datei Default.rd.xml.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)  
- [Example: Troubleshooting Dynamic Programming (Beispiel: Problembehandlung bei dynamischer Programmierung)](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+## <a name="see-also"></a>Siehe auch
+- [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [Anpassen von mit VSTU Problembehandlung bei dynamischer Programmierung](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

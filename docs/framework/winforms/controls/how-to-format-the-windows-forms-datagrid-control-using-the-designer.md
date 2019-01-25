@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers'
+title: 'Vorgehensweise: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 7a63ff5e070c9986fb5890fbf09fb7d4e8cccc9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 6445a8fd51c8802f3f1565e53f044594850cd9a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873163"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615623"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Gewusst wie: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Vorgehensweise: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers
 
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
@@ -103,5 +103,5 @@ ms.locfileid: "48873163"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Vorgehensweise: Löschen oder Ausblenden von Spalten im DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

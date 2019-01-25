@@ -1,19 +1,19 @@
 ---
-title: '&lt;UdpDiscoveryEndpoint&gt;'
+title: '&lt;udpDiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: 6508f73de7920a339e40284c86b0d1d649e7eabe
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b46da83a175c2a9cff38abc211d462f3d43c1b9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569218"
 ---
-# <a name="ltudpdiscoveryendpointgt"></a>&lt;UdpDiscoveryEndpoint&gt;
+# <a name="ltudpdiscoveryendpointgt"></a>&lt;udpDiscoveryEndpoint&gt;
 Dieses Konfigurationselement definiert einen Standardendpunkt, der für Suchvorgänge über eine UDP-Multicastbindung vorkonfiguriert ist. Dieser Endpunkt hat einen festen Vertrag und unterstützt zwei WS-Discovery-Protokollversionen. Außerdem weist er eine feste UDP-Bindung und eine Standardadresse gemäß WS-Discovery-Spezifikationen (WS-Discovery Version April 2005 oder Version 1.1) auf.  
   
  \<system.ServiceModel>  
-\<StandardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,13 +48,13 @@ Dieses Konfigurationselement definiert einen Standardendpunkt, der für Suchvorg
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<UdpTransportSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Eine Auflistung von Einstellungen, mit denen Sie die UDP-Transporteinstellungen für den UDP-Endpunkt konfigurieren können.|  
+|[\<udpTransportSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/udptransportsettings.md)|Eine Auflistung von Einstellungen, mit denen Sie die UDP-Transporteinstellungen für den UDP-Endpunkt konfigurieren können.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<StandardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Eine Auflistung von Standardendpunkten, bei denen es sich um vordefinierte Endpunkte handelt, für die eine oder mehrere Eigenschaften (Adresse, Bindung, Vertrag) fest vorgegeben sind.|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Eine Auflistung von Standardendpunkten, bei denen es sich um vordefinierte Endpunkte handelt, für die eine oder mehrere Eigenschaften (Adresse, Bindung, Vertrag) fest vorgegeben sind.|  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt einen Dienst, der einen UDP-Multicasttransport auf Ermittlungsnachrichten überwacht.  
@@ -78,5 +78,5 @@ Dieses Konfigurationselement definiert einen Standardendpunkt, der für Suchvorg
 </services>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>
