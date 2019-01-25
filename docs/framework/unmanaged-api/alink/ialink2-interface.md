@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ddc2f50b42ba8adf7aa5f4d7fa0dc68469e7344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 918b4f8c42b21878fa7eae5c79ae1171ef3e6b29
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739445"
 ---
 # <a name="ialink2-interface"></a>IALink2-Schnittstelle
-Ergänzt die [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) durch Deklarieren Methoden für neuere Metadatenschnittstellen wie z. B. [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Darüber hinaus deklariert IALink2 Methoden, die zusätzliche Auslastung Flexibilität, über die ursprünglichen IALink-Schnittstellen ermöglichen.  
+Ergänzt die [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) durch das Deklarieren von Methoden, die in neueren Metadatenschnittstellen, wie z. B. arbeiten [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). IALink2 deklariert darüber hinaus Methoden, die zusätzliche Nutzung über die ursprüngliche IALink Schnittstellen flexibler zu sein.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [AddFile2-Methode](../../../../docs/framework/unmanaged-api/alink/addfile2-method.md)  
@@ -41,7 +41,7 @@ Ergänzt die [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/ali
   
  [SetPEKind-Methode](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Siehe auch
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

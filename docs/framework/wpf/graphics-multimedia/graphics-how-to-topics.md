@@ -8,31 +8,31 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: f566b5139f839ae37b90c4ea30a4bdfafa696ede
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63f268692924db94710d4aa21ff6f03b00989f67
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688209"
 ---
 # <a name="graphics-how-to-topics"></a>Gewusst-wie-Themen zu Grafiken
-In den folgenden Themen wird veranschaulicht, wie zum Verwenden der grafischen Funktionen von der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+In den folgenden Themen veranschaulichen, wie die Grafiken Funktionen des die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Animieren eines Rechtecks](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
  [Animieren der Position eines Objekts mit Punktanimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [Transformieren von Punkten und Vektoren](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
  [Erweitern von Glasframe in eine WPF-Anwendung](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [Gewusst wie: Verbessern der Renderingleistung durch Zwischenspeichern eines Elements](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [Gewusst wie: Verwenden eines zwischengespeicherten Elements als Pinsel](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+ [Vorgehensweise: Verbessern der Renderingleistung durch Zwischenspeichern eines Elements](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [Vorgehensweise: Verwenden eines zwischengespeicherten Elements als Pinsel](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Shapes.Shape>  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Media.Geometry>  
- <xref:System.Windows.Media.Drawing>  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Effects.BitmapEffect>  
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Shapes.Shape>
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Media.Geometry>
+- <xref:System.Windows.Media.Drawing>
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Effects.BitmapEffect>
+- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

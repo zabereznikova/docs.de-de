@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97e9ae5a7c35b4f9b6e2b4ca7e754b5b7480dfa6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716777"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType-Enumeration
 Gibt den Typ eines Moduls.  
@@ -46,21 +46,21 @@ typedef enum
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|Das Modul ist ein ungültiger Typ.|  
-|`ValidatorModuleTypeMin`|Der Minimalwert der der `CorValidatorModuleType` Enum.|  
-|`ValidatorModuleTypePE`|Das Modul ist eine PE (portable Executable)-Datei.|  
+|`ValidatorModuleTypeMin`|Der minimale Wert des der `CorValidatorModuleType` Enum.|  
+|`ValidatorModuleTypePE`|Das Modul ist eine Datei (portable Executable)-Datei.|  
 |`ValidatorModuleTypeObj`|Das Modul ist eine OBJ-Datei.|  
 |`ValidatorModuleTypeEnc`|Das Modul ist eine Debugsitzung mit bearbeiten und fortfahren.|  
-|`ValidatorModuleTypeIncr`|Das Modul ist eine, die inkrementell erstellt wurde.|  
-|`ValidatorModuleTypeMax`|Der Maximalwert der der `CorValidatorModuleType` Enum.|  
+|`ValidatorModuleTypeIncr`|Das Modul ist ein, die inkrementell erstellt wurde.|  
+|`ValidatorModuleTypeMax`|Der maximale Wert, der die `CorValidatorModuleType` Enum.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

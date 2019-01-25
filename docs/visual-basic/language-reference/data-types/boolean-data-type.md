@@ -12,12 +12,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: bbd914d8b4239bbae1de7031e68b2900cf5ad6a3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5e90d1dc5eb0beb3afd8fc69da32f89943e94c48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862382"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741911"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean-Datentyp (Visual Basic)
 Enthält Werte, die nur können `True` oder `False`. Die Schlüsselwörter `True` und `False` entsprechen, die beiden Status `Boolean` Variablen.  
@@ -53,11 +53,11 @@ If scriptEngine = "VB" Then
 End If  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Boolean?displayProperty=nameWithType>  
- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  
- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [CType-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Boolean?displayProperty=nameWithType>
+- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
+- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [CType-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md)

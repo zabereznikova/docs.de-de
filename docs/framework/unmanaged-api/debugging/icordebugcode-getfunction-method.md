@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d0e7f20be3f18e49dcc1b986460d5da0c3d7777
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dd544619f9e5fb85a0b08b91ead8231ea25743cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651227"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction-Methode
-Ruft die "ICorDebugCode" zugeordnet "ICorDebugFunction" ab.  
+Ruft ab, der "ICorDebugFunction" diesem "ICorDebugCode" zugeordnet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,10 +40,10 @@ HRESULT GetFunction (
  [out] Ein Zeiger auf die Adresse der Funktion.  
   
 ## <a name="remarks"></a>Hinweise  
- `ICorDebugCode` und `ICorDebugFunction` : 1-Beziehung zu verwalten.  
+ `ICorDebugCode` und `ICorDebugFunction` eine direkte Beziehung zu verwalten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -51,5 +51,5 @@ HRESULT GetFunction (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+

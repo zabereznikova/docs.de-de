@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 9456316f71a213905bcb50336533c4e618f5174a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2f09a2842edfa9471267f294c9b64229ae824098
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738747"
 ---
 # <a name="value-types-and-reference-types"></a>Wert- und Verweistypen
 In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementiert. Die Visual Basic-Datentypen können klassifiziert werden, gemäß der gibt an, ob eine Variable eines bestimmten Typs seine eigenen Daten oder ein Zeiger auf die Daten speichert. Wenn seine eigenen Daten speichert, es ist ein *Werttyp*; Wenn sie einen Zeiger auf die Daten an anderer Stelle im Arbeitsspeicher enthält es eine *Verweistyp*.  
@@ -25,7 +25,7 @@ In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementi
   
 -   Alle numerischen Datentypen  
   
--   `Boolean`, `Char` und `Date`  
+-   `Boolean`, `Char`und `Date`  
   
 -   Alle Strukturen, auch wenn deren Member Verweistypen sind.  
   
@@ -72,10 +72,10 @@ Dim totals() As Single = New Single(8) {}
   
  Finden Sie heraus, ob ein `Object` Variablen fungiert als ein Verweistyp oder ein Werttyp durch Übergabe an die <xref:Microsoft.VisualBasic.Information.IsReference%2A> -Methode in der die <xref:Microsoft.VisualBasic.Information> Klasse von der <xref:Microsoft.VisualBasic?displayProperty=nameWithType> Namespace. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Gibt `True` Wenn den Inhalt der `Object` Variable stellt einen Verweistyp handelt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Auf NULL festlegbare Werttypen](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  
- [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)  
- [Effiziente Verwendung von Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Auf NULL festlegbare Werttypen](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Effiziente Verwendung von Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

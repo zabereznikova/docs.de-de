@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0afe4daa1c85f3e15addac55bdbe631d40e03f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407564"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710338"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType-Methode
 Gibt geschachtelte Typen als "Exportierbar" markieren. Die [ExportType-Methode](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) kann auch geschachtelte Typen exportieren, aber diese Methode ist schneller.  
@@ -43,33 +43,33 @@ HRESULT ExportNestedType(
   
 #### <a name="parameters"></a>Parameter  
  `AssemblyID`  
- ID der Assembly exportieren.  
+ ID der Assembly zum Exportieren aus.  
   
  `FileToken`  
  Datei-Token oder übergeordnete Assembly der Datei, definiert den Typ als exportierbar festgelegt werden.  
   
  `TypeToken`  
- Geben Sie ein Token vom Typ als exportierbar festgelegt werden.  
+ Geben Sie ein Token des Typs als exportierbar festgelegt werden.  
   
  `ParentType`  
  Token des übergeordneten Typs.  
   
  `pszTypename`  
- Voll qualifizierten Typnamen zu exportieren.  
+ Vollqualifizierten Typnamen zu exportieren.  
   
  `dwFlags`  
- `ComType` Flags, z. B. `tdPublic` oder `tdNested`. Dieser Wert möglicherweise übergeben werden, um [DefineExportedType-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` Flags, z. B. `tdPublic` oder `tdNested`. Dieser Wert kann übergeben werden, um [DefineExportedType-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Empfängt Token für den exportierten Typ.  
+ Empfängt die Token für den exportierten Typ.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  Erfordert alink.h  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

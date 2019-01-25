@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Drucken von Client- und Nicht-Client-Bereichen eines Formulars (Visual Basic)'
+title: 'Vorgehensweise: Drucken von Client- und nicht-Clientbereich eines Formulars (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - title bar [Visual Basic], printing
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - entire form
 - non-client area [Visual Basic], printing
 ms.assetid: 856bb0e4-dbc3-47e2-81cd-4b376cf07757
-ms.openlocfilehash: 5109993146a8d53d5cbeebcc52c018a6f0f57ed5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b32b5bc6cfe45f38b9eb5a0df0778eb02d827d21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685078"
 ---
-# <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>Gewusst wie: Drucken von Client- und Nicht-Client-Bereichen eines Formulars (Visual Basic)
+# <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>Vorgehensweise: Drucken von Client- und nicht-Clientbereich eines Formulars (Visual Basic)
 Mithilfe der <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Komponente können Sie schnell ein Bild eines Formulars genau so drucken, wie es auf dem Bildschirm angezeigt wird, ohne eine <xref:System.Drawing.Printing.PrintDocument> -Komponente zu verwenden. Die folgende Vorgehensweise zeigt das Drucken eines Formulars, einschließlich des Clientbereichs und des Nicht-Clientbereichs. Der Nicht-Clientbereich beinhaltet die Titelleiste, Rahmen und Scrollleisten.  
   
- Die PowerPack-Steuerelemente sind nicht mehr in Visual Studio enthalten, aber Sie können sie aus der [Downloadcenter](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Die PowerPack-Steuerelemente sind nicht mehr in Visual Studio enthalten, Sie können sie jedoch aus dem [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=25169)herunterladen.  
   
 ### <a name="to-print-both-the-client-and-the-non-client-areas-of-a-form"></a>So drucken Sie sowohl den Client- als auch den Nicht-Clientbereich eines Formulars  
   
@@ -37,8 +37,8 @@ Mithilfe der <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> -Kompone
     > [!NOTE]
     >  Unter einigen Betriebssystemen werden von den <xref:System.Drawing.Graphics> -Methoden gezeichnete Text- oder Grafikelemente möglicherweise nicht ordnungsgemäß gedruckt. Verwenden Sie in diesem Fall diese kompatible Druckmethode: `PrintForm1.Print(Me, PowerPacks.Printing.PrintForm.PrintOption.CompatibleModeFullWindow`  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
- [PrintForm-Komponente](../../../visual-basic/developing-apps/printing/printform-component.md)  
- [Gewusst wie: Drucken eines bildlauffähigen Formulars](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>
+- <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>
+- [PrintForm-Komponente](../../../visual-basic/developing-apps/printing/printform-component.md)
+- [Vorgehensweise: Drucken eines bildlauffähigen Formulars](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)

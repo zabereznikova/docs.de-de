@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 2a372ba995f409fc3dd12492e21af80b93d20b8c
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 20676b53d21931987139288e29c009c8348ce6ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058593"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690890"
 ---
 # <a name="serialization-guidelines"></a>Serialisierungsrichtlinien
 In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer API zu berücksichtigen sind, welche für die Serialisierung vorgesehen ist.  
@@ -140,10 +140,10 @@ In diesem Dokument werden die Richtlinien beschrieben, die beim Entwurf einer AP
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Datenverträgen](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
-- [Datenvertragsserialisierer](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
-- [Vom Datenvertragsserialisierer unterstützte Typen](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
-- [Binäre Serialisierung](binary-serialization.md)  
-- [Remoteobjekte](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
-- [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)  
+- [Verwenden von Datenverträgen](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Datenvertragsserialisierer](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
+- [Vom Datenvertragsserialisierer unterstützte Typen](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Binäre Serialisierung](binary-serialization.md)
+- [Remoteobjekte](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+- [XML- und SOAP-Serialisierung](xml-and-soap-serialization.md)
 - [Sicherheit und Serialisierung](../../../docs/framework/misc/security-and-serialization.md)

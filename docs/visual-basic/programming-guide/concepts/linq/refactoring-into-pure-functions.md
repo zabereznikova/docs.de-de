@@ -1,15 +1,15 @@
 ---
-title: Umgestalten in reine Funktionen (Visual Basic)
+title: Refactoring in reine Funktionen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 99e7d27b-a3ff-4577-bdb2-5a8278d6d7af
-ms.openlocfilehash: 207b77ff50cd2aaeede758db69b48c8f29a16ab1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c4be0c3574f2bd3171b8f5a86359d3181fe8731
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654256"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54644462"
 ---
-# <a name="refactoring-into-pure-functions-visual-basic"></a>Umgestalten in reine Funktionen (Visual Basic)
+# <a name="refactoring-into-pure-functions-visual-basic"></a>Refactoring in reine Funktionen (Visual Basic)
 Ein wichtiger Aspekt bei dem Studium reiner funktionaler Transformationen besteht darin zu lernen, wie Code mit reinen Funktionen umgestaltet werden kann.  
   
  Wie bereits weiter oben erwähnt, besitzt eine reine Funktion zwei nützliche Eigenschaften:  
@@ -20,7 +20,7 @@ Ein wichtiger Aspekt bei dem Studium reiner funktionaler Transformationen besteh
   
  Eine Möglichkeit des Umstiegs auf die funktionale Programmierung besteht darin, vorhandenen Code umzugestalten und so unnötige Nebenwirkungen und externe Abhängigkeiten abzuschaffen. Auf diese Weise können Sie Versionen von reinen Funktionen von vorhandenem Code erstellen.  
   
- In diesem Thema wird erläutert, was eine reine Funktion ist und was nicht. Die [Lernprogramm: Bearbeiten des Inhalts eines WordprocessingML-Dokuments (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) Lernprogramm wird gezeigt, wie ein WordprocessingML-Dokument bearbeiten, und enthält zwei Beispiele für die Umgestaltung mit einer reinen Funktion.  
+ In diesem Thema wird erläutert, was eine reine Funktion ist und was nicht. Die [Lernprogramm: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) Tutorial zeigt, wie Sie ein WordprocessingML-Dokument bearbeiten und enthält zwei Beispiele für das Umgestalten mithilfe einer reinen Funktion.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Beseitigen von Nebenwirkungen und externen Abhängigkeiten  
  In den folgenden Beispielen werden zwei nicht reine Funktionen einer reinen Funktion gegenübergestellt.  
@@ -49,7 +49,7 @@ End Module
 StringOne-StringTwo  
 ```  
   
- Beachten Sie, dass es spielt keine Rolle, ob die zu ändernden Daten hat `public` oder `private` Zugriff auf oder ist eine `shared` Member bzw. ein Instanzmember. Reine Funktionen führen zu keinerlei Änderungen an Daten außerhalb der Funktion.  
+ Beachten Sie, dass es nicht relevant ist, ob die Änderung die Daten hat `public` oder `private` Zugriff, oder eine `shared` Member bzw. ein Instanzmember. Reine Funktionen führen zu keinerlei Änderungen an Daten außerhalb der Funktion.  
   
 ### <a name="non-pure-function-that-changes-an-argument"></a>Nicht reine Funktion, die ein Argument ändert  
  Außerdem ist die folgende Version derselben Funktion keine reine Funktion, weil sie den Inhalt ihres Parameters, `sb`, ändert.  
@@ -97,8 +97,8 @@ End Module
 ## <a name="standard-query-operators"></a>Standardabfrageoperatoren  
  Ein wichtiges Merkmal der Standardabfrageoperatoren besteht darin, dass sie als reine Funktionen implementiert sind.  
   
- Weitere Informationen finden Sie unter [Standard Übersicht über Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Weitere Informationen finden Sie unter [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Funktionale Programmierung und Imperative Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Funktionale Programmierung und Imperative Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

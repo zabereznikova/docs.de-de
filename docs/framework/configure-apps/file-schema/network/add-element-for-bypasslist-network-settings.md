@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: ca1d33b2077736a9760f65857bffe4e96c4aeab0
-ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
+ms.openlocfilehash: 3be617d53ba87c35ae44f143da15a6b647eaa0d9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235725"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680779"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Hinzufügen&gt; -Element für Bypasslist (Netzwerkeinstellungen)
 Fügt eine IP-Adresse oder DNS-Namen, der Proxyumgehungsliste enthalten an.  
   
  \<configuration>  
 \<system.net>  
-\<DefaultProxy >  
-\<BypassList >  
+\<defaultProxy>  
+\<bypasslist>  
 \<add>  
   
 ## <a name="syntax"></a>Syntax  
@@ -50,7 +50,7 @@ Fügt eine IP-Adresse oder DNS-Namen, der Proxyumgehungsliste enthalten an.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Bietet eine Reihe von regulären Ausdrücken, die Adressen beschreiben, die einen Proxy nicht verwenden.|  
+|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Bietet eine Reihe von regulären Ausdrücken, die Adressen beschreiben, die einen Proxy nicht verwenden.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `add` -Element fügt reguläre Ausdrücke, die beschreiben, IP-Adressen oder DNS-Servernamen zur Liste der Adressen, die einen Proxyserver zu umgehen.  
@@ -80,6 +80,6 @@ Fügt eine IP-Adresse oder DNS-Namen, der Proxyumgehungsliste enthalten an.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0898936665b3b337f2fd4e4d53bcc9f6071469b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d570f9392bbd66f0d9031c776b139ee3b30541b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698218"
 ---
 # <a name="corfield-structure"></a>COR_FIELD-Struktur
 Bietet Informationen zu einem Feld in einem Objekt.  
@@ -42,14 +42,14 @@ typedef struct COR_FIELD{
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`token`|Ein `mdFieldDef` Token, das zum Abrufen von Feldinformationen verwendet werden kann.|  
-|`offset`|Der Offset in Bytes, die die Felddaten im-Objekt.|  
-|`id`|Ein [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) -Wert, der den Typ dieses Felds identifiziert.|  
+|`offset`|Der Offset in Bytes, die die Feld-Daten in das Objekt.|  
+|`id`|Ein [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) -Wert, der den Typ dieses Felds angibt.|  
 |`fieldType`|Ein Wert der CorElementType-Enumeration, der den Typ des Felds angibt.|  
   
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -57,6 +57,6 @@ typedef struct COR_FIELD{
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
