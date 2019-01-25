@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a59d8bce6ae565687e7ed906f6c14332f0c5c71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 08a9bc8aa4aa70ad6b01c58abccd145ae43d8a52
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416831"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568291"
 ---
-# <a name="icordebugheapvalue3-interface"></a><span data-ttu-id="ce67b-102">ICorDebugHeapValue3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ce67b-102">ICorDebugHeapValue3 Interface</span></span>
-<span data-ttu-id="ce67b-103">Macht die Bildschirmsperreigenschaften von Objekten verfügbar.</span><span class="sxs-lookup"><span data-stu-id="ce67b-103">Exposes the monitor lock properties of objects.</span></span> <span data-ttu-id="ce67b-104">Diese Schnittstelle erweitert die ICorDebugHeapValue und ICorDebugHeapValue2-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="ce67b-104">This interface extends the ICorDebugHeapValue and ICorDebugHeapValue2 interfaces.</span></span>  
+# <a name="icordebugheapvalue3-interface"></a><span data-ttu-id="1b056-102">ICorDebugHeapValue3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1b056-102">ICorDebugHeapValue3 Interface</span></span>
+<span data-ttu-id="1b056-103">Macht die Bildschirmsperreigenschaften von Objekten verfügbar.</span><span class="sxs-lookup"><span data-stu-id="1b056-103">Exposes the monitor lock properties of objects.</span></span> <span data-ttu-id="1b056-104">Diese Schnittstelle erweitert die ICorDebugHeapValue und ICorDebugHeapValue2-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="1b056-104">This interface extends the ICorDebugHeapValue and ICorDebugHeapValue2 interfaces.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="ce67b-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="ce67b-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="1b056-105">Methoden</span><span class="sxs-lookup"><span data-stu-id="1b056-105">Methods</span></span>  
   
-|<span data-ttu-id="ce67b-106">Methode</span><span class="sxs-lookup"><span data-stu-id="ce67b-106">Method</span></span>|<span data-ttu-id="ce67b-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ce67b-107">Description</span></span>|  
+|<span data-ttu-id="1b056-106">Methode</span><span class="sxs-lookup"><span data-stu-id="1b056-106">Method</span></span>|<span data-ttu-id="1b056-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1b056-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="ce67b-108">GetThreadOwningMonitorLock-Methode</span><span class="sxs-lookup"><span data-stu-id="ce67b-108">GetThreadOwningMonitorLock Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getthreadowningmonitorlock-method.md)|<span data-ttu-id="ce67b-109">Gibt den verwalteten Thread, der die Monitorsperre für dieses Objekt besitzt.</span><span class="sxs-lookup"><span data-stu-id="ce67b-109">Returns the managed thread that owns the monitor lock on this object.</span></span>|  
-|[<span data-ttu-id="ce67b-110">GetMonitorEventWaitList-Methode</span><span class="sxs-lookup"><span data-stu-id="ce67b-110">GetMonitorEventWaitList Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getmonitoreventwaitlist-method.md)|<span data-ttu-id="ce67b-111">Stellt eine geordnete Liste von Threads in der Warteschlange auf das Ereignis, das einen Monitorsperre zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="ce67b-111">Provides an ordered list of threads that are queued on the event that is associated with a monitor lock.</span></span>|  
+|[<span data-ttu-id="1b056-108">GetThreadOwningMonitorLock-Methode</span><span class="sxs-lookup"><span data-stu-id="1b056-108">GetThreadOwningMonitorLock Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getthreadowningmonitorlock-method.md)|<span data-ttu-id="1b056-109">Gibt zurück, den verwalteten Thread, der die Monitorsperre für dieses Objekt besitzt.</span><span class="sxs-lookup"><span data-stu-id="1b056-109">Returns the managed thread that owns the monitor lock on this object.</span></span>|  
+|[<span data-ttu-id="1b056-110">GetMonitorEventWaitList-Methode</span><span class="sxs-lookup"><span data-stu-id="1b056-110">GetMonitorEventWaitList Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-getmonitoreventwaitlist-method.md)|<span data-ttu-id="1b056-111">Enthält eine geordnete Liste von Threads, die in die Warteschlange eingereiht werden auf das Ereignis, das eine Sperre für die Überwachung zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="1b056-111">Provides an ordered list of threads that are queued on the event that is associated with a monitor lock.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ce67b-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ce67b-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1b056-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1b056-112">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ce67b-113">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="ce67b-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="1b056-113">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1b056-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ce67b-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ce67b-114">Requirements</span></span>  
- <span data-ttu-id="ce67b-115">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce67b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1b056-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1b056-114">Requirements</span></span>  
+ <span data-ttu-id="1b056-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b056-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ce67b-116">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ce67b-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1b056-116">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1b056-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ce67b-117">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce67b-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1b056-117">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b056-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ce67b-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ce67b-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="1b056-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b056-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ce67b-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ce67b-119">See Also</span></span>  
- [<span data-ttu-id="ce67b-120">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="ce67b-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [<span data-ttu-id="ce67b-121">Debuggen</span><span class="sxs-lookup"><span data-stu-id="ce67b-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="1b056-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1b056-119">See also</span></span>
+- [<span data-ttu-id="1b056-120">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="1b056-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="1b056-121">Debuggen</span><span class="sxs-lookup"><span data-stu-id="1b056-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f50a5cb1f16be44b03cd94b69fdf32efa9e9007b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5227de340bec85620f8c8d45538ad9a9d7f688fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630956"
 ---
-# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="f98ac-102">ISymUnmanagedReader::GetNamespaces-Methode</span><span class="sxs-lookup"><span data-stu-id="f98ac-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
-<span data-ttu-id="f98ac-103">Ruft die im globalen Gültigkeitsbereich in diesem Symbolspeicher definierten Namespaces ab.</span><span class="sxs-lookup"><span data-stu-id="f98ac-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
+# <a name="isymunmanagedreadergetnamespaces-method"></a><span data-ttu-id="10c92-102">ISymUnmanagedReader::GetNamespaces-Methode</span><span class="sxs-lookup"><span data-stu-id="10c92-102">ISymUnmanagedReader::GetNamespaces Method</span></span>
+<span data-ttu-id="10c92-103">Ruft die Namespaces, die auf diesem Symbolspeicher mit globalem Gültigkeitsbereich definiert.</span><span class="sxs-lookup"><span data-stu-id="10c92-103">Gets the namespaces defined at global scope within this symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f98ac-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f98ac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10c92-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="10c92-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNamespaces (  
@@ -38,21 +38,21 @@ HRESULT GetNamespaces (
         ISymUnmanagedNamespace*  namespaces[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f98ac-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="f98ac-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="10c92-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="10c92-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="f98ac-106">[in] Die Größe des Namespacearrays.</span><span class="sxs-lookup"><span data-stu-id="f98ac-106">[in] The size of the namespaces array.</span></span>  
+ <span data-ttu-id="10c92-106">[in] Die Größe des Namespacearrays.</span><span class="sxs-lookup"><span data-stu-id="10c92-106">[in] The size of the namespaces array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="f98ac-107">[out] Ein Zeiger auf eine Variable, die die Länge der Namespaceliste empfängt.</span><span class="sxs-lookup"><span data-stu-id="f98ac-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
+ <span data-ttu-id="10c92-107">[out] Ein Zeiger auf eine Variable, die die Länge der Liste der Namespaces empfängt.</span><span class="sxs-lookup"><span data-stu-id="10c92-107">[out] A pointer to a variable that receives the length of the namespace list.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="f98ac-108">[out] Ein Zeiger auf eine Variable, die die Namespaceliste empfängt.</span><span class="sxs-lookup"><span data-stu-id="f98ac-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
+ <span data-ttu-id="10c92-108">[out] Ein Zeiger auf eine Variable, die der Liste der Namespaces empfängt.</span><span class="sxs-lookup"><span data-stu-id="10c92-108">[out] A pointer to a variable that receives the namespace list.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f98ac-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="f98ac-109">Return Value</span></span>  
- <span data-ttu-id="f98ac-110">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="f98ac-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="10c92-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="10c92-109">Return Value</span></span>  
+ <span data-ttu-id="10c92-110">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="10c92-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f98ac-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f98ac-111">Requirements</span></span>  
- <span data-ttu-id="f98ac-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f98ac-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10c92-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="10c92-111">Requirements</span></span>  
+ <span data-ttu-id="10c92-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="10c92-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f98ac-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f98ac-113">See Also</span></span>  
- [<span data-ttu-id="f98ac-114">ISymUnmanagedReader-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f98ac-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="10c92-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="10c92-113">See also</span></span>
+- [<span data-ttu-id="10c92-114">ISymUnmanagedReader-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="10c92-114">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

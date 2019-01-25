@@ -5,42 +5,42 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fdd64af-6ad0-46cd-91c8-dbe26620eeb1
-ms.openlocfilehash: 8abcab3bc2e2ee65f7b54581d9144d62cb5d5dd6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 92daf1dff3d473016d92b359ea6f75295a9dbd37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739028"
 ---
-# <a name="dataset-specific-operator-examples-linq-to-dataset"></a><span data-ttu-id="08ca3-102">Beispiele für DataSet-spezifische Operatoren (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="08ca3-102">DataSet-Specific Operator Examples (LINQ to DataSet)</span></span>
-<span data-ttu-id="08ca3-103">In den Beispielen in diesem Thema wird gezeigt, wie Sie die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode und die <xref:System.Data.DataRowComparer>-Klasse verwenden können.</span><span class="sxs-lookup"><span data-stu-id="08ca3-103">The examples in this topic demonstrate how to use the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method and the <xref:System.Data.DataRowComparer> class.</span></span>  
+# <a name="dataset-specific-operator-examples-linq-to-dataset"></a><span data-ttu-id="5179f-102">Beispiele für DataSet-spezifische Operatoren (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="5179f-102">DataSet-Specific Operator Examples (LINQ to DataSet)</span></span>
+<span data-ttu-id="5179f-103">In den Beispielen in diesem Thema wird gezeigt, wie Sie die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode und die <xref:System.Data.DataRowComparer>-Klasse verwenden können.</span><span class="sxs-lookup"><span data-stu-id="5179f-103">The examples in this topic demonstrate how to use the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method and the <xref:System.Data.DataRowComparer> class.</span></span>  
   
- <span data-ttu-id="08ca3-104">Die `FillDataSet` in diesen Beispielen verwendete Methode angegeben, [Laden von Daten in ein DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="08ca3-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="5179f-104">Die `FillDataSet` in diesen Beispielen verwendete Methode angegeben ist, im [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="5179f-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="08ca3-105">In den Beispielen in diesem Thema wird auf die Tabellen <legacyBold>Contact</legacyBold>, <legacyBold>Address</legacyBold>, <legacyBold>Product</legacyBold>, <legacyBold>SalesOrderHeader</legacyBold> und <legacyBold>SalesOrderDetail</legacyBold> in der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank zurückgegriffen.</span><span class="sxs-lookup"><span data-stu-id="08ca3-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="5179f-105">In den Beispielen in diesem Thema wird auf die Tabellen <legacyBold>Contact</legacyBold>, <legacyBold>Address</legacyBold>, <legacyBold>Product</legacyBold>, <legacyBold>SalesOrderHeader</legacyBold> und <legacyBold>SalesOrderDetail</legacyBold> in der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank zurückgegriffen.</span><span class="sxs-lookup"><span data-stu-id="5179f-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="08ca3-106">In den Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:</span><span class="sxs-lookup"><span data-stu-id="08ca3-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="5179f-106">In die Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:</span><span class="sxs-lookup"><span data-stu-id="5179f-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="08ca3-107">Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines LINQ to DataSet-Projekt In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="08ca3-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="5179f-107">Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie eine LINQ to DataSet-Projekt In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span><span class="sxs-lookup"><span data-stu-id="5179f-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="copytodatatable"></a><span data-ttu-id="08ca3-108">CopyToDataTable</span><span class="sxs-lookup"><span data-stu-id="08ca3-108">CopyToDataTable</span></span>  
+## <a name="copytodatatable"></a><span data-ttu-id="5179f-108">CopyToDataTable</span><span class="sxs-lookup"><span data-stu-id="5179f-108">CopyToDataTable</span></span>  
   
-### <a name="example"></a><span data-ttu-id="08ca3-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="08ca3-109">Example</span></span>  
- <span data-ttu-id="08ca3-110">In diesem Beispiel wird eine <xref:System.Data.DataTable> mithilfe der <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode mit Abfrageergebnissen geladen.</span><span class="sxs-lookup"><span data-stu-id="08ca3-110">This example loads a <xref:System.Data.DataTable> with query results by using the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method.</span></span>  
+### <a name="example"></a><span data-ttu-id="5179f-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5179f-109">Example</span></span>  
+ <span data-ttu-id="5179f-110">In diesem Beispiel wird eine <xref:System.Data.DataTable> mithilfe der <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode mit Abfrageergebnissen geladen.</span><span class="sxs-lookup"><span data-stu-id="5179f-110">This example loads a <xref:System.Data.DataTable> with query results by using the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#LoadDataTableWithQueryResults](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#loaddatatablewithqueryresults)]
  [!code-vb[DP LINQ to DataSet Examples#LoadDataTableWithQueryResults](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#loaddatatablewithqueryresults)]  
   
-## <a name="datarowcomparer"></a><span data-ttu-id="08ca3-111">DataRowComparer</span><span class="sxs-lookup"><span data-stu-id="08ca3-111">DataRowComparer</span></span>  
+## <a name="datarowcomparer"></a><span data-ttu-id="5179f-111">DataRowComparer</span><span class="sxs-lookup"><span data-stu-id="5179f-111">DataRowComparer</span></span>  
   
-### <a name="example"></a><span data-ttu-id="08ca3-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="08ca3-112">Example</span></span>  
- <span data-ttu-id="08ca3-113">In diesem Beispiel werden zwei verschiedene Datenzeilen mithilfe von <xref:System.Data.DataRowComparer> miteinander verglichen.</span><span class="sxs-lookup"><span data-stu-id="08ca3-113">This example compares two different data rows by using <xref:System.Data.DataRowComparer>.</span></span>  
+### <a name="example"></a><span data-ttu-id="5179f-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5179f-112">Example</span></span>  
+ <span data-ttu-id="5179f-113">In diesem Beispiel werden zwei verschiedene Datenzeilen mithilfe von <xref:System.Data.DataRowComparer> miteinander verglichen.</span><span class="sxs-lookup"><span data-stu-id="5179f-113">This example compares two different data rows by using <xref:System.Data.DataRowComparer>.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#CompareDifferentDataRows](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#comparedifferentdatarows)]  
   
-## <a name="see-also"></a><span data-ttu-id="08ca3-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="08ca3-114">See Also</span></span>  
- [<span data-ttu-id="08ca3-115">Laden von Daten in ein DataSet</span><span class="sxs-lookup"><span data-stu-id="08ca3-115">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
- [<span data-ttu-id="08ca3-116">Beispiele für LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="08ca3-116">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+## <a name="see-also"></a><span data-ttu-id="5179f-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5179f-114">See also</span></span>
+- [<span data-ttu-id="5179f-115">Laden von Daten in ein DataSet</span><span class="sxs-lookup"><span data-stu-id="5179f-115">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [<span data-ttu-id="5179f-116">Beispiele für LINQ to DataSet</span><span class="sxs-lookup"><span data-stu-id="5179f-116">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
