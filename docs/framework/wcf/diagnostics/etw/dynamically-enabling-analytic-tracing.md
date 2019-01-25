@@ -2,12 +2,12 @@
 title: Dynamisches Aktivieren der analytischen Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: f03d2ce381be430121a11df95341886a4be667e2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 42d238c704910c2406eb580c2ce102e5e84ed0f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529518"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54719988"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Dynamisches Aktivieren der analytischen Ablaufverfolgung
 Mit Tools, die im Lieferumfang des Windows-Betriebssystems enthalten sind, können Sie die Ablaufverfolgung mithilfe der Ereignisablaufverfolgung für Windows (ETW) aktivieren und deaktivieren. Für alle [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF)-Dienste, analytische Ablaufverfolgung kann aktivierten und deaktivierten dynamisch ohne Ändern der Datei Web.config oder Neustarten des Diensts sein. Auf diese Weise wird die Anwendung, die die Ablaufverfolgungsereignisse ausgibt, nicht beeinträchtigt.  
@@ -20,7 +20,7 @@ Mit Tools, die im Lieferumfang des Windows-Betriebssystems enthalten sind, könn
   
 -   **Perfmon** – Grafisches Windows-Verwaltungstool, das Indikatoren zum Überwachen der Ablaufverfolgung und der Auswirkungen der Ablaufverfolgung auf die Leistung verwendet. Weitere Informationen finden Sie unter [erstellen Sie eine Data Collector festgelegt manuell](https://go.microsoft.com/fwlink/?LinkId=165429).  
   
-### <a name="keywords"></a>Stichwörter  
+### <a name="keywords"></a>Schlüsselwörter  
  Wenn Sie die <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> -Klasse verwenden, werden .NET Framework-Ablaufverfolgungsmeldungen im Allgemeinen nach dem Schweregrad gefiltert (z. B. "Error", "Warning" und "Information") gefiltert. ETW unterstützt das Schweregradkonzept, führt jedoch einen neuen, flexiblen Filtermechanismus mit Schlüsselwörtern ein. Schlüsselwörter sind beliebige Textwerte, über die Ablaufverfolgungsereignisse zusätzlichen Kontext zur Bedeutung eines Ereignisses bereitstellen können.  
   
  Für die analytische Ablaufverfolgung von WCF, verfügt jedes Ablaufverfolgungsereignis über zwei Arten von Schlüsselwörtern. Erstens verfügt jedes Ereignis über ein oder mehrere Szenarioschlüsselwörter. Diese Schlüsselwörter bezeichnen die Szenarien, die das Ereignis unterstützen soll. Es gibt drei Szenarioschlüsselwörter, die jeweils einen bestimmten Zweck haben. Dies ist in der folgenden Tabelle beschrieben. Filtern mit Schlüsselwörtern kann dynamisch geändert werden, ohne Beeinträchtigung des WCF-Diensts. Dies bedeutet, dass Sie das aktuelle Ablaufverfolgungsszenario und die Menge der erfassten Ablaufverfolgungsinformationen dynamisch ändern können. Sie können z. B. `HealthMonitoring` in `Troubleshooting` ändern und die Granularität für Ablaufverfolgungsereignisse erhöhen.  
@@ -40,5 +40,5 @@ Mit Tools, die im Lieferumfang des Windows-Betriebssystems enthalten sind, könn
 |`ServiceHost`|Vom Diensthost ausgegebene Ereignisse.|  
 |`WCFMessageLogging`|WCF-Nachricht Protokollieren von Ereignissen.|  
   
-## <a name="see-also"></a>Siehe auch  
- [WCF-Dienste und Ereignisablaufverfolgung für Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+## <a name="see-also"></a>Siehe auch
+- [WCF-Dienste und Ereignisablaufverfolgung für Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Steuern, wie viel verbundene Daten abgerufen werden'
+title: 'Vorgehensweise: Steuern Sie, wie viel verbundene Daten abgerufen werden'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 202e33f3130e8db7269af2b4669690cf5c6468cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b52e2cdefefce011be7d729569b76f919f9bb33
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360856"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715607"
 ---
-# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Gewusst wie: Steuern, wie viel verbundene Daten abgerufen werden
+# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Vorgehensweise: Steuern Sie, wie viel verbundene Daten abgerufen werden
 Geben Sie mit der <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>-Methode an, welche mit Ihrem Hauptziel verbundenen Daten gleichzeitig abgerufen werden sollen. Wenn Sie beispielsweise Informationen über die Bestellungen eines Kunden benötigen, können Sie mithilfe von <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> sicherstellen, dass die Bestellinformationen zusammen mit den Kundeninformationen abgerufen werden. Dadurch können beide Informationssätze in einem Vorgang aus der Datenbank abgerufen werden.  
   
 > [!NOTE]
@@ -24,5 +24,5 @@ Geben Sie mit der <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>-Methode an
  [!code-csharp[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#2)]
  [!code-vb[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfragen der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+## <a name="see-also"></a>Siehe auch
+- [Abfragen der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

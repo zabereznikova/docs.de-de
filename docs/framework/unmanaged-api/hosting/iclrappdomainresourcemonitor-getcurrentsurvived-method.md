@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c179ba23be07e8ff77e1397ed753d4287b22440
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 648a2c044920b7524ad96ff656e83268ffd55652
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612215"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived-Methode
-Ruft die Anzahl der Bytes, die die letzte vollständige blockierende Garbagecollection noch vorhanden sind und verwiesen wird, werden von der aktuellen Anwendungsdomäne, ab.  
+Ruft die Anzahl der Bytes, die die letzte vollständigen blockierenden Garbagecollection noch vorhanden sind und verwiesen wird, werden von der aktuellen Anwendungsdomäne, ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,13 +38,13 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
   
 #### <a name="parameters"></a>Parameter  
  `dwAppDomainId`  
- [in] Die ID der angeforderten Anwendungsdomäne.  
+ [in] Die ID des angeforderten Anwendungsdomäne.  
   
  `pAppDomainBytesSurvived`  
- [out] Ein Zeiger auf die Anzahl der Bytes, die nach der letzten Garbagecollection noch vorhanden sind, die von dieser Anwendungsdomäne gehalten werden. Nach einer vollständigen Auflistung ist diese Nummer genauer und vollständiger. Nach einer kurzlebigen Auflistung ist diese Nummer möglicherweise unvollständig. Dieser Parameter kann `null` sein.  
+ [out] Ein Zeiger auf die Anzahl der Bytes, die nach der letzten Garbagecollection noch vorhanden, die von dieser Anwendungsdomäne gespeichert werden. Ist nach einer vollständigen Auflistung stellt diese Anzahl richtig und vollständig. Nach einer kurzlebiger Auflistung ist ist diese Zahl möglicherweise unvollständig. Dieser Parameter kann `null` sein.  
   
  `pRuntimeBytesSurvived`  
- [out] Ein Zeiger auf die Gesamtanzahl der Bytes, die von der letzten Garbagecollection noch vorhanden sind. Nach einer vollständigen Auflistung stellt diese Anzahl die Anzahl der Bytes, die in verwalteten Heaps gehalten werden. Nach einer kurzlebigen Auflistung stellt diese Anzahl die Anzahl der Bytes, die in kurzlebigen Generationen live gespeichert werden. Dieser Parameter kann `null` sein.  
+ [out] Ein Zeiger auf die Gesamtzahl der Bytes, die von der letzten Garbagecollection noch vorhanden sind. Nach einer vollständigen Auflistung stellt diese Anzahl die Anzahl der Bytes, die in verwalteten Heaps gespeichert werden. Nach einer kurzlebigen Auflistung stellt diese Anzahl die Anzahl der Bytes, die in kurzlebigen Generationen live gespeichert werden. Dieser Parameter kann `null` sein.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zurück, die Methodenfehler anzeigen.  
@@ -52,24 +52,24 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|COR_E_APPDOMAINUNLOADED|Die Anwendungsdomäne entladen wurde oder nicht vorhanden.|  
+|COR_E_APPDOMAINUNLOADED|Die Anwendungsdomäne entladen wurde, oder es ist nicht vorhanden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Statistiken werden erst nach eine vollständige blockierende Garbagecollection aktualisiert. Tritt auf, d. h. eine Auflistung, die alle Generationen umfasst, und Beenden der Anwendung während der Auflistung, an. Z. B. die <xref:System.GC.Collect?displayProperty=nameWithType> methodenüberladung führt eine vollständige blockierende Garbage Collection. Die gleichzeitige Garbagecollection erfolgt im Hintergrund und die Anwendung nicht blockiert.  
+ Statistiken werden nur nach einer vollständigen blockierenden Garbagecollection aktualisiert. Tritt auf, d. h. eine Auflistung, die alle Generationen umfasst, und Beenden der Anwendung während der Auflistung, an. Z. B. die <xref:System.GC.Collect?displayProperty=nameWithType> -methodenüberladung, führt eine vollständige blockierende Auflistung. Gleichzeitige Garbagecollection erfolgt im Hintergrund und die Anwendung nicht blockiert.  
   
- Die `GetCurrentSurvived` Methode ist die nicht verwaltete Entsprechung der verwalteten <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> Eigenschaft.  
+ Die `GetCurrentSurvived` Methode ist, die nicht verwaltete Entsprechung der verwalteten <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> Eigenschaft.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRAppDomainResourceMonitor-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- [Überwachung von Anwendungsdomänenressourcen](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)  
- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRAppDomainResourceMonitor-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [Überwachung von Anwendungsdomänenressourcen](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

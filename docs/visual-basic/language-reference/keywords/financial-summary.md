@@ -5,12 +5,12 @@ helpviewer_keywords:
 - financial functions
 - payment
 ms.assetid: 474f973e-7103-42b7-aa4d-367c935e07e1
-ms.openlocfilehash: bb1bb4a71199e60bc1b685dc83851af7f25b6e40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea980691c4eb9c6fda91dbfdeeeeaa0cceb7f92b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720352"
 ---
 # <a name="financial-summary-visual-basic"></a>Finanzdaten: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  
@@ -25,6 +25,6 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Berechnen von Zahlungen|<xref:Microsoft.VisualBasic.Financial.IPmt%2A>, <xref:Microsoft.VisualBasic.Financial.Pmt%2A>, <xref:Microsoft.VisualBasic.Financial.PPmt%2A>|  
 |Berechnen von Barwerten|<xref:Microsoft.VisualBasic.Financial.NPV%2A>, <xref:Microsoft.VisualBasic.Financial.PV%2A>|  
   
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)  
- [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>Siehe auch
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

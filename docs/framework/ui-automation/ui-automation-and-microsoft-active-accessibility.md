@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1b7dbc8dffb15485ec035049d2da7aac6915eb58
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: f8dfe0520e0db676a208dcd46a45db8fefe98703
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603741"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] war die vorherige Lösung zum Ermöglichen des Zugriffs auf Clientanwendungen. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] ist das neue Zugriffsmodell für [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] und richtet sich an die Bedürfnisse von Hilfstechnologieprodukten und automatisierte Testtools. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bietet gegenüber [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]viele Verbesserungen.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48036213"
   
  Die Navigation zwischen Elementen in [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]erfolgt entweder räumlich (z. B. beim Wechsel zum Element, das auf der linken Seite des Bildschirms liegt), logisch (z. B. beim Wechsel zum nächsten Menüelement oder zum nächsten Element in der Aktivierreihenfolge eines Dialogfelds) oder hierarchisch (z. B. beim Wechsel zum ersten untergeordneten Element in einem Container oder vom untergeordneten zum übergeordneten Element). Die hierarchische Navigation erweist sich durch die Tatsache als kompliziert, dass untergeordnete Elemente nicht immer Objekte sind, die `IAccessible`implementieren.  
   
- In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]sind alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente <xref:System.Windows.Automation.AutomationElement> -Objekte, die dieselbe grundlegende Funktionalität unterstützen. (Aus Sicht des Anbieters, die Objekte, die Implementierung einer Schnittstelle vererbt werden <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>.) Die Navigation erfolgt überwiegend hierarchisch: von übergeordneten zu untergeordneten Elementen sowie von einem gleichgeordneten Element zum nächsten. (Die Navigation zwischen gleichgeordneten Elementen weist ein logisches Element auf, da sie möglicherweise der Aktivierreihenfolge folgt.) Sie können Navigieren von einem beliebigen Startpunkt, eine beliebige gefilterte Ansicht der Struktur mithilfe der <xref:System.Windows.Automation.TreeWalker> Klasse. Sie können auch mithilfe der <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> und <xref:System.Windows.Automation.AutomationElement.FindAll%2A>zu bestimmten untergeordneten Elementen oder Nachfolgerelementen navigieren. Es ist z. B. ganz einfach, alle Elemente in einem Dialogfeld abzurufen, die ein bestimmtes Steuerelementmuster unterstützen.  
+ In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]sind alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente <xref:System.Windows.Automation.AutomationElement> -Objekte, die dieselbe grundlegende Funktionalität unterstützen. (Aus Sicht des Anbieters sind sie Objekte, die eine von <xref:System.Windows.Automation.Provider.IRawElementProviderSimple> geerbte Schnittstelle implementieren.) Die Navigation erfolgt überwiegend hierarchisch: von übergeordneten zu untergeordneten Elementen sowie von einem gleichgeordneten Element zum nächsten. (Die Navigation zwischen gleichgeordneten Elementen weist ein logisches Element auf, da sie möglicherweise der Aktivierreihenfolge folgt.) Sie können mithilfe der <xref:System.Windows.Automation.TreeWalker>-Klasse von einem beliebigen Startpunkt aus über eine beliebige gefilterte Ansicht der Struktur navigieren. Sie können auch mithilfe der <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> und <xref:System.Windows.Automation.AutomationElement.FindAll%2A>zu bestimmten untergeordneten Elementen oder Nachfolgerelementen navigieren. Es ist z. B. ganz einfach, alle Elemente in einem Dialogfeld abzurufen, die ein bestimmtes Steuerelementmuster unterstützen.  
   
  Die Navigation in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ist konsistenter als bei der [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]. Einige Elemente wie Dropdownlisten und Popupfenster werden in der [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] -Struktur zweimal angezeigt und die Navigation von diesen Elementen kann möglicherweise zu unerwarteten Ergebnissen führen. Es ist eigentlich nicht möglich, [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] für ein Grundleistensteuerelement ordnungsgemäß zu implementieren. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht die erneute Zuordnung zu übergeordneten Elementen und die Neupositionierung, sodass ein Element ungeachtet der Hierarchie, die sich durch den Besitz von Fenstern ergibt, an eine beliebige Stelle in der Struktur platziert werden kann.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "48036213"
 |EVENT_OBJECT_SELECTIONWITHIN|Keine Entsprechung|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|Verschiedene durch geänderte Eigenschaften ausgelöste Ereignisse|  
-|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> und <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> geändert|  
+|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> und <xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType> wurden geändert|  
 |EVENT_SYSTEM_ALERT|Keine Entsprechung|  
 |EVENT_SYSTEM_CAPTUREEND|Keine Entsprechung|  
 |EVENT_SYSTEM_CAPTURESTART|Keine Entsprechung|  
@@ -251,5 +251,5 @@ ms.locfileid: "48036213"
   
  Das [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Modell beseitigt die Notwendigkeit, dass Anbieter anderen Anbietercode aufrufen müssen. Der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Kerndienst führt alle erforderlichen Aggregationen aus.  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Grundlagen der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/index.md)

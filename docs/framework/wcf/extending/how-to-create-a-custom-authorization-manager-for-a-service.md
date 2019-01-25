@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 7fe392b2fcd2f8ccb00bfd6ffd7e917649f8280c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64eb44c948f669ea5364cc38c7416fdd12cdabd6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490439"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573948"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst
 Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) unterstützt eine erweiterbare anspruchsbasierte Autorisierung-Modell. Ansprüche werden aus Token extrahiert, wahlweise mit benutzerdefinierten Autorisierungsrichtlinien verarbeitet und dann in einem <xref:System.IdentityModel.Policy.AuthorizationContext> platziert. Die Ansprüche im <xref:System.IdentityModel.Policy.AuthorizationContext> werden von einem Autorisierungs-Manager geprüft und als Grundlage für Autorisierungsentscheidungen herangezogen.  
@@ -33,7 +33,7 @@ Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) unt
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  Überschreiben Sie die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29>-Methode.  
+2.  Überschreiben Sie die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> -Methode.  
   
      Verwenden Sie den an die <xref:System.ServiceModel.OperationContext>-Methode übergebenen <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29>, um Autorisierungsentscheidungen zu fällen.  
   
@@ -57,15 +57,15 @@ Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) unt
   
 1.  Öffnen Sie die Konfigurationsdatei für den Dienst.  
   
-2.  Hinzufügen einer [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) auf die [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
+2.  Hinzufügen einer [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) auf die [ \<Verhaltensweisen >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
   
-     Um die [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), Hinzufügen einer `serviceAuthorizationManagerType` Attribut, und legen Sie den Wert in den Typ, der vom benutzerdefinierten Autorisierungs-Manager darstellt.  
+     Um die [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), Hinzufügen einer `serviceAuthorizationManagerType` Attribut, und legen Sie dessen Wert in den Typ, der den benutzerdefinierten Autorisierungs-Manager darstellt.  
   
 3.  Fügen Sie eine Bindung hinzu, durch die die Kommunikation zwischen Client und Dienst gesichert wird.  
   
-     Die für diese Kommunikation gewählte Bindung bestimmt die Ansprüche, die zum <xref:System.IdentityModel.Policy.AuthorizationContext> hinzugefügt werden, der vom benutzerdefinierten Autorisierungs-Manager verwendet wird, um Autorisierungsentscheidungen zu treffen. Weitere Informationen zu den vom System bereitgestellten Bindungen, finden Sie unter [sicherheitsbindungsarten Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md).  
+     Die für diese Kommunikation gewählte Bindung bestimmt die Ansprüche, die zum <xref:System.IdentityModel.Policy.AuthorizationContext> hinzugefügt werden, der vom benutzerdefinierten Autorisierungs-Manager verwendet wird, um Autorisierungsentscheidungen zu treffen. Weitere Informationen zu den vom System bereitgestellten Bindungen finden Sie unter [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
-4.  Ordnen Sie das Verhalten zu einem Dienstendpunkt durch Hinzufügen einer [ \<Service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) Element und legen Sie den Wert von der `behaviorConfiguration` -Attributs auf den Wert des Namensattributs für die [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element.  
+4.  Ordnen Sie das Verhalten einem Dienstendpunkt, durch das Hinzufügen einer [ \<Service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) Element, und legen Sie den Wert des der `behaviorConfiguration` -Attributs auf den Wert des Attributs "Name" für die [ \<Verhalten >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) Element.  
   
      Weitere Informationen zum Konfigurieren eines Dienstendpunkts finden Sie unter [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   
@@ -112,12 +112,12 @@ Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) unt
     >  Beachten Sie, dass die Zeichenfolge den vollqualifizierten Typnamen enthalten muss, wenn Sie serviceAuthorizationManagerType angeben. ein Komma und der Name der Assembly, in der der Typ definiert ist. Wenn Sie den Assemblynamen auslassen, versucht WCF, den Typ aus System.ServiceModel.dll zu laden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codebeispiel zeigt eine grundlegende Implementierung einer <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse, bei der auch die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>-Methode außer Kraft gesetzt (überschrieben) wird. Im Beispielcode wird der <xref:System.IdentityModel.Policy.AuthorizationContext> auf einen benutzerspezifischen Anspruch hin überprüft und `true` zurückgegeben, wenn die Ressource für diesen benutzerspezifischen Anspruch zum Aktionswert aus dem <xref:System.ServiceModel.OperationContext> passt. Für eine vollständige Implementierung der eine <xref:System.ServiceModel.ServiceAuthorizationManager> Klasse, finden Sie unter [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md).  
+ Das folgende Codebeispiel zeigt eine grundlegende Implementierung einer <xref:System.ServiceModel.ServiceAuthorizationManager>-Klasse, bei der auch die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>-Methode außer Kraft gesetzt (überschrieben) wird. Im Beispielcode wird der <xref:System.IdentityModel.Policy.AuthorizationContext> auf einen benutzerspezifischen Anspruch hin überprüft und `true` zurückgegeben, wenn die Ressource für diesen benutzerspezifischen Anspruch zum Aktionswert aus dem <xref:System.ServiceModel.OperationContext> passt. Eine vollständige Implementierung von einem <xref:System.ServiceModel.ServiceAuthorizationManager> Klasse, finden Sie unter [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
  [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.ServiceAuthorizationManager>  
- [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md)  
- [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.ServiceAuthorizationManager>
+- [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 048c7234fcb2592ea0dade135a32341a6e0f404f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b2b7559c203e5d357dd6921ea6862fbb5ec90a1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576186"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName-Methode
-Ruft einen Zeiger auf einem exportierten Typ erhält den Namen und den einschließenden Typ.  
+Ruft einen Zeiger auf einem exportierten Typ, erhält seinen Namen und der einschließende Typ ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,23 +42,23 @@ HRESULT FindExportedTypeByName (
  [in] Der Name des exportierten Typs.  
   
  `mdtExportedType`  
- [in] Das Metadatentoken für die einschließende Klasse des exportierten Typs. Dieser Wert ist `mdExportedTypeNil` , wenn der angeforderte exportiert ist keines geschachtelten Typs.  
+ [in] Das Metadatentoken für die einschließende Klasse des exportierten Typs. Dieser Wert ist `mdExportedTypeNil` Wenn der angeforderte exportierte Typ nicht geschachtelter Typ ist.  
   
  `ptkExportedType`  
  [out] Ein Zeiger auf die `mdExportedType` Token, das den exportierten Typ darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `FindExportedTypeByName` Methode verwendet die Standardregeln, die von der common Language Runtime zum Auflösen von verweisen.  
+ Die `FindExportedTypeByName` -Methode verwendet die Standardregeln, die von der common Language Runtime zum Auflösen von verweisen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- [So sucht Common Language Runtime nach Assemblys](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataAssemblyImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [So sucht Common Language Runtime nach Assemblys](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

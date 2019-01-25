@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6909fa426fa952c0918638f40a571393c651e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: db3b0f59884b2ec20ea3a2bd9779dbffd0fc8e1b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449932"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583755"
 ---
 # <a name="corprfclausetype-enumeration"></a>COR_PRF_CLAUSE_TYPE-Enumeration
 Zeigt den Typ der Ausnahmeklausel an, die der Code gerade eben eingegeben oder zurückgelassen hat.  
@@ -41,13 +41,13 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|Die Ausnahmeklausel ist ungültig.|  
-|`COR_PRF_CLAUSE_FILTER`|Die Ausnahmeklausel ist ein Filterausdruck.|  
+|`COR_PRF_CLAUSE_NONE`|Die Exception-Klausel ist ungültig.|  
+|`COR_PRF_CLAUSE_FILTER`|Die Exception-Klausel ist ein Filterausdruck.|  
 |`COR_PRF_CLAUSE_CATCH`|Die Ausnahmeklausel ist ein `catch` Anweisung.|  
 |`COR_PRF_CLAUSE_FINALLY`|Die Ausnahmeklausel ist ein `finally` Anweisung.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -55,5 +55,5 @@ typedef enum {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7f2b65f263256fe887c61c7b866beaa0038c37d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b8cccf395e77c7dfefb85302b522d7e9398ffca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730021"
 ---
 # <a name="ihostautoevent-interface"></a>IHostAutoEvent-Schnittstelle
-Bietet eine Darstellung der Implementierung des Hosts ein AutoReset-Ereignis.  
+Bietet eine Darstellung der Implementierung des Hosts ein automatisches Zurücksetzungsereignis.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[Set-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Legt das aktuelle `IHostAutoEvent` Instanz zum Zustand "signalisiert".|  
-|[Wait-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Bewirkt, dass der aktuelle `IHostAutoEvent` Instanz warten, bis das Ereignis der Besitzer ist oder einen bestimmten Zeitraum verstrichen ist.|  
+|[Set-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-set-method.md)|Legt die aktuelle `IHostAutoEvent` Instanz in einem signalisierten Zustand.|  
+|[Wait-Methode](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-wait-method.md)|Bewirkt, dass die aktuelle `IHostAutoEvent` zu warten, bis das Ereignis gehört-Instanz oder einen bestimmten Zeitraum abgelaufen ist.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [IHostManualEvent-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)  
- [IHostSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostManualEvent-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)
+- [IHostSyncManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

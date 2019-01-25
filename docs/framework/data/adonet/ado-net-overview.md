@@ -2,12 +2,12 @@
 title: Übersicht über ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529922"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714385"
 ---
 # <a name="adonet-overview"></a>Übersicht über ADO.NET
 ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowie auf Datenquellen bereit, die durch OLE DB und ODBC verfügbar gemacht werden. Verbraucheranwendungen mit Datenfreigabe können mit ADO.NET eine Verbindung mit diesen Datenquellen herstellen und die enthaltenen Daten abrufen, verarbeiten und aktualisieren.  
@@ -20,7 +20,7 @@ ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowi
   
  ADO.NET stellt die direkteste Methode des Datenzugriffs innerhalb von .NET Framework bereit. Eine Abstraktion auf höherer Ebene, die Anwendungen für ein konzeptionelles Modell statt des zugrunde liegenden Speichermodells arbeiten kann, finden Sie unter den [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
- **Datenschutzbestimmungen**: nicht der Fall ist die System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll und System.Data.DataSetExtensions.dll Assemblys unterscheiden Sie zwischen privaten und nicht-privaten Daten eines Benutzers.  Durch diese Assemblys werden keine privaten Daten von Benutzern gesammelt, gespeichert oder transportiert. Es ist aber möglich, dass Drittanbieteranwendungen, die diese Assemblys verwenden, private Daten von Benutzern sammeln, speichern oder transportieren.  
+ **Datenschutzbestimmungen**: Die Assemblys System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll und System.Data.DataSetExtensions.dll unterscheiden nicht zwischen eines Benutzers private Daten und nicht-privaten Daten.  Durch diese Assemblys werden keine privaten Daten von Benutzern gesammelt, gespeichert oder transportiert. Es ist aber möglich, dass Drittanbieteranwendungen, die diese Assemblys verwenden, private Daten von Benutzern sammeln, speichern oder transportieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [ADO.NET-Architektur](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -57,7 +57,7 @@ ADO.NET stellt konsistenten Zugriff auf Datenquellen wie SQL Server und XML sowi
  [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  Beschreibt das Herstellen von Verbindungen mit einer Datenquelle, das Abrufen von Daten und das Ändern von Daten. Dazu gehören auch `DataReaders` und `DataAdapters`.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

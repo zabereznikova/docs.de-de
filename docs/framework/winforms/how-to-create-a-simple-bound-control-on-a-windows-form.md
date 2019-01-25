@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Erstellen eines einfach gebundenen Steuerelements in einem Windows Form'
+title: 'Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54643571"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Gewusst wie: Erstellen eines einfach gebundenen Steuerelements in einem Windows Form
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in Windows Forms
 Mit *einfache Bindung*, Sie können ein einzelnes Datenelement, z. B. ein Spaltenwert aus einem Dataset-Tabelle in einem Steuerelement anzeigen. Sie können einfach eine Eigenschaft eines Steuerelements an einen Datenwert binden.  
   
 > [!NOTE]
@@ -45,7 +45,7 @@ Mit *einfache Bindung*, Sie können ein einzelnes Datenelement, z. B. ein Spalte
     > [!NOTE]
     >  Da einfach gebundene Steuerelemente nur ein einzelnes Datenelement angezeigt werden, kommt es häufig vor, ein Windows-Formular mit einfachen datengebundenen Steuerelementen Navigationslogik einschließt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.Binding>  
- [Windows Forms-Datenbindung](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.Binding>
+- [Windows Forms-Datenbindung](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

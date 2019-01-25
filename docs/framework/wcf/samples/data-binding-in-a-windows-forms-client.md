@@ -2,12 +2,12 @@
 title: Datenbindung in einem Windows Forms-Client
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-ms.openlocfilehash: a0eaa24cb521dfe4f0d6906d2d8bbbddd3a0d2e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: afca572fcc2c4e519d799511010d66859dc8b472
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529549"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652106"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Datenbindung in einem Windows Forms-Client
 In diesem Beispiel wird veranschaulicht, wie zum Binden an Daten, die von einem Windows Communication Foundation (WCF)-Dienst in einer Windows Forms-Anwendung zurückgegeben wird.  

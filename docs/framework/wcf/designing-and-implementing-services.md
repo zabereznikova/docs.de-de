@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 673712912b674c48dee094859364df9b22c51c82
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 51cdcc4789ac553c2775c89d6124cf90624b8747
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877293"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716051"
 ---
 # <a name="designing-and-implementing-services"></a>Entwerfen und Implementieren von Diensten
 In diesem Abschnitt erfahren Sie, wie Sie definieren und Implementieren von WCF-Verträge. Ein Dienstvertrag gibt an, was ein Endpunkt an die Außenwelt kommuniziert. Konkreter gesagt ist er ein Anweisung zu mehreren bestimmten Nachrichten, die in grundlegende Nachrichtenaustauschmuster aufgeteilt sind, wie Anforderung/Antwort, unidirektional und Duplex. Wenn ein Dienstvertrag ein logisch zusammengehöriger Satz von Vorgängen des Nachrichtenaustauschs ist, dann ist ein Dienstvorgang ein einzelner Nachrichtenaustausch. Beispielsweise muss ein `Hello`-Vorgang natürlich eine Nachricht annehmen (damit der Aufrufer den Gruß ankündigen kann) und kann dann eine Nachricht zurückgeben (je nach Verfügung des Vorgangs).  
@@ -66,6 +66,6 @@ In diesem Abschnitt erfahren Sie, wie Sie definieren und Implementieren von WCF-
   
  Diesen zusätzlichen Anforderungsvorgang ist wichtig zu bedenken, beim Entwerfen, implementieren, konfigurieren und hosten eine Windows Communication Foundation (WCF)-dienstanwendung. Beispielsweise kann der Vertrag angeben, dass er eine Sitzung unterstützen muss. In diesem Fall müssen Sie die Bindung so konfigurieren, dass sie diese Vertragsanforderung unterstützt, oder die Dienstimplementierung funktioniert nicht. Wenn der Dienst integrierte Windows-Authentifizierung erfordert und in Internetinformationsdiensten gehostet wird, muss für die Webanwendung, in der sich der Dienst befindet, die integrierte Windows-Authentifizierung aktiviert und der anonyme Support deaktiviert sein. Weitere Informationen zu den Funktionen und die Auswirkungen der verschiedenen Diensthost-Anwendungstypen finden Sie unter [Hostingdienste](../../../docs/framework/wcf/hosting-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md)  
- [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md)
+## <a name="see-also"></a>Siehe auch
+- [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md)
+- [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md)

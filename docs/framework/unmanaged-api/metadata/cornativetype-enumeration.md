@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b28fe8e8fd8b602a01b6358f46f60cdf792ced0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15226e6efc468974c32c11adec48a35764bc8446
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448624"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612254"
 ---
 # <a name="cornativetype-enumeration"></a>CorNativeType-Enumeration
 Enthält Werte, die systemeigene, nicht verwaltete Typen beschreiben.  
@@ -93,59 +93,59 @@ typedef enum CorNativeType {
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Veraltet.|  
 |`NATIVE_TYPE_VOID`|Veraltet.|  
-|`NATIVE_TYPE_BOOLEAN`|Ein boolescher Wert 4-Byte, "true" ungleich 0 (null) und "false steht" ist NULL.|  
-|`NATIVE_TYPE_I1`|Eine 8-Bit-Ganzzahl mit Vorzeichen.|  
+|`NATIVE_TYPE_BOOLEAN`|Ein 4-Byte-boolescher Wert, wobei "true" nicht 0 (null) und "false" ist, wird 0 (null).|  
+|`NATIVE_TYPE_I1`|Eine 8-Bit-Ganzzahlwert mit Vorzeichen.|  
 |`NATIVE_TYPE_U1`|Eine 8-Bit-Ganzzahlwert ohne Vorzeichen.|  
-|`NATIVE_TYPE_I2`|Eine 16-Bit-Ganzzahl mit Vorzeichen.|  
+|`NATIVE_TYPE_I2`|Eine 16-Bit-Ganzzahlwert mit Vorzeichen.|  
 |`NATIVE_TYPE_U2`|Eine 16-Bit-Ganzzahlwert ohne Vorzeichen.|  
 |`NATIVE_TYPE_I4`|Ein 32-Bit-Ganzzahlwert mit Vorzeichen.|  
 |`NATIVE_TYPE_U4`|Ein 32-Bit-Ganzzahlwert ohne Vorzeichen.|  
-|`NATIVE_TYPE_I8`|Eine 64-Bit-Ganzzahl mit Vorzeichen.|  
-|`NATIVE_TYPE_U8`|Ein 64-Bit-Ganzzahlwert ohne Vorzeichen.|  
+|`NATIVE_TYPE_I8`|Eine 64-Bit-Ganzzahlwert mit Vorzeichen.|  
+|`NATIVE_TYPE_U8`|Eine 64-Bit-Ganzzahlwert ohne Vorzeichen.|  
 |`NATIVE_TYPE_R4`|Ein 4-Byte-Gleitkommazahl numerischer Wert.|  
 |`NATIVE_TYPE_R8`|Eine 8-Byte-Gleitkommazahl numerischer Wert.|  
 |`NATIVE_TYPE_SYSCHAR`|Veraltet.|  
 |`NATIVE_TYPE_VARIANT`|Veraltet.|  
-|`NATIVE_TYPE_CURRENCY`|Eine numerische COM-Typs, die verwaltete entspricht <xref:System.Decimal> Typ.|  
+|`NATIVE_TYPE_CURRENCY`|Ein numerischer COM-Typ, der die verwaltete entspricht <xref:System.Decimal> Typ.|  
 |`NATIVE_TYPE_PTR`|Veraltet.|  
 |`NATIVE_TYPE_DECIMAL`|Veraltet.|  
 |`NATIVE_TYPE_DATE`|Veraltet.|  
 |`NATIVE_TYPE_BSTR`|COM-Interop.|  
-|`NATIVE_TYPE_LPSTR`|Ein Zeichenfolgenwert LPSTR.|  
-|`NATIVE_TYPE_LPWSTR`|Ein LPWSTR-Zeichenfolgenwert.|  
-|`NATIVE_TYPE_LPTSTR`|Ein Zeichenfolgenwert LPTSTR.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|Ein fester, systemdefinierte Zeichenfolgenwert.|  
+|`NATIVE_TYPE_LPSTR`|Ein Zeichenfolgenwert des LPSTR.|  
+|`NATIVE_TYPE_LPWSTR`|Ein Zeichenfolgenwert des LPWSTR.|  
+|`NATIVE_TYPE_LPTSTR`|Ein Zeichenfolgenwert des LPTSTR.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|Ein fester, vom System definierten Zeichenfolgenwert.|  
 |`NATIVE_TYPE_OBJECTREF`|Veraltet.|  
 |`NATIVE_TYPE_IUNKNOWN`|COM-Interop.|  
 |`NATIVE_TYPE_IDISPATCH`|COM-Interop.|  
 |`NATIVE_TYPE_STRUCT`|Der Wert einer systemeigenen Struktur.|  
 |`NATIVE_TYPE_INTF`|COM-Interop.|  
 |`NATIVE_TYPE_SAFEARRAY`|COM-Interop.|  
-|`NATIVE_TYPE_FIXEDARRAY`|Ein Wert des Arrays mit fester Länge.|  
-|`NATIVE_TYPE_INT`|Eine systemeigene 16-Bit-Ganzzahlwert mit Vorzeichen.|  
-|`NATIVE_TYPE_UINT`|Eine systemeigene 16-Bit-Ganzzahlwert ohne Vorzeichen.|  
+|`NATIVE_TYPE_FIXEDARRAY`|Ein Array fester Länge-Wert.|  
+|`NATIVE_TYPE_INT`|Eine native 16-Bit-Ganzzahlwert mit Vorzeichen.|  
+|`NATIVE_TYPE_UINT`|Eine native 16-Bit-Ganzzahlwert ohne Vorzeichen.|  
 |`NATIVE_TYPE_NESTEDSTRUCT`|Veraltet.<br /><br /> Verwenden Sie NATIVE_TYPE_STRUCT.|  
 |`NATIVE_TYPE_BYVALSTR`|COM-Interop.|  
 |`NATIVE_TYPE_ANSIBSTR`|COM-Interop.|  
-|`NATIVE_TYPE_TBSTR`|COM-Interop.<br /><br /> Wählen Sie je nach Plattform BSTR oder ANSIBSTR aus.|  
-|`NATIVE_TYPE_VARIANTBOOL`|Ein boolescher 2-Byte-Wert, wobei "true" ist-1 und "false" ist NULL.|  
+|`NATIVE_TYPE_TBSTR`|COM-Interop.<br /><br /> Wählen Sie BSTR oder ANSIBSTR, abhängig von der Plattform.|  
+|`NATIVE_TYPE_VARIANTBOOL`|Ein boolescher 2-Byte-Wert, wobei "true" ist-1 und "false" ist 0 (null).|  
 |`NATIVE_TYPE_FUNC`|Ein Funktionszeiger.|  
 |`NATIVE_TYPE_ASANY`|Ein Verweis auf einen beliebigen systemeigenen Typ.|  
 |`NATIVE_TYPE_ARRAY`|Ein Verweis auf ein Array mit Elementen eines nicht angegebenen Typs.|  
 |`NATIVE_TYPE_LPSTRUCT`|Eine ganze 32-Bit-Zeiger auf eine Struktur.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Einem benutzerdefinierten Marshaller systemeigenen Typ.<br /><br /> Darauf muss durch eine Zeichenfolge im folgenden Format: "systemeigener Typ Name/0Name Marshaller type Name/0Optionaler Cookie/0" oder "{systemeigenen Typ GUID} / 0Name Marshaller type Name/0Optionaler Cookie/0"|  
-|`NATIVE_TYPE_ERROR`|COM-Interop.<br /><br /> Mit der ELEMENT_TYPE_I4 wird dieser Typ VT_HRESULT zugeordnet.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|Ein systemeigener Typ des benutzerdefinierten Marshallers.<br /><br /> Dies muss eine Zeichenfolge im folgenden Format folgen: "Systemeigener Typ Name/0Name Marshaller type/0Optionaler Cookie/0" oder "{Native geben GUID} / 0Name Marshaller type/0Optionaler Cookie/0"|  
+|`NATIVE_TYPE_ERROR`|COM-Interop.<br /><br /> Ordnet diesen Typ mit ELEMENT_TYPE_I4 VT_HRESULT zugeordnet.|  
 |`NATIVE_TYPE_IINSPECTABLE`|Ein systemeigenes `IInspectable` Typ.|  
 |`NATIVE_TYPE_HSTRING`|Ein systemeigenes `HString`.|  
 |`NATIVE_TYPE_MAX`|Ein ungültiger Wert.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.UnmanagedType>  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.InteropServices.UnmanagedType>
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

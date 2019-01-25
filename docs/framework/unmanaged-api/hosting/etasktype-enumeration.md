@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8609857f142000245aef4326c8ef7490e6d4c95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59fdc3d4682fe3c1967c8153043dc1bfe0668c35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430595"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610538"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType-Enumeration
-Enthält Werte, die den Typ der Aufgabe angeben, indem Sie entweder dargestellt wird, ein [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) oder ein [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) Schnittstelle.  
+Enthält Werte, die den Typ der Aufgabe angeben, indem Sie entweder dargestellt wird, ein [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) oder [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,26 +48,26 @@ typedef enum ETaskType {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|Die Schnittstelle stellt einen Anwendung Domäne entladen-Task dar.|  
-|`TT_DEBUGGERHELPER`|Die Schnittstelle stellt einen Debugger Helper-Task dar.|  
+|`TT_ADUNLOAD`|Die Schnittstelle stellt eine Aufgabe zur Entladung einer Anwendung dar.|  
+|`TT_DEBUGGERHELPER`|Die Schnittstelle stellt einen Debugger-Hilfsprogramm-Task dar.|  
 |`TT_FINALIZER`|Die Schnittstelle stellt einen Finalizer-Task dar.|  
 |`TT_GC`|Die Schnittstelle stellt eine Garbage Collection-Aufgabe dar.|  
 |`TT_THREADPOOL_GATE`|Die Schnittstelle stellt einen Gate-Thread-Task dar.|  
 |`TT_THREADPOOL_IOCOMPLETION`|Die Schnittstelle stellt eine e/a-Thread-Aufgabe oder Thread eine Abschlussaufgabe-Port dar.|  
 |`TT_THREADPOOL_TIMER`|Die Schnittstelle stellt einen Timer-Thread-Task dar.|  
-|`TT_THREADPOOL_WAIT`|Die Schnittstelle stellt einen warten-Thread-Task dar.|  
-|`TT_THREADPOOL_WORKER`|Die Schnittstelle stellt einen Worker-Thread-Task dar.|  
+|`TT_THREADPOOL_WAIT`|Die Schnittstelle stellt einen Wait-Thread-Task dar.|  
+|`TT_THREADPOOL_WORKER`|Die Schnittstelle stellt eine Aufgabe der Worker-Threads dar.|  
 |`TT_UNKNOWN`|Der Task ist unbekannt.|  
-|`TT_USER`|Die Schnittstelle stellt eine Benutzeraufgabe dar.|  
+|`TT_USER`|Die Schnittstelle stellt eine Aufgabe dar.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

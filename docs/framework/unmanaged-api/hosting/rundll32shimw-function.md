@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18247a947449ea5fd19f1882031b598086332742
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 883f987eb168bf5996baba66f5081875e67f2000
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698725"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW-Funktion
 Führt den angegebenen Befehl aus.  
@@ -41,7 +41,7 @@ HRESULT RunDll32ShimW (
   
 #### <a name="parameters"></a>Parameter  
  `hwnd`  
- [in] Ein Handle für ein Fenster, in dem die Ausgabe des Befehls angezeigt wird.  
+ [in] Ein Handle für ein Fenster, in der Ausgabe des Befehls angezeigt werden sollen.  
   
  `hinst`  
  [in] Ein Handle für die Bibliothek, die den Befehl enthält.  
@@ -53,13 +53,13 @@ HRESULT RunDll32ShimW (
  [in] Eine ganze Zahl, die den Anzeigemodus für das Fenster "Ausgabe" angibt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

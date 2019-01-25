@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 876a59d1441c1ba4c5057556d5ef2fb2ecb43af6
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ceda7e6ed6fc1744de14afcb0245ebabbd7fa733
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959678"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674793"
 ---
 # <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>Der zugrunde liegende Typ &lt;Typename&gt; der Enumeration ist nicht CLS-kompatibel.
 Der Datentyp angegeben werden, für diese Enumeration nicht ist Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS). Dies ist kein Fehler in der Komponente, da die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] und Visual Basic unterstützt diesen Datentyp. Allerdings kann in eine andere Komponente, die in streng CLS-kompatiblem Code geschrieben diesen Datentyp nicht unterstützt. Eine solche Komponente möglicherweise nicht erfolgreich mit der Komponente interagieren können.  
@@ -27,7 +27,7 @@ Der Datentyp angegeben werden, für diese Enumeration nicht ist Teil der [Sprach
   
 -   [UShort-Datentyp](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
- Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen aus, oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Fehler-ID:** BC40032  
   
@@ -41,7 +41,7 @@ Der Datentyp angegeben werden, für diese Enumeration nicht ist Teil der [Sprach
   
 -   Beachten Sie beim Verbinden mit Automatisierungs- oder COM-Objekten, dass einige Typen über andere Datenbreiten als im [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verfügen. Zum Beispiel umfasst `uint` in anderen Umgebungen oft 16 Bits. Wenn Sie ein 16-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `UShort` anstelle von `UInteger` in verwaltetem Visual Basic-Code.  
   
-## <a name="see-also"></a>Siehe auch  
- [Reflektion (Visual Basic)](../../programming-guide/concepts/reflection.md)  
- [Reflexion](../../../framework/reflection-and-codedom/reflection.md)  
- 
+## <a name="see-also"></a>Siehe auch
+- [Reflektion (Visual Basic)](../../programming-guide/concepts/reflection.md)
+- [Reflexion](../../../framework/reflection-and-codedom/reflection.md)
+

@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: 241980c2f63a89a1a649bdbd852ea0fbbb0d28a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03de5911baf2a26ff5fc0d3a4e7ed3f9400db8b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656764"
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu-Komponente (Windows Forms)
 > [!NOTE]
->  Obwohl `MenuStrip` und `ContextMenuStrip` ersetzt und funktionell die `MainMenu` und <xref:System.Windows.Forms.ContextMenu> Steuerelemente von früheren Versionen `MainMenu` und <xref:System.Windows.Forms.ContextMenu> für Abwärtskompatibilität und für zukünftige Verwendung beibehalten werden, falls gewünscht.  
+>  Obwohl `MenuStrip` und `ContextMenuStrip` ersetzen und Erweitern der Funktionalität für die `MainMenu` und <xref:System.Windows.Forms.ContextMenu> Steuerelemente aus früheren Versionen, `MainMenu` und <xref:System.Windows.Forms.ContextMenu> werden für Abwärtskompatibilität und zur künftigen Verwendung beibehalten, wenn Sie auswählen.  
   
- Windows Forms `MainMenu` Komponente wird ein Menü angezeigt, zur Laufzeit.  
+ Die Windows-Formulare `MainMenu` Komponente wird ein Menü zur Laufzeit angezeigt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die MainMenu-Komponente](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
- Erläutert, was diese Komponente und seine wichtigsten Funktionen und Eigenschaften.  
+ Erläutert, was diese Komponente ist und die wichtigsten Features und -Eigenschaften.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.MainMenu>  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ContextMenuStrip>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ContextMenuStrip>

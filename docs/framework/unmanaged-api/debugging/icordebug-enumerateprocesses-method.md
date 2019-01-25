@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53d40c198b53370733009c76fd3d49f14df93e6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 10741ef9d329986d869665ef3aae14196946bb22
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724420"
 ---
 # <a name="icordebugenumerateprocesses-method"></a>ICorDebug::EnumerateProcesses-Methode
 Ruft einen Enumerator für die Prozesse, die gedebuggt werden.  
@@ -37,10 +37,10 @@ HRESULT EnumerateProcesses (
   
 #### <a name="parameters"></a>Parameter  
  `ppProcess`  
- Ein Zeiger auf die Adresse eines ICorDebugProcessEnum-Objekts, das den Enumerator für die zu debuggenden Prozesse darstellt.  
+ Ein Zeiger auf die Adresse des ICorDebugProcessEnum-Objekts, das den Enumerator für die zu debuggenden Prozesse ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -48,5 +48,5 @@ HRESULT EnumerateProcesses (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

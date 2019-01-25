@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64b09c173e2f66d4c650083cc12f8a0ac2c92007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 90c805a5f1f1da990564034fc292562d5f933d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608088"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification-Methode
-Stellt die Benachrichtigung, dass die Ausführung von Code ein Assistent für verwaltetes Debuggen (MDA) in der Anwendung gefunden hat, die gedebuggt wird.  
+Stellt die Benachrichtigung, dass die codeausführung einen managed debugging Assistant, Assistent (MDA) in der Anwendung aufgetreten ist, der debuggt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,29 +41,29 @@ HRESULT MDANotification(
  `pController`  
  [in] Ein Zeiger auf eine ICorDebugController-Schnittstelle, die den Prozess verfügbar macht oder die Anwendungsdomäne, in der der MDA aufgetreten ist.  
   
- Ein Debugger sollten keine Annahmen darüber, ob der Controller ein Prozess oder eine Anwendungsdomäne ist zwar die Schnittstelle, um eine Entscheidung zu treffen immer abgefragt werden kann.  
+ Ein Debugger sollten keine Annahmen darüber, ob der Controller ein Prozess oder eine Anwendungsdomäne ist, obwohl sie immer die Schnittstelle, um eine Entscheidung treffen, Abfragen kann.  
   
  `pThread`  
  [in] Ein Zeiger auf eine ICorDebugThread-Schnittstelle, die den verwalteten Thread verfügbar macht, auf dem das Debug-Ereignis aufgetreten ist.  
   
- Wenn der MDA aufgetreten ist, auf eine nicht verwaltete thread, den Wert des `pThread` wird null sein.  
+ Wenn der MDA aufgetreten ist, auf eine nicht verwaltete thread, den Wert des `pThread` NULL.  
   
- Sie müssen die Thread-ID (BS) aus dem MDA-Objekt selbst abrufen.  
+ Sie müssen die Betriebssystem (OS)-Thread-ID aus der MDA-Objekt selbst abrufen.  
   
  `pMDA`  
  [in] Ein Zeiger auf ein [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) Schnittstelle, die MDA-Informationen verfügbar macht.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein MDA ist eine heuristische Warnung und erfordert kein Eingreifen explizite Debugger außer Aufrufen [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) zum Fortsetzen der Ausführung der Anwendung, die gedebuggt wird.  
+ Ein MDA ist eine heuristische Warnung und erfordert keine explizite Debuggeraktion mit Ausnahme der Aufruf keine [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) zum Fortsetzen der Ausführung der Anwendung, die gedebuggt wird.  
   
- Die common Language Runtime (CLR) kann ermitteln, welcher MDAs werden ausgelöst, welche Daten befinden sich in jeder angegebenen MDA zu einem beliebigen Zeitpunkt. Aus diesem Grund sollte Debugger nicht erstellt werden solche Funktionen verwendet werden, erfordern bestimmte MDA-Muster.  
+ Die common Language Runtime (CLR) kann bestimmen, die MDAs ausgelöst werden und welche Daten befinden sich auf alle angegebenen MDA zu einem beliebigen Zeitpunkt. Aus diesem Grund sollte Debugger nicht erstellt werden alle Funktionen, die bestimmte MDA-Muster erfordern.  
   
- MDAs möglicherweise in die Warteschlange gestellt und ausgelöst, kurz nachdem der MDA festgestellt wurde. Dies kann passieren, wenn die Laufzeit muss warten, bis auf einem sicheren Zeitpunkt zum Auslösen des MDA, statt den MDA ausgelöst wird, wenn es gefunden wird. Dies bedeutet auch, dass die Common Language Runtime eine Anzahl von MDAs in einem einzelnen Satz von in der Warteschlange Rückrufe (ähnlich wie ein "Anfügen" Ereignis-Vorgang) ausgelöst werden kann.  
+ MDAs möglicherweise in die Warteschlange gestellt und wird ausgelöst, kurz nach der MDA gefunden wird. Dies kann passieren, wenn die Laufzeit muss warten, bis es erreicht, dass einen sicheren Punkt für das Auslösen des MDA, statt den MDA ausgelöst, wenn es gefunden wird. Dies bedeutet auch, dass die Runtime einige MDAs in einer einzelnen Gruppe in der Warteschlange Rückrufe (ähnlich wie ein "Anfügen" Ereignis-Vorgang) ausgelöst werden kann.  
   
- Ein Debugger sollte aufheben den Verweis auf ein `ICorDebugMDA` Instanz sofort nach der Rückgabe aus der `MDANotification` Rückruf, um die CLR beim wiederverwenden des Speicherplatzes, der von einem MDA zu ermöglichen. Das Freigeben der Instanz kann die Leistung verbessern, wenn viele MDAs ausgelöst werden.  
+ Ein Debugger sollte freigeben, den Verweis auf ein `ICorDebugMDA` Instanz sofort nach der Rückgabe von der `MDANotification` Rückruf, um die CLR die belegten Arbeitsspeichers von einem MDA zu ermöglichen. Die Instanz freigegeben kann die Leistung verbessern, wenn viele MDAs ausgelöst werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -71,7 +71,7 @@ HRESULT MDANotification(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [ICorDebugManagedCallback2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [ICorDebugManagedCallback2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -2,12 +2,12 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: 6299100a5dd29bed8d4a30bcb4fbc9631d7bf967
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: b75762fdef4f0c71c58542be9f674da291fcf23f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145882"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656569"
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Definiert ein Binding-Element, das verwendet wird, zum Konfigurieren von Endpunkten für Windows Communication Foundation (WCF)-Webdienste, die auf HTTP-Anforderungen und nicht auf SOAP-Nachrichten reagieren.  
@@ -90,11 +90,11 @@ Definiert ein Binding-Element, das verwendet wird, zum Konfigurieren von Endpunk
   
  Unterstützt in WCF für Syndication und ASP. AJAX-Integration basieren beide auf das Webprogrammiermodell. Weitere Informationen für das Modell finden Sie unter [WCF-HTTP-Webprogrammierungsmodell](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
- [WCF-Web-HTTP-Programmiermodell](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
+- [WCF-Web-HTTP-Programmiermodell](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

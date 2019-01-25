@@ -13,22 +13,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c3066df-9bac-479a-82b2-79e484b346a3
-ms.openlocfilehash: b2738f174c9837a2ba83c1306f4617f39ce17de1
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1f9afd575e2de04e0b11556ad34436839e13d968
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208570"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693239"
 ---
 # <a name="international-fonts-in-windows-forms-and-controls"></a>Internationale Schriftarten in Windows Forms und Steuerelementen
 
-Die empfohlene Methode zum Auswählen von Schriftarten werden in internationalen Anwendungen Schriftartauswahl transaktionsanweisungen verwendet werden. Automatische Schriftartauswahl bedeutet, dass das System bestimmt, was das Zeichen Skript gehört.
+Die empfohlene Methode für das Auswählen von Schriftarten werden in internationale Anwendungen Schriftart-Fallback transaktionsanweisungen verwendet werden. Schriftart-fallback-bedeutet, dass das System bestimmt, was das Zeichen Skript gehört.
 
 ## <a name="using-font-fallback"></a>Verwenden Schriftart-fallback
 
-Um dieses Feature nutzen zu können, legen Sie nicht die <xref:System.Drawing.Font> -Eigenschaft für das Formular oder ein anderes Element. Die Anwendung wird automatisch der Standardsystemschriftart verwenden, die von einer lokalisierten Sprache des Betriebssystems auf einen anderen abweicht. Wenn die Anwendung ausgeführt wird, wird das System automatisch die richtige Schriftart für die Kultur, die im Betriebssystem aktiviert bereitstellen.
+Um dieses Feature nutzen zu können, legen Sie nicht die <xref:System.Drawing.Font> -Eigenschaft für das Formular oder ein anderes Element. Die Anwendung verwendet automatisch die Standardschriftart des Systems, die von einer lokalisierten Sprache des Betriebssystems zur anderen unterscheidet. Wenn die Anwendung ausgeführt wird, wird das System automatisch die richtige Schriftart für die Kultur, die im Betriebssystem aktiviert bereitstellen.
 
-Es wird eine Ausnahme von der Regel der Schriftart an, die zum Ändern der Schriftart wird nicht festlegen. Dies könnte wichtig für eine Anwendung sein in dem der Benutzer eine Schaltfläche, um Text in einem Textfeld angezeigt werden in Fettschrift klickt. Dazu würden Sie eine Funktion zum Ändern der Schriftart fett formatiert, das Textfeld schreiben, basierend auf den des Formulars Schriftart ist. Es ist wichtig, diesen Funktionsaufruf an zwei Orten: in der Schaltfläche <xref:System.Windows.Forms.Control.Click> Ereignishandler und klicken Sie in der <xref:System.Windows.Forms.Control.FontChanged> -Ereignishandler. Wenn die Funktion, nur in aufgerufen wird der <xref:System.Windows.Forms.Control.Click> -Ereignishandler und einigen anderen Codeabschnitt ändert die Schriftfamilie des gesamten Formulars, das Textfeld nicht mit dem Rest des Formulars ändern.
+Es gibt eine Ausnahme von der Regel der Schriftart an, die zum Ändern der Schriftart wird nicht festgelegt. Dies kann für eine Anwendung wichtig sein in dem der Benutzer eine Schaltfläche, um Text in einem Textfeld angezeigt werden in Fettdruck stellen klickt. Dazu würden Sie eine Funktion zum Ändern der Textfeld-Schriftart fett formatiert ist, schreiben, basierend auf den der Schriftart des Formulars ist. Es ist wichtig, diese Funktion aufrufen, an zwei Orten: in der Schaltfläche <xref:System.Windows.Forms.Control.Click> -Ereignishandler und klicken Sie in der <xref:System.Windows.Forms.Control.FontChanged> -Ereignishandler. Wenn die Funktion, nur in aufgerufen wird der <xref:System.Windows.Forms.Control.Click> -Ereignishandler und einen anderen Teil des Codes ändert die Schriftfamilie für das gesamte Formular, mit dem Rest des Formulars ändert sich nicht im Textfeld.
 
 ```vb
 Private Sub MakeBold()
@@ -74,7 +74,7 @@ private void Form1_FontChanged(object sender, System.EventArgs e)
 }
 ```
 
-Jedoch, wenn Sie die Anwendung zu lokalisieren, möglicherweise die fettformatierung Verschlechterung der Leistung für bestimmte Sprachen angezeigt. Wenn dies eine wichtige Überlegung ist, sollen die Lokalisierungsexperten haben die Möglichkeit, wechseln die Schriftart von fetter zu normaler Text. Da Lokalisierungsexperten nicht in der Regel Entwickler sind und keinen Zugriff auf den Quellcode haben, muss diese Option nur für Ressourcendateien, in den Ressourcendateien festgelegt werden. Zu diesem Zweck legen Sie die <xref:System.Drawing.Font.Bold%2A> Eigenschaft `true`. Dadurch wird der Einstellung "Schriftart" in die Ressourcendateien, in dem Sie Lokalisierungsexperten bearbeiten können geschrieben werden. Anschließend schreiben Sie Code nach der `InitializeComponent` Methode, um die Schriftart basierend auf beliebigen des Formulars Schriftart ist, jedoch mit den Schriftschnitt in der Ressourcendatei angegeben.
+Jedoch wenn Sie die Anwendung zu lokalisieren, möglicherweise die fettformatierung schlecht für bestimmte Sprachen angezeigt. Wenn dies relevant ist, möchten Sie den Lokalisierungsexperten die Schrift in Fettdruck in normalen Text benötigen. Da Lokalisierer in der Regel keine Entwickler sind und keinen Zugriff auf den Quellcode haben, muss diese Option nur für Ressourcendateien, in den Ressourcendateien festgelegt werden. Zu diesem Zweck legen Sie die <xref:System.Drawing.Font.Bold%2A> Eigenschaft `true`. Dies führt in die schriftarteinstellung, die in die Ressourcendateien, in dem Lokalisierungsexperten diese bearbeiten können geschrieben werden. Sie klicken Sie dann Code schreiben, nachdem die `InitializeComponent` Methode, die Schriftart auf beliebige der Schriftart des Formulars ist, jedoch mit den Schriftschnitt in der Ressourcendatei angegeben.
 
 ```vb
 TextBox1.Font = New System.Drawing.Font(Me.Font, TextBox1.Font.Style)
@@ -86,5 +86,5 @@ textBox1.Font = new System.Drawing.Font(this.Font, textBox1.Font.Style);
   
 ## <a name="see-also"></a>Siehe auch
 
-[Globalisieren von Windows Forms-Anwendungen](globalizing-windows-forms.md)  
-[Verwenden von Schriftarten und Text](using-fonts-and-text.md)
+- [Globalisieren von Windows Forms-Anwendungen](globalizing-windows-forms.md)
+- [Verwenden von Schriftarten und Text](using-fonts-and-text.md)

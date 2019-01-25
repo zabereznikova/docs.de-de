@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a19c6f22ee9fbe7eb1019a0b799d63e4ee650e98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cd385c1176bea41b41a981e743c6104227d8acd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708193"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>CLRDataEnumMemoryFlags-Enumeration
 Zeigt an, welche Speicherbereiche ein Aufruf der [ICLRDataEnumMemoryRegions:: EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) -Methode einschließen sollte.  
@@ -41,10 +41,10 @@ typedef enum CLRDataEnumMemoryFlags {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`CLRDATA_ENUM_MEM_DEFAULT`|Ein Minidump, d. h. eine mit geringer Dichte Speicherabbild.|  
-|`CLRDATA_ENUM_MEM_HEAP`|Eine vollständige Heapdumps.|  
+|`CLRDATA_ENUM_MEM_HEAP`|Eine vollständige Heapinformationen-Dumps.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** ClrData.idl, ClrData.h  
   
@@ -52,5 +52,5 @@ typedef enum CLRDataEnumMemoryFlags {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

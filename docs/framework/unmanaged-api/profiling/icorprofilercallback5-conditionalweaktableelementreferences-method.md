@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ee3c3302d77bcc7b807c01ccb5bab172153ddda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad192f753cd1977c9ca68e147d23375ce092b66f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708232"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences-Methode
 Identifiziert den transitiven Abschluss von Objekten, auf die durch diese Stammelemente verwiesen wird, sowohl über direkte Memberfeldverweise, als auch `ConditionalWeakTable`-Abhängigkeiten.  
@@ -49,7 +49,7 @@ HRESULT ConditionalWeakTableElementReferences(     [in]                     ULON
  Keine `ObjectID`-Werte, die von der `ConditionalWeakTableElementReferences`-Methode zurückgegeben werden, sind während des Rückrufs selbst gültig, da der Garbage Collector möglicherweise gerade Objekten von alten an neue Speicherorte verschiebt. Deshalb sollten Profiler nicht versuchen, Objekte während eines `ConditionalWeakTableElementReferences`-Aufrufs zu überprüfen. Bei `GarbageCollectionFinished` wurden alle Objekte zu den neuen Speicherorten verschoben, und die Überprüfung kann ausgeführt werden.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel wird veranschaulicht, wie implementieren [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) und verwenden Sie diese Methode.  
+ Im folgenden Codebeispiel wird veranschaulicht, wie implementieren [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) und diese Methode verwenden.  
   
 ```  
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(  
@@ -73,14 +73,14 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Profiler für die [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] oder höhere Versionen implementiert die [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) -Schnittstelle und zeichnet die Abhängigkeiten, die gemäß der `ConditionalWeakTableElementReferences` Methode. `ICorProfilerCallback5` Stellt den vollständigen Satz von Abhängigkeiten zwischen als live-Objekte dargestellt werden, indem `ConditionalWeakTable` Einträge. Diese Abhängigkeiten und die memberfeldverweise gemäß der [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) Methode ermöglichen einen verwalteten Profiler, die das vollständige Objektdiagramm von aktiven Objekten zu generieren.  
+ Ein Profiler für die [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] oder höhere Versionen implementiert die [ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md) -Schnittstelle und zeichnet die Abhängigkeiten, die gemäß der `ConditionalWeakTableElementReferences` Methode. `ICorProfilerCallback5` Stellt den vollständigen Satz von Abhängigkeiten zwischen den aktiven Objekten, die durch dargestellt `ConditionalWeakTable` Einträge. Diese Abhängigkeiten und die memberfeldverweise gemäß der [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) Methode ermöglichen einen verwalteten Profiler, die das vollständige Objektdiagramm von aktiven Objekten zu generieren.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback5-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback5-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)

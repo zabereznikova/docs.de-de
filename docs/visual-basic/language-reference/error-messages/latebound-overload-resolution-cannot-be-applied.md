@@ -1,5 +1,5 @@
 ---
-title: Spät gebundene überladungsauflösung. kann nicht angewendet werden, um &#39; &lt;Prozedurname&gt; &#39; , da die Instanz beim Zugriff auf ein Schnittstellentyp ist.
+title: Spät gebundene überladungsauflösung kann nicht angewendet werden, um &#39; &lt;Prozedurname&gt; &#39; , da die Zugreifende Instanz ein Schnittstellentyp ist.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30933
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: e41cbf30f06547ef39553e31542e4e8b6df49a3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db0ce88f63be8d58cc1c1abf91eda6a0e56456c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589879"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651515"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Spät gebundene überladungsauflösung. kann nicht angewendet werden, um &#39; &lt;Prozedurname&gt; &#39; , da die Instanz beim Zugriff auf ein Schnittstellentyp ist.
-Der Compiler versucht, einen Verweis auf eine überladene Eigenschaft oder Prozedur aufzulösen, aber der Verweis schlägt fehl, da ein Argument des Typs ist `Object` und das verweisende Objekt weist den Datentyp einer Schnittstelle. Die `Object` Argument zwingt den Compiler zum Auflösen des Verweises als spät gebunden.  
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>Spät gebundene überladungsauflösung kann nicht angewendet werden, um &#39; &lt;Prozedurname&gt; &#39; , da die Zugreifende Instanz ein Schnittstellentyp ist.
+Der Compiler versucht, einen Verweis auf eine überladene Eigenschaft oder Prozedur aufzulösen, aber der Verweis schlägt fehl, weil ein Argument des Typs `Object` und das verweisende Objekt weist den Datentyp einer Schnittstelle. Die `Object` Argument erzwingt, dass der Compiler zum Auflösen des Verweises als spät gebunden.  
   
- Unter diesen Umständen löst der Compiler die Überladung über die implementierende Klasse anstelle von über die zugrunde liegenden Schnittstelle. Wenn die Klasse mit einer der überladenen Versionen umbenennt, berücksichtigt der Compiler nicht diese Version mit einer Überladung, da Sie einen anderen Namen aufweist. Dies Compiler wiederum der die umbenannte Version ignoriert, wenn sie die richtige Auswahl den Verweis aufgelöst gegangen sein könnte.  
+ Unter diesen Umständen löst der Compiler die Überladung durch die implementierende Klasse statt über die zugrunde liegenden Schnittstelle. Wenn die Klasse eine der überladenen Versionen umbenennt, berücksichtigt der Compiler nicht diese Version mit einer Überladung, da Sie einen anderen Namen aufweist. Dies bewirkt wiederum, dass den Compiler die umbenannte Version ignoriert, wenn sie die richtige Wahl zum Auflösen des Verweises gegangen sein könnte.  
   
  **Fehler-ID:** BC30933  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Verwendung `CType` das Argument aus umwandeln `Object` in den angegebenen, durch die Signatur der Überladung, die Sie aufrufen möchten.  
+-   Verwendung `CType` umzuwandelnde das Argument vom `Object` in den Typ angegeben wird, durch die Signatur der Überladung aufgerufen werden soll.  
   
-     Beachten Sie, dass er nicht behoben wird, das verweisende Objekt, das die zugrunde liegende Schnittstelle umwandeln. Das Argument, um diesen Fehler vermeiden, müssen Sie eine Umwandlung.  
+     Beachten Sie, dass es nicht hilfreich sein wird, das verweisende Objekt in der zugrunde liegenden Schnittstelle umwandeln. Sie müssen das Argument, um diesen Fehler zu vermeiden, umwandeln.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt einen Aufruf einer überladenen `Sub` Prozedur, die diesen Fehler zur Kompilierzeit verursacht.  
+ Das folgende Beispiel zeigt einen Aufruf einer überladenen `Sub` Prozedur, die zum Zeitpunkt der Kompilierung diesen Fehler verursacht.  
   
 ```  
 Module m1  
@@ -53,18 +53,18 @@ Module m1
 End Module  
 ```  
   
- Im vorherigen Beispiel, wenn der Compiler den Aufruf zugelassen `s1` geschrieben, die Auflösung erfolgt über die Klasse `c1` anstelle der Schnittstelle `i1`. Dies bedeutet, dass der Compiler nicht berücksichtigt, `s2` weil dieser Name in verschiedenen ist `c1`, auch wenn es sich um die richtige Wahl ist gemäß der Definition von `i1`.  
+ Im vorherigen Beispiel, wenn der Compiler den Aufruf zugelassen `s1` laut würde die Auflösung ausgeführt, über die Klasse `c1` statt die Schnittstelle `i1`. Dies bedeutet, dass der Compiler nicht berücksichtigt, `s2` da seinen Namen unterscheidet `c1`, auch wenn es sich um die richtige Wahl ist gemäß `i1`.  
   
- Sie können den Fehler behoben, durch den Aufruf an einen der folgenden Codezeilen ändern:  
+ Sie können den Fehler korrigieren, ändern Sie den Aufruf an eines der folgenden Codezeilen:  
   
 ```  
 refer.s1(CType(o1, Integer))  
 refer.s1(CType(o1, Double))  
 ```  
   
- Jede der vorangehenden Zeilen des Codes explizit wandelt die `Object` Variable `o1` auf einen der Parametertypen für die Überladungen definiert.  
+ Jede der vorausgehenden Zeilen Code explizit wandelt die `Object` Variable `o1` auf einen der Parametertypen für die Überladungen definiert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Überladungsauflösung](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)  
- [CType-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md)
+## <a name="see-also"></a>Siehe auch
+- [Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Überladungsauflösung](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
+- [CType-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md)

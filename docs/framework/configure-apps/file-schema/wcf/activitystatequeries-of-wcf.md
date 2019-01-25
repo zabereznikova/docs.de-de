@@ -2,12 +2,12 @@
 title: '&lt;activityStateQueries&gt; von WCF'
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 2dabfdd248006de60b5e84e739f78e03f364dde3
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6b21ad3f5487a924309b8bee6b9ac972f23bdc66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146185"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701936"
 ---
 # <a name="ltactivitystatequeriesgt-of-wcf"></a>&lt;activityStateQueries&gt; von WCF
 
@@ -16,11 +16,11 @@ Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Lebenszyklusä
 Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
 
 \<system.serviceModel>  
-\<Nachverfolgen von >  
-\<Profile >  
+\<tracking>  
+\<profiles>  
 \<trackingProfile>  
-\<Workflow >  
-\<ActivityStateQueries >  
+\<workflow>  
+\<activityStateQueries>  
 
 ## <a name="syntax"></a>Syntax  
   
@@ -60,7 +60,7 @@ Keine
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|[\<ActivityStateQuery >](activitystatequery-of-wcf.md)|Eine Abfrage, die verwendet wird, um die Behandlung von Fehlern zu verfolgen, die in einer Aktivität auftreten.  Dieses Ereignis tritt jedes Mal auf, wenn ein FaultHandler einen Fehler verarbeitet.|
+|[\<activityStateQuery>](activitystatequery-of-wcf.md)|Eine Abfrage, die verwendet wird, um die Behandlung von Fehlern zu verfolgen, die in einer Aktivität auftreten.  Dieses Ereignis tritt jedes Mal auf, wenn ein FaultHandler einen Fehler verarbeitet.|
 
 ### <a name="parent-elements"></a>Übergeordnete Elemente
 
@@ -70,7 +70,7 @@ Keine
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>    
-- <xref:System.Activities.Tracking.ActivityStateQuery>    
-- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>
+- <xref:System.Activities.Tracking.ActivityStateQuery>
+- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

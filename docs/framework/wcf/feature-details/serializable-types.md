@@ -2,12 +2,12 @@
 title: Serialisierbare Typen
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: e54fd860ce757257253dad097a52e634dbb5d8bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0fe29d2eb2b50d2515d71745bc062255dbfb60ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498279"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608049"
 ---
 # <a name="serializable-types"></a>Serialisierbare Typen
 Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContractSerializer> alle öffentlich sichtbaren Typen. Alle öffentlichen Lese-/Schreibeigenschaften und Felder des Typs werden serialisiert.  
@@ -38,9 +38,9 @@ Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContract
 ## <a name="inheritance"></a>Vererbung  
  Nicht markierte Typen (Typen ohne <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut) können von Typen erben, die dieses Attribut besitzen. Der umgekehrte Vorgang ist jedoch nicht möglich: Typen mit diesem Attribut können nicht von nicht markierten Typen erben. Diese Regel wird in erster Linie deshalb erzwungen, um die Abwärtskompatibilität mit in früheren Versionen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] geschriebenem Code sicherzustellen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [Vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

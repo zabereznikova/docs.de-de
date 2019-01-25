@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 88707ed6c0e3e5a0ecf1f0812d31634bbdca3123
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 806675c35c0463047646c70a54f80a69d57dffa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574845"
 ---
 # <a name="group-by-clause-visual-basic"></a>GROUP BY-Klausel (Visual Basic)
 Gruppiert die Elemente eines Abfrageergebnisses. Kann auch verwendet werden, um Aggregatfunktionen auf die einzelnen Gruppen anzuwenden. Der Gruppierungsvorgang basiert auf einem oder mehreren Schlüssel(n).  
@@ -62,18 +62,18 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
 ## <a name="remarks"></a>Hinweise  
  Sie können die `Group By` -Klausel verwenden, um die Ergebnisse einer Abfrage in Gruppen aufzuteilen. Die Gruppierung erfolgt auf der Basis eines Schlüssels oder eines zusammengesetzten Schlüssels, der aus mehreren Schlüsseln besteht. Elemente, die übereinstimmenden Schlüsselwerten zugeordnet sind werden in die gleiche Gruppe aufgenommen.  
   
- Sie verwenden den `aggregateList` -Parameter der `Into` -Klausel und das `Group` -Schlüsselwort, um den Membernamen zu bezeichnen, der zum Verweisen auf die Gruppe verwendet wird. Ferner kann die `Into` -Klausel Aggregatfunktionen beinhalten, um Werte für die gruppierten Elemente zu berechnen. Eine Liste der standardmäßigen Aggregatfunktionen finden Sie [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Sie verwenden den `aggregateList` -Parameter der `Into` -Klausel und das `Group` -Schlüsselwort, um den Membernamen zu bezeichnen, der zum Verweisen auf die Gruppe verwendet wird. Ferner kann die `Into` -Klausel Aggregatfunktionen beinhalten, um Werte für die gruppierten Elemente zu berechnen. Eine Liste der standardmäßigen Aggregatfunktionen finden Sie unter [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird eine Liste von Kunden basierend auf ihrem Standort (Land) gruppiert und die Anzahl der Kunden in jeder Gruppe angegeben. Die Ergebnisse werden nach Ländernamen geordnet. Die gruppierten Ergebnisse sind nach Städtenamen geordnet.  
   
  [!code-vb[VbSimpleQuerySamples#11](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-by-clause_1.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Abfragen](../../../visual-basic/language-reference/queries/index.md)  
- [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)  
- [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)  
- [Order By-Klausel](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [Group Join-Klausel](../../../visual-basic/language-reference/queries/group-join-clause.md)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Abfragen](../../../visual-basic/language-reference/queries/index.md)
+- [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)
+- [From-Klausel](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Order By-Klausel](../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [Aggregate-Klausel](../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [Group Join-Klausel](../../../visual-basic/language-reference/queries/group-join-clause.md)

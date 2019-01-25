@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 0cc565809792c619ca9903f9ef9b029b51a8aa17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17886ececbd418ae60d6321c7a6278a1e982b9af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588261"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611279"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>Fehler beim Kompilieren der XML-Schemas im Projekt
 Fehler beim Kompilieren der XML-Schemas im Projekt. Aus diesem Grund ist die XML-IntelliSense nicht verfügbar.  
   
- Es ist ein Fehler in einem XML-Schemadefinition (XSD)-Schema, das im Projekt enthalten. Dieser Fehler tritt auf, wenn Sie eine XSD-Schemadatei (.xsd) hinzufügen, die Konflikte mit vorhandenen XSD-Schema für das Projekt festgelegt.  
+ Es ist ein Fehler in einem XML-Schema Definition (XSD)-Schema, das im Projekt enthalten ist. Dieser Fehler tritt auf, wenn Sie eine XSD-Schemadatei (.xsd) hinzufügen, die Konflikte mit vorhandenen XSD-Schema für das Projekt festgelegt.  
   
  **Fehler-ID:** BC36810  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Doppelklicken Sie auf die Warnung in der **Fehlerliste** Fenster. Visual Basic wird die Position in der XSD-Datei aufzurufen, die die Quelle der Warnung ist. Korrigieren Sie den Fehler in der XSD-Schema.  
+-   Doppelklicken Sie auf die Warnung in der **Fehlerliste** Fenster. Visual Basic gelangen Sie zu der Position in der XSD-Datei, die die Quelle der Warnung ist. Korrigieren Sie den Fehler in der XSD-Schema.  
   
--   Stellen Sie sicher, dass alle erforderlichen XSD-Schemadateien (.xsd) im Projekt enthalten sind. Möglicherweise müssen Sie auf klicken **alle Dateien anzeigen** auf die **Projekt** Menü, um die XSD-Dateien im **Projektmappen-Explorer**. Mit der rechten Maustaste einer XSD-Datei, und klicken Sie dann auf **zu Projekt hinzufügen** auf die Datei im Projekt enthalten.  
+-   Stellen Sie sicher, dass alle erforderlichen XSD-Schemadateien (.xsd) im Projekt enthalten sind. Möglicherweise müssen Sie auf klicken **alle Dateien anzeigen** auf die **Projekt** Menü, um die XSD-Dateien im **Projektmappen-Explorer**. Mit der rechten Maustaste einer XSD-Datei, und klicken Sie dann auf **zu Projekt** auf die Datei in Ihr Projekt einbinden.  
   
--   Wenn Sie die XML zu Schema-Assistenten verwenden, wird dieser Fehler kann auftreten, wenn Sie Schemas mehr als ein Mal aus der gleichen Quelle ableiten. In diesem Fall fügen Sie Sie die vorhandenen XSD-Schema-Dateien aus dem Projekt entfernen können eine neue XML Schema-Elementvorlage, und geben Sie dann die XML zu Schema-Assistenten mit den entsprechenden XML-Datenquellen für das Projekt.  
+-   Wenn Sie das XML to Schema-Assistenten verwenden, wird dieser Fehler kann auftreten, wenn Sie Schemas mehrmals aus derselben Quelle ableiten. In diesem Fall fügen Sie eine neue XML Schema-Elementvorlage, die vorhandenen XSD-Schema-Dateien aus dem Projekt entfernen können, und geben Sie dann die XML-Schema-Assistenten mit den entsprechenden XML-Datenquellen für Ihr Projekt.  
   
--   Wenn keine Fehler in der XSD-Schema identifiziert wird, möglicherweise die XML-Compiler nicht genügend Informationen, um eine detaillierte Fehlermeldung. Möglicherweise können ausführlichere Fehlerinformationen abgerufen werden, wenn Sie sicherstellen, dass die XML-Namespaces für die XSD-Dateien in Ihrem Projekt Übereinstimmung, die XML-Namespaces für das XML-Schemaset in Visual Studio identifiziert enthalten.  
+-   Wenn kein Fehler im XSD-Schema identifiziert wird, möglicherweise der XML-Compiler nicht genügend Informationen, um eine detaillierte Fehlermeldung bereitzustellen. Möglicherweise können Sie detailliertere Fehlerinformationen erhalten, wenn Sie sicherstellen, dass die XML-Namespaces für die XSD-Dateien in Ihrem Projekt Übereinstimmung, die XML-Namespaces, die für das XML-Schemaset in Visual Studio identifiziert enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Fenster „Fehlerliste“](/visualstudio/ide/reference/error-list-window)  
- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Fenster „Fehlerliste“](/visualstudio/ide/reference/error-list-window)
+- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

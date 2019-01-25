@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728356"
 ---
 # <a name="white-space-processing-in-xaml"></a>Leerzeichen in XAML verarbeitet
 Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet werden müssen, indem eine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung. In diesem Thema werden diese XAML-Sprachregeln erläutert. Er dokumentiert auch zusätzliche Leerzeichen behandeln, die von definiert ist die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Implementierung der XAML-Prozessor und der XAML-Writer für die Serialisierung.  
@@ -53,7 +53,7 @@ Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet wer
 ## <a name="preserving-white-space"></a>Beibehalten von Leerraum  
  Es gibt mehrere Verfahren zum Beibehalten von Leerzeichen in der Quelle [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] für die nachfolgende Darstellung, die nicht betroffen sind [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] leerstellennormalisierung Prozessor.  
   
- **XML: space = "preserve"**: Geben Sie dieses Attribut auf der Ebene des Elements, in denen Leerraum beibehalten wird. Hierdurch werden alle Leerräume beibehalten, auch die Leerzeichen, die ggf. von Codebearbeitungsanwendungen als visuell intuitive Schachtelung hinzugefügt werden, um Elemente für den Schöndruck auszurichten. Ob diese Leerzeichen gerendert werden, wird jedoch durch das Inhaltsmodell für das enthaltende Element bestimmt. Vermeiden Sie es, `xml:space="preserve"` auf der Stammebene, da die meisten Objektmodelle weiß nicht berücksichtigt werden Leerzeichen als signifikant, unabhängig davon, wie Sie das Attribut festlegen. Die globale Festlegung von `xml:space` kann in einigen Implementierungen die Leistung der XAML-Verarbeitung (insbesondere der Serialisierung) beeinträchtigen. Es ist empfehlenswert, die das Attribut nur speziell auf der Ebene von Elementen festgelegt werden kann, die Leerzeichen in Zeichenfolgen rendern oder Auflistungen Leerzeichen sind.  
+ **xml:space="preserve"**: Geben Sie dieses Attribut auf der Ebene des Elements, in denen Leerraum beibehalten wird. Hierdurch werden alle Leerräume beibehalten, auch die Leerzeichen, die ggf. von Codebearbeitungsanwendungen als visuell intuitive Schachtelung hinzugefügt werden, um Elemente für den Schöndruck auszurichten. Ob diese Leerzeichen gerendert werden, wird jedoch durch das Inhaltsmodell für das enthaltende Element bestimmt. Vermeiden Sie es, `xml:space="preserve"` auf der Stammebene, da die meisten Objektmodelle weiß nicht berücksichtigt werden Leerzeichen als signifikant, unabhängig davon, wie Sie das Attribut festlegen. Die globale Festlegung von `xml:space` kann in einigen Implementierungen die Leistung der XAML-Verarbeitung (insbesondere der Serialisierung) beeinträchtigen. Es ist empfehlenswert, die das Attribut nur speziell auf der Ebene von Elementen festgelegt werden kann, die Leerzeichen in Zeichenfolgen rendern oder Auflistungen Leerzeichen sind.  
   
  **Entitäten und geschützte Leerzeichen**: [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] unterstützt das Platzieren beliebiger [!INCLUDE[TLA#tla_unicode](../../../includes/tlasharptla-unicode-md.md)] -Entitäten in einem Textobjektmodell. Sie können dedizierte Entitäten wie geschützte Leerzeichen (&\#160; in UTF-8-Codierung). Sie können auch Rich-Text-Steuerelemente verwenden, die geschützte Leerzeichen unterstützen. Seien Sie vorsichtig, wenn Sie Entitäten zum Simulieren von Layouteigenschaften wie Einzügen verwenden, da die Laufzeitausgabe der Entitäten basierend auf einer größeren Anzahl von Faktoren variiert, als dies bei den Funktionen zum Erzeugen von Einzugsergebnisse in einem typischen Layoutsystem der Fall ist, z. B. richtige Verwendung von Bereichen und Rändern. Beispielsweise werden Entitäten Schriftarten zugeordnet und können sich als Reaktion auf eine Schriftartauswahl durch den Benutzer in der Größe ändern.  
   
@@ -74,7 +74,7 @@ Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet wer
   
  Darüber hinaus sollten bestimmte Inlineelemente, die einen Zeilenumbruch in einem Flussdokumentmodell absichtlich nicht auch in eine Auflistung Leerzeichen ein zusätzliches Leerzeichen führen. Z. B. die <xref:System.Windows.Documents.LineBreak> Element hat den gleichen Zweck wie die \<BR / >-Tag in [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)], und zur besseren Lesbarkeit im Markup in der Regel eine <xref:System.Windows.Documents.LineBreak> wird durch einen erstellten Zeilenvorschub von nachfolgendem Text getrennt. Dieser Zeilenvorschub darf nicht zu einem voranstellten Leerzeichen in der nächsten Zeile normalisiert werden. So aktivieren Sie dieses Verhalten, die Klassendefinition für den <xref:System.Windows.Documents.LineBreak> Element gilt die <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, wird dann von interpretiert die [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] -Prozessor so, Leerzeichen, umgibt <xref:System.Windows.Documents.LineBreak> immer entfernt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XML-Zeichenentitäten und XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [XML: space-Behandlung in XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XML-Zeichenentitäten und XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+- [XML: space-Behandlung in XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

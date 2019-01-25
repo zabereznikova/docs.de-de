@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 357b7b42c7ad609b2a86ec3ee79a0f6f38dd9471
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54641979"
 ---
 # <a name="long-data-type-visual-basic"></a>Long-Datentyp (Visual Basic)
 
@@ -78,10 +78,10 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="see-also"></a>Siehe auch
 
-<xref:System.Int64>
-[Datentypen](../../../visual-basic/language-reference/data-types/index.md)   
-[Integer-Datentyp](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
-[Short-Datentyp](../../../visual-basic/language-reference/data-types/short-data-type.md)   
-[Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
-[Zusammenfassung: Konvertieren](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
-[Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int64>
+- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
+- [Integer-Datentyp](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Short-Datentyp](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

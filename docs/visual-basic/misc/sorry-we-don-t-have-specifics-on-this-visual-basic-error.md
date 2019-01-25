@@ -3044,12 +3044,12 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: a3af5e519b263b5b151640ac9c3d0576905eddb9
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 5eb00854f27a195ac3121aea16e2889897e6ef3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53781738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667660"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Leider haben wir keine Einzelheiten zu diesem Visual Basic-Fehler
 Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren fragen:  
@@ -3072,6 +3072,6 @@ Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehle
  Siehe auch:  
  [Zusätzliche Ressourcen für Visual Basic-Programmierer](../../visual-basic/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Programmierhandbuch](../../visual-basic/programming-guide/index.md)  
- [Visual Basic-Referenz](../../visual-basic/reference/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Visual Basic-Programmierhandbuch](../../visual-basic/programming-guide/index.md)
+- [Visual Basic-Referenz](../../visual-basic/reference/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: e6690a4f11bb1a88e2d77c67ccb29056c8e03f96
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: d4483d11903d61135585a2b6c2c33eff48300151
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616013"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Sicherheitsberechtigung für die Umleitung der Assemblybindung
 Für die explizite Umleitung einer Assemblybindung in einer Anwendungskonfigurationsdatei ist eine Sicherheitsberechtigung erforderlich. Dies betrifft die Umleitung von .NET Framework-Assemblys und Assemblys von Drittanbietern. Die Berechtigung wird erteilt, indem die <xref:System.Security.Permissions.SecurityPermissionFlag> flag für die <xref:System.Security.Permissions.SecurityPermission>. Verwaltete Assemblys verfügen standardmäßig über keine Berechtigungen zu.  
@@ -32,7 +32,7 @@ Für die explizite Umleitung einer Assemblybindung in einer Anwendungskonfigurat
   
  Diese Sicherheitseinstellungen für die Unterstützung oder bestimmte Szenarien auf einem Computer zu beschränken, kann ein Administrator ändern. Es sind keine Tools zum Ändern der **BindingRedirects** Flag, das auf den Standard die Security.config-Datei auf dem Computer eines Benutzers muss von ein Administrator manuell bearbeiten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Herausgeberrichtliniendateien und Seite-an-Seite-Ausführung](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
- [Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
- [Parallele Ausführung](../../../docs/framework/deployment/side-by-side-execution.md)
+## <a name="see-also"></a>Siehe auch
+- [Herausgeberrichtliniendateien und Seite-an-Seite-Ausführung](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)
+- [Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Parallele Ausführung](../../../docs/framework/deployment/side-by-side-execution.md)

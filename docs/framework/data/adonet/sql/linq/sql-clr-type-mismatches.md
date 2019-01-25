@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 61731c4d9590892bdae8e90717d77b4dddf1d71d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147618"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700948"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR-Typenkonflikte
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatisiert einen Großteil des Übersetzungsprozesses zwischen dem Objektmodell und SQL Server. Trotzdem verhindern einige Situationen die genaue Übersetzung. In den folgenden Abschnitten werden diese wichtigen Konflikte zwischen den CLR (Common Language Runtime)-Typen und den SQL Server-Datenbanktypen zusammengefasst. Sie finden weitere Informationen zu bestimmten Typmappings und funktionsübersetzungen am [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) und [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -31,7 +31,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Ganze Zahlen ohne Vorzeichen**. Diese Typen werden in der Regel größeren Äquivalenten mit Vorzeichen zugeordnet, um ein Überlaufen zu vermeiden. Literale können auf der Basis des Werts in eine mit Vorzeichen versehene Zahl der gleichen oder einer kleineren Größe umgewandelt werden.  
   
-    -   **Boolesche**. Diese Typen können einem Bit oder einem größeren numerischen Wert/einer Zeichenfolge zugeordnet werden. Ein Literal kann einem Ausdruck zugeordnet werden, der den gleichen Wert ergibt (Beispiel: `1=1` in SQL für `True` in CLS).  
+    -   **Boolean**. Diese Typen können einem Bit oder einem größeren numerischen Wert/einer Zeichenfolge zugeordnet werden. Ein Literal kann einem Ausdruck zugeordnet werden, der den gleichen Wert ergibt (Beispiel: `1=1` in SQL für `True` in CLS).  
   
     -   **TimeSpan**. Dieser Typ steht für den Unterschied zwischen zwei `DateTime`-Werten und entspricht nicht dem `timestamp` von SQL Server. Die CLR-<xref:System.TimeSpan?displayProperty=nameWithType> wird möglicherweise auch dem `TIME`-Typ in SQL Server zugeordnet. Der `TIME`-Typ in SQL Server kann nur positive Werte unter 24 Stunden darstellen. Die CLR-<xref:System.TimeSpan> hat einen viel größeren Bereich.  
   
@@ -293,5 +293,5 @@ Where Col1 + Col2 > 4
   
  Zusätzlich zu Semantikunterschieden müssen bei Schnittstellen der Typsysteme von SQL Server und CLR Auswirkungen auf die Leistung berücksichtigt werden. Bei großen Datensätzen können solche Leistungsprobleme aufzeigen, ob eine Anwendung zur Bereitstellung geeignet ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>Siehe auch
+- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

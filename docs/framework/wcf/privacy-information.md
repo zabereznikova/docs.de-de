@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086673"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683966"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation-Datenschutzinformationen
 Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Bei der Erstellung einer Anwendung mithilfe von Windows Communication Foundation (WCF), Version 3.0, kann Ihre Anwendung Datenschutz der Endbenutzer beeinträchtigen. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. WCF sendet nicht an Microsoft aus Ihrer Anwendung Informationen, sofern Ihnen oder dem Endbenutzer Sie uns senden möchten.  
@@ -95,7 +95,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 ### <a name="tracing"></a>Ablaufverfolgung  
  Die Diagnosefunktion der WCF-Infrastruktur protokolliert Nachrichten, die über den Transport und Dienstebenen Ausführen-Modell, und die Aktivitäten und Ereignisse im Zusammenhang mit diesen Nachrichten übergeben. Diese Funktion ist standardmäßig deaktiviert. Mithilfe der Anwendungskonfigurationsdatei aktiviert und Verhalten für die Ablaufverfolgung kann mithilfe des WCF WMI-Anbieters zur Laufzeit geändert werden. Wenn das Feature aktiviert ist, gibt die Ablaufverfolgungsinfrastruktur eine Diagnoseablaufverfolgung mit Nachrichten, Aktivitäten und Verarbeitungsereignissen an konfigurierte Listener aus. Format und Speicherort der Ausgabe werden durch die Listener-Konfigurationsauswahl des Administrators bestimmt; normalerweise ist es eine Datei im XML-Format. Der Administrator ist verantwortlich für das Festlegen der Zugriffssteuerungsliste (ACL) für die Ablaufverfolgungsdateien. Insbesondere beim Hosten durch WAS (Windows Activation System) muss der Administrator sicherstellen, dass die Dateien nicht im öffentlichen virtuellen Stammverzeichnis befinden, falls dies nicht gewünscht ist.  
   
- Es gibt zwei Typen von Ablaufverfolgung, Nachrichtenprotokollierung und Dienstmodell-Diagnoseablaufverfolgung, die im folgenden Abschnitt beschrieben werden. Jeder Typ wird über seine eigene Ablaufverfolgungsquelle konfiguriert: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> und <xref:System.ServiceModel>. Beide Protokollierungs-Ablaufverfolgungsquellen erfassen Daten, die lokale Daten der Anwendung sind.  
+ Es gibt zwei Typen von Ablaufverfolgung: Die nachrichtenprotokollierung und Dienstmodell-diagnoseablaufverfolgung Ablaufverfolgung, die im folgenden Abschnitt beschrieben. Jeder Typ wird über seine eigene Ablaufverfolgungsquelle konfiguriert: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> und <xref:System.ServiceModel>. Beide Protokollierungs-Ablaufverfolgungsquellen erfassen Daten, die lokale Daten der Anwendung sind.  
   
 ### <a name="message-logging"></a>Nachrichtenprotokollierung  
  Die Ablaufverfolgungsquelle für die Nachrichtenprotokollierung (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) ermöglicht einem Administrator das Protokollieren der Nachrichten, die das System durchlaufen. Über die Konfiguration kann der Benutzer entscheiden, ob ganze Nachrichten oder nur Nachrichtenheader protokolliert werden, ob die Protokollierung auf der Transport- und/oder der Dienstmodellebene erfolgt und ob falsch formatierte Nachrichten erfasst werden. Außerdem kann der Benutzer die Filterung konfigurieren, um einzuschränken, welche Nachrichten protokolliert werden.  
@@ -163,7 +163,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  >  
   
- \<Bedingungen NotBefore = "[" DateTime "]" NotOnOrAfter "DateTime" = >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
  \<AudienceRestrictionCondition>  
   
@@ -171,7 +171,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  \</AudienceRestrictionCondition>*  
   
- \<DoNotCacheCondition / > *  
+ \<DoNotCacheCondition />*  
   
  <\!--abstrakten Basistyp.  
   
@@ -179,23 +179,23 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  -->  
   
- \</ Bedingungen >?  
+ \</Conditions>?  
   
- \<Ratschläge >  
+ \<Advice>  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
  \<Assertion > [Assertion]\</Assertion > *  
   
  [any]*  
   
- \</-Meldung >?  
+ \</Advice>?  
   
  <\!--Abstrakter Basistypen  
   
  \<Anweisung / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
  \<Betreff >  
   
@@ -211,19 +211,19 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
  \<ConfirmationMethod > [AnyUri]\</ConfirmationMethod > +  
   
- \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
+ \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<DS: KeyInfo >... \</ds:KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</ SubjectConfirmation >?  
+ \</SubjectConfirmation>?  
   
- \</ Betreff >  
+ \</Subject>  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -255,7 +255,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
  \<AttributeStatement>  
   
@@ -271,7 +271,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</-Attribut > +  
+ \</Attribute>+  
   
  \</AttributeStatement>*  
   
@@ -285,15 +285,15 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  [Subject]  
   
- \<Aktion-Namespace = "[Uri]" > [String] \< /Action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
  \<Beweise >  
   
- \<AssertionIDReference > [ID]\</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
  \<Assertion > [Assertion]\</Assertion > +  
   
- \</ Beweis >?  
+ \</Evidence>?  
   
  \</AuthorizationDecisionStatement>*  
   
@@ -401,6 +401,6 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Die WSDL (Web Services Description Language) enthält eine Definition des Anschlusses. Jeder Anschluss verfügt über eine Endpunktadresse und eine Bindung, die die von der Anwendung verwendeten Dienste darstellt. Das Verfügbarmachen der WSDL kann mithilfe der Konfiguration deaktiviert werden. Auf dem Computer werden keine Informationen beibehalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
- [Sicherheit](../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Siehe auch
+- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Sicherheit](../../../docs/framework/wcf/feature-details/security.md)
