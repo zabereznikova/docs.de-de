@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a261d9164e8714531eab1fe9fc8148304e6d5bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 635c232f2f6721e734f4fe6a74088fe9b82c6166
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432881"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54639470"
 ---
-# <a name="econtexttype-enumeration"></a><span data-ttu-id="678bb-102">EContextType-Enumeration</span><span class="sxs-lookup"><span data-stu-id="678bb-102">EContextType Enumeration</span></span>
-<span data-ttu-id="678bb-103">Beschreibt den Sicherheitskontext des aktuell ausgeführten Threads.</span><span class="sxs-lookup"><span data-stu-id="678bb-103">Describes the security context of the currently executing thread.</span></span>  
+# <a name="econtexttype-enumeration"></a><span data-ttu-id="9670d-102">EContextType-Enumeration</span><span class="sxs-lookup"><span data-stu-id="9670d-102">EContextType Enumeration</span></span>
+<span data-ttu-id="9670d-103">Beschreibt den Sicherheitskontext des gerade ausgeführten Threads an.</span><span class="sxs-lookup"><span data-stu-id="9670d-103">Describes the security context of the currently executing thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="678bb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="678bb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9670d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9670d-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -35,26 +35,26 @@ typedef enum {
 } EContextType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="678bb-105">Member</span><span class="sxs-lookup"><span data-stu-id="678bb-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9670d-105">Member</span><span class="sxs-lookup"><span data-stu-id="9670d-105">Members</span></span>  
   
-|<span data-ttu-id="678bb-106">Member</span><span class="sxs-lookup"><span data-stu-id="678bb-106">Member</span></span>|<span data-ttu-id="678bb-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="678bb-107">Description</span></span>|  
+|<span data-ttu-id="9670d-106">Member</span><span class="sxs-lookup"><span data-stu-id="9670d-106">Member</span></span>|<span data-ttu-id="9670d-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9670d-107">Description</span></span>|  
 |------------|-----------------|  
-|`eCurrentContext`|<span data-ttu-id="678bb-108">Gibt den Kontext des aktuellen Threads zum Zeitpunkt der common Language Runtime (CLR) Ruft die [IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md) Methode oder den Kontext angefordert, die von der CLR in einem Aufruf der [ IHostSecurityManager:: SetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="678bb-108">Indicates the context on the current thread at the time the common language runtime (CLR) calls the [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md) method, or the context requested by the CLR in a call to the [IHostSecurityManager::SetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md) method.</span></span>|  
-|`eRestrictedContext`|<span data-ttu-id="678bb-109">Gibt einen Kontext, der über den vom Host mit geringeren Privilegien, z. B. die Garbage collection oder Klasse oder des Moduls Konstruktoren kann an.</span><span class="sxs-lookup"><span data-stu-id="678bb-109">Indicates a context over which the host has lower privileges, such as the garbage collector, or class or module constructors.</span></span>|  
+|`eCurrentContext`|<span data-ttu-id="9670d-108">Gibt den Kontext des aktuellen Threads zum Zeitpunkt der common Language Runtime (CLR) Ruft die [IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md) Methode oder den Kontext, angefordert von der CLR in einem Aufruf der [ IHostSecurityManager:: SetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="9670d-108">Indicates the context on the current thread at the time the common language runtime (CLR) calls the [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md) method, or the context requested by the CLR in a call to the [IHostSecurityManager::SetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md) method.</span></span>|  
+|`eRestrictedContext`|<span data-ttu-id="9670d-109">Gibt einen Kontext an, über den geringeren Privilegien, z. B. der Garbage Collector oder Konstruktoren für Klasse oder das Modul auf dem Host ist.</span><span class="sxs-lookup"><span data-stu-id="9670d-109">Indicates a context over which the host has lower privileges, such as the garbage collector, or class or module constructors.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="678bb-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="678bb-110">Remarks</span></span>  
- <span data-ttu-id="678bb-111">Die CLR stellt eines der `EContextType` Werte als Parameterwert in Aufrufen an die `IHostSecurityManager::GetSecurityContext` und `IHostSecurityManager::SetSecurityContext` Methoden.</span><span class="sxs-lookup"><span data-stu-id="678bb-111">The CLR supplies one of the `EContextType` values as a parameter value in calls to the `IHostSecurityManager::GetSecurityContext` and `IHostSecurityManager::SetSecurityContext` methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9670d-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="9670d-110">Remarks</span></span>  
+ <span data-ttu-id="9670d-111">Die CLR stellt eines der `EContextType` Werte als Parameterwert in Aufrufen an die `IHostSecurityManager::GetSecurityContext` und `IHostSecurityManager::SetSecurityContext` Methoden.</span><span class="sxs-lookup"><span data-stu-id="9670d-111">The CLR supplies one of the `EContextType` values as a parameter value in calls to the `IHostSecurityManager::GetSecurityContext` and `IHostSecurityManager::SetSecurityContext` methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="678bb-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="678bb-112">Requirements</span></span>  
- <span data-ttu-id="678bb-113">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="678bb-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9670d-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9670d-112">Requirements</span></span>  
+ <span data-ttu-id="9670d-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9670d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="678bb-114">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="678bb-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9670d-114">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9670d-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="678bb-115">**Bibliothek:** "Mscoree.dll"</span><span class="sxs-lookup"><span data-stu-id="678bb-115">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="9670d-115">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9670d-115">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="678bb-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="678bb-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9670d-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9670d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="678bb-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="678bb-117">See Also</span></span>  
- [<span data-ttu-id="678bb-118">IHostSecurityContext-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="678bb-118">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  
- [<span data-ttu-id="678bb-119">IHostSecurityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="678bb-119">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
- [<span data-ttu-id="678bb-120">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="678bb-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="9670d-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9670d-117">See also</span></span>
+- [<span data-ttu-id="9670d-118">IHostSecurityContext-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9670d-118">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
+- [<span data-ttu-id="9670d-119">IHostSecurityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9670d-119">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [<span data-ttu-id="9670d-120">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="9670d-120">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b550c7b3cec999b0420fbdc06582a24f420abe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf6a08b17819e3d3cdaa62b0e209fc2064de4a4a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425983"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688700"
 ---
-# <a name="isymunmanagedreadergetdocumentversion-method"></a><span data-ttu-id="fa2c8-102">ISymUnmanagedReader::GetDocumentVersion-Methode</span><span class="sxs-lookup"><span data-stu-id="fa2c8-102">ISymUnmanagedReader::GetDocumentVersion Method</span></span>
-<span data-ttu-id="fa2c8-103">Ruft die angegebene Version des angegebenen Dokuments ab.</span><span class="sxs-lookup"><span data-stu-id="fa2c8-103">Gets the specified version of the specified document.</span></span> <span data-ttu-id="fa2c8-104">Die Dokumentversion beginnt mit 1 und erhöht sich beim das Dokument aktualisiert wird, mit der [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="fa2c8-104">The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method.</span></span> <span data-ttu-id="fa2c8-105">Wenn die `pbCurrent` Parameter ist `true`, dies ist die neueste Version des Dokuments.</span><span class="sxs-lookup"><span data-stu-id="fa2c8-105">If the `pbCurrent` parameter is `true`, this is the latest version of the document.</span></span>  
+# <a name="isymunmanagedreadergetdocumentversion-method"></a><span data-ttu-id="507d1-102">ISymUnmanagedReader::GetDocumentVersion-Methode</span><span class="sxs-lookup"><span data-stu-id="507d1-102">ISymUnmanagedReader::GetDocumentVersion Method</span></span>
+<span data-ttu-id="507d1-103">Ruft die angegebene Version des angegebenen Dokuments ab.</span><span class="sxs-lookup"><span data-stu-id="507d1-103">Gets the specified version of the specified document.</span></span> <span data-ttu-id="507d1-104">Die Version beginnt bei 1 und wird erhöht, jeder Aktualisierung des Dokuments wird mithilfe der [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="507d1-104">The document version starts at 1 and is incremented each time the document is updated using the [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) method.</span></span> <span data-ttu-id="507d1-105">Wenn die `pbCurrent` Parameter `true`, dies ist die neueste Version des Dokuments.</span><span class="sxs-lookup"><span data-stu-id="507d1-105">If the `pbCurrent` parameter is `true`, this is the latest version of the document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fa2c8-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="fa2c8-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="507d1-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="507d1-106">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentVersion (  
@@ -36,21 +36,21 @@ HRESULT GetDocumentVersion (
     [out] BOOL* pbCurrent);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fa2c8-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="fa2c8-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="507d1-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="507d1-107">Parameters</span></span>  
  `pDoc`  
- <span data-ttu-id="fa2c8-108">[in] Das angegebene Dokument.</span><span class="sxs-lookup"><span data-stu-id="fa2c8-108">[in] The specified document.</span></span>  
+ <span data-ttu-id="507d1-108">[in] Das angegebene Dokument.</span><span class="sxs-lookup"><span data-stu-id="507d1-108">[in] The specified document.</span></span>  
   
  `version`  
- <span data-ttu-id="fa2c8-109">[out] Ein Zeiger auf eine Variable, die Version des angegebenen Dokuments empfängt.</span><span class="sxs-lookup"><span data-stu-id="fa2c8-109">[out] A pointer to a variable that receives the version of the specified document.</span></span>  
+ <span data-ttu-id="507d1-109">[out] Ein Zeiger auf eine Variable, die Version des angegebenen Dokuments empfängt.</span><span class="sxs-lookup"><span data-stu-id="507d1-109">[out] A pointer to a variable that receives the version of the specified document.</span></span>  
   
  `pbCurrent`  
- <span data-ttu-id="fa2c8-110">[out] Ein Zeiger auf eine Variable, empfängt `true` ist dies die neueste Version des Dokuments oder `false` Falls sie nicht die neueste Version ist.</span><span class="sxs-lookup"><span data-stu-id="fa2c8-110">[out] A pointer to a variable that receives `true` if this is the latest version of the document, or `false` if it isn't the latest version.</span></span>  
+ <span data-ttu-id="507d1-110">[out] Ein Zeiger auf eine Variable, empfängt `true` ist dies die neueste Version des Dokuments oder `false` Falls sie nicht, dass die neueste Version ist.</span><span class="sxs-lookup"><span data-stu-id="507d1-110">[out] A pointer to a variable that receives `true` if this is the latest version of the document, or `false` if it isn't the latest version.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fa2c8-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="fa2c8-111">Return Value</span></span>  
- <span data-ttu-id="fa2c8-112">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="fa2c8-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="507d1-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="507d1-111">Return Value</span></span>  
+ <span data-ttu-id="507d1-112">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="507d1-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fa2c8-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fa2c8-113">Requirements</span></span>  
- <span data-ttu-id="fa2c8-114">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="fa2c8-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="507d1-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="507d1-113">Requirements</span></span>  
+ <span data-ttu-id="507d1-114">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="507d1-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fa2c8-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fa2c8-115">See Also</span></span>  
- [<span data-ttu-id="fa2c8-116">ISymUnmanagedReader-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fa2c8-116">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="507d1-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="507d1-115">See also</span></span>
+- [<span data-ttu-id="507d1-116">ISymUnmanagedReader-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="507d1-116">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
