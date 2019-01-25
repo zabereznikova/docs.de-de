@@ -1,14 +1,6 @@
 ---
 title: COR_PRF_STATIC_TYPE-Enumeration
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_STATIC_TYPE
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 76d43a620b64c771427cd30af770e70642dabe7a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 34a2ca5b505c504115af47402c3d92a05ec0676f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737632"
 ---
-# <a name="corprfstatictype-enumeration"></a><span data-ttu-id="b4616-102">COR_PRF_STATIC_TYPE-Enumeration</span><span class="sxs-lookup"><span data-stu-id="b4616-102">COR_PRF_STATIC_TYPE Enumeration</span></span>
-<span data-ttu-id="b4616-103">Zeigt an, ob ein Feld statisch ist und, falls dies der Fall ist, ob die statische Qualität für das Feld gilt.</span><span class="sxs-lookup"><span data-stu-id="b4616-103">Indicates whether a field is static and, if so, the static quality that applies to the field.</span></span> <span data-ttu-id="b4616-104">Diese Werte können kombiniert werden, verwenden die bitweise OR-Operation, um anzugeben, dass das Feld mehrere verschiedene statische Qualitäten.</span><span class="sxs-lookup"><span data-stu-id="b4616-104">These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.</span></span>  
+# <a name="corprfstatictype-enumeration"></a><span data-ttu-id="f1cc7-102">COR_PRF_STATIC_TYPE-Enumeration</span><span class="sxs-lookup"><span data-stu-id="f1cc7-102">COR_PRF_STATIC_TYPE Enumeration</span></span>
+<span data-ttu-id="f1cc7-103">Zeigt an, ob ein Feld statisch ist und, falls dies der Fall ist, ob die statische Qualität für das Feld gilt.</span><span class="sxs-lookup"><span data-stu-id="f1cc7-103">Indicates whether a field is static and, if so, the static quality that applies to the field.</span></span> <span data-ttu-id="f1cc7-104">Diese Werte können kombiniert werden, die bitweise OR-Operation verwenden, um anzugeben, dass das Feld mehrere verschiedene statische Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="f1cc7-104">These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b4616-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="b4616-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f1cc7-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="f1cc7-105">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -49,24 +38,24 @@ typedef enum {
 } COR_PRF_STATIC_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b4616-106">Member</span><span class="sxs-lookup"><span data-stu-id="b4616-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f1cc7-106">Member</span><span class="sxs-lookup"><span data-stu-id="f1cc7-106">Members</span></span>  
   
-|<span data-ttu-id="b4616-107">Member</span><span class="sxs-lookup"><span data-stu-id="b4616-107">Member</span></span>|<span data-ttu-id="b4616-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="b4616-108">Description</span></span>|  
+|<span data-ttu-id="f1cc7-107">Member</span><span class="sxs-lookup"><span data-stu-id="f1cc7-107">Member</span></span>|<span data-ttu-id="f1cc7-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f1cc7-108">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|<span data-ttu-id="b4616-109">Das Feld ist nicht statisch.</span><span class="sxs-lookup"><span data-stu-id="b4616-109">The field is not static.</span></span>|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|<span data-ttu-id="b4616-110">Das Feld ist Anwendung statische Domäne.</span><span class="sxs-lookup"><span data-stu-id="b4616-110">The field is application domain-static.</span></span>|  
-|`COR_PRF_FIELD_THREAD_STATIC`|<span data-ttu-id="b4616-111">Das Feld ist threadstatische.</span><span class="sxs-lookup"><span data-stu-id="b4616-111">The field is thread-static.</span></span>|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|<span data-ttu-id="b4616-112">Das Feld ist statischen Kontext.</span><span class="sxs-lookup"><span data-stu-id="b4616-112">The field is context-static.</span></span>|  
-|`COR_PRF_FIELD_RVA_STATIC`|<span data-ttu-id="b4616-113">Das Feld wird die relative virtuelle Adresse (RVA)-statisch.</span><span class="sxs-lookup"><span data-stu-id="b4616-113">The field is relative virtual address (RVA)-static.</span></span>|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|<span data-ttu-id="f1cc7-109">Das Feld ist nicht statisch.</span><span class="sxs-lookup"><span data-stu-id="f1cc7-109">The field is not static.</span></span>|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|<span data-ttu-id="f1cc7-110">Das Feld ist die Anwendung statischen Domäne.</span><span class="sxs-lookup"><span data-stu-id="f1cc7-110">The field is application domain-static.</span></span>|  
+|`COR_PRF_FIELD_THREAD_STATIC`|<span data-ttu-id="f1cc7-111">Das Feld ist threadstatischen.</span><span class="sxs-lookup"><span data-stu-id="f1cc7-111">The field is thread-static.</span></span>|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|<span data-ttu-id="f1cc7-112">Das Feld ist kontextstatische.</span><span class="sxs-lookup"><span data-stu-id="f1cc7-112">The field is context-static.</span></span>|  
+|`COR_PRF_FIELD_RVA_STATIC`|<span data-ttu-id="f1cc7-113">Das Feld ist die relative virtuelle Adresse (RVA) – statisch.</span><span class="sxs-lookup"><span data-stu-id="f1cc7-113">The field is relative virtual address (RVA)-static.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="b4616-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b4616-114">Requirements</span></span>  
- <span data-ttu-id="b4616-115">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b4616-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f1cc7-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f1cc7-114">Requirements</span></span>  
+ <span data-ttu-id="f1cc7-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f1cc7-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b4616-116">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b4616-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="f1cc7-116">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="f1cc7-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b4616-117">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b4616-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f1cc7-117">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f1cc7-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b4616-118">**.NET Framework-Versionen:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4616-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f1cc7-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f1cc7-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b4616-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b4616-119">See Also</span></span>  
- [<span data-ttu-id="b4616-120">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="b4616-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="f1cc7-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f1cc7-119">See also</span></span>
+- [<span data-ttu-id="f1cc7-120">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="f1cc7-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
