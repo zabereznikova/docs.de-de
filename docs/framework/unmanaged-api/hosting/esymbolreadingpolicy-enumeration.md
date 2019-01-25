@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28f6bdbc3e382f82b7fdd632b9fc8c4d422629c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e17f88cf7f0d8572e65d00d8500a1fd83aa44eeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429733"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663913"
 ---
-# <a name="esymbolreadingpolicy-enumeration"></a><span data-ttu-id="c6ed6-102">ESymbolReadingPolicy-Enumeration</span><span class="sxs-lookup"><span data-stu-id="c6ed6-102">ESymbolReadingPolicy Enumeration</span></span>
-<span data-ttu-id="c6ed6-103">Enthält Werte, die die Richtlinie für das Lesen der Programmdatenbankdateien (PDB) festgelegt.</span><span class="sxs-lookup"><span data-stu-id="c6ed6-103">Contains values that set the policy for reading program database (PDB) files.</span></span>  
+# <a name="esymbolreadingpolicy-enumeration"></a><span data-ttu-id="f757e-102">ESymbolReadingPolicy-Enumeration</span><span class="sxs-lookup"><span data-stu-id="f757e-102">ESymbolReadingPolicy Enumeration</span></span>
+<span data-ttu-id="f757e-103">Enthält Werte, die die Richtlinie für das Lesen von Programmdatenbankdateien (PDB) festgelegt.</span><span class="sxs-lookup"><span data-stu-id="f757e-103">Contains values that set the policy for reading program database (PDB) files.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c6ed6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c6ed6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f757e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f757e-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -36,25 +36,25 @@ typedef enum {
 } ESymbolReadingPolicy;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c6ed6-105">Member</span><span class="sxs-lookup"><span data-stu-id="c6ed6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f757e-105">Member</span><span class="sxs-lookup"><span data-stu-id="f757e-105">Members</span></span>  
   
-|<span data-ttu-id="c6ed6-106">Member</span><span class="sxs-lookup"><span data-stu-id="c6ed6-106">Member</span></span>|<span data-ttu-id="c6ed6-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c6ed6-107">Description</span></span>|  
+|<span data-ttu-id="f757e-106">Member</span><span class="sxs-lookup"><span data-stu-id="f757e-106">Member</span></span>|<span data-ttu-id="f757e-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f757e-107">Description</span></span>|  
 |------------|-----------------|  
-|`eSymbolReadingAlways`|<span data-ttu-id="c6ed6-108">Gibt an, dass der Debugger immer PDB-Dateien lesen sollten.</span><span class="sxs-lookup"><span data-stu-id="c6ed6-108">Specifies that the debugger should always read PDB files.</span></span>|  
-|`eSymbolReadingFullTrustOnly`|<span data-ttu-id="c6ed6-109">Gibt an, dass der Debugger nur PDB-Dateien gelesen werden soll, die vollständig vertrauenswürdige Assemblys zugeordnet sind.</span><span class="sxs-lookup"><span data-stu-id="c6ed6-109">Specifies that the debugger should read only PDB files that are associated with full-trust assemblies.</span></span>|  
-|`eSymbolReadingNever`|<span data-ttu-id="c6ed6-110">Gibt an, dass der Debugger niemals PDB-Dateien lesen soll.</span><span class="sxs-lookup"><span data-stu-id="c6ed6-110">Specifies that the debugger should never read PDB files.</span></span>|  
+|`eSymbolReadingAlways`|<span data-ttu-id="f757e-108">Gibt an, dass der Debugger die PDB-Dateien immer lesen soll.</span><span class="sxs-lookup"><span data-stu-id="f757e-108">Specifies that the debugger should always read PDB files.</span></span>|  
+|`eSymbolReadingFullTrustOnly`|<span data-ttu-id="f757e-109">Gibt an, dass der Debugger nur PDB-Dateien gelesen werden soll, die mit vollständig vertrauenswürdigen Assemblys verknüpft sind.</span><span class="sxs-lookup"><span data-stu-id="f757e-109">Specifies that the debugger should read only PDB files that are associated with full-trust assemblies.</span></span>|  
+|`eSymbolReadingNever`|<span data-ttu-id="f757e-110">Gibt an, dass der Debugger keine PDB-Dateien lesen soll.</span><span class="sxs-lookup"><span data-stu-id="f757e-110">Specifies that the debugger should never read PDB files.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c6ed6-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c6ed6-111">Remarks</span></span>  
- <span data-ttu-id="c6ed6-112">Die `ESymbolReadingPolicy` Enumeration wird zusammen mit den [ICLRDebugManager:: SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="c6ed6-112">The `ESymbolReadingPolicy` enumeration is used with the [ICLRDebugManager::SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f757e-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f757e-111">Remarks</span></span>  
+ <span data-ttu-id="f757e-112">Die `ESymbolReadingPolicy` Enumeration wird zusammen mit den [ICLRDebugManager:: SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="f757e-112">The `ESymbolReadingPolicy` enumeration is used with the [ICLRDebugManager::SetSymbolReadingPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c6ed6-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c6ed6-113">Requirements</span></span>  
- <span data-ttu-id="c6ed6-114">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6ed6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f757e-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f757e-113">Requirements</span></span>  
+ <span data-ttu-id="f757e-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f757e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c6ed6-115">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c6ed6-115">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f757e-115">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f757e-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c6ed6-116">**Bibliothek:** "Mscoree.dll"</span><span class="sxs-lookup"><span data-stu-id="c6ed6-116">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="f757e-116">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f757e-116">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c6ed6-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c6ed6-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f757e-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f757e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6ed6-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c6ed6-118">See Also</span></span>  
- [<span data-ttu-id="c6ed6-119">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="c6ed6-119">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="f757e-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f757e-118">See also</span></span>
+- [<span data-ttu-id="f757e-119">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="f757e-119">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
