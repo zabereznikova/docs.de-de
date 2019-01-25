@@ -2,12 +2,12 @@
 title: '&lt;serviceThrottling&gt;'
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 000124c8d0dda81f99668cd330f7cc97c2520464
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: ebef29360f661c77f51557ae4c9ca0bdf8177b99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689480"
 ---
 # <a name="ltservicethrottlinggt"></a>&lt;serviceThrottling&gt;
 Legt den Einschränkungsmechanismus eines WCF (Windows Communication Foundation)-Diensts fest.  
@@ -15,7 +15,7 @@ Legt den Einschränkungsmechanismus eines WCF (Windows Communication Foundation)
  \<system.ServiceModel>  
 \<behaviors>  
 \<serviceBehaviors>  
-\<Verhalten >  
+\<behavior>  
 \<serviceThrottling>  
   
 ## <a name="syntax"></a>Syntax  
@@ -68,7 +68,7 @@ Legt den Einschränkungsmechanismus eines WCF (Windows Communication Foundation)
 </behaviors>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>  
- <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>  
- [Verwenden von ServiceThrottlingBehavior zur Steuerung der Leistung des WCF-Diensts](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
+- <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
+- [Verwenden von ServiceThrottlingBehavior zur Steuerung der Leistung des WCF-Diensts](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

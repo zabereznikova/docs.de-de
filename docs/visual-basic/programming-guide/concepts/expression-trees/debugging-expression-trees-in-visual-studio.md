@@ -1,15 +1,15 @@
 ---
-title: Debuggen von Ausdrucksbaumstrukturen in Visual Studio (Visual Basic)
+title: Debuggen von Ausdrucksbäumen in Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: 2addba2654067eaaf6c621c927e0992308879ae4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b060a65a38c4ab295a54f972678f273ada218d06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644237"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617355"
 ---
-# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Debuggen von Ausdrucksbaumstrukturen in Visual Studio (Visual Basic)
+# <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Debuggen von Ausdrucksbäumen in Visual Studio (Visual Basic)
 Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debuggen Ihrer Anwendung analysieren. Um einen schnellen Überblick über die Ausdrucksbaumstruktur zu erhalten, können Sie die `DebugView`-Eigenschaft verwenden, die nur im Debugmodus verfügbar ist. Weitere Informationen zum Debugging finden Sie unter [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
  Die `DebugView`-Eigenschaft stellt den Inhalt von Ausdrucksbaumstrukturen mithilfe von Visual Studio-Schnellansichten übersichtlicher dar. Weitere Informationen finden Sie unter [Create Custom Visualizers (Erstellen benutzerdefinierter Schnellansichten)](/visualstudio/debugger/create-custom-visualizers-of-data).  
@@ -38,7 +38,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Expression.Parameter(GetType(Integer), "num")  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      `$num`  
   
@@ -49,7 +49,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Expression.Parameter(GetType(Integer))  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      `$var1`  
   
@@ -65,7 +65,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Dim expr As ConstantExpression = Expression.Constant(num)  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      10  
   
@@ -76,7 +76,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Dim expr As ConstantExpression = Expression.Constant(num)  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      10D  
   
@@ -91,7 +91,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      `.Block() {`  
   
@@ -106,7 +106,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Expression.Block(GetType(Object), Expression.Constant("test"))  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      `.Block<System.Object>() {`  
   
@@ -128,7 +128,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Expression.Lambda(Of Func(Of Integer))(Expression.Constant(1))  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      `.Lambda #Lambda1<System.Func'1[System.Int32]>() {`  
   
@@ -143,7 +143,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Expression.Lambda(Of Func(Of Integer))(Expression.Constant(1), "SampleLamda", Nothing)  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      `.Lambda SampleLambda<System.Func'1[System.Int32]>() {`  
   
@@ -169,7 +169,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Expression.Label(target, Expression.Constant(-1)))  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      `.Block() {`  
   
@@ -191,7 +191,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Expression.Goto(target), Expression.Label(target))  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      `.Block() {`  
   
@@ -215,7 +215,7 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Expression.Constant(1), Expression.Constant(2))  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      `1 #+ 2`  
   
@@ -226,11 +226,11 @@ Sie können die Struktur und den Inhalt von Ausdrucksbaumstrukturen beim Debugge
     Expression.Constant(10.0), GetType(Integer))  
     ```  
   
-     `DebugView`-Eigenschaft  
+     `DebugView` -Eigenschaft  
   
      `#(System.Int32)10D`  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
- [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  
- [Erstellen benutzerdefinierter Schnellansichten](/visualstudio/debugger/create-custom-visualizers-of-data)
+## <a name="see-also"></a>Siehe auch
+- [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Erstellen benutzerdefinierter Schnellansichten](/visualstudio/debugger/create-custom-visualizers-of-data)

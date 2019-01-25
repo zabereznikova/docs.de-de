@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: cc299e26316b1a3a6fd9b475dcdb8e3911bcf2e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12d7dd8d47262f8eefe8f71f144c5648f089be45
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356327"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593575"
 ---
 # <a name="serialization"></a>Serialisierung
-In diesem Thema wird beschrieben, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Serialisierungsfähigkeiten. Die folgenden Abschnitte enthalten Informationen zum Hinzufügen von Serialisierung während der Codeerstellung zur Entwicklungszeit sowie zum Serialisierungsverhalten von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Klassen zur Laufzeit.  
+In diesem Thema wird beschrieben, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Serialisierungsfunktionen. Die folgenden Abschnitte enthalten Informationen zum Hinzufügen von Serialisierung während der Codeerstellung zur Entwicklungszeit sowie zum Serialisierungsverhalten von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Klassen zur Laufzeit.  
   
  Sie können zur Entwurfszeit durch eine der folgenden Methoden Serialisierungscode hinzufügen:  
   
--   In der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], ändern Sie die **Serialisierungsmodus** Eigenschaft **unidirektional**.  
+-   In der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], ändern Sie die **Serialisierungsmodus** Eigenschaft **Unidirectional**.  
   
--   Fügen Sie in der SQLMetal-Befehlszeile den **/serialization** Option. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+-   Fügen Sie in der SQLMetal-Befehlszeile, die **/serialization** Option. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Übersicht  
- Die vom generierten Code [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verzögertes Laden Funktionen standardmäßig bereitgestellt. Verzögertes Laden ist auf der Mittelebene eine komfortable Möglichkeit zum transparenten, bedarfsorientierten Laden der Daten. Bei der Serialisierung kommt es jedoch zu Problemen, da hierbei das verzögerte Laden auch dann ausgelöst wird, wenn dieses nicht beabsichtigt ist. Wird ein Objekt serialisiert, wird sein transitiver Abschluss unter allen ausgehenden verzögert geladenen Verweisen serialisiert.  
+ Vom generierten Code [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] stellt die Möglichkeit zum verzögerten Laden standardmäßig bereit. Verzögertes Laden ist auf der Mittelebene eine komfortable Möglichkeit zum transparenten, bedarfsorientierten Laden der Daten. Bei der Serialisierung kommt es jedoch zu Problemen, da hierbei das verzögerte Laden auch dann ausgelöst wird, wenn dieses nicht beabsichtigt ist. Wird ein Objekt serialisiert, wird sein transitiver Abschluss unter allen ausgehenden verzögert geladenen Verweisen serialisiert.  
   
- Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Serialisierungsfunktion behebt dieses Problem vor allem durch zwei Mechanismen:  
+ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Serialisierungsfunktion behebt dieses Problem in erster Linie durch zwei Mechanismen:  
   
 -   Ein <xref:System.Data.Linq.DataContext>-Modus für die Deaktivierung des verzögerten Ladens (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Weitere Informationen finden Sie unter <xref:System.Data.Linq.DataContext>.  
   
@@ -32,9 +32,9 @@ In diesem Thema wird beschrieben, [!INCLUDE[vbtecdlinq](../../../../../../includ
   
 ### <a name="definitions"></a>Definitionen  
   
--   *DataContract-Serialisierungsprogramm*: Standard-Serializer der Windows Communication Framework (WCF)-Komponente des .NET Framework 3.0 oder höher.  
+-   *DataContract-Serialisierungsprogramm*: Standard-Serializer, die von der Windows Communication Framework (WCF)-Komponente des .NET Framework 3.0 oder höher.  
   
--   *Unidirektionale Serialisierung*: die serialisierte Version einer Klasse, die nur eine Einweg-Zuordnungseigenschaft (um einen Zyklus zu vermeiden) enthält. Laut Konvention wird die Eigenschaft auf der übergeordneten Seite einer primären Fremdschlüsselbeziehung für die Serialisierung markiert. Die andere Seite in einer bidirektionalen Zuordnung wird nicht serialisiert.  
+-   *Unidirektionale Serialisierung*: Die serialisierte Version einer Klasse, die nur eine Einweg-Zuordnungseigenschaft (um einen Zyklus zu vermeiden) enthält. Laut Konvention wird die Eigenschaft auf der übergeordneten Seite einer primären Fremdschlüsselbeziehung für die Serialisierung markiert. Die andere Seite in einer bidirektionalen Zuordnung wird nicht serialisiert.  
   
      Unidirektionale Serialisierung ist der einzige Serialisierungstyp, der von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt wird.  
   
@@ -67,12 +67,12 @@ In diesem Thema wird beschrieben, [!INCLUDE[vbtecdlinq](../../../../../../includ
 ### <a name="self-recursive-relationships"></a>Selbstrekursive Beziehungen  
  Selbstrekursive Beziehungen folgen dem gleichen Muster. Die dem Fremdschlüssel entsprechende Zuordnungseigenschaft weist im Gegensatz zur übergeordneten Eigenschaft kein `DataMember`-Attribut auf.  
   
- Beachten Sie die folgende Klasse, die über zwei selbstrekursive Beziehungen verfügt: Employee.Manager/Reports und Employee.Mentor/Mentees.  
+ Beachten Sie die folgende Klasse, die über zwei Selbstrekursive Beziehungen verfügt: Employee.Manager/Reports und Employee.Mentor/mentees.  
   
  [!code-csharp[DLinqSerialization#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#7)]
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
- [Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+## <a name="see-also"></a>Siehe auch
+- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
