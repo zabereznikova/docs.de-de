@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8ae7149e1f104863825fdea128729dcc80847c19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679931"
 ---
 # <a name="handling-and-raising-events"></a>Behandeln und Auslösen von Ereignissen
 Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell folgt dem Beobachter-Entwurfsmuster, mit dem sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen kann. Von einem Ereignissender wird eine Benachrichtigung erstellt, die angibt, dass ein Ereignis aufgetreten ist. Diese Benachrichtigung wird dann vom Ereignisempfänger empfangen, und eine Antwort wird definiert. In diesem Artikel werden die Hauptkomponenten des Delegatmodells, das Verwenden von Ereignissen in Anwendungen und das Implementieren von Ereignissen im Code beschrieben.  
@@ -89,10 +89,10 @@ Ereignisse in .NET Framework basieren auf dem Delegatmodell. Das Delegatmodell 
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.EventHandler>  
-- <xref:System.EventHandler%601>  
-- <xref:System.EventArgs>  
-- <xref:System.Delegate>  
-- [Übersicht über Ereignisse und Routingereignisse (UWP-Apps)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
-- [Ereignisse (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- <xref:System.EventHandler>
+- <xref:System.EventHandler%601>
+- <xref:System.EventArgs>
+- <xref:System.Delegate>
+- [Übersicht über Ereignisse und Routingereignisse (UWP-Apps)](/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [Ereignisse (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)
 - [Ereignisse (C#-Programmierhandbuch)](../../csharp/programming-guide/events/index.md)

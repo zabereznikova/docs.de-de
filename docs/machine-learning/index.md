@@ -1,14 +1,14 @@
 ---
 title: Leitfaden zu ML.NET-Inhalt
 description: Erfahren Sie mehr über das Erstellen von benutzerdefinierten KI-Lösungen, und integrieren Sie sie mithilfe von ML.NET in Ihre .NET-Anwendungen.
-ms.date: 11/06/2018
+ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 0ba32490e30051616ae5270a050d8666490c9eef
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126249"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550460"
 ---
 # <a name="mlnet-content-guide"></a>Leitfaden zu ML.NET-Inhalt
 
@@ -29,6 +29,8 @@ Grundlegende Informationen finden Sie unter [Basiskonzepte für das Modelltraini
 
 [Standpunktanalyse mit einem Modell zur binären Klassifizierung](tutorials/sentiment-analysis.md): Hier wird gezeigt, wie Sie eine App entwickeln, die ermittelt, ob eine Stimmung positiv oder negativ ist.
 
+[Klassifizieren von GitHub-Problemen mit einem Modell zur mehrklassigen Klassifizierung](tutorials/github-issue-classification.md): Hier wird gezeigt, wie Sie eine App entwickeln, die die Bezeichnung „Bereich“ für ein GitHub-Problem bestimmt.
+
 [Vorhersage von Taxifahrtpreisen mit einem Regressionsmodell](tutorials/taxi-fare.md): Hier wird gezeigt, wie Sie eine Vorhersage-App erstellen, die zum Bestimmen der Antwort verschiedene Faktoren aus Verlaufsdaten nutzt.
 
 [Klassifizierung nach Merkmalen unter Verwendung des Iris-Beispiels](tutorials/iris-clustering.md): Hier wird gezeigt, wie Sie ein Clusteringmodell zum Analysieren des Iris-Datasets verwenden. 
@@ -46,6 +48,6 @@ Grundlegende Informationen finden Sie unter [Basiskonzepte für das Modelltraini
 [Datentransformationen](resources/transforms.md): Beschreiben die Funktionen zur Datenvorbereitung in ML.NET.
 
 
-## <a name="api-reference"></a>API-Referenz
+## <a name="api-reference"></a>API-Verweis
 
 In der [ML.NET-API-Referenz](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet) finden Sie die gesamte Auswahl verfügbarer APIs.

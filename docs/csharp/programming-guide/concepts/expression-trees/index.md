@@ -2,17 +2,17 @@
 title: Ausdrucksbaumstrukturen (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: f17b4fba92c502ca6d53fef7ac6d01f2fdefc02e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7744954d3a3f552d5765e6e7085950f08a5adf55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526864"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720927"
 ---
 # <a name="expression-trees-c"></a>Ausdrucksbaumstrukturen (C#)
 Ausdrucksbaumstrukturen stellen Code in einer baumähnlichen Datenstruktur dar, in denen jeder Knoten ein Ausdruck ist, z. B. ein Methodenaufruf oder eine binäre Operation wie `x < y`.  
   
- Sie können Code kompilieren und ausführen, der von Ausdrucksbaumstrukturen dargestellt wird. Dies ermöglicht dynamische Änderungen des ausführbaren Codes, die Ausführung von LINQ-Abfragen in verschiedenen Datenbanken und die Erstellung von dynamischen Abfragen. Weitere Informationen zu Ausdrucksbaumstrukturen in LINQ finden Sie unter [How to: Use Expression Trees to Build Dynamic Queries (C#) (Vorgehensweise: Verwenden von Ausdrucksbaumstrukturen zum Erstellen von dynamischen Abfragen (C#))](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
+ Sie können Code kompilieren und ausführen, der von Ausdrucksbaumstrukturen dargestellt wird. Dies ermöglicht dynamische Änderungen des ausführbaren Codes, die Ausführung von LINQ-Abfragen in verschiedenen Datenbanken und die Erstellung von dynamischen Abfragen. Weitere Informationen zu Ausdrucksbaumstrukturen in LINQ finden Sie unter [Vorgehensweise: Verwenden von Ausdrucksbaumstrukturen zum Erstellen dynamischer Abfragen (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md).  
   
  Ausdrucksbaumstrukturen werden auch in der Dynamic Language Runtime (DLR) verwendet, um Interoperabilität zwischen dynamischen Sprachen und dem .NET-Framework zu gewährleisten und ermöglicht Entwicklern von Compilern, Ausdrucksbaumstrukturen anstelle der Microsoft Intermediate Language (MSIL) auszugeben. Weitere Informationen zur DLR finden Sie unter [Übersicht über die Dynamic Language Runtime](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md).  
   
@@ -118,7 +118,7 @@ Console.WriteLine("Decomposed expression: {0} => {1} {2} {3}",
 ```  
   
 ## <a name="immutability-of-expression-trees"></a>Unveränderlichkeit von Ausdrucksbaumstrukturen  
- Ausdrucksbaumstrukturen sollten unveränderlich sein. Das heißt, wenn Sie eine Ausdrucksbaumstruktur ändern möchten, müssen Sie einen neuen Knoten konstruieren, indem Sie einen vorhandenen Knoten kopieren und die enthaltenen Knoten ersetzen. Sie können einen Ausdrucksbaumstruktur-Besucher verwenden, um die vorhandene Ausdrucksbaumstruktur zu durchlaufen. Weitere Informationen finden Sie unter [How to: Modify Expression Trees (C#) (Vorgehensweise: Bearbeiten von Ausdrucksbaumstrukturen (C#))](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).  
+ Ausdrucksbaumstrukturen sollten unveränderlich sein. Das heißt, wenn Sie eine Ausdrucksbaumstruktur ändern möchten, müssen Sie einen neuen Knoten konstruieren, indem Sie einen vorhandenen Knoten kopieren und die enthaltenen Knoten ersetzen. Sie können einen Ausdrucksbaumstruktur-Besucher verwenden, um die vorhandene Ausdrucksbaumstruktur zu durchlaufen. Weitere Informationen finden Sie unter [Vorgehensweise: Ändern von Ausdrucksbaumstrukturen (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md).  
   
 ## <a name="compiling-expression-trees"></a>Kompilieren von Ausdrucksbaumstrukturen  
  Der Typ <xref:System.Linq.Expressions.Expression%601> bietet die Methode <xref:System.Linq.Expressions.Expression%601.Compile%2A>, welche den durch eine Ausdrucksbaumstruktur dargestellten Code in einen ausführbaren Delegaten kompiliert.  
@@ -145,13 +145,13 @@ Console.WriteLine(expr.Compile()(4));
 // Also prints True.  
 ```  
   
- Weitere Informationen finden Sie unter [How to: Execute Expression Trees (C#) (Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (C#))](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Linq.Expressions>  
-- [Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
-- [How to: Modify Expression Trees (C#) (Vorgehensweise: Bearbeiten von Ausdrucksbaumstrukturen (C#))](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
-- [Lambda-Ausdrücke](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-- [Übersicht über die Dynamic Language Runtime](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+- <xref:System.Linq.Expressions>
+- [Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [Vorgehensweise: Ändern von Ausdrucksbaumstrukturen (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [Lambda-Ausdrücke](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Übersicht über die Dynamic Language Runtime](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [Programmierkonzepte (C#)](../../../../csharp/programming-guide/concepts/index.md)

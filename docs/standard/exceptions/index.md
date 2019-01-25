@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 648a4d9e2f9be2cd8a5912ebfe272331a70ee76e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707881"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Behandeln und Auslösen von Ausnahmen in .NET
 
@@ -48,7 +48,7 @@ Ausnahmen bieten verschiedene Vorteile gegenüber anderen Methoden zur Fehlerben
 
 In der folgenden Tabelle sind einige allgemeine Ausnahmen sowie Beispiele aufgeführt, die die Ausnahmen verursachen können.
 
-| Ausnahmetyp | Beschreibung  | Beispiel |
+| Ausnahmetyp | Beschreibung | Beispiel |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | Die Basisklasse für alle Ausnahmen. | Keines (verwenden Sie eine abgeleitete Klasse dieser Ausnahme). |
 | <xref:System.IndexOutOfRangeException> | Wird von der Runtime nur dann ausgelöst, wenn ein Array falsch indiziert ist. | Indizieren eines Arrays außerhalb seines gültigen Vereichs: <br /> `arr[arr.Length+1]` |
@@ -60,13 +60,13 @@ In der folgenden Tabelle sind einige allgemeine Ausnahmen sowie Beispiele aufgef
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Exception-Klasse und Exception-Eigenschaften](exception-class-and-properties.md)  
-- [Gewusst wie: Verwenden des Try-Catch-Blocks zum Abfangen von Ausnahmen](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
-- [Gewusst wie: Verwenden spezifischer Ausnahmen in einem Catch-Block](how-to-use-specific-exceptions-in-a-catch-block.md)  
-- [Vorgehensweise: Explizites Auslösen von Ausnahmen](how-to-explicitly-throw-exceptions.md)  
-- [Gewusst wie: Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md)  
-- [Verwenden benutzergefilterter Ausnahmehandler](using-user-filtered-exception-handlers.md)  
-- [Gewusst wie: Verwenden von Finally-Blöcken](how-to-use-finally-blocks.md)  
-- [Behandeln von COM-Interop-Ausnahmen](handling-com-interop-exceptions.md)  
-- [Bewährte Methoden für Ausnahmen](best-practices-for-exceptions.md)  
+- [Exception-Klasse und Exception-Eigenschaften](exception-class-and-properties.md)
+- [Vorgehensweise: Verwenden des Try-Catch-Blocks zum Abfangen von Ausnahmen](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [Vorgehensweise: Verwenden spezifischer Ausnahmen in einem Catch-Block](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [Vorgehensweise: Explizites Auslösen von Ausnahmen](how-to-explicitly-throw-exceptions.md)
+- [Vorgehensweise: Erstellen benutzerdefinierter Ausnahmen](how-to-create-user-defined-exceptions.md)
+- [Verwenden benutzergefilterter Ausnahmehandler](using-user-filtered-exception-handlers.md)
+- [Vorgehensweise: Verwenden von Finally-Blöcken](how-to-use-finally-blocks.md)
+- [Behandeln von COM-Interop-Ausnahmen](handling-com-interop-exceptions.md)
+- [Bewährte Methoden für Ausnahmen](best-practices-for-exceptions.md)
 - [What Every Dev needs to Know About Exceptions in the Runtime (Was jeder Entwickler über Ausnahmen in der Runtime wissen muss)](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).

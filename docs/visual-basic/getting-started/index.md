@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: c17b3e1849664bb1a5d56b60e8f4121fedfcdae3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a7e6c084c84fec1af05a38664bcfbcabc99061ff
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638768"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534341"
 ---
 # <a name="get-started-with-visual-basic"></a>Erste Schritte mit Visual Basic
 Dieser Abschnitt der Dokumentation hilft Ihnen bei den ersten Schritten in der Visual Basic-Anwendungsentwicklung.  
@@ -33,31 +33,22 @@ Führt Änderungen in dieser Version auf, die die Kompilierung der Anwendung ver
 Bietet eine Liste von Websites und Newsgroups, in denen Sie Antworten auf Fragen zu häufig auftauchenden Problemen finden  
 
 ## <a name="see-also"></a>Siehe auch
- [Visual Basic abrufen](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
- Bietet Downloadlinks für Visual Studio-Versionen mit Visual Basic-Unterstützung, kostenlose Versionen eingeschlossen.  
+- [Visual Basic abrufen](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) Bietet Downloadlinks für Visual Studio-Versionen mit Visual Basic-Support, kostenlose Versionen eingeschlossen.  
 
- [Visual Basic-Grundlagen für Einsteiger](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
- Microsoft Virtual Academy-Kurs, der die Grundlagen der Programmierung mit Visual Basic vermittelt.
+- [Visual Basic-Grundlagen für Einsteiger](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507) Microsoft Virtual Academy-Kurs, der die Grundlagen der Programmierung mit Visual Basic vermittelt.
 
- [Objektorientierte Programmierung](../programming-guide/concepts/object-oriented-programming.md)  
- Bietet Links zu Seiten mit Einführungen in die objektorientierte Programmierung und beschreibt das Erstellen eigener Objekte sowie das Verwenden der Objekte zum Vereinfachen der Codierung  
-  
- [Beispiele](../../visual-basic/sample-applications.md)  
- Hier werden Links zu Beispielcode in Visual Basic aufgeführt.  
-  
- [Exemplarische Vorgehensweisen](../../visual-basic/walkthroughs.md)  
- Außerdem erhalten Sie eine Liste von Hilfeseiten, die Aspekte von Visual Basic veranschaulichen.  
-  
- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)  
- Erläutert, wie Sie Support erhalten und Feedback geben können  
-  
- [Visual Studio](/visualstudio/)  
- Enthält Links zur Dokumentation für Visual Studio.  
-  
- [C#](../../csharp/index.md): Listet Links zur Dokumentation der Anwendungsentwicklung mit Visual Basic auf.  
-  
- [Visual C++](/cpp/)  
- Enthält Links zur Visual C++-Dokumentation  
-  
- [Office- und SharePoint-Entwicklung](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio)  
- Bietet Informationen zur Verwendung von Microsoft Office und Visual Studio als Bestandteil einer Geschäftsanwendung.
+- [Objektorientierte Programmierung](../programming-guide/concepts/object-oriented-programming.md) Bietet Links zu Seiten mit Einführungen in die objektorientierte Programmierung und beschreibt das Erstellen eigener Objekte sowie das Verwenden der Objekte zum Vereinfachen der Codierung.  
+
+- [Beispiele](../../visual-basic/sample-applications.md) Hier sind Links zu Beispielcode in Visual Basic aufgeführt.  
+
+- [Exemplarische Vorgehensweisen](../../visual-basic/walkthroughs.md) Außerdem erhalten Sie eine Liste von Hilfeseiten, die Aspekte von Visual Basic veranschaulichen.  
+
+- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us) Erläutert, wie Sie Support erhalten und Feedback geben können.  
+
+- [Visual Studio](/visualstudio/) Enthält Links zur Dokumentation für Visual Studio.  
+
+- [C#](../../csharp/index.md): Listet Links zur Dokumentation der Anwendungsentwicklung mit Visual Basic auf.  
+
+- [Visual C++](/cpp/) Enthält Links zur Visual C++-Dokumentation.  
+
+- [Office- und SharePoint-Entwicklung](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio) Bietet Informationen zur Verwendung von Microsoft Office und Visual Studio als Bestandteil einer Geschäftsanwendung.

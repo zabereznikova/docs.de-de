@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: 68ec09dac026e46716ff18dce88acf9d60635026
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d7cdf5a309da1f32b337bea4d609fe34487a5457
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54746807"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Protokollieren von Informationen aus der Anwendung (Visual Basic)
 Dieser Abschnitt enthält Themen zur Protokollierung von Anwendungsinformationen mithilfe der Objekte `My.Application.Log` oder `My.Log` und zur Erweiterung der Protokollierungsfunktionen der Anwendung.  
@@ -27,17 +27,17 @@ Dieser Abschnitt enthält Themen zur Protokollierung von Anwendungsinformationen
   
 |Beschreibung|Siehe|  
 |--------|---------|  
-|Schreiben Sie Ereignisinformationen in die Anwendungsprotokolle.|[Gewusst wie: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
-|Schreiben Sie Ausnahmeinformationen in die Anwendungsprotokolle.|[Gewusst wie: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
-|Schreiben Sie beim Starten und Herunterfahren der Anwendung Ablaufverfolgungsinformationen in die Anwendungsprotokolle.|[Gewusst wie: Protokollieren von Meldungen beim Starten oder Beenden der Anwendung](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
-|Konfigurieren Sie `My.Application.Log`, um Informationen in eine Textdatei zu schreiben.|[Gewusst wie: Schreiben von Ereignisinformationen in eine Textdatei](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)|  
-|Konfigurieren Sie `My.Application.Log`, um Informationen in ein Ereignisprotokoll zu schreiben.|[Gewusst wie: Schreiben in ein Anwendungsereignisprotokoll](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)|  
+|Schreiben Sie Ereignisinformationen in die Anwendungsprotokolle.|[Vorgehensweise: Schreiben von Protokollmeldungen](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
+|Schreiben Sie Ausnahmeinformationen in die Anwendungsprotokolle.|[Vorgehensweise: Protokollieren von Ausnahmen](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
+|Schreiben Sie beim Starten und Herunterfahren der Anwendung Ablaufverfolgungsinformationen in die Anwendungsprotokolle.|[Vorgehensweise: Protokollieren von Meldungen beim Starten oder Beenden der Anwendung](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
+|Konfigurieren Sie `My.Application.Log`, um Informationen in eine Textdatei zu schreiben.|[Vorgehensweise: Schreiben von Ereignisinformationen in eine Textdatei](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)|  
+|Konfigurieren Sie `My.Application.Log`, um Informationen in ein Ereignisprotokoll zu schreiben.|[Vorgehensweise: Schreiben in ein Anwendungsereignisprotokoll](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)|  
 |Ändern Sie den Ort, in den `My.Application.Log` Informationen schreibt.|[Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)|  
 |Bestimmen Sie, wohin `My.Application.Log` Informationen schreibt.|[Exemplarische Vorgehensweise: Bestimmen, wohin „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
 |Erstellen Sie einen benutzerdefinierten Protokolllistener für `My.Application.Log`.|[Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Protokolllistenern](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)|  
 |Filtern Sie die Ausgabe der Protokolle `My.Application.Log`.|[Exemplarische Vorgehensweise: Filtern der Ausgabe von „My.Application.Log“](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [Arbeiten mit Anwendungsprotokollen](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [Problembehandlung: Protokolllistener](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- [Arbeiten mit Anwendungsprotokollen](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [Problembehandlung: Protokolllistener](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
