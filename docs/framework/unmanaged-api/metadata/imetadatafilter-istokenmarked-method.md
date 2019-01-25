@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5bf5149e8e42a810a6a490767638b374f66b5679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 32642c4ff6193e2002c8a4c7d201b36c7601debb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445863"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582538"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked-Methode
-Ruft einen Wert, der angibt, ob das angegebene Metadatentoken als verarbeitet markiert wurde.  
+Ruft einen Wert, der angibt, ob das angegebene Metadatentoken als verarbeitet gekennzeichnet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,19 +38,19 @@ HRESULT IsTokenMarked (
   
 #### <a name="parameters"></a>Parameter  
  `tk`  
- [in] Das Token für eine Markierung für die Verarbeitung zu untersuchen.  
+ [in] Das Token, um eine Markierung für die Verarbeitung überprüfen.  
   
  `pIsMarked`  
- [out] Ein Wert, `true` Wenn `tk` wurde verarbeitet, andernfalls `false`.  
+ [out] Ein Wert, `true` Wenn `tk` wurde verarbeitet wird; andernfalls `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataFilter-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataFilter-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

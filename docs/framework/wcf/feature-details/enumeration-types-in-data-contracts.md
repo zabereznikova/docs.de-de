@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: ed4a0c572f651793a40cb5ffcaa32aef884c1cec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21f1f948e0bcd088cbe14316760708e10285124b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649309"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Enumerationstypen in Datenverträgen
 Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Thema werden mehrere Beispiele behandelt, in denen das Programmiermodell erklärt wird.  
@@ -30,7 +30,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
  Sie können die <xref:System.Runtime.Serialization.DataContractAttribute>-Eigenschaften (<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> und <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>) wie gewohnt für Enumerationsdatenverträge verwenden.  
   
 ### <a name="enumeration-member-values"></a>Enumerationsmemberwerte  
- Im Allgemeinen enthält der Datenvertrag Enumerationsmembernamen, keine numerischen Werte. Allerdings behält das exportierte Schema, wenn das datenvertragsmodell verwenden, wenn der Empfängerseite wird genauso eine WCF-Client ist, die numerischen Werte. Beachten Sie, dass dies nicht der Fall ist, bei Verwendung der [verwenden der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+ Im Allgemeinen enthält der Datenvertrag Enumerationsmembernamen, keine numerischen Werte. Bleiben jedoch erhalten, wenn das datenvertragsmodell verwenden die Empfängerseite einen WCF-Client das exportierte Schema die numerischen Werte. Beachten Sie, dass dies nicht der Fall ist, bei Verwendung der [mithilfe der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
  Wenn im obigen Beispiel `condition` auf `Used` festgelegt ist und die Daten in XML serialisiert werden, lautet das XML-Ergebnis `<condition>Used</condition>``<condition>1</condition>`, und nicht . Deshalb entspricht der folgende Datenvertrag dem Datenvertrag von `CarConditionEnum`.  
   
@@ -81,7 +81,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
   
 1.  Versuchen Sie, einen Enumerationsmember zu finden (mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), der dem numerischen Wert zugeordnet ist. Wenn Sie einen Member finden, senden Sie eine Liste, die nur diesen Member enthält.  
   
-2.  Versuchen Sie, den numerischen Wert so zu einer Summe aufzulösen, dass Enumerationsmember vorhanden sind (jeweils mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), die den einzelnen Teilen der Summe zugeordnet sind. Senden Sie die Liste mit allen Membern dieser Art. Beachten Sie, dass die *gierige Algorithmus* wird verwendet, um solche Auffinden einer und daher besteht keine Garantie, die eine Summe gefunden wird, auch wenn es vorhanden ist. Um dieses Problem zu verhindern, sollten Sie sicherstellen, dass es sich bei den numerischen Werten der Enumerationsmember um Potenzen von 2 handelt.  
+2.  Versuchen Sie, den numerischen Wert so zu einer Summe aufzulösen, dass Enumerationsmember vorhanden sind (jeweils mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), die den einzelnen Teilen der Summe zugeordnet sind. Senden Sie die Liste mit allen Membern dieser Art. Beachten Sie, dass die *greedy-Algorithmus* verwendet, um eine Summe, suchen und es gibt also keine Garantie dafür, die eine Summe gefunden wird, auch wenn es vorhanden ist. Um dieses Problem zu verhindern, sollten Sie sicherstellen, dass es sich bei den numerischen Werten der Enumerationsmember um Potenzen von 2 handelt.  
   
 3.  Lösen Sie eine <xref:System.Runtime.Serialization.SerializationException> aus, wenn die vorausgehenden zwei Schritte fehlschlagen und der numerische Wert ungleich 0 ist. Senden Sie die leere Liste, wenn der numerische Wert 0 ist.  
   
@@ -96,7 +96,7 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
  [!code-csharp[c_DataContractEnumerations#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractenumerations/cs/source.cs#5)]
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

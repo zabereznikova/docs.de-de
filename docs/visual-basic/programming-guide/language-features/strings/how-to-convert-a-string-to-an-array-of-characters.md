@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Konvertieren einer Zeichenfolge in ein Zeichenfolgenarray in Visual Basic'
+title: 'Vorgehensweise: Konvertieren einer Zeichenfolge in ein Array von Zeichen in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - character arrays [Visual Basic], converting strings
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - strings [Visual Basic], converting to arrays
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
-ms.openlocfilehash: cc12b70cddcb93a72b4421a8ddd93542ef84f55b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9d68e3d90c52d6a4312ccb7c0c9610968e7a4b55
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603754"
 ---
-# <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Gewusst wie: Konvertieren einer Zeichenfolge in ein Zeichenfolgenarray in Visual Basic
+# <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>Vorgehensweise: Konvertieren einer Zeichenfolge in ein Array von Zeichen in Visual Basic
 Manchmal ist es sinnvoll, Daten über die Zeichen in der Zeichenfolge und die Positionen der diese Zeichen in der Zeichenfolge ein, z. B. Wenn Sie eine Zeichenfolge analysieren. Dieses Beispiel zeigt, wie Sie ein Array von Zeichen in einer Zeichenfolge abrufen können, durch den Aufruf der Zeichenfolge <xref:System.String.ToCharArray%2A> Methode.  
   
 ## <a name="example"></a>Beispiel  
@@ -28,9 +28,9 @@ Manchmal ist es sinnvoll, Daten über die Zeichen in der Zeichenfolge und die Po
   
  [!code-vb[VbVbalrStrings#76](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-a-string-to-an-array-of-characters_2.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.String.Chars%2A>  
- <xref:System.Globalization.StringInfo?displayProperty=nameWithType>  
- [Gewusst wie: Zugreifen auf Zeichen in Zeichenfolgen](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)  
- [Konvertieren zwischen Zeichenfolgen und anderen Datentypen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)  
- [Zeichenfolgen](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.String.Chars%2A>
+- <xref:System.Globalization.StringInfo?displayProperty=nameWithType>
+- [Vorgehensweise: Zugreifen auf Zeichen in Zeichenfolgen](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)
+- [Konvertieren zwischen Zeichenfolgen und anderen Datentypen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
+- [Zeichenfolgen](../../../../visual-basic/programming-guide/language-features/strings/index.md)

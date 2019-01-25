@@ -2,12 +2,12 @@
 title: Partitionieren von Daten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 17e929d3c95e079a0a73b8e8cadf51d3ece6f5f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afbbd479d3dadd69b81cdd6aead0a4263b92dfe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645911"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728267"
 ---
 # <a name="partitioning-data-visual-basic"></a>Partitionieren von Daten (Visual Basic)
 Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz in zwei Abschnitte unterteilt wird, ohne die Elemente dabei neu anzuordnen, und bei dem anschließend einer der Abschnitte zurückzugeben wird.  
@@ -30,29 +30,29 @@ Partitionieren in LINQ bezieht sich auf den Vorgang, bei dem eine Eingabesequenz
 ## <a name="query-expression-syntax-examples"></a>Beispiele für die Abfrageausdruckssyntax  
   
 ### <a name="skip"></a>Skip  
- Im folgenden Codebeispiel wird mit der `Skip` -Klausel in Visual Basic, überspringen die ersten vier Zeichenfolgen in ein Array von Zeichenfolgen vor der Rückgabe der verbleibenden Zeichenfolgen im Array.  
+ Im folgenden Codebeispiel wird die `Skip` -Klausel in Visual Basic, um über die ersten vier Zeichenfolgen in ein Array von Zeichenfolgen zu überspringen, vor der Rückgabe die restlichen Zeichenfolgen im Array.  
   
  [!code-vb[CsLINQPartitioning#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_1.vb)]  
   
 ### <a name="skipwhile"></a>SkipWhile  
- Im folgenden Codebeispiel wird mit der `Skip While` -Klausel in Visual Basic, um die Zeichenfolgen in einem Array überspringen, wenn es sich bei der erste Buchstaben der Zeichenfolge ist "a". Die übrigen Zeichenfolgen im Array werden zurückgegeben.  
+ Im folgenden Codebeispiel wird die `Skip While` -Klausel in Visual Basic, um die Zeichenfolgen in einem Array überspringen, wenn es sich bei den ersten Buchstaben der Zeichenfolge ist "a". Es werden die restlichen Zeichenfolgen im Array zurückgegeben.  
   
  [!code-vb[CsLINQPartitioning#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_2.vb)]  
   
 ### <a name="take"></a>Take  
- Im folgenden Codebeispiel wird mit der `Take` -Klausel in Visual Basic, um die ersten zwei Zeichenfolgen in ein Array von Zeichenfolgen zurückzugeben.  
+ Im folgenden Codebeispiel wird die `Take` -Klausel in Visual Basic, um die ersten beiden Zeichenfolgen in ein Array von Zeichenfolgen zurückzugeben.  
   
  [!code-vb[CsLINQPartitioning#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_3.vb)]  
   
 ### <a name="takewhile"></a>TakeWhile  
- Im folgenden Codebeispiel wird mit der `Take While` -Klausel in Visual Basic, um Zeichenfolgen aus einem Array zurück, während die Länge der Zeichenfolge fünf oder weniger beträgt.  
+ Im folgenden Codebeispiel wird die `Take While` -Klausel in Visual Basic, um Zeichenfolgen aus einem Array zurück, während sich die Länge der Zeichenfolge bis zu fünf befindet.  
   
  [!code-vb[CsLINQPartitioning#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/partitioning-data_4.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Linq>  
- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Skip-Klausel](../../../../visual-basic/language-reference/queries/skip-clause.md)  
- [Skip While-Klausel](../../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- [Take-Klausel](../../../../visual-basic/language-reference/queries/take-clause.md)  
- [Take While-Klausel](../../../../visual-basic/language-reference/queries/take-while-clause.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Linq>
+- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Skip-Klausel](../../../../visual-basic/language-reference/queries/skip-clause.md)
+- [Skip While-Klausel](../../../../visual-basic/language-reference/queries/skip-while-clause.md)
+- [Take-Klausel](../../../../visual-basic/language-reference/queries/take-clause.md)
+- [Take While-Klausel](../../../../visual-basic/language-reference/queries/take-while-clause.md)

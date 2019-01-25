@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ecc2f62a6bb8119b7fe06a82aea827a58d04ecb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a614ad1bd9738c993775667ccd261a089e8b57a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441667"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624260"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags-Enumeration
-Enthält Werte, die den Typ der Datei, die in einem Aufruf definiert beschreiben [IMetaDataAssemblyEmit:: DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+Enthält Werte, die beschreiben, den Typ der Datei, die definiert, die in einem Aufruf von [IMetaDataAssemblyEmit:: DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,15 +41,15 @@ typedef enum CorFileFlags {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`ffContainsMetaData`|Gibt an, dass die Datei nicht mit einer Ressourcendatei gespeichert ist.|  
-|`ffContainsNoMetaData`|Gibt an, dass die Datei, die möglicherweise eine Ressourcendatei keine Metadaten enthält.|  
+|`ffContainsMetaData`|Gibt an, dass die Datei keiner Ressourcendatei gespeichert ist.|  
+|`ffContainsNoMetaData`|Gibt an, dass die Datei, die möglicherweise eine Ressourcendatei, die Metadaten nicht enthält.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

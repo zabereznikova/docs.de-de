@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c9080a588b96c5b89c280a0fb407952bd580f26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5484f8bd5515d3a4a3cd08110cc5d48c4356a9f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404222"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590145"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual-Methode
 Liest Daten aus der angegebenen virtuellen Speicheradresse in den angegebenen Puffer.  
@@ -41,7 +41,7 @@ HRESULT ReadVirtual (
   
 #### <a name="parameters"></a>Parameter  
  `address`  
- [in] Eine CLRDATA_ADDRESS, die Adresse des virtuellen Arbeitsspeichers speichert.  
+ [in] Eine CLRDATA_ADDRESS, speichert die Adresse des virtuellen Arbeitsspeichers.  
   
  `buffer`  
  [out] Ein Zeiger auf einen Puffer, der die Daten empfängt.  
@@ -53,7 +53,7 @@ HRESULT ReadVirtual (
  [out] Ein Zeiger auf die Anzahl der Bytes, die zurückgegeben werden soll.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** ClrData.idl, ClrData.h  
   
@@ -61,5 +61,5 @@ HRESULT ReadVirtual (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

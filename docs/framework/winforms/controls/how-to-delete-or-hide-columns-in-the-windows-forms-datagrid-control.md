@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Löschen oder Ausblenden von Spalten im DataGrid-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: 6541ffff1149e5df13c43ee392ffa8b221c8407d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 635fbc112a241c4c8b17d2b49c22042c6bd59a21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653943"
 ---
-# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Gewusst wie: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms
+# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Vorgehensweise: Löschen oder Ausblenden von Spalten im DataGrid-Steuerelement in Windows Forms
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Programmgesteuert löschen oder Ausblenden von Spalten in Windows Forms <xref:System.Windows.Forms.DataGrid> mithilfe der Eigenschaften und Methoden des Steuerelements die <xref:System.Windows.Forms.GridColumnStylesCollection> und <xref:System.Windows.Forms.DataGridColumnStyle> Objekte (Member der der <xref:System.Windows.Forms.DataGridTableStyle> Klasse).  
+ Sie können programmgesteuert zu löschen oder Ausblenden von Spalten in der Windows Forms <xref:System.Windows.Forms.DataGrid> -Steuerelement unter Verwendung der Eigenschaften und Methoden des der <xref:System.Windows.Forms.GridColumnStylesCollection> und <xref:System.Windows.Forms.DataGridColumnStyle> Objekte (Member der der <xref:System.Windows.Forms.DataGridTableStyle> Klasse).  
   
- Die gelöschten oder ausgeblendeten Spalten sind weiterhin vorhanden, in der Datenquelle, die dem Raster gebunden ist und weiterhin programmgesteuert aufgerufen werden können. Sie sind gerade nicht mehr in das DataGrid-Steuerelement angezeigt.  
+ Die gelöschten oder ausgeblendeten Spalten sind noch vorhanden, in der Datenquelle, die dem Raster gebunden ist, und weiterhin programmgesteuert zugegriffen werden. Sie sind lediglich nicht mehr sichtbar, in das DataGrid-Steuerelement.  
   
 > [!NOTE]
->  Wenn Ihre Anwendung greift nicht auf bestimmte Spalten der Daten und nicht in das DataGrid-Steuerelement angezeigt werden möchten, ist es wahrscheinlich nicht erforderlich, um ursprünglich in der Datenquelle einzuschließen.  
+>  Wenn Ihre Anwendung greift nicht auf bestimmte Spalten der Daten, und Sie nicht in das DataGrid-Steuerelement angezeigt werden möchten, ist es wahrscheinlich nicht erforderlich, um sie in der Datenquelle im vornherein einzuschließen.  
   
 ### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>So löschen Sie eine Spalte programmgesteuert aus dem DataGrid  
   
 1.  Deklarieren Sie eine neue Instanz der im Deklarationsbereich des Formulars die <xref:System.Windows.Forms.DataGridTableStyle> Klasse.  
   
-2.  Legen Sie die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> Eigenschaft, um die Tabelle in der Datenquelle, die der Stil angewendet werden sollen. Im folgenden Beispiel wird die <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> -Eigenschaft, die es wird vorausgesetzt, ist bereits festgelegt.  
+2.  Legen Sie die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> Eigenschaft, um die Tabelle in der Datenquelle, die auf den der Stil angewendet werden sollen. Im folgenden Beispiel wird die <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> -Eigenschaft, die es wird davon ausgegangen ist bereits festgelegt.  
   
-3.  Fügen Sie der neuen <xref:System.Windows.Forms.DataGridTableStyle> -Objekt, das Datenraster Tabellenformate der Auflistung.  
+3.  Hinzufügen des neuen <xref:System.Windows.Forms.DataGridTableStyle> Objekt, das das DataGrid-Steuerelement Tabellenformate der Auflistung.  
   
-4.  Rufen Sie die <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> Methode der <xref:System.Windows.Forms.DataGrid>des <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> -Auflistung, den Spaltenindex der zu löschenden Spalte angeben.  
+4.  Rufen Sie die <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> Methode der <xref:System.Windows.Forms.DataGrid>des <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> Auflistung, die den Spaltenindex der zu löschenden Spalte angeben.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -81,11 +81,11 @@ ms.locfileid: "33534553"
   
 1.  Deklarieren Sie eine neue Instanz der im Deklarationsbereich des Formulars die <xref:System.Windows.Forms.DataGridTableStyle> Klasse.  
   
-2.  Festlegen der <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Eigenschaft von der <xref:System.Windows.Forms.DataGridTableStyle> auf die Tabelle in der Datenquelle, die der Stil angewendet werden sollen. Im folgenden Codebeispiel wird mit der <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> -Eigenschaft, die es wird vorausgesetzt, ist bereits festgelegt.  
+2.  Legen Sie die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Eigenschaft der <xref:System.Windows.Forms.DataGridTableStyle> in die Tabelle in der Datenquelle, die auf den der Stil angewendet werden sollen. Im folgenden Codebeispiel wird die <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> -Eigenschaft, die es wird davon ausgegangen ist bereits festgelegt.  
   
-3.  Fügen Sie der neuen <xref:System.Windows.Forms.DataGridTableStyle> -Objekt, das Datenraster Tabellenformate der Auflistung.  
+3.  Hinzufügen des neuen <xref:System.Windows.Forms.DataGridTableStyle> Objekt, das das DataGrid-Steuerelement Tabellenformate der Auflistung.  
   
-4.  Ausblenden der Spalte durch Festlegen seiner `Width` -Eigenschaft auf 0 festlegen des Spaltenindexes der Spalte ausgeblendet.  
+4.  Blenden Sie die Spalte durch Festlegen seiner `Width` Eigenschaft auf 0 (null), die den Spaltenindex der Spalte ausblenden angibt.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -124,6 +124,6 @@ ms.locfileid: "33534553"
     }  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Ändern der angezeigten Daten im DataGrid-Steuerelement in Windows Forms zur Laufzeit](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)  
- [Gewusst wie: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Ändern der angezeigten Daten zur Laufzeit in das DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

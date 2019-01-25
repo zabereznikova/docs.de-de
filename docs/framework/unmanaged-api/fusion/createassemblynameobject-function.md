@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5433c49db8e507c6026ab0e87040dd5634ad0808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1412231b53763ce8e6c2400497396d2f178d8e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666292"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject-Funktion
-Ruft einen Schnittstellenzeiger auf eine [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) Instanz, die die eindeutige Identität der Assembly mit dem angegebenen Namen darstellt.  
+Ruft einen Schnittstellenzeiger auf ein [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) -Instanz, die eindeutige Identität der Assembly mit dem angegebenen Namen darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ HRESULT CreateAssemblyNameObject (
  [out] Das zurückgegebene `IAssemblyName`.  
   
  `szAssemblyName`  
- [in] Der Name der Assembly, für die Erstellung des neuen `IAssemblyName` Instanz.  
+ [in] Der Name der Assembly, für die zum Erstellen des neuen `IAssemblyName` Instanz.  
   
  `dwFlags`  
  [in] Flags, die an den Objektkonstruktor übergeben.  
@@ -53,14 +53,14 @@ HRESULT CreateAssemblyNameObject (
  [in] Für zukünftige Erweiterungen reserviert. `pvReserved` ein null-Verweis muss sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Fusion.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

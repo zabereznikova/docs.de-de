@@ -2,12 +2,12 @@
 title: Generieren von SQL aus Befehlsstrukturen – Best Practices
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 476a2b9d6d3a8efb6094afce0143abed765bdb48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659094"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generieren von SQL aus Befehlsstrukturen – Best Practices
 Mit Befehlsstrukturen für Ausgabeabfragen werden Abfragen so modelliert, dass diese in SQL ausgedrückt werden können. Beim Generieren von SQL anhand einer Ausgabebefehlsstruktur treten für die Anbieterwriter jedoch bestimmte allgemeine Probleme auf. Diese Probleme werden im Rahmen dieses Themas erläutert. Im nächsten Thema wird anhand des Beispielanbieters aufgezeigt, wie diese Probleme gelöst werden können.  
@@ -130,7 +130,7 @@ ON b.y = d.z
  Auch beim Vereinfachen von Joins verfügen die beteiligten Tabellen (oder Unterabfragen) möglicherweise über miteinander in Konflikt stehende Aliase, die umbenannt werden müssen.  
   
 ## <a name="avoid-select-"></a>Vermeiden von SELECT *  
- Verwenden Sie zum Auswählen aus Basistabellen nicht `SELECT *`. Das Speichermodell einer [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] -Anwendung beinhaltet möglicherweise nur eine Teilmenge der Spalten, die in der Datenbanktabelle sind. In diesem Fall führt `SELECT *` möglicherweise zu einem falschen Ergebnis. Stattdessen sollten Sie alle beteiligten Spalten mithilfe des Spaltennamens des Ergebnistyps der teilnehmenden Ausdrücke angeben.  
+ Verwenden Sie zum Auswählen aus Basistabellen nicht `SELECT *`. Das Speichermodell einer [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] -Anwendung beinhaltet möglicherweise nur eine Teilmenge der Spalten, die in der Tabelle der Datenbank befinden. In diesem Fall führt `SELECT *` möglicherweise zu einem falschen Ergebnis. Stattdessen sollten Sie alle beteiligten Spalten mithilfe des Spaltennamens des Ergebnistyps der teilnehmenden Ausdrücke angeben.  
   
 ## <a name="reuse-of-expressions"></a>Wiederverwendung von Ausdrücken  
  Ausdrücke werden möglicherweise in der von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] übergebenen Abfragebefehlsstruktur wiederverwendet. Es sollte nicht davon ausgegangen werden, dass die einzelnen Ausdrücke in der Abfragebefehlsstruktur nur einmal vorhanden sind.  
@@ -138,5 +138,5 @@ ON b.y = d.z
 ## <a name="mapping-primitive-types"></a>Zuordnen von primitiven Typen  
  Wenn Sie konzeptionelle Typen (EDM) Anbietertypen zuordnen, sollte die Zuordnung zum allgemeinsten Typ (Int32) erfolgen, sodass alle möglichen Werte geeignet sind. Vermeiden Sie außerdem die Zuordnung zu Typen, die für viele Vorgänge, wie BLOB-Typen verwendet werden kann (z. B. `ntext` in SQL Server).  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL-Generierung](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+## <a name="see-also"></a>Siehe auch
+- [SQL-Generierung](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

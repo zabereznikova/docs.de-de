@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: f5b2775b2f0c8e35d398d5d0666d47bf0009a9e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 783ecb35408f63c7f3e7299e503c3f0fda3f36ba
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666435"
 ---
 # <a name="querying-across-relationships"></a>Beziehungsübergreifendes Abfragen
 Verweise auf andere Objekte oder Auflistungen in Ihren Klassendefinitionen entsprechen direkt den Fremdschlüsselbeziehungen in der Datenbank. Sie können diese Beziehungen nutzen, wenn Sie eine Abfrage mit der dot-Schreibweise vornehmen, um auf die Beziehungseigenschaften zuzugreifen und von einem Objekt zu einem anderen zu navigieren. Diese Zugriffsoperationen werden in komplexere Joins oder korrelierte Unterabfragen in den entsprechenden SQL-Befehlen übersetzt.  
@@ -20,7 +20,7 @@ Verweise auf andere Objekte oder Auflistungen in Ihren Klassendefinitionen entsp
  [!code-csharp[DLinqQueryConcepts#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#3)]
  [!code-vb[DLinqQueryConcepts#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#3)]  
   
- Wenn keine Beziehungseigenschaften existieren haben schreiben manuell als *Joins*, genau wie in einer SQL-Abfrage, wie im folgenden Code:  
+ Wenn Beziehungseigenschaften nicht vorhanden war man musste diese schreiben manuell als *Joins*genau wie in einer SQL-Abfrage wie im folgenden Code:  
   
  [!code-csharp[DLinqQueryConcepts#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#4)]
  [!code-vb[DLinqQueryConcepts#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#4)]  
@@ -31,9 +31,9 @@ Verweise auf andere Objekte oder Auflistungen in Ihren Klassendefinitionen entsp
   
  Da Sie nun über Beziehungen verfügen, können Sie Abfragen schreiben, die auf die in Ihren Klassen definierten Beziehungseigenschaften Bezug nehmen. Diese Beziehungsverweise entsprechen Fremdschlüsselbeziehungen in der Datenbank. Operationen, die diese Beziehungen verwenden, werden in komplexere Joins in der entsprechenden SQL übersetzt. Sofern Sie (mit dem <xref:System.Data.Linq.Mapping.AssociationAttribute>-Attribut) eine Beziehung definiert haben, müssen Sie in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] keinen expliziten Join codieren.  
   
- Um diese Illusion aufrechtzuerhalten [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementiert ein Verfahren namens *verzögertes Laden*. Weitere Informationen finden Sie unter [verzögerte und sofortige laden](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+ Um diese Illusion aufrechtzuerhalten [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementiert sogenannte *verzögertes Laden*. Weitere Informationen finden Sie unter [verzögertes im Vergleich zu den sofortigen Laden](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
   
- Betrachten Sie die folgende SQL-Abfrage um eine Liste der zu projizieren `CustomerID` - `OrderID` Paare:  
+ Betrachten Sie die folgende SQL-Abfrage, um eine Liste der zu projizieren `CustomerID` - `OrderID` Paare:  
   
 ```  
 SELECT t0.CustomerID, t1.OrderID  
@@ -42,15 +42,15 @@ FROM   Customers AS t0 INNER JOIN
 WHERE  (t0.City = @p0)  
 ```  
   
- Wenn Sie mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die gleichen Ergebnisse erzielen möchten, verwenden Sie den `Orders`-Eigenschaftenverweis, der bereits in der `Customer`-Klasse existiert. Die `Orders` Referenz enthält die erforderlichen Informationen zum Ausführen der Abfrage und zum projizieren der `CustomerID` - `OrderID` -Paare, wie im folgenden Code:  
+ Wenn Sie mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die gleichen Ergebnisse erzielen möchten, verwenden Sie den `Orders`-Eigenschaftenverweis, der bereits in der `Customer`-Klasse existiert. Die `Orders` Referenz enthält die erforderlichen Informationen zum Ausführen der Abfrage und dem Projekt die `CustomerID` - `OrderID` -Paare, wie im folgenden Code:  
   
  [!code-csharp[DLinqQueryConcepts#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#5)]
  [!code-vb[DLinqQueryConcepts#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#5)]  
   
- Sie können auch umgekehrt vorgehen. In diesem Fall fragen Sie `Orders` (Bestellungen) ab und verwenden den `Customer`-Beziehungsverweis für den Zugriff auf Informationen zum zugehörigen `Customer`-Objekt. Der folgende Code projiziert die gleichen `CustomerID` - `OrderID` -Paare wie zuvor, dieses Mal jedoch durch Abfragen `Orders` anstelle von `Customers`.  
+ Sie können auch umgekehrt vorgehen. In diesem Fall fragen Sie `Orders` (Bestellungen) ab und verwenden den `Customer`-Beziehungsverweis für den Zugriff auf Informationen zum zugehörigen `Customer`-Objekt. Der folgende Code projiziert die gleichen `CustomerID` - `OrderID` -Paare wie zuvor, aber dieses Mal durch Abfragen `Orders` anstelle von `Customers`.  
   
  [!code-csharp[DLinqQueryConcepts#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#6)]
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+## <a name="see-also"></a>Siehe auch
+- [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
