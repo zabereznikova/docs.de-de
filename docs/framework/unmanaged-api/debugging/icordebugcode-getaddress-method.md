@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2de22729fd3d7a511c1105ebf810d0402bd73a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 229bf968d21516d48468610c8f47367324fb6b13
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402082"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695516"
 ---
-# <a name="icordebugcodegetaddress-method"></a><span data-ttu-id="38c9d-102">ICorDebugCode::GetAddress-Methode</span><span class="sxs-lookup"><span data-stu-id="38c9d-102">ICorDebugCode::GetAddress Method</span></span>
-<span data-ttu-id="38c9d-103">Ruft die relative virtuelle Adresse (RVA) des Codesegments, die diese Schnittstelle "ICorDebugCode" darstellt.</span><span class="sxs-lookup"><span data-stu-id="38c9d-103">Gets the relative virtual address (RVA) of the code segment that this "ICorDebugCode" interface represents.</span></span>  
+# <a name="icordebugcodegetaddress-method"></a><span data-ttu-id="99b2b-102">ICorDebugCode::GetAddress-Methode</span><span class="sxs-lookup"><span data-stu-id="99b2b-102">ICorDebugCode::GetAddress Method</span></span>
+<span data-ttu-id="99b2b-103">Ruft die relative virtuelle Adresse (RVA) des Codesegments, die diese Schnittstelle "ICorDebugCode" darstellt.</span><span class="sxs-lookup"><span data-stu-id="99b2b-103">Gets the relative virtual address (RVA) of the code segment that this "ICorDebugCode" interface represents.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38c9d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="38c9d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99b2b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="99b2b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAddress (  
@@ -35,18 +35,18 @@ HRESULT GetAddress (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="38c9d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="38c9d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="99b2b-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="99b2b-105">Parameters</span></span>  
  `pStart`  
- <span data-ttu-id="38c9d-106">[out] Ein Zeiger auf die RVA des Codesegments.</span><span class="sxs-lookup"><span data-stu-id="38c9d-106">[out] A pointer to the RVA of the code segment.</span></span>  
+ <span data-ttu-id="99b2b-106">[out] Ein Zeiger auf die RVA des Codesegments.</span><span class="sxs-lookup"><span data-stu-id="99b2b-106">[out] A pointer to the RVA of the code segment.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="38c9d-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="38c9d-107">Requirements</span></span>  
- <span data-ttu-id="38c9d-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38c9d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="99b2b-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="99b2b-107">Requirements</span></span>  
+ <span data-ttu-id="99b2b-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99b2b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38c9d-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="38c9d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="99b2b-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="99b2b-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="38c9d-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="38c9d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="99b2b-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="99b2b-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="38c9d-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38c9d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="99b2b-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99b2b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38c9d-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="38c9d-112">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="99b2b-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="99b2b-112">See also</span></span>
+
