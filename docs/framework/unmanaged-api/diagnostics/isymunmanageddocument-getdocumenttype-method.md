@@ -17,29 +17,29 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0460086874af38cad348c965237f8c423f18e868
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: adad8854052d76476076e5e1357f6d3e2dec1052
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629474"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="d70d5-102">ISymUnmanagedDocument::GetDocumentType-Methode</span><span class="sxs-lookup"><span data-stu-id="d70d5-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="d70d5-103">Ruft den Dokumenttyp dieses Dokuments ab.</span><span class="sxs-lookup"><span data-stu-id="d70d5-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="ba7b8-102">ISymUnmanagedDocument::GetDocumentType-Methode</span><span class="sxs-lookup"><span data-stu-id="ba7b8-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+<span data-ttu-id="ba7b8-103">Ruft den Dokumenttyp dieses Dokuments ab.</span><span class="sxs-lookup"><span data-stu-id="ba7b8-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d70d5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d70d5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba7b8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ba7b8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d70d5-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d70d5-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ba7b8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ba7b8-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="d70d5-106">[out] Ein Zeiger auf eine Variable, die den Dokumenttyp empfängt.</span><span class="sxs-lookup"><span data-stu-id="d70d5-106">[out] Pointer to a variable that receives the document type.</span></span>  
+ <span data-ttu-id="ba7b8-106">[out] Zeiger auf eine Variable, die den Dokumenttyp empfängt.</span><span class="sxs-lookup"><span data-stu-id="ba7b8-106">[out] Pointer to a variable that receives the document type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d70d5-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d70d5-107">Return Value</span></span>  
- <span data-ttu-id="d70d5-108">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="d70d5-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ba7b8-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="ba7b8-107">Return Value</span></span>  
+ <span data-ttu-id="ba7b8-108">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="ba7b8-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d70d5-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d70d5-109">See Also</span></span>  
- [<span data-ttu-id="d70d5-110">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d70d5-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ba7b8-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ba7b8-109">See also</span></span>
+- [<span data-ttu-id="ba7b8-110">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ba7b8-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
