@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f86cc83936dd8150ca6b3f28c9b6a624278e2b36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b768c8f7880a2317d1b72878657158e839b731f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406277"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569728"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach-Methode
-Gibt ein HRESULT, das angibt, ob ein neuer Prozess gestartet oder Anhängen an den angegebenen vorhandenen Prozess innerhalb des Kontexts der aktuellen Konfiguration für Computer und die Common Language Runtime möglich ist.  
+Gibt ein HRESULT, der angibt, ob ein neuer Prozess gestartet oder an den angegebenen vorhandenen Prozess anfügen innerhalb des Kontexts der aktuellen Computer und -Runtime-Konfiguration möglich ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,13 +38,13 @@ HRESULT CanLaunchOrAttach (
   
 #### <a name="parameters"></a>Parameter  
  `dwProcessId`  
- [in] Die ID der eine vorhandene Prozessressource.  
+ [in] Die ID eines vorhandenen Prozesses.  
   
  `win32DebuggingEnabled`  
- [in] Übergeben Sie `true` , wenn Sie planen, mit aktiviertem Win32-Debuggen zu starten, oder übergeben Sie eine Verbindung mit der Win32-Debuggen aktiviert ist, andernfalls `false`.  
+ [in] Übergeben Sie `true` , wenn Sie, starten Sie mit der Win32-Debuggen aktiviert möchten ist, oder übergeben Sie eine Verbindung mit der Win32-Debuggen aktiviert ist, andernfalls `false`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- S_OK, wenn der Debugdienste bestimmen, die einen neuen Prozess starten oder Anhängen an den angegebenen Prozess ist möglich, die Informationen zur aktuellen Computer und zur Laufzeit angegeben. HRESULT Werte sind möglich:  
+ S_OK, wenn die Debuggen von Diensten, die ein neuer Prozess gestartet oder das Anfügen an den Prozess ermitteln kann, erhält die Informationen über die aktuelle Konfiguration für Computer und der Common Language Runtime. HRESULT Werte sind möglich:  
   
 -   S_OK  
   
@@ -55,12 +55,12 @@ HRESULT CanLaunchOrAttach (
 -   CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode ist ausschließlich zu Informationszwecken. Die Schnittstelle beenden Sie nicht starten oder Anfügen an einen Prozess, unabhängig vom Wert von zurückgegebenen `CanLaunchOrAttach`.  
+ Diese Methode dient ausschließlich zu Informationszwecken. Die Schnittstelle beenden Sie nicht starten oder Anfügen an einen Prozess, unabhängig vom Wert von zurückgegebenen `CanLaunchOrAttach`.  
   
- Wenn Sie beabsichtigen, mit aktiviertem Win32-Debuggen starten oder Anhängen, mit der Win32-Debuggen aktiviert, übergeben Sie `true` für `win32DebuggingEnabled`. Zurückgegebenes HRESULT `CanLaunchOrAttach` unterscheiden, wenn Sie diese Option verwenden.  
+ Wenn Sie planen, starten Sie mit der Win32-Debuggen aktiviert oder Verbindung mit Win32-Debuggen aktiviert, übergeben Sie `true` für `win32DebuggingEnabled`. Das HRESULT zurückgegeben wird, indem `CanLaunchOrAttach` können abweichen, wenn Sie diese Option verwenden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -68,5 +68,5 @@ HRESULT CanLaunchOrAttach (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

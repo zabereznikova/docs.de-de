@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Zeichnen eines Rechtecks'
+title: 'Vorgehensweise: Zeichnen eines Rechtecks'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], rectangles
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: 5f65bd11976817fe3f4d3e5d016f820a249769c3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b8434a8935a8e2f79aff17b96d20c8798f96e9fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674676"
 ---
-# <a name="how-to-draw-a-rectangle"></a>Gewusst wie: Zeichnen eines Rechtecks
+# <a name="how-to-draw-a-rectangle"></a>Vorgehensweise: Zeichnen eines Rechtecks
 In diesem Beispiel wird gezeigt, wie zum Zeichnen eines Rechtecks mit dem <xref:System.Windows.Shapes.Rectangle> Element.  
   
  Um ein Rechteck zu zeichnen, erstellen eine <xref:System.Windows.Shapes.Rectangle> Element, und geben Sie die <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A>. Um die Fläche des Rechtecks zu zeichnen, legen Sie dessen <xref:System.Windows.Shapes.Shape.Fill%2A>. Um dem Rechteck eine Gliederung zu gewähren, verwenden Sie die <xref:System.Windows.Shapes.Shape.Stroke%2A> und <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Eigenschaften.  
@@ -29,8 +29,8 @@ In diesem Beispiel wird gezeigt, wie zum Zeichnen eines Rechtecks mit dem <xref:
   
  Dieses Beispiel ist Teil eines umfangreicheren Beispiels. Das vollständige Beispiel finden Sie unter [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Shapes.Rectangle>  
- [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037)  
- [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Übersicht über Tabellen](../../../../docs/framework/wpf/advanced/table-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Shapes.Rectangle>
+- [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Übersicht über Tabellen](../../../../docs/framework/wpf/advanced/table-overview.md)

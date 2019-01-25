@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48617022940d889abedb9a9d25f04782371c4a5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad04e90d1855e2de89aa6515bf16424de95ffa26
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696437"
 ---
 # <a name="corprfmoduleflags-enumeration"></a>COR_PRF_MODULE_FLAGS-Enumeration
 Gibt die Eigenschaften eines Moduls an.  
@@ -45,19 +45,19 @@ typedef enum
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|COR_PRF_MODULE_DISK|Das Modul wurde von der Festplatte geladen.|  
-|COR_PRF_MODULE_NGEN|Das Modul wurde von der Native Image Generator (Ngen.exe) generiert.|  
-|COR_PRF_MODULE_DYNAMIC|Das Modul wurde von Methoden in der <xref:System.Reflection.Emit?displayProperty=nameWithType> Namespace.|  
+|COR_PRF_MODULE_DISK|Das Modul wurde vom Datenträger geladen.|  
+|COR_PRF_MODULE_NGEN|Das Modul wurde durch die Native Image Generator (Ngen.exe) generiert.|  
+|COR_PRF_MODULE_DYNAMIC|Das Modul wurde erstellt, von Methoden in der <xref:System.Reflection.Emit?displayProperty=nameWithType> Namespace.|  
 |COR_PRF_MODULE_COLLECTIBLE|Die Lebensdauer des Moduls wird vom Garbage Collector verwaltet.|  
-|COR_PRF_MODULE_RESOURCE|Das Modul enthält keine Metadaten und ausschließlich als Ressource verwendet wird. Die verwaltete Entsprechung dieses Bit ist die <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> Methode.|  
-|COR_PRF_MODULE_FLAT_LAYOUT|Das Layout des Moduls im Arbeitsspeicher ist flach, nicht zugeordnet. Wenn ein Modul dieses Bit festgelegt hat, Profiler, die Informationen direkt aus dem portable ausführbare Datei (PE)-Dateiheader müssen darauf achten, dass beim Interpretieren von relativen virtuellen Adresse (RVA) in den Header gelesen.|  
-|COR_PRF_MODULE_WINDOWS_RUNTIME|Die Windows-Runtime-Content-Type-Flag wird in den Metadaten für die Assembly des Moduls festgelegt. Dies gilt für alle Module auf Windows-Metadatendatei (.winmd).|  
+|COR_PRF_MODULE_RESOURCE|Das Modul enthält keine Metadaten und wird ausschließlich als Ressource verwendet. Die verwaltete Entsprechung dieses Bit ist die <xref:System.Reflection.Module.IsResource%2A?displayProperty=nameWithType> Methode.|  
+|COR_PRF_MODULE_FLAT_LAYOUT|Das Layout des Moduls im Arbeitsspeicher ist unstrukturiert, nicht zugeordnet. Wenn ein Modul hat dieses Bit festgelegt, Profiler, die Informationen direkt aus der portierbare ausführbare Datei (PE)-Dateiheader müssen darauf achten, dass beim Interpretieren der relativen virtuellen Adresse (RVA) in der Kopfzeile zu lesen.|  
+|COR_PRF_MODULE_WINDOWS_RUNTIME|Die Windows-Runtime-Content-Type-Flag wird in den Metadaten für die Assembly dieses Moduls festgelegt. Dies gilt für alle Module für Windows-Metadatendatei (.winmd).|  
   
 ## <a name="remarks"></a>Hinweise  
- Bits von COR_PRF_MODULE_FLAGS werden zurückgegeben, an den Profiler in den `pdwModuleFlags` output-Parameter von der [ICorProfilerInfo3:: Getmoduleinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) Methode. Einige Kombinationen von zwei oder mehr Flags sind möglich, aber nicht alle Kombinationen sind möglich.  
+ Bits von COR_PRF_MODULE_FLAGS werden zurückgegeben, an den Profiler in den `pdwModuleFlags` output-Parameter, der die [ICorProfilerInfo3:: Getmoduleinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md) Methode. Einige Kombinationen von zwei oder mehrere Flags sind möglich, aber nicht alle Kombinationen sind möglich.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -65,5 +65,5 @@ typedef enum
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
