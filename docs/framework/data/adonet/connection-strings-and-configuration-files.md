@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 990e82aa6b4f85458979adfa25965cbd16b7893e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865825"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707478"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Verbindungszeichenfolgen und Konfigurationsdateien
 Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu Sicherheitslücken und Wartungsproblemen führen. Unverschlüsselte Verbindungszeichenfolgen, die in den Quellcode einer Anwendung kompiliert wurden, können mit dem Tool [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) angezeigt werden. Hinzu kommt, dass die Anwendung neu kompiliert werden muss, wenn sich die Verbindungszeichenfolge irgendwann einmal ändert. Aus diesen Gründen empfehlen wir, Verbindungszeichenfolgen in einer Anwendungskonfigurationsdatei zu speichern.  
@@ -89,13 +89,13 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-name"></a>Beispiel: Abrufen einer Verbindungszeichenfolge nach dem Namen  
+### <a name="example-retrieving-a-connection-string-by-name"></a>Beispiel: Abrufen einer Verbindungszeichenfolge nach Namen  
  In diesem Beispiel wird gezeigt, wie eine Verbindungszeichenfolge aus einer Konfigurationsdatei durch Angabe ihres Namens abgerufen werden kann. Der Code erstellt ein <xref:System.Configuration.ConnectionStringSettings>-Objekt, das den bereitgestellten Eingabeparameter mit dem <xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A>-Namen abgleicht. Wird kein übereinstimmender Name gefunden, gibt die Funktion `null` (`Nothing` in Visual Basic) zurück.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Beispiel: Abrufen einer Verbindungszeichenfolge nach dem Anbieternamen  
+### <a name="example-retrieving-a-connection-string-by-provider-name"></a>Beispiel: Abrufen einer Verbindungszeichenfolge nach Anbietername  
  In diesem Beispiel wird gezeigt, wie eine Verbindungszeichenfolge durch Angabe des unveränderlichen Anbieternamens im Format *System.Daten.ProviderName* abgerufen werden kann. Der Code durchläuft die <xref:System.Configuration.ConnectionStringSettingsCollection> und gibt die Verbindungszeichenfolge für den ersten gefundenen <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>-Eintrag zurück. Wird kein Anbietername gefunden, gibt die Funktion `null` (`Nothing` in Visual Basic) zurück.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
@@ -167,12 +167,12 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Weitere Informationen zum Absichern von ASP.NET-Anwendungen finden Sie unter [NIB: ASP.NET-Sicherheit](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) und unter [ASP.NET 2.0 Security Practices at a Glance (Übersicht über Sicherheitsmaßnahmen für ASP.NET 2.0)](https://go.microsoft.com/fwlink/?LinkId=59997) im ASP.NET Developer Center.  
+ Weitere Informationen zum Absichern von ASP.NET-Anwendungen finden Sie unter [NIB: ASP.NET-Sicherheit](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) und [ASP.NET 2.0 Security Practices auf einen Blick](https://go.microsoft.com/fwlink/?LinkId=59997) im ASP.NET Developer Center.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verbindungszeichenfolgengeneratoren](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Verwenden der Konfigurationsklassen](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [Konfigurieren von Apps](../../../../docs/framework/configure-apps/index.md)  
- [ASP.NET-Websiteverwaltung](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Verbindungszeichenfolgengeneratoren](../../../../docs/framework/data/adonet/connection-string-builders.md)
+- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Verwenden der Konfigurationsklassen](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)
+- [Konfigurieren von Apps](../../../../docs/framework/configure-apps/index.md)
+- [ASP.NET-Websiteverwaltung](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

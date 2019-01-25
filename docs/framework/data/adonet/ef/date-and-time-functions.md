@@ -2,12 +2,12 @@
 title: Funktionen für Datum und Zeit
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
-ms.openlocfilehash: 358d124da5fb60d38d5e906a821c0b4bc86baab2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b0272f4a9301b02bc654a00c09c1b8bb799d8309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148989"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690773"
 ---
 # <a name="date-and-time-functions"></a>Funktionen für Datum und Zeit
 Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt Funktionen für Datum und Uhrzeit bereit, die einen `System.DateTime`-Eingabewert verarbeiten und ein Ergebnis vom Typ `string` oder `System.DateTime` bzw. einen numerischen Wert zurückgeben. Diese Funktionen befinden sich im SQLServer-Namespace, der bei der Verwendung von SqlClient verfügbar ist. Anhand der Namespaceigenschaft des Anbieters kann Entity Framework ermitteln, welches Präfix von diesem Anbieter für spezifische Konstrukte, wie Typen und Funktionen, verwendet wird. Die folgende Tabelle zeigt die Datums- und Uhrzeitfunktionen von SqlClient.  
@@ -15,7 +15,7 @@ Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt Funktionen f
 |Funktion|Beschreibung|  
 |--------------|-----------------|  
 |`DATEADD(datepart, number, date)`|Gibt einen neuen `DateTime`-Wert zurück, der berechnet wird, indem zum angegebenen Datum ein Intervall addiert wird.<br /><br /> **Argumente**<br /><br /> `datepart`: Ein `String` , die Teil des Datums ein neuer Wert zurückgegeben, darstellt.<br /><br /> `number`: Der Wert vom Typ `Int32`, `Int64`, `Decimal` oder `Double`, um den `datepart` erhöht wird.<br /><br /> `date:` Ein Ausdruck, der gibt eine `DateTime`, oder `DateTimeOffset`, oder `Time` mit einer Genauigkeit von = [0-7] oder eine Zeichenfolge in ein Datum im Format.<br /><br /> **Rückgabewert**<br /><br /> Ein neuer `DateTime`-, `DateTimeOffset`- oder `Time`-Wert mit einer Genauigkeit von = [0-7].<br /><br /> **Beispiel**<br /><br /> `SqlServer.DATEADD('day', 22, cast('6/9/2006' as DateTime))`|  
-|`DATEDIFF(datepart,startdate,enddate)`|Gibt die Anzahl der Datums- und Zeitgrenzen zurück, die zwischen zwei Daten überschritten werden.<br /><br /> **Argumente**<br /><br /> `datepart`: Ein `String` , die Teil des Datums zur Berechnung der Differenz darstellt.<br /><br /> `startdate`: Das Startdatum für die Berechnung ist ein Ausdruck, der zurückgegeben eine `DateTime`, oder `DateTimeOffset`, oder `Time` Wert mit einer Genauigkeit von = [0-7] oder eine Zeichenfolge in ein Datum im Format.<br /><br /> `enddate:` Ein Enddatum für die Berechnung ist ein Ausdruck, der gibt eine `DateTime`, oder `DateTimeOffset`, oder `Time` Wert mit einer Genauigkeit von = [0-7], oder eine Zeichenfolge in ein Datum im Format.<br /><br /> **Rückgabewert**<br /><br /> `Int32`.<br /><br /> **Beispiel**<br /><br /> `SqlServer.DATEDIFF('day', cast('6/9/2006' as DateTime),`<br /><br /> `cast('6/20/2006' as DateTime))`|  
+|`DATEDIFF(datepart,startdate,enddate)`|Gibt die Anzahl der Datums- und Zeitgrenzen zurück, die zwischen zwei Daten überschritten werden.<br /><br /> **Argumente**<br /><br /> `datepart`: Ein `String` , die Teil des Datums zur Berechnung der Differenz darstellt.<br /><br /> `startdate`: Das Startdatum für die Berechnung ist ein Ausdruck, der zurückgegeben eine `DateTime`, oder `DateTimeOffset`, oder `Time` Wert mit einer Genauigkeit von = [0-7] oder eine Zeichenfolge in ein Datum im Format.<br /><br /> `enddate:` Ein Enddatum für die Berechnung ist ein Ausdruck, der gibt eine `DateTime`, oder `DateTimeOffset`, oder `Time` Wert mit einer Genauigkeit von = [0-7], oder eine Zeichenfolge in ein Datum im Format.<br /><br /> **Rückgabewert**<br /><br /> Eine `Int32`.<br /><br /> **Beispiel**<br /><br /> `SqlServer.DATEDIFF('day', cast('6/9/2006' as DateTime),`<br /><br /> `cast('6/20/2006' as DateTime))`|  
 |`DATENAME(datepart, date)`|Gibt eine Zeichenfolge zurück, die den Datumsteil des angegebenen Datums darstellt.<br /><br /> **Argumente**<br /><br /> `datepart`: Ein `String` , die Teil des Datums ein neuer Wert zurückgegeben, darstellt.<br /><br /> `date`: Ein Ausdruck, der gibt eine `DateTime,` oder `DateTimeOffset`, oder `Time` Wert mit einer Genauigkeit von = [0-7], oder eine Zeichenfolge in ein Datum im Format.<br /><br /> **Rückgabewert**<br /><br /> Die Zeichenfolge, die den angegebenen Datumsteil des angegebenen Datums darstellt.<br /><br /> **Beispiel**<br /><br /> `SqlServer.DATENAME('year', cast('6/9/2006' as DateTime))`|  
 |`DATEPART(datepart, date)`|Gibt eine ganze Zahl zurück, die den angegebenen Teil des angegebenen Datums darstellt.<br /><br /> **Argumente**<br /><br /> `datepart`: Ein `String` , die Teil des Datums ein neuer Wert zurückgegeben, darstellt.<br /><br /> `date`: Ein Ausdruck, der gibt eine `DateTime,` oder `DateTimeOffset,` oder `Time` Wert mit einer Genauigkeit von = [0-7], oder eine Zeichenfolge in ein Datum im Format.<br /><br /> **Rückgabewert**<br /><br /> Der angegebene Datumsteil des angegebenen Datums als `Int32`-Wert.<br /><br /> **Beispiel**<br /><br /> `SqlServer.DATEPART('year', cast('6/9/2006' as DateTime))`|  
 |`DAY(date)`|Gibt den Tag des angegebenen Datums als ganze Zahl zurück.<br /><br /> **Argumente**<br /><br /> `date`: Ein Ausdruck vom Typ `DateTime` oder `DateTimeOffset` mit einer Genauigkeit von = 0-7.<br /><br /> **Rückgabewert**<br /><br /> Der Tag des angegebenen Datums als `Int32`-Wert.<br /><br /> **Beispiel**<br /><br /> `SqlServer.DAY(cast('6/9/2006' as DateTime))`|  
@@ -33,5 +33,5 @@ Der .NET Framework-Datenanbieter für SQL Server (SqlClient) stellt Funktionen f
 |---------------------|---------------------|---------------------|  
 |[Datums- und Uhrzeitfunktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115908)|[Datums- und Uhrzeitfunktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115909)|[Datums- und Uhrzeitfunktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|  
   
-## <a name="see-also"></a>Siehe auch  
- [SqlClient für Entity Framework-Funktionen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [SqlClient für Entity Framework-Funktionen](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)
