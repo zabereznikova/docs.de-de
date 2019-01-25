@@ -9,27 +9,27 @@ helpviewer_keywords:
 - data grids [Windows Forms], selecting cells
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
-ms.openlocfilehash: c777366124a3cc5f43df8efca54fc366245bcb75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd7dca483b05e52ea3932bc59e3c5b98de1a0667
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537641"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659435"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Verwendung von Auswahl und Zwischenablage mit dem DataGridView-Steuerelement in Windows Forms
-Die `DataGridView` gesteuert, die Sie mit einer Vielzahl von Optionen zum Konfigurieren, wie Benutzer Zellen, Zeilen und Spalten auswählen können. Beispielsweise können Sie aktivieren einfach- oder Mehrfachauswahl, Auswahl der ganze Zeilen oder Spalten, wenn Benutzer Zellen klicken oder Auswahl ganzer Zeilen oder Spalten nur, wenn Benutzer ihre Header auf die Zellenauswahl sowie ermöglicht. Wenn Sie eine eigene Benutzeroberfläche für die Auswahl bereitstellen möchten, können normale Auswahl deaktivieren und die gesamte Auswahl programmgesteuert zu behandeln. Darüber hinaus können Sie Benutzern die ausgewählten Werte in die Zwischenablage kopieren.  
+Die `DataGridView` gesteuert, die Sie mit einer Vielzahl von Optionen zum Konfigurieren, wie Benutzer die Zellen, Zeilen und Spalten auswählen können. Beispielsweise können Sie aktivieren einfach- oder Mehrfachauswahl, Auswahl ganzer Zeilen oder Spalten, wenn der Benutzer die Zellen klicken Sie auf oder die Auswahl ganzer Zeilen oder Spalten nur, wenn Benutzer ihre Header klicken dadurch auch die Auswahl der Zelle. Wenn Sie eine eigene Benutzeroberfläche für die Auswahl bereitstellen möchten, können normale Auswahl deaktivieren und die gesamte Auswahl programmgesteuert verarbeiten. Darüber hinaus können Sie Benutzer auf die ausgewählten Werte in die Zwischenablage zu kopieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Auswahlmodi im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/selection-modes-in-the-windows-forms-datagridview-control.md)  
- Beschreibt die Optionen für den Benutzer und programmgesteuerte Auswahl im Steuerelement.  
+ Beschreibt die Optionen für Benutzer und die programmgesteuerte Auswahl im Steuerelement.  
   
- [Gewusst wie: Festlegen des Auswahlmodus des DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
- Beschreibt, wie das Steuerelement für einzeilige Auswahl konfigurieren, wenn ein Benutzer eine Zelle klickt.  
+ [Vorgehensweise: Festlegen des Auswahlmodus des DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+ Beschreibt, wie das Steuerelement für die Auswahl einzelner Zeilen konfigurieren, wenn ein Benutzer eine Zelle klickt.  
   
- [Gewusst wie: Abrufen der ausgewählten Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/selected-cells-rows-and-columns-datagridview.md)  
- Beschreibt, wie mit der ausgewählten Zelle, Zeile und Spalte Auflistungen arbeiten.  
+ [Vorgehensweise: Abrufen der ausgewählten Zellen, Zeilen und Spalten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/selected-cells-rows-and-columns-datagridview.md)  
+ Beschreibt, wie mit den ausgewählten Sammlungen von Zellen, Zeilen und Spalten arbeiten.  
   
- [Gewusst wie: Festlegen, dass mehrere Zellen aus dem DataGridView-Steuerelement in Windows Forms in die Zwischenablage kopiert werden können](../../../../docs/framework/winforms/controls/enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ [Vorgehensweise: Aktivieren von Benutzern für mehrere Zellen aus dem Windows Forms-DataGridView-Steuerelement in die Zwischenablage kopieren](../../../../docs/framework/winforms/controls/enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  Beschreibt die Unterstützung der Zwischenablage in das Steuerelement zu aktivieren.  
   
 ## <a name="reference"></a>Referenz  
@@ -51,6 +51,6 @@ Die `DataGridView` gesteuert, die Sie mit einer Vielzahl von Optionen zum Konfig
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>  
  Enthält die Referenzdokumentation für die <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> Klasse.  
   
-## <a name="see-also"></a>Siehe auch  
- [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch
+- [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

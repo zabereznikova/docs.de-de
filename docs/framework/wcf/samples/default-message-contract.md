@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 9f5a7eff25fb202ba84f0bd49893748b507326fd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b1c4db312c04c4248f16a2ff7ee8b54222e66cbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188169"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620278"
 ---
 # <a name="default-message-contract"></a>Standardnachrichtenvertrag
 Das Beispiel zum Standardnachrichtenvertrag zeigt einen Dienst, bei dem eine benutzerdefinierte Nachricht an und aus Dienstvorgängen übergeben wird. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das eine Rechnerschnittstelle als einen typisierten Dienst implementiert. Statt die einzelnen Dienstvorgänge für Addition, Subtraktion, Multiplikation und Division verwendet die [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), in diesem Beispiel übergibt eine benutzerdefinierte Meldung, die enthält sowohl die Operanden und den Operator aus, und gibt zurück Das Ergebnis der arithmetischen Berechnung.  

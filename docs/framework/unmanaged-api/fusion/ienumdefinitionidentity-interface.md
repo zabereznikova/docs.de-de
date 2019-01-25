@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34186ee8825c0981ec095cf855c76ff5f800907d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a3ff37acd9b4dffe80112f0a0ebe9c9cd86ae66f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668446"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity-Schnittstelle
 Dient als Enumerator für eine Auflistung von `IDefinitionIdentity` Objekte.  
@@ -55,18 +55,18 @@ IEnumDefinitionIdentity : IUnknown {
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|Ruft einen Schnittstellenzeiger auf eine neue `IEnumDefinitionIdentity` -Objekt, das dieselben Member wie dies enthält `IEnumDefinitionIdentity`.|  
-|`IEnumDefinitionIdentity::Next`|Ruft die angegebene Anzahl von `IDefinitionIdentity` Objekte, die an der aktuellen Position ab.|  
+|`IEnumDefinitionIdentity::Clone`|Ruft einen Schnittstellenzeiger zu einem neuen `IEnumDefinitionIdentity` -Objekt, das dieselben Member wie diese enthält `IEnumDefinitionIdentity`.|  
+|`IEnumDefinitionIdentity::Next`|Ruft die angegebene Anzahl von `IDefinitionIdentity` Objekten, beginnend an der aktuellen Position.|  
 |`IEnumDefinitionIdentity::Reset`|Verschiebt den Anweisungszeiger an den Anfang `IEnumDefinitionIdentity`.|  
 |`IEnumDefinitionIdentity::Skip`|Verschiebt den Anweisungszeiger vorwärts durch die angegebene Anzahl von Elementen, die an der aktuellen Position ab.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Isolation.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IDefinitionIdentity-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [IDefinitionIdentity-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)

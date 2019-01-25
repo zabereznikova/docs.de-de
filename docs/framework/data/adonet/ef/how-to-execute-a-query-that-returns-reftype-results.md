@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Ausführen einer Abfrage, die RefType-Ergebnisse zurückgibt'
+title: 'Vorgehensweise: Ausführen einer Abfrage, die RefType-Ergebnisse zurückgibt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
-ms.openlocfilehash: 96e4034c6a2476e1dfcf8e8ef22bae6e5b8d4934
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ca23888ee09ca002d0693ed813e5d7ed449bcc2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214945"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595707"
 ---
-# <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Gewusst wie: Ausführen einer Abfrage, die RefType-Ergebnisse zurückgibt
+# <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Vorgehensweise: Ausführen einer Abfrage, die RefType-Ergebnisse zurückgibt
 In diesem Thema wird dargestellt, wie ein Befehl für ein konzeptionelles Modell unter Verwendung eines <xref:System.Data.EntityClient.EntityCommand>-Objekts ausgeführt wird, und wie die <xref:System.Data.Metadata.Edm.RefType>-Ergebnisse mithilfe von <xref:System.Data.EntityClient.EntityDataReader> abgerufen werden.  
   
 ### <a name="to-run-the-code-in-this-example"></a>So führen Sie den Code in diesem Beispiel aus  
@@ -36,6 +36,6 @@ In diesem Thema wird dargestellt, wie ein Befehl für ein konzeptionelles Modell
  [!code-csharp[DP EntityServices Concepts#eSQLRefTypes](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#esqlreftypes)]
  [!code-vb[DP EntityServices Concepts#eSQLRefTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlreftypes)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Entity SQL-Referenz](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
+## <a name="see-also"></a>Siehe auch
+- [Entity SQL-Referenz](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

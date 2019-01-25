@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba8bca6d14308284c869b923853f7e27e045bca5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2296f6e386f35aed91a8aea4392a9cd00ec27ccb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402938"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724358"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState-Enumeration
 Gibt den Zustand eines Threads zum Debuggen an.  
@@ -39,16 +39,16 @@ typedef enum CorDebugThreadState {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`THREAD_RUN`|Der Thread wird frei, ausgeführt, es sei denn, ein Debug-Ereignis tritt auf.|  
-|`THREAD_SUSPEND`|Der Thread kann nicht ausgeführt werden.|  
+|`THREAD_RUN`|Der Thread wird frei, ausgeführt, es sei denn, ein Debug-Ereignis auftritt.|  
+|`THREAD_SUSPEND`|Der Thread kann nicht ausgeführt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Debugger nutzt die `CorDebugThreadState` Enumeration zum Steuern der Ausführung eines Threads. Der Zustand eines Threads kann festgelegt werden, mithilfe der [ICorDebugThread:: SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) oder [ICorDebugController:: SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) Methode.  
+ Der Debugger verwendet den `CorDebugThreadState` Enumeration, um die Ausführung eines Threads zu steuern. Der Zustand eines Threads kann festgelegt werden, mithilfe der [ICorDebugThread:: SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) oder [ICorDebugController:: SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) Methode.  
   
- Ein Rückruf bereitgestellt, um die [hosting-API](../../../../docs/framework/unmanaged-api/hosting/index.md) ermöglicht meldungsweiterleitung, ein unterbrochener Zustand ist nicht erforderlich.  
+ Ein Rückruf bereitgestellt, um die [hosting-API](../../../../docs/framework/unmanaged-api/hosting/index.md) ermöglicht das besser mit meldungsweiterleitung, ein unterbrochener Zustand nicht erforderlich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDegug.h  
   
@@ -56,5 +56,5 @@ typedef enum CorDebugThreadState {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

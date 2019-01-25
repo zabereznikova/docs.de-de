@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - In keyword [Visual Basic]
 ms.assetid: 2f003a85-8fb6-4280-822b-6ac12839b915
-ms.openlocfilehash: 47eb90c9c89c7114c40b8a2caeb0e99f3ceccccb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e96cb9e8c67075a229c97f11ec7127a4afb75a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54567229"
 ---
 # <a name="in-clause-visual-basic"></a>In-Klausel (Visual Basic)
-Gibt die Gruppe, der Schleifenvariablen in Durchlaufen einer `For Each` Schleife oder gibt die Auflistung in der Abfrage eine `From`, `Join`, oder `Group Join` Klausel.  
+Gibt die Gruppe, die die Schleifenvariable in Durchlaufen einer `For Each` Schleife aus, oder gibt die Auflistung in der Abfrage eine `From`, `Join`, oder `Group Join` Klausel.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `In` -Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
@@ -27,5 +27,5 @@ Gibt die Gruppe, der Schleifenvariablen in Durchlaufen einer `For Each` Schleife
   
  [Group Join-Klausel](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

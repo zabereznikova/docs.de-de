@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 949b6c7272b39900698b618760f5e5bad11ccc3d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670640"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;Listener&gt; -Element für &lt;Quelle&gt;
 Fügt Listener hinzu oder entfernt den <xref:System.Diagnostics.TraceSource.Listeners%2A> Sammlung für einen <xref:System.Diagnostics.TraceSource>. Ein Listener leitet die Ablaufverfolgungsausgabe an ein entsprechendes Ziel, z. B. ein Protokoll, Fenster oder Text-Datei.  
   
  \<configuration>  
-\<System.Diagnostics >  
+\<system.diagnostics>  
 \<Quellen >  
 \<Quelle >  
 \<Listener >-Element  
@@ -89,7 +89,7 @@ Fügt Listener hinzu oder entfernt den <xref:System.Diagnostics.TraceSource.List
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Diagnostics.TraceListener>  
- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Diagnostics.TraceListener>
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

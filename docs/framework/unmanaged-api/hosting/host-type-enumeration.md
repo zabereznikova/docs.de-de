@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fce759877ad5e3c9041344647781da07ad19a45a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6a2db1aea04ae060623bc39a52ed6990f6137f82
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430893"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606445"
 ---
 # <a name="hosttype-enumeration"></a>HOST_TYPE-Enumeration
-Enthält Werte, die den Typ des Hosts angeben, die eine Anwendung startet.  
+Enthält Werte, die den Typ des Hosts angeben, die eine Anwendung ausgeführt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,18 +40,18 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|Starten Sie die Anwendung über AppLaunch.exe.<br /><br /> Verwenden Sie diesen Wert für teilweise vertrauenswürdige Anwendungen.|  
-|`HOST_TYPE_CORFLAG`|Starten Sie die Anwendung direkt. D. h., starten Sie die Anwendung aus einer eigenen .exe-Datei.<br /><br /> Verwenden Sie diesen Wert für voll vertrauenswürdige Anwendungen.|  
-|`HOST_TYPE_DEFAULT`|Identisch mit HOST_TYPE_APPLAUNCH.|  
+|`HOST_TYPE_APPLAUNCH`|Starten Sie die Anwendung über AppLaunch.exe.<br /><br /> Verwenden Sie diesen Wert für teilweise vertrauenswürdigen Anwendungen.|  
+|`HOST_TYPE_CORFLAG`|Starten Sie die Anwendung direkt auf. Starten Sie die Anwendung über einen eigenen .exe-Datei, also.<br /><br /> Verwenden Sie diesen Wert für voll vertrauenswürdige Anwendungen.|  
+|`HOST_TYPE_DEFAULT`|Same as HOST_TYPE_APPLAUNCH.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

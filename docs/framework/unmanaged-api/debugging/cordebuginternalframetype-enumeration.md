@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49b42a7fc54af56149b602b337e4a6c853c270cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736532"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType-Enumeration
 Identifiziert den Stapelrahmentyp. Diese Enumeration wird verwendet, durch die [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) Methode.  
@@ -50,19 +50,19 @@ typedef enum CorDebugInternalFrameType {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`STUBFRAME_NONE`|Ein NULL-Wert. Die `ICorDebugInternalFrame::GetFrameType` Methode gibt diesen Wert nie zurück.|  
-|`STUBFRAME_M2U`|Ein Stub verwaltet, nicht verwaltete-Frame.|  
-|`STUBFRAME_U2M`|Einen nicht verwalteten zum verwalteten Stub-Frame.|  
+|`STUBFRAME_M2U`|Ein Stub verwalteten zum nicht verwalteten Frame.|  
+|`STUBFRAME_U2M`|Ein Stub nicht verwalteten zu verwalteten Frame.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Ein Übergang zwischen Anwendungsdomänen.|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Ein lightweight-Methodenaufruf.|  
-|`STUBFRAME_FUNC_EVAL`|Der Beginn des funktionsauswertung.|  
-|`STUBFRAME_INTERNALCALL`|Ein interner Aufruf in der common Language Runtime.|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Der Aufruf einer einfachen Methode.|  
+|`STUBFRAME_FUNC_EVAL`|Der Anfang der funktionsauswertung.|  
+|`STUBFRAME_INTERNALCALL`|Einen internen Aufruf in der common Language Runtime.|  
 |`STUBFRAME_CLASS_INIT`|Der Anfang der Initialisierung einer Klasse.|  
 |`STUBFRAME_EXCEPTION`|Eine Ausnahme, die ausgelöst wird.|  
 |`STUBFRAME_SECURITY`|Ein Frame, der für die Codezugriffssicherheit verwendet wird.|  
-|`STUBFRAME_JIT_COMPILATION`|Die Common Language Runtime ist eine Methode JIT-Kompilierung.|  
+|`STUBFRAME_JIT_COMPILATION`|Die Laufzeit ist eine Methode JIT-Kompilierung.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -70,5 +70,5 @@ typedef enum CorDebugInternalFrameType {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

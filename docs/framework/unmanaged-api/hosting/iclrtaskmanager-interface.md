@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14c2c9b70ac2e57983ea4b16772add6a1dff5ff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9012a38271afdef5e00e9e69eb9b2730834be2fa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438066"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656153"
 ---
 # <a name="iclrtaskmanager-interface"></a>ICLRTaskManager-Schnittstelle
-Enthält Methoden, die dem Host explizit anfordern, die die common Language Runtime (CLR) ermöglichen, Erstellen eines neuen Tasks, die aktuell ausgeführte Aufgabe erhalten und die geografische Sprache und Kultur für den Task festlegen.  
+Stellt Methoden, die dem Host explizit anfordern, die die common Language Runtime (CLR) ermöglichen Erstellen eines neuen Tasks, die aktuell ausgeführte Aufgabe zu erhalten, und legen Sie die geografische Sprache und Kultur für den Task.  
   
 ## <a name="methods"></a>Methoden  
   
@@ -34,22 +34,22 @@ Enthält Methoden, die dem Host explizit anfordern, die die common Language Runt
 |[GetCurrentTask-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-getcurrenttask-method.md)|Ruft die `ICLRTask` -Instanz, die die Aufgabe darstellt, die gerade ausgeführt wird.|  
 |[GetCurrentTaskType-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-getcurrenttasktype-method.md)|Ruft den Typ der Aufgabe, die gerade ausgeführt wird.|  
 |[SetLocale-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-setlocale-method.md)|Benachrichtigt die CLR, dass der Host den Gebietsschemabezeichner für die aktuell ausgeführte Aufgabe geändert hat.|  
-|[SetUILocale-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-setuilocale-method.md)|Benachrichtigt der common Language Runtime, dass der Host den Gebietsschemabezeichner der Benutzeroberfläche für die aktuell ausgeführte Aufgabe geändert hat.|  
+|[SetUILocale-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-setuilocale-method.md)|Benachrichtigt, dass der Host den Gebietsschemabezeichner der Benutzeroberfläche für die derzeit ausgeführte Aufgabe geändert hat der common Language Runtime.|  
   
 ## <a name="remarks"></a>Hinweise  
- Jede Aufgabe, die in einer gehosteten Umgebung ausgeführt wird verfügt über Darstellungen, die beide auf der Hostseite (eine Instanz von [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)) und auf der CLR-Seite (eine Instanz von [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)). Der Host oder die CLR kann die Erstellung einer Aufgabe initiieren, aber die hostseitige Darstellung muss mit einer entsprechenden CLR-Seite-Darstellung, um sicherzustellen, dass erfolgreiche Kommunikation zwischen dem Host und der CLR in Bezug auf die Aufgabe verknüpft werden. Die beiden Objekte müssen erstellt und instanziiert wird, bevor verwalteter Code auf einem Betriebssystem-Thread ausgeführt werden kann.  
+ Jede Aufgabe, die in einer gehosteten Umgebung ausgeführt wird verfügt über Darstellungen, die beide auf der Hostseite (eine Instanz von [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)) und auf der CLR-Seite (eine Instanz von [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)). Entweder der Host oder die CLR kann die Erstellung einer Aufgabe initiieren, aber die Hostseite Darstellung muss mit einer entsprechenden CLR-Seite-Darstellung, um sicherzustellen, dass erfolgreiche Kommunikation zwischen dem Host und die CLR in Bezug auf die Aufgabe verknüpft werden. Die beiden Objekte müssen erstellt und instanziiert wird, bevor verwalteter Code in einem Betriebssystem-Thread ausgeführt werden kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
- [IHostTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  
- [IHostTaskManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [IHostTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

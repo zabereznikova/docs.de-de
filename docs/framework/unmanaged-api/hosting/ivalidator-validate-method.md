@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf2c343db459879ca95372e104aee68b22dee6b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03a8bf7e215794f4a2951fe4e2d54a791bda20e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440615"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594056"
 ---
 # <a name="ivalidatorvalidate-method"></a>IValidator::Validate-Methode
 Überprüft die angegebene Datei (portable Executable) oder Microsoft intermediate Language (MSIL)-Datei.  
@@ -44,37 +44,37 @@ HRESULT Validate (
   
 #### <a name="parameters"></a>Parameter  
  `veh`  
- [in] Ein Zeiger auf eine `IVEHandler` -Instanz, die Validierungsfehler behandelt.  
+ [in] Ein Zeiger auf ein `IVEHandler` -Instanz, die Validierungsfehler behandelt.  
   
  `pAppDomain`  
  [in] Ein Zeiger auf die Anwendungsdomäne, in der die Datei geladen wird.  
   
  `ulFlags`  
- [in] Eine bitweise Kombination von [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) Werte, der angibt, die Überprüfungen, die ausgeführt werden soll.  
+ [in] Eine bitweise Kombination von [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) Werte, der angibt, Überprüfungen, die ausgeführt werden soll.  
   
  `ulMaxError`  
- [in] Die maximale Anzahl von Fehlern, um zuzulassen, bevor Sie die Überprüfung beendet werden soll.  
+ [in] Die maximale Anzahl von Fehlern, die vor dem Beenden der Überprüfungsprozess zulassen.  
   
  `token`  
  [in] Nicht verwendet.  
   
  `fileName`  
- [in] Eine Zeichenfolge, die den Namen der zu überprüfenden Datei angibt.  
+ [in] Eine Zeichenfolge, die mit dem Namen der Datei, die überprüft werden soll.  
   
  `pe`  
- [in] Ein Zeiger auf die Speicherpuffer in dem die Datei gespeichert ist.  
+ [in] Ein Zeiger auf den Speicherpuffer, die in dem die Datei gespeichert ist.  
   
  `ulSize`  
- [in] Die Größe in Bytes der Datei überprüft werden.  
+ [in] Die Größe in Bytes der Datei, die überprüft werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** IValidator.idl, IValidator.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+

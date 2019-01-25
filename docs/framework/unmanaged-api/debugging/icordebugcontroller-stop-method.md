@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cd0fc9f86515d63533275002301eb47f11feebb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4cb5b091aadbdd503dd7988f713f40a00876a2dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411265"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608319"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop-Methode
 Beendet alle Threads, die verwalteten Code im Prozess ausgeführt werden.  
@@ -40,15 +40,15 @@ HRESULT Stop (
  Nicht verwendet.  
   
 ## <a name="remarks"></a>Hinweise  
- `Stop` Führt einen kooperativen Stop für alle Threads ausführen verwaltet-Code im Prozess an. Während einer Debugsitzung nur verwaltet nicht verwaltete Threads möglicherweise weiterhin ausgeführt (jedoch wird beim Aufrufen von verwalteten Codes blockiert werden). Während einer Debugsitzung Interop werden auch nicht verwaltete Threads beendet werden. Die `dwTimeoutIgnored` Wert wird derzeit ignoriert und als INFINITE (-1) behandelt. Wenn das kooperative Beenden aufgrund eines Deadlocks fehlschlägt, werden alle Threads angehalten, und E_TIMEOUT zurückgegeben.  
+ `Stop` Führt einen kooperativen beenden für alle Threads, die ausgeführt wird, die verwaltet Code im Prozess an. Während einer Debugsitzung ausschließlich verwalteten nicht verwaltete Threads können weiterhin ausführen (wird jedoch blockiert, wenn Sie versuchen, verwalteten Code aufrufen). Während einer Interop-Debugsitzung werden auch nicht verwaltete Threads beendet werden. Die `dwTimeoutIgnored` Wert wird gegenwärtig ignoriert und als UNENDLICH (-1) behandelt. Wenn das kooperative Beenden aufgrund eines Deadlocks ein Fehler auftritt, werden alle Threads angehalten und E_TIMEOUT zurückgegeben.  
   
 > [!NOTE]
->  `Stop` ist die einzige synchrone Methode in der Debug-API. Wenn `Stop` S_OK zurückgibt, wird der Prozess beendet wird. Es erfolgt kein Rückruf benachrichtigt Listener über die Beendigung. Der Debugger muss Aufrufen [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , der Prozess fortgesetzt werden kann.  
+>  `Stop` ist die nur synchrone Methode in der Debug-API. Wenn `Stop` S_OK zurückgibt, wird der Prozess wurde beendet. Benachrichtigt Listener über das Beenden ist kein Rückruf erhält. Der Debugger muss Aufrufen [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , der Prozess fortgesetzt werden kann.  
   
- Der Debugger verwaltet einen Leistungsindikator beenden. Wenn der Zähler auf 0 (null) ist, wird der Controller fortgesetzt. Jeder Aufruf von `Stop` oder jedem gesendeten Rückruf wird der Zähler erhöht. Jeder Aufruf von `ICorDebugController::Continue` dekrementiert den Zähler.  
+ Der Debugger verwaltet einen Stop-Zähler. Wenn der Zähler auf Null geht, wird der Controller wieder fortgesetzt. Jeder Aufruf von `Stop` oder jedem gesendeten Rückruf wird der Zähler erhöht. Jeder Aufruf von `ICorDebugController::Continue` verringert den Zähler.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -56,5 +56,5 @@ HRESULT Stop (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+

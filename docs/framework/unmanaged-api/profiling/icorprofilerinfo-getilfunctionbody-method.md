@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bde194023ff6913db9a56e30eddaad8d7abc5ad1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9e1ef61271e5b413972b8ba40a8fe8bac60ceeb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566213"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>ICorProfilerInfo::GetILFunctionBody-Methode
-Ruft einen Zeiger auf den Text einer Methode in Microsoft intermediate Language (MSIL)-Code, beginnend mit dem Header.  
+Ruft einen Zeiger auf den Text einer Methode in Microsoft intermediate Language (MSIL)-Code, beginnend mit dem Header an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,18 +45,18 @@ HRESULT GetILFunctionBody(
  [in] Das Metadatentoken für die Methode.  
   
  `ppMethodHeader`  
- [out] Ein Zeiger auf die Method-Header.  
+ [out] Ein Zeiger auf den Header der Methode.  
   
  `pcbMethodSize`  
  [out] Eine ganze Zahl, die die Größe der Methode angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine Methode wird vom Modul begrenzt, in dem er sich befindet. Da die `GetILFunctionBody` -Methode entwickelt, um MSIL-Code eine Toolzugriff erteilen, bevor er von der common Language Runtime (CLR) geladen wurde, es verwendet das Metadatentoken der Methode, um die gewünschte Instanz gefunden werden.  
+ Eine Methode ist das Modul beschränkt, in dem er sich befindet. Da die `GetILFunctionBody` -Methode entwickelt, um den MSIL-Code eine Toolzugriff gewähren, bevor es von der common Language Runtime (CLR) geladen wurde, es verwendet das Metadatentoken der Methode aus, um die gewünschte Instanz zu suchen.  
   
- `GetILFunctionBody` kann ein HRESULT CORPROF_E_FUNCTION_NOT_IL zurückgeben, wenn die `methodId` verweist auf eine Methode ohne MSIL-code (z. B. eine abstrakte Methode oder eine Plattform invoke PInvoke-Methode).  
+ `GetILFunctionBody` kann ein CORPROF_E_FUNCTION_NOT_IL HRESULT zurückgeben, wenn die `methodId` verweist auf eine Methode ohne MSIL-code (z. B. PInvoke-Methode aufrufen, eine abstrakte Methode oder eine Plattform).  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -64,5 +64,5 @@ HRESULT GetILFunctionBody(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

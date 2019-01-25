@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7078b2eb98c15b7229132076da8af4691032bb08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8a4cc17bdcaea5099d0d2b0195ae4fa28e3d4744
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441791"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744603"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions-Enumeration
 Enthält Flagwerte, die das Verhalten beim Import einer Assembly außerhalb des aktuellen Bereichs steuern.  
@@ -48,22 +48,22 @@ typedef enum CorImportOptions {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Gibt an, das Standardverhalten, d. h. gelöschten Datensätze übersprungen.|  
-|`MDImportOptionAll`|Gibt an, dass alle Metadaten aufgelistet werden sollen.|  
-|`MDImportOptionAllTypeDefs`|Gibt an, dass alle TypeDefs, auch die gelöschten, aufgelistet werden sollen.|  
-|`MDImportOptionAllMethodDefs`|Gibt an, dass alle MethodDefs, auch die gelöschten, aufgelistet werden sollen.|  
-|`MDImportOptionAllFieldDefs`|Gibt an, dass alle FieldDefs, auch die gelöschten, aufgelistet werden sollen.|  
-|`MDImportOptionAllProperties`|Gibt an, dass alle PropertyDefs, auch die gelöschten, aufgelistet werden sollen.|  
-|`MDImportOptionAllEvents`|Gibt an, dass alle EventDefs, auch die gelöschten, aufgelistet werden sollen.|  
+|`MDImportOptionDefault`|Gibt an, das Standardverhalten, das gelöschte Datensätze übersprungen wird.|  
+|`MDImportOptionAll`|Gibt an, dass alle Metadaten, die aufgelistet werden sollen.|  
+|`MDImportOptionAllTypeDefs`|Gibt an, dass alle TypeDefs, einschließlich der gelöschten, aufgelistet werden sollen.|  
+|`MDImportOptionAllMethodDefs`|Gibt an, dass alle MethodDefs, einschließlich der gelöschten, aufgelistet werden sollen.|  
+|`MDImportOptionAllFieldDefs`|Gibt an, dass alle FieldDefs, einschließlich der gelöschten, aufgelistet werden sollen.|  
+|`MDImportOptionAllProperties`|Gibt an, dass alle PropertyDefs, einschließlich der gelöschten, aufgelistet werden sollen.|  
+|`MDImportOptionAllEvents`|Gibt an, dass alle EventDefs, einschließlich der gelöschten, aufgelistet werden sollen.|  
 |`MDImportOptionAllCustomAttributes`|Gibt an, dass alle benutzerdefinierten Attribute, einschließlich der gelöschten, aufgelistet werden sollen.|  
 |`MDImportOptionAllExportedTypes`|Gibt an, dass alle exportierte Typen, einschließlich der gelöschten, aufgelistet werden sollen.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

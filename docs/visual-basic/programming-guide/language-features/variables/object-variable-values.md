@@ -7,35 +7,35 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: a5152ad0e5e5ac876783c2b191ee13e845593df8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce38089e91b25cf50e738d956881f3a44bfa3306
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54588724"
 ---
 # <a name="object-variable-values-visual-basic"></a>Werte von Objektvariablen (Visual Basic)
-Eine Variable, der die [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md) kann auf Daten eines beliebigen Typs verweisen. Der Wert, die Sie, in speichern eine `Object` Variable wird an anderer Stelle im Arbeitsspeicher beibehalten, während die Variable selbst einen Zeiger auf die Daten enthält.  
+Eine Variable die [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) kann auf Daten eines beliebigen Typs verweisen. Der Wert, die Sie in Speichern einer `Object` Variable wird an anderer Stelle im Arbeitsspeicher gespeichert, während die Variable selbst einen Zeiger auf die Daten enthält.  
   
-## <a name="object-classifier-functions"></a>Objekt-Klassifizierungsfunktionen  
- Visual Basic bietet Funktionen, mit denen Informationen darüber, was eine `Object` Variable verweist auf, wie in der folgenden Tabelle gezeigt.  
+## <a name="object-classifier-functions"></a>Objekt Klassifizierungsfunktionen  
+ Visual Basic bietet Funktionen, Zurückgeben von Informationen darüber, was, eine `Object` Variable verweist auf, wie in der folgenden Tabelle gezeigt.  
   
 |Funktion|Gibt True zurück, wenn auf die Objektvariable verweist|  
 |--------------|---------------------------------------------------|  
 |<xref:Microsoft.VisualBasic.Information.IsArray%2A>|Ein Array von Werten, anstatt einen einzelnen Wert|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|Ein [Datumsdatentyp](../../../../visual-basic/language-reference/data-types/date-data-type.md) Wert oder eine Zeichenfolge, die als Wert für Datum und Uhrzeit interpretiert werden kann|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|Ein Objekt des Typs <xref:System.DBNull>, der fehlende oder nicht vorhandene Daten darstellt|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|Ein [Date-Datentyps](../../../../visual-basic/language-reference/data-types/date-data-type.md) Wert oder eine Zeichenfolge, die als einen Wert für Datum und Uhrzeit interpretiert werden kann|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|Ein Objekt des Typs <xref:System.DBNull>, steht für fehlende oder nicht vorhandene Daten|  
 |<xref:Microsoft.VisualBasic.Information.IsError%2A>|Ein Exception-Objekt, das von abgeleitet ist <xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nichts](../../../../visual-basic/language-reference/nothing.md), d. h. kein Objekt auf die Variable derzeit zugewiesen ist|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|["Nothing"](../../../../visual-basic/language-reference/nothing.md), d. h. kein Objekt auf die Variable derzeit zugewiesen ist|  
 |<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|Eine Zahl oder eine Zeichenfolge, die als Zahl interpretiert werden kann|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|Ein Verweistyp (z. B. eine Zeichenfolge, Array, Delegat oder Klassentyp)|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|Ein Verweistyp (z. B. eine Zeichenfolge, ein Array, Delegat oder ein Klassentyp)|  
   
- Diese Funktionen können Sie vermeiden, senden einen ungültigen Wert für einen Vorgang oder einer Prozedur.  
+ Sie können diese Funktionen verwenden, um zu vermeiden, senden einen ungültigen Wert zu einer Operation oder einer Prozedur.  
   
 ## <a name="typeof-operator"></a>Operator TypeOf  
- Sie können auch die [TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) zu bestimmen, ob eine Objektvariable gegenwärtig auf einen bestimmten Datentyp verweist. Die `TypeOf`... `Is` Ausdruck wird zu `True` , wenn der Laufzeittyp des Operanden abgeleitet wird, oder den angegebenen Typ implementiert.  
+ Sie können auch die [TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) zu bestimmen, ob eine Objektvariable derzeit in einem bestimmten Datentyp verweist. Die `TypeOf`... `Is` Ausdruck wird zu `True` , wenn die Run-Time-Typ des Operanden abgeleitet ist, oder den angegebenen Typ implementiert.  
   
- Im folgenden Beispiel wird `TypeOf` in Objektvariablen verweisen auf Wert-und Verweistypen.  
+ Im folgenden Beispiel wird `TypeOf` in Objektvariablen, die auf der Wert-und Verweistypen.  
   
 ```  
 ' The following statement puts a value type (Integer) in an Object variable.  
@@ -51,7 +51,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- Im obige Beispiel schreibt die folgenden Zeilen, die die **Debuggen** Fenster:  
+ Im obige Beispiel schreibt die folgenden Zeilen, die **Debuggen** Fenster:  
   
  `num is Integer`  
   
@@ -64,14 +64,14 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
  Die Objektvariable `num` bezieht sich auf die Daten des Typs `Integer`, und `frm` bezieht sich auf ein Objekt der Klasse <xref:System.Windows.Forms.Form>.  
   
 ## <a name="object-arrays"></a>Objektarrays  
- Sie können deklarieren und verwenden Sie ein Array von `Object` Variablen. Dies ist hilfreich, wenn Sie eine Vielzahl von Datentypen und Objektklassen behandeln müssen. Alle Elemente in einem Array müssen den gleichen deklarierten Datentyp haben. Dieser Datentyp als deklarieren `Object` können Sie zum Speichern von Objekten und-Klasseninstanzen zusammen mit anderen Datentypen in das Array.  
+ Sie können deklarieren und verwenden Sie ein Array von `Object` Variablen. Dies ist nützlich, wenn Sie eine Vielzahl von Datentypen und Objektklassen verarbeiten müssen. Alle Elemente in einem Array müssen den gleichen Datentyp deklariert. Dieser Datentyp als deklarieren `Object` ermöglicht Ihnen das Speichern von Objekten und -Klasseninstanzen zusammen mit anderen Datentypen in das Array.  
   
-## <a name="see-also"></a>Siehe auch  
- [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Zuweisen von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)  
- [Gewusst wie: Verweisen auf die aktuelle Instanz eines Objekts](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)  
- [Gewusst wie: Bestimmen des Typs, auf den eine Objektvariable verweist](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)  
- [Gewusst wie: Bestimmen des Bezugs zwischen zwei Objekten](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
- [Gewusst wie: Bestimmen der Gleichheit zweier Objekte](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Zuweisen von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
+- [Vorgehensweise: Verweisen Sie auf die aktuelle Instanz eines Objekts](../../../../visual-basic/programming-guide/language-features/variables/how-to-refer-to-the-current-instance-of-an-object.md)
+- [Vorgehensweise: Bestimmen des Typs, um eine Objektvariable verweist](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
+- [Vorgehensweise: Bestimmen Sie, ob zwei Objekte verknüpft sind](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Vorgehensweise: Bestimmt, ob zwei Objekte identisch sind.](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: f08a52add4e735ce794ecef2c3bd4b186b3c01a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8fdf11887d9ed7a52ac0d5f1abc81dcbb7932a4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655694"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618908"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Problembehandlung bei Variablen in Visual Basic
-Auf dieser Seite sind einige allgemeine Probleme, die auftreten können, bei der Arbeit mit Variablen in Visual Basic.  
+Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei der Arbeit mit Variablen in Visual Basic.  
   
 ## <a name="unable-to-access-members-of-an-object"></a>Zugriff auf Member eines Objekts ist nicht möglich  
  Wenn Ihr Code versucht, auf eine Eigenschaft oder Methode eines Objekts zuzugreifen, können zwei Arten von Fehlern auftreten:  
@@ -29,7 +29,7 @@ Auf dieser Seite sind einige allgemeine Probleme, die auftreten können, bei der
  In diesem Beispiel kann `p` nur die Mitglieder der <xref:System.Object> -Klasse selbst verwenden, die nicht die `Left` -Eigenschaft enthalten. Auf der anderen Seite wurde `q` als Typ <xref:System.Windows.Forms.Label>deklariert, sodass es alle Methoden und Eigenschaften der <xref:System.Windows.Forms.Label> -Klasse im <xref:System.Windows.Forms> -Namespace verwenden kann.  
   
 ### <a name="correct-approach"></a>Richtige Vorgehensweise  
- Um auf alle Member eines Objekts einer bestimmten Klasse zugreifen zu können, deklarieren Sie die Objektvariable nach Möglichkeit als Typ der Klasse. Wenn Sie nicht möglich, z. B. Wenn Sie den Objekttyp zur Kompilierzeit nicht bekannt ist, müssen Sie festlegen `Option Strict` auf `Off` und deklarieren Sie die Variable in einer der [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md). So können der Variablen Objekte beliebigen Typs zugewiesen werden, und Sie sollten Maßnahmen ergreifen, um sicherzustellen, dass das aktuell zugewiesene Objekt einen zulässigen Typ hat. Sie können die [TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) um diese Entscheidung zu treffen.  
+ Um auf alle Member eines Objekts einer bestimmten Klasse zugreifen zu können, deklarieren Sie die Objektvariable nach Möglichkeit als Typ der Klasse. Wenn Sie dies nicht möglich, z. B. Wenn Sie den Objekttyp zur Kompilierzeit nicht bekannt ist, müssen Sie festlegen `Option Strict` zu `Off` und deklarieren Sie die Variable der [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). So können der Variablen Objekte beliebigen Typs zugewiesen werden, und Sie sollten Maßnahmen ergreifen, um sicherzustellen, dass das aktuell zugewiesene Objekt einen zulässigen Typ hat. Sie können die [TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) , diese Entscheidung zu treffen.  
   
 ## <a name="other-components-cannot-access-your-variable"></a>Andere Komponenten können nicht auf die Variable zugreifen  
  Visual Basic-Namen sind *Groß-/Kleinschreibung*. Wenn zwei Namen sich nur in der Groß- und Kleinschreibung unterscheiden, interpretiert der Compiler sie als identisch. Er geht z. B. davon aus, dass `ABC` und `abc` auf das gleiche deklarierte Element verweisen.  
@@ -47,13 +47,13 @@ Auf dieser Seite sind einige allgemeine Probleme, die auftreten können, bei der
 ### <a name="correct-approach"></a>Richtige Vorgehensweise  
  Vermeiden Sie, Variablen mit gleichem Namen, aber unterschiedlichen Gültigkeitsbereichen zu verwenden. Wenn Sie andere Assemblys oder Projekte verwenden, vermeiden Sie so weit wie möglich die Verwendung von Namen, die in diesen externen Komponenten definiert werden. Wenn Sie über mehrere Variablen gleichen Namens verfügen, achten Sie darauf, jeden Verweis auf sie zu qualifizieren. Weitere Informationen finden Sie unter [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Variablen](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
- [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)  
- [Gewusst wie: Zugreifen auf Member eines Objekts](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
- [Werte von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Gewusst wie: Bestimmen des Typs, auf den eine Objektvariable verweist](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)  
- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+## <a name="see-also"></a>Siehe auch
+- [Variablen](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
+- [Vorgehensweise: Zugreifen auf Member eines Objekts](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Werte von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [Vorgehensweise: Bestimmen des Typs, um eine Objektvariable verweist](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
+- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

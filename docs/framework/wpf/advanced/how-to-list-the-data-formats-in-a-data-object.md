@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Auflisten der Datenformate in einem Datenobjekt'
+title: 'Vorgehensweise: Auflisten der Datenformate in einem Datenobjekt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,20 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - data formats [WPF], listing
 ms.assetid: 18e7ba4b-ccef-4815-ae2d-3a32891010c0
-ms.openlocfilehash: c0e5917d52d9253737a56307beed69bc0255807c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7d96cc7f7327ff7d33cf1147dbae75bc7620e310
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54595889"
 ---
-# <a name="how-to-list-the-data-formats-in-a-data-object"></a>Gewusst wie: Auflisten der Datenformate in einem Datenobjekt
-Den folgenden Beispielen wird veranschaulicht, wie die <xref:System.Windows.DataObject.GetFormats%2A> Überladungen der Methode erhalten ein Array von Zeichenfolgen, die jede-Datenformat, die in einem Datenobjekt verfügbar ist.  
+# <a name="how-to-list-the-data-formats-in-a-data-object"></a>Vorgehensweise: Auflisten der Datenformate in einem Datenobjekt
+Die folgenden Beispiele zeigen, wie Sie mit der <xref:System.Windows.DataObject.GetFormats%2A> Überladungen der Methode erhalten ein Array von Zeichenfolgen, die jede Datenformat, das in einem Datenobjekt verfügbar ist.  
   
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Der folgende Beispielcode verwendet die <xref:System.Windows.DataObject.GetFormats%2A> methodenüberladung, um ein Array von Zeichenfolgen, die alle verfügbaren Datenformate in ein Datenobjekt (systemeigene und automatisch konvertierbare) abrufen.  
+ Der folgende Beispielcode verwendet die <xref:System.Windows.DataObject.GetFormats%2A> -Überladung verwenden, um ein Array von Zeichenfolgen, die alle verfügbaren Datenformate in einem Datenobjekt (systemeigene und automatisch konvertierbare) abrufen.  
   
 ### <a name="code"></a>Code  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats)]
@@ -30,12 +31,12 @@ Den folgenden Beispielen wird veranschaulicht, wie die <xref:System.Windows.Data
 ## <a name="example"></a>Beispiel  
   
 ### <a name="description"></a>Beschreibung  
- Der folgende Beispielcode verwendet die <xref:System.Windows.DataObject.GetFormats%2A> Überladung abzurufenden ein Array von Zeichenfolgen, die nur Datenformate in ein Datenobjekt (Auto-Datenformate Formate werden gefiltert) verfügbar.  
+ Der folgende Beispielcode verwendet die <xref:System.Windows.DataObject.GetFormats%2A> -Überladung verwenden, um ein Array von Zeichenfolgen, die nur verfügbaren Datenformate in einem Datenobjekt (automatisch konvertierbare Daten Formate gefiltert werden) zu erhalten.  
   
 ### <a name="code"></a>Code  
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats_NativeOnly](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats_nativeonly)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats_NativeOnly](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats_nativeonly)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.IDataObject>  
- [Übersicht über Drag & Drop](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.IDataObject>
+- [Übersicht über Drag & Drop](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

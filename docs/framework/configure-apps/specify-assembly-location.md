@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8fedec60b6152e77d6f99bf55cf11ec909fa8f80
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f15111fbd65896cc42ab3d1462dc567133a7b4ea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566345"
 ---
 # <a name="specifying-an-assembly39s-location"></a>Angeben einer Assemblys&#39;s-Speicherort
 Es gibt zwei Möglichkeiten zum Angeben des Speicherortes einer Assembly:  
@@ -67,8 +67,8 @@ Es gibt zwei Möglichkeiten zum Angeben des Speicherortes einer Assembly:
   
  Die **PrivatePath** Attribut enthält die Verzeichnisse, die die Common Language Runtime nach Assemblys suchen soll. Wenn die Anwendung unter C:\Program Files\MyApp befindet, sucht die Runtime nach Assemblys, die keine Codebasis in c:\Programme\Microsoft Files\MyApp\Bin, c:\Programme\Microsoft Files\MyApp\Bin2\Subbin und c:\Programme\Microsoft Files\MyApp\Bin3 angeben. Die Verzeichnisse im angegebenen **PrivatePath** müssen Unterverzeichnisse des Basisverzeichnisses der Anwendung sein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Konfigurieren von .NET Framework-Apps](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+## <a name="see-also"></a>Siehe auch
+- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Konfigurieren von .NET Framework-Apps](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

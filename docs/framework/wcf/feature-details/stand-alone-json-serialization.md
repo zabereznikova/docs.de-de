@@ -2,12 +2,12 @@
 title: Eigenständige JSON-Serialisierung.
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: b84e7dbb91c4f1e94ae0701dffcca50b7834df6c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618421"
 ---
 # <a name="stand-alone-json-serialization"></a>Eigenständige JSON-Serialisierung.
 JSON (JavaScript Object Notation) ist ein Datenformat, das speziell zur Verwendung von JavaScript-Code entworfen wurde, der auf Webseiten innerhalb des Browsers ausgeführt wird. Es ist das von ASP.NET AJAX-Diensten erstellt in der Windows Communication Foundation (WCF) verwendete Standarddatenformat.  
@@ -32,7 +32,7 @@ JSON (JavaScript Object Notation) ist ein Datenformat, das speziell zur Verwendu
 |<xref:System.Array> Der Typ <xref:System.Byte>|Array von Zahlen|Jede Zahl stellt den Wert eines Bytes dar.|  
 |<xref:System.DateTime>|DateTime oder Zeichenfolge|Siehe "Datums-/Uhrzeitangaben und JSON" weiter unten in diesem Thema.|  
 |<xref:System.DateTimeOffset>|Komplexer Typ|Siehe "Datums-/Uhrzeitangaben und JSON" weiter unten in diesem Thema.|  
-|XML- und ADO.NET-Typen (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement> Arrays von <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>) angezeigt wird.|Zeichenfolge|Siehe den Abschnitt "XML-Typen und JSON" in diesem Thema.|  
+|XML- und ADO.NET-Typen (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Arrays von <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>) angezeigt wird.|Zeichenfolge|Siehe den Abschnitt "XML-Typen und JSON" in diesem Thema.|  
 |<xref:System.DBNull>|Leerer komplexer Typ|--|  
 |Auflistungen, Wörterbücher und Arrays|Array|Siehe den Abschnitt "Auflistungen, Wörterbücher und Arrays" in diesem Thema.|  
 |Komplexe Typen (mit angewendetem <xref:System.Runtime.Serialization.DataContractAttribute> oder <xref:System.SerializableAttribute>)|Komplexer Typ|Datenmember werden Member des komplexen JavaScript-Typs.|  
@@ -80,7 +80,7 @@ JSON (JavaScript Object Notation) ist ein Datenformat, das speziell zur Verwendu
   
     -   Erwägen Sie die Verwendung der [schwach typisierten JSON-Serialisierung (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md) Beispiel.  
   
-    -   Verwenden Sie die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle und des Serialisierungskonstruktors. Diese beiden Mechanismen ermöglichen es Ihnen, bei der Serialisierung und der Deserialisierung auf JSON-Schlüssel/Wert-Paare zuzugreifen, was jedoch in teilweise vertrauenswürdigen Szenarien nicht möglich ist.  
+    -   Verwenden Sie die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle und Deserialisierungskonstruktoren. Diese beiden Mechanismen ermöglichen es Ihnen, bei der Serialisierung und der Deserialisierung auf JSON-Schlüssel/Wert-Paare zuzugreifen, was jedoch in teilweise vertrauenswürdigen Szenarien nicht möglich ist.  
   
     -   Arbeiten Sie mit der [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md) statt ein Serialisierungsprogramm.  
   
@@ -129,7 +129,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 -   Ein <xref:System.Runtime.Serialization.ISerializable>-Typ, der in seinem Deserialisierungskonstruktor von einer bestimmten Reihenfolge der Deserialisierung abhängt, wird bei der Deserialisierung mancher JSON-Daten möglicherweise ebenfalls fehlschlagen, weil die meisten JSON-Serialisierungsprogramme keine bestimmte Reihenfolge gewährleisten.  
   
 #### <a name="factory-types"></a>Factorytypen  
- Während die <xref:System.Runtime.Serialization.IObjectReference>-Schnittstelle allgemein in JSON unterstützt wird, werden Typen, die die Funktion "Factorytyp" benötigen (die Rückgabe eines anderen Typs von <xref:System.Runtime.Serialization.IObjectReference.GetRealObject%28System.Runtime.Serialization.StreamingContext%29> als den Typ, der die Schnittstelle implementiert) nicht unterstützt.  
+ Während die <xref:System.Runtime.Serialization.IObjectReference>-Schnittstelle allgemein in JSON unterstützt wird, werden Typen, die die Funktion „Factorytyp“ benötigen (die Rückgabe eines anderen Typs von <xref:System.Runtime.Serialization.IObjectReference.GetRealObject%28System.Runtime.Serialization.StreamingContext%29> als den Typ, der die Schnittstelle implementiert) nicht unterstützt.  
   
 ### <a name="datetime-wire-format"></a>DateTime-Übertragungsformat  
  <xref:System.DateTime>-Werte werden als JSON-Zeichenfolgen im Format "/Date(700000+0500)/" dargestellt, wobei die erste Zahl (700000 in dem angeführten Beispiel) die Anzahl der seit Mitternacht des 1. Januar 1970 in der GMT-Zeitzone verstrichenen Millisekunden (ohne Berücksichtigung der Sommerzeit) angibt. Die Zahl kann negativ sein und gibt dann einen früheren Zeitpunkt an. Der im Beispiel als "+0500" angegebene Teil ist optional und legt fest, dass die Zeitangabe als <xref:System.DateTimeKind.Local> zu verstehen ist, also bei der Deserialisierung in eine lokale Zeitzone konvertiert werden muss. Fehlt dieser Teil, wird die Zeitangabe als <xref:System.DateTimeKind.Utc> deserialisiert. Die tatsächliche Zahl ("0500" in diesem Beispiel) und ihr Vorzeichen (+ oder -) werden ignoriert.  
@@ -260,6 +260,6 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>Gültige JSON-Schlüsselnamen  
  Das Serialisierungsprogramm codiert Schlüsselnamen in XML, die keine gültigen XML-Namen sind. Beispielsweise ein Datenmember mit dem Namen "123" hätte einen codierten Namen wie "\_X0031\_\_X0032\_\_X0033\_" weil "123" ein ungültiger XML-Elementname ist (beginnt mit einem Ziffer). Eine ähnliche Situation tritt möglicherweise bei einigen internationalen Zeichensätzen auf, deren Verwendung ungültige XML-Namen ergibt. Eine Erklärung dieses Effekts von XML in JSON-Verarbeitung, finden Sie unter [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 
 - [Unterstützung für JSON und andere Datenübertragungsformate](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c803a805da605bd52fd50eb1e292c0e277143d7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49290a37ca7ea101e3c8b458a5daa4995cb3beee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610044"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping-Struktur
-Ordnet eine [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID, um das zugehörige ICorDebugType-Objekt.  
+Maps eine [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID, die das zugehörige ICorDebugType-Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,8 +41,8 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`iid`|Die GUID, der die zwischengespeicherten [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typ.|  
-|`pType`|Ein Zeiger auf eine ICorDebugType-Objekt, das Informationen über den Cache bereitstellt.|  
+|`iid`|Die GUID der der zwischengespeicherte [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typ.|  
+|`pType`|Ein Zeiger auf ein ICorDebugType-Objekt, das Informationen zu der zwischengespeicherte Typ bereitstellt.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)].  
@@ -53,6 +53,6 @@ typedef struct CorDebugGuidToTypeMapping {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

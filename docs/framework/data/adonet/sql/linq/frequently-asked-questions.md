@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 5f556c46823bd867709e8c53b59f7ac53201d242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365487"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54679760"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen (FAQs)
 In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die bei der Implementierung von [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] auftreten können.  
   
- Weitere Probleme werden adressiert [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+ Weitere Probleme werden behandelt, [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
 ## <a name="cannot-connect"></a>Es kann keine Verbindung hergestellt werden  
  F. Es kann keine Verbindung mit meiner Datenbank hergestellt werden.  
   
- A. Stellen Sie sicher, dass Ihre Verbindungszeichenfolge richtig ist und dass die SQL Server-Instanz ausgeführt wird. Beachten Sie auch, dass für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] das Named Pipes-Protokoll aktiviert sein muss. Weitere Informationen finden Sie unter [lernen durch Exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+ A. Stellen Sie sicher, dass Ihre Verbindungszeichenfolge richtig ist und die SQL Server-Instanz ausgeführt wird. Beachten Sie auch, dass für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] das Named Pipes-Protokoll aktiviert sein muss. Weitere Informationen finden Sie unter [lernen durch Exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
 ## <a name="changes-to-database-lost"></a>Änderungen an der Datenbank sind nicht vorhanden  
  F. Änderungen an den Daten in der Datenbank sind nicht mehr vorhanden, nachdem meine Anwendung erneut ausgeführt wurde.  
   
  A. Stellen Sie sicher, dass Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufrufen, um Ergebnisse in der Datenbank zu speichern.  
   
-## <a name="database-connection-open-how-long"></a>Wie lange kann die Datenbankverbindung geöffnet bleiben?  
+## <a name="database-connection-open-how-long"></a>Datenbankverbindung: Wie lange öffnen?  
  F. Wie lange bleibt meine Datenbankverbindung geöffnet?  
   
  A. Eine Verbindung bleibt normalerweise geöffnet, bis Sie die Abfrageergebnisse verwenden. Wenn Sie erwarten, dass die Verarbeitung sämtlicher Ergebnisse länger dauert und nichts dagegen spricht, die Ergebnisse zwischenzuspeichern, wenden Sie <xref:System.Linq.Enumerable.ToList%2A> auf die Abfrage an. In gängigen Szenarien, in denen jedes Objekt nur einmal verarbeitet wird, ist das Streamingmodell sowohl in `DataReader` als auch in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die bevorzugte Lösung.  
@@ -100,14 +100,14 @@ In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die be
  Weitere Informationen finden Sie unter [anpassen Operations By Using Stored Procedures](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md).  
   
 ## <a name="serialization-errors"></a>Serialisierungsfehler  
- F. Wenn ich zum Serialisieren Versuche, erhalte ich die folgende Fehlermeldung: "Geben Sie '+ standardchangetracker'... ist nicht als serialisierbar gekennzeichnet."  
+ F. Wenn ich zum Serialisieren Versuche, erhalte ich den folgenden Fehler: "Typ 'System.Data.Linq.ChangeTracker+StandardChangeTracker'... ist nicht als serialisierbar markiert."  
   
  A. Die Codegenerierung in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet Unterstützung für die <xref:System.Runtime.Serialization.DataContractSerializer>-Serialisierung. <xref:System.Xml.Serialization.XmlSerializer> oder <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> wird nicht unterstützt. Weitere Informationen finden Sie unter [Serialization (Serialisierung)](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).  
   
 ## <a name="multiple-dbml-files"></a>Mehrere DBML-Dateien  
  F. Bei Verwendung mehrerer DBML-Dateien, die einige Tabellen gemeinsam nutzen, wird ein Compilerfehler ausgegeben.  
   
- A. Legen Sie die **Context Namespace** und **Entity Namespace** Eigenschaften aus der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] auf einen unterschiedlichen Wert für jede DBML-Datei. Durch diese Lösung werden Konflikte zwischen Namen und Namespace vermieden.  
+ A. Legen Sie die **Kontext Namespace** und **Entity Namespace** Eigenschaften aus der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] auf einen unterschiedlichen Wert für jede DBML-Datei. Durch diese Lösung werden Konflikte zwischen Namen und Namespace vermieden.  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Vermeiden, dass von der Datenbank generierte Werte bei Einfüge- oder Updatevorgängen explizit festgelegt werden  
  F. Bei einer Datenbanktabelle mit einer `DateCreated`-Spalte wird die Spalte standardmäßig auf SQL `Getdate()` festgelegt. Beim Versuch, mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] einen neuen Datensatz einzufügen, wird der Wert auf `NULL` festgelegt. Erwartungsgemäß sollte der Wert auf den Datenbankstandard festgelegt werden.  
@@ -170,7 +170,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  A. Ja, die System.Data.Linq.dll-Assembly gehört zu den [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]-Assemblys, die mit dem <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut markiert sind. Assemblys in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)], die diese Markierung nicht aufweisen, sind nur für die Verwendung durch voll vertrauenswürdigen Code vorgesehen.  
   
- Principal Szenario in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für das Zulassen von teilweise vertrauenswürdigen Aufrufern ist die Aktivierung der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Assembly Webanwendungen zugreifen können, in denen die *Vertrauensstellung* Konfiguration ist Mittel.  
+ Das Dienstprinzipal Szenario in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zum Zulassen teilweise vertrauenswürdiger Aufrufer ist die Aktivierung der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Assembly über Webanwendungen zugegriffen werden, in dem die *Vertrauensstellung* Konfiguration ist Mittel.  
   
 ## <a name="mapping-data-from-multiple-tables"></a>Zuordnen von Daten aus mehreren Tabellen  
  F. Die Daten in meiner Entität stammen aus mehreren Tabellen. Wie werden sie zugeordnet?  
@@ -178,7 +178,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
  A. Sie können eine Ansicht in einer Datenbank erstellen und die Entität der Ansicht zuordnen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generiert für Ansichten dieselbe SQL wie für Tabellen.  
   
 > [!NOTE]
->  Die Verwendung von Ansichten in diesem Szenario unterliegt Einschränkungen. Dieser Ansatz funktioniert am sichersten, wenn die für <xref:System.Data.Linq.Table%601> ausgeführten Vorgänge von der zugrunde liegenden Ansicht unterstützt werden. Nur Sie wissen, welche Vorgänge beabsichtigt sind. Beispielsweise die meisten Anwendungen sind schreibgeschützt, und führen Sie eine weitere große Anzahl `Create` / `Update` / `Delete` Vorgänge nur mithilfe von gespeicherten Prozeduren mit Sichten.  
+>  Die Verwendung von Ansichten in diesem Szenario unterliegt Einschränkungen. Dieser Ansatz funktioniert am sichersten, wenn die für <xref:System.Data.Linq.Table%601> ausgeführten Vorgänge von der zugrunde liegenden Ansicht unterstützt werden. Nur Sie wissen, welche Vorgänge beabsichtigt sind. Beispielsweise werden die meisten Anwendungen sind schreibgeschützt, und führen Sie eine weitere große Anzahl `Create` / `Update` / `Delete` -Vorgänge nur durch die gespeicherte Prozeduren für Ansichten.  
   
 ## <a name="connection-pooling"></a>Verbindungspooling  
  F. Gibt es ein Konstrukt, das das <xref:System.Data.Linq.DataContext>-Pooling unterstützt?  
@@ -199,7 +199,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  A. Im schreibgeschützten Modus ist der Kontext nicht mehr in der Lage, Änderungen nachzuverfolgen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  
- [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+## <a name="see-also"></a>Siehe auch
+- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
+- [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

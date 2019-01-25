@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 95e33f38fcad70b61ae565307915b60dcbfb905a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd480f7f9a4fec42aebc57fe0b9e61bd8993ee34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562374"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697035"
 ---
 # <a name="transformations-how-to-topics"></a>Gewusst-wie-Themen zu Transformationen
 Die Themen in diesem Abschnitt wird beschrieben, wie verschiedene Transformationen auf Objekte angewendet.  
@@ -30,8 +30,8 @@ Die Themen in diesem Abschnitt wird beschrieben, wie verschiedene Transformation
  [Übersetzen eines Elements](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)  
  [Verwenden von MatrixTransform zum Erstellen benutzerdefinierter Transformationen](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Transform>  
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Transform>
+- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Layout](../../../../docs/framework/wpf/advanced/layout.md)

@@ -2,22 +2,22 @@
 title: Auswählen eines Nachrichtenaustauschmusters
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 927324e0f707284e31baefa261d4d90b147e4e24
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805888"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594758"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Auswählen eines Nachrichtenaustauschmusters
-Der erste Schritt beim Schreiben eines benutzerdefinierten Transports besteht, zu entscheiden, welche *Nachrichtenaustauschmuster* (oder Nachrichtenaustauschmuster) für die von Ihnen entwickelten Kanal erforderlich sind. In diesem Thema werden die verfügbaren Optionen beschrieben und die verschiedenen Anforderungen erläutert. Dies ist die erste Aufgabe in der Aufgabenliste kanalentwicklung in beschriebenen [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Der erste Schritt beim Schreiben eines benutzerdefinierten Transports ist, zu entscheiden, welche *Nachrichtenaustauschmuster* (oder Nachrichtenaustauschmuster) für den Kanal, die Sie entwickeln erforderlich sind. In diesem Thema werden die verfügbaren Optionen beschrieben und die verschiedenen Anforderungen erläutert. Dies ist die erste Aufgabe in der beschriebenen kanalentwicklungsaufgabenliste [Entwickeln von Kanälen](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="six-message-exchange-patterns"></a>Sechs Nachrichtenaustauschmuster  
  Es stehen drei Nachrichtenaustauschmuster zur Auswahl:  
   
 -   Datagramm (<xref:System.ServiceModel.Channels.IInputChannel> und <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
-     Bei Verwendung ein Datagramm-Nachrichtenaustauschmusters sendet ein Client eine Nachricht über einen *auslösen und vergessen* Exchange. Ein "fire and forget"-Austausch erfordert eine Out-of-Band-Bestätigung für die erfolgreiche Zustellung. Die Nachricht könnte unterwegs verloren gehen und den Dienst nicht erreichen. Wenn der Sendevorgang auf der Clientseite erfolgreich abgeschlossen wird, stellt dies keine Garantie dar, dass der Remoteendpunkt die Nachricht erhalten hat. Das Datagramm ist ein wesentlicher Baustein für den Nachrichtenaustausch, da Sie eigene Protokolle damit erstellen können, einschließlich zuverlässiger Protokolle und sicherer Protokolle. Clientdatagrammkanäle implementieren die <xref:System.ServiceModel.Channels.IOutputChannel>-Schnittstelle, und Dienstdatagrammkanäle implementieren die <xref:System.ServiceModel.Channels.IInputChannel>-Schnittstelle.  
+     Bei Verwendung ein Datagramm-Nachrichtenaustauschmusters sendet ein Client eine Nachricht mit einem *auslösen und vergessen* Exchange. Ein "fire and forget"-Austausch erfordert eine Out-of-Band-Bestätigung für die erfolgreiche Zustellung. Die Nachricht könnte unterwegs verloren gehen und den Dienst nicht erreichen. Wenn der Sendevorgang auf der Clientseite erfolgreich abgeschlossen wird, stellt dies keine Garantie dar, dass der Remoteendpunkt die Nachricht erhalten hat. Das Datagramm ist ein wesentlicher Baustein für den Nachrichtenaustausch, da Sie eigene Protokolle damit erstellen können, einschließlich zuverlässiger Protokolle und sicherer Protokolle. Clientdatagrammkanäle implementieren die <xref:System.ServiceModel.Channels.IOutputChannel>-Schnittstelle, und Dienstdatagrammkanäle implementieren die <xref:System.ServiceModel.Channels.IInputChannel>-Schnittstelle.  
   
 -   Anforderung-Antwort (<xref:System.ServiceModel.Channels.IRequestChannel> und <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
@@ -27,7 +27,7 @@ Der erste Schritt beim Schreiben eines benutzerdefinierten Transports besteht, z
   
      Das Duplex-Nachrichtenaustauschmuster ermöglicht, dass eine willkürliche Anzahl von Nachrichten von einem Client gesendet und in beliebiger Reihenfolge empfangen wird. Das Duplex-Nachrichtenaustauschmuster ist mit einem Telefongespräch vergleichbar, bei dem jedes gesprochene Wort einer Nachricht entspricht. Da beide Teilnehmer in diesem Nachrichtenaustauschmuster senden und empfangen können, ist die vom Client und von den Dienstkanälen implementierte Schnittstelle <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
- ![Auswählen eines nachrichtenaustauschmusters](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "Wcfc_BasicThreeMEPsc")  
+ ![Auswählen eines meldungsaustauschmusters](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "Wcfc_BasicThreeMEPsc")  
 Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm, Anforderung-Antwort und Duplex.  
   
  Jedes dieser Nachrichtenaustauschmuster kann außerdem unterstützen *Sitzungen*. Eine Sitzung (und Implementierung von <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> des Typs <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) korreliert alle in einem Kanal gesendeten und empfangenen Nachrichten. Das Anforderung-Antwort-Muster ist eine eigenständige, aus zwei Nachrichten bestehende Sitzung, da die Anforderung und die Antwort korreliert werden. Demgegenüber impliziert das Anforderung-Antwort-Muster, das Sitzungen unterstützt, dass alle Anforderung/Antwort-Paare in diesem Kanal miteinander korreliert werden. Daher stehen insgesamt sechs Nachrichtenaustauschmuster zur Auswahl:  
@@ -48,11 +48,11 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
 >  Für den UDP-Transport wird nur das Nachrichtenaustauschmuster Datagramm unterstützt, da UDP grundsätzlich ein "fire and forget"-Protokoll ist.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Sitzungen und sitzungsbasierte Kanäle  
- Im Bereich der Netzwerke gibt es verbindungsorientierte Protokolle (z. B. TCP) und verbindungslose Protokolle (z. B. UDP). WCF verwendet den Begriff Sitzung, um eine Verbindung-verbindungsähnliche logische Abstraktion. Sitzungsbasierte WCF-Protokolle sind mit verbindungsorientierten Netzwerkprotokollen vergleichbar, und nicht sitzungsbasierte Protokolle entsprechen verbindungslosen Netzwerkprotokollen.  
+ Im Bereich der Netzwerke gibt es verbindungsorientierte Protokolle (z. B. TCP) und verbindungslose Protokolle (z. B. UDP). WCF verwendet den Begriff Sitzung um eine Verbindung-verbindungsähnliche logische Abstraktion. Sitzungsbasierte WCF-Protokolle sind mit verbindungsorientierten Netzwerkprotokollen vergleichbar, und nicht sitzungsbasierte Protokolle entsprechen verbindungslosen Netzwerkprotokollen.  
   
  Im Kanalobjektmodell manifestiert sich jede logische Sitzung als Instanz eines sitzungsbasierten Kanals. Daher entspricht jede neue vom Client erstellte und vom Dienst akzeptierte Sitzung einem neuen sitzungsbasierten Kanal auf jeder Seite. Das folgende Diagramm zeigt oben die Struktur nicht sitzungsbasierter Kanäle und unten die Struktur sitzungsbasierter Kanäle.  
   
- ![Auswählen eines nachrichtenaustauschmusters](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "Wcfc_SessionAndSessionlessChannelsc")  
+ ![Auswählen eines meldungsaustauschmusters](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "Wcfc_SessionAndSessionlessChannelsc")  
   
  Ein Client erstellt einen neuen sitzungsbasierten Kanal und sendet eine Nachricht. Auf der Dienstseite empfängt der Kanallistener diese Nachricht und erkennt, dass sie zu einer neuen Sitzung gehört. Daraufhin erstellt er einen neuen sitzungsbasierten Kanal und übergibt diesen an die Anwendung (als Antwort auf den AcceptChannel-Aufruf der Anwendung im Kanallistener). Die Anwendung empfängt dann diese Nachricht sowie alle nachfolgenden Nachrichten, die in derselben Sitzung über denselben sitzungsbasierten Kanal gesendet werden.  
   
@@ -92,5 +92,5 @@ Die drei grundlegenden Nachrichtenaustauschmuster von oben nach unten: Datagramm
   
 -   Wenn <xref:System.ServiceModel.ICommunicationObject.Abort%2A> auf dem Kanal aufgerufen wird, beenden Sie die Sitzung unvermittelt, ohne E/A auszuführen. Dies bedeutet möglicherweise, nichts zu machen oder eine Netzwerkverbindung oder eine andere Ressource abzubrechen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über das Kanalmodell](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über das Kanalmodell](../../../../docs/framework/wcf/extending/channel-model-overview.md)

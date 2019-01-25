@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: f6c7f28cee03c2d5ac258cf1e2c8956225334f7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a716a767563ab2721b3f01663d7566f141fc8e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604145"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612020"
 ---
 # <a name="string-functions-visual-basic"></a>String-Funktionen (Visual Basic)
 In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum Suchen und Bearbeiten von Zeichenfolgen bereitstellt.  
@@ -46,7 +46,7 @@ In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum S
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Gibt eine Zeichenfolge zurück, die eine Kopie einer angegebenen Zeichenfolge ohne führende oder nachgestellte Leerzeichen enthält.|  
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Gibt eine Zeichenfolge oder ein Zeichen zurück, die bzw. das die angegebene Zeichenfolge in Großbuchstaben enthält.|  
   
- Können Sie die [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) Anweisung, um festzulegen, ob Zeichenfolgen verglichen werden mit einem Groß-/Kleinschreibung den durch das Gebietsschema des Systems bestimmten Textsortierreihenfolge (`Text`) oder durch den internen binären Darstellungen der die Zeichen () `Binary`). Die Standardmethode zum Textvergleich ist `Binary`.  
+ Können Sie die [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) Anweisung, um festzulegen, ob die Zeichenfolgen verglichen mit einem Groß-/Kleinschreibung Text bestimmt, indem das Gebietsschema des Systems Sortierreihenfolge (`Text`) oder durch den internen binären Darstellungen von den Zeichen () `Binary`). Die Standardmethode zum Textvergleich ist `Binary`.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird die `UCase`-Funktion verwendet, um eine Zeichenfolge in Großbuchstaben zurückzugeben:  
@@ -81,7 +81,7 @@ In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum S
   
  [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)  
- [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)  
- [Zeichenfolgenbearbeitung: Zusammenfassung](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+## <a name="see-also"></a>Siehe auch
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Zeichenfolgenbearbeitung: Zusammenfassung](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

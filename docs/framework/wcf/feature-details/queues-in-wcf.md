@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: 46d70a0b0ccc33755666867240be8778b5638947
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13bc401647612c982eb13a3b607e41c6afa61716
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742746"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Warteschlangen in Windows Communication Foundation
 Die Themen in diesem Abschnitt erläutert die Windows Communication Foundation (WCF)-Unterstützung für Warteschlangen. WCF bietet Unterstützung für Warteschlangenvorgänge durch die Nutzung von Microsoft Message Queuing (vormals bekannt als MSMQ) als Transport und ermöglicht die folgenden Szenarien:  
@@ -22,7 +22,7 @@ Die Themen in diesem Abschnitt erläutert die Windows Communication Foundation (
   
 -   Getrennte Vorgänge: Die Vorgänge des Sendens, Empfangens und Verarbeitens können bei der Kommunikation über Netzwerke mit hoher Latenz oder eingeschränkter Verfügbarkeit, wie dies zum Beispiel bei mobilen Geräten der Fall ist, voneinander getrennt werden. Warteschlangen ermöglichen die Fortsetzung dieser Vorgänge, selbst wenn die Endpunkte nicht erreichbar sind. Sobald die Verbindung wiederhergestellt ist, leitet die Warteschlange die Nachrichten an die empfangende Anwendung weiter.  
   
- Um die Warteschlangenfunktion in einer WCF-Anwendung verwenden möchten, können Sie eine der standardbindungen verwenden, oder Sie können eine benutzerdefinierte Bindung erstellen, wenn die standardbindungen Ihre Anforderungen nicht erfüllen. Weitere Informationen über relevante standardbindungen und wie Sie eine auswählen, finden Sie unter [Vorgehensweise: Austauschen von Nachrichten mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Um die Warteschlangenfunktion in einer WCF-Anwendung verwenden möchten, können Sie eine der standardbindungen verwenden, oder Sie können eine benutzerdefinierte Bindung erstellen, wenn die standardbindungen Ihre Anforderungen nicht erfüllen. Weitere Informationen über relevante standardbindungen und wie Sie eine auswählen, finden Sie unter [Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md). Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
@@ -31,10 +31,10 @@ Die Themen in diesem Abschnitt erläutert die Windows Communication Foundation (
  [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  Eine Übersicht über die Unterstützung der WCF-Warteschlange.  
   
- [Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCD-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Vorgehensweise: Austauschen von Nachrichten in der Warteschlange mit wcd-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  Erläutert, wie die <xref:System.ServiceModel.NetMsmqBinding> Klasse für die Kommunikation zwischen einem WCF-Clients und WCF-Dienst.  
   
- [Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Vorgehensweise: Austauschen von Nachrichten mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  Erläutert, wie die <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> für die Kommunikation zwischen WCF und Message Queuing-Anwendungen.  
   
  [Gruppieren von Nachrichten in der Warteschlange einer Sitzung](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
@@ -64,5 +64,5 @@ Die Themen in diesem Abschnitt erläutert die Windows Communication Foundation (
  [Bewährte Methoden für die Kommunikation unter Verwendung von Warteschlangen](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  Erläutert, dass die bewährte Methoden für die Verwendung von WCF die Kommunikation in der Warteschlange.  
   
-## <a name="see-also"></a>Siehe auch  
- [Message Queuing-](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)
+## <a name="see-also"></a>Siehe auch
+- [Message Queuing-](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

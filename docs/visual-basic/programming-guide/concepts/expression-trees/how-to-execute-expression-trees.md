@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 5fbd9ea2842a87a941a1b572acadc93b0a7d2e11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fde681905cded0e4043f52c5f2a29cee74b91209
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643652"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729352"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)
 In diesem Thema erfahren Sie, wie eine Ausdrucksbaumstruktur ausgeführt wird. Die Ausführung einer Ausdrucksbaumstruktur gibt möglicherweise einen Wert zurück. Es kann jedoch auch nur eine Aktion ausgeführt werden, z.B. das Aufrufen einer Methode.  
@@ -48,6 +48,6 @@ MsgBox(result)
   
 -   Binden Sie den System.Linq.Expressions-Namespace ein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)  
- [Vorgehensweise: Ändern von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+## <a name="see-also"></a>Siehe auch
+- [Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [Vorgehensweise: Ändern von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
