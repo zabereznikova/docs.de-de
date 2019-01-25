@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Implementieren von PriorityBinding'
+title: 'Vorgehensweise: Implementieren von PriorityBinding'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c239cb3005d2748f9cba55a5bb0b5d564828f51b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717896"
 ---
-# <a name="how-to-implement-prioritybinding"></a>Gewusst wie: Implementieren von PriorityBinding
+# <a name="how-to-implement-prioritybinding"></a>Vorgehensweise: Implementieren von PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funktioniert, indem Sie eine Liste der Bindungen angeben. Die Liste der Bindungen ist von der höchsten zur niedrigsten Priorität geordnet. Wenn die höchste Priorität Bindung einen Wert zurückgibt erfolgreich bei der Verarbeitung wird besteht nie die anderen Bindungen in der Liste verarbeitet werden muss. Es könnte den Fall, den die höchste Priorität Bindung sehr lange dauert, die ausgewertet werden, die nächstniedrigeren Priorität, die einen Wert, erfolgreich zurückgibt verwendet werden, bis eine Bindung mit einer höheren Priorität erfolgreich einen Wert zurückgibt.  
   
 ## <a name="example"></a>Beispiel  
@@ -27,7 +27,7 @@ ms.locfileid: "47398809"
  Get-Accessor der `SlowestDP` wartet fünf Sekunden vor der Rückgabe des Werts des der `_slowestDP` -Datenmember.  
   
 > [!NOTE]
->  Das Beispiel dient nur der Veranschaulichung. Die [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Richtlinien wird die Definition von Eigenschaften, erheblich langsamer sind, als wäre eine Feldgruppe, empfohlen. Weitere Informationen finden Sie unter [NIB: Auswahl zwischen Eigenschaften und Methoden](https://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
+>  Das Beispiel dient nur der Veranschaulichung. Die [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] Richtlinien wird die Definition von Eigenschaften, erheblich langsamer sind, als wäre eine Feldgruppe, empfohlen. Weitere Informationen finden Sie unter [NIB: Auswählen zwischen Eigenschaften und Methoden](https://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
@@ -44,7 +44,7 @@ ms.locfileid: "47398809"
   
  Finden Sie unter <xref:System.Windows.Data.PriorityBinding> Informationen, was einen erfolgreiche Rückgabewert aus einer Bindung gilt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  
- [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
+- [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

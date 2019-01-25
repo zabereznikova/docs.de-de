@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-ms.openlocfilehash: 366c174a13e9a1a1928ef943febf199ae8485dfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 249ed8425f175b80cb55289c2a7fe68742d8389c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352437"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655724"
 ---
 # <a name="local-method-calls"></a>Lokale Methodenaufrufe
-Ein Aufruf einer lokalen Methode wird innerhalb des Objektmodells ausgeführt. Ein Remotemethodenaufruf wird von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in SQL übersetzt und zur Ausführung an das Datenbankmodul übergeben. Lokale Methodenaufrufe sind erforderlich, wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht den Aufruf in SQL übersetzen. Andernfalls ein <xref:System.InvalidOperationException> ausgelöst wird.  
+Ein Aufruf einer lokalen Methode wird innerhalb des Objektmodells ausgeführt. Ein Remotemethodenaufruf wird von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] in SQL übersetzt und zur Ausführung an die Datenbank-Engine übergeben. Lokale Methodenaufrufe sind erforderlich, wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann nicht den Aufruf in SQL übersetzt werden. Andernfalls wird eine <xref:System.InvalidOperationException> ausgelöst.  
   
 ## <a name="example-1"></a>Beispiel 1  
  Im folgenden Beispiel wird veranschaulicht, wie eine `Order`-Klasse der Tabelle Bestellungen in der Datenbank Northwind zugewiesen wird. Eine lokale Instanzmethode wurde der Klasse hinzugefügt.  
@@ -26,5 +26,5 @@ Ein Aufruf einer lokalen Methode wird innerhalb des Objektmodells ausgeführt. E
  [!code-csharp[DlinqLocalMethodCall#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqLocalMethodCall/cs/northwind.cs#2)]
  [!code-vb[DlinqLocalMethodCall#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqLocalMethodCall/vb/northwind.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+## <a name="see-also"></a>Siehe auch
+- [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

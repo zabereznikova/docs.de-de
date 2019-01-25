@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 31b2b3cf16857bf08a4f8d09f47f80d9b34a53b8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b4c2bb2d9c81b6ab3afc783d1188de7664e01566
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741417"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)
 Das WS-AtomicTransaction-Konfigurationsdienstprogramm wird zur Konfiguration von grundlegenden WS-AtomicTransaction-Unterstützungseinstellungen verwendet.  
@@ -35,20 +35,20 @@ wsatConfig [Options]
 |Optionen|Beschreibung|  
 |-------------|-----------------|  
 |-Konten:\<Konto >|Gibt eine durch Trennzeichen getrennte Liste von Konten an, die von WS-AtomicTransaction verwendet werden können. Die Gültigkeit dieser Konten wird nicht überprüft.|  
-|-AccountsCerts:\<Thumb >&#124;"Issuer\SubjectName," >|Gibt eine durch Trennzeichen getrennte Liste von Zertifikaten an, die von WS-AtomicTransaction verwendet werden können. Die Zertifikate werden vom Fingerabdruck oder vom Issuer\SubjectName-Paar angegeben. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
-|-EndpointCert: < Machine&#124;\<Thumb >&#124;"Issuer\SubjectName" >|Verwendet das Computerzertifikat oder ein anderes lokales Endpunktzertifikat, das vom Fingerabdruck oder Issuer\SubjectName-Paar angegeben wird. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
-|MaxTimeout-:\<s >|Gibt das maximale Timeout in Sekunden an. Gültige Werte reichen von 0 bis 3600.|  
+|-accountsCerts:\<thumb>&#124;"Issuer\SubjectName",>|Gibt eine durch Trennzeichen getrennte Liste von Zertifikaten an, die von WS-AtomicTransaction verwendet werden können. Die Zertifikate werden vom Fingerabdruck oder vom Issuer\SubjectName-Paar angegeben. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
+|-endpointCert:<machine&#124;\<thumb>&#124;"Issuer\SubjectName">|Verwendet das Computerzertifikat oder ein anderes lokales Endpunktzertifikat, das vom Fingerabdruck oder Issuer\SubjectName-Paar angegeben wird. Verwendet {EMPTY} für den Betreffnamen, wenn dieser leer ist.|  
+|-maxTimeout:\<sec>|Gibt das maximale Timeout in Sekunden an. Gültige Werte reichen von 0 bis 3600.|  
 |-Netzwerk:\<aktivieren&#124;deaktivieren >|Aktiviert oder deaktiviert die WS-AtomicTransaction-Netzwerkunterstützung.|  
-|-Port:\<PortNum >|Legt den HTTPS-Anschluss für WS-AtomicTransaction fest.<br /><br /> Wenn Sie die Firewall schon vor dem Ausführen dieses Tools aktiviert haben, wird der Anschluss automatisch in der Ausnahmeliste registriert. Wenn die Firewall vor dem Ausführen dieses Tools deaktiviert wird, werden keine zusätzlichen Konfigurationen in Bezug auf die Firewall vorgenommen.<br /><br /> Wenn Sie die Firewall nach der Konfiguration von WS-AT aktivieren, müssen Sie dieses Tool erneut ausführen und die Anschlussnummer mit diesem Parameter angeben. Wenn Sie die Firewall nach der Konfiguration deaktivieren, wird WS-AT ohne zusätzliche Eingabe ausgeführt.|  
-|-Timeout:\<s >|Gibt das Standardtimeout in Sekunden an. Gültige Werte reichen von 1 bis 3600.|  
-|-TraceActivity:\<aktivieren&#124;deaktivieren >|Aktiviert oder deaktiviert die Ablaufverfolgung von Aktivitätsereignissen.|  
+|-port:\<portNum>|Legt den HTTPS-Anschluss für WS-AtomicTransaction fest.<br /><br /> Wenn Sie die Firewall schon vor dem Ausführen dieses Tools aktiviert haben, wird der Anschluss automatisch in der Ausnahmeliste registriert. Wenn die Firewall vor dem Ausführen dieses Tools deaktiviert wird, werden keine zusätzlichen Konfigurationen in Bezug auf die Firewall vorgenommen.<br /><br /> Wenn Sie die Firewall nach der Konfiguration von WS-AT aktivieren, müssen Sie dieses Tool erneut ausführen und die Anschlussnummer mit diesem Parameter angeben. Wenn Sie die Firewall nach der Konfiguration deaktivieren, wird WS-AT ohne zusätzliche Eingabe ausgeführt.|  
+|-timeout:\<sec>|Gibt das Standardtimeout in Sekunden an. Gültige Werte reichen von 1 bis 3600.|  
+|-traceActivity:\<enable&#124;disable>|Aktiviert oder deaktiviert die Ablaufverfolgung von Aktivitätsereignissen.|  
 |– TraceLevel:\<aus&#124;Fehler&#124;kritische&#124;Warnung&#124;Informationen&#124; ausführliche&#124;alle >}|Gibt die Ablaufverfolgungsebene an.|  
-|-TracePII:\<aktivieren&#124;deaktivieren >|Aktiviert oder deaktiviert die Ablaufverfolgung von persönlich identifizierbaren Informationen.|  
-|-TraceProp:\<aktivieren&#124;deaktivieren >|Aktiviert oder deaktiviert die Ablaufverfolgung von Propagierungsereignissen.|  
+|-tracePII:\<enable&#124;disable>|Aktiviert oder deaktiviert die Ablaufverfolgung von persönlich identifizierbaren Informationen.|  
+|-traceProp:\<enable&#124;disable>|Aktiviert oder deaktiviert die Ablaufverfolgung von Propagierungsereignissen.|  
 |-restart|Startet MSDTC neu, um Änderungen sofort zu aktivieren. Wenn dies nicht angegeben wird, werden die Änderungen erst wirksam, wenn MSDTC neu gestartet wird.|  
 |-show|Zeigt die aktuellen WS-AtomicTransaction-Protokolleinstellungen an.|  
-|"virtualserver"-:\<"virtualserver" >|Gibt den DTC-Ressourcenclusternamen an.|  
+|-virtualServer:\<virtualServer>|Gibt den DTC-Ressourcenclusternamen an.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von WS-AtomicTransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
- [Konfigurieren der Unterstützung von WS-Atomic-Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwenden von WS-AtomicTransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)
+- [Konfigurieren der Unterstützung von WS-Atomic-Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

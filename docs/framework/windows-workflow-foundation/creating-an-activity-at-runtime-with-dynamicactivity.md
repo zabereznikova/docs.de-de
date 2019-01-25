@@ -2,12 +2,12 @@
 title: Erstellen einer Aktivität zur Laufzeit mit DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 32a35d5220950d8547b1f934c431bdb9c3627e8e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 17dda5643f86690c25067e70680a6b797dd172d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733206"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Erstellen einer Aktivität zur Laufzeit mit DynamicActivity
 <xref:System.Activities.DynamicActivity> ist eine konkrete, versiegelte Klasse mit einem öffentlichen Konstruktor. <xref:System.Activities.DynamicActivity> kann zur Zusammenstellung von Aktivitätsfunktionen zur Laufzeit mit einem Aktivitäts-DOM verwendet werden.  
@@ -21,7 +21,7 @@ ms.locfileid: "48583871"
   
 #### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>So erstellen Sie zur Laufzeit eine Aktivität mit imperativem Code  
   
-1.  Datenbankdateinamen Studio 2010.  
+1.  OpenVisual Studio 2010.  
   
 2.  Wählen Sie **Datei**, **neue**, **Projekt**. Wählen Sie **Workflow 4.0** unter **Visual C#-** in die **Projekttypen** , und wählen die **v2010** Knoten. Wählen Sie **Konsolenanwendung für sequenzielle Workflows** in die **Vorlagen** Fenster. Geben Sie dem neuen Projekt den Namen DynamicActivitySample.  
   

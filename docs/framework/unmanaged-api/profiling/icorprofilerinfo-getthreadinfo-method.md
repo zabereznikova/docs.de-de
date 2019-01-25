@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f68565977551a54244f3caf6a0250f67005a6ecf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03b6f2fe0cc98b469b9b82bfdc4151adafb99c38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452880"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665551"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo-Methode
 Ruft die aktuelle Win32-Thread-Identität für den angegebenen Thread ab.  
@@ -37,13 +37,13 @@ HRESULT GetThreadInfo(
   
 #### <a name="parameters"></a>Parameter  
  `threadId`  
- [in] Die ID des Threads für die aktuelle Win32-ID abgerufen  
+ [in] Die ID des Threads für die die aktuelle Win32-ID abzurufen  
   
  `pdwWin32ThreadId`  
  [out] Ein Zeiger auf den angegebenen Thread aktuelle Win32-Thread-ID.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -51,5 +51,5 @@ HRESULT GetThreadInfo(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

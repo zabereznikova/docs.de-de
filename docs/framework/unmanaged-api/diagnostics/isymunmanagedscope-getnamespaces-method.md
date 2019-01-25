@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c786cd43a25aa0c69c19e57452a3b190c7bfb167
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e577fd6bafecb9adaf3b759d100ab21f6b32ffd4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693174"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>ISymUnmanagedScope::GetNamespaces-Methode
-Ruft die Namespaces, die in diesem Bereich verwendet werden.  
+Ruft die Namespaces, die innerhalb dieses Bereichs verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ HRESULT GetNamespaces(
  [in] Die Größe des `namespaces`-Arrays.  
   
  `pcNameSpaces`  
- [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers erforderlich, um die Namespaces zu enthalten.  
+ [out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers erforderlich, um die Namespaces enthalten.  
   
  `namespaces`  
  [out] Das Array, das die Namespaces empfängt.  
@@ -54,5 +54,5 @@ HRESULT GetNamespaces(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedScope-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedScope-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

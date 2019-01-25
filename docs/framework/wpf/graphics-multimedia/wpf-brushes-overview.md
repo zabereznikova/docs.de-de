@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 47a795fa63c4d143689804cd5b3d36ac34d141be
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 967d0e67ed0ce106de291e1e47b7d72e06560342
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655958"
 ---
 # <a name="wpf-brushes-overview"></a>Übersicht über WPF-Pinsel
 Alles, was auf dem Bildschirm sichtbar ist sichtbar, da es mit einem Pinsel gezeichnet wurde. Beispielsweise wird ein Pinsel verwendet, um den Hintergrund einer Schaltfläche, die Vordergrundfarbe des Texts und des Ausfüllens einer Form zu beschreiben. In diesem Thema werden die Konzepte Zeichnen mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel und stellt Beispiele bereit. Mithilfe von Pinseln können Sie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-Objekte, angefangen von einfachen Objekten, über Objekte in Volltonfarbe bis hin zu Objekten mit komplexen von Mustern und Bildern, zeichnen.  
@@ -160,14 +160,14 @@ Ein mit einem VisualBrush gezeichnetes Rechteck
   
  Weitere Informationen zu den Gründen <xref:System.Windows.Media.VisualBrush> -Objekte können nicht fixiert ist, finden Sie in der <xref:System.Windows.Media.VisualBrush> Seite.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Brushes>  
- [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Beispiel für Pinsel](https://go.microsoft.com/fwlink/?LinkID=159973)  
- [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Weitere Leistungsempfehlungen](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Brushes>
+- [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Beispiel für Pinsel](https://go.microsoft.com/fwlink/?LinkID=159973)
+- [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [Weitere Leistungsempfehlungen](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

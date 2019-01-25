@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45548fcd85e58086c2a43ac33e739c8ccb0e833f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ecd11b57d1901c4618ee0d27442753559b85c509
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428080"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738104"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument-Methode
-Sucht nach einem Dokument. Die Dokumentsprache, Hersteller und Typ sind optional.  
+Sucht ein Dokument an. Die Sprache des Dokuments, Hersteller und Typ sind optional.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,10 +43,10 @@ HRESULT GetDocument (
  [in] Die URL, die das Dokument kennzeichnet.  
   
  `language`  
- [in] Die Dokumentsprache. Dieser Parameter ist optional.  
+ [in] Die Sprache des Dokuments. Dieser Parameter ist optional.  
   
  `languageVendor`  
- [in] Die Identität des Herstellers für die Dokumentsprache. Dieser Parameter ist optional.  
+ [in] Die Identität des Herstellers für die Sprache des Dokuments. Dieser Parameter ist optional.  
   
  `documentType`  
  [in] Der Typ des Dokuments. Dieser Parameter ist optional.  
@@ -60,5 +60,5 @@ HRESULT GetDocument (
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedReader-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

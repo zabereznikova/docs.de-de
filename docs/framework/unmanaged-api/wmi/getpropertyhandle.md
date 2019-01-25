@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 902414ca96d9b4bf888608bd9ad267777da92e32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200414"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742314"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle-Funktion
 Gibt ein eindeutiges Handle zurück, das eine Eigenschaft identifiziert.
@@ -64,7 +64,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Der angegebene Eigenschaftenname wurde nicht gefunden. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 |`WBEM_E_NOT_SUPPORTED` | 0x8004100c | Die angeforderte Eigenschaft ist vom Typ sind `CIM_OBJECT` oder `CIM_ARRAY`. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
@@ -77,11 +77,11 @@ Sie können dieses Handle verwenden, um Eigenschaften zu identifizieren, bei Ver
 Handles können nicht für die Eigenschaften aller Datentypen abgerufen werden `CIM_OBJECT` und `CIM_ARRAY`. Handles Arbeit, die über alle Instanzen einer Klasse zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen  
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

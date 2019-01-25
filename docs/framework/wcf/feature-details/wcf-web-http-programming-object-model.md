@@ -2,12 +2,12 @@
 title: Objektmodell für WCF-Web-HTTP-Programmierung
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861636"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54739364"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Objektmodell für WCF-Web-HTTP-Programmierung
 Der WCF-HTTP-Webprogrammierungsmodell ermöglicht Entwicklern von Windows Communication Foundation (WCF)-Webdienste durch grundlegende HTTP-Anforderungen, die ohne SOAP verfügbar machen. Der WCF-HTTP-Webprogrammierungsmodell basiert auf der vorhandenen WCF-Erweiterbarkeitsmodell. Mit diesem Modell werden folgende Klassen definiert:  
@@ -94,15 +94,15 @@ Der WCF-HTTP-Webprogrammierungsmodell ermöglicht Entwicklern von Windows Commun
  Die <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>-Klasse verwendet die <xref:System.UriTemplate>-Klasse und die <xref:System.UriTemplateTable>-Klasse, um Aufrufe an Dienstvorgänge zu senden.  
   
 ## <a name="compatibility"></a>Kompatibilität  
- Der WCF-HTTP-Webprogrammierungsmodell verwendet keine SOAP-basierten Nachrichten und unterstützt daher nicht die WS-* Protokolle. Sie können jedoch denselben Vertrag durch zwei verschiedene Endpunkte verfügbar machen, von denen einer im Gegensatz zum anderen SOAP verwendet. Finden Sie unter [wie: Verfügbarmachen eines Vertrags für SOAP- und Webclients](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) verdeutlicht.  
+ Der WCF-HTTP-Webprogrammierungsmodell verwendet keine SOAP-basierten Nachrichten und unterstützt daher nicht die WS-* Protokolle. Sie können jedoch denselben Vertrag durch zwei verschiedene Endpunkte verfügbar machen, von denen einer im Gegensatz zum anderen SOAP verwendet. Weitere Informationen finden Sie unter [How to: Verfügbarmachen eines Vertrags für SOAP- und Webclients](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) verdeutlicht.  
   
 ## <a name="security"></a>Sicherheit  
  Da die WCF-HTTP-Webprogrammierungsmodell nicht der WS - unterstützt * Protokolle, die einzige Möglichkeit zum Sichern eines Webdiensts basiert auf der WCF-HTTP-Webprogrammierungsmodell Verfügbarmachen des Diensts mithilfe von SSL ist. Weitere Informationen zum Einrichten von SSL mit [!INCLUDE[iisver](../../../../includes/iisver-md.md)] finden Sie unter [Gewusst wie: Implementieren von SSL auf IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.WebHttpBinding>  
- <xref:System.ServiceModel.Web.WebGetAttribute>  
- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
- <xref:System.ServiceModel.Description.WebHttpBehavior>  
- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.WebHttpBinding>
+- <xref:System.ServiceModel.Web.WebGetAttribute>
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>
+- <xref:System.ServiceModel.Description.WebHttpBehavior>
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>
+- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

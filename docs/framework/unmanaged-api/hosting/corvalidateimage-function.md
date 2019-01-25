@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 101271823f7b7877bb7f007588b6a164233e5b45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a84869281ec27aface96d722603186382c6e15e7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432376"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730775"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage-Funktion
 Überprüft Images des verwalteten Moduls, und benachrichtigt das Betriebssystemladeprogramm, nachdem sie geladen wurden.  
@@ -37,50 +37,50 @@ STDAPI _CorValidateImage (
   
 #### <a name="parameters"></a>Parameter  
  `ImageBase`  
- [in] Ein Zeiger auf die Startposition des Bilds als überprüfen zu verwaltetem Code. Das Bild muss bereits in den Arbeitsspeicher geladen werden.  
+ [in] Ein Zeiger auf den Anfangsort des Bildes, das als Überprüfen von verwaltetem Code. Das Image muss bereits in den Arbeitsspeicher geladen werden.  
   
  `FileName`  
  [in] Der Dateiname des Bilds.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Diese Funktion gibt die Standardwerte `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, und `E_FAIL`, sowie die folgenden Werte.  
+ Diese Funktion gibt die Standardwerte zurück `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, und `E_FAIL`, sowie die folgenden Werte.  
   
 |Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|Das Bild ist ungültig. Dieser Wert hat den HRESULT 0xC000007BL auf.|  
-|`STATUS_SUCCESS`|Das Bild ist ungültig. Dieser Wert hat den HRESULT 0x00000000L auf.|  
+|`STATUS_INVALID_IMAGE_FORMAT`|Das Image ist ungültig. Dieser Wert muss es sich um das HRESULT 0xC000007BL auf.|  
+|`STATUS_SUCCESS`|Das Image ist ungültig. Dieser Wert muss es sich um das HRESULT 0x00000000L auf.|  
   
 ## <a name="remarks"></a>Hinweise  
- In Windows XP und höheren Versionen überprüft vom Ladeprogramm des Betriebssystems nach verwalteten Modulen durch untersuchen das Verzeichnis der COM-Deskriptor Bit im Header common Object-Datei-Format (COFF). Ein festgelegtes Bit gibt ein verwaltetes Modul an. Wenn das Ladeprogramm eine verwaltete Module erkennt, lädt es "Mscoree.dll" und Aufrufe `_CorValidateImage`, die folgenden Aktionen ausgeführt:  
+ In Windows XP und höheren Versionen überprüft vom Ladeprogramm des Betriebssystems nach verwalteten Modulen durch untersuchen das Verzeichnis der COM-Deskriptor-Bit in den Header zu common Object File-Format (COFF). Ein festgelegtes Bit gibt an, ein verwaltetes Modul. Wenn das Ladeprogramm ein verwaltetes Modul erkannt wird, lädt es "Mscoree.dll" und ruft `_CorValidateImage`, die die folgenden Aktionen ausführt:  
   
--   Bestätigt, dass das Bild ein gültiges verwaltetes Modul ist.  
+-   Bestätigt, dass das Bild, ein gültiges verwaltetes Modul ist.  
   
--   Ändert den Einstiegspunkt in das Image auf einen Einstiegspunkt in die common Language Runtime (CLR).  
+-   Ändert den Einstiegspunkt in das Abbild an einen Einstiegspunkt in die common Language Runtime (CLR).  
   
--   Für 64-Bit-Versionen von Windows ändert das Image im Arbeitsspeicher vom Format PE32 in das Format PE32 + transformiert.  
+-   Für 64-Bit-Versionen von Windows ändert das Image im Arbeitsspeicher vom Format PE32 in das Format PE32 + transformieren.  
   
--   Benachrichtigt das Ladeprogramm, wenn die Images der verwalteten Module geladen werden.  
+-   Benachrichtigt das Ladeprogramm, wenn die Images des verwalteten Moduls geladen werden.  
   
- Für ausführbare Images vom Ladeprogramm des Betriebssystems dann ruft der [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) -Funktion, unabhängig von den Einstiegspunkt in die ausführbare Datei angegeben. Für DLL-Assembly-Images, das Ladeprogramm ruft die [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) Funktion.  
+ Für ausführbare Images vom Ladeprogramm des Betriebssystems dann ruft der [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) -Funktion, unabhängig von der Einstiegspunkt in die ausführbare Datei angegeben. DLL-Assembly-Images, das Ladeprogramm ruft die [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) Funktion.  
   
- `_CorExeMain` oder `_CorDllMain` führt die folgenden Aktionen aus:  
+ `_CorExeMain` oder `_CorDllMain` führt folgende Aktionen aus:  
   
 -   Initialisiert die CLR.  
   
--   Sucht den verwalteten Einstiegspunkt aus der Assembly aneinander gehängt CLR-Header.  
+-   Sucht den verwalteten Einstiegspunkt von CLR-Header der Assembly an.  
   
 -   Beginnt die Ausführung.  
   
- Ruft die Ladeprogramm der [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) funktionieren bei verwalteten Images des Moduls entladen werden. Diese Funktion ist jedoch keine Aktion ausgeführt; Es gibt nur zurück.  
+ Die Aufrufe der Loader die [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) funktionieren, wenn verwaltete Modulimages entladen. Diese Funktion führt jedoch keine Maßnahmen; Es gibt nur zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Globale statische Metadatenfunktionen](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Globale statische Metadatenfunktionen](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

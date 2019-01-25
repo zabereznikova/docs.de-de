@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3407fcac420b8129dd39eabf84aec84b58651944
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b460c2c4b0d38ec46ee9d7341de9b320a2ecaa7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442833"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594641"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions-Enumeration
 Gibt Flags für die Auswahl von Optionen für die Threadsicherheit an.  
@@ -41,15 +41,15 @@ typedef enum CorThreadSafetyOptions {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`MDThreadSatetyDefault`|Der Standardwert. Wie in `MDThreadSatetyOff`.|  
-|`MDThreadSatetyOff`|Gibt an, dass eine Lese-/Schreibsperre kann nicht festgelegt werden.|  
-|`MDThreadSatetyOn`|Gibt an, dass eine Lese-/Schreibsperre festgelegt werden kann.|  
+|`MDThreadSatetyOff`|Gibt an, dass eine Reader-/Writer-Sperre kann nicht festgelegt werden.|  
+|`MDThreadSatetyOn`|Gibt an, dass eine Reader-/Writer-Sperre festgelegt werden kann.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -17,14 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13498c58c7625edfa4954b8da8837f1bd60c976d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b5800890a5dfaef40225616f1d661a8e37ed4d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661099"
 ---
 # <a name="icordebugprocess5gettypefortypeid-method"></a>ICorDebugProcess5::GetTypeForTypeID-Methode
-Konvertiert einen Typbezeichner auf einen ICorDebugType-Wert.  
+Konvertiert einen Typ-ID zu einem ICorDebugType-Wert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,10 +44,10 @@ HRESULT GetTypeForTypeID(
  [out] Ein Zeiger auf die Adresse eines ICorDebugType-Objekts.  
   
 ## <a name="remarks"></a>Hinweise  
- In einigen Fällen gelegten Methoden, die Typ-ID zurückgeben Null `COR_TYPEID` Wert. Wenn dieser Wert, als übergeben wird die `id` Argument, das `GetTypeForTypeID` Methode fehlschlagen und zurückgegeben `E_FAIL`.  
+ In einigen Fällen Methoden, die Typ-ID zurückgeben können ein NULL-Wert zurückgeben `COR_TYPEID` Wert. Wenn dieser Wert, als übergeben wird die `id` -Argument, das `GetTypeForTypeID` Methode fehlschlagen und zurückgegeben `E_FAIL`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -54,6 +55,6 @@ HRESULT GetTypeForTypeID(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugProcess5-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugProcess5-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

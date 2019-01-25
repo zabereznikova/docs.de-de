@@ -8,15 +8,15 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 99e0c22a66eb1d839f1594cf53373a74fc3dd02d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e2217cdac8edcab2f4b9e28484fb0758a149b72c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590590"
 ---
 # <a name="defining-and-specifying-faults"></a>Definieren und Angeben von Fehlern
-SOAP-Fehler vermitteln Informationen zu Fehlerbedingungen auf interoperable Weise von einem Dienst an einen Client und bei Duplexkommunikation von einem Client an einen Dienst. In diesem Thema wird beschrieben, wann und wie Sie benutzerdefinierten Fehlerinhalt definieren und wie Sie angeben, welche Vorgänge diesen zurückgeben können. Weitere Informationen wie ein Dienst oder ein duplexclient, diese Fehler senden kann und wie eine Client- oder dienstanwendung diese Fehler behandelt, finden Sie unter [senden und Empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md). Einen Überblick über die Fehlerbehandlung in Windows Communication Foundation (WCF)-Anwendungen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+SOAP-Fehler vermitteln Informationen zu Fehlerbedingungen auf interoperable Weise von einem Dienst an einen Client und bei Duplexkommunikation von einem Client an einen Dienst. In diesem Thema wird beschrieben, wann und wie Sie benutzerdefinierten Fehlerinhalt definieren und wie Sie angeben, welche Vorgänge diesen zurückgeben können. Weitere Informationen wie ein Dienst oder ein duplexclient diese Fehler senden kann und wie eine Client- oder dienstanwendung diese Fehler verarbeitet, finden Sie unter [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md). Einen Überblick über die Fehlerbehandlung in Windows Communication Foundation (WCF)-Anwendungen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="overview"></a>Übersicht  
  Bei deklarierten SOAP-Fehlern verfügt ein Vorgang über ein <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>, das einen benutzerdefinierten SOAP-Fehlertyp angibt. Nicht deklarierte SOAP-Fehler sind Fehler, die nicht im Vertrag eines Vorgangs festgelegt sind. Dieses Thema enthält Informationen zur Identifizierung der Fehlerbedingungen und zur Erstellung eines Fehlervertrags für Ihren Dienst, den Clients verwenden können, um die Fehlerbedingungen richtig zu verarbeiten, wenn sie anhand von benutzerdefinierten SOAP-Fehlern darüber informiert werden. Die folgenden grundlegenden Aufgaben gelten in dieser Reihenfolge:  
@@ -28,7 +28,7 @@ SOAP-Fehler vermitteln Informationen zu Fehlerbedingungen auf interoperable Weis
 3.  Kennzeichnen Sie Ihre Vorgänge, damit die spezifischen SOAP-Fehler, die diese Vorgänge auslösen, für Clients in WSDL offengelegt werden.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>Definieren von Fehlerbedingungen, über die Clients informiert werden sollen  
- SOAP-Fehler sind öffentlich beschriebene Meldungen, die Fehlerinformationen für einen besonderen Vorgang enthalten. Da sie zusammen mit anderen Vorgangsmeldungen in WSDL beschrieben sind, sind Clients darüber informiert und erwarten beim Aufrufen eines Vorgangs, dass sie diese ggf. verarbeiten müssen. Aber da WCF-Dienste in verwaltetem Code, welche Fehler, fehlerbedingungen in verwaltetem Code in Fehler konvertiert werden sollen und an den Client zurückgegeben, fehlerbedingungen und Fehler in Ihrem Dienst von der formalen Fehler trennen ermöglicht die Entscheidung geschrieben werden unterhalten Sie mit einem Client.  
+ SOAP-Fehler sind öffentlich beschriebene Meldungen, die Fehlerinformationen für einen besonderen Vorgang enthalten. Da sie zusammen mit anderen Vorgangsmeldungen in WSDL beschrieben sind, sind Clients darüber informiert und erwarten beim Aufrufen eines Vorgangs, dass sie diese ggf. verarbeiten müssen. Aber da WCF-Dienste in verwaltetem Code, die Entscheidung, welche Fehler, fehlerbedingungen in verwaltetem Code in Fehler konvertiert werden sollen und an den Client zurückgegebenen, bietet Ihnen die Möglichkeit, fehlerbedingungen und Fehler in Ihrem Dienst von der formalen Fehler trennen geschrieben werden Die Konversation mit einem Client.  
   
  Das folgende Codebeispiel zeigt zum Beispiel einen Vorgang, bei dem zwei ganze Zahlen verwendet und eine weitere ganze Zahl zurückgegeben wird. Hierbei können mehrere Ausnahmen ausgelöst werden. Beim Entwerfen des Fehlervertrags müssen Sie deshalb bestimmen, welche Fehlerbedingungen für Ihren Client wichtig sind. In diesem Fall muss der Dienst die <xref:System.DivideByZeroException?displayProperty=nameWithType>-Ausnahme erkennen.  
   
@@ -66,7 +66,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- Weitere Informationen zur Vorgehensweise sicherzustellen, dass Ihre Daten serialisierbar ist, finden Sie unter [angeben von Datenübertragung in Dienstverträgen](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Eine Liste der Serialisierung zu unterstützen, die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> bereitstellt, finden Sie unter [Typen unterstützt, durch den Datenvertragsserialisierer](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Weitere Informationen zu wie Sie sicherzustellen, dass Ihre Daten serialisierbar ist, finden Sie unter [Specifying Data Transfer in Service Contracts](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Eine Liste der Serialisierung zu unterstützen, die <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> bereitstellt, finden Sie unter [Types Supported by the Data Contract Serializer](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>Markieren von Operationen, um den Fehlervertrag einzurichten  
  Nachdem Sie eine serialisierbare Datenstruktur definiert haben, die als Teil eines benutzerdefinierten SOAP-Fehlers zurückgegeben wird, besteht der letzte Schritt darin, Ihren Operationsvertrag so zu kennzeichnen, dass er einen SOAP-Fehler dieses Typs auslöst. Verwenden Sie dazu das <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>-Attribut, und übergeben Sie den Typ des benutzerdefinierten Datentyps, den Sie erstellt haben. Das folgende Codebeispiel zeigt, wie Sie das <xref:System.ServiceModel.FaultContractAttribute>-Attribut verwenden, um anzugeben, dass die `Divide`-Operation einen SOAP-Fehler vom Typ `MathFault` zurückgeben kann. Andere mathematische Operationen können jetzt auch angeben, dass sie einen `MathFault` zurückgeben können.  
@@ -76,7 +76,7 @@ End Class
   
  Eine Operation kann angeben, dass sie mehr als einen benutzerdefinierten Fehler zurückgibt, indem Sie diese mit mehr als einem <xref:System.ServiceModel.FaultContractAttribute>-Attribut versehen.  
   
- Der nächste Schritt, zum Implementieren des fehlervertrags in Ihrer vorgangsimplementierung wird in diesem Thema beschriebenen [senden und Empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
+ Der nächste Schritt, um des fehlervertrags in der Implementierung der Operation zu implementieren ist in diesem Thema beschriebenen [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 #### <a name="soap-wsdl-and-interoperability-considerations"></a>Überlegungen zu SOAP, WSDL und zur Interoperabilität  
  Unter bestimmten Umständen, besonders bei der Zusammenarbeit mit anderen Plattformen, kann es wichtig sein, die Art und Weise der Anzeige eines Fehlers in einer SOAP-Meldung bzw. seine Beschreibung in WSDL-Metadaten zu steuern.  
@@ -85,15 +85,15 @@ End Class
   
  Gemäß SOAP-Standard kann ein Fehler die Elemente `Action`, `Code` und `Reason` aufweisen. Die `Action` wird von der <xref:System.ServiceModel.FaultContractAttribute.Action%2A>-Eigenschaft gesteuert. Die <xref:System.ServiceModel.FaultException.Code%2A>-Eigenschaft und die <xref:System.ServiceModel.FaultException.Reason%2A>-Eigenschaften sind Eigenschaften der <xref:System.ServiceModel.FaultException?displayProperty=nameWithType>-Klasse, bei der es sich um die übergeordnete Klasse der generischen <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> handelt. Die `Code`-Eigenschaft enthält einen <xref:System.ServiceModel.FaultCode.SubCode%2A>-Member.  
   
- Beim Zugreifen auf andere Elemente als Dienste, die Fehler generieren, gelten bestimmte Einschränkungen. WCF unterstützt nur Fehler mit detailtypen, die das Schema beschreibt und, die mit Datenverträgen kompatibel sind. Beispielsweise unterstützt wie oben erwähnt, WCF nicht Fehler an, die in ihren detailtypen XML-Attribute verwenden, und keine Fehler mit mehr als ein Element der obersten Ebene im Detailabschnitt.  
+ Beim Zugreifen auf andere Elemente als Dienste, die Fehler generieren, gelten bestimmte Einschränkungen. WCF unterstützt nur Fehler mit detailtypen, die das Schema beschreibt und die mit Datenverträgen kompatibel sind. Zum Beispiel wie oben erwähnt, unterstützt WCF nicht Fehlern, die in ihren detailtypen XML-Attribute zu verwenden oder Fehler mit mehr als ein Element der obersten Ebene im Detailabschnitt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.FaultContractAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
- [Senden und Empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md)  
- [Vorgehensweise: Deklarieren von Fehlern in Dienstverträgen](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)  
- [Grundlagen der Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md)  
- [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Angeben von Datenübertragung in Dienstverträgen](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.FaultContractAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Senden und Empfangen von Fehlern](../../../docs/framework/wcf/sending-and-receiving-faults.md)
+- [Vorgehensweise: Deklarieren von Fehlern in Dienstverträgen](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
+- [Grundlagen der Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md)
+- [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Angeben von Datenübertragung in Dienstverträgen](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /nowarn compiler option [Visual Basic]
 - -nowarn compiler option [Visual Basic]
 ms.assetid: 7ebf2106-0652-4fdc-bf60-70fc86465d83
-ms.openlocfilehash: 338b4672d215968275c30d37a2f8061e764aed8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eff367fd6cc14c655f0c623731e334054233b0a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653441"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744309"
 ---
 # <a name="-nowarn"></a>-nowarn
 Unterdrückt die Compilerfunktion zum Generieren von Warnungen.  
@@ -26,18 +26,18 @@ Unterdrückt die Compilerfunktion zum Generieren von Warnungen.
   
 |Begriff|Definition|  
 |---|---|  
-|`numberList`|Dies ist optional. Durch Trennzeichen getrennte Liste von die Warnung-ID-Nummern, die der Compiler unterdrücken soll. Wenn die Warnung IDs nicht angegeben werden, werden alle Warnungen unterdrückt.|  
+|`numberList`|Dies ist optional. Durch Trennzeichen getrennte Liste mit der ID-Warnzahlen, die der Compiler unterdrücken soll. Wenn keine Warnungs-IDs angegeben sind, werden alle Warnungen unterdrückt.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `-nowarn` Option bewirkt, dass der Compiler keine Warnungen generiert werden. Um eine einzelne Warnung zu unterdrücken, geben Sie die ID der Warnung, die die `-nowarn` Option nach dem Doppelpunkt ausmacht. Trennen Sie mehrere Warnungsnummern jeweils durch Kommas.  
+ Die `-nowarn` Option bewirkt, dass den Compiler keine Warnungen generiert werden. Um eine einzelne Warnung zu unterdrücken, geben Sie die ID der Warnung, die die `-nowarn` Option, die hinter dem Doppelpunkt. Trennen Sie mehrere Warnungsnummern jeweils durch Kommas.  
   
- Sie müssen nur den numerischen Teil des Warnungsbezeichners angeben. Geben Sie z. B. wenn BC42024, das die Warnung für nicht verwendete lokale Variablen, unterdrückt werden sollen `-nowarn:42024`.  
+ Sie müssen nur den numerischen Teil des Warnungsbezeichners angeben. Wenn Sie BC42024, die Warnung für nicht verwendete lokale Variablen, unterdrücken möchten, z. B. Geben Sie `-nowarn:42024`.  
   
- Weitere Informationen über die Warnung-ID-Nummern, finden Sie unter [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Weitere Informationen zu die Warnung-ID-Nummern, finden Sie unter [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
-|-Nowarn in der integrierten Visual Studio-Entwicklungsumgebung fest|  
+|-Nowarn in der integrierten Entwicklungsumgebung von Visual Studio festlegen.|  
 |---|  
-|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Wählen Sie die **deaktivieren Sie alle Warnungen** Kontrollkästchen, um alle Warnungen zu deaktivieren.<br />     - oder -<br />     Um eine bestimmte Warnung zu deaktivieren, klicken Sie auf **keine** aus der Dropdownliste neben der Warnung.|  
+|1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**. <br />2.  Klicken Sie auf die Registerkarte **Kompilieren**.<br />3.  Wählen Sie die **alle Warnungen deaktivieren** Kontrollkästchen, um alle Warnungen deaktivieren.<br />     - oder -<br />     Um eine bestimmte Warnung zu deaktivieren, klicken Sie auf **keine** aus der Dropdown-Liste neben der Warnung.|  
   
 ## <a name="example"></a>Beispiel  
  Der folgende code kompiliert `T2.vb` und keine Warnungen angezeigt.  
@@ -53,7 +53,7 @@ vbc -nowarn t2.vb
 vbc -nowarn:42024 t2.vb  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Konfigurieren von Warnungen in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)
+## <a name="see-also"></a>Siehe auch
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)

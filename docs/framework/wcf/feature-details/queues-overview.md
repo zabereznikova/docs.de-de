@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: a387627e95ce3bf5cfb095412c7100e1bfbe836d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562134"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600426"
 ---
 # <a name="queues-overview"></a>Warteschlangenübersicht
 In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Warteschlangenkommunikation vorgestellt. Die folgenden Abschnitte werden in den Details wie den hier beschriebenen warteschlangenbegriffe in Windows Communication Foundation (WCF) festgelegt werden.  
@@ -73,14 +73,14 @@ In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Wartesc
 ## <a name="poison-message-queue-programming"></a>Programmierung für Warteschlangen für potenziell schädliche Nachrichten  
  Nachdem eine Nachricht in der Zielwarteschlange eingetroffen ist, schlägt der Dienst beim Verarbeiten der Nachricht ggf. wiederholt fehl. Eine Anwendung, die im Rahmen einer Transaktion eine Nachricht aus einer Warteschlange ausliest und eine Datenbank aktualisiert, kann zum Beispiel auf das Problem treffen, dass die Verbindung zur Datenbank vorübergehend unterbrochen ist. In diesem Fall wird für die Transaktion ein Rollback ausgeführt, es wird eine neue Transaktion erstellt, und die Nachricht wird erneut aus der Warteschlange ausgelesen. Ein zweiter Versuch kann erfolgreich sein oder fehlschlagen. Es kann je nach Fehlerursache auch vorkommen, dass die Nachricht wiederholt nicht an die Anwendung zugestellt wird. In diesem Fall wird die Nachricht als "potenziell schädlich" eingestuft. Nachrichten dieser Art werden in eine Warteschlange für potenziell schädliche Nachrichten verschoben, die von einer Anwendung zur Bearbeitung von potenziell schädlichen Nachrichten gelesen werden kann.  
   
-## <a name="see-also"></a>Siehe auch  
- [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Sitzungen und Warteschlangen](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  
- [Warteschlangen für unzustellbare Nachrichten](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
- [Flüchtige Kommunikation unter Verwendung von Warteschlangen](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
- [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
- [Message Queuing-Integrationsbindung Beispiele](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)  
- [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Nachrichtensicherheit über Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+## <a name="see-also"></a>Siehe auch
+- [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Sitzungen und Warteschlangen](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
+- [Warteschlangen für unzustellbare Nachrichten](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
+- [Flüchtige Kommunikation unter Verwendung von Warteschlangen](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
+- [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
+- [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
+- [Message Queuing-Integrationsbindung Beispiele](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)
+- [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)
+- [Nachrichtensicherheit über Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 0e38bc663d3c2143703ba178eb8ac420bb1baa08
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3bd4cbeffcf320d6415b3a3d4aa907280d71a598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725180"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Ändern von Daten mit "DbDataAdapter"
 Mit der <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A>-Methode eines <xref:System.Data.Common.DbProviderFactory>-Objekts erhalten Sie ein <xref:System.Data.Common.DbDataAdapter>-Objekt, das bezüglich des zugrunde liegenden Datenanbieters, der beim Erstellen der Factory angegeben wurde, stark typisiert ist. Sie können dann einen <xref:System.Data.Common.DbCommandBuilder> verwenden, um Einfüge-, Update- und Löschbefehle für Daten in einem <xref:System.Data.DataSet> zu erstellen und diese auf eine Datenquelle anzuwenden.  
@@ -42,8 +42,8 @@ Mit der <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A>-Methode
 > [!IMPORTANT]
 >  Aus Sicherheitsgründen wird davon abgeraten, anbieterspezifische Parameter generell zu vermeiden und stattdessen zum Konstruieren direkter SQL-Anweisungen die Zeichenfolgenverkettung zu verwenden. Das Verwenden von Zeichenfolgenverkettung anstelle von Parametern macht Ihre Anwendung für Angriffe durch Einschleusung von SQL-Befehlen (SQL Injection-Angriffe) anfällig.  
   
-## <a name="see-also"></a>Siehe auch  
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [Abrufen einer DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)  
- [DbConnection, DbCommand und DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+- [Abrufen einer DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+- [DbConnection, DbCommand und DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

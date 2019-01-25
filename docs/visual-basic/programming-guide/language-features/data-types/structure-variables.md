@@ -7,15 +7,15 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 0dad7bdcac5428753e252f3b26ca0a127c293a7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648498"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640601"
 ---
 # <a name="structure-variables-visual-basic"></a>Strukturvariablen (Visual Basic)
-Nachdem Sie eine Struktur erstellt haben, können Sie Variablen auf Prozedurebene und auf Modulebene als diesen Typ deklarieren. Beispielsweise können Sie eine Struktur, zeichnet Informationen zu einem Computersystem erstellen. Dies wird im folgenden Beispiel veranschaulicht:  
+Nachdem Sie eine Struktur erstellt haben, können Sie Variablen auf Prozedurebene und auf Modulebene wie dieser Typ deklarieren. Beispielsweise können Sie eine Struktur, zeichnet Informationen zu einem Computersystem erstellen. Dies wird im folgenden Beispiel veranschaulicht:  
   
 ```  
 Public Structure systemInfo  
@@ -25,17 +25,17 @@ Public Structure systemInfo
 End Structure  
 ```  
   
- Nun können Sie Variablen dieses Typs deklarieren. Dies wird anhand die folgende Deklaration veranschaulicht.  
+ Nun können Sie die Variablen dieses Typs deklarieren. Dies wird in die folgende Deklaration veranschaulicht.  
   
 ```  
 Dim mySystem, yourSystem As systemInfo  
 ```  
   
 > [!NOTE]
->  In Klassen und Module mit Strukturen deklariert die [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) standardmäßig öffentlichen Zugriff auf. Wenn Sie beabsichtigen die eine Struktur, die privat sein, sicher deklarieren Sie sie mit der [Private](../../../../visual-basic/language-reference/modifiers/private.md) Schlüsselwort.  
+>  In Klassen und Modulen, Strukturen deklariert mit dem [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) standardmäßig öffentlichen Zugriff auf. Wenn Sie eine Struktur privat festlegen möchten deklarieren Sie sie mithilfe, der [Private](../../../../visual-basic/language-reference/modifiers/private.md) Schlüsselwort.  
   
 ## <a name="access-to-structure-values"></a>Zugriff auf die Strukturwerte  
- Um zuzuweisen, und rufen Werte aus den Elementen einer Strukturvariablen, verwenden Sie die gleiche Syntax wie zum Festlegen und Abrufen von Eigenschaften für ein Objekt. Platzieren Sie den Memberzugriffsoperator (`.`) zwischen den Struktur-Variablennamen und den Elementnamen. Das folgende Beispiel greift auf die Elemente der zuvor als Typ deklarierten Variablen `systemInfo`.  
+ Zum Zuweisen und Abrufen von Werten aus den Elementen einer Strukturvariablen, verwenden Sie die gleiche Syntax wie zum Festlegen und Abrufen von Eigenschaften für ein Objekt. Platzieren Sie den Memberzugriffsoperator (`.`) zwischen der Name der Struktur und der Elementname. Das folgende Beispiel greift auf die Elemente der zuvor als Typ deklarierten Variablen `systemInfo`.  
   
 ```  
 mySystem.cPU = "486"  
@@ -44,22 +44,22 @@ If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
 ```  
   
 ## <a name="assigning-structure-variables"></a>Zuweisen von Strukturvariablen  
- Sie können auch eine Variable auf einen anderen zuweisen, wenn vom selben Strukturtyp angehören. Kopiert alle Elemente einer Struktur in die entsprechenden Elemente in der anderen. Dies wird anhand die folgende Deklaration veranschaulicht.  
+ Sie können auch eine Variable in einen anderen zuweisen, wenn vom selben Strukturtyp angehören. Dies kopiert alle Elemente einer Struktur in die entsprechenden Elemente im anderen. Dies wird in die folgende Deklaration veranschaulicht.  
   
 ```  
 yourSystem = mySystem  
 ```  
   
- Wenn ein Strukturelement einen Referenztyp darstellt, wie eine `String`, `Object`, oder Array, der Zeiger auf die Daten kopiert wird. Im vorherigen Beispiel wenn `systemInfo` hatte eine Objektvariable enthalten, und klicken Sie dann im vorherige Beispiel den Zeiger von kopiert haben, würden `mySystem` auf `yourSystem`, und eine Änderung an den Daten des Objekts durch eine Struktur wäre beim Zugriff aktiviert über die andere Struktur.  
+ Wenn ein Strukturelement einen Referenztyp darstellt, z. B. eine `String`, `Object`, oder ein Array, das Zeiger auf die Daten werden kopiert. Im vorherigen Beispiel wenn `systemInfo` hatte eine Objektvariable enthalten, und klicken Sie dann im vorherigen Beispiel wird den Zeiger von kopiert haben, würden `mySystem` zu `yourSystem`, und eine Änderung an den Daten des Objekts durch eine Struktur wäre in Kraft, beim Zugriff auf über die andere Struktur.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
- [Werttypen und Verweistypen](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
- [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Gewusst wie: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
- [Strukturen und andere Programmierelemente](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
- [Strukturen und Klassen](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>Siehe auch
+- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Strukturen](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
+- [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Vorgehensweise: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Strukturen und andere Programmierelemente](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
+- [Strukturen und Klassen](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)

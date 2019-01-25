@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 970fd0483d7e0126b258afd5ac5c3607cbc6aa0a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 699c03d379d105806292a23b09a63d0634a7a2e4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44202231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592684"
 ---
 # <a name="security-wpf"></a>Sicherheit (WPF)
 <a name="introduction"></a> Wenn Sie Windows Presentation Foundation (WPF)-eigenständige und im Browser gehostete Anwendungen zu entwickeln, müssen Sie das Sicherheitsmodell berücksichtigen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendungen werden mit uneingeschränkten Berechtigungen ausgeführt ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** Berechtigungssatz), ob mithilfe von Windows Installer (MSI), XCopy, bereitgestellt oder [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Die Bereitstellung teilweise vertrauenswürdiger eigenständiger WPF-Anwendungen mit ClickOnce wird nicht unterstützt. Eine voll vertrauenswürdige hostanwendung kann jedoch eine teilweise vertrauenswürdige erstellen <xref:System.AppDomain> mit dem .NET Framework-Add-in-Modell. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-Ins](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "44202231"
 |Inhaltstyp|Beschreibung|URI-Beispiel|  
 |------------------|-----------------|-----------------|  
 |Ressource|Dateien, die einem Projekt mit einem Buildtyp hinzugefügt werden **Ressource**.|`pack://application:,,,/MyResourceFile.xaml`|  
-|Inhalt|Dateien, die einem Projekt mit einem Buildtyp hinzugefügt werden **Content**.|`pack://application:,,,/MyContentFile.xaml`|  
+|Content|Dateien, die einem Projekt mit einem Buildtyp hinzugefügt werden **Content**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Ursprungswebsite|Dateien, die einem Projekt mit einem Buildtyp hinzugefügt werden **keine**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
 |Anwendungscode|XAML-Ressourcen mit kompiliertem Code-Behind<br /><br /> - oder - <br /><br /> XAML-Dateien, die einem Projekt mit einem Buildtyp hinzugefügt werden **Seite**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
@@ -184,7 +184,7 @@ ms.locfileid: "44202231"
  Funktionssteuerelemente werden angewendet, durch den Prozess der WebBrowser ActiveX-Objekt instanziiert. Daher wird unbedingt empfohlen, beim Erstellen einer eigenständigen Anwendung, die zu nicht vertrauenswürdigem Inhalt navigieren kann, zusätzliche Funktionssteuerelemente zu aktivieren.  
   
 > [!NOTE]
->  Diese Empfehlung basiert auf allgemeinen Empfehlungen für MSHTML- und SHDOCVW-Hostsicherheit. Weitere Informationen finden Sie unter [The MSHTML Host Security FAQ: Part I of II](https://go.microsoft.com/fwlink/?LinkId=179396) und [The MSHTML Host Security FAQ: Part II of II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+>  Diese Empfehlung basiert auf allgemeinen Empfehlungen für MSHTML- und SHDOCVW-Hostsicherheit. Weitere Informationen finden Sie unter [The MSHTML Host Security FAQ: Teil I, II](https://go.microsoft.com/fwlink/?LinkId=179396) und [der MSHTML Host Security – häufig gestellte Fragen: Teil II of II](https://go.microsoft.com/fwlink/?LinkId=179415).  
   
  Für eine ausführbare Datei sollten die folgenden Funktionssteuerelemente aktiviert werden, indem der Registrierungswert auf 1 festgelegt wird.  
   
@@ -271,11 +271,11 @@ ms.locfileid: "44202231"
 |[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [WPF-Sicherheitsstrategie – Sicherheitsentwicklung](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  
- [Patterns and Practices-Sicherheitsleitfaden für Anwendungen](https://go.microsoft.com/fwlink/?LinkId=117426)  
- [Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)  
- [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)  
- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a>Siehe auch
+- [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../docs/framework/wpf/wpf-partial-trust-security.md)
+- [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
+- [WPF-Sicherheitsstrategie – Sicherheitsentwicklung](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [Patterns and Practices-Sicherheitsleitfaden für Anwendungen](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)
+- [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Hinzufügen, Ändern und Löschen von Entitäten (WCF Data Services)'
+title: 'Vorgehensweise: Hinzufügen, ändern und Löschen von Entitäten (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: a00f8933-b232-4445-95ba-adc634f055d8
-ms.openlocfilehash: 4475d8767226a810c7b6f7d8949e9cbe2d846cca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af087aa2107927d79a7a47080d9fff43244ef4cd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708882"
 ---
-# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Gewusst wie: Hinzufügen, Ändern und Löschen von Entitäten (WCF Data Services)
-Mit der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliotheken, Sie können erstellen, aktualisieren und Löschen von Entitätsdaten in einem Datendienst anhand der entsprechende Aktionen für Objekte in der <xref:System.Data.Services.Client.DataServiceContext>. Weitere Informationen finden Sie unter [Aktualisieren des Datendiensts](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
+# <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Vorgehensweise: Hinzufügen, ändern und Löschen von Entitäten (WCF Data Services)
+Mit der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliotheken, Sie können erstellen, aktualisieren und Löschen von Entitätsdaten in einem Datendienst durch die entsprechenden Aktionen für Objekte in der <xref:System.Data.Services.Client.DataServiceContext>. Weitere Informationen finden Sie unter [Aktualisieren des Datendiensts](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
  Im Beispiel in diesem Thema werden der Northwind-Beispieldatendienst und automatisch generierte Client-Datendienstklassen verwendet. Dieser Dienst und die clientdatenklassen werden erstellt, wenn Sie die [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
@@ -43,8 +43,8 @@ Mit der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibli
  [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addorderdetailtoorderauto)]
  [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderAuto](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorderauto)]  
   
-## <a name="see-also"></a>Siehe auch  
- [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Vorgehensweise: Anfügen einer vorhandenen Entität an DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)  
- [Vorgehensweise: Definieren von Entitätsbeziehungen](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)  
- [Batchvorgänge](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
+## <a name="see-also"></a>Siehe auch
+- [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Vorgehensweise: Anfügen einer vorhandenen Entität an DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)
+- [Vorgehensweise: Definieren von Entitätsbeziehungen](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)
+- [Batchvorgänge](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

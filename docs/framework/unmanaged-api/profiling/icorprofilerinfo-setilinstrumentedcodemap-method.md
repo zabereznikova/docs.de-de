@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4780242dc34f31ecd0ff0dc2c339cdaa30278a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458062"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721161"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap-Methode
-Legt eine Code Map für die angegebene Funktion mithilfe der festgelegten Zuordnungseinträge der Microsoft intermediate Language (MSIL) fest.  
+Legt eine Code Map für die angegebene Funktion, die mit der angegebenen Microsoft intermediate Language (MSIL)-Zuordnungseinträge fest.  
   
 > [!NOTE]
->  In .NET Framework, Version 2.0, Aufrufen von `SetILInstrumentedCodeMap` auf eine `FunctionID` , dass alle Instanzen dieser Funktion in der Anwendungsdomäne darstellt, die eine generische Funktion in einer bestimmten Anwendungsdomäne beeinflusst.  
+>  In .NET Framework, Version 2.0, Aufrufen von `SetILInstrumentedCodeMap` auf eine `FunctionID` , dass alle Instanzen dieser Funktion in der Anwendungsdomäne darstellt, die eine generische Funktion in einer bestimmten Anwendungsdomäne auswirkt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ HRESULT SetILInstrumentedCodeMap(
  [in] Die ID der Funktion für die die Code Map festgelegt.  
   
  `fStartJit`  
- [in] Ein boolescher Wert, der angibt, ob der Aufruf der `SetILInstrumentedCodeMap` Methode ist die erste für einen bestimmten `FunctionID`. Festgelegt `fStartJit` auf `true` im ersten Aufruf von `SetILInstrumentedCodeMap` für einen bestimmten `FunctionID`, und `false` danach.  
+ [in] Ein boolescher Wert, der angibt, ob der Aufruf der `SetILInstrumentedCodeMap` Methode ist die erste für einen bestimmten `FunctionID`. Legen Sie `fStartJit` zu `true` im ersten Aufruf von `SetILInstrumentedCodeMap` für einen angegebenen `FunctionID`, und `false` danach.  
   
  `cILMapEntries`  
  [in] Die Anzahl der Elemente in der `cILMapEntries` Array.  
@@ -54,36 +54,36 @@ HRESULT SetILInstrumentedCodeMap(
  [in] Ein Array von COR_IL_MAP-Strukturen, von denen jede einen MSIL-Offset angibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Profiler fügt oft Anweisungen innerhalb des Quellcodes einer Methode um Instrumentieren Ermittlungsmethode (z. B. zu benachrichtigen, wenn eine Zeile für die angegebene Quelle erreicht ist). `SetILInstrumentedCodeMap` ermöglicht einen Profiler an die neuen Speicherorte die ursprünglichen MSIL-Anweisungen zuordnen. Ein Profiler können Sie die [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) Methode, um den ursprünglichen MSIL-Offset für einen bestimmten systemeigenen Offset abrufen.  
+ Ein Profiler fügt häufig die Anweisungen im Quellcode einer Methode zum Instrumentieren von dieser Methode (z. B. zu benachrichtigen, wenn eine Zeile für die angegebene Quelle erreicht wird). `SetILInstrumentedCodeMap` ermöglicht einen Profiler, die ursprünglichen MSIL-Anweisungen zu den neuen Speicherorten zuzuordnen. Ein Profiler können die [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) Methode, um den ursprünglichen MSIL-Offset für einen bestimmten Offset des systemeigenen abzurufen.  
   
- Der Debugger wird davon ausgegangen, dass jeder Alter Offset auf einen MSIL-offset innerhalb der ursprünglichen, unveränderten MSIL-Code verweist, und dass jeder neuer Offset auf den MSIL-Offset innerhalb der neuen, instrumentierten Code verweist. Die Zuordnung sollte in aufsteigender Reihenfolge sortiert werden. Beachten Sie für die schrittweise Ausführung, um ordnungsgemäß zu arbeiten Folgendes:  
+ Der Debugger geht davon aus, dass jeder Alter Offset auf einen MSIL-offset innerhalb der ursprünglichen, unveränderten MSIL-Code verweist, und jeder neuer Offset auf den MSIL-Offset innerhalb der neuen, instrumentierten Code verweist. Die Zuordnung muss in aufsteigender Reihenfolge sortiert werden. Führen Sie für die schrittweise Ausführung, um ordnungsgemäß zu arbeiten die folgenden Richtlinien:  
   
--   Anordnung ändern Sie instrumentierten MSIL-Code nicht.  
+-   Keine neu instrumentierten MSIL-Code an.  
   
 -   Entfernen Sie den ursprünglichen MSIL-Code nicht.  
   
--   Schließen Sie Einträge für die Sequenzpunkte aus der Programmdatenbankdatei (PDB), in der Zuordnung. Die Zuordnung ist nicht fehlenden Einträge interpolieren. Der folgende Code Map wird daher angenommen:  
+-   Enthalten Sie Einträge für die Sequenzpunkte über die Programmdatenbankdatei (PDB) werden in der Zuordnung. Die Zuordnung wird nicht fehlenden Einträge interpoliert. Betrachten Sie daher in der folgenden Schritte aus:  
   
-     (0 alt, 0 neu)  
+     (0 alt ist, 0 neue)  
   
-     (5 ALT, 10 neue)  
+     (5 alt ist, 10 neue)  
   
-     (9 ALT, 20 neu)  
+     (9 ALT ist, 20 neue)  
   
-    -   Ein Alter Offset von 0, 1, 2, 3 oder 4 wird dem neuen Offset 0 zugeordnet werden.  
+    -   Ein Alter Offset von 0, 1, 2, 3 oder 4 wird zum neuen Offset 0 zugeordnet werden.  
   
-    -   Ein Alter Offset von 5, 6, 7 oder 8 wird dem neuen Offset 10 zugeordnet werden.  
+    -   Ein Alter Offset von 5, 6, 7 oder 8 wird zum neuen Offset 10 zugeordnet werden.  
   
-    -   Ein Alter Offset von 9 oder höher werden neue Offset 20 zugeordnet werden.  
+    -   Ein Alter Offset des 9 oder höher wird zum neuen Offset 20 zugeordnet werden.  
   
-    -   Ein neuer Offset von 0, 1, 2, 3, 4, 5, 6, 7, 8 oder 9 wird dem alten Offset 0 zugeordnet werden.  
+    -   Ein neuer Offset von 0, 1, 2, 3, 4, 5, 6, 7, 8 oder 9 werden alte Offset 0 zugeordnet werden.  
   
-    -   Ein neuer Offset von 10, 11, 12, 13, 14, 15, 16, 17, 18 oder 19 wird dem alten Offset 5 zugeordnet werden.  
+    -   Alte Offset 5 wird ein neuer Offset von 10, 11, 12, 13, 14, 15, 16, 17, 18 oder 19 zugeordnet werden.  
   
-    -   Ein neuer Offset von 20 oder höher wird dem alten Offset 9 zugeordnet werden.  
+    -   Ein neuer Offset von 20 oder höher werden alte Offset 9 zugeordnet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -91,5 +91,5 @@ HRESULT SetILInstrumentedCodeMap(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

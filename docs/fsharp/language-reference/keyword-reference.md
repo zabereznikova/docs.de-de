@@ -2,12 +2,12 @@
 title: Schlüsselwortreferenz
 description: Hier finden Sie Links zu Informationen über alle der F# Programmiersprachen-Schlüsselwörter.
 ms.date: 05/16/2016
-ms.openlocfilehash: 20592c57e09c6e0f09bb3acae021369ac5e511d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579837"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857904"
 ---
 # <a name="keyword-reference"></a>Schlüsselwortreferenz
 
@@ -73,7 +73,7 @@ Die folgende Tabelle zeigt alle F# Schlüsselwörter in alphabetischer Reihenfol
 |`return!`|[Berechnungsausdrücke](computation-expressions.md)<br /><br />[Asynchrone Workflows](asynchronous-workflows.md)|Verwendet, um einen Ausdruck für die Berechnung anzugeben, dass bei der Auswertung, stellt das Ergebnis des Berechnungsausdrucks enthält.|
 |`select`|[Abfrageausdrücke](query-expressions.md)|In Abfrageausdrücken verwendet, an welche Felder oder Spalten zu extrahieren. Beachten Sie, dass dies ein Kontextschlüsselwort, d. h., es ist dabei nicht um ein reserviertes Wort und es nur verhält sich wie ein Schlüsselwort in den entsprechenden Kontext.|
 |`static`|[Mitglieder](members/index.md)|Damit wird angegeben, eine Methode oder Eigenschaft, die ohne eine Instanz eines Typs aufgerufen werden kann oder einem Wertmember, die von allen Instanzen eines Typs gemeinsam genutzt wird.|
-|`struct`|[Strukturen](structures.md)<br /><br />[Einschränkungen](generics/constraints.md)|Wird verwendet, um einen Strukturtyp zu deklarieren.<br /><br />Auch verwendet in Einschränkungen für generische Typparameter.<br /><br />Für die Kompatibilität mit OCaml in Moduldefinitionen verwendet.|
+|`struct`|[Strukturen](structures.md)<br /><br /> [Tupel](tuples.md)<br/><br/>[Einschränkungen](generics/constraints.md)|Wird verwendet, um einen Strukturtyp zu deklarieren.<br /><br/>Dient zum Angeben eines Tupels Struktur.<br/><br />Auch verwendet in Einschränkungen für generische Typparameter.<br /><br />Für die Kompatibilität mit OCaml in Moduldefinitionen verwendet.|
 |`then`|[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Konstruktoren](members/constructors.md)|In bedingten Ausdrücken verwendet.<br /><br />Auch verwendet, um Nebeneffekte nach der objekterstellung.|
 |`to`|[Schleifen: `for...to` Ausdruck](loops-for-to-expression.md)|Verwendet `for` Schleifen auf, um einen Bereich anzugeben.|
 |`true`|[Primitive Typen](primitive-types.md)|Als ein boolesches Literal verwendet.|

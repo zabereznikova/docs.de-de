@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verwenden des Interpolationsmodus zum Steuern der Bildqualität während der Skalierung'
+title: 'Vorgehensweise: Verwenden des Interpolationsmodus zum Steuern der Bildqualität während der Skalierung'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 72a9cb3a19f0d449dcb376a65f1734b79ed61ab9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c295411418dabac74626c3c4ab43fb8210bbfa4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54631424"
 ---
-# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Gewusst wie: Verwenden des Interpolationsmodus zum Steuern der Bildqualität während der Skalierung
-Der Interpolationsmodus eine <xref:System.Drawing.Graphics> Objekt beeinflusst die Möglichkeit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Bilder skaliert (gestreckt bzw. verkleinert). Die <xref:System.Drawing.Drawing2D.InterpolationMode> -Enumeration definiert mehrere Interpolationsmodi, von denen einige sind in der folgenden Liste:  
+# <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Vorgehensweise: Verwenden des Interpolationsmodus zum Steuern der Bildqualität während der Skalierung
+Der Interpolationsmodus eine <xref:System.Drawing.Graphics> Objekt beeinflusst die Möglichkeit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Bilder skaliert (erstreckt und Verkleinerung). Die <xref:System.Drawing.Drawing2D.InterpolationMode> -Enumeration definiert mehrere Interpolationsmodi, von denen einige sind in der folgenden Liste:  
   
 -   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
@@ -29,14 +29,14 @@ Der Interpolationsmodus eine <xref:System.Drawing.Graphics> Objekt beeinflusst d
   
 -   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
- Um ein Bild gestreckt wird, muss jedes Pixels in das ursprüngliche Image für eine Gruppe von Pixel im größeren Bild zugeordnet werden. Um ein Bild zu verkleinern, müssen Gruppen von Pixeln in das ursprüngliche Image auf einzelnen Pixel im kleineren Bild zugeordnet werden. Die Effektivität der Algorithmen, die diese Zuordnungen ausführen bestimmt die Qualität eines skalierte Images. Algorithmen, die skalierte Bilder von höherer Qualität produzieren tendenziell mehr Verarbeitungszeit erfordern. In der vorangehenden Liste <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> ist der niedrigste Qualität-Modus und <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> Modus mit der höchsten Qualität ist.  
+ Um ein Bild ein stretching durchzuführen, muss jedes Pixel in das ursprüngliche Image für eine Gruppe von Pixel im größeren Bild zugeordnet werden. Um ein Bild zu verkleinern, müssen die Gruppen der Pixel in das ursprüngliche Bild auf einzelnen Pixel in die kleinere Grafik zugeordnet werden. Die Effektivität der Algorithmen, die diese Zuordnungen ausführen bestimmt die Qualität der einem skalierten Bild. Algorithmen, die skalierte Bilder von höherer Qualität produzieren tendenziell mehr Verarbeitungszeit erfordern. In der obigen Liste <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor> ist der niedrigste Qualität-Modus und <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic> ist der Modus mit der höchsten Qualität.  
   
- Um den Interpolationsmodus festzulegen, weisen Sie einem der Mitglieder von der <xref:System.Drawing.Drawing2D.InterpolationMode> -Enumeration der <xref:System.Drawing.Graphics.InterpolationMode%2A> Eigenschaft ein <xref:System.Drawing.Graphics> Objekt.  
+ Zum Festlegen des Interpolationsmodus weisen Sie einem Mitglied des von der <xref:System.Drawing.Drawing2D.InterpolationMode> Enumeration, die <xref:System.Drawing.Graphics.InterpolationMode%2A> Eigenschaft eine <xref:System.Drawing.Graphics> Objekt.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel zeichnet ein Bild, und klicken Sie dann mit drei verschiedenen Interpolationsmodi verkleinert wird.  
+ Im folgende Beispiel zeichnet ein Bild, und klicken Sie dann verkleinert das Image mit drei verschiedenen Interpolationsmodi.  
   
- Die folgende Abbildung zeigt das ursprüngliche Bild und die drei kleinere Bilder.  
+ Die folgende Abbildung zeigt das ursprüngliche Bild und drei kleinere Bilder.  
   
  ![Bild mit Interpolationseinstellungen](../../../../docs/framework/winforms/advanced/media/csgrapes1.png "csgrapes1")  
   
@@ -46,6 +46,6 @@ Der Interpolationsmodus eine <xref:System.Drawing.Graphics> Objekt beeinflusst d
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.  
   
-## <a name="see-also"></a>Siehe auch  
- [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a>Siehe auch
+- [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

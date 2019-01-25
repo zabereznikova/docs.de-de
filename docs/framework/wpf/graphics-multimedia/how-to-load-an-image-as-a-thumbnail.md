@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Laden eines Bilds als Miniaturansicht'
+title: 'Vorgehensweise: Laden eines Bilds als Miniaturansicht'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - images [WPF], loading as thumbnails
 - thumbnails [WPF], loading images as
 ms.assetid: 02e055a0-54df-499a-b8b6-ab6ff7535cff
-ms.openlocfilehash: 349a602a10b89931701e24334bf5ac5536f26400
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d92a489f19f8c7160bed5ec83535bdc33cfe561b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735986"
 ---
-# <a name="how-to-load-an-image-as-a-thumbnail"></a>Gewusst wie: Laden eines Bilds als Miniaturansicht
-Die folgenden Beispiele zeigen, wie beim Laden einer <xref:System.Windows.Controls.Image> als eine Miniaturansicht, um die Anwendung Speicherplatz zu sparen.  
+# <a name="how-to-load-an-image-as-a-thumbnail"></a>Vorgehensweise: Laden eines Bilds als Miniaturansicht
+Die folgenden Beispiele zeigen, wie Sie laden eine <xref:System.Windows.Controls.Image> als eine Miniaturansicht, um die Anwendung Speicherplatz zu sparen.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> Eigenschaft von einem <xref:System.Windows.Media.Imaging.BitmapImage> in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] reduziert den erforderlichen Speicher zum Laden des Bilds.  
+ Im folgenden Beispiel wird die <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> Eigenschaft eine <xref:System.Windows.Media.Imaging.BitmapImage> in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] um den erforderlichen Speicher zum Laden des Bilds zu reduzieren.  
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
@@ -30,5 +30,5 @@ Die folgenden Beispiele zeigen, wie beim Laden einer <xref:System.Windows.Contro
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über die Bildverarbeitung](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über die Bildverarbeitung](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

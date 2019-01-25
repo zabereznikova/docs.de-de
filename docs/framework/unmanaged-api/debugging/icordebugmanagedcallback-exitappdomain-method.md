@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f909eddde182a73709be9ca5cafec6285db46b4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: baeac4ee3e4a22b023420caa7caffa238ff5a5c3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412853"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696112"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>ICorDebugManagedCallback::ExitAppDomain-Methode
-Benachrichtigt den Debugger an, eine Anwendungsdomäne beendet wurde.  
+Benachrichtigt den Debugger, dass eine Anwendungsdomäne beendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,13 +38,13 @@ HRESULT ExitAppDomain (
   
 #### <a name="parameters"></a>Parameter  
  `pProcess`  
- [in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, der die angegebene Anwendungsdomäne enthält.  
+ [in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, der zur angegebenen Anwendungsdomäne enthält.  
   
  `pAppDomain`  
  [in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, die beendet wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -52,5 +52,5 @@ HRESULT ExitAppDomain (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

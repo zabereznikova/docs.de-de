@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717401"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurieren von Diensten mit Konfigurationsdateien
 Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Konfigurationsdatei bietet Ihnen die Flexibilität für die Bereitstellung von Endpunkt und die Daten zum Dienst zum Zeitpunkt der Bereitstellung statt zur Entwurfszeit. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  
@@ -21,7 +21,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
 > [!IMPORTANT]
 >  Beim Bereitstellen paralleler Szenarien, in denen zwei verschiedene Versionen eines Diensts bereitgestellt werden, müssen bei Verweisen in Konfigurationsdateien partielle Assemblynamen angegeben werden. Dies liegt daran, dass die Konfigurationsdatei gemeinsam von allen Versionen eines Diensts verwendet wird und dass diese Dienste ggf. unter unterschiedlichen Versionen von .NET Framework ausgeführt werden.  
   
-## <a name="systemconfiguration-webconfig-and-appconfig"></a>"System.Configuration": "Web.config" und "App.config"  
+## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: "Web.config" und "App.config"  
  WCF verwendet das Konfigurationssystem System.Configuration über die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Wenn einen Dienst in Visual Studio zu konfigurieren, verwenden Sie entweder eine Datei "Web.config" oder eine Datei "App.config", um die Einstellungen anzugeben. Die Wahl der Konfigurationsdatei wird durch die Hostumgebung des Diensts bestimmt. Wenn Sie den Dienst in IIS hosten, verwenden Sie eine Web.config-Datei. Bei einer anderen Hostumgebung verwenden Sie eine App.config-Datei.  
@@ -262,8 +262,8 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
   
  Wenn eine untergeordnete Verhaltensauflistung ein Verhalten enthält, das bereits in der übergeordneten Verhaltensauflistung enthalten ist, wird das übergeordnete Verhalten vom untergeordneten überschrieben. Wenn eine übergeordnete verhaltensauflistung `<serviceMetadata httpGetEnabled="False" />` und eine untergeordnete verhaltensauflistung `<serviceMetadata httpGetEnabled="True" />`, überschreibt das untergeordnete Verhalten das übergeordnete Verhalten in der verhaltensauflistung, und HttpGetEnabled wird auf "true".  
   
-## <a name="see-also"></a>Siehe auch  
- [Vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md)  
- [Konfigurieren von Windows Communication Foundation-Anwendungen](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<binding>](../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- [Vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md)
+- [Konfigurieren von Windows Communication Foundation-Anwendungen](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
+- [\<binding>](../../../docs/framework/misc/binding.md)

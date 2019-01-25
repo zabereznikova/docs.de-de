@@ -2,12 +2,12 @@
 title: Nachrichtensicherheit in WCF
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 81d9acde3c8fab1860904074199066cca55c7186
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 023798f3bbc283b11dbb6c132f7573ee65d18077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195250"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731347"
 ---
 # <a name="message-security-in-wcf"></a>Nachrichtensicherheit in WCF
 Windows Communication Foundation (WCF) verfügt über zwei Hauptmodi zum Bereitstellen von Sicherheit (`Transport` und `Message`) und einen dritten Modus (`TransportWithMessageCredential`), die die beiden kombiniert. In diesem Thema werden die Nachrichtensicherheit und die Gründe für deren Verwendung erläutert.  
@@ -58,8 +58,8 @@ Windows Communication Foundation (WCF) verfügt über zwei Hauptmodi zum Bereits
   
 -   Erfordert die Implementierung von Sicherheitsmechanismen auf XML-Ebene und Unterstützung der WS-Sicherheitsspezifikation. Dies kann sich auf die Interoperabilität auswirken.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
- [Microsoft Patterns and Practices, Chapter 3: Implementing Transport and Message Layer Security](https://go.microsoft.com/fwlink/?LinkId=88897)
+## <a name="see-also"></a>Siehe auch
+- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Transportsicherheit](../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [Microsoft Patterns and Practices "," Kapitel 3: Implementieren von Transport- und Nachrichtensicherheit-Ebene](https://go.microsoft.com/fwlink/?LinkId=88897)

@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 6b54f75afd52b5179693c5a92ebce2e8aa02f122
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765463"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717962"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Bekannte Probleme von und Überlegungen zu LINQ to Entities
 Dieser Abschnitt enthält Informationen zu bekannten Problemen bei [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen.  
   
--   [LINQ-Abfragen, die nicht zwischengespeichert werden](#LINQQueriesThatAreNotCached)  
+-   [LINQ-Abfragen, können nicht zwischengespeichert werden](#LINQQueriesThatAreNotCached)  
   
 -   [Fehlende Sortierung](#OrderingInfoLost)  
   
--   [Ganzzahlen ohne Vorzeichen, die nicht unterstützt.](#UnsignedIntsUnsupported)  
+-   [Ganzzahlen ohne Vorzeichen, die nicht unterstützt](#UnsignedIntsUnsupported)  
   
 -   [Fehler bei der Datentypkonvertierung](#TypeConversionErrors)  
   
--   [Verweisen auf nicht skalare Variablen werden nicht unterstützt.](#RefNonScalarClosures)  
+-   [Verweisen auf nicht skalare Variablen werden nicht unterstützt](#RefNonScalarClosures)  
   
--   [Geschachtelte Abfragen können mit SQLServer 2000 möglicherweise fehlschlagen.](#NestedQueriesSQL2000)  
+-   [Geschachtelte Abfragen schlagen möglicherweise mit SQLServer 2000 fehl.](#NestedQueriesSQL2000)  
   
--   [Auf einen anonymen Typ projiziert](#ProjectToAnonymousType)  
+-   [Projizieren auf einen anonymen Typ](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>LINQ-Abfragen, die nicht zwischengespeichert werden können  
@@ -42,7 +42,7 @@ Dieser Abschnitt enthält Informationen zu bekannten Problemen bei [!INCLUDE[lin
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>Keine Unterstützung von ganzen Zahlen ohne Vorzeichen  
- Sie können in einer [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfrage keine ganze Zahl ohne Vorzeichen angeben, da das [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] keine ganzen Zahlen ohne Vorzeichen unterstützt. Wenn Sie eine Ganzzahl ohne Vorzeichen angeben einer <xref:System.ArgumentException> Ausnahme wird während der Übersetzung des Abfrageausdrucks, ausgelöst werden, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird die Bestellung mit der ID 48000 abgefragt.  
+ Sie können in einer [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfrage keine ganze Zahl ohne Vorzeichen angeben, da das [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] keine ganzen Zahlen ohne Vorzeichen unterstützt. Wenn Sie eine Ganzzahl ohne Vorzeichen angeben einer <xref:System.ArgumentException> Ausnahme aus, während der Übersetzung des Abfrageausdrucks, wie im folgenden Beispiel gezeigt. In diesem Beispiel wird die Bestellung mit der ID 48000 abgefragt.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -79,5 +79,5 @@ Dieser Abschnitt enthält Informationen zu bekannten Problemen bei [!INCLUDE[lin
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype2)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>Siehe auch
+- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
