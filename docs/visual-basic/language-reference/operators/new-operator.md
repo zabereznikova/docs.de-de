@@ -11,33 +11,33 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: 0fe511b2c16681d7bab7eeda7c121fcbbaa2f5dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e8ec5877cba5f5cf97e1677460da06fd87cce1c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603638"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587553"
 ---
 # <a name="new-operator-visual-basic"></a>Operator New (Visual Basic)
-Führt eine `New` -Klausel, um eine neue Objektinstanz erstellt gibt eine Konstruktoreinschränkung für einen Typparameter, oder gibt einen `Sub` Prozedur als ein Klassenkonstruktor.  
+Führt eine `New` -Klausel zum Erstellen einer neuen Objektinstanz gibt eine Konstruktoreinschränkung für einen Typparameter oder identifiziert eine `Sub` Prozedur als ein Klassenkonstruktor.  
   
 ## <a name="remarks"></a>Hinweise  
- In einer Deklaration oder zuweisungsanweisung eine `New` -Klausel muss eine definierte Klasse, von dem die Instanz erstellt werden kann. Dies bedeutet, dass die Klasse einen oder mehrere Konstruktoren verfügbar machen muss, die der aufrufende Code zugreifen kann.  
+ In einer Deklaration oder zuweisungsanweisung eine `New` -Klausel muss angeben eine definierte Klasse, die von dem die Instanz erstellt werden kann. Dies bedeutet, dass die Klasse einen oder mehrere Konstruktoren verfügbar machen muss, die der aufrufende Code zugreifen können.  
   
- Sie können eine `New` -Klausel in einer deklarationsanweisung oder eine zuweisungsanweisung. Wenn die Anweisung ausgeführt wird, ruft es den entsprechenden Konstruktor der angegebenen Klasse, und übergeben von Argumenten, die Sie angegeben haben. Das folgende Beispiel zeigt dies durch Erstellen von Instanzen von einem `Customer` Klasse, die zwei Konstruktoren aufweist, eine, die keine Parameter akzeptiert und eine, die einen Zeichenfolgenparameter annimmt.  
+ Sie können eine `New` -Klausel in einer deklarationsanweisung oder eine zuweisungsanweisung. Wenn die Anweisung ausgeführt wird, ruft er den entsprechenden Konstruktor der angegebenen Klasse und übergeben von Argumenten, die Sie angegeben haben. Das folgende Beispiel zeigt dies durch das Erstellen von Instanzen von einem `Customer` -Klasse, die zwei Konstruktoren, die keine Parameter akzeptiert und eine, die einen Zeichenfolgenparameter akzeptiert.  
   
  [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
   
- Da Arrays Klassen sind `New` können eine neue Arrayinstanz erstellen, wie in den folgenden Beispielen gezeigt.  
+ Da Arrays Klassen sind `New` können eine neues Array-Instanz erstellen, wie in den folgenden Beispielen gezeigt.  
   
  [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
   
- Löst die common Language Runtime (CLR) eine <xref:System.OutOfMemoryException> Fehlermeldung, wenn nicht genügend zum Erstellen der neuen Instanz Arbeitsspeicher.  
+ Löst die common Language Runtime (CLR) eine <xref:System.OutOfMemoryException> Fehler, wenn nicht genügend zum Erstellen der neuen Instanz Arbeitsspeicher.  
   
 > [!NOTE]
->  Die `New` -Schlüsselwort wird auch in Typparameterlisten verwendet, um anzugeben, dass der angegebene Typ einen zugänglichen parameterlosen Konstruktor verfügbar machen muss. Weitere Informationen über Typparameter und Einschränkungen finden Sie unter [Typliste](../../../visual-basic/language-reference/statements/type-list.md).  
+>  Die `New` -Schlüsselwort wird auch in der Parameterliste des Typs verwendet, um anzugeben, dass der angegebene Typ der einen zugänglichen parameterlosen Konstruktor verfügbar machen muss. Weitere Informationen über Typparameter und Einschränkungen finden Sie unter [Typliste](../../../visual-basic/language-reference/statements/type-list.md).  
   
- Um eine Konstruktorprozedur für eine Klasse zu erstellen, legen Sie den Namen des eine `Sub` Vorgehensweise der `New` Schlüsselwort. Weitere Informationen finden Sie unter [Objektlebensdauer: wie Objekte erstellen und zerstören sind](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Um eine Konstruktorprozedur für eine Klasse zu erstellen, legen Sie den Namen des eine `Sub` Vorgehensweise die `New` Schlüsselwort. Weitere Informationen finden Sie unter [Object Lifetime: Wie die Objekte erstellt und zerstört werden](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
  Das `New`-Schlüsselwort kann in den folgenden Kontexten verwendet werden:  
   
@@ -47,9 +47,9 @@ Führt eine `New` -Klausel, um eine neue Objektinstanz erstellt gibt eine Konstr
   
  [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.OutOfMemoryException>  
- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)  
- [Typliste](../../../visual-basic/language-reference/statements/type-list.md)  
- [Generische Typen in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Objektlebensdauer: Erstellen und Zerstören von Objekten](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.OutOfMemoryException>
+- [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
+- [Typliste](../../../visual-basic/language-reference/statements/type-list.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Objektlebensdauer: Wie die Objekte erstellt und zerstört werden](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)

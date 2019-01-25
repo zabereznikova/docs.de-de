@@ -2,12 +2,12 @@
 title: XmlSerializer-Fehler
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
-ms.openlocfilehash: 763e2c60e3cd1b2511b229f470a64cdd5a01d5a6
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 71d273f1fe695fb8210eed7492ef987716d3b8ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54732582"
 ---
 # <a name="xmlserializer-faults"></a>XmlSerializer-Fehler
 Im <xref:System.Xml.Serialization.XmlSerializer>-Fehlervertragsbeispiel wird veranschaulicht, wie Fehlerinformationen von einem Dienst zu einem Client mit <xref:System.Xml.Serialization.XmlSerializer> übermittelt werden. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), wurde dabei zusätzlicher Code hinzugefügt, mit dem Dienst um eine interne Ausnahme in einen Fehler zu konvertieren. Der Client versucht, eine Division durch 0 (null) auszuführen, um einen Fehlerzustand beim Dienst zu erzwingen.  
@@ -56,6 +56,6 @@ public interface ICalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\XmlSerializerFaults`  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.XmlSerializerFormatAttribute>  
- <xref:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults%2A>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.XmlSerializerFormatAttribute>
+- <xref:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults%2A>

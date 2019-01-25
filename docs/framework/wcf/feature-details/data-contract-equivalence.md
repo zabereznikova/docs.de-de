@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: b6461ffe6525b377e7f836a686a401033d344a4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492794"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708934"
 ---
 # <a name="data-contract-equivalence"></a>Datenvertragsäquivalenz
-Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet oder ein Dienst erfolgreich Daten an einen Client sendet, muss der gesendete Typ nicht unbedingt an der Empfängerseite vorhanden sein. Die einzige Anforderung ist, dass die Datenverträge beider Typen äquivalent sind. (Manchmal strenger Äquivalenz ist nicht erforderlich, wie in beschrieben [Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
+Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet oder ein Dienst erfolgreich Daten an einen Client sendet, muss der gesendete Typ nicht unbedingt an der Empfängerseite vorhanden sein. Die einzige Anforderung ist, dass die Datenverträge beider Typen äquivalent sind. (In einigen Fällen strenge Äquivalenz ist nicht erforderlich, siehe [Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
   
  Die Äquivalenz von Datenverträgen wird durch denselben Namespace und Namen gewährleistet. Darüber hinaus muss jeder Datenmember auf einer Seite über einen entsprechenden Datenmember auf der anderen Seite verfügen.  
   
@@ -24,7 +24,7 @@ Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet 
 > [!NOTE]
 >  Bei Datenvertragsnamen und Namespaces sowie Datenmembernamen ist Groß-/Kleinschreibung zu beachten.  
   
- Weitere Informationen zu den Datenvertragsnamen und Namespaces sowie Datenmembernamen, finden Sie unter [Datenvertragsnamen](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Weitere Informationen zu den Datenvertragsnamen und Namespaces sowie Datenmembernamen, finden Sie unter [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Sind zwei Typen auf derselben Seite vorhanden (Absender oder Empfänger) und sind die Datenverträge nicht äquivalent (wenn sie beispielsweise unterschiedliche Datenmember besitzen), sollten sie nicht denselben Name und denselben Namespace erhalten. Falls Sie doch denselben Namen bzw. Namespace zuweisen, werden möglicherweise Ausnahmen ausgelöst.  
   
@@ -54,15 +54,15 @@ Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet 
  [!code-csharp[C_DataContractNames#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#8)]
  [!code-vb[C_DataContractNames#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#8)]  
   
- Beim Übergeben von Parametern und der Rückgabe von Werten zwischen einem Client und einem Dienst kann ein Datenvertrag von einer Basisklasse nicht gesendet werden, wenn der empfangende Endpunkt einen Datenvertrag von einer abgeleiteten Klasse erwartet. Dies stimmt mit objektorientierten Programmierungsgrundsätzen überein. Im vorherigen Beispiel, ein Objekt des Typs `Person` kann nicht gesendet werden, wenn ein `Employee` wird erwartet.  
+ Beim Übergeben von Parametern und der Rückgabe von Werten zwischen einem Client und einem Dienst kann ein Datenvertrag von einer Basisklasse nicht gesendet werden, wenn der empfangende Endpunkt einen Datenvertrag von einer abgeleiteten Klasse erwartet. Dies stimmt mit objektorientierten Programmierungsgrundsätzen überein. Im vorherigen Beispiel ein Objekt des Typs `Person` kann nicht gesendet werden, wenn ein `Employee` wird erwartet.  
   
- Ein Datenvertrag von einer abgeleiteten Klasse kann gesendet werden, wenn ein Datenvertrag von einer Basisklasse erwartet wird. Dies ist jedoch nur möglich, falls der empfangende Endpunkt unter Verwendung von <xref:System.Runtime.Serialization.KnownTypeAttribute> über den abgeleiteten Typen "informiert" ist. Weitere Informationen finden Sie unter [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Im vorangegangenen Beispiel kann ein Objekt vom Typ `Employee` gesendet werden, wenn eine `Person` erwartet wird. Dies ist jedoch nur möglich, falls der Empfängercode <xref:System.Runtime.Serialization.KnownTypeAttribute> verwendet, um es in die Liste der bekannten Typen aufzunehmen.  
+ Ein Datenvertrag von einer abgeleiteten Klasse kann gesendet werden, wenn ein Datenvertrag von einer Basisklasse erwartet wird. Dies ist jedoch nur möglich, falls der empfangende Endpunkt unter Verwendung von <xref:System.Runtime.Serialization.KnownTypeAttribute> über den abgeleiteten Typen "informiert" ist. Weitere Informationen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Im vorangegangenen Beispiel kann ein Objekt vom Typ `Employee` gesendet werden, wenn eine `Person` erwartet wird. Dies ist jedoch nur möglich, falls der Empfängercode <xref:System.Runtime.Serialization.KnownTypeAttribute> verwendet, um es in die Liste der bekannten Typen aufzunehmen.  
   
- Beim Übergeben von Parametern und Rückgabewerten zwischen Anwendungen entspricht der erwartete Typ (sofern es sich dabei um eine Schnittstelle handelt) dem erwarteten Typ <xref:System.Object>. Da jeder Typ letztlich von <xref:System.Object> abgeleitet wird, wird jeder Datenvertrag letztlich vom Datenvertrag für <xref:System.Object> abgeleitet. So kann jeder Datenvertragstyp übergeben werden, wenn eine Schnittstelle erwartet wird. Zusätzliche Schritte sind erforderlich, um erfolgreich arbeiten mit Schnittstellen; Weitere Informationen finden Sie unter [Datenvertragstypen bezeichnet](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Beim Übergeben von Parametern und Rückgabewerten zwischen Anwendungen entspricht der erwartete Typ (sofern es sich dabei um eine Schnittstelle handelt) dem erwarteten Typ <xref:System.Object>. Da jeder Typ letztlich von <xref:System.Object> abgeleitet wird, wird jeder Datenvertrag letztlich vom Datenvertrag für <xref:System.Object> abgeleitet. So kann jeder Datenvertragstyp übergeben werden, wenn eine Schnittstelle erwartet wird. Um erfolgreich arbeiten mit Schnittstellen sind zusätzliche Schritte erforderlich; Weitere Informationen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataMemberAttribute>  
- [Datenmemberreihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md)  
- [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [Datenvertragsnamen](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataMemberAttribute>
+- [Datenmemberreihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md)
+- [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Datenvertragsnamen](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

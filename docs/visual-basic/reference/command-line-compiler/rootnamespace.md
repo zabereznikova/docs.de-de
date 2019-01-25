@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -rootnamespace compiler option [Visual Basic]
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
-ms.openlocfilehash: 2c7fb6c88477899a0cf08a467e8f23d687b90c90
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ff4b1729f1b9fb1d698b4b5b1e3711ce3d27b4db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655555"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
 Gibt einen Namespace für alle Typdeklarationen an.  
@@ -49,6 +49,6 @@ vbc -rootnamespace:mynamespace in.vb
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
-- [Ildasm.exe (IL-Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md)  
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Ildasm.exe (IL-Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md)
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

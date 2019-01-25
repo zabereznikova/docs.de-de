@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: 8fd1cfb0764d16b86cd639d8266d1cceff874932
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df2aec3ff108c0106f29e453a93b06c60e67c6af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649413"
 ---
-# <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Gewusst wie: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms
-Sie können Text in Windows Forms programmgesteuert auswählen <xref:System.Windows.Forms.TextBox> Steuerelement. Wenn Sie eine Funktion, mit dem Text für eine bestimmte Zeichenfolge gesucht erstellen, können Sie z. B. den Text den Reader die gefundene Zeichenfolge Position visuell Warnungen auswählen.  
+# <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms
+Sie können Text programmgesteuert in das Windows Forms auswählen <xref:System.Windows.Forms.TextBox> Steuerelement. Wenn Sie eine Funktion, die Text nach einer bestimmten Zeichenfolge sucht erstellen, können Sie beispielsweise den Text, den Reader, der die gefundene Zeichenfolge Position visuell Warnung auswählen.  
   
-### <a name="to-select-text-programmatically"></a>Text programmgesteuert aus  
+### <a name="to-select-text-programmatically"></a>Text programmgesteuert ausgewählt  
   
-1.  Legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft auf den Anfang des Texts, die Sie auswählen möchten.  
+1.  Legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft an den Anfang des Texts, die Sie auswählen möchten.  
   
-     Die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft ist eine Zahl, die Einfügemarke innerhalb der Textzeichenfolge angibt, wobei 0 die linke Position. Wenn die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft ist festgelegt auf einen Wert gleich oder größer als die Anzahl der Zeichen in das Textfeld, das die Einfügemarke befindet sich nach dem letzten Zeichen.  
+     Die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft ist eine Zahl, die die Einfügemarke innerhalb der Zeichenfolge des Texts angibt, wobei 0 die äußerste linke Position. Wenn die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> -Eigenschaftensatz auf einen Wert gleich oder größer als die Anzahl der Zeichen in das Textfeld, das die Einfügemarke befindet sich hinter dem letzten Zeichen.  
   
 2.  Legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft, um die Länge des Texts, die Sie auswählen möchten.  
   
-     Die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft ist ein numerischer Wert, der die Breite der Einfügemarke festlegt. Festlegen der <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> auf eine Zahl größer als 0 bewirkt, diese Anzahl von Zeichen dass, die ausgewählt werden, beginnend mit der Einfügemarke.  
+     Die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft ist ein numerischer Wert, der die Breite der Einfügemarke festlegt. Festlegen der <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> auf eine Zahl größer als 0 bewirkt, diese Anzahl von Zeichen dass, die ausgewählt werden, beginnend mit der aktuellen Einfügemarke.  
   
-3.  (Optional) Zugriff auf den markierten Text über den <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> Eigenschaft.  
+3.  (Optional) Zugriff auf den markierten Text durch die <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> Eigenschaft.  
   
-     Der Code unten wählt den Inhalt von Text Feld, wenn des Steuerelements <xref:System.Windows.Forms.Control.Enter> Ereignis auftritt. In diesem Beispiel wird überprüft, ob es sich bei dem Textfeld einen Wert für ist das <xref:System.Windows.Forms.TextBox.Text%2A> -Eigenschaft, die nicht `null` oder eine leere Zeichenfolge. Wenn das Textfeld den Fokus erhält, wird der aktuelle Text im Textfeld ausgewählt. Die `TextBox1_Enter` Ereignishandler; Weitere Informationen an das Steuerelement gebunden werden muss, finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern an Zeit für Windows Forms führen](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+     Der Code unten wählt den Inhalt mit einem Feld beim des Steuerelements <xref:System.Windows.Forms.Control.Enter> Ereignis auftritt. In diesem Beispiel wird überprüft, ob das Textfeld einen Wert für die <xref:System.Windows.Forms.TextBox.Text%2A> -Eigenschaft, die nicht `null` oder eine leere Zeichenfolge. Wenn das Textfeld den Fokus erhält, ist der aktuelle Text in das Textfeld ausgewählt. Die `TextBox1_Enter` Ereignishandler muss gebunden sein, auf das Steuerelement; Weitere Informationen, wie unter [Vorgehensweise: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
-     Drücken Sie zum Testen dieses Beispiels die Tab-Taste, bis das Textfeld den Fokus besitzt. Wenn Sie in das Textfeld klicken, wird der Text nicht ausgewählt.  
+     Zum Testen dieses Beispiels, drücken Sie die Tab-Taste, bis das Textfeld den Fokus besitzt. Wenn Sie in das Textfeld klicken, ist der Text nicht ausgewählt.  
   
     ```vb  
     Private Sub TextBox1_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Enter  
@@ -67,12 +67,12 @@ Sie können Text in Windows Forms programmgesteuert auswählen <xref:System.Wind
     }  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.TextBox>  
- [Übersicht über das TextBox-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)  
- [Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [Gewusst wie: Setzen von Anführungszeichen in Zeichenfolgen](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- [Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [TextBox-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.TextBox>
+- [Übersicht über das TextBox-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
+- [Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

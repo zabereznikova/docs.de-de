@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 824337a8a87282e59c9fc5df18c71800339e8d7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c94960478e6b2eb4e7b8f1e9592b0831af3ec686
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603767"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls-Methode
 Zählt MethodDef-Token auf, die Schnittstellenimplementierungen darstellen.  
@@ -44,7 +44,7 @@ HRESULT EnumInterfaceImpls (
  [in, out] Ein Zeiger auf den Enumerator.  
   
  `td`  
- [in] Das Token der TypeDef, die schnittstellenimplementierungen darstellen, deren MethodDef-Token werden aufgelistet werden sollen.  
+ [in] Das Token der TypeDef, die schnittstellenimplementierungen darstellen, deren MethodDef-Token sind, aufgelistet werden sollen.  
   
  `rImpls`  
  [out] Das Array zum Speichern der MethodDef-Token verwendet wird.  
@@ -53,24 +53,24 @@ HRESULT EnumInterfaceImpls (
  [in] Die maximale Größe des `rImpls`-Arrays.  
   
  `pcImpls`  
- [out] Die tatsächliche Anzahl der im zurückgegebenen Token `rImpls`.  
+ [out] Die tatsächliche Anzahl der in zurückgegebenen Token `rImpls`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumInterfaceImpls` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine MethodDef-Token, aufgelistet werden. In diesem Fall `pcImpls` auf 0 (null) festgelegt ist.|  
+|`S_FALSE`|Es sind keine MethodDef-Token aufgelistet werden. In diesem Fall `pcImpls` auf 0 (null) festgelegt ist.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

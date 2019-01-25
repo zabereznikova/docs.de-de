@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e6fee91146e99ba1f63ecafcbbdaae9d42675848
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731139"
 ---
 # <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT-Struktur
 Bietet Informationen zum Layout eines Arrayobjekts im Speicher.  
@@ -48,19 +48,19 @@ typedef struct COR_ARRAY_LAYOUT {
 |`componentID`|Der Bezeichner des Typs von Objekten, die das Array enthält.|  
 |`componentType`|Ein Wert der CorElementType-Enumeration, der angibt, ob die Komponente eine Garbage Collection-Verweis, eine Wertklasse oder ein primitiver Typ ist.|  
 |`firstElementOffset`|Der Offset, der das erste Element im Array.|  
-|`elementSize`|Die Größe jedes Elements.|  
+|`elementSize`|Die Größe der einzelnen Elemente.|  
 |`countOffset`|Der Offset, der die Anzahl der Elemente im Array.|  
-|`rankSize`|Die Größe der Rang in Bytes.|  
-|`numRanks`|Die Anzahl der Ränge im Array.|  
+|`rankSize`|Die Größe des den Rang, wird in Bytes.|  
+|`numRanks`|Die Anzahl der Ränge in das Array.|  
 |`rankOffset`|Der Offset, an dem die Ränge starten.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `rankSize` Feld gibt die Größe der Rang in ein mehrdimensionales Array. Für eindimensionale Arrays als auch präzise ist.  
+ Die `rankSize` Feld gibt die Größe der Rang in ein mehrdimensionales Array. Es ist für eindimensionale Arrays auch präzise.  
   
- Der Wert der `numRanks` ist 1 für ein eindimensionales Array und `N` für ein mehrdimensionales Array des `N` Dimensionen.  
+ Der Wert des `numRanks` ist 1 für ein eindimensionales Array und `N` für ein mehrdimensionales Array des `N` Dimensionen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -68,6 +68,6 @@ typedef struct COR_ARRAY_LAYOUT {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

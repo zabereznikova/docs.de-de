@@ -2,12 +2,12 @@
 title: LINQ to XML für XPath-Benutzer (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: e4a84c373a4b355297db130c64ca3a1df5726c5e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 471bd4faa44bcb23ff488df6fb93f0a28cc48950
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395688"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568165"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML für XPath-Benutzer (Visual Basic)
 
@@ -23,7 +23,7 @@ Die Themen in diesem Abschnitt demonstrieren eine Reihe von XPath-Ausdrücken un
 |[Vorgehensweise: Suchen eines untergeordneten Elements (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|Vergleicht die XPath-Achse für untergeordnete Elemente mit der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>-Methode.<br /><br /> Der zugehörige XPath-Ausdruck ist `"DeliveryNotes"`.|  
 |[Vorgehensweise: Suchen einer Liste von untergeordneten Elementen (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md)|Vergleicht die XPath-Achse für untergeordnete Elemente mit der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>-Achse.<br /><br /> Der zugehörige XPath-Ausdruck ist `"./*"`.|  
 |[Vorgehensweise: Suchen des Stammelements (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md)|Vergleicht, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] das Stammelement abrufen können.<br /><br /> Der zugehörige XPath-Ausdruck ist `"/PurchaseOrders"`.|  
-|[Vorgehensweise: Suchen nach untergeordneten Elementen (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md)|Vergleicht, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] die Nachfolgerelemente mit einem bestimmten Namen abrufen können.<br /><br /> Der zugehörige XPath-Ausdruck ist `"//Name"`.|  
+|[Vorgehensweise: Suchen von Descendant-Elementen (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md)|Vergleicht, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] die Nachfolgerelemente mit einem bestimmten Namen abrufen können.<br /><br /> Der zugehörige XPath-Ausdruck ist `"//Name"`.|  
 |[Vorgehensweise: Filtern nach einem Attribut (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md)|Vergleicht, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] die Nachfolgerelemente mit einem bestimmten Namen und mit einem Attribut mit einem bestimmten Wert abrufen können.<br /><br /> Der zugehörige XPath-Ausdruck ist `".//Address[@Type='Shipping']"`.|  
 |[Vorgehensweise: Suchen nach verwandten Elementen (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-related-elements-xpath-linq-to-xml.md)|Vergleicht, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ein Element abrufen können, indem nach einem Attribut ausgewählt wird, auf das der Wert eines anderen Elements verweist.<br /><br /> Der zugehörige XPath-Ausdruck ist `".//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]"`.|  
 |[Vorgehensweise: Suchen nach Elementen in einem Namespace (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-in-a-namespace.md)|Vergleicht die Verwendung der XPath-<xref:System.Xml.XmlNamespaceManager>-Klasse mit der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<xref:System.Xml.Linq.XName.Namespace%2A>-Eigenschaft der <xref:System.Xml.Linq.XName>-Klasse beim Arbeiten mit XML-Namespaces.<br /><br /> Der zugehörige XPath-Ausdruck ist `"./aw:*"`.|  
@@ -34,10 +34,10 @@ Die Themen in diesem Abschnitt demonstrieren eine Reihe von XPath-Ausdrücken un
 |[Vorgehensweise: Suchen eines Attributs eines übergeordneten Elements (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md)|Vergleicht, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zum übergeordneten Element navigieren und nach einem zugeordneten Attribut suchen können.<br /><br /> Der zugehörige XPath-Ausdruck ist `"../@id"`.|  
 |[Vorgehensweise: Suchen nach Attributen von nebengeordneten Elementen mit einem bestimmten Namen (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-attributes-of-siblings-with-a-specific-name.md)|Vergleicht, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nach bestimmten Attributen der nebengeordneten Knoten des Kontextknotens suchen können.<br /><br /> Der zugehörige XPath-Ausdruck ist `"``../Book/@id``"`.|  
 |[Vorgehensweise: Suchen nach Elementen mit bestimmten Attributen (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-elements-with-a-specific-attribute.md)|Vergleicht, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nach allen Elementen suchen können, die ein bestimmtes Attribut enthalten.<br /><br /> Der zugehörige XPath-Ausdruck ist `"./*[@Select]"`.|  
-|[Vorgehensweise: Ermitteln untergeordneter Elemente anhand der Position (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|Vergleicht, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nach einem Element anhand seiner relativen Position suchen können.<br /><br /> Der zugehörige XPath-Ausdruck ist `"Test[position() >= 2 and position() <= 4]"`.|  
+|[Vorgehensweise: Suchen nach untergeordneten Elementen, die anhand der Position (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position.md)|Vergleicht, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nach einem Element anhand seiner relativen Position suchen können.<br /><br /> Der zugehörige XPath-Ausdruck ist `"Test[position() >= 2 and position() <= 4]"`.|  
 |[Vorgehensweise: Suchen des direkten vorangegangenen nebengeordneten (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|Vergleicht, wie Sie mit XPath und mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nach dem unmittelbar vorgehenden nebengeordneten Knoten eines Knotens suchen können.<br /><br /> Der zugehörige XPath-Ausdruck ist `"preceding-sibling::*[1]"`.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Xml.XPath?displayProperty=nameWithType>  
- [Abfragen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)  
- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Xml.XPath?displayProperty=nameWithType>
+- [Abfragen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

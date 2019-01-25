@@ -2,12 +2,12 @@
 title: Transaktionsgrundlagen
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: 20bce37bb5d5aa1460570b1d39b54c2cb8a3362f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cb5123cbee9245178cac43cfd2388cce3f5d356f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177196"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620512"
 ---
 # <a name="transaction-fundamentals"></a>Transaktionsgrundlagen
 In Transaktionen werden mehrere Aufgaben zusammengefasst. Stellen Sie sich z.&#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zuerst erstellt sie eine neue Tabelle in einer Datenbank. Danach ruft sie ein spezielles Objekt auf, um Daten zu sammeln, zu formatieren und in die neue Tabelle einzufügen. Diese beiden Aufgaben sind aufeinander bezogen und sogar voneinander abhängig, da nur dann eine neue Tabelle erstellt werden sollte, wenn diese mit Daten gefüllt werden kann. Wenn beide Aufgaben im Bereich einer Transaktion ausgeführt werden, wird die zwischen ihnen bestehende Beziehung verstärkt. Falls die zweite Aufgabe fehlschlägt, wird die erste Aufgabe bis zu einem Punkt rückgängig gemacht, der vor der Erstellung der Tabelle liegt.  
@@ -24,5 +24,5 @@ In Transaktionen werden mehrere Aufgaben zusammengefasst. Stellen Sie sich z.&#1
   
  Sie können Transaktionen, die mithilfe von ADO.NET erstellen <xref:System.EnterpriseServices>, oder das transaktionsprogrammierungsmodell durch die <xref:System.Transactions> Namespace. Die [von System.Transactions bereitgestellte Funktionen](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) Thema wird erläutert, die Funktionen, die Sie, zum Schreiben einer transaktionsanwendung mithilfe verwenden können der <xref:System.Transactions> Namespace.  
   
-## <a name="see-also"></a>Siehe auch  
- [Von System.Transactions bereitgestellte Funktionen](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)
+## <a name="see-also"></a>Siehe auch
+- [Von System.Transactions bereitgestellte Funktionen](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)

@@ -2,12 +2,12 @@
 title: WCF-Dienste und ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: c4d747787529ce6755a25cbd791886cf1999b699
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58b5a09f63b6efb3c48fb3836da63c24650c5b21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712284"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF-Dienste und ASP.NET
 In diesem Thema wird erläutert, hosting Windows Communication Foundation (WCF) Services Seite-an-Seite mit ASP.NET und sie im ASP.NET-Kompatibilitätsmodus gehostet werden.  
@@ -29,13 +29,13 @@ In diesem Thema wird erläutert, hosting Windows Communication Foundation (WCF) 
   
     -   HttpContext: <xref:System.Web.HttpContext.Current%2A> ist immer `null` Wenn der Zugriff innerhalb eines WCF-Diensts. Verwendung <!--zz <xref:System.ServiceModel.OperationContext.Current.RequestContext>--> `RequestContext` stattdessen.  
   
-    -   Dateibasierte Autorisierung: die WCF-Sicherheitsmodell lässt sich nicht für die Zugriffssteuerungsliste (ACL) auf die SVC-Datei des Diensts angewendet werden, bei der Entscheidung, ob eine dienstanforderung autorisiert ist.  
+    -   Dateibasierte Autorisierung: Das WCF-Sicherheitsmodell lässt sich nicht für die Zugriffssteuerungsliste (ACL) auf die SVC-Datei des Diensts angewendet werden, bei der Entscheidung, ob eine dienstanforderung autorisiert ist.  
   
-    -   Konfigurationsbasierte URL-Autorisierung: Entsprechend der WCF nicht-Sicherheitsmodell URL-basierten Autorisierungsregeln, die in von "System.Web" angegeben \<Authorization >-Konfigurationselement. Diese Einstellungen werden für WCF-Anforderungen ignoriert, wenn ein Dienst in einem URL-Bereich von ASP gesichert befindet. NET URL-Autorisierungsregeln.  
+    -   Konfigurationsbasierte URL-Autorisierung: Modell der WCF-Sicherheit auf ähnliche Weise nicht erfüllen, in der von "System.Web" angegebene URL-basierten Autorisierungsregeln \<Authorization >-Konfigurationselement. Diese Einstellungen werden für WCF-Anforderungen ignoriert, wenn ein Dienst in einem URL-Bereich von ASP gesichert befindet. NET URL-Autorisierungsregeln.  
   
-    -   HttpModule-Erweiterbarkeit: die WCF-Hostinginfrastruktur abgefangen WCF anfordert, wenn die <xref:System.Web.HttpApplication.PostAuthenticateRequest> Ereignis wird ausgelöst, und die Verarbeitung nicht an die ASP.NET HTTP-Pipeline zurück. Module, die zum Abfangen von Anforderungen in späteren Phasen der Pipeline codiert sind werden WCF-Anforderungen nicht abgefangen werden.  
+    -   HttpModule-Erweiterbarkeit: Der WCF-Hostinginfrastruktur abgefangen WCF anfordert, wenn die <xref:System.Web.HttpApplication.PostAuthenticateRequest> Ereignis wird ausgelöst, und die Verarbeitung nicht an die ASP.NET HTTP-Pipeline zurück. Module, die zum Abfangen von Anforderungen in späteren Phasen der Pipeline codiert sind werden WCF-Anforderungen nicht abgefangen werden.  
   
-    -   ASP.NET-Identitätswechsel: standardmäßig WCF-Anforderungen ausgeführt als die IIS Prozessidentität, auch wenn für ASP.NET Identitätswechsel unter Verwendung von "System.Web" aktivieren \<Identity impersonate = "true" / > Konfigurationsoption.  
+    -   ASP.NET-Identitätswechsel: In der Standardeinstellung WCF-Anforderungen ausgeführt als die IIS Prozessidentität, auch wenn für ASP.NET Identitätswechsel unter Verwendung von "System.Web" aktivieren \<Identity impersonate = "true" / > Konfigurationsoption.  
   
  Diese Einschränkungen gelten nur für in IIS gehostete WCF-Dienste. Das Verhalten des ASP.NET-Inhalts wird durch das Vorhandensein von WCF nicht beeinflusst.  
   
@@ -62,7 +62,7 @@ In diesem Thema wird erläutert, hosting Windows Communication Foundation (WCF) 
   
 -   Konfigurierbare URL-Autorisierung: ASP. NET URL-Autorisierungsregeln werden für WCF-Anforderungen erzwungen, wenn der WCF-Dienst im ASP.NET-Kompatibilitätsmodus ausgeführt wird.  
   
--   <xref:System.Web.HttpModuleCollection> Erweiterbarkeit: weil-WCF-Dienste im ASP.NET-Kompatibilitätsmodus, nehmen uneingeschränkt an der am ASP.NET HTTP-Anforderungslebenszyklus alle HTTP-Module, die in der HTTP-Pipeline konfiguriert ist, kann für WCF-Anforderungen vor und nach Aufrufen von Diensten verwendet werden.  
+-   <xref:System.Web.HttpModuleCollection> Erweiterbarkeit: Da WCF-Dienste im ASP.NET-Kompatibilitätsmodus, voll am ASP.NET HTTP-Anforderungslebenszyklus teilnehmen, ist HTTP-Modul, das in der HTTP-Pipeline konfigurierten WCF-Anforderungen vor und nach dem Dienstaufruf arbeiten.  
   
 -   ASP.NET-Identitätswechsel: Führen Sie mit der aktuellen Identität, die der WCF-Dienste mit Identitätswechsel Thread, der die IIS-Prozessidentität unterscheiden sein kann, wenn ASP.NET-Identitätswechsel für die Anwendung aktiviert wurde. Wenn Identitätswechsel in ASP.NET und WCF-Identitätswechsel für einen bestimmten Dienstvorgang aktiviert sind, die dienstimplementierung letztlich unter der Identität ausgeführt von WCF abgerufen.  
   
@@ -88,18 +88,18 @@ In diesem Thema wird erläutert, hosting Windows Communication Foundation (WCF) 
   
 |Anwendungsweite Einstellung des Kompatibilitätsmodus|[AspNetCompatibilityRequirementsMode]<br /><br /> Einstellung|Beobachtetes Ergebnis|  
 |--------------------------------------------------|---------------------------------------------------------|---------------------|  
-|AspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Dienst wird erfolgreich aktiviert.|  
-|AspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Dienst wird erfolgreich aktiviert.|  
-|AspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Ein Aktivierungsfehler tritt auf, wenn der Dienst eine Nachricht empfängt.|  
-|AspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Ein Aktivierungsfehler tritt auf, wenn der Dienst eine Nachricht empfängt.|  
-|AspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Dienst wird erfolgreich aktiviert.|  
-|AspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Dienst wird erfolgreich aktiviert.|  
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Dienst wird erfolgreich aktiviert.|  
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Dienst wird erfolgreich aktiviert.|  
+|aspNetCompatibilityEnabled = "`true`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Ein Aktivierungsfehler tritt auf, wenn der Dienst eine Nachricht empfängt.|  
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>|Ein Aktivierungsfehler tritt auf, wenn der Dienst eine Nachricht empfängt.|  
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>|Dienst wird erfolgreich aktiviert.|  
+|aspNetCompatibilityEnabled = "`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|Dienst wird erfolgreich aktiviert.|  
   
 > [!NOTE]
 >  IIS 7.0 und WAS können WCF-Dienste über andere Protokolle als HTTP zu kommunizieren. WCF-Dienste in Anwendungen, die ASP.NET-Kompatibilitätsmodus aktiviert haben, sind jedoch nicht zulässig, um nicht-HTTP-Endpunkte verfügbar zu machen. Eine solche Konfiguration generiert eine Aktivierungsausnahme, wenn der Dienst seine erste Nachricht empfängt.  
   
  Weitere Informationen zum Aktivieren des ASP.NET-Kompatibilitätsmodus für WCF-Dienste finden Sie unter <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode> und [ASP.NET-Kompatibilität](../../../../docs/framework/wcf/samples/aspnet-compatibility.md) Beispiel.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>  
- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>
+- [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)

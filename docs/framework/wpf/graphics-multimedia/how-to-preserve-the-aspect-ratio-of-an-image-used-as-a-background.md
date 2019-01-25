@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Beibehalten des Seitenverhältnisses bei einem als Hintergrund verwendeten Bild'
+title: 'Vorgehensweise: Beibehalten des Seitenverhältnisses bei einem als Hintergrund verwendeten Bild'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - aspect ratios of background images [WPF], preserving
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: 8cf0a3804172b90af33318299d60aa6c7eaa53f0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f8133ac4fcd01e08f41861b7a441e9ff1325f6ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863085"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698322"
 ---
-# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Gewusst wie: Beibehalten des Seitenverhältnisses bei einem als Hintergrund verwendeten Bild
+# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Vorgehensweise: Beibehalten des Seitenverhältnisses bei einem als Hintergrund verwendeten Bild
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaft eine <xref:System.Windows.Media.ImageBrush> um das Seitenverhältnis des Bilds zu erhalten.  
   
  Standardmäßig wird bei der Verwendung einer <xref:System.Windows.Media.ImageBrush> zum Zeichnen eines Bereichs, dessen Inhalt wird gestreckt, um den Ausgabebereich vollständig ausfüllt. Wenn der Ausgabebereich und das Bild unterschiedliche Seitenverhältnisse aufweisen, wird das Bild durch dieses Strecken verzerrt.  
@@ -39,6 +39,6 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.TileBrush.Stre
   
  Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Windows.Media.ImageBrush> Klasse. Das vollständige Beispiel finden Sie unter [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.TileBrush>  
- [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.TileBrush>
+- [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

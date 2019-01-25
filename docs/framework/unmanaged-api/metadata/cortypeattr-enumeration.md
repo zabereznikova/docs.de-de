@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f71e59eb13321517de61315d3ba06b96c5458f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af90055c0a51e61d4032e45d6fa4a4914ddd045f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449272"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667936"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr-Enumeration
 Enthält Werte, die Typmetadaten angeben.  
@@ -80,45 +80,45 @@ typedef enum CorTypeAttr {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`tdVisibilityMask`|Für Informationen zur Sichtbarkeit des Typs verwendet.|  
-|`tdNotPublic`|Gibt an, dass der Typ nicht im öffentlichen Bereich befindet.|  
-|`tdPublic`|Gibt an, dass der Typ im öffentlichen Bereich befindet.|  
+|`tdNotPublic`|Gibt an, dass der Typ nicht im öffentlichen Bereich ist.|  
+|`tdPublic`|Gibt an, dass der Typ im öffentlichen Bereich.|  
 |`tdNestedPublic`|Gibt an, dass der Typ mit öffentlicher Sichtbarkeit geschachtelt ist.|  
 |`tdNestedPrivate`|Gibt an, dass der Typ mit privater Sichtbarkeit geschachtelt ist.|  
 |`tdNestedFamily`|Gibt an, dass der Typ mit familiensichtbarkeit geschachtelt ist.|  
 |`tdNestedAssembly`|Gibt an, dass der Typ mit Assemblysichtbarkeit geschachtelt ist.|  
-|`tdNestedFamANDAssem`|Gibt an, dass der Typ mit Family und Assembly Sichtbarkeit geschachtelt ist.|  
-|`tdNestedFamORAssem`|Gibt an, dass der Typ mit Family oder Assembly Sichtbarkeit geschachtelt ist.|  
+|`tdNestedFamANDAssem`|Gibt an, dass der Typ mit Familien- und Assemblysichtbarkeit geschachtelt ist.|  
+|`tdNestedFamORAssem`|Gibt an, dass der Typ mit Familien- oder Assemblysichtbarkeit geschachtelt ist.|  
 |`tdLayoutMask`|Ruft Layoutinformationen für den Typ ab.|  
-|`tdAutoLayout`|Gibt an, dass die Felder dieses Typs automatisch angelegt werden.|  
+|`tdAutoLayout`|Gibt an, dass die Felder dieses Typs automatisch angeordnet werden.|  
 |`tdSequentialLayout`|Gibt an, dass die Felder dieses Typs sequenziell angelegt werden.|  
-|`tdExplicitLayout`|Gibt an, dass diese Feldlayouts explizit angegeben wird.|  
+|`tdExplicitLayout`|Gibt an, dass das Feldlayout explizit bereitgestellt wird.|  
 |`tdClassSemanticsMask`|Ruft die semantischen Informationen über den Typ ab.|  
 |`tdClass`|Gibt an, dass der Typ eine Klasse ist.|  
 |`tdInterface`|Gibt an, dass der Typ eine Schnittstelle ist.|  
 |`tdAbstract`|Gibt an, dass der Typ abstrakt ist.|  
-|`tdSealed`|Gibt an, dass der Typ nicht erweitert werden.|  
-|`tdSpecialName`|Gibt an, dass der Name der Klasse spezielle. Der Name beschreibt wie.|  
+|`tdSealed`|Gibt an, dass der Typ nicht erweitert werden kann.|  
+|`tdSpecialName`|Gibt an, dass der Klassenname spezielle. Der Name wird beschrieben, wie.|  
 |`tdImport`|Gibt an, dass der Typ importiert wird.|  
 |`tdSerializable`|Gibt an, dass der Typ serialisierbar ist.|  
 |`tdWindowsRuntime`|Gibt an, dass dieser Typ ist ein [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Typ.|  
-|`tdStringFormatMask`|Ruft Informationen darüber, wie Zeichenfolgen codiert und formatiert werden.|  
+|`tdStringFormatMask`|Ruft Informationen über die Zeichenfolgen codiert und formatiert werden.|  
 |`tdAnsiClass`|Gibt an, dass dieser Typ eine LPTSTR als ANSI interpretiert.|  
 |`tdUnicodeClass`|Gibt an, dass dieser Typ eine LPTSTR als Unicode interpretiert.|  
 |`tdAutoClass`|Gibt an, dass dieser Typ eine LPTSTR automatisch interpretiert.|  
-|`tdCustomFormatClass`|Gibt an, dass der Typ verfügt über eine nicht standardmäßige Codierung gemäß `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Verwenden Sie diese Maske, um nicht standardkonforme Codierungsinformationen für systemeigenes Interop abzurufen. Die Bedeutung der Werte dieser zwei Bits ist nicht angegeben.|  
-|`tdBeforeFieldInit`|Gibt an, dass der Typ muss vor dem ersten Versuch, ein statisches Feld initialisiert werden.|  
+|`tdCustomFormatClass`|Gibt an, dass der Typ einer nicht standardmäßigen Codierung gemäß `CustomFormatMask`.|  
+|`tdCustomFormatMask`|Verwenden Sie diese Maske, um nicht standardkonforme Codierungsinformationen für systemeigenes Interop abzurufen. Die Bedeutung der Werte der diese zwei Bits ist nicht angegeben.|  
+|`tdBeforeFieldInit`|Gibt an, dass der Typ muss, bevor beim ersten Versuch initialisiert werden, ein statisches Feld zugreifen.|  
 |`tdForwarder`|Gibt an, dass der Typ exportiert wird, und eine typweiterleitung.|  
 |`tdReservedMask`|Dieses Flag und die folgenden Flags werden intern von der common Language Runtime verwendet.|  
-|`tdRTSpecialName`|Gibt an, dass die common Language Runtime die Codierung von Namen überprüfen soll.|  
+|`tdRTSpecialName`|Gibt an, dass die common Language Runtime die namenscodierung überprüfen soll.|  
 |`tdHasSecurity`|Gibt an, dass der Typ Sicherheit zugeordnet.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Anwenden von Attributen auf Windows Forms-Steuerelemente'
+title: 'Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: 1ab54b0c6828a0648fecfc293b6a7143b012ad6a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 522c8b207b86608e3bbd9a5831a3adb5c6d6d430
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45592960"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54735155"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Gewusst wie: Anwenden von Attributen auf Windows Forms-Steuerelemente
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente
 Zum Entwickeln von Komponenten und Steuerelementen, die die entwurfsumgebung ordnungsgemäß interagieren und zur Laufzeit ordnungsgemäß ausgeführt werden, müssen Sie Attribute ordnungsgemäß auf Klassen und Member anwenden.  
   
 ## <a name="example"></a>Beispiel  
@@ -77,9 +77,9 @@ Zum Entwickeln von Komponenten und Steuerelementen, die die entwurfsumgebung ord
   
 -   Das Formular, hostet die `AttributesDemoControl` erfordert einen Verweis auf die `AttributesDemoControl` Assembly, um zu erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IComparable>  
- <xref:System.Windows.Forms.DataGridView>  
- [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Attribute in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
- [Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.IComparable>
+- <xref:System.Windows.Forms.DataGridView>
+- [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Attribute in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)
+- [Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](https://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)

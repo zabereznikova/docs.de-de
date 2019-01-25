@@ -2,12 +2,12 @@
 title: '&lt;security&gt; von &lt;wsHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
-ms.openlocfilehash: 2260a64b53f2ff2ace11f78c392ffc0a69c187bd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: dd3ff1b1b00be376abc5f8d3c44cb0aabc49a230
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145626"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688817"
 ---
 # <a name="ltsecuritygt-of-ltwshttpbindinggt"></a>&lt;security&gt; von &lt;wsHttpBinding&gt;
 Gibt die Sicherheitsfunktionen von der [ \<WsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -16,7 +16,7 @@ Gibt die Sicherheitsfunktionen von der [ \<WsHttpBinding >](../../../../../docs/
 \<bindings>  
 \<wsHttpBinding>  
 \<binding>  
-\<Sicherheit >  
+\<security>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ Gibt die Sicherheitsfunktionen von der [ \<WsHttpBinding >](../../../../../docs/
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|mode|– Optional. Gibt den angewendeten Sicherheitstyp an. Die Standardeinstellung ist `Message`.<br />– Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
+|mode|-   Optional. Gibt den angewendeten Sicherheitstyp an. Die Standardeinstellung ist `Message`.<br />– Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Mode-Attribut  
   
@@ -57,7 +57,7 @@ Gibt die Sicherheitsfunktionen von der [ \<WsHttpBinding >](../../../../../docs/
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)|Definiert die Sicherheitseinstellungen für den Transport. Dieses Element entspricht dem <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>-Typ.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-wshttpbinding.md)|Definiert die Sicherheitseinstellungen für den Transport. Dieses Element entspricht dem <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>-Typ.|  
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)|Definiert die Sicherheitseinstellungen für die Nachricht. Dieses Element entspricht dem <xref:System.ServiceModel.Configuration.MessageSecurityOverHttpElement>-Typ.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -69,13 +69,13 @@ Gibt die Sicherheitsfunktionen von der [ \<WsHttpBinding >](../../../../../docs/
 ## <a name="remarks"></a>Hinweise  
  Die WSHttpBinding-Klasse ist für die Zusammenarbeit mit Diensten vorgesehen, die WS-*-Spezifikationen implementieren. Die Transportsicherheit für diese Bindung ist SSL (Secure Sockets Layer) über HTTP oder HTTPS.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.WSHttpSecurity>  
- <xref:System.ServiceModel.WSHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>  
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.WSHttpSecurity>
+- <xref:System.ServiceModel.WSHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpBindingElement.Security%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
+- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

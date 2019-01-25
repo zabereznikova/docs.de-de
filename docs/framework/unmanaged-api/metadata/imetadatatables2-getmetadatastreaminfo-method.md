@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 756b0ff726c31bf096a1c1b70004c3ff82fe9979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f0301506d591a3738ea403393236c2574d48a7cb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450036"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593965"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo-Methode
-Ruft den Namen, die Größe und den Inhalt des Metadatenstreams am angegebenen Index.  
+Ruft ab, der Name, Größe und Inhalt des Metadatenstreams am angegebenen Index.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ HRESULT GetMetaDataStreamInfo (
   
 #### <a name="parameters"></a>Parameter  
  `ix`  
- [in] Der Index des angeforderten Metadaten-Streams.  
+ [in] Der Index des angeforderten Metadatenstreams.  
   
  `ppchName`  
  [out] Ein Zeiger auf den Namen des Datenstroms.  
@@ -49,17 +49,17 @@ HRESULT GetMetaDataStreamInfo (
  [out] Ein Zeiger auf die Metadaten-Datenstrom.  
   
  `pcb`  
- [out] Die Größe in Bytes, der `ppv`.  
+ [out] Die Größe in Bytes, des `ppv`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataTables2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)  
- [IMetaDataTables-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataTables2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

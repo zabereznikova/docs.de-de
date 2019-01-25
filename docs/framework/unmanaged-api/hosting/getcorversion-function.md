@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0e922273a7d4e5b98c1321992e5e89e01adb437
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0741e5773b946186a452e191cc3ae987e6067c44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606886"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion-Funktion
-Gibt die Versionsnummer der common Language Runtime (CLR), die im aktuellen Prozess ausgeführt wird.  
+Gibt die Versionsnummer der die common Language Runtime (CLR), die im aktuellen Prozess ausgeführt wird.  
   
  Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.  
   
@@ -41,22 +41,22 @@ HRESULT GetCORVersion (
   
 #### <a name="parameters"></a>Parameter  
  `pbuffer`  
- Ein Zeiger auf einen Puffer, in dem die CLR gibt eine Zeichenfolge, die Version der Laufzeit, die derzeit in den Prozess geladen wird. Die zurückgegebene Zeichenfolge hat das gleiche Format wie Zeichenfolgen, die an [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), z. B. "v1.0.1216". Wenn die Common Language Runtime noch nicht in den Prozess geladen wurde, gibt die Funktion die entsprechenden Verzeichnisinformationen für die neueste Version der Laufzeit auf dem Computer installiert.  
+ Ein Zeiger auf einen Puffer, in dem die CLR zurückgegeben wird eine Zeichenfolge, die Angabe der Version der Laufzeit, die derzeit in den Prozess geladen wird. Die zurückgegebene Zeichenfolge hat dieselbe Form wie Zeichenfolgen, die an [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), z. B. "v1.0.1216". Wenn die Runtime noch nicht in den Prozess geladen wurde, gibt die Funktion die entsprechenden Verzeichnisinformationen für die neueste Version der Laufzeit auf dem Computer installiert.  
   
  `cchBuffer`  
- Die Anzahl der Zeichen (`WCHAR`s), können in gespeicherten werden `pbuffer`.  
+ Die Anzahl der Zeichen (`WCHAR`s), die gespeichert werden können, im `pbuffer`.  
   
  `dwLength`  
- Ein Zeiger auf die Anzahl der Zeichen, die tatsächlich im zurückgegebenen `pbuffer`. Wenn `pbuffer` ist ein null-Zeiger, die Common Language Runtime gibt E_POINTER zurück. Wenn die Anzahl der Zeichen größer ist die Länge von `pbuffer` , gibt die Runtime ERROR_INSUFFICIENT_BUFFER.  
+ Ein Zeiger auf die Anzahl der Zeichen im tatsächlich zurückgegebenen `pbuffer`. Wenn `pbuffer` ist ein null-Zeiger der Common Language Runtime gibt E_POINTER zurück. Wenn die Anzahl der Zeichen größer ist. Klicken Sie dann die Länge des `pbuffer` , gibt die Laufzeit ERROR_INSUFFICIENT_BUFFER zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

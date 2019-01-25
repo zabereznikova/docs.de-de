@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8f4cffd718fffa9145e1082092ecec45b80a2ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11b36fa4636dd55e539c198a260dcf93da02a237
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451057"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728959"
 ---
 # <a name="corprfmisc-enumeration"></a>COR_PRF_MISC-Enumeration
 Enthält Konstantenwerte, die spezielle Bezeichner angeben.  
@@ -40,12 +40,12 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|Die Standard-ID, die von [ICorProfilerInfo:: GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) für ein Modul, das noch nicht auf eine Assembly angefügt wurde.|  
-|`PROFILER_GLOBAL_CLASS`|Die Standard-Klassen-ID für globale Konstanten, die nicht auf eine Klasse gehören.|  
-|`PROFILER_GLOBAL_MODULE`|Die Standard-Modul-ID für globale Objekte, die nicht auf ein Modul gehören.|  
+|`PROFILER_PARENT_UNKNOWN`|Die Standard-ID ein, die [ICorProfilerInfo:: GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) für ein Modul, das noch nicht auf eine Assembly verbunden wurde.|  
+|`PROFILER_GLOBAL_CLASS`|Die Standard-Klassen-ID für globale Konstanten, die nicht zu einer Klasse gehören.|  
+|`PROFILER_GLOBAL_MODULE`|Der Modulbezeichner des standardmäßig für globale Objekte, die nicht auf ein Modul gehören.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -53,5 +53,5 @@ typedef enum {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

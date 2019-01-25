@@ -6,21 +6,21 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: 03615c1c49f2acf2a7c7f0910860f36de0a4f2d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e9e2f83e15e4e1703ed42dfb479efb8feed3bb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547341"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661281"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Sichere Konstruktormuster für DependencyObjects
-Im Allgemeinen sollten Klassenkonstruktoren Rückrufe wie virtuelle Methoden oder Delegaten nicht aufrufen, da Konstruktoren als Basisinitialisierung von Konstruktoren für eine abgeleitete Klasse aufgerufen werden können. Eintritt in das Virtuelle kann möglicherweise bei einem unvollständigen Initialisierungszustand eines Objekts erfolgen. Allerdings ruft das Eigenschaftensystem Rückrufe intern als Teil des Abhängigkeitseigenschaftensystem selbst auf und macht diese verfügbar. So einfach einen Vorgang wie das Festlegen der Wert einer Abhängigkeitseigenschaft mit <xref:System.Windows.DependencyObject.SetValue%2A> Aufruf potenziell enthält einen Rückruf an einer beliebigen Stelle in der Ermittlung. Aus diesem Grund sollten Sie beim Einstellen der Eigenschaftswerte innerhalb des Texts eines Konstruktors vorsichtig sein, da dies problematisch werden kann, wenn Ihr Typ als Basisklasse verwendet wird. Es wird ein bestimmtes Muster für die Implementierung <xref:System.Windows.DependencyObject> Konstruktoren, die bestimmte Probleme mit der Abhängigkeit Eigenschaft Status und den inhärenten Rückrufen vermieden werden können, die hier dokumentiert ist.  
+Im Allgemeinen sollten Klassenkonstruktoren Rückrufe wie virtuelle Methoden oder Delegaten nicht aufrufen, da Konstruktoren als Basisinitialisierung von Konstruktoren für eine abgeleitete Klasse aufgerufen werden können. Eintritt in das Virtuelle kann möglicherweise bei einem unvollständigen Initialisierungszustand eines Objekts erfolgen. Allerdings ruft das Eigenschaftensystem Rückrufe intern als Teil des Abhängigkeitseigenschaftensystem selbst auf und macht diese verfügbar. So einfach Vorgang der Einstellung eines Abhängigkeitseigenschaftswerts mit <xref:System.Windows.DependencyObject.SetValue%2A> Aufruf möglicherweise umfasst einen Rückruf an einer beliebigen Stelle in der Bestimmung. Aus diesem Grund sollten Sie beim Einstellen der Eigenschaftswerte innerhalb des Texts eines Konstruktors vorsichtig sein, da dies problematisch werden kann, wenn Ihr Typ als Basisklasse verwendet wird. Es gibt ein bestimmtes Muster zum Implementieren von <xref:System.Windows.DependencyObject> Konstruktoren, die bestimmte Probleme mit abhängigkeitseigenschaftszuständen und den inhärenten Rückrufen, vermieden werden können, die hier dokumentiert ist.  
   
  
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>Eigenschaftensystem – Virtuelle Methoden  
- Die folgenden virtuellen Methoden oder Rückrufe potenziell aufgerufen, während die Berechnungen für die <xref:System.Windows.DependencyObject.SetValue%2A> Aufruf, der Wert einer Abhängigkeitseigenschaft festlegt: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Diese virtuellen Methoden oder Rückrufe haben jeweils einen bestimmten Zweck bei der Erweiterung der Vielseitigkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems und der Abhängigkeitseigenschaften. Weitere Informationen zur Verwendung dieser virtuellen Methoden, um Eigenschaftswertbestimmungen anzupassen, finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+ Die folgenden virtuellen Methoden oder Rückrufe werden möglicherweise bei der Berechnung des Namens der <xref:System.Windows.DependencyObject.SetValue%2A> Aufruf, der einen Abhängigkeitseigenschaftenwert festlegt: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Diese virtuellen Methoden oder Rückrufe haben jeweils einen bestimmten Zweck bei der Erweiterung der Vielseitigkeit des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems und der Abhängigkeitseigenschaften. Weitere Informationen zur Verwendung dieser virtuellen Methoden, um Eigenschaftswertbestimmungen anzupassen, finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
   
 ### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>Erzwingung der FXCop-Regel vs. Virtuelle Methoden des Eigenschaftensystems  
  Wenn Sie das Microsoft-Tool FXCop als Teil des Buildprozesses verwenden und Sie entweder von bestimmten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Frameworkklassen ableiten, die den Basiskonstruktor aufrufen oder Ihre eigenen Abhängigkeitseigenschaften in abgeleiteten Klassen implementieren, treten möglicherweise bestimmte FXCop-Regelverstöße auf. Der Name für diesen Verstoß ist:  
@@ -62,7 +62,7 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- Wenn der Anwendungscode `new MyClass(objectvalue)` aufruft, ruft dies den Standardkonstruktor und die Basisklassenkonstruktoren auf. Dann legt `Property1 = object1`, die die virtuelle Methode aufruft `OnPropertyChanged` für die besitzende `MyClass` <xref:System.Windows.DependencyObject>.  Die Überschreibung verweist auf `_myList`, was noch nicht initialisiert wurde.  
+ Wenn der Anwendungscode `new MyClass(objectvalue)` aufruft, ruft dies den Standardkonstruktor und die Basisklassenkonstruktoren auf. Dann legt `Property1 = object1`, ruft die virtuelle Methode `OnPropertyChanged` für die besitzende `MyClass` <xref:System.Windows.DependencyObject>.  Die Überschreibung verweist auf `_myList`, was noch nicht initialisiert wurde.  
   
  Eine Möglichkeit zur Vermeidung dieser Probleme, ist es sicherzustellen, dass Rückrufe nur andere Abhängigkeitseigenschaften verwenden, und dass jede dieser Abhängigkeitseigenschaften über einen festgelegten Standardwert als Teil ihrer registrierten Metadaten verfügt.  
   
@@ -112,9 +112,9 @@ public MyClass : SomeBaseClass {
  Für Fälle, in denen der Basistyp über mehrere Signaturen verfügt, müssen Sie absichtlich alle möglichen Signaturen Ihrer eigenen Konstruktorimplementierung zuordnen, die das empfohlene Muster vom Aufrufen der Standardkonstruktoren der Klasse verwenden, bevor Sie weitere Eigenschaften festlegen.  
   
 #### <a name="setting-dependency-properties-with-setvalue"></a>Festlegen von Abhängigkeitseigenschaften mit SetValue  
- Diese Muster anzuwenden, wenn Sie eine Eigenschaft, die nicht über einen Wrapper für den einfacheren Festlegen von Eigenschaften verfügen festlegen, und legen Sie Werte mit <xref:System.Windows.DependencyObject.SetValue%2A>. Die Aufrufe von <xref:System.Windows.DependencyObject.SetValue%2A> , Pass-through-Konstruktorparameter sollten auch den Standardkonstruktor der Klasse für die Initialisierung aufrufen.  
+ Diese gleichen Muster gelten, wenn Sie eine Eigenschaft, die nicht über einen Wrapper zum einfacheren Festlegen von Eigenschaften festlegen, und legen Sie Werte mit <xref:System.Windows.DependencyObject.SetValue%2A>. Ihre Aufrufe von <xref:System.Windows.DependencyObject.SetValue%2A> , Pass-through-Konstruktorparameter sollten auch den Standardkonstruktor der Klasse für die Initialisierung aufrufen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Sicherheit von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
+## <a name="see-also"></a>Siehe auch
+- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Sicherheit von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-security.md)

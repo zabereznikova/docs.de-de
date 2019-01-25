@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Definieren des Verhaltens bei Größen- und Positionsänderungen in einem geteilten Fenster'
+title: 'Vorgehensweise: Definieren des Größen- und Positionsänderungen Verhalten in einem geteilten Fenster'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 015e93fb551b8d48b8a57662b8def61c3cb46c2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0e16a1961e5eb7fcb81503d0ccead38e08974dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628252"
 ---
-# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Gewusst wie: Definieren des Verhaltens bei Größen- und Positionsänderungen in einem geteilten Fenster
-Die Bereiche von den <xref:System.Windows.Forms.SplitContainer> Steuerelement eignen sich gut für wird ein, angepasst und von Benutzern bearbeitet. Es werden jedoch Situationen wird den Splitter programmgesteuert –, wo es positioniert ist, und in welchem Maß sie verschoben werden kann.  
+# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Vorgehensweise: Definieren des Größen- und Positionsänderungen Verhalten in einem geteilten Fenster
+Die Bereiche von den <xref:System.Windows.Forms.SplitContainer> Steuerelement eignen sich gut für das wird ein, angepasst und die vom Benutzer bearbeitet. Es werden jedoch Situationen wird den Splitter programmgesteuert –, wo es positioniert ist und in welchem Ausmaß verschoben werden.  
   
- Die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> -Eigenschaft und die anderen Eigenschaften auf die <xref:System.Windows.Forms.SplitContainer> steuern das Verhalten der Benutzeroberfläche an Ihre Bedürfnisse genaue zu steuern. Diese Eigenschaften sind in der folgenden Tabelle aufgeführt.  
+ Die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> -Eigenschaft und die anderen Eigenschaften auf der <xref:System.Windows.Forms.SplitContainer> -Steuerelement bietet eine präzise Kontrolle über das Verhalten der Benutzeroberfläche an Ihre Anforderungen anpassen. Diese Eigenschaften sind in der folgenden Tabelle aufgeführt.  
   
-|Name|Beschreibung|  
+|name|Beschreibung|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>-Eigenschaft|Bestimmt, ob der Splitter mithilfe der Tastatur oder Maus verschiebbar ist.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>-Eigenschaft|Legt den Abstand in Pixel vom linken oder oberen Rand auf die Splitterleiste verschiebbar.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>-Eigenschaft|Bestimmt die minimale Entfernung in Pixel, dass der Splitter vom Benutzer verschoben werden kann.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> -Eigenschaft|Bestimmt, ob der Splitter mithilfe der Tastatur oder Maus verschoben ist.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> -Eigenschaft|Legt den Abstand in Pixel vom linken oder oberen Rand auf die Splitterleiste verschiebbar.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> -Eigenschaft|Bestimmt die minimale Entfernung in Pixeln, des Splitters vom Benutzer verschoben werden kann.|  
   
- Im folgenden Beispiel ändert die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Eigenschaft zum Erstellen eines Effekts "Andocken Splitter"; der Benutzer des Splitters inkrementiert in Schritten von 10 Pixel anstatt der Standardeinstellung 1.  
+ Im folgenden Beispiel ändert die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Eigenschaft, um einen Effekt "Andocken Splitter"; zu erstellen, wenn der Benutzer den Splitter zieht, inkrementiert in Einheiten von 10 Pixel und nicht der Standardwert 1.  
   
-### <a name="to-define-splitcontainer-resize-behavior"></a>SplitContainer-Resize-Verhalten definieren  
+### <a name="to-define-splitcontainer-resize-behavior"></a>Verhalten bei Größenänderung SplitContainer definieren  
   
-1.  Legen Sie in einer Prozedur, die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Eigenschaft auf die gewünschte Größe, damit das Verhalten "andocken" des Splitters erreicht wird.  
+1.  Legen Sie in einer Prozedur die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Eigenschaft, um die gewünschte Größe, damit der "springende" Verhalten des Splitters erreicht wird.  
   
-     Im folgenden Codebeispiel wird innerhalb des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis, das der Splitter innerhalb der <xref:System.Windows.Forms.SplitContainer> Steuerelements springen 10 Pixel beim gezogen festgelegt ist.  
+     Das folgende Codebeispiel zeigt, innerhalb des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis, das der Splitter innerhalb der <xref:System.Windows.Forms.SplitContainer> -Steuerelement so eingestellt ist, dass 10 Pixel beim gezogen.  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, _  
@@ -55,14 +55,14 @@ Die Bereiche von den <xref:System.Windows.Forms.SplitContainer> Steuerelement ei
     }  
     ```  
   
-     (Visual c#) Fügen Sie folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
+     (Visual C#) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.  
   
     ```csharp  
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
-     Den Splitter etwas nach links oder rechts verschieben, müssen keine messbaren Auswirkungen; Wenn der Mauszeiger die Form 10 Pixel in beide Richtungen ist, wird der Splitter an die neue Position ausrichten.  
+     Den Splitter etwas nach links oder rechts verschieben, wird keine erkennbaren Auswirkungen haben; Wenn der Mauszeiger über 10 Pixel in beide Richtungen überschreitet, wird der Splitter jedoch auf die neue Position ausrichten.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.SplitContainer>  
- <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.SplitContainer>
+- <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

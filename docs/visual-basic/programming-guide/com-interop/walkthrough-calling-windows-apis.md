@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: bb98d842bfe65bdf637a789fc9a8319a70cb2bc8
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 59c316ccb3a35a650ac11b96717a3ad729e777a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332859"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657973"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Exemplarische Vorgehensweise: Aufrufen von Windows-APIs (Visual Basic)
 Windows-APIs sind Dynamic Link Libraries (DLLs), die Teil des Windows-Betriebssystems sind. Können Sie diese Aufgaben auszuführen, wenn es schwierig, Ihre eigenen Prozeduren zu schreiben ist. Windows stellt z. B. eine Funktion namens `FlashWindowEx` , mit der Sie die Titelleiste für eine Anwendung wechseln Sie zwischen hellen und dunklen Graustufen.  
@@ -147,12 +147,12 @@ Windows-APIs sind Dynamic Link Libraries (DLLs), die Teil des Windows-Betriebssy
   
 12. Klicken Sie auf **Button2**. Die Meldung "die Datei erfolgreich verschoben wurde" wird angezeigt, wenn die Datei verschoben werden kann.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.DllImportAttribute>  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)  
- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  
- [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](../../../framework/interop/creating-prototypes-in-managed-code.md)  
- [Marshallen von Delegaten als Rückrufmethode](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.InteropServices.DllImportAttribute>
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
+- [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](../../../framework/interop/creating-prototypes-in-managed-code.md)
+- [Marshallen von Delegaten als Rückrufmethode](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

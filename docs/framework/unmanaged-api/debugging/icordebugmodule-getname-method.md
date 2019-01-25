@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bebee019595143d25e950719ad62d9e10b76a3e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ae9bc5925634f8bba71731a0c51eb19cf9eec04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418905"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663952"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName-Methode
 Ruft den Dateinamen des Moduls ab.  
@@ -48,10 +48,10 @@ HRESULT GetName(
  [out] Ein Array, das den zurückgegebenen Namen speichert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetName` Methode gibt ein S_OK HRESULT aus, wenn der Dateiname für das Modul mit dem Namen auf dem Datenträger übereinstimmt. `GetName` Gibt HRESULT "S_FALSE" zurück, wenn der Name, erstellt wurde, z. B. für ein dynamisches oder in-Memory-Modul ist.  
+ Die `GetName` Methode gibt ein S_OK HRESULT zurück, wenn der Dateiname des Moduls mit dem Namen auf dem Datenträger übereinstimmt. `GetName` Gibt ein HRESULT S_FALSE zurück, wenn der Name, erstellt wurde, z. B. für eine dynamische oder in-Memory-Modul ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -59,6 +59,6 @@ HRESULT GetName(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-    
- 
+## <a name="see-also"></a>Siehe auch
+
+

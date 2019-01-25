@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 371768a8306c3751e7fc54b91a8583df41ad219b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4576d8ea7d601e1b37d0cb6f54802f93bc128622
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422281"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54593783"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget-Schnittstelle
-Stellt Methoden, die zum Steuern der Verweiszähler, Auflisten von Prozessen und einen Debugger, der mit einem Remoteziel für Macintosh Silverlight angefügt ist zugeordneten Arbeitsspeicher freizugeben.  
+Bietet Methoden, die einen Zähler zu steuern, Auflisten von Prozessen und einen Debugger, der mit einem Remoteziel für Macintosh Silverlight verknüpft zugeordneten Arbeitsspeicher freizugeben.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -54,14 +54,14 @@ class ICoreClrDebugTarget {
 |Methode|Beschreibung|  
 |------------|-----------------|  
 |[ICoreClrDebugTarget::EnumProcesses-Methode](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|Listet die Prozesse auf, die auf einem Remotecomputer ausgeführt werden.|  
-|[ICoreClrDebugTarget::EnumRuntimes-Methode](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Listet die common Language Runtime (Runtime) in den angegebenen Prozess auf einem Remotecomputer befindet.|  
-|[ICoreClrDebugTarget::FreeMemory-Methode](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Gibt den Arbeitsspeicher frei, der durch die Enumerationsmethoden in dieser Klasse zugeordnet ist.|  
+|[ICoreClrDebugTarget::EnumRuntimes-Methode](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|Listet die common Language Runtimes (Runtime) in den angegebenen Prozess auf einem Remotecomputer befindet.|  
+|[ICoreClrDebugTarget::FreeMemory-Methode](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|Gibt den Arbeitsspeicher frei, der von der Enumerationsmethoden in dieser Klasse zugeordnet ist.|  
   
 ## <a name="remarks"></a>Hinweise  
- Derzeit wird diese Funktion unterstützt, nur für das Debuggen einer Silverlight-basierten Anwendung-Ziel, das auf einem Macintosh-Remotecomputer ausgeführt wird.  
+ Derzeit wird diese Funktion unterstützt, nur für das Debuggen ein Silverlight-Anwendung-Ziel, das auf einem Macintosh-Remotecomputer ausgeführt wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CoreClrRemoteDebuggingInterfaces.h  
   
@@ -69,8 +69,8 @@ class ICoreClrDebugTarget {
   
  **.NET Framework-Versionen:** 3.5 SP1  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a712ed9e3534ca6bb2962989f1ab3750a25d539
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f2abb24a319d8d3aff940ddb7eabd16b3e238862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417901"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611747"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap-Methode
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
@@ -41,20 +41,20 @@ HRESULT GetInstrumentedILMap(
  [in] Die Speicherkapazität für das `map`-Array. Weitere Informationen finden Sie im Abschnitt Hinweise.  
   
  pcMap  
- [out] Die Anzahl der COR_IL_MAP-Werte, die in das Zuordnungsarray geschrieben.  
+ [out] Die Anzahl der COR_IL_MAP-Werte, die in das Zuordnungsarray geschrieben werden soll.  
   
  Zuordnung  
- [out] Ein Array von COR_IL_MAP-Werte, die Informationen über Zuordnungen von Profiler-instrumentierter IL zur IL der ursprünglichen Methode enthalten.  
+ [out] Ein Array von COR_IL_MAP-Werte, die Informationen auf Zuordnungen von Profiler-instrumentierter IL zur IL der ursprünglichen Methode bereitstellen.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn bei der Profiler die Zuordnung durch Aufrufen der [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) -Methode, der Debugger kann diese Methode zum Abrufen der Zuordnung und die Zuordnung verwendet intern beim Berechnen des IL-für die Stack Offsets aufrufen ablaufverfolgungen und Variable Lebensdauer.  
+ Wenn bei der Profiler die Zuordnung durch Aufrufen der [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md) -Methode der Debugger kann diese Methode aufrufen und die Zuordnung verwenden intern beim Berechnen des IL-für Stack Offsets aufrufen ablaufverfolgungen und Variable Lebensdauer.  
   
- Wenn `cMap` ist 0 und `pcMap` nicht**null**, `pcMap` auf die Anzahl der verfügbaren COR_IL_MAP-Werte festgelegt ist. Wenn `cMap` ungleich null ist, stellt es die Speicherkapazität des `map`-Arrays dar. Wenn die Methode zurückkehrt, `map` höchstens `cMap` Elemente und `pcMap` festgelegt ist, um die Anzahl der tatsächlich geschriebenen COR_IL_MAP-Werte der `map` Array.  
+ Wenn `cMap` ist 0 und `pcMap` nicht**null**, `pcMap` auf die Anzahl der verfügbaren COR_IL_MAP-Werte festgelegt ist. Wenn `cMap` ungleich null ist, stellt es die Speicherkapazität des `map`-Arrays dar. Wenn die Methode zurückgibt, `map` enthält maximal `cMap` Elemente und `pcMap` festgelegt ist, auf die Anzahl der tatsächlich geschriebenen COR_IL_MAP-Werte der `map` Array.  
   
  Wenn das IL instrumentiert oder die Zuordnung nicht von einem Profiler bereitgestellt wurde, gibt diese Methode `S_OK` aus und legt `pcMap` auf 0 fest.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -62,7 +62,7 @@ HRESULT GetInstrumentedILMap(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)  
- [ICorDebugILCode2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
+- [ICorDebugILCode2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

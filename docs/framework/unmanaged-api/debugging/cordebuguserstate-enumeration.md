@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f489ab29726292f6c55151169ad9efc6f0fbfbcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b1ee5044c2223d3ff90cf10b53cad4e1b353d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407793"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726509"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState-Enumeration
 Gibt den Benutzerzustand eines Threads an.  
@@ -46,23 +46,23 @@ typedef enum CorDebugUserState {
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|`USER_STOP_REQUESTED`|Beenden des Threads wurde angefordert.|  
-|`USER_SUSPEND_REQUESTED`|Eine Unterbrechung des Threads wurde angefordert.|  
+|`USER_STOP_REQUESTED`|Ein Beenden des Threads wurde angefordert.|  
+|`USER_SUSPEND_REQUESTED`|Führt zu eine Unterbrechung des Threads wurde angefordert.|  
 |`USER_BACKGROUND`|Der Thread wird im Hintergrund ausgeführt.|  
 |`USER_UNSTARTED`|Der Thread wurde nicht gestartet, ausgeführt.|  
 |`USER_STOPPED`|Der Thread wurde beendet.|  
 |`USER_WAIT_SLEEP_JOIN`|Der Thread wartet darauf, dass ein anderer Thread eine Aufgabe auszuführen.|  
 |`USER_SUSPENDED`|Der Thread wurde angehalten.|  
-|`USER_UNSAFE_POINT`|Der Thread ist an einem unsicheren Punkt. Also der Thread an einem Punkt in der Ausführung, in denen es möglicherweise Garbagecollection verhindert.<br /><br /> Debuggen von Ereignissen können von unsicheren Punkten weitergeleitet werden, aber das Anhalten eines Threads an einem unsicheren Punkt wird sehr wahrscheinlich einen Deadlock bis der Thread fortgesetzt wird. Die sicheren und unsicheren Punkte werden durch den Just-in-Time (JIT) und die Garbage Collection Implementierung bestimmt.|  
-|`USER_THREADPOOL`|Der Thread wird aus dem Threadpool.|  
+|`USER_UNSAFE_POINT`|Der Thread ist an einem unsicheren Punkt. Ist der Thread zu einem Zeitpunkt in der Ausführung, in dem sie die automatische speicherbereinigung blockiert möglicherweise.<br /><br /> Debuggen von Ereignisse von unsicheren Punkten verteilt werden können, aber einen Thread an einem unsicheren Punkt angehalten wird sehr wahrscheinlich einen Deadlock bis der Thread fortgesetzt wird. Die sicheren und unsicheren Punkte werden durch den just-in-Time (JIT) und die Garbage Collection-Implementierung bestimmt.|  
+|`USER_THREADPOOL`|Der Thread ist aus dem Threadpool.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Benutzerzustand eines Threads ist der Zustand, den der Thread hat, wenn der Debugger untersucht. Ein Thread möglicherweise eine Kombination des Benutzerstatus.  
+ Der Benutzerzustand eines Threads ist der Zustand, den der Thread wurde bei der Überprüfung durch den Debugger. Ein Thread möglicherweise eine Kombination von Benutzerstatus.  
   
- Verwenden der [ICorDebugThread:: GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) Methode, um Benutzerzustand eines Threads abzurufen.  
+ Verwenden der [ICorDebugThread:: GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) Methode, um den Benutzerzustand eines Threads abzurufen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -70,5 +70,5 @@ typedef enum CorDebugUserState {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

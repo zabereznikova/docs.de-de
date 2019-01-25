@@ -2,12 +2,12 @@
 title: Sichern von Nachrichten mithilfe der Nachrichtensicherheit
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: ff1d488e58be64f31836587c8893ba608ccd821b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4432540bfb6238be5b3e102283d6b67bebad07bd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202028"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610950"
 ---
 # <a name="securing-messages-using-message-security"></a>Sichern von Nachrichten mithilfe der Nachrichtensicherheit
 Dieser Abschnitt beschreibt die WCF-nachrichtensicherheit bei Verwendung <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -63,8 +63,8 @@ Dieser Abschnitt beschreibt die WCF-nachrichtensicherheit bei Verwendung <xref:S
 ## <a name="using-transport-and-message-security"></a>Verwenden der Transport- und der Nachrichtensicherheit  
  Wenn die Transportsicherheit und die Nachrichtensicherheit verwendet werden, muss das auf der Transportebene zum Sichern der Nachricht verwendete Zertifikat mit dem auf der SOAP-Nachrichtenebene verwendeten Zertifikat identisch sein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sichern von Nachrichten mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [Nachrichtensicherheit über Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
- [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+## <a name="see-also"></a>Siehe auch
+- [Sichern von Nachrichten mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [Nachrichtensicherheit über Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+- [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

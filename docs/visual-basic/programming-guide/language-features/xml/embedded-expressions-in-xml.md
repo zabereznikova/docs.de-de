@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: f99735df2512fd4b1477bab9126e18f5afbbfa8c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: c02b6ea0895d8b22ac71d0cb3ea6950861de47df
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932928"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678758"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Eingebettete Ausdrücke in XML (Visual Basic)
 Eingebettete Ausdrücke ermöglichen Ihnen die Erstellung von XML-Literale, die Ausdrücke enthalten, die zur Laufzeit ausgewertet werden. Die Syntax für einen eingebetteten Ausdruck ist `<%=` `expression` `%>`, das ist identisch mit der Syntax in verwendet [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -80,10 +80,10 @@ Eingebettete Ausdrücke ermöglichen Ihnen die Erstellung von XML-Literale, die 
 > [!NOTE]
 >  Wenn Sie ein XML-Namespacepräfix deklarieren, indem die `xmlns` Namespace-Attribut den Wert des Attributs muss eine Konstante Zeichenfolge sein. In dieser Hinsicht mithilfe der `xmlns` Attribut ist, wie die Verwendung der `Imports` Anweisung, um ein XML-Namespace zu deklarieren. Sie können keinen eingebetteten Ausdruck verwenden, um die XML-Namespacewert anzugeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML-Dokumentliteral](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
- [XML-Elementliteral](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Übersicht über XML-Literale](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)
+## <a name="see-also"></a>Siehe auch
+- [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML-Dokumentliteral](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [XML-Elementliteral](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Übersicht über XML-Literale](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)

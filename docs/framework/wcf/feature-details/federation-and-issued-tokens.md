@@ -6,12 +6,12 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: bdbd5c49197b65816da9b0f2c87d97afb893d79f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 513d68f49e4182979b492fa67e65860aee96e09a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699414"
 ---
 # <a name="federation-and-issued-tokens"></a>Verbund und ausgestellte Token
 Mit Windows Communication Foundation (WCF), können Sie Clients erstellen, die sicher mit Diensten kommunizieren, die die WS-Federation und WS-Trust-Spezifikationen implementieren. Die Spezifikationen verwenden XML, SOAP und Web Services Description Language (WSDL), um Mechanismen zu bieten, die Authentifizierung und Autorisierung über verschiedene Vertrauensbereiche hinweg zu ermöglichen.  
@@ -41,7 +41,7 @@ Mit Windows Communication Foundation (WCF), können Sie Clients erstellen, die s
  [Vorgehensweise: Konfigurieren eines lokalen Ausstellers](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  Beschreibt, wie ein lokaler Aussteller von Sicherheitstoken erstellt wird.  
   
- [Vorgehensweise: Deaktivieren sicherer Sitzungen auf einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Vorgehensweise: Deaktivieren von Sicherheitssitzungen auf einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Beschreibt, wie Sicherheitssitzungen auf `WSFederationHttpBinding` deaktiviert werden. Sichere Sitzungen müssen deaktiviert werden, wenn eine Webfarm erstellt wird, die eine Sitzung für jeden Client erfordert.  
   
 ## <a name="reference"></a>Referenz  
@@ -61,7 +61,7 @@ Mit Windows Communication Foundation (WCF), können Sie Clients erstellen, die s
   
  <xref:System.ServiceModel.WSFederationHttpBinding>  
   
-## <a name="see-also"></a>Siehe auch  
- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
- [ Benutzerdefinierte Token](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Siehe auch
+- [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [ Benutzerdefinierte Token](../../../../docs/framework/wcf/extending/custom-tokens.md)
+- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

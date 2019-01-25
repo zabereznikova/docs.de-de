@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d59416ea2d9a2d7b001421271b9907bb3e84c086
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 284b7f814f8a9355220f0da59e8fce7d79345609
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396967"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620239"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>ETW-Ereignisse in der Common Language Runtime
 Die Common Language Runtime (CLR) stellt nützliche Diagnoseinformationen für die Ereignisablaufverfolgung für Windows (ETW) durch eine große Vielfalt von Ereignissen für das Debuggen und die Profilerstellung bereit. CLR-ETW-Ereignisse nutzen das Windows-ETW-Ablaufverfolgungssystem, um die bestehende Unterstützung für die Profilerstellung und das Debuggen zu erweitern, die von der Common Language Runtime bereitgestellt wird.  
@@ -35,5 +35,5 @@ Die Common Language Runtime (CLR) stellt nützliche Diagnoseinformationen für d
  [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)  
  Bietet detaillierte Informationen zu CLR-ETW-Ereignissen sowie zu deren Schlüsselwörtern, Ebenen und Ereignisdaten.  
   
-## <a name="see-also"></a>Siehe auch  
- [ETW Events in the .NET Framework (ETW-Ereignisse in .NET Framework)](../../../docs/framework/performance/etw-events.md)
+## <a name="see-also"></a>Siehe auch
+- [ETW Events in the .NET Framework (ETW-Ereignisse in .NET Framework)](../../../docs/framework/performance/etw-events.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-ms.openlocfilehash: d41613ce2488fa572fa11def06350ab1e564df6c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 7358cc97f5b6b822be592c9e78aebbf9078fdd25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086218"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54723536"
 ---
 # <a name="commanding-overview"></a>Befehlsübersicht
 <a name="introduction"></a> Befehle sind ein Eingabemechanismus in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], der Eingabeverarbeitung auf einer höheren Ebene als die Geräteeingabe bereitstellt. Beispiele für Befehle sind die in vielen Programmen enthaltenen Vorgänge **Kopieren**, **Ausschneiden** und **Einfügen**.  
@@ -183,13 +183,13 @@ ms.locfileid: "44086218"
   
  Ein Beispiel für das Erstellen eines benutzerdefinierten <xref:System.Windows.Input.RoutedCommand> finden Sie unter [Create a Custom RoutedCommand Sample (Erstellen eines benutzerdefinierten „RoutedCommand“-Beispiels)](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Input.RoutedCommand>  
- <xref:System.Windows.Input.CommandBinding>  
- <xref:System.Windows.Input.InputBinding>  
- <xref:System.Windows.Input.CommandManager>  
- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Implementieren von ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [How to: Add a Command to a MenuItem (Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem)](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
- [Create a Custom RoutedCommand Sample (Erstellen eines benutzerdefinierten „RoutedCommand“-Beispiels)](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Input.RoutedCommand>
+- <xref:System.Windows.Input.CommandBinding>
+- <xref:System.Windows.Input.InputBinding>
+- <xref:System.Windows.Input.CommandManager>
+- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Implementieren von ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)
+- [Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+- [Create a Custom RoutedCommand Sample (Erstellen eines benutzerdefinierten „RoutedCommand“-Beispiels)](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 899d64633447223fffc5a9c7323a9baa7d040297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181552"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702547"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;Entfernen Sie&gt; -Element für ConnectionManagement (Netzwerkeinstellungen)
 Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder DNS-Namen.  
   
  \<configuration>  
 \<system.net>  
-\<ConnectionManagement >  
+\<connectionManagement>  
 \<remove>  
   
 ## <a name="syntax"></a>Syntax  
@@ -74,7 +74,7 @@ Entfernt aus der Verbindungsverwaltungsliste eine IP-Adresse oder DNS-Namen.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
 - [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

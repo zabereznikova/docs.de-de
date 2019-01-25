@@ -2,12 +2,12 @@
 title: TransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 54ecfbee-53c0-410c-a7fa-a98f2e40c545
-ms.openlocfilehash: 79d8b1f4a5127ca36eb57954cff6ee6a97e55e41
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 303e5523befb68c65bc50ee3933af58897929363
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54668452"
 ---
 # <a name="transportbindingelement"></a>TransportBindingElement
 TransportBindingElement  
@@ -64,5 +64,5 @@ class TransportBindingElement : BindingElement
 |---------|-----------------------------------|  
 |Namespace|Definiert in root\ServiceModel|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Channels.TransportBindingElement>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Channels.TransportBindingElement>

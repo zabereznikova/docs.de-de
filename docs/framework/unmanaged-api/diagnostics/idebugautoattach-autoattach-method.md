@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5c95423a6918da7cc043f8d46de13d166b8d895
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6b45b5e1a7589329b788160df3ac4493efa48197
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663517"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach-Methode
 AutoAttach Debuggers führt anfügen.  
@@ -45,7 +45,7 @@ HRESULT AutoAttach
  [in] Legen Sie immer auf `GUID_NULL`.  
   
  `dwPid`  
- [in] Prozess-ID, die normalerweise abgerufen, mit der `GetCurrentProcessId` Funktion.  
+ [in] Prozess-ID, die normalerweise mit abgerufen. die `GetCurrentProcessId` Funktion.  
   
  `dwProgramType`  
  [in] Programmtyp: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, oder `AUTOATTACH_PROGRAM_UNKNOWN`.  
@@ -54,7 +54,7 @@ HRESULT AutoAttach
  [in] Programm-ID an.  
   
  `pszSessionId`  
- [in] Von der Debug-Verbs übergebene Zeichenfolge.  
+ [in] Zeichenfolge, die durch das Debug-Verb übergeben werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
  S_OK, wenn die Methode erfolgreich ist.  
@@ -62,5 +62,5 @@ HRESULT AutoAttach
 ## <a name="requirements"></a>Anforderungen  
  **Header:** DbgAutoAttach.h  
   
-## <a name="see-also"></a>Siehe auch  
- [IDebugAutoAttach-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IDebugAutoAttach-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

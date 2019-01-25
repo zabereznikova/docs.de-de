@@ -2,12 +2,12 @@
 title: '&lt;IDN&gt; -Elements (Netzwerkeinstellungen)'
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: e68fa040123180ee31af40e82f45d6efd076d8aa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 21950beeefb23e81066623534774148e1f5d92ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153357"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580737"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;IDN&gt; -Elements (Netzwerkeinstellungen)
 Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domänennamen angewendet wird.  
@@ -17,7 +17,7 @@ Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domä
   
  [\<URI >-Elements (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
- [\<IDN >](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
+ [\<idn>](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domä
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Enthält Einstellungen, die angeben, wie .NET Framework Webadressen, die mithilfe von uniform Resource Identifier (URIs) ausgedrückt verarbeitet.|  
+|[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Enthält Einstellungen, die angeben, wie .NET Framework Webadressen, die mithilfe von uniform Resource Identifier (URIs) ausgedrückt verarbeitet.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die vorhandene <xref:System.Uri> Klasse in .NET Framework 3.5 erweitert wurde. 3.0 SP1 und 2.0 SP1 mit Unterstützung von International Resource Identifiers (IRI) und internationale Domänennamen (IDN). Derzeitige Benutzer werden keine Änderung gegenüber dem .NET Framework 2.0-Verhalten feststellen, es sei denn, sie IRI und IDN explizit aktivieren unterstützen. Dadurch wird die Anwendungskompatibilität mit früheren Versionen von .NET Framework garantiert.  
@@ -93,7 +93,7 @@ Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domä
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -19,15 +19,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b30cc2c499644ffc97a734e1554e4e352b34af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 755ff827300dd9fef5944924f6373415f6d8fa6a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431889"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568581"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM-Funktion
-Erzwingt, dass die common Language Runtime (CLR), alle Schnittstellenzeiger freizugeben, die sie innerhalb der Runtime callable Wrappern (RCW) enthält. Dies hat den Effekt des Freigebens von allen RCW-Caches. Diese globale Funktion ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Verwenden Sie stattdessen den Einstiegspunkt für eine bestimmte Laufzeit.  
+Erzwingt die common Language Runtime (CLR), um alle Schnittstellenzeiger freizugeben, die sie in der Common Language Runtime callable Wrapper (RCW) enthält. Dies hat den Effekt der Freigabe alle RCW-Caches. Diese globale Funktion ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Verwenden Sie stattdessen den Einstiegspunkt für eine bestimmte Laufzeit.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,21 +36,21 @@ void CoEEShutDownCOM ();
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CoEEShutDownCOM` Funktion zuerst die RCWs in allen Kontexten und in allen Caches frei und entfernt dann Löschvorgänge Benachrichtigungen im Setup vorhanden. Keine DLL entladen auftritt.  
+ Die `CoEEShutDownCOM` Funktion gibt zuerst die RCWs in allen Kontexten und alle Caches frei, und entfernt dann alle Löschvorgänge-Benachrichtigung, die im Setup. Tritt auf, keine DLL entladen.  
   
 > [!CAUTION]
 >  Diese Funktion wirkt sich auf alle Laufzeiten, die in den Prozess geladen werden.  
   
- Beginnend mit der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], rufen Sie den Einstiegspunkt für diese Funktion auf die bestimmte Laufzeit gelten soll. Rufen Sie zum Abrufen des Einstiegspunkts der [ICLRRuntimeInfo:: GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) Methode, und geben Sie "CoEEShutDownCOM".  
+ Beginnend mit der [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], rufen Sie den Einstiegspunkt für diese Funktion auf die angegebene Runtime, die Sie ändern möchten. Rufen Sie zum Abrufen des Einstiegspunkts der [ICLRRuntimeInfo:: GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) Methode, und geben Sie "CoEEShutDownCOM".  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Globale statische Metadatenfunktionen](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Globale statische Metadatenfunktionen](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

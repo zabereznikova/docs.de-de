@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verwenden von SystemFonts'
+title: 'Vorgehensweise: Verwenden von SystemFonts'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,39 +9,39 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 305d0cf18db5dc96b2d3cde863cf4ba2ae8dbb96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf99d716c5c41b7604244022d2e58423594a9cf3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544676"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674871"
 ---
-# <a name="how-to-use-systemfonts"></a>Gewusst wie: Verwenden von SystemFonts
-In diesem Beispiel wird gezeigt, wie für die Verwendung der statischen Ressourcen von der <xref:System.Windows.SystemFonts> Klasse, um zu formatieren oder Anpassen einer Schaltfläche.  
+# <a name="how-to-use-systemfonts"></a>Vorgehensweise: Verwenden von SystemFonts
+Dieses Beispiel zeigt, wie Sie mit der statischen Ressourcen der der <xref:System.Windows.SystemFonts> Klasse zum Formatieren oder Anpassen einer Schaltfläche.  
   
 ## <a name="example"></a>Beispiel  
- Systemressourcen machen mehrere vom System festgelegte Werte als Ressourcen und Eigenschaften verfügbar, um visuelle Elemente zu erstellen, mit Systemeinstellungen konsistent sind. <xref:System.Windows.SystemFonts> ist eine Klasse, die beide System Schriftartwerte, als statische Eigenschaften und Eigenschaften, die auf Ressourcenschlüssel verweisen, die verwendet werden können enthält, um diese Werte dynamisch zur Laufzeit zugreifen. Beispielsweise <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> ist ein <xref:System.Windows.SystemFonts> Wert und <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A> ist ein entsprechender Ressourcenschlüssel.  
+ Systemressourcen machen mehrere vom System festgelegte Werte als Ressourcen und Eigenschaften verfügbar, um visuelle Elemente zu erstellen, mit Systemeinstellungen konsistent sind. <xref:System.Windows.SystemFonts> ist eine Klasse, die enthält sowohl als statische Eigenschaften und Eigenschaften, die auf Ressourcenschlüssel verweisen, die verwendet werden können, um diese Werte dynamisch zur Laufzeit zugreifen. Z. B. <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> ist eine <xref:System.Windows.SystemFonts> Wert und <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A> ist ein entsprechender Ressourcenschlüssel.  
   
- In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], können Sie die Mitglieder der <xref:System.Windows.SystemFonts> als Eigenschaften für statischen oder dynamischen Ressourcenverweise (mit der statischen Eigenschaft-Wert als Schlüssel). Verwenden Sie einen dynamischen Ressourcenverweis, wenn sich die Schriftarteigenschaft während der Ausführung der Anwendung automatisch aktualisieren soll; verwenden Sie andernfalls einen statischen Wertverweis.  
+ In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], können Sie die Mitglieder der <xref:System.Windows.SystemFonts> als statische Eigenschaften oder dynamische Ressourcenverweise (mit dem statischen Eigenschaftswert als Schlüssel). Verwenden Sie einen dynamischen Ressourcenverweis, wenn sich die Schriftarteigenschaft während der Ausführung der Anwendung automatisch aktualisieren soll; verwenden Sie andernfalls einen statischen Wertverweis.  
   
 > [!NOTE]
 >  Die Ressourcenschlüssel verfügen über das Suffix „Key“, das an den Eigenschaftennamen angefügt wird.  
   
- Im folgende Beispiel wird gezeigt, wie zugreifen auf und verwenden die Eigenschaften des <xref:System.Windows.SystemFonts> als statische Werte zum Formatieren oder Anpassen einer Schaltfläche. In diesem Markupbeispiel weist <xref:System.Windows.SystemFonts> Werte mit einer Schaltfläche.  
+ Das folgende Beispiel zeigt, wie Sie den Zugriff auf und verwenden Sie die Eigenschaften der <xref:System.Windows.SystemFonts> als statische Werte zum Formatieren oder Anpassen einer Schaltfläche. Dieses Markupbeispiel weist <xref:System.Windows.SystemFonts> Werte auf eine Schaltfläche.  
   
  [!code-xaml[SystemRes_snip#FontStaticResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#fontstaticresources)]  
   
- Verwenden Sie die Werte der <xref:System.Windows.SystemFonts> in Code, Sie müssen nicht um einen statischen Wert oder einen dynamischen Ressourcenverweis zu verwenden. Verwenden Sie stattdessen die nicht schlüsselbezogene Eigenschaften von der <xref:System.Windows.SystemFonts> Klasse. Obwohl die nicht schlüsselbezogene Eigenschaften als statische Eigenschaften, die das Laufzeitverhalten des offensichtlich definiert sind [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] als gehostete durch das System wird neu Auswerten der Eigenschaften in Echtzeit und wird für Benutzer vorgenommene Änderungen Systemwerte ordnungsgemäß berücksichtigt. Im folgenden Beispiel wird veranschaulicht, wie die Schriftarteinstellung einer Schaltfläche festgelegt wird.  
+ Verwenden Sie die Werte der <xref:System.Windows.SystemFonts> in Code, Sie müssen keinen statischen Wert oder einen dynamischen Ressourcenverweis zu verwenden. Verwenden Sie stattdessen die Nichtschlüsseleigenschaften der der <xref:System.Windows.SystemFonts> Klasse. Obwohl die Nichtschlüsseleigenschaften scheinbar als statische Eigenschaften, die das Laufzeitverhalten des definiert sind [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wie von gehostet wird das System Systemwerten die Eigenschaften in Echtzeit und benutzergesteuerte Änderungen von ordnungsgemäß berücksichtigt wird. Im folgenden Beispiel wird veranschaulicht, wie die Schriftarteinstellung einer Schaltfläche festgelegt wird.  
   
  [!code-csharp[SystemRes_snip#FontResourcesCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
  [!code-vb[SystemRes_snip#FontResourcesCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.SystemFonts>  
- [Zeichnen eines Bereichs mit einem Systempinsel](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [Verwenden von SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [Verwenden von Systemschriftartschlüsseln](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)  
- [x:Statische Markuperweiterung](../../../../docs/framework/xaml-services/x-static-markup-extension.md)  
- [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [DynamicResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.SystemFonts>
+- [Zeichnen eines Bereichs mit einem Systempinsel](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [Verwenden von SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)
+- [Verwenden von Systemschriftartschlüsseln](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+- [x:Statische Markuperweiterung](../../../../docs/framework/xaml-services/x-static-markup-extension.md)
+- [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+- [DynamicResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

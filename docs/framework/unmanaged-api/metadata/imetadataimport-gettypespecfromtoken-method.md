@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54c35f4f7a7f933bbc06a641d9ba00c5059b5ff9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 53d0f3bd991d502e4ddcad7df1e24d18af367e7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598393"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken-Methode
 Ruft die binäre Metadatensignatur der Typspezifikation ab, die durch das angegebene Token dargestellt wird.  
@@ -39,26 +39,26 @@ HRESULT GetTypeSpecFromToken (
   
 #### <a name="parameters"></a>Parameter  
  `typespec`  
- [in] Das angeforderte Metadatensignatur zugeordnete TypeSpec-Token.  
+ [in] Das TypeSpec-Token, das die Signatur für die angeforderten Metadaten zugeordnet ist.  
   
  `ppvSig`  
  [out] Ein Zeiger auf die binäre Metadatensignatur.  
   
  `pcbSig`  
- [out] Die Größe der Metadatensignatur in Bytes.  
+ [out] Die Größe in Byte der Signatur der Metadaten.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein HRESULT, das Erfolg oder Fehler angibt. Fehler können mit dem FAILED-Makro getestet werden.  
+ Ein HRESULT, der Erfolg oder Misserfolg angibt. Fehler können mit dem Makro FAILED getestet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

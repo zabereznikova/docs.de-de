@@ -2,12 +2,12 @@
 title: ETW-Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 3e4dd141bd5f6a9d137b2fe981b3b412ec0c81e2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2329ebc8b98b0d34b5acc7861a7e691a31e3ba15
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855919"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54700286"
 ---
 # <a name="etw-tracing"></a>ETW-Ablaufverfolgung
 In diesem Beispiel wird das Implementieren der End-to-End (E2E)-Ablaufverfolgung mit Event Tracing for Windows (ETW) und dem in diesem Beispiel bereitgestellten `ETWTraceListener` veranschaulicht. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) und ETW-Ablaufverfolgung enthält.  
@@ -106,5 +106,5 @@ Logman stop Wcf
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
-## <a name="see-also"></a>Siehe auch  
- [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>Siehe auch
+- [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

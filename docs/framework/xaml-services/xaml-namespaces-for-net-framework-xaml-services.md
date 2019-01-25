@@ -2,12 +2,12 @@
 title: XAML-Namespaces für .NET Framework-XAML-Dienste
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: ac6554cbdeb5bc6e0fe7fb96ea95d0143c293d22
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e9e2d9e2257e5e6059210b82a69d7a837254032
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030865"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736798"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>XAML-Namespaces für .NET Framework-XAML-Dienste
 Ein XAML-Namespace ist ein Konzept, das auf der Definition eines XML-Namespaces erweitert. Ähnlich wie ein XML-Namespace, können Sie definieren eine XAML-Namespace mit einem `xmlns` Attribut im Markup. XAML-Namespaces werden auch in der XAML-Knotenstream und andere XAML-Dienste-APIs dargestellt. In diesem Thema das Konzept des XAML-Namespace definiert und beschreibt, wie XAML-Namespaces können definiert werden und von XAML-Schema-Kontexten und andere Aspekte der .NET Framework-XAML-Dienste verwendet werden.  
@@ -30,7 +30,7 @@ Ein XAML-Namespace ist ein Konzept, das auf der Definition eines XML-Namespaces 
   
  Die einfachste Form eines Bezeichners, die die CLR-Namespace und Assembly-Konvention verwendet lautet wie folgt aus:  
   
- `clr-namespace:` *ClrnsName* `; assembly=` *AssemblyShortName*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyShortName*  
   
  `clr-namespace:` und `; assembly=` sind Literale Komponenten der Syntax.  
   
@@ -40,7 +40,7 @@ Ein XAML-Namespace ist ein Konzept, das auf der Definition eines XML-Namespaces 
   
  Eine vollständige Definition der CLR-Namespace und Assembly Konvention lautet wie folgt aus:  
   
- `clr-namespace:` *ClrnsName* `; assembly=` *AssemblyName*  
+ `clr-namespace:` *clrnsName* `; assembly=` *assemblyName*  
   
  *AssemblyName* stellt eine beliebige Zeichenfolge, die als gültig ist ein <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> Eingabe. Diese Zeichenfolge enthalten kann, Kultur, PublicKey oder Versionsinformationen (Definitionen dieser Konzepte werden in die Referenz für definiert <xref:System.Reflection.Assembly>). COFF Format und Beweise (von andere Überladungen verwendet <xref:System.Reflection.Assembly.Load%2A>) sind nicht relevant für XAML-assamblys Zwecke; alle lastinformationen muss als Zeichenfolge dargestellt werden.  
   
@@ -63,5 +63,5 @@ Ein XAML-Namespace ist ein Konzept, das auf der Definition eines XML-Namespaces 
   
  Zwei andere API, die für XAML-Namespace in .NET Framework-XAML-Dienste verarbeiten relevant sind, sind die Attribute <xref:System.Windows.Markup.XmlnsDefinitionAttribute> und <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Diese Attribute gelten für Assemblys. <xref:System.Windows.Markup.XmlnsDefinitionAttribute> wird von einem XAML-Schemakontext verwendet, um alle XAML-Namespacedeklaration zu interpretieren, die einen URI enthält. <xref:System.Windows.Markup.XmlnsPrefixAttribute> wird von Tools verwendet, die XAML ausgeben, damit Sie ein bestimmter XAML-Namespace mit einem vorhersagbaren Präfix serialisiert werden kann. Weitere Informationen finden Sie unter [XAML-Related CLR-Attribute für benutzerdefinierte Typen und Bibliotheken](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+## <a name="see-also"></a>Siehe auch
+- [Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

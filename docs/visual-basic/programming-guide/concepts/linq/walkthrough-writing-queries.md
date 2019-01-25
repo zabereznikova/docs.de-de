@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480655"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54666578"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen von Visual Basic verwenden können, schreiben [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] -Abfrageausdrücken. Die exemplarische Vorgehensweise veranschaulicht das Erstellen von Abfragen in der Liste der Student-Objekten, wie Sie die Abfragen ausführen und zum Ändern. Die Abfragen enthalten mehrere Funktionen, einschließlich lokaler Typrückschluss, Objektinitialisierer und anonyme Typen.  
@@ -47,7 +47,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>Hinzufügen ein neues Studenten zur Liste Studenten  
   
--   Befolgen Sie die Muster in den `getStudents` Methode zum Hinzufügen einer anderen Instanz von der `Student` Klasse zur Liste. Hinzufügen der Student werden Objektinitialisierer vorgestellt. Weitere Informationen finden Sie unter [Objektinitialisierer: benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
+-   Befolgen Sie die Muster in den `getStudents` Methode zum Hinzufügen einer anderen Instanz von der `Student` Klasse zur Liste. Hinzufügen der Student werden Objektinitialisierer vorgestellt. Weitere Informationen finden Sie unter [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md).  
   
 ## <a name="create-a-query"></a>Erstellen einer Abfrage  
  Bei der Ausführung erzeugt die Abfrage hinzugefügt, die in diesem Abschnitt eine Liste der Studenten akademischen Rang sie in der oberen zehn versetzt. Da die Abfrage die vollständige wählt `Student` Objekt jedes Mal, den Typ des Abfrageergebnisses ist `IEnumerable(Of Student)`. Der Typ der Abfrage ist jedoch in der Regel nicht in den Abfragedefinitionen angegeben. Stattdessen verwendet der Compiler lokaler Typrückschluss, um den Typ zu bestimmen. Weitere Informationen finden Sie unter [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md). Im Abfrage Range-Variable, `currentStudent`, dient als Verweis auf die einzelnen `Student` Instanz in der Quelle `students`, Zugriff auf die Eigenschaften jedes Objekts im `students`.  
@@ -144,11 +144,11 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
-- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
-- [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
-- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Abfragen](../../../../visual-basic/language-reference/queries/index.md)

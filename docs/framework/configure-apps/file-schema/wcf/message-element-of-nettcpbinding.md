@@ -2,12 +2,12 @@
 title: '&lt;message&gt;-Element von &lt;netTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 7af8cd9d36b56093eee2b53873c0fe0775a33430
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 018cd6797b730bc5469cc68dd23fcf8315716588
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146159"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54677391"
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>&lt;message&gt;-Element von &lt;netTcpBinding&gt;
 Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen Endpunkt konfiguriert, mit der [ \<NetTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -16,8 +16,8 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
 \<bindings>  
 \<netTcpBinding>  
 \<binding>  
-\<Sicherheit >  
-\<Meldung >  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -79,13 +79,13 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
 ## <a name="remarks"></a>Hinweise  
  Die Nachricht verwendet Sicherheit auf Nachrichtenebene für die Integrität und die Vertraulichkeit der SOAP-Nachricht und für die gegenseitige Authentifizierung der Kommunikationspeers. Wurde dieser Sicherheitsmodus für eine Bindung ausgewählt, wird der Kanalstapel mit Nachrichtensicherheits-Bindungselementen konfiguriert, und die SOAP-Nachrichten werden gemäß der WS-Security*-Standards geschützt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.MessageSecurityOverTcp>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>  
- <xref:System.ServiceModel.NetTcpSecurity.Message%2A>  
- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>  
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.MessageSecurityOverTcp>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
+- <xref:System.ServiceModel.NetTcpSecurity.Message%2A>
+- <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
+- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

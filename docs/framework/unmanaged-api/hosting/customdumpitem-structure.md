@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f742d219d603488bbade091f7a8192785d3e84f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 930d56fcfe7cf0d2a128c2068e724b85a224b3fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433095"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54568919"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem-Struktur
-Beschreibt ein Element, das ein benutzerdefiniertes Speicherabbild Fehlerberichterstattung hinzugefügt werden.  
+Beschreibt ein Element ein benutzerdefiniertes Speicherabbild in der Fehlerberichterstattung hinzugefügt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,19 +42,19 @@ struct {
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`itemKind`|Ein [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) Wert, der die Art des hinzuzufügenden Elements angibt.|  
-|`pReserved`|Zurzeit nicht verwendet. Keine Elemente hinzugefügt werden, auf die Union muss nicht größer als die Größe des Zeigers. Wenn ein `struct` ist erforderlich, müssen Sie diese separat zugeordnet werden und zeigen Sie darauf.|  
+|`pReserved`|Derzeit nicht verwendet. Keine Elemente hinzugefügt, die Union müssen nicht größer als die Größe des Zeigers sein. Wenn eine `struct` ist erforderlich, müssen Sie diese separat zugeordnet werden und darauf verweisen.|  
   
 ## <a name="remarks"></a>Hinweise  
- [ICLRErrorReportingManager:: BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) akzeptiert einen Parameter vom Typ `CustomDumpItem`.  
+ [ICLRErrorReportingManager:: BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) nimmt einen Parameter vom Typ `CustomDumpItem`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.idl  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

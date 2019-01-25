@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6be40ecbb801348ad73fb929741b5a8e8407a7ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ece5173ce2a80ceb46d535eb8cbc6eb18e18fd1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621879"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly-Methode
-Wird die angegebene Assembly aus dem globalen Assemblycache deinstalliert.  
+Deinstalliert die angegebene Assembly aus dem globalen Assemblycache.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,13 +43,13 @@ HRESULT UninstallAssembly (
  [in] Flags, die in Fusion.idl definiert sind.  
   
  `pszAssemblyName`  
- [in] Der Name der Assembly zu deinstallieren.  
+ [in] Der Name der zu deinstallierenden Assembly.  
   
  `pRefData`  
- [in] Ein [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) -Struktur, die Installationsdaten für die Assembly enthält.  
+ [in] Ein [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) -Struktur, die die Installationsdaten für die Assembly enthält.  
   
  `pulDisposition`  
- [out, optional] Einer der Dispositionswerte, die in Fusion.idl definiert sind. Mögliche Werte umfassen Folgendes:  
+ [Out, optional] Einer der Dispositionswerte in Fusion.idl definiert sind. Die folgenden: mögliche Werten  
   
 -   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
@@ -64,11 +64,11 @@ HRESULT UninstallAssembly (
 -   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Fusion.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IAssemblyCache-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IAssemblyCache-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

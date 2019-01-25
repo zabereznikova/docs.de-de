@@ -2,12 +2,12 @@
 title: AJAX-Dienst ohne Konfiguration
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: 60b61a26574764f0f2ea4ca834c5ba92b49a043d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f722eac27fadbd772b85a638c3c9171c2783a8b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308400"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582187"
 ---
 # <a name="ajax-service-without-configuration"></a>AJAX-Dienst ohne Konfiguration
 Dieses Beispiel veranschaulicht, wie Windows Communication Foundation (WCF) zum Erstellen eines einfachen (ASP.NET Asynchronous JavaScript and XML (AJAX)-Diensts (ein Dienst, die Sie mithilfe von JavaScript-Codes über einen Webbrowserclient zugreifen können) ohne Konfiguration Einstellungen. Der Dienst verwendet eine besondere Syntax in der .svc-Datei zur automatischen Aktivierung eines AJAX-Endpunkts.  
@@ -50,5 +50,5 @@ Dieses Beispiel veranschaulicht, wie Windows Communication Foundation (WCF) zum 
 > [!NOTE]
 >  Stellen Sie bei der Ausführung dieses Beispiels sicher, dass für den Ordner ServiceModelSamples in IIS nicht gleichzeitig anonyme Authentifizierung und Windows-Authentifizierung aktiviert ist. Wenn das der Fall ist, deaktivieren Sie die Windows-Authentifizierung. Sobald Sie das Beispiel ausgeführt haben, aktivieren Sie die Windows-Authentifizierung und führen "iisreset" aus.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einfacher AJAX-Dienst](../../../../docs/framework/wcf/samples/basic-ajax-service.md)
+## <a name="see-also"></a>Siehe auch
+- [Einfacher AJAX-Dienst](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

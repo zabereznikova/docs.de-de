@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /filealign compiler option [Visual Basic]
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
-ms.openlocfilehash: db70749f28592ae6711b6d9544f8704af9416490
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 551d151ab923110c73a528a5def639fb383c889f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715919"
 ---
 # <a name="-filealign"></a>-filealign
 Gibt die Ausrichtung der Abschnitte der Ausgabedatei an.  
@@ -39,5 +39,5 @@ Gibt die Ausrichtung der Abschnitte der Ausgabedatei an.
 > [!NOTE]
 >  Die `-filealign` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)

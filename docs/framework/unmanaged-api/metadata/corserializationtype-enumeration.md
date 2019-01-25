@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70d2d4ed0d2b923b1095fd0ce898330c319fa5cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446658"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637371"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType-Enumeration
 Gibt an, wie ein Objekt von der common Language Runtime serialisiert wird.  
@@ -59,33 +59,33 @@ typedef enum CorSerializationType {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Die Serialisierung des Objekts ist nicht definiert.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Das Objekt wird als einem Boolean-Typ serialisiert.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|Serialisierung des Objekts ist nicht definiert.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|Das Objekt wird als einem Boolean-Typ serialisiert werden.|  
 |`SERIALIZATION_TYPE_CHAR`|Das Objekt wird als ein Zeichentyp serialisiert.|  
 |`SERIALIZATION_TYPE_I1`|Das Objekt wird als eine 1-Byte-Ganzzahl mit Vorzeichen serialisiert.|  
 |`SERIALIZATION_TYPE_U1`|Das Objekt wird als eine 1-Byte-Ganzzahl ohne Vorzeichen serialisiert.|  
 |`SERIALIZATION_TYPE_I2`|Das Objekt wird als eine 2-Byte-Ganzzahl mit Vorzeichen serialisiert.|  
 |`SERIALIZATION_TYPE_U2`|Das Objekt wird als eine 2-Byte-Ganzzahl ohne Vorzeichen serialisiert.|  
 |`SERIALIZATION_TYPE_I4`|Objekt wird als ein 4-Byte-Ganzzahl mit Vorzeichen serialisiert.|  
-|`SERIALIZATION_TYPE_U4`|Das Objekt wird als ein 4-Byte-Ganzzahl ohne Vorzeichen serialisiert.|  
+|`SERIALIZATION_TYPE_U4`|Das Objekt wird als eine 4-Byte-Ganzzahl ohne Vorzeichen serialisiert.|  
 |`SERIALIZATION_TYPE_I8`|Das Objekt wird als eine 8-Byte-Ganzzahl mit Vorzeichen serialisiert.|  
 |`SERIALIZATION_TYPE_U8`|Das Objekt wird als eine 8-Byte-Ganzzahl ohne Vorzeichen serialisiert.|  
 |`SERIALIZATION_TYPE_R4`|Objekt wird als ein 4-Byte-Gleitkommazahl serialisiert.|  
-|`SERIALIZATION_TYPE_R8`|Das Objekt wird als eine 8-Byte-Gleitkommazahl serialisiert.|  
-|`SERIALIZATION_TYPE_STRING`|Objekt wird als System.String-Typ serialisiert.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Objekt wird serialisiert, wie ein eindimensionales, 0 (null) Untergrenze Array.|  
+|`SERIALIZATION_TYPE_R8`|Objekt wird als eine 8-Byte-Gleitkommazahl serialisiert.|  
+|`SERIALIZATION_TYPE_STRING`|Das Objekt wird als ein System.String-Typ serialisiert.|  
+|`SERIALIZATION_TYPE_SZARRAY`|Objekt wird serialisiert, wie ein eindimensionales, keine untere Begrenzung-Array.|  
 |`SERIALIZATION_TYPE_TYPE`|Objekt wird als generischer Typ serialisiert.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Objekt wird als markiertes Objekt serialisiert.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Objekt wird als markierte Objekt serialisiert.|  
 |`SERIALIZATION_TYPE_FIELD`|Objekt wird als Feld serialisiert.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Das Objekt wird als eine Eigenschaft serialisiert.|  
-|`SERIALIZATION_TYPE_ENUM`|Das Objekt wird als eine Enumeration serialisiert.|  
+|`SERIALIZATION_TYPE_PROPERTY`|Objekt wird als Eigenschaft serialisiert werden.|  
+|`SERIALIZATION_TYPE_ENUM`|Objekt wird als eine Enumeration serialisiert.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

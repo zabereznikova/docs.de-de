@@ -2,12 +2,12 @@
 title: Nachverfolgungsdatensätze
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 2be8dbcdd740dee1c5cddd1121716058bfa5c175
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 753541814497b62cf05f0c22cc4e08c0d127e91b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527038"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676106"
 ---
 # <a name="tracking-records"></a>Nachverfolgungsdatensätze
 Die Workflowlaufzeit ist so instrumentiert, dass Überwachungsdatensätze im Zusammenhang mit der Ausführung einer Workflowinstanz ausgegeben werden.  
@@ -60,6 +60,6 @@ Die Workflowlaufzeit ist so instrumentiert, dass Überwachungsdatensätze im Zus
   
 5.  Das <xref:System.Activities.Tracking.WorkflowInstanceRecord>-Objekt gibt an, dass der Workflow abgeschlossen wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Windows Server App Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)  
- [Überwachen von Anwendungen mit AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+## <a name="see-also"></a>Siehe auch
+- [Windows Server App Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Überwachen von Anwendungen mit AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

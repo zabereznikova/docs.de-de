@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Ändern eines Office Open XML-Dokuments (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
-ms.openlocfilehash: 8d4ecdf89606190eed16b5374a5e43421d1260b7
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 333896eab6002a578b1cb53eb02f787bc9259123
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753392"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670367"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>Vorgehensweise: Ändern eines Office Open XML-Dokuments (Visual Basic)
 Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet, ändert und speichert.  
@@ -137,11 +137,11 @@ End Module
   
  Wenn Sie `SampleDoc.docx` nach der Ausführung dieses Programms öffnen, sehen Sie, dass der erste Absatz des Dokuments in Großbuchstaben umgewandelt wurde.  
   
- Bei der Ausführung mit der beschrieben, die im Open XML-Beispieldokument [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), dieses Beispiel erzeugt die folgende Ausgabe:  
+ Bei der Ausführung mit der beschriebenen Open XML-Beispieldokument [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), in diesem Beispiel erzeugt die folgende Ausgabe:  
   
 ```  
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Siehe auch
+- [Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b28c18d55b91d6315003229295ab0e6781be183
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03949fb52d23e3b0f107f9f1d5208208369c3960
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574612"
 ---
 # <a name="exporttypeforwarder-method"></a>ExportTypeForwarder-Methode
-Die Tabelle der angegebenen Assembly hinzugefügt typweiterleitung.  
+Fügt eine typweiterleitung zur Typtabelle der angegebenen Assembly.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,24 +39,24 @@ HRESULT ExportTypeForwarder(
   
 #### <a name="parameters"></a>Parameter  
  `tkAssemblyRef`  
- Verweis auf die Assembly, auf die die typweiterleitung verweist.  
+ Verweis auf die Assembly, die auf der die typweiterleitung verweist.  
   
  `pszTypename`  
- Voll qualifizierten Typnamen zu exportieren.  
+ Vollqualifizierten Typnamen zu exportieren.  
   
  `dwFlags`  
- `ComType` Flags, z. B. `tdPublic` oder `tdNested`. Dieser Wert möglicherweise übergeben werden, um [DefineExportedType-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` Flags, z. B. `tdPublic` oder `tdNested`. Dieser Wert kann übergeben werden, um [DefineExportedType-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Empfängt das Token des exportierten Typs. Dies ist nur für das Ausgeben von geschachtelten Typen erforderlich.  
+ Empfängt das Token des exportierten Typs. Dies ist nur für die Ausgabe von geschachtelter Typen erforderlich.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
  Erfordert alink.h  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

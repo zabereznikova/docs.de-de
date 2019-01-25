@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Zeichnen einer Ellipse oder eines Kreises'
+title: 'Vorgehensweise: Zeichnen einer Ellipse oder eines Kreises'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ellipses [WPF], drawing
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [WPF], drawing circles
 - graphics [WPF], drawing ellipses
 ms.assetid: 99763b8c-bfc8-44be-8231-8a70daf5481a
-ms.openlocfilehash: ddeada8619d1b6c8970f1efb7cca1bc98773d0c5
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7aac743b0cd2119107e48493b3ee9563b81b391d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689116"
 ---
-# <a name="how-to-draw-an-ellipse-or-a-circle"></a>Gewusst wie: Zeichnen einer Ellipse oder eines Kreises
+# <a name="how-to-draw-an-ellipse-or-a-circle"></a>Vorgehensweise: Zeichnen einer Ellipse oder eines Kreises
 In diesem Beispiel wird gezeigt, wie zum Zeichnen von Ellipsen und Kreisen mithilfe der <xref:System.Windows.Shapes.Ellipse> Element. Um eine Ellipse zeichnen, erstellen eine <xref:System.Windows.Shapes.Ellipse> Element, und geben Sie die <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A>. Verwenden der <xref:System.Windows.Shapes.Shape.Fill%2A> -Eigenschaft an die <xref:System.Windows.Media.Brush> , mit dem das Innere der Ellipse gezeichnet werden soll. Verwenden der <xref:System.Windows.Shapes.Shape.Stroke%2A> -Eigenschaft an die <xref:System.Windows.Media.Brush> , wird verwendet, um die Kontur der Ellipse gezeichnet werden soll. Die <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Eigenschaft gibt die Stärke der Kontur Ellipse an.  
   
  Um einen Kreis zu zeichnen, stellen die <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> von der <xref:System.Windows.Shapes.Ellipse> Element, das jeweils anderen.  
@@ -30,7 +30,7 @@ In diesem Beispiel wird gezeigt, wie zum Zeichnen von Ellipsen und Kreisen mithi
   
  Dieses Beispiel ist Teil eines umfangreicheren Beispiels. Das vollständige Beispiel finden Sie unter [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Shapes.Ellipse>  
- <xref:System.Windows.Shapes.Shape>  
- [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Shapes.Ellipse>
+- <xref:System.Windows.Shapes.Shape>
+- [Formelemente](https://go.microsoft.com/fwlink/?LinkID=160037)

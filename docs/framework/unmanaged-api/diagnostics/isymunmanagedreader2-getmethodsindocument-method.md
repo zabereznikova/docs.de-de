@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 762649e260817c43291de416d2f1a92a8f03afb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 38cbea25c485ff517e3448c4de5245ff36fb5b21
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427368"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594550"
 ---
 # <a name="isymunmanagedreader2getmethodsindocument-method"></a>ISymUnmanagedReader2::GetMethodsInDocument-Methode
-Ruft jede Methode, die Zeileninformationen in das angegebene Dokument ab.  
+Ruft jede Methode, die in das angegebene Dokument über Zeileninformationen verfügt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,5 +57,5 @@ HRESULT GetMethodsInDocument(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedReader2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedReader2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

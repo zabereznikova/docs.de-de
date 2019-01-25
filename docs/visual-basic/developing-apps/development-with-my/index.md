@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: f13e7348eb1c63e8256a48da7a8f5a8e357c72ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2758dc847d6549689d688ef4742bb334b1968988
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584423"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720222"
 ---
 # <a name="development-with-my-visual-basic"></a>Entwicklung mit "My" (Visual Basic)
 Visual Basic stellt neue Features für die schnelle Anwendungsentwicklung bereit, die die Produktivität und die Benutzerfreundlichkeit erhöhen und zugleich Leistung liefern. Eines dieser Features, das den Namen `My` trägt, stellt den Zugriff auf Informationen und Standardobjektinstanzen bereit, die mit der Anwendung und seiner Laufzeitumgebung verwandt sind. Diese Informationen werden in einem Format organisiert, das durch IntelliSense erkannt werden kann, und gemäß ihrer Verwendung logisch beschrieben.  
@@ -36,15 +36,15 @@ Visual Basic stellt neue Features für die schnelle Anwendungsentwicklung bereit
  Beschreibt die Objekte `My.Resources` und `My.Settings`, die Zugriff auf die Ressourcen und Einstellungen einer Anwendung ermöglichen  
   
  [Übersicht über das Visual Basic-Anwendungsmodell](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Beschreibt das Visual Basic-Anwendung Starten/Herunterfahren-Modell.  
+ Beschreibt die Visual Basic-Anwendung Starten/Herunterfahren-Modell.  
   
  [Merkmale von "My" auf Grundlage des Projekttyps](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Bietet Informationen zu den in verschiedenen Projekttypen verfügbaren `My`-Funktionen  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.Devices.Computer>  
- <xref:Microsoft.VisualBasic.ApplicationServices.User>  
- [My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)  
- [My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)  
- [Merkmale von "My" auf Grundlage des Projekttyps](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.Devices.Computer>
+- <xref:Microsoft.VisualBasic.ApplicationServices.User>
+- [My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [Merkmale von "My" auf Grundlage des Projekttyps](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms'
+title: 'Vorgehensweise: Zugreifen auf spezifische Elemente in einer Windows Forms, ComboBox-, ListBox- oder CheckedListBox-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: 731527f2d6adb206fa4d8bc4bc2e488c61b86200
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6478c24550f9f32ea75899521f7aa610ef12955
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523568"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656699"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Gewusst wie: Zugreifen auf spezifische Elemente in ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms
-Zugreifen auf bestimmte Elemente in einer Windows Forms-Kombinationsfeld, Listenfeld oder ausgewählten Listenfeld ist eine wichtige Aufgabe. Er ermöglicht es Ihnen, programmgesteuert festzustellen, was in der Liste, an einer beliebigen angegebenen Position befindet.  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Vorgehensweise: Zugreifen auf spezifische Elemente in einer Windows Forms, ComboBox-, ListBox- oder CheckedListBox-Steuerelement
+Zugreifen auf spezifische Elemente in einer Windows Forms-Kombinationsfeld, Listenfeld oder ausgewählten Listenfeld ist eine wichtige Aufgabe. Sie können Sie programmgesteuert zu ermitteln, was in einer Liste an einer bestimmten Position ist.  
   
 ### <a name="to-access-a-specific-item"></a>Auf ein bestimmtes Element zugreifen.  
   
-1.  Abfrage der `Items` Auflistung über den Index eines bestimmten Elements:  
+1.  Abfrage der `Items` Auflistung über den Index des bestimmten Elements:  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -51,8 +51,8 @@ Zugreifen auf bestimmte Elemente in einer Windows Forms-Kombinationsfeld, Listen
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- <xref:System.Windows.Forms.CheckedListBox>  
- [Windows Forms-Steuerelemente zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- <xref:System.Windows.Forms.CheckedListBox>
+- [Windows Forms-Steuerelemente zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

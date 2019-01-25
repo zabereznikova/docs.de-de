@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess2 Schnittstelle1
+title: ICorDebugProcess2-Schnittstelle1
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcess2
@@ -16,27 +16,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a1588a37891d6a73c49cb1b9ccbc81d9dcdb7e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0b37cb8ecd178b90a4dcd2d2eab9fa7c4cd3211d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420416"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54647321"
 ---
-# <a name="icordebugprocess2-interface1"></a>ICorDebugProcess2 Schnittstelle1
-Eine logische Erweiterung der ICorDebugProcess-Schnittstelle, die eine Prozess Ausführung von verwaltetem Code darstellt.  
+# <a name="icordebugprocess2-interface1"></a>ICorDebugProcess2-Schnittstelle1
+Eine logische Erweiterung der ICorDebugProcess-Schnittstelle, die eine ausgeführten Prozess für verwalteten Code darstellt.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[ClearUnmanagedBreakpoint-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md)|Entfernt einen Haltepunkt am angegebenen Offset begonnen, die durch einen früheren Aufruf festgelegter `ICorDebugProcess2::SetUnmanagedBreakpoint`.|  
-|[GetDesiredNGENCompilerFlags-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getdesiredngencompilerflags-method.md)|Ruft die Flags ab, die für die common Language Runtime (CLR) müssen, beim Laden des Bilds in den Prozess festgelegt werden, auf die verwiesen wird von diesem `ICorDebugProcess2`.|  
-|[GetReferenceValueFromGCHandle-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getreferencevaluefromgchandle-method.md)|Ruft einen Verweiszeiger auf dem angegebenen verwalteten Objekt, das eine Garbagecollection-handle verfügt.|  
-|[GetThreadForTaskID-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getthreadfortaskid-method.md)|Ruft den Thread, auf dem die Aufgabe mit dem angegebenen Bezeichner ausgeführt wird.|  
-|[GetVersion-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getversion-method.md)|Ruft die Version der CLR, auf denen der zu debuggende Prozess ausgeführt wird.|  
-|[SetDesiredNGENCompilerFlags-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md)|Legt die Flags, die für den Just-in-Time (JIT)-Compiler, ein Bild in den zu debuggenden Prozess zu laden erforderlich sind.|  
-|[SetUnmanagedBreakpoint-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)|Legt einen Haltepunkt auf nicht verwalteten Offset angegebene systemeigene Image fest.|  
+|[ClearUnmanagedBreakpoint-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md)|Entfernt einen Haltepunkt am angegebenen Offset, die von einem früheren Aufruf festgelegt wurde `ICorDebugProcess2::SetUnmanagedBreakpoint`.|  
+|[GetDesiredNGENCompilerFlags-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getdesiredngencompilerflags-method.md)|Ruft die Flags ab, die für die common Language Runtime (CLR) festgelegt werden müssen, um das Image in den Prozess, der auf die dieses laden `ICorDebugProcess2`.|  
+|[GetReferenceValueFromGCHandle-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getreferencevaluefromgchandle-method.md)|Ruft einen Verweiszeiger auf das angegebene verwaltete Objekt, das eine Garbagecollection verarbeitet hat.|  
+|[GetThreadForTaskID-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getthreadfortaskid-method.md)|Ruft den Thread, der auf dem die Aufgabe mit der angegebenen ID ausgeführt wird.|  
+|[GetVersion-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getversion-method.md)|Ruft die Version der CLR auf dem die zu debuggende Prozess ausgeführt wird.|  
+|[SetDesiredNGENCompilerFlags-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md)|Legt die Flags, die für den just-in-Time (JIT)-Compiler zum Laden eines Bilds in der gedebuggte Prozess erforderlich sind.|  
+|[SetUnmanagedBreakpoint-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)|Legt einen nicht verwaltete Haltepunkt am Offset angegebene systemeigene Image fest.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -44,7 +44,7 @@ Eine logische Erweiterung der ICorDebugProcess-Schnittstelle, die eine Prozess A
 >  Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -52,5 +52,5 @@ Eine logische Erweiterung der ICorDebugProcess-Schnittstelle, die eine Prozess A
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Endpunkte im Unternehmen sperren'
+title: 'Vorgehensweise: Sperren von Endpunkten im Unternehmen'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663078"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Vorgehensweise: Endpunkte im Unternehmen sperren
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Vorgehensweise: Sperren von Endpunkten im Unternehmen
 Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der Sicherheitsrichtlinien der Unternehmen entwickelt werden. Im folgende Thema wird erläutert, wie zum Entwickeln und installieren eine clientendpunktbestätigung, die verwendet werden kann, überprüfen Sie alle Windows Communication Foundation (WCF)-Client-Anwendungen, die auf Computern installiert werden.  
   
  In diesem Fall wird das Validierungssteuerelement eine Clientbestätigung, da dieses Endpunktverhalten, an den Client hinzugefügt wird [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt in der Datei "Machine.config". WCF lädt gemeinsame Endpunktverhalten nur für Clientanwendungen und gemeinsames Dienstverhalten nur für dienstanwendungen. Um diese Bestätigung für Dienstanwendungen installieren zu können, muss es sich bei der Bestätigung um ein Dienstverhalten handeln. Weitere Informationen finden Sie unter den [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt.  
@@ -63,6 +63,6 @@ Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der S
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Sie können darüber hinaus die Elemente der Konfigurationsdatei verschlüsseln. Weitere Informationen finden Sie im Abschnitt "Siehe auch".  
   
-## <a name="see-also"></a>Siehe auch  
- [Verschlüsseln von konfigurationsdateielementen mit DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)  
- [Verschlüsseln von konfigurationsdateielementen mit RSA](https://go.microsoft.com/fwlink/?LinkId=94955)
+## <a name="see-also"></a>Siehe auch
+- [Verschlüsseln von konfigurationsdateielementen mit DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [Verschlüsseln von konfigurationsdateielementen mit RSA](https://go.microsoft.com/fwlink/?LinkId=94955)

@@ -2,12 +2,12 @@
 title: Konfigurieren von WCF-Diensten in Code
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 96bd9af7fcf22789b95b2efabbed6a19401b2d97
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d55c4994dfa322619f7e5e5911c23d68b439646a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718766"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurieren von WCF-Diensten in Code
 Windows Communication Foundation (WCF) können Entwickler Dienste mithilfe von Konfigurationsdateien oder Code konfigurieren.  Konfigurationsdateien sind nützlich, wenn ein Dienst konfiguriert werden muss, nachdem er bereitgestellt wurde. Bei der Verwendung von Konfigurationsdateien muss ein IT-Experte nur die Konfigurationsdatei aktualisieren, es ist keine Neukompilierung erforderlich. Konfigurationsdateien können jedoch komplex und schwierig zu pflegen sein. Das Debuggen von Konfigurationsdateien wird nicht unterstützt. Auf Konfigurationselemente wird über den Namen verwiesen, was die Erstellung von Konfigurationsdateien fehleranfällig und schwierig macht. WCF ermöglicht es auch die Konfiguration von Diensten in Code. In früheren Versionen von WCF (4.0 und früher) Konfigurieren von Diensten im Code in selbstgehosteten Szenarien einfach war die <xref:System.ServiceModel.ServiceHost> Klasse zulässig. Sie konfigurieren Endpunkte und Verhaltensweisen vor dem ServiceHost.Open aufgerufen wird. In webgehosteten Szenarien haben Sie jedoch keinen direkten Zugriff auf die <xref:System.ServiceModel.ServiceHost>-Klasse. Um einen webgehosteten Dienst zu konfigurieren, mussten Sie eine `System.ServiceModel.ServiceHostFactory` erstellen, durch die ein <xref:System.ServiceModel.Activation.ServiceHostFactory> erstellt und alle erforderlichen Konfigurationsschritte ausgeführt wurden. Ab .NET 4.5, bietet WCF eine einfachere Möglichkeit zum Konfigurieren Sie beide selbstgehostete und das Web gehostete Dienste im Code.  
@@ -93,15 +93,15 @@ public class Service1 : IService1
 > [!IMPORTANT]
 >  Beachten Sie, dass <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ignoriert <`host`> Einstellungen innerhalb der <`service`>-Tag von <`system.serviceModel`>. Im Prinzip <`host`> geht es um Hostkonfiguration, nicht-Dienstkonfiguration, und er ruft geladen, bevor die Configure-Methode ausgeführt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Diensten mit Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [Konfigurieren von Clientverhalten](../../../docs/framework/wcf/configuring-client-behaviors.md)  
- [Vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md)  
- [Konfiguration](../../../docs/framework/wcf/samples/configuration-sample.md)  
- [Konfigurationsbasierte Aktivierung unter IIS und WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
- [Konfiguration und Metadatenunterstützung](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  
- [Konfiguration](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
- [Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
- [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
- [Vorgehensweise: Angeben einer Clientbindung in einer Konfiguration](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+## <a name="see-also"></a>Siehe auch
+- [Konfigurieren von Diensten mit Konfigurationsdateien](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [Konfigurieren von Clientverhalten](../../../docs/framework/wcf/configuring-client-behaviors.md)
+- [Vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md)
+- [Konfiguration](../../../docs/framework/wcf/samples/configuration-sample.md)
+- [Konfigurationsbasierte Aktivierung unter IIS und WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
+- [Konfiguration und Metadatenunterstützung](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
+- [Konfiguration](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
+- [Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Vorgehensweise: Angeben einer Clientbindung in einer Konfiguration](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

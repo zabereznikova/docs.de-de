@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584200"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724342"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen
 Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellung von Benutzern mit Zugriff auf die zugrunde liegenden Daten, unabhängig davon, ob Sie sind [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] oder [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie die Datenbindung in hybridanwendungen verwenden können, die beide enthalten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente.  
@@ -38,7 +38,7 @@ Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellun
   
  Anschließend werden Sie verstehen, welche Rolle Datenbindungsfunktionen bei Hybridanwendungen spielen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:  
   
 -   Visual Studio.  
@@ -173,10 +173,10 @@ Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellun
   
 10. Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
- [Datenbindung im Beispiel für Hybrid-Anwendungen](https://go.microsoft.com/fwlink/?LinkID=159983)  
- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Datenbindung im Beispiel für Hybrid-Anwendungen](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

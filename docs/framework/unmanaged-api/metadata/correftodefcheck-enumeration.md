@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5caf432b5de7cb0c8ff0e6f53b3e79a64ecf802e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a54b20ecf34ecf1824420fcbb3d45fba64017b76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33443312"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657193"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck-Enumeration
 Gibt Flags an, mit denen gesteuert wird, welche Elemente, auf die verwiesen wird, zur Optimierung des Codes in ihre Definitionen konvertiert werden.  
@@ -42,18 +42,18 @@ typedef enum CorRefToDefCheck {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Gibt an, dass Typverweise und Elementverweise in Definitionen konvertiert werden soll. Dies ist der Standardwert (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefDefault`|Gibt an, dass Verweise auf Typen und memberverweisen auf Definitionen konvertiert werden sollen. Dies ist der Standardwert (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
 |`MDRefToDefAll`|Gibt an, dass alle referenzierten Elemente in Definitionen konvertiert werden soll.|  
-|`MDRefToDefNone`|Gibt an, dass keine referenzierten Elemente in Definitionen konvertiert werden soll.|  
-|`MDTypeRefToDef`|Gibt an, dass nur Typverweise Typdefinitionen konvertiert werden soll.|  
-|`MDMemberRefToDef`|Gibt an, dass nur Member verweisen auf Definitionen konvertiert werden sollen. D. h. sollte Elementverweisen Methodendefinitionen oder Felddefinitionen konvertiert werden.|  
+|`MDRefToDefNone`|Gibt an, dass keine Elemente auf die verwiesen wird, die in Definitionen konvertiert werden soll.|  
+|`MDTypeRefToDef`|Gibt an, dass nur Verweise auf Typen um zu Typdefinitionen konvertiert werden sollen.|  
+|`MDMemberRefToDef`|Gibt an, dass nur memberverweisen auf Definitionen konvertiert werden sollen. D. h. sollen Elementverweise Methodendefinitionen oder Felddefinitionen konvertiert werden.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

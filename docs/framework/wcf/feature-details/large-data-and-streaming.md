@@ -2,12 +2,12 @@
 title: Umfangreiche Daten und Streaming
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: a6c655e260aa75504e9a445458664b11d8e4d56d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674114"
 ---
 # <a name="large-data-and-streaming"></a>Umfangreiche Daten und Streaming
 Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfrastruktur. Da XML-Daten häufig in dem definierten im standard-Text-Format codiert ist die [XML 1.0-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=94838), vernetzte Systementwickler und Architekten sind in der Regel, sorgen die über das Netzwerk Speicherbedarf (oder Größe) der gesendeten Nachrichten über das Netzwerk und die textbasierte Codierung von XML stellt besondere Herausforderungen für die effiziente Übertragung binärer Daten dar.  
@@ -238,5 +238,5 @@ public class UploadStreamMessage
 > [!NOTE]
 >  Die Entscheidung über die Verwendung der gepufferten oder der Streamingübertragung wird lokal am Endpunkt getroffen. Bei HTTP-Übertragungen wird der Übertragungsmodus nicht über Verbindungen oder an Proxyserver oder andere Vermittler weitergegeben. Das Festlegen des Übertragungsmodus spiegelt sich nicht in der Beschreibung der Dienstschnittstelle wider. Nach dem Generieren eines WCF-Clients an einen Dienst, müssen Sie die Konfigurationsdatei für Dienste, die mit Streamingübertragungen verwendet werden, um den Modus festzulegen bearbeiten. Bei TCP und Named Pipe-Transporten wird der Übertragungsmodus als Richtlinienassertion weitergegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [So wird es gemacht: Aktivieren des Streamens](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Aktivieren des Streamens](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

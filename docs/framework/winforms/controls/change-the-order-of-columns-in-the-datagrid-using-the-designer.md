@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ändern der Reihenfolge von Spalten des DataGridView-Steuerelements in Windows Forms mithilfe des Designers'
+title: 'Vorgehensweise: Ändern der Reihenfolge der Spalten in der DataGridView-Steuerelement in Windows Forms mithilfe des Designers'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], order of
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Windows Forms, columns
 - data [Windows Forms], displaying
 ms.assetid: 7fe52a98-75d6-448c-97a5-65ca2c568c1a
-ms.openlocfilehash: 7ada2124c0cfb1a14d757963f186da90c553470e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b181deed966b2642670b7b5c8becb267c8a10b9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855504"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649790"
 ---
-# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Gewusst wie: Ändern der Reihenfolge von Spalten des DataGridView-Steuerelements in Windows Forms mithilfe des Designers
-Wenn Sie ein Windows Forms binden <xref:System.Windows.Forms.DataGridView> Steuerelement mit einer Datenquelle, die Anzeigereihenfolge von automatisch generierten Spalten hängt von der Datenquelle. Wenn diese Reihenfolge nicht, was Sie bevorzugen ist, können Sie die Reihenfolge der Spalten mithilfe des Designers ändern. Sie sollten auch das Steuerelement ungebundene Spalten hinzugefügt, und Ändern der angezeigten Reihenfolge. Informationen dazu, wie Sie programmgesteuert die Spaltenreihenfolge zu ändern, finden Sie unter [Vorgehensweise: Ändern der Reihenfolge von Spalten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).  
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Vorgehensweise: Ändern der Reihenfolge der Spalten in der DataGridView-Steuerelement in Windows Forms mithilfe des Designers
+Wenn Sie ein Windows Forms binden <xref:System.Windows.Forms.DataGridView> Steuerelement mit einer Datenquelle, die Anzeigereihenfolge von automatisch generierten Spalten hängt von der Datenquelle. Wenn diese Reihenfolge nicht, was Sie bevorzugen ist, können Sie die Reihenfolge der Spalten mithilfe des Designers ändern. Sie sollten auch das Steuerelement ungebundene Spalten hinzugefügt, und Ändern der angezeigten Reihenfolge. Informationen dazu, wie Sie programmgesteuert die Spaltenreihenfolge zu ändern, finden Sie unter [Vorgehensweise: Ändern Sie die Reihenfolge der Spalten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md).  
   
  Das folgende Verfahren erfordert eine **Windows-Anwendung** Projekt ein Formular mit eine <xref:System.Windows.Forms.DataGridView> Steuerelement. Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) und [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
@@ -30,8 +30,8 @@ Wenn Sie ein Windows Forms binden <xref:System.Windows.Forms.DataGridView> Steue
   
 3.  Klicken Sie auf den Pfeil nach oben oder nach-unten-Pfeil rechts neben der **ausgewählten Spalten** auflisten, bis die ausgewählte Spalte an der Position ist werden sollen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.DataGridView>  
- [Vorgehensweise: Hinzufügen und Entfernen von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
- [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)  
- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.DataGridView>
+- [Vorgehensweise: Hinzufügen und Entfernen von Spalten in der DataGridView-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Vorgehensweise: Create a New Windows Forms Application Project (Vorgehensweise: Erstellen Sie ein Windows-Anwendungsprojekt)](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)
+- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

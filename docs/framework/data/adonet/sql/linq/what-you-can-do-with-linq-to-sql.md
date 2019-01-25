@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: 719c2e5c97d3f8c64de53831ac50b2e7156a38fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c589ddbc7276ca13fc82513effd3bcae3cd61fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718740"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>Möglichkeiten von LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt alle wichtigen Funktionen, die Sie als SQL-Entwickler erwarten würden. Sie können Informationen abfragen und Informationen in Tabellen einfügen, aktualisieren und löschen.  
@@ -43,14 +43,14 @@ ms.locfileid: "33356417"
  Wenn Sie ein Element löschen möchten ( `Delete` ), entfernen Sie dieses aus der entsprechenden Auflistung, und rufen Sie dann <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext> auf, um die Änderung zu bestätigen.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kaskadierte Löschvorgänge werden nicht erkannt werden. Wenn Sie eine Zeile in einer Tabelle löschen möchten, verfügt, Einschränkungen, finden Sie unter [Vorgehensweise: Löschen von Zeilen aus der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+>  Kaskadierte Löschvorgänge werden von[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht erkannt. Wenn Sie eine Zeile in einer Tabelle löschen möchten, Einschränkungen, finden Sie unter [Vorgehensweise: Löschen von Zeilen aus der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
  Im folgenden Beispiel wird der Kunde mit der `CustomerID` `98128` aus der Datenbank abgerufen. Nach dem Bestätigen des Abrufs wird <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> aufgerufen, um das Objekt aus der Auflistung zu entfernen. Schließlich wird <xref:System.Data.Linq.DataContext.SubmitChanges%2A> aufgerufen, um die Löschung an die Datenbank weiterzuleiten.  
   
  [!code-csharp[DLinqGettingStarted#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#4)]
  [!code-vb[DLinqGettingStarted#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#4)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmierhandbuch](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
- [Erste Schritte](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmierhandbuch](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
+- [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [Erste Schritte](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

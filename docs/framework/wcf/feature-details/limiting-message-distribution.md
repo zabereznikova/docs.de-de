@@ -2,12 +2,12 @@
 title: Beschränken der Nachrichtenverteilung
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: bec5a28abeff23929d2c0f1c363f4e08872a63fa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3f660294bf9acea3ac5df7e0b4250885645a0835
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738645"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686763"
 ---
 # <a name="limiting-message-distribution"></a>Beschränken der Nachrichtenverteilung
 Der Peerkanal ist als Übertragungsnetz konzipiert. Das grundlegende Weitergabemodell umfasst die Verteilung jeder Nachricht, die von einem Mitglied eines Netzes gesendet wird, an alle anderen Mitglieder dieses Netzes. Dies ist besonders in Situationen von Vorteil, in denen jede von einem Mitglied generierte Nachricht für alle anderen Mitglieder relevant und hilfreich ist – beispielsweise in einem Chatraum. Bei vielen Anwendungen muss die Nachrichtenverteilung jedoch gelegentlich eingeschränkt werden. Tritt beispielsweise ein neues Mitglied dem Netz bei und möchte die letzte durch das Netz gesendete Nachricht abrufen, muss diese Anforderung nicht an alle Mitglieder des Netzes weitergeleitet werden. Die Anforderung kann auf nahe gelegene Nachbarn beschränkt werden, oder es können lokal generierte Nachrichten herausgefiltert werden. Nachrichten können auch an einen einzelnen Knoten des Netzes gesendet werden. In diesem Thema wird erläutert, wie mithilfe der Hopanzahl, eines Nachrichtenweitergabefilters, eines lokalen Filters oder einer Direktverbindung gesteuert werden kann, auf welche Weise Nachrichten innerhalb des Netzes weitergeleitet werden. Darüber hinaus finden Sie hier allgemeine Richtlinien für die Auswahl eines geeigneten Ansatzes.  
@@ -46,23 +46,23 @@ Der Peerkanal ist als Übertragungsnetz konzipiert. Das grundlegende Weitergabem
   
 -   **Wer**  
   
-    -   *Einzelner Knoten*: lokaler Filter oder direktverbindung.  
+    -   *Einzelner Knoten*:  Lokaler Filter oder direktverbindung.  
   
-    -   *Nachbarn innerhalb einer bestimmten Umgebung*: PeerHopCount.  
+    -   *Nachbarn innerhalb einer bestimmten Umgebung*:  PeerHopCount.  
   
-    -   *Komplexe Teilmenge des Netzes*: MessagePropagationFilter.  
+    -   *Komplexe Teilmenge des Netzes*:  MessagePropagationFilter.  
   
 -   **Wie oft**  
   
-    -   *Sehr häufig*: Direktverbindung, PeerHopCount, MessagePropagationFilter.  
+    -   *Sehr häufig*:  Direktverbindung, PeerHopCount, MessagePropagationFilter.  
   
-    -   *Gelegentlich*: lokaler Filter.  
+    -   *Occasional*:  Lokaler Filter.  
   
 -   **Nutzung der Netzwerkbandbreite**  
   
-    -   *Hohe*: Direktverbindung, MessagePropagationFilter oder lokalem Filter nicht ratsam.  
+    -   *Hohe*:  Direkte Verbindung, MessagePropagationFilter oder lokalem Filter nicht ratsam.  
   
-    -   *Niedrig*: beliebig; direktverbindung wahrscheinlich nicht erforderlich.  
+    -   *Niedrig*:  Beliebig; direktverbindung wahrscheinlich nicht erforderlich.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Peerkanalanwendung](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+## <a name="see-also"></a>Siehe auch
+- [Erstellen einer Peerkanalanwendung](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

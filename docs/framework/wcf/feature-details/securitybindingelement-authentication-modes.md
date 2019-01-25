@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 2b1601bd84e92b5a39c5c4c91fdfe67537720430
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b09b50d2db277d6aec325fb9305890f8e5be581c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658899"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement-Authentifizierungsmodi
 Windows Communication Foundation (WCF) bietet verschiedene Modi, die mit denen Clients und Dienste gegenseitig authentifizieren. Sie können Sicherheitsbindungselemente für diese Authentifizierungsmodi erstellen. Dazu verwenden Sie statische Methoden für die <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse oder führen eine entsprechende Konfiguration durch. In diesem Thema werden die 18 Authentifizierungsmodi kurz beschrieben.  
@@ -120,6 +120,6 @@ Windows Communication Foundation (WCF) bietet verschiedene Modi, die mit denen C
 ### <a name="usernameovertransport"></a>UserNameOverTransport  
  In diesem Authentifizierungsmodus authentifiziert sich der Client über ein Benutzernamentoken, das an der SOAP-Schicht als signiertes unterstützendes Token angezeigt wird. Dieses Token wird von der Nachrichtensignatur signiert. Der Dienst wird über ein X.509-Zertifikat auf der Transportschicht authentifiziert. Das Sicherheitsbindungselement ist ein von der `TransportSecurityBindingElement`-Methode zurückgegebenes <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A>. Legen Sie das `authenticationMode`-Attribut alternativ auf `UserNameOverTransport` fest.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>  
- [Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+- [Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82e798e1a31f771c63e71f2a85f8cbb684b237bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 330a159e056018d702eec7e4fef80c3d8e041212
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462389"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54630800"
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging-Methode
-Initialisiert in-Process-debugging-Unterstützung. Diese Methode ist veraltet in .NET Framework, Version 2.0.  
+Initialisiert in-Process-debugging-Unterstützung. Diese Methode ist in .NET Framework, Version 2.0, veraltet.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,22 +37,22 @@ HRESULT BeginInprocDebugging(
   
 #### <a name="parameters"></a>Parameter  
  `fThisThreadOnly`  
- [in] Legen Sie diesen Wert auf `true` Debuggingunterstützung für nur den aktuellen Thread initialisiert werden, legen Sie es auf `false` Debugunterstützung für alle Threads zu initialisieren.  
+ [in] Legen Sie diesen Wert auf `true` zum Initialisieren der debugging-Unterstützung für nur den aktuellen Thread; legen Sie ihn auf `false` Debuggingunterstützung für alle Threads zu initialisieren.  
   
  `pdwProfilerContext`  
- [out] Der Zeiger auf ein zurückgegebener Wert, der die Debugsitzung identifiziert.  
+ [out] Der Zeiger auf ein Rückgabewert, der die Debugsitzung identifiziert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die CLR-Debugdiensten unterstützt beschränkt prozessinternes Debuggen in .NET Framework, Version 1.0 und 1.1. Prozessinternes Debuggen aktiviert einen Profiler an die Inspektionsteile der Debug-API verwenden. Jedoch aufgrund von Kundenfeedback wurde prozessinternes Debuggen von .NET Framework Version 2.0 entfernt, und durch eine Reihe von Funktionen, die mehrere im Einklang mit den die profilerstellungs-API ersetzt.  
+ Die Debugdiensten der CLR unterstützt eingeschränkte prozessinternen Debuggens in .NET Framework, Version 1.0 und 1.1. In-Process-Debuggen aktiviert einen Profiler, die Prüfung Teile der Debug-API zu verwenden. Jedoch aufgrund von Kundenfeedback hat prozessinternen Debuggens wurden entfernt von .NET Framework Version 2.0, und mit einem Satz von Funktionen, die enger an die profilerstellungs-API ersetzt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
  **Bibliothek:** CorGuids.lib  
   
- **.NET Framework-Version:** 1.0  
+ **.NET Framework Version:** 1.0  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

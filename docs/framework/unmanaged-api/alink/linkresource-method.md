@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f75ebc3a40bddbaf2347b9ef559139888f83900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b0b5c6e70afffd12d3f0cdbbb92b20ac3a949e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401107"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635008"
 ---
 # <a name="linkresource-method"></a>LinkResource-Methode
 Links in einer Ressource.  
@@ -46,21 +46,21 @@ HRESULT LinkResource(
  Der Name der Datei.  
   
  `pszNewLocation`  
- Neuen Dateinamen optional. Wenn ungleich NULL, `pszFileName` in PszNewLocation kopiert werden.  
+ Neuer Dateiname optional. Wenn ungleich NULL, `pszFileName` PszNewLocation kopiert wird.  
   
  `pszResourceName`  
  Name der Ressource.  
   
  `dwFlags`  
- Eingabehilfen kennzeichnet, wie z. B. `mrPublic` und `mrPrivate`. Dieser Parameter kann übergeben werden, um [DefineManifestResource-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).  
+ Barrierefreiheit flags, z. B. `mrPublic` und `mrPrivate`. Dieser Parameter kann übergeben werden, um [DefineManifestResource-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md).  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h.  
+ Erfordert alink.h an.  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

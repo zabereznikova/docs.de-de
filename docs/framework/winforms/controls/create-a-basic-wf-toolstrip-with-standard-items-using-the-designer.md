@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen eines einfachen Windows Forms-ToolStrip mit Standardelementen im Designer'
+title: 'Vorgehensweise: Erstellen Sie ein einfachen Windows Forms-ToolStrip mit Standardelementen mithilfe des Designers'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 05ca122f425f929264669ca4914f87e850154246
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f36df117ee7bb7bcdb79ccb134c914288ec6903d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778359"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602675"
 ---
-# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Gewusst wie: Erstellen eines einfachen Windows Forms-ToolStrip mit Standardelementen im Designer
+# <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Vorgehensweise: Erstellen Sie ein einfachen Windows Forms-ToolStrip mit Standardelementen mithilfe des Designers
 Das folgende Verfahren veranschaulicht, wie eine <xref:System.Windows.Forms.ToolStrip> und fügen Sie sieben <xref:System.Windows.Forms.ToolStripButton> Steuerelemente, die typische Aufgaben darstellen.  
   
 > [!NOTE]
@@ -28,9 +28,9 @@ Das folgende Verfahren veranschaulicht, wie eine <xref:System.Windows.Forms.Tool
   
 3.  In der **ToolStrip-Aufgaben** Bereich wählen **Standardelemente einfügen**.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ToolStrip>  
- [Übersicht über das ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [Architektur des ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [Zusammenfassung der ToolStrip-Technologie](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ToolStrip>
+- [Übersicht über das ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [Architektur des ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+- [Zusammenfassung der ToolStrip-Technologie](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

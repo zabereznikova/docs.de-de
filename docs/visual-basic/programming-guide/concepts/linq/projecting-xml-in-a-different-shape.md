@@ -2,12 +2,12 @@
 title: Projektieren von XML in eine andere Form (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: d5fe201b14bdfa81bd4c750e17eaef6ba6e895f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9df05ff8c9dc43de861675b4780fcbdca6881bf8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645654"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609719"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projektieren von XML in eine andere Form (Visual Basic)
 In diesem Thema wird anhand eines Beispiels gezeigt, wie Sie XML in eine andere Form als das Quell-XML projizieren können.  
@@ -17,7 +17,7 @@ In diesem Thema wird anhand eines Beispiels gezeigt, wie Sie XML in eine andere 
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel verarbeitet ein WordprocessingML-Dokument, indem es die Absatzknoten aus einem WordprocessingML-Dokument abruft. Außerdem identifiziert es die Formatvorlage und den Text der einzelnen Absätze. Schließlich projiziert das Beispiel XML mit einer anderen Form. Das Beispiel baut auf den vorherigen Beispielen dieses Lernprogramms auf. Die neue Anweisung, die die Projektion ausführt, wird im Code unten durch entsprechende Kommentare gekennzeichnet.  
   
- Anweisungen für das Quelldokument in diesem Beispiel erstellen, finden Sie unter [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Anweisungen zum Erstellen des Quelldokuments für dieses Beispiel finden Sie [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
@@ -232,5 +232,5 @@ End Module
   
 -   [Suchen von Text in Word-Dokumenten (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Lernprogramm: Bearbeiten von Inhalt in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Siehe auch
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

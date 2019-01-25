@@ -8,12 +8,12 @@ helpviewer_keywords:
 - visual layer [WPF], DrawingVisual objects
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
-ms.openlocfilehash: 799892424f92782d71b9a35e76d722d1725815ea
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0d4ba3939a95b665684713f3b1775bacd3d028b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675068"
 ---
 # <a name="using-drawingvisual-objects"></a>Verwenden von DrawingVisual-Objekten
 Dieses Thema enthält eine Übersicht über die Verwendung von <xref:System.Windows.Media.DrawingVisual> Objekte in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visuellen Ebene.  
@@ -51,9 +51,9 @@ Dieses Thema enthält eine Übersicht über die Verwendung von <xref:System.Wind
   
  Die folgende Liste beschreibt die zwei Elemente, die Sie überschreiben müssen:  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Gibt ein untergeordnetes Element am angegebenen Index aus der Auflistung der untergeordneten Elemente.  
+-   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Gibt ein untergeordnetes Element am angegebenen Index aus der Auflistung der untergeordneten Elemente zurück.  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Ruft die Anzahl der sichtbaren untergeordneten Elemente innerhalb dieses Elements.  
+-   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Ruft die Anzahl der sichtbaren untergeordneten Elemente innerhalb dieses Elements ab.  
   
  Im folgenden Beispiel überschreibt, für die beiden <xref:System.Windows.FrameworkElement> Member werden implementiert.  
   
@@ -69,8 +69,8 @@ Dieses Thema enthält eine Übersicht über die Verwendung von <xref:System.Wind
  [!code-csharp[DrawingVisualSample#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#103)]
  [!code-vb[DrawingVisualSample#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#103)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.DrawingVisual>  
- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Treffertests in der visuellen Ebene](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.DrawingVisual>
+- <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
+- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Treffertests in der visuellen Ebene](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)

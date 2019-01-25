@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -noconfig compiler option [Visual Basic]
 - /noconfig compiler option [Visual Basic]
 ms.assetid: a7405067-bd21-4171-adf4-a126fa3ad6c3
-ms.openlocfilehash: bce2d98a8915e80cdecd7b67029b0c872cf70140
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a5663fff6f7351272a78947d364458c83e5b8af1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687595"
 ---
 # <a name="-noconfig"></a>-noconfig
 Gibt an, dass der Compiler nicht automatisch die häufig verwendeten verweisen sollten [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Assemblys oder Import der `System` und `Microsoft.VisualBasic` Namespaces.  
@@ -35,8 +35,8 @@ Gibt an, dass der Compiler nicht automatisch die häufig verwendeten verweisen s
 > [!NOTE]
 >  Die `-noconfig` Option ist nicht in der Visual Studio-Entwicklungsumgebung verfügbar, sondern nur, wenn Sie über die Befehlszeile kompilieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)  
- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)  
- [@ (Antwortdatei festlegen)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)  
- [-Referenz (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+## <a name="see-also"></a>Siehe auch
+- [-nostdlib (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nostdlib.md)
+- [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
+- [@ (Antwortdatei festlegen)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)
+- [-Referenz (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)

@@ -17,11 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a53b0a9cdcec33846f9d491e7d6567bcf9235b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f2a05009caed7bef6da9edee57a4a54b876b18f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580992"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication-Funktion
 Startet die Anwendung im angegebenen Netzwerkpfad, wobei die angegebenen Manifeste und sonstigen Anwendungsdaten verwendet werden.  
@@ -50,28 +51,28 @@ HRESULT CorLaunchApplication (
  [in] Der vollständige Name der Anwendung, die gestartet wird.  
   
  `dwManifestPaths`  
- [in] Die Anzahl der Manifestdatei Pfade für die Anwendung.  
+ [in] Die Anzahl der Manifestspfade für die Anwendung.  
   
  `ppwzManifestPaths`  
- [in] Ein Array von Zeichenfolgen, von denen jedes einen Pfad zu einem Manifest für die Anwendung angibt, die gestartet wird.  
+ [in] Ein Array von Zeichenfolgen, von denen jede einen Pfad zu einem Anwendungsmanifest für die Anwendung angibt, das gestartet wird.  
   
  `dwActivationData`  
- [in] Die Anzahl der Aktivierung der Datenelemente für die Anwendung, die gestartet wird.  
+ [in] Die Anzahl der Aktivierung von Datenelementen für die Anwendung, die gestartet wird.  
   
  `ppwzActivationData`  
- [in] Ein Array von Zeichenfolgen, von denen jeder ein Aktivierungsdatenelement für die Anwendung ist, die gestartet wird.  
+ [in] Ein Array von Zeichenfolgen, von denen jede eine Aktivierung-Datenelement für die Anwendung ist, das gestartet wird.  
   
  `lpProcessInformation`  
- [out] Ein Zeiger auf Informationen über den Prozess, in dem die Anwendung geladen wurde.  
+ [out] Ein Zeiger auf die Informationen über den Prozess, in dem die Anwendung geladen wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

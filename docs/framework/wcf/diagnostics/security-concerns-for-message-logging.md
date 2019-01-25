@@ -2,12 +2,12 @@
 title: Sicherheitsaspekte für Nachrichtenprotokollierung
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 5ed2529d82c3994a245d2132909cd1e88b6ed62d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188806"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54731997"
 ---
 # <a name="security-concerns-for-message-logging"></a>Sicherheitsaspekte für Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in Nachrichtenprotokollen verfügbar gemacht zu werden, wie auch Ereignisse, die von der Nachrichtenprotokollierung generiert werden.  
@@ -99,16 +99,16 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
 ## <a name="events-triggered-by-message-logging"></a>Von Nachrichtenprotokollierung ausgelöste Ereignisse  
  Im Folgenden werden alle Ereignisse aufgelistet, die von der Nachrichtenprotokollierung ausgelöst werden.  
   
--   Nachrichtenprotokollierung ein: Dieses Ereignis wird ausgegeben, wenn Nachrichtenprotokollierung in der Konfiguration aktiviert wird, oder durch WMI. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde aktiviert". Vertrauliche Informationen werden möglicherweise in Klartext protokolliert, auch wenn sie bei der Übertragung verschlüsselt waren (beispielsweise Nachrichtentext).  
+-   Nachrichtenprotokollierung auf: Dieses Ereignis wird ausgegeben, wenn die nachrichtenprotokollierung, in der Konfiguration oder über WMI aktiviert ist. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde aktiviert". Vertrauliche Informationen werden möglicherweise in Klartext protokolliert, auch wenn sie bei der Übertragung verschlüsselt waren (beispielsweise Nachrichtentext).  
   
--   Nachrichtenprotokollierung aus: Dieses Ereignis wird ausgegeben, wenn Nachrichtenprotokollierung durch WMI deaktiviert ist. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde deaktiviert".  
+-   Nachrichtenprotokollierung aus: Dieses Ereignis wird ausgegeben, wenn nachrichtenprotokollierung durch WMI deaktiviert ist. Der Inhalt des Ereignisses ist "Die Nachrichtenprotokollierung wurde deaktiviert".  
   
--   Protokollieren von bekannten PII ein: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII aktiviert ist. In diesem Fall bei der `enableLoggingKnownPii` -Attribut in der `machineSettings` -Element der Datei "Machine.config" festgelegt ist, um `true`, und die `logKnownPii` Attribut des der `source` Element in der Datei App.config oder Web.config-Datei auf festgelegtist`true`.  
+-   Melden Sie sich bekannten PII ein: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII aktiviert ist. In diesem Fall bei der `enableLoggingKnownPii` -Attribut in der `machineSettings` -Element der Datei "Machine.config" festgelegt ist, um `true`, und die `logKnownPii` Attribut des der `source` Element in der Datei App.config oder Web.config-Datei auf festgelegtist`true`.  
   
--   Protokollieren von bekannten PII nicht zugelassen: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII nicht zugelassen ist. In diesem Fall bei der `logKnownPii` Attribut des der `source` Element in der Datei App.config oder Web.config-Datei wird festgelegt, um `true`, aber die `enableLoggingKnownPii` -Attribut in der `machineSettings` -Element der Datei Machine.config auf festgelegtist`false`. Es werden keine Ausnahmen ausgelöst.  
+-   Melden Sie sich bekannten PII nicht zugelassen: Dieses Ereignis wird ausgegeben, wenn das Protokollieren von bekanntem PII nicht zugelassen wird. In diesem Fall bei der `logKnownPii` Attribut des der `source` Element in der Datei App.config oder Web.config-Datei wird festgelegt, um `true`, aber die `enableLoggingKnownPii` -Attribut in der `machineSettings` -Element der Datei Machine.config auf festgelegtist`false`. Es werden keine Ausnahmen ausgelöst.  
   
  Diese Ereignisse können im Windows-integrierten Tool der Ereignisanzeige angezeigt werden. Weitere Informationen hierzu finden Sie unter [Ereignisprotokollierung](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
- [Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+## <a name="see-also"></a>Siehe auch
+- [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)
+- [Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

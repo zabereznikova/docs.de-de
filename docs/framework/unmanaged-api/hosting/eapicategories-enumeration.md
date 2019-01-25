@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f25348410387a7b0e03ef897e8534336baeb126a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 50aa116fc1f5377254a8a6a128d0240c57cb52b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597566"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories-Enumeration
-Beschreibt die Kategorien von Funktionen, die der Host ausführen in teilweise vertrauenswürdigem Code blockieren kann.  
+Beschreibt die Kategorien von Funktionen, die der Host blockieren kann, Ausführen in teilweise vertrauenswürdigen Code.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,32 +48,32 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`eAll`|Gibt an, dass alle verwalteten Klassen und Member, die von anderen abgedeckt werden `EApiCategories` Felder gehindert werden in teilweise vertrauenswürdigem Code ausgeführt wird.|  
-|`eExternalProcessMgmt`|Gibt an, dass verwaltete Klassen und Member, die Erstellung, Bearbeitung und Zerstörung von externen Prozessen ermöglichen, Ausführen in teilweise vertrauenswürdigem Code gesperrt werden.|  
-|`eExternalThreading`|Gibt an, dass verwaltete Klassen und Member, die die Erstellung, Bearbeitung und Zerstörung von externen Threads ermöglichen ausführen in teilweise vertrauenswürdigem Code gesperrt werden.|  
-|`eMayLeakOnAbort`|Gibt an, dass verwaltete Typen und Member, die beim Abbruch zu Speicherverlusten potenziell konnte ausführen in teilweise vertrauenswürdigem Code gesperrt werden.|  
+|`eAll`|Gibt an, dass alle verwalteten Klassen und Member, die von anderen abgedeckt werden `EApiCategories` Felder ausführen in teilweise vertrauenswürdigen Code blockiert werden.|  
+|`eExternalProcessMgmt`|Gibt an, dass verwaltete Klassen und Member, die die Erstellung, Bearbeitung und Löschung von externen Prozessen zu ermöglichen, an der Ausführung in teilweise vertrauenswürdigem Code gehindert werden.|  
+|`eExternalThreading`|Gibt an, dass verwaltete Klassen und Member, mit denen die Erstellung, Bearbeitung und Zerstörung von externen Threads blockiert werden, Ausführen in teilweise vertrauenswürdigen Code.|  
+|`eMayLeakOnAbort`|Gibt an, dass verwaltete Typen und Member, die möglicherweise bei Abbruch Speicherverlust könnte blockiert werden, Ausführen in teilweise vertrauenswürdigen Code.|  
 |`eNoCategory`|Gibt an, dass keine Kategorien für verwalteten Code für die Ausführung in teilweise vertrauenswürdigem Code gehindert werden.|  
 |`eSecurityInfrastructure`|Gibt an, dass die common Language Runtime (CLR)-Security-Infrastruktur blockiert werden, von teilweise vertrauenswürdigem Code verwendet werden.|  
-|`eSelfAffectingProcessMgmt`|Gibt an, dass verwaltete Klassen und Member, deren Funktionen gehosteten Prozess auswirken können, Ausführen in teilweise vertrauenswürdigem Code gesperrt werden.|  
-|`eSelfAffectingThreading`|Gibt an, dass verwaltete Klassen und Member, deren Funktionen Threads im gehosteten Prozess auswirken können, Ausführen in teilweise vertrauenswürdigem Code gesperrt werden.|  
-|`eSharedState`|Gibt an, dass verwaltete Klassen und Member, die gemeinsam verwendete Zustände verfügbar machen ausführen in teilweise vertrauenswürdigem Code gesperrt werden.|  
-|`eSynchronization`|Gibt an, dass die common Language Runtime-Klassen und Member, mit die Benutzercode Sperren können ausführen in teilweise vertrauenswürdigem Code gesperrt werden.|  
-|`eUI`|Gibt an, dass verwaltete Klassen und Member, die zugelassen oder erfordern menschliche Interaktion ausführen in teilweise vertrauenswürdigem Code gesperrt werden.|  
+|`eSelfAffectingProcessMgmt`|Gibt an, dass verwaltete Klassen und Member, deren Funktionen gehosteten Prozess auswirken können, an der Ausführung in teilweise vertrauenswürdigem Code gehindert werden.|  
+|`eSelfAffectingThreading`|Gibt an, dass verwaltete Klassen und Member, deren Funktionen Threads im Prozess gehosteten auswirken können, an der Ausführung in teilweise vertrauenswürdigem Code gehindert werden.|  
+|`eSharedState`|Gibt an, dass verwaltete Klassen und Member, die gemeinsam genutzten Zustand verfügbar zu machen, an der Ausführung in teilweise vertrauenswürdigem Code gehindert werden.|  
+|`eSynchronization`|Gibt an, dass die common Language Runtime-Klassen und Member, mit denen Benutzercode, der Sperren beibehält, an der Ausführung in teilweise vertrauenswürdigem Code gehindert werden.|  
+|`eUI`|Gibt an, dass verwaltete Klassen und Member, die zulassen, oder erfordern menschliche Interaktion ausführen in teilweise vertrauenswürdigen Code blockiert werden.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die [ICLRHostProtectionManager:: SetProtectedCategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) Methode nimmt einen Parameter vom Typ `EApiCategories`.  
   
- Die `EApiCategories` Enumeration und die `SetProtectedCategories` Methode beziehen sich direkt auf die verwaltete <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> Klasse. Die verwaltete Klasse wird verwendet, mit der <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> Enumeration, deren Werte direkt entsprechen der `EApiCategories` Werte zu markieren von verwalteten Typen und Membern, die Funktionen, die Kategorien, die durch beschrieben entspricht verfügbar machen `EApiCategories`.  
+ Die `EApiCategories` Enumeration und die `SetProtectedCategories` Methode beziehen sich direkt an die verwaltete <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> Klasse. Die verwaltete Klasse wird verwendet, mit der <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> -Enumeration, deren Werte direkt entsprechen der `EApiCategories` -Werten, um verwaltete Typen und Member, die Funktionen von beschriebenen Kategorien verfügbar machen `EApiCategories`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** "Mscoree.dll"  
+ **Bibliothek:** MSCorEE.dll  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRHostProtectionManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRHostProtectionManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)
+- [Hosten von Enumerationen](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

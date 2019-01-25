@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen (Visual Basic)'
+title: 'Vorgehensweise: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring property names [Visual Basic]
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 80127c05d56162397cfa421122ddd9698750b376
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67cc9e85d249365a7b4b7636c99766087314622d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596858"
 ---
-# <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Gewusst wie: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen (Visual Basic)
+# <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Vorgehensweise: Ableiten von Eigenschaftennamen und Typen in Deklarationen von anonymen Typen (Visual Basic)
 Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von Eigenschaften bereit. Die Typen aller Eigenschaften werden abgeleitet. Im folgenden Beispiel werden die Typen von `Name` und `Price` direkt aus den Werten abgeleitet, mit denen sie initialisiert werden.  
   
  [!code-vb[VbVbalrAnonymousTypes#1](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_1.vb)]  
@@ -120,8 +120,8 @@ Anonyme Typen stellen keinen Mechanismus zum direkten Angeben der Datentypen von
   
      [!code-vb[VbVbalrAnonymousTypes#16](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/how-to-infer-property-names-and-types-in-anonymous-type-declarations_10.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Key](../../../../visual-basic/language-reference/modifiers/key.md)
+## <a name="see-also"></a>Siehe auch
+- [Objektinitialisierer: Benannte und anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Key](../../../../visual-basic/language-reference/modifiers/key.md)

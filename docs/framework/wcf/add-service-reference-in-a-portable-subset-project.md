@@ -2,12 +2,12 @@
 title: Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: dd07ab5623a66f7ad4b666955027adcaea232db4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121141"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681013"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 Projekte für Portable Teilmengen ermöglichen .NET Assembly-Programmierern, die eine einzelne Quellstruktur zu verwalten und Buildsystem Unterstützung mehrerer .NET Implementierungen (Desktop, Silverlight, Windows Phone und XBOX). Projekte für Portable Teilmengen verweisen nur auf .NET portable Bibliotheken, die eine .NET Framework-Assembly sind, die auf jeder .NET-Implementierung verwendet werden kann.  
@@ -43,6 +43,6 @@ Projekte für Portable Teilmengen ermöglichen .NET Assembly-Programmierern, die
   
 14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> wird in Projekten für portable Teilmengen nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Portable Klassenbibliothek](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)
+## <a name="see-also"></a>Siehe auch
+- [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Portable Klassenbibliothek](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

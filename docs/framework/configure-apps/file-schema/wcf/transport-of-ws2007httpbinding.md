@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; von &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: fe015fa308821519419a97a26bb5f57a6b4ab0cd
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 6f09a71a7ec7dbfae5eb6f1896f1fba68456973f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148616"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54642593"
 ---
 # <a name="lttransportgt-of-ltws2007httpbindinggt"></a>&lt;transport&gt; von &lt;ws2007HttpBinding&gt;
 Definiert die Authentifizierungseinstellungen für den HTTP-Transport.  
@@ -16,8 +16,8 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
 \<bindings>  
 \<ws2007HttpBinding>  
 \<binding>  
-\<Sicherheit >  
-\<Transport >  
+\<security>  
+\<transport>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -72,13 +72,13 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Gibt die Sicherheitsfunktionen von der [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) Element.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>  
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
+- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -16,16 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea34c4087014091b92d6227177a2f08209cc2e10
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570878"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx-Funktion
-Ruft den Anzeigenamen nach der Richtlinie für eine Assembly ab.  
+Ruft den Anzeigenamen für die nach der Richtlinie für eine Assembly ab.  
   
- Diese Funktion unterstützt die .NET Framework-Infrastruktur und sollte nicht direkt aus Ihrem Code verwendet werden.  
+ Diese Funktion unterstützt die .NET Framework-Infrastruktur und nicht direkt aus Ihrem Code verwendet werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,13 +46,13 @@ HRESULT PreBindAssemblyEx (
  [in] Gibt den Anwendungskontext.  
   
  `pName`  
- [in] Identifiziert den Assemblynamen.  
+ [in] Bezeichnet den Assemblynamen an.  
   
  `pAsmParent`  
  [in] Identifiziert die übergeordnete Assembly. Dieser Parameter wird ignoriert.  
   
  `pwzRuntimeVersion`  
- [in] Identifiziert die Laufzeitversion an.  
+ [in] Identifiziert die Runtimeversion der Common Language.  
   
  `ppNamePostPolicy`  
  [out] Enthält den Anzeigenamen nach der Richtlinie an.  
@@ -60,16 +61,16 @@ HRESULT PreBindAssemblyEx (
  [in] Für zukünftige Erweiterungen reserviert. `pvReserved` ein null-Verweis muss sein.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ppNamePostPolicy` Output-Parameter festgelegt ist, nur, wenn die Funktion HRESULT FUSION_E_REF_DEF_MISMATCH zurückgibt. Es ist, andernfalls null.  
+ Die `ppNamePostPolicy` Output-Parameter wird nur festgelegt, wenn die Funktion HRESULT FUSION_E_REF_DEF_MISMATCH zurückgibt. Es ist, andernfalls null.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Fusion.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

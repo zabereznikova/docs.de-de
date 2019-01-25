@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 5735b5104884a702a649a029116be7446424ec67
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b304b28aa7d43a33111c49507bf02f004fcdd9c6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480995"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603842"
 ---
 # <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Typ des Members &#39; &lt;Membername&gt; &#39; ist nicht CLS-kompatibel.
 Der Datentyp angegeben werden, für die dieses Element ist nicht Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS). Dies ist kein Fehler in der Komponente, da die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] und Visual Basic unterstützt diesen Datentyp. Allerdings kann in eine andere Komponente, die in streng CLS-kompatiblem Code geschrieben diesen Datentyp nicht unterstützt. Eine solche Komponente möglicherweise nicht erfolgreich mit der Komponente interagieren können.  
@@ -27,7 +27,7 @@ Der Datentyp angegeben werden, für die dieses Element ist nicht Teil der [Sprac
   
 -   [UShort-Datentyp](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
- Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen aus, oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Standardmäßig ist diese Meldung eine Warnung. Weitere Informationen zum Ausblenden von Warnungen oder zum Behandeln von Warnungen als Fehler finden Sie unter [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
  **Fehler-ID:** BC40025  
   
@@ -41,6 +41,6 @@ Der Datentyp angegeben werden, für die dieses Element ist nicht Teil der [Sprac
   
 -   Beachten Sie beim Verbinden mit Automatisierungs- oder COM-Objekten, dass einige Typen über andere Datenbreiten als im [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] verfügen. Zum Beispiel umfasst `uint` in anderen Umgebungen oft 16 Bits. Wenn Sie ein 16-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `UShort` anstelle von `UInteger` in verwaltetem Visual Basic-Code.  
   
-## <a name="see-also"></a>Siehe auch  
- [Reflexion](../../../framework/reflection-and-codedom/reflection.md)  
- 
+## <a name="see-also"></a>Siehe auch
+- [Reflexion](../../../framework/reflection-and-codedom/reflection.md)
+

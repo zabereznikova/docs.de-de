@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Filtern von Abfrageergebnissen unter Verwendung von LINQ (Visual Basic)'
+title: 'Vorgehensweise: Filtern von Abfrageergebnissen unter Verwendung von LINQ (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - filtering [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: f9854650b1f89a2330cfa81910187e3fb01c54b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d0260e53be421d36cdc8d351d30d7f8a4ac4fa84
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684170"
 ---
-# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Gewusst wie: Filtern von Abfrageergebnissen unter Verwendung von LINQ (Visual Basic)
+# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Vorgehensweise: Filtern von Abfrageergebnissen unter Verwendung von LINQ (Visual Basic)
 Language Integrated Query (LINQ) erleichtert den Zugriff auf Informationen und Ausführen von Abfragen.  
   
  Das folgende Beispiel zeigt, wie Sie eine neue Anwendung zu erstellen, führt Abfragen in SQL Server-Datenbank und filtert die Ergebnisse nach einem bestimmten Wert mithilfe, der `Where` Klausel. Weitere Informationen finden Sie unter [Where-Klausel](../../../../visual-basic/language-reference/queries/where-clause.md).  
@@ -77,8 +77,8 @@ Language Integrated Query (LINQ) erleichtert den Zugriff auf Informationen und A
   
      [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
   
-## <a name="see-also"></a>Siehe auch  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Abfragen](../../../../visual-basic/language-reference/queries/index.md)  
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
- [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
+## <a name="see-also"></a>Siehe auch
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Abfragen](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

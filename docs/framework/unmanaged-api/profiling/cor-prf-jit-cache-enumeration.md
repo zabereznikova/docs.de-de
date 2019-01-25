@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8c972bcace3ba3d855a3b5eebc16e6b76994eb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6aaa334c83aff18886c0c2db4462d6baaa4cd70f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450703"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687413"
 ---
 # <a name="corprfjitcache-enumeration"></a>COR_PRF_JIT_CACHE-Enumeration
 Zeigt das Ergebnis einer zwischengespeicherten Funktionssuche.  
   
 > [!NOTE]
->  `COR_PRF_CACHED_FUNCTION_FOUND` hat den Wert 0 (null), sodass `COR_PRF_JIT_CACHE` kann nicht als boolescher Ersatzzeichen verwendet werden.  
+>  `COR_PRF_CACHED_FUNCTION_FOUND` hat den Wert 0 (null), also `COR_PRF_JIT_CACHE` kann nicht als boolesches Ersatzzeichen verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,11 +42,11 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_FUNCTION_FOUND`|Die Suche wurde die Funktion gefunden.|  
-|`COR_PRF_FUNCTION_NOT_FOUND`|Die Suche hat die Funktion nicht gefunden.|  
+|`COR_PRF_FUNCTION_FOUND`|Die Suche finden Sie die Funktion.|  
+|`COR_PRF_FUNCTION_NOT_FOUND`|Die Suche wurde die Funktion nicht gefunden werden.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -54,5 +54,5 @@ typedef enum {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

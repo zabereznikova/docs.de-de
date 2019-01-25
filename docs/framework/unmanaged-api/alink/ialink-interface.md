@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b93dd3b1d08a939e03ccfa52f7fb2e97c97d7e96
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408592"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600088"
 ---
 # <a name="ialink-interface"></a>IALink-Schnittstelle
-Hilft beim Erstellen von .NET Framework-Assemblys. Unter anderem enthält die Schnittstelle Methoden, die beim Schreiben von Assemblymanifesten für Assemblys mit mehreren Modulen und Signieren von Assemblys mit starken Namen erstellen NETMODULE-Dateien unterstützen.  
+Unterstützt beim Erstellen von .NET Framework-Assemblys. Unter anderem enthält die Schnittstelle Methoden, die beim Schreiben von Manifesten für Assemblys mit mehreren Modulen, Signieren von Assemblys mit starken Namen und das Erstellen einer NETMODULE-Datei unterstützen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [AddFile-Methode1](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
@@ -75,7 +75,7 @@ Hilft beim Erstellen von .NET Framework-Assemblys. Unter anderem enthält die Sc
   
  [SetNonAssemblyFlags-Methode](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Siehe auch
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

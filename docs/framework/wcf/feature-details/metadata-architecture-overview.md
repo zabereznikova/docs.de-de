@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: d0fc45b5ccabedb127061090eed1f6b63fd7acba
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199150"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664199"
 ---
 # <a name="metadata-architecture-overview"></a>Übersicht über die Metadatenarchitektur
 Windows Communication Foundation (WCF) bietet eine umfangreiche Infrastruktur für das Exportieren, veröffentlichen, abrufen und Import von Dienstmetadaten. WCF-Dienste mithilfe von Metadaten um zu beschreiben, wie mit den Endpunkten des Diensts zu interagieren, sodass Tools, wie Svcutil.exe, automatisch Clientcode für den Zugriff auf den Dienst generieren können.  
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Infrastruktur f�
 > [!CAUTION]
 > Wenn Sie der Konfigurationsdatei Ihrer Anwendung einen MEX-Endpunkt hinzufügen und anschließend dem Diensthost im Code das <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Element hinzufügen, wird sinngemäß folgende Ausnahme ausgegeben:  
 >
-> System.InvalidOperationException: Der Vertragsname "IMetadataExchange" wurde nicht in der Liste der von Dienst "Service1" implementierten Verträge gefunden. Fügen Sie der Konfigurationsdatei oder dem ServiceHost ein ServiceMetadataBehavior-Element hinzu, um die Unterstützung des Vertrags zu aktivieren.  
+> System.InvalidOperationException: Der Vertragsname "IMetadataExchange" konnte nicht in der Liste der vom Dienst "Service1" implementierten Verträge gefunden werden. Fügen Sie der Konfigurationsdatei oder dem ServiceHost ein ServiceMetadataBehavior-Element hinzu, um die Unterstützung des Vertrags zu aktivieren.  
 >
 > Fügen Sie der Konfigurationsdatei das <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Element hinzu, oder fügen Sie den Endpunkt und das <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Element im Code hinzu, um das Problem zu umgehen.  
 >
@@ -71,7 +71,7 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Infrastruktur f�
   
  Standardmäßig wird eine <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Instanz an eine einzelne <xref:System.ServiceModel.Channels.ChannelFactoryBase>-Instanz gebunden. Sie können die <xref:System.ServiceModel.Channels.ChannelFactoryBase>-Instanz, die von einem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> verwendet wird, durch Überschreiben der virtuellen <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A>-Methode ändern oder ersetzen. Ebenso können Sie die <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>-Instanz, die von einem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zur Erstellung von HTTP/GET-Anforderungen verwendet wird, durch Überschreiben der virtuellen <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType>-Methode ändern oder ersetzen.  
   
- Sie können Dienstmetadaten mit WS-MetadataExchange- oder HTTP/GET-Anforderungen, indem Sie das Tool Svcutil.exe und übergeben Abrufen der **/target:metadata** Switches und einer Adresse. Svcutil.exe lädt die Metadaten von der angegebenen Adresse herunter und speichert die Dateien auf dem Datenträger. Svcutil.exe verwendet intern eine <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Instanz und lädt die MEX-Endpunktkonfiguration, deren Name mit dem Schema der an Svcutil.exe als Eingabe weitergegebenen Adresse übereinstimmt, aus der Anwendungskonfigurationsdatei, sofern vorhanden. Andernfalls verwendet Svcutil.exe standardmäßig eine der Bindungen, die durch den statischen <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Factorytyp definiert werden.  
+ Sie können Dienstmetadaten mit WS-MetadataExchange- oder HTTP/GET-Anforderungen, indem Sie das Tool Svcutil.exe und übergeben Abrufen der **/target:metadata** Switches und einer Adresse. Svcutil.exe lädt die Metadaten von der angegebenen Adresse herunter und speichert die Dateien auf dem Datenträger. Svcutil.exe verwendet intern eine <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Instanz und lädt die MEX-Endpunktkonfiguration, deren Name mit dem Schema der an Svcutil.exe als Eingabe weitergegebenen Adresse übereinstimmt, aus der Anwendungskonfigurationsdatei, sofern vorhanden. Andernfalls verwendet „Svcutil.exe“ standardmäßig eine der Bindungen, die durch den statischen <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Factorytyp definiert werden.  
   
 ## <a name="importing-service-metadata"></a>Importieren von Dienstmetadaten  
  In WCF ist Metadatenimport der Prozess der Generierung einer abstrakten Darstellung eines Diensts oder seiner Komponenten aus dessen Metadaten. WCF kann importieren, z. B. <xref:System.ServiceModel.Description.ServiceEndpoint> Instanzen <xref:System.ServiceModel.Channels.Binding> Instanzen oder <xref:System.ServiceModel.Description.ContractDescription> Instanzen aus einem WSDL-Dokument für einen Dienst. Verwenden Sie zum Importieren von Metadaten von Diensten in WCF eine Implementierung der <xref:System.ServiceModel.Description.MetadataImporter> abstrakte Klasse. Von abgeleiteten Typen dem <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> Klasse implementieren die Unterstützung für das Importieren von Metadaten-Formate, die die WS-Richtlinie nutzen Logik in WCF zu importieren.  
@@ -87,12 +87,12 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Infrastruktur f�
 ## <a name="dynamic-bindings"></a>Dynamische Bindungen  
  Sie können die Bindung, die zum Erstellen eines Kanals zu einem Dienstendpunkt verwendet wird, dynamisch aktualisieren, wenn sich die Bindung für den Endpunkt ändert oder wenn Sie einen Kanal zu einem Endpunkt erstellen möchten, der den gleichen Vertrag verwendet, aber über eine andere Bindung verfügt. Sie können mithilfe der statischen <xref:System.ServiceModel.Description.MetadataResolver>-Klasse zur Laufzeit Metadaten für Dienstendpunkte abrufen und importieren, die einen bestimmten Vertrag implementieren. Mit den importierten <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>-Objekten können Sie einen Client oder eine Kanalfactory für den gewünschten Endpunkt erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Description>  
- [Metadatenformate](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
- [Exportieren und Importieren von Metadaten](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  
- [Veröffentlichen von Metadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)  
- [Abrufen von Metadaten](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)  
- [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
- [Sicherheitsüberlegungen für Metadaten](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
- [Erweitern des Metadatensystems](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Description>
+- [Metadatenformate](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
+- [Exportieren und Importieren von Metadaten](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)
+- [Veröffentlichen von Metadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)
+- [Abrufen von Metadaten](../../../../docs/framework/wcf/feature-details/retrieving-metadata.md)
+- [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+- [Sicherheitsüberlegungen für Metadaten](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
+- [Erweitern des Metadatensystems](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)

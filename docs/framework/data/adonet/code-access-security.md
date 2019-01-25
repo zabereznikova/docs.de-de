@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: a5e5826dddbf60e92a50fd4f83322e7c1062f636
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fcba4ea556d1f5036c2bbd0beaeb5f349dec4e36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144870"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688105"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -194,8 +194,8 @@ Failed, as expected: Request failed.
   
  .NET Framework unterstützt den Zugriff durch COM-Interop, um die Abwärtskompatibilität zu vorhandenen COM-Komponenten sicherzustellen. Sie können COM-Komponenten in eine .NET Framework-Anwendung einbauen, indem Sie die entsprechenden COM-Typen mit den COM-Interop-Tools importieren. Nach dem Import sind die COM-Typen einsatzbereit. COM-Interop ermöglicht es COM-Clients auch, auf verwalteten Code zuzugreifen, indem Assemblymetadaten in eine Typbibliothek exportiert und die verwalteten Komponenten als COM-Komponente registriert werden. Weitere Informationen finden Sie unter [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
-## <a name="see-also"></a>Siehe auch  
- [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [PAVE Security in Native and .NET Framework Code (PAVE-Sicherheit in nativem und .NET Framework-Code)](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Rollenbasierte Sicherheit](../../../../docs/standard/security/role-based-security.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [PAVE Security in Native and .NET Framework Code (PAVE-Sicherheit in nativem und .NET Framework-Code)](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)
+- [Rollenbasierte Sicherheit](../../../../docs/standard/security/role-based-security.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

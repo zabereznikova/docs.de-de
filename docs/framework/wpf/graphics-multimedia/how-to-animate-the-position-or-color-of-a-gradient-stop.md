@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Animieren der Position oder Farbe eines Farbverlaufunterbrechungspunkts'
+title: 'Vorgehensweise: Animieren der Position oder Farbe eines Farbverlaufunterbrechungspunkts'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - animation [WPF], color of GradientStop objects
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
-ms.openlocfilehash: fcbb546b64810416d3f7dbe052da77b7bc941e7a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 48f10d418c4f584fd9d24f9292efbca5a941643c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711137"
 ---
-# <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Gewusst wie: Animieren der Position oder Farbe eines Farbverlaufunterbrechungspunkts
+# <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Vorgehensweise: Animieren der Position oder Farbe eines Farbverlaufunterbrechungspunkts
 Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.GradientStop.Color%2A> und <xref:System.Windows.Media.GradientStop.Offset%2A> von <xref:System.Windows.Media.GradientStop> Objekte.  
   
 ## <a name="example"></a>Beispiel  
@@ -39,7 +39,7 @@ Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.Gradient
   
  Weitere Beispiele finden Sie unter den [Pinselbeispiel](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.GradientStop>  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.GradientStop>
+- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

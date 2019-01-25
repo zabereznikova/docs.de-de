@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a79133b117f3a718dd84af6c2144a6098bc79f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ef46c066512caac93f5f0cb189152d2cac6dada
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407231"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633842"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase-Methode
-Ruft die Basis Speicheradresse für das angegebene Bild ab.  
+Ruft die Basis Speicheradresse des angegebenen Bilds ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,16 +38,16 @@ HRESULT GetImageBase (
   
 #### <a name="parameters"></a>Parameter  
  `imagePath`  
- [in] Der Dateiname des Bilds, einschließlich ihres Pfads.  
+ [in] Der Dateiname des Bilds, einschließlich des Pfads.  
   
  `baseAddress`  
  [out] Ein Zeiger auf eine CLRDATA_ADDRESS, die Basisadresse des Bilds speichert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Bilddateinamen kann oder möglicherweise keinen Pfad. Wenn kein Pfad angegeben wird, erfolgt für den gesamten Pfad übereinstimmenden; Abgleich ist hingegen nur auf den Dateinamen ausgeführt.  
+ Der Namen der Abbilddatei kann oder möglicherweise keinen Pfad aufweisen. Wenn kein Pfad angegeben ist, erfolgt für den gesamten Pfad übereinstimmenden; andernfalls Übereinstimmung nur auf den Dateinamen erfolgt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** ClrData.idl, ClrData.h  
   
@@ -55,5 +55,5 @@ HRESULT GetImageBase (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66b2b9d6fb3f6379abb92fe081f36b487f9df234
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b54f5bb47135bcf56c91cd07b916c959e75b9fb5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54745305"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam-Methode
 Erstellt eine Definition für einen generischen Typparameter, und ruft ein Token an den generischen Typparameter ab.  
@@ -43,7 +43,7 @@ HRESULT DefineGenericParam (
   
 #### <a name="parameters"></a>Parameter  
  `tk`  
- [in] Ein `mdTypeDef` oder `mdMethodDef` Token, das die Methode oder der Konstruktor für die Definition eines generischen Parameters darstellt.  
+ [in] Ein `mdTypeDef` oder `mdMethodDef` Token, das die Methode oder der Konstruktor für das Definieren eines generischen Parameters darstellt.  
   
  `ulParamSeq`  
  [in] Der Index des generischen Parameters.  
@@ -58,20 +58,20 @@ HRESULT DefineGenericParam (
  [in] Dieser Parameter ist für zukünftige Erweiterungen reserviert.  
   
  `rtkConstraints`  
- [in] Ein Null endendes Array von typeinschränkungen. Arraymember muss ein `mdTypeDef`, `mdTypeRef`, oder `mdTypeSpec` Metadatentoken.  
+ [in] Ein NULL-terminierte Array von Einschränkungen. Arraymember muss ein `mdTypeDef`, `mdTypeRef`, oder `mdTypeSpec` Metadatentoken.  
   
  `pgp`  
  [out] Ein Token, das den generischen Parameter darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MsCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: ee4005d6f7d8899b19b2bcc5c62501570165f03e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3f53c9889e1fdae6c582e8d4a17f640e425e6594
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734434"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Erstellen eines DataView-Objekts (LINQ to DataSet)
-Es gibt zwei Möglichkeiten, im <xref:System.Data.DataView>-Kontext eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zu erstellen. Sie können das <xref:System.Data.DataView>-Objekt auf der Grundlage einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage einer <xref:System.Data.DataTable> erstellen, oder Sie können es auf der Grundlage einer typisierten oder nicht typisierten <xref:System.Data.DataTable> erstellen. In beiden Fällen erstellen Sie die <xref:System.Data.DataView> mithilfe eines der <xref:System.Data.DataTableExtensions.AsDataView%2A> Erweiterungsmethoden. <xref:System.Data.DataView> ist nicht direkt-Kontext der [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Kontext.  
+Es gibt zwei Möglichkeiten, im <xref:System.Data.DataView>-Kontext eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zu erstellen. Sie können das <xref:System.Data.DataView>-Objekt auf der Grundlage einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage einer <xref:System.Data.DataTable> erstellen, oder Sie können es auf der Grundlage einer typisierten oder nicht typisierten <xref:System.Data.DataTable> erstellen. In beiden Fällen erstellen Sie die <xref:System.Data.DataView> mithilfe eines der <xref:System.Data.DataTableExtensions.AsDataView%2A> Erweiterungsmethoden. <xref:System.Data.DataView> konstruierbar ist; nicht direkt in die [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Kontext.  
   
  Nachdem die <xref:System.Data.DataView> erstellt wurde, können Sie sie an ein Benutzeroberflächensteuerelement in einer Windows Forms-Anwendung oder einer ASP.NET-Anwendung binden oder die Filter- und Sortiereinstellungen ändern.  
   
@@ -45,18 +45,18 @@ Es gibt zwei Möglichkeiten, im <xref:System.Data.DataView>-Kontext eine [!INCLU
   
 -   <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
- Wenn eine <xref:System.Data.DataView> aus einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage erstellt wird, muss die <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>-Methode die in der Abfrage zuletzt aufgerufene Methode sein. Dies wird gezeigt, im folgenden Beispiel erstellt eine <xref:System.Data.DataView> von onlinebestellungen nach Gesamtbetrag sortiert:  
+ Wenn eine <xref:System.Data.DataView> aus einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage erstellt wird, muss die <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>-Methode die in der Abfrage zuletzt aufgerufene Methode sein. Dies wird gezeigt, im folgenden Beispiel erstellt eine <xref:System.Data.DataView> von onlinebestellungen, die nach Gesamtbetrag sortiert:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- Sie können auch die zeichenfolgenbasierten <xref:System.Data.DataView.RowFilter%2A> und <xref:System.Data.DataView.Sort%2A> Eigenschaften zu filtern und Sortieren ein <xref:System.Data.DataView> nachdem er aus einer Abfrage erstellt wurde. Beachten Sie, dass dabei die von der Abfrage geerbten Sortierungs- und Filterinformationen gelöscht werden. Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage erstellt, bei der nur die Einträge angezeigt werden, bei denen der Nachname mit "S" beginnt. Die zeichenfolgenbasierte <xref:System.Data.DataView.Sort%2A>-Eigenschaft ist so eingerichtet, dass die Nachnamen in aufsteigender Reihenfolge und dann die Vornamen in absteigender Reihenfolge sortiert werden:  
+ Sie können auch die zeichenfolgenbasierte <xref:System.Data.DataView.RowFilter%2A> und <xref:System.Data.DataView.Sort%2A> Eigenschaften zum Filtern und Sortieren eine <xref:System.Data.DataView> nachdem es von einer Abfrage erstellt wurde. Beachten Sie, dass dabei die von der Abfrage geerbten Sortierungs- und Filterinformationen gelöscht werden. Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage erstellt, bei der nur die Einträge angezeigt werden, bei denen der Nachname mit "S" beginnt. Die zeichenfolgenbasierte <xref:System.Data.DataView.Sort%2A>-Eigenschaft ist so eingerichtet, dass die Nachnamen in aufsteigender Reihenfolge und dann die Vornamen in absteigender Reihenfolge sortiert werden:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
   
 ## <a name="creating-a-dataview-from-a-datatable"></a>Erstellen einer "DataView" aus einer "DataTable"  
- Zusätzlich zu erstellende aus einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfrage eine <xref:System.Data.DataView> Objekt kann erstellt werden, eine <xref:System.Data.DataTable> mithilfe der <xref:System.Data.DataTableExtensions.AsDataView%2A> Methode.  
+ Zusätzlich zu erstellenden aus eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfrage eine <xref:System.Data.DataView> Objekt kann erstellt werden, aus einer <xref:System.Data.DataTable> mithilfe der <xref:System.Data.DataTableExtensions.AsDataView%2A> Methode.  
   
  Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage der <legacyBold>SalesOrderDetail</legacyBold>-Tabelle erstellt und dann als Datenquelle eines <xref:System.Windows.Forms.BindingSource>-Objekts festgelegt. Dieses Objekt fungiert als Proxy für ein <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
@@ -70,7 +70,7 @@ Es gibt zwei Möglichkeiten, im <xref:System.Data.DataView>-Kontext eine [!INCLU
   
  Wenn die <xref:System.Data.DataView.RowFilter%2A> auf der Grundlage einer Abfrage erstellt wurde, kommt es jedoch beim Einrichten der Eigenschaft <xref:System.Data.DataView.Sort%2A> bzw. <xref:System.Data.DataView> zu einem Leistungsabfall, weil <xref:System.Data.DataView> einen Index generiert, um die Filter- und Sortieroperationen zu unterstützen. Wenn Sie die Eigenschaft <xref:System.Data.DataView.RowFilter%2A> oder <xref:System.Data.DataView.Sort%2A> festlegen, wird der Index für die Daten neu erstellt, wodurch zusätzlicher Verwaltungsmehraufwand für die Anwendung entsteht und die Arbeitsgeschwindigkeit verringert wird. Es ist daher empfehlenswert, die Filter- und Sortierinformationen schon beim Erstellen der <xref:System.Data.DataView> einzurichten und nachträgliche Änderungen zu vermeiden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbindung und LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
- [Filtern mit DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- [Sortieren mit DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+## <a name="see-also"></a>Siehe auch
+- [Datenbindung und LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+- [Filtern mit DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [Sortieren mit DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

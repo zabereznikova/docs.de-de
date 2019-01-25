@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Abfangen von Datendienstnachrichten (WCF Data Services)'
+title: 'Vorgehensweise: Abfangen von Datendienstnachrichten (WCF Data Services)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 9d79a9ca27470512105b3a04d681906aa365d7e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5fdbaa25f55caf3de2f0591b7258d4a7dcb1b7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355759"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586396"
 ---
-# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Gewusst wie: Abfangen von Datendienstnachrichten (WCF Data Services)
-Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Anforderungsnachrichten abfangen, damit Sie einem Vorgang benutzerdefinierte Logik hinzufügen können. Zum Abfangen einer Nachricht verwenden Sie besonders attributierte Methoden im Datendienst. Weitere Informationen finden Sie unter [Interceptors](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>Vorgehensweise: Abfangen von Datendienstnachrichten (WCF Data Services)
+Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Anforderungsnachrichten abfangen, damit Sie einem Vorgang benutzerdefinierte Logik hinzufügen können. Zum Abfangen einer Nachricht, verwenden Sie besonders attributierte Methoden im Datendienst. Weitere Informationen finden Sie unter [Interceptors](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).  
   
  In dem Beispiel in diesem Thema wird der Northwind-Beispieldatendienst verwendet. Dieser Dienst wird erstellt, Sie nach Beendigung der [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
@@ -44,7 +44,7 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Anfo
      [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
 ## <a name="example"></a>Beispiel  
- In diesem Beispiel wird eine Abfrage-Interceptor-Methode für die `Orders`-Entitätenmenge definiert, die einen Lambda-Ausdruck zurückgibt. Dieser Ausdruck enthält einen Delegaten, der die angeforderten `Orders` auf Grundlage verknüpfter `Customers` filtert, die einen bestimmten Kontaktnamen haben. Der Name wird wiederum auf Grundlage des anfordernden Benutzers bestimmt. In diesem Beispiel wird davon ausgegangen, dass der Datendienst innerhalb einer ASP.NET-Webanwendung gehostet wird, die WCF verwendet, und dass die Authentifizierung aktiviert ist. Die <xref:System.Web.HttpContext>-Klasse wird verwendet, um das Prinzip der aktuellen Anforderung abzurufen.  
+ In diesem Beispiel wird eine Abfrage-Interceptor-Methode für die `Orders`-Entitätenmenge definiert, die einen Lambdaausdruck zurückgibt. Dieser Ausdruck enthält einen Delegaten, der die angeforderten `Orders` auf Grundlage verknüpfter `Customers` filtert, die einen bestimmten Kontaktnamen haben. Der Name wird wiederum auf Grundlage des anfordernden Benutzers bestimmt. In diesem Beispiel wird davon ausgegangen, dass der Datendienst innerhalb einer ASP.NET-Webanwendung gehostet wird, die WCF verwendet, und dass die Authentifizierung aktiviert ist. Die <xref:System.Web.HttpContext>-Klasse wird verwendet, um das Prinzip der aktuellen Anforderung abzurufen.  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptor)]
  [!code-vb[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptor)]  
@@ -55,6 +55,6 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Anfo
  [!code-csharp[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptor)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptor)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Definieren eines Dienstvorgangs](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Definieren eines Dienstvorgangs](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

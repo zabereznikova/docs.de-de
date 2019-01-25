@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f18fcd5be15794449cc6c60d5217db702159e34d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11afa2900ef2db857942e95d0b184f99b1e9c947
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436662"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741807"
 ---
 # <a name="icorthreadpoolcorcallorqueueuserworkitem-method"></a>ICorThreadpool::CorCallOrQueueUserWorkItem-Methode
 Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
@@ -38,13 +38,13 @@ HRESULT CorCallOrQueueUserWorkItem (
 ```  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorThreadpool-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorThreadpool-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)

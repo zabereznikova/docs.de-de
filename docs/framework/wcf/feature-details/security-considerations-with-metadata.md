@@ -2,21 +2,21 @@
 title: Sicherheitsüberlegungen für Metadaten
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 4afa040744b1b1a8a25addb954d5785436899434
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187594"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585564"
 ---
 # <a name="security-considerations-with-metadata"></a>Sicherheitsüberlegungen für Metadaten
 Wenn Sie die Metadaten-Features in Windows Communication Foundation (WCF) verwenden, sollten Sie die Sicherheitsaspekte bei der Veröffentlichung, abrufen und verwenden die Metadaten des Diensts.  
   
 ## <a name="when-to-publish-metadata"></a>Veröffentlichen von Metadaten  
- WCF-Dienste veröffentlichen Metadaten nicht standardmäßig. Zum Veröffentlichen von Metadaten für einen WCF-Dienst müssen Sie explizit Veröffentlichen von Metadaten durch das Hinzufügen von metadatenendpunkten zu Ihrem Dienst aktivieren (siehe [Veröffentlichungsmetadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Wird das Veröffentlichen von Metadaten nicht aktiviert, bietet der Dienst eine geringere Angriffsfläche, und auch das Risiko der ungewollten Preisgabe von Informationen ist geringer. Metadaten müssen nicht von allen Diensten veröffentlicht werden. Wenn keine Metadaten veröffentlicht werden müssen, können Sie die Funktion auch deaktiviert lassen. Beachten Sie, dass Sie weiterhin Metadaten sowie Clientcode direkt über die Dienstassemblys mit generieren können die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Weitere Informationen zur Verwendung von Svcutil.exe zum Exportieren von Metadaten finden Sie unter [Vorgehensweise: Verwenden Sie Svcutil.exe zum Export von Metadaten aus kompilierten Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
+ WCF-Dienste veröffentlichen Metadaten nicht standardmäßig. Zum Veröffentlichen von Metadaten für einen WCF-Dienst müssen Sie explizit Veröffentlichen von Metadaten durch das Hinzufügen von metadatenendpunkten zu Ihrem Dienst aktivieren (siehe [Veröffentlichungsmetadaten](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)). Wird das Veröffentlichen von Metadaten nicht aktiviert, bietet der Dienst eine geringere Angriffsfläche, und auch das Risiko der ungewollten Preisgabe von Informationen ist geringer. Metadaten müssen nicht von allen Diensten veröffentlicht werden. Wenn keine Metadaten veröffentlicht werden müssen, können Sie die Funktion auch deaktiviert lassen. Beachten Sie, dass Sie weiterhin Metadaten sowie Clientcode direkt über die Dienstassemblys mit generieren können die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Weitere Informationen zur Verwendung von Svcutil.exe zum Exportieren von Metadaten finden Sie unter [Vorgehensweise: Verwenden von Svcutil.exe zum Exportieren von Metadaten aus kompiliertem Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md).  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>Veröffentlichen von Metadaten unter Verwendung einer sicheren Bindung  
- Die Metadaten-standardbindungen, die WCF stellt nicht sicher sind, und sie können anonymen Zugriff auf die Metadaten auf. Die Metadaten des Diensts, die ein WCF-Dienst veröffentlicht enthält eine ausführliche Beschreibung des Diensts und kann absichtlich oder unabsichtlich vertrauliche Informationen enthalten. So können in den Dienstmetadaten beispielsweise Informationen zu Infrastrukturvorgängen enthalten sein, die nicht für eine Veröffentlichung bestimmt sind. Mithilfe einer sicheren Bindung für den Metadatenendpunkt können die Dienstmetadaten vor nicht autorisiertem Zugriff geschützt werden. Metadatenendpunkte reagieren auf HTTP/GET-Anforderungen, von denen Secure Sockets Layer (SSL) zum Sichern der Metadaten verwendet werden kann. Weitere Informationen finden Sie unter [wie: sichere Metadatenendpunkte](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+ Die Metadaten-standardbindungen, die WCF stellt nicht sicher sind, und sie können anonymen Zugriff auf die Metadaten auf. Die Metadaten des Diensts, die ein WCF-Dienst veröffentlicht enthält eine ausführliche Beschreibung des Diensts und kann absichtlich oder unabsichtlich vertrauliche Informationen enthalten. So können in den Dienstmetadaten beispielsweise Informationen zu Infrastrukturvorgängen enthalten sein, die nicht für eine Veröffentlichung bestimmt sind. Mithilfe einer sicheren Bindung für den Metadatenendpunkt können die Dienstmetadaten vor nicht autorisiertem Zugriff geschützt werden. Metadatenendpunkte reagieren auf HTTP/GET-Anforderungen, von denen Secure Sockets Layer (SSL) zum Sichern der Metadaten verwendet werden kann. Weitere Informationen finden Sie unter [Vorgehensweise: Sichere Metadatenendpunkte](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
  Das Sichern der Metadatenendpunkte hat zudem den Vorteil, dass Dienstmetadaten auf sichere Weise und ohne Manipulations- oder Spoofinggefahr abgerufen werden können.  
   
@@ -38,6 +38,6 @@ Wenn Sie die Metadaten-Features in Windows Communication Foundation (WCF) verwen
 ## <a name="protecting-application-configuration-files"></a>Schützen von Anwendungskonfigurationsdateien  
  Mithilfe der Anwendungskonfigurationsdatei eines Diensts kann gesteuert werden, ob und auf welche Weise Metadaten veröffentlicht werden. Es empfiehlt sich, die Anwendungskonfigurationsdatei mit geeigneten Zugriffssteuerungslisten (Access Control Lists, ACLs) zu schützen, um so den Schutz vor Einstellungsänderungen durch einen möglichen Angreifer sicherzustellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Sichere Metadatenendpunkte](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
- [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Sichere Metadatenendpunkte](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18db77b42af47b76bf1b3b66748d586c4c41dbd7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f107847ddd48805f4779ff94c4e436a176688030
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699024"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain-Methode
-Legt die Eigenschaften, die verwendet werden, um die Standardanwendungsdomäne zu initialisieren.  
+Legt die Eigenschaften, die zum Initialisieren der Standardanwendungsdomäne verwendet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ HRESULT SetPropertiesForDefaultAppDomain(
  [in] Die Anzahl der Einträge im `pwszPropertyNames` und `pwszPropertyValues`.  
   
  `pwszPropertyNames`  
- [in] Ein Array von Namen von Eigenschaften oder Null, wenn keine Eigenschaften vorhanden sind. Derzeit ist der einzige Eigenschaftenname, der von dieser Methode erkannt wird, "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".  
+ [in] Ein Array von Eigenschaftennamen oder Null, wenn keine Eigenschaften vorhanden sind. Derzeit ist der einzige Eigenschaftenname, der von dieser Methode erkannt wird, "PARTIAL_TRUST_VISIBLE_ASSEMBLIES".  
   
  `pwszPropertyValues`  
  [in] Ein Array von Eigenschaftswerten oder Null, wenn keine Eigenschaften vorhanden sind.  
@@ -51,20 +51,20 @@ HRESULT SetPropertiesForDefaultAppDomain(
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` enthält einen Eigenschaftsnamen, der von dieser Methode nicht erkannt wird.|  
+|HRESULT_FROM_WIN32(ERROR_UNKNOWN_PROPERTY)|`pwszPropertyNames` enthält einen Eigenschaftennamen an, der von dieser Methode nicht erkannt wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Der Eigenschaftswert für "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" ist eine Liste der Assemblys, die bedingte <xref:System.Security.AllowPartiallyTrustedCallersAttribute> -Attribut (APTCA) mit dem <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> -Flag, das in der standardanwendung für teilweise vertrauenswürdige Aufrufer sichtbar gemacht werden sollen Domäne.  
+ Der Eigenschaftswert für "PARTIAL_TRUST_VISIBLE_ASSEMBLIES" ist eine Liste der Assemblys, die bedingte <xref:System.Security.AllowPartiallyTrustedCallersAttribute> -Attribut (APTCA), mit der <xref:System.Security.PartialTrustVisibilityLevel.NotVisibleByDefault?displayProperty=nameWithType> -Flag, das in der standardanwendung für teilweise vertrauenswürdige Aufrufer sichtbar gemacht werden sollen die Domäne.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MetaHost.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [ICLRDomainManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRDomainManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)

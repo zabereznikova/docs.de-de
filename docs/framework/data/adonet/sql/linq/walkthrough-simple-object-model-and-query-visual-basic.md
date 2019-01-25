@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: f2df0dfa039fa37fd9d9b471d28b2a03f06b3037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6d00271f412829cb8e030c2b9a338f73327977b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365734"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724173"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (Visual Basic)
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mit minimaler Komplexität bereit. Sie erstellen eine Entitätsklasse, die die Customers-Tabelle in der Beispieldatenbank Northwind modelliert. Sie erstellen dann eine einfache Abfrage, um Kunden aus London aufzulisten.  
@@ -20,7 +20,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
  Diese exemplarische Vorgehensweise wurde mithilfe von Visual Basic-Entwicklungseinstellungen geschrieben.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
   
 -   Diese exemplarische Vorgehensweise verwendet einen dedizierten Ordner ("c:\linqtest") als Speicherort für Dateien. Erstellen Sie diesen Ordner, bevor Sie die exemplarische Vorgehensweise starten.  
   
@@ -42,13 +42,13 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 -   Ausführen der Abfrage und Prüfen der Ergebnisse  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Erstellen einer LINQ to SQL-Lösung  
- In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projektmappe, enthält die erforderlichen Verweise zur Erstellung und Ausführung, einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt.  
+ In dieser ersten Aufgabe erstellen Sie eine Visual Studio-Projektmappe, die die erforderlichen Verweise zur Erstellung und Ausführung enthält eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekt.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>So erstellen Sie eine LINQ to SQL-Lösung  
   
 1.  Klicken Sie im Menü **Datei** auf **Neues Projekt**.  
   
-2.  In der **-Projekttypen** im Bereich der **neues Projekt** (Dialogfeld), klicken Sie auf **Visual Basic**.  
+2.  In der **Projekttypen** im Bereich der **neues Projekt** Dialogfeld klicken Sie auf **Visual Basic**.  
   
 3.  Klicken Sie im Bereich **Vorlagen** auf **Konsolenanwendung**.  
   
@@ -57,17 +57,17 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 5.  Klicken Sie auf **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Hinzufügen von LINQ-Verweisen und Anweisungen  
- Diese exemplarische Vorgehensweise verwendet Assemblys, die im Projekt u. U. nicht standardmäßig installiert sind. Wenn `System.Data.Linq` nicht als Verweis im Projekt aufgeführt (klicken Sie auf **alle Dateien anzeigen** in **Projektmappen-Explorer** und erweitern Sie die **Verweise** Knoten), fügen Sie es, wie beschrieben die folgenden Schritte aus.  
+ Diese exemplarische Vorgehensweise verwendet Assemblys, die im Projekt u. U. nicht standardmäßig installiert sind. Wenn `System.Data.Linq` ist nicht als Verweis im Projekt aufgeführt (klicken Sie auf **alle Dateien anzeigen** in **Projektmappen-Explorer** und erweitern Sie die **Verweise** Knoten), fügen Sie, wie beschrieben hinzu die folgenden Schritte aus.  
   
 #### <a name="to-add-systemdatalinq"></a>So fügen Sie System.Data.Linq hinzu  
   
 1.  In **Projektmappen-Explorer**, mit der rechten Maustaste **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.  
   
-2.  In der **Verweis hinzufügen** (Dialogfeld), klicken Sie auf **.NET**, klicken Sie auf die System.Data.Linq-Assembly, und klicken Sie dann auf **OK**.  
+2.  In der **Verweis hinzufügen** Dialogfeld klicken Sie auf **.NET**, klicken Sie auf die System.Data.Linq-Assembly, und klicken Sie dann auf **OK**.  
   
      Dem Projekt wird die Assembly hinzugefügt.  
   
-3.  Auch in der **Verweis hinzufügen** (Dialogfeld), klicken Sie auf **.NET**, einen Bildlauf zu, und klicken Sie auf "System.Windows.Forms", und klicken Sie dann auf **OK**.  
+3.  Auch in der **Verweis hinzufügen** Dialogfeld klicken Sie auf **.NET**, scrollen Sie zu, und klicken Sie auf "System.Windows.Forms" und klicken Sie dann auf **OK**.  
   
      Dem Projekt wird diese Assembly, die das Meldungsfeld in der exemplarischen Vorgehensweise unterstützt, hinzugefügt.  
   
@@ -76,7 +76,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
      [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]  
   
 ## <a name="mapping-a-class-to-a-database-table"></a>Zuordnen einer Klasse zu einer Datenbanktabelle.  
- In diesem Schritt erstellen Sie eine Klasse und ordnen diese einer Datenbanktabelle zu. Eine solche Klasse spricht man ein *Entitätsklasse*. Beachten Sie, dass die Zuordnung durch Hinzufügen des <xref:System.Data.Linq.Mapping.TableAttribute>-Attributs erreicht wird. Die <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>-Eigenschaft gibt den Namen der Tabelle in der Datenbank an.  
+ In diesem Schritt erstellen Sie eine Klasse und ordnen diese einer Datenbanktabelle zu. Eine solche Klasse wird als bezeichnet ein *Entitätsklasse*. Beachten Sie, dass die Zuordnung durch Hinzufügen des <xref:System.Data.Linq.Mapping.TableAttribute>-Attributs erreicht wird. Die <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>-Eigenschaft gibt den Namen der Tabelle in der Datenbank an.  
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>So erstellen Sie eine Entitätsklasse und weisen diese einer Datenbanktabelle zu  
   
@@ -113,7 +113,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
      [!code-vb[DLinqWalk1VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#4)]  
   
 ## <a name="creating-a-simple-query"></a>Erstellen einer einfachen Abfrage  
- In diesem Schritt erstellen Sie eine Abfrage, um zu ermitteln, welche Kunden in der Customers-Datenbanktabelle aus London stammen. Im Abfragecode in diesem Schritt wird nur die Abfrage beschrieben. Die Abfrage wird nicht ausgeführt. Dieser Ansatz wird als bezeichnet *verzögerte Ausführung*. Weitere Informationen finden Sie unter [Introduction to LINQ queries (C#) (Einführung in LINQ-Abfragen (C#))](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+ In diesem Schritt erstellen Sie eine Abfrage, um zu ermitteln, welche Kunden in der Customers-Datenbanktabelle aus London stammen. Im Abfragecode in diesem Schritt wird nur die Abfrage beschrieben. Die Abfrage wird nicht ausgeführt. Dieser Ansatz wird bezeichnet als *verzögerte Ausführung*. Weitere Informationen finden Sie unter [Introduction to LINQ queries (C#) (Einführung in LINQ-Abfragen (C#))](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
  Sie erzeugen auch eine Protokollausgabe, um die SQL-Befehle anzuzeigen, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erzeugt. Diese Protokolllierungsfunktion (die <xref:System.Data.Linq.DataContext.Log%2A> verwendet), eignet sich für das Debugging. Sie stellt außerdem sicher, dass die an die Datenbank übergebenen Befehle Ihre Abfrage genau wiedergeben.  
   
@@ -135,22 +135,22 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 2.  Drücken Sie F5, um die Anwendung zu debuggen.  
   
     > [!NOTE]
-    >  Wenn die Anwendung einen Laufzeitfehler erzeugt, finden Sie im Abschnitt Problembehandlung der [lernen durch Exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+    >  Wenn die Anwendung einen Laufzeitfehler erzeugt, finden Sie im Abschnitt zur Problembehandlung [lernen durch Exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
      Das Meldungsfeld zeigt eine Liste von sechs Kunden an. Das Konsolenfenster zeigt den generierten SQL-Code an.  
   
-3.  Klicken Sie auf **OK** auf das Meldungsfeld zu schließen.  
+3.  Klicken Sie auf **OK**, um das Meldungsfeld zu schließen.  
   
      Die Anwendung wird geschlossen.  
   
-4.  Auf der **Datei** Menü klicken Sie auf **alle speichern**.  
+4.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
      Sie benötigen diese Anwendung, wenn Sie mit der nächsten exemplarischen Vorgehensweise fortfahren.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Die [Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) Thema fortgesetzt wird, in dieser exemplarischen Vorgehensweise endet. Die beziehungsübergreifenden Abfragen zeigt, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tabellenübergreifende Abfragen ausführt, ähnlich wie *Joins* in einer relationalen Datenbank.  
+ Die [Exemplarische Vorgehensweise: Erstellen von Abfragen für Beziehungen (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) -Thema schließt, in dieser exemplarischen Vorgehensweise endet. Die exemplarische Vorgehensweise zu beziehungsübergreifenden Abfragen zeigt, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] können Abfragen auf Tabellen, ähnlich wie *Joins* in einer relationalen Datenbank.  
   
  Wenn Sie die exemplarische Vorgehensweise zu beziehungsübergreifenden Abfragen absolvieren möchten, stellen Sie sicher, dass Sie die gerade erstellte Lösung speichern, da diese benötigt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>Siehe auch
+- [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

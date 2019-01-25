@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7deab95db2e7ccfd167f3158f0f008c6b077a012
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 932d4ecbf34a636d37a60af0ba11f3fc149ffcea
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649647"
 ---
 # <a name="icordebugobjectvalueisvalueclass-method"></a>ICorDebugObjectValue::IsValueClass-Methode
-Ruft einen Wert, der angibt, ob dieser Objektwert ein Werttyp ist.  
+Ruft einen Wert, der angibt, ob der Wert dieses Objekts ein Werttyp ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,10 +37,10 @@ HRESULT IsValueClass (
   
 #### <a name="parameters"></a>Parameter  
  `pbIsValueClass`  
- [out] Ein Zeiger auf einen booleschen Wert, der `true` der Objektwert dargestellt, die von diesem "ICorDebugObjectValue" ist ein Werttyp, anstatt einen Referenztyp darstellt; andernfalls `pbIsValueClass` ist `false`.  
+ [out] Ein Zeiger auf einen booleschen Wert, der `true` der Objektwert, der von diesem "ICorDebugObjectValue" dargestellten ist ein Werttyp, anstatt einen Verweistyp handelt; andernfalls `pbIsValueClass` ist `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -48,6 +48,6 @@ HRESULT IsValueClass (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-    
- 
+## <a name="see-also"></a>Siehe auch
+
+

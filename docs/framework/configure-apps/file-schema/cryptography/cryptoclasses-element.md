@@ -10,21 +10,21 @@ helpviewer_keywords:
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 8363351efd0b6cbcfee5b137cf9f222e16dcc425
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e3bc8fbb103d59b825e07cc52b155f1ea8061f31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188741"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649374"
 ---
 # <a name="ltcryptoclassesgt-element"></a>&lt;CryptoClasses&gt; Element
 Enthält eine Liste von Kryptografieklassen, die einem Anzeigenamen im Element [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) zugeordnet sind.  
   
  \<configuration>  
-\<"mscorlib" >  
-\<CryptographySettings >  
-\<CryptoNameMapping >  
-\<CryptoClasses >  
+\<mscorlib>  
+\<cryptographySettings>  
+\<cryptoNameMapping>  
+\<cryptoClasses>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ Enthält eine Liste von Kryptografieklassen, die einem Anzeigenamen im Element [
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<CryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|Enthält eine Kryptografieklasse, die einem Anzeigenamen im Element **\<nameEntry>** zugeordnet ist.|  
+|[\<cryptoClass>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)|Enthält eine Kryptografieklasse, die einem Anzeigenamen im Element **\<nameEntry>** zugeordnet ist.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -78,10 +78,10 @@ Enthält eine Liste von Kryptografieklassen, die einem Anzeigenamen im Element [
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- <xref:System.Security.Cryptography>  
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)  
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Security.Cryptography>
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
 - [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

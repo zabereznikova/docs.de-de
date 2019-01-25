@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 13f11388-2f91-48d8-98d6-6a4a63cb5746
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85ff64e30519e448b87c2e9ae5d2c66959d836fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0931cb5ed133d4de82473ae786f28f13fd396db5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412132"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743005"
 ---
 # <a name="icordebugdatatarget2-interface"></a>ICorDebugDataTarget2-Schnittstelle
 Erweitert logisch die [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)Schnittstelle.  
@@ -30,7 +30,7 @@ Erweitert logisch die [ICorDebugDataTarget](../../../../docs/framework/unmanaged
 >  Diese Schnittstelle ist nur in Verbindung mit .NET Native verfügbar. Wenn Sie diese Schnittstelle für ICorDebug-Szenarien außerhalb von .NET Native implementieren, ignoriert die Common Language Runtime diese Schnittstelle.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -38,6 +38,6 @@ Erweitert logisch die [ICorDebugDataTarget](../../../../docs/framework/unmanaged
   
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

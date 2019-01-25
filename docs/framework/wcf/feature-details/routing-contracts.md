@@ -2,12 +2,12 @@
 title: Routingverträge
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-ms.openlocfilehash: 17bdd4556533b33b635f80b9aec3f16d0f256843
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 593c7a328aba82c35f5876e6e325844c829c08c7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54707712"
 ---
 # <a name="routing-contracts"></a>Routingverträge
 Routingverträge definieren die Nachrichtenmuster, die der Routingdienst verarbeiten kann.  Jeder Vertrag ist typenlos und ermöglicht es dem Dienst, eine Nachricht ohne Kenntnis des Nachrichtenschemas oder der Nachrichtenaktion zu empfangen. Auf diese Weise kann der Routingdienst Nachrichten generisch weiterleiten, ohne dass eine zusätzliche Konfiguration für die Einzelheiten der zugrunde liegenden weitergeleiteten Nachrichten erforderlich ist.  
@@ -26,6 +26,6 @@ Routingverträge definieren die Nachrichtenmuster, die der Routingdienst verarbe
 |<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode.Allowed<br /><br /> AsyncPattern = true|IReplyChannel -> IRequestChannel|  
 |<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
   
-## <a name="see-also"></a>Siehe auch  
- [Routingdienst](../../../../docs/framework/wcf/feature-details/routing-service.md)  
- [Einführung in Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a>Siehe auch
+- [Routingdienst](../../../../docs/framework/wcf/feature-details/routing-service.md)
+- [Einführung in Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: KrzysztofCwalina
-ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a8e8672d71500478dbbe28512e413e8ada501f45
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587127"
 ---
 # <a name="guidelines-for-collections"></a>Richtlinien für Auflistungen
 Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten, die einige gemeinsame Merkmale haben, kann eine Auflistung betrachtet werden. Es ist fast immer für solche Typen implementieren <xref:System.Collections.IEnumerable> oder <xref:System.Collections.Generic.IEnumerable%601>, sodass in diesem Abschnitt nur Typen, die Implementierung einer oder beide dieser Schnittstellen, die Sammlungen sein betrachten wir.  
@@ -130,5 +130,5 @@ Jeder Typ speziell dazu entwickelt, bearbeiten eine Gruppe von Objekten, die ein
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Verwendungsrichtlinien](../../../docs/standard/design-guidelines/usage-guidelines.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: 5ce801a96bc4ef48934b983838dcf8578a5bc6e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e3337dddcc39517558cf85af76223306d20d2bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503016"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599698"
 ---
 # <a name="control-type-recommendations"></a>Empfehlungen zum Typ von Steuerelementen
 .NET Framework bietet Ihnen die Möglichkeit, neue Steuerelemente zu entwickeln und zu implementieren. Zusätzlich zu den bekannten Benutzersteuerelementen können Sie nun benutzerdefinierte Steuerelemente schreiben, die ihre eigene Grafikausgabe ausführen und über Vererbung sogar die Funktionalität von vorhandenen Steuerelementen erweitern können. Das Treffen einer Entscheidung, welcher Typ von Steuerelement erstellt werden soll, kann verwirrend sein kann. In diesem Abschnitt werden die Unterschiede aufgezeigt, die es zwischen den verschiedenen Typen von Steuerelementen gibt, von denen geerbt werden kann, und werden Aspekte hinsichtlich des Typs vorgestellt, den Sie für Ihr Projekt wählen sollten.  
@@ -45,11 +45,11 @@ ms.locfileid: "43503016"
   
 -   Sie müssen benutzerdefinierte Funktionalität implementieren, die über Standardsteuerelemente nicht verfügbar ist.  
   
--   [Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+-   [Vorgehensweise: Anzeigen eines Steuerelements in der Toolbox-Elemente-Dialogfeld "auswählen"](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   
 -   [Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#](https://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
+-   [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit visuellen ElementC#](https://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
 -   [Vorgehensweise: Bereitstellen einer Toolboxbitmap für ein Steuerelement](https://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -59,7 +59,7 @@ ms.locfileid: "43503016"
   
 -   [Vorgehensweise: Erben von der Control-Klasse](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
   
--   [Gewusst wie: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+-   [Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
 -   [Vorgehensweise: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
   
@@ -71,14 +71,14 @@ ms.locfileid: "43503016"
   
 -   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#](https://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
+-   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit visuellen ElementC#](https://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
 -   [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual Basic](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   
--   [Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Entwurfszeitfeatures nutzt](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
+-   [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
   
--   [Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Entwurfszeitfeatures nutzt](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Entwickeln eines einfachen Windows Forms-Steuerelements](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)  
- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Entwickeln eines einfachen Windows Forms-Steuerelements](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)
+- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

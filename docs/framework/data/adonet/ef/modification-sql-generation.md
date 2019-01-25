@@ -2,12 +2,12 @@
 title: Generierung von Änderungen in SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: bfeb4f826022d39b2a45132a5b2bf344ef4c99c6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0bacd974c4eb9bc98851d35d574a184fde4d9468
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127068"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580056"
 ---
 # <a name="modification-sql-generation"></a>Generierung von Änderungen in SQL
 In diesem Abschnitt wird erläutert, wie ein SQL-Änderungsgenerierungsmodul für den Anbieter (von SQL:1999-kompatiblen Datenbanken) entwickelt wird. Mit diesem Modul wird eine Änderungsbefehlsstruktur in die entsprechenden INSERT-, UPDATE- oder DELETE-Anweisungen von SQL übersetzt.  
@@ -27,7 +27,7 @@ In diesem Abschnitt wird erläutert, wie ein SQL-Änderungsgenerierungsmodul fü
   
  DbModificationCommandTree und ihre Implementierung, die erstellt werden, indem die [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] stellen immer einen einzelne Zeile Vorgang dar. In diesem Abschnitt werden diese Typen mit ihren Einschränkungen in .NET Framework 3.5 beschrieben.  
   
- ![Diagramm](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
  DbModificationCommandTree verfügt über eine Zieleigenschaft, die den Zielsatz für den Änderungsvorgang darstellt. Die Ausdruckseigenschaft des Ziels, mit der der Eingabesatz definiert wird, ist immer DbScanExpression.  Ein DbScanExpression kann entweder darstellen, eine Tabelle oder Sicht, oder ein Satz von Daten mit einer Abfrage definierten ist die Metadateneigenschaft "Defining Query" des Ziels nicht Null.  
   
@@ -286,5 +286,5 @@ delete [dbo].[Categories]
 where ([CategoryID] = @p0)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Schreiben eines Entity Framework-Datenanbieters](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+## <a name="see-also"></a>Siehe auch
+- [Schreiben eines Entity Framework-Datenanbieters](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

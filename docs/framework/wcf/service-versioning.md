@@ -2,12 +2,12 @@
 title: Dienstversionsverwaltung
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 75a19c62f52c1d9468976f7ebea72245d1d341eb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 62c8641e69ea461c3bf56b911c25b4894f63abe9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649244"
 ---
 # <a name="service-versioning"></a>Dienstversionsverwaltung
 Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen die Dienste (und die Endpunkte, die sie verfügbar machen) eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z.&#160;B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Jede Änderung führt zu einer neuen Version des Diensts. In diesem Thema wird erläutert, Überlegungen zur versionsverwaltung in Windows Communication Foundation (WCF).  
@@ -15,15 +15,15 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
 ## <a name="four-categories-of-service-changes"></a>Vier Kategorien von Dienständerungen  
  Die Änderungen von Diensten, die eventuell erforderlich sind, können in vier Kategorien unterteilt werden:  
   
--   Vertragsänderungen: Ein Vorgang wird z.&#160;B. hinzugefügt, oder ein Datenelement in einer Nachricht wird hinzugefügt oder geändert.  
+-   Vertragsänderungen: Beispielsweise kann ein Vorgang hinzugefügt werden, oder ein Datenelement in einer Nachricht hinzugefügt oder geändert werden kann.  
   
--   Adressänderungen: Ein Dienst wird z.&#160;B. an einen anderen Speicherort verschoben, an dem die Endpunkte neue Adressen aufweisen.  
+-   Adressänderungen: Verschiebt beispielsweise ein Dienst an einen anderen Speicherort, in dem Endpunkte neue Adressen aufweisen.  
   
--   Bindungsänderungen: Ein Sicherheitsmechanismus oder seine Einstellungen werden z.&#160;B. geändert.  
+-   Bindungsänderungen: Z. B. ein Sicherheitsmechanismus oder seine Einstellungen zu ändern.  
   
--   Implementierungsänderungen: Wenn sich z.&#160;B. eine interne Methodenimplementierung ändert.  
+-   Implementierungsänderungen: Wenn eine interne methodenimplementierung ändert sich beispielsweise.  
   
- Einige dieser Änderungen werden als "unterbrechend" und andere als "nicht unterbrechend" bezeichnet. Eine Änderung ist *geschütztes* , wenn alle Nachrichten, die erfolgreich in der vorherigen Version verarbeitet worden wären, in der neuen Version erfolgreich verarbeitet werden. Jede Änderung, die dieses Kriterium nicht erfüllt ist ein *wichtige* ändern.  
+ Einige dieser Änderungen werden als "unterbrechend" und andere als "nicht unterbrechend" bezeichnet. Eine Änderung *geschützte* Wenn alle Nachrichten, die erfolgreich in der vorherigen Version verarbeitet worden wären, in der neuen Version erfolgreich verarbeitet wurden. Jede Änderung, die dieses Kriterium nicht erfüllt ist eine *wichtige* ändern.  
   
 ## <a name="service-orientation-and-versioning"></a>Dienstausrichtung und Versionsverwaltung  
  Einer der Grundsätze der Dienstausrichtung ist, dass die Dienste und Clients autonom (oder unabhängig) sind. Unter anderem impliziert dies, dass die Dienstentwickler nicht davon ausgehen können, dass sie alle Dienstclients steuern oder sogar kennen. Dies beeinträchtigt die Möglichkeit, alle Clients neu zu erstellen und neu bereitzustellen, wenn die Version eines Diensts geändert wird. In diesem Thema wird davon ausgegangen, dass der Dienst diesem Grundsatz folgt und daher unabhängig von den Clients geändert oder "versionsverwaltet" werden muss.  
@@ -35,7 +35,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
   
  Für Dienstverträge bedeutet Kompatibilität, dass neue, vom Dienst verfügbar gemachte Vorgänge hinzugefügt, vorhandene Vorgänge jedoch nicht entfernt oder semantisch geändert werden können.  
   
- Für Datenverträge bedeutet Kompatibilität, dass neue Schematypdefinitionen hinzugefügt, vorhandene Schematypdefinitionen jedoch nicht auf die unterbrechende Art geändert werden können. Zu den unterbrechenden Änderungen können das Entfernen von Datenmembern oder das Ändern ihrer Datentypinkompatibilität gehören. Diese Funktion bietet dem Dienst einigen Spielraum zum Ändern seiner Vertragsversionen, ohne Clients zu unterbrechen. In den nächsten beiden Abschnitten wird erläutert, geschützte und wichtige Änderungen, die mit WCF-Daten hergestellt werden können und-Dienstverträgen.  
+ Für Datenverträge bedeutet Kompatibilität, dass neue Schematypdefinitionen hinzugefügt, vorhandene Schematypdefinitionen jedoch nicht auf die unterbrechende Art geändert werden können. Zu den unterbrechenden Änderungen können das Entfernen von Datenmembern oder das Ändern ihrer Datentypinkompatibilität gehören. Diese Funktion bietet dem Dienst einigen Spielraum zum Ändern seiner Vertragsversionen, ohne Clients zu unterbrechen. In den nächsten beiden Abschnitten wird erläutert, geschützte und wichtige Änderungen, die auf WCF-Daten vorgenommen werden können und -Dienstverträge.  
   
 ## <a name="data-contract-versioning"></a>Datenvertragsversionsverwaltung  
  In diesem Abschnitt wird die Datenversionsverwaltung für die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse und die <xref:System.Runtime.Serialization.DataContractAttribute>-Klasse beschrieben.  
@@ -54,18 +54,18 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
 ### <a name="lax-versioning"></a>Weniger strenge Versionsverwaltung  
  In vielen anderen Szenarien kann der Dienstentwickler davon ausgehen, dass das Hinzufügen eines neuen, optionalen Members zum Datenvertrag keine vorhandenen Clients unterbricht. Dazu muss der Dienstentwickler überprüfen, ob die vorhandenen Clients keine Schemavalidierung durchführen und dass sie unbekannte Datenmember ignorieren. In diesen Szenarien ist es möglich, die Datenvertragsfunktionen zum Hinzufügen neuer Member auf eine nicht unterbrechende Weise zu nutzen. Der Dienstentwickler kann diese Annahme machen, wenn die Datenvertragsfunktionen für die Versionsverwaltung bereits für die erste Version des Diensts verwendet wurden.  
   
- WCF, ASP.NET-Webdienste und viele andere Web-service-Webdienststapel unterstützen *weniger strenge versionsverwaltung*: d. h., sie nicht lösen Sie Ausnahmen für neue unbekannte Datenmember in den empfangenen Daten.  
+ WCF, ASP.NET Web Services und viele andere Web-service-Webdienststapel unterstützen *weniger strenge versionsverwaltung*: d. h., sie lösen keine Ausnahmen für neue unbekannte Datenmember in den empfangenen Daten.  
   
  Häufig wird fälschlicherweise angenommen, dass die vorhandenen Clients durch das Hinzufügen eines neuen Members nicht unterbrochen werden können. Falls Sie sich nicht sicher sind, ob alle Clients für die weniger strenge Versionsverwaltung ausgerichtet sind, wird empfohlen, die strengen Richtlinien zur Versionsverwaltung zu verwenden und die Datenverträge als unveränderlich zu behandeln.  
   
- Detaillierte Richtlinien für die lax und strenge versionsverwaltung von Datenverträgen finden Sie unter [Vorgehensweisen: versionsverwaltung von Datenverträgen](../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+ Detaillierte Richtlinien für die weniger strenge und die strenge versionsverwaltung von Datenverträgen finden Sie [Best Practices: Versionsverwaltung von Datenverträgen](../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
   
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>Unterscheidung zwischen Datenvertrags- und .NET-Typen  
  Eine .NET-Klasse oder eine Struktur kann als Datenvertrag projiziert werden, indem Sie der Klasse das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut hinzufügen. Der .NET-Typ und seine Datenvertragsprojektionen sind zwei verschiedene Dinge. Es können mehrere .NET-Typen mit derselben Datenvertragsprojektion vorhanden sein. Diese Unterscheidung ist besonders nützlich, wenn Sie den .NET-Typ ändern und gleichzeitig den projizierten Datenvertrag beibehalten möchten, wobei Sie gleichzeitig die Kompatibilität mit den bereits vorhandenen Clients bewahren. Sie sollten immer die folgenden beiden Maßnahmen ergreifen, um diese Unterscheidung zwischen .NET-Typ und Datenvertrag beizubehalten:  
   
 -   Geben Sie einen <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> und einen <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> an. Sie sollten immer den Namen und den Namespace Ihres Datenvertrags angeben, um zu verhindern, dass der Name und der Namespace Ihres .NET-Typs im Vertrag verfügbar gemacht wird. Auf diese Weise bleibt der Datenvertrag derselbe, wenn Sie den .NET-Namespace oder -Typnamen zu einem späteren Zeitpunkt ändern möchten.  
   
--   Geben Sie <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> an. Sie sollten immer den Namen Ihrer Datenmember angeben, um zu verhindern, dass der Name des .NET-Members im Vertrag verfügbar gemacht wird. Auf diese Weise bleibt der Datenvertrag derselbe, wenn Sie den .NET-Namen des Members zu einem späteren Zeitpunkt ändern möchten.  
+-   Geben Sie <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>an. Sie sollten immer den Namen Ihrer Datenmember angeben, um zu verhindern, dass der Name des .NET-Members im Vertrag verfügbar gemacht wird. Auf diese Weise bleibt der Datenvertrag derselbe, wenn Sie den .NET-Namen des Members zu einem späteren Zeitpunkt ändern möchten.  
   
 ### <a name="changing-or-removing-members"></a>Ändern oder Entfernen von Membern  
  Wenn Sie den Namen oder Datentyp eines Members ändern oder Datenmember entfernen, ist dies eine unterbrechende Änderung, auch wenn die weniger strenge Versionsverwaltung zulässig ist. Falls dies erforderlich ist, müssen Sie einen neuen Datenvertrag erstellen.  
@@ -93,13 +93,13 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
 ## <a name="message-contract-versioning"></a>Versionsverwaltung für Nachrichtenverträge  
  Die Richtlinien für die Versionsverwaltung von Nachrichtenverträgen sind ähnlich wie diejenigen für die Versionsverwaltung von Datenverträgen. Falls eine strenge Versionsverwaltung erforderlich ist, sollten Sie den Nachrichtentext nicht ändern, sondern stattdessen einen neuen Nachrichtenvertrag mit einem eindeutig qualifizierten Namen erstellen. Wenn Sie sicher sind, dass Sie die weniger strenge Versionsverwaltung verwenden können, können Sie neue Teile des Nachrichtentexts hinzufügen, die bereits vorhandenen jedoch nicht ändern oder entfernen. Diese Richtlinie gilt sowohl für reine als auch für eingeschlossene Nachrichtenverträge.  
   
- Nachrichtenheader können immer hinzugefügt werden, auch wenn die strenge Versionsverwaltung verwendet wird. Das MustUnderstand-Flag kann sich auf die Versionsverwaltung auswirken. Im Allgemeinen ist das Modell der versionsverwaltung für Header in WCF, wie in der SOAP-Spezifikation beschrieben.  
+ Nachrichtenheader können immer hinzugefügt werden, auch wenn die strenge Versionsverwaltung verwendet wird. Das MustUnderstand-Flag kann sich auf die Versionsverwaltung auswirken. Im Allgemeinen ist das Modell für die versionsverwaltung für Header in WCF, wie in der SOAP-Spezifikation beschrieben.  
   
 ## <a name="service-contract-versioning"></a>Versionsverwaltung für Dienstverträge  
  Ähnlich wie bei der Versionsverwaltung für Datenverträge umfasst die Versionsverwaltung für Dienstverträge auch das Hinzufügen, Ändern und Entfernen von Vorgängen.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Angeben von Name, Namespace und Aktion  
- Standardmäßig entspricht der Name eines Dienstvertrags dem Namen der Schnittstelle. Der Standardnamespace ist "http://tempuri.org", und jeder Vorgang Aktion ist "http://tempuri.org/contractname/methodname". Es wird empfohlen, dass Sie einen Namen und Namespace-URI für den Dienstvertrag und eine Aktion für jeden Vorgang mit vermeiden explizit angeben "http://tempuri.org" und zu verhindern, dass die Schnittstellen- und Methodennamen im Vertrag für den Dienst verfügbar gemacht wird.  
+ Standardmäßig entspricht der Name eines Dienstvertrags dem Namen der Schnittstelle. Der Standardnamespace ist "http://tempuri.org", und jeder Vorgang die Aktion ist "http://tempuri.org/contractname/methodname". Es wird empfohlen, dass Sie einen Namen und Namespace-URI für den Dienstvertrag, und eine Aktion für jeden Vorgang, um zu vermeiden explizit angeben "http://tempuri.org" und zu verhindern, dass die Schnittstellen-und Methodennamen in den Vertrag des Dienstes verfügbar gemacht werden.  
   
 ### <a name="adding-parameters-and-operations"></a>Hinzufügen von Parametern und Vorgängen  
  Beim Hinzufügen von Vorgängen, die vom Dienst verfügbar gemacht werden, handelt es sich um eine nicht unterbrechende Änderung, da die vorhandenen Clients diese neuen Vorgänge nicht berücksichtigen müssen.  
@@ -119,13 +119,13 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
  Die Liste der in einem Dienstvertrag beschriebenen Fehler wird nicht als vollständig betrachtet. Ein Vorgang kann jederzeit Fehler zurückgeben, die in seinem Vertrag nicht beschrieben sind. Deshalb werden Änderungen der im Vertrag beschriebenen Fehler nicht als unterbrechend betrachtet. Beispielsweise das Hinzufügen eines neuen Fehlers zum Vertrag mithilfe von <xref:System.ServiceModel.FaultContractAttribute> oder das Entfernen eines vorhandenen Fehlers aus dem Vertrag.  
   
 ### <a name="service-contract-libraries"></a>Dienstvertragsbibliotheken  
- In Organisationen können Bibliotheken mit Verträgen vorhanden sein. Dabei wird ein Vertrag in einem zentralen Repository veröffentlicht, und die Dienstimplementierer implementieren Datenverträge aus diesem Repository. In diesem Fall können Sie beim Veröffentlichen eines Dienstvertrags im Repository nicht steuern, wer Dienste erstellt, die ihn implementieren. Sie können daher den Dienstvertrag nicht ändern, nachdem er veröffentlicht wurde, da er dadurch unveränderlich wird. WCF unterstützt die vertragsvererbung, die verwendet werden kann, um einen neuen Vertrag zu erstellen, der bereits vorhandener Verträge erweitert. Wenn Sie diese Funktion verwenden möchten, müssen Sie eine neue Dienstvertragsschnittstelle definieren, die von der alten Dienstvertragsschnittstelle erbt, und dann der neuen Schnittstelle Methoden hinzufügen. Anschließend ändern Sie den Dienst, der den alten Vertrag implementiert, um den neuen Vertrag zu implementieren, und ändern die "versionOld"-Endpunktdefinition für die Verwendung des neuen Vertrags. Für "versionOld"-Clients erscheint der Endpunkt weiterhin als "versionOld"-Vertrag; für "versionNew"-Clients erscheint der Endpunkt als "versionNew"-Vertrag.  
+ In Organisationen können Bibliotheken mit Verträgen vorhanden sein. Dabei wird ein Vertrag in einem zentralen Repository veröffentlicht, und die Dienstimplementierer implementieren Datenverträge aus diesem Repository. In diesem Fall können Sie beim Veröffentlichen eines Dienstvertrags im Repository nicht steuern, wer Dienste erstellt, die ihn implementieren. Sie können daher den Dienstvertrag nicht ändern, nachdem er veröffentlicht wurde, da er dadurch unveränderlich wird. WCF unterstützt die vertragsvererbung, die verwendet werden kann, um einen neuen Vertrag zu erstellen, der Erweiterung vorhandener Verträge darstellt. Wenn Sie diese Funktion verwenden möchten, müssen Sie eine neue Dienstvertragsschnittstelle definieren, die von der alten Dienstvertragsschnittstelle erbt, und dann der neuen Schnittstelle Methoden hinzufügen. Anschließend ändern Sie den Dienst, der den alten Vertrag implementiert, um den neuen Vertrag zu implementieren, und ändern die "versionOld"-Endpunktdefinition für die Verwendung des neuen Vertrags. Für "versionOld"-Clients erscheint der Endpunkt weiterhin als "versionOld"-Vertrag; für "versionNew"-Clients erscheint der Endpunkt als "versionNew"-Vertrag.  
   
 ## <a name="address-and-binding-versioning"></a>Versionsverwaltung von Adressen und Bindungen  
  Bei Änderungen an der Endpunktadresse und -bindung handelt es sich um unterbrechende Änderungen, solange die Clients die neue Endpunktadresse oder -bindung nicht dynamisch erkennen können. Ein Mechanismus zur Implementierung dieser Funktion ist die Verwendung einer UDDI-Registrierung sowie des UDDI-Aufrufmusters, bei der ein Client versucht, mit einem Endpunkt zu kommunizieren und im Falle eines Scheiterns eine bekannte UDDI-Registrierung für die aktuellen Endpunktdaten abfragt. Der Client verwendet dann die Adresse und die Bindung aus diesen Metadaten, um mit dem Endpunkt zu kommunizieren. Wenn diese Kommunikation erfolgreich ist, speichert der Client die Adress- und Bindungsinformationen für eine spätere Verwendung zwischen.  
   
 ## <a name="routing-service-and-versioning"></a>Routingdienst und Versionsverwaltung  
- Wenn es sich bei an einem Dienst vorgenommenen Änderungen um unterbrechende Änderungen handelt und Sie zwei oder mehr verschiedene Versionen eines Diensts gleichzeitig ausführen müssen, können Sie mit dem WCF-Routingdienst Meldungen an die entsprechende Dienstinstanz weiterleiten. Der WCF-Routingdienst führt inhaltsbasiertes Routing aus. Mit anderen Worten: Anhand von Informationen innerhalb der Nachricht wird bestimmt, an welches Ziel die Nachricht weitergeleitet wird. Weitere Informationen finden Sie in der WCF-Routingdienst [Routingdienst](../../../docs/framework/wcf/feature-details/routing-service.md). Ein Beispiel zum Verwenden der WCF-Routingdienst für die dienstversionsverwaltung finden Sie unter [How To: Dienstversionsverwaltung](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Wenn es sich bei an einem Dienst vorgenommenen Änderungen um unterbrechende Änderungen handelt und Sie zwei oder mehr verschiedene Versionen eines Diensts gleichzeitig ausführen müssen, können Sie mit dem WCF-Routingdienst Meldungen an die entsprechende Dienstinstanz weiterleiten. Der WCF-Routingdienst führt inhaltsbasiertes Routing aus. Mit anderen Worten: Anhand von Informationen innerhalb der Nachricht wird bestimmt, an welches Ziel die Nachricht weitergeleitet wird. Weitere Informationen zu den WCF-Routingdienst finden Sie unter [Routingdienst](../../../docs/framework/wcf/feature-details/routing-service.md). Ein Beispiel zum Verwenden der WCF-Routingdienst für die versionsverwaltung finden Sie unter [so wird's gemacht: Dienstversionsverwaltung](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Anhang  
  Die allgemeine Richtlinie für die Datenvertrags-Versionsverwaltung im Falle der strengen Versionsverwaltung besagt, dass Datenverträge als unveränderlich behandelt werden und neue Verträge erstellt werden, wenn Änderungen erforderlich sind. Für jeden neuen Datenvertrag muss eine neue Klasse erstellt werden. Deshalb ist ein Mechanismus erforderlich, mit dem vermieden wird, dass bereits vorhandener Code, der für die alte Datenvertragsklasse geschrieben wurde, für die neue Datenvertragsklasse neu geschrieben werden muss.  
@@ -175,16 +175,16 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
   
  Der Dienstvertrag würde aktualisiert werden, um neue Vorgänge für `PurchaseOrderV2` zu berücksichtigen. Die vorhandene Geschäftslogik für `IPurchaseOrderV1` würde weiterhin für `PurchaseOrderV2` funktionieren. Es würde eine neue Geschäftslogik für `OrderDate` geschrieben, die die `IPurchaseOrderV2`-Eigenschaft benötigt.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.Serialization.DataContractSerializer>  
- <xref:System.Runtime.Serialization.DataContractAttribute>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  
- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject>  
- <xref:System.Runtime.Serialization.ExtensionDataObject>  
- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>  
- <xref:System.Xml.Serialization.XmlSerializer>  
- [Datenvertragsäquivalenz](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)  
- [Versionstolerante Serialisierungsrückrufe](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.Serialization.DataContractSerializer>
+- <xref:System.Runtime.Serialization.DataContractAttribute>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
+- <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>
+- <xref:System.Runtime.Serialization.ExtensionDataObject>
+- <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Datenvertragsäquivalenz](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
+- [Versionstolerante Serialisierungsrückrufe](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

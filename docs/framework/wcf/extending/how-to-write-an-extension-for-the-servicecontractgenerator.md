@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Schreiben einer Erweiterung für den ServiceContractGenerator'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 43105553739e104ab862b3be3cf2082fbf6d499f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd0566f358b313ea96f1c9b2d5fd7fc447f4d2ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629702"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Vorgehensweise: Schreiben einer Erweiterung für den ServiceContractGenerator
 In diesem Thema wird beschrieben, wie Sie eine Erweiterung für den <xref:System.ServiceModel.Description.ServiceContractGenerator> schreiben können. Dies kann durch Implementieren der <xref:System.ServiceModel.Description.IOperationContractGenerationExtension>-Schnittstelle für ein Vorgangsverhalten oder Implementieren der <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>-Schnittstelle für ein Vertragsverhalten geschehen. In diesem Thema wird gezeigt, wie die <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>-Schnittstelle in einem Vertragsverhalten implementiert wird.  
@@ -98,6 +98,6 @@ In diesem Thema wird beschrieben, wie Sie eine Erweiterung für den <xref:System
   
 7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> wird automatisch für jedes Vertragsverhalten für einen bestimmten Vertrag, der <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> implementiert, aufgerufen. Diese Methode kann dann den übergebenen <xref:System.ServiceModel.Description.ServiceContractGenerationContext> ändern. In diesem Beispiel werden Kommentare hinzugefügt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadaten](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Vorgehensweise: Importieren von benutzerdefinierter WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadaten](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Vorgehensweise: Benutzerdefinierte WSDL importieren](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 205e0052f0ea257d965b0cd088cbe3586321022f
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: f05d4a9348c12a29dc3cd7b93334ab1134eeb1a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48914178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709389"
 ---
 # <a name="federation"></a>Verbund
 Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit. Darüber hinaus wird die Windows Communication Foundation (WCF)-Unterstützung für die Bereitstellung von verbundsicherheitsarchitekturen beschrieben. Eine beispielanwendung, die Verbund veranschaulicht, finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -35,9 +35,9 @@ Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit.
 ### <a name="example-scenario"></a>Beispielszenario  
  Die folgende Abbildung zeigt ein Beispiel für Verbundsicherheit.  
   
- ![Verbund](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ ![Federation](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
   
- Dieses Szenario enthält zwei Organisationen: A und B. Organisation B hat eine Webressource (einen Webdienst), die einige Benutzer in der Organisation A als wertvoll betrachten.  
+ Dieses Szenario enthält zwei Organisationen: A und B. Organisation B hat eine Webressource (einen Webdienst), die einige Benutzer in Organisation A als wertvoll.  
   
 > [!NOTE]
 >  In diesem Abschnitt werden die Begriffe verwendet *Ressource*, *Service*, und *Webdienst* Synonym verwenden lassen.  
@@ -84,7 +84,7 @@ Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit.
   
 -   Präsentation des Token vor dem Dienst für den Zugriff auf den Dienst.  
   
-### <a name="phase-2-run-time-phase"></a>Phase 2: Laufzeitphase  
+### <a name="phase-2-run-time-phase"></a>Phase 2: Laufzeit-Phase  
  Während der Laufzeit-Phase wird der Client instanziiert ein Objekt der WCF-Clientklasse, und Sie mit dem WCF-Client aufruft. Das zugrunde liegende Framework von WCF verarbeitet die zuvor genannten Schritte in der verbundsicherheitskommunikationsmuster und ermöglicht dem Client, den Dienst nahtlos zu nutzen.  
   
 ## <a name="sample-implementation-using-wcf"></a>Beispielimplementierung mithilfe von WCF  
@@ -95,7 +95,7 @@ Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit.
 ### <a name="example-myservice"></a>Beispiel MyService  
  Der Dienst `MyService` macht durch `MyServiceEndpoint` einen einzelnen Endpunkt verfügbar. Die folgende Abbildung zeigt Adresse, Bindung und Vertrag an, die zum Endpunkt gehören.  
   
- ![Verbund](../../../../docs/framework/wcf/feature-details/media/myservice.gif "\"MyService\"")  
+ ![Federation](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
   
  Der Dienstendpunkt `MyServiceEndpoint` verwendet die [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) und erfordert ein gültiges Security Assertions Markup Language (SAML)-Token mit einem `accessAuthorized` von STS B. ausgestellten Anspruchs Dies wird deklarativ in der Dienstkonfiguration angegeben.  
   
@@ -160,7 +160,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 #### <a name="sts-b"></a>STS B  
  Die folgende Abbildung zeigt den STS B. Wie zuvor erwähnt, ist ein STS (Security Token Service) auch ein Webdienst und kann über zugehörige Endpunkte, Richtlinien usw. verfügen.  
   
- ![Verbund](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ ![Federation](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
   
  STS B macht einen einzelnen Endpunkt namens `STSEndpoint` verfügbar, der verwendet werden kann, um das Sicherheitstoken anzufordern. STS B gibt insbesondere SAML-Token mit `accessAuthorized`-Anspruch heraus, die der `MyService`-Dienstsite vorgelegt werden können, um Zugriff auf den Dienst zu erhalten. Allerdings erfordert STS B, dass Benutzer ein gültiges SAML-Token vorlegen, das von STS A herausgegeben wurde und den `userAuthenticated`-Anspruch enthält. Dies wird deklarativ in der STS-Konfiguration angegeben.  
   
@@ -284,10 +284,10 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>Client bei Organisation A  
  Die folgende Abbildung zeigt den Client bei Organisation A sowie die Schritte zur Durchführung eines `MyService`-Dienstaufrufs. Der Vollständigkeit halber sind auch die anderen funktionalen Komponenten aufgeführt.  
   
- ![Verbund](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ ![Federation](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
 ## <a name="summary"></a>Zusammenfassung  
  Verbundsicherheit liefert eine klare Trennung der Verantwortungsbereiche und unterstützt den Aufbau einer sicheren und skalierbaren Dienstarchitektur. WCF bietet als Plattform für die Erstellung und Bereitstellung von verteilten Anwendungen die systemeigenen Unterstützung für die Implementierung von verbundsicherheit.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)
+## <a name="see-also"></a>Siehe auch
+- [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)

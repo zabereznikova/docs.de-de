@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 3707196cf833577e65dbd1879f2762ec4336abc2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 8dde6775162adc092ea58795f3c4bf7d2db570cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073514"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589843"
 ---
 # <a name="ui-automation-properties-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Benutzeroberflächenautomatisierungs-Anbieter machen Eigenschaften von [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Elementen verfügbar. Diese Eigenschaften ermöglichen es Benutzeroberflächenautomatisierungs-Clientanwendungen, Informationen zu Bestandteilen der [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)](insbesondere Steuerelemente) zu ermitteln, wobei diese Informationen sowohl statische als auch dynamische Daten umfassen können.  
   
@@ -161,10 +161,10 @@ ms.locfileid: "47073514"
   
  Clients lauschen Ereignissen, indem sie diese abonnieren. Abonnieren von Ereignissen bedeutet, dass Delegatenmethoden erstellt werden, die Ereignisse verarbeiten können, und dass die Methoden anschließend zusammen mit den Ereignissen, die von diesen Methoden verarbeitet werden, an [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] übergeben werden. Insbesondere für Ereignisse wegen geänderter Eigenschaften müssen Clients <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>implementieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [Server-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)  
- [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [Auslösen von Ereignissen aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+## <a name="see-also"></a>Siehe auch
+- [Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
+- [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
+- [Server-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)
+- [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
+- [Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
+- [Auslösen von Ereignissen aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)

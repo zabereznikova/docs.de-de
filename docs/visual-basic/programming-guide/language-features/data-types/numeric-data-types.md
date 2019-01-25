@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 6578a410e389a313b0bad70f043691240e288887
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1188e8288bb73a49acc3e3bf0f72e3ac4fef5f7a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54636412"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Numerische Datentypen (Visual Basic)
 Visual Basic bietet mehrere *numerische Datentypen* für die Behandlung von Zahlen in verschiedenen Darstellungen bereit. *Ganzzahlige* Typen darstellen, nur ganze Zahlen (Positive und negative und 0 (null)), und *Nonintegral* Typen stellen die Zahlen mit Nachkommastellen und ganze Zahl dar.  
@@ -78,9 +78,9 @@ Visual Basic bietet mehrere *numerische Datentypen* für die Behandlung von Zahl
 ### <a name="small-fractional-numbers"></a>Kleine Bruchzahlen  
  Wenn Sie nicht, dass das gesamte Spektrum benötigen der `Double` Datentyp aufweisen, können Sie die `Single` -Datentyp, der Gleitkommazahlen von - 3,4028235E + 38 bis 3,4028235E + 38 enthalten kann. Die kleinsten Werte für `Single` Variablen sind - 1.401298E-45, bei negativen Werten und 1.401298E-45 für positive Werte. Wenn Sie eine sehr große Anzahl von Variablen, die kleine Gleitkommazahlen enthalten verfügen, wird die common Language Runtime kann manchmal speichern Ihre `Single` Variablen effizienter und Arbeitsspeicher belegt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Zeichendatentypen](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [Sonstige Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Gewusst wie: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+## <a name="see-also"></a>Siehe auch
+- [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Zeichendatentypen](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
+- [Sonstige Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)
+- [Problembehandlung bei Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Vorgehensweise: Aufrufen einer Windows-Funktion, die vorzeichenlose Typen akzeptiert](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

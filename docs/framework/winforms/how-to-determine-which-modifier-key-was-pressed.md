@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Ermitteln der gedrückten Modifizierertaste'
+title: 'Vorgehensweise: Bestimmen Sie, welche Zusatztaste gedrückt wurde'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - Keys.Alt enumeration member
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-ms.openlocfilehash: bfdef668a5c766f00680c0150103a8c5267fdf68
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: e2caf421e25dff3300b3d799582f4260d0aab320
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49314883"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54586656"
 ---
-# <a name="how-to-determine-which-modifier-key-was-pressed"></a>Gewusst wie: Ermitteln der gedrückten Modifizierertaste
+# <a name="how-to-determine-which-modifier-key-was-pressed"></a>Vorgehensweise: Bestimmen Sie, welche Zusatztaste gedrückt wurde
 Wenn Sie eine Anwendung, die die Tastaturanschläge des Benutzers akzeptiert erstellen, können Sie auch Zusatztasten wie die Tasten UMSCHALT, ALT und STRG überwachen möchten. Wenn eine Taste in Kombination mit anderen Schlüsseln oder Mausklicks gedrückt wird, kann Ihre Anwendung entsprechend reagieren. Z. B. wenn die Buchstaben S gedrückt wird, einfach dadurch möglicherweise ein "s" auf dem Bildschirm angezeigt werden, aber wenn die Tasten STRG + S gedrückt werden, kann das aktuelle Dokument gespeichert werden. Verarbeitet die <xref:System.Windows.Forms.Control.KeyDown> -Ereignis, das <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Eigenschaft der <xref:System.Windows.Forms.KeyEventArgs> empfangen vom Ereignis-Handler legt die Modifizierertasten gedrückt sind. Sie können auch die <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> Eigenschaft <xref:System.Windows.Forms.KeyEventArgs> gibt das Zeichen, die auch alle Zusatztasten, die mit einem bitweisen OR kombiniert gedrückt wurde. Aber wenn Sie behandeln die <xref:System.Windows.Forms.Control.KeyPress> Ereignis oder ein Mausereignis der Ereignishandler empfängt diese Informationen nicht. In diesem Fall müssen Sie verwenden die <xref:System.Windows.Forms.Control.ModifierKeys%2A> Eigenschaft der <xref:System.Windows.Forms.Control> Klasse. In beiden Fällen müssen Sie ein bitweises AND des entsprechenden ausführen <xref:System.Windows.Forms.Keys> Wert und der Wert, die Sie testen. Die <xref:System.Windows.Forms.Keys> Enumeration bietet Variationen der einzelnen Schlüssel Modifizierer, daher es wichtig ist, dass Sie den bitweisen ausführen und mit dem richtigen Wert. Beispielsweise wird durch die UMSCHALTTASTE gedrückt dargestellt <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> und <xref:System.Windows.Forms.Keys.LShiftKey> UMSCHALT zu testen, wie Sie Modifizierertaste wird der korrekte Wert <xref:System.Windows.Forms.Keys.Shift>. Auf ähnliche Weise, STRG und ALT als Modifizierer Sie testen sollten verwenden die <xref:System.Windows.Forms.Keys.Control> und <xref:System.Windows.Forms.Keys.Alt> Werte.  
   
 > [!NOTE]
@@ -45,8 +45,8 @@ Wenn Sie eine Anwendung, die die Tastaturanschläge des Benutzers akzeptiert ers
      [!code-csharp[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/VB/form1.vb#5)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.Keys>  
- <xref:System.Windows.Forms.Control.ModifierKeys%2A>  
- [Tastatureingaben in einer Windows Forms-Anwendung](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Gewusst wie: bestimmen, ob die FESTSTELLTASTE aktiviert ist, in Visual Basic](https://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.Keys>
+- <xref:System.Windows.Forms.Control.ModifierKeys%2A>
+- [Tastatureingaben in einer Windows Forms-Anwendung](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
+- [Vorgehensweise: Bestimmen Sie, dass wenn CapsLock ist in Visual Basic](https://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)

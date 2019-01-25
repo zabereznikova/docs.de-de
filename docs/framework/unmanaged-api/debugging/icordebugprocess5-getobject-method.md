@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fa6a8c4989b6bc7027a585f098e0aedf17fee01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9588a22feb27d2bd40af2b003179638ef6f34e83
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417283"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660865"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject-Methode
 Konvertiert eine Adresse des Objekts auf ein Objekt "ICorDebugObjectValue".  
@@ -44,10 +44,10 @@ HRESULT GetObject(
  [out] Ein Zeiger auf die Adresse eines Objekts "ICorDebugObjectValue".  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn `addr` verweist nicht auf ein gültiges verwaltetes Objekt der `GetObject` -Methode zurückkehrt `E_FAIL`.  
+ Wenn `addr` verweist nicht auf ein gültiges verwaltetes Objekt, das `GetObject` Methodenrückgabe `E_FAIL`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -55,6 +55,6 @@ HRESULT GetObject(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugProcess5-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugProcess5-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

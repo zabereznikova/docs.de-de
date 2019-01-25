@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 92b3444f81f00ee709c22836126073d342c6fa05
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b73f1063c83d61e02a01cb31932d93c468996598
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741495"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Überlegungen zu LINQ (WCF Data Services)
 Dieses Thema enthält Informationen zum Erstellen und Ausführen von LINQ-Abfragen bei der Verwendung des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clients und zu den Einschränkungen, die gelten, wenn Sie einen Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, mithilfe von LINQ abfragen. Weitere Informationen zum Verfassen und Ausführen von Abfragen für ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]--basierten Datendienst finden Sie unter [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -165,7 +165,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |Projektions- und Filterungsoperatoren|Die folgenden Projektions- und Filterungsoperatoren, die ein Positionsargument akzeptieren, werden für eine <xref:System.Data.Services.Client.DataServiceQuery%601> nicht unterstützt:<br /><br /> -   <xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%2CSystem.Collections.Generic.IEqualityComparer%7B%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2C%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Where%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29>|  
 |Gruppierungsoperatoren|Alle Gruppierungsoperatoren werden nicht für eine <xref:System.Data.Services.Client.DataServiceQuery%601> unterstützt. Dazu zählen folgende Operatoren:<br /><br /> -   <xref:System.Linq.Enumerable.GroupBy%2A><br />-   <xref:System.Linq.Enumerable.GroupJoin%2A><br /><br /> Gruppierungsvorgänge müssen auf dem Client ausgeführt werden.|  
 |Aggregatoperatoren|Alle Aggregatoperatoren werden nicht für eine <xref:System.Data.Services.Client.DataServiceQuery%601> unterstützt. Dazu zählen folgende Operatoren:<br /><br /> -   <xref:System.Linq.Enumerable.Aggregate%2A><br />-   <xref:System.Linq.Enumerable.Average%2A><br />-   <xref:System.Linq.Enumerable.Count%2A><br />-   <xref:System.Linq.Enumerable.LongCount%2A><br />-   <xref:System.Linq.Enumerable.Max%2A><br />-   <xref:System.Linq.Enumerable.Min%2A><br />-   <xref:System.Linq.Enumerable.Sum%2A><br /><br /> Aggregatvorgänge müssen entweder auf dem Client ausgeführt oder von einem Dienstvorgang gekapselt werden.|  
-|Pagingoperatoren|Die folgenden Pagingoperatoren werden nicht für eine <xref:System.Data.Services.Client.DataServiceQuery%601> unterstützt:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **Hinweis:** pagingoperatoren, die auf eine leere Sequenz ausgeführt werden, geben null zurück.|  
+|Pagingoperatoren|Die folgenden Pagingoperatoren werden nicht für eine <xref:System.Data.Services.Client.DataServiceQuery%601> unterstützt:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **Hinweis:**  Pagingoperatoren, die für eine leere Sequenz ausgeführt werden, geben NULL zurück.|  
 |Andere Operatoren|Die folgenden anderen Operatoren werden nicht für eine <xref:System.Data.Services.Client.DataServiceQuery%601> unterstützt:<br /><br /> 1.  <xref:System.Linq.Enumerable.Empty%2A><br />2.  <xref:System.Linq.Enumerable.Range%2A><br />3.  <xref:System.Linq.Enumerable.Repeat%2A><br />4.  <xref:System.Linq.Enumerable.ToDictionary%2A><br />5.  <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
 <a name="supportedExpressions"></a>   
@@ -212,8 +212,8 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  Der Client kann möglicherweise auch weitere CLR-Funktionen auf dem Client auswerten. Für einen Ausdruck, der nicht auf dem Client ausgewertet und nicht in einen gültigen URI für die Auswertung auf dem Server übersetzt werden kann, wird eine <xref:System.NotSupportedException> ausgelöst.  
   
-## <a name="see-also"></a>Siehe auch  
- [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
- [Abfrageprojektionen](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
- [Objektmaterialisierung](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
- [OData: URI-Konventionen](https://go.microsoft.com/fwlink/?LinkID=185564)
+## <a name="see-also"></a>Siehe auch
+- [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Abfrageprojektionen](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [Objektmaterialisierung](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
+- [OData: URI-Konventionen](https://go.microsoft.com/fwlink/?LinkID=185564)

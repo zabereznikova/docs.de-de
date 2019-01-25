@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 416c7787e7e68ea0c6864091e92d92fed1a60bf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442165"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650118"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets-Enumeration
 Gibt die Anwendungselemente an, auf die Attribute angewendet werden können.  
@@ -65,33 +65,33 @@ typedef enum CorAttributeTargets
 |Member|Beschreibung|  
 |------------|-----------------|  
 |`catAssembly`|Attribut kann auf eine Assembly angewendet werden.|  
-|`catModule`|Attribut kann auf eine portable ausführbare (.dll oder .exe) Modul angewendet werden.|  
+|`catModule`|Attribut kann auf ein portierbare ausführbare Datei (.dll oder .exe) Modul angewendet werden.|  
 |`catClass`|Attribut kann auf eine Klasse angewendet werden.|  
-|`catStruct`|Attribute kann auf eine Struktur angewendet werden. d. h. einen Wert eingeben.|  
+|`catStruct`|Auf einer Struktur können Attribute angewendet werden; Typ, d. h. ein Wert.|  
 |`catEnum`|Attribut kann auf eine Enumeration angewendet werden.|  
-|`catConstructor`|Attribut kann auf Konstruktoren angewendet werden.|  
+|`catConstructor`|Attribut kann an einen Konstruktor angewendet werden.|  
 |`catMethod`|Attribut kann auf eine Methode angewendet werden.|  
 |`catProperty`|Attribut kann auf eine Eigenschaft angewendet werden.|  
 |`catField`|Attribut kann auf ein Feld angewendet werden.|  
 |`catEvent`|Attribut kann auf ein Ereignis angewendet werden.|  
 |`catInterface`|Attribut kann auf eine Schnittstelle angewendet werden.|  
 |`catParameter`|Attribut kann auf einen Parameter angewendet werden.|  
-|`catDelegate`|Attribut kann auf einen Delegaten angewendet werden.|  
+|`catDelegate`|In einen Delegaten können Attribute angewendet werden.|  
 |`catGenericParameter`|Attribut kann auf einen generischen Parameter angewendet werden.|  
-|`catAll`|Attribut kann auf jedes Anwendungselement angewendet werden.|  
+|`catAll`|Auf jedes Anwendungselement kann Attribute angewendet werden.|  
 |`catClassMembers`|Attribut kann auf einen Member einer Klasse angewendet werden.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CorAttributeTargets` Enumerationswerte können kombiniert werden, mit einer bitweisen OR-Operation auf die gewünschte Kombination abzurufen.  
+ Die `CorAttributeTargets` Enumerationswerte können kombiniert werden, mit der eine bitweise OR-Operation, um die gewünschte Kombination zu erhalten.  
   
- Die `CorAttributeTargets` codenavigation, die verwaltete <xref:System.AttributeTargets?displayProperty=nameWithType> Enumeration.  
+ Die `CorAttributeTargets` gleicht die verwaltete <xref:System.AttributeTargets?displayProperty=nameWithType> Enumeration.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

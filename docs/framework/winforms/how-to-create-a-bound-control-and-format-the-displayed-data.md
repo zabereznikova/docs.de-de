@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Erstellen eines gebundenen Steuerelements und Formatieren der angezeigten Daten'
+title: 'Vorgehensweise: Erstellen eines gebundenen Steuerelements und Formatieren der angezeigten Daten'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8f4d3c4c738e31ab83d506dc7afb4e49b142765b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2e9dabe12e3f4eda590cec26a70c6becb0e2b7a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45614997"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689730"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Gewusst wie: Erstellen eines gebundenen Steuerelements und Formatieren der angezeigten Daten
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Vorgehensweise: Erstellen eines gebundenen Steuerelements und Formatieren der angezeigten Daten
 Mit Windows Forms-Datenbindung können Sie die Daten formatieren, in einem datengebundenen Steuerelement angezeigt wird, indem die **Formatierung und erweiterte Bindung** Dialogfeld.  
   
 > [!NOTE]
@@ -50,11 +50,11 @@ Mit Windows Forms-Datenbindung können Sie die Daten formatieren, in einem daten
     |Währung|Geben Sie die Anzahl der Dezimalstellen mithilfe **Dezimalstellen** auf-ab-Steuerelement.|  
     |Datum/Zeit|Wählen Sie, wie das Datum und die Uhrzeit angezeigt werden soll, wählen Sie eines der Elemente in der **Typ** Auswahlfeld.|  
     |Wissenschaftlich|Geben Sie die Anzahl der Dezimalstellen mithilfe **Dezimalstellen** auf-ab-Steuerelement.|  
-    |Benutzerdefiniert|Geben Sie eine benutzerdefinierte Formatzeichenfolge ein.<br /><br /> Weitere Informationen finden Sie unter [Formatieren von Typen in .NET](../../../docs/standard/base-types/formatting-types.md). **Hinweis:** benutzerdefinierte Formatzeichenfolgen erfolgreicher Roundtrip zwischen Datenquelle und gebundenen Steuerelement nicht garantiert. Behandeln Sie stattdessen das <xref:System.Windows.Forms.Binding.Parse>- oder <xref:System.Windows.Forms.Binding.Format>-Ereignis für die Bindung, und wenden Sie im Ereignisbehandlungscode eine benutzerdefinierte Formatierung an.|  
+    |Benutzerdefiniert|Geben Sie eine benutzerdefinierte Formatzeichenfolge ein.<br /><br /> Weitere Informationen finden Sie unter [Formatieren von Typen in .NET](../../../docs/standard/base-types/formatting-types.md). **Hinweis**:  Bei benutzerdefinierten Formatzeichenfolgen kann ein erfolgreicher Roundtrip zwischen Datenquelle und gebundenem Steuerelement nicht garantiert werden  Behandeln Sie stattdessen das <xref:System.Windows.Forms.Binding.Parse>- oder <xref:System.Windows.Forms.Binding.Format>-Ereignis für die Bindung, und wenden Sie im Ereignisbehandlungscode eine benutzerdefinierte Formatierung an.|  
   
 8.  Klicken Sie auf **OK** schließen die **Formatierung und erweiterte Bindung** Dialogfeld und zum Eigenschaftenfenster zurückzukehren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in einem Windows Form](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Validierung von Benutzereingaben in Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Windows Forms-Datenbindung](../../../docs/framework/winforms/windows-forms-data-binding.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in Windows Forms](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Validierung von Benutzereingaben in Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)
+- [Windows Forms-Datenbindung](../../../docs/framework/winforms/windows-forms-data-binding.md)

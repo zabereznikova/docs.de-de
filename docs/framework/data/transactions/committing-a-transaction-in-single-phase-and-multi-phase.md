@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: ad0b639aec60fc1dc9b594ff774232699001db5d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142918"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589518"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Ausführen eines Einphasen- oder Mehrphasencommits für eine Transaktion
 Jede in einer Transaktion verwendete Ressource wird von einem Ressourcen-Manager (RM) verwaltet, dessen Aktionen von einem Transaktions-Manager (TM) koordiniert werden. Die [eintragen von Ressourcen als Teilnehmer an einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) Thema wird erläutert, wie eine Ressource (oder mehrere Ressourcen) in einer Transaktion eingetragen werden können. In diesem Thema wird erläutert, wie das Ausführen von Commits für Transaktionen unter eingetragenen Ressourcen koordiniert werden kann.  
@@ -109,6 +109,6 @@ public void InDoubt (Enlistment enlistment)
 ## <a name="single-phase-commit-optimization"></a>Optimierung des Einphasencommit  
  Das Einphasencommit-Protokoll ist zur Laufzeit effizienter, da alle Updates ohne eine explizite Koordination ausgeführt werden. Weitere Informationen zu diesem Protokoll finden Sie unter [Optimization using Single Phase Commit and Promotable Single Phase Notification](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Optimierung mit Einphasencommit und heraufstufbarer Einphasenbenachrichtigung](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
- [Eintragen von Ressourcen als Teilnehmer an einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+## <a name="see-also"></a>Siehe auch
+- [Optimierung mit Einphasencommit und heraufstufbarer Einphasenbenachrichtigung](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
+- [Eintragen von Ressourcen als Teilnehmer an einer Transaktion](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

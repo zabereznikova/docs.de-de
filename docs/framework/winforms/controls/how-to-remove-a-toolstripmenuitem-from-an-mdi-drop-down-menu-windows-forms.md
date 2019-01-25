@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Entfernen eines ToolStripMenuItem aus einem MDI-Dropdownmenü (Windows Forms)'
+title: 'Vorgehensweise: Entfernen eines ToolStripMenuItem aus einem MDI-Dropdownmenü (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], removing
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-ms.openlocfilehash: 0649e99c682464928aaae68451b2cb29d5675485
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c650f8a26629d942aa4ccf0066aee6af4b51f8b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540516"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632061"
 ---
-# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Gewusst wie: Entfernen eines ToolStripMenuItem aus einem MDI-Dropdownmenü (Windows Forms)
+# <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>Vorgehensweise: Entfernen eines ToolStripMenuItem aus einem MDI-Dropdownmenü (Windows Forms)
 In einigen Anwendungen kann sich die Art eines untergeordneten MDI-Fensters (Multiple-Document Interface) von der des übergeordneten MDI-Fensters unterscheiden. Beispielsweise könnte das übergeordnete MDI-Fenster eine Kalkulationstabelle und das untergeordnete MDI-Fenster ein Diagramm enthalten. In diesem Fall möchten Sie möglicherweise den Inhalt des Menüs des übergeordneten MDI-Fensters mit dem Inhalt des Menüs des untergeordneten MDI-Fensters aktualisieren, da untergeordnete MDI-Fenster unterschiedlicher Arten aktiviert werden.  
   
- Im folgenden Verfahren wird die <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, und <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> Eigenschaften zum Entfernen eines Menüelements aus dem Dropdownbereich des übergeordneten MDI-Menüs. Die entfernte Menüelemente schließen die untergeordneten MDI-Fensters in übergeordneten MDI-Menüs wiederhergestellt wird.  
+ Im folgenden Verfahren wird die <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, und <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> Eigenschaften für ein Menüelement aus dem Dropdownbereich des übergeordneten MDI-Menüs zu entfernen. Schließen die untergeordneten MDI-Fensters wird die entfernte Menüelemente übergeordneten MDI-Menüs wiederhergestellt.  
   
 ### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a>So entfernen Sie ein MenuStrip in ein MDI-Dropdownmenü  
   
@@ -30,17 +30,17 @@ In einigen Anwendungen kann sich die Art eines untergeordneten MDI-Fensters (Mul
   
 3.  Fügen Sie ein Menüelement der obersten Ebene zu `Form1`<xref:System.Windows.Forms.MenuStrip> hinzu, und legen Sie dessen <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft auf `&File` fest.  
   
-4.  Hinzufügen von drei Untermenüelemente hinzu der `&File` Menüelement und legen ihre <xref:System.Windows.Forms.ToolStripItem.Text%2A> Eigenschaften `&Open`, `&Import from`, und `E&xit`.  
+4.  Fügen Sie drei Untermenüelemente an die `&File` Menü, und legen ihre <xref:System.Windows.Forms.ToolStripItem.Text%2A> Eigenschaften `&Open`, `&Import from`, und `E&xit`.  
   
-5.  Fügen Sie zwei Untermenüelemente hinzu. die `&Import from` Untermenüelement und legen ihre <xref:System.Windows.Forms.ToolStripItem.Text%2A> Eigenschaften `&Word` und `&Excel`.  
+5.  Fügen Sie zwei Untermenüelemente hinzu. die `&Import from` Untermenü, und legen ihre <xref:System.Windows.Forms.ToolStripItem.Text%2A> Eigenschaften `&Word` und `&Excel`.  
   
 6.  Fügen Sie dem Projekt ein Formular hinzu, fügen Sie dem Formular ein <xref:System.Windows.Forms.MenuStrip> hinzu, und legen die <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>-Eigenschaft von `Form2`<xref:System.Windows.Forms.MenuStrip> auf `true` fest.  
   
 7.  Fügen Sie ein Menüelement der obersten Ebene zu `Form2`<xref:System.Windows.Forms.MenuStrip> hinzu, und legen Sie dessen <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf `&File` fest.  
   
-8.  Hinzufügen einer `&Import from` Untermenüelement hinzu der `&File` Menü `Form2`, und fügen eine `&Word` Untermenüelement hinzu der `&File` im Menü.  
+8.  Hinzufügen eine `&Import from` Untermenüelement, das auf die `&File` im Menü `Form2`, und fügen eine `&Word` Untermenüelement, das auf die `&File` im Menü.  
   
-9. Festlegen der <xref:System.Windows.Forms.MergeAction> und <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> Eigenschaften der `Form2` Menüelemente, wie in der folgenden Tabelle gezeigt.  
+9. Legen Sie die <xref:System.Windows.Forms.MergeAction> und <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> Eigenschaften der `Form2` Menüelemente, wie in der folgenden Tabelle gezeigt.  
   
     |Menüelement Form2|MergeAction-Wert|MergeIndex-Wert|  
     |---------------------|-----------------------|----------------------|  
@@ -48,9 +48,9 @@ In einigen Anwendungen kann sich die Art eines untergeordneten MDI-Fensters (Mul
     |Importieren aus|MatchOnly|-1|  
     |Word|Remove|-1|  
   
-10. In `Form1`, erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.Control.Click> -Ereignis für die `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. In `Form1`, erstellen Sie einen Ereignishandler für die <xref:System.Windows.Forms.Control.Click> Ereignis die `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
-11. Fügen Sie im Ereignishandler Code wie im folgenden Codebeispiel wird zum Erstellen und Anzeigen von neue Instanzen eines `Form2` als untergeordnete MDI-Fenster von `Form1`:  
+11. Fügen Sie Code wie im folgenden Codebeispiel wird zu erstellende und anzuzeigende neue Instanzen von innerhalb des ereignishandlers `Form2` als untergeordnete MDI-Fenster von `Form1`:  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles openToolStripMenuItem.Click  
@@ -94,7 +94,7 @@ In einigen Anwendungen kann sich die Art eines untergeordneten MDI-Fensters (Mul
   
 -   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- [Übersicht über das MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
+- [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
+- [Übersicht über das MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

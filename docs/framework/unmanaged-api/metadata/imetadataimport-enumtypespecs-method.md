@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9b9bc8e364342a601c0738d5a64c5eac3cb7e7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7a4273b36ce3e761348a091df3acb41212e1df05
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722314"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs-Methode
 Zählt TypeSpec-Token auf, die im aktuellen Metadatenbereich definiert sind.  
@@ -40,7 +40,7 @@ HRESULT EnumTypeSpecs (
   
 #### <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss NULL für den ersten Aufruf dieser Methode.  
+ [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss NULL für den ersten Aufruf dieser Methode sein.  
   
  `rTypeSpecs`  
  [out] Das Array zum Speichern der TypeSpec-Token verwendet wird.  
@@ -49,27 +49,27 @@ HRESULT EnumTypeSpecs (
  [in] Die maximale Größe des `rTypeSpecs`-Arrays.  
   
  `pcTypeSpecs`  
- [out] Die Anzahl der TypeSpec-Token im zurückgegebenen `rTypeSpecs`.  
+ [out] Die Anzahl der zurückgegebenen TypeSpec-Token `rTypeSpecs`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumTypeSpecs` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es sind keine Token aufgelistet werden. In diesem Fall `pcTypeSpecs` 0 (null).|  
+|`S_FALSE`|Es gibt keine Token aufgelistet werden. In diesem Fall `pcTypeSpecs` ist 0 (null).|  
   
 ## <a name="remarks"></a>Hinweise  
  Die TypeSpec-Token werden erstellt, indem die [IMetaDataEmit:: GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) Methode.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

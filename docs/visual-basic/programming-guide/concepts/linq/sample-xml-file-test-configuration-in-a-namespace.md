@@ -2,14 +2,14 @@
 title: 'XML-Beispieldatei: Testkonfiguration in einem Namespace3'
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-ms.openlocfilehash: 2a572bb4d2618bdd6ef002389703ea63ee2ed21b
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 642bc270bc502a4119b31decb0e432ec6951e610
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609654"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Beispiel XML-Datei: Testkonfiguration in einem Namespace
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>XML-Beispieldatei: Testkonfiguration in einem Namespace
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Dies ist eine Testkonfigurationsdatei. Der XML-Code befindet sich in einem Namespace.  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
@@ -56,5 +56,5 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 </Tests>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Beispieldokumente (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Siehe auch
+- [XML-Beispieldokumente (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

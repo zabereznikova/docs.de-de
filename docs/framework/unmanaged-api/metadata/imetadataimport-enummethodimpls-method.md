@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 75d1ce526d4cba025ea6e9db8281023969e7cb0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aebfd41a232a3284f79e4229a8845bf5a34f9d1f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54574767"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls-Methode
 Zählt MethodBody- und MethodDeclaration-Token auf, die Methoden des angegebenen Typs darstellen.  
@@ -42,10 +42,10 @@ HRESULT EnumMethodImpls (
   
 #### <a name="parameters"></a>Parameter  
  `phEnum`  
- [in, out] Ein Zeiger auf den Enumerator. Dies muss für den ersten Aufruf dieser Methode NULL sein.  
+ [in, out] Ein Zeiger auf den Enumerator. Dies muss NULL sein, für den ersten Aufruf dieser Methode.  
   
  `td`  
- [in] Eine TypeDef-token für den Typ, dessen Implementierungen der Dienstmethode aufgelistet werden.  
+ [in] Eine TypeDef-token für den Typ, dessen methodenimplementierungen aufgelistet werden.  
   
  `rMethodBody`  
  [out] Das Array zum Speichern der MethodBody--Token.  
@@ -57,24 +57,24 @@ HRESULT EnumMethodImpls (
  [in] Die maximale Größe der `rMethodBody` und `rMethodDecl` Arrays.  
   
  `pcTokens`  
- [in] Die tatsächliche Anzahl der zurückgegebenen Methoden `rMethodBody` und `rMethodDecl`.  
+ [in] Die tatsächliche Anzahl von Methoden, die in zurückgegebenen `rMethodBody` und `rMethodDecl`.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMethodImpls` wurde erfolgreich zurückgegeben.|  
-|`S_FALSE`|Es gibt keine Methodentoken aufgelistet werden. In diesem Fall `pcTokens` 0 (null).|  
+|`S_FALSE`|Es gibt keine Methodentoken aufgelistet. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

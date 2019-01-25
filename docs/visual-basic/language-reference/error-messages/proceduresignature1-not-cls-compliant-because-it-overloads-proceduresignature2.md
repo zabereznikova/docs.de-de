@@ -1,5 +1,5 @@
 ---
-title: '&lt;proceduresignature1&gt; ist nicht CLS-kompatibel, da sie überlädt &lt;proceduresignature2&gt; die unterscheidet sich jedoch nur durch Array von Arrayparametertypen oder durch den Rang der Array-Parametertypen'
+title: '&lt;proceduresignature1&gt; ist nicht CLS-kompatibel, da sie überlädt &lt;proceduresignature2&gt; , unterscheidet sich jedoch nur durch Array-von-Array-Parametertypen oder durch den Rang der Arrayparametertypen davon'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40035
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-ms.openlocfilehash: 0d150dad8d32b4bfa2b9e549e068ef24382d0eba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f4eaa09c3d04af350637fba0d672f55040a6466
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594727"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626848"
 ---
-# <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>&lt;proceduresignature1&gt; ist nicht CLS-kompatibel, da sie überlädt &lt;proceduresignature2&gt; die unterscheidet sich jedoch nur durch Array von Arrayparametertypen oder durch den Rang der Array-Parametertypen
-Eine Prozedur oder Eigenschaft wird als gekennzeichnet `<CLSCompliant(True)>` Wenn sie eine andere Prozedur oder Eigenschaft überschreibt und des einzigen Unterschied zwischen ihren Parameterlisten der Schachtelungsebene eines verzweigten Arrays oder den Rang eines Arrays.  
+# <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>&lt;proceduresignature1&gt; ist nicht CLS-kompatibel, da sie überlädt &lt;proceduresignature2&gt; , unterscheidet sich jedoch nur durch Array-von-Array-Parametertypen oder durch den Rang der Arrayparametertypen davon
+Eine Prozedur oder Eigenschaft wird als markiert `<CLSCompliant(True)>` wenn er überschreibt, eine andere Prozedur bzw. Eigenschaft und der einzige Unterschied zwischen zugehörigen Parameterlisten der Schachtelungsebene eines verzweigten Arrays oder den Rang eines Arrays.  
   
  In den folgenden Deklarationen generieren die zweiten und dritten Deklarationen für diesen Fehler.  
   
@@ -25,7 +25,7 @@ Eine Prozedur oder Eigenschaft wird als gekennzeichnet `<CLSCompliant(True)>` We
   
  `Overloads Sub processArray(ByVal arrayParam(,) As Integer)`  
   
- Die zweite Deklaration ändert der ursprünglichen eindimensionalen Parameter `arrayParam` auf ein Array von Arrays. Die dritte Deklaration ändert `arrayParam` in ein zweidimensionales Array (Rang 2). Wenn Sie Visual Basic Überladungen auf, um nur eine dieser Änderungen unterscheiden können, solche überladen ist nicht kompatibel mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
+ Die zweite Deklaration ändert den ursprünglichen eindimensionalen Parameter `arrayParam` in ein Array von Arrays. Die dritte Deklaration ändert `arrayParam` in ein zweidimensionales Array (Rang 2). Während Visual Basic Überladungen, um nur eine dieser Änderungen unterscheiden können, diese Überladung ist nicht kompatibel mit der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
  Wenn Sie das <xref:System.CLSCompliantAttribute> auf ein Programmierelement anwenden, legen Sie den `isCompliant` -Parameter des Attributs auf `True` oder `False` fest, um die Kompatibilität bzw. Nichtkompatibilität anzugeben. Es gibt keinen Standardwert für diesen Parameter, und Sie müssen einen Wert angeben.  
   
@@ -37,11 +37,11 @@ Eine Prozedur oder Eigenschaft wird als gekennzeichnet `<CLSCompliant(True)>` We
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
--   Wenn Sie CLS-Kompatibilität benötigen, definieren Sie die Überladungen, um auf vielfältigere Weise als nur die Änderungen, die auf dieser Hilfeseite sorgen voneinander abweichen.  
+-   Wenn Sie CLS-Kompatibilität benötigen, definieren Sie Ihre Überladungen, um auf vielfältigere Weise als nur die Änderungen, die auf dieser Hilfeseite genannten voneinander abweichen.  
   
--   Wenn Sie verlangen, dass die Überladungen unterscheiden sich nur durch die Änderungen, die auf diese Hilfe erwähnten Seite, entfernen Sie die <xref:System.CLSCompliantAttribute> von ihren Definitionen, oder markieren Sie sie als `<CLSCompliant(False)>`.  
+-   Wenn Sie festlegen, dass die Überladungen unterscheiden sich nur durch die Änderungen, die auf diese Hilfe erwähnten Seite, entfernen Sie die <xref:System.CLSCompliantAttribute> von den Definitionen, oder markieren Sie sie als `<CLSCompliant(False)>`.  
   
-## <a name="see-also"></a>Siehe auch  
-   
- [Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
+## <a name="see-also"></a>Siehe auch
+
+- [Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
+- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)

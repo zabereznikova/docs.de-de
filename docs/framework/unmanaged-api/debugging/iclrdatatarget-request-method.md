@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc79277c75118b11766e66137284bd5655eed091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 77bd3bc239d0101f02cd515b0ec2a8bec3372882
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405371"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596903"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request-Methode
-Wird von der common Language Runtime (CLR) Daten Access Services zum Anfordern eines Vorgangs aufgerufen, wie durch die Implementierung definiert.  
+Aufgerufen von der common Language Runtime (CLR) Datenzugriffsdiensten der zum Anfordern eines Vorgangs, wie durch die Implementierung definiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ HRESULT Request (
   
 #### <a name="parameters"></a>Parameter  
  `reqCode`  
- [in] Benutzerdefiniert.  
+ [in] Vom Benutzer definiert.  
   
  `inBufferSize`  
  [in] Die Größe des Eingabepuffers, die für die eingehende Anforderung verwendet wird.  
@@ -55,15 +55,15 @@ HRESULT Request (
  [in] Die Größe des Ausgabepuffers, die für die Antwort verwendet wird.  
   
  `outBuffer`  
- [out] Ein Puffer, die die Antwort enthält.  
+ [out] Ein Puffer mit der Antwort.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `Request` Methode ermöglicht das Hinzufügen von nicht angegebenen benutzerdefinierten Vorgänge. Diese Methode sorgt für Erweiterbarkeit, d. h. ohne Revision der Schnittstellendefinition.  
+ Die `Request` Methode ermöglicht das Hinzufügen nicht angegebener benutzerdefinierter Vorgänge. Diese Methode, also bereitstellt Erweiterbarkeit ohne Revision der Definition der Schnittstelle.  
   
  Diese Methode wird vom Writer der Debuganwendung implementiert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** ClrData.idl, ClrData.h  
   
@@ -71,5 +71,5 @@ HRESULT Request (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICLRDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-ms.openlocfilehash: 7baf77b4923cff4320d657b3024ab2a286e40c2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7619dbfcdb0a3a219c9245d30518ffec8b586360
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671420"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Wie das WCF-Syndication-Objektmodell Atom und RSS zugeordnet wird
 Wenn Sie einen Windows Communication Foundation (WCF)-Syndication-Dienst zu entwickeln, erstellen Sie Feeds und Elemente, die mit den folgenden Klassen:  
@@ -33,7 +33,7 @@ Wenn Sie einen Windows Communication Foundation (WCF)-Syndication-Dienst zu entw
   
  Ein <xref:System.ServiceModel.Syndication.SyndicationFeed> kann in jedes beliebige Syndication-Format serialisiert werden, für das ein Formatierungsprogramm definiert ist. WCF wird mit zwei Formatierungsprogrammen geliefert: <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> und <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>.  
   
- Das Objektmodell um <xref:System.ServiceModel.Syndication.SyndicationFeed> und <xref:System.ServiceModel.Syndication.SyndicationItem> orientiert sich näher an der Atom&#160;1.0-Spezifikation als der RSS&#160;2.0-Spezifikation. Das liegt daran, dass Atom&#160;1.0 eine umfassendere Spezifikation ist, die Elemente definiert, die in der RSS&#160;2.0-Spezifikation nicht eindeutig sind oder fehlen. Aus diesem Grund haben viele Elemente im WCF Syndication-Objektmodell keine direkte Darstellung in der Spezifikation RSS 2.0. Bei der Serialisierung <xref:System.ServiceModel.Syndication.SyndicationFeed> und <xref:System.ServiceModel.Syndication.SyndicationItem> -Objekten in RSS 2.0 WCF ermöglicht es Ihnen, Atom-spezifische Datenelemente als Namespace gekennzeichnete Erweiterungselemente zu serialisieren, die der Atom-Spezifikation entsprechen. Sie können diesen Vorgang anhand eines Parameters steuern, der an den <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>-Konstruktor übergeben wird.  
+ Das Objektmodell um <xref:System.ServiceModel.Syndication.SyndicationFeed> und <xref:System.ServiceModel.Syndication.SyndicationItem> orientiert sich näher an der Atom&#160;1.0-Spezifikation als der RSS&#160;2.0-Spezifikation. Das liegt daran, dass Atom&#160;1.0 eine umfassendere Spezifikation ist, die Elemente definiert, die in der RSS&#160;2.0-Spezifikation nicht eindeutig sind oder fehlen. Aus diesem Grund verfügen viele Elemente im WCF Syndication-Objektmodell keine direkte Darstellung in der Spezifikation RSS 2.0. Bei der Serialisierung <xref:System.ServiceModel.Syndication.SyndicationFeed> und <xref:System.ServiceModel.Syndication.SyndicationItem> -Objekten in RSS 2.0 WCF ermöglicht es Ihnen, Atom-spezifische Datenelemente als Namespace gekennzeichnete Erweiterungselemente zu serialisieren, die der Atom-Spezifikation entsprechen. Sie können diesen Vorgang anhand eines Parameters steuern, der an den <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>-Konstruktor übergeben wird.  
   
  Für die Codebeispiele in diesem Thema wird eine der beiden hier definierten Methoden für die Serialisierung verwendet.  
   
@@ -397,9 +397,9 @@ Wenn Sie einen Windows Communication Foundation (WCF)-Syndication-Dienst zu entw
   
  `</content>`  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
- [Architektur von Syndication](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
- [Vorgehensweise: Erstellen eines grundlegenden RS-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
- [Vorgehensweise: Erstellen eines grundlegenden Atom-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
- [Vorgehensweise: Bereitstellen eines Feeds als Atom und RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [Architektur von Syndication](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+- [Vorgehensweise: Erstellen eines einfachen RSS-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
+- [Vorgehensweise: Erstellen eines grundlegenden Atom-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
+- [Vorgehensweise: Bereitstellen eines Feeds als Atom und RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

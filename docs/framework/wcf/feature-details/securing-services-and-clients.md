@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-ms.openlocfilehash: 05dc9c810d2e8ba64c4dcf21d83e91f8a61225a1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ad5bffdb98276864501861d36ea4353eed6860b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148847"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691449"
 ---
 # <a name="securing-services-and-clients"></a>Sichern von Diensten und Clients
 Die Informationen in diesem Abschnitt programmiersicherheit in Windows Communication Foundation (WCF). Hierzu zählt im Allgemeinen das Auswählen einer geeigneten vom System bereitgestellten Bindung, das Festlegen der Eigenschaften des Sicherheitselements sowie das anschließende Festlegen von Eigenschaften für das Dienstverhalten, mit denen gesteuert wird, wie Anmeldeinformationen für die Verwendung durch den Dienst oder den Client abgerufen werden. Diese Techniken decken die sicherheitsanforderungen der meisten Benutzer in den meisten Fällen, siehe [häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Wenn Ihr Szenario mehr Funktionen erforderlich sind, lesen Sie zunächst [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); ist eine Lösung nicht offensichtlich ist, finden Sie unter [Erweitern von Sicherheit](../../../../docs/framework/wcf/extending/extending-security.md). Wenn Sie erstellen (oder Interoperabilität mit) ein System, das umfangreiche Ansprüche verwendet, finden Sie unter den Themen in [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -52,6 +52,6 @@ Die Informationen in diesem Abschnitt programmiersicherheit in Windows Communica
   
  [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>Siehe auch
+- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

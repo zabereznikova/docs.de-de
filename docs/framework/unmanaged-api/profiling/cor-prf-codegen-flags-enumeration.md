@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab5612a2bb48b2cc93e0150f45107e474a4e6217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27e2f194d252baa2e2ca185d905c945d26a177a0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452116"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590090"
 ---
 # <a name="corprfcodegenflags-enumeration"></a>COR_PRF_CODEGEN_FLAGS-Enumeration
 Definiert die codeerstellungskennzeichen, die mit festgelegt werden, können die [icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) Methode.  
@@ -39,14 +39,14 @@ typedef enum {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`COR_PRF_CODEGEN_DISABLE_INLINING`|Keine Funktionen werden in diese Funktion Text als inlinespalten betrachtet. Allerdings kann die Funktion selbst inline in seine Aufrufer sein.|  
-|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|Alle Optimierungen werden für diese Funktion Text deaktiviert werden. Die Funktion selbst sind jedoch weiterhin in seine Aufrufer inline möglicherweise.|  
+|`COR_PRF_CODEGEN_DISABLE_INLINING`|Keine Funktionen werden in dieser Funktion den Text als inlinespalten betrachtet. Die Funktion selbst kann jedoch jetzt Inline an seine Aufrufer eingebettet sein.|  
+|`COR_PRF_CODEGEN_DISABLE_ALL_OPTIMIZATIONS`|Alle Optimierungen werden für den Text für diese Funktion deaktiviert. Die Funktion selbst kann jedoch weiterhin jetzt Inline an seine Aufrufer eingebettet sein.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `COR_PRF_CODEGEN_FLAGS` Enumeration wird verwendet, durch die [icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) Methode, um den Profiler zum Steuern der codegenerierung für die JIT-kompilierten Funktion zu aktivieren.  
+ Die `COR_PRF_CODEGEN_FLAGS` Enumeration wird verwendet, durch die [icorprofilerfunctioncontrol:: Setcodegenflags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) Methode, um den Profiler zu steuern, die codegenerierung für die erneut JIT-kompilierten Funktion zu aktivieren.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -54,5 +54,5 @@ typedef enum {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

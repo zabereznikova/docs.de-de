@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e29c9c246649229900beba2fcc9ab482071ae46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f809395de68b596f769f9396da8668bf296b1aa2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400665"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54675040"
 ---
 # <a name="createalink-function"></a>CreateALink-Funktion
-Erstellt eine Instanz der Assembly Linker aus, und legt einen Zeiger auf die angegebene Schnittstelle fest.  
+Erstellt eine Instanz der Assembly Linker und setzt einen Zeiger auf die angegebene Schnittstelle.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,11 +40,11 @@ HRESULT CreateALink (
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  
-|`riid`|Der physische Name einer Assembly Linker-Schnittstellen.|  
+|`riid`|Der physische Name einer Assemblylinker-Schnittstellen.|  
 |`ppInterface`|Das Verzeichnis, bei erfolgreichem Abschluss einen Zeiger auf die `riid` Schnittstelle.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Bibliothek**: alink.dll  
   
-## <a name="see-also"></a>Siehe auch  
- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>Siehe auch
+- [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

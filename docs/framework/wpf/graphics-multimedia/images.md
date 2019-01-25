@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: dbb8b9511b05c5df228a463d82efb17b7cd6f23a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64d5ede4dcbe50beeec22ca7782d1dc8c24a27f5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561698"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54687218"
 ---
 # <a name="images"></a>Bilder
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet integrierte Unterstützung für mehrere Bildformate, hochwertiges Bildrendering und Codec-Erweiterbarkeit.  
@@ -30,6 +30,6 @@ ms.locfileid: "33561698"
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>Siehe auch  
- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>Siehe auch
+- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
