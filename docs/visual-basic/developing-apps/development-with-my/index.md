@@ -1,11 +1,6 @@
 ---
 title: Entwicklung mit "My" (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.MyWpfExtension.Windows
 helpviewer_keywords:
@@ -14,44 +9,42 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ea802572a59a3b94508558cee97290cac67e1ac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2758dc847d6549689d688ef4742bb334b1968988
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720222"
 ---
-# <a name="development-with-my-visual-basic"></a><span data-ttu-id="eb0b8-102">Entwicklung mit "My" (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eb0b8-102">Development with My (Visual Basic)</span></span>
-<span data-ttu-id="eb0b8-103">Visual Basic stellt neue Features für die schnelle Anwendungsentwicklung bereit, die die Produktivität und die Benutzerfreundlichkeit erhöhen und zugleich Leistung liefern.</span><span class="sxs-lookup"><span data-stu-id="eb0b8-103">Visual Basic provides new features for rapid application development that improve productivity and ease of use while delivering power.</span></span> <span data-ttu-id="eb0b8-104">Eines dieser Features, das den Namen `My` trägt, stellt den Zugriff auf Informationen und Standardobjektinstanzen bereit, die mit der Anwendung und seiner Laufzeitumgebung verwandt sind.</span><span class="sxs-lookup"><span data-stu-id="eb0b8-104">One of these features, called `My`, provides access to information and default object instances that are related to the application and its run-time environment.</span></span> <span data-ttu-id="eb0b8-105">Diese Informationen werden in einem Format organisiert, das durch IntelliSense erkannt werden kann, und gemäß ihrer Verwendung logisch beschrieben.</span><span class="sxs-lookup"><span data-stu-id="eb0b8-105">This information is organized in a format that is discoverable through IntelliSense and logically delineated according to use.</span></span>  
+# <a name="development-with-my-visual-basic"></a><span data-ttu-id="55e6f-102">Entwicklung mit "My" (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55e6f-102">Development with My (Visual Basic)</span></span>
+<span data-ttu-id="55e6f-103">Visual Basic stellt neue Features für die schnelle Anwendungsentwicklung bereit, die die Produktivität und die Benutzerfreundlichkeit erhöhen und zugleich Leistung liefern.</span><span class="sxs-lookup"><span data-stu-id="55e6f-103">Visual Basic provides new features for rapid application development that improve productivity and ease of use while delivering power.</span></span> <span data-ttu-id="55e6f-104">Eines dieser Features, das den Namen `My` trägt, stellt den Zugriff auf Informationen und Standardobjektinstanzen bereit, die mit der Anwendung und seiner Laufzeitumgebung verwandt sind.</span><span class="sxs-lookup"><span data-stu-id="55e6f-104">One of these features, called `My`, provides access to information and default object instances that are related to the application and its run-time environment.</span></span> <span data-ttu-id="55e6f-105">Diese Informationen werden in einem Format organisiert, das durch IntelliSense erkannt werden kann, und gemäß ihrer Verwendung logisch beschrieben.</span><span class="sxs-lookup"><span data-stu-id="55e6f-105">This information is organized in a format that is discoverable through IntelliSense and logically delineated according to use.</span></span>  
   
- <span data-ttu-id="eb0b8-106">Member der obersten Ebene von `My` werden als Objekte verfügbar gemacht.</span><span class="sxs-lookup"><span data-stu-id="eb0b8-106">Top-level members of `My` are exposed as objects.</span></span> <span data-ttu-id="eb0b8-107">Jedes Objekt verhält sich wie ein Namespace oder eine Klasse mit `Shared` Membern und stellt eine Reihe von verwandten Membern zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="eb0b8-107">Each object behaves similarly to a namespace or a class with `Shared` members, and it exposes a set of related members.</span></span>  
+ <span data-ttu-id="55e6f-106">Member der obersten Ebene von `My` werden als Objekte verfügbar gemacht.</span><span class="sxs-lookup"><span data-stu-id="55e6f-106">Top-level members of `My` are exposed as objects.</span></span> <span data-ttu-id="55e6f-107">Jedes Objekt verhält sich wie ein Namespace oder eine Klasse mit `Shared` Membern und stellt eine Reihe von verwandten Membern zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="55e6f-107">Each object behaves similarly to a namespace or a class with `Shared` members, and it exposes a set of related members.</span></span>  
   
- <span data-ttu-id="eb0b8-108">Diese Tabelle zeigt die `My`-Objekte der obersten Ebene und ihre Beziehung zueinander.</span><span class="sxs-lookup"><span data-stu-id="eb0b8-108">This table shows the top-level `My` objects and their relationship to each other.</span></span>  
+ <span data-ttu-id="55e6f-108">Diese Tabelle zeigt die `My`-Objekte der obersten Ebene und ihre Beziehung zueinander.</span><span class="sxs-lookup"><span data-stu-id="55e6f-108">This table shows the top-level `My` objects and their relationship to each other.</span></span>  
   
- <span data-ttu-id="eb0b8-109">![Objektmodell für „My“](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")</span><span class="sxs-lookup"><span data-stu-id="eb0b8-109">![Object Model for My](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")</span></span>  
+ <span data-ttu-id="55e6f-109">![Objektmodell für „My“](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")</span><span class="sxs-lookup"><span data-stu-id="55e6f-109">![Object Model for My](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="eb0b8-110">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="eb0b8-110">In This Section</span></span>  
- [<span data-ttu-id="eb0b8-111">Ausführen von Aufgaben mit My.Application, My.Computer und My.User</span><span class="sxs-lookup"><span data-stu-id="eb0b8-111">Performing Tasks with My.Application, My.Computer, and My.User</span></span>](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
- <span data-ttu-id="eb0b8-112">Beschreibt die drei wichtigsten `My`-Objekte `My.Application`, `My.Computer` und `My.User`, die Zugriff auf Informationen und Funktionalität bieten</span><span class="sxs-lookup"><span data-stu-id="eb0b8-112">Describes the three central `My` objects, `My.Application`, `My.Computer`, and `My.User`, which provide access to information and functionality</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="55e6f-110">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="55e6f-110">In This Section</span></span>  
+ [<span data-ttu-id="55e6f-111">Ausführen von Aufgaben mit My.Application, My.Computer und My.User</span><span class="sxs-lookup"><span data-stu-id="55e6f-111">Performing Tasks with My.Application, My.Computer, and My.User</span></span>](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
+ <span data-ttu-id="55e6f-112">Beschreibt die drei wichtigsten `My`-Objekte `My.Application`, `My.Computer` und `My.User`, die Zugriff auf Informationen und Funktionalität bieten</span><span class="sxs-lookup"><span data-stu-id="55e6f-112">Describes the three central `My` objects, `My.Application`, `My.Computer`, and `My.User`, which provide access to information and functionality</span></span>  
   
- [<span data-ttu-id="eb0b8-113">Von My.Forms und My.WebServices bereitgestellte Standardobjektinstanzen</span><span class="sxs-lookup"><span data-stu-id="eb0b8-113">Default Object Instances Provided by My.Forms and My.WebServices</span></span>](../../../visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md)  
- <span data-ttu-id="eb0b8-114">Beschreibt die Objekte `My.Forms` und `My.WebServices`, die Zugriff auf Formulare, Datenquellen und XML-Webdienste bieten, die von der Anwendung verwendet werden</span><span class="sxs-lookup"><span data-stu-id="eb0b8-114">Describes the `My.Forms` and `My.WebServices` objects, which provide access to forms, data sources, and XML Web services used by your application.</span></span>  
+ [<span data-ttu-id="55e6f-113">Von My.Forms und My.WebServices bereitgestellte Standardobjektinstanzen</span><span class="sxs-lookup"><span data-stu-id="55e6f-113">Default Object Instances Provided by My.Forms and My.WebServices</span></span>](../../../visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md)  
+ <span data-ttu-id="55e6f-114">Beschreibt die Objekte `My.Forms` und `My.WebServices`, die Zugriff auf Formulare, Datenquellen und XML-Webdienste bieten, die von der Anwendung verwendet werden</span><span class="sxs-lookup"><span data-stu-id="55e6f-114">Describes the `My.Forms` and `My.WebServices` objects, which provide access to forms, data sources, and XML Web services used by your application.</span></span>  
   
- [<span data-ttu-id="eb0b8-115">Schnelle Anwendungsentwicklung mit My.Resources und My.Settings</span><span class="sxs-lookup"><span data-stu-id="eb0b8-115">Rapid Application Development with My.Resources and My.Settings</span></span>](../../../visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md)  
- <span data-ttu-id="eb0b8-116">Beschreibt die Objekte `My.Resources` und `My.Settings`, die Zugriff auf die Ressourcen und Einstellungen einer Anwendung ermöglichen</span><span class="sxs-lookup"><span data-stu-id="eb0b8-116">Describes the `My.Resources` and `My.Settings` objects, which provide access to an application's resources and settings.</span></span>  
+ [<span data-ttu-id="55e6f-115">Schnelle Anwendungsentwicklung mit My.Resources und My.Settings</span><span class="sxs-lookup"><span data-stu-id="55e6f-115">Rapid Application Development with My.Resources and My.Settings</span></span>](../../../visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md)  
+ <span data-ttu-id="55e6f-116">Beschreibt die Objekte `My.Resources` und `My.Settings`, die Zugriff auf die Ressourcen und Einstellungen einer Anwendung ermöglichen</span><span class="sxs-lookup"><span data-stu-id="55e6f-116">Describes the `My.Resources` and `My.Settings` objects, which provide access to an application's resources and settings.</span></span>  
   
- [<span data-ttu-id="eb0b8-117">Übersicht über das Visual Basic-Anwendungsmodell</span><span class="sxs-lookup"><span data-stu-id="eb0b8-117">Overview of the Visual Basic Application Model</span></span>](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- <span data-ttu-id="eb0b8-118">Beschreibt das Visual Basic-Anwendung Starten/Herunterfahren-Modell.</span><span class="sxs-lookup"><span data-stu-id="eb0b8-118">Describes the Visual Basic Application Startup/Shutdown model.</span></span>  
+ [<span data-ttu-id="55e6f-117">Übersicht über das Visual Basic-Anwendungsmodell</span><span class="sxs-lookup"><span data-stu-id="55e6f-117">Overview of the Visual Basic Application Model</span></span>](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
+ <span data-ttu-id="55e6f-118">Beschreibt die Visual Basic-Anwendung Starten/Herunterfahren-Modell.</span><span class="sxs-lookup"><span data-stu-id="55e6f-118">Describes the Visual Basic Application Startup/Shutdown model.</span></span>  
   
- [<span data-ttu-id="eb0b8-119">Merkmale von "My" auf Grundlage des Projekttyps</span><span class="sxs-lookup"><span data-stu-id="eb0b8-119">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
- <span data-ttu-id="eb0b8-120">Bietet Informationen zu den in verschiedenen Projekttypen verfügbaren `My`-Funktionen</span><span class="sxs-lookup"><span data-stu-id="eb0b8-120">Gives details on which `My` features are available in different project types.</span></span>  
+ [<span data-ttu-id="55e6f-119">Merkmale von "My" auf Grundlage des Projekttyps</span><span class="sxs-lookup"><span data-stu-id="55e6f-119">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
+ <span data-ttu-id="55e6f-120">Bietet Informationen zu den in verschiedenen Projekttypen verfügbaren `My`-Funktionen</span><span class="sxs-lookup"><span data-stu-id="55e6f-120">Gives details on which `My` features are available in different project types.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb0b8-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="eb0b8-121">See Also</span></span>  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.Devices.Computer>  
- <xref:Microsoft.VisualBasic.ApplicationServices.User>  
- [<span data-ttu-id="eb0b8-122">My.Forms-Objekt</span><span class="sxs-lookup"><span data-stu-id="eb0b8-122">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)  
- [<span data-ttu-id="eb0b8-123">My.WebServices-Objekt</span><span class="sxs-lookup"><span data-stu-id="eb0b8-123">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)  
- [<span data-ttu-id="eb0b8-124">Merkmale von "My" auf Grundlage des Projekttyps</span><span class="sxs-lookup"><span data-stu-id="eb0b8-124">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+## <a name="see-also"></a><span data-ttu-id="55e6f-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="55e6f-121">See also</span></span>
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.Devices.Computer>
+- <xref:Microsoft.VisualBasic.ApplicationServices.User>
+- [<span data-ttu-id="55e6f-122">My.Forms-Objekt</span><span class="sxs-lookup"><span data-stu-id="55e6f-122">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [<span data-ttu-id="55e6f-123">My.WebServices-Objekt</span><span class="sxs-lookup"><span data-stu-id="55e6f-123">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [<span data-ttu-id="55e6f-124">Merkmale von "My" auf Grundlage des Projekttyps</span><span class="sxs-lookup"><span data-stu-id="55e6f-124">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

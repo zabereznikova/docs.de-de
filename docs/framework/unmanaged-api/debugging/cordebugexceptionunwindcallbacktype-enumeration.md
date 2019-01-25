@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fe2fcf10b517f4eb7b1c7e87142afb386821246
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 31b302977950b3daeab6ac2be117c7f8db51eb2e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54654762"
 ---
-# <a name="cordebugexceptionunwindcallbacktype-enumeration"></a><span data-ttu-id="686b5-102">CorDebugExceptionUnwindCallbackType-Enumeration</span><span class="sxs-lookup"><span data-stu-id="686b5-102">CorDebugExceptionUnwindCallbackType Enumeration</span></span>
-<span data-ttu-id="686b5-103">Gibt das Ereignis an, das durch den Rückruf während der Entladephase signalisiert wird.</span><span class="sxs-lookup"><span data-stu-id="686b5-103">Indicates the event that is being signaled by the callback during the unwind phase.</span></span>  
+# <a name="cordebugexceptionunwindcallbacktype-enumeration"></a><span data-ttu-id="8f72f-102">CorDebugExceptionUnwindCallbackType-Enumeration</span><span class="sxs-lookup"><span data-stu-id="8f72f-102">CorDebugExceptionUnwindCallbackType Enumeration</span></span>
+<span data-ttu-id="8f72f-103">Gibt das Ereignis an, das durch den Rückruf während der Entladephase signalisiert wird.</span><span class="sxs-lookup"><span data-stu-id="8f72f-103">Indicates the event that is being signaled by the callback during the unwind phase.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="686b5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="686b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f72f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8f72f-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugExceptionUnwindCallbackType {  
@@ -35,21 +35,21 @@ typedef enum CorDebugExceptionUnwindCallbackType {
 } CorDebugExceptionUnwindCallbackType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="686b5-105">Member</span><span class="sxs-lookup"><span data-stu-id="686b5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8f72f-105">Member</span><span class="sxs-lookup"><span data-stu-id="8f72f-105">Members</span></span>  
   
-|<span data-ttu-id="686b5-106">Member</span><span class="sxs-lookup"><span data-stu-id="686b5-106">Member</span></span>|<span data-ttu-id="686b5-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="686b5-107">Description</span></span>|  
+|<span data-ttu-id="8f72f-106">Member</span><span class="sxs-lookup"><span data-stu-id="8f72f-106">Member</span></span>|<span data-ttu-id="8f72f-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8f72f-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_UNWIND_BEGIN`|<span data-ttu-id="686b5-108">Der Anfang des Entladeprozesses wird.</span><span class="sxs-lookup"><span data-stu-id="686b5-108">The beginning of the unwind process.</span></span>|  
-|`DEBUG_EXCEPTION_INTERCEPTED`|<span data-ttu-id="686b5-109">Die Ausnahme abgefangen wurde.</span><span class="sxs-lookup"><span data-stu-id="686b5-109">The exception was intercepted.</span></span>|  
+|`DEBUG_EXCEPTION_UNWIND_BEGIN`|<span data-ttu-id="8f72f-108">Der Anfang des Entladeprozesses werden soll.</span><span class="sxs-lookup"><span data-stu-id="8f72f-108">The beginning of the unwind process.</span></span>|  
+|`DEBUG_EXCEPTION_INTERCEPTED`|<span data-ttu-id="8f72f-109">Die Ausnahme wurde abgefangen.</span><span class="sxs-lookup"><span data-stu-id="8f72f-109">The exception was intercepted.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="686b5-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="686b5-110">Requirements</span></span>  
- <span data-ttu-id="686b5-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="686b5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f72f-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8f72f-110">Requirements</span></span>  
+ <span data-ttu-id="8f72f-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8f72f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="686b5-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="686b5-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8f72f-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8f72f-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="686b5-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="686b5-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8f72f-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8f72f-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="686b5-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="686b5-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8f72f-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f72f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="686b5-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="686b5-115">See Also</span></span>  
- [<span data-ttu-id="686b5-116">Debuggen von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="686b5-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="8f72f-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8f72f-115">See also</span></span>
+- [<span data-ttu-id="8f72f-116">Debuggen von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="8f72f-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
