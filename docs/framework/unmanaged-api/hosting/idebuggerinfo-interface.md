@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e5a7d0555b026340ec53363a7cd054532d1491c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e269e699d708c669715829eade9ca56fba16eac3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438739"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694828"
 ---
 # <a name="idebuggerinfo-interface"></a>IDebuggerInfo-Schnittstelle
-Stellt Methoden zum Abrufen von Informationen über den Zustand der Debugdienste bereit.  
+Stellt Methoden zum Abrufen von Informationen über den Status der Debugdienste bereit.  
   
 ## <a name="methods"></a>Methoden  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
-|[IsDebuggerAttached-Methode](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-isdebuggerattached-method.md)|Ruft einen Wert, der angibt, ob dieser Prozess ein verwalteter Debugger angefügt ist.|  
+|[IsDebuggerAttached-Methode](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-isdebuggerattached-method.md)|Ruft einen Wert, der angibt, ob dieses Prozesses ein verwalteter Debugger angefügt wird.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MSCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [CorRuntimeHost-Co-Klasse](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+## <a name="see-also"></a>Siehe auch
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [CorRuntimeHost-Co-Klasse](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

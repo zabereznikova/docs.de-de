@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: 2bde9b3f6934833804866e29c18f3636c65ba069
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 215b04ce47a393a0ec3ad01957a311bc5508d24f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539177"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580238"
 ---
-# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Gewusst wie: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms
-Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet die Zeilenvorlage als Grundlage für alle Zeilen, die an das Steuerelement hinzufügt, über die Datenbindung oder beim Aufrufen der <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> -Methode ohne Angabe einer vorhandenen Zeile verwenden.  
+# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms
+Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet die Zeilenvorlage als Grundlage für alle Zeilen, die es dem Steuerelement hinzugefügt, über die Datenbindung oder beim Aufrufen der <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> Methode ohne Angabe einer vorhandenen Zeile verwenden.  
   
- Die Zeilenvorlage bietet Ihnen eine bessere Kontrolle über das Aussehen und Verhalten von Zeilen als die <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> Eigenschaft ermöglicht. Mit der Zeilenvorlage können Sie festlegen, eine <xref:System.Windows.Forms.DataGridViewRow> Eigenschaften, einschließlich <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
+ Die Zeilenvorlage ermöglicht Ihnen größere Kontrolle über das Erscheinungsbild und Verhalten von Zeilen als die <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> Eigenschaft enthält. Mit der Zeilenvorlage können Sie alle festlegen <xref:System.Windows.Forms.DataGridViewRow> Eigenschaften, einschließlich <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
   
- Es gibt einige Situationen, in denen Sie die Zeilenvorlage verwenden müssen, um einen bestimmten Effekt zu erzielen. Z. B. kann keine Informationen über die Zeilenhöhe gespeichert werden, einem <xref:System.Windows.Forms.DataGridViewCellStyle>, sodass Sie eine Zeilenvorlage verwenden müssen, um die Standardhöhe verwendet, die für alle Zeilen zu ändern. Die Zeilenvorlage ist auch nützlich, wenn Sie Ihren eigenen Klassen abgeleitet erstellen <xref:System.Windows.Forms.DataGridViewRow> und Ihren benutzerdefinierten Typ verwendet werden, wenn das Steuerelement neue Zeilen hinzugefügt werden sollen.  
+ Es gibt einige Situationen, in dem Sie die Zeilenvorlage verwenden müssen, um einen bestimmten Effekt zu erzielen. Z. B. Informationen über die Zeilenhöhe in gespeichert werden kann keiner <xref:System.Windows.Forms.DataGridViewCellStyle>, Sie eine Zeilenvorlage verwenden müssen, um die Standardhöhe aller Zeilen ein, zu ändern. Die Zeilenvorlage ist auch nützlich, bei der Erstellung eigener Klassen abgeleitet <xref:System.Windows.Forms.DataGridViewRow> und den benutzerdefinierten Typ verwendet, wenn dem Steuerelement neue Zeilen hinzugefügt werden sollen.  
   
 > [!NOTE]
->  Die Zeilenvorlage wird verwendet, nur, wenn Zeilen hinzugefügt werden. Sie können nicht vorhandene Zeilen ändern, indem Sie die Zeilenvorlage ändern.  
+>  Die Zeilenvorlage wird verwendet, nur, wenn Zeilen hinzugefügt werden. Sie können keine vorhandene Zeilen ändern, durch Ändern der Zeilenvorlage.  
   
-### <a name="to-use-the-row-template"></a>Verwenden der Zeilenvorlage  
+### <a name="to-use-the-row-template"></a>Verwenden die Zeilenvorlage  
   
 -   Legen Sie Eigenschaften für das Objekt abgerufen, die von der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> Eigenschaft.  
   
@@ -41,10 +41,10 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet die Zeilenv
   
 -   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewCellStyle>  
- <xref:System.Windows.Forms.DataGridViewRow>  
- <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>  
- [Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- [Zellstile im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewCellStyle>
+- <xref:System.Windows.Forms.DataGridViewRow>
+- <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>
+- [Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Zellstile im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)

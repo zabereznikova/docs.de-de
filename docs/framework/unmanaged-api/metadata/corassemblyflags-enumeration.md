@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f99fb7a693c47b257abe9c0b783856179fc9f0eb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442832"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582374"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags-Enumeration
 Enthält Werte, die die auf eine Assemblykompilierung angewendeten Metadaten beschreiben.  
@@ -59,31 +59,31 @@ typedef enum CorAssemblyFlags {
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`afPublicKey`|Gibt an, dass der Assemblyverweis die vollständigen, nicht gehashte öffentlichen Schlüssel enthält.|  
+|`afPublicKey`|Gibt an, dass der Assemblyverweis auf den öffentlichen Schlüssel für vollständigen, nicht gehashte enthält.|  
 |`afPA_None`|Gibt an, dass die Prozessorarchitektur nicht angegeben wird.|  
 |`afPA_MSIL`|Gibt an, dass die Prozessorarchitektur neutral ist (PE32).|  
 |`afPA_x86`|Gibt an, dass die Prozessorarchitektur X86 (PE32) ist.|  
 |`afPA_IA64`|Gibt an, dass die Prozessorarchitektur Itanium (PE32 +) ist.|  
 |`afPA_AMD64`|Gibt an, dass die Prozessorarchitektur AMD X64 (PE32 +) ist.|  
 |`afPA_ARM`|Gibt an, dass die Prozessorarchitektur ARM (PE32) ist.|  
-|`afPA_NoPlatform`|Gibt an, dass die Assembly eine Verweisassembly ist; d. h. gilt für jede Architektur, aber nicht auf jeder Architektur ausgeführt wird. Daher das Flag ist identisch mit `afPA_Mask`.|  
-|`afPA_Specified`|Gibt an, dass die Flags der Prozessorarchitektur an weitergegeben werden soll die `AssemblyRef` Datensatz.|  
+|`afPA_NoPlatform`|Gibt an, dass die Assembly eine Verweisassembly; Das heißt, es gilt für jede Architektur, jedoch kann nicht auf jeder Architektur ausgeführt werden. Daher das Flag ist identisch mit `afPA_Mask`.|  
+|`afPA_Specified`|Gibt an, dass die Flags der Prozessorarchitektur soll, um weitergegeben werden die `AssemblyRef` Datensatz.|  
 |`afPA_Mask`|Eine Maske, die die Prozessorarchitektur beschreibt.|  
 |`afPA_FullMask`|Gibt an, dass die Beschreibung der Prozessorarchitektur enthalten ist.|  
-|`afPA_Shift`|Gibt eine Anzahl UMSCHALT in Flags der Prozessorarchitektur verschiedene andere und aus dem Index.|  
+|`afPA_Shift`|Gibt ein Verschiebungswert in die Flags der Prozessorarchitektur in und aus dem Index an.|  
 |`afEnableJITcompileTracking`|Gibt den entsprechenden Wert aus der <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> von der <xref:System.Diagnostics.DebuggableAttribute>.|  
 |`afDisableJITcompileOptimizer`|Gibt den entsprechenden Wert aus der <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> von der <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Gibt an, dass die Assembly zur Laufzeit auf eine Assembly von einem anderen Herausgeber umgeleitet werden kann.|  
+|`afRetargetable`|Gibt an, dass die Assembly zur Laufzeit auf eine Assembly von einem anderen Verleger umgeleitet werden kann.|  
 |`afContentType_Mask`|Eine Maske, die den Inhaltstyp beschreibt.|  
 |`afContentType_Default`|Gibt den Standardinhaltstyp an.|  
 |`afContentType_WindowsRuntime`|Gibt an, die [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Inhaltstyp.|  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

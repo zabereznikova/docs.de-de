@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: e8fbfd54782e601595712035827ea346d1dbf500
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572694"
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Beim Schreiben in die Ausgabedatei kann nicht &#39; &lt;Filename&gt;&#39;: &lt;Fehler&gt;
 Beim Erstellen der Datei ist ein Fehler aufgetreten.  
@@ -33,11 +33,11 @@ Beim Erstellen der Datei ist ein Fehler aufgetreten.
   
 1.  Kompilieren Sie das Programm erneut, um festzustellen, ob der Fehler erneut auftritt.  
   
-2.  Wenn der Fehler weiterhin auftritt, speichern Sie Ihre Arbeit, und starten Sie Visual Studio neu.  
+2.  Wenn der Fehler weiterhin auftritt, speichern Sie Ihre Arbeit, und starten Sie Visual Studio.  
   
 3.  Wenn der Fehler weiterhin besteht, starten Sie den Computer neu.  
   
-4.  Wenn der Fehler erneut auftritt, installieren Sie Visual Basic aus.  
+4.  Wenn der Fehler erneut auftritt, installieren Sie Visual Basic.  
   
 5.  Wenn der Fehler auch nach der erneuten Installation auftritt, informieren Sie den Produktsupport von Microsoft.  
   
@@ -47,15 +47,15 @@ Beim Erstellen der Datei ist ein Fehler aufgetreten.
   
 2.  Klicken Sie auf die **Ansichten** Symbol, und wählen Sie **Details**.  
   
-3.  Maustaste auf die Spaltenüberschrift, und wählen Sie **Attribute** aus der Dropdown-Liste.  
+3.  Mit der rechten Maustaste in der Kopfzeile der Spalte, und wählen **Attribute** aus der Dropdown-Liste.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>So ändern Sie die Attribute einer Datei oder eines Ordners  
   
 1.  In **Datei-Explorer**mit der rechten Maustaste auf die Datei oder den Ordner, und wählen Sie **Eigenschaften**.  
   
-2.  In der **Attribute** Teil der **allgemeine** Registerkarte Deaktivieren der **schreibgeschützt** Feld.  
+2.  In der **Attribute** Teil der **allgemeine** Registerkarte die **schreibgeschützte** Feld.  
   
-3.  Press **OK**.  
+3.  Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a>Siehe auch
+- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

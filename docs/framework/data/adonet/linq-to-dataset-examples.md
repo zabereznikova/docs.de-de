@@ -2,12 +2,12 @@
 title: Beispiele für LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 09a5d652d1d75a02966f3ed38fe9d3aa7901a87b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8e6cce8ba79cad42ade6ac373631094f9e2d4e04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524841"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634531"
 ---
 # <a name="linq-to-dataset-examples"></a>Beispiele für LINQ to DataSet
 Dieser Abschnitt enthält [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] -Programmierbeispiele, bei denen die Standardabfrageoperatoren zu verwenden. Die <xref:System.Data.DataSet> in diesen Beispielen verwendete werden ausgefüllt, indem Sie mit der `FillDataSet` -Methode, die im angegebenen [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Weitere Informationen finden Sie unter [Standard Query Operators Overview](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -52,6 +52,6 @@ Dieser Abschnitt enthält [!INCLUDE[linq_dataset](../../../../includes/linq-data
  [Beispiele für DataSet-spezifische Operatoren](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
  Enthält Beispiele, die zeigen, wie Sie die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode und die <xref:System.Data.DataRowComparer>-Klasse verwenden können.  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmierhandbuch](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [Laden von Daten in ein DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+## <a name="see-also"></a>Siehe auch
+- [Programmierhandbuch](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [Laden von Daten in ein DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

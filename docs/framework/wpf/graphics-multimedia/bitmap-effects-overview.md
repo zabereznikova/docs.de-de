@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
-ms.openlocfilehash: 97b878621d5aa1860cd955755d9bbc344b95b993
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: c0c5019eb122f30ad25fa86164b4ead6db8c83c2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715815"
 ---
 # <a name="bitmap-effects-overview"></a>Übersicht über Bitmapeffekte
 Mit Bitmapeffekten können Designer und Entwickler visuelle Effekte anwenden, an Windows Presentation Foundation (WPF) Inhalt gerendert. Z. B. Bitmapeffekten können Sie ganz einfach Anwenden einer <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> Auswirkung oder einen Weichzeichnereffekt auf ein Bild oder eine Schaltfläche.  
@@ -60,12 +60,12 @@ Mit Bitmapeffekten können Designer und Entwickler visuelle Effekte anwenden, an
 ## <a name="creating-custom-effects"></a>Erstellen von benutzerdefinierten Effekten  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet außerdem nicht verwaltete Schnittstellen zum Erstellen von benutzerdefinierter Effekten, die in verwalteten [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen verwendet werden können. Weiteres Referenzmaterial zum Erstellen von benutzerdefinierten Bitmapeffekten fnden Sie in der Dokumentation [Unmanaged WPF Bitmap Effect (Nicht verwaltete WPF-Bitmapeffekte)](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.Effects.BitmapEffectGroup>  
- <xref:System.Windows.Media.Effects.BitmapEffectInput>  
- <xref:System.Windows.Media.Effects.BitmapEffectCollection>  
- [Nicht verwaltete WPF-Bitmapeffekte](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)  
- [Übersicht über die Bildverarbeitung](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Sicherheit](../../../../docs/framework/wpf/security-wpf.md)  
- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.Effects.BitmapEffectGroup>
+- <xref:System.Windows.Media.Effects.BitmapEffectInput>
+- <xref:System.Windows.Media.Effects.BitmapEffectCollection>
+- [Nicht verwaltete WPF-Bitmapeffekte](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)
+- [Übersicht über die Bildverarbeitung](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Sicherheit](../../../../docs/framework/wpf/security-wpf.md)
+- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)

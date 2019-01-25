@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80cee666a05432099a380a5ac547a5ca28698c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 414526d498b39e894c6bd3530a446f8c06f46378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436032"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572746"
 ---
 # <a name="silverlight-debugging"></a>Silverlight-Debugging
 In den Themen dieses Abschnitts sind die Umgebung und die Schnittstellen beschrieben, mit denen die Common Language Runtime (CLR) das Debuggen von Silverlight-basierten Anwendungen unterstützt, die unter Windows oder auf der Macintosh-Plattform ausgeführt werden.  
@@ -22,7 +22,7 @@ In den Themen dieses Abschnitts sind die Umgebung und die Schnittstellen beschri
  Stellt einen Mechanismus für das Auflisten der CLRs in einem Prozess bereit.  
   
  [CloseCLREnumeration-Funktion](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)  
- Schließt alle gültigen CLR-Starts weiterhin Ereignisse, die befindet sich in einem Array von Handles zurückgegebenes der [EnumerateCLRs-Funktion](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md), und der Speicher für die Handle- und Pfadarrays freigegeben wird.  
+ Schließt alle gültigen CLR weiterhin-Startup-Ereignisse in ein Array von Handles, die vom der [EnumerateCLRs-Funktion](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md), und den Speicher für den Pfad von Handle- und Zeichenfolgenarrays freigegeben.  
   
  [CreateCoreClrDebugTarget-Funktion](../../../../docs/framework/unmanaged-api/debugging/createcoreclrdebugtarget-function.md)  
  Erstellt eine Verbindung mit einem Remoteziel für eine Prozess- und Runtime-Enumeration.  
@@ -34,7 +34,7 @@ In den Themen dieses Abschnitts sind die Umgebung und die Schnittstellen beschri
  Erstellt eine Versionszeichenfolge aus einem CLR-Pfad in einem Zielprozess.  
   
  [CreateDebuggingInterfaceFromVersion-Funktion](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)  
- Akzeptiert eine Versionszeichenfolge der CLR Merry [CreateVersionStringFromModule-Funktion](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)-Funktion und gibt eine entsprechende Debuggerschnittstelle zurück.  
+ Akzeptiert eine CLR-Versionszeichenfolge Merry [CreateVersionStringFromModule-Funktion](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)Funktion, und gibt eine entsprechende Debuggerschnittstelle zurück.  
   
  [CoreClrDebugProcInfo-Struktur](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)  
  Entspricht einem Prozess, der auf einem Remotecomputer ausgeführt wird.  
@@ -54,9 +54,9 @@ In den Themen dieses Abschnitts sind die Umgebung und die Schnittstellen beschri
  [ShutdownDbgTransportManager-Funktion](../../../../docs/framework/unmanaged-api/debugging/shutdowndbgtransportmanager-function.md)  
  Fährt den Transport-Manager für eine Verbindung mit einem Remotecomputer herunter.  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Co-Klassen](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Co-Klassen](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von globalen statischen Funktionen](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

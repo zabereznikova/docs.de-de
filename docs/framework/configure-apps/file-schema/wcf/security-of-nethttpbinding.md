@@ -2,12 +2,12 @@
 title: '&lt;security&gt; von &lt;netHttpBinding'
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: a03553c5afe78b3f95526411b8187464da08161b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 7273aaf187882a6f72bd901e03581524e919770f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54584933"
 ---
 # <a name="ltsecuritygt-of-ltnethttpbinding"></a>&lt;security&gt; von &lt;netHttpBinding
 Definiert die Sicherheitsfunktionen von der [ \<BasicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -16,7 +16,7 @@ Definiert die Sicherheitsfunktionen von der [ \<BasicHttpBinding >](../../../../
 \<bindings>  
 \<netHttpBinding>  
 \<binding>  
-\<Sicherheit >  
+\<security>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,7 +53,7 @@ Definiert die Sicherheitsfunktionen von der [ \<BasicHttpBinding >](../../../../
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nethttpbinding.md)|Definiert die Transportsicherheitseinstellungen für einen Standard-HTTP-Dienst. Dieses Element entspricht <xref:System.ServiceModel.HttpTransportSecurity>.|  
+|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nethttpbinding.md)|Definiert die Transportsicherheitseinstellungen für einen Standard-HTTP-Dienst. Dieses Element entspricht <xref:System.ServiceModel.HttpTransportSecurity>.|  
 |[\<message>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-nethttpbinding.md)|Definiert die Nachrichtensicherheitseinstellungen für einen Standard-HTTP-Dienst. Dieses Element entspricht <!--zz <xref:System.ServiceModel.NetHttpMessageSecurity> --> `System.ServiceModel.NetHttpMessageSecurity`.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -65,12 +65,12 @@ Definiert die Sicherheitsfunktionen von der [ \<BasicHttpBinding >](../../../../
 ## <a name="remarks"></a>Hinweise  
  Standardmäßig wird die SOAP-Nachricht nicht geschützt, und der Client wird nicht authentifiziert. Dieses Element ermöglicht es Ihnen, zusätzliche Sicherheitseinstellungen für das `netHttpBinding`-Element zu konfigurieren.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.NetHttpBinding.Security%2A>  
- <xref:System.ServiceModel.Configuration.NetHttpBindingElement.Security%2A>    
- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Ausählen eines Anmeldeinformationentyps](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.NetHttpBinding.Security%2A>
+- <xref:System.ServiceModel.Configuration.NetHttpBindingElement.Security%2A>
+- [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Ausählen eines Anmeldeinformationentyps](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../../../docs/framework/misc/binding.md)

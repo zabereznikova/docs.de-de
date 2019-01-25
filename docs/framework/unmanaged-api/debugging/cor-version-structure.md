@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2668e36debebb5ba71277912f37833eba584fde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e07487f536454d9d2dcfff15eb871124112d250e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403278"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54634957"
 ---
 # <a name="corversion-structure"></a>COR_VERSION-Struktur
 Speichert die standardmäßige vierstellige Versionsnummer der Common Language Runtime.  
@@ -43,14 +43,14 @@ typedef struct _COR_VERSION {
 |------------|-----------------|  
 |`dwMajor`|Die Hauptversionsnummer.|  
 |`dwMinor`|Die Nebenversionsnummer.|  
-|`dwBuild`|Die Buildnummer.|  
-|`dwSubBuild`|Sub-Buildnummer.|  
+|`dwBuild`|Die Nummer des Builds.|  
+|`dwSubBuild`|Die untergeordnete Buildnummer.|  
   
 ## <a name="remarks"></a>Hinweise  
- Ist die Versionsnummer 1.0.3705.288, 1 ist die Hauptversionsnummer, 0 ist die Nummer der Nebenversion 3705 wird die Buildnummer und 288 ist das Sub-Buildnummer.  
+ Ist die Versionsnummer 1.0.3705.288, 1 ist die Hauptversionsnummer, 0 ist die Nummer der Nebenversion, 3705 ist die Nummer des Builds und 288 ist das Sub-Buildnummer.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl  
   
@@ -58,6 +58,6 @@ typedef struct _COR_VERSION {
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

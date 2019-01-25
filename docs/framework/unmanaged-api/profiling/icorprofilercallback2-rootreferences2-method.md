@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf92749e1139a85ea2f49fb5d5caff69ce39c24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b4383bf8b7369f5906fe4664056f1cd938f04584
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458460"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607539"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2-Methode
-Benachrichtigt den Profiler zu Stammverweisen, nach eine Garbagecollection aufgetreten ist. Diese Methode ist eine Erweiterung der [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) Methode.  
+Benachrichtigt den Profiler über Root-verweisen an, nach eine Garbagecollection aufgetreten ist. Diese Methode ist eine Erweiterung von der [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) Methode.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,30 +43,30 @@ HRESULT RootReferences2(
  [in] Die Anzahl der Elemente in der `rootRefIds`, `rootKinds`, `rootFlags`, und `rootIds` Arrays.  
   
  `rootRefIds`  
- [in] Ein Array von Objekt-IDs, von denen jeder ein statisches Objekt oder ein Objekt auf dem Stapel verweist. Elemente in der `rootKinds` Array enthalten Informationen zum Klassifizieren der entsprechenden Elemente in der `rootRefIds` Array.  
+ [in] Ein Array von Objekt-IDs, von denen jeder entweder ein statisches Objekt oder ein Objekt im Stapel verweist. Elemente in der `rootKinds` Angaben zum Klassifizieren der entsprechenden Elemente im Array der `rootRefIds` Array.  
   
  `rootKinds`  
  [in] Ein Array von [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) Werte, die den Typ der Garbage Collection-Stamm angeben.  
   
  `rootFlags`  
- [in] Ein Array von [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) Werte, die die Eigenschaften eines Garbage Collection-Stamm zu beschreiben.  
+ [in] Ein Array von [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) Werte, die die Eigenschaften einer Garbage Collection-Stamm zu beschreiben.  
   
  `rootIds`  
- [in] Ein Array von UINT_PTR Werten, die in eine ganze Zahl, die zusätzliche Informationen über die Garbage Collection-Stamm, abhängig vom Wert enthält den `rootKinds` Parameter.  
+ [in] Ein Array von UINT_PTR Werten, die in eine ganze Zahl, die zusätzliche Informationen über die Garbage Collection-Stamm, abhängig vom Wert enthält die `rootKinds` Parameter.  
   
- Wenn der Typ des Stamms einen Stapel ist, ist die Stamm-ID für die Funktion, die die Variable enthält. Wenn die Stamm-ID 0 ist, ist die Funktion eine unbenannte Funktion, die für die CLR intern ist. Wenn der Typ des Stamms ein Handle ist, ist die Stamm-ID für die Garbage Collection-Handle. Die ID für die anderen Stammreferenztypen ist ein nicht transparenter Wert und sollte ignoriert werden.  
+ Wenn der Typ des Stamms eines Stapels ist, ist der Stamm-ID für die Funktion, die die Variable enthält. Wenn die Stamm-ID 0 ist, ist die Funktion eine unbenannte Funktion, die intern für die CLR ist. Wenn der Typ des Stamms ein Handle ist, ist der Stamm-ID für die Garbage Collection-Handle. Für die anderen Stammreferenztypen die ID ist ein nicht transparenter Wert und ignoriert werden sollen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `rootRefIds`, `rootKinds`, `rootFlags`, und `rootIds` Arrays sind parallele Arrays. D. h. `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, und `rootIds[i]` betreffen alle mit demselben Stamm.  
+ Die `rootRefIds`, `rootKinds`, `rootFlags`, und `rootIds` Arrays sind parallele Arrays. D. h. `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, und `rootIds[i]` betreffen alle den gleichen Stamm.  
   
- Beide `RootReferences` und `RootReferences2` werden aufgerufen, um den Profiler zu benachrichtigen. Profiler implementieren normalerweise eine Methode oder die andere aber nicht beides, da die Informationen im übergeben `RootReferences2` ist eine Obermenge der übergebenen `RootReferences`.  
+ Beide `RootReferences` und `RootReferences2` werden aufgerufen, um den Profiler zu benachrichtigen. Profiler implementieren normalerweise eine Methode oder die andere, aber nicht beides, da die Informationen in übergeben `RootReferences2` ist eine Obermenge der, die übergebene `RootReferences`.  
   
- Es ist möglich, dass Einträge in `rootRefIds` als 0 (null), das bedeutet, dass der entsprechende Stammverweis null ist, und nicht auf ein Objekt auf dem verwalteten Heap verweist.  
+ Es ist möglich, dass Einträge in `rootRefIds` gleich 0 (null), das bedeutet, dass der entsprechende Stammverweis null ist, und nicht auf ein Objekt auf dem verwalteten Heap verweist.  
   
- Die Objekt-IDs zurückgegebenes `RootReferences2` sind nicht während des Rückrufs selbst gültig, da die Garbagecollection in der Mitte Verschieben von Objekten von alten Adressen auf neue Adressen werden kann. Deshalb sollten Profiler nicht versuchen, Objekte während eines `RootReferences2`-Aufrufs zu überprüfen. Wenn [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) wird aufgerufen, alle Objekte an die neuen Speicherorte verschoben wurden und können problemlos geprüft werden.  
+ Die Objekt-IDs von zurückgegebenen `RootReferences2` sind nicht während des Rückrufs selbst gültig, da die Garbagecollection in der Mitte Verschieben von Objekten von alten Adressen auf neue Adressen werden kann. Deshalb sollten Profiler nicht versuchen, Objekte während eines `RootReferences2`-Aufrufs zu überprüfen. Wenn [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) wird aufgerufen, alle Objekte an die neuen Speicherorte verschoben wurden und problemlos überprüft werden kann.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -74,6 +74,6 @@ HRESULT RootReferences2(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

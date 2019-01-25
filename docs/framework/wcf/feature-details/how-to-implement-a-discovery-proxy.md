@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Implementieren eines Suchproxys'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: 2d76a2df0541dfd64058d61ca687a2749d745e8a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 12adc7215e929bb56aafe104546eb6e58af52ddb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839117"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608913"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Vorgehensweise: Implementieren eines Suchproxys
 In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere Informationen zu den Discovery-Feature in Windows Communication Foundation (WCF), finden Sie unter [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Sie können einen Suchproxy implementieren, indem Sie eine Klasse erstellen, die die abstrakte <xref:System.ServiceModel.Discovery.DiscoveryProxy>-Klasse erweitert. Es gibt eine Reihe von anderen Unterstützungsklassen, die in diesem Beispiel definiert und verwendet werden. `OnResolveAsyncResult`, `OnFindAsyncResult` und `AsyncResult`. Diese Klassen implementieren die <xref:System.IAsyncResult>-Schnittstelle. Weitere Informationen zu <xref:System.IAsyncResult> finden Sie unter [System.IAsyncResult-Schnittstelle](xref:System.IAsyncResult).
@@ -225,7 +225,7 @@ In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere
 
 ### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a>So definieren Sie die Methoden, die die Suchproxyfunktionalität implementieren
 
-1.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType>-Methode. Diese Methode wird aufgerufen, wenn der Suchproxy eine Onlineankündigungsmeldung empfängt.
+1.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> -Methode. Diese Methode wird aufgerufen, wenn der Suchproxy eine Onlineankündigungsmeldung empfängt.
 
     ```
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -236,7 +236,7 @@ In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere
             }
     ```
 
-2.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType>-Methode. Diese Methode wird aufgerufen, wenn der Suchproxy die Verarbeitung einer Ankündigungsmeldung beendet.
+2.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> -Methode. Diese Methode wird aufgerufen, wenn der Suchproxy die Verarbeitung einer Ankündigungsmeldung beendet.
 
     ```
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -245,7 +245,7 @@ In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere
             }
     ```
 
-3.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType>-Methode. Diese Methode wird aufgerufen, wenn der Suchproxy eine Offlineankündigungsmeldung empfängt.
+3.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> -Methode. Diese Methode wird aufgerufen, wenn der Suchproxy eine Offlineankündigungsmeldung empfängt.
 
     ```
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -256,7 +256,7 @@ In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere
             }
     ```
 
-4.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType>-Methode. Diese Methode wird aufgerufen, wenn der Suchproxy die Verarbeitung einer Offlineankündigungsmeldung beendet.
+4.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> -Methode. Diese Methode wird aufgerufen, wenn der Suchproxy die Verarbeitung einer Offlineankündigungsmeldung beendet.
 
     ```
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -265,7 +265,7 @@ In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere
             }
     ```
 
-5.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType>-Methode. Diese Methode wird aufgerufen, wenn der Suchproxy eine Suchanforderung empfängt.
+5.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> -Methode. Diese Methode wird aufgerufen, wenn der Suchproxy eine Suchanforderung empfängt.
 
     ```
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -284,7 +284,7 @@ In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere
     }
     ```
 
-6.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType>-Methode. Diese Methode wird aufgerufen, wenn der Suchproxy die Verarbeitung einer Suchanforderung beendet.
+6.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> -Methode. Diese Methode wird aufgerufen, wenn der Suchproxy die Verarbeitung einer Suchanforderung beendet.
 
     ```
     protected override void OnEndFind(IAsyncResult result)
@@ -293,7 +293,7 @@ In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere
             }
     ```
 
-7.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType>-Methode. Diese Methode wird aufgerufen, wenn der Suchproxy eine Auflösungsnachricht empfängt.
+7.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> -Methode. Diese Methode wird aufgerufen, wenn der Suchproxy eine Auflösungsnachricht empfängt.
 
     ```
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -310,7 +310,7 @@ In diesem Thema wird erläutert, wie Sie einen Suchproxy implementieren. Weitere
     }
     ```
 
-8.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType>-Methode. Diese Methode wird aufgerufen, wenn der Suchproxy die Verarbeitung einer Auflösungsnachricht beendet.
+8.  Überschreiben Sie die <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> -Methode. Diese Methode wird aufgerufen, wenn der Suchproxy die Verarbeitung einer Auflösungsnachricht beendet.
 
     ```
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -980,6 +980,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Vorgehensweise: Implementieren eines ermittelbaren Diensts, das beim Suchproxy registriert.](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
 - [Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
 - [Vorgehensweise: Testen des Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

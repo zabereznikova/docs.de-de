@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - behavior [WCF], service performance
 ms.assetid: f9dc120c-dc24-49d5-930e-b22f5bc73423
-ms.openlocfilehash: b54d1d6146b9751fdd12502771de01fe52854c07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77fe2d3bb7f0e9c9d2e2defd4aa8c0053799406b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498048"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609498"
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>Verwenden von ServiceThrottlingBehavior zur Steuerung der Leistung des WCF-Diensts
-Mit der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>-Klasse werden Eigenschaften verfügbar gemacht, mit denen die Anzahl der Instanzen oder Sitzungen begrenzt wird, die auf Anwendungsebene erstellt werden dürfen. Mit diesem Verhalten können Sie Optimieren der Leistung der Windows Communication Foundation (WCF)-Anwendung.  
+Mit der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>-Klasse werden Eigenschaften verfügbar gemacht, mit denen die Anzahl der Instanzen oder Sitzungen begrenzt wird, die auf Anwendungsebene erstellt werden dürfen. Mit diesem Verhalten können Sie die Leistung Ihrer Windows Communication Foundation (WCF)-Anwendung optimieren.  
   
 ## <a name="controlling-service-instances-and-concurrent-calls"></a>Steuern von Dienstinstanzen und gleichzeitigen Aufrufen  
  Verwenden Sie die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>-Eigenschaft, um die maximale Anzahl der Nachrichten anzugeben, die aktiv in einer <xref:System.ServiceModel.ServiceHost>-Klasse verarbeitet werden und die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>-Eigenschaft, um die maximale Anzahl der <xref:System.ServiceModel.InstanceContext>-Objekte im Dienst anzugeben.  
   
- Da bestimmen die Einstellungen für diese Eigenschaften in der Regel nach praktische Erfahrung Ausführen der Anwendung für stattfindet geladen wird, die Einstellungen für die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> Eigenschaften ist in der Regel angegeben, in einer Anwendungskonfigurationsdatei mithilfe der [ \<ServiceThrottling >](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md) Element.  
+ Da bestimmen die Einstellungen für diese Eigenschaften in der Regel nach tatsächlicher Ausführung der Anwendung mit stattfindet geladen wird, das die Einstellungen für die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> Eigenschaften ist in der Regel angegeben, in einer Anwendungskonfigurationsdatei mithilfe der [ \<ServiceThrottling >](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md) Element.  
   
  Im folgenden Codebeispiel wird die Verwendung der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>-Klasse von einer Anwendungskonfigurationsdatei gezeigt, die die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>-Eigenschaft und die <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>-Eigenschaft in einem einfachen Beispiel auf 1 festlegt. Die optimalen Einstellungen für eine bestimmte Anwendung finden Sie durch praktische Erfahrung heraus.  
   
@@ -27,6 +27,6 @@ Mit der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>-Klasse 
   
  Ausführliche Informationen finden Sie unter <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> und <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>  
- <xref:System.ServiceModel.NetTcpBinding.MaxConnections%2A>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
+- <xref:System.ServiceModel.NetTcpBinding.MaxConnections%2A>

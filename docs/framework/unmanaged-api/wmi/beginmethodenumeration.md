@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b682904a8e7f2eafa8833d784febe7b3b2a1e5f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54611084"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration-Funktion
 Startet eine Enumeration der verfügbaren Methoden für das Objekt.  
@@ -60,7 +60,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `lEnnumFlags` ist ungleich NULL und ist keiner der angegebenen Flags. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` ist ungleich NULL und ist keiner der angegebenen Flags. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
 ## <a name="remarks"></a>Hinweise
@@ -70,11 +70,11 @@ Diese Funktion umschließt einen Aufruf der [IWbemClassObject::BeginMethodEnumer
 Dieser Methodenaufruf wird nur unterstützt, wenn das aktuelle Objekt einer Klassendefinition. Bearbeitung der Methode ist nicht verfügbar [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Zeigern, die auf Instanzen verweisen. Die Reihenfolge, in dem werden Methoden aufgelistet, ist garantiert für eine bestimmte Instanz von invarianten [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

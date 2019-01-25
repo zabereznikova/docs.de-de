@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24ba4b37cc8221df4e018d172996c0910ec07f7d
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: e3a7d606f64dfe1a1abfd3da930fd00957da90a3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754468"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583583"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText-Funktion
 Gibt eine Textrendering des Objekts in der Managed Object Format (MOF)-Syntax zurück.
@@ -59,8 +59,8 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
+|`WBEM_E_FAILED` | 0x80041001 | Es wurde ein allgemeiner Fehler. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
   
@@ -78,11 +78,11 @@ Der folgende Algorithmus wird verwendet, um den Text der Parameter einer Methode
 `pstrObjectText` muss ein Zeiger auf eine `null` , wenn die Funktion aufgerufen wird; es muss auf eine Zeichenfolge, die vor dem Methodenaufruf gültig ist, da der Zeiger nicht freigegeben wird, nicht zu verweisen.
 
 ## <a name="requirements"></a>Anforderungen  
-**Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

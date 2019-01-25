@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ae761b2d48552aded8191ddbea26552d8da277
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4bc91a90320967e625aab63fa17ae88ab284ea38
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411017"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54689129"
 ---
 # <a name="icordebugdatatargetgetplatform-method"></a>ICorDebugDataTarget::GetPlatform-Methode
-Enthält Informationen über die Plattform, einschließlich der Prozessorarchitektur und Betriebssystem, auf denen der Zielprozess ausgeführt wird.  
+Enthält Informationen über die Plattform, einschließlich der Prozessorarchitektur und Betriebssystem, auf dem der Zielprozess ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
  [out] Ein Zeiger auf eine [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) Enumeration, die die Zielplattform beschreibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `CorDebugPlatformEnum` return Enumerationswert wird verwendet, durch die [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) Schnittstelle, um die Details des Zielprozesses, z. B. die Zeigergröße, Adresse Speicherplatz Layout, Registersatz, Anweisungsformat, Kontextlayout zu bestimmen und Aufrufkonventionen.  
+ Die `CorDebugPlatformEnum` Rückgabewert der Enumeration wird verwendet, durch die [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) Schnittstelle, um zu bestimmen, die Details des Zielprozesses z. B. die Größe des Zeigers, Adresse Speicherplatz Layout, Registersatz, Anweisungsformat, Layout mit Ausrichtung von Kontext und Aufrufkonventionen.  
   
- Die `pTargetPlatform` Wert bezieht sich möglicherweise auf eine Plattform, die für das Ziel die tatsächliche Hardware verwendet angeben, statt emuliert wird. Beispielsweise ein Prozess, der in dem Windows on Windows (WOW)-Umgebung auf eine 64-Bit-Edition von Windows-Betriebssystem ausgeführt wird die zu verwendende der `CORDB_PLATFORM_WINDOWS_X86` Wert, der die [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) Enumeration.  
+ Die `pTargetPlatform` Wert bezieht sich möglicherweise auf eine Plattform, die für das Ziel anstelle der tatsächlichen Hardware verwendet emuliert wird. Beispielsweise ein Prozess, der in der Windows für die Umgebung für Windows (WOW), auf einer 64-Bit-Edition des Betriebssystems Windows ausgeführt wird verwenden sollte die `CORDB_PLATFORM_WINDOWS_X86` Wert, der die [CorDebugPlatformEnum](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md) Enumeration.  
   
- Diese Methode muss erfolgreich sein. Falls dies fehlschlägt, ist die Zielplattform unbrauchbar. Die Methode kann den folgenden Gründen fehlschlagen:  
+ Diese Methode muss erfolgreich sein. Wenn ein Fehler auftritt, ist die Zielplattform unbrauchbar. Die Methode kann den folgenden Gründen fehlschlagen:  
   
--   Die Plattform, die für das Ziel emulierte ist unbrauchbar.  
+-   Die Plattform, die emuliert wird, für das Ziel kann nicht verwendet werden.  
   
--   Die tatsächliche Hardware für die Zielplattform ist unbrauchbar.  
+-   Die tatsächliche Hardware auf der Zielplattform ist unbrauchbar.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -57,7 +57,7 @@ HRESULT GetPlatform([out] CorDebugPlatform * pTargetPlatform);
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

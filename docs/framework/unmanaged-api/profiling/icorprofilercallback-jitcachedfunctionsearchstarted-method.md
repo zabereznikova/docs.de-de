@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d97b40412b6999000a601b72904a03edf2acd08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9036746fcf0150875ab534fdb774ed3633cf96ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454033"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54698343"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted-Methode
-Benachrichtigt den Profiler, dass eine Suche für eine Funktion, die zuvor mit der Native Image Generator (NGen.exe) kompiliert wurde, gestartet wurde.  
+Benachrichtigt den Profiler, dass eine Suche für eine Funktion, die vorher mit dem Native Image Generator (NGen.exe) kompiliert wurde, gestartet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,22 +37,22 @@ HRESULT JITCachedFunctionSearchStarted(
   
 #### <a name="parameters"></a>Parameter  
  `functionId`  
- [in] Die ID der Funktion für die Suche durchgeführt wird.  
+ [in] Die ID der Funktion für die Suche ausgeführt wird.  
   
  `pbUseCachedFunction`  
- [out] `true` , wenn das Ausführungsmodul die zwischengespeicherte Version einer Funktion (falls vorhanden) verwenden soll; andernfalls `false`. Wenn der Wert `false`, das Ausführungsmodul JIT-kompiliert der Funktion statt mit einer Version, die keine JIT-kompiliert wird.  
+ [out] `true` , wenn die ausführungs-Engine die zwischengespeicherte Version einer Funktion (falls verfügbar) verwenden soll, andernfalls `false`. Wenn der Wert ist `false`, das Ausführungsmodul JIT-kompiliert wird die Funktion anstelle einer Version, die keine JIT-kompiliert wird.  
   
 ## <a name="remarks"></a>Hinweise  
- In .NET Framework, Version 2.0 die `JITCachedFunctionSearchStarted` und [ICorProfilerCallback:: JITCachedFunctionSearchFinished-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) Rückrufe werden nicht für alle Funktionen in regulären NGen-Images gestellt. Nur NGen-Images, die für ein Profil optimiert generiert Rückrufe für alle Funktionen in der Abbildung. Aufgrund der zusätzlichen Verwaltungsaufwand, sollte ein Profiler jedoch Profiler optimiert NGen-Images anfordern, nur, wenn sie beabsichtigt, diese Rückrufe verwenden, um eine Funktion zu kompilierten just-in-Time (JIT) zu erzwingen. Andernfalls sollte der Profiler eine Strategie für die verzögerte verwenden, für das Sammeln von Informationen.  
+ In .NET Framework, Version 2.0 der `JITCachedFunctionSearchStarted` und [ICorProfilerCallback:: JITCachedFunctionSearchFinished-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md) Rückrufe kommt nicht zustande, für alle Funktionen in reguläre NGen-Images. Nur NGen-Images, die für ein Profil optimiert generiert Rückrufe für alle Funktionen in der Abbildung. Aufgrund der zusätzlichen Aufwand, sollte ein Profiler jedoch optimierten Profiler der NGen-Images anfordern, nur dann, wenn diese Rückrufe verwendet, eine Funktion, die kompilierten just-in-Time (JIT) werden erzwungen werden soll. Andernfalls sollte der Profiler eine Strategie für die verzögerte verwenden, zum Erfassen von Funktionsinformationen.  
   
- Profiler müssen Fälle unterstützen, in denen mehrere Threads einer Anwendung mit Profil dieselbe Methode gleichzeitig aufgerufen werden. Beispielsweise ruft Thread A `JITCachedFunctionSearchStarted` und der Profiler reagiert durch Festlegen von *PbUseCachedFunction*auf "false", um JIT-Kompilierung zu erzwingen. Anschließend ruft Thread A [ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) und [ICorProfilerCallback:: JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
+ Profiler müssen Fällen unterstützen, in denen mehrere Threads einer Anwendung ein Profil erstellt wurde gleichzeitig die gleiche Methode aufrufen. Thread A ruft z. B. `JITCachedFunctionSearchStarted` und der Profiler reagiert durch Festlegen von *PbUseCachedFunction*auf "false", um JIT-Kompilierung zu erzwingen. Anschließend ruft Thread A [ICorProfilerCallback:: JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) und [ICorProfilerCallback:: JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md).  
   
- Jetzt ruft thread B `JITCachedFunctionSearchStarted` für die gleiche Funktion. Auch wenn der Profiler die Absicht JIT-kompiliert die Funktion angegeben wurde, empfängt der Profiler die zweite Rückruf, weil Thread B den Rückruf sendet, bevor Sie der Profiler an Thread A Aufruf reagiert wurde `JITCachedFunctionSearchStarted`. Die Reihenfolge, in der die Threads Aufrufe ausführen, hängt davon ab, wie die Threads geplant werden.  
+ Jetzt thread B ruft `JITCachedFunctionSearchStarted` für die gleiche Funktion. Auch wenn der Profiler die Absicht zu JIT-Kompilieren der Funktion angegeben hat, empfängt der Profiler den zweiten Rückruf an, daran, dass Thread B den Rückruf sendet, bevor Sie der Profiler auf Thread A-Aufruf geantwortet hat `JITCachedFunctionSearchStarted`. Die Reihenfolge, in der die Threads aufrufen, hängt davon ab, wie die Threads geplant werden.  
   
- Wenn der Profiler doppelte Rückrufe empfängt, muss er legen Sie den Wert verweist `pbUseCachedFunction` auf den gleichen Wert für alle doppelten Rückrufe. Das heißt, wenn `JITCachedFunctionSearchStarted` mehrere Male aufgerufen wird, mit dem gleichen `functionId` Wert, der Profiler muss die gleiche jedes Mal reagieren.  
+ Wenn der Profiler doppelte Rückrufe empfängt, muss er legen Sie den Wert verweist `pbUseCachedFunction` auf den gleichen Wert für alle doppelten Rückrufe. Das heißt, wenn `JITCachedFunctionSearchStarted` mehrmals aufgerufen wird, mit dem gleichen `functionId` Wert, der Profiler muss die gleiche jedes Mal reagieren.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -60,5 +60,5 @@ HRESULT JITCachedFunctionSearchStarted(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

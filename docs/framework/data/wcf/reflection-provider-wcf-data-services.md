@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: 3c6885ee7976461379513e8e579f58160146769a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12a23970b059e338df05a2f0b58ca67ad6fae6d8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366007"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582564"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Reflektionsanbieter (WCF Data Services)
 Zusätzlich zu Daten aus einem Datenmodell über das Entity Framework kann [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Daten verfügbar machen, die in einem entitätsbasierten Modell nicht streng definiert sind. Der Reflexionsanbieter macht Daten in Klassen verfügbar, die Typen zurückgeben, die die <xref:System.Linq.IQueryable%601>-Schnittstelle implementieren. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verwendet Reflexion, um ein Datenmodell für diese Klassen abzuleiten, und kann adressenbasierte Abfragen nach Ressourcen in LINQ (Language Integrated Query)-basierte Abfragen nach den verfügbar gemachten <xref:System.Linq.IQueryable%601>-Typen übersetzen.  
@@ -17,7 +17,7 @@ Zusätzlich zu Daten aus einem Datenmodell über das Entity Framework kann [!INC
 > [!NOTE]
 >  Sie können eine <xref:System.Linq.Queryable.AsQueryable%2A>-Schnittstelle mithilfe der <xref:System.Linq.IQueryable%601>-Methode aus einer Klasse zurückgeben, die die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert. Dies ermöglicht die Verwendung der meisten generischen Auflistungstypen als Datenquelle für den Datendienst.  
   
- Der Reflektionsanbieter unterstützt Typhierarchien. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Daten mithilfe des Reflektionsanbieters](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
+ Der Reflektionsanbieter unterstützt Typhierarchien. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Datendiensts mit dem Reflektionsanbieter](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   
 ## <a name="inferring-the-data-model"></a>Herleiten des Datenmodells  
  Wenn Sie den Datendienst erstellen, leitet der Anbieter das Datenmodell mithilfe der Reflektion her. In der folgenden Liste wird gezeigt, wie der Reflektionsanbieter das Datenmodell herleitet:  
@@ -69,7 +69,7 @@ Zusätzlich zu Daten aus einem Datenmodell über das Entity Framework kann [!INC
 >  .NET Framework-Werttypen, denen ein NULL-Wert zugewiesen werden kann, werden den gleichen Datenmodelltypen zugeordnet wie den entsprechenden Werttypen, denen kein NULL-Wert zugewiesen werden kann.  
   
 ## <a name="enabling-updates-in-the-data-model"></a>Aktivieren von Updates im Datenmodell  
- Der Reflektionsanbieter definiert eine <xref:System.Data.Services.IUpdatable>-Schnittstelle, um Updates für Daten zu ermöglichen, die durch diese Art von Datenmodell verfügbar gemacht werden. Diese Schnittstelle weist den Datendienst an, wie Updates für die verfügbar gemachten Typen beibehalten werden. Die Entitätscontainerklasse muss die <xref:System.Data.Services.IUpdatable>-Schnittstelle implementieren, um Updates für vom Datenmodell definierte Ressourcen zu aktivieren. Ein Beispiel für eine Implementierung von der <xref:System.Data.Services.IUpdatable> Schnittstelle, finden Sie unter [wie: Erstellen eines Daten mithilfe einer LINQ to SQL-Datenquelle](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
+ Der Reflektionsanbieter definiert eine <xref:System.Data.Services.IUpdatable>-Schnittstelle, um Updates für Daten zu ermöglichen, die durch diese Art von Datenmodell verfügbar gemacht werden. Diese Schnittstelle weist den Datendienst an, wie Updates für die verfügbar gemachten Typen beibehalten werden. Die Entitätscontainerklasse muss die <xref:System.Data.Services.IUpdatable>-Schnittstelle implementieren, um Updates für vom Datenmodell definierte Ressourcen zu aktivieren. Ein Beispiel für die Implementierung von der <xref:System.Data.Services.IUpdatable> Benutzeroberfläche, siehe [Vorgehensweise: Erstellen eines Datendiensts mit einer LINQ to SQL-Datenquelle](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
  Die <xref:System.Data.Services.IUpdatable>-Schnittstelle erfordert, dass die folgenden Member implementiert werden, damit Updates mit dem Reflektionsanbieter zur Datenquelle weitergegeben werden können:  
   
@@ -92,7 +92,7 @@ Zusätzlich zu Daten aus einem Datenmodell über das Entity Framework kann [!INC
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt ein Modell vollständiger Parallelität, indem es Ihnen das Definieren eines Parallelitätstokens für eine Entität ermöglicht. Dieses Parallelitätstoken, das eine oder mehrere Eigenschaften der Entität beinhaltet, wird vom Datendienst verwendet, um zu bestimmen, ob eine Änderung in den angeforderten, aktualisierten oder gelöschten Daten aufgetreten ist. Wenn Tokenwerte die vom eTag in der Anforderung abgerufen wurden, sich von den aktuellen Werten der Entität unterscheiden, löst der Datendienst eine Ausnahme aus. Das <xref:System.Data.Services.ETagAttribute> wird auf einen Entitätstyp angewendet, um im Reflektionsanbieter ein Parallelitätstoken zu definieren. Im Parallelitätstoken darf keine Schlüsseleigenschaft oder Navigationseigenschaft enthalten sein. Weitere Informationen finden Sie unter [Aktualisieren des Datendiensts](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
 ## <a name="using-linq-to-sql-with-the-reflection-provider"></a>Verwenden von LINQ to SQL mit dem Reflektionsanbieter  
- Da das Entity Framework standardmäßig systemintern unterstützt wird, ist es der empfohlene Datenanbieter zum Verwenden von relationalen Daten mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Sie können allerdings LINQ to SQL-Klassen mithilfe des Reflektionsanbieters mit einem Datendienst verwenden. Die <xref:System.Data.Linq.Table%601> Resultsets, die von Methoden zurückgegeben werden die <xref:System.Data.Linq.DataContext> generiert, die für die LINQ to SQL Object Relational Designer (O/R-Designer) implementieren die <xref:System.Linq.IQueryable%601> Schnittstelle. Dies ermöglicht dem Reflektionsanbieter, auf diese Methoden zuzugreifen und mit den generierten LINQ to SQL-Klassen Entitätsdaten aus SQL Server zurückzugeben. Da LINQ to SQL die <xref:System.Data.Services.IUpdatable>-Schnittstelle nicht implementiert, müssen Sie jedoch eine partielle Klasse hinzufügen, die die vorhandene partielle <xref:System.Data.Linq.DataContext>-Klasse erweitert, um die <xref:System.Data.Services.IUpdatable>-Implementierung hinzuzufügen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Daten mithilfe einer LINQ to SQL-Datenquelle](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
+ Da das Entity Framework standardmäßig systemintern unterstützt wird, ist es der empfohlene Datenanbieter zum Verwenden von relationalen Daten mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Sie können allerdings LINQ to SQL-Klassen mithilfe des Reflektionsanbieters mit einem Datendienst verwenden. Die <xref:System.Data.Linq.Table%601> Resultsets, die von Methoden zurückgegeben werden, auf die <xref:System.Data.Linq.DataContext> generiert, die vom LINQ to SQL Object Relational Designer (O/R Designer) implementieren die <xref:System.Linq.IQueryable%601> Schnittstelle. Dies ermöglicht dem Reflektionsanbieter, auf diese Methoden zuzugreifen und mit den generierten LINQ to SQL-Klassen Entitätsdaten aus SQL Server zurückzugeben. Da LINQ to SQL die <xref:System.Data.Services.IUpdatable>-Schnittstelle nicht implementiert, müssen Sie jedoch eine partielle Klasse hinzufügen, die die vorhandene partielle <xref:System.Data.Linq.DataContext>-Klasse erweitert, um die <xref:System.Data.Services.IUpdatable>-Implementierung hinzuzufügen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Datendiensts mit einer LINQ to SQL-Datenquelle](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Datendienstanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Datendienstanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1380d03d4456e0695777775ae786a19982d691b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a561c5af868968624ee9ee81050d87b17c4591be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864406"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624417"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject-Funktion
 Gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf ein angegebenes zulassen [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) Objekt.   
@@ -64,18 +64,18 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0 x 80070057 | Ein oder mehrere Argumente sind ungültig. |
-| `E_POINTER` | 0 x 80004003 | `pIWbemServices` ist `null`. | 
+| `E_INVALIDARG` | 0x80070057 | Ein oder mehrere Argumente sind ungültig. |
+| `E_POINTER` | 0x80004003 | `pIWbemServices` ist `null`. | 
 | `E_FAIL` | 0x80000008 | Ein Unbekannter Fehler aufgetreten. |
 | `E_OUTOFMEMORY` | 0x80000002 | Es steht nicht genügend Arbeitsspeicher zum Ausführen des Vorgangs zur Verfügung. | 
 | `S_OK` | 0 | Der Funktionsaufruf war erfolgreich. | 
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1173091a5f2d8814747c93f827150afe39b8b309
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20e718d425d0300aed8cc7ccf064126ee8384704
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399111"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608296"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>ICorDebugCode::CreateBreakpoint-Methode
-Erstellt einen Breakpoint in dieses Codesegment am angegebenen Offset.  
+Erstellt einen Haltepunkt in diesem Codesegment am angegebenen Offset.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ HRESULT CreateBreakpoint (
   
 #### <a name="parameters"></a>Parameter  
  `offset`  
- [in] Der Offset, bei der den Breakpoint erstellt werden soll.  
+ [in] Der Offset, an der den Haltepunkt erstellt werden soll.  
   
  `ppBreakpoint`  
- [out] Ein Zeiger auf die Adresse eines Objekts "ICorDebugFunctionBreakpoint", das den Haltepunkt darstellt.  
+ [out] Ein Zeiger auf die Adresse ein "ICorDebugFunctionBreakpoint"-Objekt, das den Haltepunkt darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Bevor der Haltepunkt aktiv ist, müssen sie das Prozessobjekt hinzugefügt werden.  
+ Bevor Sie der Haltepunkt aktiv ist, müssen sie das Prozessobjekt hinzugefügt werden.  
   
- Wenn dieser Code Microsoft intermediate Language (MSIL)-Code wird aus, und es eine just-in-Time (JIT gibt)-kompilierte, systemeigene Version des Codes, der Haltepunkt wird in der JIT-kompilierten Code als auch angewendet werden. (Die gleiche ist true, wenn der Code JIT-kompilierten höher ist.)  
+ Wenn dieser Code ist die Microsoft intermediate Language (MSIL)-Code ein, und es ein just-in-Time (JIT gibt)-kompilierte, systemeigene Version des Codes, der Haltepunkt wird in der JIT-kompiliertem Code auch angewendet werden. (Der gleiche ist true, wenn der Code JIT-kompilierten höher ist.)  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -57,5 +57,5 @@ HRESULT CreateBreakpoint (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+

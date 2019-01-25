@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Angeben der Bindungsquelle'
+title: 'Vorgehensweise: Angeben der Bindungsquelle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 333a85bc59ded3fd42bef6aff5845c9a6ddeb49b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2e3fa3352da85c7da394a582cfcd058fe3fadf4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556873"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577125"
 ---
-# <a name="how-to-specify-the-binding-source"></a>Gewusst wie: Angeben der Bindungsquelle
+# <a name="how-to-specify-the-binding-source"></a>Vorgehensweise: Angeben der Bindungsquelle
 Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem Sie Ihre Daten abrufen. In diesem Thema werden die verschiedenen Methoden zur Angabe der Bindungsquelle beschrieben.  
   
 ## <a name="example"></a>Beispiel  
@@ -39,14 +39,14 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
   
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
-|<xref:System.Windows.Data.Binding.Source%2A>|Verwenden Sie diese Eigenschaft, um als Quelle die Instanz eines Objekts festzulegen. Wenn Sie nicht die Funktionalität zum Einrichten eines Bereichs benötigen, welche mehrere Eigenschaften erben den gleichen Datenkontext, können Sie mithilfe der <xref:System.Windows.Data.Binding.Source%2A> -Eigenschaft anstelle der `DataContext` Eigenschaft. Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.Source%2A>.|  
+|<xref:System.Windows.Data.Binding.Source%2A>|Verwenden Sie diese Eigenschaft, um als Quelle die Instanz eines Objekts festzulegen. Wenn Sie nicht benötigen, dass die Funktionalität der Einrichtung eines Bereichs erbt die mehrere Eigenschaften denselben Datenkontext, können Sie verwenden die <xref:System.Windows.Data.Binding.Source%2A> -Eigenschaft anstelle der `DataContext` Eigenschaft. Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.Source%2A>.|  
 |<xref:System.Windows.Data.Binding.RelativeSource%2A>|Dies ist hilfreich, wenn Sie die Quelle relativ zum Speicherort Ihres Bindungsziels festlegen möchten. Sie können diese Eigenschaft beispielsweise verwenden, wenn Sie eine Eigenschaft Ihres Elements an eine andere Eigenschaft desselben Elements binden möchten oder wenn Sie eine Bindung in einem Stil oder einer Vorlage definieren möchten. Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.RelativeSource%2A>.|  
-|<xref:System.Windows.Data.Binding.ElementName%2A>|Sie geben eine Zeichenfolge an, die das Element darstellt, an das die Bindung erfolgen soll. Dies ist hilfreich, wenn Sie eine Bindung zur Eigenschaft eines anderen Elements Ihrer Anwendung erstellen möchten. Angenommen, Sie verwenden möchten eine <xref:System.Windows.Controls.Slider> die Höhe eines anderen Steuerelements in der Anwendung oder wenn Sie binden möchten die <xref:System.Windows.Controls.ContentControl.Content%2A> des Steuerelements die <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> Eigenschaft Ihrer <xref:System.Windows.Controls.ListBox> Steuerelement. Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.ElementName%2A>.|  
+|<xref:System.Windows.Data.Binding.ElementName%2A>|Sie geben eine Zeichenfolge an, die das Element darstellt, an das die Bindung erfolgen soll. Dies ist hilfreich, wenn Sie eine Bindung zur Eigenschaft eines anderen Elements Ihrer Anwendung erstellen möchten. Angenommen, Sie verwenden möchten eine <xref:System.Windows.Controls.Slider> steuern die Höhe eines anderen Steuerelements in der Anwendung oder wenn die Bindung erfolgen soll die <xref:System.Windows.Controls.ContentControl.Content%2A> des Steuerelements die <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> Eigenschaft Ihre <xref:System.Windows.Controls.ListBox> Steuerelement. Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.ElementName%2A>.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>  
- [Vererbung von Eigenschaftswerten](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Übersicht über Bindungsdeklarationen](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
+- [Vererbung von Eigenschaftswerten](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
+- [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [Übersicht über Bindungsdeklarationen](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

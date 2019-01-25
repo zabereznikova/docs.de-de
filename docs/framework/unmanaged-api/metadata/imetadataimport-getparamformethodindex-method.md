@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31096f7a5fd23bbd54f2beb9258c9d529e94f373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 28d4c9098076699de250ab1c43e5f9e353dc9752
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448761"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740111"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex-Methode
-Ruft das Token, das einen angegebenen Parameter der Methode, die vom angegebenen MethodDef-Token dargestellt darstellt.  
+Ruft das Token ab, das einen angegebenen Parameter, der durch das angegebene MethodDef-Token dargestellten Methode darstellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,23 +39,23 @@ HRESULT GetParamForMethodIndex (
   
 #### <a name="parameters"></a>Parameter  
  `md`  
- [in] Ein Token, das die Methode den ParameterToken für die zurückzugebenden darstellt.  
+ [in] Ein Token, das die Methode zum Zurückgeben der ParameterToken für darstellt.  
   
  `ulParamSeq`  
- [in] Die Ordnungsposition in der Parameterliste, in dem der angeforderte Parameter auftritt. Parameter werden beginnend mit einer mit der Methodenrückgabewert an Position 0 (null) nummeriert.  
+ [in] Die Ordnungsposition in der Parameterliste, in dem der angeforderte Parameter auftritt. Parameter sind nummeriert, beginnend bei eins, mit der Methodenrückgabewert an Position 0 (null).  
   
  `ppd`  
  [out] Ein Zeiger auf ein ParamDef-Token, das den angeforderten Parameter darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

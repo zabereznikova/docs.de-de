@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0eb24c7c4f2c60a9c16d903ab1e845b058e280f7
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: e5fa4376cdb0496cfd25f4764257c4f3afbc7268
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539303"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697048"
 ---
 # <a name="time-zone-overview"></a>Übersicht über Zeitzonen
 
@@ -75,4 +75,4 @@ Weitere Informationen über das Konvertieren von Uhrzeiten zwischen Zeitzonen fi
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)
+- [Datumsangaben, Uhrzeiten und Zeitzonen](../../../docs/standard/datetime/index.md)

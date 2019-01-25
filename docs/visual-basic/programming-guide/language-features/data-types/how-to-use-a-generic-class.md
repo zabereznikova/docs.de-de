@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verwenden einer generischen Klasse (Visual Basic)'
+title: 'Vorgehensweise: Verwenden einer generischen Klasse (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type parameters [Visual Basic], defining
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: 108532e5b765fa918fa894199ef710a9f52db4e4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cd2e48ad9ee5e6266fff676cf109cdf6b0136f32
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003710"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573906"
 ---
-# <a name="how-to-use-a-generic-class-visual-basic"></a>Gewusst wie: Verwenden einer generischen Klasse (Visual Basic)
+# <a name="how-to-use-a-generic-class-visual-basic"></a>Vorgehensweise: Verwenden einer generischen Klasse (Visual Basic)
 Eine Klasse, die *Typparameter* akzeptiert, wird *generische Klasse*genannt. Wenn Sie eine generische Klasse verwenden, können Sie daraus eine *erzeugte Klasse* generieren, indem Sie ein *Typargument* für jeden dieser Parameter angeben. Sie können dann eine Variable vom Typ der erzeugten Klasse deklarieren, und Sie können eine Instanz der erzeugten Klasse erstellen und dieser Variablen zuweisen.  
   
  Zusätzlich zu generischen Klassen können Sie auch generische Strukturen, Schnittstellen, Prozeduren und Delegaten definieren und verwenden.  
@@ -47,10 +47,10 @@ Eine Klasse, die *Typparameter* akzeptiert, wird *generische Klasse*genannt. Wen
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
-- [Generische Typen in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
-- [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../../../standard/language-independence-and-language-independent-components.md)  
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
-- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
-- [Gewusst wie: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
+- [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../../../standard/language-independence-and-language-independent-components.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Vorgehensweise: Definieren einer Klasse, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen kann](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
 - [Iteratoren](../../../../visual-basic/programming-guide/concepts/iterators.md)

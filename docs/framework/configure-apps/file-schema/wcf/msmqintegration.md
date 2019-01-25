@@ -2,12 +2,12 @@
 title: '&lt;msmqIntegration&gt;'
 ms.date: 03/30/2017
 ms.assetid: ab677405-1ffe-457a-803f-00c1770e51e2
-ms.openlocfilehash: 6b1449ec385af2478ee278e9823a005c69ca8dc2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 42197706a0c3f0f1940f8815fe0e41bb609a457a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147849"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603052"
 ---
 # <a name="ltmsmqintegrationgt"></a>&lt;msmqIntegration&gt;
 Gibt einen MSMQ-Transport für eine benutzerdefinierte Bindung an.  
@@ -16,7 +16,7 @@ Gibt einen MSMQ-Transport für eine benutzerdefinierte Bindung an.
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<MsmqIntegration >  
+\<msmqIntegration>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -62,7 +62,7 @@ Gibt einen MSMQ-Transport für eine benutzerdefinierte Bindung an.
 |MaxRetryCycles|Eine ganze Zahl, welche die maximale Anzahl von Wiederholungszyklen angibt, mit denen versucht wird, Nachrichten an die empfangende Anwendung zu senden. Die Standardeinstellung ist <xref:System.Int32.MaxValue>.<br /><br /> Ein einzelner Wiederholungszyklus versucht, einer Anwendung eine Nachricht mit einer festgelegten Häufigkeit zuzustellen. Die Anzahl von unternommenen Versuchen wird durch das `maxImmediateRetries`-Attribut festgelegt. Wenn die Anwendung die Nachricht nicht empfangen kann, nachdem die Zustellungsversuche beendet sind, wird die Nachricht an eine Wiederholungswarteschlange gesendet. Nachfolgende Wiederholungszyklen bestehen aus der Nachricht, die von der Wiederholungswarteschlange an die Anwendungswarteschlange zurückgegeben wurde, um erneut zu versuchen, der Anwendung die Nachricht nach einer durch das `retryCycleDelay`-Attribut angegebenen Verzögerung zuzustellen. Das `maxRetryCycles`-Attribut gibt die Anzahl der Wiederholungszyklen an, welche die Anwendung für die Zustellung der Nachricht verwendet.|  
 |rejectAfterLastRetry|Ein boolescher Wert, der angibt, welche Aktion für eine Nachricht erfolgen soll, deren Zustellung auch nach der maximalen Anzahl von Wiederholungen fehlgeschlagen ist.<br /><br /> `true` bedeutet, dass eine negative Bestätigung zurück zum Absender geschickt wird und die Nachricht verworfen wird; `false` bedeutet, dass die Nachricht an die Warteschlange für potenziell schädliche Nachrichten gesendet wird. Die Standardeinstellung ist `false`.<br /><br /> Falls der Wert `false` lautet, kann die empfangende Anwendung die Warteschlange für potenziell schädliche Nachrichten lesen, um solche Nachrichten zu verarbeiten (das heißt, Nachrichten, die nicht zugestellt werden konnten).<br /><br /> MSMQ 3.0 unterstützt das Zurücksenden einer negativen Bestätigung an den Absender nicht. Dieses Attribut wird also in MSMQ 3.0 ignoriert.|  
 |retryCycleDelay|Ein <xref:System.TimeSpan>, der die Zeitverzögerung zwischen den Wiederholungszyklen angibt, wenn versucht wird, eine Nachricht zuzustellen, die nicht sofort zugestellt werden konnte. Der Standardwert ist 00:10:00.<br /><br /> Ein einzelner Wiederholungszyklus versucht, einer empfangenden Anwendung eine Nachricht mit einer festgelegten Häufigkeit zuzustellen. Die Anzahl von unternommenen Versuchen wird durch das `maxImmediateRetries`-Attribut angegeben. Wenn die Anwendung die Nachricht nach der angegebenen Anzahl von Wiederholungsversuchen nicht empfangen kann, wird die Nachricht an eine Wiederholungswarteschlange gesendet. Nachfolgende Wiederholungszyklen bestehen aus der Nachricht, die von der Wiederholungswarteschlange an die Anwendungswarteschlange zurückgegeben wurde, um erneut zu versuchen, der Anwendung die Nachricht nach einer durch das `retryCycleDelay`-Attribut angegebenen Verzögerung zuzustellen. Die Anzahl von Wiederholungszyklen wird durch das `maxRetryCycles`-Attribut angegeben.|  
-|serializationFormat|Gibt das Formatierungsprogramm an, das zum Serialisieren von Objekten verwendet wird, die als Teil einer MSMQ-Nachricht gesendet werden. Folgende Werte sind gültig:<br /><br /> -ActiveX: Das ActiveX-Formatierungsprogramm wird verwendet, bei der Serialisierung von COM-Objekte.<br />-Binäre:  Serialisiert das Objekt in ein binäres Paket.<br />-ByteArray:  Serialisiert das Objekt in Byte-Array.<br />-Stream:  Serialisiert das Objekt in einen Stream.<br />-XML-Code:  Serialisiert das Objekt, das ein XML-Paket. Der Standard ist XML.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
+|serializationFormat|Gibt das Formatierungsprogramm an, das zum Serialisieren von Objekten verwendet wird, die als Teil einer MSMQ-Nachricht gesendet werden. Folgende Werte sind gültig:<br /><br /> -ActiveX: Das ActiveX-Formatierungsprogramm wird verwendet, bei der Serialisierung von COM-Objekte.<br />-Binäre:  Serialisiert das Objekt in ein binäres Paket.<br />-   ByteArray:  Serialisiert das Objekt in Byte-Array.<br />-Stream:  Serialisiert das Objekt in einen Stream.<br />-XML-Code:  Serialisiert das Objekt, das ein XML-Paket. Der Standard ist XML.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
 |timeToLive|Ein <xref:System.TimeSpan>-Wert, der angibt, wie lange die Nachricht gültig ist, bis sie abläuft und in die Warteschlange für unzustellbare Nachrichten übertragen wird. Der Standard ist 1.00:00:00, was 1 Tag bedeutet.<br /><br /> Dieses Attribut wird festgelegt, um sicherzustellen, dass zeitkritische Nachrichten nicht veralten, bevor sie von den empfangenden Anwendungen verarbeitet werden. Eine Nachricht in einer Warteschlange, die nicht von der empfangenden Anmeldung innerhalb des angegebenen Zeitintervalls verarbeitet wird, läuft ab. Abgelaufene Nachrichten werden an eine besondere Warteschlange gesendet: die Warteschlange für unzustellbare Nachrichten. Der Speicherort der Warteschlange für unzustellbare Meldungen wird mithilfe des `customDeadLetterQueue`-Attributs festgelegt. Andernfalls gilt die entsprechende, auf den Zusicherungen basierende Standardeinstellung.|  
 |useMsmqTracing|Ein boolescher Wert, der angibt, ob von dieser Bindung verarbeitete Nachrichten verfolgt werden sollen. Die Standardeinstellung ist `false`.<br /><br /> Wenn die Ablaufverfolgung aktiviert ist, werden Berichtsnachrichten erstellt und jedes Mal an die Berichtswarteschlange gesendet, wenn die Nachricht einen Computer mit Message Queuing erreicht oder verlässt.|  
 |useSourceJournal|Ein boolescher Wert, der angibt, ob Kopien der von dieser Bindung verarbeiteten Nachrichten in der Quelljournalwarteschlange gespeichert werden sollen. Die Standardeinstellung ist `false`.<br /><br /> Anwendungen in Warteschlangen, die Nachrichten aufzeichnen möchten, die die Ausgangswarteschlange des Computers verlassen haben, können die Nachrichten in eine Journalwarteschlange kopieren. Wenn eine Nachricht die Ausgangswarteschlange verlässt und eine Bestätigung empfangen wird, dass die Nachricht auf dem Zielcomputer empfangen wurde, wird eine Kopie der Nachricht in der Systemjournalwarteschlange des sendenden Computers beibehalten.|  
@@ -79,14 +79,14 @@ Gibt einen MSMQ-Transport für eine benutzerdefinierte Bindung an.
 |-------------|-----------------|  
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|Definiert alle Bindungsmöglichkeiten der benutzerdefinierten Bindung.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [Warteschlangen in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [Bindungen](../../../../../docs/framework/wcf/bindings.md)  
- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Configuration.MsmqIntegrationElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [Warteschlangen in WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Bindungen](../../../../../docs/framework/wcf/bindings.md)
+- [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

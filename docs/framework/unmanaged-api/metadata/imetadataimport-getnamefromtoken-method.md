@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a39eac88537d47535844d1f05e0741cc94142f0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 36218fa44f1cb49d8d0193d7c72e6feb2d121050
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447252"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718844"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>IMetaDataImport::GetNameFromToken-Methode
 Ruft den UTF-8-Namen des Objekts ab, auf das vom angegebenen Metadatentoken verwiesen wird. Diese Methode ist veraltet.  
@@ -44,17 +44,17 @@ HRESULT GetNameFromToken (
  [out] Ein Zeiger auf den UTF-8-Objektnamen im Heap.  
   
 ## <a name="remarks"></a>Hinweise  
- `GetNameFromToken` ist veraltet. Als Alternative, rufen Sie eine Methode zum Abrufen der Eigenschaften von den betreffenden Typ des Tokens, die erforderlich sind, z. B. `GetFieldProps` für ein Feld oder `GetMethodProps` für eine Methode.  
+ `GetNameFromToken` ist veraltet. Rufen Sie alternativ eine Methode zum Abrufen der Eigenschaften des bestimmten Typs des Tokens erforderlich ist, z. B. `GetFieldProps` für ein Feld oder `GetMethodProps` für eine Methode.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MsCorEE.dll enthalten  
+ **Bibliothek:** Als Ressource in MsCorEE.dll enthalten  
   
  **.NET Framework-Versionen:** 1.0  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

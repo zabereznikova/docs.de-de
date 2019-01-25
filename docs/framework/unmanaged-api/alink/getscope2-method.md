@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed9645c5111e7260010df74554825ffd8d427e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc986dc27deb08f779a9654324e6832d8420554a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402144"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587133"
 ---
 # <a name="getscope2-method"></a>GetScope2-Methode
 Ruft eine Importgültigkeitsbereich ab.  
@@ -42,21 +42,21 @@ HRESULT GetScope2(
  ID der Zielassembly.  
   
  `FileToken`  
- ID der Datei, aus denen importiert.  
+ ID der Datei an, zu importieren.  
   
  `dwScope`  
- Nullbasierter Gültigkeitsbereich zu importieren.  
+ Nullbasierte Bereich importiert.  
   
  `ppImportScope`  
  Zeiger auf empfängt [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md) Schnittstelle für den angegebenen Gültigkeitsbereich.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ausgeführt wird.  
+ Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h.  
+ Erfordert alink.h an.  
   
-## <a name="see-also"></a>Siehe auch  
- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>Siehe auch
+- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Einbetten von Ausdrücken in XML-Literalen (Visual Basic)'
+title: 'Vorgehensweise: Einbetten von Ausdrücken in XML-Literalen (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 41dc6ef8d2ec2ffd6cd1cf793911f2e09f1a1e77
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: fba33bc177641f3fc9f67b1a82919a44d28a11cf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929515"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681781"
 ---
-# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Gewusst wie: Einbetten von Ausdrücken in XML-Literalen (Visual Basic)
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Vorgehensweise: Einbetten von Ausdrücken in XML-Literalen (Visual Basic)
 Sie können XML-Literale kombinieren, mit eingebetteten Ausdrücken erstellen Sie eine XML-Dokument, Fragment oder Element, das zur Laufzeit erstellten Inhalte enthält. Die folgenden Beispiele veranschaulichen, wie Sie eingebettete Ausdrücke, die zum Auffüllen der Inhalt des Elements, Attribute und Elementnamen zur Laufzeit verwendet wird.  
   
  Die Syntax für einen eingebetteten Ausdruck ist `<%=` `exp` `%>`, dies ist die gleiche Syntax, die [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] verwendet. Weitere Informationen finden Sie unter [eingebettete Ausdrücke in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
@@ -65,8 +65,8 @@ Sie können XML-Literale kombinieren, mit eingebetteten Ausdrücken erstellen Si
     </contact>  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Erstellen von XML-Literalen](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)  
- [Eingebettete Ausdrücke in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
- [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Erstellen von XML-Literalen](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
+- [Eingebettete Ausdrücke in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

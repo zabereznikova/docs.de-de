@@ -2,12 +2,12 @@
 title: Sicherheitsüberlegungen (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 41812dab1f92e20e3742661d13c9f0e4fb81b46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591949"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612826"
 ---
 # <a name="security-considerations-entity-framework"></a>Sicherheitsüberlegungen (Entity Framework)
 In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung, der Bereitstellung und der Ausführung von [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]-Anwendungen beschrieben. Neben diesen Hinweisen sollten Sie auch die Empfehlungen zum Erstellen sicherer [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]-Anwendungen befolgen. Weitere Informationen finden Sie unter [Sicherheitsübersicht](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -75,7 +75,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
   
 -   Berechtigung zum Öffnen einer datenbankverbindung und führen Sie Befehle für die Datenbank, z. B. <xref:System.Data.SqlClient.SqlClientPermission> für eine SQL Server-Datenbank.  
   
- Weitere Informationen finden Sie unter [Codezugriffssicherheit und ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
+ Weitere Informationen finden Sie unter [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
 #### <a name="do-not-install-untrusted-applications"></a>Installieren Sie keine nicht vertrauenswürdigen Anwendungen.  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] erzwingt keinerlei Sicherheitsberechtigungen und ruft jeden vom Benutzer übergebenen Datenobjektcode während der Verarbeitung auf, unabhängig davon, ob dieser vertrauenswürdig ist oder nicht. Stellen Sie sicher, dass die Authentifizierung und die Autorisierung des Clients durch den Datenspeicher und Ihre Anwendung erfolgen.  
@@ -161,7 +161,7 @@ In diesem Thema werden spezielle Sicherheitsaspekte hinsichtlich der Entwicklung
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Akzeptieren Sie keine "MetadataWorkspace"-Objekte von nicht vertrauenswürdigen Quellen.  
  Anwendungen sollten keine Instanzen der <xref:System.Data.Metadata.Edm.MetadataWorkspace>-Klasse von nicht vertrauenswürdigen Quellen akzeptieren. Stattdessen sollten Sie einen Arbeitsbereich explizit erstellen und aus so einer Quelle füllen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Überlegungen zur Bereitstellung](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Migrationsüberlegungen](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [Überlegungen zur Bereitstellung](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Migrationsüberlegungen](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

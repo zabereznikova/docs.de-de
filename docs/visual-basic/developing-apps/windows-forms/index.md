@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 59b21bf9bbe3e78a1ac8cedd3812863cbcae7382
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 3db3c49427765249f7d6c5ac394f8b239cd40fa3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582572"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592522"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Grundlagen zu Windows Forms-Anwendungen (Visual Basic)
 Ein wichtiger Bestandteil von Visual Basic ist die Fähigkeit zum Erstellen von Windows Forms-Anwendungen, die lokal auf Benutzercomputern ausgeführt werden. Sie können Visual Studio verwenden, um die mithilfe von Windows Forms-Anwendung und die Benutzeroberfläche zu erstellen. Eine Windows Forms-Anwendung baut auf Klassen aus der <xref:System.Windows.Forms> Namespace.  
@@ -46,7 +46,7 @@ Ein wichtiger Bestandteil von Visual Basic ist die Fähigkeit zum Erstellen von 
   
 |Beschreibung|Siehe|  
 |--------|---------|  
-|Erstellen einer neuen Windows Forms-Anwendung mit Visual Studio|[Exemplarische Vorgehensweise: Erstellen eines einfachen Windows-Formulars](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Erstellen einer neuen Windows Forms-Anwendung mit Visual Studio|[Exemplarische Vorgehensweise: Erstellen eines einfachen Windows Forms](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Verwenden von Steuerelementen auf Formularen|[Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Erstellen von Grafiken mit <xref:System.Drawing>|[Erste Schritte mit Grafikprogrammierung](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Erstellen benutzerdefinierter Steuerelemente|[Vorgehensweise: Erben von der UserControl-Klasse](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -66,8 +66,8 @@ Ein wichtiger Bestandteil von Visual Basic ist die Fähigkeit zum Erstellen von 
   
 |Beschreibung|Siehe|  
 |--------|---------|  
-|Verwenden der <xref:System.Windows.Forms.BindingSource> Komponente|[Vorgehensweise: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|Arbeiten mit [!INCLUDE[vstecado](~/includes/vstecado-md.md)] -Datenquellen|[Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der BindingSource-Komponente in Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Verwenden der <xref:System.Windows.Forms.BindingSource> Komponente|[Vorgehensweise: Binden von Windows Forms-Steuerelementen mithilfe der BindingSource-Komponente, die mithilfe des Designers](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
+|Arbeiten mit [!INCLUDE[vstecado](~/includes/vstecado-md.md)] -Datenquellen|[Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der Windows Forms-BindingSource-Komponente](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Verwenden Sie das Fenster "Datenquellen"|[Exemplarische Vorgehensweise: Anzeigen von Daten in einem Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Bereitstellen von Anwendungen auf Clientcomputern  
@@ -81,9 +81,9 @@ Ein wichtiger Bestandteil von Visual Basic ist die Fähigkeit zum Erstellen von 
   
 |Beschreibung|Siehe|  
 |--------|---------|  
-|Bereitstellen einer Anwendung mit [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Gewusst wie: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|Update einer [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] Bereitstellung|[Gewusst wie: Verwalten von Aktualisierungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Verwalten der Sicherheit mit [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Gewusst wie: Aktivieren von ClickOnce-Sicherheitseinstellungen](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Bereitstellen einer Anwendung mit [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Vorgehensweise: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Update einer [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] Bereitstellung|[Vorgehensweise: Verwalten von Aktualisierungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|Verwalten der Sicherheit mit [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Vorgehensweise: Aktivieren von ClickOnce-Sicherheitseinstellungen](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Andere Steuerelemente und Funktionen  
  In Windows Forms stehen viele weitere Features bereit, mit denen häufige Aufgaben schnell und einfach ausgeführt werden können, beispielsweise zum Erstellen von Dialogfeldern, Drucken, Hinzufügen von Hilfe und Dokumentation sowie zum Lokalisieren von Anwendungen in mehrere Sprachen. Darüber hinaus die robusten Sicherheitssystem von Windows Forms verwendet die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], sodass Sie sicherere Anwendungen für Ihre Kunden freigeben.  
@@ -97,6 +97,6 @@ Ein wichtiger Bestandteil von Visual Basic ist die Fähigkeit zum Erstellen von 
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
-- [Übersicht über Windows Forms](../../../framework/winforms/windows-forms-overview.md)  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
+- [Übersicht über Windows Forms](../../../framework/winforms/windows-forms-overview.md)
 - [My.Forms-Objekt](../../../visual-basic/language-reference/objects/my-forms-object.md)

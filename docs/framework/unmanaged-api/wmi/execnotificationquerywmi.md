@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d314d85e7c1297636e8dd5cecaf050a527151518
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd00a1fa8099d5a87577271487c46e68a46794c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43453050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54566982"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi-Funktion
-Führt eine Abfrage zum Empfangen von Ereignissen. Der Aufruf sofort zurückgegeben, und der Aufrufer Abfragen kann des zurückgegebenen Enumerators für Ereignisse, deren eintreffen. Den zurückgegebenen Enumerator freigegeben wird, bricht die Abfrage ab.  
+Führt eine Abfrage zum Empfangen von Ereignissen aus. Der Aufruf sofort zurückgegeben, und der Aufrufer Abfragen kann des zurückgegebenen Enumerators für Ereignisse, deren eintreffen. Den zurückgegebenen Enumerator freigegeben wird, bricht die Abfrage ab.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -91,12 +91,12 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0 x 80041003 | Der Benutzer keine Berechtigung zum Anzeigen, eine oder mehrere Klassen, die die Funktion zurückgeben kann. |
-| `WBEM_E_FAILED` | 0 x 80041001 | Ein Unbekannter Fehler aufgetreten. |
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein Parameter ist ungültig. |
-| `WBEM_E_INVALID_CLASS` | 0 x 80041010 | Die Abfrage gibt eine Klasse, die nicht vorhanden ist. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | Der Benutzer keine Berechtigung zum Anzeigen, eine oder mehrere Klassen, die die Funktion zurückgeben kann. |
+| `WBEM_E_FAILED` | 0x80041001 | Ein Unbekannter Fehler aufgetreten. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | Die Abfrage gibt eine Klasse, die nicht vorhanden ist. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Zu viel Genauigkeit bei der Übermittlung von Ereignissen wurde angefordert. Eine größere Abruf Toleranz muss angegeben werden. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0 x 80042001 | Die Abfrage Requess kann mehr Informationen als Windows-Verwaltung bereitstellen. Dies `HRESULT` wird zurückgegeben, wenn ein Event-in einer Anforderung zum Abrufen aller Objekte in einem Namespace Abfrageergebnisse. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Die Abfrage Requess kann mehr Informationen als Windows-Verwaltung bereitstellen. Dies `HRESULT` wird zurückgegeben, wenn ein Event-in einer Anforderung zum Abrufen aller Objekte in einem Namespace Abfrageergebnisse. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | Die Abfrage musste ein Syntaxfehler aufgetreten. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | Die angeforderte Abfragesprache wird nicht unterstützt. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | Die Abfrage ist zu komplex. |
@@ -117,11 +117,11 @@ Bestehen Einschränkungen in Bezug auf die Anzahl der `AND` und `OR` Schlüsselw
 Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformationen abrufen, durch den Aufruf der [GetErrorInfo](geterrorinfo.md) Funktion.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9758de5c2801f2c55b7eca149569016ec5b9243
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f13800bcecbf6e7bdc5fede4e11c2ea15ecdec93
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412752"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603897"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap-Methode
-Benachrichtigt den Debugger, dass ein STRG + C im Prozess aufgefangen wird, der debuggt wird.  
+Benachrichtigt den Debugger, dass im Prozess, der debuggt wird, STRG + C drücken aufgefangen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +37,7 @@ HRESULT ControlCTrap (
   
 #### <a name="parameters"></a>Parameter  
  `pProcess`  
- [in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, in dem die STRG + C abgefangen wird.  
+ [in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, in dem die STRG + C aufgefangen wird.  
   
 ## <a name="return-value"></a>Rückgabewert  
   
@@ -47,10 +47,10 @@ HRESULT ControlCTrap (
 |S_FALSE|Der Debugger behandelt nicht das Trap STRG + C.|  
   
 ## <a name="remarks"></a>Hinweise  
- Für diesen Rückruf werden alle Anwendungsdomänen innerhalb des Prozesses beendet.  
+ Alle Anwendungsdomänen innerhalb des Prozesses werden für diesen Rückruf beendet.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -58,5 +58,5 @@ HRESULT ControlCTrap (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

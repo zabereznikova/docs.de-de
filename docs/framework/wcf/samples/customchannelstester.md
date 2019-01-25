@@ -2,21 +2,21 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: eebe4f15095c7cefbd32971fd2f3ee308e9916b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ede9e6b2c2b4d4bf027ff729bc0418d7ac48f06
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596643"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 Der `CustomChannelsTester` ist ein Tool, das Sie zum Testen Ihrer benutzerdefinierten Channelimplementierungen mit einem Satz vordefinierter Dienstverträge verwenden können. Sie können einen Satz von Dienstverträgen auswählen und diesen mithilfe einer XML-Datei an das Tool übergeben. Anschließend generiert das Tool den Dienst und den Client, die die benutzerdefinierten Channelimplementierungen während des Nachrichtenaustauschs ausführen.  
   
 ### <a name="to-build-the-tool"></a>So erstellen Sie das Tool  
   
-1.  Führen Sie zum Erstellen der Projektmappe die Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Während der Erstellung der Projektmappe werden drei Dateien generiert: "CustomChannelsTester.exe", "TestSpec.xml" und "SampleRun.cmd". Die Datei "samplerun.cmd" hat eine Beispielbefehlszeile, die zeigt, wie Sie dieses Tool zum Testen verwenden die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
+2.  Erstellen der Projektmappe werden drei Dateien generiert: CustomChannelsTester.exe, "Testspec.xml" und "samplerun.cmd". Die Datei "samplerun.cmd" verfügt über eine Beispielbefehlszeile, die zeigt, wie Sie dieses Tool zum Testen verwenden die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
   
 ### <a name="to-run-the-tool"></a>So führen Sie das Tool aus  
   
@@ -28,7 +28,7 @@ Der `CustomChannelsTester` ist ein Tool, das Sie zum Testen Ihrer benutzerdefini
   
      Die Verwendung der `/binding`-Option ist erforderlich.  
   
-     `/dll` ist erforderlich, wenn "Bindung" keine vom System bereitgestellte Bindung von Windows Communication Foundation (WCF) bereitgestellt ist.  
+     `/dll` ist erforderlich, wenn "Bindung" keine vom System bereitgestellten Bindung von Windows Communication Foundation (WCF) bereitgestellt ist.  
   
      `/testspec` ist optional.  
   

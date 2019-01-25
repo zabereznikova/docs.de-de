@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 0b76e07a23b105f2c1b4fb55a0d25bb52bcb9dc2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0b3b92e29c5de7365cbf1196a387bc0c9c440755
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192040"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582088"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>ClickOnce-Bereitstellung für Windows Forms
 Die folgenden Themen beschreiben [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], eine Technologie für die einfache Bereitstellung von Windows Forms-Anwendungen auf Clientcomputern.  
@@ -41,16 +41,16 @@ Die folgenden Themen beschreiben [!INCLUDE[ndptecclick](../../../includes/ndptec
  [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  Veranschaulicht die Verwendung von Befehlszeilen- und SDK-Tools zum Bereitstellen einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendung ohne Visual Studio.  
   
- [Gewusst wie: Hinzufügen eines vertrauenswürdigen Herausgebers zu einem Clientcomputer für ClickOnce-Anwendungen](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [Vorgehensweise: Hinzufügen eines vertrauenswürdigen Herausgebers zu einem Clientcomputer für ClickOnce-Anwendungen](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  Veranschaulicht die einmalige Konfiguration von Clientcomputern, die für die Bereitstellung vertrauenswürdiger Anwendungen erforderlich ist.  
   
- [Gewusst wie: Angeben eines anderen Speicherorts für Bereitstellungsaktualisierungen](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
+ [Vorgehensweise: Angeben eines anderen Speicherorts für Bereitstellungsaktualisierungen](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  Veranschaulicht das Konfigurieren einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendung mithilfe von SDK-Tools, um einen anderen Speicherort auf neue Versionen einer Anwendung zu überprüfen.  
   
  [Exemplarische Vorgehensweise: Herunterladen von Assemblys bei Bedarf mit der API für die ClickOnce-Bereitstellung](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  Veranschaulicht die Verwendung von API-Aufrufen zum Abrufen einer Assembly beim ersten Versuch Ihrer Anwendung, diese zu laden.  
   
- [Gewusst wie: Abrufen von Abfragezeichenfolgen-Informationen in einer Online-ClickOnce-Anwendung](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
+ [Vorgehensweise: Abrufen von Abfragezeichenfolgen-Informationen in einer Online-ClickOnce-Anwendung](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
  Veranschaulicht das Abrufen von Parametern aus der URL, mit der eine [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendung ausgeführt wird.  
   
  [Übersicht über den ClickOnce-Cache](/visualstudio/deployment/clickonce-cache-overview)  
@@ -59,13 +59,13 @@ Die folgenden Themen beschreiben [!INCLUDE[ndptecclick](../../../includes/ndptec
  [Zugreifen auf lokale und Remotedaten in einer ClickOnce-Anwendung](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
  Beschreibt, wie Sie aus einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendung auf lokale Datendateien und Remotedatenquellen zugreifen.  
   
- [Gewusst wie: Einschließen einer Datendatei in eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
+ [Vorgehensweise: Einschließen einer Datendatei in eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  Veranschaulicht, wie Sie eine Datei so markieren, dass sie im [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Datenverzeichnis verfügbar ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Veröffentlichen von ClickOnce-Anwendungen](/visualstudio/deployment/publishing-clickonce-applications)  
- [Erstellen von ClickOnce-Anwendungen über die Befehlszeile](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)  
- [Debuggen von ClickOnce-Anwendungen, die System.Deployment.Application verwenden](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)  
- [Bereitstellen von COM-Komponenten mit ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)  
- [Gewusst wie: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Anwendungseinstellungen](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Veröffentlichen von ClickOnce-Anwendungen](/visualstudio/deployment/publishing-clickonce-applications)
+- [Erstellen von ClickOnce-Anwendungen über die Befehlszeile](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
+- [Debuggen von ClickOnce-Anwendungen, die System.Deployment.Application verwenden](https://msdn.microsoft.com/library/86f31948-2ca8-47c0-8e8b-c2b817bbf79f)
+- [Bereitstellen von COM-Komponenten mit ClickOnce](/visualstudio/deployment/deploying-com-components-with-clickonce)
+- [Vorgehensweise: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)

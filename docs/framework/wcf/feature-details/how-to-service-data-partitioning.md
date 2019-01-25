@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Dienstdatenpartitionierung'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 47e84555e38d2a71b7741c18de5f67349a622798
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3755a9ecb61148bcc426e9d510dc2eab1c34eeb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54590629"
 ---
 # <a name="how-to-service-data-partitioning"></a>Vorgehensweise: Dienstdatenpartitionierung
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um Meldungen über mehrere Instanzen des gleichen Zieldiensts zu partitionieren. Die Partitionierung von Dienstdaten wird in der Regel verwendet, wenn Sie einen Dienst skalieren müssen, um eine bessere Dienstqualität bereitzustellen, oder wenn Sie Anforderungen verschiedener Kunden jeweils auf bestimmte Art und Weise behandeln müssen. Beispielsweise können Nachrichten von wichtigen Kunden oder "Gold"-Kunden mit einer höheren Priorität als Nachrichten von einem Standardkunden verarbeitet werden müssen.  
@@ -173,5 +173,5 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)
