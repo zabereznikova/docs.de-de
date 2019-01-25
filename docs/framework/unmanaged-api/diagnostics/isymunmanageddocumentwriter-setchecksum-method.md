@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b9b77b94e466a4aab4a575501ac6922293b3410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d7a3fcd34f8cab6fa3c2949a4ee3270189b3dc77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424143"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54730034"
 ---
 # <a name="isymunmanageddocumentwritersetchecksum-method"></a>ISymUnmanagedDocumentWriter::SetCheckSum-Methode
 Legt Prüfsummeninformationen fest.  
@@ -38,10 +38,10 @@ HRESULT SetCheckSum(
   
 #### <a name="parameters"></a>Parameter  
  `algorithmId`  
- [in] Die GUID, die die Algorithmus-ID darstellt.  
+ [in] Die GUID, die den Algorithmusbezeichner darstellt.  
   
  `checkSumSize`  
- [in] Ein `ULONG32` gibt, die die Größe in Bytes, der die `checkSum` Puffer.  
+ [in] Ein `ULONG32` , die Größe in Bytes angibt, der die `checkSum` Puffer.  
   
  `checkSum`  
  [in] Der Puffer, in dem die Prüfsummeninformationen gespeichert.  
@@ -52,5 +52,5 @@ HRESULT SetCheckSum(
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [ISymUnmanagedDocumentWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ISymUnmanagedDocumentWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 3094c82382292be3295238ef9cf2687f6eeb98f8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5c87b0f411c187e1497c8ec55771b80bb94c3629
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635676"
 ---
 # <a name="configuring-http-and-https"></a>Konfigurieren von HTTP und HTTPS
 WCF-Dienste und -Clients können über HTTP und HTTPS kommunizieren. Die HTTP/HTTPS-Einstellungen werden mit Internetinformationsdienste (IIS) oder mit einem Befehlszeilentool konfiguriert. Wenn ein WCF-Dienst unter IIS gehostet wird, können die HTTP- oder HTTPS-Einstellungen in IIS konfiguriert werden (mit dem Tool "inetmgr.exe"). Bei einem selbst gehosteten WCF-Dienst werden die HTTP- oder HTTPS-Einstellungen mit einem Befehlszeilentool konfiguriert.  
@@ -90,6 +90,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 ## <a name="issues-specific-to-windows-xp"></a>Probleme bezüglich Windows XP  
  IIS unterstützt keine Anschlussfreigabe unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Wenn IIS ausgeführt wird, und ein WCF-Dienst versucht, einen Namespace mit dem gleichen Anschluss zu verwenden, kann der WCF-Dienst gestartet. IIS und WCF, die standardmäßig auf Port 80 verwenden. Ändern Sie die anschlusszuweisung für einen der Dienste oder verwenden Sie die IP-Lauschliste, um einen Netzwerkadapter, die nicht von IIS verwendet den WCF-Dienst zuweisen. IIS&#160;6.0 und höher wurde für die Verwendung der HTTP-Server-APIs neu konzipiert.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.WSDualHttpBinding>  
- [So wird es gemacht: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.WSDualHttpBinding>
+- [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

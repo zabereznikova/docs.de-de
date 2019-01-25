@@ -1,19 +1,19 @@
 ---
-title: '&lt;AnnouncementEndpoint&gt;'
+title: '&lt;announcementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: fe278da539af59a32edf5a626461dbec0ba3887d
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 8e180d53260ccf3364ab3c8d7b076f78917526d0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151643"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729878"
 ---
-# <a name="ltannouncementendpointgt"></a>&lt;AnnouncementEndpoint&gt;
+# <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
 Dieses Konfigurationselement definiert einen Standardendpunkt mit einem festen Ankündigungsvertrag. Die Verfügbarkeit eines Diensts kann optional angekündigt werden, indem beim Öffnen bzw. Schließen des Diensts eine Online- bzw. Offline-Ankündigungsnachricht gesendet wird. Ein Windows Communication Foundation (WCF)-Dienst gibt die ankündigungsendpunkte im an die [ \<ServiceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) Element und das announcementclient-Ankündigungen ausführen. Ein Client, der zum Lauschen auf die Ankündigungen von anderen Diensten fungiert als WCF-Dienst tatsächlich; Daher müssen Sie die ankündigungsendpunkte für diesen Client im Konfigurieren der [ \<Services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) Abschnitt.  
   
 \<system.ServiceModel>  
-\<StandardEndpoints >  
+\<standardEndpoints>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ Dieses Konfigurationselement definiert einen Standardendpunkt mit einem festen A
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<StandardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Eine Auflistung von Standardendpunkten, bei denen es sich um vordefinierte Endpunkte handelt, für die eine oder mehrere Eigenschaften (Adresse, Bindung, Vertrag) fest vorgegeben sind.|  
+|[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Eine Auflistung von Standardendpunkten, bei denen es sich um vordefinierte Endpunkte handelt, für die eine oder mehrere Eigenschaften (Adresse, Bindung, Vertrag) fest vorgegeben sind.|  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt einen Client, der über http und peernet eine Überwachung auf Ankündigungsnachrichten durchführt.  
@@ -78,5 +78,5 @@ Dieses Konfigurationselement definiert einen Standardendpunkt mit einem festen A
 </standardEndpoints>
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

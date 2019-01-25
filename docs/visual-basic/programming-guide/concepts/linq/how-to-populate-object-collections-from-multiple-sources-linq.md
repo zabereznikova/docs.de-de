@@ -2,23 +2,23 @@
 title: 'Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0228d152539abe3bf0db5a8e5bf4581eaf957b31
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070862"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638820"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (Visual Basic)
 
 In diesem Beispiel erfahren Sie, wie Sie Daten aus unterschiedlichen Quellen in einer Sequenz aus neuen Typen zusammenführen können.
 
 > [!NOTE]
-> Versuchen Sie nicht, die in-Memory-Daten oder Daten im Dateisystem mit Daten zu verknüpfen, der immer noch in einer Datenbank ist. Derartige domänenübergreifende Verknüpfungen können aufgrund von möglichen unterschiedlichen Definitionen von Verknüpfungsvorgänge für Datenbankabfragen und anderen Quelltypen zu undefinierten Ergebnissen führen. Zusätzlich kann eine derartige Verknüpfung eine Ausnahme außerhalb des Speichers verursachen, wenn die Datenmenge in der Datenbank groß genug ist. Um Daten aus einer Datenbank mit Daten im Arbeitsspeicher zu verknüpfen, rufen Sie zuerst `ToList` oder `ToArray` in der Datenbankabfrage auf, und führen Sie dann die Verknüpfung in der zurückgegebenen Auflistung durch.
+> Versuchen Sie nicht, Daten im Arbeitsspeicher oder Daten im Dateisystem mit Daten, die sich noch in der Datenbank befinden, zusammenzuführen. Derartige domänenübergreifende Verknüpfungen können aufgrund von möglichen unterschiedlichen Definitionen von Verknüpfungsvorgänge für Datenbankabfragen und anderen Quelltypen zu undefinierten Ergebnissen führen. Zusätzlich kann eine derartige Verknüpfung eine Ausnahme außerhalb des Speichers verursachen, wenn die Datenmenge in der Datenbank groß genug ist. Um Daten aus einer Datenbank mit Daten im Arbeitsspeicher zu verknüpfen, rufen Sie zuerst `ToList` oder `ToArray` in der Datenbankabfrage auf, und führen Sie dann die Verknüpfung in der zurückgegebenen Auflistung durch.
 
 ## <a name="to-create-the-data-file"></a>So erstellen Sie die Datendatei
 
-- Kopieren Sie die names.csv und scores.csv-Dateien in den Projektordner, wie in beschrieben [wie: Verknüpfen Inhalte aus unterschiedlichen Dateien (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+- Kopieren Sie die Dateien "Names.csv" und "scores.csv" in Ihrem Projektordner, siehe [Vorgehensweise: Verknüpfen des Inhalts Unterschiedlicher Dateien (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -100,9 +100,9 @@ End Class
 ' The average score of Tucker Michael is 92
 ```
 
-In der [Select-Klausel](../../../../visual-basic/language-reference/queries/select-clause.md) -Klausel ein Objektinitialisierer wird verwendet, um instanziieren jedes neuen `Student` Objekt, indem Sie die Daten aus beiden Quellen verwenden.
+In der [Select-Klausel](../../../../visual-basic/language-reference/queries/select-clause.md) eines Objektinitialisierers-Klausel wird verwendet, um die Instanziierung jedes neuen `Student` Objekt, indem Sie mit den Daten aus beiden Quellen.
 
-Wenn Sie die Ergebnisse einer Abfrage gespeichert haben, können anonyme Typen einfacher als benannter Typen sein. Benannte Typen sind für die Übergabe von Abfrageergebnissen außerhalb der Methode, in der die Abfrage ausgeführt wird, erforderlich. In folgendem Beispiel wird die gleiche Aufgabe wie im vorherigen Beispiel ausgeführt; allerdings werden statt benannter anonyme Typen verwendet:
+Wenn Sie die Ergebnisse einer Abfrage nicht speichern müssen, können anonyme Typen praktischer als benannte Typen sein. Benannte Typen sind für die Übergabe von Abfrageergebnissen außerhalb der Methode, in der die Abfrage ausgeführt wird, erforderlich. In folgendem Beispiel wird die gleiche Aufgabe wie im vorherigen Beispiel ausgeführt; allerdings werden statt benannter anonyme Typen verwendet:
 
 ```vb
 ' Merge the data by using an anonymous type.
@@ -130,12 +130,12 @@ Next
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Erstellen und Kompilieren eines Projekts, das als Ziel eine der folgenden Optionen verwendet:
+Erstellen und kompilieren Sie ein Projekt, das eine der folgenden Optionen als Ziel verwendet:
 
-- .NET Framework Version 3.5 mit einem Verweis auf "System.Core.dll".
-- .NET Framework Version 4.0 oder höher.
+- .NET Framework-Version 3.5 mit einem Verweis auf „System.Core.dll“.
+- .NET Framework-Version 4.0 oder höher.
 - .NET Core-Version 1.0 oder höher.
 
 ## <a name="see-also"></a>Siehe auch
 
-[LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

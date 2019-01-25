@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Hinzufügen von Erweiterungen zu ToolStripMenuItems'
+title: 'Vorgehensweise: Hinzufügen von Erweiterungen zu ToolStripMenuItems'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: eb55796480bea896383da479fe23a5d8967a52e3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 621b96805543abb92bc73f734f1a090d9cdb7319
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582410"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54685084"
 ---
-# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Gewusst wie: Hinzufügen von Erweiterungen zu ToolStripMenuItems
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Vorgehensweise: Hinzufügen von Erweiterungen zu ToolStripMenuItems
 Sie können die benutzerfreundlichkeit verbessern <xref:System.Windows.Forms.MenuStrip> und <xref:System.Windows.Forms.ContextMenuStrip> Steuerelemente es gibt folgende Möglichkeiten:  
   
 -   Hinzufügen von Häkchen, um festzulegen, ob ein Feature aktiviert ist, aktiviert oder deaktiviert, wie z. B., ob ein Lineal am Rand des eine textverarbeitungsanwendung angezeigt wird, oder, um anzugeben, welche Datei in einer Liste von Dateien angezeigt, z. B. auf wird eine **Fenster** ein Menü.  
@@ -113,7 +113,7 @@ Sie können die benutzerfreundlichkeit verbessern <xref:System.Windows.Forms.Men
     this.exitToolStripMenuItem});  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.MenuStrip>  
- <xref:System.Windows.Forms.ToolStripMenuItem>  
- [Übersicht über das MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.MenuStrip>
+- <xref:System.Windows.Forms.ToolStripMenuItem>
+- [Übersicht über das MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

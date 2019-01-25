@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Entschlüsseln von XML-Elementen mit X.509-Zertifikaten'
+title: 'Vorgehensweise: Entschlüsseln von XML-Elementen mit x. 509-Zertifikaten'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72630fce122c2b0acadb074724ed41394695f2c6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 5e58a463c38dc41e669cf554961124b893fb7406
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122369"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54682137"
 ---
-# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Gewusst wie: Entschlüsseln von XML-Elementen mit X.509-Zertifikaten
+# <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Vorgehensweise: Entschlüsseln von XML-Elementen mit x. 509-Zertifikaten
 Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden, um ein Element in einem XML-Dokument zu verschlüsseln und zu entschlüsseln.  XML-Verschlüsselung ist ein gängiges Verfahren zum Austauschen oder Speichern von verschlüsselten XML-Daten, ohne sich Gedanken machen zu müssen, dass die Daten einfach gelesen werden können.  Weitere Informationen zu XML-Verschlüsselungsstandard, finden Sie die Spezifikation des World Wide Web Consortium (W3C) XML-Verschlüsselung im Pfad <https://www.w3.org/TR/xmldsig-core/>.  
   
- In diesem Beispiel wird entschlüsselt, ein XML-Element, das mit den beschriebenen Methoden verschlüsselt wurde: [wie: Verschlüsseln von XML-Elementen mit x. 509-Zertifikaten](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Im Beispiel wird ein <`EncryptedData`>-Element gesucht, wird dieses Element entschlüsselt, und wird das Element dann durch das ursprüngliche Klartext-XML-Element ersetzt.  
+ In diesem Beispiel wird entschlüsselt, ein XML-Element, das mit den beschriebenen Methoden verschlüsselt wurde: [Vorgehensweise: Verschlüsseln von XML-Elementen mit x. 509-Zertifikaten](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Im Beispiel wird ein <`EncryptedData`>-Element gesucht, wird dieses Element entschlüsselt, und wird das Element dann durch das ursprüngliche Klartext-XML-Element ersetzt.  
   
  Im Codebeispiel dieser Vorgehensweise wird ein XML-Element mithilfe eines X.059-Zertifikats entschlüsselt, das aus einem lokalen Zertifikatsspeicher des aktuellen Benutzerkontos stammt.  Im Beispiel wird die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>-Methode verwendet, um automatisch das X.509-Zertifikat abzurufen und einen Sitzungsschlüssel zu entschlüsseln, der im <`EncryptedKey`>-Element des <`EncryptedData`>-Elements gespeichert ist.  Die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>-Methode verwendet anschließend automatisch den Sitzungsschlüssel, um das XML-Element zu entschlüsseln.  
   
@@ -79,5 +79,5 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Security.Cryptography.Xml>  
-- [Gewusst wie: Verschlüsseln von XML-Elementen mit X.509-Zertifikaten](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)
+- <xref:System.Security.Cryptography.Xml>
+- [Vorgehensweise: Verschlüsseln von XML-Elementen mit x. 509-Zertifikaten](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)

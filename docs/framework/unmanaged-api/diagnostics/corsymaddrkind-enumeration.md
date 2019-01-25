@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 389cf2e77728002ce1078f63df3d741d1847c105
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744972"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind-Enumeration
 Gibt den Typ der Speicheradresse.  
@@ -48,19 +48,19 @@ typedef enum CorSymAddrKind
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Gibt einen Microsoft intermediate Language (MSIL) lokale Variablen oder Parameter Index an.|  
+|`ADDR_IL_OFFSET`|Gibt einen Microsoft intermediate Language (MSIL) lokale Variable oder Parameter Index an.|  
 |`ADDR_NATIVE_RVA`|Gibt eine relative virtuelle Adresse in einem Modul an.|  
-|`ADDR_NATIVE_REGISTER`|Gibt einen CPU-Register an.|  
-|`ADDR_NATIVE_REGREL`|Gibt an, dass die erste Adresse eines Registers und die zweite Adresse ein Offset ist.|  
-|`ADDR_NATIVE_OFFSET`|Gibt einen Offset von einer Basisadresse an.|  
-|`ADDR_NATIVE_REGREG`|Gibt an, dass die erste Adresse der niedrigen Teil eines Registers ist und die zweite Adresse der hohe Bereich.|  
-|`ADDR_NATIVE_REGSTK`|Gibt an, dass die erste Adresse der niedrigen Teil eines Registers ist, das zweite der hohe Bereich ist und das dritte ein Offset ist.|  
-|`ADDR_NATIVE_STKREG`|Gibt an, dass die erste Adresse eines Registers, das zweite ein Offset ist, und der dritte der hohe Bereich des Registers ist.|  
-|`ADDR_BITFIELD`|Gibt an, dass die erste Adresse der Anfang eines Felds ist und die zweite Adresse die Feldlänge ist.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Gibt an, dass die erste Adresse der Abschnitt ist und die zweite Adresse ein Offset ist.|  
+|`ADDR_NATIVE_REGISTER`|Gibt ein CPU-Register an.|  
+|`ADDR_NATIVE_REGREL`|Gibt an, dass die erste Adresse ein Register ist und die zweite Adresse eine Abweichung ist.|  
+|`ADDR_NATIVE_OFFSET`|Gibt an, ein Offset von einer Basisadresse.|  
+|`ADDR_NATIVE_REGREG`|Gibt an, dass die erste Adresse der niedrige Teil eines Registers ist, und die zweite Adresse der hohe Teil ist.|  
+|`ADDR_NATIVE_REGSTK`|Gibt an, dass die erste Adresse der niedrige Teil eines Registers ist, das zweite der hohe Teil ist, und die dritte ein Offset ist.|  
+|`ADDR_NATIVE_STKREG`|Gibt an, dass die erste Adresse ein Register ist, die zweite ein Offset ist und der dritte der hohe Teil der Registrierung ist.|  
+|`ADDR_BITFIELD`|Gibt an, dass die erste Adresse der Anfang eines Felds ist, und die zweite Adresse die Feldlänge stellt.|  
+|`ADDR_NATIVE_ISECTOFFSET`|Gibt an, dass die erste Adresse der Abschnitt ist, und die zweite Adresse eine Abweichung ist.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Header:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>Siehe auch  
- [Diagnosesymbolspeicher-Enumerationen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>Siehe auch
+- [Diagnosesymbolspeicher-Enumerationen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

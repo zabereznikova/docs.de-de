@@ -1,5 +1,5 @@
 ---
-title: '&lt;LegacyImpersonationPolicy&gt; Element'
+title: '&lt;legacyImpersonationPolicy&gt; Element'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0d71bef4ad68c2fea63cec413e8bd17b78df1d0
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 196aaa35561cba7925bcd005474cccb393494250
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699883"
 ---
-# <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;LegacyImpersonationPolicy&gt; Element
+# <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyImpersonationPolicy&gt; Element
 Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, unabhängig von den Floweinstellungen für den Ausführungskontext im aktuellen Thread.  
   
  \<configuration>  
-\<Common Language Runtime >  
+\<runtime>  
 \<legacyImpersonationPolicy>  
   
 ## <a name="syntax"></a>Syntax  
@@ -115,7 +115,7 @@ Gibt an, dass die Windows-Identität nicht über asynchrone Punkte verläuft, un
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+## <a name="see-also"></a>Siehe auch
+- [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<AlwaysFlowImpersonationPolicy >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Abrufen von Absätzen aus einem Office Open XML-Dokument (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 17d8c0fb9ecd5d3cb7a4f692d25a9f1514696117
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: ea577d114c4c736b074311bfb3c927268d18830d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753311"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54624245"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Vorgehensweise: Abrufen von Absätzen aus einem Office Open XML-Dokument (Visual Basic)
 Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet und eine Auflistung aller in diesem Dokument vorhandenen Absätze abruft.  
@@ -19,7 +19,7 @@ Dieses Thema enthält ein Beispiel, das ein Office Open XML-Dokument öffnet und
   
  Das Beispiel verwendet eine Erweiterungsmethode mit dem Namen `StringConcatenate`, die ebenfalls im Beispiel angegeben ist.  
   
- Ein ausführliches Lernprogramm, aus der hervorgeht, wie dieses Beispiel funktioniert, finden Sie unter [reine funktionale Transformationen von XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Ein ausführliches Tutorial, die erklärt, wie dieses Beispiel funktioniert, finden Sie unter [reine funktionale Transformationen von XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
  Dieses Beispiel verwendet Klassen aus der <legacyBold>WindowsBase</legacyBold>-Assembly. Außerdem werden Typen im <xref:System.IO.Packaging?displayProperty=nameWithType>-Namespace verwendet.  
   
@@ -152,7 +152,7 @@ Module Module1
 End Module  
 ```  
   
- Bei der Ausführung mit der beschrieben, die im Open XML-Beispieldokument [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), dieses Beispiel erzeugt die folgende Ausgabe:  
+ Bei der Ausführung mit der beschriebenen Open XML-Beispieldokument [erstellen das Office Open XML-Quelldokument (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), in diesem Beispiel erzeugt die folgende Ausgabe:  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -172,5 +172,5 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Siehe auch
+- [Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

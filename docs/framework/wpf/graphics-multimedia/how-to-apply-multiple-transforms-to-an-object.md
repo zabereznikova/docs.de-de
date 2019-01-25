@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Anwenden mehrerer Transformationen auf ein Objekt'
+title: 'Vorgehensweise: Anwenden mehrerer Transformationen auf ein Objekt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - graphics [WPF], grouping Transform objects
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
-ms.openlocfilehash: 0700a7ae3f18f745b0d479ace3acbf2d7fbd9722
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: dc9b7c052d9deb4d1167c813a6ce652c99983a9f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873115"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649452"
 ---
-# <a name="how-to-apply-multiple-transforms-to-an-object"></a>Gewusst wie: Anwenden mehrerer Transformationen auf ein Objekt
+# <a name="how-to-apply-multiple-transforms-to-an-object"></a>Vorgehensweise: Anwenden mehrerer Transformationen auf ein Objekt
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.TransformGroup> Gruppe zwei oder mehr <xref:System.Windows.Media.Transform> Objekte in einem einzigen zusammengesetzten <xref:System.Windows.Media.Transform>.  
   
 ## <a name="example"></a>Beispiel  
@@ -28,8 +28,8 @@ Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.TransformGro
  [!code-csharp[Transforms_Procedural_snip#MultipleTransformsCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Transforms_Procedural_snip/CSharp/MultipleTransformsExample.cs#multipletransformscodeexamplewholepage)]
  [!code-vb[Transforms_Procedural_snip#MultipleTransformsCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/MultipleTransformsExample.vb#multipletransformscodeexamplewholepage)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.UIElement.RenderTransform%2A>  
- <xref:System.Windows.Media.TransformGroup>  
- [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [Beispiel für 2D-Transformationen](https://go.microsoft.com/fwlink/?LinkID=158252)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.UIElement.RenderTransform%2A>
+- <xref:System.Windows.Media.TransformGroup>
+- [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+- [Beispiel für 2D-Transformationen](https://go.microsoft.com/fwlink/?LinkID=158252)

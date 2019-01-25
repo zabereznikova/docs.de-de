@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 5d2d84f298b9cf6138e84ef287f6ea9212da2960
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180227"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54626484"
 ---
 # <a name="double-data-type-visual-basic"></a>Double-Datentyp (Visual Basic)
 Speichert signierte IEEE-64-Bit (8 Byte) mit doppelter Genauigkeit Gleitkommazahlen, die in den Wertebereich von - 1.79769313486231570E + 308 bis - liegen 4.94065645841246544E-324 für negative Werte und 4.94065645841246544E-324 bis 1.79769313486231570E + 308 für positive Werte. Zahlen mit doppelter Genauigkeit speichern eine Approximation einer reellen Zahl.  
@@ -55,13 +55,13 @@ Speichert signierte IEEE-64-Bit (8 Byte) mit doppelter Genauigkeit Gleitkommazah
   
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Double?displayProperty=nameWithType>-Struktur.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Double?displayProperty=nameWithType>  
- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)  
- [Decimal-Datentyp](../../../visual-basic/language-reference/data-types/decimal-data-type.md)  
- [Single-Datentyp](../../../visual-basic/language-reference/data-types/single-data-type.md)  
- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
- [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Typzeichen](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Double?displayProperty=nameWithType>
+- [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
+- [Decimal-Datentyp](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
+- [Single-Datentyp](../../../visual-basic/language-reference/data-types/single-data-type.md)
+- [Typkonvertierungsfunktionen](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Konvertierung: Zusammenfassung](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Effiziente Verwendung von Datentypen](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [Problembehandlung bei Datentypen](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Typzeichen](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)

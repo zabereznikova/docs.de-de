@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 164b0283864cdeb60ef7b8e19c9d457f80ee4eb9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583923"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696463"
 ---
 # <a name="xname-directive"></a>x:Name-Anweisung
 Identifiziert eindeutig die XAML-definierte Elemente in einem XAML-Namescope. XAML-Namescopes und ihre Eindeutigkeitsmodelle können auf die instanziierten Objekte angewendet werden, Frameworks bieten APIs oder zum Implementieren von Verhaltensweisen, die das XAML erstellte Objektdiagramm zur Laufzeit zugreifen.  
@@ -66,7 +66,7 @@ Identifiziert eindeutig die XAML-definierte Elemente in einem XAML-Namescope. XA
 ## <a name="silverlight-usage-notes"></a>Silverlight-Verwendungshinweise  
  `x:Name` für Silverlight wird separat dokumentiert. Weitere Informationen finden Sie unter [XAML-Namespace (x:)) Sprachfunktionen (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
- [Strukturen in WPF](../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
+- [Strukturen in WPF](../../../docs/framework/wpf/advanced/trees-in-wpf.md)

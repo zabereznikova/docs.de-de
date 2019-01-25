@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: c012eeb7ef7dad8c52b8b9a5f153582710c1fd73
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5384a49461886ba184a0a128467c864b37c0efc9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54667027"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Abfangen von Tablettstifteingaben
 Die <xref:System.Windows.Input.StylusPlugIns> Architektur bietet einen Mechanismus zum Implementieren der Steuerung auf niedriger Ebene über <xref:System.Windows.Input.Stylus> sowie die Erstellung von digitaler Tinte <xref:System.Windows.Ink.Stroke> Objekte. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> -Klasse bietet einen Mechanismus für die Sie benutzerdefiniertes Verhalten implementieren, und klicken Sie auf die vom Tablettstift für eine optimale Leistung eingehenden Datenstrom anzuwenden.  
@@ -70,6 +70,6 @@ Die <xref:System.Windows.Input.StylusPlugIns> Architektur bietet einen Mechanism
 ## <a name="conclusion"></a>Schlussbemerkung  
  Durch Ableiten von Ihren eigenen <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klassen und Einfügen in <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> Auflistungen, Sie können das Verhalten von digitaler Tinte erheblich verbessern. Sie haben Zugriff auf die <xref:System.Windows.Input.StylusPoint> Daten generiert, haben Sie die Möglichkeit zum Anpassen der <xref:System.Windows.Input.Stylus> Eingabe. Da diesen Low-Level-Zugriff auf die <xref:System.Windows.Input.StylusPoint> Daten, Sie können die Freihandeingaben und das Rendering mit optimaler Leistung für Ihre Anwendung implementieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Behandlung von Freihandeingaben](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
- [Zugreifen auf und Bearbeiten von Stifteingabe](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)
+## <a name="see-also"></a>Siehe auch
+- [Erweiterte Behandlung von Freihandeingaben](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Zugreifen auf und Bearbeiten von Stifteingabe](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

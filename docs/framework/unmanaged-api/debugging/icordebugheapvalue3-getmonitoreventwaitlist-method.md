@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a395579892ff2410865a4fcdd19cf20449b82b88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27815cf8cb7fdcd1c01f26391c317d52bbb388ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421071"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628512"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList-Methode
-Stellt eine geordnete Liste von Threads in der Warteschlange auf das Ereignis, das einen Monitorsperre zugeordnet ist.  
+Enthält eine geordnete Liste von Threads, die in die Warteschlange eingereiht werden auf das Ereignis, das eine Sperre für die Überwachung zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,18 +50,18 @@ HRESULT GetMonitorEventWaitList (
 ## <a name="exceptions"></a>Ausnahmen  
   
 ## <a name="remarks"></a>Hinweise  
- Der erste Thread in der Liste ist der erste Thread, der durch den nächsten Aufruf freigegeben wird <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. Der nächste Thread in der Liste wird der folgende Aufruf usw. veröffentlicht.  
+ Der erste Thread in der Liste ist der erste Thread, der durch den nächsten Aufruf von freigegeben wird <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>. Der nächste Thread in der Liste wird auf dem folgenden Aufruf, und So weiter freigegeben.  
   
- Wenn die Liste nicht leer ist, gibt diese Methode S_OK zurück. Wenn die Liste leer ist, gibt die Methode "S_FALSE" zurück. In diesem Fall ist die Enumeration noch gültig sind, obwohl es leer ist.  
+ Wenn die Liste nicht leer ist, gibt diese Methode S_OK zurück. Die Methode gibt S_FALSE zurück, wenn die Liste leer ist, In diesem Fall ist die Enumeration noch gültig ist, auch wenn es leer ist.  
   
- In beiden Fällen ist die Enumerationsschnittstelle nur für die Dauer des aktuellen Status "synchronisiert" verwendet werden kann. Verteilten die Thread-Schnittstellen sind jedoch gültig, bis der Thread beendet wird.  
+ In beiden Fällen kann die Enumerationsschnittstelle nur für die Dauer des aktuellen Status "synchronisiert" verwendet werden. Verteilten des Threads Schnittstellen sind jedoch gültig, bis der Thread beendet wird.  
   
  Wenn `ppThreadEnum` ist kein gültiger Zeiger ist, das Ergebnis nicht definiert ist.  
   
- Wenn ein Fehler auftritt, sodass nicht ermittelt werden kann, die ggf. Threads für den Monitor warten gibt die Methode ein HRESULT, das Fehler weist darauf hin.  
+ Wenn ein Fehler auftritt, sodass nicht bestimmt werden kann, die ggf. Threads für den Monitor, warten gibt die Methode ein HRESULT, der Fehler weist darauf hin.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
@@ -69,6 +69,6 @@ HRESULT GetMonitorEventWaitList (
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

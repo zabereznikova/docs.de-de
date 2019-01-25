@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dda1176c6d547421dab9663379329043b614783e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 52800b204873604d927193e1280f2eb6ccbcce0a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084809"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638365"
 ---
 # <a name="runtime-directive-elements"></a>Elemente der Laufzeitanweisung
 Das Dateiformat der Laufzeitanweisungen (rd.xml) unterstützt die folgenden Laufzeitanweisungselemente. Eine hierarchische Darstellung finden Sie unter [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
@@ -68,5 +68,5 @@ Das Dateiformat der Laufzeitanweisungen (rd.xml) unterstützt die folgenden Lauf
  [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
  Wendet eine Laufzeitrichtlinie auf den Typ an, der durch ein <xref:System.Type>-Argument, das an eine Methode übergeben wird, dargestellt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [„rd.xml“-Konfigurationsdateireferenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+## <a name="see-also"></a>Siehe auch
+- [„rd.xml“-Konfigurationsdateireferenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

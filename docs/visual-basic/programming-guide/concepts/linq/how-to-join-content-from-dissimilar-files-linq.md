@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verknüpfen des Inhalts Unterschiedlicher Dateien (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: a3dbfc6593d838af0285d8dab73ceecf1b0340f0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072045"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54655464"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Vorgehensweise: Verknüpfen des Inhalts Unterschiedlicher Dateien (LINQ) (Visual Basic)
 
@@ -123,13 +123,13 @@ End Class
 
 ## <a name="compiling-the-code"></a>Kompilieren des Codes
 
-Erstellen und Kompilieren eines Projekts, das als Ziel eine der folgenden Optionen verwendet:
+Erstellen und kompilieren Sie ein Projekt, das eine der folgenden Optionen als Ziel verwendet:
 
-- .NET Framework Version 3.5 mit einem Verweis auf "System.Core.dll".
-- .NET Framework Version 4.0 oder höher.
+- .NET Framework-Version 3.5 mit einem Verweis auf „System.Core.dll“.
+- .NET Framework-Version 4.0 oder höher.
 - .NET Core-Version 1.0 oder höher.
   
 ## <a name="see-also"></a>Siehe auch
 
- [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

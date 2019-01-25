@@ -2,15 +2,15 @@
 title: Arbeiten mit globalen Namespaces (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: c1f34b374f956ec0a8b9658742e529d7ccb1b2ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0922c6973baeb3e0ca51d984b332fd7a3e0b13f6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733908"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Arbeiten mit globalen Namespaces (Visual Basic) (LINQ to XML)
-Eine der Schlüsselfunktionen von XML-Literalen in Visual Basic ist die Fähigkeit, XML-Namespaces zu deklarieren der `Imports` Anweisung. Mithilfe dieser Funktionen können Sie einen XML-Namespace, der einen Präfix verwendet, oder einen XML-Standardnamespace deklarieren.  
+Eine der Schlüsselfunktionen von XML-Literale in Visual Basic ist die Möglichkeit zum Deklarieren von XML-Namespaces mithilfe der `Imports` Anweisung. Mithilfe dieser Funktionen können Sie einen XML-Namespace, der einen Präfix verwendet, oder einen XML-Standardnamespace deklarieren.  
   
  Diese Möglichkeit erweist sich in zwei Situationen als hilfreich: Zum einen werden in XML-Literalen deklarierte Namespaces nicht in eingebettete Ausdrücke übertragen. Durch das Deklarieren globaler Namespaces verringert sich der Arbeitsaufwand, der erforderlich ist, wenn Sie eingebettete Ausdrücke mit Namespaces verwenden. Zum anderen müssen Sie globale Namespaces deklarieren, um Namespaces mit XML-Eigenschaften zu verwenden.  
   
@@ -197,5 +197,5 @@ End Module
 http://www.adventure-works.com  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Siehe auch
+- [Arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

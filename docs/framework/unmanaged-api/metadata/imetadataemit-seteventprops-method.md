@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42dc78ff3c58b67801cd99512781d8c8509dd272
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab479aab56b429c104a44b1fae192bc7f20a389d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447339"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54656920"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps-Methode
-Legt fest oder aktualisiert die angegebene Funktion eines Ereignisses definiert, die durch einen vorherigen Aufruf von [DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Legt fest oder aktualisiert die angegebene Funktion eines Ereignisses definiert, die von einem vorherigen Aufruf von [IMetaDataEmit:: DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,13 +49,13 @@ HRESULT SetEventProps (
  [in] Ereignisflags. Dies ist eine Bitmaske der `CorEventAttr` Werte.  
   
  `tkEventType`  
- [in] Das Token für die Ereignisklasse. Dies liegt entweder an einem `mdTypeDef` oder ein `mdTypeRef` token.  
+ [in] Das Token für Event-Klasse. Dies ist entweder ein `mdTypeDef` oder `mdTypeRef` token.  
   
  `mdAddOn`  
- [in] Die Methode, die zum Abonnieren der Ereignis- oder Null.  
+ [in] Die Methode, die zum Abonnieren das Ereignis oder Null.  
   
  `mdRemoveOn`  
- [in] Die Methode verwendet, um das Ereignis bzw. Null Kündigen des Abonnements.  
+ [in] Die Methode verwendet, um das Ereignis oder Null zu kündigen.  
   
  `mdFire`  
  [in] Die Methode, die zum Auslösen des Ereignisses (durch eine abgeleitete Klasse) verwendet.  
@@ -64,14 +64,14 @@ HRESULT SetEventProps (
  [in] Ein Array von Token für andere Methoden, die dem Ereignis zugeordnet werden soll. Das letzte Element des Arrays muss `mdMethodDefNil`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** Cor.h  
   
- **Bibliothek:** als Ressource in MSCorEE.dll verwendet  
+ **Bibliothek:** Als Ressource in MSCorEE.dll verwendet  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [IMetaDataEmit-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

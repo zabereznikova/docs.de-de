@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement'
+title: 'Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: e61a635d59bd9adfb73a0293df776187cdbca499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 134cda4aa0042323e39966d60a7d51fda54cb954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527101"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711550"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Gewusst wie: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
- Ein wesentlicher Bestandteil der <xref:System.Windows.Forms.ToolBar> -Steuerelement ist die Schaltflächen, die Sie hinzufügen. Diese können verwendet werden, um den einfachen Zugriff auf Befehle im Menü aus, oder sie können alternativ abgelegt werden, in einem anderen Bereich der Benutzeroberfläche der Anwendung, um Befehle für Benutzer verfügbar zu machen, die nicht in der Menüstruktur verfügbar sind.  
+ Ein wesentlicher Bestandteil der <xref:System.Windows.Forms.ToolBar> Steuerelement ist, die Sie, damit hinzufügen Schaltflächen. Diese können verwendet werden, um den einfachen Zugriff auf Befehle im Menü, oder sie können alternativ abgelegt werden, in einem anderen Bereich der Benutzeroberfläche der Anwendung, um Befehle aus, um Ihre Benutzer verfügbar zu machen, die nicht in der Menüstruktur verfügbar sind.  
   
  Die folgenden Beispielen wird angenommen, dass eine <xref:System.Windows.Forms.ToolBar> -Steuerelement zu einem Windows-Formular hinzugefügt wurde (`Form1`).  
   
-### <a name="to-add-buttons-programmatically"></a>So fügen Sie Schaltflächen programmgesteuert hinzu  
+### <a name="to-add-buttons-programmatically"></a>Programmgesteuertes Hinzufügen von Schaltflächen  
   
-1.  Erstellen Sie Symbolleisten-Schaltflächen in einer Prozedur können durch Hinzufügen der <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Auflistung.  
+1.  Erstellen Sie in einer Prozedur Symbolleistenschaltflächen durch Hinzufügen der <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Auflistung.  
   
-2.  Geben Sie die eigenschafteneinstellungen für eine einzelne Schaltfläche, indem Sie die Schaltfläche Index über die <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft.  
+2.  Geben Sie die eigenschafteneinstellungen für eine einzelne Schaltfläche durch Übergeben der Schaltfläche Index über die <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft.  
   
      Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.ToolBar> Steuerelement bereits hinzugefügt.  
   
     > [!NOTE]
-    >  Die <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Auflistung ist nullbasiert, damit der Code entsprechend fortgesetzt werden soll.  
+    >  Die <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> Auflistung ist nullbasiert, sodass Code entsprechend fortgesetzt werden soll.  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -148,9 +148,9 @@ ms.locfileid: "33527101"
        }  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Forms.ToolBar>  
- [Gewusst wie: Definieren eines Symbols für eine Symbolleistenschaltfläche](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [Gewusst wie: Auslösen von Menüereignissen für Symbolleistenschaltflächen](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [Übersicht über das ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Forms.ToolBar>
+- [Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
+- [Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Übersicht über das ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
+- [ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)

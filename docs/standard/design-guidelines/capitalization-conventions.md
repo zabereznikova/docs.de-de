@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
-ms.openlocfilehash: 159635d6e3ce414c8fd45ff7f02a75fd7cbdfe7e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54670172"
 ---
 # <a name="capitalization-conventions"></a>Konventionen für die Groß-/Kleinschreibung
 Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwendung von Fall, wenn stellen-IDs für Typen, Member und Parameter, die leicht lesbar konsistent angewendet.  
@@ -106,5 +106,5 @@ Die Richtlinien in diesem Kapitel Layout, eine einfache Methode für die Verwend
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)  
+- [Frameworkentwurfsrichtlinien](../../../docs/standard/design-guidelines/index.md)
 - [Richtlinien für die Benennung](../../../docs/standard/design-guidelines/naming-guidelines.md)

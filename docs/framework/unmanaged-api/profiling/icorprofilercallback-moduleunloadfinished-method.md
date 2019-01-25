@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a4637ac7466a575c94f8244168576c4a5542689
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7759b0815946301932ca60edaf731313d04a245
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452087"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743464"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>ICorProfilerCallback::ModuleUnloadFinished-Methode
 Benachrichtigt den Profiler, dass ein Modul entladen wurde.  
@@ -37,18 +37,18 @@ HRESULT ModuleUnloadFinished(
   
 #### <a name="parameters"></a>Parameter  
  `moduleId`  
- [in] Die ID des Moduls, der entladen wurde.  
+ [in] Die ID des Moduls, das entladen wurde.  
   
  `hrStatus`  
- [in] Ein HRESULT, das angibt, ob das Modul erfolgreich entladen wurde.  
+ [in] Ein HRESULT, der angibt, ob das Modul erfolgreich entladen wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert der `moduleId` gilt nicht für eine Anforderung Informationen nach der [ICorProfilerCallback:: ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) -Methode zurückkehrt.  
+ Der Wert des `moduleId` gilt nicht für eine informationsanforderung nach der [ICorProfilerCallback:: ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md) Methodenrückgabe.  
   
- Einige Teile der Entladen der Klasse möglicherweise weiterhin nach dem `ModuleUnloadFinished` Rückruf. Fehler-HRESULT in `hrStatus` gibt einen Fehler. Allerdings ein Erfolgs-HRESULT in `hrStatus` bedeutet nur, dass der erste Teil des Moduls entladen erfolgreich war.  
+ Das Entladen der Klasse möglicherweise weiterhin nach den `ModuleUnloadFinished` Rückruf. Fehler-HRESULT in `hrStatus` gibt einen Fehler. Allerdings einen HRESULT-Erfolg in `hrStatus` gibt nur an, dass der erste Teil des Entladevorgangs für das Modul erfolgreich war.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
   
@@ -56,5 +56,5 @@ HRESULT ModuleUnloadFinished(
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>Siehe auch
+- [ICorProfilerCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

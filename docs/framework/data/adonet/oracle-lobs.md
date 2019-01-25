@@ -2,12 +2,12 @@
 title: Oracle-LOBs
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 39ff8f1c21fc1161f4f3726548713d384c7d7400
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 70928cdd1ff82e54fd8e45563bb14df6340e4a95
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747998"
 ---
 # <a name="oracle-lobs"></a>Oracle-LOBs
 Die .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleLob> -Klasse, die verwendet wird, um das Arbeiten mit Oracle- **LOB** -Datentypen.  
@@ -247,6 +247,6 @@ cmd.ExecuteNonQuery();
 tx.Commit();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Oracle und ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>Siehe auch
+- [Oracle und ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
+- [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

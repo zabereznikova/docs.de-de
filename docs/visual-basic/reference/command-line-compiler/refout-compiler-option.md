@@ -1,5 +1,5 @@
 ---
-title: -Refout (Visual Basic)
+title: -refout (Visual Basic)
 ms.date: 03/16/2018
 f1_keywords:
 - /refout
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: 8a8068c467f9066af3153434187749fa80d254ca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3d7f5f9065ba53bd037d7307f62c9acad913b8e9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048397"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638703"
 ---
-# <a name="-refout-visual-basic"></a>-Refout (Visual Basic)
+# <a name="-refout-visual-basic"></a>-refout (Visual Basic)
 
 Die Option **-refout** gibt einen Dateipfad an, an den die Verweisassembly ausgegeben werden soll.
 
@@ -41,7 +41,7 @@ Verweisassemblys enthalten ein auf Assemblyebene [ReferenceAssembly](xref:System
 Die Optionen `-refout` und [`-refonly`](refonly-compiler-option.md) schließen sich gegenseitig aus.
 
 ## <a name="see-also"></a>Siehe auch
-[-refonly](refonly-compiler-option.md)   
-[Visual Basic-Befehlszeilencompiler](index.md)  
-[Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)  
+- [/refonly](refonly-compiler-option.md)
+- [Visual Basic-Befehlszeilencompiler](index.md)
+- [Beispiele für Kompilierungsbefehlszeilen](sample-compilation-command-lines.md)
 

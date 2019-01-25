@@ -16,11 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3fd130759ab11b54b597d5c099c33dab93070ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e231c4fa51e6e66cba6227233cf73dd1cd4ebbe
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54733921"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly-Funktion
 Ruft einen Wert, der angibt, ob die angegebene Assembly verwaltet wird.  
@@ -38,13 +39,13 @@ HRESULT IsFrameworkAssembly (
   
 #### <a name="parameters"></a>Parameter  
  `pwzAssemblyReference`  
- [in] Der Name der Assembly zu überprüfen.  
+ [in] Der Name des zu überprüfenden Assembly.  
   
  `pbIsFrameworkAssembly`  
  [out] Ein boolescher Wert, der angibt, ob die Assembly verwaltet wird.  
   
  `pwzFrameworkAssemblyIdentity`  
- [in] Eine uncanonicalized Zeichenfolge, die eindeutige Identität der Assembly enthält.  
+ [in] Eine uncanonicalized-Zeichenfolge, die eindeutige Identität der Assembly enthält.  
   
  `pccSize`  
  [in] Die Größe des `pwzFrameworkAssemblyIdentity`.  
@@ -52,12 +53,12 @@ HRESULT IsFrameworkAssembly (
 ## <a name="remarks"></a>Hinweise  
  Die `pwzAssemblyReference` Parameter ist ein Zeiger auf eine Zeichenfolge, die den Namen einer Assembly enthält.  
   
- Wenn diese Assembly Bestandteil von .NET Framework ist die `pbIsFrameworkAssembly` Parameter enthält einen booleschen Wert des `true`.  
+ Wenn diese Assembly Bestandteil von .NET Framework ist die `pbIsFrameworkAssembly` Parameter enthält einen booleschen Wert der `true`.  
   
- Wenn der benannte Assembly kein Bestandteil von .NET Framework ist oder wenn die `pwzAssemblyReference` Parameter wird nicht den Namen einer Assembly `pbIsFrameworkAssembly` enthält einen booleschen Wert des `false`.  
+ Wenn die benannte Assembly nicht als Teil von .NET Framework ist oder wenn die `pwzAssemblyReference` Parameter gibt nicht an eine Assembly `pbIsFrameworkAssembly` enthält einen booleschen Wert der `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>Siehe auch
+- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
