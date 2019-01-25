@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8ff07c483ef1bcbf9d5141b7180cea08454ebef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e7f0ca805b6f2085498977720cb4cb78dac9afae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417098"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652578"
 ---
-# <a name="icordebugvaluebreakpointgetvalue-method"></a><span data-ttu-id="3f16d-102">ICorDebugValueBreakpoint::GetValue-Methode</span><span class="sxs-lookup"><span data-stu-id="3f16d-102">ICorDebugValueBreakpoint::GetValue Method</span></span>
-<span data-ttu-id="3f16d-103">Ruft einen Schnittstellenzeiger auf ein "ICorDebugValue"-Objekt, das den Wert des Objekts darstellt, auf denen der Breakpoint festgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="3f16d-103">Gets an interface pointer to an "ICorDebugValue" object that represents the value of the object on which the breakpoint is set.</span></span>  
+# <a name="icordebugvaluebreakpointgetvalue-method"></a><span data-ttu-id="ba2c0-102">ICorDebugValueBreakpoint::GetValue-Methode</span><span class="sxs-lookup"><span data-stu-id="ba2c0-102">ICorDebugValueBreakpoint::GetValue Method</span></span>
+<span data-ttu-id="ba2c0-103">Ruft einen Schnittstellenzeiger auf ein "ICorDebugValue"-Objekt, das den Wert des Objekts darstellt, auf denen der Haltepunkt gesetzt ist.</span><span class="sxs-lookup"><span data-stu-id="ba2c0-103">Gets an interface pointer to an "ICorDebugValue" object that represents the value of the object on which the breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3f16d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3f16d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba2c0-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ba2c0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetValue (  
@@ -35,18 +35,18 @@ HRESULT GetValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3f16d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="3f16d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="ba2c0-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ba2c0-105">Parameters</span></span>  
  `ppValue`  
- <span data-ttu-id="3f16d-106">[out] Ein Zeiger auf die Adresse des ein `ICorDebugValue` Objekt.</span><span class="sxs-lookup"><span data-stu-id="3f16d-106">[out] A pointer to the address of an `ICorDebugValue` object.</span></span>  
+ <span data-ttu-id="ba2c0-106">[out] Ein Zeiger auf die Adresse einer `ICorDebugValue` Objekt.</span><span class="sxs-lookup"><span data-stu-id="ba2c0-106">[out] A pointer to the address of an `ICorDebugValue` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3f16d-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3f16d-107">Requirements</span></span>  
- <span data-ttu-id="3f16d-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f16d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba2c0-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ba2c0-107">Requirements</span></span>  
+ <span data-ttu-id="ba2c0-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ba2c0-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3f16d-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3f16d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ba2c0-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ba2c0-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3f16d-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f16d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ba2c0-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ba2c0-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3f16d-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f16d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ba2c0-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba2c0-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f16d-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3f16d-112">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="ba2c0-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ba2c0-112">See also</span></span>
+
