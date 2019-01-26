@@ -2,12 +2,12 @@
 title: Datenbankzugriffsaktivitäten
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: efcdd25ee3e6b86d87d551623b166eab4fa76845
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850399"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066089"
 ---
 # <a name="database-access-activities"></a>Datenbankzugriffsaktivitäten
 Mit Datenbankzugriffsaktivitäten können Sie auf eine Datenbank innerhalb eines Workflows zugreifen. Diese Aktivitäten können Datenbanken abrufen und ändern Sie Informationen sowie über [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) Zugriff auf die Datenbank.  
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
 
  Die auszuführende Abfrage wird in der `Sql`-Eigenschaft konfiguriert, und die Parameter werden über die `Parameters`-Auflistung übergeben.
 
- Nach dem `DbQueryScalar` wird ausgeführt, wird der Skalarwert im zurückgegeben der `Result``out` Argument (des Typs `TResult`, d. h. in der Basisklasse definierte <xref:System.Activities.AsyncCodeActivity%601>).
+ Nach dem `DbQueryScalar` wird ausgeführt, wird der Skalarwert im zurückgegeben der `Result out` Argument (des Typs `TResult`, d. h. in der Basisklasse definierte <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
@@ -200,7 +200,7 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 
  Die auszuführende Abfrage wird in der `Sql`-Eigenschaft konfiguriert, und die Parameter werden über die `Parameters`-Auflistung übergeben.
 
- Nach der `DbQueryDataSet` ausgeführt wird die `DataSet` wird zurückgegeben, der `Result``out` Argument (des Typs `TResult`, d. h. in der Basisklasse definierte <xref:System.Activities.AsyncCodeActivity%601>).
+ Nach der `DbQueryDataSet` ausgeführt wird die `DataSet` wird zurückgegeben, der `Result out` Argument (des Typs `TResult`, d. h. in der Basisklasse definierte <xref:System.Activities.AsyncCodeActivity%601>).
 
 ```
 public class DbQueryDataSet : AsyncCodeActivity<DataSet>
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>Konfigurieren von Verbindungsinformationen
  Für alle Datenbankaktivitäten gelten die gleichen Konfigurationsparameter. Für die Konfiguration gibt es zwei Möglichkeiten:
 
--   `ConnectionString + InvariantName`: Legen Sie den invarianten Namen und die Verbindungszeichenfolge für den ADO.NET-Anbieter fest.
+-   `ConnectionString + InvariantName`: Legen Sie den ADO.NET-Anbieter invarianten Namen und die Verbindungszeichenfolge-Zeichenfolge.
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`: Geben Sie den Namen des Abschnitts in der Konfigurationsdatei an, der die Verbindungsinformationen enthält.
+-   `ConfigName`: Legen Sie den Namen des Konfigurationsabschnitts, der die Verbindungsinformationen enthält.
 
     ```xml
     <connectionStrings>

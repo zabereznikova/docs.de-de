@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 40ea9b6d8ad88683ef0b3d75907fe645e9f2e3e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74e373610a78cbed5d31ff408e3c4ef8f11216f6
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679070"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066241"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -43,7 +43,7 @@ ms.locfileid: "54679070"
   
  Benutzeroberflächenautomatisierungs-Clients verwenden Methoden und Eigenschaften von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Steuerelement-Musterklassen, um Informationen über die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]abzurufen oder Änderungen an der [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]vorzunehmen. Diese Steuerelement-Musterklassen befinden sich im <xref:System.Windows.Automation> -Namespace (z. B. <xref:System.Windows.Automation.InvokePattern> und <xref:System.Windows.Automation.SelectionPattern>).  
   
- Clients verwenden <xref:System.Windows.Automation.AutomationElement> -Methoden (etwa <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> oder <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) oder die [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] -Accessoren, um auf die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften für ein Muster zuzugreifen. Jede Steuerelementmusterklasse hat einen Feldmember (z. B. <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType>'' oder <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>), das das Steuerelementmuster kennzeichnet und als Parameter übergeben werden <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> oder <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zum Abrufen dieses Musters für eine <xref:System.Windows.Automation.AutomationElement>.  
+ Clients verwenden <xref:System.Windows.Automation.AutomationElement> -Methoden (etwa <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> oder <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) oder die [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] -Accessoren, um auf die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften für ein Muster zuzugreifen. Jede Steuerelementmusterklasse hat einen Feldmember (z. B. <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> oder <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>), das das Steuerelementmuster kennzeichnet und als Parameter übergeben werden <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> oder <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zum Abrufen dieses Musters für eine <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>Dynamische Steuerelementmuster  

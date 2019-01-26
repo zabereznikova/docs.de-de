@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5a6d69b121827c3ee4f55714dcf3d4628706ce2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98b83abce36b6e8a66ec3580af109b66b7ae09d8
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737896"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065829"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Allgemeine Datentypen (Referenz zur nicht verwalteten API)
 In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs für .NET Framework verwenden und die über `typedef`-Argumente aus C/C++ definiert sind. Diese Datentypen sind meist Aliase für primitive Datentypen aus C/C++. Die Werte dieser Datentypen sind meist nicht transparent. Das bedeutet, sie werden von einer bestimmten Funktion oder Methode zurückgegeben, sodass sie ohne Änderungen an andere Funktionen oder Methoden übergeben werden können.  
@@ -18,7 +18,8 @@ In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs f�
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|Der Bezeichner einer Anwendungsdomäne.|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|Der Bezeichner einer Assembly.|  
-|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Der Bezeichner einer verwalteten Klasse.|
+|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|Der Bezeichner einer verwalteten Klasse.|  
+|CLRDATA_ADDRESS|`typedef ULONG64 CLRDATA_ADDRESS;`|clrdata.h|Eine 64-Bit-Speicheradresse.|
 |CLRDATA_ENUM|`typedef ULONG64 CLRDATA_ADDRESS;`|Nicht verfügbar|Eine 64-Bit-Speicheradresse.|
 |CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|Die Verbindungs-ID eines Threads ist mit einer Instanz von Microsoft SQL Server verbunden.|  
 |ContextID|`typedef UINT_PTR ContextID;`|corprof.h|Der Bezeichner des Kontexts, der mit einem bestimmten verwalteten Thread verknüpft ist.|  
@@ -29,6 +30,7 @@ In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs f�
 |CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|Der Wert eines CPU-Registers.|
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|Der Bezeichner einer Funktion oder Methode.|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|Ein Garbage Collection-Handle.|  
+|mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|Ein Methodentoken Definition.|
 |mdToken|`typedef UINT32 mdToken;`|corprof.h|Ein Metadatentoken (eine Zeile in einer Metadatentabelle).|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|Der Bezeichner eines Assemblymoduls.|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|Der Bezeichner eines Objekts.|  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 092f1acf6e6a8468890a371836979db4e0692d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbe73ed5574261f1aab6134a15a5aeb5fbb8596c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669314"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065855"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Vorgehensweise: Rufen Sie eine Windows-Funktion, die vorzeichenlose Typen (Visual Basic) akzeptiert
 Wenn Sie eine Klasse, Modul oder der Struktur, die Mitglieder von Ganzzahltypen ohne Vorzeichen enthält verwenden, können Sie diese Mitglieder mit Visual Basic zugreifen.  
@@ -32,7 +32,7 @@ Wenn Sie eine Klasse, Modul oder der Struktur, die Mitglieder von Ganzzahltypen 
   
 3.  Lesen Sie die Dokumentation für die Windows-Funktion, die Sie finden die Namen und Werte der Konstanten verwendeten aufrufen. Viele davon werden in der WinUser.h-Datei definiert.  
   
-4.  Deklarieren Sie die erforderlichen Konstanten in Ihrem Code. Viele Windows-Konstanten sind 32-Bit-Werten ohne Vorzeichen, deklarieren Sie diese `As``UInteger`.  
+4.  Deklarieren Sie die erforderlichen Konstanten in Ihrem Code. Viele Windows-Konstanten sind 32-Bit-Werten ohne Vorzeichen, deklarieren Sie diese `As UInteger`.  
   
 5.  Aufrufen der Funktion auf die übliche Weise. Im folgenden Beispiel wird die Windows-Funktion `MessageBox`, der eine ganze Zahl ohne Vorzeichen-Argument akzeptiert.  
   

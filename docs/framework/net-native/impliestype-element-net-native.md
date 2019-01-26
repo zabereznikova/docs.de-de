@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe590022f1354b3a41c709e4fed30f89e865fa0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 867a11eae14c3e7b2fb09acac5849698119e72c7
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548049"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065972"
 ---
 # <a name="ltimpliestypegt-element-net-native"></a>&lt;ImpliesType&gt; Element (.NET Native)
 Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthaltenden Typ oder die enthaltende Methode angewendet wurde.  
@@ -99,7 +99,7 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
 </Type>  
 ```  
   
- Das `<ImpliesType>`-Element kann auch innerhalb eines `<Method>`-Element angezeigt werden, da in einigen Fällen das Instanziieren einer generischen Methode die Reflektion einer Typinstanziierung impliziert. Stellen Sie sich zum Beispiel eine generische Methode `IEnumerable<T> MakeEnumerable<T>(string``spelling``, T``defaultValue``)` vor, auf die eine angegebene Bibliothek zusammen mit den zugehörigen <xref:System.Collections.Generic.List%601>- und <xref:System.Array>-Typen dynamisch zugreift. Dies kann folgendermaßen ausgedrückt werden:  
+ Das `<ImpliesType>`-Element kann auch innerhalb eines `<Method>`-Element angezeigt werden, da in einigen Fällen das Instanziieren einer generischen Methode die Reflektion einer Typinstanziierung impliziert. Angenommen, eine generische Methode `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` , die eine angegebene Bibliothek wird dynamisch zugreift, zusammen mit den zugehörigen <xref:System.Collections.Generic.List%601> und <xref:System.Array> Typen. Dies kann folgendermaßen ausgedrückt werden:  
   
 ```xml  
 <Type Name="MyType">  

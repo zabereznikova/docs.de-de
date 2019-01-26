@@ -2,12 +2,12 @@
 title: Segmentierungskanal
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 3e98e4be3c5ad9d6d18990feeae86369775972b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db14ceb956202bee06ff5e6b37b21fb837c6f1d9
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624238"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066414"
 ---
 # <a name="chunking-channel"></a>Segmentierungskanal
 Beim Senden großer Nachrichten mit Windows Communication Foundation (WCF) ist es oft wünschenswert, um die Menge an Arbeitsspeicher verwendet, um die Pufferung dieser Nachrichten einzuschränken. Eine mögliche Lösung besteht im Streamen des Nachrichtentexts (vorausgesetzt, der größte Teil der Daten befindet sich dort). Einige Protokolle erfordern jedoch die Pufferung der Nachricht als Ganzes. Zuverlässiges Messaging und Sicherheit sind zwei solche Beispiele. Eine weitere mögliche Lösung besteht darin, die große Nachricht in kleinere Nachrichten zu teilen, so genannte Segmente, diese Segmente jeweils einzeln zu senden und dann auf der Empfängerseite die große Nachricht wiederherzustellen. Die Anwendung selbst könnte diese Segmentierung und Desegmentierung vornehmen, oder es könnte alternativ ein benutzerdefinierter Kanal dafür verwendet werden. Das Beispiel für den Segmentierungskanal zeigt, wie mit einem benutzerdefinierten Protokollkanal oder Mehrschicht-Kanal das Segmentieren und Desegmentieren beliebig großer Nachrichten vorgenommen werden kann.  
@@ -271,7 +271,7 @@ interface ITestService
  `OnOpen` ruft `innerChannel.Open` auf, um den inneren Kanal zu öffnen.  
   
 ### <a name="onclose"></a>OnClose  
- `OnClose` legt zuerst `stopReceive` auf `true` fest, um zu signalisieren, dass der ausstehende`ReceiveChunkLoop` beendet werden soll. Er wartet dann für die `receiveStopped``ManualResetEvent`, festgelegt wird, wenn `ReceiveChunkLoop` beendet. Angenommen, `ReceiveChunkLoop` wird innerhalb des angegebenen Timeouts beendet, dann ruft `OnClose` mit dem restlichen Timeout `innerChannel.Close` auf.  
+ `OnClose` legt zuerst `stopReceive` auf `true` fest, um zu signalisieren, dass der ausstehende`ReceiveChunkLoop` beendet werden soll. Es wartet dann auf den `receiveStopped`<xref:System.Threading.ManualResetEvent>, der festgelegt wird, wenn `ReceiveChunkLoop` beendet wird. Angenommen, `ReceiveChunkLoop` wird innerhalb des angegebenen Timeouts beendet, dann ruft `OnClose` mit dem restlichen Timeout `innerChannel.Close` auf.  
   
 ### <a name="onabort"></a>OnAbort  
  `OnAbort` ruft `innerChannel.Abort` auf, um den inneren Kanal abzubrechen. Wenn es einen ausstehenden `ReceiveChunkLoop` gibt, erhält diese eine Ausnahme vom ausstehenden `innerChannel.Receive`-Aufruf.  

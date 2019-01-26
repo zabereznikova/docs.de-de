@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b2bab09d9ac9f14ae9d1bf78254c9c6a376677
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ad7c9aba84a769cb4ea16a2d288b1a9b4f17ca5
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691475"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066011"
 ---
 # <a name="securing-method-access"></a>Sichern des Methodenzugriffs
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -234,7 +234,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Überschreibungen von "virtual internal" oder "Overloads Overridable Friend"  
   
 > [!NOTE]
->  In diesem Abschnitt zeigt eine Warnung vor einem Sicherheitsproblem beim Deklarieren einer Methode wie `virtual` und `internal` (`Overloads``Overridable``Friend` in Visual Basic). Diese Warnung gilt nur für die .NET Framework-Versionen 1.0 und 1.1, sie gelten nicht für höhere Versionen.  
+>  In diesem Abschnitt zeigt eine Warnung vor einem Sicherheitsproblem beim Deklarieren einer Methode wie `virtual` und `internal` (`Overloads` `Overridable` `Friend` in Visual Basic). Diese Warnung gilt nur für die .NET Framework-Versionen 1.0 und 1.1, sie gelten nicht für höhere Versionen.  
   
  In der .NET Framework-Versionen 1.0 und 1.1 muss Sie ein Merkmal des Typsystemzugriffs Typsystemzugriffs beachten bei der Bestätigung, dass der Code für andere Assemblys nicht verfügbar ist. Eine Methode, die deklariert wird **virtuellen** und **interne** (**Overloads Overridable Friend** in Visual Basic) können Vtable-Eintrag der übergeordneten Klasse überschreiben und kann nur verwendet werden in der gleichen Assembly, da diese intern verfügbar ist. Allerdings wird der Zugriff für die Außerkraftsetzung durch bestimmt die **virtuellen** -Schlüsselwort, und dies kann aus einer anderen Assembly überschrieben werden, solange dieser Code Zugriff auf die Klasse selbst hat. Wenn die Möglichkeit der Außerkraftsetzung ein Problem darstellt, verwenden Sie die deklarative Sicherheit korrigieren oder Entfernen der **virtuellen** Schlüsselwort, wenn es nicht unbedingt erforderlich ist.  
   

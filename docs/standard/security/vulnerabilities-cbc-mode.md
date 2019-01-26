@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie erkennen und Minimieren von Sicherheitsrisike
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123643"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066174"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Zeitliche Steuerung Sicherheitsrisiken CBC-Modus symmetrische Entschlüsselung mithilfe von Abständen
 
@@ -29,7 +29,7 @@ Blockbasierte Verschlüsselungen haben eine andere Eigenschaft mit dem Namen des
 
 Ein Angreifer kann eine Auffüllung Oracle, in Kombination mit CBC-Daten Strukturierung verwenden, um etwas geänderten Nachrichten zu senden, auf den Code, der die Oracle verfügbar macht und Daten zu senden, bis die Oracle er darüber informiert wird die Daten korrekt sind. Aus dieser Antwort kann der Angreifer die Nachricht byteweise entschlüsseln.
 
-Moderne Computernetzwerke sind solche qualitativ hochwertige, dass ein Angreifer sehr klein (weniger als 0,1 ms) die Unterschiede bei der Ausführung auf Remotesystemen Zeit erkennen kann. Anwendungen, die, dass ein erfolgreicher Entschlüsselung kann nur passieren, wenn die Daten manipuliert wurde nicht angenommen werden, möglicherweise anfällig für Angriffe, Tools, die entwickelt wurden, um Unterschiede in der erfolgreiche und fehlgeschlagene Entschlüsselung zu beobachten. Während dieser Unterschied für die zeitliche Steuerung in einigen Sprachen und Bibliotheken wichtiger als andere sein mag, ist es nun davon ausgegangen, dass dies ist eine praktische Bedrohung für alle Sprachen und Bibliotheken, wenn die Anwendung für die Reaktion auf Fehler berücksichtigt wird.
+Moderne Computernetzwerke sind solche qualitativ hochwertige, dass ein Angreifer sehr klein (weniger als 0,1 ms) die Unterschiede bei der Ausführung auf Remotesystemen Zeit erkennen kann. Anwendungen, die, dass ein erfolgreicher Entschlüsselung kann nur passieren, wenn die Daten manipuliert wurde nicht angenommen werden, möglicherweise anfällig für Angriffe, Tools, die entwickelt wurden, um Unterschiede in der erfolgreiche und fehlgeschlagene Entschlüsselung zu beobachten. Während dieser Unterschied für die zeitliche Steuerung in einigen Sprachen und Bibliotheken wichtiger als andere sein mag, ist es nun davon ausgegangen, dass dies ist eine praktische Bedrohung für alle Sprachen und Bibliotheken, wenn die Anwendung für die Reaktion auf Fehler berücksichtigt wird.
 
 Dieser Angriff basiert auf der Fähigkeit, ändern die verschlüsselten Daten und testen das Ergebnis mit der Oracle. Die einzige Möglichkeit, vollständig der Angriff zu entschärfen ist zum Erkennen von Änderungen auf die verschlüsselten Daten und zur Ausführung von Aktionen auf verweigern. Die standardmäßige Möglichkeit hierzu ist eine Signatur für die Daten zu erstellen und dieser Signatur zu überprüfen, bevor Vorgänge ausgeführt werden. Die Signatur muss überprüfbar sein, von der Angreifer kann nicht erstellt werden, andernfalls sie ändern die verschlüsselten Daten würden dann eine neue Signatur, die auf Grundlage der geänderten Daten zu berechnen. Eine häufige Art der entsprechenden Signatur wird als einen schlüsselgebundenen Hash Nachrichtenauthentifizierungscode (HMAC) bezeichnet. Ein HMAC, der verwendet wird, abweicht eine Prüfsumme, einen geheimen Schlüssel, bekannte nur für die Person, die den HMAC erzeugt und an die Person, die Überprüfung dauert. Sie können nicht ohne den Besitz des Schlüssels einen richtigen HMAC erzeugen. Wenn Sie Ihre Daten erhalten, Sie die verschlüsselten Daten, die HMAC, der den geheimen Schlüssel unabhängig zu berechnen, Sie den Absender Freigabe ein, und Vergleichen der HMAC, die sie mit der Sie gesendet berechnet. Dieser Vergleich muss ein konstanter Zeit, die andernfalls Sie hinzugefügt haben eine andere erkennbare Oracle, sodass eine andere Art von Angriff.
 
@@ -100,7 +100,7 @@ Anwendungen, die nicht ihre messaging-Format zu ändern, aber nicht authentifizi
 
 ## <a name="finding-vulnerable-code---native-applications"></a>Suchen Sie nach anfälligen Codes - systemeigene Anwendungen
 
-Für Programme, die für die Windows-Kryptografie erstellt: Next Generation (CNG)-Bibliothek:
+Für Programme, die für die Windows-Kryptografie erstellt werden: Next Generation (CNG)-Bibliothek:
 
 - Der Entschlüsselung Aufruf [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt)unter Angabe der `BCRYPT_BLOCK_PADDING` Flag.
 - Das Schlüsselhandle wurde durch den Aufruf initialisiert ["BCryptSetProperty"](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) mit [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) festgelegt `BCRYPT_CHAIN_MODE_CBC`.
@@ -109,7 +109,7 @@ Für Programme, die für die Windows-Kryptografie erstellt: Next Generation (CNG
 Für Programme, die für die älteren Windows Kryptografie-API erstellt werden:
 
 - Der Entschlüsselung Aufruf [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) mit `Final=TRUE`.
-- Das Schlüsselhandle wurde durch den Aufruf initialisiert [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) mit [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) festgelegt `CRYPT_MODE_CBC`.
+- Das Schlüsselhandle wurde durch den Aufruf initialisiert [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) mit [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) festgelegt `CRYPT_MODE_CBC`.
   - Da `CRYPT_MODE_CBC` ist die Standardeinstellung. betroffene Code möglicherweise keine Werte für zugewiesen `KP_MODE`.
 
 ## <a name="finding-vulnerable-code---managed-applications"></a>Suchen nach anfälligen Codes - verwalteten Anwendungen

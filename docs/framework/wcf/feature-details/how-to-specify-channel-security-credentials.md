@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Geben Sie Anmeldeinformationen für Kanalsicherheit'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: b24178b9810d9ab4cde3190ab372a2c342823ca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495200"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066195"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Vorgehensweise: Geben Sie Anmeldeinformationen für Kanalsicherheit
 Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendungen zum Aufrufen von WCF-Diensten. Die meisten WCF-Dienste erfordern den Client Anmeldeinformationen für Authentifizierung und Autorisierung angeben. Beim Aufrufen eines WCF-Diensts aus einem WCF-Client können Sie diese Anmeldeinformationen in verwaltetem Code oder in einer Anwendungskonfigurationsdatei angeben. Beim Aufrufen eines WCF-Diensts aus einer COM-Anwendung können Sie die <xref:System.ServiceModel.ComIntegration.IChannelCredentials> Schnittstelle, um die Anmeldeinformationen angeben. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  
@@ -23,9 +23,9 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendu
   
 2.  Öffnen Sie das Nachrichtensicherheitsprojekt.  
   
-3.  Hinzufügen `[ServiceBehavior(Namespace=``http://Microsoft.ServiceModel.Samples``)]` auf die `ICalculator` Schnittstellendefinition.  
+3.  Hinzufügen `[ServiceBehavior(Namespace="http://Microsoft.ServiceModel.Samples")]` auf die `ICalculator` Schnittstellendefinition.  
   
-4.  Hinzufügen `bindingNamespace=``http://Microsoft.ServiceModel.Samples` dem endpunkttag in "App.config" für den Dienst.  
+4.  Hinzufügen `bindingNamespace="http://Microsoft.ServiceModel.Samples"` dem endpunkttag in "App.config" für den Dienst.  
   
 5.  Erstellen Sie das Nachrichtensicherheitsbeispiel, und führen Sie Service.exe aus. Verwenden Sie Internet Explorer, und navigieren Sie zum URI des Diensts (http://localhost:8000/ServiceModelSamples/Service) um sicherzustellen, dass der Dienst funktioniert.  
   

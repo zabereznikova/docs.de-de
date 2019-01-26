@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: df9538bfb778d6838b51d3b0c525a433812d8131
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd120c11e42648d1ca0304bbf9338f1cf569c48
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571820"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065868"
 ---
 # <a name="myresources-object"></a>My.Resources-Objekt
 Stellt Eigenschaften und Klassen für den Zugriff auf die Ressourcen der Anwendung bereit.  
@@ -26,9 +26,9 @@ Stellt Eigenschaften und Klassen für den Zugriff auf die Ressourcen der Anwendu
  Es stehen der Anwendung kulturspezifische Ressourcendateien aus den `My.Resources` Objekt. In der Standardeinstellung die `My.Resources` -Objekt sucht nach Ressourcen aus der Ressourcendatei, die die Kultur in entspricht der <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.UICulture%2A> Eigenschaft. Allerdings können Sie dieses Verhalten überschreiben, und geben eine bestimmte Kultur, die für die Ressourcen verwendet. Weitere Informationen finden Sie unter [Ressourcen in Desktop-Apps](../../../framework/resources/index.md).  
   
 ## <a name="properties"></a>Eigenschaften  
- Die Eigenschaften der `My.Resources` Objekt bereitstellen, nur-Lese Zugriff auf die Ressourcen der Anwendung. Verwenden Sie zum Hinzufügen oder Entfernen von Ressourcen, die **Projekt-Designer**. Sie Zugriff auf Ressourcen, die hinzugefügt werden, über die **Projekt-Designer** mit `My.Resources.``resourceName`.  
+ Die Eigenschaften der `My.Resources` Objekt bereitstellen, nur-Lese Zugriff auf die Ressourcen der Anwendung. Verwenden Sie zum Hinzufügen oder Entfernen von Ressourcen, die **Projekt-Designer**. Sie Zugriff auf Ressourcen, die hinzugefügt werden, über die **Projekt-Designer** mit `My.Resources.` *ResourceName*.  
   
- Sie können auch hinzufügen oder entfernen Sie hierzu Ihr Projekt in Ressourcendateien **Projektmappen-Explorer** und auf **neues Element hinzufügen** oder **vorhandenes Element hinzufügen** aus der  **Projekt** Menü. Sie erreichen auf diese Weise mit hinzugefügten Ressourcen `My.Resources.``resourceFileName`.`resourceName`.  
+ Sie können auch hinzufügen oder entfernen Sie hierzu Ihr Projekt in Ressourcendateien **Projektmappen-Explorer** und auf **neues Element hinzufügen** oder **vorhandenes Element hinzufügen** aus der  **Projekt** Menü. Sie erreichen auf diese Weise mit hinzugefügten Ressourcen `My.Resources.` *ResourceFileName*`.`*ResourceName*.  
   
  Jede Ressource verfügt über ein Name, Kategorie und Wert und die ressourceneinstellungen für diese zu ermitteln, wie die Eigenschaft, die Zugriff auf die Ressource in angezeigt wird der `My.Resources` Objekt. Für Ressourcen, die hinzugefügt werden, der **Projekt-Designer**:  
   
