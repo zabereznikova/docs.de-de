@@ -11,23 +11,21 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3069022287d469704cc7adac40d02ef3c6997b56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eaeffb365dd2c9999d4faa6b28c6d50e8cd6a6e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563046"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084327"
 ---
-# <a name="ltsharedlistenersgt-element"></a><span data-ttu-id="37f8a-102">&lt;SharedListeners&gt; Element</span><span class="sxs-lookup"><span data-stu-id="37f8a-102">&lt;sharedListeners&gt; Element</span></span>
-<span data-ttu-id="37f8a-103">Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen kann.</span><span class="sxs-lookup"><span data-stu-id="37f8a-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="37f8a-104">Diese Listener empfangen keine ablaufverfolgungen in der Standardeinstellung, und es ist nicht möglich, diese Listener zur Laufzeit abrufen.</span><span class="sxs-lookup"><span data-stu-id="37f8a-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="37f8a-105">Listener, die als freigegebene Listener können anhand des Namens mit Quellen oder ablaufverfolgungen hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="37f8a-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  
+# <a name="ltsharedlistenersgt-element"></a><span data-ttu-id="681f3-102">&lt;SharedListeners&gt; Element</span><span class="sxs-lookup"><span data-stu-id="681f3-102">&lt;sharedListeners&gt; Element</span></span>
+<span data-ttu-id="681f3-103">Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen kann.</span><span class="sxs-lookup"><span data-stu-id="681f3-103">Contains listeners that any source or trace element can reference.</span></span>  <span data-ttu-id="681f3-104">Diese Listener empfangen keine ablaufverfolgungen in der Standardeinstellung, und es ist nicht möglich, diese Listener zur Laufzeit abrufen.</span><span class="sxs-lookup"><span data-stu-id="681f3-104">These listeners do not receive any traces by default, and it is not possible to retrieve these listeners at run time.</span></span> <span data-ttu-id="681f3-105">Listener, die als freigegebene Listener können anhand des Namens mit Quellen oder ablaufverfolgungen hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="681f3-105">Listeners identified as shared listeners can be added to sources or traces by name.</span></span>  
   
- <span data-ttu-id="37f8a-106">\<configuration></span><span class="sxs-lookup"><span data-stu-id="37f8a-106">\<configuration></span></span>  
-<span data-ttu-id="37f8a-107">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="37f8a-107">\<system.diagnostics></span></span>  
-<span data-ttu-id="37f8a-108">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="37f8a-108">\<sharedListeners></span></span>  
+ <span data-ttu-id="681f3-106">\<configuration></span><span class="sxs-lookup"><span data-stu-id="681f3-106">\<configuration></span></span>  
+<span data-ttu-id="681f3-107">\<system.diagnostics></span><span class="sxs-lookup"><span data-stu-id="681f3-107">\<system.diagnostics></span></span>  
+<span data-ttu-id="681f3-108">\<sharedListeners></span><span class="sxs-lookup"><span data-stu-id="681f3-108">\<sharedListeners></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37f8a-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="37f8a-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="681f3-109">Syntax</span><span class="sxs-lookup"><span data-stu-id="681f3-109">Syntax</span></span>  
   
 ```xml  
 <sharedListeners>   
@@ -35,32 +33,32 @@ ms.locfileid: "54563046"
 </sharedListeners>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="37f8a-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="37f8a-110">Attributes and Elements</span></span>  
- <span data-ttu-id="37f8a-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="37f8a-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="681f3-110">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="681f3-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="681f3-111">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="681f3-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="37f8a-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="37f8a-112">Attributes</span></span>  
- <span data-ttu-id="37f8a-113">Keine</span><span class="sxs-lookup"><span data-stu-id="37f8a-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="681f3-112">Attribute</span><span class="sxs-lookup"><span data-stu-id="681f3-112">Attributes</span></span>  
+ <span data-ttu-id="681f3-113">Keine</span><span class="sxs-lookup"><span data-stu-id="681f3-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="37f8a-114">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="37f8a-114">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="681f3-114">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="681f3-114">Child Elements</span></span>  
   
-|<span data-ttu-id="37f8a-115">Element</span><span class="sxs-lookup"><span data-stu-id="37f8a-115">Element</span></span>|<span data-ttu-id="37f8a-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="37f8a-116">Description</span></span>|  
+|<span data-ttu-id="681f3-115">Element</span><span class="sxs-lookup"><span data-stu-id="681f3-115">Element</span></span>|<span data-ttu-id="681f3-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="681f3-116">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="37f8a-117">\<add></span><span class="sxs-lookup"><span data-stu-id="37f8a-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="37f8a-118">Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu.</span><span class="sxs-lookup"><span data-stu-id="37f8a-118">Adds a listener to the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="681f3-117">\<add></span><span class="sxs-lookup"><span data-stu-id="681f3-117">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="681f3-118">Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu.</span><span class="sxs-lookup"><span data-stu-id="681f3-118">Adds a listener to the `sharedListeners` collection.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="37f8a-119">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="37f8a-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="681f3-119">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="681f3-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="37f8a-120">Element</span><span class="sxs-lookup"><span data-stu-id="37f8a-120">Element</span></span>|<span data-ttu-id="37f8a-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="37f8a-121">Description</span></span>|  
+|<span data-ttu-id="681f3-120">Element</span><span class="sxs-lookup"><span data-stu-id="681f3-120">Element</span></span>|<span data-ttu-id="681f3-121">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="681f3-121">Description</span></span>|  
 |-------------|-----------------|  
-|`Configuration`|<span data-ttu-id="37f8a-122">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="37f8a-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="37f8a-123">Gibt das Stammelement für den ASP.NET-Konfigurationsabschnitt an.</span><span class="sxs-lookup"><span data-stu-id="37f8a-123">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`Configuration`|<span data-ttu-id="681f3-122">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="681f3-122">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="681f3-123">Gibt das Stammelement für den ASP.NET-Konfigurationsabschnitt an.</span><span class="sxs-lookup"><span data-stu-id="681f3-123">Specifies the root element for the ASP.NET configuration section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="37f8a-124">Hinweise</span><span class="sxs-lookup"><span data-stu-id="37f8a-124">Remarks</span></span>  
- <span data-ttu-id="37f8a-125">Hinzufügen eines Listeners zur gemeinsam genutzten Auflistung ist es keinen aktiven Listener einzurichten.</span><span class="sxs-lookup"><span data-stu-id="37f8a-125">Adding a listener to the shared listeners collection does not make it an active listener.</span></span> <span data-ttu-id="37f8a-126">Es muss immer noch eine Ablaufverfolgungsquelle zu einer Ablaufverfolgung hinzugefügt werden, fügen es zu den `Listeners` Auflistung für das Trace-Element.</span><span class="sxs-lookup"><span data-stu-id="37f8a-126">It must still be added to a trace source or a trace by adding it to the `Listeners` collection for that trace element.</span></span> <span data-ttu-id="37f8a-127">Die Listenerklassen in .NET Framework leiten sich von der <xref:System.Diagnostics.TraceListener> Klasse.</span><span class="sxs-lookup"><span data-stu-id="37f8a-127">The listener classes in the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="681f3-124">Hinweise</span><span class="sxs-lookup"><span data-stu-id="681f3-124">Remarks</span></span>  
+ <span data-ttu-id="681f3-125">Hinzufügen eines Listeners zur gemeinsam genutzten Auflistung ist es keinen aktiven Listener einzurichten.</span><span class="sxs-lookup"><span data-stu-id="681f3-125">Adding a listener to the shared listeners collection does not make it an active listener.</span></span> <span data-ttu-id="681f3-126">Es muss immer noch eine Ablaufverfolgungsquelle zu einer Ablaufverfolgung hinzugefügt werden, fügen es zu den `Listeners` Auflistung für das Trace-Element.</span><span class="sxs-lookup"><span data-stu-id="681f3-126">It must still be added to a trace source or a trace by adding it to the `Listeners` collection for that trace element.</span></span> <span data-ttu-id="681f3-127">Die Listenerklassen in .NET Framework leiten sich von der <xref:System.Diagnostics.TraceListener> Klasse.</span><span class="sxs-lookup"><span data-stu-id="681f3-127">The listener classes in the .NET Framework derive from the <xref:System.Diagnostics.TraceListener> class.</span></span>  
   
- <span data-ttu-id="37f8a-128">Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="37f8a-128">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
+ <span data-ttu-id="681f3-128">Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="681f3-128">This element can be used in the machine configuration file (Machine.config) and the application configuration file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="37f8a-129">Beispiel</span><span class="sxs-lookup"><span data-stu-id="37f8a-129">Example</span></span>  
- <span data-ttu-id="37f8a-130">Das folgende Beispiel zeigt, wie Sie mit der `<sharedListeners>` Element, um den Listener hinzuzufügen `console` auf die `Listeners` Auflistung für beide die <xref:System.Diagnostics.TraceSource> und <xref:System.Diagnostics.Trace> Klassen.</span><span class="sxs-lookup"><span data-stu-id="37f8a-130">The following example shows how to use the `<sharedListeners>` element to add the listener `console` to the `Listeners` collection for both the <xref:System.Diagnostics.TraceSource> and <xref:System.Diagnostics.Trace> classes.</span></span> <span data-ttu-id="37f8a-131">Die Konsolen-Ablaufverfolgungslistener Schreibt Ablaufverfolgungsinformationen in die Konsole durch Aufrufen von <xref:System.Diagnostics.TraceSource> oder <xref:System.Diagnostics.Trace>.</span><span class="sxs-lookup"><span data-stu-id="37f8a-131">The console trace listener writes trace information to the console through calls to either <xref:System.Diagnostics.TraceSource> or <xref:System.Diagnostics.Trace>.</span></span>  
+## <a name="example"></a><span data-ttu-id="681f3-129">Beispiel</span><span class="sxs-lookup"><span data-stu-id="681f3-129">Example</span></span>  
+ <span data-ttu-id="681f3-130">Das folgende Beispiel zeigt, wie Sie mit der `<sharedListeners>` Element, um den Listener hinzuzufügen `console` auf die `Listeners` Auflistung für beide die <xref:System.Diagnostics.TraceSource> und <xref:System.Diagnostics.Trace> Klassen.</span><span class="sxs-lookup"><span data-stu-id="681f3-130">The following example shows how to use the `<sharedListeners>` element to add the listener `console` to the `Listeners` collection for both the <xref:System.Diagnostics.TraceSource> and <xref:System.Diagnostics.Trace> classes.</span></span> <span data-ttu-id="681f3-131">Die Konsolen-Ablaufverfolgungslistener Schreibt Ablaufverfolgungsinformationen in die Konsole durch Aufrufen von <xref:System.Diagnostics.TraceSource> oder <xref:System.Diagnostics.Trace>.</span><span class="sxs-lookup"><span data-stu-id="681f3-131">The console trace listener writes trace information to the console through calls to either <xref:System.Diagnostics.TraceSource> or <xref:System.Diagnostics.Trace>.</span></span>  
   
 ```xml  
 <configuration>  
@@ -90,7 +88,7 @@ ms.locfileid: "54563046"
 </configuration></system.diagnostics>   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="37f8a-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="37f8a-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="681f3-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="681f3-132">See also</span></span>
 - <xref:System.Diagnostics.TraceListener>
-- [<span data-ttu-id="37f8a-133">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="37f8a-133">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [<span data-ttu-id="37f8a-134">Trace Listeners (Ablaufverfolgungslistener)</span><span class="sxs-lookup"><span data-stu-id="37f8a-134">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [<span data-ttu-id="681f3-133">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="681f3-133">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [<span data-ttu-id="681f3-134">Trace Listeners (Ablaufverfolgungslistener)</span><span class="sxs-lookup"><span data-stu-id="681f3-134">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
