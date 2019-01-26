@@ -8,14 +8,12 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <trace>
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 85d81beead84be48730ba3a4469e8efdff1bbb0b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b53c3e4cc2362a1f1dc0312d59aff403ca924b5e
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523690"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55084184"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-lttracegt"></a>&lt;Filter&gt; -Element für &lt;hinzufügen&gt; für &lt;Listener&gt; für &lt;Ablaufverfolgung&gt;
 Fügt einen Filter zu einem Listener in der `Listeners` Sammlung für eine Ablaufverfolgung.  

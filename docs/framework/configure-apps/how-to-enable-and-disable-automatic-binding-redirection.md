@@ -5,16 +5,14 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 284c2a08f2b78d2c6a1ab9752a3f2283e87fd734
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50980832"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083660"
 ---
-# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung
+# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung
 
 Beim Kompilieren von apps in Visual Studio, die auf die [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] und höhere Versionen werden bindungsumleitungen werden automatisch hinzugefügt, um die app-Konfigurationsdatei für die Assemblyvereinheitlichung zu überschreiben. Bindungsumleitungen werden hinzugefügt, wenn die App oder ihre Komponenten auf mehr als eine Version der gleichen Assembly verweisen, auch wenn Sie manuell Bindungsumleitungen in der Konfigurationsdatei für Ihre App angeben. Die automatische bindungsumleitung wirkt sich auf desktop-apps und Web-apps, die auf die [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] oder eine höhere Version, obwohl das Verhalten für eine Web-app etwas anders ist. Sie können die automatische bindungsumleitung aktivieren, wenn Sie vorhandene apps, die frühere Versionen von .NET Framework abzielen, oder Sie diese Funktion deaktivieren können, wenn Sie manuell bindungsumleitungen erstellen möchten.
 

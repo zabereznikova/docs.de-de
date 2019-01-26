@@ -9,20 +9,18 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 82ee7b163efcefae0f2a169b74d29ea4c9f5398a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 9fc5a555085369cdec249eb9b5b247f403bd12ed
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222739"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083716"
 ---
 # <a name="ltstartupgt-element"></a>&lt;Beim Start&gt; Element
 
 Gibt beim Start zur common Language Runtime an.
 
- \<Konfiguration > \<Start >
+ \<configuration> \<startup>
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +39,7 @@ Gibt beim Start zur common Language Runtime an.
 |---------------|-----------------|
 |`useLegacyV2RuntimeActivationPolicy`|Optionales Attribut.<br /><br /> Gibt an, ob die [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] Richtlinie für die laufzeitaktivierung oder verwendet den [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] Activation-Richtlinie.|
 
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy-Attribut
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy attribute
 
 |Wert|Beschreibung|
 |-----------|-----------------|
@@ -98,6 +96,6 @@ Gibt beim Start zur common Language Runtime an.
 
 - [Startup Settings Schema (Schema für Starteinstellungen)](index.md)
 - [Konfigurationsdateischema](../index.md)
-- [Vorgehensweise: Konfigurieren einer app zur Unterstützung von .NET Framework 4 oder höher](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [Seite-an-Seite-Ausführung für COM-Interop](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
 - [Prozessinterne parallele Ausführung](../../../deployment/in-process-side-by-side-execution.md)
