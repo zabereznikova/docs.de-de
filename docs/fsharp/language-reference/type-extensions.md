@@ -1,13 +1,13 @@
 ---
 title: Typerweiterungen
 description: Erfahren Sie, wie F# typerweiterungen können Sie einen zuvor definierten Objekttyp neue Member hinzufügen.
-ms.date: 07/20/2018
-ms.openlocfilehash: 9c0c6247eb5b94e9f42377859026ba7b466eb2e4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 01/23/2019
+ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614057"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066154"
 ---
 # <a name="type-extensions"></a>Erweiterungen des Typs
 
@@ -121,7 +121,7 @@ Es gibt keine Möglichkeit, dieser Code funktioniert mit der eine optionale type
 
 * Da ist, die `Sum` Member hat eine andere Einschränkung auf `'T` (`static member get_Zero` und `static member (+)`) als durch die Erweiterung festgelegt.
 * Ändern die Erweiterung für die gleiche Einschränkung wie `Sum` entspricht die definierte Einschränkung nicht mehr auf `IEnumerable<'T>`.
-* Vornehmen, ändern das Element zu `member inline Sum` gibt einen Fehler, dass die typeinschränkungen nicht übereinstimmt
+* Ändern der `member this.Sum` zu `member inline this.Sum` gibt einen Fehler, dass die typeinschränkungen nicht übereinstimmt.
 
 Erwünscht sind statische Methoden, die "im Bereich" float"und können angezeigt werden, als ob sie einen Typ erweitern können. Dies ist, in denen Erweiterungsmethoden bereit, die erforderlich sind.
 

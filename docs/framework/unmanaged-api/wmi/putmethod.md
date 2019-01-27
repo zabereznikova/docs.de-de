@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98ef688c1136a81a5b57c3fdfee73c53024186e7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 74654cf18d87fed8ad5ce9a4cd4249d56fdb4343
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191039"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693450"
 ---
 # <a name="putmethod-function"></a>PutMethod-Funktion
 Erstellt eine Methode.
@@ -68,7 +68,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein oder mehrere Parameter sind ungültig. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein oder mehrere Parameter sind ungültig. |
 | `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | Die `[in, out]` Methodenparameter angegeben wird, sowohl die *pInSignature* und *pOutSignature* Objekte verfügen über unterschiedliche Qualifizierer.
 | `WBEM_E_MISSING_PARAMETER_ID` | 0x80041036 | Parameter der Methode fehlt die Angabe der **ID** Qualifizierer. |
 | `WBEM_E_NONCONSECUTIVE_PARAMETER_IDS` | 0x80041038 | Die ID-Reihe, die die Parameter der Methode zugewiesen ist, nicht aufeinander folgende oder beginnt nicht bei 0. |
@@ -95,11 +95,11 @@ Jede Eigenschaft im eine [__Parameters](/windows/desktop/WmiSdk/--parameters) Ob
 Ein Beispiel finden Sie unter den [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) Methode.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

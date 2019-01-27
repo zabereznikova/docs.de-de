@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d019c67849197cd24171ff607e60e9f08d5ff70
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2ebe6924dfe1a4aa640ef8ccd7b4047c1d137948
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040875"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640042"
 ---
 # <a name="nextmethod-function"></a>NextMethod-Funktion
 Ruft die nächste Methode in einer Enumeration, die mit einem Aufruf von beginnt [BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -50,7 +50,7 @@ HRESULT NextMethod (
 [in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
 `lFlags`  
-[in] Reserviert. Dieser Parameter muss 0 sein.
+[in]: Reserviert Dieser Parameter muss 0 sein.
 
 `pName`  
 [out] Ein Zeiger, der auf zeigt `null` vor dem Aufruf. Wenn die Funktion zurückgibt, die Adresse eines neuen `BSTR` , enthält der Name der Methode. 
@@ -82,11 +82,11 @@ Der Aufrufer beginnt der Enumerationssequenz durch Aufrufen der [BeginMethodEnum
 Eine C++-Beispiel finden Sie unter den [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) Methode.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

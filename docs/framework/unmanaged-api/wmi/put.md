@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ec8fe889885b555cbf9a95cd34b7330efff27f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54625769"
 ---
 # <a name="put-function"></a>Put-Funktion
 Legt eine benannte Eigenschaft auf einen neuen Wert fest.
@@ -53,7 +53,7 @@ HRESULT Put (
 [in] Der Name der Eigenschaft. Dieser Parameter darf nicht sein `null`.
 
 `lFlags`  
-[in] Reserviert. Dieser Parameter muss 0 sein.
+[in]: Reserviert Dieser Parameter muss 0 sein.
 
 `pVal`   
 [in] Ein Zeiger auf ein gültiges `VARIANT` , wird der neue Eigenschaftswert. Wenn `pVal` ist `null` oder verweist auf eine `VARIANT` des Typs `VT_NULL`, die Eigenschaft wird festgelegt, um `null`. 
@@ -68,11 +68,11 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Es wurde ein allgemeiner Fehler. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Ein oder mehrere Parameter sind ungültig. |
+|`WBEM_E_FAILED` | 0x80041001 | Es wurde ein allgemeiner Fehler. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein oder mehrere Parameter sind ungültig. |
 |`WBEM_E_INVALID_PROPERTY_TYPE` | 0x8004102a | Der Eigenschaftentyp wird nicht erkannt. Beim Erstellen von Klasseninstanzen, wenn die Klasse bereits vorhanden ist, wird dieser Wert zurückgegeben. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Vorgang abzuschließen. |
-| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Für Instanzen: Gibt an, dass `pVal` verweist auf eine `VARIANT` mit einem falschen Typ für die Eigenschaft. <br/> Für Klassendefinitionen: die Eigenschaft, die bereits in der übergeordneten Klasse vorhanden ist, und die neue COM-Typ unterscheidet sich von der alten COM-Typ. |
+| `WBEM_E_TYPE_MISMATCH` | 0x80041005 | Für Instanzen: Gibt an, dass `pVal` verweist auf eine `VARIANT` mit einem falschen Typ für die Eigenschaft. <br/> Für Klassendefinitionen: Die Eigenschaft, die bereits in der übergeordneten Klasse vorhanden ist, und die neue COM-Typ unterscheidet sich von der alten COM-Typ. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich. |
   
 ## <a name="remarks"></a>Hinweise
@@ -94,11 +94,11 @@ Verwenden der `vtType` Parameter nur, wenn neue Eigenschaften in der Definition 
 Ein Beispiel finden Sie unter den [IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put) Methode.
 
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
   
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>Siehe auch  
-[WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)
+## <a name="see-also"></a>Siehe auch
+- [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

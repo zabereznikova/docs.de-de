@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: f2f7f6c1c03a96af0c114033aee2063e0c991401
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e436a9505ea9ae770a748da244dd21ce63ad3464
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736980"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementieren des Window-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
->  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: UI-Automatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Dieses Thema enthält Richtlinien und Konventionen für das Implementieren von <xref:System.Windows.Automation.Provider.IWindowProvider>, einschließlich Informationen über <xref:System.Windows.Automation.WindowPattern> -Eigenschaften, -Methoden und -Ereignisse. Links zu zusätzlichen Referenzen sind am Ende dieses Themas aufgelistet.  
   
@@ -43,18 +43,18 @@ ms.locfileid: "48840815"
   
 |Erforderlicher Member|Memberart|Hinweise|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Eigenschaft|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Methode|Keiner|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|event|Keiner|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|event|Keiner|  
-|<xref:System.Windows.Automation.WindowInteractionState>|event|<xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.IsTopmost%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Maximizable%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Minimizable%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.VisualState%2A>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|event|Keine|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|event|Keine|  
+|<xref:System.Windows.Automation.WindowInteractionState>|event| <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Ausnahmen  
@@ -65,9 +65,9 @@ ms.locfileid: "48840815"
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> – Wenn ein Steuerelement ein gefordertes Verhalten nicht unterstützt.|  
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> – Wenn der Parameter keine gültige Zahl ist.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a>Siehe auch
+- [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
+- [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+- [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -2,12 +2,12 @@
 title: F#Richtlinien zum Entwerfen der Komponente
 description: Erfahren Sie, die Richtlinien für das Schreiben von F# Komponenten, die für die Nutzung durch andere Aufrufer vorgesehen.
 ms.date: 05/14/2018
-ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415636"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066024"
 ---
 # <a name="f-component-design-guidelines"></a>F#Richtlinien zum Entwerfen der Komponente
 
@@ -708,7 +708,7 @@ Bevorzugen Sie stattdessen die Rückgabe eines benannten Typs, der die aggregier
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>Vermeiden Sie die Verwendung von currying von Parametern
 
-Verwenden Sie stattdessen .NET Aufrufkonventionen ``Method(arg1,arg2,…,argN)``.
+Verwenden Sie stattdessen .NET Aufrufkonventionen `Method(arg1,arg2,…,argN)`.
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str
