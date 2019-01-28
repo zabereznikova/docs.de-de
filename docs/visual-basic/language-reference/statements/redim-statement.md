@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1252c9a93d9c37923b1fd2940a42f1a33b575b8a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605393"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617315"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim-Anweisung (Visual Basic)
 Reserviert Speicherplatz für eine Arrayvariable neu.  
@@ -47,7 +47,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |Begriff|Definition|  
 |----------|----------------|  
 |`Preserve`|Dies ist optional. Modifizierer zum Beibehalten der Daten im vorhandenen Array, wenn lediglich die Größe der letzten Dimension geändert wird.|  
-|`name`|Erforderlich. Name der Arrayvariablen. Finden Sie unter [deklarierte Elementnamen](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`name`|Erforderlich. Name der Arrayvariablen. Siehe [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`boundlist`|Erforderlich. Liste der Grenzen jeder Dimension des neu definierten Arrays.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -67,7 +67,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **Datentypen.** Mit der `ReDim`-Anweisung kann der Datentyp einer Arrayvariablen oder ihrer Elemente nicht geändert werden.  
   
--   **die Initialisierung.** Mit der `ReDim`-Anweisung können keine neuen Initialisierungswerte für die Arrayelemente bereitgestellt werden.  
+-   **Die Initialisierung.** Mit der `ReDim`-Anweisung können keine neuen Initialisierungswerte für die Arrayelemente bereitgestellt werden.  
   
 -   **Rang.** Mit der `ReDim`-Anweisung kann der Rang (Anzahl von Dimensionen) des Arrays nicht geändert werden.  
   
@@ -79,7 +79,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>Verhalten  
   
--   **Array-Austausch.** `ReDim` Gibt das vorhandene Array frei und erstellt ein neues Array mit demselben Rang. Das neue Array ersetzt das freigegebene Array in der Arrayvariablen.  
+-   **Array-Ersatz.** `ReDim` Gibt das vorhandene Array frei und erstellt ein neues Array mit den gleichen Rang. Das neue Array ersetzt das freigegebene Array in der Arrayvariablen.  
   
 -   **Initialisierung ohne beibehalten.** Wenn Sie kein `Preserve`-Element angeben, werden die Elemente des neuen Arrays von `ReDim` mit dem Standardwert für ihren Datentyp initialisiert.  
   
@@ -100,10 +100,10 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  Weitere Beispiele finden Sie unter [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.IndexOutOfRangeException>  
- [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md)  
- [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)  
- [Erase-Anweisung](../../../visual-basic/language-reference/statements/erase-statement.md)  
- [Nothing](../../../visual-basic/language-reference/nothing.md)  
- [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.IndexOutOfRangeException>
+- [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Erase-Anweisung](../../../visual-basic/language-reference/statements/erase-statement.md)
+- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)

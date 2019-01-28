@@ -8,19 +8,19 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: e590732419396660221aa781e3c333311b6e88b4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9058c6c3256efad15e0811fcc1f21f440e13edbf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505138"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683020"
 ---
 # <a name="tilebrush-overview"></a>Übersicht über TileBrush
 <xref:System.Windows.Media.TileBrush> -Objekte bieten Ihnen viel Kontrolle wie ein Bereich mit einem Bild, gezeichnet wird <xref:System.Windows.Media.Drawing>, oder <xref:System.Windows.Media.Visual>. In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.TileBrush> Funktionen erhalten Sie weitere steuern, wie ein <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, oder <xref:System.Windows.Media.VisualBrush> zeichnet einen Bereich.  
   
   
 <a name="prerequisite"></a>   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Um in diesem Thema zu verstehen, ist es hilfreich zu verstehen, wie Sie mit der grundlegenden Funktionen des die <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, oder <xref:System.Windows.Media.VisualBrush> Klasse. Eine Einführung in diese Datentypen, finden Sie unter den [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
 <a name="tilebrush"></a>   
@@ -108,7 +108,7 @@ Komponenten eines TileBrush mit einer TileMode-Kachel
   
 -   <xref:System.Windows.Media.TileMode.FlipY>: Identisch mit <xref:System.Windows.Media.TileMode.Tile>, aber kachelreihe vertikal gekippt werden.  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>: Eine Kombination von <xref:System.Windows.Media.TileMode.FlipX> und <xref:System.Windows.Media.TileMode.FlipY>.  
+-   <xref:System.Windows.Media.TileMode.FlipXY>: Die Kombination aus <xref:System.Windows.Media.TileMode.FlipX> und <xref:System.Windows.Media.TileMode.FlipY>.  
   
  Die folgende Abbildung zeigt die unterschiedlichen Kachelmodi.  
   
@@ -121,13 +121,13 @@ Komponenten eines TileBrush mit einer TileMode-Kachel
  [!code-csharp[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/CSharp/TilingExample.cs#graphicsmmflipxyexample)]
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Windows.Media.ImageBrush>  
- <xref:System.Windows.Media.DrawingBrush>  
- <xref:System.Windows.Media.VisualBrush>  
- <xref:System.Windows.Media.TileBrush>  
- [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)  
- [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Windows.Media.ImageBrush>
+- <xref:System.Windows.Media.DrawingBrush>
+- <xref:System.Windows.Media.VisualBrush>
+- <xref:System.Windows.Media.TileBrush>
+- [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)
+- [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
+- [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)
