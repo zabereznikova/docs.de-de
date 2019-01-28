@@ -2,18 +2,18 @@
 title: Befehl „dotnet test“
 description: Der Befehl „dotnet test“ wird zum Ausführen von Unittests in einem bestimmten Projekt verwendet.
 ms.date: 05/29/2018
-ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 1b2a3917a930db0c0a49ebea41f568aaf4a58ee3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170845"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54535281"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet test`: .NET-Testtreiber, der verwendet wird, um Komponententests auszuführen.
 
@@ -304,5 +304,5 @@ Weitere Informationen und Beispiele zur Verwendung von selektiven Komponententes
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Frameworks und Ziele](../../standard/frameworks.md)  
-* [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
+- [Frameworks und Ziele](../../standard/frameworks.md)
+- [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)

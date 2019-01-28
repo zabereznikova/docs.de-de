@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 27f0df14fef7c261828040d905c9f624f02eddfe
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 36e910328651cc4f91acdfb2d40edea56cde2a9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243828"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676483"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Vorgehensweise: Zurückgeben von Teilmengen von Elementeigenschaften in einer Abfrage (C#-Programmierhandbuch)
 Verwenden Sie einen anonymen Typ in einem Abfrageausdruck, wenn die folgenden Bedingungen beide erfüllt sind:  
@@ -48,6 +48,6 @@ Console.WriteLine(student.First + " " + student.Last);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)

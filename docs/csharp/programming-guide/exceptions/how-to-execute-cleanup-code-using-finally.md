@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 67ef164232a27b8110dfcd108a0345d9d63e8f91
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d1a95519b2c7fc1d90d677e7a62c549defe289ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244934"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596396"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Vorgehensweise: Ausführen von Bereinigungscode mit „finally“ (C#-Programmierhandbuch)
 `finally`-Anweisungen sollen sicherstellen, dass die notwendige Bereinigung von Objekten, die externe Ressourcen enthalten, sofort erfolgen, auch wenn eine Ausnahme ausgelöst wird. Ein Beispiel für eine solche Bereinigung ist der Aufruf von <xref:System.IO.Stream.Close%2A> auf einem <xref:System.IO.FileStream> sofort nach der Verwendung, anstatt abzuwarten, bis das Objekt durch die Common Language Runtime wie folgt speicherbereinigt wird:  
@@ -30,10 +30,10 @@ ms.locfileid: "53244934"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)  
-- [Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exception-handling.md)  
-- [Using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)  
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)
+- [Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [Using-Anweisung](../../../csharp/language-reference/keywords/using-statement.md)
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

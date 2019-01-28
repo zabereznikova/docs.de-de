@@ -2,12 +2,12 @@
 title: Suchen von Text in Word-Dokumenten (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 3213855716ebcfc581f213a34417e579c133e385
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 59d224307808edefbbb7e7ffc848f40fbe2880ae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200496"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720784"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Suchen von Text in Word-Dokumenten (C#)
 In diesem Thema werden die vorherigen Abfragen so erweitert, dass sie etwas Sinnvolles tun, nämlich alle Stellen im Dokument zu finden, an denen eine bestimmte Zeichenfolge vorkommt.  
@@ -329,6 +329,6 @@ StyleName:Code ><
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
-- [Refactoring mit einer reinen Funktion (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refactoring mit einer reinen Funktion (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)
 - [Deferred Execution and Lazy Evaluation in LINQ to XML (C#) (Verzögerte Ausführung und Auswertung in LINQ to XML (C#))](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

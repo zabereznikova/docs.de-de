@@ -6,12 +6,12 @@ helpviewer_keywords:
 - jump statements [C#]
 - branch statements [C#]
 ms.assetid: 58da6ae7-7388-491e-828f-e74485d87d53
-ms.openlocfilehash: 0083406a4ba3cf5d3d70ca1b17630ceb73c17dce
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1661c551c576e5f6dd7180fbc40ec837f40622bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242827"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645261"
 ---
 # <a name="jump-statements-c-reference"></a>Sprunganweisungen (C#-Referenz)
 Die Verzweigung wird mit Sprunganweisung durchgeführt, was zu einer sofortigen Übertragung der Programmsteuerung führt. Die folgenden Schlüsselwörter werden in Sprunganweisungen verwendet:  
@@ -28,7 +28,7 @@ Die Verzweigung wird mit Sprunganweisung durchgeführt, was zu einer sofortigen 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
+- [C#-Referenz](../../../csharp/language-reference/index.md)
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
 - [Anweisungsschlüsselwörter](../../../csharp/language-reference/keywords/statement-keywords.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 6e4674acd2a5edbbffd2babf130d2078019ab9b7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517002"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560337"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (C#-Compileroptionen)
 Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei eingefügt werden sollen.  
@@ -53,8 +53,8 @@ Gibt an, dass Debuginformationen zum Zweck einer späteren Analyse in eine Datei
   
  Beachten Sie, dass im Inhalt der generierten Datei Quellcode offen gelegt wird, was zu einer unbeabsichtigten Veröffentlichung von Informationen führen konnte.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
-- [-errorreport (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+- [-errorreport (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

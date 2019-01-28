@@ -2,12 +2,12 @@
 title: Querying XML Trees (C#) (Abfragen von XML-Strukturen (C#))
 ms.date: 07/20/2015
 ms.assetid: 0913d81b-541a-4fd4-9cbf-7ec89fd817ea
-ms.openlocfilehash: 349235689dba125f697d0df5ff90bd10a69432c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 71a3d8538d96a9a5c273188a1bbb920ad6fa2d37
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501050"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741729"
 ---
 # <a name="querying-xml-trees-c"></a>Querying XML Trees (C#) (Abfragen von XML-Strukturen (C#))
 Dieser Abschnitt enthält Beispiele für [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen.  
@@ -18,7 +18,7 @@ Dieser Abschnitt enthält Beispiele für [!INCLUDE[sqltecxlinq](~/includes/sqlte
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung |  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Basic Queries (LINQ to XML) (C#) (Standardabfragen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|Enthält allgemeine Beispiele für das Abfragen von XML-Strukturen.|  
 |[Projections and Transformations (LINQ to XML) (C#) (Projektionen und Transformationen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)|Enthält allgemeine Beispiele für das Projizieren aus und das Transformieren in XML-Strukturen.|  
@@ -28,5 +28,5 @@ Dieser Abschnitt enthält Beispiele für [!INCLUDE[sqltecxlinq](~/includes/sqlte
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
+- [Programming Guide (LINQ to XML) (C#) (Programmierhandbuch (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
 - [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

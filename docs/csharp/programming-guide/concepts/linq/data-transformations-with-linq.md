@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: a4060017a2d3d352b3db70b1d364eb14ec1e94ce
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2e679e0ef18623aa2fdc312ff8ec6598ad239171
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54635922"
 ---
 # <a name="data-transformations-with-linq-c"></a>Datentransformationen mit LINQ (C#)
 Bei [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] geht es nicht nur um das Abrufen von Daten. Es ist auch ein leistungsstarkes Tool zur Datentransformation. Mithilfe einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage können Sie eine Quellsequenz als Eingabe verwenden und sie auf viele Arten zum Erstellen einer neuen Ausgabesequenz ändern. Sie können die Sequenz selbst durch Sortieren und Gruppieren ändern, ohne die Elemente zu ändern. Aber das vielleicht leistungsstärkste Feature von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen ist die Fähigkeit, neue Typen zu erstellen. Dies erfolgt in der [select](../../../../csharp/language-reference/keywords/select-clause.md)-Klausel. Sie können z. B. folgende Aufgaben ausführen:  
@@ -99,9 +99,9 @@ Bei [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] geht es nicht nur um
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
-- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
-- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
-- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
-- [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
+- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+- [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [select-Klausel](../../../../csharp/language-reference/keywords/select-clause.md)

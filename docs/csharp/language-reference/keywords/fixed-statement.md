@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 23bb3d51ca4324bcbc1ee4f699aaff2754bf1516
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c93c00ca939bcb6c3c7feea4e6b6234f738298dc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243757"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605531"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed-Anweisung (C#-Referenz)
 
@@ -74,8 +74,8 @@ Im nicht sicheren Modus können Sie dem Stapel Arbeitsspeicher zuweisen, auf dem
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../index.md)  
-- [C#-Programmierhandbuch](../../programming-guide/index.md)  
-- [C#-Schlüsselwörter](index.md)  
-- [unsafe](unsafe.md)  
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](index.md)
+- [unsafe](unsafe.md)
 - [Puffer fester Größe](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

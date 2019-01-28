@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 96153dcc9c144df0f412678ec5c0928d4e832a40
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e70bc27606e51d3685d4f92484f632c8fa2eba76
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235737"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652162"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizer (C#-Programmierhandbuch)
 Mit Finalizern (die auch als **Destruktoren** bezeichnet werden) werden alle erforderlichen endgültigen Bereinigungen durchgeführt, wenn eine Klasseninstanz vom Garbage Collector gesammelt wird.  
@@ -89,7 +89,7 @@ Weitere Informationen finden Sie im Abschnitt [Destruktoren](~/_csharplang/spec/
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.IDisposable>  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- <xref:System.IDisposable>
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)
 - [Garbage Collection](../../../standard/garbage-collection/index.md)

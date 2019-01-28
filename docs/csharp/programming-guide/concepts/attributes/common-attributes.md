@@ -2,12 +2,12 @@
 title: Allgemeine Attribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4a1dd6200f7eb9e69caefe62d9e9defd90856ce1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54558587"
 ---
 # <a name="common-attributes-c"></a>Allgemeine Attribute (C#)
 Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwendet werden.  
@@ -73,7 +73,7 @@ Dieses Thema beschreibt die Attribute, die am häufigsten in C#-Programmen verwe
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Definiert einen benutzerfreundlichen Standardalias für ein Assemblymanifest|  
   
 ##  <a name="Obsolete"></a> Obsolete-Attribut  
- Das `Obsolete`-Attribut markiert eine Programmentität als eine, die nicht mehr zur Verwendung empfohlen wird. Jede Verwendung einer Entität, die als veraltet markiert ist, generiert anschließend eine Warnung oder einen Fehler, je nachdem, wie das Attribut konfiguriert ist. Zum Beispiel:  
+ Das `Obsolete`-Attribut markiert eine Programmentität als eine, die nicht mehr zur Verwendung empfohlen wird. Jede Verwendung einer Entität, die als veraltet markiert ist, generiert anschließend eine Warnung oder einen Fehler, je nachdem, wie das Attribut konfiguriert ist. Beispiel:  
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -221,7 +221,7 @@ class SampleClass
   
  Um diese Memberaufruferinformationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden. Jeder optionale Parameter gibt einen Standardwert an. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:  
   
-|Attribut|Beschreibung |Typ|  
+|Attribut|Beschreibung|Typ|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Vollständiger Pfad der Quelldatei, die den Aufrufer enthält. Dies ist der Pfad zum Zeitpunkt der Kompilierung.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Zeilennummer in der Quelldatei, in der die Methode aufgerufen wird|`Integer`|  
@@ -231,9 +231,9 @@ class SampleClass
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
-- [Attribute](../../../../../docs/standard/attributes/index.md)  
-- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
+- [Attribute](../../../../../docs/standard/attributes/index.md)
+- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
 - [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

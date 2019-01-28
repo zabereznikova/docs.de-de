@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: df2d7837217f4267f95ed73948a4eb479cc035c1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: fa863a5606c7526ae32bc28a0cfeaa91f8c7b539
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244413"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712154"
 ---
 # <a name="methods-c-programming-guide"></a>Methoden (C#-Programmierhandbuch)
 Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Programm bewirkt die Ausführung der Anweisungen, indem die Methode aufgerufen wird und alle erforderlichen Methodenargumente angegeben werden. In C# werden alle Anweisungen im Kontext einer Methode ausgeführt. Die Main-Methode ist der Einstiegspunkt jeder C#-Anwendung und wird von der Common Language Runtime (CLR) aufgerufen, wenn das Programm gestartet wird.  
@@ -30,12 +30,12 @@ Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Pro
  [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
   
 ## <a name="method-access"></a>Methodenzugriff  
- Das Aufrufen einer Methode für ein Objekt ähnelt dem Zugreifen auf ein Feld. Fügen Sie nach dem Objektnamen einen Punkt, den Namen der Methode und Klammern hinzu. Argumente werden innerhalb der Klammern aufgelistet und durch Kommas getrennt. Die Methoden der `Motorcycle`-Klasse können also wie im folgenden Beispiel gezeigt aufgerufen werden:  
+ Das Aufrufen einer Methode für ein Objekt ähnelt dem Zugreifen auf ein Feld. Fügen Sie nach dem Objektnamen einen Punkt, den Namen der Methode und Klammern hinzu. Argumente werden innerhalb der Klammern aufgelistet und durch Kommas getrennt. Die Methoden der `Motorcycle` -Klasse können also wie im folgenden Beispiel gezeigt aufgerufen werden:  
   
  [!code-csharp[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
   
 ## <a name="method-parameters-vs-arguments"></a>Methodenparameter und Argumente  
- Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parameter an. Wenn aufrufender Code die Methode aufruft, werden für jeden Parameter konkrete Werte bereitgestellt, die als Argumente bezeichnet werden. Die Argumente müssen mit dem Parametertyp kompatibel sein, aber der im aufrufenden Code verwendete Name des Arguments (sofern vorhanden) muss nicht mit dem in der Methode definierten Parameternamen identisch sein. Zum Beispiel:  
+ Die Methodendefinition gibt die Namen und Typen aller ggf. erforderlichen Parameter an. Wenn aufrufender Code die Methode aufruft, werden für jeden Parameter konkrete Werte bereitgestellt, die als Argumente bezeichnet werden. Die Argumente müssen mit dem Parametertyp kompatibel sein, aber der im aufrufenden Code verwendete Name des Arguments (sofern vorhanden) muss nicht mit dem in der Methode definierten Parameternamen identisch sein. Beispiel:  
   
  [!code-csharp[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
   
@@ -158,14 +158,14 @@ public Customer this[long id] => store.LookupCustomer(id);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Klassen und Strukturen](index.md)  
-- [Zugriffsmodifizierer](access-modifiers.md)  
-- [Statische Klassen und statische Klassenmember](static-classes-and-static-class-members.md)  
-- [Vererbung](inheritance.md)  
-- [Abstrakte und versiegelte Klassen und Klassenmember](abstract-and-sealed-classes-and-class-members.md)  
-- [params](../../../csharp/language-reference/keywords/params.md)  
-- [return](../../../csharp/language-reference/keywords/return.md)  
-- [out](../../../csharp/language-reference/keywords/out.md)  
-- [ref](../../../csharp/language-reference/keywords/ref.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Klassen und Strukturen](index.md)
+- [Zugriffsmodifizierer](access-modifiers.md)
+- [Statische Klassen und statische Klassenmember](static-classes-and-static-class-members.md)
+- [Vererbung](inheritance.md)
+- [Abstrakte und versiegelte Klassen und Klassenmember](abstract-and-sealed-classes-and-class-members.md)
+- [params](../../../csharp/language-reference/keywords/params.md)
+- [return](../../../csharp/language-reference/keywords/return.md)
+- [out](../../../csharp/language-reference/keywords/out.md)
+- [ref](../../../csharp/language-reference/keywords/ref.md)
 - [Übergeben von Parametern](passing-parameters.md)

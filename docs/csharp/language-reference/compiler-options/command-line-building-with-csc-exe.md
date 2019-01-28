@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 833308838c5087a657c8f718682aef8d971c188f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: bb8f9ace8f259ece803aa6681ebab90355146380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415909"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661697"
 ---
 # <a name="command-line-build-with-cscexe"></a>Erstellen über die Befehlszeile mit csc.exe
 Sie können den C#-Compiler aufrufen, indem Sie den Namen seiner ausführbaren Datei (*csc.exe*) in der Befehlszeile eingeben.
@@ -97,11 +97,11 @@ Durch den Aufruf des C#-Compilers werden keine Objektdateien (*.obj*) erstellt, 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
-- [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
-- [C#-Compileroptionen nach Kategorien sortiert](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
-- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
-- [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-- [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von „foreach“](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
+- [C#-Compileroptionen alphabetisch sortiert](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)
+- [C#-Compileroptionen nach Kategorien sortiert](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)
+- [Vorgehensweise: Anzeigen von Befehlszeilenargumenten](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von „foreach“](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

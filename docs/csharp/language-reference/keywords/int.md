@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: 3436d2ceeec9eed80f346c28231ba376cf6d5fb6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b1a621b7cce61ecd2c26c72adbdc3aa56749c914
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615649"
 ---
 # <a name="int-c-reference"></a>int (C#-Referenz)
 
@@ -52,7 +52,7 @@ Im Folgenden werden einige Beispiele veranschaulicht.
 In diesen Beispielen ist das Literal 90946 vom Typ `int`.
   
 ## <a name="conversions"></a>Konvertierungen  
- Es gibt eine vordefinierte implizite Konvertierung von `int` in [long](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) oder [decimal](../../../csharp/language-reference/keywords/decimal.md). Zum Beispiel:  
+ Es gibt eine vordefinierte implizite Konvertierung von `int` in [long](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) oder [decimal](../../../csharp/language-reference/keywords/decimal.md). Beispiel:  
   
 ```csharp  
 // '123' is an int, so an implicit conversion takes place here:  
@@ -82,11 +82,11 @@ Weitere Informationen finden Sie unter [Intregrale Datentypen](~/_csharplang/spe
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Int32>  
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
-- [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.Int32>
+- [C#-Referenz](../../../csharp/language-reference/index.md)
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+- [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

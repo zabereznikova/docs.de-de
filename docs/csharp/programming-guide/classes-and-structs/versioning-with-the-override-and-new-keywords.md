@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ddb34fd32d13224faed92bd8ba01933ca19c04a9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5c83ce79bede1ee4e5752ac0b1dcf9647df1f36c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555985"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Versionsverwaltung mit den Schlüsselwörtern "override" und "new" (C#-Programmierhandbuch)
 Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csharp/language-reference/keywords/base.md)- (Basis-) und abgeleiteten Klassen in unterschiedlichen Bibliotheken weiterentwickelt und die Abwärtskompatibilität aufrechterhalten werden kann. Das bedeutet z.B., dass die Einführung eines neuen Members in einer [Basisklasse](../../../csharp/language-reference/keywords/class.md) mit demselben Name wie ein Member in einer abgeleiteten Klasse von C# vollständig unterstützt wird und nicht zu unerwartetem Verhalten führt. Das bedeutet auch, dass eine Klasse explizit angeben muss, ob eine Methode für das außer Kraft setzen einer geerbten Methode vorgesehen ist, oder ob eine Methode eine neue Methode ist, die eine Methode mit ähnlichem Namen verbirgt.  
@@ -81,7 +81,7 @@ Die C#-Sprache wurde entwickelt, damit die Versionierung von [base](../../../csh
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

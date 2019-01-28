@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: c7775de75ddbf274f3a1555c9f0daaf63bbee713
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dfa3b60e0c76e377a52243c534139d6c9025d46e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573325"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Erstellen und Auslösen von Ausnahmen (C#-Programmierhandbuch)
 Ausnahmen werden verwendet, um anzugeben, dass während der Ausführung des Programms ein Fehler aufgetreten ist. Ausnahmeobjekte, die einen Fehler beschreiben, werden erstellt und dann mit dem Schlüsselwort [throw](../../../csharp/language-reference/keywords/throw.md) (auslösen) *ausgelöst*. Die Laufzeit sucht dann nach dem kompatibelsten Ausnahmehandler.  
@@ -68,7 +68,7 @@ Weitere Informationen finden Sie unter [Ausnahmen](~/_csharplang/spec/exceptions
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)  
-- [Ausnahmenhierarchie](../../../standard/exceptions/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md)
+- [Ausnahmenhierarchie](../../../standard/exceptions/index.md)
 - [Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/exception-handling.md)

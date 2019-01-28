@@ -2,12 +2,12 @@
 title: Refactoring mithilfe einer reinen Funktion (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 66aab1b92f1a017eae650b18bd13d52536e84a6f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45610118"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692297"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactoring mithilfe einer reinen Funktion (C#)
 Das folgende Beispiel gestaltet das vorherige Beispiel, [Refactoring Using an Extension Method (Refactoring mit einer Erweiterungsmethode (C#))](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) so um, dass es eine reine Funktion verwendet. In diesem Beispiel wird der Code, der den Text eines Absatzes ermitteln soll, in die reine statische Methode `ParagraphText` verschoben.  
@@ -181,6 +181,6 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
-- [Refactoring mit einer Erweiterungsmethode (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Refactoring mit einer Erweiterungsmethode (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
 - [Refactoring in reine Funktionen (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

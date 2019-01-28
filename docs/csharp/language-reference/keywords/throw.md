@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f9729a3536a6611ed593f16ba3bc09e7af20a4c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4e29c0cc85f0ec6ccd3f428d64121f53b91ae9a7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238818"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713849"
 ---
 # <a name="throw-c-reference"></a>throw (C#-Referenz)
 
@@ -70,10 +70,10 @@ Ab C# 7.0 kann `throw` sowohl als Ausdruck als auch als Anweisung verwendet werd
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../index.md)  
-- [C#-Programmierhandbuch](../../programming-guide/index.md)  
-- [try-catch](try-catch.md)  
-- [The try, catch, and throw Statements in C++ (Die Anweisungen „try“, „catch“ und „throw“ in C++)](try-catch.md)  
-- [C#-Schlüsselwörter](index.md)  
-- [Ausnahmebehandlungsanweisungen](exception-handling-statements.md)  
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [try-catch](try-catch.md)
+- [The try, catch, and throw Statements in C++ (Die Anweisungen „try“, „catch“ und „throw“ in C++)](try-catch.md)
+- [C#-Schlüsselwörter](index.md)
+- [Ausnahmebehandlungsanweisungen](exception-handling-statements.md)
 - [Vorgehensweise: Explizites Auslösen von Ausnahmen](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

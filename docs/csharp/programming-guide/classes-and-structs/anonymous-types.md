@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 234190beb2cde69906df9d5c5f468689b7399535
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 179e49f44b2dbf711dae2ce81a1ef14815b7d18a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235984"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729758"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Anonyme Typen (C#-Programmierhandbuch)
 Anonyme Typen stellen eine praktische Möglichkeit dar, einen Satz schreibgeschützter Eigenschaften in einem Objekt zu kapseln, ohne zuerst explizit einen Typ definieren zu müssen. Der Typname wird vom Compiler generiert und ist auf Quellcodeebene nicht verfügbar. Der Typ der einzelnen Eigenschaften wird vom Compiler abgeleitet.  
@@ -57,7 +57,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Erste Schritte mit LINQ in C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: a9e20d0020b82973fb95e422c30f87421adedd5c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3a615bd1db3742787a5fb41ea5b309dd72746e43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236894"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492476"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Allgemeine Struktur eines C#-Programms (C#-Programmierhandbuch)
 C#-Programme bestehen aus mindestens einer Datei. Jede Datei kann 0 (null) oder mehrere Namespaces enthalten. Ein Namespace kann Typen, z.B. Klassen, Strukturen, Schnittstellen, Enumerationen und Delegaten sowie andere Namespaces enthalten. Im Folgenden wird das Grundgerüst eines C#-Programms dargestellt, das alle diese Elemente enthält.  
@@ -36,7 +36,7 @@ Weitere Informationen finden Sie in den [grundlegenden Konzepten](~/_csharplang/
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)  
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Einblicke in ein C#-Programm](../../../csharp/programming-guide/inside-a-program/index.md)
+- [C#-Referenz](../../../csharp/language-reference/index.md)
 - [Beispielanwendungen für C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)

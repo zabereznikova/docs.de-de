@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: d29de118e928522dcc3a4b4ab32fe2d2c4d1f2f9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e52e5857d9fbe70cbd71ec91f8aa0c49b0e85df8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54552306"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Verwenden von Namespaces (C#-Programmierhandbuch)
 Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwendet. Erstens: Die .NET Framework-Klassen verwenden Namespaces, um ihre zahlreichen Klassen zu organisieren. Zweitens: Eigene Namespaces zu deklarieren kann Ihnen dabei helfen, den Umfang der Klassen- und Methodennamen in größeren Programmierprojekten zu steuern.  
@@ -90,9 +90,9 @@ Namespaces werden häufig in C# -Programmen auf zwei verschiedene Arten verwende
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)  
-- [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [. Operator](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
+- [Namespaceschlüsselwörter](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [. Operator](../../../csharp/language-reference/operators/member-access-operator.md)
+- [:: Operator](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: af80f403942f59d672854c80830e175ef7ebaff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652184"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Schnittstelleneigenschaften (C#-Programmierhandbuch)
 Eigenschaften können für eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) deklariert werden. Das folgende Beispiel zeigt den Accessor einer Schnittstelleneigenschaft:  
@@ -23,7 +23,7 @@ Eigenschaften können für eine [Schnittstelle](../../../csharp/language-referen
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel besitzt die Schnittstelle `IEmployee` eine Lese-/Schreibzugriff-Eigenschaft `Name` und eine Lesezugriff-Eigenschaft `Counter`. Die Klasse `Employee` implementiert die Schnittstelle `IEmployee` und verwendet diese beiden Eigenschaften. Der Name eines neuen Mitarbeiters und die aktuelle Anzahl der Mitarbeiter werden vom Programm gelesen, und der Mitarbeitername sowie die berechnete Mitarbeiteranzahl werden angezeigt.  
   
- Sie können den vollqualifizierten Namen der Eigenschaft verwenden, der auf die Schnittstelle verweist, in der der Member deklariert wird. Zum Beispiel:  
+ Sie können den vollqualifizierten Namen der Eigenschaft verwenden, der auf die Schnittstelle verweist, in der der Member deklariert wird. Beispiel:  
   
  [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
@@ -53,9 +53,9 @@ Eigenschaften können für eine [Schnittstelle](../../../csharp/language-referen
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Verwenden von Eigenschaften](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [Vergleich zwischen Eigenschaften und Indexern](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
-- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Verwenden von Eigenschaften](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [Vergleich zwischen Eigenschaften und Indexern](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
+- [Indexer](../../../csharp/programming-guide/indexers/index.md)
 - [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)

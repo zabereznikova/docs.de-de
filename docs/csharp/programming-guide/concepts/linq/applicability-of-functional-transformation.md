@@ -2,12 +2,12 @@
 title: Anwendbarkeit der funktionalen Transformation (C#)
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
-ms.openlocfilehash: baa3866c8c2c148a3080522d7c02e28e9d0fd945
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 72027dadfd2b9a4596c68507535301a8a20741fb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086816"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598146"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>Anwendbarkeit der funktionalen Transformation (C#)
 Reine funktionale Transformationen können in vielen Situationen angewendet werden.  
@@ -34,6 +34,6 @@ Reine funktionale Transformationen können in vielen Situationen angewendet werd
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
-- [Funktionale Transformation von XML (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)  
+- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Funktionale Transformation von XML (C#)](../../../../csharp/programming-guide/concepts/linq/functional-transformation-of-xml.md)
 - [Refactoring in reine Funktionen (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

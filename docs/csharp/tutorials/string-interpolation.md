@@ -3,12 +3,12 @@ title: Zeichenfolgeninterpolation in C#
 description: Informationen zum Hinzufügen von formatierten Ausdrucksergebnissen in einer Ergebniszeichenfolge in C# mithilfe von Zeichenfolgeninterpolation
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: ef4358ff61cde43998fc0dc4ba174dc0f06bc2bd
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 702a586d6a1d6844e7f5efb14a86ec635d41445c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727858"
 ---
 # <a name="string-interpolation-in-c"></a>Zeichenfolgeninterpolation in C# #
 
@@ -110,7 +110,7 @@ In diesem Tutorial wurden häufig auftretende Szenarios zur Verwendung der Zeich
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- <xref:System.FormattableString?displayProperty=nameWithType>  
-- <xref:System.IFormattable?displayProperty=nameWithType>  
-- [Zeichenfolgen](../programming-guide/strings/index.md)  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [Zeichenfolgen](../programming-guide/strings/index.md)

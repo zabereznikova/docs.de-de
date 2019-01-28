@@ -2,12 +2,12 @@
 title: Aktivieren einer Datenquelle für LINQ-Abfragen1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 1aa3a22028b0b3d7c705076a3e16379e09323271
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d3faeb15c5c8deedec3c3347c6317cac872224f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122696"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54515718"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Aktivieren einer Datenquelle für LINQ-Abfragen
 Es gibt verschiedene Möglichkeiten, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zu erweitern, um die Abfrage einer beliebigen Datenquelle im [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Muster zu ermöglichen. Bei der Datenquelle kann es sich u. a. um eine Datenstruktur, einen Webdienst, ein Dateisystem oder eine Datenbank handeln. Das [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Muster erleichtert Clients das Ausführen von Abfragen für eine Datenquelle mit aktivierter [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage, da die Syntax und das Muster der Abfrage unverändert bleiben. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kann u.a. auf folgende Weisen für die Verwendung dieser Datenquellen erweitert werden:  
@@ -41,8 +41,8 @@ Es gibt verschiedene Möglichkeiten, [!INCLUDE[vbteclinq](~/includes/vbteclinq-m
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Linq.IQueryable%601>  
-- <xref:System.Collections.Generic.IEnumerable%601>  
-- <xref:System.Linq.Enumerable>  
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- <xref:System.Linq.IQueryable%601>
+- <xref:System.Collections.Generic.IEnumerable%601>
+- <xref:System.Linq.Enumerable>
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 598f0e75a96a43162d0c626d00320effb418c7fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4bb5a8134bb9cbcdb70830628895338ec83b28a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241430"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614119"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Codekonventionen für C# (C#-Programmierhandbuch)
  Codierungskonventionen dienen den folgenden Zwecken:  
@@ -115,7 +115,7 @@ ms.locfileid: "53241430"
   
      [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
-### <a name="delegates"></a>Delegate  
+### <a name="delegates"></a>Delegaten  
   
 -   Verwenden Sie die präzise Syntax, um Instanzen eines Delegattyps zu erstellen.  
   
@@ -198,5 +198,5 @@ ms.locfileid: "53241430"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual Basic-Codierungskonventionen](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)  
+- [Visual Basic-Codierungskonventionen](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [Richtlinien für das Schreiben von sicherem Code](../../../standard/security/secure-coding-guidelines.md)

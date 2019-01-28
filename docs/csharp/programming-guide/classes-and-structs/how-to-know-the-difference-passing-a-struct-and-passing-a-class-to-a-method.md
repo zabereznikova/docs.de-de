@@ -7,12 +7,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: c5963f45ee233f4413c4281a063c9c3d2a4c2a93
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f131f647d5335a011c5f446f847ed43fda019ade
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559279"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Vorgehensweise: Unterschiede zwischen dem Übergeben einer Struktur und dem Übergeben eines Klassenverweises an eine Methode (C#-Programmierhandbuch)
 Das folgende Beispiel stellt dar, wie die Übergabe einer [Struktur](../../../csharp/language-reference/keywords/struct.md) an eine Methode sich von der Übergabe einer [Klasseninstanz](../../../csharp/language-reference/keywords/class.md) an eine Methode unterscheidet. Im Beispiel werden beide Argumente (Struktur und Klasseninstanz) nach Wert übergeben, und beide Methoden ändern den Wert eines Felds des Arguments. Allerdings sind die Ergebnisse der beiden Methoden nicht identisch, denn wenn Sie eine Struktur übergeben, unterscheidet sich dies von dem, wenn Sie eine Instanz einer Klasse übergeben.  
@@ -28,7 +28,7 @@ Das folgende Beispiel stellt dar, wie die Übergabe einer [Struktur](../../../cs
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)
 - [Übergeben von Parametern](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)

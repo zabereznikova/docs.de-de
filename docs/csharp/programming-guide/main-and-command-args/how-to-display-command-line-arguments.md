@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: 9b09f5a1991ab5545ab31b1879f30c383a0e9a9f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 948ff6e752b3f5cce870b483340cbbf9f4e78b01
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236530"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607714"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Vorgehensweise: Anzeigen von Befehlszeilenargumenten (C#-Programmierhandbuch)
 Auf die Argumente, die für eine ausführbare Datei in der Befehlszeile bereitgestellt wurden, können Sie über einen optionalen Parameter für `Main` zugreifen. Die Argumente werden in Form eines Arrays von Zeichenfolgen bereitgestellt. Jedes Element des Arrays enthält ein Argument. Leerzeichen zwischen Argumenten wird entfernt. Beachten Sie z.B. diese Befehlszeilenaufrufe einer fiktiven ausführbaren Datei:  
@@ -31,8 +31,8 @@ Auf die Argumente, die für eine ausführbare Datei in der Befehlszeile bereitge
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von „foreach“](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Erstellen über die Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [Main() und Befehlszeilenargumente](../../../csharp/programming-guide/main-and-command-args/index.md)
+- [Vorgehensweise: Zugreifen auf Befehlszeilenargumente mithilfe von „foreach“](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main()-Rückgabewerte](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

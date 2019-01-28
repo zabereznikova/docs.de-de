@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 316f8f59b86294b1f344b31f7355017ebd992362
-ms.sourcegitcommit: 8598d446303b545eed2d520a6ccd061c1a7d00cb
+ms.openlocfilehash: b31eb8bfc5a933cc374528c9a4d7b97ad72a7412
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53334755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604222"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Eindimensionale Arrays (C#-Programmierhandbuch)
 
@@ -57,8 +57,8 @@ Sie können ein eindimensionales Array aus fünf ganzen Zahlen deklarieren, wie 
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Array>  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Arrays](../../../csharp/programming-guide/arrays/index.md)  
-- [Mehrdimensionale Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+- <xref:System.Array>
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Arrays](../../../csharp/programming-guide/arrays/index.md)
+- [Mehrdimensionale Arrays](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
 - [Verzweigte Arrays](../../../csharp/programming-guide/arrays/jagged-arrays.md)

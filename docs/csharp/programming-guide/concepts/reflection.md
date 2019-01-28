@@ -2,12 +2,12 @@
 title: Reflektion (C#)
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: d04fb15add465d0a04ac6b38b1c47aa408c81eaa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8cdfe00a09d340d8b77f1f5582a3a3ad82c496b1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521671"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537646"
 ---
 # <a name="reflection-c"></a>Reflektion (C#)
 Reflektion bietet Objekte (vom Typ <xref:System.Type>), die Assemblys, Module und Typen beschreiben. Mithilfe von Reflektion können Sie dynamisch eine Instanz eines Typs erzeugen, den Typ an ein vorhandenes Objekt binden und Typinformationen von vorhandenen Objekten abfragen. Ebenso wird erläutert wie die Methoden vorhandener Objekte aufgerufen und auf ihre Felder und Eigenschaften zugegriffen werden kann. Wenn Sie Attribute in Ihrem Code verwenden, können Sie mit Reflektion auf diese zugreifen. Weitere Informationen finden Sie unter [Attribute](../../../../docs/standard/attributes/index.md).  
@@ -66,5 +66,5 @@ System.Console.WriteLine(info);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [Assemblys in der Common Language Runtime (CLR)](../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

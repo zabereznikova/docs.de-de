@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: df590cf9d18b6de81caccfb77e544451da9ee0df
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 57a368f6aadee608297124a9cc72dc76b0e36f30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681910"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Benannte und optionale Argumente (C#-Programmierhandbuch)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] führt benannte und optionale Argumente ein. *Benannte Argumente* ermöglichen es Ihnen, ein Argument für einen bestimmten Parameter anzugeben, indem Sie das Argument dem Parameternamen anstatt der Position des Parameters in der Parameterliste zuordnen. *Optionale Argumente* ermöglichen es Ihnen, Argumente für einige Parameter auszulassen. Beide Techniken können mit Methoden, Indexern, Konstruktoren und Delegaten verwendet werden.  
@@ -131,7 +131,7 @@ AutoFormat-Parameter
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
-- [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md)  
-- [Verwenden von Konstruktoren](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [Vorgehensweise: Verwenden von benannten und optionalen Argumenten in der Office-Programmierung](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [Verwenden von Konstruktoren](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
 - [Verwenden von Indexern](../../../csharp/programming-guide/indexers/using-indexers.md)

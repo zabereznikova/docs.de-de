@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C#], type parameters
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
-ms.openlocfilehash: 8b9e040beea0590320a34d35ca323374f357bf2f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 48fa90226b7a8a36f5f432921cf5d999e76c6fa8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238194"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681637"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>Generische Typparameter (C#-Programmierhandbuch)
 Bei der Definition eines generischen Typs oder einer Methode ist ein Typparameter ein Platzhalter für einen bestimmten Typ, den ein Client angibt, wenn eine Variable des generischen Typs instanziiert wird. Eine generische Klasse, z.B. die unter [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md) aufgelistete Klasse `GenericList<T>`, kann nicht ohne Anpassung verwendet werden, denn sie ist nicht wirklich ein Typ, sondern mehr wie die Kopie eines Typs. Um `GenericList<T>` verwenden zu können, muss der Clientcode einen konstruierten Typ deklarieren und instanziieren, indem er ein Typargument in spitzen Klammern angibt. Das Typargument für diese spezielle Klasse kann jeder Typ sein, der vom Compiler erkannt wird. Instanzen von konstruierten Typen können in beliebiger Zahl erstellt werden, wobei jede Instanz ein anderes Typargument verwendet, z.B.:  
@@ -38,7 +38,7 @@ Bei der Definition eines generischen Typs oder einer Methode ist ein Typparamete
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Collections.Generic>  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Generika](../../../csharp/programming-guide/generics/index.md)  
+- <xref:System.Collections.Generic>
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Generika](../../../csharp/programming-guide/generics/index.md)
 - [Unterschiede zwischen C++-Vorlagen und C#-Generika](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)

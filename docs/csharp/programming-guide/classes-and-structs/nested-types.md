@@ -5,15 +5,15 @@ ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: b08a7e95e3ddf7e2392be30f2e69c4ec8f425107
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 32f434d9813b08254b72b713ec2f9a1bc9d1b06d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244008"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54725011"
 ---
 # <a name="nested-types-c-programming-guide"></a>Geschachtelte Typen (C#-Programmierhandbuch)
-Ein innerhalb einer [Klasse](../../../csharp/language-reference/keywords/class.md) oder [Struktur](../../../csharp/language-reference/keywords/struct.md) definierter Typ wird als geschachtelter Typ bezeichnet. Zum Beispiel:  
+Ein innerhalb einer [Klasse](../../../csharp/language-reference/keywords/class.md) oder [Struktur](../../../csharp/language-reference/keywords/struct.md) definierter Typ wird als geschachtelter Typ bezeichnet. Beispiel:  
   
 [!code-csharp[csProgGuideObjects#68](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_1.cs)]  
   
@@ -43,7 +43,7 @@ Im folgenden Beispiel wird die `Nested`-Klasse öffentlich gemacht:
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md)

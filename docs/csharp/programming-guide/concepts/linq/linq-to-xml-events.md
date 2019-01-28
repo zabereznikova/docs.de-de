@@ -2,12 +2,12 @@
 title: LINQ to XML-Ereignisse (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-ms.openlocfilehash: 6308d81eac830e11b6d58f8e460dfa377663cd21
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: f7ce6ed99f7279d1dc774314cdc2dde345b6a84d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736863"
 ---
 # <a name="linq-to-xml-events-c"></a>LINQ to XML-Ereignisse (C#)
 Mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Ereignissen können Sie sich benachrichtigen lassen, wenn eine XML-Struktur geändert wird.  
@@ -19,21 +19,21 @@ Mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Ereignissen können Si
 ## <a name="types-and-events"></a>Typen und Ereignisse  
  Beim Arbeiten mit Ereignissen stehen Ihnen die folgenden Typen zur Verfügung:  
   
-|Typ|Beschreibung |  
+|Typ|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Gibt den Ereignistyp an, wenn ein Ereignis für ein <xref:System.Xml.Linq.XObject> ausgelöst wird.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|Stellt Daten für das <xref:System.Xml.Linq.XObject.Changing>-Ereignis und das <xref:System.Xml.Linq.XObject.Changed>-Ereignis bereit.|  
   
  Die folgenden Ereignisse werden ausgelöst, wenn Sie eine XML-Struktur ändern:  
   
-|event|Beschreibung |  
+|event|Beschreibung|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|Tritt ein, unmittelbar bevor sich dieses <xref:System.Xml.Linq.XObject> oder eines seiner Nachfolger ändert.|  
 |<xref:System.Xml.Linq.XObject.Changed>|Tritt ein, wenn sich ein <xref:System.Xml.Linq.XObject> oder eines seiner Nachfolger geändert hat.|  
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung   
+### <a name="description"></a>Beschreibung  
  Ereignisse erweisen sich als nützlich, wenn aggregierte Informationen in einer XML-Struktur bereitgestellt werden sollen. So können Sie auf diese Weise z. B. einen Rechnungsgesamtbetrag bereitstellen, der sich aus der Summe der Einzelpositionen der Rechnung ergibt. Dieses Beispiel verwendet Ereignisse, um den Gesamtbetrag aller untergeordneten Elemente des komplexen Elements `Items` bereitzustellen:  
   
 ### <a name="code"></a>Code  

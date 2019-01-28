@@ -1,19 +1,19 @@
 ---
 title: Befehl „dotnet publish“
-description: Der Befehl „dotnet publish“ veröffentlicht ein .NET Core-Projekt in einem Verzeichnis.
+description: Der „dotnet publish“-Befehl veröffentlicht ein .NET Core-Projekt in einem Verzeichnis.
 ms.date: 05/29/2018
-ms.openlocfilehash: 353adfcbb0479e4a951b900f06327e23a3414225
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 40ce31073ee3f6f94e110f3a4e1eeda0c7b2e48d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54559306"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet publish`: Packt die Anwendung und ihre Abhängigkeiten in einen Ordner für die Bereitstellung auf einem Hostsystem.
 
@@ -227,5 +227,5 @@ Veröffentlichen sie die aktuelle Anwendung, aber fügen Sie während der Wieder
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Zielframeworks](../../standard/frameworks.md)
-* [Runtime-ID-Katalog (RID)](../rid-catalog.md)
+- [Zielframeworks](../../standard/frameworks.md)
+- [Runtime-ID-Katalog (RID)](../rid-catalog.md)

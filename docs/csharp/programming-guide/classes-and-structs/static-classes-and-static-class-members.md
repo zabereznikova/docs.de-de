@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: eae8d290c25399170153bbebd0637539bc565584
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 870d7593dcfd6c2b8d58562d182d37a64484a53e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362872"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577498"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statische Klassen und statische Klassenmember (C#-Programmierhandbuch)
 Eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse ist im Grunde identisch mit einer nicht statischen Klasse, aber es gibt einen Unterschied: Eine statische Klasse kann nicht instanziiert werden. Das heißt, Sie können das Schlüsselwort [new](../../../csharp/language-reference/keywords/new.md) nicht verwenden, um eine Variable des Klassentyps zu erstellen. Da keine Instanzvariable vorhanden ist, greifen Sie auf die Member einer statischen Klasse mit dem Klassennamen selbst zu. Wenn Sie z.B. eine statische Klasse dem Namen `UtilityClass` haben, die eine öffentliche statische Methode mit dem Namen `MethodA` besitzt, rufen Sie die Methode wie im folgenden Beispiel gezeigt auf:  
@@ -90,9 +90,9 @@ Weitere Informationen erhalten Sie unter [Statische Klassen](~/_csharplang/spec/
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [static](../../../csharp/language-reference/keywords/static.md)  
-- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
-- [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [static](../../../csharp/language-reference/keywords/static.md)
+- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [class](../../../csharp/language-reference/keywords/class.md)
+- [Statische Konstruktoren](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)
 - [Instanzkonstruktoren](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)

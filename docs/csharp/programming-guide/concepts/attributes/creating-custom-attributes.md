@@ -2,12 +2,12 @@
 title: Erstellen benutzerdefinierter Attribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 0a27924623cc462f6d3339149718a1b29999ac1d
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 0277a88b7e5beda511f6490261a7009adcfed4ee
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058268"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54674634"
 ---
 # <a name="creating-custom-attributes-c"></a>Erstellen benutzerdefinierter Attribute (C#)
 Sie können eigene benutzerdefinierte Attribute erstellen, indem Sie eine Attributklasse definieren. Dies ist eine Klasse, die direkt oder indirekt von <xref:System.Attribute> abgeleitet wird, was es einfach macht, schnell Attributdefinitionen in Metadaten zu identifizieren. Angenommen, Sie möchten Typen mit dem Namen des Programmierers markieren, der den Typ geschrieben hat. Sie definieren möglicherweise eine benutzerdefinierte `Author`-Attributklasse:  
@@ -65,10 +65,10 @@ class SampleClass
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Reflection>  
-- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
-- [Verfassen von benutzerdefinierten Attributen](../../../../standard/attributes/writing-custom-attributes.md)  
-- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
-- [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
-- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- <xref:System.Reflection>
+- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
+- [Verfassen von benutzerdefinierten Attributen](../../../../standard/attributes/writing-custom-attributes.md)
+- [Reflektion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
+- [Attribute (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
+- [Accessing Attributes by Using Reflection (C#) (Zugriff auf Attribute mit Reflektion (C#))](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
 - [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)

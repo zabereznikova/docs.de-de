@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 45bc5cbbdd1c0721797aed38636892e731c2883f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 02540db02d8e413ec254c0642d106ca41b263376
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513885"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54662516"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ und generische Typen (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen basieren auf generischen Typen, die mit Version 2.0 von [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] eingeführt wurden. Sie benötigen kein ausführliches Wissen über Generika, um Abfragen schreiben zu können. Dennoch sollten Sie zwei grundlegende Konzepte verstehen:  
@@ -38,5 +38,5 @@ ms.locfileid: "43513885"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Generika](../../../../csharp/programming-guide/generics/index.md)

@@ -2,12 +2,12 @@
 title: Verwenden von XSLT zum Transformieren eines XML-Baums (C#)
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
-ms.openlocfilehash: 3fa850c0f09404da49b2963e980d15e1ed54316f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cbba118be31a852420616a667660cef25cb9fd88
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47207545"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54692310"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>Verwenden von XSLT zum Transformieren eines XML-Baums (C#)
 Sie können eine XML-Struktur erstellen, einen <xref:System.Xml.XmlReader> aus der XML-Struktur erstellen, ein neues Dokument erstellen und dann einen <xref:System.Xml.XmlWriter> erstellen, der in das neue Dokument schreibt. Anschließend können Sie die XSLT-Transformation aufrufen und den <xref:System.Xml.XmlReader> sowie den <xref:System.Xml.XmlWriter> an die Transformation übergeben. Nach erfolgreichem Abschluss der Transformation wird die neue XML-Struktur mit den Ergebnissen der Transformation aufgefüllt.  
@@ -60,6 +60,6 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>  
-- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
 - [Advanced LINQ to XML Programming (C#) (Erweiterte LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

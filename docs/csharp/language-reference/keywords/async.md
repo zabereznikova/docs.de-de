@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 7bf45a701b10372d8cc4061db13f347eb0ddae91
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f902d6a92f9d982dc00c3446f7b516c372f1a30e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242425"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709519"
 ---
 # <a name="async-c-reference"></a>async (C#-Referenz)
 Mit dem `async`-Modifizierer können Sie angeben, dass eine Methode, ein [Lambdaausdruck](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) oder eine [anonyme Methode](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) asynchron ist. Wenn Sie diesen Modifizierer auf Methoden oder Ausdrücke anwenden, wird dies als *asynchrone Methode* bezeichnet. Im folgenden Beispiel wird eine asynchrone Methode mit dem Namen `ExampleMethodAsync` definiert: 
@@ -85,7 +85,7 @@ Weitere Informationen und Beispiele finden Sie unter [Asynchrone Rückgabetypen]
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
-- [await](../../../csharp/language-reference/keywords/await.md)  
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
+- [await](../../../csharp/language-reference/keywords/await.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md)
