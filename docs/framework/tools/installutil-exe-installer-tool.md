@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cd7826581a8750d0c5bc87b6223d51eb2b6cce2
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: e2cba7099b84cb8a11fb7c11fae960293eb60a18
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221946"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658259"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Installer-Tool)
 Das Installationsprogrammtool ist ein Befehlszeilen-Hilfsprogramm, mit dem Sie Serverressourcen installieren und deinstallieren können, indem Sie die Komponenten des Installationsprogramms in angegebenen Assemblys ausführen. Dieses Tool funktioniert in Verbindung mit Klassen im <xref:System.Configuration.Install>-Namespace.  
@@ -46,8 +46,8 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|`/h[elp]`<br /><br /> - oder - <br /><br /> `/?`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|`/help` *assembly*<br /><br /> - oder -<br /><br /> `/?` *assembly*|Zeigt zusätzliche Optionen, die von einzelnen Installationsprogrammen innerhalb der angegebenen Assembly erkannt werden, zusammen mit der Befehlssyntax und Optionen für "InstallUtil.exe" an. Mit dieser Option wird dem Hilfetext von "InstallUtil.exe" der von der <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>-Eigenschaft aller Installationsprogrammkomponenten zurückgegebene Text hinzugefügt.|  
+|`/h[elp]`<br /><br /> - oder -<br /><br /> `/?`|Zeigt Befehlssyntax und Optionen für das Tool an.|  
+|`/help` *assembly*<br /><br /> - oder - <br /><br /> `/?` *assembly*|Zeigt zusätzliche Optionen, die von einzelnen Installationsprogrammen innerhalb der angegebenen Assembly erkannt werden, zusammen mit der Befehlssyntax und Optionen für "InstallUtil.exe" an. Mit dieser Option wird dem Hilfetext von "InstallUtil.exe" der von der <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>-Eigenschaft aller Installationsprogrammkomponenten zurückgegebene Text hinzugefügt.|  
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Gibt den starken Namen einer Assembly an, die im globalen Assemblycache registriert werden muss. Der Assemblyname muss mit der Version, Kultur und dem öffentlichen Schlüsseltoken der Assembly vollständig qualifiziert werden. Der vollqualifizierte Name muss in Anführungszeichen stehen.<br /><br /> "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" ist beispielsweise ein vollqualifizierter Assemblyname.|  
 |`/InstallStateDir=[` *directoryName* `]`|Gibt das Verzeichnis der INSTALLSTATE-Datei an, die die Daten enthält, die verwendet werden, um die Assembly zu deinstallieren. Das Standardverzeichnis ist das Verzeichnis, das die Assembly enthält.|  
 |`/LogFile=`[*filename*]|Gibt den Namen der Protokolldatei an, in der der Installationsverlauf aufgezeichnet wird. Wenn die Option `/LogFile` fehlt, wird standardmäßig die Protokolldatei „*assemblyname*.InstallLog“ erstellt. Wenn *filename* nicht angegeben wird, wird keine Protokolldatei generiert.|  
@@ -161,7 +161,7 @@ installutil /LogFile= /email=admin@mycompany.com myAssembly.exe
 installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallLog myTestAssembly.exe  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Configuration.Install>  
- [Extras](../../../docs/framework/tools/index.md)  
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Configuration.Install>
+- [Extras](../../../docs/framework/tools/index.md)
+- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: a065e04e6683279b4541d9a723ed9c7442dec9dc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50088597"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54598866"
 ---
 # <a name="deriving-from-webresponse"></a>Ableiten von WebResponse
 Die <xref:System.Net.WebResponse>-Klasse ist eine abstrakte Basisklasse, die die grundlegenden Methoden und Eigenschaften bereitstellt, mit denen eine protokollspezifische Antwort erstellt wird, die in das austauschbare Protokollmodell von .NET Framework passt. Anwendungen, die die <xref:System.Net.WebRequest>-Klasse zur Datenanforderung von Ressourcen verwenden, erhalten die Antworten in Form einer **WebResponse**. Protokollspezifische **WebResponse**-Nachfolger müssen die abstrakten Member der **WebResponse**-Klasse implementieren.  
@@ -38,9 +38,9 @@ Die <xref:System.Net.WebResponse>-Klasse ist eine abstrakte Basisklasse, die die
   
  Die von der **GetResponseStream**-Methode zurückgegebene Streaminstanz ist im Besitz der Anwendung und kann geschlossen werden, ohne **WebResponse** zu schließen. Konventionsgemäß wird durch Aufrufen der **WebResponse.Close**-Methode auch der von **GetResponse** zurückgegebene Datenstrom geschlossen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.WebResponse>  
- <xref:System.Net.HttpWebResponse>  
- <xref:System.Net.FileWebResponse>  
- [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Deriving from WebRequest (Ableiten von WebRequest)](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.WebResponse>
+- <xref:System.Net.HttpWebResponse>
+- <xref:System.Net.FileWebResponse>
+- [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Deriving from WebRequest (Ableiten von WebRequest)](../../../docs/framework/network-programming/deriving-from-webrequest.md)

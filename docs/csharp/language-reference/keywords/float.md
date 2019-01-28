@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 4ca256bf7204cdaad7d49ed19c662ab81bb01bf9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6bf8043b97d23fdb91ca5798ed46cdea783bad7e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242450"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54514129"
 ---
 # <a name="float-c-reference"></a>float (C#-Referenz)
 
@@ -66,12 +66,12 @@ Im folgenden Beispiel werden ein [int](int.md)-, ein [short](short.md) und ein `
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Single>  
-- [C#-Referenz](../index.md)  
-- [C#-Programmierhandbuch](../../programming-guide/index.md)  
-- [Umwandlung und Typkonvertierungen](../../programming-guide/types/casting-and-type-conversions.md)  
-- [C#-Schlüsselwörter](index.md)  
-- [Tabelle ganzzahliger Typen](integral-types-table.md)  
-- [Tabelle integrierter Typen](built-in-types-table.md)  
-- [Tabelle für implizite numerische Konvertierungen](implicit-numeric-conversions-table.md)  
-- [Tabelle für explizite numerische Konvertierungen](explicit-numeric-conversions-table.md)  
+- <xref:System.Single>
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [Umwandlung und Typkonvertierungen](../../programming-guide/types/casting-and-type-conversions.md)
+- [C#-Schlüsselwörter](index.md)
+- [Tabelle ganzzahliger Typen](integral-types-table.md)
+- [Tabelle integrierter Typen](built-in-types-table.md)
+- [Tabelle für implizite numerische Konvertierungen](implicit-numeric-conversions-table.md)
+- [Tabelle für explizite numerische Konvertierungen](explicit-numeric-conversions-table.md)

@@ -3,12 +3,12 @@ title: Grundlagen zu Abfrageausdrücken (LINQ in C#)
 description: Führt Konzepte im Zusammenhang mit Abfrageausdrücken ein
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 68f338381e354f4944539d63ca3a3cc3500031c1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625503"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709116"
 ---
 # <a name="query-expression-basics"></a>Grundlagen zu Abfrageausdrücken
 
@@ -154,7 +154,7 @@ Verwenden Sie die `join`-Klausel zum Zuordnen und/oder Kombinieren von Elementen
 
 [!code-csharp[csrefQueryExpBasics#61](~/samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]
 
-Sie können auch eine Gruppenverknüpfung durchführen, indem Sie die Ergebnisse des `join`-Vorgangs mithilfe des Schlüsselworts [into](../language-reference/keywords/into.md) in eine temporäre Variable speichern. Weitere Informationen finden Sie unter [Join-Klausel](../language-reference/keywords/join-clause.md).
+Sie können auch eine Gruppenverknüpfung durchführen, indem Sie die Ergebnisse des `join`-Vorgangs mithilfe des Schlüsselworts [into](../language-reference/keywords/into.md) in eine temporäre Variable speichern. Weitere Informationen finden Sie unter [join-Klausel](../language-reference/keywords/join-clause.md).
 
 #### <a name="let-clause"></a>let-Klausel 
 
@@ -174,7 +174,7 @@ Weitere Informationen finden Sie unter [How to: perform a subquery on a grouping
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../programming-guide/index.md)  
-- [Language-Integrated Query (LINQ)](index.md)  
-- [Abfrageschlüsselwörter (LINQ)](../language-reference/keywords/query-keywords.md)  
-- [Standard query operators overview (Übersicht über Standardabfrageoperatoren)](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [C#-Programmierhandbuch](../programming-guide/index.md)
+- [Language-Integrated Query (LINQ)](index.md)
+- [Abfrageschlüsselwörter (LINQ)](../language-reference/keywords/query-keywords.md)
+- [Standard query operators overview (Übersicht über Standardabfrageoperatoren)](../programming-guide/concepts/linq/standard-query-operators-overview.md)

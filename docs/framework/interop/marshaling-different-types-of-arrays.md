@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0c71284fbc925aa9bb10a8bf68cef581f78d7f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d3e56faad9e65cff6037f11b332d7b0df52a79fc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50088753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589544"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshallen verschiedener Typen von Arrays
 Ein Array ist ein Verweistyp in verwaltetem Code, der ein oder mehrere Elemente des gleichen Typs enthält. Obwohl es sich bei Arrays um Verweistypen handelt, werden sie als In-Parameter an unverwaltete Funktionen übergeben. Dieses Verhalten entspricht nicht der Art und Weise, wie verwaltete Arrays an verwaltete Objekte übergeben werden, d. h. Als In-/Out-Parameter. Weitere Details finden Sie unter [Kopieren und Fixieren](copying-and-pinning.md).  
   
  Die folgende Tabelle enthält eine Liste der Marshallingoptionen für Arrays und beschreibt deren Verwendung.  
   
-|Array|Beschreibung |  
+|Array|Beschreibung|  
 |-----------|-----------------|  
 |Aus ganzen Zahlen nach Wert|Übergibt ein aus ganzen Zahlen bestehendes Array als In-Parameter.|  
 |Aus ganzen Zahlen nach Verweis|Übergibt ein aus ganzen Zahlen bestehendes Array als In-/Out-Parameter.|  
@@ -104,7 +104,7 @@ typedef struct _MYPERSON
   
  In diesem Beispiel enthalten die Strukturen `MyPoint` und `MyPerson` eingebettete Typen. Das <xref:System.Runtime.InteropServices.StructLayoutAttribute> -Attribut ist so eingerichtet, dass sichergestellt wird, dass die Member im Speicher sequenziell in der Reihenfolge ihres Erscheinens angeordnet sind.  
   
- Die `LibWrap`-Klasse enthält eine Reihe von Methoden, die von der `App`-Klasse aufgerufen werden. Spezifische Details zum Übergeben von Array finden Sie in den Kommentaren im folgenden Beispiel. Ein Array vom Typ "Verweis" wird standardmäßig als In-Parameter übergeben. Damit das aufrufende Programm die Ergebnisse erhält, müssen **InAttribute** und **OutAttribute** explizit dem Argument hinzugefügt werden, das das Array enthält.  
+ Die `LibWrap` -Klasse enthält eine Reihe von Methoden, die von der `App` -Klasse aufgerufen werden. Spezifische Details zum Übergeben von Array finden Sie in den Kommentaren im folgenden Beispiel. Ein Array vom Typ "Verweis" wird standardmäßig als In-Parameter übergeben. Damit das aufrufende Programm die Ergebnisse erhält, müssen **InAttribute** und **OutAttribute** explizit dem Argument hinzugefügt werden, das das Array enthält.  
   
 ### <a name="declaring-prototypes"></a>Deklarieren von Prototypen  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
@@ -114,7 +114,7 @@ typedef struct _MYPERSON
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Marshallen von Typenarrays](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))  
- [Datentypen für den Plattformaufruf](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)
+## <a name="see-also"></a>Siehe auch
+- [Marshallen von Typenarrays](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+- [Datentypen für den Plattformaufruf](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
+- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)

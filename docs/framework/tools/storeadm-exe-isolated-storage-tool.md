@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29dd8ae38e2635f92c5be2b4d856f03a2e3e5767
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 80923d32bfefb53c41b6588b87bac679bb380811
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221517"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713407"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Isolated Storage-Tool)
 Das Isolated Storage-Tool listet alle vorhandenen Speicher des aktuellen Benutzers auf oder löscht diese.  
@@ -60,7 +60,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  Ob Roaming für den Benutzer tatsächlich aktiviert ist, wirkt sich nicht auf die Verwaltung von "Storeadm.exe" aus. Wenn das Tool ohne Optionen ausgeführt wird, werden sämtliche Aktionen auf den lokalen Speicher angewendet. Wird das Tool mit der **/roaming**-Option ausgeführt, werden alle Aktionen auf den Speicher angewendet, der Roaming zulässt. Wenn das Tool mit der **/machine**-Option ausgeführt wird, werden sämtliche Aktionen auf den Computerspeicher angewendet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Extras](../../../docs/framework/tools/index.md)  
- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)  
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Siehe auch
+- [Extras](../../../docs/framework/tools/index.md)
+- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)
+- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

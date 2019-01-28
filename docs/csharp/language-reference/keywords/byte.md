@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 9c70c5a08e1509e9c8b1a007603abfbf18f03f14
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: fe2ef272c77b1af3a5b5a7f5bf3efb4836edcf23
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241229"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54691527"
 ---
 # <a name="byte-c-reference"></a>byte (C#-Referenz)
 
@@ -106,13 +106,13 @@ SampleMethod((byte)5);
 
 Weitere Informationen finden Sie unter [Intregrale Datentypen](~/_csharplang/spec/types.md#integral-types) in der [C#-Sprachspezifikation](../language-specification/index.md). Die Sprachspezifikation ist die verbindliche Quelle für die Syntax und Verwendung von C#.
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Byte>  
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)  
-- [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- <xref:System.Byte>
+- [C#-Referenz](../../../csharp/language-reference/index.md)
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
+- [Tabelle ganzzahliger Typen](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md)
+- [Tabelle für implizite numerische Konvertierungen](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
 - [Tabelle für explizite numerische Konvertierungen](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)

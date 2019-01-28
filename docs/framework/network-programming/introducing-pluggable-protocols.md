@@ -22,12 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-ms.openlocfilehash: 213a714a04c31954b0091071b0625449916d154d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc238f6739f7db23d570688ea3c6e2031f9699f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146913"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729131"
 ---
 # <a name="introducing-pluggable-protocols"></a>Einführung in austauschbare Protokolle
 Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete Implementierung von Internetdiensten zur Verfügung. Die Internetdienste können schnell und auf einfache Weise in Ihre Anwendungen integriert werden. Die Internetzugriffsklassen in den Namespaces <xref:System.Net> und <xref:System.Net.Sockets> können zur Implementierung von sowohl webbasierten als auch internetbasierten Anwendungen verwendet werden.  
@@ -66,8 +66,8 @@ Microsoft .NET Framework stellt eine mehrschichtige, erweiterbare und verwaltete
   
  Die **System.Net.Sockets**-Klassen erweisen sich besonders für Entwickler als nützlich, die mit der Windows Sockets-Schnittstelle vertraut sind oder die die Kontrolle durch das Programmieren auf Socketebene benötigen. Die **System.Net.Sockets**-Klassen stellen innerhalb der **System.Net**-Klassen einen Übergangspunkt von verwaltetem zu nativem Code dar. In den meisten Fällen marshallen **System.Net.Sockets**-Klassen Daten in ihre jeweilige Windows-32-Bit-Entsprechung und führen alle erforderlichen Sicherheitsüberprüfungen durch.  
   
-## <a name="see-also"></a>Siehe auch  
- [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Netzwerkbeispiele für .NET in der MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+## <a name="see-also"></a>Siehe auch
+- [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)
+- [Netzwerkbeispiele für .NET in der MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

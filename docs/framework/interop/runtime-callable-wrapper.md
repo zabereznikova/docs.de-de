@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7366bfd6459a9387e8c57092ba85cac5f4da125b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0832489d74abc3aec78218f87d2bce72e6e68f75
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393509"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54632789"
 ---
 # <a name="runtime-callable-wrapper"></a>Runtime Callable Wrapper (RCW)
 Die Common Language Runtime macht COM-Objekte über einen Proxy verfügbar, der RCW (Runtime Callable Wrapper, Aufrufwrapper der Common Language Runtime) genannt wird. Obwohl .NET-Clients einen RCW als normales Objekt betrachten, besteht seine primäre Funktion im Marshallen von Aufrufen zwischen einem .NET-Client und einem COM-Objekt.  
@@ -41,7 +41,7 @@ COM-Schnittstellen und der RCW
   
  Der RCW beansprucht die in der folgenden Tabelle aufgelisteten Schnittstellen, die durch das umschlossene Objekt verfügbar gemacht werden.  
   
-|Interface|description|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |**IDispatch**|Regelt späte Bindung an COM-Objekte durch Reflektion.|  
 |**IErrorInfo**|Stellt eine Textbeschreibung des Fehlers und der Fehlerquelle, eine Hilfedatei, den Hilfekontext und die GUID der Schnittstelle bereit, die den Fehler definiert hat (bei .NET-Klassen immer **GUID_NULL**).|  
@@ -50,15 +50,15 @@ COM-Schnittstellen und der RCW
   
  Der RCW beansprucht optional die in der folgenden Tabelle aufgelisteten Schnittstellen, die durch das umschlossene Objekt verfügbar gemacht werden.   
   
-|Interface|description|  
+|Interface|Beschreibung|  
 |---------------|-----------------|  
 |**IConnectionPoint** und **IConnectionPointContainer**|Der RCW konvertiert Objekte, die Ereignisformate für Verbindungspunkte gegenüber delegatbasierten Ereignissen verfügbar machen.|  
 |**IDispatchEx**|Wenn die Klasse **IDispatchEx** implementiert, implementiert der RCW **IExpando**. Die **IDispatchEx**-Schnittstelle ist eine Erweiterung der **IDispatch**-Schnittstelle. Im Gegensatz zu **IDispatch** ermöglicht sie das Aufzählen, Hinzufügen, Löschen und Aufrufen von Membern unter Berücksichtigung von Groß-/Kleinschreibung.|  
 |**IEnumVARIANT**|Aktiviert COM-Typen, die die Behandlung von Enumerationen als Auflistungen unterstützen.|  
   
-## <a name="see-also"></a>Siehe auch  
- [COM-Wrapper](com-wrappers.md)  
- [Marshallen von ausgewählten Schnittstellen](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
- [COM Callable Wrapper](com-callable-wrapper.md)  
- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)
+## <a name="see-also"></a>Siehe auch
+- [COM-Wrapper](com-wrappers.md)
+- [Marshallen von ausgewählten Schnittstellen](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))
+- [COM Callable Wrapper](com-callable-wrapper.md)
+- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ad6c87dcec55a332bced00370fe6ea888508793
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 92b72667101575aebea9b60a41979e374004b541
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143544"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499261"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Typweiterleitung in der Common Language Runtime
 Durch Typweiterleitung können Sie einen Typ in eine andere Assembly verschieben, ohne Anwendungen, die die ursprüngliche Assembly verwenden, neu kompilieren zu müssen.  
@@ -46,7 +46,7 @@ Durch Typweiterleitung können Sie einen Typ in eine andere Assembly verschieben
   
 4.  Führen Sie für die Assembly, in der sich der Typ befand, eine Neukompilierung mit einem Verweis auf die Assembly durch, die jetzt den Typ enthält. Wenn Sie z. B. eine C#-Datei über die Befehlszeile kompilieren, geben Sie mit der [/reference (C# Compiler Options)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md)-Option die Assembly an, die den Typ enthält. In C++ verwenden Sie die [#using](/cpp/preprocessor/hash-using-directive-cpp)-Direktive in der Quelldatei, um die Assembly anzugeben, die den Typ enthält.  
   
-## <a name="see-also"></a>Siehe auch  
-- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
-- [Typweiterleitung (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
+- [Typweiterleitung (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
 - [#using-Direktive](/cpp/preprocessor/hash-using-directive-cpp)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 437bbb7a1645c0ab13da33e57c1e70b5ec98984c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398677"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628538"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Angeben vollständig gekennzeichneter Typnamen
 Sie müssen Typnamen angeben, um eine gültige Eingabe für verschiedene Reflektionsvorgänge zu haben. Ein vollqualifizierter Typname besteht aus der Angabe eines Assemblynamens, eines Namespaces und eines Typnamens. Angaben von Typnamen werden von Methoden wie <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> und <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> verwendet.  
@@ -120,7 +120,7 @@ AssemblyProperty
 |\\*|Zeigertyp|  
 |\\[|Arraydimensionstrennzeichen|  
 |\\]|Arraydimensionstrennzeichen|  
-|\\|Verwenden Sie den umgekehrten Schrägstrich nur dann vor einem Punkt, wenn der Punkt in einer Arrayspezifikation verwendet wird. Punkte in NamespaceSpec akzeptieren keine umgekehrten Schrägstriche.|  
+|\\.|Verwenden Sie den umgekehrten Schrägstrich nur dann vor einem Punkt, wenn der Punkt in einer Arrayspezifikation verwendet wird. Punkte in NamespaceSpec akzeptieren keine umgekehrten Schrägstriche.|  
 |\\\| Bei Bedarf kann der umgekehrte Schrägstrich als Zeichenfolgenliteral verwendet werden.|  
   
  Beachten Sie, dass in allen TypeSpec-Komponenten außer AssemblyNameSpec Leerzeichen relevant sind. In AssemblyNameSpec sind Leerzeichen vor dem Trennzeichen „,“ (Komma) relevant, aber dahinter werden sie nicht beachtet.  
@@ -134,7 +134,7 @@ AssemblyProperty
 ## <a name="specifying-assembly-names"></a>Angeben von Assemblynamen  
  Eine Assemblynamenspezifikation muss mindestens den wörtlichen Namen (IDENTIFIER) der Assembly enthalten. Auf den IDENTIFIER kann eine durch Kommas getrennte Liste von Eigenschaft/Wert-Paaren folgen, wie in der folgenden Tabelle beschrieben. Das Benennen von IDENTIFIER sollte die Regeln für das Benennen von Dateien einhalten. Beim IDENTIFIER wird Groß- und Kleinschreibung beachtet.  
   
-|Name der Eigenschaft|description|Zulässige Werte|  
+|Name der Eigenschaft|Beschreibung|Zulässige Werte|  
 |-------------------|-----------------|----------------------|  
 |**Version**|Assemblyversionsnummer|*Major.Minor.Build.Revision*, wobei es sich bei *Major*, *Minor*, *Build* und *Revision* um ganze Zahlen zwischen 0 und einschließlich 65535 handelt|  
 |**PublicKey**|Vollständiger öffentlicher Schlüssel|Zeichenfolgenwert des vollständigen öffentlichen Schlüssels im Hexadezimalformat. Geben Sie einen NULL-Verweis an (**Nothing** in Visual Basic), um eine private Assembly explizit zu kennzeichnen.|  
@@ -201,11 +201,11 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
   
  `MyArray[0..5]` gibt für **ModuleBuilder.GetType** ein eindimensionales Array mit der Größe 6 und einer unteren Grenze von 0 an. `MyArray[4…]` gibt ein eindimensionales Array mit unbekannter Größe und einer unteren Grenze von 4 an.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection.AssemblyName>  
- <xref:System.Reflection.Emit.ModuleBuilder>  
- <xref:System.Reflection.Emit.TypeBuilder>  
- <xref:System.Type.FullName%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
- [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Reflection.AssemblyName>
+- <xref:System.Reflection.Emit.ModuleBuilder>
+- <xref:System.Reflection.Emit.TypeBuilder>
+- <xref:System.Type.FullName%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>
+- [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)

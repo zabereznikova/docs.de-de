@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d533ac4d4287af551e4fc0c3131c761dbbc135a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: face7f836ece3230ec1be745569060f8b34d814c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197053"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604352"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Reflektion in .NET Framework für Windows Store-Apps
 Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stellt .NET Framework eine Reihe von Reflektionstypen und -membern für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps zur Verfügung. Diese Typen und Member sind im vollständigen .NET Framework sowie im [.NET für Windows Store-Apps](https://go.microsoft.com/fwlink/?LinkID=225700) verfügbar. In diesem Dokument werden die Hauptunterschiede zwischen ihnen und ihren Entsprechungen in .NET Framework 4 und früheren Versionen erklärt.  
@@ -41,6 +41,6 @@ Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stellt .NET Framework e
  [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
  [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Reflexion](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [.NET für Windows Store-Apps – unterstützte APIs](https://go.microsoft.com/fwlink/?LinkID=225700)
+## <a name="see-also"></a>Siehe auch
+- [Reflexion](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [.NET für Windows Store-Apps – unterstützte APIs](https://go.microsoft.com/fwlink/?LinkID=225700)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 11b0082630fb41823173a87160344d2dfff5482e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 552fb69910d7186321d834e4bc36abc867a31658
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602909"
 ---
 # <a name="using-tcp-services"></a>Verwenden von TCP-Diensten
 Die <xref:System.Net.Sockets.TcpClient>-Klasse fordert über TCP Daten von einer Internetressource an. Die Eigenschaften und Methoden von **TcpClient** abstrahieren die Details zum Erstellen einer <xref:System.Net.Sockets.Socket> zum Anfordern und Empfangen von Daten mithilfe von TCP. Da die Verbindung mit dem Remotegerät als Datenstrom dargestellt wird, können Daten mit Techniken zur Datenstromverarbeitung von .NET Framework gelesen und geschrieben werden.  
@@ -194,5 +194,5 @@ public class TcpTimeServer {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- 
+## <a name="see-also"></a>Siehe auch
+

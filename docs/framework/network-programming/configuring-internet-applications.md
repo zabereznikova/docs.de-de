@@ -21,12 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 48794898eb1a3e13454a335a2335fac57d8faf3b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197235"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54561646"
 ---
 # <a name="configuring-internet-applications"></a>Konfigurieren von Internetanwendungen
 Das Konfigurationselement [\<system.Net> (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) enthält Informationen zur Netzwerkkonfiguration von Anwendungen. Mit dem Element [\<system.Net> (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) können Sie Proxyserver und Parameter zur Verbindungsverwaltung festlegen sowie benutzerdefinierte Authentifizierung und Anforderungsmodule in Ihre Anwendung einfügen.  
@@ -97,7 +97,7 @@ Das Konfigurationselement [\<system.Net> (Netzwerkeinstellungen)](../../../docs/
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [\<system.Net>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)
+## <a name="see-also"></a>Siehe auch
+- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [\<system.Net>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)

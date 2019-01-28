@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12a7b4cb29dcf2c799f17bb7f3a02c300c5f0d36
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393149"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555400"
 ---
 # <a name="default-marshaling-for-arrays"></a>Standardmäßiges Marshalling für Arrays
 In einer Anwendung, die vollständig aus verwaltetem Code besteht, übergibt die Common Language Runtime Arraytypen als In-/Out-Parameter. Im Gegensatz dazu übergibt der Interopmarshaller außerdem ein Array als In-Parameter in der Standardeinstellung.  
@@ -131,7 +131,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- Obwohl Sie das **Size_is**- oder **Length_is**-Attribut auf ein Array in der Interface Definition Language (IDL)-Quelle anwenden können, um einem Client die Größe mitzuteilen, übermittelt der Microsoft Interface Definition Language (MIDL)-Compiler diese Information nicht an die Typbibliothek. Ohne die Größe zu kennen, kann der Interop-Marshallingdienst die Arrayelemente nicht marshallen. Folglich werden Arrays mit variabler Länge als Verweisargumente importiert. Zum Beispiel:  
+ Obwohl Sie das **Size_is**- oder **Length_is**-Attribut auf ein Array in der Interface Definition Language (IDL)-Quelle anwenden können, um einem Client die Größe mitzuteilen, übermittelt der Microsoft Interface Definition Language (MIDL)-Compiler diese Information nicht an die Typbibliothek. Ohne die Größe zu kennen, kann der Interop-Marshallingdienst die Arrayelemente nicht marshallen. Folglich werden Arrays mit variabler Länge als Verweisargumente importiert. Beispiel:  
   
  **Nicht verwaltete Signatur**  
   
@@ -171,7 +171,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   Definieren Sie die Größe des Arrays als Konstante. Zum Beispiel:  
+-   Definieren Sie die Größe des Arrays als Konstante. Beispiel:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -203,7 +203,7 @@ void New3(ref String ar);
  In der OLE-Automatisierung, gibt es im Zusammenhang mit Arrays von Strukturen, die LPSTR oder LPWSTR enthalten eine Einschränkung.  Aus diesem Grund müssen **Zeichenfolge**-Felder als **UnmanagedType.BSTR** gemarshallt werden. Andernfalls wird eine Ausnahme ausgelöst.  
   
 ### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
- Wenn eine Methode mit einem **ELEMENT_TYPE_SZARRAY**-Parameter (eindimensionales Array) aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in ein **SAFEARRAY** eines gegebenen Typs konvertiert. Dieselben Konvertierungsregeln gelten für die Arrayelementtypen. Der Inhalt des verwalteten Arrays wird automatisch aus dem verwalteten Speicher in das **SAFEARRAY** kopiert. Zum Beispiel:  
+ Wenn eine Methode mit einem **ELEMENT_TYPE_SZARRAY**-Parameter (eindimensionales Array) aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in ein **SAFEARRAY** eines gegebenen Typs konvertiert. Dieselben Konvertierungsregeln gelten für die Arrayelementtypen. Der Inhalt des verwalteten Arrays wird automatisch aus dem verwalteten Speicher in das **SAFEARRAY** kopiert. Beispiel:  
   
 #### <a name="managed-signature"></a>Verwaltete Signatur  
   
@@ -226,7 +226,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  Der Rang eines sicheren Arrays ist immer 1, und die Untergrenze ist immer 0. Die Größe wird zur Laufzeit durch die Größe des übergebenen verwalteten Arrays bestimmt.  
   
- Das Array kann auch als Array im C-Stil, mithilfe des <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attributs gemarshallt werden. Zum Beispiel:  
+ Das Array kann auch als Array im C-Stil, mithilfe des <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attributs gemarshallt werden. Beispiel:  
   
 #### <a name="managed-signature"></a>Verwaltete Signatur  
   
@@ -261,7 +261,7 @@ HRESULT New(LPStr ar[]);
  Obwohl der Marshaller die erforderlichen Längeninformationen zum Marshallen von Arrays hat, wird die Länge des Arrays in der Regel als separates Argument übergeben, um dem Aufgerufenen die Länge mitzuteilen.  
   
 ### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
- Wenn eine Methode mit einem **ELEMENT_TYPE_ARRAY**-Parameter aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in ein **SAFEARRAY** eines gegebenen Typs konvertiert. Der Inhalt des verwalteten Arrays wird automatisch aus dem verwalteten Speicher in das **SAFEARRAY** kopiert. Zum Beispiel:  
+ Wenn eine Methode mit einem **ELEMENT_TYPE_ARRAY**-Parameter aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in ein **SAFEARRAY** eines gegebenen Typs konvertiert. Der Inhalt des verwalteten Arrays wird automatisch aus dem verwalteten Speicher in das **SAFEARRAY** kopiert. Beispiel:  
   
 #### <a name="managed-signature"></a>Verwaltete Signatur  
   
@@ -284,7 +284,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  Der Rang, die Größe und die Grenzen eines sicheren Arrays werden zur Laufzeit durch die Merkmale des verwalteten Arrays bestimmt.  
   
- Das Array kann auch als Array im C-Stil, mithilfe des <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attributs gemarshallt werden. Zum Beispiel:  
+ Das Array kann auch als Array im C-Stil, mithilfe des <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attributs gemarshallt werden. Beispiel:  
   
 #### <a name="managed-signature"></a>Verwaltete Signatur  
   
@@ -324,7 +324,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- Wenn eine Methode, die einen <xref:System.Array?displayProperty=nameWithType>-Parameter enthält aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in eine **_Array**-Schnittstelle konvertiert. Auf den Inhalt des verwalteten Arrays kann nur über die Methoden und Eigenschaften der **_Array**-Schnittstelle zugegriffen werden. **System.Array** kann auch als **SAFEARRAY**, mithilfe von <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attributen gemarshallt werden. Wenn die Arrayelemente als sicheres Array gemarshallt werden, werden sie als Varianten gemarshallt. Zum Beispiel:  
+ Wenn eine Methode, die einen <xref:System.Array?displayProperty=nameWithType>-Parameter enthält aus einer .NET-Assembly in eine Typbibliothek exportiert wird, wird der Arrayparameter in eine **_Array**-Schnittstelle konvertiert. Auf den Inhalt des verwalteten Arrays kann nur über die Methoden und Eigenschaften der **_Array**-Schnittstelle zugegriffen werden. **System.Array** kann auch als **SAFEARRAY**, mithilfe von <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attributen gemarshallt werden. Wenn die Arrayelemente als sicheres Array gemarshallt werden, werden sie als Varianten gemarshallt. Beispiel:  
   
 #### <a name="managed-signature"></a>Verwaltete Signatur  
   
@@ -372,8 +372,8 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)  
- [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)  
- [Direktionale Attribute](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [Kopieren und Fixieren](copying-and-pinning.md)
+## <a name="see-also"></a>Siehe auch
+- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
+- [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)
+- [Direktionale Attribute](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Kopieren und Fixieren](copying-and-pinning.md)
