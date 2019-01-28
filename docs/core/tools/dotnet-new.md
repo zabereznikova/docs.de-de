@@ -1,19 +1,19 @@
 ---
 title: Befehl „dotnet new“
-description: Der Befehl „dotnet new“ erstellt neue .NET Core-Projekte basierend auf der angegebenen Vorlage
+description: Der dotnet new Befehl erstellt neue .NET Core-Projekte basierend auf der angegebenen Vorlage
 ms.date: 10/24/2018
-ms.openlocfilehash: 3a10aaa93af57e7beb86771e7d3b00b06fca14b2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 5177c920fee6fa946d2bf5d96644f26309ed0a99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516147"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet new`: Erstellt ein neues Projekt, eine Konfigurationsdatei oder eine Lösung auf Grundlage der angegebenen Vorlage.
 
@@ -536,7 +536,7 @@ Erstellen Sie eine *global.json* im aktuellen Verzeichnis, und legen Sie die SDK
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Custom templates for dotnet new (Benutzerdefinierte Vorlagen für dotnet new)](custom-templates.md)  
-* [Erstellen eines benutzerdefinierten Vorlagen-Assistenten](~/docs/core/tutorials/create-custom-template.md)  
-* [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)  
-* [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+- [Custom templates for dotnet new (Benutzerdefinierte Vorlagen für dotnet new)](custom-templates.md)
+- [Erstellen eines benutzerdefinierten Vorlagen-Assistenten](~/docs/core/tutorials/create-custom-template.md)
+- [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)
+- [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

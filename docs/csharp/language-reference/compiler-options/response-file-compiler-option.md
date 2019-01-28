@@ -7,12 +7,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: f342f26ee8abe29e6c5a1477469c8b7292cd702e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 32a06c596c44cdf28e5c1bb3422b9cf8262f2c08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738091"
 ---
 # <a name="-c-compiler-options"></a>@ (C#-Compileroptionen)
 Mit der @-Option können Sie eine Datei angeben, die Compileroptionen und zu kompilierende Quellcodedateien enthält.  
@@ -30,7 +30,7 @@ Mit der @-Option können Sie eine Datei angeben, die Compileroptionen und zu kom
 ## <a name="remarks"></a>Hinweise  
  Die Compileroptionen und Quellcodedateien werden vom Compiler so verarbeitet, als ob sie in der Befehlszeile angegeben wären.  
   
- Wenn Sie mehr als eine Antwortdatei in einer Kompilierung angeben möchten, geben Sie mehrere Antwortdateioptionen an. Zum Beispiel:  
+ Wenn Sie mehr als eine Antwortdatei in einer Kompilierung angeben möchten, geben Sie mehrere Antwortdateioptionen an. Beispiel:  
   
 ```  
 @file1.rsp @file2.rsp  
@@ -54,6 +54,6 @@ Mit der @-Option können Sie eine Datei angeben, die Compileroptionen und zu kom
 -target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)

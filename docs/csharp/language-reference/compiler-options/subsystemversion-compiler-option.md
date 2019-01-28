@@ -2,12 +2,12 @@
 title: -subsystemversion (C#-Compileroptionen)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: ff4cd196edc1ec04f8abcecfa1a7a4e99e32dd56
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 42d9d81c4cfbf98c1d7a470a5863ac9198f16395
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025446"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738078"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C#-Compileroptionen)
 Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei ausführen kann. Dabei bestimmt sie die Version von Windows, auf der die ausführbare Datei ausgeführt werden kann. In den meisten Fällen stellt diese Option sicher, dass die ausführbare Datei bestimmte Sicherheitsfunktionen nutzt, die nicht in älteren Versionen von Windows verfügbar sind.  
@@ -37,7 +37,7 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
 |Windows Server 2003|5.02|  
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
-|Windows Server 2008|6.01|  
+|Windows Server 2008|6.01|  
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Standardwerte  
@@ -58,6 +58,6 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
 ## <a name="setting-this-option"></a>Festlegen dieser Option  
  Sie müssen die CSPROJ-Datei öffnen und einen Wert für die Eigenschaft `SubsystemVersion` im MSBuild-XML angeben, um die Compileroption **-subsystemversion** in Visual Studio festzulegen. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 
 - [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)

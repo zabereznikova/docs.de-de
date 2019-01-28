@@ -6,14 +6,14 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2c6f2f78ed71558b71adcc1d4d8cc9a6f459d75
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235214"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54658246"
 ---
-# <a name="using-nullable-types-c-programming-guide"></a>Verwenden von Nullable-Typen (C#-Programmierhandbuch)
+# <a name="using-nullable-types-c-programming-guide"></a>Verwenden von Nullable-Typen (C#-Programmierleitfaden)
 
 Nullable-Typen sind Typen, die alle Werte eines zugrunde liegenden `T`-Werttyps und einen zusätzlichen [NULL](../../language-reference/keywords/null.md)-Wert darstellen. Weitere Informationen finden Sie im Artikel [Nullable-Typen](index.md).
 
@@ -112,6 +112,6 @@ Beachten Sie, dass für diese beiden Operatoren nicht die im Abschnitt [Operator
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Nullable-Typen](index.md)  
-- [C#-Programmierhandbuch](../../programming-guide/index.md)  
-- [What exactly does 'lifted' mean?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/) (Was bedeutet „Lifted“ genau?)  
+- [Nullable-Typen](index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [What exactly does 'lifted' mean?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/) (Was bedeutet „Lifted“ genau?)

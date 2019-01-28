@@ -8,12 +8,12 @@ helpviewer_keywords:
 - variables [C#], pointers
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
-ms.openlocfilehash: b20642344b34b5426512ef64bde2ab33d55136b9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5fbc925b6770bc951a0d7ec856898f62c265462e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236634"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54577151"
 ---
 # <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>Vorgehensweise: Abrufen des Werts einer Zeigervariablen (C#-Programmierhandbuch)
 Verwenden Sie den Zeigerdereferenzierungsoperator, um die Variable aus dem Speicherort abzurufen, auf den von einem Zeiger gezeigt wird. Der Ausdruck hat das folgende Format, wobei `p` ein Zeigertyp ist:  
@@ -40,10 +40,10 @@ Verwenden Sie den Zeigerdereferenzierungsoperator, um die Variable aus dem Speic
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [Typen](../../../csharp/language-reference/keywords/types.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Typen](../../../csharp/language-reference/keywords/types.md)
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
+- [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
