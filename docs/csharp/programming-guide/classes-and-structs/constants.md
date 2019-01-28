@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: b723bb23559f88e7498c22295a6b2f70312461fc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3cfb238317e14df8d663bc96ddf46e863c7b98be
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241930"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54663874"
 ---
 # <a name="constants-c-programming-guide"></a>Konstanten (C#-Programmierhandbuch)
 Konstanten sind unveränderliche Werte, die zur Kompilierzeit bekannt sind und sich während der Lebensdauer des Programms nicht ändern. Konstanten werden mit dem [const](../../../csharp/language-reference/keywords/const.md)-Modifizierer deklariert. Nur die in C# integrierten Typen (außer <xref:System.Object?displayProperty=nameWithType>) können als `const` deklariert werden. Eine Liste der integrierten Typen finden Sie unter [Tabelle integrierter Typen](../../../csharp/language-reference/keywords/built-in-types-table.md). Benutzerdefinierte Typen einschließlich Klassen, Strukturen und Arrays können nicht `const` sein. Verwenden Sie den [readonly](../../../csharp/language-reference/keywords/readonly.md)-Modifizierer zum Erstellen einer Klasse, einer Struktur oder eines Arrays, die/das zur Laufzeit einmal initialisiert wird (z.B. in einem Konstruktor) und danach nicht geändert werden kann.  
@@ -20,7 +20,7 @@ Konstanten sind unveränderliche Werte, die zur Kompilierzeit bekannt sind und s
   
  Der Enumerationstyp ermöglicht Ihnen das Definieren benannter Konstanten für ganzzahlige integrierte Typen (z.B. `int`, `uint`, `long` usw.). Weitere Informationen finden Sie unter [enum](../../../csharp/language-reference/keywords/enum.md).  
   
- Konstanten müssen initialisiert werden, wenn sie deklariert werden. Zum Beispiel:  
+ Konstanten müssen initialisiert werden, wenn sie deklariert werden. Beispiel:  
   
  [!code-csharp[csProgGuideObjects#64](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_1.cs)]  
   
@@ -39,7 +39,7 @@ Konstanten sind unveränderliche Werte, die zur Kompilierzeit bekannt sind und s
   
  Konstanten können als [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [protected internal](../../../csharp/language-reference/keywords/protected-internal.md) oder [private protected](../../../csharp/language-reference/keywords/private-protected.md) markiert werden. Diese Zugriffsmodifizierer definieren, wie Benutzer der Klasse auf die Konstante zugreifen können. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
- Auf Konstanten wird zugegriffen, als wären sie [statische](../../../csharp/language-reference/keywords/static.md) Felder, da der Wert der Konstante für alle Instanzen des Typs identisch ist. Sie verwenden nicht das `static`-Schlüsselwort, um sie zu deklarieren. Ausdrücke, die nicht in der Klasse enthalten sind, die die Konstante definiert, müssen den Klassennamen, einen Punkt und den Namen der Konstante verwenden, um auf die Konstante zuzugreifen. Zum Beispiel:  
+ Auf Konstanten wird zugegriffen, als wären sie [statische](../../../csharp/language-reference/keywords/static.md) Felder, da der Wert der Konstante für alle Instanzen des Typs identisch ist. Sie verwenden nicht das `static`-Schlüsselwort, um sie zu deklarieren. Ausdrücke, die nicht in der Klasse enthalten sind, die die Konstante definiert, müssen den Klassennamen, einen Punkt und den Namen der Konstante verwenden, um auf die Konstante zuzugreifen. Beispiel:  
   
  [!code-csharp[csProgGuideObjects#67](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/constants_4.cs)]  
   
@@ -48,9 +48,9 @@ Konstanten sind unveränderliche Werte, die zur Kompilierzeit bekannt sind und s
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Typen](../../../csharp/programming-guide/types/index.md)  
-- [readonly](../../../csharp/language-reference/keywords/readonly.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Typen](../../../csharp/programming-guide/types/index.md)
+- [readonly](../../../csharp/language-reference/keywords/readonly.md)
 - [Unveränderlichkeit in C#, Teil 1: Arten von Unveränderlichkeit](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability)

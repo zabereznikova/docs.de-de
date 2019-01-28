@@ -5,12 +5,12 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: 3b8f9f124943d2092b65718f5dbf17831252a4a5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54708440"
 ---
 # <a name="contextual-keywords-c-reference"></a>Kontextabhängige Schlüsselwörter (C#-Referenz)
 Ein Kontextschlüsselwort wird verwendet, um eine spezifische Bedeutung im Code bereitzustellen, es ist jedoch kein reserviertes Wort in C#. In diesem Abschnitt werden die folgenden Kontextschlüsselwörter eingeführt:  
@@ -36,6 +36,6 @@ Ein Kontextschlüsselwort wird verwendet, um eine spezifische Bedeutung im Code 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Referenz](../../../csharp/language-reference/index.md)
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)
