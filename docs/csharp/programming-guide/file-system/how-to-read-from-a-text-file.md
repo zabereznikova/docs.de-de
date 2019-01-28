@@ -10,39 +10,39 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 67e98750af589a3deb5e9d0d51f8b1204fdaad84
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: f7ddfbec13fad073272c75c3e68a4f5c9c3eef9e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240306"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54672239"
 ---
-# <a name="how-to-read-from-a-text-file-c-programming-guide"></a><span data-ttu-id="e0f0f-102">Vorgehensweise: Lesen aus einer Textdatei (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="e0f0f-102">How to: Read From a Text File (C# Programming Guide)</span></span>
-<span data-ttu-id="e0f0f-103">In diesem Beispiel wird der Inhalt von Textdateien gelesen, indem die statische Methoden <xref:System.IO.File.ReadAllText%2A> und <xref:System.IO.File.ReadAllLines%2A> aus der <xref:System.IO.File?displayProperty=nameWithType>-Klasse verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="e0f0f-103">This example reads the contents of a text file by using the static methods <xref:System.IO.File.ReadAllText%2A> and <xref:System.IO.File.ReadAllLines%2A> from the <xref:System.IO.File?displayProperty=nameWithType> class.</span></span>  
+# <a name="how-to-read-from-a-text-file-c-programming-guide"></a><span data-ttu-id="a6d67-102">Vorgehensweise: Lesen aus einer Textdatei (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="a6d67-102">How to: Read From a Text File (C# Programming Guide)</span></span>
+<span data-ttu-id="a6d67-103">In diesem Beispiel wird der Inhalt von Textdateien gelesen, indem die statische Methoden <xref:System.IO.File.ReadAllText%2A> und <xref:System.IO.File.ReadAllLines%2A> aus der <xref:System.IO.File?displayProperty=nameWithType>-Klasse verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="a6d67-103">This example reads the contents of a text file by using the static methods <xref:System.IO.File.ReadAllText%2A> and <xref:System.IO.File.ReadAllLines%2A> from the <xref:System.IO.File?displayProperty=nameWithType> class.</span></span>  
   
- <span data-ttu-id="e0f0f-104">Ein Beispiel, in dem <xref:System.IO.StreamReader> verwendet wird, finden Sie unter [Vorgehensweise: Zeilenweises Lesen einer Textdatei](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).</span><span class="sxs-lookup"><span data-stu-id="e0f0f-104">For an example that uses <xref:System.IO.StreamReader>, see [How to: Read a Text File One Line at a Time](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).</span></span>  
+ <span data-ttu-id="a6d67-104">Ein Beispiel, in dem <xref:System.IO.StreamReader> verwendet wird, finden Sie unter [Vorgehensweise: Zeilenweises Lesen einer Textdatei](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).</span><span class="sxs-lookup"><span data-stu-id="a6d67-104">For an example that uses <xref:System.IO.StreamReader>, see [How to: Read a Text File One Line at a Time](../../../csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e0f0f-105">Die in diesem Beispiel verwendeten Dateien werden in diesem Thema beschrieben: [Vorgehensweise: Schreiben in eine Textdatei](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).</span><span class="sxs-lookup"><span data-stu-id="e0f0f-105">The files that are used in this example are created in the topic [How to: Write to a Text File](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).</span></span>  
+>  <span data-ttu-id="a6d67-105">Die in diesem Beispiel verwendeten Dateien werden in diesem Thema beschrieben: [Vorgehensweise: Schreiben in eine Textdatei](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).</span><span class="sxs-lookup"><span data-stu-id="a6d67-105">The files that are used in this example are created in the topic [How to: Write to a Text File](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e0f0f-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e0f0f-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a6d67-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="a6d67-106">Example</span></span>  
  [!code-csharp[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="e0f0f-107">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="e0f0f-107">Compiling the Code</span></span>  
- <span data-ttu-id="e0f0f-108">Kopieren Sie den Code, und fügen Sie ihn in eine C#-Konsolenanwendung ein.</span><span class="sxs-lookup"><span data-stu-id="e0f0f-108">Copy the code and paste it into a C# console application.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a6d67-107">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="a6d67-107">Compiling the Code</span></span>  
+ <span data-ttu-id="a6d67-108">Kopieren Sie den Code, und fügen Sie ihn in eine C#-Konsolenanwendung ein.</span><span class="sxs-lookup"><span data-stu-id="a6d67-108">Copy the code and paste it into a C# console application.</span></span>  
   
- <span data-ttu-id="e0f0f-109">Wenn Sie nicht die Textdateien aus [Vorgehensweise: Schreiben in eine Textdatei](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md) verwenden, ersetzen Sie das Argument für `ReadAllText` und `ReadAllLines` durch die entsprechenden Pfad- und Dateinamen auf Ihrem Computer.</span><span class="sxs-lookup"><span data-stu-id="e0f0f-109">If you are not using the text files from [How to: Write to a Text File](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), replace the argument to `ReadAllText` and `ReadAllLines` with the appropriate path and file name on your computer.</span></span>  
+ <span data-ttu-id="a6d67-109">Wenn Sie nicht die Textdateien aus [Vorgehensweise: Schreiben in eine Textdatei](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md) verwenden, ersetzen Sie das Argument für `ReadAllText` und `ReadAllLines` durch die entsprechenden Pfad- und Dateinamen auf Ihrem Computer.</span><span class="sxs-lookup"><span data-stu-id="a6d67-109">If you are not using the text files from [How to: Write to a Text File](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md), replace the argument to `ReadAllText` and `ReadAllLines` with the appropriate path and file name on your computer.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="e0f0f-110">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="e0f0f-110">Robust Programming</span></span>  
- <span data-ttu-id="e0f0f-111">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="e0f0f-111">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="a6d67-110">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="a6d67-110">Robust Programming</span></span>  
+ <span data-ttu-id="a6d67-111">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="a6d67-111">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="e0f0f-112">Die Datei ist nicht oder nicht am angegebenen Speicherort vorhanden.</span><span class="sxs-lookup"><span data-stu-id="e0f0f-112">The file doesn't exist or doesn't exist at the specified location.</span></span> <span data-ttu-id="e0f0f-113">Überprüfen Sie die Schreibweise des Dateinamens und -pfads.</span><span class="sxs-lookup"><span data-stu-id="e0f0f-113">Check the path and the spelling of the file name.</span></span>  
+-   <span data-ttu-id="a6d67-112">Die Datei ist nicht oder nicht am angegebenen Speicherort vorhanden.</span><span class="sxs-lookup"><span data-stu-id="a6d67-112">The file doesn't exist or doesn't exist at the specified location.</span></span> <span data-ttu-id="a6d67-113">Überprüfen Sie die Schreibweise des Dateinamens und -pfads.</span><span class="sxs-lookup"><span data-stu-id="a6d67-113">Check the path and the spelling of the file name.</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="e0f0f-114">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="e0f0f-114">.NET Framework Security</span></span>  
- <span data-ttu-id="e0f0f-115">Schließen Sie nicht vom Namen einer Datei auf deren Inhalt.</span><span class="sxs-lookup"><span data-stu-id="e0f0f-115">Do not rely on the name of a file to determine the contents of the file.</span></span> <span data-ttu-id="e0f0f-116">Bei der Datei `myFile.cs` handelt es sich zum Beispiel nicht unbedingt um eine C#-Quelldatei.</span><span class="sxs-lookup"><span data-stu-id="e0f0f-116">For example, the file `myFile.cs` might not be a C# source file.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="a6d67-114">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="a6d67-114">.NET Framework Security</span></span>  
+ <span data-ttu-id="a6d67-115">Schließen Sie nicht vom Namen einer Datei auf deren Inhalt.</span><span class="sxs-lookup"><span data-stu-id="a6d67-115">Do not rely on the name of a file to determine the contents of the file.</span></span> <span data-ttu-id="a6d67-116">Bei der Datei `myFile.cs` handelt es sich zum Beispiel nicht unbedingt um eine C#-Quelldatei.</span><span class="sxs-lookup"><span data-stu-id="a6d67-116">For example, the file `myFile.cs` might not be a C# source file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0f0f-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e0f0f-117">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6d67-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a6d67-117">See also</span></span>
 
-- <xref:System.IO?displayProperty=nameWithType>  
-- [<span data-ttu-id="e0f0f-118">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="e0f0f-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="e0f0f-119">Das Dateisystem und die Registrierung (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="e0f0f-119">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)
+- <xref:System.IO?displayProperty=nameWithType>
+- [<span data-ttu-id="a6d67-118">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="a6d67-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="a6d67-119">Das Dateisystem und die Registrierung (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="a6d67-119">File System and the Registry (C# Programming Guide)</span></span>](../../../csharp/programming-guide/file-system/index.md)

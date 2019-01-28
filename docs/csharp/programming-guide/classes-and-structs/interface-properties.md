@@ -6,41 +6,41 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: c51064f9bb5e834648e0086fd8d28f9c0bd84b61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: af80f403942f59d672854c80830e175ef7ebaff5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241586"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652184"
 ---
-# <a name="interface-properties-c-programming-guide"></a><span data-ttu-id="d0058-102">Schnittstelleneigenschaften (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="d0058-102">Interface Properties (C# Programming Guide)</span></span>
-<span data-ttu-id="d0058-103">Eigenschaften können für eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="d0058-103">Properties can be declared on an [interface](../../../csharp/language-reference/keywords/interface.md).</span></span> <span data-ttu-id="d0058-104">Das folgende Beispiel zeigt den Accessor einer Schnittstelleneigenschaft:</span><span class="sxs-lookup"><span data-stu-id="d0058-104">The following is an example of an interface property accessor:</span></span>  
+# <a name="interface-properties-c-programming-guide"></a><span data-ttu-id="e90a8-102">Schnittstelleneigenschaften (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="e90a8-102">Interface Properties (C# Programming Guide)</span></span>
+<span data-ttu-id="e90a8-103">Eigenschaften können für eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="e90a8-103">Properties can be declared on an [interface](../../../csharp/language-reference/keywords/interface.md).</span></span> <span data-ttu-id="e90a8-104">Das folgende Beispiel zeigt den Accessor einer Schnittstelleneigenschaft:</span><span class="sxs-lookup"><span data-stu-id="e90a8-104">The following is an example of an interface property accessor:</span></span>  
   
  [!code-csharp[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_1.cs)]  
   
- <span data-ttu-id="d0058-105">Der Accessor einer Schnittstelleneigenschaft enthält keinen Text.</span><span class="sxs-lookup"><span data-stu-id="d0058-105">The accessor of an interface property does not have a body.</span></span> <span data-ttu-id="d0058-106">Der Zweck eines Accessors besteht darin anzugeben, ob die Eigenschaft gleichzeitig Lese- und Schreibzugriff, nur Lesezugriff oder nur Schreibzugriff besitzt.</span><span class="sxs-lookup"><span data-stu-id="d0058-106">Thus, the purpose of the accessors is to indicate whether the property is read-write, read-only, or write-only.</span></span>  
+ <span data-ttu-id="e90a8-105">Der Accessor einer Schnittstelleneigenschaft enthält keinen Text.</span><span class="sxs-lookup"><span data-stu-id="e90a8-105">The accessor of an interface property does not have a body.</span></span> <span data-ttu-id="e90a8-106">Der Zweck eines Accessors besteht darin anzugeben, ob die Eigenschaft gleichzeitig Lese- und Schreibzugriff, nur Lesezugriff oder nur Schreibzugriff besitzt.</span><span class="sxs-lookup"><span data-stu-id="e90a8-106">Thus, the purpose of the accessors is to indicate whether the property is read-write, read-only, or write-only.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d0058-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d0058-107">Example</span></span>  
- <span data-ttu-id="d0058-108">In diesem Beispiel besitzt die Schnittstelle `IEmployee` eine Lese-/Schreibzugriff-Eigenschaft `Name` und eine Lesezugriff-Eigenschaft `Counter`.</span><span class="sxs-lookup"><span data-stu-id="d0058-108">In this example, the interface `IEmployee` has a read-write property, `Name`, and a read-only property, `Counter`.</span></span> <span data-ttu-id="d0058-109">Die Klasse `Employee` implementiert die Schnittstelle `IEmployee` und verwendet diese beiden Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="d0058-109">The class `Employee` implements the `IEmployee` interface and uses these two properties.</span></span> <span data-ttu-id="d0058-110">Der Name eines neuen Mitarbeiters und die aktuelle Anzahl der Mitarbeiter werden vom Programm gelesen, und der Mitarbeitername sowie die berechnete Mitarbeiteranzahl werden angezeigt.</span><span class="sxs-lookup"><span data-stu-id="d0058-110">The program reads the name of a new employee and the current number of employees and displays the employee name and the computed employee number.</span></span>  
+## <a name="example"></a><span data-ttu-id="e90a8-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="e90a8-107">Example</span></span>  
+ <span data-ttu-id="e90a8-108">In diesem Beispiel besitzt die Schnittstelle `IEmployee` eine Lese-/Schreibzugriff-Eigenschaft `Name` und eine Lesezugriff-Eigenschaft `Counter`.</span><span class="sxs-lookup"><span data-stu-id="e90a8-108">In this example, the interface `IEmployee` has a read-write property, `Name`, and a read-only property, `Counter`.</span></span> <span data-ttu-id="e90a8-109">Die Klasse `Employee` implementiert die Schnittstelle `IEmployee` und verwendet diese beiden Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="e90a8-109">The class `Employee` implements the `IEmployee` interface and uses these two properties.</span></span> <span data-ttu-id="e90a8-110">Der Name eines neuen Mitarbeiters und die aktuelle Anzahl der Mitarbeiter werden vom Programm gelesen, und der Mitarbeitername sowie die berechnete Mitarbeiteranzahl werden angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e90a8-110">The program reads the name of a new employee and the current number of employees and displays the employee name and the computed employee number.</span></span>  
   
- <span data-ttu-id="d0058-111">Sie können den vollqualifizierten Namen der Eigenschaft verwenden, der auf die Schnittstelle verweist, in der der Member deklariert wird.</span><span class="sxs-lookup"><span data-stu-id="d0058-111">You could use the fully qualified name of the property, which references the interface in which the member is declared.</span></span> <span data-ttu-id="d0058-112">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="d0058-112">For example:</span></span>  
-  
- [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
-  
- <span data-ttu-id="d0058-113">Dies wird [Explizite Schnittstellenimplementierung](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) genannt.</span><span class="sxs-lookup"><span data-stu-id="d0058-113">This is called [Explicit Interface Implementation](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md).</span></span> <span data-ttu-id="d0058-114">Wenn z.B. die Klasse `Employee` die beiden Schnittstellen `ICitizen` und `IEmployee` implementiert und beide Schnittstellen die Eigenschaft `Name` besitzen, ist die explizite Implementierung des Schnittstellenmembers erforderlich.</span><span class="sxs-lookup"><span data-stu-id="d0058-114">For example, if the class `Employee` is implementing two interfaces `ICitizen` and `IEmployee` and both interfaces have the `Name` property, the explicit interface member implementation will be necessary.</span></span> <span data-ttu-id="d0058-115">Das bedeutet, dass die folgende Eigenschaftendeklaration:</span><span class="sxs-lookup"><span data-stu-id="d0058-115">That is, the following property declaration:</span></span>  
+ <span data-ttu-id="e90a8-111">Sie können den vollqualifizierten Namen der Eigenschaft verwenden, der auf die Schnittstelle verweist, in der der Member deklariert wird.</span><span class="sxs-lookup"><span data-stu-id="e90a8-111">You could use the fully qualified name of the property, which references the interface in which the member is declared.</span></span> <span data-ttu-id="e90a8-112">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="e90a8-112">For example:</span></span>  
   
  [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
- <span data-ttu-id="d0058-116">die Eigenschaft `Name` für die Schnittstelle `IEmployee` implementiert. Dahingegen implementiert die folgende Deklaration:</span><span class="sxs-lookup"><span data-stu-id="d0058-116">implements the `Name` property on the `IEmployee` interface, while the following declaration:</span></span>  
+ <span data-ttu-id="e90a8-113">Dies wird [Explizite Schnittstellenimplementierung](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) genannt.</span><span class="sxs-lookup"><span data-stu-id="e90a8-113">This is called [Explicit Interface Implementation](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md).</span></span> <span data-ttu-id="e90a8-114">Wenn z.B. die Klasse `Employee` die beiden Schnittstellen `ICitizen` und `IEmployee` implementiert und beide Schnittstellen die Eigenschaft `Name` besitzen, ist die explizite Implementierung des Schnittstellenmembers erforderlich.</span><span class="sxs-lookup"><span data-stu-id="e90a8-114">For example, if the class `Employee` is implementing two interfaces `ICitizen` and `IEmployee` and both interfaces have the `Name` property, the explicit interface member implementation will be necessary.</span></span> <span data-ttu-id="e90a8-115">Das bedeutet, dass die folgende Eigenschaftendeklaration:</span><span class="sxs-lookup"><span data-stu-id="e90a8-115">That is, the following property declaration:</span></span>  
+  
+ [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
+  
+ <span data-ttu-id="e90a8-116">die Eigenschaft `Name` für die Schnittstelle `IEmployee` implementiert. Dahingegen implementiert die folgende Deklaration:</span><span class="sxs-lookup"><span data-stu-id="e90a8-116">implements the `Name` property on the `IEmployee` interface, while the following declaration:</span></span>  
   
  [!code-csharp[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_3.cs)]  
   
- <span data-ttu-id="d0058-117">die Eigenschaft `Name` für die Schnittstelle `ICitizen`.</span><span class="sxs-lookup"><span data-stu-id="d0058-117">implements the `Name` property on the `ICitizen` interface.</span></span>  
+ <span data-ttu-id="e90a8-117">die Eigenschaft `Name` für die Schnittstelle `ICitizen`.</span><span class="sxs-lookup"><span data-stu-id="e90a8-117">implements the `Name` property on the `ICitizen` interface.</span></span>  
   
  [!code-csharp[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_4.cs)]  
   
   **`210 Hazem Abolrous`**    
-## <a name="sample-output"></a><span data-ttu-id="d0058-118">Beispielausgabe</span><span class="sxs-lookup"><span data-stu-id="d0058-118">Sample Output</span></span>  
+## <a name="sample-output"></a><span data-ttu-id="e90a8-118">Beispielausgabe</span><span class="sxs-lookup"><span data-stu-id="e90a8-118">Sample Output</span></span>  
  `Enter number of employees: 210`  
   
  `Enter the name of the new employee: Hazem Abolrous`  
@@ -51,11 +51,11 @@ ms.locfileid: "53241586"
   
  `Employee name: Hazem Abolrous`  
   
-## <a name="see-also"></a><span data-ttu-id="d0058-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d0058-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e90a8-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e90a8-119">See also</span></span>
 
-- [<span data-ttu-id="d0058-120">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="d0058-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="d0058-121">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="d0058-121">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [<span data-ttu-id="d0058-122">Verwenden von Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="d0058-122">Using Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-- [<span data-ttu-id="d0058-123">Vergleich zwischen Eigenschaften und Indexern</span><span class="sxs-lookup"><span data-stu-id="d0058-123">Comparison Between Properties and Indexers</span></span>](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
-- [<span data-ttu-id="d0058-124">Indexer</span><span class="sxs-lookup"><span data-stu-id="d0058-124">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)  
-- [<span data-ttu-id="d0058-125">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="d0058-125">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)
+- [<span data-ttu-id="e90a8-120">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="e90a8-120">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="e90a8-121">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="e90a8-121">Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [<span data-ttu-id="e90a8-122">Verwenden von Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="e90a8-122">Using Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
+- [<span data-ttu-id="e90a8-123">Vergleich zwischen Eigenschaften und Indexern</span><span class="sxs-lookup"><span data-stu-id="e90a8-123">Comparison Between Properties and Indexers</span></span>](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)
+- [<span data-ttu-id="e90a8-124">Indexer</span><span class="sxs-lookup"><span data-stu-id="e90a8-124">Indexers</span></span>](../../../csharp/programming-guide/indexers/index.md)
+- [<span data-ttu-id="e90a8-125">Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="e90a8-125">Interfaces</span></span>](../../../csharp/programming-guide/interfaces/index.md)

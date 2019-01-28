@@ -8,47 +8,47 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: 58d1511387c93841f49d6ced934b492fe097876b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6ff29a7a204cb8f20f2f67946d5d1ed9c976e7aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518519"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694580"
 ---
-# <a name="-baseaddress-c-compiler-options"></a><span data-ttu-id="e3c15-102">-baseaddress (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="e3c15-102">-baseaddress (C# Compiler Options)</span></span>
-<span data-ttu-id="e3c15-103">Mit der Option **-baseaddress** können Sie die bevorzugte Basisadresse angeben, an der eine DLL geladen werden soll.</span><span class="sxs-lookup"><span data-stu-id="e3c15-103">The **-baseaddress** option lets you specify the preferred base address at which to load a DLL.</span></span> <span data-ttu-id="e3c15-104">Weitere Informationen zu Situationen und Gründen für die Verwendung dieser Option finden Sie in [Larry Ostermans WebLog](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/).</span><span class="sxs-lookup"><span data-stu-id="e3c15-104">For more information about when and why to use this option, see [Larry Osterman's WebLog](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/).</span></span>  
+# <a name="-baseaddress-c-compiler-options"></a><span data-ttu-id="b405f-102">-baseaddress (C#-Compileroptionen)</span><span class="sxs-lookup"><span data-stu-id="b405f-102">-baseaddress (C# Compiler Options)</span></span>
+<span data-ttu-id="b405f-103">Mit der Option **-baseaddress** können Sie die bevorzugte Basisadresse angeben, an der eine DLL geladen werden soll.</span><span class="sxs-lookup"><span data-stu-id="b405f-103">The **-baseaddress** option lets you specify the preferred base address at which to load a DLL.</span></span> <span data-ttu-id="b405f-104">Weitere Informationen zu Situationen und Gründen für die Verwendung dieser Option finden Sie in [Larry Ostermans WebLog](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/).</span><span class="sxs-lookup"><span data-stu-id="b405f-104">For more information about when and why to use this option, see [Larry Osterman's WebLog](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e3c15-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="e3c15-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b405f-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="b405f-105">Syntax</span></span>  
   
 ```console  
 -baseaddress:address  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="e3c15-106">Argumente</span><span class="sxs-lookup"><span data-stu-id="e3c15-106">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="b405f-106">Argumente</span><span class="sxs-lookup"><span data-stu-id="b405f-106">Arguments</span></span>  
  `address`  
- <span data-ttu-id="e3c15-107">Die Basisadresse für die DLL.</span><span class="sxs-lookup"><span data-stu-id="e3c15-107">The base address for the DLL.</span></span> <span data-ttu-id="e3c15-108">Diese Adresse kann als dezimale, hexadezimale oder oktale Zahl angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="e3c15-108">This address can be specified as a decimal, hexadecimal, or octal number.</span></span>  
+ <span data-ttu-id="b405f-107">Die Basisadresse für die DLL.</span><span class="sxs-lookup"><span data-stu-id="b405f-107">The base address for the DLL.</span></span> <span data-ttu-id="b405f-108">Diese Adresse kann als dezimale, hexadezimale oder oktale Zahl angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="b405f-108">This address can be specified as a decimal, hexadecimal, or octal number.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e3c15-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e3c15-109">Remarks</span></span>  
- <span data-ttu-id="e3c15-110">Die Standard-Basisadresse für eine DLL-Datei wird durch die Common Language Runtime von .NET Framework festgelegt.</span><span class="sxs-lookup"><span data-stu-id="e3c15-110">The default base address for a DLL is set by the .NET Framework common language runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b405f-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b405f-109">Remarks</span></span>  
+ <span data-ttu-id="b405f-110">Die Standard-Basisadresse für eine DLL-Datei wird durch die Common Language Runtime von .NET Framework festgelegt.</span><span class="sxs-lookup"><span data-stu-id="b405f-110">The default base address for a DLL is set by the .NET Framework common language runtime.</span></span>  
   
- <span data-ttu-id="e3c15-111">Denken Sie daran, dass das niederwertige Wort in dieser Adresse gerundet wird.</span><span class="sxs-lookup"><span data-stu-id="e3c15-111">Be aware that the lower-order word in this address will be rounded.</span></span> <span data-ttu-id="e3c15-112">Wenn Sie zum Beispiel 0x11110001 angeben, wird dies auf 0x11110000 gerundet.</span><span class="sxs-lookup"><span data-stu-id="e3c15-112">For example, if you specify 0x11110001, it will be rounded to 0x11110000.</span></span>  
+ <span data-ttu-id="b405f-111">Denken Sie daran, dass das niederwertige Wort in dieser Adresse gerundet wird.</span><span class="sxs-lookup"><span data-stu-id="b405f-111">Be aware that the lower-order word in this address will be rounded.</span></span> <span data-ttu-id="b405f-112">Wenn Sie zum Beispiel 0x11110001 angeben, wird dies auf 0x11110000 gerundet.</span><span class="sxs-lookup"><span data-stu-id="b405f-112">For example, if you specify 0x11110001, it will be rounded to 0x11110000.</span></span>  
   
- <span data-ttu-id="e3c15-113">Um das Signieren für eine DLL abzuschließen, verwenden Sie „SN.EXE“ mit der Option „-R“.</span><span class="sxs-lookup"><span data-stu-id="e3c15-113">To complete the signing process for a DLL, use SN.EXE with the -R option.</span></span>  
+ <span data-ttu-id="b405f-113">Um das Signieren für eine DLL abzuschließen, verwenden Sie „SN.EXE“ mit der Option „-R“.</span><span class="sxs-lookup"><span data-stu-id="b405f-113">To complete the signing process for a DLL, use SN.EXE with the -R option.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="e3c15-114">So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest</span><span class="sxs-lookup"><span data-stu-id="e3c15-114">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="b405f-114">So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest</span><span class="sxs-lookup"><span data-stu-id="b405f-114">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="e3c15-115">Öffnen Sie die Seite **Eigenschaften** des Projekts.</span><span class="sxs-lookup"><span data-stu-id="e3c15-115">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="b405f-115">Öffnen Sie die Seite **Eigenschaften** des Projekts.</span><span class="sxs-lookup"><span data-stu-id="b405f-115">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="e3c15-116">Klicken Sie auf die Eigenschaftenseite **Build** .</span><span class="sxs-lookup"><span data-stu-id="e3c15-116">Click the **Build** property page.</span></span>  
+2.  <span data-ttu-id="b405f-116">Klicken Sie auf die Eigenschaftenseite **Build** .</span><span class="sxs-lookup"><span data-stu-id="b405f-116">Click the **Build** property page.</span></span>  
   
-3.  <span data-ttu-id="e3c15-117">Klicken Sie auf die Schaltfläche **Erweitert** .</span><span class="sxs-lookup"><span data-stu-id="e3c15-117">Click the **Advanced** button.</span></span>  
+3.  <span data-ttu-id="b405f-117">Klicken Sie auf die Schaltfläche **Erweitert** .</span><span class="sxs-lookup"><span data-stu-id="b405f-117">Click the **Advanced** button.</span></span>  
   
-4.  <span data-ttu-id="e3c15-118">Ändern Sie die Eigenschaft **DLL-Basisadresse**.</span><span class="sxs-lookup"><span data-stu-id="e3c15-118">Modify the **DLL Base Address** property.</span></span>  
+4.  <span data-ttu-id="b405f-118">Ändern Sie die Eigenschaft **DLL-Basisadresse**.</span><span class="sxs-lookup"><span data-stu-id="b405f-118">Modify the **DLL Base Address** property.</span></span>  
   
-     <span data-ttu-id="e3c15-119">Wie Sie diese Compileroption programmgesteuert festlegen, erfahren Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>.</span><span class="sxs-lookup"><span data-stu-id="e3c15-119">To set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>.</span></span>  
+     <span data-ttu-id="b405f-119">Wie Sie diese Compileroption programmgesteuert festlegen, erfahren Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>.</span><span class="sxs-lookup"><span data-stu-id="b405f-119">To set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3c15-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e3c15-120">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b405f-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b405f-120">See also</span></span>
 
-- <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>  
-- [<span data-ttu-id="e3c15-121">C#-Compileroptionen</span><span class="sxs-lookup"><span data-stu-id="e3c15-121">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="e3c15-122">Verwalten von Projekt- und Projektmappeneigenschaften</span><span class="sxs-lookup"><span data-stu-id="e3c15-122">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
+- [<span data-ttu-id="b405f-121">C#-Compileroptionen</span><span class="sxs-lookup"><span data-stu-id="b405f-121">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="b405f-122">Verwalten von Projekt- und Projektmappeneigenschaften</span><span class="sxs-lookup"><span data-stu-id="b405f-122">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
