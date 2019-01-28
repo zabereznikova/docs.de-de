@@ -4,12 +4,12 @@ description: Dieses Thema führt Sie durch die Erstellung einer .NET Core-Lösun
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 710ce4c26bf06f7f7a9b1dc633fa55ddb3477dd6
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7f06a0b9ae9eeb9ff9020641c6f12744725f30f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169709"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54727754"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac
 
@@ -192,4 +192,4 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Versionsanmerkungen für Visual Studio 2017 für Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
+- [Versionsanmerkungen für Visual Studio 2017 für Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)

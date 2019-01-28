@@ -2,18 +2,18 @@
 title: Befehl „dotnet tool uninstall“
 description: Der Befehl „dotnet tool uninstall“ deinstalliert das angegebene globale .NET Core-Tool auf Ihrem Computer.
 ms.date: 05/29/2018
-ms.openlocfilehash: 2ac0046d012fcf4a4be1c9bfa2e942e35b2c7290
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 4d53d305131e3399ab5d9c19f9319f3ba3544c19
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168350"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54680922"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet tool uninstall`: Deinstalliert das angegebene [globale .NET Core-Tool](global-tools.md) auf Ihrem Computer.
 
@@ -65,4 +65,4 @@ Deinstalliert das globale Tool [dotnetsay](https://www.nuget.org/packages/dotnet
 
 ## <a name="see-also"></a>Siehe auch
 
-* [.NET Core Global Tools (Globale .NET Core-Tools)](global-tools.md)
+- [.NET Core Global Tools (Globale .NET Core-Tools)](global-tools.md)
