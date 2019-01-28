@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a9b80d90c8f5089744e9cd5a126f7730afbed44
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362313"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600491"
 ---
 # <a name="expressions-c-programming-guide"></a>Ausdrücke (C#-Programmierhandbuch)
 Ein *Ausdruck* ist eine Sequenz von einem oder mehr Operanden und null oder mehr Operatoren, die einen einzelnen Wert, ein Objekt, eine Methode oder ein Namespace annehmen können. Ausdrücke können einen literalen Wert, einen Methodenaufruf, einen Operator und die entsprechenden Operanden oder einen *einfachen Namen* enthalten. Einfache Namen können der Name einer Variablen, eines Typmembers, eines Methodenparameters, eines Namespaces oder eines Typs sein.  
@@ -75,9 +75,9 @@ C# unterstützt *Ausdruckskörpermember*, mit denen Sie eine präzise Ausdrücks
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Delegaten](../../../csharp/programming-guide/delegates/index.md)  
-- [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
-- [Typen](../../../csharp/programming-guide/types/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Delegaten](../../../csharp/programming-guide/delegates/index.md)
+- [Operatoren](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Typen](../../../csharp/programming-guide/types/index.md)
 - [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)

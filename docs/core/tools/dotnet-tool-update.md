@@ -2,18 +2,18 @@
 title: Befehl „dotnet tool update“
 description: Der Befehl „dotnet tool update“ aktualisiert die angegebenen globalen .NET Core-Tools auf Ihrem Computer.
 ms.date: 05/29/2018
-ms.openlocfilehash: 2716f7f88ffe364bebacf970d7152f5509edc888
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: bc7edada013c118564d44cbe4542dacb76925692
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54516641"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>name
 
 `dotnet tool update`: Aktualisiert das angegebene [globale .NET Core-Tool](global-tools.md) auf Ihrem Computer.
 
@@ -81,4 +81,4 @@ Aktualisiert das globale Tool [dotnetsay](https://www.nuget.org/packages/dotnets
 
 ## <a name="see-also"></a>Siehe auch
 
-* [.NET Core Global Tools (Globale .NET Core-Tools)](global-tools.md)
+- [.NET Core Global Tools (Globale .NET Core-Tools)](global-tools.md)

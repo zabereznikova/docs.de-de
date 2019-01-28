@@ -3,12 +3,12 @@ title: Dokumentieren von Code mit XML-Kommentaren
 description: Informationen zum Dokumentieren Ihres Codes mit XML-Dokumentationskommentaren und zum Erstellen einer XML-Dokumentationsdatei zum Zeitpunkt der Kompilierung.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 70da976861a9bca024d41dd329dc7be043d67c94
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 15bdd65b96159b4c9b6eb45016f8bdde58c1efe3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54576199"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentieren von Code mit XML-Kommentaren
 
@@ -222,5 +222,5 @@ Das Dokumentieren von Code wird aus vielen Gründen empfohlen. Es folgen einige 
 
 ## <a name="see-also"></a>Siehe auch
 
-* [XML-Dokumentationskommentare (C#-Programmierhandbuch)](programming-guide/xmldoc/xml-documentation-comments.md)
-* [Empfohlene Tags für Dokumentationskommentare (C#-Programmierhandbuch)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [XML-Dokumentationskommentare (C#-Programmierhandbuch)](programming-guide/xmldoc/xml-documentation-comments.md)
+- [Empfohlene Tags für Dokumentationskommentare (C#-Programmierhandbuch)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

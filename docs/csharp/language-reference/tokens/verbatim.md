@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9575f408da351ac3715e1969d601c0cc73da286
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 2302c2602411455c0f3f0371579fc9be200004d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244166"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660852"
 ---
 # <a name="-c-reference"></a>@ (C#-Referenz)
 
@@ -40,6 +40,6 @@ Das Sonderzeichen `@` dient als ausführlicher Bezeichner. Er wird wie folgt ver
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Referenz](../../../csharp/language-reference/index.md)
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [C#-Sonderzeichen](../../../csharp/language-reference/tokens/index.md)

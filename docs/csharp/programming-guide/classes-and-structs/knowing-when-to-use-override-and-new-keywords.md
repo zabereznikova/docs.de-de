@@ -7,14 +7,14 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: d44d8d0143d366117a24495df3fa8a18f893ebb3
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244738"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496256"
 ---
-# <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Wann müssen die Schlüsselwörter „override“ und „new“ verwendet werden? (C#-Programmierhandbuch)
+# <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Wann müssen die Schlüsselwörter "override" und "new" verwendet werden? (C#-Programmierhandbuch)
 In C# kann eine Methode in einer abgeleiteten Klasse den gleichen Namen wie eine Methode in einer Basisklasse haben. Sie können mit den Schlüsselwörtern [new](../../../csharp/language-reference/keywords/new.md) und [override](../../../csharp/language-reference/keywords/override.md) festlegen, wie die Methoden interagieren. Der `override`-Modifizierer *erweitert* die Methode der Basisklasse, und der `new`-Modifizierer *verbirgt* sie. Der Unterschied wird in den Beispielen in diesem Thema veranschaulicht.  
   
  Deklarieren Sie in einer Konsolenanwendung die folgenden beiden Klassen: `BaseClass` und `DerivedClass`. `DerivedClass` erbt von `BaseClass`.  
@@ -544,8 +544,8 @@ namespace OverrideAndNew2
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Versionsverwaltung mit den Schlüsselwörtern "override" und "new"](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
-- [base](../../../csharp/language-reference/keywords/base.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Versionsverwaltung mit den Schlüsselwörtern "override" und "new"](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
+- [base](../../../csharp/language-reference/keywords/base.md)
 - [abstract](../../../csharp/language-reference/keywords/abstract.md)

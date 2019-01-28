@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: a290cd709dd6491981658f467fa0163011290128
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 16f65bc4ddcc37bbc1abb5dfa6299670a738073b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238467"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503572"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Verwenden von foreach mit Arrays (C#-Programmierhandbuch)
 
@@ -29,9 +29,9 @@ Bei mehrdimensionalen Arrays haben Sie jedoch eine größere Kontrolle über die
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Array>  
-- [C#-Programmierhandbuch](../index.md)  
-- [Arrays](index.md)  
-- [Eindimensionale Arrays](single-dimensional-arrays.md)  
-- [Mehrdimensionale Arrays](multidimensional-arrays.md)  
+- <xref:System.Array>
+- [C#-Programmierhandbuch](../index.md)
+- [Arrays](index.md)
+- [Eindimensionale Arrays](single-dimensional-arrays.md)
+- [Mehrdimensionale Arrays](multidimensional-arrays.md)
 - [Verzweigte Arrays](jagged-arrays.md)

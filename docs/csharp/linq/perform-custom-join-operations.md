@@ -1,14 +1,14 @@
 ---
 title: Ausführen von benutzerdefinierten JOIN-Vorgängen (LINQ in C#)
 description: In diesem Artikel erfahren Sie, wie Sie benutzerdefinierte LINQ-JOIN-Vorgänge in C# ausführen.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: a0e08396c006f68949357c50a28b3b0982f0dd83
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7051007c67bd64cd11ede2f4d5352ce3d497255f
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217424"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857865"
 ---
 # <a name="perform-custom-join-operations"></a>Ausführen von benutzerdefinierten Verknüpfungsoperationen
 
@@ -25,7 +25,7 @@ Die `join`-Klausel kann jedoch nicht in den folgenden Fällen verwendet werden:
  Wenn Sie Verknüpfungen ausführen möchten, die keine Gleichheitsverknüpfungen sind, können Sie mehrere `from`-Klauseln verwenden, um jede Datenquelle einzeln einzuführen. Sie wenden anschließend einen Prädikatsausdruck in einer `where`-Klausel auf die Bereichsvariable für jede Quelle an. Der Ausdruck kann auch die Form eines Methodenaufrufs annehmen.
 
 > [!NOTE]
-> Verwechseln Sie diese Art des benutzerdefinierten JOIN-Vorgangs nicht mit der Verwendung mehrerer `from`-Klauseln für den Zugriff auf interne Sammlungen. Weitere Informationen finden Sie unter [Join-Klausel](../language-reference/keywords/join-clause.md).
+> Verwechseln Sie diese Art des benutzerdefinierten JOIN-Vorgangs nicht mit der Verwendung mehrerer `from`-Klauseln für den Zugriff auf interne Sammlungen. Weitere Informationen finden Sie unter [join-Klausel](../language-reference/keywords/join-clause.md).
 
 ## <a name="example"></a>Beispiel
 
@@ -43,6 +43,6 @@ Im folgenden Beispiel muss die Abfrage zwei Sequenzen anhand übereinstimmender 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Language-Integrated Query (LINQ)](index.md)  
-- [join-Klausel](../language-reference/keywords/join-clause.md)  
-- [Sortieren der Ergebnisse einer Join-Klausel](order-the-results-of-a-join-clause.md)  
+- [Language-Integrated Query (LINQ)](index.md)
+- [join-Klausel](../language-reference/keywords/join-clause.md)
+- [Sortieren der Ergebnisse einer Join-Klausel](order-the-results-of-a-join-clause.md)

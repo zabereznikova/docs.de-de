@@ -6,12 +6,12 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: ff636691ea2f4dacd13fbd2a336f0023ed65750b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 5d2dc8f5bdb0b89d5fd265ad86cbb13401bc8b14
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235659"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523583"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>Indexer in Schnittstellen (C#-Programmierhandbuch)
 Indexer können für eine [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) deklariert werden. Accessoren für Schnittstellenindexer unterscheiden sich von den Accessoren für [Klassen](../../../csharp/language-reference/keywords/class.md)-Indexer in den folgenden Punkten:  
@@ -61,7 +61,7 @@ string ICitizen.this[int index]
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
-- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Indexer](../../../csharp/programming-guide/indexers/index.md)
+- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)

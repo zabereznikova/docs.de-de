@@ -2,12 +2,12 @@
 title: Verwenden von Varianz für die generischen Delegaten Func und Action (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: 903926bc86b1b96cea25b91314e35ed4771bbcb9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970356"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540597"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Verwenden von Varianz für die generischen Delegaten Func und Action (C#)
 Diese Beispiele veranschaulichen, wie Sie Kovarianz und Kontravarianz in den generischen Delegaten `Func` und `Action` verwenden, um die Wiederverwendung von Methoden zu ermöglichen und mehr Flexibilität in Ihrem Code zu bieten.  
@@ -83,5 +83,5 @@ class Program
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Kovarianz und Kontravarianz (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
+- [Kovarianz und Kontravarianz (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Generika](~/docs/standard/generics/index.md)

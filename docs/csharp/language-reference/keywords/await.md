@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: c80d6598540700fdb8559497f10c66726c384519
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 86da57c0f8ecca7e5dada3ae6756739197c3f206
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239682"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618973"
 ---
 # <a name="await-c-reference"></a>await (C#-Referenz)
 Der Operator `await` wird auf eine Aufgabe in einer asynchronen Methode angewendet, um einen Unterbrechungspunkt in die Ausführung der Methode einzufügen, bis die Aufgabe abgeschlossen ist. Die Aufgabe stellt derzeit ausgeführte Arbeit dar.  
@@ -68,7 +68,7 @@ Im folgenden Beispiel wird die Gesamtzahl der Zeichen auf den Seiten zurückgege
 
 Im vorhergehenden Beispiel wird C# 7.1 verwendet, was die [`async` `Main`-Methode unterstützt](../../programming-guide/main-and-command-args/index.md). Da frühere C#-Versionen keine Anwendungseinstiegspunkte unterstützen, die <xref:System.Threading.Tasks.Task> oder <xref:System.Threading.Tasks.Task%601> zurückgeben, können Sie den `async`-Modifikator nicht auf die `Main`-Methode anwenden und auf den Aufruf der `GetPageLengthsAsync`-Methode warten. In diesem Fall können Sie sicherstellen, dass die `Main`-Methode auf den Abschluss des asynchronen Vorgangs wartet, indem der Wert der Eigenschaft <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> abgerufen wird. Bei Aufgaben, die keinen Wert zurückgeben, wird die Methode <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> aufgerufen. Informationen zum Auswählen der Sprachversion finden Sie unter [Auswählen der C#-Sprachversion](../configure-language-version.md).
 
-## <a name="see-also"></a>Siehe auch  
-- [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md)   
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+## <a name="see-also"></a>Siehe auch
+- [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

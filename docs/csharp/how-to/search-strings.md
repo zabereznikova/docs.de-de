@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 030d71f95947e98d9f269095908b0431c2192430
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857153"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54623390"
 ---
 # <a name="how-to-search-strings"></a>Vorgehensweise: Durchsuchen von Zeichenfolgen
 
@@ -74,12 +74,12 @@ Dieses einzelne Suchmuster findet alle gültigen Zeichenfolgen. Reguläre Ausdr�
 
 Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [GitHub-Repository](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings) ansehen. Alternativ dazu können Sie die Beispiele [als ZIP-Datei](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) herunterladen.
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../programming-guide/index.md)  
-- [Zeichenfolgen](../programming-guide/strings/index.md)  
+- [C#-Programmierhandbuch](../programming-guide/index.md)
+- [Zeichenfolgen](../programming-guide/strings/index.md)
 - [LINQ und Zeichenfolgen](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)
 - [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md)
-- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET](../../standard/base-types/best-practices-strings.md)  
+- [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen in .NET](../../standard/base-types/best-practices-strings.md)

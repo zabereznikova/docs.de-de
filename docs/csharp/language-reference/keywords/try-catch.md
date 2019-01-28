@@ -11,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 7e48783c01a5b94f51f89d25f465f22358e7aa8f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: df4ccde0a9a377b06b8efc64cc78936a983c66cc
+ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240020"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55083924"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C#-Referenz)
 
@@ -163,7 +163,7 @@ Im folgenden Beispiel wird die Ausnahmebehandlung für asynchrone Methoden veran
 
 Heben Sie die Auskommentierung der Zeile `throw new Exception` im Beispiel auf, um die Ausnahmebehandlung zu veranschaulichen. Die `IsFaulted`-Eigenschaft der Aufgabe wird auf `True` festgelegt, die `Exception.InnerException`-Eigenschaft der Aufgabe auf die Ausnahme, und die Ausnahme wird im `catch`-Block abgefangen.
 
-Heben Sie die Auskommentierung der Zeile `throw new OperationCancelledException` auf, um zu veranschaulichen, was beim Abbrechen eines asynchronen Prozesses passiert. Die `IsCanceled`-Eigenschaft der Aufgabe wird auf `true` festgelegt, und die Ausnahme wird im `catch`-Block abgefangen. Unter bestimmten Bedingungen, die für dieses Beispiel nicht gelten, wird die `IsFaulted`-Eigenschaft der Aufgabe auf `true` und `IsCanceled` auf `false` festgelegt.
+Heben Sie die Auskommentierung der Zeile `throw new OperationCanceledException` auf, um zu veranschaulichen, was beim Abbrechen eines asynchronen Prozesses passiert. Die `IsCanceled`-Eigenschaft der Aufgabe wird auf `true` festgelegt, und die Ausnahme wird im `catch`-Block abgefangen. Unter bestimmten Bedingungen, die für dieses Beispiel nicht gelten, wird die `IsFaulted`-Eigenschaft der Aufgabe auf `true` und `IsCanceled` auf `false` festgelegt.
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 

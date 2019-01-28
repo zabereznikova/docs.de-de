@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: ccb783d8d478b14078ab6fe09f12e480c12ac06b
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084770"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517837"
 ---
 # <a name="if-else-c-reference"></a>if-else (C#-Referenz)
 
@@ -137,9 +137,9 @@ if (!(m >= n || m >= p))
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../index.md)  
-- [C#-Programmierhandbuch](../../programming-guide/index.md)  
-- [C#-Schlüsselwörter](index.md)  
-- [?: Operator](../operators/conditional-operator.md)  
-- [if-else-Anweisung (C++)](/cpp/cpp/if-else-statement-cpp)  
-- [switch](switch.md)  
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
+- [C#-Schlüsselwörter](index.md)
+- [?: Operator](../operators/conditional-operator.md)
+- [if-else-Anweisung (C++)](/cpp/cpp/if-else-statement-cpp)
+- [switch](switch.md)

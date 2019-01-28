@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 8753e977007e46ea4227c8c0072671a2e9298645
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: bd0562c2c2f22a549af8f21e40b46ac130f8bf75
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362131"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673058"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Umwandlung und Typkonvertierungen (C#-Programmierhandbuch)
 
@@ -91,12 +91,12 @@ Giraffe g2 = (Giraffe) a;
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Typen](../../../csharp/programming-guide/types/index.md)  
-- [()-Operator](../../../csharp/language-reference/operators/invocation-operator.md)  
-- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
-- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
-- [Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
-- [Verallgemeinerte Typkonvertierung](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
-- [Konvertieren exportierter Typen](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Typen](../../../csharp/programming-guide/types/index.md)
+- [()-Operator](../../../csharp/language-reference/operators/invocation-operator.md)
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)
+- [implicit](../../../csharp/language-reference/keywords/implicit.md)
+- [Konvertierungsoperatoren](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)
+- [Verallgemeinerte Typkonvertierung](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)
+- [Konvertieren exportierter Typen](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)
 - [Vorgehensweise: Konvertieren einer Zeichenfolge in eine Zahl](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

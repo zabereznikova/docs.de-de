@@ -2,12 +2,12 @@
 title: Refactoring mit einer Erweiterungsmethode (C#)
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 08c37923792e1ac6ee922bf052d39fb63b1685c7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 904dd558819a498bd8a3876759edaaa185be3b7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44201049"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616952"
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>Refactoring mit einer Erweiterungsmethode (C#)
 Dieses Beispiel baut auf dem vorhergehenden Beispiel, [Retrieving the Text of the Paragraphs (C#) (Abrufen des Textes der Absätze (C#))](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), auf. Es gestaltet die Verkettung von Zeichenfolgen mit einer reinen Funktion um, die als Erweiterungsmethode implementiert wird.  
@@ -248,5 +248,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (C#) (Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#))](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+- [Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [Refactoring in reine Funktionen (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

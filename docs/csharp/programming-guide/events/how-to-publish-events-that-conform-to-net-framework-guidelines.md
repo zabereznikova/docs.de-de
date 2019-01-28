@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 8269c976f161ba6ae11bee8cbef44b2f7c878e61
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bdc512ae1ac7fa51dec1307a9e759e5b1f97bf53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242892"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563196"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Vorgehensweise: Veröffentlichen von Ereignissen, die den .NET Framework-Richtlinien entsprechen (C#-Programmierhandbuch)
 Das folgende Verfahren veranschaulicht, wie Sie Ereignisse hinzufügen können, die dem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Standardmuster ihrer Klassen und Strukturen folgen. Alle Ereignisse in der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Klassenbibliothek basieren auf dem <xref:System.EventHandler>-Delegaten, der wie folgt definiert ist:  
@@ -76,7 +76,7 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Delegate>  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Ereignisse](../../../csharp/programming-guide/events/index.md)  
+- <xref:System.Delegate>
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Ereignisse](../../../csharp/programming-guide/events/index.md)
 - [Delegaten](../../../csharp/programming-guide/delegates/index.md)

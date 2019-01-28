@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
-ms.openlocfilehash: 13b43919b666dcc8c5adfc3490eaad73960547ae
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 58e29363ca1298966ecf88e6b456f33f43a176b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243900"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573045"
 ---
 # <a name="endif-c-reference"></a>#endif (C#-Referenz)
 `#endif` gibt das Ende einer bedingten Anweisung an, die mit der [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)-Anweisung angefangen hat. Ein auf ein Objekt angewendeter  
@@ -30,6 +30,6 @@ ms.locfileid: "53243900"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Referenz](../../../csharp/language-reference/index.md)  
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
+- [C#-Referenz](../../../csharp/language-reference/index.md)
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [C#-Präprozessoranweisungen](../../../csharp/language-reference/preprocessor-directives/index.md)

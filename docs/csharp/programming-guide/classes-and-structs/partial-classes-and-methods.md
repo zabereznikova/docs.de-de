@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 222a47989537f09fd78c4a3b17fa8c1a5478d73f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b960bbf0a35a917d9143a0f47ce3219b6cb10ab4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243464"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713314"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partielle Klassen und Methoden (C#-Programmierhandbuch)
 Es ist möglich, die Definition einer [Klasse](../../../csharp/language-reference/keywords/class.md), einer [Struktur](../../../csharp/language-reference/keywords/struct.md), einer [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) oder einer Methode auf zwei oder mehr Quelldateien aufzuteilen. Jede Quelldatei enthält einen Abschnitt der Typ- oder Methodendefinition. Die Teile werden bei der Kompilierung der Anwendung miteinander kombiniert.  
@@ -164,8 +164,8 @@ Weitere Informationen finden Sie unter [Partielle Datentypen](~/_csharplang/spec
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)  
-- [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)  
-- [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Klassen](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Strukturen](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Schnittstellen](../../../csharp/programming-guide/interfaces/index.md)
 - [partial (Typ)](../../../csharp/language-reference/keywords/partial-type.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236322"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54726649"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -83,7 +83,7 @@ Ein Verweisrückgabewert wird definiert durch Verwenden des `ref`-Schlüsselwort
 public ref decimal GetCurrentPrice()
 ```
 
-- Zwischen dem `return`-Token und der Variable, die in einer `return`-Anweisung in der Methode zurückgegeben wird. Zum Beispiel:
+- Zwischen dem `return`-Token und der Variable, die in einer `return`-Anweisung in der Methode zurückgegeben wird. Beispiel:
 
 ```csharp
 return ref DecimalArray[0];
@@ -154,12 +154,12 @@ Sie können Modifizierer zum Deklarieren einer Struktur als `readonly ref` kombi
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schreiben von sicherem und effizientem Code](../../write-safe-efficient-code.md)  
+- [Schreiben von sicherem und effizientem Code](../../write-safe-efficient-code.md)
 - [Ref-Rückgabetypen und lokale ref-Variablen](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Bedingter ref-Ausdruck](../operators/conditional-operator.md#conditional-ref-expression)
 - [ref-Zuweisungsoperator](../operators/assignment-operator.md#ref-assignment-operator)
-- [Übergeben von Parametern](../../programming-guide/classes-and-structs/passing-parameters.md)  
-- [Methodenparameter](method-parameters.md)  
-- [C#-Referenz](../index.md)  
-- [C#-Programmierhandbuch](../../programming-guide/index.md)  
+- [Übergeben von Parametern](../../programming-guide/classes-and-structs/passing-parameters.md)
+- [Methodenparameter](method-parameters.md)
+- [C#-Referenz](../index.md)
+- [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)

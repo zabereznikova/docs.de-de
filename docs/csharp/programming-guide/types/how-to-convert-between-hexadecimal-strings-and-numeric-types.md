@@ -8,12 +8,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: d61d48ca05e93743ef3afa894ad0cbc98d6d2ab0
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1d6884dc7376c07d2cc6fc03aa3972fb68d39ead
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615239"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Vorgehensweise: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen (C#-Programmierhandbuch)
 In diesen Beispielen wird gezeigt, wie Sie die folgenden Aufgaben ausführen:  
@@ -55,6 +55,6 @@ In diesen Beispielen wird gezeigt, wie Sie die folgenden Aufgaben ausführen:
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)  
-- [Typen](../../../csharp/programming-guide/types/index.md)  
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Typen](../../../csharp/programming-guide/types/index.md)
 - [Vorgehensweise: Bestimmen, ob eine Zeichenfolge einen numerischen Wert darstellt](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

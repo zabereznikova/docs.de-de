@@ -6,12 +6,12 @@ ms.date: 04/25/2018
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.openlocfilehash: 4b14714a55f77763425299ffc13ba579ead57810
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8e10a5de73e8d49f1a380fb8945b98ac797ef270
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237284"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54575540"
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>Standardwertausdrücke (C#-Programmierhandbuch)
 
@@ -62,9 +62,9 @@ Das folgende Beispiel demonstriert die Verwendung des `default`-Literals in eine
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Collections.Generic>  
-- [C#-Programmierhandbuch](../index.md)  
-- [Generika (C#-Programmierleitfaden)](../generics/index.md)  
-- [Generische Methoden](../generics/generic-methods.md)  
-- [Generika in .NET](~/docs/standard/generics/index.md)  
+- <xref:System.Collections.Generic>
+- [C#-Programmierhandbuch](../index.md)
+- [Generika (C#-Programmierleitfaden)](../generics/index.md)
+- [Generische Methoden](../generics/generic-methods.md)
+- [Generika in .NET](~/docs/standard/generics/index.md)
 - [Tabelle für Standardwerte](../../language-reference/keywords/default-values-table.md)

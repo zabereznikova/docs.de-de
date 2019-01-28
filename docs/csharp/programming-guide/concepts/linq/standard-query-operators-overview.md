@@ -2,12 +2,12 @@
 title: Übersicht über Standardabfrageoperatoren (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 397d1368a3c4e0b20a0bc9c694421ed60119d1aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7ce3a13c98bf08eae79906f1806427741568155e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502438"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54537958"
 ---
 # <a name="standard-query-operators-overview-c"></a>Übersicht über Standardabfrageoperatoren (C#)
 Die *Standardabfrageoperatoren* sind die Methoden, die das LINQ-Muster bilden. Die meisten dieser Methoden bearbeiten Sequenzen. Eine Sequenz ist hier ein Objekt, dessen Typ die <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert. Die Standardabfrageoperatoren stellen Abfragefunktionen wie Filterung, Projektion, Aggregation, Sortierung und weitere bereit.  
@@ -105,9 +105,9 @@ foreach (var obj in query)
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Linq.Enumerable>  
-- <xref:System.Linq.Queryable>  
-- [Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
-- [Abfrageausdruckssyntax für Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
-- [Classification of Standard Query Operators by Manner of Execution (C#) (Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#))](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
+- [Abfrageausdruckssyntax für Standardabfrageoperatoren (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Classification of Standard Query Operators by Manner of Execution (C#) (Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (C#))](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
 - [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

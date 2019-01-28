@@ -6,12 +6,12 @@ helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: 49151c6d2a573a24e63f733a5279faeee40de1b7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: d174f51fa1709a70b98473a4dbbad89b9c62c22a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640302"
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>Vorgehensweise: Verwenden von Zeigern zum Kopieren eines Bytearrays (C#-Programmierhandbuch)
 
@@ -27,7 +27,7 @@ In diesem Beispiel werden Indizes anstelle eines zweiten nicht verwalteten Zeige
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../index.md)  
-- [Unsicherer Code und Zeiger](index.md)  
-- [-unsafe (C#-Compileroptionen)](../../language-reference/compiler-options/unsafe-compiler-option.md)  
-- [Garbage Collection](../../../standard/garbage-collection/index.md)  
+- [C#-Programmierhandbuch](../index.md)
+- [Unsicherer Code und Zeiger](index.md)
+- [-unsafe (C#-Compileroptionen)](../../language-reference/compiler-options/unsafe-compiler-option.md)
+- [Garbage Collection](../../../standard/garbage-collection/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 489fdf87f973de6137587fc2280ef0fa72ab78ba
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: ab0cf58bec2d9072fbc3af78e477a84726dd7a81
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286454"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54659643"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphismus (C#-Programmierhandbuch)
 Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte Säule der objektorientierten Programmierung bezeichnet. Es handelt sich dabei um ein griechisches Wort, das "Vielgestaltigkeit" bedeutet und zwei verschiedene Aspekte umfasst:  
@@ -47,7 +47,7 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
  [!code-csharp[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
   
- Felder können nicht virtuelle sein; nur Methoden, Eigenschaften, Ereignisse und Indexer können virtuell sein. Wenn eine abgeleitete Klasse einen virtuellen Member überschreibt, wird dieser Member auch dann aufgerufen, wenn auf eine Instanz dieser Klasse als Instanz der Basisklasse zugegriffen wird. Der folgende Code veranschaulicht dies:  
+ Felder können – anders als Methoden, Eigenschaften, Ereignisse und Indexer – nicht virtuell sein. Wenn eine abgeleitete Klasse einen virtuellen Member überschreibt, wird dieser Member auch dann aufgerufen, wenn auf eine Instanz dieser Klasse als Instanz der Basisklasse zugegriffen wird. Der folgende Code veranschaulicht dies:  
   
  [!code-csharp[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
   
@@ -58,7 +58,7 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
  [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
- Auf ausgeblendete Klassenmember kann vom Clientcode immer noch zugegriffen werden, indem die Instanz der abgeleiteten Klasse in eine Instanz der Basisklasse umgewandelt wird. Zum Beispiel:  
+ Auf ausgeblendete Klassenmember kann vom Clientcode immer noch zugegriffen werden, indem die Instanz der abgeleiteten Klasse in eine Instanz der Basisklasse umgewandelt wird. Beispiel:  
   
  [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
@@ -98,10 +98,10 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
-- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Ereignisse](../../../csharp/programming-guide/events/index.md)  
-- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)  
-- [Indexer](../../../csharp/programming-guide/indexers/index.md)  
+- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Abstrakte und versiegelte Klassen und Klassenmember](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Ereignisse](../../../csharp/programming-guide/events/index.md)
+- [Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Indexer](../../../csharp/programming-guide/indexers/index.md)
 - [Typen](../../../csharp/programming-guide/types/index.md)

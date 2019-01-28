@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 92ac601719ccb1c5e9f769c286a1d2dd443c713a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6217b741a4dfabb67fc182a58543187ac37987ca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237804"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54695672"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Vorgehensweise: Verwenden von implizit typisierten lokalen Variablen und Arrays in einem Abfrageausdruck (C#-Programmierhandbuch)
 Sie können implizit typisierte lokale Variablen immer dann verwenden, wenn Sie möchten, dass der Compiler den Typ einer lokalen Variablen bestimmt. Sie müssen implizit typisierte lokale Variablen verwenden, um anonyme Typen zu speichern, die häufig in Abfrageausdrücken verwendet werden. In den folgenden Beispielen werden sowohl optionale als auch erforderliche Einsatzmöglichkeiten von implizit typisierte lokale Variablen in einer Abfrage veranschaulicht.  
@@ -29,8 +29,8 @@ Sie können implizit typisierte lokale Variablen immer dann verwenden, wenn Sie 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Erweiterungsmethoden](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
-- [LINQ (Language Integrated Query)](../../../csharp/linq/index.md)  
-- [var](../../../csharp/language-reference/keywords/var.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Erweiterungsmethoden](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [LINQ (Language Integrated Query)](../../../csharp/linq/index.md)
+- [var](../../../csharp/language-reference/keywords/var.md)
 - [LINQ-Abfrageausdrücke](../../../csharp/programming-guide/linq-query-expressions/index.md)

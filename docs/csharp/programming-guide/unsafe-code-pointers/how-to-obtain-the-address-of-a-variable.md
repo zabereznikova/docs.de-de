@@ -7,14 +7,14 @@ helpviewer_keywords:
 - pointers [C#], & operator
 - pointer expressions [C#], address-of operator
 ms.assetid: 44fe2cd9-a64f-4ef5-be2a-09ce807c0182
-ms.openlocfilehash: 3e2eac468643b755c6db2d6055427baa7ce2b7a7
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: cba33803c31ccc144479ad3e7b073ea7057495d5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241774"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490557"
 ---
-# <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>Vorgehensweise: Abrufen der Adresse einer Variablen (C#-Programmierhandbuch)
+# <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>Gewusst wie: Abrufen der Adresse einer Variablen (C#-Programmierhandbuch)
 
 Verwenden Sie den address-of-Operator `&` zum Abrufen der Adresse eines unären Ausdrucks, der eine feste Variable ergibt:  
   
@@ -39,10 +39,10 @@ int* p = &number; //address-of operator &
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
-- [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
-- [Typen](../../../csharp/language-reference/keywords/types.md)  
-- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
-- [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Zeigerausdrücke](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
+- [Zeigertypen](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
+- [Typen](../../../csharp/language-reference/keywords/types.md)
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)
+- [fixed-Anweisung](../../../csharp/language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

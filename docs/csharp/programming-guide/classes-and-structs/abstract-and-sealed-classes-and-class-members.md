@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: 8c0b8e9814bf692e486624dd8a4a99d98337bca9
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3257d365bb9816f4cb41d354f78c88ad4fa0f567
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235854"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54523830"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Abstrakte und versiegelte Klassen und Klassenmember (C#-Programmierhandbuch)
 Das Schlüsselwort [abstract](../../../csharp/language-reference/keywords/abstract.md) ermöglicht die Erstellung von Klassen und [Klassenmembern](../../../csharp/language-reference/keywords/class.md), die unvollständig sind und in einer abgeleiteten Klasse implementiert werden müssen.  
@@ -50,9 +50,9 @@ Das Schlüsselwort [abstract](../../../csharp/language-reference/keywords/abstra
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)  
-- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
-- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-- [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)
 - [Vorgehensweise: Definieren von abstrakten Eigenschaften](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)

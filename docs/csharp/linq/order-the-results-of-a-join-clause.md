@@ -1,14 +1,14 @@
 ---
 title: Sortieren der Ergebnisse einer Join-Klausel (LINQ in C#)
 description: In diesem Artikel erfahren Sie, wie Sie die Ergebnisse einer Join-Klausel in C# sortieren.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: a7458901-1201-4c25-b8d9-c04ca52e0eb9
-ms.openlocfilehash: 13cd6cb202cf67def17310db6d98e368ce837646
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f60000b83bf378dd8740b7255d421dd4335614c4
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516985"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857887"
 ---
 # <a name="order-the-results-of-a-join-clause"></a>Sortieren der Ergebnisse einer Join-Klausel
 
@@ -22,6 +22,6 @@ Diese Abfrage erstellt eine Gruppenverknüpfung und sortiert die Gruppen anschli
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Language-Integrated Query (LINQ)](index.md)  
-- [orderby-Klausel](../language-reference/keywords/orderby-clause.md)  
-- [join-Klausel](../language-reference/keywords/join-clause.md)  
+- [Language-Integrated Query (LINQ)](index.md)
+- [orderby-Klausel](../language-reference/keywords/orderby-clause.md)
+- [join-Klausel](../language-reference/keywords/join-clause.md)

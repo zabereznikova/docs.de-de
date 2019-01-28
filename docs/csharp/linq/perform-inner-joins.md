@@ -1,14 +1,14 @@
 ---
 title: Erstellen innerer Joins (LINQ in C#)
 description: In diesem Artikel erfahren Sie, wie Sie innere Joins mit LINQ in C# ausführen.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
-ms.openlocfilehash: 2f6aad30dc8278ce1bb88bacc19b27deaa0288c7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112782"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857956"
 ---
 # <a name="perform-inner-joins"></a>Ausführen von inneren Verknüpfungen
 
@@ -66,8 +66,8 @@ Das Ergebnis von `query1` entspricht dem Ergebnissatz, der mithilfe der `join`-K
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Linq.Enumerable.Join%2A>  
-- <xref:System.Linq.Enumerable.GroupJoin%2A>  
-- [Ausführen von Gruppenverknüpfungen](perform-grouped-joins.md)  
-- [Ausführen linker äußerer Verknüpfungen](perform-left-outer-joins.md)  
-- [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>
+- <xref:System.Linq.Enumerable.GroupJoin%2A>
+- [Ausführen von Gruppenverknüpfungen](perform-grouped-joins.md)
+- [Ausführen linker äußerer Verknüpfungen](perform-left-outer-joins.md)
+- [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)

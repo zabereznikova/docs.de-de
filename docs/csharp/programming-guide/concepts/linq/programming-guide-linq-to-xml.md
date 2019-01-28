@@ -2,12 +2,12 @@
 title: Programmierhandbuch (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
-ms.openlocfilehash: acb8271ad9ea338d31516c35bae46593a5fd2f78
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d71fb2d0365199bf89b0cfbd05b614ebd7634219
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199046"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494001"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Programmierhandbuch (LINQ to XML) (C#)
 Dieser Abschnitt enthält grundlegende Informationen und Anleitungen zum Programmieren mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -21,7 +21,7 @@ Dieser Abschnitt enthält grundlegende Informationen und Anleitungen zum Program
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung |  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[LINQ to XML Programming Overview (C#) (Übersicht der LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Bietet eine Übersicht über die [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen sowie detaillierte Informationen zu drei der wichtigsten Klassen: <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> und <xref:System.Xml.Linq.XDocument>.|  
 |[Erstellen von XML-Bäumen (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|Enthält konzeptuelle und aufgabenbasierte Informationen zum Erstellen von XML-Strukturen. XML-Strukturen können mittels funktionaler Konstruktion oder durch Analysieren von XML-Text aus einer Zeichenfolge oder Datei erstellt werden. Sie können auch einen <xref:System.Xml.XmlReader> verwenden, um eine XML-Struktur aufzufüllen.|  
@@ -36,5 +36,5 @@ Dieser Abschnitt enthält grundlegende Informationen und Anleitungen zum Program
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erste Schritte (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
+- [Erste Schritte (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
 - [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)

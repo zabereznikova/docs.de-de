@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 7ddc79a7d9864ecd7834cb75e23c9ad3a4320a91
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 97f30838d6bd61654daa800e891e3a79dd3f1297
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415506"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617199"
 ---
 # <a name="methods"></a>Methoden #
 
@@ -288,12 +288,12 @@ Weitere Informationen finden Sie unter [Iteratoren](programming-guide/concepts/i
 
 ## <a name="see-also"></a>Siehe auch ##
 
-- [Zugriffsmodifizierer](language-reference/keywords/access-modifiers.md)   
-- [Statische Klassen und statische Klassenmember](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
-- [Vererbung](programming-guide/classes-and-structs/inheritance.md)   
-- [Abstrakte und versiegelte Klassen und Klassenmember](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
-- [params](language-reference/keywords/params.md)   
-- [out](language-reference/keywords/out-parameter-modifier.md)   
-- [ref](language-reference/keywords/ref.md)   
-- [in](language-reference/keywords/in-parameter-modifier.md)   
+- [Zugriffsmodifizierer](language-reference/keywords/access-modifiers.md)
+- [Statische Klassen und statische Klassenmember](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+- [Vererbung](programming-guide/classes-and-structs/inheritance.md)
+- [Abstrakte und versiegelte Klassen und Klassenmember](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [params](language-reference/keywords/params.md)
+- [out](language-reference/keywords/out-parameter-modifier.md)
+- [ref](language-reference/keywords/ref.md)
+- [in](language-reference/keywords/in-parameter-modifier.md)
 - [Übergeben von Parametern](programming-guide/classes-and-structs/passing-parameters.md)

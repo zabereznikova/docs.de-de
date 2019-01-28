@@ -2,12 +2,12 @@
 title: Leistung (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 43c9f1b7-9bd3-489c-b45c-cb09173a3718
-ms.openlocfilehash: 340be61f55f2b77ed22d608ec151daa737389771
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4655620bbf432cd64578a7959b3a1be9434d5054
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728089"
 ---
 # <a name="performance-linq-to-xml-c"></a>Leistung (LINQ to XML) (C#)
 Dieser Abschnitt enthält Informationen über die Leistung in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], insbesondere über die Leistung von funktionaler Konstruktion und Abfragen.  

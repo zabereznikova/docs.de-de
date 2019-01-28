@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 71285057a465cd7fa09ae8290a7b74a3c6d6407c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 77c30db3e59461340ea6ac92f4769de87f4271dd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238844"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54570134"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Verwenden von Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der ähnlich einem Funktionszeiger in C und C++ eine Methode sicher kapselt. Im Gegensatz zu C-Funktionszeigern sind Delegate objektorientiert, typsicher und sicher. Der Typ eines Delegaten wird durch den Namen des Delegaten definiert. Im folgenden Beispiel wird ein Delegat mit dem Namen `Del` deklariert, der eine Methode kapseln kann, die eine [Zeichenfolge](../../../csharp/language-reference/keywords/string.md) als Argument übernimmt und [void](../../../csharp/language-reference/keywords/void.md) zurückgibt:  
@@ -45,7 +45,7 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
   
  Zusammen mit der zuvor dargestellten statischen `DelegateMethod` verfügen Sie jetzt über drei Methoden, die von einer `Del`-Instanz umschlossen werden können.  
   
- Ein Delegat kann bei Aufruf mehr als eine Methode aufrufen. Dies wird als Multicasting bezeichnet. Um der Liste an Methoden des Delegaten, sprich der Aufrufliste, eine weitere Methode hinzuzufügen, müssen lediglich zwei Delegaten mithilfe der Additions- oder Additionszuweisungsoperatoren ('+' oder '+=') hinzugefügt werden. Zum Beispiel:  
+ Ein Delegat kann bei Aufruf mehr als eine Methode aufrufen. Dies wird als Multicasting bezeichnet. Um der Liste an Methoden des Delegaten, sprich der Aufrufliste, eine weitere Methode hinzuzufügen, müssen lediglich zwei Delegaten mithilfe der Additions- oder Additionszuweisungsoperatoren ('+' oder '+=') hinzugefügt werden. Beispiel:  
   
  [!code-csharp[csProgGuideDelegates#27](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_7.cs)]  
   
