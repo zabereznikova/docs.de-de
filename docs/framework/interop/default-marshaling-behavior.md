@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aedc7b1941268184b71713d31913dbfbd8b74643
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504258"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688999"
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
@@ -440,9 +440,9 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)  
- [Kopieren und Fixieren](copying-and-pinning.md)  
- [Standardmäßiges Marshalling für Arrays](default-marshaling-for-arrays.md)  
- [Standardmäßiges Marshalling für Objekte](default-marshaling-for-objects.md)  
- [Standardmäßiges Marshalling für Zeichenfolgen](default-marshaling-for-strings.md)
+## <a name="see-also"></a>Siehe auch
+- [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)
+- [Kopieren und Fixieren](copying-and-pinning.md)
+- [Standardmäßiges Marshalling für Arrays](default-marshaling-for-arrays.md)
+- [Standardmäßiges Marshalling für Objekte](default-marshaling-for-objects.md)
+- [Standardmäßiges Marshalling für Zeichenfolgen](default-marshaling-for-strings.md)

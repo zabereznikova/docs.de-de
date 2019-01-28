@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cbf7db4d9369eade62767e55035df4118d5248ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47235282"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646645"
 ---
 # <a name="managed-thread-states"></a>Zustände von verwalteten Threads
 Die Eigenschaft <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> stellt eine Bitmaske zur Verfügung, die den aktuellen Zustand des Threads angibt. Ein Thread ist immer in mindestens einem der möglichen Zustände in der <xref:System.Threading.ThreadState> -Enumeration und kann mehrere Zustände zugleich aufweisen.  
@@ -27,7 +27,7 @@ Die Eigenschaft <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nam
 |Aktion|Resultierender neuer Zustand|  
 |------------|-------------------------|  
 |Der Konstruktor für die <xref:System.Threading.Thread> -Klasse wird aufgerufen.|<xref:System.Threading.ThreadState.Unstarted>|  
-|Ein anderer Thread ruft <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> auf.|<xref:System.Threading.ThreadState.Unstarted>|  
+|Ein anderer Thread ruft <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>auf.|<xref:System.Threading.ThreadState.Unstarted>|  
 |Der Thread reagiert auf <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> und wird gestartet.|<xref:System.Threading.ThreadState.Running>|  
 |Der Thread ruft <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> auf.|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
 |Der Thread ruft <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> auf einem anderen Objekt auf.|<xref:System.Threading.ThreadState.WaitSleepJoin>|  
@@ -44,13 +44,13 @@ Die Eigenschaft <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nam
 if ((state & (Unstarted | Stopped)) == 0)   // implies Running     
 ```  
   
- Threads sind häufig in mehreren Zuständen gleichzeitig. Wenn beispielsweise ein Thread durch einen <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType>-Aufruf blockiert ist und ein anderer Thread <xref:System.Threading.Thread.Abort%2A> für den gleichen Thread aufruft, befindet sich der Thread gleichzeitig im Zustand <xref:System.Threading.ThreadState.WaitSleepJoin> und <xref:System.Threading.ThreadState.AbortRequested>. Sobald der Thread in diesem Fall von dem Aufruf an <xref:System.Threading.Monitor.Wait%2A> zurückkehrt oder unterbrochen wird, empfängt er die <xref:System.Threading.ThreadAbortException>.  
+ Threads sind häufig in mehreren Zuständen gleichzeitig. Wenn beispielsweise ein Thread durch einen <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> -Aufruf blockiert ist und ein anderer Thread <xref:System.Threading.Thread.Abort%2A> für den gleichen Thread aufruft, befindet sich der Thread gleichzeitig im Zustand <xref:System.Threading.ThreadState.WaitSleepJoin> und im Zustand <xref:System.Threading.ThreadState.AbortRequested> . Sobald der Thread in diesem Fall von dem Aufruf an <xref:System.Threading.Monitor.Wait%2A> zurückkehrt oder unterbrochen wird, empfängt er die <xref:System.Threading.ThreadAbortException>.  
   
  Sobald ein Thread den Zustand <xref:System.Threading.ThreadState.Unstarted> als Folge eines Aufrufs von <xref:System.Threading.Thread.Start%2A>verlässt, kann er nicht mehr in den Zustand <xref:System.Threading.ThreadState.Unstarted> zurückkehren. Ein Thread kann den Zustand <xref:System.Threading.ThreadState.Stopped> nie verlassen.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Threading.ThreadAbortException>  
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadState>  
+- <xref:System.Threading.ThreadAbortException>
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadState>
 - [Threading](../../../docs/standard/threading/index.md)

@@ -4,12 +4,12 @@ description: Empfehlungen für bewährte Methoden zum Umgang mit Breaking Change
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e0e62cda1b7475cd5d1f8bcd3558dc2fe7f6e07c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a5cfd2dfb544b2e47a87bd0939990ae73e5eda9b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148505"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564223"
 ---
 # <a name="breaking-changes"></a>Breaking Changes
 
@@ -68,7 +68,7 @@ Eine binärer Breaking Change kann auch eine **ganze Assembly** unterbrechen. Da
 
 **❌ Sie dürfen nicht** Assemblynamen ändern.
 
-**❌ Sie dürfen nicht** den starken Namensschlüssel hinzufügen, entfernen oder ändern.
+**❌ DON‘T** Sie dürfen den starken Namensschlüssel nicht hinzufügen, entfernen oder ändern.
 
 **✔️ Verwenden Sie** abstrakte Basisklassen anstelle von Schnittstellen.
 
@@ -100,9 +100,9 @@ public class Document
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Versions- und Updateüberlegungen für C#-Entwickler](../../csharp/whats-new/version-update-considerations.md)
-* [Umfassendes Handbuch für API-Breaking Changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-* [Regeln von Breaking Changes in CoreFX ](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [Versions- und Updateüberlegungen für C#-Entwickler](../../csharp/whats-new/version-update-considerations.md)
+- [Umfassendes Handbuch für API-Breaking Changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
+- [Regeln von Breaking Changes in CoreFX ](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Vorherige](versioning.md)

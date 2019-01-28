@@ -2,12 +2,12 @@
 title: Änderungen an der NTLM-Authentifizierung für „HttpWebRequest“ in Version 3.5 SP1
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: d20707bbecb7521408d2ea1a3d6a6e3d6e892504
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 40e041f17a07e17aad3d5f10f7920b0466e2b1b0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589557"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Änderungen an der NTLM-Authentifizierung für „HttpWebRequest“ in Version 3.5 SP1
 Es wurden Sicherheitsänderungen in .NET Framework Version 3.5 SP1 und höher vorgenommen, die beeinflussen, wie die integrierte Windows-Authentifizierung durch <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> und verwandte Klassen im System.Net-Namespace behandelt wird. Diese Änderungen können sich auf Anwendungen auswirken, die diese Klassen für Webanforderungen und den Empfang der Antworten verwenden, in denen die integrierte Windows-Authentifizierung auf NTLM-Basis verwendet wird. Die Änderung kann sich auf Webserver und Clientanwendungen auswirken, die für die Verwendung der integrierten Windows-Authentifizierung konfiguriert sind.  
@@ -50,7 +50,7 @@ Es wurden Sicherheitsänderungen in .NET Framework Version 3.5 SP1 und höher vo
   
  Eine unsicherere Lösung ist die Deaktivierung der Loopbacküberprüfung, die in <https://support.microsoft.com/kb/896861> beschrieben ist. Der Schutz vor Reflektionsangriffen wird somit deaktiviert. Daher ist es besser, den Satz von alternativen Namen auf jene einzuschränken, von denen Sie erwarten, dass sie tatsächlich vom Computer verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  
- <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>  
- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
+- <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>
+- <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

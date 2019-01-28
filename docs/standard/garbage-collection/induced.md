@@ -7,22 +7,22 @@ helpviewer_keywords:
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 149597f0e34448d9c275a2cb8cd4ffc250bec619
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492121"
 ---
 # <a name="induced-collections"></a>Indizierte Auflistungen
 In den meisten Fällen können Sie es dem Garbage Collector überlassen, den am besten geeigneten Zeitpunkt für eine Collection zu bestimmen. In seltenen Fällen kann das Erzwingen einer Auflistung jedoch die Leistung der Anwendung erhöhen. In diesen Fällen können Sie die Garbage Collection auslösen, indem Sie die <xref:System.GC.Collect%2A?displayProperty=nameWithType>-Methode zum Erzwingen einer Garbage Collection wählen.  
   
  Verwenden Sie die <xref:System.GC.Collect%2A?displayProperty=nameWithType>-Methode, wenn es zu einem bestimmten Zeitpunkt während der Ausführung des Anwendungscodes zu einer erheblichen Reduzierung des verwendeten Arbeitsspeichers kommt. Wenn die Anwendung zum Beispiel ein kompliziertes Dialogfeld mit mehreren Steuerelementen verwendet, kann der Aufruf von <xref:System.GC.Collect%2A> beim Schließen des Dialogfelds die Leistung erhöhen, indem der vom Dialogfeld verwendete Speicher sofort freigegeben wird. Stellen Sie sicher, dass die Anwendung nicht zu häufig eine Garbage Collection durchführt, das sich dies negativ auf die Leistung auswirken kann, wenn der Garbage Collector vergeblich versucht, Objekte zu ungünstigen Zeitpunkten freizugeben. Sie können einen <xref:System.GCCollectionMode.Optimized?displayProperty=nameWithType>-Enumerationswert an die <xref:System.GC.Collect%2A>-Methode liefern, um nur zu sammeln, wenn die Auflistung produktiv ist, wie im nächsten Abschnitt erläutert wird.  
   
-## <a name="gc-collection-mode"></a>Der GC-Auflistungsmodus  
+## <a name="gc-collection-mode"></a>Der GC-Sammlungsmodus  
  Sie können eine der <xref:System.GC.Collect%2A?displayProperty=nameWithType>-Methodenüberladungen verwenden, die einen <xref:System.GCCollectionMode>-Wert enthält, um das Verhalten einer erzwungenen Auflistung wie folgt zu bestimmen.  
   
-|`GCCollectionMode`-Wert|Beschreibung |  
+|`GCCollectionMode`-Wert|Beschreibung|  
 |------------------------------|-----------------|  
 |<xref:System.GCCollectionMode.Default>|Verwendet die standardmäßige Garbage Collection-Einstellung für die ausgeführte .NET-Version.|  
 |<xref:System.GCCollectionMode.Forced>|Erzwingt die sofortige Durchführung der Garbage Collection. Dies entspricht dem Aufruf der <xref:System.GC.Collect?displayProperty=nameWithType>-Überladung. Dies führt zu einer vollständigen blockierenden Auflistung aller Generationen.<br /><br /> Sie können auch das große Objektheap komprimieren, indem Sie die <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>-Eigenschaft auf <xref:System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce?displayProperty=nameWithType> festlegen, bevor Sie eine unmittelbare vollständige blockierende Garbage Collection erzwingen.|  
@@ -38,5 +38,5 @@ In den meisten Fällen können Sie es dem Garbage Collector überlassen, den am 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Latenzmodi](../../../docs/standard/garbage-collection/latency.md)  
+- [Latenzmodi](../../../docs/standard/garbage-collection/latency.md)
 - [Garbage Collection](../../../docs/standard/garbage-collection/index.md)

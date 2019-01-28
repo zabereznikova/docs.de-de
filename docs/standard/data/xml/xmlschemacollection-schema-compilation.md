@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7b6ea782020dde83aa7d59be8ec3058a27075ad
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 3d47fa4d4ef7a55182dd27aa6f64542fec1fa99c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48030667"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704315"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Schemakompilierung mit "XmlSchemaCollection"
 Bei **XmlSchemaCollection** handelt es sich um einen Cache oder eine Bibliothek, worin XDR-Schemata (XML-Data Reduced) und XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können. **XmlSchemaCollection** erhöht die Leistungsfähigkeit, indem Schemata im Arbeitsspeicher zwischengespeichert werden, anstatt über eine Datei oder eine URL auf sie zuzugreifen.  
@@ -59,5 +59,5 @@ vr.Schemas.Add(xsc);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XDR-Validierung mit „XmlSchemaCollection“](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)  
+- [XDR-Validierung mit „XmlSchemaCollection“](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)
 - [XSD-Validierung (XML Schema) mit „XmlSchemaCollection“](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)

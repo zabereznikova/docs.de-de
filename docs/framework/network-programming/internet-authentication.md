@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 245e94cab61c0c60672476aadb417fc798b30362
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50181042"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587959"
 ---
 # <a name="internet-authentication"></a>Internetauthentifizierung
 Die <xref:System.Net>-Klassen unterstützen eine Vielzahl von Client-Authentifizierungsmechanismen, einschließlich folgender Standardmethoden zur Internetauthentifizierung: Basic, Digest, Negotiate, NTLM, die Kerberos-Authentifizierung und benutzerdefinierte Methoden, die Sie erstellen können.  
@@ -39,7 +39,7 @@ Die <xref:System.Net>-Klassen unterstützen eine Vielzahl von Client-Authentifiz
   
  Einige Authentifizierungsschemas können einen Benutzer authentifizieren, ohne zuvor eine Anforderung für eine Ressource durchzuführen. Eine Anwendung kann Zeit sparen, indem der Benutzer mit der Ressource präauthentifiziert wird. So wird mindestens ein Roundtrip zum Server vermieden. Sie können die Authentifizierung auch während des Programmstarts durchführen, um später besser auf den Benutzer reagieren zu können. Authentifizierungsschemas, die die Präauthentifizierung verwenden können, legen die <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A>-Eigenschaft auf **TRUE** fest.  
   
-## <a name="see-also"></a>Siehe auch  
- [Standard- und Digestauthentifizierung](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [NTLM- und Kerberos-Authentifizierung](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
- [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](../../../docs/framework/network-programming/security-in-network-programming.md)
+## <a name="see-also"></a>Siehe auch
+- [Standard- und Digestauthentifizierung](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
+- [NTLM- und Kerberos-Authentifizierung](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+- [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](../../../docs/framework/network-programming/security-in-network-programming.md)

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c24fe637514ba773cecc7824de276b1707a4e90c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54579588"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>"XmlSchemaSet" zur Kompilierung von Schemata
 Beschreibt das <xref:System.Xml.Schema.XmlSchemaSet>, bei dem es sich um einen Cache handelt, in dem XSD-Schemata (XML Schema Definition Language) gespeichert und validiert werden können.  
@@ -253,12 +253,12 @@ foreach (XmlSchema schema in schemaSet.Schemas())
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
-- [„XmlSchemaSet“ zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>
+- [„XmlSchemaSet“ zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [Validierung eines XML-Schemas (XSD) mit „XmlSchemaSet“](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

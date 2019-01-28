@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: 41baeb9724d142bb860e51fa3ee84fb6c3f6261e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5d095d4cd6d8ee204b6d05a7674dee67c35e46c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188689"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694919"
 ---
 # <a name="using-secure-sockets-layer"></a>Verwenden von Secure Sockets Layer
 Die <xref:System.Net>-Klassen verwenden Secure Sockets Layer (SSL) zum Verschlüsseln der Verbindung für mehrere Netzwerkprotokolle.  
@@ -62,7 +62,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
   
 -   Verweise auf den Namespace **System.Net**  
   
-## <a name="see-also"></a>Siehe auch  
- [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](../../../docs/framework/network-programming/security-in-network-programming.md)  
- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Zertifikatauswahl und -überprüfung](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+## <a name="see-also"></a>Siehe auch
+- [Security in Network Programming (Sicherheit in der Netzwerkprogrammierung)](../../../docs/framework/network-programming/security-in-network-programming.md)
+- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Zertifikatauswahl und -überprüfung](../../../docs/framework/network-programming/certificate-selection-and-validation.md)

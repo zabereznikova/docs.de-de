@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0b68eaefcd2901f9cf05d491459b18f94a2614a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 8422c0b22f2286df98acbed874344f7664cb8903
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415067"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529761"
 ---
 # <a name="assembly-manifest"></a>Assemblymanifest
 Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, in der beschrieben ist, wie die Elemente in der Assembly miteinander verknüpft sind. Das Assemblymanifest enthält diese Assemblymetadaten. Ein Assemblymanifest enthält alle Metadaten, die zum Angeben von Versionsanforderungen und Sicherheitsidentität der Assembly erforderlich sind, sowie alle Metadaten, die zum Definieren des Gültigkeitsbereichs der Assembly und zum Auflösen von Verweisen auf Ressourcen und Klassen benötigt werden. Das Assemblymanifest kann entweder in einer PE-Datei (eine EXE- oder DLL-Datei) mit MSIL-Code (Microsoft Intermediate Language) oder in einer eigenständigen PE-Datei gespeichert sein, die ausschließlich Informationen aus dem Assemblymanifest enthält.  
@@ -42,7 +42,7 @@ Typen von Assemblys
 ## <a name="assembly-manifest-contents"></a>Inhalt des Assemblymanifests  
  Die folgende Tabelle enthält die im Assemblymanifest enthaltenen Informationen. Die Identität einer Assembly setzt sich aus den ersten vier Elementen zusammen (Assemblyname, Versionsnummer, Kultur und Informationen über den starken Namen).  
   
-|Information|Beschreibung |  
+|Information|Beschreibung|  
 |-----------------|-----------------|  
 |Assemblyname|Eine Zeichenfolge, die den Namen der Assembly angibt.|  
 |Versionsnummer|Eine Haupt- und Nebenversionsnummer und eine Revisions- und Buildnummer. Die Common Language Runtime verwendet diese Nummern, um die Versionsrichtlinien zu erzwingen.|  
@@ -54,8 +54,8 @@ Typen von Assemblys
   
  Im Assemblymanifest können Sie Informationen hinzufügen oder ändern. Dazu müssen Sie Assemblyattribute im Code verwenden. Sie können Versionsinformationen und Informationsattribute ändern, einschließlich Marke, Urheberrecht, Produkt, Firma und Informationsversion. Eine vollständige Liste von Assemblyattributen finden Sie unter [Setting Assembly Attributes (Festlegen von Assemblyattributen)](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
-## <a name="see-also"></a>Siehe auch  
-- [Assemblyinhalte](../../../docs/framework/app-domains/assembly-contents.md)  
-- [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md)  
-- [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
+## <a name="see-also"></a>Siehe auch
+- [Assemblyinhalte](../../../docs/framework/app-domains/assembly-contents.md)
+- [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md)
+- [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)
 - [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)

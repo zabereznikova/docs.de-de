@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: df526c93c195275751c393299b0e0d80337eee44
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698561"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54688895"
 ---
 # <a name="comparing-strings-in-net"></a>Vergleichen von Zeichenfolgen in .NET
 .NET stellt mehrere Methoden bereit, um Werte von Zeichenfolgen zu vergleichen. In der folgenden Tabelle werden die Methoden zum Vergleichen von Werten aufgeführt und beschrieben.  
@@ -42,16 +42,16 @@ ms.locfileid: "45698561"
 |<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>|Gibt ausgehend vom Ende der zu überprüfenden Zeichenfolge die Indexposition eines Zeichens oder einer Zeichenfolge zurück. Gibt einen Ganzzahlwert zurück.|  
   
 ## <a name="compare"></a>Vergleichen  
- Die statische <xref:System.String.Compare%2A?displayProperty=nameWithType>-Methode bietet umfassende Möglichkeiten zum Vergleichen von zwei Zeichenfolgen. Bei dieser Methode werden unterschiedliche Kulturen berücksichtigt. Sie können diese Funktion verwenden, um zwei Zeichenfolgen oder zwei untergeordnete Zeichenfolgen zweier Zeichenfolgen miteinander zu vergleichen. Zusätzlich sind Überladungen verfügbar, mit denen die Groß-/Kleinschreibung sowie abweichende Kulturen berücksichtigt bzw. ignoriert werden können. In der folgenden Tabelle sind die drei ganzzahligen Werte aufgeführt, die von dieser Methode zurückgegeben werden können.  
+ Die statische <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode bietet umfassende Möglichkeiten zum Vergleichen von zwei Zeichenfolgen. Bei dieser Methode werden unterschiedliche Kulturen berücksichtigt. Sie können diese Funktion verwenden, um zwei Zeichenfolgen oder zwei untergeordnete Zeichenfolgen zweier Zeichenfolgen miteinander zu vergleichen. Zusätzlich sind Überladungen verfügbar, mit denen die Groß-/Kleinschreibung sowie abweichende Kulturen berücksichtigt bzw. ignoriert werden können. In der folgenden Tabelle sind die drei ganzzahligen Werte aufgeführt, die von dieser Methode zurückgegeben werden können.  
   
 |Rückgabewert|Bedingung|  
 |------------------|---------------|  
 |Eine negative ganze Zahl|Die erste Zeichenfolge steht in der Sortierreihenfolge vor der zweiten Zeichenfolge.<br /><br /> - oder - <br /><br /> Die erste Zeichenfolge ist `null`.|  
-|0|Die erste Zeichenfolge und die zweite Zeichenfolge sind gleich.<br /><br /> - oder - <br /><br /> Beide Zeichenfolgen sind `null`.|  
-|Eine positive ganze Zahl<br /><br /> - oder - <br /><br /> 1|Die erste Zeichenfolge steht in der Sortierreihenfolge hinter der zweiten Zeichenfolge.<br /><br /> - oder - <br /><br /> Die zweite Zeichenfolge ist `null`.|  
+|0|Die erste Zeichenfolge und die zweite Zeichenfolge sind gleich.<br /><br /> - oder -<br /><br /> Beide Zeichenfolgen sind `null`.|  
+|Eine positive ganze Zahl<br /><br /> - oder -<br /><br /> 1|Die erste Zeichenfolge steht in der Sortierreihenfolge hinter der zweiten Zeichenfolge.<br /><br /> - oder -<br /><br /> Die zweite Zeichenfolge ist `null`.|  
   
 > [!IMPORTANT]
->  Die <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode ist hauptsächlich für die Anordnung oder Sortierung von Zeichenfolgen bestimmt. Sie sollten die <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode nicht verwenden, um einen Übereinstimmungstest auszuführen (also um explizit nach dem Rückgabewert 0 zu suchen, ohne dass dabei berücksichtigt wird, ob eine Zeichenfolge kleiner oder größer als die andere ist). Um festzustellen, ob zwei Zeichenfolgen gleich sind, verwenden Sie stattdessen die <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType>-Methode.  
+>  Die <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode ist hauptsächlich für die Anordnung oder Sortierung von Zeichenfolgen bestimmt. Sie sollten die <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode nicht verwenden, um einen Übereinstimmungstest auszuführen (also um explizit nach dem Rückgabewert 0 zu suchen, ohne dass dabei berücksichtigt wird, ob eine Zeichenfolge kleiner oder größer als die andere ist). Um festzustellen, ob zwei Zeichenfolgen gleich sind, verwenden Sie stattdessen die <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> -Methode.  
   
  Im folgenden Beispiel wird die <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode verwendet, um die relativen Werte von zwei Zeichenfolgen zu bestimmen.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "45698561"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Grundlegende Zeichenfolgenoperationen](../../../docs/standard/base-types/basic-string-operations.md)
 - [Durchführen kulturunabhängiger Zeichenfolgenoperationen](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
 - [Sortiergewichtungstabellen (für .NET unter Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
 - [Default Unicode Collation Element Table (für .NET Core unter Linux und macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

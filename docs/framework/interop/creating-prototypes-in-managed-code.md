@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae4dd9adbdad313afa53721e83d7b7d5212df91e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398208"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54564291"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Erstellen von Prototypen in verwaltetem Code
 In diesem Thema wird der Zugriff auf nicht verwaltete Funktionen beschrieben. Zudem werden verschiedene Attributfelder eingeführt, die die Methodendefinition in verwaltetem Code mit Anmerkungen versehen. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](marshaling-data-with-platform-invoke.md).  
@@ -79,7 +79,7 @@ using namespace System::Runtime::InteropServices;
   
  In der folgenden Tabelle ist der vollständige Satz an Attributfeldern aufgeführt, die den Plattformaufruf betreffen. Für jedes Feld enthält die Tabelle den Standardwert und einen Link zu Informationen darüber, wie diese Felder zum Definieren nicht verwalteter DLL-Funktionen verwendet werden.  
   
-|Feld|description|  
+|Feld|Beschreibung|  
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|Aktiviert oder deaktiviert die Zuordnung mit ähnlichen Zeichen.|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|Gibt die Aufrufkonvention an, die bei der Übergabe von Methodenargumenten verwendet wird. Der Standardwert ist `WinAPI`, was dem `__stdcall` für Intel-basierte 32-Bit-Plattformen entspricht.|  
@@ -221,12 +221,12 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden nicht verwalteter DLL-Funktionen](consuming-unmanaged-dll-functions.md)  
- [Angeben eines Einstiegspunktes](specifying-an-entry-point.md)  
- [Festlegen eines Zeichensatzes](specifying-a-character-set.md)  
- [Beispiele für Plattformaufrufe](platform-invoke-examples.md)  
- [Überlegungen zur Plattformaufrufsicherheit](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
- [Identifizieren von Funktionen in DLLs](identifying-functions-in-dlls.md)  
- [Erstellen einer Klasse zum Halten von DLL-Funktionen](creating-a-class-to-hold-dll-functions.md)  
- [Calling a DLL Function (Aufrufen einer DLL-Funktion)](calling-a-dll-function.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwenden nicht verwalteter DLL-Funktionen](consuming-unmanaged-dll-functions.md)
+- [Angeben eines Einstiegspunktes](specifying-an-entry-point.md)
+- [Festlegen eines Zeichensatzes](specifying-a-character-set.md)
+- [Beispiele für Plattformaufrufe](platform-invoke-examples.md)
+- [Überlegungen zur Plattformaufrufsicherheit](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))
+- [Identifizieren von Funktionen in DLLs](identifying-functions-in-dlls.md)
+- [Erstellen einer Klasse zum Halten von DLL-Funktionen](creating-a-class-to-hold-dll-functions.md)
+- [Calling a DLL Function (Aufrufen einer DLL-Funktion)](calling-a-dll-function.md)

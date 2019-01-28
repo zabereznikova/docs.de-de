@@ -2,12 +2,12 @@
 title: Grundlegendes zu WebRequest-Problemen und -Ausnahmen
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 14bce9e9791e74f70f9bd91fc2551f55eaabfc5e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 55ef0b0f5260c986cad01d2854202dea3755ace7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54587527"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Grundlegendes zu WebRequest-Problemen und -Ausnahmen
 <xref:System.Net.WebRequest> und die abgeleiteten Klassen (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> und <xref:System.Net.FileWebRequest>) lösen Ausnahmen aus, um einen nicht ordnungsgemäßen Zustand zu signalisieren. In einigen Fällen ist die Lösung dieser Probleme nicht offensichtlich.  
@@ -28,7 +28,7 @@ ms.locfileid: "50200599"
 |<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|Der Domain Name Service konnte den Proxyhostnamen nicht auflösen.|Konfigurieren Sie den Proxy ordnungsgemäß. Siehe <https://support.microsoft.com/?id=318140>.<br /><br /> Zwingen Sie <xref:System.Net.HttpWebRequest> hierfür kein Proxy zu verwenden, indem Sie die <xref:System.Net.HttpWebRequest.Proxy%2A>-Eigenschaft auf `null` festlegen.|  
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|Die Serverantwort ist eine ungültige HTTP-Antwort. Dieses Problem tritt auf, wenn .NET Framework erkennt, dass die Serverantwort nicht mit HTTP 1.1 RFC übereinstimmt. Dieses Problem kann auftreten, wenn die Antwort falsche Header oder falsche Headertrennzeichen enthält. RFC 2616 definiert HTTP 1.1 und gültige Formate für die Serverantwort. Weitere Informationen finden Sie unter [RFC 2616 –Hypertext Transfer-Protokoll – HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) auf der Webseite der [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Führen Sie eine Ablaufverfolgung im Netzwerk der Transaktion aus, und untersuchen Sie die Header in der Antwort.<br /><br /> Wenn Ihre Anwendung eine Serverantwort ohne Analyse erfordert (dies kann ein Sicherheitsproblem sein), dann legen Sie `useUnsafeHeaderParsing` in der Konfigurationsdatei auf `true` fest. Weitere Informationen finden Sie unter [\<HttpWebRequest>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.HttpWebRequest>  
- <xref:System.Net.HttpWebResponse>  
- <xref:System.Net.Dns>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.HttpWebRequest>
+- <xref:System.Net.HttpWebResponse>
+- <xref:System.Net.Dns>

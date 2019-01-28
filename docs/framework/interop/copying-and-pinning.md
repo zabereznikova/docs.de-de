@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 503ef7066b5d66b05c1642512ab8d59a2b1d3f9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42257790b5a6e5005ca142bd5e32d4c6fc545195
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392800"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54507082"
 ---
 # <a name="copying-and-pinning"></a>Kopieren und Fixieren
 Beim Marshalling von Daten kann der Interop-Marshaller die gemarshallten Daten kopieren oder fixieren. Beim Kopieren der Daten wird eine Kopie der Daten aus einem Speicherort an einem anderen Speicherort abgelegt. Die folgende Abbildung veranschaulicht die Unterschiede zwischen dem Kopieren eines Werttyps und dem Kopieren eines Typs, der als Verweis von einem verwalteten Speicher zu einem nicht verwalteten Speicher übergeben wird.  
@@ -77,8 +77,8 @@ Wert und Verweis als übergebener Verweistyp
   
  Wenn ein <xref:System.Text.StringBuilder?displayProperty=nameWithType> als Wert übergeben wird, übergibt der Marshaller dem Aufrufer direkt einen Verweis auf den internen Puffer von **StringBuilder**. Aufrufer und Aufgerufener müssen bei der Größe des Puffers übereinstimmen. Der Aufrufer ist für das Erstellen von **StringBuilder** in einer angemessenen Länge zuständig. Der Aufgerufene muss die erforderlichen Vorsichtsmaßnahmen treffen, um einen Pufferüberlauf zu verhindern. **StringBuilder** stellt eine Ausnahme zu der Regel dar, dass als Wert übergebene Verweistypen standardmäßig als Eingabeparameter übergeben werden. Es wird immer als Ein-/Ausgabeparameter übergeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)  
- [Speicherverwaltung mit dem Interop-Marshaller](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
- [Direktionale Attribute](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
- [Interop Marshaling (Interop-Marshalling)](interop-marshaling.md)
+## <a name="see-also"></a>Siehe auch
+- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
+- [Speicherverwaltung mit dem Interop-Marshaller](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))
+- [Direktionale Attribute](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Interop Marshaling (Interop-Marshalling)](interop-marshaling.md)

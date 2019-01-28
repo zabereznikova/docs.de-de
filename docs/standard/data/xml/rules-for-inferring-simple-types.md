@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 15e7692abfe06ec9e9f91a3b229bf99971eaecc1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550499"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Regeln zum Herleiten einfacher Typen
 Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xref:System.Xml.Schema.XmlSchemaInference>-Klasse.  
@@ -24,7 +24,7 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
   
  In der folgenden Tabelle werden die für das resultierende Schema möglichen hergeleiteten Typen aufgeführt.  
   
-|Einfacher Typ|Beschreibung |  
+|Einfacher Typ|Beschreibung|  
 |-----------------|-----------------|  
 |boolean|True, false, 0, 1.|  
 |byte|Ganze Zahlen im Bereich von -128 bis 127.|  
@@ -37,8 +37,8 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
 |unsignedLong|Ganze Zahlen im Bereich von 0 bis 18446744073709551615.|  
 |Ganze Zahl|Eine endliche Anzahl von Ziffern, möglichst mit dem Präfix "-".|  
 |decimal|Numerische Werte mit einer Genauigkeit von 0 bis 28 Stellen.|  
-|float|Dezimalzahlen, nach denen optional "E" oder "e" folgt, gefolgt von einem Ganzzahlenwert als Exponent. Dezimalwerte können im Bereich von -16777216 bis 16777216 liegen. Exponentenwerte können im Bereich von -149 bis 104 liegen.<br /><br /> Float ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Besondere Werte für Float sind 0, -0, INF - INF, NaN.|  
-|double|Die gleichen Werte wie bei float, allerdings können die Dezimalwerte im Bereich von -9007199254740992 bis 9007199254740992 und die Exponentenwerte zwischen –1075 und 970 liegen.<br /><br /> Double ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Besondere Werte für Float sind 0, -0, INF - INF, NaN.|  
+|float|Dezimalzahlen, nach denen optional "E" oder "e" folgt, gefolgt von einem Ganzzahlenwert als Exponent. Dezimalwerte können im Bereich von -16777216 bis 16777216 liegen. Exponentenwerte können im Bereich von -149 bis 104 liegen.<br /><br /> Float ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Diese speziellen Werte umfassen die Folgenden: 0, -0, INF, -INF, NaN.|  
+|double|Die gleichen Werte wie bei float, allerdings können die Dezimalwerte im Bereich von -9007199254740992 bis 9007199254740992 und die Exponentenwerte zwischen –1075 und 970 liegen.<br /><br /> Double ermöglicht spezielle Werte, mit denen unendliche und nicht numerische Werte dargestellt werden. Diese speziellen Werte umfassen die Folgenden: 0, -0, INF, -INF, NaN.|  
 |duration|Das W3C-Format für duration.|  
 |dateTime|Das W3C-Format für dateTime.|  
 |Uhrzeit|Das W3C-Format für time.|  
@@ -69,7 +69,7 @@ Beschreibt das Herleiten der Datentypen für Attribute und Elemente mit der <xre
 
 Bei den folgenden Attributen handelt es sich um schemadefinierte Attribute, die während der Schemaherleitung ignoriert werden.  
   
-|Attribut|Beschreibung |  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
 |`xsi:type`|Wenn ein Element mit der Angabe `xsi:type` festgestellt wird, wird `xsi:type` ignoriert.|  
 |`xsi:nil`|Wenn ein Element mit einem `xsi:nil`-Attribut festgestellt wird, weist dessen Elementdeklaration im hergeleiteten Schema den Wert `nillable="true"` auf. Ein Element, dessen `xsi:nil`-Attribut auf `true` festgelegt wurde, darf keine untergeordneten Elemente besitzen.|  
@@ -78,6 +78,6 @@ Bei den folgenden Attributen handelt es sich um schemadefinierte Attribute, die 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [Herleiten von Schemas aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [Herleiten von Schemas aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Regeln für Rückschlussschemaknotentypen und Struktur](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

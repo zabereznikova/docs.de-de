@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48838a90939899fc1e7e91cdb7bbe98019591416
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 45f0e30efac32dec42cf0687fa0da40f4d6dca4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210298"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54551825"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Vergleiche und Sortierungen innerhalb von Sammlungen
 Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Verwaltung von Auflistungen Vergleiche durch, sei es bei der Suche nach zu entfernenden Elementen oder bei der Rückgabe eines Schlüssel-Wert-Paars.  
@@ -61,8 +61,8 @@ Die <xref:System.Collections>-Klassen führen bei nahezu allen Vorgängen zur Ve
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Collections.IComparer>  
-- <xref:System.IEquatable%601>  
-- <xref:System.Collections.Generic.IComparer%601>  
-- <xref:System.IComparable>  
+- <xref:System.Collections.IComparer>
+- <xref:System.IEquatable%601>
+- <xref:System.Collections.Generic.IComparer%601>
+- <xref:System.IComparable>
 - <xref:System.IComparable%601>

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b149f21a2cb51740f0027f6b01984c628723939
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: f043fa541073402bee9fc4cf84e8151e6e0192f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221756"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54549209"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL-Assembler)
 
@@ -229,7 +229,7 @@ Das folgende IL-Codebeispiel entspricht dem vorherigen C#-Codebeispiel. Sie kön
 
 ## <a name="see-also"></a>Siehe auch
 
-[Extras](../../../docs/framework/tools/index.md)  
-[*Ildasm.exe* (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
-[Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md)  
-[Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [Extras](../../../docs/framework/tools/index.md)
+- [*Ildasm.exe* (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md)
+- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -2,12 +2,12 @@
 title: PNRP in der Anwendungsentwicklung
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-ms.openlocfilehash: b19138c43185f4d31bef4fe67af48f89dc03eba4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93dd65100e19f16c6597374cbab1e10d6a759562
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50180432"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54736545"
 ---
 # <a name="pnrp-in-application-development"></a>PNRP in der Anwendungsentwicklung
 In Windows Vista können Netzwerkanwendungen über eine vereinfachte PNRP-Anwendungsprogrammierschnittstelle (application programming interface – API) auf Funktionen zur Veröffentlichung und Auflösung von Namen zugreifen.  
@@ -19,5 +19,5 @@ In Windows Vista können Netzwerkanwendungen über eine vereinfachte PNRP-Anwend
   
  Die Nachrichtenübergabe zwischen Peer-zu-Peer-Anwendungen wird weiterhin von der zu Grunde liegenden Architektur übernommen, z.B. PeerChannel oder der WCF-Funktion für [umfangreiche Daten und Streaming](https://go.microsoft.com/fwlink/?LinkID=179652).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.PeerToPeer>
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.PeerToPeer>

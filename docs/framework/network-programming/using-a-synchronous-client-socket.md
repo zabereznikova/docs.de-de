@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-ms.openlocfilehash: 8036421f937385edbaefb8df4ee3915798084c64
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a368048f83540bf5bb9cd43a0a88c40641eb7e94
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54621698"
 ---
 # <a name="using-a-synchronous-client-socket"></a>Verwenden eines synchronen Clientsockets
 Ein synchroner Clientsocket hält das Anwendungsprogramm an, während der Netzwerkvorgang abgeschlossen wird. Synchrone Serversockets eignen sich nicht für Anwendungen, die das Netzwerk in ihrem Betrieb stark nutzen, aber sie können einfachen Zugang zu Netzwerkdiensten für andere Anwendungen ermöglichen.  
@@ -70,7 +70,7 @@ s.Shutdown(SocketShutdown.Both);
 s.Close();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von asynchronen Clientsockets](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)  
- [Synchrone Clientsockets - Beispiel](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwenden von asynchronen Clientsockets](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
+- [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Synchrone Clientsockets - Beispiel](../../../docs/framework/network-programming/synchronous-client-socket-example.md)

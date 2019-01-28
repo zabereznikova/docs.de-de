@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842657"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54617914"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Datensynchronisierung für Multithreading
 Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufrufen können, ist es wichtig, dass diese Aufrufe synchronisiert werden. Andernfalls kann ein Thread möglicherweise die Aufgabe eines anderen Threads unterbrechen, und das Objekt bleibt womöglich in einem ungültigen Status zurück. Eine Klasse, deren Mitglieder vor solchen Unterbrechungen geschützt, wird threadsicher genannt.  
@@ -69,8 +69,8 @@ Wenn mehrere Threads die Eigenschaften und Methoden eines einzelnen Objekts aufr
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
-- [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)  
-- [Übersicht über Synchronisierungsprimitiven](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
-- [SyncLock-Anweisung](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
+- [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)
+- [Übersicht über Synchronisierungsprimitiven](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [SyncLock-Anweisung](~/docs/visual-basic/language-reference/statements/synclock-statement.md)
 - [lock-Anweisung](~/docs/csharp/language-reference/keywords/lock-statement.md)

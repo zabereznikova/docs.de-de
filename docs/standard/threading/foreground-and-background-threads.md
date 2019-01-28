@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcedd478ee1eb89c11dc9535b1d2ffe843d0f658
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c6605fa1923dc4fdaf4f12a7c8fc7c1e344673b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081328"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54697496"
 ---
 # <a name="foreground-and-background-threads"></a>Vordergrund- und Hintergrundthreads
 Ein verwalteter Thread ist entweder ein Hintergrund- oder Vordergrundthread. Hintergrundthreads sind mit einer Ausnahme identisch mit Vordergrundthreads: Ein Hintergrundthread erhält nicht die Ausführung der verwalteten Ausführungsumgebung aufrecht. Sobald alle Vordergrundthreads in einem verwalteten Prozess (wobei die EXE-Datei eine verwaltete Assembly ist) beendet sind, beendet das System alle Hintergrundthreads und fährt herunter.  
@@ -34,6 +34,6 @@ Ein verwalteter Thread ist entweder ein Hintergrund- oder Vordergrundthread. Hin
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
-- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>
+- <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadAbortException>

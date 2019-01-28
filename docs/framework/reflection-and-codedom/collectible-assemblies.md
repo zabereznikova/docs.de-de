@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04a04e422fec14055d8ac3f50b9f2f18658a0f9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398260"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637741"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Entladbare Assemblys für die dynamische Typgenerierung
 
@@ -77,9 +77,9 @@ Für entladbare Assemblys gelten folgende Einschränkungen:
 - **Kontextgebundene Objekte**    
    Kontextstatische Variablen werden nicht unterstützt. Typen in einer entladbaren Assembly können <xref:System.ContextBoundObject> nicht erweitern. Der Code in entladbaren Assemblys kann jedoch in kontextgebundenen Objekten verwendet werden, die an anderer Stelle definiert werden.
 
-- **Threadstatische Daten**       
+- **Threadstatische Daten**       
    Threadstatische Variablen werden nicht unterstützt.
 
 ## <a name="see-also"></a>Siehe auch
 
-[Ausgeben von dynamischen Methoden und Assemblys](emitting-dynamic-methods-and-assemblies.md)
+- [Ausgeben von dynamischen Methoden und Assemblys](emitting-dynamic-methods-and-assemblies.md)

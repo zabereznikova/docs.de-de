@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7fa240ea42fe1bee4011a228595e48eb163e1a9
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982866"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066322"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Grundlagen der Garbage Collection
 <a name="top"></a> In der Common Language Runtime (CLR) dient der Garbage Collector als automatischer Speicher-Manager. Der Garbage Collector bietet folgende Vorteile:  
@@ -98,7 +98,7 @@ ms.locfileid: "50982866"
   
  Es gibt einen verwalteten Heap für jeden verwalteten Prozess. Alle Threads im Prozess ordnen Speicher zu, für Objekte auf dem gleichen Heap.  
   
- Zum Reservieren von Speicher ruft der Garbage Collector die [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) -Win32-Funktion auf und reserviert jeweils ein Segment des Speichers für verwaltete Anwendungen. Zudem reserviert der Garbage Collector nach Bedarf weitere Segmente und gibt Segmente wieder für das Betriebssystem frei (nachdem alle Objekte aus diesen entfernt wurden), indem er die [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) -Win32-Funktion aufruft.  
+ Zum Reservieren von Speicher ruft der Garbage Collector die [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) -Win32-Funktion auf und reserviert jeweils ein Segment des Speichers für verwaltete Anwendungen. Zudem reserviert der Garbage Collector nach Bedarf weitere Segmente und gibt Segmente wieder für das Betriebssystem frei (nachdem alle Objekte aus diesen entfernt wurden), indem er die [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) -Win32-Funktion aufruft.  
   
 > [!IMPORTANT]
 >  Die Größe der Segmente, die vom Garbage Collector zugeordnet werden, ist implementierungsspezifisch und kann jederzeit, auch in regelmäßigen Updates, geändert werden. Für eine Anwendung darf weder eine bestimmte Segmentgröße vorausgesetzt werden, noch darf sie von einer bestimmten Segmentgröße abhängen noch darf in ihr versucht werden, die Menge des für Segmentbelegungen verfügbaren Speichers zu konfigurieren.  

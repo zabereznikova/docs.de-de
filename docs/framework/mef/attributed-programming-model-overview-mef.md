@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc929aba10d8a18e2a084707b69d3fef5f91a701
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 5429dfbf7b318b60d6c3150315dbe22ee73b4792
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54563443"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Übersicht über das Modell der attributierten Programmierung (MEF)
 Im Managed Extensibility Framework (MEF) ist ein *Programmiermodell* eine besondere Methode, den Satz der konzeptionellen Objekte zu definieren, mit denen MEF ausgeführt wird. Diese konzeptionellen Objekte umfassen Teile, Importe und Exporte. MEF verwendet diese Objekte, gibt jedoch nicht an, wie sie dargestellt werden sollen. Daher ist eine Vielzahl von Programmiermodellen möglich, einschließlich benutzerdefinierter Programmiermodelle.  
@@ -149,7 +149,7 @@ public class MyAddin
 }  
 ```  
   
- In dieser Klasse erhält die `DoSomething` -Methode einen einzelnen `int` -Parameter und gibt `string`zurück. Damit eine Übereinstimmung mit dem Export vorliegt, muss der importbezogene Teil einen entsprechenden Member deklarieren. Die folgende Klasse importiert die `DoSomething`-Methode.  
+ In dieser Klasse erhält die `DoSomething` -Methode einen einzelnen `int` -Parameter und gibt `string`zurück. Damit eine Übereinstimmung mit dem Export vorliegt, muss der importbezogene Teil einen entsprechenden Member deklarieren. Die folgende Klasse importiert die `DoSomething` -Methode.  
   
 ```vb  
 Public Class MyClass1  
@@ -670,7 +670,7 @@ public class NumFour : NumThree
 }  
 ```  
   
- Wenn Metadaten einem `InheritedExport`-Attribut zugeordnet sind, werden diese Metadaten ebenfalls geerbt. (Weitere Informationen finden Sie im Abschnitt "Metadaten und Metadatenansichten".) Geerbte Metadaten können nicht von der Unterklasse geändert werden. Allerdings kann die Unterklasse durch erneutes Deklarieren des `InheritedExport`-Attributs mit dem gleichen Vertragsnamen und Vertragstyp (jedoch mit neuen Metadaten) die geerbten Metadaten durch neue Metadaten ersetzen. Die folgende Klasse verdeutlicht dieses Prinzip. Der `MegaLogger` -Teil erbt von `Logger` und schließt das `InheritedExport` -Attribut ein. Da `MegaLogger` neue Metadaten mit dem Namen "Status" erneut deklariert, erbt es nicht die Namens- und Versionsmetadaten von `Logger`.  
+ Wenn Metadaten einem `InheritedExport` -Attribut zugeordnet sind, werden diese Metadaten ebenfalls geerbt. (Weitere Informationen finden Sie im Abschnitt "Metadaten und Metadatenansichten".) Geerbte Metadaten können nicht von der Unterklasse geändert werden. Allerdings kann die Unterklasse durch erneutes Deklarieren des `InheritedExport` -Attributs mit dem gleichen Vertragsnamen und Vertragstyp (jedoch mit neuen Metadaten) die geerbten Metadaten durch neue Metadaten ersetzen. Die folgende Klasse verdeutlicht dieses Prinzip. Der `MegaLogger` -Teil erbt von `Logger` und schließt das `InheritedExport` -Attribut ein. Da `MegaLogger` neue Metadaten mit dem Namen "Status" erneut deklariert, erbt es nicht die Namens- und Versionsmetadaten von `Logger`.  
   
 ```vb  
 <InheritedExport(GetType(IPlugin))>  
@@ -730,7 +730,7 @@ public class MegaLogger : Logger        {
 }  
 ```  
   
- Wenn Sie das `InheritedExport`-Attribut erneut deklarieren, um Metadaten zu überschreiben, stellen Sie sicher, dass die Vertragstypen identisch sind. (Im vorherigen Beispiel ist `IPlugin` der Vertragstyp.) Wenn sie sich unterscheiden und nicht überschrieben werden, erstellt das zweite Attribut einen zweiten, unabhängigen Export des Teils. Im Allgemeinen bedeutet dies, dass Sie den Vertragstyp explizit angeben müssen, wenn Sie ein `InheritedExport`-Attribut überschreiben (siehe vorheriges Beispiel).  
+ Wenn Sie das `InheritedExport` -Attribut erneut deklarieren, um Metadaten zu überschreiben, stellen Sie sicher, dass die Vertragstypen identisch sind. (Im vorherigen Beispiel ist `IPlugin` der Vertragstyp.) Wenn sie sich unterscheiden und nicht überschrieben werden, erstellt das zweite Attribut einen zweiten, unabhängigen Export des Teils. Im Allgemeinen bedeutet dies, dass Sie den Vertragstyp explizit angeben müssen, wenn Sie ein `InheritedExport` -Attribut überschreiben (siehe vorheriges Beispiel).  
   
  Da Schnittstellen nicht direkt instanziiert werden können, können sie im Allgemeinen nicht mit `Export` -Attributen oder `Import` -Attribut ergänzt werden. Allerdings kann eine Schnittstelle mit einem `InheritedExport` -Attribut auf der Schnittstellenebene ergänzt werden. Dieser Export wird zusammen mit allen zugeordneten Metadaten von jeder beliebigen implementierenden Klasse geerbt. Die Schnittstelle selbst ist jedoch nicht als ein Teil verfügbar.  
   
@@ -957,6 +957,6 @@ public class PartSeven
   
  `IPartImportsSatisfiedNotification` enthält eine Methode mit dem Namen `OnImportsSatisfied`. Diese Methode wird vom Kompositionscontainer für alle Teile aufgerufen, die die Schnittstelle implementieren, wenn die Komposition abgeschlossen wurde und die Importe des Teils verwendet werden können. Teile werden von der Kompositions-Engine erstellt, um die Importe anderer Teilen auszufüllen. Vor dem Festlegen der Importe eines Teils können Sie keine Initialisierung ausführen, die importierte Werte im Teilkonstruktor verwendet oder bearbeitet, sofern diese Werte nicht mithilfe des `ImportingConstructor` -Attributs als Voraussetzung angegeben wurden. Dies ist normalerweise die bevorzugte Methode, doch in einigen Fällen ist die Konstruktoreinfügung möglicherweise nicht verfügbar. In diesen Fällen kann die Initialisierung in `OnImportsSatisfied`ausgeführt werden, und der Teil sollte `IPartImportsSatisfiedNotification`implementieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Channel 9-Video: Öffnen Ihrer Anwendungen mit dem Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Channel 9-Video: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+## <a name="see-also"></a>Siehe auch
+- [Channel 9-Video: Öffnen Ihrer Anwendungen mit dem Managed Extensibility Framework](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
+- [Channel 9-Video: Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

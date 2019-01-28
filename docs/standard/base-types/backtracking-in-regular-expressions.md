@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 3a61c65b108cba6bb256949a120afc76b58949f2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130090"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615977"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Backtracking in regulären Ausdrücken
 <a name="top"></a> Eine Rückverfolgung tritt ein, wenn ein Muster eines regulären Ausdrucks optionale [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) oder [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)enthält und das Modul für reguläre Ausdrücke in einen zuvor gespeicherten Zustand zurückkehrt, um die Suche nach einer Übereinstimmung fortzusetzen. Die Rückverfolgung ist für die Leistungsfähigkeit regulärer Ausdrücke von zentraler Bedeutung. Sie ermöglicht flexible und leistungsstarke Ausdrücke, die höchst komplexen Muster entsprechen können. Diese Leistungsfähigkeit zieht aber auch Nachteile mit sich. Die Rückverfolgung ist häufig der wichtigste Faktor, der sich auf die Leistung der Engine für reguläre Ausdrücke auswirkt. Der Entwickler kann jedoch steuern, wie sich die Engine für reguläre Ausdrücke verhält und wie die Rückverfolgung verwendet wird. In diesem Thema wird erläutert, wie die Rückverfolgung funktioniert und wie sie gesteuert werden kann.  
@@ -107,7 +107,7 @@ ms.locfileid: "53130090"
   
 <a name="backtracking_with_nested_optional_quantifiers"></a>   
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>Rückverfolgung mit geschachtelten optionalen Quantifizierern  
- Die Anzahl der für den Abgleich mit einem regulären Ausdrucksmuster erforderlichen Vergleichsoperationen kann sich exponentiell erhöhen, wenn das Muster viele Alternierungskonstrukte bzw. geschachtelte Alternierungskonstrukte oder, wie es am häufigsten vorkommt, geschachtelte optionale Quantifizierer enthält. Beispielsweise ist das reguläre Ausdrucksmuster `^(a+)+$` darauf ausgelegt, eine Übereinstimmung mit einer vollständigen Zeichenfolge zu finden, die mindestens ein "a" enthält. Das Beispiel stellt zwei Eingabezeichenfolgen mit identischer Länge bereit. Aber nur die erste Zeichenfolge stimmt mit dem Muster überein. Die <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType>-Klasse wird verwendet, um zu bestimmen, wie lange die Vergleichsoperation dauert.  
+ Die Anzahl der für den Abgleich mit einem regulären Ausdrucksmuster erforderlichen Vergleichsoperationen kann sich exponentiell erhöhen, wenn das Muster viele Alternierungskonstrukte bzw. geschachtelte Alternierungskonstrukte oder, wie es am häufigsten vorkommt, geschachtelte optionale Quantifizierer enthält. Beispielsweise ist das reguläre Ausdrucksmuster `^(a+)+$` darauf ausgelegt, eine Übereinstimmung mit einer vollständigen Zeichenfolge zu finden, die mindestens ein "a" enthält. Das Beispiel stellt zwei Eingabezeichenfolgen mit identischer Länge bereit. Aber nur die erste Zeichenfolge stimmt mit dem Muster überein. Die <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> -Klasse wird verwendet, um zu bestimmen, wie lange die Vergleichsoperation dauert.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking3.cs#3)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking3.vb#3)]  
@@ -157,7 +157,7 @@ ms.locfileid: "53130090"
   
  `(?<=` *Teilausdruck* `)` ist eine positive Lookbehindassertion. Das heißt, das oder die Zeichen vor der aktuellen Position muss bzw. müssen mit *Teilausdruck*übereinstimmen. `(?<!`*Teilausdruck*`)` ist eine negative Lookbehindassertion. Das heißt, das oder die Zeichen vor der aktuellen Position muss bzw. müssen nicht mit *Teilausdruck*übereinstimmen. Positive und negative Lookbehindassertionen sind besonders hilfreich, wenn *Teilausdruck* eine Teilmenge des vorherigen Teilausdrucks ist.  
   
- Im folgenden Beispiel werden zwei äquivalente reguläre Ausdrucksmuster verwendet, die den Benutzernamen in einer E-Mail-Adresse überprüfen. Aufgrund übermäßiger Rückverfolgung tritt beim ersten Muster eine schlechte Leistung auf. Das zweite Muster ist eine Änderung des ersten regulären Ausdrucks, indem ein geschachtelter Quantifizierer durch eine positive Lookbehindassertion ersetzt wird. In der Beispielausgabe wird die Ausführungszeit der <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode angezeigt.  
+ Im folgenden Beispiel werden zwei äquivalente reguläre Ausdrucksmuster verwendet, die den Benutzernamen in einer E-Mail-Adresse überprüfen. Aufgrund übermäßiger Rückverfolgung tritt beim ersten Muster eine schlechte Leistung auf. Das zweite Muster ist eine Änderung des ersten regulären Ausdrucks, indem ein geschachtelter Quantifizierer durch eine positive Lookbehindassertion ersetzt wird. In der Beispielausgabe wird die Ausführungszeit der <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> -Methode angezeigt.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  
@@ -167,7 +167,7 @@ ms.locfileid: "53130090"
 |Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Die Suche nach Übereinstimmungen soll am Anfang der Zeichenfolge beginnen.|  
-|`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>-Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>-Option aufgerufen wird.|  
+|`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen. Bei diesem Vergleich wird die Groß-/Kleinschreibung nicht beachtet, da die <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> -Methode mit der <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> -Option aufgerufen wird.|  
 |`[-.\w]*`|Übereinstimmung mit keinem, einem oder mehreren Vorkommen eines Bindestrichs, eines Punkts oder eines Wortzeichens.|  
 |`[0-9A-Z]`|Übereinstimmung mit einem alphanumerischen Zeichen.|  
 |`([-.\w]*[0-9A-Z])*`|Übereinstimmung mit keinem oder mehreren Vorkommen der Kombination aus keinem oder mehreren Bindestrichen, Punkten oder Wortzeichen, gefolgt von einem alphanumerischen Zeichen. Dies ist die erste Erfassungsgruppe.|  
@@ -219,8 +219,8 @@ ms.locfileid: "53130090"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)  
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
-- [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
-- [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [Quantifizierer](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
+- [Alternierungskonstrukte](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
 - [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

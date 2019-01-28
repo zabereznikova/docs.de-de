@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 554ea7c54973852510e539000baf03bdce8e7bcf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 590fed6a2a4e59f438dc73057973aff4539cb1aa
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392563"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589765"
 ---
 # <a name="applying-interop-attributes"></a>Anwenden von Interop-Attributen
 Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von Interop-spezifischen Attributen zur Verfügung: Attribute, die Sie zur Entwurfszeit anwenden, Attribute, die von COM-Interop-Tools und -APIs während des Konvertierungsprozesses angewendet werden und Attribute, die entweder von Ihnen oder von COM-Interop angewendet werden.  
@@ -30,7 +30,7 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 ## <a name="design-time-attributes"></a>Entwurfszeitattribute  
  Sie können das Ergebnis des Konvertierungsvorgangs von COM-Interop-Tools und -APIs mithilfe von Entwurfszeitattributen anpassen. Die folgende Tabelle beschreibt die Attribute, die Sie auf dem verwalteten Quellcode anwenden können. COM-Interop-Tools wenden möglicherweise auch die in dieser Tabelle beschriebenen Attribute an.  
   
-|Attribut|description|  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|Gibt an, ob der Typ mithilfe des Automation-Marshallers oder eines benutzerdefinierten Proxys und Stubs gemarshallt werden soll.|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|Steuert den Typ der für eine Klasse generierten Schnittstelle.|  
@@ -57,7 +57,7 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 ## <a name="conversion-tool-attributes"></a>Attribute des Konvertierungstools  
  Die folgende Tabelle beschreibt die Attribute, die COM-Interop-Tools während des Konvertierungsvorgangs anwenden. Diese Attribute werden nicht zur Entwurfszeit angewendet.  
   
-|Attribut|description|  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|Gibt den COM-Alias für einen Parameter oder Feldtyp an. Kann verwendet werden, um Parameter und Felder zuzuordnen oder Werte zurückzugeben.|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|Gibt den Informationsverlust zu einer Klasse oder Schnittstelle an, als diese aus einer Typbibliothek in eine Assembly importiert wurden.|  
@@ -67,9 +67,9 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|Enthält die **FUNCFLAGS**, die ursprünglich für diesen Typ aus der COM-Typbibliothek importiert wurden.|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Enthält die **FUNCFLAGS**, die ursprünglich für diese Variable aus der COM-Typbibliothek importiert wurden.|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices>  
- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Attribute](../../../docs/standard/attributes/index.md)  
- [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [Verpacken einer Assembly für COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.InteropServices>
+- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Attribute](../../../docs/standard/attributes/index.md)
+- [Qualifizieren von .NET-Typen für die Interoperation](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)
+- [Verpacken einer Assembly für COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

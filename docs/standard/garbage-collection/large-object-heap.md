@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 822aedd3e08ad3f8950f6531fe687ec26df4622a
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415532"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066427"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Der große Objektheap auf Windows-Systemen
 
@@ -34,7 +34,7 @@ Kleine Objekte werden immer in Generation 0 zugeordnet und je nach Lebensdauer e
 
 Große Objekte gehören zu Generation 2, da sie nur während einer Garbage Collection für Generation 2 bereinigt werden. Wenn eine Generation bereinigt wird, werden alle jüngeren Generationen ebenfalls bereinigt. So findet beispielsweise bei einer Garbage Collection für Generation 1 eine Bereinigung der Generationen 1 und 0 statt. Erfolgt eine Garbage Collection für Generation 2, wird der gesamte Heap bereinigt. Aus diesem Grund wird eine Garbage Collection für Generation 2 auch als *vollständige Garbage Collection* bezeichnet. In diesem Artikel wird „Garbage Collection für Generation 2“ statt „vollständige Garbage Collection“ verwendet, die Begriffe sind jedoch synonym.
 
-Die Generationen stellen eine logische Ansicht des Garbage Collection-Heaps bereit. Physisch gesehen werden Objekte in verwalteten Heapsegmenten gespeichert. Ein *verwaltetes Heapsegment* ist ein Speicherblock, den der Garbage Collector vom Betriebssystem (durch Aufrufen der [VirtualAlloc-Funktion](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)) für verwalteten Code reserviert. Beim Laden der CLR ordnet der Garbage Collector zunächst zwei Heapsegmente zu: eines für kleine Objekte (der kleine Objektheap) und eines für große Objekte (der große Objektheap).
+Die Generationen stellen eine logische Ansicht des Garbage Collection-Heaps bereit. Physisch gesehen werden Objekte in verwalteten Heapsegmenten gespeichert. Ein *verwaltetes Heapsegment* ist ein Speicherblock, den der Garbage Collector vom Betriebssystem (durch Aufrufen der [VirtualAlloc-Funktion](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)) für verwalteten Code reserviert. Beim Laden der CLR ordnet der Garbage Collector zunächst zwei Heapsegmente zu: eines für kleine Objekte (der kleine Objektheap) und eines für große Objekte (der große Objektheap).
 
 Die Zuordnungsanforderungen werden dann erfüllt, indem verwaltete Objekte in diesen verwalteten Heapsegmenten abgelegt werden. Wenn das Objekt kleiner als 85.000 Byte ist, wird es im Segment für den kleinen Objektheap abgelegt, andernfalls im Segment für einen großen Objektheap. Segmente werden (in kleineren Blöcken) übernommen, wenn ihnen immer mehr Objekte zugeordnet werden.
 Beim kleinen Objektheap werden Objekte, die bei einer Garbage Collection nicht bereinigt werden, in die nächste Generation heraufgestuft. Objekte, die in einer Garbage Collection für Generation 0 nicht bereinigt werden, werden nun als Objekte von Generation 1 betrachtet und so weiter. Objekte, die die älteste Generation überdauern, werden jedoch weiterhin als Objekte der ältesten Generation betrachtet. Die Objekte, die Generation 2 überdauern, sind also Objekte von Generation 2, und die Objekte, die den großen Objektheap überdauern, sind Objekte des großen Objektheaps (die in Generation 2 bereinigt werden).
@@ -57,9 +57,9 @@ Abbildung 2: Nach einer Garbage Collection für Generation 2
 
 Wenn nicht genügend Speicherplatz zur Erfüllung der Zuordnungsanforderungen für große Objekte verfügbar ist, versucht die Garbage Collection zunächst, weitere Segmente vom Betriebssystem anzufordern. Wenn dies fehlschlägt, wird eine Garbage Collection für Generation 2 ausgelöst, um Speicherplatz freizugeben.
 
-Bei einer Garbage Collection für Generation 1 oder 2 gibt der Garbage Collector Segmente frei für das Betriebssystem, in denen keine aktiven Objekte vorhanden sind, indem die Funktion [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) aufgerufen wird. Der Speicherplatz nach dem letzten aktiven Objekt bis zum Ende des Segments wird aufgehoben (außer in dem kurzlebigen Segment, in dem Generation 0 und Generation 1 aktiv sind und in dem der Garbage Collector einigen Speicherplatz beibehält, da dieser sofort Ihrer Anwendung zugewiesen wird). Die freien Speicherblöcke sind nach wie vor committet, obwohl sie zurückgesetzt werden. Das bedeutet, dass das Betriebssystem in ihnen befindliche Daten nicht wieder auf den Datenträger schreiben muss.
+Bei einer Garbage Collection für Generation 1 oder 2 gibt der Garbage Collector Segmente frei für das Betriebssystem, in denen keine aktiven Objekte vorhanden sind, indem die Funktion [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) aufgerufen wird. Der Speicherplatz nach dem letzten aktiven Objekt bis zum Ende des Segments wird aufgehoben (außer in dem kurzlebigen Segment, in dem Generation 0 und Generation 1 aktiv sind und in dem der Garbage Collector einigen Speicherplatz beibehält, da dieser sofort Ihrer Anwendung zugewiesen wird). Die freien Speicherblöcke sind nach wie vor committet, obwohl sie zurückgesetzt werden. Das bedeutet, dass das Betriebssystem in ihnen befindliche Daten nicht wieder auf den Datenträger schreiben muss.
 
-Da der große Objektheap nur während Garbage Collections für Generation 2 bereinigt wird, kann ein Segment des großen Objektheaps nur während einer solchen Garbage Collection freigegeben werden. In Abbildung 3 wird ein Szenario veranschaulicht, indem der Garbage Collector ein Segment (Segment 2) für das Betriebssystem freigibt und mehr Speicherplatz für die verbleibenden Segmente aufhebt. Wenn der aufgehobene Speicherplatz am Ende des Segments verwendet werden muss, um Zuordnungsanforderungen für große Objekte zu erfüllen, wird der Arbeitsspeicher wieder committet. (Eine Erläuterung zum Übernehmen und Aufheben finden Sie in der Dokumentation für [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).)
+Da der große Objektheap nur während Garbage Collections für Generation 2 bereinigt wird, kann ein Segment des großen Objektheaps nur während einer solchen Garbage Collection freigegeben werden. In Abbildung 3 wird ein Szenario veranschaulicht, indem der Garbage Collector ein Segment (Segment 2) für das Betriebssystem freigibt und mehr Speicherplatz für die verbleibenden Segmente aufhebt. Wenn der aufgehobene Speicherplatz am Ende des Segments verwendet werden muss, um Zuordnungsanforderungen für große Objekte zu erfüllen, wird der Arbeitsspeicher wieder committet. (Eine Erläuterung zum Übernehmen und Aufheben finden Sie in der Dokumentation für [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).)
 
 ![Abbildung 3: Großer Objektheap nach einer Garbage Collection für Generation 2](media/loh/loh-figure-3.jpg)  
 Abbildung 3: Der große Objektheap nach einer Garbage Collection für Generation 2
@@ -302,13 +302,13 @@ Da der große Objektheap nicht komprimiert wird, wird der große Objektheap manc
 
 Häufiger kommt es vor, dass eine Fragmentierung des virtuellen Arbeitsspeichers durch temporäre große Objekte verursacht wird, für die erforderlich ist, dass der Garbage Collector regelmäßig neue verwaltete Heapsegmente vom Betriebssystem abruft und leere Segmente wieder für das Betriebssystem freigibt.
 
-Sie können überprüfen, ob der große Objektheap die Fragmentierung des virtuellen Arbeitsspeichers verursacht, indem Sie einen Haltepunkt für [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) und [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx) festlegen und bestimmen, von wem diese Funktionen aufgerufen werden. Sie können einen Breakpoint z.B. folgendermaßen festlegen, um anzuzeigen, wer versucht hat, virtuelle Arbeitsspeicherblöcke, die größer als 8 MB sind, aus dem Betriebssystem zuzuordnen:
+Sie können überprüfen, ob der große Objektheap die Fragmentierung des virtuellen Arbeitsspeichers verursacht, indem Sie einen Haltepunkt für [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) und [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) festlegen und bestimmen, von wem diese Funktionen aufgerufen werden. Sie können einen Breakpoint z.B. folgendermaßen festlegen, um anzuzeigen, wer versucht hat, virtuelle Arbeitsspeicherblöcke, die größer als 8 MB sind, aus dem Betriebssystem zuzuordnen:
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-Dieser Befehl unterbricht den Debugger und zeigt die Aufrufliste nur an, wenn [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) mit einer Zuordnungsgröße aufgerufen wird, die größer als 8 MB (0x800000) ist.
+Dieser Befehl unterbricht den Debugger und zeigt die Aufrufliste nur an, wenn [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) mit einer Zuordnungsgröße aufgerufen wird, die größer als 8 MB (0x800000) ist.
 
 In CLR 2.0 wurde ein Feature namens *VM Hoarding* hinzugefügt, das für Szenarios nützlich ist, in denen Segmente (einschließlich des großen und des kleinen Objektheaps) häufig abgerufen und freigegeben werden. Wenn Sie das Feature „VM Hoarding“ definieren möchten, geben Sie ein Startflag namens `STARTUP_HOARD_GC_VM` über die Hosting-API an. Die CLR hebt den Arbeitsspeicher für diese Segmente auf, und setzt diese auf eine Standbyliste, anstatt leere Segmente wieder für das Betriebssystem freizugeben. (Beachten Sie, dass die CLR dies nicht für Segmente durchführen kann, die zu groß sind.) Die CLR verwendet diese Segmente später, um Anforderungen für neue Segmente zu erfüllen. Wenn Ihre App das nächste Mal ein neues Segment benötigt, verwendet die CLR eines von dieser Standbyliste, wenn sie eines finden kann, das groß genug ist.
 

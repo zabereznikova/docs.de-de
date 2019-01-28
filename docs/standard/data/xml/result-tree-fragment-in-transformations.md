@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10449867a37863798a0da2df9111bcd7addfc6ef
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4835536dd3ae815fbe7e50582b94caefb1fc9082
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625944"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54683819"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Ergebnisstrukturfragment in Transformationen
 
@@ -35,7 +35,7 @@ Beim `parameter`-Element kann der Wert dem `Qname` (qualifizierter Name) auf ver
 
 Dem `variable`-Element kann der Wert ebenfalls auf verschiedene Weise zugewiesen werden. Die Zuordnung kann erfolgen, indem der Inhalt aus dem XPath-Ausdruck im `select`-Attribut zurückgegeben wird, oder indem der Inhalt des Vorlagenkörpers zugewiesen wird.
 
-Wenn bei einem `parameter`-Element und einem `variable`-Element der Wert durch den XPath-Ausdruck zugeordnet wird, wird einer der vier XPath-Grundtypen zurückgegeben: "Boolean" (boolescher Wert), "string" (Zeichenfolge), "number" (Zahl) oder "node set" (Knotengruppe). Wenn der Wert aus einem Vorlagenkörper mit Inhalt stammt, wird kein XPath-Datentyp zurückgegeben, sondern ein Ergebnisstrukturfragment.
+Wenn bei einem `parameter`-Element und einem `variable`-Element der Wert durch den XPath-Ausdruck zugeordnet wird, wird einer der vier XPath-Grundtypen zurückgegeben: Boolean, String, Number oder node set. Wenn der Wert aus einem Vorlagenkörper mit Inhalt stammt, wird kein XPath-Datentyp zurückgegeben, sondern ein Ergebnisstrukturfragment.
 
 Nur wenn eine Variable nicht an einen der vier XPath-Grunddatentypen, sondern an ein Ergebnisstrukturfragment gebunden ist, gibt eine XPath-Abfrage einen Typ zurück, der nicht zu den vier XPath-Objekttypen gehört. Das Verhalten von Ergebnisstrukturfragmenten wird in der [W3C-Spezifikation](https://www.w3.org/TR/xslt-10/), [Abschnitt 11.1, „Result Tree Fragments“](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments), bis [Abschnitt 11.6, „Passing Parameters to Templates“](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates), erörtert. Darüber hinaus werden in [Abschnitt 1, „Introduction“](https://www.w3.org/TR/xslt-10/#section-Introduction) Möglichkeiten erläutert, wie Vorlagen auch Elemente aus dem XSLT-Namespace enthalten können, die Ergebnisstrukturfragmente zurückgeben oder erstellen.
 
@@ -113,7 +113,7 @@ Im nächsten Beispiel wird eine Variable im RTF-Format (Rich Text Format) und da
 
 In der folgenden Ausgabe wird das Ergebnis der XML-Transformation mit diesem Stylesheet dargestellt.
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 ```xml
 <first_book xmlns:user="urn:books">Book1</first_book>
@@ -127,7 +127,7 @@ Wie oben angegeben, können Sie mit der `node-set`-Funktion ein Ergebnisstruktur
 
 Wenn Sie ein Fragment in eine Knotengruppe konvertieren, wird <xref:System.Xml.XPath.XPathNavigator> nicht mehr zum Navigieren durch die Knoten verwendet. Stattdessen verwenden Sie für Knotengruppen <xref:System.Xml.XPath.XPathNodeIterator>.
 
-Im folgenden Beispiel handelt es sich bei `$var` um eine Variable, die im Stylesheet eine Knotenstruktur darstellt. Die "for-each"-Anweisung in Verbindung mit der `node-set`-Funktion ermöglicht es Benutzern, diese Struktur wie eine Knotengruppe zu durchlaufen.
+Im folgenden Beispiel handelt es sich bei `$var` um eine Variable, die im Stylesheet eine Knotenstruktur darstellt. Die „for-each“-Anweisung in Verbindung mit der `node-set`-Funktion ermöglicht es Benutzern, diese Struktur wie eine Knotengruppe zu durchlaufen.
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -194,7 +194,7 @@ Nachfolgend wird das Ergebnis der XML-Transformation mit diesem Stylesheet darge
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Xml.XPath.XPathNodeIterator>  
-- <xref:System.Xml.XPath.XPathNodeIterator>  
-- [XSLT-Transformationen mit der XslTransform-Klasse](xslt-transformations-with-the-xsltransform-class.md)  
-- [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](xsltransform-class-implements-the-xslt-processor.md)  
+- <xref:System.Xml.XPath.XPathNodeIterator>
+- <xref:System.Xml.XPath.XPathNodeIterator>
+- [XSLT-Transformationen mit der XslTransform-Klasse](xslt-transformations-with-the-xsltransform-class.md)
+- [Implementierung des XSLT-Prozessors durch die XslTransform-Klasse](xsltransform-class-implements-the-xslt-processor.md)

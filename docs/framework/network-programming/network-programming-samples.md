@@ -2,12 +2,12 @@
 title: Beispiele zur Netzwerkprogrammierung
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 55d4403f1b51674a6ee5a58eebdbeaffef1cd857
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: f2ed40eae2ef49964d80978f4a4c20c0d85fa3d1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307304"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694762"
 ---
 # <a name="network-programming-samples"></a>Beispiele zur Netzwerkprogrammierung
 Dieser Abschnitt enthält Beschreibungen und Links zu Downloads von Programmierbeispielen für Netzwerke, die Klassen in <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> und in verwandten Namespaces verwenden. 
@@ -58,6 +58,6 @@ Dieser Abschnitt enthält Beschreibungen und Links zu Downloads von Programmierb
   
  <xref:System.Net.NetworkInformation>  
   
-## <a name="see-also"></a>Siehe auch  
- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Themen zur Vorgehensweise bei der Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+## <a name="see-also"></a>Siehe auch
+- [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Themen zur Vorgehensweise bei der Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-how-to-topics.md)

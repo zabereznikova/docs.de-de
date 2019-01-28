@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555179"
 ---
 # <a name="net-class-library-overview"></a>Übersicht über die .NET-Klassenbibliothek
 
@@ -89,7 +89,7 @@ ms.locfileid: "54029871"
 |Kategorie|Klassenname|Beschreibung|Datentyp in Visual Basic|Datentyp in C#|C++/CLI-Datentyp|F#-Datentyp|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Ganze Zahl|<xref:System.Byte>|Eine 8-Bit-Ganzzahl ohne Vorzeichen.|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|Eine 8-Bit-Ganzzahl mit Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**SByte**|**sbyte**|**char**<br /> - oder - <br /> **char** **mit Vorzeichen**|**sbyte**|  
+||<xref:System.SByte>|Eine 8-Bit-Ganzzahl mit Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**SByte**|**sbyte**|**char**<br /> - oder -<br /> **char** **mit Vorzeichen**|**sbyte**|  
 ||<xref:System.Int16>|Eine 16-Bit-Ganzzahl mit Vorzeichen.|**Short**|**short**|**short**|**int16**|  
 ||<xref:System.Int32>|Eine 32-Bit-Ganzzahl mit Vorzeichen.|**Integer**|**int**|**int**<br /><br /> - oder - <br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Eine 64-Bit-Ganzzahl mit Vorzeichen.|**Long**|**long**|**__int64**|**int64**|  
@@ -112,6 +112,6 @@ ms.locfileid: "54029871"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Allgemeines Typsystem](../../docs/standard/base-types/common-type-system.md)  
-- [.NET API-Browser](../../api/index.md)  
+- [Allgemeines Typsystem](../../docs/standard/base-types/common-type-system.md)
+- [.NET API-Browser](../../api/index.md)
 - [Übersicht](../../docs/framework/get-started/overview.md)

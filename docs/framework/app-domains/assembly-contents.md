@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aed7e1e9e85f746c4b55b10c59dd82e85565b00
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 27bbc1b382d962379a50fba4557e3f2a408d9bc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194838"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54649166"
 ---
 # <a name="assembly-contents"></a>Assemblyinhalte
 Im Allgemeinen kann eine statische Assembly vier Elemente enthalten:  
@@ -48,7 +48,7 @@ Mehrfachdateiassembly
   
  Wenn Sie gegenwärtig Quellcode schreiben, treffen Sie explizite Entscheidungen darüber, wie die Funktionen einer Anwendung in eine oder mehrere Dateien aufgeteilt werden. Beim Entwerfen von .NET Framework-Code werden Sie in Zukunft ähnliche Entscheidungen darüber treffen, wie Sie Funktionen in eine oder mehrere Assemblys aufteilen.  
   
-## <a name="see-also"></a>Siehe auch  
-- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
-- [Assemblymanifest](../../../docs/framework/app-domains/assembly-manifest.md)  
+## <a name="see-also"></a>Siehe auch
+- [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Assemblymanifest](../../../docs/framework/app-domains/assembly-manifest.md)
 - [Überlegungen zur Assemblysicherheit](../../../docs/framework/app-domains/assembly-security-considerations.md)

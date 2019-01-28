@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: eaabb382a7bbb2cdd19c884fcd8499e626f70d4a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30b61a662170b87a557a1a2ea094301ba6401742
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180990"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54608673"
 ---
 # <a name="proxy-configuration"></a>Proxykonfiguration
 Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann eine angeforderte Ressource aus dem Cache zurückgeben oder die Anforderung an den Server weiterleiten, auf dem sich die Ressource befindet. Proxys können die Netzwerkleistung durch Reduzierung der Anzahl der an Remote-Server gesendeten Anforderungen verbessern. Proxys können auch verwendet werden, um den Zugriff auf Ressourcen einzuschränken.  
@@ -53,7 +53,7 @@ Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann 
   
  Die folgende Tabelle zeigt die Konfigurationsoptionen für einen statischen Proxy.  
   
-|Attribut-, Eigenschafts- oder Konfigurationseinstellung|Beschreibung |  
+|Attribut-, Eigenschafts- oder Konfigurationseinstellung|Beschreibung|  
 |--------------------------------------------------------|-----------------|  
 |`proxyaddress` oder <xref:System.Net.WebProxy.Address>|Die Adresse des Proxyservers, der verwendet werden soll.|  
 |`bypassonlocal` oder <xref:System.Net.WebProxy.BypassProxyOnLocal>|Steuert, ob der Proxy für lokale Adressen umgangen wird.|  
@@ -75,7 +75,7 @@ Ein Proxyserver verarbeitet Clientanforderungen für Ressourcen. Ein Proxy kann 
 </system.net>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.WebProxy>  
- <xref:System.Net.GlobalProxySelection>  
- [Automatische Proxyerkennung](../../../docs/framework/network-programming/automatic-proxy-detection.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.WebProxy>
+- <xref:System.Net.GlobalProxySelection>
+- [Automatische Proxyerkennung](../../../docs/framework/network-programming/automatic-proxy-detection.md)

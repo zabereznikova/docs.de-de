@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 127a059865250642c604288b0296b4152cf91f52
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 02568de0a1cc5cec6b92e646e000e69ae79b1646
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221647"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066388"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Strong Name-Tool)
 Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [starken Namen](../../../docs/framework/app-domains/strong-named-assemblies.md). SN.EXE stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.  
@@ -65,7 +65,7 @@ sn [-quiet][option [parameter(s)]]
 |**-t**[**p**] *eingabedatei*|Zeigt das in der *Eingabedatei* gespeicherte Token für den öffentlichen Schlüssel an. Die *Eingabedatei* muss einen öffentlichen Schlüssel enthalten, der zuvor mittels **-p** aus einer Schlüsselpaardatei generiert wurde.  Verwenden Sie nicht die Option **-t[p]**, um das Token direkt aus einer Schlüsselpaardatei zu extrahieren.<br /><br /> SN.EXE berechnet das Token mithilfe einer Hashfunktion aus dem öffentlichen Schlüssel. Um Speicherplatz zu sparen, werden Token für öffentliche Schlüssel von der Common Language Runtime als Teil eines Verweises auf eine weitere Assembly im Manifest gespeichert, wenn eine Abhängigkeit zu einer Assembly mit starkem Namen aufgezeichnet wird. Bei der Option **-Tp** wird zusätzlich zum Token auch der öffentliche Schlüssel angezeigt. Wenn das <xref:System.Reflection.AssemblySignatureKeyAttribute>-Attribut auf die Assembly angewendet wurde, dient das Token für den Identitätsschlüssel, und der Name des Hashalgorithmus und der Identitätsschlüssel werden angezeigt.<br /><br /> Beachten Sie, dass bei Verwendung dieser Option die Assemblysignatur nicht überprüft wird und daher nicht für Entscheidungen über Vertrauensstellungen verwendet werden sollte.  Bei Angabe dieser Option werden nur die unformatierten Tokendaten des öffentlichen Schlüssels angezeigt.|  
 |**-T**[**p**] *assembly*|Zeigt das Token des öffentlichen Schlüssels für *Assembly* an. Die *Assembly* muss dem Namen einer Datei entsprechen, die ein Assemblymanifest enthält.<br /><br /> SN.EXE berechnet das Token mithilfe einer Hashfunktion aus dem öffentlichen Schlüssel. Um Speicherplatz zu sparen, werden Token für öffentliche Schlüssel von der Runtime als Teil eines Verweises auf eine weitere Assembly im Manifest gespeichert, wenn eine Abhängigkeit zu einer Assembly mit starkem Namen aufgezeichnet wird. Bei der Option **-Tp** wird zusätzlich zum Token auch der öffentliche Schlüssel angezeigt. Wenn das <xref:System.Reflection.AssemblySignatureKeyAttribute>-Attribut auf die Assembly angewendet wurde, dient das Token für den Identitätsschlüssel, und der Name des Hashalgorithmus und der Identitätsschlüssel werden angezeigt.<br /><br /> Beachten Sie, dass bei Verwendung dieser Option die Assemblysignatur nicht überprüft wird und daher nicht für Entscheidungen über Vertrauensstellungen verwendet werden sollte.  Bei Angabe dieser Option werden nur die unformatierten Tokendaten des öffentlichen Schlüssels angezeigt.|  
 |`-TS` `assembly` `infile`|Signiert testweise die vollständig oder teilweise signierte `assembly` mit dem Schlüsselpaar aus der `infile`.|  
-|-`TSc``assembly``container`|Signiert testweise die vollständig oder teilweise signierte `assembly` mit dem Schlüsselpaar aus dem Schlüsselcontainer `container`.|  
+|-`TSc` `assembly` `container`|Signiert testweise die vollständig oder teilweise signierte `assembly` mit dem Schlüsselpaar aus dem Schlüsselcontainer `container`.|  
 |**-v** *assembly*|Überprüft den starken Namen in *Assembly*, wobei *Assembly* der Name einer Datei ist, die ein Assemblymanifest enthält.|  
 |**-vf** *assembly*|Überprüft den starken Namen in der *Assembly*. Im Unterschied zur Option **-v** wird bei Angabe von **-vf** die Überprüfung auch dann erzwungen, wenn diese mit der Option **-vr** deaktiviert wurde.|  
 |**-vk** *regfile.reg* *assembly* [*userlist*] [*infile*]|Erstellt eine Datei für Registrierungseinträge (.REG), die Sie verwenden können, um die angegebene Assembly für das Überspringen der Überprüfung zu registrieren. Für mit der Option **-vr** angegebene Assemblys gelten die gleichen Benennungsregeln wie bei der Option **–vk**. Weitere Informationen zu den Optionen *userlist* und *infile* finden Sie bei den Erläuterungen zur Option **–Vr**.|  
@@ -124,8 +124,8 @@ sn -v MyAsm.dll
 sn -d MyContainer  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Extras](../../../docs/framework/tools/index.md)  
- [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Siehe auch
+- [Extras](../../../docs/framework/tools/index.md)
+- [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

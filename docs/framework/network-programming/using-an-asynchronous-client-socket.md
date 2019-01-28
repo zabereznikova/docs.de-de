@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 386b9d3cf0342784c09ed8fc7a815a242924b068
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 54a8209c7dee2d1c26b4a66223b5f727d7765c11
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194955"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54497445"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Verwenden von asynchronen Clientsockets
 Ein asynchroner Clientsocket hält die Anwendung nicht an, während darauf gewartet wird, dass Netzwerkvorgänge abgeschlossen werden. Stattdessen wird das standardmäßige asynchrone Programmiermodell von .NET Framework verwendet, um die Netzwerkverbindung in einem Thread zu verarbeiten, während die Anwendung weiterhin auf dem ursprünglichen Thread ausgeführt wird. Asynchrone Sockets eignen sich für Anwendungen, die das Netzwerk stark nutzen, oder die nicht warten können, bis Netzwerkvorgänge vor dem Fortsetzen abgeschlossen werden.  
@@ -33,7 +33,7 @@ Ein asynchroner Clientsocket hält die Anwendung nicht an, während darauf gewar
   
  Asynchrone Sockets verwenden mehrere Threads aus dem Systemthreadpool, um Netzwerkverbindungen zu bearbeiten. Ein Thread ist verantwortlich für das Initiieren des Datenversands oder Datenempfangs. Andere Threads schließen die Verbindung zum Netzwerkgerät ab und senden oder empfangen Daten. In den folgenden Beispielen werden Instanzen der <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>-Klasse verwendet, um die Ausführung des Hauptthreads anzuhalten und zu signalisieren, wann die Ausführung fortgesetzt werden kann.  
   
- Zur Verbindung eines asynchronen Sockets mit einem Netzwerkgerät initialisiert die `Connect`-Methode im folgenden Beispiel ein **Socket**, ruft dann die <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType>-Methode auf und übergibt einen Remoteendpunkt, der das Netzwerkgerät, die Rückrufmethode „Connect“ und ein Zustandsobjekt (der Client-**Socket**), darstellt. Dieses wird verwendet, um Zustandsinformationen zwischen asynchronen Aufrufen zu übergeben. Das Beispiel implementiert die `Connect`-Methode zur Verbindung des angegebenen **Socket** mit dem angegebenen Endpunkt. Ein globales **ManualResetEvent** mit dem Namen `connectDone` wird vorausgesetzt.  
+ Zur Verbindung eines asynchronen Sockets mit einem Netzwerkgerät initialisiert die `Connect`-Methode im folgenden Beispiel ein **Socket**, ruft dann die <xref:System.Net.Sockets.Socket.Connect%2A?displayProperty=nameWithType>-Methode auf und übergibt einen Remoteendpunkt, der das Netzwerkgerät, die Rückrufmethode „Connect“ und ein Zustandsobjekt (der Client-**Socket**), darstellt. Dieses wird verwendet, um Zustandsinformationen zwischen asynchronen Aufrufen zu übergeben. Das Beispiel implementiert die `Connect`-Methode zur Verbindung des angegebenen **Socket** mit dem angegebenen Endpunkt. Es wird ein globales **ManualResetEvent** mit dem Namen `connectDone` vorausgesetzt.  
   
 ```vb  
 Public Shared Sub Connect(remoteEP As EndPoint, client As Socket)  
@@ -285,7 +285,7 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden eines synchronen Clientsockets](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)  
- [Asynchrone Clientsockets - Beispiel](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwenden eines synchronen Clientsockets](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
+- [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
+- [Asynchrone Clientsockets - Beispiel](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 958699b8e3a00cfe3f8fd8ac4bb96914dcd0598c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7f73edf5912f8158db51ed070da8816d5b988b8d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44185125"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555478"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>Auflösen von externen Ressourcen während der XSLT-Verarbeitung
 Während einer XSLT-Transformation müssen Sie u. U. mehrmals externe Ressourcen auflösen.  
@@ -46,6 +46,6 @@ Während einer XSLT-Transformation müssen Sie u. U. mehrmals externe Ressource
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
-- <xref:System.Xml.Xsl.XsltSettings>  
+- <xref:System.Xml.Xsl.XslCompiledTransform>
+- <xref:System.Xml.Xsl.XsltSettings>
 - [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)

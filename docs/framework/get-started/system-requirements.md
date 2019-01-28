@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9d1c6dff4a1a8722a2ca196763756336d512631
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 765dac0a6cf8a3403880bead1716b8477662052c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203942"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529527"
 ---
 # <a name="net-framework-system-requirements"></a>Systemanforderungen für .NET Framework
 
@@ -55,7 +55,7 @@ Für die Installation von .NET Framework sind Administratorrechte erforderlich. 
 
 | Betriebssystem | Unterstützte Editionen | Mit vorinstalliertem Betriebssystem | Separat installierbar |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Windows 10-Update vom Oktober 2018 | 32 Bit und 64 Bit | .NET Framework 4.7.2 |--|
+| Windows 10-Update von Oktober 2018 | 32 Bit und 64 Bit | .NET Framework 4.7.2 |--|
 | Windows 10-Update vom April 2018 | 32 Bit und 64 Bit | .NET Framework 4.7.2 |--|
 | Windows 10 Fall Creators Update | 32 Bit und 64 Bit | .NET Framework 4.7.1 | .NET Framework 4.7.2 |
 | Windows 10 Creators Update | 32 Bit und 64 Bit | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 | 
@@ -108,6 +108,6 @@ Für die Installation von .NET Framework sind Administratorrechte erforderlich. 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Installationshandbuch](../../../docs/framework/install/index.md)   
-- [Erste Schritte](../../../docs/framework/get-started/index.md)   
+- [Installationshandbuch](../../../docs/framework/install/index.md)
+- [Erste Schritte](../../../docs/framework/get-started/index.md)
 - [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

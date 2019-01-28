@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: d199219b36e2cc06314b38303fb2296f9f3794ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198340"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54599779"
 ---
 # <a name="handling-errors"></a>Behandeln von Fehlern
 Die Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> lösen beide Systemausnahmen (z.B. <xref:System.ArgumentException>) und webspezifische Ausnahmen (bei denen es sich um <xref:System.Net.WebException> handelt, ausgelöst von der <xref:System.Net.WebRequest.GetResponse%2A>-Methode) aus.  
@@ -45,7 +45,7 @@ Die Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResponse> löse
   
  In der folgenden Tabelle werden die möglichen Rückgabewerte für die **Status**-Eigenschaft beschrieben.  
   
-|Status|Beschreibung |  
+|Status|Beschreibung|  
 |------------|-----------------|  
 |ConnectFailure|Der Remotedienst konnte auf Transportebene nicht erreicht werden.|  
 |ConnectionClosed|Die Verbindung wurde vorzeitig getrennt.|  
@@ -167,6 +167,6 @@ End Try
   
  Wenn eine **SocketException** ausgelöst wird, legt die **SocketException**-Klasse die <xref:System.Net.Sockets.SocketException.ErrorCode%2A>-Eigenschaft auf den zuletzt aufgetretenen Betriebssystemsocketfehler fest. Weitere Informationen zu Socketfehlercodes finden Sie in der Fehlercodedokumentation von Winsock 2.0 API in MSDN.  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen der Ausnahmebehandlung](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
- [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>Siehe auch
+- [Grundlagen der Ausnahmebehandlung](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)

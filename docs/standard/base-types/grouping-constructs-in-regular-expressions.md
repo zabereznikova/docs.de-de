@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041599"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645898"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Gruppierungskonstrukte in regulären Ausdrücken
 Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab und zeichnen die Teilzeichenfolgen einer Eingabezeichenfolge auf. Mit Gruppierungskonstrukten können Sie folgende Schritte ausführen:  
@@ -29,9 +29,9 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
 -   Wenden Sie einen Quantifizierer auf einen Teilausdruck an, der über mehrere reguläre Ausdruckssprachelemente verfügt. Weitere Informationen zu Quantifizierern finden Sie unter [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
--   Schließen Sie einen Teilausdruck in die Zeichenfolge ein, die von den <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>- und <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methoden zurückgegeben wird.  
+-   Schließen Sie einen Teilausdruck in die Zeichenfolge ein, die von den <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> - und <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methoden zurückgegeben wird.  
   
--   Rufen Sie einzelne Teilausdrücke aus der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft ab, und verarbeiten Sie sie getrennt vom entsprechenden Text als Ganzes.  
+-   Rufen Sie einzelne Teilausdrücke aus der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> -Eigenschaft ab, und verarbeiten Sie sie getrennt vom entsprechenden Text als Ganzes.  
   
  Die folgende Tabelle führt die Gruppierungskonstrukte auf, die von der .NET-Engine für reguläre Ausdrücke unterstützt werden, und gibt an, ob sie erfassend oder nicht erfassend sind.  
   
@@ -59,7 +59,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
  wobei *Teilausdruck* ein beliebiges gültiges Muster eines regulären Ausdrucks ist. Erfassungen, die Klammern verwenden, werden automatisch von links nach rechts und mit eins beginnend auf Grundlage der Reihenfolge der öffnenden runden Klammern im regulären Ausdruck aufgezählt. Die Erfassung, die mit 0 gekennzeichnet wird, ist der Text, dem das gesamte Muster für den regulären Ausdruck entspricht.  
   
 > [!NOTE]
->  Standardmäßig erfasst das Sprachelement `(`*Teilausdruck*`)` den übereinstimmenden Teilausdruck. Wenn der <xref:System.Text.RegularExpressions.RegexOptions>-Parameter einer übereinstimmenden Methode für ein Muster eines regulären Ausdrucks das <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>-Flag enthält oder wenn die `n`-Option auf diesen Teilausdruck angewendet wird (siehe [Gruppenoptionen](#group_options) weiter unten in diesem Thema), wird der übereinstimmende Teilausdruck jedoch nicht erfasst.  
+>  Standardmäßig erfasst das Sprachelement `(`*Teilausdruck*`)` den übereinstimmenden Teilausdruck. Wenn der <xref:System.Text.RegularExpressions.RegexOptions> -Parameter einer übereinstimmenden Methode für ein Muster eines regulären Ausdrucks das <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> -Flag enthält oder wenn die `n` -Option auf diesen Teilausdruck angewendet wird (siehe weiter unten in diesem Thema [Gruppenoptionen](#group_options) ), wird der übereinstimmende Teilausdruck jedoch nicht erfasst.  
   
  Für den Zugriff auf erfasste Gruppen gibt es vier Möglichkeiten:  
   
@@ -67,9 +67,9 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
 -   Indem das benannte Rückverweiskonstrukt im regulären Ausdruck verwendet wird. Auf den übereinstimmenden Teilausdruck wird im gleichen regulären Ausdruck mit der Syntax `\k<`*name*`>`verwiesen, wobei *name* der Name einer Erfassungsgruppe ist, oder mit `\k<`*number*`>`verwiesen, wobei *number* die Ordinalzahl einer Erfassungsgruppe ist. Eine Erfassungsgruppe weist einen Standardnamen auf, der mit der zugehörigen Ordinalzahl identisch ist. Weitere Informationen finden Sie unter [Benannte übereinstimmende Teilausdrücke](#named_matched_subexpression) weiter unten in diesem Thema.  
   
--   Mit der Ersatzsequenz `$`*number* in einem <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>- oder <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methodenaufruf, wobei *number* die Ordinalzahl des erfassten Teilausdrucks ist.  
+-   Mit der Ersatzsequenz `$`*number* in einem <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> - oder <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methodenaufruf, wobei *number* die Ordinalzahl des erfassten Teilausdrucks ist.  
   
--   Programmgesteuert durch die Verwendung des <xref:System.Text.RegularExpressions.GroupCollection>-Objekts, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird. Der Member auf der Nullposition in der Auflistung stellt die gesamte Übereinstimmung für einen regulären Ausdruck dar. Jeder nachfolgende Member stellt einen übereinstimmenden Teilausdruck dar. Weitere Informationen finden Sie im Abschnitt [Grouping Constructs and Regular Expression Objects](#Objects) .  
+-   Programmgesteuert durch die Verwendung des <xref:System.Text.RegularExpressions.GroupCollection> -Objekts, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben wird. Der Member auf der Nullposition in der Auflistung stellt die gesamte Übereinstimmung für einen regulären Ausdruck dar. Jeder nachfolgende Member stellt einen übereinstimmenden Teilausdruck dar. Weitere Informationen finden Sie im Abschnitt [Grouping Constructs and Regular Expression Objects](#Objects) .  
   
  Im folgenden Beispiel wird ein regulärer Ausdruck veranschaulicht, der doppelte Wörter im Text identifiziert. Die zwei Erfassungsgruppen des Musters eines regulären Ausdrucks stellen die zwei Instanzen des doppelten Worts dar. Die zweite Instanz wird erfasst, um die Anfangsposition in der Eingabezeichenfolge zu melden.  
   
@@ -84,7 +84,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Die folgende Tabelle zeigt, wie das Muster eines regulären Ausdrucks interpretiert wird.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Dies ist die erste Erfassungsgruppe.|  
 |`\s`|Entsprechung für ein Leerraumzeichen finden.|  
@@ -108,7 +108,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
  wobei *name* ein gültiger Gruppenname und *subexpression* ein beliebiges gültiges Muster eines regulären Ausdrucks ist. *name* darf keine Interpunktion enthalten und nicht mit einer Zahl beginnen.  
   
 > [!NOTE]
->  Wenn der <xref:System.Text.RegularExpressions.RegexOptions>-Parameter einer übereinstimmenden Methode für ein Muster eines regulären Ausdrucks das <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>-Flag enthält oder wenn die `n`-Option auf diesen Teilausdruck angewendet wird (siehe [Gruppenoptionen](#group_options) weiter unten in diesem Thema), besteht die einzige Möglichkeit zur Erfassung eines Teilausdrucks in der expliziten Benennung von Erfassungsgruppen.  
+>  Wenn der <xref:System.Text.RegularExpressions.RegexOptions> -Parameter einer übereinstimmenden Methode für ein Muster eines regulären Ausdrucks das <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> -Flag enthält oder wenn die `n` -Option auf diesen Teilausdruck angewendet wird (siehe weiter unten in diesem Thema [Gruppenoptionen](#group_options) ), besteht die einzige Möglichkeit zur Erfassung eines Teilausdrucks in der expliziten Benennung von Erfassungsgruppen.  
   
  Sie können wie folgt auf benannte erfasste Gruppen zugreifen:  
   
@@ -116,11 +116,11 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
 -   Indem das Rückverweiskonstrukt im regulären Ausdruck verwendet wird. Auf den übereinstimmenden Teilausdruck wird im gleichen regulären Ausdruck mit der Syntax `\`*number*verwiesen, wobei *number* die Ordinalzahl des erfassten Teilausdrucks ist. Benannte übereinstimmende Teilausdrücke werden hintereinander von links nach rechts nach übereinstimmenden Teilausdrücken nummeriert.  
   
--   Mit der Ersatzsequenz `${`*name*`}` in einem <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>- oder <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methodenaufruf, wobei *name* der Name des erfassten Teilausdrucks ist.  
+-   Mit der Ersatzsequenz `${`*name*`}` in einem <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> - oder <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> -Methodenaufruf, wobei *name* der Name des erfassten Teilausdrucks ist.  
   
 -   Mit der Ersatzsequenz `$`*number* in einem <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>- oder <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>-Methodenaufruf, wobei *number* die Ordinalzahl des erfassten Teilausdrucks ist.  
   
--   Programmgesteuert durch die Verwendung des <xref:System.Text.RegularExpressions.GroupCollection>-Objekts, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird. Der Member auf der Nullposition in der Auflistung stellt die gesamte Übereinstimmung für einen regulären Ausdruck dar. Jeder nachfolgende Member stellt einen übereinstimmenden Teilausdruck dar. Benannte erfasste Gruppen werden in der Auflistung nach nummerierten erfassten Gruppen gespeichert.  
+-   Programmgesteuert durch die Verwendung des <xref:System.Text.RegularExpressions.GroupCollection> -Objekts, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben wird. Der Member auf der Nullposition in der Auflistung stellt die gesamte Übereinstimmung für einen regulären Ausdruck dar. Jeder nachfolgende Member stellt einen übereinstimmenden Teilausdruck dar. Benannte erfasste Gruppen werden in der Auflistung nach nummerierten erfassten Gruppen gespeichert.  
   
 -   Programmgesteuert, durch das Bereitstellen des Teilausdrucknamens für den Indexer (in C#) des <xref:System.Text.RegularExpressions.GroupCollection> -Objekts oder seine <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> -Eigenschaft (in Visual Basic).  
   
@@ -147,7 +147,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  In der folgenden Tabelle wird gezeigt, wie der reguläre Ausdruck interpretiert wird.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`(?<duplicateWord>\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Geben Sie für die Erfassungsgruppe `duplicateWord`als Namen an.|  
 |`\s`|Entsprechung für ein Leerraumzeichen finden.|  
@@ -164,7 +164,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  In der folgenden Tabelle wird gezeigt, wie der reguläre Ausdruck interpretiert wird.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\D+`|Übereinstimmung mit einem oder mehreren Nichtdezimal-Ziffernzeichen.|  
 |`(?<digit>\d+)`|Übereinstimmung mit einem oder mehreren Dezimalziffernzeichen. Weisen Sie die Übereinstimmung der Gruppe namens `digit` zu.|  
@@ -187,7 +187,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  wobei *name1* die aktuelle Gruppe (optional), *name2* eine zuvor definierte Gruppe und *subexpression* ein beliebiges gültiges Muster eines regulären Ausdrucks ist. Die Ausgleichsgruppendefinition löscht die Definition von *name2* und speichert das Intervall zwischen *name2* und *name1* in *name1*. Wenn keine *name2* -Gruppe definiert ist, wird die Übereinstimmung rückwärts verarbeitet. Da durch Löschen der letzten Definition von *name2* die vorherige Definition von *name2*angezeigt wird, kann mithilfe dieses Konstrukts der Erfassungsstapel für die *name2* -Gruppe als Zähler für die Erfassung von geschachtelten Konstrukten, z. B. Anführungszeichen oder öffnende bzw. schließende Klammern, verwendet werden.  
   
- Die Ausgleichsgruppendefinition verwendet *name2* als Stapel. Das Anfangszeichen jedes geschachtelten Konstrukts wird in die Gruppe sowie in die zugehörige <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Auflistung eingefügt. Wenn das schließende Zeichen abgeglichen wird, wird das entsprechende öffnende Zeichen aus der Gruppe entfernt, und die <xref:System.Text.RegularExpressions.Group.Captures%2A> -Auflistung wird um eins verringert. Nachdem die öffnenden und schließenden Zeichen aller geschachtelten Konstrukte abgeglichen wurden, ist *name1* leer.  
+ Die Ausgleichsgruppendefinition verwendet *name2* als Stapel. Das Anfangszeichen jedes geschachtelten Konstrukts wird in die Gruppe sowie in die zugehörige <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> -Auflistung eingefügt. Wenn das schließende Zeichen abgeglichen wird, wird das entsprechende öffnende Zeichen aus der Gruppe entfernt, und die <xref:System.Text.RegularExpressions.Group.Captures%2A> -Auflistung wird um eins verringert. Nachdem die öffnenden und schließenden Zeichen aller geschachtelten Konstrukte abgeglichen wurden, ist *name1* leer.  
   
 > [!NOTE]
 >  Nachdem Sie den regulären Ausdruck im folgenden Beispiel geändert haben, sodass er die entsprechenden öffnenden und schließenden Zeichen eines geschachtelten Konstrukts enthält, können Sie diesen zur Behandlung der meisten geschachtelten Konstrukte verwenden, z. B. für mathematische Ausdrücke oder Programmcodezeilen, die mehrere geschachtelte Methodenaufrufe enthalten.  
@@ -205,7 +205,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Der reguläre Ausdruck wird wie folgt interpretiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`^`|Starten Sie am Beginn der Zeichenfolge.|  
 |`[^<>]*`|Finden Sie eine Entsprechung für null oder mehr Zeichen, die keine linken oder rechten spitzen Klammern sind.|  
@@ -270,7 +270,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Der reguläre Ausdruck `(?:\b(?:\w+)\W*)+\.` stimmt mit einem Satz überein, der durch einen Punkt beendet wird. Da sich der reguläre Ausdruck auf Sätze konzentriert und nicht auf einzelne Wörter, werden Gruppierungskonstrukte ausschließlich als Quantifizierer verwendet. Das Muster für reguläre Ausdrücke wird entsprechend der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(?:\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Weisen Sie einer erfassten Gruppe den entsprechenden Text nicht zu.|  
@@ -287,13 +287,13 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
  wobei *Teilausdruck* ein beliebiges gültiges Muster eines regulären Ausdrucks ist. Beispielsweise aktiviert `(?i-s:)` die Einstellung, dass Groß-/Kleinschreibung nicht beachtet wird, und deaktiviert den Einzeilenmodus. Weitere Informationen zu den möglichen Inlineoptionen finden Sie unter [Optionen für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Sie können Optionen angeben, die für einen vollständigen regulären Ausdruck und nicht für einen Teilausdruck gültig sind. Verwenden Sie dazu einen <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>-Klassenkonstruktor oder eine statische Methode. Sie können auch Inlineoptionen angeben, die nach einem bestimmten Punkt in einem regulären Ausdruck gelten. Verwenden Sie dazu das `(?imnsx-imnsx)` -Sprachkonstrukt.  
+>  Sie können Optionen angeben, die für einen vollständigen regulären Ausdruck und nicht für einen Teilausdruck gültig sind. Verwenden Sie dazu einen <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> -Klassenkonstruktor oder eine statische Methode. Sie können auch Inlineoptionen angeben, die nach einem bestimmten Punkt in einem regulären Ausdruck gelten. Verwenden Sie dazu das `(?imnsx-imnsx)` -Sprachkonstrukt.  
   
  Das Konstrukt für die Gruppenoptionen ist keine Erfassungsgruppe. Obwohl ein beliebiger Teil einer Zeichenfolge, die von *subexpression* erfasst wird, in der Übereinstimmung enthalten ist, ist sie weder in einer erfassten Gruppe enthalten, noch wird sie dazu verwendet, das <xref:System.Text.RegularExpressions.GroupCollection> -Objekt aufzufüllen.  
   
  Beispiel: Der reguläre Ausdruck `\b(?ix: d \w+)\s` verwendet Inlineoptionen in einem Gruppierungskonstrukt, um die Groß-/Kleinschreibung nicht beachtende Übereinstimmung zu aktivieren und Musterleerstellen beim Identifizieren aller Wörter zu ignorieren, die mit dem Buchstaben „d“ beginnen. Der reguläre Ausdruck wird entsprechend der Darstellung in der folgenden Tabelle definiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(?ix: d \w+)`|In diesem Muster wird Übereinstimmung ohne Berücksichtigung von Groß- und Kleinschreibung verwendet, und Leerzeichen werden ignoriert (entspricht dem Buchstaben "d" gefolgt von mindestens einem Wortzeichen).|  
@@ -319,7 +319,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Der reguläre Ausdruck `\b\w+(?=\sis\b)` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -342,7 +342,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Der reguläre Ausdruck `\b(?!un)\w+\b` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(?!un)`|Es wird bestimmt, ob die nächsten zwei Zeichen "un" sind. Trifft dies nicht zu, ist eine Übereinstimmung möglich.|  
@@ -356,7 +356,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Der reguläre Ausdruck `\b\w+\b(?!\p{P})` wird entsprechend der Darstellung in der folgenden Tabelle interpretiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\w+`|Übereinstimmung mit mindestens einem Wortzeichen.|  
@@ -380,7 +380,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Das Muster für reguläre Ausdrücke `(?<=\b20)\d{2}\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\d{2}`|Entsprechung für zwei Dezimalstellen finden.|  
 |`(?<=\b20)`|Die Übereinstimmung wird fortgesetzt, wenn den zwei Dezimalstellen die Dezimalstellen "20" bei einer Wortgrenze vorangestellt sind.|  
@@ -405,7 +405,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Das Muster für reguläre Ausdrücke `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`\w+`|Suchen Sie nach einer Übereinstimmung mit einem oder mehreren Wortzeichen gefolgt von einem Leerzeichen.|  
@@ -434,7 +434,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Der nicht zurückverfolgende reguläre Ausdruck `(?>(\w)\1+).\b` wird entsprechend der folgenden Tabelle definiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`(\w)`|Finden Sie eine Entsprechung für ein einzelnes Wortzeichen, und weisen Sie es der ersten Erfassungsgruppe zu.|  
 |`\1+`|Finden Sie mindestens eine Entsprechung für die erste erfasste Teilzeichenfolge.|  
@@ -444,7 +444,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
 <a name="Objects"></a>   
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Gruppieren von Konstrukten und Objekten für reguläre Ausdrücke  
- Teilzeichenfolgen, die von einer Erfassungsgruppe für reguläre Ausdrücke abgeglichen werden, werden durch <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType>-Objekte dargestellt, die aus dem <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType>-Objekt abgerufen werden können, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird. Das <xref:System.Text.RegularExpressions.GroupCollection> -Objekt wird folgendermaßen aufgefüllt:  
+ Teilzeichenfolgen, die von einer Erfassungsgruppe für reguläre Ausdrücke abgeglichen werden, werden durch <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> -Objekte dargestellt, die aus dem <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> -Objekt abgerufen werden können, das von der <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben wird. Das <xref:System.Text.RegularExpressions.GroupCollection> -Objekt wird folgendermaßen aufgefüllt:  
   
 -   Das erste <xref:System.Text.RegularExpressions.Group> -Objekt in der Auflistung (das Objekt bei Index 0) stellt die gesamte Übereinstimmung dar.  
   
@@ -452,7 +452,7 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
 -   Der endgültige Satz von <xref:System.Text.RegularExpressions.Group> -Objekten stellt benannte Erfassungsgruppen dar. Sie werden in der Reihenfolge angezeigt, in der sie im regulären Ausdruck definiert sind (von links nach rechts). Der Indexwert der zuerst benannten Erfassungsgruppe ist um eins größer als der Index der letzten unbenannten Erfassungsgruppe. Wenn es keine unbenannten Erfassungsgruppen im regulären Ausdruck gibt, ist der Indexwert der zuerst benannten Erfassungsgruppe gleich eins.  
   
- Wenn Sie einen Quantifizierer auf eine Erfassungsgruppe anwenden, reflektieren die entsprechenden <xref:System.Text.RegularExpressions.Group>-, <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>- und <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>-Eigenschaften des <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType>-Objekts die letzte Teilzeichenfolge, die von einer Erfassungsgruppe erfasst wird. Sie können einen vollständigen Satz von Teilzeichenfolgen abrufen, die von Gruppen erfasst werden, die Quantifizierer vom <xref:System.Text.RegularExpressions.CaptureCollection>-Objekt besitzen, das von der <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
+ Wenn Sie einen Quantifizierer auf eine Erfassungsgruppe anwenden, reflektieren die entsprechenden <xref:System.Text.RegularExpressions.Group> -, <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>- und <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>-Eigenschaften des <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> -Objekts die letzte Teilzeichenfolge, die von einer Erfassungsgruppe erfasst wird. Sie können einen vollständigen Satz von Teilzeichenfolgen abrufen, die von Gruppen erfasst werden, die Quantifizierer vom <xref:System.Text.RegularExpressions.CaptureCollection> -Objekt besitzen, das von der <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben wird.  
   
  Im folgenden Beispiel wird die Beziehung zwischen den <xref:System.Text.RegularExpressions.Group> - und <xref:System.Text.RegularExpressions.Capture> -Objekten veranschaulicht.  
   
@@ -461,16 +461,16 @@ Gruppierungskonstrukte grenzen die Teilausdrücke eines regulären Ausdrucks ab 
   
  Das Muster eines regulären Ausdrucks `\b(\w+)\W+)+` extrahiert einzelne Wörter aus einer Zeichenfolge. Das Muster wird wie in der folgenden Tabelle gezeigt definiert.  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`\b`|Der Vergleich beginnt an einer Wortgrenze.|  
 |`(\w+)`|Übereinstimmung mit mindestens einem Wortzeichen. Zusammen bilden diese Zeichen ein Wort. Dies ist die zweite Erfassungsgruppe.|  
 |`\W+`|Entsprechung für mindestens ein Nicht-Wortzeichen finden.|  
 |`(\w+)\W+)+`|Suchen Sie nach einer Übereinstimmung für das Muster aus einem oder mehreren Wortzeichen, gefolgt von einem oder mehreren Nicht-Wortzeichen (ein oder zwei Mal). Dies ist die erste Erfassungsgruppe.|  
   
- Die erste Erfassungsgruppe stimmt mit jedem Wort des Satzes überein. Die zweite Erfassungsgruppe vergleicht jedes Wort zusammen mit der Interpunktion und den Leerstellen, die auf das Wort folgen. Das <xref:System.Text.RegularExpressions.Group> -Objekt, dessen Index 2 ist, stellt Informationen zu dem Text bereit, der mit der zweiten Erfassungsgruppe übereinstimmt. Der vollständige Satz von Wörtern, die von der Erfassungsgruppe erfasst wurden, ist vom <xref:System.Text.RegularExpressions.CaptureCollection>-Objekt verfügbar, das von der <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wurde.  
+ Die erste Erfassungsgruppe stimmt mit jedem Wort des Satzes überein. Die zweite Erfassungsgruppe vergleicht jedes Wort zusammen mit der Interpunktion und den Leerstellen, die auf das Wort folgen. Das <xref:System.Text.RegularExpressions.Group> -Objekt, dessen Index 2 ist, stellt Informationen zu dem Text bereit, der mit der zweiten Erfassungsgruppe übereinstimmt. Der vollständige Satz von Wörtern, die von der Erfassungsgruppe erfasst wurden, ist vom <xref:System.Text.RegularExpressions.CaptureCollection> -Objekt verfügbar, das von der <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> -Eigenschaft zurückgegeben wurde.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

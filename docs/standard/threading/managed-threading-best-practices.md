@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab33474fa8f3d62fb21c86a0699bbfcb75e7a270
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 907e85d2622ea07ddbb61092f439583ed72e0c50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150614"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54560034"
 ---
 # <a name="managed-threading-best-practices"></a>Best Practices für verwaltetes Threading
 Wenn Sie mehrere Threads verwenden, ist eine sorgfältige Programmierung erforderlich. Für die meisten Aufgaben können Sie die Komplexität reduzieren, indem Sie Ausführungsanforderungen mithilfe von Threadpoolthreads in Warteschlangen einfügen. Dieses Thema behandelt problematische Situationen wie die Koordinierung der Verarbeitung von mehreren Threads oder die Behandlung von blockierenden Threads.  
@@ -179,5 +179,5 @@ Verwenden Sie die Eigenschaft <xref:System.Environment.ProcessorCount?displayPro
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Threading](../../../docs/standard/threading/index.md)  
+- [Threading](../../../docs/standard/threading/index.md)
 - [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)

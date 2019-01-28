@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbbf7055a250ae7fa630097f3014a6420228fed3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1e09f1464a5df751034639d8bc1cb5d79faacd0f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714190"
 ---
 # <a name="barrier"></a>Barriere
 
@@ -56,5 +56,5 @@ Eine <xref:System.Threading.Barrier?displayProperty=nameWithType> ist eine Synch
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Threadingobjekte und -funktionen](threading-objects-and-features.md)  
+- [Threadingobjekte und -funktionen](threading-objects-and-features.md)
 - [Gewusst wie: Synchronisieren gleichzeitiger Vorgänge mit einer Barriere](how-to-synchronize-concurrent-operations-with-a-barrier.md)

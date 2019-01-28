@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a40b9524990213eaaf2ed78503b6f831776306ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389043"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524311"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Qualifizieren von .NET-Typen für die Interoperation
 Wenn Sie beabsichtigen, Typen in einer Assembly für eine COM-Anwendung verfügbar zu machen, beachten Sie zur Entwurfszeit die Anforderungen von Com-Interop. Verwaltete Typen (Klassen, Schnittstellen, Strukturen und Enumerationen) lassen sich nahtlos in COM-Typen integrieren, wenn Sie die folgenden Richtlinien einhalten:  
@@ -47,9 +47,9 @@ Wenn Sie beabsichtigen, Typen in einer Assembly für eine COM-Anwendung verfügb
   
  Beim Export eines verwalteten Typs in das COM wird seine Vererbungshierarchie vereinfacht. Auch die Versionsverwaltung läuft bei verwalteten und nicht verwalteten Umgebungen unterschiedlich ab. Im COM verfügbare Typen haben nicht dieselben Versionsverwaltungseigenschaften wie andere verwaltete Typen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Einführung in die Klassenschnittstelle](com-callable-wrapper.md#introducing-the-class-interface)  
- [Anwenden von Interop-Attributen](../../../docs/framework/interop/applying-interop-attributes.md)  
- [Verpacken einer Assembly für COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.InteropServices.ComVisibleAttribute>
+- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+- [Einführung in die Klassenschnittstelle](com-callable-wrapper.md#introducing-the-class-interface)
+- [Anwenden von Interop-Attributen](../../../docs/framework/interop/applying-interop-attributes.md)
+- [Verpacken einer Assembly für COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
