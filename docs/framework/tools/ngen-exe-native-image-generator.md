@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f086c5b6bf1d45f3f711112c618e2398c3a39ed
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 915ffcba4ad0dc361e3a3c392adc6215d2420a85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222167"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54592626"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Native Image Generator)
 Native Image Generator (Ngen.exe) ist ein Tool zur Leistungsoptimierung verwalteter Anwendungen. Mit "Ngen.exe" können Sie systemeigene Images erstellen, also Dateien mit kompiliertem prozessorspezifischem Computercode, die daraufhin im Cache für systemeigene Images auf dem lokalen Computer installiert werden. Die Laufzeit kann systemeigene Abbilder aus dem Cache nutzen und muss nicht den JIT (Just-In-Time)-Compiler verwenden, um die ursprüngliche Assembly zu kompilieren.  
@@ -78,7 +78,7 @@ ngen /? | /help
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Löscht die systemeigenen Images einer Assembly und ihre Abhängigkeiten aus dem Cache für systemeigene Images.<br /><br /> Verwenden Sie zum Deinstallieren eines einzelnen Images und seiner Abhängigkeiten dieselben Befehlszeilenargumente wie beim Installieren des Images. **Hinweis**:  Beginnend mit [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] wird die Aktion `uninstall` * nicht mehr unterstützt.|  
 |`update` [`/queue`]|Aktualisiert systemeigene Images, die ungültig geworden sind.<br /><br /> Wenn `/queue` angegeben wird, werden die Aktualisierungen in die Warteschlange des Diensts für systemeigene Images gestellt. Aktualisierungen werden immer mit Priorität 3 geplant, sodass sie zu Leerlaufzeiten des Computers ausgeführt werden.|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|Zeigt den Zustand der systemeigenen Images für eine Assembly und ihre Abhängigkeiten an.<br /><br /> Wenn kein Argument angegeben wird, wird der gesamte Inhalt des Caches für native Images angezeigt.|  
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - oder -<br /><br /> `eqi` [1&#124;2&#124;3]|Führt die in der Warteschlange enthaltenen Kompilierungsaufträge aus.<br /><br /> Wenn eine Priorität angegeben wird, werden Kompilierungsaufträge mit höherer oder gleicher Priorität ausgeführt. Wenn keine Priorität angegeben wird, werden alle in die Warteschlange gestellten Kompilierungsaufträge ausgeführt.|  
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - oder - <br /><br /> `eqi` [1&#124;2&#124;3]|Führt die in der Warteschlange enthaltenen Kompilierungsaufträge aus.<br /><br /> Wenn eine Priorität angegeben wird, werden Kompilierungsaufträge mit höherer oder gleicher Priorität ausgeführt. Wenn keine Priorität angegeben wird, werden alle in die Warteschlange gestellten Kompilierungsaufträge ausgeführt.|  
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Hält den Dienst für systemeigene Images an, setzt den angehaltenen Dienst fort bzw. fragt den Dienststatus ab.|  
   
 <a name="ArgumentTable"></a>   
@@ -584,10 +584,10 @@ ngen executeQueuedItems
 ### <a name="service-interaction-with-clients"></a>Dienstinteraktion mit Clients  
  In .NET Framework 2.0 erfolgt die einzige Interaktion mit dem Dienst für systemeigene Abbilder über das Befehlszeilentool "Ngen.exe". Verwenden Sie das Befehlszeilentool in Installationsskripts, um Aktionen für den Dienst für systemeigene Abbilder in die Warteschlange zu stellen und mit dem Dienst zu interagieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Extras](../../../docs/framework/tools/index.md)  
- [Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md)  
- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Siehe auch
+- [Extras](../../../docs/framework/tools/index.md)
+- [Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md)
+- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 
 [Native Image Service]: #native-image-service
