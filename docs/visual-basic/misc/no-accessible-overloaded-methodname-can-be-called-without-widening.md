@@ -1,17 +1,17 @@
 ---
-title: "Keine zugreifbare überladene '&lt;Methodname&gt;' kann mit diesen Argumenten ohne eine erweiternde Konvertierung aufgerufen werden: &lt;Liste&gt;"
+title: "Keine zugreifbare überladene '<methodname>' kann mit diesen Argumenten ohne eine erweiternde Konvertierung aufgerufen werden: <list>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall_WideningConversion2
 ms.assetid: 5e74f5cf-80bd-4b48-b58a-465f981ec694
-ms.openlocfilehash: 47d3fa8343ba514cd4d99d44e6c9ba792af9f4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4395d379c289dc17504fa50d5f147e007fceef2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743386"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261646"
 ---
-# <a name="no-accessible-overloaded-ltmethodnamegt-can-be-called-with-these-arguments-without-a-widening-conversion-ltlistgt"></a>Keine zugreifbare überladene '&lt;Methodname&gt;' kann mit diesen Argumenten ohne eine erweiternde Konvertierung aufgerufen werden: &lt;Liste&gt;
+# <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-widening-conversion-list"></a>Keine zugreifbare überladene '\<Methodenname >' kann mit diesen Argumenten ohne eine erweiternde Konvertierung aufgerufen werden: \<Liste >
 Eine überladene Methode wurde aufgerufen, aber ohne eine erweiternde Konvertierung kann keine Methode mit der Liste der bereitgestellten Argumente abgeglichen werden.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
