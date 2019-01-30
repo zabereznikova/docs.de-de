@@ -1,5 +1,5 @@
 ---
-title: '&lt;Deaktivieren Sie&gt; -Element für &lt;Listener&gt; für &lt;Ablaufverfolgung&gt;'
+title: <clear>-Element für <listeners> für <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: c0bb2cabafbaba33f8dde7cbf3399387876e0158
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b199f24a2c1e1c8154c0ec22bef6367e5ba0ec26
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083586"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262609"
 ---
-# <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Deaktivieren Sie&gt; -Element für &lt;Listener&gt; für &lt;Ablaufverfolgung&gt;
+# <a name="clear-element-for-listeners-for-trace"></a>\<clear >-Element für \<Listener > für \<Ablaufverfolgung >
 Löscht die `Listeners`-Sammlung für die Ablaufverfolgung.  
   
  \<configuration>  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;add&gt; des &lt;declaredTypes&gt;-Elements'
+title: <add> der <declaredTypes> Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: dd5972c2bb25367f2566bcf77e53e7a3341d89b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6aab0b1eca340e212c34e2d25b9b84984dcc7a0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519462"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255509"
 ---
-# <a name="ltaddgt-of-ltdeclaredtypesgt-element"></a>&lt;add&gt; des &lt;declaredTypes&gt;-Elements
+# <a name="add-of-declaredtypes-element"></a>\<Hinzufügen > der \<DeclaredTypes >-Element
 Fügt einen während der Deserialisierung vom <xref:System.Runtime.Serialization.DataContractSerializer> verwendeten Typ hinzu. Jeder deklarierte Typ umfasst die bekannten Typen, die als Feld oder Eigenschaft des deklarierten Typs zurückgegeben werden.  
   
  system.runtime.serialization  

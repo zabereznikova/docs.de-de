@@ -1,25 +1,25 @@
 ---
-title: '&lt;activityStateQuery&gt; von WCF'
+title: <activityStateQuery> von WCF
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 6d55a53a6344922cee0d42c26102d5f0bbf46f67
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 97fce512415ad6ae165b29c7e8eff3394d5e675a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151788"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254794"
 ---
-# <a name="ltactivitystatequerygt-of-wcf"></a>&lt;activityStateQuery&gt; von WCF
+# <a name="activitystatequery-of-wcf"></a>\<activityStateQuery> of WCF
 
 Stellt eine Abfrage dar, die verwendet wird, um Lebenszyklusänderungen der Aktivitäten nachzuverfolgen, die zu einer Workflowinstanz gehören. Beispielsweise empfiehlt es sich zum Nachverfolgen jedes Mal, wenn die Aktivität "E-Mail senden" innerhalb einer Workflowinstanz abgeschlossen wird. Diese Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensatzobjekte des Aktivitätszustands abonnieren kann. Die verfügbaren Zustände, die abonniert werden können, sind in ActivityStates angegeben.  
   
 Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
 
-\<system.serviceModel > \<tracking >  
-\<Profile > \<TrackingProfile >  
-\<Workflow >  
-\<ActivityStateQueries >  
-\<ActivityStateQuery >  
+\<system.serviceModel> \<tracking>  
+\<profiles> \<trackingProfile>  
+\<workflow>  
+\<activityStateQueries>  
+\<activityStateQuery>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -61,15 +61,15 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Argumente >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Eine Auflistung der dieser Aktivitätsabfrage zugeordneten Argumente.|  
-|[\<Status >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Eine Auflistung von Konfigurationselementen, die die Zustände der abonnierten Aktivität enthalten, für die ein Nachverfolgungsdatensatz ausgegeben werden soll.|  
-|[\<Status >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Eine Auflistung von Variablen, die dieser Aktivitätsabfrage zugeordnet sind.|  
+|[\<arguments>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Eine Auflistung der dieser Aktivitätsabfrage zugeordneten Argumente.|  
+|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Eine Auflistung von Konfigurationselementen, die die Zustände der abonnierten Aktivität enthalten, für die ein Nachverfolgungsdatensatz ausgegeben werden soll.|  
+|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Eine Auflistung von Variablen, die dieser Aktivitätsabfrage zugeordnet sind.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<FaultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Stellt eine Liste von Konfigurationselementen dar, die verwendet werden, um Anforderungen zum Abbrechen einer untergeordneten Aktivität durch die übergeordnete Aktivität nachzuverfolgen. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensatzobjekte mit Abbruchanforderungen abonnieren kann.|  
+|[\<faultPropagationQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Stellt eine Liste von Konfigurationselementen dar, die verwendet werden, um Anforderungen zum Abbrechen einer untergeordneten Aktivität durch die übergeordnete Aktivität nachzuverfolgen. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensatzobjekte mit Abbruchanforderungen abonnieren kann.|  
   
 ## <a name="remarks"></a>Hinweise
 

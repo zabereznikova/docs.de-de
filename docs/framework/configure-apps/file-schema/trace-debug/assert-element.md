@@ -1,5 +1,5 @@
 ---
-title: '&lt;Assert-&gt; Element'
+title: <assert>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/assert
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 450ff1a6e4b5705a33f8869ed8a99ebd674b96e7
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: aa5682c1cb2d662e1352c1d6c78e1a4a7e41f760
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084483"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259516"
 ---
-# <a name="ltassertgt-element"></a>&lt;Assert-&gt; Element
+# <a name="assert-element"></a>\<Assert->-Element
 Gibt an, ob ein Meldungsfeld angezeigt wird, wenn Sie die <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>-Methode aufrufen. Außerdem wird der Name der Datei angegeben, in die die Meldung geschrieben werden soll.  
   
  \<configuration>  
