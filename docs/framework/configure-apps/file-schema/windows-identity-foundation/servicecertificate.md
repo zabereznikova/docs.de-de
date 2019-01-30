@@ -1,21 +1,21 @@
 ---
-title: '&lt;ServiceCertificate&gt;'
+title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: 008d2269a72759117658e27ec130cc8cf62cfdfa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 328d074f9edc5ddf871308a7e3d694bf94adea78
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400412"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261601"
 ---
-# <a name="ltservicecertificategt"></a>&lt;ServiceCertificate&gt;
+# <a name="servicecertificate"></a>\<serviceCertificate>
 Konfiguriert das x. 509-Zertifikat, das zum Verschlüsseln und Entschlüsseln von Token verwendet wird.  
   
- \<system.identityModel.services >  
-\<FederationConfiguration >  
-\<ServiceCertificate >  
+ \<system.identityModel.services>  
+\<federationConfiguration>  
+\<serviceCertificate>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,13 +32,13 @@ Konfiguriert das x. 509-Zertifikat, das zum Verschlüsseln und Entschlüsseln vo
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keiner  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<CertificateReference >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatereference.md)|Gibt die Einstellungen, die zum Suchen und überprüfen ein x. 509-Zertifikat im Zertifikatspeicher verwendet werden.|  
+|[\<certificateReference>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatereference.md)|Gibt die Einstellungen, die zum Suchen und überprüfen ein x. 509-Zertifikat im Zertifikatspeicher verwendet werden.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

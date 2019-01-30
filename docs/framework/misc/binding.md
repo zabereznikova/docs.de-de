@@ -1,16 +1,16 @@
 ---
-title: '&lt;binding&gt;'
+title: <binding>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 666183d6-4d1f-45c7-ac64-bdf93ee8f36f
-ms.openlocfilehash: fb4fafda31205e2ce5efd01ab265fcacfa70bdf6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb51eb1962603439b89a203eb668dfb543049170
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539193"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271472"
 ---
-# <a name="ltbindinggt"></a>&lt;binding&gt;
+# <a name="binding"></a>\<binding>
 Sie können das `binding`-Element zum Konfigurieren verschiedener Typen von vordefinierten Bindungen verwenden, die von Windows Communication Foundation (WCF) bereitgestellt werden.  
   
 ## <a name="system-provided-binding"></a>Vom System bereitgestellte Bindung  

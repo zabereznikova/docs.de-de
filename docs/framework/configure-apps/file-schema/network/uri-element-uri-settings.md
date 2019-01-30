@@ -1,15 +1,15 @@
 ---
-title: '&lt;URI&gt; -Elements (Netzwerkeinstellungen)'
+title: <Uri>-Element (Uri-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: 48769298246dd71e040aac1c682e0fddfb5de89b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f432be7594b1659dfcae0c6eee706358230f2cbb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655542"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269249"
 ---
-# <a name="lturigt-element-uri-settings"></a>&lt;URI&gt; -Elements (Netzwerkeinstellungen)
+# <a name="uri-element-uri-settings"></a>\<URI >-Elements (Netzwerkeinstellungen)
 Enthält Einstellungen, die angeben, wie .NET Framework Webadressen, die mithilfe von uniform Resource Identifier (URIs) ausgedrückt verarbeitet.  
   
 ## <a name="schema-hierarchy"></a>Schemahierarchie  

@@ -1,15 +1,15 @@
 ---
-title: '&lt;activityStateQueries&gt; von WCF'
+title: <activityStateQueries> von WCF
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: 6b21ad3f5487a924309b8bee6b9ac972f23bdc66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9c78b6929b4550204a22fe2e2786891b516a818
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701936"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265323"
 ---
-# <a name="ltactivitystatequeriesgt-of-wcf"></a>&lt;activityStateQueries&gt; von WCF
+# <a name="activitystatequeries-of-wcf"></a>\<ActivityStateQueries > von WCF
 
 Stellt eine Auflistung von Abfragen dar, die verwendet werden, um Lebenszyklusänderungen der Aktivitäten nachzuverfolgen, die zu einer Workflowinstanz gehören. Beispielsweise empfiehlt es sich zum Nachverfolgen jedes Mal, wenn die Aktivität "E-Mail senden" innerhalb einer Workflowinstanz abgeschlossen wird. Diese Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensatzobjekte des Aktivitätszustands abonnieren kann. Die verfügbaren Zustände, die abonniert werden können, sind in ActivityStates angegeben.
 

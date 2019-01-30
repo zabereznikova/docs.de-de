@@ -1,5 +1,5 @@
 ---
-title: Der Ausdruck ruft rekursiv die enthaltende Eigenschaft &#39; &lt;Propertyname&gt;&#39;
+title: Der Ausdruck ruft rekursiv die enthaltende <propertyname>-Eigenschaft auf.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42026
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: 88dbecfe6e63248e07b3fdb9102a5cbba4b1b628
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9382c6b6850036f3ca3795f0aa80f49b892c0a5e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553073"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259760"
 ---
-# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>Der Ausdruck ruft rekursiv die enthaltende Eigenschaft &#39; &lt;Propertyname&gt;&#39;
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a>Der Ausdruck ruft rekursiv die enthaltende Eigenschaft '\<Propertyname >'
 Eine Anweisung in der `Set` Definition einer Prozedur speichert einen Wert in den Namen der Eigenschaft.  
   
  Der empfohlene Ansatz zum Speichern des Werts einer Eigenschaft wird zum definieren eine `Private` -Variable im Container der Eigenschaft und verwenden in beiden die `Get` und `Set` Verfahren. Die `Set` Prozedur muss dann den eingehenden Wert in dieser speichern `Private` Variable.  

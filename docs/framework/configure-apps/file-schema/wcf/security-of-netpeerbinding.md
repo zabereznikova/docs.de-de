@@ -1,15 +1,15 @@
 ---
-title: '&lt;security&gt; von &lt;netPeerBinding&gt;'
+title: <security> von <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 6b4fe62afad22de880fdaaefad0e719f29c63fd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06c4b537c336804c28492124e6a4fa8cc4ff3091
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553944"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266298"
 ---
-# <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a>&lt;security&gt; von &lt;netPeerBinding&gt;
+# <a name="security-of-netpeerbinding"></a>\<security> of \<netPeerBinding>
 Definiert die Sicherheitseinstellungen der [ \<NetPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), z. B. den Typ der Authentifizierung verwendet und die Sicherheit für den Nachrichtentransport verwendet.  
   
  \<system.ServiceModel>  

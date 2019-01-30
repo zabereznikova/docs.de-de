@@ -1,5 +1,5 @@
 ---
-title: Es wurde ein Verweis auf eingebettete Interop-Assembly erstellt &#39; &lt;assembly1&gt; &#39; aufgrund eines indirekten Verweises auf diese Assembly aus Assembly &#39; &lt;assembly2&gt;&#39;
+title: Es wurde ein Verweis auf die eingebettete Interopassembly '<assembly1>' aufgrund eines indirekten Verweises auf diese Assembly aus Assembly '<assembly2>' erstellt.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40059
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-ms.openlocfilehash: fe04742e0a3be5e1d19ab4017e55f2293988a671
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 058aa4891d05147756290affd60ea5fb260c33ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560021"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55262951"
 ---
-# <a name="a-reference-was-created-to-embedded-interop-assembly-39ltassembly1gt39-because-of-an-indirect-reference-to-that-assembly-from-assembly-39ltassembly2gt39"></a>Es wurde ein Verweis auf eingebettete Interop-Assembly erstellt &#39; &lt;assembly1&gt; &#39; aufgrund eines indirekten Verweises auf diese Assembly aus Assembly &#39; &lt;assembly2&gt;&#39;
+# <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Ein Verweis auf eingebettete Interop-Assembly erstellt wurde "\<assembly1 >' aufgrund eines indirekten Verweises auf diese Assembly aus Assembly '\<assembly2 >'
 Es wurde ein Verweis auf die eingebettete Interopassembly „\<assembly1>“ aufgrund eines indirekten Verweises auf diese Assembly aus Assembly „\<assembly2>“ erstellt. Ändern Sie ggf. für beide Assembly die Eigenschaft 'Interoptypen einbetten'.  
   
  Sie haben einen Verweis auf eine Assembly (assembly1) hinzugefügt, deren `Embed Interop Types`-Eigenschaft auf `True` festgelegt ist. Dadurch wird der Compiler angewiesen, Interoptypinformationen von dieser Assembly einzubetten. Der Compiler kann jedoch keine Interoptypinformationen von dieser Assembly einbetten, da eine andere Assembly, auf die verwiesen wird (assembly2), ebenfalls auf diese Assembly verweist (assembly1) und die `Embed Interop Types`-Eigenschaft auf `False` festgelegt ist.  

@@ -1,5 +1,5 @@
 ---
-title: Ein Ausdruck vom Typ &lt;Typ&gt; kann nicht abgefragt werden
+title: Ein Ausdruck vom Typ <type> kann nicht abgefragt werden
 ms.date: 07/20/2015
 f1_keywords:
 - bc36593
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: ce0831e0770e5733759c072b8d7c6f20b56f771b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06b2a7f5c6bd838d09fd39f31778462c364fb8bd
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521490"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261255"
 ---
-# <a name="expression-of-type-lttypegt-is-not-queryable"></a>Ein Ausdruck vom Typ &lt;Typ&gt; kann nicht abgefragt werden
+# <a name="expression-of-type-type-is-not-queryable"></a>Ein Ausdruck vom Typ \<Typs > kann nicht abgefragt werden
 Ein Ausdruck vom Typ \<Typs > kann nicht abgefragt werden. Stellen Sie sicher, dass eine Assembly und/oder Namespaceimport importieren keine für den LINQ-Anbieter fehlt.  
   
  Abfragbare Typen werden definiert, der <xref:System.Linq>, <xref:System.Data.Linq>, und <xref:System.Xml.Linq> Namespaces. Importieren Sie eine oder mehrere dieser Namespaces zur LINQ-Abfragen auszuführen.  

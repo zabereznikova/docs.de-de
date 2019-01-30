@@ -1,15 +1,15 @@
 ---
-title: '&lt;knownType&gt;'
+title: <knownType>
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: cb36a0d1d1ceb13a6db902904783ee15b14e673b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1224a410d030669e340bd328c9158c85cdfeaeee
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541065"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266454"
 ---
-# <a name="ltknowntypegt"></a>&lt;knownType&gt;
+# <a name="knowntype"></a>\<knownType>
 Gibt einen Typ an, der vom <xref:System.Runtime.Serialization.DataContractSerializer> während der Deserialisierung verwendet werden sollte. Dieses Element gibt einen "bekannten Typ" an, der von einem Feld oder einer Eigenschaft eines "deklarierten Typs" zurückgegeben werden kann. Weitere Informationen finden Sie unter [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
  \<system.runtime.serialization>  

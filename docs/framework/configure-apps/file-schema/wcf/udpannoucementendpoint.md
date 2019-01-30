@@ -1,15 +1,15 @@
 ---
-title: '&lt;udpAnnoucementEndpoint&gt;'
+title: <udpAnnoucementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 5b3fa9c5-f372-4df9-a9d6-1e426063b721
-ms.openlocfilehash: ab0e786ec4b21f25682c52fb7609d24e901f6eac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c7c92db479efa9f6fdf2dafc9a6d512df4254e3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582434"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55265193"
 ---
-# <a name="ltudpannoucementendpointgt"></a>&lt;udpAnnoucementEndpoint&gt;
+# <a name="udpannoucementendpoint"></a>\<udpAnnoucementEndpoint>
 Dieses Konfigurationselement definiert einen Standardendpunkt, der von Diensten verwendet wird, um Ankündigungsnachrichten über eine UDP-Bindung zu senden. Es weist einen festen Vertrag auf und unterstützt zwei Suchversionen. Außerdem weist er eine feste UDP-Bindung und einen Standardadresswert gemäß WS-Discovery-Spezifikationen (WS-Discovery Version April 2005 oder Version 1.1) auf. Sie können die Multicastadresse angeben, die zum Senden und Empfangen der Ankündigungsnachrichten verwendet werden soll.  
   
 \<system.ServiceModel>  

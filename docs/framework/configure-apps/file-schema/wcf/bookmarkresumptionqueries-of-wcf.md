@@ -1,15 +1,15 @@
 ---
-title: '&lt;bookmarkResumptionQueries&gt; von WCF'
+title: <bookmarkResumptionQueries> von WCF
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: 80d1c1e4bc61972d44c27bcbdd0eba14d97c2d6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b11543e240b482d52c157083d1184db4f81bb04
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493949"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55261268"
 ---
-# <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>&lt;bookmarkResumptionQueries&gt; von WCF
+# <a name="bookmarkresumptionqueries-of-wcf"></a>\<BookmarkResumptionQueries > von WCF
   
 Stellt eine Auflistung von Abfragen dar, die verwendet werden, um die Wiederaufnahme eines Lesezeichens innerhalb einer Workflowinstanz nachzuverfolgen. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Datensätze mit Lesezeichenwiederaufnahmen abonnieren kann.  
   

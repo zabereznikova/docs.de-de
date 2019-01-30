@@ -1,17 +1,17 @@
 ---
-title: Wurde kein Standardmember gefunden, für den Typ "&lt;Typename&gt;"
+title: Wurde kein Standardmember gefunden, für den Typ "<typename>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_NoDefaultMemberFound1
 ms.assetid: 1869ecb8-7c6a-422f-86ac-5da96c6adc66
-ms.openlocfilehash: 76b12ad4267834e2a8f51f873dd769d2127c25a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a90d81f144658e4a4b48e393358ffcb51b579dc4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613544"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55264400"
 ---
-# <a name="no-default-member-found-for-type-lttypenamegt"></a>Wurde kein Standardmember gefunden, für den Typ "&lt;Typename&gt;"
+# <a name="no-default-member-found-for-type-typename"></a>Wurde kein Standardmember gefunden, für den Typ "\<Typname >'
 Es wurde ein `Get` - oder `Set` -Indexaufruf mit später Bindung versucht.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

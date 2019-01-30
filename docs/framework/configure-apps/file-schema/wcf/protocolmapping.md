@@ -1,15 +1,15 @@
 ---
-title: '&lt;protocolMapping&gt;'
+title: <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: 199a5d820a80565ccdfa2cb11fe749d63bd65087
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec17457c8742fdf17208c6588e0ab70ece7c42a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644259"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268670"
 ---
-# <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
+# <a name="protocolmapping"></a>\<protocolMapping>
 Stellt einen Konfigurationsabschnitt zum Definieren eines Satzes von standardprotokollzuordnungen zwischen transportprotokollschemas (z. B. http, net.tcp, net.pipe usw.) und WCF-Bindungen dar. Beim Erstellen von Standardendpunkten zur Laufzeit wird Windows Communication Foundation (WCF) untersucht die konfigurierten Zuordnungen und entscheidet, auf die Bindung für die Verwendung für eine bestimmte Adresse basiert.  
   
 [**\<system.serviceModel>**](system-servicemodel.md)  
