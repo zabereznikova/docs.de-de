@@ -2,12 +2,12 @@
 title: XML-Dokumentation (F#)
 description: Erfahren Sie mehr über Unterstützung für in F#, zum Generieren von Dokumentation aus Kommentaren.
 ms.date: 05/16/2016
-ms.openlocfilehash: a1fb5eb682ff1188136b31b64e2d7c537d2c9a0e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c5305dea8832112644710b2863269ef00feddd10
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153643"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204677"
 ---
 # <a name="xml-documentation"></a>XML-Dokumentation
 
@@ -15,7 +15,7 @@ Sie können die Dokumentation von drei Schrägstrichen (/ / /) erstellen code in
 
 ## <a name="generating-documentation-from-comments"></a>Generieren von Dokumentation aus Kommentaren
 
-Die Unterstützung in F# für das Generieren von Dokumentation aus Kommentaren ist identisch, die in anderen .NET Framework-Sprachen. Wie in anderen .NET Framework-Sprachen die [-Doc-Compileroption](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) ermöglicht es Ihnen, eine XML-Datei zu erzeugen, die Informationen enthält, die Sie zur Dokumentation mithilfe eines Tools wie Sandcastle konvertieren können. Die Dokumentation mithilfe von Tools, sind für die Verwendung mit Assemblys, die in anderen .NET Framework-Sprachen, in der Regel geschrieben wurden generiert erzeugen einen Überblick über die APIs, die basierend auf der kompilierten Form eines F#-Konstrukte. Es sei denn, insbesondere toolunterstützung F#, Dokumentation, die mit diesen Tools generierte stimmt nicht überein. die F# Ansicht einer API.
+Die Unterstützung in F# für das Generieren von Dokumentation aus Kommentaren ist identisch, die in anderen .NET Framework-Sprachen. Wie in anderen .NET Framework-Sprachen die [-Doc-Compileroption](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) ermöglicht es Ihnen, eine XML-Datei zu erzeugen, die Informationen, die Sie in der Dokumentation konvertieren können enthält, mithilfe eines Tools wie z. B. [DocFX](https://dotnet.github.io/docfx/) oder [ Sandcastle](https://github.com/EWSoftware/SHFB). Die Dokumentation mithilfe von Tools, sind für die Verwendung mit Assemblys, die in anderen .NET Framework-Sprachen, in der Regel geschrieben wurden generiert erzeugen einen Überblick über die APIs, die basierend auf der kompilierten Form eines F#-Konstrukte. Es sei denn, insbesondere toolunterstützung F#, Dokumentation, die mit diesen Tools generierte stimmt nicht überein. die F# Ansicht einer API.
 
 Weitere Informationen zum Generieren von Dokumentation aus XML finden Sie unter [XML-Dokumentationskommentare &#40;C&#35; Programming Guide&#41;](https://msdn.microsoft.com/library/b2s063f7).
 
@@ -25,16 +25,16 @@ Es gibt zwei Möglichkeiten zum Schreiben von XML-Dokumentationskommentare. Eine
 
 |Tagsyntax|Beschreibung|
 |----------|-----------|
-|**\<c\>**_Text_ **\< /c\>**|Gibt an, dass *Text* Code. Dieses Tag kann von Dokumentationsgeneratoren verwendet werden, zum Anzeigen von Text in einer Schriftart an, die für Code geeignet ist.|
-|**\<Zusammenfassung\>**_Text_ **\< /summary\>**|Gibt an, dass *Text* ist eine kurze Beschreibung des Programms-Elements. Die Beschreibung ist in der Regel ein oder zwei Sätze an.|
-|**\<"Hinweise"\>**_Text_ **\< /Hinweise\>**|Gibt an, dass *Text* enthält zusätzliche Informationen über das Programmelement.|
-|**\<Param Name = "**_Namen_**"\>**_Beschreibung_**\</param\>**|Gibt den Namen und eine Beschreibung für einen Parameter-Funktion oder Methode.|
-|**\<Typeparam Name = "**_Namen_**"\>**_Beschreibung_**\</typeparam\>**|Gibt den Namen und eine Beschreibung für einen Typparameter an.|
-|**\<Gibt\>**_Text_ **\< /returns\>**|Gibt an, dass *Text* beschreibt den Rückgabewert einer Funktion oder Methode.|
-|**\<Ausnahme Cref = "**_Typ_**"\>**_Beschreibung_**\</exception\>**|Gibt den Typ der Ausnahme, die generiert werden kann und die Umstände, unter denen sie ausgelöst wird.|
-|**\<Siehe Cref = "**_Verweis_**"\>**_Text_ **\< /finden Sie unter\>**|Gibt einen Inlinelink auf ein anderes Programmelement. Die *Verweis* ist der Name, wie er in die XML-Dokumentationsdatei angezeigt wird. Die *Text* ist der Text im Link angezeigt.|
-|**\<Seealso Cref = "**_Verweis_**" /\>**|Gibt einen Link "Siehe auch" in der Dokumentation für einen anderen Typ. Die *Verweis* ist der Name, wie er in die XML-Dokumentationsdatei angezeigt wird. Siehe auch Links in der Regel am unteren Rand eine Dokumentationsseite angezeigt werden.|
-|**\<Para\>**_Text_**\</para\>**|Gibt einen Textabsatz an. Dient zum Trennen von Text in die **"Hinweise"** Tag.|
+|**\<c\>**_text_**\</c\>**|Gibt an, dass *Text* Code. Dieses Tag kann von Dokumentationsgeneratoren verwendet werden, zum Anzeigen von Text in einer Schriftart an, die für Code geeignet ist.|
+|**\<summary\>**_text_**\</summary\>**|Gibt an, dass *Text* ist eine kurze Beschreibung des Programms-Elements. Die Beschreibung ist in der Regel ein oder zwei Sätze an.|
+|**\<remarks\>**_text_**\</remarks\>**|Gibt an, dass *Text* enthält zusätzliche Informationen über das Programmelement.|
+|**\<param name="**_name_**"\>**_description_**\</param\>**|Gibt den Namen und eine Beschreibung für einen Parameter-Funktion oder Methode.|
+|**\<typeparam name="**_name_**"\>**_description_**\</typeparam\>**|Gibt den Namen und eine Beschreibung für einen Typparameter an.|
+|**\<returns\>**_text_**\</returns\>**|Gibt an, dass *Text* beschreibt den Rückgabewert einer Funktion oder Methode.|
+|**\<exception cref="**_type_**"\>**_description_**\</exception\>**|Gibt den Typ der Ausnahme, die generiert werden kann und die Umstände, unter denen sie ausgelöst wird.|
+|**\<see cref="**_reference_**"\>**_text_**\</see\>**|Gibt einen Inlinelink auf ein anderes Programmelement. Die *Verweis* ist der Name, wie er in die XML-Dokumentationsdatei angezeigt wird. Die *Text* ist der Text im Link angezeigt.|
+|**\<seealso cref="**_reference_**"/\>**|Gibt einen Link "Siehe auch" in der Dokumentation für einen anderen Typ. Die *Verweis* ist der Name, wie er in die XML-Dokumentationsdatei angezeigt wird. Siehe auch Links in der Regel am unteren Rand eine Dokumentationsseite angezeigt werden.|
+|**\<para\>**_text_**\</para\>**|Gibt einen Textabsatz an. Dient zum Trennen von Text in die **"Hinweise"** Tag.|
 
 ## <a name="example"></a>Beispiel
 

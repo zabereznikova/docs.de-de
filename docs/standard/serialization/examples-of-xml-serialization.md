@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: ce8e4f0ebb086ca2f8335a0a5a625638e079fde2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638300"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204807"
 ---
 # <a name="examples-of-xml-serialization"></a>Beispiele für die XML-Serialisierung
 Die XML-Serialisierung kann verschiedenste Formen nehmen, von einfach bis zu komplex. Sie können beispielsweise, wie unter [Introducing XML Serialization (Einführung in die XML-Serialisierung)](../../../docs/standard/serialization/introducing-xml-serialization.md) beschrieben, eine Klasse serialisieren, die nur aus öffentlichen Feldern und Eigenschaften besteht. Die folgenden Codebeispiele beziehen sich auf verschiedene komplexe Szenarios, einschließlich der Verwendung der XML-Serialisierung zur Generierung eines XML-Streams, der einem bestimmten XSD-Dokument (XML Schema) entspricht.  
@@ -71,7 +71,7 @@ private void SerializeDataSet(string filename){
 ```  
   
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Serialisieren von XmlElement und XmlNode  
- Sie können auch Instanzen einer <xref:System.Xml.XmlElement>-Klasse oder <xref:System.Xml.XmlNode>-Klasse serialisieren, wie im folgenden Codebeispiel gezeigt.  
+ Sie können auch Instanzen von serialisieren eine <xref:System.Xml.XmlElement> oder <xref:System.Xml.XmlNode> Klasse, wie im folgenden Codebeispiel gezeigt.  
   
 ```vb  
 private Sub SerializeElement(filename As String)  
@@ -146,9 +146,9 @@ public class Address
   
 ```xml  
 <PurchaseOrder>  
-    <Address>  
+    <MyAddress>  
         <FirstName>George</FirstName>  
-    </Address>  
+    </MyAddress>  
 </PurchaseOrder>  
 ```  
   
@@ -169,13 +169,13 @@ End Class
 ```csharp  
 public class PurchaseOrder  
 {  
-    public Item [] ItemsOrders  
+    public Item [] ItemsOrders;  
 }  
   
 public class Item  
 {  
-    public string ItemID  
-    public decimal ItemPrice  
+    public string ItemID;  
+    public decimal ItemPrice;  
 }  
 ```  
   
@@ -183,7 +183,7 @@ public class Item
   
 ```xml  
 <PurchaseOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
-    <Items>  
+    <ItemsOrders>  
         <Item>  
             <ItemID>aaa111</ItemID>  
             <ItemPrice>34.22</ItemPrice>  
@@ -192,7 +192,7 @@ public class Item
             <ItemID>bbb222</ItemID>  
             <ItemPrice>2.89</ItemPrice>  
         <Item>  
-    </Items>  
+    </ItemsOrders>  
 </PurchaseOrder>  
 ```  
   
@@ -363,7 +363,7 @@ public class Employee {
   
  Durch die `CreatePO`-Methode werden das `PurchaseOrder`-Klassenobjekt, das `Address`-Klassenobjekt und das `OrderedItem` Klassenobjekt erstellt und die Werte für die öffentlichen Felder festgelegt. Die Methode erstellt außerdem eine Instanz der <xref:System.Xml.Serialization.XmlSerializer>-Klasse, die zum Serialisierenn und Deserialisieren des `PurchaseOrder`-Objekts verwendet wird. Beachten Sie, dass der Typ der Klasse, die serialisiert wird, durch den Code an den Konstruktor übergeben wird. Zudem wird durch den Code ein `FileStream` erstellt, mit dem der XML-Stream in ein XML-Dokument geschrieben wird.  
   
- Die `ReadPo`-Methode ist etwas einfacher. Sie erstellt nur Objekte, die deserialisiert werden sollen, und liest ihre Werte aus. Wie bei der `CreatePo`-Methode müssen Sie zunächst eine <xref:System.Xml.Serialization.XmlSerializer>-Instanz erstellen und den Typ der zu deserialisierenden Klasse an den Konstruktor übergeben. Zum Lesen des XML-Dokuments ist zudem ein <xref:System.IO.FileStream>-Objekt erforderlich. Um die Objekte zu deserialisieren, rufen Sie die <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>-Methode mit dem <xref:System.IO.FileStream>-Objekt als Argument auf. Das deserialisierte Objekt muss in eine Objektvariable des Typs `PurchaseOrder` umgewandelt werden. Im Code werden dann die Werte der deserialisierten `PurchaseOrder`-Objektvariablen gelesen. Beachten Sie, dass Sie auch die Datei PO.xml lesen können, die zur Darstellung der tatsächlichen XML-Ausgabe erstellt wurde.  
+ Die `ReadPo`-Methode ist etwas einfacher. Sie erstellt nur Objekte, die deserialisiert werden sollen, und liest ihre Werte aus. Wie bei der `CreatePo` -Methode müssen Sie zuerst erstellen eine <xref:System.Xml.Serialization.XmlSerializer>, den Typ der Klasse, die deserialisiert werden, an den Konstruktor übergibt. Zum Lesen des XML-Dokuments ist zudem ein <xref:System.IO.FileStream>-Objekt erforderlich. Um die Objekte zu deserialisieren, rufen Sie die <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A>-Methode mit dem <xref:System.IO.FileStream>-Objekt als Argument auf. Das deserialisierte Objekt muss in eine Objektvariable des Typs `PurchaseOrder` umgewandelt werden. Im Code werden dann die Werte der deserialisierten `PurchaseOrder`-Objektvariablen gelesen. Beachten Sie, dass Sie auch die Datei PO.xml lesen können, die zur Darstellung der tatsächlichen XML-Ausgabe erstellt wurde.  
   
 ```vb  
 Imports System  
@@ -395,8 +395,8 @@ End Class
   
 Public Class Address  
     ' The XmlAttribute attribute instructs the XmlSerializer to serialize the   
-    ' Name field as an XML attribute instead of an XML element (the   
-    ' default behavior).   
+    ' Name field as an XML attribute instead of an XML element (XML element is  
+    ' the default behavior).     
     <XmlAttribute()> _  
     Public Name As String  
     Public Line1 As String  
@@ -575,8 +575,8 @@ public class PurchaseOrder
 public class Address  
 {  
     // The XmlAttribute attribute instructs the XmlSerializer to serialize the   
-    // Name field as an XML attribute instead of an XML element (the   
-    // default behavior).  
+    // Name field as an XML attribute instead of an XML element (XML element is  
+    // the default behavior).  
     [XmlAttribute]  
     public string Name;  
     public string Line1;  
