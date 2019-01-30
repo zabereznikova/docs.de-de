@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;name1&gt; &#39; ist nicht eindeutig, importiert aus den Namespaces oder Typen &#39; &lt;name2&gt;&#39;'
+title: <name1> ist nicht eindeutig. Importiert aus den Namespaces oder Typen "<name2>".
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30561
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: 12cca32bc3c44926c5cd616152221f1efa63e971
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b867380661e3545db9ac64cb67ad4e3a5a1a6b1e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516771"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254742"
 ---
-# <a name="39ltname1gt39-is-ambiguous-imported-from-the-namespaces-or-types-39ltname2gt39"></a>&#39;&lt;name1&gt; &#39; ist nicht eindeutig, importiert aus den Namespaces oder Typen &#39; &lt;name2&gt;&#39;
+# <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1 >' ist nicht eindeutig, importiert aus den Namespaces oder Typen\<name2 >'
 Sie haben einen Namen angegeben, der nicht eindeutig ist und daher einen Konflikt mit einem anderen Namen verursacht. Visual Basic-Compiler keine Regeln zur konfliktlösung; Sie müssen Namen selbst eindeutig machen.  
   
  **Fehler-ID:** BC30561  

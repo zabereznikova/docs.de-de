@@ -1,5 +1,5 @@
 ---
-title: Der zugrunde liegende Typ &lt;Typename&gt; der Enumeration ist nicht CLS-kompatibel.
+title: Der zugrunde liegende <typename>-Typ der Enumeration ist nicht CLS-kompatibel.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40032
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: ceda7e6ed6fc1744de14afcb0245ebabbd7fa733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a75f66c79bcf6c857fb19acf7c5a75320b16a43d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674793"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258622"
 ---
-# <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>Der zugrunde liegende Typ &lt;Typename&gt; der Enumeration ist nicht CLS-kompatibel.
+# <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>Der zugrunde liegende Typ \<Typename > der Enumeration ist nicht CLS-kompatibel.
 Der Datentyp angegeben werden, für diese Enumeration nicht ist Teil der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS). Dies ist kein Fehler in der Komponente, da die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] und Visual Basic unterstützt diesen Datentyp. Allerdings kann in eine andere Komponente, die in streng CLS-kompatiblem Code geschrieben diesen Datentyp nicht unterstützt. Eine solche Komponente möglicherweise nicht erfolgreich mit der Komponente interagieren können.  
   
  Die folgenden Visual Basic-Datentypen sind nicht CLS-kompatibel:  

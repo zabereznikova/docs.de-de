@@ -1,17 +1,17 @@
 ---
-title: Zeile &lt;Anzahl&gt; kann nicht mit den aktuellen Trennzeichen analysiert werden
+title: Zeile <number> kann nicht mit den aktuellen Trennzeichen analysiert werden
 ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
-ms.openlocfilehash: a5e4f5f5127322f4160ea73f627f59436bc83a3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 776cf7ed231f63ec9ad4308305fe77d500a4fc1b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652344"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257338"
 ---
-# <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a>Zeile &lt;Anzahl&gt; kann nicht mit den aktuellen Trennzeichen analysiert werden
+# <a name="line-number-cannot-be-parsed-using-the-current-delimiters"></a>Zeile \<Nummer > kann nicht mit den aktuellen Trennzeichen analysiert werden
 Die angegebene Zeile kann nicht analysiert werden, da sie andere als die angegebenen Trennzeichen verwendet.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

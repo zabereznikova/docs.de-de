@@ -1,5 +1,5 @@
 ---
-title: Typ &#39; &lt;Typename&gt; &#39; hat keine Konstruktoren
+title: Der Typ "<typename>" hat keinen Konstruktor.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30251
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 8a13451956b8afb1bf733c6faa218eadf4255495
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a12bc35aeaa6e9e21835ce0a091ee89ea4c326d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511103"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55260367"
 ---
-# <a name="type-39lttypenamegt39-has-no-constructors"></a>Typ &#39; &lt;Typename&gt; &#39; hat keine Konstruktoren
+# <a name="type-typename-has-no-constructors"></a>Typ "\<Typname >' hat keine Konstruktoren
 Ein Typ unterstützt nicht den Aufruf von `Sub New()`. Eine mögliche Ursache ist ein beschädigter Compiler oder eine fehlerhafte Binärdatei.  
   
  **Fehler-ID:** BC30251  

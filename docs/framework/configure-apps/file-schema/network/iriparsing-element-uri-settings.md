@@ -1,15 +1,15 @@
 ---
-title: '&lt;IriParsing&gt; -Elements (Netzwerkeinstellungen)'
+title: <iriParsing>-Element (Uri-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: ca8fc86b5b64b971e54eec8f7338010394b73239
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4d4df8c214efb955f8f9d6678aaf8d56de71ebc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552943"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55256655"
 ---
-# <a name="ltiriparsinggt-element-uri-settings"></a>&lt;IriParsing&gt; -Elements (Netzwerkeinstellungen)
+# <a name="iriparsing-element-uri-settings"></a>\<IriParsing >-Element (Netzwerkeinstellungen)
 Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International Resource Identifier, IRI) auf <xref:System.Uri> angewendet wird und ob die IRI-Analyseregeln angewendet werden sollen.  
   
 ## <a name="schema-hierarchy"></a>Schemahierarchie  

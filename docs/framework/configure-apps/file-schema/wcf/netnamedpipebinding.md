@@ -1,15 +1,15 @@
 ---
-title: '&lt;netNamedPipeBinding&gt;'
+title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 54f1ad4feefe15f4901d8e493cadc0842f55224f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 183ce624d22162c2d665b173d8c04e132457a3fb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606672"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55257251"
 ---
-# <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
+# <a name="netnamedpipebinding"></a>\<netNamedPipeBinding>
 Definiert eine Bindung, die sicher und zuverlässig ist und für eine prozessübergreifende Kommunikation auf einem Computer optimiert ist. Sie generiert standardmäßig einen Laufzeitkommunikationsstapel mit WS-ReliableMessaging für Verlässlichkeit, Transport- und Übertragungssicherheit, benannte Pipes für den Nachrichtentransport sowie binäre Nachrichtencodierung.  
   
  \<system.ServiceModel>  

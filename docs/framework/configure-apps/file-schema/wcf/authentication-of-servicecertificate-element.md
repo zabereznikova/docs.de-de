@@ -1,15 +1,15 @@
 ---
-title: '&lt;authentication&gt; des &lt;serviceCertificate&gt;-Elements'
+title: <authentication> der <serviceCertificate> Element
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 967ab391c9a6dfe7da9b6ef0542b052872b21f52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8288e530d0164b41a6cf53cc39385a2d29fdb091
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661125"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255171"
 ---
-# <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;authentication&gt; des &lt;serviceCertificate&gt;-Elements
+# <a name="authentication-of-servicecertificate-element"></a>\<Authentication > des \<ServiceCertificate >-Element
 Gibt die vom Clientproxy zum Authentifizieren von Dienstzertifikaten verwendeten Einstellungen an, die mittels SSL/TLS-Verhandlung abgerufen werden.  
   
  \<system.ServiceModel>  

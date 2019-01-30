@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ändern Sie das Windows Forms-MonthCalendar-Steuerelement&#39;Darstellung'
+title: 'Vorgehensweise: Ändern Sie die Windows Forms MonthCalendar Darstellung des Steuerelements'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 5afee81d3db9452be352c875dbba0f7885592c02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7f321c1557bc7ea19213f2fc67767fe56328cf4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624348"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55258920"
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Vorgehensweise: Ändern Sie das Windows Forms-MonthCalendar-Steuerelement&#39;Darstellung
+# <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Vorgehensweise: Ändern Sie die Windows Forms MonthCalendar Darstellung des Steuerelements
 Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement ermöglicht es Ihnen, zum Anpassen der Darstellung des Kalenders in vielerlei Hinsicht. Sie können z. B. das Farbschema festlegen und anzeigen oder ausblenden Wochennummern und dem aktuellen Datum.  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>Der im Monatskalender Farbschema ändern  

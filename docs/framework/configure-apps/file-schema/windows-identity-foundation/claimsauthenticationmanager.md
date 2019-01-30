@@ -1,21 +1,21 @@
 ---
-title: '&lt;Komponente "ClaimsAuthenticationManager"&gt;'
+title: <claimsAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
-ms.openlocfilehash: b0cee2fedb5f90ca2a1f7e379e199cfee66ee745
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ecf26263bf47e8b4609e7adc208f0a59a2fa795b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190969"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255184"
 ---
-# <a name="ltclaimsauthenticationmanagergt"></a>&lt;Komponente "ClaimsAuthenticationManager"&gt;
+# <a name="claimsauthenticationmanager"></a>\<claimsAuthenticationManager>
 Registriert einen anspruchsauthentifizierungs-Manager für die eingehenden Ansprüche.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<Komponente "ClaimsAuthenticationManager" >  
+\<claimsAuthenticationManager>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ Registriert einen anspruchsauthentifizierungs-Manager für die eingehenden Anspr
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Gibt die identitätseinstellungen der Servicelevel.|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Gibt die identitätseinstellungen der Servicelevel.|  
   
 ## <a name="remarks"></a>Hinweise  
  Das Standardverhalten durch die <xref:System.Security.Claims.ClaimsAuthenticationManager> Klasse gibt, die eingehenden Ansprüche. Wenn kein `type` -Attribut angegeben ist oder wenn die `type` -Attribut gibt an, die <xref:System.Security.Claims.ClaimsAuthenticationManager> -Klasse, die `<claimsAuthenticationManager>` Element nimmt keine untergeordneten Elemente. Können Sie angeben, die `type` Attribut, um einen Typ registrieren, abgeleitet aus den <xref:System.Security.Claims.ClaimsAuthenticationManager> Klasse, um benutzerdefiniertes Verhalten zu implementieren. Abgeleitete Klassen können die Konfiguration über untergeordnete Elemente des unterstützen die `<claimsAuthenticationManager>` Element durch das Überschreiben der <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A> Methode, um diese Elemente zu verarbeiten. Das Schema für die untergeordneten Elemente definiert ist, bis zu den Designer der-Klasse.  
