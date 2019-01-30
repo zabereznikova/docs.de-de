@@ -62,7 +62,7 @@ Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine de
 ## <a name="modifying-the-stringbuilder-string"></a>Ändern der StringBuilder-Zeichenfolge  
  In der folgenden Tabelle sind die Methoden aufgeführt, mit denen Sie den Inhalt eines **StringBuilder**-Objekts ändern können.  
   
-|Methodenname|Mit|  
+|Methodenname|Verwendung|  
 |-----------------|---------|  
 |<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|Fügt Informationen an das Ende des aktuellen **StringBuilder**-Objekts an.|  
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Ersetzt einen in einer Zeichenfolge übergebenen Formatbezeichner durch formatierten Text.|  
@@ -70,7 +70,7 @@ Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine de
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Entfernt eine angegebene Anzahl von Zeichen aus dem aktuellen **StringBuilder**-Objekt.|  
 |<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Ersetzt ein angegebenes Zeichen an einem angegebenen Index.|  
   
-### <a name="append"></a>Anfügen  
+### <a name="append"></a>Append  
  Mithilfe der **Append**-Methode kann Text oder eine Zeichenfolgendarstellung eines Objekts am Ende einer Zeichenfolge hinzugefügt werden, die durch den aktuellen **StringBuilder** dargestellt wird. Im folgenden Beispiel wird ein **StringBuilder**-Objekt auf „Hello World“ initialisiert und anschließend Text am Ende des Objekts angefügt. Speicherplatz wird automatisch nach Bedarf zugeordnet.  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]
@@ -98,7 +98,7 @@ Das <xref:System.String>-Objekt ist unveränderlich. Jedes Mal, wenn Sie eine de
  [!code-csharp[Conceptual.StringBuilder#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#7)]
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
-### <a name="replace"></a>Ersetzen  
+### <a name="replace"></a>Replace  
  Mithilfe der **Replace**-Methode können Zeichen im <xref:System.Text.StringBuilder>-Objekt durch ein anderes angegebenes Zeichen ersetzt werden. Im folgenden Beispiel wird die **Replace**-Methode verwendet, um in einem <xref:System.Text.StringBuilder>-Objekt nach allen Vorkommen des Ausrufezeichens (!) zu suchen und diese durch das Fragezeichen (?) zu ersetzen.  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]
