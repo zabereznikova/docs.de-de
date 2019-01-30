@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;TypeName&gt; &#39; kann nicht von erben &lt;Typ&gt; &#39; &lt;Basistypname&gt; &#39; erweitert den Zugriff der Basis &lt;Typ&gt; außerhalb der Assembly'
+title: <typename> erweitert den Zugriff der Basis-<type> außerhalb der Assembly und kann daher nicht von <basetypename> "<type>" erben.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30910
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: 108025132bdd0fa86df5ed142aaa39c7b7e18062
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226c85f887ecc706a5cb554c2163742f10896141
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556482"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269821"
 ---
-# <a name="39lttypenamegt39-cannot-inherit-from-lttypegt-39ltbasetypenamegt39-because-it-expands-the-access-of-the-base-lttypegt-outside-the-assembly"></a>&#39;&lt;TypeName&gt; &#39; kann nicht von erben &lt;Typ&gt; &#39; &lt;Basistypname&gt; &#39; erweitert den Zugriff der Basis &lt;Typ&gt; außerhalb der Assembly
+# <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>"\<Typname >' kann nicht von erben \<Typ > '\<Basistypname >' erweitert den Zugriff der Basis \<Typ > außerhalb der Assembly
 Eine Klasse oder Schnittstelle erbt von einer Basisklasse oder Schnittstelle weist jedoch eine weniger restriktive Zugriffsebene.  
   
  Z. B. eine `Public` Schnittstelle erbt von einer `Friend` -Schnittstelle, oder ein `Protected` Klasse erbt von einer `Private` Klasse. Dies stellt die Basisklasse oder Schnittstelle, um nach den gewünschten zugreifen.  

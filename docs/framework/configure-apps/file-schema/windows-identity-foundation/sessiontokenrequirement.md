@@ -1,23 +1,23 @@
 ---
-title: '&lt;auf "sessiontokenrequirement"&gt;'
+title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 4d5d2348f04ace7596a3a513c5106ea612dc17b7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0c575e02862884e8f7ecf062138c36fe731f8e19
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840887"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271901"
 ---
-# <a name="ltsessiontokenrequirementgt"></a>&lt;auf "sessiontokenrequirement"&gt;
+# <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
 Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Klasse oder abgeleitete Klassen.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<SecurityTokenHandlers >  
+\<securityTokenHandlers>  
 \<add>  
-\<auf "sessiontokenrequirement" >  
+\<sessionTokenRequirement>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Tokens.Session
 |Lebensdauer|Gibt die Lebensdauer des Sitzungstoken.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keiner  
+ Keine  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

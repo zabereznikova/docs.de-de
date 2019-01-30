@@ -1,16 +1,16 @@
 ---
-title: '&lt;state&gt; von &lt;states&gt;'
+title: <state> von <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-ms.openlocfilehash: 1ddf7e0ed2849764f3b21e8cf1c31d98762c0d5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 657814eb120878cdc71cd7603d0499ff65ca50e8
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696242"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271433"
 ---
-# <a name="ltstategt-of-ltstatesgt"></a>&lt;state&gt; von &lt;states&gt;
+# <a name="state-of-states"></a>\<State > von \<Status >
 Ein Konfigurationselement, das den Zustand der abonnierten Aktivität enthält, für die ein Nachverfolgungsdatensatz ausgegeben werden soll.  
   
  Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  

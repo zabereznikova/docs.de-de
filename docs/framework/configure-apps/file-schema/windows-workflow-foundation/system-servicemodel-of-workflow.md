@@ -1,16 +1,16 @@
 ---
-title: '&lt;system.serviceModel&gt; des Workflows'
+title: <system.serviceModel> des Workflows
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 62047d68d559a34ead290cf18f77d032841210b2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 005a274df9e9ab99227a3748b7a25c9d465d020f
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755636"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271127"
 ---
-# <a name="ltsystemservicemodelgt-of-workflow"></a>&lt;system.serviceModel&gt; des Workflows
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > des Workflows
 Dieser Konfigurationsabschnitt enthält alle Workflowkonfigurationselemente.  
   
 ## <a name="syntax"></a>Syntax  
@@ -95,7 +95,7 @@ Dieser Konfigurationsabschnitt enthält alle Workflowkonfigurationselemente.
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keiner  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   

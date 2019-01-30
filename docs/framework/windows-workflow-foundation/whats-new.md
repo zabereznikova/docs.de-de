@@ -1,22 +1,22 @@
 ---
-title: Was&#39;s neu in Windows Workflow Foundation
+title: Neues in Windows Workflow Foundation
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: d45c16d4f16c239d1c1c8116b4b41dd41f8a953d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 327a2ddbf9a45bc1d4633548ced7a8f39928345b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518436"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55263796"
 ---
-# <a name="what39s-new-in-windows-workflow-foundation"></a>Was&#39;s neu in Windows Workflow Foundation
-Windows Workflow Foundation (WF) in [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] zahlreiche Entwicklungsmuster ändert sich von früheren Versionen. Workflows sind jetzt einfacher zu erstellen, auszuführen und zu warten und implementieren eine Vielzahl neuer Funktionen. Weitere Informationen zum Migrieren von .NET 3.0 und .NET 3.5-workflowanwendungen auf die neueste Version verwenden, finden Sie unter [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
+# <a name="whats-new-in-windows-workflow-foundation"></a>Neues in Windows Workflow Foundation
+Windows Workflow Foundation (WF) in [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] ändert sich zahlreiche Entwicklungsmuster von früheren Versionen. Workflows sind jetzt einfacher zu erstellen, auszuführen und zu warten und implementieren eine Vielzahl neuer Funktionen. Weitere Informationen zum Migrieren von .NET 3.0 und .NET 3.5-workflowanwendungen, die neueste Version verwenden, finden Sie unter [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>Workflowaktivitätsmodell  
- Statt der <xref:System.Workflow.Activities.SequentialWorkflowActivity>-Klasse oder der <xref:System.Workflow.Activities.StateMachineWorkflowActivity>-Klasse ist die Aktivität jetzt die Basiseinheit beim Erstellen eines Workflows. Die <xref:System.Activities.Activity>-Klasse stellt die Basisabstraktion des Workflowverhaltens bereit. Aktivitätsautoren können dann <xref:System.Activities.CodeActivity> für eine grundlegende benutzerdefinierte Aktivitätsfunktionalität oder <xref:System.Activities.NativeActivity> für eine benutzerdefinierte Aktivitätsfunktionalität, die alle zur Laufzeit verfügbaren Funktionen verwendet, implementieren. <xref:System.Activities.Activity> ist eine Klasse, die von aktivitätsautoren verwendet, um das neue Verhalten deklarativ im Hinblick auf andere express <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, oder <xref:System.Activities.DynamicActivity> -Objekte, ab, ob sie benutzerdefinierte entwickelt oder im enthalten sind die [integrierten Aktivität Bibliothek](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md).  
+ Statt der <xref:System.Workflow.Activities.SequentialWorkflowActivity>-Klasse oder der <xref:System.Workflow.Activities.StateMachineWorkflowActivity>-Klasse ist die Aktivität jetzt die Basiseinheit beim Erstellen eines Workflows. Die <xref:System.Activities.Activity>-Klasse stellt die Basisabstraktion des Workflowverhaltens bereit. Aktivitätsautoren können dann <xref:System.Activities.CodeActivity> für eine grundlegende benutzerdefinierte Aktivitätsfunktionalität oder <xref:System.Activities.NativeActivity> für eine benutzerdefinierte Aktivitätsfunktionalität, die alle zur Laufzeit verfügbaren Funktionen verwendet, implementieren. <xref:System.Activities.Activity> ist eine Klasse wird von aktivitätsautoren verwendet, um neue Verhaltensweisen deklarativ mittels anderer auszudrücken <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, oder <xref:System.Activities.DynamicActivity> Objekte, benutzerdefinierte oder im enthalten sind die [integrierten Aktivität Bibliothek](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md).  
   
 ## <a name="rich-composite-activity-options"></a>Umfangreiche zusammengesetzte Aktivitätsoptionen  
  <xref:System.Activities.Statements.Flowchart> ist eine leistungsstarke neue Ablaufsteuerungsaktivität, die es Autoren ermöglicht, beliebige Schleifen und bedingte Verzweigungen zu modellieren. <xref:System.Activities.Statements.Flowchart> stellt ein ereignisgesteuertes Programmiermodell bereit, das zuvor nur mit <xref:System.Workflow.Activities.StateMachineWorkflowActivity> implementiert werden konnte. Verfahrensworkflows profitieren von neuen Flusssteuerungsaktivitäten, die herkömmliche Flusssteuerungsstrukturen modellieren, z. B. <xref:System.Activities.Statements.TryCatch> und <xref:System.Activities.Statements.Switch%601>.  
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF) in [!INCLUDE[netfx40_long](../../../includes/ne
 -   Das Fortsetzen ausstehender Workflows kann jetzt mit dem <xref:System.Activities.Bookmark>-Objekt verwaltet werden.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Vereinfachte Erweiterung der WF-Designer-Umgebung  
- Der neue WF-Designer basiert auf Windows Presentation Foundation (WPF) und stellt ein einfacheres Modell zu verwenden, wenn die WF-Designer außerhalb von Visual Studio erneutes hosten und bietet auch einfachere Mechanismen zum Erstellen benutzerdefinierter Aktivitäts-Designer. Weitere Informationen finden Sie unter [Anpassen des Workflowentwurfsvorgangs](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ Der neue WF-Designer basiert auf Windows Presentation Foundation (WPF) und stellt ein einfacheres Modell zum zu verwendende rehosting außerhalb von Visual Studio WF-Designer und bietet außerdem einfachere Mechanismen zum Erstellen benutzerdefinierter Aktivitäts-Designer. Weitere Informationen finden Sie unter [Anpassen des Workflowentwurfsvorgangs](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Listener&gt; -Element für &lt;Quelle&gt;'
+title: <listeners>-Element für <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 8378d34ffc2fea22fb5d16ed0b727da54ca74503
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 34085d06ec3f3b91e5efdba6220d79032baaea52
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083989"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55266775"
 ---
-# <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;Listener&gt; -Element für &lt;Quelle&gt;
+# <a name="listeners-element-for-source"></a>\<Listener >-Element für \<Quelle >
 Fügt Listener hinzu oder entfernt den <xref:System.Diagnostics.TraceSource.Listeners%2A> Sammlung für einen <xref:System.Diagnostics.TraceSource>. Ein Listener leitet die Ablaufverfolgungsausgabe an ein entsprechendes Ziel, z. B. ein Protokoll, Fenster oder Text-Datei.  
   
  \<configuration>  

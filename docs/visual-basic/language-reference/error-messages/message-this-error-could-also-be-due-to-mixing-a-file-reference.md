@@ -1,5 +1,5 @@
 ---
-title: '&lt;Nachricht&gt; dieser Fehler wird möglicherweise auch durch das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly &#39; &lt;Assemblyname&gt;&#39;'
+title: <message> Dieser Fehler könnte auch auf die Kombination eines Dateiverweises mit einem Projektverweis auf Assembly '<assemblyname>' zurückzuführen sein
 ms.date: 07/20/2015
 f1_keywords:
 - bc30971
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: d4fb2a8985a21ecea5056b83d2766e8dc468180d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f28327b4df5b15f368f736e7402179227035a06e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528991"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55272551"
 ---
-# <a name="ltmessagegt-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-39ltassemblynamegt39"></a>&lt;Nachricht&gt; dieser Fehler wird möglicherweise auch durch das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly &#39; &lt;Assemblyname&gt;&#39;
+# <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<Meldung > Dieser Fehler wird möglicherweise auch durch das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly '\<Assemblyname >'
 \<Meldung > Dieser Fehler wird möglicherweise auch durch das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly '\<Assemblyname >. In diesem Fall versuchen Sie es, und Ersetzen Sie dabei den Dateiverweis auf "\<Assemblydateiname >" in Projekt "\<projektnamen1 >' mit einem Projektverweis auf"\<projektname2 > ".  
   
  Code in Ihrem Projekt greift auf einen Member eines anderen Projekts, aber die Konfiguration Ihrer Lösung lässt sich nicht auf die Visual Basic-Compiler zum Auflösen des Verweises.  

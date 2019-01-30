@@ -1,16 +1,16 @@
 ---
-title: '&lt;roleClaimType&gt;'
+title: <roleClaimType>
 ms.date: 03/30/2017
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
 author: BrucePerlerMS
-ms.openlocfilehash: 6114a95f3942c367849785ce981858f276c0b8fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 812d44ef947d27b0f73d9dc2172494e89ee56d72
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599945"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55270868"
 ---
-# <a name="ltroleclaimtypegt"></a>&lt;roleClaimType&gt;
+# <a name="roleclaimtype"></a>\<roleClaimType>
 Gibt an, den Anspruchstyp, der die Rollenansprüche für den Typ in der Auflistung definiert <xref:System.Security.Claims.ClaimsIdentity> zurückgegebenen Objekte die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode der Tokenhandler.  
   
  \<system.identityModel>  
