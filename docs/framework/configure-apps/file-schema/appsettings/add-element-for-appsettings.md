@@ -1,5 +1,5 @@
 ---
-title: '&lt;Hinzufügen&gt; -Element für &lt;"appSettings"&gt;'
+title: <add>-Element für <appSettings>
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: e74f0956dd5acebccee87fd6ad8c09b299badffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dde773dc722cf75da9d922ccf28af4bf4a09636c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194344"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277471"
 ---
 # <a name="add-element-for-appsettings"></a>\<Hinzufügen >-Element für \<AppSettings >
 
@@ -22,7 +22,7 @@ Fügt eine benutzerdefinierte anwendungseinstellung an.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Hinzufügen >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ Fügt eine benutzerdefinierte anwendungseinstellung an.
 |           | Beschreibung |
 | --------- | ----------- |
 | **key**   | Erforderliches Attribut.<br><br>Gibt den Namen des hinzuzufügenden Schlüssels. |
-| **Wert** | Erforderliches Attribut.<br><br>Gibt den Wert des hinzuzufügenden Schlüssels. |
+| **value** | Erforderliches Attribut.<br><br>Gibt den Wert des hinzuzufügenden Schlüssels. |
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -47,7 +47,7 @@ Fügt eine benutzerdefinierte anwendungseinstellung an.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
-Keiner
+Keine
 
 ## <a name="example"></a>Beispiel
 

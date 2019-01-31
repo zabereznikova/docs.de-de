@@ -1,26 +1,26 @@
 ---
-title: '&lt;faultPropagationQueries&gt; von WCF'
+title: <faultPropagationQueries> von WCF
 ms.date: 03/30/2017
 ms.assetid: d85f66a7-e7b0-4dbb-83cc-89fa06fc9161
-ms.openlocfilehash: 77a38f8474b5e2ac8634d6ea91bc80c6044ff3ed
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: bc016827c5bb243bc83dbb53c1eda7eec1bfd8c4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54144963"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280396"
 ---
-# <a name="ltfaultpropagationqueriesgt-of-wcf"></a>&lt;faultPropagationQueries&gt; von WCF
+# <a name="faultpropagationqueries-of-wcf"></a>\<FaultPropagationQueries > von WCF
 
 Stellt eine Auflistung von Abfragen dar, die verwendet werden, um die Behandlung von Fehlern nachzuverfolgen, die in einer Aktivität auftreten.  Dieses Ereignis tritt jedes Mal auf, wenn ein FaultHandler einen Fehler verarbeitet. Sie sollten eine solche Abfrage verwenden, um die Behandlung der Fehler nachzuverfolgen, die in einer Aktivität auftreten. Die Abfrage ist notwendig, damit ein Nachverfolgungsteilnehmer Fehlerbehandlungsdatensätze abonnieren kann.  
   
 Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Nachverfolgungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
-\<Nachverfolgen von >  
-\<Profile >  
+\<tracking>  
+\<profiles>  
 \<trackingProfile>  
-\<Workflow >  
-\<FaultPropagationQueries >  
+\<workflow>  
+\<faultPropagationQueries>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,7 +51,7 @@ Keine
 
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<FaultPropagationQuery >](faultpropagationquery-of-wcf.md)|Eine Abfrage, die verwendet wird, um die Behandlung von Fehlern zu verfolgen, die in einer Aktivität auftreten.  Dieses Ereignis tritt jedes Mal auf, wenn ein FaultHandler einen Fehler verarbeitet.|  
+|[\<faultPropagationQuery>](faultpropagationquery-of-wcf.md)|Eine Abfrage, die verwendet wird, um die Behandlung von Fehlern zu verfolgen, die in einer Aktivität auftreten.  Dieses Ereignis tritt jedes Mal auf, wenn ein FaultHandler einen Fehler verarbeitet.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

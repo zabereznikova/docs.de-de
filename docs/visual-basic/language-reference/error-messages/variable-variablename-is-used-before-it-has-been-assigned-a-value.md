@@ -1,5 +1,5 @@
 ---
-title: Variable &#39; &lt;Variablename&gt; &#39; wird verwendet, bevor ihr einen Wert zugewiesen wurde.
+title: Die <variablename>-Variable wird verwendet, bevor ihr ein Wert zugewiesen wird.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42104
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: f91343e850600c9e5f4b4b4eb2126798baf3d980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23201b89f44f6384ae9f75d941d264e8d59bef80
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647022"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268833"
 ---
-# <a name="variable-39ltvariablenamegt39-is-used-before-it-has-been-assigned-a-value"></a>Variable &#39; &lt;Variablename&gt; &#39; wird verwendet, bevor ihr einen Wert zugewiesen wurde.
+# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Variable "\<Variablenname >' wird verwendet, bevor ihr einen Wert zugewiesen wurde.
 Variable "\<Variablenname >' wird verwendet, bevor sie einen Wert zugewiesen wurde. Zur Laufzeit kann eine NULL-Verweisausnahme auftreten.  
   
  Eine Anwendung muss über mindestens einen möglichen Pfad durch den Code, der eine Variable liest, bevor ein Wert zugewiesen wird.  

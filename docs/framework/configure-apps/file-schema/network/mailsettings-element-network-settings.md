@@ -1,5 +1,5 @@
 ---
-title: '&lt;MailSettings&gt; -Element (Netzwerkeinstellungen)'
+title: <mailSettings>-Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mailSettings
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 954755c7576e0ca4dd7946926c77e1e7e18055e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e71284e914dac2d28448f3d8bd4bdc7a9f6b325
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713953"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277614"
 ---
-# <a name="ltmailsettingsgt-element-network-settings"></a>&lt;MailSettings&gt; -Element (Netzwerkeinstellungen)
+# <a name="mailsettings-element-network-settings"></a>\<MailSettings >-Element (Netzwerkeinstellungen)
 Konfiguriert E-Mail-Sendeoptionen.  
 
 \<configuration>  

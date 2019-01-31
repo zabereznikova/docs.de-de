@@ -1,5 +1,5 @@
 ---
-title: Namespace oder Typ angegeben werden, in-Projekt auf Dokumentebene Imports &#39; &lt;qualifizierterelementname&gt; &#39; &#39;t enthält keine öffentlichen Member oder wurde nicht gefunden
+title: Der in Imports '<qualifiedelementname>' auf Projektebene angegebene Namespace oder Typ enthält keine öffentlichen Member oder kann nicht gefunden werden
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40057
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 215d8d301317f711aecb88167030e70ed01408aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12d20a88179a3d0c93c18f0aed65ca46b001059a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552462"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283308"
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace oder Typ angegeben werden, in-Projekt auf Dokumentebene Imports &#39; &lt;qualifizierterelementname&gt; &#39; &#39;t enthält keine öffentlichen Member oder wurde nicht gefunden
+# <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace oder Typ angegeben werden, in das Projekt auf Dokumentebene Imports'\<qualifizierter_elementname >' enthält keine öffentlichen Member oder wurde nicht gefunden
 Namespace oder Typ angegeben werden, in das Projekt auf Dokumentebene Imports'\<qualifizierter_elementname >' enthält keine öffentlichen Member oder wurde nicht gefunden. Stellen Sie sicher, dass der Namespace oder der Typ definiert ist und mindestens einen öffentliches Member enthält. Stellen Sie sicher, dass der Aliasname keine andere Aliase enthält.  
   
  Eine Import-Eigenschaft eines Projekts gibt ein enthaltendes Element, das entweder nicht gefunden werden kann, oder keine definiert `Public` Member.  

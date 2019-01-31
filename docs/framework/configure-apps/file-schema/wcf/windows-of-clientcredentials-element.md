@@ -1,15 +1,15 @@
 ---
-title: '&lt;windows&gt; des &lt;clientCredentials&gt;-Elements'
+title: <windows> der <clientCredentials> Element
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: 1331456f6defc24511064684181f615451be5b93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb55fb9901e4c08a3c5d7662fdb3bf12a71876bb
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610746"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275157"
 ---
-# <a name="ltwindowsgt-of-ltclientcredentialsgt-element"></a>&lt;windows&gt; des &lt;clientCredentials&gt;-Elements
+# <a name="windows-of-clientcredentials-element"></a>\<Windows > des \<ClientCredentials >-Element
 Gibt die Einstellungen für Windows-Anmeldeinformationen an, die zum Darstellen des Clients verwendet werden.  
   
  \<system.ServiceModel>  

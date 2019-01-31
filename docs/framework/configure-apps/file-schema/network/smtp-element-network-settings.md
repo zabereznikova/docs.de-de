@@ -1,5 +1,5 @@
 ---
-title: '&lt;SMTP&gt; -Element (Netzwerkeinstellungen)'
+title: <smtp>-Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 4a2947594f5adc9cc4c11471e133c6a4f2662a50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecd780da7224389685b61c39c796c7a80587709c
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638014"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273581"
 ---
-# <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; -Element (Netzwerkeinstellungen)
+# <a name="smtp-element-network-settings"></a>\<SMTP >-Element (Netzwerkeinstellungen)
 Konfiguriert das übermittlungsformat, die Übermittlungsmethode und die Absenderadresse zum Senden von e-Mails.  
   
  \<configuration>  

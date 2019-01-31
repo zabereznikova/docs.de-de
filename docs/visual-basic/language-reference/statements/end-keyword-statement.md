@@ -1,19 +1,19 @@
 ---
-title: End &lt;Schlüsselwort&gt; Anweisung (Visual Basic)
+title: End <keyword>-Anweisung (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.EndDefinition
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-ms.openlocfilehash: d65c921a1631cd38c4d0d1ab9b34db3d7e43a97e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96dc8ce6b0d3b7545f5caeef43358936e426f566
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654840"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273529"
 ---
-# <a name="end-ltkeywordgt-statement-visual-basic"></a>End &lt;Schlüsselwort&gt; Anweisung (Visual Basic)
+# <a name="end-keyword-statement-visual-basic"></a>End \<Schlüsselwort >-Anweisung (Visual Basic)
 
 Wenn Sie ein zusätzliches Schlüsselwort gefolgt wird, beendet die Definition der Anweisungsblock, der durch dieses Schlüsselwort eingeführt.
 

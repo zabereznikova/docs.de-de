@@ -1,19 +1,19 @@
 ---
-title: '&lt;system.identityModel.services&gt;'
+title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: c7261d20ae2379ad33679cadecdef484f2afdecf
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9728f3caee4dba367e4fc4a3e68213b1055cc3d1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873400"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55273974"
 ---
-# <a name="ltsystemidentitymodelservicesgt"></a>&lt;system.identityModel.services&gt;
+# <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
 Der Konfigurationsabschnitt für die Authentifizierung mit dem WS-Verbund-Protokoll.  
   
- \<system.identityModel.services >  
+ \<system.identityModel.services>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -28,7 +28,7 @@ Der Konfigurationsabschnitt für die Authentifizierung mit dem WS-Verbund-Protok
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keiner  
+ Keine  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -37,7 +37,7 @@ Der Konfigurationsabschnitt für die Authentifizierung mit dem WS-Verbund-Protok
 |[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Enthält Einstellungen, konfigurieren die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) und die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM)-HTTP-Module.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
- Keiner  
+ Keine  
   
 ## <a name="remarks"></a>Hinweise  
  Hinzufügen einer `<system.identityModel.services>` Abschnitt aus, um Sie in der Konfigurationsdatei der Anwendung der Einstellungen für das SAM und das WSFAM bereitstellen.  

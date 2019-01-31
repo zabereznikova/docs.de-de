@@ -1,18 +1,18 @@
 ---
-title: '&lt;Deaktivieren Sie&gt; -Element für &lt;NamedCaches&gt;'
+title: <clear>-Element für <namedCaches>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <clear> element for <namedCaches>
 - clear element for <namedCaches>
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
-ms.openlocfilehash: d71c5de42104961bc096b786dfe50bb4097bc4fc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: aaf5c2360b53a1cd6e5775a195c89c96ed6440a3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083560"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288664"
 ---
-# <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;Deaktivieren Sie&gt; -Element für &lt;NamedCaches&gt;
+# <a name="clear-element-for-namedcaches"></a>\<clear >-Element für \<NamedCaches >
 Löscht alle `namedCache` Einträge in der `namedCaches` Auflistung für einen Speichercache.  
   
  \<system.runtime.caching>  

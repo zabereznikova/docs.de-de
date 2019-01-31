@@ -1,15 +1,15 @@
 ---
-title: '&lt;peerAuthentication&gt;-Element'
+title: <peerAuthentication>-Element
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: 0491a175c237bf6dd18b607d8ad99f1057661d76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e9fd69af5bce4da0bb14442cddcbecd536535f3
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610018"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55277718"
 ---
-# <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt;-Element
+# <a name="peerauthentication-element"></a>\<PeerAuthentication >-Element
 Gibt die Authentifizierungsoptionen für Peer-to-Peer-Clients an.  
   
  Weitere Informationen zur Peer-zu-Peer-Programmierung finden Sie unter [Peer-zu-Peer-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  

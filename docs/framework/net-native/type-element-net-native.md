@@ -1,17 +1,17 @@
 ---
-title: '&lt;Typ&gt; Element (.NET Native)'
+title: <Type> (Element (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 766b839afe0ca14e49bcf595241169b601999d7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85c5ae85a07567305d6e7e2a57f4b5459bd647d4
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706788"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276298"
 ---
-# <a name="lttypegt-element-net-native"></a>&lt;Typ&gt; Element (.NET Native)
+# <a name="type-element-net-native"></a>\<Typ > (Element (.NET Native)
 Wendet eine Laufzeitrichtlinie auf einen bestimmten Typ an, z. B. eine Klasse oder Struktur.  
   
 ## <a name="syntax"></a>Syntax  

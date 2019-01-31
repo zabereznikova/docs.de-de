@@ -1,17 +1,17 @@
 ---
-title: Argument '&lt;Argumentname&gt;' muss größer als 0 (null) sein
+title: Argument '<argumentname>' muss größer als 0 (null) sein
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GTZero1
 ms.assetid: f9939fbd-6c4f-4871-9452-9ea0267e948e
-ms.openlocfilehash: 4ef17a10a90515956e9bdf02873fd80fdf8e8892
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b998ee6acfbb945bbe8134af68bcf820737f7e5
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605257"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55286467"
 ---
-# <a name="argument-ltargumentnamegt-must-be-greater-than-zero"></a>Argument '&lt;Argumentname&gt;' muss größer als 0 (null) sein
+# <a name="argument-argumentname-must-be-greater-than-zero"></a>Argument '\<Argumentname >' muss größer als 0 (null) sein
 Ein Argument ist ungültig, da es kleiner als oder gleich 0 (null) ist.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

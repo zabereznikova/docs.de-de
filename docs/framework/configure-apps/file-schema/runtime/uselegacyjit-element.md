@@ -1,17 +1,17 @@
 ---
-title: '&lt;UseLegacyJit&gt; Element'
+title: <useLegacyJit>-Element
 ms.date: 04/26/2017
 ms.assetid: c2cf97f0-9262-4f1f-a754-5568b51110ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecf4d805feeb27a7c3fa08d2ab6dd05b6fff693a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a467599084f01b1a48c95c5e25fb1f869156dffa
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648179"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278758"
 ---
-# <a name="ltuselegacyjitgt-element"></a>&lt;UseLegacyJit&gt; Element
+# <a name="uselegacyjit-element"></a>\<UseLegacyJit >-Element
 
 Legt fest, ob die Runtime den 64-Bit-JIT-Legacycompiler für die Just-in-Time-Kompilierung verwendet.  
   

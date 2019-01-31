@@ -1,5 +1,5 @@
 ---
-title: Der erste Operand in eine Binärdatei &#39;Wenn&#39; Ausdruck muss NULL-Werte zulässt, oder geben Sie ein Verweis
+title: Der erste Operand in einem binären If-Ausdruck muss ein Typ, der NULL-Werte zulässt, oder ein Referenztyp sein
 ms.date: 07/20/2015
 f1_keywords:
 - bc33107
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 85094ba6d6a44bf2e6cc4fba7946598c286a08a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb47670e8417e903b2886887394b972d1ac138b0
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668271"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284634"
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>Der erste Operand in eine Binärdatei &#39;Wenn&#39; Ausdruck muss NULL-Werte zulässt, oder geben Sie ein Verweis
+# <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>Der erste Operand in einem binären If-Ausdruck muss ein Typ, der NULL-Werte zulässt, oder ein Referenztyp sein
 Ein `If` Ausdruck kann entweder zwei oder drei Argumente annehmen. Wenn Sie nur zwei Argumente senden, muss das erste Argument ein Verweistyp oder einem nullable-Typ sein. Ergibt das erste Argument auf einen anderen als `Nothing`, dessen Wert zurückgegeben. Wenn das erste Argument ergibt `Nothing`, das zweite Argument wird ausgewertet und zurückgegeben.  
   
  Der folgende Code enthält z. B. zwei `If` Ausdrücke, eine mit drei Argumenten und einen mit zwei Argumenten. Die Ausdrücke berechnen und den gleichen Wert zurück.  

@@ -1,5 +1,5 @@
 ---
-title: Ausdruck weist den Typ &#39; &lt;Typename&gt; &#39; , einen eingeschränkten Typ, kann nicht verwendet werden, um über geerbte Member zuzugreifen &#39;Objekt&#39; oder &#39;ValueType&#39;
+title: Der Ausdruck weist den Typ '<typename>' auf, einen eingeschränkten Typ, der nicht verwendet werden kann, um auf von 'Object' oder 'ValueType' geerbte Member zuzugreifen
 ms.date: 07/20/2015
 f1_keywords:
 - bc31393
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: d44b9a29f0848508d8cd814e857d9b01819ce7ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d366ec750ea5a4505ae5ea618e27f47406ba959
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535956"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274018"
 ---
-# <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>Ausdruck weist den Typ &#39; &lt;Typename&gt; &#39; , einen eingeschränkten Typ, kann nicht verwendet werden, um über geerbte Member zuzugreifen &#39;Objekt&#39; oder &#39;ValueType&#39;
+# <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>Ausdruck weist den Typ "\<Typname >', einen eingeschränkten Typ, kann nicht verwendet werden, um von 'Object' oder 'ValueType' geerbte Member zuzugreifen
 Ein Ausdruck ergibt einen Typ, der von der common Language Runtime (CLR) geschachtelt werden kann, aber greift auf ein Element, das Boxing erforderlich.  
   
  *Boxing* bezieht sich auf die Verarbeitung, die zum Konvertieren eines Typs in `Object` oder gelegentlich in <xref:System.ValueType>erforderlich ist. Die common Language Runtime kann nicht bestimmte Typen, z. B. Feld <xref:System.ArgIterator>, <xref:System.RuntimeArgumentHandle>, und <xref:System.TypedReference>.  

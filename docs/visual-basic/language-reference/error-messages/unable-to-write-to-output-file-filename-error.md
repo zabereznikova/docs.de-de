@@ -1,5 +1,5 @@
 ---
-title: 'Beim Schreiben in die Ausgabedatei kann nicht &#39; &lt;Filename&gt;&#39;: &lt;Fehler&gt;'
+title: 'In die Ausgabedatei "<filename>" konnte nicht geschrieben werden: <error>.'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: c82f1e6e4a01af87cc7dce49cfaa78f9be1631db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f7580c53535c28c97213a5a0488c3fc0365c4ac
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572694"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55274104"
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Beim Schreiben in die Ausgabedatei kann nicht &#39; &lt;Filename&gt;&#39;: &lt;Fehler&gt;
+# <a name="unable-to-write-to-output-file-filename-error"></a>Beim Schreiben in die Ausgabedatei kann nicht '\<Dateiname >': \<Fehler >
 Beim Erstellen der Datei ist ein Fehler aufgetreten.  
   
  Eine Ausgabedatei kann nicht zum Schreiben geöffnet werden. Die Datei (oder der Ordner, der die Datei enthält) kann für die Exklusivnutzung durch einen anderen Prozess geöffnet sein, oder sie ist schreibgeschützt.  

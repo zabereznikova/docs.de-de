@@ -1,15 +1,15 @@
 ---
-title: '&lt;defaultCertificate&gt;-Element'
+title: <defaultCertificate>-Element
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: 1e4c76ea2b3e4064f3bc14461be1729af299117b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f1e17d6c6517e72c1a2ec8e001d857c0d2aa7af
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676629"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55275664"
 ---
-# <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt;-Element
+# <a name="defaultcertificate-element"></a>\<DefaultCertificate >-Element
 Gibt ein X.509-Zertifikat an, das verwendet wird, wenn ein Dienst oder STS kein Zertifikat über ein Aushandlungsprotokoll bereitstellt.  
   
  \<system.ServiceModel>  
