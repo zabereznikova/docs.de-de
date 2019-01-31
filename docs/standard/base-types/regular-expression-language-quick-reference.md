@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b191a01995b7c36d733b225672a3d79f488a276
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cedabbfff10b89f9755b14b963fd1d1a143cb0f0
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531420"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204885"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
 <a name="top"></a> Reguläre Ausdrücke sind Muster, für die das Modul für reguläre Ausdrücke eine Entsprechung im Eingabetext sucht. Muster können aus einem oder mehr Zeichenliteralen, Operatoren oder Konstrukten bestehen.  Eine kurze Einführung finden Sie unter [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -58,10 +58,10 @@ ms.locfileid: "54531420"
 |`\f`|Entspricht einem Seitenvorschubzeichen \u000C.|`[\f]{2,}`|"\f\f\f" in "\f\f\f"|  
 |`\n`|Entspricht einer neuen Zeile \u000A.|`\r\n(\w+)`|"\r\nDies" in "\r\nDies sind\nzwei Zeilen."|  
 |`\e`|Entspricht einem Escapezeichen \u001B.|`\e`|"\x001B" in "\x001B"|  
-|`\` *nnn*|Verwendet die oktale Darstellung, um ein Zeichen anzugeben (*nnn* besteht aus zwei oder drei Ziffern).|`\w\040\w`|"a b", "c d" in<br /><br /> "a bc d"|  
-|`\x` *nn*|Verwendet die hexadezimale Darstellung, um ein Zeichen anzugeben (*nn* besteht genau aus zwei Ziffern).|`\w\x20\w`|"a b", "c d" in<br /><br /> "a bc d"|  
+|`\` *nnn*|Verwendet die oktale Darstellung, um ein Zeichen anzugeben (*nnn* besteht aus zwei oder drei Ziffern).|`\w\040\w`|"a b", "c d" in "a bc d"|  
+|`\x` *nn*|Verwendet die hexadezimale Darstellung, um ein Zeichen anzugeben (*nn* besteht genau aus zwei Ziffern).|`\w\x20\w`|"a b", "c d" in "a bc d"|  
 |`\c` *X*<br /><br /> `\c` *x*|Entspricht dem durch *X* oder *x*angegebenen ASCII-Steuerzeichen, wobei *X* oder *x* der Buchstabe des Steuerzeichens ist.|`\cC`|"\x0003" in "\x0003" (Strg-C)|  
-|`\u` *nnnn*|Entspricht einem Unicode-Zeichen in hexadezimaler Darstellung (genau vier Stellen, dargestellt durch *nnnn*).|`\w\u0020\w`|"a b", "c d" in<br /><br /> "a bc d"|  
+|`\u` *nnnn*|Entspricht einem Unicode-Zeichen in hexadezimaler Darstellung (genau vier Stellen, dargestellt durch *nnnn*).|`\w\u0020\w`|"a b", "c d" in "a bc d"|  
 |`\`|Entspricht dem angegebenen Zeichen, wenn darauf ein Zeichen folgt, das in dieser und anderen Tabellen in diesem Thema nicht als Escapezeichen erkannt wird. Beispielsweise ist `\*` identisch mit `\x2A`und `\.` entspricht `\x2E`. Hierdurch kann die Engine für reguläre Ausdrücke Sprachelemente (z.B. \* oder ?) und Zeichenliterale (dargestellt durch `\*` oder `\?`) unterscheiden.|`\d+[\+-x\*]\d+`|„2+2“ und „3\*9“ in „(2+2) \* 3\*9“|  
   
  [Zurück zum Anfang](#top)  
@@ -92,11 +92,11 @@ ms.locfileid: "54531420"
   
 |Assertion|Beschreibung |Muster|Übereinstimmungen|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Die Übereinstimmung muss standardmäßig zu Anfang der Zeichenfolge beginnen. Im Mehrzeilenmodus muss sie am Anfang der Zeile beginnen.|`^\d{3}`|"901" in<br /><br /> "901-333-"|  
-|`$`|Die Übereinstimmung muss standardmäßig am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie am Ende der Zeile oder vor `\n` am Ende der Zeile erfolgen.|`-\d{3}$`|"-333" in<br /><br /> "-901-333"|  
-|`\A`|Der Vergleich muss am Beginn der Zeichenfolge erfolgen.|`\A\d{3}`|"901" in<br /><br /> "901-333-"|  
-|`\Z`|Der Vergleich muss am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge erfolgen.|`-\d{3}\Z`|"-333" in<br /><br /> "-901-333"|  
-|`\z`|Der Vergleich muss am Ende der Zeichenfolge erfolgen.|`-\d{3}\z`|"-333" in<br /><br /> "-901-333"|  
+|`^`|Die Übereinstimmung muss standardmäßig zu Anfang der Zeichenfolge beginnen. Im Mehrzeilenmodus muss sie am Anfang der Zeile beginnen.|`^\d{3}`|"901" in "901-333-"|  
+|`$`|Die Übereinstimmung muss standardmäßig am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie am Ende der Zeile oder vor `\n` am Ende der Zeile erfolgen.|`-\d{3}$`|"-333" in "-901-333"|  
+|`\A`|Der Vergleich muss am Beginn der Zeichenfolge erfolgen.|`\A\d{3}`|"901" in "901-333-"|  
+|`\Z`|Der Vergleich muss am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge erfolgen.|`-\d{3}\Z`|"-333" in "-901-333"|  
+|`\z`|Der Vergleich muss am Ende der Zeichenfolge erfolgen.|`-\d{3}\z`|"-333" in "-901-333"|  
 |`\G`|Der Vergleich muss an dem Punkt erfolgen, an dem der vorherige Vergleich beendet wurde.|`\G\(\d\)`|"(1)", "(3)", "(5)" in "(1)(3)(5)[7](9\)"|  
 |`\b`|Der Vergleich muss an einer Begrenzung zwischen einem `\w` (alphanumerischen) und einem `\W` (nicht alphanumerischen) Zeichen erfolgen.|`\b\w+\s\w+\b`|"dem demnach", "dem dem" in "dem demnach dem dem"|  
 |`\B`|Der Vergleich darf nicht an einer `\b` -Begrenzung erfolgen.|`\Bend\w*\b`|"ends", "ender" in "end sendet endete sender"|  
@@ -218,7 +218,7 @@ ms.locfileid: "54531420"
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
-- <xref:System.Text.RegularExpressions.Regex>
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [Reguläre Ausdrücke von .NET](regular-expressions.md)
 - [Das Objektmodell für reguläre Ausdrücke](the-regular-expression-object-model.md)
 - [Beispiele für reguläre Ausdrücke](regular-expression-examples.md)
