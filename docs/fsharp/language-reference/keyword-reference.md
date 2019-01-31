@@ -3,10 +3,10 @@ title: Schlüsselwortreferenz
 description: Hier finden Sie Links zu Informationen über alle der F# Programmiersprachen-Schlüsselwörter.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
+ms.lasthandoff: 01/31/2019
 ms.locfileid: "54857904"
 ---
 # <a name="keyword-reference"></a>Schlüsselwortreferenz
@@ -64,7 +64,7 @@ Die folgende Tabelle zeigt alle F# Schlüsselwörter in alphabetischer Reihenfol
 |`null`|[NULL-Werte](values/null-values.md)<br /><br />[Einschränkungen](generics/constraints.md)|Gibt das Fehlen eines Objekts an.<br /><br />Auch verwendet in Einschränkungen für generische Typparameter.|
 |`of`|[Unterscheidbare Unions](discriminated-unions.md)<br /><br />[Delegaten](delegates.md)<br /><br />[Ausnahmetypen](exception-handling/exception-types.md)|In Unterscheidungs-Unions, um den Typ der Kategorien von Werten anzugeben, und klicken Sie in Deklarationen von Delegaten und der Ausnahme verwendet.|
 |`open`|[Importdeklarationen: Das `open`-Schlüsselwort](import-declarations-the-open-keyword.md)|Verwendet, um den Inhalt von einem Namespace oder Modul ohne Qualifikation verfügbar zu machen.|
-|`or`|[Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|Mit booleschen Bedingungen verwendet werden, als booleschen `or` Operator. Entspricht '||`.<br /><br />Auch verwendet in Membereinschränkungen.|
+|`or`|[Symbol- und Operatorenreferenz](symbol-and-operator-reference/index.md)<br /><br />[Einschränkungen](generics/constraints.md)|Mit booleschen Bedingungen verwendet werden, als booleschen `or` Operator. Entspricht `||`.<br /><br />Auch verwendet in Membereinschränkungen.|
 |`override`|[Mitglieder](members/index.md)|Verwendet, um eine Version einer abstrakten oder virtuellen Methode zu implementieren, der die Basisversion unterscheidet.|
 |`private`|[Zugriffssteuerung](access-control.md)|Schränkt den Zugriff auf einen Member auf Code in den gleichen Typ oder Modul an.|
 |`public`|[Zugriffssteuerung](access-control.md)|Ermöglicht den Zugriff auf einen Member von außerhalb des Typs.|

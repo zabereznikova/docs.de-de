@@ -9,15 +9,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: c9602599be0dd9fc262a7809348ef2642d6b4ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7083c4b15e2693c0c76e6ca7c9a00e4c4dab56c
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513723"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55480061"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung
-Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn die Daten erneut zugegriffen werden, erhalten Anwendungen die Daten aus dem Cache stattdessen aus der ursprünglichen Quelle abrufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.
+Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn erneut auf die Daten zugegriffen wird, erhalten Anwendungen die Daten aus dem Zwischenspeicher, anstatt sie aus der Originalquelle abzurufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.
 
  Die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bietet Klassen, die Ihnen ermöglichen, verwenden der Zwischenspeicherung in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Anwendungen. Diese Klassen befinden sich in der <xref:System.Runtime.Caching> Namespace.
 
@@ -218,7 +218,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
     policy.AbsoluteExpiration = DateTimeOffset.Now.AddSeconds(10.0);
     ```
 
-     Wenn keine Informationen Cachelöschungs- oder Ablaufrichtlinie angegeben wird, wird der Standardwert ist <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, was bedeutet, dass die Cacheeinträge läuft nie ab basiert nur auf einer absoluten Zeit. Stattdessen laufen die Einträge im Cache nur, wenn genügend Arbeitsspeicher vorhanden ist. Als bewährte Methode sollten Sie entweder ein absoluter oder ein Ablauf Wetterseite immer explizit bereitstellen.
+     Wenn keine Informationen Cachelöschungs- oder Ablaufrichtlinie angegeben wird, wird der Standardwert ist <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, was bedeutet, dass die Cacheeinträge läuft nie ab basiert nur auf einer absoluten Zeit. Stattdessen laufen die Einträge im Cache nur, wenn genügend Arbeitsspeicher vorhanden ist. Als bewährte Methode sollten Sie entweder ein absoluter oder ein variabler Ablauf immer explizit bereitstellen.
 
 7.  In der `if/then` blockieren und die folgenden den Code, die Sie im vorherigen Schritt hinzugefügt haben, fügen Sie den folgenden Code aus, um eine Sammlung für die Dateipfade zu erstellen, überwachen und den Pfad der Textdatei, die Auflistung hinzugefügt werden soll:
 
@@ -254,7 +254,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
     ```
 
     ```csharp
-    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + + "\n" + DateTime.Now;
+    fileContents = File.ReadAllText("c:\\cache\\cacheText.txt") + "\n" + DateTime.Now;
     ```
 
      Die Datums- / Zeitstempel wird hinzugefügt, sodass Sie sehen werden, wenn der Cacheeintrag abläuft.
@@ -296,7 +296,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
      Die zwischengespeicherte Inhalte aus der Textdatei wird in einem Meldungsfeld angezeigt. Beachten Sie, dass die Zeitstempel der Datei.
 
-3.  Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut **.**
+3.  Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut aus.
 
      Der Zeitstempel ist unverändert. Dies gibt an, dass der zwischengespeicherte Inhalt angezeigt wird.
 
@@ -306,7 +306,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 5.  Öffnen Sie in einem Text-Editor die Textdatei, die Sie erstellt haben. Nehmen Sie Änderungen noch nicht.
 
-6.  Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut **.**
+6.  Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut aus.
 
      Beachten Sie den Zeitstempel erneut ein.
 
