@@ -1,5 +1,5 @@
 ---
-title: '&lt;Konfiguration&gt; Element'
+title: <configuration>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - configuration element
 - container tags, <configuration> element
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
-ms.openlocfilehash: 92d4a4dacddcce3e3b12337f0c55ff49c3c8e6ae
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 980eb93a66de51250ac190cd44cfd32769ef5b8e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084444"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55284699"
 ---
-# <a name="configuration-element"></a><span data-ttu-id="1f341-102">\<Configuration >-Element</span><span class="sxs-lookup"><span data-stu-id="1f341-102">\<configuration> element</span></span>
+# <a name="configuration-element"></a><span data-ttu-id="88807-102">\<Configuration >-Element</span><span class="sxs-lookup"><span data-stu-id="88807-102">\<configuration> element</span></span>
 
-<span data-ttu-id="1f341-103">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="1f341-103">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>
+<span data-ttu-id="88807-103">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="88807-103">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>
 
-<span data-ttu-id="1f341-104">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="1f341-104">**\<configuration>**</span></span>
+<span data-ttu-id="88807-104">**\<configuration>**</span><span class="sxs-lookup"><span data-stu-id="88807-104">**\<configuration>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="1f341-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="1f341-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="88807-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="88807-105">Syntax</span></span>
 
 ```xml
 <configuration>
@@ -29,34 +29,34 @@ ms.locfileid: "55084444"
 </configuration>
 ```
 
-## <a name="attributes"></a><span data-ttu-id="1f341-106">Attribute</span><span class="sxs-lookup"><span data-stu-id="1f341-106">Attributes</span></span>
+## <a name="attributes"></a><span data-ttu-id="88807-106">Attribute</span><span class="sxs-lookup"><span data-stu-id="88807-106">Attributes</span></span>
 
-<span data-ttu-id="1f341-107">Keine</span><span class="sxs-lookup"><span data-stu-id="1f341-107">None</span></span>
+<span data-ttu-id="88807-107">Keine</span><span class="sxs-lookup"><span data-stu-id="88807-107">None</span></span>
 
-## <a name="parent-element"></a><span data-ttu-id="1f341-108">Übergeordnetes Element</span><span class="sxs-lookup"><span data-stu-id="1f341-108">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="88807-108">Übergeordnetes Element</span><span class="sxs-lookup"><span data-stu-id="88807-108">Parent element</span></span>
 
-<span data-ttu-id="1f341-109">Keine</span><span class="sxs-lookup"><span data-stu-id="1f341-109">None</span></span>
+<span data-ttu-id="88807-109">Keine</span><span class="sxs-lookup"><span data-stu-id="88807-109">None</span></span>
 
-## <a name="child-elements"></a><span data-ttu-id="1f341-110">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="1f341-110">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="88807-110">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="88807-110">Child elements</span></span>
 
-|     | <span data-ttu-id="1f341-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1f341-111">Description</span></span> |
+|     | <span data-ttu-id="88807-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="88807-111">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="1f341-112">**\<assemblyBinding>**</span><span class="sxs-lookup"><span data-stu-id="1f341-112">**\<assemblyBinding>**</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | <span data-ttu-id="1f341-113">Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an.</span><span class="sxs-lookup"><span data-stu-id="1f341-113">Specifies assembly binding policy at the configuration level.</span></span>|
-| [<span data-ttu-id="1f341-114">**\<Startup >** Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="1f341-114">**\<startup>** Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/startup/index.md) | <span data-ttu-id="1f341-115">Alle Elemente in das Schema für starteinstellungen.</span><span class="sxs-lookup"><span data-stu-id="1f341-115">All elements in the startup settings schema.</span></span> |
-| [<span data-ttu-id="1f341-116">**\<Common Language Runtime >** Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="1f341-116">**\<runtime>** Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/runtime/index.md) | <span data-ttu-id="1f341-117">Alle Elemente in das Schema für Laufzeiteinstellungen.</span><span class="sxs-lookup"><span data-stu-id="1f341-117">All elements in the runtime settings schema.</span></span> |
-| [<span data-ttu-id="1f341-118">**\<system.runtime.remoting>** Settings Schema</span><span class="sxs-lookup"><span data-stu-id="1f341-118">**\<system.runtime.remoting>** Settings Schema</span></span>](https://msdn.microsoft.com/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) | <span data-ttu-id="1f341-119">Alle Elemente im Schema für Remoteeinstellungen.</span><span class="sxs-lookup"><span data-stu-id="1f341-119">All elements in the remoting settings schema.</span></span> |
-| [<span data-ttu-id="1f341-120">**\<system.Net >** Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="1f341-120">**\<system.Net>** Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/network/index.md) | <span data-ttu-id="1f341-121">Alle Elemente in der netzwerkeinstellungsschema.</span><span class="sxs-lookup"><span data-stu-id="1f341-121">All elements in the network settings schema.</span></span> |
-| [<span data-ttu-id="1f341-122">**\<cryptographySettings>** Settings Schema</span><span class="sxs-lookup"><span data-stu-id="1f341-122">**\<cryptographySettings>** Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | <span data-ttu-id="1f341-123">Alle Elemente im Schema für Kryptografieeinstellungen.</span><span class="sxs-lookup"><span data-stu-id="1f341-123">All elements in the crypto settings schema.</span></span> |
-| [<span data-ttu-id="1f341-124">**\<Konfiguration >** Schema für Konfigurationsabschnitte</span><span class="sxs-lookup"><span data-stu-id="1f341-124">**\<configuration>** Sections Schema</span></span>](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | <span data-ttu-id="1f341-125">Alle Elemente in den Einstellungen des Konfigurationsschemas-Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="1f341-125">All elements in the configuration section settings schema.</span></span> |
-| [<span data-ttu-id="1f341-126">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="1f341-126">Trace and Debug Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | <span data-ttu-id="1f341-127">Alle Elemente im Einstellungsschema für Ablaufverfolgung und Debuggen.</span><span class="sxs-lookup"><span data-stu-id="1f341-127">All elements in the trace and debug settings schema.</span></span> |
-| <span data-ttu-id="1f341-128">[Einstellungen für die ASP.NET-Konfigurationsschema](https://msdn.microsoft.com/library/b5ysx397(v=vs.100).aspx)</span><span class="sxs-lookup"><span data-stu-id="1f341-128">[ASP.NET Configuration Settings Schema](https://msdn.microsoft.com/library/b5ysx397(v=vs.100).aspx)</span></span> | <span data-ttu-id="1f341-129">Alle Elemente in die ASP.NET-Konfigurationsschema, die Elemente für die Konfiguration von ASP.NET-Websites und-Anwendungen enthält.</span><span class="sxs-lookup"><span data-stu-id="1f341-129">All elements in the ASP.NET configuration schema, which includes elements for configuring ASP.NET Web sites and applications.</span></span> <span data-ttu-id="1f341-130">Verwendet *"Web.config"* Dateien.</span><span class="sxs-lookup"><span data-stu-id="1f341-130">Used in *Web.config* files.</span></span> |
-| [<span data-ttu-id="1f341-131">**\<webServices>** Settings Schema</span><span class="sxs-lookup"><span data-stu-id="1f341-131">**\<webServices>** Settings Schema</span></span>](https://msdn.microsoft.com/f84d6d55-1add-4eb7-ae46-33df5833ea2e) | <span data-ttu-id="1f341-132">Alle Elemente in das Einstellungsschema für Webdienste.</span><span class="sxs-lookup"><span data-stu-id="1f341-132">All elements in the Web services settings schema.</span></span> |
-| [<span data-ttu-id="1f341-133">Web Settings Schema (Schema für Webeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="1f341-133">Web Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/web/index.md) | <span data-ttu-id="1f341-134">Alle Elemente im Webeinstellungsschema, das Elemente für die Konfiguration von ASP.NET mit einer Hostanwendung wie IIS enthält.</span><span class="sxs-lookup"><span data-stu-id="1f341-134">All elements in the Web settings schema, which includes elements for configuring how ASP.NET works with a host application such as IIS.</span></span> <span data-ttu-id="1f341-135">Verwendet *aspnet.config* Dateien.</span><span class="sxs-lookup"><span data-stu-id="1f341-135">Used in *aspnet.config* files.</span></span> |
+| [<span data-ttu-id="88807-112">**\<assemblyBinding>**</span><span class="sxs-lookup"><span data-stu-id="88807-112">**\<assemblyBinding>**</span></span>](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | <span data-ttu-id="88807-113">Gibt die Assemblybindungsrichtlinie auf Konfigurationsebene an.</span><span class="sxs-lookup"><span data-stu-id="88807-113">Specifies assembly binding policy at the configuration level.</span></span>|
+| [<span data-ttu-id="88807-114">**\<Startup >** Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="88807-114">**\<startup>** Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/startup/index.md) | <span data-ttu-id="88807-115">Alle Elemente in das Schema für starteinstellungen.</span><span class="sxs-lookup"><span data-stu-id="88807-115">All elements in the startup settings schema.</span></span> |
+| [<span data-ttu-id="88807-116">**\<Common Language Runtime >** Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="88807-116">**\<runtime>** Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/runtime/index.md) | <span data-ttu-id="88807-117">Alle Elemente in das Schema für Laufzeiteinstellungen.</span><span class="sxs-lookup"><span data-stu-id="88807-117">All elements in the runtime settings schema.</span></span> |
+| [<span data-ttu-id="88807-118">**\<system.runtime.remoting>** Settings Schema</span><span class="sxs-lookup"><span data-stu-id="88807-118">**\<system.runtime.remoting>** Settings Schema</span></span>](https://msdn.microsoft.com/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) | <span data-ttu-id="88807-119">Alle Elemente im Schema für Remoteeinstellungen.</span><span class="sxs-lookup"><span data-stu-id="88807-119">All elements in the remoting settings schema.</span></span> |
+| [<span data-ttu-id="88807-120">**\<system.Net >** Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="88807-120">**\<system.Net>** Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/network/index.md) | <span data-ttu-id="88807-121">Alle Elemente in der netzwerkeinstellungsschema.</span><span class="sxs-lookup"><span data-stu-id="88807-121">All elements in the network settings schema.</span></span> |
+| [<span data-ttu-id="88807-122">**\<cryptographySettings>** Settings Schema</span><span class="sxs-lookup"><span data-stu-id="88807-122">**\<cryptographySettings>** Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | <span data-ttu-id="88807-123">Alle Elemente im Schema für Kryptografieeinstellungen.</span><span class="sxs-lookup"><span data-stu-id="88807-123">All elements in the crypto settings schema.</span></span> |
+| [<span data-ttu-id="88807-124">**\<Konfiguration >** Schema für Konfigurationsabschnitte</span><span class="sxs-lookup"><span data-stu-id="88807-124">**\<configuration>** Sections Schema</span></span>](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | <span data-ttu-id="88807-125">Alle Elemente in den Einstellungen des Konfigurationsschemas-Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="88807-125">All elements in the configuration section settings schema.</span></span> |
+| [<span data-ttu-id="88807-126">Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="88807-126">Trace and Debug Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | <span data-ttu-id="88807-127">Alle Elemente im Einstellungsschema für Ablaufverfolgung und Debuggen.</span><span class="sxs-lookup"><span data-stu-id="88807-127">All elements in the trace and debug settings schema.</span></span> |
+| <span data-ttu-id="88807-128">[Einstellungen für die ASP.NET-Konfigurationsschema](https://msdn.microsoft.com/library/b5ysx397(v=vs.100).aspx)</span><span class="sxs-lookup"><span data-stu-id="88807-128">[ASP.NET Configuration Settings Schema](https://msdn.microsoft.com/library/b5ysx397(v=vs.100).aspx)</span></span> | <span data-ttu-id="88807-129">Alle Elemente in die ASP.NET-Konfigurationsschema, die Elemente für die Konfiguration von ASP.NET-Websites und-Anwendungen enthält.</span><span class="sxs-lookup"><span data-stu-id="88807-129">All elements in the ASP.NET configuration schema, which includes elements for configuring ASP.NET Web sites and applications.</span></span> <span data-ttu-id="88807-130">Verwendet *"Web.config"* Dateien.</span><span class="sxs-lookup"><span data-stu-id="88807-130">Used in *Web.config* files.</span></span> |
+| [<span data-ttu-id="88807-131">**\<webServices>** Settings Schema</span><span class="sxs-lookup"><span data-stu-id="88807-131">**\<webServices>** Settings Schema</span></span>](https://msdn.microsoft.com/f84d6d55-1add-4eb7-ae46-33df5833ea2e) | <span data-ttu-id="88807-132">Alle Elemente in das Einstellungsschema für Webdienste.</span><span class="sxs-lookup"><span data-stu-id="88807-132">All elements in the Web services settings schema.</span></span> |
+| [<span data-ttu-id="88807-133">Web Settings Schema (Schema für Webeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="88807-133">Web Settings Schema</span></span>](~/docs/framework/configure-apps/file-schema/web/index.md) | <span data-ttu-id="88807-134">Alle Elemente im Webeinstellungsschema, das Elemente für die Konfiguration von ASP.NET mit einer Hostanwendung wie IIS enthält.</span><span class="sxs-lookup"><span data-stu-id="88807-134">All elements in the Web settings schema, which includes elements for configuring how ASP.NET works with a host application such as IIS.</span></span> <span data-ttu-id="88807-135">Verwendet *aspnet.config* Dateien.</span><span class="sxs-lookup"><span data-stu-id="88807-135">Used in *aspnet.config* files.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="1f341-136">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1f341-136">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="88807-136">Hinweise</span><span class="sxs-lookup"><span data-stu-id="88807-136">Remarks</span></span>
 
-<span data-ttu-id="1f341-137">Jede der Konfigurationsdateien muss genau einen enthalten  **\<Configuration >** Element.</span><span class="sxs-lookup"><span data-stu-id="1f341-137">Each configuration file must contain exactly one **\<configuration>** element.</span></span>
+<span data-ttu-id="88807-137">Jede der Konfigurationsdateien muss genau einen enthalten  **\<Configuration >** Element.</span><span class="sxs-lookup"><span data-stu-id="88807-137">Each configuration file must contain exactly one **\<configuration>** element.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1f341-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1f341-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="88807-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="88807-138">See also</span></span>
 
-- [<span data-ttu-id="1f341-139">Konfigurationsdateischema für .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1f341-139">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="88807-139">Konfigurationsdateischema für .NET Framework</span><span class="sxs-lookup"><span data-stu-id="88807-139">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
