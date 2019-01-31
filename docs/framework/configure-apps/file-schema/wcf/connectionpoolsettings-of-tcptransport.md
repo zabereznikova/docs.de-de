@@ -1,15 +1,15 @@
 ---
-title: '&lt;connectionPoolSettings&gt; von &lt;tcpTransport&gt;'
+title: <connectionPoolSettings> von <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 188a71a0c270f5c0b28c22fb72b19e94376c5f1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4828357f392089be14ee04bc672acce0c0973300
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732062"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55269262"
 ---
-# <a name="ltconnectionpoolsettingsgt-of-lttcptransportgt"></a>&lt;connectionPoolSettings&gt; von &lt;tcpTransport&gt;
+# <a name="connectionpoolsettings-of-tcptransport"></a>\<ConnectionPoolSettings > von \<TcpTransport >
 Gibt zusätzliche Verbindungspooleinstellungen für einen TCP-Transport an.  
   
  \<system.serviceModel>  

@@ -1,27 +1,27 @@
 ---
-title: '&lt;workflowInstanceQuery&gt; von WCF'
+title: <workflowInstanceQuery> von WCF
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 01867171941db82260d28b0825bdf3453e46e66c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 726d4db3bad9f57663790e2bb4e081faba28f1ef
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148174"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278771"
 ---
-# <a name="ltworkflowinstancequerygt-of-wcf"></a>&lt;workflowInstanceQuery&gt; von WCF
+# <a name="workflowinstancequery-of-wcf"></a>\<WorkflowInstanceQuery > von WCF
 
 Stellt eine Abfrage dar, die Änderungen im Lebenszyklus einer Workflowinstanz nachverfolgt, beispielsweise ein gestartetes oder abgeschlossenes Ereignis.  
   
 Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
-\<Nachverfolgen von >  
-\<Profile >  
+\<tracking>  
+\<profiles>  
 \<trackingProfile>  
-\<Workflow >  
+\<workflow>  
 \<workflowInstanceQueries>  
-\<WorkflowInstanceQuery >  
+\<workflowInstanceQuery>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,7 +55,7 @@ Keine
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Status >](states-of-wcf-workflowinstancequery.md)|Eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz bei der Erstellung von Nachverfolgungsdatensätzen.|  
+|[\<states>](states-of-wcf-workflowinstancequery.md)|Eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz bei der Erstellung von Nachverfolgungsdatensätzen.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

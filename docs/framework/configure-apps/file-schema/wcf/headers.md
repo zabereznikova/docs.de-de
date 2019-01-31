@@ -1,15 +1,15 @@
 ---
-title: '&lt;headers&gt;'
+title: <headers>
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: f47462ba63b9bd8868420ee9d3a320ba18c83c65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c3c3a3d747a1338e2db3afa92c735af4a588642
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557824"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288027"
 ---
-# <a name="ltheadersgt"></a>&lt;headers&gt;
+# <a name="headers"></a>\<headers>
 Ein Endpunkt kann neben seinem Basis-URI von einem oder mehreren SOAP-Headern adressiert werden. Dies ist beispielsweise in SOAP-Vermittlerszenarien nützlich, in denen ein Endpunkt es erfordert, dass seine Clients SOAP-Header einfügen, die sich an Vermittler richten. Dieses Konfigurationselement kann verwendet werden, um solche benutzerdefinierten Adressheader zu definieren. Einträge in der Endpunktheader-Auflistung sind benutzerdefinierte XML-Elemente. Jedes Element muss ein wohlgeformtes XML-Element sein.  
   
  \<system.ServiceModel>  
