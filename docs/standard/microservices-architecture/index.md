@@ -3,19 +3,19 @@ title: .NET-Microservices. .NET-Microservices-Architektur für .NET-Containeranw
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Microservices sind modulare und unabhängig bereitstellbare Dienste. Docker-Container (für Linux und Windows) vereinfachen die Bereitstellung und das Testen, indem ein Dienst und seine Abhängigkeiten zu einer einzigen Einheit gebündelt werden, die dann in einer isolierten Umgebung ausgeführt wird.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 08/31/2018
-ms.openlocfilehash: 52435c31e77e7139b982829ae4ab33a5e0f9f045
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 6b75485d34b90b4807e82f629bbb05979add8eea
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030437"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479944"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET-Microservices: .NET-Microservices-Architektur für .NET-Containeranwendungen
 
 ![Bucheinband](./media/cover-small.png)
 
-**EDITION v2.1.03**: auf ASP.NET Core 2.1 aktualisiert
+**EDITION v2.2.00:** auf ASP.NET Core 2.2 aktualisiert
 
 Dieser Leitfaden ist eine Einführung in das Entwickeln von auf Microservices basierenden Anwendung und das Verwalten derselben mithilfe von Containern. Er erläutert das Architekturdesign und Implementierungsansätze mithilfe von .NET Core und Docker-Containern. 
 
@@ -49,7 +49,7 @@ Der nächste Schritt nach dem Durcharbeiten dieses Leitfadens ist der, mehr übe
 
 ## <a name="version"></a>Version
 
-Dieser Leitfaden wurde für die Version **.NET Core 2.1** überarbeitet und weist viele weitere Aktualisierungen auf, die sich auf die gleiche „Welle“ von Technologien beziehen (also Azure und ergänzende Technologien von Drittanbietern), die zeitlich mit .NET Core 2.1 zusammenfallen. Aus diesem Grund wurde auch die Versionsnummer des Buchs auf Version **2.1** aktualisiert. 
+Dieser Leitfaden wurde für die Version **.NET Core 2.2** überarbeitet und weist viele weitere Aktualisierungen auf, die sich auf die gleiche „Generation“ von Technologien beziehen (also Azure und ergänzende Technologien von Drittanbietern), die zeitlich mit .NET Core 2.2 zusammenfallen. Aus diesem Grund wurde auch die Versionsnummer des Buchs auf Version **2.2** aktualisiert. 
 
 ## <a name="what-this-guide-does-not-cover"></a>Was in diesem Leitfaden nicht behandelt wird
 
@@ -124,6 +124,8 @@ Teilnehmer und Prüfer:
 >
 > **Scott Hunter**, Partner Director von PM, .NET-Team, Microsoft
 >
+> **Nish Anil**, Senior Program Manager, .NET-Team, Microsoft
+>
 > **Dylan Reisenberger**, Architekt und Entwicklungsleiter bei Polly
 >
 > **Steve Smith**, Softwarespezialist & Trainer bei ASPSmith Ltd.
@@ -147,7 +149,6 @@ Teilnehmer und Prüfer:
 > **Charles Lowell**, Softwareentwickler, VS CAT-Team, Microsoft
 >
 > **Miguel Veloso**, leitender Berater bei Turing Challenge
-
 
 ## <a name="copyright"></a>Copyright
 
