@@ -1,5 +1,5 @@
 ---
-title: '&#39;&lt;Klassenname&gt; &#39; ist nicht CLS-kompatibel, da die Schnittstelle &#39; &lt;Schnittstellenname&gt; &#39; er implementiert ist nicht CLS-kompatibel.'
+title: <classname> ist nicht CLS-kompatibel, da die <interfacename>-Schnittstelle, von der geerbt wird, nicht CLS-kompatibel ist
 ms.date: 07/20/2015
 f1_keywords:
 - bc40029
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-ms.openlocfilehash: 4dda0e16a94f43cdb3deeff16fabdd1b10b62526
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6743a0decebb9711a4e44d09b03fe32f88ff2f72
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588493"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55283477"
 ---
-# <a name="39ltclassnamegt39-is-not-cls-compliant-because-the-interface-39ltinterfacenamegt39-it-implements-is-not-cls-compliant"></a>&#39;&lt;Klassenname&gt; &#39; ist nicht CLS-kompatibel, da die Schnittstelle &#39; &lt;Schnittstellenname&gt; &#39; er implementiert ist nicht CLS-kompatibel.
+# <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>"\<Klassenname >' ist nicht CLS-kompatibel, da die Schnittstelle"\<Schnittstellenname >' Es implementiert ist nicht CLS-kompatibel
 Eine Klasse oder Schnittstelle wird als `<CLSCompliant(True)>` gekennzeichnet, wenn sie von einem Typ abgeleitet ist oder einen Typ implementiert, der als `<CLSCompliant(False)>` oder gar nicht gekennzeichnet ist.  
   
  Für eine Klasse oder Schnittstelle einhalten der [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS), ihre gesamte Vererbungshierarchie kompatibel sein muss. Das bedeutet, dass jeder Typ, von dem sie direkt oder indirekt erbt, kompatibel sein muss. Analog dazu muss eine Klasse, wenn sie eine oder mehrere Schnittstellen implementiert, deren Kompatibilität durch alle Vererbungshierarchien sicherstellen.  

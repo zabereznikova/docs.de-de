@@ -1,5 +1,5 @@
 ---
-title: Namespace oder Typ angegeben werden, in die Importe &#39; &lt;qualifizierterelementname&gt; &#39; &#39;t enthält keine öffentlichen Member oder wurde nicht gefunden
+title: Der in Imports '<qualifiedelementname>' angegebene Namespace oder Typ enthält keine öffentlichen Member oder kann nicht gefunden werden
 ms.date: 07/20/2015
 f1_keywords:
 - bc40056
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-ms.openlocfilehash: 21c0794fb4ed6104204fba5d49e37394eff24865
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19a769b33b3b63b7f431b73841f49632e41f9e6
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552137"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288274"
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace oder Typ angegeben werden, in die Importe &#39; &lt;qualifizierterelementname&gt; &#39; &#39;t enthält keine öffentlichen Member oder wurde nicht gefunden
+# <a name="namespace-or-type-specified-in-the-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace oder Typ angegeben werden, in Imports'\<qualifizierter_elementname >' enthält keine öffentlichen Member oder wurde nicht gefunden
 Namespace oder Typ angegeben werden, in Imports'\<qualifizierter_elementname >' enthält keine öffentlichen Member oder wurde nicht gefunden. Stellen Sie sicher, dass der Namespace oder der Typ definiert ist und mindestens einen öffentliches Member enthält. Stellen Sie sicher, dass der Aliasname keine andere Aliase enthält.  
   
  Ein `Imports` Anweisung gibt ein enthaltendes Element, das entweder nicht gefunden werden kann, oder keine definiert `Public` Member.  

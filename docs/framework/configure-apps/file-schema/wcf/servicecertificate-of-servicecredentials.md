@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceCertificate&gt; von &lt;serviceCredentials&gt;'
+title: <serviceCertificate> von <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: 6718804005d21cfdb75c27e417cb106aa05d79ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd2d59218ce40639ac04aa7c5cc157fe37eb9937
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556323"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55276691"
 ---
-# <a name="ltservicecertificategt-of-ltservicecredentialsgt"></a>&lt;serviceCertificate&gt; von &lt;serviceCredentials&gt;
+# <a name="servicecertificate-of-servicecredentials"></a>\<ServiceCertificate > von \<ServiceCredentials >
 Geben Sie ein X.509-Zertifikat an, mit dem der Dienst gegenüber Clients im Nachrichtensicherheitsmodus authentifiziert wird.  
   
  \<system.ServiceModel>  

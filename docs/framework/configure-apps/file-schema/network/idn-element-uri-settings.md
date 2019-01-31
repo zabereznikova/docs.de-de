@@ -1,15 +1,15 @@
 ---
-title: '&lt;IDN&gt; -Elements (Netzwerkeinstellungen)'
+title: <idn>-Element (Uri-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 21950beeefb23e81066623534774148e1f5d92ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6abbc70e16a6c9ff8e4a7b52df7a7c3d74c7498a
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580737"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55288911"
 ---
-# <a name="ltidngt-element-uri-settings"></a>&lt;IDN&gt; -Elements (Netzwerkeinstellungen)
+# <a name="idn-element-uri-settings"></a>\<IDN >-Element (Netzwerkeinstellungen)
 Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domänennamen angewendet wird.  
   
 ## <a name="schema-hierarchy"></a>Schemahierarchie  

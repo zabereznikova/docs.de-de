@@ -1,18 +1,18 @@
 ---
-title: '&lt;ApplicationPool&gt; -Element (Webeinstellungen)'
+title: <applicationPool>-Element (Webeinstellungen)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 3f2e325a05242a028c5bcda3a44a38e7bda77e1b
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: b1afd6227444828c58b6dbb44de24fe82af9f8b2
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084002"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55271979"
 ---
-# <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;ApplicationPool&gt; -Element (Webeinstellungen)
+# <a name="applicationpool-element-web-settings"></a>\<ApplicationPool >-Element (Webeinstellungen)
 Gibt Konfigurationseinstellungen an, die von ASP.NET verwendet werden, um prozessübergreifende Verhalten zu verwalten, wenn eine ASP.NET-Anwendung im integrierten Modus ausgeführt wird, auf [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] oder eine höhere Version.  
   
 > [!IMPORTANT]

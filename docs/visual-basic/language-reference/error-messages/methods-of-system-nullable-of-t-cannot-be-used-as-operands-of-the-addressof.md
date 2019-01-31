@@ -1,5 +1,5 @@
 ---
-title: Methoden der &#39;"System.Nullable (Of T)"&#39; kann nicht als Operanden verwendet werden die &#39;AddressOf&#39; Operator
+title: Methoden von „System.Nullable(Of T)“ können nicht als Operanden des Operators „AddressOf“ verwendet werden
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32126
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: c3e34e79f2e91bb55bb2e053ae3e59fd42c4250c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59e89b24eca6a034dc1df2216f6f0d68e8191a18
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655321"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55278559"
 ---
-# <a name="methods-of-39systemnullableof-t39-cannot-be-used-as-operands-of-the-39addressof39-operator"></a>Methoden der &#39;"System.Nullable (Of T)"&#39; kann nicht als Operanden verwendet werden die &#39;AddressOf&#39; Operator
+# <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>Methoden von „System.Nullable(Of T)“ können nicht als Operanden des Operators „AddressOf“ verwendet werden
 Eine Anweisung verwendet die `AddressOf` -Operator mit einem Operanden, eine Prozedur darstellt. die <xref:System.Nullable%601> Struktur.  
   
  **Fehler-ID:** BC32126  

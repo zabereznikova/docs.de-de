@@ -1,5 +1,5 @@
 ---
-title: XML-Namespace-URI &#39; &lt;Uri&gt; &#39; kann nur für gebunden werden &#39;Xmlns&#39;
+title: XML-Namespace-URI '<uri>"nur an 'Xmlns' gebunden werden kann.
 ms.date: 07/20/2015
 f1_keywords:
 - bc31183
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
-ms.openlocfilehash: 42d89530355a1372e83fbdcfe4c94bfe4db5fd3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd5e67d573176a6b1a011b3191fca9607af85538
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687517"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55279876"
 ---
-# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a>XML-Namespace-URI `http://www.w3.org/XML/1998/namespace`; kann nur für gebunden werden &#39;Xmlns&#39;
+# <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-xmlns"></a>XML-Namespace-URI `http://www.w3.org/XML/1998/namespace`; nur an 'Xmlns' gebunden werden kann.
 Der URI `http://www.w3.org/XML/1998/namespace` wird in eine XML-Namespacedeklaration verwendet. Dieser URI ist ein reservierter Namespace und kann nicht in eine XML-Namespacedeklaration enthalten sein.  
   
  **Fehler-ID:** BC31183  

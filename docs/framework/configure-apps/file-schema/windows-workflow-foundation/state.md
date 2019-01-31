@@ -1,16 +1,16 @@
 ---
-title: '&lt;state&gt;'
+title: <state>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 619414f2-61c2-4427-9977-d05009e343db
-ms.openlocfilehash: 8e381671d9282218a4e5bf0ae979bec79c7cfe78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38b0522b93c051473d7cdc28ae955cc3b7b58efe
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523050"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287234"
 ---
-# <a name="ltstategt"></a>&lt;state&gt;
+# <a name="state"></a>\<state>
 Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz dar.  
   
  Weitere Informationen zu überwachungsprofilabfragen finden Sie unter [Überwachungsprofile](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  

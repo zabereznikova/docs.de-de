@@ -1,15 +1,15 @@
 ---
-title: '&lt;add&gt; von &lt;protocolMapping&gt;'
+title: <add> von <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: ce970b9ef71e2a28de680926f96f83500948619b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18b50ec2d848bc6bb920fb8f630ac7703654b286
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632815"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55280734"
 ---
-# <a name="ltaddgt-of-ltprotocolmappinggt"></a>&lt;add&gt; von &lt;protocolMapping&gt;
+# <a name="add-of-protocolmapping"></a>\<Hinzufügen > der \<ProtocolMapping >
 Stellt eine standardprotokollzuordnung zwischen einem transportprotokollschema (z. B. http, net.tcp, net.pipe usw.) und einer Windows Communication Foundation (WCF)-Bindung dar. Beim Erstellen von Standardendpunkten zur Laufzeit wird WCF untersucht die konfigurierten Zuordnungen und entscheidet, auf die Bindung für die Verwendung für eine bestimmte Adresse basiert.  
   
  \<system.serviceModel>  

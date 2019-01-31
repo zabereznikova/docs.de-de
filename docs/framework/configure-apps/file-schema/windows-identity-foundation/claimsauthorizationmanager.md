@@ -1,21 +1,21 @@
 ---
-title: '&lt;"claimsauthorizationmanager"&gt;'
+title: <claimsAuthorizationManager>
 ms.date: 03/30/2017
 ms.assetid: 9354eee3-f692-4ad6-8427-3169686b8bcc
 author: BrucePerlerMS
-ms.openlocfilehash: a745339cffdada56a9b7f27f3f879b9d437c2da2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 59d47eda97e97629408ece12a1d1dfbe804feb3e
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195553"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55268094"
 ---
-# <a name="ltclaimsauthorizationmanagergt"></a>&lt;"claimsauthorizationmanager"&gt;
+# <a name="claimsauthorizationmanager"></a>\<claimsAuthorizationManager>
 Registriert einen anspruchsautorisierungs-Manager für die eingehenden Ansprüche.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
-\<"claimsauthorizationmanager" >  
+\<claimsAuthorizationManager>  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ Registriert einen anspruchsautorisierungs-Manager für die eingehenden Ansprüch
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<IdentityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Gibt die identitätseinstellungen der Servicelevel.|  
+|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Gibt die identitätseinstellungen der Servicelevel.|  
   
 ## <a name="remarks"></a>Hinweise  
  Das Standardverhalten durch die <xref:System.Security.Claims.ClaimsAuthorizationManager> Klasse immer autorisiert die eingehenden Ansprüche. Wenn kein `type` -Attribut angegeben ist oder wenn die `type` -Attribut gibt an, die <xref:System.Security.Claims.ClaimsAuthorizationManager> -Klasse, die `<claimsAuthorizationManager>` Element nimmt keine untergeordneten Elemente. Können Sie angeben, die `type` Attribut, um einen Typ registrieren, abgeleitet aus den <xref:System.Security.Claims.ClaimsAuthorizationManager> Klasse, um benutzerdefiniertes Verhalten zu implementieren. Abgeleitete Klassen können die Konfiguration über untergeordnete Elemente des unterstützen die `<claimsAuthorizationManager>` Element durch das Überschreiben der <xref:System.Security.Claims.ClaimsAuthorizationManager.LoadCustomConfiguration%2A> Methode, um diese Elemente zu verarbeiten. Das Schema für die untergeordneten Elemente definiert ist, bis zu den Designer der-Klasse.  
