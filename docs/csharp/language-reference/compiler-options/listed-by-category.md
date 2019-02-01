@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 891e5eac249f4bd22b6eadde7509de2d07cd1576
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7403b42a48413d28808b49542727c2f07d0ad026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527186"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54546987"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C#-Compileroptionen nach Kategorien sortiert
 
@@ -95,7 +95,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[-codepage](codepage-compiler-option.md)|Gibt die für alle Quellcodedateien in der Kompilierung die zu verwendende Codepage an.|
 |[-help](help-compiler-option.md)|Listet Compileroptionen in „stdout“ auf.|
 |[-highentropyva](highentropyva-compiler-option.md)|Gibt an, dass die ausführbare Datei Address Space Layout Randomization (ASLR) unterstützt.|
-|[-langversion](langversion-compiler-option.md)|Gibt die Sprachversion an: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 oder die aktuelle. |
+|[-langversion](langversion-compiler-option.md)|Sprachversion angeben: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 oder Latest |
 |[-main](main-compiler-option.md)|Gibt den Speicherort der **Main**-Methode an.|
 |[-noconfig](noconfig-compiler-option.md)|Weist den Compiler an, nicht mit „csc.rsp“ zu kompilieren.|
 |[-nologo](nologo-compiler-option.md)|Unterdrückt Compilerbannerinformationen.|
@@ -104,7 +104,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[/unsafe](unsafe-compiler-option.md)|Aktiviert die Kompilierung von Code, der das Schlüsselwort [unsafe](../../../csharp/language-reference/keywords/unsafe.md) verwendet.|
 |[-utf8output](utf8output-compiler-option.md)|Zeigt die Compilerausgabe mit UTF-8-Codierung an.|
 |-parallel[+|-]|Gibt an, ob parallele Builds (+) verwendet werden sollen.|
-|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte sind SHA1 (Standard) oder SHA256.|
+|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte: SHA-1 (Standard) oder SHA-256.|
 
 ## <a name="obsolete-options"></a>Veraltete Optionen
 
@@ -114,6 +114,6 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](index.md)  
-- [C#-Compileroptionen alphabetisch sortiert](listed-alphabetically.md)  
-- [Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [C#-Compileroptionen](index.md)
+- [C#-Compileroptionen alphabetisch sortiert](listed-alphabetically.md)
+- [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

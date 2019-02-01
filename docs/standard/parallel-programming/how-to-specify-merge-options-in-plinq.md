@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Angeben von Mergeoptionen in PLINQ'
+title: 'Vorgehensweise: Angeben von Mergeoptionen in PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8914d3c443971f73e6f3fa366c26567bae60dbe1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 87079337ae3cea81dbb4aab13ec2043b74498d9a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189462"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54573571"
 ---
-# <a name="how-to-specify-merge-options-in-plinq"></a>Gewusst wie: Angeben von Mergeoptionen in PLINQ
+# <a name="how-to-specify-merge-options-in-plinq"></a>Vorgehensweise: Angeben von Mergeoptionen in PLINQ
 Dieses Beispiel zeigt, wie Mergeoptionen angegeben werden, die für alle nachfolgenden Operatoren in einer PLINQ-Abfrage angewendet werden. Sie müssen nicht explizit Mergeoptionen festlegen, aber dies könnte die Leistung verbessert. Weitere Informationen zu Mergeoptionen finden Sie unter [Mergeoptionen in PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
 > [!WARNING]
@@ -33,5 +33,5 @@ Dieses Beispiel zeigt, wie Mergeoptionen angegeben werden, die für alle nachfol
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Linq.ParallelMergeOptions>  
+- <xref:System.Linq.ParallelMergeOptions>
 - [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

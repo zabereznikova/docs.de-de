@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 2b19b6d29d0117d4822f370dcc9abc840a18ad3d
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 763d1106a289e4aa6530eb07971d6ffb7e6095b9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982749"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54527847"
 ---
 # <a name="listening-with-sockets"></a>Überwachen mit Sockets
 Listener oder Serversockets öffnen einen Port auf dem Netzwerk und warten dann darauf, dass ein Client eine Verbindung zu diesem Port herstellt. Obwohl andere Netzwerkadressfamilien und -protokolle vorhanden sind, zeigt dieses Beispiel, wie ein Remotedienst für ein TCP/IP-Netzwerk erstellt wird.  
@@ -59,9 +59,9 @@ listener.Listen(100);
   
  Die **Listener**-Methode verwendet einen einzigen Parameter, der angibt, wie viele ausstehende Verbindungen zum **Socket** zugelassen sind, bevor der Fehler „Server ausgelastet“ an den verbindenden Client zurückgegeben wird. In diesem Fall werden bis zu 100 Clients in der Verbindungswarteschlange platziert, bevor die Antwort „Server ausgelastet“ an den 101. Client zurückgegeben wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden eines synchronen Serversockets](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Verwenden eines asynchronen Serversockets](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Verwenden von Clientsockets](../../../docs/framework/network-programming/using-client-sockets.md)  
- [Vorgehensweise: Erstellen eines Sockets](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
- [Sockets](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Siehe auch
+- [Verwenden eines synchronen Serversockets](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [Verwenden eines asynchronen Serversockets](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
+- [Verwenden von Clientsockets](../../../docs/framework/network-programming/using-client-sockets.md)
+- [Vorgehensweise: Erstellen eines Sockets](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+- [Sockets](../../../docs/framework/network-programming/sockets.md)

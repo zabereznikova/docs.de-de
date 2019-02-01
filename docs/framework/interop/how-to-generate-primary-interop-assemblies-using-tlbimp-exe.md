@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Generieren primärer Interop-Assemblys mit "Tlbimp.exe"'
+title: 'Vorgehensweise: Generieren primärer Interopassemblys mit „Tlbimp.exe“'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74c196c0f6525214e2ea25e6506e9c89f4e48906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d6ef2e11efe858c03d1cf4e7167ae856ec4d690a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389992"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596136"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Gewusst wie: Generieren primärer Interop-Assemblys mit "Tlbimp.exe"
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Vorgehensweise: Generieren primärer Interopassemblys mit „Tlbimp.exe“
 Es gibt zwei Möglichkeiten, eine primäre Interop-Assembly zu generieren:  
   
 -   Verwenden von [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), das im [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] bereitgestellt wird.  
@@ -67,5 +67,5 @@ tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /o
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst wie: Registrieren primärer Interop-Assemblys](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Registrieren primärer Interopassemblys](../../../docs/framework/interop/how-to-register-primary-interop-assemblies.md)

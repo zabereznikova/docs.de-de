@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Behandeln von Ausnahmen in parallelen Schleifen'
+title: 'Vorgehensweise: Behandeln von Ausnahmen in parallelen Schleifen'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf311ad2b79e615f5c3097686035e7bbfbc49c9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ef883f37587948871b222ca03a4032bea2109bf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47210213"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54711420"
 ---
-# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Gewusst wie: Behandeln von Ausnahmen in parallelen Schleifen
+# <a name="how-to-handle-exceptions-in-parallel-loops"></a>Vorgehensweise: Behandeln von Ausnahmen in parallelen Schleifen
 Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>- und <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>-Überladungen verfügen über keinen speziellen Mechanismus zur Behandlung von Ausnahmen, die möglicherweise ausgelöst werden. In dieser Hinsicht ähneln sie regulären `for`- und `foreach`-Schleifen (`For` und `For Each` in Visual Basic). Eine nicht behandelte Ausnahme bewirkt, dass die Schleife sofort beendet wird.  
   
  Wenn Sie Parallelschleifen eigene Logik zur Ausnahmebehandlung hinzufügen, behandeln Sie den Fall, in dem ähnliche Ausnahmen in mehreren Threads gleichzeitig ausgelöst werden können, sowie den Fall, in dem eine in einem Thread ausgelöste Ausnahme bewirkt, dass eine andere Ausnahme in einem anderen Thread ausgelöst wird. Sie können beide Fälle behandeln, indem Sie alle Ausnahmen der Schleife in einer <xref:System.AggregateException?displayProperty=nameWithType> umschließen. Im folgenden Beispiel wird ein möglicher Ansatz gezeigt.  
@@ -33,5 +33,5 @@ Die <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>- 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Lambdaausdrücke in PLINQ und TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

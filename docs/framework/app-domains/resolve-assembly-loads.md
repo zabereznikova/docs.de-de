@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdd610ade931bedc9ee387b65b18efd1909ef58b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a93052cba4693e63b3cb702a5ab8f6e15a8d8dec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202210"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54684488"
 ---
 # <a name="resolving-assembly-loads"></a>Auflösen beim Laden von Assemblys
 .NET Framework stellt das Ereignis <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> für Anwendungen bereit, die eine erhöhte Steuerung des Ladens von Assemblys erfordern. Durch das Behandeln dieses Ereignisses kann Ihre Anwendung eine Assembly außerhalb der Prüfpfade in einen Kontext laden, vor dem Laden zwischen verschiedenen Assemblyversionen wählen, eine dynamische Assembly ausgeben und diese zurückgeben und so weiter. In diesem Thema erhalten Sie eine Anleitung zum Behandeln des Ereignisses <xref:System.AppDomain.AssemblyResolve>.  
@@ -72,7 +72,7 @@ ms.locfileid: "50202210"
  Die erste Regeln beim Behandeln des Ereignis <xref:System.AppDomain.AssemblyResolve> ist, dass Sie nie versuchen sollten, eine Assembly zurückzugeben, die Sie nicht erkennen. Wenn Sie den Handler schreiben, sollten Sie wissen, welche Assemblys das Ereignis auslösen können. Ihr Handler sollte für andere Assemblys NULL zurückgeben.  
   
 > [!IMPORTANT]
->  Ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] wird das Ereignis <xref:System.AppDomain.AssemblyResolve> für Satellitenassemblys ausgelöst. Diese Änderung betrifft Ereignishandler, die für eine frühere Version von .NET Framework geschrieben wurden, wenn diese versuchen, alle Ladeanforderungen von Assemblys aufzulösen. Ereignishandler, die Assemblys ignorieren, die sie nicht erkennen, sind von dieser Änderung nicht betroffen: Sie geben NULL zurück und folgen dann den üblichen Fallbackmechanismen.  
+>  Ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] wird das Ereignis <xref:System.AppDomain.AssemblyResolve> für Satellitenassemblys ausgelöst. Diese Änderung betrifft Ereignishandler, die für eine frühere Version von .NET Framework geschrieben wurden, wenn diese versuchen, alle Ladeanforderungen von Assemblys aufzulösen. Ereignishandler, die nicht erkannte Assemblys ignorieren, sind von dieser Änderung nicht betroffen: Sie geben NULL zurück. Danach wird auf die üblichen Fallbackmechanismen zurückgegriffen.  
   
  Beim Laden einer Assembly darf der Ereignishandler nicht die Methodenüberladungen <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> oder <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> verwendet, die dazu führen können, dass das Ereignis <xref:System.AppDomain.AssemblyResolve> rekursiv ausgelöst wird, da dies zu einem Stapelüberlauf führen kann. (Weitere Informationen finden Sie in der weiter oben in diesem Thema angegebenen Liste.) Dies geschieht auch, wenn Sie eine Ausnahmebehandlung für die Ladeanforderung bereitstellen, da keine Ausnahme ausgelöst wird, bis alle Ereignishandler etwas zurückgegeben haben. Deshalb führt der folgende Code zu einem Stapelüberlauf, wenn `MyAssembly` nicht gefunden werden kann:  
   
@@ -80,6 +80,6 @@ ms.locfileid: "50202210"
  [!code-csharp[AssemblyResolveRecursive#1](../../../samples/snippets/csharp/VS_Snippets_CLR/assemblyresolverecursive/cs/example.cs#1)]
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
-## <a name="see-also"></a>Siehe auch  
-- [Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>Siehe auch
+- [Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Verwenden von Anwendungsdomänen](../../../docs/framework/app-domains/use.md)

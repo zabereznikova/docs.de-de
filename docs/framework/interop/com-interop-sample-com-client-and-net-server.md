@@ -1,5 +1,5 @@
 ---
-title: 'COM-Interop-Beispiel: COM-Client und .NET-Server'
+title: 'COM-Interopbeispiel: COM-Client und .NET-Server'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26963a6dc057c979b43e9697ec7a85a60fd3932d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc2cd6b59fe7d05e4973d8a9ece13d9ae7f91e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389554"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54548546"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a>COM-Interop-Beispiel: COM-Client und .NET-Server
+# <a name="com-interop-sample-com-client-and-net-server"></a>COM-Interopbeispiel: COM-Client und .NET-Server
 Dieses Beispiel veranschaulicht die Interoperation zwischen einem [COM-Client](#cpconcominteropsamplecomclientnetserveranchor1) und einem [.NET-Server](#cpconcominteropsamplecomclientnetserveranchor2), die Hypothekenberechnungen ausführt. In diesem Beispiel erstellt der Client eine Instanz der verwalteten `Loan`-Klasse und ruft sie auf. Er übergibt vier Argumente (eine dieser vier ist gleich 0 (null)) an die Instanz und zeigt die Berechnungen. In diesem Abschnitt werden Codebeispiele aus diesem Beispiel angezeigt.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
@@ -389,5 +389,5 @@ namespace LoanLib {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
+## <a name="see-also"></a>Siehe auch
+- [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

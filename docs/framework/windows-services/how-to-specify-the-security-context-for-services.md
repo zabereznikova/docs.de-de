@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Angeben des Sicherheitskontexts für Dienste'
+title: 'Vorgehensweise: Angeben des Sicherheitskontexts für Dienste'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, security
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: a5a437af90f29bc601215176ad5c4fec702ddbc0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9adcb39504cc2b5189f0c65cc5603c149d1483f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036077"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54572616"
 ---
-# <a name="how-to-specify-the-security-context-for-services"></a>Gewusst wie: Angeben des Sicherheitskontexts für Dienste
+# <a name="how-to-specify-the-security-context-for-services"></a>Vorgehensweise: Angeben des Sicherheitskontexts für Dienste
 Standardmäßig werden Dienste in einem anderen Sicherheitskontext ausgeführt als dem des angemeldeten Benutzers. Dienste werden im Kontext des Standardsystemkontos, `LocalSystem`, ausgeführt, das ihnen andere Zugriffsberechtigungen für Systemressourcen erteilt als dem Benutzer. Sie können dieses Verhalten ändern und ein anderes Benutzerkonto angeben, unter dem Ihr Dienst ausgeführt werden sollte.  
   
  Der Sicherheitskontext lässt sich festlegen, indem Sie die Eigenschaft <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> für den Prozess bearbeiten, in dem der Dienst ausgeführt wird. Mit dieser Eigenschaft können Sie den Dienst auf einen von vier Kontotypen festlegen:  
@@ -35,7 +35,7 @@ Standardmäßig werden Dienste in einem anderen Sicherheitskontext ausgeführt a
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>Angeben des Sicherheitskontexts für einen Dienst  
   
-1.  Nachdem Sie den Dienst erstellt haben, fügen Sie die erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zu Ihrer Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Nachdem Sie den Dienst erstellt haben, fügen Sie die erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 2.  Greifen Sie im Designer auf die Klasse `ProjectInstaller` zu, und klicken Sie bei dem Prozess, mit dem Sie arbeiten, auf den Dienstprozessinstaller.  
   
@@ -44,7 +44,7 @@ Standardmäßig werden Dienste in einem anderen Sicherheitskontext ausgeführt a
   
 3.  Legen Sie im Fenster **Eigenschaften** <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> auf den entsprechenden Wert fest.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
- [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+- [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)

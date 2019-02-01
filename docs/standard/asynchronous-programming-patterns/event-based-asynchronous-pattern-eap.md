@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be4935d74affa227386aa6c63dad13e7e2f7d3dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 052773c615bcc4ddb5b735ae8164d44ed70bd935
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207455"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54513489"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Ereignisbasiertes asynchrones Muster (EAP)
 
@@ -37,13 +37,13 @@ Es gibt verschiedene Möglichkeiten, asynchrone Funktionen für Clientcode verf�
  [Deciding When to Implement the Event-based Asynchronous Pattern (Gründe für das Implementieren des ereignisbasierten asynchronen Musters)](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
  Beschreibt, wie Sie ermitteln, ob Sie das ereignisbasierte asynchrone Muster anstelle des <xref:System.IAsyncResult>-Musters implementieren sollen, das vom [Asynchronous Programming Model (APM) (Asynchrones Programmiermodell)](asynchronous-programming-model-apm.md) dargestellt wird
   
- [Gewusst wie: Implementieren einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt](component-that-supports-the-event-based-asynchronous-pattern.md)  
+ [Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen](component-that-supports-the-event-based-asynchronous-pattern.md)  
  Beschreibt das Erstellen einer Komponente, die das ereignisbasierte asynchrone Muster implementiert. Dieses Muster wird mithilfe von Hilfsklassen aus dem <xref:System.ComponentModel?displayProperty=nameWithType>-Namespace implementiert, was eine einwandfreie Funktionsweise der Komponente unter jedem beliebigen Anwendungsmodell gewährleistet.  
 
- [Gewusst wie: Implementieren eines Clients des ereignisbasierten asynchronen Musters](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
+ [Vorgehensweise: Implementieren eines Clients des ereignisbasierten asynchronen Musters](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
  Beschreibt das Erstellen eines Clients, der das ereignisbasierte asynchrone Muster implementiert.
   
- [How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ [Vorgehensweise: How to: Use Components That Support the Event-based Asynchronous Pattern (Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen)](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  Beschreibt die Verwendung einer Komponente, die das ereignisbasierte asynchrone Muster unterstützt.  
   
 ## <a name="reference"></a>Referenz
@@ -67,6 +67,6 @@ Es gibt verschiedene Möglichkeiten, asynchrone Funktionen für Clientcode verf�
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Empfohlene Vorgehensweise für das verwaltete Threading](../threading/managed-threading-best-practices.md)  
-- [Ereignisse](../events/index.md)  
+- [Empfohlene Vorgehensweise für das verwaltete Threading](../threading/managed-threading-best-practices.md)
+- [Ereignisse](../events/index.md)
 - [Asynchronous Programming Design Patterns (Entwurfsmuster für die asynchrone Programmierung)](index.md)

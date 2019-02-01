@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Löschen von Registrierungsschlüsseln in Visual Basic'
+title: 'Vorgehensweise: Löschen von Registrierungsschlüsseln in Visual Basic'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: 8a983436b8c7415f0d356d65ae7d6c5ffd1c2db5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 226dc22f42783bec11eb1ddc38f270477bb0fbab
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583850"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633962"
 ---
-# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Gewusst wie: Löschen von Registrierungsschlüsseln in Visual Basic
+# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Vorgehensweise: Löschen von Registrierungsschlüsseln in Visual Basic
 Die Methoden <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> und <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> können zum Löschen von Registrierungsschlüsseln verwendet werden.  
   
 ## <a name="procedure"></a>Prozedur  
@@ -45,9 +45,9 @@ Die Methoden <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> 
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Registrierungsaufrufe schlagen fehl, wenn die notwendigen Laufzeitberechtigungen fehlen (<xref:System.Security.Permissions.RegistryPermission>), oder wenn der Benutzer nicht über den korrekten Zugriff (wie von den ACLs angegeben) für das Erstellen von und Schreiben in Einstellungen verfügt. Beispielsweise besitzt eine lokale Anwendung, die die Sicherheitsberechtigung für den Codezugriff besitzt, möglicherweise keine Betriebssystemberechtigung.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>  
- <xref:Microsoft.Win32.RegistryKey>  
- [Sicherheit und die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
- [Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
+- <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
+- <xref:Microsoft.Win32.RegistryKey>
+- [Sicherheit und die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
+- [Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

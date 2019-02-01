@@ -2,12 +2,12 @@
 title: Quantifizierer-Vorgänge (C#)
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
-ms.openlocfilehash: 24c8f9a6b589592c26c8a514bc44ff9623a82d2f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 22d7b86a5935c7721b7ab13eea1252231d6ac095
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523104"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509213"
 ---
 # <a name="quantifier-operations-c"></a>Quantifizierer-Vorgänge (C#)
 Quantifizierer-Vorgänge geben einen <xref:System.Boolean>-Wert zurück, der angibt, ob einige oder alle Elemente in einer Sequenz eine Bedingung erfüllen.  
@@ -20,7 +20,7 @@ Quantifizierer-Vorgänge geben einen <xref:System.Boolean>-Wert zurück, der ang
   
 ## <a name="methods"></a>Methoden  
   
-|Methodenname|Beschreibung |C#-Abfrageausdruckssyntax|Weitere Informationen|  
+|Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Alle|Bestimmt, ob alle Elemente in einer Sequenz eine Bedingung erfüllen.|Nicht zutreffend.|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
 |Beliebig|Bestimmt, ob Elemente einer Sequenz eine Bedingung erfüllen.|Nicht zutreffend.|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
@@ -28,7 +28,7 @@ Quantifizierer-Vorgänge geben einen <xref:System.Boolean>-Wert zurück, der ang
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Linq>  
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [Gewusst wie: Dynamisches Festlegen von Prädikatfiltern zur Laufzeit](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)  
-- [How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (C#) (Vorgehensweise: Abfragen von Sätzen, die bestimmte Wörter enthalten (LINQ) (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
+- <xref:System.Linq>
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Vorgehensweise: Dynamisches Festlegen von Prädikatfiltern zur Laufzeit](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [Vorgehensweise: Abfragen von Sätzen, die bestimmte Wörter enthalten (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)

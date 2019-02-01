@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f5ab93ca5cf616bd4a29ab5d297af1f4550623b4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48266647"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606529"
 ---
 # <a name="application-domain-resource-monitoring"></a>Überwachung von Anwendungsdomänenressourcen
 Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (ARM) können die CPU- und Speicherauslastung pro Anwendungsdomäne überwachen. Dies ist nützlich für Hosts wie ASP.NET, die eine Vielzahl von Anwendungsdomänen in einem Prozess mit langer Ausführungsdauer verwenden. Der Host kann die Anwendungsdomäne einer Anwendung entladen, die sich negativ auf die Leistung des gesamten Prozesses auswirkt, jedoch nur, wenn er die problematische Anwendung ermitteln kann. Die ARM stellt Informationen bereit, die als Unterstützung bei solchen Entscheidungen herangezogen werden können.  
@@ -40,35 +40,35 @@ Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (ARM) können di
 ## <a name="using-arm"></a>Verwenden der ARM  
  Die ARM stellt die gesamte von einer Anwendungsdomäne in Anspruch genommene Prozessorzeit sowie drei Arten von Informationen zur Speicherauslastung bereit.  
   
--   **Gesamtprozessorzeit für eine Anwendungsdomäne in Sekunden**: Diese wird durch Addieren der Threadzeiten berechnet, die vom Betriebssystem für alle Threads gemeldet, die Zeit für die Ausführung in der Anwendungsdomäne während ihrer Lebensdauer aufgewendet haben. Blockierte Threads oder Threads im Ruhezustand nehmen keine Prozessorzeit in Anspruch. Wenn ein Thread nativen Code aufruft, ist die vom Thread für nativen Code aufgewendete Zeit im Wert für die Anwendungsdomäne enthalten, in der der Aufruf erfolgt ist.  
+-   **Gesamtprozessorzeit für eine Anwendungsdomäne in Sekunden:** Diese wird durch Addieren der Threadzeiten berechnet, die vom Betriebssystem für alle Threads gemeldet werden, die während ihrer Lebensdauer Zeit für die Ausführung in der Anwendungsdomäne aufgewendet haben. Blockierte Threads oder Threads im Ruhezustand nehmen keine Prozessorzeit in Anspruch. Wenn ein Thread nativen Code aufruft, ist die vom Thread für nativen Code aufgewendete Zeit im Wert für die Anwendungsdomäne enthalten, in der der Aufruf erfolgt ist.  
   
     -   Verwaltete API: Eigenschaft <xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>  
   
-    -   Hosting-API: Methode [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)  
+    -   Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentCpuTime](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)-Methode  
   
     -   ETW-Ereignisse: Ereignisse `ThreadCreated`, `ThreadAppDomainEnter` und `ThreadTerminated`. Informationen zu Anbietern und Schlüsselwörtern finden Sie im Artikel [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md) unter „ETW-Ereignisse der Anwendungsdomänen-Ressourcenüberwachung“.  
   
--   **Gesamtanzahl der durch eine Anwendungsdomäne während ihrer Lebensdauer vorgenommenen verwalteten Zuordnungen in Byte**: Die Gesamtanzahl der Zuordnungen spiegelt nicht immer die Speicherauslastung einer Anwendungsdomäne wider, da die zugeordneten Objekte kurzlebig sein können. Wenn eine Anwendung eine große Anzahl von Objekten zuordnet und freigibt, können die Kosten für die Zuordnungen beträchtlich sein.  
+-   **Gesamtanzahl der durch eine Anwendungsdomäne während ihrer Lebensdauer vorgenommenen verwalteten Zuordnungen in Byte:** Die Gesamtanzahl der Zuordnungen spiegelt nicht immer die Speicherauslastung einer Anwendungsdomäne wider, da die zugeordneten Objekte kurzlebig sein können. Wenn eine Anwendung eine große Anzahl von Objekten zuordnet und freigibt, können die Kosten für die Zuordnungen beträchtlich sein.  
   
     -   Verwaltete API: Eigenschaft <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType>  
   
-    -   Hosting-API: Methode [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)  
+    -   Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentAllocated](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)-Methode  
   
     -   ETW-Ereignisse: Ereignis `AppDomainMemAllocated`, Feld `Allocated`  
   
--   **Verwalteter Speicher in Byte, auf den durch eine Anwendungsdomäne verwiesen wird und der bei der letzten vollständigen blockierenden Auflistung beibehalten wurde**: Dieser Wert ist erst nach einer vollständigen blockierenden Auflistung präzise. (Dieser Vorgang stellt das Gegenteil zu gleichzeitigen Auflistungen dar, die im Hintergrund ausgeführt werden und die Anwendung nicht blockieren.) Die Methodenüberladung <xref:System.GC.Collect?displayProperty=nameWithType> führt beispielsweise zu einer vollständigen blockierenden Auflistung.  
+-   **Verwalteter Speicher in Byte, auf den durch eine Anwendungsdomäne verwiesen wird und der bei der letzten vollständigen blockierenden Collection beibehalten wurde:** Dieser Wert ist erst nach einer vollständigen blockierenden Collection präzise. (Dieser Vorgang stellt das Gegenteil zu gleichzeitigen Auflistungen dar, die im Hintergrund ausgeführt werden und die Anwendung nicht blockieren.) Die Methodenüberladung <xref:System.GC.Collect?displayProperty=nameWithType> führt beispielsweise zu einer vollständigen blockierenden Auflistung.  
   
     -   Verwaltete API: Eigenschaft <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>  
   
-    -   Hosting-API: Methode [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), Parameter `pAppDomainBytesSurvived`  
+    -   Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)-Methode mit dem Parameter `pAppDomainBytesSurvived`  
   
     -   ETW-Ereignisse: Ereignis `AppDomainMemSurvived`, Feld `Survived`  
   
--   **Gesamtmenge des verwalteten Speichers in Byte, auf den durch den Prozess verwiesen wird und der nach der letzten vollständigen blockierenden Auflistung beibehalten wurde**: Der beibehaltene Speicher für einzelne Anwendungsdomänen kann mit diesem Wert verglichen werden.  
+-   **Gesamter verwalteter Speicher in Byte, auf den vom Prozess verwiesen wird und der bei der letzten vollständigen blockierenden Collection beibehalten wurde:** Der Speicher, der für einzelne Anwendungsdomänen beibehalten wird, kann mit dieser Zahl verglichen werden.  
   
     -   Verwaltete API: Eigenschaft <xref:System.AppDomain.MonitoringSurvivedProcessMemorySize%2A?displayProperty=nameWithType>  
   
-    -   Hosting-API: Methode [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md), Parameter `pTotalBytesSurvived`  
+    -   Hosting-API: [ICLRAppDomainResourceMonitor::GetCurrentSurvived](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)-Methode mit dem Parameter `pTotalBytesSurvived`  
   
     -   ETW-Ereignisse: Ereignis `AppDomainMemSurvived`, Feld `ProcessSurvived`  
   
@@ -85,7 +85,7 @@ Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (ARM) können di
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
-- [ICLRAppDomainResourceMonitor-Schnittstelle](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
-- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
+- [ICLRAppDomainResourceMonitor-Schnittstelle](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
 - [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

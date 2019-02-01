@@ -2,12 +2,12 @@
 title: Sortieren von Daten (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 6a7f687895385bfb77d2a1e3e785742a794bb1b6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: dfa0a4a030cab8ec33c90d8edaef0d6070755034
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45749578"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54721976"
 ---
 # <a name="sorting-data-c"></a>Sortieren von Daten (C#)
 Bei einem Sortiervorgang werden die Elemente einer Sequenz auf Grundlage eines oder mehrerer Attribute sortiert. Mit dem ersten Sortierkriterium wird eine primäre Sortierung der Elemente ausgeführt. Sie können die Elemente innerhalb jeder primären Sortiergruppe sortieren, indem Sie ein zweites Sortierkriterium angeben.  
@@ -20,7 +20,7 @@ Bei einem Sortiervorgang werden die Elemente einer Sequenz auf Grundlage eines o
   
 ## <a name="methods"></a>Methoden  
   
-|Methodenname|Beschreibung |C#-Abfrageausdruckssyntax|Weitere Informationen|  
+|Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OrderBy|Sortiert Werte in aufsteigender Reihenfolge|`orderby`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|  
 |OrderByDescending|Sortiert Werte in absteigender Reihenfolge|`orderby … descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|  
@@ -128,8 +128,8 @@ foreach (string str in query)
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Linq>  
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [orderby-Klausel](../../../../csharp/language-reference/keywords/orderby-clause.md)  
-- [Gewusst wie: Sortieren der Ergebnisse einer Join-Klausel](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+- <xref:System.Linq>
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [orderby-Klausel](../../../../csharp/language-reference/keywords/orderby-clause.md)
+- [Vorgehensweise: Sortieren der Ergebnisse einer Join-Klausel](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
 - [Vorgehensweise: Sortieren oder Filtern von Textdaten nach einem beliebigen Wort oder Feld (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

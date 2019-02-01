@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0618e9853eea2f4aa6e6a5dfd11b571cb3d7b123
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1074abf9784bc26086c85f78047baa98e9c6dee7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397175"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54506718"
 ---
 # <a name="standard-numeric-format-strings"></a>Standardmäßige Zahlenformatzeichenfolgen
 
@@ -49,22 +49,22 @@ Standardmäßige Zahlenformatzeichenfolgen werden von Folgendem unterstützt:
 - [Interpolierten Zeichenfolgen](../../csharp/language-reference/tokens/interpolated.md) in C# und Visual Basic, die im Vergleich zu Zeichenfolgen im kombinierten Format eine vereinfachte Syntax bereitstellen.
  
 > [!TIP]
->  Sie können das [Formatting Utility](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d) herunterladen, eine Anwendung, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können.  
+>  Sie können das [Formatting Utility](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)herunterladen, eine Anwendung, mit der Sie Formatzeichenfolgen auf numerische Werte oder Datums- und Zeitwerte anwenden und die Ergebniszeichenfolge anzeigen können.  
   
 <a name="table"></a> Die folgenden Tabelle beschreibt die standardmäßigen Zahlenformatbezeichner und zeigt eine Beispielausgabe an, die von den einzelnen Formatbezeichnern erstellt wird. Weitere Informationen über das Verwenden von standardmäßigen Zahlenformatzeichenfolgen finden Sie im Abschnitt [Hinweise](#NotesStandardFormatting). Der Abschnitt [Beispiel](#example) enthält eine umfassende Abbildung ihrer Verwendung.  
   
-|Formatbezeichner|name|Beschreibung |Beispiele|  
+|Formatbezeichner|name|Beschreibung|Beispiele|  
 |----------------------|----------|-----------------|--------------|  
-|"C" oder "c"|Währung|Ergebnis: Währungswert.<br /><br /> Unterstützt von: Alle numerischen Typen.<br /><br /> Genauigkeitsangabe: Anzahl der Dezimalstellen.<br /><br /> Standardmäßige Genauigkeitsangabe: Definiert von <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Weitere Informationen finden Sie unter [Der Währungsformatbezeichner "C"](#CFormatString).|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
-|"D" oder "d"|Decimal|Ergebnis: Ganzzahlige Ziffern mit optionalem Minuszeichen.<br /><br /> Unterstützt von: Nur ganzzahlige Typen.<br /><br /> Genauigkeitsangabe: Mindestanzahl von Ziffern.<br /><br /> Standardmäßige Genauigkeitsangabe: Mindestanzahl von erforderlichen Ziffern.<br /><br /> Weitere Informationen finden Sie unter [Der Dezimalformatbezeichner "D"](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
-|"E" oder "e"|Exponential (wissenschaftlich)|Ergebnis: Exponentialschreibweise.<br /><br /> Unterstützt von: Alle numerischen Typen.<br /><br /> Genauigkeitsangabe: Anzahl der Dezimalstellen.<br /><br /> Standardmäßige Genauigkeitsangabe: 6.<br /><br /> Weitere Informationen finden Sie unter [Der Exponentialformatbezeichner "E"](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|  
-|"F" oder "f"|Festkomma|Ergebnis: Ganze Zahlen und Dezimalzahlen mit optionalem Minuszeichen.<br /><br /> Unterstützt von: Alle numerischen Typen.<br /><br /> Genauigkeitsangabe: Anzahl der Dezimalstellen.<br /><br /> Standardmäßige Genauigkeitsangabe: Definiert von <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Weitere Informationen finden Sie unter [Der Festkommaformatbezeichner "F"](#FFormatString).|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
-|"G" oder "g"|Allgemein|Ergebnis: Die kompaktere Festkomma- oder wissenschaftliche Schreibweise.<br /><br /> Unterstützt von: Alle numerischen Typen.<br /><br /> Genauigkeitsangabe: Anzahl der signifikanten Stellen.<br /><br /> Standardmäßige Genauigkeitsangabe: Abhängig vom numerischen Typ.<br /><br /> Weitere Informationen finden Sie unter [Der allgemeine Formatbezeichner "G"](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
-|"N" oder "n"|Anzahl|Ergebnis: Ganze Zahlen und Dezimalzahlen, Gruppentrennzeichen und ein Dezimaltrennzeichen mit optionalem Minuszeichen.<br /><br /> Unterstützt von: Alle numerischen Typen.<br /><br /> Genauigkeitsangabe: gewünschte Anzahl der Dezimalstellen.<br /><br /> Standardmäßige Genauigkeitsangabe: Definiert von <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Weitere Informationen finden Sie unter [Der numerische Formatbezeichner "N"](#NFormatString).|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
-|"P" oder "p"|Prozent|Ergebnis: Die Zahl multipliziert mit 100 und mit einem Prozentzeichen versehen.<br /><br /> Unterstützt von: Alle numerischen Typen.<br /><br /> Genauigkeitsangabe: gewünschte Anzahl der Dezimalstellen.<br /><br /> Standardmäßiger Genauigkeitsspezifizierer: Definiert von <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Weitere Informationen finden Sie unter [Der Prozentformatbezeichner "P"](#PFormatString).|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
-|"R" oder "r"|Schleife|Ergebnis: Eine Zeichenfolge, die eine Schleife zu einem identischen Wert ausführen kann.<br /><br /> Unterstützt von: <xref:System.Single>, <xref:System.Double> und <xref:System.Numerics.BigInteger>.<br /><br /> Hinweis: Wird ausschließlich für den Typ <xref:System.Numerics.BigInteger> empfohlen. Verwenden Sie für <xref:System.Double>-Typen „G17“ und für <xref:System.Single>-Typen „G9“. </br> Genauigkeitsangabe: Wird ignoriert.<br /><br /> Weitere Informationen finden Sie unter [Der Schleifenformatbezeichner "R"](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
-|"X" oder "x"|Hexadezimal|Ergebnis: Eine Hexadezimalzeichenfolge.<br /><br /> Unterstützt von: Nur ganzzahlige Typen.<br /><br /> Genauigkeitsangabe: Anzahl von Ziffern in der Ergebniszeichenfolge.<br /><br /> Weitere Informationen finden Sie unter [Der Hexadezimal-Formatbezeichner "X"](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
-|Jedes andere einzelne Zeichen|Unbekannter Bezeichner|Ergebnis: Löst zur Laufzeit eine <xref:System.FormatException> aus.||  
+|"C" oder "c"|Währung|Ergebnis:  Ein Währungswert<br /><br /> Unterstützt von: allen numerischen Typen<br /><br /> Genauigkeitsspezifizierer: Anzahl der Dezimalstellen<br /><br /> Standardgenauigkeitsspezifizierer: wird von <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> definiert<br /><br /> Weitere Informationen: [Der Währungsformatspezifizierer „C“](#CFormatString)|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en-US) -> ($123.456)<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
+|"D" oder "d"|Decimal|Ergebnis:  Ganzzahlige Ziffern mit optionalem Minuszeichen<br /><br /> Unterstützt von: ausschließlich integralen Typen<br /><br /> Genauigkeitsspezifizierer: Mindestanzahl von Ziffern<br /><br /> Standardgenauigkeitsspezifizierer: Mindestanzahl von erforderlichen Ziffern<br /><br /> Weitere Informationen: [Der Dezimalformatspezifizierer „D“](#DFormatString)|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
+|"E" oder "e"|Exponential (wissenschaftlich)|Ergebnis:  Exponentialschreibweise<br /><br /> Unterstützt von: allen numerischen Typen<br /><br /> Genauigkeitsspezifizierer: Anzahl der Dezimalstellen<br /><br /> Standardgenauigkeitsspezifizierer: 6.<br /><br /> Weitere Informationen: [Der Exponentialformatspezifizierer „E“](#EFormatString)|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|  
+|"F" oder "f"|Festkomma|Ergebnis:  Ganzzahlen und Dezimalzahlen mit optionalem Minuszeichen<br /><br /> Unterstützt von: allen numerischen Typen<br /><br /> Genauigkeitsspezifizierer: Anzahl der Dezimalstellen<br /><br /> Standardgenauigkeitsspezifizierer: wird von <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> definiert<br /><br /> Weitere Informationen: [Der Festkommaformatspezifizierer „F“](#FFormatString)|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|  
+|"G" oder "g"|Allgemein|Ergebnis:  Die kompaktere Festkomma- oder wissenschaftliche Schreibweise.<br /><br /> Unterstützt von: allen numerischen Typen<br /><br /> Genauigkeitsspezifizierer: Anzahl der signifikanten Ziffern.<br /><br /> Standardgenauigkeitsspezifizierer: abhängig vom numerischen Typ<br /><br /> Weitere Informationen: [Der allgemeine Formatspezifizierer „G“](#GFormatString)|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
+|"N" oder "n"|Anzahl|Ergebnis:  Ganzzahlen und Dezimalzahlen, Gruppentrennzeichen und ein Dezimaltrennzeichen mit optionalem Minuszeichen<br /><br /> Unterstützt von: allen numerischen Typen<br /><br /> Genauigkeitsspezifizierer: gewünschte Anzahl der Dezimalstellen<br /><br /> Standardgenauigkeitsspezifizierer: wird von <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> definiert<br /><br /> Weitere Informationen: [Der numerische Formatspezifizierer „N“](#NFormatString)|1234.567 ("N", en-US) -> 1,234.57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1", en-US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1234.56 ("N3", en-US) -> -1,234.560<br /><br /> -1234.56 ("N3", ru-RU) -> -1 234,560|  
+|"P" oder "p"|Prozent|Ergebnis:  Die Zahl multipliziert mit 100 und mit einem Prozentzeichen versehen<br /><br /> Unterstützt von: allen numerischen Typen<br /><br /> Genauigkeitsspezifizierer: gewünschte Anzahl der Dezimalstellen<br /><br /> Standardgenauigkeitsspezifizierer: wird von <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> definiert<br /><br /> Weitere Informationen: [Der Prozentformatspezifizierer „P“](#PFormatString)|1 ("P", en-US) -> 100.00 %<br /><br /> 1 ("P", fr-FR) -> 100,00 %<br /><br /> -0.39678 ("P1", en-US) -> -39.7 %<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
+|"R" oder "r"|Schleife|Ergebnis:  Eine Zeichenfolge, die eine Schleife zu einem identischen Wert ausführen kann<br /><br /> Unterstützt von: <xref:System.Single>, <xref:System.Double> und <xref:System.Numerics.BigInteger>.<br /><br /> Hinweis: Wird ausschließlich für den Typ <xref:System.Numerics.BigInteger> empfohlen. Verwenden Sie für <xref:System.Double>-Typen „G17“ und für <xref:System.Single>-Typen „G9“. </br> Genauigkeitsspezifizierer: Ignoriert.<br /><br /> Weitere Informationen: [Der Roundtripformatspezifizierer „R“](#RFormatString)|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|"X" oder "x"|Hexadezimal|Ergebnis:  Eine hexadezimale Zeichenfolge<br /><br /> Unterstützt von: ausschließlich integralen Typen<br /><br /> Genauigkeitsspezifizierer: Anzahl von Ziffern in der Ergebniszeichenfolge<br /><br /> Weitere Informationen: [Der Hexadezimalformatspezifizierer „X“](#XFormatString)|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
+|Jedes andere einzelne Zeichen|Unbekannter Bezeichner|Ergebnis:  Löst zur Laufzeit eine <xref:System.FormatException>-Ausnahme aus.||  
   
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>Verwenden von numerischen Standardformatzeichenfolgen  
@@ -103,7 +103,7 @@ Eine numerische Standardformatzeichenfolge kann verwendet werden, um die Formati
   
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern.  
   
-|NumberFormatInfo-Eigenschaft|Beschreibung |  
+|NumberFormatInfo-Eigenschaft|Beschreibung|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Definiert die Platzierung des Währungssymbols für positive Werte.|  
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Definiert die Platzierung des Währungssymbols für negative Werte und gibt an, ob das Minuszeichen durch Klammern oder durch die <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>-Eigenschaft dargestellt wird.|  
@@ -130,7 +130,7 @@ Eine numerische Standardformatzeichenfolge kann verwendet werden, um die Formati
   
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. Wie die folgende Tabelle zeigt, wirkt sich eine einzelne Eigenschaft auf die Formatierung der Ergebniszeichenfolge aus.  
   
-|NumberFormatInfo-Eigenschaft|Beschreibung |  
+|NumberFormatInfo-Eigenschaft|Beschreibung|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl negativ ist.|  
   
@@ -152,7 +152,7 @@ Eine numerische Standardformatzeichenfolge kann verwendet werden, um die Formati
   
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern.  
   
-|NumberFormatInfo-Eigenschaft|Beschreibung |  
+|NumberFormatInfo-Eigenschaft|Beschreibung|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl sowohl für den Koeffizienten als auch für den Exponenten negativ ist.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die die ganzzahlige Ziffer von Dezimalstellen im Koeffizienten trennt.|  
@@ -174,7 +174,7 @@ Eine numerische Standardformatzeichenfolge kann verwendet werden, um die Formati
   
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabelle sind die Eigenschaften des <xref:System.Globalization.NumberFormatInfo>-Objekts aufgeführt, die die Formatierung der Ergebniszeichenfolge steuern.  
   
-|NumberFormatInfo-Eigenschaft|Beschreibung |  
+|NumberFormatInfo-Eigenschaft|Beschreibung|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl negativ ist.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die ganze Zahlen von Dezimalzahlen trennt.|  
@@ -219,7 +219,7 @@ Bei Verwendung mit einem <xref:System.Single>-Wert stellt der Formatbezeichner �
 
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabellen sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der Ergebniszeichenfolge steuern.  
   
-|NumberFormatInfo-Eigenschaft|Beschreibung |  
+|NumberFormatInfo-Eigenschaft|Beschreibung|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl negativ ist.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die ganze Zahlen von Dezimalzahlen trennt.|  
@@ -239,7 +239,7 @@ Bei Verwendung mit einem <xref:System.Single>-Wert stellt der Formatbezeichner �
   
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabellen sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der Ergebniszeichenfolge steuern.  
   
-|NumberFormatInfo-Eigenschaft|Beschreibung |  
+|NumberFormatInfo-Eigenschaft|Beschreibung|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl negativ ist.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Definiert das Format von negativen Werten und gibt an, ob das Minuszeichen durch Klammern oder durch die <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>-Eigenschaft dargestellt wird.|  
@@ -262,7 +262,7 @@ Bei Verwendung mit einem <xref:System.Single>-Wert stellt der Formatbezeichner �
   
  In der folgenden Tabelle sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der zurückgegebenen Zeichenfolge steuern.  
   
-|NumberFormatInfo-Eigenschaft|Beschreibung |  
+|NumberFormatInfo-Eigenschaft|Beschreibung|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|Definiert die Platzierung des Prozentsymbols für positive Werte.|  
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|Definiert die Platzierung des Prozentsymbols sowie des Minuszeichens für negative Werte.|  
@@ -292,7 +292,7 @@ Bei <xref:System.Double>-Werten kann der Formatbezeichner „R“ in einigen Fä
  Eine Genauigkeitsangabe kann zwar vorhanden sein, sie wird jedoch ignoriert. Bei diesem Bezeichner hat die Rückkonvertierbarkeit höhere Priorität als die Genauigkeit.    
  Die Ergebniszeichenfolge wird von den Formatierungsinformationen des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst. In der folgenden Tabellen sind die <xref:System.Globalization.NumberFormatInfo>-Eigenschaften aufgeführt, die die Formatierung der Ergebniszeichenfolge steuern.  
   
-|NumberFormatInfo-Eigenschaft|Beschreibung |  
+|NumberFormatInfo-Eigenschaft|Beschreibung|  
 |-------------------------------|-----------------|  
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Definiert die Zeichenfolge, die angibt, dass eine Zahl negativ ist.|  
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Definiert die Zeichenfolge, die ganze Zahlen von Dezimalzahlen trennt.|  
@@ -336,7 +336,7 @@ Bei <xref:System.Double>-Werten kann der Formatbezeichner „R“ in einigen Fä
 ### <a name="control-panel-settings"></a>Einstellungen der Systemsteuerung  
  Die Einstellungen der **Regions- und Sprachoptionen** in der Systemsteuerung beeinflussen die durch einen Formatierungsvorgang erstellte Ergebniszeichenfolge. Mithilfe dieser Einstellungen wird das <xref:System.Globalization.NumberFormatInfo>-Objekt initialisiert, das der aktuellen Threadkultur zugeordnet ist. Sie stellt Werte zur Steuerung der Formatierung bereit. Auf Computern mit anderen Einstellungen werden andere Ergebniszeichenfolgen generiert.  
   
- Wenn der <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>-Konstruktor verwendet wird, um ein neues <xref:System.Globalization.CultureInfo>-Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo>-Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo>-Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.  
+ Wenn der <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>-Konstruktor verwendet wird, um ein neues <xref:System.Globalization.CultureInfo>-Objekt zu instanziieren, das dieselbe Kultur repräsentiert wie die aktuelle Systemkultur, werden darüber hinaus alle Anpassungen, die über die Einstellung **Regions- und Sprachoptionen** in der Systemsteuerung eingerichtet werden, auf das neue <xref:System.Globalization.CultureInfo>-Objekt angewendet. Sie können den <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> -Konstruktor verwenden, um ein <xref:System.Globalization.CultureInfo> -Objekt zu erstellen, das die Anpassungen eines Systems nicht wiedergibt.  
   
 ### <a name="numberformatinfo-properties"></a>NumberFormatInfo-Eigenschaften  
  Die Formatierung wird durch die Eigenschaften des aktuellen <xref:System.Globalization.NumberFormatInfo>-Objekts beeinflusst, das implizit durch die aktuelle Threadkultur oder explizit durch den <xref:System.IFormatProvider>-Parameter der Methode bereitgestellt wird, die die Formatierung aufruft. Geben Sie ein <xref:System.Globalization.NumberFormatInfo>-Objekt oder ein <xref:System.Globalization.CultureInfo>-Objekt für diesen Parameter an.  
@@ -361,9 +361,9 @@ Bei <xref:System.Double>-Werten kann der Formatbezeichner „R“ in einigen Fä
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Globalization.NumberFormatInfo>  
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
-- [Vorgehensweise: Auffüllen einer Zahl mit führenden Nullen](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
-- [Beispiel: .NET Framework 4-Hilfsprogramm zur Formatierung](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
+- <xref:System.Globalization.NumberFormatInfo>
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
+- [Vorgehensweise: Auffüllen einer Zahl mit führenden Nullen](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
+- [Beispiel: .NET Framework 4-Hilfsprogramm zur Formatierung](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
 - [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)

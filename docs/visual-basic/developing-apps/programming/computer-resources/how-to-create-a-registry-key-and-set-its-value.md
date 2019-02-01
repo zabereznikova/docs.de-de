@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen von Registrierungsschlüsseln und Festlegen von deren Werten in Visual Basic'
+title: 'Vorgehensweise: Erstellen von Registrierungsschlüsseln und Festlegen von deren Werten in Visual Basic'
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 4f74d41aa8055e26f5a707829449ddd310ff576f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b41d05a1394e009541bed47fa4d2d8ccadd4bb4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54585941"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Gewusst wie: Erstellen von Registrierungsschlüsseln und Festlegen von deren Werten in Visual Basic
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Vorgehensweise: Erstellen von Registrierungsschlüsseln und Festlegen von deren Werten in Visual Basic
 Die `CreateSubKey`-Methode des `My.Computer.Registry`-Objekts kann verwendet werden, um einen Registrierungsschlüssel zu erstellen.  
   
 ## <a name="procedure"></a>Prozedur  
@@ -70,9 +70,9 @@ Die `CreateSubKey`-Methode des `My.Computer.Registry`-Objekts kann verwendet wer
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Die Assembly benötigt zum Ausführen dieses Prozesses eine von der <xref:System.Security.Permissions.RegistryPermission>-Klasse gewährte Berechtigungsebene. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Ebenso muss der Benutzer die richtigen Zugriffssteuerungslisten zum Erstellen von oder Schreiben auf Einstellungen verfügen. Beispielsweise besitzt eine lokale Anwendung, die die Sicherheitsberechtigung für den Codezugriff besitzt, möglicherweise keine Betriebssystemberechtigung. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../../../framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
- [Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
- [Grundlagen der Codezugriffssicherheit](../../../../framework/misc/code-access-security-basics.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>
+- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>
+- [Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+- [Grundlagen der Codezugriffssicherheit](../../../../framework/misc/code-access-security-basics.md)

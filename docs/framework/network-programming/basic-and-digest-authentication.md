@@ -19,15 +19,15 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: db39bdcaf2c3a4457028e30f9458a5626aa7e795
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2c764909514eac74cb930df055cdb846bab7b249
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50190670"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54502925"
 ---
 # <a name="basic-and-digest-authentication"></a>Standard- und Digestauthentifizierung
-Die <xref:System.Net>-Implementierung der Standard- und Digestauthentifizierung entspricht der RFC2617 – HTTP-Authentifizierung: Standard- und Digestauthentifizierung (verfügbar auf der Website des [World Wide Web Consortium (W3C)](https://www.w3.org)).  
+Die <xref:System.Net>-Implementierung der einfachen und Digestauthentifizierung entspricht dem Dokument zur HTTP-Authentifizierung RCF 2617: „Basic and Digest Authentication“ (Einfache und Digestauthentifizierung), das auf der Website des [World Wide Web Consortium](https://www.w3.org) zum Download zur Verfügung steht.  
   
  Um Standard- und Digestauthentifizierung zu verwenden, muss eine Anwendung einen Benutzernamen und ein Kennwort in der <xref:System.Net.WebRequest.Credentials%2A>-Eigenschaft des <xref:System.Net.WebRequest>-Objekts bereitstellen, das zur Anforderung von Daten aus dem Internet verwendet wird, wie im folgenden Beispiel gezeigt.  
   
@@ -46,6 +46,6 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 > [!CAUTION]
 >  Mittels Standard- und Hashwertauthentifizierung gesendete Daten sind nicht verschlüsselt und daher für Angreifer sichtbar. Anmeldeinformationen für die Standardauthentifizierung (Benutzername und Kennwort) werden zudem in Klartext gesendet und können abgefangen werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [NTLM- und Kerberos-Authentifizierung](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
- [Internet Authentication (Internetauthentifizierung)](../../../docs/framework/network-programming/internet-authentication.md)
+## <a name="see-also"></a>Siehe auch
+- [NTLM- und Kerberos-Authentifizierung](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
+- [Internet Authentication (Internetauthentifizierung)](../../../docs/framework/network-programming/internet-authentication.md)

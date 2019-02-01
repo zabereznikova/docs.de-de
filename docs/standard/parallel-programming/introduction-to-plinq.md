@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54601bc705a8684508563ecf0682d84bcac8713f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cf9b842243cd7b9ae244688b0da348f63b68f08a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492038"
 ---
 # <a name="introduction-to-plinq"></a>Einführung in PLINQ
 ## <a name="what-is-a-parallel-query"></a>Was ist eine parallele-Abfrage?  
@@ -37,7 +37,7 @@ ms.locfileid: "43879753"
   
  Zusätzlich zu den Standardabfrageoperatoren enthält die <xref:System.Linq.ParallelEnumerable>-Klasse einen Satz von Methoden, die spezielle Verhaltensweisen für die parallele Ausführung unterstützen. Diese PLINQ-spezifischen Methoden sind in der folgenden Tabelle aufgeführt.  
   
-|ParallelEnumerable-Operator|Beschreibung |  
+|ParallelEnumerable-Operator|Beschreibung|  
 |---------------------------------|-----------------|  
 |<xref:System.Linq.ParallelEnumerable.AsParallel%2A>|Der Einstiegspunkt für PLINQ. Gibt an, dass der Rest der Abfrage nach Möglichkeit parallelisiert werden soll.|  
 |<xref:System.Linq.ParallelEnumerable.AsSequential%2A>|Gibt an, dass der Rest der Abfrage sequenziell, als nicht parallele LINQ-Abfrage ausgeführt werden soll.|  
@@ -59,7 +59,7 @@ ms.locfileid: "43879753"
  Die <xref:System.Linq.ParallelEnumerable.AsParallel%2A>-Erweiterungsmethode bindet die nachfolgenden Abfrageoperatoren, in diesem Fall, `where` und `select`, an die <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>-Implementierungen.  
   
 ## <a name="execution-modes"></a>Ausführungsmodi  
- Standardmäßig wird PLINQ konservativ ausgeführt. Die PLINQ-Infrastruktur analysiert zur Laufzeit die Gesamtstruktur der Abfrage. Wenn die Abfrage voraussichtlich durch eine Parallelisierung beschleunigt werden kann, partitioniert PLINQ die Quellsequenz in Aufgaben, die gleichzeitig ausgeführt werden können. Kann eine Abfrage nicht sicher parallelisiert werden, führt PLINQ die Abfrage sequenziell aus. Wenn PLINQ die Wahl zwischen einem potenziell rechenintensiven parallelen Algorithmus und einem einfachen sequenziellen Algorithmus hat, entscheidet es sich standardmäßig für den sequenziellen Algorithmus. Mit der <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>-Methode und der <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType>-Enumeration können Sie PLINQ anweisen, den parallelen Algorithmus auszuwählen. Dies ist sinnvoll, wenn Sie aufgrund von Tests und Messungen wissen, dass eine bestimmte Abfrage im parallelen Modus schneller ausgeführt wird. Weitere Informationen finden Sie unter [How to: Specify the Execution Mode in PLINQ (Vorgehensweise: Angeben des Ausführungsmodus in PLINQ)](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
+ Standardmäßig wird PLINQ konservativ ausgeführt. Die PLINQ-Infrastruktur analysiert zur Laufzeit die Gesamtstruktur der Abfrage. Wenn die Abfrage voraussichtlich durch eine Parallelisierung beschleunigt werden kann, partitioniert PLINQ die Quellsequenz in Aufgaben, die gleichzeitig ausgeführt werden können. Kann eine Abfrage nicht sicher parallelisiert werden, führt PLINQ die Abfrage sequenziell aus. Wenn PLINQ die Wahl zwischen einem potenziell rechenintensiven parallelen Algorithmus und einem einfachen sequenziellen Algorithmus hat, entscheidet es sich standardmäßig für den sequenziellen Algorithmus. Mit der <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>-Methode und der <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType>-Enumeration können Sie PLINQ anweisen, den parallelen Algorithmus auszuwählen. Dies ist sinnvoll, wenn Sie aufgrund von Tests und Messungen wissen, dass eine bestimmte Abfrage im parallelen Modus schneller ausgeführt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben des Ausführungsmodus in PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
   
 ## <a name="degree-of-parallelism"></a>Grad der Parallelität  
  Standardmäßig verwendet PLINQ alle Prozessoren des Hostcomputers. Mit der <xref:System.Linq.ParallelEnumerable.WithDegreeOfParallelism%2A>-Methode können Sie PLINQ anweisen, nicht mehr als eine angegebene Anzahl von Prozessoren zu verwenden. Sie können so sicherstellen, dass andere auf dem Computer ausgeführt Prozesse eine bestimmte Menge an CPU-Zeit erhalten. Der folgende Codeausschnitt beschränkt die Abfrage auf maximal zwei Prozessoren.  
@@ -80,7 +80,7 @@ ms.locfileid: "43879753"
  Weitere Informationen finden Sie unter [Order Preservation in PLINQ (Beibehaltung der Reihenfolge in PLINQ)](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).  
   
 ## <a name="parallel-vs-sequential-queries"></a>Parallele und sequenzielle Abfragen  
- Einige Vorgänge erfordern, dass die Quelldaten sequenziell übergeben werden. Die <xref:System.Linq.ParallelEnumerable>-Abfrageoperatoren stellen automatisch den sequenziellen Modus wieder her, wenn dies erforderlich ist. Für benutzerdefinierte Abfrageoperatoren und Benutzerdelegaten, die eine sequenzielle Ausführung erfordern, stellt PLINQ die <xref:System.Linq.ParallelEnumerable.AsSequential%2A>-Methode bereit. Bei Verwendung von <xref:System.Linq.ParallelEnumerable.AsSequential%2A> werden alle nachfolgenden Operatoren in der Abfrage sequenziell ausgeführt, bis <xref:System.Linq.ParallelEnumerable.AsParallel%2A> erneut aufgerufen wird. Weitere Informationen finden Sie unter [How to: Combine Parallel and Sequential LINQ Queries (Vorgehensweise: Kombinieren von parallelen und sequenziellen LINQ-Abfragen)](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md).  
+ Einige Vorgänge erfordern, dass die Quelldaten sequenziell übergeben werden. Die <xref:System.Linq.ParallelEnumerable>-Abfrageoperatoren stellen automatisch den sequenziellen Modus wieder her, wenn dies erforderlich ist. Für benutzerdefinierte Abfrageoperatoren und Benutzerdelegaten, die eine sequenzielle Ausführung erfordern, stellt PLINQ die <xref:System.Linq.ParallelEnumerable.AsSequential%2A>-Methode bereit. Bei Verwendung von <xref:System.Linq.ParallelEnumerable.AsSequential%2A> werden alle nachfolgenden Operatoren in der Abfrage sequenziell ausgeführt, bis <xref:System.Linq.ParallelEnumerable.AsParallel%2A> erneut aufgerufen wird. Weitere Informationen finden Sie unter [Vorgehensweise: Kombinieren von parallelen und sequenziellen LINQ-Abfragen](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md).  
   
 ## <a name="options-for-merging-query-results"></a>Optionen für das Zusammenführen von Abfrageergebnissen  
  Wenn eine PLINQ-Abfrage parallel ausgeführt wird, müssen die Ergebnisse aller Arbeitsthreads wieder im Hauptthread zusammengeführt werden, damit sie in einer `foreach`-Schleife (`For Each` in Visual Basics) verwendet oder in eine Liste bzw. ein Array eingefügt werden können. In einigen Fällen ist es hilfreich, eine bestimmte Art von Merge anzugeben, z. B. um Ergebnisse schneller zu erzeugen. Zu diesem Zweck unterstützt PLINQ die <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A>-Methode und die <xref:System.Linq.ParallelMergeOptions>-Enumeration. Weitere Informationen finden Sie unter [Merge Options in PLINQ (Zusammenführungsoptionen in PLINQ)](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
@@ -100,14 +100,14 @@ ms.locfileid: "43879753"
   
  Es ist möglich, dass eine PLINQ-Abfrage nach dem Festlegen des Abbruchtokens weiterhin einige Elemente verarbeitet.  
   
- Um kürzere Reaktionszeiten zu erzielen, können Sie auch auf Abbruchanforderungen in Benutzerdelegaten mit langer Laufzeit reagieren. Weitere Informationen finden Sie unter [How to: Cancel a PLINQ Query (Vorgehensweise: Abbrechen einer PLINQ-Abfrage)](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
+ Um kürzere Reaktionszeiten zu erzielen, können Sie auch auf Abbruchanforderungen in Benutzerdelegaten mit langer Laufzeit reagieren. Weitere Informationen finden Sie unter [Vorgehensweise: Abbrechen einer PLINQ-Abfrage](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
 ## <a name="exceptions"></a>Ausnahmen  
  Bei der Ausführung einer PLINQ-Abfrage können mehrere Ausnahmen von verschiedenen Threads gleichzeitig ausgelöst werden. Zudem kann sich der Code für die Behandlung einer Ausnahme in einem anderen Thread befinden als der Code, der die Ausnahme ausgelöst hat. PLINQ kapselt alle Ausnahmen, die von einer Abfrage ausgelöst wurden, mithilfe des <xref:System.AggregateException>-Typs und marshallt diese Ausnahmen zurück an den aufrufenden Thread. Im aufrufenden Thread ist nur ein try/catch-Block erforderlich. Sie können jedoch alle Ausnahmen durchlaufen, die in <xref:System.AggregateException> gekapselt sind, und die Ausnahmen erfassen, die Sie sicher beheben können. In seltenen Fällen können Ausnahmen ausgelöst werden, die nicht in einer <xref:System.AggregateException> eingeschlossen sind. <xref:System.Threading.ThreadAbortException>s sind ebenfalls nicht eingeschlossen.  
   
  Wenn Ausnahmen mittels Bubbling wieder an den Verbindungsthread übergeben werden können, ist es möglich, dass eine Abfrage nach dem Auslösen der Ausnahme weiterhin einige Elemente verarbeitet.  
   
- Weitere Informationen finden Sie unter [How to: Handle Exceptions in a PLINQ Query (Vorgehensweise: Behandeln von Ausnahmen in einer PLINQ-Abfrage)](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+ Weitere Informationen finden Sie unter [Vorgehensweise: Behandeln von Ausnahmen in einer PLINQ-Abfrage](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="custom-partitioners"></a>Benutzerdefinierte Partitionierer  
  Sie können die Abfrageleistung teilweise erhöhen, indem Sie einen benutzerdefinierten Partitionierer schreiben, der bestimmte Merkmale der Quelldaten nutzt. In der Abfrage ist der benutzerdefinierte Partitionierer das auflistbare Objekt, das abgefragt wird.  
@@ -118,9 +118,9 @@ ms.locfileid: "43879753"
  PLINQ unterstützt eine feste Anzahl von Partitionen (auch wenn die Daten während der Laufzeit diesen Partitionen dynamisch neu zugeordnet werden können, um einen Lastenausgleich zu gewährleisten). <xref:System.Threading.Tasks.Parallel.For%2A> und <xref:System.Threading.Tasks.Parallel.ForEach%2A> unterstützen nur die dynamische Partitionierung, d. h. die Anzahl der Partitionen ändert sich zur Laufzeit. Weitere Informationen finden Sie unter [Custom Partitioners for PLINQ and TPL (Benutzerdefinierte Partitionierer für PLINQ und TPL)](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="measuring-plinq-performance"></a>Messen der PLINQ-Leistung  
- In vielen Fällen kann eine Abfrage parallelisiert werden, der mit dem Einrichten der parallelen Abfrage verbundene Mehraufwand überwiegt jedoch die erzielte Leistungssteigerung. Wenn eine Abfrage nur wenige Berechnung ausführt oder wenn die Datenquelle klein ist, ist eine PLINQ-Abfrage möglicherweise langsamer als ein sequenzielle LINQ to Objects-Abfrage. Mithilfe des Parallel Performance Analyzer in Visual Studio Team Server können Sie die Leistung verschiedener Abfragen vergleichen, Verarbeitungsengpässe suchen und bestimmen, ob die Abfrage parallel oder sequenziell ausgeführt wird. Weitere Informationen finden Sie unter [Parallelitätsschnellansicht](/visualstudio/profiling/concurrency-visualizer) und [How to: Measure PLINQ Query Performance (Vorgehensweise: Messen der Leistung von PLINQ-Abfragen)](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
+ In vielen Fällen kann eine Abfrage parallelisiert werden, der mit dem Einrichten der parallelen Abfrage verbundene Mehraufwand überwiegt jedoch die erzielte Leistungssteigerung. Wenn eine Abfrage nur wenige Berechnung ausführt oder wenn die Datenquelle klein ist, ist eine PLINQ-Abfrage möglicherweise langsamer als ein sequenzielle LINQ to Objects-Abfrage. Mithilfe des Parallel Performance Analyzer in Visual Studio Team Server können Sie die Leistung verschiedener Abfragen vergleichen, Verarbeitungsengpässe suchen und bestimmen, ob die Abfrage parallel oder sequenziell ausgeführt wird. Weitere Informationen finden Sie unter [Parallelitätsschnellansicht](/visualstudio/profiling/concurrency-visualizer) und [Vorgehensweise: Messen der Leistung von PLINQ-Abfragen](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Grundlagen zur Beschleunigung in PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

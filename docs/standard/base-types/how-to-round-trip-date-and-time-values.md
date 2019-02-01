@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Roundtrip-Datums- und -Uhrzeitwerte'
+title: 'Vorgehensweise: Roundtrip-Datums- und -Uhrzeitwerte'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668417"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54628187"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Gewusst wie: Roundtrip-Datums- und -Uhrzeitwerte
+# <a name="how-to-round-trip-date-and-time-values"></a>Vorgehensweise: Roundtrip-Datums- und -Uhrzeitwerte
 In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunkt eindeutig identifizieren. In diesem Thema wird gezeigt, wie ein <xref:System.DateTime>-Wert, ein <xref:System.DateTimeOffset>-Wert sowie ein Datums- und Uhrzeitwert mit Zeitzoneninformationen so gespeichert und wiederhergestellt werden, dass der wiederhergestellte Wert denselben Zeitpunkt bezeichnet wie der gespeicherte Wert.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>So führen Sie einen Roundtrip für einen DateTime-Wert durch  
@@ -87,13 +87,13 @@ In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunk
   
     -   <xref:System> (nur C#)  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>  
+    -   <xref:System.Globalization?displayProperty=nameWithType>.  
   
     -   <xref:System.IO?displayProperty=nameWithType>  
   
     -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
   
 -   Ein Verweis auf „System.Core.dll“  
   
@@ -101,6 +101,6 @@ In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunk
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Auswählen zwischen „DateTime“, „DateTimeOffset“, „TimeSpan“ und „TimeZoneInfo“](../../../docs/standard/datetime/choosing-between-datetime.md)  
+- [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Auswählen zwischen „DateTime“, „DateTimeOffset“, „TimeSpan“ und „TimeZoneInfo“](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

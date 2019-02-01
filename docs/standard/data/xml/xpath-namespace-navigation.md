@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6d4f63dacc09208176b47dbca38783f1e9bc0a1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 373d1e4e5089b23ecaeffd10fd167b701b75760c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45743981"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702898"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath-Namespacenavigation
 Zum Verwenden von XPath-Abfragen mit XML-Dokumenten müssen Sie XML-Namespaces und die darin enthaltenen Elemente korrekt adressieren. Mithilfe von Namespaces werden Zweideutigkeiten vermieden, die auftreten können, wenn Namen in mehr als einem Kontext verwendet werden. Der Name `ID` kann beispielsweise auf mehrere ID-Bezeichner verweisen, die unterschiedlichen Elementen eines XML-Dokuments zugewiesen sind. In der Namespace-Syntax werden URIs, Namen und Präfixe zur Unterscheidung der Elemente in einem XML-Dokument definiert.  
@@ -20,7 +20,7 @@ Zum Verwenden von XPath-Abfragen mit XML-Dokumenten müssen Sie XML-Namespaces u
 ## <a name="namespace-declarations"></a>Namespacedeklarationen  
  Mithilfe von Namespacedeklarationen werden die Elemente in einem XML-Dokument beim Verwenden einer Instanz des <xref:System.Xml.XPath.XPathNavigator> unterscheidbar und adressierbar gemacht. Namespacepräfixe stellen eine kurze Syntax für Adressierungsnamespaces bereit.  
   
- Präfixe werden durch folgende Form definiert: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` In dieser Syntax ist das Präfix "`e`" eine Abkürzung für den formalen URI des Namespaces. Sie können das `Body`-Element mit folgender Syntax als Member des `Envelope`-Namespaces kennzeichnen: `e:Body`.  
+ Präfixe werden durch folgende Form definiert: `<e:Envelope xmlns:e=http://schemas.xmlsoap.org/soap/envelope/>.` In dieser Syntax ist das Präfix `e` eine Abkürzung für den formalen URI des Namespaces. Sie können das `Body`-Element mit folgender Syntax als Member des `Envelope`-Namespaces kennzeichnen: `e:Body`.  
   
  Im Navigationsbeispiel im nächsten Abschnitt wird auf das folgende XML-Dokument als `response.xml` verwiesen.  
   
@@ -72,5 +72,5 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Zugreifen auf XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+- [Zugreifen auf XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
 - [Auswählen, Auswerten und Zuordnen von XML-Daten mithilfe von XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

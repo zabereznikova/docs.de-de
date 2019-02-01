@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ff8b5b75d1d69d3d8c88810de1311540a239c52
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9b66ec913a6e8726710d90737f97c04335ae6e4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45743627"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54676431"
 ---
 # <a name="spinwait"></a>SpinWait
 <xref:System.Threading.SpinWait?displayProperty=nameWithType> ist ein einfacher Synchronisierungstyp, den Sie in Szenarien auf niedriger Ebene verwenden können, um die aufwändigen Kontextwechsel und Kernelübergänge zu vermeiden, die für Kernelereignisse erforderlich sind. Wenn bei Computern mit mehreren Kernen nicht erwartet wird, dass eine Ressource für längere Zeit beibehalten wird, kann es effizienter sein, wenn ein wartender Thread für ein paar Dutzend oder Hundert Zyklen im Benutzermodus rotiert und dann versucht wird, die Ressource zu erlangen. Wenn die Ressource nach den Spinvorgängen verfügbar ist, haben Sie mehrere Tausend Zyklen gespeichert. Wenn die Ressource immer noch nicht verfügbar ist, haben Sie nur wenige Zyklen verbraucht und können weiterhin in einen kernelbasierten Wartevorgang eintreten. Diese Kombination aus Spin- und Wartevorgang wird manchmal als *zweiphasiger Wartevorgang* bezeichnet.  
@@ -31,5 +31,5 @@ ms.locfileid: "45743627"
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Threading.Thread.SpinWait%2A>  
+- <xref:System.Threading.Thread.SpinWait%2A>
 - [Threading Objects and Features (Threadingobjekte und -funktionen)](../../../docs/standard/threading/threading-objects-and-features.md)

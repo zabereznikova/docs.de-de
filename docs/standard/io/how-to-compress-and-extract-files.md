@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Komprimieren und Extrahieren von Dateien'
+title: 'Vorgehensweise: Komprimieren und Extrahieren von Dateien'
 ms.date: 06/06/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 669936d15cfe1ea125ed36ffdfcfd093b6aacbe1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c35bf549dc4dcd5e12e3580c2357b64dcc42905b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424427"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54650940"
 ---
-# <a name="how-to-compress-and-extract-files"></a>Gewusst wie: Komprimieren und Extrahieren von Dateien
+# <a name="how-to-compress-and-extract-files"></a>Vorgehensweise: Komprimieren und Extrahieren von Dateien
 
 Der <xref:System.IO.Compression>-Namespace enthält die folgenden Typen zum Komprimieren und Dekomprimieren von Dateien und Streams. Sie können diese Typen auch verwenden, um den Inhalt einer komprimierten Datei zu lesen und zu ändern:
 
@@ -70,9 +70,9 @@ Sie können auch die Klassen <xref:System.IO.Compression.GZipStream> und <xref:S
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.IO.Compression.ZipArchive>  
-- <xref:System.IO.Compression.ZipFile>  
-- <xref:System.IO.Compression.ZipArchiveEntry>  
-- <xref:System.IO.Compression.DeflateStream>  
-- <xref:System.IO.Compression.GZipStream>  
+- <xref:System.IO.Compression.ZipArchive>
+- <xref:System.IO.Compression.ZipFile>
+- <xref:System.IO.Compression.ZipArchiveEntry>
+- <xref:System.IO.Compression.DeflateStream>
+- <xref:System.IO.Compression.GZipStream>
 - [Datei- und Stream-E/A](../../../docs/standard/io/index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a9bc9e14621b22cad6491f6f5132ef302e7ef06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d75911c2087370cb9313c6694ce2630b80e635a5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387337"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54686035"
 ---
 # <a name="mitigation-wpf-layout"></a>Entschärfung: WPF-Layout
 Das Layout der WPF-Steuerelemente kann sich leicht ändern.  
@@ -38,5 +38,5 @@ Das Layout der WPF-Steuerelemente kann sich leicht ändern.
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>Siehe auch
+- [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

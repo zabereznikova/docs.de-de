@@ -1,15 +1,15 @@
 ---
-title: 'Gewusst wie: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)'
+title: 'Vorgehensweise: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 0fa19af47847b0d6b804528af3f766c9775e74f3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9277253e885ac27ccb7d98221366d404ce0902e1
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863686"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54618528"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Gewusst wie: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Vorgehensweise: Erstellen eines Dokuments mit Namespaces (C#) (LINQ to XML)
 In diesem Thema wird das Erstellen von Dokumenten mit Namespaces beschrieben.  
   
 ## <a name="example"></a>Beispiel  

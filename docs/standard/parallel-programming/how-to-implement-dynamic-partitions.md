@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Implementieren von dynamischen Partitionen'
+title: 'Vorgehensweise: Implementieren von dynamischen Partitionen'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: c875ad12-a161-43e6-ad1c-3d6927c536a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b2d46264113cb4c961f6c4b971b5986bdd9eb6a7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 792488e53ffb7f870e21fdd1ad3ef94bf0303b1a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180964"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720235"
 ---
-# <a name="how-to-implement-dynamic-partitions"></a>Gewusst wie: Implementieren von dynamischen Partitionen
+# <a name="how-to-implement-dynamic-partitions"></a>Vorgehensweise: Implementieren von dynamischen Partitionen
 Im folgenden Beispiel wird das Implementieren eines benutzerdefinierten <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> gezeigt, der dynamische Partitionierung implementiert und von bestimmten <xref:System.Threading.Tasks.Parallel.ForEach%2A>-Überladungen und PLINQ verwendet werden kann.  
   
 ## <a name="example"></a>Beispiel  
@@ -30,5 +30,5 @@ Im folgenden Beispiel wird das Implementieren eines benutzerdefinierten <xref:Sy
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Benutzerdefinierte Partitionierer für PLINQ und TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)  
-- [Gewusst wie: Implementieren eines Partitionierers für statisches Partitionieren](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+- [Benutzerdefinierte Partitionierer für PLINQ und TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)
+- [Vorgehensweise: Implementieren eines Partitionierers für statisches Partitionieren](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

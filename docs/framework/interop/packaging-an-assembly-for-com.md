@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 453ace4af7ce07c8d81b6d7ece71140e04bfa9bc
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392395"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54531511"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Verpacken einer Assembly für COM
 COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Typen, die sie in ihre Anwendung integrieren möchten:  
@@ -60,7 +60,7 @@ COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Ty
   
      Unabhängig vom Mechanismus, den Sie auswählen, sind nur öffentliche Typen in der von Ihnen bereitgestellten Assembly in der generierten Typbibliothek enthalten.  
   
-     Sie können eine Typbibliothek als separate Datei verpacken oder sie als Win32-Ressourcendatei in eine .NET-basierte Anwendung einbetten. Microsoft Visual Basic 6.0 führt diese Aufgabe automatisch für Sie aus. Bei der Verwendung von [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] müssen Sie die Typbibliothek jedoch manuell einbetten. Weitere Informationen finden Sie unter [Vorgehensweise: Einbetten von Typbibliotheken als Win32-Ressourcen in .NET-basierten Anwendungen](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
+     Sie können eine Typbibliothek als separate Datei verpacken oder sie als Win32-Ressourcendatei in eine .NET-basierte Anwendung einbetten. Microsoft Visual Basic 6.0 führt diese Aufgabe automatisch für Sie aus. Bei der Verwendung von [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] müssen Sie die Typbibliothek jedoch manuell einbetten. Anweisungen hierzu finden Sie unter [Vorgehensweise: Einbetten von Typbibliotheken als Win32-Ressourcen in .NET-Anwendungen](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100)).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Type Library Exporter-Tool  
@@ -80,13 +80,13 @@ COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Ty
 ## <a name="net-services-installation-tool"></a>.NET Services Installation-Tool  
  Das [.NET Services Installation-Tool (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) fügt verwaltete Klassen zu Windows 2000-Komponentendiensten hinzu, kombiniert mehrere Aufgaben innerhalb eines einzigen Tools. Zusätzlich zum Laden und Registrieren der Assembly, generiert, registriert und installiert Regsvcs.exe die Typbibliothek in eine vorhandene COM+ 1.0-Anwendung.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Runtime.InteropServices.TypeLibConverter>  
- <xref:System.Runtime.InteropServices.ITypeLibConverter>  
- [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)  
- [Qualifizieren von .NET-Typen für die Interoperation](qualifying-net-types-for-interoperation.md)  
- [Einführung in die Klassenschnittstelle](com-callable-wrapper.md#introducing-the-class-interface)  
- [Überlegungen zur Assemblysicherheit](../app-domains/assembly-security-considerations.md)  
- [Tlbexp.exe (Type Library Exporter-Tool)](../tools/tlbexp-exe-type-library-exporter.md)  
- [Registrieren von Assemblys bei COM](registering-assemblies-with-com.md)  
- [Vorgehensweise: Einbetten von Typbibliotheken als Win32-Ressourcen in Anwendungen](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Runtime.InteropServices.TypeLibConverter>
+- <xref:System.Runtime.InteropServices.ITypeLibConverter>
+- [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)
+- [Qualifizieren von .NET-Typen für die Interoperation](qualifying-net-types-for-interoperation.md)
+- [Einführung in die Klassenschnittstelle](com-callable-wrapper.md#introducing-the-class-interface)
+- [Überlegungen zur Assemblysicherheit](../app-domains/assembly-security-considerations.md)
+- [Tlbexp.exe (Type Library Exporter-Tool)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Registrieren von Assemblys bei COM](registering-assemblies-with-com.md)
+- [Vorgehensweise: Einbetten von Typbibliotheken als Win32-Ressourcen in .NET-Anwendungen](https://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44(v=vs.100))

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: ac8b8bae69ba20f34bb74fbff533ba53f915a150
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183411"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54633851"
 ---
 # <a name="ipv6-addressing"></a>IPv6-Adressierung
 Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund für solch einen großen Adressbereich ist das Unterteilen der verfügbaren Adressen in eine Hierarchie von Routingdomänen, die die Topologie des Internets widerspiegeln. Ein weiterer Grund ist das Zuordnen der Adressen des Netzwerkadapters (oder der Netzwerkschnittstellen), die Geräte mit dem Netzwerk verbinden. IPv6 verfügt über die inhärente Funktion, Adressen auf ihrer niedrigsten Ebene aufzulösen, bei der es sich um die Ebene der Netzwerkschnittstelle handelt. Weiterhin verfügt es über Funktionen zur automatischen Konfiguration.  
@@ -60,11 +60,11 @@ Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund
   
 -   **Unicast address (Unicastadressen)**. Ein Bezeichner für eine einzelne Schnittstelle. Ein Paket, das an diese Adresse gesendet wird, wird an die angegebene Schnittstelle übermittelt. Die Unicastadressen werden von den Multicastadressen durch den Wert des oberen Oktetts unterschieden. Das obere Oktett der Multicastadressen hat den Hexadezimalwert von FF. Jeder andere Wert für dieses Oktett bezeichnet eine Unicastadresse. Es gibt folgende verschiedene Typen von Unicastadressen:  
   
-    -   **Link-local addresses (Verbindungslokale Adressen)**. Diese Adressen werden dann in einem einzigen Link verwendet und weisen folgendes Format auf: FE80::*InterfaceID*. Verbindungslokale Adressen werden zwischen Knoten auf einem Link zur automatischen Adresskonfiguration und Nachbarsuche verwendet oder wenn keine Router vorhanden sind. Eine verbindungslokale Adresse wird in erster Linie beim Start verwendet und wenn das System noch keine größeren Adressen abgerufen hat.  
+    -   **Link-local addresses (Verbindungslokale Adressen)**. Diese Adressen werden in einem einzigen Link verwendet und weisen folgendes Format auf: FE80::*InterfaceID*. Verbindungslokale Adressen werden zwischen Knoten auf einem Link zur automatischen Adresskonfiguration und Nachbarsuche verwendet oder wenn keine Router vorhanden sind. Eine verbindungslokale Adresse wird in erster Linie beim Start verwendet und wenn das System noch keine größeren Adressen abgerufen hat.  
   
-    -   **Site-local addresses (Standortlokale Adressen)**. Diese Adressen werden dann in einem einzigen Standort verwendet und weisen folgendes Format auf: FEC0::*SubnetID*:*InterfaceID*. Die standortlokalen Adressen werden für die Adressierung innerhalb eines Standorts verwendet, wenn kein globales Präfix benötigt wird.  
+    -   **Site-local addresses (Standortlokale Adressen)**. Diese Adressen werden in einem einzigen Standort verwendet und weisen folgendes Format auf: FEC0::*SubnetID*:*InterfaceID*. Die standortlokalen Adressen werden für die Adressierung innerhalb eines Standorts verwendet, wenn kein globales Präfix benötigt wird.  
   
-    -   **Global IPv6 unicast addresses (Globale IPv6-Unicastadressen)**. Diese Adressen können über das Internet verwendet werden und weisen folgendes Format auf: 010(FP, 3 Bits) TLA ID (13 Bits) Reserved (8 Bits) NLA ID (24 Bits) SLA ID (16 Bits) *InterfaceID* (64 Bits).  
+    -   **Global IPv6 unicast addresses (Globale IPv6-Unicastadressen)**. Diese Adressen können über das Internet verwendet werden und weisen folgendes Format auf: 010(FP, 3 Bit) TLA ID (13 Bit) Reserved (8 Bit) NLA ID (24 Bit) SLA ID (16 Bit) *InterfaceID* (64 Bit).  
   
 -   **Multicast address (Multicastadressen)**. Ein Bezeichner für eine Reihe von Schnittstellen, die normalerweise zu den unterschiedlichen Knoten gehören. Ein Paket, das an diese Adresse gesendet wird, wird an alle von der Adresse angegebenen Schnittstellen gesendet. Die Multicastadresstypen ersetzen die IPv4-Broadcastadressen.  
   
@@ -72,6 +72,6 @@ Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund
   
  Im Allgemeinen verfügt der Knoten immer über eine verbindungslokale Adresse. Er kann auch über eine standortlokale Adresse und eine oder mehrere globale Adressen verfügen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Internetprotokoll Version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
- [Sockets](../../../docs/framework/network-programming/sockets.md)
+## <a name="see-also"></a>Siehe auch
+- [Internetprotokoll Version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
+- [Sockets](../../../docs/framework/network-programming/sockets.md)

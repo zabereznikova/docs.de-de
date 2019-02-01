@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary'
+title: 'Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer ConcurrentDictionary-Klasse'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9d8b1c63f10d1d79c3fec6cad87c9a82f03716c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677837"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543421"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Gewusst wie: Hinzufügen und Entfernen von Elementen aus einem ConcurrentDictionary
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer ConcurrentDictionary-Klasse
 Dieses Beispiel zeigt, wie Elemente hinzugefügt, abgerufen, aktualisiert und von einer <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> entfernt werden. Diese Auflistungsklasse ist eine threadsichere Implementierung. Es empfiehlt sich, diese Klasse immer dann zu verwenden, wenn möglicherweise mehrere Threads gleichzeitig versuchen, auf Elemente zuzugreifen.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> bietet verschiedene praktische Methoden, mit denen der Code nicht mehr zuerst prüfen muss, ob ein Schlüssel vorhanden ist, bevor versucht wird, Daten hinzuzufügen oder zu entfernen. Die folgende Tabelle führt diese praktischen Methoden auf und beschreibt ihre Verwendung.  
@@ -50,5 +50,5 @@ Dieses Beispiel zeigt, wie Elemente hinzugefügt, abgerufen, aktualisiert und vo
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [Threadsichere Sammlungen](../../../../docs/standard/collections/thread-safe/index.md)

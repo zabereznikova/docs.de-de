@@ -3,14 +3,14 @@ title: .NET-Glossar
 description: Informationen zu den Bedeutungen der ausgewählten Begriffe, die in der .NET-Dokumentation verwendet werden.
 author: tdykstra
 ms.author: tdykstra
-ms.date: 07/08/2017
+ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b9654bf7f6cbc1019d00db986ba883cbab0abbb5
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840270"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857972"
 ---
 # <a name="net-glossary"></a>.NET-Glossar
 
@@ -21,6 +21,8 @@ Der primäre Zweck dieses Glossars ist die Klärung der Bedeutungen der ausgewä
 Ahead-of-Time-Compiler
 
 Ähnlich wie bei [JIT](#jit) übersetzt dieser Compiler ebenfalls [IL](#il) in Computercode. Im Gegensatz zur JIT-Kompilierung erfolgt die AOT-Kompilierung, bevor die Anwendung ausgeführt wird und wird von einem anderen Computer aus ausgeführt. Da AOT-Toolketten nicht während der Laufzeit kompiliert werden, muss die Zeit, die für das Kompilieren aufgewendet wird, nicht minimiert werden. Das bedeutet, dass mehr Zeit in die Optimierung investiert werden kann. Da die gesamte Anwendung den Kontext der AOT darstellt, führt der AOT-Compiler auch modulübergreifende Verknüpfungen und die Analyse des gesamten Programms aus. Das bedeutet, dass allen Verweisen gefolgt und eine einzige ausführbare Datei generiert wird.
+
+Siehe [CoreRT](#corert) und [.NET Native](#net-native).
 
 ## <a name="aspnet"></a>ASP.NET 
 
@@ -52,7 +54,7 @@ Die genaue Bedeutung hängt vom Kontext ab, normalerweise wird damit jedoch die 
 
 .NET Core Common Language Runtime
 
-Die CoreCLR basiert auf demselben Code wie die CLR. Ursprünglich war CoreCLR die Runtime von Silverlight und wurde für die Ausführung auf mehreren Plattformen entworfen, besonders unter Windows und OS X. CoreCLR ist nun Teil von .NET Core und stellt eine vereinfachte Version der CLR dar. Es handelt sich dabei immer noch um eine [plattformübergreifende](#cross-platform) Runtime, die nun viele Linux-Distributionen unterstützt. CoreCLR ist auch ein virtueller Computer mit JIT und Funktionen für die Codeausführung.
+Die CoreCLR basiert auf demselben Code wie die CLR. rsprünglich war CoreCLR die Runtime von Silverlight und wurde entworfen, um auf mehreren Plattformen ausgeführt zu werden, besonders unter Windows und OS X. CoreCLR ist nun Teil von .NET Core und stellt eine vereinfachte Version der CLR dar. Es handelt sich dabei immer noch um eine [plattformübergreifende](#cross-platform) Runtime, die nun viele Linux-Distributionen unterstützt. CoreCLR ist auch ein virtueller Computer mit JIT und Funktionen für die Codeausführung.
 
 ## <a name="corefx"></a>CoreFX
 
@@ -117,7 +119,7 @@ Eine Implementierung von .NET umfasst Folgendes:
 
 - Mindestens eine Runtime. Beispiele: CLR, CoreCLR, CoreRT.
 - Eine Klassenbibliothek, die eine Version des .NET Standards implementiert und ggf. zusätzliche APIs beinhaltet. Beispiele: .NET Framework-Basisklassenbibliothek, .NET Core-Basisklassenbibliothek.
-- Optional mindestens ein Anwendungsframework. Beispiele: ASP.NET, Windows Forms und WPF sind in .NET Framework enthalten.
+- Optional mindestens ein Anwendungsframework. Beispiele: ASP.NET, Windows Forms und WPF sind im .NET Framework enthalten.
 - Optional Entwicklungstools. Einige Entwicklungstools werden zwischen mehreren Implementierungen freigegeben.
 
 Beispiele für .NET-Implementierungen:
@@ -272,8 +274,8 @@ Eine Implementierung von .NET, mit der moderne Touchscreen-Windows-Anwendungen u
 
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Guide (Leitfaden für .NET)](index.md)  
-- [Leitfaden für .NET Framework](../framework/index.md)  
-- [.NET Core](../core/index.md)  
-- [ASP.NET Overview (Übersicht über ASP.NET)](/aspnet/index#pivot=aspnet)  
-- [ASP.NET Core Overview (Übersicht über ASP.NET Core)](/aspnet/index#pivot=core)  
+- [.NET Guide (Leitfaden für .NET)](index.md)
+- [Leitfaden für .NET Framework](../framework/index.md)
+- [.NET Core](../core/index.md)
+- [ASP.NET Overview (Übersicht über ASP.NET)](/aspnet/index#pivot=aspnet)
+- [ASP.NET Core Overview (Übersicht über ASP.NET Core)](/aspnet/index#pivot=core)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54653748"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C#-Compileroptionen alphabetisch sortiert
 
@@ -29,7 +29,7 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 |[-baseaddress](baseaddress-compiler-option.md)|Gibt die Basisadresse für die zu erstellende Bibliothek an.|
 |[-bugreport](bugreport-compiler-option.md)|Erstellt eine Fehlerberichtsdatei. Diese Datei wird zusammen mit den Absturzinformationen gesendet, wenn sie zusammen mit „-errorreport:prompt“ oder „-errorreport:send“ verwendet wird.|
 |[/checked](checked-compiler-option.md)|Führt dazu, dass der Compiler Überlaufprüfen generiert.|
-|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte sind: SHA1 (Standard) oder SHA256.|
+|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte: SHA-1 (Standard) oder SHA-256.|
 |[-codepage](codepage-compiler-option.md)|Gibt die beim Öffnen von Quelldateien zu verwendende Codepage an.|
 |[-debug](debug-compiler-option.md)|Gibt Debuginformationen aus.|
 |[-define](define-compiler-option.md)|Definiert Symbole für die bedingte Kompilierung.|
@@ -44,7 +44,7 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 |-incremental|Aktiviert die inkrementelle Kompilierung [veraltet].|
 |[-keycontainer](keycontainer-compiler-option.md)|Gibt einen Schlüsselcontainer mit starkem Namen an.|
 |[-keyfile](keyfile-compiler-option.md)|Gibt eine Schlüsseldatei mit starkem Namen an.|
-|[-langversion:\<string>](langversion-compiler-option.md)|Gibt die Sprachversion an: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 oder die aktuelle. |
+|[-langversion:\<string>](langversion-compiler-option.md)|Sprachversion angeben: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3, oder Latest |
 |[/lib](lib-compiler-option.md)|Gibt zusätzliche Verzeichnisse an, in denen nach Verweisen gesucht wird.|
 |[-link](link-compiler-option.md)|Macht COM-Typinformationen in den angegebenen Assemblys für das Projekt verfügbar.|
 |[-linkresource](linkresource-compiler-option.md)|Verknüpft die angegebene Ressource mit dieser Assembly.|
@@ -82,7 +82,7 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](index.md)  
-- [C#-Compileroptionen nach Kategorien sortiert](listed-by-category.md)  
-- [Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [C#-Compileroptionen](index.md)
+- [C#-Compileroptionen nach Kategorien sortiert](listed-by-category.md)
+- [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

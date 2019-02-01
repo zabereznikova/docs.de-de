@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Hinzufügen von Installern zur Dienstanwendung'
+title: 'Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: b73d7cf694e7bce5d055f8a3c9f78c27bb8cd5b9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3316f3b292f6a9597b62a802b489459ee2f0a952
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196225"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54743516"
 ---
-# <a name="how-to-add-installers-to-your-service-application"></a>Gewusst wie: Hinzufügen von Installern zur Dienstanwendung
+# <a name="how-to-add-installers-to-your-service-application"></a>Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung
 Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendungen zugeordnete Ressourcen installiert werden können. Installationskomponenten registrieren einen einzelnen Dienst auf dem System, auf dem dieser installiert wird, und informieren den Dienststeuerungs-Manager über das Vorhandensein des Diensts. Bei der Arbeit mit einer Dienstanwendung können Sie im Fenster „Eigenschaften“ einen Link auswählen, damit die entsprechenden Installer für Ihr Projekt automatisch hinzugefügt werden.  
   
 > [!NOTE]
@@ -60,8 +60,8 @@ Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendunge
     > [!NOTE]
     >  Sie müssen für jeden weiteren Dienst in Ihrem Projekt eine zusätzliche <xref:System.ServiceProcess.ServiceInstaller>-Komponente für die Klasse `ProjectInstaller` des Projekts hinzufügen. Die in Schritt 3 hinzugefügte Komponente <xref:System.ServiceProcess.ServiceProcessInstaller> kann mit allen Dienstinstallern im Projekt ausgeführt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

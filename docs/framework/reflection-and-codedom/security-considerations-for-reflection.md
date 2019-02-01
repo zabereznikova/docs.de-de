@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7bec2023e3ee0db9987e053dd54647ab2e94f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398703"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54509307"
 ---
 # <a name="security-considerations-for-reflection"></a>Sicherheitsüberlegungen für die Reflektion
 Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen und auf Member zuzugreifen (d. h. Aufrufen von Methoden und Konstruktoren, Abrufen und Festlegen von Eigenschaftswerten, Hinzufügen und Entfernen von Ereignishandlern usw.). Die Verwendung von Reflektion, um Typ- und Memberinformationen abzurufen, ist nicht eingeschränkt. Jeglicher Code kann Reflektion verwenden, um die folgenden Aufgaben auszuführen:  
@@ -56,7 +56,7 @@ Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen u
   
  Diese Regeln gelten immer, ganz gleich, ob auf einen sicherheitskritischen Member direkt aus kompiliertem Code oder über Reflektion zugegriffen wird.  
   
- Anwendungscode, der über die Befehlszeile ausgeführt wird, wird mit voller Vertrauenswürdigkeit ausgeführt. Solange Code nicht als transparent gekennzeichnet ist, kann er über Reflektion auf sicherheitskritische Member zugreifen. Wird derselbe Code mit teilweiser Vertrauenswürdigkeit ausgeführt (z. B. in einer Sandkastenanwendungsdomäne), bestimmt die Vertrauensebene der Assembly, ob sie auf sicherheitskritischen Code zugreifen kann: Wenn die Assembly einen starken Namen hat und im globalen Assemblycache installiert ist, ist sie eine vertrauenswürdige Assembly und kann sicherheitskritische Member aufrufen. Ist die Assembly nicht vertrauenswürdig ist, wird sie transparent, obwohl sie nicht als transparent gekennzeichnet wurde, und sie kann nicht auf sicherheitskritische Member zugreifen.  
+ Anwendungscode, der über die Befehlszeile ausgeführt wird, wird mit voller Vertrauenswürdigkeit ausgeführt. Solange Code nicht als transparent gekennzeichnet ist, kann er über Reflektion auf sicherheitskritische Member zugreifen. Wenn der gleiche Code mit teilweiser Vertrauenswürdigkeit ausgeführt wird (z. B. in einer Sandkastenanwendungsdomäne), bestimmt die Vertrauensebene der Assembly, ob der Zugriff auf sicherheitskritischen Code gewährt wird: Wenn die Assembly über einen starken Namen verfügt und im globalen Assemblycache installiert ist, ist sie eine vertrauenswürdige Assembly und sie kann sicherheitskritische Member aufrufen. Ist die Assembly nicht vertrauenswürdig ist, wird sie transparent, obwohl sie nicht als transparent gekennzeichnet wurde, und sie kann nicht auf sicherheitskritische Member zugreifen.  
   
  Weitere Informationen zum Sicherheitsmodell in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] finden Sie unter [Änderungen der Sicherheit in .NET Framework](../../../docs/framework/security/security-changes.md).  
   
@@ -82,7 +82,7 @@ Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen u
     > [!NOTE]
     >  Standardmäßig verweigert die Sicherheitsrichtlinie diese Berechtigung für Code, der aus dem Internet stammt. Diese Berechtigung sollte niemals für Code gewährt werden, der aus dem Internet stammt.  
   
--   Damit Code einen beliebigen nicht öffentlichen Member aufrufen kann, sofern der Berechtigungssatz der Assembly, die den aufgerufenen Member enthält, mit dem Berechtigungssatz des aufrufenden Codes identisch oder eine Untermenge dieses Berechtigungssatzes ist: Dem Code muss <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag gewährt werden.  
+-   Damit Code beliebige nicht öffentliche Member aufrufen kann, sofern der Berechtigungssatz der Assembly, die den aufgerufenen Member enthält, mit dem Berechtigungssatz des aufrufenden Codes identisch oder eine Teilmenge dieses Berechtigungssatzes ist: Dem Code muss <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag gewährt werden.  
   
  Beispiel: Angenommen, Sie gewähren einer Anwendungsdomäne Internetberechtigungen plus <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag und führen anschließend eine Internetanwendung mit den beiden Assemblys A und B aus.  
   
@@ -104,13 +104,13 @@ Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen u
   
 -   Ab [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] sind keine Berechtigungen erforderlich, um über Reflektion Informationen über nicht öffentliche Typen und Member abzurufen. In früheren Versionen ist <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>-Flag erforderlich.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Security.Permissions.ReflectionPermissionFlag>  
- <xref:System.Security.Permissions.ReflectionPermission>  
- <xref:System.Security.Permissions.SecurityPermission>  
- [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md)  
- [Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)  
- [Sicherheitsaspekte bei der Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
- [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Anwenden von Attributen](../../../docs/standard/attributes/applying-attributes.md)  
- [Zugreifen auf benutzerdefinierte Attribute](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Security.Permissions.ReflectionPermissionFlag>
+- <xref:System.Security.Permissions.ReflectionPermission>
+- <xref:System.Security.Permissions.SecurityPermission>
+- [Sicherheitsänderungen](../../../docs/framework/security/security-changes.md)
+- [Codezugriffssicherheit](../../../docs/framework/misc/code-access-security.md)
+- [Sicherheitsaspekte bei der Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
+- [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Anwenden von Attributen](../../../docs/standard/attributes/applying-attributes.md)
+- [Zugreifen auf benutzerdefinierte Attribute](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

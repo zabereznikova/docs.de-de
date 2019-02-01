@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher'
+title: 'Vorgehensweise: Löschen von Dateien und Verzeichnissen in isoliertem Speicher'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 8fcc0dea-435b-4d40-ba4d-ba056265c202
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b324cc391bc784ac558ed3eb634506b5eea0d63
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d05b7fa3010ab089d1a97e9a0516096326fd4bb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214562"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54538023"
 ---
-# <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher
+# <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Vorgehensweise: Löschen von Dateien und Verzeichnissen in isoliertem Speicher
 Sie können Verzeichnisse und Dateien in einer isolierten Speicherdatei löschen. In einem Speicher sind Datei- und Verzeichnisnamen abhängig und werden relativ zum Stamm des virtuellen Dateisystems angegeben. In Windows-Betriebssystemen wird bei ihnen nicht zwischen Groß- und Kleinschreibung unterschieden.  
   
  Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>-Klasse stellt zwei Methoden zum Löschen von Verzeichnissen und Dateien bereit: <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> und <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A>. Eine <xref:System.IO.IsolatedStorage.IsolatedStorageException>-Ausnahme wird ausgelöst, wenn Sie versuchen, Dateien oder Verzeichnisse zu löschen, die nicht existieren. Wenn Sie ein Platzhalterzeichen in den Namen aufnehmen, löst <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A> eine <xref:System.IO.IsolatedStorage.IsolatedStorageException>-Ausnahme aus, und <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteFile%2A> eine <xref:System.ArgumentException>-Ausnahme.  
   
- Bei der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A>-Methode tritt ein Fehler auf, wenn das Verzeichnis Dateien oder Unterverzeichnisse enthält. Mit der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>- und <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A>-Methode können Sie vorhandene Dateien und Verzeichnisse abrufen. Weitere Informationen zum Durchsuchen des virtuellen Dateisystems eines Speichers finden Sie unter [Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md).  
+ Bei der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.DeleteDirectory%2A>-Methode tritt ein Fehler auf, wenn das Verzeichnis Dateien oder Unterverzeichnisse enthält. Mit der <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>- und <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A>-Methode können Sie vorhandene Dateien und Verzeichnisse abrufen. Weitere Informationen zum Durchsuchen des virtuellen Dateisystems eines Speichers finden Sie unter [Vorgehensweise: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel werden mehrere Verzeichnisse und Dateien erstellt und dann gelöscht.  
@@ -42,5 +42,5 @@ Sie können Verzeichnisse und Dateien in einer isolierten Speicherdatei löschen
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>
 - [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)

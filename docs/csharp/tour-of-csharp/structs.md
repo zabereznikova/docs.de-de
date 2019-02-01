@@ -3,12 +3,12 @@ title: C#-Strukturen – Überblick über C#
 description: Lernen Sie die Grundlagen der als Strukturen bezeichneten C#-Werttypen kennen.
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d22cb23fe095874f24d7c002dfdb3eefdde66722
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142735"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065959"
 ---
 # <a name="structs"></a>Strukturen
 
@@ -30,7 +30,7 @@ Mit Klassen können zwei Variablen auf das gleiche Objekt verweisen, und so kön
 
 [!code-csharp[PointUse](../../../samples/snippets/csharp/tour/structs/Program.cs#L19-L22)]
 
-Wenn `Point` eine Klasse ist, ist die Ausgabe 20, da „a“ und „b“ auf das gleiche Objekt verweisen. Wenn „Point“ eine Struktur ist, ist die Ausgabe 10, da die Zuweisung von `a` zu `b` eine Kopie des Werts erstellt, und diese Kopie ist nicht von der nachfolgenden Zuweisung zu `a.x` betroffen.
+Wenn `Point` eine Klasse ist, ist die Ausgabe 20, da `a` und `b` auf das gleiche Objekt verweisen. Wenn `Point` eine Struktur ist, ist die Ausgabe 10, da die Zuweisung von `a` zu `b` eine Kopie des Werts erstellt, und diese Kopie ist nicht von der darauffolgenden Zuweisung zu `a.x` betroffen.
 
 Im vorherigen Beispiel werden zwei der Einschränkungen von Strukturen hervorgehoben. Erstens ist das Kopieren einer gesamten Struktur in der Regel weniger effizient als das Kopieren eines Objektverweises, sodass Zuweisung und Wertparameterübergabe mit Strukturen aufwändiger sein kann als mit Verweistypen. Zweitens ist es mit Ausnahme der `in`-, `ref`- und `out`-Parameter nicht möglich, Verweise auf Strukturen zu erstellen, was ihre Verwendung in einer Reihe von Situationen ausschließt.
 

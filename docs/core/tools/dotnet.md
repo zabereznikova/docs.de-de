@@ -2,12 +2,12 @@
 title: dotnet-Befehl
 description: Informationen zum dotnet-Befehl (generischer Treiber für die .NET Core CLI-Tools) und dessen Verwendung.
 ms.date: 06/04/2018
-ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170844"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066440"
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
@@ -78,9 +78,14 @@ Zeigt die installierten .NET Core-Runtimes an.
 
 Zeigt die installierten .NET Core-SDKs an.
 
-`--roll-forward-on-no-candidate-fx`
+`--roll-forward-on-no-candidate-fx <N>`
 
- Deaktiviert Rollforward der Nebenversion, wenn `0` festgelegt ist. Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-2-1.md#roll-forward).
+Definiert ein Verhalten, wenn das erforderliche freigegebene Framework nicht verfügbar ist. `N` kann Folgendes sein:
+ * `0` - Das Ausführen von Rollforward ist auch für die Nebenversion deaktiviert.
+ * `1` - Rollforward wird in der Nebenversion, nicht aber in der Hauptversion, ausgeführt. Dies ist das Standardverhalten.
+ * `2` - Rollforward wird in Neben- und Hauptversionen ausgeführt.
+
+ Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
 `-v|--verbosity <LEVEL>`
 

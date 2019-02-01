@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Überprüfen des Verbindungsstatus in Visual Basic'
+title: 'Vorgehensweise: Überprüfen des Verbindungsstatus in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web connections [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - connections [Visual Basic], checking status
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
-ms.openlocfilehash: 4a6cb67474d03ada5e0a73d94f65da7a381c44a8
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: c7a43fd154616e516f8c5e7d36d25f34924649ac
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911940"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499959"
 ---
-# <a name="how-to-check-connection-status-in-visual-basic"></a>Gewusst wie: Überprüfen des Verbindungsstatus in Visual Basic
+# <a name="how-to-check-connection-status-in-visual-basic"></a>Vorgehensweise: Überprüfen des Verbindungsstatus in Visual Basic
 Die <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>-Eigenschaft kann verwendet werden, um zu ermitteln, ob der Computer über eine funktionierende Netzwerk- oder Internetverbindung verfügt.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -27,6 +27,6 @@ Die <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>-Eigenschaft kann ve
   
      Dieses Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. In der Codeausschnittauswahl ist er unter **Konnektivität und Netzwerk** zu finden. Weitere Informationen finden Sie unter [Codeausschnitte](/visualstudio/ide/code-snippets).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>

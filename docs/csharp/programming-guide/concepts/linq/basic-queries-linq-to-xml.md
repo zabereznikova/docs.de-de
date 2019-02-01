@@ -2,19 +2,19 @@
 title: Standardabfragen (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-ms.openlocfilehash: 77ff053e3cf8589cbc44caf66a4e5b532bc54b26
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a77ea062889e05c598df27fb143ba34466714e12
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518492"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583336"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Standardabfragen (LINQ to XML) (C#)
 Dieser Abschnitt enthält Beispiele für einfache [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung |  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Vorgehensweise: Suchen nach einem Element mit bestimmten Attributen (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Erläutert, wie Sie ein bestimmtes Element mit einem Attribut ermitteln können, das einen konkreten Wert hat.|  
 |[Vorgehensweise: Suchen nach einem Element mit einem bestimmten untergeordneten Element (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|Erläutert, wie Sie ein bestimmtes Element mit einem untergeordneten Element ermitteln können, das einen konkreten Wert hat.|  

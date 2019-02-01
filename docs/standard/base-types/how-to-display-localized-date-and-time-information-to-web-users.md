@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer'
+title: 'Vorgehensweise: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,19 +10,22 @@ helpviewer_keywords:
 - displaying date and time data
 - localized date displays [.NET Framework]
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085224"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857657"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Gewusst wie: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Vorgehensweise: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer
 Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, die Datums- und Uhrzeitwerte analysieren und formatieren, bei der Interaktion mit dem Benutzer nicht von einem Standardformat (am häufigsten das Format der lokalen Kultur des Webservers) abhängen. Stattdessen sollten Webformulare, die vom Benutzer eingegebene Datums- und Uhrzeitzeichenfolgen behandeln, die Zeichenfolgen gemäß der bevorzugten Kultur des Benutzers analysieren. Entsprechend sollten Datums- und Uhrzeitdaten dem Benutzer in einem Format angezeigt werden, das seiner Kultur entspricht. In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.  
   
-### <a name="to-parse-date-and-time-strings-input-by-the-user"></a>So analysieren Sie vom Benutzer eingegebene Datums- und Uhrzeitzeichenfolgen  
+## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>So analysieren Sie vom Benutzer eingegebene Datums- und Uhrzeitzeichenfolgen  
   
 1.  Bestimmen Sie, ob das von der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene Zeichenfolgenarray gefüllt ist. Wenn dies nicht der Fall ist, fahren Sie mit Schritt 6 fort.  
   
@@ -40,7 +43,7 @@ Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, 
   
 6.  Wenn bei der Konvertierung weiterhin ein Fehler auftritt, oder das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray leer ist, analysieren Sie die Zeichenfolge mit der invarianten Kultur, die durch die <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
   
-### <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>So analysieren Sie lokales Datum und Ortszeit der Anforderung des Benutzers  
+## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>So analysieren Sie lokales Datum und Ortszeit der Anforderung des Benutzers  
   
 1.  Fügen Sie einem Webformular ein <xref:System.Web.UI.WebControls.HiddenField>-Steuerelement hinzu.  
   
@@ -110,7 +113,7 @@ Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)  
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Verarbeiten von Zeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/parsing-datetime.md)

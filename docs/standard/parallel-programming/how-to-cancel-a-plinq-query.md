@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Abbrechen einer PLINQ-Abfrage'
+title: 'Vorgehensweise: Abbrechen einer PLINQ-Abfrage'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45973091"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604300"
 ---
-# <a name="how-to-cancel-a-plinq-query"></a>Gewusst wie: Abbrechen einer PLINQ-Abfrage
+# <a name="how-to-cancel-a-plinq-query"></a>Vorgehensweise: Abbrechen einer PLINQ-Abfrage
 In den folgenden Beispielen werden zwei Möglichkeiten zum Ändern einer PLINQ-Abfrage veranschaulicht. Das erste Beispiel zeigt, wie eine Abfrage abgebrochen wird, die größtenteils aus Datendurchlauf besteht. Im zweiten Beispiel wird gezeigt, wie eine Abfrage abgebrochen wird, die eine rechenintensive Benutzerfunktion enthält.  
   
 > [!NOTE]
@@ -52,6 +52,6 @@ In den folgenden Beispielen werden zwei Möglichkeiten zum Ändern einer PLINQ-A
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Linq.ParallelEnumerable>  
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- <xref:System.Linq.ParallelEnumerable>
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)

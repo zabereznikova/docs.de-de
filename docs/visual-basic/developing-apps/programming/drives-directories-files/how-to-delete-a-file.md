@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Löschen einer Datei in Visual Basic'
+title: 'Vorgehensweise: Löschen einer Datei in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Delete method [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: 2918b756d5f37de2489042a9eabfe7312841af81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2222c06b71b3063c848495aec52fd4acf0674073
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588622"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54520619"
 ---
-# <a name="how-to-delete-a-file-in-visual-basic"></a>Gewusst wie: Löschen einer Datei in Visual Basic
+# <a name="how-to-delete-a-file-in-visual-basic"></a>Vorgehensweise: Löschen einer Datei in Visual Basic
 Die `DeleteFile`-Methode des `My.Computer.FileSystem`-Objekts ermöglicht das Löschen einer Textdatei. Sie bietet u.a. folgende Optionen: ob die gelöschte Datei in den **Papierkorb** verschoben werden soll, ob der Benutzer den Löschvorgang bestätigen muss und was passiert, wenn der Benutzer den Vorgang abbricht.  
   
 ### <a name="to-delete-a-text-file"></a>Löschen einer Textdatei  
@@ -58,9 +58,9 @@ Die `DeleteFile`-Methode des `My.Computer.FileSystem`-Objekts ermöglicht das L�
   
 -   Der Benutzer hat den Vorgang abgebrochen, und `onUserCancel` wird auf `ThrowException` festgelegt (<xref:System.OperationCanceledException>).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.UIOption>  
- <xref:Microsoft.VisualBasic.FileIO.RecycleOption>  
- [Gewusst wie: Abrufen einer Sammlung von Dateien in einem Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.UIOption>
+- <xref:Microsoft.VisualBasic.FileIO.RecycleOption>
+- [Vorgehensweise: Abrufen einer Auflistung der Dateien in einem Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

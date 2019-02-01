@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 720c33fb4af197198f8ee1a21c5e1dc6dad24ce3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e0635d03e7d1b31642a6669aecefd2b0099e9c78
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150863"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066284"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Verwenden von NoSQL-Datenbanken als Persistenzinfrastruktur
 
@@ -317,9 +317,9 @@ services:
   [*https://docs.microsoft.com/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/azure/cosmos-db/modeling-data)
 
 - **Vaughn Vernon. The Ideal Domain-Driven Design Aggregate Store? (Was ist der ideale DDD-Aggregatspeicher?)** \
-  [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
+  <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
-- **Einführung in Azure Cosmos DB: MongoDB-API**  \
+- **Einführung in die Azure Cosmos DB-API für MongoDB**  \
   [*https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
 
 - **Azure Cosmos DB: Erstellen einer Web-App mit einer MongoDB-API mit .NET und dem Azure-Portal**  \
@@ -337,7 +337,7 @@ services:
 - **The MongoDB Docker image (Linux and Windows Container) (Das MongoDB-Docker-Image (Linux- und Windows-Container))**  \
   [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
-- **Verwenden von MongoChef (Studio 3T) mit Azure Cosmos DB: API für MongoDB-Konten**  \
+- **Verwenden von MongoChef (Studio 3T) mit der Azure Cosmos DB-API für MongoDB-Konten**  \
   [*https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef*](https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef)
 
 >[!div class="step-by-step"]

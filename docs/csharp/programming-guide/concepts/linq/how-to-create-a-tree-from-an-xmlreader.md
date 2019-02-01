@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Struktur aus XmlReader (C#)'
+title: 'Vorgehensweise: Erstellen einer Struktur aus einer XmlReader-Klasse (C#)'
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: f0e75e4d3f6964fa44c41265c1c276c32fb9e87d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fb65c7b74bf3bd006fd4f545e4587efe9a392131
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501753"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54496181"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Vorgehensweise: Erstellen einer Struktur aus XmlReader (C#)
+# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Vorgehensweise: Erstellen einer Struktur aus einer XmlReader-Klasse (C#)
 In diesem Thema wird erläutert, wie Sie direkt aus einem <xref:System.Xml.XmlReader> eine XML-Struktur erstellen können. Um aus einem <xref:System.Xml.Linq.XElement> ein <xref:System.Xml.XmlReader> zu erstellen, müssen Sie den <xref:System.Xml.XmlReader> in einem Elementknoten positionieren. Der <xref:System.Xml.XmlReader> überspringt Kommentare und Verarbeitungsanweisungen, aber wenn der <xref:System.Xml.XmlReader> in einem Textknoten positioniert wird, wird eine Fehlermeldung ausgegeben. Diese Fehlermeldung können Sie vermeiden, indem Sie den <xref:System.Xml.XmlReader> immer in einem Element platzieren, bevor Sie ihn als Grundlage für das Erstellen einer XML-Struktur verwenden aus der <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Beispiel  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 83b45d5cc8424acab789b9824af887f15036488d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebc41d4d59100b9e71bd6ed3abd2ff26937e7465
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143843"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554555"
 ---
 # <a name="in-process-side-by-side-execution"></a>Prozessinterne parallele Ausführung
 Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mit prozessinternem parallelem Hosting mehrere Versionen der Common Language Runtime (CLR) in einem einzelnen Prozess ausführen. Standardmäßig werden verwaltete COM-Komponenten mit der .NET Framework-Version ausgeführt, mit der sie erstellt wurden, unabhängig von der .NET Framework-Version, die für den Prozess geladen wird.  
@@ -50,17 +50,17 @@ Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mi
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>Häufige Szenarios des parallelen Hostings  
   
--   **Szenario 1:** Native Anwendung, die COM-Komponenten verwendet, die mit früheren Versionen von .NET Framework erstellt wurden.  
+-   **Szenario 1:** Eine Native Anwendung, die COM-Komponenten verwendet, die mit früheren Versionen von .NET Framework erstellt wurden.  
   
-     Installierte .NET Framework-Versionen: Die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] und alle anderen Versionen des .NET Framework, die von den COM-Komponenten verwendet werden.  
+     Installierte .NET Framework-Versionen: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] und alle anderen Versionen von .NET Framework, die von den COM-Komponenten verwendet werden.  
   
-     Das muss ich tun: In diesem Szenario unternehmen Sie nichts. Die COM-Komponenten werden mit der Version des .NET Framework ausgeführt, mit der sie registriert wurden.  
+     Vorgehensweise: In diesem Szenario unternehmen Sie nichts. Die COM-Komponenten werden mit der Version des .NET Framework ausgeführt, mit der sie registriert wurden.  
   
--   **Szenario 2**: Verwaltete Anwendung, die mit [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] erstellt wurde, die lieber mit [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] ausgeführt werden soll, jedoch auch unter [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ausgeführt werden kann, wenn Version 2.0 nicht verfügbar ist.  
+-   **Szenario 2:** Verwaltete Anwendung, die mit [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] erstellt wurde, die lieber mit [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] ausgeführt werden soll, jedoch auch unter [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ausgeführt werden kann, wenn Version 2.0 nicht verfügbar ist.  
   
-     Installierte .NET Framework-Version: Eine frühere Version von .NET Framework und [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Installierte .NET Framework-Versionen: Eine frühere Version von .NET Framework und [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Vorgehensweise: Verwenden Sie in der [Anwendungskonfigurationsdatei](../../../docs/framework/configure-apps/index.md) im Anwendungsverzeichnis das [\<startup>-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) und das [\<supportedRuntime>-Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md), die wie folgt festgelegt sind:  
+     Vorgehensweise: Verwenden Sie in der [Anwendungskonfigurationsdatei](../../../docs/framework/configure-apps/index.md) im Anwendungsverzeichnis das [Element \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) und das [Element \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md), die wie folgt festgelegt sind:  
   
     ```xml  
     <configuration>  
@@ -73,9 +73,9 @@ Ab [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] können Sie mi
   
 -   **Szenario 3:** Native Anwendung, die COM-Komponenten verwendet, die mit früheren Versionen von .NET Framework erstellt wurden, die Sie mit [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ausführen möchten.  
   
-     Installierte .NET Framework-Versionen: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]  
+     Installierte .NET Framework-Versionen: Die [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     Vorgehensweise: Verwenden Sie in der Anwendungskonfigurationsdatei im Anwendungsverzeichnis das `<startup>`-Element, mit mit dem `useLegacyV2RuntimeActivationPolicy`-Attribut, das auf `true` festgelegt ist, sowie das `<supportedRuntime>`-Element, das wie folgt festgelegt ist:  
+     Vorgehensweise: Verwenden Sie in der Anwendungskonfigurationsdatei im Anwendungsverzeichnis das `<startup>`-Element, mit dem `useLegacyV2RuntimeActivationPolicy`-Attribut, das auf `true` festgelegt ist, sowie das `<supportedRuntime>`-Element, das wie folgt festgelegt ist:  
   
     ```xml  
     <configuration>  
@@ -173,6 +173,6 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-- [\<startup>-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)  
+## <a name="see-also"></a>Siehe auch
+- [\<startup>-Element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
 - [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

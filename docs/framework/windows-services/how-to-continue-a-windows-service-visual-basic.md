@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Fortsetzen eines Windows-Diensts (Visual Basic)'
+title: 'Vorgehensweise: Fortsetzen eines Windows-Diensts (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 255dccfb74eced63ffbeff7ef567083a504cc6da
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 86c2414fd6ad9c32a37339c553ec80c98426f78a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027285"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612709"
 ---
-# <a name="how-to-continue-a-windows-service-visual-basic"></a>Gewusst wie: Fortsetzen eines Windows-Diensts (Visual Basic)
+# <a name="how-to-continue-a-windows-service-visual-basic"></a>Vorgehensweise: Fortsetzen eines Windows-Diensts (Visual Basic)
 In diesem Beispiel wird die <xref:System.ServiceProcess.ServiceController>-Komponente verwendet, um den IIS-Verwaltungsdienst auf dem lokalen Computer fortzusetzen.  
   
 ## <a name="example"></a>Beispiel  
@@ -49,7 +49,7 @@ In diesem Beispiel wird die <xref:System.ServiceProcess.ServiceController>-Kompo
   
  Der Zugriff auf Dienstinformationen kann mithilfe der <xref:System.Security.Permissions.PermissionState>-Enumeration eingeschränkt werden, um Berechtigungen in der <xref:System.Security.Permissions.SecurityPermission>-Klasse festzulegen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceProcess.ServiceController>  
- <xref:System.ServiceProcess.ServiceControllerStatus>  
- [Vorgehensweise: Anhalten von Windows-Diensten (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceProcess.ServiceController>
+- <xref:System.ServiceProcess.ServiceControllerStatus>
+- [Vorgehensweise: Anhalten von Windows-Diensten (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

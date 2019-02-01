@@ -9,14 +9,14 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 0feff32f3a2264b8e6cbd4746fdeaaaad728b8e5
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 91d972f468f80c509a90ea293937b117d54a2e7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241287"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54737519"
 ---
-# <a name="lambda-expressions-c-programming-guide"></a>Lambda-Ausdrücke (C#-Programmierhandbuch)
+# <a name="lambda-expressions-c-programming-guide"></a>Lambdaausdrücke (C#-Programmierhandbuch)
 
 Ein Lambda-Ausdruck ist eine [anonyme Funktion](anonymous-methods.md) , mit der Typen für [Delegaten](../delegates/using-delegates.md) oder die [Ausdrucksbaumstruktur](../concepts/expression-trees/index.md) erstellt werden können. Mit Lambda-Ausdrücken können lokale Funktionen geschrieben werden, die als Argumente übergeben oder als Wert von Funktionsaufrufen zurückgegeben werden können. Lambda-Ausdrücke sind besonders für das Schreiben von LINQ-Abfrageausdrücken hilfreich.
   
@@ -89,7 +89,8 @@ namespace ConsoleApplication1
 
  Beachten Sie im vorherigen Beispiel, dass der Text eines Ausdruckslambdas ein Methodenaufruf sein kann. Wenn Sie jedoch Ausdrucksbaumstrukturen erstellen, die auf einer anderen Plattform als .NET Framework ausgewertet werden, z. B. SQL Server, sollten Sie in Lambda-Ausdrücken keine Methodenaufrufe verwenden. Die Methoden haben außerhalb des Kontexts der .NET Common Language Runtime keine Bedeutung.  
   
-## <a name="statement-lambdas"></a>Anweisungslambdas  
+## <a name="statement-lambdas"></a>Anweisungslambdas
+
  Ein Anweisungslambda ähnelt einem Ausdruckslambda, allerdings sind die Anweisungen in Klammern eingeschlossen:  
   
 (input-parameters) => { statement; }
@@ -102,7 +103,8 @@ namespace ConsoleApplication1
 
  Anweisungslambdas, wie anonyme Methoden, können nicht zum Erstellen von Ausdrucksbaumstrukturen verwendet werden.  
   
-## <a name="async-lambdas"></a>Asynchrone Lambdas  
+## <a name="async-lambdas"></a>Asynchrone Lambdas
+
  Sie können mit den Schlüsselwörtern [async](../../../csharp/language-reference/keywords/async.md) und [await](../../../csharp/language-reference/keywords/await.md) Lambda-Ausdrücke und Anweisungen, die asynchrone Verarbeitung enthalten, leicht erstellen. Das folgende Windows Forms enthält z. B. einen Ereignishandler, der eine Async-Methode, `ExampleMethodAsync`, aufruft und erwartet.  
   
 ```csharp
@@ -154,8 +156,9 @@ public partial class Form1 : Form
 
  Weitere Informationen zum Erstellen und Verwenden von asynchronen Methoden finden Sie unter [Asynchronous programming with async and await (Asynchrones Programmieren mit „async“ and „await“)](../../../csharp/programming-guide/concepts/async/index.md).  
   
-## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas mit Standardabfrageoperatoren  
- Viele Standardabfrageoperatoren weisen einen Eingabeparameter auf, deren Typ einem der Typen aus der <xref:System.Func%602> -Familie generischer Delegaten entspricht. Diese Delegaten verwenden Typparameter zur Definition der Anzahl und des Typs der Eingabeparameter sowie des Rückgabetyps des Delegaten. `Func` -Delegaten sind für das Kapseln von benutzerdefinierten Ausdrücken, die für jedes Element in einem Satz von Quelldaten übernommen werden, sehr nützlich. Betrachten Sie z. B. den folgenden Delegattyp:  
+## <a name="lambdas-with-the-standard-query-operators"></a>Lambdas mit Standardabfrageoperatoren
+
+ Viele Standardabfrageoperatoren weisen einen Eingabeparameter auf, dessen Typ einem der Typen aus der <xref:System.Func%602>-Familie generischer Delegaten entspricht. Diese Delegaten verwenden Typparameter zur Definition der Anzahl und des Typs der Eingabeparameter sowie des Rückgabetyps des Delegaten. `Func` -Delegaten sind für das Kapseln von benutzerdefinierten Ausdrücken, die für jedes Element in einem Satz von Quelldaten übernommen werden, sehr nützlich. Betrachten Sie z. B. den folgenden Delegattyp:  
   
 ```csharp  
 public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
@@ -191,7 +194,8 @@ var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);
 var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);  
 ```  
   
-## <a name="type-inference-in-lambdas"></a>Typrückschluss in Lambdas  
+## <a name="type-inference-in-lambdas"></a>Typrückschluss in Lambdas
+
  Beim Schreiben von Lambdas müssen Sie oftmals keinen Typ für die Eingabeparameter angeben, da der Compiler den Typ auf der Grundlage des Lambda-Texts, des zugrunde liegenden Delegattyps des Parameters und anderer Faktoren per Rückschluss ableiten kann, wie in der C#-Programmiersprachenspezifikation beschrieben. Bei den meisten Standardabfrageoperatoren entspricht die erste Eingabe dem Typ der Elemente in der Quellsequenz. Beim Abfragen von `IEnumerable<Customer>`wird die Eingabevariable als `Customer` -Objekt abgeleitet, sodass Sie auf die zugehörigen Methoden und Eigenschaften zugreifen können:  
   
 ```csharp  
@@ -208,7 +212,8 @@ customers.Where(c => c.City == "London");
   
  Beachten Sie, dass Lambda-Ausdrücke keinen eigenen Typ haben, da das allgemeine Typsystem kein internes Konzept von "Lambda-Ausdrücken" aufweist. Es kann manchmal praktisch sein, informell vom "Typ" eines Lambda-Ausdrucks zu sprechen. In einem solchen Fall bezeichnet Typ den Delegattyp bzw. den <xref:System.Linq.Expressions.Expression> -Typ, in den der Lambda-Ausdruck konvertiert wird.  
   
-## <a name="variable-scope-in-lambda-expressions"></a>Variablenbereich in Lambda-Ausdrücken  
+## <a name="variable-scope-in-lambda-expressions"></a>Variablenbereich in Lambdaausdrücken
+
  Lambdas können auf *äußere Variablen* verweisen (siehe [Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)), die im Bereich der Methode, mit der die Lambdafunktion definiert wird, oder im Bereich des Typs liegen, der den Lambdaausdruck enthält. Variablen, die auf diese Weise erfasst werden, werden zur Verwendung in Lambda-Ausdrücken gespeichert, auch wenn die Variablen andernfalls außerhalb des Gültigkeitsbereichs liegen und an die Garbage Collection übergeben würden. Eine äußere Variable muss definitiv zugewiesen sein, bevor sie in einem Lambda-Ausdruck verwendet werden kann. Das folgende Beispiel veranschaulicht diese Regeln:  
   
 ```csharp  
@@ -269,18 +274,20 @@ class Test
   
 -   Ein Lambda-Ausdruck kann eine `goto` -Anweisung, `break` -Anweisung oder `continue` -Anweisung enthalten, die innerhalb der Lambda-Funktion liegt, wenn das Ziel der jump-Anweisung außerhalb des Blocks liegt. Eine jump-Anweisung darf auch nicht außerhalb des Lambda-Funktionsblocks sein, wenn das Ziel im Block ist.  
   
-## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation  
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="featured-book-chapter"></a>Enthaltenes Buchkapitel  
+## <a name="featured-book-chapter"></a>Enthaltenes Buchkapitel
+
  [Delegates, Events, and Lambda Expressions](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) (Delegaten, Ereignisse und Lambda-Ausdrücke) in [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29) (C# 3.0-Cookbook, 3. Auflage: Mehr als 250 Lösungen für C# 3.0-Programmierer)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)  
-- [LINQ (Language Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)  
-- [Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
-- [is](../../../csharp/language-reference/keywords/is.md)  
-- [Ausdrucksbaumstrukturen](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-- [Visual Studio 2008 C#-Beispiele (siehe LINQ-Beispielabfragedateien und XQuery-Programm)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+- [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
+- [LINQ (Language Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)
+- [Anonyme Methoden](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [is](../../../csharp/language-reference/keywords/is.md)
+- [Ausdrucksbaumstrukturen](../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Visual Studio 2008 C#-Beispiele (siehe LINQ-Beispielabfragedateien und XQuery-Programm)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Rekursive Lambda-Ausdrücke](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

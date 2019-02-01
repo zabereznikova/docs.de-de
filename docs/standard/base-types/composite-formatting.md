@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126860"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54517681"
 ---
 # <a name="composite-formatting"></a>Kombinierte Formatierung
 
@@ -67,7 +67,7 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Mehrere Formatelemente können auf dasselbe Element in der Objektliste verweisen, indem derselbe Parameterbezeichner festgelegt wird. Sie können beispielsweise denselben numerischen Wert im hexadezimalen, wissenschaftlichen oder Zahlenformat formatieren, indem Sie eine kombinierte Formatierungszeichenfolge wie z.B. „0x{0:X} {0:E} {0:N}“ angeben (siehe nächstes Beispiel).  
+ Mehrere Formatelemente können auf dasselbe Element in der Objektliste verweisen, indem derselbe Parameterbezeichner festgelegt wird. Sie können beispielsweise denselben numerischen Wert im hexadezimalen, im wissenschaftlichen und im Zahlenformat formatieren, indem Sie eine kombinierte Formatzeichenfolge wie die Folgende angeben: "0x{0:X} {0:E} {0:N}" wie im folgenden Beispiel gezeigt.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -161,15 +161,15 @@ Die Funktion für kombinierte Formatierung wird beispielsweise von folgenden Met
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Console.WriteLine%2A>  
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- [Zeichenfolgeninterpolation (C#)](../../csharp/language-reference/tokens/interpolated.md)  
-- [Zeichenfolgeninterpolation (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
-- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
-- [Standardmäßige Zahlenformatzeichenfolgen](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
-- [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Standardformatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
-- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
-- [TimeSpan-Standardformatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
-- [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- <xref:System.Console.WriteLine%2A>
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- [Zeichenfolgeninterpolation (C#)](../../csharp/language-reference/tokens/interpolated.md)
+- [Zeichenfolgeninterpolation (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
+- [Standardmäßige Zahlenformatzeichenfolgen](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [Benutzerdefinierte Zahlenformatzeichenfolgen](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standardformatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [TimeSpan-Standardformatzeichenfolgen](../../../docs/standard/base-types/standard-timespan-format-strings.md)
+- [Benutzerdefinierte TimeSpan-Formatzeichenfolgen](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

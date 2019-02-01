@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Implementieren von Rückruffunktionen'
+title: 'Vorgehensweise: Implementieren von Rückruffunktionen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389274"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718675"
 ---
-# <a name="how-to-implement-callback-functions"></a>Gewusst wie: Implementieren von Rückruffunktionen
+# <a name="how-to-implement-callback-functions"></a>Vorgehensweise: Implementieren von Rückruffunktionen
 Im folgenden Verfahren und Beispiel wird veranschaulicht, wie eine verwaltete Anwendung den Handlewert für jedes Fenster auf dem lokalen Computer mithilfe eines Plattformaufrufs drucken kann. Insbesondere verwenden das Verfahren und das Beispiel die **EnumWindows**-Funktion, um die Liste von Fenstern und eine verwaltete Rückruffunktion (namens „CallBack“) zu durchlaufen, um den Wert des Fensterhandles auszugeben.  
   
 ### <a name="to-implement-a-callback-function"></a>So implementieren Sie die Rückruffunktion  
@@ -129,6 +129,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Rückruffunktionen](../../../docs/framework/interop/callback-functions.md)  
- [Calling a DLL Function (Aufrufen einer DLL-Funktion)](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>Siehe auch
+- [Rückruffunktionen](../../../docs/framework/interop/callback-functions.md)
+- [Calling a DLL Function (Aufrufen einer DLL-Funktion)](../../../docs/framework/interop/calling-a-dll-function.md)

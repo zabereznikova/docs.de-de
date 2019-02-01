@@ -2,12 +2,12 @@
 title: LINQ und Zeichenfolgen (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: da7a35f0fd66d1f7b8a72550c175b5428242fbc1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886499"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744621"
 ---
 # <a name="linq-and-strings-c"></a>LINQ und Zeichenfolgen (C#)
 
@@ -32,7 +32,7 @@ Sie können Textblöcke abfragen, analysieren und ändern, indem Sie sie mithilf
 
   Veranschaulicht, dass eine Zeichenfolge ein abfragbarer Typ ist.
 
-- [Vorgehensweise: Verbinden von LINQ-Abfragen mit regulären Ausdrücken (C#)](how-to-combine-linq-queries-with-regular-expressions.md)
+- [Vorgehensweise: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (C#)](how-to-combine-linq-queries-with-regular-expressions.md)
 
   Zeigt, wie reguläre Ausdrücke in LINQ-Abfragen für komplexe Musterabgleiche bei gefilterten Abfrageergebnissen verwendet werden.
 
@@ -48,7 +48,7 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
 
   Zeigt, wie Textzeilen anhand eines beliebigen Worts oder Felds sortiert werden.
 
-- [Vorgehensweise: Neuordnen der Felder einer Datei mit Trennzeichen (LINQ) (C#)](how-to-reorder-the-fields-of-a-delimited-file-linq.md)
+- [Vorgehensweise: Neuordnen der Felder einer durch Trennzeichen getrennten Datei (LINQ) (C#)](how-to-reorder-the-fields-of-a-delimited-file-linq.md)
 
   Zeigt, wie Felder in einer Zeile in einer CSV-Datei neu angeordnet werden
 
@@ -56,7 +56,7 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
 
   Zeigt, wie Zeichenfolgenlisten auf verschiedene Weise verbunden werden
 
-- [Vorgehensweise: Füllen von Objektauflistungen aus mehreren Quellen (LINQ) (C#)](how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Vorgehensweise: Auffüllen von Objektauflistungen aus mehreren Quellen (LINQ) (C#)](how-to-populate-object-collections-from-multiple-sources-linq.md)
 
   Zeigt, wie Auflistungen erstellt werden, indem Sie mehrere Textdateien als Datenquellen verwenden
 
@@ -64,7 +64,7 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
   
   Zeigt, wie Zeichenfolgen in zwei Listen mit einem übereinstimmenden Schlüssel in einer einzigen Zeichenfolge vereint werden
 
-- [Vorgehensweise: Teilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Vorgehensweise: Teilen einer Datei in mehrere Dateien durch Verwenden von Gruppen (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
   
   Veranschaulicht, wie neue Dateien mithilfe einer einzelnen Datei als Datenquelle erstellt werden
 
@@ -74,5 +74,5 @@ Viele verschiedene Typen von Textdateien bestehen aus einer Reihe von Zeilen, di
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Language-Integrated Query (LINQ) (C#) (Language-Integrated Query (LINQ) (C#))](index.md)
-- [Gewusst wie: Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md)
+- [Language Integrated Query (LINQ) (C#)](index.md)
+- [Vorgehensweise: Generieren von XML aus CSV-Dateien](how-to-generate-xml-from-csv-files.md)

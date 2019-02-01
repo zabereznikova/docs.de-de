@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Vorhersehen von Speicherengpässen bei isoliertem Speicher'
+title: 'Vorgehensweise: Vorhersehen von Speicherengpässen bei isoliertem Speicher'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,14 +24,14 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: be3c38c1cf1e6fa6f2bfd5fed05ee8150309d7d3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649380"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609680"
 ---
-# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Gewusst wie: Vorhersehen von Speicherengpässen bei isoliertem Speicher
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Vorgehensweise: Vorhersehen von Speicherengpässen bei isoliertem Speicher
 Code, der isolierten Speicher verwendet, ist durch ein [Kontingent](../../../docs/standard/io/isolated-storage.md#quotas) eingeschränkt, das die maximale Größe für das Datendepot festlegt, in dem isolierte Speicherdateien und Verzeichnisse vorhanden sind. Das Kontingent wird durch die Sicherheitsrichtlinie definiert und kann von Administratoren konfiguriert werden. Falls die maximal zulässige Größe überschritten wird, wenn Sie versuchen, Daten zu schreiben, wird eine <xref:System.IO.IsolatedStorage.IsolatedStorageException>-Ausnahme ausgelöst, und bei dem Vorgang tritt ein Fehler auf. Dies hilft, bösartige Denial-of-Service-Angriffe zu vermeiden, die dazu führen könnten, dass die Anwendung Anforderungen verweigert, da der Datenspeicher gefüllt ist.  
   
  Um Ihnen bei der Bestimmung zu helfen, ob bei einem bestimmten Schreibversuch wahrscheinlich aus diesem Grund ein Fehler auftritt, bietet die <xref:System.IO.IsolatedStorage.IsolatedStorage>-Klasse drei schreibgeschützte Eigenschaften: <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>, <xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A> und <xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A>. Sie können diese Eigenschaften verwenden, um zu bestimmen, ob beim Schreiben in den Speicher die maximal zulässige Größe des Speichers überschritten wird. Berücksichtigen Sie, dass paralleler Zugriff auf isolierten Speicher möglich ist. Darum denken Sie beim Berechnen der verbleibenden Speichermenge daran, dass der Speicherplatz verbraucht sein könnte, wenn Sie versuchen, in den Speicher zu schreiben. Allerdings können Sie mithilfe der maximalen Größe des Speichers ermitteln, ob der obere Grenzwert verfügbaren Speichers bald erreicht ist.  
@@ -47,6 +47,6 @@ Code, der isolierten Speicher verwendet, ist durch ein [Kontingent](../../../doc
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)  
-- [Gewusst wie: Erhalten von Speichern für isolierten Speicher](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)
+- [Vorgehensweise: Erhalten von Speichern für isolierten Speicher](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

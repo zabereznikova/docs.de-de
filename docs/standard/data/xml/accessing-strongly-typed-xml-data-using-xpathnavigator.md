@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c283d3c87effcf9e898bb769cc8991da6cea453
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: cd0719fbc84159fdf751b136c2a65b0ce40b42ec
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44199621"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665187"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Zugreifen auf streng typisierte XML-Daten mit XPathNavigator
 Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavigator>-Klasse stark typisierte Daten enthalten, die den CLR-Typen (Common Language Runtime) zugeordnet werden. Gemäß des XPath 2.0-Datenmodells können nur Elemente und Attribute stark typisierte Daten enthalten. Die <xref:System.Xml.XPath.XPathNavigator>-Klasse stellt Mechanismen zum Zugreifen auf Daten in einem <xref:System.Xml.XPath.XPathDocument>-Objekt oder einem <xref:System.Xml.XmlDocument>-Objekt als stark typisierte Daten sowie Mechanismen zum Konvertieren von einem Datentyp in einen anderen bereit.  
@@ -29,12 +29,12 @@ Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavi
   
 -   Schemasprachenspezifischer Typname: In den meisten Fällen werden die CLR-Typen, die als Nebeneffekt beim Übernehmen eines externen Schemas festgelegt werden, zum Bereitstellen des Zugriffs auf den Wert eines Knotens verwendet. In manchen Situationen ist es jedoch empfehlenswert, den Typ zu überprüfen, der einem bestimmten auf ein XML-Dokument angewendeten Schema zugeordnet ist. Zum Beispiel möchten Sie möglicherweise ein XML-Dokument durchsuchen und dabei alle Elemente extrahieren, die Inhalt vom Typ "PurchaseOrder" gemäß eines zugewiesenen Schemas aufweisen. Diese Typinformationen können nur durch Schemavalidierung festgelegt werden. Auf diese Informationen wird über die <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>-Eigenschaft und die <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse zugegriffen. Weitere Informationen finden Sie im Abschnitt „Das Post-Schema-Validation-Infoset (PSVI)“ weiter unten.  
   
--   Schemasprachenspezifische Typreflektion: In anderen Fällen möchten Sie möglicherweise nähere Informationen zum schemaspezifischen Typ abrufen, der auf ein XML-Dokument angewendet wird. Zum Beispiel möchten Sie eventuell beim Lesen einer XML-Datei die `maxOccurs`-Attribute aller gültigen Knoten im XML-Dokument extrahieren, um eine benutzerdefinierte Berechnung durchzuführen. Da diese Informationen nur durch Schemavalidierung festgelegt wird, wird darauf über die <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse zugegriffen. Weitere Informationen finden Sie im Abschnitt „Das Post-Schema-Validation-Infoset (PSVI)“ weiter unten.  
+-   Schemasprachenspezifische Typreflektion: In anderen Fällen sollten Sie nähere Informationen zum schemaspezifischen Typ abrufen, der auf ein XML-Dokument angewendet wird. Zum Beispiel möchten Sie eventuell beim Lesen einer XML-Datei die `maxOccurs`-Attribute aller gültigen Knoten im XML-Dokument extrahieren, um eine benutzerdefinierte Berechnung durchzuführen. Da diese Informationen nur durch Schemavalidierung festgelegt wird, wird darauf über die <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse zugegriffen. Weitere Informationen finden Sie im Abschnitt „Das Post-Schema-Validation-Infoset (PSVI)“ weiter unten.  
   
 ## <a name="xpathnavigator-typed-accessors"></a>Mit XPathNavigator typisierte Accessoren  
  Die folgenden Tabelle enthält die verschiedenen Eigenschaften und Methoden der <xref:System.Xml.XPath.XPathNavigator>-Klasse, mit denen auf die Typinformationen eines Knotens zugegriffen werden kann.  
   
-|Eigenschaft|Beschreibung |  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |<xref:System.Xml.XPath.XPathNavigator.XmlType%2A>|Dieses Objekt enthält die XML-Schematypinformationen des Knotens, sofern dieser gültig ist.|  
 |<xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>|Dieses Objekt enthält das Post-Schema-Validation-Infoset des Knotens, der nach der Validierung hinzugefügt wird. Darin sind die XML-Schematypinformationen sowie die Gültigkeitsinformationen eingeschlossen.|  
@@ -56,7 +56,7 @@ Als Instanz des XPath 2.0-Datenmodells kann die <xref:System.Xml.XPath.XPathNavi
   
 2.  Standardinformationen: Angaben dazu, ob der Wert des Elements oder des Attributs über im Schema angegebene Standardwerte abgerufen wurde. Diese werden von der <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse verfügbar gemacht.  
   
-3.  Anmerkungen zum Typ: Verweise auf Schemakomponenten, die möglicherweise Typdefinitionen oder Element- und Attributdeklarationen sind. Die <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>-Eigenschaft von <xref:System.Xml.XPath.XPathNavigator> enthält die bestimmten Typinformationen des Knotens, sofern dieser gültig ist. Wenn die Gültigkeit eines Knotens unbekannt ist, das heißt, er wurde überprüft und anschließend bearbeitet. dann wird die <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>-Eigenschaft auf `null` festgelegt, wobei die Typinformationen jedoch weiterhin in den verschiedenen Eigenschaften der <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse verfügbar sind.  
+3.  Typanmerkungen: Verweise auf Schemakomponenten, die möglicherweise Typdefinitionen oder Element- und Attributdeklarationen sind. Die <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>-Eigenschaft von <xref:System.Xml.XPath.XPathNavigator> enthält die bestimmten Typinformationen des Knotens, sofern dieser gültig ist. Wenn die Gültigkeit eines Knotens unbekannt ist, das heißt, er wurde überprüft und anschließend bearbeitet. dann wird die <xref:System.Xml.XPath.XPathNavigator.XmlType%2A>-Eigenschaft auf `null` festgelegt, wobei die Typinformationen jedoch weiterhin in den verschiedenen Eigenschaften der <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A>-Eigenschaft der <xref:System.Xml.XPath.XPathNavigator>-Klasse verfügbar sind.  
   
  Im folgenden Beispiel wird das Verwenden der Informationen im Post-Schema-Validation-Infoset veranschaulicht, die von <xref:System.Xml.XPath.XPathNavigator> verfügbar gemacht wurden.  
   
@@ -187,11 +187,11 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
-- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
-- [Das Navigieren durch Attribut- und Namespaceknoten mit XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [Type Support in the System.Xml Classes (Typenunterstützung in den System.Xml-Klassen)](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+- [Verarbeiten von XML-Daten mithilfe des XPath-Datenmodells](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [Navigieren in Knotengruppen mit XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)
+- [Das Navigieren durch Attribut- und Namespaceknoten mit XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)
 - [Extrahieren von XML-Daten mit XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Entpacken einer geschachtelten Aufgabe'
+title: 'Vorgehensweise: Entpacken einer geschachtelten Aufgabe'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224f9273b0c8c9445a6a9e25f064e9726acc84f0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3cc468da70d3c62c139a98a6637e7a3c7990c378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750192"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602051"
 ---
-# <a name="how-to-unwrap-a-nested-task"></a>Gewusst wie: Entpacken einer geschachtelten Aufgabe
+# <a name="how-to-unwrap-a-nested-task"></a>Vorgehensweise: Entpacken einer geschachtelten Aufgabe
 Sie können eine Aufgabe aus einer Methode zurückgeben und anschließend warten oder von dieser Aufgabe aus fortfahren, wie im folgenden Beispiel gezeigt:  
   
  [!code-csharp[TPL_Unwrap#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#01)]
@@ -45,5 +45,5 @@ Sie können eine Aufgabe aus einer Methode zurückgeben und anschließend warten
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>
 - [Aufgabenbasierte asynchrone Programmierung](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

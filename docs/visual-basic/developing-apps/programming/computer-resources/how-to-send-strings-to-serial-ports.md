@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen in Visual Basic'
+title: 'Vorgehensweise: Senden von Zeichenfolgen an serielle Anschlüsse in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ports, sending strings to
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
-ms.openlocfilehash: a00306407cfe880ebc915d74a753109cc9696f6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2ba25f4ca3f63e1e7831d26745fa35cd337dc48
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584026"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54503026"
 ---
-# <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen in Visual Basic
+# <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>Vorgehensweise: Senden von Zeichenfolgen an serielle Anschlüsse in Visual Basic
 Dieses Thema beschreibt, wie `My.Computer.Ports` zum Senden von Zeichenfolgen an serielle Ports des Computers in Visual Basic verwendet wird.  
   
 ## <a name="example"></a>Beispiel  
@@ -33,12 +33,12 @@ Dieses Thema beschreibt, wie `My.Computer.Ports` zum Senden von Zeichenfolgen an
 -   In diesem Beispiel wird davon ausgegangen, dass der Computer `COM1` verwendet.  
   
 ## <a name="robust-programming"></a>Stabile Programmierung  
- In diesem Beispiel wird davon ausgegangen, dass der Computer `COM1` verwendet; für eine erhöhte Flexibilität sollte der Code es dem Benutzer ermöglichen, den gewünschten seriellen Anschluss aus einer Liste von seriellen Anschlüssen auszuwählen. Weitere Informationen finden Sie unter [Gewusst wie: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
+ In diesem Beispiel wird davon ausgegangen, dass der Computer `COM1` verwendet; für eine erhöhte Flexibilität sollte der Code es dem Benutzer ermöglichen, den gewünschten seriellen Anschluss aus einer Liste von seriellen Anschlüssen auszuwählen. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md).  
   
  Dieses Beispiel verwendet einen `Using`-Block, um sicherzustellen, dass die Anwendung den Anschluss auch dann schließt, wenn eine Ausnahme ausgelöst wird. Weitere Informationen finden Sie unter [using-Anweisung](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Devices.Ports>  
- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>  
- [Gewusst wie: Wählen mit Modems an seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
- [Gewusst wie: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.Devices.Ports>
+- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
+- [Vorgehensweise: Wählen mit Modems an seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
+- [Vorgehensweise: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

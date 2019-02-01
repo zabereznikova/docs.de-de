@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Auflisten aller Knoten in einem Baum (C#)'
+title: 'Vorgehensweise: Auflisten aller Knoten in einer Struktur (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e014de90935830df3ea5454dcd4d5a840f4d04ad
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 90c92e8390f75e7b7e2c63d809d8a0aca34e2fd0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744478"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Vorgehensweise: Auflisten aller Knoten in einem Baum (C#)
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Vorgehensweise: Auflisten aller Knoten in einer Struktur (C#)
 Manchmal ist es hilfreich, alle in einer Struktur vorhandenen Knoten aufzulisten. Dies kann sinnvoll sein, wenn Sie genau verstehen möchten, wie sich eine Methode oder eine Eigenschaft auf die Struktur auswirkt. Eine Möglichkeit, alle Knoten in Textform aufzulisten, besteht darin, einen XPath-Ausdruck zu generieren, der exakt und spezifisch jeden Knoten in der Struktur identifiziert.  
   
  Das Ausführen von XPath-Ausdrücken mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist nicht besonders hilfreich. XPath-Ausdrücke verfügen über eine schlechtere Leistung als [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen, und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen sind deutlich leistungsfähiger. Zur Identifizierung der Knoten in der XML-Struktur eignet sich XPath aber gut.  

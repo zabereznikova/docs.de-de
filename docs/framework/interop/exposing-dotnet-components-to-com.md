@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f11928388dba9b0e9b442578bfb7b6f751c2e172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5c80ba473b0080a1368c82949c765820239ef25
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387431"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54715737"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Verfügbarmachen von .NET Framework-Komponenten in COM
 Das Schreiben eines .NET-Typs und das Verwenden dieses Typs von nicht verwaltetem Code sind unterschiedliche Aktivitäten für Entwickler. Dieser Abschnitt beschreibt einige Tipps zum Schreiben von verwaltetem Code, der mit COM-Clients interagiert:  
@@ -50,6 +50,6 @@ Das Schreiben eines .NET-Typs und das Verwenden dieses Typs von nicht verwaltete
   
      Eine Assembly mit starkem Namen kann im globalen Assemblycache installiert werden und erfordert eine Signatur des Herausgebers. Assemblys, die keinen starken Namen haben, müssen im Anwendungsverzeichnis des Clients installiert werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Interoperabilität mit nicht verwaltetem Code](../../../docs/framework/interop/index.md)  
- [COM-Interop-Beispiel: COM-Client und .NET-Server](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+## <a name="see-also"></a>Siehe auch
+- [Interoperabilität mit nicht verwaltetem Code](../../../docs/framework/interop/index.md)
+- [COM-Interopbeispiel: COM-Client und .NET-Server](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

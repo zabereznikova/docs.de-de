@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: fbe75d8ec4a677c47a98a5868c4e7e44c95f1d93
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028178"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54714879"
 ---
 # <a name="service-application-programming-architecture"></a>Programmierarchitektur für Dienstanwendungen
 Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> erbt. Wenn Sie das Verhalten Ihres Diensts bestimmen möchten, können Sie Methoden aus dieser Klasse außer Kraft setzen und ihre Funktionen definieren.  
@@ -57,7 +57,7 @@ Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:Sy
      [!code-vb[VbRadconService#6](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#6)]  
   
     > [!NOTE]
-    >  In diesen Beispielen wird ein Array vom Typ <xref:System.ServiceProcess.ServiceBase> verwendet, in das jeder Dienst hinzugefügt werden kann, den Ihre App enthält. Anschließend können sämtliche Dienste zusammen ausgeführt werden. Wenn Sie nur einen Dienst erstellen, empfiehlt es sich jedoch, nicht das Array zu verwenden, sondern einfach ein neues Objekt zu deklarieren, das aus <xref:System.ServiceProcess.ServiceBase> erbt, und dieses Objekt auszuführen. Siehe beispielsweise [Vorgehensweise: Programmgesteuertes Schreiben von Diensten](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
+    >  In diesen Beispielen wird ein Array vom Typ <xref:System.ServiceProcess.ServiceBase> verwendet, in das jeder Dienst hinzugefügt werden kann, den Ihre App enthält. Anschließend können sämtliche Dienste zusammen ausgeführt werden. Wenn Sie nur einen Dienst erstellen, empfiehlt es sich jedoch, nicht das Array zu verwenden, sondern einfach ein neues Objekt zu deklarieren, das aus <xref:System.ServiceProcess.ServiceBase> erbt, und dieses Objekt auszuführen. Ein Beispiel finden Sie unter [Gewusst wie: Programmgesteuertes Schreiben von Diensten](../../../docs/framework/windows-services/how-to-write-services-programmatically.md).  
   
 -   Eine Reihe von Eigenschaften in der Klasse <xref:System.ServiceProcess.ServiceBase>. Mit diesen Eigenschaften wird bestimmt, welche Methoden in Ihrem Dienst aufgerufen werden können. Wenn die Eigenschaft <xref:System.ServiceProcess.ServiceBase.CanStop%2A> beispielsweise auf `true` festgelegt wird, kann die Methode <xref:System.ServiceProcess.ServiceBase.OnStop%2A> in Ihrem Dienst aufgerufen werden. Wenn die Eigenschaft <xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A> auf `true` festgelegt wird, können die Methoden <xref:System.ServiceProcess.ServiceBase.OnPause%2A> und <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> aufgerufen werden. Wenn Sie eine dieser Eigenschaften auf `true` festlegen, sollten Sie anschließend die Verarbeitung für die zugeordneten Methoden außer Kraft setzen und definieren.  
   
@@ -66,6 +66,6 @@ Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:Sy
   
  Sie können auch die Komponente <xref:System.ServiceProcess.ServiceController> verwenden, um mit dem vorhandenen Dienst zu kommunizieren und sein Verhalten zu steuern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)

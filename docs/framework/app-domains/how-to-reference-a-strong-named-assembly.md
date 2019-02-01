@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verweisen auf eine Assembly mit starkem Namen'
+title: 'Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18844a9e8eff574d061b044bf88bc7857ce8033e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182982"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54596071"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>Gewusst wie: Verweisen auf eine Assembly mit starkem Namen
+# <a name="how-to-reference-a-strong-named-assembly"></a>Vorgehensweise: Verweisen auf eine Assembly mit starkem Namen
 Beim Verweisen auf Typen oder Ressourcen in einer Assembly mit starkem Namen handelt es sich in der Regel um einen transparenten Prozess. Sie können den Verweis zur Kompilierzeit (frühes Binden) oder zur Runtime vornehmen.  
   
  Ein Verweis zur Kompilierzeit tritt auf, wenn Sie den Compiler darauf hinweisen, dass Ihre Assembly explizit auf eine andere Assembly verweist. Beim Verweisen zur Kompilierzeit ruft der Compiler automatisch den öffentlichen Schlüssel der Zielassembly mit starkem Namen ab und platziert ihn in der Assemblyreferenz der Assembly, die aktuell kompiliert wird.  
@@ -48,7 +48,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
      \<*Assemblyname*>**,** \<*Versionsnummer*>**,** \<*Kultur*>**,** \<*öffentliches Schlüsseltoken*>  
   
-     Zum Beispiel:  
+     Beispiel:  
   
     ```  
     myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
@@ -70,5 +70,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  **sn -tp \<** *öffentliche Schlüsseldatei* **>**  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 - [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

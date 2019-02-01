@@ -3,12 +3,12 @@ title: 'Vorgehensweise: Ändern von Zeichenfolgeninhalten (C#-Leitfaden)'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 349269f8158f7d4db5e2058791087a258f504460
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453436"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54664016"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Vorgehensweise: Ändern von Zeichenfolgeninhalten in C\#
 
@@ -73,5 +73,5 @@ Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [Gi
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)  
-- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [Reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md)
+- [Sprachelemente für reguläre Ausdrücke – Kurzübersicht](../../standard/base-types/regular-expression-language-quick-reference.md)

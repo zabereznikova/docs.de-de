@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Streamen von XML-Fragmenten aus einem XmlReader (C#)'
+title: 'Vorgehensweise: Streamen von XML-Fragmenten aus einer XmlReader-Klasse (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: cb3e9fbc9567593cdc77ae116273f4c0fede4af3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0c34b9aeb5cda61c13045487dee6ab15e55314e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44195802"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693992"
 ---
-# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Vorgehensweise: Streamen von XML-Fragmenten aus einem XmlReader (C#)
+# <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Vorgehensweise: Streamen von XML-Fragmenten aus einer XmlReader-Klasse (C#)
 Wenn Sie große XML-Dateien verarbeiten müssen, kann u. U. nicht die gesamte XML-Struktur in den Arbeitsspeicher geladen werden. In diesem Thema wird gezeigt, wie mit einem <xref:System.Xml.XmlReader> Fragmente gestreamt werden können.  
   
  Eine der effektivsten Möglichkeiten, einen <xref:System.Xml.XmlReader> zum Lesen von <xref:System.Xml.Linq.XElement>-Objekten zu verwenden, besteht darin, eine eigene benutzerdefinierte Achsenmethode zu schreiben. Achsenmethoden geben in der Regel eine Auflistung, z. B. die <xref:System.Collections.Generic.IEnumerable%601> von <xref:System.Xml.Linq.XElement> zurück, wie dies im Beispiel in diesem Thema dargestellt ist. Nachdem Sie in der benutzerdefinierten Achsenmethode durch Aufrufen der <xref:System.Xml.Linq.XNode.ReadFrom%2A>-Methode das XML-Fragment erstellt haben, geben Sie die Auflistung mit `yield return` zurück. Auf diese Weise versehen Sie Ihre benutzerdefinierte Achsenmethode mit der Semantik für eine verzögerte Ausführung.  
@@ -18,9 +18,9 @@ Wenn Sie große XML-Dateien verarbeiten müssen, kann u. U. nicht die gesamte X
   
  Wenn Sie eine Teilstruktur erstellen möchten, können Sie einen <xref:System.Xml.XmlReader> instanziieren, den Reader auf dem Knoten positionieren, der in eine <xref:System.Xml.Linq.XElement>-Struktur umgewandelt werden soll, und dann das <xref:System.Xml.Linq.XElement>-Objekt erstellen.  
   
- Unter [How to: Stream XML Fragments with Access to Header Information (C#) (Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) finden Sie weitere Informationen und ein Beispiel, wie Sie ein komplexeren Dokument streamen können.  
+ Unter [Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) finden Sie weitere Informationen und ein Beispiel, wie Sie ein komplexeres Dokument streamen können.  
   
- Unter [How to: Perform Streaming Transform of Large XML Documents (C#) (vorgehensweise: Durchführen einer Streamingtransformation großer XML-Dokumente (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) finden Sie ein Beispiel für das Verwenden von LINQ to XML, um ein sehr großes XML-Dokument umzuwandeln, während Sie gleichzeitig eine geringe Speicherbeanspruchung beibehalten.  
+ Unter [Vorgehensweise: Durchführen einer Streamingtransformation großer XML-Dokumente (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) finden Sie ein Beispiel für das Verwenden von LINQ to XML, um ein sehr großes XML-Dokument umzuwandeln, während Sie gleichzeitig eine geringe Speicherbeanspruchung beibehalten.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel erstellt eine benutzerdefinierte Achsenmethode. Zum Abfragen kann eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage verwendet werden. Die benutzerdefinierte Achsenmethode `StreamRootChildDoc` eignet sich vor allem zum Lesen eines Dokuments, das ein sich wiederholendes `Child`-Element enthält.  

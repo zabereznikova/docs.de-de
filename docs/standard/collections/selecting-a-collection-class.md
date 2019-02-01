@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 049976c1e63d04c495a38b39531313adc1d12c5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836510"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620083"
 ---
 # <a name="selecting-a-collection-class"></a>Auswählen einer Auflistungsklasse
 Achten Sie darauf, dass Sie Ihre Auflistungsklasse sorgfältig auswählen. Ein falscher Typ kann die Verwendung der Auflistung einschränken. Vermeiden Sie im Allgemeinen die Verwendung der Typen im <xref:System.Collections>-Namespace - es sei denn, Ihr Ziel ist ausdrücklich .NET Framework, Version 1.1. Die generischen und parallelen Versionen der Auflistungen sind vorzuziehen, weil sie größere Typsicherheit und andere Optimierungen aufweisen.  
@@ -48,13 +48,13 @@ Achten Sie darauf, dass Sie Ihre Auflistungsklasse sorgfältig auswählen. Ein f
   
 -   Enthält jedes Element einen Wert, eine Kombination aus einem Schlüssel und einem Wert oder eine Kombination aus einem Schlüssel und mehreren Werten?  
   
-    -   Ein Wert: Verwenden Sie eine beliebige auf der <xref:System.Collections.IList>-Schnittstelle oder der generischen Schnittstelle <xref:System.Collections.Generic.IList%601> basierende Auflistung.  
+    -   Ein Wert: Verwenden Sie eine beliebige auf der <xref:System.Collections.IList>-Schnittstelle oder der generischen Schnittstelle <xref:System.Collections.Generic.IList%601> basierende Collection.  
   
-    -   Ein Schlüssel und ein Wert: Verwenden Sie eine beliebige auf der <xref:System.Collections.IDictionary>-Schnittstelle oder der generischen Schnittstelle <xref:System.Collections.Generic.IDictionary%602> basierende Auflistung.  
+    -   Ein Schlüssel und ein Wert: Verwenden Sie eine beliebige auf der <xref:System.Collections.IDictionary>-Schnittstelle oder der generischen Schnittstelle <xref:System.Collections.Generic.IDictionary%602> basierende Collection.  
   
-    -   Ein Wert mit eingebettetem Schlüssel: Verwenden Sie die generische Klasse <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
+    -   Ein Wert mit eingebettetem Schlüssel: Verwenden Sie die generische <xref:System.Collections.ObjectModel.KeyedCollection%602>-Klasse.  
   
-    -   Ein Schlüssel und mehrere Werte: Verwenden Sie die Klasse <xref:System.Collections.Specialized.NameValueCollection>.  
+    -   Ein Schlüssel und mehrere Werte: Verwenden Sie die <xref:System.Collections.Specialized.NameValueCollection>-Klasse.  
   
 -   Müssen Sie die Elemente abweichend von ihrer Eingabereihenfolge sortieren?  
   
@@ -81,7 +81,7 @@ Achten Sie darauf, dass Sie Ihre Auflistungsklasse sorgfältig auswählen. Ein f
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Collections>  
-- <xref:System.Collections.Specialized>  
-- <xref:System.Collections.Generic>  
+- <xref:System.Collections>
+- <xref:System.Collections.Specialized>
+- <xref:System.Collections.Generic>
 - [Threadsichere Sammlungen](../../../docs/standard/collections/thread-safe/index.md)

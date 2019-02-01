@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864228"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690617"
 ---
 # <a name="using-threads-and-threading"></a>Verwenden von Threads und Threading
 
@@ -44,7 +44,7 @@ Mit der <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>-Met
 
 In der folgenden Tabelle werden einige <xref:System.Threading.Thread>-Eigenschaften aufgeführt:  
   
-|Eigenschaft|Beschreibung |  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Gibt `true` zurück, wenn dieser Thread gestartet und ordnungsgemäß beendet bzw. abgebrochen wurde.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Es wird ein boolescher Wert abgerufen oder festgelegt, der angibt, ob ein Thread ein Hintergrundthread ist. Hintergrundthreads sind wie Vordergrundthreads, aber ein Hintergrundthread verhindert nicht, dass ein Prozess beendet wird. Sobald alle zu einem Prozess gehörenden Vordergrundthreads beendet wurden, beendet die Common Language Runtime den Prozess, indem die Methode <xref:System.Threading.Thread.Abort%2A> in Hintergrundthreads aufgerufen wird, die noch aktiv sind. Weitere Informationen finden Sie im Artikel zu [Vordergrund- und Hintergrundthreads](foreground-and-background-threads.md).|  
@@ -54,6 +54,6 @@ In der folgenden Tabelle werden einige <xref:System.Threading.Thread>-Eigenschaf
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Threading.Thread?displayProperty=nameWithType>  
-- [Threads and Threading (Threads und Threading)](threads-and-threading.md)  
-- [Parallele Programmierung](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>
+- [Threads and Threading (Threads und Threading)](threads-and-threading.md)
+- [Parallele Programmierung](../parallel-programming/index.md)

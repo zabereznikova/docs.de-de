@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Konfigurieren einer Anwendungsdomäne'
+title: 'Vorgehensweise: Konfigurieren einer Anwendungsdomäne'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 012f0220afa0e444d68af5998fb2492a03a371d8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8989d7695f44b0cd2e8b0ce3ec8bd74a6e802102
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50183164"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534565"
 ---
-# <a name="how-to-configure-an-application-domain"></a>Gewusst wie: Konfigurieren einer Anwendungsdomäne
+# <a name="how-to-configure-an-application-domain"></a>Vorgehensweise: Konfigurieren einer Anwendungsdomäne
 Sie können die Common Language Runtime mit Konfigurationsinformationen mithilfe der <xref:System.AppDomainSetup>-Klasse für eine Anwendungsdomäne bereitstellen. Wenn Sie Ihre eigenen Anwendungsdomänen erstellen, ist die wichtigste Eigenschaft <xref:System.AppDomainSetup.ApplicationBase%2A>. Die anderen **AppDomainSetup**-Eigenschaften werden hauptsächlich von den Runtimehosts zur Konfiguration einer bestimmten Anwendungsdomäne verwendet.  
   
  Die Eigenschaft **ApplicationBase** definiert das Stammverzeichnis der Anwendung. Wenn die Runtime eine Typanforderung erfüllen muss, sucht sie nach der Assembly, die den Typ im Verzeichnis enthält, der von der **ApplicationBase**-Eigenschaft angegeben ist.  
@@ -33,6 +33,6 @@ Sie können die Common Language Runtime mit Konfigurationsinformationen mithilfe
  [!code-csharp[ADApplicationBase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADApplicationBase/CS/source2.cs#2)]
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch  
-- [Programming with Application Domains (Programmieren mit Anwendungsdomänen)](application-domains.md#programming-with-application-domains)  
+## <a name="see-also"></a>Siehe auch
+- [Programming with Application Domains (Programmieren mit Anwendungsdomänen)](application-domains.md#programming-with-application-domains)
 - [Verwenden von Anwendungsdomänen](../../../docs/framework/app-domains/use.md)

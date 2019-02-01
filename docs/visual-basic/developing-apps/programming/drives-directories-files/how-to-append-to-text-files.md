@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Anfügen an Textdateien in Visual Basic'
+title: 'Vorgehensweise: Anfügen an Textdateien in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], appending to files
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-ms.openlocfilehash: 78d98dcf098966de435254926af21db76b7bccfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fabd0b6894fc5ab7d4bab1979d71b171d2b21c4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585735"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54498215"
 ---
-# <a name="how-to-append-to-text-files-in-visual-basic"></a>Gewusst wie: Anfügen an Textdateien in Visual Basic
+# <a name="how-to-append-to-text-files-in-visual-basic"></a>Vorgehensweise: Anfügen an Textdateien in Visual Basic
 Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>-Methode kann zum Anfügen an eine Textdatei verwendet werden. Dazu müssen Sie den Parameter `append` auf `True` festlegen.  
   
 ### <a name="to-append-to-a-text-file"></a>Anfügen an eine Textdatei  
@@ -41,7 +41,7 @@ Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>-Methode kann 
   
 -   Dem Benutzer fehlen die erforderlichen Berechtigungen zum Anzeigen des Pfades (<xref:System.Security.SecurityException>).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- [Schreiben in Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- [Schreiben in Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

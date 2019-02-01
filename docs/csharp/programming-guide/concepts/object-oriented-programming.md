@@ -2,12 +2,12 @@
 title: Objektorientiertes Programmieren (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8e211fec25ceb2e8e42620ff3f421e6943d8b5e5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8f7a810b3f3ec74723ca5e715b7428e1b60928f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54702482"
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 C# bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Kapselung, Vererbung und Polymorphie.  
@@ -296,7 +296,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };  
 ```  
   
- Weitere Informationen finden Sie unter [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ Weitere Informationen finden Sie unter: [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ##  <a name="Inheritance"></a> Vererbung  
  Vererbung ermöglicht die Erstellung neuer Klassen, die in anderen Klassen definiertes Verhalten wieder verwenden, erweitern und ändern. Die Klasse, deren Member vererbt werden, wird *Basisklasse* genannt, und die Klasse, die diese Member erbt, wird *abgeleitete Klasse* genannt. Alle Klassen in C# erben jedoch implizit von der Klasse <xref:System.Object>, die die .NET-Klassenhierarchie unterstützt und einfache Dienste für alle Klassen bereitstellt.  

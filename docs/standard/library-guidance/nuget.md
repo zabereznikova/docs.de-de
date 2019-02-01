@@ -4,12 +4,12 @@ description: Best Practices für die Paketerstellung mit NuGet für .NET-Bibliot
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 6c3c7feb95f0ebe6b348f42cdd243ce1d14b9c50
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 2ad8d2ed77610a3acead69b7c864785261ea5e7f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333420"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54724303"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -112,11 +112,14 @@ Eine Alternative zum Erstellen eines Symbolpakets ist das Einbetten von Symbolda
 </Project>
 ```
 
-**✔️ Betten** Sie Symboldateien in das NuGet-Hauptpaket ein.
+Der Nachteil von eingebetteten Symboldateien ist, dass sie die Paketgröße für .NET-Bibliotheken, die mit SDK-Projekten kompiliert wurden, um etwa 30 % erhöhen. Wenn die Paketgröße ein Problem darstellt, sollten Sie Symbole stattdessen in einem Symbolpaket veröffentlichen.
 
-> Durch das Einbetten von Symboldateien in das NuGet-Hauptpaket lässt sich der Debugvorgang für Entwickler standardmäßig optimieren. Sie müssen den NuGet-Symbolserver in ihrer IDE nicht suchen und konfigurieren, um Symboldateien abzurufen.
+**✔️ Überlegen** Sie sich, ob Sie Symbole als Symbolpaket (`*.snupkg`) auf NuGet.org veröffentlichen möchten
+
+> Mit Symbolpaketen (`*.snupkg`) erhalten Entwickler eine gute abrufbare Debugfunktion, ohne dass die Größe des Hauptpakets und die Wiederherstellungsleistung für diejenigen, die das NuGet-Paket nicht debuggen möchten, beeinträchtigt wird.
 >
-> Der Nachteil von eingebetteten Symboldateien ist, dass sie die Paketgröße für .NET-Bibliotheken, die mit SDK-Projekten kompiliert wurden, um etwa 30 % erhöhen. Wenn die Paketgröße ein Problem darstellt, sollten Sie Symbole stattdessen in einem Symbolpaket veröffentlichen.
+> Der Nachteil ist, dass sie den NuGet-Symbolserver in ihrer IDE finden und konfigurieren müssen (einmalige Konfiguration), um Symboldateien abzurufen. Für Visual Studio 2019 ist geplant, dass der Symbolserver von NuGet.org als Standardoption bereitgestellt wird. 
+
 
 >[!div class="step-by-step"]
 >[Zurück](strong-naming.md)

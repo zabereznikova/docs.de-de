@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Downloaden einer Datei in Visual Basic'
+title: 'Vorgehensweise: Herunterladen einer Datei in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - downloading Internet resources [Visual Basic], files
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - files [Visual Basic], downloading
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-ms.openlocfilehash: b0dc95674e17a7aba9b04a8b7e0b82c9c97c4180
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 435dfe497cde5a08bce8825eaf6fa73daab4348b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43385548"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54671186"
 ---
-# <a name="how-to-download-a-file-in-visual-basic"></a>Gewusst wie: Downloaden einer Datei in Visual Basic
+# <a name="how-to-download-a-file-in-visual-basic"></a>Vorgehensweise: Herunterladen einer Datei in Visual Basic
 Die <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>-Methode kann zum Herunterladen einer Remotedatei und dazu verwendet werden, diese an einem bestimmten Speicherort zu speichern. Wenn der `ShowUI`-Parameter auf `True` festgelegt wird, wir ein Dialogfeld angezeigt, das den Fortschritt des Downloads anzeigt und Benutzern erlaubt, den Vorgang abzubrechen. Standardmäßig werden vorhandene Dateien mit demselben Namen nicht überschrieben. Wenn vorhandene Dateien überschrieben werden sollen, legen Sie den `overwrite`-Parameter auf `True` fest.  
   
  Die folgenden Bedingungen können einen Ausnahmefehler verursachen:  
@@ -54,8 +54,8 @@ Die <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>-Methode kann zu
     > [!IMPORTANT]
     >  Das FTP-Protokoll, das von der `DownLoadFile`-Methode verwendet wird, sendet Informationen in Klartext, einschließlich Kennwörter, und darf nicht für die Übermittlung vertraulicher Informationen verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Devices.Network>  
- <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
- [Gewusst wie: Hochladen einer Datei](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- [Gewusst wie: Analysieren von Dateipfaden](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.Devices.Network>
+- <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>
+- [Vorgehensweise: Hochladen einer Datei](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
+- [Vorgehensweise: Analysieren von Dateipfaden](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Wählen mit Modems an seriellen Anschlüssen in Visual Basic'
+title: 'Vorgehensweise: Wählen mit Modems an seriellen Anschlüssen in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modems [Visual Basic], dialing
 - serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-ms.openlocfilehash: 6bef611b96c8c86a6eaf2802840e96769cd6fa34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db99f94d27235a7c9dca4fc5339854a39147b585
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588907"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54490612"
 ---
-# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Gewusst wie: Wählen mit Modems an seriellen Anschlüssen in Visual Basic
+# <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>Vorgehensweise: Wählen mit Modems an seriellen Anschlüssen in Visual Basic
 In diesem Thema wird beschrieben, wie Sie `My.Computer.Ports` nutzen, um ein Modem in Visual Basic anzuwählen.  
   
  In der Regel ist das Modem mit einem der seriellen Anschlüsse am Computer verbunden. Damit die Anwendung mit dem Modem kommunizieren kann, muss sie Befehle an den entsprechenden seriellen Anschluss senden.  
@@ -51,9 +51,9 @@ In diesem Thema wird beschrieben, wie Sie `My.Computer.Ports` nutzen, um ein Mod
   
  In diesem Beispiel trennt die Anwendung den seriellen Anschluss, nachdem sie das Modem anwählt. In der Praxis ist es erwünscht, dass Daten von und an das Modem übertragen werden. Weitere Informationen finden Sie unter [Vorgehensweise: Empfangen von Zeichenfolgen von seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Devices.Ports>  
- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>  
- [Gewusst wie: Senden von Zeichenfolgen zu seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
- [Gewusst wie: Empfangen von Zeichenfolgen von seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
- [Gewusst wie: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.Devices.Ports>
+- <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
+- [Vorgehensweise: Senden von Zeichenfolgen an serielle Anschlüsse](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
+- [Vorgehensweise: Empfangen von Zeichenfolgen von seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+- [Vorgehensweise: Anzeigen von verfügbaren seriellen Anschlüssen](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

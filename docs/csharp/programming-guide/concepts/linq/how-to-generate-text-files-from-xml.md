@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Generieren von Textdateien aus XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 1e0c57b1fa16bb1b92cabaf4afa7ff7bf40824bd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2890128e4dacbac5279b928d9b9bcc097cbe669a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591352"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530450"
 ---
 # <a name="how-to-generate-text-files-from-xml-c"></a>Vorgehensweise: Generieren von Textdateien aus XML (C#)
 In diesem Beispiel wird gezeigt, wie Sie aus einer XML-Datei eine CSV-Datei generieren können.  

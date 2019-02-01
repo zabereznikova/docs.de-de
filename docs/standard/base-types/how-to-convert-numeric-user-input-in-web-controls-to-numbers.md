@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen'
+title: 'Vorgehensweise: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349136"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54722360"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Gewusst wie: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Vorgehensweise: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen
 Da eine Webseite in verschiedensten Ländern auf der ganzen Welt angezeigt werden kann, können Benutzer numerische Daten in einer nahezu unbegrenzten Anzahl von Formaten in ein <xref:System.Web.UI.WebControls.TextBox>-Steuerelement einfügen. Daher ist es von entscheidender Bedeutung, das Gebietsschema und die Kultur des Webseitenbenutzers zu ermitteln. Bei der Analyse von Benutzereingaben können Sie dann die vom Gebietsschema und der Kultur des Benutzers definierten Formatierungskonventionen anwenden.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>So konvertieren Sie numerische Eingaben eines TextBox-Websteuerelements in eine Zahl  
@@ -73,5 +73,5 @@ Da eine Webseite in verschiedensten Ländern auf der ganzen Welt angezeigt werde
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [Verarbeiten numerischer Zeichenfolgen](../../../docs/standard/base-types/parsing-numeric.md)

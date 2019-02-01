@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Starten von Diensten'
+title: 'Vorgehensweise: Starten von Diensten'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: b3f04deb11a23957198864c444b4872aef45b2e4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176746"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54494366"
 ---
-# <a name="how-to-start-services"></a>Gewusst wie: Starten von Diensten
+# <a name="how-to-start-services"></a>Vorgehensweise: Starten von Diensten
 Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wird die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode für die Dienstklasse aufgerufen. In der Regel werden die Vorgänge, die vom Dienst durchgeführt werden, von der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode definiert. Nachdem ein Dienst gestartet worden ist, bleibt er aktiv, solange er nicht manuell angehalten oder beendet wird.  
   
  Für Dienste kann festgelegt werden, ob sie automatisch oder manuell gestartet werden. Ein automatisch startender Dienst wird gestartet, wenn der Computer, auf dem er installiert ist, neu gestartet oder zum ersten Mal eingeschaltet wird. Ein Dienst, der manuell gestartet wird, muss von Benutzern gestartet werden.  
@@ -27,7 +27,7 @@ Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wir
   
 ### <a name="to-specify-how-a-service-should-start"></a>So geben Sie an, wie ein Dienst gestartet werden soll  
   
-1.  Nachdem Sie den Dienst erstellt haben, fügen Sie die erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zu Ihrer Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1.  Nachdem Sie den Dienst erstellt haben, fügen Sie die erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 2.  Klicken Sie im Designer auf das Dienstinstallationsprogramm für den Dienst, mit dem Sie arbeiten.  
   
@@ -48,7 +48,7 @@ Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wir
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>So starten Sie einen Dienst manuell mit dem Server-Explorer  
   
-1.  Fügen Sie im **Server-Explorer** den gewünschten Server hinzu, sofern dieser noch nicht aufgelistet ist. Weitere Informationen finden Sie unter „Vorgehensweise: Zugreifen auf und Initialisieren von Server-Explorer/Datenbank-Explorer“.  
+1.  Fügen Sie im **Server-Explorer** den gewünschten Server hinzu, sofern dieser noch nicht aufgelistet ist. Weitere Informationen finden Sie unter Gewusst wie: Zugreifen auf und Initialisieren von Server-Explorer und Datenbank-Explorer“.  
   
 2.  Erweitern Sie den Knoten **Dienste**, und suchen Sie den zu startenden Dienst.  
   
@@ -77,7 +77,7 @@ Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wir
   
 2.  Starten Sie den Dienst, indem Sie die <xref:System.ServiceProcess.ServiceController.Start%2A>-Methode aufrufen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

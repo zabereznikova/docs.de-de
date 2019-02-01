@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation'
+title: 'Vorgehensweise: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db23b424d4357ad94b8b0de66ca71726b765321e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 810b29b4abde174e3634a03d5c7b5e0e43de11b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47234808"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637767"
 ---
-# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Gewusst wie: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation
+# <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Vorgehensweise: Verwenden von anonymen Pipes zur lokalen prozessübergreifenden Kommunikation
 Anonyme Pipes stellen prozessübergreifende Kommunikation auf einem lokalen Computer bereit. Sie bieten zwar weniger Funktionen als benannte Pipes, erfordern aber auch weniger Mehraufwand. Sie können anonyme Pipes verwenden, um die prozessübergreifende Kommunikation auf einem lokalen Computer zu vereinfachen. Anonyme Pipes können nicht zur Kommunikation über ein Netzwerk verwendet werden.  
   
  Um anonyme Pipes zu implementieren, verwenden Sie die <xref:System.IO.Pipes.AnonymousPipeServerStream>- und <xref:System.IO.Pipes.AnonymousPipeClientStream>-Klassen.  
@@ -47,5 +47,5 @@ Anonyme Pipes stellen prozessübergreifende Kommunikation auf einem lokalen Comp
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Pipes](../../../docs/standard/io/pipe-operations.md)  
-- [Gewusst wie: Verwenden von Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [Pipes](../../../docs/standard/io/pipe-operations.md)
+- [Vorgehensweise: Verwenden von Named Pipes zur prozessübergreifenden Kommunikation über ein Netzwerk](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

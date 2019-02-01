@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: c11e1f0c99b3189c7a353e6778c701667b0a1d12
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec54e2234d11a474f89c2890353b4eab53c3d41b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397685"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54693135"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Arbeiten mit Anwendungsprotokollen in Visual Basic
 Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protokollierungs- und Ablaufverfolgungsinformationen in Protokolle zu schreiben.  
@@ -42,10 +42,10 @@ Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protoko
   
  Die Werte von `CompanyName`, `ProductName`und `ProductVersion` stammen aus den Assemblyinformationen der Anwendung. Der Name der Protokolldatei hat die Form " *AssemblyName*.log", wobei *AssemblyName* der Dateiname der Assembly ohne Erweiterung ist. Wenn mehr als eine Protokolldatei erforderlich ist, etwa wenn die ursprüngliche Protokolldatei zu dem Zeitpunkt, da die Anwendung versucht, in es zu schreiben, nicht verfügbar ist, hat der Name der Protokolldatei die Form " *AssemblyName*-*iteration*.log", wobei `iteration` ein positiver `Integer`.  
   
- Sie können das Standardverhalten außer Kraft setzen, indem Sie die Konfigurationsdateien des Computers und der Anwendung hinzufügen oder ändern. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ändern des Ortes, in den "My.Application.Log" Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
+ Sie können das Standardverhalten außer Kraft setzen, indem Sie die Konfigurationsdateien des Computers und der Anwendung hinzufügen oder ändern. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ändern des Orts, in den „My.Application.Log“ Informationen schreibt](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).  
   
 ## <a name="configuring-log-settings"></a>Konfigurieren von Protokolleinstellungen  
- Die Standardimplementierung des `Log` -Objekts funktioniert ohne Anwendungskonfigurationsdatei, "app.config". Um die Standardwerte zu ändern, müssen Sie eine Konfigurationsdatei mit den neuen Einstellungen hinzufügen. Weitere Informationen finden Sie unter [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
+ Die Standardimplementierung des `Log` -Objekts funktioniert ohne Anwendungskonfigurationsdatei, "app.config". Um die Standardwerte zu ändern, müssen Sie eine Konfigurationsdatei mit den neuen Einstellungen hinzufügen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Filterung der Ausgabe von „My.Application.Log“](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).  
   
  Die Protokollkonfigurationsabschnitte befinden sich im `<system.diagnostics>` -Knoten im `<configuration>` -Hauptknoten der app.config-Datei. Die Protokollinformationen sind in mehreren Knoten definiert:  
   
@@ -100,6 +100,6 @@ Mithilfe der `My.Applicaton.Log` - und `My.Log` -Objekte ist es einfach, Protoko
   
 -   **Vermeiden Sie Dienstverweigerung** . Wenn die Anwendung zu viele Informationen in das Protokoll schreibt, kann das Protokolls voll werden, oder die Suche nach wichtigen Informationen gestaltet sich schwierig.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
- [Protokollieren von Informationen aus der Anwendung](../../../../visual-basic/developing-apps/programming/log-info/index.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
+- [Protokollieren von Informationen aus der Anwendung](../../../../visual-basic/developing-apps/programming/log-info/index.md)

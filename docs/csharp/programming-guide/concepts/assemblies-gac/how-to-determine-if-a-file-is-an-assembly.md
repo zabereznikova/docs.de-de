@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist (C#)'
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: 0cf9258aa4a5a1a633ee0bb04808d384de8f48d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a147081d16a6b9f7252466a06ebd8fc204e47c2a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54681767"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Vorgehensweise: Bestimmen, ob eine Datei eine Assembly ist (C#)
 Eine Datei ist nur dann eine Assembly, wenn sie verwaltet wird und einen Assemblyeintrag in ihren Metadaten enthält. Weitere Informationen über Assemblys und Metadaten finden Sie im Thema [Assemblymanifest](../../../../../docs/framework/app-domains/assembly-manifest.md).  
@@ -18,7 +18,7 @@ Eine Datei ist nur dann eine Assembly, wenn sie verwaltet wird und einen Assembl
   
 2.  Laden Sie die Datei, die Sie testen möchten.  
   
-3.  Wenn **ILDASM** meldet, dass die Datei keine portierbare ausführbare Datei (PE, portable executable) ist, ist es keine Assembly. Weitere Informationen finden Sie im Thema [Vorgehensweise: Ansichtsassemblyinhalt](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3.  Wenn **ILDASM** meldet, dass die Datei keine portierbare ausführbare Datei (PE, portable executable) ist, ist es keine Assembly. Weitere Informationen finden Sie im Thema [How to: View Assembly Contents (Vorgehensweise: Anzeigen von Assemblyinhalt)](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>So bestimmen Sie programmgesteuert, ob eine Datei eine Assembly ist  
   
@@ -68,6 +68,6 @@ class TestAssembly
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Reflection.AssemblyName>  
-- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)  
+- <xref:System.Reflection.AssemblyName>
+- [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
 - [Assemblys und der globale Assemblycache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

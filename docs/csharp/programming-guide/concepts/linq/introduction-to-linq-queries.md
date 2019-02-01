@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 80aafccab9b9183a1dc4dc25d531ebe65f6905b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dfbd663384a76298390d216bb2488b00e2535d00
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505154"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54605132"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Einführung in LINQ-Abfragen (C#)
 Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden normalerweise in einer spezialisierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für die verschiedenen Datenquellen entwickelt, beispielsweise SQL für relationale Datenbanken und XQuery für XML. Aus diesem Grund mussten Entwickler für jeden Typ von Datenquelle oder Datenformat, den sie unterstützen müssen, eine neue Abfragesprache erlernen. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] vereinfacht diese Situation durch die Bereitstellung eines konsistenten Modells zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Objekten. Sie verwenden dieselben grundlegenden Codierungsmuster für die Abfrage und Transformation von Daten in XML-Dokumenten, SQL-Datenbanken, [!INCLUDE[vstecado](~/includes/vstecado-md.md)]-Datasets, .NET-Auflistungen sowie allen anderen Quellen und Formaten, für die ein [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter verfügbar ist.  
@@ -56,7 +56,7 @@ IQueryable<Customer> custQuery =
  Weitere Informationen zum Erstellen bestimmter Typen von Datenquellen finden Sie in der Dokumentation der verschiedenen [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Anbieter. Die Grundregel ist jedoch sehr einfach: Eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Datenquelle ist jedes Objekt, das die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle oder eine Schnittstelle unterstützt, die davon erbt.  
   
 > [!NOTE]
->  Typen wie <xref:System.Collections.ArrayList>, die die nicht generische <xref:System.Collections.IEnumerable>-Schnittstelle unterstützen, können ebenso als [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Datenquelle verwendet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Abfragen von ArrayList mit LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
+>  Typen wie <xref:System.Collections.ArrayList>, die die nicht generische <xref:System.Collections.IEnumerable>-Schnittstelle unterstützen, können ebenso als [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Datenquelle verwendet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Abfragen der ArrayList-Klasse mit LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).  
   
 ##  <a name="query"></a> Die Abfrage  
  Die Abfrage gibt an, welche Informationen aus der Datenquelle oder den Datenquellen abgerufen werden sollen. Optional kann eine Abfrage auch angeben, wie diese Informationen vor der Rückgabe sortiert, gruppiert und strukturiert werden sollen. Eine Abfrage wird in einer Abfragevariablen gespeichert und mit einem Abfrageausdruck initialisiert. Um das Schreiben von Abfragen zu erleichtern, hat C# eine neue Abfragesyntax eingeführt.  
@@ -90,9 +90,9 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
-- [Walkthrough (Exemplarische Vorgehensweise: Schreiben von Abfragen in C#)](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [Walkthrough (Exemplarische Vorgehensweise: Schreiben von Abfragen in C#)](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
-- [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)  
+- [Erste Schritte mit LINQ in C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Exemplarische Vorgehensweise: Schreiben von Abfragen in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [Exemplarische Vorgehensweise: Schreiben von Abfragen in C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)
 - [Abfrageschlüsselwörter (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

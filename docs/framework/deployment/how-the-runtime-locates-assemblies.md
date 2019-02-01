@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453449"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661866"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>So sucht Common Language Runtime nach Assemblys
 Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen Sie mit dem Verfahren vertraut sein, mit dem die Common Language Runtime die Assemblys sucht und bindet, aus denen Ihre Anwendung zusammengesetzt ist. Standardmäßig versucht die Common Language Runtime, die genaue Version einer Assembly einzubinden, mit der die Anwendung erstellt wurde. Dieses Standardverhalten kann durch Einstellungen in der Konfigurationsdatei überschrieben werden.  
@@ -247,6 +247,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  Wenn beispielsweise „Assembly1“ auf „Assembly2“ verweist und „Assembly1“ von `http://www.code.microsoft.com/utils` heruntergeladen wurde, wird dieser Speicherort als Hinweis auf den Speicherort von „Assembly2.dll“ angesehen. Die Runtime sucht in `http://www.code.microsoft.com/utils/Assembly2.dll` und `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` nach der Assembly. Wenn "Assembly2" in keinem der beiden Speicherorte vorhanden ist, wird eine Anfrage an Windows Installer gestellt.  
   
-## <a name="see-also"></a>Siehe auch  
-- [Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+## <a name="see-also"></a>Siehe auch
+- [Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Bereitstellung](../../../docs/framework/deployment/index.md)

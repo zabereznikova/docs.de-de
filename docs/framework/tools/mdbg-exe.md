@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202919"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066401"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework-Befehlszeilendebugger)
 Der .NET Framework-Befehlszeilendebugger unterstützt Anbieter von Tools und Anwendungsentwickler beim Suchen und Beheben von Fehlern in Programmen, die für die Common Language Runtime von .NET Framework entwickelt wurden. Dieses Tool stellt mithilfe der Debug-API Debugdienste bereit. Sie können mit "MDbg.exe" lediglich verwalteten Code debuggen. Das Debuggen von nicht verwaltetem Code wird nicht unterstützt.  
@@ -34,7 +34,7 @@ MDbg [ProgramName[arguments]] [options]
   
  Bei Befehlen für "MDbg.exe" wird die Groß- und Kleinschreibung berücksichtigt.  
   
-|Befehl|Beschreibung |  
+|Befehl|Beschreibung|  
 |-------------|-----------------|  
 |**ap**[**rocess**] [*nummer*]|Wechselt zu einem anderen debuggten Prozess oder druckt verfügbare Prozesse. Die Zahlen sind keine echten Prozess-IDs (PID), sondern eine 0-indizierte Liste.|  
 |**a**[**ttach**] [*pid*]|Fügt an einen Prozess an oder druckt verfügbare Prozesse.|  
@@ -52,7 +52,7 @@ MDbg [ProgramName[arguments]] [options]
 |**fo**[**reach**] [*andererBefehl*]|Führt einen Befehl für alle Threads aus. *andererBefehl* ist ein gültiger Befehl, der für einen Thread ausgeführt wird. **foreach** *andererBefehl* führt denselben Befehl für alle Threads aus.|  
 |**f**[**unceval**] [`-ad` *Nr*] *funktionsname* [*argumente ...* ]|Führt eine Funktionsauswertung für den derzeit aktiven Thread aus, wobei *Funktionsname* die auszuwertende Funktion ist. Der Funktionsname muss vollqualifiziert sein, einschließlich Namespaces.<br /><br /> Die `-ad`-Option gibt die Anwendungsdomäne an, die zum Auflösen der Funktion verwendet werden soll. Wird die `-ad`-Option nicht angegeben, ist die Standardeinstellung der Anwendungsdomäne für die Auflösung die Anwendungsdomäne, in der sich der für die Funktionsauswertung verwendete Thread befindet.<br /><br /> Wenn die ausgewertete Funktion nicht statisch ist, sollte der erste übergebene Parameter ein `this`-Zeiger sein. Alle Anwendungsdomänen werden nach Argumenten für die Funktionsauswertung durchsucht.<br /><br /> Um einen Wert aus einer Anwendungsdomäne anzufordern, stellen Sie der Variablen den Modul- und Anwendungsdomänennamen als Präfix voran, z. B. `funceval -ad 0 System.Object.ToString hello.exe#0!MyClass.g_rootRef`. Mit diesem Befehl wird die Funktion `System.Object.ToString` in der Anwendungsdomäne `0` ausgewertet. Da die `ToString`-Methode eine Instanzfunktion ist, muss der erste Parameter ein `this`-Zeiger sein.|  
 |**g**[**o**]|Bewirkt, dass das Programm fortgesetzt wird, bis ein Haltepunkt erreicht wird, das Programm beendet wird oder ein Ereignis das Beenden des Programms verursacht (z. B. ein Ausnahmefehler).|  
-|**h**[**elp**] [*befehl*]<br /><br /> - oder - <br /><br /> **?** [*Befehl*]|Zeigt eine Beschreibung aller Befehle oder eine ausführliche Beschreibung eines angegebenen Befehls an.|  
+|**h**[**elp**] [*befehl*]<br /><br /> - oder -<br /><br /> **?** [*Befehl*]|Zeigt eine Beschreibung aller Befehle oder eine ausführliche Beschreibung eines angegebenen Befehls an.|  
 |**ig**[**nore**] [*ereignis*]|Bewirkt, dass der Debugger nur bei Ausnahmefehlern anhält.|  
 |**int**[**ercept**] *framezahl*|Führt einen Rollback für den Debugger zu einer angegebenen Framenummer aus.<br /><br /> Wenn der Debugger auf eine Ausnahme trifft, verwenden Sie diesen Befehl, um für den Debugger einen Rollback zur angegebenen Framenummer auszuführen. Sie können den Programmzustand mit dem **set**-Befehl ändern und mit dem **go**-Befehl fortfahren.|  
 |**k**[**ill**]|Hält den aktiven Prozess an.|  
@@ -77,7 +77,7 @@ MDbg [ProgramName[arguments]] [options]
 |**sh**[**ow**] [*zeilen*]|Gibt die Anzahl der anzuzeigenden Zeilen an.|  
 |**s**[**tep**]|Wechselt mit der Ausführung in die nächste Funktion der aktuellen Zeile oder wechselt zur nächsten Zeile, wenn keine Funktion vorhanden ist, zu der gewechselt werden kann.|  
 |**su**[**spend**] [\* &#124; [~]*threadnummer*]|Hält den aktuellen Thread oder den vom *threadnummer*-Parameter angegebenen Thread an.  Wenn *threadnummer* als `*` angegeben wird, wird der Befehl auf alle Threads angewendet. Beginnt die Threadnummer mit `~`, wird der Befehl für alle Threads mit Ausnahme des durch *threadnummer* angegebenen Threads angewendet. Unterbrochene Threads werden von der Ausführung ausgeschlossen, wenn der Prozess entweder durch den **go**-Befehl oder den **step**-Befehl ausgeführt wird. Wenn sich keine nicht unterbrochenen Threads im Prozess befinden und Sie den **go**-Befehl ausgeben, wird der Prozess nicht fortgesetzt. Drücken Sie in diesem Fall STRG+C, um den Prozess zu beeinflussen.|  
-|**sy**[**mbol**] *befehlsname* [*befehlswert*]|Gibt einen der folgenden Befehle an:<br /><br /> -   `symbol path` [`"``value``"`] – Zeigt den aktuellen Symbolpfad an oder legt diesen fest.<br />-   `symbol addpath` `"` `value` `"` – Fügt dem aktuellen Symbolpfad den Wert hinzu.<br />-   `symbol reload` [`"``module``"`] – Lädt entweder alle Symbole oder die Symbole für das angegebene Modul erneut.<br />-   `symbol list` [`module`] – Zeigt die derzeit geladenen Symbole für alle Module oder das angegebene Modul an.|  
+|**sy**[**mbol**] *befehlsname* [*befehlswert*]|Gibt einen der folgenden Befehle an:<br /><br /> -   `symbol path` [`"value"`] – Zeigt den aktuellen Symbolpfad an oder legt diesen fest.<br />-   `symbol addpath` `"value"` – Fügt dem aktuellen Symbolpfad den Wert hinzu.<br />-   `symbol reload` [`"module"`] – Lädt entweder alle Symbole oder die Symbole für das angegebene Modul erneut.<br />-   `symbol list` [`module`] – Zeigt die derzeit geladenen Symbole für alle Module oder das angegebene Modul an.|  
 |**t**[**hread**] [*neuerThread*] [-*nick spitzname*`]`|Der Thread-Befehl ohne Parameter zeigt alle verwalteten Threads im aktuellen Prozess an. Threads werden in der Regel durch ihre Threadnummern bezeichnet. Wurde dem Thread jedoch ein Spitzname zugewiesen, wird stattdessen der Spitzname angezeigt. Sie können den `-nick`-Parameter verwenden, um einem Thread einen Spitznamen zuzuweisen.<br /><br /> -   **thread** `-nick` *threadname* weist dem aktuell ausgeführten Thread einen Spitznamen zu.<br /><br /> Spitznamen dürfen nicht aus Zahlen bestehen. Wenn dem aktuellen Thread bereits ein Spitzname zugewiesen wurde, wird der alte Spitzname durch den neuen ersetzt. Wenn der neue Spitzname eine leere Zeichenfolge ("") ist, wird der Spitzname für den aktuellen Thread gelöscht und dem Thread wird kein neuer Spitzname zugewiesen.|  
 |**u**[**p**]|Verschiebt den aktiven Stapelrahmen nach oben.|  
 |**uwgc**[**handle**] [*var*] &#124; [*adresse*]|Druckt die von einem Handle nachverfolgte Variable. Das Handle kann mit dem Namen oder der Adresse angegeben werden.|  
@@ -106,6 +106,6 @@ mdbg>
   
 ## <a name="examples"></a>Beispiele  
   
-## <a name="see-also"></a>Siehe auch  
- [Extras](../../../docs/framework/tools/index.md)  
- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>Siehe auch
+- [Extras](../../../docs/framework/tools/index.md)
+- [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

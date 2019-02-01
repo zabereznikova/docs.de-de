@@ -1,12 +1,12 @@
 ---
 title: 'Exemplarische Vorgehensweise: Beibehalten eines Objekts unter Verwendung von C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086076"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54512449"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Exemplarische Vorgehensweise: Beibehalten eines Objekts unter Verwendung von C# #
 
@@ -101,5 +101,5 @@ Nun können Sie die Anwendung erneut erstellen und ausführen. Beachten Sie, das
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Serialisierung (C#)](index.md)  
-- [C#-Programmierhandbuch](../..//index.md)  
+- [Serialisierung (C#)](index.md)
+- [C#-Programmierhandbuch](../..//index.md)

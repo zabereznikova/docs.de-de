@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verketten mehrerer Zeichenfolgen (C#-Handbuch)'
+title: 'Vorgehensweise: Verketten mehrerer Zeichenfolgen (C#-Leitfaden)'
 description: Es gibt mehrere Möglichkeiten zum Verketten von Zeichenfolgen in C#. Lernen Sie die Optionen und Gründe für verschiedene Auswahlmöglichkeiten kennen.
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: da83a79f58c236692e284a7920c7b98c3520e5d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710416"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Vorgehensweise: Verketten mehrerer Zeichenfolgen (C#-Handbuch)
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>Vorgehensweise: Verketten mehrerer Zeichenfolgen (C#-Leitfaden)
 
 *Verkettung* ist der Prozess, eine Zeichenfolge ans Ende einer anderen Zeichenfolge anzufügen. Sie können Zeichenfolgen mithilfe des `+`-Operators verketten. Bei Zeichenfolgenliteralen und Zeichenfolgenkonstanten erfolgt die Verkettung beim Kompilieren. Es erfolgt keine Verkettung zur Laufzeit. Bei Zeichenfolgenvariablen erfolgt die Verkettung nur zur Laufzeit.
 
@@ -55,7 +55,7 @@ Sie können diese Beispiele ausprobieren, indem Sie sich den Code in unserem [Gi
 
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.String>  
-- <xref:System.Text.StringBuilder>  
-- [C#-Programmierhandbuch](../programming-guide/index.md)  
+- <xref:System.String>
+- <xref:System.Text.StringBuilder>
+- [C#-Programmierhandbuch](../programming-guide/index.md)
 - [Zeichenfolgen](../programming-guide/strings/index.md)

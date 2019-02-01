@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Parsen einer Zeichenfolge (C#)'
+title: 'Vorgehensweise: Analysieren einer Zeichenfolge (C#)'
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: b6b955d2cc9a3ea0c6e17e68639ad7fc677c3fc7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c4d26f534c718d69c84a30b11de22249b241e084
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43744799"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54629786"
 ---
-# <a name="how-to-parse-a-string-c"></a>Vorgehensweise: Parsen einer Zeichenfolge (C#)
+# <a name="how-to-parse-a-string-c"></a>Vorgehensweise: Analysieren einer Zeichenfolge (C#)
 In diesem Thema wird erläutert, wie Sie in C# eine XML-Struktur erstellen können.  
   
 ## <a name="example"></a>Beispiel  

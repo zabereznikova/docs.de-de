@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Lesen und Schreiben eines codierten Dokuments (C#)'
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: a5e1d6f70d8ad2740e4d7daff8c78b49966bb7ee
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fdf3e05c705ca9caea32306616c79ade0aeb9be3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799384"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54615454"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>Vorgehensweise: Lesen und Schreiben eines codierten Dokuments (C#)
 Fügen Sie zum Erstellen eines codierten XML-Dokuments der XML-Struktur eine <xref:System.Xml.Linq.XDeclaration> hinzu, die die Codierung auf den gewünschten Codeseitennamen festlegt.  
@@ -78,5 +78,5 @@ Encoding of loaded document is:utf-16
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
 - [Advanced LINQ to XML Programming (C#) (Erweiterte LINQ to XML-Programmierung (C#))](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

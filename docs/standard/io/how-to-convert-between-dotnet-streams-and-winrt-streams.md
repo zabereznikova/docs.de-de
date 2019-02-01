@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams'
+title: 'Vorgehensweise: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96067ab6c8e13417158e4ebf7fae0e08cb9fbea4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 6a006d739b6fa9a31ad238702dd0b2d26254deca
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087478"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54492759"
 ---
-# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Gewusst wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams
+# <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Vorgehensweise: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams
 
 .NET Framework für Windows Store-Apps ist eine Teilmenge der Vollversion von .NET Framework. Aufgrund der Sicherheitsanforderungen und anderer Anforderungen an Windows Store-Apps können Sie nicht den vollständigen Satz von .NET Framework-APIs zum Öffnen und Lesen von Dateien verwenden. Weitere Informationen finden Sie unter [.NET für Windows Store-Apps – Übersicht](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Sie können die .NET Framework-APIs jedoch für andere Streambearbeitungsvorgänge verwenden. Zur Bearbeitung dieser Streams müssen Sie möglicherweise einen .NET Framework-Streamtyp wie <xref:System.IO.MemoryStream> oder <xref:System.IO.FileStream> und einen Windows-Runtime-Stream wie <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> oder <xref:Windows.Storage.Streams.IRandomAccessStream> konvertieren.
 
@@ -68,7 +68,7 @@ Wenn Sie einen .NET Framework-Stream in einen Windows-Runtime-Stream konvertiere
 - Verwenden Sie die [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md)-Methode, wie im folgenden Beispiel dargestellt wird:
 
   > [!IMPORTANT]
-  > Stellen Sie sicher, dass der von Ihnen verwendete .NET Framework-Stream Suchvorgänge unterstützt, oder kopieren Sie ihn in einen Stream, der dies unterstützt. Um dies zu ermitteln, können Sie die <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType>-Eigenschaft verwenden.
+  > Stellen Sie sicher, dass der von Ihnen verwendete .NET Framework-Stream Suchvorgänge unterstützt, oder kopieren Sie ihn in einen Stream, der dies unterstützt. Um dies zu ermitteln, können Sie die <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> -Eigenschaft verwenden.
 
   Um dieses Beispiel auszuführen, müssen Sie eine Windows Store XAML-App erstellen, die auf .NET Framework 4.5.1 abzielt und einen Textblock mit dem Namen `TextBlock2` und eine Schaltfläche mit dem Namen `Button2`enthält. Das Click-Ereignis für die Schaltfläche muss der in diesem Beispiel gezeigten `button2_Click` -Methode zugeordnet sein.
 
@@ -79,6 +79,6 @@ Wenn Sie einen .NET Framework-Stream in einen Windows-Runtime-Stream konvertiere
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Schnellstart: Lesen und Schreiben einer Datei (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-- [.NET für Windows Store-Apps – Übersicht](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-- [.NET für Windows Store-Apps – unterstützte APIs](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [Schnellstart: Lesen und Schreiben einer Datei (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)
+- [.NET für Windows Store-Apps – Übersicht](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)
+- [.NET für Windows Store-Apps – unterstützte APIs](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

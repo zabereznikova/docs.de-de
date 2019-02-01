@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 14656fa25ea1d01339bd63efb999e938e1243db8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5a4ecd1fbe5bb79a67d9df07d8f1a93830b03880
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54499868"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C#-Compileroptionen)
 Die Option **-warn** gibt die vom Compiler anzuzeigende Warnstufe an.  
@@ -30,7 +30,7 @@ Die Option **-warn** gibt die vom Compiler anzuzeigende Warnstufe an.
   
 ## <a name="arguments"></a>Argumente  
  `option`  
- Die Warnstufe, die für die Kompilierung angezeigt werden soll: Niedrigere Zahlen zeigen nur schwerwiegendere Warnungen an, höhere Zahlen zeigen mehr Warnungen an. Gültige Werte sind 0–4:  
+ Die Warnstufe, die für die Kompilierung angezeigt werden soll: Niedrigere Zahlen zeigen nur sehr schwerwiegende Warnungen an; höhere Zahlen zeigen mehr Warnungen an. Gültige Werte sind 0–4:  
   
 |Warnstufe|Bedeutung|  
 |-------------------|-------------|  
@@ -64,7 +64,7 @@ Die Option **-warn** gibt die vom Compiler anzuzeigende Warnstufe an.
 csc -warn:1 in.cs  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 
-- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)  
+- [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Lesen eines Werts aus einem Registrierungsschlüssel in Visual Basic'
+title: 'Vorgehensweise: Lesen eines Werts aus einem Registrierungsschlüssel in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - registry keys [Visual Basic], reading from
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-ms.openlocfilehash: 645ec80124a23ac86a06993bd4e06b59372a6d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f731492ba794cffebe97b93fc6b9c9f5fd8eacdf
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586476"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54748089"
 ---
-# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Gewusst wie: Lesen eines Werts aus einem Registrierungsschlüssel in Visual Basic
+# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>Vorgehensweise: Lesen eines Werts aus einem Registrierungsschlüssel in Visual Basic
 Die `GetValue`-Methode des `My.Computer.Registry`-Objekts kann verwendet werden, um Werte in der Windows-Registrierung zu lesen.  
   
  Wenn der Schlüssel („Software\MyApp“ im folgenden Beispiel) nicht vorhanden ist, wird eine Ausnahme ausgelöst. Wenn der `ValueName` („Name“ im folgenden Beispiel) nicht vorhanden ist, wird `Nothing` zurückgegeben.  
@@ -52,7 +52,7 @@ Die `GetValue`-Methode des `My.Computer.Registry`-Objekts kann verwendet werden,
 ## <a name="net-framework-security"></a>.NET Framework-Sicherheit  
  Die Assembly benötigt zum Ausführen dieses Prozesses eine von der <xref:System.Security.Permissions.RegistryPermission>-Klasse gewährte Berechtigungsebene. Wenn Sie in einem teilweise vertrauenswürdigen Kontext arbeiten, kann der Vorgang möglicherweise aufgrund fehlender Berechtigungen eine Ausnahme auslösen. Ebenso muss der Benutzer die richtigen Zugriffssteuerungslisten zum Erstellen von oder Schreiben auf Einstellungen verfügen. Beispielsweise besitzt eine lokale Anwendung, die die Sicherheitsberechtigung für den Codezugriff besitzt, möglicherweise keine Betriebssystemberechtigung. Weitere Informationen finden Sie unter [Grundlagen der Codezugriffssicherheit](../../../../framework/misc/code-access-security-basics.md).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- <xref:Microsoft.Win32.RegistryHive>  
- [Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- <xref:Microsoft.Win32.RegistryHive>
+- [Lesen aus der und Schreiben in die Registrierung](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

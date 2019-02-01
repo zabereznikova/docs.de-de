@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erhalten von Speichern für isolierten Speicher'
+title: 'Vorgehensweise: Erhalten von Speichern für isolierten Speicher'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e2f87bfe1e3e7f3a1c8135c047b25a998793453
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084069"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524571"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>Gewusst wie: Erhalten von Speichern für isolierten Speicher
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>Vorgehensweise: Erhalten von Speichern für isolierten Speicher
 Ein isolierter Speicher macht ein virtuelles Dateisystem in einem Datendepot verfügbar. Die <xref:System.IO.IsolatedStorage.IsolatedStorageFile>-Klasse bietet eine Reihe von Methoden für die Interaktion mit einem isolierten Speicher. Zum Erstellen und Abrufen von Speichern stellt <xref:System.IO.IsolatedStorage.IsolatedStorageFile> drei statische Methoden bereit:  
   
 -   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> gibt Speicher zurück, der nach Benutzer und Assembly isoliert ist.  
@@ -58,8 +58,8 @@ Ein isolierter Speicher macht ein virtuelles Dateisystem in einem Datendepot ver
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
-- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)  
-- [Isolationstypen](../../../docs/standard/io/types-of-isolation.md)  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
+- [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)
+- [Isolationstypen](../../../docs/standard/io/types-of-isolation.md)
 - [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

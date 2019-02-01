@@ -20,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f3e67fe49fb6d8a4d56b3d36d78d86c6c517d2a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8ba1651583f4cd962f5038fbe0e3f55a5d8b42ed
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50181604"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54589674"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshallen von Klassen, Strukturen und Unions
 Klassen und Strukturen sind in .NET Framework ähnlich. Beide können Felder, Eigenschaften und Ereignisse enthalten. Sie können auch über statische und nicht statische Methoden verfügen. Ein deutlicher Unterschied ist, dass Strukturen Werttypen sind, während Klassen Verweistypen sind.  
   
  In der folgende Tabelle werden Marshallingoptionen für Klassen, Strukturen und Unions aufgelistet. Ihre Verwendung wird beschrieben, und es werden Links zu den entsprechenden Plattformaufrufbeispielen bereitgestellt.  
   
-|Typ|Beschreibung |Beispiel|  
+|Typ|Beschreibung|Beispiel|  
 |----------|-----------------|------------|  
 |Klasse als Wert.|Übergibt eine Klasse mit ganzzahligen Membern als In/Out-Parameter, wie der verwaltete Fall.|SysTime-Beispiel|  
 |Struktur als Wert.|Übergibt Strukturen als In-Parameter.|Beispiel für Strukturen|  
 |Struktur als Verweis.|Übergibt Strukturen als In/Out-Parameter.|OSInfo-Beispiel|  
 |Struktur mit geschachtelten Strukturen (vereinfacht).|Übergibt eine Klasse, die eine Struktur mit geschachtelten Strukturen in der nicht verwalteten Funktion darstellt. Die Struktur wird zu einer einzigen großen Struktur im verwalteten Prototyp vereinfacht.|FindFile-Beispiel|  
 |Struktur mit einem Zeiger auf eine andere Struktur.|Übergibt eine Struktur, die einen Zeiger auf eine zweite Struktur enthält, als Member.|Beispiel für Strukturen|  
-|Array von Strukturen mit ganzen Zahlen als Wert.|Übergibt ein Array von Strukturen, die nur ganze Zahlen enthalten, als In/Out-Parameter. Member des Arrays können geändert werden.|Beispiel zu Arrays|  
+|Array von Strukturen mit ganzen Zahlen als Wert.|Übergibt ein aus Strukturen bestehendes Array, das nur ganze Zahlen enthält, als In-/Out-Parameter. Member des Arrays können geändert werden.|Beispiel zu Arrays|  
 |Array von Strukturen mit ganzen Zahlen und Zeichenfolgen als Verweis.|Übergibt ein Array von Strukturen, die ganze Zahlen und Zeichenfolgen enthalten, als Out-Parameter. Die aufgerufene Funktion weist Speicher für das Array zu.|OutArrayOfStructs-Beispiel|  
 |Unions mit Werttypen.|Übergibt Unions mit Werttypen (Integer und Double).|Unions-Beispiel|  
 |Unions mit gemischten Typen.|Übergibt Unions mit gemischten Typen (Integer und String).|Unions-Beispiel|  
@@ -288,8 +288,8 @@ typedef struct _MYSTRSTRUCT2
  [!code-csharp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)  
- [Datentypen für den Plattformaufruf](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
- [Marshallen von Zeichenfolgen](marshaling-strings.md)  
- [Marshallen von Typenarrays](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))
+## <a name="see-also"></a>Siehe auch
+- [Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)
+- [Datentypen für den Plattformaufruf](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
+- [Marshallen von Zeichenfolgen](marshaling-strings.md)
+- [Marshallen von Typenarrays](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))

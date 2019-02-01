@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 589d268e937cc9cbd37e88a53fb9e00935d19f55
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127549"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066349"
 ---
 # <a name="whats-new-in-net-core-21"></a>Neuigkeiten in .NET Core 2.1
 
@@ -96,23 +96,30 @@ Ab .NET Core 2.0 wird für alle .NET Core-Anwendungen automatisch ein Rollforwar
 Wenn die Version von .NET Core, mit der eine Anwendung erstellt wurde, nicht zur Runtime vorhanden ist, wird die Anwendung ab .NET Core 2.0 automatisch für die neueste installierte *Nebenversion* von .NET Core ausgeführt. Das heißt, wenn eine Anwendung mit .NET Core 2.0 erstellt wurde, und .NET Core 2.0 auf dem Hostsystem nicht vorhanden ist, jedoch .NET Core 2.1, wird die Anwendung mit .NET Core 2.1 ausgeführt.
 
 > [!IMPORTANT]
-> Dieses Rollforwardverhalten gilt nicht für Vorschauversionen. Ebenso wenig gilt es für Hauptversionen. Beispielsweise würde für eine .NET Core 1.0-Anwendung kein Rollforward zu .NET Core 2.0 oder .NET Core 2.1 ausgeführt.
+> Dieses Rollforwardverhalten gilt nicht für Vorschauversionen. Es wird standardmäßig auch nicht auf Hauptreleases angewendet. Dies können Sie mit den folgenden Einstellungen jedoch ändern.
 
-Sie können den Rollforward einer Nebenversion auch auf drei Arten deaktivieren:
+Sie können dieses Verhalten anpassen, indem Sie die Einstellung für den Rollforward auf das freigegebene Framework ohne Candidate. Folgende Einstellungen sind verfügbar:
+- `0`: Das Rollforwardverhalten für Nebenversionen deaktivieren. Mit dieser Einstellung wird für Anwendungen für .NET Core 2.0.0 ein Rollforward auf .NET Core 2.0.1 ausgeführt, aber nicht für .NET Core 2.2.0 oder .NET Core 3.0.0.
+- `1`: Das Rollforwardverhalten für Nebenversionen aktivieren. Dies ist die Standardeinstellung. Mit dieser Einstellung wird für Anwendungen für .NET Core 2.0.0 ein Rollforward auf .NET Core 2.0.1 oder .NET Core 2.2.0 abhängig davon ausgeführt, was installiert wird. Es wird jedoch kein Rollforward auf .NET Core 3.0.0 ausgeführt.
+- `2`: Das Rollforwardverhalten für Neben- und Hauptversionen aktivieren. Wenn diese Einstellung festgelegt wird, werden auch verschiedene Hauptversionen für das Rollforwardverhalten beachtet, d. h., für Anwendungen für .NET Core 2.0.0 wird ein Rollforward auf .NET Core 3.0.0 ausgeführt.
 
-- Legen Sie für die `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`-Umgebungsvariable 0 (null) fest.
+Sie können diese Einstellung auf drei verschiedene Arten ändern:
 
-- Fügen Sie die folgende Zeile in die Datei „runtimeconfig.json“ ein:
+- Legen Sie den gewünschten Wert für die Umgebungsvariable `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` fest.
+
+- Fügen Sie die folgende Zeile mit dem gewünschten Wert in die `runtimeconfig.json`-Datei ein:
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- Schließen Sie bei Verwendung der [.NET Core-CLI-Tools](../tools/index.md) die folgende Option mit einem .NET Core-Befehl wie z.B. `run` ein:
+- Fügen Sie bei Verwendung der [.NET Core-CLI-Tools](../tools/index.md) die folgende Option mit dem gewünschten Wert zu einem .NET Core-Befehl wie `run` hinzu:
 
    ```console
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
+
+Rollforwards für die Patchversionen sind unabhängig von dieser Einstellung und erfolgen erst, nachdem Rollforwards für Neben- und Hauptversionen ausgeführt wurden.
 
 ## <a name="deployment"></a>Bereitstellung
 
@@ -239,6 +246,6 @@ Auf Linux und macOS können Sie <xref:System.Net.Http.HttpClient> nur pro Prozes
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Neuigkeiten in .NET Core](index.md)  
-* [Neue Features in EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
-* [Neuerungen in ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)
+- [Neuigkeiten in .NET Core](index.md)
+- [Neue Features in EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)
+- [Neuerungen in ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

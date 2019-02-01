@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 681938b4893e9fe68caa142898db9b867b481bf0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190904"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54657297"
 ---
 # <a name="strong-named-assemblies"></a>Assemblys mit starkem Namen
 Durch die Vergabe eines starken Namens erhalten Assemblys eine eindeutige Identität. Außerdem werden Assemblykonflikte verhindert.  
@@ -42,8 +42,8 @@ Durch die Vergabe eines starken Namens erhalten Assemblys eine eindeutige Identi
   
  Wenn Sie Open Source-Entwickler sind und die Vorzüge von Assemblys mit starkem Namen kennen lernen möchten, können Sie unter Umständen den privaten Schlüssel einer Assembly zusammen in Ihr Quellcodeverwaltungssystem einchecken.  
   
-## <a name="see-also"></a>Siehe auch  
-- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)  
-- [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
-- [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+## <a name="see-also"></a>Siehe auch
+- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)
+- [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

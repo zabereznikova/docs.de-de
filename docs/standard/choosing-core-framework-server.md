@@ -4,12 +4,12 @@ description: Ein Leitfaden zur Auswahl der NET-Implementierung für die Erstellu
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fe6aa28b456d3a83b15dfcb3a65147e77b9d5f85
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202236"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54699505"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wahl zwischen .NET Core und .NET Framework für Server-Apps
 
@@ -85,15 +85,15 @@ Sie müssen nur dann .NET Framework verwenden, wenn die Bibliotheken oder NuGet-
 
 Einige .NET Framework-Technologien sind in .NET Core nicht verfügbar. Möglicherweise werden aber einige in zukünftigen .NET Core-Releases verfügbar gemacht. Andere können jedoch für die neuen Anwendungsmuster, auf die .NET Core abzielt, nicht verwendet werden und werden möglicherweise nie verfügbar sein. Die folgende Liste enthält die häufigsten Technologien, die von .NET Core nicht unterstützt werden:
 
-* ASP.NET-Web Forms-Anwendungen: ASP.NET-Web Forms ist nur in .NET Framework verfügbar. ASP.NET Core kann nicht für ASP.NET-Web Forms verwendet werden. Eine Integration von ASP.NET-.Web Forms in .NET Core ist nicht geplant.
+* ASP.NET Web Forms-Anwendungen: ASP.NET-Web Forms sind nur in .NET Framework verfügbar. ASP.NET Core kann nicht für ASP.NET-Web Forms verwendet werden. Eine Integration von ASP.NET-.Web Forms in .NET Core ist nicht geplant.
 
-* ASP.NET Web Pages-Anwendungen: ASP.NET Web Pages ist nicht in ASP.NET Core enthalten. 
+* ASP.NET-Web Pages-Anwendungen: ASP.NET Web Pages sind nicht in ASP.NET Core enthalten. 
 
 * Implementierung von WCF-Diensten. Auch wenn WCF-Dienste über eine [WCF-Clientbibliothek](https://github.com/dotnet/wcf) von .NET Core genutzt werden, ist die WCF-Serverimplementierung aktuell nur in .NET Framework verfügbar. Dieses Szenario ist nicht Bestandteil der derzeitigen Pläne für .NET Core, wird jedoch für die Zukunft in Betracht gezogen.
 
-* Workflowbezogene Dienste: Windows Workflow Foundation (WF), Workflow Services (WCF + WF in einem einzigen Dienst) und WCF Data Services (zuvor bekannt als „ADO.NET Data Services“) sind nur in .NET Framework verfügbar.  Eine Integration von WF/WCF+WF/WCF Data Services in .NET Core ist nicht geplant.
+* Workflow-bezogene Dienste: Windows Workflow Foundation (WF), Workflow-Dienste (WCF + WF in einem einzigen Dienst) und WCF Data Services (früher „ADO.NET Data Services“) sind nur in .NET Framework verfügbar.  Eine Integration von WF/WCF+WF/WCF Data Services in .NET Core ist nicht geplant.
 
-* Sprachunterstützung: Visual Basic und F# werden aktuell in .NET Core unterstützt, allerdings nicht für alle Projekttypen. Eine Liste der unterstützten Projektvorlagen finden Sie im Abschnitt [Vorlagenoptionen für dotnet new](../core/tools/dotnet-new.md#arguments).
+* Sprachenunterstützung: Visual Basic und F# werden aktuell in .NET Core unterstützt, allerdings nicht für alle Projekttypen. Eine Liste der unterstützten Projektvorlagen finden Sie im Abschnitt [Vorlagenoptionen für dotnet new](../core/tools/dotnet-new.md#arguments).
 
 Zusätzlich zum offiziellen Meilensteinplan werden auch andere Frameworks in .NET Core portiert. Eine vollständige Liste finden Sie bei den CoreFX-Problemen, die als [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) (Port auf Core) gekennzeichnet wurden. Diese Liste stellt jedoch nicht die Komponenten dar, die Microsoft auch tatsächlich in .NET Core integrieren wird. Sie spiegelt lediglich die Wünsche der Community wider. Wenn Ihnen eine als `port-to-core` gekennzeichnete Komponente als wichtig erscheint, beteiligen Sie sich an der Diskussion auf GitHub. Wenn Ihrer Ansicht nach noch etwas fehlt, erstellen Sie im [CoreFX-Repository](https://github.com/dotnet/corefx/issues/new) ein neues Problem.
 
@@ -103,11 +103,11 @@ Einige Plattformen von Microsoft oder Drittanbietern unterstützen .NET Core nic
 
 ## <a name="see-also"></a>Siehe auch
 
-* [Wählen zwischen ASP.NET und ASP.NET Core](/aspnet/core/choose-aspnet-framework)
-* [ASP.NET Core, das .NET Framework anzielt](/aspnet/core#aspnet-core-targeting-net-framework)
-* [Zielframeworks](frameworks.md)
-* [Leitfaden für .NET Core](../core/index.md)  
-* [Portieren von .NET Framework zu .NET Core](../core/porting/index.md)  
-* [Leitfaden zu .NET Framework in Docker](../framework/docker/index.md)  
-* [.NET-Komponenten – Übersicht](components.md)  
-* [.NET Microservices. Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md)
+- [Wählen zwischen ASP.NET und ASP.NET Core](/aspnet/core/choose-aspnet-framework)
+- [ASP.NET Core, das .NET Framework anzielt](/aspnet/core#aspnet-core-targeting-net-framework)
+- [Zielframeworks](frameworks.md)
+- [Leitfaden für .NET Core](../core/index.md)
+- [Portieren von .NET Framework zu .NET Core](../core/porting/index.md)
+- [Leitfaden zu .NET Framework in Docker](../framework/docker/index.md)
+- [.NET-Komponenten – Übersicht](components.md)
+- [.NET Microservices. Architecture for Containerized .NET Applications (.NET Microservices: Architektur für .NET-Containeranwendungen)](microservices-architecture/index.md)

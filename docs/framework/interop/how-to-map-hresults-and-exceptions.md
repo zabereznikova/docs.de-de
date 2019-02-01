@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Zuordnen von HRESULTs und Ausnahmen'
+title: 'Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d5728de1140df51b9c725db0c8c80d21ace6deb
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454472"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54729235"
 ---
-# <a name="how-to-map-hresults-and-exceptions"></a>Gewusst wie: Zuordnen von HRESULTs und Ausnahmen
+# <a name="how-to-map-hresults-and-exceptions"></a>Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen
 COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melden sie durch das Auslösen von Ausnahmen. Die Common Language Runtime verwaltet den Übergang zwischen den beiden. Jede Ausnahmeklasse in .NET Framework wird einem HRESULT zugeordnet.  
   
  Benutzerdefinierte Ausnahmeklassen können jedes angemessene HRESULT angeben. Diese Ausnahmeklassen können durch eine dynamische Änderung einstellen, dass das HRESULT zurückgegeben wird, wenn die Ausnahme durch Festlegen des **HResult**-Felds für das Ausnahmeobjekt generiert wird. Weitere Informationen zur Ausnahme wird dem Client über die **IErrorInfo**-Schnittstelle zur Verfügung gestellt, die auf das .NET-Objekt im nicht verwalteten Prozess implementiert wird.  
@@ -142,6 +142,6 @@ CMyClass::MethodThatThrows
   
  Ausnahmefelder, wie z.B. **Message**, **Source** und **StackTrace** sind für die **StackOverflowException** nicht verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Ausnahmen](../../standard/exceptions/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Ausnahmen](../../standard/exceptions/index.md)

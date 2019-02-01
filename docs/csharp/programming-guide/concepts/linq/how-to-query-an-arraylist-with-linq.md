@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Abfragen von ArrayList mit LINQ (C#)'
+title: 'Vorgehensweise: Abfragen der ArrayList-Klasse mit LINQ (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: 7cf804bc86dc6f8378e62e01ba373bb82821de52
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 9276ebe02858d7a7e295430b0125c590b9c2f308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43740233"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651805"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-c"></a>Vorgehensweise: Abfragen von ArrayList mit LINQ (C#)
+# <a name="how-to-query-an-arraylist-with-linq-c"></a>Vorgehensweise: Abfragen der ArrayList-Klasse mit LINQ (C#)
 Bei Verwendung von LINQ zum Abfragen nicht generischer <xref:System.Collections.IEnumerable>-Auflistungen wie z.B. <xref:System.Collections.ArrayList> müssen Sie den Typ der Bereichsvariablen entsprechend dem spezifischen Typ der Objekte in der Auflistung explizit deklarieren. Wenn Sie zum Beispiel eine <xref:System.Collections.ArrayList> mit `Student`-Objekten haben, sollte die [from-Klausel](../../../../csharp/language-reference/keywords/from-clause.md) wie folgt aussehen:  
   
 ```  

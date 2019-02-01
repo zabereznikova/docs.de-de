@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be7120b9bff5c51141a1eac80051c4b464433aa
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c58fe8aeeb9acdb886cb224046c68af0577eae7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801553"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54539752"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Abrufen von Ressourcen in Desktop-Apps
 Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollten Sie idealerweise die Ressourcen für die Standardkultur bzw. neutrale Kultur mit der Hauptassembly packen und eine separate Satellitenassembly für jede Sprache oder Kultur erstellen, die Ihre App unterstützt. Anschließend können Sie die <xref:System.Resources.ResourceManager> -Klasse wie im nächsten Abschnitt beschrieben für den Zugriff auf benannte Ressourcen verwenden. Wenn Sie die Ressourcen nicht in die Hauptassembly und Satellitenassemblys einbetten möchten, können Sie auch direkt auf binäre Resources-Dateien (.resources) zugreifen, wie im Abschnitt [Abrufen von Ressourcen aus Ressourcendateien](#from_file) weiter unten in diesem Artikel erläutert.  Informationen zum Abrufen von Ressourcen in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps finden Sie unter [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](https://go.microsoft.com/fwlink/p/?LinkID=241674) im Windows Developer Center.  
@@ -40,7 +40,7 @@ Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollt
   
  Der Ressourcen-Manager verwendet den Ressourcenfallback-Prozess um zu steuern, wie die Anwendung kulturabhängige Ressourcen abruft. Weitere Informationen finden Sie im Abschnitt „Ressourcenfallback-Prozess“ in [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Informationen zum Instanziieren eines <xref:System.Resources.ResourceManager> -Objekts finden Sie im Abschnitt „Instanziieren eines ResourceManager-Objekts“ in der <xref:System.Resources.ResourceManager> -Themenklasse.  
   
-### <a name="retrieving-string-data-an-example"></a>Abrufen Zeichenfolgedaten: Beispiel  
+### <a name="retrieving-string-data-an-example"></a>Abrufen von Zeichenfolgedaten: Beispiel  
  Im folgenden Beispiel wird die <xref:System.Resources.ResourceManager.GetString%28System.String%29> -Methode aufgerufen, um die Zeichenfolgenressourcen für die aktuelle UI-Kultur abzurufen. Es umfasst eine neutrale Zeichenfolgenressource für die Kultur Englisch (USA) und lokalisierte Ressourcen für die Kulturen Französisch (Frankreich) und Russisch (Russische Föderation). Die folgende Ressource für Englisch (USA) ist in einer Strings.txt-Datei enthalten:  
   
 ```  
@@ -184,7 +184,7 @@ Greeting=Здравствуйте
 Prompt=Как вас зовут?  
 ```  
   
- Der Quellcode für das Beispiel lautet wie folgt. Das Beispiel instanziiert <xref:System.Globalization.CultureInfo> -Objekte für die Kulturen Englisch (USA), Englisch (Kanada), Französisch (Frankreich) und Russisch (Russische Föderation) und macht diese jeweils zur aktuellen Kultur. Die <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>-Methode stellt dann den Wert der <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>-Eigenschaft als `culture` Argument bereit, um die entsprechenden kulturspezifischen Ressourcen abzurufen.  
+ Der Quellcode für das Beispiel lautet wie folgt. Das Beispiel instanziiert <xref:System.Globalization.CultureInfo> -Objekte für die Kulturen Englisch (USA), Englisch (Kanada), Französisch (Frankreich) und Russisch (Russische Föderation) und macht diese jeweils zur aktuellen Kultur. Die <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> -Methode stellt dann den Wert der <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> -Eigenschaft als `culture` Argument bereit, um die entsprechenden kulturspezifischen Ressourcen abzurufen.  
   
  [!code-csharp[Conceptual.Resources.Retrieving#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example3.cs#9)]
  [!code-vb[Conceptual.Resources.Retrieving#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example3.vb#9)]  
@@ -200,9 +200,9 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Resources.ResourceManager>  
- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)  
- [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](https://go.microsoft.com/fwlink/p/?LinkID=241674)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Resources.ResourceManager>
+- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
+- [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](https://go.microsoft.com/fwlink/p/?LinkID=241674)

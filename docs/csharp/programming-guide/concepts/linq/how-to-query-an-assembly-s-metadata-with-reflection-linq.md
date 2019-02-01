@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Abfragen der Metadaten einer Assembly mit Reflektion (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: dece3cd6dbac2d10a3467892ef8aed80443cb2ef
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c4e10001e4c4b84265147c43aa9a5557e68e2d54
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516453"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696060"
 ---
 # <a name="how-to-query-an-assembly39s-metadata-with-reflection-linq-c"></a>Vorgehensweise: Abfragen der Metadaten einer Assembly mit Reflektion (LINQ) (C#)
 Das folgende Beispiel zeigt, wie LINQ mit Reflektion verwendet werden kann, um bestimmte Metadaten über Methoden abzurufen, die einem angegebenen Suchkriterium entsprechen. In diesem Fall findet die Abfrage die Namen aller Methoden in der Assembly, die aufzählbare Typen zurückgeben wie z.B. Arrays.  

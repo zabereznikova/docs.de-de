@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: ac2b0eafa64b809d2b40ac6471806dc9ab3c8c53
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45641507"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54609628"
 ---
 # <a name="common-io-tasks"></a>Allgemeine E/A-Aufgaben
 Der <xref:System.IO>-Namespace stellt mehrere Klassen bereit, die verschiedene Aktionen ermöglichen, z. B. Lese- und Schreibvorgänge für Dateien, Verzeichnisse und Streams. Weitere Informationen finden Sie unter [File and Stream I/O (Datei- und Datenstrom-E/A)](../../../docs/standard/io/index.md).  
@@ -22,18 +22,18 @@ Der <xref:System.IO>-Namespace stellt mehrere Klassen bereit, die verschiedene A
 |Aufgabe|Siehe das Beispiel in diesem Thema:|  
 |-------------------|--------------------------------------|  
 |Erstellen einer Textdatei|<xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.FileInfo.CreateText%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.File.Create%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.FileInfo.Create%2A?displayProperty=nameWithType>-Methode|  
-|Schreiben von Text in eine Datei|[Gewusst wie: Schreiben von Text in eine Datei](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [Vorgehensweise: Schreiben einer Textdatei (C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
-|Lesen aus einer Textdatei|[Gewusst wie: Lesen von Text aus einer Datei](../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
-|Anfügen von Text an eine Datei|[Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>-Methode|  
+|Schreiben von Text in eine Datei|[Vorgehensweise: Schreiben von Text in eine Datei](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [Vorgehensweise: Schreiben einer Textdatei (C++/CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
+|Lesen aus einer Textdatei|[Vorgehensweise: Lesen von Text aus einer Datei](../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Anfügen von Text an eine Datei|[Vorgehensweise: Öffnen und Anfügen an eine Protokolldatei](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType>-Methode|  
 |Umbenennen oder Verschieben einer Datei|<xref:System.IO.File.Move%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType>-Methode|  
 |Löschen einer Datei|<xref:System.IO.File.Delete%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.FileInfo.Delete%2A?displayProperty=nameWithType>-Methode|  
 |Kopieren einer Datei|<xref:System.IO.File.Copy%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.FileInfo.CopyTo%2A?displayProperty=nameWithType>-Methode|  
-|Abrufen der Größe einer Datei|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType>-Eigenschaft|  
+|Abrufen der Größe einer Datei|<xref:System.IO.FileInfo.Length%2A?displayProperty=nameWithType> -Eigenschaft|  
 |Abrufen der Attribute einer Datei|<xref:System.IO.File.GetAttributes%2A?displayProperty=nameWithType>-Methode|  
 |Festlegen der Attribute einer Datei|<xref:System.IO.File.SetAttributes%2A?displayProperty=nameWithType>-Methode|  
 |Bestimmen, ob eine Datei vorhanden ist|<xref:System.IO.File.Exists%2A?displayProperty=nameWithType>-Methode|  
-|Lesen aus einer Binärdatei|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|Schreiben in eine Binärdatei|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Lesen aus einer Binärdatei|[Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Schreiben in eine Binärdatei|[Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
 |Abrufen einer Dateierweiterung|<xref:System.IO.Path.GetExtension%2A?displayProperty=nameWithType>-Methode|  
 |Abrufen des vollqualifizierten Pfads einer Datei|<xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>-Methode|  
 |Abrufen des Dateinamens und der Dateierweiterung aus einem Pfad|<xref:System.IO.Path.GetFileName%2A?displayProperty=nameWithType>-Methode|  
@@ -43,18 +43,18 @@ Der <xref:System.IO>-Namespace stellt mehrere Klassen bereit, die verschiedene A
   
 |Aufgabe|Siehe das Beispiel in diesem Thema:|  
 |-------------------|--------------------------------------|  
-|Zugreifen auf eine Datei in einem speziellen Ordner wie z. B. "Eigene Dateien"|[Gewusst wie: Schreiben von Text in eine Datei](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
-|Erstellen eines Verzeichnisses|<xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType>-Eigenschaft|  
+|Zugreifen auf eine Datei in einem speziellen Ordner wie z. B. "Eigene Dateien"|[Vorgehensweise: Schreiben von Text in eine Datei](../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Erstellen eines Verzeichnisses|<xref:System.IO.Directory.CreateDirectory%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.FileInfo.Directory%2A?displayProperty=nameWithType> -Eigenschaft|  
 |Erstellen eines Unterverzeichnisses|<xref:System.IO.DirectoryInfo.CreateSubdirectory%2A?displayProperty=nameWithType>-Methode|  
 |Umbenennen oder Verschieben eines Verzeichnisses|<xref:System.IO.Directory.Move%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.DirectoryInfo.MoveTo%2A?displayProperty=nameWithType>-Methode|  
-|Kopieren eines Verzeichnisses|[Gewusst wie: Kopieren von Verzeichnissen](../../../docs/standard/io/how-to-copy-directories.md)|  
+|Kopieren eines Verzeichnisses|[Vorgehensweise: Kopieren von Verzeichnissen](../../../docs/standard/io/how-to-copy-directories.md)|  
 |Löschen eines Verzeichnisses|<xref:System.IO.Directory.Delete%2A?displayProperty=nameWithType>-Methode<br /><br /> <xref:System.IO.DirectoryInfo.Delete%2A?displayProperty=nameWithType>-Methode|  
-|Anzeigen der Dateien und Unterverzeichnisse in einem Verzeichnis|[Gewusst wie: Auflisten von Verzeichnissen und Dateien](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)|  
+|Anzeigen der Dateien und Unterverzeichnisse in einem Verzeichnis|[Vorgehensweise: Auflisten von Verzeichnissen und Dateien](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)|  
 |Suchen der Größe eines Verzeichnisses|<xref:System.IO.Directory?displayProperty=nameWithType>-Klasse|  
 |Bestimmen, ob ein Verzeichnis vorhanden ist|<xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType>-Methode|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
-- [Erstellen von Streams](../../../docs/standard/io/composing-streams.md)  
-- [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)
+- [Erstellen von Streams](../../../docs/standard/io/composing-streams.md)
+- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

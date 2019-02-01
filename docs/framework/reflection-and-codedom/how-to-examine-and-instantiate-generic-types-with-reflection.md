@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Untersuchen und Instanziieren von generischen Typen mit Reflektion'
+title: 'Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0f964ac73f070b99cdfd06e9037d06ce7888938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69864e647a7cf4e6193f4eb76ce2b7bc93b09404
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397571"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54622051"
 ---
-# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Gewusst wie: Untersuchen und Instanziieren von generischen Typen mit Reflektion
+# <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Vorgehensweise: Untersuchen und Instanziieren von generischen Typen mit Reflektion
 Informationen zu generischen Typen können Sie genauso abrufen wie Informationen zu anderen Typen: indem Sie sich ein <xref:System.Type>-Objekt anschauen, das den generischen Typ darstellt. Der größte Unterschied besteht dabei darin, dass eine generischer Type eine Liste von <xref:System.Type>-Objekten hat, die dessen generischen Typparameter darstellen. Die erste Prozedur in diesem Abschnitt beschäftigt sich mit generischen Typen.  
   
  Sie können ein <xref:System.Type>-Objekt erstellen, dass einen konstruierten Typ darstellt, indem Sie Typargumente an die Typparameter einer generischen Typdefinition binden. Dies wird in der zweiten Prozedur veranschaulicht.  
@@ -123,9 +123,9 @@ Informationen zu generischen Typen können Sie genauso abrufen wie Informationen
   
 -   Kompilieren Sie den Code über die Befehlszeile mit csc.exe, vbc.exe oder cl.exe. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Type>  
- <xref:System.Reflection.MethodInfo>  
- [Reflektion und generische Typen](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)  
- [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
- [Generika](../../../docs/standard/generics/index.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Type>
+- <xref:System.Reflection.MethodInfo>
+- [Reflektion und generische Typen](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
+- [Generika](../../../docs/standard/generics/index.md)

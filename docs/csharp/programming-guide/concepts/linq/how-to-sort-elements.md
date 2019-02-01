@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Sortieren von Elementen (C#)'
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: 7548f183736ac9ed0ed09d3be775b3ffde6cb255
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 66a41fc018b2df64aa95c24d1d698b6c38fd189a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042607"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54640783"
 ---
 # <a name="how-to-sort-elements-c"></a>Vorgehensweise: Sortieren von Elementen (C#)
 In diesem Beispiel wird gezeigt, wie Sie eine Abfrage schreiben können, die ihre Ergebnisse sortiert.  
@@ -69,5 +69,5 @@ foreach (decimal el in prices)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Sorting Data (C#) (Sortieren von Daten (C#))](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+- [Sorting Data (C#) (Sortieren von Daten (C#))](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)
 - [Basic Queries (LINQ to XML) (C#) (Standardabfragen (LINQ to XML) (C#))](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

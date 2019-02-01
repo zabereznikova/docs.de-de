@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Hochladen einer Datei in Visual Basic'
+title: 'Vorgehensweise: Hochladen einer Datei in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UploadFile method [Visual Basic]
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
-ms.openlocfilehash: 769c04430f8323dfde680fca45cfcd67809bdab0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d0aaca06a72b9bd2631a652a0b4756f4681df7d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583785"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54704406"
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>Gewusst wie: Hochladen einer Datei in Visual Basic
+# <a name="how-to-upload-a-file-in-visual-basic"></a>Vorgehensweise: Hochladen einer Datei in Visual Basic
 Die <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>-Methode kann zum Hochladen einer Datei und zum Speichern derselben an einem Remotespeicherort verwendet werden. Wenn der `ShowUI`-Parameter auf `True` festgelegt wird, wir ein Dialogfeld angezeigt, das den Fortschritt des Hochladens anzeigt und Benutzern erlaubt, den Vorgang abzubrechen.  
   
 ### <a name="to-upload-a-file"></a>Hochladen einer Datei  
@@ -45,8 +45,8 @@ Die <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>-Methode kann zum 
   
 -   Verbindungstimeout (<xref:System.TimeoutException>)  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>  
- [Gewusst wie: Herunterladen einer Datei](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
- [Gewusst wie: Analysieren von Dateipfaden](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>
+- [Vorgehensweise: Herunterladen einer Datei](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
+- [Vorgehensweise: Analysieren von Dateipfaden](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

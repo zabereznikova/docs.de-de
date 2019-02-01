@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Anhalten von Windows-Diensten (Visual Basic)'
+title: 'Vorgehensweise: Anhalten von Windows-Diensten (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
-ms.openlocfilehash: c62de97439ecf90ebfcc14d9fea4c5ab52f6ef73
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8d378aba5ad09a38d24359fda8b50de072c58035
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035122"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54612722"
 ---
-# <a name="how-to-pause-a-windows-service-visual-basic"></a>Gewusst wie: Anhalten von Windows-Diensten (Visual Basic)
+# <a name="how-to-pause-a-windows-service-visual-basic"></a>Vorgehensweise: Anhalten von Windows-Diensten (Visual Basic)
 In diesem Beispiel wird die <xref:System.ServiceProcess.ServiceController>-Komponente verwendet, um den IIS-Verwaltungsdienst auf dem lokalen Computer anzuhalten.  
   
 ## <a name="example"></a>Beispiel  
@@ -47,8 +47,8 @@ In diesem Beispiel wird die <xref:System.ServiceProcess.ServiceController>-Kompo
   
  Der Zugriff auf Dienstinformationen kann mithilfe von <xref:System.Security.Permissions.PermissionState> eingeschränkt werden, um Berechtigungen in <xref:System.Security.Permissions.SecurityPermission> festzulegen.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.ServiceProcess.ServiceController>  
- <xref:System.ServiceProcess.ServiceControllerStatus>  
- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>  
- [Vorgehensweise: Fortsetzen eines Windows-Diensts (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.ServiceProcess.ServiceController>
+- <xref:System.ServiceProcess.ServiceControllerStatus>
+- <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
+- [Vorgehensweise: Fortsetzen eines Windows-Diensts (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)

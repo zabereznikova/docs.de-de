@@ -1,5 +1,5 @@
 ---
-title: 'Entschärfung: Neuer 64-Bit-JIT-Compiler'
+title: 'Entschärfung: Der neue 64-Bit-JIT-Compiler'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compiler, 64-bit
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4edce9558cdbdd5937aa12866077210a91ee8494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d3eb82cf9bac1e40947fb78882d18c5f09b0092
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391939"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54690084"
 ---
-# <a name="mitigation-new-64-bit-jit-compiler"></a>Entschärfung: Neuer 64-Bit-JIT-Compiler
+# <a name="mitigation-new-64-bit-jit-compiler"></a>Entschärfung: Der neue 64-Bit-JIT-Compiler
 Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für die Just-in-Time-Kompilierung. Diese Änderung wirkt sich nicht auf die Kompilierung mit dem 32-Bit-JIT-Compiler aus.  
   
 ## <a name="unexpected-behavior-or-exceptions"></a>Unerwartetes Verhalten oder Ausnahmen  
@@ -69,6 +69,6 @@ Ab .NET Framework 4.6 enthält die Runtime einen neuen 64-Bit-JIT-Compiler für 
   
  Ferner können Sie uns über das Problem informieren, indem Sie einen Bug auf [Microsoft Connect](https://connect.microsoft.com/VisualStudio) melden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)  
- [\<useLegacyJit> Element](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+## <a name="see-also"></a>Siehe auch
+- [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [\<useLegacyJit> Element](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)

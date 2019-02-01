@@ -1,18 +1,18 @@
 ---
-title: 'Gewusst wie: Asynchrones Aufrufen eines Webdiensts (Visual Basic)'
+title: 'Vorgehensweise: Asynchrones Aufrufen eines Webdiensts (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: bf109780f26ce2fa4d5dbaa63832e765970b5cb4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9127b0edce029f8b2944ddf692e85166ee8c89b8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842692"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616146"
 ---
-# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Gewusst wie: Asynchrones Aufrufen eines Webdiensts (Visual Basic)
+# <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Vorgehensweise: Asynchrones Aufrufen eines Webdiensts (Visual Basic)
 Dieses Beispiel hängt einen Handler an das asynchrone Handlerereignis eines Webdiensts an, sodass dieses das Ergebnis eines asynchronen Methodenaufrufs abrufen kann. Dieses Beispiel verwendet den Webdienst DemoTemperatureService unter `http://www.xmethods.net`.  
   
  Wenn Sie im Projekt in der integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) von Visual Studio auf einen Webdienst verweisen, wird dieser dem `My.WebServices`-Objekt hinzugefügt und die IDE generiert eine Client-Proxyklasse für den Zugriff auf einen festgelegten Webdienst.  
@@ -65,6 +65,6 @@ Dieses Beispiel hängt einen Handler an das asynchrone Handlerereignis eines Web
   
      Für einen asynchronen Aufruf der `getTemp`-Webmethode rufen Sie die `CallGetTempAsync`-Methode auf. Wenn die Webmethode fertig ist, wird ihr Rückgabewert an den `getTempCompletedHandler`-Ereignishandler übergeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Zugreifen auf Anwendungswebdienste](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- [My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a>Siehe auch
+- [Zugreifen auf Anwendungswebdienste](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+- [My.WebServices-Objekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)

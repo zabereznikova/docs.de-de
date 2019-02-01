@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: b8fb60640c9bdc0337d45b6901b1be3979dbac1f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 064d7ed61921f3f700311a1b09ee77e0c9818d71
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259755"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554282"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#)
 Dieses Beispiel verwendet die <xref:System.Xml.Serialization.XmlSerializer>-Klasse, um das Objekt aus einer Klasse in eine XML-Datei zu schreiben.  
@@ -63,6 +63,6 @@ public class XMLWrite
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.IO.StreamWriter>  
-- [How to: Read Object Data from an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md) (Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#))  
+- <xref:System.IO.StreamWriter>
+- [Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
 - [Serialisierung (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)

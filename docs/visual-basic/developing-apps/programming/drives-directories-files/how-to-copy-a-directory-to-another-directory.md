@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Kopieren eines Verzeichnisses in ein anderes Verzeichnis in Visual Basic'
+title: 'Vorgehensweise: Kopieren eines Verzeichnisses in ein anderes Verzeichnis in Visual Basic'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: 9b6e095d061619cf9d2e2d87a7247cbdbc51cbe2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25919e0256b967f59bd98d20e75d159e018ac954
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588583"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54594745"
 ---
-# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Gewusst wie: Kopieren eines Verzeichnisses in ein anderes Verzeichnis in Visual Basic
+# <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Vorgehensweise: Kopieren eines Verzeichnisses in ein anderes Verzeichnis in Visual Basic
 Verwenden Sie die <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>-Methode zum Kopieren eines Verzeichnisses in ein anderes Verzeichnis. Diese Methode kopiert den Inhalt des Verzeichnisses sowie das Verzeichnis selbst. Wenn das Zielverzeichnis nicht vorhanden ist, wird es erstellt. Wenn ein Verzeichnis mit dem gleichen Namen am Zielspeicherort vorhanden ist und `overwrite` auf `False` festgelegt ist, werden die Inhalte der beiden Verzeichnisse zusammengeführt. Sie können während des Vorgangs einen neuen Namen für das Verzeichnis angeben.  
   
  Beim Kopieren von Dateien innerhalb eines Verzeichnisses können Ausnahmen ausgelöst werden, die durch eine bestimmte Datei verursacht werden. Dies kann zum Beispiel eine Datei sein, die während einer Zusammenführung vorhanden ist, wenn `overwrite` auf `False` festgelegt ist. Wenn solche Ausnahmen ausgelöst werden, werden sie zu einer einzigen Ausnahme konsolidiert, deren `Data`-Eigenschaft Einträge enthält, in denen der Datei- oder Verzeichnispfad der Schlüssel ist und die spezifische Ausnahmemeldung im entsprechenden Wert enthalten ist.  
@@ -60,7 +60,7 @@ Verwenden Sie die <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A
   
 -   Eine Zieldatei ist vorhanden, aber nicht zugänglich (<xref:System.UnauthorizedAccessException>).  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>  
- [Gewusst wie: Suchen nach Unterverzeichnissen mit einem bestimmten Muster](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
- [Gewusst wie: Abrufen einer Sammlung von Dateien in einem Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>
+- [Vorgehensweise: Suchen nach Unterverzeichnissen mit einem bestimmten Muster](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [Vorgehensweise: Abrufen einer Auflistung der Dateien in einem Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Berechnen von Zwischenwerten (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
-ms.openlocfilehash: 15ccf58738b64ebfaef77deb162ddb29db0ae33a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 12c8a87114859ce7b47b8206acb454cdc2838470
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259729"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54604327"
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>Vorgehensweise: Berechnen von Zwischenwerten (C#)
 In diesem Beispiel wird das Berechnen von Zwischenwerten gezeigt, die zum Sortieren, Filtern und Auswählen verwendet werden können.  

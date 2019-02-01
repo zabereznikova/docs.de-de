@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57db77b64ddcbe282fed035b52bb122901383ca4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40db78b8b09b90ab5e11dcc61dc042af1981e827
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398871"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54701403"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Sicherheitsaspekte bei der Reflektionsausgabe
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] bietet drei Möglichkeiten zum Ausgeben der Microsoft Intermediate Language (MSIL), jeweils mit eigenen Sicherheitsproblemen:  
@@ -68,7 +68,7 @@ ms.locfileid: "33398871"
 > [!NOTE]
 >  Konzeptionell werden Anforderungen während der Erstellung der Methode gestellt. Das heißt, dass bei jeder Ausgabe einer MSIL-Anweisung Anforderungen gestellt werden könnten. In der aktuellen Implementierung werden alle Forderungen gestellt, wenn die <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType>-Methode aufgerufen wird oder wenn der JIT-Compiler (Just-in-Time) aufgerufen wird, falls die Methode ohne Aufruf von <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> aufgerufen wird.  
   
- Wenn die Anwendungsdomäne dies zulässt, können anonym gehostete dynamische Methoden JIT-Sichtbarkeitsprüfungen gemäß der folgenden Einschränkung überspringen: Die nicht öffentliche Typen und Member, auf die von einer anonym gehosteten dynamischen Methode zugegriffen wird, muss sich in Assemblys befinden, deren Berechtigungssätze mit dem Berechtigungssatz der ausgebenden Aufrufliste übereinstimmen oder eine Teilmenge davon darstellen. Diese eingeschränkte Fähigkeit zum Überspringen von JIT-Sichtbarkeitsprüfungen wird aktiviert, wenn die Anwendungsdomäne mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag <xref:System.Security.Permissions.ReflectionPermission> erteilt.  
+ Wenn die Anwendungsdomäne es zulässt, können anonym gehostete dynamische Methoden JIT-Sichtbarkeitsprüfungen gemäß der folgenden Einschränkung überspringen: Die nicht öffentlichen Typen und Member, auf die durch eine anonym gehostete dynamische Methode zugegriffen wird, müssen sich in Assemblys befinden, deren Berechtigungssätze entweder mit den Berechtigungssätzen der ausgebenden Aufrufliste übereinstimmen oder Teilmengen davon sind. Diese eingeschränkte Fähigkeit zum Überspringen von JIT-Sichtbarkeitsprüfungen wird aktiviert, wenn die Anwendungsdomäne mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag <xref:System.Security.Permissions.ReflectionPermission> erteilt.  
   
 -   Wenn Ihre Methode nur öffentliche Typen und Member verwendet, sind während der Erstellung keine Berechtigungen erforderlich.  
   
@@ -153,6 +153,6 @@ ms.locfileid: "33398871"
 ### <a name="obtaining-information-on-types-and-members"></a>Abrufen von Informationen zu Typen und Member  
  Ab [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] sind keine Berechtigungen erforderlich, um Informationen über nicht öffentliche Typen und Member abzurufen. Reflektion wird verwendet, um Informationen abzurufen, die zum Ausgeben dynamischer Methoden erforderlich sind. Beispielsweise werden <xref:System.Reflection.MethodInfo>-Objekte verwendet, um Methodenaufrufe auszugeben. In früheren Versionen von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ist <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>-Flag erforderlich. Weitere Informationen finden Sie unter [Sicherheitsüberlegungen für die Reflektion](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Security Considerations for Reflection (Sicherheitsüberlegungen für die Reflektion)](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)  
- [Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)
+## <a name="see-also"></a>Siehe auch
+- [Security Considerations for Reflection (Sicherheitsüberlegungen für die Reflektion)](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)
+- [Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)

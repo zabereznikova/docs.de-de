@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Auffüllen einer Zahl mit führenden Nullen'
+title: 'Vorgehensweise: Auffüllen einer Zahl mit führenden Nullen'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cc6e4d96378cfd8c065a3b04aab865f9b787438
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b48462e79c3e8ef3fdd6e0a91f5abecffc022b5c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086721"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54673033"
 ---
-# <a name="how-to-pad-a-number-with-leading-zeros"></a>Gewusst wie: Auffüllen einer Zahl mit führenden Nullen
+# <a name="how-to-pad-a-number-with-leading-zeros"></a>Vorgehensweise: Auffüllen einer Zahl mit führenden Nullen
 Führende Nullen können Sie mithilfe der [numerischen Standardformatzeichenfolge](../../../docs/standard/base-types/standard-numeric-format-strings.md) „D“ zusammen mit einem Genauigkeitsbezeichner zu einer Ganzzahl hinzufügen. Ganz- und Gleitkommazahlen können Sie führende Nullen mithilfe einer [benutzerdefinierten numerischen Formatzeichenfolge](../../../docs/standard/base-types/custom-numeric-format-strings.md) hinzufügen. In diesem Thema lernen Sie beide Methoden zum Auffüllen einer Zahl mit führenden Nullen kennen.  
   
 ### <a name="to-pad-an-integer-with-leading-zeros-to-a-specific-length"></a>Ganzzahl bis zu einer bestimmten Länge mit führenden Nullen auffüllen  
@@ -95,6 +95,6 @@ Führende Nullen können Sie mithilfe der [numerischen Standardformatzeichenfolg
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Kombinierte Formatierung](../../../docs/standard/base-types/composite-formatting.md)

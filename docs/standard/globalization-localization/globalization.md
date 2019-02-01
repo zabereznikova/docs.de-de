@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f3bf29b9b4d216483ea0c81cc787c80fc8b9e6f
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 84e44f0112a5d1b5fd38daf488d865f6e228f82b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453358"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54713940"
 ---
 # <a name="globalization"></a>Globalisierung
 Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Benutzeroberflächen und regionale Daten für Benutzer verschiedener Kulturen unterstützen. Bevor Sie mit der Entwurfsphase beginnen, sollten Sie festlegen, welche Kulturen die App unterstützen soll. Auch wenn eine App standardmäßig auf eine einzige Kultur oder Region ausgerichtet ist, kann Sie so entworfen und geschrieben werden, dass sie leicht auf Benutzer in anderen Kulturen oder Regionen ausgeweitet werden kann.  
@@ -204,7 +204,7 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
   
 <a name="DatesAndTimes_TimeZones"></a>   
 ### <a name="serialization-and-time-zone-awareness"></a>Serialisierung und Unterstützung von Zeitzonen  
- Ein Datums- und Uhrzeitwert kann über mehrere Interpretationen verfügen, von der allgemeinen Uhrzeit ("Die Läden öffnen am 2. Januar 2013 um 9:00 Uhr") bis zu einem bestimmten Zeitpunkt ("Geburtsdatum: 2. Januar 2013 6:32:00 Uhr"). Wenn ein Zeitwert einen bestimmten Zeitpunkt darstellt und aus einem serialisierten Wert wiederhergestellt wird, sollten Sie sicherstellen, dass er den gleichen Zeitpunkt unabhängig vom geografischen Ort oder der Zeitzone des Benutzers repräsentiert.  
+ Ein Datums- und Uhrzeitwert kann über mehrere Interpretationen verfügen, von der allgemeinen Uhrzeit („Die Läden öffnen am 2. Januar 2013 um 9:00 Uhr“) bis zu einem bestimmten Zeitpunkt („Geburtsdatum: 2. Januar 2013 6:32:00 Uhr“). Wenn ein Zeitwert einen bestimmten Zeitpunkt darstellt und aus einem serialisierten Wert wiederhergestellt wird, sollten Sie sicherstellen, dass er den gleichen Zeitpunkt unabhängig vom geografischen Ort oder der Zeitzone des Benutzers repräsentiert.  
   
  Dieses Problem wird anhand des folgenden Beispiels veranschaulicht. Ein einzelner lokaler Datums- und Uhrzeitwert wird als Zeichenfolge in drei [Standardformaten](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) („G“ für generelles Datum, lange Zeit, „s“ für sortierbare(s) Datum/Uhrzeit und „o“ für Roundtrip für Datum/Uhrzeit) sowie im Binärformat gespeichert.  
   
@@ -371,5 +371,5 @@ Globalisierung bedeutet Gestaltung und Entwicklung von Apps, die lokalisierte Be
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)  
+- [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)
 - [Empfohlene Vorgehensweisen für die Verwendung von Zeichenfolgen](../../../docs/standard/base-types/best-practices-strings.md)

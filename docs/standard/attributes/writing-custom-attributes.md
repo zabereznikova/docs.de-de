@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 70845b3e184e7e8e06002a308d574d4d084e25fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087390"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54696216"
 ---
 # <a name="writing-custom-attributes"></a>Verfassen von benutzerdefinierten Attributen
-Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele neue Konzepte zu beherrschen. Wenn Sie mit objektorientierter Programmierung vertraut sind und wissen, wie Klassen entworfen werden, haben Sie bereits den größten Teil der Kenntnisse, die Sie benötigen. Benutzerdefinierte Attribute sind im Wesentlichen traditionelle Klassen, die sich direkt oder indirekt aus <xref:System.Attribute?displayProperty=nameWithType> ableiten. Genau wie traditionelle Klassen enthalten benutzerdefinierte Attribute Methoden zum Speichern und Abrufen von Daten.  
+Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele neue Konzepte zu beherrschen. Wenn Sie mit objektorientierter Programmierung vertraut sind und wissen, wie Klassen entworfen werden, haben Sie bereits den größten Teil der Kenntnisse, die Sie benötigen. Benutzerdefinierte Attribute sind im Wesentlichen traditionelle Klassen, die sich direkt oder indirekt aus <xref:System.Attribute?displayProperty=nameWithType>ableiten. Genau wie traditionelle Klassen enthalten benutzerdefinierte Attribute Methoden zum Speichern und Abrufen von Daten.  
   
  Die wichtigsten Schritte beim ordnungsgemäßen Entwerfen von benutzerdefinierten Attributklassen sind die folgenden:  
   
@@ -47,7 +47,7 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- Das <xref:System.AttributeUsageAttribute> weist drei Member auf, die für die Erstellung von benutzerdefinierten Attributen wichtig sind: [AttributeTargets](#attributetargets-member), [Inherited](#inherited-property)und [AllowMultiple](#allowmultiple-property).  
+ Die Klasse <xref:System.AttributeUsageAttribute> weist drei Member auf, die für die Erstellung von benutzerdefinierten Attributen wichtig sind: [AttributeTargets](#attributetargets-member), [Inherited](#inherited-property) und [AllowMultiple](#allowmultiple-property).  
   
 ### <a name="attributetargets-member"></a>AttributeTargets-Member  
  Im vorherigen Beispiel wird <xref:System.AttributeTargets.All?displayProperty=nameWithType> angegeben, was darauf hinweist, dass dieses Attribut auf alle Programmelemente angewendet werden kann. Alternativ können Sie <xref:System.AttributeTargets.Class?displayProperty=nameWithType> angeben und damit festlegen, dass Ihr Attribut nur auf eine Klasse angewendet werden kann, oder Sie können <xref:System.AttributeTargets.Method?displayProperty=nameWithType> angeben, wodurch Sie festlegen, dass Ihr Attribut nur auf eine Methode angewendet werden kann. Alle Programmelemente können in dieser Weise für die Beschreibung durch ein benutzerdefiniertes Attribut gekennzeichnet werden.  
@@ -150,6 +150,6 @@ Zum Entwerfen eigener, benutzerdefinierter Attribute brauchen Sie nicht viele ne
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Attribute?displayProperty=nameWithType>  
-- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
+- <xref:System.Attribute?displayProperty=nameWithType>
+- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>
 - [Attribute](../../../docs/standard/attributes/index.md)

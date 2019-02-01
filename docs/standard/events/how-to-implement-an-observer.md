@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Implementieren eines Observers'
+title: 'Vorgehensweise: Implementieren eines Observers'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6426e8bd138d06d3655562de6384e46a12c09279
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 8b7534843c1f724dc4544b9a5a7062e79e973a34
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583986"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738052"
 ---
-# <a name="how-to-implement-an-observer"></a>Gewusst wie: Implementieren eines Observers
-Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Observer, der für den Empfang von Benachrichtigungen registriert wird, und einem Anbieter, der Daten überwacht und Benachrichtigungen an mindestens einen Observer sendet. In diesem Thema wird das Erstellen eines Observers behandelt. In dem verwandten Thema [Gewusst wie: Implementieren eines Anbieters](../../../docs/standard/events/how-to-implement-a-provider.md) wird erläutert, wie ein Anbieter erstellt wird.  
+# <a name="how-to-implement-an-observer"></a>Vorgehensweise: Implementieren eines Observers
+Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Observer, der für den Empfang von Benachrichtigungen registriert wird, und einem Anbieter, der Daten überwacht und Benachrichtigungen an mindestens einen Observer sendet. In diesem Thema wird das Erstellen eines Observers behandelt. Im verwandten Thema [Vorgehensweise: Implementieren eines Anbieters](../../../docs/standard/events/how-to-implement-a-provider.md) wird erläutert, wie ein Anbieter erstellt wird.  
   
 ### <a name="to-create-an-observer"></a>So erstellen Sie einen Observer  
   
@@ -51,7 +51,7 @@ Das Entwurfsmuster „Observer“ erfordert eine Trennung zwischen einem Observe
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.IObserver%601>  
-- [Beobachterentwurfsmuster](../../../docs/standard/events/observer-design-pattern.md)  
-- [Gewusst wie: Implementieren eines Anbieters](../../../docs/standard/events/how-to-implement-a-provider.md)  
+- <xref:System.IObserver%601>
+- [Beobachterentwurfsmuster](../../../docs/standard/events/observer-design-pattern.md)
+- [Vorgehensweise: Implementieren eines Anbieters](../../../docs/standard/events/how-to-implement-a-provider.md)
 - [Empfohlene Vorgehensweisen für Beobachterentwurfsmuster](../../../docs/standard/events/observer-design-pattern-best-practices.md)

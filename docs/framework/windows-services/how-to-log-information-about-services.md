@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Protokollinformationen über Dienste'
+title: 'Vorgehensweise: Protokollinformationen über Dienste'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: 5556b83346aba5bc48eddb930dedc56f4786bdb5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ff3eb0dd27f097899fc19f57142034ffd2bb382a
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036171"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54660140"
 ---
-# <a name="how-to-log-information-about-services"></a>Gewusst wie: Protokollinformationen über Dienste
+# <a name="how-to-log-information-about-services"></a>Vorgehensweise: Protokollinformationen über Dienste
 Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisprotokoll zugreifen und Informationen sowie Ausnahmen in das Protokoll schreiben. Sie geben über die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft an, ob Sie diese Funktionalität in Ihrer Anwendung nutzen möchten. Standardmäßig ist die Protokollierung für jeden Dienst aktiviert, den Sie mit den Projektvorlagen für Windows-Dienste erstellen. Sie können eine statische Form der <xref:System.Diagnostics.EventLog> -Klasse verwenden, um Dienstinformationen in ein Protokoll zu schreiben, ohne dass Sie eine Instanz von einer <xref:System.Diagnostics.EventLog> -Komponente erstellen oder eine Quelle manuell registrieren müssen.  
   
  Das Installationsprogramm für Ihren Dienst registriert jeden Dienst in Ihrem Projekt automatisch als gültige Quelle von Ereignissen für das Anwendungsprotokoll auf dem Computer, auf dem der Dienst installiert ist, wenn die Protokollierung aktiviert ist. Der Dienst protokolliert jedes Mal Informationen, wenn er gestartet, beendet, angehalten, fortgesetzt, installiert oder deinstalliert wird. Der Dienst protokolliert auch alle auftretenden Fehler. Wird das Standardverhalten verwendet, müssen Sie keinen Code schreiben, damit Einträge in das Protokoll geschrieben werden. Dies wird vom Dienst automatisch erledigt.  
@@ -69,5 +69,5 @@ Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisp
     [!code-csharp[VbRadconService#15](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#15)]
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

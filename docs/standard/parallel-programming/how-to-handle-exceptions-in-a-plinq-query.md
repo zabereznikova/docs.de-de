@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Behandeln von Ausnahmen in einer PLINQ-Abfrage'
+title: 'Vorgehensweise: Behandeln von Ausnahmen in einer PLINQ-Abfrage'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40b98e01d6c34fb01a1f508f2ea52309f2f7938b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989520"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54554243"
 ---
-# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Gewusst wie: Behandeln von Ausnahmen in einer PLINQ-Abfrage
+# <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Vorgehensweise: Behandeln von Ausnahmen in einer PLINQ-Abfrage
 Das erste Beispiel in diesem Thema zeigt, wie die <xref:System.AggregateException?displayProperty=nameWithType> behandelt wird, die während der Ausführung von einer PLINQ-Abfrage ausgelöst werden kann. Das zweite Beispiel zeigt, wie try-catch-Blöcke in Delegaten so nah wie möglich an der Position platziert werden, an der die Ausnahme ausgelöst wird. Auf diese Weise können Sie sie sofort nach dem Auftreten abfangen und die Ausführung der Abfrage möglicherweise fortsetzen. Wenn Ausnahmen mittels Bubbling wieder an den Verbindungsthread übergeben werden können, ist es möglich, dass eine Abfrage nach dem Auslösen der Ausnahme weiterhin einige Elemente verarbeitet.  
   
  Wenn PLINQ auf die sequenzielle Ausführung zurückgreift und eine Ausnahme auftritt, kann die Ausnahme in einigen Fällen direkt weitergegeben werden und muss nicht mit einer <xref:System.AggregateException> umschlossen werden. <xref:System.Threading.ThreadAbortException>s werden darüber hinaus immer direkt weitergegeben.  
@@ -50,5 +50,5 @@ Das erste Beispiel in diesem Thema zeigt, wie die <xref:System.AggregateExceptio
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Linq.ParallelEnumerable>  
+- <xref:System.Linq.ParallelEnumerable>
 - [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

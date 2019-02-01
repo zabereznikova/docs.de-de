@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Angeben des Ausführungsmodus in PLINQ'
+title: 'Vorgehensweise: Angeben des Ausführungsmodus in PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c85731b991399e92297d6109a3000c1e345e02f6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c67b23da6742af3cb65da6da49dbab982a0248bb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087206"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694619"
 ---
-# <a name="how-to-specify-the-execution-mode-in-plinq"></a>Gewusst wie: Angeben des Ausführungsmodus in PLINQ
+# <a name="how-to-specify-the-execution-mode-in-plinq"></a>Vorgehensweise: Angeben des Ausführungsmodus in PLINQ
 Dieses Beispiel zeigt, wie erzwungen wird, dass PLINQ seine Standardheuristik umgeht und eine Abfrage unabhängig von der Form parallelisiert.  
   
 > [!WARNING]
@@ -34,5 +34,5 @@ Dieses Beispiel zeigt, wie erzwungen wird, dass PLINQ seine Standardheuristik um
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>  
+- <xref:System.Linq.ParallelEnumerable.AsSequential%2A>
 - [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

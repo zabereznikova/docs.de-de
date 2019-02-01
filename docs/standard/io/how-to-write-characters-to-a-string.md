@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Schreiben von Zeichen in eine Zeichenfolge'
+title: 'Vorgehensweise: Schreiben von Zeichen in eine Zeichenfolge'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bea51eaf11bd9d73d5a68eb09795bd9f9f143f95
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 125c8ba03c4d1006535dd1e10cbd162b32fede4f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214471"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54740982"
 ---
-# <a name="how-to-write-characters-to-a-string"></a>Gewusst wie: Schreiben von Zeichen in eine Zeichenfolge
+# <a name="how-to-write-characters-to-a-string"></a>Vorgehensweise: Schreiben von Zeichen in eine Zeichenfolge
 In den folgenden Codebeispielen werden Zeichen synchron und asynchron aus einem Zeichenarray in eine Zeichenfolge geschrieben.  
   
 ## <a name="example"></a>Beispiel  
@@ -37,14 +37,14 @@ In den folgenden Codebeispielen werden Zeichen synchron und asynchron aus einem 
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.IO.StringWriter>  
-- <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  
-- <xref:System.Text.StringBuilder>  
-- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)  
-- [Asynchrone Datei-E/A](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [Gewusst wie: Auflisten von Verzeichnissen und Dateien](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [Gewusst wie: Lesen von Text aus einer Datei](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [Gewusst wie: Schreiben von Text in eine Datei](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [Gewusst wie: Lesen von Zeichen aus einer Zeichenfolge](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- <xref:System.IO.StringWriter>
+- <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>
+- <xref:System.Text.StringBuilder>
+- [Datei- und Stream-E/A](../../../docs/standard/io/index.md)
+- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [Vorgehensweise: Auflisten von Verzeichnissen und Dateien](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
+- [Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
+- [Vorgehensweise: Öffnen und Anfügen an eine Protokolldatei](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
+- [Vorgehensweise: Lesen von Text aus einer Datei](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [Vorgehensweise: Schreiben von Text in eine Datei](../../../docs/standard/io/how-to-write-text-to-a-file.md)
+- [Vorgehensweise: Lesen von Zeichen aus einer Zeichenfolge](../../../docs/standard/io/how-to-read-characters-from-a-string.md)

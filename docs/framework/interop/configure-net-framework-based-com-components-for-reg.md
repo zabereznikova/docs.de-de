@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung'
+title: 'Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519407"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54530695"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Gewusst wie: Konfigurieren von .NET Framework-basierten COM-Komponenten für die registrierungsfreie Aktivierung
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung
 Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur geringfügig schwieriger als bei COM-Komponenten. Für das Setup sind zwei Manifeste erforderlich:  
   
 -   COM-Anwendungen müssen über ein Win32-Anwendungsmanifest verfügen, um die verwaltete Komponente zu bestimmen.  
@@ -105,7 +105,7 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
   
 4.  Bestimmen Sie alle Klassen in der Assembly. Verwenden Sie das `<clrClass>`-Element, um die einzelnen Klassen in der verwalteten Assembly eindeutig zu kennzeichnen. Das Element, das ein Unterelement des `<assembly>`-Elements ist, verfügt über die in der folgenden Tabelle beschriebenen Attribute.  
   
-    |Attribut|Beschreibung |Erforderlich|  
+    |Attribut|Beschreibung|Erforderlich|  
     |---------------|-----------------|--------------|  
     |`clsid`|Der Bezeichner, der die zu aktivierende Klasse kennzeichnet.|Ja|  
     |`description`|Eine Zeichenfolge, die Benutzer über die Komponente informiert. Der Standardwert ist eine leere Zeichenfolge.|Nein|  
@@ -172,8 +172,8 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
   
      Auch hier ist `myresource.res` der Name der Ressourcendatei mit der eingebetteten Ressource.  
   
-## <a name="see-also"></a>Siehe auch  
- [COM-Interop ohne Registrierung](registration-free-com-interop.md)  
- [Anforderungen an COM-Interop ohne Registrierung](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))  
- [Konfigurieren von COM-Komponenten für eine Aktivierung ohne Registrierung](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))  
- [Registration-Free Activation of .NET-Based Components: A Walkthrough (Exemplarische Vorgehensweise: Aktivierung der .NET-basierten Komponenten ohne Registrierung)](https://msdn.microsoft.com/library/ms973915.aspx)
+## <a name="see-also"></a>Siehe auch
+- [COM-Interop ohne Registrierung](registration-free-com-interop.md)
+- [Anforderungen an COM-Interop ohne Registrierung](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))
+- [Konfigurieren von COM-Komponenten für eine Aktivierung ohne Registrierung](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))
+- [Registration-Free Activation of .NET-Based Components: A Walkthrough (Exemplarische Vorgehensweise: Aktivierung der .NET-basierten Komponenten ohne Registrierung)](https://msdn.microsoft.com/library/ms973915.aspx)

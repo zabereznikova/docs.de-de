@@ -159,20 +159,20 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95d971003a28ec411b3734009bcb978c630cb811
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 983d7b9a89346a89a89b5e8de23049287f719026
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873786"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54734486"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe-Fehlermeldungen
 Der Buildprozess ruft [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) auf, wenn Sie die Vorlage **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Komponente** in Visual Studio 2012 verwenden, sodass Winmdexp.exe-Fehlermeldungen in der **Fehlerliste** angezeigt werden. Winmdexp.exe arbeitet auf einem Modul, das mit der `/target:winmdobj`-Option kompiliert ist. Da ein kompiliertes Modul als Eingabe erforderlich ist, erscheinen die Fehlermeldungen nicht, bis die Kompilierung erfolgreich war.  
   
- Die Fehlermeldungen sollen alle Informationen enthalten, die Sie benötigen, um die Fehlerbedingungen anzugehen, die gemeldet werden. Jedoch erfordern einige Probleme mehr Information als in die Meldung passt. Zusätzliche Informationen zu [Diagnostizieren von Fehlerbedingungen der Windows-Runtime-Komponente](https://go.microsoft.com/fwlink/p/?LinkId=251127) finden Sie im Windows Dev Center.  
+ Die Fehlermeldungen sollen alle Informationen enthalten, die Sie benötigen, um die Fehlerbedingungen anzugehen, die gemeldet werden. Jedoch erfordern einige Probleme mehr Informationen als in die Meldung passen. Zusätzliche Informationen zu [Diagnostizieren von Fehlerbedingungen der Windows-Runtime-Komponente](https://go.microsoft.com/fwlink/p/?LinkId=251127) finden Sie im Windows Dev Center.  
   
  Falls Ihr Fehler nicht in diesem Artikel behandelt wird, und Sie der Meinung sind, dass die Meldung nicht genügend Informationen enthält, um das Problem zu beheben, verwenden Sie den Link für Feedbackanforderung in diesem Artikel, und fügen Sie die Fehlermeldung ein. Oder melden Sie den Fehler auf der [Microsoft Connect-Website](https://go.microsoft.com/fwlink/p/?LinkId=251130). Sie können in den [Microsoft-Foren](https://go.microsoft.com/fwlink/p/?LinkId=251129) auch nach weiteren Informationen suchen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
- [Diagnostizieren von Fehlerbedingungen der Windows-Runtime-Komponente](https://go.microsoft.com/fwlink/p/?LinkId=251127)
+## <a name="see-also"></a>Siehe auch
+- [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
+- [Diagnostizieren von Fehlerbedingungen der Windows-Runtime-Komponente](https://go.microsoft.com/fwlink/p/?LinkId=251127)

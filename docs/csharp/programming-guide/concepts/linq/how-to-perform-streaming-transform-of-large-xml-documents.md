@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Durchführen einer Streamingtransformation großer XML-Dokumente (C#)'
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: f837117bec2bac615e4cbd822c1110f648d32ce8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8ddd7e25cf160526b741db5769a78682970c3724
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514072"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54524675"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Vorgehensweise: Durchführen einer Streamingtransformation großer XML-Dokumente (C#)
 Es kann vorkommen, dass Sie große XML-Dateien transformieren und Ihre Anwendung so schreiben müssen, dass der Arbeitsspeicherbedarf der Anwendung vorhersehbar ist. Wenn Sie versuchen, eine XML-Struktur mit einer sehr großen XML-Datei zu füllen, ändert sich Ihre Speicherbeanspruchung proportional zur Größe der Datei, also exzessiv. Deshalb sollten Sie stattdessen ein Streamingverfahren verwenden.  
@@ -189,7 +189,7 @@ static void Main(string[] args)
 ```  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel baut ebenfalls auf dem Beispiel in [Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) auf.  
+ Auch das folgende Beispiel baut auf dem Beispiel in [Vorgehensweise: Streamen von XML-Fragmenten mit Zugriff auf Headerinformationen (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) auf.  
   
  In diesem Beispiel wird die Fähigkeit von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] genutzt, Elemente in einen <xref:System.Xml.XmlWriter> zu schreiben. Damit kann auch ein sehr großes Dokument transformiert werden, ohne dass die Speicherbeanspruchung zu groß wird.  
   

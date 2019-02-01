@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Erstellen von COM-Wrappern'
+title: 'Vorgehensweise: Erstellen von COM-Wrappern'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14bf011c3711a267b8cf5a1fc0497a347468387d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121754"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54540974"
 ---
-# <a name="how-to-create-com-wrappers"></a>Gewusst wie: Erstellen von COM-Wrappern
+# <a name="how-to-create-com-wrappers"></a>Vorgehensweise: Erstellen von COM-Wrappern
 
 Sie können mit Visual Studio 2005-Features oder den .NET Framework-Tools „Tlbimp.exe“ und „Regasm.exe“ COM-Wrapper (Component Object Model) erstellen. Beide Methoden generieren zwei Typen von COM-Wrappern:
 
@@ -73,7 +73,7 @@ Dieses Tool liest die Metadaten in einer Assembly und fügt der Registrierung di
   
 Sie können Regasm.exe für eine Assembly in jedem beliebigen Verzeichnis ausführen und anschließend das [Gacutil.exe (Global Assembly Cache Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) ausführen, um sie in den globalen Assemblycache zu verschieben. Beim Verschieben der Assembly werden die Registrierungseinträge für den Speicherort nicht ungültig, da der globale Assemblycache immer überprüft wird, wenn die Assembly nicht an einem anderen Speicherort gefunden wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Siehe auch
 
-- [Runtime Callable Wrapper (RCW)](../../../docs/framework/interop/runtime-callable-wrapper.md)  
+- [Runtime Callable Wrapper (RCW)](../../../docs/framework/interop/runtime-callable-wrapper.md)
 - [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)

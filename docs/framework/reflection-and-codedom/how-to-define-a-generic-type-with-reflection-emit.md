@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Definieren eines generischen Typs mit Reflektionsausgabe'
+title: 'Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32e06790ffebe49c7917ba4fc7344f86f7a49762
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8109bfd590e5cb08e0031dcfcab5090160b2932b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085251"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54645062"
 ---
-# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Gewusst wie: Definieren eines generischen Typs mit Reflektionsausgabe
+# <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Vorgehensweise: Definieren eines generischen Typs mit Reflektionsausgabe
 In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typparametern erstellt wird, wie Klasseneinschränkungen, Schnittstelleneinschränkungen und bestimmte Einschränkungen für Typparameter angewandt werden und wie Member erstellt werden, die die Typparameter der Klasse als Parametertypen und Rückgabetypen verwenden.  
   
 > [!IMPORTANT]
->  Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Die meisten Methoden für generische Typen sind nicht generisch, so auch in diesem Beispiel. Ein Beispiel zur Ausgabe einer generischen Methode finden Sie unter [Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+>  Eine Methode ist nicht generisch, weil sie zu einem generischen Typ gehört und die Typparameter dieses Typs verwendet. Eine Methode ist nur dann generisch, wenn sie über eine eigene Typparameterliste verfügt. Die meisten Methoden für generische Typen sind nicht generisch, so auch in diesem Beispiel. Ein Beispiel für die Ausgabe einer generischen Methode finden Sie unter [Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>So definieren Sie einen generischen Typ  
   
@@ -135,7 +135,7 @@ In diesem Thema wird gezeigt, wie ein einfacher generischer Typ mit zwei Typpara
   
 -   Kompilieren Sie den Code über die Befehlszeile mit csc.exe, vbc.exe oder cl.exe. Um den Code in Visual Studio zu kompilieren, fügen Sie ihn in eine Projektvorlage für eine Konsolenanwendung ein.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [Verwenden der Reflektionsausgabe](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Szenarios für die Reflektionsausgabe mit dynamischen Assemblys](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
+- [Verwenden der Reflektionsausgabe](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
+- [Szenarios für die Reflektionsausgabe mit dynamischen Assemblys](https://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

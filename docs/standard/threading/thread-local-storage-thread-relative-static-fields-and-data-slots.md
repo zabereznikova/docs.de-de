@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bea5dfd7c53b5b5f53ddab5d4d07ec6a603b14e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042230"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54718259"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots
 Sie können verwalteten lokalen Threadspeicher (TLS, Thread Local Storage) zum Speichern von Daten verwenden, die für einen Thread und die Anwendungsdomäne eindeutig sind. .NET Framework bietet zwei Möglichkeiten zur Verwendung von verwaltetem TLS: threadbezogene statische Felder und Datenslots.  
@@ -59,8 +59,8 @@ Sie können verwalteten lokalen Threadspeicher (TLS, Thread Local Storage) zum S
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.ContextStaticAttribute>  
-- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
-- <xref:System.ThreadStaticAttribute>  
-- <xref:System.Runtime.Remoting.Messaging.CallContext>  
+- <xref:System.ContextStaticAttribute>
+- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>
+- <xref:System.ThreadStaticAttribute>
+- <xref:System.Runtime.Remoting.Messaging.CallContext>
 - [Threading](../../../docs/standard/threading/index.md)

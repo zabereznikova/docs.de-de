@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6447593ba81e4512afaf2b5798fcec00b755e63c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9b210ea2126058d38c2586c5bdd0d94af2abab30
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50184776"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54529816"
 ---
 # <a name="assembly-names"></a>Assemblynamen
 Der Name einer Assembly wird in Metadaten gespeichert und wirkt sich erheblich auf den Geltungsbereich einer Assembly aus. Zudem hat er Einfluss darauf, wie die Assembly von einer Anwendung verwendet wird. Eine Assembly mit starkem Namen hat einen vollqualifizierten Namen, der den Namen, die Kultur, den öffentlichen Schlüssel und die Versionsnummer der Assembly enthält. Dies wird häufig als Anzeigename bezeichnet. Für geladenen Assemblys kann er mit der <xref:System.Reflection.Assembly.FullName%2A>-Eigenschaft abgerufen werden.  
@@ -57,10 +57,10 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 > [!NOTE]
 >  Wenn Sie eine Assembly mit starkem Namen in den globalen Assemblycache einfügen, muss der Dateiname der Assembly mit dem Assemblynamen übereinstimmen (davon ausgenommen sind Erweiterungen des Dateinamen wie „.exe“ oder „.dll“). Wenn der Dateiname einer Assembly z.B. „meineAssembly.dll“ ist, muss der Assemblyname „meineAssembly“ sein. Private Assemblys, die nur im Stammanwendungsverzeichnis bereitgestellt wurden, können einen Assemblynamen haben, der sich vom Dateinamen unterscheidet.  
   
-## <a name="see-also"></a>Siehe auch  
-- [Gewusst wie: Bestimmen des vollqualifizierten Namens einer Assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
-- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
-- [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)  
-- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)  
-- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+## <a name="see-also"></a>Siehe auch
+- [Vorgehensweise: Bestimmen des vollqualifizierten Namens einer Assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
+- [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)
+- [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)
+- [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)

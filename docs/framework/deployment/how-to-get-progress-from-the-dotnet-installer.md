@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5'
+title: 'Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bec27165d1bfd6a501ba8b96a1eb133276fe7269
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 22c44340edf5e7a625524500838ab32d516ad97b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197950"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54614593"
 ---
-# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Gewusst wie: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5
 Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine verteilbare Laufzeit. Wenn Sie Apps für diese Version von .NET Framework entwickeln, können Sie das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup als Teil einer erforderlichen Komponente in das Setup Ihrer App einschließen (mit dem Setup verketten). Für ein angepasstes oder einheitliches Setup können Sie festlegen, dass das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup automatisch gestartet und sein Status nachverfolgt wird, während der Setupstatus Ihrer App angezeigt wird. Das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup (das beobachtet werden kann) definiert mithilfe eines MMIO (Memory-Mapped IO)-Segments ein Protokoll für die Kommunikation mit Ihrem Setup (dem Monitor oder Chainer), um die automatische Nachverfolgung zu aktivieren. Dieses Protokoll definiert ein Verfahren für einen Chainer zum Abrufen von Statusinformationen und ausführlichen Ergebnissen, zum Antworten auf Meldungen sowie zum Abrechen des [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setups.  
   
 -   **Aufruf**  Um das [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]-Setup aufzurufen und Statusinformationen aus dem MMIO-Abschnitt zu empfangen, muss das Setupprogramm folgende Aktionen ausführen:  
@@ -35,7 +35,7 @@ Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine
   
          Ersetzen Sie diese Namen durch Namen, die für das Setupprogramm eindeutig sind.  
   
-    2.  Lesen aus dem MMIO-Abschnitt. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] erfolgen Download und Installation gleichzeitig: Ein Teil von .NET Framework kann installiert werden, während ein anderer Teil heruntergeladen wird. Als Ergebnis wird der Status als zwei Zahlen (`m_downloadSoFar` und `m_installSoFar`), die von 0 bis 255 zunehmen, an den MMIO-Abschnitt zurückgesendet (das heißt, in den Abschnitt geschrieben). Wenn 255 geschrieben wurde und .NET Framework beendet wird, ist die Installation abgeschlossen.  
+    2.  Lesen aus dem MMIO-Abschnitt. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] werden die Download- und Installationsvorgänge gleichzeitig ausgeführt: Während ein Teil von .NET Framework installiert wird, wird vielleicht ein weiterer Teil heruntergeladen. Als Ergebnis wird der Status als zwei Zahlen (`m_downloadSoFar` und `m_installSoFar`), die von 0 bis 255 zunehmen, an den MMIO-Abschnitt zurückgesendet (das heißt, in den Abschnitt geschrieben). Wenn 255 geschrieben wurde und .NET Framework beendet wird, ist die Installation abgeschlossen.  
   
 -   **Exitcodes** Mit den folgenden Exitcodes im Befehl zum Aufrufen des verteilbaren Programms für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wird angegeben, ob das Setup erfolgreich war oder mit einem Fehler beendet wurde:  
   
@@ -57,7 +57,7 @@ Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine
   
  Sie können die vollständige Visual Studio-Projektmappe für das [Chainer-Beispiel für .NET Framework 4.5](https://go.microsoft.com/fwlink/?LinkId=231345) von der MSDN Samples Gallery herunterladen.  
   
- In den folgenden Abschnitten werden die wichtigsten Dateien in diesem Beispiel beschrieben: MMIOChainer.h, ChainingdotNet4.cpp und IProgressObserver.h.  
+ In den folgenden Abschnitten werden die bedeutendsten Dateien in diesem Beispiel beschrieben: MMIOChainer.h, ChainingdotNet4.cpp und IProgressObserver.h.  
   
 #### <a name="mmiochainerh"></a>MMIOChainer.h  
   
@@ -309,6 +309,6 @@ Bei [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] handelt es sich um eine
   
  Ein typischer Server erstellt einen zufälligen MMIO-Dateinamen, erstellt die Datei (wie im vorherigen Codebeispiel in `Server::CreateSection` gezeigt) und startet das verteilbare Programm mit der `CreateProcess`-Methode. Dabei wird der Pipename mit der Option `-pipe someFileSectionName` übergeben. Der Server sollte Methoden für `OnProgress`, `Send` und `Finished` mit spezifischem Code für die Benutzeroberfläche der Anwendung implementieren.  
   
-## <a name="see-also"></a>Siehe auch  
-- [Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+## <a name="see-also"></a>Siehe auch
+- [Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [Bereitstellung](../../../docs/framework/deployment/index.md)

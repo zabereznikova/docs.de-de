@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Füllen eines XML-Baums mit einem XmlWriter (LINQ to XML) (C#)'
+title: 'Vorgehensweise: Auffüllen einer XML-Struktur mit einer XmlWriter-Klasse (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-ms.openlocfilehash: cd8f8b5c382c64e142d794951ea289a3ca979f81
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 32dd06dbd166847298716d1da840cb37f0172b43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530346"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54661021"
 ---
-# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Vorgehensweise: Füllen eines XML-Baums mit einem XmlWriter (LINQ to XML) (C#)
+# <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>Vorgehensweise: Auffüllen einer XML-Struktur mit einer XmlWriter-Klasse (LINQ to XML) (C#)
 Eine Möglichkeit, eine XML-Struktur aufzufüllen, besteht darin, mit <xref:System.Xml.Linq.XContainer.CreateWriter%2A> einen <xref:System.Xml.XmlWriter> zu erstellen und dann in den <xref:System.Xml.XmlWriter> zu schreiben. Die XML-Struktur wird mit allen Knoten aufgefüllt, die in den <xref:System.Xml.XmlWriter> geschrieben werden.  
   
  Diese Methode kommt in der Regel zum Einsatz, wenn Sie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit einer anderen Klasse verwenden, die davon ausgeht, dass sie in einen <xref:System.Xml.XmlWriter>, z.B. <xref:System.Xml.Xsl.XslCompiledTransform>, schreibt.  
@@ -64,7 +64,7 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Xml.Linq.XContainer.CreateWriter%2A>  
-- <xref:System.Xml.XmlWriter>  
-- <xref:System.Xml.Xsl.XslCompiledTransform>  
+- <xref:System.Xml.Linq.XContainer.CreateWriter%2A>
+- <xref:System.Xml.XmlWriter>
+- <xref:System.Xml.Xsl.XslCompiledTransform>
 - [Creating XML Trees (C#) (Erstellen von XML-Strukturen (C#))](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399176"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54678797"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Erstellen von Satellitenassemblys für Desktop-Apps
 Ressourcendatei spielen eine tragende Rolle in lokalisierten Anwendungen. Durch sie kann eine Anwendung Zeichenfolgen, Images und andere Daten in der Sprache und Kultur des Benutzers anzeigen und alternative Daten bereitstellen, wenn keine Ressourcen für die Sprache oder Kultur des Benutzers verfügbar sind. .NET Framework verwendet ein Speichenarchitekturmodell (Hub and Spoke), um lokalisierte Ressourcen zu finden und aufzurufen. Der Hub ist die Hauptassembly, die den nicht lokalisierbaren, ausführbaren Code und die Ressourcen für eine einzelne Kultur enthält, die als neutrale oder Standardkultur bezeichnet wird. Die Standardkultur ist die Ausweichkultur der Anwendung. Dabei handelt es sich um die Kultur, die verwendet wird, wenn keine lokalisierten Ressourcen verfügbar sind. Sie verwenden das <xref:System.Resources.NeutralResourcesLanguageAttribute>-Attribut, um die Standardkultur der Anwendung festzulegen. Jede Speiche ist mit einer Satellitenassembly verbunden, die die Ressourcen für eine einzelne lokalisierte Kultur aber keinen Code enthält. Da die Satellitenassemblys kein Teil der Hauptassembly sind, können Sie die Ressourcen problemlos entsprechend einer bestimmten Kultur ersetzen oder aktualisieren, ohne die Hauptassembly der App ersetzen zu müssen.  
@@ -74,7 +74,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  In der folgenden Tabelle werden die Optionen von „al.exe“ ausführlicher beschrieben, die in diesen Befehlen verwendet werden.  
   
-|Option|description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**-target:** lib|Gibt an, dass Ihre Satellitenassembly in einer Bibliotheksdatei (.dll) kompiliert ist. Da eine Satellitenassembly keinen ausführbaren Code enthält und nicht die Hauptassembly einer Anwendung ist, müssen Sie Satellitenassemblys als DLLs speichern.|  
 |**-embed:** strings.de.resources|Gibt den Namen der einzubettenden Ressourcendatei an, wenn „al.exe“ die Assembly kompiliert. Sie können mehrere RESOURCEN-Dateien in einer Satellitenassembly einbetten. Wenn Sie allerdings das Speichenarchitekturmodell einsetzen, müssen Sie eine Satellitenassembly für jede Kultur kompilieren. Sie können allerdings separate RESOURCES-Dateien für Zeichenfolgen und Objekte erstellen.|  
@@ -84,7 +84,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Eine vollständige Liste der Optionen von „al.exe“ finden Sie unter [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
-## <a name="satellite-assemblies-an-example"></a>Satellitenassemblys: Ein Beispiel  
+## <a name="satellite-assemblies-an-example"></a>Satellitenassemblys: Beispiel  
  Das folgende ist ein einfaches „Hello world“-Beispiel, in dem ein Meldungsfeld mit einer lokalisierten Begrüßung angezeigt wird. Das Beispiel enthält Ressourcen für die Kulturen Englisch (USA), Französisch (Frankreich) und Russisch (Russische Föderation). Die Fallback-Kultur ist Englisch. Gehen Sie folgendermaßen vor, um dieses Beispiel zu erstellen:  
   
 1.  Erstellen Sie eine Ressourcendatei mit dem Namen „greeting.resx“ oder „greeting.txt“, die die Ressource für die Standardkultur enthalten soll. Speichern Sie in dieser Datei eine einzelne Zeichenfolge mit dem Namen `HelloString`, die den Wert „Hello world!“ hat.  
@@ -199,7 +199,7 @@ gacutil -i:StringLibrary.resources.dll
   
  Die Option **/i** gibt an, dass „gacutil.exe“ die angegeben Assembly im GAC installieren soll. Nachdem die Satellitenassembly im Cache installiert wurde, werden die Ressourcen, die sie enthält, für alle Anwendungen verfügbar gemacht, die dafür entwickelt wurden, die Satellitenassembly zu verwenden.  
   
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>Ressourcen im globalen Assemblycache: Ein Beispiel  
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>Ressourcen im globalen Assemblycache: Beispiel  
  In folgendem Beispiel wird eine Methode in der .NET Framework-Klassenbibliothek verwendet, um eine lokalisierte Begrüßung aus einer Ressourcendatei zu extrahieren und zurückzugeben. Die Bibliothek und ihre Ressourcen werden im GAC registriert. Das Beispiel enthält Ressourcen für die Kulturen Englisch (USA), Französisch (Frankreich), Russisch (Russland) und englische Kulturen. Englisch ist die Standardkultur. Ihre Ressourcen sind in der Hauptassembly gespeichert. Im Beispiel werden die Bibliothek und ihre Satellitenassemblys zunächst mit einem öffentlichen Schlüssel verzögert signiert. Anschließend werden Sie mit einem Paar aus privatem und öffentlichem Schlüssel erneut signiert. Gehen Sie folgendermaßen vor, um dieses Beispiel zu erstellen:  
   
 1.  Wenn Sie nicht Visual Studio verwenden, verwenden Sie den folgenden Befehl vom [Strong Name-Tool (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md), um ein Paar aus privatem und öffentlichem Schlüssel mit dem Namen „ResKey.snk“ zu erstellen:  
@@ -308,10 +308,10 @@ gacutil -i:StringLibrary.resources.dll
   
 14. Führen Sie „Beispiel.exe“ aus.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Verzögertes Signieren einer Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Gacutil.exe (Global Assembly Cache-Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>Siehe auch
+- [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Verzögertes Signieren einer Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)
+- [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Sn.exe (Strong Name-Tool)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Gacutil.exe (Global Assembly Cache-Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)

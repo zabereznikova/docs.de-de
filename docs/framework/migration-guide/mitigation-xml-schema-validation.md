@@ -1,5 +1,5 @@
 ---
-title: 'Entschärfung: XML-Schema-Validierung'
+title: 'Entschärfung: XML-Schemavalidierung'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e757962f02cce104d8c5ab805d0481861cab426e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbeeecda3bd34f5eb651cb32246f8b56d5705002
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389212"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54651005"
 ---
-# <a name="mitigation-xml-schema-validation"></a>Entschärfung: XML-Schema-Validierung
+# <a name="mitigation-xml-schema-validation"></a>Entschärfung: XML-Schemavalidierung
 In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ermittelt die XSD-Schemavalidierung einen Verstoß gegen die Unique-Einschränkung, wenn ein Verbundschlüssel verwendet wird und ein Schlüssel leer ist.  
   
 ## <a name="impact"></a>Auswirkungen  
@@ -37,5 +37,5 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ermittelt die XSD-Schema
  [!code-csharp[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/cs/program.cs#2)]
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>Siehe auch
+- [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

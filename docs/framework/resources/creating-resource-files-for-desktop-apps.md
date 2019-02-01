@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8d5c151c728002ede0e29be77fa6e23aa2c1b3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8219888b7944a19b100f73aab3713c09fd93f45b
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399820"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569939"
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Erstellen von Ressourcendateien für Desktop-Apps
 Sie können Ressourcen (z. B. Zeichenfolgen, Bilder oder Objektdaten) in Ressourcendateien einschließen, um sie für die Anwendung leicht verfügbar zu machen. .NET Framework bietet fünf Möglichkeiten, Ressourcendateien zu erstellen:  
@@ -58,7 +58,7 @@ name2=value2
   
  Das Ressourcendateiformat von .txt und von .restext-Dateien ist identisch. Die .restext-Dateierweiterung dient lediglich dazu, Textdateien direkt als textbasierte Ressourcendateien identifizierbar zu machen.  
   
- Zeichenfolgenressourcen werden als Name/Wert-Paare (*name/value* pairs) angezeigt, wobei *name* eine Zeichenfolge ist, die die Ressource identifiziert, und *value* die Ressourcenzeichenfolge, die zurückgegeben wird, wenn Sie *name* an eine Ressourcenabrufmethode wie <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> übergeben. *name* und *value* müssen durch ein Gleichheitszeichen (=) getrennt werden. Zum Beispiel:  
+ Zeichenfolgenressourcen werden als Name/Wert-Paare (*name/value* pairs) angezeigt, wobei *name* eine Zeichenfolge ist, die die Ressource identifiziert, und *value* die Ressourcenzeichenfolge, die zurückgegeben wird, wenn Sie *name* an eine Ressourcenabrufmethode wie <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> übergeben. *name* und *value* müssen durch ein Gleichheitszeichen (=) getrennt werden. Beispiel:  
   
 ```  
 FileMenuName=File  
@@ -70,7 +70,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  Verwenden Sie Ressourcendateien nicht, um Kennwörter, sicherheitsrelevante Informationen oder private Daten zu speichern.  
   
- Leere Zeichenfolgen (eine Ressource, deren Wert <xref:System.String.Empty?displayProperty=nameWithType> ist) sind in Textdateien zulässig. Zum Beispiel:  
+ Leere Zeichenfolgen (eine Ressource, deren Wert <xref:System.String.Empty?displayProperty=nameWithType> ist) sind in Textdateien zulässig. Beispiel:  
   
 ```  
 EmptyString=  
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
   
  Zur Kompilierzeit werden von Visual Studio zuerst die RESX-Dateien in einem Projekt in binäre Ressourcendateien (.resources) konvertiert und im Verzeichnis "obj" des Projekts in einem Unterverzeichnis gespeichert. Visual Studio bettet alle Ressourcendateien ein, die keine lokalisierten Ressourcen in der vom Projekt generierten Hauptassembly enthalten. Wenn Ressourcendateien lokalisierte Ressourcen enthalten, werden diese von Visual Studio für jede lokalisierte Kultur in separate Satellitenassemblys eingebettet. Anschließend wird jede Satellitenassembly in einem Verzeichnis gespeichert, dessen Name der lokalisierten Kultur entspricht. Lokalisierte englische Ressourcen (USA) werden z. B. in einer Satellitenassembly im Unterverzeichnis "en-US" gespeichert.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Resources>  
- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)  
- [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Resources>
+- [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
+- [Verpacken und Bereitstellen von Ressourcen](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

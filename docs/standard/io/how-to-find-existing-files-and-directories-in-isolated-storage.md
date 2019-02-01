@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher'
+title: 'Vorgehensweise: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fd5bc2a8db8d98791cdd1a75b007555226c050b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 277f7d562d5e345556a9047f6e4bf2b60eaef462
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202093"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646710"
 ---
-# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher
+# <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Vorgehensweise: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher
 
 Um ein Verzeichnis im isolierten Speicher zu suchen, verwenden Sie die <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>-Methode. Diese Methode akzeptiert eine Zeichenfolge, die ein Suchmuster darstellt. Sie können Platzhalterzeichen für einzelne Zeichen (?) und mehrere Zeichen (\*) im Suchmuster verwenden, aber die Platzhalterzeichen müssen im letzten Teil des Namens angezeigt werden. Beispielsweise ist `directory1/*ect*` eine gültige Suchzeichenfolge, `*ect*/directory2` aber nicht.  
   
@@ -43,5 +43,5 @@ Um ein Verzeichnis im isolierten Speicher zu suchen, verwenden Sie die <xref:Sys
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [Isolierter Speicher](../../../docs/standard/io/isolated-storage.md)

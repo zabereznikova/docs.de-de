@@ -1,19 +1,19 @@
 ---
-title: 'Gewusst wie: Manuelles Erstellen von Wrappern'
+title: 'Vorgehensweise: Manuelles Erstellen von Wrappern'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d61095e4e8c7f9b3795b751a5894de99d6ce8f99
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fba0de3f45afc199255dce93e69142724b68b0fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390262"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54553034"
 ---
-# <a name="how-to-create-wrappers-manually"></a>Gewusst wie: Manuelles Erstellen von Wrappern
+# <a name="how-to-create-wrappers-manually"></a>Vorgehensweise: Manuelles Erstellen von Wrappern
 Wenn Sie COM-Typen manuell in verwaltetem Quellcode deklarieren möchten, sollten Sie mit einer vorhandenen IDL-Datei oder -Typbibliothek (IDL, Interface Definition Language – Sprache für die Schnittstellendefinition) beginnen. Wenn Sie nicht über eine IDL-Datei verfügen oder keine Typbibliotheksdatei generieren können, können Sie die COM-Typen simulieren, indem Sie verwaltete Deklarationen erstellen und die sich daraus ergebende Assembly in eine Typbibliothek exportieren.  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>So simulieren Sie COM-Typen aus verwaltetem Quellcode  
@@ -32,7 +32,7 @@ Wenn Sie COM-Typen manuell in verwaltetem Quellcode deklarieren möchten, sollte
   
 3.  Wenn die Deklarationen vollständig sind, kompilieren Sie die Datei so, wie Sie es für verwalteten Quellcode gewohnt sind.  
   
-4.  Analog zu den mit Tlbimp.exe importierten Typen benötigen einige Typen zusätzliche Informationen, die Sie dem Code direkt hinzufügen können. Weitere Informationen finden Sie unter [Vorgehensweise: Bearbeiten von Interop-Assemblys](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100)).  
+4.  Analog zu den mit Tlbimp.exe importierten Typen benötigen einige Typen zusätzliche Informationen, die Sie dem Code direkt hinzufügen können. Weitere Informationen finden Sie unter [Vorgehensweise: Bearbeiten von Interopassemblys](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100)).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Code sind ein Beispiel der `ISATest`-Schnittstelle und der `SATest`-Klasse in IDL sowie die entsprechenden Typen im C#-Quellcode dargestellt.  
@@ -99,10 +99,10 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Anpassen von Runtime Callable Wrappers](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))  
- [COM-Datentypen](https://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061(v=vs.100))  
- [Vorgehensweise: Bearbeiten von Interop-Assemblys](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100))  
- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
- [Tlbimp.exe (Type Library Importer-Tool)](../tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (Type Library Exporter-Tool)](../tools/tlbexp-exe-type-library-exporter.md)
+## <a name="see-also"></a>Siehe auch
+- [Anpassen von Runtime Callable Wrappers](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))
+- [COM-Datentypen](https://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061(v=vs.100))
+- [Vorgehensweise: Bearbeiten von Interopassemblys](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100))
+- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Tlbimp.exe (Type Library Importer-Tool)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (Type Library Exporter-Tool)](../tools/tlbexp-exe-type-library-exporter.md)

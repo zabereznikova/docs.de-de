@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Debuggen von Windows-Dienstanwendungen'
+title: 'Vorgehensweise: Debuggen von Windows-Dienstanwendungen'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 3f8dfff59acaa10fa99874dde2eb6eb6ed04e8fb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 02ea82bf224349e6ea7a5afbfb3c38ba50df46f8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035947"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54720365"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>Gewusst wie: Debuggen von Windows-Dienstanwendungen
+# <a name="how-to-debug-windows-service-applications"></a>Vorgehensweise: Debuggen von Windows-Dienstanwendungen
 Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb von Visual Studio ausgeführt werden. Aus diesem Grund ist das Debuggen eines Dienstes nicht so einfach wie das Debuggen anderer Anwendungstypen in Visual Studio. Damit ein Dienst gedebuggt werden kann, muss er gestartet werden. Danach muss ein Debugger an den Prozess angehängt werden, in dem er ausgeführt wird. Anschließend kann die Anwendung mit allen Standarddebugfunktionen von Visual Studio gedebuggt werden.  
   
 > [!CAUTION]
@@ -38,7 +38,7 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
   
 1.  Erstellen Sie Ihren Dienst in der Debugkonfiguration.  
   
-2.  Installieren Sie den Dienst. Weitere Informationen finden Sie unter [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2.  Installieren Sie den Dienst. Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 3.  Starten Sie den Dienst entweder mit dem **Dienststeuerungs-Manager**, mit dem **Server-Explorer** oder aus dem Code. Weitere Informationen finden Sie unter [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md).  
   
@@ -46,7 +46,7 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
   
 5.  (Optional) Klicken Sie in Visual Studio auf der Menüleiste auf **Extras** und **Optionen**. Wählen Sie im Dialogfeld **Optionen** die Optionen **Debuggen** und **Symbole** aus. Aktivieren Sie das Kontrollkästchen **Microsoft-Symbolserver**, und klicken Sie anschließend auf die Schaltfläche **OK**.  
   
-6.  Wählen Sie auf der Menüleiste aus dem Menü **Debuggen** oder **Extras** die Option **An den Prozess anhängen** aus. (Tastatur: Strg + Alt + P)  
+6.  Wählen Sie auf der Menüleiste aus dem Menü **Debuggen** oder **Extras** die Option **An den Prozess anhängen** aus. (Tastatur: STRG+ALT+P)  
   
      Das Dialogfeld **Prozesse** wird angezeigt.  
   
@@ -66,7 +66,7 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
   
 10. Legen Sie die Haltepunkte fest, die im Code verwendet werden sollen.  
   
-11. Öffnen Sie den Dienststeuerungs-Manager und bearbeiten Sie den Dienst, indem Sie Befehle zum Beenden, Anhalten und Fortsetzen ausgeben, um die festgelegten Haltepunkte anzusteuern. Weitere Informationen zum Ausführen des Dienststeuerungs-Managers finden Sie unter [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md). Informationen finden Sie auch unter [Problembehandlung: Debuggen von Windows-Diensten](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
+11. Öffnen Sie den Dienststeuerungs-Manager und bearbeiten Sie den Dienst, indem Sie Befehle zum Beenden, Anhalten und Fortsetzen ausgeben, um die festgelegten Haltepunkte anzusteuern. Weitere Informationen zum Ausführen des Dienststeuerungs-Managers finden Sie unter [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md). Zudem finden Sie Informationen unter [Problembehandlung: Debuggen von Windows-Diensten](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 ## <a name="debugging-tips-for-windows-services"></a>Tipps zum Debuggen für Windows-Dienste  
  Durch das Anfügen an den Prozess des Dienstes können Sie die meisten, aber nicht alle, Codes für diesen Dienst debuggen. Z. B. weil der Dienst bereits gestartet wurde, können Sie den Code in der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode des Dienstes oder den Code in der `Main`-Methode nicht debuggen, die verwendet wird, um den Dienst auf diese Weise zu lassen. Dies kann dadurch umgangen werden, dass ein zweiter temporärer Dienst in der Dienstanweisung erstellt wird, der lediglich als Hilfsmittel für das Debuggen verwendet wird. Beide Dienste können installiert werden. Anschließend wird der Dienstprozess geladen, indem der "Dummydienst" gestartet wird. Sobald der Prozess vom temporären Dienst gestartet wurde, können Sie mit dem Anhängen an den Dienstprozess über das Menü **Debuggen** in Visual Studio beginnen.  
@@ -113,8 +113,8 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
   
  In einigen Fällen, z. B. beim Debuggen eines Problems, das nur beim Systemstart auftritt, müssen Sie den Windows-Debugger verwenden. Installieren Sie die [Debugtools für Windows](https://msdn.microsoft.com/windows/hardware/hh852365). Weitere Informationen finden Sie unter [Vorgehensweise: Debuggen von Windows-Diensten](https://support.microsoft.com/kb/824344).  
   
-## <a name="see-also"></a>Siehe auch  
- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Debugging a Service (Debuggen eines Diensts)](/windows/desktop/Services/debugging-a-service)
+## <a name="see-also"></a>Siehe auch
+- [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+- [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
+- [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md)
+- [Debugging a Service (Debuggen eines Diensts)](/windows/desktop/Services/debugging-a-service)

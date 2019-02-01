@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e60aae158d822a3cfba93f6d714d83bcd7aa0e08
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155024"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54600764"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework (Visual Basic)
 Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateien und Verzeichnissen verwendet.  
@@ -57,11 +57,11 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
   
 |Beschreibung|Informationen|
 |---|---|   
-|Lesen und Schreiben in einer Datendatei|[Gewusst wie: Lesen und Schreiben einer neu erstellten Datendatei](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|Lesen von Text aus einer Datei|[Gewusst wie: Lesen von Text aus einer Datei](../../../../standard/io/how-to-read-text-from-a-file.md)|  
-|Schreiben von Text in eine Datei|[Gewusst wie: Schreiben von Text in eine Datei](../../../../standard/io/how-to-write-text-to-a-file.md)|  
-|Lesen von Zeichen aus einer Zeichenfolge|[Gewusst wie: Lesen von Zeichen aus einer Zeichenfolge](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
-|Schreiben von Zeichen in eine Zeichenfolge|[Gewusst wie: Schreiben von Zeichen in eine Zeichenfolge](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|Lesen und Schreiben in einer Datendatei|[Vorgehensweise: Vorgehensweise: Lesen von bzw. Schreiben in eine neu erstellte Datendatei](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Lesen von Text aus einer Datei|[Vorgehensweise: Lesen von Text aus einer Datei](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|Schreiben von Text in eine Datei|[Vorgehensweise: Schreiben von Text in eine Datei](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|Lesen von Zeichen aus einer Zeichenfolge|[Vorgehensweise: Lesen von Zeichen aus einer Zeichenfolge](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|Schreiben von Zeichen in eine Zeichenfolge|[Vorgehensweise: Schreiben von Zeichen in eine Zeichenfolge](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
 |Verschlüsseln von Daten|[Verschlüsseln von Daten](../../../../standard/security/encrypting-data.md)|  
 |Entschlüsseln von Daten|[Entschlüsseln von Daten](../../../../standard/security/decrypting-data.md)|  
   
@@ -74,7 +74,7 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
   
 |Beschreibung|Siehe|  
 |---|---|
-|Öffnen und Anfügen an eine Protokolldatei|[Gewusst wie: Öffnen und Anfügen an eine Protokolldatei](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
+|Öffnen und Anfügen an eine Protokolldatei|[Vorgehensweise: Öffnen und Anfügen an eine Protokolldatei](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Festlegen der Attribute einer Datei|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Dateiberechtigungen  
@@ -87,19 +87,19 @@ Klassen im <xref:System.IO>-Namespace werden zum Arbeiten mit Laufwerken, Dateie
   
 |Beschreibung|Siehe|
 |---|---|  
-|Erstellen eines isolierten Speichers|[Gewusst wie: Erhalten von Speichern für isolierten Speicher](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
-|Auflisten von isolierten Speichern|[Gewusst wie: Auflisten von Speichern für isolierten Speicher](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
-|Löschen eines isolierten Speichers|[Gewusst wie: Löschen von Speichern im isolierten Speicher](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
-|Erstellen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
-|Suchen einer Datei im isolierten Speicher|[Gewusst wie: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
-|Lesen aus oder Schreiben in einer Datei im isolierten Speicher|[Gewusst wie: Lesen bzw. Schreiben von Dateien im isolierten Speicher](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
-|Löschen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Gewusst wie: Löschen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
+|Erstellen eines isolierten Speichers|[Vorgehensweise: Erhalten von Speichern für isolierten Speicher](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Auflisten von isolierten Speichern|[Vorgehensweise: Auflisten von Speichern für isolierten Speicher](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Löschen eines isolierten Speichers|[Vorgehensweise: Löschen von Speichern im isolierten Speicher](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Erstellen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Vorgehensweise: Erstellen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Suchen einer Datei im isolierten Speicher|[Vorgehensweise: Suchen von vorhandenen Dateien und Verzeichnissen im isolierten Speicher](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|Lesen aus oder Schreiben in einer Datei im isolierten Speicher|[Vorgehensweise: Lesen von bzw. Schreiben in Dateien im isolierten Speicher](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Löschen einer Datei oder eines Verzeichnisses im isolierten Speicher|[Vorgehensweise: Löschen von Dateien und Verzeichnissen in isoliertem Speicher](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Dateiereignisse  
  Mit der Komponente von <xref:System.IO.FileSystemWatcher> können Sie Änderungen in Dateien und Verzeichnissen in Ihrem System oder auf jedem beliebigen Computer, auf dem Sie über Netzwerkzugriff verfügen, überwachen. Wenn z.B. eine Datei verändert wird, möchten Sie möglicherweise eine Warnung an einen Benutzer versenden, dass die Änderung durchgeführt wurde. Wenn Änderungen auftreten, werden ein Ereignis oder mehrere Ereignisse ausgelöst, in einem Puffer gespeichert und an die <xref:System.IO.FileSystemWatcher>-Komponente für die Verarbeitung übermittelt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Streams](../../../../standard/io/composing-streams.md)  
- [Datei- und Stream-E/A](../../../../standard/io/index.md)  
- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
- [Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+## <a name="see-also"></a>Siehe auch
+- [Erstellen von Streams](../../../../standard/io/composing-streams.md)
+- [Datei- und Stream-E/A](../../../../standard/io/index.md)
+- [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

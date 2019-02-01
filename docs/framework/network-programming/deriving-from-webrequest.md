@@ -10,17 +10,17 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f840e042321b636443b6763e168abd144b05edae
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147541"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54717453"
 ---
 # <a name="deriving-from-webrequest"></a>Ableiten von WebRequest
 Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die grundlegende Methoden und Eigenschaften bereitstellt, mit denen ein protokollspezifischer Anforderungshandler erstellt wird, der in das austauschbare Protokollmodell von .NET Framework passt. Anwendungen, die die **WebRequest**-Klasse verwenden, können Daten mit einem beliebigen unterstützten Protokoll anfordern, ohne das verwendete Protokoll anzugeben.  
   
- Zwei Kriterien müssen erfüllt sein, damit eine protokollspezifische Klasse als ein austauschbares Protokoll verwendet werden kann: Die Klasse muss die <xref:System.Net.IWebRequestCreate>-Schnittstelle implementieren und sie mit der <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>-Methode registrieren. Die Klasse muss alle abstrakten Methoden und Eigenschaften von **WebRequest** überschreiben, um die austauschbare Schnittstelle bereitzustellen.  
+ Eine protokollspezifische Klasse muss die folgenden zwei Anforderungen erfüllen, damit Sie diese als austauschbares Protokoll verwenden können: Die Klasse muss die <xref:System.Net.IWebRequestCreate>-Schnittstelle implementieren und sich bei der <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType>-Methode registrieren. Die Klasse muss alle abstrakten Methoden und Eigenschaften von **WebRequest** überschreiben, um die austauschbare Schnittstelle bereitzustellen.  
   
  **WebRequest**-Instanzen sind für die einmalige Verwendung vorgesehen. Wenn Sie eine andere Anforderung vornehmen möchten, erstellen Sie eine neue **WebRequest**. **WebRequest** unterstützt die <xref:System.Runtime.Serialization.ISerializable>-Schnittstelle, um Entwicklern zu ermöglichen, eine **WebRequest**-Vorlage zu serialisieren und die Vorlage für zusätzliche Anforderungen zu rekonstruieren.  
   
@@ -88,9 +88,9 @@ Die <xref:System.Net.WebRequest>-Klasse ist eine abstrakte Basisklasse, die die 
   
  Die **GetResponse**-Methode ist verantwortlich für das Erstellen eines entsprechenden **WebResponse**-Nachfolgers, der die eingehende Antwort enthält.  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:System.Net.WebRequest>  
- <xref:System.Net.HttpWebRequest>  
- <xref:System.Net.FileWebRequest>  
- [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [Ableiten von WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+## <a name="see-also"></a>Siehe auch
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.HttpWebRequest>
+- <xref:System.Net.FileWebRequest>
+- [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
+- [Ableiten von WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)

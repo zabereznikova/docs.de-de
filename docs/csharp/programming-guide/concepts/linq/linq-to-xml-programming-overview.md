@@ -2,19 +2,19 @@
 title: Übersicht über die LINQ to XML-Programmierung (C#)
 ms.date: 07/20/2015
 ms.assetid: 2dfa9b6f-5890-461d-b81c-316853c7f320
-ms.openlocfilehash: 9eb86e0c9c5dada36e09c78e7070d32afa9824c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c5510733197ad63b4d3e2ce1134425e1954fdc2d
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522711"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54652747"
 ---
 # <a name="linq-to-xml-programming-overview-c"></a>Übersicht über die LINQ to XML-Programmierung (C#)
 Diese Themen enthalten allgemeine Informationen zu den [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen sowie detaillierte Informationen zu drei der wichtigsten Klassen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung |  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Vergleich von funktionaler und Prozedurale Programmierung (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-vs-procedural-programming-linq-to-xml.md)|Bietet eine allgemeine Einführung in die beiden prinzipiellen Herangehensweisen an das Schreiben von LINQ to XML-Anwendungen.|  
 |[Übersicht über die LINQ to XML-Klassen (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-classes-overview.md)|Enthält eine Übersicht über die [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen.|  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4c6d10fad075a70d80bf6e5aa32edf0f89c42dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151290"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54532190"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standard-Formatzeichenfolgen für Datum und Uhrzeit
 Eine standardmäßige Formatzeichenfolge für Datum und Uhrzeit verwendet einen einzelnen Formatbezeichner, um die Textdarstellung eines Datums- und Uhrzeitwerts zu definieren. Jede Formatzeichenfolge für Datum und Uhrzeit, die mehr als ein Zeichen (einschließlich Leerzeichen) enthält, wird als benutzerdefinierte Formatzeichenfolge für Datum und Uhrzeit interpretiert. Weitere Informationen finden Sie unter [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Eine standardmäßige oder benutzerdefinierte Formatzeichenfolge kann auf zwei Arten verwendet werden:  
@@ -43,19 +43,19 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
 |----------------------|-----------------|--------------|  
 |"d"|Kurzes Datumsmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "d" für das kurze Datum](#ShortDate).|2009-06-15T13:45:30 -> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30 -> 2009/06/15 (ja-JP)|  
 |"D"|Langes Datumsmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "D" für das lange Datum](#LongDate).|2009-06-15T13:45:30 -> Monday, June 15, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> Montag, 15. Juni 2009 (de-DE)|  
-|"f"|Vollständiges Datums-/Zeitmuster (kurze Zeit).<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "f" für vollständiges Datum und kurze Zeit](#FullDateShortTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|  
-|"F"|Vollständiges Datums-/Zeitmuster (lange Zeit).<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "F" für vollständiges Datum und lange Zeit](#FullDateLongTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|  
-|"g"|Allgemeines Datums-/Zeitmuster (kurze Zeit).<br /><br /> Weitere Informationen finden Sie unter [Der allgemeine Formatbezeichner "g" für Datum und kurze Zeit](#GeneralDateShortTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|  
-|"G"|Allgemeines Datums-/Zeitmuster (lange Zeit).<br /><br /> Weitere Informationen finden Sie unter [Der allgemeine Formatbezeichner "G" für Datum und lange Zeit](#GeneralDateLongTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|  
-|"M", "m"|Monatstagmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "M", "m" für den Monat](#MonthDay).|2009-06-15T13:45:30 -> June 15 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (id-ID)|  
-|"O", "o"|Zurückkonvertieren von Datums-/Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "O", "o" für Roundtrips](#Roundtrip).|<xref:System.DateTime>-Werte sind:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset>-Werte sind:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|  
-|"R", "r"|RFC1123-Muster.<br /><br /> Weitere Informationen finden Sie unter [Der RFC1123-Formatbezeichner "R", "r"](#RFC1123).|2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT|  
-|"s"|Sortierbares Datums-/Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter [Der sortierbare Formatbezeichner "s"](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
-|"t"|Kurzes Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "t" für kurze Zeit](#ShortTime).|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
-|"T"|Langes Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "T" für lange Zeit](#LongTime).|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|  
-|"u"|Universelles, sortierbares Datums-/Zeitmuster.<br /><br /> Weitere Informationen finden Sie unter [Der universelle sortierbare Formatbezeichner "u"](#UniversalSortable).|Mit dem <xref:System.DateTime>-Wert: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Mit dem <xref:System.DateTimeOffset>-Wert: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
-|"U"|Universelles Datums-/Zeitmuster (Koordinierte Weltzeit).<br /><br /> Weitere Informationen finden Sie unter [Der universelle vollständige Formatbezeichner "U"](#UniversalFull).|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|  
-|"Y", "y"|Jahr-Monat-Muster.<br /><br /> Weitere Informationen finden Sie unter [Der Formatbezeichner "Y", "y" für Jahr-Monat](#YearMonth).|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|  
+|"f"|Vollständiges Datums-/Zeitmuster (kurze Zeit).<br /><br /> Weitere Informationen: [Der Formatspezifizierer „f“ für vollständiges Datum und kurze Zeit](#FullDateShortTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45 μμ (el-GR)|  
+|"F"|Vollständiges Datums-/Zeitmuster (lange Zeit).<br /><br /> Weitere Informationen: [Der Formatspezifizierer „F“ für vollständiges Datum und lange Zeit](#FullDateLongTime).|2009-06-15T13:45:30 -> Monday, June 15, 2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|  
+|"g"|Allgemeines Datums-/Zeitmuster (kurze Zeit).<br /><br /> Weitere Informationen: [Der allgemeine Formatspezifizierer „g“ für Datum und kurze Zeit](#GeneralDateShortTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45 (zh-CN)|  
+|"G"|Allgemeines Datums-/Zeitmuster (lange Zeit).<br /><br /> Weitere Informationen: [Der allgemeine Formatspezifizierer „G“ für Datum und lange Zeit](#GeneralDateLongTime).|2009-06-15T13:45:30 -> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15/06/2009 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|  
+|"M", "m"|Monatstagmuster.<br /><br /> Weitere Informationen: [Der Formatspezifizierer „M“, „m“ für den Monat](#MonthDay).|2009-06-15T13:45:30 -> June 15 (en-US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (id-ID)|  
+|"O", "o"|Zurückkonvertieren von Datums-/Zeitmuster.<br /><br /> Weitere Informationen: [Der Formatspezifizierer „O“, „o“ für Roundtrips](#Roundtrip).|<xref:System.DateTime>-Werte sind:<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Local) --> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) --> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified) --> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset>-Werte sind:<br /><br /> 2009-06-15T13:45:30-07:00 --> 2009-06-15T13:45:30.0000000-07:00|  
+|"R", "r"|RFC1123-Muster.<br /><br /> Weitere Informationen: [Der RFC1123-Formatspezifizierer „R“, „r“](#RFC1123).|2009-06-15T13:45:30 -> Mon, 15 Jun 2009 20:45:30 GMT|  
+|"s"|Sortierbares Datums-/Zeitmuster.<br /><br /> Weitere Informationen: [Der sortierbare Formatspezifizierer „s“](#Sortable).|2009-06-15T13:45:30 (DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
+|"t"|Kurzes Zeitmuster.<br /><br /> Weitere Informationen: [Der Formatspezifizierer „t“ für kurze Zeit](#ShortTime).|2009-06-15T13:45:30 -> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45 م (ar-EG)|  
+|"T"|Langes Zeitmuster.<br /><br /> Weitere Informationen: [Der Formatspezifizierer „T“ für lange Zeit](#LongTime).|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|  
+|"u"|Universelles, sortierbares Datums-/Zeitmuster.<br /><br /> Weitere Informationen: [Der universelle sortierbare Formatspezifizierer „u“](#UniversalSortable).|Mit einem <xref:System.DateTime>-Wert: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> Mit einem <xref:System.DateTimeOffset>-Wert: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|  
+|"U"|Universelles Datums-/Zeitmuster (Koordinierte Weltzeit).<br /><br /> Weitere Informationen: [Der universelle vollständige Formatspezifizierer „U“](#UniversalFull).|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|  
+|"Y", "y"|Jahr-Monat-Muster.<br /><br /> Weitere Informationen: [Der Formatspezifizierer „Y“, „y“ für Jahr-Monat](#YearMonth).|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|  
 |Jedes andere einzelne Zeichen|Unbekannter Bezeichner.|Löst eine <xref:System.FormatException> zur Laufzeit aus.|  
   
 ## <a name="how-standard-format-strings-work"></a>Funktionsweise der Standardformatzeichenfolgen  
@@ -81,7 +81,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
 > [!NOTE]
 >  Informationen zum Anpassen der Muster oder Zeichenfolgen, die beim Formatieren der Datums- und Uhrzeitwerte verwendet werden, finden Sie im Thema zur <xref:System.Globalization.NumberFormatInfo>-Klasse.  
   
- In einigen Fällen dient die Standardformatzeichenfolge als praktische Abkürzung für eine längere benutzerdefinierte Formatzeichenfolge, die unveränderlich ist. Vier Standardformatzeichenfolgen fallen in diese Kategorie: "O" (oder "o"), "R" (oder "r"), "s" und "u". Diese Zeichenfolgen entsprechen benutzerdefinierten Formatzeichenfolgen, die durch die invariante Kultur definiert werden. Sie erzeugen Zeichenfolgenentsprechungen von Datums- und Uhrzeitwerten, die über Kulturen hinweg identisch sein sollen. In der folgenden Tabelle werden Informationen über dieses vier Standardformatzeichenfolgen für Datum und Uhrzeit bereitgestellt.  
+ In einigen Fällen dient die Standardformatzeichenfolge als praktische Abkürzung für eine längere benutzerdefinierte Formatzeichenfolge, die unveränderlich ist. Vier Standardformatzeichenfolgen fallen in diese Kategorie: „O“ (oder „o“), „R“ (oder „r“), „s“ und „u“. Diese Zeichenfolgen entsprechen benutzerdefinierten Formatzeichenfolgen, die durch die invariante Kultur definiert werden. Sie erzeugen Zeichenfolgenentsprechungen von Datums- und Uhrzeitwerten, die über Kulturen hinweg identisch sein sollen. In der folgenden Tabelle werden Informationen über dieses vier Standardformatzeichenfolgen für Datum und Uhrzeit bereitgestellt.  
   
 |Standardformatzeichenfolge|Definiert durch die DateTimeFormatInfo.InvariantInfo-Eigenschaft|Benutzerdefinierte Formatzeichenfolge|  
 |----------------------------|----------------------------------------------------------|--------------------------|  
@@ -259,7 +259,7 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
  Zeichenfolgen, die an die `Parse`-, `TryParse`-, `ParseExact` und `TryParseExact`-Methoden von <xref:System.DateTime> und <xref:System.DateTimeOffset> weitergegeben werden, können mit dem Formatbezeichner "O" oder "o" analysiert werden, wenn sie in einem dieser Formate vorliegen. Bei <xref:System.DateTime>-Objekten sollte die Überladung, die Sie aufrufen, auch einen `styles`-Parameter mit einem Wert von <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> enthalten. Beachten Sie, dass Sie durch Aufrufen einer Analysemethode mit der benutzerdefinierten Formatzeichenfolge, die dem Formatbezeichner "O" oder "o" entspricht, nicht die gleichen Ergebnisse wie "O" oder "o" erhalten. Der Grund dafür ist, dass Analysemethoden, die benutzerdefinierte Formatzeichenfolgen verwenden, die Zeichenfolgendarstellung von Datums- und Zeitwerten nicht analysieren können, wenn diese keine Zeitzonenkomponente enthalten oder "Z" zur Angabe von UTC verwenden.  
   
- Im folgenden Beispiel wird der "o"-Formatbezeichner verwendet, um eine Reihe von <xref:System.DateTime>-Werten und einen <xref:System.DateTimeOffset>-Wert in einem System in der Zeitzone Pacific anzuzeigen.  
+ Im folgenden Beispiel wird der "o"-Formatbezeichner verwendet, um eine Reihe von <xref:System.DateTime>-Werten und einen <xref:System.DateTimeOffset>-Wert in einem System in der Zeitzone Pacific verwendet wird.  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
@@ -415,8 +415,8 @@ Standard-Formatzeichenfolgen für Datum und Uhrzeit können mit dem Wert <xref:S
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.DateTime?displayProperty=nameWithType>  
-- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
-- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)  
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- <xref:System.DateTime?displayProperty=nameWithType>
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>
+- [Formatierung von Typen](../../../docs/standard/base-types/formatting-types.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Beispiel: .NET Framework 4-Hilfsprogramm zur Formatierung](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

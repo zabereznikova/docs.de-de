@@ -2,15 +2,15 @@
 title: Verketten von Standardabfrageoperatoren (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 07cc6769646f8f3f924b488e30ce2415c587ebe0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 71b364d76860b5daa21ea176947d9cfe9d49b308
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582882"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>Verketten von Standardabfrageoperatoren (C#)
-Dies ist das letzte Thema von [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
+Das ist das letzte Thema im [Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).  
   
  Die Standardabfrageoperatoren können ebenfalls verkettet werden. So können Sie z. B. den <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType>-Operator verwenden; dieser funktioniert ebenfalls verzögert. Er materialisiert keinerlei Zwischenergebnisse.  
   
@@ -19,7 +19,7 @@ Dies ist das letzte Thema von [Tutorial: Verketten von Abfragen (C#)](../../../.
   
  Ein Unterschied besteht darin, dass die <xref:System.Linq.Enumerable.Where%2A>-Methode in diesem Fall ihre Quellauflistung durchläuft, dabei feststellt, dass das erste Element kein Prädikat übergibt, und dann zum nächsten Element geht, das ein Prädikat übergibt. Anschließend gibt die Methode das zweite Element zurück.  
   
- Die Grundidee ist aber dieselbe: Zwischenauflistungen werden nur dann materialisiert, wenn dies erforderlich ist.  
+ Die Grundidee bleibt jedoch dieselbe: Zwischenauflistungen werden nur dann materialisiert, wenn dies erforderlich ist.  
   
  Bei Verwendung von Abfrageausdrücken werden diese in Aufrufe für die Standardabfrageoperatoren umgewandelt, und es werden dieselben Prinzipien angewendet.  
   

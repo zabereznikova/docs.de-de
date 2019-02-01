@@ -2,12 +2,12 @@
 title: Serialisieren von Objektdiagrammen, die XElement-Objekte enthalten (C#)
 ms.date: 07/20/2015
 ms.assetid: fcbc3951-3cc4-4d0f-9259-e97549ed68f0
-ms.openlocfilehash: 2e82165421d31ec234de4806b59565fa675217ef
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: db7354598fc84c6fa3f8ec4e5b53799030459387
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698142"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54569140"
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-c"></a>Serialisieren von Objektdiagrammen, die XElement-Objekte enthalten (C#)
 Dieses Thema bietet eine Einführung in das Serialisieren von Objektdiagrammen, die Verweise auf Objekte vom Typ <xref:System.Xml.Linq.XElement> enthalten. Um diese Art der Serialisierung zu ermöglichen, implementiert <xref:System.Xml.Linq.XElement> die <xref:System.Xml.Serialization.IXmlSerializable>-Schnittstelle.  
@@ -16,10 +16,10 @@ Dieses Thema bietet eine Einführung in das Serialisieren von Objektdiagrammen, 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung |  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
-|[How to: Serialize Using XmlSerializer (C#) (Vorgehensweise: Serialisieren mit XmlSerializer (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Zeigt die Vorgehensweise beim Serialisieren mit <xref:System.Xml.Serialization.XmlSerializer>.|  
-|[How to: Serialize Using DataContractSerializer (C#) (Vorgehensweise: Serialisieren mit DataContractSerializer (C#))](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Zeigt die Vorgehensweise beim Serialisieren mit <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[Vorgehensweise: Serialisieren mit XmlSerializer (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)|Zeigt die Vorgehensweise beim Serialisieren mit <xref:System.Xml.Serialization.XmlSerializer>.|  
+|[Vorgehensweise: Serialisieren mit der DataContractSerializer-Klasse (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-serialize-using-datacontractserializer.md)|Zeigt die Vorgehensweise beim Serialisieren mit <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="see-also"></a>Siehe auch
 

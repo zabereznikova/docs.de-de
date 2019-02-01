@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d86743f59c12cf59376ad542c2cd58f6e8c4ad65
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 38031509b999662c86657f0f5cdc7202de65c194
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187243"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607198"
 ---
 # <a name="com-wrappers"></a>COM-Wrapper
 COM unterscheidet sich vom .NET Framework-Objektmodell in mehreren wichtigen Punkten:  
@@ -34,9 +34,9 @@ COM unterscheidet sich vom .NET Framework-Objektmodell in mehreren wichtigen Pun
   
  In den meisten Fällen stellen die von der Common Language Runtime standardmäßig generierten RCW oder CCW ausreichend Marshalling für Aufrufe bereit, die die Anwendungsgrenze zwischen COM und dem .NET Framework überschreiten. Mithilfe von benutzerdefinierten Attributen können Sie optional anpassen, wie die Common Language Runtime verwalteten und nicht verwalteten Code darstellt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
- [Runtime Callable Wrapper (RCW)](runtime-callable-wrapper.md)  
- [COM Callable Wrapper](com-callable-wrapper.md)  
- [Anpassen von Standardwrappern](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
- [Vorgehensweise: Anpassen von durch die Laufzeit aufrufbaren Wrappern](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))
+## <a name="see-also"></a>Siehe auch
+- [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [Runtime Callable Wrapper (RCW)](runtime-callable-wrapper.md)
+- [COM Callable Wrapper](com-callable-wrapper.md)
+- [Anpassen von Standardwrappern](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))
+- [Vorgehensweise: Anpassen von Runtime Callable Wrappern](https://msdn.microsoft.com/library/4a4bb3da-4d60-4517-99f2-78d46a681732(v=vs.100))

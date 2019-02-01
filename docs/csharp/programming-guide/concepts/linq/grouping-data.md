@@ -2,12 +2,12 @@
 title: Gruppieren von Daten (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 42e93bf291b0921d7aafa07265d1193387d46aa6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 079f346435e2f21b7c46b528d68f917f5532db66
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500314"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54583219"
 ---
 # <a name="grouping-data-c"></a>Gruppieren von Daten (C#)
 Als „Gruppieren“ wird das Anordnen von Daten in Gruppen bezeichnet, sodass die Elemente in jeder Gruppe über ein gemeinsames Attribut verfügen.  
@@ -20,7 +20,7 @@ Als „Gruppieren“ wird das Anordnen von Daten in Gruppen bezeichnet, sodass d
   
 ## <a name="methods"></a>Methoden  
   
-|Methodenname|Beschreibung |C#-Abfrageausdruckssyntax|Weitere Informationen|  
+|Methodenname|Beschreibung|C#-Abfrageausdruckssyntax|Weitere Informationen|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |GroupBy|Gruppenelemente, die über ein gemeinsames Attribut verfügen. Jede Gruppe wird durch ein <xref:System.Linq.IGrouping%602>-Objekt dargestellt.|`group … by`<br /><br /> - oder - <br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Fügt Elemente basierend auf einer Schlüsselauswahlfunktion in eine <xref:System.Linq.Lookup%602>-Klasse (one-to-many-Wörterbuch) ein.|Nicht zutreffend.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -61,11 +61,11 @@ foreach (var group in query)
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Linq>  
-- [Standard Query Operators Overview (C#) (Übersicht der Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [group-Klausel](../../../../csharp/language-reference/keywords/group-clause.md)  
-- [Gewusst wie: Erstellen einer geschachtelten Gruppe](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
-- [Vorgehensweise: Gruppieren von Dateien nach Erweiterung (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
-- [Gewusst wie: Gruppieren von Abfrageergebnissen](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
-- [Gewusst wie: Ausführen einer Unterabfrage für eine Gruppierungsoperation](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)  
-- [Vorgehensweise: Teilen einer Datei in mehrere Dateien durch das Verwenden von Gruppen (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- <xref:System.Linq>
+- [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [group-Klausel](../../../../csharp/language-reference/keywords/group-clause.md)
+- [Vorgehensweise: Erstellen einer geschachtelten Gruppe](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)
+- [Vorgehensweise: Gruppieren von Dateien nach Erweiterung (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [Vorgehensweise: Gruppieren von Abfrageergebnissen](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)
+- [Vorgehensweise: Ausführen einer Unterabfrage für eine Gruppierungsoperation](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
+- [Vorgehensweise: Teilen einer Datei in mehrere Dateien durch Verwenden von Gruppen (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

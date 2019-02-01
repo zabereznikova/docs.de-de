@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
+ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143604"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55066266"
 ---
 # <a name="design-a-microservice-domain-model"></a>Entwerfen eines Microservicedomänenmodells
 
@@ -82,16 +82,17 @@ EF Core 2.0 umfasst die Funktion [Nicht eigenständige Entitäten](https://blogs
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Martin Fowler. Value Object pattern (Das Wertobjektmuster)**
+- **Martin Fowler. Value Object pattern (Das Wertobjektmuster)** \
   [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
-- **Value Object (Das Wertobjekt)**
+- **Value Object (Das Wertobjekt)** \
   [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
-- **Value Objects in Test-Driven Development (Wertobjekte in der testgesteuerten Entwicklung)**
+- **Value Objects in Test-Driven Development (Wertobjekte in der testgesteuerten Entwicklung)** \
   [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software (Domänengesteuertes Design: Umgang mit Komplexität im Kern einer Software).** (Buch, das Erläuterungen zu Wertobjekten enthält) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software. (Domänengesteuertes Design (DDD): Umgang mit Komplexität im Kern einer Software.)** (Buch, das Erläuterungen zu Wertobjekten enthält) \
+  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>Das Aggregatmuster
 
@@ -134,14 +135,14 @@ Für das Identifizieren von und Arbeiten mit Aggregaten sind Recherchen und Erfa
 
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **Vaughn Vernon. Effective Aggregate Design – Part I: Modeling a Single Aggregate (Effektive Aggregatentwicklung, Teil 1: Modellieren eines einzelnen Aggregats)** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate (Effektive Aggregatentwicklung, Teil 1: Modellieren eines einzelnen Aggregats)** (von <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung Teil II: Kooperation von Aggregaten)** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung Teil II: Kooperation von Aggregaten)** (von <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Effective Aggregate Design Part III: Gaining Insight Through Discovery (Effektive Aggregatentwicklung – Teil III: Gewinnen von Erkenntnissen durch Ermittlung)** \
-  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery (Effektive Aggregatentwicklung – Teil III: Gewinnen von Erkenntnissen durch Ermittlung)** (von <http://dddcommunity.org/>) \
+  <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak. DDD Tactical Design Patterns (Taktische DDD-Entwurfsmuster)** \
   [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)

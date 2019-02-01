@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7721ffaebfefadee332c923d867e68204b5205f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f921f40bbc5a7b72341c3fb778dd69fcc7b918c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003684"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665265"
 ---
 # <a name="the-managed-thread-pool"></a>Der verwaltete Threadpool
 
@@ -67,7 +67,7 @@ Ab .NET Framework 4 kann der Threadpool am einfachsten über die [Task Parallel 
 
 Sie können den Threadpool auch verwenden, indem Sie in verwaltetem Code <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> aufrufen (oder [`ICorThreadpool::CorQueueUserWorkItem`](../../framework/unmanaged-api/hosting/icorthreadpool-corqueueuserworkitem-method.md) in nicht verwaltetem Code) und einen <xref:System.Threading.WaitCallback?displayProperty=nameWithType>-Delegaten übergeben, der die Methode darstellt, die die Aufgabe ausführt.
 
-Eine andere Möglichkeit, den Threadpool zu verwenden, ist, Arbeitsaufgaben, die mit einem Wartevorgang verknüpft sind, mit der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>-Methode in die Warteschlange zu stellen und ein <xref:System.Threading.WaitHandle?displayProperty=nameWithType> zu übergeben, das bei einer Signalisierung oder einem Timeout die Methode aufruft, die vom <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType>-Delegaten dargestellt wird. Threadpoolthreads werden zum Aufrufen von Rückrufmethoden verwendet.   
+Eine andere Möglichkeit, den Threadpool zu verwenden, ist, Arbeitselemente, die mit einem Wartevorgang verknüpft sind, mit der <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType>-Methode in die Warteschlange zu stellen und ein <xref:System.Threading.WaitHandle?displayProperty=nameWithType> zu übergeben, das bei einer Signalisierung oder einem Timeout die Methode aufruft, die vom <xref:System.Threading.WaitOrTimerCallback?displayProperty=nameWithType>-Delegaten dargestellt wird. Threadpoolthreads werden zum Aufrufen von Rückrufmethoden verwendet.   
 
 Beispiele finden Sie auf den referenzierten API-Seiten.
   
@@ -87,12 +87,12 @@ In einigen Szenarios ist die Erstellung und Verwaltung eigener Threads der Verwe
   
 ## <a name="see-also"></a>Siehe auch
 
-- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
-- [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
-- [Gewusst wie: Zurückgeben eines Werts aus einer Aufgabe](../parallel-programming/how-to-return-a-value-from-a-task.md)  
-- [Threading Objects and Features (Threadingobjekte und -funktionen)](threading-objects-and-features.md)  
-- [Threads and Threading (Threads und Threading)](threads-and-threading.md)  
-- [Asynchrone Datei-E/A](../io/asynchronous-file-i-o.md)  
-- [Timer](timers.md)  
+- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
+- [Task Parallel Library (TPL)](../parallel-programming/task-parallel-library-tpl.md)
+- [Vorgehensweise: Zurückgeben eines Werts aus einer Aufgabe](../parallel-programming/how-to-return-a-value-from-a-task.md)
+- [Threading Objects and Features (Threadingobjekte und -funktionen)](threading-objects-and-features.md)
+- [Threads and Threading (Threads und Threading)](threads-and-threading.md)
+- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [Timer](timers.md)
