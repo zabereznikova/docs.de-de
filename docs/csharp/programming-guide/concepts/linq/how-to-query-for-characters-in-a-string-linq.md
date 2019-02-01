@@ -2,18 +2,18 @@
 title: 'Vorgehensweise: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: c6e5fb14e0be277f53511aaddd362f2f203531e8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0c577fc2dc2ae07574580f819a6fb51336107dfb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741184"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665629"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a><span data-ttu-id="24c58-102">Vorgehensweise: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="24c58-102">How to: Query for Characters in a String (LINQ) (C#)</span></span>
-<span data-ttu-id="24c58-103">Da die <xref:System.String>-Klasse die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert, kann jede Zeichenfolge als Folge von Zeichen abgefragt werden.</span><span class="sxs-lookup"><span data-stu-id="24c58-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="24c58-104">Dies ist allerdings kein üblicher Einsatz von LINQ.</span><span class="sxs-lookup"><span data-stu-id="24c58-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="24c58-105">Verwenden Sie für komplex Musterabgleichvorgänge die <xref:System.Text.RegularExpressions.Regex>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="24c58-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a><span data-ttu-id="064d2-102">Vorgehensweise: Abfragen von Zeichen in einer Zeichenfolge (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="064d2-102">How to: Query for Characters in a String (LINQ) (C#)</span></span>
+<span data-ttu-id="064d2-103">Da die <xref:System.String>-Klasse die generische <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle implementiert, kann jede Zeichenfolge als Folge von Zeichen abgefragt werden.</span><span class="sxs-lookup"><span data-stu-id="064d2-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="064d2-104">Dies ist allerdings kein üblicher Einsatz von LINQ.</span><span class="sxs-lookup"><span data-stu-id="064d2-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="064d2-105">Verwenden Sie für komplex Musterabgleichvorgänge die <xref:System.Text.RegularExpressions.Regex>-Klasse.</span><span class="sxs-lookup"><span data-stu-id="064d2-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="24c58-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="24c58-106">Example</span></span>  
- <span data-ttu-id="24c58-107">In folgendem Beispiel wird eine Zeichenfolge abgefragt, um die Zahl von enthaltenen numerischen Ziffern zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="24c58-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="24c58-108">Beachten Sie, dass die Abfrage „wieder verwendet“ wird, nachdem sie zum ersten Mal ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="24c58-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="24c58-109">Dies ist möglich, da die Abfrage selbst keine Ergebnisse speichert.</span><span class="sxs-lookup"><span data-stu-id="24c58-109">This is possible because the query itself does not store any actual results.</span></span>  
+## <a name="example"></a><span data-ttu-id="064d2-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="064d2-106">Example</span></span>  
+ <span data-ttu-id="064d2-107">In folgendem Beispiel wird eine Zeichenfolge abgefragt, um die Zahl von enthaltenen numerischen Ziffern zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="064d2-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="064d2-108">Beachten Sie, dass die Abfrage „wieder verwendet“ wird, nachdem sie zum ersten Mal ausgeführt wurde.</span><span class="sxs-lookup"><span data-stu-id="064d2-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="064d2-109">Dies ist möglich, da die Abfrage selbst keine Ergebnisse speichert.</span><span class="sxs-lookup"><span data-stu-id="064d2-109">This is possible because the query itself does not store any actual results.</span></span>  
   
 ```csharp  
 class QueryAString  
@@ -54,10 +54,10 @@ class QueryAString
 */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="24c58-110">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="24c58-110">Compiling the Code</span></span>  
- <span data-ttu-id="24c58-111">Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.</span><span class="sxs-lookup"><span data-stu-id="24c58-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="064d2-110">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="064d2-110">Compiling the Code</span></span>  
+ <span data-ttu-id="064d2-111">Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.</span><span class="sxs-lookup"><span data-stu-id="064d2-111">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24c58-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="24c58-112">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="064d2-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="064d2-112">See also</span></span>
 
-- [<span data-ttu-id="24c58-113">LINQ und Zeichenfolgen (C#)</span><span class="sxs-lookup"><span data-stu-id="24c58-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [<span data-ttu-id="24c58-114">Vorgehensweise: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (C#)</span><span class="sxs-lookup"><span data-stu-id="24c58-114">How to: Combine LINQ Queries with Regular Expressions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [<span data-ttu-id="064d2-113">LINQ und Zeichenfolgen (C#)</span><span class="sxs-lookup"><span data-stu-id="064d2-113">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="064d2-114">Vorgehensweise: Kombinieren von LINQ-Abfragen mit regulären Ausdrücken (C#)</span><span class="sxs-lookup"><span data-stu-id="064d2-114">How to: Combine LINQ Queries with Regular Expressions (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)

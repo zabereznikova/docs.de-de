@@ -2,28 +2,28 @@
 title: 'Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 61ae9b56e983e5ca05c3dd99d4db4797b67b3452
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153513"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543041"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a><span data-ttu-id="5a348-102">Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="5a348-102">How to: Compare the Contents of Two Folders (LINQ) (C#)</span></span>
-<span data-ttu-id="5a348-103">Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:</span><span class="sxs-lookup"><span data-stu-id="5a348-103">This example demonstrates three ways to compare two file listings:</span></span>  
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a><span data-ttu-id="fef8e-102">Vorgehensweise: Vergleichen des Inhalts von zwei Ordnern (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="fef8e-102">How to: Compare the Contents of Two Folders (LINQ) (C#)</span></span>
+<span data-ttu-id="fef8e-103">Dieses Beispiel zeigt drei Verfahren zum Vergleichen von zwei Dateilisten:</span><span class="sxs-lookup"><span data-stu-id="fef8e-103">This example demonstrates three ways to compare two file listings:</span></span>  
   
--   <span data-ttu-id="5a348-104">Durch Abfragen eines booleschen Werts, der angibt, ob die zwei Dateilisten identisch sind.</span><span class="sxs-lookup"><span data-stu-id="5a348-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
+-   <span data-ttu-id="fef8e-104">Durch Abfragen eines booleschen Werts, der angibt, ob die zwei Dateilisten identisch sind.</span><span class="sxs-lookup"><span data-stu-id="fef8e-104">By querying for a Boolean value that specifies whether the two file lists are identical.</span></span>  
   
--   <span data-ttu-id="5a348-105">Durch Abfragen der Schnittmenge, um die Dateien abzurufen, die sich in beiden Ordnern befinden.</span><span class="sxs-lookup"><span data-stu-id="5a348-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
+-   <span data-ttu-id="fef8e-105">Durch Abfragen der Schnittmenge, um die Dateien abzurufen, die sich in beiden Ordnern befinden.</span><span class="sxs-lookup"><span data-stu-id="fef8e-105">By querying for the intersection to retrieve the files that are in both folders.</span></span>  
   
--   <span data-ttu-id="5a348-106">Durch Abfragen der Unterschiedsmenge, um die Dateien abzurufen, die sich in einem Ordner befinden, aber nicht im anderen.</span><span class="sxs-lookup"><span data-stu-id="5a348-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
+-   <span data-ttu-id="fef8e-106">Durch Abfragen der Unterschiedsmenge, um die Dateien abzurufen, die sich in einem Ordner befinden, aber nicht im anderen.</span><span class="sxs-lookup"><span data-stu-id="fef8e-106">By querying for the set difference to retrieve the files that are in one folder but not the other.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="5a348-107">Die hier gezeigten Verfahren können zum Vergleichen von Sequenzen von Objekten eines beliebigen Typs angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="5a348-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
+    >  <span data-ttu-id="fef8e-107">Die hier gezeigten Verfahren können zum Vergleichen von Sequenzen von Objekten eines beliebigen Typs angepasst werden.</span><span class="sxs-lookup"><span data-stu-id="fef8e-107">The techniques shown here can be adapted to compare sequences of objects of any type.</span></span>  
   
- <span data-ttu-id="5a348-108">Die hier gezeigte `FileComparer`-Klasse veranschaulicht, wie eine benutzerdefinierte Vergleichsklasse zusammen mit den Standardabfrageoperatoren verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="5a348-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="5a348-109">Die Klasse ist nicht für die Verwendung in realen Szenarios vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="5a348-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="5a348-110">Sie verwendet nur den Namen und die Länge jeder Datei in Bytes, um zu bestimmen, ob die Inhalte der einzelnen Ordner identisch sind.</span><span class="sxs-lookup"><span data-stu-id="5a348-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="5a348-111">In einem realen Szenario sollten Sie diese Vergleichsklasse ändern, um eine gründlichere Überprüfung auf Gleichheit durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="5a348-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
+ <span data-ttu-id="fef8e-108">Die hier gezeigte `FileComparer`-Klasse veranschaulicht, wie eine benutzerdefinierte Vergleichsklasse zusammen mit den Standardabfrageoperatoren verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="fef8e-108">The `FileComparer` class shown here demonstrates how to use a custom comparer class together with the Standard Query Operators.</span></span> <span data-ttu-id="fef8e-109">Die Klasse ist nicht für die Verwendung in realen Szenarios vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="fef8e-109">The class is not intended for use in real-world scenarios.</span></span> <span data-ttu-id="fef8e-110">Sie verwendet nur den Namen und die Länge jeder Datei in Bytes, um zu bestimmen, ob die Inhalte der einzelnen Ordner identisch sind.</span><span class="sxs-lookup"><span data-stu-id="fef8e-110">It just uses the name and length in bytes of each file to determine whether the contents of each folder are identical or not.</span></span> <span data-ttu-id="fef8e-111">In einem realen Szenario sollten Sie diese Vergleichsklasse ändern, um eine gründlichere Überprüfung auf Gleichheit durchzuführen.</span><span class="sxs-lookup"><span data-stu-id="fef8e-111">In a real-world scenario, you should modify this comparer to perform a more rigorous equality check.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5a348-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5a348-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="fef8e-112">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fef8e-112">Example</span></span>  
   
 ```csharp  
 namespace QueryCompareTwoDirs  
@@ -125,10 +125,10 @@ namespace QueryCompareTwoDirs
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5a348-113">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="5a348-113">Compiling the Code</span></span>  
- <span data-ttu-id="5a348-114">Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.</span><span class="sxs-lookup"><span data-stu-id="5a348-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="fef8e-113">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="fef8e-113">Compiling the Code</span></span>  
+ <span data-ttu-id="fef8e-114">Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und `using`-Direktiven für System.Linq- und System.IO-Namespaces.</span><span class="sxs-lookup"><span data-stu-id="fef8e-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5a348-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5a348-115">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fef8e-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fef8e-115">See also</span></span>
 
-- [<span data-ttu-id="5a348-116">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="5a348-116">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
-- [<span data-ttu-id="5a348-117">LINQ und Dateiverzeichnisse (C#)</span><span class="sxs-lookup"><span data-stu-id="5a348-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="fef8e-116">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="fef8e-116">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="fef8e-117">LINQ und Dateiverzeichnisse (C#)</span><span class="sxs-lookup"><span data-stu-id="fef8e-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
