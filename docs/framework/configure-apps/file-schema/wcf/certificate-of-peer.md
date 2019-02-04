@@ -2,12 +2,12 @@
 title: <certificate> von <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 5c70355d35393132c283ba64714419d72792ceb5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 57f011bd0d6311c71871773ea866ef4c52513b17
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262164"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674606"
 ---
 # <a name="certificate-of-peer"></a>\<Zertifikat > der \<Peer >
 Gibt ein von einem Peer verwendetes Zertifikat an.  
@@ -63,7 +63,7 @@ Gibt ein von einem Peer verwendetes Zertifikat an.
 - <xref:System.ServiceModel.Security.PeerCredential>
 - [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Peer-to-Peer-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Peerkanal-Nachrichtenauthentifizierung](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)
-- [Benutzerdefinierter Peerkanal-Authentifizierung](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)
+- [Peerkanal-Nachrichtenauthentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Benutzerdefinierter Peerkanal-Authentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Sichern von Peerkanalanwendungen](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
 - [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

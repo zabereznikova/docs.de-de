@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: 861840f574c80f282198775272eff149b84c6fca
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 52b874b12d93730716bb531cf02bbb7f64be0975
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289730"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674645"
 ---
 # <a name="basichttpbinding"></a>\<basicHttpBinding>
 Stellt eine Bindung dar, die ein Windows Communication Foundation-Dienst (WCF) zum Konfigurieren und Verfügbarmachen von Endpunkten verwenden kann, die mit ASMX-basierten Webdiensten und -clients sowie mit anderen Diensten kommunizieren können, die mit WS-I Basic Profile 1.1 konform sind.  
@@ -86,7 +86,7 @@ Stellt eine Bindung dar, die ein Windows Communication Foundation-Dienst (WCF) z
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiert die Sicherheitseinstellungen für die Bindung. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>.|  
-|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiert die Beschränkungen der Komplexität von SOAP-Nachrichten, die von Endpunkten verarbeitet werden können, die mit dieser Bindung konfiguriert wurden. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

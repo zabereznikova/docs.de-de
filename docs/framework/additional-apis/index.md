@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 84e2d07275194683661a75e422847bbe0ebf1383
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198366"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674411"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Zusätzliche Klassenbibliotheken und APIs
 
@@ -29,7 +29,7 @@ Darüber hinaus wurden einige Bibliotheken speziell für bestimmte Plattformen o
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Bietet Auflistungen, die threadsicher sind und garantiert nie ihren Inhalt ändern. |
 | <xref:System.Net.Http.WinHttpHandler> | Stellt einen Meldungshandler für <xref:System.Net.Http.HttpClient> auf Grundlage der WinHTTP-Schnittstelle von Windows bereit. |
-| [System.Numerics.Vectors](https://msdn.microsoft.com/library/mt452176.aspx) | Stellt eine Bibliothek von Vektortypen bereit, die die SIMD-Hardwarebeschleunigung nutzen können.| 
+| <xref:System.Numerics> | Stellt eine Bibliothek von Vektortypen bereit, die die SIMD-Hardwarebeschleunigung nutzen können.| 
 | <xref:System.Threading.Tasks.Dataflow> | Die TPL-Datenflussbibliothek (Task Parallel Library) stellt Datenflusskomponenten bereit, um die Stabilität von nebenläufigkeitsfähigen Anwendungen zu erhöhen. |  
 
 ## <a name="platform-specific-libraries"></a>Plattformspezifische Bibliotheken
@@ -51,7 +51,7 @@ Diese APIs unterstützen die Produktinfrastruktur. Sie sind nicht für eine dire
 | [System.Net.CoreResponseData-Klasse](../../../docs/framework/additional-apis/coreresponsedata.md) |
 | [System.Net.CoreResponseData.m\_ResponseHeaders Field](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
 | [System.Net.CoreResponseData.m\_StatusCode-Feld](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
-| [System.Net.HttpWebRequest. \_AutoRedirects-Feld](../../../docs/framework/additional-apis/_autoredirects.md) |
+| [System.Net.HttpWebRequest.\_AutoRedirects Field](../../../docs/framework/additional-apis/_autoredirects.md) |
 | [System.Net.HttpWebRequest. \_CoreResponse-Feld](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
 | [System.Net.HttpWebRequest. \_HttpResponse-Feld](../../../docs/framework/additional-apis/_httpresponse.md) |
 | [System.Net.ServicePoint.m\_ConnectionGroupList-Feld](../../../docs/framework/additional-apis/m_connectiongrouplist.md) |

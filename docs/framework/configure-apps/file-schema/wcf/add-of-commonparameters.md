@@ -2,12 +2,12 @@
 title: <add> von <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 63ff98d91db7c8c112b0b00e9bd37c3262bcad6d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e0ca00911577f9f210def9326df261f772f9c26d
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258621"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674424"
 ---
 # <a name="add-of-commonparameters"></a>\<add> of \<commonParameters>
 Gibt ein Name-Wert-Paar von Parametern an, die global in mehreren Diensten verwendet werden. In der Regel umfasst dieser Parameter die Datenbank-Verbindungszeichenfolge, die von permanenten Diensten freigegeben werden könnte.  
@@ -47,7 +47,7 @@ Gibt ein Name-Wert-Paar von Parametern an, die global in mehreren Diensten verwe
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<commonParameters>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Eine Auflistung der allgemeinen, von Diensten verwendeten Parameter. Diese Auflistung schließt in der Regel die Datenbankverbindungszeichenfolge ein, die ggf. von permanenten Diensten gemeinsam genutzt wird.|  
+|[\<commonParameters>](commonparameters.md)|Eine Auflistung der allgemeinen, von Diensten verwendeten Parameter. Diese Auflistung schließt in der Regel die Datenbankverbindungszeichenfolge ein, die ggf. von permanenten Diensten gemeinsam genutzt wird.|  
   
 ## <a name="remarks"></a>Hinweise  
  Mit dem `<commonParameters>`-Element werden alle Parameter definiert, die global in mehreren Diensten verwendet werden, beispielsweise `ConnectionString` bei der Verwendung von <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
@@ -92,4 +92,4 @@ Gibt ein Name-Wert-Paar von Parametern an, die global in mehreren Diensten verwe
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
 - [Workflowkonfigurationsdateien](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
-- [\<commonParameters>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)
+- [\<commonParameters>](commonparameters.md)

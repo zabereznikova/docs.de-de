@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a389403d58bb0b4fb4f98e25d2c9a6b2cf337281
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7998275ae1e80a87354dd5b3a8b0a1aa73b3b987
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264633"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674775"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup >-Element
 Gibt an, ob von der Garbage Collection mehrere CPU-Gruppen unterstützt werden.  
@@ -75,5 +75,5 @@ Gibt an, ob von der Garbage Collection mehrere CPU-Gruppen unterstützt werden.
 ## <a name="see-also"></a>Siehe auch
 - [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Vorgehensweise: Deaktivieren von gleichzeitigen Garbagecollection](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+- [Zum Deaktivieren der gleichzeitigen Garbagecollection](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Garbage Collection für die Arbeitsstation und Garbage Collection auf dem Server](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

@@ -2,12 +2,12 @@
 title: Auflistungen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 734eeba001c243fa3466ac608feb766d6d94c394
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55234e39fc692ec8f6cc10d05df6b29be5818927
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698764"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674827"
 ---
 # <a name="collections-visual-basic"></a>Auflistungen (Visual Basic)
 Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten. Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.  
@@ -578,7 +578,6 @@ End Function
 - [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [Sammlungen und Datenstrukturen](../../../standard/collections/index.md)
-- [Erstellen und Bearbeiten von Auflistungen](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)
 - [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)
 - [Vergleiche und Sortierungen innerhalb von Auflistungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)

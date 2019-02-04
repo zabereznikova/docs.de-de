@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-ms.openlocfilehash: 25b74de66fbf053b4d9129ab6ca0bef1530bf228
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ba4e7e790860696f4489e9ef7b73bddcb8c4e399
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083755"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674437"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Sicherheitsberechtigung für die Umleitung der Assemblybindung
 Für die explizite Umleitung einer Assemblybindung in einer Anwendungskonfigurationsdatei ist eine Sicherheitsberechtigung erforderlich. Dies betrifft die Umleitung von .NET Framework-Assemblys und Assemblys von Drittanbietern. Die Berechtigung wird erteilt, indem die <xref:System.Security.Permissions.SecurityPermissionFlag> flag für die <xref:System.Security.Permissions.SecurityPermission>. Verwaltete Assemblys verfügen standardmäßig über keine Berechtigungen zu.  
@@ -31,6 +31,7 @@ Für die explizite Umleitung einer Assemblybindung in einer Anwendungskonfigurat
  Diese Sicherheitseinstellungen für die Unterstützung oder bestimmte Szenarien auf einem Computer zu beschränken, kann ein Administrator ändern. Es sind keine Tools zum Ändern der **BindingRedirects** Flag, das auf den Standard die Security.config-Datei auf dem Computer eines Benutzers muss von ein Administrator manuell bearbeiten.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Herausgeberrichtliniendateien und Seite-an-Seite-Ausführung](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)
+
+- [Herausgeberrichtliniendateien und Seite-an-Seite-Ausführung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/06d2bae3(v=vs.100))
 - [Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
 - [Parallele Ausführung](../../../docs/framework/deployment/side-by-side-execution.md)

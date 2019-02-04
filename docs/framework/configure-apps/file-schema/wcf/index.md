@@ -2,17 +2,17 @@
 title: WCF-Konfigurationsschema
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: 11123d30138e8e1e763af0a01245e774dfba14f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ae9e660ee5c4163487e953077df8782955f90ef5
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508901"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675360"
 ---
 # <a name="wcf-configuration-schema"></a>WCF-Konfigurationsschema
 Windows Communication Foundation (WCF)-Konfigurationselemente können Sie WCF-Dienst und Client-Anwendungen zu konfigurieren. Sie können das [Configuration Editor-Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) verwenden, um Konfigurationsdateien für Clients und Dienste zu erstellen und zu bearbeiten. Da die Konfigurationsdateien als XML formatiert sind, müssen Sie mit XML vertraut sein, wenn Sie diese manuell in einem Texteditor bearbeiten möchten. Andernfalls treten möglicherweise Probleme auf, wie ein nicht gefundenes XML-Elementtag oder -attribut. Das liegt daran, dass bei XML-Elementtags und -attributen zwischen Groß- und Kleinschreibung unterschieden wird.  
   
- Das WCF-Konfigurationssystem basiert auf der <xref:System.Configuration> Namespace. Deshalb können Sie alle Standardfeatures verwenden, die vom <xref:System.Configuration>-Namespace bereitgestellt werden, wie die Konfigurationssperre, die Verschlüsselung und das Zusammenführen, um die Sicherheit Ihrer Anwendung und ihrer Konfiguration zu erhöhen. Weitere Informationen über diese Konzepte finden Sie in den folgenden Themen.  
+ Das WCF-Konfigurationssystem basiert auf der <xref:System.Configuration> Namespace. Deshalb können Sie alle Standardfunktionen verwenden, die vom <xref:System.Configuration>-Namespace bereitgestellt werden, wie die Konfigurationssperre, die Verschlüsselung und das Zusammenführen, um die Sicherheit Ihrer Anwendung und ihrer Konfiguration zu erhöhen. Weitere Informationen über diese Konzepte finden Sie in den folgenden Themen.  
   
  [Encrypting Configuration Information (Verschlüsseln von Konfigurationsinformationen)](https://go.microsoft.com/fwlink/?LinkId=95337)  
   
@@ -36,5 +36,5 @@ Windows Communication Foundation (WCF)-Konfigurationselemente können Sie WCF-Di
  Das Element der obersten Ebene zum Festlegen von Optionen für die Verwendung von Serialisierern, wie z. B. <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Konfigurieren von Windows Communication Foundation-Anwendungen](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Konfigurieren von Windows Communication Foundation-Anwendungen](../../../wcf/configuring-services.md)  
  Beschreibt, wie WCF-Dienste und Clients zu konfigurieren.

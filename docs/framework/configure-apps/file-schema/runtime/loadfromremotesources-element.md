@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebb32a74f5413f9c927a84ababf2d60d20e0b024
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269691"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675308"
 ---
 # <a name="loadfromremotesources-element"></a>\<LoadFromRemoteSources >-Element
 Gibt an, ob Assemblys aus Remotequellen geladen volle Vertrauenswürdigkeit in .NET Framework 4 und höher gewährt werden soll.
   
 > [!NOTE]
->  Wenn Sie aufgrund einer Fehlermeldung in der Fehlerliste von Visual Studio-Projekt oder einen Buildfehler zu diesem Thema weitergeleitet wurden, finden Sie unter [Vorgehensweise: Verwenden Sie eine Assembly aus dem Web in Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Wenn Sie aufgrund einer Fehlermeldung in der Fehlerliste von Visual Studio-Projekt oder einen Buildfehler zu diesem Artikel weitergeleitet wurden, finden Sie unter [Vorgehensweise: Verwenden Sie eine Assembly aus dem Web in Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
   
  \<configuration>  
 \<runtime>  
@@ -118,7 +118,7 @@ Das folgende Beispiel zeigt, wie Sie Assemblys aus Remotequellen geladen volles 
 ## <a name="see-also"></a>Siehe auch
 
 - [Mehr impliziten verwendet der CAS-Richtlinie: LoadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
-- [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

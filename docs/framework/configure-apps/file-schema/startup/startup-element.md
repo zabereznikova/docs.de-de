@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: cc261097593150583072ab796df9de8edea5ca6e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5047cb0ab1c8206abd88dc795e50272d69f1fd3f
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280201"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55674567"
 ---
 # <a name="startup-element"></a>\<Startup >-Element
 
@@ -70,7 +70,7 @@ Gibt beim Start zur common Language Runtime an.
  Dieses Attribut ist nützlich, wenn Ihre Anwendung legacy-Aktivierungspfade,, wie z. B. verwendet die [CorBindToRuntimeEx-Funktion](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), und diese Pfade Version 4 der CLR anstelle von einer früheren Version aktivieren möchten oder wenn Ihre Anwendung Dank der [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] weist jedoch eine Abhängigkeit für eine gemischte-Assembly, die mit einer früheren Version von .NET Framework erstellt. In diesen Szenarien legen Sie das Attribut auf `true`.
 
 > [!NOTE]
-> Festlegen des Attributs auf `true` verhindert CLR, Version 1.1 oder CLR, Version 2.0 lädt in den gleichen Prozess, der effektiv den deaktivieren, in-Process Side-by-Side (finden Sie unter [Seite-an-Seite-Ausführung für COM-Interop](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).
+> Festlegen des Attributs auf `true` verhindert CLR, Version 1.1 oder CLR, Version 2.0 lädt in den gleichen Prozess, der effektiv den deaktivieren, in-Process Side-by-Side (finden Sie unter [Seite-an-Seite-Ausführung für COM-Interop](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))).
 
 ## <a name="example"></a>Beispiel
 
@@ -97,5 +97,5 @@ Gibt beim Start zur common Language Runtime an.
 - [Startup Settings Schema (Schema für Starteinstellungen)](index.md)
 - [Konfigurationsdateischema](../index.md)
 - [Vorgehensweise: Konfigurieren einer App zur Unterstützung von .NET Framework 4 oder höher](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
-- [Seite-an-Seite-Ausführung für COM-Interop](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
+- [Seite-an-Seite-Ausführung für COM-Interop](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8t8td04t(v=vs.100))
 - [Prozessinterne parallele Ausführung](../../../deployment/in-process-side-by-side-execution.md)
