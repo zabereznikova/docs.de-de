@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9b9d1c8a059a85f2b5137e568ec6ad562ca0eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 092b1cfc9350ea398eb18199f19a8eee7ea9f218
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680300"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675438"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Neuerungen der Barrierefreiheit in .NET Framework
 
@@ -292,7 +292,7 @@ Ab .NET Framework 4.7.1 wurden Verbesserungen am Design „Hoher Kontrast“ fü
 Weitere Informationen zu Verbesserungen der WPF-Barrierefreiheit in .NET Framework 4.7.1 finden Sie unter [Verbesserung der Barrierefreiheit in WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
 <a name="winforms471"></a>
-## <a name="windows-forms-accessibility-improvements"></a>Verbesserung der Barrierefreiheit von Windows Forms
+### <a name="windows-forms-accessibility-improvements"></a>Verbesserung der Barrierefreiheit von Windows Forms
 
 In .NET Framework 4.7.1 enthält Windows Forms (WinForms) Verbesserungen der Barrierefreiheit für folgende Bereiche:
 
@@ -358,7 +358,7 @@ Ab .NET Framework 4.7.1 enthält Windows Forms Folgendes:
 - Ein verbessertes Verhalten der Sprachausgabe
  
 <a name="aspnet471"></a>
-## <a name="aspnet-web-controls"></a>ASP.NET-Websteuerelemente
+### <a name="aspnet-web-controls"></a>ASP.NET-Websteuerelemente
 
 Ab .NET Framework 4.7.1 und Visual Studio 2017 15.3 arbeiten .ASP.NET-Websteuerelemente effizienter mit den Funktionen für die Barrierefreiheit in Visual Studio zusammen. Dazu gehören folgende Änderungen:
 
@@ -369,14 +369,14 @@ Ab .NET Framework 4.7.1 und Visual Studio 2017 15.3 arbeiten .ASP.NET-Websteuere
 - Änderungen zur Verbesserung der Benutzerfreundlichkeit bei der Tastaturnavigation für Steuerelemente, z.B. beim Dialogfeld **Felder** im Assistenten für das **Bearbeiten von Pagerfeldern** des DataPager-Steuerelements, beim Dialogfeld **ObjectContext konfigurieren** oder beim Dialogfeld **Datenauswahl konfigurieren** des Assistenten zum **Konfigurieren der Datenquelle**.
 
 <a name="tools471"></a>
-## <a name="net-sdk-tools"></a>.NET SDK-Tools
+### <a name="net-sdk-tools"></a>.NET SDK-Tools
 
 Das [Configuration Editor-Tool (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) und das [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) wurden verbessert, indem verschiedene Barrierefreiheitsprobleme verbessert wurden. In den meisten Fälle handelte es sich um kleinere Probleme, durch die ein Name nicht definiert wurde oder bestimmte Muster für die Benutzeroberflächenautomatisierung nicht richtig implementiert wurden. Obwohl viele Benutzer diese falschen Werte nicht bemerken würden, erhöhen die SDK-Tools die Benutzerfreundlichkeit für Kunden, die Hilfstechnologien wie die Sprachausgabe verwenden. 
 
 Durch diese Verbesserungen ändert sich vorheriges Verhalten wie die Reihenfolge des Tastaturfokus.
 
 <a name="wf471"></a>
-## <a name="windows-workflow-foundation-wf-workflow-designer"></a>Workflow-Designer von Windows Workflow Foundation (WF)
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Workflow-Designer von Windows Workflow Foundation (WF)
 
 Die Barrierefreiheitsänderungen im Workflow-Designer umfassen Folgendes:
 

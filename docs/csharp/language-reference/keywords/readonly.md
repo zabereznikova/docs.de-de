@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: dfbeb5ff94f39e8d8df03feea9ff55db748d2182
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: c7f3b1b1525277bf948070c9121d151f9f520127
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058580"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204664"
 ---
 # <a name="readonly-c-reference"></a>readonly (C#-Referenz)
 
@@ -46,10 +46,10 @@ Diese Konstruktorkontexte sind auch die einzigen Kontexte, in denen es gültig i
 
 > [!NOTE]
 > Das Schlüsselwort `readonly` unterscheidet sich vom Schlüsselwort [const](const.md). Ein `const`-Feld kann nur bei der Deklaration des Felds initialisiert werden. Ein `readonly`-Feld kann mehrere Male in der Felddeklaration und in einem Konstruktor zugewiesen werden. Daher können `readonly`-Felder abhängig vom verwendeten Konstruktor über unterschiedliche Werte verfügen. Außerdem ist ein `const`-Feld eine Kompilierzeitkonstante, während ein `readonly`-Feld wie im folgenden Beispiel für Laufzeitkonstanten verwendet werden kann:
-
-```csharp
-public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
-```
+>
+> ```csharp
+> public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
+> ```
 
 [!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]
 

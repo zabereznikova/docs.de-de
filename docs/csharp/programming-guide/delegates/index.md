@@ -1,11 +1,17 @@
 ---
-title: 'Delegaten – C#-Programmierhandbuch'
+title: Delegaten – C#-Programmierhandbuch
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, delegates'
-  - 'delegates [C#]'
+- C# language, delegates
+- delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
+ms.openlocfilehash: 1c272dd9ab4f810a0eb1a1064b4c7731873d2c80
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675373"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegaten (C#-Programmierhandbuch)
 Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein Typ, der Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp darstellt. Nach Instanziierung eines Delegaten können Sie die Instanz mit einer beliebigen Methode verknüpfen, die eine kompatible Signatur und einen kompatiblen Rückgabetyp aufweist. Sie können die Methode über die Delegatinstanz aufrufen.  
@@ -40,7 +46,7 @@ Ein [Delegat](../../../csharp/language-reference/keywords/delegate.md) ist ein T
   
 -   [Verwenden von Delegaten](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [Verwenden von Delegaten anstelle Schnittstellen (C#-Programmierhandbuch)](https://msdn.microsoft.com/library/2e759bdf-7ca4-4005-8597-af92edf6d8f0)  
+-   [Verwenden von Delegaten anstelle Schnittstellen (C#-Programmierhandbuch)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
 -   [Delegate mit benannten im Vergleich zu anonymen Methoden](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0a9f76852652ff5cfe0ff0049c2669441dbf51c
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066401"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55282034"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework-Befehlszeilendebugger)
 Der .NET Framework-Befehlszeilendebugger unterstützt Anbieter von Tools und Anwendungsentwickler beim Suchen und Beheben von Fehlern in Programmen, die für die Common Language Runtime von .NET Framework entwickelt wurden. Dieses Tool stellt mithilfe der Debug-API Debugdienste bereit. Sie können mit "MDbg.exe" lediglich verwalteten Code debuggen. Das Debuggen von nicht verwaltetem Code wird nicht unterstützt.  
@@ -52,7 +52,7 @@ MDbg [ProgramName[arguments]] [options]
 |**fo**[**reach**] [*andererBefehl*]|Führt einen Befehl für alle Threads aus. *andererBefehl* ist ein gültiger Befehl, der für einen Thread ausgeführt wird. **foreach** *andererBefehl* führt denselben Befehl für alle Threads aus.|  
 |**f**[**unceval**] [`-ad` *Nr*] *funktionsname* [*argumente ...* ]|Führt eine Funktionsauswertung für den derzeit aktiven Thread aus, wobei *Funktionsname* die auszuwertende Funktion ist. Der Funktionsname muss vollqualifiziert sein, einschließlich Namespaces.<br /><br /> Die `-ad`-Option gibt die Anwendungsdomäne an, die zum Auflösen der Funktion verwendet werden soll. Wird die `-ad`-Option nicht angegeben, ist die Standardeinstellung der Anwendungsdomäne für die Auflösung die Anwendungsdomäne, in der sich der für die Funktionsauswertung verwendete Thread befindet.<br /><br /> Wenn die ausgewertete Funktion nicht statisch ist, sollte der erste übergebene Parameter ein `this`-Zeiger sein. Alle Anwendungsdomänen werden nach Argumenten für die Funktionsauswertung durchsucht.<br /><br /> Um einen Wert aus einer Anwendungsdomäne anzufordern, stellen Sie der Variablen den Modul- und Anwendungsdomänennamen als Präfix voran, z. B. `funceval -ad 0 System.Object.ToString hello.exe#0!MyClass.g_rootRef`. Mit diesem Befehl wird die Funktion `System.Object.ToString` in der Anwendungsdomäne `0` ausgewertet. Da die `ToString`-Methode eine Instanzfunktion ist, muss der erste Parameter ein `this`-Zeiger sein.|  
 |**g**[**o**]|Bewirkt, dass das Programm fortgesetzt wird, bis ein Haltepunkt erreicht wird, das Programm beendet wird oder ein Ereignis das Beenden des Programms verursacht (z. B. ein Ausnahmefehler).|  
-|**h**[**elp**] [*befehl*]<br /><br /> - oder -<br /><br /> **?** [*Befehl*]|Zeigt eine Beschreibung aller Befehle oder eine ausführliche Beschreibung eines angegebenen Befehls an.|  
+|**h**[**elp**] [*befehl*]<br /><br /> - oder - <br /><br /> **?** [*Befehl*]|Zeigt eine Beschreibung aller Befehle oder eine ausführliche Beschreibung eines angegebenen Befehls an.|  
 |**ig**[**nore**] [*ereignis*]|Bewirkt, dass der Debugger nur bei Ausnahmefehlern anhält.|  
 |**int**[**ercept**] *framezahl*|Führt einen Rollback für den Debugger zu einer angegebenen Framenummer aus.<br /><br /> Wenn der Debugger auf eine Ausnahme trifft, verwenden Sie diesen Befehl, um für den Debugger einen Rollback zur angegebenen Framenummer auszuführen. Sie können den Programmzustand mit dem **set**-Befehl ändern und mit dem **go**-Befehl fortfahren.|  
 |**k**[**ill**]|Hält den aktiven Prozess an.|  
@@ -103,8 +103,6 @@ mdbg>
  Die Eingabeaufforderung `mdbg>` zeigt an, dass Sie sich im Debugger befinden.  
   
  Sobald Sie im Debugger sind, verwenden Sie die im vorherigen Abschnitt beschriebenen Befehle und Argumente.  
-  
-## <a name="examples"></a>Beispiele  
   
 ## <a name="see-also"></a>Siehe auch
 - [Extras](../../../docs/framework/tools/index.md)

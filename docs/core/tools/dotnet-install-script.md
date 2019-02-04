@@ -2,12 +2,12 @@
 title: Dotnet-Installationsskripts
 description: Informationen zu Dotnet-Installationsskripts zur Installation von .NET Core CLI-Tools und freigegebener Laufzeit.
 ms.date: 01/16/2019
-ms.openlocfilehash: f796ac494c0be5458b3ea192e809a4d875bcc6dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6404a8332a7196f0e6fdfe649c2c180970390775
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608790"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204794"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dotnet-Installationsskripts Verweis
 
@@ -36,7 +36,7 @@ Sie sollten die stabile Version verwenden, die auf der [.NET Core-Hauptwebsite](
 
 Diese Skripts sind vor allem in Szenarios für die Automatisierung und Nicht-Administrator-Installationen nützlich. Es gibt zwei Skripts: eines für PowerShell unter Windows und ein Bash-Skript für Linux/macOS. Beide Skripts weisen das gleiche Verhalten auf. Das Bash-Skript liest auch PowerShell-Schalter, sodass Sie PowerShell-Schalter mit dem Skript auf Linux/macOS-Systemen verwenden können.
 
-Die Installationsskripts laden die ZIP/Tarball-Datei vom CLI-Build-Ablagespeicherort herunter und installieren sie entweder am Standardspeicherort oder an einem in `-InstallDir|--install-dir` angegebenen Speicherort. In der Standardeinstellung laden die Installationsskripts das SDK herunter und installieren es. Wenn Sie nur die freigegebene Laufzeit abrufen möchten, geben Sie das `--shared-runtime`-Argument an.
+Die Installationsskripts laden die ZIP/Tarball-Datei vom CLI-Build-Ablagespeicherort herunter und installieren sie entweder am Standardspeicherort oder an einem in `-InstallDir|--install-dir` angegebenen Speicherort. In der Standardeinstellung laden die Installationsskripts das SDK herunter und installieren es. Wenn Sie nur die freigegebene Laufzeit abrufen möchten, geben Sie das `--runtime`-Argument an.
 
 In der Standardeinstellung fügt das Skript den Installationsort dem $PATH für die aktuelle Sitzung hinzu. Überschreiben Sie dieses Standardverhalten, indem sie das `--no-path`-Argument angeben.
 
@@ -168,13 +168,13 @@ Installieren Sie eine bestimmte Version mithilfe des Arguments `--version`. Die 
   Windows:
 
   ```powershell
-  ./dotnet-install.ps1 -SharedRuntime -Version 1.1.0
+  ./dotnet-install.ps1 -Runtime dotnet -Version 1.1.0
   ```
 
   Mac OS/Linux:
 
   ```bash
-  ./dotnet-install.sh --shared-runtime --version 1.1.0
+  ./dotnet-install.sh --runtime dotnet --version 1.1.0
   ```
 
 * Rufen Sie das Skript ab und installieren Sie die Version 2.1.2 hinter einem Unternehmensproxy (nur Windows):

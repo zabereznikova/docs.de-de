@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b346da9174d77fbc6a861a8b12f2cc5035b6c291
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517616"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479697"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Datenstrukturen für die parallele Programmierung
 .NET Framework Version 4 führt mehrere neue Typen ein, die für die parallele Programmierung nützlich sind. Darunter eine Reihe von parallelen Auflistungsklassen, einfache Synchronisierungsprimitiven und Typen für die verzögerte Initialisierung. Sie können diese Typen mit jedem Multithreadanwendungscode verwenden, einschließlich der Task Parallel Library und PLINQ.  
@@ -41,7 +41,7 @@ ms.locfileid: "54517616"
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|Ermöglicht mehreren Threads, parallel an einem Algorithmus zu arbeiten, indem ein Punkt bereitgestellt wird, an dem jeder Task seine Ankunft signalisieren und dann blockieren kann, bis einige oder alle Tasks angekommen sind. Weitere Informationen finden Sie unter [Barrier](../../../docs/standard/threading/barrier.md).|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|Vereinfacht Fork- und Join-Szenarien durch einen einfachen Rendezvousmechanismus. Weitere Informationen finden Sie unter [CountdownEvent](../../../docs/standard/threading/countdownevent.md).|  
-|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Eine Synchronisierungsprimitive, ähnlich wie <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> ist einfacher, kann aber nur für prozessinterne Kommunikation verwendet werden. Weitere Informationen finden Sie unter [ManualResetEvent and ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md).|  
+|<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>|Eine Synchronisierungsprimitive, ähnlich wie <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>. <xref:System.Threading.ManualResetEventSlim> ist einfacher, kann aber nur für prozessinterne Kommunikation verwendet werden.|  
 |<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>|Eine Synchronisierungsprimitive, die die Anzahl von Threads beschränkt, die parallel auf eine Ressource oder einen Ressourcenpool zugreifen können. Weitere Informationen finden Sie unter [Semaphore und SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).|  
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|Eine gegenseitige Ausschlusssperrprimitive, durch die der Thread, der die Sperre zu erlangen versucht, für eine gewisse Zeit in einer Schleife warten (oder *rotieren*) muss, bevor er sein Quantum liefert. In Szenarien, in denen die Wartezeit für die Sperre nur kurz ist, bietet <xref:System.Threading.SpinLock> eine bessere Leistung als andere Arten von Sperren. Weitere Informationen finden Sie unter [SpinLock](../../../docs/standard/threading/spinlock.md).|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|Ein kleiner, einfacher Typ, der für eine bestimmte Zeit rotiert und schließlich den Thread in einen Wartezustand versetzt, wenn die Schleifenzahl überschritten wird.  Weitere Informationen finden Sie unter [SpinWait](../../../docs/standard/threading/spinwait.md).|  

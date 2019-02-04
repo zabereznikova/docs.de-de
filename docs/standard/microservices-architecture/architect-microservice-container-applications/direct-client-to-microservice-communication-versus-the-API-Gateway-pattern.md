@@ -3,13 +3,13 @@ title: Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Cl
 description: Dieser Artikel hilft Ihnen, die Unterschiede und die Verwendungsmöglichkeiten des API-Gatewaymusters und der direkten Kommunikation zwischen Client und Microservice zu verstehen.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/20/2018
-ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 01/07/2019
+ms.openlocfilehash: 35bebd9429dabbe0e3ddc3549a504719321e47e1
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030541"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675451"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Das API-Gatewaymuster im Vergleich zur direkten Kommunikation zwischen Client und Microservice
 
@@ -25,7 +25,7 @@ Es ist möglich, eine Architektur zur direkten Kommunikation zwischen Client und
 
 In diesem Ansatz verfügt jeder Microservice über einen öffentlichen Endpunkt. Dabei kann es sein, dass jeder Microservice auf einem anderen TCP-Port ausgeführt wird. In Azure kann die URL eines bestimmten Diensts z.B. wie folgt lauten:
 
-<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
+`http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
 In einer Produktionsumgebung, die auf einem Cluster basiert, wird diese URL dem im Cluster verwendeten Load Balancer zugeordnet, der dann wiederum die Anforderungen an die Microservices weiterleitet. In Produktionsumgebungen kann es sein, dass zwischen Ihren Microservices und dem Internet ein Application Delivery Controller (ADC) wie [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) steht. Dieser Controller fungiert als transparente Ebene, die nicht nur einen Lastenausgleich ausführt, sondern auch Ihre Dienste sichert, indem sie das Beenden von SSL ermöglicht. Dadurch wird das Laden Ihrer Hosts verbessert, denn das Beenden von SSL, das zu einer hohen CPU-Auslastung führt, und andere Pflichten zur Weiterleitung an das Azure Application Gateway werden abgeladen. In jedem Fall sind Lastenausgleich und ADC im Hinblick auf die logische Anwendungsarchitektur transparent.
 
@@ -134,7 +134,7 @@ Je nach Implementierung bedienen verschiedene API-Gatewayprodukte viele weitere 
 
 **Abbildung 4-14.** Verwenden von Azure API Management für das API-Gateway
 
-In diesem Fall ist es nicht so riskant, wenn Sie nur über ein API-Gateway verfügen und Sie ein Produkt wie Azure API Management verwenden, da diese API-Gateway „dünner“ sind. Sie implementieren also keinen benutzerdefinierten C#-Code, der in eine monolithische Komponente umgewandelt werden könnte. Diese Produkte funktionieren wie ein Reverseproxy für die eingehende Kommunikation – hier können Sie auch die APIs der internen Microservices filtern und Autorisierungsfunktionen auf die veröffentlichten APIs auf dieser einzelnen Ebene anwenden.
+In diesem Fall ist es nicht so riskant, wenn Sie nur über ein API-Gateway verfügen und Sie ein Produkt wie Azure API Management verwenden, da diese API-Gateway „dünner“ sind. Sie implementieren also keinen benutzerdefinierten C#-Code, der in eine monolithische Komponente umgewandelt werden könnte. 
 
 Die API-Gatewayprodukte fungieren in der Regel wie ein Reverseproxy für die eingehende Kommunikation – hier können Sie auch die APIs der internen Microservices filtern und Autorisierungsfunktionen auf die veröffentlichten APIs auf dieser einzelnen Ebene anwenden.
 

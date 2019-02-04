@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8af9d0f3c31e9178e815dc8fb00f192b8da3e5de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86928c734583cfc8cae0be53458a0d5c1769f292
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541260"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55287819"
 ---
-# <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
+# <a name="whats-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
 .NET Framework unterliegt im Laufe der Zeit Änderungen. Jede neue Version erhält neue Typen und Typmember, die neue Funktionen bieten. Vorhandene Typen und deren Member werden im Laufe der Zeit ebenfalls geändert. Einige Typen verlieren z. B. an Bedeutung, da die von ihnen unterstützte Technologie durch eine neue Technologie ersetzt wird, und einige Methoden werden von neueren Methoden abgelöst, die entweder benutzerfreundlicher sind oder über einen größeren Funktionsumfang verfügen.  
   
  .NET Framework und die Common Language Runtime sollen Abwärtskompatibilität unterstützen (dadurch können Anwendungen, die mit einer bestimmten Version von .NET Framework entwickelt wurden, unter der nächsten Version von .NET Framework ausgeführt werden). Dadurch wird es schwierig, einfach einen Typ oder einen Typmember zu entfernen. Stattdessen gibt .NET Framework an, dass ein Typ oder Typmember nicht mehr verwendet werden sollte, indem er als veraltet markiert wird. Ein veralteter Typ oder Member muss entsprechend markiert werden, damit Entwickler Bescheid wissen, dass er entfernt werden soll und die Zeit haben, auf das Entfernen des Typs zu reagieren. Allerdings wird vorhandener Code, in dem der Typ oder Member verwendet wird, weiterhin in der neuen Version von .NET Framework ausgeführt.  
