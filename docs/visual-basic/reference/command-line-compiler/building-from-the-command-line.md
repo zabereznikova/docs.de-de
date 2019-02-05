@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: 89bcd6e0e7c1cc867bf853dc9bbe96628942ace2
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 798baa90308c83e42b335635fb23a9983f5180fb
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211748"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739474"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Erstellen von der Befehlszeile aus (Visual Basic)
 Visual Basic-Projekt besteht aus einem oder mehreren separaten Quelldateien. Während des Prozesses, der als Kompilierung bezeichnet wird, werden diese Dateien in einem Paket zusammengefasst, eine einzelne ausführbare Datei, die als eine Anwendung ausgeführt werden kann.  
@@ -28,12 +28,12 @@ Visual Basic-Projekt besteht aus einem oder mehreren separaten Quelldateien. Wä
   Um Quelldateien in der Visual Studio IDE kompilieren möchten, wählen Sie die **erstellen** Befehl die **erstellen** Menü.  
   
 > [!TIP]
->  Wenn Sie Projektdateien mithilfe von Visual Studio-IDE erstellen, können Sie anzeigen, Informationen über die zugeordnete **Vbc** Befehl und seine Schalter im Ausgabefenster angezeigt. Um diese Informationen anzuzeigen, öffnen Sie die [Optionen (Dialogfeld), Projekte und Projektmappen, erstellen und ausführen](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), und legen Sie dann die **MSBuild Projektbuildausgabe** zu **Normal** oder ein höheres Maß an Ausführlichkeit. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen, Speichern und Konfigurieren von Buildprotokolldateien](https://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7).  
+>  Wenn Sie Projektdateien mithilfe von Visual Studio-IDE erstellen, können Sie anzeigen, Informationen über die zugeordnete **Vbc** Befehl und seine Schalter im Ausgabefenster angezeigt. Um diese Informationen anzuzeigen, öffnen Sie die [Optionen (Dialogfeld), Projekte und Projektmappen, erstellen und ausführen](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), und legen Sie dann die **MSBuild Projektbuildausgabe** zu **Normal** oder ein höheres Maß an Ausführlichkeit. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen, speichern und Konfigurieren von Buildprotokolldateien](/visualstudio/ide/how-to-view-save-and-configure-build-log-files).  
   
  Sie können Projektdateien (VBPROJ) an einer Eingabeaufforderung kompilieren, mithilfe von MSBuild. Weitere Informationen finden Sie unter [Command-Line Reference](/visualstudio/msbuild/msbuild-command-line-reference) und [Exemplarische Vorgehensweise: Verwenden von MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Aufrufen des Befehlszeilencompilers](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  
+ [Vorgehensweise: Aufrufen des Befehlszeilencompilers](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  
  Beschreibt, wie zum Aufrufen des Befehlszeilencompilers an der MS-DOS-Eingabeaufforderung oder aus einem bestimmten Unterverzeichnis.  
   
  [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  

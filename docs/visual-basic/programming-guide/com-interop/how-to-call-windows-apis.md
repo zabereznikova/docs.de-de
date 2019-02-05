@@ -7,12 +7,12 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 5db6e299012982024f34d46906de1a3be9b20ff1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9eb667c8492c1e20b82e16ae8d640aee872969e5
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650690"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738642"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Vorgehensweise: Call Windows APIs (Visual Basic)
 In diesem Beispiel definiert und ruft die `MessageBox` -Funktion in "User32.dll" und klicken Sie dann eine Zeichenfolge an diese übergibt.  
@@ -39,6 +39,6 @@ In diesem Beispiel definiert und ruft die `MessageBox` -Funktion in "User32.dll"
 - [Genauere Betrachtung von Plattformaufrufen](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Beispiele für Plattformaufrufe](../../../framework/interop/platform-invoke-examples.md)
 - [Verwenden nicht verwalteter DLL-Funktionen](../../../framework/interop/consuming-unmanaged-dll-functions.md)
-- [Definieren einer Methode mit Reflektionsausgabe](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)
+- [Definieren einer Methode mit Reflektionsausgabe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
 - [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)

@@ -2,12 +2,12 @@
 title: Der Preserve-Operand „ReDim“ kann nicht „Nothing“ sein
 ms.date: 07/20/2015
 ms.assetid: b857f313-3fc2-4262-a577-88df1718b811
-ms.openlocfilehash: 84ba0ff6a36765df1c775f82b8b3b93dba23763c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4153795bc72e831d9f4bb0814df0c410cf67ab8
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631463"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55738837"
 ---
 # <a name="redim-preserve-operand-cannot-be-nothing"></a>Der Preserve-Operand „ReDim“ kann nicht „Nothing“ sein
 Eine `ReDim` -Anweisung hat versucht, mithilfe des `Preserve` -Schlüsselworts eine Dimension eines Arrays zu ändern, die nicht die letzte Dimension ist, aber es wurde keine gültiger Wert für den Operanden bereitgestellt.  
@@ -21,4 +21,3 @@ Eine `ReDim` -Anweisung hat versucht, mithilfe des `Preserve` -Schlüsselworts e
 - [Arraydimensionen in Visual Basic](~/docs/visual-basic/programming-guide/language-features/arrays/array-dimensions.md)
 - [ReDim-Anweisung](../../visual-basic/language-reference/statements/redim-statement.md)
 - [Dim-Anweisung](../../visual-basic/language-reference/statements/dim-statement.md)
-- [Beibehalten – Löschen](https://msdn.microsoft.com/library/91badeab-b4e0-48b6-92c9-9f0c8f995d81)

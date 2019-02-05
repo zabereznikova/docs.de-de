@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 611195143fd216caab0b5f89badefb93d7dea017
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b9912f5206633a45d5d5d2d9c8c25ffab94ed9b
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589109"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739565"
 ---
 # <a name="operator-procedures-visual-basic"></a>Operatorprozeduren (Visual Basic)
 Eine Operatorprozedur besteht aus einer Reihe von Visual Basic-Anweisungen, die das Verhalten von Standardoperatoren definieren (z. B. `*`, `<>`, oder `And`) auf eine Klasse oder Struktur, die Sie definiert haben. Dies ist die Abkürzung *operatorüberladung*.  
@@ -44,7 +44,7 @@ Eine Operatorprozedur besteht aus einer Reihe von Visual Basic-Anweisungen, die 
 ## <a name="declaration-syntax"></a>Deklarationssyntax  
  Die Syntax zum Deklarieren einer Operatorprozedur lautet wie folgt aus:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *Operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *Datatype*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *Operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *Datatype*  
   
  `' Statements of the operator procedure.`  
   
@@ -68,7 +68,7 @@ Eine Operatorprozedur besteht aus einer Reihe von Visual Basic-Anweisungen, die 
   
  `Dim testStruct As`  *Strukturname*  
   
- `Dim testNewStruct As`  *Strukturname*`= testStruct`*Operatorsymbol*   `10`  
+ `Dim testNewStruct As`  *Strukturname*`= testStruct`*Operatorsymbol*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Abbildung der Deklaration und Aufruf  
  Die folgende Struktur speichert einen 128-Bit-Ganzzahl-Wert als die höherwertigen und niederwertigen Bestandteile. Definiert die `+` Operator, um zwei `veryLong` Werte und generiert eine resultierende `veryLong` Wert.  
@@ -79,7 +79,6 @@ Eine Operatorprozedur besteht aus einer Reihe von Visual Basic-Anweisungen, die 
   
  [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
- Weitere Informationen und Beispiele finden Sie unter [Operator Overloading in Visual Basic 2005 (Operatorüberladung in Visual Basic 2005)](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx).  
   
 ## <a name="see-also"></a>Siehe auch
 - [Verfahren](./index.md)
