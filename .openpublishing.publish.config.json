@@ -1,20 +1,18 @@
 {
-  "need_generate_intellisense": false, 
-  "need_preview_pull_request": true,
-  "need_pr_comments": false,
-  "need_generate_pdf_url_template": false,
-  "git_repository_branch_open_to_public_contributors": "live",
-  "need_generate_pdf": false,
-  "continue_with_document_error": true,
-  "contribution_branch_mappings": {
-    "live-sxs": "live"
-  },
   "branch_target_mapping": {
+    "CITest": [
+      "Publish",
+      "Pdf"
+    ],
+    "ai-ebook": [
+      "Publish",
+      "Pdf"
+    ],
     "live": [
       "Publish",
       "Pdf"
     ],
-     "live-sxs": [
+    "live-sxs": [
       "Publish"
     ],
     "master": [
@@ -24,28 +22,109 @@
     "serverless-ebook": [
       "Publish",
       "Pdf"
-    ],    
-    "ai-ebook": [
-      "Publish",
-      "Pdf"
-    ], 
-    "CITest": [
-      "Publish",
-      "Pdf"
     ]
   },
-  "Targets": {
-    "Pdf": {
-      "template_folder": "_themes.pdf"
-    }
+  "branches_to_filter": [
+    "live"
+  ],
+  "continue_with_document_error": true,
+  "contribution_branch_mappings": {
+    "live-sxs": "live"
   },
+  "dependent_packages": [
+    {
+      "id": "Microsoft.DocAsCode.ECMA2Yaml",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "path_to_root": "_dependentPackages/ECMA2Yaml",
+      "target_framework": "net45",
+      "version": "latest"
+    },
+    {
+      "id": "memberpage.plugins",
+      "nuget_feed": "https://www.myget.org/F/docfx/api/v2",
+      "path_to_root": "_dependentPackages/memberpage.plugins",
+      "target_framework": "net45",
+      "version": "latest"
+    },
+    {
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2",
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest"
+    }
+  ],
+  "dependent_repositories": [
+    {
+      "branch": "master",
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft.de-de"
+    },
+    {
+      "branch": "master",
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf"
+    },
+    {
+      "branch": "live-sxs",
+      "path_to_root": "_csharplang",
+      "url": "https://github.com/dotnet/csharplang.de-de"
+    },
+    {
+      "branch": "live-sxs",
+      "path_to_root": "_vblang",
+      "url": "https://github.com/dotnet/vblang.de-de"
+    },
+    {
+      "branch": "live",
+      "branch_mapping": {
+        "live": "live",
+        "master": "master"
+      },
+      "path_to_root": "_repo.en-us",
+      "url": "https://github.com/dotnet/docs"
+    },
+    {
+      "branch": "master",
+      "branch_mapping": {
+        "live": "live"
+      },
+      "path_to_root": "samples",
+      "url": "https://github.com/dotnet/samples"
+    }
+  ],
   "docsets_to_publish": [
     {
-      "docset_name": "core-docs",
-      "build_source_folder": ".",
+      "DiffFolder": [
+        "api"
+      ],
+      "ECMA2Yaml": {
+        "Flatten": true,
+        "OutputYamlFolder": "api",
+        "SourceMetadataFolder": "add\\metadata",
+        "SourceXmlFolder": "xml"
+      },
+      "SplitTOC": [
+        "api/toc.yml"
+      ],
+      "build_entry_point": "docs",
       "build_output_subfolder": ".",
+      "build_source_folder": ".",
+      "customized_tasks": {
+        "docset_postbuild": [
+          "_dependentPackages/ECMA2Yaml/tools/PostBuild.ps1"
+        ],
+        "docset_prebuild": [
+          "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
+          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
+          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
+        ]
+      },
+      "customized_template_paths": [
+        "_dependentPackages/memberpage.plugins/content"
+      ],
+      "docset_name": "core-docs",
       "locale": "de-de",
-      "xref_query_tags": ["/uwp/api"],
       "monikers": [
         "netframework-4.5.1",
         "netframework-4.5.2",
@@ -71,105 +150,30 @@
         "xamarinmac-3.0"
       ],
       "open_to_public_contributors": true,
+      "pdf_build_exclude_tocs": [],
+      "template_folder": "_themes",
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
         "Tutorial": "Content"
       },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "customized_template_paths": [
-        "_dependentPackages/memberpage.plugins/content"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
-          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
-          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
-        ],
-        "docset_postbuild": [
-          "_dependentPackages/ECMA2Yaml/tools/PostBuild.ps1"
-        ]
-      },
-      "pdf_build_exclude_tocs": [],
-      "ECMA2Yaml": {
-        "SourceXmlFolder": "xml",
-        "SourceMetadataFolder": "add\\metadata",
-        "OutputYamlFolder": "api",
-        "Flatten": true
-      },
-      "SplitTOC": [
-        "api/toc.yml"
-      ],
-      "DiffFolder": [
-        "api"
+      "xref_query_tags": [
+        "/uwp/api"
       ]
     }
   ],
+  "git_repository_branch_open_to_public_contributors": "live",
+  "need_generate_intellisense": false,
+  "need_generate_pdf": false,
+  "need_generate_pdf_url_template": true,
+  "need_pr_comments": false,
+  "need_preview_pull_request": true,
   "notification_subscribers": [],
-  "branches_to_filter": ["live"],
   "skip_source_output_uploading": false,
-  "dependent_repositories": [
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.de-de",
-      "branch": "master"
-    },
-    {
-      "path_to_root": "_themes.pdf",
-      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master"
-    },
-    {
-      "path_to_root": "_csharplang",
-      "url": "https://github.com/dotnet/csharplang.de-de",
-      "branch": "live-sxs"
-    },
-    {
-      "path_to_root": "_vblang",
-      "url": "https://github.com/dotnet/vblang.de-de", 
-      "branch": "live-sxs"
-    },
-    {
-      "path_to_root": "_repo.en-us",
-      "url": "https://github.com/dotnet/docs",
-      "branch": "live",
-      "branch_mapping": {
-        "master": "master",
-        "live": "live"
-      }
-    },
-    {
-      "path_to_root": "samples",
-      "url": "https://github.com/dotnet/samples",
-      "branch": "master",
-      "branch_mapping": {
-        "live": "live"
-      }
+  "targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
     }
-  ],
-  "dependent_packages": [
-    {
-      "id": "Microsoft.DocAsCode.ECMA2Yaml",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
-      "path_to_root": "_dependentPackages/ECMA2Yaml",
-      "target_framework": "net45",
-      "version": "latest"
-    },
-    {
-      "id": "memberpage.plugins",
-      "nuget_feed": "https://www.myget.org/F/docfx/api/v2",
-      "path_to_root": "_dependentPackages/memberpage.plugins",
-      "target_framework": "net45",
-      "version": "latest"
-    },
-    {
-      "id": "Microsoft.OpenPublishing.CommonPlugins",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
-      "path_to_root": "_dependentPackages/CommonPlugins",
-      "target_framework": "net45",
-      "version": "latest"
-    }
-  ]
+  }
 }
