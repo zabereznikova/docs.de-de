@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Definieren Sie eine Klasse, die gleiche Funktionalität für unterschiedliche Datentypen bereitstellen kann(Visual Basic)'
+title: 'Vorgehensweise: Definieren einer Klasse, die gleiche Funktionalität für unterschiedliche Datentypen bereitstellen kann (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
