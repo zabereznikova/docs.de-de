@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0af820b590271e16cbfb443c193fd0afb4ed3358
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad40087ca61f1b07c0e0e36e785d89b84132962a
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604111"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759547"
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue-Methode
 Erstellt einen Wert des angegebenen Typs mit einem Anfangswert von 0 (null) oder Null.  
@@ -67,4 +67,5 @@ HRESULT CreateValue (
   
 ## <a name="see-also"></a>Siehe auch
 
-- [CreateValueForType-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) ICorDebugValue
+- [CreateValueForType-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)
+- [ICorDebugEval-Schnittstelle](icordebugeval-interface.md)

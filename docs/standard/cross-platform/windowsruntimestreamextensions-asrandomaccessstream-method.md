@@ -12,12 +12,12 @@ api_location:
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8935a8c282bbe812ad76ac6d4228c38ab12626a4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d5dd2829a9a00f869af3d7f370f99361979b8106
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193587"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758793"
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)-Methode
 
@@ -25,8 +25,8 @@ ms.locfileid: "44193587"
 
 Konvertiert den angegebenen Stream in einen Random-Access-Stream.
 
-**Namespace:** <xref:System.IO?displayProperty=nameWithType> 
- **Assembly:** System.Runtime.WindowsRuntime (in System.Runtime.WindowsRuntime.dll)
+**Namespace:** <xref:System.IO?displayProperty=nameWithType>
+**Assembly:** System.Runtime.WindowsRuntime (in System.Runtime.WindowsRuntime.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -76,5 +76,4 @@ Unterstützt in: Windows 8.1
 
 ## <a name="see-also"></a>Siehe auch
 
--[System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions(v=vs.110).aspx)
--[wie: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)
+- [Vorgehensweise: Konvertieren zwischen .NET Framework-Streams und Windows-Runtime-Streams](../io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)

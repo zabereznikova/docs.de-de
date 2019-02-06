@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: f9c8d9fe4b8bea45e4b655415b044937f248deab
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 86c1fabe1116e5b5d7e81022777f861f6d57e3e6
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266480"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758364"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>Fehler beim Erstellen des Assemblymanifests: \<Fehlermeldung >
 Visual Basic-Compiler Ruft die Assembly Linker (Al.exe, auch bekannt als Alink) aus, um eine Assembly mit einem Manifest zu generieren. Der Linker meldet einen Fehler in der Vorausgabestufe der Assemblyerstellung.  
@@ -29,6 +29,6 @@ Visual Basic-Compiler Ruft die Assembly Linker (Al.exe, auch bekannt als Alink) 
   
 ## <a name="see-also"></a>Siehe auch
 - [Vorgehensweise: Signieren einer Assembly mit einem starken Namen](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
-- [Seite "Signierung", Projekt-Designer](/visualstudio/ide/reference/signing-page-project-designer)
- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).  
+- [Seite „Signierung“, Projekt-Designer](/visualstudio/ide/reference/signing-page-project-designer)
+- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

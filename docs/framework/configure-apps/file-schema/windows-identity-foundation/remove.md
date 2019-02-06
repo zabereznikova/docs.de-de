@@ -3,12 +3,12 @@ title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: a54957458311e2d5941d1aa1c2486a2f66994d9b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 17c4d4289cf90b66d52986c054d4807ecff2b3d8
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288131"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55758416"
 ---
 # <a name="remove"></a>\<remove>
 Entfernt den angegebene Sicherheitstoken-Handler aus der Auflistung der Tokenhandler.  
@@ -38,7 +38,7 @@ Entfernt den angegebene Sicherheitstoken-Handler aus der Auflistung der Tokenhan
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|Typ|Die CLR-Typnamen, der die token-Handler entfernt werden soll. Weitere Informationen zur Vorgehensweise beim Angeben der `type` Attribut, finden Sie unter [benutzerdefinierte Typverweise](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24). Erforderlich.|  
+|Typ|Die CLR-Typnamen, der die token-Handler entfernt werden soll. Weitere Informationen zur Vorgehensweise beim Angeben der `type` Attribut, finden Sie unter [benutzerdefinierte Typverweise](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references). Erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
