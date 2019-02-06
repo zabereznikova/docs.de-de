@@ -18,10 +18,10 @@ ms.lasthandoff: 01/23/2019
 ms.locfileid: "54738747"
 ---
 # <a name="value-types-and-reference-types"></a>Wert- und Verweistypen
-In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementiert. Die Visual Basic-Datentypen können klassifiziert werden, gemäß der gibt an, ob eine Variable eines bestimmten Typs seine eigenen Daten oder ein Zeiger auf die Daten speichert. Wenn seine eigenen Daten speichert, es ist ein *Werttyp*; Wenn sie einen Zeiger auf die Daten an anderer Stelle im Arbeitsspeicher enthält es eine *Verweistyp*.  
+In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementiert. Die Visual Basic-Datentypen werden anhand des Verhaltens klassifiziert, je nachdem, ob eine Variable eines bestimmten Typs die eigenen Daten speichert oder einen Zeiger auf die Daten. Wenn sie ihre eigenen Daten speichert, handelt es sich um einen *Werttyp*. Wenn sie einen Zeiger auf die Daten an einer anderer Stelle im Arbeitsspeicher enthält, ist es eim *Verweistyp*.  
   
 ## <a name="value-types"></a>Werttypen  
- Ein Datentyp ist ein *Werttyp* , wenn sie die Daten in eine eigene speicherbelegung enthält. Die folgenden: Werttypen  
+ Ein Datentyp ist ein *Werttyp* , wenn er die Daten in einer eigenen Speicherbelegung enthält. Die folgenden sind Beispiele für Werttypen:
   
 -   Alle numerischen Datentypen  
   
@@ -29,11 +29,11 @@ In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementi
   
 -   Alle Strukturen, auch wenn deren Member Verweistypen sind.  
   
--   Enumerationen, da der zugrunde liegenden Typ immer ist `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, oder `ULong`  
+-   Enumerationen, da der zugrunde liegende Typ immer `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger` oder `ULong` ist
   
- Jede Struktur ist ein Werttyp, auch wenn es sich um referenztypmember enthält. Aus diesem Grund Werttypen wie z. B. `Char` und `Integer` von .NET Framework-Strukturen implementiert werden.  
+ Jede Struktur ist ein Werttyp, auch wenn sie Verweistypmember enthält. Aus diesem Grund werden Werttypen wie z. B. `Char` und `Integer` von .NET Framework-Strukturen implementiert. 
   
- Sie können einen Werttyp deklarieren, indem Sie mit dem reservierten Schlüsselwort, z. B. `Decimal`. Sie können auch die `New` Schlüsselwort, um einen Werttyp zu initialisieren. Dies ist besonders nützlich, wenn der Typ einen Konstruktor verfügt, der Parameter annimmt. Ein Beispiel hierfür ist die <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> Konstruktor, der eine neue erstellt `Decimal` Wert aus den angegebenen teilen.  
+ Sie können einen Werttyp deklarieren, indem Sie das reservierte Schlüsselwort verwenden, z. B. `Decimal`. Sie können auch das Schlüsselwort `New` verwenden, um einen Werttyp zu initialisieren. Dies ist besonders nützlich, wenn der Typ über einen Konstruktor verfügt, der Parameter annimmt. Ein Beispiel hierfür ist der Konstruktor <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>, der einen neue `Decimal`-Wert aus den angegebenen Teilen erstellt.  
   
 ## <a name="reference-types"></a>Verweistypen  
  Ein *Verweistyp* enthält einen Zeiger auf einen anderen Speicherort, das Daten enthält. Verweistypen umfassen Folgendes:  
@@ -55,7 +55,7 @@ Dim totals() As Single = New Single(8) {}
 ```  
   
 ## <a name="elements-that-are-not-types"></a>Elemente, die keine Typen sind  
- Die folgenden Programmierelemente qualifiziere nicht als Typen, da Sie diese als Datentyp für eine deklarierte Element angeben können:  
+ Die folgenden Programmierelemente gelten nicht als Typen, da Sie keines davon als Datentyp für ein deklariertes Element angeben können:  
   
 -   Namespaces  
   
