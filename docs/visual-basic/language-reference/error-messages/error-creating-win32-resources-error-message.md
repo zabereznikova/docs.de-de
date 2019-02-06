@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: 56de1554480fdb31f64859da2d94a81618f01c50
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 653169dfe0e590181d3ee225e77d71e9dbe11ccd
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270464"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759066"
 ---
-# <a name="error-creating-win32-resources-error-message"></a><span data-ttu-id="23311-102">Fehler beim Erstellen von Win32-Ressourcen: \<Fehlermeldung ></span><span class="sxs-lookup"><span data-stu-id="23311-102">Error creating Win32 resources: \<error message></span></span>
-<span data-ttu-id="23311-103">Visual Basic-Compiler Ruft die Assembly Linker (Al.exe, auch bekannt als Alink) aus, um eine Assembly mit einem Manifest zu generieren.</span><span class="sxs-lookup"><span data-stu-id="23311-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="23311-104">Der Linker hat einen Fehler beim Erstellen einer speicherinternen Ressource gemeldet.</span><span class="sxs-lookup"><span data-stu-id="23311-104">The linker has reported an error creating an in-memory resource.</span></span> <span data-ttu-id="23311-105">Das kann ein Problem mit der Umgebung sein oder Ihr Computer hat wenig Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="23311-105">This might be a problem with the environment, or your computer might be low on memory.</span></span>  
+# <a name="error-creating-win32-resources-error-message"></a><span data-ttu-id="c1894-102">Fehler beim Erstellen von Win32-Ressourcen: \<Fehlermeldung ></span><span class="sxs-lookup"><span data-stu-id="c1894-102">Error creating Win32 resources: \<error message></span></span>
+<span data-ttu-id="c1894-103">Visual Basic-Compiler Ruft die Assembly Linker (Al.exe, auch bekannt als Alink) aus, um eine Assembly mit einem Manifest zu generieren.</span><span class="sxs-lookup"><span data-stu-id="c1894-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="c1894-104">Der Linker hat einen Fehler beim Erstellen einer speicherinternen Ressource gemeldet.</span><span class="sxs-lookup"><span data-stu-id="c1894-104">The linker has reported an error creating an in-memory resource.</span></span> <span data-ttu-id="c1894-105">Das kann ein Problem mit der Umgebung sein oder Ihr Computer hat wenig Arbeitsspeicher.</span><span class="sxs-lookup"><span data-stu-id="c1894-105">This might be a problem with the environment, or your computer might be low on memory.</span></span>  
   
- <span data-ttu-id="23311-106">**Fehler-ID:** BC30136</span><span class="sxs-lookup"><span data-stu-id="23311-106">**Error ID:** BC30136</span></span>  
+ <span data-ttu-id="c1894-106">**Fehler-ID:** BC30136</span><span class="sxs-lookup"><span data-stu-id="c1894-106">**Error ID:** BC30136</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="23311-107">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="23311-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c1894-107">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="c1894-107">To correct this error</span></span>  
   
-1.  <span data-ttu-id="23311-108">Überprüfen Sie die angegebene Fehlermeldung, und wenden Sie sich an das Thema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span><span class="sxs-lookup"><span data-stu-id="23311-108">Examine the quoted error message and consult the topic [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span></span> <span data-ttu-id="23311-109">Um weitere erläuterungen und Hinweise.</span><span class="sxs-lookup"><span data-stu-id="23311-109">for further explanation and advice.</span></span>  
+1.  <span data-ttu-id="c1894-108">Überprüfen Sie die angegebene Fehlermeldung, und wenden Sie sich an das Thema [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span><span class="sxs-lookup"><span data-stu-id="c1894-108">Examine the quoted error message and consult the topic [Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span></span> <span data-ttu-id="c1894-109">Um weitere erläuterungen und Hinweise.</span><span class="sxs-lookup"><span data-stu-id="c1894-109">for further explanation and advice.</span></span>  
   
-2.  <span data-ttu-id="23311-110">Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.</span><span class="sxs-lookup"><span data-stu-id="23311-110">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
+2.  <span data-ttu-id="c1894-110">Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.</span><span class="sxs-lookup"><span data-stu-id="c1894-110">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23311-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="23311-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c1894-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c1894-111">See also</span></span>
 
- <span data-ttu-id="23311-112">[Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span><span class="sxs-lookup"><span data-stu-id="23311-112">[Al.exe](../../../framework/tools/al-exe-assembly-linker.md).</span></span>  
-- [<span data-ttu-id="23311-113">Sprechen Sie mit uns</span><span class="sxs-lookup"><span data-stu-id="23311-113">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+- [<span data-ttu-id="c1894-112">Al.exe</span><span class="sxs-lookup"><span data-stu-id="c1894-112">Al.exe</span></span>](../../../framework/tools/al-exe-assembly-linker.md)
+- [<span data-ttu-id="c1894-113">Sprechen Sie mit uns</span><span class="sxs-lookup"><span data-stu-id="c1894-113">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
