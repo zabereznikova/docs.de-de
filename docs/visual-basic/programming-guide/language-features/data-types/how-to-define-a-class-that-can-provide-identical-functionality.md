@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Definieren Sie eine Klasse, die gleiche Funktionalität, für unterschiedliche Datentypen (Visual Basic bereitstellen kann)'
+title: 'Vorgehensweise: Definieren einer Klasse, die gleiche Funktionalität für unterschiedliche Datentypen bereitstellen kann (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -33,8 +33,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/23/2019
 ms.locfileid: "54667478"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Vorgehensweise: Definieren Sie eine Klasse, die gleiche Funktionalität, für unterschiedliche Datentypen (Visual Basic bereitstellen kann)
-Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen. Hierzu geben Sie in der Definition mindestens einen *Typparameter* an. Die Klasse kann dann als Vorlage für Objekte fungieren, für die verschiedene Datentypen verwendet werden. Eine in dieser Weise definierte Klasse wird als *generische Klasse*bezeichnet.  
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Vorgehensweise: Definieren Sie eine Klasse, die gleiche Funktionalität für unterschiedliche Datentypen bereitstellen kann (Visual Basic)
+Sie können eine Klasse definieren, über die Sie Objekte erstellen können, die für unterschiedliche Datentypen die gleiche Funktionalität bereitstellen. Hierzu geben Sie in der Definition mindestens einen *Typparameter* an. Die Klasse kann dann als Vorlage für Objekte fungieren, für die verschiedene Datentypen verwendet werden. Eine in dieser Weise definierte Klasse wird als *generische Klasse* bezeichnet.  
   
  Der Vorteil des Definierens einer generischen Klasse besteht darin, dass Sie die Klasse nur einmal definieren müssen und diese in Ihrem Code verwenden können, um viele Objekte zu erstellen, für die unterschiedliche Datentypen verwendet werden. Dies führt zu einer besseren Leistung, als dies der Fall ist, wenn die Klasse mit dem `Object` -Typ definiert wird.  
   
