@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 737f98dd11d6172bb79aaa925ac153c64728e9ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629607"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825731"
 ---
 # <a name="annotating-typed-datasets"></a>Hinzufügen von Anmerkungen zu typisierten "DataSets"
 Anmerkungen ermöglichen Ihnen die Namensänderung von Elementen in einem typisierten <xref:System.Data.DataSet>, ohne das zugrunde liegende Schema ändern zu müssen. Ändern die Namen der Elemente im zugrunde liegenden Schema würde dazu führen, dass die typisierte **DataSet** zum Verweisen auf Objekte, die nicht in der Datenquelle vorhanden sind, als auch einen Verweis auf die Objekte, die in der Datenquelle vorhanden sind, verlieren.  
@@ -74,7 +74,7 @@ Anmerkungen ermöglichen Ihnen die Namensänderung von Elementen in einem typisi
 |**Übergeordnete** Accessor|TableNameRow|typedParent|  
 |**DataSet** Ereignisse|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Um typisierte **DataSet** Anmerkungen, Sie müssen Folgendes umfassen **Xmlns** Verweis in Ihrem Schema für XML Schema Definition Language (XSD). (Um ein XSD-Schema aus Datenbanktabellen erstellen zu können, finden Sie unter <xref:System.Data.DataSet.WriteXmlSchema%2A> oder [arbeiten mit Datasets in Visual Studio](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
+ Um typisierte **DataSet** Anmerkungen, Sie müssen Folgendes umfassen **Xmlns** Verweis in Ihrem Schema für XML Schema Definition Language (XSD). Um ein XSD-Schema aus Datenbanktabellen erstellen zu können, finden Sie unter <xref:System.Data.DataSet.WriteXmlSchema%2A> oder [arbeiten mit Datasets in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  

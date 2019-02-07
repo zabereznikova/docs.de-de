@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: 117043a461779dee19f1c99361c44a33f5904993
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b897be62a940f1d27e9a8cf2eb54eec460b60468
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583521"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825939"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Tabellenübergreifende Abfragen (LINQ to DataSet)
 Zusätzlich zum Abfragen einer einzelnen Tabelle können Sie in [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] auch Abfragen für mehrere Tabellen (tabellenübergreifende Abfragen) ausführen. Dies erfolgt mithilfe einer *Join*. Bei einem Join werden Objekte in einer Datenquelle mit Objekten in einer anderen Datenquelle, die über ein gemeinsames Attribut (wie Produkt oder Kontakt-ID) verfügen, miteinander verknüpft. Bei der objektorientierten Programmierung ist die Navigation in den Beziehungen zwischen den Objekten relativ einfach, da es in jedem Objekt einen Member gibt, der auf ein anderes Objekt verweist. In externen Datenbanktabellen ist die Navigation zwischen den Beziehungen etwas komplizierter. Datenbanktabellen enthalten keine integrierten Beziehungen. In diesen Fällen kann die JOIN-Operation verwendet werden, um Elemente aus den einzelnen Quellen zu verknüpfen. Wenn Sie z. B. zwei Tabellen haben, die Produktinformationen und Vertriebsinformationen enthalten, könnten Sie mittels einer JOIN-Operation Vertriebsinformationen und Produkte für ein und denselben Auftrag miteinander verknüpfen.  
@@ -21,7 +21,7 @@ Zusätzlich zum Abfragen einer einzelnen Tabelle können Sie in [!INCLUDE[linq_d
   
  Die <xref:System.Linq.Enumerable.GroupJoin%2A> Operatoren haben keine direkte Entsprechung in der Terminologie für relationale Datenbanken, die sie implementieren eine übergeordnete Menge innerer und linker äußerer Verknüpfungen. Ein linker äußerer Join ist ein Join, der jedes Element der ersten (linken) Auflistung zurückgibt, selbst wenn die zweite Auflistung keine zugehörigen Elemente enthält.  
   
- Weitere Informationen zu Joins finden Sie unter [Verknüpfungsoperationen](https://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107).  
+ Weitere Informationen zu Joins finden Sie unter [Verknüpfungsoperationen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120)).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden die Tabellen `SalesOrderHeader` und `SalesOrderDetail` aus der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank auf herkömmliche Art und Weise miteinander verknüpft, um Onlinebestellungen aus dem Monat August abzurufen.  
@@ -33,5 +33,5 @@ Zusätzlich zum Abfragen einer einzelnen Tabelle können Sie in [!INCLUDE[linq_d
 - [Abfragen von DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [Abfragen für einzelne Tabellen](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
 - [Abfragen von typisierten DataSets](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
-- [Verknüpfungsvorgänge](https://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)
+- [Verknüpfungsvorgänge](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397908(v=vs.120))
 - [Beispiele für LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 529b7094ad36861cacc4009ea8faf152f056c20e
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: c4b656d1ee7edcdc7e0e5cd41f7d57266ad5ad26
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066219"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828357"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework-Datenanbieter
 Mithilfe eines [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters werden Verbindungen mit einer Datenbank hergestellt, Befehle ausgeführt und Ergebnisse abgerufen. Diese Ergebnisse werden entweder direkt verarbeitet und in einem <xref:System.Data.DataSet> -Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen, oder sie werden an eine andere Ebene übergeben. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter sind einfach. Sie erstellen eine Ebene von minimaler Größe zwischen der Datenquelle und dem Code und erhöhen so die Leistung, ohne auf Funktionalität verzichten zu müssen.  
@@ -24,7 +24,7 @@ Mithilfe eines [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Datenanbieter für ODBC|Für Datenquellen, die mit ODBC verfügbar gemacht werden. Verwendet den <xref:System.Data.Odbc> -Namespace.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für Oracle|Für Oracle-Datenquellen. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für Oracle unterstützt Oracle-Clientsoftware der Version 8.1.7 und höher und verwendet den <xref:System.Data.OracleClient> -Namespace.|  
 |EntityClient-Anbieter|Stellt Datenzugriff für Entity Data Model (EDM)-Anwendungen bereit. Verwendet den <xref:System.Data.EntityClient> -Namespace.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQLServer Compact 4.0.|Ermöglicht den Datenzugriff für Microsoft SQL Server Compact 4.0. Verwendet den Namespace [System.Data.SqlServerCe](https://msdn.microsoft.com/library/system.data.sqlserverce.aspx) .|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQLServer Compact 4.0.|Ermöglicht den Datenzugriff für Microsoft SQL Server Compact 4.0. Verwendet den Namespace [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>Hauptobjekte von .NET Framework-Datenanbietern  
  In der folgenden Tabelle werden die vier Hauptobjekte aufgelistet, aus denen sich ein [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter zusammensetzt.  

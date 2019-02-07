@@ -2,12 +2,12 @@
 title: "\"DataViews\""
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: 4731b0c94f9ecd03dc3d1229f27cb8ede7e0e203
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592899"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825874"
 ---
 # <a name="dataviews"></a>"DataViews"
 Mit einer <xref:System.Data.DataView> können Sie verschiedene Ansichten der in einer <xref:System.Data.DataTable> gespeicherten Daten erstellen. Diese Funktion wird oft in Datenbindungsanwendungen verwendet. Mit einem **DataView**, können Sie die Daten in einer Tabelle mit verschiedenen Sortierreihenfolgen verfügbar machen, und Sie können die Daten nach Zeilenstatus oder basierend auf einem Filterausdruck filtern.  
@@ -44,10 +44,10 @@ Mit einer <xref:System.Data.DataView> können Sie verschiedene Ansichten der in 
  Beschreibt, wie eine **DataViewManager** zum Verwalten von **DataView** Einstellungen für jede Tabelle in eine **DataSet**.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [ASP.NET-Webanwendungen](https://msdn.microsoft.com/library/a812d7b7-049e-4234-a4c2-6acf690301f6)  
+ [ASP.NET-Webanwendungen](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
  Stellt Übersichten und ausführliche schrittweise Anleitungen zum Erstellen von ASP.NET-Anwendungen, Web Forms und Web Services bereit.  
   
- [Windows-Anwendungen](https://msdn.microsoft.com/library/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
+ [Windows-Anwendungen](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
  Stellt ausführliche Informationen zum Arbeiten mit Windows Forms und Konsolenanwendungen bereit.  
   
  [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: b76537a347cdf30c65bfd6e56f274108e796a315
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258989"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825406"
 ---
 # <a name="specifying-an-assemblys-location"></a>Festlegen des Speicherortes einer Assembly
 Es gibt zwei Möglichkeiten zum Angeben des Speicherortes einer Assembly:  
@@ -20,7 +20,7 @@ Es gibt zwei Möglichkeiten zum Angeben des Speicherortes einer Assembly:
   
 -   Mithilfe der [ \<probing >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) Element.  
   
- Sie können auch die [.NET Framework-Konfigurationstool (Mscorcfg.msc)](https://msdn.microsoft.com/library/a7106c52-68da-490e-b129-971b2c743764) Speicherorte von Assemblys oder Speicherorte für die common Language Runtime nach Assemblys suchen angeben.  
+ Sie können auch die [.NET Framework-Konfigurationstool (Mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100)) Speicherorte von Assemblys oder Speicherorte für die common Language Runtime nach Assemblys suchen angeben.  
   
 ## <a name="using-the-codebase-element"></a>Mithilfe der \<codeBase >-Element  
  Sie können die  **\<codeBase >** Element nur im Computer-Konfiguration oder Verleger Richtliniendateien, die auch die Version der Assembly umleiten. Wenn die Runtime die zu verwendende Assemblyversion ermittelt wird, gilt es die CodeBase-Einstellung aus der Datei, die die Version bestimmt. Wenn keine Codebasis angegeben ist, durchsucht die Runtime für die Assembly, auf die übliche Weise. Weitere Informationen finden Sie unter [How the Runtime Locates Assemblies](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
@@ -69,4 +69,4 @@ Es gibt zwei Möglichkeiten zum Angeben des Speicherortes einer Assembly:
 - [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Konfigurieren von .NET Framework-Apps](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+- [Konfigurieren von Apps mithilfe von Konfigurationsdateien](index.md)

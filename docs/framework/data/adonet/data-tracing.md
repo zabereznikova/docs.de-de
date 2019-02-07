@@ -2,12 +2,12 @@
 title: Datenablaufverfolgung in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: ac9e290d4c9209cbf8ccf5eb3acdeceb68f9021b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f1191396c8e5a68d613c403d260d15d26fa929f
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721884"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826576"
 ---
 # <a name="data-tracing-in-adonet"></a>Datenablaufverfolgung in ADO.NET
 ADO.NET bietet integrierte Datenablaufverfolgungsfunktionen, die von den .NET-Datenanbietern für SQL Server, Oracle, OLE DB und ODBC sowie ADO.NET unterstützt wird <xref:System.Data.DataSet>, und den SQL Server-Netzwerkprotokollen.  
@@ -26,10 +26,10 @@ ADO.NET bietet integrierte Datenablaufverfolgungsfunktionen, die von den .NET-Da
   
  Zur Unterstützung verschiedener Ablaufverfolgungstechnologien ist die Ablaufverfolgung erweiterbar, sodass Entwickler eine Ablaufverfolgung für Probleme auf jeder Ebene des Anwendungsstapels ausführen können. Obwohl die Ablaufverfolgung nicht auf ADO.NET beschränkt ist, nutzen Microsoft-Anbieter die Vorteile generalisierter Ablaufverfolgungs- und Instrumentierungs-APIs.  
   
- Weitere Informationen zum Festlegen und Konfigurieren der verwalteten Ablaufverfolgung in ADO.NET finden Sie unter [Tracing Data Access](https://msdn.microsoft.com/library/hh880086.aspx).  
+ Weitere Informationen zum Festlegen und Konfigurieren der verwalteten Ablaufverfolgung in ADO.NET finden Sie unter [Tracing Data Access](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10)).  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Zugriff auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse  
- In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server, Datenzugriff tracing ([Datenzugriffs-Ablaufverfolgung](https://msdn.microsoft.com/library/hh880086.aspx)) wurde aktualisiert, um einfacher Clientereignissen zu Diagnoseinformationen, z. B. Verbindungsfehlern, aus zu erleichtern die die Serververbindung Klingeln und Informationen zur Anwendungsleistung im Protokoll für erweiterte Ereignisse. Informationen zum Lesen des Protokolls für erweiterte Ereignisse finden Sie unter [View Event Session Data](https://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx).  
+ In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server, Datenzugriff tracing ([Datenzugriffs-Ablaufverfolgung](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) wurde aktualisiert, um einfacher Clientereignissen zu Diagnoseinformationen, z. B. Verbindungsfehlern, aus zu erleichtern die die Serververbindung Klingeln und Informationen zur Anwendungsleistung im Protokoll für erweiterte Ereignisse. Informationen zum Lesen des Protokolls für erweiterte Ereignisse finden Sie unter [View Event Session Data](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).  
   
  Für Verbindungsvorgänge sendet ADO.NET eine Clientverbindungs-ID. Wenn die Verbindung fehlschlägt, können Sie auf den verbindungsringpuffer zugreifen ([Behandlung von Konnektivitätsproblemen in SQL Server 2008 mit dem Konnektivitätsringpuffer](https://go.microsoft.com/fwlink/?LinkId=207752)) und suchen Sie die `ClientConnectionID` Feld und Diagnoseinformationen zum Abrufen der Verbindungsfehler. Clientverbindungs-IDs werden nur im Ringpuffer protokolliert, wenn ein Fehler auftritt. (Wenn eine Verbindung fehlschlägt, bevor das Voranmeldungspaket gesendet wird, wird keine Clientverbindungs-ID generiert). Die Clientverbindungs-ID ist eine 16-Byte-GUID. Sie finden die Clientverbindungs-ID auch in der Zielausgabe für erweiterte Ereignisse, wenn die `client_connection_id`-Aktion den Ereignissen in einer Sitzung für erweiterte Ereignisse hinzugefügt wurde. Sie können die Ablaufverfolgung für den Datenzugriff aktivieren, den Verbindungsbefehl erneut ausführen und das `ClientConnectionID`-Feld in der Datenzugriffs-Ablaufverfolgung beobachten, wenn Sie weitere Diagnoseinformationen zum Clienttreiber benötigen.  
   

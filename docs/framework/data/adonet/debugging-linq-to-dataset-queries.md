@@ -2,12 +2,12 @@
 title: Debuggen von LINQ to DataSet-Abfragen
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 6c7b8c6cec39adfd5b7456d94cfae5622649e5a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680506"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825510"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debuggen von LINQ to DataSet-Abfragen
 
@@ -16,7 +16,7 @@ Visual Studio unterstützt das Debuggen von [!INCLUDE[linq_dataset](../../../../
 ## <a name="viewing-results"></a>Anzeigen von Ergebnissen  
  Sehen Sie das Ergebnis einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] mithilfe von DataTips, die Fenster "überwachen" und das Dialogfeld "Schnellüberwachung". Bei Verwendung eines Quellcodefensters können Sie den Mauszeiger auf eine Abfrage im Quellcodefenster bewegen, woraufhin ein <legacyBold>DataTip</legacyBold> eingeblendet wird. Sie können eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Variable kopieren und in das Überwachungsfenster oder das Dialogfeld Schnellüberwachung einfügen. In [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] wird eine Abfrage nicht beim Erstellen oder Deklarieren, sondern erst bei ihrer Ausführung ausgewertet. Dies wird als bezeichnet *verzögerte Ausführung*. Deshalb besitzt die Abfragevariable erst nach der Auswertung einen Wert. Weitere Informationen finden Sie unter [Abfragen in LINQ to DataSet](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md).  
   
- Der Debugger muss eine Abfrage auswerten, um die Abfrageergebnisse anzeigen zu können. Diese implizite Auswertung erfolgt, wenn Sie eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfrageergebnis in den Debugger, und es hat einige Auswirkungen, die Sie berücksichtigen sollten. Jede Auswertung der Abfrage dauert einige Zeit. Das Erweitern des Ergebnisknotens nimmt ebenfalls Zeit in Anspruch. Bei einigen Abfragen kann eine wiederholte Auswertung zu beträchtlichen Leistungseinbußen führen. Die Auswertung einer Abfrage kann auch dazu führen, dass der Datenwert oder Zustand des Programms geändert wird. Nicht alle Abfragen verfügen über Nebeneffekte. Um festzustellen, ob eine Abfrage ohne Nebeneffekte sicher ausgewertet werden kann, sollten Sie sich den Code verdeutlichen, durch den die Abfrage implementiert wird. Weitere Informationen finden Sie unter [Nebeneffekte und Ausdrücke](https://msdn.microsoft.com/library/e1f8a6ea-9e19-481d-b6bd-df120ad3bf4e).  
+ Der Debugger muss eine Abfrage auswerten, um die Abfrageergebnisse anzeigen zu können. Diese implizite Auswertung erfolgt, wenn Sie eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfrageergebnis in den Debugger, und es hat einige Auswirkungen, die Sie berücksichtigen sollten. Jede Auswertung der Abfrage dauert einige Zeit. Das Erweitern des Ergebnisknotens nimmt ebenfalls Zeit in Anspruch. Bei einigen Abfragen kann eine wiederholte Auswertung zu beträchtlichen Leistungseinbußen führen. Die Auswertung einer Abfrage kann auch dazu führen, dass der Datenwert oder Zustand des Programms geändert wird. Nicht alle Abfragen verfügen über Nebeneffekte. Um festzustellen, ob eine Abfrage ohne Nebeneffekte sicher ausgewertet werden kann, sollten Sie sich den Code verdeutlichen, durch den die Abfrage implementiert wird. Weitere Informationen finden Sie unter [Nebeneffekte und Ausdrücke](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120)).  
   
 ## <a name="edit-and-continue"></a>Bearbeiten und Fortfahren  
  Bearbeiten und Fortfahren unterstützt keine Änderungen an [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfragen. Wenn Sie Daten hinzufügen, entfernen oder Ändern einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] -Anweisung während einer Debugsitzung ein Dialogfeld angezeigt wird, der anzeigt, die Änderung wird von bearbeiten und Fortfahren nicht unterstützt. An diesem Punkt können Sie entweder die Änderungen rückgängig machen oder die Debugsitzung beenden und eine neue Sitzung mit dem bearbeiteten Code starten.  

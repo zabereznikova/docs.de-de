@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5d21b178-d731-471a-8534-1f8184a2ef06
-ms.openlocfilehash: a2dcdcc65a40ada37817d66ef0a7c147831990b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73ea7a11353c83995bee6457c1fed12cd9c936d2
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702092"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828058"
 ---
 # <a name="method-based-query-syntax-examples-ordering"></a>Beispiele für die methodenbasierte Abfragesyntax: Sortieren
-In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.ThenBy%2A> -Methode und die [AdventureWorks Sales-Modell](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) mit der methodenbasierten Abfragesyntax. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
+In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.ThenBy%2A> -Methode und die [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mit der methodenbasierten Abfragesyntax. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
   
  In die Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:  
   

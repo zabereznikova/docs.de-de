@@ -2,12 +2,12 @@
 title: Überlegungen zur Entwicklung und Bereitstellung
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
-ms.openlocfilehash: bc9501ba49594a769db64d69ac93157b734c9eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31b9015ea898047dc346c9bf2ec4c8510e7e69b9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540883"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826368"
 ---
 # <a name="development-and-deployment-considerations"></a>Überlegungen zur Entwicklung und Bereitstellung
 In den Themen dieses Abschnitts wird auf Punkte eingegangen, die bei der Entwicklung und Bereitstellung einer auf dem ADO.NET Entity Framework basierenden Anwendung zu berücksichtigen sind.  
@@ -25,4 +25,4 @@ In den Themen dieses Abschnitts wird auf Punkte eingegangen, die bei der Entwick
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Übersicht über Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
 - [Erste Schritte](../../../../../docs/framework/data/adonet/ef/getting-started.md)
-- [ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+- [ADO.NET Entity Data Model-Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

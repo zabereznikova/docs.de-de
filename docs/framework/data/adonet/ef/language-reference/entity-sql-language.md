@@ -2,12 +2,12 @@
 title: Entity SQL-Sprache
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: 0c698f04c3b95ffb204a20d41e91ef3f6210c5d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b26d9a88130e0449d437ae9dd88e5e818f29f54d
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494096"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826225"
 ---
 # <a name="entity-sql-language"></a>Entity SQL-Sprache
 Entity SQL ist eine speicherunabhängige Abfragesprache, die SQL ähnlich ist. Mit Entity SQL können Sie Entitätsdaten als Objekte oder in einem Tabellenformular abfragen. In den folgenden Fällen empfiehlt sich die Verwendung von Entity SQL:  
@@ -48,31 +48,31 @@ Entity SQL ist eine speicherunabhängige Abfragesprache, die SQL ähnlich ist. M
 ## <a name="using-entity-sql-with-object-queries"></a>Verwenden von Entity SQL mit Objektabfragen  
  Weitere Informationen zum Verwenden von Entity SQL mit Objektabfragen finden Sie in den folgenden Themen:  
   
- [Vorgehensweise: Ausführen einer Abfrage, die Entitätstypobjekte zurückgibt](https://msdn.microsoft.com/library/f73e137d-1534-42bb-9e31-99ca42c19b48)  
+ [Vorgehensweise: Ausführen einer Abfrage, die Entitätstypobjekte zurückgibt](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738694(v=vs.100))  
   
- [Vorgehensweise: Ausführen einer parametrisierten Abfrage](https://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)  
+ [Vorgehensweise: Ausführen einer parametrisierten Abfrage](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))  
   
- [Vorgehensweise: Navigieren Sie in Beziehungen mithilfe von Navigationseigenschaften](https://msdn.microsoft.com/library/b1d71c7d-16a7-4b46-96ac-690176bd5057)  
+ [Vorgehensweise: Navigieren Sie in Beziehungen mithilfe von Navigationseigenschaften](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896321(v=vs.100))  
   
- [Vorgehensweise: Aufrufen einer benutzerdefinierten Funktion](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)  
+ [Vorgehensweise: Aufrufen einer benutzerdefinierten Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))  
   
- [Vorgehensweise: Filtern von Daten](https://msdn.microsoft.com/library/776f8556-3350-4572-804a-b1513515c1b2)  
+ [Vorgehensweise: Filtern von Daten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716755(v=vs.100))  
   
- [Vorgehensweise: Sortieren von Daten](https://msdn.microsoft.com/library/c05f2506-cb9d-4ebc-822b-300042ad53e7)  
+ [Vorgehensweise: Sortieren von Daten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716784(v=vs.100))  
   
- [Vorgehensweise: Gruppieren von Daten](https://msdn.microsoft.com/library/df801d9d-9a8a-4157-97a6-5016b18998e1)  
+ [Vorgehensweise: Gruppieren von Daten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896341(v=vs.100))  
   
- [Vorgehensweise: Aggregieren von Daten](https://msdn.microsoft.com/library/4cf04ce8-3c0f-4f88-9d97-8fac8622598d)  
+ [Vorgehensweise: Aggregieren von Daten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716738(v=vs.100))  
   
- [Vorgehensweise: Ausführen einer Abfrage, die Objekte anonymer Typen zurückgibt](https://msdn.microsoft.com/library/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [Vorgehensweise: Ausführen einer Abfrage, die Objekte anonymer Typen zurückgibt](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))  
   
- [Vorgehensweise: Ausführen einer Abfrage, die eine Auflistung von primitiven Typen zurückgibt](https://msdn.microsoft.com/library/115b52c0-4f27-4253-8991-284b450000b5)  
+ [Vorgehensweise: Ausführen einer Abfrage, die eine Auflistung von primitiven Typen zurückgibt](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738451(v=vs.100))  
   
- [Vorgehensweise: Fragen Sie verbundener Objekte in einer "EntityCollection ab"](https://msdn.microsoft.com/library/11ce946f-16f8-4c1d-9d80-f740853807ba)  
+ [Vorgehensweise: Fragen Sie verbundener Objekte in einer "EntityCollection ab"](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716708(v=vs.100))  
   
- [Vorgehensweise: Reihenfolge der Union von zwei Abfragen](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)  
+ [Vorgehensweise: Reihenfolge der Union von zwei Abfragen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))  
   
- [Vorgehensweise: Seitenweise Abfrageresultate durch Navigieren](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [Vorgehensweise: Seitenweise Abfrageresultate durch Navigieren](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  

@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e56f837c4d3362ec6e71030e4fb475df42b9fba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639949"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55825952"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData-Methode
 
-Ruft ab, die Daten für den angegebenen [MethodDesc](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md).
+Ruft die Daten für den angegebenen MethodDesc-Zeiger.
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -34,9 +34,9 @@ Ruft ab, die Daten für den angegebenen [MethodDesc](../../../../docs/framework/
 HRESULT GetMethodDescData(
     CLRDATA_ADDRESS            methodDesc,
     CLRDATA_ADDRESS            ip,
-    void                       *data,
+    DacpMethodDescData *data,
     ULONG                      cRevertedRejitVersions,
-    void                      *rgRevertedRejitData,
+    DacpReJitData      *rgRevertedRejitData,
     void                      *pcNeededRevertedRejitData
 );
 ```
@@ -47,17 +47,17 @@ HRESULT GetMethodDescData(
 
 `ip` [in] Die IP-Adresse der Methode.
 
-`data` [out] Die Daten, die die MethodDesc zugeordnet, wie die internen APIs zurückgegeben wird. Die Struktur benötigt mindestens 168 Bytes.
+`data` [out] Die Daten, die die MethodDesc zugeordnet, wie die internen APIs zurückgegeben wird.
 
 `cRevertedRejitVersions` [out] Die Anzahl der wiederhergestellten Rejit-Versionen.
 
-`rgRevertedRejitData` [out] Die Daten, die die wiederhergestellten Rejit-Versionen zugeordnet, wie die internen APIs zurückgegeben wird. Die Struktur benötigt mindestens 24 Bytes.
+`rgRevertedRejitData` [out] Die Daten, die die wiederhergestellten Rejit-Versionen zugeordnet, wie die internen APIs zurückgegeben wird.
 
 `pcNeededRevertedRejitData` [out] Die Anzahl der Bytes, die zum Speichern der Daten verknüpft, die mit den wiederhergestellten ReJit-Versionen ist erforderlich.
 
 ## <a name="remarks"></a>Hinweise
 
-Die angegebene Methode ist Teil der `ISOSDacInterface` Schnittstelle und zum 20. Steckplatz der virtuellen Methodentabelle entspricht. Auch die `CLRDATA_ADDRESS` sind 64-Bit-Ganzzahl ohne Vorzeichen.
+Die angegebene Methode ist Teil der `ISOSDacInterface` Schnittstelle und zum 20. Steckplatz der virtuellen Methodentabelle entspricht. Zu deren Verwendung können [ `CLRDATA_ADDRESS` ](../common-data-types-unmanaged-api-reference.md) muss als eine 64-Bit-Ganzzahl ohne Vorzeichen definiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
