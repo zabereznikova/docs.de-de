@@ -2,27 +2,27 @@
 title: Überlegungen zur Entwicklung und Bereitstellung
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
-ms.openlocfilehash: bc9501ba49594a769db64d69ac93157b734c9eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31b9015ea898047dc346c9bf2ec4c8510e7e69b9
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540883"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826368"
 ---
-# <a name="development-and-deployment-considerations"></a><span data-ttu-id="5b90e-102">Überlegungen zur Entwicklung und Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="5b90e-102">Development and Deployment Considerations</span></span>
-<span data-ttu-id="5b90e-103">In den Themen dieses Abschnitts wird auf Punkte eingegangen, die bei der Entwicklung und Bereitstellung einer auf dem ADO.NET Entity Framework basierenden Anwendung zu berücksichtigen sind.</span><span class="sxs-lookup"><span data-stu-id="5b90e-103">Topics in this section address issues to consider when developing or deploying an application that is based on the ADO.NET Entity Framework.</span></span>  
+# <a name="development-and-deployment-considerations"></a><span data-ttu-id="cbd84-102">Überlegungen zur Entwicklung und Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="cbd84-102">Development and Deployment Considerations</span></span>
+<span data-ttu-id="cbd84-103">In den Themen dieses Abschnitts wird auf Punkte eingegangen, die bei der Entwicklung und Bereitstellung einer auf dem ADO.NET Entity Framework basierenden Anwendung zu berücksichtigen sind.</span><span class="sxs-lookup"><span data-stu-id="cbd84-103">Topics in this section address issues to consider when developing or deploying an application that is based on the ADO.NET Entity Framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5b90e-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5b90e-104">In This Section</span></span>  
- [<span data-ttu-id="5b90e-105">Sicherheitsüberlegungen</span><span class="sxs-lookup"><span data-stu-id="5b90e-105">Security Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cbd84-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="cbd84-104">In This Section</span></span>  
+ [<span data-ttu-id="cbd84-105">Sicherheitsüberlegungen</span><span class="sxs-lookup"><span data-stu-id="cbd84-105">Security Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/security-considerations.md)  
   
- [<span data-ttu-id="5b90e-106">Überlegungen zur Leistung</span><span class="sxs-lookup"><span data-stu-id="5b90e-106">Performance Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
+ [<span data-ttu-id="cbd84-106">Überlegungen zur Leistung</span><span class="sxs-lookup"><span data-stu-id="cbd84-106">Performance Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/performance-considerations.md)  
   
- [<span data-ttu-id="5b90e-107">Migrationsüberlegungen</span><span class="sxs-lookup"><span data-stu-id="5b90e-107">Migration Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
+ [<span data-ttu-id="cbd84-107">Migrationsüberlegungen</span><span class="sxs-lookup"><span data-stu-id="cbd84-107">Migration Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)  
   
- [<span data-ttu-id="5b90e-108">Überlegungen zur Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="5b90e-108">Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
+ [<span data-ttu-id="cbd84-108">Überlegungen zur Bereitstellung</span><span class="sxs-lookup"><span data-stu-id="cbd84-108">Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
   
-## <a name="see-also"></a><span data-ttu-id="5b90e-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5b90e-109">See also</span></span>
-- [<span data-ttu-id="5b90e-110">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="5b90e-110">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)
-- [<span data-ttu-id="5b90e-111">Übersicht über Entity Framework</span><span class="sxs-lookup"><span data-stu-id="5b90e-111">Entity Framework Overview</span></span>](../../../../../docs/framework/data/adonet/ef/overview.md)
-- [<span data-ttu-id="5b90e-112">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="5b90e-112">Getting Started</span></span>](../../../../../docs/framework/data/adonet/ef/getting-started.md)
-- [<span data-ttu-id="5b90e-113">ADO.NET Entity Data Model Tools (ADO.NET Entity Data Model-Tools)</span><span class="sxs-lookup"><span data-stu-id="5b90e-113">ADO.NET Entity Data Model  Tools</span></span>](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+## <a name="see-also"></a><span data-ttu-id="cbd84-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cbd84-109">See also</span></span>
+- [<span data-ttu-id="cbd84-110">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="cbd84-110">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)
+- [<span data-ttu-id="cbd84-111">Übersicht über Entity Framework</span><span class="sxs-lookup"><span data-stu-id="cbd84-111">Entity Framework Overview</span></span>](../../../../../docs/framework/data/adonet/ef/overview.md)
+- [<span data-ttu-id="cbd84-112">Erste Schritte</span><span class="sxs-lookup"><span data-stu-id="cbd84-112">Getting Started</span></span>](../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- <span data-ttu-id="cbd84-113">[ADO.NET Entity Data Model-Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="cbd84-113">[ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span></span>
