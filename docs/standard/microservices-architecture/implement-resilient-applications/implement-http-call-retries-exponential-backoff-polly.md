@@ -3,13 +3,13 @@ title: Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Ba
 description: Erfahren Sie, wie Sie HTTP-Fehler mit Polly und HttpClientFactory verarbeiten können.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 25b816cb56c30545b8d67986817f51e17b2ff770
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362755"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479645"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit HttpClientFactory und Polly-Richtlinien
 
@@ -21,9 +21,9 @@ Die Verwendung der Polly-Bibliothek mit eigenem benutzerdefinierten Code mit Htt
 
 Die folgenden Schritte veranschaulichen, wie Sie HTTP-Wiederholungen mit Polly in HttpClientFactory verwenden können. Die Integration von Polly wird im vorherigen Abschnitt erläutert.
 
-**Verweis auf das ASP.NET Core 2.1-Paket**
+**Verweisen auf die ASP.NET Core 2.2-Pakete**
 
-Ihr Projekt muss ASP.NET Core 2.1-Pakete von NuGet verwenden. Sie benötigen üblicherweise das Metapaket `AspNetCore` und das Erweiterungspaket `Microsoft.Extensions.Http.Polly`.
+`HttpClientFactory` ist seit .NET Core 2.1 verfügbar. Wir empfehlen jedoch die Verwendung der aktuellsten ASP.NET Core 2.2-Pakete von NuGet in Ihrem Projekt. Sie benötigen üblicherweise das Metapaket `AspNetCore` und das Erweiterungspaket `Microsoft.Extensions.Http.Polly`.
 
 **Konfigurieren eines Clients mit der Polly-Wiederholungsrichtlinie in der Startup-Klasse**
 

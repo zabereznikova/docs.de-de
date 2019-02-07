@@ -4,12 +4,12 @@ description: Erfahren Sie hier, wie Sie mit ML.NET in einem Szenario zur Multikl
 ms.date: 01/24/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6f01357906fd4398f68dadfb35dbce816f4302c0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: a951e884a7494b0dcc808fc3dafbfadebc5577dc
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066206"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55254989"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Tutorial: Verwenden von ML.NET zur Klassifizierung von GitHub-Issues in einem Szenario mit Multiklassenklassifizierung
 
@@ -106,6 +106,8 @@ Klassifizierungsaufgaben zählen häufig zu einem der folgenden Typen:
 
 * Binär: entweder A oder B.
 * Multiklasse: mehrere Kategorien, die mit einem einzelnen Modell vorhergesagt werden können.
+
+Verwenden Sie für diese Art von Problemen eine Multiklassenklassifizierungsaufgabe, da es wahrscheinlicher ist, dass Ihre Vorhersage einer Problemkategorie einer von vielen Kategorien (Multiklasse) als einer von zwei (Binär) entspricht.
 
 ## <a name="create-a-console-application"></a>Erstellen einer Konsolenanwendung
 

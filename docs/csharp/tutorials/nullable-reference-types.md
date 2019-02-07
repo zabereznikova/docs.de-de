@@ -3,12 +3,12 @@ title: Entwerfen mit Verweistypen, die NULL-Werte zulassen
 description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistypen, die NULL-Werte zulassen. Sie erfahren, wie Sie Ihre Entwurfsabsicht ausdrücken, wenn die Verweiswerte Null sein können, und wie Sie den Compiler durchsetzen, wenn sie nicht NULL sein können.
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e4cb423658287e5260770a680f189c227b9cd01
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156688"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204768"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Besseres Ausdrücken Ihrer Entwurfsabsicht mit Verweistypen, die NULL-Werte zulassen und nicht zulassen
 
@@ -68,7 +68,7 @@ Für diese Umfrageanwendung müssen einige Klassen erstellt werden:
 
 Diese Typen verwenden Verweistypen, die NULL-Werte sowohl zulassen als auch nicht zulassen, um auszudrücken, welche Member erforderlich und welche optional sind. Verweistypen, die NULL-Werte zulassen, kommunizieren diese Entwurfsabsicht eindeutig:
 
-- Die Fragen, die Teil der Umfrage sind, können nie NULL sein: es macht keinen Sinn, eine leere Frage zu stellen.
+- Die Fragen, die Teil der Umfrage sind, können nie NULL sein. Es ist nicht sinnvoll, eine leere Frage zu stellen.
 - Die Befragten können nie NULL sein. Sie werden sicher die Personen nachverfolgen wollen, mit denen Sie Kontakt aufgenommen haben, sogar die Personen, die die Teilnahme abgelehnt haben.
 - Jede Antwort auf eine Frage darf NULL sein. Befragten können es ablehnen, einige oder alle Fragen zu beantworten.
 
@@ -146,7 +146,7 @@ namespace NullableIntroduction
 }
 ```
 
-Wie bisher müssen Sie das Listenobjekt Wert initialisieren, der keine NULL-Werte zulässt, oder der Compiler gibt eine Warnung aus. Es gibt keine NULL-Überprüfungen in der zweiten Überladung von `AddQuestion`, da sie nicht benötigt werden: Sie haben diese Variable als Wert deklariert, der keine NULL-Werte zulässt. Der Wert kann nicht `null` sein.
+Wie bisher müssen Sie das Listenobjekt Wert initialisieren, der keine NULL-Werte zulässt, oder der Compiler gibt eine Warnung aus. Es gibt keine NULL-Überprüfungen in der zweiten Überladung von `AddQuestion`, da sie nicht benötigt werden: Sie haben diese Variable als Typ deklariert, der keine NULL-Werte zulässt. Der Wert kann nicht `null` sein.
 
 Wechseln Sie in Ihrem Editor zu `Program.cs`, und ersetzen Sie den Inhalt von `Main` durch die folgenden Codezeilen:
 
@@ -190,7 +190,7 @@ Die Hauptaufgabe dieser Klasse besteht darin, die Antworten für einen Teilnehme
 1. Bitten Sie um die Teilnahme an der Umfrage. Wenn eine Person nicht einverstanden ist, geben Sie eine fehlende (oder Null) Antwort zurück.
 1. Stellen Sie die einzelnen Fragen, und notieren Sie die Antwort. Jede Antwort kann auch nicht vorhanden (oder null) sein.
 
-Fügen Sie der `SurveyRespondent`-Klasse den folgenden Code hinzu:
+Fügen Sie der `SurveyResponse`-Klasse den folgenden Code hinzu:
 
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
@@ -212,7 +212,7 @@ Der letzte Schritt ist das Anzeigen von Umfrageergebnissen. Sie fügen Code zu v
 
 [!code-csharp[ReportResponses](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-Da `surveyResponses` ein Verweistyp ist, der NULL-Werte zulässt, sind vor dem Dereferenzieren keine Überprüfungen erforderlich. Die `Answer`-Methode gibt eine Zeichenfolge zurück, die keine NULL-Werte zulässt. Wählen Sie also die Überladung von `GetValueOrDefault`, bei der ein zweites Argument für den Standardwert verwendet wird.
+Da `surveyResponses` ein Verweistyp ist, der keine NULL-Werte zulässt, sind vor dem Dereferenzieren keine Überprüfungen erforderlich. Die `Answer`-Methode gibt eine Zeichenfolge zurück, die keine NULL-Werte zulässt. Wählen Sie also die Überladung von `GetValueOrDefault`, bei der ein zweites Argument für den Standardwert verwendet wird.
 
 Fügen Sie diese drei Ausdruckskörpermember zur `SurveyRun`-Klasse hinzu:
 
@@ -228,7 +228,7 @@ Sie benötigen keine `null`-Überprüfungen in diesem Code, das Sie die darunter
 
 ## <a name="get-the-code"></a>Abrufen des Codes
 
-Sie können den Code für das abgeschlossene Tutorial aus unserem [samples](https://github.com/dotnet/samples)-Repository im Ordner [csharp/IntroToNullables](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) herunterladen.
+Sie können den Code für das abgeschlossene Tutorial aus unserem [samples](https://github.com/dotnet/samples)-Repository im Ordner [csharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) abrufen.
 
 Experimentieren Sie, indem Sie bei der Typdeklaration zwischen Verweistypen wechseln, die NULL-Werte zulassen bzw. nicht zulassen. Sehen Sie sich an, wie dabei verschiedene Warnungen erzeugt werden, um sicherzustellen, dass Sie nicht versehentlich`null` dereferenzieren.
 

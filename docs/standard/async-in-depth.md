@@ -6,18 +6,18 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 7aa2bcdad9584ecf05dfee35e0887ed70737795d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492832"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55285024"
 ---
 # <a name="async-in-depth"></a>Async ausführlich
 
 Schreiben von E/A- und CPU-gebundenem asynchronen Code ist mit dem .NET Task-basierten asynchronen Modell einfach. Das Modell wird durch die Typen `Task` und `Task<T>` und die C#- und Visual Basic-Schlüsselwörter `async` und `await` verfügbar gemacht. (Sprachspezifische Ressourcen finden Sie im Abschnitt [Siehe auch](#see-also).) Dieser Artikel erläutert den Einsatz von .NET-Async und bietet einen Einblick in das im Hintergrund verwendete Async-Framework.
 
-## <a name="task-and-tasklttgt"></a>Task und Task&lt;T&gt;
+## <a name="task-and-taskt"></a>Task und Task\<T>
 
 Tasks sind Konstrukte zum Implementieren dessen, was als [Promise-Modell der Parallelität](https://en.wikipedia.org/wiki/Futures_and_promises) bezeichnet wird.  Kurz gesagt: Sie bieten Ihnen eine „Zusage“, dass die Arbeit zu einem späteren Zeitpunkt abgeschlossen wird, sodass Sie die Zusage mit einer sauberen API koordinieren können.
 
@@ -114,7 +114,7 @@ Noch wichtiger: Da E/A-gebundene Arbeit praktisch keine CPU-Zeit beansprucht, w�
 
 Außerdem ist das Verteilen von Arbeit an den Benutzeroberflächenthread (z.B. die Aktualisierung einer Benutzeroberfläche) mit `async`-Methoden sehr einfach und erfordert keine zusätzliche Arbeit (wie den Aufruf eines threadsicheren Delegaten).
 
-## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Tieferer Einblick in Task und Task&lt;T&gt; für einen CPU-gebundenen Vorgang
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Tieferer Einblick in Task und Task\<T> für einen CPU-gebundenen Vorgang
 
 CPU-gebundener `async`-Code ist etwas anders als E/A-gebundener `async`-Code.  Da die Arbeit auf der CPU ausgeführt wird, besteht keine Möglichkeit, einen Thread für die Berechnung zu dedizieren.  Die Verwendung von `async` und `await` bietet Ihnen eine saubere Möglichkeit, mit einem Hintergrundthread zu interagieren und den Aufrufer der Async-Methode reaktionsfähig zu halten.  Beachten Sie, dass dies keinen Schutz freigegebener Daten bietet.  Wenn Sie freigegebene Daten verwenden, müssen Sie eine entsprechende Synchronisierungsstrategie anwenden.
 

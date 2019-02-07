@@ -4,12 +4,12 @@ description: Empfehlungen für bewährte Methoden für die Versionsverwaltung f�
 author: jamesnk
 ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e6f811039f74649564cbfb42ef67e0a406e4cd70
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169598"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204742"
 ---
 # <a name="versioning"></a>Versionskontrolle
 
@@ -37,9 +37,9 @@ Da die NuGet-Paketversion für Entwickler die sichtbarste Version ist, ist es ei
 
 **✔️ ERWÄGEN** Sie, [SemVer 2.0.0](https://semver.org/) für die Versionskontrolle Ihres NuGet-Pakets zu verwenden.
 
-**✔️ VERWENDEN** Sie die NuGet-Paketversion in der öffentlichen Dokumentation, da es die Versionsnummer ist, die den Benutzern häufig angezeigt wird.
+**✔️ DO** Verwenden Sie die NuGet-Paketversion in der öffentlichen Dokumentation, da es die Versionsnummer ist, die den Benutzern häufig angezeigt wird.
 
-**✔️ FÜGEN** Sie ein Suffix der Vorabversion hinzu, wenn Sie ein nicht stabiles Paket freigeben.
+**✔️ DO** Fügen Sie ein Suffix der Vorabversion hinzu, wenn Sie ein nicht stabiles Paket freigeben.
 
 > Benutzer müssen sich dafür entscheiden, Vorabversionspakete zu erhalten, sodass ihnen bewusst ist, dass das Paket nicht vollständig ist.
 
@@ -63,7 +63,7 @@ Ein starker Name in Kombination mit der Assemblyversion ermöglicht das [strikte
 
 > Die Assemblyversion ist in einigen Informationsmeldungen enthalten, die dem Benutzer angezeigt werden, z.B. der Assemblyname und Typnamen mit Assemblyqualifikation in Ausnahmemeldungen. Durch die Beibehaltung einer Beziehung zwischen den Versionen erhalten Entwickler weitere Informationen darüber, welche Version sie verwenden.
 
-**❌ VERWENDEN SIE KEINE** feste Assemblyversion.
+**❌ DON‘T** Verwenden Sie keine feste Assemblyversion.
 
 > Da eine unveränderliche Assemblyversion die Notwendigkeit von Bindungsumleitungen vermeidet, bedeutet dies, dass nur eine einzige Version der Assembly im globalen Assemblycache (GAC) installiert werden kann. Außerdem werden die Anwendungen, die auf die Assembly im GAC verweisen, unterbrochen, wenn eine andere Anwendung die GAC-Assembly mit Änderungen aktualisiert.
 

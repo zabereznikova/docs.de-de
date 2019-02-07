@@ -1,5 +1,5 @@
 ---
-title: -&gt;-Operator – C#-Referenz
+title: ->-Operator – C#-Referenz
 ms.custom: seodec18
 ms.date: 11/26/2018
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-ms.openlocfilehash: bb1ccd026f403e68565c5c7681943d8017578d01
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: be74f02a85aa05cdab32768ed38222fc4d9289b1
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53234889"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55255366"
 ---
-# <a name="-gt-operator-c-reference"></a>-&gt;-Operator (C#-Referenz)
+# <a name="--operator-c-reference"></a>Operator -> (C#-Referenz)
 
 Der Zeigermember-Zugriffsoperator `->` kombiniert Zeigerdereferenzierung mit Memberzugriff.
 
@@ -33,7 +33,7 @@ für die folgende Syntax:
 
 Der `->`-Operator erfordert [unsicheren](../keywords/unsafe.md) Kontext.
 
-Weitere Informationen finden Sie unter [Vorgehensweise: Zugreifen auf einen Member mit einem Zeiger](../../programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md).
+Weitere Informationen finden Sie unter [Gewusst wie: Zugreifen auf einen Member mit einem Zeiger](../../programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md).
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 

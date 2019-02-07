@@ -4,12 +4,12 @@ description: Erste Schritte beim Erstellen von .NET-Bibliotheken.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e26c6632252257ab8cb5598f1b201559b760dc6b
+ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145724"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55204643"
 ---
 # <a name="get-started"></a>Erste Schritte
 
@@ -29,7 +29,7 @@ Der beste Weg, NuGet-Pakete für Open-Source-.NET-Bibliotheken zu erstellen, ein
 
 Mit NuGet ist es ganz einfach, vorhandene Pakete beim Erstellen einer.NET-Bibliothek zu verwenden. Erfahren Sie mehr über die häufigen Problemquellen von NuGet-Abhängigkeiten und wie Sie diese vermeiden können.
 
-### <a name="sourcelinksourcelinkmd"></a>[SourceLink](./sourcelink.md)
+### <a name="source-linksourcelinkmd"></a>[Quelllink](./sourcelink.md)
 
 SourceLink ist ein großartiges Werkzeug, das es Benutzern Ihrer .NET-Bibliothek ermöglicht, während des Debuggens in den Quellcode zu wechseln. Dieser Artikel bietet eine Übersicht darüber, was SourceLink ist, und warum Sie es verwenden sollten.
 

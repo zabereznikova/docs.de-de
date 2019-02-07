@@ -3,13 +3,13 @@ title: Offizielle .NET-Docker-Images
 description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Offizielle .NET-Docker-Images
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/11/2018
-ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/07/2019
+ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
+ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131377"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55479606"
 ---
 # <a name="official-net-docker-images"></a>Offizielle .NET-Docker-Images
 
@@ -31,13 +31,13 @@ Warum mehrere Images? Beim Entwickeln, Erstellen und Ausführen von Containeranw
 
 ### <a name="during-development-and-build"></a>Während der Entwicklung und Erstellung
 
-In der Entwicklungsphase zählt, wie schnell Sie Änderungen durchlaufen und Änderungen debuggen können. Die Größe des Images ist nicht so entscheidend wie die Fähigkeit, Änderungen am Code vorzunehmen und schnell anzuzeigen. Einige Tools und „Build-Agent-Container“ verwenden das .NET Core-Entwicklungsimage (*microsoft/dotnet:2.1-sdk*) während der Entwicklung und des Buildprozesses. Wenn Sie innerhalb eines Docker-Containers programmieren, sind die Elemente, die zum Kompilieren der App benötigt werden, das Wichtigste. Das schließt den Compiler und alle anderen .NET-Abhängigkeiten ein.
+In der Entwicklungsphase zählt, wie schnell Sie Änderungen durchlaufen und Änderungen debuggen können. Die Größe des Images ist nicht so entscheidend wie die Fähigkeit, Änderungen am Code vorzunehmen und schnell anzuzeigen. Einige Tools und „Build-Agent-Container“ verwenden das .NET Core-Entwicklungsimage (*microsoft/dotnet:2.2-sdk*) während der Entwicklung und des Buildprozesses. Wenn Sie innerhalb eines Docker-Containers programmieren, sind die Elemente, die zum Kompilieren der App benötigt werden, das Wichtigste. Das schließt den Compiler und alle anderen .NET-Abhängigkeiten ein.
 
 Warum ist diese Art von Buildimage wichtig? Dieses Image wird nie in einer Produktionsumgebung bereitgestellt. Damit wird ausschließlich der Inhalt erstellt, den Sie in einem Produktionsimage platzieren. Dieses Image wird dann bei Verwendung mehrstufiger Docker-Builds in der Continuous Integration- oder Buildumgebung verwendet.
 
 ### <a name="in-production"></a>In einer Produktionsumgebung
 
-In der Produktion ist wichtig, wie schnell Sie bereitstellen und die Container basierend auf einem Produktions-.NET Core-Image starten können. Das Image, das auf *microsoft/dotnet:2.1-aspnetcore-runtime* basiert und nur die Runtime enthält, ist aus diesem Grund klein: damit es von der Docker-Registrierung schnell über das Netzwerk an die Docker-Hosts übertragen werden kann. Die Inhalte sind bereit zur Ausführung und ermöglichen eine minimale Zeitspanne zwischen dem Start des Containers und dem Verarbeiten der Ergebnisse. Anders als bei „dotnet build“ oder „dotnet publish“ beim Verwenden des Buildcontainers besteht im Docker-Modell keine Notwendigkeit, C\#-Code zu kompilieren.
+In der Produktion ist wichtig, wie schnell Sie bereitstellen und die Container basierend auf einem Produktions-.NET Core-Image starten können. Das Image, das auf *microsoft/dotnet:2.2-aspnetcore-runtime* basiert und nur die Runtime enthält, ist aus diesem Grund klein: damit es von der Docker-Registrierung schnell über das Netzwerk an die Docker-Hosts übertragen werden kann. Die Inhalte sind bereit zur Ausführung und ermöglichen eine minimale Zeitspanne zwischen dem Start des Containers und dem Verarbeiten der Ergebnisse. Anders als bei „dotnet build“ oder „dotnet publish“ beim Verwenden des Buildcontainers besteht im Docker-Modell keine Notwendigkeit, C\#-Code zu kompilieren.
 
 In diesem optimierten Image werden nur die Binärdateien und andere Inhalte platziert, die zum Ausführen der Anwendung erforderlich sind. Der von „dotnet publish“ erstellte Inhalt enthält z.B. nur die kompilierten .NET-Binärdateien, Images sowie JS- und CSS-Dateien. Im Lauf der Zeit werden Sie Images bemerken, die vorab JIT-kompiliert wurden (die Kompilierung von IL zu nativ, die zur Laufzeit erfolgt).
 
@@ -47,8 +47,8 @@ Wenn Sie sich die .NET-Image-Repositorys im Docker-Hub ansehen, werden Sie mehre
 
 | Bild                                       | Kommentare                                                                                          |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| microsoft/dotnet:**2.1-aspnetcore-runtime** | ASP.NET Core mit Optimierungen nur für die Runtime und ASP.NET Core unter Linux und Windows (Mehrfacharchitektur) |
-| microsoft/dotnet:**2.1-sdk**                | .NET Core mit enthaltenen SDKs unter Linux und Windows (Mehrfacharchitektur)                                  |
+| microsoft/dotnet:**2.2-aspnetcore-runtime** | ASP.NET Core mit Optimierungen nur für die Runtime und ASP.NET Core unter Linux und Windows (Mehrfacharchitektur) |
+| microsoft/dotnet:**2.2-sdk**                | .NET Core mit enthaltenen SDKs unter Linux und Windows (Mehrfacharchitektur)                                  |
 
 >[!div class="step-by-step"]
 >[Zurück](net-container-os-targets.md)

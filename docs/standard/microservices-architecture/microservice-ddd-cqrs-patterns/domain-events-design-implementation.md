@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 84ab1a67aca30aa1967ef2fb11f930bf14ec45e3
+ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127848"
+ms.lasthandoff: 02/03/2019
+ms.locfileid: "55675477"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -31,7 +31,7 @@ Kurz gesagt: Mit Domänenereignissen können Sie die Domänenregeln ausdrücklic
 
 Genau wie bei einer Datenbanktransaktion ist es wichtig sicherzustellen, dass entweder alle Vorgänge, die sich auf ein Domänenereignis beziehen, erfolgreich beendet werden, oder keiner davon.
 
-Domänenereignisse ähneln Ereignissen im Messagingstil, unterscheiden sich jedoch in einem wichtigen Punkt. Beim echten Messaging, beim Message Queuing, bei Nachrichtenbrokern oder bei einem Service Bus mit AMPQ wird eine Nachricht immer asynchron gesendet und kommuniziert prozess- und computerübergreifend. Dies ist hilfreich beim Integrieren von mehreren Kontextgrenzen, von Microservices oder sogar von verschiedenen Anwendungen. Mit Domänenereignissen soll ein Ereignis über den Domänenvorgang ausgelöst werden, den Sie gerade ausführen, aber alle Nebenwirkungen sollen in der gleichen Domäne auftreten.
+Domänenereignisse ähneln Ereignissen im Messagingstil, unterscheiden sich jedoch in einem wichtigen Punkt. Beim echten Messaging, beim Message Queuing, bei Nachrichtenbrokern oder bei einem Service Bus mit AMQP wird eine Nachricht immer asynchron gesendet und kommuniziert prozess- und computerübergreifend. Dies ist hilfreich beim Integrieren von mehreren Kontextgrenzen, von Microservices oder sogar von verschiedenen Anwendungen. Mit Domänenereignissen soll ein Ereignis über den Domänenvorgang ausgelöst werden, den Sie gerade ausführen, aber alle Nebenwirkungen sollen in der gleichen Domäne auftreten.
 
 Die Domänenereignisse und ihre Nebenwirkungen (die später ausgelösten Aktionen, die vom Ereignishandler verwaltet werden) sollten fast unmittelbar, in der Regel „In-Process“ und in der gleichen Domäne auftreten. Daher könnten Domänenereignisse synchron oder asynchron sein. Integrationsereignisse dagegen sollten immer asynchron sein.
 
@@ -73,7 +73,7 @@ Wenn Sie Domänenereignisse verwenden, können Sie andererseits eine differenzie
 2. Empfangen Sie den Befehl in einem Befehlshandler.
    - Führen Sie eine Transaktion eines Aggregats aus.
    - (Optional) Lösen Sie die Domänenereignisse für Nebenwirkungen aus (z.B. OrderStartedDomainEvent).
-3. Behandeln Sie die Domänenereignisse (im aktuellen Prozess), die eine offene Anzahl von Nebenwirkungen in mehreren Aggregaten oder Anwendungsaktionen ausführen. Zum Beispiel:
+3. Behandeln Sie die Domänenereignisse (im aktuellen Prozess), die eine offene Anzahl von Nebenwirkungen in mehreren Aggregaten oder Anwendungsaktionen ausführen. Beispiel:
    - Überprüfen oder erstellen Sie Käufer und Zahlungsmethode.
    - Erstellen und senden Sie ein zugehöriges Integrationsereignis an den Ereignisbus, um Zustände über Microservices zu übertragen oder externe Aktionen auszulösen, z.B. Senden einer E-Mail an den Käufer.
    - Behandeln Sie andere Nebenwirkungen.
@@ -124,7 +124,7 @@ Dies ist im Wesentlichen eine Klasse, die die Daten enthält, die im Zusammenhan
 
 Im Hinblick auf die ubiquitäre Sprache der Domäne muss der Klassenname des Ereignisses als Verb in der Vergangenheitsform, z.B. OrderStartedDomainEvent oder OrderShippedDomainEvent, dargestellt werden, da ein Ereignis etwas ist, das in der Vergangenheit aufgetreten ist. Auf diese Weise wird das Domänenereignis in dem Microservice für Bestellungen in eShopOnContainers implementiert.
 
-Wie bereits erwähnt, ist ein wichtiges Merkmal eines Ereignisses, dass es nicht geändert werden soll, da es etwas ist, das in der Vergangenheit aufgetreten ist. Daher muss es eine unveränderliche Klasse sein. Im obigen Code sehen Sie, dass die Eigenschaften schreibgeschützt sind. Es gibt keine Möglichkeit, das Objekt zu aktualisieren. Sie können die entsprechenden Werte nur beim Erstellen festlegen.
+Wie bereits erwähnt, ist ein wichtiges Merkmal von Ereignissen, dass es nicht geändert werden soll, da es etwas ist, das in der Vergangenheit aufgetreten ist. Daher muss es eine unveränderliche Klasse sein. Im obigen Code sehen Sie, dass die Eigenschaften schreibgeschützt sind. Es gibt keine Möglichkeit, das Objekt zu aktualisieren. Sie können die entsprechenden Werte nur beim Erstellen festlegen.
 
 Wichtig: Wenn Domänenereignisse asynchron verarbeitet werden mit einer Warteschlange, die eine Serialisierung und Deserialisierung der Ereignisobjekte erfordert, müssen die Eigenschaften auf „privat“ statt „schreibgeschützt“ festgelegt werden, damit der Deserialisierer die Werte beim Entfernen aus der Warteschlange zuweisen kann. Das ist kein Problem im Microservice für Bestellungen, da das Domänenereignis „Veröffentlichen/Abonnieren“ synchron über MediatR implementiert wird.
 
@@ -132,7 +132,7 @@ Wichtig: Wenn Domänenereignisse asynchron verarbeitet werden mit einer Wartesch
 
 Die nächste Frage lautet, wie ein Domänenereignis ausgelöst wird, damit es seine zugehörigen Ereignishandler erreicht. Mehrere Methoden stehen zur Verfügung.
 
-Udi Dahan hat ursprünglich (z.B. in mehreren Beiträgen wie [Domain Events – Take 2 (Domänenereignisse – Teil 2)](http://udidahan.com/2008/08/25/domain-events-take-2/)) die Verwendung einer statischen Klasse für die Verwaltung und Auslösung von Ereignissen vorgeschlagen. Dazu gehören beispielsweise eine statische Klasse mit dem Namen DomainEvents, die Domänenereignisse sofort auslöst, wenn sie aufgerufen wird, und eine Syntax wie `DomainEvents.Raise(Event myEvent)` verwendet. Jimmy Bogard empfiehlt in seinem Blogbeitrag ([Strengthening your domain: Domain Events (Stärkung Ihrer Domäne: Domänenereignisse)](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) einen ähnlichen Ansatz.
+Udi Dahan hat ursprünglich (z.B. in mehreren Beiträgen wie [Domain Events – Take 2 (Domänenereignisse – Teil 2)](http://udidahan.com/2008/08/25/domain-events-take-2/)) die Verwendung einer statischen Klasse für die Verwaltung und Auslösung von Ereignissen vorgeschlagen. Dazu gehören beispielsweise eine statische Klasse mit dem Namen DomainEvents, die Domänenereignisse sofort auslöst, wenn sie aufgerufen wird, und eine Syntax wie `DomainEvents.Raise(Event myEvent)` verwendet. Jimmy Bogard empfiehlt in seinem Blogbeitrag ([Strengthening your domain: Domain Events (Stärken Ihrer Domäne: Domänenereignisse)](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) einen ähnlichen Ansatz.
 
 Wenn die Domänenereignisklasse statisch ist, sendet sie auch sofort an Handler. Dies erschwert das Testen und Debuggen, da die Ereignishandler mit Nebenwirkungslogik unmittelbar nach der Auslösung des Ereignisses ausgeführt werden. Wenn Sie testen und debuggen, sollten Sie sich nur auf das konzentrieren, was in den aktuellen Aggregatklassen geschieht. Achten Sie darauf, dass Sie nicht plötzlich zu anderen Ereignishandlern für Nebenwirkungen im Zusammenhang mit anderen Aggregaten oder anderer Anwendungslogik umgeleitet werden. Aus diesem Grund wurden weitere Methoden entwickelt, die im nächsten Abschnitt erläutert werden.
 
@@ -218,7 +218,7 @@ Die Frage, ob eine einzelne Transaktion über Aggregate ausgeführt oder „Even
 
 > Es kann nicht davon ausgegangen werden, dass jede Regel, die Aggregate umfasst, jederzeit auf dem neuesten Stand ist. Durch die Ereignisverarbeitung, Batchverarbeitung oder andere Aktualisierungsmechanismen können andere Abhängigkeiten innerhalb einer bestimmten Zeit aufgelöst werden. (Seite 128)
 
-Vaughn Vernon erklärt Folgendes in [Effective Aggregate Design. Part II: Making Aggregates Work Together (Effektives Aggregatdesign. Teil II: So arbeiten Aggregate zusammen)](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
+Vaughn Vernon erklärt Folgendes in [Effective Aggregate Design. Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung Teil II: Kooperation von Aggregaten)](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
 
 > Wenn die Ausführung eines Befehls auf einer Aggregatinstanz erfordert, dass zusätzliche Geschäftsregeln auf einem oder mehreren Aggregaten ausgeführt werden, sollte „Eventual Consistency“ verwendet werden\[...\] Es gibt eine praktische Möglichkeit, „Eventual Consistency“ in einem DDD-Modell zu unterstützen. Eine Aggregatmethode veröffentlicht ein Domänenereignis, das rechtzeitig an einen oder mehrere asynchrone Abonnenten übermittelt wird.
 
@@ -355,10 +355,10 @@ Verwenden Sie Domänenereignisse, um explizit Nebenwirkungen von Änderungen in 
 - **Jimmy Bogard. A better domain events pattern (Ein verbessertes Domänenereignismuster)** \
   [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
-- **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung Teil II: Kooperation von Aggregaten)** \
+- **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung Teil II: Kooperation von Aggregaten)** \
   [*https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
-- **Jimmy Bogard. Strengthening your domain: Domain Events (Erweiterung des Domänenmodells durch Domänenereignisse)** \
+- **Jimmy Bogard. Strengthening your domain: Domain Events (Stärken Ihrer Domäne: Domänenereignisse)** \
   [*https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/*](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
 
 - **Tony Truong. Domain Events Pattern Example (Beispiel für das Domänenereignismuster)** \
