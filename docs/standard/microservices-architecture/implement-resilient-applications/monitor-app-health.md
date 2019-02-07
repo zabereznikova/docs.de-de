@@ -3,201 +3,295 @@ title: Systemüberwachung
 description: Entdecken Sie eine Möglichkeit zum Implementieren der Systemüberwachung.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/16/2018
-ms.openlocfilehash: 666b55608ca4e5d18448e1a0b4a1735f3e856474
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.date: 01/07/2019
+ms.openlocfilehash: 4ad13fa4596cc852317a367852b76a9f769caf78
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362482"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55259357"
 ---
-# <a name="health-monitoring"></a><span data-ttu-id="1cb61-103">Systemüberwachung</span><span class="sxs-lookup"><span data-stu-id="1cb61-103">Health monitoring</span></span>
+# <a name="health-monitoring"></a><span data-ttu-id="e1ff4-103">Systemüberwachung</span><span class="sxs-lookup"><span data-stu-id="e1ff4-103">Health monitoring</span></span>
 
-<span data-ttu-id="1cb61-104">Über die Systemüberwachung können Sie nahezu in Echtzeit Informationen zum Zustand Ihrer Container und Microservices erhalten.</span><span class="sxs-lookup"><span data-stu-id="1cb61-104">Health monitoring can allow near-real-time information about the state of your containers and microservices.</span></span> <span data-ttu-id="1cb61-105">Die Systemüberwachung ist für verschieden Aspekte von Betriebsmicroservices wichtig und ist von besonderer Bedeutung, wenn Orchestratoren wie im Folgenden beschrieben ein Anwendungsupgrade in Phasen ausführen.</span><span class="sxs-lookup"><span data-stu-id="1cb61-105">Health monitoring is critical to multiple aspects of operating microservices and is especially important when orchestrators perform partial application upgrades in phases, as explained later.</span></span>
+<span data-ttu-id="e1ff4-104">Über die Systemüberwachung können Sie nahezu in Echtzeit Informationen zum Zustand Ihrer Container und Microservices erhalten.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-104">Health monitoring can allow near-real-time information about the state of your containers and microservices.</span></span> <span data-ttu-id="e1ff4-105">Die Systemüberwachung ist für verschieden Aspekte von Betriebsmicroservices wichtig und ist von besonderer Bedeutung, wenn Orchestratoren wie im Folgenden beschrieben ein Anwendungsupgrade in Phasen ausführen.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-105">Health monitoring is critical to multiple aspects of operating microservices and is especially important when orchestrators perform partial application upgrades in phases, as explained later.</span></span>
 
-<span data-ttu-id="1cb61-106">Auf einem Microservice basierende Anwendungen verwenden häufig Takte oder Integritätsüberprüfungen, damit ihre Systemmonitore, Zeitpläne und Orchestratoren die verschiedenen Dienste überwachen können.</span><span class="sxs-lookup"><span data-stu-id="1cb61-106">Microservices-based applications often use heartbeats or health checks to enable their performance monitors, schedulers, and orchestrators to keep track of the multitude of services.</span></span> <span data-ttu-id="1cb61-107">Wenn Dienste auf Verlangen oder nach Zeitplan kein Signal senden können, um deutlich zu machen, dass sie noch funktionieren, können für Ihre Anwendung Risiken entstehen, wenn Sie Updates bereitstellen. Zudem kann es auch vorkommen, dass Fehler zu spät erkannt werden, wodurch kaskadierende Fehler nicht vermieden werden können, die zu größeren Ausfällen führen können.</span><span class="sxs-lookup"><span data-stu-id="1cb61-107">If services cannot send some sort of “I’m alive” signal, either on demand or on a schedule, your application might face risks when you deploy updates, or it might just detect failures too late and not be able to stop cascading failures that can end up in major outages.</span></span>
+<span data-ttu-id="e1ff4-106">Auf einem Microservice basierende Anwendungen verwenden häufig Takte oder Integritätsüberprüfungen, damit ihre Systemmonitore, Zeitpläne und Orchestratoren die verschiedenen Dienste überwachen können.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-106">Microservices-based applications often use heartbeats or health checks to enable their performance monitors, schedulers, and orchestrators to keep track of the multitude of services.</span></span> <span data-ttu-id="e1ff4-107">Wenn Dienste auf Verlangen oder nach Zeitplan kein Signal senden können, um deutlich zu machen, dass sie noch funktionieren, können für Ihre Anwendung Risiken entstehen, wenn Sie Updates bereitstellen. Zudem kann es auch vorkommen, dass Fehler zu spät erkannt werden, wodurch kaskadierende Fehler nicht vermieden werden können, die zu größeren Ausfällen führen können.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-107">If services cannot send some sort of “I’m alive” signal, either on demand or on a schedule, your application might face risks when you deploy updates, or it might just detect failures too late and not be able to stop cascading failures that can end up in major outages.</span></span>
 
-<span data-ttu-id="1cb61-108">Dienste in ihrer allgemeinen Form senden Zustandsberichte. Diese Informationen werden dann aggregiert, sodass eine allgemeine Übersicht zum Integritätsstatus Ihrer Anwendung erstellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="1cb61-108">In the typical model, services send reports about their status, and that information is aggregated to provide an overall view of the state of health of your application.</span></span> <span data-ttu-id="1cb61-109">Wenn Sie einen Orchestrator verwenden, können Sie Integritätsinformationen zum Cluster Ihrer Orchestratoren hinzufügen, damit der Cluster entsprechend agieren kann.</span><span class="sxs-lookup"><span data-stu-id="1cb61-109">If you're using an orchestrator, you can provide health information to your orchestrator’s cluster, so that the cluster can act accordingly.</span></span> <span data-ttu-id="1cb61-110">Wenn Sie in Integritätsberichte von hoher Qualität investieren, die an Ihre Anwendung angepasst werden, können Sie Fehler der ausgeführte Anwendung viel einfacher ermitteln und beheben.</span><span class="sxs-lookup"><span data-stu-id="1cb61-110">If you invest in high-quality health reporting that's customized for your application, you can detect and fix issues for your running application much more easily.</span></span>
+<span data-ttu-id="e1ff4-108">Dienste in ihrer allgemeinen Form senden Zustandsberichte. Diese Informationen werden dann aggregiert, sodass eine allgemeine Übersicht zum Integritätsstatus Ihrer Anwendung erstellt werden kann.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-108">In the typical model, services send reports about their status, and that information is aggregated to provide an overall view of the state of health of your application.</span></span> <span data-ttu-id="e1ff4-109">Wenn Sie einen Orchestrator verwenden, können Sie Integritätsinformationen zum Cluster Ihrer Orchestratoren hinzufügen, damit der Cluster entsprechend agieren kann.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-109">If you're using an orchestrator, you can provide health information to your orchestrator’s cluster, so that the cluster can act accordingly.</span></span> <span data-ttu-id="e1ff4-110">Wenn Sie in Integritätsberichte von hoher Qualität investieren, die an Ihre Anwendung angepasst werden, können Sie Fehler der ausgeführte Anwendung viel einfacher ermitteln und beheben.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-110">If you invest in high-quality health reporting that's customized for your application, you can detect and fix issues for your running application much more easily.</span></span>
 
-## <a name="implement-health-checks-in-aspnet-core-services"></a><span data-ttu-id="1cb61-111">Implementieren von Integritätsüberprüfungen in ASP.NET Core-Diensten</span><span class="sxs-lookup"><span data-stu-id="1cb61-111">Implement health checks in ASP.NET Core services</span></span>
+## <a name="implement-health-checks-in-aspnet-core-services"></a><span data-ttu-id="e1ff4-111">Implementieren von Integritätsüberprüfungen in ASP.NET Core-Diensten</span><span class="sxs-lookup"><span data-stu-id="e1ff4-111">Implement health checks in ASP.NET Core services</span></span>
 
-<span data-ttu-id="1cb61-112">Wenn Sie einen ASP.NET Core-Microservice oder eine Webanwendung entwickeln, können Sie eine experimentelle Out-of-band-Bibliothek mit dem Namen *Health Checks* (kein offizieller Bestandteil von ASP.NET Core und jetzt veraltet) des ASP-NET-Teams verwenden.</span><span class="sxs-lookup"><span data-stu-id="1cb61-112">When developing an ASP.NET Core microservice or web application, you can use an experimental out-of-band library (not official as part of ASP.NETCore and now deprecated) named *Health Checks* from the ASP.NET team.</span></span> <span data-ttu-id="1cb61-113">Sie ist in diesem [ Dotnet-Architektur-GitHub-Repository](https://github.com/dotnet-architecture/HealthChecks) verfügbar.</span><span class="sxs-lookup"><span data-stu-id="1cb61-113">It's available at this [dotnet-architecture GitHub repository](https://github.com/dotnet-architecture/HealthChecks).</span></span> <span data-ttu-id="1cb61-114">Die offizielle Version von *Health Checks* [wird jedoch in ASP.NET Core 2.2 veröffentlicht](https://github.com/aspnet/Announcements/issues/307) (sollte Ende 2018 offiziell freigegeben werden).</span><span class="sxs-lookup"><span data-stu-id="1cb61-114">However, the official version of *Health Checks* [will be released in ASP.NET Core 2.2](https://github.com/aspnet/Announcements/issues/307) (Should be officially released by the end of 2018).</span></span>
+<span data-ttu-id="e1ff4-112">Beim Entwickeln eines ASP.NET Core-Microservice oder einer -Webanwendung können Sie das integrierte Feature für Integritätsprüfungen verwenden, das mit ASP.NET Core 2.2 veröffentlicht wurde.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-112">When developing an ASP.NET Core microservice or web application, you can use the built-in health checks feature that was released in ASP .NET Core 2.2.</span></span> <span data-ttu-id="e1ff4-113">Wie viele andere ASP.NET Core-Features enthalten die Integritätsprüfungen mehrere Dienste und eine Middleware.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-113">Like many ASP.NET Core features, health checks come with a set of services and a middleware.</span></span>
 
-<span data-ttu-id="1cb61-115">Die Verwendung dieser Bibliothek ist einfach. Außerdem stellt sie Features bereit, mit denen Sie überprüfen können, ob eine beliebige externe Ressource einwandfrei funktioniert, die für Ihre Anwendung benötigt wird (z.B. eine SQL Server-Datenbank oder eine Remote-API).</span><span class="sxs-lookup"><span data-stu-id="1cb61-115">This library is easy to use and provides features that let you validate that any specific external resource needed for your application (like a SQL Server database or remote API) is working properly.</span></span> <span data-ttu-id="1cb61-116">Wenn Sie diese Bibliothek verwenden, bedeutet das, dass die Ressource einwandfrei funktioniert. Dies wird nachfolgend näher erläutert.</span><span class="sxs-lookup"><span data-stu-id="1cb61-116">When you use this library, you can also decide what it means that the resource is healthy, as we explain later.</span></span>
+<span data-ttu-id="e1ff4-114">Dienste und Middleware zur Überprüfung der Integrität sind einfach zu verwenden und stellen Funktionen bereit, mit denen Sie überprüfen können, ob eine beliebige externe Ressource, die für Ihre Anwendung (z. B. eine SQL Server-Datenbank oder eine Remote-API) erforderlich ist, ordnungsgemäß funktioniert.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-114">Health check services and middleware are easy to use and provide capabilities that let you validate if any external resource needed for your application (like a SQL Server database or a remote API) is working properly.</span></span> <span data-ttu-id="e1ff4-115">Wenn Sie dieses Feature verwenden, können Sie außerdem die Voraussetzungen für die Integrität der Ressource festlegen. Dies wird nachfolgend näher erläutert.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-115">When you use this feature, you can also decide what it means that the resource is healthy, as we explain later.</span></span>
 
-<span data-ttu-id="1cb61-117">Damit Sie diese Bibliothek verwenden können, müssen Sie sie zunächst in Ihren Microservices verwenden.</span><span class="sxs-lookup"><span data-stu-id="1cb61-117">In order to use this library, you need to first use the library in your microservices.</span></span> <span data-ttu-id="1cb61-118">Außerdem ist eine Front-End-Anwendung erforderlich, die Integritätsberichte abfragt.</span><span class="sxs-lookup"><span data-stu-id="1cb61-118">Second, you need a front-end application that queries for the health reports.</span></span> <span data-ttu-id="1cb61-119">Bei dieser Front-End-Anwendung kann es sich z.B. um eine benutzerdefinierte Anwendung zur Berichterstattung oder einen Orchestrator an sich handeln, der im Hinblick auf den Integritätszustand angemessen reagieren kann.</span><span class="sxs-lookup"><span data-stu-id="1cb61-119">That front-end application could be a custom reporting application, or it could be an orchestrator itself that can react accordingly to the health states.</span></span>
+<span data-ttu-id="e1ff4-116">Damit Sie dieses Feature effektiv nutzen können, müssen Sie zunächst Dienste in Ihren Microservices konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-116">To use this feature effectively, you need to first configure services in your microservices.</span></span> <span data-ttu-id="e1ff4-117">Außerdem ist eine Front-End-Anwendung erforderlich, die Integritätsberichte abfragt.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-117">Second, you need a front-end application that queries for the health reports.</span></span> <span data-ttu-id="e1ff4-118">Bei dieser Front-End-Anwendung kann es sich z.B. um eine benutzerdefinierte Anwendung zur Berichterstattung oder einen Orchestrator an sich handeln, der im Hinblick auf den Integritätszustand angemessen reagieren kann.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-118">That front-end application could be a custom reporting application, or it could be an orchestrator itself that can react accordingly to the health states.</span></span>
 
-### <a name="use-the-healthchecks-library-in-your-back-end-aspnet-microservices"></a><span data-ttu-id="1cb61-120">Verwenden der HealthChecks-Bibliothek in Ihren Back-End-ASP.NET-Microservices</span><span class="sxs-lookup"><span data-stu-id="1cb61-120">Use the HealthChecks library in your back-end ASP.NET microservices</span></span>
+### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a><span data-ttu-id="e1ff4-119">Verwenden des HealthChecks-Features in Ihren Back-End-ASP.NET-Microservices</span><span class="sxs-lookup"><span data-stu-id="e1ff4-119">Use the HealthChecks feature in your back-end ASP.NET microservices</span></span>
 
-<span data-ttu-id="1cb61-121">In der Beispielanwendung eShopOnContainers können Sie sehen, wie die HealthChecks-Bibliothek verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="1cb61-121">You can see how the HealthChecks library is used in the eShopOnContainers sample application.</span></span> <span data-ttu-id="1cb61-122">Damit Sie beginnen können, müssen Sie definieren, was die Integritätsstatus für die einzelnen Microservices ausmacht.</span><span class="sxs-lookup"><span data-stu-id="1cb61-122">To begin, you need to define what constitutes a healthy status for each microservice.</span></span> <span data-ttu-id="1cb61-123">In der Beispielanwendung funktionieren die Microservices einwandfrei, wenn über HTTP auf die Microservice-API zugegriffen werden kann und wenn die jeweilige SQL Server-Datenbank verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="1cb61-123">In the sample application, the microservices are healthy if the microservice API is accessible via HTTP and if its related SQL Server database is also available.</span></span>
+<span data-ttu-id="e1ff4-120">In diesem Abschnitt erfahren Sie, wie das HealthChecks-Feature in einer Web-API-Beispielanwendung für ASP.NET Core 2.2 verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-120">In this section, you will learn how the HealthChecks feature is used in a sample ASP.NET Core 2.2 Web API application.</span></span> <span data-ttu-id="e1ff4-121">Die Implementierung dieses Features in großen Microservices wie „eShopOnContainers“ wird in einem späteren Abschnitt erläutert.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-121">Implementation of this feature in a large scale microservices like the eShopOnContainers is explained in the later section.</span></span> <span data-ttu-id="e1ff4-122">Damit Sie beginnen können, müssen Sie definieren, was die Integritätsstatus für die einzelnen Microservices ausmacht.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-122">To begin, you need to define what constitutes a healthy status for each microservice.</span></span> <span data-ttu-id="e1ff4-123">In der Beispielanwendung funktionieren die Microservices einwandfrei, wenn über HTTP auf die Microservice-API zugegriffen werden kann und die jeweilige SQL Server-Datenbank verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-123">In the sample application, the microservices are healthy if the microservice API is accessible via HTTP and its related SQL Server database is also available.</span></span>
 
-<span data-ttu-id="1cb61-124">Zukünftig soll die HealthChecks-Bibliothek als NuGet-Paket installiert werden können.</span><span class="sxs-lookup"><span data-stu-id="1cb61-124">In the future, you'll be able to install the HealthChecks library as a NuGet package.</span></span> <span data-ttu-id="1cb61-125">Derzeit müssen Sie den Code aber noch als Teil Ihrer Projektmappe herunterladen oder kompilieren.</span><span class="sxs-lookup"><span data-stu-id="1cb61-125">But as of this writing, you need to download and compile the code as part of your solution.</span></span> <span data-ttu-id="1cb61-126">Klonen Sie den unter <https://github.com/dotnet-architecture/HealthChecks> verfügbaren Code, und kopieren Sie die folgenden Ordner in Ihre Projektmappe:</span><span class="sxs-lookup"><span data-stu-id="1cb61-126">Clone the code available at <https://github.com/dotnet-architecture/HealthChecks> and copy the following folders to your solution:</span></span>
+<span data-ttu-id="e1ff4-124">In .NET Core 2.2 mit den integrierten APIs können Sie wie folgt die Dienste konfigurieren und eine Integritätsprüfung für den Microservice sowie die abhängige SQL Server-Datenbank hinzufügen:</span><span class="sxs-lookup"><span data-stu-id="e1ff4-124">In .NET Core 2.2, with the built-in APIs, you can configure the services, add a Health Check for the microservice and its dependent SQL Server database in this way:</span></span>
 
-- <span data-ttu-id="1cb61-127">src/common</span><span class="sxs-lookup"><span data-stu-id="1cb61-127">src/common</span></span>
-- <span data-ttu-id="1cb61-128">src/Microsoft.AspNetCore.HealthChecks</span><span class="sxs-lookup"><span data-stu-id="1cb61-128">src/Microsoft.AspNetCore.HealthChecks</span></span>
-- <span data-ttu-id="1cb61-129">src/Microsoft.Extensions.HealthChecks</span><span class="sxs-lookup"><span data-stu-id="1cb61-129">src/Microsoft.Extensions.HealthChecks</span></span>
-- <span data-ttu-id="1cb61-130">src/Microsoft.Extensions.HealthChecks.SqlServer</span><span class="sxs-lookup"><span data-stu-id="1cb61-130">src/Microsoft.Extensions.HealthChecks.SqlServer</span></span>
+```csharp
+// Startup.cs from .NET Core 2.2 Web Api sample
+//
+public void ConfigureServices(IServiceCollection services)
+{
+    //...
+    // Registers required services for health checks
+    services.AddHealthChecks()
+    // Add a health check for a SQL database
+    .AddCheck("MyDatabase", new SqlConnectionHealthCheck(Configuration["ConnectionStrings:DefaultConnection"]));
+}
+```
 
-<span data-ttu-id="1cb61-131">Außerdem können Sie auch zusätzliche Überprüfungen wie die für Azure verwenden (Microsoft.Extensions.HealthChecks.AzureStorage), aber da diese eShopOnContainers-Version nicht von Azure abhängig ist, ist dies nicht erforderlich.</span><span class="sxs-lookup"><span data-stu-id="1cb61-131">You could also use additional checks like the ones for Azure (Microsoft.Extensions.HealthChecks.AzureStorage), but since this version of eShopOnContainers does not have any dependency on Azure, you do not need it.</span></span> <span data-ttu-id="1cb61-132">Die Überprüfungen der Integrität von ASP.NET sind nicht erforderlich, da eShopOnContainers auf ASP.NET Core basiert.</span><span class="sxs-lookup"><span data-stu-id="1cb61-132">You do not need the ASP.NET health checks, because eShopOnContainers is based on ASP.NET Core.</span></span>
+<span data-ttu-id="e1ff4-125">Im obigen Code konfiguriert die `services.AddHealthChecks()`-Methode eine einfache HTTP-Überprüfung, die den Statuscode **200** mit der Meldung „Fehlerfrei“ zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-125">In the previous code, the `services.AddHealthChecks()` method configures a basic HTTP check that returns a status code **200** with “Healthy”.</span></span>  <span data-ttu-id="e1ff4-126">Außerdem konfiguriert die `AddCheck()`-Erweiterungsmethode eine benutzerdefinierte `SqlConnectionHealthCheck`-Klasse, mit der die Integrität der zugehörigen SQL-Datenbank-Instanz geprüft wird.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-126">Further, the `AddCheck()` extension method configures a custom `SqlConnectionHealthCheck` that checks the related SQL Database’s health.</span></span>
 
-<span data-ttu-id="1cb61-133">In Abbildung 8-7 wird die HealthChecks-Bibliothek in Visual Studio dargestellt, die von sämtlichen Microservices als Baustein verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="1cb61-133">Figure 8-7 shows the HealthChecks library in Visual Studio, ready to be used as a building block by any microservices.</span></span>
+<span data-ttu-id="e1ff4-127">Die `AddCheck()`-Methode fügt eine neue Integritätsprüfung mit einem festgelegten Namen und der Implementierung vom Typ `IHealthCheck` hinzu.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-127">The `AddCheck()` method adds a new health check with a specified name and the implementation of type `IHealthCheck`.</span></span> <span data-ttu-id="e1ff4-128">Mit der Methode „AddCheck“ können Sie mehrere Integritätsprüfungen hinzufügen, sodass ein Microservice erst einen „fehlerfreien“ Status meldet, wenn alle Prüfungen den Status „Fehlerfrei“ zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-128">You can add multiple Health Checks using AddCheck method, so a microservice won't provide a “healthy” status until all its checks are healthy.</span></span>
 
-![Ansicht des Ordners HealthChecks mit den drei Projekten im Projektmappen-Explorer.](./media/image6.png)
+<span data-ttu-id="e1ff4-129">`SqlConnectionHealthCheck` ist eine benutzerdefinierte Klasse, die `IHealthCheck` implementiert, wodurch eine Verbindungszeichenfolge als Konstruktorparameter interpretiert und eine einfache Abfrage durchgeführt wird, um zu überprüfen, ob die Verbindung mit der SQL-Datenbank-Instanz erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-129">`SqlConnectionHealthCheck` is a custom class that implements `IHealthCheck`, which takes a connection string as a constructor parameter and executes a simple query to check if the connection to the SQL database is successful.</span></span> <span data-ttu-id="e1ff4-130">Sie gibt `HealthCheckResult.Healthy()` zurück, wenn die Abfrage erfolgreich ausgeführt wurde, und Sie gibt `FailureStatus` mit der tatsächlichen Ausnahme zurück, wenn sie fehlschlägt.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-130">It returns `HealthCheckResult.Healthy()` if the query was executed successfully and a `FailureStatus` with the actual exception when it fails.</span></span>
 
-<span data-ttu-id="1cb61-135">**Abbildung 8-7.**</span><span class="sxs-lookup"><span data-stu-id="1cb61-135">**Figure 8-7**.</span></span> <span data-ttu-id="1cb61-136">Quellcode der HealthChecks-Bibliothek von ASP.NET Core in einer Visual Studio-Projektmappe</span><span class="sxs-lookup"><span data-stu-id="1cb61-136">ASP.NET Core HealthChecks library source code in a Visual Studio solution</span></span>
+```csharp
+// Sample SQL Connection Health Check
+public class SqlConnectionHealthCheck : IHealthCheck
+{
+    private static readonly string DefaultTestQuery = "Select 1";
 
-<span data-ttu-id="1cb61-137">Wie zuvor bereits erwähnt, müssen Sie als ersten Schritt für jedes Microserviceprojekt einen Verweis auf die drei HealthChecks-Bibliotheken hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="1cb61-137">As introduced earlier, the first thing to do in each microservice project is to add a reference to the three HealthChecks libraries.</span></span> <span data-ttu-id="1cb61-138">Fügen Sie anschließend die Aktionen zur Überprüfung der Integrität hinzu, die Sie in diesem Microservice ausführen möchten.</span><span class="sxs-lookup"><span data-stu-id="1cb61-138">After that, you add the health check actions that you want to perform in that microservice.</span></span> <span data-ttu-id="1cb61-139">Bei diesen Aktionen handelt es sich im Grunde genommen um Abhängigkeiten von anderen Microservices (HttpUrlCheck) oder Datenbanken (derzeit SqlCheck\* für SQL Server-Datenbanken).</span><span class="sxs-lookup"><span data-stu-id="1cb61-139">These actions are basically dependencies on other microservices (HttpUrlCheck) or databases (currently SqlCheck\* for SQL Server databases).</span></span> <span data-ttu-id="1cb61-140">Fügen Sie die Aktion innerhalb der Startklasse jedes ASP.NET-Microservice oder jeder ASP.NET-Webanwendung hinzu.</span><span class="sxs-lookup"><span data-stu-id="1cb61-140">You add the action within the Startup class of each ASP.NET microservice or ASP.NET web application.</span></span>
+    public string ConnectionString { get; }
 
-<span data-ttu-id="1cb61-141">Sie sollten jeden Dienst bzw. jede Webanwendung konfigurieren, indem Sie alle HTTP- oder Datenbankabhängigkeiten als genau eine AddHealthCheck-Methode hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="1cb61-141">Each service or web application should be configured by adding all its HTTP or database dependencies as one AddHealthCheck method.</span></span> <span data-ttu-id="1cb61-142">Beispielsweise ist die MVC-Webanwendung von eShopOnContainers von vielen Diensten abhängig und verfügt daher über verschiedene AddCheck-Methoden, die zu den Integritätsüberprüfungen hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="1cb61-142">For example, the MVC web application from eShopOnContainers depends on many services, therefore has several AddCheck methods added to the health checks.</span></span>
+    public string TestQuery { get; }
 
-<span data-ttu-id="1cb61-143">Beispielsweise können Sie im folgenden (vereinfachten) Code sehen, wie der Katalogmicroservice eine Abhängigkeit von dessen SQL Server-Datenbank hinzufügt.</span><span class="sxs-lookup"><span data-stu-id="1cb61-143">For instance, in the following (simplified) code you can see how the catalog microservice adds a dependency on its SQL Server database.</span></span>
+    public SqlConnectionHealthCheck(string connectionString)
+        : this(connectionString, testQuery: DefaultTestQuery)
+    {
+    }
+
+    public SqlConnectionHealthCheck(string connectionString, string testQuery)
+    {
+        ConnectionString = connectionString ?? throw new ArgumentNullException(nameof(connectionString));
+        TestQuery = testQuery;
+    }
+
+    public async Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default(CancellationToken))
+    {
+        using (var connection = new SqlConnection(ConnectionString))
+        {
+            try
+            {
+                await connection.OpenAsync(cancellationToken);
+
+                if (TestQuery != null)
+                {
+                    var command = connection.CreateCommand();
+                    command.CommandText = TestQuery;
+
+                    await command.ExecuteNonQueryAsync(cancellationToken);
+                }
+            }
+            catch (DbException ex)
+            {
+                return new HealthCheckResult(status: context.Registration.FailureStatus, exception: ex);
+            }
+        }
+
+        return HealthCheckResult.Healthy();
+    }
+}
+```
+
+<span data-ttu-id="e1ff4-131">Beachten Sie, dass `Select 1` die Abfrage ist, die im obigen Code zur Überprüfung der Integrität der Datenbank verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-131">Note that in the previous code, `Select 1` is the query used to check the Health of the database.</span></span> <span data-ttu-id="e1ff4-132">Orchestratoren wie Kubernetes und Service Fabric führen regelmäßig zur Überwachung der Verfügbarkeit Ihrer Microservices Integritätsüberprüfungen durch, indem sie Anforderungen senden, um diese Microservices zu testen.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-132">To monitor the availability of your microservices, orchestrators like Kubernetes and Service Fabric periodically perform health checks by sending requests to test the microservices.</span></span> <span data-ttu-id="e1ff4-133">Es ist wichtig, dass Ihre Datenbankabfragen effizient sind, damit diese Vorgänge schnell durchgeführt werden können und zu keiner erhöhten Ressourcennutzung führen.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-133">It's important to keep your database queries efficient so that these operations are quick and don’t result in a higher utilization of resources.</span></span>
+
+<span data-ttu-id="e1ff4-134">Erstellen Sie abschließend eine Middleware, die auf den URL-Pfad „/hc“ reagiert:</span><span class="sxs-lookup"><span data-stu-id="e1ff4-134">Finally, create a middleware that responds to the url path “/hc”:</span></span>
+
+```csharp
+// Startup.cs from .NET Core 2.2 Web Api sample
+//
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+    //…
+    app.UseHealthChecks("/hc");
+    //…
+} 
+```
+
+<span data-ttu-id="e1ff4-135">Wenn der Endpunkt `<yourmicroservice>/hc` aufgerufen wird, werden alle Integritätsüberprüfungen ausgeführt, die in der Startklasse in der `AddHealthChecks()`-Methode konfiguriert sind, und das Ergebnis wird angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-135">When the endpoint `<yourmicroservice>/hc` is invoked, it runs all the health checks that are configured in the `AddHealthChecks()` method in the Startup class and shows the result.</span></span>
+
+### <a name="healthchecks-implementation-in-eshoponcontainers"></a><span data-ttu-id="e1ff4-136">Implementieren des HealthChecks-Features in eShopOnContainers</span><span class="sxs-lookup"><span data-stu-id="e1ff4-136">HealthChecks implementation in eShopOnContainers</span></span>
+
+<span data-ttu-id="e1ff4-137">Microservices in eShopOnContainers hängen bei der Ausführung ihrer Aufgaben von mehreren Diensten ab.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-137">Microservices in eShopOnContainers rely on multiple services to perform its task.</span></span> <span data-ttu-id="e1ff4-138">Der `Catalog.API`-Microservice von eShopOnContainers hängt beispielsweise von mehreren Diensten wie Azure Blob Storage, SQL Server und RabbitMQ ab.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-138">For example, the `Catalog.API` microservice from eShopOnContainers depends on many services, such as Azure Blob Storage, SQL Server, and RabbitMQ.</span></span> <span data-ttu-id="e1ff4-139">Daher wurden ihm mit der `AddCheck()`-Methode mehrere Integritätsprüfungen hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-139">Therefore, it has several health checks added using the `AddCheck()` method.</span></span> <span data-ttu-id="e1ff4-140">Für jeden abhängigen Dienst definiert eine `IHealthCheck`-Implementierung, dass der zugehörige Integritätsstatus hinzugefügt werden muss.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-140">For every dependent service, a custom `IHealthCheck` implementation that defines its respective health status needs to be added.</span></span>
+
+<span data-ttu-id="e1ff4-141">Beim Open Source-Projekt [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) wird dieses Problem mit benutzerdefinierten Implementierungen von Integritätsprüfungen für jeden dieser auf .NET Core 2.2 basierenden Unternehmensdiensten gelöst.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-141">The open-source project [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) solves this problem by providing custom health check implementations for each of these enterprise services that are built on top of .NET Core 2.2.</span></span> <span data-ttu-id="e1ff4-142">Jede Integritätsprüfung steht als individuelles NuGet-Paket zur Verfügung, das dem Projekt mühelos hinzugefügt werden kann.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-142">Each health check is available as an individual NuGet package that can be easily added to the project.</span></span> <span data-ttu-id="e1ff4-143">Für eShopOnContainers werden sie in allen enthaltenen Microservices verwendet.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-143">eShopOnContainers use them extensively in all its microservices.</span></span>
+
+<span data-ttu-id="e1ff4-144">Zum `Catalog.API`-Microservice wurden beispielsweise folgende NuGet-Pakete hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="e1ff4-144">For instance, in the `Catalog.API` microservice, the following NuGet packages were added:</span></span>
+
+![Ansicht des Catalog.API-Projekts mit Verweisen auf AspNetCore.Diagnostics.HealthChecks-NuGet-Pakete im Projektmappen-Explorer](./media/image6.png)
+
+<span data-ttu-id="e1ff4-146">**Abbildung 8-7.**</span><span class="sxs-lookup"><span data-stu-id="e1ff4-146">**Figure 8-7**.</span></span> <span data-ttu-id="e1ff4-147">Mit AspNetCore.Diagnostics.HealthChecks in Catalog.API implementierte benutzerdefinierte Integritätsprüfungen</span><span class="sxs-lookup"><span data-stu-id="e1ff4-147">Custom Health Checks implemented in Catalog.API using AspNetCore.Diagnostics.HealthChecks</span></span>
+
+<span data-ttu-id="e1ff4-148">Im folgenden Code werden die Implementierungen der Integritätsprüfungen für jeden abhängigen Dienst hinzugefügt, und anschließend wird die Middleware konfiguriert:</span><span class="sxs-lookup"><span data-stu-id="e1ff4-148">In the following code, the health check implementations are added for each dependent service and then the middleware is configured:</span></span>
 
 ```csharp
 // Startup.cs from Catalog.api microservice
 //
-public class Startup
+public static IServiceCollection AddCustomHealthCheck(this IServiceCollection services, IConfiguration configuration)
 {
-    public void ConfigureServices(IServiceCollection services)
+    var accountName = configuration.GetValue<string>("AzureStorageAccountName");
+    var accountKey = configuration.GetValue<string>("AzureStorageAccountKey");
+
+    var hcBuilder = services.AddHealthChecks();
+
+    hcBuilder
+        .AddSqlServer(
+            configuration["ConnectionString"],
+            name: "CatalogDB-check",
+            tags: new string[] { "catalogdb" });
+
+    if (!string.IsNullOrEmpty(accountName) && !string.IsNullOrEmpty(accountKey))
     {
-        // Add framework services
-        services.AddHealthChecks(checks =>
-        {
-            checks.AddSqlCheck("CatalogDb", Configuration["ConnectionString"]);
-        });
-        // Other services
+        hcBuilder
+            .AddAzureBlobStorage(
+                $"DefaultEndpointsProtocol=https;AccountName={accountName};AccountKey={accountKey};EndpointSuffix=core.windows.net",
+                name: "catalog-storage-check",
+                tags: new string[] { "catalogstorage" });
     }
+    if (configuration.GetValue<bool>("AzureServiceBusEnabled"))
+    {
+        hcBuilder
+            .AddAzureServiceBusTopic(
+                configuration["EventBusConnection"],
+                topicName: "eshop_event_bus",
+                name: "catalog-servicebus-check",
+                tags: new string[] { "servicebus" });
+    }
+    else
+    {
+        hcBuilder
+            .AddRabbitMQ(
+                $"amqp://{configuration["EventBusConnection"]}",
+                name: "catalog-rabbitmqbus-check",
+                tags: new string[] { "rabbitmqbus" });
+    }
+
+    return services;
 }
 ```
 
-<span data-ttu-id="1cb61-144">Jedoch verfügt die MVC-Webanwendung von eShopOnContainers über mehrere Abhängigkeiten von den restlichen Microservices.</span><span class="sxs-lookup"><span data-stu-id="1cb61-144">However, the MVC web application of eShopOnContainers has multiple dependencies on the rest of the microservices.</span></span> <span data-ttu-id="1cb61-145">Daher ruft diese wie im folgenden (vereinfachten) Beispiel dargestellt genau eine AddUrlCheck-Methode für jeden Microservice auf:</span><span class="sxs-lookup"><span data-stu-id="1cb61-145">Therefore, it calls one AddUrlCheck method for each microservice, as shown in the following (simplified) example:</span></span>
+<span data-ttu-id="e1ff4-149">Abschließend wird die HealthCheck-Middleware hinzugefügt, die am Endpunkt „/hc“ lauscht:</span><span class="sxs-lookup"><span data-stu-id="e1ff4-149">Finally, we add the HealthCheck middleware to listen to “/hc” endpoint:</span></span>
 
 ```csharp
-// Startup.cs from the MVC web app
-public class Startup
+// HealthCheck middleware
+app.UseHealthChecks("/hc", new HealthCheckOptions()
 {
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.AddMvc();
-        services.Configure<AppSettings>(Configuration);
-        services.AddHealthChecks(checks =>
-        {
-            checks.AddUrlCheck(Configuration["CatalogUrl"]);
-            checks.AddUrlCheck(Configuration["OrderingUrl"]);
-            checks.AddUrlCheck(Configuration["BasketUrl"]);
-            checks.AddUrlCheck(Configuration["IdentityUrl"]);
-        });
-    }
-}
-```
-
-<span data-ttu-id="1cb61-146">Somit gibt ein Microservice erst den Status „healthy“ (OK) zurück, wenn alle Überprüfungen einwandfrei durchgeführt werden konnten.</span><span class="sxs-lookup"><span data-stu-id="1cb61-146">Thus, a microservice will not provide a “healthy” status until all its checks are healthy as well.</span></span>
-
-<span data-ttu-id="1cb61-147">Wenn der Microservice nicht über eine Abhängigkeit von einem Dienst oder einem SQL Server verfügt, sollten Sie die Überprüfung „Healthy("Ok")“ hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="1cb61-147">If the microservice does not have a dependency on a service or on SQL Server, you should just add a Healthy("Ok") check.</span></span> <span data-ttu-id="1cb61-148">Der folgende Code wurde dem eShopOnContainers-Microservice `basket.api` entnommen.</span><span class="sxs-lookup"><span data-stu-id="1cb61-148">The following code is from the eShopOnContainers `basket.api` microservice.</span></span> <span data-ttu-id="1cb61-149">(Der Warenkorbmicroservice verwendet zwar den Redis-Cache, jedoch enthält die Bibliothek noch keinen Redis-Anbieter für Integritätsüberprüfungen.)</span><span class="sxs-lookup"><span data-stu-id="1cb61-149">(The basket microservice uses the Redis cache, but the library does not yet include a Redis health check provider.)</span></span>
-
-```csharp
-services.AddHealthChecks(checks =>
-{
-    checks.AddValueTaskCheck("HTTP Endpoint", () => new
-        ValueTask<IHealthCheckResult>(HealthCheckResult.Healthy("Ok")));
+    Predicate = _ => true,
+    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 });
-```
-
-<span data-ttu-id="1cb61-150">Damit ein Dienst oder eine Webanwendung die Endpunkte zur Integritätsüberprüfung zur Verfügung stellen kann, muss die Erweiterungsmethode `UseHealthChecks([*url_for_health_checks*])` aktiviert sein.</span><span class="sxs-lookup"><span data-stu-id="1cb61-150">For a service or web application to expose the health check endpoint, it has to enable the `UseHealthChecks([*url_for_health_checks*])` extension method.</span></span> <span data-ttu-id="1cb61-151">Diese Methode wird auf der `WebHostBuilder`-Ebene in der Hauptmethode der `Program`-Klasse Ihres ASP.NET Core-Diensts oder Ihrer Anwendung unmittelbar nach <xref:Microsoft.AspNetCore.WebHost.CreateDefaultBuilder> ausgeführt, wie im folgenden vereinfachten Code dargestellt:</span><span class="sxs-lookup"><span data-stu-id="1cb61-151">This method goes at the `WebHostBuilder` level in the main method of the `Program` class of your ASP.NET Core service or web application, right after <xref:Microsoft.AspNetCore.WebHost.CreateDefaultBuilder> as shown in the following simplified code:</span></span>
-
-```csharp
-namespace Microsoft.eShopOnContainers.WebMVC
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var host = WebHost.CreateDefaultBuilder(args)
-                .UseHealthChecks("/hc")
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseStartup<Startup>()
-                .Build();
-
-            host.Run();
-        }
-    }
 }
 ```
 
-<span data-ttu-id="1cb61-152">Der Prozess funktioniert wie folgt: Jeder Microservice stellt den Endpunkt „/hc“ zur Verfügung.</span><span class="sxs-lookup"><span data-stu-id="1cb61-152">The process works this way: each microservice exposes the endpoint /hc.</span></span> <span data-ttu-id="1cb61-153">Dieser Endpunkt wird von der ASP.NET Core-Middleware „HealthChecks-Bibliothek“ erstellt.</span><span class="sxs-lookup"><span data-stu-id="1cb61-153">That endpoint is created by the HealthChecks library ASP.NET Core middleware.</span></span> <span data-ttu-id="1cb61-154">Wenn dieser Endpunkt aufgerufen wird, werden alle Integritätsüberprüfungen ausgeführt, die in der Startklasse in der AddHealthChecks-Methode konfiguriert sind.</span><span class="sxs-lookup"><span data-stu-id="1cb61-154">When that endpoint is invoked, it runs all the health checks that are configured in the AddHealthChecks method in the Startup class.</span></span>
+### <a name="query-your-microservices-to-report-about-their-health-status"></a><span data-ttu-id="e1ff4-150">Abfragen eines Berichts zum Integritätsstatus der Microservices</span><span class="sxs-lookup"><span data-stu-id="e1ff4-150">Query your microservices to report about their health status</span></span>
 
-<span data-ttu-id="1cb61-155">Die Methode „UseHealthChecks“ geht davon aus, dass es einen Port oder einen Pfad gibt.</span><span class="sxs-lookup"><span data-stu-id="1cb61-155">The UseHealthChecks method expects a port or a path.</span></span> <span data-ttu-id="1cb61-156">Dieser Port bzw. Pfad wird als Endpunkt verwendet, um den Integritätsstatus dieses Diensts zu überprüfen.</span><span class="sxs-lookup"><span data-stu-id="1cb61-156">That port or path is the endpoint to use to check the health state of the service.</span></span> <span data-ttu-id="1cb61-157">Beispielsweise verwendet der Katalogmicroservice den Pfad „/hc“.</span><span class="sxs-lookup"><span data-stu-id="1cb61-157">For instance, the catalog microservice uses the path /hc.</span></span>
-
-### <a name="cache-health-check-responses"></a><span data-ttu-id="1cb61-158">Zwischenspeichern der Antworten der Integritätsüberprüfung</span><span class="sxs-lookup"><span data-stu-id="1cb61-158">Cache health check responses</span></span>
-
-<span data-ttu-id="1cb61-159">Damit in Ihrem Dienst kein Denial of Service (DoS) festgestellt wird, oder wenn die Leistung des Diensts nicht beeinträchtigt werden soll, indem die Ressourcen zu häufig überprüft werden, können Sie die Rückgaben zwischenspeichern und eine Cachedauer für jede Integritätsüberprüfung konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="1cb61-159">Since you do not want to cause a Denial of Service (DoS) in your services, or you simply do not want to impact service performance by checking resources too frequently, you can cache the returns and configure a cache duration for each health check.</span></span>
-
-<span data-ttu-id="1cb61-160">Standardmäßig ist die Cachedauer intern auf 5 Minuten festgelegt. Sie können diese Cachedauer allerdings wie im folgenden Code bei jeder Integritätsüberprüfung ändern:</span><span class="sxs-lookup"><span data-stu-id="1cb61-160">By default, the cache duration is internally set to 5 minutes, but you can change that cache duration on each health check, as in the following code:</span></span>
-
-```csharp
-checks.AddUrlCheck(Configuration["CatalogUrl"],1); // 1 min as cache duration
-```
-
-### <a name="query-your-microservices-to-report-about-their-health-status"></a><span data-ttu-id="1cb61-161">Abfragen eines Berichts zum Integritätsstatus der Microservices</span><span class="sxs-lookup"><span data-stu-id="1cb61-161">Query your microservices to report about their health status</span></span>
-
-<span data-ttu-id="1cb61-162">Wenn Sie wie in diesem Artikel beschrieben Integritätsüberprüfungen konfiguriert haben, können Sie direkt über den Browser überprüfen, ob der Microservice einwandfrei funktioniert, sobald dieser in Docker ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="1cb61-162">When you've configured health checks as described in this article and you have the microservice running in Docker, you can directly check from a browser if it's healthy.</span></span>
-
-<span data-ttu-id="1cb61-163">Sie müssen den Containerport im Docker-Host veröffentlichen, damit Sie über die externe Docker-Host-IP-Adresse oder `localhost` auf den Container zugreifen können, wie in Abbildung 8-8 gezeigt.</span><span class="sxs-lookup"><span data-stu-id="1cb61-163">You have to publish the container port in the Docker host, so you can access the container through the external Docker host IP or through `localhost`, as shown in figure 8-8.</span></span>
+<span data-ttu-id="e1ff4-151">Wenn Sie wie in diesem Artikel beschrieben Integritätsüberprüfungen konfiguriert haben, können Sie direkt über den Browser überprüfen, ob der Microservice einwandfrei funktioniert, sobald dieser in Docker ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-151">When you've configured health checks as described in this article and you have the microservice running in Docker, you can directly check from a browser if it's healthy.</span></span> <span data-ttu-id="e1ff4-152">Sie müssen den Containerport im Docker-Host veröffentlichen, damit Sie über die externe Docker-Host-IP-Adresse oder `localhost` auf den Container zugreifen können, wie in Abbildung 8-8 gezeigt.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-152">You have to publish the container port in the Docker host, so you can access the container through the external Docker host IP or through `localhost`, as shown in figure 8-8.</span></span>
 
 ![Browseransicht der von einer Integritätsprüfung zurückgegebenen JSON-Antwort](./media/image7.png)
 
-<span data-ttu-id="1cb61-165">**Abbildung 8-8.**</span><span class="sxs-lookup"><span data-stu-id="1cb61-165">**Figure 8-8**.</span></span> <span data-ttu-id="1cb61-166">Überprüfen des Integritätsstaus eines einzelnen Diensts über einen Browser</span><span class="sxs-lookup"><span data-stu-id="1cb61-166">Checking health status of a single service from a browser</span></span>
+<span data-ttu-id="e1ff4-154">**Abbildung 8-8.**</span><span class="sxs-lookup"><span data-stu-id="e1ff4-154">**Figure 8-8**.</span></span> <span data-ttu-id="e1ff4-155">Überprüfen des Integritätsstaus eines einzelnen Diensts über einen Browser</span><span class="sxs-lookup"><span data-stu-id="e1ff4-155">Checking health status of a single service from a browser</span></span>
 
-<span data-ttu-id="1cb61-167">In diesem Test können Sie sehen, dass der Microservice „catalog.api“ (der auf Port 5101 ausgeführt wird) einwandfrei funktioniert, da er den HTTP-Status 200 und Statusinformationen im JSON-Format zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="1cb61-167">In that test, you can see that the catalog.api microservice (running on port 5101) is healthy, returning HTTP status 200 and status information in JSON.</span></span> <span data-ttu-id="1cb61-168">Das bedeutet außerdem, dass der Dienst intern ebenfalls die Integrität seiner SQL Server-Datenbankabhängigkeit überprüft hat und für die Integritätsüberprüfung „OK“ zurückgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="1cb61-168">It also means that internally the service also checked the health of its SQL Server database dependency and that health check was reported itself as healthy.</span></span>
+<span data-ttu-id="e1ff4-156">In diesem Test können Sie sehen, dass der Microservice `Catalog.API` (der auf Port 5101 ausgeführt wird) einwandfrei funktioniert, da er den HTTP-Status 200 und Statusinformationen im JSON-Format zurückgibt.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-156">In that test, you can see that the `Catalog.API` microservice (running on port 5101) is healthy, returning HTTP status 200 and status information in JSON.</span></span> <span data-ttu-id="e1ff4-157">Der Dienst hat die Integrität seiner SQL Server-Datenbankabhängigkeit und RabbitMQ ebenfalls überprüft, weshalb die Integritätsprüfung sich selbst als „Fehlerfrei“ meldet.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-157">The service also checked the health of its SQL Server database dependency and RabbitMQ, so the health check reported itself as healthy.</span></span>
 
-## <a name="use-watchdogs"></a><span data-ttu-id="1cb61-169">Verwenden von Überwachungselementen</span><span class="sxs-lookup"><span data-stu-id="1cb61-169">Use watchdogs</span></span>
+## <a name="use-watchdogs"></a><span data-ttu-id="e1ff4-158">Verwenden von Überwachungselementen</span><span class="sxs-lookup"><span data-stu-id="e1ff4-158">Use watchdogs</span></span>
 
-<span data-ttu-id="1cb61-170">Bei einem Überwachungselement handelt es sich um einen separaten Dienst, der die Integrität überprüfen und in mehreren Diensten geladen werden kann. Außerdem kann es Berichte zur Integrität der Microservices erstellen, indem es eine Abfrage an die bereit eingeführte `HealthChecks`-Bibliothek sendet.</span><span class="sxs-lookup"><span data-stu-id="1cb61-170">A watchdog is a separate service that can watch health and load across services, and report health about the microservices by querying with the `HealthChecks` library introduced earlier.</span></span> <span data-ttu-id="1cb61-171">Dadurch können Fehler vermieden werden, die anhand der Ansicht eines einzelnen Diensts nicht ermittelt werden könnten.</span><span class="sxs-lookup"><span data-stu-id="1cb61-171">This can help prevent errors that would not be detected based on the view of a single service.</span></span> <span data-ttu-id="1cb61-172">Überwachungselemente eignen sich außerdem zum Hosten von Code, über den ohne Benutzerinteraktion Abhilfemaßnahmen für bekannte Bedingungen ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="1cb61-172">Watchdogs also are a good place to host code that can perform remediation actions for known conditions without user interaction.</span></span>
+<span data-ttu-id="e1ff4-159">Bei einem Überwachungselement handelt es sich um einen separaten Dienst, der die Integrität überprüfen und in mehreren Diensten geladen werden kann. Außerdem kann es Berichte zur Integrität der Microservices erstellen, indem es eine Abfrage an die bereit eingeführte `HealthChecks`-Bibliothek sendet.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-159">A watchdog is a separate service that can watch health and load across services, and report health about the microservices by querying with the `HealthChecks` library introduced earlier.</span></span> <span data-ttu-id="e1ff4-160">Dadurch können Fehler vermieden werden, die anhand der Ansicht eines einzelnen Diensts nicht ermittelt werden könnten.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-160">This can help prevent errors that would not be detected based on the view of a single service.</span></span> <span data-ttu-id="e1ff4-161">Überwachungselemente eignen sich außerdem zum Hosten von Code, über den ohne Benutzerinteraktion Abhilfemaßnahmen für bekannte Bedingungen ausgeführt werden können.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-161">Watchdogs also are a good place to host code that can perform remediation actions for known conditions without user interaction.</span></span>
 
-<span data-ttu-id="1cb61-173">Das eShopOnContainers-Beispiel enthält eine Webseite, auf der wie in Abbildung 8-9 dargestellt Beispielberichte zur Integritätsüberprüfung angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="1cb61-173">The eShopOnContainers sample contains a web page that displays sample health check reports, as shown in Figure 8-9.</span></span> <span data-ttu-id="1cb61-174">Dabei handelt es sich um das einfachste Überwachungselement, da es nur den Zustand der Microservices und Webanwendungen in eShopOnContainers anzeigt.</span><span class="sxs-lookup"><span data-stu-id="1cb61-174">This is the simplest watchdog you could have since it only shows the state of the microservices and web applications in eShopOnContainers.</span></span> <span data-ttu-id="1cb61-175">In der Regel führt ein Überwachungselement Aktionen aus, wenn der Status „Fehlerhaft“ ermittelt wird.</span><span class="sxs-lookup"><span data-stu-id="1cb61-175">Usually a watchdog also takes actions when it detects unhealthy states.</span></span>
+<span data-ttu-id="e1ff4-162">Das eShopOnContainers-Beispiel enthält eine Webseite, auf der wie in Abbildung 8-9 dargestellt Beispielberichte zur Integritätsüberprüfung angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-162">The eShopOnContainers sample contains a web page that displays sample health check reports, as shown in Figure 8-9.</span></span> <span data-ttu-id="e1ff4-163">Dabei handelt es sich um das einfachste Überwachungselement, da es nur den Zustand der Microservices und Webanwendungen in eShopOnContainers anzeigt.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-163">This is the simplest watchdog you could have since it only shows the state of the microservices and web applications in eShopOnContainers.</span></span> <span data-ttu-id="e1ff4-164">In der Regel führt ein Überwachungselement Aktionen aus, wenn der Status „Fehlerhaft“ ermittelt wird.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-164">Usually a watchdog also takes actions when it detects unhealthy states.</span></span>
 
-![Browseransicht der WebStatus-App zeigt den Integritätsstatus von fünf Microservices von eShopOnContainers](./media/image8.png)
+<span data-ttu-id="e1ff4-165">[AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) stellt auch das NuGet-Paket [AspNetCore.HealthChecks.UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) bereit, das zum Anzeigen der Ergebnisse der Integritätsprüfung der konfigurierten URIs verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-165">Fortunately, [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) also provides [AspNetCore.HealthChecks.UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) NuGet package that can be used to display the health check results from the configured URIs.</span></span>
 
-<span data-ttu-id="1cb61-177">**Abbildung 8-9.**</span><span class="sxs-lookup"><span data-stu-id="1cb61-177">**Figure 8-9**.</span></span> <span data-ttu-id="1cb61-178">Beispielbericht zur Integritätsüberprüfung in eShopOnContainers</span><span class="sxs-lookup"><span data-stu-id="1cb61-178">Sample health check report in eShopOnContainers</span></span>
+![Browseransicht der WebStatus-App mit den Integritätsstatus aller Microservices von eShopOnContainers](./media/image8.png)
 
-<span data-ttu-id="1cb61-179">Die ASP.NET-Middleware der HealthChecks-Bibliothek von ASP.NET Core stellt also für jeden Microservice genau einen Endpunkt zur Integritätsüberprüfung bereit.</span><span class="sxs-lookup"><span data-stu-id="1cb61-179">In summary, the ASP.NET middleware of the ASP.NET Core HealthChecks library provides a single health check endpoint for each microservice.</span></span> <span data-ttu-id="1cb61-180">Dadurch werden alle darin definierten Integritätsüberprüfungen ausgeführt und ein allgemeiner Integritätsstatus zurückgegeben, der von diesen Überprüfungen abhängig ist.</span><span class="sxs-lookup"><span data-stu-id="1cb61-180">This will execute all the health checks defined within it and return an overall health state depending on all those checks.</span></span>
+<span data-ttu-id="e1ff4-167">**Abbildung 8-9.**</span><span class="sxs-lookup"><span data-stu-id="e1ff4-167">**Figure 8-9**.</span></span> <span data-ttu-id="e1ff4-168">Beispielbericht zur Integritätsüberprüfung in eShopOnContainers</span><span class="sxs-lookup"><span data-stu-id="e1ff4-168">Sample health check report in eShopOnContainers</span></span>
 
-<span data-ttu-id="1cb61-181">Die HealthChecks-Bibliothek ist über neue Integritätsüberprüfungen im Zusammenhang mit externen Ressourcen erweiterbar.</span><span class="sxs-lookup"><span data-stu-id="1cb61-181">The HealthChecks library is extensible through new health checks of future external resources.</span></span> <span data-ttu-id="1cb61-182">Beispielsweise wird erwartet, dass in Zukunft die Bibliothek Integritätsüberprüfungen für den Redis-Cache und andere Datenbanken verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="1cb61-182">For example, we expect that in the future the library will have health checks for Redis cache and for other databases.</span></span> <span data-ttu-id="1cb61-183">Über die Bibliothek können mithilfe von Dienst- oder Anwendungsabhängigkeiten Berichte zur Integrität erstellt werden. Anhand dieser Integritätsüberprüfungen können Sie Aktionen durchführen.</span><span class="sxs-lookup"><span data-stu-id="1cb61-183">The library allows health reporting by multiple service or application dependencies, and you can then take actions based on those health checks.</span></span>
+<span data-ttu-id="e1ff4-169">Dieser Überwachungsdienst fragt also den Endpunkt „/hc“ aller Microservices ab.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-169">In summary, this watchdog service queries each microservice’s "/hc" endpoint.</span></span> <span data-ttu-id="e1ff4-170">Dadurch werden alle darin definierten Integritätsüberprüfungen ausgeführt und ein allgemeiner Integritätsstatus zurückgegeben, der von diesen Überprüfungen abhängig ist.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-170">This will execute all the health checks defined within it and return an overall health state depending on all those checks.</span></span> <span data-ttu-id="e1ff4-171">HealthChecksUI ist mit wenigen Konfigurationseinträgen und zwei Codezeilen, die zur Datei „Startup.cs“ des Überwachungsdiensts hinzugefügt werden müssen, leicht zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-171">The HealthChecksUI is easy to consume with a few configuration entries and two lines of code that needs to be added into the Startup.cs of the watchdog service.</span></span>
 
-## <a name="health-checks-when-using-orchestrators"></a><span data-ttu-id="1cb61-184">Integritätsüberprüfungen, wenn Orchestratoren verwendet werden</span><span class="sxs-lookup"><span data-stu-id="1cb61-184">Health checks when using orchestrators</span></span>
+<span data-ttu-id="e1ff4-172">Beispielkonfigurationsdatei für HealthChecksUI:</span><span class="sxs-lookup"><span data-stu-id="e1ff4-172">Sample configuration file for health check UI:</span></span>
 
-<span data-ttu-id="1cb61-185">Orchestratoren wie Kubernetes und Service Fabric führen regelmäßig zur Überwachung der Verfügbarkeit Ihrer Microservices Integritätsüberprüfungen durch, indem sie Anforderungen senden, um diese Microservices zu testen.</span><span class="sxs-lookup"><span data-stu-id="1cb61-185">To monitor the availability of your microservices, orchestrators like Kubernetes and Service Fabric periodically perform health checks by sending requests to test the microservices.</span></span> <span data-ttu-id="1cb61-186">Wenn ein Orchestrator ermittelt, dass ein Dienst bzw. ein Container fehlerhaft ist, leitet er keine Anforderungen mehr an diese Instanz weiter.</span><span class="sxs-lookup"><span data-stu-id="1cb61-186">When an orchestrator determines that a service/container is unhealthy, it stops routing requests to that instance.</span></span> <span data-ttu-id="1cb61-187">Außerdem erstellt er dann in der Regel eine neue Instanz dieses Containers.</span><span class="sxs-lookup"><span data-stu-id="1cb61-187">It also usually creates a new instance of that container.</span></span>
+```json
+// Configuration
+{
+  "HealthChecks-UI": {
+    "HealthChecks": [
+      {
+        "Name": "Ordering HTTP Check",
+        "Uri": "http://localhost:5102/hc"
+      },
+      {
+        "Name": "Ordering HTTP Background Check",
+        "Uri": "http://localhost:5111/hc"
+      },
+      //...
+    ]}
+}
+```
 
-<span data-ttu-id="1cb61-188">Beispielsweise können die meisten Orchestratoren Integritätsüberprüfungen verwenden, um Bereitstellungen ohne Ausfallzeit zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="1cb61-188">For instance, most orchestrators can use health checks to manage zero-downtime deployments.</span></span> <span data-ttu-id="1cb61-189">Erst wenn sich der Status des Diensts bzw. Containers in „healthy“ (OK) ändert, leitet der Orchestrator wieder Datenverkehr an die Instanzen des Diensts bzw. Containers weiter.</span><span class="sxs-lookup"><span data-stu-id="1cb61-189">Only when the status of a service/container changes to healthy will the orchestrator start routing traffic to service/container instances.</span></span>
+<span data-ttu-id="e1ff4-173">Datei „Startup.cs“, die HealthChecksUI hinzufügt:</span><span class="sxs-lookup"><span data-stu-id="e1ff4-173">Startup.cs file that adds HealthChecksUI:</span></span>
 
-<span data-ttu-id="1cb61-190">Die Systemüberwachung ist besonders wichtig, wenn ein Orchestrator ein Anwendungsupgrade ausführt.</span><span class="sxs-lookup"><span data-stu-id="1cb61-190">Health monitoring is especially important when an orchestrator performs an application upgrade.</span></span> <span data-ttu-id="1cb61-191">Einige Orchestratoren (wie Azure Service Fabric) führen in Phasen Updates für Dienste aus. Sie aktualisieren also z.B. ein Fünftel der Clusteroberfläche für jedes Anwendungsupgrade.</span><span class="sxs-lookup"><span data-stu-id="1cb61-191">Some orchestrators (like Azure Service Fabric) update services in phases—for example, they might update one-fifth of the cluster surface for each application upgrade.</span></span> <span data-ttu-id="1cb61-192">Die Knoten, für die zur selben Zeit ein Upgrade ausgeführt wird, werden als *Upgradedomäne* bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="1cb61-192">The set of nodes that's upgraded at the same time is referred to as an *upgrade domain*.</span></span> <span data-ttu-id="1cb61-193">Wenn für alle Upgradedomänen ein Upgrade ausgeführt wurde und für die Benutzer verfügbar sind, muss diese Upgradedomäne Integritätsüberprüfungen übergeben, bevor die Bereitstellung auf die nächste Upgradedomäne verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="1cb61-193">After each upgrade domain has been upgraded and is available to users, that upgrade domain must pass health checks before the deployment moves to the next upgrade domain.</span></span>
+```csharp
+// Startup.cs from WebStatus(Watch Dog) service
+//
+public void ConfigureServices(IServiceCollection services)
+{
+    //…
+    // Registers required services for health checks
+    services.AddHealthChecksUI();
+}
+//…
+public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+{
+    //…
+    app.UseHealthChecksUI(config=> config.UIPath = “/hc-ui”);
+    //…
+}
+```
 
-<span data-ttu-id="1cb61-194">Berichtsmetriken des Diensts machen einen weiteren Aspekt der Dienstintegrität aus.</span><span class="sxs-lookup"><span data-stu-id="1cb61-194">Another aspect of service health is reporting metrics from the service.</span></span> <span data-ttu-id="1cb61-195">Dabei handelt es sich um eine erweiterte Funktion des Integritätsmodells einiger Orchestratoren wie Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="1cb61-195">This is an advanced capability of the health model of some orchestrators, like Service Fabric.</span></span> <span data-ttu-id="1cb61-196">Metriken sind von Bedeutung, wenn Orchestratoren verwendet werden, da sie einen Ausgleich für die Ressourcennutzung schaffen.</span><span class="sxs-lookup"><span data-stu-id="1cb61-196">Metrics are important when using an orchestrator because they are used to balance resource usage.</span></span> <span data-ttu-id="1cb61-197">Metriken können außerdem auf Systemintegrität hindeuten.</span><span class="sxs-lookup"><span data-stu-id="1cb61-197">Metrics also can be an indicator of system health.</span></span> <span data-ttu-id="1cb61-198">Beispielsweise kann es sein, dass Sie über eine Anwendung mit vielen Microservices verfügen, wobei jede Instanz einen Bericht zu einer „Anforderungen pro Sekunde“-Metrik erstellt.</span><span class="sxs-lookup"><span data-stu-id="1cb61-198">For example, you might have an application that has many microservices, and each instance reports a requests-per-second (RPS) metric.</span></span> <span data-ttu-id="1cb61-199">Wenn ein Dienst mehre Ressourcen (z.B. den Arbeitsspeicher oder den Prozessor) als ein anderer Dienst verwendet, kann der Orchestrator Dienstinstanzen innerhalb des Clusters verschieben, um zu versuchen, die Ressourcenverwendung zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="1cb61-199">If one service is using more resources (memory, processor, etc.) than another service, the orchestrator could move service instances around in the cluster to try to maintain even resource utilization.</span></span>
+## <a name="health-checks-when-using-orchestrators"></a><span data-ttu-id="e1ff4-174">Integritätsüberprüfungen, wenn Orchestratoren verwendet werden</span><span class="sxs-lookup"><span data-stu-id="e1ff4-174">Health checks when using orchestrators</span></span>
 
-<span data-ttu-id="1cb61-200">Beachten Sie, dass Azure Service Fabric ein eigenes [Modell zur Systemüberwachung](/azure/service-fabric/service-fabric-health-introduction) umfasst, das umfassender ist als einfache Integritätsüberprüfungen.</span><span class="sxs-lookup"><span data-stu-id="1cb61-200">Note that Azure Service Fabric provides its own [Health Monitoring model](/azure/service-fabric/service-fabric-health-introduction), which is more advanced than simple health checks.</span></span>
+<span data-ttu-id="e1ff4-175">Orchestratoren wie Kubernetes und Service Fabric führen regelmäßig zur Überwachung der Verfügbarkeit Ihrer Microservices Integritätsüberprüfungen durch, indem sie Anforderungen senden, um diese Microservices zu testen.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-175">To monitor the availability of your microservices, orchestrators like Kubernetes and Service Fabric periodically perform health checks by sending requests to test the microservices.</span></span> <span data-ttu-id="e1ff4-176">Wenn ein Orchestrator ermittelt, dass ein Dienst bzw. ein Container fehlerhaft ist, leitet er keine Anforderungen mehr an diese Instanz weiter.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-176">When an orchestrator determines that a service/container is unhealthy, it stops routing requests to that instance.</span></span> <span data-ttu-id="e1ff4-177">Außerdem erstellt er dann in der Regel eine neue Instanz dieses Containers.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-177">It also usually creates a new instance of that container.</span></span>
 
-## <a name="advanced-monitoring-visualization-analysis-and-alerts"></a><span data-ttu-id="1cb61-201">Erweiterte Überwachung: Visualisierung, Analyse und Warnungen</span><span class="sxs-lookup"><span data-stu-id="1cb61-201">Advanced monitoring: visualization, analysis, and alerts</span></span>
+<span data-ttu-id="e1ff4-178">Beispielsweise können die meisten Orchestratoren Integritätsüberprüfungen verwenden, um Bereitstellungen ohne Ausfallzeit zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-178">For instance, most orchestrators can use health checks to manage zero-downtime deployments.</span></span> <span data-ttu-id="e1ff4-179">Erst wenn sich der Status des Diensts bzw. Containers in „healthy“ (OK) ändert, leitet der Orchestrator wieder Datenverkehr an die Instanzen des Diensts bzw. Containers weiter.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-179">Only when the status of a service/container changes to healthy will the orchestrator start routing traffic to service/container instances.</span></span>
 
-<span data-ttu-id="1cb61-202">Als letzter Schritt im Rahmen der Überwachung wird der Ereignisdatenstrom visualisiert, ein Bericht zur Leistung des Diensts wird erstellt, und es wird eine Warnung ausgegeben, wenn ein Problem erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="1cb61-202">The final part of monitoring is visualizing the event stream, reporting on service performance, and alerting when an issue is detected.</span></span> <span data-ttu-id="1cb61-203">Sie können für diesen Bestandteil der Überwachung mehrere Lösungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="1cb61-203">You can use different solutions for this aspect of monitoring.</span></span>
+<span data-ttu-id="e1ff4-180">Die Systemüberwachung ist besonders wichtig, wenn ein Orchestrator ein Anwendungsupgrade ausführt.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-180">Health monitoring is especially important when an orchestrator performs an application upgrade.</span></span> <span data-ttu-id="e1ff4-181">Einige Orchestratoren (wie Azure Service Fabric) führen in Phasen Updates für Dienste aus. Sie aktualisieren also z.B. ein Fünftel der Clusteroberfläche für jedes Anwendungsupgrade.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-181">Some orchestrators (like Azure Service Fabric) update services in phases—for example, they might update one-fifth of the cluster surface for each application upgrade.</span></span> <span data-ttu-id="e1ff4-182">Die Knoten, für die zur selben Zeit ein Upgrade ausgeführt wird, werden als *Upgradedomäne* bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-182">The set of nodes that's upgraded at the same time is referred to as an *upgrade domain*.</span></span> <span data-ttu-id="e1ff4-183">Wenn für alle Upgradedomänen ein Upgrade ausgeführt wurde und für die Benutzer verfügbar sind, muss diese Upgradedomäne Integritätsüberprüfungen übergeben, bevor die Bereitstellung auf die nächste Upgradedomäne verschoben wird.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-183">After each upgrade domain has been upgraded and is available to users, that upgrade domain must pass health checks before the deployment moves to the next upgrade domain.</span></span>
 
-<span data-ttu-id="1cb61-204">Einerseits können Sie einfache benutzerdefinierte Anwendungen verwenden, die den Status Ihrer Dienste anzeigen, z.B. die im Zusammenhang mit [ASP.NET Core-Integritätsüberprüfungen](https://github.com/dotnet-architecture/HealthChecks) erwähnten benutzerdefinierten Seiten.</span><span class="sxs-lookup"><span data-stu-id="1cb61-204">You can use simple custom applications showing the state of your services, like the custom page shown when explaining the [ASP.NET Core HealthChecks](https://github.com/dotnet-architecture/HealthChecks).</span></span> <span data-ttu-id="1cb61-205">Andererseits können Sie auch Tools mit erweiterten Funktionen wie Azure Application Insights verwenden, um Warnungen anhand des Datenstroms der Ereignisse auszulösen.</span><span class="sxs-lookup"><span data-stu-id="1cb61-205">Or you could use more advanced tools like Azure Application Insights to raise alerts based on the stream of events.</span></span>
+<span data-ttu-id="e1ff4-184">Berichtsmetriken des Diensts machen einen weiteren Aspekt der Dienstintegrität aus.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-184">Another aspect of service health is reporting metrics from the service.</span></span> <span data-ttu-id="e1ff4-185">Dabei handelt es sich um eine erweiterte Funktion des Integritätsmodells einiger Orchestratoren wie Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-185">This is an advanced capability of the health model of some orchestrators, like Service Fabric.</span></span> <span data-ttu-id="e1ff4-186">Metriken sind von Bedeutung, wenn Orchestratoren verwendet werden, da sie einen Ausgleich für die Ressourcennutzung schaffen.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-186">Metrics are important when using an orchestrator because they are used to balance resource usage.</span></span> <span data-ttu-id="e1ff4-187">Metriken können außerdem auf Systemintegrität hindeuten.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-187">Metrics also can be an indicator of system health.</span></span> <span data-ttu-id="e1ff4-188">Beispielsweise kann es sein, dass Sie über eine Anwendung mit vielen Microservices verfügen, wobei jede Instanz einen Bericht zu einer „Anforderungen pro Sekunde“-Metrik erstellt.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-188">For example, you might have an application that has many microservices, and each instance reports a requests-per-second (RPS) metric.</span></span> <span data-ttu-id="e1ff4-189">Wenn ein Dienst mehre Ressourcen (z.B. den Arbeitsspeicher oder den Prozessor) als ein anderer Dienst verwendet, kann der Orchestrator Dienstinstanzen innerhalb des Clusters verschieben, um zu versuchen, die Ressourcenverwendung zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-189">If one service is using more resources (memory, processor, etc.) than another service, the orchestrator could move service instances around in the cluster to try to maintain even resource utilization.</span></span>
 
-<span data-ttu-id="1cb61-206">Außerdem können Sie Microsoft Power BI oder andere Lösungen (z.B. Kibana oder Splunk) verwenden, um Daten zu visualisieren, wenn Sie alle Ereignisdatenströme gespeichert haben.</span><span class="sxs-lookup"><span data-stu-id="1cb61-206">Finally, if you're storing all the event streams, you can use Microsoft Power BI or other solutions like Kibana or Splunk to visualize the data.</span></span>
+<span data-ttu-id="e1ff4-190">Beachten Sie, dass Azure Service Fabric ein eigenes [Modell zur Systemüberwachung](/azure/service-fabric/service-fabric-health-introduction) umfasst, das umfassender ist als einfache Integritätsüberprüfungen.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-190">Note that Azure Service Fabric provides its own [Health Monitoring model](/azure/service-fabric/service-fabric-health-introduction), which is more advanced than simple health checks.</span></span>
 
-## <a name="additional-resources"></a><span data-ttu-id="1cb61-207">Zusätzliche Ressourcen</span><span class="sxs-lookup"><span data-stu-id="1cb61-207">Additional resources</span></span>
+## <a name="advanced-monitoring-visualization-analysis-and-alerts"></a><span data-ttu-id="e1ff4-191">Erweiterte Überwachung: Visualisierung, Analyse und Warnungen</span><span class="sxs-lookup"><span data-stu-id="e1ff4-191">Advanced monitoring: visualization, analysis, and alerts</span></span>
 
-- <span data-ttu-id="1cb61-208">**ASP.NET Core-HealthChecks** (Vorabversion)\\</span><span class="sxs-lookup"><span data-stu-id="1cb61-208">**ASP.NET Core HealthChecks** (experimental release)\\</span></span>
-  [*https://github.com/dotnet-architecture/HealthChecks/*](https://github.com/dotnet-architecture/HealthChecks/)
+<span data-ttu-id="e1ff4-192">Als letzter Schritt im Rahmen der Überwachung wird der Ereignisdatenstrom visualisiert, ein Bericht zur Leistung des Diensts wird erstellt, und es wird eine Warnung ausgegeben, wenn ein Problem erkannt wird.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-192">The final part of monitoring is visualizing the event stream, reporting on service performance, and alerting when an issue is detected.</span></span> <span data-ttu-id="e1ff4-193">Sie können für diesen Bestandteil der Überwachung mehrere Lösungen verwenden.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-193">You can use different solutions for this aspect of monitoring.</span></span>
 
-- <span data-ttu-id="1cb61-209">**Einführung in die Systemüberwachung mit Service Fabric**\\</span><span class="sxs-lookup"><span data-stu-id="1cb61-209">**Introduction to Service Fabric health monitoring**\\</span></span>
-  [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](/azure/service-fabric/service-fabric-health-introduction)
+<span data-ttu-id="e1ff4-194">Einerseits können Sie einfache benutzerdefinierte Anwendungen verwenden, die den Status Ihrer Dienste anzeigen, z. B. die im Zusammenhang mit [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) erwähnten benutzerdefinierten Seiten.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-194">You can use simple custom applications showing the state of your services, like the custom page shown when explaining the [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks).</span></span> <span data-ttu-id="e1ff4-195">Andererseits können Sie auch Tools mit erweiterten Funktionen wie Azure Application Insights verwenden, um Warnungen anhand des Datenstroms der Ereignisse auszulösen.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-195">Or you could use more advanced tools like Azure Application Insights to raise alerts based on the stream of events.</span></span>
 
-- <span data-ttu-id="1cb61-210">**Azure Application Insights**\\</span><span class="sxs-lookup"><span data-stu-id="1cb61-210">**Azure Application Insights**\\</span></span>
-  [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
+<span data-ttu-id="e1ff4-196">Außerdem können Sie Microsoft Power BI oder andere Lösungen (z.B. Kibana oder Splunk) verwenden, um Daten zu visualisieren, wenn Sie alle Ereignisdatenströme gespeichert haben.</span><span class="sxs-lookup"><span data-stu-id="e1ff4-196">Finally, if you're storing all the event streams, you can use Microsoft Power BI or other solutions like Kibana or Splunk to visualize the data.</span></span>
 
-- <span data-ttu-id="1cb61-211">**Microsoft Operations Management Suite**\\</span><span class="sxs-lookup"><span data-stu-id="1cb61-211">**Microsoft Operations Management Suite**\\</span></span>
-  [*https://www.microsoft.com/cloud-platform/operations-management-suite*](https://www.microsoft.com/cloud-platform/operations-management-suite)
+## <a name="additional-resources"></a><span data-ttu-id="e1ff4-197">Zusätzliche Ressourcen</span><span class="sxs-lookup"><span data-stu-id="e1ff4-197">Additional resources</span></span>
+
+-   <span data-ttu-id="e1ff4-198">**HealthChecks and HealthChecks UI for ASP.NET Core (HealthChecks und HealthChecksUI für ASP.NET Core)**
+    [*https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks*](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )</span><span class="sxs-lookup"><span data-stu-id="e1ff4-198">**HealthChecks and HealthChecks UI for ASP.NET Core**
+[*https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks*](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )</span></span>
+
+-   <span data-ttu-id="e1ff4-199">**Introduction to Service Fabric health monitoring (Einführung in die Systemüberwachung mit Service Fabric)**
+    [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](/azure/service-fabric/service-fabric-health-introduction)</span><span class="sxs-lookup"><span data-stu-id="e1ff4-199">**Introduction to Service Fabric health monitoring**
+[*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](/azure/service-fabric/service-fabric-health-introduction)</span></span>
+
+-   <span data-ttu-id="e1ff4-200">**Azure Application Insights**
+    [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)</span><span class="sxs-lookup"><span data-stu-id="e1ff4-200">**Azure Application Insights**
+[*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)</span></span>
+
+-   <span data-ttu-id="e1ff4-201">**Microsoft Operations Management Suite**
+    [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)</span><span class="sxs-lookup"><span data-stu-id="e1ff4-201">**Microsoft Operations Management Suite**
+[*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="1cb61-212">[Zurück](implement-circuit-breaker-pattern.md)
->[Weiter](../secure-net-microservices-web-applications/index.md)</span><span class="sxs-lookup"><span data-stu-id="1cb61-212">[Previous](implement-circuit-breaker-pattern.md)
+><span data-ttu-id="e1ff4-202">[Zurück](implement-circuit-breaker-pattern.md)
+>[Weiter](../secure-net-microservices-web-applications/index.md)</span><span class="sxs-lookup"><span data-stu-id="e1ff4-202">[Previous](implement-circuit-breaker-pattern.md)
 [Next](../secure-net-microservices-web-applications/index.md)</span></span>
