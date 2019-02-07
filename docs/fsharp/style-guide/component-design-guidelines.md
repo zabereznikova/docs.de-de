@@ -3,10 +3,10 @@ title: F#Richtlinien zum Entwerfen der Komponente
 description: Erfahren Sie, die Richtlinien für das Schreiben von F# Komponenten, die für die Nutzung durch andere Aufrufer vorgesehen.
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
+ms.lasthandoff: 02/07/2019
 ms.locfileid: "55066024"
 ---
 # <a name="f-component-design-guidelines"></a>F#Richtlinien zum Entwerfen der Komponente
@@ -74,7 +74,7 @@ In der folgende Tabelle werden die .NET benennen und Groß-/Kleinschreibung-Konv
 |-----------|------|------|----------|-------|
 | Konkrete Typen | PascalCase | Nomen / adjektivische | Liste, Double, komplexe | Konkrete Typen sind Strukturen, Klassen, Enumerationen, Delegaten, Datensätze und Unions. Obwohl Typnamen traditionell in mit OCaml Kleinbuchstaben sind, hat F# das Benennungsschema für .NET für Typen übernommen.
 | DLLs           | PascalCase |                 | Fabrikam.Core.dll |  |
-| Union-tags     | PascalCase | Nomen | Einige hinzuzufügen, Erfolg | Verwenden Sie ein Präfix nicht in öffentlichen APIs aus. Verwenden Sie optional ein Präfix, bei der internen, z. B. `Teams geben = TAlpha  | TBeta | TDelta. ` |
+| Union-tags     | PascalCase | Nomen | Einige hinzuzufügen, Erfolg | Verwenden Sie ein Präfix nicht in öffentlichen APIs aus. Verwenden Sie optional ein Präfix, bei der internen, z. B. `type Teams = TAlpha | TBeta | TDelta.` |
 | event          | PascalCase | Verb | ValueChanged / ValueChanging |  |
 | Ausnahmen     | PascalCase |      | WebException | Name sollte mit "Exception" enden. |
 | Feld          | PascalCase | Nomen | CurrentName  | |
