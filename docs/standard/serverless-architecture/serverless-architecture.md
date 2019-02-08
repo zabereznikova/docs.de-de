@@ -4,16 +4,16 @@ description: Die Auswertung von verschiedenen Architekturen und apps, die durch 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150302"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904795"
 ---
 # <a name="serverless-architecture"></a>Serverlose Architektur
 
-Es gibt viele Ansätze für die Verwendung serverloser Architekturen. In diesem Kapitel werden Beispiele für allgemeine Architekturen, die serverlose integriert. Er behandelt auch bedenken, die möglicherweise zusätzliche Herausforderungen darstellen, oder benötigen zusätzliche Überlegung beim serverlosen implementieren. Schließlich sind einige entwurfsbeispielen bereitgestellt, die verschiedene serverlose Anwendungsfälle veranschaulichen.
+Es gibt viele Ansätze mit [serverlose](http://azure.com/serverless) Architekturen. In diesem Kapitel werden Beispiele für allgemeine Architekturen, die serverlose integriert. Er behandelt auch bedenken, die möglicherweise zusätzliche Herausforderungen darstellen, oder benötigen zusätzliche Überlegung beim serverlosen implementieren. Schließlich sind einige entwurfsbeispielen bereitgestellt, die verschiedene serverlose Anwendungsfälle veranschaulichen.
 
 Serverlose Hosts verwenden häufig eine vorhandene containerbasierte oder PaaS-Schicht, um die serverlose-Instanzen zu verwalten. Azure Functions basiert beispielsweise auf [Azure App Service](https://docs.microsoft.com/azure/app-service/). App Service wird verwendet, um Instanzen skalieren und Verwalten von der Runtime, die Azure Functions-Code ausgeführt wird. Für Windows-basierten Funktionen out der Host ausgeführt wird, als PaaS und skaliert die .NET Runtime. Für Linux-basierten Funktionen nutzt der Host Container.
 

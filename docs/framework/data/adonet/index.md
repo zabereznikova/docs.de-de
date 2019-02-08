@@ -2,6 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
+ms.openlocfilehash: 86d4d4628313ff248618f37637b0a25e80820b06
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903623"
 ---
 # <a name="adonet"></a>ADO.NET
 Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste für .NET Framework-Programmierer verfügbar machen. ADO.NET umfasst eine Vielzahl von Komponenten zum Erstellen von verteilten Anwendungen mit Datenfreigabe. Es ist in .NET Framework integriert und ermöglicht den Zugriff auf relationale, XML- und Anwendungsdaten. ADO.NET unterstützt eine Reihe von Entwicklungsanforderungen, z. B. das Erstellen von Front-End-Datenbankclients und Geschäftsobjekten mittlerer Ebene, die von Anwendungen, Tools, Sprachen oder Internetbrowsern verwendet werden.  
@@ -38,23 +44,20 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  Beschreibt Funktionen und Verhaltensweisen, die spezifisch für den .NET Framework-Datenanbieter für Oracle sind.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [PAVE Security in Native and .NET Framework Code (PAVE-Sicherheit in nativem und .NET Framework-Code)](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- Enthält Links zu Sicherheitsthemen für Visual Studio, .NET Framework und Kryptografie.  
+ [Language-Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ Enthält Links zu LINQ-Themen und Beispiele mit C#.  
   
- [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- Enthält Links zu LINQ-Themen und -Beispielen.  
+ [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ Enthält Links zu LINQ-Themen und Beispiele, die mithilfe von Visual Basic.  
   
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
  Beschreibt die Verwendung von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zum Bereitstellen von Datendiensten, die das Open Data Protocol (OData) implementieren, im Internet oder in einem Intranet.  
   
- [Core Development Technologies (Core-Entwicklungstechnologien)](https://msdn.microsoft.com/library/csxbhtye.aspx)  
+ [Entwicklungshandbuch für .NET Framework](../../development-guide.md)  
  Stellt Links zu Informationen über Standardentwicklungsaufgaben in .NET Framework bereit.  
   
- [Advanced Development Technologies (Erweiterte Entwicklungstechnologien)](https://msdn.microsoft.com/library/a493kdy6.aspx)  
- Stellt Links zu Informationen über anspruchsvolle Entwicklungsaufgaben und Techniken in .NET Framework bereit.  
-  
- [Samples and Quickstarts (Beispiele und Schnellstarts)](https://msdn.microsoft.com/library/ms184422.aspx)  
- Stellt komplette Auflistungen aller mit .NET Framework verbundenen Beispiele (einschließlich denen für den Schnellstart) bereit.  
+ [Beispiele und Tutorials](../../../samples-and-tutorials/index.md)  
+ Enthält eine Liste von .NET Beispiele und Tutorials.
   
 ## <a name="see-also"></a>Siehe auch
 - [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
