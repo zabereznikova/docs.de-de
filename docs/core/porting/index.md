@@ -2,14 +2,14 @@
 title: Portieren von Code von .NET Framework auf .NET Core
 description: Verstehen Sie den Portiervorgang und entdecken Sie Tools, die Ihnen beim Portieren eines .NET Framework-Projekts zu .NET Core behilflich sein können.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: e29750340cf272c2e05287482bcbeca703d8720a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266571"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903566"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Portieren Ihres Codes von .NET Framework auf .NET Core
 
@@ -37,8 +37,6 @@ Dies ist die Vorgehensweise, die wir zur Portierung Ihres Projekts auf .NET Core
 
 5. Führen Sie Ihren Plan zum Portieren aus!
 
-## <a name="tools-to-help"></a>Hilfetools
-
 Die folgende Liste enthält Tools, die während der Portierung nützlich sein könnten:
 
 * .NET Portability Analyzer: [Befehlszeilentool](https://github.com/Microsoft/dotnet-apiport/releases) oder [Visual Studio-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Mit dieser Toolkette kann ein Bericht generiert werden, der Aufschluss über die Portierbarkeit Ihres Codes von .NET Framework auf .NET Core gibt. Vorhandene Probleme werden nach Assembly aufgeschlüsselt. Weitere Informationen finden Sie unter [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md).
@@ -51,4 +49,4 @@ Darüber hinaus können Sie mit dem Tool [CsprojToVs2017](https://github.com/hva
 > CsprojToVs2017 ist ein Drittanbietertool. Es kann nicht garantiert werden, dass das Tool für all Ihre Projekte funktioniert, und es kann zu subtilen Änderungen bei Verhalten kommen, von dem Sie abhängig sind. CsprojToVs2017 sollte als _Ausgangspunkt_ verwendet werden, um grundlegende Elemente zu automatisieren. Es handelt sich nicht um ein garantierte Lösung zum Migrieren von Projektdateiformaten.
 
 >[!div class="step-by-step"]
->[Nächste](third-party-deps.md)
+>[Nächste](net-framework-tech-unavailable.md)
