@@ -3,13 +3,13 @@ title: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure
 description: Ein Leitfaden, der eine End-to-End-Anleitung zur Erstellung monolithischer Webanwendungen mit ASP.NET Core und Azure bietet.
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 0d59a07e01897400a53f48799383d1670a468d73
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: 5e85126cbec23bdebd510b103478b3c362ef71fa
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148105"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827863"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure
 
@@ -25,7 +25,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 by Microsoft Corporation
+Copyright © 2019 Microsoft Corporation
 
 Alle Rechte vorbehalten. Die Inhalte dieses Buchs dürfen in keiner Form und für keinen Zweck ohne die schriftliche Genehmigung des Herausgebers reproduziert oder übertragen werden.
 
@@ -43,7 +43,7 @@ Alle anderen Marken und Logos sind Eigentum der jeweiligen Besitzer.
 
 Autor:
 
-> **Steve Smith (@ardalis)**, Software Architecture Advisor, [Ardalis.com](https://ardalis.com)
+> **Steve „ardalis“ Smith** – Softwarearchitekt und Trainer – [Ardalis.com](https://ardalis.com)
 
 Editoren:
 
@@ -63,11 +63,11 @@ Editoren:
 
 - Parallele Versionsverwaltung von .NET-Versionen durch Anwendung auf demselben Server
 
-Traditionelle .NET-Anwendungen können und werden diese Anforderungen unterstützen, aber ASP.NET Core und .NET Core wurden optimiert, um eine verbesserte Unterstützung für die oben genannten Szenarien zu bieten.
+Traditionelle .NET-Anwendungen können und werden viele dieser Anforderungen unterstützen, aber ASP.NET Core und .NET Core wurden optimiert, um eine verbesserte Unterstützung für die oben genannten Szenarien zu bieten.
 
 Immer mehr Unternehmen entscheiden sich dafür, ihre Webanwendungen in der Cloud zu hosten, indem sie Dienste wie Microsoft Azure nutzen. Sie sollten in Erwägung ziehen, Ihre Anwendung in der Cloud zu hosten, wenn die folgenden Punkte für Ihre Anwendung oder Organisation wichtig sind:
 
-- Geringere Investitionen in die Kosten des Datencenters (Hardware, Software, Speicherplatz, Hilfsprogramme usw.)
+- Geringere Investitionen bei den Rechenzentrumskosten (Hardware, Software, Speicherplatz, Hilfsprogramme, Serververwaltung usw.)
 
 - Flexible Preisgestaltung (nutzungsbasierte Abrechnung, nicht nach Leerlaufkapazität)
 
@@ -81,7 +81,7 @@ Das Erstellen von Webanwendungen mit ASP.NET Core (gehostet in Azure) bietet ein
 
 ## <a name="purpose"></a>Zweck
 
-Dieser Leitfaden bietet eine End-to-End-Anleitung zur Erstellung monolithischer Webanwendungen mit ASP.NET Core und Azure.
+Dieser Leitfaden bietet eine End-to-End-Anleitung zur Erstellung *monolithischer* Webanwendungen mit ASP.NET Core und Azure. In diesem Zusammenhang bezieht sich „monolithisch“ auf die Tatsache, dass diese Anwendungen als eine einzige Einheit und nicht als eine Sammlung von interagierenden Diensten und Anwendungen bereitgestellt werden.
 
 Dieser Leitfaden ist eine Ergänzung zum E-Book [„_.NET Microservices. Architektur für .NET-Containeranwendungen_“](../microservices-architecture/index.md), das sich mehr auf Docker, Microservices und die Bereitstellung von Containern zum Hosten von Unternehmensanwendungen konzentriert.
 

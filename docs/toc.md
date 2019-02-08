@@ -136,7 +136,7 @@
 ### [Komponententests in VB mit MSTest](core/testing/unit-testing-visual-basic-with-mstest.md)
 ### [Ausführen von selektiven Komponententests](core/testing/selective-unit-tests.md)
 ### [Veröffentlichte Ausgabe von Komponententests](core/testing/unit-testing-published-output.md)
-### [Live unit testing .NET Core projects with Visual Studio](/visualstudio/test/live-unit-testing-start) (Live-Komponententests von .NET Core-Projekten mit Visual Studio)
+### [Live-Komponententests von .NET Core-Projekten mit Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Versionskontrolle](core/versions/index.md)
 ### [.NET Core-Versionsauswahl](core/versions/selection.md)
 ### [Entfernen von veralteten Runtimes und SDKs](core/versions/remove-runtime-sdk-versions.md)
@@ -196,8 +196,8 @@
 ### [Portieren von Bibliotheken](core/porting/libraries.md)
 ### [Verwenden von Windows Compatibility Pack](core/porting/windows-compat-pack.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
-## [Build .NET Core from source (Erstellen von .NET Core aus einer Quelle)](core/build/index.md)
-### [.NET Core distribution packaging (Verpacken der Verteilung in .NET Core)](core/build/distribution-packaging.md)
+## [Erstellen von .NET Core aus einer Quelle](core/build/index.md)
+### [Verpacken der Verteilung in .NET Core](core/build/distribution-packaging.md)
 ## [VS 2015/project.json-Dokumentation](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -298,7 +298,7 @@
 #### [Stark typisierte Delegate](csharp/delegates-strongly-typed.md)
 #### [Gängige Muster für Delegate](csharp/delegates-patterns.md)
 #### [Einführung in Ereignisse](csharp/events-overview.md)
-#### [Standard .NET event patterns (Standardereignismuster in .NET)](csharp/event-pattern.md)
+#### [Standardereignismuster in .NET](csharp/event-pattern.md)
 #### [Das aktualisierte .NET-Ereignismuster](csharp/modern-events.md)
 #### [Unterscheidung zwischen Delegaten und Ereignissen](csharp/distinguish-delegates-events.md)
 ### [Language-Integrated Query (LINQ)](csharp/linq/)
@@ -1189,7 +1189,7 @@
 ## [Tutorials](machine-learning/tutorials/index.md)
 ### [Standpunktanalyse (Binäre Klassifikation)](machine-learning/tutorials/sentiment-analysis.md)
 ### [Fehlerklassifizierung (Multiklassenklassifizierung)](machine-learning/tutorials/github-issue-classification.md)
-### [Vorhersage des Rolltarifs (Regression)](machine-learning/tutorials/taxi-fare.md)
+### [Preisvorhersage (Regression)](machine-learning/tutorials/taxi-fare.md)
 ### [Iris-Clustering](machine-learning/tutorials/iris-clustering.md)
 ## [Anleitungen](machine-learning/how-to-guides/index.md)
 ### Vorbereiten von Daten
@@ -1200,7 +1200,7 @@
 #### [Laden von Daten aus Textdateien](machine-learning/how-to-guides/load-data-from-text-file-ml-net.MD)
 #### [Vorverarbeiten von Daten mit Normalisierung](machine-learning/how-to-guides/normalizers-preprocess-data-ml-net.md)
 ### Trainieren, auswerten und erläutern des Modells
-#### [Trainingsmodell ohne Daten in einer Textdatei](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
+#### [Trainieren eines Modells mit Echtzeitdatenquellen](machine-learning/how-to-guides/load-non-file-training-data-ml-net.md)
 #### [Trainingsmodell mit Kreuzvalidierung](machine-learning/how-to-guides/train-cross-validation-ml-net.md)
 #### [Untersuchen von Zwischenwerten in Pipelinedaten](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [Trainingsmodell mit Regression](machine-learning/how-to-guides/train-regression-model-ml-net.md)

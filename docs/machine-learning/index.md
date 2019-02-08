@@ -3,12 +3,12 @@ title: Leitfaden zu ML.NET-Inhalt
 description: Erfahren Sie mehr über das Erstellen von benutzerdefinierten KI-Lösungen, und integrieren Sie sie mithilfe von ML.NET in Ihre .NET-Anwendungen.
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: d80ba8ec2d563960242765f1ffbedec3e8882954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550460"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826265"
 ---
 # <a name="mlnet-content-guide"></a>Leitfaden zu ML.NET-Inhalt
 
@@ -31,7 +31,7 @@ Grundlegende Informationen finden Sie unter [Basiskonzepte für das Modelltraini
 
 [Klassifizieren von GitHub-Problemen mit einem Modell zur mehrklassigen Klassifizierung](tutorials/github-issue-classification.md): Hier wird gezeigt, wie Sie eine App entwickeln, die die Bezeichnung „Bereich“ für ein GitHub-Problem bestimmt.
 
-[Vorhersage von Taxifahrtpreisen mit einem Regressionsmodell](tutorials/taxi-fare.md): Hier wird gezeigt, wie Sie eine Vorhersage-App erstellen, die zum Bestimmen der Antwort verschiedene Faktoren aus Verlaufsdaten nutzt.
+[Vorhersage von Preisen mit einem Regressionsmodell](tutorials/taxi-fare.md): Hier wird gezeigt, wie Sie eine Vorhersage-App erstellen, die zum Bestimmen der Antwort verschiedene Faktoren aus Verlaufsdaten nutzt.
 
 [Klassifizierung nach Merkmalen unter Verwendung des Iris-Beispiels](tutorials/iris-clustering.md): Hier wird gezeigt, wie Sie ein Clusteringmodell zum Analysieren des Iris-Datasets verwenden. 
 
