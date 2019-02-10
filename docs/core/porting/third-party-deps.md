@@ -2,14 +2,14 @@
 title: Analysieren von Abhängigkeiten zum Portieren von Code zu .NET Core
 description: Erfahren Sie, wie Sie externe Abhängigkeiten analysieren können, um Ihr Projekt von .NET Framework auf .NET Core portieren zu können.
 author: cartermp
-ms.date: 12/04/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415220"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904331"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analysieren Ihrer Abhängigkeiten zum Portieren von Code zu .NET Core
 
@@ -93,13 +93,13 @@ Um die Warnung durch Bearbeiten der Projektdatei zu unterdrücken, suchen Sie de
 
 Weitere Informationen zum Unterdrücken von Compilerwarnungen in Visual Studio finden Sie unter [Unterdrücken von Compilerwarnungen](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages) im Abschnitt zum Unterdrücken von Warnungen für NuGet-Pakete.
 
-### <a name="port-your-packages-to-packagereference"></a>Portieren Sie Ihre Pakete zu `PackageReference`.
+## <a name="port-your-packages-to-packagereference"></a>Portieren Sie Ihre Pakete zu `PackageReference`.
 
 .NET Core verwendet [PackageReference](/nuget/consume-packages/package-references-in-project-files) zum Angeben von Paketabhängigkeiten. Wenn Sie [packages.config](/nuget/reference/packages-config) zum Angeben Ihrer Pakete verwenden, müssen Sie zu `PackageReference` konvertieren.
 
 Weitere Informationen finden Sie unter [Migrieren von „packages.config“ zu „packagereference“](/nuget/reference/migrate-packages-config-to-package-reference).
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Vorgehensweise, wenn die NuGet-Paket-Abhängigkeit unter .NET Core nicht ausgeführt wird
+## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Vorgehensweise, wenn die NuGet-Paket-Abhängigkeit unter .NET Core nicht ausgeführt wird
 
 Es gibt einige Dinge, die Sie tun können, wenn ein NuGet-Paket, auf das Sie angewiesen sind, unter .NET Core nicht ausgeführt wird:
 
@@ -119,6 +119,5 @@ Das .NET-Team würde gerne wissen, welche Bibliotheken von .NET Core unterstütz
 
 Möglicherweise verfügen Sie über eine Abhängigkeit, bei der es sich nicht um ein NuGet-Paket, sondern beispielsweise um eine DLL im Dateisystem handelt. Wenn Sie feststellen möchten, ob diese Abhängigkeit portiert werden kann, haben Sie nur die Möglichkeit, das Tool [.NET Portability Analyzer](https://github.com/Microsoft/dotnet-apiport) auszuführen. Das Tool kann Assemblys analysieren, die auf .NET Framework ausgerichtet sind, und APIs identifizieren, die nicht auf andere .NET-Plattformen wie .NET Core portiert werden können. Sie können das Tool als Konsolenanwendung oder als [Visual Studio-Erweiterung](../../standard/analyzers/portability-analyzer.md) ausführen.
 
-## <a name="next-steps"></a>Nächste Schritte
-
-Wenn Sie eine Bibliothek portieren, lesen Sie [Portieren von Bibliotheken](libraries.md).
+>[!div class="step-by-step"]
+>[Nächste](libraries.md)

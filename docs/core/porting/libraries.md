@@ -2,14 +2,14 @@
 title: Portieren von Bibliotheken auf .NET Core
 description: Erfahren Sie, wie Sie Bibliotheksprojekte von .NET Framework zu .NET Core portieren.
 author: cartermp
-ms.date: 07/14/2017
+ms.date: 12/7/2018
 ms.custom: seodec18
-ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8190dcfd3ffed9051c7724752a19d88e7bef4f4d
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169680"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904698"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portieren von .NET Framework-Bibliotheken auf .NET Core
 
@@ -40,38 +40,6 @@ In diesem Artikel werden die Änderungen erläutert, die an die Projektdateien b
 
 [Portieren auf .NET Core – Analysieren der Abhängigkeiten von Drittanbietern](~/docs/core/porting/third-party-deps.md)   
 In diesem Thema wird die Portabilität von Drittanbieterabhängigkeiten diskutiert und was Sie tun, wenn die Abhängigkeit eines NuGet-Pakets für .NET Core nicht ausgeführt wird.
-
-## <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Framework-Technologien, die auf .NET Core nicht verfügbar sind
-
-Einige Technologien, die für .NET Framework-Bibliotheken verfügbar sind, sind für die Verwendung mit .NET Core nicht verfügbar, z.B. AppDomains, Remoting, Codezugriffssicherheit (Code Access Security, CAS) und Sicherheitstransparenz. Wenn Ihre Bibliotheken eine oder mehrere dieser Technologien benötigen, sollten Sie die unten beschriebenen alternativen Ansätze in Erwägung ziehen. Für weitere Informationen zur API-Kompatibilität verwaltet das CoreFX-Team eine [Liste von verhaltensbasierten Änderungen/Kompatibilitätsunterbrechungen und veraltete/ältere APIs](https://github.com/dotnet/corefx/wiki/ApiCompat) auf GitHub.
-
-Nur weil eine API oder Technologie derzeit nicht implementiert ist, bedeutet dies nicht zwangsläufig, dass sie absichtlich nicht unterstützt wird. Melden Sie ein Problem in den [dotnet/CoreFX-Repositoryproblemen](https://github.com/dotnet/corefx/issues) auf GitHub, um bestimmte APIs und Technologien anzufordern. [Portierte Anfragen in den Problemen](https://github.com/dotnet/corefx/labels/port-to-core) sind mit der Bezeichnung `port-to-core` markiert.
-
-### <a name="appdomains"></a>AppDomains
-
-AppDomains isoliert Apps voneinander. AppDomains benötigen eine Runtimeunterstützung und sind im Allgemeinen sehr teuer. Sie sind nicht in .NET Core implementiert. Wir planen nicht, diese Funktion in Zukunft hinzuzufügen. Für die Codeisolierung empfehlen wir separate Prozesse oder die Verwendung von Containern als Alternative. Für das dynamische Laden von Assemblys wird die neue Klasse <xref:System.Runtime.Loader.AssemblyLoadContext> empfohlen.
-
-Um die Codemigration von .NET Framework verständlicher zu gestalten, haben wir einiges der <xref:System.AppDomain>-API-Oberfläche in .NET Core verfügbar gemacht. Manche Elemente der API funktionieren normal (z.B. <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), einige Member führen keine Aktion aus (z.B. <xref:System.AppDomain.SetCachePath%2A>), und einige davon lösen <xref:System.PlatformNotSupportedException> aus (z.B. <xref:System.AppDomain.CreateDomain%2A>). Überprüfen Sie die Typen, die Sie für die [`System.AppDomain`-Verweisquelle](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs) im [dotnet/CoreFX-GitHub-Repository](https://github.com/dotnet/corefx) verwenden. Stellen Sie dabei sicher, dass Sie den Branch auswählen, der mit Ihrer implementierten Version übereinstimmt.
-
-### <a name="remoting"></a>Remoting
-
-.NET-Remoting wurde als eine problematische Architektur identifiziert. Es wird für die AppDomain-übergreifende Kommunikation verwendet, die nicht mehr unterstützt wird. Darüber hinaus erfordert Remoting die Runtimeunterstützung, die teuer in der Wartung ist. Aus diesen Gründen wird .NET-Remoting auf .NET Core nicht unterstützt, und wir planen nicht, zukünftig eine Unterstützung dafür hinzuzufügen.
-
-Für die Kommunikation zwischen Prozessen sollten Sie die Mechanismen der prozessübergreifenden Kommunikation (interprocess communication, IPC) als Alternative zu Remoting berücksichtigen, zB die Klassen <xref:System.IO.Pipes> oder <xref:System.IO.MemoryMappedFiles.MemoryMappedFile>.
-
-Verwenden Sie computerübergreifend eine netzwerkbasierte Lösung als Alternative. Verwenden Sie vorzugsweise ein Nur-Text-Protokoll mit geringem Verwaltungsaufwand, z.B. HTTP. Der [Kestrel Webserver](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), der von ASP.NET Core verwendete Webserver, ist hier eine Option. Ziehen Sie auch die Verwendung von <xref:System.Net.Sockets> für netzwerkbasierte, computerübergreifende Szenarios in Erwägung. Weitere Optionen finden Sie unter [.NET Open Source Developer Projects: Messaging (.NET Open Source-Entwicklerprojekte: Messaging)](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
-
-### <a name="code-access-security-cas"></a>Codezugriffssicherheit (Code Access Security, CAS)
-
-Das Verwenden einer Sandbox, das sich auf die Runtime oder das Framework verlässt, um einzuschränken, welche Ressourcen eine verwaltete Anwendung oder Bibliothek verwendet oder ausführt, [wird in .NET Framework nicht unterstützt](~/docs/framework/misc/code-access-security.md). Daher wird es auch in .NET Core nicht unterstützt. Wir glauben, dass es zu viele Fälle im .NET Framework und in der Runtime gibt, in denen eine Rechteerweiterung CAS weiterhin als Sicherheitsgrenze behandelt. Darüber hinaus macht CAS die Implementierung komplizierter und führt oft zu Auswirkungen auf die Leistung der Korrektheitsprüfung für Anwendungen, die dies nicht verwenden sollen.
-
-Verwenden Sie vom Betriebssystem bereitgestellte Sicherheitsgrenzen, wie Virtualisierung, Container oder Benutzerkonten zum Ausführen von Prozessen mit den geringsten Rechten.
-
-### <a name="security-transparency"></a>Sicherheitstransparenz
-
-Ähnlich wie CAS ermöglicht die Sicherheitstransparenz das Trennen von Sandboxcode von sicherheitsrelevantem Code in einer deklarativen Weise, aber sie wird [nicht mehr als eine Sicherheitsgrenze unterstützt](~/docs/framework/misc/security-transparent-code.md). Diese Funktion wird oft von Silverlight verwendet. 
-
-Verwenden Sie vom Betriebssystem bereitgestellte Sicherheitsgrenzen, wie Virtualisierung, Container oder Benutzerkonten zum Ausführen von Prozessen mit den geringsten Rechten.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Neuzuweisung Ihres .NET Framework-Codes zu .NET Framework 4.7.2
 
@@ -163,3 +131,6 @@ Die Arbeit für die Portierung hängt letztendlich schwer davon ab, wie Ihr .NET
 1. Wählen Sie die nächste Codeebene aus, die portiert werden soll, und wiederholen Sie die vorherigen Schritte.
 
 Wenn Sie mit der Basis Ihrer Bibliothek beginnen und sich von der Basis aus nach außen bewegen, und jede Ebene wie erforderlich testen, ist die Portierung ein schematischer Prozess, bei dem Probleme jeweils auf einer Codeebene isoliert werden.
+
+>[!div class="step-by-step"]
+>[Nächste](project-structure.md)
