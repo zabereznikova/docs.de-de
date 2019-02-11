@@ -3,13 +3,13 @@ title: Architekturprinzipien
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Architekturprizipien
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: fb854b89b9f8e425d594545b9ad61cbd334b7b2f
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.date: 01/30/2019
+ms.openlocfilehash: b7edfc8d0cb3460bb33fb4e54cc93dd18ce2f385
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151890"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828097"
 ---
 # <a name="architectural-principles"></a>Architekturprinzipien
 
