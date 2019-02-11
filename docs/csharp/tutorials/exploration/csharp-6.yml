@@ -8,12 +8,12 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: d782899c3b29851f020cd9fc07cde8f408bf2ac5
-  ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+  ms.openlocfilehash: c44d16e543f85852cee39106688fd3870dff7c4d
+  ms.sourcegitcommit: c3cf1ace8a1d403aeae76d8976d01995893d2536
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 01/23/2019
-  ms.locfileid: "54634258"
+  ms.lasthandoff: 02/07/2019
+  ms.locfileid: "55807049"
 items:
 - durationInMinutes: 1
   content: >
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    Versuchen Sie das gleiche mit der `Caps`-Methode. Das ist zwar nur eine geringfügige Änderung, aber wenn Sie diese mit Bedacht einsetzen, schreiben Sie sehr viel lesbareren Code, insbesondere für Datenübertragungsobjekte und andere Typen mit geringem Verhalten.
+    Versuchen Sie das gleiche mit der `AllCaps`-Methode. Das ist zwar nur eine geringfügige Änderung, aber wenn Sie diese mit Bedacht einsetzen, schreiben Sie sehr viel lesbareren Code, insbesondere für Datenübertragungsobjekte und andere Typen mit geringem Verhalten.
 - title: Importieren einer einzigen Klasse
   durationInMinutes: 2
   content: "Wenn Sie wiederholt eine statische Methoden einer Klasse im gesamten Code verwenden, wird Ihr Code unübersichtlich, wenn Sie den Klassennamen jedes Mal angeben. Die `Person`-Klasse importiert aktuell den Namespace `System`, obwohl nur <xref:System.Console?displayProperty=nameWithType> verwendet wird. Ändern Sie die `using`-Anweisung folgendermaßen:\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#UsingStatic)]  \n\nDie `static using`-Anweisung ist in größeren Programmen nützlicher, die oft die gleiche Klasse mit vielen statischen Methoden verwenden, wie z. B. die Klassen [`string`](xref:System.String) und <xref:System.Math?displayProperty=nameWithType>.\n"
