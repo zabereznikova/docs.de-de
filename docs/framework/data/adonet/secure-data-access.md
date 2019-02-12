@@ -2,12 +2,12 @@
 title: Sicherer Datenzugriff
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 600ab092d1ae7c890a5d50f3beed52eb8b4110b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fad9145cde499d7f0fc1b158810b75ff85c039b
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494638"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094034"
 ---
 # <a name="secure-data-access"></a>Sicherer Datenzugriff
 Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsmechanismen kennen, die im zugrunde liegenden Datenspeicher oder der zugrundeliegenden Datenbank verfügbar sind. Außerdem müssen Sie die Auswirkungen anderer in Ihrer Anwendung enthaltenen Funktionen oder Komponenten auf die Sicherheit berücksichtigen.  
@@ -24,7 +24,7 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
 |[Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Beschreibt bewährte Methoden und Techniken zum Schützen von Verbindungsinformationen, z. B. das Verwenden der geschützten Konfiguration zur Verschlüsselung von Verbindungszeichenfolgen.|  
-|[Empfehlungen für Strategien für den Datenzugriff](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
+|[Empfehlungen für Strategien für den Datenzugriff](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
 |[Verbindungszeichenfolgengeneratoren](../../../../docs/framework/data/adonet/connection-string-builders.md)|Beschreibt, wie aus Benutzereingabe zur Laufzeit Verbindungszeichenfolgen erstellt werden können.|  
 |[Übersicht über die SQL Server-Sicherheit](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Beschreibt die SQL Server-Sicherheitsarchitektur.|  
   
@@ -46,7 +46,7 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Übersicht über Skriptangriffe](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Beschreibt, wie Sie sich vor Skript- und SQL-Anweisung-Exploits schützen können.|  
+|[Übersicht über Skriptangriffe](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Beschreibt, wie Sie sich vor Skript- und SQL-Anweisung-Exploits schützen können.|  
   
 ## <a name="probing-attacks"></a>Angriffe anhand von ausgewerteten Fehlerinformationen  
  Angreifer verwenden für ihre Angriffe häufig Informationen aus Fehlermeldungen. Diese können z. B. Aufschluss über den Namen des Servers, der Datenbank oder der Tabelle geben. Da Fehlermeldungen spezifische Informationen über eine Anwendung bzw. Datenquelle enthalten können, können Sie die Anwendung bzw. Datenquelle besser schützen, indem Sie lediglich Informationen verfügbar machen, die vom Client explizit angefordert werden.  
@@ -75,7 +75,7 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[COM+ rollenbasierte Sicherheit und .NET Framework](https://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|Erläutert, wie verwalteter Code mit COM+-Sicherheitsdiensten integriert werden kann.|  
+|[Rollenbasierte Sicherheit](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Erläutert, wie verwalteter Code mit COM+-Sicherheitsdiensten integriert werden kann.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Interoperation mit nicht verwaltetem Code  
  .NET Framework ermöglicht die Interaktion mit nicht verwaltetem Code, darunter COM-Komponenten, COM+-Diensten, externen Typbibliotheken und vielen Betriebssystemdiensten. Beim Arbeiten mit nicht verwaltetem Code wird die "Sicherheitszone" des verwalteten Codes verlassen. Sowohl Ihr Code als auch jeder Code, der Ihren Code aufruft, muss eine Berechtigung für nicht verwalteten Code besitzen (<xref:System.Security.Permissions.SecurityPermission> mit <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>-Flag). Nicht verwalteter Code kann für Ihre Anwendung unbeabsichtigte Sicherheitslücken bedeuten. Deshalb sollten Sie mit nicht verwaltetem Code nur interagieren, wenn dies absolut notwendig ist.  
@@ -90,7 +90,7 @@ Wenn Sie sicheren ADO.NET-Code schreiben möchten, müssen Sie die Sicherheitsme
 ## <a name="see-also"></a>Siehe auch
 - [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Empfehlungen für Strategien für den Datenzugriff](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Empfehlungen für Strategien für den Datenzugriff](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Verbindungszeichenfolgengeneratoren](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: N-Schicht-LINQ to SQL mit Webdiensten
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: caa7105e4f64cce78c34237279fd357fdfe92d55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e621063a2bd38b8ed473b8092c65a2aa9a645511
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623611"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092721"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N-Schicht-LINQ to SQL mit Webdiensten
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dient speziell zur Verwendung auf der mittleren Ebene in einer lose gekoppelten Datenzugriffsebene (DAL) wie z. B. einen Webdienst. Wenn es sich bei der Präsentationsebene um eine ASP.NET-Webseite handelt, können Sie die Datenübertragung zwischen der Benutzeroberfläche und <xref:System.Web.UI.WebControls.LinqDataSource> auf der mittleren Ebene mithilfe des [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Webserversteuerelements verwalten. Wenn es sich bei der Präsentationsebene nicht um eine ASP.NET-Seite handelt, müssen sowohl die mittlere Ebene als auch die Präsentationsebene zusätzliche Arbeit leisten, um die Serialisierung und Deserialisierung von Daten zu verwalten.  
@@ -15,7 +15,7 @@ ms.locfileid: "54623611"
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Einrichten von LINQ to SQL auf der mittleren Ebene  
  In einem Webdienst oder einer N-Tier-Anwendung enthält die mittlere Ebene den Datenkontext und die Entitätsklassen. Sie können diese Klassen manuell erstellen, indem Sie entweder SQLMetal.exe oder [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], wie an anderer Stelle in der Dokumentation beschrieben, verwenden. Zur Entwurfszeit können Sie die Entitätsklassen serialisierbar machen. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren der Serialisierbarkeit von Entitäten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Eine weitere Möglichkeit besteht darin, eine separate Gruppe von Klassen zu erstellen, die die zu serialisierenden Daten kapseln, und dann bei der Rückgabe von Daten in den [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Abfragen in diese serialisierbaren Typen zu projizieren.  
   
- Anschließend definieren Sie die Schnittstelle mithilfe der Methoden, die von Clients zum Abrufen, Einfügen und Aktualisieren von Daten aufgerufen werden. Die Schnittstellenmethoden umschließen die [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Abfragen. Sie können einen beliebigen Serialisierungsmechanismus verwenden, um Remotemethodenaufrufe und die Serialisierung von Daten zu behandeln. Wenn Sie in Ihrem Objektmodell über zyklische oder bidirektionale Beziehungen verfügen, z. B. Beziehungen zwischen Customers und Orders im standardmäßigen Northwind-Objektmodell, besteht die einzige Anforderung darin, einen Serialisierer zu verwenden, der das Modell unterstützt. Die Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt im Unterschied zum XmlSerializer, der mit Nicht-WCF-Webdiensten verwendet wird, bidirektionale Beziehungen. Wenn Sie den XmlSerializer verwenden möchten, müssen Sie sicherstellen, dass das Objektmodell keine zyklischen Beziehungen aufweist.  
+ Anschließend definieren Sie die Schnittstelle mithilfe der Methoden, die von Clients zum Abrufen, Einfügen und Aktualisieren von Daten aufgerufen werden. Die Schnittstellenmethoden umschließen die [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Abfragen. Sie können einen beliebigen Serialisierungsmechanismus verwenden, um Remotemethodenaufrufe und die Serialisierung von Daten zu behandeln. Wenn Sie in Ihrem Objektmodell über zyklische oder bidirektionale Beziehungen verfügen, z. B. Beziehungen zwischen Customers und Orders im standardmäßigen Northwind-Objektmodell, besteht die einzige Voraussetzung darin, einen Serialisierer zu verwenden, der das Modell unterstützt. Die Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt im Unterschied zum XmlSerializer, der mit Nicht-WCF-Webdiensten verwendet wird, bidirektionale Beziehungen. Wenn Sie den XmlSerializer verwenden möchten, müssen Sie sicherstellen, dass das Objektmodell keine zyklischen Beziehungen aufweist.  
   
  Weitere Informationen zu Windows Communication Foundation, finden Sie unter [Windows Communication Foundation-Dienste und WCF Data Services in Visual Studio](/visualstudio/data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio).  
   
@@ -38,4 +38,4 @@ ms.locfileid: "54623611"
   
 ## <a name="see-also"></a>Siehe auch
 - [N-schichtige Anwendungen und Remoteanwendungen mit LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
-- [NIB: Übersicht über LinqDataSource Webserver-Steuerelement](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)
+- [Übersicht über LinqDataSource Webserver-Steuerelement](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))

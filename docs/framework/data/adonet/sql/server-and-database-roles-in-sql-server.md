@@ -2,12 +2,12 @@
 title: Server- und Datenbankrollen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 57570d1879efa91dc98e41203eac9464c547af77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643077"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56091811"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Server- und Datenbankrollen in SQL Server
 Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie einer Rolle, also einer ganzen Gruppe von Benutzern, Berechtigungen zuweisen können, statt Berechtigungen individuell für jeden Benutzer einzeln festzulegen. Feste Server- und feste Datenbankrollen besitzen einen festen Satz von ihnen übertragenen Berechtigungen.  
@@ -27,8 +27,8 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Auf Serverebene Rollen](/sql/relational-databases/security/authentication-access/server-level-roles) und [Berechtigungen fester Serverrollen](https://msdn.microsoft.com/library/ms175892.aspx) in SQL Server-Onlinedokumentation|Beschreibt feste Serverrollen und die Berechtigungen, die in SQL Server zugeordnet.|  
-|[Datenbankrollen](/sql/relational-databases/security/authentication-access/database-level-roles) und [Berechtigungen fester Datenbankrollen](https://msdn.microsoft.com/library/ms189612.aspx) in SQL Server-Onlinedokumentation|Beschreibt die festen Datenbankrollen und die mit ihnen verknüpften Berechtigungen.|  
+|[Auf Serverebene Rollen](/sql/relational-databases/security/authentication-access/server-level-roles)|Beschreibt feste Serverrollen und die Berechtigungen, die in SQL Server zugeordnet.|  
+|[Datenbankrollen](/sql/relational-databases/security/authentication-access/database-level-roles)|Beschreibt die festen Datenbankrollen und die mit ihnen verknüpften Berechtigungen.|  
   
 ## <a name="database-roles-and-users"></a>Datenbankrollen und Benutzer  
  Anmeldungen müssen Datenbankbenutzerkonten zugeordnet werden, damit das Arbeiten mit den Datenbankobjekten funktioniert. Anschließend können den Datenbankrollen Datenbankbenutzer hinzugefügt werden, die alle Berechtigungssätze erben, die mit diesen Rollen verknüpft sind. Alle Berechtigungen können erteilt werden.  
@@ -58,8 +58,8 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Identität und Zugriffssteuerung](https://msdn.microsoft.com/library/bb510418.aspx) in SQL Server-Onlinedokumentation|Enthält Links zu Themen, in denen Prinzipale, Rollen, Anmeldeinformationen, sicherungsfähige Elemente und Berechtigungen beschrieben werden.|  
-|[Prinzipale](/sql/relational-databases/security/authentication-access/principals-database-engine) in SQL Server-Onlinedokumentation|Beschreibt Prinzipale und enthält Links zu Themen, in denen Server- und Datenbankrollen beschrieben werden.|  
+|[Erste Schritte mit Berechtigungen für die Datenbank-Engine](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Enthält Links zu Themen, in denen Prinzipale, Rollen, Anmeldeinformationen, sicherungsfähige Elemente und Berechtigungen beschrieben werden.|  
+|[Prinzipale](/sql/relational-databases/security/authentication-access/principals-database-engine)|Beschreibt Prinzipale und enthält Links zu Themen, in denen Server- und Datenbankrollen beschrieben werden.|  
   
 ## <a name="see-also"></a>Siehe auch
 - [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)

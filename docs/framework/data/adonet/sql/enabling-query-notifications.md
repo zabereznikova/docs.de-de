@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-ms.openlocfilehash: be9cae6f702b72306875246e874b99e7c79eb113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a711ad4779b8c932436ce1886b1a93dda849a94
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743035"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093956"
 ---
 # <a name="enabling-query-notifications"></a>Aktivieren von Abfragebenachrichtigungen
 Anwendungen, die Abfragebenachrichtigungen verwenden, haben einige Anforderungen gemeinsam. Ihre Datenquelle muss richtig konfiguriert sein, um SQL-Abfragebenachrichtigungen zu unterstützen, und die Benutzer müssen über die richtigen client- und serverseitigen Berechtigungen verfügen.  
@@ -28,25 +28,25 @@ Anwendungen, die Abfragebenachrichtigungen verwenden, haben einige Anforderungen
 ## <a name="query-notifications-requirements"></a>Anforderungen für Abfragebenachrichtigungen  
  Abfragebenachrichtigungen werden nur für SELECT-Anweisungen unterstützt, die bestimmte Anforderungen erfüllen. Die folgende Tabelle enthält Links zur SQL Server-Onlinedokumentation zu Service Broker und Abfragebenachrichtigungen.  
   
- **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
+ **SQL Server-Dokumentation**  
   
--   [Erstellen eine Abfrage für die Benachrichtigung](https://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Erstellen eine Abfrage für die Benachrichtigung](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
--   [Überlegungen zur Sicherheit für Service Broker](https://msdn.microsoft.com/library/ms166059.aspx)  
+-   [Überlegungen zur Sicherheit für Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
--   [Sicherheit und Schutz (Service Broker)](https://msdn.microsoft.com/library/bb522911.aspx)  
+-   [Sicherheit und Schutz (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
--   [Sicherheitsaspekte für Notification Services](https://msdn.microsoft.com/library/ms172604.aspx)  
+-   [Sicherheitsaspekte für Notification Services](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
--   [Berechtigungen für Abfragebenachrichtigungen](https://msdn.microsoft.com/library/ms188311.aspx)  
+-   [Berechtigungen für Abfragebenachrichtigungen](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
--   [Internationale Gesichtspunkte bei Service Broker](https://msdn.microsoft.com/library/ms166028.aspx)  
+-   [Internationale Gesichtspunkte bei Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
--   [Überlegungen zu Lösungsentwürfen (Service Broker)](https://msdn.microsoft.com/library/bb522899.aspx)  
+-   [Überlegungen zu Lösungsentwürfen (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
--   [Service Broker Developer InfoCenter](https://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Service Broker Developer InfoCenter](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [Entwicklerhandbuch (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Entwicklerhandbuch (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Aktivieren von Abfragebenachrichtigungen für das Ausführen von Beispielcode  
  Zum Aktivieren von Service Broker für die **AdventureWorks** -Datenbank mithilfe des SQL Server Management Studio, führen Sie die folgende Transact-SQL-Anweisung:  

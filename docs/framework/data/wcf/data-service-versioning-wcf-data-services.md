@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: aef4c98390d1fda4828bea8b6b2e482cb0071c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 818495cd2f7100f416280ce019321fed3f26aee8
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558526"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092916"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Datendienst-Versionskontrolle (WCF Data Services)
 Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ermöglicht es Ihnen, Datendienste zu erstellen, sodass Clients Daten als Ressourcen mit URIs zugreifen können, die auf einem Datenmodell basieren. OData unterstützt auch die Definition von Dienstvorgängen. Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen diese Datendienste eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z. B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Wenn Sie Änderungen an einem vorhandenen Datendienst vornehmen, müssen Sie berücksichtigen, ob eine neue Version des Datendiensts definiert wird und wie die Auswirkungen auf vorhandene Clientanwendungen am besten minimiert werden. Dieses Thema enthält einen Leitfaden, wann und wie eine neue Version eines Datendiensts erstellt wird. Es wird beschrieben, wie WCF Data Services verarbeitet einen Austausch zwischen Clients und Datendiensten, die verschiedene Versionen des OData-Protokolls unterstützen.
@@ -69,7 +69,7 @@ Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ermöglicht 
 |Version 3|– Sie können auch herunterladen und installieren Sie eine Vorabversion, die OData Version 3 unterstützt die [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=203885).|
 
 ### <a name="metadata-versions"></a>Metadatenversionen
- Standardmäßig verwendet WCF Data Services Version 1.1 von CSDL, um ein Datenmodell darzustellen. Dies ist immer bei Datenmodellen der Fall, die auf einem Reflektionsanbieter oder einem benutzerdefinierten Datendienstanbieter basieren. Wenn das Datenmodell jedoch mit [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] definiert wird, wird die CSDL-Version zurückgegeben, die von [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] verwendet wird. Die CSDL-Version richtet sich nach den Namespace der [Schemaelement](https://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f). Weitere Informationen finden Sie in der Spezifikation [ \[MC-CSDL\]: Konzeptionelles Schema Definition File Format](https://go.microsoft.com/fwlink/?LinkId=159072).
+ Standardmäßig verwendet WCF Data Services Version 1.1 von CSDL, um ein Datenmodell darzustellen. Dies ist immer bei Datenmodellen der Fall, die auf einem Reflektionsanbieter oder einem benutzerdefinierten Datendienstanbieter basieren. Wenn das Datenmodell jedoch mit [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] definiert wird, wird die CSDL-Version zurückgegeben, die von [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] verwendet wird. Die CSDL-Version richtet sich nach den Namespace der [Schema-Element (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl).
 
  Das `DataServices`-Element der zurückgegebenen Metadaten enthält auch ein `DataServiceVersion`-Attribut, das den gleichen Wert wie der `DataServiceVersion`-Header in der Antwortnachricht hat. Clientanwendungen, z. B. die **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio verwenden Sie diese Informationen zum Generieren von clientdatendienstklassen, die mit der Version von WCF Data Services ordnungsgemäß arbeiten, die den Datendienst hostet. Weitere Informationen finden Sie unter [OData: Protocol Versioning](https://go.microsoft.com/fwlink/?LinkId=186071).
 

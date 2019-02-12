@@ -2,12 +2,12 @@
 title: Sichere Clientanwendungen
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: 4233ce4edc788f3129043c5a1ef1acb26dd1d899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8efdf4c4baceb22ee60bdcf333ad1fec9ebd2d0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599612"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092708"
 ---
 # <a name="secure-client-applications"></a>Sichere Clientanwendungen
 Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werden müssen, dass keine Daten verloren gehen oder das System nicht anderweitig gefährdet wird. Durch das Erstellen sicherer Benutzeroberflächen lassen sich viele Probleme vermeiden, weil Angreifer damit bereits blockiert werden, bevor sie überhaupt auf Daten oder Systemressourcen zugreifen können.  
@@ -21,7 +21,7 @@ Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werd
  [Sicherheit und Benutzereingaben](../../../../docs/standard/security/security-and-user-input.md)  
  Beschreibt die Vorgehensweise bei kleinen und potenziell gefährlichen Fehlern im Zusammenhang mit der Benutzereingabe.  
   
- [Überprüfen der Benutzereingabe in ASP.NET-Webseiten](https://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)  
+ [Überprüfen der Benutzereingabe in ASP.NET-Webseiten](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Enthält eine Übersicht über das Validieren der Benutzereingabe mit ASP.NET-Validierungssteuerelementen.  
   
  [Benutzereingaben in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
@@ -39,7 +39,7 @@ Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werd
  [Windows Forms und nicht verwaltete Anwendungen](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Beschreibt die Interaktion mit nicht verwalteten Anwendungen in einer Windows Forms-Anwendung.  
   
- [ClickOnce-Bereitstellung für Windows Forms-Anwendungen](https://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df)  
+ [ClickOnce-Bereitstellung für Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
  Beschreibt die Verwendung einer `ClickOnce`-Bereitstellung in einer Windows Forms-Anwendung und erläutert die Auswirkungen auf die Sicherheit.  
   
 ## <a name="aspnet-and-xml-web-services"></a>ASP.NET und XML-Webdienste  
@@ -51,23 +51,23 @@ Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werd
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[NIB: ASP.NET-Sicherheit](https://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)|Erläutert das Sichern von ASP.NET-Anwendungen.|  
-|[Sichern von mit ASP.NET erstellten XML-Webdienste](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c)|Veranschaulicht das Implementieren von Sicherheit für einen ASP.NET-Webdienst.|  
-|[Übersicht über Skriptangriffe](https://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|Erläutert, wie Sie sich vor Angriffen mit Skriptexploits schützen können, bei denen versucht wird, bösartige Zeichen in eine Webseite einzufügen.|  
-|[NIB: Allgemeine Sicherheitsmaßnahmen für ASP.NET-Webanwendungen](https://msdn.microsoft.com/library/94a52ab8-731d-417e-b997-721baf43df38)|Enthält allgemeine Sicherheitsinformationen und Links zu weiteren Erläuterungen.|  
+|[Sichern von ASP.NET-Websites](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|Erläutert das Sichern von ASP.NET-Anwendungen.|  
+|[Sichern von mit ASP.NET erstellten XML-Webdienste](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|Veranschaulicht das Implementieren von Sicherheit für einen ASP.NET-Webdienst.|  
+|[Übersicht über Skriptangriffe](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Erläutert, wie Sie sich vor Angriffen mit Skriptexploits schützen können, bei denen versucht wird, bösartige Zeichen in eine Webseite einzufügen.|  
+|[Grundlegende Sicherheitsmaßnahmen für Webanwendungen](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|Enthält allgemeine Sicherheitsinformationen und Links zu weiteren Erläuterungen.|  
   
 ## <a name="remoting"></a>Remoting  
  Mit .NET-Remoting können Sie auf einfache Weise weit verteilte Anwendungen erstellen, wobei sich die einzelnen Anwendungskomponenten auf demselben Computer oder weltweit an verschiedenen Standorten befinden können. Sie können Clientanwendungen erstellen, die Objekte in anderen Prozessen auf demselben Computer oder auf einem beliebigen anderen Computer im Netzwerk verwenden. Sie können .NET Remoting auch für die Kommunikation mit anderen Anwendungsdomänen im selben Prozess verwenden.  
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Konfiguration von Remoteanwendungen](https://msdn.microsoft.com/library/92c0c097-d984-4315-835b-7490ecdf1097)|Erläutert, wie Sie Remoting-Anwendungen so konfigurieren können, dass allgemeine Probleme vermieden werden.|  
-|[Sicherheit beim Remoting](https://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|Beschreibt die Authentifizierung und Verschlüsselung und enthält darüber hinaus weitere Sicherheitsthemen im Zusammenhang mit Remoting.|  
+|[Konfiguration von Remoteanwendungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Erläutert, wie Sie Remoting-Anwendungen so konfigurieren können, dass allgemeine Probleme vermieden werden.|  
+|[Sicherheit beim Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Beschreibt die Authentifizierung und Verschlüsselung und enthält darüber hinaus weitere Sicherheitsthemen im Zusammenhang mit Remoting.|  
 |[Remoting Überlegungen zu Sicherheit und](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Beschreibt Sicherheitsprobleme mit geschützten Objekten und dem anwendungsdomänenübergreifenden Arbeiten.|  
   
 ## <a name="see-also"></a>Siehe auch
 - [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Empfehlungen für Strategien für den Datenzugriff](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)
+- [Empfehlungen für Strategien für den Datenzugriff](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Sichern von Anwendungen](/visualstudio/ide/securing-applications)
 - [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: a94c2e2ffc3ae3fa5406daeae97e31cfc3fdd1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588573"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093930"
 ---
 # <a name="standard-query-operator-translation"></a>Übersetzen von Standardabfrageoperatoren
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt Standardabfrageoperatoren in SQL-Befehle. Der Abfrageprozessor der Datenbank bestimmt die Ausführungssemantik der SQL-Übersetzung an.  
   
- Standardabfrageoperatoren sind, die für definiert *Sequenzen*. Eine Sequenz ist *sortiert* und basiert auf der Verweisidentität für jedes Element der Sequenz. Weitere Informationen finden Sie unter [Standard Query Operators Overview](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Standardabfrageoperatoren sind, die für definiert *Sequenzen*. Eine Sequenz ist *sortiert* und basiert auf der Verweisidentität für jedes Element der Sequenz. Weitere Informationen finden Sie unter [Standard Query Operators Overview (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) oder [Standard Query Operators Overview (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
  SQL beschäftigt sich hauptsächlich mit *ungeordneten Sätzen von Werten*. Die Sortierung ist in der Regel ein explizit angegebener, nachgelagerter Prozess, der auf das Endergebnis einer Abfrage und nicht auf Zwischenergebnisse angewendet wird. Die Identität wird durch Werte definiert. Aus diesem Grund werden die SQL-Abfragen für den Umgang mit Multisets verstanden (*kontextbehälter*) anstelle von *legt*.  
   
@@ -192,7 +192,7 @@ ORDER BY [t0].[CustomerID]
 ### <a name="text--ntext"></a>text / ntext  
  Datentypen `text`  /  `ntext` kann nicht verwendet werden, in bestimmten Abfrageoperationen für `varchar(max)`  /  `nvarchar(max)`, die von unterstützt [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].  
   
- Für diese Einschränkung ist keine Auflösung verfügbar. Sie können insbesondere `Distinct()` nicht für Ergebnisse verwenden, die Member enthalten, die der `text`-Spalte oder der `ntext`-Spalte zugeordnet sind.  
+ Für diese Einschränkung ist keine Lösung verfügbar. Sie können insbesondere `Distinct()` nicht für Ergebnisse verwenden, die Member enthalten, die der `text`-Spalte oder der `ntext`-Spalte zugeordnet sind.  
   
 ### <a name="behavior-triggered-by-nested-queries"></a>Von verschachtelten Abfragen ausgelöstes Verhalten  
  [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (durch SP4) weist einige eigenheiten auf, die von verschachtelten Abfragen ausgelöst werden. Der Satz von SQL-Abfragen, der diese Eigenheiten auslöst, ist nicht klar definiert. Aus diesem Grund keine definieren den Satz von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen, die SQL Server-Ausnahmen führen können.  

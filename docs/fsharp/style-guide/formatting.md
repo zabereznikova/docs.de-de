@@ -1,13 +1,13 @@
 ---
 title: F#Richtlinien für die codeformatierung
 description: Erfahren Sie, Richtlinien für die Formatierung F# Code.
-ms.date: 11/26/2018
-ms.openlocfilehash: b80a66f582d9fb8a2ec940ab565823483e7e4eea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.date: 02/08/2019
+ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254821"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093618"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#Richtlinien für die codeformatierung
 
@@ -424,6 +424,42 @@ let foo a =
 
 Die gleichen Regeln gelten für Listen- und Elemente.
 
+## <a name="formatting-copy-and-update-record-expressions"></a>Formatieren von kopieren und Aktualisieren von Datensatz-Ausdrücken
+
+Ein Datensatzausdruck von kopieren und aktualisieren ist immer noch einen Datensatz, damit ähnliche Richtlinien gelten.
+
+Kurze Ausdrücke können in eine Zeile passen:
+
+```fsharp
+let point2 = { point with X = 1; Y = 2 }
+```
+
+Längere Ausdrücke sollten neue Zeilen verwenden:
+
+```fsharp
+let rainbow2 =
+    { rainbow with
+        Boss = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"] }
+```
+
+Und wie mit der Anleitung Datensatz möchten reservieren einzelne Zeilen für die geschweiften Klammern und einen Bereich auf der rechten Seite mit dem Ausdruck einziehen. Beachten Sie, dass in einigen besonderen Fällen, z. B. einen Wert mit einem optionalen ohne Klammern umschließen Sie möglicherweise eine geschweifte Klammer in einer Zeile beibehalten müssen:
+
+```fsharp    
+type S = { F1: int; F2: string }
+type State = { F:  S option }
+
+let state = { F = Some { F1 = 1; F2 = "Hello" } }
+let newState = 
+    {
+        state with
+            F = Some {
+                    F1 = 0
+                    F2 = ""
+                }
+    }
+```
+
 ## <a name="formatting-lists-and-arrays"></a>Formatieren von Listen und arrays
 
 Schreiben von `x :: l` mit Leerzeichen vor und hinter der `::` Operator (`::` ist ein Infix-Operator, und daher von Leerzeichen eingeschlossen).
@@ -759,7 +795,7 @@ Wenn für einen Parameter angewendet wird, sie muss in der gleichen Zeile und ge
 
 ## <a name="formatting-literals"></a>Formatieren von literalen
 
-[F#Literale](../language-reference/literals.md) mithilfe der `Literal` Attribut sollte sollte das Attribut in einer eigenen Zeile platzieren, und benennen CamelCase:
+[F#Literale](../language-reference/literals.md) mithilfe der `Literal` Attribut sollte das Attribut in einer eigenen Zeile platzieren, und benennen CamelCase:
 
 ```fsharp
 [<Literal>]

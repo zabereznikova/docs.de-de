@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 8c5f94cb7f815e4aebef10d930843971219baef6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 461ff195ab4f147f98c7bc2ac83f5e8f12edc4c0
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623117"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093267"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Abfragen in LINQ to DataSet
 Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in der Regel in einer speziellen Abfragesprache, wie SQL für relationale Datenbanken oder XQuery für XML, geschrieben. Deshalb mussten Entwickler bisher für jeden abzufragenden Datenquellentyp oder Datenformattyp eine neue Abfragesprache lernen. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] bietet ein einfacheres, konsistentes Modell zum Arbeiten mit Daten über verschiedene Arten von Datenquellen und Formate hinweg. In einer [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Programmierobjekten.  
@@ -29,7 +29,7 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfragen können in zwei verschiedenen Syntaxarten formuliert werden: Abfrageausdrucksyntax und mit der methodenbasierten Abfragesyntax.  
   
 ### <a name="query-expression-syntax"></a>Abfrageausdruckssyntax  
- Abfrageausdrücke sind eine deklarative Abfragesyntax. Mit dieser Syntax kann der Entwickler Abfragen in einem SQL-ähnlichen Format in C# oder Visual Basic schreiben. Die Abfrageausdruckssyntax ermöglicht die Ausführung komplexer Filter-, Sortier- und Gruppiervorgänge mit minimalem Codeeinsatz. Weitere Informationen finden Sie unter [LINQ-Abfrageausdrücke](https://msdn.microsoft.com/library/40638f19-fb46-4d26-a2d9-a383b48f5ed4) und [Grundlegende Abfrageoperationen (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
+ Abfrageausdrücke sind eine deklarative Abfragesyntax. Mit dieser Syntax kann der Entwickler Abfragen in einem SQL-ähnlichen Format in C# oder Visual Basic schreiben. Die Abfrageausdruckssyntax ermöglicht die Ausführung komplexer Filter-, Sortier- und Gruppiervorgänge mit minimalem Codeeinsatz. Weitere Informationen finden Sie unter [LINQ-Abfrageausdrücke](../../../csharp/linq/index.md#query-expression-overview) und [Grundlegende Abfrageoperationen (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
   
  Die Abfrageausdruckssyntax ist eine in C# 3.0 und [!INCLUDE[vb_orcas_long](../../../../includes/vb-orcas-long-md.md)] neu eingeführte Funktion. Beachten Sie jedoch, dass die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Common Language Runtime (CLR) die Abfrageausdruckssyntax selbst nicht lesen kann. Daher werden die Abfrageausdrücke beim Kompilieren in etwas übersetzt, was die CLR versteht: Methodenaufrufe. Diese Methoden werden als bezeichnet die *Standardabfrageoperatoren*. Als Entwickler können Sie entscheiden, ob Sie die Methoden mittels Methodensyntax direkt aufrufen möchten oder ob dafür die Abfragesyntax verwendet werden soll. Weitere Informationen finden Sie unter [Abfragesyntax und Methodensyntax in LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md). Weitere Informationen zu den Standardabfrageoperatoren, finden Sie unter [Standard Query Operators Overview](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   

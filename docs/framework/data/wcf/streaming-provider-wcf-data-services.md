@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: b7a2cd6ec3be6d2a572e96e37032b3dec8a5a741
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697347"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093839"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und Serialisieren von umfangreichen Binärdaten auf diese Weise die Leistung beeinträchtigen können die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu dem er gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.  
@@ -89,7 +89,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
  Weitere Informationen finden Sie unter [Nachrichtenübertragung per Stream](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) und [Transportkontingente](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- Darüber hinaus wird die Größe von Anforderungen von Internetinformationsdienste (IIS) standardmäßig auf 4 MB begrenzt. Um Datenströme, die größer als 4 MB zu erhalten, wenn die Ausführung in IIS vom Datendienst zu aktivieren, müssen Sie auch Festlegen der `maxRequestLength` Attribut der [HttpRuntime-Element ((ASP.NET Einstellungsschema)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) in die `<system.web />` Konfigurationsabschnitt als Im folgenden Beispiel gezeigt:  
+ Darüber hinaus wird die Größe von Anforderungen von Internetinformationsdienste (IIS) standardmäßig auf 4 MB begrenzt. Um Datenströme, die größer als 4 MB zu erhalten, wenn die Ausführung in IIS vom Datendienst zu aktivieren, müssen Sie auch Festlegen der `maxRequestLength` Attribut der [HttpRuntime-Element ((ASP.NET Einstellungsschema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) in die `<system.web />` Konfigurationsabschnitt als Im folgenden Beispiel gezeigt:  
   
   
   
@@ -119,7 +119,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
 -   Wenn Sie die Methode <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> oder <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> implementieren, müssen Sie die eTag- und Content-Type-Werte verwenden, die als Methodenparameter angegeben werden. Legen Sie keine eTag- oder Content-Type-Header in der <xref:System.Data.Services.Providers.IDataServiceStreamProvider>-Anbieterimplementierung fest.  
   
--   Standardmäßig sendet der Client große binäre Datenströme mithilfe einer segmentierten HTTP-Übertragungscodierung. Da die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server diese Art von Codierung nicht unterstützt, Sie können nicht diesen Webserver verwenden, um einen streamingdatendienst zu hosten, der große binäre Datenströme annehmen muss. Weitere Informationen zu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server finden Sie unter [Webserver in Visual Studio für ASP.NET-Webprojekte](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   Standardmäßig sendet der Client große binäre Datenströme mithilfe einer segmentierten HTTP-Übertragungscodierung. Da die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server diese Art von Codierung nicht unterstützt, Sie können nicht diesen Webserver verwenden, um einen streamingdatendienst zu hosten, der große binäre Datenströme annehmen muss. Weitere Informationen zu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server finden Sie unter [Webserver in Visual Studio für ASP.NET-Webprojekte](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Versionsanforderungen  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 75d1dba6678be0bfa45be5f3e60e8e76f80a7e9e
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: ff1869ab17761645321d803f0f7db4bb39c992bc
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083846"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093280"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Abrufen von Daten, die mit "DataReader"
 Zum Abrufen von Daten mithilfe einer **DataReader**, erstellen Sie eine Instanz von der **Befehl** Objekt aus, und erstellen Sie eine **DataReader** durch Aufrufen von **Command.ExecuteReader**  um Zeilen aus einer Datenquelle abzurufen. Die **DataReader** enthält einen nicht gepufferten Datenstream, mit der prozeduralen Logik, die Ergebnisse aus einer Datenquelle effizient sequenziell zu verarbeiten zu können. Die **DataReader** ist eine gute Wahl, wenn Sie große Mengen von Daten abgerufen werden, da die Daten nicht im Arbeitsspeicher zwischengespeichert werden.
@@ -258,7 +258,6 @@ adapter.Fill(ds);
 >  Vermeiden einer **OverflowException**, es wird empfohlen, dass Sie auch jede Konvertierung von Oracle-Typ NUMBER in einen gültigen .NET Framework-Typ vor dem Speichern des Werts in behandeln eine <xref:System.Data.DataRow>. Sie können die <xref:System.Data.Common.DataAdapter.FillError> Ereignis, um zu bestimmen, ob ein **OverflowException** aufgetreten. Weitere Informationen zu den <xref:System.Data.Common.DataAdapter.FillError> Ereignis finden Sie unter [Behandeln von DataAdapter-Ereignissen](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Arbeiten mit "DataReaders"](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)
 - [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)

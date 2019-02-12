@@ -2,12 +2,12 @@
 title: Berechnungsausdrücke
 description: Erfahren Sie, wie Sie einfache Syntax für das Schreiben von Berechnungen in F#, die können sequenziert und kombiniert werden mithilfe von ablaufsteuerungskonstrukten und Bindungen erstellen.
 ms.date: 07/27/2018
-ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7524a42f8efb951be255ca6cc285740ef1fa12c3
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610696"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093514"
 ---
 # <a name="computation-expressions"></a>Berechnungsausdrücke
 
@@ -218,6 +218,7 @@ Die folgende Tabelle beschreibt die Methoden, die in einer Workflow-Generator-Kl
 |`Yield`|`'T -> M<'T>`|Wird aufgerufen, für die `yield` Ausdrücke im Berechnungsausdrücke.|
 |`YieldFrom`|`M<'T> -> M<'T>`|Wird aufgerufen, für die `yield!` Ausdrücke im Berechnungsausdrücke.|
 |`Zero`|`unit -> M<'T>`|Wird aufgerufen, für leere `else` branches `if...then` Ausdrücke im Berechnungsausdrücke.|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Gibt an, dass der Ausdruck für die Berechnung zu übergeben, wird die `Run` Element als ein Angebot. Er übersetzt alle Instanzen einer Berechnung in Anführungszeichen.|
 
 Viele der Methoden in einem Zeichenfolgengenerator-Klasse verwenden und Zurückgeben einer `M<'T>` Konstrukt, in der Regel separat definierten Typ, der die Art der Berechnungen, die kombiniert werden, z. B. charakterisiert, `Async<'T>` für asynchrone Workflows und `Seq<'T>` für die Sequenz-Workflows. Die Signaturen der folgenden Methoden ermöglichen ihnen kombiniert und mit untereinander geschachtelt werden sollen, damit der Workflow-Objekt, das von einem Konstrukt zurückgegebene zum nächsten übergeben werden kann. Der Compiler, wenn es sich um einen Ausdruck für die Berechnung, analysiert konvertiert den Ausdruck in eine Reihe von Aufrufe geschachtelter Funktionen mithilfe von Methoden in der obigen Tabelle und der Code in den Ausdruck für die Berechnung.
 

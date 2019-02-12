@@ -2,12 +2,12 @@
 title: Programmierhandbuch
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 3a6dad5237c149186a91637ec98efd6f7f315c4d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 32e62899c13be3f2f08bef7e882d5b9c4d11fda2
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799657"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093441"
 ---
 # <a name="programming-guide"></a>Programmierhandbuch
 Dieser Abschnitt enthält Informationen zur Erstellung und Nutzung Ihres [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objektmodells. Wenn Sie Visual Studio verwenden, können Sie auch die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] viele dieser Aufgaben ausführen.  
@@ -40,5 +40,8 @@ Dieser Abschnitt enthält Informationen zur Erstellung und Nutzung Ihres [!INCLU
  [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  Umfasst Links zu Themen, die die Verwendung gespeicherter Prozeduren erläutern.  
   
- [Einführung in LINQ](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)  
- Stellt Ressourcen bereit, die Ihnen die ersten Schritte mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erleichtern.
+ [Einführung in LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)  
+ Enthält Ressourcen, können Sie anfangen, erfahren Sie mehr über LINQ auf SQL mithilfe C#.
+
+ [Introduction to LINQ (Visual Basic) (Einführung in LINQ (Visual Basic))](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
+ Enthält Ressourcen, damit Sie die Informationen über LINQ to SQL mit Visual Basic beginnen können.

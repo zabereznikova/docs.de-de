@@ -2,12 +2,12 @@
 title: Abfragebeispiele
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 74664dd98ac067153894edc934c8f15eec407261
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211865"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093761"
 ---
 # <a name="query-examples"></a>Abfragebeispiele
 Dieser Abschnitt enthält die Visual Basic- und c#-Beispiele für typische [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen. Entwickler, die mit Visual Studio finden viele weitere Beispiele in einer beispiellösung im Abschnitt Beispiele. Weitere Informationen finden Sie unter [Beispiele](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
@@ -65,8 +65,11 @@ Dieser Abschnitt enthält die Visual Basic- und c#-Beispiele für typische [!INC
  Bietet Beispiele für die Kombination `select` mit anderen Funktionen (z. B. *anonyme Typen*) um Abfrageprojektionen zu bilden.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht über Standardabfrageoperatoren](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- Erläutert das Konzept der standardmäßigen Abfrageoperatoren.  
+ [Standard Query Operators Overview (C#) (Übersicht über Standardabfrageoperatoren (C#))](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Erklärt das Konzept der standardmäßigen Abfrageoperatoren, die mit C#.  
+  
+ [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ Erläutert das Konzept der standardmäßigen Abfrageoperatoren, die mithilfe von Visual Basic.  
   
  [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
  Erläutert, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Konzepte für Abfragen verwendet.  
