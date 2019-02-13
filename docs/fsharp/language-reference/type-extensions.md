@@ -1,13 +1,13 @@
 ---
 title: Typerweiterungen
 description: Erfahren Sie, wie F# typerweiterungen können Sie einen zuvor definierten Objekttyp neue Member hinzufügen.
-ms.date: 01/23/2019
-ms.openlocfilehash: d52bc38850219a142ff4f5d840e418ea4bd50cca
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.date: 02/08/2019
+ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066154"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092474"
 ---
 # <a name="type-extensions"></a>Erweiterungen des Typs
 
@@ -100,6 +100,8 @@ Sie können jetzt zugreifen `RepeatElements` , als ob es sich um ein Mitglied is
 Optionale Erweiterungen werden nicht für den erweiterten Typ, wenn durch Reflektion untersucht angezeigt. Optionale Erweiterungen müssen in Modulen sein, und sie sind nur im Gültigkeitsbereich, wenn das Modul, das die Erweiterung enthält, geöffnet ist, oder andernfalls befindet sich im Bereich.
 
 Member optionaler Erweiterungen werden in statische Member kompiliert, für die die Objektinstanz implizit als erster Parameter übergeben wird. Verhalten sich jedoch, als befänden sie Instanzmember oder statische Member nach, wie sie deklariert werden.
+
+Member Optionaler Erweiterungen sind auch für nicht sichtbar C# oder VB-Consumer. Sie können nur in anderen genutzt werden F# Code.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Generische Einschränkung der systeminterne und optionalen typerweiterungen
 
