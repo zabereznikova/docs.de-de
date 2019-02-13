@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 963923951b3f3c288506cf339cd8a15f27792af3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599217"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826901"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Vorgehensweise: Signieren einer Assembly mit einem starken Namen
 Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signieren:  
@@ -42,6 +42,9 @@ Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signier
 3.  Wählen Sie das Feld **Assembly signieren** aus.  
   
 4.  Wählen Sie im Feld **Schlüsseldatei mit starkem Namen auswählen** die Option **\<Durchsuchen…>** aus, und navigieren Sie dann zur Schlüsseldatei. Wählen Sie zum Erstellen einer neuen Schlüsseldatei **\<Neu…>** aus, und geben Sie ihren Namen im Dialogfeld **Schlüssel für einen starken Namen erstellen** ein.  
+  
+> [!NOTE]
+>  Wählen Sie eine Datei mit öffentlichem Schlüssel aus, um [die Signierung einer Assembly zu verzögern](../../../docs/framework/app-domains/delay-sign-assembly.md).  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>So erstellen und signieren Sie eine Assembly mit einem starken Namen unter Verwendung des Assemblylinkers  
   

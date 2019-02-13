@@ -1,19 +1,19 @@
 ---
-title: Vorhersagen von New Yorker Taxifahrtpreisen unter Verwendung eines Regressionslernmoduls mit ML.NET
-description: Sagen Sie Fahrtpreise unter Verwendung eines Regressionslernmoduls mit ML.NET vorher.
+title: Vorhersagen von Preisen mithilfe eines Regressionslernmoduls mit ML.NET
+description: Vorhersagen von Preisen mithilfe eines Regressionslernmoduls mit ML.NET.
 author: aditidugar
 ms.author: johalex
 ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b17b4e31a60d6eaf432577281004bcf2c7ca1da2
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333784"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828396"
 ---
-# <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Tutorial: Vorhersagen von New Yorker Taxifahrtpreisen unter Verwendung eines Regressionslernmoduls mit ML.NET
+# <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutorial: Vorhersagen von Preisen mithilfe eines Regressionslernmoduls mit ML.NET
 
 > [!NOTE]
 > Dieses Thema bezieht sich auf ML.NET, was derzeit als Vorschau verfügbar ist, und das Material kann jederzeit geändert werden. Weitere Informationen finden Sie in der [ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).

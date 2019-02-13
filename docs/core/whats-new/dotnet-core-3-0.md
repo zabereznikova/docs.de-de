@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: baaa2676865c475e331ec889e7b10ae326b552fa
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 9a43f9407d530224b5ad4775ef3a8c0ef2a9fe27
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675087"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828409"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>Neuerungen in .NET Core 3.0 (Vorschauversion 2)
 
@@ -20,11 +20,12 @@ In diesem Artikel werden Neuerungen in .NET Core 3.0 (Vorschauversion 2) beschri
 
 .NET Core 3.0 bietet Unterstützung für C# 8.0.
 
-[Sie können die Vorschauversion 2 von .NET Core 3.0 jetzt für Windows, Mac und Linux herunterladen und sofort starten.](https://aka.ms/netcore3download) Alle Details zu diesem Release finden Sie in den [Versionshinweisen zur Vorschauversion 2 von .NET Core 3.0](https://aka.ms/netcore3releasenotes).
+[Sie können .NET Core 3.0 Preview 2 jetzt für Windows, Mac und Linux herunterladen und sofort starten.](https://aka.ms/netcore3download) Alle Details zu diesem Release finden Sie in den [Versionshinweisen zu .NET Core 3.0 Preview 2](https://aka.ms/netcore3releasenotes).
 
-Weitere Informationen zu Neuerungen, die in Vorschauversion 1 eingeführt wurden, finden Sie in der [Ankündigung der Vorschauversion 1 von .NET Core 3.0](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/).
+Weitere Informationen zu den Inhalten der einzelnen Versionen finden Sie in den folgenden Ankündigungen:
 
-Weitere Informationen zu Neuerungen, die in Vorschauversion 2 eingeführt wurden, finden Sie in der [Ankündigung der Vorschauversion 2 von .NET Core 3.0]().
+- [.NET Core 3.0 Preview 1 announcement (Ankündigung von .NET Core 3.0 Preview 1)](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [.NET Core 3.0 Preview 2 announcement (Ankündigung von .NET Core 3.0 Preview 2)](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8.0
 
@@ -308,7 +309,7 @@ Ihr Feedback in den [dotnet/winforms](https://github.com/dotnet/winforms/issues)
 
 [MSIX](https://docs.microsoft.com/windows/msix/) ist ein neues Windows-App-Paketformat. Es kann zum Bereitstellen von .NET Core 3.0-Desktopanwendungen auf Windows 10 verwendet werden.
 
-Ab der Vorschauversion 2 von Visual Studio 2019 können mit dem enthaltenen [Paketerstellungsprojekt für Windows-Anwendungen](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) MSIX-Pakete mit [eigenständigen](../deploying/#self-contained-deployments-scd) .NET Core-Anwendungen erstellt werden.
+Ab der Vorschauversion 2 von Visual Studio 2019 können mit dem enthaltenen [Paketerstellungsprojekt für Windows-Anwendungen](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) MSIX-Pakete mit [eigenständigen](../deploying/index.md#self-contained-deployments-scd) .NET Core-Anwendungen erstellt werden.
 
 >Hinweis: Die unterstützten Laufzeiten müssen in der `<RuntimeIdentifiers>`-Eigenschaft der .NET Core-Projektdatei angegeben werden:
 ```xml

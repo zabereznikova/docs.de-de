@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: dfb99681ba363f23d742ac83940f1ce3e5e78bb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cac6215afb34b5b2864284763eea59b33feb35fe
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504001"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55826459"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Veröffentlichen von .NET Core-Apps mit der CLI
 
@@ -38,11 +38,11 @@ Benötigen Sie schnelle Hilfe zur Verwendung der CLI? In der folgenden Tabelle f
 
 ## <a name="publishing-basics"></a>Grundlagen der Veröffentlichung
 
-Die `<TargetFramework>`-Einstellung der Projektdatei gibt das Standardzielframework an, wenn Sie Ihre App veröffentlichen. Sie können das Zielframework in einen beliebigen, gültigen [Zielframeworkmoniker (TFM)](../../standard/frameworks.md) ändern. Wenn Sie in Ihrem Projekt beispielsweise `<TargetFramework>netcoreapp2.2</TargetFramework>` verwenden, wird eine Binärdatei für .NET Core 2.2 erstellt. Der in dieser Einstellung festgelegte TFW ist das Standardziel des [`dotnet publish`][dotnet-publish]-Befehls.
+Die `<TargetFramework>`-Einstellung der Projektdatei gibt das Standardzielframework an, wenn Sie Ihre App veröffentlichen. Sie können das Zielframework in einen beliebigen, gültigen [Zielframeworkmoniker (TFM)](../../standard/frameworks.md) ändern. Wenn Sie in Ihrem Projekt beispielsweise `<TargetFramework>netcoreapp2.2</TargetFramework>` verwenden, wird eine Binärdatei für .NET Core 2.2 erstellt. Der mit dieser Einstellung festgelegte TFM ist das Standardziel des [`dotnet publish`](../tools/dotnet-publish.md)-Befehls.
 
 Sie können mehrere durch Semikolons getrennte TFM-Werte in der `<TargetFrameworks>`-Einstellung festlegen, wenn Sie mehr als ein Zielframework benötigen. Mit dem `dotnet publish -f <TFM>`-Befehl können Sie eines der Frameworks veröffentlichen. Wenn Sie beispielsweise über `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` verfügen und `dotnet publish -f netcoreapp2.1` ausführen, wird eine Binärdatei für .NET Core 2.1 erstellt.
 
-Sofern es nicht anders festgelegt ist, ist `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` das Ausgabeverzeichnis des Befehls [`dotnet publish`][dotnet-publish]. Der **BUILD-CONFIGURATION**-Standardmodus ist **Debug**, sofern er nicht mithilfe des `-c`-Parameters geändert wurde. Zum Beispiel wird mit `dotnet publish -c Release -f netcoreapp2.1` in `myfolder/bin/Release/netcoreapp2.1/publish/` veröffentlicht. 
+Sofern es nicht anders festgelegt ist, ist `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` das Ausgabeverzeichnis des [`dotnet publish`](../tools/dotnet-publish.md)-Befehls. Der **BUILD-CONFIGURATION**-Standardmodus ist **Debug**, sofern er nicht mithilfe des `-c`-Parameters geändert wurde. Zum Beispiel wird mit `dotnet publish -c Release -f netcoreapp2.1` in `myfolder/bin/Release/netcoreapp2.1/publish/` veröffentlicht. 
 
 Wenn Sie das .NET Core SDK 3.0 verwenden, ist die frameworkabhängige ausführbare Datei der Standardveröffentlichungsmodus für Apps für die .NET Core-Versionen 2.1, 2.2 und 3.0.
 
@@ -95,7 +95,7 @@ Module Program
 End Module
 ```
 
-Wenn Sie die App ausführen ([`dotnet run`][dotnet-run]), wird die folgende Ausgabe angezeigt:
+Wenn Sie die App ausführen ([`dotnet run`](../tools/dotnet-run.md)), wird die folgende Ausgabe angezeigt:
 
 ```terminal
   _   _      _ _         __        __         _     _ _
@@ -163,6 +163,3 @@ Sie müssen die folgenden Parameter mit dem `dotnet publish`-Befehl verwenden, u
 
 - [.NET Core Application Deployment Overview (Übersicht über die .NET Core-Anwendungsbereitstellung)](index.md)
 - [.NET Core Runtime-ID (RID)-Katalog](../rid-catalog.md)
-
-[dotnet-publish]: ../tools/dotnet-publish.md
-[dotnet-run]: ../tools/dotnet-run.md
