@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
+ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086763"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55739461"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Exemplarische Vorgehensweisen für Visual Basic
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien, sodass sie der ideale Ausgangspunkt sind, um mehr über das Produkt oder einen bestimmten Funktionsbereich zu erfahren.  
@@ -47,9 +47,6 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  [Implementing Inheritance with COM Objects (Implementieren der Vererbung mit COM-Objekten)](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Veranschaulicht, wie man Visual Basic 6.0 zum Erstellen eines COM-Objekts mit einer Klasse und anschließend als Basisklasse in Visual Basic verwendet  
   
- [Multithreading](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
- Veranschaulicht, wie man eine Multithreadanwendung erstellt, die in einer Textdatei nach dem Vorkommen eines Worts sucht  
-  
  [Implementing Inheritance with COM Objects (Bestimmen, wohin „My.Application.Log“ Informationen schreibt)](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  Beschreibt die Standardeinstellungen für `My.Application.Log` und erläutert, wie Sie die Einstellungen für Ihre Anwendung ermitteln.  
   
@@ -80,5 +77,5 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
  [Persisting an Object in Visual Basic (Beibehalten eines Objekts in Visual Studio)](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Veranschaulicht, wie man ein einfaches Objekt erstellt und dessen Daten in einer Datei beibehält.  
   
- [Test-First Support with the Generate from Usage Feature (Test-First-Unterstützung mit der Funktion „Generate From Usage“)](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [Exemplarische Vorgehensweise: Test-First-Unterstützung mit der Funktion „Generate From Usage“](/visualstudio/ide/walkthrough-test-first-support-with-the-generate-from-usage-feature)  
  Veranschaulicht die Test-First-Entwicklung, in der Sie zuerst Komponententests und anschließend den Quellcode schreiben, um die Tests erfolgreich auszuführen

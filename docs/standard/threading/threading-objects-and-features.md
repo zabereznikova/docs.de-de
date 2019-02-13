@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 745cd1e17e2c06a513c6fdafe8f6b5f464b95d5f
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: f25609bc3c4dd829c66a1a4514b7f1121f9c0909
+ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479658"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759027"
 ---
 # <a name="threading-objects-and-features"></a>Threadingobjekte und -funktionen
 
@@ -24,10 +24,11 @@ Zusammen mit der <xref:System.Threading.Thread?displayProperty=nameWithType>-Kla
 |[Der verwaltete Threadpool](the-managed-thread-pool.md)|Beschreibt die <xref:System.Threading.ThreadPool?displayProperty=nameWithType>-Klasse, die einen Pool von Arbeitsthreads bereitstellt, die von .NET verwaltet werden.|  
 |[Timer](timers.md)|Beschreibt .NET-Timer, die in einer Multithreadumgebung verwendet werden können.|
 |[Übersicht über Synchronisierungsprimitiven](overview-of-synchronization-primitives.md)|Beschreibt Typen, die zum Synchronisieren des Zugriffs auf eine freigegebene Ressource oder zum Steuern von Threadinteraktionen verwendet werden können.|
-|[EventWaitHandle, CountdownEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|Beschreibt verwaltete Event-Wait-Handles, die signalisieren und auf Signale warten und zum Synchronisieren von Threadaktivitäten verwendet werden.|
-|[Mutexe](mutexes.md)|Beschreibt <xref:System.Threading.Mutex?displayProperty=nameWithType>, das exklusiven Zugriff auf eine freigegebene Ressource gewährt.|
+|[EventWaitHandle](eventwaithandle.md)|Beschreibt die <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>-Klasse, die ein Threadsynchronisierungsereignis darstellt.|
+|[CountdownEvent](countdownevent.md)|Beschreibt die <xref:System.Threading.CountdownEvent?displayProperty=nameWithType>-Klasse, die ein Threadsynchronisierungsereignis darstellt, das eingestellt wird, wenn sein Zähler gleich Null ist.|
+|[Mutexe](mutexes.md)|Beschreibt die <xref:System.Threading.Mutex?displayProperty=nameWithType>-Klasse, die exklusiven Zugriff auf eine freigegebene Ressource gewährt.|
 |[Semaphore and SemaphoreSlim (Semaphore und SemaphoreSlim)](semaphore-and-semaphoreslim.md)|Beschreibt die <xref:System.Threading.Semaphore?displayProperty=nameWithType>-Klasse, die die Anzahl von Threads einschränkt, die gleichzeitig auf eine freigegebene Ressource oder einen Pool von Ressourcen zugreifen können.|
-|[Barrier](barrier.md)|Beschreibt <xref:System.Threading.Barrier?displayProperty=nameWithType>-Klasse, die das Barrieremuster für die Koordination von Threads in stufenweise durchgeführten Vorgängen implementiert.|
+|[Barrier](barrier.md)|Beschreibt die <xref:System.Threading.Barrier?displayProperty=nameWithType>-Klasse, die das Barrieremuster für die Koordination von Threads in stufenweise durchgeführten Vorgängen implementiert.|
 |[SpinLock](spinlock.md)|Beschreibt die <xref:System.Threading.SpinLock?displayProperty=nameWithType>-Struktur, die für bestimmte Low-Level-Sperrszenarios eine einfache Alternative zur <xref:System.Threading.Monitor?displayProperty=nameWithType>-Klasse darstellt.|
 |[SpinWait](spinwait.md)|Beschreibt die <xref:System.Threading.SpinWait?displayProperty=nameWithType>-Struktur, die Unterstützung für Spin-basierte Wartevorgänge bereitstellt.|
 

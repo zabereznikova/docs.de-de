@@ -3,13 +3,13 @@ title: Arbeiten mit Daten in ASP.NET Core-Apps
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Arbeiten mit Daten in ASP.NET Core-Apps
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: a30d6708b87687ee4d5cdb13452662e264a1b54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 01/30/2019
+ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532681"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55827174"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Arbeiten mit Daten in ASP.NET Core-Apps
 
@@ -123,13 +123,82 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Sie können unter Verwendung von ThenInclude mehrere Beziehungen sowie untergeordnete Beziehungen hinzufügen. EF Core führt dann eine einzelne Abfrage aus, um die daraus entstehenden Entitäten abzurufen.
+Sie können unter Verwendung von ThenInclude mehrere Beziehungen sowie untergeordnete Beziehungen hinzufügen. EF Core führt dann eine einzelne Abfrage aus, um die daraus entstehenden Entitäten abzurufen. Alternativ können Sie die Navigationseigenschaften von Navigationseigenschaften einfügen, indem Sie eine durch Trennzeichen (.) getrennte Zeichenfolge wie im Folgenden dargestellt an die Erweiterungsmethode `.Include()` übergeben:
+
+```csharp
+    .Include(“Items.Products”)
+```
+
+Zusätzlich zum Kapseln der Filterlogik kann eine Spezifikation die Form der zurückzugebenden Daten angeben, einschließlich der aufzufüllenden Eigenschaften. Das Beispiel „eShopOnWeb“ enthält mehrere Spezifikationen, die das Kapseln von Eager Loading-Informationen in der Spezifikation veranschaulichen. Hier sehen Sie, wie die Spezifikation als Teil einer Abfrage verwendet wird:
+
+```csharp
+// Includes all expression-based includes
+query = specification.Includes.Aggregate(query,
+            (current, include) => current.Include(include));
+
+// Include any string-based include statements
+query = specification.IncludeStrings.Aggregate(query,
+            (current, include) => current.Include(include));
+```
 
 Sie können auch das _explizite Laden_ verwenden, um verknüpfte Daten zu laden. Beim expliziten Laden können Sie zusätzliche Daten in eine Entität laden, die bereits abgerufen wurde. Da dies eine separate Anforderung an die Datenbank umfasst, wird dies nicht für Webanwendungen empfohlen, die die Anzahl von Datenbankroundtrips pro Anforderung reduzieren sollen.
 
 Beim _verzögerten Laden_ handelt es sich um ein Feature, das automatisch verknüpfte Daten lädt, wenn die Anwendung auf dieses verweist. EF Core Version 2.1 unterstützt verzögertes Laden. Verzögertes Laden ist standardmäßig deaktiviert und erfordert die Installation von `Microsoft.EntityFrameworkCore.Proxies`. Ähnlich wie das explizite Laden sollte das verzögerte Laden in der Regel für Webanwendungen deaktiviert sein, da dessen Verwendung zu zusätzlichen Datenbankabfragen in jeder Webanforderung führt. Der vom verzögerten Laden verursachte zeitliche Mehraufwand wird zur Entwicklungszeit oft nicht beachtet, wenn die Wartezeit kurz ist und die für die Tests verwendeten Datasets klein sind. Allerdings können die zusätzlichen Datenbankanforderungen oft zu schlechter Leistung bei Webanwendungen führen, die intensiven Gebrauch vom verzögerten Laden machen, da in der Produktion mehr Benutzer sowie Daten vorhanden sind und höhere Wartezeiten auftreten.
 
 [Avoid Lazy Loading Entities in Web Applications (Vermeiden von verzögertem Laden von Entitäten in Webanwendungen)](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
+
+### <a name="encapsulating-data"></a>Kapseln von Daten
+
+EF Core enthält mehrere Features, mit denen Sie den Zustand des Modells richtig kapseln können. Ein häufiges Problem im Zusammenhang mit Domänenmodellen ist, dass sie Navigationseigenschaften für Sammlungen als öffentlich zugängliche Listentypen zur Verfügung stellen. Dadurch können alle Mitarbeiter die Inhalte dieser Auflistungstypen ändern. Dabei können möglicherweise wichtige Geschäftsregeln umgangen werden, die im Zusammenhang mit der Sammlung stehen, wodurch das Objekt in einem ungültigen Zustand hinterlassen wird. Zur Lösung dieses Problems können Sie lediglich schreibgeschützten Zugriff auf verwandte Sammlungen auf gewähren und explizit Methoden zur Verfügung stellen, über die Clients Änderungen vornehmen können. Dieser Vorgang wird im folgenden Beispiel veranschaulicht:
+
+```csharp
+public class Basket : BaseEntity
+{
+    public string BuyerId { get; set; }
+    private readonly List<BasketItem> _items = new List<BasketItem>();
+    public IReadOnlyCollection<BasketItem> Items => _items.AsReadOnly();
+
+    public void AddItem(int catalogItemId, decimal unitPrice, int quantity = 1)
+    {
+        if (!Items.Any(i => i.CatalogItemId == catalogItemId))
+        {
+            _items.Add(new BasketItem()
+            {
+                CatalogItemId = catalogItemId,
+                Quantity = quantity,
+                UnitPrice = unitPrice
+            });
+            return;
+        }
+        var existingItem = Items.FirstOrDefault(i => i.CatalogItemId == catalogItemId);
+        existingItem.Quantity += quantity;
+    }
+}
+```
+
+Beachten Sie, dass bei diesem Entitätstyp keine öffentliche `List`- oder `ICollection`-Eigenschaft sondern ein `IReadOnlyCollection`-Typ verfügbar gemacht wird, der den zugrunde liegenden Listentyp einschließt. Wenn Sie dieses Muster nutzen, können Sie festlegen, dass Entity Framework Core das Unterstützungsfeld folgendermaßen verwendet:
+
+```csharp
+private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
+{
+    var navigation = builder.Metadata.FindNavigation(nameof(Basket.Items));
+
+    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+}
+```
+
+Sie können Ihr Domänenmodell auch verbessern, indem Sie die Wertobjekte für Typen verwenden, die keine Identitäten besitzen oder sich nur durch ihre Eigenschaften unterscheiden. Durch das Verwenden solcher Typen als Eigenschaften Ihrer Entitäten können Sie sicherstellen, dass die Logik für das entsprechende Wertobjekt spezifisch ist. So kann duplizierte Logik in mehreren Entitäten, die das gleiche Konzept verwenden, vermieden werden. In Entity Framework Core können Sie Wertobjekte in der gleichen Tabelle wie die besitzende Entität speichern, indem Sie den Typ folgendermaßen als nicht eigenständige Entität konfigurieren:
+
+```csharp
+private void ConfigureOrder(EntityTypeBuilder<Order> builder)
+{
+    builder.OwnsOne(o => o.ShipToAddress);
+}
+```
+
+In diesem Beispiel weist die `ShipToAddress`-Eigenschaft den Typ `Address` auf. `Address` ist ein Wertobjekt mit mehreren Eigenschaften wie `Street` und `City`. EF Core ordnet das `Order`-Objekt zu seiner Tabelle zu, die eine Spalte pro `Address`-Eigenschaft enthält. Dabei wird jedem Spaltennamen der Name der Eigenschaft vorangestellt. In diesem Beispiel würde die Tabelle `Order` Spalten wie `ShipToAddress_Street` und `ShipToAddress_City` enthalten.
+
+[Ab EF Core 2.2 werden Sammlungen von nicht eigenständigen Entitäten unterstützt](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
 
 ### <a name="resilient-connections"></a>Robuste Verbindungen
 
@@ -253,7 +322,7 @@ var data = connection.Query<Post, User, Post>(sql,
 (post, user) => { post.Owner = user; return post;});
 ```
 
-Da Entwickler im Zusammenhang mit Dapper weniger Kapselungen vornehmen müssen, ist es erforderlich, dass diese wissen, wie ihre Daten gespeichert werden, wie sie diese effizient abfragen können und wie sie mehr Code schreiben können, um diese Daten abzurufen. Wenn das Modell verändert wird, darf nicht bloß eine neue Migration erstellt werden (ein anderes EF Core-Feature) und/oder Informationen einem Ort in DbContext zugeordnet werden. Stattdessen muss jede Abfrage, die betroffen ist, aktualisiert werden. Für diese Abfragen gibt es keine Garantien hinsichtlich der Kompilierzeit – das kann zur Laufzeit zu Unterbrechungen führen, wenn Änderungen an dem Modell oder der Datenbank vorgenommen werden, sodass es schwieriger wird, Fehler direkt zu ermitteln. Nichtsdestotrotz bietet Dapper eine schnelle Leistung.
+Da Entwickler im Zusammenhang mit Dapper weniger Kapselungen vornehmen müssen, ist es erforderlich, dass diese wissen, wie ihre Daten gespeichert werden, wie sie diese effizient abfragen können und wie sie mehr Code schreiben können, um diese Daten abzurufen. Wenn das Modell verändert wird, darf nicht bloß eine neue Migration erstellt werden (ein anderes EF Core-Feature) und/oder Informationen einem Ort in DbContext zugeordnet werden. Stattdessen muss jede Abfrage, die betroffen ist, aktualisiert werden. Für diese Abfragen gibt es keine Garantien hinsichtlich der Kompilierzeit. Das kann zur Laufzeit zu Unterbrechungen führen, wenn Änderungen am Modell oder an der Datenbank vorgenommen werden, sodass es schwieriger wird, Fehler direkt zu ermitteln. Nichtsdestotrotz bietet Dapper eine schnelle Leistung.
 
 Sowohl für die meisten Anwendungen als auch für die meisten Bestandteile von Anwendungen bietet EF Core eine akzeptable Leistung. Somit sind die Vorteile hinsichtlich der Leistung für Entwickler größer als die durch den Leistungsaufwand entstehenden Nachteile. Bei Abfragen, die von Zwischenspeicherungen profitieren können, beansprucht die eigentliche Abfrage nur wenig Zeit, wodurch kleine Unterschiede hinsichtlich der Abfrageleistung nur in der Theorie einen Unterschied machen.
 

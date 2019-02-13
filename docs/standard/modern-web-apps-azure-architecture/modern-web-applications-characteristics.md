@@ -3,13 +3,13 @@ title: Merkmale moderner Webanwendungen
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Merkmale moderner Webanwendungen
 author: ardalis
 ms.author: wiwagn
-ms.date: 06/28/2018
-ms.openlocfilehash: 6c416432f10bb93ff5012d716b2d92f13efdcd9b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/30/2019
+ms.openlocfilehash: eacc66ff5d2c4bfb8d8645bc6bd319eab52437a3
+ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147335"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55828123"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Merkmale moderner Webanwendungen
 
@@ -39,25 +39,25 @@ ASP.NET Core ist für die Cloud (öffentliche Cloud, private Cloud, jede andere 
 
 ## <a name="cross-platform"></a>Plattformübergreifend
 
-ASP.NET Core ist plattformübergreifend und kann unter Linux, MacOS und Windows ausgeführt werden. Dadurch entstehen viele neue Optionen für die Entwicklung und Bereitstellung von Apps, die mit ASP.NET Core erstellt werden. Docker-Container, die heutzutage normalerweise Linux ausführen, können ASP.NET Core-Anwendungen ausführen und diesen ermöglichen, die Vorteile von [Containern und Microservices](../microservices-architecture/index.md) zu nutzen.
+ASP.NET Core ist plattformübergreifend und kann unter Linux, macOS und Windows ausgeführt werden. Dadurch entstehen viele neue Optionen für die Entwicklung und Bereitstellung von Apps, die mit ASP.NET Core erstellt werden. Docker-Container – sowohl unter Linux als auch unter Windows – können ASP.NET Core-Anwendungen ausführen und diesen ermöglichen, die Vorteile von [Containern und Microservices](../microservices-architecture/index.md) zu nutzen.
 
 ## <a name="modular-and-loosely-coupled"></a>Modular und lose gekoppelt
 
 NuGet-Pakete sind wesentliche Bestandteile in .Net Core, und ASP.NET Core-Anwendungen werden aus vielen Bibliotheken über NuGet zusammengesetzt. Die Genauigkeit der Funktionen hilft bei der Gewährleistung, dass Apps nur von den Funktionen abhängen, die sie tatsächlich benötigen, und diese bereitstellen. Dadurch wird deren Speicherbedarf und die Oberfläche von Sicherheitsrisiken reduziert.
 
-ASP.NET Core unterstützt auch vollumfänglich die Abhängigkeitsinjektion, sowohl auf interner Ebene als auch auf Anwendungsebene. Schnittstellen verfügen über mehrere Implementierungen, die nach Bedarf ausgelagert werden können. Abhängigkeitsinjektionen ermöglichen es Anwendungen, an diese Schnittstellen zu koppeln. Dies erleichtert das Erweitern, Verwalten und Testen.
+ASP.NET Core unterstützt auch vollumfänglich die [Abhängigkeitsinjektion](https://deviq.com/dependency-injection/), sowohl auf interner Ebene als auch auf Anwendungsebene. Schnittstellen verfügen über mehrere Implementierungen, die nach Bedarf ausgelagert werden können. Durch Abhängigkeitsinjektionen ist es möglich, Anwendungen eher lose an diese Schnittstellen zu koppeln als an bestimmte Implementierungen. Dies erleichtert das Erweitern, Verwalten und Testen der Anwendungen.
 
 ## <a name="easily-tested-with-automated-tests"></a>Problemloses Testen mit automatisierten Tests
 
-ASP.NET Core-Anwendungen unterstützen Komponententests, und deren lose Kopplung und Unterstützung für Abhängigkeitsinjektionen erleichtert das Austauschen der Infrastrukturprobleme mit falschen Implementierungen zu Testzwecken. ASP.NET Core umfasst auch einen TestServer, der verwendet werden kann, um Anwendungen im Arbeitsspeicher zu hosten. Funktionstests können dann Anforderungen an diesen In-Memory-Server stellen, den vollständigen Anwendungsstapel ausführen (einschließlich Middleware, Routing, Modellbindung, Filter usw.) und eine Antwort erhalten. Dies alles geschieht in einem Bruchteil der Zeit, die benötigt werden würde, um die Anwendung auf einem echten Server zu hosten und Anforderungen über die Netzwerkschicht zu stellen. Diese Tests sind für APIs, die bei modernen Webanwendungen zunehmend wichtiger werden, besonders einfach zu schreiben und wertvoll.
+ASP.NET Core-Anwendungen unterstützen Komponententests. Deren lose Kopplung und Unterstützung für Abhängigkeitsinjektionen erleichtern das Austauschen der Infrastrukturprobleme mit falschen Implementierungen zu Testzwecken. ASP.NET Core umfasst auch einen TestServer, der verwendet werden kann, um Anwendungen im Arbeitsspeicher zu hosten. Funktionstests können dann Anforderungen an diesen In-Memory-Server stellen, den vollständigen Anwendungsstapel ausführen (einschließlich Middleware, Routing, Modellbindung, Filter usw.) und eine Antwort erhalten. Dies alles geschieht in einem Bruchteil der Zeit, die benötigt werden würde, um die Anwendung auf einem echten Server zu hosten und Anforderungen über die Netzwerkschicht zu stellen. Diese Tests sind für APIs, die bei modernen Webanwendungen zunehmend wichtiger werden, besonders einfach zu schreiben und wertvoll.
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>Herkömmliches Verhalten und SPA-Verhalten unterstützt
 
-Herkömmliche Webanwendungen verfügen über wenig clientseitiges Verhalten. Stattdessen verlassen sie sich bei allen Navigationen, Abfragen und Updates, die die Anwendung benötigen könnte, auf den Server. Jeder neue vom Benutzer ausgeführte Vorgang würde in eine neue Webanforderung verschoben werden. Das Ergebnis wäre ein vollständiges Neuladen der Seite im Browser des Benutzers. Klassische MVC-Frameworks folgen normalerweise diesem Verfahren, bei dem jede neue Anforderung zu einer anderen Controlleraktion gehört, die wiederum mit einem Modell arbeiten und eine Ansicht zurückgeben würde. Einige individuelle Vorgänge auf einer vorhandenen Seite könnten mit der AJAX-Funktion (Asynchronous JavaScript And XML) erweitert werden, aber die Gesamtarchitektur der Anwendung hat viele verschiedene MVC-Ansichten und URL-Endpunkte verwendet.
+Herkömmliche Webanwendungen verfügen über wenig clientseitiges Verhalten. Stattdessen verlassen sie sich bei allen Navigationen, Abfragen und Updates, die die Anwendung benötigen könnte, auf den Server. Jeder neue vom Benutzer ausgeführte Vorgang würde in eine neue Webanforderung verschoben werden. Das Ergebnis wäre ein vollständiges Neuladen der Seite im Browser des Benutzers. Klassische MVC-Frameworks folgen normalerweise diesem Verfahren, bei dem jede neue Anforderung zu einer anderen Controlleraktion gehört, die wiederum mit einem Modell arbeiten und eine Ansicht zurückgeben würde. Einige individuelle Vorgänge auf einer vorhandenen Seite könnten mit der AJAX-Funktion (Asynchronous JavaScript And XML) erweitert werden, aber die Gesamtarchitektur der Anwendung hat viele verschiedene MVC-Ansichten und URL-Endpunkte verwendet. Zusätzlich unterstützt ASP.NET Core MVC auch Razor Pages, eine einfachere Möglichkeit zum Organisieren von Seiten im MVC-Stil.
 
 Single-Page-Webanwendungen (SPAs) schließen dagegen wenige dynamisch erstellte serverseitige Ladevorgänge der Seite ein (sofern vorhanden). Viele SPAs werden innerhalb einer statischen HTML-Datei initialisiert, die die notwendigen JavaScript-Bibliotheken lädt, um die Anwendung zu starten und auszuführen. Diese Anwendungen führen zu einer hohen Auslastung der Web-APIs für deren Datenanforderungen und können für mehr Benutzerfreundlichkeit sorgen.
 
-Viele Webanwendungen verfügen über eine Kombination aus den Verhaltensweisen von herkömmlichen Webanwendungen (normalerweise für Inhalte) und SPAs (für Interaktivität). ASP.NET Core unterstützt sowohl MVC-APIs (Ansichten und/oder Razor Pages) als auch Web-APIs in derselben Anwendung. Dabei werden das gleiche Toolset und die gleichen zugrunde liegenden Frameworkbibliotheken verwendet.
+Viele Webanwendungen verfügen über eine Kombination aus den Verhaltensweisen von herkömmlichen Webanwendungen (normalerweise für Inhalte) und SPAs (für Interaktivität). ASP.NET Core unterstützt sowohl MVC-APIs (Ansichten oder seitenbasierte) als auch Web-APIs in derselben Anwendung. Dabei werden das gleiche Toolset und die gleichen zugrunde liegenden Frameworkbibliotheken verwendet.
 
 ## <a name="simple-development-and-deployment"></a>Einfache Entwicklung und Bereitstellung
 
