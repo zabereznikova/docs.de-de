@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 03c2620913aff2ef2934e7c07574c130923c7139
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2f2bff0d86d3c3fed443628a5c437fe1ebdcc15
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540662"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219840"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Schreiben großer, reaktionsfähiger .NET Framework-Apps
 In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Framework-Apps oder Apps bereitgestellt, die großen Datenmengen wie Dateien oder Datenbanken verarbeiten. Die Tipps stammen aus dem Umschreiben der C#- und Visual Basic-Compiler in verwalteten Code, und dieser Artikel enthält mehrere reale Beispiele aus dem C#-Compiler. 
@@ -37,7 +37,7 @@ In diesem Artikel werden Tipps zum Verbessern der Leistung von großen .NET Fram
  Sie sollten Leistungsziele für wichtige Kundenerfahrungen oder -szenarien in Ihrer App festlegen und Tests schreiben, um die Leistung zu messen. Untersuchen Sie fehlschlagende Tests, indem Sie die wissenschaftliche Methode anwenden: Verwenden Sie Profile, um Ihnen die Richtung zu weisen, stellen Sie Hypothesen auf, worin das Problem bestehen könnte, und testen Sie Ihre Hypothese mit einem Experiment oder einer Codeänderung. Richten Sie Baselineleistungsmessungen über die Zeit mit regelmäßigen Tests ein, damit Sie Änderungen isolieren können, die Leistungsregressionen verursachen. Wenn Sie die Leistungsarbeit auf eine rigorose Weise angehen, verschwenden Sie keine Zeit mit Codeaktualisierungen, die Sie nicht benötigen. 
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Tatsache 3: Gute Tools machen einen großen Unterschied  
- Mit guten Tools können Sie schnell einen Drilldown in die größten Leistungsprobleme (CPU, Speicher oder Datenträger) ausführen und den Code finden, der diese Engpässe verursacht. Microsoft bietet eine Reihe von Leistungstools wie [Visual Studio Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling), [Windows Phone Analysis Tool](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) und [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
+ Mit guten Tools können Sie schnell einen Drilldown in die größten Leistungsprobleme (CPU, Speicher oder Datenträger) ausführen und den Code finden, der diese Engpässe verursacht. Microsoft bietet eine Reihe von Leistungstools wie [Visual Studio-Profiler](/visualstudio/profiling/beginners-guide-to-performance-profiling) und [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView ist ein kostenloses und erstaunlich leistungsstarkes Tool, mit dem Sie sich auf tiefliegende Probleme wie Datenträger-E/A, GC-Ereignisse und Arbeitsspeicher konzentrieren können. Sie erfassen leistungsrelevante Ereignisse der [Ereignisablaufverfolgung für Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (Event Tracing for Windows, ETW) und zeigen auf einfache Weise Informationen pro App, pro Prozess, pro Stapel und pro Thread an. PerfView zeigt Ihnen, wie viel und welche Art von Speicher Ihre App zuweist und welche Funktionen oder Aufrufstapel zu welchem Anteil der Speicherbelegungen beitragen. Einzelheiten finden Sie in den umfassenden Hilfethemen, Demos und Videos, die mit dem Tool ausgeliefert werden (zum Beispiel die [PerfView-Tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial) auf Channel 9). 
   
@@ -434,7 +434,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Dieser Code ändert den Typ von `cachedResult` in `Task<SyntaxTree>` und wendet eine `async`-Hilfsfunktion an, die den Originalcode von `GetSyntaxTreeAsync()` speichert. `GetSyntaxTreeAsync()` verwendet jetzt den [NULL-Sammeloperator](../../csharp/language-reference/operators/null-coalescing-operator.md), um `cachedResult` zurückzugeben, wenn es nicht NULL ist. Wenn `cachedResult` Null ist, ruft `GetSyntaxTreeAsync()` `GetSyntaxTreeUncachedAsync()` auf und speichert das Ergebnis zwischen. Beachten Sie, dass `GetSyntaxTreeAsync()` nicht auf den Aufruf an `GetSyntaxTreeUncachedAsync()` wartet, wie es der Code normalerweise tun würde. Wenn await nicht verwendetet wird, bedeutet das, dass, wenn `GetSyntaxTreeUncachedAsync()` sein <xref:System.Threading.Tasks.Task>-Objekt zurückgibt, `GetSyntaxTreeAsync()` sofort <xref:System.Threading.Tasks.Task> zurückgibt. Jetzt ist das zwischengespeicherte Objekt ein <xref:System.Threading.Tasks.Task>, sodass keine Zuordnungen vorhanden sind, die das zwischengespeicherte Ergebnis zurückgeben. 
+ Dieser Code ändert den Typ von `cachedResult` in `Task<SyntaxTree>` und wendet eine `async`-Hilfsfunktion an, die den Originalcode von `GetSyntaxTreeAsync()` speichert. `GetSyntaxTreeAsync()` verwendet jetzt den [NULL-Sammeloperator](../../csharp/language-reference/operators/null-coalescing-operator.md), um `cachedResult` zurückzugeben, wenn es nicht NULL ist. Wenn `cachedResult` Null ist, ruft `GetSyntaxTreeAsync()``GetSyntaxTreeUncachedAsync()` auf und speichert das Ergebnis zwischen. Beachten Sie, dass `GetSyntaxTreeAsync()` nicht auf den Aufruf an `GetSyntaxTreeUncachedAsync()` wartet, wie es der Code normalerweise tun würde. Wenn await nicht verwendetet wird, bedeutet das, dass, wenn `GetSyntaxTreeUncachedAsync()` sein <xref:System.Threading.Tasks.Task>-Objekt zurückgibt, `GetSyntaxTreeAsync()` sofort <xref:System.Threading.Tasks.Task> zurückgibt. Jetzt ist das zwischengespeicherte Objekt ein <xref:System.Threading.Tasks.Task>, sodass keine Zuordnungen vorhanden sind, die das zwischengespeicherte Ergebnis zurückgeben. 
   
 ### <a name="additional-considerations"></a>Weitere Überlegungen  
  Hier sind einige weitere Punkt zu potenziellen Problemen in großen Apps oder Apps, die viele Daten verarbeiten. 
@@ -466,9 +466,8 @@ class Compilation { /*...*/
 - [Video der Präsentation zu diesem Thema](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Einführung in die Leistungsprofilerstellung](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Leistung](../../../docs/framework/performance/index.md)
-- [Leistungstipps für .NET](https://msdn.microsoft.com/library/ms973839.aspx)
+- [Leistungstipps für .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
 - [Windows Phone-Leistungsanalysetools](https://msdn.microsoft.com/magazine/hh781024.aspx)
-- [Aufspüren von Anwendungsengpässen mit Visual Studio-Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)
 - [Channel 9 PerfView-tutorials](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [Das .NET Compiler Platform SDK](../../csharp/roslyn-sdk/index.md)
 - [Dotnet/Roslyn-Repositorys auf GitHub](https://github.com/dotnet/roslyn)

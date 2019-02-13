@@ -1,15 +1,15 @@
 ---
 title: Überwachen von containeranwendungsdiensten
-description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
+description: Erfahren Sie, einige wichtige Aspekte der Überwachung von Container-Architekturen
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: e1be3c36f17fc5f85c9deacaa29031cee45226cc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153920"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221185"
 ---
 # <a name="monitor-containerized-application-services"></a>Überwachen von containeranwendungsdiensten
 

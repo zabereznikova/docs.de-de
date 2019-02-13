@@ -1,15 +1,15 @@
 ---
 title: Was ist Docker?
-description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
+description: Erhalten Sie ein bisschen tiefer in Ihre Kenntnisse von Docker, hier eine einfache Analogie kann Ihnen ein.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: c8300c964dfce0cc8e39478cc10ed7589dbca2c9
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152709"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218553"
 ---
 # <a name="what-is-docker"></a>Was ist Docker?
 

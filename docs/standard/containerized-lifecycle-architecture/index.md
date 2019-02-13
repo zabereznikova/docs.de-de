@@ -1,15 +1,15 @@
 ---
 title: Einführung in Container und Docker
-description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
+description: Erhalten Sie einen allgemeinen Überblick über die wichtigsten Vorteile der Verwendung von Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: c2a6b9802bbb995939d33c5c40ef9c1afa1620e5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 547a76b46a319cd1b8403505ce3da618123b490e
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148820"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218696"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Einführung in Container und Docker
 

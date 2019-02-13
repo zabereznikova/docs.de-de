@@ -1,15 +1,15 @@
 ---
 title: Verwalten von Docker-produktionsumgebungen
-description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
+description: Lernen Sie wichtige Punkte für die Verwaltung einer produktionsumgebung containerbasierte kennen.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 54e2b999f744600d3b6853442bb9ccca004f4e76
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147293"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219489"
 ---
 # <a name="manage-production-docker-environments"></a>Verwalten von Docker-produktionsumgebungen
 
@@ -32,7 +32,7 @@ Tabelle 6 – 1: Docker-Verwaltungstools
 | Docker Universal Control Plane\(lokal oder in der Cloud) | [Docker Universal Control Plane](https://docs.docker.com/v1.11/ucp/overview/) ist die professionelle Unternehmens-Cluster-verwaltungslösung von Docker. Sie können Sie Ihren gesamten Cluster von einem zentralen Ort zu verwalten. <br /><br /> Docker Universal Control Plane ist Bestandteil der kommerziellen Produkt Docker Datacenter bietet Docker Swarm, Docker Universal Control Plane und Docker Trusted Registry. <br /><br /> Docker Datacenter kann lokal installiert oder von einer öffentlichen Cloud wie Azure bereitgestellt. | Docker Swarm\(von Container Service unterstützt) |
 | Docker Cloud\(auch bekannt als Tutum; SaaS-Cloud) | [Docker Cloud](https://docs.docker.com/docker-cloud/) ist ein gehosteter Dienst (SaaS), das Erstellen und Testen Funktionen für die in docker bereitgestellte Anwendungsbilder, Tools zum Einrichten und Verwalten Ihrer Hostinfrastruktur bietet Orchestrierungsfunktionen und eine Docker-Registrierung und von Bereitstellungsfunktionen zum Automatisieren Ihrer Images für Ihre konkrete Infrastruktur bereitstellen. Sie können Ihr Konto SaaS Docker Cloud für Ihre Infrastruktur in Container Service mit Docker Swarm-Cluster verbinden. | Docker Swarm\(von Container Service unterstützt) |
 | Mesosphere Marathon\(lokal oder in der Cloud) | [Marathon](https://mesosphere.github.io/marathon/docs/marathon-ui.html) ist eine Plattform für das Container Produktionsniveau der Orchestrierung und der Scheduler von Mesosphere DC/OS und Apache Mesos. <br /><br /> Es funktioniert mit Mesos (DC/OS basiert auf Apache Mesos) steuern lang ausgeführte Dienste eine [-web-UI für die Verwaltung von Prozess und Container](https://mesosphere.github.io/marathon/docs/marathon-ui.html). Es bietet ein Web-UI-Verwaltungstool | Mesosphere DC/OS\(basierend auf Apache Mesos; von Container Service unterstützt) |
-| Google-Kubernetes | [Kubernetes](https://kubernetes.io/docs/user-guide/ui/#dashboard-access) umfasst die Orchestrierung, Planung und -Cluster-Infrastruktur. Es ist ein Open Source-Plattform für die Automatisierung von Bereitstellung, Skalierung und Betrieb von anwendungscontainern für Hostcluster, Container ausgerichtete Infrastruktur bereitstellen. | Google Kubernetes\(von Container Service unterstützt) |
+| Google Kubernetes | [Kubernetes](https://kubernetes.io/docs/user-guide/ui/#dashboard-access) umfasst die Orchestrierung, Planung und -Cluster-Infrastruktur. Es ist ein Open Source-Plattform für die Automatisierung von Bereitstellung, Skalierung und Betrieb von anwendungscontainern für Hostcluster, Container ausgerichtete Infrastruktur bereitstellen. | Google Kubernetes\(von Container Service unterstützt) |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 

@@ -1,15 +1,15 @@
 ---
 title: Entwerfen und Entwickeln von Container-Apps mit Docker und Microsoft Azure
-description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
+description: Wir rufen nun in der arbeitsauslastung zum Entwickeln/Design des Docker-Anwendungen-Lebenszyklus.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/21/2017
-ms.openlocfilehash: 2f8e969ce48a448a293efafccbce1d62b059640d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: a65f3b59df32c16c0985c8b74ba6a438490e3317
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155222"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219417"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>Entwerfen und Entwickeln von Container-Apps mit Docker und Microsoft Azure
 

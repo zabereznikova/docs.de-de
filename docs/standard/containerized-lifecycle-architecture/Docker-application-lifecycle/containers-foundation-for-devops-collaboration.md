@@ -1,15 +1,15 @@
 ---
 title: Container als Grundlage für die DevOps-Zusammenarbeit
-description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
+description: Erfahren Sie, die wichtige Rolle der Container, DevOps zu optimieren.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: ccc8ef765cadfec31a2f714767d8e6eb76508093
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: d0339199092304dd6c91707d8cf4da213f110b58
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126626"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219286"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Container als Grundlage für die DevOps-Zusammenarbeit
 

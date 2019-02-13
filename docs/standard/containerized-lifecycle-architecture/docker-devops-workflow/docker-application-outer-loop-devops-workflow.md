@@ -1,15 +1,15 @@
 ---
 title: Schritte in der äußeren Schleife DevOps-Workflow für eine Docker-Anwendung
-description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
+description: Lernen Sie die Schritte für die "äußere"Schleife des DevOps-Workflows
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/10/2018
-ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: b75e9df1c31e8bcebcaa6d56336a6aa499d13e1d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143648"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220938"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Schritte in der äußeren Schleife DevOps-Workflow für eine Docker-Anwendung
 
@@ -235,4 +235,4 @@ Sind Sie nur bei der Überwachung und Diagnose zu 100 Prozent in den Bereich von
 
 >[!div class="step-by-step"]
 >[Zurück](index.md)
->[Weiter](../run-manage-monitor-docker-environments/index.md)
+>[Weiter](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

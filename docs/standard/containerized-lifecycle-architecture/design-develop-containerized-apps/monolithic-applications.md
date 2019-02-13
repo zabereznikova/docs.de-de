@@ -1,15 +1,15 @@
 ---
 title: Monolithische Anwendungen
-description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
+description: Verstehen Sie die grundlegenden Konzepte für das containerisieren monolithischer Anwendungen.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.date: 11/23/2018
+ms.openlocfilehash: 056f4bd8abf5c482855f38e45435b67b487769fb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2018
-ms.locfileid: "52743268"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221354"
 ---
 # <a name="monolithic-applications"></a>Monolithische Anwendungen
 
@@ -21,7 +21,7 @@ Ist nach dem Dienstprinzipal, dass ein Container nur eine Sache ist, und wird es
 
 ![](./media/image1.png)
 
-Abbildung 4-1: ein Beispiel der Architektur der monolithischen Anwendung
+Abbildung 4-1: Ein Beispiel der Architektur der monolithischen Anwendung
 
 Der Nachteil dieses Ansatzes ist, wenn Warnungen oder die Anwendung und skaliert wächst. Wenn die gesamte Anwendung skaliert werden kann, ist dies kein Problem. Allerdings sind in den meisten Fällen einige Teile der Anwendung Engpässe, die erfordern, Skalierung, während andere Komponenten verwendet werden.
 
@@ -35,13 +35,13 @@ Aus Sicht der Infrastruktur kann jeder Server viele Anwendungen auf dem gleichen
 
 ![](./media/image2.png)
 
-Abbildung 4-2: einem Host Ausführen mehrerer apps/Container
+Abbildung 4-2: Einem mehrere apps/Container-host
 
 Sie können mithilfe von dedizierten VMs für jede Instanz monolithische Anwendungen in Azure bereitstellen. Mithilfe von [Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), Sie können die VMs problemlos skalieren. [Azure App Service](https://azure.microsoft.com/services/app-service/) kann auch monolithische Anwendungen ausführen und Instanzen problemlos skalieren, ohne dass die VMs verwaltet werden müssen. Seit 2016 kann Azure App Services einzelne Instanzen von Docker-Container auch ausführen, vereinfachen die Bereitstellung. Und mit Docker können Sie eine einzelne VM als Docker-Host bereitstellen und ausführen können mehrere Instanzen. Verwenden den Azure Balancer aus, wie in Abbildung 4: 3 dargestellt, können Sie die Skalierung verwalten.
 
 ![](./media/image3.png)
 
-Abbildung 4 – 3: mehrere Hosts horizontalen Skalieren einer einzelnen Docker-apps/Anwendungscontainer
+Abbildung 4 – 3: Mehrere Hosts horizontalen Skalieren einer einzelnen Docker-apps/Anwendungscontainer
 
 Sie können die Bereitstellung auf den verschiedenen Hosts über die herkömmlichen Bereitstellungsverfahren verwalten. Sie können Docker-Hosts verwalten, mit Befehlen wie `docker run` manuell über die Automatisierung, z.B. Pipelines für Continuous Delivery (CD), die wir weiter unten in diesem e-Book zu erklären.
 
@@ -65,7 +65,7 @@ Jetzt hingegen (auf der Microsoft Connect 2016 im November 2016 angekündigt) un
 
 ![](./media/image4.png)
 
-Abbildung 4-4: Veröffentlichen eines Containers in Azure App Service aus Visual Studio-apps/Container
+Abbildung 4-4: Veröffentlichen Sie einen Container in Azure App Service aus Visual Studio-apps/Container
 
 Abbildung 4-4 zeigt auch, dass es sich bei der veröffentlichungsfluss überträgt ein Bild über eine Containerregistrierung, die möglicherweise die Azure-Containerregistrierung (eine Registrierung in der Nähe Ihrer Bereitstellungen in Azure und von Azure Active Directory-Gruppen und-Konten gesichert werden) oder andere Docker-Registrierungen wie Docker Hub oder in lokalen Registrierungen.
 

@@ -1,19 +1,19 @@
 ---
 title: Entwicklungsumgebung für Docker-Apps
-description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
+description: Lernen Sie die wichtigsten Entwicklung Tooloptionen kennen, die den Docker-Entwicklungslebenszyklus zu unterstützen.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: 471b52fd577e5560bd93e6da50f2032d63eb2e6f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 11/23/2018
+ms.openlocfilehash: 1d22b45a8eee9198d337df9f0b8b4b78371fa31a
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152410"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219996"
 ---
 # <a name="development-environment-for-docker-apps"></a>Entwicklungsumgebung für Docker-Apps
 
-## <a name="development-tools-choices-ide-or-editor"></a>Größere Auswahl an Entwicklungstools: IDE oder Ihrem editor
+## <a name="development-tools-choices-ide-or-editor"></a>Auswahlmöglichkeiten für Entwicklungstools: IDE oder Editor
 
 Unabhängig davon, wenn Sie eine vollständige und leistungsstarke IDE oder einen einfachen und flexiblen Editor bevorzugen hat Microsoft Sie bei der Entwicklung von Docker-Anwendungen.
 
@@ -47,5 +47,5 @@ Sie können Docker-Anwendungen und Microsoft-Tools mit den meisten modernen Spra
 Im Grunde genommen können Sie alle modernen Sprache, die von Docker unter Linux oder Windows unterstützt werden.
 
 >[!div class="step-by-step"]
->[Zurück](orchestrate-high-scalability-availability.md)
+>[Zurück](deploy-azure-kubernetes-service.md)
 >[Weiter](docker-apps-inner-loop-workflow.md)
