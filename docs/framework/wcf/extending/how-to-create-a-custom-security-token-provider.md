@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: db492967dc6df882221f0547b609b3c7f700b118
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a81f6eac5648406f50d9600b030828551b21c56
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627706"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261345"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Anbieter
 In diesem Thema wird beschrieben, wie Sie neue Tokentypen mit einem benutzerdefinierten Sicherheitstokenanbieter erstellen und den Anbieter in einen benutzerdefinierten Sicherheitstoken-Manager integrieren.  
@@ -23,8 +23,6 @@ In diesem Thema wird beschrieben, wie Sie neue Tokentypen mit einem benutzerdefi
  Der Sicherheitstokenanbieter erstellt eine Sicherheitstokendarstellung basierend auf Daten in den Client- oder Dienstanmeldeinformationen. Um den benutzerdefinierten Sicherheitstokenanbieter in Windows Communication Foundation (WCF)-Sicherheit zu verwenden, müssen Sie benutzerdefinierte Anmeldeinformationen und Sicherheitstoken-managerimplementierungen erstellen.  
   
  Weitere Informationen über benutzerdefinierte Anmeldeinformationen und Sicherheitstoken-Manager finden Sie unter den [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
-  
- Weitere Informationen zu Anmeldeinformationen, Sicherheitstoken-Manager sowie Anbieter- und authentifiziererklassen Sicherheitsklassen, finden Sie unter den [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>So erstellen Sie einen benutzerdefinierten Sicherheitstokenanbieter  
   
@@ -61,4 +59,3 @@ In diesem Thema wird beschrieben, wie Sie neue Tokentypen mit einem benutzerdefi
 - <xref:System.IdentityModel.Tokens.X509SecurityToken>
 - [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Authentifikator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

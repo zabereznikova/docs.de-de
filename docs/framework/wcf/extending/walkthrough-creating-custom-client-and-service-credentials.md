@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: a21c32547b1bd612196daf8be54cf85c373a7ff3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5688fbbe2c40e7cd30517fb53fe21ae3d0630f22
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681741"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261534"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen
 In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldeinformationen implementiert und benutzerdefinierte Anmeldeinformationen aus Anwendungscode genutzt werden.  
@@ -23,8 +23,6 @@ In diesem Thema wird gezeigt, wie benutzerdefinierte Client- und Dienstanmeldein
 -   Funktion als Factory für <xref:System.IdentityModel.Selectors.SecurityTokenManager>-Implementierungen.  
   
  Sowohl die <xref:System.ServiceModel.Description.ClientCredentials>- als auch die <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse erben von der abstrakten <xref:System.ServiceModel.Security.SecurityCredentialsManager>-Klasse, die den Vertrag für die Rückgabe des <xref:System.IdentityModel.Selectors.SecurityTokenManager> definieren.  
-  
- Weitere Informationen über die Klassen von Anmeldeinformationen und wie sie in der WCF-Sicherheitsarchitektur passen, finden Sie unter [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
  In WCF bereitgestellten standardimplementierungen unterstützen die vom System bereitgestellten Anmeldeinformationstypen und erstellen einen Sicherheitstoken-Manager, die diese Anmeldeinformationstypen verarbeiten kann.  
   

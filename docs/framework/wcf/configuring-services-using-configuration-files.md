@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 8d138bae794cac00b1542f63153f343fb95a24c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92c86980f3276054dbcd41c1cd796e2bc2c0df23
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717401"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261359"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurieren von Diensten mit Konfigurationsdateien
 Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Konfigurationsdatei bietet Ihnen die Flexibilität für die Bereitstellung von Endpunkt und die Daten zum Dienst zum Zeitpunkt der Bereitstellung statt zur Entwurfszeit. Dieses Thema beschreibt die dafür verfügbaren grundlegenden Verfahren.  
@@ -91,7 +91,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
   
 -   `contract`. Gibt die Schnittstelle an, die den Vertrag definiert. Das ist die Schnittstelle, die im CLR-Typ (Common Language Runtime) implementiert ist, der vom `name` -Attribut des `service` -Elements angegeben wird.  
   
--   [\<Endpunkt >-Elementverweis](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>Die \<Bindings >-Element  
  Das `bindings` -Element enthält die Spezifikationen für alle Bindungen, die von jedem in einem Dienst definierten Endpunkt verwendet werden können.  
@@ -101,7 +101,7 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
 ### <a name="the-binding-element"></a>Die \<Bindung >-Element  
  Das `binding` -Elemente, die im `bindings` -Element enthalten sind, können entweder eine der systemeigenen Bindungen (siehe [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) oder eine benutzerdefinierte Bindung (siehe [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)) sein. Das `binding` -Element verfügt über ein `name` -Attribut, das eine Beziehung zwischen der Bindung und dem Endpunkt herstellt, der im `bindingConfiguration` -Attribut des `endpoint` -Elements angegeben ist. Wenn kein Name angegeben wird, entspricht die Bindung der Standardbindung für diesen Bindungstyp.  
   
- Weitere Informationen zum Konfigurieren von Diensten und Clients finden Sie unter [Konfigurieren von Windows Communication Foundation-Anwendungen](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+Weitere Informationen zum Konfigurieren von Diensten und Clients finden Sie unter [Konfigurieren von WCF-Dienste](configuring-services.md).
   
  [\<binding>](../../../docs/framework/misc/binding.md)  
   
@@ -264,6 +264,6 @@ Konfigurieren eines Windows Communication Foundation (WCF)-Diensts mit einer Kon
   
 ## <a name="see-also"></a>Siehe auch
 - [Vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md)
-- [Konfigurieren von Windows Communication Foundation-Anwendungen](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)
+- [Konfigurieren von WCF-Diensten](configuring-services.md)
 - [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
 - [\<binding>](../../../docs/framework/misc/binding.md)

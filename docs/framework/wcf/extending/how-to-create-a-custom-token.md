@@ -10,17 +10,17 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 20c462f811be86d52ec6f06700326f0e949a76d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3367a75fc0532e3eaa312400221c662bb35146bf
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637910"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261166"
 ---
 # <a name="how-to-create-a-custom-token"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Tokens
 In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tokens.SecurityToken>-Klasse ein benutzerdefiniertes Sicherheitstoken erstellen und in einen benutzerdefinierten Sicherheitstokenanbieter und -authentifizierer integrieren. Ein vollständiges Codebeispiel finden Sie unter den [benutzerdefinierte Token](../../../../docs/framework/wcf/samples/custom-token.md) Beispiel.  
   
- Ein *Sicherheitstoken* ist im Wesentlichen ein XML‑Element, das durch das Windows Communication Foundation (WCF)-Sicherheitsframework verwendet wird, um Ansprüche bezüglich des Absenders in der SOAP-Nachricht darzustellen. WCF-Sicherheit bietet verschiedene Token für vom System bereitgestellten Authentifizierungsmodi. Dazu gehören u.&#160;a. ein Sicherheitstoken für ein X.509-Zertifikat, dargestellt durch die <xref:System.IdentityModel.Tokens.X509SecurityToken>-Klasse, oder ein Sicherheitstoken für den Benutzernamen, dargestellt durch die <xref:System.IdentityModel.Tokens.UserNameSecurityToken>-Klasse.  
+ Ein *Sicherheitstoken* ist im Wesentlichen ein XML‑Element, das durch das Windows Communication Foundation (WCF)-Sicherheitsframework verwendet wird, um Ansprüche bezüglich des Absenders in der SOAP-Nachricht darzustellen. WCF-Sicherheit bietet verschiedene Token für vom System bereitgestellten Authentifizierungsmodi. Dazu gehören u.&amp;#160;a. ein Sicherheitstoken für ein X.509-Zertifikat, dargestellt durch die <xref:System.IdentityModel.Tokens.X509SecurityToken>-Klasse, oder ein Sicherheitstoken für den Benutzernamen, dargestellt durch die <xref:System.IdentityModel.Tokens.UserNameSecurityToken>-Klasse.  
   
  Möglicherweise werden Authentifizierungsmodi oder Anmeldeinformationen nicht von den bereitgestellten Typen unterstützt. In diesem Fall müssen Sie ein benutzerdefiniertes Sicherheitstoken erstellen, um eine XML-Darstellung der benutzerdefinierten Anmeldeinformationen in der SOAP-Nachricht bereitzustellen.  
   
@@ -29,8 +29,6 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
  Weitere Informationen über benutzerdefinierte Anmeldeinformationen und Sicherheitstoken-Manager finden Sie unter [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  Weitere Klassen, die Sicherheitstoken darstellen, finden Sie im <xref:System.IdentityModel.Tokens>-Namespace.  
-  
- Weitere Informationen zu Anmeldeinformationen, Sicherheitstoken-Manager sowie Anbieter- und authentifiziererklassen finden Sie unter [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Verfahren  
  Clientanwendungen müssen über eine Möglichkeit zur Angabe von Kreditkarteninformationen für die Sicherheitsinfrastruktur verfügen. Diese Informationen werden von einer benutzerdefinierten Klasse für Clientanmeldeinformationen für die Anwendung verfügbar gemacht. Zunächst muss eine Klasse erstellt werden, um die Kreditkarteninformationen für die benutzerdefinierten Clientanmeldeinformationen darzustellen.  
@@ -165,4 +163,3 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
 - [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
 - [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Authentifikator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
 - [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Anbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Sicherheitsarchitektur](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

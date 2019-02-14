@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: c57b5ccd81a8a2123ac2269adbd75a3a656ba51e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e266dbf3fed2c1f1bcadd010e2ad6dfd0804230d
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695711"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260646"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Vorgehensweise: Aufrufen von Vorgängen, die asynchron mit einer Kanalfactory
 In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchron zugreifen kann, wenn eine auf <xref:System.ServiceModel.ChannelFactory%601> basierende Clientanwendung verwendet wird. (Wenn Sie ein <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>-Objekt verwenden, um einen Dienst aufzurufen, können Sie das ereignisgesteuerte asynchrone Aufrufmodell verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Weitere Informationen über den ereignisbasierten asynchronen aufrufmodells finden Sie unter [das ereignisbasierte asynchrone Muster (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  
@@ -47,5 +47,3 @@ In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchr
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
   
-## <a name="see-also"></a>Siehe auch
-- [Dienstvertrag: Asynchrone Beispiel](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)

@@ -2,12 +2,12 @@
 title: Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 396ad7ba6f690cedf783adcf180c92a88427a959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695555"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261151"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
 ## <a name="error-handling-in-windows-communication-foundation"></a>Fehlerbehandlung in Windows Communication Foundation  
@@ -22,13 +22,13 @@ ms.locfileid: "54695555"
   
  Anwendungsblöcke enthalten in der Regel häufig verwendete bewährte Methoden und bieten eine allgemeine Vorgehensweise für die Ausnahmebehandlung in der gesamten Anwendung. Jedoch können benutzerdefinierte Fehlerhandler und Fehlerverträge, die selbst entwickelt wurden, ebenfalls sehr hilfreich sein. Beispielsweise bieten Benutzerdefinierte Fehlerhandler eine ausgezeichnete Gelegenheit, automatisch alle Ausnahmen FaultExceptions höher stufen und Hinzufügen von Protokollierfunktionen zu Ihrer Anwendung.  
   
- Weitere Informationen finden Sie unter [Microsoft Enterprise Library](https://msdn.microsoft.com/library/ff632023.aspx).  
+ Weitere Informationen finden Sie unter [Microsoft Enterprise Library](https://docs.microsoft.com/previous-versions/msp-n-p/ff632023(v=pandp.10)).  
   
 ### <a name="dealing-with-expected-exceptions"></a>Behandeln von erwarteten Ausnahmen  
  Die korrekte Vorgehensweise ist Abfangen erwarteter Ausnahmen in jedem Vorgang oder die relevanten Erweiterungspunkt, entscheiden Sie, ob sie aus wiederhergestellt werden können, und geben Sie den ordnungsgemäßen benutzerdefinierten Fehler in einer FaultException zurück\<T >  
   
 ### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Behandeln von unerwarteten Ausnahmen mit einem IErrorHandler  
- Um unerwartete Ausnahmen zu beheben, ist die empfohlene Vorgehensweise "Einen" ierrorhandler "verknüpfen" aus. Fehlerhandler fangen nur Ausnahmen, die WCF-Laufzeitebene (der "" dienstmodellebene), nicht auf Kanalebene. Die einzige Möglichkeit, einen "IErrorHandler" auf Kanalebene zu verknüpfen, ist das Erstellen eines benutzerdefinierten Kanals, und dies wird in den meisten Szenarien nicht empfohlen.  
+ Um unerwartete Ausnahmen zu beheben, ist die empfohlene Vorgehensweise "Einen" ierrorhandler "verknüpfen" aus. Fehlerhandler fangen nur Ausnahmen, die WCF-Laufzeitebene (der "" dienstmodellebene), nicht auf Kanalebene. Die einzige Möglichkeit, einen IErrorHandler auf Kanalebene zu verknüpfen, ist das Erstellen eines benutzerdefinierten Kanals, und dies wird in den meisten Szenarien nicht empfohlen.  
   
  Eine "unerwartete"Ausnahme ist im Allgemeinen weder eine nicht behebbare Ausnahme noch eine Verarbeitungsausnahme; Es ist, stattdessen eine unerwartete Benutzerausnahme. Eine nicht behebbare Ausnahme (z. B. eine Out-of-Memory-Ausnahme) – eine in der Regel anhand der [Dienstmodell-Ausnahmehandler](xref:System.ServiceModel.Dispatcher.ExceptionHandler) automatisch kann nicht in der Regel nicht erfolgreich behandelt werden, und der einzige Grund, eine Ausnahme zu behandeln Alle möglicherweise zusätzliche Protokollierung oder eine Standardausnahme an den Client zurückgegeben. Eine Verarbeitungsausnahme tritt meist beim Verarbeiten der Nachricht auf, beispielsweise auf Serialisierungs-, Encoder- oder Formatiererebene, und kann im Allgemeinen nicht von einem "IErrorHandler" behandelt werden, weil die Fehlerbehandlung noch nicht oder nicht mehr eingreifen kann, wenn diese Ausnahmen auftreten. Ebenso können Transportausnahmen nicht von einem IErrorHandler behandelt werden.  
   

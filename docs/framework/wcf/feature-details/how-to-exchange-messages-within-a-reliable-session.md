@@ -2,18 +2,18 @@
 title: 'Vorgehensweise: Austauschen von Nachrichten innerhalb einer zuverlässigen Sitzung'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 0b03845f9638a3646c72b1210de12dd94cf4cc9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720053"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260685"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Vorgehensweise: Austauschen von Nachrichten innerhalb einer zuverlässigen Sitzung
 
 Dieses Thema enthält einen Überblick über die Schritte zum Aktivieren einer zuverlässigen Sitzung mithilfe einer der vom System bereitgestellten Bindungen, die eine solche Sitzung zwar unterstützen, dies jedoch nicht standardmäßig. Sie ermöglichen, eine zuverlässige Sitzung verbindlich durch Verwenden von Code oder deklarativ in der Konfigurationsdatei. Diese Prozedur verwendet die Konfigurationsdateien von Client und Dienst aus, um die zuverlässige Sitzung zu aktivieren und um festzulegen, dass die Nachrichten in der gleichen Reihenfolge eintreffen in der sie gesendet wurden.
 
-Der wesentliche Teil dieser Prozedur ist, dass der Endpunkt-Konfigurationselement enthalten eine `bindingConfiguration` -Attribut, das auf die Bindungskonfiguration mit dem Namen `Binding1`. Die [  **\<Bindung >** ](../../../../docs/framework/misc/binding.md) Konfigurationselement verweist auf diesen Namen, um zuverlässige Sitzungen zu aktivieren, indem Sie die Einstellung der `enabled` Attribut der [  **\<ReliableSession >** ](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) Element `true`. Sie geben die Zusicherung einer Zustellung in der richtigen Reihenfolge für die zuverlässige Sitzung an, indem Sie das `ordered`-Attribut auf `true` festlegen.
+Der wesentliche Teil dieser Prozedur ist, dass der Endpunkt-Konfigurationselement enthalten eine `bindingConfiguration` -Attribut, das auf die Bindungskonfiguration mit dem Namen `Binding1`. Die [  **\<Bindung >** ](../../../../docs/framework/misc/binding.md) Konfigurationselement verweist auf diesen Namen, um zuverlässige Sitzungen zu aktivieren, indem Sie die Einstellung der `enabled` Attribut der [  **\<ReliableSession >** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) Element `true`. Sie geben die Zusicherung einer Zustellung in der richtigen Reihenfolge für die zuverlässige Sitzung an, indem Sie das `ordered`-Attribut auf `true` festlegen.
 
 Die Quellkopie dieses Beispiels, finden Sie unter [zuverlässige WS-Sitzung](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 
