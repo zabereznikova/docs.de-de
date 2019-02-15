@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508521"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303392"
 ---
 # <a name="unmanaged-api-reference"></a>Referenz zur nicht verwalteten API
 Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwendungen mit verwaltetem Code verwendet werden können, wie Laufzeithosts, Compiler, Disassembler, Obfuskatoren, Debugger und Profiler.  
@@ -32,7 +32,7 @@ Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwen
  [Konstanten](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Beschreibt die Konstanten, die in CorSym.idl definiert werden.  
   
- [Benutzerdefinierte Schnittstellenattribute](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Benutzerdefinierte Schnittstellenattribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  Beschreibt benutzerdefinierte Schnittstellenattribute des Component Object Model (COM).  
   
  [Debuggen](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -64,5 +64,3 @@ Dieser Abschnitt enthält Informationen zu nicht verwalteten APIs, die von Anwen
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Entwicklungshandbuch](../../../docs/framework/development-guide.md)  
-  
- [Weiterführende Informationen zu .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

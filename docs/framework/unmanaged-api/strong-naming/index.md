@@ -2,12 +2,18 @@
 title: Verwenden von starken Namen (Referenz zur nicht verwalteten API)
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'strong naming [.NET Framework], using the unmanaged API'
-  - 'native API reference [.NET Framework], strong naming'
-  - 'unmanaged API reference [.NET Framework], strong naming'
+- strong naming [.NET Framework], using the unmanaged API
+- native API reference [.NET Framework], strong naming
+- unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 230a5e3e3231ad6675d214d370f74eb37405c89c
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305644"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Verwenden von starken Namen (Referenz zur nicht verwalteten API)
 Die API für starke Namen ermöglicht es einem Client, die starke Namenssignierung für Assemblys zu verwalten.  
@@ -15,8 +21,6 @@ Die API für starke Namen ermöglicht es einem Client, die starke Namenssignieru
  Beim Signieren einer Assembly mit einem starken Namen wird der Datei, die das Assemblymanifest enthält, eine Verschlüsselung mit einem öffentlichen Schlüssel hinzugefügt. Das Signieren mit starkem Namen gewährleistet die Eindeutigkeit der Namen, verhindert das Vortäuschen von Namen (Spoofing) und stellt Aufrufern beim Auflösen eines Verweises eine eindeutige Identität bereit. Mit einem starken Namen ist jedoch keine Vertrauensebene verknüpft.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Globale statische Funktionen für starke Namen](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
- Beschreibt die nicht verwalteten globalen statischen Funktionen, die die API für starke Namen verwendet.  
   
 > [!NOTE]
 >  Alle diese Funktionen sind veraltet, beginnend mit [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Empfohlene Alternativen finden Sie in der [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)-Schnittstelle.  
@@ -98,9 +102,6 @@ Die API für starke Namen ermöglicht es einem Client, die starke Namenssignieru
   
  [StrongNameTokenFromPublicKey-Funktion](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Ruft ein Token ab, das einen öffentlichen Schlüssel darstellt. Veraltet ab [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
-  
- [Strukturen für starke Namen](https://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
- Beschreibt die nicht verwaltete Struktur, die die API für starke Namen verwendet, um die starke Namenssignierung für Assemblys zu verwalten.  
   
  [PublicKeyBlob-Struktur](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  Stellt den öffentlichen Schlüssel eines öffentlichen/privaten Schlüsselpaars im binären Format dar.  
