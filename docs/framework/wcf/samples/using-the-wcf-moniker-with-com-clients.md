@@ -2,12 +2,12 @@
 title: Verwenden des WCF-Monikers mit COM-Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 3bcb0291b3ee91d7a5fd402c8f0e2cc4bce3695a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cd334dab8574845e10332e90b50fef833447a1d
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606097"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303958"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Verwenden des WCF-Monikers mit COM-Clients
 In diesem Beispiel wird veranschaulicht, wie Sie mit, dass der Windows Communication Foundation (WCF)-Dienstmoniker um Webdienste in COM-basierte entwicklungsumgebungen, wie Microsoft Office Visual Basic for Applications (Office VBA) oder Visual Basic 6.0 zu integrieren. Das Beispiel umfasst einen Windows Script Host-Client (.vbs), eine unterstützende Clientbibliothek (.dll) und eine Dienstbibliothek (.dll), die von Internetinformationsdienste (IIS) gehostet werden. Der Dienst ist ein Rechnerdienst und der COM-Client ruft mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) auf dem Dienst auf. Die Clientaktivität ist in den Meldungsfeldfenstern sichtbar.  
@@ -205,7 +205,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 2.  Führen Sie die Datei "ComCalcClient.vbs" aus dem Ordner "\client" unter dem sprachspezifischen Ordner aus. Die Clientaktivität wird in den Meldungsfeldfenstern angezeigt.  
   
-3.  Wenn der Client und der Dienst nicht kommunizieren können, finden Sie weitere Informationen unter [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  Wenn der Client und Dienst nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>So führen Sie das Beispiel computerübergreifend aus  
   

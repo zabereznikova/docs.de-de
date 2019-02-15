@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 82415524e60a1c9cf44cdccd9a1b2660f4b517a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dea56b69632759193c5ccb23b9d789de6ee45e10
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607734"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303880"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients
 > [!NOTE]
@@ -38,7 +38,7 @@ ms.locfileid: "54607734"
 ## <a name="retrieving-properties-on-control-patterns"></a>Abrufen von Eigenschaften in Steuerelementmustern  
  Clients können die Eigenschaftswerte in Steuerelementmustern durch Aufrufen von <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> oder <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> abrufen und das zurückgegebene Objekt in einen geeigneten Typ umwandeln. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
- Zusätzlich zu den `GetPropertyValue`-Methoden können Eigenschaftswerte über die [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]-Zugriffsmethoden abgerufen werden, um auf die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Eigenschaften in einem Muster zuzugreifen.  
+ Zusätzlich zu den `GetPropertyValue`-Methoden können Eigenschaftswerte über die [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)]-Accessoren abgerufen werden, um auf die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Eigenschaften in einem Muster zuzugreifen.  
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>Steuerelemente mit Variablenmustern  
@@ -52,6 +52,6 @@ ms.locfileid: "54607734"
 - [Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
 - [Abrufen des Umschaltstatus eines Kontrollkästchens mithilfe von Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
 - [Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Beispiel für TextPattern Insert Text](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16)
-- [TextPattern-Suche und Auswahl-Beispiel](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
-- ["InvokePattern" und ExpandCollapsePattern-Menü-Element-Beispiel](https://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+- [Beispiel für TextPattern Insert Text](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
+- [TextPattern-Suche und Auswahl-Beispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
+- ["InvokePattern" ExpandCollapsePattern und TogglePattern-Beispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: d4c3801e81efc7af1afbf15d882a9d13ad552524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8de1d1b1f2bfe385a815eb6147b79a1dc2be0206
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717557"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304894"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Benutzeroberflächenautomatisierung und Bildschirmskalierung
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "54717557"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Diese Funktion sorgt dafür, dass der gesamte Prozess mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatibel ist, d. h. alle zum Prozess gehörenden Fenster werden nicht skaliert. Im [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)befinden sich die vier Fenster, die das hervorgehobene Rechteck bilden, z. B. an den physischen Koordinaten, die von der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]abgerufen werden, und nicht an den logischen Koordinaten. Wenn das Beispiel nicht mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatibel wäre, würde die Hervorhebung an den logischen Koordinaten auf dem Desktop dargestellt werden, was zu einer falschen Platzierung in einer Nicht-96- [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] -Umgebung führen würde.  
+     Diese Funktion wird der gesamte Prozess dpi-fähig ist, was bedeutet, dass alle an den Prozess gehörenden Fenster nicht skaliert werden werden. In der [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), z. B. die vier Fenster, die das hervorgehobene Rechteck bilden sich an den physischen Koordinaten, die aus der UI-Automatisierung, nicht an den logischen Koordinaten abgerufen werden. Wenn das Beispiel nicht dpi-bewusst wäre, würde die Hervorhebung an den logischen Koordinaten auf dem Desktop gezeichnet werden was zu falschen Platzierung in einer nicht-96-dpi-Umgebung führen würde.  
   
 2.  Rufen Sie die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `GetPhysicalCursorPos`auf, um Cursorkoordinaten abzurufen. Im folgenden Beispiel wird das Deklarieren und Verwenden dieser Funktion veranschaulicht.  
   
@@ -78,4 +78,4 @@ ms.locfileid: "54717557"
  Wenn Ihre Anwendung eine direkte prozessübergreifende Kommunikation mit nicht mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatiblen Anwendungen unterhält, müssen Sie mithilfe der [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktionen `PhysicalToLogicalPoint` und `LogicalToPhysicalPoint`möglicherweise zwischen logischen und physischen Koordinaten konvertieren.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+- [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

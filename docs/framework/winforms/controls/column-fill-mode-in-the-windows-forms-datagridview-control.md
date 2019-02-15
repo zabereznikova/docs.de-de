@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: 79ef0310e5f134c09c9bbf0c0403ea6aa7cd7059
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 823d3c06648ed37003176eab9df538d95f1ced69
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595148"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304309"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms
 Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerelement seine Spalten automatisch so an, dass sie die Breite des verfügbaren Anzeigebereichs ausfüllen. Das Steuerelement zeigt die horizontale Bildlaufleiste nur an, wenn es erforderlich ist, dass die Breite jeder Spalte gleich oder größer als sein <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Eigenschaftenwert ist.  
@@ -60,7 +60,7 @@ Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerel
   
 -   Verweise auf die Assemblys "System", "System.Drawing" und "System.Windows.Forms".  
   
--   Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Kompilieren und Ausführen einer vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+-   Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.DataGridView>

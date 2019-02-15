@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Storyboards [WPF], handoff behavior between animations
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
-ms.openlocfilehash: 01c652e170e27da0be9b1ab5f7659d7089aee6f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a27c377e2993c1e67ada508071698a541cec660
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677743"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305440"
 ---
 # <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>Vorgehensweise: Angeben des Übergabeverhaltens zwischen Storyboard-Animationen
 Dieses Beispiel zeigt das Angeben des Übergabeverhaltens zwischen Storyboard-Animationen. Die <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> Eigenschaft <xref:System.Windows.Media.Animation.BeginStoryboard> gibt an, wie neue Animationen interagieren mit vorhandenen Laufwerknamen unterscheiden, die bereits auf eine Eigenschaft angewendet werden.  
@@ -25,4 +25,4 @@ Dieses Beispiel zeigt das Angeben des Übergabeverhaltens zwischen Storyboard-An
 - <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>
 - [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
 - [Animations- und Zeitsteuerungssystem](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Das Animations- und Zeitsteuerungssystem Gewusst-wie-Themen](animation-and-timing-how-to-topics.md)

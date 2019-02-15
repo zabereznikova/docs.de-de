@@ -8,12 +8,12 @@ helpviewer_keywords:
 - border thickness [WPF], animating changes to
 - animation [WPF], changes to border thickness
 ms.assetid: fd021978-f74b-4e7b-a7f7-3987dcad9e0f
-ms.openlocfilehash: bd9c75ecb6c95f0dad562701940850e111dddbff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96467fd013ddd2b2e215520384da2000aec68866
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664381"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304218"
 ---
 # <a name="how-to-animate-a-borderthickness-value"></a>Vorgehensweise: Animieren eines BorderThickness-Werts
 In diesem Beispiel wird gezeigt, wie zum Animieren von Änderungen an die Stärke eines Rahmens mithilfe der <xref:System.Windows.Media.Animation.ThicknessAnimation> Klasse.  
@@ -31,6 +31,5 @@ In diesem Beispiel wird gezeigt, wie zum Animieren von Änderungen an die Stärk
 - <xref:System.Windows.Controls.Border.BorderThickness%2A>
 - <xref:System.Windows.Controls.Border>
 - [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Animations- und Zeitsteuerungssystem](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [Das Animations- und Zeitsteuerungssystem Gewusst-wie-Themen](../graphics-multimedia/animation-and-timing-how-to-topics.md)
 - [Animieren der Breite eines Rahmens mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)

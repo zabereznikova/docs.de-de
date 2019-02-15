@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: d058fd43649b8096ce2a65d8537cf4b663f58594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f337164043014ed14d42e219f26ee2ec8be06662
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585418"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56305843"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel
 Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst entsprechend neu anordnet, wenn sich die Größe des Formulars oder des Inhalts ändert. Wenn Sie ein dynamisches Layout benötigen und <xref:System.Windows.Forms.Control.Layout> -Ereignisse nicht explizit im Code verarbeiten möchten, ziehen Sie die Verwendung eines Layoutbereichs in Erwägung.  
@@ -22,7 +22,7 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
   
  Die <xref:System.Windows.Forms.TableLayoutPanel> ordnet seinen Inhalt in einem Raster, und bietet eine auf die HTML-ähnliche Funktionalität \<Tabelle > Element. Die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement ermöglicht es Ihnen, Steuerelemente in einem Rasterlayout platziert werden, ohne dass Sie die genaue Position der einzelnen Steuerelemente angeben. Seine Zellen sind in Zeilen und Spalten angeordnet, und diese können verschiedene Größen haben. Zellen können in Zeilen und Spalten zusammengeführt werden. Zellen können alles enthalten, einem Formular enthalten und Verhalten sich in den meisten anderen Punkten, die als Container kann.  
   
- Die <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement bietet auch eine proportionale Größenänderung-Funktion zur Laufzeit, damit das Layout problemlos ändern kann, wie Ihre Formulars geändert wird. Dadurch wird die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement eignet sich gut für Zwecke, z. B. Dateneingabeformularen und lokalisierter Anwendungen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen in der Größe veränderbaren Windows Forms für die Dateneingabe](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab) und [Exemplarische Vorgehensweise: Erstellen einer lokalisierbaren Windows Forms](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c).  
+ Die <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement bietet auch eine proportionale Größenänderung-Funktion zur Laufzeit, damit das Layout problemlos ändern kann, wie Ihre Formulars geändert wird. Dadurch wird die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement eignet sich gut für Zwecke, z. B. Dateneingabeformularen und lokalisierter Anwendungen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen in der Größe veränderbaren Windows Forms für die Dateneingabe](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)) und [Exemplarische Vorgehensweise: Erstellen einer lokalisierbaren Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100)).  
   
  Im Allgemeinen sollten Sie nicht verwenden eine <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement als Container für das gesamte Layout. Verwendung <xref:System.Windows.Forms.TableLayoutPanel> Steuerelemente, um Teile des Layouts proportionale Größenänderung von Fenstern annimmt Funktionen bereitzustellen.  
   
@@ -54,7 +54,7 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
   
 #### <a name="to-create-the-project"></a>So erstellen Sie das Projekt  
   
-1.  Erstellen Sie eine Windows-Anwendungsprojekt mit dem Namen "TableLayoutPanelExample". Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Windows-Anwendungsprojekts](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) .  
+1.  Erstellen Sie eine Windows-Anwendungsprojekt mit dem Namen "TableLayoutPanelExample". Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eines Windows Forms-Anwendungsprojekts](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .  
   
 2.  Wählen Sie das Formular in der **Windows** **Formulardesigner**.  
   
@@ -184,8 +184,8 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Microsoft Windows-Benutzererfahrung, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
-- [Exemplarische Vorgehensweise: Erstellen in der Größe veränderbaren Windows Forms für die Dateneingabe](https://msdn.microsoft.com/library/e193b4fc-912a-4917-b036-b76c7a6f58ab)
-- [Exemplarische Vorgehensweise: Erstellen einer lokalisierbaren Windows Forms](https://msdn.microsoft.com/library/c5240b6e-aaca-4286-9bae-778a416edb9c)
+- [Exemplarische Vorgehensweise: Erstellen in der Größe veränderbaren Windows Forms für die Dateneingabe](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
+- [Exemplarische Vorgehensweise: Erstellen einer lokalisierbaren Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [Empfohlene Vorgehensweisen für das TableLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)
 - [Übersicht über die AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
 - [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)

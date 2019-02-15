@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 8c40f4a58800183c142602d950e4fe1331c1eaf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4c6bf42bdd1ba6b0f9ccddb730dc517dbaab963
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730268"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304088"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten
-Wenn die Komponenten von einem Projekt in der aktuell geöffneten Projektmappe definiert sind, werden sie automatisch in angezeigt der **Toolbox**, keine Aktion erforderlich. Sie können auch manuell Auffüllen der **Toolbox** mit den benutzerdefinierten Komponenten mithilfe der [Choose Toolbox Items Dialog Box (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), aber die **Toolbox** berücksichtigt der Elemente in der Projektmappe Buildausgaben Sie mit folgenden Merkmalen:  
+Wenn die Komponenten von einem Projekt in der aktuell geöffneten Projektmappe definiert sind, werden sie automatisch in angezeigt der **Toolbox**, keine Aktion erforderlich. Sie können auch manuell Auffüllen der **Toolbox** mit den benutzerdefinierten Komponenten mithilfe der [Choose Toolbox Items Dialog Box (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), aber die **Toolbox** berücksichtigt der Elemente in der Projektmappe Buildausgaben Sie mit folgenden Merkmalen:  
   
 -   Implementiert <xref:System.ComponentModel.IComponent>;  
   
@@ -49,7 +49,7 @@ Wenn die Komponenten von einem Projekt in der aktuell geöffneten Projektmappe d
   
 2.  Fügen Sie dem Projekt eine neue Komponente hinzu. Geben Sie ihm den Namen `DemoComponent`.  
   
-     Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen neuer Projektelemente](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce).  
+     Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen neuer Projektelemente](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)).  
   
 3.  Erstellen Sie das Projekt.  
   
@@ -80,7 +80,7 @@ Wenn die Komponenten von einem Projekt in der aktuell geöffneten Projektmappe d
   
 1.  Entladen Sie das Projekt aus der Projektmappe.  
   
-     Weitere Informationen zum Entladen von Projekten finden Sie unter [NIB: Vorgehensweise: Entladen und Laden von Projekten](https://msdn.microsoft.com/library/abc0155b-8fcb-4ffc-95b6-698518a7100b). Wenn Sie aufgefordert werden, um zu speichern, wählen Sie **Ja**.  
+     Weitere Informationen zum Entladen von Projekten finden Sie unter [Vorgehensweise: Entladen und Laden von Projekten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100)). Wenn Sie aufgefordert werden, um zu speichern, wählen Sie **Ja**.  
   
 2.  Fügen Sie einen neuen **Windows-Anwendung** Projekt der Projektmappe. Öffnen Sie das Formular in der **Designer**.  
   
@@ -94,7 +94,7 @@ Wenn die Komponenten von einem Projekt in der aktuell geöffneten Projektmappe d
  In dieser exemplarischen Vorgehensweise wird veranschaulicht, dass die **Toolbox** berücksichtigt Komponenten eines Projekts, aber die **Toolbox** ist auch Steuerelemente. Experimentieren Sie mit Ihren eigenen benutzerdefinierten Steuerelementen durch Hinzufügen und Entfernen von Projekten aus Ihrer Projektmappe.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)
-- [Vorgehensweise: Ändern Sie Toolbox-Registerkarten](https://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)
-- [Dialogfeld „Toolboxelemente auswählen“ (Visual Studio)](https://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)
+- [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [Vorgehensweise: Ändern Sie Toolbox-Registerkarten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
+- [Dialogfeld „Toolboxelemente auswählen“ (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [Einfügen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
