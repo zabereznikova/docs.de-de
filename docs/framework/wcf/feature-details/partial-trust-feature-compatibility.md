@@ -2,12 +2,12 @@
 title: Funktionskompatibilität für teilweise Vertrauenswürdigkeit
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 404fe1a7fb14f28d264d4a97981eade8404141ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564723"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333502"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Funktionskompatibilität für teilweise Vertrauenswürdigkeit
 Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge der Funktionen auf, wenn in einer teilweise vertrauenswürdigen Umgebung ausgeführt. Die in einer teilweise vertrauenswürdigen Umgebung unterstützten Funktionen sind, wie im Thema [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) beschrieben, für einen speziellen Satz von Szenarios konzipiert.  
@@ -111,7 +111,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge der
  Die nachrichtenprotokollierung funktioniert nicht, wenn WCF in einer teilweise vertrauenswürdigen Umgebung ausgeführt wird. Wird sie in einer teilweise vertrauenswürdigen Umgebung aktiviert, schlägt zwar die Dienstaktivierung nicht fehl, jedoch wird keine Nachricht protokolliert.  
   
 ### <a name="tracing"></a>Ablaufverfolgung  
- In einer teilweise vertrauenswürdigen Umgebung ist nur eine eingeschränkte Funktionalität der Ablaufverfolgung verfügbar. Dem <`listeners`>-Element der Konfigurationsdatei können Sie nur den <xref:System.Diagnostics.TextWriterTraceListener>-Typ und den neuen <xref:System.Diagnostics.EventSchemaTraceListener>-Typ hinzufügen. Die Verwendung des Standardtyps <xref:System.Diagnostics.XmlWriterTraceListener> führt möglicherweise zu unvollständigen oder falschen Protokollen.  
+ In einer teilweise vertrauenswürdigen Umgebung ist nur eine eingeschränkte Funktionalität der Ablaufverfolgung verfügbar. In der <`listeners`>-Element in der Konfigurationsdatei, die einzigen Typen, die Sie hinzufügen können, sind <xref:System.Diagnostics.TextWriterTraceListener> und die neue <xref:System.Diagnostics.EventSchemaTraceListener>. Die Verwendung des Standardtyps <xref:System.Diagnostics.XmlWriterTraceListener> führt möglicherweise zu unvollständigen oder falschen Protokollen.  
   
  Unterstützte Ablaufverfolgungsquellen sind:  
   
@@ -127,7 +127,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge der
   
 -   <xref:System.IO.Log>  
 
--   [System.ServiceModel.Internal.TransactionBridge](https://msdn.microsoft.com/library/system.servicemodel.internal.transactionbridge.aspx)]
+-   [System.ServiceModel.Internal.TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
   
  Die folgenden Member der <xref:System.Diagnostics.TraceOptions> -Enumeration sollten nicht angegeben werden.  
   

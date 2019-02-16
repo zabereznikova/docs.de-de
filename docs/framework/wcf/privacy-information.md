@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: ea3ff1e8ec4234e75b937cfef81b55bb8f71fa12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683966"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333403"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation-Datenschutzinformationen
 Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Bei der Erstellung einer Anwendung mithilfe von Windows Communication Foundation (WCF), Version 3.0, kann Ihre Anwendung Datenschutz der Endbenutzer beeinträchtigen. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. WCF sendet nicht an Microsoft aus Ihrer Anwendung Informationen, sofern Ihnen oder dem Endbenutzer Sie uns senden möchten.  
@@ -24,7 +24,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 ## <a name="messaging"></a>Messaging  
  Jede WCF-Nachricht besitzt einen Adressheader, der angibt, das Ziel der Nachricht und, in dem die Antwort.  
   
- Die Adresskomponente einer Endpunktadresse ist ein URI (Uniform Resource Identifier), der den Endpunkt identifiziert. Die Adresse kann eine Netzwerkadresse oder eine logische Adresse sein. Die Adresse kann den Computernamen (Hostname, vollqualifizierter Domänenname) und eine IP-Adresse einschließen. Die Endpunktadresse kann außerdem eine GUID (Globally Unique Identifier) oder eine Auflistung von GUIDs für die temporäre Adressierung zum Ermitteln jeder Adresse enthalten. Jede Nachricht enthält eine Nachrichten-ID, die eine GUID ist. Diese Funktion folgt dem WS-Addressierungs-Verweisstandard.  
+ Die Adresskomponente einer Endpunktadresse ist ein URI (Uniform Resource Identifier), der den Endpunkt identifiziert. Die Adresse kann eine Netzwerkadresse oder eine logische Adresse sein. Die Adresse kann den Computernamen (Hostname, vollqualifizierter Domänenname) und eine IP-Adresse einschließen. Die Endpunktadresse kann außerdem eine GUID (Globally Unique Identifier) oder eine Auflistung von GUIDs für die temporäre Adressierung zum Ermitteln jeder Adresse enthalten. Jede Nachricht enthält eine Nachrichten-ID, die eine GUID ist. Dieses Feature folgt dem WS-Addressierungs-Verweisstandard.  
   
  Der WCF-Messagingebene schreibt keine persönlichen Informationen nicht auf dem lokalen Computer. Sie kann jedoch persönliche Daten auf der Netzwerkebene weitergeben, wenn ein Diensteentwickler einen Dienst erstellt hat, der solche Informationen verfügbar macht (z. B. durch das Verwenden des Namens einer Person in einem Endpunktnamen oder durch das Aufnehmen persönlicher Daten in die WSDL des Endpunkts, ohne dass Clients zum Zugriff auf die WSDL HTTPS verwenden müssen). Auch wenn ein Entwickler ausgeführt wird. die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) -Tool gegen einen Endpunkt, die persönlichen Daten, die Ausgabe des Tools verfügbar macht, kann diese Informationen enthalten, und in die Ausgabedatei geschrieben der lokale Festplatte.  
   
@@ -59,7 +59,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 ## <a name="transactions"></a>Transaktionen  
  Die Transaktionsfunktion stellt Transaktionsdienste für eine WCF-Anwendung bereit.  
   
- Bei der Transaktionsweitergabe verwendete Transaktionsheader enthalten möglicherweise TransaktionsIDs oder Eintragung-IDs, die GUIDs sind.  
+ Bei der Transaktionsweitergabe verwendete Transaktionsheader enthalten möglicherweise Transaktions-IDs oder Eintragung-IDs, die GUIDs sind.  
   
  Das Tansaktionsfeature verwendet den MSDTC (Microsoft Distributed Transaction Coordinator)-Transaktions-Manager (eine Windows-Komponente) zum Verwalten des Transaktionszustands. Standardmäßig sind Kommunikationen zwischen Transaktions-Managern verschlüsselt. Transaktions-Manager protokollieren möglicherweise Endpunktverweise, Transaktions-IDs und Eintragung-IDs als Teil ihres permanenten Zustands. Die Lebensdauer dieses Zustands wird von der Lebensdauer der Protokolldatei des Transaktions-Managers bestimmt. Der MSDTC-Dienst besitzt dieses Protokoll und behält es bei.  
   
@@ -75,7 +75,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 ## <a name="queued-channels"></a>In der Warteschlange stehende Kanäle  
  Warteschlangen speichern Nachrichten von einer sendenden Anwendung für eine empfangende Anwendung und leiten sie später an die empfangende Anwendung weiter. Sie sichern die Nachrichtenübertragung von sendenden Anwendungen an empfangende Anwendungen, wenn z. B. die empfangende Anwendung flüchtig ist. WCF bietet Unterstützung für Warteschlangenvorgänge durch die Nutzung von Microsoft Message Queuing (MSMQ) als Transport.  
   
- Die Funktion für in der Warteschlange stehende Kanäle fügt einer Nachricht keine Header hinzu. Es erstellt stattdessen eine Message Queuing-Nachricht mit entsprechenden Einstellungen und ruft Message Queuing-Methoden zum Platzieren der Nachricht in die Message Queuing-Warteschlange auf. Message Queuing ist eine in Windows enthaltene optionale Komponente.  
+ Das Feature für in der Warteschlange stehende Kanäle fügt einer Nachricht keine Header hinzu. Es erstellt stattdessen eine Message Queuing-Nachricht mit entsprechenden Einstellungen und ruft Message Queuing-Methoden zum Platzieren der Nachricht in die Message Queuing-Warteschlange auf. Message Queuing ist eine in Windows enthaltene optionale Komponente.  
   
  Durch dieses Feature werden auf dem Computer des Endbenutzers keine Informationen beibehalten, da es Message Queuing als Warteschlangeninfrastruktur verwendet.  
   
@@ -83,7 +83,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
  Diese Funktion schließt vorhandene COM- und COM+-Funktionen zum Erstellen von Diensten, die mit WCF-Diensten kompatibel sind. Diese Funktion verwendet keine bestimmten Header, und es behält keine Daten auf dem Computer des Endbenutzers bei.  
   
 ## <a name="com-service-moniker"></a>COM-Dienstmoniker  
- Dies bietet einen nicht verwalteten Wrapper um einem standard-WCF-Client. Diese Funktion verwendet keine bestimmten Header, und sie behält keine Daten auf dem Computer bei.  
+ Dies bietet einen nicht verwalteten Wrapper um einem standard-WCF-Client. Dieses Feature verwendet keine bestimmten Header, und es behält keine Daten auf dem Computer bei.  
   
 ## <a name="peer-channel"></a>Peerkanal  
  Ein Peerkanal ermöglicht die Entwicklung von mehrparteienanwendungen mithilfe von WCF. Mehrparteienmessaging tritt im Kontext eines Netzes auf. Netze werden mit einem Namen identifiziert, den Knoten verknüpfen können. Jeder Knoten im Peerkanal erstellt einen TCP-Listener an einem vom Benutzer angegebenen Anschluss und stellt Verbindungen mit anderen Knoten im Netz her, um die Flexibilität zu sichern. Für diese Verbindungen tauschen Knoten auch bestimmte Daten wie die Listeneradresse und die IP-Adresse des Computers mit anderen Knoten im Netz aus. Innerhalb des Netzes gesendete Nachrichten können Sicherheitsinformationen enthalten, die sich auf den Absender beziehen, um Nachrichtenspoofing und -manipulation zu verhindern.  
@@ -371,7 +371,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 #### <a name="custom-trace-listeners"></a>Benutzerdefinierte Ablaufverfolgungslistener  
  Sowohl für die Nachrichtenprotokollierung als auch die Ablaufverfolgung kann ein benutzerdefinierter Ablaufverfolgungslistener konfiguriert werden, der Ablaufverfolgungen und Nachrichten überträgt, z. B. an eine Remotedatenbank. Der Anwendungsbereitsteller ist für das Konfigurieren benutzerdefinierter Listener oder das Ermöglichen dieser Aktion durch Benutzer verantwortlich. Er ist außerdem für am Remotespeicherort verfügbar gemachte persönliche Informationen und für die korrekte Anwendung von ACLs auf diesen Speicherort verantwortlich.  
   
-### <a name="other-features-for-it-professionals"></a>Andere Funktionen für IT-Fachleute  
+### <a name="other-features-for-it-professionals"></a>Andere Features für IT-Fachleute  
  WCF bietet es sich um einen WMI-Anbieter, der die Konfigurationsinformationen des WCF-Infrastruktur über WMI (im Lieferumfang von Windows enthalten) verfügbar macht. Standardmäßig steht die WMI-Schnittstelle Administratoren zur Verfügung.  
   
  WCF-Konfiguration verwendet die .NET Framework-Konfigurationsverfahren. Die Konfigurationsdateien werden auf dem Computer gespeichert. Der Anwendungsentwickler und der Administrator erstellen die Konfigurationsdateien und die ACL für jede Anwendungsanforderung. Eine Konfigurationsdatei kann Endpunktadressen und Links zu Zertifikaten im Zertifikatspeicher enthalten. Mithilfe der Zertifikate können Anwendungsdaten zum Konfigurieren verschiedener Eigenschaften der von der Anwendung verwendeten Funktionen bereitgestellt werden.  
@@ -402,5 +402,5 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
  Die WSDL (Web Services Description Language) enthält eine Definition des Anschlusses. Jeder Anschluss verfügt über eine Endpunktadresse und eine Bindung, die die von der Anwendung verwendeten Dienste darstellt. Das Verfügbarmachen der WSDL kann mithilfe der Konfiguration deaktiviert werden. Auf dem Computer werden keine Informationen beibehalten.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)
+- [Windows Communication Foundation](index.md)
 - [Sicherheit](../../../docs/framework/wcf/feature-details/security.md)

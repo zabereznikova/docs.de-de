@@ -2,12 +2,12 @@
 title: Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 931ba4162ed34ab391bd0ba2de2cb5a0e16ede6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521867"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333416"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
 Dieses Thema beschreibt einige bewährten Methoden zum Hosten von Diensten für Windows Communication Foundation (WCF).  
@@ -82,5 +82,6 @@ Dieses Thema beschreibt einige bewährten Methoden zum Hosten von Diensten für 
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Beispiele für Diensthosting](https://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)
+
+- [Beispiele für Diensthosting](../samples/hosting.md)
 - [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)

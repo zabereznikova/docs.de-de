@@ -1,26 +1,27 @@
 ---
-title: Contract2
+title: WCF-Beispiele für Nachrichtenverträge
 ms.date: 03/30/2017
 ms.assetid: 305eeb65-a52f-459e-9aa8-0ef071eade16
-ms.openlocfilehash: 1b751e3d4fd6eae01e3fcd7500f844427d46524c
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 051a6fc1af7483c5b7c512de6a47afe0b39ae3ad
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809364"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332480"
 ---
 # <a name="contract"></a>Vertrag
-Dieser Abschnitt enthält Beispiele, in denen Verträge in der Windows Communication Foundation (WCF) veranschaulicht.  
+
+Dieser Abschnitt enthält Beispiele, in denen Verträge in Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Datenverträge](../../../../docs/framework/wcf/samples/data-contracts.md)  
  Veranschaulicht Datenverträge in WCF.  
   
  [Nachrichtenverträge](../../../../docs/framework/wcf/samples/message-contracts.md)  
- Veranschaulicht, dass Nachrichten in WCF-Verträge.  
+ Zeigt, dass Nachrichten in WCF Verträge.  
   
  [Dienstverträge](../../../../docs/framework/wcf/samples/service-contracts.md)  
- Veranschaulicht Dienstverträge in WCF.  
+ Zeigt, dass Dienstverträge in WCF.  
   
  [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
  Veranschaulicht, wie die Serialisierungs- und Deserialisierungsprozesse mit der <xref:System.Runtime.Serialization.DataContractResolver>-Klasse angepasst werden können.  

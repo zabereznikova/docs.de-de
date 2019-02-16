@@ -2,12 +2,12 @@
 title: 'Transport: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: e3e01634c496a3673b49ae7329e4221e0d568803
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485939"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332818"
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und -Multicast als einen benutzerdefinierten Windows Communication Foundation (WCF)-Transport implementiert wird. Im Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten Transports in WCF anhand des kanalframeworks und WCF-best Practices beschrieben. Die Schritte zum Erstellen eines benutzerdefinierten Transports lauten wie folgt:  
@@ -52,17 +52,17 @@ Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und -Multicast 
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Der ICommunicationObject- und der WCF-Objektlebenszyklus  
  WCF bietet einen allgemeinen Zustandsautomaten, der verwendet wird, zum Verwalten des legenszyklus von Objekten wie <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, und <xref:System.ServiceModel.Channels.IChannelListener> , die für die Kommunikation verwendet werden. Es gibt fünf Zustände, in denen diese Kommunikationsobjekte vorhanden sein können. Die Zustände werden durch die <xref:System.ServiceModel.CommunicationState>-Enumeration dargestellt und lauten wie folgt:  
   
--   Created: Dies ist der Zustand eines <xref:System.ServiceModel.ICommunicationObject>, wenn es zuerst instanziiert wird. In diesem Zustand tritt keine Eingabe/Ausgabe (E/A) auf.  
+-   Erstellt: Dies ist der Zustand einer <xref:System.ServiceModel.ICommunicationObject> Wenn es zuerst instanziiert. In diesem Zustand tritt keine Eingabe/Ausgabe (E/A) auf.  
   
--   Opening: Das Objekt geht zu diesem Zustand über, wenn <xref:System.ServiceModel.ICommunicationObject.Open%2A> aufgerufen wird. An diesem Punkt werden Eigenschaften unveränderlich gemacht, und Eingabe/Ausgabe kann beginnen. Dieser Übergang ist nur vom Created-Zustand aus gültig.  
+-   Opening: Objekt geht zu diesem Zustand über, wenn <xref:System.ServiceModel.ICommunicationObject.Open%2A> aufgerufen wird. An diesem Punkt werden Eigenschaften unveränderlich gemacht, und Eingabe/Ausgabe kann beginnen. Dieser Übergang ist nur vom Created-Zustand aus gültig.  
   
--   Opened: Das Objekt geht zu diesem Zustand über, wenn der geöffnete Prozess abgeschlossen wird. Dieser Übergang ist nur vom Opening-Zustand aus gültig. An diesem Punkt ist das Objekt für die Übertragung voll verwendbar.  
+-   Geöffnet: Objekt geht zu diesem Zustand, wenn der Öffnungsprozess abgeschlossen ist. Dieser Übergang ist nur vom Opening-Zustand aus gültig. An diesem Punkt ist das Objekt für die Übertragung voll verwendbar.  
   
--   Closing: Das Objekt geht zu diesem Zustand über, wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A> für ein ordnungsgemäßes Herunterfahren aufgerufen wird. Dieser Übergang ist nur vom Opened-Zustand aus gültig.  
+-   Schließen: Objekt geht zu diesem Zustand über, wenn <xref:System.ServiceModel.ICommunicationObject.Close%2A> für ein ordnungsgemäßes Herunterfahren aufgerufen wird. Dieser Übergang ist nur vom Opened-Zustand aus gültig.  
   
--   Closed: Objekte im Closed-Zustand sind nicht mehr verwendbar. Im Allgemeinen steht der größte Teil der Konfiguration noch zur Ansicht bereit, es kann aber keine Kommunikation auftreten. Dieser Zustand ist mit "Verworfen" vergleichbar.  
+-   Geschlossen: Im Closed werden Zustandsobjekte nicht mehr verwendet werden. Im Allgemeinen steht der größte Teil der Konfiguration noch zur Ansicht bereit, es kann aber keine Kommunikation auftreten. Dieser Zustand ist mit "Verworfen" vergleichbar.  
   
--   Faulted: Auf Objekte im Faulted-Zustand kann für die Inspektion zugegriffen werden, sie sind aber nicht mehr verwendbar. Wenn ein nicht behebbarer Fehler auftritt, geht das Objekt in diesen Zustand über. Der einzige gültige Übergang von diesem Status wird in der `Closed` Zustand.  
+-   Fehler: In den Faulted-Zustand sind die Objekte zugegriffen werden kann, um die Überprüfung jedoch nicht mehr verwendet werden. Wenn ein nicht behebbarer Fehler auftritt, geht das Objekt in diesen Zustand über. Der einzige gültige Übergang von diesem Status wird in der `Closed` Zustand.  
   
  Es gibt Ereignisse, die für jeden Zustandsübergang ausgelöst werden. Die <xref:System.ServiceModel.ICommunicationObject.Abort%2A>-Methode kann jederzeit aufgerufen werden und sorgt dafür, dass das Objekt sofort vom aktuellen Zustand in den Closed-Zustand übergeht. Beim Aufrufen von <xref:System.ServiceModel.ICommunicationObject.Abort%2A> wird nicht abgeschlossene Arbeit beendet.  
   
@@ -204,7 +204,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  Das benutzerdefinierte Bindungselement kann Richtlinienassertionen in die WSDL-Bindung für einen Dienstendpunkt exportieren, um die Funktionen dieses Bindungselements auszudrücken.  
   
 #### <a name="policy-export"></a>Richtlinienexport  
- Die `UdpTransportBindingElement` -Typ implementiert `IPolicyExportExtension` zum Hinzufügen der Unterstützung für das Exportieren der Richtlinie. Als Ergebnis schließt `System.ServiceModel.MetadataExporter` `UdpTransportBindingElement` in die Generierung der Richtlinie für eine Bindung, die dieses enthält, ein.  
+ Die `UdpTransportBindingElement` -Typ implementiert `IPolicyExportExtension` zum Hinzufügen der Unterstützung für das Exportieren der Richtlinie. Als Ergebnis schließt `System.ServiceModel.MetadataExporter``UdpTransportBindingElement` in die Generierung der Richtlinie für eine Bindung ein, die dieses enthält.  
   
  Fügen Sie in `IPolicyExportExtension.ExportPolicy` eine Assertion für UDP und eine weitere Assertion ein, wenn Sie sich im Multicastmodus befinden. Grund hierfür ist, dass der Multicastmodus Einfluss auf die Art und Weise hat, in der der Kommunikationsstapel erstellt wird, weshalb eine Koordinierung zwischen beiden Seiten stattfinden muss.  
   
@@ -255,11 +255,12 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>Hinzufügen einer Standardbindung  
  Das Bindungselement kann auf die beiden folgenden Arten verwendet werden:  
   
--   Über eine benutzerdefinierte Bindung: Benutzerdefinierte Bindungen erlauben Benutzern, basierend auf einer beliebigen Gruppe von Bindungselementen, eigene Bindungen zu definieren.  
+-   Durch eine benutzerdefinierte Bindung: Eine benutzerdefinierte Bindung ermöglicht den Benutzer, eigene Bindungen basierend auf einer beliebigen Gruppe von Bindungselementen erstellen.  
   
 -   Über eine vom System bereitgestellte Bindung, die das Bindungselement enthält. WCF bietet mehrere vom System definierte Bindungen, z. B. `BasicHttpBinding`, `NetTcpBinding`, und `WsHttpBinding`. Jede dieser Bindungen wird einem genau definierten Profil zugeordnet.  
   
- Das Beispiel implementiert eine Profilbindung in `SampleProfileUdpBinding`, die von <xref:System.ServiceModel.Channels.Binding> abgeleitet wurde. `SampleProfileUdpBinding` enthält bis zu vier Bindungselemente: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` und `ReliableSessionBindingElement`.  
+ Das Beispiel implementiert eine Profilbindung in `SampleProfileUdpBinding`, die von <xref:System.ServiceModel.Channels.Binding> abgeleitet wurde. 
+  `SampleProfileUdpBinding` enthält bis zu vier Bindungselemente: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` und `ReliableSessionBindingElement`.  
   
 ```csharp
 public override BindingElementCollection CreateBindingElements()  
@@ -277,7 +278,7 @@ public override BindingElementCollection CreateBindingElements()
 ```  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Hinzufügen eines benutzerdefinierten Standardbindungsimportprogramms  
- "Svcutil.exe" und der `WsdlImporter`-Typ erkennen und importieren vom System definierte Bindungen standardmäßig. Andernfalls wird die Bindung als `CustomBinding`-Instanz importiert. Zur Aktivierung des Imports der `WsdlImporter` für Svcutil.exe und den `SampleProfileUdpBinding`, fungiert der `UdpBindingElementImporter` auch als benutzerdefiniertes Standardbindungsimportprogramm.  
+ „Svcutil.exe“ und der `WsdlImporter`-Typ erkennen und importieren vom System definierte Bindungen standardmäßig. Andernfalls wird die Bindung als `CustomBinding`-Instanz importiert. Zur Aktivierung des Imports der `WsdlImporter` für „Svcutil.exe“ und den `SampleProfileUdpBinding`, fungiert der `UdpBindingElementImporter` auch als benutzerdefiniertes Importprogramm für Standardbindungen.  
   
  Ein benutzerdefiniertes Standardbindungsimportprogramm implementiert die `ImportEndpoint`-Methode auf der `IWsdlImportExtension`-Schnittstelle, um zu prüfen, ob die aus den Metadaten importierte `CustomBinding`-Instanz von einer spezifischen Standardbindung hätte generiert werden können.  
   
@@ -299,7 +300,7 @@ if (context.Endpoint.Binding is CustomBinding)
 }  
 ```  
   
- Allgemein beinhaltet die Implementierung eines benutzerdefinierten Importprogramms für Standardbindungen die Überprüfung der Eigenschaften der importierten Bindungen, um zu bestätigen, dass sich nur Eigenschaften geändert haben, die von der Standardbindung hätten festgelegt werden können, und es sich bei allen anderen Eigenschaften um die Standardwerte handelt. Eine grundlegende Strategie für die Implementierung eines Standardbindungsimportprogramms ist die Erstellung einer Standardbindung, die Weitergabe der Eigenschaften von den Bindungselementen an die von der Standardbindung unterstützte Standardbindungsinstanz und der Vergleich der Bindungselemente der Standardbindung mit den importierten Bindungselementen.  
+ Allgemein beinhaltet die Implementierung eines benutzerdefinierten Importprogramms für Standardbindungen die Überprüfung der Eigenschaften der importierten Bindungen, um zu bestätigen, dass sich nur Eigenschaften geändert haben, die von der Standardbindung hätten festgelegt werden können, und es sich bei allen anderen Eigenschaften um die Standardwerte handelt. Eine grundlegende Strategie für die Implementierung eines Importprogramms für Standardbindungen ist die Erstellung einer Standardbindung, die Weitergabe der Eigenschaften von den Bindungselementen an die von der Standardbindung unterstützte Standardbindungsinstanz und der Vergleich der Bindungselemente der Standardbindung mit den importierten Bindungselementen.  
   
 <a name="AddingConfigurationSupport"></a>   
 ## <a name="adding-configuration-support"></a>Hinzufügen von Konfigurationsunterstützung  
@@ -394,7 +395,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Der UDP-Testdienst und der Client  
- Testcode für die Verwendung dieses Beispieltransports ist in den UdpTestService- und UdpTestClient-Verzeichnissen verfügbar. Der Dienstcode besteht aus zwei Tests: Ein Test richtet die Bindungen und Endpunkte über den Code ein und der andere über die Konfiguration. Beide Tests verwenden zwei Endpunkte. Ein Endpunkt verwendet die `SampleUdpProfileBinding` mit [ \<ReliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) festgelegt `true`. Der andere Endpunkt verwendet eine benutzerdefinierte Bindung mit `UdpTransportBindingElement`. Dies ist äquivalent zur Verwendung `SampleUdpProfileBinding` mit [ \<ReliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) festgelegt `false`. Beide Tests erstellen einen Dienst, fügen einen Endpunkt für jede Bindung hinzu, öffnen den Dienst und warten anschließend darauf, dass der Benutzer die EINGABETASTE drückt, bevor der Dienst beendet wird.  
+ Testcode für die Verwendung dieses Beispieltransports ist in den UdpTestService- und UdpTestClient-Verzeichnissen verfügbar. Der Dienstcode besteht aus zwei Tests: Ein Test richtet die Bindungen und Endpunkte über den Code ein und der andere über die Konfiguration. Beide Tests verwenden zwei Endpunkte. Ein Endpunkt verwendet die `SampleUdpProfileBinding` mit [ \<ReliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) festgelegt `true`. Der andere Endpunkt verwendet eine benutzerdefinierte Bindung mit `UdpTransportBindingElement`. Dies ist äquivalent zur Verwendung `SampleUdpProfileBinding` mit [ \<ReliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) festgelegt `false`. Beide Tests erstellen einen Dienst, fügen einen Endpunkt für jede Bindung hinzu, öffnen den Dienst und warten anschließend darauf, dass der Benutzer die EINGABETASTE drückt, bevor der Dienst beendet wird.  
   
  Wenn Sie die Testanwendung für den Dienst starten, sollte folgende Ausgabe angezeigt werden:  
   

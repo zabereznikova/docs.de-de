@@ -1,17 +1,17 @@
 ---
-title: 'Gewusst wie: Konfigurieren eines grundlegenden Windows Communication Foundation-Clients'
+title: 'Vorgehensweise: Konfigurieren einer grundlegenden Windows Communication Foundation-Clients'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-ms.openlocfilehash: 3f267edf87711de8a5969e3e0b577648008c5a75
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 18acec48b2af78877f99335da38ccb0ae8942824
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562189"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332317"
 ---
-# <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Gewusst wie: Konfigurieren eines grundlegenden Windows Communication Foundation-Clients
+# <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Vorgehensweise: Konfigurieren einer grundlegenden Windows Communication Foundation-Clients
 
 Dies ist die fünfte von sechs Aufgaben, die zum Erstellen einer grundlegenden Windows Communication Foundation (WCF)-Anwendung erforderlich sind. Eine Übersicht über alle sechs Aufgaben finden Sie im Artikel [Getting Started Tutorial (Tutorial: Erste Schritte)](../../../docs/framework/wcf/getting-started-tutorial.md).
 
@@ -19,7 +19,7 @@ In diesem Thema wird erläutert, die Clientkonfigurationsdatei, die generiert wu
 
 ## <a name="configure-a-windows-communication-foundation-client"></a>Konfigurieren eines Windows Communication Foundation-Clients
 
-Öffnen Sie die generierte Konfigurationsdatei (App.config) aus dem GettingStartedClient-Projekt. Im folgenden Beispiel wird der Inhalt der generierten Konfiguration gezeigt. Unter den [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Abschnitt, suchen Sie nach der [ \<Endpunkt >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) Element.
+Öffnen Sie die generierte Konfigurationsdatei (App.config) aus dem GettingStartedClient-Projekt. Im folgenden Beispiel wird der Inhalt der generierten Konfiguration gezeigt. Unter den [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Abschnitt, suchen Sie nach der [ \<Endpunkt >](../configure-apps/file-schema/wcf/endpoint-element.md) Element.
 
 ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -58,12 +58,12 @@ Weitere Informationen zur Verwendung des generierten Clients mit dieser Konfigur
 ## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
-> [Gewusst wie: Verwenden Sie einen WCF-Client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
+> [Vorgehensweise: Verwenden Sie einen WCF-client](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Vorgehensweise: Erstellen Sie einen Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [Erste Schritte](../../../docs/framework/wcf/samples/getting-started-sample.md)
 - [Selbst gehostete Dienste](../../../docs/framework/wcf/samples/self-host.md)

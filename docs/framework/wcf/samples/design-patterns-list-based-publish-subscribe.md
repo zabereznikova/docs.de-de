@@ -2,12 +2,12 @@
 title: 'Entwurfsmuster: Listenbasiertes veröffentlichen-abonnieren'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 87151cb8e50f526838565b22088f117941d6ab98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a71e6c060a7da4161902266eabda9dd350e40f80
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717893"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56333390"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Entwurfsmuster: Listenbasiertes veröffentlichen-abonnieren
 Dieses Beispiel veranschaulicht das listenbasierte Veröffentlichen-Abonnieren-Muster, die als ein Windows Communication Foundation (WCF)-Programm implementiert.  
@@ -124,7 +124,7 @@ public class PriceChangeEventArgs : EventArgs
   
 3.  Führen Sie Datasource.exe aus \datasource\bin\\, unter dem sprachspezifischen Ordner. Die Datenquellenaktivität wird im Konsolenfenster angezeigt. Sobald die Datenquelle Informationen an den Dienst sendet, sollten diese an jeden Client übergeben werden.  
   
-4.  Wenn der Client, Datenquelle und Dienstprogramme nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Wenn der Client, Datenquelle und Dienstprogramme nicht kommunizieren können, finden Sie unter [Tipps zur Problembehandlung für WCF-Beispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>So führen Sie das Beispiel computerübergreifend aus  
   

@@ -2,17 +2,17 @@
 title: Beispiel für AJAX-Dienst mit JSON und XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: ed337b7e2717083f5b951d9c204b90ebcddf2d3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8e112a75d537927d7a099d2988c1219515e2c1a
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632295"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332342"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Beispiel für AJAX-Dienst mit JSON und XML
 In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF) zu verwenden, um einen Dienst Asynchronous JavaScript and XML (AJAX) zu erstellen, der entweder JavaScript Object Notation (JSON) oder XML-Daten zurückgibt. Sie können auf einen AJAX-Dienst zugreifen, indem Sie JavaScript-Code in einem Webbrowserclient verwenden. Dieses Beispiel baut auf den [einfacher AJAX-Dienst](../../../../docs/framework/wcf/samples/basic-ajax-service.md) Beispiel.  
   
- Im Gegensatz zu den anderen AJAX-Beispielen werden in diesem Beispiel ASP.NET AJAX und das <xref:System.Web.UI.ScriptManager>-Steuerelement nicht verwendet. Klicken Sie mit einigen zusätzlichen Konfigurationseinstellungen kann WCF AJAX-Dienst können von jeder HTML-Seite über JavaScript zugegriffen werden, und dieses Szenario ist hier dargestellt. Ein Beispiel der Verwendung von WCF mit ASP.NET AJAX finden Sie unter [AJAX-Beispielen](https://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).
+ Im Gegensatz zu den anderen AJAX-Beispielen werden in diesem Beispiel ASP.NET AJAX und das <xref:System.Web.UI.ScriptManager>-Steuerelement nicht verwendet. Klicken Sie mit einigen zusätzlichen Konfigurationseinstellungen kann WCF AJAX-Dienst können von jeder HTML-Seite über JavaScript zugegriffen werden, und dieses Szenario ist hier dargestellt. Ein Beispiel der Verwendung von WCF mit ASP.NET AJAX finden Sie unter [AJAX-Beispielen](ajax.md).
   
  In diesem Beispiel wird gezeigt, wie der Antworttyp eines Vorgangs zwischen JSON und XML umgeschaltet wird. Diese Funktion ist unabhängig davon verfügbar, ob der Dienst für den Zugriff durch ASP.NET AJAX oder eine HTML/JavaScript-Clientseite konfiguriert wurde.  
   
