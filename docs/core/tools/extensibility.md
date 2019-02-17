@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie die Tools für die Befehlszeilenschnittstelle
 author: blackdwarf
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3aedd1d507fde1cd7402ef97fa00d0c7f13005e3
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e93c9c85383d7c541b8ef55a74045307810cbb05
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170235"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093007"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Erweiterbarkeitsmodell für .NET Core-CLI-Tools
 
@@ -79,7 +79,7 @@ Diese Art von Tools haben ein Abhängigkeitsdiagramm, das komplett unabhängig i
 Umfangreichere Beispiele und verschiedene Kombinationen dessen finden Sie im [.NET Core-CLI-Repository](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
 Sie finden auch die [Implementierung von verwendeten Tools](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) im gleichen Repository.
 
-### <a name="custom-targets"></a>Benutzerdefinierte Ziele
+## <a name="custom-targets"></a>Benutzerdefinierte Ziele
 NuGet kann [benutzerdefinierte MSBuild-Ziele und PROPS-Dateien packen](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Mit dem Schritt der .NET Core-CLI-Tools zum Verwenden von MSBuild gilt nun derselbe Mechanismus für Erweiterbarkeit für .NET Core-Projekte. Sie nutzen diese Art von Erweiterbarkeit, wenn Sie den Buildprozess erweitern möchten, im Buildprozess auf Artefakte wie generierte Dateien zugreifen oder die Konfiguration überprüfen möchten, in der der Build aufgerufen wird usw.
 
 Im folgenden Beispiel können Sie die Projektdatei des Ziels mithilfe der `csproj`-Syntax anzeigen. Dies zeigt dem [`dotnet pack`](dotnet-pack.md)-Befehl, was genau gepackt werden soll, wobei die Zieldateien sowie die Assemblys in den Ordner *Erstellen* im Paket platziert werden. Beachten Sie das `<ItemGroup>`-Element, das über die Eigenschaft `Label` verfügt, die auf `dotnet pack instructions` festgelegt ist, sowie das Ziel, das darunter definiert ist.
@@ -137,7 +137,7 @@ Die Verwendung des benutzerdefinierten Ziels hängt ausschließlich von seiner K
 
 Wenn Sie jedoch Ihren Benutzern eine bessere Erfahrung bieten möchten, können Sie projektbezogene Tools und benutzerdefinierte Ziele kombinieren. In diesem Szenario akzeptiert das projektbezogene Tool lediglich die benötigten Parameter, die in den erforderlichen Aufruf von [`dotnet msbuild`](dotnet-msbuild.md) übersetzt werden, über den das Ziel ausgeführt wird. Sie sehen ein Beispiel dieser Art von Synergie im Repository mit den [MVP Summit 2016 Hackathon-Beispielen](https://github.com/dotnet/MVPSummitHackathon2016) im Projekt [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 
-### <a name="path-based-extensibility"></a>PFAD-basierte Erweiterbarkeit
+## <a name="path-based-extensibility"></a>PFAD-basierte Erweiterbarkeit
 Die PFAD-basierte Erweiterbarkeit wird in der Regel für Entwicklungscomputer verwendet, bei denen Sie ein Tool brauchen, das konzeptionell mehr als ein einzelnes Projekt abdeckt. Der größte Nachteil dieses Extensionsmechanismus ist, dass es mit dem Computer verknüpft ist, auf dem das Tool existiert. Wenn Sie ihn auf einem anderen Computer benötigen, müssten Sie ihn bereitstellen.
 
 Dieses Muster der Erweiterbarkeit des CLI-Toolsets ist sehr einfach. Wie in der [Übersicht über die .NET Core-CLI](index.md) beschrieben, kann der `dotnet`-Treiber jeden Befehl ausführen, der nach der `dotnet-<command>`-Konvention benannt ist. Die Standardauflösungslogik wird zuerst mehrere Speicherorte überprüfen und schließlich an den SYSTEMPFAD fallen. Wenn der angeforderte Befehl im SYSTEMPFAD vorhanden und eine Binärdatei ist, die aufgerufen werden kann, wird sie der `dotnet`-Treiber aufrufen.
