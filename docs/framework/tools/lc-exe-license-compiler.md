@@ -42,7 +42,7 @@ Der Lizenzcompiler liest Textdateien mit Informationen über die Lizenzierung un
 |------------|-----------------|  
 |**/complist:** *filename*|Gibt den Namen einer Datei an, die die Liste der lizenzierten Komponenten enthält, die in die LICENSES-Datei eingebunden werden sollen. Auf die einzelnen Komponenten wird mit dem vollständigen Namen verwiesen, wobei pro Zeile jeweils nur eine Komponente aufgeführt wird.<br /><br /> Benutzer der Befehlszeile können für jedes Formular des Projekts eine eigene Datei angeben. "Lc.exe" akzeptiert mehrere Eingabedateien und erstellt eine einzige LICENSES-Datei.|  
 |**-h**[**elp**]|Zeigt Befehlssyntax und Optionen für das Tool an.|  
-|**/i:***module*|Gibt die Module an, die die in der Datei **/complist**aufgelisteten Komponenten enthalten. Verwenden Sie mehrere **/i**-Flags, um mehrere Module anzugeben.|  
+|**/i:** *module*|Gibt die Module an, die die in der Datei **/complist**aufgelisteten Komponenten enthalten. Verwenden Sie mehrere **/i**-Flags, um mehrere Module anzugeben.|  
 |**/nologo**|Unterdrückt die Anzeige des Startbanners von Microsoft.|  
 |**/outdir:** *path*|Gibt das Verzeichnis an, in dem die LICENSES-Ausgabedatei gespeichert werden soll.|  
 |**/target:** *targetPE*|Gibt die ausführbare Datei an, für die die LICENSES-Datei generiert wird.|  
