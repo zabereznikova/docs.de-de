@@ -258,6 +258,7 @@
 ##### [Einführung in Klassen](csharp/tutorials/intro-to-csharp/introduction-to-classes.md)
 ### [Erkunden von C# 6](csharp/tutorials/exploration/csharp-6.yml)
 ### [Arbeiten mit Verweistypen, die Nullwerte zulassen](csharp/tutorials/nullable-reference-types.md)
+### [Generieren und Nutzen asynchroner Streams](csharp/tutorials/generate-consume-asynchronous-stream.md)
 ### [Konsolenanwendung](csharp/tutorials/console-teleprompter.md)
 ### [REST-Client](csharp/tutorials/console-webapiclient.md)
 ### [Vererbung in C# und .NET](csharp/tutorials/inheritance.md)
