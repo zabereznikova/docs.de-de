@@ -3,13 +3,18 @@ title: Erste Schritte mit .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 helpviewer_keywords:
-  - '.NET Framework, getting started'
-  - 'getting started [.NET Framework]'
+- .NET Framework, getting started
+- getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: ad380b5e411a61db648495875a5b697df54e2849
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56304686"
 ---
-
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
 
 .NET Framework ist eine Ausführungsumgebung für die Laufzeit, die Apps für .NET Framework verwaltet. Sie besteht aus der Common Language Runtime, die Speicherverwaltung und andere Systemdienste bereitstellt, und einer umfangreichen Klassenbibliothek, die Programmierern stabilen, zuverlässigen Code für alle wesentlichen Bereiche der App-Entwicklung zur Verfügung stellt.
@@ -36,7 +41,7 @@ ms.author: ronpet
 
 - Parallele Ausführung. .NET Framework unterstützt das Lösen von Versionskonflikten, da mehrere Versionen der Common Language Runtime gleichzeitig auf dem gleichen Computer vorhanden sein können. Dies bedeutet, dass mehrere Versionen von Apps gleichzeitig vorhanden sein können, und dass eine App unter der Version von .NET Framework ausgeführt werden kann, mit der sie erstellt wurde. Die parallele Ausführung gilt für die .NET Framework-Versionsgruppen 1.0/1.1, 2.0/3.0/3.5 und 4/4.5.x/4.6.x/4.7.x.
 
-- Festlegung von Zielversionen. Da Entwickler [.NET Standard](~/docs/standard/net-standard.md) als Ziel verwenden, erstellen sie Klassenbibliotheken, die auf mehreren .NET Framework-Plattformen funktionieren, die von .NET Standard unterstützt werden. Beispielsweise können Bibliotheken, die .NET Standard 2.0 als Ziel verwenden, von Apps verwendet werden, die .NET Framework 4.6.1, .NET Core 2.0 und UWP 10.0.16299 als Ziel verwenden. 
+- Festlegung von Zielversionen. Da Entwickler [.NET Standard](../../standard/net-standard.md) als Ziel verwenden, erstellen sie Klassenbibliotheken, die auf mehreren .NET Framework-Plattformen funktionieren, die von .NET Standard unterstützt werden. Beispielsweise können Bibliotheken, die .NET Standard 2.0 als Ziel verwenden, von Apps verwendet werden, die .NET Framework 4.6.1, .NET Core 2.0 und UWP 10.0.16299 als Ziel verwenden. 
 
 <a name="ForUsers"></a>
 ## <a name="the-net-framework-for-users"></a>.NET Framework für Benutzer
@@ -49,7 +54,7 @@ Im Allgemeinen sollten Sie keine der .NET Framework-Versionen deinstallieren, di
 
 - Wenn eine App, die Sie verwenden, von einer bestimmten Version von .NET Framework abhängt, können Fehler in dieser App entstehen, wenn diese Version entfernt wird.
 
-- Einige Versionen von .NET Framework sind direkte Updates früherer Versionen. So ist z. B. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ein direktes Update auf Version 2.0 und .NET Framework 4.7.2 ein direktes Update auf die Versionen 4 bis 4.7.1. Weitere Informationen finden Sie unter [.NET Framework-Versionen und -Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md).
+- Einige Versionen von .NET Framework sind direkte Updates früherer Versionen. So ist z. B. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] ein direktes Update auf Version 2.0 und .NET Framework 4.7.2 ein direktes Update auf die Versionen 4 bis 4.7.1. Weitere Informationen finden Sie unter [.NET Framework-Versionen und -Abhängigkeiten](../migration-guide/versions-and-dependencies.md).
 
 Wenn Sie auf Windows-Versionen vor Windows 8 .NET Framework entfernen möchten, verwenden Sie immer **Programme und Funktionen** in der Systemsteuerung, um es zu deinstallieren. Entfernen Sie .NET Framework-Versionen nie manuell. Unter Windows 8 und höher ist .NET Framework eine Komponente des Betriebssystems und kann nicht separat deinstalliert werden.
 
@@ -62,29 +67,29 @@ Wenn Sie ein Entwickler sind, können Sie Apps in jeder beliebigen Programmiersp
 
 Gehen Sie beim Entwickeln von .NET Framework-Apps oder -Komponenten folgendermaßen vor:
 
-1. Wenn sie nicht bereits auf dem Betriebssystem vorinstalliert ist, installieren Sie die für die App erforderliche Version von .NET Framework. Die neueste Produktionsversion ist .NET Framework 4.7.2. Diese Version ist bei den Windows 10-Updates vom April 2018 und Oktober 2018 vorinstalliert und steht für ältere Versionen des Windows-Betriebssystems zum Download zur Verfügung. Informationen zu den Systemanforderungen von .NET Framework finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md). Informationen zum Installieren anderer Versionen von .NET Framework finden Sie im [Installationshandbuch](../../../docs/framework/install/guide-for-developers.md). Zusätzliche .NET Framework-Pakete werden Out-of-Band freigegeben, das bedeutet, dass sie auf fortlaufender Basis außerhalb aller regulären oder geplanten Freigabezyklen freigegeben werden. Weitere Informationen zu diesen Paketen finden Sie unter [.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. Wenn sie nicht bereits auf dem Betriebssystem vorinstalliert ist, installieren Sie die für die App erforderliche Version von .NET Framework. Die neueste Produktionsversion ist .NET Framework 4.7.2. Diese Version ist bei den Windows 10-Updates vom April 2018 und Oktober 2018 vorinstalliert und steht für ältere Versionen des Windows-Betriebssystems zum Download zur Verfügung. Informationen zu den Systemanforderungen von .NET Framework finden Sie unter [Systemanforderungen](system-requirements.md). Informationen zum Installieren anderer Versionen von .NET Framework finden Sie im [Installationshandbuch](../install/guide-for-developers.md). Zusätzliche .NET Framework-Pakete werden Out-of-Band freigegeben, das bedeutet, dass sie auf fortlaufender Basis außerhalb aller regulären oder geplanten Freigabezyklen freigegeben werden. Weitere Informationen zu diesen Paketen finden Sie unter [.NET Framework und Out-of-Band-Releases](the-net-framework-and-out-of-band-releases.md).
 
-2. Wählen Sie die von .NET Framework unterstützten Sprachen aus, die Sie zur Entwicklung von Apps verwenden möchten. Es stehen mehrere Sprachen zur Verfügung, darunter [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) und C++/CLI von Microsoft. (Programmiersprachen, die Ihnen ermöglichen, Apps für .NET Framework zu entwickeln, erfüllen die [CLI-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=199862).)
+2. Wählen Sie die von .NET Framework unterstützten Sprachen aus, die Sie zur Entwicklung von Apps verwenden möchten. Es stehen mehrere Sprachen zur Verfügung, darunter [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) und [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) von Microsoft. (Programmiersprachen, die Ihnen ermöglichen, Apps für .NET Framework zu entwickeln, erfüllen die [CLI-Spezifikation](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).)
 
 3. Wählen Sie die Entwicklungsumgebung aus, die Sie zum Erstellen der Apps verwenden möchten und die von der von Ihnen gewählten Programmiersprachen unterstützt werden, und installieren Sie sie. Die integrierte Microsoft-Entwicklungsumgebung (IDE) für .NET Framework-Apps ist [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Es stehen verschiedene Editionen zur Verfügung.
 
-Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgerichtet sind, finden Sie im [Entwicklungshandbuch](../../../docs/framework/development-guide.md).
+Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgerichtet sind, finden Sie im [Entwicklungshandbuch](../development-guide.md).
 
 ## <a name="related-topics"></a>Verwandte Themen
 
 | Titel | Beschreibung |
 | ----- |------------ |
-| [Übersicht](../../../docs/framework/get-started/overview.md) | Enthält ausführliche Informationen für Entwickler, die Apps für .NET Framework erstellen. |
-| [Installationshandbuch](../../../docs/framework/install/index.md) | Stellt Informationen zum Installieren von .NET Framework bereit. |  
-| [.NET Framework und Out-of-Band-Releases](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) | Beschreibt die Out-of-Band-Releases von .NET Framework und ihre Verwendung in der App. |
-| [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md) | Führt die Hardware- und Softwareanforderungen für das Ausführen von .NET Framework auf. |
-| [.NET Core und Open-Source](../../../docs/framework/get-started/net-core-and-open-source.md) | Beschreibt .NET Core in Bezug auf .NET Framework, und wie Sie auf die Open-Source-Projekte von .NET Core zugreifen können. |
-| [.NET Core-Dokumentation](https://docs.microsoft.com/dotnet/) | Stellt die konzeptionelle und API-Referenzdokumentation für .NET Core bereit. |
-| [.NET-Standard](~/docs/standard/net-standard.md) | Erläutert .NET Standard, eine Spezifikation mit Versionsangabe, die von einzelnen .NET-Implementierungen unterstützt wird, um sicherzustellen, dass die gleichen APIs auf mehreren Plattformen verfügbar sind.
+| [Übersicht](overview.md) | Enthält ausführliche Informationen für Entwickler, die Apps für .NET Framework erstellen. |
+| [Installationshandbuch](../install/index.md) | Stellt Informationen zum Installieren von .NET Framework bereit. |  
+| [.NET Framework und Out-of-Band-Releases](the-net-framework-and-out-of-band-releases.md) | Beschreibt die Out-of-Band-Releases von .NET Framework und ihre Verwendung in der App. |
+| [Systemanforderungen](system-requirements.md) | Führt die Hardware- und Softwareanforderungen für das Ausführen von .NET Framework auf. |
+| [.NET Core und Open-Source](net-core-and-open-source.md) | Beschreibt .NET Core in Bezug auf .NET Framework, und wie Sie auf die Open-Source-Projekte von .NET Core zugreifen können. |
+| [.NET Core-Dokumentation](../../core/index.md) | Stellt die konzeptionelle und API-Referenzdokumentation für .NET Core bereit. |
+| [.NET-Standard](../../standard/net-standard.md) | Erläutert .NET Standard, eine Spezifikation mit Versionsangabe, die von einzelnen .NET-Implementierungen unterstützt wird, um sicherzustellen, dass die gleichen APIs auf mehreren Plattformen verfügbar sind.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Leitfaden für .NET Framework](../../../docs/framework/index.md)
-- [Neuigkeiten](../../../docs/framework/whats-new/index.md)
-- [.NET API-Browser](/dotnet/api/)
-- [Entwicklungshandbuch](../../../docs/framework/development-guide.md)
+- [Leitfaden für .NET Framework](../index.md)
+- [Neuigkeiten](../whats-new/index.md)
+- [.NET API-Browser](../../../api/index.md)
+- [Entwicklungshandbuch](../development-guide.md)
