@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bef8ce86a3dba5449e50c890b09acdee1375317c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3393adf5beed02a5a4bda2e07bd26e29e47fae2f
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719546"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219307"
 ---
 # <a name="msgbox-sample"></a>MsgBox-Beispiel
 Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Parameter übergeben werden und wann das <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>-Feld, das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>-Feld und das <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>-Feld zu verwenden sind.  
@@ -46,7 +46,6 @@ Dieses Beispiel demonstriert, wie Zeichenfolgentypen durch einen Wert als In-Par
   
 ## <a name="see-also"></a>Siehe auch
 - [Marshallen von Zeichenfolgen](marshaling-strings.md)
-- [Datentypen für den Plattformaufruf](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))
 - [Standardmäßiges Marshalling für Zeichenfolgen](default-marshaling-for-strings.md)
 - [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)
 - [Specifying a Character Set (Angeben eines Zeichensatzes)](specifying-a-character-set.md)

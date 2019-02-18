@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 587ae32c27a3c779f5f2e4f27bf521e2ca557106
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688999"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221289"
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
@@ -24,7 +24,7 @@ Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Me
  Dieser Abschnitt befasst sich mit den standardmäßigen Verhaltensmerkmalen des Interop-Marshalling-Diensts. Er enthält detaillierte Informationen zum Marshallen von Arrays, booleschen Typen, Zeichentypen, Delegaten, Klassen, Objekten, Zeichenfolgen und Strukturen.  
   
 > [!NOTE]
->  Das Marshalling von generischen Typen wird nicht unterstützt. Weitere Informationen finden Sie unter [Interoperating Using Generic Types (Interoperation mit generischen Typen)](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100)).  
+>  Das Marshalling von generischen Typen wird nicht unterstützt. Weitere Informationen finden Sie unter [Interoperating Using Generic Types (Interoperation mit generischen Typen)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Speicherverwaltung mit dem Interop-Marshaller  
  Der Interop-Marshaller versucht immer, den von nicht verwaltetem Code belegten Speicher freizugeben. Dieses Verhalten entspricht den COM-Speicherverwaltungsregeln, unterscheidet sich jedoch von den Regeln, die für systemeigenes C++ gelten.  
@@ -41,7 +41,7 @@ BSTR MethodOne (BSTR b) {
   
  Wenn Sie die Methode jedoch als einen Prototyp zum Plattformaufruf definieren, jeden **BSTR**-Typ durch einen <xref:System.String>-Typ ersetzen und `MethodOne` aufrufen, versucht die Common Language Runtime `b` zweimal freizugeben. Sie können das Marshalling-Verhalten ändern, indem Sie <xref:System.IntPtr>-Typen anstelle von **Zeichenfolgen**typen verwenden.  
   
- Zur Laufzeit wird immer die **CoTaskMemFree**-Methode zum Freigeben von Speicher verwendet. Wenn der Speicher, mit dem Sie arbeiten, nicht der **CoTaskMemAlloc**-Methode zugeordnet wurde, müssen Sie **IntPtr** verwenden und den Speicher manuell mit der geeigneten Methode freigeben. Ebenso können Sie in Situationen, in denen der Speicher niemals freigegeben werden soll, wie bei Verwendung der **GetCommandLine**-Funktion von Kernel32.dll, die einen Zeiger auf den Kernelspeicher zurückgibt, verhindern, dass Speicher automatisch freigegeben wird. Details zum manuellen Freigeben von Speicher finden Sie unter [Beispiel für Puffer](https://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
+ Zur Laufzeit wird immer die **CoTaskMemFree**-Methode zum Freigeben von Speicher verwendet. Wenn der Speicher, mit dem Sie arbeiten, nicht der **CoTaskMemAlloc**-Methode zugeordnet wurde, müssen Sie **IntPtr** verwenden und den Speicher manuell mit der geeigneten Methode freigeben. Ebenso können Sie in Situationen, in denen der Speicher niemals freigegeben werden soll, wie bei Verwendung der **GetCommandLine**-Funktion von Kernel32.dll, die einen Zeiger auf den Kernelspeicher zurückgibt, verhindern, dass Speicher automatisch freigegeben wird. Details zum manuellen Freigeben von Speicher finden Sie unter [Beispiel für Puffer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Standardmäßiges Marshalling für Klassen  
  Klassen können nur durch COM-Interop gemarshallt werden und werden immer als Schnittstellen gemarshallt. In einigen Fällen wird die zum Marshallen der Klasse verwendete Schnittstelle als Klassenschnittstelle bezeichnet. Informationen zum Überschreiben der Klassenschnittstelle mit einer beliebigen Schnittstelle finden Sie unter [Einführung in die Klassenschnittstelle](com-callable-wrapper.md#introducing-the-class-interface).  
@@ -50,7 +50,7 @@ BSTR MethodOne (BSTR b) {
  Wenn eine verwaltete Klasse an COM übergeben wird, umschließt der Interop-Marshaller die Klasse automatisch mit einem COM-Proxy und übergibt die vom Proxy erstellte Klassenschnittstelle an den COM-Methodenaufruf. Der Proxy delegiert dann alle Aufrufe der Klassenschnittstelle zurück an das verwaltete Objekt. Der Proxy macht zudem auch weitere Schnittstellen verfügbar, die von der Klasse nicht explizit implementiert werden. Der Proxy implementiert automatisch Schnittstellen wie **IUnknown** und **IDispatch** für die Klasse.  
   
 ### <a name="passing-classes-to-net-code"></a>Übergeben von Klassen an .NET-Code  
- Coklassen werden in der Regel nicht als Methodenargumente in COM verwendet. Stattdessen wird normalerweise eine Standardschnittstelle anstelle der Coklasse übergeben.  
+ Co-Klassen werden in der Regel nicht als Methodenargumente in COM verwendet. Stattdessen wird normalerweise eine Standardschnittstelle anstelle der Co-Klasse übergeben.  
   
  Wenn eine Schnittstelle an verwalteten Code übergeben wird, ist der Interop-Marshaller für das Umschließen der Schnittstelle mit dem geeigneten Wrapper und das Übergeben des Wrappers an die verwaltete Methode zuständig. Herauszufinden, welcher Wrapper verwendet werden sollte, kann schwierig sein. Jede Instanz eines COM-Objekts verfügt über einen einzelnen, eindeutigen Wrapper, ganz gleich, wie viele Schnittstellen das Objekt implementiert. So hat ein einzelnes COM-Objekt, das fünf unterschiedliche Schnittstellen implementiert, nur einen einzigen Wrapper. Der gleiche Wrapper macht alle fünf Schnittstellen verfügbar. Wenn zwei Instanzen des COM-Objekts erstellt werden, werden auch zwei Instanzen des Wrappers erstellt.  
   
@@ -77,7 +77,7 @@ BSTR MethodOne (BSTR b) {
   
 -   Für COM-Interop wird ein Delegat standardmäßig als COM-Schnittstelle vom Typ **_Delegate** gemarshallt. Die **_Delegate**-Schnittstelle ist in der Typbibliothek Mscorlib.tlb definiert und enthält die <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>-Methode, mit der Sie in der Lage sind, die Methode aufzurufen, auf die der Delegat verweist.  
   
- Die folgende Tabelle zeigt die Marshalling-Optionen für den Datentyp „Verwalteter Delegat“. Das <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut stellt mehrere <xref:System.Runtime.InteropServices.UnmanagedType>-Enumerationswerte zum Marshallen von Delegaten bereit.  
+ Die folgende Tabelle zeigt die Marshalling-Optionen für den Datentyp "Verwalteter Delegat". Das <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut stellt mehrere <xref:System.Runtime.InteropServices.UnmanagedType>-Enumerationswerte zum Marshallen von Delegaten bereit.  
   
 |Enumerationstyp|Beschreibung des nicht verwalteten Formats|  
 |----------------------|-------------------------------------|  

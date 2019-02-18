@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
+ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249072"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093605"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutorial: Iris-Clustering mithilfe eines Clusteringlernmoduls – ML.NET
 
@@ -129,7 +129,7 @@ Fügen Sie der `Main`-Methode den folgenden Code hinzu, um das Verfahren zum Lad
 
 Beachten Sie, dass die Spaltennamen und Indizes mit dem durch die Klasse `IrisData` definierten Schema übereinstimmen. Der <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType>-Wert gibt den `float`-Typ an.
 
-Verwenden Sie eine instanziierte Instanz von <xref:Microsoft.ML.Data.TextLoader>, um eine <xref:Microsoft.ML.Data.IDataView>-Instanz zu erstellen, die die Datenquelle für das Trainingsdataset bildet:
+Verwenden Sie eine instanziierte Instanz von <xref:Microsoft.ML.Data.TextLoader>, um eine <xref:Microsoft.Data.DataView.IDataView>-Instanz zu erstellen, die die Datenquelle für das Trainingsdataset bildet:
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6732eef46f87d9e2e3aeada138ea28853d3f0479
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663159"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221094"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>„Winres.exe“ (Windows-Ressourcenlokalisierungs-Editor)
 
@@ -43,7 +43,7 @@ winres /?
 |------------|-----------------|
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Der Zustand von Elementen der Benutzeroberfläche aus einem Formular in einem Windows Forms-Projekt wird in der Regel in Ressourcendateien gespeichert, bei denen es sich entweder um XML-basierte Dateien mit der Erweiterung ".resx" oder die entsprechenden kompilierten binären Versionen mit der Erweiterung ".resources" handelt. "Winres.exe" ist ein Tool, das eine begrenzte Bearbeitung beider Dateitypen außerhalb der Visual Studio-Entwurfsumgebung ermöglicht. Insbesondere können die folgenden Bearbeitungsvorgänge durchgeführt werden:
 
@@ -53,7 +53,7 @@ Der Zustand von Elementen der Benutzeroberfläche aus einem Formular in einem Wi
 
 - Eine Kulturressourcendatei kann als eine andere Kulturressourcendatei gespeichert werden. So kann z. B. eine Ressourcendatei für Englisch (USA) als Ressourcendatei für Polnisch gespeichert werden. In der Regel wird die neue Datei anschließend bearbeitet, damit sie mit der neuen Kultur kompatibel ist.
 
-Weitere Informationen finden Sie unter [Hierarchical Organization of Resources for Localization (Hierarchische Organisation der Ressourcen für die Lokalisierung)](https://msdn.microsoft.com/library/756hydy4\(v=vs.110\)) und [Hierarchical Organization of Resources for Localization (Hierarchische Organisation der Ressourcen für die Lokalisierung)](https://msdn.microsoft.com/library/756hydy4\(v=vs.120\)).
+Weitere Informationen finden Sie unter [Hierarchical Organization of Resources for Localization (Hierarchische Organisation der Ressourcen für die Lokalisierung)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) und [Hierarchical Organization of Resources for Localization (Hierarchische Organisation der Ressourcen für die Lokalisierung)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120)).
 
 "Winres.exe" kann eine RESX-Datei nicht in die zugehörige RESOURCES-Datei konvertieren. Verwenden Sie dazu das Tool "Resgen.exe". Weitere Informationen zu „resgen.exe“ finden Sie unter [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
 
@@ -110,7 +110,7 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 
 2.  Um die Standardressourcen für ein zu lokalisierendes Formular zu öffnen, klicken Sie im Menü **Datei** auf den Befehl **Öffnen**, und navigieren Sie zu der zu öffnenden Datei.
 
-     - oder - 
+     - oder -
 
      Geben Sie die zu öffnende Datei beim Starten von "Winres.exe" in der Befehlszeile an.
 

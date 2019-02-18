@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c2ae67b79559b0966ba0b36bbf420febbcb1672
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74d2f9df5f9a9d34baa6a487730d5a1614d2d142
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693317"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219931"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Richtlinientool für die Codezugriffssicherheit)
 Das Sicherheitsrichtlinientool für den Codezugriff (Caspol.exe) ermöglicht es Benutzern und Administratoren, die Sicherheitsrichtlinien für die Richtlinienebene des Computers, des Benutzers und des Unternehmens zu ändern.  
@@ -102,10 +102,10 @@ caspol [options]
 |**-levelfinal** {**on**&#124;**off**}|**on** gibt an, dass keine Richtlinienebene unterhalb der Ebene der hinzugefügten bzw. geänderten Codegruppe berücksichtigt wird. In der Regel wird diese Option auf Ebene der Computerrichtlinie verwendet. Wenn dieses Flag z. B. auf Computerebene für eine Codegruppe festgelegt wird und ein Code die Mitgliedschaftsbedingung dieser Codegruppe erfüllt, wird die Benutzerebenenrichtlinie für diesen Code von Caspol.exe nicht berechnet oder auf diesen angewendet.|  
 |**-name** „*Name*“|Gibt bei Verwendung mit der Option **-addgroup** den Skriptnamen für eine hinzuzufügende Codegruppe an. Gibt bei Verwendung mit der Option **-chggroup** den Skriptnamen für eine zu bearbeitende Codegruppe an. Das *name*-Argument muss in doppelten Anführungszeichen stehen. Das Argument *name* darf nicht mit einer Zahl beginnen und kann nur die Zeichen A-Z, 0-9 und den Unterstrich enthalten. Bei einem Verweis auf Codegruppen kann dieser *Name* anstelle ihrer numerischen Bezeichnung verwendet werden. *name* empfiehlt sich besonders für Scripting-Zwecke.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Die Sicherheitsrichtlinie teilt sich in drei Richtlinienebenen auf: Computerrichtlinie, Benutzerrichtlinie und Organisationsrichtlinie. Der Satz von Berechtigungen, den eine Assembly erhält, wird von der Schnittmenge der auf diesen drei Richtlinienebenen zulässigen Berechtigungssätze bestimmt. Jede Richtlinienebene wird durch eine hierarchische Codegruppenstruktur dargestellt. Jede Codegruppe verfügt über eine Mitgliedschaftsbedingung, die bestimmt, welcher Code ein Element dieser Gruppe darstellt. Außerdem wird jeder Codegruppe ein benannter Berechtigungssatz zugeordnet. Dieser Berechtigungssatz gibt die Berechtigungen an, die dem Code, der die Mitgliedschaftsbedingung erfüllt, von der Laufzeit erteilt werden. Jede Ebene der Sicherheitsrichtlinie wird von einer Hierarchie der Codegruppen und dem zugehörigen benannten Berechtigungssatz definiert und verwaltet. Die Ebene der Sicherheitsrichtlinie wird mit den Optionen **-user**, **-customuser**, **-machine** und **-enterprise** festgelegt.  
   
- Weitere Informationen zu Sicherheitsrichtlinien und die Bestimmung der Berechtigungszuteilung an Codes durch die Laufzeit finden Sie unter [Sicherheitsrichtlinienverwaltung](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Weitere Informationen zu Sicherheitsrichtlinien und die Bestimmung der Berechtigungszuteilung an Codes durch die Laufzeit finden Sie unter [Sicherheitsrichtlinienverwaltung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Verweise auf Codegruppen und Berechtigungssätze  
  Für das vereinfachte Erstellen von Verweisen auf Codegruppen in einer Hierarchie wird mit der Option **-list** eine Liste mit Einzügen angezeigt. In dieser sind die Codegruppen und deren numerische Bezeichnungen (1, 1.1, 1.1.1 usw.) aufgeführt. Die anderen Befehlszeilenoperationen bzgl. Codegruppen verwenden für Verweise auf bestimmte Codegruppen ebenfalls die numerischen Bezeichnungen.  

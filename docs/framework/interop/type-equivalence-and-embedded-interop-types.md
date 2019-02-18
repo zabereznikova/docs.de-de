@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e26bab4823795ba5d8afc88266b05cd71f4daf8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9ec21a21ce3c81c2d29d2edf353a098489c9026
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721031"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219749"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Typäquivalenz und eingebettete Interop-Typen
 
@@ -56,5 +56,5 @@ Wenn ein Typ nicht über das <xref:System.Runtime.InteropServices.TypeIdentifier
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Type.IsEquivalentTo%2A>
-- [Verwenden von COM-Typen in verwaltetem Code](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))
+- [Verwenden von COM-Typen in verwaltetem Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)

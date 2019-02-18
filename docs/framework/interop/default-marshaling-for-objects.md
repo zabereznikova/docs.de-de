@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84a3ea24120a9548c9d1cd2b7b83997a2c849cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c226960373783c45594e4a41dfaff353bf0b9db4
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528019"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219606"
 ---
 # <a name="default-marshaling-for-objects"></a>Standardmäßiges Marshalling für Objekte
 Parameter und Felder, die als <xref:System.Object?displayProperty=nameWithType> typisiert sind, können für nicht verwalteten Code als einer der folgenden Typen verfügbar gemacht werden:  
@@ -325,13 +325,13 @@ Durch einen Wert und durch einen Verweis übergebene Varianten
 |----------|--------|-----------------------------|  
 |**Variante**  *v*|**Objekt**  *o*|Nie|  
 |**Objekt**  *o*|**Variante**  *v*|Nie|  
-|**Variante**   ***\****  *pv*|**Objekt**  *o*|Immer|  
-|**Ref.object**  *o*|**Variante**   ***\****  *pv*|Immer|  
+|**Variante**   ***\****  *pv*|**Objekt**  *o*|Always|  
+|**Ref.object**  *o*|**Variante**   ***\****  *pv*|Always|  
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Objekt**  *o*|Nie|  
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objekt**  *o*|Nur, wenn sich der Typ nicht geändert hat.|  
   
 ## <a name="see-also"></a>Siehe auch
 - [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
 - [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)
-- [Direktionale Attribute](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))
+- [Direktionale Attribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Kopieren und Fixieren](copying-and-pinning.md)

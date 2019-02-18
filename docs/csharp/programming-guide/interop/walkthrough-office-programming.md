@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: f76fb1d52754999c16021f2417aebb8825e46340
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b20b45ee18c22ed864972dc20cd72247ed3db2c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700012"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219372"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
 Visual Studio bietet Funktionen in C# und Visual Basic, die die Microsoft Office-Programmierung verbessern. Zu nützlichen C#-Funktionen gehören benannte und optionale Argumente und Rückgabewerte des Typs `dynamic`. Bei der COM-Programmierung können Sie das `ref`-Schlüsselwort weglassen und Zugriff auf indizierte Eigenschaften erhalten. Funktionen in Visual Basic umfassen automatisch implementierte Eigenschaften, Anweisungen in Lambdaausdrücken sowie Auflistungsinitialisierer.
@@ -205,7 +205,7 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 - [Lambdaausdrücke (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Lambdaausdrücke (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Vorgehensweise: Verwenden von indizierten Eigenschaften bei der COM-Interop-Programmierung](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (C#)](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
 - [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
 - [Exemplarische Vorgehensweise: Creating Your First VSTO Add-in for Excel (Exemplarische Vorgehensweise: Erstellen Ihres ersten VSTO-Add-Ins für Excel)](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)

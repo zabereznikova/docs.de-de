@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e54c564fbd81f9a52bae5ea8a02514569902d00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d41d1ee2ab5e423ca6a1b28a0e10bac4bc58ad79
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589177"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56094008"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
 Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version des .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.
@@ -55,7 +55,7 @@ Downloadlinks finden Sie im Abschnitt [Verteilbare Pakete](#redistributable-pack
 
 - Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]können die Benutzer während des Setups eine Liste der aktiven .NET Framework-Apps anzeigen und diese Apps einfach schließen. Dies hilft möglicherweise, durch .NET Framework-Installationen verursachte Systemneustarts zu vermeiden. Informationen hierzu finden Sie unter [Reduzieren von Systemneustarts](../../../docs/framework/deployment/reducing-system-restarts.md).
 
-- Durch das Deinstallieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oder einer entsprechenden Punktversion werden auch bereits vorhandene [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] -Dateien entfernt. Wenn Sie wieder [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]verwenden möchten, müssen Sie diese Version und alle Updates für sie neu installieren. (Siehe den Artikel zum [Installieren von .NET Framework 4](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx).)
+- Durch das Deinstallieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oder einer entsprechenden Punktversion werden auch bereits vorhandene [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] -Dateien entfernt. Wenn Sie wieder [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]verwenden möchten, müssen Sie diese Version und alle Updates für sie neu installieren. (Siehe den Artikel zum [Installieren von .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100)).)
 
 - Die Redistributable-Version von .NET Framework 4.5 wurde am 9. Oktober 2012 aktualisiert, um ein Problem im Zusammenhang mit einem falschen Zeitstempel in einem digitalen Zertifikat zu beheben. Dies verursachte den vorzeitigen Ablauf der digitalen Signatur auf von Microsoft erstellten und signierten Dateien. Wenn Sie zuvor das .NET Framework 4.5 Redistributable Package vom 16. August 2012 installiert hatten, wird empfohlen, die Kopie anhand des neuesten verteilbaren Pakets aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=245484)zu aktualisieren. Weitere Informationen zu diesem Problem finden Sie in der [Microsoft-Sicherheitsempfehlung (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
 

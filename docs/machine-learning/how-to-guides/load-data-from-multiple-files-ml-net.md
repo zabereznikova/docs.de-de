@@ -1,14 +1,14 @@
 ---
 title: 'Laden von Daten aus mehreren Dateien für Machine Learning-Prozesse: ML.NET'
 description: Erfahren Sie, wie Sie Daten aus mehreren Dateien laden, um mit ML.NET Machine Learning-Modelle zu erstellen, zu trainieren und zu bewerten.
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: fe6758e46d923dc07908e1334056ea8394c1085e
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: f5108aaed80769f2bc7ed2f974f9a729abe8455e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479983"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092045"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>Laden von Daten aus mehreren Dateien für Machine Learning-Prozesse: ML.NET
 
@@ -23,7 +23,7 @@ Verwenden Sie den `TextLoader`, und geben Sie ein Array von Dateien für die `Re
 var mlContext = new MLContext();
 
 // Create the reader: define the data columns and where to find them in the text file.
-var reader = mlContext.Data.CreateTextReader(
+var reader = mlContext.Data.CreateTextLoader(
     columns: new TextLoader.Column[]
     {
         // A boolean column depicting the 'target label'.

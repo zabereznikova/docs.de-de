@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3ba8cb41244157b1fca0f7e9d345625cc579d0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e5d6c063fedf14559b20d1de49c1855d0fe1304
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494040"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219320"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrieren von Assemblys mit COM
 Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) ausführen, um eine Assembly für die Verwendung mit COM zu registrieren bzw. eine bestehende Registrierung aufzuheben. Regasm.exe fügt der Systemregistrierung Informationen über die Klasse hinzu, damit COM-Clients die .NET Framework-Klasse transparent nutzen können. Die Klasse <xref:System.Runtime.InteropServices.RegistrationServices> stellt gleichwertige Funktionen bereit.  
@@ -46,5 +46,5 @@ Sie können ein Befehlszeilentool namens [Assembly Registration Tool (Regasm.exe
 ## <a name="see-also"></a>Siehe auch
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)
 - [Vorgehensweise: Verweisen auf .NET-Typen in COM](how-to-reference-net-types-from-com.md)
-- [Aufrufen eines .NET-Objekts](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))
-- [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))
+- [Aufrufen eines .NET-Objekts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [Deploying an Application for COM Access (Bereitstellen einer Anwendung für COM-Zugriff)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

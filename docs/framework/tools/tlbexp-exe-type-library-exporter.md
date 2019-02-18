@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d10e93af4172e6759cbe04f88e54b6e1db995efa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76a4a3b91e88e1532e79eea256621ee149c320ea
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679005"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219476"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Type Library Exporter-Tool)
 Das Type Library Exporter-Tool generiert eine Typbibliothek, die die in einer Assembly der Common Language Runtime definierten Typen beschreibt.  
@@ -56,7 +56,7 @@ tlbexp assemblyName [options]
 > [!NOTE]
 >  Bei den Befehlszeilenoptionen für "Tlbexp.exe" wird die Groß- und Kleinschreibung nicht beachtet, und die Optionen können in beliebiger Reihenfolge angegeben werden. Geben Sie die Option einfach so weit an, dass eine eindeutige Identifizierung möglich ist. Z.B.: **/n** entspricht **/nologo** und **/o:** *outfile.tlb* entspricht **/out:** *outfile.tlb*.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  "Tlbexp.exe" generiert eine Typbibliothek, die Definitionen der in der Assembly definierten Typen enthält. Anwendungen wie Visual Basic 6.0 können mithilfe der generierten Typbibliothek Bindungen zu den in der Assembly definierten .NET-Typen erstellen.  
   
 > [!IMPORTANT]
@@ -90,7 +90,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Beachten Sie, dass "Tlbexp.exe" das Feld <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> ignoriert.  
   
- Da Typbibliotheken nicht alle in den Assemblys gefundenen Informationen aufnehmen können, verwirft "Tlbexp.exe" während des Exportvorgangs möglicherweise einige Daten. Eine Erläuterung des Transformationsprozesses sowie Informationen darüber, wie Sie die Quelle der Informationen identifizieren, die an eine Typbibliothek ausgegeben werden, finden Sie unter [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+ Da Typbibliotheken nicht alle in den Assemblys gefundenen Informationen aufnehmen können, verwirft "Tlbexp.exe" während des Exportvorgangs möglicherweise einige Daten. Eine Erläuterung des Transformationsprozesses sowie Informationen darüber, wie Sie die Quelle der Informationen identifizieren, die an eine Typbibliothek ausgegeben werden, finden Sie unter [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100)).  
   
  Beachten Sie, dass das Type Library Exporter-Tool Methoden exportiert, die über <xref:System.TypedReference>-Parameter als `VARIANT` verfügen, obwohl das <xref:System.TypedReference>-Objekt in nicht verwaltetem Code keine Bedeutung hat. Wenn Sie Methoden exportieren, die über <xref:System.TypedReference>-Parameter verfügen, generiert das Type Library Exporter-Tool keine Warnung und keinen Fehler, und nicht verwalteter Code, der die resultierende Typbibliothek verwendet, wird nicht ordnungsgemäß ausgeführt.  
   
@@ -133,6 +133,6 @@ tlbexp Sample.dll
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [Extras](../../../docs/framework/tools/index.md)
 - [Regasm.exe (Assembly Registration-Tool)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
-- [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)
+- [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
 - [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

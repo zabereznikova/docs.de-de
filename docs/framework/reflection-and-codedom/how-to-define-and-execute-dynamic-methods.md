@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1dd58cfe0eb448a4bf886eb11b1b2e6375835b05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f24d3e456285efe694e598aa3d435fc15341283
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709181"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221055"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Vorgehensweise: Definieren und Ausführen von dynamischen Methoden
-Die folgenden Verfahren zeigen, wie eine einfache dynamische Methode sowie eine dynamische Methode, die an eine Instanz einer Klasse gebunden ist, definiert und ausgeführt werden. Weitere Informationen zu dynamischen Methoden finden Sie in der <xref:System.Reflection.Emit.DynamicMethod>-Klasse und unter [Szenarios für die Reflektionsausgabe mit dynamischen Methoden](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e).  
+Die folgenden Verfahren zeigen, wie eine einfache dynamische Methode sowie eine dynamische Methode, die an eine Instanz einer Klasse gebunden ist, definiert und ausgeführt werden. Weitere Informationen zu dynamischen Methoden finden Sie in der <xref:System.Reflection.Emit.DynamicMethod>-Klasse und unter [Szenarios für die Reflektionsausgabe mit dynamischen Methoden](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>So definieren und Sie eine dynamische Methode und führen diese aus  
   
@@ -124,5 +124,5 @@ Die folgenden Verfahren zeigen, wie eine einfache dynamische Methode sowie eine 
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Reflection.Emit.DynamicMethod>
-- [Verwenden der Reflektionsausgabe](https://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)
-- [Szenarios für die Reflektionsausgabe mit dynamischen Methoden](https://msdn.microsoft.com/library/7c27ea3d-0f24-4bf3-8ceb-f49d33faca5e)
+- [Verwenden der Reflektionsausgabe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [Szenarios für die Reflektionsausgabe mit dynamischen Methoden](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))

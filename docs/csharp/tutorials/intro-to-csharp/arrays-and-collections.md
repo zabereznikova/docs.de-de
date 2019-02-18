@@ -3,12 +3,12 @@ title: Arbeiten mit Sammlungen – Tutorial zur Einführung in C#
 description: Machen Sie sich mit C# vertraut, indem Sie die Listenauflistung in diesem Tutorial erkunden.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: eaf921be2bd50b6e346f57f42e17f151ff336821
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
+ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205281"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56261270"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Informationen zum Verwalten von Datensammlungen mithilfe des generischen Listentyps
 
@@ -19,9 +19,6 @@ Für dieses Tutorial benötigen Sie einen Computer, den Sie für die Entwicklung
 ## <a name="a-basic-list-example"></a>Beispiel für eine einfache Liste
 
 Erstellen Sie ein Verzeichnis mit dem Namen **list-tutorial**. Machen Sie dieses Verzeichnis zum aktuellen Verzeichnis, und führen Sie `dotnet new console` aus.
-
-> [!NOTE]
-> Wenn Sie gerade [Erste Schritte mit .NET in 10 Minuten](https://www.microsoft.com/net) abgeschlossen haben, können Sie die gerade erstellte myApp-Anwendung weiterhin verwenden.
 
 Öffnen Sie **Program.cs** in Ihrem bevorzugten Editor, und ersetzen Sie den vorhandenen Code durch Folgendes:
 

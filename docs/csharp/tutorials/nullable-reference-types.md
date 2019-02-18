@@ -3,12 +3,12 @@ title: Entwerfen mit Verweistypen, die NULL-Werte zulassen
 description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistypen, die NULL-Werte zulassen. Sie erfahren, wie Sie Ihre Entwurfsabsicht ausdrücken, wenn die Verweiswerte Null sein können, und wie Sie den Compiler durchsetzen, wenn sie nicht NULL sein können.
 ms.date: 12/03/2018
 ms.custom: mvc
-ms.openlocfilehash: eec0c54c041db98595202ab982494df6ae3f743c
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 535efcdc303c17a55f6a4054ea3f5e5ed87e5f28
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204768"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092201"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Besseres Ausdrücken Ihrer Entwurfsabsicht mit Verweistypen, die NULL-Werte zulassen und nicht zulassen
 
@@ -55,7 +55,7 @@ Sie können das vorhergehende Pragma überall in einer Quelldatei hinzufügen, u
 Sie können **Verweistypen, die NULL-Werte zulassen** auch für ein ganzes Projekt aktivieren, indem Sie beispielsweise das folgende Element zu Ihrer .csproj-Datei hinzufügen, das unmittelbar auf das `LangVersion`-Element folgt, das C# 8.0 aktiviert hat:
 
 ```xml
-<NullableReferenceTypes>true</NullableReferenceTypes>
+<NullableContextOptions>enable</NullableContextOptions>
 ```
 
 ### <a name="design-the-types-for-the-application"></a>Entwerfen der Typen für die Anwendung
