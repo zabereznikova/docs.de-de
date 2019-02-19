@@ -1,5 +1,5 @@
 ---
-title: <proceduresignature1> überlädt "<proceduresignature2>", unterscheidet sich jedoch nur durch Array-von-Array-Parametertypen oder durch den Rang der Arrayparametertypen davon und ist daher nicht CLS-kompatibel.
+title: <proceduresignature1> überlädt '<proceduresignature2>', unterscheidet sich jedoch nur durch Array-von-Array-Parametertypen oder durch den Rang der Arrayparametertypen davon und ist daher nicht CLS-kompatibel.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc40035

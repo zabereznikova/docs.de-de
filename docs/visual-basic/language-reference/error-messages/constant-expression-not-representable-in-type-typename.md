@@ -1,5 +1,5 @@
 ---
-title: Der Konstantenausdruck ist in Typ "<typename>" nicht repräsentierbar.
+title: Der Konstantenausdruck ist in Typ '<typename>' nicht repräsentierbar.
 ms.date: 07/20/2015
 f1_keywords:
 - bc30439

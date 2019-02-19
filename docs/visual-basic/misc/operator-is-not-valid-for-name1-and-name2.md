@@ -1,5 +1,5 @@
 ---
-title: Operator ist ungültig für "<name1>'und'<name2>"
+title: Operator ist ungültig für '<name1>'und'<name2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoValidOperator_TwoOperands
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55257979"
 ---
-# <a name="operator-is-not-valid-for-name1-and-name2"></a>Operator ist ungültig für "\<name1 >' und '\<name2 >'
+# <a name="operator-is-not-valid-for-name1-and-name2"></a>Operator ist ungültig für '\<name1 >' und '\<name2 >'
 Ein Operator ist für die verwendeten Typen nicht geeignet.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

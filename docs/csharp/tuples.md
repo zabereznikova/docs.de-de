@@ -3,12 +3,12 @@ title: Tupeltypen | C#-Leitfaden
 description: Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
+ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155131"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56332753"
 ---
 # <a name="c-tuple-types"></a>C#-Tupeltypen #
 
@@ -82,7 +82,7 @@ Es gibt zwei Bedingungen, unter denen die Feldnamen von Kandidaten nicht auf das
 
 Durch diese Bedingungen wird Mehrdeutigkeit vermieden. Diese Namen würden eine Mehrdeutigkeit verursachen, wenn sie als Feldnamen für das Feld eines Tupels verwendet würden. Keine dieser Bedingungen verursacht Kompilierzeitfehler. Stattdessen werden für die Elemente, die nicht über projizierte Namen verfügen, keine semantischen Namen projiziert.  In den folgenden Beispielen werden diese Bedingungen veranschaulicht:
 
-[!code-csharp[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
+[!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
 Diese Situationen verursachen keine Compilerfehler, da diese eine grundlegende Änderung für mit C# 7.0 geschriebenen Code darstellen würden, bei dem die Projektionen für Tupel-Feldnamen noch nicht verfügbar waren.
 
@@ -90,29 +90,31 @@ Diese Situationen verursachen keine Compilerfehler, da diese eine grundlegende �
 
 Ab C# 7.3 unterstützen Tupeltypen die Operatoren `==` und `!=`. Diese Operatoren arbeiten durch Vergleichen jedes Members des linken Arguments mit jedem Member des rechten Arguments in der Reihenfolge. Diese Vergleiche können verkürzt werden. Sie beenden die Auswertung von Membern, sobald ein Paar nicht gleich ist. In folgendem Codebeispiel wird `==` verwendet, die Vergleichsregeln gelten jedoch alle für `!=`. Das folgende Codebeispiel stellt einen Gleichheitsvergleich für zwei Paare ganzer Zahlen dar:
 
-[!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
+[!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
 Es gibt einige Regeln, die Tupelgleichheitstests einfacher machen. Die Tupelgleichheit führt [mehrstufige Konvertierungen](~/_csharplang/spec/conversions.md#lifted-conversion-operators) aus, wenn eines der Tupel ein Tupel mit NULL-Werten ist, so wie im folgenden Code dargestellt:
 
-
-[!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
+[!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
 Die Tupelgleichheit führt ebenso implizite Konvertierungen für jeden Member beider Tupel aus. Dazu gehören mehrstufige Konvertierungen, Erweiterungskonvertierungen oder andere implizite Konvertierungen. Die folgenden zwei Beispiele zeigen, dass ein ganzzahliges 2-Tupel mit einem langen 2-Tupel aufgrund der impliziten Konvertierung von „integer“ in „long“ verglichen werden kann.
 
-[!code-csharp[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
+[!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
 Die Namen der Tupelmember sind nicht Teil von Tests auf Gleichheit. Wenn jedoch einer der Operanden ein Tupelliteral mit expliziten Namen ist, generiert der Compiler die Warnung CS8383, wenn diese Namen nicht mit den Namen des anderen Operanden übereinstimmen.
 Sobald beide Operanden Tupelliterale sind, befindet sich die Warnung beim rechten Operanden, wie im folgenden Beispiel gezeigt:
 
-[!code-csharp[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
+[!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
 Zuletzt können Tupel geschachtelte Tupel enthalten. Die Tupelgleichheit vergleicht die „Form“ jedes Operanden, wie im folgenden Beispiel dargestellt, über geschachtelte Tupel:
 
-[!code-csharp[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+[!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
+
+Beim Vergleich zweier Tupel für Gleichheit (oder Ungleichheit) tritt zur Kompilierzeit ein Fehler auf, wenn sie verschiedene Formen aufweisen. Der Compiler unternimmt keinen Dekonstruktionsversuch für geschachtelte Tupel, um diese zu vergleichen.
 
 ## <a name="assignment-and-tuples"></a>Zuweisung und Tupel
 
-Die Sprache unterstützt die Zuordnung zwischen Tupeltypen, die über die gleiche Anzahl von Elementen verfügen, wobei jedes Element auf der rechten Seite implizit in sein entsprechendes linkes Element konvertiert werden kann. Andere Konvertierungen gelten nicht für Zuordnungen. Sehen wir uns die Arten von Zuweisungen an, die zwischen Tupeltypen zulässig sind.
+Die Sprache unterstützt die Zuordnung zwischen Tupeltypen, die über die gleiche Anzahl von Elementen verfügen, wobei jedes Element auf der rechten Seite implizit in sein entsprechendes linkes Element konvertiert werden kann. Andere Konvertierungen werden für Zuweisungen nicht in Betracht gezogen. Bei der Zuweisung eines Tupels zu einem anderen tritt zur Kompilierzeit ein Fehler auf, wenn sie verschiedene Formen aufweisen. Der Compiler unternimmt keinen Dekonstruktionsversuch für geschachtelte Tupel, um diese zu zuzuweisen.
+Sehen wir uns die Arten von Zuweisungen an, die zwischen Tupeltypen zulässig sind.
 
 Berücksichtigen Sie diese Variablen, die in den folgenden Beispielen verwendet werden:
 
@@ -146,7 +148,7 @@ Einer der häufigsten Verwendungszwecke für Tupel ist als Methodenrückgabewert
 > In diesem Beispiel wird die unkorrigierte Beispielstandardabweichung berechnet.
 > Die korrigierte Formel der Beispielstandardabweichung würde die Summe der Differenzen im Quadrat vom Mittelwert mithilfe von (N-1) anstatt N teilen, wie es die Erweiterungsmethode `Average` macht. Weitere Informationen zu den Unterschieden zwischen diesen Formeln für die Standardabweichung finden Sie in einem Statistiktext.
 
-Der vorangehende Code entspricht der idealen Formel für die Standardabweichung. Die richtige Antwort wird generiert, aber es ist eine ineffiziente Implementierung. Diese Methode listet die Sequenz zweimal auf: Einmal, um den Mittelwert zu erzeugen und einmal, um den Durchschnitt des Quadrats vom Unterschied des Durchschnitts zu erzeugen.
+Der vorangehende Code entspricht der idealen Formel für die Standardabweichung. Die richtige Antwort wird generiert, aber es ist eine ineffiziente Implementierung. Diese Methode listet die Sequenz zweimal auf: Einmal, um den Durchschnitt zu erzeugen, und einmal, um den Durchschnitt des Quadrats der Differenz des Durchschnitts zu erzeugen.
 (Beachten Sie, dass LINQ-Abfragen verzögert ausgewertet werden. Daher kann die Berechnung der Unterschiede vom Mittelwert und des Durchschnitts dieser Unterschiede nur eine Enumeration erzeugen.)
 
 Es gibt eine alternative Formel, die eine Standardabweichung anhand einer Enumeration der Sequenz berechnet.  Diese Berechnung erzeugt zwei Werte, da sie die Sequenz auflistet: Die Summe aller Elemente in der Sequenz und die Summe jedes Werts im Quadrat:

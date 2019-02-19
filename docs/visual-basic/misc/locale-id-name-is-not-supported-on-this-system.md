@@ -1,5 +1,5 @@
 ---
-title: Die Gebietsschema-ID "<name>" wird auf diesem System nicht unterstützt
+title: Die Gebietsschema-ID '<name>' wird auf diesem System nicht unterstützt
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LCIDNotSupported1
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55285739"
 ---
-# <a name="locale-id-name-is-not-supported-on-this-system"></a>Die Gebietsschema-ID "\<Name >' ist auf diesem System nicht unterstützt
+# <a name="locale-id-name-is-not-supported-on-this-system"></a>Die Gebietsschema-ID '\<Name >' ist auf diesem System nicht unterstützt
 Sie versuchen, `VbStrConv`zu verwenden, Ihr System unterstützt das angegebene Gebietsschema aber nicht.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

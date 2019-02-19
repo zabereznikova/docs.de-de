@@ -1,5 +1,5 @@
 ---
-title: <type1> "<typename>" muss "<membername>" für die <interfacename>-Schnittstelle implementieren.
+title: <type1> '<typename>' muss '<membername>' für die <interfacename>-Schnittstelle implementieren.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30154
@@ -14,8 +14,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55264231"
 ---
-# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<Typ1 >'\<Typename > "implementieren müssen"\<Membername >' für die Schnittstelle "\<Schnittstellenname >'
-"\<Typename >" implementieren muss '\<Membername >' für die Schnittstelle "\<Schnittstellenname >'. Die implementierende Eigenschaft müssen übereinstimmen 'ReadOnly' / 'WriteOnly' Spezifizierer.  
+# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<Typ1 >'\<Typename > 'implementieren müssen'\<Membername >' für die Schnittstelle '\<Schnittstellenname >'
+'\<Typename >' implementieren muss '\<Membername >' für die Schnittstelle '\<Schnittstellenname >'. Die implementierende Eigenschaft müssen übereinstimmen 'ReadOnly' / 'WriteOnly' Spezifizierer.  
   
  Eine Klasse oder Struktur vorgibt, eine Schnittstelle zu implementieren, aber eine Prozedur, Eigenschaft oder das Ereignis definiert, die von der Schnittstelle nicht implementiert. Jeder Member der Schnittstelle muss implementiert werden.  
   

@@ -1,44 +1,55 @@
 ---
 title: <<-Operator – C#-Referenz
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/12/2019
 f1_keywords:
 - <<_CSharpKeyword
 helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-ms.openlocfilehash: 0271c97bc624a8946b90508e9ce39d217a128c05
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: deea2d0f720ba7f096e65c67378586bc88f24673
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261749"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219436"
 ---
 # <a name="-operator-c-reference"></a>\<\<-Operator (C#-Referenz)
 
-Der Left Shift-Operator (`<<`) verschiebt den ersten Operanden um die Anzahl von Bits nach links, die durch den zweiten Operanden angegeben wird. Der Typ des zweiten Operanden muss ein [int](../keywords/int.md) oder ein Typ sein, der eine vordefinierte implizite numerische Konvertierung in `int` besitzt.
+Der Operator zur Linksverschiebung (`<<`) verschiebt den ersten Operanden um die Anzahl von Bits nach links, die durch den zweiten Operanden angegeben wird. Alle Integertypen unterstützen den `<<` Operator. Der Typ des zweiten Operanden muss jedoch ein [int](../keywords/int.md)-Typ oder ein Typ sein, der eine [vordefinierte implizite numerische Konvertierung](../keywords/implicit-numeric-conversions-table.md) in `int` aufweist.
 
-## <a name="remarks"></a>Hinweise
+Die hohen Bits, die außerhalb des Bereichs des Ergebnistyps liegen, werden verworfen, und die niedrigen leeren Bitpositionen werden auf null festgelegt, wie im folgenden Beispiel gezeigt:
 
-Ist der erste Operand ein [int](../keywords/int.md) oder [uint](../keywords/uint.md) (32-Bit-Menge), wird die Umschaltanzahl durch die niederwertigen fünf Bits des zweiten Operanden angegeben. Die tatsächliche Umschaltanzahl beträgt also 0 bis 31 Bits.
+[!code-csharp-interactive[left shift example](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#LeftShift)]
 
-Ist der erste Operand ein [long](../keywords/long.md) oder [ulong](../keywords/ulong.md) (64-Bit-Menge), wird die Umschaltanzahl durch die niederwertigen sechs Bits des zweiten Operanden angegeben. Die tatsächliche Umschaltanzahl beträgt also 0 bis 63 Bits.
+## <a name="shift-count"></a>Verschiebungsanzahl
 
-Alle höherwertigen Bits, die nach der Verschiebung nicht im Bereich des Typs des ersten Operanden liegen, werden verworfen. Die niederwertigen leeren Bits werden mit Nullen angefüllt. Schiebeoperationen verursachen nie Überläufe.
+Für den Ausdruck `x << count` hängt die tatsächliche Verschiebungsanzahl folgendermaßen vom Typ von `x` ab:
 
-Benutzerdefinierte Typen können den `<<`-Operator überladen (siehe [Operator](../keywords/operator.md)). Der Typ des ersten Operanden muss daher der benutzerdefinierte Typ sein, der Typ des zweiten Operanden `int`. Wenn ein binärer Operator überladen ist, wird der zugehörige Zuweisungsoperator, sofern er vorhanden ist, auch implizit überladen.
+- Ist der Typ von `x` [int](../keywords/int.md) oder [uint](../keywords/uint.md), wird die Verschiebungsanzahl durch die niedrigen *fünf* Bits des zweiten Operanden angegeben. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x1F` (oder `count & 0b_1_1111`).
 
-## <a name="example"></a>Beispiel
+- Ist der Typ von `x` [long](../keywords/long.md) oder [ulong](../keywords/ulong.md), wird die Verschiebungsanzahl durch die niedrigen *sechs* Bits des zweiten Operanden angegeben. Die Verschiebungsanzahl errechnet sich daher aus `count & 0x3F` (oder `count & 0b_11_1111`).
 
-[!code-csharp[csRefOperators#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#14)]
+Das folgende Beispiel veranschaulicht dieses Verhalten:
 
-## <a name="comments"></a>Kommentare
+[!code-csharp-interactive[shift count example](~/samples/snippets/csharp/language-reference/operators/ShiftOperatorsExamples.cs#LeftShiftByLargeCount)]
 
-Beachten Sie, dass `i<<1` und `i<<33` dasselbe Ergebnis liefern, da die fünf niederwertigen Bits von 1 und 33 übereinstimmen.
+## <a name="remarks"></a>Anmerkungen
+
+Verschiebevorgänge verursachen niemals Überläufe und führen sowohl in [geprüften als auch in ungeprüften](../keywords/checked-and-unchecked.md) Kontexten zu identischen Ergebnissen.
+
+## <a name="operator-overloadability"></a>Operatorüberladbarkeit
+
+Benutzerdefinierte Typen können den Operator `<<` [überladen](../keywords/operator.md). Wenn ein benutzerdefinierter Typ `T` den `<<`-Operator überlädt, muss der Typ des ersten Operanden `T` und der Typ des zweiten Operanden `int` lauten. Wenn der `<<`-Operator überladen ist, wird der [Zuweisungsoperator für die Linksverschiebung](left-shift-assignment-operator.md) `<<=` ebenfalls implizit überladen.
+
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+Weitere Informationen finden Sie im Abschnitt [Verschiebungsoperatoren](~/_csharplang/spec/expressions.md#shift-operators) der [C#-Sprachspezifikation](../language-specification/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
+- [>>-Operator](right-shift-operator.md)

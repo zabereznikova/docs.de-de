@@ -1,16 +1,16 @@
 ---
 title: Modifizierer für in-Parameter – C#-Verweis
 ms.custom: seodec18
-ms.date: 03/06/2018
+ms.date: 02/12/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: c3644b82a180fe6ed376938c9ff86db900db440e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a765a330e4d9efe22943538503c0822e1c9dfdb
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631407"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219554"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>Modifizierer für in-Parameter (C#-Verweis)
 
@@ -20,11 +20,14 @@ Das Schlüsselwort `in` bewirkt, dass Argumente per Verweis übergeben werden. E
 
 Das vorausgehende Beispiel veranschaulicht, dass der `in`-Modifizierer an der Aufrufstelle normalerweise nicht benötigt wird. Er ist nur in der Methodendeklaration erforderlich.
 
+
 > [!NOTE] 
 > Das `in`-Schlüsselwort kann ebenfalls mit einem generischen Typparameter verwendet werden, um als der Bestandteil einer `foreach`-Anweisung oder einer `join`-Klausel in einer LINQ-Abfrage anzugeben, dass der Typparameter kontravariant ist. Weitere Informationen zur Verwendung des `in`-Schlüsselworts in diesen Kontexten und entsprechende Links finden Sie unter [in](in.md).
   
  Variablen, die als `in`-Argumente übergeben wurden, müssen initialisiert werden, bevor sie in einen Methodenaufruf übergeben werden. Es kann jedoch sein, dass die aufgerufene Methode keinen Wert zuweist oder das Argument ändert.  
-  
+
+Die `in`-Parametermodifizierer steht in C# 7.2 und höher zur Verfügung. Frühere Versionen generieren den Compilerfehler `CS8107` (Das Feature „schreibgeschützte Verweise“ ist in C# 7.0 nicht verfügbar. Verwenden Sie Sprachversion 7.2 oder höher.). Hinweise zum Konfigurieren der Compilersprachversion finden Sie unter [Auswählen der C#-Sprachversion](../configure-language-version.md).
+
  Obwohl die Schlüsselwörter `in`, `ref` und `out` unterschiedliche Laufzeitverhalten hervorrufen, gelten sie zum Zeitpunkt der Kompilierung nicht als Teil der Methodensignatur. Aus diesem Grund können die Methoden nicht überladen werden, wenn der einzige Unterschied darin besteht, dass eine Methode ein `ref`- oder `in`-Argument übernimmt und die andere ein `out`-Argument. Der folgende Code wird z. B. nicht kompiliert:  
   
 ```csharp

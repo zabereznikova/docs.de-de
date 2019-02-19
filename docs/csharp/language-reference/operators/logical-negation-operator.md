@@ -1,7 +1,7 @@
 ---
 title: '! -Operator – C#-Referenz'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 02/14/2019
 f1_keywords:
 - '!_CSharpKeyword'
 helpviewer_keywords:
@@ -9,24 +9,26 @@ helpviewer_keywords:
 - logical negation operator (!) [C#]
 - NOT operator [C#]
 ms.assetid: f5ae133f-8f64-4560-b34f-cd9cd5eed4ad
-ms.openlocfilehash: 6b6d1796032f536aac0be49d4f101c1380b4e98f
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 464bd658c9bf430191d84d3d5ad8d57173ab87c5
+ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333225"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56303711"
 ---
 # <a name="-operator-c-reference"></a>! operator (C#-Referenz)
 
-Der logische Negationsoperator (`!`) ist ein unärer Operator, der seinen Operanden negiert. Er wird für `bool` definiert, und gibt `true` nur dann zurück, wenn sein Operand `false` ist.
+Der logische Negationsoperator `!` ist ein unärer Operator, der eine logische Negation des zugehörigen [bool](../keywords/bool.md)-Operanden berechnet. D. h., er ergibt `true`, wenn der Operand `false` ist, und `false`, wenn der Operand `true` ist:
 
-## <a name="remarks"></a>Hinweise
+[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalNegationExamples.cs#Example)]
 
-Benutzerdefinierte Typen können den Operator `!` überladen (weitere Informationen unter [operator](../keywords/operator.md)).
+## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
-## <a name="example"></a>Beispiel
+Benutzerdefinierte Typen können den Operator `!` [überladen](../keywords/operator.md).
 
-[!code-csharp[csRefOperators#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#7)]
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+Weitere Informationen finden Sie im Abschnitt [Logischer Negationsoperator](~/_csharplang/spec/expressions.md#logical-negation-operator) der [C#-Sprachspezifikation](../language-specification/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 

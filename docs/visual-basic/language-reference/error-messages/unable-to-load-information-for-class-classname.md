@@ -1,5 +1,5 @@
 ---
-title: Informationen über die Klasse "<classname>" konnten nicht geladen werden.
+title: Informationen über die Klasse '<classname>' konnten nicht geladen werden.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30712

@@ -1,5 +1,5 @@
 ---
-title: <name1> ist nicht eindeutig. Importiert aus den Namespaces oder Typen "<name2>".
+title: <name1> ist nicht eindeutig. Importiert aus den Namespaces oder Typen '<name2>'.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30561

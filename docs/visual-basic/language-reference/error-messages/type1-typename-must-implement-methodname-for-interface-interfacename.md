@@ -1,5 +1,5 @@
 ---
-title: <type1> "<typename>" muss "<methodname>" für die <interfacename>-Schnittstelle implementieren.
+title: <type1> '<typename>' muss '<methodname>' für die <interfacename>-Schnittstelle implementieren.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30149
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55264432"
 ---
-# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<Typ1 >'\<Typname > "implementieren muss"\<Methodname > "für Schnittstelle"\<Schnittstellenname >'
+# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<Typ1 >'\<Typname > 'implementieren muss'\<Methodname > 'für Schnittstelle'\<Schnittstellenname >'
 Eine Klasse oder Struktur vorgibt, eine Schnittstelle zu implementieren, ohne dass eine Prozedur, die von der Schnittstelle definierten implementiert. Jeder Member der Schnittstelle muss implementiert werden.  
   
  **Fehler-ID:** BC30149  

@@ -1,5 +1,5 @@
 ---
-title: "'<interfacename>. <membername>\"wird bereits implementiert durch die Basisklasse\"<baseclassname>\". Die erneute Implementierung von <type> davon ausgegangen, dass"
+title: "'<interfacename>. <membername>'wird bereits implementiert durch die Basisklasse'<baseclassname>'. Die erneute Implementierung von <type> davon ausgegangen, dass"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc42015
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55264150"
 ---
-# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>"\<Schnittstellenname >. \<Membername >' ist bereits in der Basisklasse implementiert\<Basisklassenname >'. Die erneute Implementierung von \<Typ > davon ausgegangen, dass
+# <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>'\<Schnittstellenname >. \<Membername >' ist bereits in der Basisklasse implementiert\<Basisklassenname >'. Die erneute Implementierung von \<Typ > davon ausgegangen, dass
 Eine Eigenschaft, Prozedur oder das Ereignis in einer abgeleiteten Klasse verwendet eine `Implements` -Klausel für einen Schnittstellenmember, die bereits in der Basisklasse implementiert wird.  
   
  Ein Schnittstellenmember, der von seiner Basisklasse implementiert wird, kann von einer abgeleiteten Klasse erneut implementiert werden. Dieser Vorgang ist nicht identisch mit dem Überschreiben der Basisklassenimplementierung. Weitere Informationen finden Sie unter [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).  

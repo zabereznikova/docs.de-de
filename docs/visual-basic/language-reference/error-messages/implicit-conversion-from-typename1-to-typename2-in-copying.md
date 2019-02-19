@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 01/30/2019
 ms.locfileid: "55279616"
 ---
-# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Implizite Konvertierung von "\<Typname1 >' zu '\<Typname2 >" beim Zurückkopieren des Wertes des ByRef-Parameters "\<Parametername >' zurück in das entsprechende Argument.
+# <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Implizite Konvertierung von '\<Typname1 >' zu '\<Typname2 >' beim Zurückkopieren des Wertes des ByRef-Parameters '\<Parametername >' zurück in das entsprechende Argument.
 Eine Prozedur wird aufgerufen, mit einem [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) Argument eines anderen Typs als die des entsprechenden Parameters.  
   
  Wenn Sie ein Argument übergeben `ByRef`, kopiert Visual Basic zuweilen den Argumentwert in eine lokale Variable in der Prozedur, statt einen Verweis zu übergeben. In diesem Fall müssen Visual Basic klicken Sie dann die Prozedur gibt den Wert den lokalen Variablen zurück in das Argument im aufrufenden Code kopieren.  

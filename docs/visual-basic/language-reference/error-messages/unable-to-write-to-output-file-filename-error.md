@@ -1,5 +1,5 @@
 ---
-title: 'In die Ausgabedatei "<filename>" konnte nicht geschrieben werden: <error>.'
+title: "In die Ausgabedatei '<filename>' konnte nicht geschrieben werden: <error>."
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
