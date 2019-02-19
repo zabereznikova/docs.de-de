@@ -52,8 +52,7 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
   
  IIS kann mehrere Bindungen für jede Site angeben, was zu mehreren Basisadressen für jedes Schema führt. Vor dem [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF mehrere Adressen für ein Schema wurde nicht unterstützt und wenn sie angegeben wurden, hat eine <xref:System.ArgumentException> während der Aktivierung.  
   
- 
-  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] ermöglicht es Internetdienstanbietern, mehrere Anwendungen mit unterschiedlichen Basisadressen für dasselbe Schema auf derselben Website zu hosten.  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] ermöglicht es Internetdienstanbietern, mehrere Anwendungen mit unterschiedlichen Basisadressen für dasselbe Schema auf derselben Website zu hosten.  
   
  Eine Website kann beispielsweise die folgenden Basisadressen enthalten:  
   
