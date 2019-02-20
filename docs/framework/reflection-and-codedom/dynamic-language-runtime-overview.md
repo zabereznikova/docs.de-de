@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c75d0631b05e4db53308efde8fe4c70a0778ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7dd67ea312f3677b9010dfea7f14fa366259bcd6
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540567"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220977"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Übersicht über die Dynamic Language Runtime
 
@@ -80,7 +80,7 @@ Beispiele von Sprachen, die mithilfe der DLR entwickelt wurden, enthalten Folgen
 
  Die DLR fügt der CLR eine Reihe von Diensten hinzu, um dynamische Sprachen besser zu unterstützen. Einige dieser Dienste sind:
 
--   Ausdrucksbaumstrukturen. Die DLR verwendet Ausdrucksbaumstrukturen, um Sprachsemantik darzustellen. Zu diesem Zweck hat die DLR LINQ-Ausdrucksbaumstrukturen erweitert, um die Ablaufsteuerung, Zuweisung und andere Knoten für die Sprachmodellierung. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).
+-   Ausdrucksbaumstrukturen. Die DLR verwendet Ausdrucksbaumstrukturen, um Sprachsemantik darzustellen. Zu diesem Zweck hat die DLR LINQ-Ausdrucksbaumstrukturen erweitert, um die Ablaufsteuerung, Zuweisung und andere Knoten für die Sprachmodellierung. Weitere Informationen finden Sie unter [Ausdrucksbaumstrukturen (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) oder [Ausdrucksbaumstrukturen (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
 -   Zwischenspeichern der Aufrufwebsite. Eine *dynamische Aufrufwebsite* ist ein Ort im Code, an dem Sie einen Vorgang wie `a + b` oder `a.b()` auf dynamischen Objekten ausführen können. Die DLR speichert die Eigenschaften von `a` und `b` (normalerweise die Typen dieser Objekte) sowie Informationen über den Vorgang. Wenn solch ein Vorgang zuvor ausgeführt wurde, ruft die DLR alle nötigen Informationen aus dem Cache für den schnellen Versand ab.
 
@@ -96,5 +96,6 @@ Die DLR verwendet Binder in Aufrufwebsites, um nicht nur mit .NET Framework zu k
 - <xref:System.Dynamic.ExpandoObject>
 - <xref:System.Dynamic.DynamicObject>
 - [Common Language Runtime](../../../docs/standard/clr.md)
-- [Ausdrucksbaumstrukturen](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+- [Ausdrucksbaumstrukturen (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Ausdrucksbaumstrukturen (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

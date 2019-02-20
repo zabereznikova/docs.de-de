@@ -3,12 +3,12 @@ title: Machine Learning-Glossar – ML.NET
 description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereich, die Sie bei der Erstellung benutzerdefinierter Modelle unterstützen.
 ms.custom: seodec18
 ms.date: 12/20/2018
-ms.openlocfilehash: d21b551389778a9f301fcfea0b5302d32ebba18f
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415376"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092435"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
@@ -26,7 +26,7 @@ Bei der [binären Klassifizierung](#binary-classification) ist diese Auswertungs
 
 Ein [Klassifizierungsfall](#classification), bei dem die [Bezeichnung](#label) nur eine von zwei Klassen ist. Weitere Informationen finden Sie im Abschnitt [Binäre Klassifizierung](tasks.md#binary-classification) des Artikels [Machine Learning-Aufgaben](tasks.md).
 
-## <a name="classification"></a>Klassifikation
+## <a name="classification"></a>Klassifizierung
 
 Wenn die Daten zur Vorhersage einer Kategorie verwendet werden, wird der [überwachte Task für maschinelles Lernen](#supervised-machine-learning) als Klassifizierung bezeichnet. Die [binäre Klassifizierung](#binary-classification) bezieht sich auf die Vorhersage von nur zwei Kategorien (z.B. die Klassifizierung eines Bilds als Bild einer „Katze“ oder eines „Hunds“). Die [Multiklassenklassifizierung](#multiclass-classification) bezieht sich auf die Vorhersage mehrerer Kategorien (z.B. bei der Klassifizierung eines Bilds als Bild einer bestimmten Hunderasse).
 

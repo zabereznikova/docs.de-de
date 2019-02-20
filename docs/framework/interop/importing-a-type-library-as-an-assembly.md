@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e346b326255ea46babc2e4c9101a1724671514d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 133d70058cc8151b22d31a3211d48188095e5f07
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517567"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56218906"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importieren einer Typbibliothek als Assembly
 Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im Gegensatz dazu erzeugen CLS-kompatible Compiler Typmetadaten in einer Assembly. Die zwei Quellen von Typinformationen sind sehr unterschiedlich. In diesem Thema werden Techniken zum Generieren von Metadaten aus einer Typbibliothek beschrieben. Die sich ergebende Assembly wird Interop-Assembly genannt, und die darin enthaltenen Typinformationen erlauben .NET Framework-Anwendungen die Verwendung von COM-Typen.  
@@ -31,7 +31,7 @@ Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im
   
 -   Mithilfe der Interopassemblys, die nur zur Entwurfszeit verwendet werden: Beginnend mit der [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], können Sie den Compiler anweisen, die Typinformationen aus einer Interopassembly in die ausführbare Datei einzubetten. Der Compiler bettet nur die Typinformationen ein, die Ihre Anwendung verwendet. Sie müssen die Interop-Assembly nicht mit Ihrer Anwendung bereitstellen. Dies ist das empfohlene Verfahren.  
   
--   Bereitstellen von Interopassemblys: So können Sie einen Standardverweis auf eine Interopassembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden. Wenn Sie dieses Verfahren ohne eine private COM-Komponente verwenden, verweisen Sie immer auf die primäre Interop-Assembly (PIA), die vom Autor der COM-Komponente veröffentlicht wurde, die Sie in Ihren verwalteten Code einbetten möchten. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
+-   Bereitstellen von Interopassemblys: So können Sie einen Standardverweis auf eine Interopassembly erstellen. In diesem Fall muss die Interop-Assembly mit Ihrer Anwendung bereitgestellt werden. Wenn Sie dieses Verfahren ohne eine private COM-Komponente verwenden, verweisen Sie immer auf die primäre Interop-Assembly (PIA), die vom Autor der COM-Komponente veröffentlicht wurde, die Sie in Ihren verwalteten Code einbetten möchten. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
  Wenn Sie Interop-Assemblys nur zur Entwurfszeit verwenden, können Sie Typinformationen aus der primären Interop-Assembly einbetten, die vom Autor der COM-Komponente veröffentlicht wurden. Sie müssen jedoch die primäre Interop-Assembly nicht mit Ihrer Anwendung bereitstellen.  
   
@@ -44,7 +44,7 @@ Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im
   
 -   Visual Studio  
   
-     Visual Studio konvertiert COM-Typen automatisch in einer Typbibliothek in Metadaten in einer Assembly. Anweisungen hierzu finden Sie unter [Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) und [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100)).  
+     Visual Studio konvertiert COM-Typen automatisch in einer Typbibliothek in Metadaten in einer Assembly. Anweisungen hierzu finden Sie unter [Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md) und [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md) und [Walkthrough: Embedding Type Information from Microsoft Office Assemblies in Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md) (Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (Visual Basic)).  
   
 -   [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
@@ -66,19 +66,20 @@ Definitionen von COM-Typen befinden sich in der Regel in einer Typbibliothek. Im
   
     -   Kenntnisse der Konvertierungsregeln einer Typbibliothek in eine Assembly.  
   
-     Das Schreiben eines benutzerdefinierten Wrappers ist ein erweitertes Verfahren. Weitere Informationen zum Generieren von benutzerdefinierten Wrappern finden Sie unter [Anpassen von Standardwrappern](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100)).  
+     Das Schreiben eines benutzerdefinierten Wrappers ist ein erweitertes Verfahren. Weitere Informationen zum Generieren von benutzerdefinierten Wrappern finden Sie unter [Anpassen von Standardwrappern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)).  
   
- Weitere Informationen zum COM-Interop-Importvorgang finden Sie unter [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100)).  
+ Weitere Informationen zum COM-Interop-Importvorgang finden Sie unter [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100)).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [Verfügbarmachen von COM-Komponenten für .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
-- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))
+- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (Type Library Importer-Tool)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
-- [Anpassen von Standardwrappern](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))
-- [Verwenden von COM-Typen in verwaltetem Code](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))
+- [Anpassen von Standardwrappern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
+- [Verwenden von COM-Typen in verwaltetem Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Kompilieren eines Interop-Projekts](../../../docs/framework/interop/compiling-an-interop-project.md)
 - [Bereitstellen einer Interop-Anwendung](../../../docs/framework/interop/deploying-an-interop-application.md)
 - [Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [Vorgehensweise: Generieren von Interopassemblys aus Typbibliotheken](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)
-- [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))
+- [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)
+- [Walkthrough: Embedding Type Information from Microsoft Office Assemblies in Visual Studio (Visual Basic) ](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md) (Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio (Visual Basic))

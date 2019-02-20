@@ -3,15 +3,15 @@ title: Vorhersagen von Preisen mithilfe eines Regressionslernmoduls mit ML.NET
 description: Vorhersagen von Preisen mithilfe eines Regressionslernmoduls mit ML.NET.
 author: aditidugar
 ms.author: johalex
-ms.date: 01/15/2019
+ms.date: 02/08/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e838d5b3b42ffec6648c67b4669a438dbd9e2c34
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 10e0fa2cedff3e31575ad2b9c8bc2d9ecc81f3e8
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828396"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56092539"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Tutorial: Vorhersagen von Preisen mithilfe eines Regressionslernmoduls mit ML.NET
 
@@ -122,9 +122,9 @@ Erstellen Sie eine Variable namens `mlContext`, und initialisieren Sie sie mit e
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#3 "Create the ML Context")]
 
-Als nächstes initialisieren Sie zum Laden der Daten die globale Variable `_textLoader`, um sie wiederzuverwenden.  Beachten Sie, dass wir einen `TextReader` verwenden. Wenn Sie einen `TextLoader` mithilfe eines `TextReader` erstellen, übergeben Sie den erforderlichen Kontext und die <xref:Microsoft.ML.Data.TextLoader.Arguments>-Klasse, um eine Anpassung zu ermöglichen. Geben Sie das Datenschema an, indem Sie ein Array von <xref:Microsoft.ML.Data.TextLoader.Column>-Objekten an den `TextReader` übergeben, der alle Spaltennamen und deren Typen enthält. Das Datenschema wurde bereits beim Erstellen der `TaxiTrip`-Klasse definiert.
+Als nächstes initialisieren Sie zum Laden der Daten die globale Variable `_textLoader`, um sie wiederzuverwenden. Wenn Sie einen `TextLoader` erstellen, übergeben Sie dabei den erforderlichen Kontext und die <xref:Microsoft.ML.Data.TextLoader.Arguments>-Klasse, um eine Anpassung zu ermöglichen. Geben Sie das Datenschema an, indem Sie ein Array von <xref:Microsoft.ML.Data.TextLoader.Column>-Objekten an den `TextLoader` übergeben, der alle Spaltennamen und deren Typen enthält. Das Datenschema wurde bereits beim Erstellen der `TaxiTrip`-Klasse definiert.
 
-Die `TextReader`-Klasse gibt einen vollständig initialisierten <xref:Microsoft.ML.Data.TextLoader> zurück.  
+Die `TextLoader`-Klasse gibt einen vollständig initialisierten <xref:Microsoft.ML.Data.TextLoader> zurück.  
 
 Um die globale Variable `_textLoader` zu initialisieren, um sie für die benötigten Datasets wiederzuverwenden, fügen Sie nach der Initialisierung von `mlContext` den folgenden Code hinzu:
 
@@ -155,7 +155,7 @@ Wir übergeben zwei Parameter an die `Train`-Methode: einen `MLContext` für den
 
 ## <a name="load-and-transform-data"></a>Laden und Transformieren der Daten
 
-Wir laden die Daten mithilfe der globalen Variablen `_textLoader` mit dem `dataPath`-Parameter. Zurückgegeben wird ein <xref:Microsoft.ML.Data.IDataView>. Als Ein- und Ausgabe von Transformationen ist eine `DataView` der grundlegende Datenpipelinetyp, vergleichbar mit `IEnumerable` für `LINQ`.
+Wir laden die Daten mithilfe der globalen Variablen `_textLoader` mit dem `dataPath`-Parameter. Zurückgegeben wird ein <xref:Microsoft.Data.DataView.IDataView>. Als Ein- und Ausgabe von Transformationen ist eine `IDataView` der grundlegende Datenpipelinetyp, vergleichbar mit `IEnumerable` für `LINQ`.
 
 In ML.NET ähneln die Daten einer SQL-Ansicht. Sie werden verzögert ausgewertet, sind schematisiert und heterogen. Das Objekt ist der erste Teil der Pipeline und lädt die Daten. Für dieses Tutorial wird ein Dataset mit Taxifahrtinformationen geladen, das zur Vorhersage der Fahrtpreise nützlich ist. Damit wird das Modell erstellt und trainiert.
 

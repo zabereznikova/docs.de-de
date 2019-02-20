@@ -6,17 +6,18 @@ helpviewer_keywords:
 - marshaling data, COM interop
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0d94223223568efe921af3a340815a966cc6c6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab4dbdd0a69b158ff5c49949bee5089bd3fe095c
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388354"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56220532"
 ---
 # <a name="marshaling-data-with-com-interop"></a>Marshallen von Daten mit COM-Interop
 COM-Interop bietet Unterstützung für sowohl die Verwendung von COM-Objekten aus verwaltetem Code als auch das Bereitstellen verwalteter Objekte für COM. Die Unterstützung für das Marshalling von Daten zu und von COM ist umfangreich und stellt fast immer das richtige Marshallingverhalten bereit.  
   
- [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] umfasst die folgenden COM-Interop-Tools:  
+ 
+  [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] umfasst die folgenden COM-Interop-Tools:  
   
 -   [Type Library Importer (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), der eine COM-Typbibliothek in eine Interop-Assembly konvertiert. Aus dieser Assembly generiert der Interop-Marshallingdienst Wrapper, die Datenmarshalling zwischen verwaltetem und nicht verwaltetem Speicher ausführen.  
   
@@ -28,27 +29,27 @@ COM-Interop bietet Unterstützung für sowohl die Verwendung von COM-Objekten au
 [Vorgehensweise: Manuelles Erstellen von Wrappern](how-to-create-wrappers-manually.md)   
 Beschreibt, wie Sie einen COM-Wrapper in verwaltetem Quellcode manuell erstellen. 
  
- [How to: Migrate Managed-Code DCOM to WCF (Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF)](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
+ [Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
  Beschreibt, wie Sie verwalteten DCOM-Code zu WCF für die sicherste Lösung migrieren.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [COM-Datentypen](https://msdn.microsoft.com/library/sak564ww(v=vs.100).aspx)  
+ [COM-Datentypen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))  
  Stellt die entsprechenden verwalteten und nicht verwalteten Datentypen bereit.  
   
- [Anpassen von COM-Aufrufwrappern](https://msdn.microsoft.com/library/3bwc828w(v=vs.100).aspx)  
+ [Anpassen von COM-Aufrufwrappern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
  Beschreibt, wie Sie Datentypen mithilfe des <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attributs zur Entwurfszeit explizit marshallen.  
   
- [Anpassen von Runtime Callable Wrappers](https://msdn.microsoft.com/library/e753eftz(v=vs.100).aspx)  
+ [Anpassen von Runtime Callable Wrappers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
  Beschreibt, wie das Marshallingverhalten von Typen in einer Interop-Assembly angepasst und COM-Typen manuell definiert werden.  
   
- [Erweiterte COM-Interoperabilität](https://msdn.microsoft.com/library/bd9cdfyx(v=vs.100).aspx)  
+ [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))  
  Stellt Links zu weiteren Informationen über das Einbinden von COM-Komponenten in Ihre .NET Framework-Anwendung bereit.  
   
- [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://msdn.microsoft.com/library/xk1120c3(v=vs.100).aspx)  
+ [Zusammenfassung: Konvertieren einer Assembly in eine Typbibliothek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))  
  Beschreibt den Konvertierungsprozess beim Export einer Assembly in eine Typbibliothek.  
   
- [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://msdn.microsoft.com/library/k83zzh38(v=vs.100).aspx)  
+ [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))  
  Beschreibt den Konvertierungsprozess beim Import einer Typbibliothek in eine Assembly.  
   
- [Interoperation mit generischen Typen](https://msdn.microsoft.com/library/ms229590(v=vs.100).aspx)  
+ [Interoperation mit generischen Typen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))  
  Beschreibt, welche Aktionen bei Verwendung von generischen Typen für COM-Interoperabilität unterstützt werden.

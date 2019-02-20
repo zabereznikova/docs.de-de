@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ce1c944257a1a11287b751d9a0f9eb5a88d744f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596890"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093033"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blitfähige und nicht blitfähige Typen
 Die meisten Datentypen verfügen über eine allgemeine Darstellung in verwaltetem und unverwaltetem Speicher und erfordern keine besondere Behandlung durch den Interop-Marshaller. Diese Typen werden *blitfähige Typen* genannt, da keine Konvertierung erforderlich ist, wenn sie zwischen verwaltetem und nicht verwaltetem Code übergeben werden.  
@@ -49,7 +49,7 @@ Die meisten Datentypen verfügen über eine allgemeine Darstellung in verwaltete
   
 -   Eindimensionale Arrays von blitfähigen Typen, z.B. ein Array von Integern. Ein Typ, der ein Variablenarray von blitfähigen Typen enthält, ist jedoch nicht selbst blitfähig.  
   
--   Formatierte Werttypen, die ausschließlich blitfähige Typen (oder Klassen, wenn sie als formatierte Typen gemarshallt werden) enthalten. Weitere Informationen zu formatierten Werttypen finden Sie unter [Standardmäßiges Marshalling für Werttypen](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100)).  
+-   Formatierte Werttypen, die ausschließlich blitfähige Typen (oder Klassen, wenn sie als formatierte Typen gemarshallt werden) enthalten. Weitere Informationen zu formatierten Werttypen finden Sie unter [Standardmäßiges Marshalling für Werttypen](default-marshaling-behavior.md#default-marshaling-for-value-types).  
   
  Objektverweise sind nicht für Blitvorgänge geeignet. Dies schließt ein Array von Verweisen auf Objekte ein, die selbst für Blitting geeignet sind. Beispielsweise können Sie eine Struktur definieren, die für Blitting geeignet ist, jedoch keine blitfähigen Typen, die ein Array von Verweisen auf diese Strukturen enthält.  
   
@@ -57,7 +57,7 @@ Die meisten Datentypen verfügen über eine allgemeine Darstellung in verwaltete
   
  Einige verwaltete Datentypen erfordern eine andere Darstellung in einer nicht verwalteten Umgebung. Diese nicht blitfähigen Datentypen müssen in ein Format konvertiert werden, das gemarshallt werden kann. Beispielsweise sind verwaltete Zeichenfolgen nicht blitfähige Typen, da sie in Zeichenfolgenobjekte konvertiert werden müssen, bevor sie gemarshallt werden können.  
   
- Die folgende Tabelle listet nicht blitfähige Typen aus dem <xref:System>-Namespace auf. [Delegaten](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100)) sind Datenstrukturen, die auf eine statische Methode oder auf eine Klasseninstanz verweisen, und sind nicht blitfähig.  
+ Die folgende Tabelle listet nicht blitfähige Typen aus dem <xref:System>-Namespace auf. [Delegaten](default-marshaling-behavior.md#default-marshaling-for-delegates) sind Datenstrukturen, die auf eine statische Methode oder auf eine Klasseninstanz verweisen, und sind nicht blitfähig.  
   
 |Nicht blitfähiger Typ|Beschreibung|  
 |-------------------------|-----------------|  

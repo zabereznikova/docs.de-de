@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24112edc3ac28124953974463233800c51da5cfc
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453082"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221237"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflektion in .NET Framework
-Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mit <xref:System.Type?displayProperty=nameWithType>, Informationen zu geladenen [Assemblys](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) und den hierin definierten Typen wie [Klassen](../../../docs/standard/base-types/common-type-system.md#classes), [Schnittstellen](../../../docs/standard/base-types/common-type-system.md#interfaces) und [Werttypen](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de) abzurufen. Sie können auch mithilfe von Reflektion Typeninstanzen zur Laufzeit erstellen, diese aufrufen und darauf zugreifen. Themen zu bestimmten Aspekten der Reflektion finden Sie unter [Verwandte Themen](#related_topics) am Ende dieser Übersicht.  
+Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mit <xref:System.Type?displayProperty=nameWithType>, Informationen zu geladenen [Assemblys](../app-domains/assemblies-in-the-common-language-runtime.md) und den hierin definierten Typen wie [Klassen](../../standard/base-types/common-type-system.md#classes), [Schnittstellen](../../standard/base-types/common-type-system.md#interfaces) und [Werttypen](../../csharp/language-reference/keywords/value-types.md) abzurufen. Sie können auch mithilfe von Reflektion Typeninstanzen zur Laufzeit erstellen, diese aufrufen und darauf zugreifen. Themen zu bestimmten Aspekten der Reflektion finden Sie unter [Verwandte Themen](#related_topics) am Ende dieser Übersicht.
   
  Das [Common Language Runtime](../../../docs/standard/clr.md)-Ladeprogramm verwaltet [Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md), bei denen es sich um definierte Begrenzungen um Objekte im gleichen Anwendungsbereich handelt. Diese Verwaltung umfasst das Laden jeder Assembly in die geeignete Anwendungsdomäne und das Steuern des Speicherlayouts der Typenhierarchie in jeder Assembly.  
   
@@ -71,16 +71,16 @@ Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mi
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung |  
+|Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Beschreibt die <xref:System.Type>-Klasse und stellt Codebeispiele bereit, die zeigen, wie <xref:System.Type> mit verschiedenen Reflektionsklassen verwendet wird, um Informationen zu Konstruktoren, Methoden, Feldern, Eigenschaften und Ereignissen abzurufen.|  
 |[Reflektion und generische Typen](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Erläutert, wie die Reflektion die Typparameter und die Typargumente von generischen Typen und generischen Methoden behandelt.|  
 |[Security Considerations for Reflection (Sicherheitsüberlegungen für die Reflektion)](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|Beschreibt die Regeln, die festlegen, bis zu welchem Grad Reflektion verwendet werden kann, um Typinformationen abzurufen und auf Typen zuzugreifen.|  
 |[Dynamically Loading and Using Types (Dynamisches Laden und Verwenden von Typen)](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|Beschreibt die benutzerdefinierte Bindungsschnittstelle der Reflektion, die spätes Binden unterstützt.|  
-|[Gewusst wie: Laden von Assemblys in den reflexionsbezogenen Kontext](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Beschreibt den reflektionsbezogenen Ladungskontext. Zeigt, wie eine Assembly geladen wird, wie der Kontext getestet und wie die Attribute überprüft werden, die im reflektionsbezogenen Kontext auf eine Assembly angewendet wurden.|  
+|[Vorgehensweise: Load Assemblies into the Reflection-Only Context](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) (Gewusst wie: Laden von Assemblys in den auf Reflektion beschränkten Kontext)|Beschreibt den reflektionsbezogenen Ladungskontext. Zeigt, wie eine Assembly geladen wird, wie der Kontext getestet und wie die Attribute überprüft werden, die im reflektionsbezogenen Kontext auf eine Assembly angewendet wurden.|  
 |[Accessing Custom Attributes (Zugreifen auf benutzerdefinierte Attribute)](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|Zeigt, wie mithilfe der Reflektion das Vorhandensein von Attributen und Werten abgefragt werden kann.|  
 |[Specifying Fully Qualified Type Names (Angeben vollqualifizierter Typnamen)](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|Beschreibt das Format von vollqualifizierten Typnamen mit den Begriffen von BNF (Backus-Naur Form) sowie die Syntax, die erforderlich ist, um Sonderzeichen, Assemblynamen, Zeiger, Verweise und Arrays anzugeben.|  
-|[ How to: Hook Up a Delegate Using Reflection (Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion)](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Erläutert, wie ein Delegat für eine Methode erstellt und dieser Delegat mit einem Ereignis verknüpft wird. Beschreibt, wie eine Ereignisbehandlungsmethode zur Laufzeit mit <xref:System.Reflection.Emit.DynamicMethod> erstellt wird.|  
+|[Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Erläutert, wie ein Delegat für eine Methode erstellt und dieser Delegat mit einem Ereignis verknüpft wird. Beschreibt, wie eine Ereignisbehandlungsmethode zur Laufzeit mit <xref:System.Reflection.Emit.DynamicMethod> erstellt wird.|  
 |[Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Erläutert, wie dynamische Assemblys und dynamische Methoden generiert werden.|  
   
 ## <a name="reference"></a>Referenz  

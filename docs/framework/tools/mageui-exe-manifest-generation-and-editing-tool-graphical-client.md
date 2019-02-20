@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 33ad1f4e260d90125d260e2ada0898be7f820b7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0135e4fc655b0efc3140e388f75ac8f45193cf
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572967"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56219762"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
 
@@ -128,7 +128,7 @@ ms.locfileid: "54572967"
   
 |Benutzeroberflächenelement|Beschreibung|  
 |----------------|-----------------|  
-|**Berechtigungssatztyp**|Der minimale Berechtigungssatz, der von der Anwendung für die Ausführung auf dem Client erforderlich ist. Eine Beschreibung dieser Berechtigungssätze und der erforderlichen Berechtigungen finden Sie unter [Benannte Berechtigungssätze](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Berechtigungssatztyp**|Der minimale Berechtigungssatz, der von der Anwendung für die Ausführung auf dem Client erforderlich ist. Eine Beschreibung dieser Berechtigungssätze und der erforderlichen Berechtigungen finden Sie unter [Named Permission Sets](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)) (Benannte Berechtigungssätze).|  
 |**Details**|Die für das Anwendungsmanifest erstellte XML-Datei zum Darstellen des Berechtigungssatzes. Sie sollten diesen XML-Code nicht manuell bearbeiten, sofern Sie nicht mit dem XML-Format des Anwendungsmanifests vertraut sind. Weitere Informationen finden Sie unter [ClickOnce-Anwendungsmanifest](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Registerkarte "Bereitstellungsmanifest"  

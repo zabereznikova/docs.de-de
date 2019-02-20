@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70548231454991060098908ce954bf699eff838
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453254"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56221250"
 ---
 # <a name="interop-marshaling"></a>Interop-Marshalling
 <a name="top"></a> Interop-Marshalling steuert, wie Daten in Methodenargumenten und Rückgabewerten zwischen verwaltetem und nicht verwaltetem Speicher während Aufrufen übergeben werden. Interop-Marshalling ist eine Laufzeitaktivität, die vom Marshallingdienst der Common Language Runtime ausgeführt wird.  
@@ -102,7 +102,7 @@ Apartmentübergreifender Aufruf zwischen einem .NET-Client und einem COM-Objekt
   
 <a name="marshaling_remote_calls"></a>   
 ## <a name="marshaling-remote-calls"></a>Marshalling von Remoteaufrufen  
- Wie bei apartmentübergreifendem Marshalling ist bei jedem Aufruf zwischen verwaltetem und nicht verwaltetem Code COM-Marshalling beteiligt, wenn sich die Objekte in verschiedenen Prozessen befinden. Zum Beispiel:  
+ Wie bei apartmentübergreifendem Marshalling ist bei jedem Aufruf zwischen verwaltetem und nicht verwaltetem Code COM-Marshalling beteiligt, wenn sich die Objekte in verschiedenen Prozessen befinden. Beispiel:  
   
 -   Ein COM-Client, der einen verwalteten Server auf einem Remotehost aufruft, verwendet verteiltes COM (DCOM).  
   
@@ -143,17 +143,17 @@ Firewallübergreifende Remoteaufrufe mit SOAP oder der TcpChannel-Klasse
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|Beschreibung |  
+|Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)|Beschreibt die Regeln, die der Interop-Marshallingdienst für das Marshalling von Daten verwendet.|  
 |[Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)|Beschreibt, wie Sie Methodenparameter deklarieren und Argumente an Funktionen übergeben, die aus nicht verwalteten Bibliotheken exportiert wurden.|  
 |[Marshaling Data with COM Interop (Marshallen von Daten mit COM-Interop)](marshaling-data-with-com-interop.md)|Beschreibt, wie Sie COM-Wrapper anpassen, um das Marshallingverhalten zu ändern.|  
-|[How to: Migrate Managed-Code DCOM to WCF (Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF)](how-to-migrate-managed-code-dcom-to-wcf.md)|Beschreibt, wie Sie von DCOM zu WCF migrieren.|  
-|[Gewusst wie: Zuordnen von HRESULTs und Ausnahmen](how-to-map-hresults-and-exceptions.md)|Beschreibt, wie Sie benutzerdefinierte Ausnahmen zu HRESULTs zuordnen, und stellt die vollständige Zuordnung von jedem HRESULT zu seiner vergleichbaren Ausnahmeklasse in .NET Framework bereit.|  
-|[Interoperation mit generischen Typen](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|Beschreibt, welche Aktionen bei Verwendung von generischen Typen für COM-Interoperabilität unterstützt werden.|  
+|[Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|Beschreibt, wie Sie von DCOM zu WCF migrieren.|  
+|[Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen](how-to-map-hresults-and-exceptions.md)|Beschreibt, wie Sie benutzerdefinierte Ausnahmen zu HRESULTs zuordnen, und stellt die vollständige Zuordnung von jedem HRESULT zu seiner vergleichbaren Ausnahmeklasse in .NET Framework bereit.|  
+|[Interoperation mit generischen Typen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|Beschreibt, welche Aktionen bei Verwendung von generischen Typen für COM-Interoperabilität unterstützt werden.|  
 |[Interoperabilität mit nicht verwaltetem Code](index.md)|Beschreibt Interoperabilitätsdienste, die von der Common Language Runtime bereitgestellt werden.|  
 |[Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Stellt Links zu weiteren Informationen über das Einbinden von COM-Komponenten in Ihre .NET Framework-Anwendung bereit.|  
-|[Entwurfsüberlegungen für die Interoperation](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|Bietet Tipps zum Schreiben integrierter COM-Komponenten.|  
+|[Entwurfsüberlegungen für die Interoperation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Bietet Tipps zum Schreiben integrierter COM-Komponenten.|  
   
  [Zurück nach oben](#top)  
   

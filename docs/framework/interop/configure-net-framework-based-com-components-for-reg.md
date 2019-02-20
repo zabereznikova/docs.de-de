@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 140af66c9ea08d16aa442824ff7333eeeadf5173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
+ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530695"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56093540"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung
 Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur geringfügig schwieriger als bei COM-Komponenten. Für das Setup sind zwei Manifeste erforderlich:  
@@ -174,6 +174,6 @@ Die Aktivierung ohne Registrierung ist bei .NET Framework-Komponenten nur gering
   
 ## <a name="see-also"></a>Siehe auch
 - [COM-Interop ohne Registrierung](registration-free-com-interop.md)
-- [Anforderungen an COM-Interop ohne Registrierung](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))
-- [Konfigurieren von COM-Komponenten für eine Aktivierung ohne Registrierung](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))
-- [Registration-Free Activation of .NET-Based Components: A Walkthrough (Exemplarische Vorgehensweise: Aktivierung der .NET-basierten Komponenten ohne Registrierung)](https://msdn.microsoft.com/library/ms973915.aspx)
+- [Anforderungen an COM-Interop ohne Registrierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [Konfigurieren von COM-Komponenten für eine Aktivierung ohne Registrierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [Registration-Free Activation of .NET-Based Components: A Walkthrough (Exemplarische Vorgehensweise: Aktivierung der .NET-basierten Komponenten ohne Registrierung)](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
