@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, dynamic layout
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-ms.openlocfilehash: 7c07f94ce25c972b73532f79ce5ba3da424a0f7c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b08566f4b13ed54bfc0bb83c39777410251dafa
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610356"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441770"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>Übersicht über das FlowLayoutPanel-Steuerelement
 Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement ordnet seinen Inhalt in horizontaler oder vertikaler Flussrichtung an. Dieser Inhalt kann von einer Zeile zur nächsten oder von einer Spalte zur nächsten umgebrochen werden. Wahlweise können Sie den Inhalt auch abschneiden statt ihn umzubrechen.  
@@ -25,7 +25,7 @@ Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement ordnet seinen Inha
   
  Jedes Windows Forms-Steuerelement kann ein untergeordnetes Element des <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelements sein, einschließlich anderer Instanzen von <xref:System.Windows.Forms.FlowLayoutPanel>. Dadurch sind Sie in der Lage, anspruchsvolle Layouts zu erstellen, die sich zur Laufzeit an die Maße des Formulars anpassen.  
   
- Siehe auch [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
+ Siehe auch [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>

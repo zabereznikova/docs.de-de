@@ -2,12 +2,12 @@
 title: Unternehmenseinkaufsprozess
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837183"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442242"
 ---
 # <a name="corporate-purchase-process"></a>Unternehmenseinkaufsprozess
 In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basierenden Einkaufsvorgangs veranschaulicht, bei dem automatisch das beste Angebot ausgewählt wird. In diesem Beispiel werden <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> und <xref:System.Activities.Statements.ForEach%601> sowie eine benutzerdefinierte Aktivität kombiniert, um einen Workflow zu erstellen, der diesen Vorgang darstellt.
@@ -18,7 +18,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 
 -   Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
 
 ## <a name="demonstrates"></a>Veranschaulicht
 
@@ -83,7 +83,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 |Allgemein|Die im Vorgang verwendeten Entitätsobjekte (Ausschreibung, Anbieter und Angebot).|  
 |WfDefinition|Die Definition des Vorgangs (als [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Programm) und der Host (`PurchaseProcessHost`), die von den Clientanwendungen zum Erstellen und Verwenden von Instanzen des Einkaufsworkflows verwendet werden.|  
 |WebClient|Eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit dem Workflowmodul.|  
-|WinFormsClient|Eine Windows Forms-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit der Workflow-Engine.|  
+|WinFormsClient|Eine Windows Forms-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit dem Workflowmodul.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
  Die folgende Tabelle enthält eine Beschreibung der wichtigsten Dateien im WfDefinition-Projekt.  
@@ -108,7 +108,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 |RequestForProposal|Im Rahmen einer Ausschreibung (Request for Proposal, RFP) werden Anbieter aufgefordert, Angebote für eine bestimmte Ware oder Dienstleistungen abzugeben.|  
 |VendorProposal|Ein Angebot, das im Rahmen einer Ausschreibung von einem Anbieter abgegeben wird.|  
 |VendorRepository|Das Repository der Anbieter. Diese Implementierung enthält eine im Speicher befindliche Auflistung der Vendor-Instanzen und Methoden zum Bereitstellen dieser Instanzen.|  
-|RfpRepository|Das Repository der Ausschreibungen. Diese Implementierung verwendet LINQ to XML für die Abfrage der XML-Datei der Ausschreibung, die von der schematisierten Dauerhaftigkeit erstellt wurde. Diese Klasse implementiert [System.Runtime.Persistence.IDataViewMapper](https://msdn.microsoft.com/library/system.runtime.persistence.idataviewmapper(v=vs.110).aspx).|  
+|RfpRepository|Das Repository der Ausschreibungen. Diese Implementierung verwendet LINQ to XML für die Abfrage der XML-Datei der Ausschreibung, die von der schematisierten Dauerhaftigkeit erstellt wurde. |  
 |IOHelper|Diese Klasse behandelt alle E/A-bezogenen Probleme (Ordner, Pfade usw.)|  
   
 ### <a name="web-client"></a>Webclient  
@@ -127,7 +127,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 |Formular|Beschreibung|  
 |-|-|  
 |NewRfp|Erstellt und sendet eine neue Ausschreibung.|  
-|ShowProposals|Zeigt alle aktuellen und abgeschlossenen Ausschreibungen an. **Hinweis:** müssen Sie möglicherweise klicken Sie auf die **aktualisieren** Schaltfläche in der Benutzeroberfläche, um die Änderungen in diesem Bildschirm angezeigt wird, nachdem Sie erstellen oder ändern eine Ausschreibung.|  
+|ShowProposals|Zeigt alle aktuellen und abgeschlossenen Ausschreibungen an. **Hinweis**:  Müssen Sie möglicherweise klicken Sie auf die **aktualisieren** Schaltfläche in der Benutzeroberfläche, um die Änderungen in diesem Bildschirm angezeigt wird, nachdem Sie erstellen oder ändern eine Ausschreibung.|  
 |SubmitProposal|Ruft im Rahmen einer bestimmten Ausschreibung ein Angebot eines Anbieters ab. Dieses Fenster wird nur von Anbietern verwendet.|  
 |ViewRfp|Zeigt alle Informationen über eine Ausschreibung an (eingegangene Angebote, Daten, Werte usw.). Dieses Fenster wird nur vom Ersteller der Ausschreibung verwendet.|  
   
@@ -155,20 +155,20 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
   
 ### <a name="web-client-options"></a>Webclientoptionen  
   
--   **Erstellen Sie eine neue Ausschreibung**: erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
+-   **Erstellen Sie eine neue Ausschreibung**: Erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
   
--   **Aktualisieren Sie**: aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
+-   **Aktualisieren Sie**: Aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
   
--   **Ansicht**: Zeigt den Inhalt einer vorhandenen Ausschreibung. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
+-   **Ansicht**: Zeigt den Inhalt einer vorhandenen Ausschreibung an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
   
--   Anzeigen als: Der Benutzer zugreifen kann die Ausschreibung, die mit verschiedenen Identitäten durch den gewünschten Teilnehmer im Auswählen der **anzeigen als** im Kombinationsfeld auswählt.  
+-   Zeigen Sie als an: Der Benutzer kann die Ausschreibung, die mit verschiedenen Identitäten durch Auswählen der gewünschten Teilnehmers im zugreifen der **anzeigen als** im Kombinationsfeld auswählt.  
   
 ### <a name="winforms-client-options"></a>WinForms-Clientoptionen  
   
--   **Ausschreibung erstellen**: erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
+-   **Ausschreibung erstellen**: Erstellt eine neue Anforderung für Ausschreibungen und startet ein.  
   
--   **Aktualisieren Sie**: aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
+-   **Aktualisieren Sie**: Aktualisiert die Liste der aktuellen und abgeschlossenen Ausschreibungen im Hauptfenster.  
   
--   **Ausschreibung anzeigen**: Zeigt den Inhalt einer vorhandenen Ausschreibung. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
+-   **Ausschreibung anzeigen**: Zeigt den Inhalt einer vorhandenen Ausschreibung an. Anbieter können ihre Angebote senden (wenn eingeladen oder die Ausschreibung noch nicht beendet ist).  
   
--   **Verbinden als**: der Benutzer kann die Ausschreibung, die mit verschiedenen Identitäten durch Auswählen der gewünschten Teilnehmers im zugreifen der **anzeigen als** im Kombinationsfeld auswählt.
+-   **Herstellen einer Verbindung als**: Der Benutzer kann die Ausschreibung, die mit verschiedenen Identitäten durch Auswählen der gewünschten Teilnehmers im zugreifen der **anzeigen als** im Kombinationsfeld auswählt.

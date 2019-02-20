@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ContextMenuStrip control [Windows Forms]
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-ms.openlocfilehash: c5f2246ef70ed627ecd311c1f3e5666afcd9b5ef
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 31c056f823cc38d370d7d23b7e91d682aa571f76
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43748901"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441540"
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip-Steuerelement
 Das <xref:System.Windows.Forms.ContextMenuStrip>-Steuerelement stellt ein Kontextmenü bereit, das Sie einem Steuerelement zuordnen.  
@@ -20,22 +20,22 @@ Das <xref:System.Windows.Forms.ContextMenuStrip>-Steuerelement stellt ein Kontex
  [Übersicht über das ContextMenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/contextmenustrip-control-overview.md)  
  Erläutert die wichtigsten Funktionen und Eigenschaften des Steuerelements.  
   
- [Gewusst wie: Zuordnen eines ContextMenuStrip zu einem Steuerelement](../../../../docs/framework/winforms/controls/how-to-associate-a-contextmenustrip-with-a-control.md)  
+ [Vorgehensweise: Ordnen Sie ein ContextMenuStrip zu einem Steuerelement zu](../../../../docs/framework/winforms/controls/how-to-associate-a-contextmenustrip-with-a-control.md)  
  Beschreibt, wie Sie aus einem <xref:System.Windows.Forms.ContextMenuStrip> das Kontextmenü für ein bestimmtes Steuerelement machen.  
   
  [Vorgehensweise: Hinzufügen von Menüelementen zu einem ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-add-menu-items-to-a-contextmenustrip.md)  
  Beschreibt, wie einem <xref:System.Windows.Forms.ContextMenuStrip> auswählbare Optionen hinzugefügt werden.  
   
- [Gewusst wie: Konfigurieren des Aktivierungs- und Bildrands von ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-configure-contextmenustrip-check-margins-and-image-margins.md)  
- Beschreibt das Anpassen eines <xref:System.Windows.Forms.ContextMenuStrip> durch Festlegen von Aktivierungs- und Bildrandeigenschaften auf verschiedene Weise.  
+ [Vorgehensweise: ContextMenuStrip konfigurieren Aktivierungs- und Bildrands](../../../../docs/framework/winforms/controls/how-to-configure-contextmenustrip-check-margins-and-image-margins.md)  
+ Beschreibt, wie <xref:System.Windows.Forms.ContextMenuStrip> durch Festlegen der Aktivierungsrand- und Bildrandeigenschaften angepasst werden kann.  
   
  [Vorgehensweise: Aktivieren des Aktivierungs- und Bildrands in ContextMenuStrip-Steuerelementen](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)  
  Beschreibt das Aktivieren und Deaktivieren von <xref:System.Windows.Forms.ContextMenuStrip>-Aktivierungsrändern.  
   
- [Gewusst wie: Behandeln des Opening-Ereignisses von ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
+ [Vorgehensweise: Behandeln des Opening-Ereignisses von ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
  Beschreibt, wie das Verhalten eines <xref:System.Windows.Forms.ContextMenuStrip>-Steuerelements durch Behandeln des <xref:System.Windows.Forms.ToolStripDropDown.Opening>-Ereignisses angepasst werden kann.  
   
- Siehe auch [ContextMenuStrip-Aufgaben (Dialogfeld)](https://msdn.microsoft.com/library/ms233646\(v=vs.110\)) oder [ContextMenuStrip-Elementauflistungs-Editor](https://msdn.microsoft.com/library/ms233641\(v=vs.110\)).  
+ Siehe auch [ContextMenuStrip-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100)) oder [ContextMenuStrip-Elementauflistungs-Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100)).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.MenuStrip>  

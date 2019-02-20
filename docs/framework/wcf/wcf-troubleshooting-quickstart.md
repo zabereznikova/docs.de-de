@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5031538c49da34d0fc89442c1170e30ff56a6eff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505691"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442294"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Schnelleinstieg zur Problembehandlung in WCF
 In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden beim Entwickeln von WCF-Clients und -Diensten begegnet sind. Wenn Ihr spezifisches Problem nicht in dieser Liste enthalten ist, sollten Sie die Ablaufverfolgung für den Dienst konfigurieren. Dadurch wird eine Ablaufverfolgungsdatei generiert, die Sie im Ablaufverfolgungsdatei-Viewer anzeigen können, um detaillierte Informationen zu Ausnahmen im Dienst zu erhalten. Weitere Informationen zum Konfigurieren der Ablaufverfolgung finden Sie unter: [Konfigurieren der Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Weitere Informationen zum Ablaufverfolgungsdatei-Viewer finden Sie unter: [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -102,7 +102,7 @@ public class MyServiceHost : ServiceHost
   
 -   Sie müssen gegebenenfalls den Anschluss zur Anwendung öffnen. Weitere Informationen finden Sie unter [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) in den SDK-Beispielen.  
   
--   Informationen zu weiteren möglichen Problemen finden Sie im Thema mit den Beispielen unter [Running the Samples in a Workgroup and Across Machines](https://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
+-   Weiteren möglichen Problemen finden Sie im Thema Beispiele [Ausführen der Windows Communication Foundation-Beispiele](./samples/running-the-samples.md).  
   
 -   Wenn der Client Windows-Anmeldeinformationen verwendet und es sich bei der Ausnahme um <xref:System.ServiceModel.Security.SecurityNegotiationException>handelt, konfigurieren Sie Kerberos wie folgt.  
   
@@ -224,7 +224,7 @@ public class MyServiceHost : ServiceHost
 </bindings>  
 ```  
   
- Sie sehen, dass einen Fehler wie folgt: Nicht behandelte Ausnahme: System.ServiceModel.AddressAlreadyInUseException: Es gibt bereits ein Listener für IP-Endpunkt 0.0.0.0:9000, die Sie diesen Fehler umgehen können, indem Sie eine vollqualifizierte URL mit einem anderen Port für den MEX-Endpunkt, wie im folgenden Konfigurationsausschnitt gezeigt angeben:  
+ Sie sehen, dass einen Fehler wie folgt: Ausnahmefehler: System.ServiceModel.AddressAlreadyInUseException: Es gibt bereits ein Listener für IP-Endpunkt 0.0.0.0:9000, die Sie diesen Fehler umgehen können, indem Sie eine vollqualifizierte URL mit einem anderen Port für den MEX-Endpunkt, wie im folgenden Konfigurationsausschnitt gezeigt angeben:  
   
 ```xml
 <services>  

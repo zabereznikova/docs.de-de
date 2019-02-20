@@ -4,12 +4,12 @@ description: Beachten Sie, dass Docker, Container und einer Microservices-Archit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 6ca5e18fa8e3b8ad0f6419c1566b6e7a2123b638
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: be7799fe0ac3c22d0ffda5bc4b7e5e42f956a15e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221481"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442424"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Weg zur modernen auf Containern basierenden Anwendungen
 
@@ -24,10 +24,10 @@ Dieses Buch gehört zu einem Microsoft-Suite von Leitfäden, in denen umfassen v
 Sie können zusätzliche Microsoft-e-Books im Zusammenhang mit der Docker-Container in der folgenden Liste finden:
 
 - **.NET-Microservices: Architektur für .NET-containeranwendungen** \
-  [*https://docs.microsoft.com/dotnet/standard/microservices-architecture/*](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)
+  [*https://docs.microsoft.com/dotnet/standard/microservices-architecture/*](../microservices-architecture/index.md)
 
 - **Modernisieren Sie vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern** \
-  [*https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/*](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/)
+  [*https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/*](../modernize-with-azure-and-containers/index.md)
 
 >[!div class="step-by-step"]
 >[Zurück](docker-containers-images-and-registries.md)

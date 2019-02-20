@@ -7,18 +7,18 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: 5e3337dddcc39517558cf85af76223306d20d2bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2193c862b0bfe0ffbdc55f5d7073409b03a040d
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599698"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442944"
 ---
 # <a name="control-type-recommendations"></a>Empfehlungen zum Typ von Steuerelementen
 .NET Framework bietet Ihnen die Möglichkeit, neue Steuerelemente zu entwickeln und zu implementieren. Zusätzlich zu den bekannten Benutzersteuerelementen können Sie nun benutzerdefinierte Steuerelemente schreiben, die ihre eigene Grafikausgabe ausführen und über Vererbung sogar die Funktionalität von vorhandenen Steuerelementen erweitern können. Das Treffen einer Entscheidung, welcher Typ von Steuerelement erstellt werden soll, kann verwirrend sein kann. In diesem Abschnitt werden die Unterschiede aufgezeigt, die es zwischen den verschiedenen Typen von Steuerelementen gibt, von denen geerbt werden kann, und werden Aspekte hinsichtlich des Typs vorgestellt, den Sie für Ihr Projekt wählen sollten.  
   
 > [!NOTE]
->  Wenn Sie ein Steuerelement erstellen möchten, das in Web Forms verwendet werden soll, sollten Sie [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef) lesen.  
+>  Wenn Sie ein Steuerelement erstellen möchten, das in Web Forms verwendet werden soll, sollten Sie [Entwickeln von benutzerdefinierten ASP.NET-Serversteuerelementen](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)) lesen.  
   
 ## <a name="inheriting-from-a-windows-forms-control"></a>Erben von einem Windows Forms-Steuerelement  
  Sie können ein geerbtes Steuerelement aus jedem vorhandenen Windows Forms-Steuerelement ableiten. Diese Vorgehensweise ermöglicht es Ihnen, die in einem Windows Forms-Steuerelement implementierte Funktionalität zu übernehmen und diese Funktionalität dann durch Hinzufügen von benutzerdefinierten Eigenschaften, Methoden oder weiteren Funktionen zu erweitern. Sie könnten z. B. ein aus <xref:System.Windows.Forms.TextBox> abgeleitetes Steuerelement erstellen, das nur Zahlen akzeptiert und die jeweilige Eingabe automatisch in einen Wert konvertiert. Ein solches Steuerelement könnte Validierungscode enthalten, der immer dann aufgerufen wird, wenn der Text im Textfeld geändert wurde, und könnte die zusätzliche Eigenschaft "Wert" haben. Bei einigen Steuerelementen können Sie auch eine benutzerdefinierte Darstellung der grafischen Oberfläche des Steuerelements hinzufügen, indem Sie die <xref:System.Windows.Forms.Control.OnPaint%2A>-Methode der Basisklasse überschreiben.  
@@ -45,39 +45,39 @@ ms.locfileid: "54599698"
   
 -   Sie müssen benutzerdefinierte Funktionalität implementieren, die über Standardsteuerelemente nicht verfügbar ist.  
   
--   [Vorgehensweise: Anzeigen eines Steuerelements in der Toolbox-Elemente-Dialogfeld "auswählen"](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
+-   [Vorgehensweise: Anzeigen eines Steuerelements in der Toolbox-Elemente-Dialogfeld "auswählen"](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
   
 -   [Exemplarische Vorgehensweise: Serialisieren der Auflistungen von Standardtypen mit dem DesignerSerializationVisibilityAttribute](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit visuellen ElementC#](https://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
+-   [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit visuellen ElementC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
   
--   [Vorgehensweise: Bereitstellen einer Toolboxbitmap für ein Steuerelement](https://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
+-   [Vorgehensweise: Bereitstellen einer Toolboxbitmap für ein Steuerelement](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
   
--   [Vorgehensweise: Erben von vorhandenen Windows Forms-Steuerelementen](https://msdn.microsoft.com/library/7h62478z\(v=vs.110\))  
+-   [Vorgehensweise: Erben von vorhandenen Windows Forms-Steuerelementen](how-to-inherit-from-existing-windows-forms-controls.md)  
   
--   [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](https://msdn.microsoft.com/library/5ytx0z24\(v=vs.110\))  
+-   [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
   
--   [Vorgehensweise: Erben von der Control-Klasse](https://msdn.microsoft.com/library/skcysbt2\(v=vs.110\))  
+-   [Vorgehensweise: Erben von der Control-Klasse](how-to-inherit-from-the-control-class.md)  
   
 -   [Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [Vorgehensweise: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit](https://msdn.microsoft.com/library/1fxyb15b\(v=vs.110\))  
+-   [Vorgehensweise: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
   
--   [Vorgehensweise: Erben von der UserControl-Klasse](https://msdn.microsoft.com/library/00ctb4z0\(v=vs.110\))  
+-   [Vorgehensweise: Erben von der UserControl-Klasse](how-to-inherit-from-the-usercontrol-class.md)  
   
--   [Vorgehensweise: Erstellen von Steuerelementen für Windows Forms](https://msdn.microsoft.com/library/bs3yhkh7\(v=vs.110\))  
+-   [Vorgehensweise: Erstellen von Steuerelementen für Windows Forms](how-to-author-controls-for-windows-forms.md)  
   
--   [Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen](https://msdn.microsoft.com/library/3sf86w5h\(v=vs.110\))  
+-   [Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen](how-to-author-composite-controls.md)  
   
--   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](https://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
+-   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
   
--   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit visuellen ElementC#](https://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
+-   [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit visuellen ElementC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
   
--   [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual Basic](https://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
+-   [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
   
--   [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://msdn.microsoft.com/library/307hck25\(v=vs.110\))  
+-   [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das von Visual Studio-Entwurfszeitfunktionen nutzt](creating-a-wf-control-design-time-features.md)  
   
--   [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://msdn.microsoft.com/library/307hck25\(v=vs.120\))  
+-   [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das Entwurfszeitfeatures nutzt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>Siehe auch
 - [Vorgehensweise: Entwickeln eines einfachen Windows Forms-Steuerelements](../../../../docs/framework/winforms/controls/how-to-develop-a-simple-windows-forms-control.md)

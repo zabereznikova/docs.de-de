@@ -8,19 +8,19 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: ac89851ce9c655ebef3acf2d55ef6659815ca4c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52687347707139ba583ef4dfdeebbb41d568e95c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558955"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441358"
 ---
 # <a name="how-to-create-application-settings"></a>Vorgehensweise: Erstellen von Anwendungseinstellungen
 Mithilfe von verwaltetem Code können Sie neue Anwendungseinstellungen erstellen und diese an Eigenschaften für Ihr Formular oder die Steuerelemente Ihres Formulars binden, damit diese Einstellungen zur Laufzeit automatisch geladen und gespeichert werden.  
   
  Im folgenden Verfahren erstellen Sie manuell eine Wrapperklasse, die von <xref:System.Configuration.ApplicationSettingsBase> abgeleitet ist. Dieser Klasse fügen Sie für jede Anwendungseinstellung, die Sie verfügbar machen möchten, eine Eigenschaft hinzu, auf die öffentlich zugegriffen werden kann.  
   
- Sie können dieses Verfahren auch mit minimalem Programmieraufwand in Visual Studio-Designer ausführen.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Erstellen von Anwendungseinstellungen mithilfe des Designers](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Sie können dieses Verfahren auch mit minimalem Programmieraufwand in Visual Studio-Designer ausführen.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Erstellen von Anwendungseinstellungen mithilfe des Designers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/wabtadw6(v=vs.100)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>So erstellen Sie programmgesteuert neue Anwendungseinstellungen  
   

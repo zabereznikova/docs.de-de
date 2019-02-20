@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f838f94698375eca27027c4769fcc5f54f96528c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195646"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443184"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider-Komponente (Windows Forms)
 Die `HelpProvider`-Komponente von Windows Forms wird verwendet, um eine HTML Help 1.x-Hilfedatei (entweder eine mit HTML Help Workshop erstellte CHM-Datei oder eine HTM-Datei) mit einer Windows-basierten Anwendung zu verknüpfen.  
@@ -24,13 +24,13 @@ Die `HelpProvider`-Komponente von Windows Forms wird verwendet, um eine HTML Hel
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.HelpProvider>  
- Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
  <xref:System.Windows.Forms.Help>  
- Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
   
- Siehe auch [Hilfesysteme in Windows Forms-Anwendungen](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).
+ Siehe auch [Hilfesysteme in Windows Forms-Anwendungen](../advanced/help-systems-in-windows-forms-applications.md).

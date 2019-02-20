@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 – Leistung
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: ba6120284b3ab189b0f34e2d3ef25f6967f04e5d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 29fc675e0eee37bac7cd6a9e309fa68b29bf28c8
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202288"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442879"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 Dustin Metzgar
@@ -25,7 +25,7 @@ Dustin Metzgar
 
  Windows Communication Foundation (WCF) ist Microsofts einheitliches Programmiermodell zum Erstellen von dienstorientierten Anwendungen. Es wurde zuerst als Teil von .NET 3.0 zusammen mit WF3 eingeführt und ist jetzt eine der Hauptkomponenten von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].
 
- Windows Server AppFabric ist eine Reihe integrierter Technologien, mit denen das Erstellen, Skalieren und Verwalten von Webanwendungen und zusammengesetzten Anwendungen, die unter IIS ausgeführt werden, vereinfacht wird. Es stellt Tools zum Überwachen und Verwalten von Diensten und Workflows bereit. Weitere Informationen finden Sie unter [Windows Server AppFabric](https://msdn.microsoft.com/windowsserver/ee695849.aspx)
+ Windows Server AppFabric ist eine Reihe integrierter Technologien, mit denen das Erstellen, Skalieren und Verwalten von Webanwendungen und zusammengesetzten Anwendungen, die unter IIS ausgeführt werden, vereinfacht wird. Es stellt Tools zum Überwachen und Verwalten von Diensten und Workflows bereit. Weitere Informationen finden Sie unter [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
 ## <a name="goals"></a>Ziele
  In diesem Thema werden die Leistungsmerkmale von WF4 anhand von Daten gezeigt, die für unterschiedliche Szenarien gemessen wurden. Außerdem werden ausführliche Vergleiche zwischen WF4 und WF3 bereitgestellt und so die Verbesserungen in dieser neuen Revision veranschaulicht. Die Szenarien und Daten in diesem Artikel quantifizieren die zugrunde liegenden Kosten für verschiedene Aspekte von WF4 und WF3. Diese Daten sind nützlich, um die Leistungsmerkmale von WF4 zu verstehen, und können bei der Planung von Migrationen von WF3 zu WF4 oder beim Einsatz von WF4 in der Anwendungsentwicklung hilfreich sein. Sie sollten jedoch vorsichtig sein, aus den in diesem Artikel präsentierten Daten Schlüsse zu ziehen. Die Leistung einer zusammengesetzten Workflowanwendung hängt stark von der Art der Workflowimplementierung und der Integration der verschiedenen Komponenten ab. Jede Anwendung muss gemessen werden, um die Leistungsmerkmale dieser Anwendung zu bestimmen.
@@ -36,7 +36,7 @@ Dustin Metzgar
 ### <a name="wf-runtime"></a>WF-Laufzeit
  Die zentrale Komponente der [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Laufzeit ist ein asynchroner Planer, der die Ausführung der Aktivitäten in einem Workflow steuert. Er stellt eine leistungsstarke, vorhersagbare Ausführungsumgebung für Aktivitäten zur Verfügung. Die Umgebung weist einen gut definierten Vertrag für Ausführung, Fortsetzung, Abschluss, Abbruch, Ausnahmen und ein vorhersagbares Threadingmodell auf.
 
- Im Vergleich zu WF3 ist der Planer der WF4-Laufzeit effizienter. Es nutzt den gleichen e/a-Threadpool für die verwendeten WCF, dies ist sehr effizient auf die Ausführung im Batchmodus Arbeitsaufgaben. Die interne Warteschlange des Arbeitselementplaners ist für die gängigsten Verwendungsmuster optimiert. Die WF4-Laufzeit verwaltet auch die Ausführungszustände auf sehr ressourcenschonende Weise mit minimaler Synchronisierung und Ereignisbehandlungslogik. Für WF3 sind hingegen intelligente Ereignisregistrierungen und Aufrufe erforderlich, um die komplexe Synchronisierung für Zustandsübergänge auszuführen.
+ Im Vergleich zu WF3 ist der Planer der WF4-Laufzeit effizienter. Es nutzt den gleichen e/a-Threadpool für die verwendeten WCF, dies ist sehr effizient auf die Ausführung im Batchmodus Arbeitsaufgaben. Die interne Warteschlange des Arbeitsaufgabenplaners ist für die gängigsten Verwendungsmuster optimiert. Die WF4-Laufzeit verwaltet auch die Ausführungszustände auf sehr ressourcenschonende Weise mit minimaler Synchronisierung und Ereignisbehandlungslogik. Für WF3 sind hingegen intelligente Ereignisregistrierungen und Aufrufe erforderlich, um die komplexe Synchronisierung für Zustandsübergänge auszuführen.
 
 ### <a name="data-storage-and-flow"></a>Datenspeicherung und -fluss
  In WF3 werden einer Aktivität zugeordnete Daten durch Abhängigkeitseigenschaften modelliert, die vom Typ <xref:System.Windows.DependencyProperty> implementiert werden. Das abhängigkeitseigenschaftenmuster wurde in Windows Presentation Foundation (WPF) eingeführt. Im Allgemeinen ist dieses Muster sehr flexibel, sodass eine einfache Datenbindung und andere Benutzeroberflächenfunktionen unterstützt werden. Für das Muster müssen jedoch die Eigenschaften als statische Felder in der Workflowdefinition definiert sein. Jedes Mal, wenn die [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Laufzeit die Eigenschaftswerte festlegt oder abruft, wird eine komplexe Suchlogik angewendet.
@@ -193,7 +193,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 ### <a name="performance"></a>Leistung
  ![Leistungsdiagramm für Onlineshopdienst Online Store](../../../docs/framework/windows-workflow-foundation/media/onlinestoreperfgraph.gif "OnlineStorePerfGraph")
 
- Beim Herstellen einer Verbindung zu Back-End-TCP-Diensten ohne Channelpooling weist der [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Dienst Auswirkungen von 17,2 % auf den Durchsatz auf.  Mit Channelpooling beträgt der Abzug etwa 23,8 %.  Bei HTTP sind die Auswirkungen viel weniger: 4,3 % ohne Pooling und 8,1 % mit Pooling.  Zudem muss beachtet werden, dass bei Verwendung von HTTP das Channelpooling sehr wenig Vorteile bietet.
+ Beim Herstellen einer Verbindung zu Back-End-TCP-Diensten ohne Channelpooling weist der [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Dienst Auswirkungen von 17,2 % auf den Durchsatz auf.  Mit Channelpooling beträgt der Abzug etwa 23,8 %.  Für HTTP ist die Auswirkungen viel weniger werden: 4,3 % ohne pooling und 8,1 % mit pooling.  Zudem muss beachtet werden, dass bei Verwendung von HTTP das Channelpooling sehr wenig Vorteile bietet.
 
  Es gibt zwar Aufwand aus der WF4-Laufzeit im Vergleich mit einem handcodierten WCF-Dienst in diesem Test, kann er den ungünstigsten Fall angesehen werden.  Die zwei Back-End-Dienste in diesem Test erledigen sehr wenig Arbeit.  In einem echten End-to-End-Szenario würden diese Dienste aufwendigere Vorgänge wie Datenbankaufrufe ausführen und so die Auswirkungen auf die Leistung der Transportebene reduzieren.  Dieses Argument sowie die Vorteile der in WF4 verfügbaren Funktionen machen Workflow Foundation zu einer brauchbaren Lösung beim Erstellen von Orchestrierungsdiensten.
 
@@ -211,7 +211,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  Der Dienst erstellt einen neuen Workflow mit der Anforderung und sendet eine sofortige Antwort, damit bei der Messung der Latenzzeit die Zeit für die Ausführung des Workflows nicht einbezogen wird.  Der WF3-Workflow basiert auf XOML mit Code-Behind, und der WF4-Workflow basiert vollständig auf XAML.  Der WF4-Workflow sieht folgendermaßen aus:
 
- ![WF 4-Korrelationsbereich](../../../docs/framework/windows-workflow-foundation/media/correlationscopeworkflow.gif "CorrelationScopeWorkflow")
+ ![WF 4 Correlation Scope](../../../docs/framework/windows-workflow-foundation/media/correlationscopeworkflow.gif "CorrelationScopeWorkflow")
 
  Die <xref:System.ServiceModel.Activities.Receive>-Aktivität erstellt die Workflowinstanz.  Ein in der empfangenen Meldung übergebener Wert wird in der Antwortnachricht wiederholt.  Eine Sequenz, die der Antwort folgt, enthält den Rest des Workflows.  Im oben erwähnten Fall wird nur eine Kommentaraktivität angezeigt.  Die Anzahl der Kommentaraktivitäten wird geändert, um Workflowkomplexität zu simulieren.  Eine Kommentaraktivität entspricht einer WF3-<xref:System.Workflow.Activities.CodeActivity>, die keine Arbeit erledigt. Weitere Informationen zur kommentaraktivität finden Sie im Abschnitt "Leistungsvergleiche auf Komponentenebene" weiter oben in diesem Artikel.
 
@@ -233,7 +233,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 #### <a name="test-setup"></a>Testsetup
  ![Korrelationsdurchsatz](../../../docs/framework/windows-workflow-foundation/media/correlationthroughputworkflow.gif "CorrelationThroughputWorkflow")
 
- Der oben gezeigte Workflow entspricht dem im Abschnitt "Persistenz" verwendet.  Für die Korrelationstests ohne Persistenz ist kein Persistenzanbieter in der Laufzeit installiert.  Korrelation tritt an zwei Stellen auf: CreateOrder und CompleteOrder.
+ Der oben gezeigte Workflow entspricht dem im Abschnitt "Persistenz" verwendet.  Für die Korrelationstests ohne Persistenz ist kein Persistenzanbieter in der Laufzeit installiert.  Korrelation tritt an zwei Stellen: CreateOrder und CompleteOrder.
 
 #### <a name="test-results"></a>Testergebnisse
  ![Korrelationsdurchsatz](../../../docs/framework/windows-workflow-foundation/media/correlationthroughputgraph.gif "CorrelationThroughputGraph")
@@ -273,7 +273,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  Ein entsprechender Workflow wurde für WF3 erstellt. Der WF3-Designer zeigt den ganzen Workflow im Entwurfsbereich anstelle der Schachtelung an. Er ist daher für eine Anzeige in diesem Thema zu groß. Ein Ausschnitt des Workflows wird unten dargestellt.
 
- ![WF3-Workflow](../../../docs/framework/windows-workflow-foundation/media/wf3workflow.gif "WF3Workflow")
+ ![WF3 Workflow](../../../docs/framework/windows-workflow-foundation/media/wf3workflow.gif "WF3Workflow")
 
  Ein anderer Workflow, der Teil dieses Tests ist, verwendet 100 geschachtelte Sequenzen, um die Schachtelung im Extremfall zu üben.  In der innersten Sequenz befindet sich ein einzelner `Comment` oder eine einzelne <xref:System.Workflow.Activities.CodeActivity>.
 
@@ -424,7 +424,7 @@ public class Workflow1 : Activity
 
  WF4 verfügt über keinen SQL-Nachverfolgungsanbieter, AppFabric jedoch schon.  Der SQL-Nachverfolgungsansatz von AppFabric ist, ETW-Ereignisse mit einem Windows-Dienst zu abonnieren, der die Ereignisse stapelweise verarbeitet und sie in eine SQL-Tabelle schreibt, die für schnelle Einfügungen entworfen wurde.  Ein separater Auftrag entnimmt die Daten aus dieser Tabelle und ordnet sie in Berichtstabellen neu an, die auf dem AppFabric-Dashboard angezeigt werden können.  Dies bedeutet, dass ein Batch von Nachverfolgungsereignissen unabhängig vom Workflow behandelt wird, von dem er stammt, und daher vor dem Aufzeichnen nicht auf einen Persistenzpunkt warten muss.
 
- ETW-Ereignisse können mit Tools, wie z. B. logman oder xperf, aufgezeichnet werden.  Die kompakte ETL-Datei kann mit einem Tool wie xperfview angezeigt oder mit tracerpt in ein besser lesbares Format, wie z. B. XML, konvertiert werden.  In WF3 ist die einzige Option zum Abrufen von Nachverfolgungsereignissen ohne SQL-Datenbank das Erstellen eines benutzerdefinierten Überwachungsdiensts. Weitere Informationen zu ETW finden Sie unter [WCF-Dienste und Ereignisablaufverfolgung für Windows-Ereignis](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) und [Ereignisablaufverfolgung für Windows-Ereignis](https://msdn.microsoft.com/library/ff190903.aspx).
+ ETW-Ereignisse können mit Tools, wie z. B. logman oder xperf, aufgezeichnet werden.  Die kompakte ETL-Datei kann mit einem Tool wie xperfview angezeigt oder mit tracerpt in ein besser lesbares Format, wie z. B. XML, konvertiert werden.  In WF3 ist die einzige Option zum Abrufen von Nachverfolgungsereignissen ohne SQL-Datenbank das Erstellen eines benutzerdefinierten Überwachungsdiensts. Weitere Informationen zu ETW finden Sie unter [WCF-Dienste und Ereignisablaufverfolgung für Windows-Ereignis](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) und [Ereignisablaufverfolgung - Windows-Anwendungen](/windows/desktop/etw/event-tracing-portal).
 
  Die Aktivierung der Workflownachverfolgung wirkt sich unterschiedlich auf die Leistung aus.  Der folgende Vergleichstest verwendet das logman-Tool, um die ETW-Nachverfolgungsereignisse zu verarbeiten und sie in einer ETL-Datei aufzuzeichnen.  Die Kosten für die SQL-Nachverfolgung in AppFabric liegen außerhalb des Rahmens dieses Artikels.  Das grundlegende Nachverfolgungsprofil, das auch in AppFabric verwendet wurde, wird in diesem Vergleichstest angezeigt.  Ebenfalls enthalten sind die Kosten für die Nachverfolgung von Systemüberwachungsereignissen.  Diese Ereignisse sind für das Beheben von Problemen und Bestimmen des durchschnittlichen Durchsatzes des Systems hilfreich.
 

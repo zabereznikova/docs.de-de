@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, unmanaged
 - Windows Forms, interop
 ms.assetid: 81bc100c-fa49-4614-85a6-0f7ab59eac8a
-ms.openlocfilehash: bc0c848d1c92871dacab93497c674645f3ac83fe
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f54f039fd3477c380a2236a93ad8d80b4f7153b2
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742981"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441813"
 ---
 # <a name="windows-forms-and-unmanaged-applications"></a>Windows Forms und nicht verwaltete Anwendungen
 Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkungen mit nicht verwalteten Anwendungen zusammenarbeiten. In den folgenden Abschnitten werden die von Windows Forms-Anwendungen und -Steuerelementen unterstützten und nicht unterstützten Szenarien und Konfigurationen beschrieben.  
@@ -22,13 +22,13 @@ Windows Forms-Anwendungen und-Steuerelemente können mit einigen Einschränkunge
  [Übersicht über Windows Forms und nicht verwaltete Anwendungen](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications-overview.md)  
  Bietet allgemeine Informationen zur Verwendung und Implementierung von Windows Forms-Steuerelementen, die in nicht verwalteten Anwendungen verwendet werden können.  
   
- [Gewusst wie: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
+ [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
  Enthält ein Codebeispiel für die Verwendung der <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>-Methode zum Ausführen eines Windows Forms in einer nicht verwalteten Anwendung.  
   
- [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen jedes Windows Forms in einem eigenen Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
+ [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen jedes Windows-Formular in einem eigenen Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
  Enthält ein Codebeispiel für die Ausführung eines Windows Forms in einem eigenen Thread.  
   
- Siehe auch [Exemplarische Vorgehensweise: unterstützen von COM-Interop durch Anzeigen jedes Windows Forms in einem eigenen Thread](https://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
+ Siehe auch [Exemplarische Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen jedes Windows-Formular in einem eigenen Thread](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100)).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>  

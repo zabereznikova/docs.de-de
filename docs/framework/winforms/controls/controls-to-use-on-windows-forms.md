@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 18c3cf638934551ba40306d98b3bf28dfdd03463
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: bd8dd1e7a01378ce3eb278993321fd5063715e7c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041143"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442866"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Steuerelemente für Windows Forms
 Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Komponenten, die in Windows Forms verwendet werden können. Zusätzlich zu den in diesem Abschnitt behandelten Windows Forms-Steuerelementen können Windows Forms auch ActiveX- und benutzerdefinierte Steuerelemente hinzugefügt werden. Wenn Sie die von Ihnen benötigten Steuerelemente hier nicht finden, können Sie auch eigene erstellen. Ausführliche Informationen finden Sie unter [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Weitere Informationen zum Auswählen des benötigten Steuerelements finden Sie unter [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
@@ -228,8 +228,8 @@ Im Folgenden finden Sie eine alphabetische Auflistung von Steuerelementen und Ko
  [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  Enthält Links zu Schrittfolgen, Empfehlungen für die Erstellung von Steuerelementen sowie weitere Informationen zur Erstellung eigener Steuerelemente.  
   
- [In zahlreichen Sprachen und Bibliotheken verglichene Steuerelemente und programmierbare Objekte](https://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [In zahlreichen Sprachen und Bibliotheken verglichene Steuerelemente und programmierbare Objekte](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
  Enthält eine Tabelle, in der Steuerelemente in Visual Basic 6.0 dem entsprechenden Steuerelement in [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)] zugeordnet werden. Beachten Sie, dass Steuerelemente jetzt Klassen in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] entsprechen.  
   
- [Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [Vorgehensweise: Hinzufügen von ActiveX-Steuerelemente zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
  Beschreibt die Verwendung von ActiveX-Steuerelementen in Windows Forms.

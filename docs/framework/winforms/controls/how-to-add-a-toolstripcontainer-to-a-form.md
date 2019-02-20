@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 9aace854a9583268ef7aac6ac1f57534cfdfe1e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47279c5e8fa24accca36280f9a97200982a1451a
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515520"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441800"
 ---
 # <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Vorgehensweise: Hinzufügen von ToolStripContainer zu einem Formular
 Sie können einer Windows Form programmgesteuert einen <xref:System.Windows.Forms.ToolStripContainer> hinzufügen und diesen mit Steuerelementen füllen.  
@@ -30,7 +30,7 @@ Sie können einer Windows Form programmgesteuert einen <xref:System.Windows.Form
   
 -   Verweise auf die Assemblys "System.Drawing", "System.Text" und "System.Windows.Forms".  
   
- Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  Weitere Information finden Sie unter [How to: Kompilieren und Ausführen einer vollständigen Windows Forms-Codebeispiels mit Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)) oder [Dialogfeld "ToolStripContainer-Aufgaben"](https://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
+ Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.ToolStripContainer>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: d90c2d7f8be2448e1d4f10410b27bc5132cdb16a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e42a4f63245c16bddc219f6fff8205121f6d705c
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653826"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443223"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Zugreifen auf Frames im verwalteten HTML-Dokumentobjektmodell
 Einige HTML-Dokumente bestehen aus *Frames*, oder Windows, die ihre eigenen HTML-Dokumente enthalten kann. Mit Frames ist es ganz einfach, HTML-Seiten zu erstellen, auf denen ein oder mehrere Teile statisch bleiben, wie die Navigationsleiste, während sich der Inhalt der anderen Frames permanent ändert.  
@@ -38,8 +38,6 @@ Einige HTML-Dokumente bestehen aus *Frames*, oder Windows, die ihre eigenen HTML
   
  Diese Regel gilt auch für Fenster, die sie mit den Methoden <xref:System.Windows.Forms.HtmlWindow.Open%2A> und <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> öffnen. Wenn sich das von Ihnen geöffnete Fenster in einer anderen Domäne als die Seite befindet, die im <xref:System.Windows.Forms.WebBrowser>-Steuerelement gehostet wird, können Sie dieses Fenster nicht verschieben und dessen Inhalt nicht überprüfen. Diese Einschränkungen gelten auch, wenn Sie ein <xref:System.Windows.Forms.WebBrowser>-Steuerelement zum Anzeigen einer Website verwenden, die sich von der Website unterscheidet, die zum Bereitstellen Ihrer Windows Forms-basierten Anwendung verwendet wird. Wenn Sie die [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]-Bereitstellungstechnologie zum Installieren Ihrer Website auf Website A und dann <xref:System.Windows.Forms.WebBrowser> zum Anzeigen von Website B verwenden, können Sie auf die Daten von Website B nicht zugreifen.  
   
- Weitere Informationen zu Cross-Site-scripting, finden Sie unter [About Cross-Frame Scripting and Security](https://msdn.microsoft.com/library/ms533028.aspx).  
-  
 ## <a name="see-also"></a>Siehe auch
-- [FRAME-Element &#124; frame-Objekt](https://msdn.microsoft.com/library/ms535250.aspx)
+- [\<Frame >-Element](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
 - [Verwenden des verwalteten HTML-Dokumentobjektmodells](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

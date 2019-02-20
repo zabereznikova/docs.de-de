@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 9285f68521770e0dd4fbc8d6f9aa006eccc502c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533136"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442723"
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
 In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert eine Gruppe von Nachrichten in einer Konversation. WCF--Sitzungen sind anders als das Session-Objekt, das in verfügbar [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Anwendungen, unterstützen andere Verhaltensweisen und auf andere Weise gesteuert werden. Dieses Thema beschreibt die Funktionen, mit denen Sitzungen in WCF-Anwendungen und deren Verwendung.  
@@ -137,7 +137,7 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
  Zwischen der <xref:System.ServiceModel.SessionMode> -Enumeration in einem Vertrag und der <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> -Eigenschaft gibt es eine Interaktion, durch die die Zuordnung zwischen Kanälen und bestimmten Dienstobjekten gesteuert wird. Weitere Informationen finden Sie unter [Sessions, Instancing und Parallelität](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Freigeben von InstanceContext-Objekten  
- Sie können auch steuern, welcher sitzungsbasierte Kanal oder Aufruf welchem <xref:System.ServiceModel.InstanceContext> -Objekt zugeordnet wird, indem Sie diese Zuordnung selbst vornehmen. Ein vollständiges Beispiel finden Sie unter [InstanceContextSharing](https://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+ Sie können auch steuern, welcher sitzungsbasierte Kanal oder Aufruf welchem <xref:System.ServiceModel.InstanceContext> -Objekt zugeordnet wird, indem Sie diese Zuordnung selbst vornehmen. 
   
 ## <a name="sessions-and-streaming"></a>Sitzungen und Streaming  
  Wenn Sie eine große Menge der zu übertragenden Daten verfügen, ist der streamingübertragungsmodus in WCF eine praktische Alternative zum Standardverhalten von Puffern und Verarbeiten von Nachrichten im Arbeitsspeicher in ihrer Gesamtheit an. Möglicherweise tritt beim Streaming von Aufrufen mit einer sitzungsbasierten Bindung ein unerwartetes Verhalten auf. Alle Streamingaufrufe erfolgen über einen einzigen Kanal (den Datagrammkanal), der keine Sitzungen unterstützt, selbst wenn die verwendete Bindung für die Verwendung von Sitzungen konfiguriert ist. Wenn mehrere Clients über eine sitzungsbasierte Bindung Streamingaufrufe an das gleiche Dienstobjekt senden und der Parallelitätsmodus des Dienstobjekts auf "single" und sein Instanzkontextmodus auf `PerSession`festgelegt ist, müssen alle Aufrufe den Datagrammkanal passieren, sodass immer nur jeweils ein Aufruf verarbeitet wird. Bei einem oder mehreren Clients kommt es dabei unter Umständen zu einem Timeout. Sie können dieses Problem umgehen, indem Sie entweder den `InstanceContextMode` des Dienstobjekts auf `PerCall` oder die Parallelität auf "multiple" festlegen.  
