@@ -103,7 +103,7 @@ Die folgenden Compileroptionen sind nach Kategorien sortiert. Eine alphabetische
 |[-subsystemversion](subsystemversion-compiler-option.md)|Gibt die mindestens erforderliche Version des Subsystems an, die die generierte ausführbare Datei verwenden kann.|
 |[/unsafe](unsafe-compiler-option.md)|Aktiviert die Kompilierung von Code, der das Schlüsselwort [unsafe](../../../csharp/language-reference/keywords/unsafe.md) verwendet.|
 |[-utf8output](utf8output-compiler-option.md)|Zeigt die Compilerausgabe mit UTF-8-Codierung an.|
-|-parallel[+|-]|Gibt an, ob parallele Builds (+) verwendet werden sollen.|
+|-parallel[+&#124;-]|Gibt an, ob parallele Builds (+) verwendet werden sollen.|
 |-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte: SHA-1 (Standard) oder SHA-256.|
 
 ## <a name="obsolete-options"></a>Veraltete Optionen
