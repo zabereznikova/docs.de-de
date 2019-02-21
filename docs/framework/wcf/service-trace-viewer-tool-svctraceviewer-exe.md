@@ -2,12 +2,12 @@
 title: Service Trace Viewer-Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: f5401129601f84a5575a544490244f81b1e759ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510597"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442892"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer-Tool (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die Analyse der diagnoseablaufverfolgungen, die von WCF generiert werden. Service Trace Viewer bietet eine Möglichkeit, ganz einfach zusammenführen, anzeigen und Filtern von Ablaufverfolgungsnachrichten im Protokoll, damit können Sie diagnostizieren, reparieren und prüfen die WCF-Dienstprobleme.  
@@ -73,7 +73,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die
 >   
 >  /register: Registriert die Zuweisung der Dateierweiterungen ".svclog" und ".stvproj" in SvcTraceViewer.exe.  
 >   
->  /unregister: Hebt die Registrierung der zugewiesenen Dateierweiterungen „.svclog“ und „.stvproj“ in SvcTraceViewer.exe auf.  
+>  /unregister: Hebt die Registrierung der zugewiesenen Dateierweiterungen ".svclog" und ".stvproj" in SvcTraceViewer.exe auf.  
   
 1.  Service Trace Viewer starten, klicken Sie auf **Datei** und zeigen Sie dann auf **öffnen**. Navigieren Sie zu dem Speicherort, an dem die Ablaufverfolgungsdateien gespeichert sind.  
   
@@ -269,7 +269,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die
 >  Sobald ein Filter mit dem Vorlagen-Assistenten erstellt wurde, kann er nur manuell bearbeitet werden. Es ist nicht möglich, den Assistenten für einen Filter zu aktivieren, der bereits erstellt wurde. Darüber hinaus werden die Bedingungen eines XPath-Filters, der mit dem Vorlagen-Assistenten erstellt wurde, mit dem OR-Operator kombiniert. Wenn ein AND-Vorgang benötigt wird, können Sie den Filterausdruck bearbeiten, nachdem er erstellt wurde.  
   
 ###### <a name="creating-a-custom-filter-manually"></a>Manuelles Erstellen eines benutzerdefinierten Filters  
- Das Menü „Benutzerdefinierte Filter“ ermöglicht Ihnen, XPath-Filter manuell einzugeben.  
+ Das Menü Benutzerdefinierte Filter ermöglicht Ihnen, XPath-Filter manuell einzugeben.  
   
 1.  Klicken Sie im Menü Ansicht auf die **benutzerdefinierte Filter** Menüelement.  
   
@@ -377,12 +377,12 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die
 ### <a name="loading-large-trace-files"></a>Laden von großen Ablaufverfolgungsdateien  
  Ablaufverfolgungsdateien können sehr groß sein. Wenn Sie die Ablaufverfolgung auf der Ebene "Ausführlich", die Ergebnisdatei der Ablaufverfolgung, für die Ausführung von wenigen Minuten auf einfache Weise aktivieren werden Sie beispielsweise mehrere hundert Megabyte oder mehr umfassen, je nach netzwerkgeschwindigkeit und Kommunikationsmuster.  
   
- Wenn Sie eine sehr große Ablaufverfolgungsdatei in Service Trace Viewer öffnen, kann sich dies negativ auf die Systemleistung auswirken. Die Ladegeschwindigkeit und die Antwortzeit nach dem Laden können langsam sein. Die tatsächliche Geschwindigkeit unterscheidet sich bisweilen, abhängig von der Hardwarekonfiguration. Bei den meisten PCs wirkt sich das Laden einer Ablaufverfolgungsdatei, die größer als 200&#160;MB ist, deutlich auf die Leistung aus. Für Ablaufverfolgungsdateien, die größer als 1 GB sind, verwendet das Tool möglicherweise den gesamten verfügbaren Arbeitsspeicher oder reagiert für einen sehr langen Zeitraum nicht mehr.  
+ Wenn Sie eine sehr große Ablaufverfolgungsdatei in Service Trace Viewer öffnen, kann sich dies negativ auf die Systemleistung auswirken. Die Ladegeschwindigkeit und die Antwortzeit nach dem Laden können langsam sein. Die tatsächliche Geschwindigkeit unterscheidet sich bisweilen, abhängig von der Hardwarekonfiguration. Bei den meisten PCs wirkt sich das Laden einer Ablaufverfolgungsdatei, die größer als 200&amp;#160;MB ist, deutlich auf die Leistung aus. Für Ablaufverfolgungsdateien, die größer als 1 GB sind, verwendet das Tool möglicherweise den gesamten verfügbaren Arbeitsspeicher oder reagiert für einen sehr langen Zeitraum nicht mehr.  
   
- Um das verlangsamte laden und Antwortzeit bei der Analyse von großen Ablaufverfolgungsdateien zu vermeiden, stellt Service Trace Viewer eine Funktion, die Bezeichnung "Teilweises laden", die nur einen kleinen Teil der Ablaufverfolgung zu einem Zeitpunkt lädt. Sie verfügen zum Beispiel über eine Ablaufverfolgungsdatei mit mehr als 1&#160;GB, die mehrere Tage lang auf dem Server läuft. Wenn einige Fehler aufgetreten sind und Sie die Ablaufverfolgung analysieren möchten, müssen Sie nicht die gesamte Ablaufverfolgungsdatei öffnen. Stattdessen können Sie die Ablaufverfolgungen eines bestimmten Zeitraums, in dem der Fehler möglicherweise aufgetreten ist, laden. Da der Umfang geringer ist, kann das Service Trace Viewer-Tool die Datei schneller laden, und Sie können die Fehler anhand eines kleineren Datensatzes ermitteln.  
+ Um das verlangsamte laden und Antwortzeit bei der Analyse von großen Ablaufverfolgungsdateien zu vermeiden, stellt Service Trace Viewer eine Funktion, die Bezeichnung "Teilweises laden", die nur einen kleinen Teil der Ablaufverfolgung zu einem Zeitpunkt lädt. Sie verfügen zum Beispiel über eine Ablaufverfolgungsdatei mit mehr als 1&amp;#160;GB, die mehrere Tage lang auf dem Server läuft. Wenn einige Fehler aufgetreten sind und Sie die Ablaufverfolgung analysieren möchten, müssen Sie nicht die gesamte Ablaufverfolgungsdatei öffnen. Stattdessen können Sie die Ablaufverfolgungen eines bestimmten Zeitraums, in dem der Fehler möglicherweise aufgetreten ist, laden. Da der Umfang geringer ist, kann das Service Trace Viewer-Tool die Datei schneller laden, und Sie können die Fehler anhand eines kleineren Datensatzes ermitteln.  
   
 #### <a name="enabling-partial-loading"></a>Aktivieren des teilweisen Ladens  
- Sie müssen das teilweise Laden nicht manuell aktivieren. Wenn die Gesamtgröße der Ablaufverfolgungsdatei(en), die Sie laden möchten, 40&#160;MB überschreitet, zeigt Service Trace Viewer das Dialogfeld Teilweises Laden automatisch an, sodass Sie den Teil auswählen können, den Sie laden möchten.  
+ Sie müssen das teilweise Laden nicht manuell aktivieren. Wenn die Gesamtgröße der Ablaufverfolgungsdatei(en), die Sie laden möchten, 40&amp;#160;MB überschreitet, zeigt Service Trace Viewer das Dialogfeld Teilweises Laden automatisch an, sodass Sie den Teil auswählen können, den Sie laden möchten.  
   
 > [!NOTE]
 >  Da Ablaufverfolgungen möglicherweise nicht gleich im Zeitraum verteilt sind, ist die Länge des im Dialogfeld Teilweises Laden angegebenen Zeitraums möglicherweise nicht proportional zur angezeigten Ladegröße. Die tatsächliche Ladegröße kann kleiner als die im Dialogfeld Teilweises Laden geschätzte Größe sein.  
@@ -435,7 +435,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die
 |----------|-----------------|  
 |![Umgebungsaktivität](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Umgebungsaktivität: Eine Aktivität, die erstellt wird, öffnet oder schließt eines WCF-Host oder -Clients. Fehler, die während dieser Phasen aufgetreten sind, werden in dieser Aktivität angezeigt.|  
 |![Listen activity](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Listen Sie-Aktivität: Eine Aktivität, die mit einem Listener zusammenhängende ablaufverfolgungen protokolliert. In dieser Aktivität werden Listenerinformationen und Verbindungsanforderungen angezeigt.|  
-|![Bytes empfangen-Aktivität](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Empfangen Sie Bytes-Aktivität: Eine Aktivität, die alle ablaufverfolgungen, die im Zusammenhang mit der empfangene Bytes für eine Verbindung zwischen zwei Endpunkten gruppiert. Diese Aktivität ist wesentlich beim Korrelieren von Transportaktivitäten, die ihre Aktivitäts-ID propagieren, wie z.&#160;B. http.sys. Verbindungsfehler, wie z.&#160;B. Abbrüche, treten in dieser Aktivität auf.|  
+|![Bytes empfangen-Aktivität](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Empfangen Sie Bytes-Aktivität: Eine Aktivität, die alle ablaufverfolgungen, die im Zusammenhang mit der empfangene Bytes für eine Verbindung zwischen zwei Endpunkten gruppiert. Diese Aktivität ist wesentlich beim Korrelieren von Transportaktivitäten, die ihre Aktivitäts-ID propagieren, wie z.&amp;#160;B. http.sys. Verbindungsfehler, wie z.&amp;#160;B. Abbrüche, treten in dieser Aktivität auf.|  
 |![Nachricht verarbeiten-Aktivität](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "Wcfc_ExecutionActivityIconc")|Verarbeiten Sie Nachricht-Aktivität: Eine Aktivität, die im Zusammenhang mit der zum Erstellen einer WCF-Nachricht ablaufverfolgungen gruppiert. Fehler aufgrund eines ungültigen Umschlags oder einer falsch formatierten Nachricht werden in dieser Aktivität angezeigt. In dieser Aktivität können Nachrichtenheader geprüft werden, um zu ermitteln, ob eine Aktivitäts-ID vom Aufrufer propagiert wurde. Wenn dies zutrifft, kann beim Übertragen an die Aktion verarbeiten-Aktivität (das nächste Symbol) dieser Aktivität auch die propagierte Aktivitäts-ID für die Korrelation zwischen dem Aufrufer und den Ablaufverfolgungen des Aufrufenden zugewiesen werden.|  
 |![Nachrichtenprotokollierung-Ablaufverfolgung](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Verarbeiten Sie Aktion-Aktivität: Eine Aktivität, die alle ablaufverfolgungen, die im Zusammenhang mit einem WCF-Anforderung über zwei Endpunkte hinweg gruppiert. Wenn `propagateActivity` auf beiden Endpunkten in der Konfiguration auf `true` festgelegt ist, werden alle Ablaufverfolgungen für die direkte Korrelation in eine Aktivität zusammengeführt. Einige Aktivitäten enthalten Fehler, die bei der Transport- oder Sicherheitsverarbeitung auftreten und sich bis hin zu Benutzercodegrenzen und zurück erstrecken (sofern eine Antwort vorhanden ist).|  
 |![Nachricht verarbeiten-Aktivität](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "Wcfc_ExecutionActivityIconc")|Führen Sie die Benutzer Codeaktivität: Eine Aktivität, die Benutzer Code ablaufverfolgungen zur Verarbeitung einer Anforderung gruppiert.|  
@@ -443,7 +443,7 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die
 ## <a name="troubleshooting"></a>Problembehandlung  
  Wenn Sie nicht über die Berechtigung zum Schreiben in die Registrierung verfügen, erhalten Sie die folgende Fehlermeldung angezeigt, die "Microsoft Service Trace Viewer wurde nicht mit dem System registriert" bei Verwendung der "`svctraceviewer /register`" Befehl aus, um das Tool zu registrieren. Ist dies der Fall, sollten Sie sich über ein Konto anmelden, das Schreibzugriff auf die Registrierung bietet.  
   
- Außerdem schreibt das Service Trace Viewer-Tool einige Einstellungen (z.&#160;B. benutzerdefinierte Filter und Filteroptionen) in die SvcTraceViewer.exe.settings-Datei im Assemblyordner. Wenn Sie keine Leseberechtigungen für die Datei haben, können Sie das Tool starten, aber die Einstellungen nicht laden.  
+ Außerdem schreibt das Service Trace Viewer-Tool einige Einstellungen (z.&amp;#160;B. benutzerdefinierte Filter und Filteroptionen) in die SvcTraceViewer.exe.settings-Datei im Assemblyordner. Wenn Sie keine Leseberechtigungen für die Datei haben, können Sie das Tool starten, aber die Einstellungen nicht laden.  
   
  Wenn Sie die Fehlermeldung "Unbekannter Fehler bei der Verarbeitung von mindestens einer Ablaufverfolgung" beim Öffnen der ETL-Datei erhalten, bedeutet dies, dass das Format der ETL-Datei ungültig ist.  
   
@@ -452,4 +452,4 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die
 ## <a name="see-also"></a>Siehe auch
 - [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Konfigurieren der Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Aktivitätsablaufverfolgung und Weitergabe für End-To-End-Ablaufverfolgungskorrelation](https://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)
+- [End-to-End-Ablaufverfolgung](./diagnostics/tracing/end-to-end-tracing.md)
