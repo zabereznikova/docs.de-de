@@ -3,19 +3,13 @@ title: Neues in .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/10/2018
 dev_langs:
-- csharp
-- vb
+  - csharp
+  - vb
 helpviewer_keywords:
-- what's new [.NET Framework]
+  - 'what''s new [.NET Framework]'
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de919789c369c66c52a137bde811c56bf07a6ec9
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54416026"
 ---
 # Neues in .NET Framework <a name="introduction"></a>
 
@@ -612,7 +606,7 @@ Sie haben nun die Möglichkeit, einen auf [-Windows-Nachrichten](https://docs.mi
 
 **Neue Implementierung für Druck-APIs von WPF**
 
-Die Druck-APIs von WPF in der <xref:System.Printing.PrintQueue?displayProperty=nameWithType>-Klasse rufen die Windows-API [PrintDocumentPackage](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx) anstelle der veralteten [XPS-Druck-API](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx) auf. Die Auswirkung dieser Änderung auf die Anwendungskompatibilität finden Sie unter [Änderungen der Neuzuweisungen in .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Die Druck-APIs von WPF in der <xref:System.Printing.PrintQueue?displayProperty=nameWithType>-Klasse rufen die Windows-API [PrintDocumentPackage](/windows/desktop/printdocs/tailored-app-printing-api) anstelle der veralteten [XPS-Druck-API](/windows/desktop/printdocs/xps-printing) auf. Die Auswirkung dieser Änderung auf die Anwendungskompatibilität finden Sie unter [Änderungen der Neuzuweisungen in .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="v462" />
 
@@ -838,7 +832,8 @@ End Function
 
  **SignedXml-Unterstützung des Hashing von SHA-2**
 
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] fügt Unterstützung für die <xref:System.Security.Cryptography.Xml.SignedXml>-Klasse für die Signaturmethoden RSA-SHA256, RSA-SHA384 und RSA-SHA512 PKCS#1 und für die Referenzalgorithmen SHA256, SHA384 sowie SHA512 hinzu.
+ 
+  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] fügt Unterstützung für die <xref:System.Security.Cryptography.Xml.SignedXml>-Klasse für die Signaturmethoden RSA-SHA256, RSA-SHA384 und RSA-SHA512 PKCS#1 und für die Referenzalgorithmen SHA256, SHA384 sowie SHA512 hinzu.
 
  Die URI-Konstanten werden alle für <xref:System.Security.Cryptography.Xml.SignedXml> verfügbar gemacht:
 
@@ -1168,7 +1163,7 @@ SqlClient ermöglicht jetzt automatisch schnellere Verbindungen mit einer Always
 
 **Beispiele**
 
- Auf MSDN finden sich eine Reihe von [WPF-Beispielen](https://msdn.microsoft.com/library/ms771633.aspx). Mehr als 200 der bekanntesten Beispiele werden (basierend auf ihrer Verwendung) in ein [Open Source-GitHub-Repository](https://github.com/Microsoft/WPF-Samples) verschoben. Helfen Sie uns bei der Verbesserung unserer Beispiele, indem Sie uns einen Pull Request senden oder ein [GitHub-Problem](https://github.com/Microsoft/WPF-Samples/issues) eröffnen.
+ Sie finden mehrere WPF-Beispiele im GitHub-Repository unter [Microsoft/WPF-Samples](https://github.com/Microsoft/WPF-Samples). Helfen Sie uns bei der Verbesserung unserer Beispiele, indem Sie uns einen Pull Request senden oder ein [GitHub-Problem](https://github.com/Microsoft/WPF-Samples/issues) eröffnen.
 
  **DirectX-Erweiterungen**
 
@@ -1316,7 +1311,7 @@ Die nicht verwaltete Profilerstellungs-API wurde wie folgt erweitert:
 
     - **Kryptografieupdates**
 
-         Die <xref:System.Security.Cryptography?displayProperty=nameWithType>-API wird aktualisiert, um die [Kryptografie-APIs von Windows CNG](/windows/desktop/SecCNG/cng-reference) zu unterstützen. Frühere Versionen von .NET Framework basierten vollständig auf einer [früheren Version der Kryptografie-APIs](/windows/desktop/SecCrypto/cryptography-portal) von Windows als Grundlage für die <xref:System.Security.Cryptography?displayProperty=nameWithType>-Implementierung. Benutzer forderten die Unterstützung der CNG-API, da diese [moderne Kryptografiealgorithmen](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support) unterstützt, die für bestimmte Kategorien von Apps wichtig sind.
+         Die <xref:System.Security.Cryptography?displayProperty=nameWithType>-API wird aktualisiert, um die [Kryptografie-APIs von Windows CNG](/windows/desktop/SecCNG/cng-reference) zu unterstützen. Frühere Versionen von .NET Framework basierten vollständig auf einer [früheren Version der Kryptografie-APIs](/windows/desktop/SecCrypto/cryptography-portal) von Windows als Grundlage für die <xref:System.Security.Cryptography?displayProperty=nameWithType>-Implementierung. Benutzer forderten die Unterstützung der CNG-API, da diese [moderne Kryptografiealgorithmen](/windows/desktop/SecCNG/cng-features#suite-b-support) unterstützt, die für bestimmte Kategorien von Apps wichtig sind.
 
          .NET Framework 4.6 umfasst die folgenden neuen Erweiterungen, um die Kryptografie-API von Windows CNG zu unterstützen:
 
@@ -1765,7 +1760,7 @@ Die nicht verwaltete Profilerstellungs-API wurde wie folgt erweitert:
 
 In ASP.NET 4.5 und 4.5.1 wurden die Modellbindung für Webformulare, WebSocket-Unterstützung, asynchrone Handler, Leistungserweiterungen und viele weitere Funktionen hinzugefügt. Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-- [ASP.NET 4.5 and Visual Studio 2012 (ASP.NET 4.5 und Visual Studio 2012)](https://msdn.microsoft.com/library/hh420390(v=vs.110).aspx)
+- [ASP.NET 4.5 and Visual Studio 2012 (ASP.NET 4.5 und Visual Studio 2012)](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
 - [ASP.NET and Web Tools für Visual Studio 2013 – Anmerkungen zu dieser Version](/aspnet/visual-studio/overview/2013/release-notes)
 
