@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: fa9f35fd5ecd1c6761f363ea2a1e1a67996ecb77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 042861b2d79d0b638600a5463673fb922f3b4881
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543525"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664392"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Exemplarische Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet
 Wenn Sie einen Vorgang, der viel Zeit in Anspruch nehmen wird, und Sie nicht Ihre Benutzeroberfläche (UI) nicht mehr reagiert möchten oder "hängen", Sie können die <xref:System.ComponentModel.BackgroundWorker> Klasse, um den Vorgang in einem anderen Thread auszuführen.  
@@ -57,7 +57,7 @@ Wenn Sie einen Vorgang, der viel Zeit in Anspruch nehmen wird, und Sie nicht Ihr
   
 5.  Benennen Sie das erste <xref:System.Windows.Forms.Button> Steuerelement `startAsyncButton` und legen Sie die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft `Start Async`. Benennen Sie das zweite <xref:System.Windows.Forms.Button> Steuerelement `cancelAsyncButton`, und legen Sie die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft `Cancel Async`. Legen Sie dessen <xref:System.Windows.Forms.Control.Enabled%2A> Eigenschaft `false`.  
   
-6.  Erstellen Sie einen Ereignishandler für beide die <xref:System.Windows.Forms.Button> Steuerelemente <xref:System.Windows.Forms.Control.Click> Ereignisse. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern mithilfe des Designers](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+6.  Erstellen Sie einen Ereignishandler für beide die <xref:System.Windows.Forms.Button> Steuerelemente <xref:System.Windows.Forms.Control.Click> Ereignisse. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern mithilfe des Designers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
 7.  Ziehen Sie eine <xref:System.Windows.Forms.Label> -Steuerelement aus der **Toolbox** auf das Formular und benennen Sie sie `resultLabel`.  
   
@@ -75,7 +75,7 @@ Wenn Sie einen Vorgang, der viel Zeit in Anspruch nehmen wird, und Sie nicht Ihr
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>So implementieren Sie asynchrone Ereignishandler  
   
-1.  In der **Eigenschaften** Fenster mit den <xref:System.ComponentModel.BackgroundWorker> -Komponente noch ausgewählt ist, klicken Sie auf die **Ereignisse** Schaltfläche. Doppelklicken Sie auf die <xref:System.ComponentModel.BackgroundWorker.DoWork> und <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> Ereignisse an den Ereignishandler zu erstellen. Weitere Informationen zur Verwendung von Ereignishandlern finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern mithilfe des Designers](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2).  
+1.  In der **Eigenschaften** Fenster mit den <xref:System.ComponentModel.BackgroundWorker> -Komponente noch ausgewählt ist, klicken Sie auf die **Ereignisse** Schaltfläche. Doppelklicken Sie auf die <xref:System.ComponentModel.BackgroundWorker.DoWork> und <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> Ereignisse an den Ereignishandler zu erstellen. Weitere Informationen zur Verwendung von Ereignishandlern finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern mithilfe des Designers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).  
   
 2.  Erstellen Sie im Formular eine neue Methode namens `ComputeFibonacci`. Diese Methode führt die eigentliche Arbeit aus und wird im Hintergrund ausgeführt. Dieser Code veranschaulicht die rekursive Umsetzung des Fibonacci-Algorithmus, der deutlich ineffizient ist und wesentlich mehr Zeit in Anspruch nimmt, große Zahlen abzuschließen. Er wird hier verwendet, um einen Vorgang zu veranschaulichen, der lange Verzögerungen in der Anwendung verursachen kann.  
   

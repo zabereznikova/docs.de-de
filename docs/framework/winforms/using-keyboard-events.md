@@ -9,15 +9,15 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 05bd896dded0bc67510ccc45d6fd91bdc1c069f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93bdcbc8b23813d3c8c80ca720c54928fca11aec
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614588"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665250"
 ---
 # <a name="using-keyboard-events"></a>Verwenden von Tastaturereignissen
-Die meisten Windows Forms-Programme verarbeiten Tastatureingaben, indem sie Tastaturereignisse behandeln. Dieses Thema enthält eine Übersicht über die Tastaturereignisse, einschließlich Details dazu, wann jedes Ereignis verwendet wird sowie zu den Daten, die für jedes Ereignis übergeben werden.  Siehe auch [Übersicht über Ereignishandler (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Events Overview (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
+Die meisten Windows Forms-Programme verarbeiten Tastatureingaben, indem sie Tastaturereignisse behandeln. Dieses Thema enthält eine Übersicht über die Tastaturereignisse, einschließlich Details dazu, wann jedes Ereignis verwendet wird sowie zu den Daten, die für jedes Ereignis übergeben werden.  Siehe auch [Übersicht über Ereignishandler (Windows Forms)](event-handlers-overview-windows-forms.md) und [Events Overview (Windows Forms)](events-overview-windows-forms.md).  
   
 ## <a name="keyboard-events"></a>Tastaturereignisse  
  Windows Forms stellen zwei Ereignisse bereit, die auftreten, wenn ein Benutzer eine Taste auf der Tastatur drückt, und ein Ereignis, wenn der Benutzer die Taste loslässt:  

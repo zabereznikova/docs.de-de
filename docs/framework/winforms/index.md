@@ -2,19 +2,13 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Windows Forms
-- user interface
-- user interface [Windows Forms], forms
+  - Windows Forms
+  - user interface
+  - 'user interface [Windows Forms], forms'
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: bb785860ed3cccbd93273805e5f2bada2f5f9c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542248"
 ---
 # <a name="windows-forms"></a>Windows Forms
-Da Formulare die Grundelemente einer Anwendung sind, ist es erforderlich, dass Sie sich deren Funktion und Entwurf genauer ansehen. Ein Formular ist letztlich eine leere Schiefertafel, die Sie als Entwickler mit Steuerelementen, um eine Benutzeroberfläche zu erstellen, und mit Code erweitern, um Daten zu bearbeiten. Zu diesem Zweck Visual Studio bietet Ihnen eine integrierte Entwicklungsumgebung (IDE), und die Zustellung erleichtern das Schreiben von Code sowie eine Vielzahl von Steuerelementen geschrieben wurden, mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Dadurch, dass Sie die Funktionalität dieser Steuerelemente mit eigenem Code ergänzen, können Sie einfach und schnell die Lösungen entwickeln, die Sie benötigen.  
+Da Formulare die Grundelemente einer Anwendung sind, ist es erforderlich, dass Sie sich deren Funktion und Entwurf genauer ansehen. Ein Formular ist letztlich eine leere Schiefertafel, die Sie als Entwickler mit Steuerelementen, um eine Benutzeroberfläche zu erstellen, und mit Code erweitern, um Daten zu bearbeiten. Zu diesem Zweck Visual Studio bietet eine integrierte Entwicklungsumgebung (IDE) zur Unterstützung beim Schreiben von Code sowie eine Vielzahl von Steuerelementen geschrieben wurden, mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Dadurch, dass Sie die Funktionalität dieser Steuerelemente mit eigenem Code ergänzen, können Sie einfach und schnell die Lösungen entwickeln, die Sie benötigen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erste Schritte mit Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
@@ -45,7 +39,7 @@ Da Formulare die Grundelemente einer Anwendung sind, ist es erforderlich, dass S
  [Windows Forms-Anwendungen](/visualstudio/debugger/debugging-preparation-windows-forms-applications)  
  Erläutert das Debuggen von Anwendungen, die mit der Projektvorlage für Windows-Anwendungen erstellt wurden, und erläutert, wie die Debug- und die Releasekonfiguration geändert werden.  
   
- [Bereitstellen von Anwendungen, Diensten und Komponenten](https://msdn.microsoft.com/library/wtzawcsz)  
+ [Ein erster Blick auf die Bereitstellung in Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components)  
  Beschreibt den Prozess, in dem Sie eine fertige Anwendung oder Komponente verteilen, damit sie auf anderen Computern installiert wird.  
   
  [Erstellen von Konsolenanwendungen](../../../docs/standard/building-console-apps.md)  

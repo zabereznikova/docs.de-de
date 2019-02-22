@@ -3,13 +3,13 @@ title: Orchestrieren von Microservices und Anwendungen mit mehreren Containern f
 description: Erfahren Sie, wie Sie eine app mithilfe von Azure Kubernetes Service bereitstellen.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 984a72c9ca8883b338d10fdaa826a6007580372d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/15/2019
+ms.openlocfilehash: 82a1cf7f3cc367bfb8b8f67a130600815f2a21c4
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221504"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664964"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Bereitstellen von Azure Kubernetes Service (AKS)
 
@@ -26,9 +26,9 @@ Voraussetzungen für die verfügen, bevor Sie mit AKS werden:
 > [!NOTE]
 > Um vollständige Informationen zu finden:
 >
-> Azure-Befehlszeilenschnittstelle: [https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest](https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest)
+> Azure-Befehlszeilenschnittstelle: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
 >
-> Windows-Subsystem für Linux: [https://docs.microsoft.com/windows/wsl/about](https://docs.microsoft.com/windows/wsl/about)
+> Windows-Subsystem für Linux: <https://docs.microsoft.com/windows/wsl/about>
 
 ## <a name="create-the-aks-environment-in-azure"></a>Erstellen Sie die AKS-Umgebung in Azure
 

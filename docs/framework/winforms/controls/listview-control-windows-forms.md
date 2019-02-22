@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 4472d2a46b27c75d06c5e4cd6fbab18842ed111c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591941"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664886"
 ---
 # <a name="listview-control-windows-forms"></a>ListView-Steuerelement (Windows Forms)
 Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen mit Symbolen angezeigt. Mit einer Listenansicht können Sie eine Benutzeroberfläche erstellen, deren Darstellung dem rechten Fensterbereich von Windows Explorer ähnelt.  
@@ -51,7 +51,7 @@ Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen 
  Diese Funktion ist nur unter [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] verfügbar.  
   
  [Vorgehensweise: Anzeigen einer Einfügemarke in ein ListView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
- Beschreibt die Implementierung von Benutzerfeedback für Drag & Drop-Vorgänge, bei denen eine Einfügemarke den Ablageort für jede Mauszeigerposition angibt.  
+ Beschreibt die Implementierung von Benutzerfeedback für Drag &amp; Drop-Vorgänge, bei denen eine Einfügemarke den Ablageort für jede Mauszeigerposition angibt.  
   
  Diese Funktion ist nur unter [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] verfügbar.  
   
@@ -70,7 +70,7 @@ Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen 
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.ListView>-Klasse  
- Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
@@ -81,9 +81,6 @@ Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen 
   
  [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Enthält Anweisungen zum Gestalten des Layouts eines Windows Forms mit mehreren Bereichen.  
-  
- [Windows XP-Features und Windows Forms-Steuerelemente](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- Erläutert die Nutzung Windows XP-spezifischer Funktionen, die sich auf das <xref:System.Windows.Forms.ListView>-Steuerelement beziehen.  
   
 ## <a name="see-also"></a>Siehe auch
 - [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

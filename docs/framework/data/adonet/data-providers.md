@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: c4b656d1ee7edcdc7e0e5cd41f7d57266ad5ad26
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0223e21702c2a108740341c331f93b85f271cf8a
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828357"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664808"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework-Datenanbieter
 Mithilfe eines [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters werden Verbindungen mit einer Datenbank hergestellt, Befehle ausgeführt und Ergebnisse abgerufen. Diese Ergebnisse werden entweder direkt verarbeitet und in einem <xref:System.Data.DataSet> -Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen, oder sie werden an eine andere Ebene übergeben. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter sind einfach. Sie erstellen eine Ebene von minimaler Größe zwischen der Datenquelle und dem Code und erhöhen so die Leistung, ohne auf Funktionalität verzichten zu müssen.  
@@ -155,7 +155,7 @@ using System.Data.OracleClient;
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für Oracle|Empfohlen für Anwendungen in der mittleren Ebene und Anwendungen mit nur einer Ebene, die Oracle-Datenquellen verwenden.|  
   
 ## <a name="entityclient-provider"></a>EntityClient-Anbieter  
- Der EntityClient-Anbieter wird für den Datenzugriff basierend auf einem Entity Data Model (EDM) verwendet. Im Gegensatz zu anderen .NET Framework-Datenanbietern interagiert er nicht direkt mit einer Datenquelle. Stattdessen kommuniziert er über Entity SQL mit dem zugrunde liegenden Datenanbieter. Weitere Informationen finden Sie unter [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ Der EntityClient-Anbieter wird für den Datenzugriff basierend auf einem Entity Data Model (EDM) verwendet. Im Gegensatz zu anderen .NET Framework-Datenanbietern interagiert er nicht direkt mit einer Datenquelle. Stattdessen kommuniziert er über Entity SQL mit dem zugrunde liegenden Datenanbieter. Weitere Informationen finden Sie unter [EntityClient-Anbieter für Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)

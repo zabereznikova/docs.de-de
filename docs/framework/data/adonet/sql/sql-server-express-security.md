@@ -2,12 +2,12 @@
 title: SQL Server Express-Sicherheit
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: a767f4c3f862b3b7442e1455bf086bdba7042062
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 73f94d25e90197ade5e27ab6d9ff13602a5c854f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091616"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664249"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express-Sicherheit
 Microsoft SQL Server Express Edition (SQL Server Express) basiert auf Microsoft SQL Server und unterstützt die meisten Funktionen der Datenbank-Engine. Entbehrliche Funktionen und die Netzwerkkonnektivität sind standardmäßig deaktiviert. Auf diese Weise wird böswilligen Angreifern weniger Angriffsfläche geboten.  
@@ -31,7 +31,6 @@ Microsoft SQL Server Express Edition (SQL Server Express) basiert auf Microsoft 
   
 |||  
 |-|-|  
-|[Herstellen einer Verbindung mit SQL Server Express](https://msdn.microsoft.com/library/ms165679.aspx) in SQL Server-Onlinedokumentation|Beschreibt die Verwendung von SQL Server Express Edition in einem Netzwerk.|  
 |[Microsoft SQL Server 2005 Express Edition Books Online](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Enthält die vollständige Dokumentation zu SQL Server 2005 Express Edition.|  
 |[Benutzerinstanzen für Nichtadministratoren](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) in SQL Server-Onlinedokumentation|Beschreibt das Erstellen und Bereitstellen von Benutzerinstanzen.|  
 |[SQL Server Express-Benutzerinstanzen](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Beschreibt Benutzerinstanzfunktionen in einer ADO.NET-Anwendung. Enthält Informationen zum Aktivieren von Benutzerinstanzen, zum Herstellen einer Verbindung mit einer Benutzerinstanz über eine <xref:System.Data.SqlClient.SqlConnection>, zur Lebensdauer von Benutzerinstanzen und zu Benutzerinstanzszenarien.|  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: fece6fda33ddb86e0aff0584af97ba085dfa9e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06f2320648bd8fee3465ea1672be886293667879
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506367"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664418"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl
 Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie dessen Laufzeitverhalten zu testen. Können einen separaten Windows-basiertes Anwendungsprojekt zu erstellen und das Steuerelement auf einem Testformular, aber dieses Verfahren ist unpraktisch. Eine schnellere und einfachere Möglichkeit ist die Verwendung der **UserControl-Testcontainer** von Visual Studio bereitgestellt. Dieser Testcontainer, die direkt über das Windows-Steuerelementbibliothek-Projekt wird gestartet.  
@@ -29,7 +29,7 @@ Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie d
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>So testen Sie das Laufzeitverhalten eines UserControl  
   
-1.  Erstellen Sie ein Windows-Steuerelementbibliothek-Projekt namens **TestContainerExample**. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Erstellen Sie ein Windows-Steuerelementbibliothek-Projekt namens **TestContainerExample**. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  In der **Windows Forms-Designer**, ziehen Sie eine <xref:System.Windows.Forms.Label> -Steuerelement aus der **Toolbox** auf der Entwurfsoberfläche des Steuerelements.  
   
@@ -41,7 +41,7 @@ Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie d
   
 6.  Schließen Sie den Testcontainer.  
   
-7.  Fügen Sie einen anderen benutzerdefinierten Steuerelements, sodass die **TestContainerExample** Projekt. Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Hinzufügen vorhandener Elemente zu einem Projekt](https://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Fügen Sie einen anderen benutzerdefinierten Steuerelements, sodass die **TestContainerExample** Projekt. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen vorhandener Elemente zu einem Projekt](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100)).  
   
 8.  In der **Windows Forms-Designer**, ziehen Sie eine <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf der Entwurfsoberfläche des Steuerelements.  
   
@@ -54,7 +54,7 @@ Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie d
   
 #### <a name="to-test-user-controls-from-another-project"></a>Um Steuerelemente aus einem anderen Projekt zu testen.  
   
-1.  Erstellen Sie ein Windows-Steuerelementbibliothek-Projekt namens **TestContainerExample2**. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](https://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Erstellen Sie ein Windows-Steuerelementbibliothek-Projekt namens **TestContainerExample2**. Weitere Informationen finden Sie unter [Vorlage für Windows-Steuerelementbibliothek](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).  
   
 2.  In der **Windows Forms-Designer**, ziehen Sie eine <xref:System.Windows.Forms.RadioButton> -Steuerelement aus der **Toolbox** auf der Entwurfsoberfläche des Steuerelements.  
   
@@ -71,4 +71,4 @@ Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie d
 - [Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
 - [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit visuellen ElementC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Benutzersteuerelement-Designer](https://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+- [Benutzersteuerelement-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

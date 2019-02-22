@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 71013506bfe73907cd19c11b03d01d0c3e05e1d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573972"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664743"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Von Windows Forms unterstützte Datenquellen
 In der Vergangenheit wurde die Datenbindung in Anwendungen verwendet, um Daten in Datenbanken nutzen. Mit Windows Forms-Datenbindung, können Sie Daten aus Datenbanken sowie Daten in andere Datenstrukturen, z. B. Arrays und Sammlungen, zugreifen, solange Sie bestimmte Mindestanforderungen erfüllt sind.  
@@ -37,7 +37,7 @@ In der Vergangenheit wurde die Datenbindung in Anwendungen verwendet, um Daten i
  Windows Forms-Steuerelement für Datenbindungseigenschaften öffentlichen Eigenschaften unterstützt, für die Instanz eines Objekts mit der <xref:System.Windows.Forms.Binding> Typ. Windows Forms unterstützt auch Binden von Steuerelementen Liste basiert, wie eine <xref:System.Windows.Forms.ListControl> an eine Objektinstanz, wenn eine <xref:System.Windows.Forms.BindingSource> verwendet wird.  
   
  Array oder einer Auflistung  
- Um als Datenquelle zu fungieren, muss eine Liste implementieren die <xref:System.Collections.IList> -Schnittstelle, sondern eine Beispiel wäre ein Array, das eine Instanz von der <xref:System.Array> Klasse. Weitere Informationen zu Arrays finden Sie unter [Vorgehensweise: Erstellen Sie ein Array von Objekten (Visual Basic)](https://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Um als Datenquelle zu fungieren, muss eine Liste implementieren die <xref:System.Collections.IList> -Schnittstelle, sondern eine Beispiel wäre ein Array, das eine Instanz von der <xref:System.Array> Klasse. Weitere Informationen zu Arrays finden Sie unter [Vorgehensweise: Erstellen Sie ein Array von Objekten (Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/487y7874(v=vs.100)).  
   
  Sie sollten im Allgemeinen verwenden <xref:System.ComponentModel.BindingList%601> beim Erstellen Listen von Objekten für die Datenbindung. <xref:System.ComponentModel.BindingList%601> ist eine generische Version der <xref:System.ComponentModel.IBindingList> Schnittstelle. Die <xref:System.ComponentModel.IBindingList> Schnittstelle erweitert die <xref:System.Collections.IList> -Schnittstelle durch Hinzufügen von Eigenschaften, Methoden und Ereignisse, die für die bidirektionale Datenbindung erforderlich sind.  
   

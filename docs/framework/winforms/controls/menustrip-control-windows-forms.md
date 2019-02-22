@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f94a5c5c45d3115de647085607aac396a0a8f2bc
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205320"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664483"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip-Steuerelement (Windows Forms)
 Dieses Steuerelement gruppiert Anwendungsbefehle und macht sie leicht zugänglich.  
@@ -19,55 +19,55 @@ Dieses Steuerelement gruppiert Anwendungsbefehle und macht sie leicht zugänglic
  [Übersicht über das MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
  Erläutert die wichtigsten Funktionen und Eigenschaften des Steuerelements.  
   
- [Gewusst wie: Hinzufügen von Erweiterungen zu ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-add-enhancements-to-toolstripmenuitems.md)  
+ [Vorgehensweise: Hinzufügen von Erweiterungen zu ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-add-enhancements-to-toolstripmenuitems.md)  
  Beschreibt das Hinzufügen von Häkchen, Bildern, Tastenkombinationen, Zugriffstasten und Trennlinien zu Menüs und Menübefehlen.  
   
- [Gewusst wie: Anhängen eines MenuStrip an ein übergeordnetes MDI-Fenster](../../../../docs/framework/winforms/controls/how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
+ [Vorgehensweise: Anhängen eines MenuStrip an ein übergeordnetes MDI-Fenster](../../../../docs/framework/winforms/controls/how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md)  
  Beschreibt das Festlegen verschiedener Eigenschaften zum Anfügen des untergeordneten MDI-Menüs (Multiple Document Interface) an das übergeordnete MDI-Menü.  
   
- [Gewusst wie: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
+ [Vorgehensweise: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
  Veranschaulicht die Erstellung einer Liste aller aktiven untergeordneten Formulare für das Fenstermenü des übergeordneten Objekts.  
   
- [Gewusst wie: Deaktivieren von ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)  
+ [Vorgehensweise: Deaktivieren von ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md)  
  Beschreibt das Deaktivieren von vollständigen Menüs oder einzelnen Menübefehlen.  
   
- [Gewusst wie: Ausblenden von ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
+ [Vorgehensweise: Ausblenden von ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)  
  Beschreibt das Ausblenden von vollständigen Menüs oder einzelnen Menübefehlen.  
   
- [Gewusst wie: Einfügen eines MenuStrip in ein MDI-Dropdownmenü](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
+ [Vorgehensweise: Einfügen eines MenuStrip in ein MDI-Dropdownmenü](../../../../docs/framework/winforms/controls/how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)  
  Beschreibt das Festlegen verschiedener Eigenschaften zum Einfügen einer Gruppe von Menüelementen aus dem untergeordneten MDI-Menü in den Dropdownbereich des übergeordneten MDI-Menüs.  
   
- [Gewusst wie: Entfernen eines ToolStripMenuItem aus einem MDI-Dropdownmenü](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
+ [Vorgehensweise: Entfernen eines ToolStripMenuItem aus einem MDI-Dropdownmenü](../../../../docs/framework/winforms/controls/how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md)  
  Beschreibt das Festlegen verschiedener Eigenschaften zum Entfernen eines Menüelements aus dem Dropdownbereich des übergeordneten MDI-Menüs.  
   
- [Gewusst wie: Konfigurieren des Aktivierungs- und Bildrands von MenuStrip](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
- Beschreibt das Anpassen eines <xref:System.Windows.Forms.MenuStrip> durch Festlegen von Aktivierungs- und Bildrandeigenschaften auf verschiedene Weise.  
+ [Vorgehensweise: MenuStrip konfigurieren Aktivierungs- und Bildrands](../../../../docs/framework/winforms/controls/how-to-configure-menustrip-check-margins-and-image-margins.md)  
+ Beschreibt, wie <xref:System.Windows.Forms.MenuStrip> durch Festlegen der Aktivierungsrand- und Bildrandeigenschaften angepasst werden kann.  
   
  [Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)  
  Beschreibt das Erstellen eines Formulars mit Standardmenü mithilfe des <xref:System.Windows.Forms.MenuStrip>-Steuerelements.  
   
- [Gewusst wie: Anzeigen von Optionsfeldern in einem MenuStrip](../../../../docs/framework/winforms/controls/how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
+ [Vorgehensweise: Anzeigen von Optionsfeldern in einem MenuStrip](../../../../docs/framework/winforms/controls/how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
  Beschreibt das Implementieren des Verhaltens von Optionsfeldern in einem <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
  [Zusammenführen von Menüelementen im MenuStrip-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/merging-menu-items-in-the-windows-forms-menustrip-control.md)  
  Beschreibt allgemeine Konzepte und Methoden für das Zusammenführen von Menüs.  
   
- [Gewusst wie: Einrichten des automatischem Zusammenführens von Menüs für MDI-Anwendungen (Multiple Document Interface)](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
+ [Vorgehensweise: Richten Sie automatische Zusammenführen von Menüs für MDI-Anwendungen](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  Beschreibt das automatische Zusammenführen von Menüelementen zur Laufzeit.  
   
--   [MenuStrip-Elementauflistungs-Editor](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [MenuStrip-Elementauflistungs-Editor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [Gewusst wie: Kopieren von ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
+-   [Vorgehensweise: Kopieren von ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
   
--   [Gewusst wie: Ausblenden von ToolStripMenuItems mithilfe des Designers](how-to-hide-toolstripmenuitems-using-the-designer.md)  
+-   [Vorgehensweise: Ausblenden von ToolStripMenuItems mithilfe des Designers](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [Gewusst wie: Deaktivieren von ToolStripMenuItems mithilfe des Designers](how-to-disable-toolstripmenuitems-using-the-designer.md)  
+-   [Vorgehensweise: Deaktivieren von ToolStripMenuItems mithilfe des Designers](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [Gewusst wie: Verschieben von ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
+-   [Vorgehensweise: Verschieben von ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
   
 -   [Exemplarische Vorgehensweise: Bereitstellen von Standardmenüelementen für ein Formular](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [MenuStrip-Aufgaben (Dialogfeld)](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [MenuStrip-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.MenuStrip>  

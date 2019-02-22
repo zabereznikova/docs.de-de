@@ -2,15 +2,15 @@
 title: Optionen und Richtlinien der ADO.NET-Technologie
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: e43fa3ae893a8a18e35693cde364d227e7959398
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828474"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664795"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Optionen und Richtlinien der ADO.NET-Technologie
-Die ADO.NET-Datenplattform ist eine Multireleasestrategie, die die Menge an erforderlichem Code und den Verwaltungsaufwand reduziert, da Entwickler bei der Programmierung auf konzeptionelle EDMs zurückgreifen können. Diese Plattform enthält das ADO.NET Entity Framework und verwandte Technologien.  
+Die ADO.NET-Datenplattform ist eine Multiversionsstrategie, die die Menge an erforderlichem Code und den Verwaltungsaufwand reduziert, da Entwickler bei der Programmierung auf konzeptionelle EDMs zurückgreifen können. Diese Plattform enthält das ADO.NET Entity Framework und verwandte Technologien.  
   
 ## <a name="entity-framework"></a>Entity Framework  
  Das ADO.NET Entity Framework wurde entworfen, um Entwicklern die Möglichkeit zu geben, Anwendungen für den Datenzugriff zu erstellen, indem sie bei der Programmierung auf ein konzeptionelles Anwendungsmodell zugreifen können, anstatt direkt mit einem relationalen Speicherschema zu arbeiten. Das Ziel ist es, die Menge des Codes und den Wartungsaufwand zu verringern, die für datenorientierte Anwendungen erforderlich sind. Weitere Informationen finden Sie unter [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
@@ -28,7 +28,7 @@ Die ADO.NET-Datenplattform ist eine Multireleasestrategie, die die Menge an erfo
  Entity SQL ist eine textbasierte Abfragesprache, die zur Interaktion mit einem Entity Data Model entwickelt wurde. Entity SQL ist ein SQL-Dialekt, der Abfragekonstrukte für übergeordnete Modellkonzepte wie Vererbung, komplexe Typen und explizite Beziehungen enthält. Entwickler können Entity SQL auch direkt in Verbindung mit Object Services verwenden. Weitere Informationen finden Sie unter [Entity SQL-Sprache](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
   
 ### <a name="entityclient"></a>EntityClient  
- EntityClient ist ein neuer .NET Framework-Datenanbieter, der zur Interaktion mit einem Entity Data Model verwendet wird. EntityClient folgt dem Muster des .NET Framework-Datenanbieters, indem es <xref:System.Data.EntityClient.EntityConnection> und <xref:System.Data.EntityClient.EntityCommand> Objekte verfügbar macht, die einen <xref:System.Data.EntityClient.EntityDataReader> zurückgeben. EntityClient verwendet die Entity SQL-Programmiersprache und stellt flexibles Mapping für speicherspezifische Datenanbieter bereit. Weitere Informationen finden Sie unter [EntityClient and Entity SQL](https://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ EntityClient ist ein neuer .NET Framework-Datenanbieter, der zur Interaktion mit einem Entity Data Model verwendet wird. EntityClient folgt dem Muster des .NET Framework-Datenanbieters, indem es <xref:System.Data.EntityClient.EntityConnection> und <xref:System.Data.EntityClient.EntityCommand> Objekte verfügbar macht, die einen <xref:System.Data.EntityClient.EntityDataReader> zurückgeben. EntityClient verwendet die Entity SQL-Programmiersprache und stellt flexibles Mapping für speicherspezifische Datenanbieter bereit. Weitere Informationen finden Sie unter [EntityClient-Anbieter für Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ### <a name="entity-data-model-tools"></a>Entity Data Model-Tools  
  Das Entity Framework stellt Befehlszeilentools, Assistenten und Designer bereit, um die Erstellung von EDM-Anwendungen zu erleichtern. Das EntityDataSource-Steuerelement unterstützt Datenbindungsszenarien auf Grundlage des EDM. Die Programmieroberfläche des EntityDataSource-Steuerelements ist anderen Steuerelementen für Datenquellen in Visual Studio ähnlich. Weitere Informationen finden Sie unter [ADO.NET Entity Data Model-Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 55e10a929be9c76bd8b33771945cf84f6228980f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c4aecb4c7c7a15a7a0aad668b697af3ca0b033f
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679317"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664925"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms
 In [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] werden Berechtigungen zum Schutz von Ressourcen und Daten verwendet. In welchen Situationen Daten von einer Anwendung gelesen oder geschrieben werden können, hängt davon ab, welche Berechtigungen der Anwendung gewährt wurden. Wenn die Anwendung in einer Umgebung mit teilweiser Vertrauenswürdigkeit ausgeführt wird, können Sie unter Umständen auf bestimmte Daten nicht zugreifen oder müssen die Art des Zugriffs auf bestimmte Daten ändern.  
@@ -351,7 +351,7 @@ public void Write()
 ## <a name="database-access"></a>Datenbankzugriff  
  Die für den Zugriff auf eine Datenbank erforderlichen Berechtigungen hängen jeweils vom Datenbankanbieter ab. Jedoch können nur Anwendungen, die mit den entsprechenden Berechtigungen ausgeführt werden, über eine Datenverbindung auf eine Datenbank zugreifen. Weitere Informationen zu den Berechtigungen, die Zugriff auf eine Datenbank erforderlich sind, finden Sie unter [Codezugriffssicherheit und ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
   
- Wenn Sie nicht direkt auf eine Datenbank zugreifen können, da Sie die Anwendung nur mit teilweiser Vertrauenswürdigkeit ausführen möchten, können Sie auf die Daten auch über einen Webdienst zugreifen. Ein Webdienst ist eine Softwarekomponente, auf die über ein Netzwerk programmgesteuert zugegriffen werden kann. Mit Webdiensten können Anwendungen Daten über Codegruppenzonen hinweg gemeinsam verwenden. Anwendungen in der lokalen Intranetzone und der Internetzone wird standardmäßig die Berechtigung gewährt, auf ihre Ursprungssite zuzugreifen. Dadurch sind diese Anwendungen in der Lage, auf demselben Server gehostete Webdienste aufzurufen. Weitere Informationen finden Sie unter [Webdienste in ASP.NET AJAX](https://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) oder [Windows Communication Foundation](https://msdn.microsoft.com/library/ms735119.aspx).  
+ Wenn Sie nicht direkt auf eine Datenbank zugreifen können, da Sie die Anwendung nur mit teilweiser Vertrauenswürdigkeit ausführen möchten, können Sie auf die Daten auch über einen Webdienst zugreifen. Ein Webdienst ist eine Softwarekomponente, auf die über ein Netzwerk programmgesteuert zugegriffen werden kann. Mit Webdiensten können Anwendungen Daten über Codegruppenzonen hinweg gemeinsam verwenden. Anwendungen in der lokalen Intranetzone und der Internetzone wird standardmäßig die Berechtigung gewährt, auf ihre Ursprungssite zuzugreifen. Dadurch sind diese Anwendungen in der Lage, auf demselben Server gehostete Webdienste aufzurufen. Weitere Informationen finden Sie unter [Webdienste in ASP.NET AJAX](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100)) oder [Windows Communication Foundation](../wcf/index.md).  
   
 ## <a name="registry-access"></a>Zugriff auf die Registrierung  
  Durch die <xref:System.Security.Permissions.RegistryPermission>-Klasse wird der Zugriff auf die Registrierung des Betriebssystems gesteuert. Standardmäßig haben nur lokal ausgeführte Anwendungen Zugriff auf die Registrierung.  Durch <xref:System.Security.Permissions.RegistryPermission> wird einer Anwendung nur die Berechtigung gewährt, den Versuch zu unternehmen, auf die Registrierung zuzugreifen. Ein erfolgreicher Zugriff wird dadurch nicht garantiert, da das Betriebssystem immer noch die Einhaltung von Sicherheitsrichtlinien für die Registrierung erzwingt.  

@@ -3,12 +3,12 @@ title: Erste Schritte mit Azure Blob Storage mit F#
 description: Store unstrukturierte Daten in der Cloud mit Azure Blob Storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 31c3017d6f43afb6b534d21d18d618b1c2903bf1
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44037281"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664990"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Erste Schritte mit Azure Blob Storage mit F# #
 
@@ -24,7 +24,7 @@ Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein A
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
 
-In die Beispielen in diesem Artikel können in einer F#-Anwendung oder ein F#-Skript verwendet werden. Um ein F#-Skript zu erstellen, erstellen Sie eine Datei mit den `.fsx` Erweiterung, z. B. `blobs.fsx`, in der F#-Entwicklungsumgebung.
+In die Beispielen in diesem Artikel verwendet werden können, entweder in eine F# Anwendung oder ein F# Skript. Zum Erstellen einer F# Skript, erstellen Sie eine Datei mit der `.fsx` Erweiterung, z. B. `blobs.fsx`in Ihre F# Entwicklungsumgebung.
 
 Verwenden Sie als Nächstes eine [-Paket-Manager](package-management.md) wie z. B. [Paket-Abhängigkeits](https://fsprojects.github.io/Paket/) oder [NuGet](https://www.nuget.org/) zum Installieren der `WindowsAzure.Storage` und `Microsoft.WindowsAzure.ConfigurationManager` Pakete und Verweis `WindowsAzure.Storage.dll` und `Microsoft.WindowsAzure.Configuration.dll` in Ihrem Skript mithilfe einer `#r` Richtlinie.
 
@@ -216,23 +216,24 @@ Standardmäßig sichert Azure Storage Ihre Daten durch Beschränken des Zugriffs
 
 Standardmäßig ist die Blob-Daten in Ihrem Speicherkonto nur als speicherkontobesitzer auf zugegriffen werden kann. Authentifizieren von Anforderungen an BLOB-Speicher erfordert den kontozugriffsschlüssel standardmäßig. Allerdings empfiehlt es sich um bestimmte Blob-Daten an andere Benutzer verfügbar zu machen.
 
-Ausführliche Informationen zum Steuern des Zugriffs auf blob-Speicher finden Sie unter [.NET Guide für Blob Storage-Abschnitt für die Zugriffssteuerung](/azure/storage/storage-dotnet-how-to-use-blobs#controlling-access-to-blob-data).
-
-
 ### <a name="encrypting-blob-data"></a>Verschlüsseln von blobdaten
 
 Azure Storage unterstützt das Verschlüsseln von blobdaten sowohl auf dem Client als auch auf dem Server.
-
-Ausführliche Informationen zum Verschlüsseln von blobdaten, finden Sie unter [.NET Guide für Blob Storage-Abschnitt zur Verschlüsselung](/azure/storage/storage-dotnet-how-to-use-blobs#encrypting-blob-data).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Nun, da Sie die Grundlagen von blobspeichern vertraut gemacht haben, führen Sie diesen Links, um mehr zu erfahren.
 
 ### <a name="tools"></a>Tools
-- [F#-AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) ein F#-Typanbieter die BLOB-, Tabellen- und Warteschlangenspeicher für die Azure-Ressourcen zu untersuchen und ganz einfach anwenden CRUD-Vorgänge für diese verwendet werden kann.
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) eine F#-API für die Verwendung von Microsoft Azure Table Storage-Dienst
-- [Microsoft Azure Storage-Explorer (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) ist eine kostenlose eigenständige app von Microsoft, die Ihnen ermöglicht, die unter Windows, OS X und Linux visuell mit Azure Storage-Daten arbeiten.
+
+- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/)\
+Ein F# Typanbieter, der zum Durchsuchen von BLOB-, Tabellen- und Warteschlangenspeicher für die Azure-Ressourcen, und wenden Sie problemlos CRUD-Vorgänge für diese verwendet werden kann.
+
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage)\
+Ein F# API für die Verwendung von Microsoft Azure Table Storage-Dienst
+
+- [Microsoft Azure Storage-Explorer (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer)\
+Eine kostenlose eigenständige app von Microsoft, die Ihnen ermöglicht, die unter Windows, OS X und Linux visuell mit Azure Storage-Daten arbeiten.
 
 ### <a name="blob-storage-reference"></a>BLOB Storage-Referenz
 
@@ -246,3 +247,4 @@ Nun, da Sie die Grundlagen von blobspeichern vertraut gemacht haben, führen Sie
 - [Übertragen von Daten mit dem Befehlszeilenprogramm AzCopy unter Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Konfigurieren von Azure Storage-Verbindungszeichenfolgen](/azure/storage/common/storage-configure-connection-string)
 - [Azure Storage-Teamblog](https://blogs.msdn.microsoft.com/windowsazurestorage/)
+- [Schnellstart: Erstellen ein BLOBs im Objektspeicher mithilfe von .NET](/azure/storage/blobs/storage-quickstart-blobs-dotnet)
