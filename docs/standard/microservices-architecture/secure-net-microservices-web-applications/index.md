@@ -19,7 +19,7 @@ In Microservice-Szenarios wird die Authentifizierung in der Regel zentral verarb
 
 **Abbildung 9-1**. Zentrale Authentifizierung mit einem API-Gateway
 
-Wenn auf Dienste direkt zugegriffen werden kann, kann ein Authentifizierungsdienst wie Azure Active Directory oder ein dedizierter Authentifizierungs-Microservice, der als Sicherheitstokendienst (STS) fungiert, zum Authentifizieren von Benutzern verwendet werden. Entscheidungen über die Vertrauenswürdigkeit werden zwischen Diensten mit Sicherheitstoken oder Cookies freigegeben. (Diese Token können bei Bedarf zwischen Anwendungen in ASP.NET Core mit [Datenschutzdiensten](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications) freigegeben werden.) Dieses Muster ist in Abbildung 9-2 dargestellt.
+Wenn auf Dienste direkt zugegriffen werden kann, kann ein Authentifizierungsdienst wie Azure Active Directory oder ein dedizierter Authentifizierungs-Microservice, der als Sicherheitstokendienst (STS) fungiert, zum Authentifizieren von Benutzern verwendet werden. Entscheidungen über die Vertrauenswürdigkeit werden zwischen Diensten mit Sicherheitstoken oder Cookies freigegeben. (Diese Token können bei Bedarf zwischen ASP.NET Core-Anwendungen durch Implementierung der [gemeinsamen Nutzung von Cookies](/aspnet/core/security/cookie-sharing) freigegeben werden.) Dieses Muster ist in Abbildung 9-2 dargestellt.
 
 ![Beim direkten Zugriff auf Microservices wird die Vertrauensstellung, die Authentifizierung und Autorisierung beinhaltet, mithilfe eines Sicherheitstokens behandelt, das von einem von den Microservices gemeinsam verwendeten, dedizierten Microservice herausgegeben wird.](./media/image2.png)
 
@@ -271,7 +271,7 @@ Die Middleware für die JWT-Bearerauthentifizierung kann auch erweiterte Szenari
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Gemeinsames Verwenden von Cookies in mehreren Anwendungen** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#sharing-authentication-cookies-between-applications*](/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+  [*https://docs.microsoft.com/aspnet/core/security/cookie-sharing*](/aspnet/core/security/cookie-sharing)
 
 - **Einführung in Identität** \
   [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
@@ -285,7 +285,7 @@ Die Middleware für die JWT-Bearerauthentifizierung kann auch erweiterte Szenari
 - **Michell Anicas. An Introduction to OAuth 2 (Einführung in OAuth 2)** \
   [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
-- **AspNet.Security.OAuth.Providers** (GitHub repo for ASP.NET OAuth providers. \
+- **AspNet.Security.OAuth.Providers** (GitHub repo for ASP.NET OAuth providers) \
   [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
 - **Danny Strockis. Integrating Azure AD into an ASP.NET Core web app (Integration von Azure AD in eine ASP.NET-Web-App)** \
