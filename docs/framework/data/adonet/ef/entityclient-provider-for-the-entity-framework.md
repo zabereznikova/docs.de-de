@@ -2,12 +2,12 @@
 title: EntityClient-Anbieter für Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: b094f6d0fbd7c1dc8d56fc43a05fc4d22a80e981
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ac14840145fb3faca0f6243037c8b27be31f5c7f
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826446"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583978"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>EntityClient-Anbieter für Entity Framework
 Der EntityClient-Anbieter ist ein von Entity Framework-Anwendungen verwendeter Datenanbieter für den Zugriff auf Daten, die in einem konzeptionellen Modell beschrieben sind. Weitere Informationen zu konzeptionellen Modellen finden Sie unter [modellieren und zuordnen](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient greift mithilfe von anderen .NET Framework-Datenanbietern auf die Datenquelle zu. Beim Zugreifen (SqlClient) auf eine SQL Server-Datenbank verwendet EntityClient z. B. den .NET Framework-Datenanbieter für SQL Server. Weitere Informationen zu den SqlClient-Anbieter, finden Sie unter [SqlClient für Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Der EntityClient-Anbieter ist im <xref:System.Data.EntityClient>-Namespace implementiert.  
@@ -24,13 +24,12 @@ Der EntityClient-Anbieter ist ein von Entity Framework-Anwendungen verwendeter D
   
  Das folgende Beispiel erstellt eine <xref:System.Data.EntityClient.EntityCommand> Objekt und weist ihm eine [!INCLUDE[esql](../../../../../includes/esql-md.md)] -Abfragetext seine <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> Eigenschaft. Dies [!INCLUDE[esql](../../../../../includes/esql-md.md)] abfrageanforderungen Produkte, sortiert nach dem Listenpreis aus dem konzeptionellen Modell. Im folgenden Code werden keinerlei Annahmen über das Speichermodell vorausgesetzt.  
   
- `EntityCommand cmd = conn.CreateCommand();`  
-  
- `cmd.CommandText = @"` `SELECT VALUE p`  
-  
- `FROM AdventureWorksEntities.Product AS p`  
-  
- `ORDER BY p.ListPrice ";`  
+ ```csharp
+EntityCommand cmd = conn.CreateCommand();
+cmd.CommandText = @"SELECT VALUE p
+  FROM AdventureWorksEntities.Product AS p
+  ORDER BY p.ListPrice";
+```
   
 ## <a name="executing-queries"></a>Ausführen von Abfragen  
  Wenn eine Abfrage ausgeführt wird, wird sie analysiert und in eine kanonische Befehlsstruktur konvertiert. Die darauf folgende Verarbeitung wird mit der Befehlsstruktur ausgeführt. Die Befehlsstruktur ermöglicht die Kommunikation zwischen dem <xref:System.Data.EntityClient> und dem zugrunde liegenden [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]-Datenanbieter wie <xref:System.Data.SqlClient>.  

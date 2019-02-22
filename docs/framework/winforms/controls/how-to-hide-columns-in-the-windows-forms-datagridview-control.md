@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 673c852b89518e2cb4df6ea98a337acd60bc42cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 726fa8ee05498ae365409c8330c6e1d9283ae9f5
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659669"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583268"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Ausblenden von Spalten im DataGridView-Steuerelement in Windows Forms
 Manchmal möchten Sie nur einige der Spalten anzeigen, die in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement in Windows Forms verfügbar sind. Benutzern, die sich mit Anmeldeinformationen der Geschäftsleitung anmelden, möchten Sie beispielsweise eine Spalte mit den Gehältern der Angestellten anzeigen, diese aber für andere Benutzer ausblenden. Oder aber Sie möchten das Steuerelement an eine Datenquelle binden, die viele Spalten enthält, von denen Sie nur einige anzeigen möchten. In diesem Fall entfernen Sie in der Regel die Spalten, deren Anzeige Sie nicht interessiert, anstatt sie auszublenden.  
   
  Im <xref:System.Windows.Forms.DataGridView>-Steuerelement bestimmt der <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A>-Eigenschaftswert einer Spalte, ob diese Spalte angezeigt wird.  
   
- Visual Studio bietet Unterstützung für diese Aufgabe.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Ausblenden von Spalten in der Windows Forms-DataGridView-Steuerelement mithilfe des Designers](https://msdn.microsoft.com/library/kaswfbes\(v=vs.110\)).  
+ Visual Studio bietet Unterstützung für diese Aufgabe.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Ausblenden von Spalten in der Windows Forms-DataGridView-Steuerelement mithilfe des Designers](hide-columns-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-hide-a-column-programmatically"></a>So blenden Sie eine Spalte programmgesteuert aus  
   

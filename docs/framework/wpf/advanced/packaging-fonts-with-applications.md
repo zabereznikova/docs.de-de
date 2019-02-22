@@ -10,12 +10,12 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: 52ed421ee92eed29bf16815d22e3ec7a8b718a84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a822167ae5b2758a889c61eed5270e5abb01f961
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632347"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583419"
 ---
 # <a name="packaging-fonts-with-applications"></a>Verpacken von Schriftarten mit Anwendungen
 Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit Ihrem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendung.  
@@ -31,7 +31,7 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit I
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] und [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] Schriftarten ein Typflag, FsType, der angibt, für die schriftarteneinbettung Lizenzierung Rechte für die Schriftart enthalten. Dieses Typflag bezieht sich jedoch nur auf eingebettete Schriftarten, die in einem Dokument gespeichert sind, und nicht auf Schriftarten, die in eine Anwendung eingebettet sind. Können Sie abrufen, die für die schriftarteneinbettung Rechte für eine Schriftart durch das Erstellen einer <xref:System.Windows.Media.GlyphTypeface> -Objekt und verweisen auf die <xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A> Eigenschaft. Finden Sie im Abschnitt "OS/2 and Windows Metrics", der die [OpenType-Spezifikation](https://www.microsoft.com/typography/otspec/os2.htm) für Weitere Informationen zum FsType-Flag.  
   
- Die [Microsoft Typography](https://www.microsoft.com/typography/links/) Website enthält Kontaktinformationen, mit denen Sie suchen Sie einen bestimmten Händler oder einen Händler für benutzerdefinierte Schriftarten zu finden.  
+ Die [Microsoft Typography](https://docs.microsoft.com/typography/) Website enthält Kontaktinformationen, mit denen Sie suchen Sie einen bestimmten Händler oder einen Händler für benutzerdefinierte Schriftarten zu finden.  
   
 <a name="adding_fonts_as_content_items"></a>   
 ## <a name="adding-fonts-as-content-items"></a>Hinzufügen von Schriftarten als Inhaltselemente  
@@ -175,7 +175,7 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit I
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
-- [Microsoft-Typografie: Links, Neuigkeiten und Kontakte](https://www.microsoft.com/typography/links/)
+- [Microsoft-Typografie: Links, Neuigkeiten und Kontakte](https://docs.microsoft.com/typography/)
 - [OpenType-Spezifikation](https://www.microsoft.com/typography/otspec/)
 - [Features für OpenType-Schriftarten](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
 - [OpenType-Beispielschriftartenpaket](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)

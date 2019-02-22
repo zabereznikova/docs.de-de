@@ -1,13 +1,13 @@
 ---
 title: Sequenzen
 description: Erfahren Sie, wie Sie mit F# Sequenzen, wenn Sie eine große haben geordnete Auflistung von Daten kann aber nicht unbedingt alle Elemente zu verwenden.
-ms.date: 05/16/2016
-ms.openlocfilehash: a86d22c834b377d4e92cfa610cdd3b498dd86dfa
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 02/19/2019
+ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611996"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583926"
 ---
 # <a name="sequences"></a>Sequenzen
 
@@ -98,7 +98,7 @@ Sie können eine unendliche Sequenzen definieren, mit der [Seq.initInfinite](htt
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) generiert eine Sequenz von einer Berechnungsfunktion, die von einem Zustand transformiert, um die nachfolgenden Elemente in der Sequenz zu erzeugen. Der Zustand ist nur ein Wert, der verwendet, um jedes Element berechnen und kann ändern, wenn jedes Element berechnet wird. Das zweite Argument für `Seq.unfold` ist der anfängliche Wert, der zum Starten der Sequenz verwendet wird. `Seq.unfold` verwendet einen Optionstyp für den Zustand, dadurch können Sie die Sequenz durch Rückgabe beendet die `None` Wert. Der folgende Code zeigt zwei Beispiele für Sequenzen `seq1` und `fib`, von erzeugte eine `unfold` Vorgang. Die erste `seq1`, nur eine einfache Sequenz mit Zahlen bis zu 100 ist. Der zweite `fib`, verwendet `unfold` der Fibonacci-Folge berechnet. Da jedes Element in der Fibonacci-Folge die Summe der beiden vorherigen Fibonacci-Zahlen ist, wird der Status-Wert ein Tupel, die aus den beiden vorherigen Zahlen in der Sequenz besteht. Der Anfangswert ist `(1,1)`, die ersten beiden Zahlen in der Sequenz.
+[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) generiert eine Sequenz von einer Berechnungsfunktion, die von einem Zustand transformiert, um die nachfolgenden Elemente in der Sequenz zu erzeugen. Der Zustand ist nur ein Wert, der verwendet, um jedes Element berechnen und kann ändern, wenn jedes Element berechnet wird. Das zweite Argument für `Seq.unfold` ist der anfängliche Wert, der zum Starten der Sequenz verwendet wird. `Seq.unfold` verwendet einen Optionstyp für den Zustand, dadurch können Sie die Sequenz durch Rückgabe beendet die `None` Wert. Der folgende Code zeigt zwei Beispiele für Sequenzen `seq1` und `fib`, von erzeugte eine `unfold` Vorgang. Die erste `seq1`, nur eine einfache Sequenz mit Zahlen bis zu 20 ist. Der zweite `fib`, verwendet `unfold` der Fibonacci-Folge berechnet. Da jedes Element in der Fibonacci-Folge die Summe der beiden vorherigen Fibonacci-Zahlen ist, wird der Status-Wert ein Tupel, die aus den beiden vorherigen Zahlen in der Sequenz besteht. Der Anfangswert ist `(1,1)`, die ersten beiden Zahlen in der Sequenz.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 

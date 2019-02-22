@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 4afa4b9e2c92569df4c8023d7dbfdfb025bf94b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36891a5acbb2fe06b4ab61573e26612927587c01
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527626"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583835"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Vorgehensweise: Entwickeln eines einfachen Windows Forms-Steuerelements
 Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von benutzerdefinierten Windows Forms-Steuerelementen. Ein einfache Steuerelement in dieser exemplarischen Vorgehensweise entwickelt ermöglicht die Ausrichtung der <xref:System.Windows.Forms.Control.Text%2A> zu ändernden Eigenschaft. Es löst keine Ereignisse aus oder behandelt sie.  
@@ -34,7 +34,7 @@ Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von ben
     public class FirstControl:Control {}  
     ```  
   
-2.  Definieren Sie Eigenschaften. (Sie müssen keine Eigenschaften definieren, da ein Steuerelement viele Eigenschaften erbt die <xref:System.Windows.Forms.Control> -Klasse, aber die meisten benutzerdefinierten Steuerelemente definieren zusätzliche Eigenschaften.) Das folgende Codefragment definiert eine Eigenschaft namens `TextAlignment` , `FirstControl` verwendet, um die Anzeige formatieren der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft vererbt <xref:System.Windows.Forms.Control>. Weitere Informationen zum Definieren von Eigenschaften finden Sie in der [Übersicht über Eigenschaften](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).  
+2.  Definieren Sie Eigenschaften. (Sie müssen keine Eigenschaften definieren, da ein Steuerelement viele Eigenschaften erbt die <xref:System.Windows.Forms.Control> -Klasse, aber die meisten benutzerdefinierten Steuerelemente definieren zusätzliche Eigenschaften.) Das folgende Codefragment definiert eine Eigenschaft namens `TextAlignment` , `FirstControl` verwendet, um die Anzeige formatieren der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft vererbt <xref:System.Windows.Forms.Control>. Weitere Informationen zum Definieren von Eigenschaften finden Sie in der [Übersicht über Eigenschaften](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
@@ -46,7 +46,7 @@ Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von ben
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Stellen Sie Attribute für das Steuerelement bereit. Attribute ermöglichen es einem visuellen Designer, Ihr Steuerelement und dessen Eigenschaften und Ereignisse entsprechend zur Entwurfszeit anzuzeigen. Das folgende Codefragment wendet die Attribute auf die Eigenschaft `TextAlignment` an. In einem Designer wie Visual Studio die <xref:System.ComponentModel.CategoryAttribute.Category%2A> Attribut (Siehe Codefragment) bewirkt, dass die Eigenschaft in einer logischen Kategorie angezeigt werden. Die <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Attribut bewirkt, dass eine beschreibende Zeichenfolge, die am unteren Rand angezeigt werden die **Eigenschaften** Fenster bei der `TextAlignment` Eigenschaft ausgewählt ist. Weitere Informationen zu Attributen finden Sie unter [Entwurfszeitattribute für Komponenten](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
+4.  Stellen Sie Attribute für das Steuerelement bereit. Attribute ermöglichen es einem visuellen Designer, Ihr Steuerelement und dessen Eigenschaften und Ereignisse entsprechend zur Entwurfszeit anzuzeigen. Das folgende Codefragment wendet die Attribute auf die Eigenschaft `TextAlignment` an. In einem Designer wie Visual Studio die <xref:System.ComponentModel.CategoryAttribute.Category%2A> Attribut (Siehe Codefragment) bewirkt, dass die Eigenschaft in einer logischen Kategorie angezeigt werden. Die <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Attribut bewirkt, dass eine beschreibende Zeichenfolge, die am unteren Rand angezeigt werden die **Eigenschaften** Fenster bei der `TextAlignment` Eigenschaft ausgewählt ist. Weitere Informationen zu Attributen finden Sie unter [Entwurfszeitattribute für Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
