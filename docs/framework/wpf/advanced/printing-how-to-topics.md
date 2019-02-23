@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: c920aff295fd22cc7faa90c2f9421840f9b60b69
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 24899d8a2184c73b50902de4a30c39327576ded1
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441202"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747355"
 ---
 # <a name="printing-how-to-topics"></a>Gewusst-wie-Themen zum Drucken
 Die Themen in diesem Abschnitt veranschaulichen, wie das Drucken und Drucksystem-Management-Funktionen enthalten, mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sowie den neuen [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] -Druckpfad.  
@@ -30,9 +30,6 @@ Die Themen in diesem Abschnitt veranschaulichen, wie das Drucken und Drucksystem
   
  [Auflisten einer Teilmenge von Druckwarteschlangen](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Anweisungen zum Generieren einer Liste der Drucker mit bestimmten Eigenschaften.  
-  
- [NICHT IM BUILD: Vorgehensweise: Erweitern Sie das Druckschema und erstellen Sie neue Drucksystem-Klassen](https://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
- Längere Diskussion wie verwalteter Code Programmierer Druckschemas Specialty drucken Geräte bzw. auf Druckern mit neuen oder ungewöhnlich, dass Funktionen erweitern können.  
   
  [Abrufen von Drucksystemobjekt-Eigenschaften ohne Reflektion](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  
  Anweisungen zum Ermitteln von zur Laufzeit zu drucken Objekteigenschaften für das System und ihre Typen.  

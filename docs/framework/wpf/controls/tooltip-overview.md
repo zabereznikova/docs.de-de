@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 9db511579e273a19c18800f2e0861ef4e9c00ab0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5378744ea43b72bafb77c9d58c1a8d848c3a8fc9
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700571"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745514"
 ---
 # <a name="tooltip-overview"></a>Übersicht über die QuickInfo
 Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutzer den Mauszeiger auf ein Element, beispielsweise über hält eine <xref:System.Windows.Controls.Button>. In diesem Thema wird die QuickInfo vorgestellt und das Erstellen und Anpassen von QuickInfo-Inhalten erläutert.  
@@ -67,7 +67,7 @@ Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutz
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Verwenden der Eigenschaften von ToolTipService für Zeitintervalle  
  Die <xref:System.Windows.Controls.ToolTipService> -Klasse bietet die folgenden Eigenschaften für die Sie festlegen, QuickInfo anzeigen: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, und <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Verwenden der <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> und <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> Eigenschaften an eine Verzögerung in der Regel eine kurze, vor einer <xref:System.Windows.Controls.ToolTip> angezeigt wird und auch angeben, wie lange eine <xref:System.Windows.Controls.ToolTip> sichtbar bleibt. Weitere Informationen finden Sie unter [Vorgehensweise: Verzögern der Anzeige einer QuickInfo](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Verwenden der <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> und <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> Eigenschaften an eine Verzögerung in der Regel eine kurze, vor einer <xref:System.Windows.Controls.ToolTip> angezeigt wird und auch angeben, wie lange eine <xref:System.Windows.Controls.ToolTip> sichtbar bleibt. Weitere Informationen finden Sie unter [Vorgehensweise: Verzögern der Anzeige einer QuickInfo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms747264(v=vs.90)).  
   
  Die <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> Eigenschaft bestimmt, ob QuickInfos für andere Steuerelemente ohne Verzögerung angezeigt werden, wenn Sie den Mauszeiger Maus schnell zwischen diesen bewegen. Weitere Informationen zu den <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> -Eigenschaft finden Sie unter [verwenden der BetweenShowDelay-Eigenschaft](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   

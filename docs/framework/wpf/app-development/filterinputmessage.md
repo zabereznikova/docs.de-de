@@ -5,12 +5,12 @@ helpviewer_keywords:
 - raw input [WPF]
 - FilterInputMessage method [WPF]
 ms.assetid: 4d74c6cf-7d1d-49ff-96c1-231340ce54f5
-ms.openlocfilehash: 979fa7b70dc4b43af841c7219d64125caf99e33a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3620e13951afddc8de25c314de17704548d2366
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642619"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746165"
 ---
 # <a name="filterinputmessage"></a>FilterInputMessage
 Wird immer dann von "PresentationHost.exe" aufgerufen, wenn eine Meldung empfangen wurde, es sei denn, E_NOTIMPL wurde zurückgegeben.  
@@ -43,4 +43,4 @@ HRESULT FilterInputMessage( [in] MSG* pMsg ) ;
  Die gehostete Anwendung empfängt unformatierte eingabemeldungen durch die Registrierung mit dem Satz von Geräten für unformatierte Eingabe (Human Interface Devices) vom [GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [WM_INPUT-Benachrichtigung](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputmessages/wm_input.asp)
+- [WM_INPUT-Meldung](/windows/desktop/inputdev/wm-input)
