@@ -7,18 +7,17 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.openlocfilehash: 309a5df174a2366fda411678d95a9701dcebb9cc
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493518"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747917"
 ---
 # <a name="panel-how-to-topics"></a>Gewusst-wie-Themen zu Panel
 Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.Panel> Element und die zugehörigen [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: anwenden ein LayoutTransform auf ein Element](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [Erstellen eines benutzerdefinierten Bereichselements](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [Überschreiben der Panel.OnRender-Methode](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
  [Festlegen der Höheneigenschaften eines Elements](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
@@ -42,6 +41,6 @@ Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Co
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
  [Übersicht über ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

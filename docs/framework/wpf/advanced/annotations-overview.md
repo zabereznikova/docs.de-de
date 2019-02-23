@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: b3b009d7c25e813a73fe4f32c3eced632b052f13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e88383126c1fb618b2a2a96bdf5998560864af50
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543473"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746441"
 ---
 # <a name="annotations-overview"></a>Übersicht über Anmerkungen
 Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine verbreitete Aktivität, dass wir sie als selbstverständlich erachten. Diese Notizen oder Kommentare sind „Anmerkungen“, die wir einem Dokument hinzufügen, um Informationen zu kennzeichnen oder um interessante Elemente für einen späteren Zeitpunkt zu markieren. Obwohl das Schreiben von Notizen auf gedruckte Dokumente einfach und üblich ist, ist die Möglichkeit, persönliche Kommentare auf elektronischen Dokumenten hinzuzufügen, in der Regel nur sehr eingeschränkt, falls diese Möglichkeit überhaupt verfügbar ist.  
@@ -75,4 +75,4 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
 - [Übersicht über ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
 - [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md)
 - [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
-- [Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem](https://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)
+- [Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

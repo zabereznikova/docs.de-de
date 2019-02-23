@@ -2,12 +2,6 @@
 title: Programmierkonzepte (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-ms.openlocfilehash: fbdf2d6de7abf1d8d80ca3e88621fa569248996c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147241"
 ---
 # <a name="programming-concepts-visual-basic"></a>Programmierkonzepte (Visual Basic)
 Dieser Abschnitt erläutert die Programmierkonzepte der Sprache Visual Basic.  
@@ -16,7 +10,7 @@ Dieser Abschnitt erläutert die Programmierkonzepte der Sprache Visual Basic.
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Assemblys und der globale Assemblycache (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|Hier erfahren Sie, wie Sie Assemblys erstellen und verwenden.|  
+|[Assemblys in .NET](../../../standard/assembly/index.md)|Hier erfahren Sie, wie Sie Assemblys erstellen und verwenden.|  
 |[Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|Beschreibt, wie Sie asynchrone Projektmappen mithilfe der Schlüsselwörter [Async](../../../visual-basic/language-reference/modifiers/async.md) und [Await](../../../visual-basic/language-reference/operators/await-operator.md) schreiben. Enthält eine exemplarische Vorgehensweise.|  
 |[Übersicht über Attribute (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|Beschreibt, wie zusätzliche Informationen über Programmierelemente, wie Typen, Felder, Methoden und Eigenschaften, mit Attributen bereitgestellt werden können.|  
 |[Aufruferinformationen (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)|Beschreibt, wie Informationen zum Aufrufer einer Methode abgerufen werden. Diese Informationen umfassen den Dateipfad und die Zeilennummer des Quellcodes sowie den Membernamen des Aufrufers.|  

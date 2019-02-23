@@ -6,12 +6,12 @@ helpviewer_keywords:
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-ms.openlocfilehash: 1a00bfa0772273f9374d292e27f5fba174172ca6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1c0ad0b644c0af6a4e0982b1437291e923ca79cc
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499873"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745404"
 ---
 # <a name="timer-component-windows-forms"></a>Timer-Komponente (Windows Forms)
 Die <xref:System.Windows.Forms.Timer>-Komponente von Windows Forms ist eine Komponente, die in regelmäßigen Abständen ein Ereignis auslöst. Diese Komponente wurde für eine Windows Forms-Umgebung entwickelt.  
@@ -23,7 +23,7 @@ Die <xref:System.Windows.Forms.Timer>-Komponente von Windows Forms ist eine Komp
  [Einschränkungen für die Interval-Eigenschaft der Timer-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)  
  Beschreibt bekannte Einschränkungen des Intervalls des Timers, die beeinflussen können, wie er verwendet werden kann.  
   
- [Gewusst wie: Ausführen von Prozeduren in festgelegten Abständen mit der Timer-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
+ [Vorgehensweise: Ausführen von Prozeduren in festgelegten Abständen mit der Timer-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
  Beschreibt, wie in Windows-basierten Anwendungen auf zeitlich festgelegte Intervalle reagiert werden kann.  
   
 ## <a name="reference"></a>Referenz  
@@ -36,6 +36,3 @@ Die <xref:System.Windows.Forms.Timer>-Komponente von Windows Forms ist eine Komp
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.  
-  
- [Timer-Steuerelement für Visual Basic 6.0-Benutzer](https://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
- Beschreibt, wie sich die Timerfunktionalität in Visual Basic im Vergleich zu vorherigen Versionen geändert hat.

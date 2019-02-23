@@ -7,17 +7,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: daaafa4877e9fc5abd7e720c5a91aa61f24a686c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686048"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746522"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struktur von Visual Basic-Programmen
 Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung* besteht aus einem oder mehreren Projekten. Ein *Projekt* wiederum können eine oder mehrere Assemblys enthalten. Jede *Assembly* aus ein oder mehrere Quelldateien kompiliert wird. Ein *Quelldatei* enthält die Definition und Implementierung von Klassen, Strukturen, Module und Schnittstellen, die letzten Endes den gesamten Code enthalten.  
   
- Weitere Informationen zu diesen Bausteinen von Visual Basic-Programmen, finden Sie unter [Projektmappen und Projekte](/visualstudio/ide/solutions-and-projects-in-visual-studio) und [Assemblys und dem globalen Assemblycache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
+ Weitere Informationen zu diesen Bausteinen von Visual Basic-Programmen, finden Sie unter [Projektmappen und Projekte](/visualstudio/ide/solutions-and-projects-in-visual-studio) und [Assemblys in .NET](../../../standard/assembly/index.md).  
   
 ## <a name="file-level-programming-elements"></a>Laufwerkssicherungen auf Dateiebene Programmierelemente  
  Wenn Sie, ein Projekt oder eine Datei beginnen und den Code-Editor zu öffnen, sehen Sie etwas Code bereits an Ort und in der richtigen Reihenfolge. Code, den Sie schreiben, sollten die folgende Sequenz beachten:  

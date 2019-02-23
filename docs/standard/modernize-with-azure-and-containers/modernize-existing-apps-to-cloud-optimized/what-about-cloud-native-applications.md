@@ -4,16 +4,16 @@ description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 0e390fcc838fc745e5950a8adcaeee0e5aa6e434
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b84eb50c0d425447e3f78f1473608c27254523a7
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152565"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746415"
 ---
 # <a name="what-about-cloud-native-applications"></a>Was geschieht mit Cloudnativen Anwendungen?
 
-Obwohl [Cloudnative](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) Anwendungen sind nicht im Mittelpunkt dieses Handbuchs, es ist hilfreich, um einen Überblick über diese modernisierungsreifegrad zu erhalten, und klicken Sie zur Unterscheidung von Cloudoptimierte Anwendungen.
+Obwohl [Cloudnative](https://azure.microsoft.com/overview/cloudnative/) Anwendungen sind nicht im Mittelpunkt dieses Handbuchs, es ist hilfreich, um einen Überblick über diese modernisierungsreifegrad zu erhalten, und klicken Sie zur Unterscheidung von Cloudoptimierte Anwendungen.
 
 Abbildung 4-3 positioniert Native Cloud-apps in der Anwendung Modernisierung Reifegrads erforderlich:
 
@@ -23,7 +23,7 @@ Abbildung 4-3 positioniert Native Cloud-apps in der Anwendung Modernisierung Rei
 
 Die Native Cloud-modernisierungsreifegrad ist in der Regel neue Investitionen erforderlich. Verschieben auf die Native Cloud - Ebene in der Regel hängt von unternehmensanforderung zu modernisieren Sie Anwendungen so weit wie möglich ist, um deutlich zu verbessern, Skalierung in großen Anwendungen durch autonome Subsysteme (Microservices), die bereitgestellt werden können erstellen und skalieren unabhängig beanspruchen Sie aus anderen Bereichen der Anwendung während Sie zugleich senken in die lange Laufzeit und Erhöhung Weiterentwicklung-Agilität, diese autonomen app-Komponenten, die angeben erheblich Vorteile. 
 
-Die Hauptsäulen [Cloudnative](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) Anwendungen basieren auf Microservices-Architektur-Ansätze, die Entwickeln mit Agilität und Grenzwerte, die nur schwer zu erreichen in einer monolithischen Architektur bereitgestellt werden, entweder skaliert werden können lokale oder cloud-Umgebung.
+Basiert die Hauptsäulen von cloudbasierten Anwendungen auf Ansätze für Microservices-Architektur, die mit Agilität weiterentwickeln und an Grenzen, die nur schwer zu erreichen in einer monolithischen Architektur, die entweder lokal oder Cloud bereitgestellt, skaliert werden kann Umgebung.
 
 Abbildung 4-4 zeigt die wesentlichen Merkmale von Native Cloud-Modell.  
 
@@ -33,19 +33,19 @@ Abbildung 4-4 zeigt die wesentlichen Merkmale von Native Cloud-Modell.
 
 Darüber hinaus können Sie grundlegende moderner Web-apps und Native Cloud-apps erweitern, durch das Hinzufügen von anderen Diensten, wie Sie künstliche Intelligenz (KI), Machine Learning (ML) und IoT. Sie können eines dieser Dienste verwenden, um einen der möglichen Cloudoptimierte Ansätze zu erweitern.
 
-Der grundlegende Unterschied in Anwendungen auf der Ebene des Cloudnativen besteht in der Anwendungsarchitektur. [Cloudnative](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) Anwendungen sind per Definition apps, die auf Microservices basieren. Native Cloud-apps erfordern spezielle Architekturen, Technologien und Plattformen, im Vergleich zu einer monolithischen Webanwendung oder den herkömmlichen N-Tier-Anwendung.
+Der grundlegende Unterschied in Anwendungen auf der Ebene des Cloudnativen besteht in der Anwendungsarchitektur. Native Cloudanwendungen sind per Definition apps, die auf Microservices basieren. Native Cloud-apps erfordern spezielle Architekturen, Technologien und Plattformen, im Vergleich zu einer monolithischen Webanwendung oder den herkömmlichen N-Tier-Anwendung.
 
 ## <a name="cloud-native-applications-details"></a>Native Cloudanwendungen-details
 
-[Cloudnative](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) ist ein Zustand für eine erweiterter oder ausgereifter für umfangreiche und geschäftskritische Anwendungen. Cloudbasierte Anwendungen erfordern in der Regel auf, Architektur und Entwurf, die von Grund auf neu, nicht erstellt werden, indem Sie vorhandene Anwendungen modernisieren. Der Hauptunterschied zwischen einer Cloudnative Anwendungs- und eine einfachere Cloudoptimierte Web-app ist die Empfehlung, Microservices-Architekturen in einem cloudbasierten Ansatz zu verwenden. Cloudoptimiert apps können auch monolithische Web-apps oder N-schichtige apps sein.
+Cloudnative ist eine erweiterte oder ausgereifte nur vorrübergehend für umfangreiche und geschäftskritische Anwendungen. Cloudbasierte Anwendungen erfordern in der Regel auf, Architektur und Entwurf, die von Grund auf neu, nicht erstellt werden, indem Sie vorhandene Anwendungen modernisieren. Der Hauptunterschied zwischen einer Cloudnative Anwendungs- und eine einfachere Cloudoptimierte Web-app ist die Empfehlung, Microservices-Architekturen in einem cloudbasierten Ansatz zu verwenden. Cloudoptimiert apps können auch monolithische Web-apps oder N-schichtige apps sein.
 
-Die [zwölf-Faktoren-App](https://12factor.net/) (eine Sammlung von Mustern, die Ansätze für Microservices eng miteinander verknüpft sind) wird auch eine Voraussetzung für die betrachtet [cloudnative](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) Anwendungsarchitekturen.
+Die [zwölf-Faktoren-App](https://12factor.net/) (eine Sammlung von Mustern, die Ansätze für Microservices eng miteinander verknüpft sind) gilt auch für Native Cloud-Architekturen erforderlich.
 
 Die [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) ist eine primäre Befürworter von Native Cloud-Prinzipien. Microsoft ist ein [Mitglied der CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
 Für eine Beispieldefinition und Weitere Informationen zu den Eigenschaften von cloudbasierten Anwendungen finden Sie im Gartner-Artikel [wie entwerfen und entwickeln Native Cloudanwendungen](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications). Spezielle Anweisungen von Microsoft dazu, wie Sie eine Native Cloud-Anwendung zu implementieren, finden Sie [.NET Microservices: Architektur für containerisierte .NET-Anwendungen](https://aka.ms/microservicesebook).
 
-Der wichtigste Faktor zu beachten, wenn Sie eine vollständige Anwendung zum Migrieren der [cloudnative](https://www.gartner.com/doc/3738117/comparing-leading-cloudnative-application-platforms) Modell ist, dass Sie auf eine auf Microservices basierende Architektur überarbeiten müssen. Dies erfordert natürlich eine erhebliche Investition in der Entwicklung aufgrund der großen umgestaltungsprozess Beteiligten. Diese Option wird für unternehmenskritische Anwendungen, die Skalierbarkeit und bessere langfristige Flexibilität benötigen, in der Regel ausgewählt. Aber Sie könnten dann starten, auf dem Weg cloudnative durch Hinzufügen von Microservices nur wenige neue Szenarien und schließlich die Anwendung vollständig als Microservices umzugestalten. Dies ist ein inkrementeller Ansatz, der die beste Option für einige Szenarien ist.
+Der wichtigste Faktor zu beachten, wenn Sie eine vollständige Anwendung für das Native Cloud-Modell migrieren ist, dass Sie auf eine auf Microservices basierende Architektur überarbeiten müssen. Dies erfordert natürlich eine erhebliche Investition in der Entwicklung aufgrund der großen umgestaltungsprozess Beteiligten. Diese Option wird für unternehmenskritische Anwendungen, die Skalierbarkeit und bessere langfristige Flexibilität benötigen, in der Regel ausgewählt. Aber Sie könnten dann starten, auf dem Weg cloudnative durch Hinzufügen von Microservices nur wenige neue Szenarien und schließlich die Anwendung vollständig als Microservices umzugestalten. Dies ist ein inkrementeller Ansatz, der die beste Option für einige Szenarien ist.
 
 ## <a name="what-about-microservices"></a>Was ist mit Microservices? 
 

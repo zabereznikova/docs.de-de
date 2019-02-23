@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 48981a942461570c0ef822dba9b18cb9a41f59f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662737"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746561"
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
 <a name="Introduction"></a> .NET Framework enthält eine Add-In-Modell, mit denen Entwickler Anwendungen erstellen, die Add-in-Erweiterbarkeit zu unterstützen. Dieses Add-In-Modell ermöglicht die Erstellung von Add-Ins, die in die Anwendungsfunktionalität integriert werden und diese erweitern. In einigen Szenarien müssen Anwendungen auch von Benutzeroberflächen anzeigen, die von Add-Ins bereitgestellt werden. In diesem Thema wird gezeigt, wie das .NET Framework-add-in-Modell zum Aktivieren dieser Szenarien, in der Architektur hinter, dessen Vorteile und Einschränkungen von WPF erweitert.  
@@ -100,7 +100,7 @@ ms.locfileid: "54662737"
 -   Hat die <xref:System.SerializableAttribute> -Attribut.  
   
 > [!NOTE]
->  Weitere Informationen über das Erstellen von remotefähigen .NET Framework-Objekten finden Sie unter [erstellen Remotefähiger Objekte](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
+>  Weitere Informationen über das Erstellen von remotefähigen .NET Framework-Objekten finden Sie unter [erstellen Remotefähiger Objekte](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100)).  
   
  Die WPF-UI-Typen sind nicht remotefähig. Um das Problem zu beheben, erweitert WPF das .NET Framework-add-in-Modell zum Aktivieren von WPF-UI-add-ins erstellt, die von hostanwendungen angezeigt werden. Diese Unterstützung wird durch WPF durch zwei Arten bereitgestellt: die <xref:System.AddIn.Contract.INativeHandleContract> Schnittstelle und zwei statische Methoden implementiert, indem die <xref:System.AddIn.Pipeline.FrameworkElementAdapters> Klasse: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Im Allgemeinen werden diese Typen und Methoden wie folgt verwendet:  
   
@@ -286,6 +286,6 @@ ms.locfileid: "54662737"
 - <xref:System.LoaderOptimizationAttribute>
 - [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Anwendungsdomänen](../../../../docs/framework/app-domains/application-domains.md)
-- [Übersicht über .NET Framework-Remoting](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)
-- [Erstellen Remotefähiger Objekte](https://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)
+- [Übersicht über .NET Framework-Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Erstellen Remotefähiger Objekte](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
 - [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/app-development/how-to-topics.md)

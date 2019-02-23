@@ -6,17 +6,17 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: 260d79b7c6432c3dede5b593eaa3f1e52ed35c5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 569fccfffe1d117d7ab404f72d0275e7391926da
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588300"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746797"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer-Steuerelement
 <xref:System.Windows.Forms.ToolStrip>-Steuerelemente bieten bei Verwendung von <xref:System.Windows.Forms.ToolStripContainer> Unterstützung für das integrierte Rafting (die gemeinsame Nutzung eines horizontalen oder vertikalen Bereichs innerhalb des Toolbereichs im angedockten Zustand).  
   
- In den Themen in diesem Abschnitt werden die Konzepte und Techniken beschrieben, die Sie verwenden können, um <xref:System.Windows.Forms.ToolStripContainer>-Funktionen in Ihre Anwendungen einzubinden.  
+ In den Themen in diesem Abschnitt werden die Konzepte und Techniken beschrieben, die Sie verwenden können, um <xref:System.Windows.Forms.ToolStripContainer>-Features in Ihre Anwendungen einzubinden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über das ToolStripContainer-Steuerelement](../../../../docs/framework/winforms/controls/toolstripcontainer-control-overview.md)  
@@ -35,7 +35,7 @@ ms.locfileid: "54588300"
  <xref:System.Windows.Forms.ToolStripContentPanel>  
  Enthält die Referenzdokumentation für <xref:System.Windows.Forms.ToolStripContainer> eines <xref:System.Windows.Forms.ToolStripContentPanel>-Steuerelements.  
   
- Siehe auch [ToolStripContainer-Aufgaben (Dialogfeld)](https://msdn.microsoft.com/library/ms233647\(v=vs.110\)).  
+ Siehe auch [ToolStripContainer-Aufgaben (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100)).  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  <xref:System.Windows.Forms.ToolStripPanel>  

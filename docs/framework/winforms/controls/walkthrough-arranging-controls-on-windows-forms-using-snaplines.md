@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 2a2fd47c3ea2e675292c040f08b981a394e8221b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543223"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748033"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien
 Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anwendungen einen hohen Stellenwert. Der Windows Forms-Designer bietet Ihnen viele Layouttools, um dies zu erreichen. Einer der wichtigsten Faktoren ist die <xref:System.Windows.Forms.Design.Behavior.SnapLine> Feature.  
@@ -222,7 +222,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
   
 #### <a name="to-disable-snaplines-in-the-design-environment"></a>So deaktivieren Sie die Ausrichtungslinien, die in der entwurfsumgebung  
   
-1.  Von der **Tools** öffnen die **Optionen** Dialogfeld. Öffnen Sie im Dialogfeld Windows Forms-Designer. Weitere Informationen finden Sie unter [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834).  
+1.  Von der **Tools** öffnen die **Optionen** Dialogfeld. Öffnen Sie im Dialogfeld Windows Forms-Designer. Weitere Informationen finden Sie unter [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)).  
   
 2.  Wählen Sie die **allgemeine** Knoten. In der **Layoutmodus** Abschnitt, ändern Sie die Auswahl von **Ausrichtungslinien** zu **SnapToGrid**.  
   

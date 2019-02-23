@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 85631433534a2cd962e398fe435275aa293405a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea3c5d2c8d98f75bad164ff16c098401e41e4c5e
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543853"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748582"
 ---
 # <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken
 Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf dem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung ausgeführt wird.  
@@ -90,7 +90,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 |Gerasterter Inhalt, der verwendet <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Alle Inhalte, der Rendering über die <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> -Methode der <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
 |Gekachelter Inhalt, der verwendet <xref:System.Windows.Media.TileBrush>|Jeder gekachelte Inhalt, in dem die <xref:System.Windows.Media.TileBrush.TileMode%2A> Eigenschaft der <xref:System.Windows.Media.TileBrush> nastaven NA hodnotu <xref:System.Windows.Media.TileMode.Tile>.|  
 |Flächen, die die maximale Texturgröße der Grafikhardware überschreiten|Bei der meisten Grafikhardware sind große Flächen 2048 x 2048 oder 4096 x 4096 Pixel groß.|  
-|Jeder Vorgang, dessen Video-RAM-Anforderung den Arbeitsspeicher der Grafikhardware überschreitet|Sie können den Video-RAM-Verbrauch der Anwendung mithilfe des Perforatortools überwachen, das Bestandteil der [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) im Windows SDK ist.|  
+|Jeder Vorgang, dessen Video-RAM-Anforderung den Arbeitsspeicher der Grafikhardware überschreitet|Sie können den Video-RAM-Verbrauch der Anwendung mithilfe des Perforatortools überwachen, das Bestandteil der [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) im Windows SDK ist.|  
 |Überlappende Fenster|Überlappende Fenster ermöglichen den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen das Rendering von Inhalt auf dem Bildschirm in einem nicht rechteckigen Fenster. Auf Betriebssystemen, die Windows Display Driver Model (WDDM) unterstützen, wie z.B. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] und [!INCLUDE[win7](../../../../includes/win7-md.md)], sind überlappende Fenster hardwarebeschleunigt. Auf anderen Systemen, wie z.B. [!INCLUDE[winxp](../../../../includes/winxp-md.md)], werden überlappende Fenster von Software ohne Hardwarebeschleunigung gerendert.<br /><br /> Sie können überlappende Fenster in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] indem Sie folgende Einstellungen <xref:System.Windows.Window> Eigenschaften:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
@@ -117,7 +117,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 |Perforator|Wird für die Analyse von Renderingverhalten verwendet.|  
 |Visual Profiler|Wird zum Erstellen eines Profils der Verwendung von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Diensten durch Elemente in der visuellen Struktur verwendet, z.B. Layout- und Ereignisbehandlung.|  
   
- WPF Performance Suite bietet eine umfassende grafische Ansicht von Leistungsdaten. Weitere Informationen zu WPF-Leistungstools finden Sie unter [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e).  
+ WPF Performance Suite bietet eine umfassende grafische Ansicht von Leistungsdaten. Weitere Informationen zu WPF-Leistungstools finden Sie unter [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)).  
   
 ### <a name="directx-diagnostic-tool"></a>DirectX-Diagnosetool  
  Das [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Diagnosetool „Dxdiag.exe“ dient zum Beheben von [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-bezogenen Problemen. Der Standardinstallationsordner für das [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Diagnosetool ist:  
@@ -133,6 +133,6 @@ Hauptfenster des DirectX-Diagnosetools
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)
+- [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [Registrierungseinstellungen für das Rendern von Grafiken](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
 - [Tipps und Tricks zu Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

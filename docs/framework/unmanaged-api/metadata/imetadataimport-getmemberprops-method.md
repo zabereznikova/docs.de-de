@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d7be5adc81cff09b121265e7d5b5f712122607
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40631a15bd07b5aa54488e5d3b99cee751e2e0bd
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611409"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748335"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps-Methode
-Ruft Metadateninformationen, einschließlich der Namen, die binäre Signatur und die relative virtuelle Adresse, von der <xref:System.Type> Member vom angegebenen Metadatentoken verwiesen wird.  
+Ruft ab, in den Metadaten für eine angegebenen Member-Definition, einschließlich Name, binäre Signatur und relative virtuelle Adresse des gespeicherten Informationen dem <xref:System.Type> Member vom angegebenen Metadatentoken verwiesen wird. Dies ist eine einfache Hilfsmethode: Wenn *mb* MethodDef, dann ist **GetMethodProps** aufgerufen, wenn *mb* ist ein FieldDef, **GetFieldProps** wird aufgerufen. Finden Sie unter diesen anderen Methoden für Details. 
   
 ## <a name="syntax"></a>Syntax  
   
@@ -79,7 +79,7 @@ HRESULT GetMemberProps (
  [out] Alle Methodenimplementierungsflags, der dem Element zugeordnet wird.  
   
  `pdwCPlusTypeFlag`  
- [out] Ein Flag, das kennzeichnet eine <xref:System.ValueType>.  
+ [out] Ein Flag, das kennzeichnet eine <xref:System.ValueType>. Es ist eines der `ELEMENT_TYPE_*` Werte.
   
  `ppValue`  
  [out] Eine Zeichenfolgenkonstante, die von diesem Element zurückgegeben.  

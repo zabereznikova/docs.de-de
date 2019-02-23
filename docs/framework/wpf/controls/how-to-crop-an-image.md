@@ -8,17 +8,17 @@ helpviewer_keywords:
 - images [WPF], cropping
 - cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
-ms.openlocfilehash: fbd15ea6c5c47aa090829754402cc3a6926654d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dab4b2907f3aeeb2c480adb952a9afc92b6d5c17
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663965"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745932"
 ---
 # <a name="how-to-crop-an-image"></a>Vorgehensweise: Zuschneiden eines Bilds
 Dieses Beispiel zeigt, wie Sie ein Bild mit Zuschneiden <xref:System.Windows.Media.Imaging.CroppedBitmap>.  
   
- <xref:System.Windows.Media.Imaging.CroppedBitmap> Bei der Codierung einer zugeschnittenen Version eines Bilds wird in erster Linie, die sich in einer Datei speichern verwendet werden. Zum Zuschneiden eines Bilds zu Anzeigezwecken finden Sie die [erstellen Sie einen Clip-Bereich](https://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376) Thema.  
+ <xref:System.Windows.Media.Imaging.CroppedBitmap> Bei der Codierung einer zugeschnittenen Version eines Bilds wird in erster Linie, die sich in einer Datei speichern verwendet werden. Zum Zuschneiden eines Bilds zu Anzeigezwecken finden Sie die [Vorgehensweise: Erstellen Sie einen Clip-Bereich](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms746710(v=vs.90)) Thema.  
   
 ## <a name="example"></a>Beispiel  
  Die folgenden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definiert Ressourcen, die in den folgenden Beispielen verwendet.  
@@ -40,4 +40,4 @@ Dieses Beispiel zeigt, wie Sie ein Bild mit Zuschneiden <xref:System.Windows.Med
  [!code-vb[imageelementexample#CroppedCSharp2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp2)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erstellen Sie einen Clip-Bereich](https://msdn.microsoft.com/library/56e4bed6-78d7-4292-b917-d72d0b3e4376)
+- [Vorgehensweise: Erstellen Sie einen Clip-Bereich](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms746710(v=vs.90))

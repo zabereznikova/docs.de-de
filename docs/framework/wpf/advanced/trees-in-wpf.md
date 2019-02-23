@@ -6,12 +6,12 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 69c91a595861dacd3dcd92666684514bc3b6f4ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d49e9dec1cdbd2942fb9d1b94be32e44ca4311a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690409"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748059"
 ---
 # <a name="trees-in-wpf"></a>Strukturen in WPF
 In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur organisiert, in denen Entwickler die Objektknoten direkt in der Struktur bearbeiten, um das Rendering oder das Verhalten einer Anwendung zu beeinflussen. Außerdem verwendet [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mehrere Baumstrukturmetaphern, um Beziehungen zwischen Programmelementen festzulegen. Da die WPF-Entwickler meist eine Anwendung im Code erstellen können oder Teile der Anwendung in XAML festlegen, obwohl sie konzeptionell über die Baumstrukturobjektmetapher denken, rufen sie trotzdem eine bestimmte API auf oder verwenden bestimmte Markups, um dies zu tun, anstatt einige allgemeine API-Strukturobjektmanipulationen vorzunehmen, wie Sie sie möglicherweise im XML-DOM verwenden. WPF zeigt zwei hilfsprogrammklassen, die eine strukturmetapheransicht bereitstellen <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>. Die Begriffe „visuelle Struktur“ und „logische Struktur“ werden auch in der WPF-Dokumentation verwendet, da diese Strukturen für das Verstehen des Verhaltens bestimmter WPF-Schlüsselfunktionen hilfreich sind. In diesem Thema definiert, was die visuelle Struktur und die logische Struktur darstellen, wird erläutert, wie sich diese Strukturen auf ein allgemeines Objektstrukturkonzept beziehen und führt <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>s.  
@@ -29,7 +29,7 @@ In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur org
   
 <a name="logical_tree"></a>   
 ## <a name="the-logical-tree"></a>Die logische Struktur  
- In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fügen Sie Inhalte zu Benutzeroberflächenelementen hinzu, indem Sie Eigenschaften der Objekte festlegen, die diese Elemente unterstützen. Z. B. Elemente hinzugefügt eine <xref:System.Windows.Controls.ListBox> Steuerelement durch Bearbeiten der <xref:System.Windows.Controls.ItemsControl.Items%2A> Eigenschaft. Auf diese Weise fügen Sie Elemente in der <xref:System.Windows.Controls.ItemCollection> d. h. die <xref:System.Windows.Controls.ItemsControl.Items%2A> -Eigenschaftswert. Auf ähnliche Weise zum Hinzufügen von Objekten auf einer <xref:System.Windows.Controls.DockPanel>, Sie bearbeiten die <xref:System.Windows.Controls.Panel.Children%2A> -Eigenschaftswert. Hier ist Sie Objekte zum Hinzufügen der <xref:System.Windows.Controls.UIElementCollection>. Ein Codebeispiel finden Sie unter [Add an Element Dynamically (Dynamisches Hinzufügen eines Elements)](https://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419).  
+ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fügen Sie Inhalte zu Benutzeroberflächenelementen hinzu, indem Sie Eigenschaften der Objekte festlegen, die diese Elemente unterstützen. Z. B. Elemente hinzugefügt eine <xref:System.Windows.Controls.ListBox> Steuerelement durch Bearbeiten der <xref:System.Windows.Controls.ItemsControl.Items%2A> Eigenschaft. Auf diese Weise fügen Sie Elemente in der <xref:System.Windows.Controls.ItemCollection> d. h. die <xref:System.Windows.Controls.ItemsControl.Items%2A> -Eigenschaftswert. Auf ähnliche Weise zum Hinzufügen von Objekten auf einer <xref:System.Windows.Controls.DockPanel>, Sie bearbeiten die <xref:System.Windows.Controls.Panel.Children%2A> -Eigenschaftswert. Hier ist Sie Objekte zum Hinzufügen der <xref:System.Windows.Controls.UIElementCollection>. Ein Codebeispiel finden Sie unter [Vorgehensweise: Dynamisches Hinzufügen eines Elements](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms752374(v=vs.100)).  
   
  In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], wenn Sie die Listenelemente in Platzieren einer <xref:System.Windows.Controls.ListBox> oder Steuerelemente oder andere UI-Elemente in einer <xref:System.Windows.Controls.DockPanel>, Sie auch verwenden, die <xref:System.Windows.Controls.ItemsControl.Items%2A> und <xref:System.Windows.Controls.Panel.Children%2A> Eigenschaften entweder explizit oder implizit, wie im folgenden Beispiel.  
   

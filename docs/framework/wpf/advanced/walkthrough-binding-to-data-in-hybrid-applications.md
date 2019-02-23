@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a20dc95467df4baedce2f4acc63f0c029f178c6
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724342"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748491"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen
 Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellung von Benutzern mit Zugriff auf die zugrunde liegenden Daten, unabhängig davon, ob Sie sind [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] oder [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie die Datenbindung in hybridanwendungen verwenden können, die beide enthalten [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente.  
@@ -122,7 +122,7 @@ Binden einer Datenquelle an ein Steuerelement ist wichtig für die Bereitstellun
   
 1.  Von der **Daten** , wählen Sie im Menü **neue Datenquelle hinzufügen**.  
   
-2.  In der **Assistenten zur Datenquellenkonfiguration**, erstellen Sie eine Verbindung zur Northwind-Datenbank mithilfe eines Datasets. Weitere Informationen finden Sie unter [Vorgehensweise: Verbinden mit Daten in einer Datenbank](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
+2.  In der **Assistenten zur Datenquellenkonfiguration**, erstellen Sie eine Verbindung zur Northwind-Datenbank mithilfe eines Datasets. Weitere Informationen finden Sie unter [Vorgehensweise: Verbinden mit Daten in einer Datenbank](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120)).  
   
 3.  Wenn Sie gefragt werden durch die **Assistenten zur Datenquellenkonfiguration**, speichern Sie die Verbindungszeichenfolge als `NorthwindConnectionString`.  
   

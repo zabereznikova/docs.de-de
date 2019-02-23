@@ -9,18 +9,18 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: 8df357d3b366a057b2a6072fb69b47a6075df5a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6cd3e125b5b1a97f5851d4d1845e3e9e384e3d16
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492545"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748556"
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Vorgehensweise: Verwenden eines Ressourcenwörterbuchs für den Anwendungsbereich
 In diesem Beispiel wird gezeigt, wie ein benutzerdefiniertes Ressourcenverzeichnis für den Anwendungsbereich definiert und verwendet wird.  
   
 ## <a name="example"></a>Beispiel  
- <xref:System.Windows.Application> macht einen Anwendungsbereichspeicher für freigegebene Ressourcen: <xref:System.Windows.Application.Resources%2A>. In der Standardeinstellung die <xref:System.Windows.Application.Resources%2A> -Eigenschaft wird mit einer Instanz von initialisiert die <xref:System.Windows.ResourceDictionary> Typ. Sie verwenden diese Instanz, wenn Sie abrufen und Festlegen von Eigenschaften für den Anwendungsbereich über <xref:System.Windows.Application.Resources%2A>. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen und festlegen eine Ressource für den Anwendungsbereich](https://msdn.microsoft.com/library/39e0420c-c9fc-47dc-8956-fdd95b214095).
+ <xref:System.Windows.Application> macht einen Anwendungsbereichspeicher für freigegebene Ressourcen: <xref:System.Windows.Application.Resources%2A>. In der Standardeinstellung die <xref:System.Windows.Application.Resources%2A> -Eigenschaft wird mit einer Instanz von initialisiert die <xref:System.Windows.ResourceDictionary> Typ. Sie verwenden diese Instanz, wenn Sie abrufen und Festlegen von Eigenschaften für den Anwendungsbereich über <xref:System.Windows.Application.Resources%2A>. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen und festlegen eine Ressource für den Anwendungsbereich](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348547(v=vs.100)).
   
  Wenn Sie mehrere Ressourcen, die Sie festlegen, über <xref:System.Windows.Application.Resources%2A>, Sie können stattdessen ein benutzerdefiniertes Ressourcenverzeichnis verwenden, um diese Ressourcen zu speichern, und legen Sie <xref:System.Windows.Application.Resources%2A> mit stattdessen. Das folgende Beispiel zeigt, wie Sie ein benutzerdefiniertes Ressourcenverzeichnis mit XAML deklarieren.
   
