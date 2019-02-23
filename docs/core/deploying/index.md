@@ -5,12 +5,6 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: 78dfaf46d1531e9d416b25d7ad4a595d5b3f947b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266909"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core Anwendungsbereitstellung
 
@@ -30,7 +24,7 @@ Für eine FDD stellen Sie nur Ihre Anwendungen und Drittanbieter-Abhängigkeiten
 
 Die Bereitstellung einer FDD hat eine Reihe von Vorteilen:
 
-- Sie müssen die Zielbetriebssysteme, auf denen Ihre .NET Core-Anwendung ausgeführt wird, nicht im Voraus definieren. Da .NET Core unabhängig vom Betriebssystem ein gemeinsames PE-Dateiformat für ausführbare Dateien verwendet, kann .NET Core Ihrer Anwendung unabhängig vom zugrunde liegenden Betriebssystem ausführen. Weitere Informationen zum PE-Dateiformat finden Sie unter [.NET Assembly-Dateiformat](../../standard/assembly-format.md).
+- Sie müssen die Zielbetriebssysteme, auf denen Ihre .NET Core-Anwendung ausgeführt wird, nicht im Voraus definieren. Da .NET Core unabhängig vom Betriebssystem ein gemeinsames PE-Dateiformat für ausführbare Dateien verwendet, kann .NET Core Ihrer Anwendung unabhängig vom zugrunde liegenden Betriebssystem ausführen. Weitere Informationen zum PE-Dateiformat finden Sie unter [.NET Assembly-Dateiformat](../../standard/assembly/file-format.md).
 
 - Ihr Bereitstellungspaket ist klein. Sie müssen nur Ihre Anwendung und deren Abhängigkeiten bereitstellen, nicht .NET Core selbst.
 
