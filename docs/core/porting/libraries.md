@@ -2,20 +2,20 @@
 title: Portieren von Bibliotheken auf .NET Core
 description: Erfahren Sie, wie Sie Bibliotheksprojekte von .NET Framework zu .NET Core portieren.
 author: cartermp
-ms.date: 12/7/2018
+ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8190dcfd3ffed9051c7724752a19d88e7bef4f4d
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904698"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745559"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Portieren von .NET Framework-Bibliotheken auf .NET Core
 
 Informationen zum Portieren von .NET Framework-Bibliothekscode auf .NET Core, zur plattformübergreifenden Ausführung und zum Erweitern der Reichweite der Apps, die sie verwenden.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 In diesem Artikel wird vorausgesetzt, dass:
 
@@ -26,7 +26,7 @@ In diesem Artikel wird vorausgesetzt, dass:
 
 Sie sollten sich auch mit dem Inhalt in den folgenden Themen vertraut machen:
 
-[.NET-Standard](~/docs/standard/net-standard.md)   
+[.NET-Standard](../../standard/net-standard.md)\
 Dieses Thema beschreibt die formale Spezifikation von .NET-APIs, die in allen .NET-Implementierungen verfügbar sein sollen.
 
 [Pakete, Metapakete und Frameworks](~/docs/core/packages.md)   
