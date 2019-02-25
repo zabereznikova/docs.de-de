@@ -1,5 +1,5 @@
 ---
-title: Es tut uns leid, wir Verschlüsselungskennwort&#39;t haben Einzelheiten zu diesem C#-Fehler
+title: Leider haben wir keine Einzelheiten zu diesem C#-Fehler
 ms.date: 07/20/2015
 f1_keywords:
 - CS1583
@@ -882,32 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
+ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314069"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "56798929"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Es tut uns leid, wir Verschlüsselungskennwort&#39;t haben Einzelheiten zu diesem C#-Fehler
-Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren Fragen:  
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>Leider haben wir keine Einzelheiten zu diesem C#-Fehler
+Es tut uns leid, aber wir haben keine spezifischen Informationen zu diesem Fehler. Sie können im Internet nach der Fehlernummer und dem Meldungstext suchen, um weitere Informationen zu erhalten. Oder Sie können andere Entwickler in einem der folgenden Foren stellen:  
   
  [Visual C# Language](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- Bietet ein Forum für Fragen und allgemeine Diskussionen zu der Visual C#-Sprachsyntax und des Compilers.  
+ Bietet ein Forum für Fragen und allgemeine Diskussionen zu des visuellen Elements C# -Sprachsyntax und -Compiler.  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- Bietet ein Forum für Fragen zum Arbeiten in der Visual Studio-Umgebung.  
+ Bietet ein Forum für Fragen dazu, wie Sie in Visual Studio-Umgebung arbeiten.  
   
  [Visual C# General](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- Bietet ein Forum für Fragen und Probleme mit Visual c#, die in anderen Foren nicht diskutiert werden.  
+ Bietet ein Forum für Fragen und Probleme mit Visual C# , die in anderen Foren nicht diskutiert werden.  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Bietet ein Forum für Fragen und Probleme mit Visual c#.  
+ [Stapelüberlauf](https://stackoverflow.com/questions/tagged/c%23)  
+ Bietet ein Forum für Fragen und Probleme mit Visual C#.  
   
  Siehe auch:  
  [Zusätzliche Ressourcen für Visual C#-Programmierer](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)  
- [C#-Referenz](../../csharp/language-reference/index.md)  
- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)  
+## <a name="see-also"></a>Siehe auch
+
+- [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)
+- [C#-Referenz](../../csharp/language-reference/index.md)
+- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)
