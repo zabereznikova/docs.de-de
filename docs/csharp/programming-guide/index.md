@@ -65,7 +65,7 @@ Dieser Abschnitt bietet ausführliche Informationen zu wichtigen Funktionen von 
 ## <a name="platform-sections"></a>Abschnitte zur Plattform  
  [Anwendungsdomänen](../../framework/app-domains/application-domains.md)  
   
- [Assemblys und der globale Assemblycache](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [Assemblys in .NET](../../standard/assembly/index.md)  
   
  [Attribute](../../csharp/programming-guide/concepts/attributes/index.md)  
   
