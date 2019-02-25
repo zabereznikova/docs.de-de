@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 36f34fad49ed76293a83d3c018eea48fcdb2944a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1585f6e484923d16e1613b436588467b47daeecb
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714892"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746243"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Exemplarische Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements
 Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.ToolStrip> steuert, ein professionelles Aussehen und Verhalten durch eine eigene Klasse abgeleitet schreiben die <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Typ.  
@@ -30,7 +30,7 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
  Wenn Sie fertig sind, müssen Sie ein Steuerelement wiederverwendbare benutzerdefinierte Clienteinstellungen, mit der professionelle Darstellung eines Microsoft Office® XP-Steuerelements.  
   
- Um den Code in diesem Thema als einzelne Auflistung kopieren möchten, finden Sie unter [Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
+ Zum Kopieren des Codes in diesem Thema als einzelne Auflistung lesen Sie [Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
 >  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -49,7 +49,7 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
 2.  In **Projektmappen-Explorer**, löschen Sie Standardsteuerelement des Projekts, indem Sie die Quelldatei, die mit dem Namen "UserControl1.cs" oder "UserControl1.vb", abhängig von der Sprache Ihrer Wahl löschen.  
   
-     Weitere Informationen finden Sie unter [NIB: Vorgehensweise: Entfernen, löschen und Ausschließen von Elementen](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Weitere Informationen finden Sie unter [Vorgehensweise: Entfernen, löschen und Ausschließen von Elementen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
 3.  Fügen Sie einen neuen <xref:System.Windows.Forms.UserControl> Element für die **StackViewLibrary** Projekt. Weisen Sie der neuen Quelldatei Basisnamen `StackView`.  
   
@@ -70,7 +70,7 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
     |Schriftart|`Tahoma, 10pt, style=Bold`|  
     |GripStyle|<xref:System.Windows.Forms.ToolStripGripStyle.Hidden>|  
     |LayoutStyle|<xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow>|  
-    |Textabstand|`0, 7, 0, 0`|  
+    |Abstand|`0, 7, 0, 0`|  
     |RenderMode|<xref:System.Windows.Forms.ToolStripRenderMode.Professional>|  
   
 3.  Im Windows Forms-Designer, klicken Sie auf die <xref:System.Windows.Forms.ToolStrip> des Steuerelements **hinzufügen** Schaltfläche, und fügen eine <xref:System.Windows.Forms.ToolStripButton> auf die `stackStrip` Steuerelement.  
@@ -86,8 +86,8 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
     |ImageAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
     |ImageScaling|<xref:System.Windows.Forms.ToolStripItemImageScaling.None>|  
     |ImageTransparentColor|`238, 238, 238`|  
-    |Margin|`0, 0, 0, 0`|  
-    |Textabstand|`3, 3, 3, 3`|  
+    |Rand|`0, 0, 0, 0`|  
+    |Abstand|`3, 3, 3, 3`|  
     |Text|**E-Mail-Nachrichten**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
@@ -121,7 +121,7 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
 8.  Benennen Sie die `mailStackButton_Click` Ereignishandler `stackButton_Click`.  
   
-     Weitere Informationen finden Sie unter [Vorgehensweise: Umbenennen von Bezeichnern (Visual Basic)](https://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Weitere Informationen finden Sie unter [Umbenennen eines Codesymbols](/visualstudio/ide/reference/rename).  
   
 9. Fügen Sie folgenden Code in die `stackButton_Click` -Ereignishandler.  
   
@@ -135,7 +135,7 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
 12. Wiederholen Sie die Schritte 10 und 11 für den `contactsStackButton` und `tasksStackButton` Steuerelemente.  
   
 ## <a name="defining-icons"></a>Definieren von Symbolen  
- Jede `StackView` Schaltfläche verfügt über ein zugeordnetes Symbol. Der Einfachheit halber jedes Symbol wird dargestellt, als Base64-codierte Zeichenfolge, die deserialisiert wird, bevor Sie eine <xref:System.Drawing.Bitmap> daraus erstellt wird. In einer produktionsumgebung Bitmapdaten werden als Ressource gespeichert, und die Symbole, die im Windows Forms-Designer angezeigt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Hintergrundbildern zu Windows Forms](https://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Jede `StackView` Schaltfläche verfügt über ein zugeordnetes Symbol. Der Einfachheit halber jedes Symbol wird dargestellt, als Base64-codierte Zeichenfolge, die deserialisiert wird, bevor Sie eine <xref:System.Drawing.Bitmap> daraus erstellt wird. In einer produktionsumgebung Bitmapdaten werden als Ressource gespeichert, und die Symbole, die im Windows Forms-Designer angezeigt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Hintergrundbildern zu Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dff9f95f(v=vs.100)).  
   
 #### <a name="to-define-icons"></a>Um Symbole zu definieren.  
   
