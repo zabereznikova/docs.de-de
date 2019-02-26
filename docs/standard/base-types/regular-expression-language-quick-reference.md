@@ -191,7 +191,7 @@ ms.locfileid: "55204885"
   
 -   Mit [dem Konstrukt](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, wobei ein vor einer Option oder Optionsgruppe stehendes Minuszeichen (-) die betreffenden Optionen deaktiviert. Zum Beispiel aktiviert `(?i-mn)` Übereinstimmungen ohne Berücksichtigung der Groß-/Kleinschreibung (`i`), deaktiviert Mehrzeilenmodus (`m`) und deaktiviert unbenannte Gruppenerfassungen (`n`). Die Option gilt für das Muster des regulären Ausdrucks ab dem Punkt, an dem die Option definiert ist, und ist entweder bis zum Ende des Musters oder bis zu dem Punkt gültig, an dem ein anderes Konstrukt die Option umkehrt.  
   
--   Mit [Gruppierungskonstrukte in regulären Ausdrücken](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*Teilausdruck*`)`, das die Optionen nur für die angegebene Gruppe definiert.  
+-   Mit [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*Teilausdruck*`)`, das die Optionen nur für die angegebene Gruppe definiert.  
   
  Die .NET-Engine für reguläre Ausdrücke unterstützt die folgenden Inlineoptionen.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "55204885"
   
 <a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>Verschiedene Konstrukte  
- Verschiedene Konstrukte ändern Muster von regulären Ausdrücken oder stellen Informationen darüber bereit. In der folgenden Tabelle sind die verschiedenen Konstrukte aufgeführt, die von .NET unterstützt werden. Weitere Informationen finden Sie unter [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md).  
+ Verschiedene Konstrukte ändern Muster von regulären Ausdrücken oder stellen Informationen darüber bereit. In der folgenden Tabelle sind die verschiedenen Konstrukte aufgeführt, die von .NET unterstützt werden. Weitere Informationen finden Sie unter [Verschiedene Konstrukte](miscellaneous-constructs-in-regular-expressions.md).  
   
 |Konstrukt|Definition|Beispiel|  
 |---------------|----------------|-------------|  
