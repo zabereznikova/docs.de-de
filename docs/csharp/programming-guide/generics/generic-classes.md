@@ -36,7 +36,7 @@ Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmt
   
      Wenn Sie beispielsweise eine Klasse entwerfen, die zum Erstellen von Elementen in einer generisch basierten Auflistung verwendet wird, müssen Sie unter Umständen eine Schnittstelle implementieren, z.B. <xref:System.IComparable%601>, wobei `T` der Typ Ihrer Klasse ist.  
   
- Ein Beispiel für eine einfache generische Klasse finden Sie unter [Introduction to Generics (Einführung in Generika)](../../../csharp/programming-guide/generics/introduction-to-generics.md).  
+ Ein Beispiel für eine einfache generische Klasse finden Sie unter [Introduction to Generics (Einführung in Generics)](../../../csharp/programming-guide/generics/introduction-to-generics.md).  
   
  Die Regeln für Einschränkungen und Typparameter haben eine Reihe von Auswirkungen auf das Verhalten einer generischen Klasse, besonders im Hinblick auf Vererbung und Zugriff der Member. Bevor Sie fortfahren, sollten Sie einige Begriffe verstehen. Bei einer generischen Klasse kann der Clientcode `Node<T>,` auf die Klasse verweisen, indem er ein Typargument angibt, um einen geschlossenen konstruierten Typ (`Node<int>`) zu erstellen. Die Alternative besteht darin, den Typparameter nicht anzugeben, z.B. wenn Sie eine generische Basisklasse angeben, um einen offenen konstruierten Typ (`Node<T>`) zu erstellen. Generische Klassen können von konkreten, geschlossenen konstruierten oder offenen konstruierten Basisklassen erben:  
   
@@ -70,6 +70,6 @@ Generische Klassen kapseln Operationen, die nicht spezifisch für einen bestimmt
 
 - <xref:System.Collections.Generic>
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Generika](../../../csharp/programming-guide/generics/index.md)
+- [Generics](../../../csharp/programming-guide/generics/index.md)
 - [Saving the State of Enumerators (Speichern des Zustands von Enumeratoren)](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)
 - [An Inheritance Puzzle, Part One (Ein Vererbungs-Puzzle, Teil 1)](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)
