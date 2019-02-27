@@ -1,6 +1,6 @@
 ---
 title: IMetaDataImport::GetInterfaceImplProps-Methode
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 api_name:
 - IMetaDataImport.GetInterfaceImplProps
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91cb42a5bf1115de82b5fe28693cb77b66915c9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc16d01d45364d1a17f281f859b27c3e48342ff0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600556"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835719"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps-Methode
-Ruft einen Zeiger auf das Metadatentoken für die <xref:System.Type> , der die angegebene Methode implementiert und für die Schnittstelle, die diese Methode deklariert.  
+Ruft einen Zeiger auf das Metadatentoken für die <xref:System.Type> , der die angegebene Methode implementiert und für die Schnittstelle, die diese Methode deklariert.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,6 +46,33 @@ HRESULT GetInterfaceImplProps (
   
  `ptkIface`  
  [out] Das Metadatentoken, das die Schnittstelle, die die implementierte Methode definiert darstellt.  
+
+## <a name="remarks"></a>Hinweise
+
+ Rufen Sie den Wert für `iImpl` durch Aufrufen der [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) Methode.
+ 
+ Nehmen wir beispielsweise an, dass eine Klasse verfügt über eine `mdTypeDef` token-Wert von 0 x 02000007 und, dass es drei Schnittstellen implementiert, deren Typen Token haben: 
+
+- 0x02000003 (TypeDef)
+- 0x0100000A (TypeRef)
+- 0x0200001C (TypeDef)
+
+Vom Konzept her ist diese Informationen in eine Schnittstellentabelle-Implementierung als gespeichert:
+
+| Zeilennummer | Klassen-token | Interface-token |
+|------------|-------------|-----------------|
+| 4          |             |                 |
+| 5          | 02000007    | 02000003        |
+| 6          | 02000007    | 0100000A        |
+| 7          |             |                 |
+| 8          | 02000007    | 0200001C        |
+
+Denken Sie daran, das Token ein 4-Byte-Wert ist:
+
+- Die niederwertigen 3 Bytes enthalten die Nummer der Zeile, oder entfernen.
+- Das obere Byte enthält den Tokentyp: 0 x 09 für `mdtInterfaceImpl`.
+
+`GetInterfaceImplProps` Gibt die Informationen, in der Zeile, deren Token, das Sie bereitstellen gespeichert, in der `iImpl` Argument. 
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

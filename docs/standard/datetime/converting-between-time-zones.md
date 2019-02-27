@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78f25b657e6cb103797e13e98c3dd61a80003dc2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e08e90f61429f01f360808866fdc3d963323ba23
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701819"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835342"
 ---
 # <a name="converting-times-between-time-zones"></a>Konvertieren von Uhrzeiten zwischen Zeitzonen
 
@@ -27,7 +27,7 @@ Es wird immer wichtiger, dass Anwendungen, die mit Daten und Uhrzeiten arbeiten,
 
 ## <a name="converting-to-coordinated-universal-time"></a>Konvertieren in die koordinierte Weltzeit
 
-Die koordinierte Weltzeit (UTC, Coordinated Universal Time) ist ein auf der Atomzeit basierender, höchst präziser Zeitstandard. Die Zeitzonen der Welt werden als positive oder negative Abweichungen von der UTC ausgedrückt. Daher ist die UTC sozusagen eine zeitzonenfreie bzw. zeitzonenneutrale Zeit. Die Verwendung der UTC wird empfohlen, wenn die computerübergreifende Portabilität von Datum und Uhrzeit von großer Bedeutung ist. (Weitere Informationen und andere bewährte Verfahren, die mit Datumsangaben und Uhrzeiten, finden Sie unter [bewährter mit "DateTime" in .NET Framework](https://msdn.microsoft.com/library/ms973825.aspx).) Durch Konvertieren einzelner Zeitzonen in die UTC lassen sich Zeiten einfach miteinander vergleichen.
+Die koordinierte Weltzeit (UTC, Coordinated Universal Time) ist ein auf der Atomzeit basierender, höchst präziser Zeitstandard. Die Zeitzonen der Welt werden als positive oder negative Abweichungen von der UTC ausgedrückt. Daher ist die UTC sozusagen eine zeitzonenfreie bzw. zeitzonenneutrale Zeit. Die Verwendung der UTC wird empfohlen, wenn die computerübergreifende Portabilität von Datum und Uhrzeit von großer Bedeutung ist. (Weitere Informationen und andere bewährte Verfahren, die mit Datumsangaben und Uhrzeiten, finden Sie unter [bewährter mit "DateTime" in .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10)).) Durch Konvertieren einzelner Zeitzonen in die UTC lassen sich Zeiten einfach miteinander vergleichen.
 
 > [!NOTE]
 > Sie können auch serialisieren eine <xref:System.DateTimeOffset> Struktur zu einen bestimmten Zeitpunkt eindeutig darzustellen. Da <xref:System.DateTimeOffset> einen Wert für Datum und Uhrzeit sowie die zugehörige Abweichung von der UTC Speichern von Objekten, die sie darstellen immer einen bestimmten Zeitpunkt in Relation zur UTC.

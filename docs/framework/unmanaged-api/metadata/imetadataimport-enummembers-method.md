@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88b8f874400d68110fa5e8fb66ca910b8e7231e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4bf2cf647682062fbacb4484ffae905d1b7995
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645963"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835368"
 ---
 # <a name="imetadataimportenummembers-method"></a>IMetaDataImport::EnumMembers-Methode
 Zählt MemberDef-Token auf, die Elemente des angegebenen Typs darstellen.  
@@ -39,7 +39,7 @@ HRESULT EnumMembers (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator.  
   
@@ -63,7 +63,9 @@ HRESULT EnumMembers (
 |`S_FALSE`|Es gibt keine MemberDef-Token, die aufgelistet werden. In diesem Fall `pcTokens` ist 0 (null).|  
   
 ## <a name="remarks"></a>Hinweise  
- Beim Auflisten von Sammlungen von Elementen für eine Klasse von `EnumMembers` gibt nur die Elemente, die direkt in der Klasse definiert. Es gibt keine Member, die die Klasse erbt, zurück, auch wenn die Klasse eine Implementierung für diese geerbten Member bereitstellt. Um geerbte Member aufzulisten, muss der Aufrufer explizit die Vererbungskette geführt. Beachten Sie, dass die Regeln für die Vererbungskette variieren abhängig von der Sprache und Compiler, die die ursprüngliche Metadaten ausgegeben.  
+ Beim Auflisten von Sammlungen von Elementen für eine Klasse von `EnumMembers` gibt nur Mitglieder (Felder und Methoden, aber **nicht** Eigenschaften oder Ereignisse) direkt in der Klasse definiert. Es gibt keine Member, die die Klasse erbt, zurück, auch wenn die Klasse eine Implementierung für diese geerbten Member bereitstellt. Um geerbte Member aufzulisten, muss der Aufrufer explizit die Vererbungskette geführt. Beachten Sie, dass die Regeln für die Vererbungskette variieren abhängig von der Sprache und Compiler, die die ursprüngliche Metadaten ausgegeben.
+ 
+ Eigenschaften und Ereignisse werden nicht durch den aufgezählt `EnumMembers`. Verwenden Sie zum Auflisten von den [EnumProperties](imetadataimport-enumproperties-method.md) oder [EnumEvents](imetadataimport-enumevents-method.md).
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

@@ -3,170 +3,190 @@ title: Innere Schleife Entwicklungsworkflow für Docker-apps
 description: Erfahren Sie, die "innere Schleife"-Workflow für die Entwicklung von Docker-Anwendungen.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: 2d592f92153040d910dcf529ec21770693f5973c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.date: 02/15/2019
+ms.openlocfilehash: 1134ff439235609db840c85a1e67bc9fe4ccec84
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442320"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835680"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Innere Schleife Entwicklungsworkflow für Docker-apps
 
-Vor dem Auslösen des äußeren Schleife Workflows umfasst den gesamten DevOps-Zyklus, es beginnt alles auf dem Computer jedes Entwicklers, die app selbst zu codieren, verwenden ihren bevorzugten Sprachen oder Plattformen und diese lokal testen (Abbildung 4-14). In jedem Fall, müssen aber einen sehr wichtigen Punkt gemeinsam, unabhängig davon, welche Sprache, Framework oder Plattformen, die Sie auswählen. In diesem bestimmten Workflow immer entwickeln und Testen des Docker-Containern, aber lokal.
+Vor dem Auslösen des äußeren Schleife Workflows umfasst den gesamten DevOps-Zyklus, es beginnt alles auf dem Computer jedes Entwicklers, die app selbst zu codieren, verwenden ihren bevorzugten Sprachen oder Plattformen und diese lokal testen (Abbildung 4-21). In jedem Fall, müssen aber einen wichtigen Punkt gemeinsam, unabhängig davon, welche Sprache, Framework oder Plattformen, die Sie auswählen. In diesem bestimmten Workflow immer entwickeln und Testen des Docker-Containern, aber lokal.
 
-![](./media/image18.png)
+![Schritt 1: Code, Ausführungs-und Debuggen](./media/image18.png)
 
-Abbildung 4-14: Innere Schleife Development-Kontext
+**Abbildung 4-21:** Innere Schleife Development-Kontext
 
 Der Container oder eine Instanz eines Docker-Images werden diese Komponenten enthalten:
 
 -   Eine Betriebssystemauswahl (z.B. eine Linux-Distribution oder Windows)
 
--   Dateien, die vom Entwickler (z.B. app-Binärdateien) hinzugefügt
+- Dateien, die vom Entwickler (z.B. app-Binärdateien) hinzugefügt
 
 -   Konfiguration (z. B. umgebungseinstellungen und Abhängigkeiten)
 
--   Anweisungen für welche Aspekte Sie verarbeitet die Ausführung von Docker
+- Anweisungen für welche Aspekte Sie verarbeitet die Ausführung von Docker
 
-Sie können die innere Schleife Entwicklungsworkflow einrichten, die Docker wie der Prozess (im nächsten Abschnitt beschrieben) verwendet. Berücksichtigen Sie, dass die ersten Schritte zum Einrichten der Umgebung ist nicht eingeschlossen werden, da Sie nur einmal durchführen müssen.
+Sie können die innere Schleife Entwicklungsworkflow einrichten, die Docker wie der Prozess (im nächsten Abschnitt beschrieben) verwendet. Erwägen Sie, dass die ersten Schritte zum Einrichten der Umgebung nicht eingeschlossen werden, da Sie nur einmal tun müssen.
 
 ## <a name="building-a-single-app-within-a-docker-container-using-visual-studio-code-and-docker-cli"></a>Erstellen eine einzelne app in Docker-Container mit Visual Studio Code und Docker-CLI
 
 Apps bestehen aus Ihren eigenen Diensten sowie zusätzlichen Bibliotheken (Abhängigkeiten).
 
-Abbildung 4-15 zeigt die grundlegenden Schritte, die Sie in der Regel beim Erstellen einer Docker-app, gefolgt von ausführliche Beschreibungen der einzelnen Schritte ausführen müssen.
+Abbildung 4-22 zeigt die grundlegenden Schritte, die Sie in der Regel beim Erstellen einer Docker-app, gefolgt von ausführliche Beschreibungen der einzelnen Schritte ausführen müssen.
 
-![](./media/image19.png)
+![Übersicht über Workflow –: Schritt 1: Code, Schritt2: Schreiben von dockerfile-Dateien, Schritt 3: Erstellen von Images mit docker-Dateien, Schritt 4 definiert – definieren Sie mit Schritt 5: Ausführen von Containern docker-Compose-Datei, Dienste oder zusammengesetzte Anwendungen, Schritt 6 – Test-apps, Schritt 7: per Push übertragen, um zu beginnen die äußere Schleife (CI/CD-Pipelines), oder de Veloping.](./media/image19.png)
 
-Abbildung 4-15: Allgemeiner Workflow für die Lebenszyklus von Docker-containeranwendungen mit Docker CLI
+**Abbildung 4-22.** Allgemeiner Workflow für die Lebenszyklus von Docker-containeranwendungen mit Docker CLI
 
 ### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Schritt 1: Beginnen mit dem Programmieren in Visual Studio Code, und erstellen Sie Ihrer ersten app/des Diensts
 
-Die Möglichkeit, die Sie bei der Entwicklung Ihrer Anwendung ist ganz ähnlich wie Sie es ohne Docker. Der Unterschied ist, die beim Entwickeln, bereitstellen und Testen Ihre Anwendung oder Dienste, die in Docker-Containern platziert, die in Ihrer lokalen Umgebung (z.B. eine Linux-VM oder Windows) ausgeführt.
+Die Möglichkeit, die Sie bei der Entwicklung Ihrer Anwendung ist ähnlich wie Sie es ohne Docker. Der Unterschied ist, die beim Entwickeln, bereitstellen und Testen Ihre Anwendung oder Dienste, die in Docker-Containern platziert, die in Ihrer lokalen Umgebung (z.B. eine Linux-VM oder Windows) ausgeführt.
 
 **Das Einrichten Ihrer lokalen Umgebung**
 
 Mit den neuesten Versionen von Docker für Mac und Windows es ist einfacher als je zuvor zu Docker-Anwendungen entwickeln, und das Setup ist einfach.
 
-**Weitere Informationen** Anweisungen zum Einrichten von Docker für Windows finden Sie unter [ https://docs.docker.com/docker-for-windows/ ](https://docs.docker.com/docker-for-windows/).
-
-Anweisungen zum Einrichten von Docker für Mac finden Sie unter <https://docs.docker.com/docker-for-mac/>.
+> [!INFORMATION]
+>
+> Anweisungen zum Einrichten von Docker für Windows finden Sie unter <https://docs.docker.com/docker-for-windows/>.
+>
+>Anweisungen zum Einrichten von Docker für Mac finden Sie unter <https://docs.docker.com/docker-for-mac/>.
 
 Darüber hinaus benötigen Sie einen Code-Editor, damit Sie Ihre Anwendung bei der Verwendung von Docker-CLI tatsächlich entwickeln können.
 
 Microsoft bietet Visual Studio Code, einem einfachen Code-Editor, die unter Mac, Windows und Linux unterstützt, und bietet IntelliSense mit [Unterstützung für viele Sprachen](https://code.visualstudio.com/docs/languages/overview) (JavaScript, .NET, Go, Java, Ruby, Python und die meisten Moderne Sprachen), [Debuggen](https://code.visualstudio.com/Docs/editor/debugging), [-Integration mit Git](https://code.visualstudio.com/Docs/editor/versioncontrol) und [unterstützen](https://code.visualstudio.com/docs/extensions/overview). Dieser Editor ist ideal für Mac und Linux-Entwickler. In Windows können Sie auch die vollständige Visual Studio-Anwendung verwenden.
 
-**Weitere Informationen** finden Sie Anweisungen zum Installieren von Visual Studio für Windows, Mac oder Linux <https://code.visualstudio.com/docs/setup/setup-overview/>.
+> [!INFORMATION]
+>
+> Anweisungen zum Installieren von Visual Studio Code für Windows, Mac oder Linux finden Sie unter <https://code.visualstudio.com/docs/setup/setup-overview/>.
+>
+> Anweisungen zum Einrichten von Docker für Mac finden Sie unter <https://docs.docker.com/docker-for-mac/>.
 
-Sie arbeiten mit Docker-CLI und Schreiben Sie Ihren Code ein Code-Editor verwenden können, aber wenn Sie Visual Studio Code verwenden, macht es einfach, Autor dockerfile-Datei und Docker-compose.yml-Dateien in Ihrem Arbeitsbereich. Darüber hinaus können Sie Aufgaben für Visual Studio Code aus der IDE ausführen, die Skripts aufgefordert, die ausführliche Vorgänge, die mit Docker-CLI unter ausgeführt werden können.
+Sie können Arbeit mit Docker-CLI und Schreiben Sie Ihren Code mit jedem Code-Editor, aber mit Visual Studio Code mit der Docker-Erweiterung vereinfacht Autor `Dockerfile` und `docker-compose.yml` Dateien in Ihrem Arbeitsbereich. Sie können auch Aufgaben und Skripts aus Visual Studio Code-IDE zum Ausführen von Docker-Befehlen, die mit der Docker CLI unter ausführen.
 
-Visual Studio Code wird von einer Erweiterung bereitgestellt, die Sie installieren müssen. Drücken Sie STRG + UMSCHALT + P, dazu geben **Ext installieren**, und führen Sie dann auf die Erweiterungen: Installieren Sie die Erweiterung-Befehl, um die Liste der Marketplace-Erweiterungen anzuzeigen. Geben Sie als Nächstes **Docker** zum Filtern der Ergebnisse, und wählen Sie dann die Dockerfile und Docker Compose-Datei (Yml) Erweiterung "Support" aus, wie in Abbildung 4-16 dargestellt.
+Die Docker-Erweiterung für Visual Studio Code bietet die folgenden Features:
 
-![](./media/image20.png)
+- Automatische `Dockerfile` und `docker-compose.yml` Datei generieren
 
-Abbildung 4 – 16: Installieren der Docker-Erweiterungs in Visual Studio Code
+- Hervorhebung und zeigen Sie Tipps zur Syntax für `docker-compose.yml` und `Dockerfile` Dateien
+
+- IntelliSense (vervollständigungen) für `Dockerfile` und `docker-compose.yml` Dateien
+
+- Linting (Fehler und Warnungen) für `Dockerfile` Dateien
+
+- Befehl Palette (F1)-Integration für die am häufigsten verwendeten Docker-Befehle
+
+- Explorer-Integration für die Verwaltung von Images und Containern
+
+- Bereitstellen von Images von DockerHub und Azure-Containerregistrierungen in Azure App Service
+
+Zum Installieren der Docker-Erweiterung, drücken Sie STRG + UMSCHALT + P, geben `ext install`, und führen Sie den Befehl "Erweiterung installieren", um die Liste der Marketplace-Erweiterungen anzuzeigen. Geben Sie als Nächstes **Docker** zum Filtern der Ergebnisse, und wählen Sie dann die Erweiterung für Docker-Unterstützung, wie in Abbildung 4-23 dargestellt.
+
+![Ansicht der Docker-Erweiterung für Visual Studio Code.](./media/image20.png)
+
+**Abbildung 4-23.** Installieren der Docker-Erweiterungs in Visual Studio Code
 
 ### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>Schritt 2: Erstellen Sie eine dockerfile-Datei im Zusammenhang mit einem vorhandenen Image (einfaches Betriebssystem oder entwicklungsumgebungen wie .NET Core, Node.js und Ruby)
 
-Sie benötigen eine dockerfile-Datei pro benutzerdefiniertes Image erstellt werden und Container bereitgestellt werden, daher, wenn Ihre app aus einen benutzerdefinierten Dienst besteht, benötigen Sie eine einzelne dockerfile-Datei. Aber wenn Ihre app aus mehreren Diensten (wie in einer Microservices-Architektur) besteht, benötigen Sie eine dockerfile-Datei pro Dienst.
+Sie müssen eine `DockerFile` pro benutzerdefiniertes Image erstellt werden und Container bereitgestellt werden. Wenn Ihre app aus einen benutzerdefinierten Dienst besteht, benötigen Sie ein einzelnes `DockerFile`. Aber wenn Ihre app aus mehreren Diensten (wie in einer Microservices-Architektur) besteht, benötigen Sie ein `Dockerfile` pro Dienst.
 
-Die dockerfile-Datei befindet sich in der Regel im Stammordner Ihrer app oder Ihres Diensts und enthält die erforderlichen Befehle aus, damit Docker weiß, wie einrichten und Ausführen dieser app oder Ihres Diensts. Sie können die dockerfile-Datei zu erstellen und zu Ihrem Projekt zusammen mit Ihrem Code hinzufügen (.NET Core, node.js usw.), oder, wenn Sie in der Umgebung vertraut sind, sehen Sie sich den folgenden Tipp.
+Die `DockerFile` wird häufig im Stammordner Ihrer app oder Ihres Diensts und enthält die erforderlichen Befehle aus, damit Docker weiß, wie einrichten und Ausführen dieser app oder Ihres Diensts. Sie erstellen Ihre `DockerFile` und fügen sie dem Projekt zusammen mit Ihrem Code hinzu (.NET Core, node.js usw.), oder, wenn Sie in der Umgebung vertraut sind, sehen Sie sich den folgenden Tipp.
 
 > [!TIP]
-> Sie können ein Befehlszeilentool namens [yo Docker](https://github.com/Microsoft/generator-docker), der erstellt das Gerüst für die Dateien aus Ihrem Projekt in der Sprache Ihrer Wahl, und fügt die erforderlichen Docker-Konfigurationsdateien. Im Grunde genommen, um Entwicklern die ersten Schritte zu unterstützen, erstellt der entsprechenden dockerfile-Datei "Docker-Compose.yml", und die anderen zugehörigen Skripts zum Erstellen und Ausführen der Docker-Container. Diese Yeoman-Generators werden mit ein paar Fragen, Fragen Ihren ausgewählten Entwicklung Sprache und das Ziel der containerhost aufgefordert.
+>
+> Können Sie die Docker-Erweiterung Anleitung für die Verwendung der `Dockerfile` und `docker-compose.yml` Dateien im Zusammenhang mit der Docker-Container. Schließlich werden Sie wahrscheinlich diese Arten von Dateien ohne dieses Tool schreiben, aber mithilfe der Docker-Erweiterung ist ein guter Ausgangspunkt, der mit der Lernprozess beschleunigt wird.
 
-![yo Docker](./media/image21.png)
+In Abbildung 4-24, können Sie sehen, wie ein Docker-compose-Datei wird mithilfe der Docker-Erweiterung für Visual Studio Code hinzugefügt.
 
-Beispielsweise zeigt die beiden Screenshots aus den Terminals Abbildung 4-17, in Windows und auf einem Mac in beiden Fällen "yo" denen Docker ausgeführt wird, die den Code Beispielprojekte (derzeit .NET Core, Golang und Node.js als unterstützten Sprachen) bereits so konfiguriert, dass die arbeiten generiert wird obere von Docker.
+![Die Konsolenansicht der Docker-Erweiterung für Visual Studio Code.](./media/image24.png)
 
-![](./media/image22.PNG)  ![](./media/image23.png)
+**Abbildung 4-24.** Docker-Dateien hinzugefügt, mit der **Hinzufügen von Docker-Dateien auf Workspace-Befehl**
 
-Abbildung 4-17: yo Docker Befehlstool in Windows (links) und auf einem Mac
+Wenn Sie eine dockerfile-Datei hinzufügen, geben Sie welche Docker-Basisimage Sie verwenden (wie die Verwendung von `FROM microsoft/aspnetcore`). Erstellen Sie in der Regel Ihr benutzerdefinierte Image auf einem Basisimage, die Sie aus einem offiziellen-Repository auf erhalten die [Docker Hub-Registrierung](https://hub.docker.com/) (z. B. eine [Images für .NET Core](https://hub.docker.com/r/microsoft/dotnet/) oder der [für Node.js](https://hub.docker.com/_/node/)).
 
-Abbildung 4-18 zeigt ein Beispiel mit yo Docker nachdem man von einem vorhandenen .NET Core-Projekt einrichten, um das Gerüst erstellt werden.
-
-![](./media/image24.PNG)
-
-Abbildung 4-18: yo Docker mit einem vorhandenen .NET Core vorgesehenes Projekt
-
-Geben Sie aus der dockerfile-Datei welche Docker-Basisimage Sie verwenden möchten (z. B. mit "von microsoft/dotnet:1.0.0-core") an. In der Regel erstellen Sie Ihr benutzerdefinierte Image auf einem Basisimage, das Sie über alle offiziellen-Repository in abrufen können die [Docker Hub-Registrierung](https://hub.docker.com/) (z. B. eine [Images für .NET Core](https://hub.docker.com/r/microsoft/dotnet/) oder einem [für Node.js](https://hub.docker.com/_/node/)).
-
-***Option A: Verwenden Sie ein vorhandenes offizielles dockerimage***
+***Verwenden Sie ein vorhandenes offizielles dockerimage***
 
 Mit einem offiziellen-Repository eines Stapels Sprache mit einer Versionsnummer wird sichergestellt, dass die gleichen Sprachfunktionen auf allen Computern (einschließlich Entwicklung, Tests und Produktion) verfügbar sind.
 
-Es folgt eine DockerFile-Beispieldatei für eine .NET Core-Container:
+Im folgenden finden eine DockerFile-Beispieldatei für eine .NET Core-Container:
 
-```
-# Base Docker image to use
-FROM microsoft/aspnetcore:1.0.1\
-
-# Set the Working Directory and files to be copied to the image
-ARG source
-WORKDIR /app
-COPY ${source:-bin/Release/PublishOutput} .
-
-# Configure the listening port to 80 (Internal/Secured port within Docker host)
-EXPOSE 80
-
-# Application entry point
+```Dockerfile
+# Base Docker image to use  
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
+  
+# Set the Working Directory and files to be copied to the image  
+ARG source  
+WORKDIR /app  
+COPY ${source:-bin/Release/PublishOutput} .  
+  
+# Configure the listening port to 80 (Internal/Secured port within Docker host)  
+EXPOSE 80  
+  
+# Application entry point  
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-In diesem Fall ist es die Version 1.0.1 des offiziellen ASP.NET Core-Docker-Image für Linux mit dem Namen microsoft/aspnetcore:1.0.1 verwenden. Weitere Informationen finden Sie in der [ASP.NET Core-Docker-Image-Seite](https://hub.docker.com/r/microsoft/aspnetcore/) und [.NET Core-Docker-Image-Seite](https://hub.docker.com/r/microsoft/dotnet/). Außerdem können verwenden Sie einen anderen vergleichbares Bild wie Knoten: 4-Onbuild für Node.js oder vielen anderen vorkonfigurierten Images für Entwicklungssprachen erhältlich sind [Docker Hub](https://hub.docker.com/explore/).
+Das Bild in diesem Fall basiert auf Version 2.1 von der offiziellen ASP.NET Core-Docker-Image (Multi-Arch für Linux und Windows), gemäß der Zeile `FROM microsoft/dotnet:2.1-aspnetcore-runtime`. (Weitere Informationen zu diesem Thema finden Sie unter den [ASP.NET Core-Docker-Image](https://hub.docker.com/r/microsoft/aspnetcore/) Seite und die [.NET Core-Docker-Image](https://hub.docker.com/r/microsoft/dotnet/) Seite).
 
-In der dockerfile-Datei müssen Sie auch angeben, dass Docker zum TCP-Port zu lauschen, die Sie zur Laufzeit (z. B. Port 80) verwenden.
+In der dockerfile-Datei können Sie auch weisen Docker an zum TCP-Port zu lauschen, die Sie zur Laufzeit (z. B. Port 80) verwenden.
 
-Es gibt andere Zeilen in der Konfiguration, die Sie in der dockerfile-Datei je nach Sprachen/Frameworks, die Sie verwenden, hinzufügen können, damit Docker weiß, wie Sie die app ausführen. Beispielsweise benötigen Sie die ENTRYPOINT-Zeile mit \["Dotnet", "MyCustomMicroservice.dll"\] eine .NET Core-app ausgeführt wird, obwohl Sie mehrere Varianten je nach den Ansatz zum Erstellen und Ausführen Ihres Diensts haben können. Wenn Sie verwenden das SDK und die Dotnet-CLI zum Erstellen und führen Sie die app .NET, wäre es etwas anders. Das Fazit ist, dass die ENTRYPOINT-Zeile sowie weitere Zeilen je nach Sprache/Plattform unterscheiden, die Sie für Ihre Anwendung auswählen.
+Je nach Sprache und Framework, die Sie verwenden, können Sie zusätzliche Konfigurationseinstellungen in der Dockerfile angeben. Z. B. die `ENTRYPOINT` Linie mit `["dotnet", "MySingleContainerWebApp.dll"]` teilt Docker zum Ausführen einer .NET Core-Anwendung. Wenn Sie das SDK und .NET Core-CLI nutzen (`dotnet CLI`) zum Erstellen, und führen Sie die Anwendung .NET, diese Einstellung wären unterschiedlich. Der ausschlaggebende Punkt hierbei ist, dass die ENTRYPOINT-Zeile und andere Einstellungen hängen von der Sprache und Plattform, die Sie für Ihre Anwendung auswählen.
 
-**Weitere Informationen** Informationen über das Erstellen von Docker-Images für .NET Core-Anwendungen finden Sie unter [ https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images ](../../../core/docker/building-net-docker-images.md).
+> [!INFORMATION]
+>
+> Weitere Informationen zum Erstellen von Docker-Images für .NET Core-Anwendungen finden Sie unter <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
+>
+> Wechseln Sie zu, um weitere Informationen zum Erstellen Ihrer eigenen Images <https://docs.docker.com/engine/tutorials/dockerimages/>.
 
-Wechseln Sie zu, um weitere Informationen zum Erstellen Ihrer eigenen Images [ https://docs.docker.com/engine/\ Tutorials/Dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
+**Verwenden Sie die Repositorys für Images für mehrere Architekturen**
 
-**Für mehrere Plattformen Image-Repositorys**
+Ein einzelnes Image-Name in einem Repository kann Plattformvarianten, z. B. ein Linux-Image und ein Windows-Image enthalten. Dieses Feature ermöglicht Anbietern wie Microsoft (basisimageentwickler), um ein Repository für mehrere Plattformen (d. h., Linux und Windows) zu erstellen. Z. B. die [Microsoft/Aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) Repository zur Verfügung, in der Docker-Hub-Registrierung bietet Unterstützung für Linux und Windows Nano Server mit denselben imagenamen ein.
 
-Wie Windows-Containern immer häufiger verwendet, kann ein einzelnes Repository Plattformvarianten, z. B. ein Linux- und Windows-Image enthalten. Dies ist ein neues Feature in Docker, das für die softwareaktualisierung ein einziges Repository für die verwenden mehrere Plattformen wie z. B. ermöglicht [Microsoft/Aspdotnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) -Repository, das an DockerHub-Registrierung verfügbar ist. Wie die Funktion aktiv ist, wird dieses Image von einem Windows-Host ziehen die Windows-Variante, rufen Sie während der gleiche ImageName von einem Linux-Host ziehen die Linux-Variante abruft.
+Abrufen der [Microsoft/Aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) Image von einem Windows-Host Ruft die Windows-Variante, während der gleiche ImageName von einem Linux-Host ziehen die Linux-Variante abruft.
 
-***Option B: Ihr Basisimage von Grund auf neu erstellen***
+***Ihr Basisimage von Grund auf neu erstellen***
 
-Sie können Ihre eigenen Docker-Basisimage von Grund auf neu erstellen, wie dies unter [Artikel](https://docs.docker.com/engine/userguide/eng-image/baseimages/) von Docker. Dies ist ein Szenario, das ist wahrscheinlich nicht für Sie am besten, wenn Sie nur mit Docker beginnen, aber wenn Sie die bestimmten Bits Ihres eigenen Basisimages festlegen möchten, können Sie dies tun.
+Sie können Ihre eigenen Docker-Basisimage von Grund auf neu erstellen, wie dies unter [Artikel](https://docs.docker.com/engine/userguide/eng-image/baseimages/) von Docker. Dieses Szenario ist wahrscheinlich nicht für Sie am besten geeignet, wenn Sie gerade erst mit Docker beginnen, aber wenn Sie die bestimmten Bits Ihres eigenen Basisimages festlegen möchten, können Sie dies tun.
 
 ### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Schritt 3: Erstellen Sie Ihre benutzerdefinierten Docker-Images, die Ihrem Dienst darin einbetten
 
 Für jeden benutzerdefinierten Dienst, die Ihre app umfasst, müssen Sie ein zugehöriges Image erstellen. Wenn Ihre app aus einem einzelnen Dienst oder Web-app besteht, benötigen Sie ein einziges Bild.
 
 > [!NOTE]
-> Wenn die "outer-Loop-DevOps-Workflow" berücksichtigen, die Bilder erstellt durch einen automatisierten Buildprozess zu, wenn Sie Ihren Quellcode in einem Git-Repository (Continuous Integration) übertragen, sodass die Bilder in der globalen Umgebung erstellt werden von Ihrem im Quellcode.
+>
+> Wenn die "outer-Loop-DevOps-Workflow" berücksichtigen, die Bilder erstellt durch einen automatisierten Buildprozess zu, wenn Sie mithilfe von Push Ihren Quellcode in einem Git-Repository (Continuous Integration), übertragen sodass die Bilder in der globalen Umgebung erstellt werden von Ihrem im Quellcode.
+>
+> Aber bevor wir auf die äußere Schleife Route in Betracht ziehen, müssen wir sicherstellen, dass die Docker-Anwendung ordnungsgemäß funktioniert, damit sie Code nicht die Warteschlange übertragen, die auf das Quellcodeverwaltungssystem (Git, usw.) möglicherweise nicht ordnungsgemäß funktioniert.
+>
+> Jeder Entwickler muss daher zuerst führen Sie den gesamten Entwicklungsworkflow Prozess zum Testen lokal und weiterentwickeln, bis eine vollständige Funktion mithilfe von Push übertragen, oder ändern Sie in das Quellcodeverwaltungssystem werden soll.
 
-Aber bevor wir auf die äußere Schleife Route in Betracht ziehen, müssen wir sicherstellen, dass die Docker-Anwendung ordnungsgemäß funktioniert, damit sie Code nicht die Warteschlange übertragen, die auf das Quellcodeverwaltungssystem (Git, usw.) möglicherweise nicht ordnungsgemäß funktioniert.
+Um ein Image in Ihrer lokalen Umgebung und verwenden die dockerfile-Datei zu erstellen, können Sie die Docker-Erstellungsbefehl aus, wie in Abbildung 4-25 dargestellt (Sie können auch ausführen `docker-compose up --build` für Anwendungen besteht aus mehreren Containern/Diensten).
 
-Jeder Entwickler muss daher zuerst führen Sie den gesamten Entwicklungsworkflow Prozess zum Testen lokal und weiterentwickeln, bis eine vollständige Funktion mithilfe von Push übertragen, oder ändern Sie in das Quellcodeverwaltungssystem werden soll.
+![Die Konsolenausgabe von der docker-Compose Build, zeigt die Bilder Fortschritt herunterladen.](./media/image25.png)
 
-Um ein Image in Ihrer lokalen Umgebung und verwenden die dockerfile-Datei zu erstellen, können Sie die Docker-Erstellungsbefehl aus, wie in Abbildung 4-19 (Sie können auch ausführen Docker-compose up--build für Anwendungen besteht aus mehreren Containern/Diensten).
+**Abbildung 4-25.** Docker-Build ausgeführt wird
 
-![](./media/image25.png)
+Optional, anstatt direkt `docker build` aus dem Projektordner, Sie zuerst können generieren einen bereitstellbaren Ordner mit den mithilfe der erforderlichen .NET-Bibliotheken `dotnet publish` Befehl aus, und führen Sie `docker build`.
 
-Abbildung 4-19: Docker-Build ausgeführt wird
+In diesem Beispiel erstellt ein Docker-Image mit dem Namen `cesardl/netcore-webapi-microservice-docker:first` (`:first` ist ein Tag, wie eine bestimmte Version). Sie können diesen Schritt für jedes benutzerdefinierte Image nutzen, die Sie für Ihre zusammengesetzte Docker-Anwendung mit mehreren Containern erstellen müssen.
 
-Anstatt direkt mit Docker erstellen Sie optional aus dem Ordner des Projekts, Sie können zuerst einen bereitstellbaren Ordner mit den .NET-Bibliotheken erforderlich sind, mit der Ausführung Dotnet-publish-Befehl aus, und führen Sie Docker Build generieren.
+Die vorhandenen Images finden in Ihrem lokalen Repository (Entwicklungscomputer) Sie unter Verwendung von der Docker Images-Befehl, wie in Abbildung 4-26 veranschaulicht.
 
-In diesem Beispiel ist dies ein Docker-Image erstellt, mit dem Namen Cesardl/Netcore-Webapi-Microservice-Docker: First (: zuerst wird ein Tag, wie eine bestimmte Version). Sie können diesen Schritt für jedes benutzerdefinierte Image nutzen, die Sie für Ihre zusammengesetzte Docker-Anwendung mit mehreren Containern erstellen müssen.
+![Konsolenausgabe Befehl Docker-Images, mit der vorhandenen Bilder.](./media/image26.png)
 
-Die vorhandenen Images finden in Ihrem lokalen Repository (Entwicklungscomputer) Sie unter Verwendung von Docker Images-Befehl, wie in Abbildung 4-20 dargestellt.
+**Abbildung 4-26.** Anzeigen vorhandener Images, die mithilfe von Docker-images
 
-![](./media/image26.png)
+### <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Schritt 4: Definieren Sie Ihre Dienste im Docker-compose.yml beim Erstellen einer zusammengesetzten Docker-app mit mehreren Diensten
 
-Abbildung 4-20: Anzeigen vorhandener Images, die mithilfe von Docker-images
+Mit der `docker-compose.yml` -Datei, Sie können definieren eine Gruppe von verwandten Diensten als zusammengesetzte Anwendung mit den Bereitstellungsbefehlen im nächsten Schritt Abschnitt beschrieben bereitgestellt werden.
 
-### <a name="step-4-optional-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>Schritt 4: (Optional) Definieren Sie Ihre Dienste im Docker-compose.yml beim Erstellen einer zusammengesetzten Docker-app mit mehreren Diensten
-
-Mit der Docker-compose.yml-Datei können Sie eine Reihe von verknüpften Diensten als zusammengesetzte Anwendung bereitgestellt werden, mit den Bereitstellungsbefehlen im nächsten Schritt Abschnitt erläutert definieren.
-
-Sie müssen diese Datei in Ihrem Haupt- oder stammlösungsordner erstellen; Sie müssen einen vergleichbaren Artikel in der folgenden Docker-compose.yml-Datei:
+Erstellen Sie diese Datei in Ihrem Haupt- oder stammlösungsordner; Er sollte ähnlichen Inhalt wie in diesem angezeigten haben `docker-compose.yml` Datei:
 
 ```yml
-version: '2'
+version: '3.4'
 services:
   web:
     build: .
@@ -182,15 +202,15 @@ services:
 
 In diesem speziellen Fall diese Datei definiert zwei Dienste: der Webdienst (Ihr benutzerdefinierter Dienst) und der Redis-Dienst (ein beliebten Cache-Dienst). Jeder Dienst wird als Container bereitgestellt werden, daher wir ein konkretes Docker-Image für die einzelnen zu verwenden müssen. Für diesen bestimmten Webdienst muss das Image die folgenden Schritte ausführen:
 
--   Aus der dockerfile-Datei im aktuellen Verzeichnis erstellen
+- Aus der dockerfile-Datei im aktuellen Verzeichnis erstellen
 
--   Weiterleiten von den verfügbar gemachten Port 80 im Container Port 81 auf dem Hostcomputer
+- Weiterleiten von den verfügbar gemachten Port 80 im Container Port 81 auf dem Hostcomputer
 
--   Bereitstellen Sie Verzeichnis des Projekts, auf dem Host /code innerhalb des Containers, und es ermöglicht, dass Sie den Code ändern, ohne das Abbild neu erstellen
+- Bereitstellen Sie Verzeichnis des Projekts, auf dem Host /code innerhalb des Containers, und es ermöglicht, dass Sie den Code ändern, ohne das Abbild neu erstellen
 
--   Verknüpfen Sie den Webdienst mit Redis-Diensts
+- Verknüpfen Sie den Webdienst mit Redis-Diensts
 
-Der Redis-Dienst verwendet die [neueste öffentliche Redis-Image](https://hub.docker.com/_/redis/) mithilfe von Pull aus Docker Hub-Registrierung. [redis](https://redis.io/) ist ein sehr beliebtes Cache-System für serverseitige Anwendungen.
+Der Redis-Dienst verwendet die [neueste öffentliche Redis-Image](https://hub.docker.com/_/redis/) mithilfe von Pull aus Docker Hub-Registrierung. [redis](https://redis.io/) ist ein beliebter Cache-System für serverseitige Anwendungen.
 
 ### <a name="step-5-build-and-run-your-docker-app"></a>Schritt 5: Erstellen und Ausführen der Docker-app
 
@@ -200,62 +220,61 @@ Wenn Ihre Anwendung nur einen einzelnen Container verfügt, müssen Sie nur ausf
 
 Sie können das Docker-Image ausführen, mithilfe von "Docker run" Befehl aus, wie hier gezeigt:
 
-```
-docker run -t -d -p 80:5000
-cesardl/netcore-webapi-microservice-docker:first
+```console
+docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
-Beachten Sie, dass für diese bestimmte Bereitstellung, wir an Port 80 für den internen Port 5000 gesendete Anforderungen umgeleitet werden. Nun wird die Anwendung den externen Port 80 auf der Hostebene überwacht.
+Für diese bestimmte Bereitstellung müssen wir Umleiten von Anforderungen an Port 80 für den internen Port 5000 gesendet werden. Jetzt wird die Anwendung den externen Port 80 auf der Hostebene überwacht.
 
 ***Option B: Erstellen und Ausführen einer Anwendung von mehreren Containern***
 
-In den meisten unternehmensumgebungen wird eine Docker-Anwendung aus mehreren Diensten bestehen. In diesen Fällen können Sie den Befehl ausführen Docker-compose-einrichten (Abbildung 4-21), die verwenden der Docker-compose.yml-Datei, die Sie zuvor erstellt haben. Mit diesem Befehl wird die zusammengesetzte Anwendung mit allen ihre zugehörigen Container bereitgestellt.
+In den meisten unternehmensumgebungen wird eine Docker-Anwendung aus mehreren Diensten bestehen. Sie können in diesen Fällen Ausführen der `docker-compose up` Befehl (Abbildung 4-27), der die Docker-compose.yml-Datei verwendet wird, die Sie zuvor erstellt haben. Mit diesem Befehl wird die zusammengesetzte Anwendung mit allen ihre zugehörigen Container bereitgestellt.
 
-![](./media/image27.png)
+![Konsolenausgabe aus dem Docker-compose-Befehl.](./media/image27.png)
 
-Abbildung 4-21: Ergebnisse der Ausführung des Befehls "Docker-compose up"
+**Abbildung 4-27.** Ergebnisse der Ausführung des Befehls "Docker-compose up"
 
-Nach dem Ausführen von Docker-compose-einrichten, Sie bereitstellen Ihrer Anwendung und die zugehörigen Container in Ihrem Docker-Host, wie in Abbildung 4-22, in der VM-Darstellung dargestellt.
+Nach der Ausführung `docker-compose up`, Sie bereitstellen Ihrer Anwendung und die zugehörigen Container in Ihrem Docker-Host, wie in Abbildung 4-28, in der VM-Darstellung dargestellt.
 
-![](./media/image28.png)
+![VM, die Anwendungen mit mehreren Containern ausgeführt werden.](./media/image28.png)
 
-Abbildung 4-22: VM mit bereitgestellten Docker-Containern
-
-Hinweis Docker-compose-einrichten und "Docker run" möglicherweise für Ihre Container in Ihrer Entwicklungsumgebung testen ausreichend, aber Sie möglicherweise verwenden sie überhaupt nicht, wenn Sie erwarten, arbeiten mit Docker-Cluster und orchestratoren wie Docker Swarm, Mesosphere DC/OS oder Kubernetes Damit Sie zentral hochskalieren können. Wenn Sie einen Cluster wie verwenden [Docker Swarm-Modus](https://docs.docker.com/engine/swarm/) (verfügbar in Docker für Windows und Mac ab Version 1.12), müssen Sie zum Bereitstellen und Testen mit zusätzlichen Befehlen, z. B. Docker-Dienst für einzelne Dienste erstellen, oder wenn Sie sich befinden Bereitstellen einer app, bestehend aus mehreren Containern mit Docker compose-Paket und Docker bereitstellen MyBundleFile, als Stapel, das Bereitstellen von der app aus, wie in diesem Artikel erläutert [Distributed Application Bundles](https://blog.docker.com/2016/06/docker-app-bundle/) von Docker.
-
-Für [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-line-tool-datacenter/) und [Kubernetes](https://kubernetes.io/docs/user-guide/deployments/#creating-a-deployment) verwenden Sie unterschiedliche Bereitstellungsbefehle und Skripts, als auch.
+**Abbildung 4-28.** VM mit bereitgestellten Docker-Containern
 
 ### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>Schritt 6: Testen Sie Ihre Docker-Anwendung (lokal, in Ihre lokale CD-VM)
 
 Dieser Schritt hängen davon ab, was den Status Ihrer app.
 
-In einer einfachen .NET Core Web-API "Hello World" als ein einzelner Container oder der Dienst bereitgestellt müssten Sie nur Zugriff auf den Dienst durch die Bereitstellung des TCP-Ports in der dockerfile-Datei angegeben.
+In einer einfachen .NET Core-Web-API "Hello World" als ein einzelner Container oder der Dienst bereitgestellt müssten Sie nur Zugriff auf den Dienst durch die Bereitstellung des TCP-Ports in der dockerfile-Datei angegeben.
 
 Wenn Sie "localhost" nicht aktiviert ist, navigieren Sie zu dem Dienst finden Sie die IP-Adresse für den Computer mit diesem Befehl:
 
-Docker-Machine-Ip *Container Name-Ihrer-*
+```console
+docker-machine {IP} {YOUR-CONTAINER-NAME}
+```
 
-Öffnen Sie einen Browser, und navigieren Sie zu dieser Website, auf dem Docker-Host; Ihre app/des Diensts ausgeführt wird, sollte angezeigt werden, wie in Abbildung 4-23 veranschaulicht.
+Öffnen Sie einen Browser, und navigieren Sie zu dieser Website, auf dem Docker-Host; Ihre app/des Diensts ausgeführt wird, sollte angezeigt werden, wie in Abbildung 4-29 dargestellt.
 
-![](./media/image29.png)
+![Browseransicht der Antwort von "localhost" / API/Values.](./media/image29.png)
 
-Abbildung 4-23: Testen der Docker-Anwendung, die lokal mithilfe von "localhost"
+**Abbildung 4-29.** Testen der Docker-Anwendung, die lokal mithilfe von "localhost"
 
-Beachten Sie, dass Port 80 verwendet wird, aber er intern wird, an Port 5000 umgeleitet wurde, denn das ist wie mit "Docker run", bereitgestellt wurde wie weiter oben erläutert.
+Beachten Sie, dass Port 80 verwendet wird, aber intern zu Port 5000 umgeleitet werden wird, da es sich handelt, wie er bereitgestellt wurde, mit `docker run`, wie weiter oben erläutert.
 
-Sie können dies testen, über das Terminal mithilfe von CURL. In einer Docker-Installation unter Windows ist die Standard-IP 10.0.75.1, an, wie in Abbildung 4-24 dargestellt.
+Sie können dies testen, über das Terminal mithilfe von CURL. In einer Docker-Installation unter Windows ist die Standard-IP 10.0.75.1, an, wie in Abbildung 4-30 dargestellt.
 
-![](./media/image30.png)
+![Konsolenausgabe an der Erledigung der http://10.0.75.1/API/values mit Curl](./media/image30.png)
 
-Abbildung 4-24: Testen eine Docker-Anwendung lokal mithilfe von CURL
+**Abbildung 4-30.** Testen eine Docker-Anwendung lokal mithilfe von CURL
 
 **Debuggen eines Containers ausführen unter Docker**
 
 Visual Studio Code unterstützt Debuggen Docker an, wenn Sie Node.js und anderen Plattformen wie .NET Core-Container verwenden.
 
-Sie können auch .NET Core in Docker-Container Debuggen bei Verwendung von Visual Studio, wie im nächsten Abschnitt beschrieben.
+Sie können auch .NET Core oder .NET Framework-Containern in Docker Debuggen bei Verwendung von Visual Studio für Windows oder Mac zu erstellen, wie im nächsten Abschnitt beschrieben.
 
-**Weitere Informationen:** wechseln Sie zu, um weitere Informationen zum Debuggen von Node.js-Docker-Containern <https://blog.docker.com/2016/07/live-debugging-docker/> und [ https://blogs.msdn.microsoft.com/\ Benutzer\_Ed/2016/02/27 / Visual-Studio-Code-New-Features-13-Big-Debugging-Updates-Rich-Object-Hover-Conditional-Breakpoints-Node-js-Mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+> [!INFORMATION]
+>
+> Wechseln Sie zu, um weitere Informationen zum Debuggen von Node.js-Docker-Containern <https://blog.docker.com/2016/07/live-debugging-docker/> und <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>.
 
 >[!div class="step-by-step"]
 >[Zurück](docker-apps-development-environment.md)

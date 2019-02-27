@@ -45,5 +45,4 @@ Dieser Abschnitt enthält Richtlinien zum Entwerfen von Bibliotheken, die zu erw
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht](../../../docs/framework/get-started/overview.md)
-- [Roadmap für .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)
 - [Entwicklungshandbuch](../../../docs/framework/development-guide.md)

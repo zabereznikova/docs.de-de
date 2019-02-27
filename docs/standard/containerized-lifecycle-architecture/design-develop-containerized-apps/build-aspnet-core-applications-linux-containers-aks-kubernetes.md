@@ -3,15 +3,15 @@ title: Erstellen von ASP.NET Core 2.1-Anwendungen wie Linux-Container in AKS/Kub
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/23/2018
-ms.openlocfilehash: b03b6fab9dcd53e97c2bc4d7e5c958ca4b931077
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.date: 02/25/2019
+ms.openlocfilehash: a00a5c42facb105a23cd85fce79f9fd16a96ccfa
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221488"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835511"
 ---
-# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-akskubernetes-orchestrator"></a>Erstellen von ASP.NET Core 2.1-Anwendungen wie Linux-Container in AKS/Kubernetes-Orchestrators bereitgestellt
+# <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Erstellen von ASP.NET Core 2.1-Anwendungen, die als Linux-Container bereitgestellt werden, in einem AKS/Kubernetes-orchestrator
 
 Azure Kubernetes Service (AKS) ist von Azure verwalteten Kubernetes-Orchestrierungen-Dienste, die containerbereitstellung und Verwaltung zu vereinfachen.
 
@@ -35,11 +35,11 @@ Dieses Beispiel verwendet ein einfaches Projekt, das basiert auf Grundlage einer
 
 **Abbildung 4 bis 36**. Erstellen von ASP.NET Core-Anwendung
 
-Um das Beispielprojekt zu erstellen, müssen Sie auswählen **Datei** > **neu** > **Projekt** in Visual Studio. Und Sie eine Liste der Vorlagen für mehrere Typen von Projekten, sehen auf die Suche nach haben **Web** > **.NET Core** im linken Bereich. Wählen Sie in diesem Beispiel **ASP.NET Core-Webanwendung**.
+Wählen Sie zum Erstellen des Beispielprojekts in Visual Studio **Datei** > **neu** > **Projekt**, wählen die **Web**Projekttypen im linken Bereich, gefolgt von **ASP.NET Core-Webanwendung**.
 
-Im nächsten Dialogfeld stellen Sie sicher, dass Sie .NET Core und ASP.NET Core 2.1 als das Zielframework in der oberen Pulldowns, wie in Abbildung 4-37, ausgewählt haben, und Sie dann die Option "API" zum Erstellen einer ASP.NET Core-Web-API-Anwendung wählen.
+Visual Studio enthält Vorlagen für Webprojekte. Wählen Sie in unserem Beispiel **API** zum Erstellen einer ASP.NET Web-API-Anwendung.
 
-Die .NET Core 2.1 ist im Visual Studio 2017 Version 15.7.0 enthalten oder höher und wird automatisch installiert und konfiguriert für die Sie bei der Auswahl der **plattformübergreifende Entwicklung mit .NET Core** Workload während der Installation.
+Stellen Sie sicher, dass Sie ASP.NET Core 2.1 als das Framework ausgewählt haben. .NET Core 2.1 wird ist in der letzten Version von Visual Studio 2017 enthalten und automatisch installiert und konfiguriert Sie bei der Installation von Visual Studio 2017.
 
 ![Visual Studio-Dialogfeld zum Auswählen von einer ASP.NET Core-Webanwendung mit API-Option ausgewählt ist.](media/create-web-api-application.png)
 
@@ -47,25 +47,25 @@ Die .NET Core 2.1 ist im Visual Studio 2017 Version 15.7.0 enthalten oder höher
 
 Wenn Sie eine frühere Version von .NET Core verfügen, können Sie diese herunterladen und installieren Sie Version 2.1 von <https://www.microsoft.com/net/download/core#/sdk>.
 
-Sie können Docker-Unterstützung hinzufügen, wenn das Projekt erstellen, im vorherigen Schritt, oder höher, bei Bedarf nach dem Starten des Projekts. Zum Hinzufügen der Docker-Unterstützung nach der projekterstellung mit der Maustaste, auf die Projektdatei in die **Projektmappen-Explorer** , und wählen Sie **hinzufügen** > **Docker-Unterstützung** auf Klicken Sie im Kontextmenü.
+Sie können Docker-Unterstützung hinzufügen, wenn Sie das Projekt zu erstellen oder danach also Sie können "Verpacken" Sie Ihr Projekt zu einem beliebigen Zeitpunkt. Klicken Sie zum Hinzufügen der Docker-Unterstützung nach der projekterstellung mit der rechten Maustaste auf den Projektknoten im Projektmappen-Explorer, und wählen Sie **hinzufügen** > **Docker-Unterstützung** im Kontextmenü.
 
 ![Die Kontextmenüoption Docker-Unterstützung zu einem vorhandenen Projekt hinzufügen: Klicken Sie mit der rechten Maustaste (auf das Projekt) > Hinzufügen > Docker-Unterstützung.](media/add-docker-support-to-project.png)
 
 **Abbildung 4-38**. Docker-Unterstützung zu vorhandenen Projekt hinzufügen
 
-Zum Hinzufügen von Docker-Unterstützung abschließen zu können, müssen Sie die Auswahl von Windows oder Linux. Wählen Sie in diesem Fall **Linux**, da AKS Windows-Container (als Ende 2018) nicht unterstützt.
+Zum Hinzufügen von Docker-Unterstützung abgeschlossen haben, können Sie Windows oder Linux. Wählen Sie in diesem Fall **Linux**, da AKS Windows-Container (als Ende 2018) nicht unterstützt.
 
 ![Dialogfeld Zielbetriebssystem für die dockerfile-Datei auswählen.](media/select-linux-docker-support.png)
 
 **Abbildung 4-39**. Auswählen von Linux-Container.
 
-Mit diesen einfachen Schritten müssen Sie Ihre ASP.NET Core 2.1-Anwendung, die auf einem Linux-Container ausgeführt wird.
+Mit diesen einfachen Schritten haben Sie Ihre ASP.NET Core 2.1-Anwendung, die auf einem Linux-Container ausgeführt wird.
 
 Wie Sie sehen können, ist die Integration zwischen Visual Studio 2017 und Docker auf die die Produktivität der Entwickler vollständig ausgerichtet.
 
-Nachdem Sie drücken können **F5** erstellen und Ausführen Ihrer Anwendung.
+Jetzt können Sie Ihre Anwendung mit Ausführen der **F5** Taste oder durch die Verwendung der **spielen** Schaltfläche.
 
-Nach dem Ausführen des Projekts, können Sie Auflisten der Images mithilfe der `docker images` Befehl. Daraufhin sollte die `mssampleapplication` Image mit für das automatische Bereitstellen unseres Projekts mit Visual Studio 2017 erstellt wurden.
+Nach dem Ausführen des Projekts, können Sie Auflisten der Images mithilfe der `docker images` Befehl. Daraufhin sollte die `mssampleapplication` Images, die von der automatischen Bereitstellung unseres Projekts mit Visual Studio 2017 erstellt.
 
 ```console
 docker images
@@ -81,13 +81,13 @@ Hochladen des Images an eine beliebige Docker-Registrierung, wie z. B. [Azure Co
 
 ### <a name="create-the-image-in-release-mode"></a>Erstellen Sie das Image im Releasemodus
 
-Erstellen Sie das Image in **Version** Modus (bereit für die Produktion) in Version ändern, wie hier gezeigt, und drücken Sie F5, um die Anwendung erneut auszuführen.
+Wir erstellen nun das Image im **Version** Modus (bereit für die Produktion) durch Ändern von in **Version**, wie in Abbildung 4: 41 und Ausführen der Anwendung, wie vorher gezeigt.
 
 ![Symbolleistenoption in Visual Studio im Releasemodus zu erstellen.](media/select-release-mode.png)
 
 **Abbildung 4: 41**. Auswählen der Releasemodus
 
-Bei Ausführung der `docker image` Befehl sehen Sie beide Bilder erstellt. Eine für `debug` und die andere für `release` Modus.
+Bei Ausführung der `docker image` Befehl sehen Sie beide Bilder erstellt, eine für `debug` und die andere für `release` Modus.
 
 ### <a name="create-a-new-tag-for-the-image"></a>Erstellen eines neuen Transponders für das Image
 
@@ -111,13 +111,13 @@ az acr list --resource-group MSSampleResourceGroup --query "[].{acrLoginServer:l
 
 In beiden Fällen müssen Sie den Namen abrufen. In unserem Beispiel `mssampleacr.azurecr.io`.
 
-Jetzt können Sie das Bild, markieren, erstellen das neueste Image (Release-Image), mit dem folgenden Befehl:
+Jetzt können Sie das Image, zu kennzeichnen dauert das neueste Image (dem Release-Image), mit dem Befehl:
 
 ```console
 docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
 ```
 
-Nach dem Ausführen der `docker tag` Befehl, Listen Sie die Images mit der `docker images` Befehl. Das Image mit das neue Tag sollte angezeigt werden.
+Nach dem Ausführen der `docker tag` Befehl, Listen Sie die Images mit der `docker images` -Befehl, und Sie sollte das Image mit dem neuen Tag angezeigt.
 
 ![Konsolenausgabe aus dem Befehl "Docker Images".](media/tagged-docker-images-list.png)
 
@@ -143,7 +143,7 @@ Unten das Ergebnis sehen Sie, dass Sie nach Abschluss des Prozesses erhalten sol
 
 **Abbildung 4: 46**. Anzeigen von Knoten
 
-Der nächste Schritt ist, Ihren Container in Ihrem ACS-Kubernetes-Cluster bereitzustellen. Dafür benötigen Sie eine Datei (**.yml dateibereitstellung**), die in diesem Fall enthält:
+Der nächste Schritt ist, Ihren Container in Ihrem ACS-Kubernetes-Cluster bereitzustellen. Dafür benötigen Sie eine Datei (**.yml dateibereitstellung**), die Folgendes enthält:
 
 ```yml
 apiVersion: apps/v1beta1

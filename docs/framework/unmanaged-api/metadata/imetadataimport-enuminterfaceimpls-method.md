@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c94960478e6b2eb4e7b8f1e9592b0831af3ec686
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21d70b2702a754b554f06de5dad776ae98ae918d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603767"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836265"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls-Methode
-Zählt MethodDef-Token auf, die Schnittstellenimplementierungen darstellen.  
+Listet alle Schnittstellen implementiert, mit dem angegebenen `TypeDef`. 
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,7 +39,7 @@ HRESULT EnumInterfaceImpls (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator.  
   
@@ -61,6 +61,10 @@ HRESULT EnumInterfaceImpls (
 |-------------|-----------------|  
 |`S_OK`|`EnumInterfaceImpls` wurde erfolgreich zurückgegeben.|  
 |`S_FALSE`|Es sind keine MethodDef-Token aufgelistet werden. In diesem Fall `pcImpls` auf 0 (null) festgelegt ist.|  
+
+## <a name="remarks"></a>Hinweise
+
+Die Enumeration gibt eine Auflistung von `mdInterfaceImpl` -Token für jede Schnittstelle implementiert, mit dem angegebenen `TypeDef`. Interface-Token in der Reihenfolge, die die Schnittstellen angegeben wurden. zurückgegeben werden (über `DefineTypeDef` oder `SetTypeDefProps`). Eigenschaften des zurückgegebenen `mdInterfaceImpl` Token können abgefragt werden, mithilfe von [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
