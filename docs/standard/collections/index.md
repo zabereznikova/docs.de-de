@@ -3,21 +3,15 @@ title: Auflistungen und Datenstrukturen
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- grouping data in collections
-- objects [.NET Framework], grouping in collections
-- Array class, grouping data in collections
-- threading [.NET Framework], safety
-- Collections classes
-- collections [.NET Framework]
+  - grouping data in collections
+  - 'objects [.NET Framework], grouping in collections'
+  - 'Array class, grouping data in collections'
+  - 'threading [.NET Framework], safety'
+  - Collections classes
+  - 'collections [.NET Framework]'
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af76322cac08d7cf4e7e30e503c7fa2c97414898
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154907"
 ---
 # <a name="collections-and-data-structures"></a>Auflistungen und Datenstrukturen
 Ähnliche Daten können häufig effizienter verarbeitet werden, wenn sie als eine Auflistung gespeichert und bearbeitet werden. Sie können die <xref:System.Array?displayProperty=nameWithType>-Klasse oder die Klassen in den Namespaces <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> und System.Collections.Immutable verwenden, um entweder einzelne Elemente oder Elementbereiche in einer Auflistung hinzuzufügen, zu entfernen und zu bearbeiten.  
@@ -33,7 +27,7 @@ ms.locfileid: "53154907"
   
 -   **Die Fähigkeit zum Enumerieren der Auflistung**  
   
-     .NET Framework-Auflistungen implementieren entweder <xref:System.Collections.IEnumerable?displayProperty=nameWithType> oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>, damit die Auflistung durchlaufen werden kann. Ein Enumerator kann als beweglicher Zeiger auf ein Element in der Auflistung betrachtet werden. Die Anweisung [foreach, in](~/docs/csharp/language-reference/keywords/foreach-in.md) und die [For Each...Next-Anweisung](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) verwenden den Enumerator, der mit der <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode verfügbar gemacht wird, und verbergen die Komplexität bei der Bearbeitung des Enumerators. Darüber hinaus gilt jede Auflistung, die <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> implementiert, als *abfragbarer Typ* und kann mit LINQ abgefragt werden. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff. Sie sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und bieten Filter-, Sortier- und Gruppierungsfunktionen. LINQ-Abfragen können auch die Leistung verbessern. Weitere Informationen finden Sie unter [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) und [Einführung in LINQ-Abfragen (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+     .NET Framework-Auflistungen implementieren entweder <xref:System.Collections.IEnumerable?displayProperty=nameWithType> oder <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>, damit die Auflistung durchlaufen werden kann. Ein Enumerator kann als beweglicher Zeiger auf ein Element in der Auflistung betrachtet werden. Die Anweisung [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) und die [For Each...Next-Anweisung](../../visual-basic/language-reference/statements/for-each-next-statement.md) verwenden den Enumerator, der mit der <xref:System.Collections.IEnumerable.GetEnumerator%2A>-Methode verfügbar gemacht wird, und verbergen die Komplexität bei der Bearbeitung des Enumerators. Darüber hinaus gilt jede Auflistung, die <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> implementiert, als *abfragbarer Typ* und kann mit LINQ abgefragt werden. LINQ-Abfragen bieten ein allgemeines Muster für den Datenzugriff. Sie sind normalerweise präziser und besser lesbar als standardmäßige `foreach`-Schleifen und bieten Filter-, Sortier- und Gruppierungsfunktionen. LINQ-Abfragen können auch die Leistung verbessern. Weitere Informationen finden Sie unter [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md), [LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md), [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md), [Einführung in LINQ-Abfragen (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) und [Basic Query Operations (Visual Basic) (Grundlegende Abfragevorgänge (Visual Basic))](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
   
 -   **Die Möglichkeit, den Inhalt der Auflistung in ein Array zu kopieren**  
   
