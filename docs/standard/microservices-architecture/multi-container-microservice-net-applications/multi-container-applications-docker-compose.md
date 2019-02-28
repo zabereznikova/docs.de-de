@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Fest
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b00b0021f71097f2c6cedcb1ddea7861f1936f84
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145253"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442229"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definieren Ihrer Anwendung mit mehreren Containern mit docker-compose.yml 
 
@@ -450,7 +450,7 @@ Das .NET-Team hat sich große Mühe gegeben, damit .NET Core und ASP.NET Core ei
 
 1.  **Entwicklung:** Die schnelle Iteration hat Vorrang. Das Debuggen von Änderungen und die Größe sind zweitrangig.
 
-2.  **Erstellung:** Das Kompilieren der Anwendung hat Vorrang. Außerdem sind Binärdateien und andere Abhängigkeiten enthalten, um die Binärdateien zu optimieren.
+2.  **Build:** Das Kompilieren der Anwendung hat Vorrang. Außerdem sind Binärdateien und andere Abhängigkeiten enthalten, um die Binärdateien zu optimieren.
 
 3.  **Produktion:** Das schnelle Bereitstellen und Starten von Containern hat Vorrang. Die Images sind deshalb auf Binärdateien und den Inhalt beschränkt, der zum Ausführen der Anwendung erforderlich ist.
 
@@ -458,7 +458,7 @@ Zu diesem Zweck stellt das .NET-Team drei grundlegende Varianten unter [microsof
 
 1.  **sdk:** für Entwicklungs- und Buildszenarios
 2.  **runtime:** für das Produktionsszenario
-3.  **runtime-deps:** für das Produktionsszenario von [eigenständigen Anwendungen](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd)
+3.  **runtime-deps:** für das Produktionsszenario von [eigenständigen Anwendungen](../../../core/deploying/index.md#self-contained-deployments-scd)
 
 Runtime-Images bieten außerdem die automatische Einstellung von aspnetcore\_urls auf Port 80 und dem Cache der Assemblys, bevor er mit der „Ngen.exe“ kompiliert wird, um die Startzeit zu verkürzen.
 
@@ -468,7 +468,7 @@ Runtime-Images bieten außerdem die automatische Einstellung von aspnetcore\_url
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 -   **Erstellen von Docker-Images für .NET Core-Anwendungen** <br/>
-    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](../../../core/docker/building-net-docker-images.md)
 
 >[!div class="step-by-step"]
 >[Zurück](data-driven-crud-microservice.md)

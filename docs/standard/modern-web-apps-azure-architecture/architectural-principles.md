@@ -3,13 +3,13 @@ title: Architekturprinzipien
 description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Architekturprizipien
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: b7edfc8d0cb3460bb33fb4e54cc93dd18ce2f385
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.date: 02/16/2019
+ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828097"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442983"
 ---
 # <a name="architectural-principles"></a>Architekturprinzipien
 
@@ -99,21 +99,10 @@ Die Anforderung, dass Klassen über eines der oben genannten Features oder Verha
 
 Anstatt eine Datenbank mit anderen Anwendungen zu teilen, sollten einzelne Webanwendungen darin bestrebt sein, mindestens die eigene Kontextgrenze darzustellen, mit eigenem persistenten Speicher für ihr Geschäftsmodell. Die Kommunikation zwischen Kontextgrenzen erfolgt über Programmschnittstellen und nicht über eine freigegebene Datenbank. So können Geschäftslogik und Ereignisse als Reaktion auf auftretende Änderungen erfolgen. Kontextgrenzen sind Microservices eng zugeordnet. Diese sind ebenso ideal als ihre eigenen individuellen Kontextgrenzen implementiert.
 
-> ### <a name="references--modern-web-applications"></a>Ressourcen: Moderne Webanwendungen
-> - **Separation of Concerns**  
-> <https://deviq.com/separation-of-concerns/>
-> - **Kapselung**  
-> <https://deviq.com/encapsulation/>
-> - **Das Prinzip der Abhängigkeitsumkehr (Dependency Inversion)**  
-> <https://deviq.com/dependency-inversion-principle/>
-> - **Prinzip der expliziten Abhängigkeiten**  
-> <https://deviq.com/explicit-dependencies-principle/>
-> - **Don't Repeat Yourself**  
-> <https://deviq.com/don-t-repeat-yourself/>
-> - **Ignorieren der Persistenz**  
-> <https://deviq.com/persistence-ignorance/>
-> - **Kontextgrenze**  
-> <https://martinfowler.com/bliki/BoundedContext.html>
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
+
+* [JAVA Design Patterns: Principles (JAVA-Entwurfsmuster: Prinzipien)](https://java-design-patterns.com/principles/)
+* [Kontextgrenze](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
 >[Zurück](choose-between-traditional-web-and-single-page-apps.md)
