@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: a26ea220a807d3158d6874e2127db9a2f280a10c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21781db637c71abbbe9366bc95b6ee4c89ac2246
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547091"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981958"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate-Klausel (Visual Basic)
 Wendet eine oder mehrere Aggregatfunktionen auf eine Auflistung an.  
@@ -54,25 +54,25 @@ Im folgenden sind die standard-Aggregatfunktionen, die mit verwendet werden kön
 
 Gibt `true` , wenn alle Elemente in der Auflistung eine angegebene Bedingung erfüllen, andernfalls `false`. Im Folgenden finden Sie ein Beispiel dazu:
 
-[!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]
+ [!code-vb[VbSimpleQuerySamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#5)]
 
 ### <a name="any"></a>Beliebig
 
 Gibt `true` wenn jedes Element in der Auflistung eine angegebene Bedingung erfüllt. andernfalls `false`. Im Folgenden finden Sie ein Beispiel dazu:
 
-[!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]
+ [!code-vb[VbSimpleQuerySamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#6)]
 
 ### <a name="average"></a>Average
 
 Berechnet den Durchschnitt aller Elemente in der Auflistung, oder für alle Elemente in der Auflistung einen angegebenen Ausdruck berechnet. Im Folgenden finden Sie ein Beispiel dazu:
 
-[!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]
+ [!code-vb[VbSimpleQuerySamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#7)]
 
 ### <a name="count"></a>Anzahl
 
 Zählt die Anzahl der Elemente in der Auflistung. Sie können angeben, ein optionales `Boolean` Ausdruck, der nur die Anzahl der Elemente in der Auflistung zu zählen, die eine Bedingung erfüllen. Im Folgenden finden Sie ein Beispiel dazu:
 
-[!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_4.vb)]
+ [!code-vb[VbSimpleQuerySamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#8)]
 
 ### <a name="group"></a>Gruppieren
 
@@ -86,25 +86,25 @@ Zählt die Anzahl der Elemente in der Auflistung. Sie können angeben, ein optio
 
 Berechnet den maximalen Wert aus der Auflistung, oder für alle Elemente in der Auflistung einen angegebenen Ausdruck berechnet. Im Folgenden finden Sie ein Beispiel dazu:
 
-[!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]
+ [!code-vb[VbSimpleQuerySamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#9)]
 
 ### <a name="min"></a>Min.
 
 Berechnet den minimalen Wert aus der Auflistung, oder für alle Elemente in der Auflistung einen angegebenen Ausdruck berechnet. Im Folgenden finden Sie ein Beispiel dazu:
 
-[!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]
+ [!code-vb[VbSimpleQuerySamples#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#10)]
 
 ### <a name="sum"></a>Summe
 
 Berechnet die Summe aller Elemente in der Auflistung, oder für alle Elemente in der Auflistung einen angegebenen Ausdruck berechnet. Im Folgenden finden Sie ein Beispiel dazu:
 
-[!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_7.vb)]
+ [!code-vb[VbSimpleQuerySamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#15)]
 
 ## <a name="example"></a>Beispiel  
 
 Das folgende Beispiel zeigt, wie Sie mit der `Aggregate` -Klausel, um Aggregatfunktionen auf einem Abfrageergebnis anzuwenden.  
   
- [!code-vb[VbSimpleQuerySamples#4](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_8.vb)]  
+ [!code-vb[VbSimpleQuerySamples#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#4)]  
   
 ## <a name="creating-user-defined-aggregate-functions"></a>Erstellen von benutzerdefinierten Aggregatfunktionen
 
@@ -112,11 +112,11 @@ Das folgende Beispiel zeigt, wie Sie mit der `Aggregate` -Klausel, um Aggregatfu
   
  Das folgende Beispiel zeigt z. B. eine benutzerdefinierte Aggregatfunktion, die den Median einer Auflistung von Zahlen berechnet. Es gibt zwei Überladungen der `Median` -Erweiterungsmethode. Die erste Überladung akzeptiert als Eingabe und eine Auflistung vom Typ `IEnumerable(Of Double)`. Wenn die `Median` aggregate-Funktion wird aufgerufen, für ein Feld vom Typ `Double`, wird diese Methode aufgerufen werden. Die zweite Überladung von der `Median` Methode kann generischen Typs übergeben werden. Die generische Überladung von der `Median` Methode nimmt einen zweiten Parameter, die verweist die `Func(Of T, Double)` Lambda-Ausdruck, einen Wert für einen Typ (aus einer Sammlung) als der entsprechende Wert des Typs zu projizieren `Double`. Klicken Sie dann die Berechnung des Medians, die andere Überladung von delegiert die `Median` Methode. Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda Expressions (Lambdaausdrücke)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbSimpleQuerySamples#18](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_9.vb)]  
+ [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
  Das folgende Beispiel zeigt Beispiele für Abfragen, die aufgerufen werden die `Median` Aggregatfunktion auf eine Auflistung vom Typ `Integer`, und eine Auflistung vom Typ `Double`. Die Abfrage, die Aufrufe der `Median` Aggregatfunktion in der Auflistung des Typs `Double` Ruft die Überladung der der `Median` Methode, die als Eingabe eine Auflistung vom Typ akzeptiert `Double`. Die Abfrage, die Aufrufe der `Median` Aggregatfunktion in der Auflistung des Typs `Integer` Ruft die generische Überladung von der `Median` Methode.  
   
- [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_10.vb)]  
+ [!code-vb[VbSimpleQuerySamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#19)]  
   
 ## <a name="see-also"></a>Siehe auch
 

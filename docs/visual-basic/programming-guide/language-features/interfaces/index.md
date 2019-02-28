@@ -2,17 +2,11 @@
 title: Schnittstellen (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Visual Basic code, interfaces
-- interfaces [Visual Basic], Visual Basic
-- interfaces
-- interfaces [Visual Basic]
+  - 'Visual Basic code, interfaces'
+  - 'interfaces [Visual Basic], Visual Basic'
+  - interfaces
+  - 'interfaces [Visual Basic]'
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 8380778398495fe9948e6a0eb19b535656a575f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654421"
 ---
 # <a name="interfaces-visual-basic"></a>Schnittstellen (Visual Basic)
 *Schnittstellen* definieren die Eigenschaften, Methoden und Ereignisse, die von Klassen implementiert werden können. Schnittstellen erlauben es Ihnen, Funktionen als kleine Gruppen mit verwandten Eigenschaften, Methoden und Ereignisse zu definieren. Dadurch werden Kompatibilitätsprobleme reduziert, da Sie für die Schnittstellen erweiterte Implementierungen entwickeln können, ohne vorhandenen Code zu gefährden. Sie können neue Funktionen zu einem beliebigen Zeitpunkt hinzufügen, indem Sie weitere Schnittstellen und Implementierungen entwickeln.  
@@ -37,20 +31,20 @@ ms.locfileid: "33654421"
   
  Im folgende Code wird beispielsweise eine Schnittstelle mit einer Funktion, eine Eigenschaft und ein Ereignis definiert.  
   
- [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
+ [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
-## <a name="implementing-interfaces"></a>Implementieren von Schnittsellen  
- Visual Basic reservierten Wort `Implements` wird auf zwei Arten verwendet. Die `Implements` Anweisung gibt an, dass eine Klasse oder Struktur eine Schnittstelle implementiert. Das `Implements` Schlüsselwort gibt an, dass ein Klassenmember oder ein Strukturmember ein bestimmtes Schnittstellenmember implementiert.  
+## <a name="implementing-interfaces"></a>Implementieren von Schnittstellen  
+ Die Visual Basic reserviertes Wort `Implements` auf zweierlei Weise verwendet wird. Die `Implements` Anweisung gibt an, dass eine Klasse oder Struktur eine Schnittstelle implementiert. Das `Implements` Schlüsselwort gibt an, dass ein Klassenmember oder ein Strukturmember ein bestimmtes Schnittstellenmember implementiert.  
   
 ### <a name="implements-statement"></a>Implements-Anweisung  
  Wenn eine Klasse oder Struktur eine oder mehrere Schnittstellen implementiert, muss die `Implements` Anweisung unmittelbar nach der `Class` oder `Structure` Anweisung erfolgen. Die `Implements` Anweisung erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellen, die von einer Klasse implementiert werden. Die Klasse oder Struktur muss alle Schnittstellenmember mit dem `Implements` Schlüsselwort implementieren.  
   
 ### <a name="implements-keyword"></a>Implements-Schlüsselwort  
- Das `Implements` Schlüsselwort erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellenmembern, die implementiert werden. In der Regel wird nur ein einziger Schnittstellenmember angegeben, aber Sie können mehrere Members angeben. Die Spezifikation eines Schnittstellenmembers besteht aus dem Schnittstellennamen, der in einer Implementierungsanweisung innerhalb der Klasse angegeben werden muss, einem Zeitraum und dem Namen der Memberfunktion, der Eigenschaft oder des Ereignisses, das implementiert werden soll. Der Name eines Elements, das einen Schnittstellenmember implementiert, kann jeden beliebigen zulässigen Bezeichner verwenden, und es gibt keine Beschränkung auf die `InterfaceName_MethodName` Konvention, die in früheren Versionen von Visual Basic verwendet.  
+ Das `Implements` Schlüsselwort erfordert eine durch Trennzeichen getrennte Liste mit Schnittstellenmembern, die implementiert werden. In der Regel wird nur ein einziger Schnittstellenmember angegeben, aber Sie können mehrere Members angeben. Die Spezifikation eines Schnittstellenmembers besteht aus dem Schnittstellennamen, der in einer Implementierungsanweisung innerhalb der Klasse angegeben werden muss, einem Zeitraum und dem Namen der Memberfunktion, der Eigenschaft oder des Ereignisses, das implementiert werden soll. Der Name des Members, der einen Schnittstellenmember implementiert kann jeden beliebigen zulässigen Bezeichner verwenden, und es gibt keine Beschränkung auf die `InterfaceName_MethodName` Konvention, die in früheren Versionen von Visual Basic verwendet.  
   
  Der folgende Code zeigt z. B. das Deklarieren einer Unterroutine namens `Sub1`, die eine Methode einer Schnittstelle implementiert:  
   
- [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/VisualBasic/index_2.vb)]  
+ [!code-vb[VbVbalrOOP#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#69)]  
   
  Die Parametertypen und Rückgabetypen des implementierenden Members müssen mit den Schnittstelleneigenschaften oder der Memberdeklaration in der Schnittstelle übereinstimmen. Die gängigste Methode, um ein Element in einer Schnittstelle zu implementieren, ist mit einem Element, das den gleichen Namen wie die Schnittstelle hat, wie im vorherigen Beispiel gezeigt.  
   
@@ -58,7 +52,7 @@ ms.locfileid: "33654421"
   
  Mithilfe von `Implements`, können Sie auch eine einzelne Methode schreiben, die mehrere Methoden  implementiert, die in einer Schnittstelle definiert sind, wie z. B.:  
   
- [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/VisualBasic/index_3.vb)]  
+ [!code-vb[VbVbalrOOP#70](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#70)]  
   
  Sie können einen privaten Member verwenden, um ein Schnittstellenmember zu implementieren. Wenn ein privater Member einen Member einer Schnittstelle implementiert, wird dieses Member durch die Schnittstelle verfügbar, obwohl er nicht direkt in Objektvariablen für die Klasse verfügbar ist.  
   
@@ -67,15 +61,15 @@ ms.locfileid: "33654421"
   
  Im folgenden Beispiel werden zwei Schnittstellen definiert. Die zweite Schnittstelle `Interface2`, erbt `Interface1` und definiert eine zusätzliche Eigenschaft und Methode.  
   
- [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/VisualBasic/index_4.vb)]  
+ [!code-vb[VbVbalrOOP#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#39)]  
   
  Das nächste Beispiel implementiert `Interface1`, die im vorherigen Beispiel definierte Schnittstelle:  
   
- [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/VisualBasic/index_5.vb)]  
+ [!code-vb[VbVbalrOOP#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#40)]  
   
  Das abschließende Beispiel implementiert `Interface2`, einschließlich einer Methode geerbt von `Interface1`:  
   
- [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/VisualBasic/index_6.vb)]  
+ [!code-vb[VbVbalrOOP#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#41)]  
   
  Sie können eine schreibgeschützte Eigenschaft mit einer Readwrite-Eigenschaft implementieren (das heißt, Sie müssen sie nicht als schreibgeschützt in der implementierenden Klasse deklarieren).  Implementieren einer Schnittstelle verspricht mindestens die Member zu implementieren, die die Schnittstelle deklariert, aber Sie können mehr Funktionalität bieten, z. B. Schreibbarkeit Ihrer Eigenschaft.  
   

@@ -1,24 +1,18 @@
 ---
-title: Leitfaden für F#
-description: Dieses Handbuch enthält einen Überblick über die verschiedenen Lernmaterialien für F#, funktionalen Programmiersprachen, die auf .NET ausgeführt wird.
+title: 'Leitfaden für F#'
+description: 'Dieses Handbuch enthält einen Überblick über die verschiedenen Lernmaterialien für F#, funktionalen Programmiersprachen, die auf .NET ausgeführt wird.'
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: 5cd5bd95373c8a52a8d2b2348a51970560e8b272
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50188364"
 ---
 # <a name="f-guide"></a>Leitfaden für F#
 
 Leitfaden für F# enthält zahlreiche Ressourcen für die Sprache F# erlernen.
 
-## <a name="learning-f"></a>Erlernen von F# #
+## <a name="learning-f"></a>Learning F\#
 
-[F#-neuerungen](what-is-fsharp.md) wird beschrieben, was die F#-Sprache ist und welche Programmierung darin ähnelt, mit kurzen Codebeispielen. Dies wird empfohlen, wenn Sie mit F# vertraut sind.
+[Was ist F# ](what-is-fsharp.md) wird beschrieben, was die F# Sprache ist und welche Programmierung darin ähnelt, mit kurzen Codebeispielen. Dies wird empfohlen, wenn Sie mit F# vertraut sind.
 
-Die [Tour durch F#](tour.md) bietet einen Überblick über die wichtigsten Sprachfeatures und viele Codebeispiele. Dies wird empfohlen, wenn Sie Core F#-Funktionen in Aktion sehen möchten.
+Die [Tour durch F#](tour.md) bietet einen Überblick über die wichtigsten Sprachfeatures und viele Codebeispiele. Dies wird empfohlen, wenn Sie Core interessiert F# Features in Aktion.
 
 [Erste Schritte mit F# in Visual Studio](get-started/get-started-visual-studio.md) Wenn Sie Windows gearbeitet und möchten die umfassende Visual Studio-IDE (Integrated Development Environment)-Umgebung.
 

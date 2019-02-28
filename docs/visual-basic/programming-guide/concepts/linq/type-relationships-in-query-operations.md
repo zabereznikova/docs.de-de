@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 519b10cfa374290a2d924cce2bd3e39683ca080f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d72a55cadce287979fad25396327680e1f0e0aaf
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731126"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979098"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Typbeziehungen in Abfrageoperationen (Visual Basic)
 Im verwendeten Variablen [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Abfrage Vorgänge sind stark typisiert und miteinander kompatibel sein müssen. Starke Typisierung wird in der Datenquelle, in der Abfrage selbst und in die Ausführung der Abfrage verwendet werden. Die folgende Abbildung Begriffe, die zum Beschreiben einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage. Weitere Informationen zu den Teilen einer Abfrage finden Sie unter [Grundlegende Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -28,7 +28,7 @@ Teile einer LINQ-Abfrage
   
  Visual Basic erleichtert eine starke Typisierung durch die Implementierung von lokaler Typrückschluss, auch bekannt als *implizite Typisierung*. Funktion wird im vorherigen Beispiel verwendet, und sehen Sie in allen verwendet die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Beispiele und Dokumentation. Der lokale Typrückschluss erfolgt in Visual Basic einfach mithilfe einer `Dim` -Anweisung ohne eine `As` Klausel. Im folgenden Beispiel `city` ist stark typisiert, als Zeichenfolge.  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Lokaler Typrückschluss funktioniert nur, wenn `Option Infer` nastaven NA hodnotu `On`. Weitere Informationen finden Sie unter [Option Infer-Anweisung](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
@@ -37,16 +37,16 @@ Teile einer LINQ-Abfrage
   
  Sie müssen möglicherweise einen expliziten Typ für eine Bereichsvariable angeben, die nicht den Typ der Datenquelle übereinstimmen. Sie können den Typ der Bereichsvariablen angeben, mit einem `As` Klausel. Dies führt jedoch zu einem Fehler, wenn die Konvertierung ist ein [einschränkende Konvertierung](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) und `Option Strict` nastaven NA hodnotu `On`. Aus diesem Grund empfehlen wir, dass Sie auf die Daten aus der Datenquelle abgerufenen Werte die Konvertierung auszuführen. Sie können die Werte in den Typ der expliziten Bereich aus der Datenquelle konvertieren, mit der <xref:System.Linq.Enumerable.Cast%2A> Methode. Sie können auch die Werte, die im ausgewählten Umwandeln der `Select` -Klausel, um einen expliziten Typ, der sich von dem Typ der Bereichsvariablen. Diese Punkte sind in den folgenden Code dargestellt.  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]  
   
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Abfragen, die gesamte Elemente der Quelldaten zurückgibt  
  Das folgende Beispiel zeigt eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrageoperation, die eine Sequenz von Elementen, die aus dem quelldatenspeicher ausgewählt zurückgibt. Die Quelle `names`, enthält ein Array von Zeichenfolgen, und die Ausgabe der Abfrage ist eine Sequenz, die mit Zeichenfolgen, die mit dem Buchstaben M beginnen.  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]  
   
  Dies entspricht dem folgenden Code, aber es ist viel kürzer und einfacher zu schreiben. Abhängigkeit von den lokalen Typrückschluss in Abfragen ist das bevorzugte Format in Visual Basic.  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]  
   
  Die folgenden Beziehungen vorhanden sowohl von den vorherigen Codebeispielen, ob die Typen implizit oder explizit bestimmt werden.  
   

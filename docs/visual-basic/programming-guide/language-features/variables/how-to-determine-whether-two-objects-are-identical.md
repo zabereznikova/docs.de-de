@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 62d73b6c3d706d9990be7783f0f3461fc0783d9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1fdc5f69b8552ee10131c7408673457fffe16ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512969"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976849"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Vorgehensweise: Zu bestimmen, ob zwei Objekte identisch (Visual Basic)
 In Visual Basic sind Verweise auf zwei Variablen als identisch, wenn deren Zeiger identisch, d. h. sind Wenn beide Variablen auf die gleiche Klasseninstanz im Arbeitsspeicher verweisen. Z. B. in einer Windows Forms-Anwendung, Sie möchten stellen einen Vergleich aus, um zu bestimmen, ob die aktuelle Instanz (`Me`) ist identisch mit einer bestimmten Instanz, wie z. B. `Form2`.  
@@ -42,7 +42,7 @@ In Visual Basic sind Verweise auf zwei Variablen als identisch, wenn deren Zeige
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel testet die Paare von `Object` Variablen, um festzustellen, ob sie auf die gleiche Instanz der Klasse verweisen.  
   
- [!code-vb[VbVbalrKeywords#14](../../../../visual-basic/language-reference/codesnippet/VisualBasic/how-to-determine-whether-two-objects-are-identical_1.vb)]  
+ [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
  Im vorherige Beispiel wird die folgende Ausgabe angezeigt.  
   

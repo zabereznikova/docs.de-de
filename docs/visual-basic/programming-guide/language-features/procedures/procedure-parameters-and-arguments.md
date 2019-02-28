@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 42f85ed98f399c96f89879129b085f25ab117096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731737"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972545"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parameter und Argumente von Prozeduren (Visual Basic)
 In den meisten Fällen benötigt eine Prozedur einige Informationen zu den Umständen zusammen, die in denen sie aufgerufen wurde. Eine Prozedur, die wiederholte oder freigegebene Aufgaben ausführt, verwendet verschiedene Informationen für jeden Aufruf an. Diese Informationen bestehen aus Variablen, Konstanten und Ausdrücke, die Sie beim Aufruf an die Prozedur übergeben.  
@@ -44,7 +44,7 @@ In den meisten Fällen benötigt eine Prozedur einige Informationen zu den Umst�
 ## <a name="parameter-data-type"></a>Parameterdatentyp  
  Sie definieren einen Datentyp für einen Parameter mithilfe der `As` -Klausel in der Deklaration. Die folgende Funktion akzeptiert z. B. eine Zeichenfolge und einer ganzen Zahl.  
   
- [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
+ [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
   
  Wenn die typüberprüfung wechseln ([Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) ist `Off,` der `As` -Klausel ist optional, mit dem Unterschied, dass wenn einen Parameter verwendet wird, alle Parameter verwendet werden müssen. Wenn die typüberprüfung ist `On`, `As` -Klausel ist für alle Parameter der Prozedur erforderlich.  
   

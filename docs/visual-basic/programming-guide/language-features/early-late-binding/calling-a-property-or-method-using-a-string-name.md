@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 865270cfc8089d0bf229d9de7a7775dd2a3361d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb9d214d7bb226a4e14cb42e78bffd940049838d
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731520"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967528"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Aufrufen einer Eigenschaft oder Methode mit einem Zeichenfolgennamen (Visual Basic)
 In den meisten Fällen können Sie ermitteln die Eigenschaften und Methoden eines Objekts zur Entwurfszeit und Schreiben von Code, damit sie verarbeitet. Jedoch in einigen Fällen Sie möglicherweise nicht über Eigenschaften und Methoden eines Objekts im Voraus kennen, oder die Flexibilität, Benutzer, geben Sie Eigenschaften oder Methoden zur Laufzeit ausführen kann auch sinnvoll sein.  
@@ -35,11 +35,11 @@ In den meisten Fällen können Sie ermitteln die Eigenschaften und Methoden eine
   
  Angenommen, Sie über einen Verweis auf eine Assembly hinzufügen, die eine Klasse namens enthält `MathClass`, die über eine neue Funktion, die mit dem Namen verfügt `SquareRoot`, wie im folgenden Code gezeigt:  
   
- [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_1.vb)]  
+ [!code-vb[VbVbalrOOP#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#53)]  
   
  Die Anwendung konnte Textfeld-Steuerelemente zum Steuerelement, welche Methode aufgerufen wird, und seine Argumente verwenden. Z. B. wenn `TextBox1` enthält den Ausdruck ausgewertet werden soll, und `TextBox2` wird verwendet, um den Namen der Funktion eingeben, können Sie den folgenden Code zum Aufrufen verwenden die `SquareRoot` Funktion für den Ausdruck in `TextBox1`:  
   
- [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_2.vb)]  
+ [!code-vb[VbVbalrOOP#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#54)]  
   
  Bei Eingabe von "64" in `TextBox1`, in "SquareRoot" `TextBox2`, und rufen Sie dann die `CallMath` Prozedur, die Quadratwurzel der Zahl in `TextBox1` ausgewertet wird. Ruft der Code im Beispiel die `SquareRoot` Funktion (der akzeptiert einer Zeichenfolge, enthält den Ausdruck als ein erforderliches Argument ausgewertet wird) und gibt "8" in `TextBox1` (die Quadratwurzel von 64). Natürlich auch, wenn der Benutzer eine ungültige Zeichenfolge in eingibt `TextBox2`, wenn die Zeichenfolge den Namen einer Eigenschaft anstelle einer Methode enthält oder die Methode ein zusätzliches Argument für die erforderlichen aufweist, ein Laufzeitfehler auftritt. Müssen Sie stabile Fehlerbehandlung Code hinzufügen, bei der Verwendung `CallByName` diese oder andere Fehlermeldungen vorhersehen.  
   

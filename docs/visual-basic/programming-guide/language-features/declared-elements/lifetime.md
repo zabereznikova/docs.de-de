@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 4c52d426fe5194a6eb61b232b8f17669b4477f16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667387"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976043"
 ---
 # <a name="lifetime-in-visual-basic"></a>Lebensdauer in Visual Basic
 Die *Lebensdauer* eines deklarierten Elements ist den Zeitraum, während die It für die Verwendung verfügbar ist. Variablen sind nur Elemente, die deren Lebensdauer. Zu diesem Zweck der Compiler behandelt Prozedurparameter, und Funktionsergebnis ist als spezielle Fälle von Variablen. Die Lebensdauer einer Variablen stellt die Zeitspanne, in dem sie einen Wert enthalten kann. Der Wert kann während seiner Lebensdauer ändern, aber sie enthält immer einen Wert.  
@@ -58,7 +58,7 @@ Die *Lebensdauer* eines deklarierten Elements ist den Zeitraum, während die It 
  Das folgende Beispiel deklariert eine Variable mit dem [statische](../../../../visual-basic/language-reference/modifiers/static.md) Schlüsselwort. (Beachten Sie, die Sie nicht benötigen die `Dim` Schlüsselwort bei der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) verwendet einen Modifizierer, z. B. `Static`.)  
   
 ### <a name="code"></a>Code  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#13)]  
   
 ### <a name="comments"></a>Kommentare  
  Im vorherigen Beispiel, die Variable `applesSold` bleibt nach dem Verfahren `runningTotal` an den aufrufenden Code zurückgibt. Das nächste Mal `runningTotal` aufgerufen wird, `applesSold` behält den zuvor berechneten Wert.  

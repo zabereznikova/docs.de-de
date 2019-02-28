@@ -2,12 +2,12 @@
 title: Eingabezeichensatz (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
-ms.openlocfilehash: dce967ea8853f81fedaa53ea706fab4839b9f474
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bed10f6e4a9fb01abe825e5eb798da2d866ca84
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641199"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976758"
 ---
 # <a name="input-character-set-entity-sql"></a>Eingabezeichensatz (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] akzeptiert in UTF-16 codierte UNICODE-Zeichen.  
@@ -24,7 +24,7 @@ ms.locfileid: "54641199"
   
  Für Schlüsselwörter, Ausdrücke und Interpunktion können alle UTF-16-Zeichen verwendet werden, die sich zu lateinischen Zeichen normalisieren lassen. Zum Beispiel ist SELECT in einer japanischen Codepage ein gültiges Schlüsselwort.  
   
- Schlüsselwörter, Ausdrücke und Interpunktionszeichen können nur lateinische Zeichen sein. `SELECT` ist in einer japanischen Codepage kein Schlüsselwort. Bei +, -, *, /, =, (, ), ‘, [, ] sowie allen anderen nicht angeführten Sprachkonstrukten können nur lateinische Zeichen verwendet werden.  
+ Schlüsselwörter, Ausdrücke und Interpunktionszeichen können nur lateinische Zeichen sein. `SELECT` ist in einer japanischen Codepage kein Schlüsselwort. +,-, \*, /, =, (,), ', [,], und alle anderen nicht angeführten Sprachkonstrukten Sprachkonstrukt kann nur lateinische Zeichen sein.  
   
  Als einfache Bezeichner können nur lateinische Zeichen verwendet werden. Damit wird Mehrdeutigkeit bei Vergleichen vermieden, da ursprüngliche Werte verglichen werden. Zum Beispiel wäre ABC in japanischen und lateinischen Codepages unterschiedlich.  
   

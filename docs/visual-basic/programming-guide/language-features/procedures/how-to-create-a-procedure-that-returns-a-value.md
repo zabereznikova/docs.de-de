@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 18becfe05da27e538c5c294b26e0bb7aa19cad2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce0010762374baf5b19ab2e64f50e12fefda2dee
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506419"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966964"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Vorgehensweise: Erstellen Sie eine Prozedur, die einen Wert zurückgibt (Visual Basic)
 Sie verwenden eine `Function` -Prozedur, einen Wert an den aufrufenden Code zurückgibt.  
@@ -30,11 +30,11 @@ Sie verwenden eine `Function` -Prozedur, einen Wert an den aufrufenden Code zur�
   
      Die folgenden `Function` Prozedur berechnet werden, die längste Seite, die Hypotenuse eines rechtwinkligen Dreiecks, anhand der Werte der beiden anderen Seiten.  
   
-     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
      Das folgende Beispiel zeigt einen typischen Aufruf von `hypotenuse`.  
   
-     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-create-a-procedure-that-returns-a-value_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Verfahren](./index.md)

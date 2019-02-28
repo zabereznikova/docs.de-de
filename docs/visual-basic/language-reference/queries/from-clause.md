@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67f395069c98d8b60eca8c3663fb180a8dd5a2be
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678784"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978162"
 ---
 # <a name="from-clause-visual-basic"></a>From-Klausel (Visual Basic)
 Gibt einen oder mehrere Bereichsvariable und eine Abfragesammlung an.  
@@ -40,11 +40,11 @@ From element [ As type ] In collection [ _ ]
   
  Sie können angeben, dass mehrere `From` Klauseln in einer Abfrage zum Identifizieren von mehreren Sammlungen verknüpft werden sollen. Wenn mehrere Sammlungen angegeben werden, sie einzeln durchlaufen werden, oder Sie können diese verknüpfen, wenn diese verknüpft sind. Sie können Sammlungen implizit verknüpfen, indem die `Select` -Klausel, oder explizit durch Verwenden der `Join` oder `Group Join` Klauseln. Als Alternative können Sie mehrere Bereichsvariablen und Sammlungen angeben, in einem einzelnen `From` -Klausel, wobei alle entsprechenden Range-Variable und Sammlungen, die durch ein Komma voneinander getrennt. Im folgenden Codebeispiel wird veranschaulicht, beide Optionen zur Abfragesyntax für die `From` Klausel.  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
  Die `From` -Klausel definiert den Bereich einer Abfrage, der in den Bereich der ähnelt einem `For` Schleife. Aus diesem Grund jede `element` Bereichsvariablen im Bereich einer Abfrage muss einen eindeutigen Namen haben. Da es sich bei Angabe mehrerer `From` Klauseln für eine Abfrage, die nachfolgenden `From` Klauseln können Bereichsvariablen in finden Sie unter den `From` -Klausel, oder sie können auf Bereichsvariablen in einem vorherigen verweisen `From` Klausel. Das folgende Beispiel zeigt z. B. eine geschachtelte `From` Klausel, in die Auflistung in der zweiten Klausel auf eine Eigenschaft der Bereichsvariablen in der ersten Klausel basiert.  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
  Jede `From` Klausel kann eine beliebige Kombination von zusätzliche Abfrageklauseln, um die Abfrage zu verfeinern folgen. Sie können die Abfrage optimieren, es gibt folgende Möglichkeiten:  
   
@@ -67,7 +67,7 @@ From element [ As type ] In collection [ _ ]
 ## <a name="example"></a>Beispiel  
  Der folgende Abfrageausdruck verwendet eine `From` -Klausel, um eine Bereichsvariable deklarieren `cust` für jede `Customer` -Objekt in der `customers` Auflistung. Die `Where` -Klausel verwendet die Bereichsvariable, um die Ausgabe auf Kunden aus den angegebenen Bereich zu beschränken. Die `For Each` -Schleife zeigt den Firmennamen für jeden Kunden in den Abfrageergebnissen.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Abfragen](../../../visual-basic/language-reference/queries/index.md)

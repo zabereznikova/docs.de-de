@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 0890068d192a137689d06eb081e1a0fc128aabcd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 591fa664c56383cf8a7b3492e524a9738e065f8a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519007"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979605"
 ---
 # <a name="select-clause-visual-basic"></a>Select-Klausel (Visual Basic)
 Definiert das Ergebnis einer Abfrage an.  
@@ -36,20 +36,20 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
  Die `Select` -Klausel kann auf alle Variablen im aktuellen Bereich verweisen. Dies schließt Bereichsvariablen, die der `From` Klausel (oder `From` Klauseln). Es enthält auch neuen Variablen mit einem Alias erstellt die `Aggregate`, `Let`, `Group By`, oder `Group Join` -Klauseln oder Variablen aus einer vorherigen `Select` -Klausel in der Abfrageausdruck. Die `Select` -Klausel kann auch statische Werte enthalten. Z. B. das folgende Codebeispiel enthält einen Abfrageausdruck, in dem die `Select` -Klausel definiert das Abfrageergebnis als ein neuer anonymer Typ mit vier Mitglieder: `ProductName`, `Price`, `Discount`, und `DiscountedPrice`. Die `ProductName` und `Price` Werte stammen aus der Product-Range-Variable, die in definiert ist die `From` Klausel. Die `DiscountedPrice` Memberwert wird berechnet, der `Let` Klausel. Die `Discount` Member ist ein statischer Wert.  
   
- [!code-vb[VbSimpleQuerySamples#27](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#27)]  
   
  Die `Select` Klausel führt einen neuen Satz von Bereichsvariablen für nachfolgende Abfrageklauseln und vorherigen Bereichsvariablen sind nicht mehr im Gültigkeitsbereich. Die letzte `Select` -Klausel in einem Abfrageausdruck bestimmt den Rückgabewert der Abfrage. Z. B. gibt die folgende Abfrage das Unternehmen und Order-ID für jede kundenbestellung für die die Summe 500 übersteigt. Die erste `Select` -Klausel kennzeichnet die Bereichsvariablen für die `Where` -Klausel und das zweite `Select` Klausel. Die zweite `Select` -Klausel gibt die Werte, die von der Abfrage als ein neuer anonymer Typ zurückgegeben.  
   
- [!code-vb[VbSimpleQuerySamples#28](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#28)]  
   
  Wenn die `Select` -Klausel kennzeichnet ein einzelnes Element zurückgeben, der Abfrageausdruck gibt eine Auflistung vom Typ des einzelnen Elements zurück. Wenn die `Select` -Klausel kennzeichnet die mehrere Elemente zurückgegeben, der Abfrageausdruck gibt eine Auflistung ein neuer anonymer Typ, der auf Basis der ausgewählten Elemente zurück. Beispielsweise die folgenden beiden Abfragen zurück Auflistungen von zwei unterschiedliche Typen auf Grundlage der `Select` Klausel. Die erste Abfrage gibt eine Auflistung von Firmennamen einfügen als Zeichenfolgen zurück. Die zweite Abfrage gibt eine Auflistung von `Customer` Objekte, die mit dem Firmennamen und Informationen zur Adresse aufgefüllt.  
   
- [!code-vb[VbSimpleQuerySamples#29](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Abfrageausdruck verwendet eine `From` -Klausel, um eine Bereichsvariable deklarieren `cust` für die `customers` Auflistung. Die `Select` -Klausel wählt das Customer Name und ID-Wert, und füllt die `CompanyName` und `CustomerID` Spalten der neuen Bereichsvariablen. Die `For Each` -Anweisung durchläuft alle zurückgegebenen Objekte und zeigt die `CompanyName` und `CustomerID` Spalten für jeden Datensatz.  
   
- [!code-vb[VbSimpleQuerySamples#30](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/select-clause_4.vb)]  
+ [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

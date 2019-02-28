@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBreakpointEnum-Schnittstelle1
+title: ICorDebugBreakpointEnum-Schnittstelle
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBreakpointEnum
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 508cb9b4b2ff13a58f1313b958acd7b043741848
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b5268eb4240f7c3ff254f4d3d9a13ab494530a1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642934"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968737"
 ---
-# <a name="icordebugbreakpointenum-interface1"></a>ICorDebugBreakpointEnum-Schnittstelle1
+# <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum-Schnittstelle
+
 ICorDebugEnum-Methoden implementiert, und listet ICorDebugBreakpoint-Arrays.  
   
 ## <a name="methods"></a>Methoden  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 56466856bc70f4bde428f7087efdf4e71a50021f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef371a984d03485ccaf1ee5d61aa3cf39d80ef32
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689145"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979059"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>Leerzeichen in XML-Literalen (Visual Basic)
 Visual Basic-Compiler bindet nur die signifikanten Leerzeichen aus einem XML-Literal, wenn er erstellt eine [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Objekt. Bedeutungslose Leerzeichen sind nicht integriert.  
@@ -34,7 +34,7 @@ Visual Basic-Compiler bindet nur die signifikanten Leerzeichen aus einem XML-Lit
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel enthält zwei XML-Elemente, äußere und innere. Beide Elemente enthalten Leerzeichen in ihren Textinhalt. Der Leerraum in das äußere Element ist unbedeutend, da sie nur aus Leerzeichen und ein XML-Element enthält. Der Leerraum in das innere Element ist von Bedeutung, da er Leerzeichen und Text enthält.  
   
- [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/white-space-in-xml-literals_1.vb)]  
+ [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
  Wenn ausführen, zeigt dieser Code den folgenden Text ein.  
   

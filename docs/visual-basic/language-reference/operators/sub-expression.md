@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: d27ca262aa2349d34d78844e0aea0f96a1ced65c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e8c66f4f2b21a890b8c61e6fc642ce276df6f60
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496308"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966722"
 ---
 # <a name="sub-expression-visual-basic"></a>Teilausdruck (Visual Basic)
 Deklariert die Parameter und den Code, der einen Unterroutine Lambda-Ausdruck definieren.  
@@ -55,7 +55,7 @@ End Sub
 ## <a name="example"></a>Beispiel  
  Es folgt ein Beispiel für einen Lambda-Ausdruck, der einen Wert an die Konsole schreibt. Das Beispiel zeigt sowohl den einzeiligen und mehrzeiligen Lambda-Ausdruckssyntax für eine Unterroutine. Weitere Beispiele finden Sie unter [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
- [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
+ [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)

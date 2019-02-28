@@ -3,14 +3,14 @@ title: Erste Schritte mit Azure Table Storage mit F#
 description: Store strukturierte Daten in der Cloud mit Azure Table Storage oder Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152072"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966007"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Erste Schritte mit Azure Table Storage und Azure Cosmos DB Table API mit F# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Erste Schritte mit Azure Table Storage und Azure Cosmos DB Table API mit F\#
 
 Azure Table Storage ist ein Dienst, der strukturierte NoSQL-Daten in der Cloud gespeichert. Table Storage ist ein Schlüssel-/Attributspeicher mit einem schemalosen Design. Da der Tabellenspeicher schemalos ist, ist es einfach, Daten anzupassen, wenn sich die Anforderungen Ihrer Anwendung ändern. Zugriff auf Daten ist schnell und kostengünstig für alle Arten von Anwendungen. Table Storage ist in der Regel deutlich niedriger Kosten als herkömmliche SQL für ähnliche Datenmengen.
 

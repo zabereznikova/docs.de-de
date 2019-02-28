@@ -1,15 +1,9 @@
 ---
-title: F# Interactive-Referenz (fsi.exe)
-description: Erfahren Sie, wie F# Interactive (fsi.exe) wird verwendet, um die Ausführung F# code interaktiv in der Konsole oder auszuführende F# Skripts.
+title: 'F# Interactive-Referenz (fsi.exe)'
+description: 'Erfahren Sie, wie F# Interactive (fsi.exe) wird verwendet, um die Ausführung F# code interaktiv in der Konsole oder auszuführende F# Skripts.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0fccc818f0a4b3d6d09a69e91da1f5c337c53a44
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611060"
 ---
-# <a name="interactive-programming-with-f"></a>Interaktive Programmierung mit F# #
+# <a name="interactive-programming-with-f"></a>Interaktive Programmierung mit F\#
 
 > [!NOTE]
 > Dieser Artikel beschreibt derzeit nur das Erlebnis für Windows.  Er wird neu geschrieben.
@@ -44,7 +38,7 @@ Wenn Sie ein Projekt geöffnet haben, das auf einige Bibliotheken verweist, kön
 Sie können die Befehlszeilenargumente (Optionen) von F# Interactive steuern, indem Sie die Einstellungen anpassen. Wählen Sie im Menü **Extras** den Eintrag **Optionen** aus, und erweitern Sie anschließend **F#-Tools**. Die beiden Einstellungen, die Sie ändern können, sind die F# Interactive-Optionen und die Einstellung **64-Bit-F# Interactive**, die nur relevant ist, wenn Sie F# Interactive auf einem 64-Bit-Computer ausführen. Mit dieser Einstellung legen Sie fest, ob Sie die dedizierte 64-Bit-Version von fsi.exe oder aber fsianycpu.exe ausführen möchten, die anhand der Computerarchitektur ermittelt, ob sie als 32-Bit- oder 64-Bit-Prozess ausgeführt werden soll.
 
 
-## <a name="scripting-with-f"></a>Skripterstellung mit F# #
+## <a name="scripting-with-f"></a>Skripterstellung mit F\#
 Für Skripts wird die Dateierweiterung **.fsx** oder **.fsscript** verwendet. Statt Quellcode zu kompilieren und später die kompilierte Assembly auszuführen, können Sie einfach **fsi.exe** ausführen und den Dateinamen des Skripts mit dem F#-Quellcode angeben. F# Interactive liest dann den Code und führt ihn in Echtzeit aus.
 
 

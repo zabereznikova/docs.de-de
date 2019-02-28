@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 6d9daf47b8d9300e9de8add1423fa1824fc62d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691228"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974392"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Vorgehensweise: Übergeben von Argumenten an eine Prozedur (Visual Basic)
 Wenn Sie eine Prozedur aufrufen, verwenden Sie den Namen der Prozedur mit einer Argumentliste in Klammern angegeben. Sie geben Sie ein Argument für alle erforderlichen Parameter, die die Prozedur definiert, und geben Sie optional die Argumente, die `Optional` Parameter. Wenn Sie keinen angeben einer `Optional` Parameter im Aufruf, müssen Sie ein Komma, um seine Position in der Argumentliste zu markieren, wenn Sie alle nachfolgenden Argumente angeben einschließen.  
@@ -39,7 +39,7 @@ Wenn Sie eine Prozedur aufrufen, verwenden Sie den Namen der Prozedur mit einer 
   
      Im folgenden Beispiel wird die Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> Funktion.  
   
-     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#34)]  
   
      Im vorherige Beispiel stellt das erforderliche erste-Argument, das wird von die Meldungszeichenfolge, die angezeigt werden. Sie lässt es sich um ein Argument für den optionalen zweiten Parameter, der angibt, die Schaltflächen im Meldungsfeld angezeigt werden. Da der Aufruf einen Wert nicht angegeben wird `MsgBox` verwendet den Standardwert `MsgBoxStyle.OKOnly`, wird angezeigt, die nur eine **OK** Schaltfläche.  
   

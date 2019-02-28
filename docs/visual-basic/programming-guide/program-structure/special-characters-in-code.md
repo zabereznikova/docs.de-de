@@ -30,12 +30,12 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: 1541ac1793c9f3c082b688fecd4eb82fb5b59590
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17b5fcc2be2730abfd7ee0090f9f34053e81c5f8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726727"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971896"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>Sonderzeichen in Code (Visual Basic)
 Manchmal müssen Sie Sonderzeichen in Ihrem Code, d. h. Zeichen verwenden, die nicht alphabetisch oder numerisch sind. Die Interpunktions- und Sonderzeichen in der Visual Basic-Zeichensatz haben verschiedene Programmtexts zum Definieren der Aufgaben, die der Compiler oder das kompilierte Programm ausführt. Sie legen keine auszuführende Operation fest.  
@@ -43,14 +43,14 @@ Manchmal müssen Sie Sonderzeichen in Ihrem Code, d. h. Zeichen verwenden, die n
 ## <a name="parentheses"></a>Klammern  
  Verwenden Sie Klammern, wenn Sie eine Prozedur, wie z. B. definieren eine `Sub` oder `Function`. Sie müssen alle Prozedur Argumentlisten in Klammern einschließen. Können Sie auch Klammern zum Einfügen von Variablen oder Argumente in logischen Gruppen, die insbesondere um die Standardreihenfolge der Operatorrangfolge in einem komplexen Ausdruck außer Kraft zu setzen. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
- [!code-vb[VbVbcnConventions#11](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_1.vb)]  
+ [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
  Nach der Ausführung des vorherigen Code den Wert der `d` "8.225" und der Wert des `e` ist 3. Die Berechnung für `d` verwendet die standardmäßige Rangfolge `/` über `+` entspricht `d = b + (c / a)`. Die Klammern in die Berechnung für `e` außer Kraft setzen der Standardvorrang gilt.  
   
 ## <a name="separators"></a>Trennzeichen  
  Trennzeichen sind, was ihr Name besagt: Trennen Sie Abschnitte des Codes. In Visual Basic ist das Trennzeichen der Doppelpunkt (`:`). Verwenden Sie Trennzeichen, wenn mehrere Anweisungen in einer einzelnen Zeile anstelle von separaten Zeilen enthalten sein sollen. Dies spart Platz und verbessert die Lesbarkeit des Codes. Das folgende Beispiel zeigt drei Anweisungen, die durch Doppelpunkte getrennt sind.  
   
- [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
+ [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
  Weitere Informationen finden Sie unter [Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md).  
   
@@ -59,7 +59,7 @@ Manchmal müssen Sie Sonderzeichen in Ihrem Code, d. h. Zeichen verwenden, die n
 ## <a name="concatenation"></a>Verkettung  
  Verwenden der `&` Operator für *Verkettung*, oder Zeichenfolgen miteinander zu verknüpfen. Ist nicht zu verwechseln mit der `+` -Operator, der numerische Werte addiert. Bei Verwendung der `+` Operator zum Verketten, wenn Sie numerische Werte arbeiten Sie erhalten falsche Ergebnisse. Dies wird im folgenden Beispiel veranschaulicht:  
   
- [!code-vb[VbVbcnConventions#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_3.vb)]  
+ [!code-vb[VbVbcnConventions#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#13)]  
   
  Nach der Ausführung des vorherigen Code den Wert der `resultA` 21.01 und den Wert der `resultB` "10.0111".  
   
@@ -69,12 +69,12 @@ Manchmal müssen Sie Sonderzeichen in Ihrem Code, d. h. Zeichen verwenden, die n
 ### <a name="dot--operator"></a>Punkt (.) Operator  
  Verwenden der `.` Operator auf eine Klasse, Struktur, Schnittstelle oder Enumeration als ein Memberzugriffsoperator. Das Element kann ein Feld, Eigenschaft, Ereignis oder Methode sein. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
- [!code-vb[VbVbcnConventions#14](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_4.vb)]  
+ [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
 ### <a name="exclamation-point--operator"></a>Ausrufezeichen (!) Operator  
  Verwenden der `!` -Operator nur auf eine Klasse oder Schnittstelle wie ein wörterbuchzugriffsoperator. Die Klasse oder Schnittstelle benötigen eine Standardeigenschaft, die akzeptiert ein einzelnes `String` Argument. Der Bezeichner sofort nach der `!` Operator wird der Wert des Arguments an die Standardeigenschaft als Zeichenfolge übergeben. Dies wird im folgenden Beispiel veranschaulicht:  
   
- [!code-vb[VbVbcnConventions#15](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_5.vb)]  
+ [!code-vb[VbVbcnConventions#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#15)]  
   
  Die drei Zeilen der Ausgabe `MsgBox` alle zeigt den Wert `32856`. Die erste Zeile verwendet die herkömmlichen Zugriff auf Eigenschaft `index`, die zweite nutzt die Tatsache, `index` ist die Standardeigenschaft der Klasse `hasDefault`, und das dritte verwendet Wörterbuchzugriff auf die Klasse.  
   

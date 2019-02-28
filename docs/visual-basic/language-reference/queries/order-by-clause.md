@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: c467b46347539a3cc6c4abfabc368ce494985b95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d9055796687f828cc173a78feb9918cbf70bbd8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560935"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976368"
 ---
 # <a name="order-by-clause-visual-basic"></a>ORDER BY-Klausel (Visual Basic)
 Gibt die Sortierreihenfolge für eine Abfrage an.  
@@ -38,17 +38,17 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
 ## <a name="example"></a>Beispiel  
  Der folgende Abfrageausdruck verwendet eine `From` -Klausel, um eine Bereichsvariable deklarieren `book` für die `books` Auflistung. Die `Order By` -Klausel sortiert das Resultset der Abfrage nach Preis in aufsteigender Reihenfolge (Standard). Bücher mit den gleichen Preis sind nach Titel in aufsteigender Reihenfolge sortiert. Die `Select` -Klausel wählt die `Title` und `Price` Eigenschaften wie die von der Abfrage zurückgegebenen Werte.  
   
- [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Abfrageausdruck verwendet die `Order By` -Klausel, um das Ergebnis der Abfrage nach Preis in absteigender Reihenfolge zu sortieren. Bücher mit den gleichen Preis sind nach Titel in aufsteigender Reihenfolge sortiert.  
   
- [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Abfrageausdruck verwendet eine `Select` -Klausel, um Wählen Sie den Titel, Preis, Veröffentlichungsdatum und erstellen. Dann füllt es die `Title`, `Price`, `PublishDate`, und `Author` Felder die Bereichsvariable für den neuen Bereich. Die `Order By` -Klausel sortiert die neue Bereichsvariable, die vom Autorenname, Titel und Preis. Jede Spalte ist in der Standardreihenfolge (in aufsteigender Reihenfolge) sortiert.  
   
- [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
