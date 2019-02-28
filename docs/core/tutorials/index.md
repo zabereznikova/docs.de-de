@@ -1,16 +1,10 @@
 ---
 title: .NET Core-Tutorials
-description: Folgen Sie den Tutorials zum Erlernen von .NET Core, um Apps und Bibliotheken für Mac, Linux und Windows zu erstellen.
+description: 'Folgen Sie den Tutorials zum Erlernen von .NET Core, um Apps und Bibliotheken für Mac, Linux und Windows zu erstellen.'
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: d7d4685295c17fb4029ee077f5985f2b4152bbb4
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168742"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Lernen Sie mit diesen Tutorials .NET Core und die .NET Core SDK-Tools kennen.
 
@@ -25,7 +19,6 @@ Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 - [Erstellen einer Klassenbibliothek mit Visual Studio](vb-library-with-visual-studio.md)
 - [Testen einer Klassenbibliothek](testing-library-with-visual-studio.md)
 - [Nutzen einer Klassenbibliothek](consuming-library-with-visual-studio.md)
-- [Erstellen einer vollständigen C#-.NET Core-Projektmappe unter Windows](using-on-windows-full-solution.md)
 - [Azure Cosmos DB: Erste Schritte mit der SQL-API und .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Erstellen von Anwendungen mit Visual Studio Code
@@ -48,7 +41,6 @@ Die folgenden Tutorials sind verfügbar, um etwas über .NET Core zu erfahren.
 - [Unittests in .NET Core mit dotnet-test](../testing/unit-testing-with-dotnet-test.md)
 - [Unittests mit MSTest und .NET Core](../testing/unit-testing-with-mstest.md)
 - [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](libraries.md)
-- [So verwalten Sie Paketabhängigkeitsversionen für .NET Core 1.0](managing-package-dependency-versions.md)
 - [Hosten von .NET Core von nativem Code](netcore-hosting.md)
 - [Erstellen eines benutzerdefinierten Vorlagen-Assistenten für „dotnet new“](create-custom-template.md)
 

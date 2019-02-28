@@ -15,7 +15,7 @@ Durch die Verwendung von Schnittstellen können Sie beispielsweise das Verhalten
   
 Sie definieren eine Schnittstelle durch die Verwendung des Schlüsselworts [interface](../../language-reference/keywords/interface.md), wie im folgenden Beispiel gezeigt.  
   
-[!code-csharp[csProgGuideInheritance#47](../classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
 Der Name der Struktur muss ein gültiger C#- [Bezeichnername](../inside-a-program/identifier-names.md) sein. Gemäß Konvention beginnen Schnittstellennamen mit dem Großbuchstaben `I`.
 
