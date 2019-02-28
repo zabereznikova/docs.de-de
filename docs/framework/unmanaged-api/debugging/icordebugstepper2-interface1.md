@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStepper2-Schnittstelle1
+title: ICorDebugStepper2-Schnittstelle
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepper2
@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b7e91430b970e8a14e0c126b1b7ae2cb123d4eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69adabbe5bb607e00d383c8bd80d9e150608890e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712875"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970409"
 ---
-# <a name="icordebugstepper2-interface1"></a><span data-ttu-id="1b058-102">ICorDebugStepper2-Schnittstelle1</span><span class="sxs-lookup"><span data-stu-id="1b058-102">ICorDebugStepper2 Interface1</span></span>
-<span data-ttu-id="1b058-103">Bietet Unterstützung für nur mein (JMC) Codedebuggen.</span><span class="sxs-lookup"><span data-stu-id="1b058-103">Provides support for just my code (JMC) debugging.</span></span>  
+# <a name="icordebugstepper2-interface"></a><span data-ttu-id="fe734-102">ICorDebugStepper2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fe734-102">ICorDebugStepper2 Interface</span></span>
+<span data-ttu-id="fe734-103">Bietet Unterstützung für nur mein (JMC) Codedebuggen.</span><span class="sxs-lookup"><span data-stu-id="fe734-103">Provides support for just my code (JMC) debugging.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="1b058-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="1b058-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="fe734-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="fe734-104">Methods</span></span>  
   
-|<span data-ttu-id="1b058-105">Methode</span><span class="sxs-lookup"><span data-stu-id="1b058-105">Method</span></span>|<span data-ttu-id="1b058-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1b058-106">Description</span></span>|  
+|<span data-ttu-id="fe734-105">Methode</span><span class="sxs-lookup"><span data-stu-id="fe734-105">Method</span></span>|<span data-ttu-id="fe734-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fe734-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="1b058-107">SetJMC-Methode</span><span class="sxs-lookup"><span data-stu-id="1b058-107">SetJMC Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|<span data-ttu-id="1b058-108">Legt einen Wert, der angibt, ob diese ICorDebugStepper nur Code verarbeitet, die von einem Anwendungsentwickler erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="1b058-108">Sets a value that specifies whether this ICorDebugStepper steps only through code that is authored by an application's developer.</span></span>|  
+|[<span data-ttu-id="fe734-107">SetJMC-Methode</span><span class="sxs-lookup"><span data-stu-id="fe734-107">SetJMC Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|<span data-ttu-id="fe734-108">Legt einen Wert, der angibt, ob diese ICorDebugStepper nur Code verarbeitet, die von einem Anwendungsentwickler erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="fe734-108">Sets a value that specifies whether this ICorDebugStepper steps only through code that is authored by an application's developer.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="1b058-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1b058-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fe734-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fe734-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1b058-110">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="1b058-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="fe734-110">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="fe734-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b058-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1b058-111">Requirements</span></span>  
- <span data-ttu-id="1b058-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b058-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fe734-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fe734-111">Requirements</span></span>  
+ <span data-ttu-id="fe734-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fe734-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1b058-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1b058-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fe734-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fe734-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1b058-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b058-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fe734-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fe734-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1b058-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b058-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fe734-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe734-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b058-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1b058-116">See also</span></span>
-- [<span data-ttu-id="1b058-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="1b058-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="fe734-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fe734-116">See also</span></span>
+- [<span data-ttu-id="fe734-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="fe734-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

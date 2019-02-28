@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue2-Schnittstelle1
+title: ICorDebugHeapValue2-Schnittstelle
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue2
@@ -16,35 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 447fd8c7a6c52cdebc39ffd9c62cea5890c18c3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 497f17302416ffa13b6f91559549963f4d293b5f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499326"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966566"
 ---
-# <a name="icordebugheapvalue2-interface1"></a><span data-ttu-id="dd381-102">ICorDebugHeapValue2-Schnittstelle1</span><span class="sxs-lookup"><span data-stu-id="dd381-102">ICorDebugHeapValue2 Interface1</span></span>
-<span data-ttu-id="dd381-103">Eine Erweiterung des ICorDebugHeapValue, die Unterstützung für die common Language Runtime (CLR) behandelt.</span><span class="sxs-lookup"><span data-stu-id="dd381-103">An extension of ICorDebugHeapValue that provides support for common language runtime (CLR) handles.</span></span>  
+# <a name="icordebugheapvalue2-interface"></a><span data-ttu-id="8d050-102">ICorDebugHeapValue2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8d050-102">ICorDebugHeapValue2 Interface</span></span>
+
+<span data-ttu-id="8d050-103">Eine Erweiterung des ICorDebugHeapValue, die Unterstützung für die common Language Runtime (CLR) behandelt.</span><span class="sxs-lookup"><span data-stu-id="8d050-103">An extension of ICorDebugHeapValue that provides support for common language runtime (CLR) handles.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="dd381-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="dd381-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="8d050-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="8d050-104">Methods</span></span>  
   
-|<span data-ttu-id="dd381-105">Methode</span><span class="sxs-lookup"><span data-stu-id="dd381-105">Method</span></span>|<span data-ttu-id="dd381-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dd381-106">Description</span></span>|  
+|<span data-ttu-id="8d050-105">Methode</span><span class="sxs-lookup"><span data-stu-id="8d050-105">Method</span></span>|<span data-ttu-id="8d050-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="8d050-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="dd381-107">CreateHandle-Methode</span><span class="sxs-lookup"><span data-stu-id="dd381-107">CreateHandle Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|<span data-ttu-id="dd381-108">Erstellt ein Handle des angegebenen Typs für diese `ICorDebugHeapValue2` Objekt.</span><span class="sxs-lookup"><span data-stu-id="dd381-108">Creates a handle of the specified type for this `ICorDebugHeapValue2` object.</span></span>|  
+|[<span data-ttu-id="8d050-107">CreateHandle-Methode</span><span class="sxs-lookup"><span data-stu-id="8d050-107">CreateHandle Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|<span data-ttu-id="8d050-108">Erstellt ein Handle des angegebenen Typs für diese `ICorDebugHeapValue2` Objekt.</span><span class="sxs-lookup"><span data-stu-id="8d050-108">Creates a handle of the specified type for this `ICorDebugHeapValue2` object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="dd381-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="dd381-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8d050-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8d050-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="dd381-110">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="dd381-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="8d050-110">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="8d050-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dd381-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="dd381-111">Requirements</span></span>  
- <span data-ttu-id="dd381-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd381-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8d050-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8d050-111">Requirements</span></span>  
+ <span data-ttu-id="8d050-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d050-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dd381-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dd381-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="8d050-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8d050-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dd381-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dd381-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8d050-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8d050-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dd381-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd381-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8d050-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d050-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd381-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dd381-116">See also</span></span>
-- [<span data-ttu-id="dd381-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="dd381-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="8d050-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8d050-116">See also</span></span>
+- [<span data-ttu-id="8d050-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="8d050-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
