@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 9c4d6397d9a9ab1b95c4708c1e98741c01e9302e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706640"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970284"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Vorgehensweise: Erzwingen, dass ein Argument als Wert (Visual Basic) übergeben werden
 Den Übergabemechanismus der Prozedurdeklaration. Wenn ein Parameter deklariert wird [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic geht davon aus, das entsprechende Argument als Verweis übergeben. Dadurch wird das Verfahren zum Ändern des Werts des zugrunde liegenden Arguments im aufrufenden Code Programmierelements. Wenn Sie das zugrunde liegende Element für eine solche Änderung schützen möchten, können Sie überschreiben die `ByRef` Übergabemechanismus in der Prozedur aufrufen, indem der Name des Arguments in Klammern einschließen. Diese Klammern sind zusätzlich zu den Klammern einschließen der Liste der Argumente im Aufruf.  
@@ -35,9 +35,9 @@ Den Übergabemechanismus der Prozedurdeklaration. Wenn ein Parameter deklariert 
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine `ByRef` Parameterdeklaration. Im Aufruf, die erzwingt, dass `ByVal`, beachten Sie die zwei Ebenen von Klammern.  
   
- [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
- [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
  Wenn `str` in der Argumentliste in zusätzlichen Klammern eingeschlossen ist die `setNewString` Prozedur Wert im aufrufenden Code nicht ändern kann und `MsgBox` zeigt "Kann nicht ersetzt werden, wenn ByVal übergeben". Wenn `str` ist nicht eingeschlossen in zusätzlichen Klammern kann die Prozedur ändern, und `MsgBox` zeigt "Dies ist es sich um einen neuen Wert für das Argument InString."  
   

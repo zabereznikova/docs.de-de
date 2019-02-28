@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 5980549dd063b2c7d5c60ebd4e9762284c072009
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: becbbef008e8a474db198748d45f260fcb90c758
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586617"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966774"
 ---
 # <a name="determining-object-type-visual-basic"></a>Bestimmen des Objekttyps (Visual Basic)
 Generisches Objektvariablen (d. h. deklarierte Variablen als `Object`) Objekte aus einer Klasse enthalten kann. Bei Verwendung von Variablen des Typs `Object`, müssen Sie möglicherweise verschiedene Aktionen basierend auf der Klasse des Objekts, z. B. einige Objekte können nicht unterstützen, eine bestimmte Eigenschaft oder Methode. Visual Basic bietet zwei Methoden ermitteln, welche Art von Objekt in eine Objektvariable gespeichert ist: die `TypeName` Funktion und die `TypeOf...Is` Operator.  
@@ -22,15 +22,15 @@ Generisches Objektvariablen (d. h. deklarierte Variablen als `Object`) Objekte a
 ## <a name="typename-and-typeofis"></a>TypeName "und" TypeOf... Ist  
  Die `TypeName` Funktion gibt eine Zeichenfolge zurück und ist die beste Wahl, beim Speichern oder Anzeigen der Klassenname des Objekts, wie im folgenden Codefragment gezeigt:  
   
- [!code-vb[VbVbalrOOP#92](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_1.vb)]  
+ [!code-vb[VbVbalrOOP#92](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#92)]  
   
  Die `TypeOf...Is` Operator ist die beste Wahl für den Typ eines Objekts, zu testen, da sie viel schneller als eine entsprechende Zeichenfolge Vergleich ist `TypeName`. Das folgende Codefragment verwendet `TypeOf...Is` innerhalb einer `If...Then...Else` Anweisung:  
   
- [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
+ [!code-vb[VbVbalrOOP#93](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#93)]  
   
  Hier ist ein Wort der Warnung fällig. Die `TypeOf...Is` Operator gibt `True` wird ein Objekt eines bestimmten Typs ist, oder von einem bestimmten Typ abgeleitet ist. Fast alles, was Visual Basic bieten Ihnen umfasst Objekte, die einige Elemente, die normalerweise nicht betrachtet werden als Objekte, z. B. Zeichenfolgen und Zahlen enthalten. Diese Objekte davon abgeleitet sind, und Methoden erben <xref:System.Object>. Beim Übergeben einer `Integer` und ausgewerteten mit `Object`, die `TypeOf...Is` Operator gibt `True`. Das folgende Beispiel meldet, dass der Parameter `InParam` sowohl eine `Object` und `Integer`:  
   
- [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
+ [!code-vb[VbVbalrOOP#94](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#94)]  
   
  Im folgenden Beispiel wird sowohl `TypeOf...Is` und `TypeName` bestimmen den Typ des Objekts übergeben, die Sie in der `Ctrl` Argument. Die `TestObject` Prozeduraufrufe `ShowType` mit drei verschiedene Arten von Steuerelementen.  
   
@@ -42,7 +42,7 @@ Generisches Objektvariablen (d. h. deklarierte Variablen als `Object`) Objekte a
   
 3.  Fügen Sie dem Formular den folgenden Code hinzu:  
   
-     [!code-vb[VbVbalrOOP#95](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_4.vb)]  
+     [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>

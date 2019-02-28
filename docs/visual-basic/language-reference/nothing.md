@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b4a9acb5a43898ef616bbc6bb97f2f4f96d206b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496948"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981425"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Stellt den Standardwert eines beliebigen Datentyps dar. Für Verweistypen; der Standardwert ist die `null` Verweis. Der Standardwert hängt für Werttypen gibt an, ob der Werttyp auf NULL festlegbar ist.  
@@ -30,11 +30,11 @@ Stellt den Standardwert eines beliebigen Datentyps dar. Für Verweistypen; der S
   
  Wenn eine Variable eines Werttyps, der nicht NULL sein kann, Zuweisen von `Nothing` , wird es auf den Standardwert für den deklarierten Typ. Wenn dieses Typs Variable Membern enthält, können sie auf ihre Standardwerte zurück. Das folgende Beispiel zeigt dies für skalare Typen.  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class2.vb#7)]  
   
  Wenn eine Variable eines Referenztyps, Zuweisen von `Nothing` auf die Variable wird auf eine `null` Verweis, der den Typ der Variablen. Eine Variable, die festgelegt wird, um eine `null` Verweis ist nicht mit einem beliebigen Objekt verknüpft. Dies wird im folgenden Beispiel veranschaulicht:  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class3.vb#8)]  
   
  Wenn Sie, ob ein Verweis (oder geben Sie NULL-Wert) überprüfen Variable ist `null`, verwenden Sie keine `= Nothing` oder `<> Nothing`. Verwenden Sie immer `Is Nothing` oder `IsNot Nothing`.  
   
@@ -42,7 +42,7 @@ Stellt den Standardwert eines beliebigen Datentyps dar. Für Verweistypen; der S
   
  Das folgende Beispiel zeigt, vergleichen, verwenden die `Is` und `IsNot` Operatoren.  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class4.vb#9)]  
   
  Wenn Sie eine Variable, ohne deklarieren eine `As` Klausel und legen ihn auf `Nothing`, hat die Variable ein `Object`. Ein Beispiel hierfür ist `Dim something = Nothing`. Ein Fehler während der Kompilierung tritt in diesem Fall auf, wenn `Option Strict` befindet sich auf und `Option Infer` ist deaktiviert.  
   

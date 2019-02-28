@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 9a716a767563ab2721b3f01663d7566f141fc8e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11ea31ae245d34525ea33d5d2a53a72f1c415b16
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612020"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981451"
 ---
 # <a name="string-functions-visual-basic"></a>String-Funktionen (Visual Basic)
 In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum Suchen und Bearbeiten von Zeichenfolgen bereitstellt.  
@@ -51,27 +51,27 @@ In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum S
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird die `UCase`-Funktion verwendet, um eine Zeichenfolge in Großbuchstaben zurückzugeben:  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel werden mit der `LTrim`-Funktion führende Leerzeichen und mit der `RTrim`-Funktion nachstehende Leerzeichen aus einer Zeichenfolgenvariablen entfernt. Mit der `Trim`-Funktion werden beide Typen von Leerzeichen entfernt.  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird die `Mid`-Funktion verwendet, um eine bestimmte Anzahl von Zeichen aus einer Zeichenfolge zurückzugeben:  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird mit der `Len`-Funktion die Anzahl der Zeichen in einer Zeichenfolge zurückgegeben.  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird die `InStr`-Funktion verwendet, um die Position des ersten Auftretens einer Zeichenfolge innerhalb einer anderen Zeichenfolge zurückzugeben.  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt verschiedene Verwendungsmöglichkeiten der `Format`-Funktion zur Formatierung von Werten mit `String`-Formaten und benutzerdefinierten Formaten. Die tatsächlich von Ihrem System ausgegebene Formatierung von Datumstrennzeichen (`/`), Trennzeichen für Zeitangaben (`:`) und AM/PM-Indikatoren (`t` und `tt`) richtet sich nach den Gebietsschemaeinstellungen des Codes. Wenn Datums- und Zeitangaben in der Entwicklungsumgebung angezeigt werden, werden das 24-Stunden-Zeitformat und das kurze Datumsformat des für den Code ausgewählten Gebietsschemas verwendet.  
@@ -79,7 +79,7 @@ In der folgenden Tabelle sind die Funktionen aufgeführt, die Visual Basic zum S
 > [!NOTE]
 >  Für Gebietsschemas, die das 24-Stunden-Format verwenden, zeigen die AM/PM-Indikatoren (`t` und `tt`) nichts an.  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

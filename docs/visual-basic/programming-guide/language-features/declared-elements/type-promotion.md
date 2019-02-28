@@ -10,33 +10,33 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 4761a3ebc3e1271846c2415d8f629500a515ed2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b00fdd563a6599b3acfaaafa229fdef9400e57b6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721972"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969192"
 ---
 # <a name="type-promotion-visual-basic"></a>Typerweiterung (Visual Basic)
 Wenn Sie ein Programmierelement ein Element in einem Modul deklarieren, stuft Visual Basic den Gültigkeitsbereich auf den Namespace, die das Modul. Dies bezeichnet man als *typerweiterung*.  
   
  Das folgende Beispiel zeigt eine rumpfdefinition eines Moduls und zwei Member des Moduls.  
   
- [!code-vb[VbVbalrDeclaredElements#1](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_1.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
  In `projModule`, Programmierung Elemente, die auf Modulebene deklariert werden höher gestuft `projNamespace`. Im vorherigen Beispiel `basicEnum` und `innerClass` höher gestuft werden, aber `numberSub` dagegen nicht, da er nicht auf Modulebene deklariert ist.  
   
 ## <a name="effect-of-type-promotion"></a>Auswirkungen der Typerweiterung  
  Die Auswirkungen der typerweiterung ist, dass ein Qualifizierungspfad nicht auf den Namen des Moduls. Im folgende Beispiel enthält zwei Aufrufe an die Prozedur im vorhergehenden Beispiel.  
   
- [!code-vb[VbVbalrDeclaredElements#2](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_2.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
  Im vorherigen Beispiel verwendet der erste Aufruf vollständige Qualifizierung-Zeichenfolgen. Jedoch muss dies nicht aufgrund der typerweiterung. Der zweite Aufruf auch greift auf die Elemente des Moduls ohne `projModule` in den Zeichenfolgen Qualifizierung.  
   
 ## <a name="defeat-of-type-promotion"></a>Entschärfen von Typerweiterung  
  Wenn der Namespace bereits einem Element mit dem gleichen Namen wie eine Modul-Element verfügt, ist die typerweiterung für diesen Modulmember außer Kraft gesetzt. Im folgenden Beispiel wird die rumpfdefinition einer Enumeration und ein Modul innerhalb eines Namespaces.  
   
- [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
  Im vorherigen Beispiel Visual Basic kann nicht heraufgestuft Klasse `abc` zu `thisNameSpace` da bereits eine Enumeration mit demselben Namen im Namespace-Ebene vorhanden ist. Für den Zugriff auf `abcSub`, müssen Sie den vollständigen Qualifizierungspfad verwenden `thisNamespace.thisModule.abc.abcSub`. Allerdings Klasse `xyz` weiterhin heraufgestuft, und Sie können den `xyzSub` mit den kürzeren Qualifizierungspfad `thisNamespace.xyz.xyzSub`.  
   
@@ -45,7 +45,7 @@ Wenn Sie ein Programmierelement ein Element in einem Modul deklarieren, stuft Vi
   
  **Folgen.** Entschärfen von typerweiterung für eine partielle Definition kann es sich um unerwartete Ergebnisse und sogar zu Compilerfehlern führen. Im folgenden Beispiel wird das Skelett partiellen Definitionen einer Klasse, von denen innerhalb eines Moduls ist.  
   
- [!code-vb[VbVbalrDeclaredElements#4](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_4.vb)]  
+ [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
  Im vorherigen Beispiel erwarten Entwickler den Compiler an, die beiden partiellen Definitionen von merge `sampleClass`. Der Compiler berücksichtigt jedoch keine Erweiterung der partiellen Definition in `sampleModule`. Daher versucht er, zwei separate Klassen zu kompilieren, sowohl für benannte `sampleClass` jedoch mit anderen Qualifizierung Pfade.  
   

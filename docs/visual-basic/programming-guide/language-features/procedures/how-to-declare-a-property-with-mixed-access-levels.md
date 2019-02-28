@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: b10f679d735d21ba0002c8a3f4e230836298d4e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514256"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972585"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Vorgehensweise: Deklarieren Sie eine Eigenschaft mit gemischten Zugriffsebenen (Visual Basic)
 Wenn Sie möchten die `Get` und `Set` Prozeduren für eine Eigenschaft, um unterschiedliche Zugriffsebenen haben, können Sie die weniger restriktive Ebene in der `Property` -Anweisung und die weniger einschränkende Zugriffsebene in einem der `Get` oder `Set` -Anweisung. Verwenden Sie gemischten Zugriffsebenen auf eine Eigenschaft, wenn Sie bestimmte Teile des Codes, um den Wert der Eigenschaft abrufen zu können, und bestimmte andere Teile des Codes, um den Wert ändern zu können möchten.  
@@ -30,7 +30,7 @@ Wenn Sie möchten die `Get` und `Set` Prozeduren für eine Eigenschaft, um unter
   
 3.  Geben Sie eine Zugriffsebene nicht auf die anderen Eigenschaftenprozedur. Es wird davon ausgegangen, die Zugriffsebene in deklariert die `Property` Anweisung. Sie können den Zugriff auf nur einer der Eigenschaftenprozeduren einschränken.  
   
-     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#10)]  
   
      Im vorherigen Beispiel die `Get` Prozedur verfügt über die gleiche `Protected` Zugriff wie die Eigenschaft selbst, während die `Set` Prozedur `Private` Zugriff. Eine abgeleitete Klasse `employee` erhalten die `salary` Wert, aber nur die `employee` -Klasse festgelegt werden kann.  
   

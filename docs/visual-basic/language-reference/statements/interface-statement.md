@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 7bbce77034ce334b7c2b7f58a224fca38736385a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f65875caa16bfe00866cc3cd6fd0c0b22b034576
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532762"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970531"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface-Anweisung (Visual Basic)
 Deklariert den Namen einer Schnittstelle, und führt die Definitionen der Elemente, die die Schnittstelle enthält.  
@@ -61,7 +61,8 @@ End Interface
   
  Eine Klasse oder Struktur implementiert die Schnittstelle, indem Sie Code für jeden von der Schnittstelle definierten Member angeben. Schließlich, wenn die Anwendung eine Instanz von dieser Klasse oder Struktur erstellt, ein Objekt vorhanden ist und wird im Arbeitsspeicher ausgeführt. Weitere Informationen finden Sie unter [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) und [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- `Interface` kann nur auf Namespace- oder Modulebene verwendet werden. Dies bedeutet, dass die *Deklarationskontext* für eine Schnittstelle, eine Quelldatei, Namespace, Klasse, Struktur, Modul oder Schnittstelle sein muss, und eine Prozedur oder der Block nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ 
+  `Interface` kann nur auf Namespace- oder Modulebene verwendet werden. Dies bedeutet, dass die *Deklarationskontext* für eine Schnittstelle, eine Quelldatei, Namespace, Klasse, Struktur, Modul oder Schnittstelle sein muss, und eine Prozedur oder der Block nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  Der Standard für Schnittstellen [Friend](../../../visual-basic/language-reference/modifiers/friend.md) Zugriff. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
@@ -95,7 +96,7 @@ End Interface
   
      Wenn Sie eine Instanz der Klasse zu einer Variablen zuweisen, kann die Zugriffsebene der Member davon abhängen, ob der Datentyp der Variablen für die zugrunde liegende Schnittstelle oder die implementierende Klasse ist. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
-     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#39)]  
   
      Wenn Sie Zugriff auf Klassenmember über `varAsInterface`, sie verfügen über öffentlichen Zugriff. Jedoch wenn Sie Zugriff auf Member über `varAsClass`, `Sub` Prozedur `doSomething` privaten Zugriff hat.  
   
@@ -108,7 +109,7 @@ End Interface
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `Interface` Anweisung, um eine Schnittstelle, die mit dem Namen definieren `thisInterface`, die implementiert werden muss, mit einer `Property` Anweisung und eine `Function` Anweisung.  
   
- [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  
   
  Beachten Sie, dass die `Property` und `Function` Anweisungen führen Blöcke Endung `End Property` und `End Function` innerhalb der Schnittstelle. Die Schnittstelle definiert nur die Signaturen von Membern. Die vollständige `Property` und `Function` Blöcke angezeigt, in einer Klasse, die implementiert `thisInterface`.  
   

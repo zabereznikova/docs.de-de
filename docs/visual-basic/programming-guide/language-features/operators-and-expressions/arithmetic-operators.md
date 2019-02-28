@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: ff0532c87e03e4b502367313e33ddb9bd12ad8cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730736"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981269"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Arithmetische Operatoren in Visual Basic
 Arithmetische Operatoren werden viele der vertrauten arithmetischen Operationen ausführen, bei denen die Berechnung von numerischen Werten, die durch Literale, Variablen, andere Ausdrücke, Funktion und eigenschaftsaufrufen und Konstanten dargestellt verwendet. Sind Sie auch mit arithmetischen Operatoren klassifiziert Bitschiebeoperatoren, die auf der Ebene der einzelbits der Operanden werden und ihre Bitmuster nach links oder rechts.  
@@ -26,29 +26,29 @@ Arithmetische Operatoren werden viele der vertrauten arithmetischen Operationen 
 ## <a name="arithmetic-operations"></a>Arithmetische Operationen  
  Sie können zwei Werte hinzufügen, in einem Ausdruck zusammen mit der [+ (Operator)](../../../../visual-basic/language-reference/operators/addition-operator.md), oder entfernen Sie eine von einem anderen mit der [--Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), wie im folgende Beispiel wird veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
   
  Negation verwendet ebenfalls die [-Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md), jedoch mit nur einem Operanden, wie im folgenden Beispiel veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#58)]  
   
  Multiplikation und Division verwenden die [* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md) und [/-Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)bzw., wie im folgende Beispiel wird veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#59)]  
   
  Potenzierung verwendet die [^-Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md), wie das folgende Beispiel veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#60)]  
   
  Division ganzer Zahlen erfolgt mit der [\-Operator (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md). Division ganzer Zahlen gibt den Quotienten, d. h. die ganze Zahl, die die Anzahl der Male darstellt. der Divisor geteilt werden kann der Dividend geteilt werden ohne Rest. Sowohl der Divisor als auch der Dividend muss Ganzzahltypen (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, und `ULong`) für diesen Operator. Alle anderen Typen müssen zuerst in einen ganzzahligen Typ konvertiert werden. Das folgende Beispiel zeigt die Division ganzer Zahlen.  
   
- [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#61)]  
   
  Arithmetischer Modulo erfolgt unter Verwendung der [Mod-Operator](../../../../visual-basic/language-reference/operators/mod-operator.md). Dieser Operator gibt den Rest nach der Division des Divisors in der Dividend geteilt eine ganzzahlige Anzahl von Malen zurück. Wenn sowohl der Divisor als auch der Dividend geteilt werden ganzzahlige Typen sind, ist der zurückgegebene Wert ganzzahligen. Wenn der Divisor und Dividend Gleitkomma-Datentypen handelt, ist der zurückgegebene Wert auch Gleitkommazahl. Das folgende Beispiel veranschaulicht dieses Verhalten.  
   
- [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>Versuchte Division durch 0 (null)  
  Division durch 0 (null) verfügt über unterschiedliche Ergebnisse abhängig von den beteiligten Datentypen. Bei der ganzzahligen Division (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`), wird die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] löst eine <xref:System.DivideByZeroException> Ausnahme. Bei Divisionen der `Decimal` oder `Single` -Datentyp, der [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] löst auch eine <xref:System.DivideByZeroException> Ausnahme.  
@@ -80,7 +80,7 @@ Arithmetische Operatoren werden viele der vertrauten arithmetischen Operationen 
   
  Im folgende Beispiel wechselt ein `Integer` Wert nach rechts und Links.  
   
- [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#64)]  
   
  Arithmetische Schichten generieren keine Stapelüberlauf-Ausnahmen.  
   

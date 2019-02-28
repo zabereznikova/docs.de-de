@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: 5a931199ff8d09412d536a173f3cd12e451def64
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48845979"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979813"
 ---
 # <a name="synclock-statement"></a>SyncLock-Anweisung
 Ruft eine exklusive Sperre für einen Anweisungsblock vor der Ausführung des Blocks ab.  
@@ -81,13 +81,13 @@ End SyncLock
  Wenn die `simpleMessageList` Klasse freigegeben, eine Liste von Nachrichten auf alle zugehörigen Instanzen, die Variablen `messagesList` und `messagesLast` deklariert werden würde, als `Shared`. In diesem Fall ist die Variable `messagesLock` außerdem sollte der `Shared`, sodass es gäbe eine einzige Sperre-Objekt, das von jeder Instanz verwendet wird.  
   
 ### <a name="code"></a>Code  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>Beschreibung  
  Im folgenden Beispiel wird die Threads und `SyncLock`. Solange die `SyncLock` Anweisung vorhanden ist, der Anweisungsblock ein Kritischer Abschnitt und `balance` wird nie eine negative Zahl. Können Sie Auskommentieren der `SyncLock` und `End SyncLock` Anweisungen, um die Auswirkungen der auslassen finden Sie unter den `SyncLock` Schlüsselwort.  
   
 ### <a name="code"></a>Code  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  
   
 ### <a name="comments"></a>Kommentare  
   

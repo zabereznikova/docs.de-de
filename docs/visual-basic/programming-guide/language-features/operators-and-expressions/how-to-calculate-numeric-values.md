@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 7bbc3bcadb318203688a3b8ecae18e723e82c8ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560736"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974301"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Vorgehensweise: Berechnen von numerischen Werten (Visual Basic)
 Sie können numerische Werte durch die Verwendung von numerischen Ausdrücken berechnen. Ein *numerischer Ausdruck* ist ein Ausdruck mit Literalen, Konstanten und Variablen, die Darstellung von numerischer Werten und Operatoren, die für diese Werte dienen.  
@@ -43,7 +43,7 @@ Sie können numerische Werte durch die Verwendung von numerischen Ausdrücken be
   
 -   Sie können eine zuweisungsanweisung verwenden, den durch einen numerischen Ausdruck auf eine Variable dargestellten Wert zuweisen, wie im folgende Beispiel wird veranschaulicht.  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#82)]  
   
      Im vorherigen Beispiel den Wert des Ausdrucks auf der rechten Seite des Gleichheitsoperators (`=`) der Variablen zugewiesen ist `j` auf der linken Seite des Operators, sodass `j` 276 ergibt.  
   
@@ -56,7 +56,7 @@ Sie können numerische Werte durch die Verwendung von numerischen Ausdrücken be
   
 -   Verwenden Sie Klammern, um die Vorgänge einzuschließen, die zuerst ausgeführt werden sollen. Das folgende Beispiel zeigt zwei unterschiedliche Ergebnisse mit dem gleichen Operanden und Operatoren.  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#83)]  
   
      Im vorherigen Beispiel, der Berechnung für `j` der Additionsoperator (`+`) ersten da Klammern `(67 + i)` überschreiben normale Rangfolge und den zugewiesenen Wert `j` 276 (4-Mal so 69) ist. Die Berechnung für `k` führt die Operatoren in der normalen Rangfolge (`*` vor `+`), und der zugewiesene Wert `k` ist 270 (268 plus 2).  
   

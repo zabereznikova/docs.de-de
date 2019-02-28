@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 527e2c594f236f94ce23e4fd21238b8605af308c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 869ef0d7717ca64209bc61c2ae22ce929edcec5e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502442"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967866"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Vorgehensweise: Verbinden Sie mehrerer Ereignisse mit einem einzelnen Ereignishandler in Windows Forms
 In Ihrem Datenbankentwurf möglicherweise finden Sie es auf einen einzelnen Ereignishandler mehrere Ereignisse oder bei mehreren Ereignissen führen Sie das gleiche Verfahren erforderlich. Beispielsweise ist es oft eine leistungsstarke Zeitersparnis haben Sie einen Menübefehl, der das gleiche Ereignis auslösen, wie eine Schaltfläche im Formular ausgeführt werden, wenn sie die gleiche Funktionalität verfügbar machen. Sie erreichen dies, indem Sie die Ansicht "Ereignisse" im Eigenschaftenfenster in C# oder mithilfe der `Handles` Schlüsselwort und die **Klassenname** und **Methodenname** Dropdownfelder in Visual Basic-Code-Editor.  
@@ -46,7 +46,7 @@ In Ihrem Datenbankentwurf möglicherweise finden Sie es auf einen einzelnen Erei
   
 6.  Fügen Sie den entsprechenden Code zum Ereignishandler hinzu.  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Zum Verbinden mehrerer Ereignisse mit einem einzelnen Ereignishandler inC#  
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>So verbinden mehrere Ereignisse mit einem einzelnen Ereignishandler in C\#
   
 1.  Wählen Sie das Steuerelement, das Sie einen Ereignishandler eine Verbindung herstellen möchten.  
   

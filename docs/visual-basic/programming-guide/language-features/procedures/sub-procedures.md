@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: f558c61d2e81471e167e97816ff47bc4465c5f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646d7d217891dc8ea5b78f7ce30fce19fab08316
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638118"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977577"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub-Prozeduren (Visual Basic)
 Ein `Sub` Prozedur ist eine Reihe von Visual Basic Anweisungen durch die `Sub` und `End Sub` Anweisungen. Die `Sub` Prozedur, eine Aufgabe ausführt, und klicken Sie dann die steuerelementrückgabe an den aufrufenden Code, aber es gibt einen Wert nicht an den aufrufenden Code zurück.  
@@ -30,7 +30,7 @@ Ein `Sub` Prozedur ist eine Reihe von Visual Basic Anweisungen durch die `Sub` u
 ## <a name="declaration-syntax"></a>Deklarationssyntax  
  Die Syntax zum Deklarieren einer `Sub` Verfahren lautet wie folgt:  
   
- `[` *Modifizierer* `] Sub` *Subname* `[(` *Parameterlist*  `)]`  
+ `[` *Modifizierer* `] Sub` *Subname* `[(` *Parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -43,11 +43,11 @@ Ein `Sub` Prozedur ist eine Reihe von Visual Basic Anweisungen durch die `Sub` u
   
  Die Syntax für jeden Parameter in der Liste der Parameter lautet wie folgt aus:  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *Parametername*`As`*Datatype*   
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *Parametername*`As`*Datatype*  
   
  Wenn der Parameter optional ist, müssen Sie auch einen Standardwert als Teil der Deklaration angeben. Die Syntax zum Angeben der Standardwert ist wie folgt aus:  
   
- `Optional [ByVal | ByRef]`  *Parametername*`As`*Datatype*`=`*Defaultvalue*   
+ `Optional [ByVal | ByRef]`  *Parametername*`As`*Datatype*`=`*Defaultvalue*  
   
 ### <a name="parameters-as-local-variables"></a>Parameter als lokale Variablen  
  Wenn die Steuerung an die Prozedur übergeben, wird jeder Parameter als lokale Variable behandelt. Dies bedeutet, dass seine Lebensdauer identisch mit der Prozedur ist und der Bereich die ganze Prozedur ist.  
@@ -66,11 +66,11 @@ Ein `Sub` Prozedur ist eine Reihe von Visual Basic Anweisungen durch die `Sub` u
 ### <a name="illustration-of-declaration-and-call"></a>Abbildung der Deklaration und Aufruf  
  Die folgenden `Sub` -Prozedur meldet die welche Aufgabe die Anwendung ausführen, sowie einen Zeitstempel an. Statt diesen Code am Anfang jeder Aufgabe zu wiederholen, ruft die Anwendung nur `tellOperator` an verschiedenen Standorten. Jeder Aufruf übergibt eine Zeichenfolge in die `task` Argument, das die gestartete Aufgabe identifiziert.  
   
- [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
  Das folgende Beispiel zeigt einen typischen Aufruf von `tellOperator`.  
   
- [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Verfahren](./index.md)

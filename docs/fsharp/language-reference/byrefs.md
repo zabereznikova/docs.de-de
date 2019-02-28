@@ -2,12 +2,12 @@
 title: Parametry
 description: Informationen Sie zu Byref und Byref-ähnlichen Typen in F#, die für die Low-Level-Programmierung verwendet werden.
 ms.date: 09/02/2018
-ms.openlocfilehash: c45c061a1487c60c3361cd82a55357189754e29d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611580"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976550"
 ---
 # <a name="byrefs"></a>Parametry
 
@@ -105,7 +105,7 @@ Alle diese Regeln, die zusammen bedeuten, dass den Inhaber des ein `inref` Zeige
 
 Der Zweck der `outref<'T>` ist, um anzugeben, dass der Zeiger nur aus gelesen werden sollen. Unerwartet `outref<'T>` zulässt, lesen den zugrunde liegenden Wert trotz seines Namens. Dies ist für die Kompatibilität. Semantisch gesehen sind `outref<'T>` funktioniert genauso wie `byref<'T>`.
 
-### <a name="interop-with-c"></a>Interoperabilität mit c# #
+### <a name="interop-with-c"></a>Interoperabilität mit C\#
 
 C# unterstützt die `in ref` und `out ref` Schlüsselwörter, zusätzlich zu den `ref` zurückgibt. Die folgende Tabelle zeigt, wie F# interpretiert wie c# ausgibt:
 

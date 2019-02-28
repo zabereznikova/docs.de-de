@@ -6,12 +6,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 38b0673f5725077eec9253021eec4216e66504a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f175de647887a406f8ae87dae492a5fe58cca9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615248"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976732"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Vorgehensweise: Zurückgeben eines Werts aus einer Prozedur (Visual Basic)
 Ein `Function` Prozedur gibt einen Wert zurück an den aufrufenden Code entweder durch Ausführen einer `Return` Anweisung oder durch Auftreten einer `Exit Function` oder `End Function` Anweisung.  
@@ -26,11 +26,11 @@ Ein `Function` Prozedur gibt einen Wert zurück an den aufrufenden Code entweder
   
      Die folgenden `Function` Prozedur berechnet die längste Seite, die Hypotenuse eines rechtwinkligen Dreiecks, und wird an den aufrufenden Code zurückgegeben.  
   
-     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
      Das folgende Beispiel zeigt einen typischen Aufruf von `hypotenuse`, das den zurückgegebenen Wert speichert.  
   
-     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ### <a name="to-return-a-value-using-exit-function-or-end-function"></a>Zum Zurückgeben eines Werts, der mit der Funktion "Exit" oder eine End-Funktion  
   

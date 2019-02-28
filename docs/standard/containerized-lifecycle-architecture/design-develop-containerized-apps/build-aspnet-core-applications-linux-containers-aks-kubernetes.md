@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: a00a5c42facb105a23cd85fce79f9fd16a96ccfa
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: cb84f4ebb0681792a820f8ed7bc32c5d1d8c08b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835511"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967164"
 ---
 # <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Erstellen von ASP.NET Core 2.1-Anwendungen, die als Linux-Container bereitgestellt werden, in einem AKS/Kubernetes-orchestrator
 
@@ -29,7 +29,7 @@ Die folgenden Beispiele durchsuchen, die Erstellung einer ASP.NET Core 2.1-Anwen
 
 ASP.NET Core ist eine allgemeine Entwicklungsplattform von Microsoft und der .NET-Community auf GitHub verwaltet wird. Sie ist plattformübergreifend, d.h., sie unterstützt Windows, macOS und Linux und kann lokal, in der Cloud und in Einbettungs- und IoT-Szenarios verwendet werden.
 
-Dieses Beispiel verwendet ein einfaches Projekt, das basiert auf Grundlage einer Visual Studio Web-API-Vorlage, zusätzliche Kenntnisse zum Erstellen der Beispieldatenbank erforderlich. Sie müssen nur zum Erstellen des Projekts mithilfe einer standard-Vorlage, die alle zum Ausführen von eines kleinen Projekts mit einer REST-API, die mit ASP.NET Core 2.1-Technologie-Elemente enthält.
+Dieses Beispiel verwendet ein einfaches Projekt, das zusätzliche Kenntnisse zum Erstellen der Beispieldatenbank erforderlich, in einer Visual Studio Web-API-Vorlage basiert. Sie müssen nur zum Erstellen des Projekts mithilfe einer standard-Vorlage, die alle zum Ausführen von eines kleinen Projekts mit einer REST-API, die mit ASP.NET Core 2.1-Technologie-Elemente enthält.
 
 ![Fügen Sie Fenster "Neues Projekt hinzu" in Visual Studio, die Auswahl von ASP.NET Core-Webanwendung.](media/create-aspnet-core-application.png)
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: 366a4a42ff0bf968e51e11a66fa81566a47c86ea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d9dc68d8e7eced031af404aaec20784573c9930a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179428"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965617"
 ---
 # <a name="xml-and-soap-serialization"></a>XML- und SOAP-Serialisierung
 
@@ -52,7 +52,7 @@ Listet die zur Steuerung der XML-Serialisierung verwendeten Attribute auf.
 [Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
 Veranschaulicht anhand eines komplexen Szenarios die Generierung mehrerer XML-Streams durch außer Kraft setzen der Serialisierung.
 
-[Vorgehensweise: Steuern der Serialisierung abgeleiteter Klassen](how-to-control-serialization-of-derived-classes.md)  
+[Vorgehensweise: Steuerung der Serialisierung abgeleiteter Klassen](how-to-control-serialization-of-derived-classes.md)  
 Zeigt anhand eines Beispiels, wie sich die Serialisierung abgeleiteter Klassen steuern läst.
 
 [Vorgehensweise: Qualifizieren von XML-Element- und XML-Attributnamen](how-to-qualify-xml-element-and-xml-attribute-names.md)  
@@ -61,10 +61,10 @@ Beschreibt, wie definiert und gesteuert werden kann, wie XML-Namespaces im XML-S
 [XML-Serialisierung mit XML-Webdiensten](xml-serialization-with-xml-web-services.md)  
 Erläutert die Verwendung der XML-Serialisierung in XML-Webdiensten.
 
-[Vorgehensweise: Serialisieren eines Objekts als SOAP-codierter XML-Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+[Vorgehensweise: Serialisieren eines Objekts als ein SOAP-codierten XML-Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
 Beschreibt, wie die <xref:System.Xml.Serialization.XmlSerializer> Klasse codierten SOAP-XML-Streams zu erstellen, Abschnitt 5 des World Wide Web Consortium (W3C) Dokuments entsprechen [einfache Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/).
 
-[Gewusst wie: Überschreiben von codierter SOAP-XML-Serialisierung](how-to-override-encoded-soap-xml-serialization.md)  
+[Vorgehensweise: Überschreiben der XML-Serialisierung von codiertem SOAP](how-to-override-encoded-soap-xml-serialization.md)  
 Beschreibt, wie die XML-Serialisierung von Objekten als SOAP-Nachrichten außer Kraft gesetzt wird.
 
 [Attribute zur Steuerung der Serialisierung von codiertem SOAP](attributes-that-control-encoded-soap-serialization.md)  
@@ -84,10 +84,7 @@ Fügt Typen hinzu, die von der <xref:System.Xml.Serialization.XmlSchemaImporter>
 
 ## <a name="related-sections"></a>Verwandte Abschnitte
 
-[Advanced Development Technologies (Erweiterte Entwicklungstechnologien)](https://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
-Enthält Links zu weiteren Informationen über anspruchsvolle Aufgaben und Verfahren für die Entwicklung in .NET&#160;Framework.
-
-[Mit ASP.NET- und XML-Webdienstclients erstellte XML-Webdienste](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
+[Mit ASP.NET- und XML-Webdienstclients erstellte XML-Webdienste](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))  
 Stellt Themen bereit, in denen beschrieben und erklärt wird, wie XML-Webdienste mit ASP.NET programmiert werden.
 
 ## <a name="see-also"></a>Siehe auch

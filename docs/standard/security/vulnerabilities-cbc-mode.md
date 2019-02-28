@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie erkennen und Minimieren von Sicherheitsrisike
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 0f5f7d2032981d28445abe27f87a678ce2c74600
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066174"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974288"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Zeitliche Steuerung Sicherheitsrisiken CBC-Modus symmetrische Entschlüsselung mithilfe von Abständen
 
@@ -92,7 +92,7 @@ Anwendungen, die nicht ihre messaging-Format zu ändern, aber nicht authentifizi
   - Dies auch verhindert nur-Text-Wiederherstellung in Situationen nicht, in denen der Angreifer Klartext mehrere Male mit einem Offset für die unterschiedlichen Nachrichten, die verschlüsselt werden umgewandelt werden kann.
 - Die Auswertung eines Aufrufs Entschlüsselung der zeitlichen Steuerung Signal Befeuchten-Gate:
   - Die Berechnung des Haltezeit müssen mindestens über die maximale Zeitspanne, die der Entschlüsselungsvorgang für alle Datensegment dauern würde, die Auffüllung enthält.
-  - Time Berechnungen sollte durchgeführt werden, gemäß den Anweisungen unter [Abrufen mit hoher Auflösung Zeitstempel](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), nicht mithilfe von <xref:System.Environment.TickCount?displayProperty=nameWithType> (je nach Roll-Over/Überlauf) oder Subtraktion von zwei System Zeitstempel (gemäß den NTP-Anpassung (Fehler).
+  - Time Berechnungen sollte durchgeführt werden, gemäß den Anweisungen unter [Abrufen mit hoher Auflösung Zeitstempel](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps), nicht mithilfe von <xref:System.Environment.TickCount?displayProperty=nameWithType> (je nach Roll-Over/Überlauf) oder Subtraktion von zwei System Zeitstempel (gemäß den NTP-Anpassung (Fehler).
   - Zeit Berechnungen müssen einschließlich der Entschlüsselungsvorgang, einschließlich aller mögliche Ausnahmen in verwaltet werden oder C++-Anwendungen, die nicht nur am Ende aufgefüllt.
   - Wenn noch Erfolg oder Fehler ermittelt wurde, muss das Timing-Gate nach dessen Ablauf ein Fehler zurückgegeben.
 - Dienste, die nicht authentifizierte Entschlüsselung durchführen müssen erkennen, dass eine Flut von "ungültig" Nachrichten über stammten überwachungslösung.
@@ -103,7 +103,7 @@ Anwendungen, die nicht ihre messaging-Format zu ändern, aber nicht authentifizi
 Für Programme, die für die Windows-Kryptografie erstellt werden: Next Generation (CNG)-Bibliothek:
 
 - Der Entschlüsselung Aufruf [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt)unter Angabe der `BCRYPT_BLOCK_PADDING` Flag.
-- Das Schlüsselhandle wurde durch den Aufruf initialisiert ["BCryptSetProperty"](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) mit [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) festgelegt `BCRYPT_CHAIN_MODE_CBC`.
+- Das Schlüsselhandle wurde durch den Aufruf initialisiert ["BCryptSetProperty"](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) mit [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) festgelegt `BCRYPT_CHAIN_MODE_CBC`.
   - Da `BCRYPT_CHAIN_MODE_CBC` ist die Standardeinstellung. betroffene Code möglicherweise keine Werte für zugewiesen `BCRYPT_CHAINING_MODE`.
 
 Für Programme, die für die älteren Windows Kryptografie-API erstellt werden:

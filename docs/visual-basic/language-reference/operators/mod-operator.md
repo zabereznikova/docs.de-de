@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: d74e1f7aaaa22d68c49f4e40ca557511a48e0554
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bb34eb810f6e2d0b0d631f5891e3e65aa0b170f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525026"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981399"
 ---
 # <a name="mod-operator-visual-basic"></a>MOD-Operator (Visual Basic)
 Dividiert zwei Zahlen und gibt nur den Restwert zurück.  
@@ -36,7 +36,7 @@ number1 Mod number2
  Erforderlich. Ein beliebiger numerischer Ausdruck.  
   
 ## <a name="supported-types"></a>Unterstützte Typen  
- Alle numerischen Typen. Dazu gehören auch die Typen ohne Vorzeichen und Gleitkommatypen und `Decimal`.  
+ allen numerischen Typen Dazu gehören auch die Typen ohne Vorzeichen und Gleitkommatypen und `Decimal`.  
   
 ## <a name="result"></a>Ergebnis
 
@@ -93,12 +93,12 @@ End Module
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `Mod` Operator, um zwei Zahlen dividiert, und nur den Rest zurückzugeben. Wenn entweder Anzahl eine Gleitkommazahl ist, ist das Ergebnis eine Gleitkommazahl, die den Rest darstellt.  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#31)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt die potenzielle Ungenauigkeit der Gleitkomma-Operanden. In der ersten Anweisung, die Operanden sind `Double`, 0,2 ist ein unendlich Binärbruch mit dem gespeicherten Wert 0,20000000000000001. In der zweiten Anweisung, das Literal-Typzeichen `D` erzwingt, dass beide Operanden `Decimal`, und 0,2 verfügt über eine genaue Darstellung.  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>

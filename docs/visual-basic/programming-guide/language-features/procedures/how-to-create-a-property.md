@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: cc1222feed338f88142c4a6a7d6520fa458b5c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734038"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970960"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Vorgehensweise: Erstellen Sie eine Eigenschaft (Visual Basic)
 Sie setzen eine Eigenschaftsdefinition zwischen einem `Property` Anweisung und eine `End Property` Anweisung. Innerhalb dieser Definition, die Sie definieren eine `Get` Verfahren einen `Set` -Prozedur oder beides. Der Eigenschaftenwert Code ist in diesen Prozeduren.  
@@ -54,11 +54,11 @@ Sie setzen eine Eigenschaftsdefinition zwischen einem `Property` Anweisung und e
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt eine Lese-/Schreibeigenschaft, die einen vollständigen Namen als zwei enthaltenen Namen, der Vorname und Nachname gespeichert. Wenn der aufrufende Code liest `fullName`, `Get` Prozedur kombiniert die beiden zugehörigen Namen und gibt den vollständigen Namen zurück. Wenn der aufrufende Code einen neuen vollständigen Namen, weist der `Set` Prozedur versucht, die in zwei enthaltenen Namen aufzulösen. Wenn sie ein Leerzeichen nicht gefunden wird, es alle als den ersten Namen gespeichert.  
   
- [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/how-to-create-a-property_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#8)]  
   
  Das folgende Beispiel zeigt die typischen Aufrufe an die Eigenschaftenprozeduren von `fullName`. Der erste Aufruf legt den Eigenschaftswert fest, und der zweite Aufruf abgerufen.  
   
- [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/how-to-create-a-property_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Verfahren](./index.md)

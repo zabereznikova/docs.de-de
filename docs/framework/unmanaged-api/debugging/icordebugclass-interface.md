@@ -1,5 +1,5 @@
 ---
-title: ICorDebugClass-Schnittstelle1
+title: ICorDebugClass-Schnittstelle
 ms.date: 03/30/2017
 api_name:
 - ICorDebugClass
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d12d952fe540b2ec36d058ae2100f0cf5c8e6bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9beb8930143cbb0cc7dd8dd68a65b42d92563e31
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710214"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972052"
 ---
-# <a name="icordebugclass-interface1"></a>ICorDebugClass-Schnittstelle1
+# <a name="icordebugclass-interface"></a>ICorDebugClass-Schnittstelle
+
 Stellt einen Typ dar, der entweder grundlegend oder komplex (das heißt benutzerdefiniert) sein kann. Wenn der Typ generisch ist, stellt `ICorDebugClass` den nicht instanziierten generischen Typ dar.  
   
 ## <a name="methods"></a>Methoden  

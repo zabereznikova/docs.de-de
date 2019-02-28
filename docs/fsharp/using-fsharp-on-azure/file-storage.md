@@ -3,14 +3,14 @@ title: Erste Schritte mit Azure File Storage mit F#
 description: Store Dateidaten in der Cloud mit Azure File Storage, und binden Sie Ihre clouddateifreigabe von einem virtuellen Azure-Computer (VM) oder aus einer lokalen Anwendung Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e772da5f81d2e6827295d0dfe150934a415eb3bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fa6dadc863bb9116cfac5afd7cd22a724bc7afe2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33569342"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969595"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Erste Schritte mit Azure File Storage mit F# #
+# <a name="get-started-with-azure-file-storage-using-f"></a>Erste Schritte mit Azure File Storage mit F\#
 
 Azure File Storage ist ein Dienst, der bietet Dateifreigaben in der Cloud mit dem Standard [Server Message Block (SMB) Protokoll](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Es werden sowohl SMB 2.1 als auch SMB 3.0 unterstützt. Mit Azure File Storage können Sie ältere Anwendungen migrieren, die Dateifreigaben in Azure schnell und ohne teures abhängen. Anwendungen, die in Azure Virtual Machines oder Cloud Services oder von lokalen Clients ausgeführt, können eine Dateifreigabe in der Cloud bereitstellen, ebenso wie eine Desktopanwendung eine typische SMB-Freigabe einbindet. Eine beliebige Anzahl von Komponenten der Anwendung kann dann bereitstellen und gleichzeitig Zugriff auf die File Storage-Freigabe.
 
@@ -23,7 +23,7 @@ Sie benötigen für dieses Konto auch Ihren speicherzugriffsschlüssel.
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
 
-In die Beispielen in diesem Artikel können in einer F#-Anwendung oder ein F#-Skript verwendet werden. Um ein F#-Skript zu erstellen, erstellen Sie eine Datei mit den `.fsx` Erweiterung, z. B. `files.fsx`, in der F#-Entwicklungsumgebung.
+In die Beispielen in diesem Artikel verwendet werden können, entweder in eine F# Anwendung oder ein F# Skript. Zum Erstellen einer F# Skript, erstellen Sie eine Datei mit der `.fsx` Erweiterung, z. B. `files.fsx`in Ihre F# Entwicklungsumgebung.
 
 Verwenden Sie als Nächstes eine [-Paket-Manager](package-management.md) wie z. B. [Paket-Abhängigkeits](https://fsprojects.github.io/Paket/) oder [NuGet](https://www.nuget.org/) zum Installieren der `WindowsAzure.Storage` Paket und Verweis `WindowsAzure.Storage.dll` in Ihrem Skript mithilfe einer `#r`Richtlinie.
 

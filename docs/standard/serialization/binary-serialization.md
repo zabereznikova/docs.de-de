@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: 820a43e3c766c7abc47e21ad9d8c6e9d7a1d749e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 81d79ec0add7f8b73cced5c64a470fa9d699063c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269834"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972403"
 ---
 # <a name="binary-serialization"></a>Binäre Serialisierung
 
@@ -372,8 +372,8 @@ Beschreibt den XML-Serialisierungsmechanismus, der in der Common Language Runtim
 - [Sicherheit und Serialisierung](../../../docs/framework/misc/security-and-serialization.md)\
 Beschreibt Richtlinien für das Schreiben sicheren Codes, die beim Schreiben von befolgt werden sollten, der Serialisierungen durchführt.
 
-- [Remoteobjekte](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)\
-Beschreibt die verschiedenen Kommunikationsverfahren, die in .NET&#160;Framework für die Remotekommunikation zur Verfügung stehen.
+- [.NET remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+Beschreibt die verschiedenen Kommunikationsverfahren, die in .NET&amp;#160;Framework für die Remotekommunikation zur Verfügung stehen.
 
-- [XML-Webdienste mit ASP.NET und XML-Webdienstclients erstellte](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)\
+- [XML-Webdienste mit ASP.NET und XML-Webdienstclients erstellte](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 Stellt Themen bereit, die beschreiben und erklären, wie mit ASP.NET erstellte XML-Webdienste programmiert werden.

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: ae6b53db3a2cdcefa2b05d68ed953c5e17b279dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551786"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970297"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Grundlagen der Vererbung (Visual Basic)
 Die `Inherits` -Anweisung verwendet, um eine neue Klasse namens deklariert eine *abgeleitete Klasse*basierend auf einer vorhandenen Klasse, die als bezeichnet ein *Basisklasse*. Abgeleitete Klassen erben, und erweitern können, die Eigenschaften, Methoden, Ereignissen, Felder und Konstanten, die in der Basisklasse definiert. Der folgende Abschnitt beschreibt einige der Regeln für die Vererbung, und die Modifizierer, die Sie verwenden können, so ändern Sie die Möglichkeit Klassen erben oder geerbt werden:  
@@ -62,14 +62,14 @@ Die `Inherits` -Anweisung verwendet, um eine neue Klasse namens deklariert eine 
   
  Das folgende Beispiel definiert eine Basisklasse, `Payroll,` und einer abgeleiteten Klasse `BonusPayroll`, die eine geerbte Methode, überschreibt `PayEmployee`. Eine Prozedur `RunPayroll`, erstellt und übergibt dann eine `Payroll` Objekt und ein `BonusPayroll` Objekt, das eine Funktion, `Pay`, ausführt, die `PayEmployee` -Methode der beiden Objekte.  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
+ [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]  
   
 ## <a name="the-mybase-keyword"></a>The MyBase Keyword  
  Die `MyBase` -Schlüsselwort verhält sich wie eine Objektvariable, die auf die Basisklasse der aktuellen Instanz einer Klasse verweist. `MyBase` Member der Basisklasse zuzugreifen, die überschrieben werden, oder in einer abgeleiteten Klasse schattiert wird häufig verwendet werden. Insbesondere `MyBase.New` wird verwendet, um explizit einen Basisklassenkonstruktor aus Konstruktor einer abgeleiteten Klasse aufrufen.  
   
  Nehmen wir beispielsweise an, dass Sie eine abgeleitete Klasse entwerfen, die eine Methode, die von der Basisklasse geerbt überschreibt. Die überschriebene Methode kann die Methode in der Basisklasse aufrufen und den zurückgegebenen Wert ändern, wie im folgenden Codefragment gezeigt:  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
+ [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]  
   
  Die folgende Liste beschreibt die Einschränkungen zur Verwendung von `MyBase`:  
   

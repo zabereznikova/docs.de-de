@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: fb116d91ab7da076f2d883be3350a6d4259482ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bc467854e0c1f082a986c1216e971c86d85c994
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499751"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970076"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Exemplarische Vorgehensweise: Implementieren von IEnumerable(Of T) in Visual Basic
 Die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle wird implementiert von Klassen, die eine Sequenz von Werten eines Elements zu einem Zeitpunkt zurückgeben kann. Der Vorteil des Zurückgebens von Daten, die ein Element zu einem Zeitpunkt ist, dass Sie nicht den vollständigen Satz von Daten in den Arbeitsspeicher zu dessen Funktionsweise geladen werden soll. Sie müssen nur genügend Arbeitsspeicher verwenden, um ein einzelnes Element aus den Daten zu laden. Klassen, in denen die `IEnumerable(T)` Schnittstelle kann verwendet werden, mit `For Each` Schleifen oder LINQ-Abfragen.  
@@ -45,17 +45,17 @@ Die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle wird impleme
 
 2. In der Zeile nach `Public Class StreamReaderEnumerable`, geben Sie Folgendes ein, und drücken Sie die EINGABETASTE.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#1](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_1.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#1)]
 
    Visual Basic füllt automatisch die Klasse mit den Elementen, die erforderlich sind die `IEnumerable(Of String)` Schnittstelle.
   
 3. Dieses enumerable-Klasse werden Zeilen aus einer Textdatei zeilenweise zu lesen. Fügen Sie den folgenden Code zur Klasse, um einen öffentlichen Konstruktor verfügbar machen, der einen Dateipfad als Eingabeparameter akzeptiert.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#2](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_2.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#2)]
 
 4. Ihre Implementierung von der <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Methode der `IEnumerable(Of String)` Schnittstelle gibt eine neue Instanz der der `StreamReaderEnumerator` Klasse. Die Implementierung der `GetEnumerator` -Methode der der `IEnumerable` Schnittstelle vorgenommen werden kann `Private`, da Sie nur Member verfügbar machen müssen die `IEnumerable(Of String)` Schnittstelle. Ersetzen Sie den Code, der für Visual Basic generiert die `GetEnumerator` Methoden mit den folgenden Code.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#3](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_3.vb)]  
+     [!code-vb[VbVbalrIteratorWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#3)]  
   
 **Fügen Sie den Code zum Implementieren der IEnumerator**
 
@@ -63,35 +63,35 @@ Die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle wird impleme
 
 2. In der Zeile nach `Public Class StreamReaderEnumerator`, geben Sie Folgendes ein, und drücken Sie die EINGABETASTE.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#4](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_4.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#4)]
 
    Visual Basic füllt automatisch die Klasse mit den Elementen, die erforderlich sind die `IEnumerator(Of String)` Schnittstelle.
 
 3. Enumerator-Klasse wird die Textdatei geöffnet und führt der Datei-e/a, um die Zeilen aus der Datei gelesen. Fügen Sie den folgenden Code der Klasse verfügbar machen einen öffentlichen Konstruktor, der einen Dateipfad als Eingabeparameter akzeptiert, und öffnen Sie die Textdatei zum Lesen.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#5](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_5.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#5)]
 
 4. Die `Current` Eigenschaften für beide die `IEnumerator(Of String)` und `IEnumerator` Schnittstellen zurückgeben des aktuellen Elements aus der Textdatei als eine `String`. Die Implementierung von der `Current` Eigenschaft der `IEnumerator` Schnittstelle erfolgen kann `Private`, da Sie nur Member verfügbar machen müssen die `IEnumerator(Of String)` Schnittstelle. Ersetzen Sie den Code, der für Visual Basic generiert die `Current` Eigenschaften mit den folgenden Code.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#6](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_6.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#6)]
 
 5. Die `MoveNext` Methode der `IEnumerator` Schnittstelle navigiert zum nächsten Element in der Textdatei, und aktualisiert den Wert, der von zurückgegeben wird das `Current` Eigenschaft. Wenn es keine weiteren Elemente zu lesen ist, sind die `MoveNext` Methodenrückgabe `False`; andernfalls der `MoveNext` Methodenrückgabe `True`. Fügen Sie der `MoveNext` -Methode folgenden Code hinzu.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#7](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_7.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#7)]
 
 6. Die `Reset` Methode der `IEnumerator` Schnittstelle weist den Iterator auf den Anfang der Textdatei verweisen und löscht den aktuellen Elementwert. Fügen Sie der `Reset` -Methode folgenden Code hinzu.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#8](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_8.vb)]
+     [!code-vb[VbVbalrIteratorWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#8)]
 
 7. Die `Dispose` Methode der `IEnumerator` Schnittstelle garantiert, dass alle nicht verwaltete Ressourcen freigegeben werden, bevor der Iterator zerstört wird. Das Dateihandle, mit dem die `StreamReader` -Objekt ist eine nicht verwaltete Ressource und muss geschlossen werden, bevor die Iteratorinstanz zerstört wird. Ersetzen Sie den Code, der für Visual Basic generiert die `Dispose` Methode durch den folgenden Code.
 
-   [!code-vb[VbVbalrIteratorWalkthrough#9](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_9.vb)] 
+     [!code-vb[VbVbalrIteratorWalkthrough#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/StreamReaderIterator.vb#9)] 
   
 ## <a name="using-the-sample-iterator"></a>Mithilfe des Beispieliterators
 
  Können Sie in Ihrem Code zusammen mit Steuerungsstrukturen, die ein Objekt, das implementiert, erfordern eine enumerable-Klasse `IEnumerable`, z. B. eine `For Next` Schleife oder einer LINQ-Abfrage. Das folgende Beispiel zeigt die `StreamReaderEnumerable` in einer LINQ-Abfrage.  
   
- [!code-vb[VbVbalrIteratorWalkthrough#10](../../../../visual-basic/programming-guide/language-features/control-flow/codesnippet/VisualBasic/walkthrough-implementing-ienumerable-of-t_10.vb)]  
+ [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

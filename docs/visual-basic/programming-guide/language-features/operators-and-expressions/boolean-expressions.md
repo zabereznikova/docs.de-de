@@ -14,22 +14,22 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: a86df2734d315e5fed0784b0394bb305b15562a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562751"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965539"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolesche Ausdrücke (Visual Basic)
 Ein *booleschen Ausdruck* ist ein Ausdruck, der auf einen Wert ergibt die [Boolean-Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` oder `False`. `Boolean` Ausdrücke können verschiedene Formen annehmen. Die einfachste Form des direkten Zeichenfolgenvergleichs den Wert der ist eine `Boolean` Variable eine `Boolean` Literal, wie im folgenden Beispiel gezeigt.  
   
- [!code-vb[VbVbalrOperators#87](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_1.vb)]  
+ [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
 ## <a name="two-meanings-of-the--operator"></a>Zwei Bedeutungen, die von den =-Operator  
  Beachten Sie, dass die zuweisungsanweisung `newCustomer = True` sieht genauso aus wie des Ausdrucks im vorherigen Beispiel, aber es führt eine andere Funktion und wird anders verwendet werden kann. Im vorherigen Beispiel, den Ausdruck `newCustomer = True` stellt einen booleschen Wert, und die `=` anmelden werden als Vergleichsoperator interpretiert. In einer eigenständigen Anweisung die `=` anmelden, wird als Zuweisungsoperator interpretiert, und weist den Wert auf der rechten Seite auf die Variable auf der linken Seite. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#88](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_2.vb)]  
+ [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
  Weitere Informationen finden Sie unter [Wertvergleiche](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) und [Anweisungen](../../../../visual-basic/language-reference/statements/index.md).  
   
@@ -50,7 +50,7 @@ Ein *booleschen Ausdruck* ist ein Ausdruck, der auf einen Wert ergibt die [Boole
 ## <a name="short-circuiting-operators"></a>Kurzschlussoperatoren  
  Die logischen Operatoren `AndAlso` und `OrElse` Verhalten sich genannt *kurzschließen*. Ein Kurzschlussoperator wertet zuerst den linken Operand aus. Wenn der linke Operand den Wert des gesamten Ausdrucks bestimmt wird, wird die programmausführung fortgesetzt, ohne den rechten Ausdruck auszuwerten. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#89](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_3.vb)]  
+ [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
  Im vorherigen Beispiel wertet der Operator der linken Ausdruck `45 < 12`. Da der linke Ausdruck ergibt `False`, muss der gesamte logische Ausdruck ergeben `False`. Ausführung des Programms überspringt daher die Ausführung des Codes innerhalb der `If` -Block ohne dem rechten Ausdruck `testFunction(3)`. In diesem Beispiel wird nicht aufgerufen. `testFunction()` , da der linke Ausdruck den gesamten Ausdruck fälscht.  
   
@@ -59,7 +59,7 @@ Ein *booleschen Ausdruck* ist ein Ausdruck, der auf einen Wert ergibt die [Boole
 ### <a name="comparison-with-non-short-circuiting-operators"></a>Vergleich mit nicht kurzschließen Operatoren  
  Im Gegensatz dazu, beide Seiten des logischen Operators ausgewertet werden bei der die logischen Operatoren `And` und `Or` verwendet werden. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#90](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/boolean-expressions_4.vb)]  
+ [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
  Im vorherigen Beispiel wird `testFunction()` , obwohl der linke Ausdruck ergibt `False`.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-ms.openlocfilehash: 7c5f6fa4015c90802cdd48d3a70f06f56c926c7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ecb0b4a8fc154a179bc5d9d74ce9821cf4fea75
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662282"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56982166"
 ---
 # <a name="parameter-list-visual-basic"></a>Parameterliste (Visual Basic)
 Gibt die Parameter, die eine Prozedur erwartet wird, wenn sie aufgerufen wird. Mehrere Parameter werden durch Kommas getrennt. Folgendes ist die Syntax für einen Parameter.  
@@ -84,7 +84,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt eine `Function` Prozedur, die zwei Parameter definiert.  
   
- [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Runtime.InteropServices.DllImportAttribute>

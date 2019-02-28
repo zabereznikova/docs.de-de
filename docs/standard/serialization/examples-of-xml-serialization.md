@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: 0c5731fcff3191c192a5e7884c4d5a9566400bc5
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: fd01842bdb3a3b168c00e0366dd6fe4c2daf7121
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204807"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974366"
 ---
 # <a name="examples-of-xml-serialization"></a>Beispiele für die XML-Serialisierung
 Die XML-Serialisierung kann verschiedenste Formen nehmen, von einfach bis zu komplex. Sie können beispielsweise, wie unter [Introducing XML Serialization (Einführung in die XML-Serialisierung)](../../../docs/standard/serialization/introducing-xml-serialization.md) beschrieben, eine Klasse serialisieren, die nur aus öffentlichen Feldern und Eigenschaften besteht. Die folgenden Codebeispiele beziehen sich auf verschiedene komplexe Szenarios, einschließlich der Verwendung der XML-Serialisierung zur Generierung eines XML-Streams, der einem bestimmten XSD-Dokument (XML Schema) entspricht.  
@@ -119,7 +119,7 @@ private void SerializeNode(string filename){
 ```  
   
 ## <a name="serializing-a-class-that-contains-a-field-returning-a-complex-object"></a>Serialisieren einer Klasse, die ein Feld enthält, das ein komplexes Objekt zurückgibt  
- Wenn eine Eigenschaft oder ein Feld ein komplexes Objekt zurückgibt (z.B. ein Array oder eine Klasseninstanz), wird dieses von [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx) in ein Element konvertiert, das innerhalb des XML-Hauptdokuments geschachtelt ist. Die erste Klasse im folgenden Codebeispiel gibt beispielsweise eine Instanz der zweiten Klasse zurück.  
+ Wenn eine Eigenschaft oder ein Feld ein komplexes Objekt zurückgibt (z. B. ein Array oder eine Klasseninstanz), wird dieses von <xref:System.Xml.Serialization.XmlSerializer> in ein Element konvertiert, das innerhalb des XML-Hauptdokuments geschachtelt ist. Die erste Klasse im folgenden Codebeispiel gibt beispielsweise eine Instanz der zweiten Klasse zurück.  
   
 ```vb  
 Public Class PurchaseOrder  
@@ -767,6 +767,6 @@ public class Test
 - [Einführung in die XML-Serialisierung](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Steuern der XML-Serialisierung mit Attributen](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
 - [Attribute zur Steuerung der XML-Serialisierung](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)
-- [XmlSerializer-Klasse](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)
+- [XmlSerializer-Klasse](xref:System.Xml.Serialization.XmlSerializer)
 - [Vorgehensweise: Serialisieren eines Objekts](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [Vorgehensweise: Deserialisieren eines Objekts](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

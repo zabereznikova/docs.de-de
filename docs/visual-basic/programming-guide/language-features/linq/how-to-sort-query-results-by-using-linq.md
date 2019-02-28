@@ -11,12 +11,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 07a4584d-9fd8-4a1d-b7d9-ccf2efa5c84e
-ms.openlocfilehash: 04e8f6eaa06577ac556dbed89088f6268aae81df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 937206c5efeb4767f0c1f3d5a98f58314da105d4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672772"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967788"
 ---
 # <a name="how-to-sort-query-results-by-using-linq-visual-basic"></a>Vorgehensweise: Sortieren von Abfrageergebnissen unter Verwendung von LINQ (Visual Basic)
 Language Integrated Query (LINQ) erleichtert den Zugriff auf Informationen und Ausführen von Abfragen.  
@@ -69,7 +69,7 @@ Language Integrated Query (LINQ) erleichtert den Zugriff auf Informationen und A
   
      Fügen Sie den folgenden Code der `Load` Ereignis, um die Tabellen zu Abfragen, die als Eigenschaften des Datenkontexts verfügbar gemacht werden und die Ergebnisse sortieren. Durch die Anzahl der Bestellungen für Kunden, in absteigender Reihenfolge sortiert die Abfrage die Ergebnisse auf. Kunden, die die gleiche von Bestellungen Anzahl sind nach Unternehmensnamen in aufsteigender Reihenfolge (Standard) sortiert.  
   
-     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-sort-query-results-by-using-linq_1.vb)]  
+     [!code-vb[VbLINQToSQLHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form4.vb#10)]  
   
 4.  Drücken Sie F5, um das Projekt ausführen und die Ergebnisse anzuzeigen.  
   
