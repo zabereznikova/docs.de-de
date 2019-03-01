@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19edbebb4dcc4ad48c28ee427084510f8d743c5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 060bc53efa175314e00f487776c43124c39f33c0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637829"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970973"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Vorgehensweise: Verschlüsseln von XML-Elementen mit x. 509-Zertifikaten
 Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden, um ein Element in einem XML-Dokument zu verschlüsseln.  XML-Verschlüsselung ist ein gängiges Verfahren zum Austauschen oder Speichern von verschlüsselten XML-Daten, ohne sich Gedanken machen zu müssen, dass die Daten einfach gelesen werden können.  Weitere Informationen zu XML-Verschlüsselungsstandard, finden Sie die Spezifikation des World Wide Web Consortium (W3C) XML-Verschlüsselung im Pfad <https://www.w3.org/TR/xmldsig-core/>.  
   
  Sie können die XML-Verschlüsselung verwenden, um jedes XML-Element oder XML-Dokument durch ein <`EncryptedData`>-Element zu ersetzen, das die verschlüsselten XML-Daten enthält. Das <`EncryptedData`>-Element kann auch Unterelemente mit Informationen über die bei der Verschlüsselung verwendeten Schlüssel und Prozesse enthalten.  XML-Verschlüsselung unterstützt, dass ein Dokument mehrere verschlüsselte Elemente enthält und dass ein Element mehrfach verschlüsselt ist.  Das Codebeispiel in dieser Vorgehensweise veranschaulicht das Erstellen eines <`EncryptedData`>-Elements zusammen mit weiteren Unterelementen, die Sie später bei der Entschlüsselung verwenden können.  
   
- In diesem Beispiel wird ein XML-Element mithilfe zweier Schlüssel verschlüsselt.  Es wird ein X.509-Testzertifikat mithilfe von [Makecert.exe (Certificate Creation-Tool)](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx) generiert, und das Zertifikat wird in einem Zertifikatspeicher gespeichert.  Im Beispiel wird das Zertifikat dann programmgesteuert abgerufen und verwendet, um ein XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A>-Methode zu verschlüsseln.  Die <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A>-Methode erstellt intern einen separaten Sitzungsschlüssel und verwendet diesen, um das XML-Dokument zu verschlüsseln. Diese Methode verschlüsselt den Sitzungsschlüssel und speichert ihn mit dem verschlüsselten XML-Dokument in einem neuen <`EncryptedData`>-Element.  
+ In diesem Beispiel wird ein XML-Element mithilfe zweier Schlüssel verschlüsselt. Es wird ein X.509-Testzertifikat mithilfe von [Makecert.exe (Certificate Creation-Tool)](/windows/desktop/SecCrypto/makecert) generiert, und das Zertifikat wird in einem Zertifikatspeicher gespeichert. Im Beispiel wird das Zertifikat dann programmgesteuert abgerufen und verwendet, um ein XML-Element mithilfe der <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A>-Methode zu verschlüsseln. Die <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A>-Methode erstellt intern einen separaten Sitzungsschlüssel und verwendet diesen, um das XML-Dokument zu verschlüsseln. Diese Methode verschlüsselt den Sitzungsschlüssel und speichert ihn mit dem verschlüsselten XML-Dokument in einem neuen <`EncryptedData`>-Element.  
   
  Um das XML-Element zu entschlüsseln, rufen Sie einfach die <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>-Methode auf, die automatisch das X.509-Zertifikat aus dem Speicher abruft und die notwendige Entschlüsselung vornimmt.  Weitere Informationen dazu, wie Sie ein XML-Element zu entschlüsseln, die mit dieser Vorgehensweise verschlüsselt wurde, finden Sie unter [Vorgehensweise: Entschlüsseln von XML-Elementen mit x. 509-Zertifikaten](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md).  
   
@@ -36,7 +36,7 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>So verschlüsseln Sie ein XML-Element mit einem X.509-Zertifikat  
   
-1.  Verwenden Sie [Makecert.exe (Certificate Creation-Tool)](https://msdn.microsoft.com/library/windows/desktop/aa386968.aspx), um ein X.509-Testzertifikat zu generieren und dieses Zertifikat im lokalen Benutzerspeicher abzulegen.  Sie müssen einen exportierbaren Austauschschlüssel generieren. Führen Sie den folgenden Befehl aus:  
+1.  Verwenden Sie [Makecert.exe (Certificate Creation-Tool)](/windows/desktop/SecCrypto/makecert), um ein X.509-Testzertifikat zu generieren und dieses Zertifikat im lokalen Benutzerspeicher abzulegen.  Sie müssen einen exportierbaren Austauschschlüssel generieren. Führen Sie den folgenden Befehl aus:  
   
     ```  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my  

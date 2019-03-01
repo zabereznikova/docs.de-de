@@ -2,12 +2,12 @@
 title: Slices (F#)
 description: Erfahren Sie, wie Sie mit Slices für bestehende F# -Datentypen und wie Sie Ihre eigenen Slices für andere Datentypen zu definieren.
 ms.date: 01/22/2019
-ms.openlocfilehash: c204c6cbb195b33998b92dd940313a132ecc321d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746707"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970107"
 ---
 # <a name="slices"></a>Slices
 
@@ -95,7 +95,7 @@ Die F# Core-Bibliothek definiert keine `GetSlice`für 3D Arrays. Wenn Sie diese 
 
 Die F# Segmente für einen begrenzten Satz von Typen definiert. Wenn Sie die Slices für mehr Datentypen definieren möchten, können Sie entweder in die Typdefinition selbst oder in einer typerweiterung dafür.
 
-Beispielsweise sieht wie Sie die Slices für definieren können die <xref:System.ArraySegment`1> Klasse, um die einfache datenbearbeitung zu ermöglichen:
+Beispielsweise sieht wie Sie die Slices für definieren können die <xref:System.ArraySegment%601> Klasse, um die einfache datenbearbeitung zu ermöglichen:
 
 ```fsharp
 open System
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Um Boxing zu vermeiden, sollte es nötig inlining verwenden
 
-Wenn Sie Segmente für einen Typ, die tatsächlich eine Struktur ist definieren, wird empfohlen, die Sie `inline` der `GetSlice` Member. Die F# Compiler optimiert die optionalen Argumente, die jegliche Heapzuweisungen durch das Aufteilen in Slices zu vermeiden. Dies ist sehr wichtig für das Segmentieren von Konstrukten wie z. B. <xref:System.Span`1> , die nicht zugeordnet werden können werden auf dem Heap.
+Wenn Sie Segmente für einen Typ, die tatsächlich eine Struktur ist definieren, wird empfohlen, die Sie `inline` der `GetSlice` Member. Die F# Compiler optimiert die optionalen Argumente, die jegliche Heapzuweisungen durch das Aufteilen in Slices zu vermeiden. Dies ist sehr wichtig für das Segmentieren von Konstrukten wie z. B. <xref:System.Span%601> , die nicht auf dem Heap zugeordnet werden können.
 
 ```fsharp
 open System

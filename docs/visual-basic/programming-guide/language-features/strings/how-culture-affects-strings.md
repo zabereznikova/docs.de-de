@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 9f796583e1e38c31960868b1e6f20288587fa076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543447"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980944"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Auswirkungen der Kultur auf Zeichenfolgen in Visual Basic
 Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um zeichenfolgenkonvertierungen und vergleichen zu können.  
@@ -44,7 +44,7 @@ Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um 
   
  Um ein Datum in der Kultur Zeichenfolge zu konvertieren, übergeben die <xref:System.Globalization.CultureInfo> Objekt, des Date-Objekts <xref:System.DateTime.ToString%28System.IFormatProvider%29> Methode. Das folgende Codebeispiel zeigt "07/04/2005 00:00:00", unabhängig von kultureinstellungen der Anwendung.  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#1)]  
   
 > [!NOTE]
 >  Datumsliterale werden immer entsprechend der Kultur Englisch interpretiert.  
@@ -60,11 +60,11 @@ Diese Hilfeseite beschreibt, wie Visual Basic kulturinformationen verwendet, um 
   
  Die `StrComp` Funktionsergebnis ist eine ganze Zahl, die die Beziehung zwischen den zwei verglichenen Zeichenfolgen basierend auf der Sortierreihenfolge angibt. Ein positiver Wert für das Ergebnis gibt an, dass die erste Zeichenfolge größer als die zweite Zeichenfolge ist. Ein negatives Ergebnis gibt an, die erste Zeichenfolge kleiner ist, und 0 (null) gibt an, die Zeichenfolgen auf Gleichheit.  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
  Können Sie auch die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Partner die `StrComp` -Funktion, die <xref:System.String.Compare%2A?displayProperty=nameWithType> Methode. Dies ist eine statische, überladene Methode der Basisklasse String-Klasse. Im folgende Beispiel wird veranschaulicht, wie diese Methode verwendet wird:  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   
  Für eine genauere Steuerung, wie die Vergleiche durchgeführt werden, können Sie zusätzliche Überladungen der <xref:System.String.Compare%2A> Methode. Mit der <xref:System.String.Compare%2A?displayProperty=nameWithType> -Methode, die Sie verwenden die `comparisonType` Argument, um welche Art von Vergleich so um, anzugeben.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: c3639070ddbb3c0eb41707d5cc5fbc7a46555a65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c1087f1ea260b61a51126f42703a32075884e54
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666578"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971285"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Exemplarische Vorgehensweise: Schreiben von Abfragen in Visual Basic
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen von Visual Basic verwenden können, schreiben [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] -Abfrageausdrücken. Die exemplarische Vorgehensweise veranschaulicht das Erstellen von Abfragen in der Liste der Student-Objekten, wie Sie die Abfragen ausführen und zum Ändern. Die Abfragen enthalten mehrere Funktionen, einschließlich lokaler Typrückschluss, Objektinitialisierer und anonyme Typen.  
@@ -56,11 +56,11 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen
   
 1.  Suchen Sie nach der Stelle in der `Main` Methode des Projekts, das wie folgt markiert ist:  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#1)]  
   
      Kopieren Sie den folgenden Code ein, und fügen Sie ihn.  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#2)]  
   
 2.  Führen Sie den Mauszeiger über `studentQuery` in Ihrem Code, um sicherzustellen, dass der Compiler zugewiesene Typ `IEnumerable(Of Student)`.  
   
@@ -71,7 +71,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen
   
 1.  Fügen Sie die folgenden `For Each` Schleife unterhalb der Abfrage in Ihrem Projekt.  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#3)]  
   
 2.  Führen Sie den Mauszeiger über die Schleifensteuerungsvariable `studentRecord` Datentyp angezeigt. Der Typ des `studentRecord` wird davon ausgegangen werden `Student`, da `studentQuery` gibt eine Auflistung von `Student` Instanzen.  
   
@@ -102,7 +102,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen
   
 1.  Fügen Sie Code in diesem Abschnitt, um einen lokalen Bezeichner im Abfrageausdruck einzuführen. Der lokale Bezeichner, wird ein Zwischenergebnis enthalten. Im folgenden Beispiel `name` ist ein Bezeichner, der eine Verkettung des Studenten enthält den vor- und Nachnamen. Lokaler Bezeichner kann der Einfachheit halber verwendet werden, oder sie können die Leistung verbessern, durch Speichern der Ergebnisse eines Ausdrucks, die andernfalls mehrfach berechnet werden sollen.  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#4)]  
   
 2.  Erstellen Sie und führen Sie die Anwendung durch Drücken von STRG + F5. Beachten Sie die Ergebnisse im Konsolenfenster angezeigt.  
   
@@ -110,7 +110,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen
   
 1.  Fügen Sie der Abfrage und `For Each` Schleife in diesem Abschnitt zum Erstellen einer Abfrage, die eine Sequenz erzeugt, deren Elemente aus den Elementen in der Quelle unterscheiden. Im folgenden Beispiel wird die Quelle eine Auflistung von `Student` Objekte, jedoch nur ein Member jedes Objekt wird zurückgegeben: der erste Name des Studenten, deren Nachname Garcia. Da `currentStudent.First` ist eine Zeichenfolge, die den Datentyp der Sequenz von zurückgegebenen `studentQuery3` ist `IEnumerable(Of String)`, eine Sequenz von Zeichenfolgen. Wie in früheren Beispielen, geben Sie die Zuweisung von Daten für `studentQuery3` bleibt für den Compiler, mithilfe von lokalen Typrückschluss zu ermitteln.  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#5)]  
   
 2.  Führen Sie den Mauszeiger über `studentQuery3` in Ihrem Code, um sicherzustellen, dass der zugewiesene Typ `IEnumerable(Of String)`.  
   
@@ -122,14 +122,14 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie Sie Funktionen
   
      Das folgende Beispiel erstellt eine Abfrage, die der Name und der Rang des Vorgesetzten, dessen Rang academic zwischen 1 und 10, in der Reihenfolge der akademischen Rang wird, zurückgegeben. In diesem Beispiel ist der Typ des `studentQuery4` muss abgeleitet werden, da die `Select` -Klausel eine Instanz eines anonymen Typs zurückgibt, und ein anonymer Typ hat keinen verwendbaren Namen.  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#6)]  
   
 2.  Erstellen Sie und führen Sie die Anwendung durch Drücken von STRG + F5. Beachten Sie die Ergebnisse im Konsolenfenster angezeigt.  
   
 ## <a name="additional-examples"></a>Weitere Beispiele  
  Nun, da Sie die Grundlagen verstanden haben, im folgenden finden eine Liste zusätzlicher Beispiele veranschaulichen die Flexibilität und Leistungsfähigkeit von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfragen. Jedes Beispiel ist eine kurze Beschreibung des Einsatzzwecks vorangestellt. Der Mauszeiger auf die Abfrageergebnisvariable für jede Abfrage den abgeleiteten Typ angezeigt. Verwenden einer `For Each` Schleife, um die Ergebnisse zu erzielen.  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]  
   
 ## <a name="additional-information"></a>Zusätzliche Informationen  
  Nachdem Sie mit den grundlegenden Konzepten der Arbeit mit Abfragen vertraut sind, sind Sie bereit sind, lesen Sie die Dokumentation und Beispiele für den jeweiligen Typ der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] -Anbieter, der Sie interessiert sind:  

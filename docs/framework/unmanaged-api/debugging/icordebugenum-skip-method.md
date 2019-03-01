@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a886d8ab8f2d59bb9c9b0b3ff00fd89f7c931ff8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb651aa394022182b6730d57942199f570508436
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692820"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965900"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip-Methode
 Verschiebt den Cursor vorwärts in der Enumeration, um die angegebene Anzahl von Elementen.  
@@ -49,4 +49,4 @@ HRESULT Skip (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [ICorDebugEnum-Schnittstelle1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+- [ICorDebugEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

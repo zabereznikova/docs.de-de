@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30828
 ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
-ms.openlocfilehash: bdf339e0d91106a6d6527e085608a06b0439951c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b3fb3f208f3396f454388ec0c10406815fa957d8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274082"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974795"
 ---
 # <a name="as-any-is-not-supported-in-declare-statements"></a>As Any wird in Declare-Anweisungen nicht unterstützt.
 Die `Any` Datentyp wurde verwendet, mit `Declare` Anweisungen in Visual Basic 6.0 und früheren Versionen, um die Verwendung von Argumenten zu ermöglichen, die beliebige Datentypen enthalten könnte. Überladen zulässt, jedoch von Visual Basic unterstützt und löst so die `Any` -Datentyp ab.  
@@ -23,11 +23,11 @@ Die `Any` Datentyp wurde verwendet, mit `Declare` Anweisungen in Visual Basic 6.
   
 1.  Deklarieren Sie die Parameter des angegebenen Typs, die Sie verwenden möchten; Zum Beispiel.  
   
-     [!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_1.vb)]  
+     [!code-vb[VbVbalrStatements#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class5.vb#95)]  
   
 2.  Verwenden der <xref:System.Runtime.InteropServices.MarshalAsAttribute> Attribut an `As Any` beim `Void*` wird von der aufgerufenen Prozedur erwartet.  
   
-     [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_2.vb)]  
+     [!code-vb[VbVbalrStatements#96](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class5.vb#96)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>

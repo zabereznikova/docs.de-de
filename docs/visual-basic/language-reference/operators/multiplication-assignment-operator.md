@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '*= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 96c86509-6eb8-4682-8226-3852e049376f
-ms.openlocfilehash: 3aa1d563b9657d4e80425b8c2d29e069ca2ef06a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d672ac147a4d7b2c21f4fcb7ee6cdf91b8b4924b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601882"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965331"
 ---
 # <a name="-operator-visual-basic"></a>*=-Operator (Visual Basic)
 Multipliziert den Wert einer Variablen oder die Eigenschaft durch den Wert eines Ausdrucks und weist das Ergebnis der Variablen oder Eigenschaft.  
@@ -44,7 +44,7 @@ variableorproperty *= expression
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `*=` Operator, um eine Multiplizieren `Integer` Variable, indem Sie das zweite und das Ergebnis der ersten Variablen zuzuweisen.  
   
- [!code-vb[VbVbalrOperators#5](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [*-Operator](../../../visual-basic/language-reference/operators/multiplication-operator.md)

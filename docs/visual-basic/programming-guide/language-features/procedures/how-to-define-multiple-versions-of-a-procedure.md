@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: a3f4657b22fe0a9186e339d00cd9341e55405244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528874"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980775"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Vorgehensweise: Definieren Sie mehrerer Versionen einer Prozedur (Visual Basic)
 Sie können eine Prozedur definieren, in mehreren Versionen von *überladen* , es mit dem gleichen Namen, aber einer anderen Parameterliste für die einzelnen Versionen. Der Zweck des Überladens werden mehrere eng verwandte Versionen einer Prozedur zu definieren, ohne dass sie anhand des Namens zu unterscheiden.  
@@ -33,7 +33,7 @@ Sie können eine Prozedur definieren, in mehreren Versionen von *überladen* , e
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel definiert eine `Sub` Prozedur einer Buchung eines Kunden Beträge. Er verwendet den `Overloads` Schlüsselwort, um zwei Versionen der Prozedur zu definieren, die der Kunde anhand des Namens und der andere durch die Nummer eines Kontos annimmt.  
   
- [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
   
  Der aufrufende Code erhalten die Kunden-ID als ein `String` oder `Integer`, und klicken Sie dann die gleiche aufrufende Anweisung in beiden Fällen verwenden.  
   

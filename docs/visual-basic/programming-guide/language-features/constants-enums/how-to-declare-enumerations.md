@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: d309e4fb09bc0b8af87422bc84427528deb29e7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2654860269bc57cf6aed814760414c6ccb6383da
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710312"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968763"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Vorgehensweise: Deklarieren einer Enumeration (Visual Basic)
 Sie erstellen eine Enumeration mit den `Enum` Anweisung im Abschnitt zu Deklarationen einer Klasse oder das Modul. Sie können eine Enumeration innerhalb einer Methode nicht deklarieren. Verwenden Sie zum Angeben der entsprechenden Zugriffsebene `Private`, `Protected`, `Friend`, oder `Public`.  
@@ -26,21 +26,21 @@ Sie erstellen eine Enumeration mit den `Enum` Anweisung im Abschnitt zu Deklarat
   
 1.  Schreiben Sie eine Deklaration, die eine Ebene, enthält die `Enum` -Schlüsselwort, und einen gültigen Namen, wie in den folgenden Beispielen wird jeweils ein anderes deklariert `Enum`.  
   
-     [!code-vb[VbEnumsTask#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_1.vb)]  
+     [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
 2.  Definieren der Konstanten in der Enumeration. Standardmäßig wird das erste Konstante in einer Enumeration mit initialisiert `0`, und alle nachfolgenden Konstanten werden auf einen Wert von eins mehr als die vorherige Konstante initialisiert. Z. B. die folgende Enumeration `Days`, bietet eine Konstante, die mit dem Namen `Sunday` mit dem Wert `0`, eine Konstante, die mit dem Namen `Monday` mit dem Wert `1`, eine Konstante, die mit dem Namen `Tuesday` mit dem Wert des `2`und so weiter.  
   
-     [!code-vb[VbEnumsTask#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_2.vb)]  
+     [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
 3.  Sie können die Konstanten in einer Enumeration mithilfe einer zuweisungsanweisung explizit Werte zuweisen. Sie können einen ganzzahligen Wert, der auch negative Zahlen zuweisen. Beispielsweise sollten Sie die Konstanten Werte, die weniger als 0 (null), um fehlerbedingungen darzustellen. In der folgenden Enumeration, die Konstante `Invalid` wird der Wert explizit zugewiesen `–1`, und die Konstante `Sunday` wird der Wert zugewiesen `0`. Da es sich um das erste Konstante in der Enumeration ist `Saturday` wird auch auf den Wert initialisiert `0`. Der Wert des `Monday` ist `1` (eins mehr als der Wert des `Sunday`); der Wert des `Tuesday` ist `2`und so weiter.  
   
-     [!code-vb[VbEnumsTask#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_3.vb)]  
+     [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
 ### <a name="to-declare-an-enumeration-as-an-explicit-type"></a>Um eine Enumeration als einen expliziten Typ zu deklarieren.  
   
 -   Geben Sie den Typ der Enumeration, mit der `As` -Klausel, wie im folgenden Beispiel gezeigt.  
   
-     [!code-vb[VbEnumsTask#6](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-enumerations_4.vb)]  
+     [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Enumerationen und Namensqualifikation](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)

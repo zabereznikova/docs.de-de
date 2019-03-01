@@ -2,11 +2,11 @@
 title: AssemblyAttributesGoHereS
 ms.date: 03/30/2017
 api_name:
-- AssemblyAttributesGoHereS
+- System.Runtime.CompilerServices.AssemblyAttributesGoHereS
 api_location:
-- alink.dll
+- mscorlib.dll
 api_type:
-- COM
+- Assembly
 f1_keywords:
 - AssemblyAttributesGoHereS
 helpviewer_keywords:
@@ -17,33 +17,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3506462aaf8d040126d979801460772b3cd47f9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74447f52c75ae22e513c6f07950630d37bad191a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706283"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969829"
 ---
 # <a name="assemblyattributesgoheres"></a>AssemblyAttributesGoHereS
-Wird von ALink als Platzhalter verwendet, um Informationen über benutzerdefinierte Attribute zu speichern.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-AssemblyAttributesGoHereS  
-```  
-  
-## <a name="remarks"></a>Hinweise  
- Verweise auf diesen Typ können in NETMODULE-Dateien eingebettet sein, deren Quellen benutzerdefinierte Assemblyattribute enthalten. Beim Erstellen eines Assemblymanifests aus mindestens einer NETMODULE-Datei, die Verweise auf diese Typen enthält, verwendet ALink die zu diesen Verweisen gehörenden Informationen, um echte benutzerdefinierte Attribute auszugeben. Daher wird dieser Typ nie instanziiert, und Verweise auf diesen Typ werden nur als Teil des Buildprozesses verwendet und erfüllen in der endgültigen Assembly keinen Zweck.  
-  
- Verweise auf diesen Typ geben benutzerdefinierte Attribute an, die sicherheitsrelevant sind und nicht mehrfach verwendet werden.  
-  
- Diese Typen sind in .NET Framework mit "intern" markiert und befinden sich in <xref:System.Runtime.CompilerServices>.  
-  
-## <a name="requirements"></a>Anforderungen  
- mscorlib.dll  
-  
+
+Wird von ALink als Platzhalter verwendet, um Informationen über benutzerdefinierte Attribute zu speichern.
+
+## <a name="syntax"></a>Syntax
+
+```
+internal sealed class AssemblyAttributesGoHereS
+```
+
+## <a name="remarks"></a>Hinweise
+
+Verweise auf diesen Typ können in NETMODULE-Dateien eingebettet sein, deren Quellen benutzerdefinierte Assemblyattribute enthalten. Beim Erstellen eines Assemblymanifests aus mindestens einer NETMODULE-Datei, die Verweise auf diese Typen enthält, verwendet ALink die zu diesen Verweisen gehörenden Informationen, um echte benutzerdefinierte Attribute auszugeben. Daher wird dieser Typ nie instanziiert, und Verweise auf diesen Typ werden nur als Teil des Buildprozesses verwendet und erfüllen in der endgültigen Assembly keinen Zweck.
+
+Verweise auf diesen Typ geben benutzerdefinierte Attribute an, die sicherheitsrelevant sind und nicht mehrfach verwendet werden.
+
+Diese Typen sind "intern" in .NET Framework markiert, und befinden sich in der <xref:System.Runtime.CompilerServices> Namespace.
+
+## <a name="requirements"></a>Anforderungen
+
+mscorlib.dll
+
 ## <a name="see-also"></a>Siehe auch
-- [AssemblyAttributesGoHere](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)
-- [AssemblyAttributesGoHereM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)
-- [AssemblyAttributesGoHereSM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)
+
+- [AssemblyAttributesGoHere](assemblyattributesgohere.md)
+- [AssemblyAttributesGoHereM](assemblyattributesgoherem.md)
+- [AssemblyAttributesGoHereSM](assemblyattributesgoheresm.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4bcc97bc4b95cf425b7753e815c4796d90087ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c88b69f672f58f3f9916ad189f6e560d9f4151a5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721883"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978669"
 ---
 # <a name="icordebugenumreset-method"></a>ICorDebugEnum::Reset-Methode
 Verschiebt den Cursor auf den Anfang der Enumeration.  
@@ -43,4 +43,4 @@ HRESULT Reset ();
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [ICorDebugEnum-Schnittstelle1](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+- [ICorDebugEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

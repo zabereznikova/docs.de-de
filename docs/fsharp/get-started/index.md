@@ -1,15 +1,9 @@
 ---
-title: Erste Schritte mitF#
-description: Weitere Informationen zum Einstieg in die F# Programmiersprache.
+title: 'Erste Schritte mitF#'
+description: 'Weitere Informationen zum Einstieg in die F# Programmiersprache.'
 ms.date: 12/08/2018
-ms.openlocfilehash: df0e98b4d001ceaeca2ebe3d154c6bad57a8a30d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170820"
 ---
-# <a name="get-started-with-f"></a>Erste Schritte mitF# #
+# <a name="get-started-with-f"></a>Erste Schritte mit F#\#
 
 Sie können beginnen, mit F# auf Ihrem Computer oder online.
 

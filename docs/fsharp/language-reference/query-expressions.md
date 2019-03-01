@@ -2,12 +2,12 @@
 title: Abfrageausdrücke
 description: Informationen Sie zu Abfrage-Ausdruck-Unterstützung für LINQ, in der Programmiersprache F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: e4a36305b607f573c29744f50a841be078c8061f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: e3ad2d4ebf09fff17aba80fcb3fc9853ec06af47
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611372"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977976"
 ---
 # <a name="query-expressions"></a>Abfrageausdrücke
 
@@ -511,7 +511,7 @@ Die folgende Tabelle zeigt einige allgemeinen Transact-SQL-Abfragen und deren En
     <th>F#Der Abfrageausdruck ist (Groß-/ Kleinschreibung)</th>
   </tr>
 <tr><td>
-Wählen Sie aus der Tabelle alle Felder ein.</br>
+Wählen Sie aus der Tabelle alle Felder ein.<br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 </code></pre>

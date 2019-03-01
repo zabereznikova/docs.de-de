@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: dd50435b7cbb5d3d25c0e30618e8733b4eddfe91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655074"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968269"
 ---
 # <a name="type-list-visual-basic"></a>Typenliste (Visual Basic)
 Gibt an, die *Typparameter* für eine *generische* Programmierelement. Mehrere Parameter werden durch Kommas getrennt. Es folgt die Syntax für einen Typ-Parameter.  
@@ -80,17 +80,17 @@ Gibt an, die *Typparameter* für eine *generische* Programmierelement. Mehrere P
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die rumpfdefinition einer generischen Wörterbuch-Klasse, einschließlich eine Skelette-Funktion um einen neuen Eintrag zum Wörterbuch hinzuzufügen.  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Beispiel  
  Da `dictionary` ist generisch ist, der Code, der verwendet wird kann eine Vielzahl von Objekten aus erstellen, jeweils die gleiche Funktionalität müssen jedoch, die auf einen anderen Datentyp. Das folgende Beispiel zeigt eine einzige Zeile Code, der erstellt eine `dictionary` Objekt mit `String` Einträge und `Integer` Schlüssel.  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#4)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt die entsprechende rumpfdefinition, die im vorherigen Beispiel generiert.  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)

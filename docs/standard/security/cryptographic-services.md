@@ -26,17 +26,17 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8193932deac3854b07085cba9faac76e68c4da8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ae6124db6103554e16b1f2d39a9a9c875d97d6c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592430"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980242"
 ---
 # <a name="cryptographic-services"></a>Kryptografische Dienste
 <a name="top"></a> Öffentliche Netzwerke wie das Internet bieten keine sichere Kommunikation zwischen Entitäten. Bei einer Kommunikation über derartige Netzwerke besteht die Gefahr, dass Unbefugte Inhalte lesen oder sogar Änderungen daran vornehmen. Die Kryptografie schützt Daten vor der Anzeige, stellt Möglichkeiten bereit, mit denen erkannt werden kann, ob Daten geändert wurden, und bietet sichere Kommunikation über ansonsten unsichere Kanäle. So können Daten beispielsweise mithilfe eines kryptografischen Algorithmus verschlüsselt, im verschlüsselten Zustand übertragen und später beim vorgesehenen Empfänger wieder entschlüsselt werden. Wenn ein Dritter die verschlüsselten Daten abfängt, sind diese schwer zu entziffern.  
   
- In .NET Framework werden viele Aspekte der Kryptografie von den Klassen im <xref:System.Security.Cryptography?displayProperty=nameWithType>-Namespace verwaltet. Einige davon sind Wrapper für die nicht verwaltete Microsoft Cryptography API (CryptoAPI), bei anderen handelt es sich um rein verwaltete Implementierungen. Sie müssen kein Experte in Sachen Kryptografie sein, um diese Klassen verwenden zu können. Wenn Sie eine neue Instanz einer Verschlüsselungsalgorithmusklasse erstellen, werden der Einfachheit halber automatisch Schlüssel erzeugt. Die Standardeigenschaften sind dabei auf möglichst hohe Sicherheit und hohen Schutz ausgelegt.  
+ In .NET Framework werden viele Aspekte der Kryptografie von den Klassen im <xref:System.Security.Cryptography?displayProperty=nameWithType> -Namespace verwaltet. Einige davon sind Wrapper für die nicht verwaltete Microsoft Cryptography API (CryptoAPI), bei anderen handelt es sich um rein verwaltete Implementierungen. Sie müssen kein Experte in Sachen Kryptografie sein, um diese Klassen verwenden zu können. Wenn Sie eine neue Instanz einer Verschlüsselungsalgorithmusklasse erstellen, werden der Einfachheit halber automatisch Schlüssel erzeugt. Die Standardeigenschaften sind dabei auf möglichst hohe Sicherheit und hohen Schutz ausgelegt.  
   
  Diese Übersicht enthält eine Zusammenfassung der von .NET Framework unterstützten Verschlüsselungsmethoden und -verfahren wie ClickOnce-Manifeste, Suite B und die Unterstützung von Cryptography Next Generation (CNG), die in [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]eingeführt wurde.  
   
@@ -68,13 +68,13 @@ ms.locfileid: "33592430"
   
  Die Kryptografie wird für folgende Zielsetzungen verwendet:  
   
--   Vertraulichkeit: Die Identität des Benutzers soll geschützt oder das Lesen von Daten verhindert werden.  
+-   Vertraulichkeit: Um die Identität oder Daten eines Benutzers zu schützen, gelesen werden.  
   
--   Datenintegrität: Die Daten sollen vor Änderungen geschützt werden.  
+-   Datenintegrität: Zum Schutz der Daten nicht geändert werden.  
   
--   Authentifizierung: Es soll sichergestellt werden, dass Daten von einem bestimmten Teilnehmer stammen.  
+-   Authentifizierung: Um sicherzustellen, dass Daten von einem bestimmten Teilnehmer stammen.  
   
--   Nichtleugnung: Hindert einen bestimmten Teilnehmer zu leugnen, dass er eine Meldung gesendet hat.  
+-   Non-repudiation: Um zu verhindern, dass eine bestimmte Partei leugnen, dass sie eine Nachricht gesendet.  
   
  Um diese Ziele zu erreichen, können Sie aus einer Kombination von Algorithmen und Vorgehensweisen, die als kryptografische Grundelemente bezeichnet werden, ein kryptografisches Schema erstellen. In der nachstehenden Tabelle sind die kryptografischen Grundelemente und deren Verwendungszweck aufgeführt.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "33592430"
 |Kryptografische Signatur|Stellt sicher, dass die Daten von einem bestimmten Teilnehmer stammen. Dazu wird eine digitale Signatur erstellt, die diesen Teilnehmer eindeutig bezeichnet. Bei diesem Prozess werden auch Hashfunktionen verwendet.|  
 |Kryptografische Hashs|Ordnet Daten beliebiger Länge einer Bytefolge fester Länge zu. Hashs sind statistisch eindeutig; eine unterschiedliche 2-Byte-Sequenz erzielt nicht denselben Hashwert.|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="secret_key"></a>   
 ## <a name="secret-key-encryption"></a>Verschlüsselung mit geheimem Schlüssel  
@@ -105,7 +105,7 @@ ms.locfileid: "33592430"
   
  Die Verschlüsselung mit geheimem Schlüssel hat den Nachteil, dass sich zwei Teilnehmer auf einen Schlüssel und einen Initialisierungsvektor geeinigt und die entsprechenden Werte ausgetauscht haben müssen. Der Initialisierungsvektor ist nicht geheim und kann mit der Nachricht in Klartext übermittelt werden. Der Schlüssel muss jedoch vor Unbefugten geheim gehalten werden. Aufgrund dieser Probleme wird die Verschlüsselung mit geheimem Schlüssel oft in Verbindung mit der Verschlüsselung mit öffentlichem Schlüssel eingesetzt, um die Werte von Schlüssel und Initialisierungsvektor vertraulich zu kommunizieren.  
   
- Wenn es sich bei Alice und Bob um zwei Teilnehmer handelt, die über einen unsicheren Kanal miteinander kommunizieren möchten, könnten sie die Verschlüsselung mit geheimem Schlüssel wie nachfolgend beschrieben vornehmen: Alice und Bob einigen sich darauf, einen bestimmten Algorithmus (z. B. AES) mit einem bestimmten Schlüssel und Initialisierungsvektor zu verwenden. Alice verfasst eine Nachricht und erzeugt einen Netzwerkstream (vielleicht eine benannte Pipe oder eine Netzwerk-e-Mail) auf dem die Nachricht zu senden. Danach verschlüsselt sie mithilfe des Schlüssels und des Initialisierungsvektors den Text und sendet die verschlüsselten Nachricht und den Initialisierungsvektor über das Intranet an Bob. Bob empfängt den verschlüsselten Text und entschlüsselt ihn mit dem Initialisierungsvektor und dem zuvor vereinbarten Schlüssel. Wenn die Übertragung abgefangen wird, kann der unbefugte Dritte die Originalnachricht nicht entschlüsseln, da er den Schlüssel nicht kennt. In diesem Szenario muss nur der Schlüssel geheim bleiben. In der Realität würde entweder Alice oder Bob einen geheimen (symmetrischen) Schlüssel erzeugen und ihn mithilfe der asymmetrischen Verschlüsselung (mit öffentlichem Schlüssel) an die Gegenseite übertragen. Weitere Informationen zur Verschlüsselung mit öffentlichem Schlüssel finden Sie im nachfolgenden Abschnitt.  
+ Vorausgesetzt, dass Alice und Bob um zwei Teilnehmer, die über einen unsicheren Kanal miteinander kommunizieren möchten handelt, können sie die Verschlüsselung mit geheimem Schlüssel wie folgt verwenden: Alice und Bob stimmen auf einen bestimmten Algorithmus (z. B. AES) mit einem bestimmten Schlüssel und Initialisierungsvektor zu verwenden. Alice verfasst eine Nachricht und erstellt einen Netzwerkstream (eventuell eine benannte Pipe oder eine Netzwerk-e-Mail) auf dem die Nachricht zu senden. Danach verschlüsselt sie mithilfe des Schlüssels und des Initialisierungsvektors den Text und sendet die verschlüsselten Nachricht und den Initialisierungsvektor über das Intranet an Bob. Bob empfängt den verschlüsselten Text und entschlüsselt ihn mit dem Initialisierungsvektor und dem zuvor vereinbarten Schlüssel. Wenn die Übertragung abgefangen wird, kann der unbefugte Dritte die Originalnachricht nicht entschlüsseln, da er den Schlüssel nicht kennt. In diesem Szenario muss nur der Schlüssel geheim bleiben. In der Realität würde entweder Alice oder Bob einen geheimen (symmetrischen) Schlüssel erzeugen und ihn mithilfe der asymmetrischen Verschlüsselung (mit öffentlichem Schlüssel) an die Gegenseite übertragen. Weitere Informationen zur Verschlüsselung mit öffentlichem Schlüssel finden Sie im nachfolgenden Abschnitt.  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt die folgenden Klassen bereit, durch die Verschlüsselungsalgorithmen mit geheimem Schlüssel implementiert werden:  
   
@@ -117,17 +117,17 @@ ms.locfileid: "33592430"
   
 -   <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.  
   
--   <xref:System.Security.Cryptography.RijndaelManaged>.  
+-   <xref:System.Security.Cryptography.RijndaelManaged>  
   
 -   <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="public_key"></a>   
 ## <a name="public-key-encryption"></a>Verschlüsselung mit öffentlichem Schlüssel  
  Bei der Verschlüsselung mit öffentlichem Schlüssel werden zwei Schlüssel verwendet, nämlich ein privater Schlüssel, der vor Unbefugten geheim gehalten werden muss, und ein öffentlicher Schlüssel, der jedem zugänglich sein kann. Der öffentliche und der private Schlüssel sind mathematisch miteinander verknüpft. Mit dem öffentlichen Schlüssel verschlüsselte Daten können nur mit dem privaten Schlüssel entschlüsselt werden, und mit dem privaten Schlüssel signierte Daten können nur mit dem öffentlichen Schlüssel überprüft werden. Der öffentliche Schlüssel kann jedem zugänglich sein, da er zum Verschlüsseln von Daten verwendet wird, die an den Inhaber des privaten Schlüssels gesendet werden. Kryptografische Algorithmen mit öffentlichem Schlüssel werden auch als asymmetrische Algorithmen bezeichnet, da ein Schlüssel für das Verschlüsseln der Daten und ein anderer für das Entschlüsseln erforderlich ist. Eine grundlegende kryptografische Regel verhindert die Schlüsselwiederverwendung, und beide Schlüssel müssen für jede Kommunikationssitzung eindeutig sein. In der Praxis jedoch sind asymmetrische Schlüssel im Allgemeinen langlebig.  
   
- Zwei Teilnehmer (Alice und Bob) könnten die Verschlüsselung mit öffentlichem Schlüssel wie folgt verwenden: Zuerst erzeugt Alice ein Schlüsselpaar aus öffentlichem und privatem Schlüssel. Wenn Bob Alice eine verschlüsselte Nachricht senden möchte, bittet er Alice um den öffentlichen Schlüssel. Alice sendet Bob ihren öffentlichen Schlüssel über ein unsicheres Netzwerk, und Bob verschlüsselt damit eine Nachricht. Bob sendet die verschlüsselte Nachricht an Alice, die sie mit ihrem privaten Schlüssel entschlüsselt. Wenn Bob den Schlüssel von Alice über einen unsicheren Kanal (z. B. ein öffentliches Netzwerk) erhalten hat, ist Bob im Hinblick auf einen Man-in-the-middle-Angriff gefährdet. Daher muss Bob bei Alice nachfragen, ob es sich um die richtige Kopie des öffentlichen Schlüssels handelt.  
+ Zwei Teilnehmer (Alice und Bob) könnten die Verschlüsselung mit öffentlichem Schlüssel wie folgt verwenden: Zuerst erzeugt Alice ein öffentliches/privates Schlüsselpaar. Wenn Bob Alice eine verschlüsselte Nachricht senden möchte, bittet er Alice um den öffentlichen Schlüssel. Alice sendet Bob ihren öffentlichen Schlüssel über ein unsicheres Netzwerk, und Bob verschlüsselt damit eine Nachricht. Bob sendet die verschlüsselte Nachricht an Alice, die sie mit ihrem privaten Schlüssel entschlüsselt. Wenn Bob den Schlüssel von Alice über einen unsicheren Kanal (z. B. ein öffentliches Netzwerk) erhalten hat, ist Bob im Hinblick auf einen Man-in-the-middle-Angriff gefährdet. Daher muss Bob bei Alice nachfragen, ob es sich um die richtige Kopie des öffentlichen Schlüssels handelt.  
   
  Während der Übertragung des öffentlichen Schlüssels von Alice hätte ein Unbefugter den Schlüssel abfangen können. Außerdem hätte derselbe Unbefugte auch die verschlüsselte Nachricht von Bob abfangen können. Er kann die Nachricht mit dem öffentlichen Schlüssel jedoch nicht entschlüsseln. Die Nachricht kann nur mit Alices privatem Schlüssel entschlüsselt werden, der nicht übertragen wurde. Alice benutzt für die Verschlüsselung der Rückantwort an Bob nicht ihren privaten Schlüssel, da jeder mit dem öffentlichen Schlüssel die Nachricht entschlüsseln könnte. Wenn Alice eine Rückantwort an Bob senden möchte, bittet sie Bob um dessen öffentlichen Schlüssel und verschlüsselt ihre Nachricht damit. Bob wiederum entschlüsselt die Nachricht mit seinem zugehörigen privaten Schlüssel.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "33592430"
   
  RSA ermöglicht sowohl die Verschlüsselung als auch die Signatur. DSA kann dagegen nur für die Signatur und Diffie-Hellman nur für die Erzeugung von Schlüsseln verwendet werden. Algorithmen mit öffentlichem Schlüssel sind im Hinblick auf ihre Verwendung stärker eingeschränkt als Algorithmen mit privatem Schlüssel.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="digital_signatures"></a>   
 ## <a name="digital-signatures"></a>Digitale Signaturen  
@@ -186,7 +186,7 @@ ms.locfileid: "33592430"
   
 -   <xref:System.Security.Cryptography.ECDsaCng>  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="hash_values"></a>   
 ## <a name="hash-values"></a>Hashwerte  
@@ -196,7 +196,7 @@ ms.locfileid: "33592430"
   
 -   Alice sendet die Klartext-Nachricht und die Hashnachricht (digitale Signatur) an Bob. Bob empfängt die Nachricht, wendet den Hashalgorithmus darauf an und vergleicht seinen Hashwert mit dem von Alice empfangenen Hashwert. Wenn die Hashwerte identisch sind, wurde die Nachricht nicht geändert. Wenn die Werte nicht identisch sind, wurde die Nachricht geändert, nachdem sie von Alice geschrieben wurde.  
   
-     Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Finden Sie unter [NIB: Beispiel für sichere Cryptography Next Generation (CNG) Kommunikation](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) für Weitere Informationen.  
+     Leider wird mit dieser Methode nicht die Echtheit des Absenders angegeben. Jeder kann die Identität von Alice annehmen und eine Nachricht an Bob senden. Derselbe Hashalgorithmus kann zum Signieren der Nachricht verwendet werden, und Bob kann lediglich feststellen, dass die Nachricht mit ihrer Signatur übereinstimmt. Dies ist eine Form eines Man-in-the-middle-Angriffs. Weitere Informationen finden Sie unter [Beispiel für sichere Cryptography Next Generation (CNG) Kommunikation](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).  
   
 -   Alice sendet die Klartext-Nachricht über einen unsicheren öffentlichen Kanal an Bob. Sie sendet die Hashnachricht über einen sicheren privaten Kanal an Bob. Bob empfängt die Klartext-Meldung, wendet den Hashalgorithmus darauf an, und vergleicht den Hash mit dem privat ausgetauschten Hash. Wenn die Hashs zusammenpassen, weiß Bob zwei Dinge:  
   
@@ -216,21 +216,21 @@ ms.locfileid: "33592430"
   
 -   <xref:System.Security.Cryptography.HMACSHA1>.  
   
--   <xref:System.Security.Cryptography.MACTripleDES>.  
+-   <xref:System.Security.Cryptography.MACTripleDES>  
   
--   <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.  
+-   <xref:System.Security.Cryptography.MD5CryptoServiceProvider>  
   
--   <xref:System.Security.Cryptography.RIPEMD160>.  
+-   <xref:System.Security.Cryptography.RIPEMD160>  
   
--   <xref:System.Security.Cryptography.SHA1Managed>.  
+-   <xref:System.Security.Cryptography.SHA1Managed>  
   
--   <xref:System.Security.Cryptography.SHA256Managed>.  
+-   <xref:System.Security.Cryptography.SHA256Managed>  
   
--   <xref:System.Security.Cryptography.SHA384Managed>.  
+-   <xref:System.Security.Cryptography.SHA384Managed>  
   
 -   <xref:System.Security.Cryptography.SHA512Managed>.  
   
--   HMAC-Varianten aller SHA-Algorithmen (Secure Hash Algorithm), MD5-Algorithmen (Message Digest 5) und RIPEMD-160-Algorithmen.  
+-   HMAC-Varianten aller SHA-Algorithmen (Secure Hash Algorithm), MD5-Algorithmen (Message Digest 5) und RIPEMD-160-Algorithmen.  
   
 -   CryptoServiceProvider-Implementierungen (Wrapper für verwalteten Code) aller SHA-Algorithmen.  
   
@@ -239,7 +239,7 @@ ms.locfileid: "33592430"
 > [!NOTE]
 >  Fehler im Design von MD5 wurden 1996 erkannt und stattdessen SHA-1 empfohlen. 2004 wurden weitere Fehler festgestellt, und der MD5-Algorithmus galt nicht mehr als sicher. Der SHA-1-Algorithmus wurde ebenfalls als unsicher eingestuft, und nun wird stattdessen SHA-2 empfohlen.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="random_numbers"></a>   
 ## <a name="random-number-generation"></a>Zufallszahlengenerierung  
@@ -247,7 +247,7 @@ ms.locfileid: "33592430"
   
  Die <xref:System.Security.Cryptography.RNGCryptoServiceProvider> -Klasse ist die Implementierung eines Algorithmus mit Zufallszahlengenerator.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="clickonce"></a>   
 ## <a name="clickonce-manifests"></a>ClickOnce-Manifeste  
@@ -269,11 +269,11 @@ ms.locfileid: "33592430"
   
 -   <xref:System.Security.Cryptography.X509Certificates.TrustStatus> Liefert eine einfache Möglichkeit, um zu überprüfen, ob eine Authenticode-Signatur vertrauenswürdig ist.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Suite B-Unterstützung  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] unterstützt den Suite B-Satz kryptografischer Algorithmen, die von der National Security Agency (NSA) veröffentlicht wurden. Weitere Informationen zur Suite B finden Sie unter der [NSA-Suite B-Kryptographie-Merkblatt](https://www.nsa.gov/what-we-do/information-assurance/).  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] unterstützt den Suite B-Satz kryptografischer Algorithmen, die von der National Security Agency (NSA) veröffentlicht wurden. Weitere Informationen zur Suite B finden Sie im [NSA-Suite-B-Kryptographie-Merkblatt](https://www.nsa.gov/what-we-do/information-assurance/).  
   
  Dazu gehören die folgenden Algorithmen:  
   
@@ -287,7 +287,7 @@ ms.locfileid: "33592430"
   
  Wrapper für verwalteten Code für die FIPS-zertifizierten (Federal Information Processing Standard) Implementierungen von AES, SHA-256, SHA-384 und SHA-512 sind in den neuen Klassen <xref:System.Security.Cryptography.AesCryptoServiceProvider>, <xref:System.Security.Cryptography.SHA256CryptoServiceProvider>, <xref:System.Security.Cryptography.SHA384CryptoServiceProvider>und <xref:System.Security.Cryptography.SHA512CryptoServiceProvider> verfügbar.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="cng"></a>   
 ## <a name="cryptography-next-generation-cng-classes"></a>CNG-Klassen (Cryptography Next Generation)  
@@ -303,7 +303,7 @@ ms.locfileid: "33592430"
   
 -   <xref:System.Security.Cryptography.CngProperty> verwaltet häufig verwendete Schlüsseleigenschaften.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Verwandte Themen  

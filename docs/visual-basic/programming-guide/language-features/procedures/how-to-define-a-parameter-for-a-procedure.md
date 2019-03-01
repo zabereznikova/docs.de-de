@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 3893b87f50b37116b596b35b32c61ca81e47b3e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660800"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971792"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Vorgehensweise: Definieren eines Parameters für eine Prozedur (Visual Basic)
 Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben werden, wenn er aufgerufen. Jeder Parameter für eine Prozedur deklariert die gleiche Weise, wie Sie eine Variable deklarieren, die die Namen und den Datentyp angibt. Sie geben auch den Übergabemechanismus und gibt an, ob der Parameter optional ist.  
@@ -36,7 +36,7 @@ Ein *Parameter* kann der aufrufenden Code einen Wert an die Prozedur übergeben 
   
      Im folgende Beispiel wird die Gliederung definiert eine `Sub` Prozedur mit drei Parametern. Die ersten beiden sind erforderlich, und das dritte optional ist. Die Parameterdeklarationen werden in der Parameterliste durch Kommas getrennt.  
   
-     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#33)]  
   
      Der erste Parameter nimmt eine `customer` Objekt und `updateCustomer` können direkt aktualisieren, der an übergebene Variable `c` , da das Argument übergeben wird [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md). Die Werte der beiden letzten Argumente kann von die Prozedur kann nicht geändert werden, da sie übergeben werden [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md).  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: f792109f1d1117b5b112e06da1510938e4b8a5ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04f3cab43f7f7f7fc73e0b209b1bacee136513b5
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580494"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975393"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie für das Deklarieren und Auslösen von Ereignissen für eine Klasse, die mit dem Namen `Widget`. Nachdem Sie die Schritte abgeschlossen haben, Sie möchten das begleitthema lesen [Exemplarische Vorgehensweise: Behandeln von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), erfahren, wie Sie Ereignisse aus `Widget` Objekte Statusinformationen in einer Anwendung bereitstellen.  
@@ -46,7 +46,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie für das Dekla
   
 -   Verwenden der `Event` -Schlüsselwort zu deklarieren, ein Ereignis in der `Widget` Klasse. Beachten Sie, dass ein Ereignis kann `ByVal` und `ByRef` Argumente als `Widget`des `PercentDone` Ereignis veranschaulicht wird:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
  Wenn das aufrufende Objekt empfängt ein `PercentDone` -Ereignis, das `Percent` Argument enthält den Prozentsatz der der Vorgang abgeschlossen ist. Die `Cancel` Argument kann festgelegt werden, um `True` zum Abbrechen der Methode, die das Ereignis ausgelöst hat.  
   
@@ -59,11 +59,11 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie für das Dekla
   
 1.  Zur Vereinfachung der Zugriff auf die `Timer` hinzufügen Eigenschaft, die von dieser Klasse verwendet eine `Imports` Anweisung am Anfang des Abschnitts Deklarationen Klassenmoduls über die `Class Widget` Anweisung.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
 2.  Fügen Sie der `Widget`-Klasse folgenden Code hinzu:  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
  Bei einem Aufruf der `LongTask` -Methode, die `Widget` löst die `PercentDone` Ereignis jedes `MinimumInterval` Sekunden. Gibt das Ereignis `LongTask` überprüft, ob die `Cancel` -Argument wurde auf festgelegt `True`.  
   

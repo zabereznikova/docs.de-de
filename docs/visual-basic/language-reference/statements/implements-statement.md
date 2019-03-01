@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-ms.openlocfilehash: cdcbe20157b9647040e3610d0632bd8e3fb9df65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75776e0d78bc1d8a834333ea4c3cc0a9291d1ed1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681065"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965012"
 ---
 # <a name="implements-statement"></a>Implements-Anweisung
 Gibt an, mindestens eine weitere Schnittstellen oder Schnittstellenmember, die in der Klasse implementiert werden müssen oder Strukturdefinition, die in der sie angezeigt wird.  
@@ -46,14 +46,14 @@ Implements interfacename.interfacemember [, ...]
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie mit der `Implements` Anweisung, um die Member einer Schnittstelle zu implementieren. Es definiert eine Schnittstelle, die mit dem Namen `ICustomerInfo` mit einem Ereignis, eine Eigenschaft und einer Prozedur. Die Klasse `customerInfo` implementiert alle in der Schnittstelle definierten Member.  
   
- [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
  Beachten Sie, dass die Klasse `customerInfo` verwendet die `Implements` Anweisung in einer separaten Quellcodezeile, um anzugeben, dass die Klasse, alle Member implementiert der `ICustomerInfo` Schnittstelle. Klicken Sie dann auf jedes Element in der Klasse verwendet die `Implements` -Schlüsselwort als Teil der Element-Deklaration, um anzugeben, dass sie diesen Schnittstellenmember implementiert.  
   
 ## <a name="example"></a>Beispiel  
  Die beiden folgenden Verfahren zeigen, wie Sie die Schnittstelle implementiert, die im vorherigen Beispiel verwenden können. Um die Implementierung zu testen, fügen Sie diese Prozeduren, um Ihr Projekt, und rufen die `testImplements` Verfahren.  
   
- [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)

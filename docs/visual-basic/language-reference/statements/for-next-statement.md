@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: 703a30a558067b386c6bb5288012094418d61ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b12a1b1b8d116cc906459407240fca4302460e4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746272"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968724"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next-Anweisung (Visual Basic)
 Einer Gruppe von Anweisungen für eine angegebene Anzahl von Malen wiederholt wird.  
@@ -67,11 +67,11 @@ Next [ counter ]
   
  Im folgenden Beispiel die `index` Variable beginnt mit einem Wert von 1 und wird bei jeder Iteration der Schleife, beenden nach dem Wert des inkrementiert `index` 5 erreicht.  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]  
   
  Im folgenden Beispiel die `number` Variablen beginnt bei 2 und wird von 0,25 in jeder Iteration der Schleife, beenden nach dem Wert des reduziert `number` 0 erreicht. Die `Step` Argument `-.25` verringert den Wert von 0,25 in jeder Iteration der Schleife.  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]  
   
 > [!TIP]
 >  Ein [während... While-Anweisung enden](../../../visual-basic/language-reference/statements/while-end-while-statement.md) oder [tun... Loop-Anweisung](../../../visual-basic/language-reference/statements/do-loop-statement.md) funktioniert gut, wenn Sie nicht im Voraus kennen wie viele Male die Anweisungen in der Schleife ausgeführt. Aber wenn Sie erwarten, führen Sie der Schleife eine bestimmte Anzahl von Malen, eine `For`... `Next` Schleife ist die bessere Wahl. Sie bestimmen die Anzahl der Iterationen, bei der Eingabe der schleifenstatus.  
@@ -79,7 +79,7 @@ Next [ counter ]
 ## <a name="nesting-loops"></a>Schachteln von Schleifen  
  Sie können schachteln `For` Schleifen durch eine Schleife in einem anderen platzieren. Im folgende Beispiel wird veranschaulicht, geschachtelte `For`... `Next` Strukturen, die unterschiedliche Werte verfügen. Die äußere Schleife wird eine Zeichenfolge für jede Iteration der Schleife erstellt. Die innere Schleife verringert eine Schleifenzählervariable für jede Iteration der Schleife an.  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]  
   
  Wenn Schleifen geschachtelt werden, foreach-Schleife müssen einen eindeutigen `counter` Variable.  
   
@@ -160,17 +160,17 @@ Next [ counter ]
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel entfernt alle Elemente aus einer generischen Liste. Statt eine [für jede... Nächste Anweisung](../../../visual-basic/language-reference/statements/for-each-next-statement.md), das Beispiel zeigt eine `For`... `Next` -Anweisung, die Elemente in absteigender Reihenfolge durchläuft. Im Beispiel wird diese Technik verwendet, da die `removeAt` Methode bewirkt, dass Elemente nach dem entfernten Element einen niedrigeren Indexwert haben.  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel durchläuft eine Enumeration, die deklariert wird ein [Enum-Anweisung](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel verwenden Sie die Parameter eine Klasse mit operatorüberladungen für die `+`, `-`, `>=`, und `<=` Operatoren.  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Collections.Generic.List%601>

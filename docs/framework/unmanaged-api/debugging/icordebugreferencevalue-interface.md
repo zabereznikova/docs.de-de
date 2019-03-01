@@ -1,5 +1,5 @@
 ---
-title: ICorDebugReferenceValue-Schnittstelle1
+title: ICorDebugReferenceValue-Schnittstelle
 ms.date: 03/30/2017
 api_name:
 - ICorDebugReferenceValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dbe5388d7c18202f4b89269141d33463edb07a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4709d1b8126436d4400c788891960100915cd1bc
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544272"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971436"
 ---
-# <a name="icordebugreferencevalue-interface1"></a>ICorDebugReferenceValue-Schnittstelle1
+# <a name="icordebugreferencevalue-interface"></a>ICorDebugReferenceValue-Schnittstelle
 Enthält Methoden, die einen Wert zu verwalten, der einen Verweis auf ein Objekt ist. (D. h. diese Schnittstelle stellt Methoden bereit, die einen Zeiger zu verwalten.) Diese Schnittstelle implementiert "ICorDebugValue".  
   
 ## <a name="methods"></a>Methoden  

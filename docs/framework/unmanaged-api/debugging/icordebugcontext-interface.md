@@ -1,5 +1,5 @@
 ---
-title: ICorDebugContext Schnittstelle1
+title: ICorDebugContext-Schnittstelle
 ms.date: 03/30/2017
 api_name:
 - ICorDebugContext
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0605ce4f33bda70325f166e128b1e1dabfde1ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a560726b81c382913c1f590b8681421641aebf2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526014"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972936"
 ---
-# <a name="icordebugcontext-interface1"></a>ICorDebugContext Schnittstelle1
+# <a name="icordebugcontext-interface"></a>ICorDebugContext-Schnittstelle
+
 Stellt ein Kontextobjekt dar. Diese Schnittstelle wurde noch nicht implementiert.  
   
 ## <a name="remarks"></a>Hinweise  

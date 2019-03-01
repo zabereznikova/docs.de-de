@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 186238d8e823f028caaed2e2618d882d21e1358f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548949"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973170"
 ---
 # <a name="declare-statement"></a>Declare Statement
 Deklariert einen Verweis auf eine Prozedur in einer externen Datei implementiert.  
@@ -132,14 +132,14 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel deklariert einen externen Verweis auf eine `Function` Prozedur, die den aktuellen Benutzernamen zurückgibt. Es ruft dann die externe Prozedur `GetUserNameA` als Teil der `getUser` Verfahren.  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]  
   
 ## <a name="example"></a>Beispiel  
  Die <xref:System.Runtime.InteropServices.DllImportAttribute> bietet eine alternative Möglichkeit der Verwendung von Funktionen in nicht verwaltetem Code. Das folgende Beispiel deklariert eine importierte Funktion ohne Verwendung einer `Declare` Anweisung.  
   
- [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#16)]  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>

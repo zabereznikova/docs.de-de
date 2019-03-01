@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afa4e6cd4e99540030d3a9e151da4bbe711d973a
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d939063aaefb00d4db3de604df0dbd1b2175bf95
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219827"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981607"
 ---
 # <a name="debugging-interfaces"></a>Debugschnittstellen
 In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das Debuggen eines Programms behandeln, das in der Common Language Runtime (CLR) ausgeführt wird.  
@@ -46,10 +46,10 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebug-Schnittstelle](icordebug-interface.md)\
  Stellt Methoden bereit, mit denen Entwickler Anwendungen in der CLR-Umgebung debuggen können.  
   
- [ICorDebugAppDomain-Schnittstelle1](icordebugappdomain-interface.md)\
+ [ICorDebugAppDomain-Schnittstelle](icordebugappdomain-interface.md)\
  Stellt Methoden zum Debuggen von Anwendungsdomänen bereit.  
   
- [ICorDebugAppDomain2-Schnittstelle1](icordebugappdomain2-interface.md)\
+ [ICorDebugAppDomain2-Schnittstelle](icordebugappdomain2-interface.md)\
  Stellt Methoden bereit, um mit Arrays, Zeigern, Funktionszeigern und ByRef-Typen zu arbeiten. Diese Schnittstelle ist eine Erweiterung der `ICorDebugAppDomain`-Schnittstelle.  
   
  [ICorDebugAppDomain3-Schnittstelle](icordebugappdomain3-interface.md)\
@@ -58,52 +58,52 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugAppDomain4-Schnittstelle](icordebugappdomain4-interface.md)\
  Erweitert logisch die [ICorDebugAppDomain](icordebugappdomain-interface.md) Schnittstelle, um ein verwaltetes Objekt über einen COM callable Wrapper abzurufen.  
   
- [ICorDebugAppDomainEnum-Schnittstelle1](icordebugappdomainenum-interface.md)\
+ [ICorDebugAppDomainEnum-Schnittstelle](icordebugappdomainenum-interface.md)\
  Stellt eine Methode bereit, die eine angegebene Anzahl von `ICorDebugAppDomain`-Werten zurückgibt, beginnend mit der nächsten Position in der Enumeration.  
   
- [ICorDebugArrayValue-Schnittstelle1](icordebugarrayvalue-interface.md)\
+ [ICorDebugArrayValue-Schnittstelle](icordebugarrayvalue-interface.md)\
  Eine Unterklasse von `ICorDebugHeapValue`, die ein eindimensionales oder mehrdimensionales Array darstellt.  
   
- [ICorDebugAssembly-Schnittstelle1](icordebugassembly-interface.md)\
+ [ICorDebugAssembly-Schnittstelle](icordebugassembly-interface.md)\
  Stellt eine Assembly dar.  
   
- [ICorDebugAssembly2-Schnittstelle1](icordebugassembly2-interface.md)\
+ [ICorDebugAssembly2-Schnittstelle](icordebugassembly2-interface.md)\
  Stellt eine Assembly dar. Diese Schnittstelle ist eine Erweiterung der `ICorDebugAssembly`-Schnittstelle.  
   
  [ICorDebugAssembly3-Schnittstelle](icordebugassembly3-interface.md)\
  Erweitert logisch die [ICorDebugAssembly](icordebugassembly-interface.md) Schnittstelle, um die Container-Assemblys und der darin enthaltenen Assemblys unterstützen. **Nur .NET Native verfügbar.**  
   
- [ICorDebugAssemblyEnum-Schnittstelle1](icordebugassemblyenum-interface.md)\
+ [ICorDebugAssemblyEnum-Schnittstelle](icordebugassemblyenum-interface.md)\
  Implementiert `ICorDebugEnum`-Methoden und listet `ICorDebugAssembly`-Arrays auf.  
   
  [ICorDebugBlockingObjectEnum-Schnittstelle](icordebugblockingobjectenum-interface.md)\
  Stellt einen Enumerator bereit, eine Liste der [CorDebugBlockingObject](cordebugblockingobject-structure.md) Strukturen.  
   
- [ICorDebugBoxValue-Schnittstelle1](icordebugboxvalue-interface.md)\
+ [ICorDebugBoxValue-Schnittstelle](icordebugboxvalue-interface.md)\
  Eine Unterklasse von `ICorDebugHeapValue`, die ein geschachteltes Wertklassenobjekt darstellt.  
   
- [ICorDebugBreakpoint-Schnittstelle1](icordebugbreakpoint-interface.md)\
+ [ICorDebugBreakpoint-Schnittstelle](icordebugbreakpoint-interface.md)\
  Stellt einen Haltepunkt in einer Funktion oder einen Beobachtungspunkt für einen Wert dar.  
   
- [ICorDebugBreakpointEnum-Schnittstelle1](icordebugbreakpointenum-interface.md)\
+ [ICorDebugBreakpointEnum-Schnittstelle](icordebugbreakpointenum-interface.md)\
  Implementiert `ICorDebugEnum`-Methoden und listet `ICorDebugBreakpoint`-Arrays auf.  
   
- [ICorDebugChain-Schnittstelle1](icordebugchain-interface.md)\
+ [ICorDebugChain-Schnittstelle](icordebugchain-interface.md)\
  Stellt ein Segment einer physikalischen oder logischen Aufrufliste dar.  
   
- [ICorDebugChainEnum-Schnittstelle1](icordebugchainenum-interface.md)\
+ [ICorDebugChainEnum-Schnittstelle](icordebugchainenum-interface.md)\
  Implementiert `ICorDebugEnum`-Methoden und listet `ICorDebugChain`-Arrays auf.  
   
- [ICorDebugClass-Schnittstelle1](icordebugclass-interface.md)\
+ [ICorDebugClass-Schnittstelle](icordebugclass-interface.md)\
  Stellt einen Typ dar, der entweder grundlegend oder komplex (das heißt benutzerdefiniert) sein kann. Wenn der Typ generisch ist, stellt `ICorDebugClass` den nicht instanziierten generischen Typ dar.  
   
- [ICorDebugClass2-Schnittstelle1](icordebugclass2-interface.md)\
+ [ICorDebugClass2-Schnittstelle](icordebugclass2-interface.md)\
  Stellt eine generische Klasse oder eine Klasse mit einem Methodenparameter des Typs <xref:System.Type> dar. Diese Schnittstelle erweitert `ICorDebugClass`.  
   
- [ICorDebugCode-Schnittstelle1](icordebugcode-interface1.md)\
+ [ICorDebugCode-Schnittstelle](icordebugcode-interface1.md)\
  Stellt ein Segment von Microsoft Intermediate Language (MSIL)-Code oder nativem Code dar.  
   
- [ICorDebugCode2-Schnittstelle1](icordebugcode2-interface.md)\
+ [ICorDebugCode2-Schnittstelle](icordebugcode2-interface.md)\
  Stellt Methoden bereit, die die Fähigkeiten von `ICorDebugCode` erweitern.  
   
  [ICorDebugCode3-Schnittstelle](icordebugcode3-interface.md)\
@@ -112,16 +112,16 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugCode4-Schnittstelle](icordebugcode4-interface.md)\
  Stellt eine Methode, die einen Debugger zum Aufzählen von die lokalen Variablen und Argumente in einer Funktion ermöglicht.  
   
- [ICorDebugCodeEnum-Schnittstelle1](icordebugcodeenum-interface.md)\
+ [ICorDebugCodeEnum-Schnittstelle](icordebugcodeenum-interface.md)\
  Implementiert `ICorDebugEnum`-Methoden und listet `ICorDebugCode`-Arrays auf.  
   
  [ICorDebugComObjectValue-Schnittstelle](icordebugcomobjectvalue-interface.md)\
  Stellt Methoden bereit, um zwischengespeicherte Schnittstellenobjekte abzurufen.  
   
- [ICorDebugContext Schnittstelle1](icordebugcontext-interface.md)\
+ [ICorDebugContext-Schnittstelle](icordebugcontext-interface.md)\
  Stellt ein Kontextobjekt dar. Diese Schnittstelle wurde noch nicht implementiert.  
   
- [ICorDebugController-Schnittstelle1](icordebugcontroller-interface.md)\
+ [ICorDebugController-Schnittstelle](icordebugcontroller-interface.md)\
  Stellt einen Bereich dar, in dem der Kontext der Codeausführung gesteuert werden kann. Dabei handelt es sich entweder um einen <xref:System.Diagnostics.Process> oder eine <xref:System.AppDomain>.  
   
  [ICorDebugDataTarget-Schnittstelle](icordebugdatatarget-interface.md)\
@@ -139,19 +139,19 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugEditAndContinueErrorInfo-Schnittstelle](icordebugeditandcontinueerrorinfo-interface.md)\
  Veraltet. Verwenden Sie diese Schnittstelle nicht.  
   
- [ICorDebugEditAndContinueSnapshot-Schnittstelle1](icordebugeditandcontinuesnapshot-interface.md)\
+ [ICorDebugEditAndContinueSnapshot-Schnittstelle](icordebugeditandcontinuesnapshot-interface.md)\
  Veraltet. Verwenden Sie diese Schnittstelle nicht.  
   
- [ICorDebugEnum-Schnittstelle1](icordebugenum-interface1.md)\
+ [ICorDebugEnum-Schnittstelle](icordebugenum-interface1.md)\
  Dient als abstrakte Basisschnittstelle für das Debuggen von Enumeratoren.  
   
- [ICorDebugErrorInfoEnum-Schnittstelle1](icordebugerrorinfoenum-interface.md)\
+ [ICorDebugErrorInfoEnum-Schnittstelle](icordebugerrorinfoenum-interface.md)\
  Veraltet. Verwenden Sie diese Schnittstelle nicht.  
   
- [ICorDebugEval-Schnittstelle1](icordebugeval-interface.md)\
+ [ICorDebugEval-Schnittstelle](icordebugeval-interface.md)\
  Stellt Methoden bereit, mit denen der Debugger Code innerhalb des Kontexts des gedebuggten Codes ausführen kann.  
   
- [ICorDebugEval2-Schnittstelle1](icordebugeval2-interface.md)\
+ [ICorDebugEval2-Schnittstelle](icordebugeval2-interface.md)\
  Erweitert `ICorDebugEval`, um generische Typen zu unterstützen.  
   
  [ICorDebugExceptionDebugEvent-Schnittstelle](icordebugexceptiondebugevent-interface.md)\
@@ -163,34 +163,34 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugExceptionObjectValue-Schnittstelle](icordebugexceptionobjectvalue-interface.md)\
  Erweitert die [ICorDebugObjectValue](icordebugobjectvalue-interface.md) Schnittstelle, um Stapelüberwachungsinformationen von einem verwalteten Ausnahmeobjekt bereitzustellen.  
   
- [ICorDebugFrame-Schnittstelle1](icordebugframe-interface.md)\
+ [ICorDebugFrame-Schnittstelle](icordebugframe-interface.md)\
  Stellt einen Rahmen auf dem aktuellen Stapel dar.  
   
- [ICorDebugFrameEnum-Schnittstelle1](icordebugframeenum-interface.md)\
+ [ICorDebugFrameEnum-Schnittstelle](icordebugframeenum-interface.md)\
  Implementiert `ICorDebugEnum`-Methoden und listet `ICorDebugFrame`-Arrays auf.  
   
- [ICorDebugFunction-Schnittstelle1](icordebugfunction-interface1.md)\
+ [ICorDebugFunction-Schnittstelle](icordebugfunction-interface1.md)\
  Stellt eine verwaltete Funktion oder Methode dar.  
   
- [ICorDebugFunction2-Schnittstelle1](icordebugfunction2-interface.md)\
+ [ICorDebugFunction2-Schnittstelle](icordebugfunction2-interface.md)\
  Erweitert `ICorDebugFunction` logisch, um schrittweises Nur mein Code-Debuggen zu unterstützen.  
   
  [ICorDebugFunction3-Schnittstelle](icordebugfunction3-interface.md)\
  Erweitert logisch die [ICorDebugFunction](icordebugfunction-interface1.md) Schnittstelle, um Zugriff auf Code aus einer ReJIT-Anfrage zu bieten.  
   
- [ICorDebugFunctionBreakpoint-Schnittstelle1](icordebugfunctionbreakpoint-interface.md)\
+ [ICorDebugFunctionBreakpoint-Schnittstelle](icordebugfunctionbreakpoint-interface.md)\
  Erweitert `ICorDebugBreakpoint`, um Haltepunkte innerhalb von Funktionen zu unterstützen.  
   
  [ICorDebugGCReferenceEnum-Schnittstelle](icordebuggcreferenceenum-interface.md)\
  Stellt einen Enumerator für Objekte bereit, die der Garbage Collection übergeben werden.  
   
- [ICorDebugGenericValue-Schnittstelle1](icordebuggenericvalue-interface.md)\
+ [ICorDebugGenericValue-Schnittstelle](icordebuggenericvalue-interface.md)\
  Eine Unterklasse von `ICorDebugValue`, die für alle Werte gilt. Diese Schnittstelle stellt die Get-Methode und die Set-Methode für den Wert bereit.  
   
  [ICorDebugGuidToTypeEnum-Schnittstelle](icordebugguidtotypeenum-interface.md)\
  Stellt einen Enumerator für ein Objekt bereit, das GUIDs und die entsprechenden `ICorDebugType`-Objekte zuordnet.  
   
- [ICorDebugHandleValue-Schnittstelle1](icordebughandlevalue-interface.md)\
+ [ICorDebugHandleValue-Schnittstelle](icordebughandlevalue-interface.md)\
  Eine Unterklasse von `ICorDebugReferenceValue`, die einen Verweiswert darstellt, für den der Debugger einen Handle zur Garbage Collection erstellt hat.  
   
  [ICorDebugHeapEnum-Schnittstelle](icordebugheapenum-interface.md)\
@@ -199,10 +199,10 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugHeapSegmentEnum-Schnittstelle](icordebugheapsegmentenum-interface.md)\
  Stellt einen Enumerator für die Speicherbereiche des verwalteten Heaps bereit.  
   
- [ICorDebugHeapValue-Schnittstelle1](icordebugheapvalue-interface.md)\
+ [ICorDebugHeapValue-Schnittstelle](icordebugheapvalue-interface.md)\
  Eine Unterklasse von `ICorDebugValue`, die ein Objekt darstellt, das vom Garbage Collector der CLR gesammelt wurde.  
   
- [ICorDebugHeapValue2-Schnittstelle1](icordebugheapvalue2-interface1.md)\
+ [ICorDebugHeapValue2-Schnittstelle](icordebugheapvalue2-interface1.md)\
  Eine Erweiterung von `ICorDebugHeapValue`, die Laufzeithandles unterstützt.  
   
  [ICorDebugHeapValue3-Schnittstelle](icordebugheapvalue3-interface.md)\
@@ -214,10 +214,10 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugILCode2-Schnittstelle](icordebugilcode2-interface.md)\
  Erweitert logisch die [ICorDebugILCode](icordebugilcode-interface.md) -Schnittstelle um Methoden, die das Token für die lokale Variablensignatur von einer Funktion zurückgeben und, Zuordnen des Profilers instrumentierte intermediate Language (IL) offsets ursprünglichen IL-Methode versetzt.  
   
- [ICorDebugILFrame-Schnittstelle1](icordebugilframe-interface.md)\
+ [ICorDebugILFrame-Schnittstelle](icordebugilframe-interface.md)\
  Stellt einen Stapelrahmen des MSIL-Codes dar.  
   
- [ICorDebugILFrame2-Schnittstelle1](icordebugilframe2-interface.md)\
+ [ICorDebugILFrame2-Schnittstelle](icordebugilframe2-interface.md)\
  Eine logische Erweiterung von `ICorDebugILFrame`.  
   
  [ICorDebugILFrame3-Schnittstelle](icordebugilframe3-interface.md)\
@@ -229,7 +229,7 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugInstanceFieldSymbol-Schnittstelle](icordebuginstancefieldsymbol-interface.md)\
  Stellt die Debugsymbolinformationen für ein Instanzfeld dar. **Nur .NET Native verfügbar.**  
   
- [ICorDebugInternalFrame-Schnittstelle1](icordebuginternalframe-interface.md)\
+ [ICorDebugInternalFrame-Schnittstelle](icordebuginternalframe-interface.md)\
  Identifiziert Rahmentypen für den Debugger.  
   
  [ICorDebugInternalFrame2-Schnittstelle](icordebuginternalframe2-interface.md)\
@@ -259,46 +259,46 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugMetaDataLocator-Schnittstelle](icordebugmetadatalocator-interface.md)\
  Stellt Metadateninformationen für den Debugger bereit.  
   
- [ICorDebugModule-Schnittstelle1](icordebugmodule-interface.md)\
+ [ICorDebugModule-Schnittstelle](icordebugmodule-interface.md)\
  Stellt ein CLR-Modul dar, das entweder eine ausführbare Datei oder eine Dynamic-Link Library (DLL) ist.  
   
- [ICorDebugModule2-Schnittstelle1](icordebugmodule2-interface.md)\
+ [ICorDebugModule2-Schnittstelle](icordebugmodule2-interface.md)\
  Fungiert als logische Erweiterung von `ICorDebugModule`.  
   
  [ICorDebugModule3-Schnittstelle](icordebugmodule3-interface.md)\
  Erstellt einen Symbolreader für ein dynamisches Modul.  
   
- [ICorDebugModuleBreakpoint-Schnittstelle1](icordebugmodulebreakpoint-interface.md)\
+ [ICorDebugModuleBreakpoint-Schnittstelle](icordebugmodulebreakpoint-interface.md)\
  Erweitert `ICorDebugBreakpoint`, um Zugriff auf bestimmte Module zu ermöglichen.  
   
  [ICorDebugModuleDebugEvent-Schnittstelle](icordebugmoduledebugevent-interface.md)\
  Erweitert die [ICorDebugDebugEvent](icordebugdebugevent-interface.md) -Schnittstelle zur Unterstützung der Ereignisse auf Modulebene. **Nur .NET Native verfügbar.**  
   
- [ICorDebugModuleEnum-Schnittstelle1](icordebugmoduleenum-interface.md)\
+ [ICorDebugModuleEnum-Schnittstelle](icordebugmoduleenum-interface.md)\
  Implementiert `ICorDebugEnum`-Methoden und listet `ICorDebugModule`-Arrays auf.  
   
  [ICorDebugMutableDataTarget-Schnittstelle](icordebugmutabledatatarget-interface.md)\
  Erweitert die [ICorDebugDataTarget](icordebugdatatarget-interface.md) Schnittstelle, um änderbare Datenziele zu unterstützen.  
   
- [ICorDebugNativeFrame-Schnittstelle1](icordebugnativeframe-interface.md)\
+ [ICorDebugNativeFrame-Schnittstelle](icordebugnativeframe-interface.md)\
  Eine spezielle Implementierung von `ICorDebugFrame`, die für systemeigene Rahmen verwendet wird.  
   
  [ICorDebugNativeFrame2-Schnittstelle](icordebugnativeframe2-interface.md)\
  Stellt Methoden bereit, die auf Beziehungen zwischen untergeordneten und übergeordneten Frames überprüfen.  
   
- [ICorDebugObjectEnum-Schnittstelle1](icordebugobjectenum-interface.md)\
+ [ICorDebugObjectEnum-Schnittstelle](icordebugobjectenum-interface.md)\
  Implementiert `ICorDebugEnum`-Methoden und listet Objektarrays anhand ihrer relativen virtuellen Adresse (RVA) auf.  
   
- [ICorDebugObjectValue-Schnittstelle1](icordebugobjectvalue-interface.md)\
+ [ICorDebugObjectValue-Schnittstelle](icordebugobjectvalue-interface.md)\
  Eine Unterklasse von `ICorDebugValue`, die einen Wert darstellt, der ein Objekt enthält.  
   
- [ICorDebugObjectValue2-Schnittstelle1](icordebugobjectvalue2-interface.md)\
+ [ICorDebugObjectValue2-Schnittstelle](icordebugobjectvalue2-interface.md)\
  Erweitert `ICorDebugObjectValue`, um Vererbung und Überschreibungen zu unterstützen.  
   
- [ICorDebugProcess-Schnittstelle1](icordebugprocess-interface.md)\
+ [ICorDebugProcess-Schnittstelle](icordebugprocess-interface.md)\
  Stellt einen Prozess dar, der verwalteten Code ausführt.  
   
- [ICorDebugProcess2-Schnittstelle1](icordebugprocess2-interface1.md)\
+ [ICorDebugProcess2-Schnittstelle](icordebugprocess2-interface1.md)\
  Eine logische Erweiterung von `ICorDebugProcess`.  
   
  [ICorDebugProcess3-Schnittstelle](icordebugprocess3-interface.md)\
@@ -319,10 +319,10 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugProcess8-Schnittstelle](icordebugprocess8-interface.md)\
  Erweitert logisch die [ICorDebugProcess](icordebugprocess-interface.md) Schnittstelle zum Aktivieren oder deaktivieren bestimmte Arten von [ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md) ausnahmerückrufen.  
   
- [ICorDebugProcessEnum-Schnittstelle1](icordebugprocessenum-interface.md)\
+ [ICorDebugProcessEnum-Schnittstelle](icordebugprocessenum-interface.md)\
  Implementiert `ICorDebugEnum`-Methoden und listet `ICorDebugProcess`-Arrays auf.  
   
- [ICorDebugReferenceValue-Schnittstelle1](icordebugreferencevalue-interface.md)\
+ [ICorDebugReferenceValue-Schnittstelle](icordebugreferencevalue-interface.md)\
  Eine Unterklasse von `ICorDebugValue`, die Verweistypen unterstützt.  
   
  [ICorDebugRegisterSet-Schnittstelle](icordebugregisterset-interface.md)\
@@ -346,16 +346,16 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugStaticFieldSymbol-Schnittstelle](icordebugstaticfieldsymbol-interface.md)\
  Stellt die Debugsymbolinformationen für ein statisches Feld dar. **Nur .NET Native verfügbar.**  
   
- [ICorDebugStepper-Schnittstelle1](icordebugstepper-interface.md)\
+ [ICorDebugStepper-Schnittstelle](icordebugstepper-interface.md)\
  Stellt einen Schritt in der Codeausführung dar, der von einem Debugger ausgeführt wird, dient zwischen der Veröffentlichung und dem Abschluss eines Befehls als Bezeichner und ermöglicht das Abbrechen eines Schritts.  
   
- [ICorDebugStepper2-Schnittstelle1](icordebugstepper2-interface1.md)\
+ [ICorDebugStepper2-Schnittstelle](icordebugstepper2-interface1.md)\
  Bietet Unterstützung für Nur mein Code-Debuggen.  
   
- [ICorDebugStepperEnum Schnittstelle1](icordebugstepperenum-interface.md)\
+ [ICorDebugStepperEnum-Schnittstelle](icordebugstepperenum-interface.md)\
  Implementiert `ICorDebugEnum`-Methoden und listet `ICorDebugStepper`-Arrays auf.  
   
- [ICorDebugStringValue-Schnittstelle1](icordebugstringvalue-interface.md)\
+ [ICorDebugStringValue-Schnittstelle](icordebugstringvalue-interface.md)\
  Eine Unterklasse von `ICorDebugHeapValue`, die für Zeichenfolgenwerte gilt.  
   
  [ICorDebugSymbolProvider-Schnittstelle](icordebugsymbolprovider-interface.md)\
@@ -364,10 +364,10 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugSymbolProvider2-Schnittstelle](icordebugsymbolprovider2-interface.md)\
  Erweitert logisch die [ICorDebugSymbolProvider](icordebugsymbolprovider-interface.md) Schnittstelle, um zusätzliche Debugsymbolinformationen abzurufen. **Nur .NET Native verfügbar.**  
   
- [ICorDebugThread-Schnittstelle1](icordebugthread-interface.md)\
+ [ICorDebugThread-Schnittstelle](icordebugthread-interface.md)\
  Stellt einen Thread in einem Prozess dar. Die Lebensdauer einer `ICorDebugThread`-Instanz ist identisch mit der Lebensdauer des von ihr dargestellten Threads.  
   
- [ICorDebugThread2-Schnittstelle1](icordebugthread2-interface.md)\
+ [ICorDebugThread2-Schnittstelle](icordebugthread2-interface.md)\
  Fungiert als logische Erweiterung von `ICorDebugThread`.  
   
  [ICorDebugThread3-Schnittstelle](icordebugthread3-interface.md)\
@@ -376,16 +376,16 @@ In diesem Abschnitt werden die unverwalteten Schnittstellen beschrieben, die das
  [ICorDebugThread4-Schnittstelle](icordebugthread4-interface.md)\
  Stellt Informationen zur Threadblockierung bereit.  
   
- [ICorDebugThreadEnum-Schnittstelle1](icordebugthreadenum-interface1.md)\
+ [ICorDebugThreadEnum-Schnittstelle](icordebugthreadenum-interface1.md)\
  Implementiert `ICorDebugEnum`-Methoden und listet `ICorDebugThread`-Arrays auf.  
   
- [ICorDebugType-Schnittstelle1](icordebugtype-interface.md)\
+ [ICorDebugType-Schnittstelle](icordebugtype-interface.md)\
  Stellt einen Typ dar, der entweder grundlegend oder komplex (das heißt benutzerdefiniert) sein kann. Wenn der Typ generisch ist, stellt `ICorDebugType` den instanziierten generischen Typ dar.  
   
  [ICorDebugType2-Schnittstelle](icordebugtype2-interface.md)\
  Erweitert die [ICorDebugType](icordebugtype-interface.md) Schnittstelle, um die Typ-ID von einem Basistyp oder einen komplexen Typ auf (Benutzerdefiniert) abzurufen.  
   
- [ICorDebugTypeEnum-Schnittstelle1](icordebugtypeenum-interface.md)\
+ [ICorDebugTypeEnum-Schnittstelle](icordebugtypeenum-interface.md)\
  Implementiert `ICorDebugEnum`-Methoden und listet `ICorDebugType`-Arrays auf.  
   
  [ICorDebugUnmanagedCallback-Schnittstelle](icordebugunmanagedcallback-interface.md)\

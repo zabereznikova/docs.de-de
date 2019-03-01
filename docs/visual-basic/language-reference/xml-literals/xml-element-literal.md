@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 54ad162a1a720a1645a3b413e6518d2ccfd37bbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595915"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56979923"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML-Elementliteral (Visual Basic)
 
@@ -119,7 +119,7 @@ Ein Literal, das stellt ein <xref:System.Xml.Linq.XElement> Objekt.
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie ein einfaches XML-Element zu erstellen, das über zwei geschachtelte leere Elemente verfügt.  
   
- [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#20)]  
   
  Das Beispiel zeigt den folgenden Text. Beachten Sie, dass das Literal, die Struktur der leere Elemente beibehält.  
   
@@ -133,7 +133,7 @@ Ein Literal, das stellt ein <xref:System.Xml.Linq.XElement> Objekt.
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie eingebettete Ausdrücke benennen ein Element, und erstellen Sie Attribute verwenden.  
   
- [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_2.vb)]  
+ [!code-vb[VbXMLSamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples9.vb#21)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   
@@ -144,7 +144,7 @@ Ein Literal, das stellt ein <xref:System.Xml.Linq.XElement> Objekt.
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel deklariert `ns` als ein XML-Namespacepräfix. Anschließend verwendet das Präfix des Namespace, um das Erstellen von XML-Literale und zeigt die endgültige Form des Elements an.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_3.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  Durch diesen Code wird folgender Text angezeigt:  
   

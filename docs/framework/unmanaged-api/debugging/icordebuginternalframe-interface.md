@@ -1,5 +1,5 @@
 ---
-title: ICorDebugInternalFrame Interface1
+title: ICorDebugInternalFrame-Schnittstelle
 ms.date: 03/30/2017
 api_name:
 - ICorDebugInternalFrame
@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1fab8221bd160a74bb44c3ed0721ad4620e93419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a1af92cbce84b674058ab2c8af2e15b0070dcd8
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692794"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974756"
 ---
-# <a name="icordebuginternalframe-interface1"></a>ICorDebugInternalFrame Interface1
+# <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame-Schnittstelle
+
 Stellt einen internen Common Language Runtime-Frame im Stapel dar. Diese Schnittstelle ist eine Unterklasse der ICorDebugFrame-Schnittstelle.  
   
 ## <a name="methods"></a>Methoden  

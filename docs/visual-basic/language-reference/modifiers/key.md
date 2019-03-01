@@ -8,26 +8,26 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 695f356f44bfd6ea5ad3c0a977ec31ddfbea2b05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f4778b69963c7b0df14308b3cb6312555647b92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668222"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967775"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 Die `Key` Schlüsselwort können Sie Verhalten für Eigenschaften anonymer Typen anzugeben. Nur Eigenschaften bestimmen Sie, wie Tests für Gleichheit zwischen Instanzen eines anonymen Typs oder eine Berechnung des Code-Hashwerte Schlüsseleigenschaften teilnehmen. Die Werte der Eigenschaften können nicht geändert werden.  
   
  Eine Eigenschaft eines anonymen Typs wird als Schlüsseleigenschaft gekennzeichnet, indem Sie das Schlüsselwort `Key` vor ihrer Deklaration in der Initialisierungsliste. Im folgenden Beispiel `Airline` und `FlightNo` sind Schlüsseleigenschaften, aber `Gate` nicht.  
   
- [!code-vb[VbVbalrAnonymousTypes#26](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#26)]  
   
  Wenn ein neuer anonymer Typ erstellt wird, erbt direkt von <xref:System.Object>. Der Compiler überschreibt drei geerbte Member: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, und <xref:System.Object.ToString%2A>. Der überschreibende Code, der für die erzeugt wird <xref:System.Object.Equals%2A> und <xref:System.Object.GetHashCode%2A> basiert auf Eigenschaften. Wenn keine Eigenschaften vorhanden, geben Sie in das sind <xref:System.Object.GetHashCode%2A> und <xref:System.Object.Equals%2A> nicht überschrieben werden.  
   
 ## <a name="equality"></a>Gleichheit  
  Wenn sie Instanzen des gleichen Typs sind und die Werte der Eigenschaften, die ihren Schlüssel gleich sind, werden die zwei Instanzen eines anonymen Typs gleich sind. In den folgenden Beispielen `flight2` gleich `flight1` aus dem vorherigen Beispiel, da sie Instanzen desselben anonymen sind Typ und sie haben übereinstimmende Werte für ihre Haupteigenschaften. Allerdings `flight3` ist nicht gleich `flight1` da sie einen anderen Wert für eine Schlüsseleigenschaft verfügt `FlightNo`. Instanz `flight4` ist nicht der gleiche Typ wie `flight1` , da sie andere Eigenschaften als Schlüsseleigenschaften festlegen.  
   
- [!code-vb[VbVbalrAnonymousTypes#27](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_2.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#27)]  
   
  Wenn zwei Instanzen mit nur nicht schlüsselbezogene Eigenschaften Name, Datentyp, Reihenfolge und Wert identisch deklariert werden, sind die beiden Instanzen nicht gleich. Eine Instanz ohne Schlüsseleigenschaften entspricht nur sich selbst zur Verfügung.  
   
@@ -38,20 +38,20 @@ Die `Key` Schlüsselwort können Sie Verhalten für Eigenschaften anonymer Typen
   
  Instanzen eines anonymen Typs, die die gleichen Werte für alle Schlüsseleigenschaften haben den gleichen Hashcodewert aus, auch wenn nicht schlüsselbezogene Eigenschaften keine übereinstimmenden Werte. Die folgende Anweisung gibt `True`.  
   
- [!code-vb[VbVbalrAnonymousTypes#37](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_3.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#37)]  
   
  Instanzen eines anonymen Typs, die unterschiedliche für eine oder mehrere wichtige Eigenschaften Werte haben unterschiedliche Hashwerte für Code. Die folgende Anweisung gibt `False`.  
   
- [!code-vb[VbVbalrAnonymousTypes#38](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_4.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#38)]  
   
  Instanzen von anonymen Typen, die verschiedene Eigenschaften als Eigenschaften festlegen, sind keine Instanzen desselben Typs. Sie weisen die Werte der anderen Hash-Code, selbst, wenn die Namen und Werte aller Eigenschaften identisch sind. Die folgende Anweisung gibt `False`.  
   
- [!code-vb[VbVbalrAnonymousTypes#39](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_5.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#39)]  
   
 ## <a name="read-only-values"></a>Schreibgeschützte Werte  
  Die Werte der Eigenschaften können nicht geändert werden. Z. B. in `flight1` in den vorherigen Beispielen die `Airline` und `FlightNo` Felder sind schreibgeschützt, aber `Gate` kann geändert werden.  
   
- [!code-vb[VbVbalrAnonymousTypes#28](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/key_6.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Definition von anonymen Typen](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)

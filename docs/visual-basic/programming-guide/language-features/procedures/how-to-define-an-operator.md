@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 6ced9e2ab71ccb00c9ce3495e38d895a7104fdde
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 1e7d767b1ba370ac7303abfd8aa3606a43c33de9
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738655"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973287"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Vorgehensweise: Definieren eines Operators (Visual Basic)
 Wenn Sie eine Klasse oder Struktur definiert haben, können Sie das Verhalten von Standardoperatoren definieren (z. B. `*`, `<>`, oder `And`) Wenn eine oder beide der Operanden vom Typ der Klasse oder Struktur ist.  
@@ -30,11 +30,11 @@ Wenn Sie eine Klasse oder Struktur definiert haben, können Sie das Verhalten vo
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel definiert die `+` Operator für eine Struktur namens `height`. Die Struktur wird verwendet, gemessen in Fuß und Zoll Höhe. Eine *Zoll* ist 2,54 Zentimeter, *foot* ist 12 Zoll. Um sicherzustellen, dass normalisierte Werte (Zoll < 12.0), der Konstruktor führt *modulo* arithmetische 12. Die `+` Operator wird der Konstruktor verwendet, um normalisierte Werte zu generieren.  
   
- [!code-vb[VbVbcnProcedures#25](./codesnippet/VisualBasic/how-to-define-an-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#25)]  
   
  Sie können die Struktur testen `height` durch den folgenden Code.  
   
- [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
   
   
 ## <a name="see-also"></a>Siehe auch

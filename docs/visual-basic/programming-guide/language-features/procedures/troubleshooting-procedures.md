@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: 5ef0a485a0b114f465aac694970ec3350b26f35a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648546"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972000"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>Problembehandlung bei Prozeduren (Visual Basic)
 Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei der Verwendung von Prozeduren an.  
@@ -41,7 +41,7 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
   
  **Richtige Vorgehensweise:** Um die Elemente eines Arrays zu ändern, die zurückgegeben werden soll, definieren Sie ein internes Array als lokale Variable. Im folgende Beispiel wird ohne Fehler kompiliert.  
   
- [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#66)]  
   
 ## <a name="argument-not-being-modified-by-procedure-call"></a>Argument nicht geändert wird durch Prozeduraufruf  
  Wenn Sie beabsichtigen, eine Prozedur ein Programmierelement, das zugrunde liegende Argument im aufrufenden Code ändern zu können, müssen Sie es als Verweis übergeben. Aber eine Prozedur kann auf die Elemente eines Typarguments Verweis zugreifen, selbst wenn er als Wert übergeben.  
@@ -52,13 +52,13 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
   
  Das folgende Beispiel definiert zwei Prozeduren, die eine Array-Variable als Wert und ausgeführt werden, die Elemente. Prozedur `increase` einfach auf die einzelnen Elemente hinzugefügt. Prozedur `replace` weist ein neues Array, an den Parameter `a()` , und klicken Sie dann auf die einzelnen Elemente hinzugefügt. Die neuzuweisung ist jedoch nicht die zugrunde liegende Arrayvariable im aufrufenden Code beeinträchtigen, da `a()` deklariert `ByVal`.  
   
- [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
   
- [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#38)]  
   
  Im folgenden Beispiel wird die Aufrufe von `increase` und `replace`.  
   
- [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]  
   
  Die erste `MsgBox` aufrufen, zeigt "nach increase(n):: 11, 21, 31, 41". Da `n` ist ein Verweistyp, `increase` können ihre Member, ändern, obwohl er übergeben wird `ByVal`.  
   
@@ -66,7 +66,7 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
   
  **Richtige Vorgehensweise:** Um eine zugrunde liegende Variablenelement ändern können, als Verweis übergeben. Das folgende Beispiel zeigt die Änderung in der Deklaration der `replace` , ermöglicht es, ein Array mit einem anderen im aufrufenden Code zu ersetzen.  
   
- [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#64)]  
   
 ## <a name="unable-to-define-an-overload"></a>Definieren Sie eine Überladung kann nicht  
  Wenn Sie eine überladene Version einer Prozedur definieren möchten, müssen Sie den gleichen Namen und eine andere Signatur verwenden. Wenn der Compiler die Deklaration aus einer Überladung mit derselben Signatur unterscheiden kann, wird einen Fehler generiert.  
@@ -108,9 +108,9 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
   
  Das folgende Beispiel veranschaulicht die überladungsauflösungsprozesses.  
   
- [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
- [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
  Im ersten Aufruf wird der Compiler beseitigt die erste Überladung, da der Typ des ersten Arguments (`Short`) wird in den Typ des entsprechenden Parameters (`Byte`). Klicken Sie dann beseitigt, die dritte Überladung, da jedes Typargument in der zweiten Überladung (`Short` und `Single`) wird in den entsprechenden Typen in der dritten Überladung erweitert (`Integer` und `Single`). Die zweite Überladung eine geringere Erweiterung erfordert, damit der Compiler für den Aufruf verwendet.  
   
@@ -118,7 +118,7 @@ Diese Seite listet einige der häufigsten Probleme, die auftreten können, bei d
   
  **Richtige Vorgehensweise:** Verwenden Sie zum Aufrufen eine überladene Prozedur eindeutig sein, [CType-Funktion](../../../../visual-basic/language-reference/functions/ctype-function.md) mit den Datentypen der Argumente mit den Parametertypen übereinstimmen. Das folgende Beispiel zeigt einen Aufruf von `z` wird, die die Auflösung in die zweite Überladung erzwungen.  
   
- [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#65)]  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>Überladen von Auflösung mit optionalen "und" ParamArray-Argumente  
  Wenn zwei Überladungen einer Prozedur identische Signaturen verfügen, mit dem Unterschied, dass der letzte Parameter deklariert, wird [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in einem und [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in die andere ist der Compiler löst einen Aufruf dieser Prozedur nach der nächsten Übereinstimmung. Weitere Informationen finden Sie unter [Overload Resolution](./overload-resolution.md).  

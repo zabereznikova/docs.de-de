@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 6dd71a01aeb56a6805689b6e898ab9c2c404959b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640757"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976498"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Logische und bitweise Operatoren in Visual Basic
 Logische Operatoren vergleichen `Boolean` Ausdrücke und Rückgabe einer `Boolean` Ergebnis. Die `And`, `Or`, `AndAlso`, `OrElse`, und `Xor` Operatoren sind *binäre* , da sie zwei Operanden in Anspruch nehmen, während er sich die `Not` Operator *unäre* , da die kann eines einzelnen Operanden aus. Einige dieser Operatoren können auch die bitweise logische Operationen für ganzzahlige Werte ausführen.  
@@ -34,7 +34,7 @@ Logische Operatoren vergleichen `Boolean` Ausdrücke und Rückgabe einer `Boolea
 ## <a name="unary-logical-operator"></a>Unärer logischer Operator  
  Die [Not-Operator](../../../../visual-basic/language-reference/operators/not-operator.md) führt logische *Negation* auf eine `Boolean` Ausdruck. Er stellt das logische Gegenteil des Operanden. Wenn der Ausdruck ergibt `True`, klicken Sie dann `Not` gibt `False`; Wenn der Ausdruck ergibt `False`, klicken Sie dann `Not` gibt `True`. Dies wird anhand des folgenden Beispiels veranschaulicht.  
   
- [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
 ## <a name="binary-logical-operators"></a>Binären logischen Operatoren  
  Die [und Operator](../../../../visual-basic/language-reference/operators/and-operator.md) führt logische *zusammen* für zwei `Boolean` Ausdrücke. Wenn beide Ausdrücke `True`, klicken Sie dann `And` gibt `True`. Wenn mindestens einer der Ausdrücke ergibt `False`, klicken Sie dann `And` gibt `False`.  
@@ -45,7 +45,7 @@ Logische Operatoren vergleichen `Boolean` Ausdrücke und Rückgabe einer `Boolea
   
  Das folgende Beispiel veranschaulicht die `And`, `Or`, und `Xor` Operatoren.  
   
- [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
 ## <a name="short-circuiting-logical-operations"></a>Kurzschließen von logischen Operationen  
  Die [AndAlso-Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md) ähnelt sehr der `And` -Operator, da er führt auch logischen Konjunktion für zwei `Boolean` Ausdrücke. Der Hauptunterschied zwischen den beiden ist, `AndAlso` weist *kurzschließen* Verhalten. Wenn der erste Ausdruck in einer `AndAlso` Ausdruck wird zu `False`, und klicken Sie dann der zweite Ausdruck nicht ausgewertet, weil es das endgültige Ergebnis, alter kann nicht und `AndAlso` gibt `False`.  
@@ -57,18 +57,18 @@ Logische Operatoren vergleichen `Boolean` Ausdrücke und Rückgabe einer `Boolea
   
  Das folgende Beispiel veranschaulicht den Unterschied zwischen `And`, `Or`, und ihren entsprechenden Kurzschlussoperatoren.  
   
- [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
- [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#80](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#80)]  
   
- [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
  Im vorherigen Beispiel beachten Sie, dass wichtiger Code in `checkIfValid()` wird nicht ausgeführt werden, wenn der Aufruf kurzgeschlossen wird. Die erste `If` Anweisung ruft `checkIfValid()` , obwohl `12 > 45` gibt `False`, da `And` keinen Kurzschluss ausführt. Die zweite `If` Anweisung ruft nicht `checkIfValid()`, da beim `12 > 45` gibt `False`, `AndAlso` wird verkürzt den zweiten Ausdruck. Die dritte `If` Anweisung ruft `checkIfValid()` , obwohl `12 < 45` gibt `True`, da `Or` keinen Kurzschluss ausführt. Der vierte `If` Anweisung ruft nicht `checkIfValid()`, da beim `12 < 45` gibt `True`, `OrElse` wird verkürzt den zweiten Ausdruck.  
   
 ## <a name="bitwise-operations"></a>Bitweise Operationen  
  Bitweise Operationen ausgewertet werden zwei ganzzahlige Werte im binären (Basis 2)-Format. Sie vergleichen die Bits an den entsprechenden Positionen und weisen Sie dann Werte, die auf Basis des Vergleichs. Das folgende Beispiel veranschaulicht die `And` Operator.  
   
- [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/logical-and-bitwise-operators_6.vb)]  
+ [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
  Im vorherigen Beispiel wird den Wert des `x` auf 1. In diesem Fall den folgenden Gründen:  
   

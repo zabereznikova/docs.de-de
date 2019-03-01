@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8268aca920c0b9fc8ea3390d80b9164c22c1ad9c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719975"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977855"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi-Funktion
 Erstellt oder aktualisiert eine Instanz einer vorhandenen Klasse. Die Instanz wird in das WMI-Repository geschrieben. 
@@ -49,7 +49,7 @@ HRESULT PutInstanceWmi (
 
 |Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Wenn festgelegt, WMI keine keine Qualifizierer mit speichert die **Amended** Flavor. </br> Wenn dies nicht festgelegt ist, wird davon ausgegangen, dass dieses Objekt nicht lokalisiert ist und alle Qualifizierer Storedwith dieser Instanz. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Wenn festgelegt, WMI keine keine Qualifizierer mit speichert die **Amended** Flavor. <br> Wenn dies nicht festgelegt ist, wird davon ausgegangen, dass dieses Objekt nicht lokalisiert ist und alle Qualifizierer Storedwith dieser Instanz. |
 | `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Erstellen Sie die Instanz aus, wenn er nicht vorhanden ist, oder überschrieben, falls sie bereits vorhanden ist. |
 | `WBEM_FLAG_UPDATE_ONLY` | 1 | Aktualisieren Sie die Instanz. Die Instanz muss vorhanden sein, der Aufruf erfolgreich ist. |
 | `WBEM_FLAG_CREATE_ONLY` | 2 | Erstellen Sie die Instanz. Der Aufruf schlägt fehl, wenn die Instanz bereits vorhanden ist. |

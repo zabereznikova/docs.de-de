@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: dc940105bbeb5e54819b8df5d5b3c831c7a6e145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e519fcaf90c6f18e75d5c409cbe7067d5db36429
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527314"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975939"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Benutzerdefinierte Konstanten (Visual Basic)
 Eine Konstante ist, einen aussagekräftigen Namen, der nimmt den Platz einer Zahl oder Zeichenfolge, die nicht geändert wird. Konstanten speichern Werte, die, wie der Name schon sagt, während der Ausführung einer Anwendung konstant bleiben. Konstanten, die definiert werden, indem Sie die Steuerelemente oder Komponenten, mit denen Sie zusammenarbeiten können, oder können Sie Ihre eigenen erstellen. Konstanten, die Sie selbst erstellen, werden als beschrieben *benutzerdefinierte*.  
@@ -24,15 +24,15 @@ Eine Konstante ist, einen aussagekräftigen Namen, der nimmt den Platz einer Zah
 ## <a name="const-statement-usage"></a>Const-Anweisung  
  Ein `Const` -Anweisung kann eine mathematische Darstellung oder Datum/Uhrzeit-Menge:  
   
- [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_1.vb)]  
+ [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
   
  Sie können auch definieren, `String` Konstanten:  
   
- [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_2.vb)]  
+ [!code-vb[VbEnumsTask#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#13)]  
   
  Der Ausdruck auf der rechten Seite des Gleichheitszeichens ( `=` ) ist häufig eine Zahl oder Zeichenfolge, es kann aber auch ein Ausdruck, der eine Zahl oder Zeichenfolge führt (Obwohl dieses Ausdrucks Aufrufe von Funktionen enthalten kann). Sie können auch Konstanten in Bezug auf die zuvor definierten Konstanten definieren:  
   
- [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_3.vb)]  
+ [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
 ## <a name="scope-of-user-defined-constants"></a>Bereich der benutzerdefinierte Konstanten  
  Ein `Const` Anweisung-Bereich ist identisch mit einer Variablen, die sich am gleichen Standort deklariert. Sie können den Bereich in einem der folgenden Arten angeben:  
@@ -50,8 +50,8 @@ Eine Konstante ist, einen aussagekräftigen Namen, der nimmt den Platz einer Zah
 ### <a name="avoiding-circular-references"></a>Vermeiden von Zirkelbezügen  
  Da Konstanten im Hinblick auf andere Konstanten definiert werden können, ist es möglich, versehentlich erstellen eine *Zyklus*, oder ein zirkulärer Verweis zwischen zwei oder mehr Konstanten. Ein Zyklus tritt auf, wenn Sie zwei oder mehr öffentliche Konstanten, von die jedes in Bezug auf die andere, wie im folgenden Beispiel definiert ist:  
   
- [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
-[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
+ [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  
+[!code-vb[VbEnumsTask#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#17)]  
   
  Wenn eine Schleife auftritt, generiert Visual Basic einen Compilerfehler.  
   

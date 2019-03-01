@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: ea14cc8182b8917a0805fbc509a0000c6df67462
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: bf7a434569bf82066c79962ae24741759b97e5ce
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267039"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973690"
 ---
 # <a name="include-visual-basic"></a>\<umfassen > (Visual Basic)
 Bezieht sich auf eine andere Datei, die die Typen und Member im Quellcode beschreibt.  
@@ -42,7 +42,7 @@ Bezieht sich auf eine andere Datei, die die Typen und Member im Quellcode beschr
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel verwendet die `<include>` Tag zum Importieren von Dokumentationskommentaren Member aus einer Datei namens `commentFile.xml`.  
   
- [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#4)]  
   
  Das Format der `commentFile.xml` lautet wie folgt.  
   

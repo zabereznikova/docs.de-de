@@ -2,18 +2,18 @@
 title: Was ist F#
 description: Erfahren Sie, was der F#-Programmiersprache und F#-Programmierung wie. Informationen Sie zu Datentypen, Funktionen und deren Zusammenwirken.
 ms.date: 08/03/2018
-ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: ea82147e4e6d3c980fb224eeafd805c7ed53f8f2
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43863295"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56966957"
 ---
-# <a name="what-is-f"></a>Was ist F# #
+# <a name="what-is-f"></a>Was ist F\#
 
-F# ist eine funktionale Programmiersprache, die es einfach macht, die richtigen und verwaltbaren Code zu schreiben.
+F#ist eine funktionale Programmiersprache, die es einfach macht, die richtigen und verwaltbaren Code zu schreiben.
 
-F#-Programmierung wird in erster Linie an, Definieren von Typen und Funktionen, die automatisch generalisiert und Typ abgeleitet. Dadurch können sich der Fokus auf der Problemdomäne und bearbeiten die Details der Programmierung, anstatt die Daten verbleiben.
+F#Programmieren in erster Linie umfasst das Definieren von Typen und Funktionen, die automatisch generalisiert und Typ abgeleitet. Dadurch können sich der Fokus auf der Problemdomäne und bearbeiten die Details der Programmierung, anstatt die Daten verbleiben.
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,7 +35,7 @@ let main args =
     0
 ```
 
-F# verfügt über zahlreiche Features, darunter:
+F#verfügt über zahlreiche Features, darunter:
 
 * Einfache syntax
 * Standardmäßig unveränderlich
@@ -45,7 +45,7 @@ F# verfügt über zahlreiche Features, darunter:
 * Musterabgleich
 * Asynchrone Programmierung
 
-Ein vollständiger Satz von Features sind in dokumentiert die [F#-Sprachreferenz](language-reference/index.md).
+Ein vollständiger Satz von Features sind in dokumentiert die [ F# Sprachreferenz](language-reference/index.md).
 
 ## <a name="rich-data-types"></a>Rich-Datentypen
 
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F#-Datensätze und Unterscheidungs-Unions sind ungleich Null, unveränderliche und vergleichbare standardmäßig, sodass sie sehr einfach zu verwenden.
+F#Datensätze und Unterscheidungs-Unions sind ungleich Null, unveränderliche und vergleichbare standardmäßig, sodass sie sehr einfach zu verwenden.
 
 ## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Erzwungene Richtigkeit mit Funktionen und des musterabgleichs
 
-F#-Funktionen sind einfach zu deklarieren und leistungsstarke in der Praxis. In Kombination mit [Musterabgleich](language-reference/pattern-matching.md), können Sie sich zur Verhalten definieren, deren Richtigkeit wird vom Compiler erzwungen.
+F#Funktionen sind einfach zu deklarieren und leistungsstarke in der Praxis. In Kombination mit [Musterabgleich](language-reference/pattern-matching.md), können Sie sich zur Verhalten definieren, deren Richtigkeit wird vom Compiler erzwungen.
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F#-Funktionen sind auch erstklassige, d. h., sie als Parameter übergeben und von anderen Funktionen zurückgegeben werden können.
+F#Funktionen sind auch erstklassige, d. h., sie als Parameter übergeben und von anderen Funktionen zurückgegeben werden können.
 
 ## <a name="functions-to-define-operations-on-objects"></a>Funktionen, um Vorgänge für Objekte zu definieren.
 
-F# bietet vollständige Unterstützung für Objekte, die nützliche Daten-Typen sind, wenn Sie Daten und Funktionen in blend müssen. F#-Funktionen werden verwendet, um Objekte zu bearbeiten.
+F#bietet vollständige Unterstützung für Objekte, die nützliche Daten-Typen sind, wenn Sie Daten und Funktionen in blend müssen. F#Funktionen werden verwendet, um Objekte zu bearbeiten.
 
 ```fsharp
 type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
@@ -119,8 +119,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-Anstatt das Schreiben von Code, der objektorientiert, in F# ist, Schreiben häufig Sie Code, die behandelt werden, wie ein anderer Datentyp für die Funktionen zum Bearbeiten. Funktionen, z. B. [generische Schnittstellen](language-reference/interfaces.md), [Objektausdrücke](language-reference/object-expressions.md), und zielgerichtete Verwendung von [Mitglieder](language-reference/members/index.md) werden häufig in größeren F#-Programmen.
+Anstatt das Schreiben von Code, der objektorientiert, in F# ist, Schreiben häufig Sie Code, die behandelt werden, wie ein anderer Datentyp für die Funktionen zum Bearbeiten. Funktionen, z. B. [generische Schnittstellen](language-reference/interfaces.md), [Objektausdrücke](language-reference/object-expressions.md), und zielgerichtete Verwendung von [Mitglieder](language-reference/members/index.md) werden häufig in größeren F# Programme.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu einen größeren Satz von F#-Funktionen, sehen Sie sich die [F#-Tour](tour.md).
+Weitere Informationen zu einem größeren Satz F# Features sehen Sie sich die [ F# Tour](tour.md).

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 5de13fc4da371220f46a107ca9b620e1313e75d4
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307525"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981568"
 ---
 # <a name="introducing-xml-serialization"></a>Einführung in die XML-Serialisierung
 
@@ -28,7 +28,8 @@ Unter Serialisierung wird das Konvertieren des Zustands eines Objekts in eine Fo
 > [!NOTE]
 > Methoden, Indexer, private Felder und schreibgeschützte Eigenschaften(ausgenommen schreibgeschützte Auflistungen) werden bei der XML-Serialisierung nicht konvertiert. Verwenden Sie <xref:System.Runtime.Serialization.DataContractSerializer> statt der XML-Serialisierung, wenn alle öffentlichen und privaten Felder und Eigenschaften eines Objekts serialisiert werden sollen.
 
- Bei der XML-Serialisierung ist die <xref:System.Xml.Serialization.XmlSerializer>-Klasse die zentrale Klasse, und die wichtigsten Methoden dieser Klasse sind die **Serialize**-Methode und die **Deserialize**-Methode. <xref:System.Xml.Serialization.XmlSerializer> erstellt C#-Dateien und kompiliert sie in DLL-Dateien, um diese Serialisierung auszuführen. In .NET Framework 2.0 ist [XML Serializer Generator Tool (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) dafür konzipiert, diese Serialisierungsassemblys vorab zu erzeugen, die zusammen mit der Anwendung bereitgestellt werden sollen, und die Startleistung zu verbessern. Der XML-Stream von generiert die **XmlSerializer** ist kompatibel mit der Spezifikation des World Wide Web Consortium (W3C) [XML-Schemadefinitionssprache (XSD) 1.0 Empfehlung](https://www.w3.org/TR/xslt). Darüber hinaus die generierten Datentypen kompatibel sind mit dem Dokument mit dem Titel "XML Schema Part 2: "Datatypes."
+ Bei der XML-Serialisierung ist die <xref:System.Xml.Serialization.XmlSerializer>-Klasse die zentrale Klasse, und die wichtigsten Methoden dieser Klasse sind die **Serialize**-Methode und die **Deserialize**-Methode. 
+  <xref:System.Xml.Serialization.XmlSerializer> erstellt C#-Dateien und kompiliert sie in DLL-Dateien, um diese Serialisierung auszuführen. In .NET Framework 2.0 ist [XML Serializer Generator Tool (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) dafür konzipiert, diese Serialisierungsassemblys vorab zu erzeugen, die zusammen mit der Anwendung bereitgestellt werden sollen, und die Startleistung zu verbessern. Der XML-Stream von generiert die **XmlSerializer** ist kompatibel mit der Spezifikation des World Wide Web Consortium (W3C) [XML-Schemadefinitionssprache (XSD) 1.0 Empfehlung](https://www.w3.org/TR/xslt). Darüber hinaus die generierten Datentypen kompatibel sind mit dem Dokument mit dem Titel "XML Schema Part 2: "Datatypes."
 
  Die Daten des Objekts werden durch Konstrukte der Programmiersprache beschrieben, z.B. Klassen, Felder, Eigenschaften, primitive Typen, Arrays oder auch eingebettetes XML in Form von **XmlElement**- oder **XmlAttribute**-Objekten. Sie können eigene, mit Attributen versehene Klassen erstellen oder Klassen mit dem XML Schema Definition-Tool auf der Grundlage eines vorhandenen XML-Schemas generieren.
 
@@ -38,7 +39,7 @@ Unter Serialisierung wird das Konvertieren des Zustands eines Objekts in eine Fo
 
  Die **XmlSerializer**-Klasse kann überdies ein Objekt serialisieren und einen codierten SOAP-XML-Stream generieren. Das generierte XML entspricht Abschnitt 5 des World Wide Web Consortium-Dokuments mit dem Titel "Simple Object Access-Protokoll (SOAP) 1.1." Weitere Informationen zu diesem Prozess finden Sie unter [Vorgehensweise: Serialisieren eines Objekts als ein SOAP-codierten XML-Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md). Eine Tabelle der Attribute, die sich auf den generierten XML-Code auswirken, finden Sie unter [Attributes That Control Encoded SOAP Serialization (Attribute zum Steuern der codierten SOAP-Serialisierung)](attributes-that-control-encoded-soap-serialization.md).
 
- Die **XmlSerializer**-Klasse generiert die SOAP-Nachrichten, die durch XML-Webdienste erstellt und an XML-Webdienste übergeben werden. Zur Steuerung der SOAP-Nachrichten können Sie Attribute auf die Klassen, Rückgabewerte, Parameter und Felder einer Webdienstdatei (ASMX) anwenden. Sie können sowohl die unter "Attribute zur Steuerung der XML-Serialisierung" als auch die unter "Attribute zur Steuerung der Serialisierung von codiertem SOAP" aufgeführten Attribute verwenden, weil XML-Webdienste sowohl das literale als auch das codierte SOAP-Format verarbeiten können. Weitere Informationen dazu, wie sich der von einem XML-Webdienst erzeugte XML-Code mit Attributen steuern lässt, finden Sie unter [XML Serialization with XML Web Services (XML-Serialisierung mit XML-Webdiensten)](xml-serialization-with-xml-web-services.md). Weitere Informationen zu SOAP und XML-Webdiensten finden Sie unter [Customizing SOAP Messages (Anpassen von SOAP-Nachrichten)](https://msdn.microsoft.com/subscriptions/index/dkwy2d72\(v=vs.71\).aspx).
+ Die **XmlSerializer**-Klasse generiert die SOAP-Nachrichten, die durch XML-Webdienste erstellt und an XML-Webdienste übergeben werden. Zur Steuerung der SOAP-Nachrichten können Sie Attribute auf die Klassen, Rückgabewerte, Parameter und Felder einer Webdienstdatei (ASMX) anwenden. Sie können sowohl die unter "Attribute zur Steuerung der XML-Serialisierung" als auch die unter "Attribute zur Steuerung der Serialisierung von codiertem SOAP" aufgeführten Attribute verwenden, weil XML-Webdienste sowohl das literale als auch das codierte SOAP-Format verarbeiten können. Weitere Informationen dazu, wie sich der von einem XML-Webdienst erzeugte XML-Code mit Attributen steuern lässt, finden Sie unter [XML Serialization with XML Web Services (XML-Serialisierung mit XML-Webdiensten)](xml-serialization-with-xml-web-services.md). Weitere Informationen zu SOAP und XML-Webdiensten, finden Sie unter [Anpassen von SOAP-Nachricht formatieren](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)).
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>Sicherheitsüberlegungen zu XmlSerializer-Anwendungen
 

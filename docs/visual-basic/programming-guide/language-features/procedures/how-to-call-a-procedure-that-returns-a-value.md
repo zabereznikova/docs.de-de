@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: 8d9c7f3eadfa0095e0ed49b3a7a207fd3f7f8769
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10167075e903693df804cba044301e1f1bc6306e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525455"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56974457"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Vorgehensweise: Aufrufen einer Prozedur, die einen Wert zurückgibt (Visual Basic)
 Ein `Function` Prozedur gibt einen Wert an den aufrufenden Code zurück. Rufen Sie sie einschließlich der Namen und die Argumente entweder auf der rechten Seite einer zuweisungsanweisung oder in einem Ausdruck.  
@@ -42,7 +42,7 @@ Ein `Function` Prozedur gibt einen Wert an den aufrufenden Code zurück. Rufen S
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Visual Basic <xref:Microsoft.VisualBasic.Interaction.Environ%2A> zum Abrufen des Werts einer Betriebssystem-Umgebungsvariablen. Die erste Zeile ruft `Environ` in einen Ausdruck ein, und die zweite Zeile ruft es in einer zuweisungsanweisung. `Environ` akzeptiert den Namen den Variablen als einziges Argument. Der Wert der Variablen zurückgegeben an den aufrufenden Code.  
   
- [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
+ [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Function-Prozeduren](./function-procedures.md)

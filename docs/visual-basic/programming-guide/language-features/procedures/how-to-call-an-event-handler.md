@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 6fc08e9f16753dc853daff0120661603571d9db4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58a96ccd06b70d481de335af5c3cd2be565cbd92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717971"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56973521"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Vorgehensweise: Aufrufen eines Ereignishandlers in Visual Basic
 Ein *Ereignis* ist eine Aktion oder ein Vorkommen – z. B. ein Mausklick auf oder ein Kreditlimit überschritten –, wird durch eine Programmkomponente und für die Sie Code schreiben können, reagieren erkannt. Ein *Ereignishandler* ist der Code, die Sie schreiben, um auf ein Ereignis reagieren.  
@@ -36,7 +36,7 @@ Ein *Ereignis* ist eine Aktion oder ein Vorkommen – z. B. ein Mausklick auf od
   
      Das folgende Beispiel definiert ein Ereignis und einem `WithEvents` Variable, die auf die Klasse verweist, die das Ereignis auslöst. Die Ereignisbehandlung `Sub` Beispielprozedur verwendet eine `Handles` Klausel, um anzugeben, die Klasse und das Ereignis behandelt.  
   
-     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#4)]  
   
 ### <a name="to-call-an-event-handler-using-addhandler"></a>Um einen Ereignishandler mit AddHandler aufrufen  
   
@@ -48,7 +48,7 @@ Ein *Ereignis* ist eine Aktion oder ein Vorkommen – z. B. ein Mausklick auf od
   
      Das folgende Beispiel definiert eine `Sub` Prozedur zum Behandeln der <xref:System.Windows.Forms.Form.Closing> Ereignis eines Formulars. Anschließend wird mithilfe der [AddHandler-Anweisung](../../../../visual-basic/language-reference/statements/addhandler-statement.md) Zuordnen der `catchClose` Prozedur als ein Ereignishandler für <xref:System.Windows.Forms.Form.Closing>.  
   
-     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#5)]  
   
      Sie können einen Ereignishandler von einem Ereignis trennen, durch Ausführen der [RemoveHandler-Anweisung](../../../../visual-basic/language-reference/statements/removehandler-statement.md).  
   
