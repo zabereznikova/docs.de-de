@@ -1,16 +1,10 @@
 ---
-title: Einführung in C# – interaktive Tutorials
-description: Lernen Sie C# in Ihrem Browser kennen, und beginnen Sie mit Ihrer eigenen Entwicklungsumgebung
+title: 'Einführung in C# – interaktive Tutorials'
+description: 'Lernen Sie C# in Ihrem Browser kennen, und beginnen Sie mit Ihrer eigenen Entwicklungsumgebung'
 ms.date: 01/30/2018
 ms.custom: mvc
-ms.openlocfilehash: bfd08c0885351cebb0b2d7a45e93de20fa1bc97f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186168"
 ---
-# <a name="introduction-to-c"></a>Einführung in C# #
+# <a name="introduction-to-c"></a>Einführung in C\#
 
 Willkommen bei der Einführung in die C#-Tutorials. Sie beginnen mit interaktiven Lektionen, die Sie in Ihrem Browser ausführen können.
 

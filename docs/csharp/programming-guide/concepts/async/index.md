@@ -1,13 +1,7 @@
 ---
-title: Asynchrone Programmierung mit „async“ und „await“ (C#)
+title: 'Asynchrone Programmierung mit „async“ und „await“ (C#)'
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 011ddf8e9769471f37f073b4440a909afc5e404f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759508"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Asynchrone Programmierung mit Async und Await (C#)
 Sie können Leistungsengpässe vermeiden und die Reaktionsfähigkeit der Anwendung insgesamt verbessern, indem Sie asynchrone Programmierung verwenden. Allerdings können herkömmliche Verfahren zum Schreiben von asynchronen Anwendungen kompliziert sein, weshalb es schwierig ist, diese Anwendungen zu schreiben, zu debuggen und zu verwalten.  
@@ -230,7 +224,7 @@ Asynchrone APIs in der Windows-Runtime-Programmierung weisen einen der folgenden
    
   
 ##  <a name="BKMK_NamingConvention"></a> Benennungskonvention  
- Gemäß der Konvention fügen Sie die Zeichenfolge „Async“ an die Namen von Methoden an, die einen `async`-Modifizierer besitzen.  
+Üblicherweise sollten die Namen von Methoden, die in der Regel awaitable-Typen zurückgeben (wie `Task`, `Task<T>`, `ValueTask`, `ValueTask<T>`), auf „Async“ enden. Methoden, die einen asynchronen Vorgang starten, aber keinen awaitable-Typ zurückgeben, sollten nicht auf „Async“ enden, sondern mit „Begin“, „Start“ oder einem ähnlichen Verb beginnen, sodass eindeutig ist, dass diese Methode nicht das Ergebnis des Vorgangs zurückgibt.
   
  Sie können die Konvention ignorieren, wenn ein Ereignis, eine Basisklasse oder ein Schnittstellenvertrag einen anderen Namen vorsieht. Beispielsweise sollten Sie allgemeine Ereignishandler wie `Button1_Click` nicht umbenennen.  
   

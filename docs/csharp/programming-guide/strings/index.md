@@ -1,17 +1,11 @@
 ---
-title: Zeichenfolgen – C#-Programmierhandbuch
+title: 'Zeichenfolgen – C#-Programmierhandbuch'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-- C# language, strings
-- strings [C#]
+  - 'C# language, strings'
+  - 'strings [C#]'
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ba0c9abe9a38962ab19a204019abd3ac89ae6915
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236361"
 ---
 # <a name="strings-c-programming-guide"></a>Zeichenfolgen (C#-Programmierhandbuch)
 Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text ist. Intern wird der Text als sequenzielle schreibgeschützte Auflistung von <xref:System.Char>-Objekten gespeichert. Es gibt kein mit NULL endendes Zeichen am Ende einer C#-Zeichenfolge. Deshalb kann eine C#-Zeichenfolge eine beliebige Anzahl eingebetteter NULL-Zeichen („\0“) enthalten. Die Eigenschaft <xref:System.String.Length%2A> einer Zeichenfolge stellt die Anzahl von `Char`-Objekten dar, die darin enthalten sind, nicht die Anzahl der Unicode-Zeichen. Verwenden Sie für den Zugriff auf einzelne Unicode-Codepunkte in einer Zeichenfolge das Objekt <xref:System.Globalization.StringInfo>.  
@@ -31,22 +25,22 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
 ## <a name="immutability-of-string-objects"></a>Unveränderlichkeit von Zeichenfolgenobjekten  
  Zeichenfolgenobjekte sind *unveränderlich*: sie können nicht geändert werden, nachdem sie erstellt wurden. Alle <xref:System.String>-Methoden und C#-Operatoren, die eine Zeichenfolge scheinbar verändern, geben in Wirklichkeit die Ergebnisse in einem neuen Zeichenfolgenobjekt zurück. Im folgenden Beispiel werden die beiden ursprünglichen Zeichenfolgen nicht geändert, wenn die Inhalte von `s1` und `s2` verkettet werden, um eine einzelne Zeichenfolge zu bilden. Der `+=`-Operator erstellt eine neue Zeichenfolge, die die kombinierten Inhalte enthält. Das neue Objekt wird der Variablen `s1` zugewiesen, und das ursprüngliche Objekt, das `s1` zugewiesen wurde, wird für die Garbage Collection freigegeben, da keine andere Variable einen Verweis darauf enthält.  
   
- [!code-csharp[csProgGuideStrings#2](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuideStrings#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#2)]  
   
  Da eine „Zeichenfolgenänderung“ in Wirklichkeit eine neue Erstellung von Zeichenfolgen ist, müssen Sie vorsichtig sein, wenn Sie Verweise auf Zeichenfolgen erstellen. Wenn Sie einen Verweis auf eine Zeichenfolge erstellen und dann die ursprüngliche Zeichenfolge „ändern“, wird der Verweis weiterhin auf das ursprüngliche Objekt anstelle des neuen Objekts zeigen, das erstellt wurde, als die Zeichenfolge geändert wurde. Der folgende Code veranschaulicht dieses Verhalten:  
   
- [!code-csharp[csProgGuideStrings#25](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
  Weitere Informationen zum Erstellen neuer Zeichenfolgen, die auf Änderungen wie Such- und Ersetzungsvorgängen in der ursprünglichen Zeichenfolge basieren, finden Sie unter [Vorgehensweise: Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Reguläre und ausführliche Zeichenfolgenliterale  
  Verwenden Sie reguläre Zeichenfolgenliterale, wenn Sie von C# bereitgestellte Escapezeichen einbetten müssen, wie im folgenden Beispiel gezeigt:  
   
- [!code-csharp[csProgGuideStrings#3](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideStrings#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#3)]  
   
  Verwenden Sie ausführliche Zeichenfolgen der Einfachheit und Lesbarkeit halber, wenn der Text der Zeichenfolge umgekehrte Schrägstriche enthält, z.B. in Dateipfaden. Da ausführliche Zeichenfolgen neue Zeilenzeichen als Teil des Texts der Zeichenfolge beibehalten, können sie verwendet werden, um mehrzeilige Zeichenfolgen zu initialisieren. Verwenden Sie doppelte Anführungszeichen, um ein Anführungszeichen in eine ausführliche Zeichenfolge einzubetten. Im folgenden Beispiel werden einige gängige Verwendungszwecke für allgemeine Zeichenfolgen dargestellt:  
   
- [!code-csharp[csProgGuideStrings#4](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_5.cs)]  
+ [!code-csharp[csProgGuideStrings#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#4)]  
   
 ## <a name="string-escape-sequences"></a>Zeichenfolgen-Escapesequenzen  
   

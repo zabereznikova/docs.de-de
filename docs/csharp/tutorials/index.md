@@ -1,19 +1,13 @@
 ---
-title: C#-Tutorials
-description: Probieren Sie diese C#-Tutorials aus, um die Erstellung eines C#-Programms und die C#-Sprachfeatures zu erlernen.
+title: 'C#-Tutorials'
+description: 'Probieren Sie diese C#-Tutorials aus, um die Erstellung eines C#-Programms und die C#-Sprachfeatures zu erlernen.'
 ms.date: 10/25/2018
-ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084666"
 ---
 # <a name="c-tutorials"></a>C#-Tutorials
 
 Willkommen bei den C#-Tutorials. Sie beginnen mit interaktiven Lektionen, die Sie in Ihrem Browser ausführen können. In späteren Tutorials und in weiterführenden Tutorials wird gezeigt, wie Sie die .NET-Entwicklungstools nutzen können, um C#-Programme auf Ihrem Computer zu erstellen.
 
-## <a name="introduction-to-c-interactive-tutorials"></a>Einführung in interaktiven C#-Tutorials #
+## <a name="introduction-to-c-interactive-tutorials"></a>Einführung in interaktiven C#-Tutorials
 
 In der ersten Lektion werden C#-Konzepte anhand kleiner Codeausschnitte erläutert. Sie lernen die Grundlagen der C#-Syntax kennen und wie Sie mit Datentypen wie Zeichenfolgen, Zahlen und booleschen Werten arbeiten. Komplett interaktiv, und Ihr Code ist innerhalb weniger Minuten geschrieben und zur Ausführung bereit. Diese erste Lektionen setzen keine Vorkenntnisse in der Programmierung oder C#-Sprache voraus.
 
@@ -47,7 +41,7 @@ Für dieses Tutorial wird vorausgesetzt, dass Sie die oben aufgeführten Lektion
 
 Alle einführenden Tutorials, die auf die „Hallo Welt“-Lektion folgen, sind in Ihrer eigenen lokalen Entwicklungsumgebung verfügbar. Am Ende jedes Tutorials entscheiden Sie, ob Sie mit der nächsten Lektion online oder auf Ihrem eigenen Computer fortfahren möchten. Es sind Links verfügbar, die Ihnen helfen, Ihre Umgebung einzurichten und mit dem nächsten Tutorial auf Ihrem Computer fortzufahren.
 
-## <a name="explore-new-features-in-c"></a>Erkunden neuer Features in C# #
+## <a name="explore-new-features-in-c"></a>Erkunden neuer Features in C\#
 
 Probieren Sie mithilfe dieser [interaktiven Erkundung](exploration/csharp-6.yml) die neuen Features in [C# 6](../whats-new/csharp-6.md) aus.
 
