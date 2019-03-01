@@ -1,14 +1,14 @@
 ---
 title: Befehl „dotnet vstest“
-description: Der Befehl „dotnet vstest“ erstellt ein Projekt und alle seine Abhängigkeiten.
+description: Der dotnet vstest-Befehl erstellt ein Projekt und alle seine Abhängigkeiten.
 author: guardrex
 ms.date: 05/30/2018
-ms.openlocfilehash: cafd862f6107be9173aad6d610cf6f8fd62e1489
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: d41e901f70b4a3d0647c693fdd8076f771466073
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169016"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747728"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -43,7 +43,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 ## <a name="description"></a>Beschreibung
 
-Der `dotnet-vstest`-Befehl führt die `VSTest.Console`-Befehlszeilenanwendung aus, um automatisierte Komponententests und Tests der codierten UI-Anwendung auszuführen.
+Der `dotnet-vstest`-Befehl führt die `VSTest.Console`-Befehlszeilenanwendung aus, um automatisierte Komponententests auszuführen.
 
 ## <a name="arguments"></a>Argumente
 
@@ -73,11 +73,11 @@ Verwendete Zielplattformarchitektur für die Testausführung. Gültige Werte sin
 
 `--Framework|/Framework:<Framework Version>`
 
-.NET Framework-Zielversion, in der der Test ausgeführt wird. `.NETFramework,Version=v4.6` und `.NETCoreApp,Version=v1.0` sind Beispiele für gültige Werte. `Framework35`, `Framework40`, `Framework45`, `FrameworkCore10` und `FrameworkUap10` sind weitere unterstützte Werte.
+.NET Framework-Zielversion, in der der Test ausgeführt wird. `.NETFramework,Version=v4.6` und `.NETCoreApp,Version=v1.0` sind Beispiele für gültige Werte. Andere unterstützte Werte sind `Framework40`, `Framework45`, `FrameworkCore10` und `FrameworkUap10`.
 
 `--Parallel|/Parallel`
 
-Führt Tests parallel aus. Standardmäßig stehen alle verfügbaren Kerne auf dem Computer zur Nutzung zur Verfügung. Legt eine explizite Zahl an Kernen mit einer Einstellungsdatei fest.
+Führt Tests parallel aus. Standardmäßig stehen alle verfügbaren Kerne auf dem Computer zur Nutzung zur Verfügung. Geben Sie eine explizite Anzahl von Kernen an, indem Sie die „MaxCpuCount“-Eigenschaft unter dem Knoten „RunConfiguration“ in der Datei „runsettings“ festlegen.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -162,11 +162,11 @@ Verwendete Zielplattformarchitektur für die Testausführung. Gültige Werte sin
 
 `--Framework|/Framework:<Framework Version>`
 
-.NET Framework-Zielversion, in der der Test ausgeführt wird. `.NETFramework,Version=v4.6` und `.NETCoreApp,Version=v1.0` sind Beispiele für gültige Werte. Andere unterstützte Werte sind `Framework35`, `Framework40`, `Framework45` und `FrameworkCore10`.
+.NET Framework-Zielversion, in der der Test ausgeführt wird. `.NETFramework,Version=v4.6` und `.NETCoreApp,Version=v1.0` sind Beispiele für gültige Werte. Andere unterstützte Werte sind `Framework40`, `Framework45` und `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Führt Tests parallel aus. Standardmäßig stehen alle verfügbaren Kerne auf dem Computer zur Nutzung zur Verfügung. Legt eine explizite Zahl an Kernen mit einer Einstellungsdatei fest.
+Führt Tests parallel aus. Standardmäßig stehen alle verfügbaren Kerne auf dem Computer zur Nutzung zur Verfügung. Geben Sie eine explizite Anzahl von Kernen an, indem Sie die „MaxCpuCount“-Eigenschaft unter dem Knoten „RunConfiguration“ in der Datei „runsettings“ festlegen.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -238,11 +238,11 @@ Verwendete Zielplattformarchitektur für die Testausführung. Gültige Werte sin
 
 `--Framework|/Framework:<Framework Version>`
 
-.NET Framework-Zielversion, in der der Test ausgeführt wird. `.NETFramework,Version=v4.6` und `.NETCoreApp,Version=v1.0` sind Beispiele für gültige Werte. Andere unterstützte Werte sind `Framework35`, `Framework40`, `Framework45` und `FrameworkCore10`.
+.NET Framework-Zielversion, in der der Test ausgeführt wird. `.NETFramework,Version=v4.6` und `.NETCoreApp,Version=v1.0` sind Beispiele für gültige Werte. Andere unterstützte Werte sind `Framework40`, `Framework45` und `FrameworkCore10`.
 
 `--Parallel|/Parallel`
 
-Führt Tests parallel aus. Standardmäßig stehen alle verfügbaren Kerne auf dem Computer zur Nutzung zur Verfügung. Legt eine explizite Zahl an Kernen mit einer Einstellungsdatei fest.
+Führt Tests parallel aus. Standardmäßig stehen alle verfügbaren Kerne auf dem Computer zur Nutzung zur Verfügung. Geben Sie eine explizite Anzahl von Kernen an, indem Sie die „MaxCpuCount“-Eigenschaft unter dem Knoten „RunConfiguration“ in der Datei „runsettings“ festlegen.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 

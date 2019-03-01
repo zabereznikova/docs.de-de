@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7be62b3a97614faea14eb874be58c79246754903
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653748"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583653"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C#-Compileroptionen alphabetisch sortiert
 
@@ -36,6 +36,10 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 |[-delaysign](delaysign-compiler-option.md)|Signiert die Assembly verzögert, indem nur der öffentliche Teil des sicheren Schlüsselnamens verwendet wird.|
 |[-deterministic](deterministic-compiler-option.md)|Bewirkt, dass der Compiler eine Assembly ausgibt, deren Inhalt im Binärformat über Kompilierungen identisch ist, wenn die Eingaben identisch sind.|
 |[-doc](doc-compiler-option.md)|Gibt eine zu generierende XML-Dokumentationsdatei an.|
+|-embed|Einbetten aller Quelldateien in die PDB-Datei.|
+|-embed:\<Dateiliste>|Einbetten bestimmter Dateien in die PDB-Datei.|
+|-errorendlocation|Ausgabezeile und -spalte des Zielstandorts jedes Fehlers.|
+|-errorlog:\<Datei>|Angeben einer Datei für das Protokollieren der gesamten Compiler- und Analysetooldiagnose.|
 |[-errorreport](errorreport-compiler-option.md)|Gibt an, wie interne Compilerfehler verarbeitet werden sollen: „prompt“, „send“ oder „none“. Der Standardwert ist „none“.|
 |[-filealign](filealign-compiler-option.md)|Gibt die für die Ausgabedateiabschnitte verwendete Ausrichtung an.|
 |[/fullpaths](fullpaths-compiler-option.md)|Weist den Compiler an, vollqualifizierte Pfade zu generieren.|
@@ -58,7 +62,7 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 |[-nowin32manifest](nowin32manifest-compiler-option.md)|Weist den Compiler an, kein Anwendungsmanifest in die ausführbare Datei einzubetten.|
 |[-optimize](optimize-compiler-option.md)|Aktiviert/deaktiviert Optimierungen.|
 |[-out](out-compiler-option.md)|Gibt den Ausgabedateinamen an (Standard: Basisname der Datei mit der Hauptklasse oder erste Datei).|
-|-parallel[+|-]|Gibt an, ob parallele Builds (+) verwendet werden sollen.|
+|-parallel[+&#124;-]|Gibt an, ob parallele Builds (+) verwendet werden sollen.|
 |[-pathmap](pathmap-compiler-option.md)|Gibt eine Zuordnung für die Quellpfadnamen an, die vom Compiler ausgegeben werden.|
 |[/pdb](pdb-compiler-option.md)|Gibt den Dateinamen und den Speicherort der PDB-Datei an.|
 |[-platform](platform-compiler-option.md)|Begrenzt, auf welcher Plattform dieser Code ausgeführt werden kann: x86, Itanium, x64, anycpu oder anycpu32bitpreferred. Der Standardwert lautet „anycpu“.|
@@ -68,12 +72,14 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 |[-reference](reference-compiler-option.md)|Verweist auf Metadaten aus den angegebenen Assemblydateien.|
 |[/refout](refout-compiler-option.md)|Generiert eine Verweisassembly zusätzlich zur primären Assembly|
 |[/refonly](refonly-compiler-option.md)|Generiert eine Verweisassembly statt der primären Assembly|
+|-reportanalyzer|Berichten zusätzlicher Analysetoolinformationen, z.B. der Zeitpunkt der Ausführung.|
 |[-resource](resource-compiler-option.md)|Bettet die angegebene Ressource ein.|
 |-ruleset:\<file>|Geben Sie eine Regelsatzdatei an, die bestimmte Diagnosefunktionen deaktiviert.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Gibt die mindestens erforderliche Version des Subsystems an, die die generierte ausführbare Datei verwenden kann.|
 |[-target](target-compiler-option.md)|Gibt das Format der Ausgabedatei mit einer der folgenden Optionen an: [-target:appcontainerexe](target-appcontainerexe-compiler-option.md), [-target:exe](target-exe-compiler-option.md), [-target:library](target-library-compiler-option.md), [-target:module](target-module-compiler-option.md), [-target:winexe](target-winexe-compiler-option.md), [-target:winmdobj](target-winmdobj-compiler-option.md)|
 |[/unsafe](unsafe-compiler-option.md)|Ermöglicht [unsicheren](../../../csharp/language-reference/keywords/unsafe.md) Code|
 |[-utf8output](utf8output-compiler-option.md)|Gibt Compilermeldungen in einer UTF-8-Codierung aus.|
+|-version|Anzeigen der Compilerversionsnummer und Beenden.|
 |[/warn](warn-compiler-option.md)|Legt die Warnstufe fest (0–4).|
 |[-warnaserror](warnaserror-compiler-option.md)|Meldet bestimmte Warnungen als Fehler.|
 |[-win32icon](win32icon-compiler-option.md)|Verwendet dieses Symbol für die Ausgabe.|

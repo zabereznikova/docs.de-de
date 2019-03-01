@@ -7,12 +7,12 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: cc4f84551d28ad531713e31a27df723a78b338cb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b6036b10e87560a45880f41f30fabc7a348241d0
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242463"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747478"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Komponententests für Visual Basic .NET Core-Bibliotheken mithilfe von „dotnet test“ und MSTest
 
@@ -30,7 +30,7 @@ Erstellen Sie im Projektmappenverzeichnis ein *PrimeService*-Verzeichnis. Soweit
     /PrimeService
 ```
 
-Machen Sie *PrimeService* zum aktuellen Verzeichnis, und führen Sie [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) aus, um das Quellprojekt zu erstellen. Benennen Sie *Class1.VB* in *PrimeService.VB* um. Erstellen Sie eine fehlerhafte Implementierung der `PrimeService`-Klasse, um eine testgesteuerte Entwicklung (Test Driven Development, TDD) zu verwenden:
+Machen Sie *PrimeService* zum aktuellen Verzeichnis, und führen Sie [`dotnet new classlib -lang VB`](../tools/dotnet-new.md) aus, um das Quellprojekt zu erstellen. Benennen Sie *Class1.VB* in *PrimeService.VB* um. Sie erstellen eine fehlerhafte Implementierung der `PrimeService`-Klasse:
 
 ```vb
 Imports System
@@ -94,7 +94,7 @@ Führen Sie [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](..
 
 ## <a name="creating-the-first-test"></a>Erstellen des ersten Tests
 
-Gemäß dem TDD-Konzept müssen Sie einen fehlerhaften Test schreiben, anschließend dafür sorgen, dass der Test erfolgreich verläuft und dann den Vorgang wiederholen. Entfernen Sie *UnitTest1.vb* aus dem *PrimeService.Tests*-Verzeichnis, und erstellen Sie eine neue Visual Basic-Datei namens *PrimeService_IsPrimeShould.VB*. Fügen Sie den folgenden Code hinzu:
+Sie schreiben einen fehlerhaften Test, lassen ihn bestehen und wiederholen dann den Prozess. Entfernen Sie *UnitTest1.vb* aus dem *PrimeService.Tests*-Verzeichnis, und erstellen Sie eine neue Visual Basic-Datei namens *PrimeService_IsPrimeShould.VB*. Fügen Sie den folgenden Code hinzu:
 
 ```vb
 Imports Microsoft.VisualStudio.TestTools.UnitTesting

@@ -6,18 +6,18 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: e919da8910129be027ff7e2dbed8c4564738e023
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 384d0ac9f36f9ef9daba851f52d577d97248cd67
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241761"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746045"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Unittests für F#-Bibliotheken in .NET Core mit „dotnet test“ und NUnit
 
 Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen einer Beispielprojektmappe, um die Konzepte von Unittests zu erlernen. Wenn Sie dem Tutorial lieber mit einer vorgefertigten Projektmappe folgen, [zeigen Sie den Beispielcode an, oder laden Sie ihn herunter](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/), bevor Sie beginnen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) oder höhere Versionen.
 - Ein Text-Editor oder Code-Editor Ihrer Wahl.
@@ -45,7 +45,7 @@ Legen Sie *MathService* als aktuelles Verzeichnis fest, und führen Sie den folg
 dotnet new classlib -lang F#
 ```
 
-Erstellen Sie eine fehlerhafte Implementierung des math-Diensts, um eine testgesteuerte Entwicklung (Test Driven Development, TDD) zu verwenden:
+Sie erstellen eine fehlerhafte Implementierung des Math-Diensts:
 
 ```fsharp
 module MyMath =
@@ -116,7 +116,7 @@ dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
 
 ## <a name="creating-the-first-test"></a>Erstellen des ersten Tests
 
-Gemäß dem TDD-Konzept müssen Sie einen fehlerhaften Test schreiben, anschließend dafür sorgen, dass der Test erfolgreich verläuft und dann den Vorgang wiederholen. Öffnen Sie *UnitTest1.fs*, und fügen Sie den folgenden Code hinzu:
+Sie schreiben einen fehlerhaften Test, lassen ihn bestehen und wiederholen dann den Prozess. Öffnen Sie *UnitTest1.fs*, und fügen Sie den folgenden Code hinzu:
 
 ```fsharp
 namespace MathService.Tests

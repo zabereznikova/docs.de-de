@@ -7,12 +7,12 @@ ms.date: 08/30/2017
 dev_langs:
 - fsharp
 ms.custom: seodec18
-ms.openlocfilehash: dacf820e8e49a337792fa927838fe4b262712e41
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1765c16cb55857b83a8206ae97327d0fd2809019
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240085"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747491"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Komponententests für F#-Bibliotheken in .NET Core mit „dotnet test“ und MSTest
 
@@ -30,7 +30,7 @@ Erstellen Sie im Projektmappenverzeichnis ein *MathService*-Verzeichnis. Nachfol
     /MathService
 ```
 
-Machen Sie *MathService* zum aktuellen Verzeichnis, und führen Sie [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) aus, um das Quellprojekt zu erstellen.  Erstellen Sie eine fehlerhafte Implementierung des math-Diensts, um eine testgesteuerte Entwicklung (Test Driven Development, TDD) zu verwenden:
+Machen Sie *MathService* zum aktuellen Verzeichnis, und führen Sie [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) aus, um das Quellprojekt zu erstellen.  Sie erstellen eine fehlerhafte Implementierung des Math-Diensts:
 
 ```fsharp
 module MyMath =
@@ -87,7 +87,7 @@ Führen Sie [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../t
 
 ## <a name="creating-the-first-test"></a>Erstellen des ersten Tests
 
-Gemäß dem TDD-Konzept müssen Sie einen fehlerhaften Test schreiben, anschließend dafür sorgen, dass der Test erfolgreich verläuft und dann den Vorgang wiederholen. Öffnen Sie *Tests.fs*, und fügen Sie den folgenden Code hinzu:
+Sie schreiben einen fehlerhaften Test, lassen ihn bestehen und wiederholen dann den Prozess. Öffnen Sie *Tests.fs*, und fügen Sie den folgenden Code hinzu:
 
 ```fsharp
 namespace MathService.Tests

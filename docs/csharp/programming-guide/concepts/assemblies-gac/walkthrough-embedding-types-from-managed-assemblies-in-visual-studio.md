@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 39452702a3e757456ff00ee22e6eb1f90160ef38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd03154f9f4defdedd0694fe10398c6f62d920df
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500628"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56746927"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)
 Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbetten, können Sie Typen in einer Anwendung lose koppeln, um versionsunabhängig zu werden. Ihr Programm kann daher für Typen aus unterschiedlichen Versionen einer verwalteten Bibliothek geschrieben werden; eine erneute Kompilierung für jede Version ist nicht erforderlich.  
@@ -237,4 +237,4 @@ Wenn Sie Typinformationen von einer verwalteten Assembly mit starkem Namen einbe
 - [-link (C#-Compileroptionen)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [C#-Programmierhandbuch](../../../../csharp/programming-guide/index.md)
 - [Programmieren mit Assemblys](../../../../framework/app-domains/programming-with-assemblies.md)
-- [Assemblys und der globale Assemblycache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+- [Assemblys in .NET](../../../../standard/assembly/index.md)

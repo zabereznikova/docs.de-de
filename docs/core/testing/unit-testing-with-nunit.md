@@ -4,18 +4,18 @@ description: Erfahren Sie mehr über die Konzepte von Unittests in C# und .NET C
 author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 00be8c2fdef88861cc1119b1593155e027a3ade5
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 7d3daa344b2a6fb8694a255fdc26b5ba31e2d82a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307213"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747982"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Unittests für C# mit NUnit und .NET Core
 
 Dieses Tutorial führt Sie interaktiv Schritt für Schritt durch das Erstellen einer Beispielprojektmappe, um die Konzepte von Unittests zu erlernen. Wenn Sie dem Tutorial lieber mit einer vorgefertigten Projektmappe folgen, [zeigen Sie den Beispielcode an, oder laden Sie ihn herunter](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/), bevor Sie beginnen. Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 - [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) oder höhere Versionen.
 - Ein Text-Editor oder Code-Editor Ihrer Wahl.
@@ -42,7 +42,7 @@ Machen Sie *PrimeService* zum aktuellen Verzeichnis, und führen Sie den folgend
 dotnet new classlib
 ```
 
-Benennen Sie *Class1.cs* in *PrimeService.cs* um. Erstellen Sie eine fehlerhafte Implementierung der `PrimeService`-Klasse, um eine testgesteuerte Entwicklung (Test Driven Development, TDD) zu verwenden:
+Benennen Sie *Class1.cs* in *PrimeService.cs* um. Erstellen Sie eine fehlerhafte Implementierung der `PrimeService`-Klasse:
 
 ```csharp
 using System;
@@ -117,7 +117,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>Erstellen des ersten Tests
 
-Gemäß dem TDD-Konzept müssen Sie einen fehlerhaften Test schreiben, anschließend dafür sorgen, dass der Test erfolgreich verläuft und dann den Vorgang wiederholen. Benennen Sie im Verzeichnis *PrimeService.Tests* die Datei *UnitTest1.cs* in *PrimeService_IsPrimeShould.cs* um, und ersetzen Sie die zugehörigen Inhalte durch Inhalte mit dem folgenden Code:
+Sie schreiben einen fehlerhaften Test, lassen ihn bestehen und wiederholen dann den Prozess. Benennen Sie im Verzeichnis *PrimeService.Tests* die Datei *UnitTest1.cs* in *PrimeService_IsPrimeShould.cs* um, und ersetzen Sie die zugehörigen Inhalte durch Inhalte mit dem folgenden Code:
 
 ```csharp
 using NUnit.Framework;

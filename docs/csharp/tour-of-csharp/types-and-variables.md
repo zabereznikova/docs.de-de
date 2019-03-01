@@ -3,12 +3,12 @@ title: C#-Typen und -Variablen – Überblick über C#
 description: Erfahren Sie mehr über das Definieren von Typen und Deklarieren von Variablen in C#.
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
+ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129518"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56583952"
 ---
 # <a name="types-and-variables"></a>Typen und Variablen
 
@@ -57,20 +57,20 @@ Zur Zeichen- und Zeichenfolgenverarbeitung in C# wird die Unicode-Codierung verw
 Hier sind die numerischen Typen von C# zusammengefasst.
 
 * Ganzzahlig mit Vorzeichen
-    - `sbyte`: 8 Bit, Bereich von -128 - 127
-    - `short`: 16 Bit, Bereich von -32.768 - 32.767
-    - `int`: 32 Bit, Bereich von -2.147.483.648 - 2.147.483.647
-    - `long`: 64 Bit, Bereich von -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807
+    - `sbyte`:  8 Bit, Bereich von -128 bis 127
+    - `short`: 16 Bit, Bereich von -32.768 bis 32.767
+    - `int`: 32 Bit, Bereich von -2.147.483.648 bis 2.147.483.647
+    - `long` : 64 Bit, Bereich von -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807
 * Ganzzahlig ohne Vorzeichen
-    - `byte`: 8 Bit, Bereich von 0 - 255
-    - `ushort`: 16 Bit, Bereich von 0 - 65.535
-    - `uint`: 32 Bit, Bereich von 0 - 4.294.967.295
-    - `ulong`: 64 Bit, Bereich von -0 - 18.446.744.073.709.551.615
+    - `byte`:  8 Bit, Bereich von -0 bis 255
+    - `ushort` : 16 Bit, Bereich von 0 bis 65.535
+    - `uint`: 32 Bit, Bereich von 0 bis 4.294.967.295
+    - `ulong`: 64 Bit, Bereich von 0 bis 18.446.744.073.709.551.615
 * Gleitkomma
-    - `float`: 32 Bit, Bereich von 1,5 × 10<sup>-45</sup> - 3,4 × 10<sup>38</sup>, Genauigkeit von 7 Stellen
-    - `double`: 64 Bit, Bereich von 5,0 × 10<sup>-324</sup> - 1,7 × 10<sup>308</sup>, Genauigkeit von 15 Stellen
+    - `float`: 32 Bit, Bereich von 1,5 × 10<sup>-45</sup> bis 3,4 x 10<sup>38</sup>, Genauigkeit von 7 Stellen
+    - `double` : 64 Bit, Bereich von 5,0 × 10<sup>-324</sup> bis 1,7 x 10<sup>308</sup>, Genauigkeit von 15 Stellen
 * Decimal
-    - `decimal`: 128 Bit, Bereich mindestens -7,9 × 10<sup>-28</sup> - 7,9 x 10<sup>28</sup> mit einer Genauigkeit von mindestens 28 Stellen
+    - `decimal` : 128 Bit, Bereich mindestens -7,9 × 10<sup>-28</sup> bis 7,9 x 10<sup>28</sup>, mit einer Genauigkeit von mindestens 28 Stellen
     
 C#-Programme verwenden *Typdeklarationen*, um neue Typen zu erstellen. Eine Typdeklaration gibt den Namen und die Member des neuen Typs an. Fünf Typkategorien von C# sind benutzerdefinierbar: Klassentypen, Strukturtypen, Schnittstellentypen, Enumerationstypen und Delegattypen.
 

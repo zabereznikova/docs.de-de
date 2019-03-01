@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 1573e28f2a6f9dec7825d364debcdf1085ef7ff2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4918407c68c7164db023b19cb170aef12fd203
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635663"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663898"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C#-Compileroptionen)
 Gibt an, welche Version der Common Language Runtime (CLR) die Assembly ausführen kann.  
@@ -28,7 +28,7 @@ Gibt an, welche Version der Common Language Runtime (CLR) die Assembly ausführe
  `string`  
  anycpu (Standard), anycpu32bitpreferred, ARM, x64, x86, oder Itanium.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
   
 -   **anycpu** (Standard) kompiliert die Assembly für die Ausführung auf einer beliebigen Plattform. Ihre Anwendung wird nach Möglichkeit als 64-Bit-Prozess ausgeführt und wechselt zurück zu 32-Bit, wenn nur dieser Modus verfügbar ist.  
   
@@ -36,6 +36,8 @@ Gibt an, welche Version der Common Language Runtime (CLR) die Assembly ausführe
   
 -   **ARM** kompiliert Ihre Assembly für die Ausführung auf einem Computer mit einem ARM-Prozessor (Advanced RISC-Computer).  
   
+-   **ARM64** kompiliert Ihre Assembly für die Ausführung durch die 64-Bit-CLR auf einem Computer mit einem Advanced RISC Machine-Prozessor (ARM), der den A64-Anweisungssatz unterstützt.  
+
 -   **x64** kompiliert Ihre Assembly für die 64-Bit-CLR auf einem Computer, der den AMD64- oder EM64T-Befehlssatz unterstützt.  
   
 -   **x86** kompiliert die Assembly für die 32-Bit-CLR (Common Language Runtime), die mit x86 kompatibel ist.  

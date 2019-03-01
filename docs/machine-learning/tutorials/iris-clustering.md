@@ -3,15 +3,15 @@ title: Iris-Clustering mithilfe eines Clusteringlernmoduls – ML.NET
 description: Hier erfahren Sie, wie Sie ML.NET in einem Clusteringszenario verwenden.
 author: pkulikov
 ms.author: johalex
-ms.date: 01/11/2019
+ms.date: 02/19/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 60506a6a8640a4f37e9f181bc88ae4f757502cb9
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: fcbd75597d6fdce8dceffc9d47d06cc13dd11570
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093605"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56664470"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutorial: Iris-Clustering mithilfe eines Clusteringlernmoduls – ML.NET
 
@@ -84,7 +84,7 @@ Entfernen Sie die vorhandene Klassendefinition, und fügen Sie der Datei *IrisDa
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-`IrisData` ist die Eingabedatenklasse und verfügt über Definitionen für jedes Merkmal im Dataset. Verwenden Sie das Attribut [Column](xref:Microsoft.ML.Data.ColumnAttribute), um die Indizes der Quellspalten in der Datasetdatei festzulegen.
+`IrisData` ist die Eingabedatenklasse und verfügt über Definitionen für jedes Merkmal im Dataset. Verwenden Sie das Attribut [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute), um die Indizes der Quellspalten in der Datasetdatei festzulegen.
 
 Die Klasse `ClusterPrediction` repräsentiert die Ausgabe des Clusteringmodells, das auf eine `IrisData`-Instanz angewendet wird. Verwenden Sie das Attribut [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute), um die Felder `PredictedClusterId` und `Distances` an die Spalten **PredictedLabel** bzw. **Score** zu binden. Bei der Clusteringaufgabe haben diese Spalten die folgende Bedeutung:
 
@@ -127,7 +127,7 @@ Fügen Sie der `Main`-Methode den folgenden Code hinzu, um das Verfahren zum Lad
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Beachten Sie, dass die Spaltennamen und Indizes mit dem durch die Klasse `IrisData` definierten Schema übereinstimmen. Der <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType>-Wert gibt den `float`-Typ an.
+Verwenden Sie die [generische `CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%60%601(Microsoft.ML.DataOperationsCatalog,System.Boolean,System.Char,System.Boolean,System.Boolean,System.Boolean))-Methode zum Herleiten des Datasetschemas aus der `IrisData`-Klassendefinition.
 
 Verwenden Sie eine instanziierte Instanz von <xref:Microsoft.ML.Data.TextLoader>, um eine <xref:Microsoft.Data.DataView.IDataView>-Instanz zu erstellen, die die Datenquelle für das Trainingsdataset bildet:
 

@@ -3,12 +3,12 @@ title: Erweiterungen des CSPROJ-Formats für .NET Core
 description: Erfahren Sie mehr über die Unterschiede zwischen vorhandenen CSPROJ-Dateien und CSPROJ-Dateien von .NET Core
 author: blackdwarf
 ms.date: 09/22/2017
-ms.openlocfilehash: 74cde39a0bbba65d252d64bcedb91c3949dcf6f2
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: d715a3a30c48f1c3fa837b24ee21b49fa947011a
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222063"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56748009"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Erweiterungen des CSPROJ-Formats für .NET Core
 
@@ -47,9 +47,9 @@ Die folgende Tabelle zeigt, welche Elemente und welche [Globs](https://en.wikipe
 
 | Element           | Glob einschließen                              | Glob ausschließen                                                  | Glob entfernen                |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| Compile           | \*\*/\*.cs (oder andere Spracherweiterungen) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | Nicht zutreffend                        |
-| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | Nicht zutreffend                        |
-| Keiner              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
+| Compile           | \*\*/\*.cs (oder andere Spracherweiterungen) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | Nicht zutr.                        |
+| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | Nicht zutr.                        |
+| Keine              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
 
 Wenn Sie über Globs in Ihrem Projekt verfügen, und Sie versuchen, es mit dem neuesten SDK zu erstellen, erhalten Sie den folgenden Fehler:
 
@@ -97,26 +97,26 @@ Das `<Project>`-Stammelement der *CSPROJ*-Datei hat ein neues Attribut namens `S
 Das `Sdk`-Attribut muss auf eine dieser IDs auf dem `<Project>`-Element festgelegt werden, um die .NET Core-Tools nutzen und Codes erstellen zu können. 
 
 ### <a name="packagereference"></a>PackageReference
-Ein `<PackageReference>`-Element gibt eine NuGet-Abhängigkeit im Projekt an. Das `Include`-Attribut gibt die Paket-ID an. 
+Ein `<PackageReference>`-Element gibt eine [NuGet-Abhängigkeit im Projekt an](/nuget/consume-packages/package-references-in-project-files). Das `Include`-Attribut gibt die Paket-ID an. 
 
 ```xml
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
 #### <a name="version"></a>Version
-`Version` gibt die Version des wiederherzustellenden Pakets an. Das Attribut berücksichtigt die Regeln für das [NuGet-Versionsschema](/nuget/create-packages/dependency-versions#version-ranges). Das Standardverhalten ist eine genau Übereinstimmung mit der Version. Beispiel: Die Angabe von `Version="1.2.3"` ist gleichbedeutend mit der NuGet-Notation `[1.2.3]` für die genaue 1.2.3 Version des Pakets.
+Das erforderliche Attribut `Version` gibt die Version des wiederherzustellenden Pakets an. Das Attribut berücksichtigt die Regeln für das [NuGet-Versionsschema](/nuget/reference/package-versioning#version-ranges-and-wildcards). Das Standardverhalten ist eine genau Übereinstimmung mit der Version. Beispiel: Die Angabe von `Version="1.2.3"` ist gleichbedeutend mit der NuGet-Notation `[1.2.3]` für die genaue 1.2.3 Version des Pakets.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets und PrivateAssets
-Das `IncludeAssets`-Attribut gibt an, welche Objekte, die zu dem durch `<PackageReference>` angegebenen Paket gehören, genutzt werden sollen. 
+Das `IncludeAssets`-Attribut gibt an, welche Objekte, die zu dem durch `<PackageReference>` angegebenen Paket gehören, genutzt werden sollen. Standardmäßig sind alle Paketobjekte enthalten.
 
 Das `ExcludeAssets`-Attribut gibt an, welche Objekte, die zu dem durch `<PackageReference>` angegebenen Paket gehören, nicht genutzt werden sollen.
 
-Das `PrivateAssets`-Attribut gibt an, welche Objekte, die zu dem durch `<PackageReference>` angegebenen Paket gehören, genutzt, aber nicht an das nächste Projekt übertragen werden sollen. 
+Das `PrivateAssets`-Attribut gibt an, welche Objekte, die zu dem durch `<PackageReference>` angegebenen Paket gehören, genutzt, aber nicht an das nächste Projekt übertragen werden sollen. Die Objekte `Analyzers`, `Build` und `ContentFiles` sind standardmäßig privat, wenn dieses Attribut nicht vorhanden ist.
 
 > [!NOTE]
 > `PrivateAssets` entspricht dem Element *project.json*/*xproj* `SuppressParent`.
 
-Diese Attribute können eines oder mehrere der folgenden Elemente enthalten:
+Diese Attribute können eines oder mehrere der folgenden Elemente enthalten, getrennt durch das Semikolon `;`-Zeichen, wenn mehr als eines aufgeführt ist:
 
 * `Compile`: Gibt an, dass die Inhalte des Ordners „lib“ zum Kompilieren verfügbar sind
 * `Runtime`: Gibt an, dass die Inhalte des Ordners „runtime“ verteilt werden
@@ -206,12 +206,64 @@ Copyright-Informationen für das Paket.
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
 Ein Boolescher Wert, der angibt, ob der Client den Verbraucher dazu auffordern muss, die Paketlizenz vor der Installation des Pakets zu akzeptieren. Die Standardeinstellung ist `false`.
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+Ein SPDX-Lizenzausdruck oder Pfad zu einer Lizenzdatei innerhalb des Pakets, der oft sowohl in der Benutzeroberfläche als auch auf nuget.org angezeigt wird.
+
+Hier ist die vollständige Liste der [SPDX Lizenzbezeichner](https://spdx.org/licenses/). NuGet.org akzeptiert nur von OSI oder FSF genehmigte Lizenzen, wenn der Ausdruck „license type“ verwendet wird.
+
+Die genaue Syntax für die Lizenzausdrücke wird unten in [ABNF](https://tools.ietf.org/html/rfc5234) beschrieben.
+```cli
+license-id            = <short form license identifier from https://spdx.org/spdx-specification-21-web-version#h.luq9dgcle9mo>
+
+license-exception-id  = <short form license exception identifier from https://spdx.org/spdx-specification-21-web-version#h.ruv3yl8g6czd>
+
+simple-expression = license-id / license-id”+”
+
+compound-expression =  1*1(simple-expression /
+                simple-expression "WITH" license-exception-id /
+                compound-expression "AND" compound-expression /
+                compound-expression "OR" compound-expression ) /                
+                "(" compound-expression ")" )
+
+license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
+```
+
+> [!NOTE]
+> `PackageLicenseExpression`, `PackageLicenseFile` oder `PackageLicenseUrl` können jeweils nur einzeln angegeben werden.
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+Pfad zu einer Lizenzdatei innerhalb des Pakets, wenn Sie eine Lizenz verwenden, der kein SPDX-Bezeichner zugewiesen wurde, oder es sich um eine benutzerdefinierte Lizenz handelt (sonst wird `PackageLicenseExpression` bevorzugt).
+
+> [!NOTE]
+> `PackageLicenseExpression`, `PackageLicenseFile` oder `PackageLicenseUrl` können jeweils nur einzeln angegeben werden.
+
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
-Eine URL für die Lizenz, die auf das Paket angewendet werden kann.
 
-### <a name="packageprojecturl"></a>PackageProjectUrl
-Eine URL für die Paket-Homepage, häufig auf der Benutzeroberfläche sowie auf nuget.org angezeigt.
+Eine URL für die Lizenz, die auf das Paket angewendet werden kann. (_seit Visual Studio 15.9.4, .NET SDK 2.1.502 und 2.2.101 veraltet_)
 
+### <a name="packagelicenseexpression"></a>PackageLicenseExpression
+
+Ein [SPDX Lizenzbezeichner](https://spdx.org/licenses/) oder ein Ausdruck, z.B. `Apache-2.0`.
+
+Ersetzt `PackageLicenseUrl`, kann nicht mit `PackageLicenseFile` kombiniert werden und erfordert Visual Studio 15.9.4, .NET SDK 2.1.502 oder 2.2.101 oder höher.
+
+### <a name="packagelicensefile"></a>PackageLicenseFile
+
+Ein Pfad zur Lizenzdatei auf dem Datenträger, bezogen auf die Projektdatei, z.B. `LICENSE.txt`.
+
+Ersetzt `PackageLicenseUrl`, kann nicht mit `PackageLicenseExpression` kombiniert werden und erfordert Visual Studio 15.9.4, .NET SDK 2.1.502 oder 2.2.101 oder höher.
+
+Sie müssen sicherstellen, dass die Lizenzdatei gepackt ist, indem Sie sie explizit zum Projekt hinzufügen. Beispielnutzung:
+```xml
+<PropertyGroup>
+  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+</PropertyGroup>
+<ItemGroup>
+  <None Include="licenses\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+</ItemGroup>
+```
 ### <a name="packageiconurl"></a>PackageIconUrl
 Eine URL für ein 64x64-Bild mit transparentem Hintergrund, das als Symbol für das Paket in der UI-Anzeige verwendet wird.
 

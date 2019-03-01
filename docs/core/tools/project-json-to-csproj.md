@@ -4,12 +4,12 @@ description: Informationen zur Zuordnung zwischen project.json und csproj-Elemen
 author: natemcmaster
 ms.date: 03/13/2017
 ms.custom: seodec18
-ms.openlocfilehash: dc78a6fc43eeb2a9e556bc5a4d8e27db9067ce94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682851"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747410"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Die Zuordnung zwischen project.json und csproj-Eigenschaften
 
@@ -39,7 +39,7 @@ Das neue Format \*.csproj, ist ein XML-basiertes Format. Im folgenden Beispiel w
 }
 ```
 
-Wird nicht mehr unterstützt. In csproj wird dies durch den Dateinamen des Projekts festgelegt, der durch den Namen des Verzeichnisses definiert wird. Beispielsweise `MyProjectName.csproj`.
+Wird nicht mehr unterstützt. In csproj wird dies durch den Dateinamen des Projekts festgelegt, der in der Regel mit dem Namen des Verzeichnisses übereinstimmt. Beispielsweise `MyProjectName.csproj`.
 
 Standardmäßig gibt der Dateiname des Projekts auch den Wert der `<AssemblyName>`- und `<PackageId>`- Eigenschaften an.
 

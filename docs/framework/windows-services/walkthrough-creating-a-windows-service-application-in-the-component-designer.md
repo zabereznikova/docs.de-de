@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 79447ede354de104607117f657182023a2e57127
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123669"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56665029"
 ---
-# <a name="walkthrough-create-a-windows-service-app"></a>Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung
+# <a name="walkthrough-create-a-windows-service-app"></a>Exemplarische Vorgehensweise: Erstellen einer Windows-Dienst-App
 
 In diesem Artikel wird beschrieben, wie Sie eine einfache Windows-Dienstanwendung in Visual Studio erstellen, die Meldungen in ein Ereignisprotokoll schreibt.
 
@@ -86,7 +86,7 @@ Suchen Sie im Code-Editor die Methode <xref:System.ServiceProcess.ServiceBase.On
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-Eine Dienstanwendung soll eine lange Laufzeit haben, damit sie in der Regel etwas abfragt oder etwas im System überwacht. Die Überwachung wird in der <xref:System.ServiceProcess.ServiceBase.OnStart%2A> -Methode eingerichtet. Allerdings erfolgt die Überwachung jedoch nicht durch <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Die <xref:System.ServiceProcess.ServiceBase.OnStart%2A> -Methode muss zum Betriebssystem zurückkehren, sobald die Ausführung des Dienstes begonnen hat. Sie darf keine Endlosschleife oder Blöcke ausführen. Wenn Sie einen einfachen Abrufmechanismus einrichten, können Sie die Komponente <xref:System.Timers.Timer?displayProperty=nameWithType> wie folgt verwenden: Legen Sie in der Methode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> die Parameter für die Komponente fest, und legen Sie dann die Eigenschaft <xref:System.Timers.Timer.Enabled%2A> auf `true`. Der Zeitgeber löst dann regelmäßig zu der Zeit Ereignisse im Code aus, zu der der Dienst seine Überwachung ausführen könnte. Sie können hierfür den folgenden Code verwenden:
+Eine Dienstanwendung soll eine lange Laufzeit haben, damit sie in der Regel etwas abfragt oder etwas im System überwacht. Die Überwachung wird in der <xref:System.ServiceProcess.ServiceBase.OnStart%2A> -Methode eingerichtet. Allerdings erfolgt die Überwachung jedoch nicht durch <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Die <xref:System.ServiceProcess.ServiceBase.OnStart%2A> -Methode muss zum Betriebssystem zurückkehren, sobald die Ausführung des Dienstes begonnen hat. Sie darf keine Endlosschleife oder Blöcke ausführen. Mit der <xref:System.Timers.Timer?displayProperty=nameWithType>-Komponente können Sie einen einfachen Abrufmechanismus wie folgt einrichten: Legen Sie in der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode Parameter für die Komponente fest, und setzen Sie anschließend die <xref:System.Timers.Timer.Enabled%2A>-Eigenschaft auf `true`. Der Zeitgeber löst dann regelmäßig zu der Zeit Ereignisse im Code aus, zu der der Dienst seine Überwachung ausführen könnte. Sie können hierfür den folgenden Code verwenden:
 
 ```csharp
 // Set up a timer that triggers every minute.
@@ -296,7 +296,7 @@ Bevor Sie einen Windows-Dienst ausführen können, müssen Sie ihn bei der Insta
     > [!IMPORTANT]
     > Das Konto <xref:System.ServiceProcess.ServiceAccount.LocalSystem> verfügt über ein breites Berechtigungsspektrum, einschließlich der Berechtigung zum Schreiben in das Ereignisprotokoll. Bei der Verwendung dieses Kontos ist allerdings Vorsicht geboten, da sich dadurch das Risiko von Malware-Angriffen erhöhen kann. Für andere Aufgaben sollten Sie das Konto <xref:System.ServiceProcess.ServiceAccount.LocalService> verwenden, das auf dem lokalen Computer als Benutzer ohne Berechtigungen fungiert. Remoteservern werden anonyme Anmeldeinformationen übergeben. Dieses Beispiel schlägt fehl, wenn Sie versuchen, das <xref:System.ServiceProcess.ServiceAccount.LocalService> -Konto zu verwenden, da zum Schreiben in das Ereignisprotokoll eine Genehmigung benötigt wird.
 
-Weitere Informationen zu Installern finden Sie unter [Gewusst wie: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
+Weitere Informationen zu Installern finden Sie unter [Vorgehensweise: Hinzufügen von Installern zu Ihrer Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).
 
 ## <a name="optional-set-startup-parameters"></a>(Optional) Festlegen der Startparameter
 
@@ -431,7 +431,7 @@ Nachdem Sie den Windows-Dienst nun erstellt haben, können Sie ihn installieren.
 
     Wenn der Prozess **installutil.exe** Fehler meldet, überprüfen Sie das Installationsprotokoll, um die Gründe zu bestimmen. Standardmäßig befindet sich das Protokoll im gleichen Ordner wie die ausführbare Datei. Bei der Installation kann ein Fehler auftreten, wenn die <xref:System.ComponentModel.RunInstallerAttribute>-Klasse nicht in der `ProjectInstaller`-Klasse vorhanden ist, das Attribut nicht auf **true** festgelegt ist oder die `ProjectInstaller`-Klasse nicht als **public** gekennzeichnet ist.
 
-Weitere Informationen finden Sie unter [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="start-and-run-the-service"></a>Starten und Ausführen des Diensts
 
@@ -452,7 +452,7 @@ Weitere Informationen finden Sie unter [How to: Install and Uninstall Services](
 1. Öffnen Sie die **Ereignisanzeige**, indem Sie mit der Eingabe von **Ereignisanzeige** im Suchfeld in der Windows-Taskleiste beginnen und dann in den Suchergebnissen **Ereignisanzeige** auswählen.
 
    > [!TIP]
-   > In Visual Studio können Sie auf Ereignisprotokolle zugreifen, indem Sie den **Server-Explorer** öffnen (Tastatur: **STRG**+**ALT**+**S**) und den Knoten **Ereignisprotokolle** für den lokalen Computer aufklappen.
+   > In Visual Studio können Sie auf Ereignisprotokolle zugreifen, indem Sie den **Server-Explorer** öffnen (Tastatur: **STRG**+**ALT**+**S**) und den Knoten **Ereignisprotokolle** für den lokalen Computer erweitern.
 
 2. Klappen Sie in der **Ereignisanzeige** **Anwendungs- und Dienstprotokolle** auf.
 
@@ -472,11 +472,11 @@ Weitere Informationen finden Sie unter [How to: Install and Uninstall Services](
     installutil.exe /u MyNewService.exe
     ```
 
-   Wenn der Dienst erfolgreich deinstalliert ist, meldet **installutil.exe**, dass der Dienst erfolgreich entfernt wurde. Weitere Informationen finden Sie unter [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
+   Wenn der Dienst erfolgreich deinstalliert ist, meldet **installutil.exe**, dass der Dienst erfolgreich entfernt wurde. Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Jetzt, da Sie den Dienst erstellt haben, kann es sinnvoll sein, ein eigenständiges Setupprogramm zu erstellen, das von anderen für die Installation Ihres Windows-Diensts verwendet werden kann. ClickOnce unterstützt keine Windows-Dienste, aber Sie können das [WiX-Toolset](http://wixtoolset.org/) verwenden, um ein Installationsprogramm für einen Windows-Dienst zu erstellen. Weitere Ideen finden Sie unter [Erstellen eines Installationspakets](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
+Jetzt, da Sie den Dienst erstellt haben, kann es sinnvoll sein, ein eigenständiges Setupprogramm zu erstellen, das von anderen für die Installation Ihres Windows-Diensts verwendet werden kann. ClickOnce unterstützt keine Windows-Dienste, aber Sie können das [WiX-Toolset](http://wixtoolset.org/) verwenden, um ein Installationsprogramm für einen Windows-Dienst zu erstellen. Weitere Ideen finden Sie unter [Erstellen eines Installationspakets](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 Sie können die Verwendung einer <xref:System.ServiceProcess.ServiceController>-Komponente untersuchen, die es Ihnen ermöglicht, Befehle an den installierten Dienst zu senden.
 
@@ -486,5 +486,5 @@ Sie können ein Installationsprogramm verwenden, um ein Ereignisprotokoll währe
 
 - [Windows-Dienstanwendungen](../../../docs/framework/windows-services/index.md)
 - [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Gewusst wie: Debuggen von Windows-Dienstanwendungen](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Dienste (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+- [Vorgehensweise: Debuggen von Windows-Dienstanwendungen](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [Dienste (Windows)](/windows/desktop/Services/services)

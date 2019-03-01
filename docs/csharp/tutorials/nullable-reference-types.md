@@ -1,14 +1,14 @@
 ---
 title: Entwerfen mit Verweistypen, die NULL-Werte zulassen
 description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistypen, die NULL-Werte zulassen. Sie erfahren, wie Sie Ihre Entwurfsabsicht ausdrücken, wenn die Verweiswerte Null sein können, und wie Sie den Compiler durchsetzen, wenn sie nicht NULL sein können.
-ms.date: 12/03/2018
+ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 535efcdc303c17a55f6a4054ea3f5e5ed87e5f28
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 1c0df9b129e9c434eb3b5e6e50144013c2c0462e
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092201"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56442099"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Besseres Ausdrücken Ihrer Entwurfsabsicht mit Verweistypen, die NULL-Werte zulassen und nicht zulassen
 
@@ -24,7 +24,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich dem C# 8.0-Beta-Compiler. Der C# 8 Beta-Compiler ist mit [2019 für Visual Studio Vorschauversion 1](https://visualstudio.microsoft.com/vs/preview/) oder [.NET Core 3.0 Vorschauversion 1](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0 Beta-Compilers. Der C# 8 Beta-Compiler ist mit [2019 für Visual Studio Vorschauversion 2](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) oder [.NET Core 3.0 Vorschauversion 2](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
 
 In diesem Tutorial wird vorausgesetzt, dass Sie C# und .NET, einschließlich Visual Studio oder die .NET Core-CLI kennen.
 
@@ -36,27 +36,16 @@ Der Code, den Sie für dieses Beispiel schreiben, drückt diese Absicht aus, und
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Erstellen der Anwendung und Aktivieren der Verweistypen, die NULL-Werte zulassen
 
-Erstellen Sie eine neue Konsolenanwendung in Visual Studio oder über die Befehlszeile mit `dotnet new console`. Nennen Sie die Anwendung `NullableIntroduction`. Nachdem Sie die Anwendung erstellt haben, müssen Sie C# 8 Betafeatures aktivieren. Öffnen Sie die `csproj`-Datei, und fügen Sie dem `LangVersion`-Element ein `PropertyGroup`-Element hinzu:
+Erstellen Sie eine neue Konsolenanwendung in Visual Studio oder über die Befehlszeile mit `dotnet new console`. Nennen Sie die Anwendung `NullableIntroduction`. Nachdem Sie die Anwendung erstellt haben, müssen Sie C# 8 Betafeatures aktivieren. Öffnen Sie die `csproj`-Datei, und fügen Sie dem `LangVersion`-Element ein `PropertyGroup`-Element hinzu. Auch in C# 8-Projekten müssen Sie das Feature für **Verweistypen, die NULL-Werte zulassen** abonnieren. Grund dafür ist, dass bestehende Verweisvariablendeklarationen nach dem Aktivieren des Features zu **Verweistypen werden, die NULL-Werte nicht zulassen**. Diese Entscheidung ist zwar hilfreich, um Probleme zu finden, bei denen bestehender Code möglicherweise keine ordnungsgemäßen NULL-Überprüfungen aufweist, aber möglicherweise nicht genau Ihre ursprüngliche Entwurfsabsicht widerspiegelt. Um das Feature zu aktivieren, legen Sie für das `NullableContextOptions`-Element `enable` fest:
 
 ```xml
 <LangVersion>8.0</LangVersion>
-```
-
-Alternativ können Sie die Visual Studio-Projekteigenschaften zum Aktivieren von C# 8 verwenden. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Projektknoten, und wählen Sie **Eigenschaften** aus. Wählen Sie dann die Registerkarte **Build** aus, und klicken Sie auf **Erweitert**. Wählen Sie in der Dropdownliste für die Sprachversion  **C# 8.0 (Beta)** aus.
-
-Auch in C# 8-Projekten müssen Sie das Feature für **Verweistypen, die NULL-Werte zulassen** abonnieren. Grund dafür ist, dass bestehende Verweisvariablendeklarationen nach dem Aktivieren des Features zu **Verweistypen werden, die NULL-Werte nicht zulassen**. Diese Entscheidung ist zwar hilfreich, um Probleme zu finden, bei denen bestehender Code möglicherweise keine ordnungsgemäßen NULL-Überprüfungen aufweist, aber möglicherweise nicht genau Ihre ursprüngliche Entwurfsabsicht widerspiegelt. Sie aktivieren das Feature mit einem neuen Pragma:
-
-```csharp
-#nullable enable
-```
-
-Sie können das vorhergehende Pragma überall in einer Quelldatei hinzufügen, und das Feature für den Verweistyp, der NULL-Werte zulässt, wird aktiviert. Das Pragma unterstützt auch das `disable`-Argument zum Deaktivieren des Features.
-
-Sie können **Verweistypen, die NULL-Werte zulassen** auch für ein ganzes Projekt aktivieren, indem Sie beispielsweise das folgende Element zu Ihrer .csproj-Datei hinzufügen, das unmittelbar auf das `LangVersion`-Element folgt, das C# 8.0 aktiviert hat:
-
-```xml
 <NullableContextOptions>enable</NullableContextOptions>
 ```
+
+> [!NOTE]
+> Wenn C# 8 freigegeben ist (nicht im Vorschaumodus), wird das `NullableContextOptions`-Element durch neue Projektvorlagen hinzugefügt. Bis dahin müssen Sie es manuell hinzufügen.
+
 
 ### <a name="design-the-types-for-the-application"></a>Entwerfen der Typen für die Anwendung
 
@@ -88,10 +77,9 @@ Die von Ihnen erstellte Anwendung führt die folgenden Schritte aus:
 
 ## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>Erstellen einer Umfrage mit Typen, die NULL-Werte zulassen und nicht zulassen.
 
-Mit dem ersten geschriebenen Code erstellen Sie die Umfrage. Sie schreiben die Klassen, um eine Frage der Umfrage und eine Ausführung zu modellieren. Ihre Umfrage umfasst drei Arten von Fragen, die sich durch das Format der Antwort unterscheiden: Ja/Nein-Antworten, Zahlenantworten und Textantworten. Erstellen Sie eine `public` `SurveyQuestion`-Klasse. Binden Sie das `#nullable enable`-Pragma unmittelbar nach der `using`-Anweisung ein:
+Mit dem ersten geschriebenen Code erstellen Sie die Umfrage. Sie schreiben die Klassen, um eine Frage der Umfrage und eine Ausführung zu modellieren. Ihre Umfrage umfasst drei Arten von Fragen, die sich durch das Format der Antwort unterscheiden: Ja/Nein-Antworten, Zahlenantworten und Textantworten. Erstellen Sie eine `public` `SurveyQuestion`-Klasse:
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyQuestion
@@ -100,10 +88,9 @@ namespace NullableIntroduction
 }
 ```
 
-Das Hinzufügen des `#nullable enable`-Pragmas bedeutet, dass der Compiler jede Variablendeklaration des Verweistyps als Verweistyp interpretiert, der **NULL-Werte nicht zulässt**. Sie können Ihre erste Warnung sehen, indem Sie Eigenschaften für den Fragetext und die Art der Frage hinzufügen, wie im folgenden Code gezeigt:
+Der Compiler interpretiert jede Verweistyp-Variablendeklaration als Verweistyp, der **NULL-Werte nicht zulässt**, für Code in einem NULL-Werte zulassenden Kontext. Sie können Ihre erste Warnung sehen, indem Sie Eigenschaften für den Fragetext und die Art der Frage hinzufügen, wie im folgenden Code gezeigt:
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public enum QuestionType
@@ -127,12 +114,11 @@ Da Sie `QuestionText` noch nicht initialisiert haben, gibt der Compiler eine War
 
 Durch das Hinzufügen des Konstruktors wird die Warnung entfernt. Das Konstruktorargument ebenfalls ein Verweistyp, der keine NULL-Werte zulässt. Der Compiler gibt also keine Warnungen aus.
 
-Erstellen Sie eine `public`-Klasse mit dem Namen `SurveyRun`. Binden Sie das `#nullable enable`-Pragma nach der `using`-Anweisungen ein. Diese Klasse enthält eine Liste von `SurveyQuestion`-Objekten und Methoden, um Fragen zur Umfrage hinzuzufügen, wie im folgenden Code gezeigt:
+Erstellen Sie eine `public`-Klasse mit dem Namen `SurveyRun`. Diese Klasse enthält eine Liste von `SurveyQuestion`-Objekten und Methoden, um Fragen zur Umfrage hinzuzufügen, wie im folgenden Code gezeigt:
 
 ```csharp
 using System.Collections.Generic;
 
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyRun
@@ -152,7 +138,7 @@ Wechseln Sie in Ihrem Editor zu `Program.cs`, und ersetzen Sie den Inhalt von `M
 
 [!code-csharp[AddQuestions](../../../samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-Ohne das `#nullable enable`-Pragma am Anfang der Datei gibt der Compiler keine Warnung aus, wenn Sie `null` als Text für das `AddQuestion`-Argument übergeben. Dieses Problem können Sie beheben, indem Sie `#nullable enable` nach der `using`-Anweisung hinzufügen. Probieren Sie es aus, indem Sie die folgende Zeile zu `Main` hinzufügen:
+Da das gesamte Projekt in einem NULL-Werte zulassenden Kontext aktiviert ist, erhalten Sie Warnungen, wenn Sie `null` in Erwartung eines NULL-Werte nicht zulassenden Verweistyps an eine Methode übergeben. Probieren Sie es aus, indem Sie die folgende Zeile zu `Main` hinzufügen:
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);
@@ -160,7 +146,7 @@ surveyRun.AddQuestion(QuestionType.Text, default);
 
 ## <a name="create-respondents-and-get-answers-to-the-survey"></a>Erstellen von Befragten und Erhalten von Antworten zur Umfrage
 
-Schreiben Sie als Nächstes den Code, der Antworten für die Umfrage generiert. Dies umfasst mehrere kleine Aufgaben:
+Schreiben Sie als Nächstes den Code, der Antworten für die Umfrage generiert. Dieser Prozess umfasst mehrere kleine Aufgaben:
 
 1. Erstellen Sie eine Methode, die Antwortobjekte generiert. Diese repräsentieren die Personen, die um das Ausfüllen der Umfrage gebeten werden.
 1. Erstellen Sie eine Logik, um zu simulieren, dass Sie die Fragen an einen Befragten stellen und Antworten sammeln, oder feststellen, dass ein Befragter nicht geantwortet hat.
@@ -169,7 +155,6 @@ Schreiben Sie als Nächstes den Code, der Antworten für die Umfrage generiert. 
 Sie benötigen eine Klasse zum Darstellen einer Umfrageantwort. Fügen Sie diese jetzt hinzu. Aktivieren Sie Support für NULL-Werte. Fügen Sie eine `Id`-Eigenschaft und einen Konstruktor hinzu, der diese initialisiert, wie in folgendem Code dargestellt:
 
 ```csharp
-#nullable enable
 namespace NullableIntroduction
 {
     public class SurveyResponse
@@ -195,6 +180,8 @@ Fügen Sie der `SurveyResponse`-Klasse den folgenden Code hinzu:
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
 Der Speicher für Umfrageantworten ist eine `Dictionary<int, string>?`. Damit wird angegeben, dass auch NULL zulässig ist. Sie verwenden das neue Sprachfeature, um Ihre Entwurfsabsicht zu deklarieren, sowohl gegenüber dem Compiler als auch gegenüber allen, die Ihren Code später lesen. Wenn Sie jemals `surveyResponses` dereferenzieren, ohne zuerst nach dem NULL-Wert zu suchen, erhalten Sie eine Compiler-Warnung. Sie erhalten keine Warnung in der `AnswerSurvey`-Methode, da der Compiler bestimmen kann, dass die Variable `surveyResponses` oben auf einen Wert gesetzt wurde, der NULL-Werte zulässt.
+
+Die Verwendung von `null` für fehlende Antworten hebt einen wichtigen Punkt für die Arbeit mit NULL-Werte zulassenden Verweistypen hervor: Ihr Ziel ist nicht, alle `null`-Werte aus Ihrem Programm zu entfernen. Ihr Ziel ist eher, sicherzustellen, dass der Code, den Sie schreiben, Ihre Entwurfsabsicht ausdrückt. Fehlende Werte sind ein notwendiges in Ihrem Code auszudrückendes Konzept. Der `null`-Wert ist eine klare Möglichkeit, diese fehlenden Werte auszudrücken. Der Versuch, alle `null`-Werte zu entfernen, führt nur zum Definieren einer anderen Möglichkeit, diese fehlenden Werte ohne `null` auszudrücken.
 
 Als Nächstes müssen Sie die `PerformSurvey`-Methode in der `SurveyRun`-Klasse schreiben. Fügen Sie den folgenden Code der `SurveyRun`-Klasse hinzu:
 
@@ -234,6 +221,6 @@ Experimentieren Sie, indem Sie bei der Typdeklaration zwischen Verweistypen wech
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Erfahren Sie mehr, indem Sie sich eine Übersicht zu Verweistypen ansehen, die NULL-Werte zulassen.
+Weitere Informationen erhalten Sie durch die Migration einer vorhandenen Anwendung zur Verwendung NULL-Werte zulassender Verweistypen:
 > [!div class="nextstepaction"]
-> [ Übersicht zu Verweistypen, die NULL-Werte zulassen](../nullable-references.md)
+> [Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen](upgrade-to-nullable-references.md)

@@ -1,6 +1,6 @@
 ---
 title: Angeben vollständig gekennzeichneter Typnamen
-ms.date: 03/14/2018
+ms.date: 02/21/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
 - reflection, fully qualified type names
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9281906f5500d954f3a0c7abface4ee43adcb64d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d73cad94e0e4343c5dd09a3b12131afeabef873
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628538"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747248"
 ---
-# <a name="specifying-fully-qualified-type-names"></a>Angeben vollständig gekennzeichneter Typnamen
+# <a name="specifying-fully-qualified-type-names"></a>Angeben vollqualifizierter Typnamen
 Sie müssen Typnamen angeben, um eine gültige Eingabe für verschiedene Reflektionsvorgänge zu haben. Ein vollqualifizierter Typname besteht aus der Angabe eines Assemblynamens, eines Namespaces und eines Typnamens. Angaben von Typnamen werden von Methoden wie <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType> und <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> verwendet.  
   
 ## <a name="grammar-for-type-names"></a>Grammatik für Typnamen  
@@ -41,9 +41,12 @@ ReferenceTypeSpec
 
 SimpleTypeSpec
     : PointerTypeSpec
-    | ArrayTypeSpec
+    | GenericTypeSpec
     | TypeName
     ;
+
+GenericTypeSpec
+   : SimpleTypeSpec ` NUMBER
 
 PointerTypeSpec
     : SimpleTypeSpec '*'
@@ -177,7 +180,10 @@ com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,  
     Version=1.0.0.0  
 ```  
-  
+## <a name="specifying-generic-types"></a>Angeben von generischen Typen
+
+SimpleTypeSpec\`NUMBER stellt einen offenen generischen Typ mit 1 bis *n* generischen Typparametern dar. Um beispielsweise den Verweis auf den offenen generischen Typ List\<T> oder den geschlossenen generischen Typ List\<String> zu erhalten, verwenden Sie ``Type.GetType("System.Collections.Generic.List`1")``. Um einen Verweis auf den generischen Typ Dictionary\<TKey,TValue> zu erhalten, verwenden Sie ``Type.GetType("System.Collections.Generic.Dictionary`2")``. 
+
 ## <a name="specifying-pointers"></a>Angeben von Zeigern  
  SimpleTypeSpec* stellt einen nicht verwalteten Zeiger dar. Um z.B. einen Zeiger auf den Typ „MyType“ zu erhalten, verwenden Sie `Type.GetType("MyType*")`. Um einen Zeiger auf den Typ „MyType“ zu erhalten, verwenden Sie `Type.GetType("MyType**")`.  
   
@@ -192,7 +198,6 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
 -   `Type.GetType("MyArray[]")` ruft ein eindimensionales Array mit der unteren Grenze 0 ab.  
   
 -   `Type.GetType("MyArray[*]")` ruft ein eindimensionales Array mit unbekannter unterer Grenze ab.  
-  
 -   `Type.GetType("MyArray[][]")` ruft das Array eines zweidimensionalen Arrays ab.  
   
 -   `Type.GetType("MyArray[*,*]")` und `Type.GetType("MyArray[,]")` rufen ein rechteckiges zweidimensionales Array mit unbekannter unterer Grenze ab.  
