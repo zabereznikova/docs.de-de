@@ -2,12 +2,12 @@
 title: Set-Vorgänge (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: b1b515c7eee11f7aadc1d34223dbb4ea1367842d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aaccd2b91e842bb433fe97e59314860c631341e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741875"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200753"
 ---
 # <a name="set-operations-visual-basic"></a>Set-Vorgänge (Visual Basic)
 Mengenvorgänge in LINQ sind Abfrageoperationen, die ein Satz von Ergebnissen erzeugen, der auf der Existenz oder Abwesenheit äquivalenter Elemente in derselben oder in einer getrennten Auflistung (oder einem Satz) basiert.  
@@ -48,7 +48,7 @@ Mengenvorgänge in LINQ sind Abfrageoperationen, die ein Satz von Ergebnissen er
 ## <a name="query-expression-syntax-example"></a>Beispiel für die Abfrageausdruckssyntax  
  Im folgenden Beispiel wird die `Distinct` -Klausel in einer LINQ-Abfrage, um die eindeutigen Nummern aus einer Liste von ganzen Zahlen zurückzugeben.  
   
- [!code-vb[CsLINQSetOps#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/set-operations_1.vb)]  
+ [!code-vb[CsLINQSetOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQSetOps/VB/setops.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Linq>

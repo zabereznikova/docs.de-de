@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: bfbe1bb413e0d9f46fe587d7a412af5303685b7a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ace9e339a65c14e69e1a672880e392c7e09d36e8
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748374"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212377"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung
 
@@ -205,9 +205,9 @@ In diesem Abschnitt fügen Sie der Anwendung zwei Seiten und ein Bild hinzu.
 
 10. Fügen Sie ein Bild mit dem Namen *watermark.png* zum Projekt. Sie können Ihr eigenes Image erstellen, kopieren Sie die Datei aus dem Beispielcode oder erhalten sie [hier](https://github.com/dotnet/docs/blob/master/docs/framework/wpf/getting-started/media/watermark.png).
 
-   1. Mit der rechten Maustaste auf den Projektknoten, und wählen Sie **hinzufügen** > **vorhandenes Element**, oder drücken Sie **UMSCHALT**+**Alt** + **Ein**.
+    1. Mit der rechten Maustaste auf den Projektknoten, und wählen Sie **hinzufügen** > **vorhandenes Element**, oder drücken Sie **UMSCHALT**+**Alt** + **Ein**.
 
-   2. In der **vorhandenes Element hinzufügen** suchen Sie die Image-Datei, die Sie verwenden möchten, und wählen Sie dann im Dialogfeld **hinzufügen**.
+    2. In der **vorhandenes Element hinzufügen** suchen Sie die Image-Datei, die Sie verwenden möchten, und wählen Sie dann im Dialogfeld **hinzufügen**.
 
 ## <a name="build-and-run-the-application"></a>Erstellen eines Builds und Ausführen der Anwendung
 

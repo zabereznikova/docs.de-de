@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e1fc8d9d8c135f9eea8b9451b884ef3b7ba4704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf3d422bbcec2754601f6dd07d7b45bab2a716e3
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694138"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201160"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put-Funktion
 Schreibt den benannten Qualifizierer und den Wert. Der neue Qualifizierer wird den vorherigen Wert mit dem gleichen Namen überschrieben. Wenn Sie der Qualifizierer nicht vorhanden ist, wird es erstellt. 
@@ -60,8 +60,8 @@ HRESULT QualifierSet_Put (
 | `WBEM_FLAVOR_OVERRIDABLE` | 0 | Der Qualifizierer kann in einer abgeleiteten Klasse oder Instanz überschrieben werden. **Dies ist der Standardwert.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | Der Qualifizierer wird an Instanzen weitergegeben. |
 | `WBEM_FLAVOR_GLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Der Qualifizierer wird auf die abgeleitete Klassen weitergegeben. |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE | 0x10 | Der Qualifizierer kann in einer abgeleiteten Klasse oder Instanz nicht überschrieben werden. |
-| `WBEM_FLAVOR_AMENDED | 0x80 | Der Qualifizierer wurde lokalisiert. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Der Qualifizierer kann in einer abgeleiteten Klasse oder Instanz nicht überschrieben werden. |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | Der Qualifizierer wurde lokalisiert. |
 
 ## <a name="return-value"></a>Rückgabewert
 

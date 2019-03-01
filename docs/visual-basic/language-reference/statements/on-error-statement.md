@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 16a2ee7f16df92db8deb44ff979ec077eefc20aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5dc432f8e62430d48954b2c049cab3ebae4d442e
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976485"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203742"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error-Anweisung (Visual Basic)
 Aktiviert eine Fehlerbehandlungsroutine und gibt den Speicherort der Routine in einer Prozedur an. kann auch verwendet werden, um eine Fehlerbehandlungsroutine zu deaktivieren.  
@@ -111,7 +111,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel verwendet zuerst die `On Error GoTo` Anweisung, um den Speicherort einer Routine für die Fehlerbehandlung in einer Prozedur anzugeben. Im Beispiel führt der Versuch Division durch 0 (null) Fehlernummer 6. Der Fehler wird in der Fehlerbehandlung Routine behandelt, und die Steuerung dann wieder an die Anweisung, die den Fehler verursacht hat. Die `On Error GoTo 0` Anweisung deaktiviert das Abfangen von Fehlern. Die `On Error Resume Next` -Anweisung verwendet, um zurückstellen Fehler abfangen, damit der Kontext für den Fehler generiert, indem Sie die nächste Anweisung für bestimmte bekannt sein kann. Beachten Sie, dass `Err.Clear` dient zum Löschen der `Err` Eigenschaften des Objekts, nachdem der Fehler behandelt wird.  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]  
   
 ## <a name="requirements"></a>Anforderungen  
  **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

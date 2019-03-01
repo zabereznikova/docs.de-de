@@ -17,12 +17,12 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 8526f632b7e54c03bd16c3af70375179cd7cf277
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c10fc3998469e19d5be744ea8fb4faed25f1a2a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724472"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201221"
 ---
 # <a name="--operator-visual-basic"></a>--Operator (Visual Basic)
 Gibt die Differenz zwischen zwei numerischen Ausdrücken oder den negativen Wert eines numerischen Ausdrucks zurück.  
@@ -48,7 +48,7 @@ Gibt die Differenz zwischen zwei numerischen Ausdrücken oder den negativen Wert
  Der Ergebniswert vom Datentyp eines numerischen Typs, die für die Datentypen der entsprechenden `expression1` und `expression2`. Finden Sie in den Tabellen "Ganzzahlarithmetik" in [Datentypen von Operatorergebnissen Daten](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
   
 ## <a name="supported-types"></a>Unterstützte Typen  
- Alle numerischen Typen. Dazu gehören auch die Typen ohne Vorzeichen und Gleitkommatypen und `Decimal`.  
+ allen numerischen Typen Dazu gehören auch die Typen ohne Vorzeichen und Gleitkommatypen und `Decimal`.  
   
 ## <a name="remarks"></a>Hinweise  
  In der ersten Verwendung angezeigt, in der zuvor gezeigten Syntax der `–` Operator ist der *binäre* arithmetischer Subtraktionsoperator für den Unterschied zwischen zwei numerische Ausdrücke.  
@@ -63,7 +63,7 @@ Gibt die Differenz zwischen zwei numerischen Ausdrücken oder den negativen Wert
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `–` Operator zum Berechnen und Zurückgeben des Unterschied zwischen zwei Zahlen, und klicken Sie dann eine Zahl zu negieren.  
   
- [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
  Nach der Ausführung dieser Anweisungen ist `binaryResult` 124.45 enthält und `unaryResult` –334.90 enthält.  
   

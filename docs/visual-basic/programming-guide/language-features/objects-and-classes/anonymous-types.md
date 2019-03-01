@@ -8,12 +8,12 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-ms.openlocfilehash: 5ff3b12e85b9ab7fb8341bb8665a057165e78816
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 824481c9c73d496998d5810c620b2317c1ec252a
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968017"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203440"
 ---
 # <a name="anonymous-types-visual-basic"></a>Anonyme Typen (Visual Basic)
 Visual Basic unterstützt anonyme Typen, die Ihnen ermöglichen, Objekte zu erstellen, ohne eine Klassendefinition für den Datentyp zu schreiben. Stattdessen erzeugt der Compiler eine Klasse. Die Klasse hat keinen verwendbaren Namen, erbt direkt von <xref:System.Object>, und enthält die Eigenschaften, die Sie in der Deklaration des Objekts angeben. Da der Name des Datentyps nicht angegeben ist, wird bezeichnet als ein *anonymen Typs*.  
@@ -81,7 +81,7 @@ Visual Basic unterstützt anonyme Typen, die Ihnen ermöglichen, Objekte zu erst
 ### <a name="read-only-values"></a>Schreibgeschützte Werte  
  Die Werte der Eigenschaften können nicht geändert werden. Z. B. in `prod8` im vorherigen Beispiel die `Name` und `Price` Felder sind `read-only`, aber `OnHand` kann geändert werden.  
   
- [!code-vb[VbVbalrAnonymousTypes#8](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_8.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#8)]  
   
 ## <a name="anonymous-types-from-query-expressions"></a>Anonyme Typen in Abfrageausdrücken  
  Abfrageausdrücke muss nicht immer die Erstellung von anonymen Typen. Wenn möglich, verwenden sie einen vorhandenen Typ zum Speichern der Spaltendaten an. Dies tritt auf, wenn die Abfrage entweder ganze Datensätze aus der Datenquelle oder nur ein Feld aus jedem Datensatz zurückgibt. In den folgenden Codebeispielen `customers` ist eine Auflistung von Objekten von einem `Customer` Klasse. Die Klasse verfügt über zahlreiche Eigenschaften, und Sie können eine oder mehrere von ihnen in das Abfrageergebnis in einer beliebigen Reihenfolge einschließen. In den ersten beiden Beispielen sind keine anonymen Typen erforderlich, da die Abfragen Elemente der benannten Typen auswählen:  

@@ -1,61 +1,86 @@
 ---
 title: 'Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in'
-ms.date: 03/30/2017
+ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 72fd6a1be2f33e1bfeb08fd43f3436627ee842e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521581"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200285"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in
-Ein allgemeiner Typ der Anmeldeinformationen ist das X.509-Zertifikat. Bei der Erstellung sicherer Dienste oder Clients können Sie ein Zertifikat angeben, das als Anmeldeinformation für Client oder Dienst über die Methoden wie beispielsweise <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> verwendet wird. Die Methode erfordert diverse Parameter; beispielsweise den Speicherplatz des Zertifikats und eines Werts, der für die Suche eines Zertifikats verwendet wird. Die folgende Prozedur veranschaulicht, wie die Speicherplätze auf einem Computer untersucht werden, um ein entsprechendes Zertifikat zu suchen. Ein Beispiel für den Fingerabdruck des Zertifikats zu suchen, finden Sie unter [Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+Wenn Sie einen sicheren Client oder Dienst erstellen, können Sie eine [Zertifikat](working-with-certificates.md) als die Anmeldeinformationen. Ein allgemeiner Typ der Anmeldeinformationen ist z. B. das x. 509-Zertifikat, das Sie erstellen, mit der <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> Methode. 
+
+Es gibt drei verschiedene Typen von Zertifikatspeichern, die Sie, mit der Microsoft Management Console (MMC) auf Windows-Systemen untersuchen können:
+
+- Lokaler Computer: Der Speicher ist lokal auf dem Gerät und global für alle Benutzer auf dem Gerät.
+
+- Aktueller Benutzer: Der Speicher ist für das aktuelle Benutzerkonto auf dem Gerät lokal.
+
+- Dienstkonto: Der Speicher ist für einen bestimmten Dienst auf dem Gerät lokal.
+
   
-### <a name="to-view-certificates-in-the-mmc-snap-in"></a>So zeigen Sie Zertifikate im MMC-Snap-In an  
+## <a name="view-certificates-in-the-mmc-snap-in"></a>Anzeigen von Zertifikaten im MMC-Snap-in 
+
+Das folgende Verfahren veranschaulicht, wie der Speicher auf dem lokalen Gerät finden Sie ein entsprechendes Zertifikat zu überprüfen: 
   
-1.  Öffnen Sie ein Eingabeaufforderungsfenster.  
+1. Wählen Sie **ausführen** aus der **starten** Menü, und geben Sie dann *Mmc*. 
+
+    Die MMC wird angezeigt. 
   
-2.  Typ `mmc` , und drücken Sie die EINGABETASTE. Beachten Sie, dass Sie in der Administratorrolle sein müssen, um Zertifikate im lokalen Computerspeicher anzuzeigen.  
+2. Von der **Datei** , wählen Sie im Menü **Snap-In hinzufügen/entfernen**. 
+    
+    Die **hinzufügen oder Entfernen von-Snap-ins** Fenster wird angezeigt.
   
-3.  Auf der **Datei** Menü klicken Sie auf **Snap-In hinzufügen/entfernen**.  
+3. Von der **Verfügbare Snap-Ins** wählen **Zertifikate**, und wählen Sie dann **hinzufügen**.  
+
+    ![Zertifikat-Snap-in hinzufügen](./media/mmc-add-certificate-snap-in.png)
   
-4.  Klicken Sie auf **Hinzufügen**.  
+4. In der **Zertifikat-Snap-in** wählen Sie im Fenster **Computerkonto**, und wählen Sie dann **Weiter**. 
   
-5.  In der **Standalone-Snap-in hinzufügen** wählen Sie im Dialogfeld **Zertifikate**.  
+    Wählen Sie optional **mein Benutzerkonto** für den aktuellen Benutzer oder **-Dienstkonto** für einen bestimmten Dienst. 
+
+    > [!NOTE]
+    > Wenn Sie für Ihr Gerät kein Administrator sind, können Sie Zertifikate nur für Ihr Benutzerkonto verwalten.
   
-6.  Klicken Sie auf **Hinzufügen**.  
+5. In der **Computer auswählen** Fenster verlassen **lokalen Computer** ausgewählt, und wählen Sie dann **Fertig stellen**.  
   
-7.  In der **Zertifikat-Snap-in** wählen Sie im Dialogfeld **Computerkonto** , und klicken Sie auf **Weiter**. Wählen Sie optional **eigenes Benutzerkonto** oder **-Dienstkonto**. Sind Sie kein Verwalter des Computers, können Sie Zertifikate nur für Ihr Benutzerkonto verwalten.  
+6. In der **hinzufügen oder Entfernen von Snap-Ins** wählen Sie im Fenster **OK**.  
   
-8.  In der **Computer auswählen** Dialogfeld klicken Sie auf **Fertig stellen**.  
+    ![Zertifikat-Snap-in hinzufügen](./media/mmc-certificate-snap-in-selected.png)
+
+7. Optional: Von der **Datei** , wählen Sie im Menü **speichern** oder **speichern** zum Speichern der Datei des MMC-Konsole für die spätere Verwendung.  
+
+8. Wählen Sie zum Anzeigen Ihrer Zertifikate im MMC-Snap-in **Konsolenstamm** im linken Bereich, und erweitern Sie dann **Zertifikate (lokaler Computer)**.
+
+    Eine Liste der Verzeichnisse für jeden Typ von Zertifikat wird angezeigt. Jedes Verzeichnis Zertifikat können Sie anzeigen, exportieren, importieren und die Zertifikate zu löschen.
   
-9. In der **Standalone-Snap-in hinzufügen** Dialogfeld klicken Sie auf **schließen**.  
+
+## <a name="view-certificates-with-the-certificate-manager-tool"></a>Anzeigen von Zertifikaten mit dem Zertifikat-Manager-tool
+
+Sie können auch anzeigen, exportieren, importieren und Löschen von Zertifikaten mit dem Zertifikat-Manager-Tool.
+
+### <a name="to-view-certificates-for-the-local-device"></a>Zertifikate für das lokale Gerät angezeigt
+
+1. Wählen Sie **ausführen** aus der **starten** Menü, und geben Sie dann *"certlm.msc"*. 
+
+    Das Zertifikat-Manager-Tool für das lokale Gerät angezeigt wird. 
   
-10. Auf der **Snap-In hinzufügen/entfernen** Dialogfeld klicken Sie auf **OK**.  
+2. Die Zertifikate, unter anzeigen **Zertifikate – lokaler Computer** im linken Bereich, erweitern Sie in das Verzeichnis für den Typ des Zertifikats, die Sie anzeigen möchten.
+
+### <a name="to-view-certificates-for-the-current-user"></a>Zum Anzeigen der Zertifikate für den aktuellen Benutzer
+
+1. Wählen Sie **ausführen** aus der **starten** Menü, und geben Sie dann *"Certmgr.msc"*. 
+
+    Das Zertifikat-Manager-Tool für den aktuellen Benutzer angezeigt wird. 
   
-11. In der **Konsolenstamm** Fenster, klicken Sie auf **Zertifikate (lokaler Computer)** um das Zertifikat anzuzeigen, die für den Computer werden gespeichert.  
-  
-12. Dies ist optional. Wiederholen Sie die Schritte 3 bis 6, um Zertifikate für Ihr Konto anzuzeigen. Klicken Sie in Schritt 7 anstelle **Computerkonto**, klicken Sie auf **eigenes Benutzerkonto** , und wiederholen Sie die Schritte 8 bis 10.  
-  
-13. Dies ist optional. Auf der **Datei** Menü klicken Sie auf **speichern** oder **speichern**. Speichern Sie die Konsolendatei zur späteren Wiederverwendung.  
-  
-## <a name="viewing-certificates-with-internet-explorer"></a>Anzeigen von Zertifikaten mit Internet Explorer  
- Darüber hinaus können Sie Zertifikate mit dem Internet Explorer ansehen, exportieren, importieren und löschen.  
-  
-#### <a name="to-view-certificates-with-internet-explorer"></a>So zeigen Sie Zertifikate mit dem Internet Explorer an  
-  
-1.  Klicken Sie in Internet Explorer auf **Tools**, klicken Sie dann auf **Internetoptionen** zum Anzeigen der **Internetoptionen** Dialogfeld.  
-  
-2.  Klicken Sie auf die **Content** Registerkarte.  
-  
-3.  Klicken Sie unter **Zertifikate**, klicken Sie auf **Zertifikate**.  
-  
-4.  Zum Anzeigen der Details eines Zertifikats, wählen Sie das Zertifikat aus, und klicken Sie auf **Ansicht**.  
+2. Die Zertifikate, unter anzeigen **Zertifikate - Aktueller Benutzer** im linken Bereich, erweitern Sie in das Verzeichnis für den Typ des Zertifikats, die Sie anzeigen möchten.
+
   
 ## <a name="see-also"></a>Siehe auch
-- [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
-- [Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Arbeiten mit Zertifikaten](working-with-certificates.md)
+- [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](how-to-create-temporary-certificates-for-use-during-development.md)
+- [Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats](how-to-retrieve-the-thumbprint-of-a-certificate.md)

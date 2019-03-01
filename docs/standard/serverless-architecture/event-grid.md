@@ -4,12 +4,12 @@ description: Azure Event Grid ist ein serverlosen Lösung für die zuverlässige
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145881"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212182"
 ---
 # <a name="event-grid"></a>Event Grid
 
@@ -98,10 +98,10 @@ Ein großer Vorteil der Verwendung von Event Grid ist die automatische Nachricht
 |  | Microsoft.Resources.ResourceDeleteSuccess | Ausgelöst, wenn der Löschvorgang einer Ressource erfolgreich ist. |
 |  | Microsoft.Resources.ResourceDeleteFailure | Ausgelöst, wenn der Löschvorgang einer Ressource ein Fehler auftritt. |
 | | Microsoft.Resources.ResourceDeleteCancel | Wird ausgelöst, wenn der Löschvorgang einer Ressource abgebrochen wird. Dieses Ereignis erfolgt, wenn eine vorlagenbereitstellung abgebrochen wird. |
-| BLOB-Speicher | Microsoft.Storage.BlobCreated | Wird ausgelöst, wenn ein Blob erstellt wird. |
+| Blobspeicher | Microsoft.Storage.BlobCreated | Wird ausgelöst, wenn ein Blob erstellt wird. |
 | | Microsoft.Storage.BlobDeleted | Wird ausgelöst, wenn ein Blob gelöscht wird. |
 | Event hubs | Microsoft.EventHub.CaptureFileCreated | Wird ausgelöst, wenn eine erfassungsdatei erstellt wird.
-| IoT Hub-Instanz | Microsoft.Devices.DeviceCreated | Veröffentlicht, wenn ein Gerät mit einem iothub registriert wird. |
+| IoT Hub | Microsoft.Devices.DeviceCreated | Veröffentlicht, wenn ein Gerät mit einem iothub registriert wird. |
 | | Microsoft.Devices.DeviceDeleted | Veröffentlicht, wenn ein Gerät von einem iothub gelöscht wird. |
 | Ressourcengruppen | Microsoft.Resources.ResourceWriteSuccess | Wird ausgelöst, wenn erstellungs- oder Aktualisierungsvorgang eine Ressource ist erfolgreich. |
 | | Microsoft.Resources.ResourceWriteFailure | Wird ausgelöst, wenn eine Ressource zu erstellen oder Updatevorgang ein Fehler auftritt. |
@@ -124,7 +124,7 @@ In diesem Kapitel haben Sie über die Azure serverlose Plattform, die von Azure 
 * [Application Insights](https://docs.microsoft.com/azure/application-insights)
 * [Application Insights-Analyse](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)
 * [Azure: Bringen Sie Ihre app in die Cloud mit serverlosen Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)
-* [Azure Event Grid](https://docs.microsoft.com/azure/azure-event-grid/overview)
+* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
 * [Azure Event Grid-Ereignisschema](https://docs.microsoft.com/azure/event-grid/event-schema)
 * [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
 * [Dokumentation zu Azure Functions](https://docs.microsoft.com/azure/azure-functions)

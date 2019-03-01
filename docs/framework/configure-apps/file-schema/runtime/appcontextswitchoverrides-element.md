@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e90f551b94e16fc7cecf768feff43e4d084c04a6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b11452e34a802e84a12eb1832234ae5ab60aa992
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966150"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203547"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides >-Element
 Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse für die Bereitstellung eines Mechanismus zum Deaktivieren neuer Funktionen verwendet wird.  
@@ -88,6 +88,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|Deaktiviert die serverseitige Benachrichtigungen SslStream TLS.|.NET Framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Steuerelemente, ob die [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) serialisiert einige Steuerzeichen, die basierend auf den ECMAScript V6 und V8-Standards. Weitere Informationen finden Sie unter [Entschärfung: Serialisierung von Steuerzeichen mit dem DataContractJsonSerializer](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Steuerelemente, ob die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> mehrere Anpassungen oder nur eine einzelne Anpassung für eine Zeitzone unterstützt. Wenn `true`, verwendet der <xref:System.TimeZoneInfo> geben, die zum Serialisieren und Deserialisieren von Datums-und Uhrzeitdaten; andernfalls wird die <xref:System.TimeZone> Typ, der mehrere Anpassungsregeln nicht unterstützt.|.NET Framework 4.6.2|
+|`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|Steuerelemente, ob <xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> eine größere Größe des Arrays bei der Objektserialisierung und Deserialisierung verwendet. Legen Sie diese Option auf `true` verbessern Sie die Leistung der Serialisierung und Deserialisierung von Typen großer Objektgraphen wie z. B. <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Steuerelemente, ob die <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> Konstruktor legt des neuen Objekts <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> Eigenschaft mit dem vorhandenen Objektverweis. Weitere Informationen finden Sie unter [Entschärfung: ClaimsIdentity-Konstruktor](../../../migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Steuerelemente, ob der Versuch der Wiederverwendung bereits ein <xref:System.Security.Cryptography.AesCryptoServiceProvider> Entschlüsselungsmethode löst eine <xref:System.Security.Cryptography.CryptographicException>. Weitere Informationen finden Sie unter [die AesCryptoServiceProvider-Entschlüsselungsmethode stellt eine wiederverwendbare Transformation bereit](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform).|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Steuerelemente, ob der Wert des der [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) -Eigenschaft ist ein [IntPtr](xref:System.IntPtr) , stellt die Speicheradresse eines Fensters verarbeiten, oder gibt an, ob es ein Fensterhandle (HWND) ist. Weitere Informationen finden Sie unter [Entschärfung: CspParameters.ParentWindowHandle erwartet ein HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET Framework 4.7|   
