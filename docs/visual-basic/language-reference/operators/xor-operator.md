@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: af6589206232f01b572cd2b965ba1a0f36d462e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc3df1fdee5405445b4534a6982383c49b369b01
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527119"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980437"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor-Operator (Visual Basic)
 Führt einen logischen Ausschluss für zwei `Boolean` Ausdrücke oder eine bitweise Exklusion zweier numerischer Ausdrücke.  
@@ -78,14 +78,14 @@ result = expression1 Xor expression2
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `Xor` Operator zwei Ausdrücke logischen Ausschluss (exklusive logische Disjunktion) ausgeführt. Das Ergebnis ist eine `Boolean` -Wert, der angibt, ob genau einer der Ausdrücke ist `True`.  
   
- [!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#40)]  
   
  Das vorherige Beispiel erzeugt die Ergebnisse der `False`, `True`, und `False`bzw.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `Xor` Operator, um die einzelnen Bits von zwei numerischen Ausdrücken logischen Ausschluss (exklusive logische Disjunktion) ausgeführt. Das Bit im Ergebnismuster wird festgelegt, wenn genau eines der entsprechenden Bits in den Operanden auf 1 festgelegt ist.  
   
- [!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#41)]  
   
  Im vorherige Beispiel werden die Ergebnisse von 2, 12 und 14, bzw. erzeugt.  
   

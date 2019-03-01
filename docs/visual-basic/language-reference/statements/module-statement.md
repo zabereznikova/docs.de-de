@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-ms.openlocfilehash: 0503292dca81ef7b249b391f54c0aba2bba2cb10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a30b037b5a918f9b760ff0ab5b704dceb280d33f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524181"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980216"
 ---
 # <a name="module-statement"></a>Module-Anweisung
 Deklariert den Namen eines Moduls, und führt die Definitionen der Variablen, Eigenschaften, Ereignisse und Prozeduren ein, denen das Modul enthält.  
@@ -94,7 +94,7 @@ End Module
 -   **Qualifizierung.** Sie haben mehrere Module in einem Projekt, und Sie können Member mit demselben Namen in zwei oder mehrere Module deklarieren. Allerdings müssen Sie alle Verweise auf einen solchen Member mit dem entsprechenden Modulnamen qualifizieren, wenn der Verweis von außerhalb des Moduls ist. Weitere Informationen finden Sie unter [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="example"></a>Beispiel  
- [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)

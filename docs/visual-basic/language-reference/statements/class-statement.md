@@ -13,12 +13,12 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 846dc49f15f48e5f7f68171e0f937678751c796b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bc2d6a6b3e01cd7efa00763d3b9bf3a0026be6f
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648659"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975874"
 ---
 # <a name="class-statement-visual-basic"></a>Class-Anweisung (Visual Basic)
 Deklariert den Namen einer Klasse, und führt die Definitionen der Variablen, Eigenschaften, Ereignisse und Prozeduren, die die Klasse umfasst.  
@@ -57,7 +57,8 @@ End Class
 ## <a name="remarks"></a>Hinweise  
  Ein `Class` -Anweisung definiert einen neuen Datentyp. Ein *Klasse* ist ein wesentlicher Baustein der objektorientierten Programmierung (OOP). Weitere Informationen finden Sie unter [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
- `Class` kann nur auf Namespace- oder Modulebene verwendet werden. Dies bedeutet, dass die *Deklarationskontext* für eine Klasse, eine Quelldatei, Namespace, Klasse, Struktur, Modul oder Schnittstelle sein muss, und eine Prozedur oder der Block nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ 
+  `Class` kann nur auf Namespace- oder Modulebene verwendet werden. Dies bedeutet, dass die *Deklarationskontext* für eine Klasse, eine Quelldatei, Namespace, Klasse, Struktur, Modul oder Schnittstelle sein muss, und eine Prozedur oder der Block nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  Jede Instanz einer Klasse verfügt über eine Lebensdauer, die unabhängig von allen anderen Instanzen. Diese Lebensdauer beginnt bei der Erstellung von einem [neuer Operator](../../../visual-basic/language-reference/operators/new-operator.md) Klausel oder eine Funktion, wie z. B. <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>. Sie endet, wenn alle Variablen, zeigen auf die Instanz, dass festgelegt wurden [nichts](../../../visual-basic/language-reference/nothing.md) oder Instanzen anderer Klassen.  
   
@@ -105,7 +106,7 @@ End Class
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine `Class` Anweisung, um eine Klasse und mehrere Member definieren.  
   
- [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
