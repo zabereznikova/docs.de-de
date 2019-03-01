@@ -2,23 +2,17 @@
 title: Ressourcen in .NET-Apps
 ms.date: 07/25/2018
 helpviewer_keywords:
-- deploying applications [.NET Framework], resources
-- deploying applications [.NET Core], resources
-- application resources
-- resource files
-- satellite assemblies
-- localization
-- packaging application resources
-- localizing resources
+  - 'deploying applications [.NET Framework], resources'
+  - 'deploying applications [.NET Core], resources'
+  - application resources
+  - resource files
+  - satellite assemblies
+  - localization
+  - packaging application resources
+  - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e42255378e4a2fdd50d9c1539e3bcee43012e56c
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221042"
 ---
 # <a name="resources-in-net-apps"></a>Ressourcen in .NET-Apps
 Fast jede professionell erstellte App benötigt Ressourcen. Dabei handelt es sich um nicht ausführbare Daten, die logisch mit einer App bereitgestellt werden. Eine Ressource kann in einer App als Fehlermeldung oder als Teil der Benutzeroberfläche angezeigt werden. Ressourcen können verschiedene Formen von Daten enthalten, z. B. Zeichenfolgen, Bilder und beibehaltene Objekte. (Objekte, die beibehalten werden, müssen serialisierbar sein, um in eine Ressourcendatei geschrieben werden zu können.) Durch Speichern von Daten in einer Ressourcendatei können Sie die Daten ändern, ohne die gesamte App neu kompilieren zu müssen. Außerdem können Sie dadurch die Daten an einem einzigen Ort speichern und müssen nicht auf hartcodierte Daten zurückgreifen, die an mehreren Orten gespeichert wird.  
@@ -27,10 +21,11 @@ Fast jede professionell erstellte App benötigt Ressourcen. Dabei handelt es sic
   
  Weitere Informationen zu Ressourcen in ASP.NET finden Sie unter [Übersicht über Ressourcen der ASP.NET-Webseite](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
   
- ## <a name="creating-and-localizing-resources"></a>Erstellen und Lokalisieren von Ressourcen  
- In einer nicht lokalisierten App können Sie Ressourcendateien als Repository für App-Daten verwenden. Dies gilt besonders für Zeichenfolgen, die andernfalls an mehreren Stellen im Quellcode hartcodiert wären. Im Allgemeinen werden Ressourcen als Textdateien (.txt) oder XML-Dateien (.resx) erstellt und dann mit [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) in binäre .resources-Dateien kompiliert. Diese Dateien können dann durch einen Sprachcompiler in die ausführbare Datei der App eingebettet werden. Weitere Informationen zum Erstellen von Ressourcen finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
-  
- Sie können die Ressourcen der App auch für bestimmte Kulturen lokalisieren. Dadurch können Sie lokalisierte (übersetzte) Versionen der Apps erstellen. Wenn Sie eine App entwickeln, die lokalisierte Ressourcen verwendet, legen Sie eine Kultur als neutrale bzw. Ausweichkultur fest, deren Ressourcen verwendet werden, wenn keine passenden Ressourcen verfügbar sind. In der Regel werden die Ressourcen der neutralen Kultur in der ausführbaren Datei der App gespeichert. Die verbleibenden Ressourcen für einzelne lokalisierte Kulturen werden in eigenständigen Satellitenassemblys gespeichert. Weitere Informationen finden Sie unter [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
+## <a name="creating-and-localizing-resources"></a>Erstellen und Lokalisieren von Ressourcen  
+
+In einer nicht lokalisierten App können Sie Ressourcendateien als Repository für App-Daten verwenden. Dies gilt besonders für Zeichenfolgen, die andernfalls an mehreren Stellen im Quellcode hartcodiert wären. Im Allgemeinen werden Ressourcen als Textdateien (.txt) oder XML-Dateien (.resx) erstellt und dann mit [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) in binäre .resources-Dateien kompiliert. Diese Dateien können dann durch einen Sprachcompiler in die ausführbare Datei der App eingebettet werden. Weitere Informationen zum Erstellen von Ressourcen finden Sie unter [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).  
+
+Sie können die Ressourcen der App auch für bestimmte Kulturen lokalisieren. Dadurch können Sie lokalisierte (übersetzte) Versionen der Apps erstellen. Wenn Sie eine App entwickeln, die lokalisierte Ressourcen verwendet, legen Sie eine Kultur als neutrale bzw. Ausweichkultur fest, deren Ressourcen verwendet werden, wenn keine passenden Ressourcen verfügbar sind. In der Regel werden die Ressourcen der neutralen Kultur in der ausführbaren Datei der App gespeichert. Die verbleibenden Ressourcen für einzelne lokalisierte Kulturen werden in eigenständigen Satellitenassemblys gespeichert. Weitere Informationen finden Sie unter [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  
   
 ## <a name="packaging-and-deploying-resources"></a>Verpacken und Bereitstellen von Ressourcen  
  Lokalisierte App-Ressourcen werden in [Satellitenassemblys](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) bereitgestellt. Eine Satellitenassembly enthält die Ressourcen einer einzelnen Kultur. Sie enthält keinen App-Code. Im Satellitenassembly-Bereitstellungsmodell erstellen Sie eine App mit einer Standardassembly (in der Regel die Hauptassembly) und einer Satellitenassembly für jede Kultur, die von der App unterstützt wird. Da die Satellitenassemblys kein Teil der Hauptassembly sind, können Sie die Ressourcen problemlos entsprechend einer bestimmten Kultur ersetzen oder aktualisieren, ohne die Hauptassembly der App ersetzen zu müssen.  
