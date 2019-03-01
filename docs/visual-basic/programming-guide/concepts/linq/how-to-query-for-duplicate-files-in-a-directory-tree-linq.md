@@ -2,17 +2,17 @@
 title: 'Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 8cfa86aa3750b7a102bfe6787bf589b5662efa15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5663c368c319c8c667171f65292667029951dae9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667179"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57200623"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a><span data-ttu-id="5ab4a-102">Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ab4a-102">How to: Query for Duplicate Files in a Directory Tree (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="5ab4a-103">Manchmal können sich Dateien mit demselben Namen in mehr als einem Ordner befinden.</span><span class="sxs-lookup"><span data-stu-id="5ab4a-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="5ab4a-104">Beispielsweise enthalten mehrere Ordner unter dem Installationsordner von Visual Studio eine Datei „readme.htm“.</span><span class="sxs-lookup"><span data-stu-id="5ab4a-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="5ab4a-105">Dieses Beispiel zeigt, wie solche mehrfach vorkommenden Dateinamen in einem angegebenen Stammordner abgefragt werden können.</span><span class="sxs-lookup"><span data-stu-id="5ab4a-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="5ab4a-106">Das zweite Beispiel zeigt, wie Dateien abgefragt werden können, deren Größe und Erstellungszeit ebenfalls übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="5ab4a-106">The second example shows how to query for files whose size and creation times also match.</span></span>  
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a><span data-ttu-id="80dd5-102">Vorgehensweise: Abfragen von Dateiduplikaten in einer Verzeichnisstruktur (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="80dd5-102">How to: Query for Duplicate Files in a Directory Tree (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="80dd5-103">Manchmal können sich Dateien mit demselben Namen in mehr als einem Ordner befinden.</span><span class="sxs-lookup"><span data-stu-id="80dd5-103">Sometimes files that have the same name may be located in more than one folder.</span></span> <span data-ttu-id="80dd5-104">Beispielsweise enthalten mehrere Ordner unter dem Installationsordner von Visual Studio eine Datei „readme.htm“.</span><span class="sxs-lookup"><span data-stu-id="80dd5-104">For example, under the Visual Studio installation folder, several folders have a readme.htm file.</span></span> <span data-ttu-id="80dd5-105">Dieses Beispiel zeigt, wie solche mehrfach vorkommenden Dateinamen in einem angegebenen Stammordner abgefragt werden können.</span><span class="sxs-lookup"><span data-stu-id="80dd5-105">This example shows how to query for such duplicate file names under a specified root folder.</span></span> <span data-ttu-id="80dd5-106">Das zweite Beispiel zeigt, wie Dateien abgefragt werden können, deren Größe und Erstellungszeit ebenfalls übereinstimmen.</span><span class="sxs-lookup"><span data-stu-id="80dd5-106">The second example shows how to query for files whose size and creation times also match.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5ab4a-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5ab4a-107">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="80dd5-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="80dd5-107">Example</span></span>  
   
 ```vb  
 Module QueryDuplicateFileNames  
@@ -55,14 +55,14 @@ Module QueryDuplicateFileNames
         PageOutput(duplicates, trimLength)  
   
     End Sub  
-    ' Pages console diplay for large query results. No more than one group per page.  
+    ' Pages console display for large query results. No more than one group per page.  
     ' This sub specifically works with group queries of FileInfo objects  
     ' but can be modified for any type.  
     Sub PageOutput(ByVal groupQuery, ByVal charsToSkip)  
   
         ' "3" = 1 line for extension key + 1 for "Press any key" + 1 for input cursor.  
         Dim numLines As Integer = Console.WindowHeight - 3  
-        ' Flag to indicate whether there are more results to diplay  
+        ' Flag to indicate whether there are more results to display  
         Dim goAgain As Boolean = True  
   
         For Each fg As IEnumerable(Of System.IO.FileInfo) In groupQuery  
@@ -98,11 +98,11 @@ Module QueryDuplicateFileNames
 End Module  
 ```  
   
- <span data-ttu-id="5ab4a-108">Die erste Abfrage verwendet einen einfachen Schlüssel, um eine Übereinstimmung zu ermitteln. Somit werden Dateien gefunden, die den gleichen Namen haben, deren Inhalt aber unterschiedlich sein kann.</span><span class="sxs-lookup"><span data-stu-id="5ab4a-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="5ab4a-109">Die zweite Abfrage verwendet einen zusammengesetzten Schlüssel für den Abgleich von drei Eigenschaften des <xref:System.IO.FileInfo>-Objekts.</span><span class="sxs-lookup"><span data-stu-id="5ab4a-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="5ab4a-110">Diese Abfrage hat eine größere Wahrscheinlichkeit, Dateien zu finden, die denselben Namen und ähnliche oder identische Inhalte aufweisen.</span><span class="sxs-lookup"><span data-stu-id="5ab4a-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
+ <span data-ttu-id="80dd5-108">Die erste Abfrage verwendet einen einfachen Schlüssel, um eine Übereinstimmung zu ermitteln. Somit werden Dateien gefunden, die den gleichen Namen haben, deren Inhalt aber unterschiedlich sein kann.</span><span class="sxs-lookup"><span data-stu-id="80dd5-108">The first query uses a simple key to determine a match; this finds files that have the same name but whose contents might be different.</span></span> <span data-ttu-id="80dd5-109">Die zweite Abfrage verwendet einen zusammengesetzten Schlüssel für den Abgleich von drei Eigenschaften des <xref:System.IO.FileInfo>-Objekts.</span><span class="sxs-lookup"><span data-stu-id="80dd5-109">The second query uses a compound key to match against three properties of the <xref:System.IO.FileInfo> object.</span></span> <span data-ttu-id="80dd5-110">Diese Abfrage hat eine größere Wahrscheinlichkeit, Dateien zu finden, die denselben Namen und ähnliche oder identische Inhalte aufweisen.</span><span class="sxs-lookup"><span data-stu-id="80dd5-110">This query is much more likely to find files that have the same name and similar or identical content.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="5ab4a-111">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="5ab4a-111">Compiling the Code</span></span>  
- <span data-ttu-id="5ab4a-112">Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.</span><span class="sxs-lookup"><span data-stu-id="5ab4a-112">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="80dd5-111">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="80dd5-111">Compiling the Code</span></span>  
+ <span data-ttu-id="80dd5-112">Erstellen Sie ein neues Projekt, das auf die .NET Framework-Version 3.5 oder höher ausgelegt ist, mit einer Referenz zu System.Core.dll und einer `Imports`-Anweisung für den System.Linq-Namespace.</span><span class="sxs-lookup"><span data-stu-id="80dd5-112">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5ab4a-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5ab4a-113">See also</span></span>
-- [<span data-ttu-id="5ab4a-114">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ab4a-114">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [<span data-ttu-id="5ab4a-115">LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="5ab4a-115">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="80dd5-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="80dd5-113">See also</span></span>
+- [<span data-ttu-id="80dd5-114">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="80dd5-114">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="80dd5-115">LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="80dd5-115">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
