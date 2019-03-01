@@ -27,12 +27,12 @@
 ### [Basistypen](standard/base-types/)
 ## [.NET-Klassenbibliotheken](standard/class-libraries.md)
 ## [Analyzer](standard/analyzers/index.md)
-### [API Analyzer](standard/analyzers/api-analyzer.md) 
+### [API Analyzer](standard/analyzers/api-analyzer.md)
 ### [Portability Analyzer](standard/analyzers/portability-analyzer.md)
 ### [Framework Analyzer](standard/analyzers/framework-analyzer.md)
 ## [Behandeln und Auslösen von Ausnahmen](standard/exceptions/)
 ## [Assemblys in .NET](standard/assembly/index.md)
-### [.NET-Assemblydateiformat](standard/assembly/file-format.md) 
+### [.NET-Assemblydateiformat](standard/assembly/file-format.md)
 ## [Garbage Collection](standard/garbage-collection/)
 ## [Generische Typen](standard/generics.md)
 ## [Delegaten und Lambdas](standard/delegates-lambdas.md)
@@ -93,7 +93,6 @@
 ### [Neuigkeiten in .NET Core 2.1](core/whats-new/dotnet-core-2-1.md)
 ### [Neuigkeiten in .NET Core 2.0](core/whats-new/dotnet-core-2-0.md)
 ## [Tutorials](core/tutorials/index.md)
-### [Erstellen einer vollständigen .NET Core-Lösung unter Windows mit Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
 ### [Erste Schritte mit .NET Core unter macOS](core/tutorials/using-on-macos.md)
 ### [Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac](core/tutorials/using-on-mac-vs.md)
 ### [Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -101,7 +100,6 @@
 ### [Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile](core/tutorials/testing-with-cli.md)
 ### [Entwickeln von Bibliotheken mit plattformübergreifenden Tools](core/tutorials/libraries.md)
 ### [Entwickeln von ASP.NET Core-Anwendungen](core/tutorials/aspnet-core.md)
-### [So verwalten Sie Paketabhängigkeitsversionen für .NET Core 1.0](core/tutorials/managing-package-dependency-versions.md)
 ### [Hosten von .NET Core von nativem Code](core/tutorials/netcore-hosting.md)
 ### [Erstellen eines benutzerdefinierten Vorlagen-Assistenten](core/tutorials/create-custom-template.md)
 ## [Pakete, Metapakete und Frameworks](core/packages.md)
@@ -270,7 +268,9 @@
 ## [Einführung in C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
+<!-- markdownlint-disable MD003 -->
 ## Neues in C#
+<!-- markdownlint-enable MD003 -->
 ### [C# 8.0: Vorschauversion 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
@@ -296,7 +296,7 @@
 ### [Eigenschaften](csharp/properties.md)
 ### [Indexer](csharp/indexers.md)
 ### [Verwerfen](csharp/discards.md)
-### [Generika](csharp/programming-guide/generics/index.md)
+### [Generics](csharp/programming-guide/generics/index.md)
 ### [Iteratoren](csharp/iterators.md)
 ### [Delegaten und Ereignisse](csharp/delegates-events.md)
 #### [Einführung in Delegaten](csharp/delegates-overview.md)
@@ -393,7 +393,7 @@
 ### [Optionen](fsharp/language-reference/options.md)
 ### [Wertoptionen](fsharp/language-reference/value-options.md)
 ### [Ergebnisse](fsharp/language-reference/results.md)
-### [Generika](fsharp/language-reference/generics/index.md)
+### [Generics](fsharp/language-reference/generics/index.md)
 #### [Automatische Verallgemeinerung](fsharp/language-reference/generics/automatic-generalization.md)
 #### [Einschränkungen](fsharp/language-reference/generics/constraints.md)
 #### [Statisch aufgelöste Typparameter](fsharp/language-reference/generics/statically-resolved-type-parameters.md)
@@ -522,9 +522,11 @@
 #### [Anpassen der verfügbaren Objekte in „My“](visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
 
 ## [Programmierkonzepte](visual-basic/programming-guide/concepts/index.md)
-### [Assemblys in .NET](standard/assembly/index.md)
 ### [Asynchrone Programmierung mit Async und Await](visual-basic/programming-guide/concepts/async/index.md)
 ### [Attribute](visual-basic/programming-guide/concepts/attributes/index.md)
+### [Aufruferinformationen](visual-basic/programming-guide/concepts/caller-information.md)
+### [Sammlungen](visual-basic/programming-guide/concepts/collections.md)
+### [Kovarianz und Kontravarianz](visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 ### [Ausdrucksbaumstrukturen](visual-basic/programming-guide/concepts/expression-trees/index.md)
 ### [Iteratoren](visual-basic/programming-guide/concepts/iterators.md)
 ### [Language-Integrated Query (LINQ)](visual-basic/programming-guide/concepts/linq/index.md)
@@ -1211,7 +1213,7 @@
 #### [Untersuchen von Zwischenwerten in Pipelinedaten](machine-learning/how-to-guides/inspect-intermediate-data-ml-net.md)
 #### [Trainingsmodell mit Regression](machine-learning/how-to-guides/train-regression-model-ml-net.md)
 #### [Bestimmen der Wichtigkeit von Modellfeatures mit PFI](machine-learning/how-to-guides/determine-global-feature-importance-in-model.md)
-### Verwenden des trainierten Modells  
+### Verwenden des trainierten Modells
 #### [Einzelvorhersage mit PredictionEngine](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Operationalisieren eines trainierten Modells](machine-learning/how-to-guides/consuming-model-ml-net.md)
 ### Infer.NET
