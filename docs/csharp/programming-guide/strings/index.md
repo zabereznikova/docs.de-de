@@ -16,7 +16,7 @@ Eine Zeichenfolge ist ein Objekt des Typs <xref:System.String>, dessen Wert Text
 ## <a name="declaring-and-initializing-strings"></a>Deklarieren und Initialisieren von Zeichenfolgen  
  Sie können Zeichenfolgen auf verschiedene Weise deklarieren und Initialisieren, wie im folgenden Beispiel gezeigt:  
   
- [!code-csharp[csProgGuideStrings#1](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
  Beachten Sie, dass Sie nicht den [neuen](../../../csharp/language-reference/keywords/new-operator.md) Operator zum Erstellen eines Zeichenfolgenobjekts verwenden, außer wenn Sie die Zeichenfolge mit einem Array von Chars initialisieren.  
   
@@ -84,16 +84,16 @@ Weitere Informationen zum Formatieren von .NET-Typen finden Sie unter [Formatier
 ## <a name="substrings"></a>Teilzeichenfolgen  
  Eine Teilzeichenfolge ist eine beliebige Sequenz von Zeichen, die in einer Zeichenfolge enthalten ist. Verwenden Sie die <xref:System.String.Substring%2A>-Methode, um eine neue Zeichenfolge aus einem Teil der ursprünglichen Zeichenfolge zu erstellen. Sie können nach einem oder mehreren Vorkommnissen einer Teilzeichenfolge suchen, indem Sie die <xref:System.String.IndexOf%2A>-Methode verwenden. Verwenden Sie die <xref:System.String.Replace%2A>-Methode, um alle Vorkommnisse einer angegebenen Teilzeichenfolge mit einer neuen Zeichenfolge zu ersetzen. Genauso wie die <xref:System.String.Substring%2A>-Methode gibt <xref:System.String.Replace%2A> tatsächlich eine neue Zeichenfolge zurück und ändert nicht die ursprüngliche Zeichenfolge. Weitere Informationen finden Sie unter [Vorgehensweise: Suchen von Zeichenfolgen](../../how-to/search-strings.md) und [Vorgehensweise: Ändern von Zeichenfolgeninhalten](../../how-to/modify-string-contents.md).  
   
- [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
+ [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
 ## <a name="accessing-individual-characters"></a>Zugreifen auf einzelne Zeichen  
  Sie können die Arraynotation mit einem Indexwert verwenden, um schreibgeschützten Zugriff auf einzelne Zeichen zu erhalten, so wie in folgendem Beispiel gezeigt:  
   
- [!code-csharp[csProgGuideStrings#9](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_8.cs)]  
+ [!code-csharp[csProgGuideStrings#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#8)]  
   
  Wenn die <xref:System.String>-Methoden nicht die Funktionen bieten, die Sie zum Bearbeiten einzelner Zeichen in einer Zeichenfolge benötigen, können Sie ein <xref:System.Text.StringBuilder>-Objekt verwenden, um die einzelnen Chars „direkt“ zu bearbeiten und anschließend eine neue Zeichenfolge zu <xref:System.Text.StringBuilder>-Methoden zu speichern. Im folgenden Beispiel wird davon ausgegangen, dass Sie die ursprüngliche Zeichenfolge auf eine bestimmte Weise ändern und die Ergebnisse für die zukünftige Verwendung speichern müssen:  
   
- [!code-csharp[csProgGuideStrings#8](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_9.cs)]  
+ [!code-csharp[csProgGuideStrings#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#27)]  
   
 ## <a name="null-strings-and-empty-strings"></a>NULL-Zeichenfolgen und leere Zeichenfolgen  
  Eine leere Zeichenfolge ist eine Instanz eines <xref:System.String?displayProperty=nameWithType>-Objekts, dass 0 Zeichen enthält. Leere Zeichenfolgen werden häufig in verschiedenen Programmierszenarios verwendet, um ein leeres Textfeld darzustellen. Sie können Methoden für leere Zeichenfolgen aufrufen, da sie gültige <xref:System.String?displayProperty=nameWithType>-Objekte sind. Leere Zeichenfolgen werden wie folgt initialisiert:  
@@ -104,12 +104,12 @@ string s = String.Empty;
   
  Im Gegensatz dazu, verweist eine NULL-Zeichenfolge nicht auf eine Instanz eines <xref:System.String?displayProperty=nameWithType>-Objekts und jeder Versuch, eine Methode für eine NULL-Zeichenfolge aufzurufen, löst eine <xref:System.NullReferenceException> aus. Allerdings können Sie NULL-Zeichenfolgen in Verkettungs- und Vergleichsoperationen mit anderen Zeichenfolgen verwenden. Die folgenden Beispiele veranschaulichen einige Fälle, in denen ein Verweis auf eine NULL-Zeichenfolge nicht dazu führt, dass eine Ausnahme ausgelöst wird:  
   
- [!code-csharp[csProgGuideStrings#27](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_10.cs)]  
+ [!code-csharp[csProgGuideStrings#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#20)]  
   
 ## <a name="using-stringbuilder-for-fast-string-creation"></a>Verwenden von StringBuilder für die schnelle Erstellung von Zeichenfolgen  
  Zeichenfolgenoperationen in .NET werden hochgradig optimiert und wirken sich in den meisten Fällen nicht erheblich auf die Leistung aus. In einigen Szenarios, z.B. in engen Schleifen, die Hunderttausende Male ausgeführt werden, können sich Zeichenfolgenoperationen auf die Leistung auswirken. Die <xref:System.Text.StringBuilder>-Klasse erstellt einen Zeichenfolgenpuffer, der eine verbesserte Leistung mit sich bringt, wenn Ihr Programm viele Zeichenfolgenbearbeitungen durchführt. Mit der <xref:System.Text.StringBuilder>-Zeichenfolge können Sie auch einzelne Zeichen erneut zuweisen, was der integrierte String-Datentyp nicht unterstützt. Dieser Code ändert z.B. den Inhalt einer Zeichenfolge ohne eine neue Zeichenfolge zu erstellen:  
   
- [!code-csharp[csProgGuideStrings#20](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_11.cs)]  
+ [!code-csharp[csProgGuideStrings#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#15)]  
   
  In diesem Beispiel wird ein <xref:System.Text.StringBuilder>-Objekt zum Erstellen einer Zeichenfolge aus einem Satz von numerischen Typen verwendet:  
   
