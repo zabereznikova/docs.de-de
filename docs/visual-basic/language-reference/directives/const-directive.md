@@ -15,42 +15,42 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 7e855f76a0fa8e6c06fd557a944c518641415f09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb937a5a9d4688730085829350cb20172db50e97
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710598"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967047"
 ---
-# <a name="const-directive"></a><span data-ttu-id="f7ca7-102">#Const-Anweisung</span><span class="sxs-lookup"><span data-stu-id="f7ca7-102">#Const Directive</span></span>
-<span data-ttu-id="f7ca7-103">Definiert Konstanten für bedingte Kompilierung für Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-103">Defines conditional compiler constants for Visual Basic.</span></span>  
+# <a name="const-directive"></a><span data-ttu-id="b6a65-102">#Const-Anweisung</span><span class="sxs-lookup"><span data-stu-id="b6a65-102">#Const Directive</span></span>
+<span data-ttu-id="b6a65-103">Definiert Konstanten für bedingte Kompilierung für Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="b6a65-103">Defines conditional compiler constants for Visual Basic.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7ca7-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f7ca7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b6a65-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b6a65-104">Syntax</span></span>  
   
 ```  
 #Const constname = expression  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="f7ca7-105">Teile</span><span class="sxs-lookup"><span data-stu-id="f7ca7-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="b6a65-105">Teile</span><span class="sxs-lookup"><span data-stu-id="b6a65-105">Parts</span></span>  
  `constname`  
- <span data-ttu-id="f7ca7-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-106">Required.</span></span> <span data-ttu-id="f7ca7-107">Die Namen der Konstanten definiert wird.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-107">Name of the constant being defined.</span></span>  
+ <span data-ttu-id="b6a65-106">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="b6a65-106">Required.</span></span> <span data-ttu-id="b6a65-107">Die Namen der Konstanten definiert wird.</span><span class="sxs-lookup"><span data-stu-id="b6a65-107">Name of the constant being defined.</span></span>  
   
  `expression`  
- <span data-ttu-id="f7ca7-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-108">Required.</span></span> <span data-ttu-id="f7ca7-109">Literal, andere Konstanten für bedingte Kompilierung oder eine beliebige Kombination, die alle arithmetische oder logische Operatoren außer enthält `Is`.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-109">Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.</span></span>  
+ <span data-ttu-id="b6a65-108">Erforderlich.</span><span class="sxs-lookup"><span data-stu-id="b6a65-108">Required.</span></span> <span data-ttu-id="b6a65-109">Literal, andere Konstanten für bedingte Kompilierung oder eine beliebige Kombination, die alle arithmetische oder logische Operatoren außer enthält `Is`.</span><span class="sxs-lookup"><span data-stu-id="b6a65-109">Literal, other conditional compiler constant, or any combination that includes any or all arithmetic or logical operators except `Is`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f7ca7-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f7ca7-110">Remarks</span></span>  
- <span data-ttu-id="f7ca7-111">Bedingte Compilerkonstanten sind immer privat für die Datei, die in der sie angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-111">Conditional compiler constants are always private to the file in which they appear.</span></span> <span data-ttu-id="f7ca7-112">Kann nicht erstellt werden öffentliche Compilerkonstanten mithilfe der `#Const` -Direktive; Sie können diese erstellen, nur in der Benutzeroberfläche oder mit der `/define` -Compileroption.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-112">You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b6a65-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b6a65-110">Remarks</span></span>  
+ <span data-ttu-id="b6a65-111">Bedingte Compilerkonstanten sind immer privat für die Datei, die in der sie angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="b6a65-111">Conditional compiler constants are always private to the file in which they appear.</span></span> <span data-ttu-id="b6a65-112">Kann nicht erstellt werden öffentliche Compilerkonstanten mithilfe der `#Const` -Direktive; Sie können diese erstellen, nur in der Benutzeroberfläche oder mit der `/define` -Compileroption.</span><span class="sxs-lookup"><span data-stu-id="b6a65-112">You cannot create public compiler constants using the `#Const` directive; you can create them only in the user interface or with the `/define` compiler option.</span></span>  
   
- <span data-ttu-id="f7ca7-113">Sie können nur Bedingte Compilerkonstanten und Literale in `expression`.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-113">You can use only conditional compiler constants and literals in `expression`.</span></span> <span data-ttu-id="f7ca7-114">Verwenden eine standard-Konstante definiert `Const` verursacht einen Fehler.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-114">Using a standard constant defined with `Const` causes an error.</span></span> <span data-ttu-id="f7ca7-115">Im Gegensatz dazu können Sie mit definierte Konstanten der `#Const` Schlüsselwort nur für die bedingte Kompilierung.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-115">Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation.</span></span> <span data-ttu-id="f7ca7-116">Konstanten können auch nicht definiert sein, bei dem sie einen Wert von aufweisen `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-116">Constants can also be undefined, in which case they have a value of `Nothing`.</span></span>  
+ <span data-ttu-id="b6a65-113">Sie können nur Bedingte Compilerkonstanten und Literale in `expression`.</span><span class="sxs-lookup"><span data-stu-id="b6a65-113">You can use only conditional compiler constants and literals in `expression`.</span></span> <span data-ttu-id="b6a65-114">Verwenden eine standard-Konstante definiert `Const` verursacht einen Fehler.</span><span class="sxs-lookup"><span data-stu-id="b6a65-114">Using a standard constant defined with `Const` causes an error.</span></span> <span data-ttu-id="b6a65-115">Im Gegensatz dazu können Sie mit definierte Konstanten der `#Const` Schlüsselwort nur für die bedingte Kompilierung.</span><span class="sxs-lookup"><span data-stu-id="b6a65-115">Conversely, you can use constants defined with the `#Const` keyword only for conditional compilation.</span></span> <span data-ttu-id="b6a65-116">Konstanten können auch nicht definiert sein, bei dem sie einen Wert von aufweisen `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="b6a65-116">Constants can also be undefined, in which case they have a value of `Nothing`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f7ca7-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f7ca7-117">Example</span></span>  
- <span data-ttu-id="f7ca7-118">Dieses Beispiel verwendet die `#Const`-Anweisung.</span><span class="sxs-lookup"><span data-stu-id="f7ca7-118">This example uses the `#Const` directive.</span></span>  
+## <a name="example"></a><span data-ttu-id="b6a65-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b6a65-117">Example</span></span>  
+ <span data-ttu-id="b6a65-118">Dieses Beispiel verwendet die `#Const`-Anweisung.</span><span class="sxs-lookup"><span data-stu-id="b6a65-118">This example uses the `#Const` directive.</span></span>  
   
- [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/const-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="f7ca7-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f7ca7-119">See also</span></span>
-- [<span data-ttu-id="f7ca7-120">/define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f7ca7-120">/define (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)
-- [<span data-ttu-id="f7ca7-121">#If...Then...#Else-Anweisungen</span><span class="sxs-lookup"><span data-stu-id="f7ca7-121">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [<span data-ttu-id="f7ca7-122">Const-Anweisung</span><span class="sxs-lookup"><span data-stu-id="f7ca7-122">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)
-- [<span data-ttu-id="f7ca7-123">Bedingte Kompilierung</span><span class="sxs-lookup"><span data-stu-id="f7ca7-123">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [<span data-ttu-id="f7ca7-124">If...Then...Else-Anweisung</span><span class="sxs-lookup"><span data-stu-id="f7ca7-124">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+## <a name="see-also"></a><span data-ttu-id="b6a65-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b6a65-119">See also</span></span>
+- [<span data-ttu-id="b6a65-120">/define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6a65-120">/define (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)
+- [<span data-ttu-id="b6a65-121">#If...Then...#Else-Anweisungen</span><span class="sxs-lookup"><span data-stu-id="b6a65-121">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [<span data-ttu-id="b6a65-122">Const-Anweisung</span><span class="sxs-lookup"><span data-stu-id="b6a65-122">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)
+- [<span data-ttu-id="b6a65-123">Bedingte Kompilierung</span><span class="sxs-lookup"><span data-stu-id="b6a65-123">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- [<span data-ttu-id="b6a65-124">If...Then...Else-Anweisung</span><span class="sxs-lookup"><span data-stu-id="b6a65-124">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)

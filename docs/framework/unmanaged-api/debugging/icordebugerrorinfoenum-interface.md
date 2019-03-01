@@ -1,5 +1,5 @@
 ---
-title: ICorDebugErrorInfoEnum-Schnittstelle1
+title: ICorDebugErrorInfoEnum-Schnittstelle
 ms.date: 03/30/2017
 api_name:
 - ICorDebugErrorInfoEnum
@@ -16,15 +16,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f60387f9e327246ce5bfa9f92b7c7e00ceda8b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fed280e4192e900b02e7abe2b0550817645c1ba
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737506"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56964929"
 ---
-# <a name="icordebugerrorinfoenum-interface1"></a><span data-ttu-id="b8325-102">ICorDebugErrorInfoEnum-Schnittstelle1</span><span class="sxs-lookup"><span data-stu-id="b8325-102">ICorDebugErrorInfoEnum Interface1</span></span>
-<span data-ttu-id="b8325-103">`ICorDebugErrorInfoEnum` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="b8325-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="b8325-104">Verwenden Sie diese Schnittstelle nicht.</span><span class="sxs-lookup"><span data-stu-id="b8325-104">Do not use this interface.</span></span>  
+# <a name="icordebugerrorinfoenum-interface"></a><span data-ttu-id="9b2ad-102">ICorDebugErrorInfoEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9b2ad-102">ICorDebugErrorInfoEnum Interface</span></span>
+
+<span data-ttu-id="9b2ad-103">`ICorDebugErrorInfoEnum` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="9b2ad-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="9b2ad-104">Verwenden Sie diese Schnittstelle nicht.</span><span class="sxs-lookup"><span data-stu-id="9b2ad-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b8325-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b8325-105">See also</span></span>
-- [<span data-ttu-id="b8325-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="b8325-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="9b2ad-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9b2ad-105">See also</span></span>
+- [<span data-ttu-id="9b2ad-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="9b2ad-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

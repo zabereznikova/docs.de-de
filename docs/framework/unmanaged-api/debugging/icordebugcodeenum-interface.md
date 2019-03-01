@@ -1,5 +1,5 @@
 ---
-title: ICorDebugCodeEnum-Schnittstelle1
+title: ICorDebugCodeEnum-Schnittstelle
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCodeEnum
@@ -16,35 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c503defaee9137cb95e01181831a470a99eb0b1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed18f969d4ee857aee72668cf7230aa385586bde
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722542"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965240"
 ---
-# <a name="icordebugcodeenum-interface1"></a><span data-ttu-id="93131-102">ICorDebugCodeEnum-Schnittstelle1</span><span class="sxs-lookup"><span data-stu-id="93131-102">ICorDebugCodeEnum Interface1</span></span>
-<span data-ttu-id="93131-103">Implementiert "ICorDebugEnum"-Methoden und listet "ICorDebugType"-Arrays.</span><span class="sxs-lookup"><span data-stu-id="93131-103">Implements "ICorDebugEnum" methods, and enumerates "ICorDebugCode" arrays.</span></span>  
+# <a name="icordebugcodeenum-interface"></a><span data-ttu-id="fc2ed-102">ICorDebugCodeEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fc2ed-102">ICorDebugCodeEnum Interface</span></span>
+
+<span data-ttu-id="fc2ed-103">Implementiert "ICorDebugEnum"-Methoden und listet "ICorDebugType"-Arrays.</span><span class="sxs-lookup"><span data-stu-id="fc2ed-103">Implements "ICorDebugEnum" methods, and enumerates "ICorDebugCode" arrays.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="93131-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="93131-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="fc2ed-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="fc2ed-104">Methods</span></span>  
   
-|<span data-ttu-id="93131-105">Methode</span><span class="sxs-lookup"><span data-stu-id="93131-105">Method</span></span>|<span data-ttu-id="93131-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="93131-106">Description</span></span>|  
+|<span data-ttu-id="fc2ed-105">Methode</span><span class="sxs-lookup"><span data-stu-id="fc2ed-105">Method</span></span>|<span data-ttu-id="fc2ed-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc2ed-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="93131-107">Next-Methode</span><span class="sxs-lookup"><span data-stu-id="93131-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|<span data-ttu-id="93131-108">Ruft die angegebene Anzahl von `ICorDebugCode` Instanzen aus der Enumeration, die an der aktuellen Position ab.</span><span class="sxs-lookup"><span data-stu-id="93131-108">Gets the specified number of `ICorDebugCode` instances from the enumeration, starting at the current position.</span></span>|  
+|[<span data-ttu-id="fc2ed-107">Next-Methode</span><span class="sxs-lookup"><span data-stu-id="fc2ed-107">Next Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|<span data-ttu-id="fc2ed-108">Ruft die angegebene Anzahl von `ICorDebugCode` Instanzen aus der Enumeration, die an der aktuellen Position ab.</span><span class="sxs-lookup"><span data-stu-id="fc2ed-108">Gets the specified number of `ICorDebugCode` instances from the enumeration, starting at the current position.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="93131-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="93131-109">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc2ed-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fc2ed-109">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="93131-110">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="93131-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="fc2ed-110">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="fc2ed-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="93131-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="93131-111">Requirements</span></span>  
- <span data-ttu-id="93131-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="93131-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc2ed-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fc2ed-111">Requirements</span></span>  
+ <span data-ttu-id="fc2ed-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fc2ed-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="93131-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="93131-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fc2ed-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fc2ed-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="93131-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="93131-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fc2ed-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fc2ed-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="93131-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93131-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fc2ed-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fc2ed-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93131-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="93131-116">See also</span></span>
-- [<span data-ttu-id="93131-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="93131-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="fc2ed-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fc2ed-116">See also</span></span>
+- [<span data-ttu-id="fc2ed-117">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="fc2ed-117">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
