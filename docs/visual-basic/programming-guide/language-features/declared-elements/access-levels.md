@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: df65749156543f72d07a464b50a7934908cd533a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704653"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203625"
 ---
 # <a name="access-levels-in-visual-basic"></a>Zugriffsebenen in Visual Basic
 Die *Zugriffsebene* eines deklarierten Elements wird das Ausmaß der Fähigkeit, darauf zuzugreifen, d. h., welcher Code hat über die Berechtigung zum Lesen oder darin schreiben. Dies wird bestimmt, nicht nur durch, wie Sie das Element selbst deklarieren, sondern auch von der Zugriffsebene des Containers von des Elements. Code, der nicht auf ein einschließenden Element zugreifen kann: Dabei kann auf keinen der enthaltenen Elemente zugreifen, auch wenn diese als deklariert `Public`. Z. B. eine `Public` -Variable in eine `Private` Struktur kann aus zugegriffen werden, in der Klasse, die die Struktur enthält, jedoch nicht von außerhalb der Klasse.  
@@ -101,8 +101,9 @@ Verwenden der `Private Protected` Zugriffsmodifizierer, müssen Sie Ihre Visual 
 
 Weitere Informationen finden Sie unter [Festlegen der Sprache Visual Basic-Version](../../../language-reference/configure-language-version.md).
 
- ## <a name="access-modifiers"></a>Zugriffsmodifizierer  
- Die Schlüsselwörter, die Zugriffsebene angeben heißen *Zugriffsmodifizierer*. Die folgende Tabelle vergleicht die Zugriffsmodifizierer.  
+## <a name="access-modifiers"></a>Zugriffsmodifizierer  
+
+Die Schlüsselwörter, die Zugriffsebene angeben heißen *Zugriffsmodifizierer*. Die folgende Tabelle vergleicht die Zugriffsmodifizierer.  
   
 |Zugriffsmodifizierer|Gewährte Zugriffsebene|Elemente können Sie mit dieser Zugriffsebene deklarieren.|Deklarationskontext, in dem dieser Modifizierer verwendet werden können|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  
