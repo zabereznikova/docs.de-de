@@ -4,12 +4,12 @@ description: Suchen Sie Ressourcen, um zu erfahren, wie Sie .NET Core-Anwendunge
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 3fff7884082c46477d37b08560a2c71e7ee345e5
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121253"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977165"
 ---
 # <a name="get-started-with-net-core"></a>Erste Schritte mit .NET Core
 
@@ -84,4 +84,4 @@ Die folgenden ausführlichen Tutorials helfen Ihnen beim Einstieg in das Entwick
 
 Eine Liste der unterstützten macOS-Versionen finden Sie unter [Voraussetzungen für .NET Core unter OS X/macOS](macos-prerequisites.md).
 
-***
+---

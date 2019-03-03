@@ -27,7 +27,7 @@ Sie benötigen Grundkenntnisse von [Git und GitHub.com](https://guides.github.co
 **Schritt 1:** Überspringen Sie diesen Schritt, wenn Sie nur kleine Änderungen vornehmen möchten. Wenn Sie daran interessiert sind, neue Inhalte zu schreiben oder vorhandene Inhalte sorgfältig zu überarbeiten, eröffnen Sie ein [Ticket](https://github.com/dotnet/docs/issues) (Issue), in dem Sie beschreiben, was Sie tun möchten.
 Der Inhalt im Ordner **docs** ist in Abschnitte unterteilt, die sich im Inhaltsverzeichnis (Table of Contents, TOC) wiederfinden. Definieren Sie, an welcher Stelle sich das Thema im Inhaltsverzeichnis befinden wird. Warten Sie auf Feedback zu Ihrem Vorschlag.
 
-- oder -
+- oder - 
 
 Sie können auch eins der vorhandenen Tickets auswählen, für die Community-Beiträge willkommen sind. Unter [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Projekte für .NET-Community-Mitwirkende) sind viele der Arbeitsaufgaben aufgelistet, die für Community-Mitwirkende verfügbar sind. Je nach Interesse und Engagement können Sie Tickets in den folgenden Kategorien auswählen:
 
@@ -107,7 +107,7 @@ Ihr Thema enthält auch Links zum Beispiel. Erstellen Sie einen direkten Link zu
 
 Weitere Informationen finden Sie unter [Samples/Readme.md](https://github.com/dotnet/samples/blob/master/README.md).
 
-## <a name="the-c-interactive-experience"></a>Die interaktive C#-Umgebung #
+## <a name="the-c-interactive-experience"></a>Die interaktive C#-Umgebung
 
 Für kurze Codebeispiele in C# können Sie das Sprachtag `csharp-interactive` verwenden, um ein C#-Beispiel anzugeben, das im Browser ausgeführt wird. (Für Inline-Codebeispiele wird das Tag `csharp-interactive`, für von der Quelle eingefügte Codeausschnitte wird das Tag `code-csharp-interactive` verwendet.) Mit diesen Codebeispielen werden im Artikel ein Codefenster und ein Ausgabefenster angezeigt. Im Ausgabefenster werden alle durch die Ausführung des interaktiven Codes generierten Ausgaben angezeigt, sobald der Benutzer das Beispiel ausgeführt hat. 
 

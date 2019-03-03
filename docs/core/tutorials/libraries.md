@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie mit .NET Core-CLI-Tools .NET-Bibliotheken ers
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9dd1d8477f8e34e79ff521463972e26a21ad1dfd
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169364"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212065"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Entwickeln von Bibliotheken mit plattformübergreifenden Tools
 
@@ -58,9 +58,9 @@ Wenn Sie .NET Standard als Ziel festlegen, stehen Ihnen je nach Bedarf drei Opti
     ```
 
 2. Sie können eine niedrigere oder höhere Version von .NET Standard verwenden, indem Sie den Wert im `TargetFramework`-Knoten Ihrer Projektdatei bearbeiten.
-    
+
     .NET Standard-Versionen sind abwärtskompatibel. Das bedeutet, dass `netstandard1.0`-Bibliotheken auf `netstandard1.1`-Plattformen und höher ausgeführt werden können. Es gibt allerdings keine Aufwärtskompatibilität – niedrigere .NET Standard-Plattformen können nicht auf höhere verweisen. Das bedeutet, dass `netstandard1.0`-Bibliotheken nicht auf Bibliotheken verweisen können, die `netstandard1.1` oder höher als Ziel haben. Wählen Sie die Standard-Version aus, die die beste Mischung aus APIs und Plattformunterstützung für Ihre Anforderungen bietet. Wir empfehlen aktuell `netstandard1.4`.
-    
+
 3. Wenn Sie die .NET Framework-Version 4.0 oder niedriger als Ziel festlegen wollen, oder Sie eine API verwenden wollen, die in .NET Framework verfügbar ist, aber nicht in .NET Standard (z.B. `System.Drawing`), lesen Sie die folgenden Abschnitte. Hier lernen Sie, wie man die Zielversion festlegt.
 
 ## <a name="how-to-target-the-net-framework"></a>So legen Sie .NET Framework als Ziel fest
@@ -131,7 +131,7 @@ Ihre Projektdatei könnte also Folgendermaßen aussehen:
 Sie sehen hier drei große Veränderungen:
 
 1. Der `TargetFramework`-Knoten wurde durch `TargetFrameworks` ersetzt, und drei TFMs werden darin dargestellt.
-1. Es gibt einen `<ItemGroup>`-Knoten für das `net40 `-Ziel, der einen .NET Framework-Verweis einbezieht.
+1. Es gibt einen `<ItemGroup>`-Knoten für das `net40`-Ziel, der einen .NET Framework-Verweis einbezieht.
 1. Es gibt einen `<ItemGroup>`-Knoten für das `net45`-Ziel, der zwei .NET Framework-Verweise einbezieht.
 
 Das Buildsystem beachtet die folgenden Präprozessorsymbole, die in `#if`-Anweisungen verwendet werden:
@@ -256,7 +256,7 @@ Es ist wichtig, über Plattformen hinweg testen zu können. Sie können entweder
    [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Überprüfen Sie, ob xUnit durch Ausführung des `dotnet test`-Befehls ausgeführt wird. Wenn Sie MSTests verwenden möchten, dann muss stattdessen das MSTest-Konsolenausführungsprogramm ausgeführt werden.
-    
+
 Und das ist schon alles! Jetzt können Sie Ihre Bibliothek mithilfe der Befehlszeilentools über alle Plattformen hinweg testen. Nachdem jetzt alles eingerichtet ist, ist das weitere Testen Ihrer Bibliothek sehr einfach:
 
 1. Nehmen Sie Änderungen an Ihrer Bibliothek vor.
@@ -321,7 +321,7 @@ Dadurch werden die drei Projekte von oben in eine Projektmappe hinzugefügt, die
 Die beste Möglichkeit, auf ein Projekt zu verweisen, ist die Verwendung der .NET Core-CLI, um einen Projektverweis hinzuzufügen. Sie können den folgenden Befehl von den Projektverzeichnissen **AwesomeLibrary.CSharp** und **AwesomeLibrary.FSharp** ausführen:
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 Die Projektdateien für **AwesomeLibrary.CSharp** und **AwesomeLibrary.FSharp** verweisen nun auf **AwesomeLibrary.Core** als `ProjectReference`-Ziel.  Sie können dies überprüfen, indem Sie die Projektdateien prüfen und Folgendes darin sehen:
