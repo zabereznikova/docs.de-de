@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Generika als Codevorlagen fungieren, mit denen Si
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 1d1899d482738bc6cc9f638b6a74eab8d4ca70c1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 991e3800e1302843db0dc1c57ed3a7e4becd298e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121180"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835290"
 ---
 # <a name="generic-types-overview"></a>Generische Typen – Übersicht
 
@@ -68,5 +68,4 @@ Ein weiterer Vorteil: Wenn die Runtime den Typ der Generika kennt, wird das Debu
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Einführung in Generika in C#](https://msdn.microsoft.com/library/ms379564.aspx)
 - [C#-Programmierhandbuch – Generika](../../docs/csharp/programming-guide/generics/index.md)

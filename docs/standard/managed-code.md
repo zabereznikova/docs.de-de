@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 268ffe9c5cbbc9490ed91f2b4c28f8f876b8ff5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87be8c94c3d356a81f447f7b9542315783eea10d
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574542"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836278"
 ---
 # <a name="what-is-managed-code"></a>Was ist „verwalteter Code“?
 
@@ -39,6 +39,6 @@ In ähnlicher Weise ist C# eine Sprache, die Ihnen die Verwendung nicht verwalte
 
 ## <a name="more-resources"></a>Weitere Ressourcen
 
-*   [.NET Framework – konzeptionelle Übersicht](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [Unsicherer Code und Zeiger](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
-*   [Interoperabilität (C#-Programmierhandbuch)](https://msdn.microsoft.com/library/ms173184.aspx)
+* [Übersicht über .NET Framework](../framework/get-started/overview.md)
+* [Unsicherer Code und Zeiger](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [Native Interoperabilität](./native-interop/index.md)

@@ -3,12 +3,12 @@ title: Ausführen von Ausdrucksbaumstrukturen
 description: Informationen zum Ausführen von Ausdrucksbaumstrukturen, indem sie in Anweisungen einer ausführbaren Zwischensprache (IL) konvertiert werden.
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207390"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201845"
 ---
 # <a name="executing-expression-trees"></a>Ausführen von Ausdrucksbaumstrukturen
 
@@ -109,7 +109,7 @@ private static Func<int, int> CreateBoundResource()
 
 Der Delegat, der von dieser Methode zurückgegeben wurde, wurde über das `constant`-Objekt geschlossen, das verworfen wurde. (Es wurde verworfen, da es in einer `using`-Anweisung deklariert wurde.) 
 
-Nun, wenn Sie den von dieser Methode zurückgegebenen Delegaten ausführen, müssen Sie eine `ObjecctDisposedException` haben, die zum Zeitpunkt der Ausführung ausgelöst wird.
+Nun, wenn Sie den von dieser Methode zurückgegebenen Delegaten ausführen, müssen Sie eine `ObjectDisposedException` haben, die zum Zeitpunkt der Ausführung ausgelöst wird.
 
 Es scheint sonderbar, einen Laufzeitfehler zu haben, der ein Kompilierzeitkonstrukt darstellt, aber das ist nun mal gang und gäbe, wenn wir mit Ausdrucksbaumstrukturen arbeiten.
 

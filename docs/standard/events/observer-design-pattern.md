@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1dbd2c991f4b4259caa180375283ecb6d957336
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b022c70f7ed1707e27de7cac6ce08c53ee0878d0
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578113"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836564"
 ---
 # <a name="observer-design-pattern"></a>Beobachterentwurfsmuster
 Mit dem Entwurfsmuster "Beobachter" kann sich ein Abonnent bei einem Anbieter registrieren und Benachrichtigungen von diesem empfangen. Es ist für jedes Szenario geeignet, das pushbasierte Benachrichtigungen erfordert. Das Muster definiert einen *Anbieter* (auch als *Antragssteller* oder *Observable* bezeichnet) und keinen, einen oder mehrere *Beobachter*. Beobachter registrieren sich beim Anbieter, und sobald eine vordefinierte Bedingung, ein Ereignis oder eine Statusänderung stattfindet, benachrichtigt der Anbieter automatisch alle Beobachter, indem er eine ihrer Methoden aufruft. In diesem Methodenaufruf kann der Anbieter den Beobachtern auch aktuelle Statusinformationen bereitstellen. In .NET Framework wird das Entwurfsmuster "Beobachter" angewendet, indem die generischen Schnittstellen <xref:System.IObservable%601?displayProperty=nameWithType> und <xref:System.IObserver%601?displayProperty=nameWithType> implementiert werden. Der generische Typparameter stellt den Typ dar, der Benachrichtigungsinformationen bereitstellt.  
@@ -46,7 +46,7 @@ Mit dem Entwurfsmuster "Beobachter" kann sich ein Abonnent bei einem Anbieter re
 -   Ein Objekt, das die Daten enthält, die vom Anbieter an die Beobachter gesendet werden. Der Typ des Objekts entspricht dem generischen Typparameter der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601>. Obwohl dieses Objekt vom selben Typ sein kann wie die <xref:System.IObservable%601>-Implementierung, handelt es sich in den meisten Fällen um einen separaten Typ.  
   
 > [!NOTE]
->  Zusätzlich zum Implementieren des Entwurfsmusters "Beobachter" sind Sie ggf. an einer ausführlichen Untersuchung von Bibliotheken interessiert, die mithilfe der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601> erstellt werden. Beispielsweise bestehen [Reagierende Erweiterungen für .NET (Rx)](https://msdn.microsoft.com/library/hh242985.aspx) aus einem Satz von Erweiterungsmethoden und LINQ-Standardsequenzoperatoren, um die asynchrone Programmierung zu unterstützen.  
+>  Zusätzlich zum Implementieren des Entwurfsmusters "Beobachter" sind Sie ggf. an einer ausführlichen Untersuchung von Bibliotheken interessiert, die mithilfe der Schnittstellen <xref:System.IObservable%601> und <xref:System.IObserver%601> erstellt werden. Beispielsweise bestehen [Reagierende Erweiterungen für .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) aus einem Satz von Erweiterungsmethoden und LINQ-Standardsequenzoperatoren, um die asynchrone Programmierung zu unterstützen.  
   
 ## <a name="implementing-the-pattern"></a>Implementieren des Musters  
  Im folgenden Beispiel wird das Entwurfsmuster "Beobachter" verwendet, um ein Informationssystem für die Flughafengepäckausgabe zu implementieren. Eine `BaggageInfo`-Klasse stellt Informationen über ankommende Flüge und über die Laufbänder bereit, von denen das Gepäck der einzelnen Flüge abgeholt werden kann. Dies wird im folgenden Beispiel gezeigt.  
@@ -90,8 +90,8 @@ Mit dem Entwurfsmuster "Beobachter" kann sich ein Abonnent bei einem Anbieter re
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|description|  
+|Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Empfohlene Vorgehensweisen für Beobachterentwurfsmuster](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Beschreibt bewährte Methoden für die Entwicklung von Anwendungen, die das Entwurfsmuster "Beobachter" implementieren.|  
-|[Gewusst wie: Implementieren eines Anbieters](../../../docs/standard/events/how-to-implement-a-provider.md)|Enthält die schrittweise Implementierung eines Anbieters für eine Anwendung zur Temperaturüberwachung.|  
-|[Gewusst wie: Implementieren eines Observers](../../../docs/standard/events/how-to-implement-an-observer.md)|Enthält die schrittweise Implementierung eines Beobachters für eine Anwendung zur Temperaturüberwachung.|
+|[Vorgehensweise: Implementieren eines Anbieters](../../../docs/standard/events/how-to-implement-a-provider.md)|Enthält die schrittweise Implementierung eines Anbieters für eine Anwendung zur Temperaturüberwachung.|  
+|[Vorgehensweise: Implementieren eines Observers](../../../docs/standard/events/how-to-implement-an-observer.md)|Enthält die schrittweise Implementierung eines Beobachters für eine Anwendung zur Temperaturüberwachung.|

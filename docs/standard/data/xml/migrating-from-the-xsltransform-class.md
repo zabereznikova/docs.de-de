@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b764febc17258bc6d929c6d988a02b58f3e2351
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0d6ff9ced6fe8cb730c755579722e59c07dac5c
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664550"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836499"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrieren von der XslTransform-Klasse
 
@@ -40,9 +40,9 @@ Die Version Visual Studio 2005 wartet mit einer umgestalteten XSLT-Architektur a
 ## <a name="new-features"></a>Neue Funktionen  
   
 ### <a name="temporary-files"></a>Temporäre Dateien  
- Bei der XSLT-Verarbeitung werden mitunter temporäre Dateien angelegt. Diese temporären Dateien werden z. B. dann erstellt und im Ordner <legacyBold>%TEMP%</legacyBold> abgelegt, wenn ein Stylesheet Skriptblöcke enthält oder beim Kompilieren die Debugeinstellung auf <legacyBold>true</legacyBold> gesetzt ist. Es kann vorkommen, dass diese temporären Dateien aufgrund von Timingproblemen nicht wieder gelöscht werden. Dies ist z. B. der Fall, wenn die Dateien von der aktuellen AppDomain oder vom Debugger verwendet werden. Die <legacyBold>Finalize</legacyBold>-Methode des <xref:System.CodeDom.Compiler.TempFileCollection>-Objekts ist dann nicht in der Lage, die temporären Dateien zu entfernen.  
+ Bei der XSLT-Verarbeitung werden mitunter temporäre Dateien angelegt. Diese temporären Dateien werden z. B. dann erstellt und im Ordner &lt;legacyBold&gt;%TEMP%&lt;/legacyBold&gt; abgelegt, wenn ein Stylesheet Skriptblöcke enthält oder beim Kompilieren die Debugeinstellung auf &lt;legacyBold&gt;true&lt;/legacyBold&gt; gesetzt ist. Es kann vorkommen, dass diese temporären Dateien aufgrund von Timingproblemen nicht wieder gelöscht werden. Dies ist z. B. der Fall, wenn die Dateien von der aktuellen AppDomain oder vom Debugger verwendet werden. Die &lt;legacyBold&gt;Finalize&lt;/legacyBold&gt;-Methode des <xref:System.CodeDom.Compiler.TempFileCollection>-Objekts ist dann nicht in der Lage, die temporären Dateien zu entfernen.  
   
- Um sicherzustellen, dass alle temporären Dateien vom Client entfernt werden, können Sie die <xref:System.Xml.Xsl.XslCompiledTransform.TemporaryFiles%2A>-Methode einsetzen, um den Ordner <legacyBold>%TEMP%</legacyBold> entsprechend aufzuräumen.  
+ Um sicherzustellen, dass alle temporären Dateien vom Client entfernt werden, können Sie die <xref:System.Xml.Xsl.XslCompiledTransform.TemporaryFiles%2A>-Methode einsetzen, um den Ordner %TEMP% entsprechend aufzuräumen.  
   
 ### <a name="support-for-the-xsloutput-element-and-xmlwriter"></a>Unterstützung für das "xsl:output"-Element und "XmlWriter"  
  Die <xref:System.Xml.Xsl.XslTransform>-Klasse hat `xsl:output`-Einstellungen ignoriert, wenn die Transformierenausgabe an ein <xref:System.Xml.XmlWriter>-Objekt gesendet wurde. Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse verfügt über die <xref:System.Xml.Xsl.XslCompiledTransform.OutputSettings%2A>-Eigenschaft, die ein <xref:System.Xml.XmlWriterSettings>-Objekt mit den Ausgabeinformationen enthält, die aus dem `xsl:output`-Element des Stylesheets abgeleitet wurden. Das <xref:System.Xml.XmlWriterSettings>-Objekt wird zur Erstellung eines <xref:System.Xml.XmlWriter>-Objekts verwendet, das mit den korrekten Einstellungen versehen ist und an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode übergeben werden kann. Der folgende C#-Code veranschaulicht dieses Verhalten:  
@@ -101,7 +101,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
 -   Überladungen können anhand der Anzahl der Argumente voneinander unterschieden werden. Wenn mehrere Überladungen über die gleiche Anzahl von Argumenten verfügen, wird eine Ausnahme ausgelöst.  
   
- In <xref:System.Xml.Xsl.XslCompiledTransform> erfolgt beim Kompilieren eine Bindung (Methodennamensuche) an Skriptfunktionen, und Stylesheets, die zusammen mit <legacyBold>XslTranform</legacyBold> funktioniert haben, können eine Ausnahme auslösen, wenn sie zusammen mit <xref:System.Xml.Xsl.XslCompiledTransform> geladen werden.  
+ In <xref:System.Xml.Xsl.XslCompiledTransform> erfolgt beim Kompilieren eine Bindung (Methodennamensuche) an Skriptfunktionen, und Stylesheets, die zusammen mit &lt;legacyBold&gt;XslTranform&lt;/legacyBold&gt; funktioniert haben, können eine Ausnahme auslösen, wenn sie zusammen mit <xref:System.Xml.Xsl.XslCompiledTransform> geladen werden.  
   
  <xref:System.Xml.Xsl.XslCompiledTransform> unterstützt die Verwendung von untergeordneten `msxsl:using`- und `msxsl:assembly`-Elementen innerhalb des `msxsl:script`-Elements. Die Elemente `msxsl:using` und `msxsl:assembly` werden verwendet, um zusätzliche Namespaces und Assemblys für die Verwendung im Skriptblock zu deklarieren. Weitere Informationen finden Sie unter [Skriptblöcke, die „msxsl:script“ verwenden](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md).  
   
@@ -110,11 +110,11 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 ### <a name="msxml-functions"></a>MSXML-Funktionen  
  Die <xref:System.Xml.Xsl.XslCompiledTransform>-Klasse wurde um die Unterstützung für zusätzliche MSXML-Funktionen erweitert. In der folgenden Liste werden die neuen oder verbesserten Funktionen aufgeführt:  
   
--   msxsl:node-set: Bei <xref:System.Xml.Xsl.XslTransform> musste das Argument der [node-set-Funktion](https://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) ein Ergebnisstrukturfragment sein. Bei <xref:System.Xml.Xsl.XslCompiledTransform> ist dies nicht erforderlich.  
+-   msxsl:node-set: Bei <xref:System.Xml.Xsl.XslTransform> musste das Argument der [node-set-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100)) ein Ergebnisstrukturfragment sein. Bei <xref:System.Xml.Xsl.XslCompiledTransform> ist dies nicht erforderlich.  
   
 -   msxsl:version: Diese Funktion wird in <xref:System.Xml.Xsl.XslCompiledTransform> unterstützt.  
   
--   XPath-Erweiterungsfunktionen: Die [ms:string-compare-Funktion](https://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc-Funktion](https://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri-Funktion](https://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name-Funktion](https://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number-Funktion](https://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-date-Funktion](https://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5) und [ms:format-time Funktion](https://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) werden jetzt unterstützt.  
+-   XPath-Erweiterungsfunktionen: Die [ms:string-compare-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [ms:utc-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [ms:namespace-uri-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [ms:local-name-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [ms:number-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), [ms:format-date-Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100)) und [ms:format-time Funktion](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) werden jetzt unterstützt.  
   
 -   Schemabezogene XPath-Erweiterungsfunktionen: Diese Funktionen werden nicht systemintern von <xref:System.Xml.Xsl.XslCompiledTransform> unterstützt. Sie können aber als Erweiterungsfunktionen implementiert werden.  
   

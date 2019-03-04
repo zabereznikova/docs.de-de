@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555179"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56970570"
 ---
 # <a name="net-class-library-overview"></a>Übersicht über die .NET-Klassenbibliothek
 
@@ -89,15 +89,15 @@ ms.locfileid: "54555179"
 |Kategorie|Klassenname|Beschreibung|Datentyp in Visual Basic|Datentyp in C#|C++/CLI-Datentyp|F#-Datentyp|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Ganze Zahl|<xref:System.Byte>|Eine 8-Bit-Ganzzahl ohne Vorzeichen.|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|Eine 8-Bit-Ganzzahl mit Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**SByte**|**sbyte**|**char**<br /> - oder -<br /> **char** **mit Vorzeichen**|**sbyte**|  
+||<xref:System.SByte>|Eine 8-Bit-Ganzzahl mit Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**SByte**|**sbyte**|**char**<br /> - oder - <br /> **char** **mit Vorzeichen**|**sbyte**|  
 ||<xref:System.Int16>|Eine 16-Bit-Ganzzahl mit Vorzeichen.|**Short**|**short**|**short**|**int16**|  
 ||<xref:System.Int32>|Eine 32-Bit-Ganzzahl mit Vorzeichen.|**Integer**|**int**|**int**<br /><br /> - oder - <br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Eine 64-Bit-Ganzzahl mit Vorzeichen.|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|Eine 16-Bit-Ganzzahl ohne Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**UShort**|**ushort**|**unsigned short**|**uint16**|  
 ||<xref:System.UInt32>|Eine 32-Bit-Ganzzahl ohne Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**UInteger**|**uint**|**unsigned int**<br /> - oder - <br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|Eine 64-Bit-Ganzzahl ohne Vorzeichen.<br /><br /> Nicht CLS-kompatibel.|**ULong**|**ulong**|**__int64 ohne Vorzeichen**|**uint64**|  
-|Gleitkomma|<xref:System.Single>|Eine Gleitkommazahl einfacher Genauigkeit (32 Bit).|**Single**|**float**|**float**|**float32**</br> oder</br>**single**|  
-||<xref:System.Double>|Eine Gleitkommazahl doppelter Genauigkeit (64 Bit).|**Double**|**double**|**double**|**float**</br> oder </br> **double**|  
+|Gleitkomma|<xref:System.Single>|Eine Gleitkommazahl einfacher Genauigkeit (32 Bit).|**Single**|**float**|**float**|**float32**<br> oder<br>**single**|  
+||<xref:System.Double>|Eine Gleitkommazahl doppelter Genauigkeit (64 Bit).|**Double**|**double**|**double**|**float**<br> oder <br> **double**|  
 |Logisch|<xref:System.Boolean>|Ein boolescher Wert (true oder false).|**Boolean**|**bool**|**bool**|**bool**|  
 |Andere|<xref:System.Char>|Ein Unicode-Zeichen (16 Bit).|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Dezimalwert (128 Bit).|**Decimal**|**decimal**|**Decimal**|**decimal**|  

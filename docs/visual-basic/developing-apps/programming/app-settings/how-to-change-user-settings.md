@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], changing user settings
 - examples [Visual Basic], changing user settings
 ms.assetid: 41250181-c594-4854-9988-8183b9eb03cf
-ms.openlocfilehash: 3cf50f838124539dc774574cd1ad0b629d01a9ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e93dbf453b831bb28707250466ea928bfe9a716
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688190"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976381"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a>Vorgehensweise: Ändern von Benutzereinstellungen in Visual Basic
 Sie können eine Benutzereinstellung ändern, indem Sie der Einstellung der Eigenschaft auf dem `My.Settings`-Objekt einen neuen Wert zuweisen.  
@@ -25,11 +25,11 @@ Sie können eine Benutzereinstellung ändern, indem Sie der Einstellung der Eige
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird der Wert der `Nickname`-Benutzereinstellung geändert.  
   
- [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-change-user-settings_1.vb)]  
+ [!code-vb[VbVbalrMyResources#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#7)]  
   
  Damit dieses Beispiel funktioniert, muss Ihre Anwendung eine `Nickname`-Benutzereinstellung vom Typ `String` aufweisen.  
   
- Die Anwendung speichert die Benutzereinstellungen beim Herunterfahren der Anwendung. Um die Einstellungen sofort zu speichern, rufen Sie die `My.Settings.Save`-Methode auf. Weitere Informationen finden Sie unter [Vorgehensweise: Beibehalten von Benutzereinstellungen in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
+ Die Anwendung speichert die Benutzereinstellungen beim Herunterfahren der Anwendung. Um die Einstellungen sofort zu speichern, rufen Sie die `My.Settings.Save`-Methode auf. Weitere Informationen finden Sie unter [Vorgehensweise: Beibehalten von Benutzereinstellungen](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - [My.Settings-Objekt](../../../../visual-basic/language-reference/objects/my-settings-object.md)

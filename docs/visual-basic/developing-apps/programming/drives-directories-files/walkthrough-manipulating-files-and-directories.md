@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: f199cc8c58dbcbb0fce17dbf3c7b8e198daf0305
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb7fda617118c01e6ee54339bcc3ff8f8b342450
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709726"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202443"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic
 Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen der Datei-E/A in Visual Basic. Es wird beschrieben, wie Sie eine kleine Anwendung erstellen können, in der Textdateien in einem Verzeichnis aufgelistet und überprüft werden. Die Anwendung stellt Dateiattribute und die erste Zeile des Inhalts jeder ausgewählten Textdatei zur Verfügung. Es besteht die Möglichkeit, Informationen in eine Protokolldatei zu schreiben.  
@@ -57,13 +57,13 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
 2.  Fügen Sie dem `Click`-Ereignishandler den folgenden Code hinzu.  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
      Mit dem Aufruf `FolderBrowserDialog1.ShowDialog` wird das Dialogfeld **Ordner suchen** geöffnet. Sobald der Benutzer auf **OK** klickt, wird die <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>-Eigenschaft als Argument an die `ListFiles`-Methode gesendet, die im nächsten Schritt hinzugefügt wird.  
   
 3.  Fügen Sie die folgende `ListFiles`-Methode hinzu.  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
      Dieser Code löscht zuerst **ListBox**.  
   
@@ -83,7 +83,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
 2.  Fügen Sie dem `Click`-Ereignishandler den folgenden Code hinzu.  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
      Der Code stellt sicher, dass ein Element in `ListBox` ausgewählt ist. Anschließend ruft er den Eintrag des Dateipfads aus `ListBox` ab. Die <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A>-Methode wird verwendet, um zu überprüfen, ob die Datei noch vorhanden ist.  
   
@@ -91,7 +91,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
 3.  Fügen Sie die folgende `GetTextForOutput`-Methode hinzu.  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
      Der Code verwendet die <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>-Methode zum Abrufen von Dateiparametern. Die Dateiparameter werden einem <xref:System.Text.StringBuilder> hinzugefügt.  
   
@@ -107,7 +107,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
 1.  Fügen Sie am Ende des `examineButton_Click`-Ereignishandlers folgenden Code hinzu.  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
      Der Protokolldateipfad wird vom Code so festgelegt, dass die Protokolldatei in dem Verzeichnis gespeichert wird, das auch das Verzeichnis der ausgewählten Datei ist. Der Text der Protokolldatei wird auf das aktuelle Datum und die Uhrzeit sowie die Dateiinformationen festgelegt.  
   
@@ -123,7 +123,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
 2.  Fügen Sie dem Ereignishandler folgenden Code hinzu.  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
      Durch diesen Code wird das Standardverzeichnis auf den Browser des Ordners zum aktuellen Verzeichnis festgelegt.  
   
@@ -135,7 +135,7 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
   
 1.  Fügen Sie die folgende `SetEnabled`-Methode hinzu.  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
      Die Methode `SetEnabled` aktiviert oder deaktiviert Steuerelemente. Dies hängt davon ab, ob ein Element in `ListBox` ausgewählt ist.  
   
@@ -152,12 +152,12 @@ Diese exemplarische Vorgehensweise enthält eine Einführung in die Grundlagen d
 ## <a name="full-example-using-mycomputerfilesystem"></a>Ausführliches Beispiel mit Verwendung von „My.Computer.FileSystem“  
  Im Folgenden sehen Sie das vollständige Beispiel.  
   
- [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>Ausführliches Beispiel mit Verwendung von „System.IO“  
  Im folgenden entsprechenden Beispiel werden Klassen aus dem Namespace <xref:System.IO> anstelle von `My.Computer.FileSystem`-Objekten verwendet.  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.IO>

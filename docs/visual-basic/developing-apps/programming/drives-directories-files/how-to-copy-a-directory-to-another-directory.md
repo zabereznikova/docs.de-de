@@ -7,12 +7,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: 25919e0256b967f59bd98d20e75d159e018ac954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 873defb025ff02e6af2572d8d2587f86e5228ca0
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594745"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968789"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Vorgehensweise: Kopieren eines Verzeichnisses in ein anderes Verzeichnis in Visual Basic
 Verwenden Sie die <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>-Methode zum Kopieren eines Verzeichnisses in ein anderes Verzeichnis. Diese Methode kopiert den Inhalt des Verzeichnisses sowie das Verzeichnis selbst. Wenn das Zielverzeichnis nicht vorhanden ist, wird es erstellt. Wenn ein Verzeichnis mit dem gleichen Namen am Zielspeicherort vorhanden ist und `overwrite` auf `False` festgelegt ist, werden die Inhalte der beiden Verzeichnisse zusammengeführt. Sie können während des Vorgangs einen neuen Namen für das Verzeichnis angeben.  
@@ -23,7 +23,7 @@ Verwenden Sie die <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A
   
 -   Verwenden Sie die `CopyDirectory`-Methode, um Verzeichnisnamen von Quelle und Ziel anzugeben. Im folgenden Beispiel wird das Verzeichnis mit dem Namen `TestDirectory1` in `TestDirectory2` kopiert, wobei vorhandene Dateien überschrieben werden.  
   
-     [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]  
   
      Dieses Codebeispiel ist auch als IntelliSense-Codeausschnitt verfügbar. In der Codeausschnittauswahl befindet es sich unter **Dateisystem – Verarbeiten von Laufwerken, Ordnern und Dateien**. Weitere Informationen finden Sie unter [Codeausschnitte](/visualstudio/ide/code-snippets).  
   

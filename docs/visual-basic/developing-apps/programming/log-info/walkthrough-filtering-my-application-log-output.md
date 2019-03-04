@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e17f332365aeeb26601763f9459dccc8d6a078af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f1f0efd6190ac0ced0f83db747e3c4eb81c4975
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572512"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978318"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Exemplarische Vorgehensweise: Filterung der Ausgaben von „My.Application.Log“ (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßige Filtern von Protokollen für das `My.Application.Log`-Objekt ändern, um zu steuern, welche Informationen vom `Log`-Objekt an die Listener übergeben werden und welche Informationen von den Listenern geschrieben werden. Sie können das Protokollierungsverhalten auch nach dem Erstellen der Anwendung ändern, da die Konfigurationsinformationen in der Konfigurationsdatei der Anwendung gespeichert sind.  
@@ -27,7 +27,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
 3.  Fügen Sie im <xref:System.Windows.Forms.Control.Click>-Ereignishandler den folgenden Code für „Button1“ hinzu:  
   
-     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
+     [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
 4.  Führen Sie die Anwendung im Debugger aus.  
   
@@ -73,7 +73,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie das standardmäßi
   
 1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf „app.config“, und wählen Sie **Öffnen** aus.  
   
-     - oder -  
+     - oder -   
   
      Wenn keine app.config-Datei vorhanden ist:  
   

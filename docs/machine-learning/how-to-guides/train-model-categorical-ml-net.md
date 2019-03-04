@@ -1,14 +1,14 @@
 ---
 title: Featureentwicklung für ein Modelltraining mit Kategoriedaten in ML.NET
 description: Erfahren Sie, wie Sie die Featureentwicklung für das Trainieren eines Machine Learning-Modells mit Kategoriedaten mit ML.NET anwenden.
-ms.date: 02/06/2018
+ms.date: 02/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c24840ee89917d270bcbacbcf36905b4ee82a4aa
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: eedbe0499784e7a99b0101c42892652daef3a114
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092084"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968412"
 ---
 # <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a>Featureentwicklung für ein Modelltraining mit Kategoriedaten in ML.NET
 
