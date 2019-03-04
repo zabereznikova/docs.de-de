@@ -1,14 +1,9 @@
 ---
-title: Artikel zu Vorgehensweisen (C#-Handbuch)
+title: 'Artikel zu Vorgehensweisen (C#-Handbuch)'
 description: Eine Sammlung von einfachen Tipps und kurzen Codebeispielen
 ms.date: 12/20/2017
-ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260190"
 ---
+
 # <a name="how-to-c"></a>Vorgehensweise (C#)
 
 Im Abschnitt „Vorgehensweise“ des C#-Handbuchs finden Sie schnelle Antworten zu oft gestellten Fragen. In manchen Fällen können Artikel in mehreren Abschnitten aufgeführt sein. Diese Artikel sollten somit über verschiedene Suchwege einfach zu finden sein. 
