@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: d834cfaf566868d7fee280b613a6ef15dc7f0b1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1015e5b69f7701f772bc853bba53873fd065a996
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576914"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56967931"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Verarbeiten der XML-Datei (C# Programmierhandbuch)
 Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, wird vom Compiler eine ID-Zeichenfolge generiert. (Weitere Informationen darüber, wie Code mit Tags versehen werden kann, finden Sie unter [Empfohlene Tags für Dokumentationskommentare](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Das Konstrukt wird über die ID-Zeichenfolge eindeutig identifiziert. Programme, die die XML-Datei verarbeiten, können mithilfe der ID-Zeichenfolge das entsprechende .NET Framework-Metadaten-/Reflektionselement identifizieren, für das die Dokumentation gilt.  
@@ -79,7 +79,7 @@ Für jedes Konstrukt, das zum Generieren von Dokumentation gekennzeichnet ist, w
 ## <a name="examples"></a>Beispiele  
  Die folgenden Beispiele zeigen, wie die ID-Zeichenfolgen für eine Klasse und ihre Member generiert werden würden:  
   
- [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
+ [!code-csharp[csProgGuidePointers#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#21)]  
   
 ## <a name="see-also"></a>Siehe auch
 

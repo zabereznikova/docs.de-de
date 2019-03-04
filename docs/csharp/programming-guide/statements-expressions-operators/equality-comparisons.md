@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 25ac904b848311639dda1ecf231f0d6565799733
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2572599071fdddd15be620e1322d2e38614182c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620174"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972923"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Übereinstimmungsvergleiche (C#-Programmierhandbuch)
 Unter bestimmten Umständen ist es erforderlich, die Gleichheit zweier Werte zu prüfen. In einigen Fällen prüfen Sie die *Wertgleichheit*, die auch als *Äquivalenz* bezeichnet wird. Das bedeutet, Sie prüfen, ob die in zwei Variablen enthaltenen Werte gleich sind. In anderen Fällen müssen Sie ermitteln, ob zwei Variablen auf das gleiche zugrunde liegende Objekt im Arbeitsspeicher verweisen. Diese Art von Gleichheit wird als *Verweisgleichheit* oder *Identität* bezeichnet. In diesem Thema werden diese zwei Arten der Gleichheit beschrieben. Außerdem finden Sie hier Links zu verwandten Themen mit weiteren Informationen.  
@@ -18,7 +18,7 @@ Unter bestimmten Umständen ist es erforderlich, die Gleichheit zweier Werte zu 
 ## <a name="reference-equality"></a>Verweisgleichheit  
  Verweisgleichheit ist gegeben, wenn zwei Objektverweise auf dasselbe zugrunde liegende Objekt verweisen. Die Ursache hierfür kann eine einfache Zuweisung sein, wie im folgenden Beispiel gezeigt.  
   
- [!code-csharp[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
+ [!code-csharp[csProgGuideStatements#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#18)]  
   
  In diesem Code werden zwei Objekte erstellt, nach der Zuweisungsanweisung verweisen jedoch beide Verweise auf das gleiche Objekt. Es liegt eine Verweisgleichheit vor. Verwenden Sie die <xref:System.Object.ReferenceEquals%2A>-Methode, um zu ermitteln, ob zwei Verweise auf das gleiche Objekt verweisen.  
   

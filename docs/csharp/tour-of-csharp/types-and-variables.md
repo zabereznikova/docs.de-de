@@ -3,12 +3,12 @@ title: C#-Typen und -Variablen – Überblick über C#
 description: Erfahren Sie mehr über das Definieren von Typen und Deklarieren von Variablen in C#.
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 976cb507074d4bafe4c22e9482d8f272937baf36
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 6880fa51ca30dadac901d2b86de189b59658d164
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583952"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212000"
 ---
 # <a name="types-and-variables"></a>Typen und Variablen
 
@@ -71,7 +71,7 @@ Hier sind die numerischen Typen von C# zusammengefasst.
     - `double` : 64 Bit, Bereich von 5,0 × 10<sup>-324</sup> bis 1,7 x 10<sup>308</sup>, Genauigkeit von 15 Stellen
 * Decimal
     - `decimal` : 128 Bit, Bereich mindestens -7,9 × 10<sup>-28</sup> bis 7,9 x 10<sup>28</sup>, mit einer Genauigkeit von mindestens 28 Stellen
-    
+
 C#-Programme verwenden *Typdeklarationen*, um neue Typen zu erstellen. Eine Typdeklaration gibt den Namen und die Member des neuen Typs an. Fünf Typkategorien von C# sind benutzerdefinierbar: Klassentypen, Strukturtypen, Schnittstellentypen, Enumerationstypen und Delegattypen.
 
 Ein `class`-Typ definiert eine Datenstruktur, die Datenmember (Felder) und Funktionsmember (Methoden, Eigenschaften usw.) enthält. Klassentypen unterstützen einzelne Vererbung und Polymorphie. Dies sind Mechanismen, durch die abgeleitete Klassen erweitert und Basisklassen spezialisiert werden können.
@@ -115,6 +115,6 @@ Es gibt mehrere Arten von *Variablen* in C#, einschließlich Feldern, Arrayeleme
 * Delegattyp
     - Ein `null`-Verweis oder ein Verweis auf eine Instanz eines kompatiblen Delegattyp
 
->[!div class="step-by-step"]
->[Zurück](program-structure.md)
->[Weiter](expressions.md)
+> [!div class="step-by-step"]
+> [Zurück](program-structure.md)
+> [Weiter](expressions.md)

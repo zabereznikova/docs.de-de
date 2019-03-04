@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: a36f4a6f01c4e11429fda3a3022b4092e98db6cf
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612126"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212208"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
@@ -20,7 +20,7 @@ C# bietet ein auf Sprachebene asynchrones Programmiermodell, das das Schreiben v
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>Grundlegende Übersicht über das asynchrone Modell
 
-Der Kern der asynchronen Programmierung sind die `Task`- und `Task<T>`-Objekte, die asynchrone Vorgänge modellieren.  Sie werden von den `async`- und `await`-Schlüsselwörtern unterstützt.  Das Modell ist in den meisten Fällen recht einfach: 
+Der Kern der asynchronen Programmierung sind die `Task`- und `Task<T>`-Objekte, die asynchrone Vorgänge modellieren.  Sie werden von den `async`- und `await`-Schlüsselwörtern unterstützt.  Das Modell ist in den meisten Fällen recht einfach:
 
 Für E/A-gebundenen Code wenden Sie `await` auf einen Vorgang an, der `Task` oder `Task<T>` innerhalb einer `async`-Methode zurückgibt.
 
@@ -87,11 +87,11 @@ Für theorieinteressierte Benutzer: Dies ist eine Implementierung des [Promise-M
 
 ## <a name="key-pieces-to-understand"></a>Wichtigste Bestandteile
 
-*   Async-Code kann für E/A-gebundenen und CPU-gebundene Code, aber für jedes Szenario anders verwendet werden.
-*   Async-Code verwendet die Konstrukte `Task<T>` und `Task`, die als Modell für Arbeit im Hintergrund verwendet werden können.
+* Async-Code kann für E/A-gebundenen und CPU-gebundene Code, aber für jedes Szenario anders verwendet werden.
+* Async-Code verwendet die Konstrukte `Task<T>` und `Task`, die als Modell für Arbeit im Hintergrund verwendet werden können.
 * Das `async`-Schlüsselwort wandelt eine Methode in eine asynchrone Methode um, mit der Sie das `await`-Schlüsselwort in ihrem Nachrichtentext verwenden können.
-*   Wenn das `await`-Schlüsselwort angewendet wird, hält es die aufrufende Methode an, und gibt die Steuerung wieder an den Aufrufer zurück, bis die Aufgabe abgeschlossen ist.
-*   `await` kann nur innerhalb einer Async-Methode verwendet werden.
+* Wenn das `await`-Schlüsselwort angewendet wird, hält es die aufrufende Methode an, und gibt die Steuerung wieder an den Aufrufer zurück, bis die Aufgabe abgeschlossen ist.
+* `await` kann nur innerhalb einer Async-Methode verwendet werden.
 
 ## <a name="recognize-cpu-bound-and-io-bound-work"></a>Erkennen von CPU-gebundener und E/A-gebundener Arbeit
 
@@ -106,7 +106,7 @@ Hier sind zwei Fragen, die Sie stellen sollten, bevor Sie Code schreiben:
 2. Wird Ihr Code eine umfangreiche Berechnung durchführen?
 
     Wenn Ihre Antwort „Ja“ lautet, ist Ihre Arbeit **CPU-gebunden**.
-    
+
 Falls Ihre Arbeit **E/A-gebunden** ist, verwenden Sie `async` und `await` *ohne* `Task.Run`.  Sie *sollten nicht* die Task Parallel Library verwenden.  Der Grund dafür ist im Artikel [Async ausführlich](../standard/async-in-depth.md) dargestellt.
 
 Falls Ihre Arbeit **CPU-gebunden** ist und Sie sich für Reaktionsfähigkeit interessieren, dann verwenden Sie `async` und `await`, aber übertragen Sie die Arbeit auf einen anderen Thread *mit* `Task.Run`.  Wenn die Arbeit für Parallelität und Konkurrenz geeignet ist, sollten Sie auch über die Verwendung der [Task Parallel Library](../standard/parallel-programming/task-parallel-library-tpl.md) nachdenken.
@@ -185,12 +185,12 @@ public async Task<User> GetUserAsync(int userId)
 public static async Task<IEnumerable<User>> GetUsersAsync(IEnumerable<int> userIds)
 {
     var getUserTasks = new List<Task<User>>();
-    
+
     foreach (int userId in userIds)
     {
         getUserTasks.Add(GetUserAsync(userId));
     }
-    
+
     return await Task.WhenAll(getUserTasks);
 }
 ```
@@ -212,33 +212,34 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
     return await Task.WhenAll(getUserTasks);
 }
 ```
+
 Obwohl es weniger Code ist, sollten Sie trotzdem vorsichtig sein, wenn Sie LINQ mit asynchronem Code mischen.  Da LINQ verzögerte (lazy) Ausführung verwendet, werden asynchrone Aufrufe nicht sofort ausgeführt, so wie in einer `foreach()`-Schleife, es sei denn, Sie erzwingen, dass die generierte Sequenz einen Aufruf von `.ToList()` oder `.ToArray()` durchläuft.
 
 ## <a name="important-info-and-advice"></a>Wichtige Informationen und Hinweise
 
 Asynchrone Programmierung ist relativ einfach, es sind jedoch einige Details zu berücksichtigen, die unerwartetes Verhalten verhindern können.
 
-*  `async` **-Methoden benötigen ein**  `await` **-Schlüsselwort in Ihrem Textkörper, oder sie werden nie zurückgeben!**
+* `async` **-Methoden benötigen ein**  `await` **-Schlüsselwort in Ihrem Textkörper, oder sie werden nie zurückgeben!**
 
 Berücksichtigen Sie dies.  Wenn `await` im Textkörper einer `async`-Methode nicht verwendet wird, generiert der C#-Compiler eine Warnung, aber der Code wird kompiliert und ausgeführt, als ob es sich um eine normale Methode handeln würde.  Beachten Sie, dass dies auch sehr ineffizient wäre, da der Zustandsautomat, der vom C#-Compiler für die asynchrone Methode generiert wurde, nichts erreichen würde.
 
-*   **Sie sollten „Async“ als Suffix für die Namen aller async-Methoden hinzufügen, die Sie schreiben.**
+* **Sie sollten „Async“ als Suffix für die Namen aller async-Methoden hinzufügen, die Sie schreiben.**
 
 Dies ist die in .NET verwendete Konvention, mit der leichter zwischen synchronen und asynchronen Methoden unterschieden werden kann. Beachten Sie, dass bestimmte Methoden, die von Ihrem Code (z.B. Ereignishandler oder Webcontrollermethoden) nicht explizit aufgerufen werden, nicht unbedingt angewendet werden. Da diese von Ihrem Code nicht explizit aufgerufen werden, ist es nicht wichtig, ihre Namen explizit anzugeben.
 
-*   `async void` **sollte nur für Ereignishandler verwendet werden.**
+* `async void` **sollte nur für Ereignishandler verwendet werden.**
 
 `async void` ist die einzige Möglichkeit, mit der asynchrone Ereignishandler ausgeführt werden können, da Ereignisse keine Rückgabetypen haben (und somit `Task` und `Task<T>` nicht verwenden können). Jede andere Verwendung der `async void` folgt nicht dem TAP-Modell und kann schwierig zu verwenden sein, wie beispielsweise:
 
-  *   Ausnahmen in einer `async void`-Methode können nicht außerhalb der Methode abgefangen werden.
-  *   `async void`-Methoden sind sehr schwierig zu testen.
-  *   `async void`-Methoden können große Nebeneffekte verursachen, wenn der Aufrufende nicht erwartet, dass sie asynchron sind.
+* Ausnahmen in einer `async void`-Methode können nicht außerhalb der Methode abgefangen werden.
+* `async void`-Methoden sind sehr schwierig zu testen.
+* `async void`-Methoden können große Nebeneffekte verursachen, wenn der Aufrufende nicht erwartet, dass sie asynchron sind.
 
-*   **Gehen Sie bei der Verwendung von asynchronen Lambdaausdrücken in LINQ-Ausdrücken sorgfältig vor**
+* **Gehen Sie bei der Verwendung von asynchronen Lambdaausdrücken in LINQ-Ausdrücken sorgfältig vor**
 
 Lambdaausdrücke in LINQ verwenden verzögerte Ausführung. Das bedeutet, dass Code zu einem Zeitpunkt ausgeführt werden kann, zu dem Sie es nicht erwarten. Die Einführung von blockierenden Aufgaben kann schnell zu einem Deadlock führen, wenn diese nicht ordnungsgemäß geschrieben werden. Darüber hinaus kann die Schachtelung von asynchronem Code die Ausführung des Codes erschweren. Async und LINQ sind leistungsstark, sollten aber so sorgfältig und genau wie möglich zusammen verwendet werden.
 
-*   **Schreiben Sie Code, der Aufgaben in einer nicht blockierenden Art und Weise erwartet**
+* **Schreiben Sie Code, der Aufgaben in einer nicht blockierenden Art und Weise erwartet**
 
 Wenn Sie den aktuellen Thread blockieren, um auf den Abschluss einer Aufgabe zu warten, kann es zu Deadlocks und blockierten Kontextthreads kommen und wesentlich komplexere Fehlerbehandlung erfordern. Die folgende Tabelle enthält Anleitungen zum nicht-blockierenden Warten auf Aufgaben:
 
@@ -249,16 +250,16 @@ Wenn Sie den aktuellen Thread blockieren, um auf den Abschluss einer Aufgabe zu 
 | `await Task.WhenAll` | `Task.WaitAll` | Warten auf das Abschließen aller Aufgaben |
 | `await Task.Delay` | `Thread.Sleep` | Warten auf einen Zeitraum |
 
-*   **Schreiben eines weniger statusbehafteten Codes**
+* **Schreiben eines weniger statusbehafteten Codes**
 
 Machen Sie sich nicht abhängig vom Zustand globaler Objekte oder der Ausführung bestimmter Methoden. Seien Sie stattdessen nur abhängig von Rückgabewerten der Methoden. Warum?
 
-  *   Code wird leichter verständlich sein.
-  *   Code wird leichter zu testen sein.
-  *   Das Kombinieren von asynchronem und synchronem Code ist wesentlich einfacher.
-  *   Racebedingungen können in der Regel ganz vermieden werden.
-  *   Je nach Rückgabewerten ist das Koordinieren von asynchronem Code einfach.
-  *   (Bonus) funktioniert hervorragend mit Abhängigkeitsinjektion.
+  * Code wird leichter verständlich sein.
+  * Code wird leichter zu testen sein.
+  * Das Kombinieren von asynchronem und synchronem Code ist wesentlich einfacher.
+  * Racebedingungen können in der Regel ganz vermieden werden.
+  * Je nach Rückgabewerten ist das Koordinieren von asynchronem Code einfach.
+  * (Bonus) funktioniert hervorragend mit Abhängigkeitsinjektion.
 
 Ein empfohlenes Ziel ist das vollständige oder nahezu vollständige Erreichen [referenzieller Transparenz](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) in Ihrem Code. Dies führt zu einer sehr vorhersagbaren, getesteten und verwaltbaren Codebasis.
 

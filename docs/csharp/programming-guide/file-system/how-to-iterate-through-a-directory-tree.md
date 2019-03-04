@@ -6,12 +6,12 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613843"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56976329"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Vorgehensweise: Durchlaufen einer Verzeichnisstruktur (C#-Programmierhandbuch)
 Der Ausdruck „Durchlaufen einer Verzeichnisstruktur“ bedeutet, dass auf jede Datei in jedem verschachtelten Unterverzeichnis in einem angegebenen Stammordner in einer beliebigen Tiefe zugegriffen wird. Sie müssen nicht unbedingt jede Datei öffnen. Sie können einfach den Namen der Datei oder dem Unterverzeichnis als `string` abrufen, oder Sie können zusätzliche Informationen eines <xref:System.IO.FileInfo?displayProperty=nameWithType> oder <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>-Objekts abrufen.  
@@ -41,14 +41,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  Die besonderen Ausnahmen, die verarbeitet werden, und die besonderen Aktionen, die für jede Datei und jeden Ordner ausgeführt werden, werden nur als Beispiele angegeben. Sie sollten diesen Code für Ihre speziellen Anforderungen ändern. Weitere Informationen finden Sie in den Kommentaren im Code.  
   
- [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie Sie Dateien und Ordner in einer Verzeichnisstruktur ohne Rekursion durchlaufen. Diese Technik verwendet den generischen <xref:System.Collections.Generic.Stack%601>-Auflistungstyp, bei dem es sich um einen LIFO-Stapel handelt.  
   
  Die besonderen Ausnahmen, die verarbeitet werden, und die besonderen Aktionen, die für jede Datei und jeden Ordner ausgeführt werden, werden nur als Beispiele angegeben. Sie sollten diesen Code für Ihre speziellen Anforderungen ändern. Weitere Informationen finden Sie in den Kommentaren im Code.  
   
- [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#2)]  
   
  Es ist im Allgemeinen zu zeitaufwändig, bei allen Ordnern zu testen, ob die Anwendung über die Berechtigung zum Öffnen verfügt. Im Codebeispiel wird daher nur dieser Teil der Operation in einen `try/catch`-Block eingeschlossen. Sie können den `catch`-Block ändern, sodass Sie bei verweigertem Zugriff auf einen Ordner versuchen, Ihre Berechtigungen zu erhöhen, und dann erneut darauf zugreifen. In der Regel sollten Sie nur die Ausnahmen abfangen, die Sie behandeln können, ohne Ihre Anwendung in einem unbekannten Status zu lassen.  
   

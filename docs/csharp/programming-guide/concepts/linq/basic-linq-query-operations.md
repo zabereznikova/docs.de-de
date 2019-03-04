@@ -17,12 +17,12 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: efd4c41731b196b55676d72342e359ccb0736f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8884f2ae230a92f48e93d9b5408ff241f874f92
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728360"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56968191"
 ---
 # <a name="basic-linq-query-operations-c"></a>Grundlegende LINQ-Abfragevorgänge (C#)
 Dieses Thema gibt einen kurzen Überblick über [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageausdrücke und einige der geläufigsten Vorgänge, die Sie in einer Abfrage durchführen können. Ausführlichere Informationen finden Sie unter den folgenden Themen:  
@@ -39,7 +39,7 @@ Dieses Thema gibt einen kurzen Überblick über [!INCLUDE[vbteclinq](~/includes/
 ## <a name="obtaining-a-data-source"></a>Abrufen einer Datenquelle  
  Der erste Schritt für eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage ist das Festlegen einer Datenquelle. Wie in den meisten Programmiersprachen muss eine Variable in C# vor ihrer Verwendung deklariert werden. In einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrage steht die `from`-Klausel an erster Stelle; sie führt die Datenquelle (`customers`) und die *Bereichsvariable* (`cust`) ein.  
   
- [!code-csharp[csLINQGettingStarted#23](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  Die Bereichsvariable befindet sich wie die Iterationvariable in einer `foreach`-Schleife, mit dem Unterschied, dass in einem Abfrageausdruck keine Iterationen vorkommen. Wenn die Abfrage ausgeführt wird, fungiert die Bereichsvariable als Verweis auf jedes aufeinanderfolgende Element in `customers`. Es ist nicht notwendig, diese explizit anzugeben, da der Compiler den Typ von `cust` ableitet. Weitere Bereichsvariablen können mithilfe der `let`-Klausel eingefügt werden. Weitere Informationen finden Sie unter [let-Klausel](../../../../csharp/language-reference/keywords/let-clause.md).  
   
@@ -49,22 +49,22 @@ Dieses Thema gibt einen kurzen Überblick über [!INCLUDE[vbteclinq](~/includes/
 ## <a name="filtering"></a>Filtern  
  Die wahrscheinlich üblichste Abfrageoperation ist das Anwenden eines Filters in Form eines booleschen Ausdrucks. Das Filtern bewirkt, dass die Abfrage nur jene Elemente zurückgibt, für die der Ausdruck den Wert TRUE hat. Das Ergebnis wird durch Verwendung der `where`-Klausel erzeugt. Faktisch gibt der Filter an, welche Elemente nicht in die Quellsequenz eingeschlossen werden sollen. In folgendem Beispiel werden nur die `customers` zurückgegeben, die eine Londoner Adresse haben.  
   
- [!code-csharp[csLINQGettingStarted#24](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_2.cs)]  
+ [!code-csharp[csLINQGettingStarted#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#24)]  
   
  Sie können die geläufigen logischen C#-Operatoren `AND` und `OR` verwenden, um so viele Filterausdrücke wie benötigt in der `where`-Klausel anzuwenden. Wenn Sie z.B. nur Kunden aus „London“ zurückgeben möchten, deren Name „Devon“ ist, können Sie dazu `AND` verwenden wie in folgendem Codebeispiel:  
   
- [!code-csharp[csLINQGettingStarted#25](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_3.cs)]  
+ [!code-csharp[csLINQGettingStarted#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#25)]  
   
  Um Kunden aus London oder Paris zurückzugeben, verwenden Sie folgenden Code:  
   
- [!code-csharp[csLINQGettingStarted#26](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_4.cs)]  
+ [!code-csharp[csLINQGettingStarted#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#26)]  
   
  Weitere Informationen finden Sie unter [where-Klausel](../../../../csharp/language-reference/keywords/where-clause.md).  
   
 ## <a name="ordering"></a>Sortieren  
  Es kann häufig praktisch sein, die zurückgegebenen Daten zu sortieren. Die `orderby`-Klausel sortiert die Elemente in der zurückgegebenen Sequenz anhand des Standardcomparers für den zu sortierenden Typ. Die folgende Abfrage kann z.B. so erweitert werden, dass Sie die Ergebnisse nach der Eigenschaft `Name` sortiert. Der Standardcomparer nimmt eine Sortierung in alphabetischer Reihenfolge (A bis Z) vor, das es sich bei `Name` um eine Zeichenfolge handelt.  
   
- [!code-csharp[csLINQGettingStarted#27](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_5.cs)]  
+ [!code-csharp[csLINQGettingStarted#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#27)]  
   
  Wenn Sie die Ergebnisse andersherum, von Z bis A, sortieren möchten, können Sie die `orderby…descending`-Klausel verwenden.  
   
@@ -73,20 +73,20 @@ Dieses Thema gibt einen kurzen Überblick über [!INCLUDE[vbteclinq](~/includes/
 ## <a name="grouping"></a>Gruppierung  
  Die `group`-Klausel ermöglicht Ihnen, die Ergebnisse auf Grundlage eines von Ihnen angegebenen Schlüssels zu gruppieren. Sie können z.B. angeben, dass die Ergebnisse nach `City` gruppiert werden sollen, sodass sich alle Kunden aus London oder Paris in einer einzelnen Gruppe befinden. In diesem Fall ist `cust.City` der Schlüssel.  
   
- [!code-csharp[csLINQGettingStarted#28](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_6.cs)]  
+ [!code-csharp[csLINQGettingStarted#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#28)]  
   
  Wenn Sie eine Abfrage mit einer `group`-Klausel beenden, werden Ihre Ergebnisse in einer Liste aus Listen zurückgegeben. Jedes Element auf der Liste ist ein Objekt, dass über einen `Key`-Member und eine Liste von Elementen verfügt, die anhand dieses Schlüssels gruppiert wurden. Wenn Sie eine Abfrage durchlaufen, die eine Sequenz von Gruppen erzeugt, müssen Sie eine geschachtelte `foreach`-Schleife verwenden. Die äußere Schleife durchläuft jede Gruppe, und die innere Schleife durchläuft alle Member jeder Gruppe.  
   
  Wenn Sie auf die Ergebnisse eines Gruppenvorgangs verweisen müssen, könne Sie das Schlüsselwort `into` verwenden, um einen Bezeichner zu erstellen, der weiter abgefragt werden kann. Die folgende Abfrage gibt nur die Gruppen zurück, die mehr als zwei Kunden enthalten:  
   
- [!code-csharp[csLINQGettingStarted#29](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_7.cs)]  
+ [!code-csharp[csLINQGettingStarted#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#29)]  
   
  Weitere Informationen finden Sie unter [group-Klausel](../../../../csharp/language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Verknüpfen  
  Verknüpfungsvorgänge erstellen Verknüpfungen zwischen Sequenzen, die nicht explizit in der Datenquelle modelliert werden. Sie können z.B. eine Verknüpfung erstellen, um alle Kunden und Händler mit demselben Standort ausfindig zu machen. In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] arbeitet die `join`-Klausel immer mit Objektauflistungen statt direkt mit Datenbanktabellen.  
   
- [!code-csharp[csLINQGettingStarted#36](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/basic-linq-query-operations_8.cs)]  
+ [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
  In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] müssen Sie nicht `join` so oft wie in SQL verwenden, da Fremdschlüssel in [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] im Objektmodell als Eigenschaften repräsentiert werden, die eine Elementauflistung enthalten. Ein `Customer`-Objekt enthält z.B. eine Auflistung von `Order`-Objekten. Sie können auf die Bestellungen zugreifen, indem Sie Punktnotation statt einer Verknüpfung verwenden:  
   

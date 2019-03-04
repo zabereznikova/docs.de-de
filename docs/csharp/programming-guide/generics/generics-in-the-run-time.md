@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: f68dbec16a82b6504d2fb93581d9d52ddf614c0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d45d64d608c117ef5f1477ac55a39c192374d7ed
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587267"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981477"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Generika zur Laufzeit (C#-Programmierhandbuch)
 Beim Kompilieren eines generischen Typs oder einer generischen Methode in Microsoft Intermediate Language (MSIL) wird über Metadaten auf das Vorkommen von Typparametern hingewiesen. Die Art der Verwendung von MSIL für einen generischen Typ hängt davon ab, ob es sich bei dem übergebenen Typparameter um einen Werttyp oder einen Referenztyp handelt.  
@@ -19,11 +19,11 @@ Beim Kompilieren eines generischen Typs oder einer generischen Methode in Micros
   
  Angenommen, im Programmcode wurde ein Stapel deklariert, der aus ganzen Zahlen erstellt wurde:  
   
- [!code-csharp[csProgGuideGenerics#42](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_1.cs)]  
+ [!code-csharp[csProgGuideGenerics#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#42)]  
   
  An diesem Punkt generiert die Laufzeit eine spezialisierte Version der Klasse <xref:System.Collections.Generic.Stack%601>, in der der Parameter durch die entsprechende ganze Zahl ersetzt wird. Bei Verwendung eines Stapels aus ganzen Zahlen wird jetzt immer die generierte spezialisierte Klasse <xref:System.Collections.Generic.Stack%601> verwendet. Im folgenden Beispiel werden zwei Instanzen eines Stapels aus ganzen Zahlen erstellt, die eine Instanz des `Stack<int>`-Codes gemeinsam nutzen:  
   
- [!code-csharp[csProgGuideGenerics#43](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_2.cs)]  
+ [!code-csharp[csProgGuideGenerics#43](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#43)]  
   
  Angenommen, dass an anderer Stelle im Code jedoch eine weitere <xref:System.Collections.Generic.Stack%601>-Klasse erstellt wird, mit einem anderen Werttyp, z.B. `long`, oder einer benutzerdefinierten Struktur als Parameter. Daraufhin generiert die Laufzeit eine andere Version des generischen Typs und ersetzt `long` an den entsprechenden Stellen in MSIL. Konvertierungen sind nicht mehr notwendig, da jede spezialisierte generische Klasse den Werttyp nativ enthält.  
   
@@ -31,17 +31,17 @@ Beim Kompilieren eines generischen Typs oder einer generischen Methode in Micros
   
  Angenommen, Sie verfügen über zwei Referenztypen, eine `Customer`-Klasse und eine `Order`-Klasse, und Sie haben einen Stapel von `Customer`-Typen erstellt:  
   
- [!code-csharp[csProgGuideGenerics#47](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_3.cs)]  
+ [!code-csharp[csProgGuideGenerics#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#47)]  
   
- [!code-csharp[csProgGuideGenerics#44](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_4.cs)]  
+ [!code-csharp[csProgGuideGenerics#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#44)]  
   
  An dieser Stelle generiert die Laufzeit eine spezialisierte Version der Klasse <xref:System.Collections.Generic.Stack%601>, die anstelle von Daten Objektverweise speichert, die zu einem späteren Zeitpunkt mit Daten gefüllt werden. Angenommen, die nächste Codezeile erstellt einen Stapel eines anderen Referenztyps mit dem Namen `Order`:  
   
- [!code-csharp[csProgGuideGenerics#45](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_5.cs)]  
+ [!code-csharp[csProgGuideGenerics#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#45)]  
   
  Anders als bei Werttypen wird für den Typ <xref:System.Collections.Generic.Stack%601> keine weitere spezialisierte Version der Klasse `Order` erstellt. Stattdessen wird eine Instanz der spezialisierten Version der Klasse <xref:System.Collections.Generic.Stack%601> erstellt und die Variable `orders` so festgelegt, dass sie darauf verweist. Angenommen, Sie würden dann auf eine Codezeile stoßen, die einen Stapel des Typs `Customer` erstellt:  
   
- [!code-csharp[csProgGuideGenerics#46](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-in-the-run-time_6.cs)]  
+ [!code-csharp[csProgGuideGenerics#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#46)]  
   
  Wie auch bei der vorherigen Verwendung der mit dem Typ `Order` erstellten Klasse <xref:System.Collections.Generic.Stack%601> wird eine weitere Instanz der spezialisierten Klasse <xref:System.Collections.Generic.Stack%601> erstellt. Die darin enthaltenen Zeiger werden so festgelegt, dass sie auf einen Arbeitsspeicherbereich von der Größe eines `Customer`-Typs verweisen. Da die Anzahl der Referenztypen von Programm zu Programm sehr unterschiedlich sein kann, wird bei der C#-Implementierung von Generika eine übermäßige Zunahme des Codeumfangs dadurch verhindert, dass die Anzahl der spezialisierten Klassen, die vom Compiler für generische Klassen von Referenztypen erstellt werden, auf eine reduziert wird.  
   
@@ -51,5 +51,5 @@ Beim Kompilieren eines generischen Typs oder einer generischen Methode in Micros
 
 - <xref:System.Collections.Generic>
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)
-- [Generika](~/docs/standard/generics/index.md)
+- [Einführung in Generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Generics](~/docs/standard/generics/index.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 12c4561e9e2c2a9e3a211351b70fd83b8ca7bccd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640848"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971506"
 ---
 # <a name="statements-c-programming-guide"></a>Anweisungen (C#-Programmierhandbuch)
 Von einer Anwendung ausgeführte Aktionen werden in Anweisungen ausgedrückt. Häufig verwendete Aktionen umfassen das Deklarieren von Variablen, Zuweisen von Werten, Aufrufen von Methoden, Durchlaufen von Auflistungen und das Verzweigen auf einen oder einen anderen Codeblock, je nach gegebener Bedingung. Die Reihenfolge, in der Anweisungen in einem Programm ausgeführt werden, wird „Ablaufsteuerung“ oder „Ausführungsablauf“ genannt. Die Ablaufsteuerung kann jedes Mal, wenn ein Programm ausgeführt wird, variieren, je nachdem, wie die Anwendung auf eine Eingabe reagiert, die sie während der Laufzeit empfängt.  
   
  Eine Anweisung kann aus einer einzelnen Codezeile, die mit einem Semikolon endet, oder aus einer Reihe von einzeiligen Anweisungen in einem Block bestehen. Ein Anweisungsblock ist in geschweiften Klammern ({}) eingeschlossen und kann geschachtelte Blöcke enthalten. Der folgende Code zeigt zwei Beispiele für einzeilige Anweisungen und einen mehrzeiligen Anweisungsblock:  
   
- [!code-csharp[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
+ [!code-csharp[csProgGuideStatements#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#1)]  
   
 ## <a name="types-of-statements"></a>Typen von Anweisungen  
  Die folgende Tabelle enthält die verschiedenen Typen von Anweisungen in C# und die zugehörigen Schlüsselwörter, mit Links zu Themen, die weitere Informationen enthalten:  
@@ -43,43 +43,43 @@ Von einer Anwendung ausgeführte Aktionen werden in Anweisungen ausgedrückt. H�
 
 Der folgende Code zeigt Beispiele für Variablendeklarationen mit und ohne anfängliche Zuweisung sowie eine Konstantendeklaration mit der erforderlichen Initialisierung.
 
-[!code-csharp[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]
+ [!code-csharp[csProgGuideStatements#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#23)]
 
 ## <a name="expression-statements"></a>Ausdrucksanweisungen
 
 Der folgende Code zeigt Beispiele für Ausdrucksanweisungen, einschließlich Zuweisung, Objekterstellung mit Zuweisung und Methodenaufruf.
 
-[!code-csharp[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]
+ [!code-csharp[csProgGuideStatements#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#24)]
 
 ## <a name="the-empty-statement"></a>Die leere Anweisung
 
 Die folgenden Beispiele zeigen zwei Verwendungen für eine leere Anweisung:
 
-[!code-csharp[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]
+ [!code-csharp[csProgGuideStatements#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#25)]
 
 ## <a name="embedded-statements"></a>Eingebettete Anweisungen
 
  Einige Anweisungen, z.B. [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md), [for](../../../csharp/language-reference/keywords/for.md) und [foreach](../../../csharp/language-reference/keywords/foreach-in.md), haben immer eine eingebettete Anweisung, die diesen folgt. Diese eingebettete Anweisung kann entweder eine einzelne Anweisung oder mehrere Anweisungen sein, die durch geschweifte Klammern ({}) in einem Anweisungsblock umschlossen werden. In geschweiften Klammern ({}) können sogar einzeilige eingebettete Anweisungen wie im folgenden Beispiel gezeigt eingeschlossen werden:  
   
- [!code-csharp[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
+ [!code-csharp[csProgGuideStatements#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#26)]  
   
  Eine eingebettete Anweisung, die nicht in geschweifte Klammern ({}) eingeschlossen ist, darf keine Deklarationsanweisung oder eine Anweisung mit Bezeichnung sein. Dies wird im folgenden Beispiel gezeigt:  
   
- [!code-csharp[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
+ [!code-csharp[csProgGuideStatements#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#27)]  
   
  Fügen Sie die eingebettete Anweisung in einen Block ein, um den Fehler zu beheben:  
   
- [!code-csharp[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
+ [!code-csharp[csProgGuideStatements#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#28)]  
   
 ## <a name="nested-statement-blocks"></a>Geschachtelte Anweisungsblöcke  
  Anweisungsblöcke können geschachtelt werden, wie im folgenden Code gezeigt wird:  
   
- [!code-csharp[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
+ [!code-csharp[csProgGuideStatements#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#29)]  
   
 ## <a name="unreachable-statements"></a>Nicht erreichbare Anweisungen  
  Wenn der Compiler festlegt, dass der Steuerungsablauf nie auf eine bestimmte Anweisung unter jeglichen Umständen zugreifen kann, wird die Warnung CS0162 erzeugt, wie im folgenden Beispiel gezeigt wird:  
   
- [!code-csharp[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
+ [!code-csharp[csProgGuideStatements#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#22)]  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   

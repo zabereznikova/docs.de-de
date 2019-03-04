@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 2721048145253a441770a96f8383358bb1ceda01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710351"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977052"
 ---
-# <a name="is-c-reference"></a>is (C#-Referenz) #
+# <a name="is-c-reference"></a>is (C#-Referenz)
 
 Überprüft, ob ein Objekt mit einem angegebenen Typ kompatibel ist, oder gleicht ab C# 7.0 einen Ausdruck mit einem Muster ab.
 
-## <a name="testing-for-type-compatibility"></a>Prüfen auf Typkompatibilität ##
+## <a name="testing-for-type-compatibility"></a>Prüfen auf Typkompatibilität
 
 Das `is`-Schlüsselwort wertet die Typkompatibilität zur Laufzeit aus. Es bestimmt, ob eine Instanz eines Objekts oder das Ergebnis eines Ausdrucks in einen angegebenen Typen konvertiert werden kann. Es besitzt die Syntax
 
@@ -56,7 +56,7 @@ Das Schlüsselwort `is` generiert eine Kompilierzeitwarnung, wenn der Ausdruck i
 
 Ab C# 7.0 können Sie den Musterabgleich mit dem [Typmuster](#type) verwenden, um präziseren Code zu schreiben, der die Anweisung `is` verwendet.
 
-## <a name="pattern-matching-with-is"></a>Musterabgleich mit `is` ##
+## <a name="pattern-matching-with-is"></a>Musterabgleich mit `is`
 
 Ab C# 7.0 unterstützen die Anweisungen `is` und [switch](../../../csharp/language-reference/keywords/switch.md) den Musterabgleich. Das Schlüsselwort `is` unterstützt folgende Muster:
 
@@ -104,7 +104,7 @@ Der gleichwertige Code erfordert ohne einen Musterabgleich eine gesonderte Zuwei
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Konstantenmuster ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Konstantenmuster
 
 Beim Durchführen eines Musterabgleichs mit einem Konstantenmuster prüft `is`, ob ein Ausdruck einer angegebenen Konstanten entspricht. In C# 6 und früheren Versionen wird das Konstantenmuster von der Anweisung [switch](switch.md) unterstützt. Ab C# 7.0 wird es ebenfalls von der Anweisung `is` unterstützt. Die Syntax lautet:
 

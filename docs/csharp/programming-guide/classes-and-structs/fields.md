@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: ac825940897df3a0f6105a6d9cca8e16cf69eb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cc04d9a0504e7cd79703b97441caa5ac84eda94
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655672"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978110"
 ---
 # <a name="fields-c-programming-guide"></a>Felder (C#-Programmierhandbuch)
 Ein *Feld* ist eine Variable eines beliebigen Typs, die direkt in einer [class](../../../csharp/language-reference/keywords/class.md) oder [struct](../../../csharp/language-reference/keywords/struct.md) deklariert ist. Felder sind *Member* Ihres enthaltenden Typs.  
@@ -23,15 +23,15 @@ Ein *Feld* ist eine Variable eines beliebigen Typs, die direkt in einer [class](
   
  Felder werden innerhalb des Class-Blocks deklariert, indem Sie die Zugriffsebene des Felds, gefolgt vom Typ des Felds, gefolgt vom Namen des Felds angeben. Beispiel:  
   
- [!code-csharp[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
+ [!code-csharp[csProgGuideObjects#61](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#61)]  
   
  Um auf ein Feld in einem Objekt zuzugreifen, fügen Sie einen Punkt hinter dem Objektnamen ein, gefolgt vom Namen des Felds, wie in `objectname.fieldname`. Beispiel:  
   
- [!code-csharp[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
+ [!code-csharp[csProgGuideObjects#62](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#62)]  
   
  Einem Feld kann ein Anfangswert durch Verwendung des Zuweisungsoperators zugewiesen werden, wenn das Feld deklariert wird. Sie würden z.B. `day` wie im folgenden Beispiel deklarieren, um das `day`-Feld automatisch `"Monday"` zuzuweisen:  
   
- [!code-csharp[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
+ [!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]  
   
  Felder werden umgehend initialisiert, bevor der Konstruktor für die Objektinstanz aufgerufen wird. Wenn der Konstruktor den Wert eines Felds zuweist, überschreibt er jeden während der Felddeklaration angegebenen Wert. Weitere Informationen finden Sie unter [Verwenden von Konstruktoren](../../../csharp/programming-guide/classes-and-structs/using-constructors.md).  
   

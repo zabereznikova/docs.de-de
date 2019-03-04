@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 12c31db32b2b3ff3da7ed0972ea2cf090701f3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e028ecd6e448237d192894c4a02233c1e0dd4c0
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491741"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201494"
 ---
 # <a name="objects-c-programming-guide"></a>Objekte (C#-Programmierhandbuch)
 Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, der angibt, was der Typ machen kann. Ein Objekt ist im Grunde ein Speicherblock, der nach Plan zugewiesen und konfiguriert wurde. Ein Programm kann viele Objekte der selben Klasse erstellen. Objekte werden auch Instanzen genannt, und sie können entweder in einer benannten Variable, einem Array oder in einer Auflistung gespeichert werden. Der Client-Code ist der Code, der diese Variablen verwendet, um die Methoden aufzurufen und um auf die öffentlichen Eigenschaften des Objekts zuzugreifen. In einer objektorientierten Programmiersprache wie C# besteht ein typisches Programm aus mehreren Objekten, die dynamisch interagieren.  
@@ -24,11 +24,11 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
   
  Instanzen von Klassen werden mit dem [new-Operator](../../../csharp/language-reference/keywords/new-operator.md) erstellt. Im folgenden Beispiel ist `Person` der Typ und `person1` und `person 2` sind Instanzen oder Objekte des Typs.  
   
- [!code-csharp[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
+ [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
  Da Strukturen Werttypen sind, enthält eine Variable eines Strukturobjekts eine Kopie des gesamten Objekts. Instanzen von Strukturen können auch mithilfe des `new`-Operators erstellt werden; dies ist jedoch nicht erforderlich, wie im folgenden Beispiel gezeigt wird:  
   
- [!code-csharp[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
+ [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
  Der Speicher für `p1` und `p2` ist dem Stapel des Threads zugeordnet. Der Speicher wird zusammen mit dem Typ oder der Methode freigegeben, in dem bzw. in der er deklariert wird. Dies ist ein Grund, weshalb Strukturen bei Zuweisung kopiert werden. Im Gegensatz dazu wird der Speicher, der für eine Klasseninstanz zugeordnet ist, automatisch von der Common Language Runtime freigegeben (von Garbage Collection bereinigt), wenn alle Verweise auf das Objekt außerhalb des Gültigkeitsbereichs liegen. Es ist nicht möglich, ein Klassenobjekt deterministisch wie in C++ zu zerstören. Weitere Informationen zur Garbage Collection im [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
@@ -42,7 +42,7 @@ Die Definition einer Klasse oder Struktur ist mit einem Entwurf vergleichbar, de
   
 -   Verwenden Sie die Methode <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>, um zu bestimmen, ob die Instanzfelder in zwei Strukturinstanzen die gleichen Werte haben. Da alle Strukturen implizit von <xref:System.ValueType?displayProperty=nameWithType> erben, rufen Sie die Methode direkt an Ihrem Objekt auf, wie im folgenden Beispiel gezeigt wird:  
   
- [!code-csharp[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
+ [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  Die Implementierung <xref:System.ValueType?displayProperty=nameWithType> von `Equals` verwendet Reflektion, da sie bestimmen muss, was die Felder in jeder Struktur sind. Wenn Sie eigene Strukturen erstellen, überschreiben Sie die Methode `Equals`, um einen effizienten Gleichheitsalgorithmus bereitzustellen, der spezifisch für Ihren Typ ist.  
   

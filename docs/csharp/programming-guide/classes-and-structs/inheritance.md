@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 4ba5c28f6d4842846c55f47b3b40628ec57c9702
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607016"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202352"
 ---
 # <a name="inheritance-c-programming-guide"></a>Vererbung (C#-Programmierhandbuch)
 
@@ -35,7 +35,7 @@ Klassenvererbung
   
  Das folgende Beispiel zeigt, wie die in der oben stehenden Abbildung veranschaulichten Klassenbeziehungen in C# ausgedrückt werden. Das Beispiel zeigt auch, wie `WorkItem` die virtuelle Methode <xref:System.Object.ToString%2A?displayProperty=nameWithType> außer Kraft setzt, und wie die `ChangeRequest`-Klasse die `WorkItem`-Implementierung der Methode erbt.  
   
- [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#49)]  
   
 ## <a name="abstract-and-virtual-methods"></a>Abstrakte und virtuelle Methoden  
  Wenn eine Basisklasse eine Methode als [virtuell](../../../csharp/language-reference/keywords/virtual.md) deklariert, kann eine abgeleitete Klasse die Methode mit ihrer eigenen Implementierung [außer Kraft setzen](../../../csharp/language-reference/keywords/override.md). Wenn eine Basisklasse eine Methode als [abstrakt](../../../csharp/language-reference/keywords/abstract.md) deklariert, muss diese Methode in jeder nicht abstrakten Klasse außer Kraft gesetzt werden, die direkt von dieser Klasse erbt. Wenn eine abgeleitete Klasse selbst abstrakt ist, erbt sie abstrakte Member, ohne diese zu implementieren. Abstrakte und virtuelle Member sind die Basis für Polymorphie, die das zweite charakteristische Merkmal des objektorientierten Programmierens ist. Weitere Informationen finden Sie unter [Polymorphie](../../../csharp/programming-guide/classes-and-structs/polymorphism.md).  

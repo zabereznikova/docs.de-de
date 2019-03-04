@@ -13,12 +13,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: a127509d603ada952b3d48d4bbc417db64f607ea
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 888f6c823313c137be4b89e82f0c4cd1c50cf771
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290172"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977473"
 ---
 # <a name="list-c-programming-guide"></a>\<list> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -43,7 +43,7 @@ ms.locfileid: "55290172"
  `description`  
  Entweder ein Element einer Aufzählung oder nummerierten Liste oder die Definition eines `term`.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Der \<listheader>-Block wird verwendet, um die Überschriftenzeile einer Tabelle oder einer Definitionsliste zu definieren. Bei der Definition einer Tabelle müssen Sie nur einen Eintrag für „term“ in der Überschrift angeben.  
   
  Jedes Element der Liste wird mit einem \<item>-Block angegeben. Beim Erstellen einer Definitionsliste müssen Sie sowohl `term` als auch `description` angeben. Für eine Tabelle, eine Auflistung oder eine nummerierte Liste muss jedoch nur ein Eintrag für `description` angegeben werden.  
@@ -53,7 +53,7 @@ ms.locfileid: "55290172"
  Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.  
   
 ## <a name="example"></a>Beispiel  
- [!code-csharp[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  
   
 ## <a name="see-also"></a>Siehe auch
 

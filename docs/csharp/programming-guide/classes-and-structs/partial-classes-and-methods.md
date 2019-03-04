@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 5fdb3de03eaa60a4d29d5a0c7e4082a6806b0ec9
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7e91d77393c4d2980cce73a92589b752124e8077
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441670"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56965201"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partielle Klassen und Methoden (C#-Programmierhandbuch)
 Es ist möglich, die Definition einer [Klasse](../../../csharp/language-reference/keywords/class.md), einer [Struktur](../../../csharp/language-reference/keywords/struct.md), einer [Schnittstelle](../../../csharp/language-reference/keywords/interface.md) oder einer Methode auf zwei oder mehr Quelldateien aufzuteilen. Jede Quelldatei enthält einen Abschnitt der Typ- oder Methodendefinition. Die Teile werden bei der Kompilierung der Anwendung miteinander kombiniert.  
@@ -26,7 +26,7 @@ Es ist möglich, die Definition einer [Klasse](../../../csharp/language-referenc
   
 -   Um eine Klassendefinition aufzuteilen, verwenden Sie den Schlüsselwortmodifizierer [partial](../../../csharp/language-reference/keywords/partial-type.md), wie hier gezeigt wird:  
   
- [!code-csharp[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]  
   
  Das Schlüsselwort `partial` gibt an, dass andere Teile der Klasse, Struktur oder Schnittstelle im Namespace definiert werden können. Alle Teile müssen das Schlüsselwort `partial` verwenden. Alle Teile müssen zur Kompilierzeit verfügbar sein, um den endgültigen Typ zu bilden. Alle Teile müssen die gleiche Zugriffsebene haben, z.B. `public`, `private` usw.  
   
@@ -39,15 +39,15 @@ Es ist möglich, die Definition einer [Klasse](../../../csharp/language-referenc
   
  Im folgenden Beispiel wird gezeigt, dass geschachtelte Typen eine Teilausführung sein können, selbst wenn der Typ, in dem sie geschachtelt sind, selbst keine ist.  
   
- [!code-csharp[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#25)]  
   
  Zur Kompilierzeit werden Attribute von partiellen Typdefinitionen zusammengeführt. Betrachten Sie beispielsweise die folgenden Deklarationen:  
   
- [!code-csharp[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#23)]  
   
  Sie entsprechen den folgenden Deklarationen:  
   
- [!code-csharp[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#24)]  
   
  Die folgenden werden aus allen partiellen Typdefinitionen zusammengeführt:  
   
@@ -63,24 +63,24 @@ Es ist möglich, die Definition einer [Klasse](../../../csharp/language-referenc
   
  Betrachten Sie beispielsweise die folgenden Deklarationen:  
   
- [!code-csharp[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#21)]  
   
  Sie entsprechen den folgenden Deklarationen:  
   
- [!code-csharp[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]  
   
 ### <a name="restrictions"></a>Beschränkungen  
  Es sind mehrere Regeln zu beachten, wenn Sie partielle Klassendefinitionen verwenden:  
   
 -   Alle partiellen Typdefinitionen, die als Teile des gleichen Typs vorgesehen sind, müssen mit `partial` geändert werden. Die folgenden Klassendeklarationen erzeugen z.B. einen Fehler:  
   
-     [!code-csharp[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
+     [!code-csharp[csProgGuideObjects#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#20)]  
   
 -   Der `partial`-Modifizierer kann nur unmittelbar vor den Schlüsselwörtern `class`, `struct` oder `interface` erscheinen.  
   
 -   Geschachtelte partielle Typen sind in partiellen Typdefinitionen zulässig, wie im folgenden Beispiel dargestellt wird:  
   
-     [!code-csharp[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
+     [!code-csharp[csProgGuideObjects#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#19)]  
   
 -   Alle partiellen Typdefinitionen, die als Teile des gleichen Typs vorgesehen sind, müssen in der gleichen Assembly und demselben Modul (EXE- oder DLL-Datei) definiert werden. Partielle Definitionen können nicht mehrere Module umfassen.  
   
@@ -114,7 +114,7 @@ Es ist möglich, die Definition einer [Klasse](../../../csharp/language-referenc
  Im folgenden Beispiel werden die Felder und der Konstruktor der Klasse (`Coords`) in einer partiellen Klassendefinition deklariert, und der Member (`PrintCoords`) wird in einer anderen partiellen Klassendefinition deklariert.  
   
 ### <a name="code"></a>Code  
- [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
+ [!code-csharp[csProgGuideObjects#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#17)]  
   
 ## <a name="example-2"></a>Beispiel 2  
   
@@ -122,7 +122,7 @@ Es ist möglich, die Definition einer [Klasse](../../../csharp/language-referenc
  Im folgenden Beispiel wird gezeigt, dass Sie auch partielle Strukturen und Schnittstellen entwickeln können.  
   
 ### <a name="code"></a>Code  
- [!code-csharp[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
+ [!code-csharp[csProgGuideObjects#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#18)]  
   
 ## <a name="partial-methods"></a>Partielle Methoden  
  Eine partielle Klasse oder Struktur kann eine partielle Methode enthalten. Ein Teil der Klasse enthält die Signatur der Methode. Eine optionale Implementierung kann im gleichen oder in einem anderen Teil definiert werden. Wenn die Implementierung nicht bereitgestellt wird, werden anschließend die Methode sowie alle Aufrufe an die Methode zur Kompilierzeit entfernt.  

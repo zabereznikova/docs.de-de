@@ -7,16 +7,16 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 38b8a0fc8c89975318b42380ca936869544af601
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08863e677413c27461d621c7126c64f2b76c33a8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694970"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202599"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Einschränkungen für Typparameter (C#-Programmierhandbuch)
 
-Einschränkungen informieren den Compiler über die Funktionen, über die ein Typargument verfügen muss. Ohne Einschränkungen könnte das Typargument jedes beliebige Argument sein. Der Compiler kann nur die <xref:System.Object?displayPropety=nameWithType>-Elemente annehmen. Dies ist die übergeordnete Basisklasse für jeden beliebigen .NET-Typ. Weitere Informationen finden Sie unter [Weshalb Einschränkungen?](#why-use-constraints). Wenn Clientcode versucht, Ihre Klasse zu instanziieren, indem er einen Typ verwendet, der durch Ihre Einschränkung nicht erlaubt ist, kommt es zu einem Kompilierzeitfehler. Constraints werden mit dem kontextuellen Schlüsselwort `where` angegeben. In der folgenden Tabelle werden die sieben verschiedenen Einschränkungstypen aufgelistet:
+Einschränkungen informieren den Compiler über die Funktionen, über die ein Typargument verfügen muss. Ohne Einschränkungen könnte das Typargument jedes beliebige Argument sein. Der Compiler kann nur die <xref:System.Object?displayProperty=nameWithType>-Elemente annehmen. Dies ist die übergeordnete Basisklasse für jeden beliebigen .NET-Typ. Weitere Informationen finden Sie unter [Weshalb Einschränkungen?](#why-use-constraints). Wenn Clientcode versucht, Ihre Klasse zu instanziieren, indem er einen Typ verwendet, der durch Ihre Einschränkung nicht erlaubt ist, kommt es zu einem Kompilierzeitfehler. Constraints werden mit dem kontextuellen Schlüsselwort `where` angegeben. In der folgenden Tabelle werden die sieben verschiedenen Einschränkungstypen aufgelistet:
 
 |Constraint|Beschreibung|
 |----------------|-----------------|
@@ -114,6 +114,6 @@ Sie könnten dies wie im folgenden Beispiel gezeigt verwenden, um eine Enumerati
 
 - <xref:System.Collections.Generic>
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
-- [Einführung in Generika](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Einführung in Generics](../../../csharp/programming-guide/generics/introduction-to-generics.md)
 - [Generische Klassen](../../../csharp/programming-guide/generics/generic-classes.md)
 - [new-Einschränkung](../../../csharp/language-reference/keywords/new-constraint.md)

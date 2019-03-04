@@ -3,14 +3,14 @@ title: Tupeltypen | C#-Leitfaden
 description: Erfahren Sie mehr über unbenannte und benannte Tupeltypen in C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 2c2b25c34555699c196099c0e1c51681fba8c358
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332753"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971405"
 ---
-# <a name="c-tuple-types"></a>C#-Tupeltypen #
+# <a name="c-tuple-types"></a>C#-Tupeltypen
 
 C#-Tupel sind Typen, die Sie mithilfe einer einfachen Syntax definieren. Zu den Vorteilen gehören eine einfachere Syntax, Regeln für auf Zahlen basierte Umwandlungen (sogenannte Kardinalitäten) und Typen von Elementen sowie konsistente Regeln für Kopien, Gleichheitstests und Aufgaben. Dafür unterstützen Tupel nicht einige der objektorientierten Idiome, die der Vererbung zugeordnet werden. Sie erhalten im Abschnitt zu Tupeln im Artikel [Neuerungen in C# 7.0](whats-new/csharp-7.md#tuples) einen Überblick.
 

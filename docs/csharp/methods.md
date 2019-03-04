@@ -5,14 +5,14 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 97f30838d6bd61654daa800e891e3a79dd3f1297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb19d151140f29e81376d64ecf9976e87459ce1
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617199"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202677"
 ---
-# <a name="methods"></a>Methoden #
+# <a name="methods"></a>Methoden
 
 Eine Methode ist ein Codeblock, der eine Reihe von Anweisungen enthält. Ein Programm bewirkt die Ausführung der Anweisungen, indem die Methode aufgerufen wird und alle erforderlichen Methodenargumente angegeben werden. In C# werden alle Anweisungen im Kontext einer Methode ausgeführt. Die Methode `Main` ist der Einstiegspunkt jeder C#-Anwendung und wird von der Common Language Runtime (CLR) aufgerufen, wenn das Programm gestartet wird.
 
@@ -36,7 +36,8 @@ Dieses Thema enthält folgende Abschnitte:
 - [Iteratoren](#iterators)
 
 <a name="signatures"></a>
-## <a name="method-signatures"></a>Methodensignaturen ##
+
+## <a name="method-signatures"></a>Methodensignaturen
 
 Methoden werden in `class` oder `struct` durch folgende Angaben deklariert:
 
@@ -58,7 +59,8 @@ Im folgenden Beispiel wird eine Klasse mit dem Namen `Motorcycle` deklariert, di
 Beachten Sie, dass die `Motorcycle`-Klasse eine überladene Methode, `Drive`, enthält. Zwei Methoden haben denselben Namen, müssen aber durch ihre Parametertypen unterschieden werden.
 
 <a name="invocation"></a>
-## <a name="method-invocation"></a>Methodenaufruf ##
+
+## <a name="method-invocation"></a>Methodenaufruf
 
 Methoden können entweder *instance* oder *static* sein. Das Aufrufen einer Instanzmethode erfordert, dass Sie ein Objekt instanziieren und die Methode an diesem Objekt aufrufen; eine Instanzmethode funktioniert in dieser Instanz und ihren Daten. Sie rufen eine statische Methode auf, indem Sie auf den Namen des Typs verweisen, zu der die Methode gehört; statische Methoden funktionieren nicht in Instanzdaten. Bei dem Versuch eine statische Methode über eine Objektinstanz aufzurufen, wird ein Compilerfehler erzeugt.
 
@@ -80,8 +82,9 @@ Sie können eine Methode aufrufen, indem Sie sowohl Positionsargumente als auch 
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
- <a name="inherited"></a>
- ## <a name="inherited-and-overridden-methods"></a>Geerbte und überschriebene Methoden ##
+<a name="inherited"></a>
+
+## <a name="inherited-and-overridden-methods"></a>Geerbte und überschriebene Methoden
 
 Zusätzlich zu den Elementen, die ausdrücklich in einem Typ definiert werden, erbt ein Typ Member, die in seiner Basisklasse definiert wurden. Da alle Typen im verwalteten Typsystem direkt oder indirekt von der <xref:System.Object>-Klasse erben, erben alle Typen ihre Member, z.B. <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType> und <xref:System.Object.ToString>. Im folgenden Beispiel wird eine `Person`-Klasse definiert, zwei `Person`-Objekte instanziiert, und es wird die `Person.Equals`-Methode aufgerufen, um zu bestimmen, ob die zwei Objekte gleich sind. Jedoch ist die `Equals`-Methode nicht in der `Person`-Klasse definiert; sie wird von <xref:System.Object> vererbt.
 
@@ -92,12 +95,14 @@ Typen können geerbte Member überschreiben, indem das Schlüsselwort `override`
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
 <a name="passing"></a>
-## <a name="passing-parameters"></a>Übergeben von Parametern ##
+
+## <a name="passing-parameters"></a>Übergeben von Parametern
 
 Typen in C# sind entweder *Werttypen* oder *Verweistypen*. Eine Liste der integrierten Werttypen finden Sie unter [Typen und Variablen](./tour-of-csharp/types-and-variables.md). Sowohl Werttypen als auch Verweistypen werden standardmäßig als Wert an eine Methode übergeben.
 
 <a name="byval"></a>
-### <a name="passing-parameters-by-value"></a>Übergeben von Parametern als Wert ###
+
+### <a name="passing-parameters-by-value"></a>Übergeben von Parametern als Wert
 
 Wenn ein Werttyp an eine Methode als Wert übergeben wird, wird anstelle des eigentlichen Objekts standardmäßig eine Kopie übergeben. Aus diesem Grund haben Änderungen am Objekt in der aufgerufenen Methode keine Auswirkung auf das ursprüngliche Objekt, wenn das Steuerelement an den Aufrufer zurückgegeben wird.
 
@@ -112,7 +117,8 @@ Im folgenden Beispiel wird eine Klasse (die ein Verweistyp ist) mit dem Namen `S
 [!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
 <a name="byref"></a>
-### <a name="passing-parameters-by-reference"></a>Übergeben von Parametern durch einen Verweis ###
+
+### <a name="passing-parameters-by-reference"></a>Übergeben von Parametern durch einen Verweis
 
 Sie übergeben einen Parameter durch einen Verweis, wenn Sie den Wert eines Arguments in einer Methode ändern und diese Änderung berücksichtigen möchten, wenn die Steuerung an die aufrufende Methode zurückgegeben wird. Verwenden Sie das Schlüsselwort [`ref`](language-reference/keywords/ref.md) oder [`out`](language-reference/keywords/out-parameter-modifier.md), um einen Parameter pro Verweis zu übergeben. Außerdem können Sie einen Wert pro Verweis übergeben, um das Kopieren und Änderungen zu vermeiden, wenn Sie das Schlüsselwort [`in`](language-reference/keywords/in-parameter-modifier.md) verwenden.
 
@@ -127,7 +133,8 @@ Ein häufiges Muster, das von ref-Parametern verwendet wird, umfasst das Tausche
 Durch das Übergeben eines Verweistyp-Parameters können Sie den eigentlichen Wert des Verweises anstatt den Wert der einzelnen Elemente oder Felder ändern.
 
 <a name="paramarray"></a>
-### <a name="parameter-arrays"></a>Parameterarrays ###
+
+### <a name="parameter-arrays"></a>Parameterarrays
 
 Manchmal ist die Voraussetzung, dass Sie die genaue Anzahl von Argumenten für Ihre Methode angeben, restriktiv. Mithilfe des Schlüsselworts `params` wird angegeben, dass ein Parameter ein Parameterarray ist, und Sie können Ihre Methode mit einer variablen Anzahl von Argumenten aufrufen. Der mit dem Schlüsselwort `params` gekennzeichnete Parameter muss ein Arraytyp sein, und er muss der letzte Parameter in der Parameterliste der Methode sein.
 
@@ -142,7 +149,8 @@ Im folgenden Beispiel wird eine Methode mit dem Namen `DoStringOperation` defini
 [!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
 
 <a name="optional"></a>
-## <a name="optional-parameters-and-arguments"></a>Optionale Parameter und Argumente ##
+
+## <a name="optional-parameters-and-arguments"></a>Optionale Parameter und Argumente
 
 Eine Methodendefinition kann angeben, dass seine Parameter erforderlich oder optional sind. Parameter sind standardmäßig erforderlich. Optionale Parameter werden einschließlich des Standardwerts des Parameters in der Methodendefinition angegeben. Wird die Methode aufgerufen, wenn kein Argument für einen optionalen Parameter angegeben wird, wird stattdessen der Standardwert verwendet.
 
@@ -172,8 +180,9 @@ Die Verwendung von zwei optionalen Parametern wirkt sich auf die *Überladungsau
 - Wenn mehr als ein Kandidat gefunden wird, werden die Regeln der Überladungsauflösung als bevorzugte Konvertierungen auf die Argumente angewandt, die ausdrücklich angegeben sind. Ausgelassene Argumente für optionale Parameter werden ignoriert.
 - Wenn zwei Kandidaten gleich gut geeignet sind, wird ein Kandidat bevorzugt, der keine optionalen Parameter besitzt, für die Argumente im Aufruf ausgelassen wurden. Dies ist die Folge einer allgemeinen Präferenz bei der Überladungsauflösung für Kandidaten, die weniger Parameter besitzen.
 
- <a name="return"></a>
- ## <a name="return-values"></a>Rückgabewert ##
+<a name="return"></a>
+
+## <a name="return-values"></a>Rückgabewert
 
 Methoden können einen Wert an die aufrufende Funktion (den Aufrufer) zurückgeben. Wenn der Rückgabetyp (der vor dem Methodennamen aufgeführte Typ) nicht `void` ist, kann die Methode den Wert mithilfe des `return`-Schlüsselworts zurückgeben. Eine Anweisung mit dem Schlüsselwort `return`, gefolgt von einem Wert, der dem Rückgabetyp entspricht, gibt diesen Wert an den Methodenaufrufer zurück. Methoden mit einem anderen Rückgabetyp als „void“ müssen das `return` -Schlüsselwort verwenden, um einen Wert zurückzugeben. Das `return` -Schlüsselwort beendet außerdem die Ausführung der Methode.
 
@@ -229,8 +238,9 @@ Wenn eine Methode einem Array als Argument übergeben wird und den Wert der einz
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
- <a name="extension"></a>
- ## <a name="extension-methods"></a>Erweiterungsmethoden ##
+<a name="extension"></a>
+
+## <a name="extension-methods"></a>Erweiterungsmethoden
 
 Es gibt normalerweise zwei Möglichkeiten, einem vorhandenen Typ eine Methode hinzuzufügen:
 
@@ -242,7 +252,8 @@ Erweiterungsmethoden lassen Sie eine Methode einem vorhanden Typ „hinzufügen�
 Weitere Informationen finden Sie unter [Erweiterungsmethoden](programming-guide/classes-and-structs/extension-methods.md).
 
 <a name="async"></a>
-## <a name="async-methods"></a>Asynchrone Methoden ##
+
+## <a name="async-methods"></a>Asynchrone Methoden
 
 Mithilfe der Async-Funktion können Sie asynchrone Methoden aufrufen, ohne explizite Rückrufe verwenden oder den Code manuell über mehrere Methoden oder Lambda-Ausdrücke teilen zu müssen.
 
@@ -262,7 +273,8 @@ Mit einer asynchronen Methode können keine [in](language-reference/keywords/in-
  Weitere Informationen über asynchrone Methoden finden Sie unter [Asynchronous Programming with async and await (Asynchrone Programmierung mit Async und Await)](async.md), [Ablaufsteuerung in asynchronen Programmen](programming-guide/concepts/async/control-flow-in-async-programs.md) und [Asynchrone Rückgabetypen](programming-guide/concepts/async/async-return-types.md).
 
 <a name="expr"></a>
-## <a name="expression-bodied-members"></a>Ausdruckskörpermember ##
+
+## <a name="expression-bodied-members"></a>Ausdruckskörpermember
 
 Es gibt häufig Methodendefinitionen, die einfach direkt das Ergebnis eines Ausdrucks zurückgeben oder eine einzige Anweisung als Text der Methode aufweisen.  Es ist eine Syntaxabkürzung zur Definition solcher Methoden mithilfe von `=>`verfügbar:
 
@@ -278,7 +290,8 @@ public Customer this[long id] => store.LookupCustomer(id);
 Wenn die Methode `void` zurückgibt oder es sich um eine asynchrone Methode handelt, muss der Text der Methode ein Anweisungsausdruck sein (wie bei Lambdas).  Eigenschaften und Indexer müssen schreibgeschützt sein. Verwenden Sie darüber hinaus nicht das `get`-Accessorschlüsselwort.
 
 <a name="iterators"></a>
-## <a name="iterators"></a>Iterators ##
+
+## <a name="iterators"></a>Iterators
 
 Ein Iterator führt eine benutzerdefinierte Iteration durch eine Auflistung durch, z. B. eine Liste oder ein Array. Ein Iterator verwendet die Anweisung [yield return](language-reference/keywords/yield.md), um jedes Element einzeln nacheinander zurückzugeben. Wenn eine `yield return`-Anweisung erreicht wird, wird die aktuelle Position gespeichert, sodass der Aufrufer das nächste Element in der Sequenz anfordern kann.
 
@@ -286,7 +299,7 @@ Der Rückgabetyp eines Iterators kann <xref:System.Collections.IEnumerable>, <xr
 
 Weitere Informationen finden Sie unter [Iteratoren](programming-guide/concepts/iterators.md).
 
-## <a name="see-also"></a>Siehe auch ##
+## <a name="see-also"></a>Siehe auch
 
 - [Zugriffsmodifizierer](language-reference/keywords/access-modifiers.md)
 - [Statische Klassen und statische Klassenmember](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

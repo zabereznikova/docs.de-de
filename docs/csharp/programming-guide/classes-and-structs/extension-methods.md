@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: c231533604b4ebadfb709295b5a8b877f87bba1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35ab91279c9ed8703f29d8cbb8df3d7d4bf2a6b8
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493417"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202222"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Erweiterungsmethoden (C#-Programmierhandbuch)
 Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohne einen neuen abgeleiteten Typ zu erstellen und ohne den ursprünglichen Typ neu kompilieren oder auf andere Weise bearbeiten zu müssen. Erweiterungsmethoden sind eine besondere Art von statischen Methoden, die Sie jedoch wie Instanzmethoden für den erweiterten Typ aufrufen können. Für in C#, F# und Visual Basic geschriebenen Clientcode gibt es keinen sichtbaren Unterschied zwischen dem Aufrufen einer Erweiterungsmethode und den Methoden, die in einem Typ tatsächlich definiert sind.  
@@ -21,13 +21,13 @@ Mit Erweiterungsmethoden können Sie vorhandenen Typen Methoden hinzufügen, ohn
   
  Das folgende Beispiel zeigt, wie Sie die Standardabfrageoperator-Methode `OrderBy` für ein Ganzzahlarray aufrufen können. Der Ausdruck in Klammern ist ein Lambda-Ausdruck. Viele Standardabfrageoperatoren verwenden Lambda-Ausdrücke als Parameter, dies ist jedoch keine Voraussetzung für Erweiterungsmethoden. Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- [!code-csharp[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]  
   
  Erweiterungsmethoden werden als statische Methoden definiert, jedoch mithilfe einer Instanzmethodensyntax aufgerufen. Der erste Parameter bestimmt, für welchen Typ die Methode gilt, und vor dem Parameter steht der [this](../../../csharp/language-reference/keywords/this.md)-Modifizierer. Erweiterungsmethoden befinden sich nur dann im Bereich, wenn Sie den Namespace explizit mit einer `using`-Direktive in Ihren Quellcode importieren.  
   
  Im folgenden Beispiel wird eine für die <xref:System.String?displayProperty=nameWithType>-Klasse definierte Erweiterungsmethode veranschaulicht. Beachten Sie, dass sie in einer nicht geschachtelten, nicht generischen statischen Klasse definiert wird:  
   
- [!code-csharp[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#4)]  
   
  Die `WordCount`-Erweiterungsmethode kann mit dieser `using`-Direktive eingebunden werden:  
   
@@ -64,7 +64,7 @@ using System.Linq;
   
  Wenn der Compiler keine Instanzmethode mit einer entsprechenden Signatur findet, stellt er ggf. eine Bindung mit einer entsprechenden Erweiterungsmethode her.  
   
- [!code-csharp[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
+ [!code-csharp[csProgGuideExtensionMethods#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#5)]  
   
 ## <a name="general-guidelines"></a>Allgemeine Richtlinien  
  Im Allgemeinen wird empfohlen, dass Sie Erweiterungsmethoden sparsam und nur wenn unbedingt notwendig implementieren. Wenn möglich sollte der Clientcode, der einen vorhandenen Typ erweitern muss, dies durch die Erstellung eines neuen, vom vorhandenen Typ abgeleiteten Typs durchführen. Weitere Informationen finden Sie unter [Vererbung](../../../csharp/programming-guide/classes-and-structs/inheritance.md).  

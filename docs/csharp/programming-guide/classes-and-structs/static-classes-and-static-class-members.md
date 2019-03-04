@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 870d7593dcfd6c2b8d58562d182d37a64484a53e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcf4cd9d4ac4e4de3174cb57d83c8cab7de86c21
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577498"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202404"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statische Klassen und statische Klassenmember (C#-Programmierhandbuch)
 Eine [statische](../../../csharp/language-reference/keywords/static.md) Klasse ist im Grunde identisch mit einer nicht statischen Klasse, aber es gibt einen Unterschied: Eine statische Klasse kann nicht instanziiert werden. Das heißt, Sie können das Schlüsselwort [new](../../../csharp/language-reference/keywords/new.md) nicht verwenden, um eine Variable des Klassentyps zu erstellen. Da keine Instanzvariable vorhanden ist, greifen Sie auf die Member einer statischen Klasse mit dem Klassennamen selbst zu. Wenn Sie z.B. eine statische Klasse dem Namen `UtilityClass` haben, die eine öffentliche statische Methode mit dem Namen `MethodA` besitzt, rufen Sie die Methode wie im folgenden Beispiel gezeigt auf:  
@@ -59,7 +59,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="example"></a>Beispiel  
  Dies ist ein Beispiel für eine statische Klasse, die zwei Methoden enthält, die die Temperatur von Grad Celsius in Fahrenheit und umgekehrt konvertieren:  
   
- [!code-csharp[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
+ [!code-csharp[csProgGuideObjects#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#31)]  
   
 ## <a name="static-members"></a>Statische Member  
  Eine nicht statische Klasse kann statische Methoden, Felder, Eigenschaften oder Ereignisse enthalten. Der statische Member ist für eine Klasse aufrufbar, selbst wenn keine Instanz der Klasse erstellt wurde. Auf den statischen Member wird immer vom Klassennamen, nicht vom Namen der Instanz, zugegriffen. Es ist nur eine Kopie eines statischen Members vorhanden, unabhängig davon, wie viele Instanzen der Klasse erstellt werden. Statische Methoden und Eigenschaften können nicht auf nicht statische Felder und Ereignisse in ihrem enthaltenden Typ zugreifen, und sie können nicht auf eine Instanzvariable für ein beliebiges Objekt zugreifen, außer es wird ausdrücklich an einen Methodenparameter übergeben.  
@@ -74,11 +74,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Deklarieren Sie statische Klassenmember mithilfe des Schlüsselworts `static` vor dem Rückgabetyp des Members, wie im folgenden Beispiel gezeigt wird:  
   
- [!code-csharp[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
+ [!code-csharp[csProgGuideObjects#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#29)]  
   
  Statische Member werden initialisiert, bevor auf die statischen Member zum ersten Mal zugegriffen wird, und bevor der statische Konstruktor, sofern vorhanden, aufgerufen wird. Verwenden Sie zum Angeben des Speicherorts des Members den Namen der Klasse anstelle des Variablennamens, um auf einen statischen Klassenmember zuzugreifen, wie im folgenden Beispiel gezeigt wird:  
   
- [!code-csharp[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
+ [!code-csharp[csProgGuideObjects#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#30)]  
   
  Wenn Ihre Klasse statische Felder enthält, stellen Sie einen statischen Konstruktor bereit, der sie beim Laden der Klasse initialisiert.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 7c20292a906ecfbf08311a616e05a02cd8f8a25c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5fbf74f30e5fc6abd9e1c5542eaadc7e3fcf552
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731698"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977564"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Zugriffsmodifizierer (C#-Programmierhandbuch)
 Alle Typen und Typmember haben eine Zugriffsebene, die steuert, ob sie von anderem Code in Ihrer Assembly oder anderen Assemblys verwendet werden können. Sie können die folgenden Zugriffsmodifizierer verwenden, um den Zugriff auf einen Typ oder Member anzugeben, wenn Sie sie deklarieren:  
@@ -33,7 +33,7 @@ Alle Typen und Typmember haben eine Zugriffsebene, die steuert, ob sie von ander
   
  Die folgenden Beispiele veranschaulichen, wie Zugriffsmodifizierer für einen Typ und Member angegeben werden:  
   
- [!code-csharp[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
+ [!code-csharp[csProgGuideObjects#72](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#72)]  
   
  Nicht alle Zugriffsmodifizierer können von allen Typen oder Membern in allen Kontexten verwendet werden, und in einigen Fällen wird der Zugriff auf einen Typmember vom Zugriff auf den enthaltenden Typ eingeschränkt. Die folgenden Abschnitte enthalten ausführlichere Informationen zu diesem Zugriff.  
   
@@ -59,7 +59,7 @@ Alle Typen und Typmember haben eine Zugriffsebene, die steuert, ob sie von ander
   
  Um die Zugriffsebene für eine Klasse oder Struktur festzulegen, fügen Sie das entsprechende Schlüsselwort zur Memberdeklaration hinzu, wie im folgenden Beispiel dargestellt.  
   
- [!code-csharp[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
+ [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
 >  Die geschützte interne Zugriffsebene heißt geschützt ODER intern, nicht geschützt UND intern. Anders gesagt, kann auf einen geschützten internen Member aus einer Klasse in der gleichen Assembly, einschließlich der abgeleiteten Klassen, zugegriffen werden. Um Zugriff auf abgeleitete Klassen in derselben Assembly zu beschränken, deklarieren Sie die Klasse selbst als intern, und ihre Member als geschützt. Außerdem können Sie ab C# 7.2 den Zugriffsmodifizierer „private protected“ verwenden, um dasselbe Ergebnis zu erzielen, ohne die enthaltende Klasse als intern zu deklarieren.  

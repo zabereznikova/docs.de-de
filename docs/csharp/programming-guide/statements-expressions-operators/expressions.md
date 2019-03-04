@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 4fc6485b8ca1c2613df586a56c0c974e9e721380
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8856dfd1c6c8e35399c20b630c0d44493e42b6a
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600491"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972195"
 ---
 # <a name="expressions-c-programming-guide"></a>Ausdrücke (C#-Programmierhandbuch)
 Ein *Ausdruck* ist eine Sequenz von einem oder mehr Operanden und null oder mehr Operatoren, die einen einzelnen Wert, ein Objekt, eine Methode oder ein Namespace annehmen können. Ausdrücke können einen literalen Wert, einen Methodenaufruf, einen Operator und die entsprechenden Operanden oder einen *einfachen Namen* enthalten. Einfache Namen können der Name einer Variablen, eines Typmembers, eines Methodenparameters, eines Namespaces oder eines Typs sein.  
@@ -40,13 +40,13 @@ System.Convert.ToInt32("35");
 ## <a name="literals-and-simple-names"></a>Literale und einfache Namen  
  Die zwei einfachsten Typen von Ausdrücken sind Literale und einfache Namen. Ein Literal ist ein konstanter Wert, der keinen Namen besitzt. Im folgenden Codebeispiel sind z.B. `5` und `"Hello World"` jeweils Literalwerte:  
   
- [!code-csharp[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
+ [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  Weitere Informationen zu Literalen finden Sie unter [Typen](../../../csharp/language-reference/keywords/types.md).  
   
  Im vorherigen Beispiel sind `i` und `s` jeweils einfache Namen, die lokale Variablen identifizieren. Wenn diese Variablen in einem Ausdruck verwendet werden, ergibt der Variablenname einen Wert, der derzeit am Speicherort der Variable im Speicher gespeichert ist. Dies wird im folgenden Beispiel gezeigt:  
   
- [!code-csharp[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
+ [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]  
 ## <a name="invocation-expressions"></a>Aufrufausdrücke  
  Im folgenden Codebeispiel ist der Aufruf von `DoWork` ein Aufrufausdruck.  
   
@@ -70,7 +70,7 @@ Mithilfe von Ausdrucksbaumstrukturen können Ausdrücke als Datenstrukturen darg
 
 C# unterstützt *Ausdruckskörpermember*, mit denen Sie eine präzise Ausdrückskörperdefiniton für Methoden, Konstruktoren, Finalizer, Eigenschaften und Indexer angeben können. Weitere Informationen finden Sie unter [Ausdruckskörpermember](expression-bodied-members.md).
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Wann immer eine Variable, eine Objekteigenschaft oder ein Objektindexerzugriff von einem Ausdruck identifiziert wird, wird der Wert dieses Elements als Wert des Ausdrucks verwendet. Ein Ausdruck kann dort in C# platziert werden, wo ein Wert oder Objekt benötigt wird, solange der Ausdruck letztendlich den geforderten Typ ergibt.  
 
 ## <a name="see-also"></a>Siehe auch

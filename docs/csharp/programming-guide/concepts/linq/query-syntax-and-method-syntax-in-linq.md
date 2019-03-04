@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 5ad58e921b16498139abe403a45b21bb22ef895d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564317"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978649"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Abfragesyntax und Methodensyntax in LINQ (C#)
 Die meisten Abfragen in der einführenden Dokumentation der Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) wurden mithilfe der deklarierten Abfragesyntax von LINQ geschrieben. Die Abfragesyntax muss jedoch in Methodenaufrufe für die .NET Common Language Runtime (CLR) übersetzt werden, wenn der Code kompiliert wird. Diese Methodenaufrufe rufen die Standardabfrageoperatoren auf, die z.B. folgende Namen haben: `Where`, `Select`, `GroupBy`, `Join`, `Max` und `Average`. Sie können sie direkt mithilfe der Methodensyntax anstatt der Abfragesyntax aufrufen.  
@@ -20,7 +20,7 @@ Die meisten Abfragen in der einführenden Dokumentation der Language Integrated 
 ## <a name="standard-query-operator-extension-methods"></a>Erweiterungsmethoden von Standardabfrageoperatoren  
  Im folgenden Beispiel wird ein einfacher *Abfrageausdruck* und die semantisch äquivalente Abfrage gezeigt, die als *methodenbasierte Abfrage* geschrieben ist.  
   
- [!code-csharp[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#22)]  
   
  Die Ausgabe der beiden Beispiele ist identisch. Sie sehen, dass der Typ der Abfragevariable in beiden Formen der gleiche ist: <xref:System.Collections.Generic.IEnumerable%601>.  
   
