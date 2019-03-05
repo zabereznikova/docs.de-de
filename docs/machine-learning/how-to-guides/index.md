@@ -1,22 +1,14 @@
 ---
 title: Schrittanleitungen für .NET Machine Learning – ML.NET
-description: Erfahren Sie, wie Sie bestimmte Aufgaben ausführen können, die Sie bei der Erstellung von benutzerdefinierten KI-Lösungen und Machine Learning und deren Integration in Ihre .NET-Anwendungen unterstützen.
+description: 'Erfahren Sie, wie Sie bestimmte Aufgaben ausführen können, die Sie bei der Erstellung von benutzerdefinierten KI-Lösungen und Machine Learning und deren Integration in Ihre .NET-Anwendungen unterstützen.'
 ms.custom: seodec18
-ms.date: 12/04/2018
-ms.openlocfilehash: edff20b36d11dec169e1a4318a473533c8664842
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235188"
+ms.date: 03/01/2019
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Schrittanleitungen für .NET Machine Learning – ML.NET
 
 Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell Antworten auf häufige Fragen. In manchen Fällen können Artikel in mehreren Abschnitten aufgeführt sein, damit sie einfacher zu finden sind.
 
-## <a name="prepare-data"></a>Vorbereiten von Daten
-
-### <a name="load-data"></a>Laden von Daten
+## <a name="load-the-data"></a>Laden der Daten
 
 * [Laden von Daten mit vielen Spalten aus einer CSV-Datei für die Machine Learning-Verarbeitung](load-data-from-mult-column-csv-ml-net.md)
 
@@ -24,9 +16,11 @@ Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell
 
 * [Laden von Daten aus einer Textdateien für die Machine Learning-Verarbeitung](load-data-from-text-file-ml-net.md)
 
+### <a name="prepare-the-data"></a>Vorbereiten der Daten
+
 * [Vorverarbeiten von Trainingsdaten mit Normalisierungsfunktionen zur Nutzung in der Datenverarbeitung](normalizers-preprocess-data-ml-net.md)
 
-## <a name="train-model"></a>Trainieren eines Modells
+## <a name="train-the-model"></a>Trainieren des Modells
 
 * [Trainieren eines Machine Learning-Modells mithilfe von Daten, die nicht in einer Textdatei enthalten sind](load-non-file-training-data-ml-net.md)
 
@@ -34,7 +28,7 @@ Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell
 
 * [Trainieren eines Regressionsmodells zur Vorhersage eines Werts mit ML.NET](train-regression-model-ml-net.md)
 
-### <a name="evaluate-model-quality"></a>Bewerten der Modellqualität
+### <a name="evaluate-the-model-quality"></a>Bewerten der Modellqualität
 
 * [Berechnen von Metriken zum Auswerten der Modellqualität](verify-model-quality-ml-net.md)
 

@@ -33,6 +33,7 @@
 ## [Behandeln und Auslösen von Ausnahmen](standard/exceptions/)
 ## [Assemblys in .NET](standard/assembly/index.md)
 ### [.NET-Assemblydateiformat](standard/assembly/file-format.md)
+### [Vorgehensweise: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core](standard/assembly/unloadability-howto.md)
 ## [Garbage Collection](standard/garbage-collection/)
 ## [Generische Typen](standard/generics.md)
 ## [Delegaten und Lambdas](standard/delegates-lambdas.md)
@@ -268,9 +269,9 @@
 ## [Einführung in C#](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD003 MD020 -->
 ## Neues in C#
-<!-- markdownlint-enable MD003 -->
+<!-- markdownlint-enable MD003 MD020 -->
 ### [C# 8.0: Vorschauversion 2](csharp/whats-new/csharp-8.md)
 ### [C# 7.3](csharp/whats-new/csharp-7-3.md)
 ### [C# 7.2](csharp/whats-new/csharp-7-2.md)
