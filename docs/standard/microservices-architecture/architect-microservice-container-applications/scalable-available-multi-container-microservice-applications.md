@@ -4,12 +4,12 @@ description: Entdecken Sie die Optionen zum Orchestrieren von Microservices und 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8f8d05a79189b909990fd7ef0c05bd84d556a94a
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 0a3ecbb8d186adf3fdc492654e23111ee4c508b1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307434"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56980229"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 
@@ -137,9 +137,11 @@ Wie in Abbildung 4-26 gezeigt, ist das bemerkenswerteste Feature in Azure Dev Sp
 
 Sie können einen freigegebenen Entwicklungsbereich in Azure einrichten. Jeder Entwickler kann sich auf seinen Teil der Anwendung konzentrieren und Code vor dem Committen in einem Entwicklungsbereich iterativ entwickeln, der bereits alle anderen Dienste und Cloudressourcen enthält, die ihre Szenarios benötigen. Abhängigkeiten sind immer aktuell, und die Entwickler arbeiten auf eine Weise, die die Produktion spiegelt.
 
-Azure Dev Spaces stellt das Konzept eines Bereichs bereit, das Ihnen ermöglicht, isoliert zu arbeiten, ohne die Arbeit Ihrer Teammitglieder zu beeinträchtigen. Dieses Feature basiert auf URL-Präfixen. Wenn Sie also ein Präfix für einen Entwicklungsbereich in der URL angeben, wird für die Anforderungen jedes Containers eine bestimmte Version des Containers für den Bereich ausgeführt, in dem dieser vorhanden ist. Andernfalls wird die globale/konsolidierte Version ausgeführt.
+Azure Dev Spaces stellt das Konzept eines Bereichs bereit, das Ihnen ermöglicht, isoliert zu arbeiten, ohne die Arbeit Ihres Teams zu unterbrechen. Jeder Entwicklungsbereich ist Teil einer hierarchischen Struktur, die es Ihnen ermöglicht, im Master-Entwicklungsbereich „oben“ einen Microservice (oder mehrere) mit Ihrem eigenen in der Entwicklung befindlichen Microservice zu überschreiben.
 
-Auf der [Wiki-Seite für eShopOnContainers in Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.2-Using-Azure-Dev-Spaces-and-AKS) finden Sie eine praktische Ansicht eines konkreten Beispiels.
+Dieses Feature basiert auf URL-Präfixen, sodass Verwendung eines Entwicklungsbereichspräfixes in der URL eine Anforderung aus dem Ziel-Microservice bereitgestellt wird, wenn sie im Entwicklungsbereich vorhanden ist. Andernfalls wird sie an die erste Instanz des Ziel-Microservice in der Hierarchie weitergeleitet und gelangt schließlich in den Master-Entwicklungsbereich ganz oben.
+
+Auf der [Wiki-Seite für eShopOnContainers in Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS) finden Sie eine praktische Ansicht eines konkreten Beispiels.
 
 Weitere Informationen finden Sie im Artikel zur [Teamentwicklung mit Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore).
 

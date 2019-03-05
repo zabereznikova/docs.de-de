@@ -11,16 +11,16 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144857"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835823"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formate von Dateipfaden unter Windows-Systemen
 
-Die Member vieler Typen im <xref:System.IO>-Namespace enthalten einen `path`-Parameter, mit dem Sie einen absoluten oder relativen Pfad zu einer Dateisystemressource festlegen können. Dieser Pfad wird dann an [Windows-Dateisystem-APIs](https://msdn.microsoft.com/library/windows/desktop/aa364407(v=vs.85).aspx) übergeben. In diesem Artikel werden die Formate für Dateipfade erläutert, die Sie unter Windows-Systemen verwenden können.
+Die Member vieler Typen im <xref:System.IO>-Namespace enthalten einen `path`-Parameter, mit dem Sie einen absoluten oder relativen Pfad zu einer Dateisystemressource festlegen können. Dieser Pfad wird dann an [Windows-Dateisystem-APIs](/windows/desktop/fileio/file-systems) übergeben. In diesem Artikel werden die Formate für Dateipfade erläutert, die Sie unter Windows-Systemen verwenden können.
 
 ## <a name="traditional-dos-paths"></a>Herkömmliche DOS-Pfade
 

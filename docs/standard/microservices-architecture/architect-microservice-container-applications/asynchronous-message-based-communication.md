@@ -4,12 +4,12 @@ description: '.NET-Microservicearchitektur für .NET-Containeranwendungen | Die 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5346e5f3e780961e8353c9dec0860bebd4fc6657
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 10e2a05e8fa33ecbf2aec2432c0cf51204fc35c1
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148898"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969361"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchrone nachrichtenbasierte Kommunikation
 
@@ -77,7 +77,7 @@ Eine Herausforderung beim Implementieren einer ereignisgesteuerten Architektur f
 
 - Verwenden von [Transaktionsprotokollmining](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Verwenden des [Musters „Ereignissourcing“](https://msdn.microsoft.com/library/dn589792.aspx).
+- Verwenden des [Musters „Ereignissourcing“](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing).
 
 - Verwenden des [Musters „Postausgang“](http://gistlabs.com/2014/05/the-outbox/). Hierbei bildet eine Transaktionsdatenbanktabelle als Nachrichtenwarteschlange die Basis für eine Ereigniserstellerkomponente, die das Ereignis erstellt und veröffentlicht.
 
@@ -103,7 +103,7 @@ Bei der Verwendung der asynchronen Kommunikation sollten darüber hinaus die Ide
 - **Letztliche Konsistenz** \
   [*https://en.wikipedia.org/wiki/Eventual_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
-- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)** \
+- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \ (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)
   [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 >[!div class="step-by-step"]

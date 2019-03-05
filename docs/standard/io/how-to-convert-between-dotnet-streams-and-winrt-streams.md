@@ -8,34 +8,34 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc38e69a79af7c7220b8e3b55d4cb1f4ca3695f6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0cf5b621be7532239b67bfe970302f27eca3ea2a
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255197"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835134"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>Vorgehensweise: Konvertieren von .NET Framework- und Windows-Runtime-Streams (nur unter Windows)
 
 .NET Framework für UWP-Apps ist eine Teilmenge der Vollversion von .NET Framework. Aufgrund der Sicherheitsanforderungen und anderer Anforderungen an UWP-Apps können Sie nicht alle .NET Framework-APIs zum Öffnen und Lesen von Dateien verwenden. Weitere Informationen finden Sie unter [.NET for UWP apps overview (Übersicht zu .NET Framework für UWP-Apps)](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Sie können die .NET Framework-APIs jedoch für andere Streambearbeitungsvorgänge verwenden. Zur Bearbeitung dieser Streams können Sie einen .NET Framework-Streamtyp wie <xref:System.IO.MemoryStream> oder <xref:System.IO.FileStream> in einen Windows-Runtime-Stream wie <xref:Windows.Storage.Streams.IInputStream>, <xref:Windows.Storage.Streams.IOutputStream> oder <xref:Windows.Storage.Streams.IRandomAccessStream> konvertieren.
 
-Die Klasse [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx) enthält Methoden zur Vereinfachung von Konvertierungen. Es gibt jedoch grundlegende Unterschiede zwischen Streams in .NET Framework und der Windows-Runtime, die sich auf die Ergebnisse der Verwendung dieser Methoden auswirken. Dies wird in den folgenden Abschnitten erläutert:
+Die <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType>-Klasse enthält Methoden, die diese Konvertierungen vereinfachen. Es gibt jedoch grundlegende Unterschiede zwischen Streams in .NET Framework und der Windows-Runtime, die sich auf die Ergebnisse der Verwendung dieser Methoden auswirken. Dies wird in den folgenden Abschnitten erläutert:
 
 ## <a name="convert-from-a-windows-runtime-to-a-net-framework-stream"></a>Konvertieren eines Windows-Runtime-Streams in einen .NET Framework-Stream
-Sie können einen Windows-Runtime-Stream mit einer der folgenden [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx)-Methoden in einen .NET Framework-Stream konvertieren:
+Konvertieren Sie einen Windows-Runtime-Stream mit einer der folgenden <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType>-Methoden in einen .NET Framework-Stream:
 
-- Bei der Methode [System.IO.WindowsRuntimeStreamExtensions.AsInputStream](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.asstream.aspx) wird ein Stream mit wahlfreiem Zugriff in der Windows-Runtime in einen verwalteten Stream in .NET für UWP-Apps konvertiert.
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType> konvertiert einen Random-Access-Stream in der Windows-Runtime in einen verwalteten Stream in .NET für UWP-Apps.
   
-- Bei der Methode [System.IO.WindowsRuntimeStreamExtensions.AsStreamForWrite](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.asstreamforwrite.aspx) wird ein Ausgabestream in der Windows-Runtime in einen verwalteten Stream in .NET für UWP-Apps konvertiert.
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForWrite%2A?displayProperty=nameWithType> konvertiert einen Ausgabestream in der Windows-Runtime in einen verwalteten Stream in .NET für UWP-Apps.
   
-- Bei der Methode [System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.asstreamforread.aspx) wird ein Eingabestream in der Windows-Runtime in einen verwalteten Stream in .NET für UWP-Apps konvertiert.
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> konvertiert einen Eingabestream in der Windows-Runtime in einen verwalteten Stream in .NET für UWP-Apps.
 
 Für die Windows-Runtime gibt es Streamtypen, die nur das Lesen, nur das Schreiben oder Lesen und Schreiben unterstützen. Diese Funktionen bleiben erhalten, wenn Sie einen Windows-Runtime-Stream in einen .NET Framework-Stream konvertieren. Wenn Sie einen Windows-Runtime-Stream in einen .NET Framework-Stream bzw. zurück konvertieren, erhalten Sie darüber hinaus die ursprüngliche Windows-Runtime-Instanz zurück. 
 
-Es wird empfohlen, die Konvertierungsmethode zu verwenden, die zu den Funktionen des Windows-Runtime-Streams passt, den Sie konvertieren möchten. Da jedoch <xref:Windows.Storage.Streams.IRandomAccessStream> lesbar und schreibbar ist (es werden sowohl <xref:Windows.Storage.Streams.IOutputStream> als auch <xref:Windows.Storage.Streams.IInputStream> implementiert), ist es egal, welche Konvertierungsmethode Sie verwenden. Die Funktionen des ursprünglichen Streams bleiben stets erhalten. Wenn Sie beispielsweise [System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.asstreamforread.aspx) zum Konvertieren von <xref:Windows.Storage.Streams.IRandomAccessStream> verwenden, wird der konvertierte .NET Framework-Stream nicht auf den Schreibschutz eingeschränkt. Er ist dann auch schreibbar.
+Es wird empfohlen, die Konvertierungsmethode zu verwenden, die zu den Funktionen des Windows-Runtime-Streams passt, den Sie konvertieren möchten. Da jedoch <xref:Windows.Storage.Streams.IRandomAccessStream> lesbar und schreibbar ist (es werden sowohl <xref:Windows.Storage.Streams.IOutputStream> als auch <xref:Windows.Storage.Streams.IInputStream> implementiert), ist es egal, welche Konvertierungsmethode Sie verwenden. Die Funktionen des ursprünglichen Streams bleiben stets erhalten. Wenn Sie beispielsweise <xref:System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead%2A?displayProperty=nameWithType> zum Konvertieren von <xref:Windows.Storage.Streams.IRandomAccessStream> verwenden, wird der konvertierte .NET Framework-Stream nicht auf den Schreibschutz eingeschränkt. Er ist dann auch schreibbar.
 
 ## <a name="example-convert-windows-runtime-random-access-to-net-framework-stream"></a>Beispiel: Konvertieren eines Windows-Runtime-Streams mit wahlfreiem Zugriff in einen .NET Framework-Stream
-Sie können einen Windows-Runtime-Stream mit wahlfreiem Zugriff mithilfe der [System.IO.WindowsRuntimeStreamExtensions.AsStream](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.asstream.aspx)-Methode in einen .NET Framework-Stream konvertieren.
+Verwenden Sie die <xref:System.IO.WindowsRuntimeStreamExtensions.AsStream%2A?displayProperty=nameWithType>-Methode, um einen Windows-Runtime-Random-Access-Stream in einen .NET Framework-Stream zu konvertieren.
 
 Im folgenden Codebeispiel werden Sie dazu aufgefordert, eine Datei auszuwählen, die anschließend mithilfe von Windows-Runtime-APIs geöffnet und in einen .NET Framework-Stream konvertiert wird. Dabei wird der Stream gelesen und als Textblock ausgegeben. Üblicherweise sollten Sie den Stream mit .NET Framework-APIs bearbeiten, bevor die Ergebnisse ausgegeben werden.
 
@@ -45,15 +45,15 @@ Damit dieses Beispiel ausgeführt werden kann, müssen Sie eine XAML-App für di
   [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#Imports](~/samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage1.xaml.vb)]
 
 ## <a name="convert-from-a-net-framework-to-a-windows-runtime-stream"></a>Konvertieren eines .NET Framework-Streams in einen Windows-Runtime-Stream
-Sie können einen .NET Framework-Stream mithilfe einer der folgenden [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx)-Methoden in einen Windows-Runtime-Stream konvertieren:
+Konvertieren Sie einen .NET Framework-Stream mit einer der folgenden <xref:System.IO.WindowsRuntimeStreamExtensions?displayProperty=nameWithType>-Methoden in einen Windows-Runtime-Stream:
 
-- Bei der Methode [System.IO.WindowsRuntimeStreamExtensions.AsInputStream](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.asinputstream.aspx) wird ein in .NET für UWP-Apps verwalteter Stream in einen Eingabestream in der Windows-Runtime konvertiert.
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> konvertiert einen verwalteten Stream in .NET für UWP-Apps in einen Eingabestream in der Windows-Runtime.
   
-- Bei der [System.IO.WindowsRuntimeStreamExtensions.AsOutputStream](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.asoutputstream.aspx) wird ein in .NET für UWP-Apps verwalteter Stream in einen Ausgabestream in der Windows-Runtime konvertiert.
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A?displayProperty=nameWithType> konvertiert einen verwalteten Stream in .NET für UWP-Apps in einen Ausgabestream in der Windows-Runtime.
   
 - Bei der [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md)-Methode wird ein in .NET für UWP-Apps verwalteter Stream in einen Stream mit wahlfreiem Zugriff konvertiert, den die Windows-Runtime für Lese- und Schreibvorgänge verwenden kann.
 
-Wenn Sie einen .NET Framework-Stream in einen Windows-Runtime-Stream konvertieren, hängen die Funktionen des konvertierten Streams vom ursprünglichen Stream ab. Wenn z. B. der ursprüngliche Stream sowohl Lese- als auch Schreibvorgänge unterstützt und Sie [System.IO.WindowsRuntimeStreamExtensions.AsInputStream](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.asinputstream.aspx) zum Konvertieren des Streams aufrufen, ist der zurückgegebene Typ ein `IRandomAccessStream`. Der `IRandomAccessStream` implementiert `IInputStream` und `IOutputStream` und unterstützt Lese- und Schreibvorgänge.
+Wenn Sie einen .NET Framework-Stream in einen Windows-Runtime-Stream konvertieren, hängen die Funktionen des konvertierten Streams vom ursprünglichen Stream ab. Wenn z. B. der ursprüngliche Stream sowohl Lese- als auch Schreibvorgänge unterstützt und Sie <xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> zum Konvertieren des Streams aufrufen, ist der zurückgegebene Typ ein `IRandomAccessStream`. Der `IRandomAccessStream` implementiert `IInputStream` und `IOutputStream` und unterstützt Lese- und Schreibvorgänge.
 
 .NET Framework-Streams unterstützen selbst nach der Konvertierung keine Klonvorgänge. Wenn Sie einen .NET Framework-Stream in einen Windows-Runtime-Stream konvertieren und <xref:Windows.Storage.Streams.InMemoryRandomAccessStream.GetInputStreamAt%2A> oder <xref:Windows.Storage.Streams.IRandomAccessStream.GetOutputStreamAt%2A> aufrufen, wodurch <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A> oder <xref:Windows.Storage.Streams.RandomAccessStreamOverStream.CloneStream%2A> direkt aufgerufen wird, wird eine Ausnahme ausgelöst.
 
@@ -71,6 +71,6 @@ Um dieses Beispiel auszuführen, müssen Sie eine XAML-App für die UWP erstelle
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Schnellstart: Lesen und Schreiben von Dateien (Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
-- [.NET für Windows Store-Apps – Übersicht](https://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
-- [.NET for Windows Store apps: Supported APIs (.NET für Windows Store-Apps: Unterstützte APIs)](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)  
+- [Schnellstart: Lesen und Schreiben von Dateien (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464978(v=win.10))  
+- [.NET für Windows Store-Apps – Übersicht](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))  
+- [.NET für Windows Store-Apps – APIs](https://docs.microsoft.com/previous-versions/br230232(v=vs.120))  

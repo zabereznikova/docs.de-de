@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267299"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835251"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Skripterstellung für ein XSLT-Stylesheet mit \<msxsl:script>
 Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingebetteter Skripts mit dem `script`-Element.  
@@ -31,7 +31,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
   
  Dabei ist `msxsl` ein an den Namespace `urn:schemas-microsoft-com:xslt` gebundenes Präfix.  
   
- Das `language` ist nicht zwingend erforderlich. Wenn es jedoch angegeben wird, muss es einen der folgenden Wert aufweisen: C#, VB, JScript, JavaScript, VisualBasic oder CSharp. Wenn es nicht angegeben wird, wird die Standardsprache JScript verwendet. Beim `language-name` wird die Groß- und Kleinschreibung nicht unterschieden, daher sind "JavaScript" und "javascript" identisch.  
+ Das `language`-Attribut ist nicht zwingend erforderlich. Wenn es jedoch angegeben wird, muss der Wert einer der folgenden sein: C#, VB, JScript, JavaScript, VisualBasic oder CSharp. Wenn es nicht angegeben wird, wird die Standardsprache JScript verwendet. Beim `language-name` wird die Groß- und Kleinschreibung nicht unterschieden, daher sind "JavaScript" und "javascript" identisch.  
   
  Das `implements-prefix`-Attribut ist erforderlich. Mit diesem Attribut wird ein Namespace deklariert und mit dem Skriptblock verknüpft. Der Wert dieses Attributs ist das Präfix, das den Namespace darstellt. Dieser Namespace kann an einer beliebigen Stelle im Stylesheet definiert werden.  
   
@@ -45,7 +45,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
   
  Zum Abrufen des Beweises aus der Assembly verwenden Sie `this.GetType().Assembly.Evidence`. Zum Abrufen des Beweises aus einem URI (Uniform Resource Identifier) verwenden Sie `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Wenn Sie <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methoden verwenden, die einen <xref:System.Xml.XmlResolver> akzeptieren, nicht jedoch `Evidence`, wird in der Standardeinstellung als Sicherheitszone für die Assembly "Voll vertrauenswürdig" verwendet. Weitere Informationen finden Sie unter <xref:System.Security.SecurityZone> und [Benannte Berechtigungssätze](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Wenn Sie <xref:System.Xml.Xsl.XslTransform.Load%2A>-Methoden verwenden, die einen <xref:System.Xml.XmlResolver> akzeptieren, nicht jedoch `Evidence`, wird in der Standardeinstellung als Sicherheitszone für die Assembly "Voll vertrauenswürdig" verwendet. Weitere Informationen finden Sie unter <xref:System.Security.SecurityZone> und [Benannte Berechtigungssätze](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  Funktionen können innerhalb des `msxsl:script`-Elements deklariert werden. In der folgenden Tabelle werden die Namespaces angezeigt, die standardmäßig unterstützt werden. Sie können Klassen außerhalb der aufgeführten Namespaces verwenden. Diese Klassen müssen jedoch voll qualifiziert sein.  
   
@@ -72,7 +72,7 @@ Die <xref:System.Xml.Xsl.XslTransform>-Klasse unterstützt die Erstellung eingeb
 |Ergebnisstrukturfragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Knotengruppe|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Wenn die Skriptfunktion einen numerischen Typ  Int16, UInt16, Int32, UInt32, Int64, UInt64, Single oder Decimal verwendet, werden diese Typen in Double umgewandelt, wodurch eine Zuordnung zur XPath-Typnummer des W3C erfolgt. Für alle anderen Typen wird durch einen Aufruf der `ToString`-Methode eine Umwandlung in string erzwungen.  
+ Wenn die Skriptfunktion einen der numerischen Typen „Int16“, „UInt16“, „Int32“, „UInt32“, „Int64“, „UInt64“, „Single“ oder „Decimal“ verwendet, werden diese Typen in „Double“ umgewandelt, wodurch eine Zuordnung zur XPath-Typnummer des W3C erfolgt. Für alle anderen Typen wird durch einen Aufruf der `ToString`-Methode eine Umwandlung in string erzwungen.  
   
  Wenn die Skriptfunktion einen anderen als die oben genannten Typen verwendet oder wenn sie beim Laden des Stylesheets in das <xref:System.Xml.Xsl.XslTransform>-Objekt nicht kompiliert wird, wird eine Ausnahme ausgelöst.  
   

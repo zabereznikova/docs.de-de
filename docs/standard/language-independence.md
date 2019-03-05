@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 9ee6e9a06d590d9d8452dcdaea11219070e613c4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9e63b16106f69ec35b7713ffc1a28e2cfb19d2d9
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188182"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203651"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachunabhängigkeit und sprachunabhängige Komponenten
 
@@ -150,7 +150,7 @@ Die öffentliche Schnittstelle einer Bibliothek besteht aus folgenden Elementen:
 
 * Parameter und Rückgabetypen öffentlicher Methoden von öffentlichen Klassen sowie Parameter und Rückgabetypen von Methoden, auf die abgeleitete Klassen zugreifen können. 
 
-Die Regeln für CLS-Kompatibilität werden in der folgenden Tabelle aufgeführt. Der Text der Regeln wird in vollem Wortlaut dem [ECMA-335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) entnommen. Copyright 2012 durch Ecma-International. Ausführlichere Informationen zu diesen Regeln finden Sie in den folgenden Abschnitten. 
+Die Regeln für CLS-Kompatibilität werden in der folgenden Tabelle aufgeführt. Der Text der Regeln wird in vollem Wortlaut dem [ECMA 335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) entnommen. Copyright 2012 durch Ecma-International. Ausführlichere Informationen zu diesen Regeln finden Sie in den folgenden Abschnitten. 
 
 Kategorie | Siehe | Regel | Regelzahl
 -------- | --- | ---- | -----------
@@ -316,7 +316,7 @@ Alle in den Membersignaturen angezeigten Typen, einschließlich des Rückgabetyp
 Das [allgemeine Typsystem](common-type-system.md) von .NET enthält verschiedene integrierte Datentypen, die direkt von der Common Language Runtime unterstützt werden und insbesondere in den Metadaten einer Assembly codiert werden. Von diesen systeminternen Typen sind die in der folgenden Tabelle aufgeführten Typen CLS-kompatibel. 
 
 
-CLS-kompatibler Typ | Beschreibung 
+CLS-kompatibler Typ | Beschreibung
 ------------------ | -----------
 [Byte](xref:System.Byte) | Ganze 8-Bit-Zahl ohne Vorzeichen 
 [Int16](xref:System.Int16) | Ganze 16-Bit-Zahl mit Vorzeichen 
@@ -333,7 +333,7 @@ CLS-kompatibler Typ | Beschreibung
 Die in der folgenden Tabelle aufgeführten systeminternen Typen sind nicht CLS-kompatibel.
 
 
-Nicht kompatibler Typ | Beschreibung  | CLS-kompatible Alternative
+Nicht kompatibler Typ | Beschreibung | CLS-kompatible Alternative
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | Ganzzahliger 8-Bit-Datentyp mit Vorzeichen | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | 16-Bit-Ganzzahl ohne Vorzeichen | [Int32](xref:System.Int32)
@@ -2058,7 +2058,7 @@ Bei Konstruktoren in den CLS-kompatiblen Klassen und Strukturen müssen die folg
 
 Eigenschaften in den CLS-kompatiblen Typen müssen die folgenden Regeln beachten:
 
-* Eine Eigenschaft muss über einen Setter, einen Getter oder beides verfügen. In einer Assembly werden diese als spezielle Methoden implementiert. Das bedeutet, dass sie als separate Methoden (der Getter unter dem Namen `get`\_*propertyname* und der Setter unter dem Namen `set*\_*propertyname*) marked as `SpecialName`) in den Metadaten der Assembly angezeigt werden. Die C#-Compiler erzwingt diese Regel automatisch, ohne das [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attribut anzuwenden. 
+* Eine Eigenschaft muss über einen Setter, einen Getter oder beides verfügen. In einer Assembly werden diese als spezielle Methoden implementiert, das bedeutet, dass sie als separate Methoden (der Getter hat den Namen `get`\_*propertyname* und der Setter den Namen `set`\_*propertyname*) erscheinen, die als `SpecialName` gekennzeichnet in den Metadaten der Assembly angezeigt werden. Die C#-Compiler erzwingt diese Regel automatisch, ohne das <xref:System.CLSCompliantAttribute>-Attribut anzuwenden. 
 
 * Ein Typ der Eigenschaft entspricht dem Rückgabetyp der Getter-Methode der Eigenschaft und dem letzten Argument der Setter-Methode. Diese Typen müssen CLS-kompatibel sein, und Argumente können der Eigenschaft nicht mithilfe eines Verweises zugewiesen werden (das heißt, es können keine verwalteten Zeiger sein). 
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cedabbfff10b89f9755b14b963fd1d1a143cb0f0
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: f44bf779060a2f9ff2de96ccad5f397a9cdd33c7
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204885"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836304"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Sprachelemente für reguläre Ausdrücke – Kurzübersicht
 <a name="top"></a> Reguläre Ausdrücke sind Muster, für die das Modul für reguläre Ausdrücke eine Entsprechung im Eingabetext sucht. Muster können aus einem oder mehr Zeichenliteralen, Operatoren oder Konstrukten bestehen.  Eine kurze Einführung finden Sie unter [Reguläre Ausdrücke von .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -50,21 +50,21 @@ ms.locfileid: "55204885"
   
 |Escapezeichen|Beschreibung |Muster|Übereinstimmungen|  
 |-----------------------|-----------------|-------------|-------------|  
-|`\a`|Entspricht einem Klingelzeichen (Warnsignal) \u0007.|`\a`|"\u0007" in "Fehler!" + '\u0007'|  
-|`\b`|Entspricht in einer Zeichenklasse einem Rücktastenzeichen \u0008.|`[\b]{3,}`|"\b\b\b\b" in "\b\b\b\b"|  
-|`\t`|Entspricht einem Tabstoppzeichen \u0009.|`(\w+)\t`|"Element1\t", "Element2\t" in "Element1\tElement2\t"|  
-|`\r`|Entspricht einem Wagenrücklaufzeichen \u000D. (`\r` entspricht nicht dem Zeilenumbruchzeichen `\n`.)|`\r\n(\w+)`|"\r\nDies" in "\r\nDies sind\nzwei Zeilen."|  
-|`\v`|Entspricht einem vertikalen Tabstoppzeichen \u000B.|`[\v]{2,}`|"\v\v\v" in "\v\v\v"|  
-|`\f`|Entspricht einem Seitenvorschubzeichen \u000C.|`[\f]{2,}`|"\f\f\f" in "\f\f\f"|  
-|`\n`|Entspricht einer neuen Zeile \u000A.|`\r\n(\w+)`|"\r\nDies" in "\r\nDies sind\nzwei Zeilen."|  
-|`\e`|Entspricht einem Escapezeichen \u001B.|`\e`|"\x001B" in "\x001B"|  
-|`\` *nnn*|Verwendet die oktale Darstellung, um ein Zeichen anzugeben (*nnn* besteht aus zwei oder drei Ziffern).|`\w\040\w`|"a b", "c d" in "a bc d"|  
-|`\x` *nn*|Verwendet die hexadezimale Darstellung, um ein Zeichen anzugeben (*nn* besteht genau aus zwei Ziffern).|`\w\x20\w`|"a b", "c d" in "a bc d"|  
-|`\c` *X*<br /><br /> `\c` *x*|Entspricht dem durch *X* oder *x*angegebenen ASCII-Steuerzeichen, wobei *X* oder *x* der Buchstabe des Steuerzeichens ist.|`\cC`|"\x0003" in "\x0003" (Strg-C)|  
-|`\u` *nnnn*|Entspricht einem Unicode-Zeichen in hexadezimaler Darstellung (genau vier Stellen, dargestellt durch *nnnn*).|`\w\u0020\w`|"a b", "c d" in "a bc d"|  
-|`\`|Entspricht dem angegebenen Zeichen, wenn darauf ein Zeichen folgt, das in dieser und anderen Tabellen in diesem Thema nicht als Escapezeichen erkannt wird. Beispielsweise ist `\*` identisch mit `\x2A`und `\.` entspricht `\x2E`. Hierdurch kann die Engine für reguläre Ausdrücke Sprachelemente (z.B. \* oder ?) und Zeichenliterale (dargestellt durch `\*` oder `\?`) unterscheiden.|`\d+[\+-x\*]\d+`|„2+2“ und „3\*9“ in „(2+2) \* 3\*9“|  
+|`\a`|Entspricht einem Klingelzeichen (Warnsignal) \u0007.|`\a`|`"\u0007"` in `"Error!" + '\u0007'`|  
+|`\b`|Entspricht in einer Zeichenklasse einem Rücktastenzeichen \u0008.|`[\b]{3,}`|`"\b\b\b\b"` in `"\b\b\b\b"`|  
+|`\t`|Entspricht einem Tabstoppzeichen \u0009.|`(\w+)\t`|`"item1\t"`, `"item2\t"` in `"item1\titem2\t"`|  
+|`\r`|Entspricht einem Wagenrücklaufzeichen \u000D. (`\r` entspricht nicht dem Zeilenumbruchzeichen `\n`.)|`\r\n(\w+)`|`"\r\nThese"` in `"\r\nThese are\ntwo lines."`|  
+|`\v`|Entspricht einem vertikalen Tabstoppzeichen \u000B.|`[\v]{2,}`|`"\v\v\v"` in `"\v\v\v"`|  
+|`\f`|Entspricht einem Seitenvorschubzeichen \u000C.|`[\f]{2,}`|`"\f\f\f"` in `"\f\f\f"`|  
+|`\n`|Entspricht einer neuen Zeile \u000A.|`\r\n(\w+)`|`"\r\nThese"` in `"\r\nThese are\ntwo lines."`|  
+|`\e`|Entspricht einem Escapezeichen \u001B.|`\e`|`"\x001B"` in `"\x001B"`|  
+|`\` *nnn*|Verwendet die oktale Darstellung, um ein Zeichen anzugeben (*nnn* besteht aus zwei oder drei Ziffern).|`\w\040\w`|`"a b"`, `"c d"` in `"a bc d"`|  
+|`\x` *nn*|Verwendet die hexadezimale Darstellung, um ein Zeichen anzugeben (*nn* besteht genau aus zwei Ziffern).|`\w\x20\w`|`"a b"`, `"c d"` in `"a bc d"`|  
+|`\c` *X*<br /><br /> `\c` *x*|Entspricht dem durch *X* oder *x*angegebenen ASCII-Steuerzeichen, wobei *X* oder *x* der Buchstabe des Steuerzeichens ist.|`\cC`|`"\x0003"` in `"\x0003"` (STRG-C)|  
+|`\u` *nnnn*|Entspricht einem Unicode-Zeichen in hexadezimaler Darstellung (genau vier Stellen, dargestellt durch *nnnn*).|`\w\u0020\w`|`"a b"`, `"c d"` in `"a bc d"`|  
+|`\`|Entspricht dem angegebenen Zeichen, wenn darauf ein Zeichen folgt, das in dieser und anderen Tabellen in diesem Thema nicht als Escapezeichen erkannt wird. Beispielsweise ist `\*` identisch mit `\x2A`und `\.` entspricht `\x2E`. Hierdurch kann die Engine für reguläre Ausdrücke Sprachelemente (z.B. \* oder ?) und Zeichenliterale (dargestellt durch `\*` oder `\?`) unterscheiden.|`\d+[\+-x\*]\d+`|`"2+2"` und `"3*9"` in `"(2+2) * 3*9"`|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="character_classes"></a>   
 ## <a name="character-classes"></a>Zeichenklassen  
@@ -72,36 +72,36 @@ ms.locfileid: "55204885"
   
 |Zeichenklasse|Beschreibung |Muster|Übereinstimmungen|  
 |---------------------|-----------------|-------------|-------------|  
-|`[` *character_group* `]`|Entspricht einem beliebigen einzelnen Zeichen in *character_group*. Bei der Entsprechung wird standardmäßig die Groß- und Kleinschreibung berücksichtigt.|`[ae]`|"a" in "wage"<br /><br /> "a", "e" in "klasse"|  
-|`[^` *character_group* `]`|Negation: Entspricht jedem beliebigen einzelnen Zeichen, das nicht in *character_group* enthalten ist. Standardmäßig wird bei Zeichen in *character_group* die Groß-/Kleinschreibung beachtet.|`[^aei]`|"r", "g", "n" in "ringen"|  
-|`[` *first* `-` *last* `]`|Zeichenbereich: Entspricht jedem beliebigen einzelnen Zeichen im Bereich von *first* bis *last*.|`[A-Z]`|"A", "B" in "AB123"|  
-|`.`|Platzhalterzeichen: Entspricht jedem beliebigen einzelnen Zeichen außer \n.<br /><br /> Damit es einem Punkt als Literalzeichen entspricht ("." oder oder `\u002E`, muss ihm ein Escapezeichen (`\.`) vorangestellt werden.|`a.e`|"ade" in "gerade"<br /><br /> "ase" in "klasse"|  
-|`\p{` *Name* `}`|Entspricht jedem beliebigen Zeichen, das sich in der allgemeinen Unicode-Kategorie oder einem von *name*angegebenen benannten Block befindet.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"S", "M" in "Staatliche Museen"<br /><br /> "Д", "Ж" in "ДЖem"|  
-|`\P{` *Name* `}`|Entspricht jedem beliebigen Zeichen, das sich nicht in der allgemeinen Unicode-Kategorie oder einem von *name*angegebenen benannten Block befindet.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"a", "d", "t" in "Stadt"<br /><br /> "e", "m" in "ДЖem"|  
-|`\w`|Entspricht einem beliebigen Wortzeichen.|`\w`|"I", "D", "A", "1", "3" in "ID A1.3"|  
-|`\W`|Entspricht einem beliebigen Nichtwortzeichen.|`\W`|" ", "." in "ID A1.3"|  
-|`\s`|Entspricht einem beliebigen Leerraumzeichen.|`\w\s`|"D " in "ID A1.3"|  
-|`\S`|Entspricht einem beliebigen Nicht-Leerraumzeichen.|`\s\S`|" _" in "int \__ctr"|  
-|`\d`|Entspricht einer beliebigen Dezimalziffer.|`\d`|"4" in "4 = IV"|  
-|`\D`|Entspricht einem beliebigen Zeichen, das keine Dezimalziffer ist.|`\D`|" ", "=", " ", "I", "V" in "4 = IV"|  
+|`[` *character_group* `]`|Entspricht einem beliebigen einzelnen Zeichen in *character_group*. Bei der Entsprechung wird standardmäßig die Groß- und Kleinschreibung berücksichtigt.|`[ae]`|`"a"` in `"gray"`<br /><br /> `"a"`, `"e"` in `"lane"`|  
+|`[^` *character_group* `]`|Negation: Entspricht jedem beliebigen einzelnen Zeichen, das nicht in *character_group* enthalten ist. Standardmäßig wird bei Zeichen in *character_group* die Groß-/Kleinschreibung beachtet.|`[^aei]`|`"r"`, `"g"`, `"n"` in `"reign"`|  
+|`[` *first* `-` *last* `]`|Zeichenbereich: Entspricht jedem beliebigen einzelnen Zeichen im Bereich von *first* bis *last*.|`[A-Z]`|`"A"`, `"B"` in `"AB123"`|  
+|`.`|Platzhalterzeichen: Entspricht jedem beliebigen einzelnen Zeichen außer \n.<br /><br /> Damit es einem Punkt als Literalzeichen entspricht ("." oder oder `\u002E`, muss ihm ein Escapezeichen (`\.`) vorangestellt werden.|`a.e`|`"ave"` in `"nave"`<br /><br /> `"ate"` in `"water"`|  
+|`\p{` *Name* `}`|Entspricht jedem beliebigen Zeichen, das sich in der allgemeinen Unicode-Kategorie oder einem von *name*angegebenen benannten Block befindet.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|`"C"`, `"L"` in `"City Lights"`<br /><br /> `"Д"`, `"Ж"` in `"ДЖem"`|  
+|`\P{` *Name* `}`|Entspricht jedem beliebigen Zeichen, das sich nicht in der allgemeinen Unicode-Kategorie oder einem von *name*angegebenen benannten Block befindet.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|`"i"`, `"t"`, `"y"` in `"City"`<br /><br /> `"e"`, `"m"` in `"ДЖem"`|  
+|`\w`|Entspricht einem beliebigen Wortzeichen.|`\w`|`"I"`, `"D"`, `"A"`, `"1"`, `"3"` in `"ID A1.3"`|  
+|`\W`|Entspricht einem beliebigen Nichtwortzeichen.|`\W`|`" "`, `"."` in `"ID A1.3"`|  
+|`\s`|Entspricht einem beliebigen Leerraumzeichen.|`\w\s`|`"D "` in `"ID A1.3"`|  
+|`\S`|Entspricht einem beliebigen Nicht-Leerraumzeichen.|`\s\S`|`" _"` in `"int __ctr"`|  
+|`\d`|Entspricht einer beliebigen Dezimalziffer.|`\d`|`"4"` in `"4 = IV"`|  
+|`\D`|Entspricht einem beliebigen Zeichen, das keine Dezimalziffer ist.|`\D`|`" "`, `"="`, `" "`, `"I"`, `"V"` in `"4 = IV"`|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 ## <a name="anchors"></a>Anchor  
  Anchor oder atomare Assertionen mit einer Breite von Null bewirken, dass, in Abhängigkeit von der Position in der Zeichenfolge, eine Entsprechung gefunden oder nicht gefunden wird. Sie bewirken jedoch nicht, dass die Engine die Zeichenfolge durchläuft oder Zeichen verwendet. Die Metazeichen in der folgenden Tabelle sind Anchor. Weitere Informationen finden Sie unter [Anchor](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
 |Assertion|Beschreibung |Muster|Übereinstimmungen|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|Die Übereinstimmung muss standardmäßig zu Anfang der Zeichenfolge beginnen. Im Mehrzeilenmodus muss sie am Anfang der Zeile beginnen.|`^\d{3}`|"901" in "901-333-"|  
-|`$`|Die Übereinstimmung muss standardmäßig am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie am Ende der Zeile oder vor `\n` am Ende der Zeile erfolgen.|`-\d{3}$`|"-333" in "-901-333"|  
-|`\A`|Der Vergleich muss am Beginn der Zeichenfolge erfolgen.|`\A\d{3}`|"901" in "901-333-"|  
-|`\Z`|Der Vergleich muss am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge erfolgen.|`-\d{3}\Z`|"-333" in "-901-333"|  
-|`\z`|Der Vergleich muss am Ende der Zeichenfolge erfolgen.|`-\d{3}\z`|"-333" in "-901-333"|  
-|`\G`|Der Vergleich muss an dem Punkt erfolgen, an dem der vorherige Vergleich beendet wurde.|`\G\(\d\)`|"(1)", "(3)", "(5)" in "(1)(3)(5)[7](9\)"|  
-|`\b`|Der Vergleich muss an einer Begrenzung zwischen einem `\w` (alphanumerischen) und einem `\W` (nicht alphanumerischen) Zeichen erfolgen.|`\b\w+\s\w+\b`|"dem demnach", "dem dem" in "dem demnach dem dem"|  
-|`\B`|Der Vergleich darf nicht an einer `\b` -Begrenzung erfolgen.|`\Bend\w*\b`|"ends", "ender" in "end sendet endete sender"|  
+|`^`|Die Übereinstimmung muss standardmäßig zu Anfang der Zeichenfolge beginnen. Im Mehrzeilenmodus muss sie am Anfang der Zeile beginnen.|`^\d{3}`|`"901"` in `"901-333-"`|  
+|`$`|Die Übereinstimmung muss standardmäßig am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge stattfinden. Im Mehrzeilenmodus muss sie am Ende der Zeile oder vor `\n` am Ende der Zeile erfolgen.|`-\d{3}$`|`"-333"` in `"-901-333"`|  
+|`\A`|Der Vergleich muss am Beginn der Zeichenfolge erfolgen.|`\A\d{3}`|`"901"` in `"901-333-"`|  
+|`\Z`|Der Vergleich muss am Ende der Zeichenfolge oder vor `\n` am Ende der Zeichenfolge erfolgen.|`-\d{3}\Z`|`"-333"` in `"-901-333"`|  
+|`\z`|Der Vergleich muss am Ende der Zeichenfolge erfolgen.|`-\d{3}\z`|`"-333"` in `"-901-333"`|  
+|`\G`|Der Vergleich muss an dem Punkt erfolgen, an dem der vorherige Vergleich beendet wurde.|`\G\(\d\)`|`"(1)"`, `"(3)"`, `"(5)"` in `"(1)(3)(5)[7](9)"`|  
+|`\b`|Der Vergleich muss an einer Begrenzung zwischen einem `\w` (alphanumerischen) und einem `\W` (nicht alphanumerischen) Zeichen erfolgen.|`\b\w+\s\w+\b`|`"them theme"`, `"them them"` in `"them theme them them"`|  
+|`\B`|Der Vergleich darf nicht an einer `\b` -Begrenzung erfolgen.|`\Bend\w*\b`|`"ends"`, `"ender"` in `"end sends endure lender"`|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Gruppierungskonstrukte  
@@ -109,18 +109,18 @@ ms.locfileid: "55204885"
   
 |Gruppierungskonstrukt|Beschreibung |Muster|Übereinstimmungen|  
 |------------------------|-----------------|-------------|-------------|  
-|`(` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck auf und weist diesem eine einsbasierte Ordinalzahl zu.|`(\w)\1`|"aa" in "paarweise"|  
-|`(?<` *Name* `>` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck in einer benannten Gruppe auf.|`(?<double>\w)\k<double>`|"aa" in "paarweise"|  
-|`(?<` *name1* `-` *name2* `>` *Teilausdruck* `)`|Definiert eine Ausgleichsgruppendefinition. Weitere Informationen finden Sie im Abschnitt „Ausgleichen von Gruppendefinitionen“ in [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" in "3+2^((1-3)\*(3-1))"|  
-|`(?:` *Teilausdruck* `)`|Definiert eine Nicht-Erfassungsgruppe.|`Write(?:Line)?`|"WriteLine" in "Console.WriteLine()"<br /><br /> "Write" in "Console.Write(value)"|  
-|`(?imnsx-imnsx:` *Teilausdruck* `)`|Aktiviert oder deaktiviert die angegebenen Optionen in *subexpression*. Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" in "A12xl A12XL a12xl"|  
-|`(?=` *Teilausdruck* `)`|Positive Lookaheadassertion mit einer Breite von Null.|`\w+(?=\.)`|"is", "ren" und "weg" in "Er isst. Der Hund rennt. Die Sonne ist weg."|  
-|`(?!` *Teilausdruck* `)`|Negative Lookaheadassertion mit einer Breite von Null.|`\b(?!un)\w+\b`|"sicher", "mischt" in "unsicher sicher unter mischt"|  
-|`(?<=` *Teilausdruck* `)`|Positive Lookbehindassertion mit einer Breite von Null.|`(?<=19)\d{2}\b`|"99", "50", "05" in "1851 1999 1950 1905 2003"|  
-|`(?<!` *Teilausdruck* `)`|Negative Lookbehindassertion mit einer Breite von Null.|`(?<!19)\d{2}\b`|"51", "03" in "1851 1999 1950 1905 2003"|  
-|`(?>` *Teilausdruck* `)`|Nicht zurückverfolgender ("gieriger") Teilausdruck.|`[13579](?>A+B+)`|"1ABB", "3ABB", and "5AB" in "1ABB 3ABBC 5AB 5AC"|  
+|`(` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck auf und weist diesem eine einsbasierte Ordinalzahl zu.|`(\w)\1`|`"ee"` in `"deep"`|  
+|`(?<` *Name* `>` *Teilausdruck* `)`|Zeichnet den übereinstimmenden Teilausdruck in einer benannten Gruppe auf.|`(?<double>\w)\k<double>`|`"ee"` in `"deep"`|  
+|`(?<` *name1* `-` *name2* `>` *Teilausdruck* `)`|Definiert eine Ausgleichsgruppendefinition. Weitere Informationen finden Sie im Abschnitt „Ausgleichen von Gruppendefinitionen“ in [Gruppierungskonstrukte](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"((1-3)*(3-1))"` in `"3+2^((1-3)*(3-1))"`|  
+|`(?:` *Teilausdruck* `)`|Definiert eine Nicht-Erfassungsgruppe.|`Write(?:Line)?`|`"WriteLine"` in `"Console.WriteLine()"`<br /><br /> `"Write"` in `"Console.Write(value)"`|  
+|`(?imnsx-imnsx:` *Teilausdruck* `)`|Aktiviert oder deaktiviert die angegebenen Optionen in *subexpression*. Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"`, `"A12XL"` in `"A12xl A12XL a12xl"`|  
+|`(?=` *Teilausdruck* `)`|Positive Lookaheadassertion mit einer Breite von Null.|`\w+(?=\.)`|`"is"`, `"ran"` und `"out"` in `"He is. The dog ran. The sun is out."`|  
+|`(?!` *Teilausdruck* `)`|Negative Lookaheadassertion mit einer Breite von Null.|`\b(?!un)\w+\b`|`"sure"`, `"used"` in `"unsure sure unity used"`|  
+|`(?<=` *Teilausdruck* `)`|Positive Lookbehindassertion mit einer Breite von Null.|`(?<=19)\d{2}\b`|`"99"`, `"50"`, `"05"` in `"1851 1999 1950 1905 2003"`|  
+|`(?<!` *Teilausdruck* `)`|Negative Lookbehindassertion mit einer Breite von Null.|`(?<!19)\d{2}\b`|`"51"`, `"03"` in `"1851 1999 1950 1905 2003"`|  
+|`(?>` *Teilausdruck* `)`|Nicht zurückverfolgender ("gieriger") Teilausdruck.|`[13579](?>A+B+)`|`"1ABB"`, `"3ABB"` und `"5AB"` in `"1ABB 3ABBC 5AB 5AC"`|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Quantifizierer  
@@ -128,20 +128,20 @@ ms.locfileid: "55204885"
   
 |Quantifizierer|Beschreibung |Muster|Übereinstimmungen|  
 |----------------|-----------------|-------------|-------------|  
-|`*`|Entspricht dem vorangehenden Element nicht oder mehrmals.|`\d*\.\d`|".0", "19.9", "219.9"|  
-|`+`|Entspricht dem vorangehenden Element einmal oder mehrmals.|`"be+"`|"bei" in beim"", "be" in "bei"|  
-|`?`|Entspricht dem vorangehenden Element nicht oder einmal.|`"rai?n"`|"ran", "rain"|  
-|`{` *n* `}`|Entspricht dem vorangehenden Element genau *n* -mal.|`",\d{3}"`|",043" in "1,043.6", ",876", ",543" und ",210" in "9,876,543,210"|  
-|`{` *n* `,}`|Entspricht dem vorangehenden Element mindestens *n* -mal.|`"\d{2,}"`|"166", "29", "1930"|  
-|`{` *n* `,` *m* `}`|Entspricht dem vorangehenden Element mindestens *n* -, höchstens jedoch *m* -mal.|`"\d{3,5}"`|"166", "17668"<br /><br /> "19302" in "193024"|  
-|`*?`|Entspricht dem vorangehenden Element nicht oder mehrmals, jedoch so wenige Male wie möglich.|`\d*?\.\d`|".0", "19.9", "219.9"|  
-|`+?`|Entspricht dem vorangehenden Element ein- oder mehrmals, jedoch so wenige Male wie möglich.|`"be+?"`|"be" in "beim", "be" in "bei"|  
-|`??`|Entspricht dem vorangehenden Element nicht oder einmal, jedoch so wenige Male wie möglich.|`"rai??n"`|"ran", "rain"|  
-|`{` *n* `}?`|Entspricht dem vorangehenden Element genau *n* -mal.|`",\d{3}?"`|",043" in "1,043.6", ",876", ",543" und ",210" in "9,876,543,210"|  
-|`{` *n* `,}?`|Entspricht dem vorangehenden Element mindestens *n* -mal, jedoch so wenige Male wie möglich.|`"\d{2,}?"`|"166", "29", "1930"|  
-|`{` *n* `,` *m* `}?`|Entspricht dem vorangehenden Element zwischen *n* - und *m* -mal, jedoch so wenige Male wie möglich.|`"\d{3,5}?"`|"166", "17668"<br /><br /> "193", "024" in "193024"|  
+|`*`|Entspricht dem vorangehenden Element nicht oder mehrmals.|`\d*\.\d`|`".0"`, `"19.9"`, `"219.9"`|  
+|`+`|Entspricht dem vorangehenden Element einmal oder mehrmals.|`"be+"`|`"bee"` in `"been"`, `"be"` in `"bent"`|  
+|`?`|Entspricht dem vorangehenden Element nicht oder einmal.|`"rai?n"`|`"ran"`, `"rain"`|  
+|`{` *n* `}`|Entspricht dem vorangehenden Element genau *n* -mal.|`",\d{3}"`|`",043"` in `"1,043.6"`, `",876"`, `",543"` und `",210"` in `"9,876,543,210"`|  
+|`{` *n* `,}`|Entspricht dem vorangehenden Element mindestens *n* -mal.|`"\d{2,}"`|`"166"`, `"29"`, `"1930"`|  
+|`{` *n* `,` *m* `}`|Entspricht dem vorangehenden Element mindestens *n* -, höchstens jedoch *m* -mal.|`"\d{3,5}"`|`"166"`, `"17668"`<br /><br /> `"19302"` in `"193024"`|  
+|`*?`|Entspricht dem vorangehenden Element nicht oder mehrmals, jedoch so wenige Male wie möglich.|`\d*?\.\d`|`".0"`, `"19.9"`, `"219.9"`|  
+|`+?`|Entspricht dem vorangehenden Element ein- oder mehrmals, jedoch so wenige Male wie möglich.|`"be+?"`|`"be"` in `"been"`, `"be"` in `"bent"`|  
+|`??`|Entspricht dem vorangehenden Element nicht oder einmal, jedoch so wenige Male wie möglich.|`"rai??n"`|`"ran"`, `"rain"`|  
+|`{` *n* `}?`|Entspricht dem vorangehenden Element genau *n* -mal.|`",\d{3}?"`|`",043"` in `"1,043.6"`, `",876"`, `",543"` und `",210"` in `"9,876,543,210"`|  
+|`{` *n* `,}?`|Entspricht dem vorangehenden Element mindestens *n* -mal, jedoch so wenige Male wie möglich.|`"\d{2,}?"`|`"166"`, `"29"`, `"1930"`|  
+|`{` *n* `,` *m* `}?`|Entspricht dem vorangehenden Element zwischen *n* - und *m* -mal, jedoch so wenige Male wie möglich.|`"\d{3,5}?"`|`"166"`, `"17668"`<br /><br /> `"193"`, `"024"` in `"193024"`|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>Rückverweiskonstrukte  
@@ -149,10 +149,10 @@ ms.locfileid: "55204885"
   
 |Rückverweiskonstrukt|Beschreibung |Muster|Übereinstimmungen|  
 |-----------------------------|-----------------|-------------|-------------|  
-|`\` *number*|Rückverweis. Entspricht dem Wert eines nummerierten Teilausdrucks.|`(\w)\1`|"ee" in "beseelt"|  
-|`\k<` *Name* `>`|Benannter Rückverweis. Entspricht dem Wert eines benannten Ausdrucks.|`(?<char>\w)\k<char>`|"ee" in "beseelt"|  
+|`\` *number*|Rückverweis. Entspricht dem Wert eines nummerierten Teilausdrucks.|`(\w)\1`|`"ee"` in `"seek"`|  
+|`\k<` *Name* `>`|Benannter Rückverweis. Entspricht dem Wert eines benannten Ausdrucks.|`(?<char>\w)\k<char>`|`"ee"` in `"seek"`|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Alternierungskonstrukte  
@@ -160,11 +160,11 @@ ms.locfileid: "55204885"
   
 |Alternierungskonstrukt|Beschreibung |Muster|Übereinstimmungen|  
 |---------------------------|-----------------|-------------|-------------|  
-|<code>&#124;</code>|Entspricht jedem beliebigen durch einen senkrechten Strich (&#124;) getrennten Element.|<code>th(e&#124;is&#124;at)</code>|"the", "this" in "This is the day. "|  
-|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *yes* , wenn das von *expression* angegebene Muster für reguläre Ausdrücke übereinstimmt. Andernfalls entspricht es dem optionalen *no* . *expression* wird als Assertion mit einer Breite von Null interpretiert.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10", "910" in "A10 C103 910"|  
-|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *yes* , wenn *name*, eine benannte oder nummerierte Erfassungsgruppe, eine Übereinstimmung aufweist. Andernfalls entspricht es dem optionalen *no*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|Hund.jpg, "Yiska spielt.jpg" in "Hund.jpg "Yiska spielt.jpg""|  
+|<code>&#124;</code>|Entspricht jedem beliebigen durch einen senkrechten Strich (<code>&#124;</code>) getrennten Element.|<code>th(e&#124;is&#124;at)</code>|`"the"`, `"this"` in `"this is the day."`|  
+|`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *yes* , wenn das von *expression* angegebene Muster für reguläre Ausdrücke übereinstimmt. Andernfalls entspricht es dem optionalen *no* . *expression* wird als Assertion mit einer Breite von Null interpretiert.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|`"A10"`, `"910"` in `"A10 C103 910"`|  
+|`(?(` *name* `)` *yes* <code>&#124;</code> *no* `)`|Entspricht *yes* , wenn *name*, eine benannte oder nummerierte Erfassungsgruppe, eine Übereinstimmung aufweist. Andernfalls entspricht es dem optionalen *no*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|`"Dogs.jpg "`, `"\"Yiska playing.jpg\""` in `"Dogs.jpg \"Yiska playing.jpg\""`|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="substitutions"></a>   
 ## <a name="substitutions"></a>Ersetzungen  
@@ -172,16 +172,16 @@ ms.locfileid: "55204885"
   
 |Zeichen|Beschreibung |Muster|Ersetzungsmuster|Eingabezeichenfolge|Ergebniszeichenfolge|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
-|`$` *number*|Ersetzt die untergeordnete Zeichenfolge, die der *number*einer Gruppe entspricht.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
-|`${` *Name* `}`|Ersetzt die untergeordnete Zeichenfolge, die dem genannten *name*der Gruppe entspricht.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
-|`$$`|Ersetzt ein "$"-Literal.|`\b(\d+)\s?USD`|`$$$1`|"103 USD"|"$103"|  
-|`$&`|Ersetzt eine Kopie der gesamten Entsprechung.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|``$` ``|Ersetzt den gesamten Text der Eingabezeichenfolge vor der Entsprechung.|`B+`|``$` ``|"AABBCC"|"AAAACC"|  
-|`$'`|Ersetzt den gesamten Text der Eingabezeichenfolge nach der Entsprechung.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
-|`$+`|Ersetzt die zuletzt erfasste Gruppe.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
-|`$_`|Ersetzt die gesamte Eingabezeichenfolge.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
+|`$` *number*|Ersetzt die untergeordnete Zeichenfolge, die der *number*einer Gruppe entspricht.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|  
+|`${` *Name* `}`|Ersetzt die untergeordnete Zeichenfolge, die dem genannten *name*der Gruppe entspricht.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|  
+|`$$`|Ersetzt ein "$"-Literal.|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|  
+|`$&`|Ersetzt eine Kopie der gesamten Entsprechung.|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|  
+|``$` ``|Ersetzt den gesamten Text der Eingabezeichenfolge vor der Entsprechung.|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|  
+|`$'`|Ersetzt den gesamten Text der Eingabezeichenfolge nach der Entsprechung.|`B+`|`$'`|`"AABBCC"`|`"AACCCC"`|  
+|`$+`|Ersetzt die zuletzt erfasste Gruppe.|`B+(C+)`|`$+`|`"AABBCCDD"`|`"AACCDD"`|  
+|`$_`|Ersetzt die gesamte Eingabezeichenfolge.|`B+`|`$_`|`"AABBCC"`|`"AAAABBCCCC"`|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="options"></a>   
 ## <a name="regular-expression-options"></a>Optionen für reguläre Ausdrücke  
@@ -197,13 +197,13 @@ ms.locfileid: "55204885"
   
 |Option|Beschreibung |Muster|Übereinstimmungen|  
 |------------|-----------------|-------------|-------------|  
-|`i`|Groß-/Kleinschreibung bei der Suche ignorieren|`\b(?i)a(?-i)a\w+\b`|"Aale" und "Aasblumen" in "Aale essen Aasblumen roh"|  
+|`i`|Groß-/Kleinschreibung bei der Suche ignorieren|`\b(?i)a(?-i)a\w+\b`|`"aardvark"`, `"aaaAuto"` in `"aardvark AAAuto aaaAuto Adam breakfast"`|  
 |`m`|Mehrzeilenmodus verwenden. `^` und `$` entsprechen dem Anfang und Ende einer Zeile anstatt dem Anfang und Ende einer Zeichenfolge.|Ein Beispiel finden Sie im Abschnitt zum Mehrzeilenmodus in [Optionen für reguläre Ausdrücke](regular-expression-options.md).||  
 |`n`|Unbenannte Gruppen nicht erfassen|Ein Beispiel finden Sie im Abschnitt zu ausschließlich expliziten Erfassungen in [Optionen für reguläre Ausdrücke](regular-expression-options.md).||  
 |`s`|Einzeilenmodus verwenden|Ein Beispiel finden Sie im Abschnitt zum Einzeilenmodus in [Optionen für reguläre Ausdrücke](regular-expression-options.md).||  
-|`x`|Leerraum ohne Escapezeichen im Muster eines regulären Ausdrucks ignorieren|`\b(?x) \d+ \s \w+`|"1 Erdferkel", "2 Katzen" in "1 Erdferkel 2 Katzen IV Zenturionen"|  
+|`x`|Leerraum ohne Escapezeichen im Muster eines regulären Ausdrucks ignorieren|`\b(?x) \d+ \s \w+`|`"1 aardvark"`, `"2 cats"` in `"1 aardvark 2 cats IV centurions"`|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>Verschiedene Konstrukte  
@@ -211,7 +211,7 @@ ms.locfileid: "55204885"
   
 |Konstrukt|Definition|Beispiel|  
 |---------------|----------------|-------------|  
-|`(?imnsx-imnsx)`|Aktiviert oder deaktiviert Optionen wie die Groß-/Kleinschreibung mitten in einem Muster. Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).|`\bA(?i)b\w+\b` entspricht "ABA", "Able" in "ABA Able Act"|  
+|`(?imnsx-imnsx)`|Aktiviert oder deaktiviert Optionen wie die Groß-/Kleinschreibung mitten in einem Muster. Weitere Informationen finden Sie unter [Optionen für reguläre Ausdrücke](regular-expression-options.md).|`\bA(?i)b\w+\b` entspricht `"ABA"`, `"Able"` in `"ABA Able Act"`|  
 |`(?#` *comment* `)`|Inlinekommentar. Der Kommentar endet bei der ersten schließenden Klammer.|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [bis Zeilenende]|X‑Modus-Kommentar. Der Kommentar beginnt bei einem `#` ohne Escapezeichen und reicht bis zum Ende der Zeile.|`(?x)\bA\w+\b#Matches words starting with A`|  
   

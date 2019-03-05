@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 26d763884cc392a08e8cef7f5321d23f1c52a7fa
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 1554c3e2b13dd0ea0d64ccd7e7caee0a1e0dd3f9
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903511"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835564"
 ---
 # <a name="process-xml-data-using-linq-to-xml"></a>Verarbeitung von XML-Daten mit LINQ to XML
 LINQ to XML ist das neue Modell in .NET Framework 3.5 zum Verarbeiten von XML-Daten. Mit LINQ to XML können Entwickler alles tun, was man mit XML-Daten tun kann: abfragen, ändern, erstellen, speichern und XML-Dokumente serialisieren. Die wirklichen Vorteile liegen in den Abfrage- und Erstellungsfunktionen.  
@@ -19,11 +19,13 @@ LINQ to XML ist das neue Modell in .NET Framework 3.5 zum Verarbeiten von XML-D
   
  LINQ to XML nutzt die Language Integrated Query (LINQ)-Technologie in .NET Framework 3.5. LINQ erweitert die Sprachsyntax von C# und Visual Basic, um leistungsfähige Abfragefunktionen bereitzustellen, für die es praktisch keine Datenspeichergrenzen gibt.  
   
- Eine ausführliche Erörterung der Verwendung von LINQ to XML finden Sie unter [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13). Eine Übersicht über das LINQ-Framework finden Sie unter [Language Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md) oder [Language Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
+ Eine ausführliche Erörterung der Verwendung von LINQ to XML finden Sie unter [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) und [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md). Eine Übersicht über das LINQ-Framework finden Sie unter [Language Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md) oder [Language Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Linq>
 - <xref:System.Linq>
-- [LINQ to XML im Vergleich zu DOM](https://msdn.microsoft.com/library/19b5ed02-feb2-455a-8897-f7f0fd76aca3)
-- [LINQ to XML im Vergleich zu anderen XML-Technologien](https://msdn.microsoft.com/library/7ba1eecf-f09a-42de-bc80-22ca5b2e42d3)
+- [LINQ to XML im Vergleich zu DOM (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML im Vergleich zu DOM (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML im Vergleich zu anderen XML-Technologien (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
+- [LINQ to XML im Vergleich zu anderen XML-Technologien (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

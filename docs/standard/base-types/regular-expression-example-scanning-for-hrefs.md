@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel für reguläre Ausdrücke: Suchen nach HREFs'
+title: 'Beispiel für regulären Ausdruck: Suchen nach HREFs'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4e743f32637a7e15b4b017bbe30aa02ad8388fbe
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582839"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56975965"
 ---
-# <a name="regular-expression-example-scanning-for-hrefs"></a>Beispiel für reguläre Ausdrücke: Suchen nach HREFs
+# <a name="regular-expression-example-scanning-for-hrefs"></a>Beispiel für regulären Ausdruck: Suchen nach HREFs
 Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden alle href="..."-Werte und ihre Positionen in der Zeichenfolge angezeigt.  
   
 ## <a name="the-regex-object"></a>Das Regex-Objekt  
@@ -38,13 +38,13 @@ Im folgenden Beispiel wird eine Eingabezeichenfolge durchsucht, und es werden al
   
  Das Muster für reguläre Ausdrücke `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` wird entsprechend der folgenden Tabelle interpretiert:  
   
-|Muster|Beschreibung |  
+|Muster|Beschreibung|  
 |-------------|-----------------|  
 |`href`|Sucht nach der Literalzeichenfolge „href“. Die Groß- und Kleinschreibung wird bei der Übereinstimmung nicht berücksichtigt.|  
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|  
 |`=`|Sucht nach dem Gleichheitszeichen.|  
 |`\s*`|Sucht nach 0 (null) oder mehr Leerzeichen.|  
-|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|Sucht nach einer der folgenden Zeichenkombinationen, ohne das Ergebnis einer erfassten Gruppe zuzuweisen:<br /> <ul><li><p>Ein Anführungszeichen oder Apostroph, gefolgt von null oder mehr Vorkommen eines beliebigen anderen Zeichens als einem Anführungszeichen oder Apostroph und einem Anführungszeichen oder einem Apostroph. Die Gruppe namens `1` ist in diesem Muster enthalten.</p></li><li><p>Ein oder mehrere Zeichen außer Leerzeichen. Die Gruppe namens `1` ist in diesem Muster enthalten.</p></li></ul>|  
+|`(?:\["'\](?<1>\[^"'\]*)["']|(?<1>\S+))`|Sucht nach einer der folgenden Zeichenkombinationen, ohne das Ergebnis einer erfassten Gruppe zuzuweisen:<br /> <ul><li><p>Ein Anführungszeichen oder Apostroph, gefolgt von null oder mehr Vorkommen eines beliebigen anderen Zeichens als einem Anführungszeichen oder Apostroph und einem Anführungszeichen oder einem Apostroph. Die Gruppe namens `1` ist in diesem Muster enthalten.</p></li><li><p>Ein oder mehrere Zeichen außer Leerzeichen. Die Gruppe namens `1` ist in diesem Muster enthalten.</p></li></ul>|  
 |`(?<1>[^"']*)`|Weist der Erfassungsgruppe namens `1` null oder mehr Vorkommen eines beliebigen Zeichens außer Anführungszeichen oder Apostroph zu.|  
 |`(?<1>\S+)`|Weist der Erfassungsgruppe namens `1` ein oder mehr Nicht-Leerzeichen zu.|  
   

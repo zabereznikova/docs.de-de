@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: a56b7ba047499842a9b76612df17d22c64491301
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827877"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56978331"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
@@ -172,7 +172,7 @@ Alternativ können Sie auch festlegen, dass die Anwendung Microservices aufruft,
 
 ### <a name="feature-organization"></a>Organisieren von Features
 
-Standardmäßig stellen ASP.NET Core-Anwendungen ihre eigene Ordnerstruktur her, die Controller, Ansichten und häufig auch ViewModels umfasst. Clientseitiger Code, der diese Strukturen auf Serverseite unterstützen soll, wird in der Regel separat im wwwroot-Ordner gespeichert. Es kann jedoch sein, dass bei größeren Anwendungen im Zusammenhang mit dieser Ordnerstruktur Probleme auftreten, da Sie häufig zwischen diesen Ordnern hin- und herwechseln müssen, wenn Sie an einem bestimmten Feature arbeiten. Je mehr Dateien und Unterordner in einem Ordner gespeichert werden, desto schwieriger wird dies, und desto mehr müssen Sie im Projektmappen-Explorer scrollen. Wenn Sie dieses Problem vermeiden möchten, können Sie Anwendungscode anstatt nach Dateityp nach _Feature_ ordnen. Diese Strukturierung wird häufig als Featureordner oder [Feature Slices](https://msdn.microsoft.com/en-us/magazine/mt763233.aspx) bezeichnet (siehe auch: [Vertical Slices (Vertikale Slices)](https://deviq.com/vertical-slices/)).
+Standardmäßig stellen ASP.NET Core-Anwendungen ihre eigene Ordnerstruktur her, die Controller, Ansichten und häufig auch ViewModels umfasst. Clientseitiger Code, der diese Strukturen auf Serverseite unterstützen soll, wird in der Regel separat im wwwroot-Ordner gespeichert. Es kann jedoch sein, dass bei größeren Anwendungen im Zusammenhang mit dieser Ordnerstruktur Probleme auftreten, da Sie häufig zwischen diesen Ordnern hin- und herwechseln müssen, wenn Sie an einem bestimmten Feature arbeiten. Je mehr Dateien und Unterordner in einem Ordner gespeichert werden, desto schwieriger wird dies, und desto mehr müssen Sie im Projektmappen-Explorer scrollen. Wenn Sie dieses Problem vermeiden möchten, können Sie Anwendungscode anstatt nach Dateityp nach _Feature_ ordnen. Diese Strukturierung wird häufig als Featureordner oder [Feature Slices](https://msdn.microsoft.com/magazine/mt763233.aspx) bezeichnet (siehe auch: [Vertical Slices (Vertikale Slices)](https://deviq.com/vertical-slices/)).
 
 In diesem Zusammenhang unterstützt ASP.NET Core MVC die Verwendung verschiedener Bereiche. Wenn Sie verschiedene Bereiche verwenden, können Sie verschiedene separate Ordner für Controller und Ansichten (sowie für jegliche zugeordneten Modelle) in jedem Bereichsordner erstellen. In Abbildung 7-1 wird eine Ordnerstruktur dargestellt, in der Bereiche verwendet werden.
 

@@ -4,12 +4,12 @@ description: '.NET Microservices: Architektur für .NET-Containeranwendungen | D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b95e256bf8df7207eed0895587c0945f37b08ecb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128952"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971779"
 ---
 # <a name="subscribing-to-events"></a>Abonnieren von Ereignissen
 
@@ -93,17 +93,17 @@ In komplexeren Microservices (wenn Sie z.B. CQRS-Ansätze verwenden) kann er in 
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Entwerfen von Unteilbarkeit und Stabilität beim Veröffentlichen im Ereignisbus
 
-Wenn Sie Integrationsereignisse über ein verteiltes Messaging-System wie Ihren Ereignisbus veröffentlichen, besteht das Problem des unteilbaren Aktualisierens der ursprünglichen Datenbank und Veröffentlichens eines Ereignisses (d.h. entweder beide Vorgänge schließen ab oder keiner von beiden). Im vereinfachten Codebeispiel von oben committet der Code Daten in der Datenbank, wenn der Produktpreis geändert wird, und veröffentlicht anschließend eine ProductPriceChangedIntegrationEvent-Meldung. Zunächst erscheint es möglicherweise so, als sei es notwendig, dass diese beiden Vorgänge unteilbar durchgeführt werden. Wenn Sie jedoch eine verteilte Transaktion mit der Datenbank und dem Meldungsbroker verwenden, wie auch in älteren Systemen wie [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx), wird dies nicht empfohlen. Die Gründe werden im [CAP-Theorem](https://www.quora.com/What-Is-CAP-Theorem-1) beschrieben.
+Wenn Sie Integrationsereignisse über ein verteiltes Messaging-System wie Ihren Ereignisbus veröffentlichen, besteht das Problem des unteilbaren Aktualisierens der ursprünglichen Datenbank und Veröffentlichens eines Ereignisses (d.h. entweder beide Vorgänge schließen ab oder keiner von beiden). Im vereinfachten Codebeispiel von oben committet der Code Daten in der Datenbank, wenn der Produktpreis geändert wird, und veröffentlicht anschließend eine ProductPriceChangedIntegrationEvent-Meldung. Zunächst erscheint es möglicherweise so, als sei es notwendig, dass diese beiden Vorgänge unteilbar durchgeführt werden. Wenn Sie jedoch eine verteilte Transaktion mit der Datenbank und dem Meldungsbroker verwenden, wie auch in älteren Systemen wie [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx), wird dies nicht empfohlen. Die Gründe werden im [CAP-Theorem](https://www.quora.com/What-Is-CAP-Theorem-1) beschrieben.
 
 Sie verwenden Microservices, um skalierbare und hochverfügbare Systeme zu erstellen. Einfach ausgedrückt besagt das CAP-Theorem, dass es nicht möglich ist, eine (verteilte) Datenbank (oder einen Microservice, der das Modell besitzt) zu erstellen, die gleichzeitig fortlaufend verfügbar, stark konsistent *und* ausfalltolerant ist. Sie müssen sich für zwei dieser drei Eigenschaften entscheiden.
 
-In microservices-basierten Architekturen sollten Sie sich für Verfügbarkeit und Toleranz entscheiden und die starke Konsistenz vernachlässigen. Deshalb sollten Sie in modernen, microservice-basierten Anwendungen keine verteilten Transaktionen beim Messaging verwenden, wie Sie es tun würden, wenn Sie [verteilte Transaktionen](https://msdn.microsoft.com/library/ms681205\(v=vs.85\).aspx) auf Grundlage von Microsoft Distributed Transaction Coordinator (DTC) mit [MSMQ](https://msdn.microsoft.com/library/ms711472\(v=vs.85\).aspx) implementieren.
+In microservices-basierten Architekturen sollten Sie sich für Verfügbarkeit und Toleranz entscheiden und die starke Konsistenz vernachlässigen. Deshalb sollten Sie in modernen, microservice-basierten Anwendungen keine verteilten Transaktionen beim Messaging verwenden, wie Sie es tun würden, wenn Sie [verteilte Transaktionen](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) auf Grundlage von Microsoft Distributed Transaction Coordinator (DTC) mit [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) implementieren.
 
 Kehren wir nun zum ursprünglichen Problem und dem dazugehörigen Beispiel zurück. Wenn der Dienst abstürzt, nachdem die Datenbank aktualisiert wurde (in diesem Fall nach der Codezeile mit \_context.SaveChangesAsync()), aber bevor das Integrationsereignis veröffentlich wurde, besteht die Möglichkeit, dass das Gesamtsystem inkonsistent wird. Dies ist möglicherweise unternehmenskritisch, je nachdem, um welche Unternehmensvorgänge es sich handelt.
 
 Wie bereits im Abschnitt zur Architektur erwähnt, können Sie dieses Problem auf unterschiedliche Arten behandeln:
 
--   Sie können das [Muster „Ereignissourcing“](https://msdn.microsoft.com/library/dn589792.aspx) verwenden.
+-   Sie können das [Muster „Ereignissourcing“](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) verwenden.
 
 -   Verwenden von [Transaktionsprotokollmining](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
@@ -304,7 +304,7 @@ Es gibt Meldungsverarbeitungen, die von sich aus idempotent sind. Wenn ein Syste
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 -   **Honoring message idempotency (Berücksichtigen der Idempotenz von Nachrichten)** <br/>
-    [*https://msdn.microsoft.com/library/jj591565.aspx#honoring_message_idempotency*](https://msdn.microsoft.com/library/jj591565.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Deduplizieren von Integrationsereignismeldungen
 
@@ -337,7 +337,7 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Communicating Between Bounded Contexts (Kommunizieren zwischen gebundenen Kontexten)** <br/>
-    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 -   **Eventual Consistency (Letztliche Konsistenz)** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
@@ -352,7 +352,7 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
 -   **Introducing Event Sourcing (Einführung in Ereignissourcing)** <br/>
-    [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 -   **Event Store-Datenbank**. Offizielle Website. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
@@ -367,7 +367,7 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **Data Consistency Primer (Einführung in die Datenkonsistenz)** <br/>
-    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
+    <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 -   **Rick Saling. The CAP Theorem: Why „Everything is Different“ with the Cloud and Internet (Das CAP-Theorem: Warum für die Cloud und das Internet andere „Regeln“ gelten)** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
@@ -380,9 +380,6 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
 
 -   **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation)* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
-
--   **Participating in External (DTC) Transactions (Externe (DTC-)Transaktionen)** (MSMQ) <br/>
-    [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Azure Service Bus. Brokered Messaging: Duplicate Detection (Brokermessaging: Erkennen von Duplikaten)** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)

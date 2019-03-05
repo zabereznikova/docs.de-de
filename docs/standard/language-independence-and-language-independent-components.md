@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b25f3dbe655dd60c9284ae5ef5591e95fc1b84e5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842826"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836551"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachenunabhängigkeit und sprachunabhängige Komponenten
 Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer der zahlreichen Sprachen entwickeln kann, die auf .NET Framework ausgerichtet sind, z. B. C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL und Windows PowerShell. Sie können auf die Typen und Member von Klassenbibliotheken, die für .NET Framework entwickelt wurden, zugreifen, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen zu müssen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET Framework-Apps sprachenunabhängig auf die Komponente zugegriffen werden.  
@@ -100,7 +100,7 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
 -   Parameter und Rückgabetypen öffentlicher Methoden von öffentlichen Klassen sowie Parameter und Rückgabetypen von Methoden, auf die abgeleitete Klassen zugreifen können.  
   
- Die Regeln für CLS-Kompatibilität werden in der folgenden Tabelle aufgeführt. Der Text der Regeln wird in vollem Wortlaut dem [ECMA-335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) entnommen. Copyright 2012 durch Ecma-International. Ausführlichere Informationen zu diesen Regeln finden Sie in den folgenden Abschnitten.  
+ Die Regeln für CLS-Kompatibilität werden in der folgenden Tabelle aufgeführt. Der Text der Regeln wird in vollem Wortlaut dem [ECMA 335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) entnommen. Copyright 2012 durch Ecma-International. Ausführlichere Informationen zu diesen Regeln finden Sie in den folgenden Abschnitten.  
   
 |Kategorie|Siehe|Regel|Regelzahl|  
 |--------------|---------|----------|-----------------|  
@@ -169,7 +169,7 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Das [allgemeine Typsystem](../../docs/standard/base-types/common-type-system.md) von .NET Framework enthält verschiedene integrierte Datentypen, die direkt von der Common Language Runtime unterstützt werden und insbesondere in den Metadaten einer Assembly codiert werden. Von diesen systeminternen Typen sind die in der folgenden Tabelle aufgeführten Typen CLS-kompatibel.  
   
-|CLS-kompatibler Typ|Beschreibung |  
+|CLS-kompatibler Typ|Beschreibung|  
 |-------------------------|-----------------|  
 |<xref:System.Byte>|Ganze 8-Bit-Zahl ohne Vorzeichen|  
 |<xref:System.Int16>|Ganze 16-Bit-Zahl mit Vorzeichen|  
@@ -185,7 +185,7 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Die in der folgenden Tabelle aufgeführten systeminternen Typen sind nicht CLS-kompatibel.  
   
-|Nicht kompatibler Typ|Beschreibung |CLS-kompatible Alternative|  
+|Nicht kompatibler Typ|Beschreibung|CLS-kompatible Alternative|  
 |-------------------------|-----------------|--------------------------------|  
 |<xref:System.SByte>|Ganzzahliger 8-Bit-Datentyp mit Vorzeichen|<xref:System.Int16>|  
 |<xref:System.TypedReference>|Zeiger auf ein Objekt und den Laufzeittyp|Keiner|  
@@ -305,7 +305,7 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
      Aufgrund dieser Regel, ist es nicht erforderlich, dass CLS-kompatible Typen nicht CLS-kompatible Member implementieren. Wenn ein CLS-kompatibles Framework eine Klasse verfügbar macht, die eine nicht CLS- kompatible Schnittstelle implementiert, sollte sie konkrete Implementierungen aller nicht-CLS-kompatiblen Member angeben.  
   
- CLS-kompatible Sprachcompiler müssen einer Klasse auch ermöglichen, separate Implementierungen von Membern bereitzustellen, die in mehreren Schnittstellen über den gleichen Namen und dieselbe Signatur verfügen.  C# und Visual Basic unterstützen [explizite Schnittstellenimplementierungen](~/docs/csharp/programming-guide/interfaces/explicit-interface-implementation.md), um unterschiedliche Implementierungen identisch benannter Methoden bereitzustellen. Visual Basic unterstützt darüber hinaus das `Implements`-Schlüsselwort, mit dem Sie explizit festlegen können, welche Schnittstelle und welcher Member von einem bestimmten Member implementiert werden. Im folgenden Beispiel wird dieses Szenario veranschaulicht, indem eine `Temperature`-Klasse definiert wird, die die `ICelsius`-Schnittstelle und die `IFahrenheit`-Schnittstelle als explizite Schnittstellenimplementierungen implementiert.  
+ CLS-kompatible Sprachcompiler müssen einer Klasse auch ermöglichen, separate Implementierungen von Membern bereitzustellen, die in mehreren Schnittstellen über den gleichen Namen und dieselbe Signatur verfügen.  C# und Visual Basic unterstützen [explizite Schnittstellenimplementierungen](../csharp/programming-guide/interfaces/explicit-interface-implementation.md), um unterschiedliche Implementierungen identisch benannter Methoden bereitzustellen. Visual Basic unterstützt darüber hinaus das `Implements`-Schlüsselwort, mit dem Sie explizit festlegen können, welche Schnittstelle und welcher Member von einem bestimmten Member implementiert werden. Im folgenden Beispiel wird dieses Szenario veranschaulicht, indem eine `Temperature`-Klasse definiert wird, die die `ICelsius`-Schnittstelle und die `IFahrenheit`-Schnittstelle als explizite Schnittstellenimplementierungen implementiert.  
   
  [!code-csharp[Conceptual.CLSCompliant#24](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/eii1.cs#24)]
  [!code-vb[Conceptual.CLSCompliant#24](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/eii1.vb#24)]  
@@ -548,23 +548,23 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  Um die beiden Klassen in einer einzelnen Assembly zu verpacken, müssen Sie sie in Module kompilieren. Verwenden Sie zum Kompilieren der Visual Basic-Quellcodedatei in einem Modul folgenden Befehl:  
   
-```  
+```console  
 vbc /t:module StringUtil.vb   
 ```  
   
- Weitere Informationen zur Befehlszeilensyntax des Visual Basic-Compilers finden Sie unter [Erstellen von der Befehlszeile aus](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+ Weitere Informationen zur Befehlszeilensyntax des Visual Basic-Compilers finden Sie unter [Erstellen von der Befehlszeile aus](../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
  Verwenden Sie zum Kompilieren der C#-Quellcodedatei in einem Modul folgenden Befehl:  
   
-```  
+```console  
 csc /t:module NumberUtil.cs  
 ```  
   
- Weitere Informationen zur Befehlszeilensyntax des C#-Compilers finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
+ Weitere Informationen zur Befehlszeilensyntax des C#-Compilers finden Sie unter [Erstellen über die Befehlszeile mit csc.exe](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
- Verwenden Sie dann das [Linktool (Link.exe)](https://msdn.microsoft.com/library/c1d51b8a-bd23-416d-81e4-900e02b2c129), um die beiden Module in eine Assembly zu kompilieren:  
+ Verwenden Sie dann die [Linker-Optionen](/cpp/build/reference/linker-options), um die beiden Module in eine Assembly zu kompilieren:  
   
-```  
+```console  
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll   
 ```  
   
@@ -575,13 +575,13 @@ link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
   
  Verwenden Sie zum Kompilieren des Visual Basic-Codes folgenden Befehl:  
   
-```  
+```console  
 vbc example.vb /r:UtilityLib.dll  
 ```  
   
  Zum Kompilieren mit C# ändern Sie den Namen des Compilers von **vbc** in **csc** und die Dateierweiterung von „.vb“ in „.cs“:  
   
-```  
+```console  
 csc example.cs /r:UtilityLib.dll  
 ```  
   
