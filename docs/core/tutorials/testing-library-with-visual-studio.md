@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 7f0f1da48294fd3856f0b2524ef5239b8b63f3e6
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: c099bde5a90e7e95eb5d9da6aacf763054a865ae
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362690"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201325"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Testen einer .NET Standard-Bibliothek mit .NET Core in Visual Studio 2017
 
@@ -163,7 +163,7 @@ In Ihrem Testlauf sind keine Fehler aufgetreten, darum verändern Sie ihn leicht
 
    ![Fenster „Test-Explorer“, das den Assertionsfehler „Ist FALSE“ zeigt](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
-1. Entfernen Sie den Code, der hinzugefügt wurde (`"Error", `), und führen den Test erneut aus. Die Tests werden erfolgreich ausgeführt.
+1. Machen Sie die Änderung rückgängig, die Sie in Schritt 1 vorgenommen haben, und entfernen Sie die Zeichenfolge „Error“ (Fehler). Führen Sie die Tests erneut aus, und sie werden erfolgreich ausgeführt.
 
 ## <a name="testing-the-release-version-of-the-library"></a>Testen der endgültigen Produktversion der Bibliothek
 

@@ -3,14 +3,14 @@ title: Musterabgleich – Leitfaden für C#
 description: Erfahren Sie mehr über Musterabgleichausdrücke in C#.
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522025"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56969976"
 ---
-# <a name="pattern-matching"></a>Musterabgleich #
+# <a name="pattern-matching"></a>Musterabgleich
 
 Muster testen, ob ein Wert eine bestimmte *Form* hat, und können Informationen vom Wert *extrahieren*, wenn er die entsprechende Form hat. Der Musterabgleich stellt eine kürzere Syntax für Algorithmen bereit, die Sie bereits verwenden. Sie erstellen bereits mithilfe vorhandener Syntax Musterabgleichalgorithmen. Sie schreiben `if`- oder `switch`-Anweisungen, die Werte testen. Wenn diese Anweisungen anschließend übereinstimmen, extrahieren und verwenden Sie die Informationen von diesem Wert. Die neuen Syntaxelemente sind Erweiterungen für Anweisungen, mit denen Sie bereits vertraut sind: `is` und `switch`. Diese neuen Erweiterungen kombinieren das Testen von Werten mit dem Extrahieren dieser Information.
 
@@ -36,7 +36,7 @@ Vor C# 7.0 mussten Sie jeden Typ in einer Reihe von `if`- und `is`-Anweisungen t
 
 [!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
-Der oben dargestellte Code ist ein klassischer Ausdruck des *Typmusters*: Sie testen eine Variable, um ihren Typ zu bestimmen, und handeln anhand dieses Typs unterschiedlich.
+Der oben stehende Code ist ein klassischer Ausdruck des *Typmusters*: Sie testen eine Variable, um ihren Typ zu bestimmen, und handeln anhand dieses Typs unterschiedlich.
 
 Dieser Code wird einfacher, indem Sie Erweiterungen für den `is`-Ausdruck verwenden, um eine Variable zuzuweisen, wenn der Test erfolgreich ausgeführt wird:
 
@@ -111,7 +111,7 @@ Der besondere Verhalten für das `null`-Muster ist interessant, weil die Konstan
 
 Mit der Einführung von `var` als Übereinstimmungsausdruck werden neue Regeln für den Musterabgleich eingeführt.
 
-Die erste Regel lautet, dass die `var`-Deklaration den normalen Typrückschlussregeln entspricht: Der Typ wird als statischer Typ des switch-Ausdrucks abgeleitet. Dieser Regel entsprechend stimmt der Typ immer überein.
+Die erste Regel lautet, dass die `var`-Deklaration den normalen Typrückschlussregeln entspricht:  Der Typ wird als statischer Typ des switch-Ausdrucks abgeleitet. Dieser Regel entsprechend stimmt der Typ immer überein.
 
 Die zweite Regel lautet, dass eine `var`-Deklaration keine NULL-Überprüfung umfasst, die in anderen Typmusterausdrücken enthalten ist. Dies bedeutet, dass die Variable NULL sein kann, und eine NULL-Überprüfung ist in diesem Fall erforderlich.
 

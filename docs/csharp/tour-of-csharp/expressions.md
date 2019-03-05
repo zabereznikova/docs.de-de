@@ -3,12 +3,12 @@ title: C#-Ausdrücke – Überblick über C#
 description: Ausdrücke, Operanden und Operatoren sind Bausteine der Sprache C#.
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 28e1d6952975c6932dc9ae40af28c7201d61d778
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 682f98d51bf4eb3c1641297972afb86956e06d3e
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154933"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212091"
 ---
 # <a name="expressions"></a>Ausdrücke
 
@@ -35,12 +35,12 @@ In der folgenden Übersicht der C#-Operatoren werden die Operatorkategorien gem�
     - `x--`: Postdekrement
     - `new T(...)`: Objekt- und Delegaterstellung
     - `new T(...){...}`: Objekterstellung mit Initialisierer
-    - `new {...}`: Anonymer Objektinitialisierer
+    - `new {...}`:  Anonymer Objektinitialisierer
     - `new T[...]`: Arrayerstellung
-    - `typeof(T)`: Abrufen von <xref:System.Type> Objekt für `T`
+    - `typeof(T)`: Abrufen von <xref:System.Type>-Objekt für `T`
     - `checked(x)`: Auswerten von Ausdrücken in geprüftem Kontext
     - `unchecked(x)`: Auswerten von Ausdrücken in nicht geprüftem Kontext
-    - `default(T)`: Abrufen des Standardwerts von Typ `T`
+    - `default(T)`: Abrufen des Standardwerts vom Typ `T`
     - `delegate {...}`: Anonyme Funktion (anonyme Methode)
 * Unär
     - `+x`: Identität
@@ -62,9 +62,9 @@ In der folgenden Übersicht der C#-Operatoren werden die Operatorkategorien gem�
     - `x << y`: Linksverschiebung
     - `x >> y`: Rechtsverschiebung
 * Relational und Typtest
-    - `x < y`: Kleiner als
+    - `x < y`: Kleiner als 
     - `x > y`: Größer als
-    - `x <= y`: Kleiner oder gleich
+    - `x <= y`: Kleiner oder gleich 
     - `x >= y`: Größer oder gleich
     - `x is T`: `true` zurückgeben, wenn `x` ein `T` ist, andernfalls `false`
     - `x as T`: `x` als `T` typisiert zurückgeben, oder `null`, wenn `x` kein `T` ist
@@ -82,15 +82,15 @@ In der folgenden Übersicht der C#-Operatoren werden die Operatorkategorien gem�
 * Bedingtes OR
     - `x || y`: Wertet `y` nur aus, wenn `x` nicht `true` ist
 * NULL-Sammeloperator
-    - `x ?? y`: Wertet `y` aus, wenn `x` NULL ist, andernfalls `x`
+    - `x ?? y`: Wird zu `y` ausgewertet, wenn `x` NULL ist, andernfalls zu `x`
 * Bedingt
     - `x ? y : z`: Wertet `y` aus, wenn `x` `true` ist, `z`, wenn `x` `false` ist
 * Zuweisung oder anonyme Funktion
     - `x = y`: Zuweisung
     - `x op= y`: Zusammengesetzte Zuweisung; unterstützte Operatoren sind
         - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-    - `(T x) => y`: Anonyme Funktion (Lambdaausdruck)
+    - `(T x) => y`: Anonyme Funktion (Lambda-Ausdruck)
 
->[!div class="step-by-step"]
->[Zurück](types-and-variables.md)
->[Weiter](statements.md)
+> [!div class="step-by-step"]
+> [Zurück](types-and-variables.md)
+> [Weiter](statements.md)

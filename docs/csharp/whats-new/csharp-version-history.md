@@ -3,14 +3,14 @@ title: 'Die Geschichte von C#: Leitfaden für C#'
 description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie sich seitdem verändert?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186227"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56981932"
 ---
-# <a name="the-history-of-c"></a>Die Geschichte von C# #
+# <a name="the-history-of-c"></a>Die Geschichte von C\#
 
 Dieser Artikel erläutert den Verlauf jeder Hauptversion der Sprache C#. Das C#-Team entwickelt und ergänzt immer neue und innovative Features. Informationen zu den Status von Programmiersprachenfunktionen, so auch Funktionen, die für zukünftige Versionen geplant sind, finden Sie im [dotnet/roslyn-Repository](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) auf GitHub.
 
@@ -55,7 +55,7 @@ C# Version 1.2, wird in Visual Studio 2003 bereitgestellt. Sie enthielt einige k
 
 Nun wird es langsam interessant. Werfen wir einen Blick auf einige wichtige Features von C# 2.0, die im Jahr 2005 zusammen mit Visual Studio 2005 veröffentlicht wurden:
 
-- [Generika](../programming-guide/generics/index.md)
+- [Generics](../programming-guide/generics/index.md)
 - [Partial types (Partielle Typen)](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Anonyme Methoden](../programming-guide/statements-expressions-operators/anonymous-methods.md)
 - [Nullable-Typen](../programming-guide/nullable-types/index.md)
