@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0d741bda5426dee1292df0e6fd9107cc2f44c8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 540288f83de9c3c6ff2111330c77ded48abd6d5f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413318"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479115"
 ---
 # <a name="icordebugmodulegetsize-method"></a>ICorDebugModule::GetSize-Methode
-Ruft die Größe in Bytes des Moduls.  
+Ruft die Größe in Bytes des Moduls an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,14 +35,14 @@ HRESULT GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pcBytes`  
  [out] Die Größe des Moduls in Bytes.  
   
- Wenn das Modul aus des native Image Generator (NGen.exe) generiert wurde, wird die Größe des Moduls 0 (null) sein.  
+ Wenn das Modul des native Image Generator (NGen.exe) erstellt wurde, wird die Größe des Moduls 0 (null) haben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60624a5f6323399d06bda4e0280de8fbe861bd9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 08bf4022f7cd7f85ffe7939c16fd47950e131a77
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419584"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471523"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle-Methode
-Ruft einen Verweiszeiger auf dem angegebenen verwalteten Objekt, das eine Garbagecollection-handle verfügt.  
+Ruft einen Verweiszeiger auf das angegebene verwaltete Objekt, das eine Garbagecollection verarbeitet hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,23 +36,23 @@ HRESULT GetReferenceValueFromGCHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `handle`  
  [in] Ein Zeiger auf ein verwaltetes Objekt, das eine Garbage Collection-Handle verfügt. Dieser Wert ist eine <xref:System.IntPtr> Objekt abgerufen werden können, und wählen Sie die <xref:System.Runtime.InteropServices.GCHandle> für das verwaltete Objekt.  
   
  `pOutValue`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugReferenceValue-Objekts, das einen Verweis auf das angegebene verwaltete Objekt darstellt.  
+ [out] Ein Zeiger auf die Adresse des ein ICorDebugReferenceValue-Objekt, das einen Verweis auf das angegebene verwaltete Objekt darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwechseln Sie nicht den Wert der zurückgegebene Verweis mit einer Garbage Collection-Verweiswert.  
+ Verwechseln Sie nicht den Wert der zurückgegebene Verweis mit einem Garbage Collection-Verweis-Wert.  
   
- Der zurückgegebene Verweis verhält sich wie ein normaler Verweis. Es wird deaktiviert, wenn die Ausführung von Code nach einem Haltepunkt fortgesetzt wird. Die Lebensdauer des Zielobjekts wird von der Lebensdauer der Verweiswert nicht beeinflusst.  
+ Der zurückgegebene Verweis verhält sich wie ein normaler Verweis. Es ist deaktiviert, wenn die Ausführung von Code nach einem Haltepunkt fortgesetzt. Die Lebensdauer des Zielobjekts ist von der Lebensdauer der Verweiswert nicht betroffen.  
   
 > [!NOTE]
->  Die `GetReferenceValueFromGCHandle` Methode wird nicht überprüft, ob das Handle. Aus diesem Grund die `GetReferenceValueFromGCHandle` Methode kann möglicherweise beschädigt, des Debuggers und der Code gedebuggt wird, wenn ein ungültiges Handle übergeben wird.  
+>  Die `GetReferenceValueFromGCHandle` Methode überprüft nicht das Handle. Aus diesem Grund die `GetReferenceValueFromGCHandle` Methode kann möglicherweise beschädigt, den Debugger und der Code gedebuggt wird, wenn ein ungültiges Handle übergeben wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

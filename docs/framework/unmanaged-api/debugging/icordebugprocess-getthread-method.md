@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008f945b5301894261ce1529cbd915dd614b919d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 36070d5374a11daf4b7800481c86d61057989631
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418954"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470076"
 ---
 # <a name="icordebugprocessgetthread-method"></a>ICorDebugProcess::GetThread-Methode
-Ruft dieser Prozess Thread, der die angegebene Betriebssystem (BS)-Thread-ID.  
+Ruft den Thread dieses Prozesses, die die angegebenen Betriebssystem (OS)-Thread-ID.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT GetThread(
     [out] ICorDebugThread **ppThread);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `dwThreadId`  
  [in] Die Betriebssystem-thread-ID des Threads abgerufen werden sollen.  
   
  `ppThread`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugThread-Objekts, das den Thread darstellt.  
+ [out] Ein Zeiger auf die Adresse des ein ICorDebugThread-Objekt, das den Thread darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

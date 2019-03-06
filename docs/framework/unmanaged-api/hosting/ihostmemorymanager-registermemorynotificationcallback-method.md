@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cacf2990fd63120e02d897646ab84376db0d5e36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e5a0af2d2f3db5b1d44def3af067bc1c3a9e1aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659201"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485290"
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback-Methode
 Registriert einen Zeiger auf eine Rückruffunktion, die der Host aufruft, um die common Language Runtime (CLR) Benachrichtigen des die aktuelle Auslastung des Arbeitsspeichers auf dem Computer an.  
@@ -35,7 +35,7 @@ HRESULT RegisterMemoryNotificationCallback (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pCallback`  
  [in] Einen Schnittstellenzeiger auf ein [ICLRMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md) -Instanz, die von der CLR implementiert wird.  
   

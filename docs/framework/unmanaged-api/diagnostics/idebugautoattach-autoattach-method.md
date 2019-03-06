@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b45b5e1a7589329b788160df3ac4493efa48197
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16ccc56579a1ebe45ada61a9565cc8ade335333d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663517"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469677"
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach-Methode
 AutoAttach Debuggers führt anfügen.  
@@ -40,7 +40,7 @@ HRESULT AutoAttach
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `guidPort`  
  [in] Legen Sie immer auf `GUID_NULL`.  
   

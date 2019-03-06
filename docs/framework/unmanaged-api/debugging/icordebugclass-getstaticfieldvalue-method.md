@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d3c3c0c5634653d14577de9a1334048d75216b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6b67f5ec233679461f61715d7562b47c2a195fb8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405625"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471627"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>ICorDebugClass::GetStaticFieldValue-Methode
 Ruft den Wert des angegebenen statischen Felds ab.  
@@ -37,23 +37,23 @@ HRESULT GetStaticFieldValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `fieldDef`  
- [in] Ein Feld `Def` Token, verweist das Feld abgerufen werden sollen.  
+ [in] Ein Feld `Def` -Token, verweist das Feld abgerufen werden sollen.  
   
  `pFrame`  
- [in] Ein Zeiger auf eine ICorDebugFrame-Objekt, das verwendet werden, um den Thread, Kontext, Anwendung Domäne Mehrdeutigkeit zwischen oder den Frame darstellt.  
+ [in] Ein Zeiger auf ein ICorDebugFrame-Objekt, das den Rahmen verwendet werden, um Mehrdeutigkeiten zwischen Thread oder Kontext Anwendung Mehrdeutigkeit aufzulösen darstellt.  
   
- Wenn das statische Feld relativ zu einem Thread, einem Kontext oder eine Anwendungsdomäne, wird der Frame den richtigen Wert bestimmt.  
+ Wenn das statische Feld relativ zu einem Thread, einen Kontext oder eine Anwendungsdomäne ist, wird der Frame den richtigen Wert bestimmen.  
   
  `ppValue`  
  [out] Ein Zeiger auf die Adresse eines ICorDebugValue-Objekts, das den Wert des statischen Felds darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Ist der Wert eines statischen Felds für parametrisierte Typen relativ zu bestimmten Instanziierung. Aus diesem Grund Wenn Parameter vom Typ der Klassenkonstruktor <xref:System.Type>, rufen Sie [ICorDebugType:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) anstelle von `ICorDebugClass::GetStaticFieldValue`.  
+ Für parametrisierte Typen bezieht die bestimmten Instanziierung der Wert eines statischen Felds. Aus diesem Grund, wenn der Konstruktor der Klasse Parameter des Typs <xref:System.Type>, rufen Sie [ICorDebugType:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) anstelle von `ICorDebugClass::GetStaticFieldValue`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

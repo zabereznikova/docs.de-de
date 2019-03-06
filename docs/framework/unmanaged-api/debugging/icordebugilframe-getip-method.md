@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd421d705a96778159cb80ad92d9ac654e88985f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7a7b8985e7580282d0e38205f9b1d6078f86cee6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414065"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479765"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP-Methode
 Ruft den Wert des Anweisungszeigers und eine bitweise Kombination-Wert, der beschreibt, wie der Wert des Anweisungszeigers abgerufen wurde.  
@@ -36,7 +36,7 @@ HRESULT GetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pnOffset`  
  [out] Der Wert des Anweisungszeigers.  
   
@@ -44,12 +44,12 @@ HRESULT GetIP (
  [out] Ein Zeiger auf eine bitweise Kombination der CorDebugMappingResult-Enumerationswerte, die beschreiben, wie der Wert des Anweisungszeigers abgerufen wurde.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert des Anweisungszeigers ist der Stapelrahmen Offset der Funktion Microsoft intermediate Language (MSIL)-Code. Wenn der Stapelrahmen aktiv ist, ist diese Adresse die nächste Anweisung ausgeführt. Wenn der Stapelrahmen nicht aktiv ist, wird diese Adresse die nächste Anweisung ausführen, wenn der Stapelrahmen erneut aktiviert wird.  
+ Der Wert des Anweisungszeigers wird der Stapelrahmen-Offset in der Microsoft intermediate Language (MSIL) Funktionscode. Wenn der Stapelrahmen aktiv ist, ist diese Adresse die nächste Anweisung ausführen. Wenn der Stapelrahmen nicht aktiv ist, ist diese Adresse die nächste Anweisung ausgeführt werden, wenn der Stapelrahmen erneut aktiviert wird.  
   
- Wenn dieser Rahmen eine just-in-Time (JIT) kompilierten Rahmen ist, wird der Wert des Anweisungszeigers durch Zuordnen rückwärts von den tatsächlichen systemeigenen Anweisungszeiger, daher ist der Wert möglicherweise nur ungefähre bestimmt.  
+ Wenn dieser Rahmen eine just-in-Time (JIT) kompilierten Rahmen ist, wird der Wert des Anweisungszeigers Zuordnung rückwärts von den tatsächlichen systemeigenen Anweisungszeiger, daher der Wert möglicherweise nur ungefähr ermittelt werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

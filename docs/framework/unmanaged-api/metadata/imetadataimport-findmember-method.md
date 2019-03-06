@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 267a36fbbdf48472bc35581ce98af5cd7a9cef9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 777d7bf51db3e6984f30e31c46ac115301d13faf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550369"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478972"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember-Methode
 Ruft einen Zeiger auf das MemberDef token für das Feld oder eine Methode, die eingeschlossen ist mit dem angegebenen <xref:System.Type> und dem angegebenen Namen und Metadaten aufweist.  
@@ -39,7 +39,7 @@ HRESULT FindMember (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `td`  
  [in] Die TypeDef-Token für die Klasse oder Schnittstelle, die zu suchenden Member einschließt. Wenn dieser Wert ist `mdTokenNil`, die Suche für eine globale Variable oder eine globale Funktion durchgeführt wird.  
   

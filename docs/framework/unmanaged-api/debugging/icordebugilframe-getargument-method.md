@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1653913ca7410728f0f90a546f613a9d8b88be7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46852ed8ac53c3a7720edff4833f3dc3cce42bbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414052"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475787"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument-Methode
-Ruft den Wert des angegebenen Arguments in Microsoft intermediate Language (MSIL)-Stapelrahmen ab.  
+Ruft den Wert des angegebenen Arguments in Microsoft intermediate Language (MSIL) Stapelrahmens ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,18 +36,18 @@ HRESULT GetArgument (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `dwIndex`  
- [in] Der Index des Arguments in diesem MSIL-Stapelrahmen.  
+ [in] Der Index des Arguments in den MSIL-Stapelrahmens.  
   
  `ppValue`  
  [out] Ein Zeiger auf die Adresse eines ICorDebugValue-Objekts, das den abgerufenen Wert darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetArgument` Methode kann verwendet werden, in einem Stapelrahmen des MSIL oder in einem Just-in-Time (JIT) kompilierten Frame.  
+ Die `GetArgument` Methode kann verwendet werden, entweder in einem Stapelrahmen des MSIL oder in einem just-in-Time (JIT) kompilierten Rahmen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

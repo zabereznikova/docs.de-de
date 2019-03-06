@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 939cabe1-b647-4090-b662-eeec23c6c58d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 64affd9b262934316fc904b10f1a9c4a7e7657bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72bad186bc8bb198a8c5b05fffcc0b2b6544482f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539973"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472420"
 ---
 # <a name="icordebugdatatarget2getimagefrompointer-method"></a>ICorDebugDataTarget2::GetImageFromPointer-Methode
 Gibt die Basisadresse des Moduls und die Größe von einer Adresse in diesem Modul aus.  
@@ -24,7 +24,7 @@ HRESULT GetImageFromPointer(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `addr`  
  Ein [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) -Wert, der eine Adresse in einem Modul darstellt.  
   
