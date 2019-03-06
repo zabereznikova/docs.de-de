@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Frame control [WPF]
 - content [WPF], Frame control
 ms.assetid: 1588f9bf-9001-4437-a8fc-cc57ef50561c
-ms.openlocfilehash: b65fa2b011e1be04b1e6a16b41566c4a07ad33ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f530fa04e25bfa18095fc3b2a182d3d624789f54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552044"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371904"
 ---
-# <a name="frame"></a><span data-ttu-id="8944e-102">Frame</span><span class="sxs-lookup"><span data-stu-id="8944e-102">Frame</span></span>
-<span data-ttu-id="8944e-103">Die <xref:System.Windows.Controls.Frame> Steuerelement unterstützt Inhaltsnavigation im Inhalt.</span><span class="sxs-lookup"><span data-stu-id="8944e-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="8944e-104"><xref:System.Windows.Controls.Frame> aufgenommen werden kann, durch ein Stammelement wie <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, oder als Insel innerhalb einer Struktur, die ein Stammelement gehört.</span><span class="sxs-lookup"><span data-stu-id="8944e-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
+# <a name="frame"></a><span data-ttu-id="baee6-102">Frame</span><span class="sxs-lookup"><span data-stu-id="baee6-102">Frame</span></span>
+<span data-ttu-id="baee6-103">Die <xref:System.Windows.Controls.Frame> Steuerelement unterstützt die Inhaltsnavigation im Inhalt.</span><span class="sxs-lookup"><span data-stu-id="baee6-103">The <xref:System.Windows.Controls.Frame> control supports content navigation within content.</span></span> <span data-ttu-id="baee6-104"><xref:System.Windows.Controls.Frame> kann von einem Stammelement wie gehostet werden <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, oder als eine ganze Insel in eine Struktur, die zu einem Root-Element gehört.</span><span class="sxs-lookup"><span data-stu-id="baee6-104"><xref:System.Windows.Controls.Frame> can be hosted by a root element like <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Controls.UserControl>, <xref:System.Windows.Documents.FlowDocument>, or as an island within a content tree that belongs to a root element.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="8944e-105">Referenz</span><span class="sxs-lookup"><span data-stu-id="8944e-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="baee6-105">Referenz</span><span class="sxs-lookup"><span data-stu-id="baee6-105">Reference</span></span>  
  <xref:System.Windows.Controls.Frame>  
   
-## <a name="related-sections"></a><span data-ttu-id="8944e-106">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="8944e-106">Related Sections</span></span>  
- [<span data-ttu-id="8944e-107">Übersicht über die Navigation</span><span class="sxs-lookup"><span data-stu-id="8944e-107">Navigation Overview</span></span>](../../../../docs/framework/wpf/app-development/navigation-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="baee6-106">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="baee6-106">Related Sections</span></span>  
+ [<span data-ttu-id="baee6-107">Übersicht über die Navigation</span><span class="sxs-lookup"><span data-stu-id="baee6-107">Navigation Overview</span></span>](../app-development/navigation-overview.md)

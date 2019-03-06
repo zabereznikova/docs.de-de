@@ -8,42 +8,42 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542586"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361212"
 ---
-# <a name="events-wpf"></a><span data-ttu-id="154a1-102">Ereignisse (WPF)</span><span class="sxs-lookup"><span data-stu-id="154a1-102">Events (WPF)</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="154a1-103"> führt Routingereignisse zum Aufrufen von Handlern ein, die auf verschiedenen Listenern in der Elementstruktur einer Anwendung vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="154a1-103"> introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
+# <a name="events-wpf"></a><span data-ttu-id="a5fdb-102">Ereignisse (WPF)</span><span class="sxs-lookup"><span data-stu-id="a5fdb-102">Events (WPF)</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="a5fdb-103">führt Routingereignisse zum Aufrufen von Handlern ein, die auf verschiedenen Listenern in der Elementstruktur einer Anwendung vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="a5fdb-103">introduces routed events that can invoke handlers that exist on various listeners in the element tree of an application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="154a1-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="154a1-104">In This Section</span></span>  
- [<span data-ttu-id="154a1-105">Übersicht über Routingereignisse</span><span class="sxs-lookup"><span data-stu-id="154a1-105">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [<span data-ttu-id="154a1-106">Übersicht über angefügte Ereignisse</span><span class="sxs-lookup"><span data-stu-id="154a1-106">Attached Events Overview</span></span>](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [<span data-ttu-id="154a1-107">Objektlebensdauer-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="154a1-107">Object Lifetime Events</span></span>](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [<span data-ttu-id="154a1-108">Markieren von Routingereignissen als behandelt und Klassenbehandlung</span><span class="sxs-lookup"><span data-stu-id="154a1-108">Marking Routed Events as Handled, and Class Handling</span></span>](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [<span data-ttu-id="154a1-109">Vorschauereignisse</span><span class="sxs-lookup"><span data-stu-id="154a1-109">Preview Events</span></span>](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [<span data-ttu-id="154a1-110">Eigenschaftenänderungsereignisse</span><span class="sxs-lookup"><span data-stu-id="154a1-110">Property Change Events</span></span>](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [<span data-ttu-id="154a1-111">Visual Basic- und WPF-Ereignisbehandlung</span><span class="sxs-lookup"><span data-stu-id="154a1-111">Visual Basic and WPF Event Handling</span></span>](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [<span data-ttu-id="154a1-112">Schwache Ereignismuster</span><span class="sxs-lookup"><span data-stu-id="154a1-112">Weak Event Patterns</span></span>](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [<span data-ttu-id="154a1-113">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="154a1-113">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a5fdb-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="a5fdb-104">In This Section</span></span>  
+ [<span data-ttu-id="a5fdb-105">Übersicht über Routingereignisse</span><span class="sxs-lookup"><span data-stu-id="a5fdb-105">Routed Events Overview</span></span>](routed-events-overview.md)  
+ [<span data-ttu-id="a5fdb-106">Übersicht über angefügte Ereignisse</span><span class="sxs-lookup"><span data-stu-id="a5fdb-106">Attached Events Overview</span></span>](attached-events-overview.md)  
+ [<span data-ttu-id="a5fdb-107">Objektlebensdauer-Ereignisse</span><span class="sxs-lookup"><span data-stu-id="a5fdb-107">Object Lifetime Events</span></span>](object-lifetime-events.md)  
+ [<span data-ttu-id="a5fdb-108">Markieren von Routingereignissen als behandelt und Klassenbehandlung</span><span class="sxs-lookup"><span data-stu-id="a5fdb-108">Marking Routed Events as Handled, and Class Handling</span></span>](marking-routed-events-as-handled-and-class-handling.md)  
+ [<span data-ttu-id="a5fdb-109">Vorschauereignisse</span><span class="sxs-lookup"><span data-stu-id="a5fdb-109">Preview Events</span></span>](preview-events.md)  
+ [<span data-ttu-id="a5fdb-110">Eigenschaftenänderungsereignisse</span><span class="sxs-lookup"><span data-stu-id="a5fdb-110">Property Change Events</span></span>](property-change-events.md)  
+ [<span data-ttu-id="a5fdb-111">Visual Basic- und WPF-Ereignisbehandlung</span><span class="sxs-lookup"><span data-stu-id="a5fdb-111">Visual Basic and WPF Event Handling</span></span>](visual-basic-and-wpf-event-handling.md)  
+ [<span data-ttu-id="a5fdb-112">Schwache Ereignismuster</span><span class="sxs-lookup"><span data-stu-id="a5fdb-112">Weak Event Patterns</span></span>](weak-event-patterns.md)  
+ [<span data-ttu-id="a5fdb-113">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="a5fdb-113">How-to Topics</span></span>](events-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="154a1-114">Referenz</span><span class="sxs-lookup"><span data-stu-id="154a1-114">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a5fdb-114">Referenz</span><span class="sxs-lookup"><span data-stu-id="a5fdb-114">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="154a1-115">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="154a1-115">Related Sections</span></span>  
- [<span data-ttu-id="154a1-116">WPF-Architektur</span><span class="sxs-lookup"><span data-stu-id="154a1-116">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [<span data-ttu-id="154a1-117">XAML in WPF</span><span class="sxs-lookup"><span data-stu-id="154a1-117">XAML in WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [<span data-ttu-id="154a1-118">Basiselemente</span><span class="sxs-lookup"><span data-stu-id="154a1-118">Base Elements</span></span>](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [<span data-ttu-id="154a1-119">Elementstruktur und Serialisierung</span><span class="sxs-lookup"><span data-stu-id="154a1-119">Element Tree and Serialization</span></span>](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [<span data-ttu-id="154a1-120">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="154a1-120">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [<span data-ttu-id="154a1-121">Eingabe</span><span class="sxs-lookup"><span data-stu-id="154a1-121">Input</span></span>](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [<span data-ttu-id="154a1-122">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="154a1-122">Resources</span></span>](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [<span data-ttu-id="154a1-123">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="154a1-123">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [<span data-ttu-id="154a1-124">WPF-Inhaltsmodell</span><span class="sxs-lookup"><span data-stu-id="154a1-124">WPF Content Model</span></span>](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [<span data-ttu-id="154a1-125">Threadmodell</span><span class="sxs-lookup"><span data-stu-id="154a1-125">Threading Model</span></span>](../../../../docs/framework/wpf/advanced/threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="a5fdb-115">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="a5fdb-115">Related Sections</span></span>  
+ [<span data-ttu-id="a5fdb-116">WPF-Architektur</span><span class="sxs-lookup"><span data-stu-id="a5fdb-116">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="a5fdb-117">XAML in WPF</span><span class="sxs-lookup"><span data-stu-id="a5fdb-117">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="a5fdb-118">Basiselemente</span><span class="sxs-lookup"><span data-stu-id="a5fdb-118">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="a5fdb-119">Elementstruktur und Serialisierung</span><span class="sxs-lookup"><span data-stu-id="a5fdb-119">Element Tree and Serialization</span></span>](element-tree-and-serialization.md)  
+  [<span data-ttu-id="a5fdb-120">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="a5fdb-120">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="a5fdb-121">Eingabe</span><span class="sxs-lookup"><span data-stu-id="a5fdb-121">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="a5fdb-122">Ressourcen</span><span class="sxs-lookup"><span data-stu-id="a5fdb-122">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="a5fdb-123">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="a5fdb-123">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
+  [<span data-ttu-id="a5fdb-124">WPF-Inhaltsmodell</span><span class="sxs-lookup"><span data-stu-id="a5fdb-124">WPF Content Model</span></span>](../controls/wpf-content-model.md)  
+  [<span data-ttu-id="a5fdb-125">Threadmodell</span><span class="sxs-lookup"><span data-stu-id="a5fdb-125">Threading Model</span></span>](threading-model.md)

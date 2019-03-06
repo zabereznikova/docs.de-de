@@ -8,21 +8,21 @@ helpviewer_keywords:
 - properties [WPF], how-to topics
 - dependency properties [WPF]
 ms.assetid: e16dd710-1530-4462-81a2-43719b973970
-ms.openlocfilehash: b2b9dffe1837df0e8daaf5526a59609db8efb7fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf1dbe9c9c95a3ae1afe2515adbd8bc65a7d44
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544484"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368492"
 ---
-# <a name="properties-how-to-topics"></a><span data-ttu-id="4c1a0-102">Gewusst-wie-Themen zu Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="4c1a0-102">Properties How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="4c1a0-103">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="4c1a0-103">In This Section</span></span>  
- [<span data-ttu-id="4c1a0-104">Implementieren einer Abhängigkeitseigenschaft</span><span class="sxs-lookup"><span data-stu-id="4c1a0-104">Implement a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
- [<span data-ttu-id="4c1a0-105">Hinzufügen eines Besitzertyps für eine Abhängigkeitseigenschaft</span><span class="sxs-lookup"><span data-stu-id="4c1a0-105">Add an Owner Type for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
- [<span data-ttu-id="4c1a0-106">Registrieren einer angefügten Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="4c1a0-106">Register an Attached Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
- [<span data-ttu-id="4c1a0-107">Überschreiben von Metadaten für eine Abhängigkeitseigenschaft</span><span class="sxs-lookup"><span data-stu-id="4c1a0-107">Override Metadata for a Dependency Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
+# <a name="properties-how-to-topics"></a><span data-ttu-id="d3f2e-102">Gewusst-wie-Themen zu Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="d3f2e-102">Properties How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="d3f2e-103">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d3f2e-103">In This Section</span></span>  
+ [<span data-ttu-id="d3f2e-104">Implementieren einer Abhängigkeitseigenschaft</span><span class="sxs-lookup"><span data-stu-id="d3f2e-104">Implement a Dependency Property</span></span>](how-to-implement-a-dependency-property.md)  
+ [<span data-ttu-id="d3f2e-105">Hinzufügen eines Besitzertyps für eine Abhängigkeitseigenschaft</span><span class="sxs-lookup"><span data-stu-id="d3f2e-105">Add an Owner Type for a Dependency Property</span></span>](how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [<span data-ttu-id="d3f2e-106">Registrieren einer angefügten Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="d3f2e-106">Register an Attached Property</span></span>](how-to-register-an-attached-property.md)  
+ [<span data-ttu-id="d3f2e-107">Überschreiben von Metadaten für eine Abhängigkeitseigenschaft</span><span class="sxs-lookup"><span data-stu-id="d3f2e-107">Override Metadata for a Dependency Property</span></span>](how-to-override-metadata-for-a-dependency-property.md)  
   
-## <a name="reference"></a><span data-ttu-id="4c1a0-108">Referenz</span><span class="sxs-lookup"><span data-stu-id="4c1a0-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d3f2e-108">Referenz</span><span class="sxs-lookup"><span data-stu-id="d3f2e-108">Reference</span></span>  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -31,5 +31,5 @@ ms.locfileid: "33544484"
   
  <xref:System.Windows.DependencyObject>  
   
-## <a name="related-sections"></a><span data-ttu-id="4c1a0-109">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="4c1a0-109">Related Sections</span></span>  
- [<span data-ttu-id="4c1a0-110">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="4c1a0-110">Properties</span></span>](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="d3f2e-109">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="d3f2e-109">Related Sections</span></span>  
+ [<span data-ttu-id="d3f2e-110">Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="d3f2e-110">Properties</span></span>](properties-wpf.md)
