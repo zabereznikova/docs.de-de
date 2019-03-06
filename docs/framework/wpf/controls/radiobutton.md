@@ -7,22 +7,22 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553922"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365268"
 ---
-# <a name="radiobutton"></a><span data-ttu-id="b72c2-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="b72c2-102">RadioButton</span></span>
-<span data-ttu-id="b72c2-103"><xref:System.Windows.Controls.RadioButton> Steuerelemente sind in der Regel gruppiert, um Benutzern eine einzelne Auswahl unter mehreren Optionen bieten; Es kann jeweils nur ein Optionsfeld ausgewählt werden.</span><span class="sxs-lookup"><span data-stu-id="b72c2-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
+# <a name="radiobutton"></a><span data-ttu-id="77de9-102">RadioButton</span><span class="sxs-lookup"><span data-stu-id="77de9-102">RadioButton</span></span>
+<span data-ttu-id="77de9-103"><xref:System.Windows.Controls.RadioButton> Steuerelemente sind in der Regel gruppiert, um Benutzern eine einzelne Auswahl unter mehreren Optionen zur Verfügung stellen; Es kann nur eine Schaltfläche zu einem Zeitpunkt ausgewählt werden.</span><span class="sxs-lookup"><span data-stu-id="77de9-103"><xref:System.Windows.Controls.RadioButton> controls are usually grouped together to offer users a single choice among several options; only one button at a time can be selected.</span></span>  
   
- <span data-ttu-id="b72c2-104">Die folgende Abbildung zeigt ein Beispiel für eine <xref:System.Windows.Controls.RadioButton> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="b72c2-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
+ <span data-ttu-id="77de9-104">Die folgende Abbildung zeigt ein Beispiel für eine <xref:System.Windows.Controls.RadioButton> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="77de9-104">The following illustration shows an example of a <xref:System.Windows.Controls.RadioButton> control.</span></span>  
   
- <span data-ttu-id="b72c2-105">![Optionsfeld Schaltflächenzuständen](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="b72c2-105">![Radio button states](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
-<span data-ttu-id="b72c2-106">Typische "RadioButton"</span><span class="sxs-lookup"><span data-stu-id="b72c2-106">Typical RadioButton</span></span>  
+ <span data-ttu-id="77de9-105">![Radio-Schaltflächenstatus](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span><span class="sxs-lookup"><span data-stu-id="77de9-105">![Radio button states](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")</span></span>  
+<span data-ttu-id="77de9-106">Typische RadioButton</span><span class="sxs-lookup"><span data-stu-id="77de9-106">Typical RadioButton</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="b72c2-107">Referenz</span><span class="sxs-lookup"><span data-stu-id="b72c2-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="77de9-107">Referenz</span><span class="sxs-lookup"><span data-stu-id="77de9-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  
   
-## <a name="related-sections"></a><span data-ttu-id="b72c2-108">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="b72c2-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="77de9-108">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="77de9-108">Related Sections</span></span>

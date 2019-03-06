@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Suchen nach einem Element anhand des Namens'
+title: 'Vorgehensweise: Suchen nach einem Element anhand des Namens'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - elements [WPF], finding by name
 ms.assetid: cfa7cf35-8aa2-4060-9454-872ed4af3f0e
-ms.openlocfilehash: e2d176c9334c0a1d4c10819e0dc9f2c408e41d5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7405f9ba8db5d4db0ce35ca250f13e456685f39b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543575"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351045"
 ---
-# <a name="how-to-find-an-element-by-its-name"></a><span data-ttu-id="5b292-102">Gewusst wie: Suchen nach einem Element anhand des Namens</span><span class="sxs-lookup"><span data-stu-id="5b292-102">How to: Find an Element by Its Name</span></span>
-<span data-ttu-id="5b292-103">Dieses Beispiel beschreibt, wie die <xref:System.Windows.FrameworkElement.FindName%2A> Methode, um ein Element durch Ermitteln der <xref:System.Windows.FrameworkElement.Name%2A> Wert.</span><span class="sxs-lookup"><span data-stu-id="5b292-103">This example describes how to use the <xref:System.Windows.FrameworkElement.FindName%2A> method to find an element by its <xref:System.Windows.FrameworkElement.Name%2A> value.</span></span>  
+# <a name="how-to-find-an-element-by-its-name"></a><span data-ttu-id="398bf-102">Vorgehensweise: Suchen nach einem Element anhand des Namens</span><span class="sxs-lookup"><span data-stu-id="398bf-102">How to: Find an Element by Its Name</span></span>
+<span data-ttu-id="398bf-103">In diesem Beispiel wird beschrieben, wie Sie mit der <xref:System.Windows.FrameworkElement.FindName%2A> Methode zum Suchen von einem Element anhand seiner <xref:System.Windows.FrameworkElement.Name%2A> Wert.</span><span class="sxs-lookup"><span data-stu-id="398bf-103">This example describes how to use the <xref:System.Windows.FrameworkElement.FindName%2A> method to find an element by its <xref:System.Windows.FrameworkElement.Name%2A> value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5b292-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5b292-104">Example</span></span>  
- <span data-ttu-id="5b292-105">In diesem Beispiel wird die Methode, die ein bestimmtes Element mit dem Namen ermitteln als Ereignishandler einer Schaltfläche geschrieben.</span><span class="sxs-lookup"><span data-stu-id="5b292-105">In this example, the method to find a particular element by its name is written as the event handler of a button.</span></span> <span data-ttu-id="5b292-106">`stackPanel` ist der <xref:System.Windows.FrameworkElement.Name%2A> des Stamms <xref:System.Windows.FrameworkElement> gesucht wird, und die visuell gibt das gefundene Element klicken Sie dann an, indem er als umgewandelt <xref:System.Windows.Controls.TextBlock> und Ändern eines der <xref:System.Windows.Controls.TextBlock> sichtbar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="5b292-106">`stackPanel` is the <xref:System.Windows.FrameworkElement.Name%2A> of the root <xref:System.Windows.FrameworkElement> being searched, and the example method then visually indicates the found element by casting it as <xref:System.Windows.Controls.TextBlock> and changing one of the <xref:System.Windows.Controls.TextBlock> visible [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] properties.</span></span>  
+## <a name="example"></a><span data-ttu-id="398bf-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="398bf-104">Example</span></span>  
+ <span data-ttu-id="398bf-105">In diesem Beispiel wird die Methode, die ein bestimmtes Element anhand des Namens suchen als Ereignishandler einer Schaltfläche geschrieben.</span><span class="sxs-lookup"><span data-stu-id="398bf-105">In this example, the method to find a particular element by its name is written as the event handler of a button.</span></span> <span data-ttu-id="398bf-106">`stackPanel` ist der <xref:System.Windows.FrameworkElement.Name%2A> des Stamms <xref:System.Windows.FrameworkElement> durchsucht wird, und der Beispielmethode zeigt das gefundene Element dann an, durch das umwandeln, als <xref:System.Windows.Controls.TextBlock> und Ändern eines der <xref:System.Windows.Controls.TextBlock> sichtbar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="398bf-106">`stackPanel` is the <xref:System.Windows.FrameworkElement.Name%2A> of the root <xref:System.Windows.FrameworkElement> being searched, and the example method then visually indicates the found element by casting it as <xref:System.Windows.Controls.TextBlock> and changing one of the <xref:System.Windows.Controls.TextBlock> visible [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] properties.</span></span>  
   
- [!code-csharp[FEFindName#Find](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEFindName/CSharp/default.xaml.cs#find)]
- [!code-vb[FEFindName#Find](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FEFindName/VisualBasic/default.xaml.vb#find)]
+ [!code-csharp[FEFindName#Find](~/samples/snippets/csharp/VS_Snippets_Wpf/FEFindName/CSharp/default.xaml.cs#find)]
+ [!code-vb[FEFindName#Find](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FEFindName/VisualBasic/default.xaml.vb#find)]

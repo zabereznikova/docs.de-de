@@ -7,25 +7,25 @@ helpviewer_keywords:
 - ListBox control [WPF], how-to topics
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
-ms.openlocfilehash: f4d6b8d9ac3b092e18b87dbf9e8965bfdb064ae0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 0895b80f230d2c67ab0723c7935ae20443327a41
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746979"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363426"
 ---
-# <a name="listbox-how-to-topics"></a><span data-ttu-id="e4480-102">Gewusst-wie-Themen zu ListBox</span><span class="sxs-lookup"><span data-stu-id="e4480-102">ListBox How-to Topics</span></span>
-<span data-ttu-id="e4480-103">Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.ListBox> -Steuerelement ausgewählt werden Listen von Elementen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e4480-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
+# <a name="listbox-how-to-topics"></a><span data-ttu-id="b3077-102">Gewusst-wie-Themen zu ListBox</span><span class="sxs-lookup"><span data-stu-id="b3077-102">ListBox How-to Topics</span></span>
+<span data-ttu-id="b3077-103">Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.ListBox> -Steuerelement ausgewählt werden Listen von Elementen angezeigt.</span><span class="sxs-lookup"><span data-stu-id="b3077-103">The topics in this section describe how to use the <xref:System.Windows.Controls.ListBox> control to display selectable lists of items.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e4480-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="e4480-104">In This Section</span></span>  
- [<span data-ttu-id="e4480-105">Binden eines Listenfelds an Daten</span><span class="sxs-lookup"><span data-stu-id="e4480-105">Bind a ListBox to Data</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
- [<span data-ttu-id="e4480-106">Abrufen eines ListBoxItem</span><span class="sxs-lookup"><span data-stu-id="e4480-106">Get a ListBoxItem</span></span>](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- <span data-ttu-id="e4480-107">[Vorgehensweise: Hinzufügen von Daten zu einem ItemsControl-Element](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="e4480-107">[How to: Add Data to an ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span></span>  
- [<span data-ttu-id="e4480-108">Verbessern der Bildlaufleistung eines Listenfelds</span><span class="sxs-lookup"><span data-stu-id="e4480-108">Improve the Scrolling Performance of a ListBox</span></span>](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b3077-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="b3077-104">In This Section</span></span>  
+ [<span data-ttu-id="b3077-105">Binden eines Listenfelds an Daten</span><span class="sxs-lookup"><span data-stu-id="b3077-105">Bind a ListBox to Data</span></span>](how-to-bind-a-listbox-to-data.md)  
+ [<span data-ttu-id="b3077-106">Abrufen eines ListBoxItem</span><span class="sxs-lookup"><span data-stu-id="b3077-106">Get a ListBoxItem</span></span>](how-to-get-a-listboxitem.md)  
+ <span data-ttu-id="b3077-107">[Vorgehensweise: Hinzufügen von Daten zu einem ItemsControl-Element](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="b3077-107">[How to: Add Data to an ItemsControl](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms743602(v=vs.90))</span></span>  
+ [<span data-ttu-id="b3077-108">Verbessern der Bildlaufleistung eines Listenfelds</span><span class="sxs-lookup"><span data-stu-id="b3077-108">Improve the Scrolling Performance of a ListBox</span></span>](how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="e4480-109">Referenz</span><span class="sxs-lookup"><span data-stu-id="e4480-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="b3077-109">Referenz</span><span class="sxs-lookup"><span data-stu-id="b3077-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   
  <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="e4480-110">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="e4480-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="b3077-110">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="b3077-110">Related Sections</span></span>

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
-ms.openlocfilehash: fea698dd137a0e5639e4777b85284beaf83ace1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543526"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370965"
 ---
-# <a name="events-how-to-topics"></a><span data-ttu-id="50f2a-102">Gewusst-wie-Themen zu Ereignissen</span><span class="sxs-lookup"><span data-stu-id="50f2a-102">Events How-to Topics</span></span>
-<span data-ttu-id="50f2a-103">Die Themen in diesem Abschnitt wird beschrieben, wie Ereignisse in WPF verwendet.</span><span class="sxs-lookup"><span data-stu-id="50f2a-103">The topics in this section describe how to use events in WPF.</span></span>  
+# <a name="events-how-to-topics"></a><span data-ttu-id="13f7a-102">Gewusst-wie-Themen zu Ereignissen</span><span class="sxs-lookup"><span data-stu-id="13f7a-102">Events How-to Topics</span></span>
+<span data-ttu-id="13f7a-103">Die Themen in diesem Abschnitt wird beschrieben, wie Sie Ereignisse in WPF verwenden.</span><span class="sxs-lookup"><span data-stu-id="13f7a-103">The topics in this section describe how to use events in WPF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="50f2a-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="50f2a-104">In This Section</span></span>  
- [<span data-ttu-id="50f2a-105">Hinzufügen eines Ereignishandlers mithilfe von Code</span><span class="sxs-lookup"><span data-stu-id="50f2a-105">Add an Event Handler Using Code</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [<span data-ttu-id="50f2a-106">Behandeln eines Routingereignisses</span><span class="sxs-lookup"><span data-stu-id="50f2a-106">Handle a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [<span data-ttu-id="50f2a-107">Erstellen eines benutzerdefinierten Routingereignisses</span><span class="sxs-lookup"><span data-stu-id="50f2a-107">Create a Custom Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [<span data-ttu-id="50f2a-108">Suchen des Quellelements in einem Ereignishandler</span><span class="sxs-lookup"><span data-stu-id="50f2a-108">Find the Source Element in an Event Handler</span></span>](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [<span data-ttu-id="50f2a-109">Hinzufügen einer Klassenbehandlung für ein Routingereignis</span><span class="sxs-lookup"><span data-stu-id="50f2a-109">Add Class Handling for a Routed Event</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+## <a name="in-this-section"></a><span data-ttu-id="13f7a-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="13f7a-104">In This Section</span></span>  
+ [<span data-ttu-id="13f7a-105">Hinzufügen eines Ereignishandlers mithilfe von Code</span><span class="sxs-lookup"><span data-stu-id="13f7a-105">Add an Event Handler Using Code</span></span>](how-to-add-an-event-handler-using-code.md)  
+ [<span data-ttu-id="13f7a-106">Behandeln eines Routingereignisses</span><span class="sxs-lookup"><span data-stu-id="13f7a-106">Handle a Routed Event</span></span>](how-to-handle-a-routed-event.md)  
+ [<span data-ttu-id="13f7a-107">Erstellen eines benutzerdefinierten Routingereignisses</span><span class="sxs-lookup"><span data-stu-id="13f7a-107">Create a Custom Routed Event</span></span>](how-to-create-a-custom-routed-event.md)  
+ [<span data-ttu-id="13f7a-108">Suchen des Quellelements in einem Ereignishandler</span><span class="sxs-lookup"><span data-stu-id="13f7a-108">Find the Source Element in an Event Handler</span></span>](how-to-find-the-source-element-in-an-event-handler.md)  
+ [<span data-ttu-id="13f7a-109">Hinzufügen einer Klassenbehandlung für ein Routingereignis</span><span class="sxs-lookup"><span data-stu-id="13f7a-109">Add Class Handling for a Routed Event</span></span>](how-to-add-class-handling-for-a-routed-event.md)  
   
-## <a name="reference"></a><span data-ttu-id="50f2a-110">Referenz</span><span class="sxs-lookup"><span data-stu-id="50f2a-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="13f7a-110">Referenz</span><span class="sxs-lookup"><span data-stu-id="13f7a-110">Reference</span></span>  
  <xref:System.Windows.RoutedEvent>  
   
  <xref:System.Windows.EventManager>  
   
  <xref:System.Windows.RoutingStrategy>  
   
-## <a name="related-sections"></a><span data-ttu-id="50f2a-111">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="50f2a-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="13f7a-111">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="13f7a-111">Related Sections</span></span>

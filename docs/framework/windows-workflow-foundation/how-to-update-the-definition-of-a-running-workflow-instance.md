@@ -5,65 +5,65 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: da8b6adeede1fddf39c818568cfd884c3add317f
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 1f5980ed360e8dfb4aaac92e1e5e7236ffb9f409
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123838"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376592"
 ---
-# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a><span data-ttu-id="0edc5-102">Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz</span><span class="sxs-lookup"><span data-stu-id="0edc5-102">How to: Update the Definition of a Running Workflow Instance</span></span>
-<span data-ttu-id="0edc5-103">Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren,</span><span class="sxs-lookup"><span data-stu-id="0edc5-103">Dynamic update provides a mechanism for workflow application developers to update the workflow definition of a persisted workflow instance.</span></span> <span data-ttu-id="0edc5-104">beispielsweise um eine Fehlerkorrektur oder neue Anforderungen zu implementieren oder um unerwartete Änderungen zu berücksichtigen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-104">The required change can be to implement a bug fix, new requirements, or to accommodate unexpected changes.</span></span> <span data-ttu-id="0edc5-105">Dieser Schritt in diesem Tutorial wird veranschaulicht, wie dynamische Updates verwenden, um persistente Instanzen zu ändern. die `v1` schätzen von Zahlen Workflow entsprechend der neue Funktionen, eingeführt in [Vorgehensweise: Hosten mehrerer Workflowversionen einen Workflow Seite-an-Seite ](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="0edc5-105">This step in the tutorial demonstrates how to use dynamic update to modify  persisted instances of the `v1` number guessing workflow to match the new functionality introduced in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a><span data-ttu-id="2be16-102">Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz</span><span class="sxs-lookup"><span data-stu-id="2be16-102">How to: Update the Definition of a Running Workflow Instance</span></span>
+<span data-ttu-id="2be16-103">Dynamische Updates bieten Entwicklern von Workflowanwendungen die Möglichkeit, die Workflowdefinition einer persistenten Workflowinstanz zu aktualisieren,</span><span class="sxs-lookup"><span data-stu-id="2be16-103">Dynamic update provides a mechanism for workflow application developers to update the workflow definition of a persisted workflow instance.</span></span> <span data-ttu-id="2be16-104">beispielsweise um eine Fehlerkorrektur oder neue Anforderungen zu implementieren oder um unerwartete Änderungen zu berücksichtigen.</span><span class="sxs-lookup"><span data-stu-id="2be16-104">The required change can be to implement a bug fix, new requirements, or to accommodate unexpected changes.</span></span> <span data-ttu-id="2be16-105">Dieser Schritt in diesem Tutorial wird veranschaulicht, wie dynamische Updates verwenden, um persistente Instanzen zu ändern. die `v1` schätzen von Zahlen Workflow entsprechend der neue Funktionen, eingeführt in [Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="2be16-105">This step in the tutorial demonstrates how to use dynamic update to modify  persisted instances of the `v1` number guessing workflow to match the new functionality introduced in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="0edc5-106">Um den download einer vervollständigten Version oder eine Videodemonstration des Lernprogramms anzuzeigen, finden Sie unter [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="0edc5-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
+>  <span data-ttu-id="2be16-106">Um den download einer vervollständigten Version oder eine Videodemonstration des Lernprogramms anzuzeigen, finden Sie unter [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span><span class="sxs-lookup"><span data-stu-id="2be16-106">To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).</span></span>  
   
-## <a name="in-this-topic"></a><span data-ttu-id="0edc5-107">In diesem Thema</span><span class="sxs-lookup"><span data-stu-id="0edc5-107">In this topic</span></span>  
+## <a name="in-this-topic"></a><span data-ttu-id="2be16-107">In diesem Thema</span><span class="sxs-lookup"><span data-stu-id="2be16-107">In this topic</span></span>  
   
--   [<span data-ttu-id="0edc5-108">Um das CreateUpdateMaps-Projekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-108">To create the CreateUpdateMaps project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
+-   [<span data-ttu-id="2be16-108">Um das CreateUpdateMaps-Projekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2be16-108">To create the CreateUpdateMaps project</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
   
--   [<span data-ttu-id="0edc5-109">So aktualisieren Sie StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="0edc5-109">To update StateMachineNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)  
+-   [<span data-ttu-id="2be16-109">So aktualisieren Sie StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="2be16-109">To update StateMachineNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)  
   
--   [<span data-ttu-id="0edc5-110">So aktualisieren Sie FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="0edc5-110">To update FlowchartNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)  
+-   [<span data-ttu-id="2be16-110">So aktualisieren Sie FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="2be16-110">To update FlowchartNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)  
   
--   [<span data-ttu-id="0edc5-111">So aktualisieren Sie SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="0edc5-111">To update SequentialNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)  
+-   [<span data-ttu-id="2be16-111">So aktualisieren Sie SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="2be16-111">To update SequentialNumberGuessWorkflow</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)  
   
--   [<span data-ttu-id="0edc5-112">So erstellen und führen die CreateUpdateMaps-Anwendung</span><span class="sxs-lookup"><span data-stu-id="0edc5-112">To build and run the CreateUpdateMaps application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
+-   [<span data-ttu-id="2be16-112">So erstellen und führen die CreateUpdateMaps-Anwendung</span><span class="sxs-lookup"><span data-stu-id="2be16-112">To build and run the CreateUpdateMaps application</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
   
--   [<span data-ttu-id="0edc5-113">Um die aktualisierte Workflowassembly zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-113">To build the updated workflow assembly</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
+-   [<span data-ttu-id="2be16-113">Um die aktualisierte Workflowassembly zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2be16-113">To build the updated workflow assembly</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
   
--   [<span data-ttu-id="0edc5-114">So aktualisieren Sie WorkflowVersionMap anhand der neuen Versionen</span><span class="sxs-lookup"><span data-stu-id="0edc5-114">To update WorkflowVersionMap with the new versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
+-   [<span data-ttu-id="2be16-114">So aktualisieren Sie WorkflowVersionMap anhand der neuen Versionen</span><span class="sxs-lookup"><span data-stu-id="2be16-114">To update WorkflowVersionMap with the new versions</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [<span data-ttu-id="0edc5-115">Die dynamische Updates</span><span class="sxs-lookup"><span data-stu-id="0edc5-115">To apply the dynamic updates</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
+-   [<span data-ttu-id="2be16-115">Die dynamische Updates</span><span class="sxs-lookup"><span data-stu-id="2be16-115">To apply the dynamic updates</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
   
--   [<span data-ttu-id="0edc5-116">Zum Ausführen der Anwendung mit der aktualisierten workflows</span><span class="sxs-lookup"><span data-stu-id="0edc5-116">To run the application with the updated workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
+-   [<span data-ttu-id="2be16-116">Zum Ausführen der Anwendung mit der aktualisierten workflows</span><span class="sxs-lookup"><span data-stu-id="2be16-116">To run the application with the updated workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
   
--   [<span data-ttu-id="0edc5-117">Zum Starten von Vorgängerversionen der Workflows zu aktivieren</span><span class="sxs-lookup"><span data-stu-id="0edc5-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
+-   [<span data-ttu-id="2be16-117">Zum Starten von Vorgängerversionen der Workflows zu aktivieren</span><span class="sxs-lookup"><span data-stu-id="2be16-117">To enable starting previous versions of the workflows</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <a name="BKMK_CreateProject"></a> <span data-ttu-id="0edc5-118">Um das CreateUpdateMaps-Projekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-118">To create the CreateUpdateMaps project</span></span>  
+### <a name="BKMK_CreateProject"></a> <span data-ttu-id="2be16-118">Um das CreateUpdateMaps-Projekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2be16-118">To create the CreateUpdateMaps project</span></span>  
   
-1.  <span data-ttu-id="0edc5-119">Mit der rechten Maustaste **WF45GettingStartedTutorial** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Projekt**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
+1.  <span data-ttu-id="2be16-119">Mit der rechten Maustaste **WF45GettingStartedTutorial** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Projekt**.</span><span class="sxs-lookup"><span data-stu-id="2be16-119">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>  
   
-2.  <span data-ttu-id="0edc5-120">In der **installiert** Knoten **Visual C#-**, **Windows** (oder **Visual Basic**, **Windows**).</span><span class="sxs-lookup"><span data-stu-id="0edc5-120">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>  
+2.  <span data-ttu-id="2be16-120">In der **installiert** Knoten **Visual C#-**, **Windows** (oder **Visual Basic**, **Windows**).</span><span class="sxs-lookup"><span data-stu-id="2be16-120">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="0edc5-121">Je nachdem, welche Programmiersprache als die primäre Sprache in Visual Studio konfiguriert ist, befindet sich der Knoten **Visual C#** oder **Visual Basic** möglicherweise nicht unter dem Knoten **Andere Sprachen** im Knoten **Installiert** .</span><span class="sxs-lookup"><span data-stu-id="0edc5-121">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
+    >  <span data-ttu-id="2be16-121">Je nachdem, welche Programmiersprache als die primäre Sprache in Visual Studio konfiguriert ist, befindet sich der Knoten **Visual C#** oder **Visual Basic** möglicherweise nicht unter dem Knoten **Andere Sprachen** im Knoten **Installiert** .</span><span class="sxs-lookup"><span data-stu-id="2be16-121">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
 
-     <span data-ttu-id="0edc5-122">Stellen Sie sicher, dass in der Dropdownliste mit der .NET Framework-Version **.NET Framework 4.5** ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="0edc5-122">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="0edc5-123">Wählen Sie **Konsolenanwendung** aus der **Windows** Liste.</span><span class="sxs-lookup"><span data-stu-id="0edc5-123">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="0edc5-124">Typ **CreateUpdateMaps** in die **Namen** ein, und klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-124">Type **CreateUpdateMaps** into the **Name** box and click **OK**.</span></span>
+     <span data-ttu-id="2be16-122">Stellen Sie sicher, dass in der Dropdownliste mit der .NET Framework-Version **.NET Framework 4.5** ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="2be16-122">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="2be16-123">Wählen Sie **Konsolenanwendung** aus der **Windows** Liste.</span><span class="sxs-lookup"><span data-stu-id="2be16-123">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="2be16-124">Typ **CreateUpdateMaps** in die **Namen** ein, und klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="2be16-124">Type **CreateUpdateMaps** into the **Name** box and click **OK**.</span></span>
 
-3.  <span data-ttu-id="0edc5-125">Mit der rechten Maustaste **CreateUpdateMaps** in **Projektmappen-Explorer** , und wählen Sie **Verweis hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-125">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Add Reference**.</span></span>
+3.  <span data-ttu-id="2be16-125">Mit der rechten Maustaste **CreateUpdateMaps** in **Projektmappen-Explorer** , und wählen Sie **Verweis hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="2be16-125">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Add Reference**.</span></span>
 
-4.  <span data-ttu-id="0edc5-126">Wählen Sie **Framework** aus der **Assemblys** Knoten in der **Verweis hinzufügen** Liste.</span><span class="sxs-lookup"><span data-stu-id="0edc5-126">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="0edc5-127">Typ **System.Activities** in die **Assemblys suchen** Feld, um die Assemblys gefiltert, und stellen die gewünschten Verweise einfacher auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-127">Type **System.Activities** into the **Search Assemblies** box to filter the assemblies and make the desired references easier to select.</span></span>
+4.  <span data-ttu-id="2be16-126">Wählen Sie **Framework** aus der **Assemblys** Knoten in der **Verweis hinzufügen** Liste.</span><span class="sxs-lookup"><span data-stu-id="2be16-126">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="2be16-127">Typ **System.Activities** in die **Assemblys suchen** Feld, um die Assemblys gefiltert, und stellen die gewünschten Verweise einfacher auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="2be16-127">Type **System.Activities** into the **Search Assemblies** box to filter the assemblies and make the desired references easier to select.</span></span>
 
-5.  <span data-ttu-id="0edc5-128">Aktivieren Sie das Kontrollkästchen neben **System.Activities** aus der **Suchergebnisse** Liste.</span><span class="sxs-lookup"><span data-stu-id="0edc5-128">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
+5.  <span data-ttu-id="2be16-128">Aktivieren Sie das Kontrollkästchen neben **System.Activities** aus der **Suchergebnisse** Liste.</span><span class="sxs-lookup"><span data-stu-id="2be16-128">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
 
-6.  <span data-ttu-id="0edc5-129">Typ **Serialisierung** in die **Assemblys suchen** ein, und aktivieren Sie das Kontrollkästchen neben **System.Runtime.Serialization** aus der **Suchergebnisse**  Liste.</span><span class="sxs-lookup"><span data-stu-id="0edc5-129">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
+6.  <span data-ttu-id="2be16-129">Typ **Serialisierung** in die **Assemblys suchen** ein, und aktivieren Sie das Kontrollkästchen neben **System.Runtime.Serialization** aus der **Suchergebnisse**  Liste.</span><span class="sxs-lookup"><span data-stu-id="2be16-129">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
 
-7.  <span data-ttu-id="0edc5-130">Typ **"System.xaml"** in die **Assemblys suchen** ein, und aktivieren Sie das Kontrollkästchen neben **"System.xaml"** aus der **Suchergebnisse** Liste.</span><span class="sxs-lookup"><span data-stu-id="0edc5-130">Type **System.Xaml** into the **Search Assemblies** box, and check the checkbox beside **System.Xaml** from the **Search Results** list.</span></span>
+7.  <span data-ttu-id="2be16-130">Typ **"System.xaml"** in die **Assemblys suchen** ein, und aktivieren Sie das Kontrollkästchen neben **"System.xaml"** aus der **Suchergebnisse** Liste.</span><span class="sxs-lookup"><span data-stu-id="2be16-130">Type **System.Xaml** into the **Search Assemblies** box, and check the checkbox beside **System.Xaml** from the **Search Results** list.</span></span>
 
-8.  <span data-ttu-id="0edc5-131">Klicken Sie auf **OK** schließen **Verweis-Manager** und die Verweise hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-131">Click **OK** to close **Reference Manager** and add the references.</span></span>
+8.  <span data-ttu-id="2be16-131">Klicken Sie auf **OK** schließen **Verweis-Manager** und die Verweise hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="2be16-131">Click **OK** to close **Reference Manager** and add the references.</span></span>
 
-9. <span data-ttu-id="0edc5-132">Fügen Sie die folgenden `using`-Anweisungen (oder `Imports`-Anweisungen) mit den anderen `using`-Anweisungen (oder `Imports`-Anweisungen) am Anfang der Datei hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-132">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
+9. <span data-ttu-id="2be16-132">Fügen Sie die folgenden `using`-Anweisungen (oder `Imports`-Anweisungen) mit den anderen `using`-Anweisungen (oder `Imports`-Anweisungen) am Anfang der Datei hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-132">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
 
     ```vb
     Imports System.Activities
@@ -89,7 +89,7 @@ ms.locfileid: "49123838"
     using Microsoft.CSharp.Activities;
     ```
 
-10. <span data-ttu-id="0edc5-133">Fügen Sie der `Program`-Klasse (bzw. `Module1`) die folgenden beiden Zeichenfolgenmember hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-133">Add the following two string members to the `Program` class (or `Module1`).</span></span>
+10. <span data-ttu-id="2be16-133">Fügen Sie der `Program`-Klasse (bzw. `Module1`) die folgenden beiden Zeichenfolgenmember hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-133">Add the following two string members to the `Program` class (or `Module1`).</span></span>
 
     ```vb
     Const mapPath = "..\..\..\PreviousVersions"
@@ -101,7 +101,7 @@ ms.locfileid: "49123838"
     const string definitionPath = @"..\..\..\NumberGuessWorkflowActivities_du";
     ```
 
-11. <span data-ttu-id="0edc5-134">Fügen Sie der `StartUpdate`-Klasse (bzw. `Program`) die folgende `Module1`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-134">Add the following `StartUpdate` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="0edc5-135">Durch diese Methode wird die angegebene XAML-Workflowdefinition in einen `ActivityBuilder` geladen und dann `DynamicUpdate.PrepareForUpdate` aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-135">This method loads up the specified xaml workflow definition into an `ActivityBuilder`, and then calls `DynamicUpdate.PrepareForUpdate`.</span></span> <span data-ttu-id="0edc5-136">`PrepareForUpdate` erstellt eine Kopie der Workflowdefinition in `ActivityBuilder`.</span><span class="sxs-lookup"><span data-stu-id="0edc5-136">`PrepareForUpdate` makes a copy of the workflow definition inside the `ActivityBuilder`.</span></span> <span data-ttu-id="0edc5-137">Nachdem die Workflowdefinition geändert wurde, wird diese Kopie zusammen mit der geänderten Workflowdefinition verwendet, um die Updatezuordnung zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-137">After the workflow definition is modified, this copy is used along with the modified workflow definition to create the update map.</span></span>
+11. <span data-ttu-id="2be16-134">Fügen Sie der `StartUpdate`-Klasse (bzw. `Program`) die folgende `Module1`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-134">Add the following `StartUpdate` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="2be16-135">Durch diese Methode wird die angegebene XAML-Workflowdefinition in einen `ActivityBuilder` geladen und dann `DynamicUpdate.PrepareForUpdate` aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="2be16-135">This method loads up the specified xaml workflow definition into an `ActivityBuilder`, and then calls `DynamicUpdate.PrepareForUpdate`.</span></span> <span data-ttu-id="2be16-136">`PrepareForUpdate` erstellt eine Kopie der Workflowdefinition in `ActivityBuilder`.</span><span class="sxs-lookup"><span data-stu-id="2be16-136">`PrepareForUpdate` makes a copy of the workflow definition inside the `ActivityBuilder`.</span></span> <span data-ttu-id="2be16-137">Nachdem die Workflowdefinition geändert wurde, wird diese Kopie zusammen mit der geänderten Workflowdefinition verwendet, um die Updatezuordnung zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2be16-137">After the workflow definition is modified, this copy is used along with the modified workflow definition to create the update map.</span></span>
 
     ```vb
     Private Function StartUpdate(name As String) As ActivityBuilder
@@ -165,7 +165,7 @@ ms.locfileid: "49123838"
     }
     ```
 
-12. <span data-ttu-id="0edc5-138">Als Nächstes fügen Sie der `CreateUpdateMethod`-Klasse (bzw. `Program`) die folgende `Module1` hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-138">Next, add the following `CreateUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="0edc5-139">Dadurch wird durch Aufrufen von DynamicUpdateServices.CreateUpdateMap eine dynamische Updatezuordnung erstellt und unter dem angegebenen Namen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="0edc5-139">This creates a dynamic update map by calling DynamicUpdateServices.CreateUpdateMap, and then saves the update map using the specified name.</span></span> <span data-ttu-id="0edc5-140">Diese Updatezuordnung enthält die Informationen, die von der Workflowlaufzeit zur Aktualisierung einer persistenten Workflowinstanz benötigt werden, die mithilfe der ursprünglichen, in `ActivityBuilder` enthaltenen Workflowdefinition gestartet wurde. Die Instanz kann so mithilfe der aktualisierten Workflowdefinition abgeschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="0edc5-140">This update map contains the information needed by the workflow runtime to update a persisted workflow instance that was started using the original workflow definition contained in the `ActivityBuilder` so that it completes using the updated workflow definition.</span></span>
+12. <span data-ttu-id="2be16-138">Als Nächstes fügen Sie der `CreateUpdateMethod`-Klasse (bzw. `Program`) die folgende `Module1` hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-138">Next, add the following `CreateUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="2be16-139">Dadurch wird durch Aufrufen von DynamicUpdateServices.CreateUpdateMap eine dynamische Updatezuordnung erstellt und unter dem angegebenen Namen gespeichert.</span><span class="sxs-lookup"><span data-stu-id="2be16-139">This creates a dynamic update map by calling DynamicUpdateServices.CreateUpdateMap, and then saves the update map using the specified name.</span></span> <span data-ttu-id="2be16-140">Diese Updatezuordnung enthält die Informationen, die von der Workflowlaufzeit zur Aktualisierung einer persistenten Workflowinstanz benötigt werden, die mithilfe der ursprünglichen, in `ActivityBuilder` enthaltenen Workflowdefinition gestartet wurde. Die Instanz kann so mithilfe der aktualisierten Workflowdefinition abgeschlossen werden.</span><span class="sxs-lookup"><span data-stu-id="2be16-140">This update map contains the information needed by the workflow runtime to update a persisted workflow instance that was started using the original workflow definition contained in the `ActivityBuilder` so that it completes using the updated workflow definition.</span></span>
 
     ```vb
     Private Sub CreateUpdateMaps(wf As ActivityBuilder, name As String)
@@ -199,7 +199,7 @@ ms.locfileid: "49123838"
     }
     ```
 
-13. <span data-ttu-id="0edc5-141">Fügen Sie der `SaveUpdatedDefinition`-Klasse (bzw. `Program`) die folgende `Module1`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-141">Add the following `SaveUpdatedDefinition` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="0edc5-142">Durch diese Methode wird die aktualisierte Workflowdefinition gespeichert, nachdem die Updatezuordnung erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="0edc5-142">This method saves the updated workflow definition once the update map is created.</span></span>
+13. <span data-ttu-id="2be16-141">Fügen Sie der `SaveUpdatedDefinition`-Klasse (bzw. `Program`) die folgende `Module1`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-141">Add the following `SaveUpdatedDefinition` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="2be16-142">Durch diese Methode wird die aktualisierte Workflowdefinition gespeichert, nachdem die Updatezuordnung erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="2be16-142">This method saves the updated workflow definition once the update map is created.</span></span>
 
     ```vb
     Private Sub SaveUpdatedDefinition(wf As ActivityBuilder, name As String)
@@ -224,9 +224,9 @@ ms.locfileid: "49123838"
     }
     ```
 
-###  <a name="BKMK_StateMachine"></a> <span data-ttu-id="0edc5-143">So aktualisieren Sie StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="0edc5-143">To update StateMachineNumberGuessWorkflow</span></span>
+### <a name="BKMK_StateMachine"></a> <span data-ttu-id="2be16-143">So aktualisieren Sie StateMachineNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="2be16-143">To update StateMachineNumberGuessWorkflow</span></span>
 
-1.  <span data-ttu-id="0edc5-144">Fügen Sie der `CreateStateMachineUpdateMap`-Klasse (bzw. `Program`) eine `Module1` hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>
+1.  <span data-ttu-id="2be16-144">Fügen Sie der `CreateStateMachineUpdateMap`-Klasse (bzw. `Program`) eine `Module1` hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-144">Add a `CreateStateMachineUpdateMap` to the `Program` class (or `Module1`).</span></span>
 
     ```vb
     Private Sub CreateStateMachineUpdateMap()
@@ -240,7 +240,7 @@ ms.locfileid: "49123838"
     }
     ```
 
-2.  <span data-ttu-id="0edc5-145">Rufen Sie `StartUpdate` auf, und rufen Sie anschließend einen Verweis auf die `StateMachine`-Stammaktivität des Workflows ab.</span><span class="sxs-lookup"><span data-stu-id="0edc5-145">Make a call to `StartUpdate` and then get a reference to the root `StateMachine` activity of the workflow.</span></span>
+2.  <span data-ttu-id="2be16-145">Rufen Sie `StartUpdate` auf, und rufen Sie anschließend einen Verweis auf die `StateMachine`-Stammaktivität des Workflows ab.</span><span class="sxs-lookup"><span data-stu-id="2be16-145">Make a call to `StartUpdate` and then get a reference to the root `StateMachine` activity of the workflow.</span></span>
 
     ```vb
     Dim wf As ActivityBuilder = StartUpdate("StateMachineNumberGuessWorkflow.xaml")
@@ -256,7 +256,7 @@ ms.locfileid: "49123838"
     StateMachine sm = wf.Implementation as StateMachine;
     ```
 
-3.  <span data-ttu-id="0edc5-146">Als Nächstes aktualisieren Sie die Ausdrücke der beiden `WriteLine` Aktivitäten, die anzeigen, ob der Schätzwert des Benutzers ist zu hoch oder zu niedrig, damit diese übereinstimmen, dass die Updates im [Vorgehensweise: Hosten mehrerer Workflowversionen einen Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="0edc5-146">Next, update the expressions of the two `WriteLine` activities that display whether the user's guess is too high or too low so that they match the updates made in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+3.  <span data-ttu-id="2be16-146">Als Nächstes aktualisieren Sie die Ausdrücke der beiden `WriteLine` Aktivitäten, die anzeigen, ob der Schätzwert des Benutzers ist zu hoch oder zu niedrig, damit diese übereinstimmen, dass die Updates im [Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="2be16-146">Next, update the expressions of the two `WriteLine` activities that display whether the user's guess is too high or too low so that they match the updates made in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
 
     ```vb
     'Update the Text of the two WriteLine activities that write the
@@ -288,7 +288,7 @@ ms.locfileid: "49123838"
     tooHigh.Text = new CSharpValue<string>("Guess.ToString() + \" is too high.\"");
     ```
 
-4.  <span data-ttu-id="0edc5-147">Als Nächstes fügen Sie die neue `WriteLine`-Aktivität hinzu, durch die die abschließende Meldung angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="0edc5-147">Next, add the new `WriteLine` activity that displays the closing message.</span></span>
+4.  <span data-ttu-id="2be16-147">Als Nächstes fügen Sie die neue `WriteLine`-Aktivität hinzu, durch die die abschließende Meldung angezeigt wird.</span><span class="sxs-lookup"><span data-stu-id="2be16-147">Next, add the new `WriteLine` activity that displays the closing message.</span></span>
 
     ```vb
     'Create the new WriteLine that displays the closing message.
@@ -317,7 +317,7 @@ ms.locfileid: "49123838"
     sm.States[1].Transitions[0].Action = wl;
     ```
 
-5.  <span data-ttu-id="0edc5-148">Nach der Aktualisierung des Workflows rufen Sie `CreateUpdateMaps` und `SaveUpdatedDefinition` auf.</span><span class="sxs-lookup"><span data-stu-id="0edc5-148">After the workflow is updated, call `CreateUpdateMaps` and `SaveUpdatedDefinition`.</span></span> <span data-ttu-id="0edc5-149">Durch `CreateUpdateMaps` wird `DynamicUpdateMap` erstellt und gespeichert, und durch `SaveUpdatedDefinition` wird die aktualisierte Workflowdefinition gespeichert.</span><span class="sxs-lookup"><span data-stu-id="0edc5-149">`CreateUpdateMaps` creates and saves the `DynamicUpdateMap`, and `SaveUpdatedDefinition` saves the updated workflow definition.</span></span>
+5.  <span data-ttu-id="2be16-148">Nach der Aktualisierung des Workflows rufen Sie `CreateUpdateMaps` und `SaveUpdatedDefinition` auf.</span><span class="sxs-lookup"><span data-stu-id="2be16-148">After the workflow is updated, call `CreateUpdateMaps` and `SaveUpdatedDefinition`.</span></span> <span data-ttu-id="2be16-149">Durch `CreateUpdateMaps` wird `DynamicUpdateMap` erstellt und gespeichert, und durch `SaveUpdatedDefinition` wird die aktualisierte Workflowdefinition gespeichert.</span><span class="sxs-lookup"><span data-stu-id="2be16-149">`CreateUpdateMaps` creates and saves the `DynamicUpdateMap`, and `SaveUpdatedDefinition` saves the updated workflow definition.</span></span>
 
     ```vb
     'Create the update map.
@@ -335,7 +335,7 @@ ms.locfileid: "49123838"
     SaveUpdatedDefinition(wf, "StateMachineNumberGuessWorkflow_du.xaml");
     ```
 
-     <span data-ttu-id="0edc5-150">Im folgenden Beispiel ist die abgeschlossene `CreateStateMachineUpdateMap`-Methode dargestellt.</span><span class="sxs-lookup"><span data-stu-id="0edc5-150">The following example is the completed `CreateStateMachineUpdateMap` method.</span></span>
+     <span data-ttu-id="2be16-150">Im folgenden Beispiel ist die abgeschlossene `CreateStateMachineUpdateMap`-Methode dargestellt.</span><span class="sxs-lookup"><span data-stu-id="2be16-150">The following example is the completed `CreateStateMachineUpdateMap` method.</span></span>
 
     ```vb
     Private Sub CreateStateMachineUpdateMap()
@@ -417,9 +417,9 @@ ms.locfileid: "49123838"
     }
     ```
 
-###  <a name="BKMK_Flowchart"></a> <span data-ttu-id="0edc5-151">So aktualisieren Sie FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="0edc5-151">To update FlowchartNumberGuessWorkflow</span></span>
+### <a name="BKMK_Flowchart"></a> <span data-ttu-id="2be16-151">So aktualisieren Sie FlowchartNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="2be16-151">To update FlowchartNumberGuessWorkflow</span></span>
 
-1.  <span data-ttu-id="0edc5-152">Fügen Sie der `CreateFlowchartUpdateMethod`-Klasse (bzw. `Program`) die folgende `Module1` hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="0edc5-153">Diese Methode ist vergleichbar mit `CreateStateMachineUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="0edc5-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="0edc5-154">Sie beginnt mit einem Aufruf von `StartUpdate`, aktualisiert die Definition des Flussdiagrammworkflows und endet mit dem Speichern der Updatezuordnung und der aktualisierten Workflowdefinition.</span><span class="sxs-lookup"><span data-stu-id="0edc5-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
+1.  <span data-ttu-id="2be16-152">Fügen Sie der `CreateFlowchartUpdateMethod`-Klasse (bzw. `Program`) die folgende `Module1` hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-152">Add the following `CreateFlowchartUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="2be16-153">Diese Methode ist vergleichbar mit `CreateStateMachineUpdateMap`.</span><span class="sxs-lookup"><span data-stu-id="2be16-153">This method is similar to `CreateStateMachineUpdateMap`.</span></span> <span data-ttu-id="2be16-154">Sie beginnt mit einem Aufruf von `StartUpdate`, aktualisiert die Definition des Flussdiagrammworkflows und endet mit dem Speichern der Updatezuordnung und der aktualisierten Workflowdefinition.</span><span class="sxs-lookup"><span data-stu-id="2be16-154">It starts with a call to `StartUpdate`, updates the flowchart workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
 
     ```vb
     Private Sub CreateFlowchartUpdateMap()
@@ -531,9 +531,9 @@ ms.locfileid: "49123838"
     }
     ```
 
-###  <a name="BKMK_Sequential"></a> <span data-ttu-id="0edc5-155">So aktualisieren Sie SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="0edc5-155">To update SequentialNumberGuessWorkflow</span></span>
+### <a name="BKMK_Sequential"></a> <span data-ttu-id="2be16-155">So aktualisieren Sie SequentialNumberGuessWorkflow</span><span class="sxs-lookup"><span data-stu-id="2be16-155">To update SequentialNumberGuessWorkflow</span></span>
 
-1.  <span data-ttu-id="0edc5-156">Fügen Sie der `CreateSequentialUpdateMethod`-Klasse (bzw. `Program`) die folgende `Module1` hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="0edc5-157">Diese Methode ist vergleichbar mit den anderen beiden Methoden.</span><span class="sxs-lookup"><span data-stu-id="0edc5-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="0edc5-158">Sie beginnt mit einem Aufruf von `StartUpdate`, aktualisiert die Definition des sequenziellen Workflows und endet mit dem Speichern der Updatezuordnung und der aktualisierten Workflowdefinition.</span><span class="sxs-lookup"><span data-stu-id="0edc5-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
+1.  <span data-ttu-id="2be16-156">Fügen Sie der `CreateSequentialUpdateMethod`-Klasse (bzw. `Program`) die folgende `Module1` hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-156">Add the following `CreateSequentialUpdateMethod` to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="2be16-157">Diese Methode ist vergleichbar mit den anderen beiden Methoden.</span><span class="sxs-lookup"><span data-stu-id="2be16-157">This method is similar to the other two methods.</span></span> <span data-ttu-id="2be16-158">Sie beginnt mit einem Aufruf von `StartUpdate`, aktualisiert die Definition des sequenziellen Workflows und endet mit dem Speichern der Updatezuordnung und der aktualisierten Workflowdefinition.</span><span class="sxs-lookup"><span data-stu-id="2be16-158">It starts with a call to `StartUpdate`, updates the sequential workflow definition, and finishes by saving the update map and the updated workflow definition.</span></span>
 
     ```vb
     Private Sub CreateSequentialUpdateMap()
@@ -611,9 +611,9 @@ ms.locfileid: "49123838"
     }
     ```
 
-###  <a name="BKMK_CreateUpdateMaps"></a> <span data-ttu-id="0edc5-159">So erstellen und führen die CreateUpdateMaps-Anwendung</span><span class="sxs-lookup"><span data-stu-id="0edc5-159">To build and run the CreateUpdateMaps application</span></span>
+### <a name="BKMK_CreateUpdateMaps"></a> <span data-ttu-id="2be16-159">So erstellen und führen die CreateUpdateMaps-Anwendung</span><span class="sxs-lookup"><span data-stu-id="2be16-159">To build and run the CreateUpdateMaps application</span></span>
 
-1.  <span data-ttu-id="0edc5-160">Aktualisieren Sie die `Main`-Methode, und fügen Sie die folgenden drei Methodenaufrufe hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="0edc5-161">Diese Methoden werden in den folgenden Abschnitten hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="0edc5-161">These methods are added in the following sections.</span></span> <span data-ttu-id="0edc5-162">Durch jede Methode wird der entsprechende Workflow für das Schätzen von Zahlen aktualisiert und eine `DynamicUpdateMap` erstellt, die die Updates beschreibt.</span><span class="sxs-lookup"><span data-stu-id="0edc5-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>
+1.  <span data-ttu-id="2be16-160">Aktualisieren Sie die `Main`-Methode, und fügen Sie die folgenden drei Methodenaufrufe hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-160">Update the `Main` method and add the following three method calls.</span></span> <span data-ttu-id="2be16-161">Diese Methoden werden in den folgenden Abschnitten hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="2be16-161">These methods are added in the following sections.</span></span> <span data-ttu-id="2be16-162">Durch jede Methode wird der entsprechende Workflow für das Schätzen von Zahlen aktualisiert und eine `DynamicUpdateMap` erstellt, die die Updates beschreibt.</span><span class="sxs-lookup"><span data-stu-id="2be16-162">Each method updates the corresponding number guess workflow and creates a `DynamicUpdateMap` that describes the updates.</span></span>
 
     ```vb
     Sub Main()
@@ -636,53 +636,53 @@ ms.locfileid: "49123838"
     }
     ```
 
-2.  <span data-ttu-id="0edc5-163">Mit der rechten Maustaste **CreateUpdateMaps** in **Projektmappen-Explorer** , und wählen Sie **als Startprojekt festlegen**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-163">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
+2.  <span data-ttu-id="2be16-163">Mit der rechten Maustaste **CreateUpdateMaps** in **Projektmappen-Explorer** , und wählen Sie **als Startprojekt festlegen**.</span><span class="sxs-lookup"><span data-stu-id="2be16-163">Right-click **CreateUpdateMaps** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
 
-3.  <span data-ttu-id="0edc5-164">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen, und dann STRG+F5, um die `CreateUpdateMaps`-Anwendung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-164">Press CTRL+SHIFT+B to build the solution, and then CTRL+F5 to run the `CreateUpdateMaps` application.</span></span>
-
-    > [!NOTE]
-    >  <span data-ttu-id="0edc5-165">Die `CreateUpdateMaps` Anwendung zeigt keine keine Statusinformationen während der Ausführung jedoch der **NumberGuessWorkflowActivities_du** Ordner und die **PreviousVersions** Ordner wird angezeigt die aktualisierte Workflowdefinitions-Definitionsdateien und die updatezuordnungen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-165">The `CreateUpdateMaps` application does not display any status information while running, but if you look in the **NumberGuessWorkflowActivities_du** folder and the **PreviousVersions** folder you will see the updated workflow definition files and the update maps.</span></span>
-
-     <span data-ttu-id="0edc5-166">Sobald die Updatezuordnungen erstellt und die Workflowdefinitionen aktualisiert sind, besteht der nächste Schritt darin, eine aktualisierte Workflowassembly zu erstellen, in der die aktualisierten Definitionen enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="0edc5-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>
-
-###  <a name="BKMK_BuildAssembly"></a> <span data-ttu-id="0edc5-167">Um die aktualisierte Workflowassembly zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-167">To build the updated workflow assembly</span></span>
-
-1.  <span data-ttu-id="0edc5-168">Öffnen Sie eine zweite Instanz von Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="0edc5-168">Open a second instance of Visual Studio 2012.</span></span>
-
-2.  <span data-ttu-id="0edc5-169">Wählen Sie **öffnen**, **Projekt/Projektmappe** aus der **Datei** Menü.</span><span class="sxs-lookup"><span data-stu-id="0edc5-169">Choose **Open**, **Project/Solution** from the **File** menu.</span></span>
-
-3.  <span data-ttu-id="0edc5-170">Navigieren Sie zu der **NumberGuessWorkflowActivities_du** im erstellten Ordner [Vorgehensweise: Hosten mehrerer Workflowversionen einen Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)wählen **NumberGuessWorkflowActivities.csproj**  (oder **Vbproj**), und klicken Sie auf **öffnen**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-170">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), select **NumberGuessWorkflowActivities.csproj** (or **vbproj**), and click **Open**.</span></span>
-
-4.  <span data-ttu-id="0edc5-171">In **Projektmappen-Explorer**, klicken Sie mit der rechten Maustaste auf **SequentialNumberGuessWorkflow.xaml** , und wählen Sie **aus Projekt ausschließen**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-171">In **Solution Explorer**, right click **SequentialNumberGuessWorkflow.xaml** and choose **Exclude From Project**.</span></span> <span data-ttu-id="0edc5-172">Führen Sie dieselben Schritte für **FlowchartNumberGuessWorkflow.xaml** und **StateMachineNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-172">Do the same thing for **FlowchartNumberGuessWorkflow.xaml** and **StateMachineNumberGuessWorkflow.xaml**.</span></span> <span data-ttu-id="0edc5-173">Durch diesen Schritt werden die Vorgängerversionen der Workflowdefinitionen aus dem Projekt entfernt.</span><span class="sxs-lookup"><span data-stu-id="0edc5-173">This step removes the previous versions of the workflow definitions from the project.</span></span>
-
-5.  <span data-ttu-id="0edc5-174">Wählen Sie **vorhandenes Element hinzufügen** aus der **Projekt** Menü.</span><span class="sxs-lookup"><span data-stu-id="0edc5-174">Choose **Add Existing Item** from the **Project** menu.</span></span>
-
-6.  <span data-ttu-id="0edc5-175">Navigieren Sie zu der **NumberGuessWorkflowActivities_du** im erstellten Ordner [Vorgehensweise: Hosten mehrerer Workflowversionen einen Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="0edc5-175">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
-
-7.  <span data-ttu-id="0edc5-176">Wählen Sie **XAML-Dateien (\*.xaml;\*. Xoml)** aus der **Dateityp** Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="0edc5-176">Choose **XAML Files (\*.xaml;\*.xoml)** from the **Files of type** drop-down list.</span></span>
-
-8.  <span data-ttu-id="0edc5-177">Wählen Sie **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, und **StateMachineNumberGuessWorkflow_du.xaml** , und klicken Sie auf  **Hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-177">Select **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, and **StateMachineNumberGuessWorkflow_du.xaml** and click **Add**.</span></span>
+3.  <span data-ttu-id="2be16-164">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen, und dann STRG+F5, um die `CreateUpdateMaps`-Anwendung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="2be16-164">Press CTRL+SHIFT+B to build the solution, and then CTRL+F5 to run the `CreateUpdateMaps` application.</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="0edc5-178">Klicken Sie mit gedrückter STRG-TASTE, um mehrere Elemente gleichzeitig auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-178">CTRL+Click to select multiple items at a time.</span></span>
+    >  <span data-ttu-id="2be16-165">Die `CreateUpdateMaps` Anwendung zeigt keine keine Statusinformationen während der Ausführung jedoch der **NumberGuessWorkflowActivities_du** Ordner und die **PreviousVersions** Ordner wird angezeigt die aktualisierte Workflowdefinitions-Definitionsdateien und die updatezuordnungen.</span><span class="sxs-lookup"><span data-stu-id="2be16-165">The `CreateUpdateMaps` application does not display any status information while running, but if you look in the **NumberGuessWorkflowActivities_du** folder and the **PreviousVersions** folder you will see the updated workflow definition files and the update maps.</span></span>
 
-     <span data-ttu-id="0edc5-179">Durch diesen Schritt werden dem Projekt die aktualisierten Versionen der Workflowdefinitionen hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="0edc5-179">This step adds the updated versions of the workflow definitions to the project.</span></span>
+     <span data-ttu-id="2be16-166">Sobald die Updatezuordnungen erstellt und die Workflowdefinitionen aktualisiert sind, besteht der nächste Schritt darin, eine aktualisierte Workflowassembly zu erstellen, in der die aktualisierten Definitionen enthalten sind.</span><span class="sxs-lookup"><span data-stu-id="2be16-166">Once the update maps are created and the workflow definitions updated, the next step is to build an updated workflow assembly containing the updated definitions.</span></span>
 
-9. <span data-ttu-id="0edc5-180">Drücken Sie STRG+UMSCHALT+B, um das Projekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-180">Press CTRL+SHIFT+B to build the project.</span></span>
+### <a name="BKMK_BuildAssembly"></a> <span data-ttu-id="2be16-167">Um die aktualisierte Workflowassembly zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2be16-167">To build the updated workflow assembly</span></span>
 
-10. <span data-ttu-id="0edc5-181">Wählen Sie **Projektmappe schließen** aus der **Datei** Menü.</span><span class="sxs-lookup"><span data-stu-id="0edc5-181">Choose **Close Solution** from the **File** menu.</span></span> <span data-ttu-id="0edc5-182">Eine Projektmappendatei für das Projekt ist nicht erforderlich ist, klicken Sie daher auf **keine** zu Visual Studio zu schließen, ohne zu eine Projektmappendatei zu speichern.</span><span class="sxs-lookup"><span data-stu-id="0edc5-182">A solution file for the project is not required, so click **No** to close Visual Studio without saving a solution file.</span></span> <span data-ttu-id="0edc5-183">Wählen Sie **beenden** aus der **Datei** Menü, um Visual Studio zu schließen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-183">Choose **Exit** from the **File** menu to close Visual Studio.</span></span>
+1.  <span data-ttu-id="2be16-168">Öffnen Sie eine zweite Instanz von Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="2be16-168">Open a second instance of Visual Studio 2012.</span></span>
 
-11. <span data-ttu-id="0edc5-184">Öffnen Sie Windows Explorer, und navigieren Sie zu der **NumberGuessWorkflowActivities_du\bin\Debug** Ordner (oder **"bin\Release"** je nach den projekteinstellungen).</span><span class="sxs-lookup"><span data-stu-id="0edc5-184">Open Windows Explorer and navigate to the **NumberGuessWorkflowActivities_du\bin\Debug** folder (or **bin\Release** depending on your project settings).</span></span>
+2.  <span data-ttu-id="2be16-169">Wählen Sie **öffnen**, **Projekt/Projektmappe** aus der **Datei** Menü.</span><span class="sxs-lookup"><span data-stu-id="2be16-169">Choose **Open**, **Project/Solution** from the **File** menu.</span></span>
 
-12. <span data-ttu-id="0edc5-185">Benennen Sie **NumberGuessWorkflowActivities.dll** zu **NumberGuessWorkflowActivities_v15.dll**, und kopieren Sie sie in der **PreviousVersions** Ordner, die Sie erstellt, im haben[Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="0edc5-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+3.  <span data-ttu-id="2be16-170">Navigieren Sie zu der **NumberGuessWorkflowActivities_du** im erstellten Ordner [Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)Option **NumberGuessWorkflowActivities.csproj** (oder **Vbproj**), und klicken Sie auf **öffnen**.</span><span class="sxs-lookup"><span data-stu-id="2be16-170">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), select **NumberGuessWorkflowActivities.csproj** (or **vbproj**), and click **Open**.</span></span>
 
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="0edc5-186">So aktualisieren Sie WorkflowVersionMap anhand der neuen Versionen</span><span class="sxs-lookup"><span data-stu-id="0edc5-186">To update WorkflowVersionMap with the new versions</span></span>
+4.  <span data-ttu-id="2be16-171">In **Projektmappen-Explorer**, klicken Sie mit der rechten Maustaste auf **SequentialNumberGuessWorkflow.xaml** , und wählen Sie **aus Projekt ausschließen**.</span><span class="sxs-lookup"><span data-stu-id="2be16-171">In **Solution Explorer**, right click **SequentialNumberGuessWorkflow.xaml** and choose **Exclude From Project**.</span></span> <span data-ttu-id="2be16-172">Führen Sie dieselben Schritte für **FlowchartNumberGuessWorkflow.xaml** und **StateMachineNumberGuessWorkflow.xaml**.</span><span class="sxs-lookup"><span data-stu-id="2be16-172">Do the same thing for **FlowchartNumberGuessWorkflow.xaml** and **StateMachineNumberGuessWorkflow.xaml**.</span></span> <span data-ttu-id="2be16-173">Durch diesen Schritt werden die Vorgängerversionen der Workflowdefinitionen aus dem Projekt entfernt.</span><span class="sxs-lookup"><span data-stu-id="2be16-173">This step removes the previous versions of the workflow definitions from the project.</span></span>
 
-1.  <span data-ttu-id="0edc5-187">Wechseln Sie zurück zur ursprünglichen Instanz von Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="0edc5-187">Switch back to the initial instance of Visual Studio 2012.</span></span>
+5.  <span data-ttu-id="2be16-174">Wählen Sie **vorhandenes Element hinzufügen** aus der **Projekt** Menü.</span><span class="sxs-lookup"><span data-stu-id="2be16-174">Choose **Add Existing Item** from the **Project** menu.</span></span>
 
-2.  <span data-ttu-id="0edc5-188">Doppelklicken Sie auf **WorkflowVersionMap.cs** (oder **WorkflowVersionMap.vb**) unter den **NumberGuessWorkflowHost** Projekt, um ihn zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-188">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>
+6.  <span data-ttu-id="2be16-175">Navigieren Sie zu der **NumberGuessWorkflowActivities_du** im erstellten Ordner [Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="2be16-175">Navigate to the **NumberGuessWorkflowActivities_du** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
 
-3.  <span data-ttu-id="0edc5-189">Fügen Sie direkt unterhalb der sechs vorhandenen Deklarationen für Workflowidentitäten drei neue Workflowidentitäten hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-189">Add three new workflow identities just below the six existing workflow identity declarations.</span></span> <span data-ttu-id="0edc5-190">In diesem Lernprogramm wird `1.5.0.0` als `WorkflowIdentity.Version` für die dynamischen Updateidentitäten verwendet.</span><span class="sxs-lookup"><span data-stu-id="0edc5-190">In this tutorial, `1.5.0.0` is used as the `WorkflowIdentity.Version` for the dynamic update identities.</span></span> <span data-ttu-id="0edc5-191">Diese neuen `v15`-Workflowidentitäten werden verwendet, um die richtige Workflowdefinition für die dynamisch aktualisierten, persistenten Workflowinstanzen bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-191">These new `v15` workflow identities will be used provide the correct workflow definition for the dynamically updated persisted workflow instances.</span></span>
+7.  <span data-ttu-id="2be16-176">Wählen Sie **XAML-Dateien (\*.xaml;\*. Xoml)** aus der **Dateityp** Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="2be16-176">Choose **XAML Files (\*.xaml;\*.xoml)** from the **Files of type** drop-down list.</span></span>
+
+8.  <span data-ttu-id="2be16-177">Wählen Sie **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, und **StateMachineNumberGuessWorkflow_du.xaml** , und klicken Sie auf  **Hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="2be16-177">Select **SequentialNumberGuessWorkflow_du.xaml**, **FlowchartNumberGuessWorkflow_du.xaml**, and **StateMachineNumberGuessWorkflow_du.xaml** and click **Add**.</span></span>
+
+    > [!NOTE]
+    >  <span data-ttu-id="2be16-178">Klicken Sie mit gedrückter STRG-TASTE, um mehrere Elemente gleichzeitig auszuwählen.</span><span class="sxs-lookup"><span data-stu-id="2be16-178">CTRL+Click to select multiple items at a time.</span></span>
+
+     <span data-ttu-id="2be16-179">Durch diesen Schritt werden dem Projekt die aktualisierten Versionen der Workflowdefinitionen hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="2be16-179">This step adds the updated versions of the workflow definitions to the project.</span></span>
+
+9. <span data-ttu-id="2be16-180">Drücken Sie STRG+UMSCHALT+B, um das Projekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2be16-180">Press CTRL+SHIFT+B to build the project.</span></span>
+
+10. <span data-ttu-id="2be16-181">Wählen Sie **Projektmappe schließen** aus der **Datei** Menü.</span><span class="sxs-lookup"><span data-stu-id="2be16-181">Choose **Close Solution** from the **File** menu.</span></span> <span data-ttu-id="2be16-182">Eine Projektmappendatei für das Projekt ist nicht erforderlich ist, klicken Sie daher auf **keine** zu Visual Studio zu schließen, ohne zu eine Projektmappendatei zu speichern.</span><span class="sxs-lookup"><span data-stu-id="2be16-182">A solution file for the project is not required, so click **No** to close Visual Studio without saving a solution file.</span></span> <span data-ttu-id="2be16-183">Wählen Sie **beenden** aus der **Datei** Menü, um Visual Studio zu schließen.</span><span class="sxs-lookup"><span data-stu-id="2be16-183">Choose **Exit** from the **File** menu to close Visual Studio.</span></span>
+
+11. <span data-ttu-id="2be16-184">Öffnen Sie Windows Explorer, und navigieren Sie zu der **NumberGuessWorkflowActivities_du\bin\Debug** Ordner (oder **"bin\Release"** je nach den projekteinstellungen).</span><span class="sxs-lookup"><span data-stu-id="2be16-184">Open Windows Explorer and navigate to the **NumberGuessWorkflowActivities_du\bin\Debug** folder (or **bin\Release** depending on your project settings).</span></span>
+
+12. <span data-ttu-id="2be16-185">Benennen Sie **NumberGuessWorkflowActivities.dll** zu **NumberGuessWorkflowActivities_v15.dll**, und kopieren Sie sie in der **PreviousVersions** Ordner, die Sie erstellt, im haben[Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span><span class="sxs-lookup"><span data-stu-id="2be16-185">Rename **NumberGuessWorkflowActivities.dll** to **NumberGuessWorkflowActivities_v15.dll**, and copy it to the **PreviousVersions** folder you created in [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).</span></span>
+
+### <a name="BKMK_UpdateWorkflowVersionMap"></a> <span data-ttu-id="2be16-186">So aktualisieren Sie WorkflowVersionMap anhand der neuen Versionen</span><span class="sxs-lookup"><span data-stu-id="2be16-186">To update WorkflowVersionMap with the new versions</span></span>
+
+1.  <span data-ttu-id="2be16-187">Wechseln Sie zurück zur ursprünglichen Instanz von Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="2be16-187">Switch back to the initial instance of Visual Studio 2012.</span></span>
+
+2.  <span data-ttu-id="2be16-188">Doppelklicken Sie auf **WorkflowVersionMap.cs** (oder **WorkflowVersionMap.vb**) unter den **NumberGuessWorkflowHost** Projekt, um ihn zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="2be16-188">Double-click **WorkflowVersionMap.cs** (or **WorkflowVersionMap.vb**) under the **NumberGuessWorkflowHost** project to open it.</span></span>
+
+3.  <span data-ttu-id="2be16-189">Fügen Sie direkt unterhalb der sechs vorhandenen Deklarationen für Workflowidentitäten drei neue Workflowidentitäten hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-189">Add three new workflow identities just below the six existing workflow identity declarations.</span></span> <span data-ttu-id="2be16-190">In diesem Lernprogramm wird `1.5.0.0` als `WorkflowIdentity.Version` für die dynamischen Updateidentitäten verwendet.</span><span class="sxs-lookup"><span data-stu-id="2be16-190">In this tutorial, `1.5.0.0` is used as the `WorkflowIdentity.Version` for the dynamic update identities.</span></span> <span data-ttu-id="2be16-191">Diese neuen `v15`-Workflowidentitäten werden verwendet, um die richtige Workflowdefinition für die dynamisch aktualisierten, persistenten Workflowinstanzen bereitzustellen.</span><span class="sxs-lookup"><span data-stu-id="2be16-191">These new `v15` workflow identities will be used provide the correct workflow definition for the dynamically updated persisted workflow instances.</span></span>
 
     ```vb
     'Current version identities.
@@ -718,7 +718,7 @@ ms.locfileid: "49123838"
     static public WorkflowIdentity SequentialNumberGuessIdentity_v15;
     ```
 
-4.  <span data-ttu-id="0edc5-192">Fügen Sie den folgenden Code am Ende des Konstruktors hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-192">Add the following code at the end of the constructor.</span></span> <span data-ttu-id="0edc5-193">Durch diesen Code werden die Workflowidentitäten für dynamische Updates initialisiert, die entsprechenden Workflowdefinitionen geladen und dem Wörterbuch der Workflowversionen hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="0edc5-193">This code initializes the dynamic update workflow identities, loads the corresponding workflow definitions, and adds them to the workflow version dictionary.</span></span>
+4.  <span data-ttu-id="2be16-192">Fügen Sie den folgenden Code am Ende des Konstruktors hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-192">Add the following code at the end of the constructor.</span></span> <span data-ttu-id="2be16-193">Durch diesen Code werden die Workflowidentitäten für dynamische Updates initialisiert, die entsprechenden Workflowdefinitionen geladen und dem Wörterbuch der Workflowversionen hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="2be16-193">This code initializes the dynamic update workflow identities, loads the corresponding workflow definitions, and adds them to the workflow version dictionary.</span></span>
 
     ```vb
     'Initialize the dynamic update workflow identities.
@@ -796,7 +796,7 @@ ms.locfileid: "49123838"
         v15Assembly.CreateInstance("NumberGuessWorkflowActivities.FlowchartNumberGuessWorkflow") as Activity);
     ```
 
-     <span data-ttu-id="0edc5-194">Im folgenden Beispiel ist die abgeschlossene `WorkflowVersionMap`-Klasse dargestellt.</span><span class="sxs-lookup"><span data-stu-id="0edc5-194">The following example is the completed `WorkflowVersionMap` class.</span></span>
+     <span data-ttu-id="2be16-194">Im folgenden Beispiel ist die abgeschlossene `WorkflowVersionMap`-Klasse dargestellt.</span><span class="sxs-lookup"><span data-stu-id="2be16-194">The following example is the completed `WorkflowVersionMap` class.</span></span>
 
     ```vb
     Public Module WorkflowVersionMap
@@ -1061,36 +1061,36 @@ ms.locfileid: "49123838"
     }
     ```
 
-5.  <span data-ttu-id="0edc5-195">Drücken Sie STRG+UMSCHALT+B, um das Projekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-195">Press CTRL+SHIFT+B to build the project.</span></span>
+5.  <span data-ttu-id="2be16-195">Drücken Sie STRG+UMSCHALT+B, um das Projekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2be16-195">Press CTRL+SHIFT+B to build the project.</span></span>
 
-###  <a name="BKMK_ApplyUpdate"></a> <span data-ttu-id="0edc5-196">Die dynamische Updates</span><span class="sxs-lookup"><span data-stu-id="0edc5-196">To apply the dynamic updates</span></span>
+### <a name="BKMK_ApplyUpdate"></a> <span data-ttu-id="2be16-196">Die dynamische Updates</span><span class="sxs-lookup"><span data-stu-id="2be16-196">To apply the dynamic updates</span></span>
 
-1.  <span data-ttu-id="0edc5-197">Mit der rechten Maustaste **WF45GettingStartedTutorial** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Projekt**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>
+1.  <span data-ttu-id="2be16-197">Mit der rechten Maustaste **WF45GettingStartedTutorial** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Projekt**.</span><span class="sxs-lookup"><span data-stu-id="2be16-197">Right-click **WF45GettingStartedTutorial** in **Solution Explorer** and choose **Add**, **New Project**.</span></span>
 
-2.  <span data-ttu-id="0edc5-198">In der **installiert** Knoten **Visual C#-**, **Windows** (oder **Visual Basic**, **Windows**).</span><span class="sxs-lookup"><span data-stu-id="0edc5-198">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>
+2.  <span data-ttu-id="2be16-198">In der **installiert** Knoten **Visual C#-**, **Windows** (oder **Visual Basic**, **Windows**).</span><span class="sxs-lookup"><span data-stu-id="2be16-198">In the **Installed** node, select **Visual C#**, **Windows** (or **Visual Basic**, **Windows**).</span></span>
 
     > [!NOTE]
-    >  <span data-ttu-id="0edc5-199">Je nachdem, welche Programmiersprache als die primäre Sprache in Visual Studio konfiguriert ist, befindet sich der Knoten **Visual C#** oder **Visual Basic** möglicherweise nicht unter dem Knoten **Andere Sprachen** im Knoten **Installiert** .</span><span class="sxs-lookup"><span data-stu-id="0edc5-199">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
+    >  <span data-ttu-id="2be16-199">Je nachdem, welche Programmiersprache als die primäre Sprache in Visual Studio konfiguriert ist, befindet sich der Knoten **Visual C#** oder **Visual Basic** möglicherweise nicht unter dem Knoten **Andere Sprachen** im Knoten **Installiert** .</span><span class="sxs-lookup"><span data-stu-id="2be16-199">Depending on which programming language is configured as the primary language in Visual Studio, the **Visual C#** or **Visual Basic** node may be under the **Other Languages** node in the **Installed** node.</span></span>
 
-     <span data-ttu-id="0edc5-200">Stellen Sie sicher, dass in der Dropdownliste mit der .NET Framework-Version **.NET Framework 4.5** ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="0edc5-200">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="0edc5-201">Wählen Sie **Konsolenanwendung** aus der **Windows** Liste.</span><span class="sxs-lookup"><span data-stu-id="0edc5-201">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="0edc5-202">Typ **ApplyDynamicUpdate** in die **Namen** ein, und klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-202">Type **ApplyDynamicUpdate** into the **Name** box and click **OK**.</span></span>
+     <span data-ttu-id="2be16-200">Stellen Sie sicher, dass in der Dropdownliste mit der .NET Framework-Version **.NET Framework 4.5** ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="2be16-200">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list.</span></span> <span data-ttu-id="2be16-201">Wählen Sie **Konsolenanwendung** aus der **Windows** Liste.</span><span class="sxs-lookup"><span data-stu-id="2be16-201">Select **Console Application** from the **Windows** list.</span></span> <span data-ttu-id="2be16-202">Typ **ApplyDynamicUpdate** in die **Namen** ein, und klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="2be16-202">Type **ApplyDynamicUpdate** into the **Name** box and click **OK**.</span></span>
 
-3.  <span data-ttu-id="0edc5-203">Mit der rechten Maustaste **ApplyDynamicUpdate** in **Projektmappen-Explorer** , und wählen Sie **Verweis hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-203">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Add Reference**.</span></span>
+3.  <span data-ttu-id="2be16-203">Mit der rechten Maustaste **ApplyDynamicUpdate** in **Projektmappen-Explorer** , und wählen Sie **Verweis hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="2be16-203">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Add Reference**.</span></span>
 
-4.  <span data-ttu-id="0edc5-204">Klicken Sie auf **Lösung** und aktivieren Sie das Kontrollkästchen neben **NumberGuessWorkflowHost**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-204">Click **Solution** and check the box next to **NumberGuessWorkflowHost**.</span></span> <span data-ttu-id="0edc5-205">Dieser Verweis ist erforderlich, damit `ApplyDynamicUpdate` die `NumberGuessWorkflowHost.WorkflowVersionMap`-Klasse verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="0edc5-205">This reference is needed so that `ApplyDynamicUpdate` can use the `NumberGuessWorkflowHost.WorkflowVersionMap` class.</span></span>
+4.  <span data-ttu-id="2be16-204">Klicken Sie auf **Lösung** und aktivieren Sie das Kontrollkästchen neben **NumberGuessWorkflowHost**.</span><span class="sxs-lookup"><span data-stu-id="2be16-204">Click **Solution** and check the box next to **NumberGuessWorkflowHost**.</span></span> <span data-ttu-id="2be16-205">Dieser Verweis ist erforderlich, damit `ApplyDynamicUpdate` die `NumberGuessWorkflowHost.WorkflowVersionMap`-Klasse verwenden kann.</span><span class="sxs-lookup"><span data-stu-id="2be16-205">This reference is needed so that `ApplyDynamicUpdate` can use the `NumberGuessWorkflowHost.WorkflowVersionMap` class.</span></span>
 
-5.  <span data-ttu-id="0edc5-206">Wählen Sie **Framework** aus der **Assemblys** Knoten in der **Verweis hinzufügen** Liste.</span><span class="sxs-lookup"><span data-stu-id="0edc5-206">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="0edc5-207">Typ **System.Activities** in die **Assemblys suchen** Feld.</span><span class="sxs-lookup"><span data-stu-id="0edc5-207">Type **System.Activities** into the **Search Assemblies** box.</span></span> <span data-ttu-id="0edc5-208">Dadurch werden die Assemblys gefiltert, sodass die gewünschten Verweise einfacher auszuwählen sind.</span><span class="sxs-lookup"><span data-stu-id="0edc5-208">This will filter the assemblies and make the desired references easier to select.</span></span>
+5.  <span data-ttu-id="2be16-206">Wählen Sie **Framework** aus der **Assemblys** Knoten in der **Verweis hinzufügen** Liste.</span><span class="sxs-lookup"><span data-stu-id="2be16-206">Select **Framework** from the **Assemblies** node in the **Add Reference** list.</span></span> <span data-ttu-id="2be16-207">Typ **System.Activities** in die **Assemblys suchen** Feld.</span><span class="sxs-lookup"><span data-stu-id="2be16-207">Type **System.Activities** into the **Search Assemblies** box.</span></span> <span data-ttu-id="2be16-208">Dadurch werden die Assemblys gefiltert, sodass die gewünschten Verweise einfacher auszuwählen sind.</span><span class="sxs-lookup"><span data-stu-id="2be16-208">This will filter the assemblies and make the desired references easier to select.</span></span>
 
-6.  <span data-ttu-id="0edc5-209">Aktivieren Sie das Kontrollkästchen neben **System.Activities** aus der **Suchergebnisse** Liste.</span><span class="sxs-lookup"><span data-stu-id="0edc5-209">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
+6.  <span data-ttu-id="2be16-209">Aktivieren Sie das Kontrollkästchen neben **System.Activities** aus der **Suchergebnisse** Liste.</span><span class="sxs-lookup"><span data-stu-id="2be16-209">Check the checkbox beside **System.Activities** from the **Search Results** list.</span></span>
 
-7.  <span data-ttu-id="0edc5-210">Typ **Serialisierung** in die **Assemblys suchen** ein, und aktivieren Sie das Kontrollkästchen neben **System.Runtime.Serialization** aus der **Suchergebnisse**  Liste.</span><span class="sxs-lookup"><span data-stu-id="0edc5-210">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
+7.  <span data-ttu-id="2be16-210">Typ **Serialisierung** in die **Assemblys suchen** ein, und aktivieren Sie das Kontrollkästchen neben **System.Runtime.Serialization** aus der **Suchergebnisse**  Liste.</span><span class="sxs-lookup"><span data-stu-id="2be16-210">Type **Serialization** into the **Search Assemblies** box, and check the checkbox beside **System.Runtime.Serialization** from the **Search Results** list.</span></span>
 
-8.  <span data-ttu-id="0edc5-211">Typ **DurableInstancing** in die **Assemblys suchen** ein, und aktivieren Sie das Kontrollkästchen neben **System.Activities.DurableInstancing** und  **System.Activities.DurableInstancing** aus der **Suchergebnisse** Liste.</span><span class="sxs-lookup"><span data-stu-id="0edc5-211">Type **DurableInstancing** into the **Search Assemblies** box, and check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list.</span></span>
+8.  <span data-ttu-id="2be16-211">Typ **DurableInstancing** in die **Assemblys suchen** ein, und aktivieren Sie das Kontrollkästchen neben **System.Activities.DurableInstancing** und  **System.Activities.DurableInstancing** aus der **Suchergebnisse** Liste.</span><span class="sxs-lookup"><span data-stu-id="2be16-211">Type **DurableInstancing** into the **Search Assemblies** box, and check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list.</span></span>
 
-9. <span data-ttu-id="0edc5-212">Klicken Sie auf **OK** schließen **Verweis-Manager** und die Verweise hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-212">Click **OK** to close **Reference Manager** and add the references.</span></span>
+9. <span data-ttu-id="2be16-212">Klicken Sie auf **OK** schließen **Verweis-Manager** und die Verweise hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="2be16-212">Click **OK** to close **Reference Manager** and add the references.</span></span>
 
-10. <span data-ttu-id="0edc5-213">Mit der rechten Maustaste **ApplyDynamicUpdate** im Projektmappen-Explorer, und wählen Sie **hinzufügen**, **Klasse**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-213">Right-click **ApplyDynamicUpdate** in Solution Explorer and choose **Add**, **Class**.</span></span> <span data-ttu-id="0edc5-214">Typ `DynamicUpdateInfo` in die **Namen** ein, und klicken Sie auf **hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-214">Type `DynamicUpdateInfo` into the **Name** box and click **Add**.</span></span>
+10. <span data-ttu-id="2be16-213">Mit der rechten Maustaste **ApplyDynamicUpdate** im Projektmappen-Explorer, und wählen Sie **hinzufügen**, **Klasse**.</span><span class="sxs-lookup"><span data-stu-id="2be16-213">Right-click **ApplyDynamicUpdate** in Solution Explorer and choose **Add**, **Class**.</span></span> <span data-ttu-id="2be16-214">Typ `DynamicUpdateInfo` in die **Namen** ein, und klicken Sie auf **hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="2be16-214">Type `DynamicUpdateInfo` into the **Name** box and click **Add**.</span></span>
 
-11. <span data-ttu-id="0edc5-215">Fügen Sie der `DynamicUpdateInfo`-Klasse die beiden folgenden Member hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-215">Add the following two members to the `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="0edc5-216">Im folgenden Beispiel ist die abgeschlossene `DynamicUpdateInfo`-Klasse dargestellt.</span><span class="sxs-lookup"><span data-stu-id="0edc5-216">The following example is the completed `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="0edc5-217">Diese Klasse enthält Informationen über die Updatezuordnung und die neue Workflowidentität, die zur Aktualisierung einer Workflowinstanz verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="0edc5-217">This class contains information on the update map and new workflow identity used when a workflow instance is updated.</span></span>
+11. <span data-ttu-id="2be16-215">Fügen Sie der `DynamicUpdateInfo`-Klasse die beiden folgenden Member hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-215">Add the following two members to the `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="2be16-216">Im folgenden Beispiel ist die abgeschlossene `DynamicUpdateInfo`-Klasse dargestellt.</span><span class="sxs-lookup"><span data-stu-id="2be16-216">The following example is the completed `DynamicUpdateInfo` class.</span></span> <span data-ttu-id="2be16-217">Diese Klasse enthält Informationen über die Updatezuordnung und die neue Workflowidentität, die zur Aktualisierung einer Workflowinstanz verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="2be16-217">This class contains information on the update map and new workflow identity used when a workflow instance is updated.</span></span>
 
     ```vb
     Public Class DynamicUpdateInfo
@@ -1107,7 +1107,7 @@ ms.locfileid: "49123838"
     }
     ```
 
-12. <span data-ttu-id="0edc5-218">Fügen Sie die folgenden `using`-Anweisungen (oder `Imports`-Anweisungen) mit den anderen `using`-Anweisungen (oder `Imports`-Anweisungen) am Anfang der Datei hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-218">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
+12. <span data-ttu-id="2be16-218">Fügen Sie die folgenden `using`-Anweisungen (oder `Imports`-Anweisungen) mit den anderen `using`-Anweisungen (oder `Imports`-Anweisungen) am Anfang der Datei hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-218">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
 
     ```vb
     Imports System.Activities
@@ -1119,9 +1119,9 @@ ms.locfileid: "49123838"
     using System.Activities.DynamicUpdate;
     ```
 
-13. <span data-ttu-id="0edc5-219">Doppelklicken Sie auf **"Program.cs"** (oder **"Module1.vb"**) im Projektmappen-Explorer.</span><span class="sxs-lookup"><span data-stu-id="0edc5-219">Double-click **Program.cs** (or **Module1.vb**) in Solution Explorer.</span></span>
+13. <span data-ttu-id="2be16-219">Doppelklicken Sie auf **"Program.cs"** (oder **"Module1.vb"**) im Projektmappen-Explorer.</span><span class="sxs-lookup"><span data-stu-id="2be16-219">Double-click **Program.cs** (or **Module1.vb**) in Solution Explorer.</span></span>
 
-14. <span data-ttu-id="0edc5-220">Fügen Sie die folgenden `using`-Anweisungen (oder `Imports`-Anweisungen) mit den anderen `using`-Anweisungen (oder `Imports`-Anweisungen) am Anfang der Datei hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-220">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
+14. <span data-ttu-id="2be16-220">Fügen Sie die folgenden `using`-Anweisungen (oder `Imports`-Anweisungen) mit den anderen `using`-Anweisungen (oder `Imports`-Anweisungen) am Anfang der Datei hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-220">Add the following `using` (or `Imports`) statements at the top of the file with the other `using` (or `Imports`) statements.</span></span>
 
     ```vb
     Imports NumberGuessWorkflowHost
@@ -1144,7 +1144,7 @@ ms.locfileid: "49123838"
     using System.Activities.DurableInstancing;
     ```
 
-15. <span data-ttu-id="0edc5-221">Fügen Sie der `Program`-Klasse (bzw. `Module1`) den folgenden Verbindungszeichenfolgen-Member hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-221">Add the following connection string member to the `Program` class (or `Module1`).</span></span>
+15. <span data-ttu-id="2be16-221">Fügen Sie der `Program`-Klasse (bzw. `Module1`) den folgenden Verbindungszeichenfolgen-Member hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-221">Add the following connection string member to the `Program` class (or `Module1`).</span></span>
 
     ```vb
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"
@@ -1155,9 +1155,9 @@ ms.locfileid: "49123838"
     ```
 
     > [!NOTE]
-    >  <span data-ttu-id="0edc5-222">Abhängig von der SQL Server-Version kann der Servername der Verbindungszeichenfolge abweichen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-222">Depending on your edition of SQL Server, the connection string server name may be different.</span></span>
+    >  <span data-ttu-id="2be16-222">Abhängig von der SQL Server-Version kann der Servername der Verbindungszeichenfolge abweichen.</span><span class="sxs-lookup"><span data-stu-id="2be16-222">Depending on your edition of SQL Server, the connection string server name may be different.</span></span>
 
-16. <span data-ttu-id="0edc5-223">Fügen Sie der `GetIDs`-Klasse (bzw. `Program`) die folgende `Module1`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-223">Add the following `GetIDs` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="0edc5-224">Durch diese Methode wird eine Liste der persistenten Workflowinstanz-IDs zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="0edc5-224">This method returns a list of persisted workflow instance ids.</span></span>
+16. <span data-ttu-id="2be16-223">Fügen Sie der `GetIDs`-Klasse (bzw. `Program`) die folgende `Module1`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-223">Add the following `GetIDs` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="2be16-224">Durch diese Methode wird eine Liste der persistenten Workflowinstanz-IDs zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="2be16-224">This method returns a list of persisted workflow instance ids.</span></span>
 
     ```vb
     Function GetIds() As IList(Of Guid)
@@ -1210,7 +1210,7 @@ ms.locfileid: "49123838"
     }
     ```
 
-17. <span data-ttu-id="0edc5-225">Fügen Sie der `LoadMap`-Klasse (bzw. `Program`) die folgende `Module1`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-225">Add the following `LoadMap` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="0edc5-226">Durch diese Methode wird ein Wörterbuch erstellt, durch das `v1`-Workflowidentitäten den Updatezuordnungen und neuen Workflowidentitäten zugeordnet werden, die zum Aktualisieren der entsprechenden persistenten Workflowinstanzen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0edc5-226">This method creates a dictionary that maps `v1` workflow identities to the update maps and new workflow identities used to update the corresponding persisted workflow instances.</span></span>
+17. <span data-ttu-id="2be16-225">Fügen Sie der `LoadMap`-Klasse (bzw. `Program`) die folgende `Module1`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-225">Add the following `LoadMap` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="2be16-226">Durch diese Methode wird ein Wörterbuch erstellt, durch das `v1`-Workflowidentitäten den Updatezuordnungen und neuen Workflowidentitäten zugeordnet werden, die zum Aktualisieren der entsprechenden persistenten Workflowinstanzen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2be16-226">This method creates a dictionary that maps `v1` workflow identities to the update maps and new workflow identities used to update the corresponding persisted workflow instances.</span></span>
 
     ```vb
     Function LoadMap(mapName As String) As DynamicUpdateMap
@@ -1253,7 +1253,7 @@ ms.locfileid: "49123838"
     }
     ```
 
-18. <span data-ttu-id="0edc5-227">Fügen Sie der `LoadMaps`-Klasse (bzw. `Program`) die folgende `Module1`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-227">Add the following `LoadMaps` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="0edc5-228">Durch diese Methode werden die drei Updatezuordnungen geladen und ein Wörterbuch erstellt, das den Updatezuordnungen `v1`-Workflowidentitäten zuordnet.</span><span class="sxs-lookup"><span data-stu-id="0edc5-228">This method loads the three update maps and creates a dictionary that maps `v1` workflow identities to the update maps.</span></span>
+18. <span data-ttu-id="2be16-227">Fügen Sie der `LoadMaps`-Klasse (bzw. `Program`) die folgende `Module1`-Methode hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-227">Add the following `LoadMaps` method to the `Program` class (or `Module1`).</span></span> <span data-ttu-id="2be16-228">Durch diese Methode werden die drei Updatezuordnungen geladen und ein Wörterbuch erstellt, das den Updatezuordnungen `v1`-Workflowidentitäten zuordnet.</span><span class="sxs-lookup"><span data-stu-id="2be16-228">This method loads the three update maps and creates a dictionary that maps `v1` workflow identities to the update maps.</span></span>
 
     ```vb
     Function LoadMaps() As IDictionary(Of WorkflowIdentity, DynamicUpdateInfo)
@@ -1325,7 +1325,7 @@ ms.locfileid: "49123838"
     }
     ```
 
-19. <span data-ttu-id="0edc5-229">Fügen Sie `Main` den folgenden Code hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-229">Add the following code to `Main`.</span></span> <span data-ttu-id="0edc5-230">Der Code durchläuft die persistenten Workflowinstanzen und überprüft jede `WorkflowIdentity`.</span><span class="sxs-lookup"><span data-stu-id="0edc5-230">This code iterates the persisted workflow instances and examines each `WorkflowIdentity`.</span></span> <span data-ttu-id="0edc5-231">Wenn `WorkflowIdentity` einer `v1`-Workflowinstanz entspricht, wird eine `WorkflowApplication` mit der aktualisierten Workflowdefinition und einer aktualisierten Workflowidentität konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="0edc5-231">If the `WorkflowIdentity` maps to a `v1` workflow instance, a `WorkflowApplication` is configured with the updated workflow definition and an updated workflow identity.</span></span> <span data-ttu-id="0edc5-232">Anschließend wird `WorkflowApplication.Load` mit der Instanz und der Updatezuordnung aufgerufen, durch die die dynamische Updatezuordnung angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="0edc5-232">Next, `WorkflowApplication.Load` is called with the instance and the update map, which applies the dynamic update map.</span></span> <span data-ttu-id="0edc5-233">Nachdem das Update angewendet wurde, wird die aktualisierte Instanz mit einem Aufruf von `Unload` persistent gespeichert.</span><span class="sxs-lookup"><span data-stu-id="0edc5-233">Once the update is applied, the updated instance is persisted with a call to `Unload`.</span></span>
+19. <span data-ttu-id="2be16-229">Fügen Sie `Main` den folgenden Code hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-229">Add the following code to `Main`.</span></span> <span data-ttu-id="2be16-230">Der Code durchläuft die persistenten Workflowinstanzen und überprüft jede `WorkflowIdentity`.</span><span class="sxs-lookup"><span data-stu-id="2be16-230">This code iterates the persisted workflow instances and examines each `WorkflowIdentity`.</span></span> <span data-ttu-id="2be16-231">Wenn `WorkflowIdentity` einer `v1`-Workflowinstanz entspricht, wird eine `WorkflowApplication` mit der aktualisierten Workflowdefinition und einer aktualisierten Workflowidentität konfiguriert.</span><span class="sxs-lookup"><span data-stu-id="2be16-231">If the `WorkflowIdentity` maps to a `v1` workflow instance, a `WorkflowApplication` is configured with the updated workflow definition and an updated workflow identity.</span></span> <span data-ttu-id="2be16-232">Anschließend wird `WorkflowApplication.Load` mit der Instanz und der Updatezuordnung aufgerufen, durch die die dynamische Updatezuordnung angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="2be16-232">Next, `WorkflowApplication.Load` is called with the instance and the update map, which applies the dynamic update map.</span></span> <span data-ttu-id="2be16-233">Nachdem das Update angewendet wurde, wird die aktualisierte Instanz mit einem Aufruf von `Unload` persistent gespeichert.</span><span class="sxs-lookup"><span data-stu-id="2be16-233">Once the update is applied, the updated instance is persisted with a call to `Unload`.</span></span>
 
     ```vb
     Dim store = New SqlWorkflowInstanceStore(connectionString)
@@ -1408,35 +1408,35 @@ ms.locfileid: "49123838"
     }
     ```
 
-20. <span data-ttu-id="0edc5-234">Mit der rechten Maustaste **ApplyDynamicUpdate** in **Projektmappen-Explorer** , und wählen Sie **als Startprojekt festlegen**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-234">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
+20. <span data-ttu-id="2be16-234">Mit der rechten Maustaste **ApplyDynamicUpdate** in **Projektmappen-Explorer** , und wählen Sie **als Startprojekt festlegen**.</span><span class="sxs-lookup"><span data-stu-id="2be16-234">Right-click **ApplyDynamicUpdate** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
 
-21. <span data-ttu-id="0edc5-235">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen, und STRG+F5, um die `ApplyDynamicUpdate`-Anwendung auszuführen und die persistenten Workflowinstanzen zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="0edc5-235">Press CTRL+SHIFT+B to build the solution, and then press CTRL+F5 to run the `ApplyDynamicUpdate` application and update the persisted workflow instances.</span></span> <span data-ttu-id="0edc5-236">Die Ausgabe sollte folgendem Beispiel entsprechen:</span><span class="sxs-lookup"><span data-stu-id="0edc5-236">You should see output similar to the following.</span></span> <span data-ttu-id="0edc5-237">Die Workflows der Version 1.0.0.0 werden auf die Version 1.5.0.0 aktualisiert, während die Workflows der Version 2.0.0.0 nicht aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="0edc5-237">The version 1.0.0.0 workflows are updated to version 1.5.0.0, while the version 2.0.0.0 workflows are not updated.</span></span>
+21. <span data-ttu-id="2be16-235">Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen, und STRG+F5, um die `ApplyDynamicUpdate`-Anwendung auszuführen und die persistenten Workflowinstanzen zu aktualisieren.</span><span class="sxs-lookup"><span data-stu-id="2be16-235">Press CTRL+SHIFT+B to build the solution, and then press CTRL+F5 to run the `ApplyDynamicUpdate` application and update the persisted workflow instances.</span></span> <span data-ttu-id="2be16-236">Die Ausgabe sollte folgendem Beispiel entsprechen:</span><span class="sxs-lookup"><span data-stu-id="2be16-236">You should see output similar to the following.</span></span> <span data-ttu-id="2be16-237">Die Workflows der Version 1.0.0.0 werden auf die Version 1.5.0.0 aktualisiert, während die Workflows der Version 2.0.0.0 nicht aktualisiert werden.</span><span class="sxs-lookup"><span data-stu-id="2be16-237">The version 1.0.0.0 workflows are updated to version 1.5.0.0, while the version 2.0.0.0 workflows are not updated.</span></span>
 
- <span data-ttu-id="0edc5-238">**Untersuchen: StateMachineNumberGuessWorkflow; Version = 1.0.0.0**
-**aktualisiert und: StateMachineNumberGuessWorkflow; Version 1.5.0.0 =**
-**überprüfen: StateMachineNumberGuessWorkflow; Version = 1.0.0.0**
-**aktualisiert und: StateMachineNumberGuessWorkflow; Version 1.5.0.0 =**
-**überprüfen: FlowchartNumberGuessWorkflow; Version = 1.0.0.0**
-**aktualisiert und: FlowchartNumberGuessWorkflow; Version 1.5.0.0 =**
-**überprüfen: FlowchartNumberGuessWorkflow; Version = 1.0.0.0**
-**aktualisiert und: FlowchartNumberGuessWorkflow; Version 1.5.0.0 =**
-**überprüfen: SequentialNumberGuessWorkflow; Version = 1.0.0.0**
-**aktualisiert und: SequentialNumberGuessWorkflow; Version 1.5.0.0 =**
-**überprüfen: SequentialNumberGuessWorkflow; Version = 1.0.0.0**
-**aktualisiert und: SequentialNumberGuessWorkflow; Version 1.5.0.0 =**
-**überprüfen: SequentialNumberGuessWorkflow; Version = 1.0.0.0**
-**aktualisiert und: SequentialNumberGuessWorkflow; Version 1.5.0.0 =**
-**überprüfen: StateMachineNumberGuessWorkflow; Version = 1.0.0.0**
-**aktualisiert und: StateMachineNumberGuessWorkflow; Version 1.5.0.0 =**
-**überprüfen: FlowchartNumberGuessWorkflow; Version = 1.0.0.0**
-**aktualisiert und: FlowchartNumberGuessWorkflow; Version 1.5.0.0 =**
-**überprüfen: StateMachineNumberGuessWorkflow; Version = 2.0.0.0**
-**überprüfen: StateMachineNumberGuessWorkflow; Version = 2.0.0.0**
-**überprüfen: FlowchartNumberGuessWorkflow; Version = 2.0.0.0**
-**überprüfen: FlowchartNumberGuessWorkflow; Version = 2.0.0.0**
-**überprüfen: SequentialNumberGuessWorkflow; Version = 2.0.0.0**
-**überprüfen: SequentialNumberGuessWorkflow; Version = 2.0.0.0**
-**drücken Sie eine beliebige Taste, um den Vorgang fortzusetzen...**</span><span class="sxs-lookup"><span data-stu-id="0edc5-238">**Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
+ <span data-ttu-id="2be16-238">**Untersuchen: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
+**Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0**
+**Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
+**Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0**
+**Inspecting: FlowchartNumberGuessWorkflow; Version=1.0.0.0**
+**Updated to: FlowchartNumberGuessWorkflow; Version=1.5.0.0**
+**Inspecting: FlowchartNumberGuessWorkflow; Version=1.0.0.0**
+**Updated to: FlowchartNumberGuessWorkflow; Version=1.5.0.0**
+**Inspecting: SequentialNumberGuessWorkflow; Version=1.0.0.0**
+**Updated to: SequentialNumberGuessWorkflow; Version=1.5.0.0**
+**Inspecting: SequentialNumberGuessWorkflow; Version=1.0.0.0**
+**Updated to: SequentialNumberGuessWorkflow; Version=1.5.0.0**
+**Inspecting: SequentialNumberGuessWorkflow; Version=1.0.0.0**
+**Updated to: SequentialNumberGuessWorkflow; Version=1.5.0.0**
+**Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
+**Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0**
+**Inspecting: FlowchartNumberGuessWorkflow; Version=1.0.0.0**
+**Updated to: FlowchartNumberGuessWorkflow; Version=1.5.0.0**
+**Inspecting: StateMachineNumberGuessWorkflow; Version=2.0.0.0**
+**Inspecting: StateMachineNumberGuessWorkflow; Version=2.0.0.0**
+**Inspecting: FlowchartNumberGuessWorkflow; Version=2.0.0.0**
+**Inspecting: FlowchartNumberGuessWorkflow; Version=2.0.0.0**
+**Inspecting: SequentialNumberGuessWorkflow; Version=2.0.0.0**
+**Inspecting: SequentialNumberGuessWorkflow; Version = 2.0.0.0**
+**drücken Sie eine beliebige Taste, um den Vorgang fortzusetzen...**</span><span class="sxs-lookup"><span data-stu-id="2be16-238">**Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
 **Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0**
 **Inspecting: StateMachineNumberGuessWorkflow; Version=1.0.0.0**
 **Updated to: StateMachineNumberGuessWorkflow; Version=1.5.0.0**
@@ -1462,30 +1462,30 @@ ms.locfileid: "49123838"
 **Inspecting: SequentialNumberGuessWorkflow; Version=2.0.0.0**
 **Press any key to continue . . .**</span></span>
 
-###  <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="0edc5-239">Zum Ausführen der Anwendung mit der aktualisierten workflows</span><span class="sxs-lookup"><span data-stu-id="0edc5-239">To run the application with the updated workflows</span></span>
+### <a name="BKMK_BuildAndRun"></a> <span data-ttu-id="2be16-239">Zum Ausführen der Anwendung mit der aktualisierten workflows</span><span class="sxs-lookup"><span data-stu-id="2be16-239">To run the application with the updated workflows</span></span>
 
-1.  <span data-ttu-id="0edc5-240">Mit der rechten Maustaste **NumberGuessWorkflowHost** in **Projektmappen-Explorer** , und wählen Sie **als Startprojekt festlegen**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-240">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
+1.  <span data-ttu-id="2be16-240">Mit der rechten Maustaste **NumberGuessWorkflowHost** in **Projektmappen-Explorer** , und wählen Sie **als Startprojekt festlegen**.</span><span class="sxs-lookup"><span data-stu-id="2be16-240">Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Set as StartUp Project**.</span></span>
 
-2.  <span data-ttu-id="0edc5-241">Drücken Sie STRG+F5, um die Anwendung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-241">Press CTRL+F5 to run the application.</span></span>
+2.  <span data-ttu-id="2be16-241">Drücken Sie STRG+F5, um die Anwendung auszuführen.</span><span class="sxs-lookup"><span data-stu-id="2be16-241">Press CTRL+F5 to run the application.</span></span>
 
-3.  <span data-ttu-id="0edc5-242">Klicken Sie auf **neues Spiel** einen neuen Workflow gestartet, und notieren die Versionsinformationen unter das Statusfenster, das der Workflow wird eine `v2` Workflow.</span><span class="sxs-lookup"><span data-stu-id="0edc5-242">Click **New Game** to start a new workflow and note the version information below the status window that indicates the workflow is a `v2` workflow.</span></span>
+3.  <span data-ttu-id="2be16-242">Klicken Sie auf **neues Spiel** einen neuen Workflow gestartet, und notieren die Versionsinformationen unter das Statusfenster, das der Workflow wird eine `v2` Workflow.</span><span class="sxs-lookup"><span data-stu-id="2be16-242">Click **New Game** to start a new workflow and note the version information below the status window that indicates the workflow is a `v2` workflow.</span></span>
 
-4.  <span data-ttu-id="0edc5-243">Wählen Sie eine der der `v1` Sie am Anfang des gestarteten Workflows die [Vorgehensweise: Hosten mehrerer Workflowversionen einen Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="0edc5-243">Select one of the `v1` workflows you started at the beginning of the [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) topic.</span></span> <span data-ttu-id="0edc5-244">Beachten Sie, dass die Versionsinformationen unter dem Statusfenster gibt an, dass der Workflow eine Version **1.5.0.0** Workflow.</span><span class="sxs-lookup"><span data-stu-id="0edc5-244">Note that the version information under the status window indicates that the workflow is a version **1.5.0.0** workflow.</span></span> <span data-ttu-id="0edc5-245">Beachten Sie, dass abgesehen von der Meldung, dass die Schätzung zu hoch oder zu niedrig war, keine Informationen zu früheren Schätzungen angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="0edc5-245">Note that there is no information indicated about previous guesses other than whether they were too high or too low.</span></span>
+4.  <span data-ttu-id="2be16-243">Wählen Sie eine der der `v1` Sie am Anfang des gestarteten Workflows die [Vorgehensweise: Hosten mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="2be16-243">Select one of the `v1` workflows you started at the beginning of the [How to: Host Multiple Versions of a Workflow Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) topic.</span></span> <span data-ttu-id="2be16-244">Beachten Sie, dass die Versionsinformationen unter dem Statusfenster gibt an, dass der Workflow eine Version **1.5.0.0** Workflow.</span><span class="sxs-lookup"><span data-stu-id="2be16-244">Note that the version information under the status window indicates that the workflow is a version **1.5.0.0** workflow.</span></span> <span data-ttu-id="2be16-245">Beachten Sie, dass abgesehen von der Meldung, dass die Schätzung zu hoch oder zu niedrig war, keine Informationen zu früheren Schätzungen angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="2be16-245">Note that there is no information indicated about previous guesses other than whether they were too high or too low.</span></span>
 
- <span data-ttu-id="0edc5-246">**Bitte geben Sie eine Zahl zwischen 1 und 10**
-**Ihre Schätzung zu niedrig ist.**</span><span class="sxs-lookup"><span data-stu-id="0edc5-246">**Please enter a number between 1 and 10**
+ <span data-ttu-id="2be16-246">**Bitte geben Sie eine Zahl zwischen 1 und 10**
+**Ihre Schätzung zu niedrig ist.**</span><span class="sxs-lookup"><span data-stu-id="2be16-246">**Please enter a number between 1 and 10**
 **Your guess is too low.**</span></span>
 
-5.  <span data-ttu-id="0edc5-247">Notieren Sie die `InstanceId`, und geben Sie dann Schätzungen ein, bis der Workflow beendet ist.</span><span class="sxs-lookup"><span data-stu-id="0edc5-247">Make a note of the `InstanceId` and then enter guesses until the workflow completes.</span></span> <span data-ttu-id="0edc5-248">Das Statusfenster zeigt Informationen über den Inhalt der Schätzung an, da die `WriteLine`-Aktivitäten durch das dynamische Update aktualisiert wurden.</span><span class="sxs-lookup"><span data-stu-id="0edc5-248">The status window displays information about the content of the guess because the `WriteLine` activities were updated by the dynamic update.</span></span>
+5.  <span data-ttu-id="2be16-247">Notieren Sie die `InstanceId`, und geben Sie dann Schätzungen ein, bis der Workflow beendet ist.</span><span class="sxs-lookup"><span data-stu-id="2be16-247">Make a note of the `InstanceId` and then enter guesses until the workflow completes.</span></span> <span data-ttu-id="2be16-248">Das Statusfenster zeigt Informationen über den Inhalt der Schätzung an, da die `WriteLine`-Aktivitäten durch das dynamische Update aktualisiert wurden.</span><span class="sxs-lookup"><span data-stu-id="2be16-248">The status window displays information about the content of the guess because the `WriteLine` activities were updated by the dynamic update.</span></span>
 
- <span data-ttu-id="0edc5-249">**Bitte geben Sie eine Zahl zwischen 1 und 10**
+ <span data-ttu-id="2be16-249">**Bitte geben Sie eine Zahl zwischen 1 und 10**
 **Ihre Schätzung ist zu niedrig.** 
  **Bitte geben Sie eine Zahl zwischen 1 und 10**
 **5 ist zu niedrig.** 
  **Bitte geben Sie eine Zahl zwischen 1 und 10**
 **7 ist zu hoch.** 
  **Bitte geben Sie eine Zahl zwischen 1 und 10**
-**Herzlichen Glückwunsch, Sie erraten die Anzahl in 4 deaktiviert.**</span><span class="sxs-lookup"><span data-stu-id="0edc5-249">**Please enter a number between 1 and 10**
+**Herzlichen Glückwunsch, Sie erraten die Anzahl in 4 deaktiviert.**</span><span class="sxs-lookup"><span data-stu-id="2be16-249">**Please enter a number between 1 and 10**
 **Your guess is too low.**
 **Please enter a number between 1 and 10**
 **5 is too low.**
@@ -1494,16 +1494,16 @@ ms.locfileid: "49123838"
 **Please enter a number between 1 and 10**
 **Congratulations, you guessed the number in 4 turns.**</span></span>
 
-6.  <span data-ttu-id="0edc5-250">Öffnen Sie Windows Explorer, und navigieren Sie zu der **NumberGuessWorkflowHost\bin\debug** Ordner (oder **"bin\Release"** je nach den projekteinstellungen), und öffnen Sie die Nachverfolgungsdatei, die mit dem Editor, der entspricht mit dem abgeschlossenen Workflow.</span><span class="sxs-lookup"><span data-stu-id="0edc5-250">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="0edc5-251">Wenn Sie sich noch nicht vorgenommen haben die `InstanceId` möglicherweise die richtige Nachverfolgungsdatei mithilfe identifizieren die **Änderungsdatum** Informationen im Windows-Explorer.</span><span class="sxs-lookup"><span data-stu-id="0edc5-251">If you did not make a note of the `InstanceId` you may be able to identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span> <span data-ttu-id="0edc5-252">Die letzte Zeile der Nachverfolgungsinformationen enthält die Ausgabe der neu hinzugefügten `WriteLine`-Aktivität.</span><span class="sxs-lookup"><span data-stu-id="0edc5-252">The last line of the tracking information contains the output of the newly added `WriteLine` activity.</span></span>
+6.  <span data-ttu-id="2be16-250">Öffnen Sie Windows Explorer, und navigieren Sie zu der **NumberGuessWorkflowHost\bin\debug** Ordner (oder **"bin\Release"** je nach den projekteinstellungen), und öffnen Sie die Nachverfolgungsdatei, die mit dem Editor, der entspricht mit dem abgeschlossenen Workflow.</span><span class="sxs-lookup"><span data-stu-id="2be16-250">Open Windows Explorer and navigate to the **NumberGuessWorkflowHost\bin\debug** folder (or **bin\release** depending on your project settings) and open the tracking file using Notepad that corresponds to the completed workflow.</span></span> <span data-ttu-id="2be16-251">Wenn Sie sich noch nicht vorgenommen haben die `InstanceId` möglicherweise die richtige Nachverfolgungsdatei mithilfe identifizieren die **Änderungsdatum** Informationen im Windows-Explorer.</span><span class="sxs-lookup"><span data-stu-id="2be16-251">If you did not make a note of the `InstanceId` you may be able to identify the correct tracking file by using the **Date modified** information in Windows Explorer.</span></span> <span data-ttu-id="2be16-252">Die letzte Zeile der Nachverfolgungsinformationen enthält die Ausgabe der neu hinzugefügten `WriteLine`-Aktivität.</span><span class="sxs-lookup"><span data-stu-id="2be16-252">The last line of the tracking information contains the output of the newly added `WriteLine` activity.</span></span>
 
- <span data-ttu-id="0edc5-253">**Bitte geben Sie eine Zahl zwischen 1 und 10**
+ <span data-ttu-id="2be16-253">**Bitte geben Sie eine Zahl zwischen 1 und 10**
 **Ihre Schätzung ist zu niedrig.** 
  **Bitte geben Sie eine Zahl zwischen 1 und 10**
 **5 ist zu niedrig.** 
  **Bitte geben Sie eine Zahl zwischen 1 und 10**
 **7 ist zu hoch.** 
  **Bitte geben Sie eine Zahl zwischen 1 und 10**
-**6 richtig ist. Sie ahnen es bereits in 4 deaktiviert.**</span><span class="sxs-lookup"><span data-stu-id="0edc5-253">**Please enter a number between 1 and 10**
+**6 richtig ist. Sie ahnen es bereits in 4 deaktiviert.**</span><span class="sxs-lookup"><span data-stu-id="2be16-253">**Please enter a number between 1 and 10**
 **Your guess is too low.**
 **Please enter a number between 1 and 10**
 **5 is too low.**
@@ -1512,14 +1512,14 @@ ms.locfileid: "49123838"
 **Please enter a number between 1 and 10**
 **6 is correct. You guessed it in 4 turns.**</span></span>
 
-###  <a name="BKMK_StartPreviousVersions"></a> <span data-ttu-id="0edc5-254">Zum Starten von Vorgängerversionen der Workflows zu aktivieren</span><span class="sxs-lookup"><span data-stu-id="0edc5-254">To enable starting previous versions of the workflows</span></span>
- <span data-ttu-id="0edc5-255">Wenn keine zu aktualisierenden Workflows mehr verfügbar sind, können Sie die `NumberGuessWorkflowHost`-Anwendung ändern, um das Starten früherer Workflowversionen zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="0edc5-255">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>
+### <a name="BKMK_StartPreviousVersions"></a> <span data-ttu-id="2be16-254">Zum Starten von Vorgängerversionen der Workflows zu aktivieren</span><span class="sxs-lookup"><span data-stu-id="2be16-254">To enable starting previous versions of the workflows</span></span>
+ <span data-ttu-id="2be16-255">Wenn keine zu aktualisierenden Workflows mehr verfügbar sind, können Sie die `NumberGuessWorkflowHost`-Anwendung ändern, um das Starten früherer Workflowversionen zu aktivieren.</span><span class="sxs-lookup"><span data-stu-id="2be16-255">If you run out of workflows to update, you can modify the `NumberGuessWorkflowHost` application to enable starting previous versions of the workflows.</span></span>
 
-1.  <span data-ttu-id="0edc5-256">Doppelklicken Sie auf **WorkflowHostForm** in **Projektmappen-Explorer**, und wählen Sie die **WorkflowType** im Kombinationsfeld.</span><span class="sxs-lookup"><span data-stu-id="0edc5-256">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>
+1.  <span data-ttu-id="2be16-256">Doppelklicken Sie auf **WorkflowHostForm** in **Projektmappen-Explorer**, und wählen Sie die **WorkflowType** im Kombinationsfeld.</span><span class="sxs-lookup"><span data-stu-id="2be16-256">Double-click **WorkflowHostForm** in **Solution Explorer**, and select the **WorkflowType** combo box.</span></span>
 
-2.  <span data-ttu-id="0edc5-257">In der **Eigenschaften** wählen Sie im Fenster der **Elemente** -Eigenschaft, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten so bearbeiten Sie die **Elemente** Auflistung.</span><span class="sxs-lookup"><span data-stu-id="0edc5-257">In the **Properties** window, select the **Items** property and click the ellipsis button to edit the **Items** collection.</span></span>
+2.  <span data-ttu-id="2be16-257">In der **Eigenschaften** wählen Sie im Fenster der **Elemente** -Eigenschaft, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten so bearbeiten Sie die **Elemente** Auflistung.</span><span class="sxs-lookup"><span data-stu-id="2be16-257">In the **Properties** window, select the **Items** property and click the ellipsis button to edit the **Items** collection.</span></span>
 
-3.  <span data-ttu-id="0edc5-258">Fügen Sie der Auflistung die folgenden drei Elemente hinzu.</span><span class="sxs-lookup"><span data-stu-id="0edc5-258">Add the following three items to the collection.</span></span>
+3.  <span data-ttu-id="2be16-258">Fügen Sie der Auflistung die folgenden drei Elemente hinzu.</span><span class="sxs-lookup"><span data-stu-id="2be16-258">Add the following three items to the collection.</span></span>
 
     ```
     StateMachineNumberGuessWorkflow v1
@@ -1527,7 +1527,7 @@ ms.locfileid: "49123838"
     SequentialNumberGuessWorkflow v1
     ```
 
-     <span data-ttu-id="0edc5-259">Die abgeschlossene `Items`-Auflistung verfügt über sechs Elemente.</span><span class="sxs-lookup"><span data-stu-id="0edc5-259">The completed `Items` collection will have six items.</span></span>
+     <span data-ttu-id="2be16-259">Die abgeschlossene `Items`-Auflistung verfügt über sechs Elemente.</span><span class="sxs-lookup"><span data-stu-id="2be16-259">The completed `Items` collection will have six items.</span></span>
 
     ```
     StateMachineNumberGuessWorkflow
@@ -1538,9 +1538,9 @@ ms.locfileid: "49123838"
     SequentialNumberGuessWorkflow v1
     ```
 
-4.  <span data-ttu-id="0edc5-260">Doppelklicken Sie auf **WorkflowHostForm** in **Projektmappen-Explorer**, und wählen Sie **Ansichtscode**.</span><span class="sxs-lookup"><span data-stu-id="0edc5-260">Double-click **WorkflowHostForm** in **Solution Explorer**, and select **View Code**.</span></span>
+4.  <span data-ttu-id="2be16-260">Doppelklicken Sie auf **WorkflowHostForm** in **Projektmappen-Explorer**, und wählen Sie **Ansichtscode**.</span><span class="sxs-lookup"><span data-stu-id="2be16-260">Double-click **WorkflowHostForm** in **Solution Explorer**, and select **View Code**.</span></span>
 
-5.  <span data-ttu-id="0edc5-261">Fügen Sie drei neue Fälle, die die `switch` (oder `Select Case`)-Anweisung in der `NewGame_Click` Handler, der die neuen Elemente im Zuordnen der **WorkflowType** im Kombinationsfeld, um den entsprechenden workflowidentitäten.</span><span class="sxs-lookup"><span data-stu-id="0edc5-261">Add three new cases to the `switch` (or `Select Case`) statement in the `NewGame_Click` handler to map the new items in the **WorkflowType** combo box to the matching workflow identities.</span></span>
+5.  <span data-ttu-id="2be16-261">Fügen Sie drei neue Fälle, die die `switch` (oder `Select Case`)-Anweisung in der `NewGame_Click` Handler, der die neuen Elemente im Zuordnen der **WorkflowType** im Kombinationsfeld, um den entsprechenden workflowidentitäten.</span><span class="sxs-lookup"><span data-stu-id="2be16-261">Add three new cases to the `switch` (or `Select Case`) statement in the `NewGame_Click` handler to map the new items in the **WorkflowType** combo box to the matching workflow identities.</span></span>
 
     ```vb
     Case "SequentialNumberGuessWorkflow v1"
@@ -1567,7 +1567,7 @@ ms.locfileid: "49123838"
         break;
     ```
 
-     <span data-ttu-id="0edc5-262">Im folgenden Beispiel ist die gesamte `switch`-Anweisung (bzw. `Select Case`-Anweisung) enthalten.</span><span class="sxs-lookup"><span data-stu-id="0edc5-262">The following example contains the complete `switch` (or `Select Case`) statement.</span></span>
+     <span data-ttu-id="2be16-262">Im folgenden Beispiel ist die gesamte `switch`-Anweisung (bzw. `Select Case`-Anweisung) enthalten.</span><span class="sxs-lookup"><span data-stu-id="2be16-262">The following example contains the complete `switch` (or `Select Case`) statement.</span></span>
 
     ```vb
     Select Case WorkflowType.SelectedItem.ToString()
@@ -1620,4 +1620,4 @@ ms.locfileid: "49123838"
     };
     ```
 
-6.  <span data-ttu-id="0edc5-263">Drücken Sie STRG+F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="0edc5-263">Press CTRL+F5 to build and run the application.</span></span> <span data-ttu-id="0edc5-264">Sie können jetzt die `v1`-Versionen des Workflows sowie die aktuellen Versionen starten.</span><span class="sxs-lookup"><span data-stu-id="0edc5-264">You can now start the `v1` versions of the workflow as well as the current versions.</span></span> <span data-ttu-id="0edc5-265">Um diese neuen Instanzen dynamisch zu aktualisieren, führen Sie die **ApplyDynamicUpdate** Anwendung.</span><span class="sxs-lookup"><span data-stu-id="0edc5-265">To dynamically update these new instances, run the **ApplyDynamicUpdate** application.</span></span>
+6.  <span data-ttu-id="2be16-263">Drücken Sie STRG+F5, um die Anwendung zu erstellen und auszuführen.</span><span class="sxs-lookup"><span data-stu-id="2be16-263">Press CTRL+F5 to build and run the application.</span></span> <span data-ttu-id="2be16-264">Sie können jetzt die `v1`-Versionen des Workflows sowie die aktuellen Versionen starten.</span><span class="sxs-lookup"><span data-stu-id="2be16-264">You can now start the `v1` versions of the workflow as well as the current versions.</span></span> <span data-ttu-id="2be16-265">Um diese neuen Instanzen dynamisch zu aktualisieren, führen Sie die **ApplyDynamicUpdate** Anwendung.</span><span class="sxs-lookup"><span data-stu-id="2be16-265">To dynamically update these new instances, run the **ApplyDynamicUpdate** application.</span></span>

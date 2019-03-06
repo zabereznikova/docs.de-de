@@ -8,19 +8,19 @@ helpviewer_keywords:
 - creating add-ins [WPF]
 - add-ins [WPF], returns a UI
 ms.assetid: c33980e8-36e7-45ce-a485-8c826dd29009
-ms.openlocfilehash: 2dcddc42ec1f9f3b16e5b4465be2e4194819a736
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27eb7acbab7d9c90f0c0c311ef6331a16b7896e8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546002"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358586"
 ---
-# <a name="how-to-topics"></a><span data-ttu-id="4dd61-102">Gewusst wie-Themen</span><span class="sxs-lookup"><span data-stu-id="4dd61-102">How-to Topics</span></span>
-<span data-ttu-id="4dd61-103">Die folgenden Themen zeigen, wie Windows Presentation Foundation (WPF)-add-ins zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="4dd61-103">The following topics show how to create Windows Presentation Foundation (WPF) add-ins.</span></span>  
+# <a name="how-to-topics"></a><span data-ttu-id="66f35-102">Gewusst wie-Themen</span><span class="sxs-lookup"><span data-stu-id="66f35-102">How-to Topics</span></span>
+<span data-ttu-id="66f35-103">Die folgenden Themen zeigen, wie Sie Windows Presentation Foundation (WPF)-add-ins zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="66f35-103">The following topics show how to create Windows Presentation Foundation (WPF) add-ins.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4dd61-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="4dd61-104">In This Section</span></span>  
- [<span data-ttu-id="4dd61-105">Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche zurückgibt</span><span class="sxs-lookup"><span data-stu-id="4dd61-105">Create an Add-In That Returns a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
- [<span data-ttu-id="4dd61-106">Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist</span><span class="sxs-lookup"><span data-stu-id="4dd61-106">Create an Add-In That Is a UI</span></span>](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
+## <a name="in-this-section"></a><span data-ttu-id="66f35-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="66f35-104">In This Section</span></span>  
+ [<span data-ttu-id="66f35-105">Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche zurückgibt</span><span class="sxs-lookup"><span data-stu-id="66f35-105">Create an Add-In That Returns a UI</span></span>](how-to-create-an-add-in-that-returns-a-ui.md)  
+ [<span data-ttu-id="66f35-106">Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist</span><span class="sxs-lookup"><span data-stu-id="66f35-106">Create an Add-In That Is a UI</span></span>](how-to-create-an-add-in-that-is-a-ui.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="4dd61-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="4dd61-107">Related Sections</span></span>  
- [<span data-ttu-id="4dd61-108">Übersicht über WPF-Add-Ins</span><span class="sxs-lookup"><span data-stu-id="4dd61-108">WPF Add-Ins Overview</span></span>](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="66f35-107">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="66f35-107">Related Sections</span></span>  
+ [<span data-ttu-id="66f35-108">Übersicht über WPF-Add-Ins</span><span class="sxs-lookup"><span data-stu-id="66f35-108">WPF Add-Ins Overview</span></span>](wpf-add-ins-overview.md)

@@ -8,36 +8,36 @@ helpviewer_keywords:
 - EmissiveMaterial [WPF], applying to 3-D objects
 - 3-D objects [WPF], applying EmissiveMaterial
 ms.assetid: fd442cc2-5adc-487a-ba70-e45ed54bb3b4
-ms.openlocfilehash: 90a4903310ff7a8778296866f39f685aefee3ffb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f4158d59334c2f80775541ea1b0f944e048b081
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645040"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362499"
 ---
-# <a name="how-to-apply-emissive-material-to-a-3-d-object"></a><span data-ttu-id="d28ee-102">Vorgehensweise: Anwenden von Emissive Material auf ein 3D-Objekt</span><span class="sxs-lookup"><span data-stu-id="d28ee-102">How to: Apply Emissive Material to a 3-D Object</span></span>
-<span data-ttu-id="d28ee-103">Das folgende Beispiel zeigt, wie Sie mit <xref:System.Windows.Media.Media3D.EmissiveMaterial> zu einem bestehenden Material auf die Farbe des Pinsels von EmissiveMaterial Farbe hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="d28ee-103">The following example shows how to use <xref:System.Windows.Media.Media3D.EmissiveMaterial> to add color to an existing Material equal to the color of the EmissiveMaterial's brush.</span></span> <span data-ttu-id="d28ee-104">Der folgende Code zeigt <xref:System.Windows.Media.Media3D.DiffuseMaterial> und <xref:System.Windows.Media.Media3D.EmissiveMaterial> in Blau hinzuzufügen, zu der DiffuseMaterial Darstellung angewendet.</span><span class="sxs-lookup"><span data-stu-id="d28ee-104">The code below shows <xref:System.Windows.Media.Media3D.DiffuseMaterial> and <xref:System.Windows.Media.Media3D.EmissiveMaterial> applied in combination to add blue to the DiffuseMaterial's appearance.</span></span>  
+# <a name="how-to-apply-emissive-material-to-a-3-d-object"></a><span data-ttu-id="63d81-102">Vorgehensweise: Anwenden von Emissive Material auf ein 3D-Objekt</span><span class="sxs-lookup"><span data-stu-id="63d81-102">How to: Apply Emissive Material to a 3-D Object</span></span>
+<span data-ttu-id="63d81-103">Das folgende Beispiel zeigt, wie Sie mit <xref:System.Windows.Media.Media3D.EmissiveMaterial> zu einem bestehenden Material auf die Farbe des Pinsels von EmissiveMaterial Farbe hinzuzufügen.</span><span class="sxs-lookup"><span data-stu-id="63d81-103">The following example shows how to use <xref:System.Windows.Media.Media3D.EmissiveMaterial> to add color to an existing Material equal to the color of the EmissiveMaterial's brush.</span></span> <span data-ttu-id="63d81-104">Der folgende Code zeigt <xref:System.Windows.Media.Media3D.DiffuseMaterial> und <xref:System.Windows.Media.Media3D.EmissiveMaterial> in Blau hinzuzufügen, zu der DiffuseMaterial Darstellung angewendet.</span><span class="sxs-lookup"><span data-stu-id="63d81-104">The code below shows <xref:System.Windows.Media.Media3D.DiffuseMaterial> and <xref:System.Windows.Media.Media3D.EmissiveMaterial> applied in combination to add blue to the DiffuseMaterial's appearance.</span></span>  
   
- [!code-xaml[3DGallery_snip#EmmisiveMaterialAnimationExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/EmissiveMaterialExample.xaml#emmisivematerialanimationexampleinline1)]  
+ [!code-xaml[3DGallery_snip#EmmisiveMaterialAnimationExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/EmissiveMaterialExample.xaml#emmisivematerialanimationexampleinline1)]  
   
- <span data-ttu-id="d28ee-105">In prozeduralem Code:</span><span class="sxs-lookup"><span data-stu-id="d28ee-105">In procedural code:</span></span>  
+ <span data-ttu-id="63d81-105">In prozeduralem Code:</span><span class="sxs-lookup"><span data-stu-id="63d81-105">In procedural code:</span></span>  
   
- [!code-csharp[3DGallery_procedural_snip#EmissiveMaterialCodeExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/EmissiveMaterialExample.cs#emissivematerialcodeexampleinline1)]
- [!code-vb[3DGallery_procedural_snip#EmissiveMaterialCodeExampleInline1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/emissivematerialexample.vb#emissivematerialcodeexampleinline1)]  
+ [!code-csharp[3DGallery_procedural_snip#EmissiveMaterialCodeExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/EmissiveMaterialExample.cs#emissivematerialcodeexampleinline1)]
+ [!code-vb[3DGallery_procedural_snip#EmissiveMaterialCodeExampleInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/emissivematerialexample.vb#emissivematerialcodeexampleinline1)]  
   
-## <a name="example"></a><span data-ttu-id="d28ee-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d28ee-106">Example</span></span>  
- <span data-ttu-id="d28ee-107">Der folgende Code zeigt das gesamte Beispiel, in XAML.</span><span class="sxs-lookup"><span data-stu-id="d28ee-107">The following code shows the entire sample in XAML.</span></span>  
+## <a name="example"></a><span data-ttu-id="63d81-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="63d81-106">Example</span></span>  
+ <span data-ttu-id="63d81-107">Der folgende Code zeigt das gesamte Beispiel, in XAML.</span><span class="sxs-lookup"><span data-stu-id="63d81-107">The following code shows the entire sample in XAML.</span></span>  
   
- [!code-xaml[3DGallery_snip#EmissiveMaterialExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/EmissiveMaterialExample.xaml#emissivematerialexamplewholepage)]  
+ [!code-xaml[3DGallery_snip#EmissiveMaterialExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/EmissiveMaterialExample.xaml#emissivematerialexamplewholepage)]  
   
-## <a name="example"></a><span data-ttu-id="d28ee-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="d28ee-108">Example</span></span>  
- <span data-ttu-id="d28ee-109">Im folgenden wird das gesamte Beispiel in prozeduralem Code ein.</span><span class="sxs-lookup"><span data-stu-id="d28ee-109">Below is the entire sample in procedural code.</span></span>  
+## <a name="example"></a><span data-ttu-id="63d81-108">Beispiel</span><span class="sxs-lookup"><span data-stu-id="63d81-108">Example</span></span>  
+ <span data-ttu-id="63d81-109">Im folgenden wird das gesamte Beispiel in prozeduralem Code ein.</span><span class="sxs-lookup"><span data-stu-id="63d81-109">Below is the entire sample in procedural code.</span></span>  
   
- [!code-csharp[3DGallery_procedural_snip#EmissiveMaterialCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/EmissiveMaterialExample.cs#emissivematerialcodeexamplewholepage)]
- [!code-vb[3DGallery_procedural_snip#EmissiveMaterialCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/emissivematerialexample.vb#emissivematerialcodeexamplewholepage)]  
+ [!code-csharp[3DGallery_procedural_snip#EmissiveMaterialCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/EmissiveMaterialExample.cs#emissivematerialcodeexamplewholepage)]
+ [!code-vb[3DGallery_procedural_snip#EmissiveMaterialCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/emissivematerialexample.vb#emissivematerialcodeexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="d28ee-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d28ee-110">See also</span></span>
-- [<span data-ttu-id="d28ee-111">Erstellen einer 3D-Szene</span><span class="sxs-lookup"><span data-stu-id="d28ee-111">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)
-- [<span data-ttu-id="d28ee-112">Übersicht über 3D-Grafiken</span><span class="sxs-lookup"><span data-stu-id="d28ee-112">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
-- [<span data-ttu-id="d28ee-113">Animieren von Material-Eigenschaften in einer 3D-Szene</span><span class="sxs-lookup"><span data-stu-id="d28ee-113">Animate Material Properties in a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)
-- [<span data-ttu-id="d28ee-114">Anwenden von Material auf die Vorder- und Rückseite eines 3D-Objekts</span><span class="sxs-lookup"><span data-stu-id="d28ee-114">Apply Material to the Front and Back of a 3-D Object</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)
+## <a name="see-also"></a><span data-ttu-id="63d81-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="63d81-110">See also</span></span>
+- [<span data-ttu-id="63d81-111">Erstellen einer 3D-Szene</span><span class="sxs-lookup"><span data-stu-id="63d81-111">Create a 3-D Scene</span></span>](how-to-create-a-3-d-scene.md)
+- [<span data-ttu-id="63d81-112">Übersicht über 3D-Grafiken</span><span class="sxs-lookup"><span data-stu-id="63d81-112">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
+- [<span data-ttu-id="63d81-113">Animieren von Material-Eigenschaften in einer 3D-Szene</span><span class="sxs-lookup"><span data-stu-id="63d81-113">Animate Material Properties in a 3-D Scene</span></span>](how-to-animate-material-properties-in-a-3-d-scene.md)
+- [<span data-ttu-id="63d81-114">Anwenden von Material auf die Vorder- und Rückseite eines 3D-Objekts</span><span class="sxs-lookup"><span data-stu-id="63d81-114">Apply Material to the Front and Back of a 3-D Object</span></span>](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)

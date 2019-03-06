@@ -2,112 +2,116 @@
 title: Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
-ms.openlocfilehash: 7265fc208b7538a2ab63822afbe63b09b0f34135
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c7cde2baf6d8b163c6765b87d6bebef803eb6ee
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735408"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356701"
 ---
-# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a><span data-ttu-id="b0dfb-102">Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b0dfb-102">Using Variance in Interfaces for Generic Collections (Visual Basic)</span></span>
-<span data-ttu-id="b0dfb-103">Eine kovariante Schnittstelle ermöglicht den zugehörigen Methoden, mehr abgeleitete Typen zurückzugeben, als in der Schnittstelle angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="b0dfb-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="b0dfb-104">Eine kontravariante Schnittstelle ermöglicht den zugehörigen Methoden, Parameter von weniger abgeleiteten Typen anzunehmen, als in der Schnittstelle angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="b0dfb-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>  
-  
- <span data-ttu-id="b0dfb-105">In .NET Framework 4 wurden mehrere vorhandene Schnittstellen kovariant und kontravariant.</span><span class="sxs-lookup"><span data-stu-id="b0dfb-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="b0dfb-106">Dazu gehören <xref:System.Collections.Generic.IEnumerable%601> und <xref:System.IComparable%601>.</span><span class="sxs-lookup"><span data-stu-id="b0dfb-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="b0dfb-107">Dadurch können Sie Methoden wiederverwenden, die mit generischen Auflistungen von Basistypen für Sammlungen von abgeleiteten Typen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="b0dfb-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>  
-  
- <span data-ttu-id="b0dfb-108">Eine Liste der Varianten Schnittstellen in .NET Framework, finden Sie unter [Varianz in generischen Schnittstellen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="b0dfb-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span></span>  
-  
-## <a name="converting-generic-collections"></a><span data-ttu-id="b0dfb-109">Konvertieren von generischen Auflistungen</span><span class="sxs-lookup"><span data-stu-id="b0dfb-109">Converting Generic Collections</span></span>  
- <span data-ttu-id="b0dfb-110">Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="b0dfb-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="b0dfb-111">Die `PrintFullName`-Methode akzeptiert eine Auflistung vom Typ `IEnumerable(Of Person)` als Parameter.</span><span class="sxs-lookup"><span data-stu-id="b0dfb-111">The `PrintFullName` method accepts a collection of the `IEnumerable(Of Person)` type as a parameter.</span></span> <span data-ttu-id="b0dfb-112">Sie können dies jedoch für eine Auflistung des Typs `IEnumerable(Of Person)` wiederverwenden, da `Employee` `Person` erbt.</span><span class="sxs-lookup"><span data-stu-id="b0dfb-112">However, you can reuse it for a collection of the `IEnumerable(Of Person)` type because `Employee` inherits `Person`.</span></span>  
-  
-```vb  
-' Simple hierarchy of classes.  
-Public Class Person  
-    Public Property FirstName As String  
-    Public Property LastName As String  
-End Class  
-  
-Public Class Employee  
-    Inherits Person  
-End Class  
-  
-' The method has a parameter of the IEnumerable(Of Person) type.  
-Public Sub PrintFullName(ByVal persons As IEnumerable(Of Person))  
-    For Each person As Person In persons  
-        Console.WriteLine(  
-            "Name: " & person.FirstName & " " & person.LastName)  
-    Next  
-End Sub  
-  
-Sub Main()  
-    Dim employees As IEnumerable(Of Employee) = New List(Of Employee)  
-  
-    ' You can pass IEnumerable(Of Employee),   
-    ' although the method expects IEnumerable(Of Person).  
-  
-    PrintFullName(employees)  
-  
-End Sub  
-```  
-  
-## <a name="comparing-generic-collections"></a><span data-ttu-id="b0dfb-113">Vergleichen von generischen Auflistungen</span><span class="sxs-lookup"><span data-stu-id="b0dfb-113">Comparing Generic Collections</span></span>  
- <span data-ttu-id="b0dfb-114">Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kontravarianz in der <xref:System.Collections.Generic.IComparer%601>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="b0dfb-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="b0dfb-115">Die `PersonComparer`-Klasse implementiert die `IComparer(Of Person)`-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="b0dfb-115">The `PersonComparer` class implements the `IComparer(Of Person)` interface.</span></span> <span data-ttu-id="b0dfb-116">Sie können diese Klasse jedoch zum Vergleich einer Sequenz von Objekten des Typs `Employee` wiederverwenden, da `Employee` `Person` erbt.</span><span class="sxs-lookup"><span data-stu-id="b0dfb-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>  
-  
-```vb  
-' Simple hierarhcy of classes.  
-Public Class Person  
-    Public Property FirstName As String  
-    Public Property LastName As String  
-End Class  
-  
-Public Class Employee  
-    Inherits Person  
-End Class  
-' The custom comparer for the Person type  
-' with standard implementations of Equals()  
-' and GetHashCode() methods.  
-Class PersonComparer  
-    Implements IEqualityComparer(Of Person)  
-  
-    Public Function Equals1(  
-        ByVal x As Person,  
-        ByVal y As Person) As Boolean _  
-        Implements IEqualityComparer(Of Person).Equals  
-  
-        If x Is y Then Return True  
-        If x Is Nothing OrElse y Is Nothing Then Return False  
-        Return (x.FirstName = y.FirstName) AndAlso  
-            (x.LastName = y.LastName)  
-    End Function  
-    Public Function GetHashCode1(  
-        ByVal person As Person) As Integer _  
-        Implements IEqualityComparer(Of Person).GetHashCode  
-  
-        If person Is Nothing Then Return 0  
-        Dim hashFirstName =  
-            If(person.FirstName Is Nothing,  
-            0, person.FirstName.GetHashCode())  
-        Dim hashLastName = person.LastName.GetHashCode()  
-        Return hashFirstName Xor hashLastName  
-    End Function  
-End Class  
-  
-Sub Main()  
-    Dim employees = New List(Of Employee) From {  
-        New Employee With {.FirstName = "Michael", .LastName = "Alexander"},  
-        New Employee With {.FirstName = "Jeff", .LastName = "Price"}  
-    }  
-  
-    ' You can pass PersonComparer,   
-    ' which implements IEqualityComparer(Of Person),  
-    ' although the method expects IEqualityComparer(Of Employee)  
-  
-    Dim noduplicates As IEnumerable(Of Employee) = employees.Distinct(New PersonComparer())  
-  
-    For Each employee In noduplicates  
-        Console.WriteLine(employee.FirstName & " " & employee.LastName)  
-    Next  
-End Sub  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="b0dfb-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b0dfb-117">See also</span></span>
-- [<span data-ttu-id="b0dfb-118">Variance in Generic Interfaces (Visual Basic) (Varianz in generischen Schnittstellen (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="b0dfb-118">Variance in Generic Interfaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
+# <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a><span data-ttu-id="02dba-102">Verwenden von Varianz in Schnittstellen für generische Auflistungen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="02dba-102">Using Variance in Interfaces for Generic Collections (Visual Basic)</span></span>
+
+<span data-ttu-id="02dba-103">Eine kovariante Schnittstelle ermöglicht den zugehörigen Methoden, mehr abgeleitete Typen zurückzugeben, als in der Schnittstelle angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="02dba-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="02dba-104">Eine kontravariante Schnittstelle ermöglicht den zugehörigen Methoden, Parameter von weniger abgeleiteten Typen anzunehmen, als in der Schnittstelle angegeben sind.</span><span class="sxs-lookup"><span data-stu-id="02dba-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>
+
+<span data-ttu-id="02dba-105">In .NET Framework 4 wurden mehrere vorhandene Schnittstellen kovariant und kontravariant.</span><span class="sxs-lookup"><span data-stu-id="02dba-105">In .NET Framework 4, several existing interfaces became covariant and contravariant.</span></span> <span data-ttu-id="02dba-106">Dazu gehören <xref:System.Collections.Generic.IEnumerable%601> und <xref:System.IComparable%601>.</span><span class="sxs-lookup"><span data-stu-id="02dba-106">These include <xref:System.Collections.Generic.IEnumerable%601> and <xref:System.IComparable%601>.</span></span> <span data-ttu-id="02dba-107">Dadurch können Sie Methoden wiederverwenden, die mit generischen Auflistungen von Basistypen für Sammlungen von abgeleiteten Typen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="02dba-107">This enables you to reuse methods that operate with generic collections of base types for collections of derived types.</span></span>
+
+<span data-ttu-id="02dba-108">Eine Liste der Varianten Schnittstellen in .NET Framework, finden Sie unter [Varianz in generischen Schnittstellen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span><span class="sxs-lookup"><span data-stu-id="02dba-108">For a list of variant interfaces in the .NET Framework, see [Variance in Generic Interfaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md).</span></span>
+
+## <a name="converting-generic-collections"></a><span data-ttu-id="02dba-109">Konvertieren von generischen Auflistungen</span><span class="sxs-lookup"><span data-stu-id="02dba-109">Converting Generic Collections</span></span>
+
+<span data-ttu-id="02dba-110">Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kovarianz in der <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="02dba-110">The following example illustrates the benefits of covariance support in the <xref:System.Collections.Generic.IEnumerable%601> interface.</span></span> <span data-ttu-id="02dba-111">Die `PrintFullName`-Methode akzeptiert eine Auflistung vom Typ `IEnumerable(Of Person)` als Parameter.</span><span class="sxs-lookup"><span data-stu-id="02dba-111">The `PrintFullName` method accepts a collection of the `IEnumerable(Of Person)` type as a parameter.</span></span> <span data-ttu-id="02dba-112">Sie können dies jedoch für eine Auflistung des Typs `IEnumerable(Of Person)` wiederverwenden, da `Employee` `Person` erbt.</span><span class="sxs-lookup"><span data-stu-id="02dba-112">However, you can reuse it for a collection of the `IEnumerable(Of Person)` type because `Employee` inherits `Person`.</span></span>
+
+```vb
+' Simple hierarchy of classes.
+Public Class Person
+    Public Property FirstName As String
+    Public Property LastName As String
+End Class
+
+Public Class Employee
+    Inherits Person
+End Class
+
+' The method has a parameter of the IEnumerable(Of Person) type.
+Public Sub PrintFullName(ByVal persons As IEnumerable(Of Person))
+    For Each person As Person In persons
+        Console.WriteLine(
+            "Name: " & person.FirstName & " " & person.LastName)
+    Next
+End Sub
+
+Sub Main()
+    Dim employees As IEnumerable(Of Employee) = New List(Of Employee)
+
+    ' You can pass IEnumerable(Of Employee),
+    ' although the method expects IEnumerable(Of Person).
+
+    PrintFullName(employees)
+
+End Sub
+```
+
+## <a name="comparing-generic-collections"></a><span data-ttu-id="02dba-113">Vergleichen von generischen Auflistungen</span><span class="sxs-lookup"><span data-stu-id="02dba-113">Comparing Generic Collections</span></span>
+
+<span data-ttu-id="02dba-114">Das folgende Beispiel veranschaulicht die Vorteile der Unterstützung von Kontravarianz in der <xref:System.Collections.Generic.IComparer%601>-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="02dba-114">The following example illustrates the benefits of contravariance support in the <xref:System.Collections.Generic.IComparer%601> interface.</span></span> <span data-ttu-id="02dba-115">Die `PersonComparer`-Klasse implementiert die `IComparer(Of Person)`-Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="02dba-115">The `PersonComparer` class implements the `IComparer(Of Person)` interface.</span></span> <span data-ttu-id="02dba-116">Sie können diese Klasse jedoch zum Vergleich einer Sequenz von Objekten des Typs `Employee` wiederverwenden, da `Employee` `Person` erbt.</span><span class="sxs-lookup"><span data-stu-id="02dba-116">However, you can reuse this class to compare a sequence of objects of the `Employee` type because `Employee` inherits `Person`.</span></span>
+
+```vb
+' Simple hierarchy of classes.
+Public Class Person
+    Public Property FirstName As String
+    Public Property LastName As String
+End Class
+
+Public Class Employee
+    Inherits Person
+End Class
+' The custom comparer for the Person type
+' with standard implementations of Equals()
+' and GetHashCode() methods.
+Class PersonComparer
+    Implements IEqualityComparer(Of Person)
+
+    Public Function Equals1(
+        ByVal x As Person,
+        ByVal y As Person) As Boolean _
+        Implements IEqualityComparer(Of Person).Equals
+
+        If x Is y Then Return True
+        If x Is Nothing OrElse y Is Nothing Then Return False
+        Return (x.FirstName = y.FirstName) AndAlso
+            (x.LastName = y.LastName)
+    End Function
+    Public Function GetHashCode1(
+        ByVal person As Person) As Integer _
+        Implements IEqualityComparer(Of Person).GetHashCode
+
+        If person Is Nothing Then Return 0
+        Dim hashFirstName =
+            If(person.FirstName Is Nothing,
+            0, person.FirstName.GetHashCode())
+        Dim hashLastName = person.LastName.GetHashCode()
+        Return hashFirstName Xor hashLastName
+    End Function
+End Class
+
+Sub Main()
+    Dim employees = New List(Of Employee) From {
+        New Employee With {.FirstName = "Michael", .LastName = "Alexander"},
+        New Employee With {.FirstName = "Jeff", .LastName = "Price"}
+    }
+
+    ' You can pass PersonComparer,
+    ' which implements IEqualityComparer(Of Person),
+    ' although the method expects IEqualityComparer(Of Employee)
+
+    Dim noduplicates As IEnumerable(Of Employee) = employees.Distinct(New PersonComparer())
+
+    For Each employee In noduplicates
+        Console.WriteLine(employee.FirstName & " " & employee.LastName)
+    Next
+End Sub
+```
+
+## <a name="see-also"></a><span data-ttu-id="02dba-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="02dba-117">See also</span></span>
+
+- [<span data-ttu-id="02dba-118">Variance in Generic Interfaces (Visual Basic) (Varianz in generischen Schnittstellen (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="02dba-118">Variance in Generic Interfaces (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)

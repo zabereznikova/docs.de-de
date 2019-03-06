@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: c29f8728-bfcb-4af7-9fbc-8169e180109f
-ms.openlocfilehash: 3af90c33d6b4e993cc9599b5eefa5ac492c28e04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f67642342777a4b5b26b902161c83dc98893c63f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538873"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355596"
 ---
-# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="0e8c8-102">Hilfethemen zu digitalen Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="0e8c8-102">Digital Ink How-to Topics</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="0e8c8-103">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="0e8c8-103">In This Section</span></span>  
- [<span data-ttu-id="0e8c8-104">Auswählen von Freihandeingaben aus einem benutzerdefinierten Steuerelement</span><span class="sxs-lookup"><span data-stu-id="0e8c8-104">Select Ink from a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [<span data-ttu-id="0e8c8-105">Hinzufügen von benutzerdefinierten Daten zu Freihanddaten</span><span class="sxs-lookup"><span data-stu-id="0e8c8-105">Add Custom Data to Ink Data</span></span>](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [<span data-ttu-id="0e8c8-106">Löschen von Freihandeingaben auf einem benutzerdefinierten Steuerelement</span><span class="sxs-lookup"><span data-stu-id="0e8c8-106">Erase Ink on a Custom Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [<span data-ttu-id="0e8c8-107">Erkennen von Bewegungen in Anwendungen</span><span class="sxs-lookup"><span data-stu-id="0e8c8-107">Recognize Application Gestures</span></span>](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [<span data-ttu-id="0e8c8-108">Freihand-Drag & Drop</span><span class="sxs-lookup"><span data-stu-id="0e8c8-108">Drag and Drop Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [<span data-ttu-id="0e8c8-109">Datenbindung an ein InkCanvas-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="0e8c8-109">Data Bind to an InkCanvas</span></span>](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [<span data-ttu-id="0e8c8-110">Analysieren von Freihandeingaben mit Analysehinweisen</span><span class="sxs-lookup"><span data-stu-id="0e8c8-110">Analyze Ink with Analysis Hints</span></span>](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [<span data-ttu-id="0e8c8-111">Freihand drehen</span><span class="sxs-lookup"><span data-stu-id="0e8c8-111">Rotate Ink</span></span>](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [<span data-ttu-id="0e8c8-112">Deaktivieren des RealTimeStylus für WPF-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="0e8c8-112">Disable the RealTimeStylus for WPF Applications</span></span>](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+# <a name="digital-ink-how-to-topics"></a><span data-ttu-id="00b37-102">Hilfethemen zu digitalen Freihandeingaben</span><span class="sxs-lookup"><span data-stu-id="00b37-102">Digital Ink How-to Topics</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="00b37-103">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="00b37-103">In This Section</span></span>  
+ [<span data-ttu-id="00b37-104">Auswählen von Freihandeingaben aus einem benutzerdefinierten Steuerelement</span><span class="sxs-lookup"><span data-stu-id="00b37-104">Select Ink from a Custom Control</span></span>](how-to-select-ink-from-a-custom-control.md)  
+  [<span data-ttu-id="00b37-105">Hinzufügen von benutzerdefinierten Daten zu Freihanddaten</span><span class="sxs-lookup"><span data-stu-id="00b37-105">Add Custom Data to Ink Data</span></span>](how-to-add-custom-data-to-ink-data.md)  
+  [<span data-ttu-id="00b37-106">Löschen von Freihandeingaben auf einem benutzerdefinierten Steuerelement</span><span class="sxs-lookup"><span data-stu-id="00b37-106">Erase Ink on a Custom Control</span></span>](how-to-erase-ink-on-a-custom-control.md)  
+  [<span data-ttu-id="00b37-107">Erkennen von Bewegungen in Anwendungen</span><span class="sxs-lookup"><span data-stu-id="00b37-107">Recognize Application Gestures</span></span>](how-to-recognize-application-gestures.md)  
+  [<span data-ttu-id="00b37-108">Freihand-Drag & Drop</span><span class="sxs-lookup"><span data-stu-id="00b37-108">Drag and Drop Ink</span></span>](how-to-drag-and-drop-ink.md)  
+  [<span data-ttu-id="00b37-109">Datenbindung an ein InkCanvas-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="00b37-109">Data Bind to an InkCanvas</span></span>](how-to-data-bind-to-an-inkcanvas.md)  
+  [<span data-ttu-id="00b37-110">Analysieren von Freihandeingaben mit Analysehinweisen</span><span class="sxs-lookup"><span data-stu-id="00b37-110">Analyze Ink with Analysis Hints</span></span>](how-to-analyze-ink-with-analysis-hints.md)  
+  [<span data-ttu-id="00b37-111">Freihand drehen</span><span class="sxs-lookup"><span data-stu-id="00b37-111">Rotate Ink</span></span>](how-to-rotate-ink.md)  
+  [<span data-ttu-id="00b37-112">Deaktivieren des RealTimeStylus für WPF-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="00b37-112">Disable the RealTimeStylus for WPF Applications</span></span>](disable-the-realtimestylus-for-wpf-applications.md)
