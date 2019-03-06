@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc34ab9c8dbfe10282f36a241a4e433debef7dd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4dcfb977f5ca87f2219fd3ed8ef87d16c2defd2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420494"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472642"
 ---
-# <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a><span data-ttu-id="76545-102">ICorDebugProcess2::ClearUnmanagedBreakpoint-Methode</span><span class="sxs-lookup"><span data-stu-id="76545-102">ICorDebugProcess2::ClearUnmanagedBreakpoint Method</span></span>
-<span data-ttu-id="76545-103">Entfernt einen zuvor festgelegten Haltepunkt an der angegebenen Adresse.</span><span class="sxs-lookup"><span data-stu-id="76545-103">Removes a previously set breakpoint at the given address.</span></span>  
+# <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a><span data-ttu-id="d4684-102">ICorDebugProcess2::ClearUnmanagedBreakpoint-Methode</span><span class="sxs-lookup"><span data-stu-id="d4684-102">ICorDebugProcess2::ClearUnmanagedBreakpoint Method</span></span>
+<span data-ttu-id="d4684-103">Entfernt einen zuvor festgelegten Haltepunkt an der angegebenen Adresse.</span><span class="sxs-lookup"><span data-stu-id="d4684-103">Removes a previously set breakpoint at the given address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="76545-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="76545-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4684-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d4684-104">Syntax</span></span>  
   
 ```  
 HRESULT ClearUnmanagedBreakpoint (  
@@ -35,22 +35,22 @@ HRESULT ClearUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="76545-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="76545-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d4684-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d4684-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="76545-106">[in] Ein `CORDB_ADDRESS` Wert, der die Adresse angibt, an dem der Haltepunkt festgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="76545-106">[in] A `CORDB_ADDRESS` value that specifies the address at which the breakpoint was set.</span></span>  
+ <span data-ttu-id="d4684-106">[in] Ein `CORDB_ADDRESS` Wert, der die Adresse angibt, an dem der Haltepunkt festgelegt wurde.</span><span class="sxs-lookup"><span data-stu-id="d4684-106">[in] A `CORDB_ADDRESS` value that specifies the address at which the breakpoint was set.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="76545-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="76545-107">Remarks</span></span>  
- <span data-ttu-id="76545-108">Die angegebene Breakpoint würde zuvor festgelegten durch einen früheren Aufruf [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).</span><span class="sxs-lookup"><span data-stu-id="76545-108">The specified breakpoint would have been previously set by an earlier call to [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d4684-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d4684-107">Remarks</span></span>  
+ <span data-ttu-id="d4684-108">Die angegebene Breakpoint würde zuvor festgelegt wurden durch einen früheren Aufruf von [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).</span><span class="sxs-lookup"><span data-stu-id="d4684-108">The specified breakpoint would have been previously set by an earlier call to [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).</span></span>  
   
- <span data-ttu-id="76545-109">Die `ClearUnmanagedBreakpoint` Methode kann aufgerufen werden, während der zu debuggende Prozess ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="76545-109">The `ClearUnmanagedBreakpoint` method can be called while the process being debugged is running.</span></span>  
+ <span data-ttu-id="d4684-109">Die `ClearUnmanagedBreakpoint` Methode kann aufgerufen werden, während der gedebuggte Prozess ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="d4684-109">The `ClearUnmanagedBreakpoint` method can be called while the process being debugged is running.</span></span>  
   
- <span data-ttu-id="76545-110">Die `ClearUnmanagedBreakpoint` Methode gibt einen Fehlercode zurück, wenn der Debugger im ausschließlich verwalteten Modus verbunden ist oder wenn kein Haltepunkt an der angegebenen Adresse vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="76545-110">The `ClearUnmanagedBreakpoint` method returns a failure code if the debugger is attached in managed-only mode or if no breakpoint exists at the specified address.</span></span>  
+ <span data-ttu-id="d4684-110">Die `ClearUnmanagedBreakpoint` Methode einen Fehlercode zurückgibt, wenn der Debugger im Modus "nur verwaltet" verbunden ist oder wenn kein Haltepunkt an der angegebenen Adresse vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="d4684-110">The `ClearUnmanagedBreakpoint` method returns a failure code if the debugger is attached in managed-only mode or if no breakpoint exists at the specified address.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="76545-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="76545-111">Requirements</span></span>  
- <span data-ttu-id="76545-112">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="76545-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4684-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d4684-111">Requirements</span></span>  
+ <span data-ttu-id="d4684-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4684-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="76545-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="76545-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d4684-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d4684-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="76545-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="76545-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d4684-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4684-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="76545-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76545-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="d4684-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4684-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

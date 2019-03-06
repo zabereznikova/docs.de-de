@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39223e10b0f75eefb83f3b9a83c5f030318cd715
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44f343fa6d9f620145c707e5987ecaedf17dcba8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738929"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478985"
 ---
-# <a name="callfunctionshim-function"></a><span data-ttu-id="0b23e-102">CallFunctionShim-Funktion</span><span class="sxs-lookup"><span data-stu-id="0b23e-102">CallFunctionShim Function</span></span>
-<span data-ttu-id="0b23e-103">Ruft eine Funktion mit dem angegebenen Namen und den angegebenen Parametern in der angegebenen Bibliothek auf.</span><span class="sxs-lookup"><span data-stu-id="0b23e-103">Makes a call to the function that has the specified name and parameters in the specified library.</span></span>  
+# <a name="callfunctionshim-function"></a><span data-ttu-id="5df8c-102">CallFunctionShim-Funktion</span><span class="sxs-lookup"><span data-stu-id="5df8c-102">CallFunctionShim Function</span></span>
+<span data-ttu-id="5df8c-103">Ruft eine Funktion mit dem angegebenen Namen und den angegebenen Parametern in der angegebenen Bibliothek auf.</span><span class="sxs-lookup"><span data-stu-id="5df8c-103">Makes a call to the function that has the specified name and parameters in the specified library.</span></span>  
   
- <span data-ttu-id="0b23e-104">Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.</span><span class="sxs-lookup"><span data-stu-id="0b23e-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="5df8c-104">Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.</span><span class="sxs-lookup"><span data-stu-id="5df8c-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b23e-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="0b23e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5df8c-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="5df8c-105">Syntax</span></span>  
   
 ```  
 HRESULT CallFunctionShim (  
@@ -41,33 +41,33 @@ HRESULT CallFunctionShim (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0b23e-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="0b23e-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5df8c-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="5df8c-106">Parameters</span></span>  
  `szDllName`  
- <span data-ttu-id="0b23e-107">[in] Der Name der Bibliothek, die die Funktion enthält.</span><span class="sxs-lookup"><span data-stu-id="0b23e-107">[in] The name of the library containing the function.</span></span>  
+ <span data-ttu-id="5df8c-107">[in] Der Name der Bibliothek, die die Funktion enthält.</span><span class="sxs-lookup"><span data-stu-id="5df8c-107">[in] The name of the library containing the function.</span></span>  
   
  `szFunctionName`  
- <span data-ttu-id="0b23e-108">[in] Der Name der Funktion.</span><span class="sxs-lookup"><span data-stu-id="0b23e-108">[in] The name of the function.</span></span>  
+ <span data-ttu-id="5df8c-108">[in] Der Name der Funktion.</span><span class="sxs-lookup"><span data-stu-id="5df8c-108">[in] The name of the function.</span></span>  
   
  `lpvArgument1`  
- <span data-ttu-id="0b23e-109">[in] Das erste Argument an die Funktion übergeben.</span><span class="sxs-lookup"><span data-stu-id="0b23e-109">[in] The first argument to pass to the function.</span></span>  
+ <span data-ttu-id="5df8c-109">[in] Das erste Argument an die Funktion übergeben.</span><span class="sxs-lookup"><span data-stu-id="5df8c-109">[in] The first argument to pass to the function.</span></span>  
   
  `lpvArgument2`  
- <span data-ttu-id="0b23e-110">[in] Das zweite Argument an die Funktion übergeben.</span><span class="sxs-lookup"><span data-stu-id="0b23e-110">[in] The second argument to pass to the function.</span></span>  
+ <span data-ttu-id="5df8c-110">[in] Das zweite Argument an die Funktion übergeben.</span><span class="sxs-lookup"><span data-stu-id="5df8c-110">[in] The second argument to pass to the function.</span></span>  
   
  `szVersion`  
- <span data-ttu-id="0b23e-111">[in] Die Version der Bibliothek, die die Funktion enthält.</span><span class="sxs-lookup"><span data-stu-id="0b23e-111">[in] The version of the library that contains the function.</span></span>  
+ <span data-ttu-id="5df8c-111">[in] Die Version der Bibliothek, die die Funktion enthält.</span><span class="sxs-lookup"><span data-stu-id="5df8c-111">[in] The version of the library that contains the function.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="0b23e-112">[in] Für die zukünftige Verwendung reserviert.</span><span class="sxs-lookup"><span data-stu-id="0b23e-112">[in] Reserved for future use.</span></span> <span data-ttu-id="0b23e-113">Übergeben Sie 0 (null), in diesem Parameter.</span><span class="sxs-lookup"><span data-stu-id="0b23e-113">Pass zero in this parameter.</span></span>  
+ <span data-ttu-id="5df8c-112">[in] Für die zukünftige Verwendung reserviert.</span><span class="sxs-lookup"><span data-stu-id="5df8c-112">[in] Reserved for future use.</span></span> <span data-ttu-id="5df8c-113">Übergeben Sie 0 (null), in diesem Parameter.</span><span class="sxs-lookup"><span data-stu-id="5df8c-113">Pass zero in this parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0b23e-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0b23e-114">Requirements</span></span>  
- <span data-ttu-id="0b23e-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0b23e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5df8c-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5df8c-114">Requirements</span></span>  
+ <span data-ttu-id="5df8c-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5df8c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b23e-116">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0b23e-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5df8c-116">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5df8c-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0b23e-117">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0b23e-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="5df8c-117">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5df8c-117">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0b23e-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b23e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5df8c-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5df8c-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b23e-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0b23e-119">See also</span></span>
-- [<span data-ttu-id="0b23e-120">Veraltete CLR-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="0b23e-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="5df8c-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5df8c-119">See also</span></span>
+- [<span data-ttu-id="5df8c-120">Veraltete CLR-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="5df8c-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

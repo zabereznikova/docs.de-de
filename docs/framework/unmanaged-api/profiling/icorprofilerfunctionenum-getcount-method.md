@@ -17,35 +17,35 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7612b46cb0d7879e8e8301ae77d03b931856b85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6827a61f670c07595ac78bcd4a8aef201a48b1e0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531706"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479141"
 ---
-# <a name="icorprofilerfunctionenumgetcount-method"></a><span data-ttu-id="5c73f-102">ICorProfilerFunctionEnum::GetCount-Methode</span><span class="sxs-lookup"><span data-stu-id="5c73f-102">ICorProfilerFunctionEnum::GetCount Method</span></span>
-<span data-ttu-id="5c73f-103">Ruft die Anzahl der Funktionen ab, die von der Anwendung oder erzwungen vom Profiler geladen wurden.</span><span class="sxs-lookup"><span data-stu-id="5c73f-103">Gets the number of functions that were loaded by the application or forcibly loaded by the profiler.</span></span>  
+# <a name="icorprofilerfunctionenumgetcount-method"></a><span data-ttu-id="67a85-102">ICorProfilerFunctionEnum::GetCount-Methode</span><span class="sxs-lookup"><span data-stu-id="67a85-102">ICorProfilerFunctionEnum::GetCount Method</span></span>
+<span data-ttu-id="67a85-103">Ruft die Anzahl der Funktionen ab, die von der Anwendung oder erzwungen vom Profiler geladen wurden.</span><span class="sxs-lookup"><span data-stu-id="67a85-103">Gets the number of functions that were loaded by the application or forcibly loaded by the profiler.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5c73f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5c73f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="67a85-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="67a85-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCount([out] ULONG * pcelt);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5c73f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5c73f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="67a85-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="67a85-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="5c73f-106">[out] Die Anzahl der Funktionen, die geladen wurden.</span><span class="sxs-lookup"><span data-stu-id="5c73f-106">[out] The number of functions that were loaded.</span></span>  
+ <span data-ttu-id="67a85-106">[out] Die Anzahl der Funktionen, die geladen wurden.</span><span class="sxs-lookup"><span data-stu-id="67a85-106">[out] The number of functions that were loaded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5c73f-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5c73f-107">Requirements</span></span>  
- <span data-ttu-id="5c73f-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5c73f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="67a85-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="67a85-107">Requirements</span></span>  
+ <span data-ttu-id="67a85-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67a85-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5c73f-109">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="5c73f-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="67a85-109">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="67a85-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="5c73f-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5c73f-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="67a85-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="67a85-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5c73f-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c73f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="67a85-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67a85-111">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5c73f-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5c73f-112">See also</span></span>
-- [<span data-ttu-id="5c73f-113">ICorProfilerFunctionEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5c73f-113">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [<span data-ttu-id="5c73f-114">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="5c73f-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="67a85-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="67a85-112">See also</span></span>
+- [<span data-ttu-id="67a85-113">ICorProfilerFunctionEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="67a85-113">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="67a85-114">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="67a85-114">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
