@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d234e01e3d47a64b9a001591ee2b61074eea8afb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ed6570e11008e52d4b1f97c2dc90e2ccbef2e35
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403392"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471380"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus-Methode
-Für jede Methode der Klasse wird einen Wert, der angibt, ob die Methode benutzerdefinierten Code.  
+Für jede Methode der Klasse wird einen Wert, der angibt, ob die Methode benutzerdefinierten Code ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,17 +35,17 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `bIsJustMyCode`  
- [in] Legen Sie auf `true` um anzugeben, dass die Methode eine benutzerdefinierte ist code; legen Sie andernfalls auf `false`.  
+ [in] Legen Sie auf `true` , um anzugeben, dass die Methode den benutzerdefinierten code, legen Sie andernfalls auf `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine nur-mein-Code ("JMC") zugeordnetem wird Code nicht auf eine benutzerdefinierte übersprungen wird. Benutzerdefinierter Code muss eine Teilmenge von debugfähigem Code.  
+ Eine nur mein Code (JMC) zugeordnetem wird nicht auf eine benutzerdefinierte Code überspringen. Benutzerdefinierter Code muss es sich um eine Teilmenge der debugfähiger Code sein.  
   
- `SetJMCStatus` Gibt einen HRESULT-Wert von "S_FALSE" zurück, wenn sie zum Festlegen des Werts für eine beliebige Methode schlägt fehl, selbst wenn der Wert für alle anderen Methoden erfolgreich festgelegt.  
+ `SetJMCStatus` Gibt einen HRESULT-Wert, der S_FALSE zurück, wenn sie zum Festlegen des Werts für eine beliebige Methode, schlägt fehl, selbst wenn der Wert für alle anderen Methoden erfolgreich festgelegt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dc7d8c339e5f77bad44960092198035e13735b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b627a09db595cfbeb38aa605259eb42bdb77cc0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621291"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477061"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>IMetaDataTables::GetNumTables-Methode
 Ruft die Anzahl der Tabellen im Bereich des aktuellen `IMetaDataTables` Instanz.  
@@ -35,7 +35,7 @@ HRESULT GetNumTables (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pcTables`  
  [out] Ein Zeiger auf die Anzahl der Tabellen im Gültigkeitsbereich der aktuellen Instanz.  
   

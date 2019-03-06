@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b552ef39c7f73aaa5cfeae4a313e329b267abf98
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b81ee355fe375ca7a597d5f8f2fbf92f71e0bd9b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643389"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481456"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter-Methode
 Definiert einen einzelnen Parameter in der aktuellen Methode. Der Parametertyp stammt aus der die Position des Parameters (Sequenz) in der Signatur der Methode.  
@@ -42,7 +42,7 @@ HRESULT DefineParameter(
     [in] ULONG32      addr3);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `name`  
  [in] Der Name des Parameters.  
   

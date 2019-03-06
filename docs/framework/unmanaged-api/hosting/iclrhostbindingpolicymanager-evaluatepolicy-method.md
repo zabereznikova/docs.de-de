@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 970e57e3caee7631c8e85aef428df52ec293b9cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3310f584475a4d6a6f0e3e790db13875faf60cf2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648809"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466686"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy-Methode
 Wertet Richtlinien für die Bindung für den Host.  
@@ -40,7 +40,7 @@ HRESULT EvaluatePolicy (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pwzReferenceIdentity`  
  [in] Ein Verweis auf die Assembly, bevor die richtlinienauswertung.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: defd38798453c8b82ec23605d12d41e5b90aaabc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bac541909e07aadff06006fba8c3cfcf4dc5465
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352905"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486224"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo-Methode
 Definieren Sie eine Gruppe von Async "await" Vorgänge in der aktuellen Methode.  
@@ -22,7 +22,7 @@ Definieren Sie eine Gruppe von Async "await" Vorgänge in der aktuellen Methode.
 HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULONG32 yieldOffsets[],    [in, size_is(count)] ULONG32 breakpointOffset[],     [in, size_is(count)] mdToken breakpointMethod[]);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
   
 |Parameter|Beschreibung|  
 |---------------|-----------------|  

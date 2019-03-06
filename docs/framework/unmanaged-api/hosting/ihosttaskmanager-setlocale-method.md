@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b43de32807da2478af23e52997fce2f4da1b339
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77f0196e667e2d7bb148c07218a7e39f52a37809
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674689"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474314"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a>IHostTaskManager::SetLocale-Methode
 Benachrichtigt den Host, dass die common Language Runtime (CLR), Gebietsschema oder der Kultur, für die derzeit ausgeführte Aufgabe geändert hat.  
@@ -35,7 +35,7 @@ HRESULT SetLocale (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `lcid`  
  [in] Die Gebietsschema-ID-Wert, der die neu zugewiesene geografischen Kultur und Sprache zugeordnet ist.  
   

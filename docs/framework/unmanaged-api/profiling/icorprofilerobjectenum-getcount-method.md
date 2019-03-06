@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a363021700eacea1d4af80ca6371de5c587afda1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65f6067fcfe0e6ef5f01a13865d002afd6da9efb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622201"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474708"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount-Methode
 Ruft die Gesamtanzahl von fixierten Objekten in der Auflistung ab.  
@@ -35,7 +35,7 @@ HRESULT GetCount (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pcelt`  
  [out] Ein Zeiger auf die Anzahl der fixierten Objekte in der Auflistung.  
   

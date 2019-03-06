@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: bf7a434569bf82066c79962ae24741759b97e5ce
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8159613036942d6c79f50b59a9b24ede02b6e4d8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973690"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483587"
 ---
 # <a name="include-visual-basic"></a>\<umfassen > (Visual Basic)
 Bezieht sich auf eine andere Datei, die die Typen und Member im Quellcode beschreibt.  
@@ -21,7 +21,7 @@ Bezieht sich auf eine andere Datei, die die Typen und Member im Quellcode beschr
 <include file="filename" path="tagpath[@name='id']" />  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `filename`  
  Erforderlich. Der Name der Datei, die die Dokumentation enthält. Der Dateiname kann mit einem Pfad qualifiziert werden. Schließen Sie `filename` in doppelte Anführungszeichen ("").  
   

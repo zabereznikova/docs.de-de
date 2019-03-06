@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a406e945a67352bc7f126b40bd56f4a11dd693b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab0e28bd21b66f370a1a1e82359fe474574fd7bb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419542"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481575"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges-Methode
 Wendet die Änderungen in den Metadaten und die Änderungen in der Microsoft intermediate Language (MSIL)-Code an den laufenden Prozess an.  
@@ -38,34 +38,34 @@ HRESULT ApplyChanges (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `cbMetadata`  
- [in] Größe in Bytes, der die Deltametadaten.  
+ [in] Größe in Bytes für den Deltametadaten.  
   
  `pbMetadata`  
  [in] Der Puffer, der Deltametadaten enthält. Die Adresse des Puffers wird zurückgegeben, aus der [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) Methode.  
   
- Der relativen virtuellen Adresse (RVA) in den Metadaten sollten relativ zum Beginn des MSIL-Codes sein.  
+ Die relativen virtuellen Adressen (RVA) in den Metadaten muss relativ zum Beginn des MSIL-Codes.  
   
  `cbIL`  
- [in] Größe in Bytes, der das Delta-MSIL-Code.  
+ [in] Größe in Bytes, des Deltas MSIL-Code.  
   
  `pbIL`  
- [in] Puffer, den aktualisierte MSIL-Code enthält.  
+ [in] Puffer, den aktualisierten MSIL-Code enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `pbMetadata` Parameter ist in einem speziellen Delta-Metadaten-Format (als Ausgabeparameter von [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` vorherigen Metadaten als Basis verwendet, und einzelne Änderungen auf der Basis anwenden beschrieben.  
+ Die `pbMetadata` Parameter ist in einem speziellen Delta-Metadaten-Format (als Ausgabeparameter von [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` Vorherige Metadaten als Basis verwendet und werden die einzelnen abweichungen in auf der Basis anzuwenden.  
   
- Im Gegensatz dazu die `pbIL[`]-Parameter enthält die neue MSIL für die aktualisierte Methode und die vorherige MSIL für diese Methode vollständig ersetzen sollen  
+ Im Gegensatz dazu die `pbIL[`] Parameter enthält die neue MSIL für die aktualisierte Methode und die vorherige MSIL für diese Methode vollständig ersetzen soll  
   
- Wenn das Delta MSIL und Metadaten in der Debugger-Speicher erstellt wurde, wird der Debugger ruft `ApplyChanges` um die Änderungen in die common Language Runtime (CLR) zu senden. Die Common Language Runtime aktualisiert ihre Metadatentabellen, fügt die neue MSIL in den Prozess und eine just-in-Time (JIT)-Kompilierung der neuen MSIL richtet. Wenn die Änderungen angewendet wurden, sollte der Debugger Aufrufen [IMetaDataEmit2:: ResetENCLog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) in Vorbereitung auf die nächste bearbeitungssitzung. Der Debugger kann dann mit der Prozess fortgesetzt.  
+ Wenn das Delta MSIL und die Metadaten des Debuggers speicherintern erstellt wurden, wird der Debugger ruft `ApplyChanges` um die Änderungen in die common Language Runtime (CLR) zu senden. Die Laufzeit aktualisiert die Tabellen mit Replikationsmetadaten, fügt die neue MSIL in den Prozess und richtet eine just-in-Time (JIT)-Kompilierung der neuen MSIL. Der Debugger sollte aufrufen, wenn die Änderungen angewendet wurden, [IMetaDataEmit2:: ResetENCLog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) für die nächsten bearbeitungssitzung vorbereiten. Der Debugger kann dann mit der Prozess fortgesetzt.  
   
- Wenn der Debugger ruft `ApplyChanges` auf ein Modul, das Deltametadaten aufweist, sollten sie auch aufrufen [IMetaDataEmit:: ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) mit den gleichen Deltametadaten für alle seine Kopien der Metadaten des Moduls, mit Ausnahme der Kopie wird verwendet, um die Änderungen auszugeben. Wenn Sie eine Kopie der Metadaten-mehr-synchronisiert-wird mit den tatsächlichen Metadaten der Debugger kann immer verwerfen diese Kopie und rufen Sie eine neue Kopie.  
+ Jedes Mal, wenn der Debugger ruft `ApplyChanges` auf ein Modul, das Deltametadaten enthält, sollten sie auch aufrufen [IMetaDataEmit:: ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) mit den gleichen Deltametadaten für alle seine Kopien, die Metadaten des Moduls mit Ausnahme des Kopiervorgangs wird verwendet, um die Änderungen auszugeben. Wenn eine Kopie der Metadaten aus irgendeinem Grund-mehr-synchronisiert-wird mit die eigentlichen Metadaten, der Debugger stets wegwerfen, kopieren und rufen Sie eine neue Kopie.  
   
- Wenn die `ApplyChanges` Methode fehlschlägt, durch die Debugversionen Sitzung befindet sich in einem ungültigen Zustand und muss neu gestartet werden.  
+ Wenn die `ApplyChanges` Methode fehlschlägt, ist das Debuggen Sitzung befindet sich in einem ungültigen Zustand und muss neu gestartet werden.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

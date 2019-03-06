@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac40927ac9469e4a2fb74fb550287130b9bb9f83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402469"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481559"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange-Methode
-Ruft den Adressbereich des Stapelsegments für diese Kette ab.  
+Ruft den Adressbereich des Stack-Segments für diese Kette ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,18 +36,18 @@ HRESULT GetStackRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pStart`  
- [out] Ein Zeiger auf eine `CORDB_ADDRESS` -Wert, der die Startadresse des Stapelsegments liegt.  
+ [out] Ein Zeiger auf eine `CORDB_ADDRESS` Wert, der die Startadresse des Stack-Segments.  
   
  `pEnd`  
- [out] Ein Zeiger auf eine `CORDB_ADDRESS` -Wert, der die Endadresse des Stapelsegments liegt.  
+ [out] Ein Zeiger auf eine `CORDB_ADDRESS` Wert, der die Endadresse des Stack-Segments.  
   
 ## <a name="remarks"></a>Hinweise  
- Die numerische Bereich ist sinnvoll, nur für den Vergleich der Stack-Frame-Speicherorte. Sie können keine Annahmen dazu was tatsächlich auf dem Stapel gespeichert ist.  
+ Der numerische Bereich ist nur für den Vergleich der Stack-Frame-Standorte von Bedeutung. Sie können keine Annahmen über was tatsächlich auf dem Stapel gespeichert ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

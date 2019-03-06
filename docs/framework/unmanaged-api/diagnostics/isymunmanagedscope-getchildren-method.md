@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f9bd6ae34903798a29f8666dfdba3e102fae28db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9c05efefb985e4b9ec9349974f243c4828d9bcf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584557"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478816"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren-Methode
 Ruft die untergeordneten Elemente dieses Bereichs ab.  
@@ -37,7 +37,7 @@ HRESULT GetChildren(
         length_is(*pcChildren)] ISymUnmanagedScope* children[]);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `cChildren`  
  [in] Ein `ULONG32` , der angibt, dass der Größe des der `children` Array.  
   
