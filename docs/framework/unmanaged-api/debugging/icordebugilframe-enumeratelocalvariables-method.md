@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fd7694901534ad6897bbf78239081af6314e4bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3cc9601105d05740e6db0a41bae521bd9a276d74
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415467"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471315"
 ---
-# <a name="icordebugilframeenumeratelocalvariables-method"></a><span data-ttu-id="fa2b8-102">ICorDebugILFrame::EnumerateLocalVariables-Methode</span><span class="sxs-lookup"><span data-stu-id="fa2b8-102">ICorDebugILFrame::EnumerateLocalVariables Method</span></span>
-<span data-ttu-id="fa2b8-103">Ruft einen Enumerator für die lokalen Variablen in diesem Frame ab.</span><span class="sxs-lookup"><span data-stu-id="fa2b8-103">Gets an enumerator for the local variables in this frame.</span></span>  
+# <a name="icordebugilframeenumeratelocalvariables-method"></a><span data-ttu-id="23ec3-102">ICorDebugILFrame::EnumerateLocalVariables-Methode</span><span class="sxs-lookup"><span data-stu-id="23ec3-102">ICorDebugILFrame::EnumerateLocalVariables Method</span></span>
+<span data-ttu-id="23ec3-103">Ruft einen Enumerator für die lokalen Variablen in diesem Frame ab.</span><span class="sxs-lookup"><span data-stu-id="23ec3-103">Gets an enumerator for the local variables in this frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fa2b8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="fa2b8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23ec3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="23ec3-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateLocalVariables(   
@@ -35,18 +35,18 @@ HRESULT EnumerateLocalVariables(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fa2b8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="fa2b8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23ec3-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="23ec3-105">Parameters</span></span>  
  `ppValueEnum`  
- <span data-ttu-id="fa2b8-106">[out] Ein Zeiger auf die Adresse eines ICorDebugValueEnum-Objekts, das den Enumerator für die lokalen Variablen in diesem Frame darstellt.</span><span class="sxs-lookup"><span data-stu-id="fa2b8-106">[out] A pointer to the address of an ICorDebugValueEnum object that is the enumerator for the local variables in this frame.</span></span>  
+ <span data-ttu-id="23ec3-106">[out] Ein Zeiger auf die Adresse des ICorDebugValueEnum-Objekts, das den Enumerator für die lokalen Variablen in diesem Frame ist.</span><span class="sxs-lookup"><span data-stu-id="23ec3-106">[out] A pointer to the address of an ICorDebugValueEnum object that is the enumerator for the local variables in this frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fa2b8-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fa2b8-107">Remarks</span></span>  
- <span data-ttu-id="fa2b8-108">`EnumerateLocalVariables` Gibt einen Enumerator zurück, der die lokalen Variablen in den Aufrufframe verfügbar auflisten kann, die von diesem ICorDebugILFrame-Objekt dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="fa2b8-108">`EnumerateLocalVariables` gets an enumerator that can list the local variables available in the call frame that is represented by this ICorDebugILFrame object.</span></span> <span data-ttu-id="fa2b8-109">Die Liste kann alle lokalen Variablen in die ausgeführte Funktion nicht enthalten, da einige von ihnen möglicherweise nicht aktiv sind.</span><span class="sxs-lookup"><span data-stu-id="fa2b8-109">The list may not include all of the local variables in the running function, because some of them may not be active.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="23ec3-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="23ec3-107">Remarks</span></span>  
+ <span data-ttu-id="23ec3-108">`EnumerateLocalVariables` Ruft einen Enumerator, der den verfügbaren lokalen Variablen in den Aufrufframe auflisten kann, die von diesem ICorDebugILFrame-Objekt dargestellt wird.</span><span class="sxs-lookup"><span data-stu-id="23ec3-108">`EnumerateLocalVariables` gets an enumerator that can list the local variables available in the call frame that is represented by this ICorDebugILFrame object.</span></span> <span data-ttu-id="23ec3-109">Die Liste kann alle lokalen Variablen in der ausgeführten-Funktion nicht enthalten, da einige von ihnen möglicherweise nicht aktiv sind.</span><span class="sxs-lookup"><span data-stu-id="23ec3-109">The list may not include all of the local variables in the running function, because some of them may not be active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fa2b8-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fa2b8-110">Requirements</span></span>  
- <span data-ttu-id="fa2b8-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa2b8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23ec3-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="23ec3-110">Requirements</span></span>  
+ <span data-ttu-id="23ec3-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23ec3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fa2b8-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fa2b8-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="23ec3-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="23ec3-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fa2b8-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fa2b8-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="23ec3-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="23ec3-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fa2b8-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa2b8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="23ec3-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23ec3-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

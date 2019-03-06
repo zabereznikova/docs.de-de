@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac0b6ac09db452eb06c633027e9596bda6627005
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc29c5f975424e3dbe91e206f6a05f830d760398
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509388"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472650"
 ---
-# <a name="getcachepath-function"></a><span data-ttu-id="7e7c3-102">GetCachePath-Funktion</span><span class="sxs-lookup"><span data-stu-id="7e7c3-102">GetCachePath Function</span></span>
-<span data-ttu-id="7e7c3-103">Ruft den Pfad auf der zwischengespeicherte Assembly, die mit den angegebenen Flags.</span><span class="sxs-lookup"><span data-stu-id="7e7c3-103">Gets the path to the cached assembly, using the specified flags.</span></span>  
+# <a name="getcachepath-function"></a><span data-ttu-id="562d6-102">GetCachePath-Funktion</span><span class="sxs-lookup"><span data-stu-id="562d6-102">GetCachePath Function</span></span>
+<span data-ttu-id="562d6-103">Ruft den Pfad auf der zwischengespeicherte Assembly, die mit den angegebenen Flags.</span><span class="sxs-lookup"><span data-stu-id="562d6-103">Gets the path to the cached assembly, using the specified flags.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e7c3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7e7c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="562d6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="562d6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCachePath (  
@@ -38,23 +38,23 @@ HRESULT GetCachePath (
  );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7e7c3-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7e7c3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="562d6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="562d6-105">Parameters</span></span>  
  `dwCacheFlags`  
- <span data-ttu-id="7e7c3-106">[in] Ein [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) Wert, der die Quelle der die zwischengespeicherte Assembly angibt.</span><span class="sxs-lookup"><span data-stu-id="7e7c3-106">[in] An [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) value that indicates the source of the cached assembly.</span></span>  
+ <span data-ttu-id="562d6-106">[in] Ein [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) Wert, der die Quelle der die zwischengespeicherte Assembly angibt.</span><span class="sxs-lookup"><span data-stu-id="562d6-106">[in] An [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) value that indicates the source of the cached assembly.</span></span>  
   
  `pwzCachePath`  
- <span data-ttu-id="7e7c3-107">[out] Der zurückgegebene Zeiger auf den Pfad.</span><span class="sxs-lookup"><span data-stu-id="7e7c3-107">[out] The returned pointer to the path.</span></span>  
+ <span data-ttu-id="562d6-107">[out] Der zurückgegebene Zeiger auf den Pfad.</span><span class="sxs-lookup"><span data-stu-id="562d6-107">[out] The returned pointer to the path.</span></span>  
   
  `pcchPath`  
- <span data-ttu-id="7e7c3-108">[in, out] Die angeforderte maximale Länge des `pwzCachePath`, und bei der Rückgabe die tatsächliche Länge der `pwzCachePath`.</span><span class="sxs-lookup"><span data-stu-id="7e7c3-108">[in, out] The requested maximum length of `pwzCachePath`, and upon return, the actual length of `pwzCachePath`.</span></span>  
+ <span data-ttu-id="562d6-108">[in, out] Die angeforderte maximale Länge des `pwzCachePath`, und bei der Rückgabe die tatsächliche Länge der `pwzCachePath`.</span><span class="sxs-lookup"><span data-stu-id="562d6-108">[in, out] The requested maximum length of `pwzCachePath`, and upon return, the actual length of `pwzCachePath`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7e7c3-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7e7c3-109">Requirements</span></span>  
- <span data-ttu-id="7e7c3-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e7c3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="562d6-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="562d6-109">Requirements</span></span>  
+ <span data-ttu-id="562d6-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="562d6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e7c3-111">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="7e7c3-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="562d6-111">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="562d6-111">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="7e7c3-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e7c3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="562d6-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="562d6-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e7c3-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7e7c3-113">See also</span></span>
-- [<span data-ttu-id="7e7c3-114">ASM_CACHE_FLAGS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="7e7c3-114">ASM_CACHE_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
-- [<span data-ttu-id="7e7c3-115">Fusion: Globale statistische Funktionen</span><span class="sxs-lookup"><span data-stu-id="7e7c3-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="562d6-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="562d6-113">See also</span></span>
+- [<span data-ttu-id="562d6-114">ASM_CACHE_FLAGS-Enumeration</span><span class="sxs-lookup"><span data-stu-id="562d6-114">ASM_CACHE_FLAGS Enumeration</span></span>](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
+- [<span data-ttu-id="562d6-115">Fusion: Globale statistische Funktionen</span><span class="sxs-lookup"><span data-stu-id="562d6-115">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

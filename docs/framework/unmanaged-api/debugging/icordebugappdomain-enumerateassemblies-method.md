@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13137dcf7c2edd96397916cc7db905c9e48a3d0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ce95daaee3c74ac57b107ab8bcb23d41e42cabb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401599"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466647"
 ---
-# <a name="icordebugappdomainenumerateassemblies-method"></a><span data-ttu-id="3eefe-102">ICorDebugAppDomain::EnumerateAssemblies-Methode</span><span class="sxs-lookup"><span data-stu-id="3eefe-102">ICorDebugAppDomain::EnumerateAssemblies Method</span></span>
-<span data-ttu-id="3eefe-103">Ruft einen Enumerator für die Assemblys in der Anwendungsdomäne ab.</span><span class="sxs-lookup"><span data-stu-id="3eefe-103">Gets an enumerator for the assemblies in the application domain.</span></span>  
+# <a name="icordebugappdomainenumerateassemblies-method"></a><span data-ttu-id="a9c7a-102">ICorDebugAppDomain::EnumerateAssemblies-Methode</span><span class="sxs-lookup"><span data-stu-id="a9c7a-102">ICorDebugAppDomain::EnumerateAssemblies Method</span></span>
+<span data-ttu-id="a9c7a-103">Ruft einen Enumerator für die Assemblys in der Anwendungsdomäne ab.</span><span class="sxs-lookup"><span data-stu-id="a9c7a-103">Gets an enumerator for the assemblies in the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3eefe-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3eefe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9c7a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a9c7a-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateAssemblies (  
@@ -35,15 +35,15 @@ HRESULT EnumerateAssemblies (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3eefe-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="3eefe-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a9c7a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a9c7a-105">Parameters</span></span>  
  `ppAssemblies`  
- <span data-ttu-id="3eefe-106">[out] Ein Zeiger auf die Adresse eines ICorDebugAssemblyEnum-Objekts, das den Enumerator für die Assemblys in der Anwendungsdomäne ist.</span><span class="sxs-lookup"><span data-stu-id="3eefe-106">[out] A pointer to the address of an ICorDebugAssemblyEnum object that is the enumerator for the assemblies in the application domain.</span></span>  
+ <span data-ttu-id="a9c7a-106">[out] Ein Zeiger auf die Adresse des ICorDebugAssemblyEnum-Objekts, das den Enumerator für die Assemblys in der Anwendungsdomäne ist.</span><span class="sxs-lookup"><span data-stu-id="a9c7a-106">[out] A pointer to the address of an ICorDebugAssemblyEnum object that is the enumerator for the assemblies in the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3eefe-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3eefe-107">Requirements</span></span>  
- <span data-ttu-id="3eefe-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3eefe-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9c7a-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a9c7a-107">Requirements</span></span>  
+ <span data-ttu-id="a9c7a-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9c7a-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3eefe-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3eefe-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="a9c7a-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a9c7a-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3eefe-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3eefe-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a9c7a-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a9c7a-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3eefe-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3eefe-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="a9c7a-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9c7a-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

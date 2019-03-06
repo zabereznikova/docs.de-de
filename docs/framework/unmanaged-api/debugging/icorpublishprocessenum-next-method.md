@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e427c3919e8b714146fbe630a7e151dff10703de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b39e0b85b80618afed80d65430ba18cb1128352d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582409"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466701"
 ---
-# <a name="icorpublishprocessenumnext-method"></a><span data-ttu-id="b6255-102">ICorPublishProcessEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="b6255-102">ICorPublishProcessEnum::Next Method</span></span>
-<span data-ttu-id="b6255-103">Ruft die angegebene Anzahl von Prozessen aus der Auflistung, beginnend ab der aktuellen Cursorposition ab.</span><span class="sxs-lookup"><span data-stu-id="b6255-103">Gets the specified number of processes from the collection, starting at the current cursor position.</span></span>  
+# <a name="icorpublishprocessenumnext-method"></a><span data-ttu-id="094c9-102">ICorPublishProcessEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="094c9-102">ICorPublishProcessEnum::Next Method</span></span>
+<span data-ttu-id="094c9-103">Ruft die angegebene Anzahl von Prozessen aus der Auflistung, beginnend ab der aktuellen Cursorposition ab.</span><span class="sxs-lookup"><span data-stu-id="094c9-103">Gets the specified number of processes from the collection, starting at the current cursor position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6255-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b6255-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="094c9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="094c9-104">Syntax</span></span>  
   
 ```  
 HRESULT Next (  
@@ -38,24 +38,24 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b6255-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="b6255-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="094c9-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="094c9-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="b6255-106">[in] Die Anzahl der Prozesse abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="b6255-106">[in] The number of processes to be retrieved.</span></span>  
+ <span data-ttu-id="094c9-106">[in] Die Anzahl der Prozesse abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="094c9-106">[in] The number of processes to be retrieved.</span></span>  
   
  `objects`  
- <span data-ttu-id="b6255-107">[out] Ein Zeiger auf das Array der abgerufenen [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) Objekte, von denen jede einen Prozess darstellt.</span><span class="sxs-lookup"><span data-stu-id="b6255-107">[out] A pointer to the array of retrieved [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objects, each of which represents a process.</span></span>  
+ <span data-ttu-id="094c9-107">[out] Ein Zeiger auf das Array der abgerufenen [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) Objekte, von denen jede einen Prozess darstellt.</span><span class="sxs-lookup"><span data-stu-id="094c9-107">[out] A pointer to the array of retrieved [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) objects, each of which represents a process.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="b6255-108">[out] Zeiger auf die Anzahl der tatsächlich zurückgegebenen Prozesse.</span><span class="sxs-lookup"><span data-stu-id="b6255-108">[out] Pointer to the number of processes actually returned.</span></span> <span data-ttu-id="b6255-109">Dieser Wert kann null sein, wenn `celt` ist.</span><span class="sxs-lookup"><span data-stu-id="b6255-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="094c9-108">[out] Zeiger auf die Anzahl der tatsächlich zurückgegebenen Prozesse.</span><span class="sxs-lookup"><span data-stu-id="094c9-108">[out] Pointer to the number of processes actually returned.</span></span> <span data-ttu-id="094c9-109">Dieser Wert kann null sein, wenn `celt` ist.</span><span class="sxs-lookup"><span data-stu-id="094c9-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b6255-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b6255-110">Requirements</span></span>  
- <span data-ttu-id="b6255-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b6255-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="094c9-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="094c9-110">Requirements</span></span>  
+ <span data-ttu-id="094c9-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="094c9-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b6255-112">**Header:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="b6255-112">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="094c9-112">**Header:** CorPub.idl, CorPub.h</span><span class="sxs-lookup"><span data-stu-id="094c9-112">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="b6255-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b6255-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="094c9-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="094c9-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b6255-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b6255-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="094c9-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="094c9-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6255-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b6255-115">See also</span></span>
-- [<span data-ttu-id="b6255-116">ICorPublishProcessEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b6255-116">ICorPublishProcessEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="094c9-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="094c9-115">See also</span></span>
+- [<span data-ttu-id="094c9-116">ICorPublishProcessEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="094c9-116">ICorPublishProcessEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f82fca1d7701921a10c1feb9cce19371729ff01e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 945972269871c3e78c19cc1038dd96a7f098b997
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493469"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57464580"
 ---
-# <a name="imetadataassemblyemitdefineassemblyref-method"></a><span data-ttu-id="066af-102">IMetaDataAssemblyEmit::DefineAssemblyRef-Methode</span><span class="sxs-lookup"><span data-stu-id="066af-102">IMetaDataAssemblyEmit::DefineAssemblyRef Method</span></span>
-<span data-ttu-id="066af-103">Erstellt eine `AssemblyRef`-Struktur, die Metadaten für die Assembly enthält, auf die diese Assembly verweist, und gibt das zugeordnete Metadatentoken zurück.</span><span class="sxs-lookup"><span data-stu-id="066af-103">Creates an `AssemblyRef` structure containing metadata for the assembly that this assembly references, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefineassemblyref-method"></a><span data-ttu-id="70409-102">IMetaDataAssemblyEmit::DefineAssemblyRef-Methode</span><span class="sxs-lookup"><span data-stu-id="70409-102">IMetaDataAssemblyEmit::DefineAssemblyRef Method</span></span>
+<span data-ttu-id="70409-103">Erstellt eine `AssemblyRef`-Struktur, die Metadaten für die Assembly enthält, auf die diese Assembly verweist, und gibt das zugeordnete Metadatentoken zurück.</span><span class="sxs-lookup"><span data-stu-id="70409-103">Creates an `AssemblyRef` structure containing metadata for the assembly that this assembly references, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="066af-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="066af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="70409-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="70409-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineAssemblyRef (  
@@ -42,44 +42,44 @@ HRESULT DefineAssemblyRef (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="066af-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="066af-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="70409-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="70409-105">Parameters</span></span>  
  `pbPublicKeyOrToken`  
- <span data-ttu-id="066af-106">[in] Der öffentliche Schlüssel des Herausgebers der Assembly, auf die verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="066af-106">[in] The public key of the publisher of the referenced assembly.</span></span> <span data-ttu-id="066af-107">Die Hilfsfunktion [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) kann verwendet werden, um den Hash des öffentlichen Schlüssels, der als dieser Parameter übergeben zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="066af-107">The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.</span></span>  
+ <span data-ttu-id="70409-106">[in] Der öffentliche Schlüssel des Herausgebers der Assembly, auf die verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="70409-106">[in] The public key of the publisher of the referenced assembly.</span></span> <span data-ttu-id="70409-107">Die Hilfsfunktion [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) kann verwendet werden, um den Hash des öffentlichen Schlüssels, der als dieser Parameter übergeben zu erhalten.</span><span class="sxs-lookup"><span data-stu-id="70409-107">The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.</span></span>  
   
  `cbPublicKeyOrToken`  
- <span data-ttu-id="066af-108">[in] Die Größe in Bytes der `pbPublicKeyOrToken`.</span><span class="sxs-lookup"><span data-stu-id="066af-108">[in] The size in bytes of `pbPublicKeyOrToken`.</span></span>  
+ <span data-ttu-id="70409-108">[in] Die Größe in Bytes der `pbPublicKeyOrToken`.</span><span class="sxs-lookup"><span data-stu-id="70409-108">[in] The size in bytes of `pbPublicKeyOrToken`.</span></span>  
   
  `szName`  
- <span data-ttu-id="066af-109">[in] Der Benutzer lesbarer Textname der Assembly.</span><span class="sxs-lookup"><span data-stu-id="066af-109">[in] The human-readable text name of the assembly.</span></span> <span data-ttu-id="066af-110">Dieser Wert darf 1024 Zeichen nicht überschreiten.</span><span class="sxs-lookup"><span data-stu-id="066af-110">This value must not exceed 1024 characters.</span></span>  
+ <span data-ttu-id="70409-109">[in] Der Benutzer lesbarer Textname der Assembly.</span><span class="sxs-lookup"><span data-stu-id="70409-109">[in] The human-readable text name of the assembly.</span></span> <span data-ttu-id="70409-110">Dieser Wert darf 1024 Zeichen nicht überschreiten.</span><span class="sxs-lookup"><span data-stu-id="70409-110">This value must not exceed 1024 characters.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="066af-111">[in] Eine ASSEMBLYMETADATA-Instanz, die die Version, Plattform und Gebietsschema-Informationen der referenzierten Assembly enthält.</span><span class="sxs-lookup"><span data-stu-id="066af-111">[in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.</span></span>  
+ <span data-ttu-id="70409-111">[in] Eine ASSEMBLYMETADATA-Instanz, die die Version, Plattform und Gebietsschema-Informationen der referenzierten Assembly enthält.</span><span class="sxs-lookup"><span data-stu-id="70409-111">[in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="066af-112">[in] Die Hashdaten, das die referenzierte Assembly zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="066af-112">[in] The hash data associated with the referenced assembly.</span></span> <span data-ttu-id="066af-113">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="066af-113">Optional.</span></span>  
+ <span data-ttu-id="70409-112">[in] Die Hashdaten, das die referenzierte Assembly zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="70409-112">[in] The hash data associated with the referenced assembly.</span></span> <span data-ttu-id="70409-113">Dies ist optional.</span><span class="sxs-lookup"><span data-stu-id="70409-113">Optional.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="066af-114">[in] Die Größe in Bytes der `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="066af-114">[in] The size in bytes of `pbHashValue`.</span></span>  
+ <span data-ttu-id="70409-114">[in] Die Größe in Bytes der `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="70409-114">[in] The size in bytes of `pbHashValue`.</span></span>  
   
  `dwAssemblyRefFlags`  
- <span data-ttu-id="066af-115">[in] Eine bitweise Kombination von [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) Werte, die das Verhalten von der ausführungs-Engine zu beeinflussen.</span><span class="sxs-lookup"><span data-stu-id="066af-115">[in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.</span></span>  
+ <span data-ttu-id="70409-115">[in] Eine bitweise Kombination von [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) Werte, die das Verhalten von der ausführungs-Engine zu beeinflussen.</span><span class="sxs-lookup"><span data-stu-id="70409-115">[in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.</span></span>  
   
  `pmdar`  
- <span data-ttu-id="066af-116">[out] Ein Zeiger auf das zurückgegebene `AssemblyRef` Metadatentoken.</span><span class="sxs-lookup"><span data-stu-id="066af-116">[out] A pointer to the returned `AssemblyRef` metadata token.</span></span>  
+ <span data-ttu-id="70409-116">[out] Ein Zeiger auf das zurückgegebene `AssemblyRef` Metadatentoken.</span><span class="sxs-lookup"><span data-stu-id="70409-116">[out] A pointer to the returned `AssemblyRef` metadata token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="066af-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="066af-117">Remarks</span></span>  
- <span data-ttu-id="066af-118">Eine `AssemblyRef` Metadatenstruktur muss definiert werden, für jede Assembly, die diese Assembly verweist.</span><span class="sxs-lookup"><span data-stu-id="066af-118">One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="70409-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="70409-117">Remarks</span></span>  
+ <span data-ttu-id="70409-118">Eine `AssemblyRef` Metadatenstruktur muss definiert werden, für jede Assembly, die diese Assembly verweist.</span><span class="sxs-lookup"><span data-stu-id="70409-118">One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.</span></span>  
   
- <span data-ttu-id="066af-119">Zur Laufzeit werden die Details einer referenzierten Assembly auf der Assemblyresolver mit einem Hinweis übergeben, dass sie die "wie erstellt" Informationen darstellen.</span><span class="sxs-lookup"><span data-stu-id="066af-119">At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information.</span></span> <span data-ttu-id="066af-120">Der Assemblyresolver wendet dann die Richtlinie.</span><span class="sxs-lookup"><span data-stu-id="066af-120">The assembly resolver then applies policy.</span></span>  
+ <span data-ttu-id="70409-119">Zur Laufzeit werden die Details einer referenzierten Assembly auf der Assemblyresolver mit einem Hinweis übergeben, dass sie die "wie erstellt" Informationen darstellen.</span><span class="sxs-lookup"><span data-stu-id="70409-119">At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information.</span></span> <span data-ttu-id="70409-120">Der Assemblyresolver wendet dann die Richtlinie.</span><span class="sxs-lookup"><span data-stu-id="70409-120">The assembly resolver then applies policy.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="066af-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="066af-121">Requirements</span></span>  
- <span data-ttu-id="066af-122">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="066af-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="70409-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="70409-121">Requirements</span></span>  
+ <span data-ttu-id="70409-122">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70409-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="066af-123">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="066af-123">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="70409-123">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="70409-123">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="066af-124">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="066af-124">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="70409-124">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="70409-124">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="066af-125">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="066af-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="70409-125">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="70409-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="066af-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="066af-126">See also</span></span>
-- [<span data-ttu-id="066af-127">IMetaDataAssemblyEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="066af-127">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="70409-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="70409-126">See also</span></span>
+- [<span data-ttu-id="70409-127">IMetaDataAssemblyEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="70409-127">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d62f4f8a34123bcd3f0cbe56f1c1b958bcaa6ef2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a179b68e2196eeadc712ae8f7d023b2943533335
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413370"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471068"
 ---
-# <a name="icordebugframegetcallee-method"></a><span data-ttu-id="dae09-102">ICorDebugFrame::GetCallee-Methode</span><span class="sxs-lookup"><span data-stu-id="dae09-102">ICorDebugFrame::GetCallee Method</span></span>
-<span data-ttu-id="dae09-103">Ruft einen Zeiger auf das ICorDebugFrame-Objekt in der aktuellen Kette, die dieses Rahmens aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="dae09-103">Gets a pointer to the ICorDebugFrame object in the current chain that this frame called.</span></span>  
+# <a name="icordebugframegetcallee-method"></a><span data-ttu-id="76791-102">ICorDebugFrame::GetCallee-Methode</span><span class="sxs-lookup"><span data-stu-id="76791-102">ICorDebugFrame::GetCallee Method</span></span>
+<span data-ttu-id="76791-103">Ruft einen Zeiger auf das ICorDebugFrame-Objekt, in der aktuellen Kette, die diesem Frame aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="76791-103">Gets a pointer to the ICorDebugFrame object in the current chain that this frame called.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dae09-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="dae09-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="76791-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="76791-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCallee (  
@@ -35,15 +35,15 @@ HRESULT GetCallee (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="dae09-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="dae09-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="76791-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="76791-105">Parameters</span></span>  
  `ppFrame`  
- <span data-ttu-id="dae09-106">[out] Ein Zeiger auf die Adresse des ein `ICorDebugFrame` Objekt, das den aufgerufenen Frame darstellt.</span><span class="sxs-lookup"><span data-stu-id="dae09-106">[out] A pointer to the address of an `ICorDebugFrame` object that represents the called frame.</span></span> <span data-ttu-id="dae09-107">Dieser Wert ist null, wenn der aufrufende Frame der innerste Rahmen in der aktuellen Kette ist.</span><span class="sxs-lookup"><span data-stu-id="dae09-107">This value is null if the calling frame is the innermost frame in the current chain.</span></span>  
+ <span data-ttu-id="76791-106">[out] Ein Zeiger auf die Adresse einer `ICorDebugFrame` -Objekt, das den aufgerufenen Frame darstellt.</span><span class="sxs-lookup"><span data-stu-id="76791-106">[out] A pointer to the address of an `ICorDebugFrame` object that represents the called frame.</span></span> <span data-ttu-id="76791-107">Dieser Wert ist null, wenn der aufrufende Frame der innerste Rahmen in der aktuellen Kette ist.</span><span class="sxs-lookup"><span data-stu-id="76791-107">This value is null if the calling frame is the innermost frame in the current chain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dae09-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="dae09-108">Requirements</span></span>  
- <span data-ttu-id="dae09-109">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dae09-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="76791-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="76791-108">Requirements</span></span>  
+ <span data-ttu-id="76791-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="76791-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dae09-110">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="dae09-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="76791-110">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="76791-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="dae09-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dae09-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="76791-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="76791-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dae09-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dae09-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="76791-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76791-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

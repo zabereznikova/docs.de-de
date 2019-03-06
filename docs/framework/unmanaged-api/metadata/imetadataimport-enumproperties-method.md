@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 64e6bd57c5f16b0e7d59f6cf760030aab4c6b9f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b42c558009c25adfd7d282da905e7182dfd3342
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568802"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467018"
 ---
-# <a name="imetadataimportenumproperties-method"></a><span data-ttu-id="e3a55-102">IMetaDataImport::EnumProperties-Methode</span><span class="sxs-lookup"><span data-stu-id="e3a55-102">IMetaDataImport::EnumProperties Method</span></span>
-<span data-ttu-id="e3a55-103">Zählt PropertyDef-Token auf, die die Eigenschaften des Typs darstellen, auf den vom angegebenen TypeDef-Token verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="e3a55-103">Enumerates PropertyDef tokens representing the properties of the type referenced by the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenumproperties-method"></a><span data-ttu-id="383af-102">IMetaDataImport::EnumProperties-Methode</span><span class="sxs-lookup"><span data-stu-id="383af-102">IMetaDataImport::EnumProperties Method</span></span>
+<span data-ttu-id="383af-103">Zählt PropertyDef-Token auf, die die Eigenschaften des Typs darstellen, auf den vom angegebenen TypeDef-Token verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="383af-103">Enumerates PropertyDef tokens representing the properties of the type referenced by the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e3a55-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e3a55-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="383af-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="383af-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumProperties (  
@@ -39,38 +39,38 @@ HRESULT EnumProperties (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e3a55-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e3a55-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="383af-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="383af-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="e3a55-106">[in, out] Ein Zeiger auf den Enumerator.</span><span class="sxs-lookup"><span data-stu-id="e3a55-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="e3a55-107">Dies muss NULL sein, für den ersten Aufruf dieser Methode.</span><span class="sxs-lookup"><span data-stu-id="e3a55-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="383af-106">[in, out] Ein Zeiger auf den Enumerator.</span><span class="sxs-lookup"><span data-stu-id="383af-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="383af-107">Dies muss NULL sein, für den ersten Aufruf dieser Methode.</span><span class="sxs-lookup"><span data-stu-id="383af-107">This must be NULL for the first call of this method.</span></span>  
   
  `td`  
- <span data-ttu-id="e3a55-108">[in] Eine TypeDef-Token, das den Typ mit Eigenschaften auflisten darstellt.</span><span class="sxs-lookup"><span data-stu-id="e3a55-108">[in] A TypeDef token representing the type with properties to enumerate.</span></span>  
+ <span data-ttu-id="383af-108">[in] Eine TypeDef-Token, das den Typ mit Eigenschaften auflisten darstellt.</span><span class="sxs-lookup"><span data-stu-id="383af-108">[in] A TypeDef token representing the type with properties to enumerate.</span></span>  
   
  `rProperties`  
- <span data-ttu-id="e3a55-109">[out] Das Array zum Speichern der PropertyDef-Token verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="e3a55-109">[out] The array used to store the PropertyDef tokens.</span></span>  
+ <span data-ttu-id="383af-109">[out] Das Array zum Speichern der PropertyDef-Token verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="383af-109">[out] The array used to store the PropertyDef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="e3a55-110">[in] Die maximale Größe des `rProperties`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="e3a55-110">[in] The maximum size of the `rProperties` array.</span></span>  
+ <span data-ttu-id="383af-110">[in] Die maximale Größe des `rProperties`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="383af-110">[in] The maximum size of the `rProperties` array.</span></span>  
   
  `pcProperties`  
- <span data-ttu-id="e3a55-111">[out] Die Anzahl der zurückgegebenen PropertyDef-Token `rProperties`.</span><span class="sxs-lookup"><span data-stu-id="e3a55-111">[out] The number of PropertyDef tokens returned in `rProperties`.</span></span>  
+ <span data-ttu-id="383af-111">[out] Die Anzahl der zurückgegebenen PropertyDef-Token `rProperties`.</span><span class="sxs-lookup"><span data-stu-id="383af-111">[out] The number of PropertyDef tokens returned in `rProperties`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e3a55-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="e3a55-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="383af-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="383af-112">Return Value</span></span>  
   
-|<span data-ttu-id="e3a55-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e3a55-113">HRESULT</span></span>|<span data-ttu-id="e3a55-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="e3a55-114">Description</span></span>|  
+|<span data-ttu-id="383af-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="383af-113">HRESULT</span></span>|<span data-ttu-id="383af-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="383af-114">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="e3a55-115">`EnumProperties` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="e3a55-115">`EnumProperties` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="e3a55-116">Es gibt keine Token aufgelistet werden.</span><span class="sxs-lookup"><span data-stu-id="e3a55-116">There are no tokens to enumerate.</span></span> <span data-ttu-id="e3a55-117">In diesem Fall `pcProperties` ist 0 (null).</span><span class="sxs-lookup"><span data-stu-id="e3a55-117">In that case, `pcProperties` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="383af-115">`EnumProperties` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="383af-115">`EnumProperties` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="383af-116">Es gibt keine Token aufgelistet werden.</span><span class="sxs-lookup"><span data-stu-id="383af-116">There are no tokens to enumerate.</span></span> <span data-ttu-id="383af-117">In diesem Fall `pcProperties` ist 0 (null).</span><span class="sxs-lookup"><span data-stu-id="383af-117">In that case, `pcProperties` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e3a55-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e3a55-118">Requirements</span></span>  
- <span data-ttu-id="e3a55-119">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3a55-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="383af-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="383af-118">Requirements</span></span>  
+ <span data-ttu-id="383af-119">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="383af-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e3a55-120">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e3a55-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="383af-120">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="383af-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e3a55-121">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="e3a55-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="383af-121">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="383af-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e3a55-122">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3a55-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="383af-122">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="383af-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3a55-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e3a55-123">See also</span></span>
-- [<span data-ttu-id="e3a55-124">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e3a55-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="e3a55-125">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e3a55-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="383af-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="383af-123">See also</span></span>
+- [<span data-ttu-id="383af-124">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="383af-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="383af-125">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="383af-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

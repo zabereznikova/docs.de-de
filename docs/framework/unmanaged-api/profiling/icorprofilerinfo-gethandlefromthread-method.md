@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f1eb2354536a436bd6ae41cf70bf11549982d5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad9dc185514bfddd15a6110b1b0d80fc99230271
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612592"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472277"
 ---
-# <a name="icorprofilerinfogethandlefromthread-method"></a><span data-ttu-id="4913e-102">ICorProfilerInfo::GetHandleFromThread-Methode</span><span class="sxs-lookup"><span data-stu-id="4913e-102">ICorProfilerInfo::GetHandleFromThread Method</span></span>
-<span data-ttu-id="4913e-103">Ordnet die ID eines Threads ein Win32-Thread-Handle.</span><span class="sxs-lookup"><span data-stu-id="4913e-103">Maps the ID of a thread to a Win32 thread handle.</span></span>  
+# <a name="icorprofilerinfogethandlefromthread-method"></a><span data-ttu-id="af066-102">ICorProfilerInfo::GetHandleFromThread-Methode</span><span class="sxs-lookup"><span data-stu-id="af066-102">ICorProfilerInfo::GetHandleFromThread Method</span></span>
+<span data-ttu-id="af066-103">Ordnet die ID eines Threads ein Win32-Thread-Handle.</span><span class="sxs-lookup"><span data-stu-id="af066-103">Maps the ID of a thread to a Win32 thread handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4913e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4913e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af066-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="af066-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHandleFromThread(  
@@ -35,24 +35,24 @@ HRESULT GetHandleFromThread(
     [out] HANDLE  *phThread);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4913e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="4913e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="af066-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="af066-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="4913e-106">[in] Die Thread-ID zugeordnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="4913e-106">[in] The thread ID to be mapped.</span></span>  
+ <span data-ttu-id="af066-106">[in] Die Thread-ID zugeordnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="af066-106">[in] The thread ID to be mapped.</span></span>  
   
  `phThread`  
- <span data-ttu-id="4913e-107">[out] Ein Zeiger auf ein Win32-Thread-Handle.</span><span class="sxs-lookup"><span data-stu-id="4913e-107">[out] A pointer to a Win32 thread handle.</span></span>  
+ <span data-ttu-id="af066-107">[out] Ein Zeiger auf ein Win32-Thread-Handle.</span><span class="sxs-lookup"><span data-stu-id="af066-107">[out] A pointer to a Win32 thread handle.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4913e-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4913e-108">Remarks</span></span>  
- <span data-ttu-id="4913e-109">Der Profiler muss die Win32 Aufrufen `DuplicateHandle` Funktion auf den Ziehpunkt, bevor Sie ihn verwenden.</span><span class="sxs-lookup"><span data-stu-id="4913e-109">The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="af066-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="af066-108">Remarks</span></span>  
+ <span data-ttu-id="af066-109">Der Profiler muss die Win32 Aufrufen `DuplicateHandle` Funktion auf den Ziehpunkt, bevor Sie ihn verwenden.</span><span class="sxs-lookup"><span data-stu-id="af066-109">The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4913e-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4913e-110">Requirements</span></span>  
- <span data-ttu-id="4913e-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4913e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="af066-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="af066-110">Requirements</span></span>  
+ <span data-ttu-id="af066-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="af066-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4913e-112">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="4913e-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="af066-112">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="af066-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="4913e-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4913e-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="af066-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="af066-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4913e-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4913e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="af066-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af066-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4913e-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4913e-115">See also</span></span>
-- [<span data-ttu-id="4913e-116">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="4913e-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="af066-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="af066-115">See also</span></span>
+- [<span data-ttu-id="af066-116">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="af066-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
