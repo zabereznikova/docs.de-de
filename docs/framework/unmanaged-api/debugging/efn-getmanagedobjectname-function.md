@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4eddb1461ad448a1a1718db8a11173e5e2e4a17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a9bef248d00cb62de7c93ba837ebc9f135490cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527782"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479908"
 ---
 # <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName-Funktion
 Ruft den Namen des Typs mithilfe der bereitgestellten verwalteten Objektzeiger ab.  
@@ -37,7 +37,7 @@ HRESULT _EFN_GetManagedObjectName(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `Client`  
  [in] Ein Zeiger auf den Client Debuggen.  
   

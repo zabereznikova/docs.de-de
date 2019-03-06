@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95532d6721467b482b1d79d611f8055b606bb4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6e1edb1d25a62a9a689c397339740e563d986c8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413507"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478764"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid-Methode
-Ruft einen Wert, der angibt, ob das durch diese ICorDebugHeapValue dargestellte Objekt gültig ist.  
+Ruft einen Wert, der angibt, ob das durch diesen ICorDebugHeapValue dargestellte Objekt gültig ist.  
   
- Diese Methode ist in .NET Framework, Version 2.0 veraltet.  
+ Diese Methode wurde in .NET Framework, Version 2.0 als veraltet markiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +37,17 @@ HRESULT IsValid (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pbValid`  
  [out] Ein Zeiger auf einen booleschen Wert, der angibt, ob dieser Wert auf dem Heap gültig ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert ist ungültig, wenn er vom Garbage Collector freigegeben wurde.  
+ Der Wert ist ungültig, wenn es vom Garbage Collector freigegeben wurde.  
   
- Diese Methode ist veraltet. In .NET Framework 2.0 können alle Werte sind gültig, bis [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) aufgerufen wird, an welche die Werte ungültig sind.  
+ Diese Methode ist veraltet. In .NET Framework 2.0, alle Werte sind gültig bis [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) aufgerufen wird, an der Zeit werden die Werte ungültig sind.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

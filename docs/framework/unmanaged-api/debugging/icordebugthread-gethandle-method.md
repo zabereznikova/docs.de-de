@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 358597edc9fbc5203e5c00a5fb4d04019281060d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 900fece1dd29f73f77b85ff08e4deff1396f8aaf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418271"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484510"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle-Methode
 Ruft das aktuelle Handle für den aktiven Teil des ICorDebugThread ab.  
@@ -35,17 +35,17 @@ HRESULT GetHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `phThreadHandle`  
- [out] Ein Zeiger auf einen HTHREAD, der das Handle des aktiven Teils dieses Threads ist.  
+ [out] Ein Zeiger auf einen HTHREAD, der das Handle des aktiven Teils des Threads ist.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Handle kann sich ändern, wie der Prozess ausgeführt wird, und für die verschiedenen Teile des Threads kann abweichen.  
+ Das Handle kann sich ändern, während der Prozess ausgeführt wird, und für die verschiedenen Teile des Threads kann abweichen.  
   
- Dieses Handle ist im Besitz der Debuggen-API. Der Debugger sollte es duplizieren, bevor Sie ihn verwenden.  
+ Dieses Handle ist im Besitz der Debuggen-API. Der Debugger sollte es vor der Verwendung duplizieren.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

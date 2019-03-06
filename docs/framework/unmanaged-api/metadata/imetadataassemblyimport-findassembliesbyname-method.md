@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 454391eb7a5f1821438837c8fb7e5f8bad6b5723
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39d9b4e69080e759a5a7d930f61abb3ba6160801
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651655"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486146"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName-Methode
 Ruft ein Array von Assemblys mit dem angegebenen `szAssemblyName` Parameters unter Verwendung von die Standardregeln, die von der common Language Runtime (CLR) zum Auflösen von verweisen.  
@@ -40,7 +40,7 @@ HRESULT FindAssembliesByName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `szAppBase`  
  [in] Das Stammverzeichnis, in denen für die angegebene Assembly gesucht werden soll. Wenn dieser Wert, um festgelegt ist `null`, `FindAssembliesByName` wird nur im globalen Assemblycache suchen Sie nach der Assembly.  
   

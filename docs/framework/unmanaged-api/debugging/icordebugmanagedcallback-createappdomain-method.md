@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36ded85cd2d8ebe49ee0b1e190266061cb56dfb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0682aec060d5f65a3034d482c92a04e0880f7a6b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496740"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484770"
 ---
 # <a name="icordebugmanagedcallbackcreateappdomain-method"></a>ICorDebugManagedCallback::CreateAppDomain-Methode
 Benachrichtigt den Debugger an, dass eine Anwendungsdomäne erstellt wurde.  
@@ -36,7 +36,7 @@ HRESULT CreateAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pProcess`  
  [in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, in dem die Anwendungsdomäne erstellt wurde.  
   

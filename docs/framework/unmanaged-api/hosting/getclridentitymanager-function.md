@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f40100be3ab05c0c8e8a55d48494569424e88371
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea711cc03716f4cd0a06a96208da942a69f36d66
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637265"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471679"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager-Funktion
 Ruft einen Zeiger auf eine Schnittstelle, die die common Language Runtime (CLR) zum Verwalten von Identitäten ermöglicht.  
@@ -37,7 +37,7 @@ STDAPI GetCLRIdentityManager(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `riid`  
  [in] Ein `REFIID` (einen Schnittstellenbezeichner), die die Schnittstelle zum Abrufen von angibt. Dieser Wert muss entweder IID_ICLRAssemblyIdentityManager oder IID_ICLRHostBindingPolicyManager sein.  
   
