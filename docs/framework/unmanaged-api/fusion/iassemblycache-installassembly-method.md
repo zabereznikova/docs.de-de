@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 112c42f15b39c72ba8519877e5ee6a8700953ba5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50152b72cade763a5b890c0c9d45109d88ce65a7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625856"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469208"
 ---
-# <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="3b1a1-102">IAssemblyCache::InstallAssembly-Methode</span><span class="sxs-lookup"><span data-stu-id="3b1a1-102">IAssemblyCache::InstallAssembly Method</span></span>
-<span data-ttu-id="3b1a1-103">Wird die angegebene Assembly im globalen Assemblycache installiert.</span><span class="sxs-lookup"><span data-stu-id="3b1a1-103">Installs the specified assembly in the global assembly cache.</span></span>  
+# <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="6967f-102">IAssemblyCache::InstallAssembly-Methode</span><span class="sxs-lookup"><span data-stu-id="6967f-102">IAssemblyCache::InstallAssembly Method</span></span>
+<span data-ttu-id="6967f-103">Wird die angegebene Assembly im globalen Assemblycache installiert.</span><span class="sxs-lookup"><span data-stu-id="6967f-103">Installs the specified assembly in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3b1a1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3b1a1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6967f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6967f-104">Syntax</span></span>  
   
 ```  
 HRESULT InstallAssembly (  
@@ -37,26 +37,26 @@ HRESULT InstallAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3b1a1-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="3b1a1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6967f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="6967f-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="3b1a1-106">[in] Flags, die in Fusion.idl definiert sind.</span><span class="sxs-lookup"><span data-stu-id="3b1a1-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="3b1a1-107">Die folgenden Werte werden unterstützt:</span><span class="sxs-lookup"><span data-stu-id="3b1a1-107">The following values are supported:</span></span>  
+ <span data-ttu-id="6967f-106">[in] Flags, die in Fusion.idl definiert sind.</span><span class="sxs-lookup"><span data-stu-id="6967f-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="6967f-107">Die folgenden Werte werden unterstützt:</span><span class="sxs-lookup"><span data-stu-id="6967f-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="3b1a1-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0 X 00000001)</span><span class="sxs-lookup"><span data-stu-id="3b1a1-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
+-   <span data-ttu-id="6967f-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0 X 00000001)</span><span class="sxs-lookup"><span data-stu-id="6967f-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
   
--   <span data-ttu-id="3b1a1-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="3b1a1-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
+-   <span data-ttu-id="6967f-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="6967f-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
   
  `pszManifestFilePath`  
- <span data-ttu-id="3b1a1-110">[in] Der Pfad des Manifests für zu installierenden Assembly.</span><span class="sxs-lookup"><span data-stu-id="3b1a1-110">[in] The path to the manifest for the assembly to install.</span></span>  
+ <span data-ttu-id="6967f-110">[in] Der Pfad des Manifests für zu installierenden Assembly.</span><span class="sxs-lookup"><span data-stu-id="6967f-110">[in] The path to the manifest for the assembly to install.</span></span>  
   
  `pRefData`  
- <span data-ttu-id="3b1a1-111">[in] Ein [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) Struktur, die Daten für die Installation enthält.</span><span class="sxs-lookup"><span data-stu-id="3b1a1-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains data for the installation.</span></span>  
+ <span data-ttu-id="6967f-111">[in] Ein [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) Struktur, die Daten für die Installation enthält.</span><span class="sxs-lookup"><span data-stu-id="6967f-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains data for the installation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3b1a1-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3b1a1-112">Requirements</span></span>  
- <span data-ttu-id="3b1a1-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b1a1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6967f-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6967f-112">Requirements</span></span>  
+ <span data-ttu-id="6967f-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6967f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3b1a1-114">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="3b1a1-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="6967f-114">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="6967f-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="3b1a1-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3b1a1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6967f-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6967f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b1a1-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3b1a1-116">See also</span></span>
-- [<span data-ttu-id="3b1a1-117">IAssemblyCache-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3b1a1-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6967f-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6967f-116">See also</span></span>
+- [<span data-ttu-id="6967f-117">IAssemblyCache-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6967f-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
