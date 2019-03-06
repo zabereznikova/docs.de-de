@@ -1,21 +1,23 @@
 ---
 title: 'Leitfaden für C#: Auswählen der C#-Sprachversion'
 description: Konfigurieren des Compilers zum Ausführen der Syntaxüberprüfung mithilfe einer spezifischen Compilerversion
-ms.date: 05/24/2018
-ms.openlocfilehash: 9b91e62168ced0f373e1a55def8b279dc64833d8
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.date: 02/28/2019
+ms.openlocfilehash: 6d31a757171bd2eecdcc1fbd3da765dcb3fe45c0
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207982"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57212026"
 ---
 # <a name="select-the-c-language-version"></a>Auswählen der C#-Sprachversion
 
-Der C#-Compiler legt standardmäßig die aktuellste freigegebene Hauptversion der Sprache fest. Sie können jedes Projekt mit einem neuen Punktrelease der Sprache kompilieren. Mit einer neueren Version der Sprache können Sie die neuesten Sprachfeatures in Ihrem Projekt verwenden. In anderen Szenarios müssen Sie möglicherweise überprüfen, dass ein Projekt ordnungsgemäß kompiliert wird, wenn Sie eine ältere Version der Sprache verwenden.
+Der C#-Compiler bestimmt eine Standardsprachversion, basierend auf dem oder den Zielframeworks Ihres Projekts. Wenn Ihr Projekt auf eine Vorschauframework abzielt, das eine entsprechende Vorschausprachversion besitzt, wird die Vorschausprachversion als Sprachversion verwendet. Wenn Ihr Projekt nicht auf ein Vorschauframework abzielt, wird die höchste Nebenversion als Sprachversion verwendet.
 
-Diese Funktion entkoppelt das Installieren neuer Versionen vom SDK und den Tools in Ihrer Entwicklungsumgebung von der Entscheidung, neue Sprachfeatures in einem Projekt zu verwenden. Sie können das neueste SDK und die neuesten Tools auf Ihrem Buildcomputer installieren. Jedes Projekt kann dazu konfiguriert werden, eine spezifische Version der Sprache für das Build zu verwenden.
+Beispielsweise verwendet jedes Projekt, das während des Vorschauzeitraums für .NET Core 3.0 auf `netcoreapp3.0` oder `netstandard2.1` abzielt (beide in der Vorschauphase), die C# 8.0-Sprache (ebenfalls in der Vorschauphase). Projekte, die auf eine veröffentlichte Version abzielen, verwenden C# 7.3 (die neueste veröffentlichte Version). Dieses Verhalten bedeutet, dass jedes Projekt, das auf .NET Framework abzielt, die neueste Version verwendet (C# 7.3). 
 
-Es gibt verschiedene Möglichkeiten, die Sprachversion einzurichten:
+Diese Funktion entkoppelt das Installieren neuer Versionen vom SDK und den Tools in Ihrer Entwicklungsumgebung von der Entscheidung, neue Sprachfeatures in einem Projekt zu verwenden. Sie können das neueste SDK und die neuesten Tools auf Ihrem Buildcomputer installieren. Jedes Projekt kann dazu konfiguriert werden, eine spezifische Version der Sprache für das Build zu verwenden. Das Standardverhalten bedeutet, dass alle Sprachfunktionen, die von neuen Typen oder neuem CLR-Verhalten abhängig sind, nur aktiviert sind, wenn das Projekt auf diese Frameworks abzielt.
+
+Sie können das Standardverhalten überschreiben, indem Sie eine Sprachversion angeben. Es gibt verschiedene Möglichkeiten, die Sprachversion einzurichten:
 
 - Verwenden einer [Visual Studio-Schnellaktion](#visual-studio-quick-action)
 - Festlegen der Sprachversion in der [Visual Studio-Benutzeroberfläche](#set-the-language-version-in-visual-studio)
@@ -61,20 +63,20 @@ Der Wert `latest` verwendet die neueste Nebenversion der C#-Sprache. Gültige We
 
 |Wert|Bedeutung|
 |------------|-------------|
-|default|Der Compiler akzeptiert jede gültige Sprachsyntax der letzten Hauptversion, die unterstützen werden kann.|
-|ISO-1|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2003 C# (1.0/1.2) enthalten ist. |
-|ISO-2|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2006 C# (2.0) enthalten ist. |
-|3|Der Compiler akzeptiert nur Syntax, die in C# 3.0 oder früher enthalten ist.|
-|4|Der Compiler akzeptiert nur Syntax, die in C# 4.0 oder früher enthalten ist.|
-|5|Der Compiler akzeptiert nur Syntax, die in C# 5.0 oder früher enthalten ist.|
-|6|Der Compiler akzeptiert nur Syntax, die in C# 6.0 oder früher enthalten ist.|
-|7|Der Compiler akzeptiert nur Syntax, die in C# 7.0 oder früher enthalten ist.|
-|7.1|Der Compiler akzeptiert nur Syntax, die in C# 7.1 oder früher enthalten ist.|
-|7.2|Der Compiler akzeptiert nur Syntax, die in C# 7.2 oder früher enthalten ist.|
+|preview|Der Compiler akzeptiert jede gültige Sprachsyntax der letzten Vorschauversion.|
+|latest|Der Compiler akzeptiert die Syntax der neuesten veröffentlichte Version des Compilers (einschließlich Nebenversionen).|
+|latestMajor|Der Compiler akzeptiert die Syntax der neuesten veröffentlichte Hauptversion des Compilers.|
+|8.0|Der Compiler akzeptiert nur Syntax, die in C# 8.0 oder niedriger enthalten ist.|
 |7.3|Der Compiler akzeptiert nur Syntax, die in C# 7.3 oder früher enthalten ist.|
-|latest|Der Compiler akzeptiert alle gültige Sprachsyntax, die es unterstützen kann.|
-
-Die Auflösung der speziellen Zeichenfolgen `default` und `latest` sind die Haupt- (C# 7.0) und Nebensprachversionen (C# 7.3), die jeweils auf dem Buildcomputer installiert sind.
+|7.2|Der Compiler akzeptiert nur Syntax, die in C# 7.2 oder früher enthalten ist.|
+|7.1|Der Compiler akzeptiert nur Syntax, die in C# 7.1 oder früher enthalten ist.|
+|7|Der Compiler akzeptiert nur Syntax, die in C# 7.0 oder früher enthalten ist.|
+|6|Der Compiler akzeptiert nur Syntax, die in C# 6.0 oder früher enthalten ist.|
+|5|Der Compiler akzeptiert nur Syntax, die in C# 5.0 oder früher enthalten ist.|
+|4|Der Compiler akzeptiert nur Syntax, die in C# 4.0 oder früher enthalten ist.|
+|3|Der Compiler akzeptiert nur Syntax, die in C# 3.0 oder früher enthalten ist.|
+|ISO-2|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2006 C# (2.0) enthalten ist. |
+|ISO-1|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2003 C# (1.0/1.2) enthalten ist. |
 
 ## <a name="configure-multiple-projects"></a>Konfigurieren mehrerer Projekte
 

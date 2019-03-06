@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: ee23c962d8ea9adecabc5146af75419c87fcc75a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19d7f20bf33de6e23860d475f38d49553049dec1
+ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516797"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211961"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C#-Compileroptionen)
 
@@ -32,24 +32,22 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
   
 |Option|Bedeutung|  
 |------------|-------------|  
-|default|Der Compiler akzeptiert jede gültige Sprachsyntax der letzten Hauptversion, die unterstützen werden kann.|
-|ISO-1|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2003-C# (1.0/1.2) enthalten ist <sup id="TISO1">[ISO1](#FISO1)</sup>|  
-|ISO-2|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2006 C# (2.0) enthalten ist <sup id="TISO2">[ISO2](#FISO2)</sup>|
-|3|Der Compiler akzeptiert nur Syntax, die in C# 3.0 oder früher enthalten ist <sup id="TCS3">[CS3](#FCS3)</sup>|
-|4|Der Compiler akzeptiert nur Syntax, die in C# 4.0 oder früher enthalten ist <sup id="TCS4">[CS4](#FCS4)</sup>|
-|5|Der Compiler akzeptiert nur Syntax, die in C# 5.0 oder früher enthalten ist <sup id="TCS5">[CS5](#FCS5)</sup>|
-|6|Der Compiler akzeptiert nur Syntax, die in C# 6.0 oder früher enthalten ist <sup id="TCS6">[CS6](#FCS6)</sup>|
-|7|Der Compiler akzeptiert nur Syntax, die in C# 7.0 oder früher enthalten ist <sup id="TCS7">[CS7](#FCS7)</sup>|
-|7.1|Der Compiler akzeptiert nur Syntax, die in C# 7.1 oder früher enthalten ist <sup id="TCS71">[CS71](#FCS71)</sup>|
-|7.2|Der Compiler akzeptiert nur Syntax, die in C# 7.2 oder früher enthalten ist <sup id="TCS72">[CS72](#FCS72)</sup>|
+|preview|Der Compiler akzeptiert jede gültige Sprachsyntax der letzten Vorschauversion, die unterstützen werden kann.|
+|latest|Der Compiler akzeptiert jede gültige Sprachsyntax der letzten Version (einschließlich Nebenversionen), die unterstützen werden kann.|
+|latestMajor|Der Compiler akzeptiert jede gültige Sprachsyntax der letzten Hauptversion, die unterstützen werden kann.|
+|8.0|Der Compiler akzeptiert nur Syntax, die in C# 8.0 oder niedriger enthalten ist. <sup id="TCS80">[CS80](#FCS80)</sup>|
 |7.3|Der Compiler akzeptiert nur Syntax, die in C# 7.3 oder früher enthalten ist <sup id="TCS73">[CS73](#FCS73)</sup>|
-|latest|Der Compiler akzeptiert alle gültige Sprachsyntax, die es unterstützen kann.|
+|7.2|Der Compiler akzeptiert nur Syntax, die in C# 7.2 oder früher enthalten ist <sup id="TCS72">[CS72](#FCS72)</sup>|
+|7.1|Der Compiler akzeptiert nur Syntax, die in C# 7.1 oder früher enthalten ist <sup id="TCS71">[CS71](#FCS71)</sup>|
+|7|Der Compiler akzeptiert nur Syntax, die in C# 7.0 oder früher enthalten ist <sup id="TCS7">[CS7](#FCS7)</sup>|
+|6|Der Compiler akzeptiert nur Syntax, die in C# 6.0 oder früher enthalten ist <sup id="TCS6">[CS6](#FCS6)</sup>|
+|5|Der Compiler akzeptiert nur Syntax, die in C# 5.0 oder früher enthalten ist <sup id="TCS5">[CS5](#FCS5)</sup>|
+|4|Der Compiler akzeptiert nur Syntax, die in C# 4.0 oder früher enthalten ist <sup id="TCS4">[CS4](#FCS4)</sup>|
+|3|Der Compiler akzeptiert nur Syntax, die in C# 3.0 oder früher enthalten ist <sup id="TCS3">[CS3](#FCS3)</sup>|
+|ISO-2|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2006 C# (2.0) enthalten ist <sup id="TISO2">[ISO2](#FISO2)</sup>|
+|ISO-1|Der Compiler akzeptiert nur Syntax, die in ISO/IEC 23270:2003-C# (1.0/1.2) enthalten ist <sup id="TISO1">[ISO1](#FISO1)</sup>|  
 
-<!--- Uncomment and move these above
-|8|The compiler accepts only syntax that is included in C# 8 or lower <sup id="TCS8">[CS8](#FCS8)</sup>|
--->
-
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
  Metadaten, auf die von Ihrer C#-Anwendung verwiesen wird, unterliegen nicht der Compileroption **-langversion**.  
   
@@ -72,18 +70,23 @@ Führt dazu, dass der Compiler nur Syntax akzeptiert, die in der ausgewählten C
 
 |Version|Link|Beschreibung|
 |-------|----|-----------|
-|C# 1.0|[DOC herunterladen](https://download.microsoft.com/download/a/9/e/a9e229b9-fee5-4c3e-8476-917dee385062/csharp%20language%20specification%20v1.0.doc)|C#-Programmiersprachenspezifikation Version 1.0: Microsoft Corporation|
-|C# 1.2|[DOC herunterladen](https://download.microsoft.com/download/5/e/5/5e58be0a-b02b-41ac-a4a3-7a22286214ff/csharp%20language%20specification%20v1.2.doc)|C#-Programmiersprachenspezifikation Version 1.2: Microsoft Corporation|
-|C# 2.0|[PDF herunterladen](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/Ecma-334%204th%20edition%20June%202006.pdf)|Standard ECMA-334, 4. Edition|
-|C# 3.0|[DOC herunterladen](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C#-Programmiersprachenspezifikation Version 3.0: Microsoft Corporation|
-|C# 5.0|[PDF herunterladen](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf)|Standard ECMA-334, 5. Edition|
-|C# 6.0|[Link](../language-specification/index.md)|C#-Spezifikation Version 6, inoffizieller Entwurf: .NET Foundation|
 |C# 7.0 und höher||aktuell nicht verfügbar|
+|C# 6.0|[Link](../language-specification/index.md)|C#-Spezifikation Version 6, inoffizieller Entwurf: .NET Foundation|
+|C# 5.0|[PDF herunterladen](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Standard ECMA-334, 5. Edition|
+|C# 3.0|[DOC herunterladen](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C#-Programmiersprachenspezifikation Version 3.0: Microsoft Corporation|
+|C# 2.0|[PDF herunterladen](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Standard ECMA-334, 4. Edition|
+|C# 1.2|[DOC herunterladen](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|C#-Programmiersprachenspezifikation Version 1.2: Microsoft Corporation|
+|C# 1.0|[DOC herunterladen](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|C#-Programmiersprachenspezifikation Version 1.0: Microsoft Corporation|
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Mindestens erforderliche Compilerversion, die Sie benötigen, um alle Sprachfeatures zu unterstützen
 
-[↩](#TISO1)<a name="FISO1">ISO1</a>: Microsoft Visual Studio/Build Tools .NET 2002 oder gebündelter .NET Framework 1.0-Compiler [↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools 2005 oder gebündelter .NET Framework 2.0-Compiler [↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/Build Tools 2008 oder gebündelter .NET Framework 3.5-Compiler [↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools 2010 oder gebündelter .NET Framework 4.0-Compiler [↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools 2012 oder gebündelter .NET Framework 4.5-Compiler [↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio/Build Tools 2015 [↩](#TCS7)<a name="FCS7">CS7</a>: Microsoft Visual Studio/Build Tools 2017 [↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 2017, Version 15.3 [↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 2017, Version 15.5 [↩](#TCS73)<a name="FCS73">CS73</a>: Microsoft Visual Studio/Build Tools 2017, Version 15.7
-
-<!--- Uncomment and add to the above when they become officially released
-[↩](#TCS8)<a name="FCS8">CS8</a>: Microsoft Visual Studio/Build Tools 20??    
--->
+[↩](#TCS80)<a name="FCS80">CS80</a>: Microsoft Visual Studio/Build Tools 2019, Version 16, oder .NET Core 3.0 SDK [↩](#TCS73)<a name="FCS73">CS73</a>: Microsoft Visual Studio/Build Tools 2017, Version 15.7  
+[↩](#TCS72)<a name="FCS72">CS72</a>: Microsoft Visual Studio/Build Tools 2017, Version 15.5  
+[↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 2017, Version 15.3  
+[↩](#TCS7)<a name="FCS7">CS7</a>: Microsoft Visual Studio/Build Tools 2017  
+[↩](#TCS6)<a name="FCS6">CS6</a>: Microsoft Visual Studio/Build Tools 2015  
+[↩](#TCS5)<a name="FCS5">CS5</a>: Microsoft Visual Studio/Build Tools 2012 oder gebündelter .NET Framework 4.5-Compiler  
+[↩](#TCS4)<a name="FCS4">CS4</a>: Microsoft Visual Studio/Build Tools 2010 oder gebündelter .NET Framework 4.0-Compiler  
+[↩](#TCS3)<a name="FCS3">CS3</a>: Microsoft Visual Studio/Build Tools 2008 oder gebündelter .NET Framework 3.5-Compiler  
+[↩](#TISO2)<a name="FISO2">ISO2</a>: Microsoft Visual Studio/Build Tools 2005 oder gebündelter .NET Framework 2.0-Compiler  
+[↩](#TISO1)<a name="FISO1">ISO1</a>: Microsoft Visual Studio/Build Tools 2002 oder gebündelter .NET Framework 1.0-Compiler  

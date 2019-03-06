@@ -2,12 +2,12 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 874420775215502ebdacb8420b3fe0e027d6660f
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 1aa5a200f84b35fda3c33a900655249d07000e8e
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747621"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56835433"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -119,13 +119,13 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
         // other cases removed for brevity...
         _ => 0M
     };
-    ```
+```
 
-Pattern matching creates a concise syntax for expressing this algorithm.
+Ein Musterabgleich erstellt eine präzise Syntax,. um diesen Algorithmus auszudrücken.
 
-### Tuple patterns
+### <a name="tuple-patterns"></a>Tupelmuster
 
-Some algorithms depend on multiple inputs. **Tuple patterns** allow you to switch based on multiple values expressed as a [tuple](../tuples.md).  The following code shows a switch expression for the game *rock, paper, scissors*:
+Einige Algorithmen sind von mehreren Eingaben abhängig. **Tupelmuster** erlauben Ihnen, auf Grundlage mehrerer Werte, ausgedrückt als ein [Tupel](../tuples.md), zu wechseln („switch“).  Der folgende Code zeigt einen switch-Ausdruck für das Spiel *Stein, Schere, Papier* (Schnick, Schnack, Schnuck):
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -139,13 +139,13 @@ public static string RockPaperScissors(string first, string second)
         ("scissors", "paper") => "scissors cuts paper. Scissors wins.",
         (_, _) => "tie"
     };
-    ```
+```
 
-The messages indicate the winner. The discard case represents the three combinations for ties, or other text inputs.
+Die Meldungen zeigen den Gewinner an. Der Fall „Verwerfen“ („case discard“) stellt die drei Kombinationen für Unentschieden oder andere Texteingaben dar.
 
-### Positional patterns
+### <a name="positional-patterns"></a>Positionsmuster
 
-Some types include a `Deconstruct` method that deconstructs its properties into discrete variables. When a `Deconstruct` method is accessible, you can use **positional patterns** to inspect properties of the object and use those properties for a pattern.  Consider the following `Point` class that includes a `Deconstruct` method to create discrete variables for `X` and `Y`:
+Einige Typen umfassen eine `Deconstruct`-Methode, die ihre Eigenschaften in diskrete Variablen dekonstruiert. Wenn auf eine `Deconstruct`-Methode zugegriffen werden kann, können Sie **Positionsmuster** verwenden, um Eigenschaften des Objekts zu untersuchen, und diese Eigenschaften für ein Muster verwenden.  Beachten Sie die folgende `Point`-Klasse, die eine `Deconstruct`-Methode umfasst, um diskrete Variablen für `X` und `Y` zu erstellen:
 
 ```csharp
 public class Point

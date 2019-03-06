@@ -1,43 +1,47 @@
 ---
 title: '* -Operator – C#-Referenz'
 ms.custom: seodec18
-ms.date: 04/04/2018
+ms.date: 02/26/2019
 f1_keywords:
 - '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-ms.openlocfilehash: f4490c4632d9344eb879ea55c20787b838781d91
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: a5e120d26614f1e38cc2f2db02949552140b594e
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333732"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977343"
 ---
 # <a name="-operator-c-reference"></a>*-Operator (C#-Referenz)
 
-Der Multiplikationsoperator (`*`) berechnet das Produkt seiner Operanden. Alle numerischen Typen besitzen vordefinierte Multiplikationsoperatoren.
+Der Operator `*` wird in zwei Formen unterstützt: als unärer Zeigerdereferenzierungsoperator oder als binärer Multiplikationsoperator.
 
-`*` dient auch als Dereferenzierungsoperator, der das Lesen und Schreiben in einen Zeiger ermöglicht.
+## <a name="pointer-indirection-operator"></a>Zeigerdereferenzierungsoperator
 
-## <a name="remarks"></a>Hinweise
+Verwenden Sie den unären `*`-Operator, um die Variable zu erhalten, auf die ein Operand vom Typ „Zeiger“ verweist. Weitere Informationen finden Sie unter [Gewusst wie: Abrufen des Werts einer Zeigervariablen](../../programming-guide/unsafe-code-pointers/how-to-obtain-the-value-of-a-pointer-variable.md).
 
-Der `*`-Operator wird auch verwendet, um Zeigertypen zu deklarieren und Zeiger zu dereferenzieren. Dieser Operator kann nur in nicht sicheren Kontexten verwendet werden, gekennzeichnet durch die Verwendung des [unsafe](../keywords/unsafe.md)-Schlüsselworts und erfordert die Compileroption [/unsafe](../compiler-options/unsafe-compiler-option.md).  Die englischen Begriffe „dereference operator“ und „indirection operator“ bezeichnen beide den Dereferenzierungsoperator.
+Der Zeigerdereferenzierungsoperator `*` erfordert einen [unsicheren](../keywords/unsafe.md) Kontext.
 
-Benutzerdefinierte Typen können den binären `*`-Operator überladen (weitere Informationen finden Sie unter [Operator](../keywords/operator.md)). Wenn ein binärer Operator überladen ist, wird der zugehörige Zuweisungsoperator, sofern er vorhanden ist, auch implizit überladen.
+## <a name="multiplication-operator"></a>Multiplikationsoperator
 
-## <a name="example"></a>Beispiel
+Für numerische Typen berechnet der `*`-Operator das Produkt seiner Operanden:
 
-[!code-csharp-interactive[csRefOperators#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#50)]
+[!code-csharp-interactive[multiplication](~/samples/snippets/csharp/language-reference/operators/MultiplicationExamples.cs#Multiply)]
 
-## <a name="example"></a>Beispiel
+## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
-[!code-csharp[csRefOperators#51](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#51)]
+Benutzerdefinierte Typen können einen binären `*`-Operator [überladen](../keywords/operator.md). Wenn ein binärer `*`-Operator überladen ist, wird der [Multiplikationszuweisungsoperator](multiplication-assignment-operator.md) `*=`auch implizit überladen.
+
+## <a name="c-language-specification"></a>C#-Sprachspezifikation
+
+Weitere Informationen finden Sie unter [C#-Sprachspezifikation](../language-specification/index.md) in den Abschnitten [Zeigerdereferenzierung](~/_csharplang/spec/unsafe-code.md#pointer-indirection) und [Multiplikationsoperator](~/_csharplang/spec/expressions.md#multiplication-operator).
 
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Referenz](../index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
-- [Unsicherer Code und Zeiger](../../programming-guide/unsafe-code-pointers/index.md)
 - [C#-Operatoren](index.md)
+- [Zeigertypen](../../programming-guide/unsafe-code-pointers/pointer-types.md)
