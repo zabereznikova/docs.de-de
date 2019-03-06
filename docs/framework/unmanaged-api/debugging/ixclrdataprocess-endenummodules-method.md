@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 50ad55674360d7b880af3ddf701cf17005f30ce7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b7050e92af6fc58b45837840b2796a5deac955c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722737"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375336"
 ---
 # <a name="ixclrdataprocessendenummodules-method"></a>IXCLRDataProcess::EndEnumModules-Methode
 
@@ -35,8 +35,10 @@ HRESULT EndEnumModules(
 );
 ```
 
-### <a name="parameters"></a>Parameter
-`handle` [out] Ein Handle für das Auflisten der Module.
+## <a name="parameters"></a>Parameter
+
+`handle`\
+[out] Ein Handle für das Auflisten der Module.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -51,5 +53,5 @@ Die angegebene Methode ist Teil der `IXCLRDataProcess` Schnittstelle, und mit de
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [Debuggen](index.md)
+- [IXCLRDataProcess-Schnittstelle](ixclrdataprocess-interface.md)

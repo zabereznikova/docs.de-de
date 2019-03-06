@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 6e34347212a3dc9d8a64b48360af70366bab2083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595109"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378837"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Markieren von Routingereignissen als behandelt und Klassenbehandlung
 Handler für ein Routingereignis können das Ereignis innerhalb der Ereignisdaten als behandelt markieren. Das Behandeln des Ereignisses verkürzt die Route. Die Klassenbehandlung ist ein Programmierkonzept, das von Routingereignissen unterstützt wird. Ein Klassenhandler hat die Möglichkeit, ein bestimmtes Routingereignis auf Klassenebene mit einem Ereignishandler zu verarbeiten, der vor jedem Instanzenhandler auf jeder Instanz der Klasse aufgerufen wird.  
@@ -31,7 +31,7 @@ Handler für ein Routingereignis können das Ereignis innerhalb der Ereignisdate
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
- In diesem Thema werden unter [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md) eingeführte Konzepte näher erläutert.  
+ In diesem Thema werden unter [Übersicht über Routingereignisse](routed-events-overview.md) eingeführte Konzepte näher erläutert.  
   
 <a name="When_to_Mark_Events_as_Handled"></a>   
 ## <a name="when-to-mark-events-as-handled"></a>Markieren von Ereignissen als behandelt  
@@ -47,7 +47,7 @@ Handler für ein Routingereignis können das Ereignis innerhalb der Ereignisdate
   
  Die Verbindung zwischen Tunneling- und Bubbling-Rountingereignissen wird mithilfe der internen Implementierung erreicht, die angibt, wie jede gegebene [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Klasse die eigenen deklarierten Routingereignisse auslöst. Dies gilt für alle gekoppelten Eingaberountingereignisse. Es besteht keine Verbindung zwischen einem Tunneling- und einem Bubbling-Routnigereignis, die dasselbe Benennungsschema nutzen, wenn diese Implementierung auf Klassenebene nicht vorhanden: Ohne diese Implementierung wären beide Routingereignisse zwei vollständig getrennt und würden weder in der Sequenz ausgelöst werden, noch dieselben Ereignisdaten haben.  
   
- Weitere Informationen dazu, wie Sie Tunneling-/Bubbling-Eingabeereignispaare in einer benutzerdefinierten Klasse implementieren, finden Sie unter [Erstellen eines benutzerdefinierten Routingereignisses](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md).  
+ Weitere Informationen dazu, wie Sie Tunneling-/Bubbling-Eingabeereignispaare in einer benutzerdefinierten Klasse implementieren, finden Sie unter [Erstellen eines benutzerdefinierten Routingereignisses](how-to-create-a-custom-routed-event.md).  
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Klassenhandler und Instanzhandler  
@@ -100,6 +100,6 @@ Handler für ein Routingereignis können das Ereignis innerhalb der Ereignisdate
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.EventManager>
-- [Vorschauereignisse](../../../../docs/framework/wpf/advanced/preview-events.md)
-- [Erstellen eines benutzerdefinierten Routingereignisses](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)
-- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [Vorschauereignisse](preview-events.md)
+- [Erstellen eines benutzerdefinierten Routingereignisses](how-to-create-a-custom-routed-event.md)
+- [Übersicht über Routingereignisse](routed-events-overview.md)

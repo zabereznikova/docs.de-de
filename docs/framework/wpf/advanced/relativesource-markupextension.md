@@ -7,15 +7,15 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 43201be232a037b14d783ae61546ef0030f486ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d96a00afc08f2c5593dad5a3a47ab46045ff6b0f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559384"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365111"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource-Markuperweiterung
-Gibt die Eigenschaften einer <xref:System.Windows.Data.RelativeSource> -Bindungsquelle an verwendet werden, eine [-Markuperweiterung](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), oder beim Festlegen der <xref:System.Windows.Data.Binding.RelativeSource%2A> Eigenschaft eine <xref:System.Windows.Data.Binding> Element in XAML eingerichteten.  
+Gibt die Eigenschaften einer <xref:System.Windows.Data.RelativeSource> -Bindungsquelle an verwendet werden, eine [-Markuperweiterung](binding-markup-extension.md), oder beim Festlegen der <xref:System.Windows.Data.Binding.RelativeSource%2A> Eigenschaft eine <xref:System.Windows.Data.Binding> Element in XAML eingerichteten.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
   
@@ -61,11 +61,11 @@ Gibt die Eigenschaften einer <xref:System.Windows.Data.RelativeSource> -Bindungs
 |`intLevel`|Optional für `FindAncestor`-Modus. Eine Vorgängerebene (ausgewertet bezüglich der übergeordneten Richtung in der logischen Struktur).|  
   
 ## <a name="remarks"></a>Hinweise  
- `{RelativeSource TemplatedParent}` -Bindungsverwendungen sind eine wichtige Technik, die ein größeres Konzept der Trennung von Benutzeroberfläche und Logik eines Steuerelements behandelt. Dies ermöglicht die Bindung aus der Vorlagendefinition mit dem vorlagenbasierten übergeordneten Element (der Laufzeitobjektinstanz, in der die Vorlage angewendet wird). Für diesen Fall die [TemplateBinding-Markuperweiterung](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) ist tatsächlich eine Kurznotation für den folgenden Bindungsausdruck: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` oder `{RelativeSource TemplatedParent}` Verwendungen nur relevant, in das XAML, die eine Vorlage definiert sind. Weitere Informationen finden Sie unter [TemplateBinding-Markuperweiterung](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
+ `{RelativeSource TemplatedParent}` -Bindungsverwendungen sind eine wichtige Technik, die ein größeres Konzept der Trennung von Benutzeroberfläche und Logik eines Steuerelements behandelt. Dies ermöglicht die Bindung aus der Vorlagendefinition mit dem vorlagenbasierten übergeordneten Element (der Laufzeitobjektinstanz, in der die Vorlage angewendet wird). Für diesen Fall die [TemplateBinding-Markuperweiterung](templatebinding-markup-extension.md) ist tatsächlich eine Kurznotation für den folgenden Bindungsausdruck: `{Binding RelativeSource={RelativeSource TemplatedParent}}`. `TemplateBinding` oder `{RelativeSource TemplatedParent}` Verwendungen nur relevant, in das XAML, die eine Vorlage definiert sind. Weitere Informationen finden Sie unter [TemplateBinding-Markuperweiterung](templatebinding-markup-extension.md)  
   
  `{RelativeSource FindAncestor}` wird hauptsächlich in Steuerelementvorlagen oder vorhersagbaren unabhängigen benutzeroberflächenzusammensetzungen, für Fälle verwendet, wo ein Steuerelement immer in eine visuelle Struktur eines bestimmten vorgängertyps erwartet wird. Beispielsweise können Elemente eines Elementsteuerelements `FindAncestor`-Verwendungen zum Binden an Eigenschaften des übergeordneten Vorgängers des Elementsteuerelements verwenden. Oder Elemente, die Teil der Steuerelementzusammensetzung in einer Vorlage sind, können `FindAncestor`-Bindungen mit übergeordneten Elemente in derselben Kompositionsstruktur verwenden.  
   
- In der Objektelementsyntax für den `FindAncestor`-Modus, wie in den XAML-Syntaxabschnitten dargestellt, wird die zweite Objektelementsyntax speziell für den `FindAncestor`-Modus verwendet. Der `FindAncestor`-Modus erfordert einen <xref:System.Windows.Data.RelativeSource.AncestorType%2A>-Wert. Sie müssen festlegen, <xref:System.Windows.Data.RelativeSource.AncestorType%2A> als ein Attribut mit einem [X: Type-Markuperweiterung](../../../../docs/framework/xaml-services/x-type-markup-extension.md) Verweis auf den Typ des übergeordneten Elements, suchen Sie nach. Der <xref:System.Windows.Data.RelativeSource.AncestorType%2A>-Wert wird verwendet, wenn die Bindungsanforderung zur Laufzeit verarbeitet wird.  
+ In der Objektelementsyntax für den `FindAncestor`-Modus, wie in den XAML-Syntaxabschnitten dargestellt, wird die zweite Objektelementsyntax speziell für den `FindAncestor`-Modus verwendet. Der `FindAncestor`-Modus erfordert einen <xref:System.Windows.Data.RelativeSource.AncestorType%2A>-Wert. Sie müssen festlegen, <xref:System.Windows.Data.RelativeSource.AncestorType%2A> als ein Attribut mit einem [X: Type-Markuperweiterung](../../xaml-services/x-type-markup-extension.md) Verweis auf den Typ des übergeordneten Elements, suchen Sie nach. Der <xref:System.Windows.Data.RelativeSource.AncestorType%2A>-Wert wird verwendet, wenn die Bindungsanforderung zur Laufzeit verarbeitet wird.  
   
  Im `FindAncestor`-Modus kann die optionale Eigenschaft <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> dazu beitragen, die Vorgängersuche in den Fällen eindeutig zu machen, in denen eventuell mehr als ein Vorgänger dieses Typs in der Elementstruktur vorhanden ist.  
   
@@ -99,17 +99,17 @@ Gibt die Eigenschaften einer <xref:System.Windows.Data.RelativeSource> -Bindungs
     </ListBox.ItemTemplate>  
 ```  
   
- Finden Sie mit der Datenbindung ein Konzept ist hier nicht erläutert [Übersicht über die Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Finden Sie mit der Datenbindung ein Konzept ist hier nicht erläutert [Übersicht über die Datenbindung](../data/data-binding-overview.md).  
   
  In der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML-prozessorimplementierung wird die Handhabung dieser Markuperweiterung wird definiert, indem die <xref:System.Windows.Data.RelativeSource> Klasse.  
   
- `RelativeSource` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markuperweiterungen in XAML verwenden die `{` und `}` Zeichen in der Attributsyntax, dies ist die Konvention mit dem ein XAML-Prozessor erkannt wird, dass das Attribut von eine Markuperweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `RelativeSource` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markuperweiterungen in XAML verwenden die `{` und `}` Zeichen in der Attributsyntax, dies ist die Konvention mit dem ein XAML-Prozessor erkannt wird, dass das Attribut von eine Markuperweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Data.Binding>
-- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Übersicht über Bindungsdeklarationen](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
-- [x:Type-Markuperweiterung](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+- [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)
+- [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
+- [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md)
+- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
+- [Übersicht über Bindungsdeklarationen](../data/binding-declarations-overview.md)
+- [x:Type-Markuperweiterung](../../xaml-services/x-type-markup-extension.md)

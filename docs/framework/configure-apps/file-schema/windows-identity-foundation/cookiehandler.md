@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
 ms.openlocfilehash: dc0613bb727f9ed061c3b5d494bdc279515b56e9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285852"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369014"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
 Konfiguriert die <xref:System.IdentityModel.Services.CookieHandler> , die die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) zum Lesen und Schreiben von Cookies verwendet.  
@@ -45,7 +45,7 @@ Konfiguriert die <xref:System.IdentityModel.Services.CookieHandler> , die die <x
 |---------------|-----------------|  
 |Name|Gibt den Basisnamen für Cookies geschrieben. Der Standardwert ist "FedAuth".|  
 |path|Gibt den Pfadwert für alle Cookies geschrieben. Der Standardwert ist "HttpRuntime.AppDomainAppVirtualPath".|  
-|mode|Eines der <xref:System.IdentityModel.Services.CookieHandlerMode> Werte, der die Art der von SAM verwendete cookiehandler angibt. Die folgenden Werte können verwendet werden:<br /><br /> -"Default", "Chunked" identisch.<br />-"Aufgeteilte" – wird eine Instanz der dem <xref:System.IdentityModel.Services.ChunkedCookieHandler> Klasse. Dieses Cookie-Handler wird sichergestellt, dass es sich bei einzelner Cookies eine festgelegte maximale Größe nicht überschreiten. Dabei wird "chunking" möglicherweise eine logische Cookie in eine Anzahl von Cookies auf das Netzwerk.<br />-"Custom" – wird eine Instanz einer benutzerdefinierten Klasse, die von abgeleiteten <xref:System.IdentityModel.Services.CookieHandler>. Die abgeleitete Klasse verweist auf die `<customCookieHandler>` untergeordnetes Element.<br /><br /> Der Standardwert ist "Default".|  
+|Modus|Eines der <xref:System.IdentityModel.Services.CookieHandlerMode> Werte, der die Art der von SAM verwendete cookiehandler angibt. Die folgenden Werte können verwendet werden:<br /><br /> -"Default", "Chunked" identisch.<br />-"Aufgeteilte" – wird eine Instanz der dem <xref:System.IdentityModel.Services.ChunkedCookieHandler> Klasse. Dieses Cookie-Handler wird sichergestellt, dass es sich bei einzelner Cookies eine festgelegte maximale Größe nicht überschreiten. Dabei wird "chunking" möglicherweise eine logische Cookie in eine Anzahl von Cookies auf das Netzwerk.<br />-"Custom" – wird eine Instanz einer benutzerdefinierten Klasse, die von abgeleiteten <xref:System.IdentityModel.Services.CookieHandler>. Die abgeleitete Klasse verweist auf die `<customCookieHandler>` untergeordnetes Element.<br /><br /> Der Standardwert ist "Default".|  
 |persistentSessionLifetime|Gibt die Lebensdauer permanenter Sitzungen. Bei NULL werden immer flüchtige Sitzungen verwendet. Der Standardwert ist "0:0:0", die eine vorübergehende Sitzung angibt. Der maximale Wert ist "365:0:0", die eine Sitzung von 365 Tagen angibt. Der Wert muss angegeben werden, entsprechend die folgende Einschränkung: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, wobei der äußeren linken Wert gibt die Tage an, der Mittelwert (falls vorhanden) gibt die Stunden und der äußeren rechten Wert (falls vorhanden) gibt die Minuten.|  
 |requireSsl|Gibt an, ob die Kennzeichen "Secure" für jede geschriebene Cookies ausgegeben werden. Wenn dieser Wert festgelegt ist, werden die Anmeldung Sitzungscookies über HTTPS nur verfügbar sein. Der Standardwert ist "true".|  
 |hideFromScript|Steuert, ob das Flag "HttpOnly" für jede geschriebene Cookies ausgegeben wird. Bestimmte Webbrowser berücksichtigt dieses Flag werden, da der Client-seitige Skript Zugriff auf den Cookiewert an. Der Standardwert ist "true".|  

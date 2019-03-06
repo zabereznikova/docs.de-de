@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 1060e755ff5da3a3ef7f40417054cf0e23241652
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ec147d4ec7b59a7ac8e01680266cbd24b644985
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835264"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352412"
 ---
 # <a name="wpf-walkthroughs"></a>Exemplarische Vorgehensweisen für WPF
 Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szenarien. Dadurch sind sie ein guter Einstieg in das Produkt oder einen bestimmten Funktionsbereich.  
@@ -31,20 +31,20 @@ Exemplarische Vorgehensweisen bieten schrittweise Anleitungen für häufige Szen
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Veranschaulicht das Erstellen einer WPF-Anwendung mit vielen der allgemeinen Features von WPF, einschließlich Steuerelemente, Layout und Datenbindung.|  
-|[Erstellen einer Schaltfläche mit XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|Erstellen Sie eine animierte Schaltfläche veranschaulicht.|  
-|[Erstellen einer Schaltfläche mit Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Veranschaulicht den Prozess zum Erstellen einer benutzerdefinierten Schaltfläche mithilfe von Microsoft Expression Blend.|  
-|[Exemplarische Vorgehensweise: Anzeigen von Daten aus einer SQL Server-Datenbank in einem DataGrid-Steuerelement](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Veranschaulicht das Abrufen von Daten aus einer SQL Server-Datenbank und die Daten angezeigt werden, in einem <xref:System.Windows.Controls.DataGrid> Steuerelement.|  
+|[Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](walkthrough-my-first-wpf-desktop-application.md)|Veranschaulicht das Erstellen einer WPF-Anwendung mit vielen der allgemeinen Features von WPF, einschließlich Steuerelemente, Layout und Datenbindung.|  
+|[Erstellen einer Schaltfläche mit XAML](../controls/walkthrough-create-a-button-by-using-xaml.md)|Erstellen Sie eine animierte Schaltfläche veranschaulicht.|  
+|[Erstellen einer Schaltfläche mit Microsoft Expression Blend](../controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Veranschaulicht den Prozess zum Erstellen einer benutzerdefinierten Schaltfläche mithilfe von Microsoft Expression Blend.|  
+|[Exemplarische Vorgehensweise: Anzeigen von Daten aus einer SQL Server-Datenbank in einem DataGrid-Steuerelement](../controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Veranschaulicht das Abrufen von Daten aus einer SQL Server-Datenbank und die Daten angezeigt werden, in einem <xref:System.Windows.Controls.DataGrid> Steuerelement.|  
   
 ## <a name="migration-and-interoperability-in-wpf"></a>Migration und Interoperabilität in WPF  
   
 |Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Veranschaulicht das Hosten eines Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> -Steuerelement in einer WPF-Anwendung.|  
-|[Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Veranschaulicht das Hosten eines zusammengesetzten Windows Forms zur Dateneingabe-Steuerelements in einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.|  
-|[Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Veranschaulicht das Hosten eines zusammengesetzten WPF-Dateneingabe-Steuerelements in Windows Forms-Anwendungen.|  
-|[Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Veranschaulicht, wie WPF-Layout-Funktionen zu verwenden, um Windows Forms-Steuerelementen in einer hybridanwendung anzuordnen.|  
-|[Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Veranschaulicht, wie die Datenbindung in hybridanwendungen verwenden, die sowohl Windows Forms und WPF-Steuerelemente enthalten.|  
+|[Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Veranschaulicht das Hosten eines Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> -Steuerelement in einer WPF-Anwendung.|  
+|[Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Veranschaulicht das Hosten eines zusammengesetzten Windows Forms zur Dateneingabe-Steuerelements in einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.|  
+|[Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Veranschaulicht das Hosten eines zusammengesetzten WPF-Dateneingabe-Steuerelements in Windows Forms-Anwendungen.|  
+|[Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF](../advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Veranschaulicht, wie WPF-Layout-Funktionen zu verwenden, um Windows Forms-Steuerelementen in einer hybridanwendung anzuordnen.|  
+|[Exemplarische Vorgehensweise: Datenbindung in Hybridanwendungen](../advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Veranschaulicht, wie die Datenbindung in hybridanwendungen verwenden, die sowohl Windows Forms und WPF-Steuerelemente enthalten.|  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   

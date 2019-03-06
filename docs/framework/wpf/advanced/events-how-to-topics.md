@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
-ms.openlocfilehash: fea698dd137a0e5639e4777b85284beaf83ace1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543526"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370965"
 ---
 # <a name="events-how-to-topics"></a>Gewusst-wie-Themen zu Ereignissen
-Die Themen in diesem Abschnitt wird beschrieben, wie Ereignisse in WPF verwendet.  
+Die Themen in diesem Abschnitt wird beschrieben, wie Sie Ereignisse in WPF verwenden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Hinzufügen eines Ereignishandlers mithilfe von Code](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [Behandeln eines Routingereignisses](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [Erstellen eines benutzerdefinierten Routingereignisses](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [Suchen des Quellelements in einem Ereignishandler](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [Hinzufügen einer Klassenbehandlung für ein Routingereignis](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+ [Hinzufügen eines Ereignishandlers mithilfe von Code](how-to-add-an-event-handler-using-code.md)  
+ [Behandeln eines Routingereignisses](how-to-handle-a-routed-event.md)  
+ [Erstellen eines benutzerdefinierten Routingereignisses](how-to-create-a-custom-routed-event.md)  
+ [Suchen des Quellelements in einem Ereignishandler](how-to-find-the-source-element-in-an-event-handler.md)  
+ [Hinzufügen einer Klassenbehandlung für ein Routingereignis](how-to-add-class-handling-for-a-routed-event.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.RoutedEvent>  

@@ -7,35 +7,35 @@ helpviewer_keywords:
 - graphics [WPF], brushes
 - brushes [WPF]
 ms.assetid: 43e7f798-9558-4498-b5b6-4a4c6baf956b
-ms.openlocfilehash: b62830da6f48e07c60df731a8ba29998d6145217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bf49449cd51753e7dc59c169fe51f13dcc67a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557536"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373256"
 ---
 # <a name="brushes-how-to-topics"></a>Gewusst-wie-Themen zu Pinseln
-Die folgenden Themen zeigen, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel, um Inhalte auf dem Bildschirm gezeichnet.  
+In den folgenden Themen veranschaulichen, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel um Inhalt auf dem Bildschirm gezeichnet werden soll.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Animieren der Farbe oder der Durchlässigkeit von SolidColorBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [Animieren der Position oder Farbe eines Farbverlaufunterbrechungspunkts](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [Erstellen einer Reflektion](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
- [Erstellen von unterschiedlichen Kachelmustern mit einem TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [Definieren eines Stifts](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
- [Zeichnen eines Bereichs mit einer Zeichnung](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
- [Zeichnen eines Bereichs mit einem Bild](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
- [Zeichnen eines Bereichs mit einem linearen Farbverlauf](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
- [Zeichnen eines Bereichs mit einem radialen Farbverlauf](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
- [Zeichnen eines Bereichs mit einer Volltonfarbe](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
- [Zeichnen eines Bereichs mit einem Systempinsel](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [Zeichnen eines Bereichs mit einem Video](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
- [Zeichnen eines Bereichs mit einem visuellen Element](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
- [Beibehalten des Seitenverhältnisses bei einem als Hintergrund verwendeten Bild](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [Festlegen von horizontaler und vertikaler Ausrichtung bei einem TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [Festlegen der Kachelgröße für ein TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
- [Transformieren eines Pinsels](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
- [Verwenden von Systemfarben in einem Farbverlauf](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
+ [Animieren der Farbe oder der Durchlässigkeit von SolidColorBrush](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [Animieren der Position oder Farbe eines Farbverlaufunterbrechungspunkts](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [Erstellen einer Reflektion](how-to-create-a-reflection.md)  
+ [Erstellen von unterschiedlichen Kachelmustern mit einem TileBrush](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [Definieren eines Stifts](how-to-define-a-pen.md)  
+ [Zeichnen eines Bereichs mit einer Zeichnung](how-to-paint-an-area-with-a-drawing.md)  
+ [Zeichnen eines Bereichs mit einem Bild](how-to-paint-an-area-with-an-image.md)  
+ [Zeichnen eines Bereichs mit einem linearen Farbverlauf](how-to-paint-an-area-with-a-linear-gradient.md)  
+ [Zeichnen eines Bereichs mit einem radialen Farbverlauf](how-to-paint-an-area-with-a-radial-gradient.md)  
+ [Zeichnen eines Bereichs mit einer Volltonfarbe](how-to-paint-an-area-with-a-solid-color.md)  
+ [Zeichnen eines Bereichs mit einem Systempinsel](how-to-paint-an-area-with-a-system-brush.md)  
+ [Zeichnen eines Bereichs mit einem Video](how-to-paint-an-area-with-a-video.md)  
+ [Zeichnen eines Bereichs mit einem visuellen Element](how-to-paint-an-area-with-a-visual.md)  
+ [Beibehalten des Seitenverhältnisses bei einem als Hintergrund verwendeten Bild](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [Festlegen von horizontaler und vertikaler Ausrichtung bei einem TileBrush](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [Festlegen der Kachelgröße für ein TileBrush](how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [Transformieren eines Pinsels](how-to-transform-a-brush.md)  
+ [Verwenden von Systemfarben in einem Farbverlauf](how-to-use-system-colors-in-a-gradient.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Media.Brush>  
@@ -51,6 +51,6 @@ Die folgenden Themen zeigen, wie [!INCLUDE[TLA#tla_winclient](../../../../includ
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Grafiken und Multimedia](index.md)  
   
- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Übersicht über das WPF-Grafikrendering](wpf-graphics-rendering-overview.md)

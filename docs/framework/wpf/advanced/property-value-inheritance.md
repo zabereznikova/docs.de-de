@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: e6b16bc3fc482e0f640f8b2d083392e6f94de618
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520582"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359878"
 ---
 # <a name="property-value-inheritance"></a>Vererbung von Eigenschaftswerten
 Die Vererbung von Eigenschaftswerten ist eine Funktion des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftssystems. Die Vererbung von Eigenschaftswerten ermöglicht untergeordneten Elementen in einer Elementstruktur, den Wert einer bestimmten Eigenschaft von übergeordneten Elementen zu übernehmen. Dabei erben sie den Wert, der im nächsten übergeordneten Element festgelegt wurde. Das übergeordnete Element hat seinen Wert möglicherweise ebenfalls durch die Vererbung von Eigenschaftswerten erhalten, damit das System auf den Seitenstamm zurückgeführt werden kann. Die Vererbung von Eigenschaftswerten ist nicht das Standardverhalten eines Eigenschaftssystems. Eine Eigenschaft muss mit einer bestimmten Metadateneinstellung eingerichtet werden, damit diese die Vererbung von Eigenschaftswerten für untergeordnete Elemente veranlassen kann.  
@@ -30,7 +30,7 @@ Die Vererbung von Eigenschaftswerten ist eine Funktion des [!INCLUDE[TLA#tla_win
 ## <a name="making-a-custom-property-inheritable"></a>Erstellen einer benutzerdefinierten, vererbbaren Eigenschaft  
  Ändern Sie die Metadaten einer benutzerdefinierten Eigenschaft, können Sie auch Ihre eigenen benutzerdefinierten Eigenschaften vererbbar machen. Beachten Sie jedoch, dass das Festlegen einer Eigenschaft als vererbbar Überlegungen zur Leistung notwendig macht. In Fällen, in denen diese Eigenschaft keinen festgelegten lokalen Wert oder einen Wert hat, der durch die Stile, Vorlagen oder Datenbindung erreicht wird, stellt eine vererbbare Eigenschaft ihre zugewiesenen Eigenschaftswerte allen untergeordneten Elemente in der logischen Struktur zur Verfügung.  
   
- Erstellen Sie eine benutzerdefinierte, angefügte Eigenschaft wie unter [Registrieren einer angefügten Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md) beschrieben, um eine Eigenschaft an der Vererbung von Eigenschaftswerten zu beteiligen. Registrieren Sie die Eigenschaft mit Metadaten (<xref:System.Windows.FrameworkPropertyMetadata>), und geben Sie die Option "Vererbt" in den Optionen dieser Metadaten. Stellen Sie außerdem sicher, dass die Eigenschaft einen festgelegten Standardwert hat, da dieser Wert nun erbt. Obwohl Sie die Eigenschaft als angehängt registriert haben, empfiehlt es sich auch eine Eigenschaft „Wrapper“ für den Get/Set-Zugriff auf den Besitzertyp zu erstellen, genauso wie Sie es bei einer „nicht angefügten“ Abhängigkeitseigenschaft machen würden. Nach auf diese Weise kann die vererbbare Eigenschaft entweder mithilfe des direkten eigenschaftswrappers auf dem Besitzertyp oder abgeleiteten Typen festgelegt werden, oder es kann festgelegt werden, mithilfe der angefügten Eigenschaftssyntax für jedes beliebige <xref:System.Windows.DependencyObject>.  
+ Erstellen Sie eine benutzerdefinierte, angefügte Eigenschaft wie unter [Registrieren einer angefügten Eigenschaft](how-to-register-an-attached-property.md) beschrieben, um eine Eigenschaft an der Vererbung von Eigenschaftswerten zu beteiligen. Registrieren Sie die Eigenschaft mit Metadaten (<xref:System.Windows.FrameworkPropertyMetadata>), und geben Sie die Option "Vererbt" in den Optionen dieser Metadaten. Stellen Sie außerdem sicher, dass die Eigenschaft einen festgelegten Standardwert hat, da dieser Wert nun erbt. Obwohl Sie die Eigenschaft als angehängt registriert haben, empfiehlt es sich auch eine Eigenschaft „Wrapper“ für den Get/Set-Zugriff auf den Besitzertyp zu erstellen, genauso wie Sie es bei einer „nicht angefügten“ Abhängigkeitseigenschaft machen würden. Nach auf diese Weise kann die vererbbare Eigenschaft entweder mithilfe des direkten eigenschaftswrappers auf dem Besitzertyp oder abgeleiteten Typen festgelegt werden, oder es kann festgelegt werden, mithilfe der angefügten Eigenschaftssyntax für jedes beliebige <xref:System.Windows.DependencyObject>.  
   
  Angefügte Eigenschaften sind konzeptionell identisch mit globalen Eigenschaften. sehen Sie sich für den Wert für jedes beliebige <xref:System.Windows.DependencyObject> und ein gültiges Ergebnis zu erhalten. Das typische Szenario für angefügte Eigenschaften ist, um Eigenschaftswerte für untergeordnete Elemente festzulegen, und dieses Szenario ist effizienter, wenn die betreffende Eigenschaft eine angefügte Eigenschaft ist, der immer implizit als angefügte Eigenschaft für jedes Element vorhanden ist (<xref:System.Windows.DependencyObject>) in der Struktur.  
   
@@ -42,6 +42,6 @@ Die Vererbung von Eigenschaftswerten ist eine Funktion des [!INCLUDE[TLA#tla_win
  Vererbung erfolgt durch die Traversierung einer Elementstruktur. Diese Struktur ist häufig parallel zur logischen Struktur. Jedes Mal, wenn Sie jedoch einschließen ein WPF-Kernebenen-Objekts im Markup, das eine Elementstruktur z. B. definiert eine <xref:System.Windows.Media.Brush>, Sie haben eine nicht aufeinanderfolgende logische Struktur erstellt. Eine echte logische Struktur ist konzeptionell nicht über die <xref:System.Windows.Media.Brush>, da die logische Struktur ein Konzept der WPF-Frameworkebene ist. Sehen Sie dies in den Ergebnissen berücksichtigt werden, wenn das mithilfe der Methoden der <xref:System.Windows.LogicalTreeHelper>. Allerdings die Vererbung von Eigenschaftswerten kann diese Lücke in der logischen Struktur und vererbte Werte, können weiterhin übergeben werden, solange die vererbbare Eigenschaft als angefügte Eigenschaft und keine absichtliche Vererbung blockierende Grenze registriert wurde (z. B. eine <xref:System.Windows.Controls.Frame>) festgestellt wird.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Übersicht über angefügte Eigenschaften](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [Priorität von Abhängigkeitseigenschaftswerten](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+- [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md)
+- [Übersicht über angefügte Eigenschaften](attached-properties-overview.md)
+- [Priorität von Abhängigkeitseigenschaftswerten](dependency-property-value-precedence.md)

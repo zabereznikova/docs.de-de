@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 09f3a88d-b132-4505-a8bb-55cbfc6bb55a
-ms.openlocfilehash: df9628fab80faf6431290bbc4176a6e0d148dc8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f0d53d1ec37d200c20ed1b0053b8992cf89c4e0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540461"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370942"
 ---
 # <a name="base-elements-how-to-topics"></a>Gewusst-wie-Themen zu Basiselementen
-Die Themen in diesem Abschnitt wird beschrieben, wie die vier WPF-Basiselemente verwenden: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, und <xref:System.Windows.FrameworkContentElement>.  
+Die Themen in diesem Abschnitt wird beschrieben, wie die vier-WPF-Basiselementen: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, und <xref:System.Windows.FrameworkContentElement>.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Formatieren von UIElement als transparent oder halbtransparent](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
- [Animieren der Größe von FrameworkElement](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
- [Bestimmen, ob ein Freezable-Objekt fixiert ist](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
- [Behandeln eines geladenen Ereignisses](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
- [Festlegen von Rändern von Elementen und Steuerelementen](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
- [Erstellen eines schreibgeschützten Freezable-Objekts](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
- [Erstellen einer überschreibbaren Kopie eines schreibgeschützten Freezable-Objekts](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
- [Horizontales oder vertikales Kippen eines UIElement](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
- [Verwenden eines ThicknessConverter-Objekts](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
- [Behandeln des ContextMenuOpening-Ereignisses](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
+ [Formatieren von UIElement als transparent oder halbtransparent](how-to-make-a-uielement-transparent-or-semi-transparent.md)  
+ [Animieren der Größe von FrameworkElement](how-to-animate-the-size-of-a-frameworkelement.md)  
+ [Bestimmen, ob ein Freezable-Objekt fixiert ist](how-to-determine-whether-a-freezable-is-frozen.md)  
+ [Behandeln eines geladenen Ereignisses](how-to-handle-a-loaded-event.md)  
+ [Festlegen von Rändern von Elementen und Steuerelementen](how-to-set-margins-of-elements-and-controls.md)  
+ [Erstellen eines schreibgeschützten Freezable-Objekts](how-to-make-a-freezable-read-only.md)  
+ [Erstellen einer überschreibbaren Kopie eines schreibgeschützten Freezable-Objekts](how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
+ [Horizontales oder vertikales Kippen eines UIElement](how-to-flip-a-uielement-horizontally-or-vertically.md)  
+ [Verwenden eines ThicknessConverter-Objekts](how-to-use-a-thicknessconverter-object.md)  
+ [Behandeln des ContextMenuOpening-Ereignisses](how-to-handle-the-contextmenuopening-event.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.UIElement>  
@@ -38,4 +38,4 @@ Die Themen in diesem Abschnitt wird beschrieben, wie die vier WPF-Basiselemente 
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Basiselemente](../../../../docs/framework/wpf/advanced/base-elements.md)
+ [Basiselemente](base-elements.md)

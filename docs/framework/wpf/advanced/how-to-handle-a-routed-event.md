@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], handling
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-ms.openlocfilehash: 40cacbf6b36cf474f5267870531e5f4ac048dc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42f5f247e775fbf0bd323fc693a74d6149c87bb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561334"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368193"
 ---
 # <a name="how-to-handle-a-routed-event"></a>Vorgehensweise: Behandeln eines Routingereignisses
 Dieses Beispiel zeigt, wie Bubbling-Ereignisse funktionieren, und wie Sie einen Handler schreiben, der die Routingereignisdaten verarbeiten kann.  
@@ -27,16 +27,16 @@ Dieses Beispiel zeigt, wie Bubbling-Ereignisse funktionieren, und wie Sie einen 
   
  Beachten Sie, dass auf dem übergeordneten Element <xref:System.Windows.Controls.StackPanel> -Element, das <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignisnamen angegeben, wie das Attribut teilweise durch benennen qualifiziert wird die <xref:System.Windows.Controls.Button> Klasse. Die <xref:System.Windows.Controls.Button> -Klasse ist eine <xref:System.Windows.Controls.Primitives.ButtonBase> abgeleitete Klasse, die die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis in der Elementauflistung. Diese partiellen Qualifikation-Technik für das Anhängen eines ereignishandlers ist erforderlich, wenn das Ereignis behandelt wird, das nicht, in die Elemente vorhanden ist des Elements, an der Routingereignishandler angefügt, auflisten.  
   
- [!code-xaml[RoutedEventHandle#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
+ [!code-xaml[RoutedEventHandle#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml#xaml)]  
   
  Das folgende Beispiel verarbeitet die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  Im Beispiel wird gemeldet, welches Element das Ereignis behandelt und welches Element das Ereignis auslöst. Der Ereignishandler wird ausgeführt, wenn der Benutzer auf eine Schaltfläche klickt.  
   
- [!code-csharp[RoutedEventHandle#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
- [!code-vb[RoutedEventHandle#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
+ [!code-csharp[RoutedEventHandle#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventHandle/CSharp/default.xaml.cs#handler)]
+ [!code-vb[RoutedEventHandle#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.RoutedEvent>
-- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)
-- [Ausführliche Erläuterung der XAML-Syntax](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [Übersicht über die Eingabe](input-overview.md)
+- [Übersicht über Routingereignisse](routed-events-overview.md)
+- [Themen zu Vorgehensweisen](events-how-to-topics.md)
+- [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md)

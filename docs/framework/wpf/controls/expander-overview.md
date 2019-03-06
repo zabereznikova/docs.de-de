@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 63fa061211e846a6b4d9c88cdf3c7c24e4aac3ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693755"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369928"
 ---
 # <a name="expander-overview"></a>Übersicht über Expander-Steuerelemente
 Ein <xref:System.Windows.Controls.Expander> -Steuerelement bietet eine Möglichkeit zum Bereitstellen von Inhalt in einem erweiterbaren Bereich, der einem Fenster ähnelt und einen Header enthält.  
@@ -23,7 +23,7 @@ Ein <xref:System.Windows.Controls.Expander> -Steuerelement bietet eine Möglichk
 ## <a name="creating-a-simple-expander"></a>Erstellen einer einfachen Expanders  
  Das folgende Beispiel zeigt, wie zum Erstellen eines einfachen <xref:System.Windows.Controls.Expander> Steuerelement. In diesem Beispiel wird ein <xref:System.Windows.Controls.Expander> sieht in der vorherige Abbildung.  
   
- [!code-xaml[ExpanderExample#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
+ [!code-xaml[ExpanderExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderExample/CSharp/Page1.xaml#2)]  
   
  Die <xref:System.Windows.Controls.ContentControl.Content%2A> und <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> von einem <xref:System.Windows.Controls.Expander> können auch komplexe Inhalte aufweisen, z. B. <xref:System.Windows.Controls.RadioButton> und <xref:System.Windows.Controls.Image> Objekte.  
   
@@ -45,15 +45,15 @@ Ein <xref:System.Windows.Controls.Expander> -Steuerelement bietet eine Möglichk
   
  **Expander-Steuerelement in einem ScrollViewer**  
   
- ![Expander mit einer ScrollBar](../../../../docs/framework/wpf/controls/media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Expander mit einer ScrollBar](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
   
  Beim Platzieren ein <xref:System.Windows.Controls.Expander> steuern, eine <xref:System.Windows.Controls.ScrollViewer>, legen die <xref:System.Windows.Controls.ScrollViewer> -Dimensionseigenschaft, der die Richtung, in denen entspricht der <xref:System.Windows.Controls.Expander> Inhalt wird geöffnet, auf die Größe des der <xref:System.Windows.Controls.Expander> Inhaltsbereich. Wenn Sie festlegen, z. B. die <xref:System.Windows.Controls.Expander.ExpandDirection%2A> Eigenschaft der <xref:System.Windows.Controls.Expander> zu <xref:System.Windows.Controls.ExpandDirection.Down> (der Inhaltsbereich wird nach unten), Festlegen der <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaft der <xref:System.Windows.Controls.ScrollViewer> Steuerelement, die für den Inhaltsbereich erforderliche Höhe. Wenn Sie die Höhendimension stattdessen für den Inhalt selbst festlegen <xref:System.Windows.Controls.ScrollViewer> erkennt diese Einstellung nicht und ist daher kein bildlauffähiger Inhalt bereitgestellt.  
   
  Das folgende Beispiel zeigt, wie Sie erstellen eine <xref:System.Windows.Controls.Expander> Steuerelement mit komplexen Inhalt enthält, die eine <xref:System.Windows.Controls.ScrollViewer> Steuerelement. In diesem Beispiel wird ein <xref:System.Windows.Controls.Expander> , die in der Abbildung am Anfang dieses Abschnitts entspricht.  
   
- [!code-csharp[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ExpanderRichContent#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
- [!code-xaml[ExpanderRichContent#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
+ [!code-csharp[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ExpanderRichContent#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpanderRichContent/VisualBasic/Window1.xaml.vb#1)]
+ [!code-xaml[ExpanderRichContent#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml#1)]  
   
 <a name="UsingtheAlignmentProperties"></a>   
 ## <a name="using-the-alignment-properties"></a>Verwenden der Ausrichtungseigenschaften  
@@ -62,4 +62,4 @@ Ein <xref:System.Windows.Controls.Expander> -Steuerelement bietet eine Möglichk
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+- [Themen zu Vorgehensweisen](expander-how-to-topics.md)

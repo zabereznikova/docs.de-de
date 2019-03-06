@@ -1,6 +1,6 @@
 ---
 title: GetPropertyHandle-Funktion (Referenz zur nicht verwalteten API)
-description: GetPropertyHandle-Funktion gibt einem eindeutigen Handle dieser Identitäten eine Eigenschaft zurück.
+description: GetPropertyHandle-Funktion gibt ein eindeutige Handle, das eine Eigenschaft identifiziert.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyHandle
@@ -16,45 +16,46 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 902414ca96d9b4bf888608bd9ad267777da92e32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92d48caf7de873850135c7410a5e4b5861131212
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742314"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366373"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle-Funktion
+
 Gibt ein eindeutiges Handle zurück, das eine Eigenschaft identifiziert.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Syntax  
-  
-```  
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 HRESULT GetPropertyHandle (
-   [in] int                  vFunc, 
-   [in] IWbemObjectAccess*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemObjectAccess*   ptr,
    [in] LPCWSTR              wszPropertyName,
    [out] CIMTYPE*            pType,
    [out] long*               pHandle
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parameter
 
-`vFunc`  
+`vFunc`\
 [in] Dieser Parameter wird nicht verwendet.
 
-`ptr`  
+`ptr`\
 [in] Ein Zeiger auf ein [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) Instanz.
 
-`wszPropertyName`  
-[in] Eine Null-terminierte Zeichenfolge des UTF16-codierte Zeichen enthalten, die den Eigenschaftennamen enthält.   
+`wszPropertyName`\
+[in] Eine Null-terminierte Zeichenfolge des UTF16-codierte Zeichen, die den Eigenschaftennamen enthält.
 
-`pType`  
+`pType`\
 [out] Ein Zeiger auf eine [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) -Enumerationsmember, der den CIM-Typ der Eigenschaft darstellt.
 
-`pHandle`   
+`pHandle`\
 [out] Ein Zeiger auf eine ganze Zahl, die das Eigenschaftshandle enthält.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -67,7 +68,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Ein Parameter ist ungültig. |
 |`WBEM_E_NOT_SUPPORTED` | 0x8004100c | Die angeforderte Eigenschaft ist vom Typ sind `CIM_OBJECT` oder `CIM_ARRAY`. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
-  
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Funktion umschließt einen Aufruf der [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) Methode.
@@ -76,12 +77,14 @@ Sie können dieses Handle verwenden, um Eigenschaften zu identifizieren, bei Ver
 
 Handles können nicht für die Eigenschaften aller Datentypen abgerufen werden `CIM_OBJECT` und `CIM_ARRAY`. Handles Arbeit, die über alle Instanzen einer Klasse zurückgegeben.
 
-## <a name="requirements"></a>Anforderungen  
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Header:** WMINet_Utils.idl  
-  
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Anforderungen
+
+**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+
+**Header:** WMINet_Utils.idl
+
+**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: c29f8728-bfcb-4af7-9fbc-8169e180109f
-ms.openlocfilehash: 3af90c33d6b4e993cc9599b5eefa5ac492c28e04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f67642342777a4b5b26b902161c83dc98893c63f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538873"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355596"
 ---
 # <a name="digital-ink-how-to-topics"></a>Hilfethemen zu digitalen Freihandeingaben
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Auswählen von Freihandeingaben aus einem benutzerdefinierten Steuerelement](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [Hinzufügen von benutzerdefinierten Daten zu Freihanddaten](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [Löschen von Freihandeingaben auf einem benutzerdefinierten Steuerelement](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [Erkennen von Bewegungen in Anwendungen](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [Freihand-Drag & Drop](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [Datenbindung an ein InkCanvas-Steuerelement](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [Analysieren von Freihandeingaben mit Analysehinweisen](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [Freihand drehen](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [Deaktivieren des RealTimeStylus für WPF-Anwendungen](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+ [Auswählen von Freihandeingaben aus einem benutzerdefinierten Steuerelement](how-to-select-ink-from-a-custom-control.md)  
+  [Hinzufügen von benutzerdefinierten Daten zu Freihanddaten](how-to-add-custom-data-to-ink-data.md)  
+  [Löschen von Freihandeingaben auf einem benutzerdefinierten Steuerelement](how-to-erase-ink-on-a-custom-control.md)  
+  [Erkennen von Bewegungen in Anwendungen](how-to-recognize-application-gestures.md)  
+  [Freihand-Drag & Drop](how-to-drag-and-drop-ink.md)  
+  [Datenbindung an ein InkCanvas-Steuerelement](how-to-data-bind-to-an-inkcanvas.md)  
+  [Analysieren von Freihandeingaben mit Analysehinweisen](how-to-analyze-ink-with-analysis-hints.md)  
+  [Freihand drehen](how-to-rotate-ink.md)  
+  [Deaktivieren des RealTimeStylus für WPF-Anwendungen](disable-the-realtimestylus-for-wpf-applications.md)

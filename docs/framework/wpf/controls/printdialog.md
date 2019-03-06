@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], PrintDialog
 - PrintDialog control [WPF]
 ms.assetid: 0ce9e3e7-206f-45ec-b845-4c05cfb5ff1d
-ms.openlocfilehash: 7def3ab16fe174008d1c7287786fd22566ce3d70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8638b56e8a6430b1a7cec371f133063a0c57692
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689302"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368976"
 ---
 # <a name="printdialog"></a>PrintDialog
 Die <xref:System.Windows.Controls.PrintDialog> Steuerelement wird verwendet, um ein Standarddialogfeld Drucken zu instanziieren, die automatisch konfiguriert eine <xref:System.Printing.PrintTicket> und <xref:System.Printing.PrintQueue> entsprechend der Benutzereingabe.  
@@ -26,5 +26,5 @@ Die <xref:System.Windows.Controls.PrintDialog> Steuerelement wird verwendet, um 
  <xref:System.Printing.PrintQueue>  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)
-- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Übersicht über das Drucken](../advanced/printing-overview.md)
+- [Dokumente in WPF](../advanced/documents-in-wpf.md)

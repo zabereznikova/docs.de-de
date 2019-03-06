@@ -7,41 +7,41 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4936ba7bcd78c4867dae99df8bad11776cf655db
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994272"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358495"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Gewusst-wie-Themen zu Animation und Zeitsteuerung
 In den folgenden Themen veranschaulichen, wie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Animations- und Zeitsteuerungssystem in Ihren Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Beschleunigen oder Verlangsamen einer Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
- [Sammeln von Animationen während Wiederholungszyklen](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [Hinzufügen eines Animationsausgabewerts zu einem Animationsstartwert](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [Animieren einer Eigenschaft unter Verwendung eines Storyboards](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
- [Animieren einer Eigenschaft ohne Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
- [Animieren in einer ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
- [Animieren in einem Stil](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
- [Animieren der Durchlässigkeit eines Elements oder eines Pinsels](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [Ändern der Geschwindigkeit einer Uhr, ohne die Geschwindigkeit ihrer Zeitachse zu ändern](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
- [Interaktives Steuern eines Storyboards, nachdem es gestartet wurde](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
- [Steuern von Animationen mit From, To und By](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
- [Definieren eines Namensbereichs](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
- [Empfangen von Benachrichtigungen bei Statusänderungen der Uhr](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [Wiederholen einer Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
- [Durchsuchen eines Storyboards](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
- [Synchrones Suchen von Storyboards](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
- [Festlegen einer Dauer für eine Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
- [Festlegen einer Eigenschaft nach einer Storyboard-Animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [Vereinfachen von Animationen durch untergeordnete Zeitachsen](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
- [Angeben des Übergabeverhaltens zwischen Storyboard-Animationen](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [Festlegen von FillBehavior für ein Timeline-Objekt, das das Ende des aktiven Zeitraums erreicht hat](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
- [Festlegen, ob eine Zeitachse automatisch umgekehrt wird](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [Auslösen einer Animation, wenn sich eine Eigenschaft ändert](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [Verwenden von Ereignistriggern zum Steuern eines Storyboards nach dessen Start](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+ [Beschleunigen oder Verlangsamen einer Animation](how-to-accelerate-or-decelerate-an-animation.md)  
+ [Sammeln von Animationen während Wiederholungszyklen](how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [Hinzufügen eines Animationsausgabewerts zu einem Animationsstartwert](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md)  
+ [Animieren einer Eigenschaft ohne Storyboard](how-to-animate-a-property-without-using-a-storyboard.md)  
+ [Animieren in einer ControlTemplate](how-to-animate-in-a-controltemplate.md)  
+ [Animieren in einem Stil](how-to-animate-in-a-style.md)  
+ [Animieren der Durchlässigkeit eines Elements oder eines Pinsels](how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [Ändern der Geschwindigkeit einer Uhr, ohne die Geschwindigkeit ihrer Zeitachse zu ändern](change-the-speed-of-a-clock.md)  
+ [Interaktives Steuern eines Storyboards, nachdem es gestartet wurde](how-to-control-a-storyboard-after-it-starts.md)  
+ [Steuern von Animationen mit From, To und By](how-to-control-an-animation-using-from-to-and-by.md)  
+ [Definieren eines Namensbereichs](how-to-define-a-name-scope.md)  
+ [Empfangen von Benachrichtigungen bei Statusänderungen der Uhr](how-to-receive-notification-when-clock-state-changes.md)  
+ [Wiederholen einer Animation](how-to-repeat-an-animation.md)  
+ [Durchsuchen eines Storyboards](how-to-seek-a-storyboard.md)  
+ [Synchrones Suchen von Storyboards](how-to-seek-a-storyboard-synchronously.md)  
+ [Festlegen einer Dauer für eine Animation](how-to-set-a-duration-for-an-animation.md)  
+ [Festlegen einer Eigenschaft nach einer Storyboard-Animation](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [Vereinfachen von Animationen durch untergeordnete Zeitachsen](how-to-simplify-animations-by-using-child-timelines.md)  
+ [Angeben des Übergabeverhaltens zwischen Storyboard-Animationen](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [Festlegen von FillBehavior für ein Timeline-Objekt, das das Ende des aktiven Zeitraums erreicht hat](specify-the-fillbehavior-for-a-timeline.md)  
+ [Festlegen, ob eine Zeitachse automatisch umgekehrt wird](how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [Auslösen einer Animation, wenn sich eine Eigenschaft ändert](how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [Verwenden von Ereignistriggern zum Steuern eines Storyboards nach dessen Start](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Media.Animation.Timeline>  
@@ -55,4 +55,4 @@ In den folgenden Themen veranschaulichen, wie die [!INCLUDE[TLA#tla_winclient](.
  <xref:System.Windows.Media.Animation>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafiken und Multimedia](index.md)

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-ms.openlocfilehash: aab9759bcadd52c0af03034cc18512ced01046ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e8310e003dcd3ebca579654b81363efaac9068
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508654"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364007"
 ---
 # <a name="maximize-wpf-3d-performance"></a>Maximieren der 3D-Leistung von WPF
 Wie Sie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D-Steuerelemente erstellen und 3D-Szenen in Ihren Anwendungen einschließen möchten, es ist wichtig, die zur Optimierung der Leistung sollten. Dieses Thema enthält eine Liste von 3D Klassen und Eigenschaften, die Auswirkungen auf die Leistung für Ihre Anwendung zusammen mit Empfehlungen zur Optimierung von Leistung, wenn Sie diese verwenden.  
   
- Dieses Thema setzt voraus, umfassende Kenntnisse des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D-Funktionen. Die Vorschläge in diesem Dokument gelten "Renderingebene 2", etwa als Hardware, die Version des Pixelshaders 2.0 und Vertex-Shader, Version 2.0 unterstützt definiert. Weitere Informationen finden Sie unter [Renderingebenen](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ Dieses Thema setzt voraus, umfassende Kenntnisse des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D-Funktionen. Die Vorschläge in diesem Dokument gelten "Renderingebene 2", etwa als Hardware, die Version des Pixelshaders 2.0 und Vertex-Shader, Version 2.0 unterstützt definiert. Weitere Informationen finden Sie unter [Renderingebenen](../advanced/graphics-rendering-tiers.md).  
   
 ## <a name="performance-impact-high"></a>Auswirkungen auf die Leistung: Hoch  
   
@@ -60,4 +60,4 @@ Wie Sie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wincli
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|Minimieren Sie die Erstellungszeit der großen Auflistungen im [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], z. B. ein MeshGeometry3D <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>, <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>, und <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>, vorab Größe die Sammlungen vor der Auffüllung des Feldwerts. Wenn möglich, übergeben Sie die Sammlungen Konstruktoren Voraufgefüllte Datenstrukturen wie Arrays oder Listen.|  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über 3D-Grafiken](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [Übersicht über 3D-Grafiken](3-d-graphics-overview.md)

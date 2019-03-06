@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], how-to topics
 ms.assetid: aafce40c-9bfe-45ec-86a3-599616a11276
-ms.openlocfilehash: 0e99793a1c8ec179ee01744f8618ff6463766704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2665fc60e1366f30fb7f3621bb0669db1ea3db0a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555801"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374244"
 ---
 # <a name="listview-how-to-topics"></a>Gewusst-wie-Themen zu ListView
-Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.Windows.Controls.ListView> Steuerelement um einen Satz von Datenelementen anzuzeigen.  
+Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.ListView> -Steuerelement zum Anzeigen einer Reihe von Datenelementen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Sortieren einer GridView-Spalte beim Klicken auf einen Header](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [Erstellen eines benutzerdefinierten Ansichtsmodus für eine ListView](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
- [Formatieren eines ListView-Steuerelements mit einem GridView mithilfe von Vorlagen](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [Erstellen eines Stils für einen gezogenen GridView-Spaltenheader](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [Anzeigen von ListView-Inhalten mit GridView](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
- [Verwenden von Triggern zum Formatieren ausgewählter Elemente in einem ListView](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [Erstellen von ListViewItems mit einem Kontrollkästchen](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
- [Anzeigen von Daten mit GridViewRowPresenter](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
- [Gruppieren von Elementen in einem ListView, in dem ein GridView implementiert ist](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [Formatieren einer Zeile in einem ListView, in dem ein GridView implementiert ist](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [Gewusst wie: Ändern der horizontalen Ausrichtung einer Spalte in einem ListView-Element](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [Behandeln des MouseDoubleClick-Ereignisses für die einzelnen ListView-Einträge](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+ [Sortieren einer GridView-Spalte beim Klicken auf einen Header](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [Erstellen eines benutzerdefinierten Ansichtsmodus für eine ListView](how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [Formatieren eines ListView-Steuerelements mit einem GridView mithilfe von Vorlagen](how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [Erstellen eines Stils für einen gezogenen GridView-Spaltenheader](how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [Anzeigen von ListView-Inhalten mit GridView](how-to-display-listview-contents-by-using-a-gridview.md)  
+ [Verwenden von Triggern zum Formatieren ausgewählter Elemente in einem ListView](how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [Erstellen von ListViewItems mit einem Kontrollkästchen](how-to-create-listviewitems-with-a-checkbox.md)  
+ [Anzeigen von Daten mit GridViewRowPresenter](how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [Gruppieren von Elementen in einem ListView, in dem ein GridView implementiert ist](how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [Formatieren einer Zeile in einem ListView, in dem ein GridView implementiert ist](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [Gewusst wie: Ändern der horizontalen Ausrichtung einer Spalte in einem ListView-Element](how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [Behandeln des MouseDoubleClick-Ereignisses für die einzelnen ListView-Einträge](how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.ListView>  
@@ -39,4 +39,4 @@ Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.W
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
+ [Übersicht über ListView](listview-overview.md)

@@ -9,31 +9,31 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: aa0c07c092b6a1e9e37d9c3695107b845055a981
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745572"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352606"
 ---
 # <a name="properties-wpf"></a>Eigenschaften (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine Reihe von Diensten, die zum Erweitern der Funktionalität einer [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Eigenschaft verwendet werden können. Zusammen werden diese Dienste normalerweise als WPF-Eigenschaftensystem bezeichnet. Eine Eigenschaft, die von der [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]-Eigenschaft unterstützt wird, wird als Abhängigkeitseigenschaft bezeichnet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
-- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Übersicht über angefügte Eigenschaften](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)
-- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Rückrufe und Validierung von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)
-- [Framework-Eigenschaftenmetadaten](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
-- [Priorität von Abhängigkeitseigenschaftswerten](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [Schreibgeschützte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)
-- [Vererbung von Eigenschaftswerten](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [Sicherheit von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
-- [Sichere Konstruktormuster für DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
-- [Abhängigkeitseigenschaften vom Auflistungstyp](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
-- [Laden von XAML und Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+- [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
+- [Übersicht über angefügte Eigenschaften](attached-properties-overview.md)
+- [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
+- [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md)
+- [Rückrufe und Validierung von Abhängigkeitseigenschaften](dependency-property-callbacks-and-validation.md)
+- [Framework-Eigenschaftenmetadaten](framework-property-metadata.md)
+- [Priorität von Abhängigkeitseigenschaftswerten](dependency-property-value-precedence.md)
+- [Schreibgeschützte Abhängigkeitseigenschaften](read-only-dependency-properties.md)
+- [Vererbung von Eigenschaftswerten](property-value-inheritance.md)
+- [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md)
+- [Sichere Konstruktormuster für DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)
+- [Abhängigkeitseigenschaften vom Auflistungstyp](collection-type-dependency-properties.md)
+- [Laden von XAML und Abhängigkeitseigenschaften](xaml-loading-and-dependency-properties.md)
+- [Themen zu Vorgehensweisen](properties-how-to-topics.md)
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.DependencyProperty>  
@@ -45,12 +45,12 @@ ms.locfileid: "56745572"
  <xref:System.Windows.DependencyObject>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [WPF-Architektur](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML in WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Basiselemente](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Elementstruktur und Serialisierung](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Ereignisse](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Eingabe](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Ressourcen](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [WPF-Inhaltsmodell](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [Threadmodell](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF-Architektur](wpf-architecture.md)  
+  [XAML in WPF](xaml-in-wpf.md)  
+  [Basiselemente](base-elements.md)  
+  [Elementstruktur und Serialisierung](element-tree-and-serialization.md)  
+  [Ereignisse](events-wpf.md)  
+  [Eingabe](input-wpf.md)  
+  [Ressourcen](resources-wpf.md)  
+  [WPF-Inhaltsmodell](../controls/wpf-content-model.md)  
+  [Threadmodell](threading-model.md)

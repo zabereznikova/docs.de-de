@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Button controls [WPF], creating
 ms.assetid: 607a193c-4098-4dd8-8dc0-51256cec2020
-ms.openlocfilehash: cfebe53047531ecddde42a3a0596dfd949629ecd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe9f35a6f83c5a839823d94c4d3c55e01b192fb1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682061"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352034"
 ---
 # <a name="how-to-create-a-button-that-has-an-image"></a>Vorgehensweise: Erstellen einer Schaltfläche mit einem Bild
 Dieses Beispiel zeigt, wie Sie ein Bild enthalten, auf eine <xref:System.Windows.Controls.Button>.  
@@ -22,11 +22,11 @@ Dieses Beispiel zeigt, wie Sie ein Bild enthalten, auf eine <xref:System.Windows
   
  In diesem Beispiel wird <xref:System.Windows.Controls.Button> steuert mithilfe von Markup wird jedoch Code schreiben verwendet die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> -Ereignishandler.  
   
- [!code-xaml[BtnColor#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml#4)]  
+ [!code-xaml[BtnColor#4](~/samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml#4)]  
   
- [!code-csharp[BtnColor#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml.cs#6)]
- [!code-vb[BtnColor#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BtnColor/VisualBasic/Pane1.xaml.vb#6)]  
+ [!code-csharp[BtnColor#6](~/samples/snippets/csharp/VS_Snippets_Wpf/BtnColor/CSharp/Pane1.xaml.cs#6)]
+ [!code-vb[BtnColor#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BtnColor/VisualBasic/Pane1.xaml.vb#6)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Steuerelemente](../../../../docs/framework/wpf/controls/index.md)
-- [Steuerelementbibliothek](../../../../docs/framework/wpf/controls/control-library.md)
+- [Steuerelemente](index.md)
+- [Steuerelementbibliothek](control-library.md)

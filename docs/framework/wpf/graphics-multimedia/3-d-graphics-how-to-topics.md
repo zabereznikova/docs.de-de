@@ -7,34 +7,34 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
-ms.openlocfilehash: d542ecd7f162e56a8a6e8ae04c0ea60eb6a69f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f78d2f0ff8887ca5cf1cd1129fb946d2224246d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554840"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353555"
 ---
 # <a name="3-d-graphics-how-to-topics"></a>Gewusst-wie-Themen zu 3D-Grafiken
-Die Themen in diesem Abschnitt zeigen, wie [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] Grafiken in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen.  
+Die Themen in diesem Abschnitt veranschaulichen, wie [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] Grafiken in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erstellen einer 3D-Szene](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [Anwenden einer Zeichnung auf ein 3D-Modell](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-drawing-to-a-3-d-model.md)  
- [Anwenden von Material auf die Vorder- und Rückseite eines 3D-Objekts](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
- [Anwenden von Emissive Material auf ein 3D-Objekt](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)  
- [Transformieren der Skalierung eines 3D-Modells](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)  
- [Anwenden mehrerer Transformationen auf ein 3D-Modell](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transformations-to-a-3-d-model.md)  
- [Animieren von 3D-Übersetzungen](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
- [Animieren einer 3D-Drehung mit Storyboards](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [Animieren einer 3D-Drehung mit Rotation3DAnimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
- [Animieren einer 3D-Drehung mit Quaternionen](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
- [Animieren einer 3D-Drehung mithilfe von Keyframes (Rotation3DAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
- [Animieren einer 3D-Drehung mit Keyframes (QuaternionAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
- [Animieren der Kameraposition und -richtung in 3D-Szenen](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
- [Animieren von Kameraposition und -richtung mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
- [Animieren von Material-Eigenschaften in einer 3D-Szene](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)  
- [Treffertest in Viewport3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-in-a-viewport3d.md)  
- [Testen der Point4D-Struktur auf Gleichheit und Ungleichheit](../../../../docs/framework/wpf/graphics-multimedia/how-to-test-point4d-structures-for-equality-and-inequality.md)  
+ [Erstellen einer 3D-Szene](how-to-create-a-3-d-scene.md)  
+ [Anwenden einer Zeichnung auf ein 3D-Modell](how-to-apply-a-drawing-to-a-3-d-model.md)  
+ [Anwenden von Material auf die Vorder- und Rückseite eines 3D-Objekts](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
+ [Anwenden von Emissive Material auf ein 3D-Objekt](how-to-apply-emissive-material-to-a-3-d-object.md)  
+ [Transformieren der Skalierung eines 3D-Modells](how-to-transform-the-scale-of-a-3-d-model.md)  
+ [Anwenden mehrerer Transformationen auf ein 3D-Modell](how-to-apply-multiple-transformations-to-a-3-d-model.md)  
+ [Animieren von 3D-Übersetzungen](how-to-animate-3-d-translations.md)  
+ [Animieren einer 3D-Drehung mit Storyboards](how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [Animieren einer 3D-Drehung mit Rotation3DAnimation](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [Animieren einer 3D-Drehung mit Quaternionen](how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [Animieren einer 3D-Drehung mithilfe von Keyframes (Rotation3DAnimationUsingKeyFrames)](how-to-animate-a-3-d-rotation-using-key-frames.md)  
+ [Animieren einer 3D-Drehung mit Keyframes (QuaternionAnimationUsingKeyFrames)](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
+ [Animieren der Kameraposition und -richtung in 3D-Szenen](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
+ [Animieren von Kameraposition und -richtung mithilfe von Keyframes](how-to-animate-camera-position-and-direction-using-key-frames.md)  
+ [Animieren von Material-Eigenschaften in einer 3D-Szene](how-to-animate-material-properties-in-a-3-d-scene.md)  
+ [Treffertest in Viewport3D](how-to-hit-test-in-a-viewport3d.md)  
+ [Testen der Point4D-Struktur auf Gleichheit und Ungleichheit](how-to-test-point4d-structures-for-equality-and-inequality.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Viewport3D>  
@@ -46,4 +46,4 @@ Die Themen in diesem Abschnitt zeigen, wie [!INCLUDE[TLA#tla_3d](../../../../inc
  <xref:System.Windows.Media.Media3D.Material>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafiken und Multimedia](index.md)

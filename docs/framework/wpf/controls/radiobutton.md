@@ -7,20 +7,20 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553922"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365268"
 ---
 # <a name="radiobutton"></a>RadioButton
-<xref:System.Windows.Controls.RadioButton> Steuerelemente sind in der Regel gruppiert, um Benutzern eine einzelne Auswahl unter mehreren Optionen bieten; Es kann jeweils nur ein Optionsfeld ausgewählt werden.  
+<xref:System.Windows.Controls.RadioButton> Steuerelemente sind in der Regel gruppiert, um Benutzern eine einzelne Auswahl unter mehreren Optionen zur Verfügung stellen; Es kann nur eine Schaltfläche zu einem Zeitpunkt ausgewählt werden.  
   
  Die folgende Abbildung zeigt ein Beispiel für eine <xref:System.Windows.Controls.RadioButton> Steuerelement.  
   
- ![Optionsfeld Schaltflächenzuständen](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
-Typische "RadioButton"  
+ ![Radio-Schaltflächenstatus](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
+Typische RadioButton  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Primitives.ToggleButton>  

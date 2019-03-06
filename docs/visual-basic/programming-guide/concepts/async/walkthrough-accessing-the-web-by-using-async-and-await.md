@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 51fb2a90a7398da5334e2fd4508f90d4594e5dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9eb9f53b456b309997ef9e6fdb83b770478889b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709493"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379119"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)
 Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher und intuitiver schreiben. Sie können asynchronen Code schreiben, der wie synchroner Code aussieht und veranlassen, dass der Compiler die komplizierten Rückruffunktionen und Fortsetzungen verarbeitet, die durch den asynchronen Code für gewöhnlich verursacht werden.  
@@ -47,7 +47,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Visual Studio 2012 oder höher muss auf dem Computer installiert sein. Weitere Informationen finden Sie auf der [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkId=235233).  
   
-###  <a name="CreateWPFApp"></a> So erstellen Sie eine WPF-Anwendung  
+### <a name="CreateWPFApp"></a> So erstellen Sie eine WPF-Anwendung  
   
 1.  Starten Sie Visual Studio.  
   
@@ -61,8 +61,8 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
      Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.  
   
-##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a> So entwerfen Sie ein einfaches WPF-MainWindow  
+## <a name="BKMK_DesignWPFMainWin"></a>   
+### <a name="MainWindow"></a> So entwerfen Sie ein einfaches WPF-MainWindow  
   
 1.  Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.  
   
@@ -90,8 +90,8 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
      Weitere Informationen über den WPF-XAML-Designer finden Sie unter [Erstellen einer Benutzeroberfläche mit dem XAML-Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).  
   
-##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a> So fügen Sie einen Verweis hinzu  
+## <a name="BKMK_AddReference"></a>   
+### <a name="AddRef"></a> So fügen Sie einen Verweis hinzu  
   
 1.  Markieren Sie im **Projektmappen-Explorer** den Namen des Projekts.  
   
@@ -107,8 +107,8 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 6.  Wählen Sie die Schaltfläche **OK** aus, um das Dialogfeld zu schließen.  
   
-##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a> Erforderliche Imports-Anweisungen hinzufügen  
+## <a name="BKMK_AddStatesandDirs"></a>   
+### <a name="ImportsState"></a> Erforderliche Imports-Anweisungen hinzufügen  
   
 1.  In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Ansichtscode**.  
   
@@ -120,8 +120,8 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
     Imports System.IO  
     ```  
   
-##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a> So erstellen Sie eine synchrone Anwendung  
+## <a name="BKMK_CreatSynchApp"></a>   
+### <a name="synchronous"></a> So erstellen Sie eine synchrone Anwendung  
   
 1.  Doppelklicken Sie im Entwurfsfenster "MainWindow.xaml" auf die **starten** Schaltfläche zum Erstellen der `startButton_Click` -Ereignishandler in "MainWindow.Xaml.vb".  
   
@@ -221,8 +221,8 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
     End Sub  
     ```  
   
-##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> So testen Sie die synchrone Lösung  
+## <a name="BKMK_TestSynchSol"></a>   
+### <a name="testSynch"></a> So testen Sie die synchrone Lösung  
   
 1.  Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten** .  
   
@@ -247,8 +247,8 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
      Beachten Sie, dass es ein paar Sekunden dauert, bis die Zahlen angezeigt werden. Während dieser Zeit ist der Benutzeroberflächenthread blockiert, während auf das Herunterladen von angeforderten Ressourcen gewartet wird. Daher können Sie das Anzeigefenster weder verschieben, maximieren, minimieren noch schließen, nachdem Sie die Schaltfläche **Start** ausgewählt haben. Diese Bemühungen sind nicht erfolgreich, bis der Bytezähler angezeigt wird. Wenn eine Website nicht antwortet, erhalten Sie keinen Hinweis darüber, welche Site fehlerhaft ist. Es ist sogar schwierig, mit dem Warten aufzuhören und das Programm zu schließen.  
   
-##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a> So konvertieren Sie „GetURLContents“ in eine asynchrone Methode  
+## <a name="BKMK_ConvertGtBtArr"></a>   
+### <a name="GetURLContents"></a> So konvertieren Sie „GetURLContents“ in eine asynchrone Methode  
   
 1.  Für das Konvertieren der synchronen Projektmappe in eine asynchrone Projektmappe empfiehlt es sich, in `GetURLContents` zu beginnen, da die Aufrufe der <xref:System.Net.HttpWebRequest>-Methode <xref:System.Net.HttpWebRequest.GetResponse%2A> und der <xref:System.IO.Stream>-Methode <xref:System.IO.Stream.CopyTo%2A> dort erfolgen, wo die Anwendung auf das Web zugreift. .NET Framework erleichtert die Konvertierung, indem asynchrone Versionen beider Methoden bereitgestellt werden.  
   
@@ -329,8 +329,8 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
      Mit diesen wenigen Änderungen ist die Konvertierung von `GetURLContents` zu einer asynchronen Methode abgeschlossen.  
   
-##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a> So konvertieren Sie „SumPageSizes“ in eine asynchrone Methode  
+## <a name="BKMK_ConvertSumPagSzs"></a>   
+### <a name="SumPageSizes"></a> So konvertieren Sie „SumPageSizes“ in eine asynchrone Methode  
   
 1.  Wiederholen Sie die Schritte des vorherigen Verfahrens für `SumPageSizes`. Ändern Sie zunächst den Aufruf von `GetURLContents` zu einem asynchronen Aufruf.  
   
@@ -369,8 +369,8 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
      Die Konvertierung von `SumPageSizes` zu `SumPageSizesAsync` ist abgeschlossen.  
   
-##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a> So konvertieren Sie „startButton_Click“ in eine asynchrone Methode  
+## <a name="BKMK_Cnvrtbttn1"></a>   
+### <a name="startButton"></a> So konvertieren Sie „startButton_Click“ in eine asynchrone Methode  
   
 1.  Ändern Sie im Ereignishandler den Namen der aufgerufenen Methode von `SumPageSizes` zu `SumPageSizesAsync`, sofern Sie dies nicht bereits vorgenommen haben.  
   
@@ -415,8 +415,8 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
      Die Konvertierung des Projekts von der synchronen zu asynchronen Verarbeitung ist abgeschlossen.  
   
-##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> So testen Sie die asynchrone Lösung  
+## <a name="BKMK_testAsynchSolution"></a>   
+### <a name="testAsynch"></a> So testen Sie die asynchrone Lösung  
   
 1.  Drücken Sie die Taste F5, um das Programm auszuführen, und klicken Sie dann auf die Schaltfläche **Starten** .  
   
@@ -426,8 +426,8 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
     -   Das Wichtigste ist jedoch, dass der UI-Thread nicht blockiert wird, während Downloads vorgenommen werden. Sie können das Fenster verschieben oder dessen Größe anpassen, während die Webressourcen heruntergeladen, gezählt und angezeigt werden. Wenn eine der Websites langsam ist oder nicht antwortet, können Sie den Vorgang abbrechen, indem Sie die Schaltfläche **Schließen** (das x im roten Feld in der oberen rechten Ecke) auswählen.  
   
-##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> So ersetzen Sie die Methode „GetURLContentsAsync“ durch eine .NET Framework-Methode  
+## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
+### <a name="GetURLContentsAsync"></a> So ersetzen Sie die Methode „GetURLContentsAsync“ durch eine .NET Framework-Methode  
   
 1.  .NET Framework 4.5 bietet viele asynchrone Methoden, die Sie verwenden können. Eine davon, die <xref:System.Net.Http.HttpClient>-Methode <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> erfüllt genau das, was in dieser exemplarischen Vorgehensweise nötig ist. Sie können sie anstelle der `GetURLContentsAsync`-Methode verwenden, die Sie in einer vorherigen Vorgehensweise erstellt haben.  
   
@@ -452,7 +452,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
      Das Verhalten dieser Version des Projekts sollte mit dem Verhalten übereinstimmen, das in der Vorgehensweise „So testen Sie die asynchrone Lösung“ beschrieben wird, es sollte aber weniger Aufwand Ihrerseits nötig sein.  
   
-##  <a name="BKMK_CompleteCodeExamples"></a> Beispiel  
+## <a name="BKMK_CompleteCodeExamples"></a> Beispiel  
  Der folgende Code enthält das vollständige Beispiel der Konvertierung von einer synchronen zu einer asynchronen Lösung mithilfe der von Ihnen geschriebenen asynchronen `GetURLContentsAsync`-Methode. Beachten Sie, dass sie der ursprünglichen synchronen Lösung sehr stark ähnelt.  
   
 ```vb  

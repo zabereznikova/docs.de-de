@@ -4,6 +4,7 @@ description: 'Anleitung zur Verwendung von Azure-Diensten mit F#'
 author: sylvanc
 ms.date: 09/22/2016
 ---
+
 # <a name="using-f-on-azure"></a>Verwenden von F# in Azure
 
 F# ist eine hervorragende Sprache für die Cloudprogrammierung und wird häufig zum Schreiben von ASP.NET-Webanwendungen, Clouddiensten, in der Cloud gehosteten Microservices und für die skalierbare Datenverarbeitung verwendet.
@@ -87,7 +88,7 @@ Azure Notification Hubs können mit F# auf zwei Arten verwendet werden:
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>Implementieren von WebHooks in Azure mit F#\#
 
-Ein [Webhook](https://en.wikipedia.org/wiki/Webhook) ist ein Rückruf, der durch eine Webanfrage ausgelöst wird. Webhooks werden von Websites wie GitHub verwendet, um Ereignisse zu signalisieren. 
+Ein [Webhook](https://en.wikipedia.org/wiki/Webhook) ist ein Rückruf, der durch eine Webanfrage ausgelöst wird. Webhooks werden von Websites wie GitHub verwendet, um Ereignisse zu signalisieren.
 
 Webhooks können in F# implementiert und in Azure durch [HTTP- und Webhookbindungen in Azure Functions](/azure/azure-functions/functions-bindings-http-webhook) gehostet werden.
 
@@ -109,7 +110,7 @@ Azure-VMs können programmgesteuert bereitgestellt und von F#-Skripts mithilfe d
 
 Auch andere Azure-Ressourcen können möglicherweise auch von F#-Skripts bereitgestellt und verwaltet werden, die über die gleichen Komponenten verfügen. Beispielsweise können Sie Speicherkonten erstellen, Bereitstellen von Azure Cloud Services, Azure Cosmos DB-Instanzen erstellen und Verwalten von Azure Notification Hubs programmgesteuert von F#-Skripts.
 
-Die Verwendung von F#-Skripts zum Bereitstellen und Verwalten von Ressourcen ist normalerweise nicht notwendig. Beispielsweise können Azure-Ressourcen möglicherweise auch direkt von JSON-Vorlagebeschreibungen bereitgestellt werden, die parametrisiert werden können. Informationen, einschließlich Beispiele wie die [Azure-Schnellstartvorlagen](https://azure.microsoft.com/resources/templates/), finden Sie unter [Bewährte Methoden für das Erstellen von Azure Resource Manager-Vorlagen](/azure/azure-resource-manager/resource-manager-template-best-practices).
+Die Verwendung von F#-Skripts zum Bereitstellen und Verwalten von Ressourcen ist normalerweise nicht notwendig. Azure-Ressourcen können z. B. auch direkt über eine Beschreibung der JSON-Vorlage bereitgestellt werden, die parametrisiert werden können. Informationen, einschließlich Beispiele wie die [Azure-Schnellstartvorlagen](https://azure.microsoft.com/resources/templates/), finden Sie unter [Bewährte Methoden für das Erstellen von Azure Resource Manager-Vorlagen](/azure/azure-resource-manager/resource-manager-template-best-practices).
 
 ## <a name="other-resources"></a>Weitere Ressourcen
 

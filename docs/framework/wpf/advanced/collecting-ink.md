@@ -13,20 +13,20 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 4da833256183f10eb62b43c3f665d76a6fc2ba80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d0796eae469f8a40e01e3de02c00149eb3f00c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711797"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374673"
 ---
 # <a name="collect-ink"></a>Erfassen von Freihandeingaben
 
-Als einen ihrer zentralen Funktionsbestandteile erfasst die [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md)-Plattform Freihandeingaben. Dieses Thema beschreibt Methoden zum Erfassen von Freihandeingaben in Windows Presentation Foundation (WPF).
+Als einen ihrer zentralen Funktionsbestandteile erfasst die [Windows Presentation Foundation](../index.md)-Plattform Freihandeingaben. Dieses Thema beschreibt Methoden zum Erfassen von Freihandeingaben in Windows Presentation Foundation (WPF).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Um die folgenden Beispiele verwenden zu können, müssen Sie zunächst Visual Studio installieren und die [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Sie sollten auch Gewusst wie: Schreiben von Anwendungen für WPF kennen. Weitere Informationen zu den ersten Schritten mit WPF finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Um die folgenden Beispiele verwenden zu können, müssen Sie zunächst Visual Studio installieren und die [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Sie sollten auch Gewusst wie: Schreiben von Anwendungen für WPF kennen. Weitere Informationen zu den ersten Schritten mit WPF finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="use-the-inkcanvas-element"></a>Verwenden des InkCanvas-Elements
 
@@ -34,15 +34,15 @@ Die <xref:System.Windows.Controls.InkCanvas?displayProperty=fullName> -Element s
 
 Mit XAML, Sie können festlegen, Freihandeingaben so einfach wie das Hinzufügen einer **InkCanvas** -Elements zur Struktur. Im folgenden Beispiel wird ein <xref:System.Windows.Controls.InkCanvas> auf ein Standard-WPF-Projekt in Visual Studio erstellt wurden:
 
-[!code-xaml[DigitalInkTopics#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
+[!code-xaml[DigitalInkTopics#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
 
 Die **InkCanvas** Element kann auch untergeordnete Elemente enthalten, wodurch Anmerkungsfunktionen von Freihandeingaben auf nahezu jede Art von XAML-Element hinzufügen. Zum Beispiel um ein Textelement Freihandfunktionen hinzufügen, indem Sie es einfach ein untergeordnetes Element des ein <xref:System.Windows.Controls.InkCanvas>:
 
-[!code-xaml[DigitalInkTopics#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
+[!code-xaml[DigitalInkTopics#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
 
 Hinzufügen von Unterstützung zum Markieren eines Bilds per Freihandeingabe ist ebenso einfach:
 
-[!code-xaml[DigitalInkTopics#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
+[!code-xaml[DigitalInkTopics#7](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
 
 ### <a name="inkcollection-modes"></a>InkCollection-Modi
 
@@ -58,8 +58,8 @@ Auswahlmodus ist so einfach wie das Festlegen der <xref:System.Windows.Controls.
 
 Im folgenden Code wird den Bearbeitungsmodus basierend auf den Wert des einem <xref:System.Windows.Forms.CheckBox>:
 
-[!code-csharp[DigitalInkTopics#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
-[!code-vb[DigitalInkTopics#8](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
+[!code-csharp[DigitalInkTopics#8](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
+[!code-vb[DigitalInkTopics#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
 
 #### <a name="drawingattributes"></a>DrawingAttributes
 
@@ -67,8 +67,8 @@ Verwenden der <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Eigenschaft,
 
 Im folgende Beispiel ändert die Farbe der ausgewählten Striche in Rot angezeigt:
 
-[!code-csharp[DigitalInkTopics#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
-[!code-vb[DigitalInkTopics#9](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
+[!code-csharp[DigitalInkTopics#9](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
+[!code-vb[DigitalInkTopics#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
 
 ### <a name="defaultdrawingattributes"></a>DefaultDrawingAttributes
 
@@ -78,11 +78,11 @@ Zusätzlich zum Ändern der <xref:System.Windows.Controls.InkCanvas.DefaultDrawi
 
 Im nächste Beispiel veranschaulicht das Festlegen der <xref:System.Windows.Ink.DrawingAttributes.Color%2A> Eigenschaft. Um diesen Code zu verwenden, erstellen Sie ein neues WPF-Projekt, das Namen "HelloInkCanvas" in Visual Studio. Ersetzen Sie den Code in die *"MainWindow.xaml"* -Datei mit den folgenden Code:
 
-[!code-xaml[HelloInkCanvas#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
+[!code-xaml[HelloInkCanvas#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
 
 Fügen Sie die folgenden Ereignishandler der Schaltfläche auf der CodeBehind-Datei, in der MainWindow-Klasse:
 
-[!code-csharp[HelloInkCanvas#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
+[!code-csharp[HelloInkCanvas#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
 
 Drücken Sie nach dem Kopieren dieser Code **F5** in Visual Studio, um das Programm im Debugger auszuführen.
 

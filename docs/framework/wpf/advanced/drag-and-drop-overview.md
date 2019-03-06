@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 82d2a055f6780c81c601665f8c3403d9d95c85df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67c332b4fd4d2937f3a455353f3a5353dde10ef5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492572"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356480"
 ---
 # <a name="drag-and-drop-overview"></a>Übersicht über Drag & Drop
 Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen. Drag & Drop bezeichnet im Allgemeinen eine Methode zur Datenübertragung, die die Verwendung einer Maus (oder eines anderen Zeigegeräts) zum Auswählen mindestens eines Objekts, das Ziehen dieses Objekts auf ein gewünschtes Ablageziels auf der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] und dessen Ablegen beinhaltet.  
@@ -33,7 +33,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
  Die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zur Verfügung gestellten Drag & Drop-Möglichkeiten sind äußerst flexibel und anpassbar, um eine große Bandbreite von Drag & Drop-Szenarien zu unterstützen.  Drag-and-Drop unterstützt das Bearbeiten von Objekten innerhalb einer einzelnen Anwendung oder zwischen verschiedenen Anwendungen. Ziehen und Ablegen zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und anderen Windows-Anwendungen wird ebenfalls vollständig unterstützt.  
   
- In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können beliebige <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> an Drag & Drop-Vorgängen beteiligt sein. Die für Drag & Drop-Vorgänge erforderlichen Ereignisse und Methoden sind in der <xref:System.Windows.DragDrop>-Klasse definiert. Die Klassen <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> enthalten Aliase für die angefügten <xref:System.Windows.DragDrop>-Ereignisse, sodass ein geerbtes <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> in der Liste der Klassenelemente als Basiselement aufgeführt wird. Die an diese Ereignisse angefügten Ereignishandler werden an das zugrundeliegende angefügte <xref:System.Windows.DragDrop>-Ereignis angefügt und empfangen die gleiche Instanz der Ereignisdaten. Weitere Informationen finden Sie beim <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>-Ereignis.  
+ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können beliebige <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> an Drag &amp; Drop-Vorgängen beteiligt sein. Die für Drag & Drop-Vorgänge erforderlichen Ereignisse und Methoden sind in der <xref:System.Windows.DragDrop>-Klasse definiert. Die Klassen <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> enthalten Aliase für die angefügten <xref:System.Windows.DragDrop>-Ereignisse, sodass ein geerbtes <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> in der Liste der Klassenelemente als Basiselement aufgeführt wird. Die an diese Ereignisse angefügten Ereignishandler werden an das zugrundeliegende angefügte <xref:System.Windows.DragDrop>-Ereignis angefügt und empfangen die gleiche Instanz der Ereignisdaten. Weitere Informationen finden Sie beim <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType>-Ereignis.  
   
 > [!IMPORTANT]
 >  OLE-Drag & Drop funktioniert in der Zone „Internet“ nicht.  
@@ -50,7 +50,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
  Bei einem Kopieren und Einfügen-Vorgang wird die Zwischenablage des Systems verwendet, um die übertragenen Daten vorübergehend zu speichern; bei einem Drag & Drop-Vorgang wird ein <xref:System.Windows.DataObject> zum Speichern der Daten verwendet. Konzeptionell besteht ein Datenobjekt aus mindestens einem Paar eines <xref:System.Object>, das die eigentlichen Daten enthält, und einem entsprechenden Datenformatbezeichner.  
   
- Die Ziehquelle leitet einen Drag & Drop-Vorgang durch Aufrufen der statischen <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType>-Methode und Übergeben der übertragenen Daten an sie ein. Die <xref:System.Windows.DragDrop.DoDragDrop%2A>-Methode umschließt die Daten ggf. automatisch in einem <xref:System.Windows.DataObject>. Um mehr Kontrolle über das Datenformat zu erhalten, können Sie die Daten vor der Übergabe an die <xref:System.Windows.DataObject>-Methode mit einem <xref:System.Windows.DragDrop.DoDragDrop%2A> umschließen. Das Ablageziel ist für die Extraktion der Daten aus dem <xref:System.Windows.DataObject> zuständig. Weitere Informationen zum Arbeiten mit Datenobjekten finden Sie unter [Daten und Datenobjekte](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ Die Ziehquelle leitet einen Drag & Drop-Vorgang durch Aufrufen der statischen <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType>-Methode und Übergeben der übertragenen Daten an sie ein. Die <xref:System.Windows.DragDrop.DoDragDrop%2A>-Methode umschließt die Daten ggf. automatisch in einem <xref:System.Windows.DataObject>. Um mehr Kontrolle über das Datenformat zu erhalten, können Sie die Daten vor der Übergabe an die <xref:System.Windows.DragDrop.DoDragDrop%2A>-Methode mit einem <xref:System.Windows.DataObject> umschließen. Das Ablageziel ist für die Extraktion der Daten aus dem <xref:System.Windows.DataObject> zuständig. Weitere Informationen zum Arbeiten mit Datenobjekten finden Sie unter [Daten und Datenobjekte](data-and-data-objects.md).  
   
  Die Quelle und das Ziel eines Drag & Drop-Vorgangs sind normalerweise Elemente der Benutzeroberfläche; die tatsächlich übertragenen Daten haben aber in der Regel keine visuelle Darstellung. Sie können Code erstellen, der eine visuelle Darstellung der gezogenen Daten bereitstellt, wie es etwa beim Ziehen von Dateien im Windows-Explorer geschieht. Standardmäßig wird dem Benutzer eine Rückmeldung gegeben, indem die Form des Cursors geändert wird, um die Auswirkung darzustellen, die der Drag & Drop-Vorgang auf die Daten hat, etwa ob die Daten verschoben oder kopiert werden.  
   
@@ -63,7 +63,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
 <a name="Drag_and_Drop_Events"></a>   
 ## <a name="drag-and-drop-events"></a>Drag & Drop-Ereignisse  
- Drag & Drop-Vorgänge unterstützen ein ereignisgesteuertes Modell.  Sowohl die Ziehquelle als auch das Ablageziel verwenden einen Satz von Standardereignissen beim Verarbeiten von Drag & Drop-Vorgängen.  Die standardmäßigen Drag & Drop-Ereignisse sind in den folgenden Tabellen zusammengefasst. Dies sind angefügte Ereignisse der Klasse <xref:System.Windows.DragDrop>. Weitere Informationen zu angefügten Ereignissen finden Sie unter [Übersicht über angefügte Ereignisse](../../../../docs/framework/wpf/advanced/attached-events-overview.md).  
+ Drag & Drop-Vorgänge unterstützen ein ereignisgesteuertes Modell.  Sowohl die Ziehquelle als auch das Ablageziel verwenden einen Satz von Standardereignissen beim Verarbeiten von Drag & Drop-Vorgängen.  Die standardmäßigen Drag & Drop-Ereignisse sind in den folgenden Tabellen zusammengefasst. Dies sind angefügte Ereignisse der Klasse <xref:System.Windows.DragDrop>. Weitere Informationen zu angefügten Ereignissen finden Sie unter [Übersicht über angefügte Ereignisse](attached-events-overview.md).  
   
 ### <a name="drag-source-events"></a>Ereignisse der Ziehquelle  
   
@@ -87,7 +87,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
 |<xref:System.Windows.DragDrop.PreviewDragOver>|Tunnelversion von <xref:System.Windows.DragDrop.DragOver>.|  
 |<xref:System.Windows.DragDrop.PreviewDrop>|Tunnelversion von <xref:System.Windows.DragDrop.Drop>.|  
   
- Um Drag & Drop-Ereignisse für Instanzen eines Objekts zu verarbeiten, fügen Sie Handler für die in den vorhergehenden Tabellen aufgelisteten Ereignisse hinzu. Um Drag & Drop-Ereignisse auf der Klassenebene zu verarbeiten, überschreiben Sie die entsprechenden virtuellen On*Event- und On\*PreviewEvent-Methoden. Weitere Informationen finden Sie unter [Klassenbehandlung von Routingereignissen durch Steuerelement-Basisklassen](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
+ Um Drag & Drop-Ereignisse für Instanzen eines Objekts zu verarbeiten, fügen Sie Handler für die in den vorhergehenden Tabellen aufgelisteten Ereignisse hinzu. Um Drag & Drop-Ereignisse auf der Klassenebene zu verarbeiten, überschreiben Sie die entsprechenden virtuellen On*Event- und On\*PreviewEvent-Methoden. Weitere Informationen finden Sie unter [Klassenbehandlung von Routingereignissen durch Steuerelement-Basisklassen](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events).  
   
 <a name="Implementing_Drag_And_Drop"></a>   
 ## <a name="implementing-drag-and-drop"></a>Implementierung von Drag & Drop  
@@ -107,7 +107,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
 -   Erstellen Sie im Ablageziel einen <xref:System.Windows.DragDrop.Drop>-Ereignishandler, um die abgelegten Daten zu verarbeiten.  
   
--   Extrahieren Sie im <xref:System.Windows.DragDrop.Drop>-Ereignishandler die Daten mithilfe der Methoden <xref:System.Windows.DragEventArgs> und <xref:System.Windows.DataObject.GetDataPresent%2A> aus den <xref:System.Windows.DataObject.GetData%2A>.  
+-   Extrahieren Sie im <xref:System.Windows.DragDrop.Drop>-Ereignishandler die Daten mithilfe der Methoden <xref:System.Windows.DataObject.GetDataPresent%2A> und <xref:System.Windows.DataObject.GetData%2A> aus den <xref:System.Windows.DragEventArgs>.  
   
 -   Verwenden Sie die Daten im <xref:System.Windows.DragDrop.Drop>-Ereignishandler, um den gewünschten Drag & Drop-Vorgang auszuführen.  
   
@@ -123,9 +123,9 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>Drag & Drop-Beispiel  
- In diesem Abschnitt wird die Implementierung von Drag & Drop für ein <xref:System.Windows.Shapes.Ellipse>-Element beschrieben. Die <xref:System.Windows.Shapes.Ellipse> stellt sowohl eine Ziehquelle als auch ein Ablageziel dar. Die übertragenen Daten sind die Zeichenfolgendarstellung der <xref:System.Windows.Shapes.Shape.Fill%2A>-Eigenschaft der Ellipse. Der folgende XAML-Code zeigt das <xref:System.Windows.Shapes.Ellipse>-Element und die mit Drag & Drop zusammenhängenden Ereignisse, die es verarbeitet. Führen Sie die Schritte zum Implementieren von Drag & Drop, finden Sie unter [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
+ In diesem Abschnitt wird die Implementierung von Drag & Drop für ein <xref:System.Windows.Shapes.Ellipse>-Element beschrieben. Die <xref:System.Windows.Shapes.Ellipse> stellt sowohl eine Ziehquelle als auch ein Ablageziel dar. Die übertragenen Daten sind die Zeichenfolgendarstellung der <xref:System.Windows.Shapes.Shape.Fill%2A>-Eigenschaft der Ellipse. Der folgende XAML-Code zeigt das <xref:System.Windows.Shapes.Ellipse>-Element und die mit Drag &amp; Drop zusammenhängenden Ereignisse, die es verarbeitet. Führen Sie die Schritte zum Implementieren von Drag & Drop, finden Sie unter [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement](walkthrough-enabling-drag-and-drop-on-a-user-control.md).  
   
- [!code-xaml[DragDropSnippets#EllipseXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
+ [!code-xaml[DragDropSnippets#EllipseXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml#ellipsexaml)]  
   
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>Aktivieren eines Elements als Ziehquelle  
  Ein Objekt, das eine Ziehquelle darstellt, ist für Folgendes zuständig:  
@@ -142,10 +142,10 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
  Zu Bestimmen, wann ein Ziehvorgang eintritt, liegt in der Zuständigkeit Ihrer Anwendung, die anschließend den Drag & Drop-Vorgang durch Aufrufen der Methode <xref:System.Windows.DragDrop.DoDragDrop%2A> einleiten muss. Dies ist normalerweise der Fall, wenn ein <xref:System.Windows.UIElement.MouseMove>-Ereignis über dem zu ziehenden Element eintritt, während eine Maustaste gedrückt wird. Im folgenden Beispiel ist zu sehen, wie ein Drag & Drop-Vorgang vom <xref:System.Windows.UIElement.MouseMove>-Ereignishandler eines <xref:System.Windows.Shapes.Ellipse>-Elements eingeleitet wird, um es zu einer Ziehquelle zu machen. Die übertragenen Daten sind die Zeichenfolgendarstellung der <xref:System.Windows.Shapes.Shape.Fill%2A>-Eigenschaft der Ellipse.  
   
- [!code-csharp[DragDropSnippets#DoDragDrop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
- [!code-vb[DragDropSnippets#DoDragDrop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
+ [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
+ [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
   
- Rufen Sie im Innern des <xref:System.Windows.UIElement.MouseMove>-Ereignishandlers die Methode <xref:System.Windows.DragDrop.DoDragDrop%2A> auf, um den Drag & Drop-Vorgang einzuleiten. Die Methode <xref:System.Windows.DragDrop.DoDragDrop%2A> akzeptiert drei Parameter:  
+ Rufen Sie im Innern des <xref:System.Windows.UIElement.MouseMove>-Ereignishandlers die Methode <xref:System.Windows.DragDrop.DoDragDrop%2A> auf, um den Drag &amp; Drop-Vorgang einzuleiten. Die Methode <xref:System.Windows.DragDrop.DoDragDrop%2A> akzeptiert drei Parameter:  
   
 -   `dragSource` – Ein Verweis auf das Abhängigkeitsobjekt, das die Quelle der übertragenen Daten bildet; dies ist normalerweise die Quelle des <xref:System.Windows.UIElement.MouseMove>-Ereignisses.  
   
@@ -153,7 +153,7 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
 -   `allowedEffects` – Einer der <xref:System.Windows.DragDropEffects>-Enumerationswerte, der die zulässigen Auswirkungen des Drag & Drop-Vorgangs angibt.  
   
- Im Parameter `data` können beliebige serialisierbare Objekte übergeben werden. Wenn die Daten noch nicht von einem <xref:System.Windows.DataObject> umschlossen sind, werden sie automatisch von einem neuen <xref:System.Windows.DataObject> umschlossen. Zum Übergeben mehrerer Datenelemente müssen Sie das <xref:System.Windows.DataObject> selbst erstellen und es an die <xref:System.Windows.DragDrop.DoDragDrop%2A>-Methode übergeben. Weitere Informationen finden Sie unter [Daten und Datenobjekte](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
+ Im Parameter `data` können beliebige serialisierbare Objekte übergeben werden. Wenn die Daten noch nicht von einem <xref:System.Windows.DataObject> umschlossen sind, werden sie automatisch von einem neuen <xref:System.Windows.DataObject> umschlossen. Zum Übergeben mehrerer Datenelemente müssen Sie das <xref:System.Windows.DataObject> selbst erstellen und es an die <xref:System.Windows.DragDrop.DoDragDrop%2A>-Methode übergeben. Weitere Informationen finden Sie unter [Daten und Datenobjekte](data-and-data-objects.md).  
   
  Der `allowedEffects`-Parameter wird verwendet, um anzugeben, welche Aktionen die Ziehquelle dem Ablageziel mit den übertragenen Daten erlaubt. Die üblichen Werte für eine Ziehquelle sind <xref:System.Windows.DragDropEffects.Copy>, <xref:System.Windows.DragDropEffects.Move> und <xref:System.Windows.DragDropEffects.All>.  
   
@@ -192,32 +192,32 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
  Das folgende Beispiel zeigt den <xref:System.Windows.DragDrop.DragEnter>-Ereignishandler für ein <xref:System.Windows.Shapes.Ellipse>-Element. Dieser Code bewirkt eine Vorschau der Auswirkungen des Drag & Drop-Vorgangs durch Speichern des aktuellen <xref:System.Windows.Shapes.Shape.Fill%2A>-Pinsels. Anschließend wird die Methode <xref:System.Windows.DataObject.GetDataPresent%2A> verwendet, um zu überprüfen, ob das <xref:System.Windows.DataObject>-Objekt, das über die Ellipse gezogen wird, Zeichenfolgendaten enthält, die in einen <xref:System.Windows.Media.Brush> konvertiert werden können. Ist das der Fall, werden die Daten mithilfe der <xref:System.Windows.DataObject.GetData%2A>-Methode extrahiert. Anschließend werden sie in einen <xref:System.Windows.Media.Brush> konvertiert und auf die Ellipse angewendet. Die Änderung wird im <xref:System.Windows.DragDrop.DragLeave>-Ereignishandler rückgängig gemacht. Wenn die Daten nicht in einen <xref:System.Windows.Media.Brush> konvertiert werden können, wird keine Aktion ausgeführt.  
   
- [!code-csharp[DragDropSnippets#DragEnter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
- [!code-vb[DragDropSnippets#DragEnter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
+ [!code-csharp[DragDropSnippets#DragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
+ [!code-vb[DragDropSnippets#DragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
  Das <xref:System.Windows.DragDrop.DragOver>-Ereignis wird kontinuierlich ausgelöst, während die Daten über das Ablageziel gezogen werden. Dieses Ereignis ist mit dem <xref:System.Windows.DragDrop.GiveFeedback>-Ereignis der Ziehquelle gekoppelt. Im <xref:System.Windows.DragDrop.DragOver>-Ereignishandler verwenden Sie normalerweise die Methoden <xref:System.Windows.DataObject.GetDataPresent%2A> und <xref:System.Windows.DataObject.GetData%2A>, um zu prüfen, ob die übertragenen Daten in einem Format vorliegen, das vom Ablageziel verarbeitet werden kann. Darüber hinaus können Sie prüfen, ob Modifizierertasten gedrückt sind, was normalerweise anzeigt, ob der Benutzer eine Verschiebe- oder eine Kopieraktion beabsichtigt. Nachdem diese Prüfungen vorgenommen wurden, legen Sie die <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType>-Eigenschaft fest, um die Ziehquelle zu benachrichtigen, welche Auswirkungen das Ablegen der Daten hat. Die Ziehquelle empfängt diese Informationen in den <xref:System.Windows.DragDrop.GiveFeedback>-Ereignisargumenten und kann einen geeigneten Cursor festlegen, um dem Benutzer Rückmeldung zu geben.  
   
  Das folgende Beispiel zeigt den <xref:System.Windows.DragDrop.DragOver>-Ereignishandler für ein <xref:System.Windows.Shapes.Ellipse>-Element. Dieser Code überprüft, ob das über die Ellipse gezogene <xref:System.Windows.DataObject> Zeichenfolgendaten enthält, die in einen <xref:System.Windows.Media.Brush> konvertiert werden können. In diesem Fall legt er die <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType>-Eigenschaft als <xref:System.Windows.DragDropEffects.Copy> fest. Dies zeigt der Ziehquelle an, dass die Daten zur Ellipse kopiert werden können. Wenn die Daten nicht in einen <xref:System.Windows.Media.Brush> konvertiert werden können, wird die Eigenschaft <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> auf <xref:System.Windows.DragDropEffects.None> festgelegt. Dieses zeigt der Datenquelle an, dass die Ellipse kein gültiges Ablageziel für die Daten darstellt.  
   
- [!code-csharp[DragDropSnippets#DragOver](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
- [!code-vb[DragDropSnippets#DragOver](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
+ [!code-csharp[DragDropSnippets#DragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
+ [!code-vb[DragDropSnippets#DragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
  Das <xref:System.Windows.DragDrop.DragLeave>-Ereignis tritt ein, wenn die Daten aus der Begrenzung des Ziels heraus gezogen werden, ohne abgelegt worden zu sein. Sie behandeln dieses Ereignis, um alles rückgängig zu machen, was Sie im <xref:System.Windows.DragDrop.DragEnter>-Ereignishandler ausgeführt haben.  
   
  Das folgende Beispiel zeigt den <xref:System.Windows.DragDrop.DragLeave>-Ereignishandler für ein <xref:System.Windows.Shapes.Ellipse>-Element. Dieser Code macht die im <xref:System.Windows.DragDrop.DragEnter>-Ereignishandler ausgeführte Vorschau rückgängig, indem er den gespeicherten <xref:System.Windows.Media.Brush> auf die Ellipse anwendet.  
   
- [!code-csharp[DragDropSnippets#DragLeave](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
- [!code-vb[DragDropSnippets#DragLeave](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
+ [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
+ [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
   
  Das <xref:System.Windows.DragDrop.Drop>-Ereignis tritt ein, wenn die Daten über dem Ablageziel abgelegt werden; standardmäßig geschieht dies beim Freigeben der Maustaste. Im <xref:System.Windows.DragDrop.Drop>-Ereignishandler verwenden Sie die Methode <xref:System.Windows.DataObject.GetData%2A>, um die übertragenen Daten aus dem <xref:System.Windows.DataObject> zu extrahieren und jede von Ihrer Anwendung benötigte Datenverarbeitung auszuführen. Das <xref:System.Windows.DragDrop.Drop>-Ereignis beendet den Drag & Drop-Vorgang.  
   
  Das folgende Beispiel zeigt den <xref:System.Windows.DragDrop.Drop>-Ereignishandler für ein <xref:System.Windows.Shapes.Ellipse>-Element. Dieser Code wendet die Auswirkungen des Drag & Drop-Vorgan an und ähnelt dem Code im <xref:System.Windows.DragDrop.DragEnter>-Ereignishandler. Er überprüft, ob das <xref:System.Windows.DataObject>, das über die Ellipse gezogen wird, Zeichenfolgendaten enthält, die in einen <xref:System.Windows.Media.Brush> konvertiert werden können. In diesem Fall wird der <xref:System.Windows.Media.Brush> auf die Ellipse angewendet. Wenn die Daten nicht in einen <xref:System.Windows.Media.Brush> konvertiert werden können, wird keine Aktion ausgeführt.  
   
- [!code-csharp[DragDropSnippets#Drop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
- [!code-vb[DragDropSnippets#Drop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
+ [!code-csharp[DragDropSnippets#Drop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
+ [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Clipboard>
-- [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)
-- [Drag & Drop](../../../../docs/framework/wpf/advanced/drag-and-drop.md)
+- [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Themen zu Vorgehensweisen](drag-and-drop-how-to-topics.md)
+- [Drag & Drop](drag-and-drop.md)

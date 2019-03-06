@@ -8,12 +8,12 @@ helpviewer_keywords:
 - headers [WPF], customizing
 - GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-ms.openlocfilehash: 7cc758760075746971dd0d397568c64e7baf8b67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e5cf8a8b280a539feb73a54defbb0cd8c2c0f79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590902"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366646"
 ---
 # <a name="gridview-column-header-styles-and-templates-overview"></a>Übersicht über GridView-Spaltenheaderstile und -Spaltenheadervorlagen
 In dieser Übersicht wird erläutert, die Reihenfolge der Rangfolge für Eigenschaften, mit denen Sie eine Spaltenüberschrift im Anpassen der <xref:System.Windows.Controls.GridView> Ansichtsmodus des eine <xref:System.Windows.Controls.ListView> Steuerelement.  
@@ -36,6 +36,6 @@ In dieser Übersicht wird erläutert, die Reihenfolge der Rangfolge für Eigensc
  <sup>1</sup>für **Vorlage Headereigenschaften**, setzen Sie die Vorlage und den Eigenschaften der Auswahl, die Vorlage Eigenschaft hat Vorrang. Z. B., wenn Sie beide Optionen festlegen der <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> und <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> Eigenschaften, die <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> Eigenschaft austauschverarbeitungsmodi Vorrang vor.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
+- [Übersicht über ListView](listview-overview.md)
+- [Übersicht über GridView](gridview-overview.md)

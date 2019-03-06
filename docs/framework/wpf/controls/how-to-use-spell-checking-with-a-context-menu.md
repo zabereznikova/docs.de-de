@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reenabling spell checking in a text box [WPF]
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-ms.openlocfilehash: 2b6790fd4d5d2e322a46bd98ed19e7b88c4923c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38d41aa6710fd13ffd2a5d13a6900a1a05303f35
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713115"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377806"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Vorgehensweise: Verwenden der Rechtschreibprüfung mit einem Kontextmenü
 Standardmäßig werden beim Aktivieren der Rechtschreibprüfung in einem Bearbeitungssteuerelement wie <xref:System.Windows.Controls.TextBox> oder <xref:System.Windows.Controls.RichTextBox>, erhalten Sie die Optionen im Kontextmenü. Beispielsweise Benutzern ein falsch geschriebenes Wort mit der rechten Maustaste, erhalten sie einen Satz von Rechtschreibvorschläge oder die Option zum **alle ignorieren**. Wenn Sie das Standard-Kontextmenü mit Ihr eigenes benutzerdefiniertes Kontextmenü überschreiben, jedoch dieser Funktionalität verloren gegangen ist, und Sie Code schreiben, um die Rechtschreibprüfung-Funktion im Kontextmenü erneut aktivieren möchten. Das folgende Beispiel zeigt, wie Sie dies aktivieren, auf eine <xref:System.Windows.Controls.TextBox>.  
@@ -22,13 +22,13 @@ Standardmäßig werden beim Aktivieren der Rechtschreibprüfung in einem Bearbei
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] erstellt eine <xref:System.Windows.Controls.TextBox> mit einigen Ereignissen, die verwendet werden, um das Kontextmenü zu implementieren.  
   
- [!code-xaml[TextBoxMiscSnippets_snip#SpellerCustomContextMenuExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/speller_custom_context_menu.xaml#spellercustomcontextmenuexamplewholepage)]  
+ [!code-xaml[TextBoxMiscSnippets_snip#SpellerCustomContextMenuExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/speller_custom_context_menu.xaml#spellercustomcontextmenuexamplewholepage)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt den Code, der das Kontextmenü implementiert.  
   
- [!code-csharp[TextBoxMiscSnippets_snip#SpellerCustomContextMenuCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/speller_custom_context_menu.xaml.cs#spellercustomcontextmenucodeexamplewholepage)]
- [!code-vb[TextBoxMiscSnippets_snip#SpellerCustomContextMenuCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/speller_custom_context_menu.xaml.vb#spellercustomcontextmenucodeexamplewholepage)]  
+ [!code-csharp[TextBoxMiscSnippets_snip#SpellerCustomContextMenuCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/speller_custom_context_menu.xaml.cs#spellercustomcontextmenucodeexamplewholepage)]
+ [!code-vb[TextBoxMiscSnippets_snip#SpellerCustomContextMenuCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/visualbasic/speller_custom_context_menu.xaml.vb#spellercustomcontextmenucodeexamplewholepage)]  
   
  Der Code verwendet hierfür mit einem <xref:System.Windows.Controls.RichTextBox> ist ähnlich. Der Hauptunterschied besteht in der an übergebene Parameter die `GetSpellingError` Methode. Für eine <xref:System.Windows.Controls.TextBox>, übergeben Sie den ganzzahlige Index der Position der Einfügemarke:  
   
@@ -39,7 +39,7 @@ Standardmäßig werden beim Aktivieren der Rechtschreibprüfung in einem Bearbei
  `spellingError = myRichTextBox.GetSpellingError(myRichTextBox.CaretPosition);`  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über TextBox](../../../../docs/framework/wpf/controls/textbox-overview.md)
-- [Übersicht über RichTextBox](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
-- [Aktivieren der Rechtschreibprüfung in einem Textbearbeitungssteuerelement](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)
-- [Verwenden eines benutzerdefinierten Kontextmenüs mit "TextBox"](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)
+- [Übersicht über TextBox](textbox-overview.md)
+- [Übersicht über RichTextBox](richtextbox-overview.md)
+- [Aktivieren der Rechtschreibprüfung in einem Textbearbeitungssteuerelement](how-to-enable-spell-checking-in-a-text-editing-control.md)
+- [Verwenden eines benutzerdefinierten Kontextmenüs mit "TextBox"](how-to-use-a-custom-context-menu-with-a-textbox.md)

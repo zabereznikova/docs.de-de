@@ -7,23 +7,23 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
-ms.openlocfilehash: afc39b0d079bf273170a649f03a3756953c29eea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2f46a548f28cffb1824ffbdc51f8d4d79c4c9d02
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836395"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363695"
 ---
 # <a name="audio-and-video-how-to-topics"></a>Gewusst-wie-Themen zu Audio und Video
 In den folgenden Themen veranschaulichen, wie die <xref:System.Windows.Controls.MediaElement> , audio und video-Inhalte in Ihren Anwendungen zu integrieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Steuern eines MediaElement (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [Steuern eines MediaElement mit einem Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [Auslösen der Medienwiedergabe durch ein Benutzerereignis](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [Wiederholen der Medienwiedergabe](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [Wiedergeben von Medien mit Animationen](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [Verwenden von Transformationen für MediaElement](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+ [Steuern eines MediaElement (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [Steuern eines MediaElement mit einem Storyboard](how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [Auslösen der Medienwiedergabe durch ein Benutzerereignis](how-to-trigger-media-playback-with-a-user-event.md)  
+ [Wiederholen der Medienwiedergabe](how-to-repeat-media-playback.md)  
+ [Wiedergeben von Medien mit Animationen](how-to-play-media-with-animations.md)  
+ [Verwenden von Transformationen für MediaElement](how-to-use-transforms-on-a-mediaelement.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.MediaElement>  
@@ -33,4 +33,4 @@ In den folgenden Themen veranschaulichen, wie die <xref:System.Windows.Controls.
  <xref:System.Windows.Media.MediaTimeline>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafiken und Multimedia](index.md)

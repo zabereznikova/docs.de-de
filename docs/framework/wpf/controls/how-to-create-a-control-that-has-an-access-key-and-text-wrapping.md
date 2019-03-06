@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: bb8379776066802277886b54c60c502ad58768e0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e410b92f90f775471ef5d89365549ccd5bb7f085
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748166"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361901"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Vorgehensweise: Erstellen eines Steuerelements, das über eine Tastenkombination und Textumbruch verfügt
 Diese Beispiel veranschaulicht, wie Sie ein Steuerelement erstellen, das über eine Tastenkombination verfügt und das Umbrechen von Text unterstützt. Im Beispiel wird eine <xref:System.Windows.Controls.Label> Steuerelement zur Veranschaulichung dieser Konzepte.  
@@ -24,7 +24,7 @@ Diese Beispiel veranschaulicht, wie Sie ein Steuerelement erstellen, das über e
   
  Die <xref:System.Windows.Controls.Label> Umbrechen von Text-Steuerelement nicht unterstützt. Wenn sich eine Bezeichnung über mehrere Zeilen erstrecken soll, können Sie ein anderes Element verschachteln, das das Umbrechen von Text unterstützt, und es innerhalb der Bezeichnung platzieren. Das folgende Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Controls.TextBlock> um eine Bezeichnung zu erstellen, die mehrere Zeilen Text umbrochen wird.  
   
- [!code-xaml[LabelSnippet#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
+ [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
  **Hinzufügen von Textumbruch und einer Tastenkombination zu einer Bezeichnung**  
   
@@ -34,7 +34,7 @@ Diese Beispiel veranschaulicht, wie Sie ein Steuerelement erstellen, das über e
   
  Das folgende Beispiel zeigt, wie Sie erstellen eine <xref:System.Windows.Controls.Label> , die über eine Tastenkombination verfügt und Umbrechen von Text unterstützt. So aktivieren Sie den Textumbruch, im Beispiel wird die <xref:System.Windows.Controls.AccessText.TextWrapping%2A> -Eigenschaft und verwendet ein Unterstrich-Zeichen um den Zugriffsschlüssel angeben. (Das Zeichen, das unmittelbar auf den Unterstrich folgt, ist die Tastenkombination.)  
   
- [!code-xaml[LabelSnippet#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
+ [!code-xaml[LabelSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Vorgehensweise: Festlegen der Zieleigenschaft einer Bezeichnung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

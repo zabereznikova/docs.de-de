@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863734"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361186"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Systemeigene WPF-APIs mit Unterstützung für das Hosten in Browsern
 Hosten von [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Anwendungen im Webbrowser wird vereinfacht, indem ein Active Document-Server (auch bekannt als DocObject) aus der WPF-Host registriert. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] können Sie direkt zu aktivieren und mit einem aktiven Dokument zu integrieren. Für das Hosten von XBAPs und loose XAML-Dokumente in Mozilla-Browser, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] bietet ein NPAPI-Plug-in, bietet eine ähnliche Hostingumgebung, die [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] Active Document-Server als [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] ist. Allerdings wird die einfachste praktische Möglichkeit zum Hosten von XBAPs und XAML-Dokumente in anderen Browsern und eigenständige Anwendungen über das Internet Explorer-Webbrowser-Steuerelement ist. Das Webbrowser-Steuerelement stellt die komplexen Active Document-Server-hostumgebung bereit, aber sie können einen eigenen Host anpassen und erweitern diese Umgebung und kommunizieren direkt mit dem aktuellen Active Document-Objekt.  
@@ -32,5 +32,5 @@ enum PresentationHostCommands {
  PHCMDID_TABINTO weist den PresentationHost, um den Fokus auf das erste oder letzte fokussierbare Element in seinem Inhalt, abhängig vom Status der UMSCHALTTASTE zu ändern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)  
- [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)
+ [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
+ [IWpfHostSupport](iwpfhostsupport.md)

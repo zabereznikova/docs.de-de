@@ -14,13 +14,13 @@ Windows Presentation Foundation (WPF) ist ein Benutzeroberflächen-Framework, mi
   
 |||  
 |-|-|  
-|Ich möchte direkt beginnen…|[Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|  
+|Ich möchte direkt beginnen…|[Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](walkthrough-my-first-wpf-desktop-application.md)|  
 |Wie wird die Anwendungsbenutzeroberfläche entworfen?|[Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)|  
-|Neu bei .NET?|[Übersicht über .NET Framework](../../get-started/overview.md)<br /><br /> [Grundlagen der .NET Framework-Anwendung](../../../../docs/standard/application-essentials.md)<br /><br /> [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
-|Weitere Informationen über WPF...|[Einführung in WPF in Visual Studio](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)<br /><br /> [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)<br /><br /> [Steuerelemente](../../../../docs/framework/wpf/controls/index.md)<br /><br /> [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)|  
-|Sind Sie ein Windows Forms-Entwickler?|[Windows Forms-Steuerelemente und entsprechende WPF-Steuerelemente](../../../../docs/framework/wpf/advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Interaktion zwischen WPF und Windows Forms](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)|  
+|Neu bei .NET?|[Übersicht über .NET Framework](../../get-started/overview.md)<br /><br /> [Grundlagen der .NET Framework-Anwendung](../../../standard/application-essentials.md)<br /><br /> [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
+|Weitere Informationen über WPF...|[Einführung in WPF in Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Übersicht über XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Steuerelemente](../controls/index.md)<br /><br /> [Übersicht zur Datenbindung](../data/data-binding-overview.md)|  
+|Sind Sie ein Windows Forms-Entwickler?|[Windows Forms-Steuerelemente und entsprechende WPF-Steuerelemente](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Interaktion zwischen WPF und Windows Forms](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
 ## <a name="see-also"></a>Siehe auch
-- [Klassenbibliothek](../../../../docs/framework/wpf/class-library-wpf.md)
-- [Anwendungsentwicklung](../../../../docs/framework/wpf/app-development/index.md)
+- [Klassenbibliothek](../class-library-wpf.md)
+- [Anwendungsentwicklung](../app-development/index.md)
 - [.NET Framework Developer Center](https://www.microsoft.com/net)

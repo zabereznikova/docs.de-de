@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: 93a04ce55a10f54a6770c279f1773491d7aa463f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740137"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370045"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Vorgehensweise: Änderung der Zeilengröße mit einem GridSplitter
 Dieses Beispiel zeigt, wie Sie mit einer horizontalen <xref:System.Windows.Controls.GridSplitter> erneut zu verteilende den Abstand zwischen zwei Zeilen in einer <xref:System.Windows.Controls.Grid> ohne die Abmessungen des der <xref:System.Windows.Controls.Grid>.  
@@ -23,9 +23,9 @@ Dieses Beispiel zeigt, wie Sie mit einer horizontalen <xref:System.Windows.Contr
   
  Das folgende Beispiel zeigt, wie Sie die Definition eines horizontalen <xref:System.Windows.Controls.GridSplitter> , die angrenzende Zeilen ändert.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterRowOverlay](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterrowoverlay)]  
   
- Ein <xref:System.Windows.Controls.GridSplitter> , das ist eine eigene Zeile nicht belegen kann von anderen Steuerelementen im verdeckt werden die <xref:System.Windows.Controls.Grid>. Weitere Informationen zum Vermeiden dieses Problems finden Sie unter [Sicherstellen, dass ein GridSplitter sichtbar ist](../../../../docs/framework/wpf/controls/how-to-make-sure-that-a-gridsplitter-is-visible.md).  
+ Ein <xref:System.Windows.Controls.GridSplitter> , das ist eine eigene Zeile nicht belegen kann von anderen Steuerelementen im verdeckt werden die <xref:System.Windows.Controls.Grid>. Weitere Informationen zum Vermeiden dieses Problems finden Sie unter [Sicherstellen, dass ein GridSplitter sichtbar ist](how-to-make-sure-that-a-gridsplitter-is-visible.md).  
   
  **Erstellen eines GridSplitter-Elements, das eine Zeile einnimmt**  
   
@@ -33,9 +33,9 @@ Dieses Beispiel zeigt, wie Sie mit einer horizontalen <xref:System.Windows.Contr
   
  Das folgende Beispiel zeigt, wie Sie die Definition eines horizontalen <xref:System.Windows.Controls.GridSplitter> , die eine Zeile einnimmt und die Zeilen auf beiden Seiten davon ändert.  
   
- [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
-[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
+ [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart1)]  
+[!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Controls.GridSplitter>
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)
+- [Themen zu Vorgehensweisen](gridsplitter-how-to-topics.md)

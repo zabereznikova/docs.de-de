@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], RepeatButton
 - RepeatButton control [WPF]
 ms.assetid: 5702b603-95e6-438a-88c0-76509367e876
-ms.openlocfilehash: 4dff6497fe6d6483b12d09b6dc84fdb0f2fbd95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1eaaaae2e42bc366d6859ad72a90b149341eef0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555006"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367147"
 ---
 # <a name="repeatbutton"></a>RepeatButton
-Die <xref:System.Windows.Controls.Primitives.RepeatButton> ähnelt einer <xref:System.Windows.Controls.Button>. Allerdings <xref:System.Windows.Controls.Primitives.RepeatButton> -Elementen können Sie, wann steuern und wie sich das <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis auftritt.  
+Die <xref:System.Windows.Controls.Primitives.RepeatButton> ähnelt einem <xref:System.Windows.Controls.Button>. Allerdings <xref:System.Windows.Controls.Primitives.RepeatButton> Elemente bieten, die Ihnen die Kontrolle darüber, wann und wie die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis auftritt.  
   
- Die folgende Abbildung zeigt ein Beispiel für die drei Zustände einer Wiederholung Button-Steuerelement, Default-, PointerFocused und gedrückt. Die erste Schaltfläche zeigt den Standardzustand des der <xref:System.Windows.Controls.Primitives.RepeatButton>. Das zweite Beispiel zeigt wie die Darstellung der Schaltfläche ändert, wenn der Mauszeiger bewegt wird, über die Schaltfläche "", und geben sie Ihnen den Fokus. Die dritte Schaltfläche zeigt die Darstellung der <xref:System.Windows.Controls.Primitives.RepeatButton> Wenn der Benutzer die Maustaste über dem Steuerelement drückt.  
+ Die folgende Grafik zeigt ein Beispiel für die drei Zustände einer wiederholen Schaltflächen-Steuerelement, Standard, PointerFocused und gedrückt. Die erste Schaltfläche zeigt den Standardzustand der <xref:System.Windows.Controls.Primitives.RepeatButton>. Das zweite zeigt wie die Darstellung der Schaltfläche ändert, wenn der Mauszeiger auf die Schaltfläche gezeigt wird, sodass der Fokus darauf. Die dritte Schaltfläche zeigt die Darstellung der <xref:System.Windows.Controls.Primitives.RepeatButton> Wenn der Benutzer drückt die Maustaste über dem Steuerelement.  
   
- ![Wiederholen Sie die Schaltflächenzuständen](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
-Typische RepeatButton  
+ ![Wiederholen Sie die Schaltflächenzustände](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
+Typische RepeatButton-Elements  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

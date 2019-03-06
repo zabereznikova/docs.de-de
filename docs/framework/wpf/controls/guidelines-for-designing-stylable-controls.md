@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545029"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352983"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Richtlinien zum Entwerfen formatierbarer Steuerelemente
 Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksichtigen sind, wenn Sie ein Steuerelement erstellen, das einfach zu formatieren ist und damit bequem Vorlagen damit erstellt werden können. Wir kamen durch Experimentieren zu dieser Reihe bewährter Methoden, während wir an Steuerelementstilen für Designs für die integrierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente gearbeitet haben. Wir haben gelernt, dass die erfolgreiche Formatierung genau so eine Funktion eines gut strukturierten Objektmodells ist wie für den Stil selbst. Die Zielgruppe für dieses Dokument sind die Autoren des Steuerelements und nicht der Autoren der Stile.  
@@ -27,7 +27,7 @@ Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksic
   
 -   Datenvorlagen.  
   
- Eine Einführung zum Beispiel zu Stilen und Vorlagen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Eine Einführung zum Beispiel zu Stilen und Vorlagen finden Sie unter [Erstellen von Formaten und Vorlagen](styling-and-templating.md).  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>Bevor Sie beginnen: Verstehen des Steuerelements  
@@ -119,5 +119,5 @@ Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksic
 -   **Designstile müssen nicht über konsistente „Layoutsemantik“ über allen Designs verfügen**. Das Standardformat muss z.B: nicht garantieren, dass ein Steuerelement die gleiche Größe in allen Designs übernimmt oder dass ein Steuerelement über dieselben Ränder/Abstände des Inhalts in allen Designs verfügt.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Übersicht über das Erstellen von Steuerelementen](control-authoring-overview.md)

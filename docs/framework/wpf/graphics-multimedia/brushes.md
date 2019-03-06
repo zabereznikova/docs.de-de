@@ -8,24 +8,24 @@ helpviewer_keywords:
 - painting [WPF]
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
-ms.openlocfilehash: 2ebb4553ed55e89cb0b7acf6336f21b422d4753f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557263"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366724"
 ---
 # <a name="brushes"></a>Pinsel
-In den folgenden Themen wird beschrieben, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel zum Inhalt auf dem Bildschirm "Zeichnen"  
+In den folgenden Themen wird beschrieben, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel auf "Inhalt auf dem Bildschirm gezeichnet werden soll"  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über WPF-Pinsel](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [Übersicht über Pinseltransformationen](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [Übersicht über Durchlässigkeitsmasken](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Übersicht über TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [Übersicht über WPF-Pinsel](wpf-brushes-overview.md)  
+ [Übersicht über Pinseltransformationen](brush-transformation-overview.md)  
+ [Übersicht über Durchlässigkeitsmasken](opacity-masks-overview.md)  
+ [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md)  
+ [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)  
+ [Übersicht über TileBrush](tilebrush-overview.md)  
+ [Themen zu Vorgehensweisen](brushes-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Media.Brush>  
@@ -41,6 +41,6 @@ In den folgenden Themen wird beschrieben, wie [!INCLUDE[TLA#tla_winclient](../..
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Grafiken und Multimedia](index.md)  
   
- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Übersicht über das WPF-Grafikrendering](wpf-graphics-rendering-overview.md)

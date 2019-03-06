@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: eaaa8ad5273331941bc6915231460100e8ac24b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646239"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365567"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Erste Schritte mit Freihandeingaben in WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) ist ein Freihand-Feature, das es einfach m
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Verwenden Sie die folgenden Beispielen wird zuerst [installieren Sie Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Außerdem können wissen, wie Sie einfache WPF-apps zu schreiben. Erste Schritte mit WPF Hilfe finden Sie [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Verwenden Sie die folgenden Beispielen wird zuerst [installieren Sie Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Außerdem können wissen, wie Sie einfache WPF-apps zu schreiben. Erste Schritte mit WPF Hilfe finden Sie [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Schnellstart
 
@@ -42,7 +42,7 @@ Zum Erstellen einer WPF-app, die Freihandeingaben unterstützt:
 
 3. Typ `<InkCanvas/>` zwischen der `<Grid>` Tags.
 
-   ![XAML-Designer mit InkCanvas-Steuerelement-tag](media/getting-started-with-ink/inkcanvas-xaml.png)
+   ![XAML-Designer mit InkCanvas-Steuerelement-tag](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
 4. Drücken Sie **F5** auf die Anwendung im Debugger zu starten.
 
@@ -70,7 +70,7 @@ Lassen Sie uns einige Funktionen von WPF nutzen. Ersetzen Sie alles zwischen den
 
 Dieses XAML erstellt einen Farbverlaufspinsel-Hintergrund für die Freihandoberfläche.
 
-![Verlaufsfarben auf Freihand-Oberfläche in WPF-app](media/getting-started-with-ink/gradient-colors.png)
+![Verlaufsfarben auf Freihand-Oberfläche in WPF-app](./media/getting-started-with-ink/gradient-colors.png)
 
 ### <a name="add-some-code-behind-the-xaml"></a>Hinzufügen von Code hinter der XAML
 
@@ -78,12 +78,12 @@ Während der XAML sehr Entwerfen der Benutzeroberfläche erleichtert, muss jeder
 
 1. Legen Sie die `MouseRightButtonUp` Ereignishandler in Ihrem XAML:
 
-   [!code-xaml[DigitalInkTopics#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
+   [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
 1. In **Projektmappen-Explorer**, erweitern Sie "MainWindow.xaml", und öffnen Sie die CodeBehind-Datei ("MainWindow.Xaml.cs" oder "MainWindow.Xaml.vb"). Fügen Sie den folgenden Ereignishandlercode hinzu:
 
-   [!code-csharp[DigitalInkTopics#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
-   [!code-vb[DigitalInkTopics#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
+   [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
+   [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
 1. Führen Sie die Anwendung aus. Einige Freihandeingaben, und klicken Sie dann mit der rechten Maustaste, oder führen Sie ein Äquivalent drücken und halten mit einem Stift.
 
@@ -99,18 +99,18 @@ Sie können alle WPF-Funktionen aus prozeduralen Code zugreifen. Um eine "Hello 
 
 1. Fügen Sie den folgenden Code in der Datei Program.cs oder Program.vb-Datei ein:
 
-   [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
-   [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
+   [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
+   [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
 1. Fügen Sie Verweise auf die Assemblys PresentationCore, PresentationFramework und WindowsBase hinzu, indem Sie mit der rechten Maustaste auf **Verweise** in **Projektmappen-Explorer** und **VerweisHinzufügen**.
 
-   ![Verweis-Manager angezeigt wird, PresentationCore und PresentationFramework getrennt](media/getting-started-with-ink/references.png)
+   ![Verweis-Manager angezeigt wird, PresentationCore und PresentationFramework getrennt](./media/getting-started-with-ink/references.png)
 
 1. Erstellen Sie die Anwendung durch Drücken von **F5**.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Freihandeingaben](../../../../docs/framework/wpf/advanced/digital-ink.md)
-- [Erfassen von Freihandeingaben](../../../../docs/framework/wpf/advanced/collecting-ink.md)
-- [Schrifterkennung](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)
-- [Speichern von Eingabehilfen](../../../../docs/framework/wpf/advanced/storing-ink.md)
+- [Freihandeingaben](digital-ink.md)
+- [Erfassen von Freihandeingaben](collecting-ink.md)
+- [Schrifterkennung](handwriting-recognition.md)
+- [Speichern von Eingabehilfen](storing-ink.md)

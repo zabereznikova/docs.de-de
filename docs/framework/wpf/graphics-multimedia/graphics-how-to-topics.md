@@ -8,23 +8,23 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 63f268692924db94710d4aa21ff6f03b00989f67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688209"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358787"
 ---
 # <a name="graphics-how-to-topics"></a>Gewusst-wie-Themen zu Grafiken
 In den folgenden Themen veranschaulichen, wie die Grafiken Funktionen des die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Animieren eines Rechtecks](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle.md)  
- [Animieren der Position eines Objekts mit Punktanimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [Transformieren von Punkten und Vektoren](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-points-and-vectors.md)  
- [Erweitern von Glasframe in eine WPF-Anwendung](../../../../docs/framework/wpf/graphics-multimedia/extend-glass-frame-into-a-wpf-application.md)  
- [Vorgehensweise: Verbessern der Renderingleistung durch Zwischenspeichern eines Elements](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)  
- [Vorgehensweise: Verwenden eines zwischengespeicherten Elements als Pinsel](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-cached-element-as-a-brush.md)  
+ [Animieren eines Rechtecks](how-to-animate-a-rectangle.md)  
+ [Animieren der Position eines Objekts mit Punktanimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [Transformieren von Punkten und Vektoren](how-to-transform-points-and-vectors.md)  
+ [Erweitern von Glasframe in eine WPF-Anwendung](extend-glass-frame-into-a-wpf-application.md)  
+ [Vorgehensweise: Verbessern der Renderingleistung durch Zwischenspeichern eines Elements](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [Vorgehensweise: Verwenden eines zwischengespeicherten Elements als Pinsel](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Shapes.Shape>
@@ -34,5 +34,5 @@ In den folgenden Themen veranschaulichen, wie die Grafiken Funktionen des die [!
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Grafiken und Multimedia](index.md)
+- [Übersicht über das WPF-Grafikrendering](wpf-graphics-rendering-overview.md)

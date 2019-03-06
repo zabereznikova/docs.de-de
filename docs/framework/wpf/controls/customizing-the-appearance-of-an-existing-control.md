@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: f8802ae00de2bdb87e4e47fb82f6ebdf2108e2a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547292"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375102"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
 <a name="introduction"></a> Ein <xref:System.Windows.Controls.ControlTemplate> gibt an, die visuelle Struktur und das visuelle Verhalten eines Steuerelements. Sie können die Darstellung eines Steuerelements anpassen, indem Sie erhalten ein neues <xref:System.Windows.Controls.ControlTemplate>. Bei der Erstellung einer <xref:System.Windows.Controls.ControlTemplate>, ersetzen Sie die Darstellung eines vorhandenen Steuerelements, ohne seine Funktionalität zu ändern. Angenommen, Sie können festlegen, dass die Schaltflächen in Ihrer Anwendung rund und nicht standardmäßig quadratisch, die Schaltfläche wird jedoch trotzdem ausgelöst der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
@@ -26,16 +26,16 @@ ms.locfileid: "54547292"
   
  Die folgenden Abbildungen zeigen ein <xref:System.Windows.Controls.Button> , verwendet der <xref:System.Windows.Controls.ControlTemplate> , die in diesem Thema erstellt wird.  
   
- ![Schaltfläche mit einer benutzerdefinierten Steuerelementvorlage. ](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![Schaltfläche mit einer benutzerdefinierten Steuerelementvorlage. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet  
   
- ![Eine Schaltfläche mit einem roten Rahmen. ](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![Eine Schaltfläche mit einem roten Rahmen. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, und über der sich ein Mauszeiger befindet.  
   
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Erforderliche Voraussetzungen  
- Es wird vorausgesetzt, dass Sie sich mit dem Erstellen und mit der Verwendung von Steuerelementen und Formaten auskennen. Anweisungen dazu finden Sie unter [Steuerelemente](../../../../docs/framework/wpf/controls/index.md). Die in diesem Thema erläuterten Konzepte für Elemente, die von erben die <xref:System.Windows.Controls.Control> -Klasse, mit Ausnahme der <xref:System.Windows.Controls.UserControl>. Sie können nicht angewendet werden eine <xref:System.Windows.Controls.ControlTemplate> auf eine <xref:System.Windows.Controls.UserControl>.  
+ Es wird vorausgesetzt, dass Sie sich mit dem Erstellen und mit der Verwendung von Steuerelementen und Formaten auskennen. Anweisungen dazu finden Sie unter [Steuerelemente](index.md). Die in diesem Thema erläuterten Konzepte für Elemente, die von erben die <xref:System.Windows.Controls.Control> -Klasse, mit Ausnahme der <xref:System.Windows.Controls.UserControl>. Sie können nicht angewendet werden eine <xref:System.Windows.Controls.ControlTemplate> auf eine <xref:System.Windows.Controls.UserControl>.  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
 ## <a name="when-you-should-create-a-controltemplate"></a>Der richtige Zeitpunkt für das Erstellen einer ControlTemplate  
@@ -47,12 +47,12 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
   
  Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.CheckBox> , verwendet den Standardwert <xref:System.Windows.Controls.ControlTemplate>.  
   
- ![Kontrollkästchen mit der Standardsteuerelementvorlage. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
+ ![Kontrollkästchen mit der Standardsteuerelementvorlage. ](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Ein Kontrollkästchen, das die Standardsteuerelementvorlage verwendet  
   
  Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.CheckBox> , verwendet eine benutzerdefinierte <xref:System.Windows.Controls.ControlTemplate> , platzieren den Inhalt des der <xref:System.Windows.Controls.CheckBox> oberhalb der Auswahlindikator, und zeigt ein "X" bei der <xref:System.Windows.Controls.CheckBox> ausgewählt ist.  
   
- ![Kontrollkästchen mit einer benutzerdefinierten Steuerelementvorlage. ](../../../../docs/framework/wpf/controls/media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
+ ![Kontrollkästchen mit einer benutzerdefinierten Steuerelementvorlage. ](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
 Ein Kontrollkästchen, das eine benutzerdefinierte Steuerelementvorlage verwendet  
   
  Die <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.CheckBox> in diesem Beispiel ist relativ komplex, daher wird verwendet, in diesem Thema ein einfacheres Beispiel zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.Button>.  
@@ -71,14 +71,14 @@ Ein Kontrollkästchen, das eine benutzerdefinierte Steuerelementvorlage verwende
   
 -   Ein <xref:System.Windows.Controls.ContentPresenter> , die den Inhalt der Schaltfläche anzeigt. Die <xref:System.Windows.Controls.ContentPresenter> können beliebige Objekte angezeigt werden.  
   
- [!code-xaml[VSMButtonTemplate#BasicTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
+ [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
 ### <a name="preserving-the-functionality-of-a-controls-properties-by-using-templatebinding"></a>Beibehalten der Funktionalität von Steuerelementeigenschaften durch die Verwendung von TemplateBinding  
- Beim Erstellen einer neuen <xref:System.Windows.Controls.ControlTemplate>, trotzdem möchten die öffentlichen Eigenschaften verwenden, um die Darstellung des Steuerelements zu ändern. Die [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) Markuperweiterung bindet eine Eigenschaft eines Elements, das in der <xref:System.Windows.Controls.ControlTemplate> eine öffentliche Eigenschaft, die vom Steuerelement definiert ist. Bei der Verwendung von [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) können Steuerelementeigenschaften als Parameter der Vorlage fungieren. D.h., beim Festlegen einer Steuerelementeigenschaft wird dieser Wert an das Element mit [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) übergeben.  
+ Beim Erstellen einer neuen <xref:System.Windows.Controls.ControlTemplate>, trotzdem möchten die öffentlichen Eigenschaften verwenden, um die Darstellung des Steuerelements zu ändern. Die [TemplateBinding](../advanced/templatebinding-markup-extension.md) Markuperweiterung bindet eine Eigenschaft eines Elements, das in der <xref:System.Windows.Controls.ControlTemplate> eine öffentliche Eigenschaft, die vom Steuerelement definiert ist. Bei der Verwendung von [TemplateBinding](../advanced/templatebinding-markup-extension.md) können Steuerelementeigenschaften als Parameter der Vorlage fungieren. D.h., beim Festlegen einer Steuerelementeigenschaft wird dieser Wert an das Element mit [TemplateBinding](../advanced/templatebinding-markup-extension.md) übergeben.  
   
- Im folgende Beispiel wird der Teil des vorherigen Beispiels, das verwendet wiederholt die [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) Markup Extension, um die Eigenschaften von Elementen zu binden, die in der <xref:System.Windows.Controls.ControlTemplate> an öffentliche Eigenschaften, die von der Schaltfläche definiert sind.  
+ Im folgende Beispiel wird der Teil des vorherigen Beispiels, das verwendet wiederholt die [TemplateBinding](../advanced/templatebinding-markup-extension.md) Markup Extension, um die Eigenschaften von Elementen zu binden, die in der <xref:System.Windows.Controls.ControlTemplate> an öffentliche Eigenschaften, die von der Schaltfläche definiert sind.  
   
- [!code-xaml[VSMButtonTemplate#TemplateBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
+ [!code-xaml[VSMButtonTemplate#TemplateBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
   
  In diesem Beispiel die <xref:System.Windows.Controls.Grid> hat seine <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> eigenschaftsvorlage gebunden <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>. Da <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> ist vorlagengebunden ist, können Sie mehrere Schaltflächen, die die gleiche erstellen <xref:System.Windows.Controls.ControlTemplate> und legen Sie die <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> auf jede Schaltfläche unterschiedliche Werte. Wenn <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> wurde keine Vorlage gebunden an eine Eigenschaft eines Elements in der <xref:System.Windows.Controls.ControlTemplate>wird durch das Festlegen der <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> einer Schaltfläche würde haben keine Auswirkung auf die Darstellung der Schaltfläche.  
   
@@ -112,11 +112,11 @@ Ein Kontrollkästchen, das eine benutzerdefinierte Steuerelementvorlage verwende
   
  Das folgende Beispiel erstellt zwei Schaltflächen, mit denen die <xref:System.Windows.Controls.ControlTemplate> im vorherigen Beispiel definiert. Im Beispiel wird die <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, und <xref:System.Windows.Controls.Control.FontSize%2A> Eigenschaften für jede Schaltfläche. Festlegen der <xref:System.Windows.Controls.Control.Background%2A> Eigenschaft hat Auswirkungen, da er vorlagengebunden ist die <xref:System.Windows.Controls.ControlTemplate>. Obwohl die <xref:System.Windows.Controls.Control.Foreground%2A> und <xref:System.Windows.Controls.Control.FontSize%2A> Eigenschaften nicht vorlagengebunden sind, diese Einstellung hat Auswirkungen, da ihre Werte geerbt werden.  
   
- [!code-xaml[VSMButtonTemplate#ButtonDeclaration](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
+ [!code-xaml[VSMButtonTemplate#ButtonDeclaration](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
   
  Das Ergebnis des vorhergehenden Beispiels ähnelt der folgenden Abbildung.  
   
- ![Zwei Schaltflächen, eine blaue und eine violette. ](../../../../docs/framework/wpf/controls/media/ndp-buttontwo.png "NDP_ButtonTwo")  
+ ![Zwei Schaltflächen, eine blaue und eine violette. ](./media/ndp-buttontwo.png "NDP_ButtonTwo")  
 Zwei Schaltflächen mit unterschiedlichen Hintergrundfarben  
   
 <a name="changing_the_appearance_of_a_control_depending_on_its_state"></a>   
@@ -127,7 +127,7 @@ Zwei Schaltflächen mit unterschiedlichen Hintergrundfarben
   
  Das folgende Beispiel zeigt die <xref:System.Windows.VisualState> , ändert es sich um die Darstellung einer <xref:System.Windows.Controls.Button> Wenn der Mauszeiger darüber befindet. Die <xref:System.Windows.Media.Animation.Storyboard> ändert die Rahmenfarbe der Schaltfläche durch Ändern der Farbe der `BorderBrush`. Wenn Sie in finden der <xref:System.Windows.Controls.ControlTemplate> Beispiel am Anfang dieses Themas, erinnern Sie sich `BorderBrush` ist der Name des der <xref:System.Windows.Media.SolidColorBrush> , zugewiesen ist die <xref:System.Windows.Controls.Border.Background%2A> von der <xref:System.Windows.Controls.Border>.  
   
- [!code-xaml[VSMButtonTemplate#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
+ [!code-xaml[VSMButtonTemplate#4](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
   
  Die Zustände werden für ein Steuerelement innerhalb des Steuerelementvertrags definiert. Weitere Informationen diesbezüglich finden Sie im weiteren Verlauf dieses Themas unter [Anpassen von anderen Steuerelementen mit Steuerelementverträgen](#customizing_other_controls_by_understanding_the_control_contract). Die folgende Tabelle enthält die Zustände, die für die angegeben sind die <xref:System.Windows.Controls.Button>.  
   
@@ -147,20 +147,20 @@ Zwei Schaltflächen mit unterschiedlichen Hintergrundfarben
 > [!NOTE]
 >  Werden Sie sicher, dass die <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> angefügte Eigenschaft im Stammelement <xref:System.Windows.FrameworkElement> von der <xref:System.Windows.Controls.ControlTemplate>.  
   
- [!code-xaml[VSMButtonTemplate#VisualStates](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
+ [!code-xaml[VSMButtonTemplate#VisualStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
   
  Das Ergebnis des vorhergehenden Beispiels ähnelt den folgenden Abbildungen.  
   
- ![Schaltfläche mit einer benutzerdefinierten Steuerelementvorlage. ](../../../../docs/framework/wpf/controls/media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+ ![Schaltfläche mit einer benutzerdefinierten Steuerelementvorlage. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
 Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet  
   
- ![Eine Schaltfläche mit einem roten Rahmen. ](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+ ![Eine Schaltfläche mit einem roten Rahmen. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, wenn darüber sich der Mauszeiger befindet  
   
- ![Der Rahmen ist auf die Schaltfläche transparent. ](../../../../docs/framework/wpf/controls/media/ndp-buttonpressed.png "NDP_ButtonPressed")  
+ ![Der Rahmen ist auf die Schaltfläche transparent. ](./media/ndp-buttonpressed.png "NDP_ButtonPressed")  
 Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, wenn sie gedrückt wird  
   
- Die visuellen Zustände für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente finden Sie unter [Steuerelementformate und -vorlagen](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
+ Die visuellen Zustände für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente finden Sie unter [Steuerelementformate und -vorlagen](control-styles-and-templates.md).  
   
 <a name="specifying_the_behavior_of_a_control_when_it_transitions_between_states"></a>   
 ## <a name="specifying-the-behavior-of-a-control-when-it-transitions-between-states"></a>Festlegen des Steuerelementverhaltens beim Wechsel zwischen Zuständen  
@@ -177,12 +177,12 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
 ### <a name="specifying-the-duration-of-a-transition"></a>Festlegen der Dauer eines Übergangs  
  Sie können angeben, wie lange dauert ein Übergang durch Festlegen der <xref:System.Windows.VisualTransition.GeneratedDuration%2A> Eigenschaft. Im vorherige Beispiel wurde eine <xref:System.Windows.VisualState> , der angibt, dass der Rahmen der Schaltfläche wird transparent, wenn die Schaltfläche gedrückt wird, aber die Animation erfordert zu viel Zeit erkennbar, wenn die schnell gedrückt und losgelassen wird. Sie können eine <xref:System.Windows.VisualTransition> an die Zeitspanne, während das Steuerelement für den Übergang in den gedrückten Zustand dauert. Im folgenden Beispiel wird die Zeitspanne für den Übergang in den gedrückten Zustand auf eine Hundertstelsekunde festgelegt.  
   
- [!code-xaml[VSMButtonTemplate#PressedTransition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
+ [!code-xaml[VSMButtonTemplate#PressedTransition](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
   
 ### <a name="specifying-changes-to-the-controls-appearance-during-a-transition"></a>Festlegen von Änderungen an der Darstellung der Steuerelemente während eines Übergangs  
  Die <xref:System.Windows.VisualTransition> enthält eine <xref:System.Windows.Media.Animation.Storyboard> , beginnt, wenn das Steuerelement den Zustand wechselt. Sie können beispielsweise eine bestimmte Animation festlegen, die bei einem Übergang aus dem Zustand `MouseOver` in den Zustand `Normal` angezeigt wird. Das folgende Beispiel erstellt eine <xref:System.Windows.VisualTransition> , der angibt, dass wenn der Benutzer den Mauszeiger von der Schaltfläche weg bewegt, der Rahmen der Schaltfläche blau über Gelb und dann auf Schwarz festgelegt, in 1,5 Sekunden.  
   
- [!code-xaml[VSMButtonTemplate#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
+ [!code-xaml[VSMButtonTemplate#8](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
   
 ### <a name="specifying-when-a-visualtransition-is-applied"></a>Festlegen der Bedingungen für einen visuellen Übergang  
  Ein <xref:System.Windows.VisualTransition> beschränkt auf bestimmte Zustände angewendet werden, oder auch jedes Mal, wenn Übergänge zwischen Zuständen. Im vorherigen Beispiel der <xref:System.Windows.VisualTransition> wird angewendet, wenn das Steuerelement von wird die `MouseOver` Zustand der `Normal` Zustand im Beispiel müssen Sie zuerst die <xref:System.Windows.VisualTransition> wird angewendet, wenn das Steuerelement in den die `Pressed` Zustand. Schränken Sie ein <xref:System.Windows.VisualTransition> angewendet wird, durch Festlegen der <xref:System.Windows.VisualTransition.To%2A> und <xref:System.Windows.VisualTransition.From%2A> Eigenschaften. In der folgenden Tabelle sind die Beschränkungsebenen aufgelistet, von der restriktivsten bis zu der am wenigsten restriktiven.  
@@ -196,7 +196,7 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
   
  Sie haben mehrere <xref:System.Windows.VisualTransition> Objekte in einer <xref:System.Windows.VisualStateGroup> , die in denselben Zustand verweisen, aber sie in der Reihenfolge, der angibt, die vorherige Tabelle verwendet werden. Im folgenden Beispiel werden zwei <xref:System.Windows.VisualTransition> Objekte. Wenn das Steuerelement wechselt von der `Pressed` Zustand der `MouseOver` Zustand der <xref:System.Windows.VisualTransition> , bei dem beide <xref:System.Windows.VisualTransition.From%2A> und <xref:System.Windows.VisualTransition.To%2A> Satz wird verwendet. Wenn das Steuerelement von einem anderen Zustand als `Pressed` in den Zustand `MouseOver` wechselt, wird der andere Zustand verwendet.  
   
- [!code-xaml[VSMButtonTemplate#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
+ [!code-xaml[VSMButtonTemplate#7](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
   
  Die <xref:System.Windows.VisualStateGroup> verfügt über eine <xref:System.Windows.VisualStateGroup.Transitions%2A> -Eigenschaft, enthält die <xref:System.Windows.VisualTransition> Objekte, die zum Anwenden der <xref:System.Windows.VisualState> Objekte in der <xref:System.Windows.VisualStateGroup>. Als die <xref:System.Windows.Controls.ControlTemplate> Autor, Sie sind frei, um Sie einzubeziehen <xref:System.Windows.VisualTransition> werden sollen. Jedoch, wenn die <xref:System.Windows.VisualTransition.To%2A> und <xref:System.Windows.VisualTransition.From%2A> Eigenschaften festgelegt werden, um Namen, die nicht in der <xref:System.Windows.VisualStateGroup>, die <xref:System.Windows.VisualTransition> wird ignoriert.  
   
@@ -210,7 +210,7 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
   
 -   Aus dem Zustand `MouseOver` in den Zustand `Normal`.  
   
- [!code-xaml[VSMButtonTemplate#VisualTransitions](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
+ [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
 <a name="customizing_other_controls_by_understanding_the_control_contract"></a>   
 ## <a name="customizing-other-controls-by-understanding-the-control-contract"></a>Anpassen von anderen Steuerelementen mit Steuerelementverträgen  
@@ -229,25 +229,25 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
   
  Das folgende Beispiel zeigt die <xref:System.Windows.TemplatePartAttribute> Objekte, die auf angegeben sind die <xref:System.Windows.Controls.ComboBox> Klasse. Die Logik der <xref:System.Windows.Controls.ComboBox> davon ausgeht, eine <xref:System.Windows.Controls.TextBox> mit dem Namen `PART_EditableTextBox` und <xref:System.Windows.Controls.Primitives.Popup> mit dem Namen `PART_Popup` in seine <xref:System.Windows.Controls.ControlTemplate>.  
   
- [!code-csharp[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
- [!code-vb[VSMButtonTemplate#ComboBoxContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
+ [!code-csharp[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
+ [!code-vb[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
   
  Das folgende Beispiel zeigt eine vereinfachte <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.ComboBox> , enthält die Elemente, die vom angegebenen die <xref:System.Windows.TemplatePartAttribute> Objekte auf der <xref:System.Windows.Controls.ComboBox> Klasse.  
   
- [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
+ [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
   
 ### <a name="states-in-the-control-contract"></a>Zustände im Steuerelementvertrag  
  Die Zustände eines Steuerelements sind ebenfalls Teil des Steuerelementvertrags. Das Beispiel zum Erstellen einer <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.Button> wird gezeigt, wie die Darstellung der an eine <xref:System.Windows.Controls.Button> Abhängigkeit von seinen Zuständen. Sie erstellen eine <xref:System.Windows.VisualState> für jeden Zustand angegebenen und versetzen Sie alle <xref:System.Windows.VisualState> Objekte von dieser Freigabe eine <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> in einer <xref:System.Windows.VisualStateGroup>, wie in beschrieben [Ändern der Darstellung des Steuerelements in Abhängigkeit von dessen Zustand](#changing_the_appearance_of_a_control_depending_on_its_state) weiter oben in diesem In diesem Thema. Steuerelemente von Drittanbietern sollten Zustände angeben, indem die <xref:System.Windows.TemplateVisualStateAttribute>, wodurch Designertools, z.B. Expression Blend, um die Zustände des Steuerelements für das Erstellen von Steuerelementvorlagen verfügbar zu machen.  
   
- Den Steuerelementvertrag für Steuerelemente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] finden Sie unter [Steuerelementformate und -vorlagen](../../../../docs/framework/wpf/controls/control-styles-and-templates.md).  
+ Den Steuerelementvertrag für Steuerelemente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] finden Sie unter [Steuerelementformate und -vorlagen](control-styles-and-templates.md).  
   
 ### <a name="properties-in-the-control-contract"></a>Eigenschaften im Steuerelementvertrag  
- Die öffentlichen Eigenschaften, die sich auf das Steuerelement visuell auswirken, sind ebenfalls im Steuerelementvertrag enthalten. Sie können diese Eigenschaften, die Darstellung des Steuerelements zu ändern, ohne das Erstellen eines neuen festlegen <xref:System.Windows.Controls.ControlTemplate>. Können Sie auch die [TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md) Markup Extension, um die Eigenschaften von Elementen zu binden, die in der <xref:System.Windows.Controls.ControlTemplate> an öffentliche Eigenschaften, die von definiert sind die <xref:System.Windows.Controls.Button>.  
+ Die öffentlichen Eigenschaften, die sich auf das Steuerelement visuell auswirken, sind ebenfalls im Steuerelementvertrag enthalten. Sie können diese Eigenschaften, die Darstellung des Steuerelements zu ändern, ohne das Erstellen eines neuen festlegen <xref:System.Windows.Controls.ControlTemplate>. Können Sie auch die [TemplateBinding](../advanced/templatebinding-markup-extension.md) Markup Extension, um die Eigenschaften von Elementen zu binden, die in der <xref:System.Windows.Controls.ControlTemplate> an öffentliche Eigenschaften, die von definiert sind die <xref:System.Windows.Controls.Button>.  
   
  Das folgende Beispiel zeigt den Steuerelementvertrag für die Schaltfläche.  
   
- [!code-csharp[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
- [!code-vb[VSMButtonTemplate#ButtonContract](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
+ [!code-csharp[VSMButtonTemplate#ButtonContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
+ [!code-vb[VSMButtonTemplate#ButtonContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
   
  Beim Erstellen einer <xref:System.Windows.Controls.ControlTemplate>, es ist häufig am einfachsten, beginnen mit einem vorhandenen <xref:System.Windows.Controls.ControlTemplate> und Änderungen vornehmen. Führen Sie eine der folgenden zum Ändern einer vorhandenen <xref:System.Windows.Controls.ControlTemplate>:  
   
@@ -259,7 +259,7 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
 ## <a name="complete-example"></a>Vollständiges Beispiel  
  Das folgende Beispiel zeigt die vollständige <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> , die in diesem Thema erläutert wird.  
   
- [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
+ [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 1bee47ed5294af66bcaa45254105c00d825042ad
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 2685be197d6b47cf174c5fbd062bd3c37a19f5eb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746058"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356909"
 ---
 # <a name="scrollviewer-overview"></a>Übersicht über ScrollViewer
 Der Inhalt einer Benutzeroberfläche ist häufig größer als der Anzeigebereich eines Computerbildschirms. Die <xref:System.Windows.Controls.ScrollViewer> Steuerelement bietet eine bequeme Möglichkeit zum Scrollen durch Inhalte in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen. In diesem Thema werden die <xref:System.Windows.Controls.ScrollViewer> Element und mehrere Verwendungsbeispiele vorgestellt.  
@@ -38,33 +38,33 @@ Der Inhalt einer Benutzeroberfläche ist häufig größer als der Anzeigebereich
   
  Im folgenden Codebeispiel wird veranschaulicht, wie eine Instanz der umzuwandelnde <xref:System.Windows.Controls.Primitives.IScrollInfo> zu einem <xref:System.Windows.Controls.StackPanel> und Inhalt verwenden (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> und <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) von der Schnittstelle definiert.  
   
- [!code-csharp[IScrollInfoMethods#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
- [!code-vb[IScrollInfoMethods#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
+ [!code-csharp[IScrollInfoMethods#3](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[IScrollInfoMethods#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
 <a name="scrollviewer_markup_syntax_and_sample"></a>   
 ## <a name="defining-and-using-a-scrollviewer-element"></a>Definieren und Verwenden eines ScrollViewer-Elements  
  Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.ScrollViewer> in einem Fenster, das Text und ein Rechteck enthält. <xref:System.Windows.Controls.Primitives.ScrollBar> Elemente angezeigt werden, nur wenn sie erforderlich sind. Beim Ändern der Fenstergröße, den <xref:System.Windows.Controls.Primitives.ScrollBar> Elemente angezeigt werden, und aufgrund der aktualisierten Werte der der <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> und <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> Eigenschaften.  
   
- [!code-cpp[ScrollViewer#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
- [!code-csharp[ScrollViewer#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
- [!code-vb[ScrollViewer#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
- [!code-xaml[ScrollViewer#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
+ [!code-cpp[ScrollViewer#1](~/samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
+ [!code-csharp[ScrollViewer#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
+ [!code-vb[ScrollViewer#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
+ [!code-xaml[ScrollViewer#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
   
 <a name="scrollviewer_styling_scrollviewer"></a>   
 ## <a name="styling-a-scrollviewer"></a>Formatieren eines ScrollViewer-Elements  
- Wie alle Steuerelemente in Windows Presentation Foundation, die <xref:System.Windows.Controls.ScrollViewer> formatiert werden können, um das Standardrenderingverhalten des Steuerelements zu ändern. Weitere Informationen zum Formatieren von Steuerelementen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Wie alle Steuerelemente in Windows Presentation Foundation, die <xref:System.Windows.Controls.ScrollViewer> formatiert werden können, um das Standardrenderingverhalten des Steuerelements zu ändern. Weitere Informationen zum Formatieren von Steuerelementen finden Sie unter [Erstellen von Formaten und Vorlagen](styling-and-templating.md).  
   
 <a name="scrollviewer_scroll_vs_paginate"></a>   
 ## <a name="paginating-documents"></a>Umbrechen von Dokumenten  
  Als Alternative zum Scrollen können Sie für Dokumentinhalte einen Dokumentcontainer auswählen, der Umbrechen unterstützt. <xref:System.Windows.Documents.FlowDocument> wird für Dokumente, die entwickelt wurden, innerhalb eines Steuerelements anzeigen gehostet werden, z. B. <xref:System.Windows.Controls.FlowDocumentPageViewer>, seitenübergreifende Umbrechen von Inhalt über mehrere Seiten, die keine Notwendigkeit für den Bildlauf unterstützt. <xref:System.Windows.Controls.DocumentViewer> bietet eine Lösung für die Anzeige <xref:System.Windows.Documents.FixedDocument> Inhalt, der zum Anzeigen von Inhalten außerhalb der Reichweite des Anzeigebereichs verwendet herkömmliche scrollen.  
   
- Weitere Informationen zu Dokumentformaten und Präsentationsoptionen finden Sie unter [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ Weitere Informationen zu Dokumentformaten und Präsentationsoptionen finden Sie unter [Dokumente in WPF](../advanced/documents-in-wpf.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
 - [Vorgehensweise: Erstellen Sie ein ScrollViewer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
-- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [ScrollBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)
-- [Steuerelemente](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+- [Dokumente in WPF](../advanced/documents-in-wpf.md)
+- [ScrollBar-Stile und -Vorlagen](scrollbar-styles-and-templates.md)
+- [Steuerelemente](../advanced/optimizing-performance-controls.md)

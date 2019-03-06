@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: acc8fdeb495bf7a490752a91ec6943346efcb712
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576459"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363929"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Rückrufe und Validierung von Abhängigkeitseigenschaften
 Dieses Thema beschreibt die Erstellung von Abhängigkeitseigenschaften mithilfe alternativer benutzerdefinierter Implementierungen für eigenschaftenbezogene Funktionen wie die Überprüfungsbestimmung, Rückrufe, die immer dann aufgerufen werden, wenn der effektive Wert der Eigenschaft geändert wird, und das Überschreiben möglicher externer Einflüsse auf die Wertbestimmung. Dieses Thema enthält auch Szenarios, in denen das Erweitern des Standardverhaltens des Eigenschaftensystems mithilfe dieser Techniken geeignet ist.  
@@ -25,14 +25,14 @@ Dieses Thema beschreibt die Erstellung von Abhängigkeitseigenschaften mithilfe 
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
- Bei diesem Thema wird davon ausgegangen, dass Sie die grundlegenden Szenarien zum Implementieren einer Abhängigkeitseigenschaft verstehen, und Metadaten für eine benutzerdefinierte Abhängigkeitseigenschaft anwenden. Weitere Informationen finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) und [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+ Bei diesem Thema wird davon ausgegangen, dass Sie die grundlegenden Szenarien zum Implementieren einer Abhängigkeitseigenschaft verstehen, und Metadaten für eine benutzerdefinierte Abhängigkeitseigenschaft anwenden. Weitere Informationen finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md) und [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md).  
   
 <a name="Validation_Callbacks"></a>   
 ## <a name="validation-callbacks"></a>Überprüfungsrückrufe  
  Überprüfungsrückrufe können beim ersten Registrieren einer Abhängigkeitseigenschaft zugewiesen werden. Der Validierungsrückruf ist nicht Teil der Eigenschaftenmetadaten; Es ist eine direkte Eingabe der <xref:System.Windows.DependencyProperty.Register%2A> Methode. Sobald ein Validierungsrückruf für eine Abhängigkeitseigenschaft erstellt wurde, kann er daher nicht durch eine neue Implementierung überschrieben werden.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Die Rückrufe werden so implementiert, dass ihnen ein Objektwert bereitgestellt wird. Sie geben `true` zurück, wenn der bereitgestellte Wert für die Eigenschaft gültig ist. Andernfalls geben sie `false` zurück. Es wird davon ausgegangen, dass die Eigenschaft entsprechend dem im Eigenschaftensystem registrierten Typ zum richtigen Typ gehört. Typüberprüfungen werden daher innerhalb von Rückrufen in der Regel nicht ausgeführt. Die Rückrufe werden vom Eigenschaftensystem bei einer Vielzahl verschiedener Vorgänge verwendet. Dies schließt die ursprüngliche typinitialisierung durch den Standardwert, die programmgesteuerte Änderung durch den Aufruf <xref:System.Windows.DependencyObject.SetValue%2A>, oder die versucht, Metadaten mit bereitgestellten neuen Standardwert zu überschreiben. Wenn der Validierungsrückruf von einem dieser Vorgänge aufgerufen wird und `false` zurückgibt, wird eine Ausnahme ausgelöst. Anwendungsentwickler müssen diese Ausnahmen behandeln können. Rückrufen werden üblicherweise zur Validierung von Enumerationswerten oder der Einschränkung von Werten aus ganzen Zahlen oder Double-Datentypen verwendet, wenn die Eigenschaft Messungen festlegt, die 0 (null) oder höher entsprechen müssen.  
   
@@ -40,8 +40,8 @@ Dieses Thema beschreibt die Erstellung von Abhängigkeitseigenschaften mithilfe 
   
  Im folgenden finden Sie Beispielcode für ein sehr einfaches validierungsrückrufszenario: Überprüfung, dass eine Eigenschaft, die als typisiert ist die <xref:System.Double> primitiven nicht <xref:System.Double.PositiveInfinity> oder <xref:System.Double.NegativeInfinity>.  
   
- [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
- [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
+ [!code-csharp[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
+ [!code-vb[DPCallbackOverride#ValidateValueCallback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
 ## <a name="coerce-value-callbacks-and-property-changed-events"></a>Coerce-Wert-Rückrufe und Eigenschaftenänderungsereignisse  
@@ -51,18 +51,18 @@ Dieses Thema beschreibt die Erstellung von Abhängigkeitseigenschaften mithilfe 
   
  Im Folgenden finden Sie einen sehr kurzen Beispielcode für nur eine der drei Abhängigkeitseigenschaften, die diese Beziehung veranschaulichen. Im Beispiel wird gezeigt, wie die `CurrentReading`-Eigenschaft eines Satzes aus Minimalwert/Maximalwert/aktuellem Wert von verknüpften *Reading-Eigenschaften registriert wird. Die Überprüfung wird hier wie im vorherigen Abschnitt verwendet.  
   
- [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
- [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
+ [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
+ [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
  Das Eigenschaftenänderungsrückrufen für „Current“ wird verwendet, um die Änderung an andere abhängige Eigenschaften weiterzuleiten, indem explizit die Coerce-Wert-Rückrufe aufgerufen werden, die für diese anderen Eigenschaften registriert sind:  
   
- [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
- [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
+ [!code-csharp[DPCallbackOverride#OnPCCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
+ [!code-vb[DPCallbackOverride#OnPCCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
  Der Coerce-Wert-Rückruf überprüft die Werte von Eigenschaften, von denen die aktuelle Eigenschaft potenziell abhängt, und erzwingt bei Bedarf den aktuellen Wert:  
   
- [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
- [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
+ [!code-csharp[DPCallbackOverride#CoerceCurrent](~/samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
+ [!code-vb[DPCallbackOverride#CoerceCurrent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
 >  Standardwerte von Eigenschaften werden nicht erzwungen. Ein Eigenschaftswert der Standardwert gleich kann auftreten, wenn ein Eigenschaftswert immer noch seine anfängliche Standardeinstellung hat oder wenn andere Werte mit <xref:System.Windows.DependencyObject.ClearValue%2A>.  
@@ -81,6 +81,6 @@ Dieses Thema beschreibt die Erstellung von Abhängigkeitseigenschaften mithilfe 
  Das Eigenschaftensystem behandelt jeden <xref:System.Windows.CoerceValueCallback> , die den Wert zurückgibt <xref:System.Windows.DependencyProperty.UnsetValue> als Sonderfall. Diesem spezielle Fall bedeutet, dass die Änderung der Eigenschaft mit der die <xref:System.Windows.CoerceValueCallback> aufgerufenen vom Eigenschaftensystem abgelehnt werden sollte, und das Eigenschaftensystem sollten stattdessen den vorherigen Wert der Eigenschaft melden. Dieser Mechanismus kann bei der Überprüfung hilfreich sein, dass asynchron initiierte Änderungen an einer Eigenschaft für den aktuellen Objektzustand noch gültig sind, sowie bei der Unterdrückung dieser Änderungen, sofern sie nicht gültig sind. Ein anderes mögliches Szenario ist die selektive Unterdrückung eines Werts, je nachdem welche der Komponenten der Eigenschaftswertermittlung für den gemeldeten Wert verantwortlich ist. Zu diesem Zweck können Sie die <xref:System.Windows.DependencyProperty> übergebenen Rückruf und den Eigenschaftenbezeichner als Eingabe für <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, und klicken Sie dann verarbeiten die <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
+- [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md)
+- [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)

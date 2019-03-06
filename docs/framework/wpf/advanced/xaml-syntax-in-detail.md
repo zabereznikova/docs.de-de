@@ -29,15 +29,15 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 33e811369d7f1d419eb593b430ab939279d3713b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ecea2575503ad8fe4ff8a190a417bae75a7b31f7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510194"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367959"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ausführliche Erläuterung der XAML-Syntax
-In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der XAML-Syntax verwendet werden. Diese Begriffe werden häufig in den restlichen dieser Dokumentation wird sowohl für WPF-Dokumentation verwendet, insbesondere und für die anderen Frameworks, die XAML oder die grundlegenden XAML-Konzepte, die aktiviert, indem die XAML-sprachunterstützung auf der Ebene "System.xaml" verwenden. Dieses Thema baut auf die grundlegende Terminologie eingeführt, die im Thema [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der XAML-Syntax verwendet werden. Diese Begriffe werden häufig in den restlichen dieser Dokumentation wird sowohl für WPF-Dokumentation verwendet, insbesondere und für die anderen Frameworks, die XAML oder die grundlegenden XAML-Konzepte, die aktiviert, indem die XAML-sprachunterstützung auf der Ebene "System.xaml" verwenden. Dieses Thema baut auf die grundlegende Terminologie eingeführt, die im Thema [XAML Overview (WPF)](xaml-overview-wpf.md).  
   
 
   
@@ -68,11 +68,11 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
   
  Im folgende Beispiel wird z. B. Objektelement-Syntax, die instanziiert eine neue Instanz der der <xref:System.Windows.Controls.Button> -Klasse und gibt auch eine <xref:System.Windows.FrameworkElement.Name%2A> -Attribut und einen Wert für dieses Attribut:  
   
- [!code-xaml[XAMLOvwSupport#SyntaxOE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxoe)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxOE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxoe)]  
   
  Im folgende Beispiel wird die Objektelement-Syntax, die auch die Syntax des XAML-Inhaltseigenschaft enthält. Der innere Text enthaltenen wird verwendet, um das Festlegen der <xref:System.Windows.Controls.TextBox> XAML-Inhaltseigenschaft, <xref:System.Windows.Controls.TextBox.Text%2A>.  
   
- [!code-xaml[XAMLOvwSupport#ThisIsATextBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#thisisatextbox)]  
+ [!code-xaml[XAMLOvwSupport#ThisIsATextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#thisisatextbox)]  
   
 ### <a name="content-models"></a>Inhaltsmodelle  
  Eine Klasse kann eine Verwendung als ein XAML-Objektelement im Hinblick auf die Syntax unterstützt, aber dieses Element wird in einer Anwendung oder Seite nur einwandfrei, wenn sie in der gesamten Modell oder einer allgemeinen Elementstruktur einer erwarteten Position platziert wird. Z. B. eine <xref:System.Windows.Controls.MenuItem> sollten in der Regel nur als untergeordnetes Element angeordnet werden eine <xref:System.Windows.Controls.Primitives.MenuBase> abgeleitete Klasse wie z. B. <xref:System.Windows.Controls.Menu>. Content-Modelle für bestimmte Elemente sind als Teil der Hinweise auf den Klassenseiten für Steuerelemente und andere dokumentiert [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Klassen, die als XAML-Elemente verwendet werden können.  
@@ -88,7 +88,7 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
  Die Attributsyntax ist die XAML-Markup-Syntax, die einen Wert für eine Eigenschaft legt fest, indem Sie ein Attribut auf ein vorhandenes Objektelement deklarieren. Der Attributname muss die CLR-Membername der Eigenschaft der Klasse übereinstimmen, die die relevante Objektelement unterstützt. Ein Zuweisungsoperator (=) der Attributnamen folgt. Der Attributwert muss eine Zeichenfolge in Anführungszeichen eingeschlossen sein.  
   
 > [!NOTE]
->  Sie können die abwechselnde Anführungszeichen verwenden, um ein literales Anführungszeichen innerhalb eines Attributs zu platzieren. Beispielsweise können Sie einfache Anführungszeichen als Mittel verwenden, eine Zeichenfolge zu deklarieren, die darin enthaltenen ein doppeltes Anführungszeichen enthält. Ob Sie einfache oder doppelte Anführungszeichen verwenden, sollten Sie ein übereinstimmendes Paar verwenden, für das Öffnen und schließen die Attribut-Wert-Zeichenfolge. Es stehen auch Escape-Sequenzen oder andere Methoden zur Umgehung von Zeichen von sicherheitseinschränkungen durch die jede bestimmte XAML-Syntax. Finden Sie unter [XML-Zeichenentitäten und XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md).  
+>  Sie können die abwechselnde Anführungszeichen verwenden, um ein literales Anführungszeichen innerhalb eines Attributs zu platzieren. Beispielsweise können Sie einfache Anführungszeichen als Mittel verwenden, eine Zeichenfolge zu deklarieren, die darin enthaltenen ein doppeltes Anführungszeichen enthält. Ob Sie einfache oder doppelte Anführungszeichen verwenden, sollten Sie ein übereinstimmendes Paar verwenden, für das Öffnen und schließen die Attribut-Wert-Zeichenfolge. Es stehen auch Escape-Sequenzen oder andere Methoden zur Umgehung von Zeichen von sicherheitseinschränkungen durch die jede bestimmte XAML-Syntax. Finden Sie unter [XML-Zeichenentitäten und XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
   
  Um mithilfe von Attributsyntax festgelegt werden, eine Eigenschaft muss öffentlich sein und muss beschreibbar sein. Der Wert der Eigenschaft im Unterstützungstypsystem muss ein Werttyp sein oder bei muss werden ein Verweistyp, der instanziiert werden kann oder die von einem XAML-Prozessor verwiesen wird, wenn der Zugriff auf den entsprechenden Typ.  
   
@@ -130,11 +130,11 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
   
  Oder Sie können eine angefügte Eigenschaft verweisen angefügtes Ereignis, unabhängig von der enthaltenden Object-Element. (Angefügte Eigenschaften sind in einem späteren Abschnitt erläutert.)  
   
- Sie können auch alle Ereignisse aller Objekte, die über den Standardnamespace mit Namen eine *TypeName*. *Ereignis* teilweise qualifizierten Namen; diese Syntax unterstützt, die Handler für Routingereignisse anfügen, in dem der Handler zum Behandeln von Ereignissen, die aus untergeordneten Elementen, aber das übergeordnete Element routing vorgesehen ist auch keine dieses Ereignis in der Membertabelle. Diese Syntax ähnelt einer angefügten Ereignissyntax, aber das Ereignis hier nicht um ein angefügtes Ereignis ist. Stattdessen sind Sie ein Ereignis mit einem qualifizierten Namen verweisen. Weitere Informationen finden Sie unter [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Sie können auch alle Ereignisse aller Objekte, die über den Standardnamespace mit Namen eine *TypeName*. *Ereignis* teilweise qualifizierten Namen; diese Syntax unterstützt, die Handler für Routingereignisse anfügen, in dem der Handler zum Behandeln von Ereignissen, die aus untergeordneten Elementen, aber das übergeordnete Element routing vorgesehen ist auch keine dieses Ereignis in der Membertabelle. Diese Syntax ähnelt einer angefügten Ereignissyntax, aber das Ereignis hier nicht um ein angefügtes Ereignis ist. Stattdessen sind Sie ein Ereignis mit einem qualifizierten Namen verweisen. Weitere Informationen finden Sie unter [Übersicht über Routingereignisse](routed-events-overview.md).  
   
- Für einige Szenarien werden die Eigenschaftennamen manchmal als Wert für ein Attribut, anstatt den Attributnamen bereitgestellt. Der Eigenschaftenname kann auch enthalten die Qualifizierer, z. B. die Eigenschaft, die im Formular angegeben habe *Besitzertyp*. *dependencyPropertyName angegebene Eigenschaft*. Dieses Szenario kommt häufig, beim Schreiben von Stilen oder Vorlagen in XAML. Die Verarbeitungsregeln für als Attributwert bereitgestellten Eigenschaftennamen unterscheiden, und werden durch den Typ der festzulegenden Eigenschaft oder das Verhalten der Verarbeitungsregeln gesteuert. Weitere Informationen finden Sie unter [Stile und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Für einige Szenarien werden die Eigenschaftennamen manchmal als Wert für ein Attribut, anstatt den Attributnamen bereitgestellt. Der Eigenschaftenname kann auch enthalten die Qualifizierer, z. B. die Eigenschaft, die im Formular angegeben habe *Besitzertyp*. *dependencyPropertyName angegebene Eigenschaft*. Dieses Szenario kommt häufig, beim Schreiben von Stilen oder Vorlagen in XAML. Die Verarbeitungsregeln für als Attributwert bereitgestellten Eigenschaftennamen unterscheiden, und werden durch den Typ der festzulegenden Eigenschaft oder das Verhalten der Verarbeitungsregeln gesteuert. Weitere Informationen finden Sie unter [Stile und Vorlagen](../controls/styling-and-templating.md).  
   
- Eine andere Verwendung für Eigenschaftennamen ist, wenn ein Attributwert eine Eigenschaft Beziehung beschreibt. Dieses Feature wird für die Datenbindung und für die Storyboardziele verwendet, und wird über die <xref:System.Windows.PropertyPath> -Klasse und seinen Typkonverter. Eine vollständige Beschreibung der Suchsemantik, finden Sie unter [XAML-Syntax "PropertyPath"](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md).  
+ Eine andere Verwendung für Eigenschaftennamen ist, wenn ein Attributwert eine Eigenschaft Beziehung beschreibt. Dieses Feature wird für die Datenbindung und für die Storyboardziele verwendet, und wird über die <xref:System.Windows.PropertyPath> -Klasse und seinen Typkonverter. Eine vollständige Beschreibung der Suchsemantik, finden Sie unter [XAML-Syntax "PropertyPath"](propertypath-xaml-syntax.md).  
   
 <a name="property_element_syntax"></a>   
 ## <a name="property-element-syntax"></a>Eigenschaftenelement-Syntax  
@@ -144,11 +144,11 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
   
  Folgendes ist z. B. Eigenschaftenelement-Syntax für die <xref:System.Windows.FrameworkElement.ContextMenu%2A> Eigenschaft eine <xref:System.Windows.Controls.Button>.  
   
- [!code-xaml[XAMLOvwSupport#ContextMenu](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
+ [!code-xaml[XAMLOvwSupport#ContextMenu](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#contextmenu)]  
   
- Der Wert innerhalb eines Eigenschaftselements kann auch angegeben werden als innerer Text, der Eigenschaftentyp angegeben ist, einen primitive-Wert-Typ, z. B. <xref:System.String>, oder eine Enumeration, in dem ein Name angegeben ist. Diese zwei Verwendungen sind etwas ungewöhnlich, da es sich bei jedem dieser Fälle können auch eine einfachere Attributsyntax verwenden. Ein Szenario für das Auffüllen von einem Property-Element mit einer Zeichenfolge wird für Eigenschaften, die nicht die XAML-Inhaltseigenschaft aber weiterhin zur Darstellung von Benutzeroberflächen-Text verwendet werden, und bestimmte White-Space-Elemente wie z. B. Zeilenvorschübe sind erforderlich, um in diesem Text angezeigt werden. Attributsyntax kann Zeilenvorschübe nicht beibehalten, aber Eigenschaftenelement-Syntax kann, solange signifikanten Leerraum Beibehaltung aktiviert ist (Weitere Informationen finden Sie unter [Leerzeichen, die Verarbeitung in XAML](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)). Ein weiteres Szenario ist, damit [X: Uid Directive](../../../../docs/framework/xaml-services/x-uid-directive.md) kann auf das Property-Element angewendet werden, und markieren Sie den Wert im daher wie ein Wert, der in WPF-Anwendungen lokalisiert werden soll, BAML ausgeben oder andere Techniken.  
+ Der Wert innerhalb eines Eigenschaftselements kann auch angegeben werden als innerer Text, der Eigenschaftentyp angegeben ist, einen primitive-Wert-Typ, z. B. <xref:System.String>, oder eine Enumeration, in dem ein Name angegeben ist. Diese zwei Verwendungen sind etwas ungewöhnlich, da es sich bei jedem dieser Fälle können auch eine einfachere Attributsyntax verwenden. Ein Szenario für das Auffüllen von einem Property-Element mit einer Zeichenfolge wird für Eigenschaften, die nicht die XAML-Inhaltseigenschaft aber weiterhin zur Darstellung von Benutzeroberflächen-Text verwendet werden, und bestimmte White-Space-Elemente wie z. B. Zeilenvorschübe sind erforderlich, um in diesem Text angezeigt werden. Attributsyntax kann Zeilenvorschübe nicht beibehalten, aber Eigenschaftenelement-Syntax kann, solange signifikanten Leerraum Beibehaltung aktiviert ist (Weitere Informationen finden Sie unter [Leerzeichen, die Verarbeitung in XAML](../../xaml-services/whitespace-processing-in-xaml.md)). Ein weiteres Szenario ist, damit [X: Uid Directive](../../xaml-services/x-uid-directive.md) kann auf das Property-Element angewendet werden, und markieren Sie den Wert im daher wie ein Wert, der in WPF-Anwendungen lokalisiert werden soll, BAML ausgeben oder andere Techniken.  
   
- Ein Property-Element wird nicht in der WPF-Struktur dargestellt. Ein Property-Element ist nur einer bestimmten Syntax zum Festlegen einer Eigenschaft, und es ist kein Element, das eine Instanz oder ein Objekt, die gesichert wurde. (Weitere Informationen auf dem Konzept der logischen Struktur finden Sie unter [Strukturen in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md).)  
+ Ein Property-Element wird nicht in der WPF-Struktur dargestellt. Ein Property-Element ist nur einer bestimmten Syntax zum Festlegen einer Eigenschaft, und es ist kein Element, das eine Instanz oder ein Objekt, die gesichert wurde. (Weitere Informationen auf dem Konzept der logischen Struktur finden Sie unter [Strukturen in WPF](trees-in-wpf.md).)  
   
  Für Eigenschaften, in denen sowohl Attribut auch Eigenschaftenelementsyntax unterstützt werden, haben die beiden Syntaxformen in der Regel das gleiche Ergebnis, obwohl feinheiten, z. B. die Bearbeitung der Leerzeichen zwischen Syntaxformen geringfügig variieren können.  
   
@@ -160,11 +160,11 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
   
 -   Geben Sie implementiert <xref:System.Collections.IDictionary>.  
   
--   Typ leitet sich von <xref:System.Array> (Weitere Informationen zu Arrays in XAML finden Sie unter [X: Array Markup Extension](../../../../docs/framework/xaml-services/x-array-markup-extension.md).)  
+-   Typ leitet sich von <xref:System.Array> (Weitere Informationen zu Arrays in XAML finden Sie unter [X: Array Markup Extension](../../xaml-services/x-array-markup-extension.md).)  
   
  Wenn der Typ einer Eigenschaft eine Auflistung ist, klicken Sie dann muss der Auflistungstyp der abgeleiteten nicht im Markup als Objektelement angegeben werden. Stattdessen werden die Elemente, die vorgesehen sind, werden die Elemente in der Auflistung als ein oder mehrere untergeordnete Elemente des Property-Elements angegeben. Die einzelnen Elemente zu einem Objekt ausgewertet wird, während des Ladens und der Auflistung hinzugefügt werden, indem die `Add` -Methode der impliziten Auflistung. Z. B. die <xref:System.Windows.Style.Triggers%2A> Eigenschaft <xref:System.Windows.Style> der speziellen Auflistungstyp <xref:System.Windows.TriggerCollection>, implementiert <xref:System.Collections.IList>. Es ist nicht erforderlich, zum Instanziieren einer <xref:System.Windows.TriggerCollection> Object-Element im Markup. Stattdessen geben Sie eine oder mehrere <xref:System.Windows.Trigger> als Elemente innerhalb der `Style.Triggers` Property-Element, in denen <xref:System.Windows.Trigger> (oder einer abgeleiteten Klasse) ist der Typ als Elementtyp für die stark typisierte und implizite erwartet <xref:System.Windows.TriggerCollection>.  
   
- [!code-xaml[XAMLOvwSupport#SyntaxPECollection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxpecollection)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxPECollection](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/Page1.xaml#syntaxpecollection)]  
   
  Eine Eigenschaft kann sowohl für einen Auflistungstyp als auch für die XAML-Inhaltseigenschaft für diesen Typ und abgeleiteten Typen, die im nächsten Abschnitt dieses Themas wird erläutert.  
   
@@ -231,7 +231,7 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
 ## <a name="content-properties-and-collection-syntax-combined"></a>Inhaltseigenschaften und Auflistungssyntax in Kombination  
  Zum akzeptieren muss mehr als ein einzelnes Objektelement als Inhalt der Typ der Content-Eigenschaft explizit einen Auflistungstyp sein. Ähnlich wie Eigenschaftenelement-Syntax für Sammlungstypen, muss ein XAML-Prozessor Typen identifizieren, die Auflistungstypen sind. Wenn ein Element verfügt über eine XAML-Inhaltseigenschaft, und der Typ der XAML-Inhaltseigenschaft eine Sammlung ist, klicken Sie dann der impliziten Auflistungstyp muss sich nicht im Markup als Objektelement angegeben werden, und die XAML-Inhaltseigenschaft muss nicht als eine Eigenschaft el angegeben werden Ement. Aus diesem Grund haben deutlich Inhaltsmodell im Markup jetzt mehr als ein untergeordnetes Element als Inhalt zugewiesen. Im folgenden finden Sie Inhalte Syntax für eine <xref:System.Windows.Controls.Panel> abgeleitete Klasse. Alle <xref:System.Windows.Controls.Panel> abgeleitete Klassen herstellen, um die XAML-Inhaltseigenschaft <xref:System.Windows.Controls.Panel.Children%2A>, wofür einen Wert vom Typ <xref:System.Windows.Controls.UIElementCollection>.  
   
- [!code-xaml[XAMLOvwSupport#SyntaxContent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
+ [!code-xaml[XAMLOvwSupport#SyntaxContent](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page5.xaml#syntaxcontent)]  
   
  Beachten Sie, dass weder die Property-Element für <xref:System.Windows.Controls.Panel.Children%2A> noch das Element für die <xref:System.Windows.Controls.UIElementCollection> in das Markup erforderlich ist. Dies ist eine Funktion Entwerfen von XAML, so, dass rekursiv Elemente enthalten, die definieren, eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] intuitiver als eine Struktur von geschachtelten Elementen mit den unmittelbar übergeordneten und untergeordneten-Element-Beziehungen ohne dazwischenliegende Eigenschaftenelement-Tags dargestellt werden oder Objekte der Auflistung. In der Tat <xref:System.Windows.Controls.UIElementCollection> nicht explizit angegeben werden im Markup als Objektelement, beabsichtigt. Da die einzige vorgesehene Verwendung als implizite Sammlung ist, <xref:System.Windows.Controls.UIElementCollection> macht einen öffentlichen Standardkonstruktor nicht verfügbar und kann daher nicht als Objektelement instanziiert werden.  
   
@@ -246,7 +246,7 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
 ## <a name="xaml-namespaces"></a>XAML-Namespaces  
  Keine der obigen Syntaxbeispiele angegeben einen XAML-Namespace als dem XAML-Standardnamespace. In typischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen, die Standard-XAML-Namespace angegeben ist, werden die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Namespace. Sie können XAML-Namespaces als dem XAML-Standardnamespace angeben und immer noch eine ähnliche Syntax verwenden. Aber dann an einer beliebigen Stelle, in dem eine Klasse namens ist, die nicht zugegriffen werden kann, in der XAML-Standardnamespace, Klassennamens muss stehen mit dem Präfix des XAML-Namespace als auf den entsprechenden CLR-Namespace zugeordnet. Z. B. `<custom:Example/>` Objektelement-Syntax zum Instanziieren einer Instanz von wird die `Example` -Klasse, wobei der CLR-Namespace, Klasse (und möglicherweise die externe Assembly-Informationen, die Unterstützungstypen enthalten) enthält zuvor zugeordnet wurde die `custom` Präfix.  
   
- Weitere Informationen zu XAML-Namespaces finden Sie unter [XAML-Namespaces und Namespace-Zuordnung für WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Weitere Informationen zu XAML-Namespaces finden Sie unter [XAML-Namespaces und Namespace-Zuordnung für WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>Markuperweiterungen  
@@ -256,13 +256,13 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- Hier `StaticResource` identifiziert die <xref:System.Windows.StaticResourceExtension> -Klasse, die die Implementierung der Markuperweiterung bereitstellt. Die nächste Zeichenfolge `MyStyle` dient als Eingabe für den nicht standardmäßigen <xref:System.Windows.StaticResourceExtension> -Konstruktor, der Parameter aus der Erweiterungszeichenfolge, in dem der angeforderte deklariert <xref:System.Windows.ResourceKey>. `MyStyle` wird erwartet die [X: Key](../../../../docs/framework/xaml-services/x-key-directive.md) Wert eine <xref:System.Windows.Style> als Ressource definiert. Die [StaticResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md) Nutzung fordert, dass die Ressource verwendet werden, zu der <xref:System.Windows.Style> Eigenschaftswert über die statische Suche Logik zur Ladezeit.  
+ Hier `StaticResource` identifiziert die <xref:System.Windows.StaticResourceExtension> -Klasse, die die Implementierung der Markuperweiterung bereitstellt. Die nächste Zeichenfolge `MyStyle` dient als Eingabe für den nicht standardmäßigen <xref:System.Windows.StaticResourceExtension> -Konstruktor, der Parameter aus der Erweiterungszeichenfolge, in dem der angeforderte deklariert <xref:System.Windows.ResourceKey>. `MyStyle` wird erwartet die [X: Key](../../xaml-services/x-key-directive.md) Wert eine <xref:System.Windows.Style> als Ressource definiert. Die [StaticResource-Markuperweiterung](staticresource-markup-extension.md) Nutzung fordert, dass die Ressource verwendet werden, zu der <xref:System.Windows.Style> Eigenschaftswert über die statische Suche Logik zur Ladezeit.  
   
- Weitere Informationen über Markuperweiterungen finden Sie unter [Markuperweiterungen und WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md). Markuperweiterungen und andere XAML Features aktiviert, die in der allgemeinen .NET XAML-Implementierung programmieren, finden Sie unter [XAML-Namespace (x:)) Sprachfunktionen](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md). WPF-spezifische Markuperweiterungen finden Sie unter [WPF-XAML-Erweiterungen](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md).  
+ Weitere Informationen über Markuperweiterungen finden Sie unter [Markuperweiterungen und WPF XAML](markup-extensions-and-wpf-xaml.md). Markuperweiterungen und andere XAML Features aktiviert, die in der allgemeinen .NET XAML-Implementierung programmieren, finden Sie unter [XAML-Namespace (x:)) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md). WPF-spezifische Markuperweiterungen finden Sie unter [WPF-XAML-Erweiterungen](wpf-xaml-extensions.md).  
   
 <a name="attached_properties"></a>   
 ## <a name="attached-properties"></a>Angefügte Eigenschaften  
- Angefügte Eigenschaften sind ein Programmierkonzept, eingeführt in XAML durch Eigenschaften gehören und durch einen bestimmten Typ, definiert werden können als Attribute oder Eigenschaftenelemente auf ein beliebiges Element jedoch festgelegt. Das primäre Szenario für angefügte Eigenschaften vorgesehen sind untergeordnete Elemente in einer Markupstruktur, um Informationen an ein übergeordnetes Element zu aktivieren, ohne dass ein Modell häufig gemeinsam genutzte Objekt auf alle Elemente ist. Im Gegensatz dazu können die angefügte Eigenschaften durch übergeordnete Elemente, um Informationen an die untergeordneten Elemente verwendet werden. Weitere Informationen zu den Zweck von angefügten Eigenschaften "und" Gewusst wie: Erstellen eigener angefügte Eigenschaften, finden Sie unter [Übersicht über angefügte Eigenschaften](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).  
+ Angefügte Eigenschaften sind ein Programmierkonzept, eingeführt in XAML durch Eigenschaften gehören und durch einen bestimmten Typ, definiert werden können als Attribute oder Eigenschaftenelemente auf ein beliebiges Element jedoch festgelegt. Das primäre Szenario für angefügte Eigenschaften vorgesehen sind untergeordnete Elemente in einer Markupstruktur, um Informationen an ein übergeordnetes Element zu aktivieren, ohne dass ein Modell häufig gemeinsam genutzte Objekt auf alle Elemente ist. Im Gegensatz dazu können die angefügte Eigenschaften durch übergeordnete Elemente, um Informationen an die untergeordneten Elemente verwendet werden. Weitere Informationen zu den Zweck von angefügten Eigenschaften "und" Gewusst wie: Erstellen eigener angefügte Eigenschaften, finden Sie unter [Übersicht über angefügte Eigenschaften](attached-properties-overview.md).  
   
  Angefügte Eigenschaften verwendet eine Syntax, die Eigenschaftenelement-Syntax, ersten Blick ähnelt insofern, dass Sie auch angeben, ein *TypeName*. *PropertyName* Kombination. Es gibt zwei wichtige Unterschiede:  
   
@@ -296,29 +296,29 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
 ### <a name="full-typenamemembername-qualified-attributes"></a>Vollständige typeName.memberName qualifizierte Attribute  
  Die *TypeName*. *MemberName* bilden für ein Attribut als nur die Routingereignissen universell tatsächlich funktioniert. Aber in anderen Situationen ist diese Form überflüssig, und sollte nicht verwendet werden, wenn nur aus Gründen der Markup-Stil und Lesbarkeit. Im folgenden Beispiel führt die drei Verweise auf die <xref:System.Windows.Controls.Control.Background%2A> Attribut sind vollständig äquivalent:  
   
- [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
+ [!code-xaml[XAMLOvwSupport#TypeNameProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
  `Button.Background` funktioniert, weil die qualifizierte Suche für diese Eigenschaft auf <xref:System.Windows.Controls.Button> ist erfolgreich (<xref:System.Windows.Controls.Control.Background%2A> wurde vom Steuerelement geerbt) und <xref:System.Windows.Controls.Button> ist die Klasse des Object-Element oder eine Basisklasse. `Control.Background` funktioniert, weil die <xref:System.Windows.Controls.Control> -Klasse definiert <xref:System.Windows.Controls.Control.Background%2A> und <xref:System.Windows.Controls.Control> ist eine <xref:System.Windows.Controls.Button> Basisklasse.  
   
  Allerdings die folgenden *TypeName*. *MemberName* Form-Beispiel funktioniert nicht und wird kommentiert:  
   
- [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
+ [!code-xaml[XAMLOvwSupport#TypeNameBadProp](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
  <xref:System.Windows.Controls.Label> ist eine andere abgeleitete Klasse von <xref:System.Windows.Controls.Control>, und wenn Sie angegeben haben `Label.Background` innerhalb einer <xref:System.Windows.Controls.Label> Object-Element, diese Verwendung wird gearbeitet haben. Aber da <xref:System.Windows.Controls.Label> ist nicht der Klasse oder Basisklasse <xref:System.Windows.Controls.Button>, das angegebene XAML-Prozessor-Verhalten ist, verarbeitet `Label.Background` als angefügte Eigenschaft. `Label.Background` ist nicht verfügbare angefügte Eigenschaft, und hier ein Fehler auftritt.  
   
 ### <a name="basetypenamemembername-property-elements"></a>baseTypeName.memberName Eigenschaftenelemente  
  So, wie die *TypeName*. *MemberName* für Attributsyntax, funktioniert die Form einer *Basistypname*. *MemberName* Syntax funktioniert für Eigenschaftenelement-Syntax. Beispielsweise funktioniert die folgende Syntax:  
   
- [!code-xaml[XAMLOvwSupport#GoofyPE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofype)]  
+ [!code-xaml[XAMLOvwSupport#GoofyPE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#goofype)]  
   
  Hier wurde das Property-Element angegeben, als `Control.Background` , obwohl das Property-Element im enthalten waren `Button`.  
   
  Aber wie *TypeName*. *MemberName* Form für Attribute, *Basistypname*. *MemberName* Markupformat ist, und sollte nicht verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [XAML-Namespace (x:)) Sprachfunktionen](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)
-- [WPF-XAML-Erweiterungen](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)
-- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [TypeConverter und XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)
-- [XAML- und benutzerdefinierte Klassen für WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
+- [XAML-Namespace (x:)) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md)
+- [WPF-XAML-Erweiterungen](wpf-xaml-extensions.md)
+- [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
+- [TypeConverter und XAML](typeconverters-and-xaml.md)
+- [XAML- und benutzerdefinierte Klassen für WPF](xaml-and-custom-classes-for-wpf.md)

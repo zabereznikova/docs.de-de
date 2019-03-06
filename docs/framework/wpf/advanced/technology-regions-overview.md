@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 978cd428989aa76f82f01711ccfa566b57352f48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fc325f1b4bb4eca73e051732810c9d9853ff4d7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695740"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352485"
 ---
 # <a name="technology-regions-overview"></a>Übersicht über die Technologieregionen
 Wenn mehrere Präsentationstechnologien in einer Anwendung verwendet werden, wie z.B. WPF, Win32 oder DirectX, müssen diese die Renderingbereiche in einem gemeinsamen Fenster auf der obersten Ebene gemeinsam verwenden. In diesem Thema werden die Probleme beschrieben, welche die Präsentation und Eingabe für Ihre WPF-Interoperationsanwendung beeinflussen können.  
@@ -25,23 +25,23 @@ Wenn mehrere Präsentationstechnologien in einer Anwendung verwendet werden, wie
 ### <a name="region-examples"></a>Beispiele für Bereiche  
  Die folgende Abbildung zeigt eine Anwendung, in der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kombiniert werden. Jede Technologie verwendet einen eigenen, nicht überlappenden Satz von Pixeln, und es gibt keine Probleme mit dem Bereich.  
   
- ![Ein Fenster ohne Airspace-Probleme](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
+ ![Ein Fenster ohne Airspace-Probleme](./media/migrationinteroparchitectarticle01.png "MigrationInteropArchitectArticle01")  
   
  Nehmen wir an, diese Anwendung verwendet die Position des Mauszeigers, um eine Animation zu erstellen, die versucht, in einem dieser drei Bereiche ein Rendering durchzuführen. Unabhängig davon, welche Technologie für die Animation selbst verantwortlich ist, würde diese Technologie den Bereich der beiden anderen verletzen. Die folgende Abbildung zeigt einen Versuch, einen WPF-Kreis in einem Win32-Bereich zu rendern.  
   
- ![Interop-Diagramm](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
+ ![Interop-Diagramm](./media/migrationinteroparchitectarticle02.png "MigrationInteropArchitectArticle02")  
   
  Auch der Versuch, Transparenz/Alphablending zwischen unterschiedlichen Technologien zu verwenden, stellt eine Verletzung dar.  In der folgenden Abbildung verletzt das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Feld die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]- und [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Bereiche. Da die Pixel in diesem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Feld semitransparent sind, müssten sie sowohl zu [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gehören, was nicht möglich ist.  Dies ist eine weitere Verletzung und kann daher nicht erstellt werden.  
   
- ![Interop-Diagramm](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
+ ![Interop-Diagramm](./media/migrationinteroparchitectarticle03.png "MigrationInteropArchitectArticle03")  
   
  In den drei vorhergehenden Beispielen wurden rechteckige Bereiche verwendet, andere Formen sind jedoch auch möglich.  Ein Bereich kann z.B. ein Loch aufweisen. Die folgende Abbildung zeigt einen [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Bereich mit einem rechteckigen Loch, dessen Größe dem kombinierten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]- und [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Bereich entspricht.  
   
- ![Interop-Diagramm](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
+ ![Interop-Diagramm](./media/migrationinteroparchitectarticle04.png "MigrationInteropArchitectArticle04")  
   
  Bereiche müssen nicht rechteckig sein, und können jede Form aufweisen, die von einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-HRGN (Bereich) definiert werden kann.  
   
- ![Interop-Diagramm](../../../../docs/framework/wpf/advanced/media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
+ ![Interop-Diagramm](./media/migrationinteroparchitectarticle05.png "MigrationInteropArchitectArticle05")  
   
 ## <a name="transparency-and-top-level-windows"></a>Transparenz und Fenster der obersten Ebene  
  Der Fenster-Manager in Windows verarbeitet tatsächlich nur [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-HWNDs. Aus diesem Grund jede [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Window> ein HWND. Die <xref:System.Windows.Window> -HWND muss die allgemeinen Richtlinien für alle HWNDS erfüllen. Innerhalb dieses HWND kann von dem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Code alles durchgeführt werden, was von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] unterstützt wird. Bei Interaktionen mit anderen HWNDs auf dem Desktop muss [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jedoch die Verarbeitungs- und Renderingregeln von [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] beachten.  Durch die Verwendung von [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]-HRGNs unterstützt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nicht rechteckige Fenster und überlappende Fenster für das Alphablending pro Pixel.  
@@ -61,6 +61,6 @@ Wenn mehrere Präsentationstechnologien in einer Anwendung verwendet werden, wie
 -   Wenn die Anwendung auf [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] ausgeführt wird, führen überlappende Fenster über [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Oberflächen während des Renderings durch die [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Anwendung zu Flimmern.  (Die eigentliche Rendering-Sequenz ist wie folgt: [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] blendet das überlappende Fenster aus, anschließend zeichnet [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], und dann zeigt [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] das überlappende Fenster erneut an).  Überlappende Fenster ohne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] besitzen diese Einschränkung ebenfalls.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Exemplarische Vorgehensweise: Hosten einer WPF-Uhr in Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-clock-in-win32.md)
-- [Hosten von Win32-Inhalt in WPF](../../../../docs/framework/wpf/advanced/hosting-win32-content-in-wpf.md)
+- [Interaktion zwischen WPF und Win32](wpf-and-win32-interoperation.md)
+- [Exemplarische Vorgehensweise: Hosten einer WPF-Uhr in Win32](walkthrough-hosting-a-wpf-clock-in-win32.md)
+- [Hosten von Win32-Inhalt in WPF](hosting-win32-content-in-wpf.md)

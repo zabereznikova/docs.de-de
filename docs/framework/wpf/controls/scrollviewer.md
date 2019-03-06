@@ -9,19 +9,19 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: 7e4bb04c3d339f01b97c09966e096ddd6de47fbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671979"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367110"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
 Die <xref:System.Windows.Controls.ScrollViewer> Steuerelement erstellt einen bildlauffähigen Bereich, in dem Inhalte horizontal oder vertikal Bildlauf möglich.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/scrollviewer-how-to-topics.md)  
+ [Übersicht über ScrollViewer](scrollviewer-overview.md)  
+ [Themen zu Vorgehensweisen](scrollviewer-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
@@ -29,5 +29,5 @@ Die <xref:System.Windows.Controls.ScrollViewer> Steuerelement erstellt einen bil
  <xref:System.Windows.Controls.ScrollViewer>  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
+- [Übersicht über Panel-Elemente](panels-overview.md)
+- [Layout](../advanced/layout.md)

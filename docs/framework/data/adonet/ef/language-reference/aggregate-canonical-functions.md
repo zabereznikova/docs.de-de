@@ -2,18 +2,18 @@
 title: Aggregieren kanonischer Funktionen
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f65557703070a43f586a668903d049a374ef70d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708973"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372801"
 ---
 # <a name="aggregate-canonical-functions"></a>Aggregieren kanonischer Funktionen
 
 Aggregate sind Ausdrücke, die eine Folge von Eingabewerten beispielsweise auf einen einzigen Wert reduzieren. Aggregate werden normalerweise zusammen mit der GROUP BY-Klausel des SELECT-Ausdrucks verwendet, und für ihre Verwendung gelten Einschränkungen.
 
-## <a name="aggegate-entity-sql-canonical-functions"></a>Kanonische Funktionen Aggegate Entity SQL
+## <a name="aggregate-entity-sql-canonical-functions"></a>Aggregieren kanonischer Funktionen von Entity SQL
 
 Im folgenden werden die kanonischen Entity SQL-Aggregatfunktionen.
 
@@ -31,7 +31,7 @@ Der Typ des `expression`, oder `null` Wenn alle Eingabewerte `null` Werte.
 
 **Beispiel**
 
-[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
 [!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
 
 ### <a name="bigcountexpression"></a>BigCount (Ausdruck)
@@ -48,10 +48,10 @@ Eine `Int64`.
 
 **Beispiel**
 
-[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
 [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
 
-### <a name="countexpression"></a>Count (Ausdruck) 
+### <a name="countexpression"></a>Count (Ausdruck)
 
 Gibt die Größe des Aggregats, einschließlich null-Werte und doppelter Werte zurück.
 
@@ -74,7 +74,12 @@ Gibt den Höchstwert der von null verschiedenen Werte zurück.
 
 **Argumente**
 
-`Int16``Byte`    `Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , , .
+
+  
+  `Int16`
+  `Byte`
+  
+  `Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , , .
 
 **Rückgabewert**
 
@@ -91,7 +96,12 @@ Gibt den geringsten Wert der von NULL verschiedenen Werte zurück.
 
 **Argumente**
 
-`Int16``Byte`    `Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , , .
+
+  
+  `Int16`
+  `Byte`
+  
+  `Int64`, `Int32``Single`, `Byte``Decimal`, `Double``DateTimeOffset`, `DateTime``String`, `Time`, `Binary`, , , , , , .
 
 **Rückgabewert**
 
@@ -108,7 +118,8 @@ Gibt die Standardabweichung der von NULL verschiedenen Werte zurück.
 
 **Argumente**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Rückgabewert**
 
@@ -125,7 +136,8 @@ Gibt die Standardabweichung zum Ausfüllen aller Werte zurück.
 
 **Argumente**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Rückgabewert**
 
@@ -142,7 +154,8 @@ Gibt die Summe der von null verschiedenen Werte zurück.
 
 **Argumente**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Rückgabewert**
 
@@ -159,7 +172,8 @@ Gibt die Varianz aller Werte zurück, die keine Null-Werte sind.
 
 **Argumente**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Rückgabewert**
 
@@ -176,7 +190,8 @@ Gibt die Varianz für die Auffüllung aller Werte zurück, die keine Null-Werte 
 
 **Argumente**
 
-`Int32`, `Int64`, `Double`, `Decimal`.
+
+  `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Rückgabewert**
 
@@ -185,7 +200,7 @@ Ein `Double`, oder `null` Wenn alle Eingabewerte `null` Werte.
 **Beispiel**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
-[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
 Entsprechende Funktionen sind für den verwalteten Anbieter des Microsoft SQL-Clients verfügbar. Weitere Informationen finden Sie unter [SqlClient für Entity Framework-Funktionen](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).
 
@@ -206,7 +221,7 @@ Gruppenbasierte Aggregate werden für eine Gruppe berechnet, die mit einer GROUP
 Im folgenden Beispiel wird die durchschnittlich bestellte Anzahl für jedes Produkt berechnet:
 
 ```sql
-select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
@@ -224,7 +239,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 Ausdrücke in gruppenbasierten Aggregaten werden innerhalb des Namensauflösungsbereichs ausgewertet, der für den WHERE-Klauselausdruck sichtbar wäre.
 
-Wie in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], Gruppenbasierte Aggregate können auch angeben, alles oder DISTINCT-Modifizierer. Wenn der DISTINCT-Modifizierer angegeben ist, werden Duplikate vor der Berechnung des Aggregats aus der Aggregateingabeauflistung gelöscht. Wenn der ALL-Modifizierer oder kein Modifizierer angegeben wird, werden Duplikate nicht gelöscht.  
+Wie in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], Gruppenbasierte Aggregate können auch angeben, alles oder DISTINCT-Modifizierer. Wenn der DISTINCT-Modifizierer angegeben ist, werden Duplikate vor der Berechnung des Aggregats aus der Aggregateingabeauflistung gelöscht. Wenn der ALL-Modifizierer oder kein Modifizierer angegeben wird, werden Duplikate nicht gelöscht.
 
 ## <a name="see-also"></a>Siehe auch
 

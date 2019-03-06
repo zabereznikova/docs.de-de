@@ -9,17 +9,17 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: fa412a4f900179c22868b2ef3e7429e7dc2acc9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507550"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352398"
 ---
 # <a name="optimizing-performance-application-resources"></a>Optimieren der Leistung: Anwendungsressourcen
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie Ressourcen freigeben, sodass Sie ein konsistentes Erscheinungsbild und Verhalten für Elemente mit ähnlichen Typs unterstützen können. Dieses Thema enthält einige Empfehlungen in diesem Bereich, mit denen Sie können die Leistung Ihrer Anwendungen verbessern.  
   
- Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](xaml-resources.md).  
   
 ## <a name="sharing-resources"></a>Gemeinsame Nutzung von Ressourcen  
  Wenn die Anwendung benutzerdefinierte Steuerelemente verwendet und definiert die Ressourcen in eine <xref:System.Windows.ResourceDictionary> (oder XAML-Ressourcen-Knoten), es wird empfohlen, dass Sie entweder die Ressourcen definieren die <xref:System.Windows.Application> oder <xref:System.Windows.Window> Objekt auf, oder definieren sie in das Standarddesign für die Benutzerdefinierte Steuerelemente. Definieren von Ressourcen in eines benutzerdefinierten Steuerelements <xref:System.Windows.ResourceDictionary> erzwingt Auswirkungen auf die Leistung für jede Instanz des Steuerelements. Wenn Sie den für rechenintensive Pinselvorgänge, die als Teil der Ressourcendefinition ein benutzerdefiniertes Steuerelement und viele Instanzen des benutzerdefinierten Steuerelements definiert haben, wird z. B. Workingset der Anwendung erheblich erhöhen.  
@@ -31,7 +31,7 @@ ms.locfileid: "54507550"
   
  Im folgenden Markupbeispiel verdeutlicht dies:  
   
- [!code-xaml[Performance#PerformanceSnippet7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
+ [!code-xaml[Performance#PerformanceSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/BrushResource.xaml#performancesnippet7)]  
   
 ## <a name="use-static-resources-when-possible"></a>Verwenden Sie statische Ressourcen, wenn möglich  
  Eine statische Ressource stellt einen Wert für ein beliebiges XAML, indem ein Verweis auf einen bereits definierten Ressource gesucht. Das Suchverhalten für diese Ressource ist analog zur Kompilierzeit-Suche.  
@@ -40,15 +40,15 @@ ms.locfileid: "54507550"
   
  Im folgenden Markupbeispiel wird gezeigt, die Verwendung beider Arten von Ressourcen:  
   
- [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
+ [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [Planen der Anwendungsleistung](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [Vorteile der Hardware nutzen](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [Layout und Entwurf](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)
-- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Objektverhalten](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [Datenbindung](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [Weitere Leistungsempfehlungen](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+- [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
+- [Planen der Anwendungsleistung](planning-for-application-performance.md)
+- [Vorteile der Hardware nutzen](optimizing-performance-taking-advantage-of-hardware.md)
+- [Layout und Entwurf](optimizing-performance-layout-and-design.md)
+- [2D-Grafiken und Bildverarbeitung](optimizing-performance-2d-graphics-and-imaging.md)
+- [Objektverhalten](optimizing-performance-object-behavior.md)
+- [Text](optimizing-performance-text.md)
+- [Datenbindung](optimizing-performance-data-binding.md)
+- [Weitere Leistungsempfehlungen](optimizing-performance-other-recommendations.md)

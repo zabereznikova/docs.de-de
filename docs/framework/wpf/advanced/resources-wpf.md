@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545817"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372203"
 ---
 # <a name="resources-wpf"></a>Ressourcen (WPF)
-Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung erneut verwendet werden kann. WPF unterstützt verschiedene Arten von Ressourcen. Diese Ressourcen sind hauptsächlich zwei Typen von Ressourcen: XAML-Ressourcen und Ressourcendateien für die Daten. Verwendung von XAML-Ressourcen zählen Pinsel und Stile. Ressourcendateien für die Daten sind nicht ausführbare-Datendateien, die eine Anwendung benötigt.  
+Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung erneut verwendet werden kann. WPF unterstützt verschiedene Arten von Ressourcen. Diese Ressourcen sind in erster Linie auf zwei Arten von Ressourcen: XAML-Ressourcen und Data-Ressourcendateien. Beispiele für XAML-Ressourcen sind Pinsel und Stile. Data-Ressourcendateien sind nicht ausführbaren Datendateien, die eine Anwendung benötigt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [WPF-Anwendungsressource, Inhalts- und Datendateien](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [Paket-URI in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [XAML-Ressourcen](xaml-resources.md)  
+ [WPF-Anwendungsressource, Inhalts- und Datendateien](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [Paket-URI in WPF](../app-development/pack-uris-in-wpf.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.ResourceDictionary>  
   
- [StaticResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [StaticResource-Markuperweiterung](staticresource-markup-extension.md)  
   
- [DynamicResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [DynamicResource-Markuperweiterung](dynamicresource-markup-extension.md)  
   
- [x:Key-Anweisung](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [x:Key-Anweisung](../../xaml-services/x-key-directive.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [XAML in WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+ [XAML in WPF](xaml-in-wpf.md)

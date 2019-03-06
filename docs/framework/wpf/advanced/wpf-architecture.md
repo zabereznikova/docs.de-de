@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 7214304d8575fb6ef8774d55eaf29ad714235123
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634583"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362010"
 ---
 # <a name="wpf-architecture"></a>WPF-Architektur
 Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (WPF)-Klassenhierarchie. Es behandelt die meisten der wichtigsten Subsysteme von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] und beschreibt, wie sie interagieren. Es werden auch einige der durch die Architekten von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] getroffenen Entscheidungen erläutert.  
@@ -33,7 +33,7 @@ Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (W
   
  Die Hauptkomponenten von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sind in der folgenden Abbildung dargestellt. Die roten Abschnitte des Diagramms (PresentationFramework, PresentationCore und Milcore) sind die wichtigsten Teile von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Von diesen ist nur eine Komponente nicht verwaltet – Milcore. Milcore ist in nicht verwaltetem Code geschrieben, um eine enge Integration mit [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] zu ermöglichen. In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wird alles mithilfe der [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Engine angezeigt, was effizientes Hardware- und Software-Rendering gestattet. Ebenso erforderte [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] genaue Kontrolle über den Speicher und die Ausführung. Die Gestaltungs-Engine in Milcore ist extrem sensibel in Bezug auf die Performance und erforderte, dass viele Vorteile der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zugunsten der Leistung geopfert werden mussten.  
   
- ![Die Position von WPF im .NET Framework.](../../../../docs/framework/wpf/advanced/media/wpf-architect1.PNG "wpf_architect1")  
+ ![Die Position von WPF im .NET Framework.](./media/wpf-architect1.PNG "wpf_architect1")  
   
  Die Kommunikation zwischen den verwalteten und nicht verwalteten Teilen von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wird weiter unten in diesem Thema behandelt. Das restliche verwaltete Programmiermodell wird nachfolgend beschrieben.  
   
@@ -71,7 +71,7 @@ Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (W
   
  Bei der Programmierung [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], erstellen Sie <xref:System.Windows.Media.Visual> Elementen und abgeleiteten Typen, die intern für die Kompositionsstruktur über dieser messaging-Protokoll kommunizieren. Jede <xref:System.Windows.Media.Visual> in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] kann einen, keinen oder mehrere kompositionsknoten erstellen.  
   
- ![Die visuelle Struktur der Windows Presentation Foundation](../../../../docs/framework/wpf/advanced/media/wpf-architecture2.PNG "wpf_architecture2")  
+ ![Die visuelle Struktur der Windows Presentation Foundation](./media/wpf-architecture2.PNG "wpf_architecture2")  
   
  Es gibt hier ein sehr wichtiges architektonisches Detail zu beachten: die gesamte Struktur von visuellen Objekten und Zeichenanweisungen wird zwischengespeichert. Im Grafik-Vokabular heißt dies, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verwendet ein Retained-Rendering-System, was so viel wie „zurückbehaltenes Rendering” bedeutet. Dies ermöglicht es dem System, mit hohen Aktualisierungsraten neu zu zeichnen, ohne dass das Kompositionssystem dies aufgrund von Rückrufen auf Benutzercode blockiert. Dies verhindert eine scheinbar nicht reagierende Anwendung.  
   
@@ -149,6 +149,6 @@ Dieses Thema enthält eine Einführung in die Windows Presentation Foundation (W
 - <xref:System.Windows.Threading.DispatcherObject>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Controls.Control>
-- [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Layout](../../../../docs/framework/wpf/advanced/layout.md)
-- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
+- [Layout](layout.md)
+- [Übersicht über Animationen](../graphics-multimedia/animation-overview.md)

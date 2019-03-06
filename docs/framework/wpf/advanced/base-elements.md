@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: 165dfda74ac570578371915259548784c5a37820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539464"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359613"
 ---
 # <a name="base-elements"></a>Basiselemente
-Vier Hauptklassen –<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, und <xref:System.Windows.FrameworkContentElement>--beträchtlichen Anteil in WPF-Programmierung verfügbaren allgemeinen Elementfunktionen implementiert. Diese vier Klassen werden in diesem SDK als Basis Elementklassen bezeichnet.  
+Vier Hauptklassen –<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, und <xref:System.Windows.FrameworkContentElement>– Implementieren von unwesentlicher Teil der allgemeinen Elementfunktionen, die in WPF-Programmierung verfügbar. Diese vier Klassen werden in diesem SDK als Basiselementklassen bezeichnet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über Basiselemente](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Übersicht über Alignment, Margin und Padding](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
+ [Übersicht über Basiselemente](base-elements-overview.md)  
+ [Übersicht über Freezable-Objekte](freezable-objects-overview.md)  
+ [Übersicht über Alignment, Margin und Padding](alignment-margins-and-padding-overview.md)  
+ [Themen zu Vorgehensweisen](base-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.UIElement>  
@@ -32,12 +32,12 @@ Vier Hauptklassen –<xref:System.Windows.UIElement>, <xref:System.Windows.Conte
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [WPF-Architektur](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML in WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Elementstruktur und Serialisierung](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Eigenschaften](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Ereignisse](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Eingabe](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Ressourcen](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Threadmodell](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF-Architektur](wpf-architecture.md)  
+  [XAML in WPF](xaml-in-wpf.md)  
+  [Elementstruktur und Serialisierung](element-tree-and-serialization.md)  
+  [Eigenschaften](properties-wpf.md)  
+  [Ereignisse](events-wpf.md)  
+  [Eingabe](input-wpf.md)  
+  [Ressourcen](resources-wpf.md)  
+  [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)  
+  [Threadmodell](threading-model.md)

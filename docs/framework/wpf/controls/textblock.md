@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], TextBlock
 - TextBlock control [WPF]
 ms.assetid: ea5f7826-7a92-4de9-9eee-10ef700ce7b6
-ms.openlocfilehash: f032476326ac96edbfb7532f30dedd72b78f76fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31ef66ba7e584b88a38185a4d3ad02ca413fad34
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555898"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358911"
 ---
 # <a name="textblock"></a>TextBlock
-Die <xref:System.Windows.Controls.TextBlock> Steuerelement bietet flexible Text-Unterstützung für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen. Es eignet sich hauptsächlich für einfache [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Szenarios, in denen nicht mehr Text als ein Absatz benötigt wird.  
+Die <xref:System.Windows.Controls.TextBlock> Steuerelement bietet flexible textunterstützung für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen. Es eignet sich hauptsächlich für einfache [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Szenarios, in denen nicht mehr Text als ein Absatz benötigt wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über TextBlock](../../../../docs/framework/wpf/controls/textblock-overview.md)  
+ [Übersicht über TextBlock](textblock-overview.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Label>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Dokumente in WPF](../advanced/documents-in-wpf.md)  
   
- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [Übersicht über Flussdokumente](../advanced/flow-document-overview.md)

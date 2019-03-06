@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: de09612ee978ee809ee07f0db2e37b14533760da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 02377b0765144064df8d51fa63768412ca4b606a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974808"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363477"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambdaausdrücke (Visual Basic)
 Ein *Lambda-Ausdruck* ist eine Funktion oder Unterroutine ohne Namen, die verwendet werden kann, wo Delegaten gültig ist. Lambda-Ausdrücke können Funktionen oder Unterroutinen und können ein- oder mehrzeiligen. Sie können Werte aus dem aktuellen Bereich an einen Lambda-Ausdruck übergeben.  
@@ -109,7 +109,7 @@ End Class
   
  Weitere Informationen zum Erstellen und Verwenden von asynchronen Methoden finden Sie unter [asynchrone Programmierung mit Async und Await](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
-##  <a name="context"></a> Kontext  
+## <a name="context"></a> Kontext  
  Ein Lambda-Ausdruck teilt der Kontext durch den Bereich, in dem sie definiert ist. Es verfügt über die gleichen Zugriffsrechte wie der Code in der enthaltenden Bereich geschrieben. Dies schließt den Zugriff auf Member-Variablen, Funktionen und Subroutinen, `Me`, Parameter und lokalen Variablen in den Gültigkeitsbereich.  
   
  Zugriff auf lokale Variablen und Parameter in der enthaltenden Bereich kann über die Lebensdauer, Bereich hinaus erweitern. Solange ein Delegat, der auf einen Lambda-Ausdruck nicht bei der Garbagecollection verfügbar ist, wird der Zugriff auf die Variablen in der ursprünglichen Umgebung beibehalten. Im folgenden Beispiel Variablen `target` lediglich auf `makeTheGame`, Methode, in der Lambda-Ausdrucks `playTheGame` definiert ist. Beachten Sie, die der zurückgegebenen Lambdaausdruck, zugewiesen, `takeAGuess` in `Main`, immer noch Zugriff auf die lokale Variable `target`.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 6dc833ce3dc88b61ed6966c7b5ca2756f5012308
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265349"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368167"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Neues in WPF Version 4.5
 <a name="introduction"></a> Dieses Thema enthält Informationen zu neuen und verbesserten Features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Version 4.5.  
@@ -115,15 +115,15 @@ ms.locfileid: "55265349"
   
 <a name="weak_event_pattern"></a>   
 ## <a name="improved-support-for-establishing-a-weak-reference-to-an-event"></a>Verbesserte Unterstützung für die Einrichtung eines schwachen Verweises auf ein Ereignis  
- Die Implementierung des schwachen Ereignismusters ist jetzt einfacher, da Abonnenten der Ereignisse daran beteiligt sein können, ohne eine zusätzliche Schnittstelle implementieren zu müssen.  Die generische <xref:System.Windows.WeakEventManager>-Klasse ermöglicht es Abonnenten außerdem, am schwachen Ereignismuster teilzunehmen, wenn für ein bestimmtes Ereignis kein dedizierter <xref:System.Windows.WeakEventManager> vorhanden ist.  Weitere Informationen finden Sie unter [Schwache Ereignismuster](../../../../docs/framework/wpf/advanced/weak-event-patterns.md).  
+ Die Implementierung des schwachen Ereignismusters ist jetzt einfacher, da Abonnenten der Ereignisse daran beteiligt sein können, ohne eine zusätzliche Schnittstelle implementieren zu müssen.  Die generische <xref:System.Windows.WeakEventManager>-Klasse ermöglicht es Abonnenten außerdem, am schwachen Ereignismuster teilzunehmen, wenn für ein bestimmtes Ereignis kein dedizierter <xref:System.Windows.WeakEventManager> vorhanden ist.  Weitere Informationen finden Sie unter [Schwache Ereignismuster](../advanced/weak-event-patterns.md).  
   
 <a name="async"></a>   
 ## <a name="new-methods-for-the-dispatcher-class"></a>Neue Methoden für die Verteilerklasse  
- Die Verteilerklasse definiert neue Methoden für synchrone und asynchrone Vorgänge.  Die synchrone <xref:System.Windows.Threading.Dispatcher.Invoke%2A>-Methode definiert Überladungen, die einen <xref:System.Action>- oder <xref:System.Func%601>-Parameter entgegennehmen. Die neue asynchrone Methode <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> nimmt ebenfalls <xref:System.Action> oder <xref:System.Func%601> als Rückrufparameter entgegen und gibt <xref:System.Windows.Threading.DispatcherOperation> oder <xref:System.Windows.Threading.DispatcherOperation%601> zurück.   Die <xref:System.Windows.Threading.DispatcherOperation>- und <xref:System.Windows.Threading.DispatcherOperation%601>-Klassen definieren eine <xref:System.Threading.Tasks.Task>-Eigenschaft.  Wenn Sie <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> aufrufen, können Sie das Schlüsselwort `await` entweder mit <xref:System.Windows.Threading.DispatcherOperation> oder mit dem zugehörigen <xref:System.Threading.Tasks.Task> verwenden. Wenn Sie synchron auf das <xref:System.Threading.Tasks.Task> warten müssen, das von <xref:System.Windows.Threading.DispatcherOperation> oder <xref:System.Windows.Threading.DispatcherOperation%601> zurückgegeben wird, rufen Sie die <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>-Erweiterungsmethode auf. Wenn Sie <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> aufrufen, führt das zu einem Deadlock, wenn der Vorgang auf einem aufrufenden Thread in die Warteschlange gestellt wird. Weitere Informationen zur Verwendung einer <xref:System.Threading.Tasks.Task> zum Ausführen von asynchroner Vorgängen finden Sie unter [Aufgabenparallelität (Task Parallel Library)](../../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md).  
+ Die Verteilerklasse definiert neue Methoden für synchrone und asynchrone Vorgänge.  Die synchrone <xref:System.Windows.Threading.Dispatcher.Invoke%2A>-Methode definiert Überladungen, die einen <xref:System.Action>- oder <xref:System.Func%601>-Parameter entgegennehmen. Die neue asynchrone Methode <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> nimmt ebenfalls <xref:System.Action> oder <xref:System.Func%601> als Rückrufparameter entgegen und gibt <xref:System.Windows.Threading.DispatcherOperation> oder <xref:System.Windows.Threading.DispatcherOperation%601> zurück.   Die <xref:System.Windows.Threading.DispatcherOperation>- und <xref:System.Windows.Threading.DispatcherOperation%601>-Klassen definieren eine <xref:System.Threading.Tasks.Task>-Eigenschaft.  Wenn Sie <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> aufrufen, können Sie das Schlüsselwort `await` entweder mit <xref:System.Windows.Threading.DispatcherOperation> oder mit dem zugehörigen <xref:System.Threading.Tasks.Task> verwenden. Wenn Sie synchron auf das <xref:System.Threading.Tasks.Task> warten müssen, das von <xref:System.Windows.Threading.DispatcherOperation> oder <xref:System.Windows.Threading.DispatcherOperation%601> zurückgegeben wird, rufen Sie die <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A>-Erweiterungsmethode auf. Wenn Sie <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> aufrufen, führt das zu einem Deadlock, wenn der Vorgang auf einem aufrufenden Thread in die Warteschlange gestellt wird. Weitere Informationen zur Verwendung einer <xref:System.Threading.Tasks.Task> zum Ausführen von asynchroner Vorgängen finden Sie unter [Aufgabenparallelität (Task Parallel Library)](../../../standard/parallel-programming/task-based-asynchronous-programming.md).  
   
 <a name="events_markup_extenions"></a>   
 ## <a name="markup-extensions-for-events"></a>Markuperweiterungen für Ereignisse  
  WPF 4.5 unterstützt Markuperweiterungen für Ereignisse.  WPF definiert zwar keine Markuperweiterung zur Verwendung für Ereignisse, diese können aber von Drittanbietern erstellt werden.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Neuigkeiten in .NET Framework](../../../../docs/framework/whats-new/index.md)
+- [Neuigkeiten in .NET Framework](../../whats-new/index.md)

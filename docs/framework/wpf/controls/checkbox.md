@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550753"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377085"
 ---
 # <a name="checkbox"></a>CheckBox
-Können Sie eine <xref:System.Windows.Controls.CheckBox> in der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] der Anwendung, um die Optionen darstellen, die ein Benutzer aktivieren oder deaktivieren kann. Können Sie ein einzelnes Kontrollkästchen, oder Sie können zwei oder mehrere Kontrollkästchen gruppieren.  
+Können Sie eine <xref:System.Windows.Controls.CheckBox> in die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] der Anwendung, um die Optionen darstellt, die ein Benutzer aktivieren oder deaktivieren kann. Können Sie ein einzelnes Kontrollkästchen, oder Sie können zwei oder mehrere Kontrollkästchen gruppieren.  
   
- Die folgende Abbildung zeigt die verschiedenen Zustände von einem <xref:System.Windows.Controls.CheckBox>.  
+ Die folgende Grafik zeigt die unterschiedlichen Zustände des eine <xref:System.Windows.Controls.CheckBox>.  
   
- ![CheckBox-Zustände](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
-CheckBox-Steuerelementen in unterschiedlichen Zuständen  
+ ![CheckBox-Zustände](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
+CheckBox-Steuerelementen in verschiedenen Zuständen  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.CheckBox>  

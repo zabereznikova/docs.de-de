@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550123"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354634"
 ---
 # <a name="contextmenu"></a>ContextMenu
-Die <xref:System.Windows.Controls.ContextMenu> ermöglicht es einem Steuerelement zum Anzeigen einer <xref:System.Windows.Controls.Menu> , ist nur für den Kontext des Steuerelements. In der Regel die <xref:System.Windows.Controls.ContextMenu> wird verfügbar gemacht, der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] über die rechte Maustaste gedrückt oder über die Tastatur Menüschaltfläche.  
+Die <xref:System.Windows.Controls.ContextMenu> ermöglicht es einem Steuerelement zum Anzeigen einer <xref:System.Windows.Controls.Menu> , der auf den Kontext des Steuerelements spezifisch ist. In der Regel die <xref:System.Windows.Controls.ContextMenu> verfügbar gemacht wird, werden der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] über die rechte Maustaste gedrückt oder über die Tastatur auf die Menüschaltfläche.  
   
- Die folgende Abbildung veranschaulicht einen <xref:System.Windows.Controls.ContextMenu> in zwei verschiedenen Zustände: den Standardstatus und den geöffneten Zustand. In den Standardzustand zurückgesetzt ist das Steuerelement reduziert. Beim Klicken auf die rechten Maustaste auf das übergeordnete Element des Menüs aufgerufen wird, wird das Steuerelement erweitert und zeigt die Menüelemente.  
+ Die folgende Abbildung veranschaulicht einen <xref:System.Windows.Controls.ContextMenu> in zwei unterschiedlichen Zuständen: den Standardzustand und den Zustand "geöffnet". Die Standardwerte wird das Steuerelement reduziert. Wenn die rechten Maustaste auf das übergeordnete Element des Menüs gedrückt wird, wird das Steuerelement erweitert und zeigt die Menüelemente im.  
   
- ![ContextMenu-Zustände](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ ![ContextMenu-Zustände](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
 Kontextmenü in unterschiedlichen Zuständen  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [Übersicht über ContextMenu](contextmenu-overview.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.ContextMenu>  

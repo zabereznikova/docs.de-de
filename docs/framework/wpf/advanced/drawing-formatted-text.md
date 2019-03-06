@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: a4337eeb3db940b0000301465a6f912ed3ed5805
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 538cc23a3ee7696a28de43e5724dc450328205ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748465"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372177"
 ---
 # <a name="drawing-formatted-text"></a>Zeichnen von formatiertem Text
 Dieses Thema enthält eine Übersicht über die Funktionen von der <xref:System.Windows.Media.FormattedText> Objekt. Dieses Objekt bietet die Steuerung auf niedriger Ebene für das Zeichnen von Text in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen.  
@@ -24,14 +24,14 @@ Dieses Thema enthält eine Übersicht über die Funktionen von der <xref:System.
 ## <a name="technology-overview"></a>Übersicht über die Technologie  
  Die <xref:System.Windows.Media.FormattedText> Objekt können Sie mehrzeiligen Text zu zeichnen, in dem jedes Zeichen im Text einzeln formatiert werden kann. Das folgende Beispiel zeigt Text mit mehreren angewendeten Formaten:  
   
- ![Mit dem FormattedText-Objekt angezeigter Text](../../../../docs/framework/wpf/advanced/media/formattedtext01.jpg "FormattedText01")  
+ ![Mit dem FormattedText-Objekt angezeigter Text](./media/formattedtext01.jpg "FormattedText01")  
 Angezeigter Text mit der FormattedText-Methode  
   
 > [!NOTE]
 >  Für Entwickler, die von der [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-API migrieren, listet die Tabelle im [Win32-Migration](#win32_migration)-Abschnitt die [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-DrawText-Flags und deren ungefähre Entsprechung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] auf.  
   
 ### <a name="reasons-for-using-formatted-text"></a>Gründe für das Verwenden von formatiertem Text  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält zahlreiche Steuerelemente für das Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement ist einem bestimmten Szenario zugeordnet und besitzt eine eigene Liste von Funktionen und Einschränkungen. Im Allgemeinen die <xref:System.Windows.Controls.TextBlock> Element sollte verwendet werden, wenn nur eingeschränkte Textelemente-Unterstützung erforderlich ist, z. B. einem kurzen Satz in einem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> kann verwendet werden, wenn nur minimale textunterstützung erforderlich ist. Weitere Informationen finden Sie unter [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält zahlreiche Steuerelemente für das Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement ist einem bestimmten Szenario zugeordnet und besitzt eine eigene Liste von Funktionen und Einschränkungen. Im Allgemeinen die <xref:System.Windows.Controls.TextBlock> Element sollte verwendet werden, wenn nur eingeschränkte Textelemente-Unterstützung erforderlich ist, z. B. einem kurzen Satz in einem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> kann verwendet werden, wenn nur minimale textunterstützung erforderlich ist. Weitere Informationen finden Sie unter [Dokumente in WPF](documents-in-wpf.md).  
   
  Die <xref:System.Windows.Media.FormattedText> -Objekt bietet umfassendere Textformatierungsfunktionen als [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Textsteuerelementtyp entspricht, und können nützlich sein, in Fällen, in denen Text als dekoratives Element verwendet werden sollen. Weitere Informationen finden Sie im folgenden Abschnitt [Konvertieren von formatiertem Text in eine Geometrie](#converting_formatted_text).  
   
@@ -42,54 +42,54 @@ Angezeigter Text mit der FormattedText-Methode
   
  Verwenden der <xref:System.Windows.Media.FormattedText.MaxTextWidth%2A> Eigenschaft, um den Text auf eine bestimmte Breite zu begrenzen. Der Text wird automatisch umgebrochen, um die angegebene Breite nicht zu überschreiten. Verwenden der <xref:System.Windows.Media.FormattedText.MaxTextHeight%2A> Eigenschaft, um den Text auf eine bestimmte Höhe zu begrenzen. Der Text zeigt Auslassungspunkte „...“ an, wenn die angegebene Höhe überschritten wird.  
   
- ![Mit dem FormattedText-Objekt angezeigter Text](../../../../docs/framework/wpf/advanced/media/formattedtext02.png "FormattedText02")  
+ ![Mit dem FormattedText-Objekt angezeigter Text](./media/formattedtext02.png "FormattedText02")  
 Angezeigter Text mit Zeilenumbruch und Auslassungspunkten  
   
  Sie können mehrere Formatvorlagen auf ein oder mehrere Zeichen anwenden. Sie können z. B. Aufrufen sowohl die <xref:System.Windows.Media.FormattedText.SetFontSize%2A> und <xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A> Methoden zum Ändern der Formatierung der ersten fünf Zeichen im Text.  
   
  Das folgende Codebeispiel erstellt eine <xref:System.Windows.Media.FormattedText> Objekt aus, und anschließend mehrere Formatvorlagen auf den Text angewendet.  
   
- [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
- [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets1)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets1)]  
   
 ### <a name="font-size-unit-of-measure"></a>Maßeinheit für den Schriftgrad  
  Wie andere Textobjekte in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen, die <xref:System.Windows.Media.FormattedText> Objekt verwendet geräteunabhängige Pixel als Maßeinheit an. Die meisten [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-Anwendungen verwenden jedoch Punkte als Maßeinheit. Möchten Sie in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen Punkte als Maßeinheit für angezeigten Text verwenden, müssen Sie [!INCLUDE[TLA#tla_dipixel#plural](../../../../includes/tlasharptla-dipixelsharpplural-md.md)] in Punkte konvertieren. Der folgende Code veranschaulicht diese Konvertierung:  
   
- [!code-csharp[FormattedTextSnippets#FormattedTextSnippets2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets2)]
- [!code-vb[FormattedTextSnippets#FormattedTextSnippets2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets2)]  
+ [!code-csharp[FormattedTextSnippets#FormattedTextSnippets2](~/samples/snippets/csharp/VS_Snippets_Wpf/FormattedTextSnippets/CSharp/Window1.xaml.cs#formattedtextsnippets2)]
+ [!code-vb[FormattedTextSnippets#FormattedTextSnippets2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FormattedTextSnippets/visualbasic/window1.xaml.vb#formattedtextsnippets2)]  
   
 <a name="converting_formatted_text"></a>   
 ### <a name="converting-formatted-text-to-a-geometry"></a>Konvertieren von formatiertem Text in eine Geometrie  
  Sie können formatierten Text in konvertieren <xref:System.Windows.Media.Geometry> Objekte, die Ihnen ermöglichen, andere Arten von visuell interessantem Text erstellen. Sie können z. B. Erstellen einer <xref:System.Windows.Media.Geometry> Objekt auf Grundlage der Gliederung einer Textzeichenfolge.  
   
- ![Textkontur mit einem linearen Farbverlaufspinsel](../../../../docs/framework/wpf/advanced/media/outlinedtext02.jpg "OutlinedText02")  
+ ![Textkontur mit einem linearen Farbverlaufspinsel](./media/outlinedtext02.jpg "OutlinedText02")  
 Textkontur mit einem linearen Farbverlaufspinsel  
   
  Die folgenden Beispiele zeigen verschiedene Möglichkeiten zum Erstellen von visuell interessanten Effekten durch Ändern von Strich, Füllung und Hervorhebung des konvertierten Texts.  
   
- ![Text mit unterschiedlichen Farben für Füllung und Strich](../../../../docs/framework/wpf/advanced/media/outlinedtext03.jpg "OutlinedText03")  
+ ![Text mit unterschiedlichen Farben für Füllung und Strich](./media/outlinedtext03.jpg "OutlinedText03")  
 Beispiel für das Festlegen von unterschiedlichen Farben für Strich und Füllung  
   
- ![Text mit auf Strich angewendetem Bildpinsel](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")  
+ ![Text mit auf Strich angewendetem Bildpinsel](./media/outlinedtext04.jpg "OutlinedText04")  
 Beispiel für die Anwendung eines Bildpinsels auf den Strich  
   
- ![Text mit auf Strich angewendetem Bildpinsel](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")  
+ ![Text mit auf Strich angewendetem Bildpinsel](./media/outlinedtext05.jpg "OutlinedText05")  
 Beispiel für die Anwendung eines Bildpinsels auf den Strich und die Hervorhebung  
   
- Wenn in Text konvertiert wird eine <xref:System.Windows.Media.Geometry> Objekt, es ist nicht mehr eine Sammlung von Zeichen, die Zeichen in der Textzeichenfolge kann nicht geändert werden. Sie können jedoch die Darstellung des konvertierten Texts durch Ändern der Strich- und Füllungseigenschaften ändern. Der Strich bezieht sich auf die Kontur des konvertierten Texts und die Füllung auf den Bereich innerhalb der Kontur. Weitere Informationen finden Sie unter [Erstellen von Text mit Kontur](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md).  
+ Wenn in Text konvertiert wird eine <xref:System.Windows.Media.Geometry> Objekt, es ist nicht mehr eine Sammlung von Zeichen, die Zeichen in der Textzeichenfolge kann nicht geändert werden. Sie können jedoch die Darstellung des konvertierten Texts durch Ändern der Strich- und Füllungseigenschaften ändern. Der Strich bezieht sich auf die Kontur des konvertierten Texts und die Füllung auf den Bereich innerhalb der Kontur. Weitere Informationen finden Sie unter [Erstellen von Text mit Kontur](how-to-create-outlined-text.md).  
   
  Sie können auch formatierten Text zum Konvertieren einer <xref:System.Windows.Media.PathGeometry> -Objekt und verwenden Sie das Objekt zum Hervorheben des Texts. Sie können z. B. eine Animation Anwenden der <xref:System.Windows.Media.PathGeometry> Objekts, sodass die Animation die Kontur des formatierten Texts folgt.  
   
  Das folgende Beispiel zeigt formatierten Text, der in konvertiert wurde eine <xref:System.Windows.Media.PathGeometry> Objekt. Eine animierte Ellipse folgt dem Strichpfad des gerenderten Texts.  
   
- ![Kugel, die der Pfadgeometrie des Textes folgt](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
+ ![Kugel, die der Pfadgeometrie des Textes folgt](./media/textpathgeometry01.gif "TextPathGeometry01")  
 Kugel, die der Pfadgeometrie des Textes folgt  
   
  Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen eine PathGeometry-Animation für Text](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100)).  
   
  Sie können weitere interessanten Verwendungsmöglichkeiten für formatierten Text erstellen, sobald er in konvertiert wurde eine <xref:System.Windows.Media.PathGeometry> Objekt. So können Sie beispielsweise ein zugeschnittenes Video darin anzeigen.  
   
- ![Video anzeigen, in der Pfadgeometrie des Textes](../../../../docs/framework/wpf/advanced/media/videotextdemo01.png "VideoTextDemo01")  
+ ![Video anzeigen, in der Pfadgeometrie des Textes](./media/videotextdemo01.png "VideoTextDemo01")  
 Video, das in der Pfadgeometrie von Text angezeigt wird  
   
 <a name="win32_migration"></a>   
@@ -125,7 +125,7 @@ Video, das in der Pfadgeometrie von Text angezeigt wird
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Media.FormattedText>
-- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Typografie in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [Erstellen von Text mit Kontur](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)
+- [Dokumente in WPF](documents-in-wpf.md)
+- [Typografie in WPF](typography-in-wpf.md)
+- [Erstellen von Text mit Kontur](how-to-create-outlined-text.md)
 - [Vorgehensweise: Erstellen einer PathGeometry-Animation für Text](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))

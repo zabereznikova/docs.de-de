@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], how-to topics
 ms.assetid: c31e85e3-963f-4693-b463-a29adc433fcd
-ms.openlocfilehash: 772f5cdc4f9f1b33e040d252a1308b9ce646611e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ab53f0164c5623c93132d29045498ccffaf9712
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550162"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357546"
 ---
 # <a name="expander-how-to-topics"></a>Gewusst-wie-Themen zu einem Expander
-Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.Windows.Controls.Expander> Steuerelement.  
+Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.Expander> Steuerelement.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erstellen eines Expanders mit einem ScrollViewer](../../../../docs/framework/wpf/controls/how-to-create-an-expander-with-a-scrollviewer.md)  
+ [Erstellen eines Expanders mit einem ScrollViewer](how-to-create-an-expander-with-a-scrollviewer.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Expander>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht über Expander-Steuerelemente](../../../../docs/framework/wpf/controls/expander-overview.md)
+ [Übersicht über Expander-Steuerelemente](expander-overview.md)

@@ -4,16 +4,16 @@ ms.date: 05/10/2018
 helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
-ms.openlocfilehash: 70f725712d52ad055ff69046096da10b8edfb67c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fea43558ac0fe8181f2786b69f2621346d446b2e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701143"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376389"
 ---
 # <a name="private-protected-visual-basic"></a>Privat geschützt (Visual Basic)
 
-Die Schlüsselwortkombination `Private Protected` ist ein Zugriffsmodifizierer für Member. Ein `Private Protected` angehört, zugegriffen werden kann, indem Sie alle Elemente in der enthaltenden Klasse sowie Typen, die von der enthaltenden Klasse abgeleitet, jedoch nur, wenn sie in der enthaltenden Assembly gefunden werden. 
+Die Schlüsselwortkombination `Private Protected` ist ein Zugriffsmodifizierer für Member. Ein `Private Protected` angehört, zugegriffen werden kann, indem Sie alle Elemente in der enthaltenden Klasse sowie Typen, die von der enthaltenden Klasse abgeleitet, jedoch nur, wenn sie in der enthaltenden Assembly gefunden werden.
 
 Sie können angeben, `Private Protected` nur auf Member von Klassen; Sie können nicht angewendet werden `Private Protected` zu Membern einer Struktur da Strukturen nicht geerbt werden können.
 
@@ -39,33 +39,33 @@ Weitere Informationen finden Sie unter [Festlegen der Sprache Visual Basic-Versi
 - **Zugriffsebene.** Gesamten Code in einer Klasse kann Zugriff auf die Elemente auf. Code in einer Klasse, die von einer Basisklasse abgeleitet wird und in derselben Assembly enthalten ist, kann auf alle zugreifen der `Private Protected` Elemente der Basisklasse. Jedoch nicht im Code jeder Klasse, die von einer Basisklasse abgeleitet wird und in einer anderen Assembly enthalten ist die Basisklasse der Klasse zugreifen `Private Protected` Elemente.
 
 - **Zugriffsmodifizierer.** Die Schlüsselwörter, die Zugriffsebene angeben heißen *Zugriffsmodifizierer*. Einen Vergleich der Zugriffsmodifizierer, finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
-  
- Der `Private Protected`-Modifizierer kann in folgenden Kontexten verwendet werden:  
-  
- [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md) einer geschachtelten Klasse  
-  
- [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md)  
-  
- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
-  
- [Delegate-Anweisung](../../../visual-basic/language-reference/statements/delegate-statement.md) eines Delegaten, die in einer Klasse geschachtelt sind  
-  
- [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)  
-  
- [Enum-Anweisung](../../../visual-basic/language-reference/statements/enum-statement.md) von einem Eumeration, die in einer Klasse geschachtelt sind 
-  
- [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)  
-  
- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)  
-  
- [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md) einer Schnittstelle, die in einer Klasse geschachtelt sind 
-  
- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
-  
- [Strukturieren Sie die Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md) einer Struktur geschachtelt werden, in einer Klasse 
-  
- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
-  
+
+Der `Private Protected`-Modifizierer kann in folgenden Kontexten verwendet werden:
+
+- [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md) einer geschachtelten Klasse
+
+- [Const-Anweisung](../../../visual-basic/language-reference/statements/const-statement.md)
+
+- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)
+
+- [Delegate-Anweisung](../../../visual-basic/language-reference/statements/delegate-statement.md) eines Delegaten, die in einer Klasse geschachtelt sind
+
+- [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)
+
+- [Enum-Anweisung](../../../visual-basic/language-reference/statements/enum-statement.md) einer Enumeration, die in einer Klasse geschachtelt sind
+
+- [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)
+
+- [Function-Anweisung](../../../visual-basic/language-reference/statements/function-statement.md)
+
+- [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md) einer Schnittstelle, die in einer Klasse geschachtelt sind
+
+- [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)
+
+- [Strukturieren Sie die Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md) einer Struktur geschachtelt werden, in einer Klasse
+
+- [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)

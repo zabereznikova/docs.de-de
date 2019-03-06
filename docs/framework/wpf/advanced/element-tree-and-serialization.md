@@ -8,21 +8,21 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 9fcaf10bbed23a6c8b8cdc8355a2575574d2207a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542860"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355804"
 ---
 # <a name="element-tree-and-serialization"></a>Elementstruktur und Serialisierung
 WPF-Programmierelemente stehen häufig in einer hierarchischen Form der Beziehung zueinander. Eine in XAML erstellte Anwendungsbenutzeroberfläche kann beispielsweise als Objektstruktur entworfen werden. Die Elementstruktur kann noch weiter in zwei getrennte Strukturen unterteilt werden, die trotzdem manchmal parallel angeordnet sein können: die logische Struktur und die visuelle Struktur. Serialisierung in WPF beinhaltet das Speichern des Zustands dieser beiden Strukturen sowie des Zustands der Anwendung, die in eine Datei, potenziell als XAML, geschrieben werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Strukturen in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [Serialisierungseinschränkungen für XamlWriter.Save](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
- [Initialisierung für Objektelemente außerhalb einer Objektstruktur](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
+ [Strukturen in WPF](trees-in-wpf.md)  
+ [Serialisierungseinschränkungen für XamlWriter.Save](serialization-limitations-of-xamlwriter-save.md)  
+ [Initialisierung für Objektelemente außerhalb einer Objektstruktur](initialization-for-object-elements-not-in-an-object-tree.md)  
+ [Themen zu Vorgehensweisen](element-tree-and-serialization-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Markup>  
@@ -32,12 +32,12 @@ WPF-Programmierelemente stehen häufig in einer hierarchischen Form der Beziehun
  <xref:System.Windows.Media.VisualTreeHelper>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [WPF-Architektur](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML in WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Basiselemente](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Eigenschaften](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Ereignisse](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Eingabe](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Ressourcen](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Threadmodell](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF-Architektur](wpf-architecture.md)  
+  [XAML in WPF](xaml-in-wpf.md)  
+  [Basiselemente](base-elements.md)  
+  [Eigenschaften](properties-wpf.md)  
+  [Ereignisse](events-wpf.md)  
+  [Eingabe](input-wpf.md)  
+  [Ressourcen](resources-wpf.md)  
+  [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)  
+  [Threadmodell](threading-model.md)

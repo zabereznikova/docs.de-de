@@ -8,12 +8,12 @@ helpviewer_keywords:
 - border thickness [WPF]
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
-ms.openlocfilehash: 653137c0707c2b7ee51f6bdac6bb2501f1845e1a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 7dcac523ad105f074df11cdd74126536a60497b0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747342"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350696"
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>Vorgehensweise: Verwenden eines ThicknessConverter-Objekts
 ## <a name="example"></a>Beispiel  
@@ -23,8 +23,8 @@ ms.locfileid: "56747342"
   
  Dieses Beispiel wird nicht ausgeführt.  
   
- [!code-csharp[ThicknessConverter#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThicknessConverter/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ThicknessConverter#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
+ [!code-csharp[ThicknessConverter#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessConverter/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ThicknessConverter#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Thickness>
@@ -32,4 +32,4 @@ ms.locfileid: "56747342"
 - <xref:System.Windows.Controls.Border>
 - [Vorgehensweise: Ändern Sie die Margin-Eigenschaft](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms750561(v=vs.90))
 - [Vorgehensweise: Konvertieren Sie ein ListBoxItem in einen neuen Typ von Daten](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749147(v=vs.90))
-- [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Übersicht über Panel-Elemente](../controls/panels-overview.md)

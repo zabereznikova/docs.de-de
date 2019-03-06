@@ -9,20 +9,20 @@ helpviewer_keywords:
 - clocks [WPF], animation
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
-ms.openlocfilehash: f2888f28ad7723b7390d0e2339c2117e64e84ecd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554806"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361446"
 ---
 # <a name="clocks-how-to-topics"></a>Gewusst-wie-Themen zu Uhren
-In den folgenden Themen wird beschrieben, wie eine <xref:System.Windows.Media.Animation.Clock> Objekt, das Verwalten von Status Zeitsteuerungsinformationen für eine <xref:System.Windows.Media.Animation.Timeline>.  
+In den folgenden Themen wird beschrieben, wie eine <xref:System.Windows.Media.Animation.Clock> Objekt, das Verwalten von Informationen zur zeitlichen Steuerung Zustand für eine <xref:System.Windows.Media.Animation.Timeline>.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Animieren einer Eigenschaft mit AnimationClock](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)  
- [Interaktives Steuern einer Uhr](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)  
- [Synchrones Suchen einer Uhr](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-clock-synchronously.md)  
+ [Animieren einer Eigenschaft mit AnimationClock](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [Interaktives Steuern einer Uhr](how-to-interactively-control-a-clock.md)  
+ [Synchrones Suchen einer Uhr](how-to-seek-a-clock-synchronously.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Media.Animation.Clock>  
@@ -34,6 +34,6 @@ In den folgenden Themen wird beschrieben, wie eine <xref:System.Windows.Media.An
  <xref:System.Windows.Media.Animation.Timeline>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Übersicht über Animationen](animation-overview.md)  
   
- [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+ [Übersicht über Storyboards](storyboards-overview.md)

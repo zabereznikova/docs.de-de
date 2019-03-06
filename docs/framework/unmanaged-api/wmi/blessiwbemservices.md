@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b127c48a300af01c8e7b32d422e42fbc4796420d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23b72856015d028e50c1e3bfd4a12e0f220291c3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716077"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354608"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices-Funktion
 Gibt an, ob die Anmeldeinformationen des Benutzers Zugriff auf den angegebenen zulassen [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) Klasse.   
@@ -43,20 +43,23 @@ HRESULT BlessIWbemServices (
 
 ## <a name="parameters"></a>Parameter
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in] Ein Zeiger auf die [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) Objekt für die Berechtigungen erforderlich sind.
 
-`strUser`  
+`strUser`\
 [in] Der Benutzername.
 
-`strPassword`  
+`strPassword`\
 [in] Das zugeordnete Kennwort `strUser`.
 
-`strAuthority` [in] Der Domänenname des Benutzers. Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
+`strAuthority`\
+[in] Der Domänenname des Benutzers. Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
 
-`impLevel` [in] Die Ebene des Identitätswechsels.
+`impLevel`\
+[in] Die Ebene des Identitätswechsels.
 
-`authnLevel` [in] Die Autorisierungsebene.
+`authnLevel`\
+[in] Die Autorisierungsebene.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -71,6 +74,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 | `S_OK` | 0 | Der Funktionsaufruf war erfolgreich. | 
 
 ## <a name="requirements"></a>Anforderungen  
+
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** WMINet_Utils.idl  
@@ -78,4 +82,5 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

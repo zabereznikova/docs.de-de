@@ -1,26 +1,26 @@
 ---
-title: 'Gewusst wie: Anpassen des Abstands zwischen Absätzen'
+title: 'Vorgehensweise: Anpassen des Abstands zwischen Absätzen'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - spacing between paragraphs [WPF]
 - paragraphs [WPF], spacing between
 - documents [WPF], adjusting spacing between paragraphs
 ms.assetid: 7cd2f2ac-0e19-4587-bfb6-7f5b18c9536e
-ms.openlocfilehash: b232903054cf45b70ba99a9223352391498cf79b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2a6ba34e3ab15eb316671fef7c11bea03d53c73
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542947"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367478"
 ---
-# <a name="how-to-adjust-spacing-between-paragraphs"></a>Gewusst wie: Anpassen des Abstands zwischen Absätzen
-Dieses Beispiel zeigt, wie anpassen oder Abstände zwischen den Absätzen in fortlaufendem Inhalt zunichte gemacht werden.  
+# <a name="how-to-adjust-spacing-between-paragraphs"></a>Vorgehensweise: Anpassen des Abstands zwischen Absätzen
+Dieses Beispiel zeigt, wie zum Anpassen oder Entfernen des Abstands zwischen Absätzen in fortlaufendem Inhalt.  
   
- In fortlaufendem Inhalt ist zusätzlicher Speicherplatz, der zwischen Absätzen angezeigt wird das Ergebnis der Ränder auf diese Absätze festgelegt; Daher kann der Abstand zwischen den Absätzen durch Anpassen der Ränder auf diesen Absätzen gesteuert werden.  Um einen zusätzlichen Abstand zwischen zwei Absätzen vollständig zu vermeiden, legen Sie die Seitenränder für die Absätze **0**.  Einheitliche Abstand zwischen den Absätzen in der gesamten eine gesamte erzielen <xref:System.Windows.Documents.FlowDocument>, mithilfe der Formatvorlage fest einen uniform Margin-Wert für alle Absätze in der <xref:System.Windows.Documents.FlowDocument>.  
+ In einem fortlaufenden Inhalt ist zusätzlichen Abstands zwischen Absätzen das Ergebnis der Ränder, legen Sie für diese Absätze; Daher kann der Abstand zwischen Absätzen gesteuert werden, durch Anpassen der Ränder auf den Absätzen.  Um einen zusätzlichen Abstand zwischen den beiden Absätze tauschen vollständig zu vermeiden, legen Sie die Ränder für die Absätze **0**.  Einheitliche Abstands zwischen Absätzen während einer gesamten erreichen <xref:System.Windows.Documents.FlowDocument>, verwenden Sie Formatierung, um für alle Absätze im ein einheitlicher Rand fest der <xref:System.Windows.Documents.FlowDocument>.  
   
- Es ist wichtig zu beachten, dass die Ränder von zwei angrenzenden Absätzen "reduzieren" werden die größere von zwei Ränder anstatt verdoppelt werden. Wenn also zwei angrenzende Absätze Ränder eines 20 Pixel und 40 Pixel aufweisen, der sich ergebenden Abstand zwischen den Absätzen 40 Pixel, das größere der beiden Randwerte festgelegt.  
+ Es ist wichtig zu beachten, dass die Ränder für zwei angrenzende Absätze "reduzieren" werden der größere der beiden Ränder anstatt verdoppelt werden. Wenn zwei angrenzende Absätze bzw. Ränder 20 Pixel und 40 Pixel haben, ist der resultierende Abstand zwischen den Abschnitten also 40 Pixel, die größere der beiden Randwerte festgelegt.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird formatieren, legen Sie den Rand für alle <xref:System.Windows.Documents.Paragraph> Elemente in einer <xref:System.Windows.Documents.FlowDocument> auf **0**, wodurch effektiv einen zusätzlichen Abstand zwischen den Absätzen in entfällt die <xref:System.Windows.Documents.FlowDocument>.  
+ Im folgenden Beispiel wird die Formatierung auf den Rand für alle festzulegen <xref:System.Windows.Documents.Paragraph> Elemente in einem <xref:System.Windows.Documents.FlowDocument> zu **0**, wodurch effektiv entfällt zusätzlichen Abstand zwischen Absätzen in die <xref:System.Windows.Documents.FlowDocument>.  
   
- [!code-xaml[BlockSnippets#_ParagraphSpacingXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_paragraphspacingxaml)]
+ [!code-xaml[BlockSnippets#_ParagraphSpacingXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/BlockSnippets/CSharp/Window1.xaml#_paragraphspacingxaml)]

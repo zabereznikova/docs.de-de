@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706231"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370123"
 ---
 # <a name="attached-properties-overview"></a>Übersicht über angefügte Eigenschaften
 
@@ -20,7 +20,7 @@ Eine angefügte Eigenschaft ist ein von XAML definiertes Konzept. Eine angefügt
 
 ## Erforderliche Komponenten <a name="prerequisites"></a>
 
-In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften aus Sicht eines Consumers vorhandener Abhängigkeitseigenschaften von Klassen der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verstehen und die [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) gelesen haben. Um in den Beispielen in diesem Thema folgen zu können, sollten Sie auch XAML verstehen und wissen, wie Sie die WPF-Anwendungen zu schreiben.
+In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften aus Sicht eines Consumers vorhandener Abhängigkeitseigenschaften von Klassen der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verstehen und die [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) gelesen haben. Um in den Beispielen in diesem Thema folgen zu können, sollten Sie auch XAML verstehen und wissen, wie Sie die WPF-Anwendungen zu schreiben.
 
 ## Warum verwendet angefügte Eigenschaften <a name="attached_properties_usage"></a>
 
@@ -32,11 +32,11 @@ In XAML legen Sie angefügte Eigenschaften mithilfe der Syntax *AttachedProperty
 
 Im folgenden werden verdeutlicht, wie Sie festlegen können <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> in XAML:
 
-[!code-xaml[PropertiesOvwSupport#APBasicUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
+[!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
 Beachten Sie, dass die Verwendung einer statischen Eigenschaft ähnelt. Sie verweisen immer auf den Typ <xref:System.Windows.Controls.DockPanel> , besitzt und registriert die angefügte Eigenschaft anstatt an eine beliebige Instanz anhand des Namens verweisen.
 
-Da eine angefügte Eigenschaft in XAML ein Attribut ist, das Sie im Markup festlegen, besitzt außerdem nur der Mengenvorgang Relevanz. Sie können eine Eigenschaft in XAML nicht direkt abrufen, obwohl einige indirekte Mechanismen zum Vergleichen von Werten vorhanden sind, wie z.B. Trigger in Formaten (weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)).
+Da eine angefügte Eigenschaft in XAML ein Attribut ist, das Sie im Markup festlegen, besitzt außerdem nur der Mengenvorgang Relevanz. Sie können eine Eigenschaft in XAML nicht direkt abrufen, obwohl einige indirekte Mechanismen zum Vergleichen von Werten vorhanden sind, wie z.B. Trigger in Formaten (weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)).
 
 ### <a name="attached-property-implementation-in-wpf"></a>Implementierung von angefügten Eigenschaften in WPF
 
@@ -64,8 +64,8 @@ Angefügte Eigenschaften in WPF haben nicht die typische [!INCLUDE[TLA2#tla_clr]
 
 Das folgende Beispiel zeigt, wie Sie eine angefügte Eigenschaft im Code festlegen können. In diesem Beispiel `myCheckBox` ist eine Instanz der <xref:System.Windows.Controls.CheckBox> Klasse.
 
-[!code-csharp[PropertiesOvwSupport#APCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
-[!code-vb[PropertiesOvwSupport#APCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
+[!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
+[!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
 Ähnlich wie in der XAML-Fall: Wenn `myCheckBox` noch nicht als untergeordnetes Element hinzugefügt wurde `myDockPanel` durch die dritte Zeile des Codes, würde die vierte Zeile des Codes keine Ausnahme auslösen, aber den Wert der Eigenschaft interagieren nicht mit einem <xref:System.Windows.Controls.DockPanel> übergeordneten und somit wird keine Aktion aus. Nur ein <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Wert festgelegt, die auf einem untergeordneten-Element, das in Kombination mit dem Vorhandensein einer <xref:System.Windows.Controls.DockPanel> übergeordnete Element wird in der gerenderten Anwendung ein effektives Verhalten verursachen. (In diesem Fall könnten Sie die angefügte Eigenschaft festlegen und anschließend an die Struktur anfügen. Oder Sie könnten die angefügte Eigenschaft an die Struktur anfügen und anschließend festlegen. Jede Reihenfolge stellt das gleiche Ergebnis bereit.)
 
@@ -73,7 +73,7 @@ Das folgende Beispiel zeigt, wie Sie eine angefügte Eigenschaft im Code festleg
 
 Beim Registrieren der Eigenschaft, <xref:System.Windows.FrameworkPropertyMetadata> festgelegt ist, um die Merkmale der Eigenschaft, z. B., ob die Eigenschaft wirkt sich Rendering, Messung und So weiter auf anzugeben. Metadaten für eine angefügte Eigenschaft unterscheiden sich im Allgemeinen nicht von denen für eine Abhängigkeitseigenschaft. Wenn Sie einen Standardwert in einer Überschreibung für die Metadaten von angefügten Eigenschaften angeben, wird dieser Wert der Standardwert der impliziten angefügten Eigenschaft in Instanzen der überschreibenden Klasse. Der Standardwert wird insbesondere gemeldet, wenn ein Prozess den Wert einer angefügten Eigenschaft über die `Get`-Methodenaccessoren für diese Eigenschaft abfragt, die eine Instanz der Klasse angibt, in dem Sie die Metadaten festgelegt haben, und wenn der Wert für diese angefügte Eigenschaft andernfalls nicht festgelegt war.
 
-Wenn Sie die Vererbung von Eigenschaftswerten für eine Eigenschaft aktivieren möchten, sollten Sie die angefügten Eigenschaften anstelle von nicht angefügten Abhängigkeitseigenschaften verwenden. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).
+Wenn Sie die Vererbung von Eigenschaftswerten für eine Eigenschaft aktivieren möchten, sollten Sie die angefügten Eigenschaften anstelle von nicht angefügten Abhängigkeitseigenschaften verwenden. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](property-value-inheritance.md).
 
 ## Benutzerdefinierte angefügte Eigenschaften <a name="custom"></a>
 
@@ -83,7 +83,7 @@ Sie können eine angefügte Eigenschaft erstellen, wenn ein Mechanismus für Eig
 
 Ein weiteres Szenario für die Verwendung einer angefügten Eigenschaft: Wenn Ihre Klasse einen Dienst darstellt und Sie möchten, dass Klassen den Dienst auf transparentere Weise integrieren können.
 
-Ein weiteres Szenario ist zum Empfangen von WPF-Designer von Visual Studio-Unterstützung, z. B. **Eigenschaften** Bearbeiten des Fensters. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md).
+Ein weiteres Szenario ist zum Empfangen von WPF-Designer von Visual Studio-Unterstützung, z. B. **Eigenschaften** Bearbeiten des Fensters. Weitere Informationen finden Sie unter [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md).
 
 Wie bereits erwähnt, sollten Sie als eine angefügte Eigenschaft registrieren, wenn Sie die Vererbung von Eigenschaftswerten verwenden möchten.
 
@@ -118,8 +118,8 @@ Die Signatur für die **Set_PropertyName_** Accessor muss:
 
 Das folgende Beispiel zeigt die Registrierung der Abhängigkeitseigenschaft (mithilfe der <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Methode), als auch die **Get_PropertyName_** und **Set_PropertyName_** Accessoren. Im Beispiel ist der Name der angefügten Eigenschaft `IsBubbleSource`. Deshalb müssen die Accessoren `GetIsBubbleSource` und `SetIsBubbleSource` genannt werden.
 
-[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
-[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
+[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
+[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>Attribute von angefügten Eigenschaften
 
@@ -135,16 +135,16 @@ WPF definiert verschiedene [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../..
 
 ## Weitere Informationen über angefügte Eigenschaften <a name="more"></a>
 
--   Weitere Informationen zum Erstellen einer angefügten Eigenschaft finden Sie unter [Registrieren einer angefügten Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md).
+-   Weitere Informationen zum Erstellen einer angefügten Eigenschaft finden Sie unter [Registrieren einer angefügten Eigenschaft](how-to-register-an-attached-property.md).
 
--   Weitergehende Verwendungsszenarios für Abhängigkeitseigenschaften und angefügte Eigenschaften finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).
+-   Weitergehende Verwendungsszenarios für Abhängigkeitseigenschaften und angefügte Eigenschaften finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md).
 
 -   Sie können auch eine Eigenschaft als angefügte Eigenschaft und als Abhängigkeitseigenschaft registrieren, dann jedoch trotzdem „Wrapper“-Implementierungen offenlegen. In diesem Fall kann die Eigenschaft entweder auf das Element festgelegt werden, oder auf ein beliebiges Element über die angefügte XAML-Eigenschaftssyntax. Ein Beispiel für eine Eigenschaft mit einem entsprechenden Szenario für standard und die angefügten Verwendungen ist <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.DependencyProperty>
-- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Registrieren einer angefügten Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)
+- [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
+- [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
+- [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
+- [Registrieren einer angefügten Eigenschaft](how-to-register-an-attached-property.md)

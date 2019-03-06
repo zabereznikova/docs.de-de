@@ -16,40 +16,43 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b460c2c4b0d38ec46ee9d7341de9b320a2ecaa7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d71d2a5b3007d4e877900443af426a9643b29125
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594641"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360435"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>CorThreadSafetyOptions-Enumeration
-Gibt Flags für die Auswahl von Optionen für die Threadsicherheit an.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-typedef enum CorThreadSafetyOptions {  
-    MDThreadSafetyDefault       = 0x00000000,  
-    MDThreadSafetyOff           = 0x00000000,  
-    MDThreadSafetyOn            = 0x00000001,  
-} CorThreadSafetyOptions;  
-```  
-  
-## <a name="members"></a>Member  
-  
-|Member|Beschreibung|  
-|------------|-----------------|  
-|`MDThreadSatetyDefault`|Der Standardwert. Wie in `MDThreadSatetyOff`.|  
-|`MDThreadSatetyOff`|Gibt an, dass eine Reader-/Writer-Sperre kann nicht festgelegt werden.|  
-|`MDThreadSatetyOn`|Gibt an, dass eine Reader-/Writer-Sperre festgelegt werden kann.|  
-  
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Header:** CorHdr.h  
-  
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+Gibt Flags für die Auswahl von Optionen für die Threadsicherheit an.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+typedef enum CorThreadSafetyOptions {
+    MDThreadSafetyDefault       = 0x00000000,
+    MDThreadSafetyOff           = 0x00000000,
+    MDThreadSafetyOn            = 0x00000001,
+} CorThreadSafetyOptions;
+```
+
+## <a name="members"></a>Member
+
+|Member|Beschreibung|
+|------------|-----------------|
+|`MDThreadSafetyDefault`|Der Standardwert. Wie in `MDThreadSafetyOff`.|
+|`MDThreadSafetyOff`|Gibt an, dass eine Reader-/Writer-Sperre kann nicht festgelegt werden.|
+|`MDThreadSafetyOn`|Gibt an, dass eine Reader-/Writer-Sperre festgelegt werden kann.|
+
+## <a name="requirements"></a>Anforderungen
+
+**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+
+**Header:** CorHdr.h
+
+**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

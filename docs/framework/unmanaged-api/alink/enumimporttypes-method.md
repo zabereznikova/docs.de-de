@@ -17,47 +17,52 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e437868138d7ae31d233853ecc0f709de3ee39d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d0aefea7345bc3bf37bdb8d13cb2cda19cfe527
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512722"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355739"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes-Methode
-Listet jeden Typ in jedem Bereich an.  
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
-HRESULT EnumImportTypes(  
-    HALINKENUM   hEnum,  
-    DWORD        dwMax,  
-    mdTypeDef    aTypeDefs[],  
-    DWORD*       pdwCount  
-) PURE;  
-```  
-  
-#### <a name="parameters"></a>Parameter  
- `hEnum`  
- Handle für Enumerator.  
-  
- `dwMax`  
- Maximale Anzahl von Typen, die abgerufen werden.  
-  
- `aTypeDefs`  
- Empfängt Typtoken, nicht zu überschreiten `dwMax`.  
-  
- `pdwCount`  
- Empfängt die tatsächliche Anzahl der Typen in `aTypeDefs`.  
-  
-## <a name="return-value"></a>Rückgabewert  
- Gibt S_OK zurück, wenn die Methode erfolgreich ist.  
-  
-## <a name="requirements"></a>Anforderungen  
- Erfordert alink.h  
-  
+
+Listet jeden Typ in jedem Bereich an.
+
+## <a name="syntax"></a>Syntax
+
+```cpp
+HRESULT EnumImportTypes(
+    HALINKENUM   hEnum,
+    DWORD        dwMax,
+    mdTypeDef    aTypeDefs[],
+    DWORD*       pdwCount
+) PURE;
+```
+
+## <a name="parameters"></a>Parameter
+
+`hEnum`\
+Handle für Enumerator.
+
+`dwMax`\
+Maximale Anzahl von Typen, die abgerufen werden.
+
+`aTypeDefs`\
+Typtoken, nicht zu überschreiten erhält `dwMax`.
+
+`pdwCount`\
+Empfängt die tatsächliche Anzahl der Typen in `aTypeDefs`.
+
+## <a name="return-value"></a>Rückgabewert
+
+Gibt S_OK zurück, wenn die Methode erfolgreich ist.
+
+## <a name="requirements"></a>Anforderungen
+
+Erfordert alink.h
+
 ## <a name="see-also"></a>Siehe auch
-- [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink-Schnittstelle](ialink-interface.md)
+- [IALink2-Schnittstelle](ialink2-interface.md)
+- [Alink-API](index.md)

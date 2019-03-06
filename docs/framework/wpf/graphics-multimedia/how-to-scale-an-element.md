@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: e95a5ed091621d27a462bc691e62a5f00bab49ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6decc10c954b51d64c6045c01f1264df35429862
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504313"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358612"
 ---
 # <a name="how-to-scale-an-element"></a>Vorgehensweise: Skalieren eines Elements
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.ScaleTransform> ein Element skalieren.  
@@ -22,17 +22,17 @@ Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.ScaleTransfo
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.ScaleTransform> verdoppeln Sie die Größe des eine 50 x 50 <xref:System.Windows.Shapes.Rectangle>. Die <xref:System.Windows.Media.ScaleTransform> hat den Wert 0 (Standard) für beide <xref:System.Windows.Media.ScaleTransform.CenterX%2A> und <xref:System.Windows.Media.ScaleTransform.CenterY%2A>.  
   
 ## <a name="example"></a>Beispiel  
- [!code-xaml[transformsSample#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
+ [!code-xaml[transformsSample#21](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#21)]  
   
  Legen Sie in der Regel <xref:System.Windows.Media.ScaleTransform.CenterX%2A> und <xref:System.Windows.Media.ScaleTransform.CenterY%2A> in der Mitte des Objekts, das skaliert wird: (<xref:System.Windows.FrameworkElement.Width%2A>/2,  <xref:System.Windows.FrameworkElement.Height%2A> /2).  
   
  Das folgende Beispiel zeigt eine andere <xref:System.Windows.Shapes.Rectangle> , Größe verdoppelt wird jedoch dadurch <xref:System.Windows.Media.ScaleTransform> hat den Wert 25 für beide <xref:System.Windows.Media.ScaleTransform.CenterX%2A> und <xref:System.Windows.Media.ScaleTransform.CenterY%2A>, in der Mitte des Rechtecks entspricht.  
   
- [!code-xaml[transformsSample#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
+ [!code-xaml[transformsSample#22](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/ScaleTransformExample.xaml#22)]  
   
  Die folgende Abbildung zeigt den Unterschied zwischen den beiden <xref:System.Windows.Media.ScaleTransform> Vorgänge. Die gepunktete Linie stellt die Größe und die Position des Rechtecks vor der Skalierung dar.  
   
- ![2-fach-Skalierung mit unterschiedlichen Mittelpunkten](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-scalecenter.gif "Wcpsdk_graphicsmm_scalecenter")  
+ ![2-fach-Skalierung mit unterschiedlichen Mittelpunkten](./media/wcpsdk-graphicsmm-scalecenter.gif "Wcpsdk_graphicsmm_scalecenter")  
 Zwei ScaleTransform-Vorgänge mit identischen ScaleX- und ScaleY-Werten aber unterschiedlichen Mittelpunkten  
   
  Das vollständige Beispiel finden Sie im [Beispiel einer 2D-Transformation](https://go.microsoft.com/fwlink/?LinkID=158252).  
@@ -40,5 +40,5 @@ Zwei ScaleTransform-Vorgänge mit identischen ScaleX- und ScaleY-Werten aber unt
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
-- [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+- [Übersicht über Transformationen](transforms-overview.md)
+- [Themen zu Vorgehensweisen](transformations-how-to-topics.md)

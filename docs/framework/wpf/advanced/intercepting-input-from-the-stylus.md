@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 5384a49461886ba184a0a128467c864b37c0efc9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0568e72e6d686ce08e6bd802f273e45dd623524b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667027"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374309"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Abfangen von Tablettstifteingaben
 Die <xref:System.Windows.Input.StylusPlugIns> Architektur bietet einen Mechanismus zum Implementieren der Steuerung auf niedriger Ebene über <xref:System.Windows.Input.Stylus> sowie die Erstellung von digitaler Tinte <xref:System.Windows.Ink.Stroke> Objekte. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> -Klasse bietet einen Mechanismus für die Sie benutzerdefiniertes Verhalten implementieren, und klicken Sie auf die vom Tablettstift für eine optimale Leistung eingehenden Datenstrom anzuwenden.  
@@ -47,10 +47,10 @@ Die <xref:System.Windows.Input.StylusPlugIns> Architektur bietet einen Mechanism
   
  Das folgende Beispiel zeigt ein plug-in, das schränkt die nastala chyba vstupu durch Ändern der <xref:System.Windows.Input.StylusPoint.X%2A> und <xref:System.Windows.Input.StylusPoint.Y%2A> Werte in der <xref:System.Windows.Input.StylusPoint> Daten stammen der <xref:System.Windows.Input.Stylus> Gerät.  
   
- [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
- [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
-[!code-csharp[AdvancedInkTopicsSamples#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
-[!code-vb[AdvancedInkTopicsSamples#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
+ [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
+ [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
+[!code-csharp[AdvancedInkTopicsSamples#3](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#3)]
+[!code-vb[AdvancedInkTopicsSamples#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#3)]  
   
 <a name="AddingYourPluginToAnInkCanvas"></a>   
 ## <a name="adding-your-plug-in-to-an-inkcanvas"></a>Hinzufügen eines Plug-Ins an ein InkCanvas-Steuerelement  
@@ -58,18 +58,18 @@ Die <xref:System.Windows.Input.StylusPlugIns> Architektur bietet einen Mechanism
   
  Das folgende Beispiel veranschaulicht eine benutzerdefinierte <xref:System.Windows.Controls.InkCanvas> zum Filtern von Freihandeingaben.  
   
- [!code-csharp[AdvancedInkTopicsSamples#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
+ [!code-csharp[AdvancedInkTopicsSamples#4](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#4)]  
   
  Wenn Sie beim Hinzufügen einer `FilterInkCanvas` zu Ihrer Anwendung und führen Sie es, Sie werden feststellen, dass die Freihandeingaben beschränkt, in einer Region, bis der Benutzer einen Strich abgeschlossen hat. Grund hierfür ist, die <xref:System.Windows.Controls.InkCanvas> verfügt über eine <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> Eigenschaft, die eine <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> und bereits ein Mitglied der <xref:System.Windows.UIElement.StylusPlugIns%2A> Auflistung. Die benutzerdefinierte <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Sie hinzugefügt haben, um die <xref:System.Windows.UIElement.StylusPlugIns%2A> Sammlung erhält die <xref:System.Windows.Input.StylusPoint> Daten nach <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> empfängt Daten. Daher die <xref:System.Windows.Input.StylusPoint> Daten nicht gefiltert werden, erst nach dem der Benutzer den Stift zum Beenden eines Strichs anhebt. Um, wenn der Benutzer es zeichnet die Freihandeingabe zu filtern, müssen Sie das Einfügen der `FilterPlugin` vor der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.  
   
  Der folgende C#-Code veranschaulicht eine benutzerdefinierte <xref:System.Windows.Controls.InkCanvas> , filtert die Freihandeingabe, wie es gezeichnet wird.  
   
- [!code-csharp[AdvancedInkTopicsSamples#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
+ [!code-csharp[AdvancedInkTopicsSamples#5](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#5)]  
   
 <a name="Conclusion"></a>   
 ## <a name="conclusion"></a>Schlussbemerkung  
  Durch Ableiten von Ihren eigenen <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klassen und Einfügen in <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> Auflistungen, Sie können das Verhalten von digitaler Tinte erheblich verbessern. Sie haben Zugriff auf die <xref:System.Windows.Input.StylusPoint> Daten generiert, haben Sie die Möglichkeit zum Anpassen der <xref:System.Windows.Input.Stylus> Eingabe. Da diesen Low-Level-Zugriff auf die <xref:System.Windows.Input.StylusPoint> Daten, Sie können die Freihandeingaben und das Rendering mit optimaler Leistung für Ihre Anwendung implementieren.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erweiterte Behandlung von Freihandeingaben](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+- [Erweiterte Behandlung von Freihandeingaben](advanced-ink-handling.md)
 - [Zugreifen auf und Bearbeiten von Stifteingabe](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

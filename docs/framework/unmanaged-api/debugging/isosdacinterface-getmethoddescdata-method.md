@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825952"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352593"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData-Methode
 
@@ -41,19 +41,25 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameter
 
-`methodDesc` [in] Die Adresse der MethodDesc.
+`methodDesc`\
+[in] Die Adresse der MethodDesc.
 
-`ip` [in] Die IP-Adresse der Methode.
+`ip`\
+[in] Die IP-Adresse der Methode.
 
-`data` [out] Die Daten, die die MethodDesc zugeordnet, wie die internen APIs zurückgegeben wird.
+`data`\
+[out] Die Daten, die die MethodDesc zugeordnet, wie die internen APIs zurückgegeben wird.
 
-`cRevertedRejitVersions` [out] Die Anzahl der wiederhergestellten Rejit-Versionen.
+`cRevertedRejitVersions`\
+[out] Die Anzahl der wiederhergestellten Rejit-Versionen.
 
-`rgRevertedRejitData` [out] Die Daten, die die wiederhergestellten Rejit-Versionen zugeordnet, wie die internen APIs zurückgegeben wird.
+`rgRevertedRejitData`\
+[out] Die Daten, die die wiederhergestellten Rejit-Versionen zugeordnet, wie die internen APIs zurückgegeben wird.
 
-`pcNeededRevertedRejitData` [out] Die Anzahl der Bytes, die zum Speichern der Daten verknüpft, die mit den wiederhergestellten ReJit-Versionen ist erforderlich.
+`pcNeededRevertedRejitData`\
+[out] Die Anzahl der Bytes, die zum Speichern der Daten verknüpft, die mit den wiederhergestellten ReJit-Versionen ist erforderlich.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -68,5 +74,5 @@ Die angegebene Methode ist Teil der `ISOSDacInterface` Schnittstelle und zum 20.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [Debuggen](index.md)
+- [ISOSDacInterface-Schnittstelle](isosdacinterface-interface.md)

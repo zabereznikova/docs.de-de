@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: 8d8592ae-0c91-469e-a1cd-d179c4544548
-ms.openlocfilehash: 4eded4812d8894b58331f26ec75c592c15e95419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb3e00cad1a629a405fa75ef32a289c4006f324
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663205"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364436"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-command-support"></a>Vorgehensweise: Einbinden eines Befehls in ein Steuerelement mit Befehlsunterstützung
 Im folgenden Beispiel wird veranschaulicht, wie Sie ein <xref:System.Windows.Input.RoutedCommand>-Objekt an ein <xref:System.Windows.Controls.Control>-Objekt binden, in das Unterstützung für den Befehl integriert ist.  Ein vollständiges Beispiel, das Befehle mit mehrere Quellen verknüpft, finden Sie im Beispiel unter [Create a Custom RoutedCommand Sample (Erstellen eines benutzerdefinierten „RoutedCommand“-Beispiels)](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
@@ -31,11 +31,11 @@ Im folgenden Beispiel wird veranschaulicht, wie Sie ein <xref:System.Windows.Inp
   
  Eine <xref:System.Windows.Controls.MenuItem>-Klasse wird generiert, und deren <xref:System.Windows.Controls.MenuItem.Command%2A>-Eigenschaft wird auf den Befehl<xref:System.Windows.Input.ApplicationCommands.Paste%2A> festgelegt.  Die <xref:System.Windows.Controls.MenuItem.CommandTarget%2A>-Eigenschaft wird nicht explizit auf das Objekt <xref:System.Windows.Controls.TextBox> festgelegt.  Wenn <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> nicht festgelegt wird, ist das Ziel für den Befehl das Element, das den Tastaturfokus besitzt.  Wenn das Element, das den Tastaturfokus besitzt, den Befehl <xref:System.Windows.Input.ApplicationCommands.Paste%2A> nicht unterstützt oder derzeit den Einfügungsbefehl nicht ausführen kann (die Zwischenablage ist beispielsweise leer), ist das <xref:System.Windows.Controls.MenuItem> ausgegraut.  
   
- [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
+ [!code-xaml[MenuItemCommandTask_XAML#MenuItemCommanding](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask_XAML/CS/Window1.xaml#menuitemcommanding)]  
   
- [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
- [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
+ [!code-csharp[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandTask/CSharp/Window1.xaml.cs#menuitemcommandingcodebehind)]
+ [!code-vb[MenuItemCommandTask#MenuItemCommandingCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandTask/VisualBasic/Window1.xaml.vb#menuitemcommandingcodebehind)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Einbinden eines Befehls in ein Steuerelement ohne Befehlsunterstützung](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)
+- [Befehlsübersicht](commanding-overview.md)
+- [Einbinden eines Befehls in ein Steuerelement ohne Befehlsunterstützung](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)

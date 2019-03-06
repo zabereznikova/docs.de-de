@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: eb27f3c902a0fb783d26d14d1ce494eebcffb999
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532148"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364813"
 ---
 # <a name="dependency-property-security"></a>Sicherheit von Abhängigkeitseigenschaften
 Abhängigkeitseigenschaften sollten im Allgemeinen als öffentliche Eigenschaften betrachtet werden. Die Art des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems verhindert die Möglichkeit von Sicherheitsgarantien in Bezug auf einen Abhängigkeitseigenschaftswert.  
@@ -27,7 +27,7 @@ Abhängigkeitseigenschaften sollten im Allgemeinen als öffentliche Eigenschafte
   
  Wenn Sie Ihre eigenen Abhängigkeitseigenschaften schreiben, sollten Sie die Wrapper deklarieren und die <xref:System.Windows.DependencyProperty> -Bezeichnerfeld als öffentliche Member an, sodass Aufrufer keine Informationen über die wahre Zugriffsebene dieser Eigenschaft (aufgrund der Speicher wird irreführenden geltenden erhalten eine Abhängigkeitseigenschaft implementiert).  
   
- Sie können die Eigenschaft als schreibgeschützte Abhängigkeitseigenschaft registrieren, für eine benutzerdefinierte Abhängigkeitseigenschaft, und dies bietet eine effektive Möglichkeit zum Verhindern von jedem Benutzer, die einen Verweis auf nicht aufrechterhält Festlegen der Eigenschaft der <xref:System.Windows.DependencyPropertyKey> für diese Eigenschaft. Weitere Informationen finden Sie unter [Schreibgeschützte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md).  
+ Sie können die Eigenschaft als schreibgeschützte Abhängigkeitseigenschaft registrieren, für eine benutzerdefinierte Abhängigkeitseigenschaft, und dies bietet eine effektive Möglichkeit zum Verhindern von jedem Benutzer, die einen Verweis auf nicht aufrechterhält Festlegen der Eigenschaft der <xref:System.Windows.DependencyPropertyKey> für diese Eigenschaft. Weitere Informationen finden Sie unter [Schreibgeschützte Abhängigkeitseigenschaften](read-only-dependency-properties.md).  
   
 > [!NOTE]
 >  Deklarieren einer <xref:System.Windows.DependencyProperty> privat ist zwar zulässig, und es ist vorstellbar, dass dienen, um den sofort offengelegten Namespace einer benutzerdefinierten Klasse zu reduzieren, aber eine solche Eigenschaft sollte weder als "private", in dem Sinne wie die [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Diese Zugriffsebene im nächsten Abschnitt beschriebenen Gründen definiert.  
@@ -40,4 +40,4 @@ Abhängigkeitseigenschaften sollten im Allgemeinen als öffentliche Eigenschafte
  Eine Anforderung zum Anwenden einer <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> und erwartet wird der Fehler bei der Überprüfung auf einen Fehler bei Bedarf, um zu verhindern, dass eine Eigenschaft festgelegt wird, ist kein geeigneter Sicherheitsmechanismus. Ungültigkeit von festgelegten Werten durch erzwungen <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> kann auch von böswilligen Aufrufern unterdrückt werden, wenn diese Aufrufer innerhalb der Anwendungsdomäne ausgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
