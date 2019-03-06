@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: 5ddb23a6-7813-4058-b59d-29ff3341638c
-ms.openlocfilehash: 0793e1b500449b2da0442e306aba9deb8e719a60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57473d0a22bc7441e4c32506f57f402bab963c2d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536104"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355752"
 ---
 # <a name="digital-ink-overviews"></a>Übersicht über Freihandeingaben
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erste Schritte mit Freihandeingaben](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
-  [Erfassen von Freihandeingaben](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
-  [Schrifterkennung](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
-  [Speichern von Eingabehilfen](../../../../docs/framework/wpf/advanced/storing-ink.md)  
-  [Das Freihandobjektmodell: Windows Forms und COM im Vergleich zu WPF](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [Erweiterte Behandlung von Freihandeingaben](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+ [Erste Schritte mit Freihandeingaben](getting-started-with-ink.md)  
+  [Erfassen von Freihandeingaben](collecting-ink.md)  
+  [Schrifterkennung](handwriting-recognition.md)  
+  [Speichern von Eingabehilfen](storing-ink.md)  
+  [Das Freihandobjektmodell: Windows Forms und COM im Vergleich zu WPF](the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [Erweiterte Behandlung von Freihandeingaben](advanced-ink-handling.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: eb9de4098c5fb9bde74fa93dda6dd5a878ed0339
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e0e464adf70aeeaecb522d328d3087ca66a530c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697529"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368557"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>Vorgehensweise: Animieren eines Objekts mithilfe von Keyframes
 In diesem Beispiel wird gezeigt, wie zum Animieren eines Objekts, die in diesem Beispiel wird die <xref:System.Windows.Controls.Page.Background%2A> Eigenschaft eine <xref:System.Windows.Controls.Page> -Steuerelement, mithilfe von Keyframes.  
@@ -29,7 +29,7 @@ In diesem Beispiel wird gezeigt, wie zum Animieren eines Objekts, die in diesem 
 > [!NOTE]
 >  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> ist die einzige Art des Keyframes, mit denen Sie mit der <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> Klasse. Schlüssel wie frames <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> können abrupte Veränderungen in den Werten, d. h., ändert sich die Farbe, in diesem Beispiel treten plötzlich.  
   
- [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   
  Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
@@ -41,5 +41,5 @@ In diesem Beispiel wird gezeigt, wie zum Animieren eines Objekts, die in diesem 
 - <xref:System.Windows.Media.LinearGradientBrush>
 - <xref:System.Windows.Media.RadialGradientBrush>
 - <xref:System.Windows.Media.DrawingBrush>
-- [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
+- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)

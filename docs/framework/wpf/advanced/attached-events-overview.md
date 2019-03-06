@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: b82af44b1262f4eb2839efef85a4b35eba534524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682955"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371670"
 ---
 # <a name="attached-events-overview"></a>Übersicht über angefügte Ereignisse
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definiert eine Sprachkomponente und einen Ereignistyp mit der Bezeichnung *angefügtes Ereignis*. Mit dem Konzept eines angefügten Ereignisses können Sie einen Handler für ein bestimmtes Ereignis zu einem beliebigen Element und nicht zu einem Element, das tatsächlich das Ereignis definiert oder erbt, hinzufügen. In diesem Fall definiert oder „besitzt“ weder das Objekt, das potenziell das Ereignis auslöst, noch die Instanz der Richtungsbehandlung das Ereignis.  
@@ -26,7 +26,7 @@ ms.locfileid: "54682955"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
- In diesem Thema wird davon ausgegangen, dass Sie die Artikel [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md) und [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) gelesen haben.  
+ In diesem Thema wird davon ausgegangen, dass Sie die Artikel [Übersicht über Routingereignisse](routed-events-overview.md) und [Übersicht über XAML (WPF)](xaml-overview-wpf.md) gelesen haben.  
   
 <a name="Syntax"></a>   
 ## <a name="attached-event-syntax"></a>Syntax der angefügten Ereignisse  
@@ -36,7 +36,7 @@ ms.locfileid: "54682955"
   
  Folgendes ist z.B. die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Syntax für das Anfügen eines Handlers für ein benutzerdefiniertes angefügtes Ereignis `NeedsCleaning`:  
   
- [!code-xaml[WPFAquariumSln#AE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
+ [!code-xaml[WPFAquariumSln#AE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquarium/Window1.xaml#ae)]  
   
  Beachten Sie das `aqua:`-Präfix. Das Präfix ist in diesem Fall erforderlich, da das angefügte Ereignis ein benutzerdefiniertes Ereignis ist, das aus einer benutzerdefinierten zugeordneten xmlns stammt.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54682955"
   
  Im Allgemeinen unterscheidet sich ein angefügtes Ereignis von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nicht sehr von einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Routingereignis. Die Unterschiede bestehen in der Quelle des Ereignisses und wie es durch eine Klasse als Member verfügbar gemacht wird (was auch die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Handlersyntax beeinflusst).  
   
- Aber wie oben erwähnt sind die vorhandenen angefügten Ereignisse von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nicht speziell für die Behandlung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bestimmt. Der Zweck des Ereignisses ist häufiger das Aktivieren eines zusammengesetzten Elements, um den Status an ein übergeordnetes Element in Zusammensetzung zu melden. In diesem Fall wird das Ereignis in der Regel im Code ausgelöst und beruht auf Klassenbehandlung in der entsprechenden übergeordneten Klasse. Z. B. Elemente in einer <xref:System.Windows.Controls.Primitives.Selector> erwartet, dass Sie die angefügte <xref:System.Windows.Controls.Primitives.Selector.Selected> -Ereignis, das Klasse ist von behandelt die <xref:System.Windows.Controls.Primitives.Selector> Klasse, und klicken Sie dann möglicherweise konvertiert, indem die <xref:System.Windows.Controls.Primitives.Selector> Klasse in ein anderes Routingereignis <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Weitere Informationen über Routingereignisse und Klassenbehandlung finden Sie unter [Markieren von Routingereignissen als behandelt und Klassenbehandlung](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Aber wie oben erwähnt sind die vorhandenen angefügten Ereignisse von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nicht speziell für die Behandlung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bestimmt. Der Zweck des Ereignisses ist häufiger das Aktivieren eines zusammengesetzten Elements, um den Status an ein übergeordnetes Element in Zusammensetzung zu melden. In diesem Fall wird das Ereignis in der Regel im Code ausgelöst und beruht auf Klassenbehandlung in der entsprechenden übergeordneten Klasse. Z. B. Elemente in einer <xref:System.Windows.Controls.Primitives.Selector> erwartet, dass Sie die angefügte <xref:System.Windows.Controls.Primitives.Selector.Selected> -Ereignis, das Klasse ist von behandelt die <xref:System.Windows.Controls.Primitives.Selector> Klasse, und klicken Sie dann möglicherweise konvertiert, indem die <xref:System.Windows.Controls.Primitives.Selector> Klasse in ein anderes Routingereignis <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> . Weitere Informationen über Routingereignisse und Klassenbehandlung finden Sie unter [Markieren von Routingereignissen als behandelt und Klassenbehandlung](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="Custom"></a>   
 ## <a name="defining-your-own-attached-events-as-routed-events"></a>Definieren Ihres eigenen angefügten Ereignisses als Routingereignisse  
@@ -80,10 +80,10 @@ ms.locfileid: "54682955"
   
  Der folgende Code definiert z.B. das angefügte Ereignis `NeedsCleaning` in der Besitzerklasse `Aquarium`, unter Verwendung der Strategie des angefügten Ereignisses von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] für das Deklarieren des angefügten Ereignisses als Routingereignis.  
   
- [!code-csharp[WPFAquariumSln#AECode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
- [!code-vb[WPFAquariumSln#AECode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
+ [!code-csharp[WPFAquariumSln#AECode](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#aecode)]
+ [!code-vb[WPFAquariumSln#AECode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#aecode)]  
   
- Beachten Sie, dass die Methode verwendet wird, um das angefügte Ereignis-ID-Feld herzustellen <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, ist tatsächlich die gleiche Methode, die verwendet wird, um ein nicht angefügtes Routingereignis zu registrieren. Angefügte Ereignisse und Routingereignisse werden alle in einem zentralisierten internen Speicher registriert. Diese Implementierung des Ereignisspeichers ermöglicht die konzeptionelle Besonderheit „Ereignisse als Schnittstelle“, die im Artikel [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md) diskutiert wird.  
+ Beachten Sie, dass die Methode verwendet wird, um das angefügte Ereignis-ID-Feld herzustellen <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>, ist tatsächlich die gleiche Methode, die verwendet wird, um ein nicht angefügtes Routingereignis zu registrieren. Angefügte Ereignisse und Routingereignisse werden alle in einem zentralisierten internen Speicher registriert. Diese Implementierung des Ereignisspeichers ermöglicht die konzeptionelle Besonderheit „Ereignisse als Schnittstelle“, die im Artikel [Übersicht über Routingereignisse](routed-events-overview.md) diskutiert wird.  
   
 <a name="Raising"></a>   
 ## <a name="raising-a-wpf-attached-event"></a>Auslösen eines angefügten Ereignisses von WPF  
@@ -92,6 +92,6 @@ ms.locfileid: "54682955"
  Jedoch wenn Sie ein benutzerdefiniertes angefügtes Ereignis basierend auf definieren die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Modells angefügte Ereignisse <xref:System.Windows.RoutedEvent>, können Sie <xref:System.Windows.UIElement.RaiseEvent%2A> zum Auslösen eines angefügten Ereignisses von einem <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement>. Das Auslösen eines Routingereignisses (angefügt oder nicht) erfordert, dass Sie ein bestimmtes Element in der Elementstruktur als Ereignisquelle deklarieren. Diese Quelle wird gemeldet, als die <xref:System.Windows.UIElement.RaiseEvent%2A> Aufrufer. Das Element zu bestimmen, welches als die Quelle in der Struktur gemeldet ist, unterliegt Ihrer Verantwortung des Dienstes.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Ausführliche Erläuterung der XAML-Syntax](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [XAML- und benutzerdefinierte Klassen für WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Übersicht über Routingereignisse](routed-events-overview.md)
+- [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md)
+- [XAML- und benutzerdefinierte Klassen für WPF](xaml-and-custom-classes-for-wpf.md)

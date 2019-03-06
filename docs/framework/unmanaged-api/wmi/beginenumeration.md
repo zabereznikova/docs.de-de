@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65e1ed604084fa61c8e47f0bb468b6a6d100778c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11002ac57a37b3c9ab0badfab49bb9049b0dfa79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695724"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369291"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration-Funktion
 Setzt einen Enumerator zurück zum Anfang der Enumeration zurück.  
@@ -40,12 +40,13 @@ HRESULT BeginEnumeration (
 
 ## <a name="parameters"></a>Parameter
 
-`vFunc`  
+`vFunc`\
 [in] Dieser Parameter wird nicht verwendet.
 
-`ptr` [in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
+`ptr`\
+[in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
-`lEnumFlags`  
+`lEnumFlags`\
 [in] Eine bitweise Kombination der Flags oder Werte, die in beschriebenen der ["Hinweise"](#remarks) Abschnitt, der steuert, in der Enumeration enthaltenen Eigenschaften.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -105,4 +106,5 @@ Konstante  |Wert  |Beschreibung  |
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

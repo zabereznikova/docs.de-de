@@ -2,15 +2,15 @@
 title: Entwickeln von Vertrag zuerst-Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 10129fcb40d86d1ca7e42bce68b072e9118bcc88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519492"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373061"
 ---
 # <a name="contract-first-workflow-service-development"></a>Entwickeln von Vertrag zuerst-Workflowdiensten
-Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF)-Funktionen verbessern die Integration zwischen Webdiensten und Workflows in Form der Vertrag zuerst-Workflowentwicklung. Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es Ihnen, den Vertrag zuerst im Code zu entwerfen. Das Tool generiert dann automatisch eine Aktivitätsvorlage für die Vertragsvorgänge in der Toolbox. Dieses Thema enthält eine Übersicht darüber, wie die Aktivitäten und Eigenschaften in einer Workflowdienstzuordnung den Attributen eines Dienstvertrags zugeordnet werden. Ein ausführliches Beispiel zum Erstellen eines Vertrag zuerst-Workflowdiensts finden Sie unter [Vorgehensweise: Erstellen eines Workflowdiensts, der einem vorhandenen Dienstvertrag nutzt](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF)-Funktionen zur verbesserten Integration zwischen Webdiensten und Workflows in Form der Vertrag zuerst-Workflowentwicklung. Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es Ihnen, den Vertrag zuerst im Code zu entwerfen. Das Tool generiert dann automatisch eine Aktivitätsvorlage für die Vertragsvorgänge in der Toolbox. Dieses Thema enthält eine Übersicht darüber, wie die Aktivitäten und Eigenschaften in einer Workflowdienstzuordnung den Attributen eines Dienstvertrags zugeordnet werden. Ein ausführliches Beispiel zum Erstellen eines Vertrag zuerst-Workflowdiensts, finden Sie unter [Vorgehensweise: Erstellen eines Workflowdiensts, das Verarbeiten eines vorhandenen Dienstvertrags](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>In diesem Thema  
   
@@ -32,7 +32,7 @@ Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Work
   
     -   [Generierung konfigurierter messagingaktivitäten](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-##  <a name="MappingAttributes"></a> Zuordnen von dienstvertragsattributen zu workflowattributen  
+## <a name="MappingAttributes"></a> Zuordnen von dienstvertragsattributen zu workflowattributen  
  Die Tabellen in den folgenden Abschnitten enthalten die verschiedenen WCF-Attribute und -Eigenschaften und veranschaulichen die Zuordnung zu Messagingaktivitäten und Eigenschaften in einem Vertrag zuerst-Workflow.  
   
 -   [Dienstvertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
@@ -45,7 +45,7 @@ Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Work
   
 -   [Fehlervertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
-###  <a name="ServiceContract"></a> Dienstvertragsattribute  
+### <a name="ServiceContract"></a> Dienstvertragsattribute  
   
 |Eigenschaftenname|Unterstützt|Beschreibung|WF-Validierung|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -60,12 +60,12 @@ Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Work
   
  Unterabschnittstext hier einfügen.  
   
-###  <a name="OperationContract"></a> Vorgangsvertragsattribute  
+### <a name="OperationContract"></a> Vorgangsvertragsattribute  
   
 |Eigenschaftenname|Unterstützt|Beschreibung|WF-Validierung|  
 |-------------------|---------------|-----------------|-------------------|  
 |Aktion|Ja|Ruft ab oder legt die WS-Adressierungsaktion der Anforderungsnachricht fest.|Receive.Action sollte übereinstimmen.|  
-|AsyncPattern|Nein|Gibt an, dass ein Vorgang implementiert wird asynchron mit einem Begin\<MethodName > und End\<MethodName > Methodenpaar in einem Dienstvertrag.|(Nicht zutreffend)|  
+|AsyncPattern|Nein|Gibt an, dass ein Vorgang asynchron implementiert wird eine Begin\<MethodName > und End\<MethodName >-Methode bestehenden Methodenpaars, in einem Dienstvertrag.|(Nicht zutreffend)|  
 |HasProtectionLevel|Ja|Ruft einen Wert ab, der angibt, ob die Nachrichten für diesen Vorgang verschlüsselt oder signiert werden müssen oder beides.|Receive.ProtectionLevel darf nicht NULL sein.|  
 |IsInitiating|Nein|Ruft einen Wert ab, der angibt, ob die Methode einen Vorgang implementiert, der eine Sitzung auf dem Server initiieren kann (sofern eine solche Sitzung vorhanden ist), oder legt diesen fest.|(Nicht zutreffend)|  
 |IsOneWay|Ja|Ruft einen Wert ab, der angibt, ob ein Vorgang eine Antwortnachricht zurückgibt, oder legt diesen fest.|(Kein SendReply für dieses Empfangsvorgang ODER kein ReceiveReply für diesen Sendevorgang).|  
@@ -75,7 +75,7 @@ Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Work
 |ReplyAction|Ja|Ruft ab oder legt den Wert der SOAP-Aktion für die Antwortnachricht des Vorgangs fest.|SendReply.Action sollte übereinstimmen.|  
 |TypeId|Nein|Ruft bei der Implementierung in einer abgeleiteten Klasse einen eindeutigen Bezeichner für dieses Attribut ab. (Vom Attribut geerbt).|(Nicht zutreffend)|  
   
-###  <a name="MessageContract"></a> Nachrichtenvertragsattribute  
+### <a name="MessageContract"></a> Nachrichtenvertragsattribute  
   
 |Eigenschaftenname|Unterstützt|Beschreibung|WF-Validierung|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -86,7 +86,7 @@ Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Work
 |WrapperName|Ja|Ruft den Wrapperelementnamen des Nachrichtentexts ab, oder legt ihn fest.|Keine Validierung (Receive.Content und SendReply.Content müssen mit dem Nachrichtenvertragstyp übereinstimmen).|  
 |WrapperNamespace|Nein|Ruft den Namespace des Nachrichtentext-Wrapperelements ab oder legt ihn fest.|(Nicht zutreffend)|  
   
-###  <a name="DataContract"></a> Datenvertragsattribute  
+### <a name="DataContract"></a> Datenvertragsattribute  
   
 |Eigenschaftenname|Unterstützt|Beschreibung|WF-Validierung|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -95,7 +95,7 @@ Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Work
 |Namespace|Ja|Ruft den Namespace des Datenvertrags für den Typ ab oder legt ihn fest.|Keine Validierung (Receive.Content und SendReply.Content müssen mit dem Nachrichtenvertragstyp übereinstimmen).|  
 |TypeId|Nein|Ruft bei der Implementierung in einer abgeleiteten Klasse einen eindeutigen Bezeichner für dieses Attribut ab. (Vom Attribut geerbt).|(Nicht zutreffend)|  
   
-###  <a name="FaultContract"></a> Fehlervertragsattribute  
+### <a name="FaultContract"></a> Fehlervertragsattribute  
   
 |Eigenschaftenname|Unterstützt|Beschreibung|WF-Validierung|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -107,27 +107,28 @@ Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Work
 |ProtectionLevel|Nein|Gibt die Sicherheitsebene an, die der SOAP-Fehler von der Bindung fordert.|(Nicht zutreffend)|  
 |TypeId|Nein|Ruft bei der Implementierung in einer abgeleiteten Klasse einen eindeutigen Bezeichner für dieses Attribut ab. (Vom Attribut geerbt).|(Nicht zutreffend)|  
   
-##  <a name="AdditionalSupport"></a> Zusätzliche Support- und Implementierungsinformationen  
+## <a name="AdditionalSupport"></a> Zusätzliche Support- und Implementierungsinformationen  
   
 -   [Nicht unterstützte dienstvertragsfunktionen](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
 -   [Generierung konfigurierter messagingaktivitäten](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-###  <a name="UnsupportedFeatures"></a> Nicht unterstützte dienstvertragsfunktionen  
+### <a name="UnsupportedFeatures"></a> Nicht unterstützte dienstvertragsfunktionen  
   
 -   Die Verwendung von TPL (Task Parallel Library)-Tasks in den Verträgen wird nicht unterstützt.  
   
 -   Die Vererbung in Dienstverträgen wird nicht unterstützt.  
   
-###  <a name="ActivityGeneration"></a> Generierung konfigurierter messagingaktivitäten  
+### <a name="ActivityGeneration"></a> Generierung konfigurierter messagingaktivitäten  
  Zwei öffentliche statische Methoden werden der <xref:System.ServiceModel.Activities.Receive>-Aktivität und der <xref:System.ServiceModel.Activities.SendReply>-Aktivität hinzugefügt, um bei Verwendung von Vertrag zuerst-Workflowdiensten die Generierung von vorkonfigurierten Nachrichtenaktivitäten zu unterstützen.  
   
 -   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  
   
 -   <xref:System.ServiceModel.Activities.SendReply.FromOperationDescription%2A?displayProperty=nameWithType>  
   
- Die Aktivität, die durch diese Methoden generiert wird, sollte die Vertragsüberprüfung erfolgreich abschließen. Daher werden diese Methoden intern als Teil der Validierungslogik für <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> verwendet. <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> und <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> werden alle vorkonfiguriert, um dem importierten Vertrag zu entsprechen. Der Content-Eigenschaften auf der Seite für die Aktivitäten im Workflow-Designer die **Nachricht** oder **Parameter** Abschnitte sind ebenfalls vorkonfiguriert, dass mit den Vertrag übereinstimmen.  
+ Die Aktivität, die durch diese Methoden generiert wird, sollte die Vertragsüberprüfung erfolgreich abschließen. Daher werden diese Methoden intern als Teil der Validierungslogik für <xref:System.ServiceModel.Activities.Receive> und <xref:System.ServiceModel.Activities.SendReply> verwendet. 
+  <xref:System.ServiceModel.Activities.Receive.OperationName%2A>, <xref:System.ServiceModel.Activities.Receive.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Receive.Action%2A>, <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>, <xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A> und <xref:System.ServiceModel.Activities.Receive.KnownTypes%2A> werden alle vorkonfiguriert, um dem importierten Vertrag zu entsprechen. Auf der Seite "Content-Eigenschaften" für die Aktivitäten im Workflow-Designer die **Nachricht** oder **Parameter** Abschnitte sind auch so vorkonfiguriert, dass dem Vertrag entsprechen.  
   
- WCF-fehlerverträge auch behandelt werden, indem Sie einen separaten Satz von zurückgeben konfiguriert <xref:System.ServiceModel.Activities.SendReply> Aktivitäten für jeden Fehler, die in angezeigt werden, werden die <xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>.  
+ WCF-fehlerverträge auch behandelt werden, indem Sie einen separaten Satz von zurückgeben konfiguriert <xref:System.ServiceModel.Activities.SendReply> Aktivitäten für jeden Fehler, die in angezeigt wird, werden die <xref:System.ServiceModel.Description.OperationDescription.Faults%2A> <xref:System.ServiceModel.Description.FaultDescriptionCollection>.  
   
- Bei anderen Teilen von <xref:System.ServiceModel.Description.OperationDescription> , die von WF-Diensten heute (z. B. WebGet-/WebInvoke-Verhaltensweisen oder Verhaltensweisen benutzerdefinierter Vorgänge) nicht unterstützt werden, die API ignoriert diese Werte als Teil der Generierung und Konfiguration. Es werden keine Ausnahmen ausgelöst.
+ In anderen Teilen der <xref:System.ServiceModel.Description.OperationDescription> , die von WF-Diensten derzeit (z. B. WebGet-/WebInvoke-Verhaltensweisen oder Verhaltensweisen benutzerdefinierter Vorgänge) nicht unterstützt werden, die API ignoriert diese Werte als Teil der Generierung und Konfiguration. Es werden keine Ausnahmen ausgelöst.

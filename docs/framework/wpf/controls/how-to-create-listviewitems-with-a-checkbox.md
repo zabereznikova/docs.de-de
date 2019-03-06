@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ListView controls [WPF], CheckBox controls
 - CheckBox control [WPF], ListView control
 ms.assetid: f6d66c7f-906c-4f65-a55a-0ede9d00e26a
-ms.openlocfilehash: 1ed623495529609c83c0ced68bfc1696c29d4570
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31a500c3a592ff8d1dd839543171991e908c23c9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682241"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368531"
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a>Vorgehensweise: Erstellen von ListViewItems mit einem Kontrollkästchen
 In diesem Beispiel wird veranschaulicht, wie eine Spalte mit angezeigt <xref:System.Windows.Controls.CheckBox> -Steuerelemente in eine <xref:System.Windows.Controls.ListView> -Steuerelements, verwendet eine <xref:System.Windows.Controls.GridView>.  
@@ -22,16 +22,16 @@ In diesem Beispiel wird veranschaulicht, wie eine Spalte mit angezeigt <xref:Sys
   
  Das folgende Beispiel zeigt eine <xref:System.Windows.DataTemplate> , enthält eine <xref:System.Windows.Controls.CheckBox>. Im Beispiel wird die <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> Eigenschaft der <xref:System.Windows.Controls.CheckBox> auf die <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> Eigenschaftswert, der die <xref:System.Windows.Controls.ListViewItem> , die Sie enthält. Aus diesem Grund, wenn die <xref:System.Windows.Controls.ListViewItem> , enthält die <xref:System.Windows.Controls.CheckBox> ausgewählt ist, die <xref:System.Windows.Controls.CheckBox> aktiviert ist.  
   
- [!code-xaml[ListViewChkBox#CheckBoxDataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#checkboxdatatemplate)]  
+ [!code-xaml[ListViewChkBox#CheckBoxDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#checkboxdatatemplate)]  
   
  Das folgende Beispiel zeigt, wie zum Erstellen einer Spalte des <xref:System.Windows.Controls.CheckBox> Steuerelemente. Zu der Spalte, die im Beispiel wird die <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A> Eigenschaft der <xref:System.Windows.Controls.GridViewColumn> auf die <xref:System.Windows.DataTemplate>.  
   
- [!code-xaml[ListViewChkBox#GridViewColumnCheckBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#gridviewcolumncheckbox)]  
+ [!code-xaml[ListViewChkBox#GridViewColumnCheckBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewChkBox/CS/window1.xaml#gridviewcolumncheckbox)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Controls.Control>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [Übersicht über ListView](listview-overview.md)
+- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
+- [Übersicht über GridView](gridview-overview.md)

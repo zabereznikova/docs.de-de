@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 03d0c5096876305f9a181cc28ff2158066e4d56f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d2408104ee3cf206734c5a1904129c3b71f7229
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577395"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368232"
 ---
 # <a name="advanced-text-formatting"></a>Erweiterte Textformatierung
 Die Windows Presentation Foundation (WPF) bietet eine Reihe zuverlässiger [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] zum Einschließen von Text in Ihrer Anwendung. Layout und [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], z. B. <xref:System.Windows.Controls.TextBlock>, geben Sie die häufigsten und allgemeinsten Elemente für die Textdarstellung. Zeichnen von [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], z. B. <xref:System.Windows.Media.GlyphRunDrawing> und <xref:System.Windows.Media.FormattedText>, bieten eine Möglichkeit zum Einschließen von formatierten Texts in Zeichnungen bereit. Auf der höchsten Ebene [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet eine erweiterbare textformatierungs-Engine, um jeden Aspekt der Textdarstellung an, wie z. B. Speicherverwaltung für Text, die formatierungsverwaltung des Lauftexts und die Verwaltung eingebetteter Objekte steuern.  
@@ -28,7 +28,7 @@ Die Windows Presentation Foundation (WPF) bietet eine Reihe zuverlässiger [!INC
   
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
- In diesem Thema wird davon ausgegangen, dass Sie mit der höheren Ebene vertraut sind [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] für die Textdarstellung verwendet. Die meisten Benutzerszenarios erfordern nicht die erweiterten textformatierungs- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] in diesem Thema erläutert. Eine Einführung in die verschiedenen Text- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], finden Sie unter [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ In diesem Thema wird davon ausgegangen, dass Sie mit der höheren Ebene vertraut sind [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] für die Textdarstellung verwendet. Die meisten Benutzerszenarios erfordern nicht die erweiterten textformatierungs- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] in diesem Thema erläutert. Eine Einführung in die verschiedenen Text- [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], finden Sie unter [Dokumente in WPF](documents-in-wpf.md).  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>Erweiterte Textformatierung  
@@ -42,15 +42,15 @@ Die Windows Presentation Foundation (WPF) bietet eine Reihe zuverlässiger [!INC
   
  Im Gegensatz zu einer herkömmlichen Text- [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> interagiert mit einem Textlayoutclient durch eine Reihe von Rückrufmethoden. Der Client muss diese Methoden in einer Implementierung der Bereitstellen der <xref:System.Windows.Media.TextFormatting.TextSource> Klasse. Das folgende Diagramm veranschaulicht die Textlayoutinteraktion zwischen der Clientanwendung und <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
- ![Diagramm des Textlayout-Clients und TextFormatter](../../../../docs/framework/wpf/advanced/media/textformatter01.png "TextFormatter01")  
+ ![Diagramm des Textlayout-Clients und TextFormatter](./media/textformatter01.png "TextFormatter01")  
 Interaktion zwischen Anwendung und TextFormatter  
   
  Das Textformatierungsprogramm wird verwendet, um formatierte Textzeilen aus dem Textspeicher abzurufen. Dies ist eine Implementierung von <xref:System.Windows.Media.TextFormatting.TextSource>. Dies erfolgt durch den ersten Erstellen einer Instanz des Textformatierungsprogramms mit der <xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A> Methode. Diese Methode erstellt eine Instanz des Textformatierungsprogramms und legt die maximalen Werte für Zeilenhöhe und -breite fest. Sobald eine Instanz des textformatierers erstellt wird, wird der zeilenerstellungsprozess durch den Aufruf gestartet der <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A> Methode. <xref:System.Windows.Media.TextFormatting.TextFormatter> einen Rückruf an die Textquelle zum Abrufen von Text und Formatierungsparameter für die Ausführungen von Text, bilden eine Linie.  
   
  Im folgenden Beispiel wird der Formatierungsprozess eines Textspeichers gezeigt. Die <xref:System.Windows.Media.TextFormatting.TextFormatter> Objekt wird zum Abrufen von Textzeilen aus dem Textspeicher und formatieren Sie dann die Textzeile, die zum Zeichnen in der <xref:System.Windows.Media.DrawingContext>.  
   
- [!code-csharp[TextFormatterExample#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/Window1.xaml.cs#100)]
- [!code-vb[TextFormatterExample#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/Window1.xaml.vb#100)]  
+ [!code-csharp[TextFormatterExample#100](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/Window1.xaml.cs#100)]
+ [!code-vb[TextFormatterExample#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/Window1.xaml.vb#100)]  
   
 <a name="section3"></a>   
 ## <a name="implementing-the-client-text-store"></a>Implementieren des Clienttextspeichers  
@@ -84,8 +84,8 @@ Interaktion zwischen Anwendung und TextFormatter
   
  Das folgende Beispiel zeigt eine <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> Methode. Dieser Textspeicher gibt <xref:System.Windows.Media.TextFormatting.TextRun> Objekte an den textformatierer zur Verarbeitung.  
   
- [!code-csharp[TextFormatterExample#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/CustomTextSource.cs#101)]
- [!code-vb[TextFormatterExample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/CustomTextSource.vb#101)]  
+ [!code-csharp[TextFormatterExample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/CustomTextSource.cs#101)]
+ [!code-vb[TextFormatterExample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/CustomTextSource.vb#101)]  
   
 > [!NOTE]
 >  In diesem Beispiel stellt der Textspeicher die gleichen Texteigenschaften für den gesamten Text bereit. Erweiterte Textspeicher müssen ihre eigene Verwaltung für Bereiche implementieren, damit einzelne Zeichen über unterschiedliche Eigenschaften verfügen können.  
@@ -95,5 +95,5 @@ Interaktion zwischen Anwendung und TextFormatter
  <xref:System.Windows.Media.TextFormatting.TextRun> Objekte werden mithilfe der im Textspeicher bereitgestellte Eigenschaften formatiert. Diese Eigenschaften sind in zwei Arten <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> und <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> Behandeln Sie die Eigenschaften, die z. B. <xref:System.Windows.TextAlignment> und <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties> Eigenschaften, die für jeden Lauftext mit einem Absatz ist, z.B. Vordergrundpinsel, unterschiedlich sein können <xref:System.Windows.Media.Typeface>, und den Schriftgrad. Um benutzerdefinierte Absatz- und Lauftext-Eigenschaftentypen zu implementieren, muss Ihre Anwendung zu erstellen von abgeleiteten Klassen <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> und <xref:System.Windows.Media.TextFormatting.TextRunProperties> bzw.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Typografie in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [Typografie in WPF](typography-in-wpf.md)
+- [Dokumente in WPF](documents-in-wpf.md)

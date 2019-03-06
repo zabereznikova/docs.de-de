@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: b4cfec6dd1b732729f32abd65c6e69ca53e2ad82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547485"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359548"
 ---
 # <a name="typography-in-wpf"></a>Typografie in WPF
 In diesem Thema werden die wichtigsten typografischen Funktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vorgestellt. Diese Funktionen umfassen die verbesserte Qualität und Leistung beim Textrendering, die Unterstützung von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Typografie, einen verbesserten internationalen Text, eine verbesserte Unterstützung für Schriftarten sowie neue Text-Anwendungsprogrammierschnittstellen (APIs).  
@@ -18,33 +18,33 @@ In diesem Thema werden die wichtigsten typografischen Funktionen von [!INCLUDE[T
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>Verbesserte Textqualität und -leistung  
- Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird mit [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] gerendert , was die Übersichtlichkeit und Lesbarkeit von Text verbessert. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ist eine von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), z.B. auf Laptopbildschirmen, Pocket PC-Bildschirmen und Flachbildschirmen, optimiert wird. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] verwendet Sub-Pixel-Rendering, das durch das Ausrichten von Zeichen an Bruchteilen eines Pixels eine Textdarstellung mit größerer Genauigkeit und Wiedergabetreue ermöglicht. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert. Eine weitere Verbesserung von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist das Antialiasing in y-Richtung, das flache Kurven von Textzeichen oben und unten glättet. Weitere Informationen zu [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Funktionen finden Sie unter [Übersicht über ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md).  
+ Text in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird mit [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] gerendert , was die Übersichtlichkeit und Lesbarkeit von Text verbessert. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ist eine von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), z.B. auf Laptopbildschirmen, Pocket PC-Bildschirmen und Flachbildschirmen, optimiert wird. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] verwendet Sub-Pixel-Rendering, das durch das Ausrichten von Zeichen an Bruchteilen eines Pixels eine Textdarstellung mit größerer Genauigkeit und Wiedergabetreue ermöglicht. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert. Eine weitere Verbesserung von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist das Antialiasing in y-Richtung, das flache Kurven von Textzeichen oben und unten glättet. Weitere Informationen zu [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Funktionen finden Sie unter [Übersicht über ClearType](cleartype-overview.md).  
   
- ![Text mit ClearType-y&#45;Richtung&#45;Aliasing](../../../../docs/framework/wpf/advanced/media/typographyinwpf02.gif "TypographyInWPF02")  
+ ![Text mit ClearType-y&#45;Richtung&#45;Aliasing](./media/typographyinwpf02.gif "TypographyInWPF02")  
 Text mit ClearType-Antialiasing auf der y-Achse  
   
- Die gesamte Textrendering-Pipeline kann in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hardwarebeschleunigt erfolgen, vorausgesetzt, dass Ihr Computer die Mindestanforderungen an die Hardware erfüllt. Rendering, das nicht mit der Hardware ausgeführt werden kann, wird als Softwarerendering ausgeführt. Die Hardwarebeschleunigung beeinflusst alle Phasen der Textrendering-Pipeline – vom Speichern einzelner Glyphen, über die Zusammensetzung von Glyphenreihen und das Anwenden von Effekten bis hin zum Anwenden des [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Blendingalgorithmus auf die angezeigte Endausgabe. Weitere Informationen zur Hardware-Beschleunigung finden Sie unter [Renderingebenen für Grafiken](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ Die gesamte Textrendering-Pipeline kann in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] hardwarebeschleunigt erfolgen, vorausgesetzt, dass Ihr Computer die Mindestanforderungen an die Hardware erfüllt. Rendering, das nicht mit der Hardware ausgeführt werden kann, wird als Softwarerendering ausgeführt. Die Hardwarebeschleunigung beeinflusst alle Phasen der Textrendering-Pipeline – vom Speichern einzelner Glyphen, über die Zusammensetzung von Glyphenreihen und das Anwenden von Effekten bis hin zum Anwenden des [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Blendingalgorithmus auf die angezeigte Endausgabe. Weitere Informationen zur Hardware-Beschleunigung finden Sie unter [Renderingebenen für Grafiken](graphics-rendering-tiers.md).  
   
- ![Diagramm der Text-Rendering-Pipeline](../../../../docs/framework/wpf/advanced/media/typographyinwpf01.png "TypographyInWPF01")  
+ ![Diagramm der Text-Rendering-Pipeline](./media/typographyinwpf01.png "TypographyInWPF01")  
 Diagramm der Text-Rendering-Pipeline  
   
  Darüber hinaus nutzen Textanimation die durch [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aktivierten Vorteile der Grafikhardwarefunktion mit Zeichen oder Glyphen voll aus. Das Ergebnis ist eine glatte Textanimation.  
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>Umfangreiche Typografie  
- Das [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Schriftartformat ist eine Erweiterung des [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]-Schriftartformats. Das [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Schriftartformat wurde gemeinsam von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] und Adobe entwickelt und bietet eine umfangreiche Auswahl an erweiterten typografischen Funktionen. Die <xref:System.Windows.Documents.Typography> Objekt macht viele der erweiterten Funktionen von [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Schriftarten, z.B. alternativer Stil und schwungbuchstaben. Das [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] bietet eine Reihe von [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Schriftarten, die umfassende Funktionen enthalten,wie z.B. die Schriftarten Pericles und Pescadero. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md).  
+ Das [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Schriftartformat ist eine Erweiterung des [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]-Schriftartformats. Das [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Schriftartformat wurde gemeinsam von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] und Adobe entwickelt und bietet eine umfangreiche Auswahl an erweiterten typografischen Funktionen. Die <xref:System.Windows.Documents.Typography> Objekt macht viele der erweiterten Funktionen von [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] Schriftarten, z.B. alternativer Stil und schwungbuchstaben. Das [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] bietet eine Reihe von [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Schriftarten, die umfassende Funktionen enthalten,wie z.B. die Schriftarten Pericles und Pescadero. Weitere Informationen finden Sie unter [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md).  
   
  Die [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Schriftart Pericles enthält zusätzliche Glyphen, die alternative Stile für den Standardsatz von Glyphen bieten. Im folgenden Text werden Symbole im alternativen Stil gezeigt.  
   
- ![Text mit alternativen OpenType-Stilsymbolen](../../../../docs/framework/wpf/advanced/media/opentypefont02.gif "opentypefont02")  
+ ![Text mit alternativen OpenType-Stilsymbolen](./media/opentypefont02.gif "opentypefont02")  
 Text mit alternativen OpenType-Stilsymbolen  
   
  Schwungschrift besteht aus dekorativen Symbolen, deren ausgefeilte Verzierung häufig mit Kalligraphie assoziiert wird. Im folgenden Text werden Standard- und Schwungsymbole für die Schriftart Pescadero gezeigt.  
   
- ![Text mit OpenType-Standard- und Ziersymbolen](../../../../docs/framework/wpf/advanced/media/opentypefont08.gif "opentypefont08")  
+ ![Text mit OpenType-Standard- und Ziersymbolen](./media/opentypefont08.gif "opentypefont08")  
 Text mit OpenType-Standard- und Ziersymbolen  
   
- Weitere Informationen zu [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Funktionen finden Sie unter [OpenType-Schriftarteigenschaften](../../../../docs/framework/wpf/advanced/opentype-font-features.md).  
+ Weitere Informationen zu [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]-Funktionen finden Sie unter [OpenType-Schriftarteigenschaften](opentype-font-features.md).  
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>Verbesserte Unterstützung für internationalen Text  
@@ -52,7 +52,7 @@ Text mit OpenType-Standard- und Ziersymbolen
   
 -   Automatischer Zeilenabstand in allen Schriftsystem mithilfe adaptiver Maßeinheiten.  
   
--   Umfassende Unterstützung für internationalen Text. Weitere Informationen finden Sie unter [Globalisierung für WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md).  
+-   Umfassende Unterstützung für internationalen Text. Weitere Informationen finden Sie unter [Globalisierung für WPF](globalization-for-wpf.md).  
   
 -   An der Sprache orientierter Zeilenumbruch, Silbentrennung und Ausrichtung.  
   
@@ -90,37 +90,37 @@ Text mit OpenType-Standard- und Ziersymbolen
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Verwenden von Bitmapeffekten, Transformationen und Texteffekten  
  Mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie visuell interessante Texte mithilfe von Funktionen wie Bitmapeffekten, Transformationen und Texteffekten erstellen. Das folgende Beispiel zeigt einen typischen auf einen Text angewandten Schlagschatteneffekt.  
   
- ![Textschatten mit Weichheit &#61; 0,25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
+ ![Textschatten mit Weichheit &#61; 0,25](./media/shadowtext01.jpg "ShadowText01")  
 Text mit einem Schlagschatten  
   
  Das folgende Beispiel zeigt einen Text mit Schlagschatteneffekt und Rauschen.  
   
- ![Textschatten mit Rauschen](../../../../docs/framework/wpf/advanced/media/shadowtext04.jpg "ShadowText04")  
+ ![Textschatten mit Rauschen](./media/shadowtext04.jpg "ShadowText04")  
 Text mit Schlagschatten und Rauschen  
   
  Das folgende Beispiel zeigt einen Text mit dem Effekt Schein nach außen (Outer Glow).  
   
- ![Textschatten mit einem OuterGlowBitmapEffect](../../../../docs/framework/wpf/advanced/media/shadowtext05.jpg "ShadowText05")  
+ ![Textschatten mit einem OuterGlowBitmapEffect](./media/shadowtext05.jpg "ShadowText05")  
 Text mit dem Effekt Schein nach außen  
   
  Das folgende Beispiel zeigt einen auf einen Text angewendeten Weichzeichnereffekt.  
   
- ![Textschatten mit einem BlurBitmapEffect](../../../../docs/framework/wpf/advanced/media/shadowtext06.jpg "ShadowText06")  
+ ![Textschatten mit einem BlurBitmapEffect](./media/shadowtext06.jpg "ShadowText06")  
 Text mit einem Weichzeichnereffekt  
   
  Das folgende Beispiel zeigt die zweite Textzeile, die um 150 % entlang der X-Achse skaliert ist, und die dritte Textzeile, die um 150 % entlang der Y-Achse skaliert ist.  
   
- ![Skalierter Text mithilfe einer ScaleTransform skalierter](../../../../docs/framework/wpf/advanced/media/transformedtext02.jpg "TransformedText02")  
+ ![Skalierter Text mithilfe einer ScaleTransform skalierter](./media/transformedtext02.jpg "TransformedText02")  
 Mithilfe einer ScaleTransform skalierter Text  
   
  Das folgende Beispiel zeigt einen entlang der X-Achse geneigten Text.  
   
- ![Geneigter Text mithilfe einer SkewTransform](../../../../docs/framework/wpf/advanced/media/transformedtext03.jpg "TransformedText03")  
+ ![Geneigter Text mithilfe einer SkewTransform](./media/transformedtext03.jpg "TransformedText03")  
 Geneigter Text mithilfe einer SkewTransform  
   
  Ein <xref:System.Windows.Media.TextEffect> Objekt ist ein Hilfsobjekt, der Ihnen ermöglicht, den Text als eine oder mehrere Gruppen von Zeichen in einer Textzeichenfolge zu behandeln. Das folgende Beispiel zeigt ein einzelnes Zeichen, das gedreht wurde. Jedes Zeichen wird unabhängig in Intervallen von 1 Sekunde gedreht.  
   
- ![Bildschirmabbildung des Texteffekts zum Drehen von Text](../../../../docs/framework/wpf/advanced/media/texteffect01.jpg "TextEffect01")  
+ ![Bildschirmabbildung des Texteffekts zum Drehen von Text](./media/texteffect01.jpg "TextEffect01")  
 Beispiel für eine sich drehende Texteffektanimation  
   
 #### <a name="using-flow-documents"></a>Verwenden von Flussdokumenten  
@@ -128,51 +128,51 @@ Beispiel für eine sich drehende Texteffektanimation
   
  Das folgende Beispiel zeigt Textinhalt, gehostet einer <xref:System.Windows.Controls.FlowDocumentReader>, die bereitstellt, Suche, Navigation, Paginierung und Inhaltskalierung unterstützt.  
   
- ![Mit OpenType-Schriftarten-Beispiel-Screenshot](../../../../docs/framework/wpf/advanced/media/typographyinwpf-03.png "TypographyInWPF_03")  
+ ![Mit OpenType-Schriftarten-Beispiel-Screenshot](./media/typographyinwpf-03.png "TypographyInWPF_03")  
 In einem FlowDocumentReader gehosteter Text  
   
- Weitere Informationen finden Sie unter [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md).  
+ Weitere Informationen finden Sie unter [Dokumente in WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Einfache Textzeichnung  
  Sie können Text direkt zu zeichnen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Objekte mithilfe der <xref:System.Windows.Media.DrawingContext.DrawText%2A> Methode der <xref:System.Windows.Media.DrawingContext> Objekt. Um diese Methode verwenden, erstellen Sie eine <xref:System.Windows.Media.FormattedText> Objekt. Dieses Objekt ermöglicht das Zeichnen von mehrzeiligem Text, in dem jedes Zeichen einzeln formatiert werden kann. Die Funktionalität der <xref:System.Windows.Media.FormattedText> Objekt beinhaltet einen Großteil der Funktionalität der DrawText-Flags der Win32-API. Darüber hinaus die <xref:System.Windows.Media.FormattedText> Objekt enthält Funktionen wie Unterstützung von Auslassungszeichen, in dem ein Auslassungszeichen angezeigt wird, wenn der Text seine Grenze überschreitet. Das folgende Beispiel zeigt Text auf den verschiedene Formatierungen angewendet wurden, wie z.B. einen linearen Farbverlauf auf dem zweiten und dritten Wort.  
   
- ![Mit dem FormattedText-Objekt angezeigter Text](../../../../docs/framework/wpf/advanced/media/formattedtext01.jpg "FormattedText01")  
+ ![Mit dem FormattedText-Objekt angezeigter Text](./media/formattedtext01.jpg "FormattedText01")  
 Mit dem FormattedText-Objekt angezeigter Text  
   
  Sie können formatierten Text in konvertieren <xref:System.Windows.Media.Geometry> Objekte, die Ihnen ermöglichen, andere Arten von visuell interessantem Text erstellen. Sie können z. B. Erstellen einer <xref:System.Windows.Media.Geometry> Objekt auf Grundlage der Gliederung einer Textzeichenfolge.  
   
- ![Textkontur mit einem linearen Farbverlaufspinsel](../../../../docs/framework/wpf/advanced/media/outlinedtext02.jpg "OutlinedText02")  
+ ![Textkontur mit einem linearen Farbverlaufspinsel](./media/outlinedtext02.jpg "OutlinedText02")  
 Textkontur mit einem linearen Farbverlaufspinsel  
   
  Die folgenden Beispiele zeigen verschiedene Möglichkeiten zum Erstellen von visuell interessanten Effekten durch Ändern von Strich, Füllung und Hervorhebung des konvertierten Texts.  
   
- ![Text mit unterschiedlichen Farben für Füllung und Strich](../../../../docs/framework/wpf/advanced/media/outlinedtext03.jpg "OutlinedText03")  
+ ![Text mit unterschiedlichen Farben für Füllung und Strich](./media/outlinedtext03.jpg "OutlinedText03")  
 Beispiel für das Festlegen von unterschiedlichen Farben für Strich und Füllung  
   
- ![Text mit auf Strich angewendetem Bildpinsel](../../../../docs/framework/wpf/advanced/media/outlinedtext04.jpg "OutlinedText04")  
+ ![Text mit auf Strich angewendetem Bildpinsel](./media/outlinedtext04.jpg "OutlinedText04")  
 Beispiel für die Anwendung eines Bildpinsels auf den Strich  
   
- ![Text mit auf Strich angewendetem Bildpinsel](../../../../docs/framework/wpf/advanced/media/outlinedtext05.jpg "OutlinedText05")  
+ ![Text mit auf Strich angewendetem Bildpinsel](./media/outlinedtext05.jpg "OutlinedText05")  
 Beispiel für die Anwendung eines Bildpinsels auf den Strich und die Hervorhebung  
   
- Weitere Informationen zu den <xref:System.Windows.Media.FormattedText> Objekt, finden Sie unter [Drawing Formatted Text](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md).  
+ Weitere Informationen zu den <xref:System.Windows.Media.FormattedText> Objekt, finden Sie unter [Drawing Formatted Text](drawing-formatted-text.md).  
   
 ### <a name="advanced-text-formatting"></a>Erweiterte Textformatierung  
  Auf der höchsten Ebene des Texts [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet die Möglichkeit zum Erstellen von benutzerdefinierten Textlayouts mithilfe der <xref:System.Windows.Media.TextFormatting.TextFormatter> -Objekt und anderen Typen in der <xref:System.Windows.Media.TextFormatting> Namespace. Die <xref:System.Windows.Media.TextFormatting.TextFormatter> und die zugeordneten Klassen ermöglichen Ihnen die Implementierung von benutzerdefinierten Textlayouts, die Ihre eigene Definitionen der Zeichenformate, Absatzformatvorlagen, unterstützt die Regeln für den Zeilenumbruch Zeile und andere Layoutfeatures für internationalen Text. Es gibt nur sehr wenige Fälle, in denen es sinnvoll ist, die Standardimplementierung der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Textlayoutunterstützung zu überschreiben. Wenn Sie jedoch ein Steuerelement oder eine Anwendung erstellen, kann möglicherweise eine andere Implementierung als die standardmäßige [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung benötigt werden.  
   
  Im Gegensatz zu einer herkömmlichen Text- [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)], <xref:System.Windows.Media.TextFormatting.TextFormatter> interagiert mit einem Textlayoutclient durch eine Reihe von Rückrufmethoden. Der Client muss diese Methoden in einer Implementierung der Bereitstellen der <xref:System.Windows.Media.TextFormatting.TextSource> Klasse. Das folgende Diagramm veranschaulicht die Textlayoutinteraktion zwischen der Clientanwendung und <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
- ![Diagramm des Textlayout-Clients und TextFormatter](../../../../docs/framework/wpf/advanced/media/textformatter01.png "TextFormatter01")  
+ ![Diagramm des Textlayout-Clients und TextFormatter](./media/textformatter01.png "TextFormatter01")  
 Interaktion zwischen Anwendung und TextFormatter  
   
- Weitere Informationen zum Erstellen von benutzerdefinierten Textlayouts finden Sie unter [Advanced Text Formatting](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md).  
+ Weitere Informationen zum Erstellen von benutzerdefinierten Textlayouts finden Sie unter [Advanced Text Formatting](advanced-text-formatting.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>
-- [Übersicht über ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)
-- [Features für OpenType-Schriftarten](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
-- [Zeichnen von formatiertem Text](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)
-- [Erweiterte Textformatierung](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
+- [Übersicht über ClearType](cleartype-overview.md)
+- [Features für OpenType-Schriftarten](opentype-font-features.md)
+- [Zeichnen von formatiertem Text](drawing-formatted-text.md)
+- [Erweiterte Textformatierung](advanced-text-formatting.md)
+- [Text](optimizing-performance-text.md)
 - [Microsoft-Typografie](https://www.microsoft.com/typography/default.mspx)

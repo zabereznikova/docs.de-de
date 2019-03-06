@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 6c72a69a1593c97ebda924e2b8aeb49a3cbefe1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527327"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379106"
 ---
 # <a name="application-startup-time"></a>Startzeit der Anwendung
 Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheblich variieren. Dieses Thema beschreibt verschiedene Verfahren zur Reduzierung der wahrgenommenen und tatsächlichen Startzeit für eine WPF-Anwendung (Windows Presentation Foundation).  
@@ -24,7 +24,7 @@ Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheb
  Warmstarts treten auf, wenn die meisten Seiten für die Hauptkomponenten der Common Language Runtime (CLR) bereits im Arbeitsspeicher geladen sind. Dies spart wertvolle Festplattenzugriffszeit. Dadurch startet eine verwaltete Anwendung schneller, wenn sie ein zweites Mal ausgeführt wird.  
   
 ## <a name="implement-a-splash-screen"></a>Implementieren eines Begrüßungsbildschirms  
- In Fällen, in denen eine erhebliche unvermeidliche Verzögerung zwischen dem Starten einer Anwendung und dem Anzeigen der ersten Benutzeroberfläche besteht, können Sie die wahrgenommene Startzeit optimieren, indem Sie einen *Begrüßungsbildschirm* verwenden. Dieser Ansatz zeigt ein Bild fast unmittelbar nachdem der Benutzer die Anwendung startet. Wenn die Anwendung zum Anzeigen der ersten Benutzeroberfläche bereit ist, wird der Begrüßungsbildschirm ausgeblendet. Ab der [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], können Sie die <xref:System.Windows.SplashScreen> Klasse zum Implementieren eines Begrüßungsbildschirms. Weitere Informationen finden Sie unter [Add a Splash Screen to a WPF Application (Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung)](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ In Fällen, in denen eine erhebliche unvermeidliche Verzögerung zwischen dem Starten einer Anwendung und dem Anzeigen der ersten Benutzeroberfläche besteht, können Sie die wahrgenommene Startzeit optimieren, indem Sie einen *Begrüßungsbildschirm* verwenden. Dieser Ansatz zeigt ein Bild fast unmittelbar nachdem der Benutzer die Anwendung startet. Wenn die Anwendung zum Anzeigen der ersten Benutzeroberfläche bereit ist, wird der Begrüßungsbildschirm ausgeblendet. Ab der [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], können Sie die <xref:System.Windows.SplashScreen> Klasse zum Implementieren eines Begrüßungsbildschirms. Weitere Informationen finden Sie unter [Add a Splash Screen to a WPF Application (Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung)](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  Sie können auch einen eigenen Begrüßungsbildschirm mit nativen Win32-Grafiken implementieren. Zeigen Sie die Implementierung vor der <xref:System.Windows.Application.Run%2A> Methode wird aufgerufen.  
   
@@ -53,7 +53,7 @@ Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheb
  Ziehen Sie in Betracht, die Anwendungskonfiguration zu vermeiden. Wenn eine Anwendung z.B. einfache Anforderungen an die Konfiguration und strenge Startzeitziele hat, sind Registrierungseinträge oder eine einfache INI-Datei möglicherweise eine schnellere Alternative für den Start.  
   
 ## <a name="utilize-the-gac"></a>Verwenden des GAC  
- Wenn eine Assembly nicht im globalen Assemblycache (Global Assembly Cache, GAC) installiert ist, kommt es zu Verzögerungen durch die Hashüberprüfung von Assemblys mit starken Namen und durch die Verifizierung von NGen-Images, wenn ein natives Image für diese Assembly auf dem Computer vorhanden ist. Die Verifizierung starker Namen wird für alle im GAC installierten Assemblys übersprungen. Weitere Informationen finden Sie unter [Gacutil.exe (Global Assembly Cache-Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+ Wenn eine Assembly nicht im globalen Assemblycache (Global Assembly Cache, GAC) installiert ist, kommt es zu Verzögerungen durch die Hashüberprüfung von Assemblys mit starken Namen und durch die Verifizierung von NGen-Images, wenn ein natives Image für diese Assembly auf dem Computer vorhanden ist. Die Verifizierung starker Namen wird für alle im GAC installierten Assemblys übersprungen. Weitere Informationen finden Sie unter [Gacutil.exe (Global Assembly Cache-Tool)](../../tools/gacutil-exe-gac-tool.md).  
   
 ## <a name="use-ngenexe"></a>Verwenden von „Ngen.exe“  
  Sie sollten die Verwendung von Native Image Generator („Ngen.exe“) für Ihre Anwendung in Betracht ziehen. Die Verwendung von „Ngen.exe“ bedeutet, dass CPU-Auslastung für mehr Datenträgerzugriff eingetauscht wird, da das von „Ngen.exe“ erzeugte Image wahrscheinlich größer ist als das MSIL-Image.  
@@ -67,14 +67,14 @@ Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheb
 ### <a name="ngen-and-clickonce"></a>NGen und ClickOnce  
  Die Planung der Bereitstellung Ihrer Anwendung kann ebenfalls die Ladedauer beeinflussen. Die Anwendungsbereitstellung von [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] unterstützt NGen nicht. Wenn Sie „Ngen.exe“ für Ihre Anwendung verwenden möchten, müssen Sie einen anderen Bereitstellungsmechanismus verwenden, z.B. Windows Installer.  
   
- Weitere Informationen finden Sie unter [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Weitere Informationen finden Sie unter [Ngen.exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md).  
   
 ### <a name="rebasing-and-dll-address-collisions"></a>Rebase und DLL-Adresskonflikte  
  Wenn Sie „Ngen.exe“ verwenden, müssen Sie sich bewusst sein, dass die Ausführung eines Rebase auftreten kann, wenn die nativen Images in den Speicher geladen werden. Wenn eine DLL nicht an ihrer bevorzugten Basisadresse geladen wird, da dieser Adressbereich bereits zugewiesen wurde, wird das Windows-Ladeprogramm sie an einer anderen Adresse laden. Das kann viel Zeit in Anspruch nehmen.  
   
  Sie können das Tool „Virtual Address Dump“ (Vadump.exe) verwenden, um zu überprüfen, ob Module bestehen, in denen alle Seiten privat sind. Wenn dies der Fall ist, wurde das Modul möglicherweise auf eine andere Adresse zurückgesetzt. Aus diesem Grund können die Seiten nicht freigegeben werden.  
   
- Weitere Informationen zum Festlegen der Basisadresse finden Sie unter [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
+ Weitere Informationen zum Festlegen der Basisadresse finden Sie unter [Ngen.exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md).  
   
 ## <a name="optimize-authenticode"></a>Optimieren von Authenticode  
  Überprüfen von Authenticode erhöht die Startzeit. Assemblys mit Authenticode-Signatur müssen durch die Zertifizierungsstelle (certification authority, CA) verifiziert werden. Diese Überprüfung kann zeitaufwendig sein, da es erforderlich sein kann, mehrmals mit dem Netzwerk eine Verbindung herzustellen, um die aktuellen Zertifikatssperrlisten herunterzuladen. Es wird außerdem sichergestellt, dass eine vollständige Kette mit gültigen Zertifikaten auf dem Pfad zu einer vertrauenswürdigen Stammzertifizierungsstelle besteht. Dies kann mehrere Sekunden Verzögerung bedeuten, während die Assembly geladen wird.  
@@ -91,7 +91,7 @@ Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheb
 </configuration>  
 ```  
   
- Weitere Informationen finden Sie unter [\<generatePublisherEvidence> Element](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
+ Weitere Informationen finden Sie unter [\<generatePublisherEvidence> Element](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md).  
   
 ## <a name="compare-performance-on-windows-vista"></a>Vergleichen der Leistung unter Windows Vista  
  Der Speicher-Manager in Windows Vista verfügt über eine Technologie namens SuperFetch. SuperFetch analysiert im Lauf der Zeit Speicherauslastungsmuster, um den optimalen Speicherinhalt für einen bestimmten Benutzer zu bestimmen. SuperFetch arbeitet fortlaufend, um diesen Inhalt jederzeit beizubehalten.  
@@ -127,6 +127,6 @@ Die Zeitspanne, die zum Starten einer WPF-Anwendung erforderlich ist, kann erheb
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
-- [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence> Element](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [Hinzufügen eines Begrüßungsbildschirms zu einer WPF-Anwendung](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [Ngen.exe (Native Image Generator)](../../tools/ngen-exe-native-image-generator.md)
+- [\<generatePublisherEvidence> Element](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

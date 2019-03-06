@@ -13,12 +13,12 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: cd7c9c514c90a94e3329bec9614624ee399481ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523999"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351995"
 ---
 # <a name="property-change-events"></a>Eigenschaftenänderungsereignisse
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definiert mehrere Ereignisse, die ausgelöst werden als Antwort auf eine Änderung des Werts einer Eigenschaft. Häufig ist die Eigenschaft eine Abhängigkeitseigenschaft. Das Ereignis selbst ist manchmal ein Routingereignis und manchmal ein [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Standardereignis. Die Definition des Ereignisses variiert je nach Szenario, da einige Eigenschaftenänderungen besser durch eine Elementstruktur weitergeleitet werden, während andere Eigenschaftenänderungen in der Regel nur für das Objekt von Bedeutung sind, bei dem sich die Eigenschaft geändert hat.  
@@ -33,7 +33,7 @@ ms.locfileid: "54523999"
   
  Da Sie über einen vorherigen und einen neuen Wert verfügen, kann es dazu verleiten, diesen Ereignishandler als ein Validierungssteuerelement für den Eigenschaftswert zu verwenden. Allerdings ist dies nicht der Zweck der meisten Eigenschaften, die durch Ereignisse geändert wurden. Im Allgemeinen werden die Werte bereitgestellt, damit Sie diese Werte in anderen Logikbereichen Ihres Codes ausführen können, aber eigentlich ist das Ändern der Werte aus dem Ereignishandler heraus nicht empfehlenswert und kann zu unbeabsichtigter Rekursion führen, dies ist davon abhängig, wie der Handler implementiert ist.  
   
- Wenn die Eigenschaft eine benutzerdefinierte Abhängigkeitseigenschaft ist, oder wenn Sie eine abgeleitete Klasse arbeiten, in dem Sie den Instanziierungscode festgelegt haben, ein viel besserer Mechanismus zum Nachverfolgen von Änderungen von Eigenschaften, die ist in integrierten der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem: die Eigenschaftensystemrückrufen <xref:System.Windows.CoerceValueCallback> und <xref:System.Windows.PropertyChangedCallback>. Weitere Informationen über die Verwendung des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaftensystems für die Überprüfung und Koersion, finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) und [Benutzerdefinierten Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+ Wenn die Eigenschaft eine benutzerdefinierte Abhängigkeitseigenschaft ist, oder wenn Sie eine abgeleitete Klasse arbeiten, in dem Sie den Instanziierungscode festgelegt haben, ein viel besserer Mechanismus zum Nachverfolgen von Änderungen von Eigenschaften, die ist in integrierten der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eigenschaftensystem: die Eigenschaftensystemrückrufen <xref:System.Windows.CoerceValueCallback> und <xref:System.Windows.PropertyChangedCallback>. Weitere Informationen über die Verwendung des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaftensystems für die Überprüfung und Koersion, finden Sie unter [Rückrufe und Validierung von Abhängigkeitseigenschaften](dependency-property-callbacks-and-validation.md) und [Benutzerdefinierten Abhängigkeitseigenschaften](custom-dependency-properties.md).  
   
 ### <a name="dependencypropertychanged-events"></a>Abhängigkeitseigenschaftsänderungs-Ereignisse  
  Ist ein weiteres Paar von Typen, die Teil einer Eigenschaftenänderungsereignis-Szenarios sind <xref:System.Windows.DependencyPropertyChangedEventArgs> und <xref:System.Windows.DependencyPropertyChangedEventHandler>. Ereignisse für diese Eigenschaftenänderungen werden nicht weitergeleitet; Sie sind [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Standardereignisse. <xref:System.Windows.DependencyPropertyChangedEventArgs> ist ein ungewöhnlicher ereignisdatenberichts geben, da es nicht von abgeleitet ist <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> ist eine Struktur, die keine Klasse.  
@@ -59,8 +59,8 @@ ms.locfileid: "54523999"
   
  Eigenschaftsauslöser eigenen sich im Allgemeinen für Szenarios, in denen eine oder mehrere Darstellungseigenschaften sich basierend auf dem Zustand einer anderen Eigenschaft auf dem selben Element ändern sollten.  
   
- Weitere Informationen zu Eigenschaftsauslösern finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
+ Weitere Informationen zu Eigenschaftsauslösern finden Sie unter [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [Übersicht über Routingereignisse](routed-events-overview.md)
+- [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)

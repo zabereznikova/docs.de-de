@@ -2,12 +2,12 @@
 title: Brechen Sie eine asynchrone Aufgabe oder Aufgabenliste (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: e4e0fcb1d706fef09233543487aebdeb01cdfbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81676324145bcf8f6d9a13e757865fa86e6d2e23
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695892"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374452"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Brechen Sie eine asynchrone Aufgabe oder Aufgabenliste (Visual Basic)
 Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendung abbrechen können, wenn Sie nicht darauf warten möchten, bis diese beendet wird. Anhand der Beispiele in diesem Thema können Sie einer Anwendung, über die der Inhalt einer Website oder einer Liste von Websites heruntergeladen wird, eine Schaltfläche zum Abbrechen hinzufügen.  
@@ -17,11 +17,11 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
 > [!NOTE]
 >  Zum Ausführen der Beispiele müssen Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf dem Computer installiert sein.  
   
-##  <a name="BKMK_CancelaTask"></a> Eine Aufgabe abbrechen  
+## <a name="BKMK_CancelaTask"></a> Eine Aufgabe abbrechen  
  Im ersten Beispiel wird die Schaltfläche **Abbrechen** einer Aufgabe mit einem einzigen Download zugeordnet. Wenn Sie die Schaltfläche auswählen, während die Anwendung Inhalt herunterlädt, wird der Download abgebrochen.  
   
 ### <a name="downloading-the-example"></a>Herunterladen des Beispiels  
- Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Feinabstimmung der Anwendung](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) und befolgen Sie dann die folgenden Schritte aus.  
+ Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und die folgenden Schritte ausführen.  
   
 1.  Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.  
   
@@ -135,11 +135,11 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a> Eine Aufgabenliste abbrechen  
+## <a name="BKMK_CancelaListofTasks"></a> Eine Aufgabenliste abbrechen  
  Sie können das vorherige Beispiel so erweitern, dass viele Aufgaben abgebrochen werden, indem Sie jeder Aufgabe die gleiche `CancellationTokenSource`-Instanz zuordnen. Wenn Sie die Schaltfläche **Abbrechen** auswählen, brechen Sie alle Aufgaben ab, die noch nicht abgeschlossen sind.  
   
 ### <a name="downloading-the-example"></a>Herunterladen des Beispiels  
- Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Feinabstimmung der Anwendung](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) und befolgen Sie dann die folgenden Schritte aus.  
+ Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und die folgenden Schritte ausführen.  
   
 1.  Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.  
   
@@ -247,10 +247,10 @@ Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendu
     Downloads canceled.  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a> Vollständige Beispiele  
+## <a name="BKMK_CompleteExamples"></a> Vollständige Beispiele  
  Die folgenden Abschnitte enthalten den Code für jedes der vorherigen Beispiele. Beachten Sie, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.  
   
- Sie können die Projekte aus [Async Sample: Feinabstimmung der Anwendung](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
+ Sie können die Projekte aus [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.  
   
 ### <a name="cancel-a-task-example"></a>Beispiel zum Abbrechen einer Aufgabe  
  Der folgende Code ist die vollständige Datei "MainWindow.Xaml.vb" für das Beispiel, in dem eine einzelne Aufgabe abgebrochen.  

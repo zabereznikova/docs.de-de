@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
-ms.openlocfilehash: e01a0264b86e052d9def7f3657f96d238a67afb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555788"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370760"
 ---
 # <a name="menu"></a>Menü
-Ein <xref:System.Windows.Controls.Menu> ist ein Steuerelement, hierarchische Organisation von Elementen, die Befehle oder Ereignishandler zugeordnet werden können. Jede <xref:System.Windows.Controls.Menu> kann mehrere enthalten <xref:System.Windows.Controls.MenuItem> Steuerelemente. Jede <xref:System.Windows.Controls.MenuItem> können aufrufen ein Befehls oder beim Aufrufen einer `Click` -Ereignishandler. Ein <xref:System.Windows.Controls.MenuItem> können auch verfügen über mehrere <xref:System.Windows.Controls.MenuItem> Elemente als untergeordnete Elemente, die ein Untermenü bilden.  
+Ein <xref:System.Windows.Controls.Menu> ist ein Steuerelement, das hierarchische Organisation der Elemente, die mithilfe von Befehlen oder Ereignishandlern ermöglicht. Jede <xref:System.Windows.Controls.Menu> können enthält mehrere <xref:System.Windows.Controls.MenuItem> Steuerelemente. Jede <xref:System.Windows.Controls.MenuItem> können einen Befehl aufrufen, oder rufen einen `Click` -Ereignishandler. Ein <xref:System.Windows.Controls.MenuItem> kann auch über mehrere verfügen <xref:System.Windows.Controls.MenuItem> -Elemente als untergeordnete Elemente, die ein Untermenü bilden.  
   
- Die folgende Abbildung zeigt die drei verschiedenen Zustände eines Steuerelements im Menü. Standardmäßig befindet sich kein Gerät wie z. B. dem Mauszeiger auf die <xref:System.Windows.Controls.Menu>. Des Fokuszustands tritt auf, wenn der Mauszeiger, über bewegt wird die <xref:System.Windows.Controls.Menu> und Zustand "gedrückt" tritt auf, wenn eine Maustaste, über geklickt wird die <xref:System.Windows.Controls.Menu>.  
+ Die folgende Abbildung zeigt die drei verschiedenen Zustände eines Steuerelements im Menü. Der Standardstatus lautet, wenn kein Gerät wie z. B. ein Mauszeiger befindet sich auf die <xref:System.Windows.Controls.Menu>. Des Fokuszustands tritt auf, wenn der Mauszeiger zeigt die <xref:System.Windows.Controls.Menu> und gedrückten Zustand tritt auf, wenn eine Maustaste, über geklickt wird die <xref:System.Windows.Controls.Menu>.  
   
- ![Menüzustände](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
+ ![Menüzustände](./media/ss-ctl-menu.gif "SS_CTL_menu")  
 Menüs in unterschiedlichen Zuständen  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über Menu](../../../../docs/framework/wpf/controls/menu-overview.md)  
+ [Übersicht über Menu](menu-overview.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Menu>  

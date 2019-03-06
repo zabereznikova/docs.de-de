@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WrapPanel control [WPF]
 - content [WPF], sequentially positioning
 ms.assetid: f0acb1b4-df71-4c5a-b4a4-98f189002537
-ms.openlocfilehash: a8072a90984e5b9b926ab28d7f0239a71b754b73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 530c41938ae4abb893fd91d64804c7aaa2d430b5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554027"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362148"
 ---
 # <a name="wrappanel"></a>WrapPanel
-Die <xref:System.Windows.Controls.WrapPanel> Element positioniert untergeordnete Elemente sequenziell von links nach rechts und wichtige Inhalt in die nächste Zeile am Rand des enthaltenden Felds.  
+Die <xref:System.Windows.Controls.WrapPanel> Element positioniert untergeordnete Elemente nacheinander von links nach rechts und umbricht den Inhalt in die nächste Zeile am Rand des enthaltenden Felds.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Panel>  
@@ -34,8 +34,8 @@ Die <xref:System.Windows.Controls.WrapPanel> Element positioniert untergeordnete
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Übersicht über ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Übersicht über ScrollViewer](scrollviewer-overview.md)

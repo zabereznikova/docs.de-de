@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 9efaaebdf08a6079bff7179e9ec035b4f38bb3ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 967537bb1828d323f1dcaa8d049604a1a6e30fa4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678446"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374185"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>Vorgehensweise: Animieren von Größenänderungen mithilfe von Keyframes
 In diesem Beispiel wird das Animieren von Größenänderungen mithilfe von Keyframes veranschaulicht.  
@@ -25,7 +25,7 @@ In diesem Beispiel wird das Animieren von Größenänderungen mithilfe von Keyfr
   
 3.  Über die letzten zwei Sekunden wird eine Instanz der dem <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> Klasse, um die Größe des Bogens zu erhöhen. Spline-Keyframes wie <xref:System.Windows.Media.Animation.SplineSizeKeyFrame> erzeugen einen variablen Übergang zwischen Werten, die von der <xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A> Eigenschaft. In diesem Beispiel wächst die Größe des Bogens zunächst nur langsam und steigt dann exponentiell zum Ende des Zeitabschnitts.  
   
- [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   
  Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
@@ -36,5 +36,5 @@ In diesem Beispiel wird das Animieren von Größenänderungen mithilfe von Keyfr
 - <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>
-- [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
+- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)

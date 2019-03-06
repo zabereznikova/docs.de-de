@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 29286328c960707151fd5b6f2804346373000ad4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748076"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352710"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter und XAML
 In diesem Thema wird der Zweck der Typkonvertierung aus einer Zeichenfolge in eine allgemeinere Funktion der XAML-Sprache erläutert. In .NET Framework die <xref:System.ComponentModel.TypeConverter> Klasse einen bestimmten Zweck dient, als Teil der Implementierung für eine verwaltete benutzerdefinierte Klasse, die als Eigenschaftswert in der XAML-Attributverwendung verwendet werden kann. Wenn Sie eine benutzerdefinierte Klasse schreiben und Instanzen dieser Klasse als festlegbare XAML-Attributwerte verwendet werden sollen, müssen Sie möglicherweise Anwenden einer <xref:System.ComponentModel.TypeConverterAttribute> in Ihrer Klasse schreiben Sie eine benutzerdefinierte <xref:System.ComponentModel.TypeConverter> Klasse oder beides.  
@@ -24,27 +24,22 @@ In diesem Thema wird der Zweck der Typkonvertierung aus einer Zeichenfolge in ei
  Ein XAML-Prozessor benötigt zwei Angaben, um einen Attributwert zu verarbeiten. Die erste Angabe ist der Werttyp der Eigenschaft, die festgelegt wird. Jede Zeichenfolge, die einen Attributwert definiert, und in XAML verarbeitet wird, muss schließlich umgewandelt werden oder zu einem Wert dieses Typs aufgelöst werden. Wenn es sich beim Wert um einen Primitiv handelt, den der XAML-Parser versteht (beispielsweise ein numerischer Wert), wird versucht, eine direkte Konvertierung der Zeichenfolge vorzunehmen. Wenn es sich bei dem Wert um eine Enumeration handelt, wird mithilfe der Zeichenfolge nach einer Namensübereinstimmung mit einer benannten Konstante in dieser Enumeration gesucht. Wenn es sich beim Wert weder um einen primitiven Typ handelt, den der Parser versteht, noch um eine Enumeration, muss der zutreffende Typ einen Typ oder Wert bereitstellen können, der auf einer konvertierten Zeichenfolge beruht. Dies erfolgt durch Angabe einer Typkonverterklasse. Der Typkonverter ist eine Hilfsklasse zum Bereitstellen von Werten einer anderen Klasse im XAML-Szenario und möglicherweise auch für Codeaufrufe in .NET-Code.  
   
 ### <a name="using-existing-type-conversion-behavior-in-xaml"></a>Verwenden von vorhandenem Typkonvertierungsverhalten in XAML  
- Je nach Ihren Vorkenntnissen der zugrunde liegenden XAML-Konzepte verwenden Sie möglicherweise bereits das Typkonvertierungsverhalten in der grundlegenden XAML-Anwendung, ohne es zu wissen. WPF definiert z.B. buchstäblich Hunderte von Eigenschaften, die einen Wert vom Typ akzeptieren <xref:System.Windows.Point>. Ein <xref:System.Windows.Point> ist ein Wert, der eine Koordinate in einem zweidimensionalen Koordinatenraum beschreibt, und es eigentlich nur zwei wichtige Eigenschaften hat: <xref:System.Windows.Point.X%2A> und <xref:System.Windows.Point.Y%2A>. Wenn Sie einen Punkt in XAML angeben, geben Sie ihn als eine Zeichenfolge mit einem Trennzeichen (in der Regel ein Komma) zwischen den <xref:System.Windows.Point.X%2A> und <xref:System.Windows.Point.Y%2A> Werte, die Sie bereitstellen. Beispiel: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">`.  
+ Je nach Ihren Vorkenntnissen der zugrunde liegenden XAML-Konzepte verwenden Sie möglicherweise bereits das Typkonvertierungsverhalten in der grundlegenden XAML-Anwendung, ohne es zu wissen. WPF definiert z.B. buchstäblich Hunderte von Eigenschaften, die einen Wert vom Typ akzeptieren <xref:System.Windows.Point>. Ein <xref:System.Windows.Point> ist ein Wert, der eine Koordinate in einem zweidimensionalen Koordinatenraum beschreibt, und es eigentlich nur zwei wichtige Eigenschaften hat: <xref:System.Windows.Point.X%2A> und <xref:System.Windows.Point.Y%2A>. Wenn Sie einen Punkt in XAML angeben, geben Sie ihn als eine Zeichenfolge mit einem Trennzeichen (in der Regel ein Komma) zwischen den <xref:System.Windows.Point.X%2A> und <xref:System.Windows.Point.Y%2A> Werte, die Sie bereitstellen. Beispiel: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1"/>`.  
   
  Auch dieser einfache Typ von <xref:System.Windows.Point> und dessen einfache Verwendung in XAML erfordern einen Typkonverter. In diesem Fall ist, die die Klasse <xref:System.Windows.PointConverter>.  
   
  Der Typkonverter für <xref:System.Windows.Point> definiert die Klasse auf optimiert die Verwendungsmöglichkeiten von Markup von allen Eigenschaften, die annehmen <xref:System.Windows.Point>. Ohne Typkonverter benötigen Sie das folgende, viel ausführlichere Markup für dasselbe zuvor gezeigte Beispiel:  
-  
- `<LinearGradientBrush>`  
-  
- `<LinearGradientBrush.StartPoint>`  
-  
- `<Point X="0" Y="0"/>`  
-  
- `</LinearGradientBrush.StartPoint>`  
-  
- `<LinearGradientBrush.EndPoint>`  
-  
- `<Point X="1" Y="1"/>`  
-  
- `</LinearGradientBrush.EndPoint>`  
-  
- `<LinearGradientBrush>`  
+
+```xaml
+<LinearGradientBrush>
+  <LinearGradientBrush.StartPoint>
+    <Point X="0" Y="0"/>
+  </LinearGradientBrush.StartPoint>
+  <LinearGradientBrush.EndPoint>
+    <Point X="1" Y="1"/>
+  </LinearGradientBrush.EndPoint>
+</LinearGradientBrush>
+ ```
   
  Die Verwendung der Zeichenfolge für die Typkonvertierung oder die einer ausführlicheren entsprechenden Syntax ist eine Stilfrage beim Programmieren. Der XAML-Tool-Workflow könnte auch beeinflussen, wie Werte festgelegt werden. Einige XAML-Tools neigen dazu, die ausführlichste Form von Markup auszugeben, da ein Roundtrip zu Designeransichten oder zum eigenen Serialisierungsmechanismus einfacher ist.  
   
@@ -53,7 +48,7 @@ In diesem Thema wird der Zweck der Typkonvertierung aus einer Zeichenfolge in ei
 ### <a name="type-converters-and-markup-extensions"></a>Typkonverter und Markuperweiterungen  
  Markuperweiterungen und Typkonverter füllen orthogonale Rollen in Bezug auf das Verhalten des XAML-Prozessors und die Szenarios, auf die sie auf angewendet werden. Obwohl der Kontext für die Verwendung von Markuperweiterungen verfügbar ist, wird das Typkonvertierungsverhalten von Eigenschaften, bei denen eine Markuperweiterung einen Wert bereitstellt, in der Regel nicht in den Implementierungen der Markuperweiterung überprüft. Das heißt, auch wenn eine Markuperweiterung eine Textzeichenfolge als zurückgibt seine `ProvideValue` auszugeben, Typkonvertierungsverhalten für diese Zeichenfolge entsprechend der auf eine bestimmte Eigenschaft oder der Werttyp der Eigenschaft angewendet wird nicht aufgerufen, in der Regel wird des Zwecks einer Markuperweiterung an Prozess ein Zeichenfolge und ein Objekt ohne beteiligten Typkonverter zurück.  
   
- Eine allgemeine Situation, in der eine Markuperweiterung statt einem Typkonverter erforderlich ist, besteht im Erstellen eines Verweises auf ein vorhandenes Objekt. Ein zustandsloser Typkonverter könnte bestenfalls nur eine neue Instanz genieren, die möglicherweise nicht gewünscht ist. Weitere Informationen über Markuperweiterungen finden Sie unter [Markuperweiterungen und WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Eine allgemeine Situation, in der eine Markuperweiterung statt einem Typkonverter erforderlich ist, besteht im Erstellen eines Verweises auf ein vorhandenes Objekt. Ein zustandsloser Typkonverter könnte bestenfalls nur eine neue Instanz genieren, die möglicherweise nicht gewünscht ist. Weitere Informationen über Markuperweiterungen finden Sie unter [Markuperweiterungen und WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ### <a name="native-type-converters"></a>Systemeigene Typkonverter  
  In WPF- und .NET Framework-Implementierungen des XAML-Parsers gibt es bestimmte Typen, die über eine native Typkonvertierungsverarbeitung verfügen. Diese Typen werden jedoch herkömmlich nicht als primitive Typen angesehen. Ein Beispiel eines solchen Typs ist <xref:System.DateTime>. Der Grund dafür basiert auf der Funktionsweise der .NET Framework-Architektur: der Typ <xref:System.DateTime> in "mscorlib", die grundlegendste Bibliothek in .NET definiert ist. <xref:System.DateTime> darf nicht mit einem Attribut zu attribuieren, die aus einer anderen Assembly stammt, eine Abhängigkeit einführt (<xref:System.ComponentModel.TypeConverterAttribute> stammt aus dem System), damit der gewöhnliche Typkonverter-Ermittlungsmechanismus durch die Attributierung nicht unterstützt wird. Stattdessen verfügt der XAML-Parser über eine Liste von Typen, für die diese native Verarbeitung erforderlich ist, und verarbeitet diese Typen ähnlich wie echte primitive Typen. (Im Fall von <xref:System.DateTime> Dies umfasst einen Aufruf von <xref:System.DateTime.Parse%2A>.)  
@@ -116,6 +111,6 @@ In diesem Thema wird der Zweck der Typkonvertierung aus einer Zeichenfolge in ei
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.ComponentModel.TypeConverter>
-- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Ausführliche Erläuterung der XAML-Syntax](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+- [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
+- [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md)
+- [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md)

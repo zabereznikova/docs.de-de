@@ -2,12 +2,12 @@
 title: Auflistungen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: d81af633222961dfd9db49722f25c46a549413f9
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 7fdafce071a77f344eb58e17c4be9d4f204e118d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739006"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359353"
 ---
 # <a name="collections-visual-basic"></a>Auflistungen (Visual Basic)
 Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten. Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.  
@@ -227,7 +227,7 @@ End Class
  Der <xref:System.Collections.Specialized>-Namespace bietet spezialisierte und stark typisierte Auflistungsklassen, beispielsweise für Zeichenfolgenauflistungen sowie für Wörterbücher mit verketteten Listen und Hybridwörterbücher.  
 
 <a name="BKMK_VisualBasic"></a> 
-###  <a name="visual-basic-collection-class"></a>Visual Basic-Auflistungsklasse  
+### <a name="visual-basic-collection-class"></a>Visual Basic-Auflistungsklasse  
  Sie können die Visual Basic-Klasse <xref:Microsoft.VisualBasic.Collection> verwenden, um auf ein Auflistungselement zuzugreifen, indem Sie entweder einen numerischen Index oder einen `String`schlüssel verwenden. Sie können einem Auflistungsobjekt Elemente entweder mit oder ohne Angabe eines Schlüssels hinzufügen. Wenn Sie ein Element ohne einen Schlüssel hinzufügen, müssen Sie seinen numerischen Index verwenden, um darauf zuzugreifen.  
   
  Die Visual Basic-Klasse `Collection` speichert alle Elemente als `Object`-Typ, damit Elemente eines beliebigen Datentyps hinzugefügt werden können. Es gibt keine Vorkehrung, die das Hinzufügen ungeeigneter Datentypen verhindert.  
@@ -337,7 +337,7 @@ End Sub
 ```  
   
 <a name="BKMK_LINQ"></a> 
-##  <a name="using-linq-to-access-a-collection"></a>Verwenden von LINQ zum Zugriff auf eine Auflistung  
+## <a name="using-linq-to-access-a-collection"></a>Verwenden von LINQ zum Zugriff auf eine Auflistung  
  LINQ (Language-Integrated Query) kann verwendet werden, um auf Auflistungen zuzugreifen. LINQ-Abfragen stellen Filter-, Sortier- und Gruppierungsfunktionen bereit. Weitere Informationen finden Sie unter [erste Schritte mit LINQ in Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
  Im folgenden Beispiel wird eine LINQ-Abfrage für eine generische `List` ausgeführt. Die LINQ-Abfrage gibt eine andere Auflistung zurück, die die Ergebnisse enthält.  
@@ -539,7 +539,7 @@ End Class
 ```  
   
 <a name="BKMK_Iterators"></a>
-##  <a name="iterators"></a>Iterators  
+## <a name="iterators"></a>Iterators  
  Ein *Iterator* wird verwendet, um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Methode oder ein `get`-Accessor sein. Ein Iterator verwendet eine [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) Anweisung, um jedes Element der Auflistung zu einem Zeitpunkt zurückzugeben.  
   
  Sie rufen einen Iterator mithilfe einer [für jede... Nächste](../../../visual-basic/language-reference/statements/for-each-next-statement.md) Anweisung. Jede Iteration der `For Each`-Schleife ruft den Iterator auf. Wenn eine `Yield`-Anweisung im Iterator erreicht ist, wird ein Ausdruck zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  

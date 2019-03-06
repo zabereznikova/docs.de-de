@@ -2,12 +2,12 @@
 title: Erweiterbarkeit des Speichers
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f317e8e0864dd6c4595ac669611594c843b277c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517919"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375427"
 ---
 # <a name="store-extensibility"></a>Erweiterbarkeit des Speichers
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> ermöglicht es Benutzern, benutzerdefinierte, anwendungsspezifische Eigenschaften höher zu stufen, die verwendet werden können, um Instanzen in der Persistenzdatenbank abzufragen. Durch das Höherstufen einer Eigenschaft ist der Wert in einer besonderen Ansicht in der Datenbank verfügbar. Diese höhergestuften Eigenschaften sind Eigenschaften, die in Benutzerabfragen verwendet werden können. Dabei kann es sich um einfache Typen wie Int64, Guid, String und DateTime oder um einen serialisierten Binärtyp (byte[]) handeln.  
@@ -35,7 +35,7 @@ ms.locfileid: "33517919"
     application.Extensions.Add(documentStatusExtension);  
     ```  
   
-     Weitere Informationen zum Hinzufügen eines benutzerdefinierten persistenzteilnehmers finden Sie unter der [Persistenzteilnehmer](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) Beispiel.  
+     Weitere Informationen zum Hinzufügen eines benutzerdefinierten persistenzteilnehmers finden Sie unter den [Persistenzteilnehmer](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) Beispiel.  
   
 3.  Die benutzerdefinierten Aktivitäten in der DP-Anwendung füllen verschiedene Statusfelder in der **Execute** Methode.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33517919"
     > [!NOTE]
     >  Alle diese Eigenschaften werden an übergeben **SqlWorkflowInstanceStore** vom persistenzframework über die **SqlWorkflowInstanceStore** Auflistung.  
   
-5.  Die DP-Anwendung initialisiert den SQL-Workflowinstanzspeicher und ruft die **heraufstufen** Methode, um diese Daten höher zu stufen.  
+5.  Die DP-Anwendung initialisiert den SQL-Workflow-Instanz-Store, und ruft die **höher stufen** Methode, um diese Daten höher zu stufen.  
   
     ```  
     SqlWorkflowInstanceStore store = new SqlWorkflowInstanceStore(connectionString);  
@@ -108,7 +108,7 @@ ms.locfileid: "33517919"
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties]-Ansicht  
+## <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties]-Sicht  
   
 |Spaltenname|Spaltentyp|Beschreibung|  
 |-----------------|-----------------|-----------------|  

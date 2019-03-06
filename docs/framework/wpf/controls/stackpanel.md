@@ -8,18 +8,18 @@ helpviewer_keywords:
 - StackPanel control [WPF]
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
-ms.openlocfilehash: b901c256491b24c0583835fab36744733c545920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553740"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361228"
 ---
 # <a name="stackpanel"></a>StackPanel
-Die <xref:System.Windows.Controls.StackPanel> Element wird verwendet, um untergeordnete Elemente horizontal oder vertikal Stapeln.  
+Die <xref:System.Windows.Controls.StackPanel> Element untergeordnete Elemente horizontal oder vertikal gestapelt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](stackpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ Die <xref:System.Windows.Controls.StackPanel> Element wird verwendet, um unterge
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Übersicht über ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Übersicht über ScrollViewer](scrollviewer-overview.md)

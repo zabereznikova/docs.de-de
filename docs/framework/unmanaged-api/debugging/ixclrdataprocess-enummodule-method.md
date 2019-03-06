@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1648e53df5f36f7615831b425d2b5d764731c5c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0398d18f9568754231082d63b4c6a2c865d8c6f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738130"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363305"
 ---
 # <a name="ixclrdataprocessenummodule-method"></a>IXCLRDataProcess::EnumModule-Methode
 
@@ -37,11 +37,13 @@ HRESULT EnumModule(
 );
 ```
 
-### <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameter
 
-`handle` [in, out] Ein Handle für das Auflisten der Module.
+`handle`\
+[in, out] Ein Handle für das Auflisten der Module.
 
-`mod` [out] Die aufgelisteten-Modul.
+`mod`\
+[out] Die aufgelisteten-Modul.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -56,7 +58,7 @@ Die angegebene Methode ist Teil der `IXCLRDataProcess` Schnittstelle, und mit de
 
 ## <a name="see-also"></a>Siehe auch
 
-- [CLRDataSourceType-Enumeration](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataModule-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
-- [IXCLRDataProcess-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType-Enumeration](clrdatasourcetype-enumeration.md)
+- [Debuggen](index.md)
+- [IXCLRDataModule-Schnittstelle](ixclrdatamodule-interface.md)
+- [IXCLRDataProcess-Schnittstelle](ixclrdataprocess-interface.md)

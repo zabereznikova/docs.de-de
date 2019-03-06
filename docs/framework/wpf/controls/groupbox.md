@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
-ms.openlocfilehash: e7e73523f9c7038fdcec64f66567dc41a75d5e2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 811a29f6575681504a8dcf72257c82d288558a12
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550838"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358924"
 ---
 # <a name="groupbox"></a>GroupBox
-Die <xref:System.Windows.Controls.GroupBox> -Steuerelement ist ein <xref:System.Windows.Controls.HeaderedContentControl> , mit dem Titel Container für bereitstellt [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] Inhalt.  
+Die <xref:System.Windows.Controls.GroupBox> Steuerelement ist ein <xref:System.Windows.Controls.HeaderedContentControl> , die für einen benannten Container bereitstellt [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] Inhalt.  
   
- Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.GroupBox> , enthält eine <xref:System.Windows.Controls.TabControl> und ein <xref:System.Windows.Controls.Button> , eingeschlossen sind, eine <xref:System.Windows.Controls.StackPanel>.  
+ Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.GroupBox> , enthält eine <xref:System.Windows.Controls.TabControl> und <xref:System.Windows.Controls.Button> , die in eingeschlossen sind ein <xref:System.Windows.Controls.StackPanel>.  
   
- ![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")  
+ ![GroupBoxImage](./media/groupboximage.JPG "GroupBoxImage")  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Definieren einer GroupBox-Vorlage](../../../../docs/framework/wpf/controls/how-to-define-a-groupbox-template.md)  
+ [Definieren einer GroupBox-Vorlage](how-to-define-a-groupbox-template.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.GroupBox>  

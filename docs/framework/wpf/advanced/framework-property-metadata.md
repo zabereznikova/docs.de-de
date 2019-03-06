@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: 73ac80786b95c214cbba5924301b21f9c6e32837
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649816"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379275"
 ---
 # <a name="framework-property-metadata"></a>Framework-Eigenschaftenmetadaten
 Die Optionen für Framework-Eigenschaftenmetadaten werden für die Eigenschaften von Objektelementen gemeldet, die in der WPF-Frameworkebene in der Architektur [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] vorhanden sein sollen. Im Allgemeinen bedeutet die Bezeichnung WPF-Frameworkebene, dass Funktionen wie das Rendering, die Datenbindung und die Verbesserungen des Eigenschaftensystems von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Präsentations-[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] und von ausführbaren Dateien behandelt werden. Framework-Eigenschaftenmetadaten werden von diesen Systemen zur Ermittlung funktionsspezifischer Merkmale von bestimmten Elementeigenschaften abgefragt.  
@@ -19,7 +19,7 @@ Die Optionen für Framework-Eigenschaftenmetadaten werden für die Eigenschaften
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Erforderliche Komponenten  
- In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften aus Sicht eines Consumers vorhandener Abhängigkeitseigenschaften von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Klassen verstehen und die [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) gelesen haben. Folgenden Artikel sollten Sie auch gelesen haben: [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+ In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften aus Sicht eines Consumers vorhandener Abhängigkeitseigenschaften von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Klassen verstehen und die [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) gelesen haben. Folgenden Artikel sollten Sie auch gelesen haben: [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md).  
   
 <a name="What_Is_Communicated_by_Framework_Property"></a>   
 ## <a name="what-is-communicated-by-framework-property-metadata"></a>Was wird von Framework-Eigenschaftenmetadaten übermittelt?  
@@ -32,11 +32,11 @@ Die Optionen für Framework-Eigenschaftenmetadaten werden für die Eigenschaften
 -   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Standardmäßig erben Abhängigkeitseigenschaften keine Werte. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> ermöglicht dem Vererbungspfad auch in einer visuellen Struktur übertragen der für einige Szenarien für das Steuerelement Zusammensetzung erforderlich ist.  
   
     > [!NOTE]
-    >  Im Kontext mit Eigenschaftswerten bedeutet der Begriff „erbt“ für Abhängigkeitseigenschaften etwas Bestimmtes. Das bedeutet, dass untergeordnete Elemente den tatsächlichen Abhängigkeitseigenschaftswert von übergeordneten Elementen erben können, aufgrund einer Funktion der WPF-Frameworkebene des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaftensystems. Dies hat nichts mit verwaltetem Codetypen und Vererbung der Member über abgeleitete Typen zu tun. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
+    >  Im Kontext mit Eigenschaftswerten bedeutet der Begriff „erbt“ für Abhängigkeitseigenschaften etwas Bestimmtes. Das bedeutet, dass untergeordnete Elemente den tatsächlichen Abhängigkeitseigenschaftswert von übergeordneten Elementen erben können, aufgrund einer Funktion der WPF-Frameworkebene des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaftensystems. Dies hat nichts mit verwaltetem Codetypen und Vererbung der Member über abgeleitete Typen zu tun. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](property-value-inheritance.md).  
   
--   Eigenschaften der Datenbindung Reporting (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). Standardmäßig unterstützen Abhängigkeitseigenschaften im Framework die Datenbindung mit einem unidirektionalen Bindungsverhalten. Sie können möglicherweise die Datenbindung deaktivieren, wenn es dafür überhaupt kein Szenario gäbe (da sie flexibel und erweiterbar vorgesehen sind, sind nicht viele Beispiele für solche Eigenschaften in den standardmäßigen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]). Legen Sie möglicherweise die Bindung an einen bidirektionalen Standard für Eigenschaften verfügen, die zusammen Verhalten eines Steuerelements seiner Komponententeile verknüpfen (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> ist ein Beispiel) oder dass die bidirektionale Bindung das allgemeine und erwartete Szenario für Benutzer (<xref:System.Windows.Controls.TextBox.Text%2A> ist ein Beispiel). Das Ändern der auf die Datenbindung bezogenen Metadaten beeinflusst nur den Standardwert. Bei einer Basis pro Bindung kann dieser Standardwert immer geändert werden. Weitere Informationen zu den Bindungsmodi und zur Bindung im Allgemeinen finden Sie unter [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+-   Eigenschaften der Datenbindung Reporting (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>, <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>). Standardmäßig unterstützen Abhängigkeitseigenschaften im Framework die Datenbindung mit einem unidirektionalen Bindungsverhalten. Sie können möglicherweise die Datenbindung deaktivieren, wenn es dafür überhaupt kein Szenario gäbe (da sie flexibel und erweiterbar vorgesehen sind, sind nicht viele Beispiele für solche Eigenschaften in den standardmäßigen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]). Legen Sie möglicherweise die Bindung an einen bidirektionalen Standard für Eigenschaften verfügen, die zusammen Verhalten eines Steuerelements seiner Komponententeile verknüpfen (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A> ist ein Beispiel) oder dass die bidirektionale Bindung das allgemeine und erwartete Szenario für Benutzer (<xref:System.Windows.Controls.TextBox.Text%2A> ist ein Beispiel). Das Ändern der auf die Datenbindung bezogenen Metadaten beeinflusst nur den Standardwert. Bei einer Basis pro Bindung kann dieser Standardwert immer geändert werden. Weitere Informationen zu den Bindungsmodi und zur Bindung im Allgemeinen finden Sie unter [Übersicht zur Datenbindung](../data/data-binding-overview.md).  
   
--   Meldet, ob die Eigenschaften von Anwendungen oder Dienste, die Journaling unterstützen werden sollen (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). Für allgemeine Elemente ist Journaling nicht standardmäßig aktiviert, aber es ist selektiv für bestimmte Benutzereingabe-Steuerelemente aktiviert. Diese Eigenschaft soll von Journaling-Diensten gelesen werden, einschließlich der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung von Journaling, und wird in der Regel auf Benutzersteuerelemente festgelegt, z.B. Auswahlmöglichkeiten des Benutzers in Listen, die über Navigationsschritte hinweg beibehalten werden soll. Informationen zur Erfassung finden Sie unter [Übersicht über die Navigation](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
+-   Meldet, ob die Eigenschaften von Anwendungen oder Dienste, die Journaling unterstützen werden sollen (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>). Für allgemeine Elemente ist Journaling nicht standardmäßig aktiviert, aber es ist selektiv für bestimmte Benutzereingabe-Steuerelemente aktiviert. Diese Eigenschaft soll von Journaling-Diensten gelesen werden, einschließlich der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung von Journaling, und wird in der Regel auf Benutzersteuerelemente festgelegt, z.B. Auswahlmöglichkeiten des Benutzers in Listen, die über Navigationsschritte hinweg beibehalten werden soll. Informationen zur Erfassung finden Sie unter [Übersicht über die Navigation](../app-development/navigation-overview.md).  
   
 <a name="Reading_FrameworkPropertyMetadata"></a>   
 ## <a name="reading-frameworkpropertymetadata"></a>Lesen von FrameworkPropertyMetadata  
@@ -74,6 +74,6 @@ Die Optionen für Framework-Eigenschaftenmetadaten werden für die Eigenschaften
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
-- [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+- [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md)
+- [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
+- [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)

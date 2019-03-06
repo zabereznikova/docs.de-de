@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-ms.openlocfilehash: 42e6601ecc65ec3534b82154bffc1076e10db665
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5758aead9811cdbaf7f61bbd710092f6b4474ad8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504287"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369629"
 ---
 # <a name="treeview-overview"></a>Übersicht über TreeView
 Die <xref:System.Windows.Controls.TreeView> -Steuerelement bietet eine Möglichkeit zum Anzeigen von Informationen in einer hierarchischen Struktur mit reduzierbaren Knoten. In diesem Thema werden die <xref:System.Windows.Controls.TreeView> und <xref:System.Windows.Controls.TreeViewItem> steuert und enthält einfache Beispiele für deren Verwendung.  
@@ -21,7 +21,7 @@ Die <xref:System.Windows.Controls.TreeView> -Steuerelement bietet eine Möglichk
 ## <a name="what-is-a-treeview"></a>Was versteht man unter einem TreeView-Steuerelement?  
  <xref:System.Windows.Controls.TreeView> ist ein <xref:System.Windows.Controls.ItemsControl> , die die Elemente mithilfe von schachtelt <xref:System.Windows.Controls.TreeViewItem> Steuerelemente. Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.TreeView>.  
   
- [!code-xaml[TreeViewSnips#EmbeddedTVIs](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
+ [!code-xaml[TreeViewSnips#EmbeddedTVIs](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
   
 <a name="Creating_a_TreeView"></a>   
 ## <a name="creating-a-treeview"></a>Erstellen eines TreeView-Steuerelements  
@@ -31,7 +31,7 @@ Die <xref:System.Windows.Controls.TreeView> -Steuerelement bietet eine Möglichk
   
  Sie können auch angeben einer <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> als Daten Datenquelle, und geben Sie dann eine <xref:System.Windows.Controls.HeaderedItemsControl.HeaderTemplate%2A> und <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> definieren die <xref:System.Windows.Controls.TreeViewItem> Inhalt.  
   
- Zum Definieren des Layouts einer <xref:System.Windows.Controls.TreeViewItem> -Steuerelement, können Sie auch <xref:System.Windows.HierarchicalDataTemplate> Objekte. Weitere Informationen und ein Beispiel dazu finden Sie unter [Use SelectedValue, SelectedValuePath, and SelectedItem (Verwenden von SelectedValue, SelectedValuePath und SelectedItem)](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+ Zum Definieren des Layouts einer <xref:System.Windows.Controls.TreeViewItem> -Steuerelement, können Sie auch <xref:System.Windows.HierarchicalDataTemplate> Objekte. Weitere Informationen und ein Beispiel dazu finden Sie unter [Use SelectedValue, SelectedValuePath, and SelectedItem (Verwenden von SelectedValue, SelectedValuePath und SelectedItem)](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
   
  Ein Element ist keiner <xref:System.Windows.Controls.TreeViewItem> -Steuerelement, es ist automatisch eingeschlossen, indem eine <xref:System.Windows.Controls.TreeViewItem> steuern, wann die <xref:System.Windows.Controls.TreeView> -Steuerelements angezeigt wird.  
   
@@ -47,7 +47,7 @@ Die <xref:System.Windows.Controls.TreeView> -Steuerelement bietet eine Möglichk
   
  Die <xref:System.Windows.Controls.TreeView.SelectedItem%2A> Eigenschaft für die <xref:System.Windows.Controls.TreeView> Steuerelement ist eine schreibgeschützte Eigenschaft; daher Sie nicht explizit festlegen. Die <xref:System.Windows.Controls.TreeView.SelectedItem%2A> Eigenschaft festgelegt ist, klickt der Benutzer auf eine <xref:System.Windows.Controls.TreeViewItem> Steuerelement oder wenn der <xref:System.Windows.Controls.TreeViewItem.IsSelected%2A> -Eigenschaftensatz auf `true` auf die <xref:System.Windows.Controls.TreeViewItem> Steuerelement.  
   
- Verwenden der <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> -Eigenschaft an eine <xref:System.Windows.Controls.TreeView.SelectedValue%2A> von eine <xref:System.Windows.Controls.TreeView.SelectedItem%2A>. Weitere Informationen finden Sie unter [Use SelectedValue, SelectedValuePath, and SelectedItem (Verwenden von SelectedValue, SelectedValuePath und SelectedItem)](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+ Verwenden der <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> -Eigenschaft an eine <xref:System.Windows.Controls.TreeView.SelectedValue%2A> von eine <xref:System.Windows.Controls.TreeView.SelectedItem%2A>. Weitere Informationen finden Sie unter [Use SelectedValue, SelectedValuePath, and SelectedItem (Verwenden von SelectedValue, SelectedValuePath und SelectedItem)](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
   
  Sie registrieren einen Ereignishandler, auf die <xref:System.Windows.Controls.TreeView.SelectedItemChanged> Ereignis, um zu ermitteln, wann sich ein <xref:System.Windows.Controls.TreeViewItem> Änderungen. Die <xref:System.Windows.RoutedPropertyChangedEventArgs%601> , die auf das Ereignis-Handler legt dient der <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A>, d.h., dass die vorherige Auswahl, und die <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>, dies ist die aktuelle Auswahl. Es kann kein Wert `null` sein, wenn die Anwendung oder der Benutzer keine vorherige oder aktuelle Auswahl getroffen hat.  
   
@@ -59,7 +59,7 @@ Die <xref:System.Windows.Controls.TreeView> -Steuerelement bietet eine Möglichk
   
  Das folgende Beispiel zeigt, wie Sie festlegen der <xref:System.Windows.Controls.Control.Foreground%2A> und <xref:System.Windows.Controls.Control.FontSize%2A> Eigenschaftswerte für eine <xref:System.Windows.Controls.TreeViewItem> -Steuerelement unter Verwendung einer <xref:System.Windows.FrameworkElement.Style%2A>.  
   
- [!code-xaml[TreeViewSimple#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#8)]  
+ [!code-xaml[TreeViewSimple#8](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#8)]  
   
 <a name="Adding_Images_and_oOther_Content_to_TreeView_Items"></a>   
 ## <a name="adding-images-and-other-content-to-treeview-items"></a>Hinzufügen von Bildern und anderen Inhalten zu TreeView-Elementen  
@@ -67,14 +67,14 @@ Die <xref:System.Windows.Controls.TreeView> -Steuerelement bietet eine Möglichk
   
  Das folgende Beispiel zeigt, wie Sie definieren die <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> von einer <xref:System.Windows.Controls.TreeViewItem> als eine <xref:System.Windows.Controls.CheckBox> und <xref:System.Windows.Controls.TextBlock> , dass beide in eingeschlossen sind ein <xref:System.Windows.Controls.DockPanel> Steuerelement.  
   
- [!code-xaml[TreeViewSnips#TVIHeader](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#tviheader)]  
+ [!code-xaml[TreeViewSnips#TVIHeader](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#tviheader)]  
   
  Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.DataTemplate> , enthält ein <xref:System.Windows.Controls.Image> und <xref:System.Windows.Controls.TextBlock> , die in eingeschlossen sind ein <xref:System.Windows.Controls.DockPanel> Steuerelement. Können Sie eine <xref:System.Windows.DataTemplate> Festlegen der <xref:System.Windows.Controls.HeaderedItemsControl.HeaderTemplate%2A> oder <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> für eine <xref:System.Windows.Controls.TreeViewItem>.  
   
- [!code-xaml[TreeViewDataBinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
+ [!code-xaml[TreeViewDataBinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)
-- [WPF-Inhaltsmodell](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+- [Themen zu Vorgehensweisen](treeview-how-to-topics.md)
+- [WPF-Inhaltsmodell](wpf-content-model.md)

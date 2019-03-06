@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 08fb3b7a6d2af4ede27ebeb1454b040d2bd3eb43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719221"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355154"
 ---
 # <a name="cleartype-overview"></a>Übersicht über ClearType
 Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]-Technologie in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -28,12 +28,12 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA#tla_ct](../../../../
   
  In den folgenden zwei Beispielen wird gezeigt, dass Glyphen auf jeder Subpixelgrenze beginnen können, wenn die Subpixel-Positionierung verwendet wird. Das Beispiel links wird mithilfe der früheren Version des [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Renderers gerendert, der keine Subpixel-Positionierung verwendete. Das Beispiel rechts wird mithilfe der neuen Version des [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Renderers mit der Subpixel-Positionierung gerendert. Beachten Sie, dass die Buchstaben **e** und **l** im Bild rechts minimal anders gerendert werden, da jedes auf einem anderen Subpixel beginnt. Wenn den Text in Normalgröße auf dem Bildschirm angezeigt wird, ist dieser Unterschied aufgrund des hohen Kontrasts des Glyphenbilds nicht wahrnehmbar. Dies ist nur wegen der komplexen, in [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] integrierten Farbfilterung möglich.  
   
- ![Mit zwei Versionen von ClearType angezeigter Text](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
+ ![Mit zwei Versionen von ClearType angezeigter Text](./media/wcpsdk-mmgraphics-text-cleartype-overview-01.png "wcpsdk_mmgraphics_text_cleartype_overview_01")  
 Mit zwei Versionen von ClearType angezeigter Text  
   
  In den folgenden beiden Beispielen wird die Ausgabe des älteren [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Renderers mit der neuen Version des [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Renderers verglichen. Die rechts dargestellte Subpixel-Positionierung verbessert den Abstand zwischen Buchstaben auf dem Bildschirm erheblich, insbesondere bei kleinen Schriftgrößen, bei denen der Unterschied zwischen einem Subpixel und einem Pixel einen bedeutenden Anteil an der Glyphenbreite ausmacht. Es ist deutlich zu sehen, dass der Abstand zwischen den Buchstaben im zweiten Bild gleichmäßiger ist. Der kumulierte Vorteil der Subpixel-Positionierung für die Gesamtdarstellung eines Texts auf einem Bildschirm erhöht sich damit beträchtlich und stellt eine wesentliche Weiterentwicklung der [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Technologie dar.  
   
- ![Mit einer früheren Version von ClearType angezeigter Text](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
+ ![Mit einer früheren Version von ClearType angezeigter Text](./media/wcpsdk-mmgraphics-text-cleartype-overview-02.png "wcpsdk_mmgraphics_text_cleartype_overview_02")  
 Mit einer früheren Version von ClearType angezeigter Text  
   
 <a name="y-direction_antialiasing"></a>   
@@ -42,14 +42,14 @@ Mit einer früheren Version von ClearType angezeigter Text
   
  Im folgenden Beispiel werden die Auswirkungen von fehlendem Antialiasing auf der y-Achse dargestellt. Die gezackten Kanten oben und unten am Buchstaben treten deutlich hervor.  
   
- ![Text mit gezackten Kanten an flachen Kurven](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
+ ![Text mit gezackten Kanten an flachen Kurven](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 Text mit Flatterrändern an flachen Kurven  
   
  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt Antialiasing auf der y-Achse zum Glätten der gezackten Kanten bereit. Dies ist besonders für die Verbesserung der Lesbarkeit ostasiatischer Sprachen wichtig, in denen Ideogramme über nahezu gleiche Anteile von horizontalen und vertikalen flachen Kurven verfügen.  
   
  Im folgenden Beispiel wird die Auswirkung von Antialiasing auf der y-Achse gezeigt. In diesem Fall weisen der obere und untere Rand des Buchstabens eine glatte Kurve auf.  
   
- ![Text mit ClearType-y&#45;Richtung&#45;Aliasing](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![Text mit ClearType-y&#45;Richtung&#45;Aliasing](./media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 Text mit ClearType-Antialiasing auf der y-Achse  
   
 <a name="hardware_acceleration"></a>   
@@ -67,4 +67,4 @@ Text mit ClearType-Antialiasing auf der y-Achse
  [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Siehe auch
-- [ClearType Registry Settings (ClearType-Registrierungseinstellungen)](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)
+- [ClearType Registry Settings (ClearType-Registrierungseinstellungen)](cleartype-registry-settings.md)

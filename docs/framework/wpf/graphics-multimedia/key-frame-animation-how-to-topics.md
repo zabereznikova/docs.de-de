@@ -7,28 +7,28 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 6571ee16b54c7b22d65567c8d3347cfe4a7936fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ee0f8a6cd40e6293062b62b8bc81bd4c54903c0
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510428"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361433"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Gewusst-wie-Themen zur Keyframe-Animation
 Die Themen in diesem Abschnitt veranschaulichen das Keyframe-Animationen verwenden, um mehr als zwei Werte und Steuerung der Interpolation zu animieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Animieren eines Objekts mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [Animieren eines booleschen Werts mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [Animieren eines Doubles mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [Animieren einer Matrix mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [Animieren eines Point mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [Animieren einer Rechteckgeometrie mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [Animieren einer Zeichenfolge mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [Animieren von Color mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [Animieren von Größenänderungen mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [Animieren der Breite eines Rahmens mithilfe von Keyframes](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [Steuern der Keyframe-Animationszeit](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+ [Animieren eines Objekts mithilfe von Keyframes](how-to-animate-an-object-by-using-key-frames.md)  
+ [Animieren eines booleschen Werts mithilfe von Keyframes](how-to-animate-a-boolean-by-using-key-frames.md)  
+ [Animieren eines Doubles mithilfe von Keyframes](how-to-animate-a-double-by-using-key-frames.md)  
+ [Animieren einer Matrix mithilfe von Keyframes](how-to-animate-a-matrix-by-using-key-frames.md)  
+ [Animieren eines Point mithilfe von Keyframes](how-to-animate-a-point-by-using-key-frames.md)  
+ [Animieren einer Rechteckgeometrie mithilfe von Keyframes](how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [Animieren einer Zeichenfolge mithilfe von Keyframes](how-to-animate-a-string-by-using-key-frames.md)  
+ [Animieren von Color mithilfe von Keyframes](how-to-animate-color-by-using-key-frames.md)  
+ [Animieren von Größenänderungen mithilfe von Keyframes](how-to-animate-size-changes-by-using-key-frames.md)  
+ [Animieren der Breite eines Rahmens mithilfe von Keyframes](how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [Steuern der Keyframe-Animationszeit](how-to-control-key-frame-animation-timing.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
@@ -38,6 +38,6 @@ Die Themen in diesem Abschnitt veranschaulichen das Keyframe-Animationen verwend
  <xref:System.Windows.Media.Animation.KeyTime>  
   
 ## <a name="see-also"></a>Siehe auch
-- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+- [Grafiken und Multimedia](index.md)
+- [Übersicht über Animationen](animation-overview.md)
+- [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)

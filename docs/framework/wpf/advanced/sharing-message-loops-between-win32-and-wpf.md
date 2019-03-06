@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 6ee440d91bf241949923074dfd5163a49cfd9979
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740964"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378211"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Gemeinsame Verwendung von Nachrichtenschleifen zwischen Win32 und WPF
 In diesem Thema wird beschrieben, wie eine Nachrichtenschleife für die Interoperation mit implementieren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], entweder durch Nutzung vorhandener message Loop-Präsenz im <xref:System.Windows.Threading.Dispatcher> oder erstellen eine separate Nachrichtenschleife für den [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] -Seite der interoperation Code.  
@@ -64,6 +64,6 @@ In diesem Thema wird beschrieben, wie eine Nachrichtenschleife für die Interope
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
-- [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Threadmodell](../../../../docs/framework/wpf/advanced/threading-model.md)
-- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Interaktion zwischen WPF und Win32](wpf-and-win32-interoperation.md)
+- [Threadmodell](threading-model.md)
+- [Übersicht über die Eingabe](input-overview.md)

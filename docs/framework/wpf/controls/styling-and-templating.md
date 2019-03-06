@@ -15,27 +15,27 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 8bd806d6b0d53d09cfca875f9f8fa844eb73ffdc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 580eb2c7efd00382f7fff24984f0ce6f6d8fa027
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549716"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370721"
 ---
 # <a name="styling-and-templating"></a>Erstellen von Formaten und Vorlagen
 Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stehen eine Reihe von Funktionen (Stile, Vorlagen, Trigger und Storyboards) zur Verfügung, mit denen Entwickler und Designer visuell ansprechende Effekte erzeugen und ein einheitliches Erscheinungsbild ihres Produkts erstellen können. Obwohl Entwickler und/oder Designer die Darstellung in den einzelnen Anwendungen umfassend anpassen können, ist ein starkes Stil- und Vorlagenmodell erforderlich, um die Wartung und Freigabe der Darstellung innerhalb von Anwendungen und anwendungsübergreifend zu ermöglichen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt dieses Modell bereit.  
   
  Eine weitere Funktion des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Stilmodells ist die Trennung von Darstellung und Logik. Dies bedeutet, dass Designer die Darstellung einer Anwendung nur mithilfe von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bearbeiten können, während die Entwickler mit C# oder Visual Basic an der Programmierlogik arbeiten.  
   
- Diese Übersicht konzentriert sich auf die Aspekte der Stile und Vorlagen der Anwendung und geht nicht auf Datenbindungskonzepte ein. Weitere Informationen zur Datenbindung finden Sie unter [Übersicht über die Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md).  
+ Diese Übersicht konzentriert sich auf die Aspekte der Stile und Vorlagen der Anwendung und geht nicht auf Datenbindungskonzepte ein. Weitere Informationen zur Datenbindung finden Sie unter [Übersicht über die Datenbindung](../data/data-binding-overview.md).  
   
- Darüber hinaus ist es wichtig, die Ressourcen zu kennen, die die Wiederverwendung von Stilen und Vorlagen ermöglichen. Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).
+ Darüber hinaus ist es wichtig, die Ressourcen zu kennen, die die Wiederverwendung von Stilen und Vorlagen ermöglichen. Weitere Informationen zu Ressourcen finden Sie unter [XAML-Ressourcen](../advanced/xaml-resources.md).
 
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>Beispiel für das Erstellen von Stilen und Vorlagen  
  In dieser Übersicht verwendeten Codebeispiele basieren auf einem einfachen Fotobeispiel, das in der folgenden Abbildung dargestellt wird:  
   
- ![Formatierte ListView](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
+ ![Formatierte ListView](./media/stylingintro-triggers.png "StylingIntro_triggers")  
   
  In diesem einfachen Foto-Beispiel werden Stile und Vorlagen verwendet, um eine visuell ansprechende Benutzeroberfläche zu erstellen. Das Beispiel enthält zwei <xref:System.Windows.Controls.TextBlock> Elemente und ein <xref:System.Windows.Controls.ListBox> -Steuerelement, das eine Liste von Bildern gebunden ist. Das vollständige Beispiel finden Sie unter [Einführung zum Beispiel zu Stilen und Vorlagen](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
@@ -43,38 +43,38 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
 ## <a name="style-basics"></a>Grundlagen zu Stilen  
  Stellen Sie sich eine <xref:System.Windows.Style> als eine bequeme Möglichkeit, eine Gruppe von Eigenschaftswerten auf mehr als ein Element anwenden möchten. Betrachten Sie beispielsweise die folgenden <xref:System.Windows.Controls.TextBlock> Elemente und deren standardmäßiges Erscheinungsbild:  
   
- [!code-xaml[StylingIntroSample_snippet#TextBlocks](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#textblocks)]  
+ [!code-xaml[StylingIntroSample_snippet#TextBlocks](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#textblocks)]  
   
- ![Screenshot des Stilbeispiels](../../../../docs/framework/wpf/controls/media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
+ ![Screenshot des Stilbeispiels](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
   
  Sie können das standardmäßige Erscheinungsbild ändern, durch Festlegen von Eigenschaften, z. B. <xref:System.Windows.Controls.Control.FontSize%2A> und <xref:System.Windows.Controls.Control.FontFamily%2A>, auf den einzelnen <xref:System.Windows.Controls.TextBlock> -Element direkt. Jedoch ggf. Ihre <xref:System.Windows.Controls.TextBlock> -Elemente einige Eigenschaften gemeinsam nutzen können Sie erstellen eine <xref:System.Windows.Style> in die `Resources` Teil Ihrer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei, wie hier gezeigt:  
   
- [!code-xaml[StylingIntroSnippet#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources)]  
-[!code-xaml[StylingIntroSnippet#tb1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#tb1)]  
-[!code-xaml[StylingIntroSnippet#Resources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources2)]  
+ [!code-xaml[StylingIntroSnippet#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources)]  
+[!code-xaml[StylingIntroSnippet#tb1](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#tb1)]  
+[!code-xaml[StylingIntroSnippet#Resources2](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources2)]  
   
  Beim Festlegen der <xref:System.Windows.Style.TargetType%2A> des Formats auf die <xref:System.Windows.Controls.TextBlock> Typ, der Stil angewendet wird, auf alle die <xref:System.Windows.Controls.TextBlock> Elemente im Fenster.  
   
  Jetzt die <xref:System.Windows.Controls.TextBlock> Elemente wie folgt aussehen:  
   
- ![Screenshot des Stilbeispiels](../../../../docs/framework/wpf/controls/media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
+ ![Screenshot des Stilbeispiels](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
   
 ### <a name="extending-styles"></a>Erweitern von Stilen  
  Vielleicht möchten Sie Ihre <xref:System.Windows.Controls.TextBlock> Elemente gemeinsam einige Eigenschaftswerte, z. B. die <xref:System.Windows.Controls.Control.FontFamily%2A> und die zentrierte <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, aber Sie möchten auch den Text "Eigene Bilder", um einige zusätzlichen Eigenschaften zu erhalten. Sie können dies durch das Erstellen einer neuen Formatvorlage, die auf dem ersten Stil basiert, wie hier gezeigt:  
   
- [!code-xaml[StylingIntroSnippet#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources)]  
-[!code-xaml[StylingIntroSnippet#tb2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#tb2)]  
-[!code-xaml[StylingIntroSnippet#Resources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources2)]  
+ [!code-xaml[StylingIntroSnippet#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources)]  
+[!code-xaml[StylingIntroSnippet#tb2](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#tb2)]  
+[!code-xaml[StylingIntroSnippet#Resources2](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources2)]  
   
  Beachten Sie, das der vorherige Stil ein `x:Key` erhält. Um den Stil anzuwenden, legen Sie die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft Ihre <xref:System.Windows.Controls.TextBlock> auf die `x:Key` Wert, wie hier gezeigt:  
   
- [!code-xaml[StylingIntroSnippet#UIText](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#uitext)]  
+ [!code-xaml[StylingIntroSnippet#UIText](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#uitext)]  
   
  Dies <xref:System.Windows.Controls.TextBlock> -Stil hat nun eine <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> Wert <xref:System.Windows.HorizontalAlignment.Center>, <xref:System.Windows.Controls.TextBlock.FontFamily%2A> Wert `Comic Sans MS`, <xref:System.Windows.Controls.TextBlock.FontSize%2A> -Wert von 26, und eine <xref:System.Windows.Controls.TextBlock.Foreground%2A> Wert festgelegt wird, um die <xref:System.Windows.Media.LinearGradientBrush> im Beispiel gezeigt. Beachten Sie, den sie überschreibt die <xref:System.Windows.Controls.Control.FontSize%2A> Wert für den grundlegenden Stil. Wenn es mehr als eine <xref:System.Windows.Setter> dieselbe Eigenschaft festlegen, eine <xref:System.Windows.Style>, <xref:System.Windows.Setter> , deklarierten letzte Vorrang.  
   
  Das folgende Beispiel zeigt, was die <xref:System.Windows.Controls.TextBlock> Elemente wie folgt aussehen:  
   
- ![Formatierte TextBlocks](../../../../docs/framework/wpf/controls/media/stylingintro-textblocks.png "StylingIntro_TextBlocks")  
+ ![Formatierte TextBlocks](./media/stylingintro-textblocks.png "StylingIntro_TextBlocks")  
   
  Dies `TitleText` -Stil erweitert den Stil, die für die Erstellung der <xref:System.Windows.Controls.TextBlock> Typ. Sie können einen Stil mit `x:Key` auch mithilfe des `x:Key`-Werts erweitern. Ein Beispiel finden Sie im Beispiel für die <xref:System.Windows.Style.BasedOn%2A> Eigenschaft.  
   
@@ -86,15 +86,15 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
  Beachten Sie außerdem, dass viele [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente aus einer Kombination von anderen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelementen bestehen. Wenn Sie einen Stil erstellen, das für alle Steuerelemente eines Typs gilt, erhalten Sie möglicherweise unerwartete Ergebnisse. Wenn Sie einen Stil erstellen, z. B. die <xref:System.Windows.Controls.TextBlock> Geben Sie in eine <xref:System.Windows.Window>, der Stil angewendet wird, um alle <xref:System.Windows.Controls.TextBlock> Steuerelemente im Fenster selbst wenn die <xref:System.Windows.Controls.TextBlock> ist Teil eines anderen Steuerelements wie einer <xref:System.Windows.Controls.ListBox>.  
   
 ### <a name="styles-and-resources"></a>Stile und Ressourcen  
- Sie können einen Stil verwenden, auf ein beliebiges Element, das von abgeleitet ist <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>. Die gängigste Methode zum Deklarieren eines Stils ist, es als Ressource im `Resources`-Abschnitt einer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei zu deklarieren, wie in den vorherigen Beispielen gezeigt. Da es sich bei Stilen um Ressourcen handelt, unterliegen sie die gleichen Bereichsregeln, die für alle Ressourcen gelten: Der Deklarationsort eines Stils wirkt sich darauf aus, wo der Stil angewendet werden kann. Wenn Sie den Stil z.B. im Stammelement Ihrer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei mit der Anwendungsdefinition deklarieren, kann der Stil überall in der Anwendung verwendet werden. Wenn Sie eine Navigationsanwendung erstellen und den Stil in einer von der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Dateien der Anwendung deklarieren, kann der Stil nur in der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei verwendet werden. Weitere Informationen zu Bereichsregeln für Ressourcen finden Sie unter [XAML-Ressourcen](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+ Sie können einen Stil verwenden, auf ein beliebiges Element, das von abgeleitet ist <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>. Die gängigste Methode zum Deklarieren eines Stils ist, es als Ressource im `Resources`-Abschnitt einer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei zu deklarieren, wie in den vorherigen Beispielen gezeigt. Da es sich bei Stilen um Ressourcen handelt, unterliegen sie die gleichen Bereichsregeln, die für alle Ressourcen gelten: Der Deklarationsort eines Stils wirkt sich darauf aus, wo der Stil angewendet werden kann. Wenn Sie den Stil z.B. im Stammelement Ihrer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei mit der Anwendungsdefinition deklarieren, kann der Stil überall in der Anwendung verwendet werden. Wenn Sie eine Navigationsanwendung erstellen und den Stil in einer von der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Dateien der Anwendung deklarieren, kann der Stil nur in der [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Datei verwendet werden. Weitere Informationen zu Bereichsregeln für Ressourcen finden Sie unter [XAML-Ressourcen](../advanced/xaml-resources.md).  
   
  Darüber hinaus finden Sie weitere Informationen zu Stilen und Ressourcen in [Gemeinsam genutzte Ressourcen und Designs](#styling_themes) weiter unten in dieser Übersicht.  
   
 ### <a name="setting-styles-programmatically"></a>Programmgesteuertes Festlegen von Stilen  
  Um ein Element programmgesteuert einen benannten Stil zuzuweisen, rufen Sie den Stil aus der ressourcenauflistung, und weisen diese des Elements <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Beachten Sie, dass die Elemente in einer Ressourcensammlung des Typs <xref:System.Object>. Aus diesem Grund müssen Sie den abgerufenen Stil zum Umwandeln einer <xref:System.Windows.Style> vor der Zuweisung auf die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft. Beispielsweise, um die definierten festzulegen `TitleText` Stil auf ein <xref:System.Windows.Controls.TextBlock> mit dem Namen `textblock1`, gehen Sie folgendermaßen vor:  
   
- [!code-csharp[StylingIntroSample_snippet#Code](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml.cs#code)]
- [!code-vb[StylingIntroSample_snippet#Code](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StylingIntroSample_snippet/visualbasic/window1.xaml.vb#code)]  
+ [!code-csharp[StylingIntroSample_snippet#Code](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml.cs#code)]
+ [!code-vb[StylingIntroSample_snippet#Code](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StylingIntroSample_snippet/visualbasic/window1.xaml.vb#code)]  
   
  Beachten Sie, dass ein Stil, sobald er angewendet wurde, versiegelt ist und nicht geändert werden kann. Wenn Sie einen Stil dynamisch ändern möchten, das bereits angewendet wurde, müssen Sie einen neuen Stil erstellen, um das vorhandene zu ersetzen. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Style.IsSealed%2A>-Eigenschaft.  
   
@@ -102,7 +102,7 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
   
 <a name="styling_binding_dynamicresource"></a>   
 ### <a name="bindings-dynamic-resources-and-event-handlers"></a>Bindungen, dynamische Ressourcen und Ereignishandler  
- Beachten Sie, dass Sie die `Setter.Value`-Eigenschaft dazu nutzen können, um eine [Bindung als Markuperweiterung](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) oder eine [DynamicResource-Markuperweiterung](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md) anzugeben. Weitere Informationen finden Sie die Beispiele für die <xref:System.Windows.Setter.Value%2A?displayProperty=nameWithType> Eigenschaft.  
+ Beachten Sie, dass Sie die `Setter.Value`-Eigenschaft dazu nutzen können, um eine [Bindung als Markuperweiterung](../advanced/binding-markup-extension.md) oder eine [DynamicResource-Markuperweiterung](../advanced/dynamicresource-markup-extension.md) anzugeben. Weitere Informationen finden Sie die Beispiele für die <xref:System.Windows.Setter.Value%2A?displayProperty=nameWithType> Eigenschaft.  
   
  In dieser Übersicht wurde bisher nur die Verwendung von Settern zum Festlegen eines Eigenschaftswerts erläutert. Sie können auch Ereignishandler in einem Stil angeben. Weitere Informationen finden Sie unter <xref:System.Windows.EventSetter>.  
   
@@ -110,11 +110,11 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
 ## <a name="data-templates"></a>Datenvorlagen  
  In dieser beispielanwendung besteht eine <xref:System.Windows.Controls.ListBox> -Steuerelement, das eine Liste der Fotos gebunden ist:  
   
- [!code-xaml[StylingIntroSnippet#UIListBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#uilistbox)]  
+ [!code-xaml[StylingIntroSnippet#UIListBox](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#uilistbox)]  
   
  Dies <xref:System.Windows.Controls.ListBox> derzeit sieht wie folgt aus:  
   
- ![ListBox vor der Anwendung der Vorlage](../../../../docs/framework/wpf/controls/media/stylingintro-listboxbefore.png "StylingIntro_ListBoxBefore")  
+ ![ListBox vor der Anwendung der Vorlage](./media/stylingintro-listboxbefore.png "StylingIntro_ListBoxBefore")  
   
  Die meisten Steuerelemente verfügen über Inhalte, und dieser Inhalt stammt häufig aus Daten, an die Sie binden. In diesem Beispiel sind die Daten die Liste der Fotos. In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], Sie verwenden eine <xref:System.Windows.DataTemplate> definieren die visuelle Darstellung der Daten. Im Grunde genommen, was fügen Sie eine <xref:System.Windows.DataTemplate> bestimmt, wie die Daten in der gerenderten Anwendung aussieht.  
   
@@ -122,21 +122,21 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
   
  Für die Fotos als Bilder angezeigt werden, Sie erstellen eine <xref:System.Windows.DataTemplate> als Ressource:  
   
- [!code-xaml[StylingIntroSnippet#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources)]  
-[!code-xaml[StylingIntroSnippet#DataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#datatemplate)]  
-[!code-xaml[StylingIntroSnippet#Resources2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources2)]  
+ [!code-xaml[StylingIntroSnippet#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources)]  
+[!code-xaml[StylingIntroSnippet#DataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#datatemplate)]  
+[!code-xaml[StylingIntroSnippet#Resources2](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSnippet/CS/window1.xaml#resources2)]  
   
  Beachten Sie, dass die <xref:System.Windows.DataTemplate.DataType%2A> Eigenschaft ähnelt der <xref:System.Windows.Style.TargetType%2A> Eigenschaft der <xref:System.Windows.Style>. Wenn Ihre <xref:System.Windows.DataTemplate> ist im Resources-Abschnitt, wenn Sie angeben der <xref:System.Windows.DataTemplate.DataType%2A> Eigenschaft auf einen Typ und weisen Sie ihn kein `x:Key`, <xref:System.Windows.DataTemplate> angewendet wird, wenn dieser Typ vorkommt. Haben immer die Option zum Zuweisen der <xref:System.Windows.DataTemplate> mit einer `x:Key` und legen Sie es als ein `StaticResource` für Eigenschaften, die annehmen <xref:System.Windows.DataTemplate> Typen, z. B. die <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> Eigenschaft oder der <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> Eigenschaft.  
   
  Im Wesentlichen die <xref:System.Windows.DataTemplate> im obigen Beispiel definiert, die beim Auftreten einer `Photo` Objekt, es sollte angezeigt werden, als ein <xref:System.Windows.Controls.Image> innerhalb einer <xref:System.Windows.Controls.Border>. Mit diesem <xref:System.Windows.DataTemplate>, nun die Anwendung sieht folgendermaßen aus:  
   
- ![Foto](../../../../docs/framework/wpf/controls/media/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")  
+ ![Foto](./media/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")  
   
- Das Datenvorlagenmodell stellt weitere Funktionen bereit. Angenommen, Sie Auflistungsdaten anzeigen, die andere Auflistungen mit enthalten eine <xref:System.Windows.Controls.HeaderedItemsControl> Geben Sie z. B. eine <xref:System.Windows.Controls.Menu> oder ein <xref:System.Windows.Controls.TreeView>, besteht die <xref:System.Windows.HierarchicalDataTemplate>. Eine andere Funktion für Datenvorlagen ist die <xref:System.Windows.Controls.DataTemplateSelector>, können Sie wählen eine <xref:System.Windows.DataTemplate> auf Grundlage benutzerdefinierten Logik zu verwenden. Weitere Informationen finden Sie unter im Artikel [Übersicht über Datenvorlagen](../../../../docs/framework/wpf/data/data-templating-overview.md), der eine ausführlichere Erläuterung der verschiedenen Vorlagenfunktionen bereitstellt.  
+ Das Datenvorlagenmodell stellt weitere Funktionen bereit. Angenommen, Sie Auflistungsdaten anzeigen, die andere Auflistungen mit enthalten eine <xref:System.Windows.Controls.HeaderedItemsControl> Geben Sie z. B. eine <xref:System.Windows.Controls.Menu> oder ein <xref:System.Windows.Controls.TreeView>, besteht die <xref:System.Windows.HierarchicalDataTemplate>. Eine andere Funktion für Datenvorlagen ist die <xref:System.Windows.Controls.DataTemplateSelector>, können Sie wählen eine <xref:System.Windows.DataTemplate> auf Grundlage benutzerdefinierten Logik zu verwenden. Weitere Informationen finden Sie unter im Artikel [Übersicht über Datenvorlagen](../data/data-templating-overview.md), der eine ausführlichere Erläuterung der verschiedenen Vorlagenfunktionen bereitstellt.  
   
 <a name="styling_controltemplates"></a>   
 ## <a name="control-templates"></a>Steuerelementvorlagen  
- In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Controls.ControlTemplate> eines Steuerelements definiert die Darstellung des Steuerelements. Sie können die Struktur und Darstellung eines Steuerelements ändern, durch Definieren einer neuen <xref:System.Windows.Controls.ControlTemplate> für das Steuerelement. In vielen Fällen erhalten Sie hierdurch die ausreichende Flexibilität, um keine eigenen benutzerdefinierten Steuerelemente schreiben zu müssen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Controls.ControlTemplate> eines Steuerelements definiert die Darstellung des Steuerelements. Sie können die Struktur und Darstellung eines Steuerelements ändern, durch Definieren einer neuen <xref:System.Windows.Controls.ControlTemplate> für das Steuerelement. In vielen Fällen erhalten Sie hierdurch die ausreichende Flexibilität, um keine eigenen benutzerdefinierten Steuerelemente schreiben zu müssen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 <a name="styling_triggers"></a>   
 ## <a name="triggers"></a>Trigger  
@@ -147,25 +147,25 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
   
  Um die Verwendung von Eigenschaftstrigger zu veranschaulichen, machen Sie jede <xref:System.Windows.Controls.ListBoxItem> teilweise transparent, es sei denn, diese Option ausgewählt ist. Dem folgenden Format wird die <xref:System.Windows.UIElement.Opacity%2A> Wert eine <xref:System.Windows.Controls.ListBoxItem> zu `0.5`. Wenn die <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A> -Eigenschaft ist `true`jedoch die <xref:System.Windows.UIElement.Opacity%2A> nastaven NA hodnotu `1.0`:  
   
- [!code-xaml[StylingIntroSample_snippet#Triggers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#triggers)]  
-[!code-xaml[StylingIntroSample_snippet#EndTriggers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#endtriggers)]  
+ [!code-xaml[StylingIntroSample_snippet#Triggers](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#triggers)]  
+[!code-xaml[StylingIntroSample_snippet#EndTriggers](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#endtriggers)]  
   
  Dieses Beispiel verwendet eine <xref:System.Windows.Trigger> einen Eigenschaftswert festlegen, aber beachten Sie, dass die <xref:System.Windows.Trigger> -Klasse verfügt auch über die <xref:System.Windows.TriggerBase.EnterActions%2A> und <xref:System.Windows.TriggerBase.ExitActions%2A> Eigenschaften, die einen Trigger zur Durchführung von Aktionen zu ermöglichen.  
   
  Beachten Sie, dass die <xref:System.Windows.FrameworkElement.MaxHeight%2A> Eigenschaft der <xref:System.Windows.Controls.ListBoxItem> nastaven NA hodnotu `75`. In der folgenden Abbildung ist das dritte Element das ausgewählte Element:  
   
- ![Formatierte ListView](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
+ ![Formatierte ListView](./media/stylingintro-triggers.png "StylingIntro_triggers")  
   
 ### <a name="eventtriggers-and-storyboards"></a>EventTrigger und Storyboards  
  Ein weiterer Trigger ist die <xref:System.Windows.EventTrigger>, die eine Reihe von Aktionen, die abhängig vom Auftreten eines Ereignisses startet. Beispielsweise die folgenden <xref:System.Windows.EventTrigger> Objekte angeben, wenn der Mauszeiger wechselt die <xref:System.Windows.Controls.ListBoxItem>, <xref:System.Windows.FrameworkElement.MaxHeight%2A> Eigenschaft animiert, auf den Wert `90` über eine `0.2` Sekunden-Zeitraums. Wenn sich die Maus vom Element weg bewegt, gibt die Eigenschaft auf den ursprünglichen Wert über einen Zeitraum von `1` Sekunden an. Beachten Sie, wie es nicht notwendig, geben Sie einen <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> Wert für die <xref:System.Windows.ContentElement.MouseLeave> Animation. Dies liegt daran, dass die Animation den ursprünglichen Wert nachverfolgen kann.  
   
- [!code-xaml[StylingIntroSample_snippet#EventTriggers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#eventtriggers)]  
+ [!code-xaml[StylingIntroSample_snippet#EventTriggers](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#eventtriggers)]  
   
- Weitere Informationen finden Sie unter der [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md).  
+ Weitere Informationen finden Sie unter der [Übersicht über Storyboards](../graphics-multimedia/storyboards-overview.md).  
   
  In der folgenden Abbildung zeigt die Maus auf das dritte Element:  
   
- ![Screenshot des Stilbeispiels](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![Screenshot des Stilbeispiels](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTrigger, DataTrigger und MultiDataTrigger  
  Zusätzlich zu <xref:System.Windows.Trigger> und <xref:System.Windows.EventTrigger>, es gibt andere Arten von Triggern. <xref:System.Windows.MultiTrigger> können Sie Eigenschaftswerte auf Grundlage mehrerer Kriterien festlegen. Verwenden Sie <xref:System.Windows.DataTrigger> und <xref:System.Windows.MultiDataTrigger> Wenn die Eigenschaft der Bedingung datengebunden ist.  
@@ -184,19 +184,19 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
   
  Auf einen Satz von Ressourcen wie Stile und Vorlagen anwendungsübergreifend freigeben, können Sie erstellen eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei, und definieren Sie eine <xref:System.Windows.ResourceDictionary>. Sehen Sie sich z.B. die folgende Abbildung an, die einen Teil des [Beispiels zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) zeigt:
 
-![Beispiele für Steuerelementvorlagen](../../../../docs/framework/wpf/controls/media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
+![Beispiele für Steuerelementvorlagen](./media/stylingintro-controltemplateexamples.png "StylingIntro_ControlTemplateExamples")  
   
  Wenn Sie die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Dateien in diesem Beispiel näher betrachten, werden Sie feststellen, dass alle Dateien über Folgendes verfügen:  
   
- [!code-xaml[ControlTemplateExamples#MergedDictionaries](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/button.xaml#mergeddictionaries)]  
+ [!code-xaml[ControlTemplateExamples#MergedDictionaries](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/button.xaml#mergeddictionaries)]  
   
  Es ist die gemeinsame Nutzung von `shared.xaml`, definiert ein <xref:System.Windows.ResourceDictionary> , enthält einen Satz von Stil-und Pinselressourcen, die die Steuerelemente in der Stichprobe, die eine einheitliche Darstellung verleihen kann.  
   
- Weitere Informationen finden Sie unter [Zusammengeführte Ressourcenverzeichnisse](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
+ Weitere Informationen finden Sie unter [Zusammengeführte Ressourcenverzeichnisse](../advanced/merged-resource-dictionaries.md).  
   
- Wenn Sie ein Design für Ihr ein benutzerdefiniertes Steuerelement erstellen, finden Sie im Abschnitt zur externen Steuerelementbibliothek im Artikel [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ Wenn Sie ein Design für Ihr ein benutzerdefiniertes Steuerelement erstellen, finden Sie im Abschnitt zur externen Steuerelementbibliothek im Artikel [Übersicht über das Erstellen von Steuerelementen](control-authoring-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Paket-URI in WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Vorgehensweise: Suchen von Elementen einer ControlTemplate generiert wurden](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)
-- [Suchen von Elementen, die mit einer DataTemplate generiert wurden](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)
+- [Paket-URI in WPF](../app-development/pack-uris-in-wpf.md)
+- [Vorgehensweise: Suchen von Elementen einer ControlTemplate generiert wurden](how-to-find-controltemplate-generated-elements.md)
+- [Suchen von Elementen, die mit einer DataTemplate generiert wurden](../data/how-to-find-datatemplate-generated-elements.md)

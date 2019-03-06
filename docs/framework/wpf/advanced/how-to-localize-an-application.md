@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 1761fbf1cb8ec337ea5733e3ab693031b1934179
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725542"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374114"
 ---
 # <a name="how-to-localize-an-application"></a>Vorgehensweise: Lokalisieren einer Anwendung
 In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem LocBaml-Tool erstellt wird.  
@@ -30,7 +30,7 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
 ## <a name="requirements"></a>Anforderungen  
  Im Verlauf dieser Diskussion verwenden Sie [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)], ein Compiler, der über die Befehlszeile ausgeführt wird.  
   
- Darüber hinaus werden Sie aufgefordert, eine Projektdatei zu verwenden. Anweisungen zur Verwendung von [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] und Projektdateien, finden Sie unter [erstellen und Bereitstellen von](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md).  
+ Darüber hinaus werden Sie aufgefordert, eine Projektdatei zu verwenden. Anweisungen zur Verwendung von [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] und Projektdateien, finden Sie unter [erstellen und Bereitstellen von](../app-development/building-and-deploying-wpf-applications.md).  
   
  Alle Beispiele in dieser Diskussion verwenden als Kultur US-amerikanisches Englisch (en-US, Englisch-US). Dies ermöglicht es Ihnen, die Beispielschritte durchzuarbeiten, ohne eine andere Sprache installieren zu müssen.  
   
@@ -137,13 +137,13 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
    2.  **Ressourcenschlüssel**. Der lokalisierte Ressourcenbezeichner.  
   
-   3.  **Kategorie**. Der Werttyp. Finden Sie unter [Lokalisierungsattribute und-Kommentare](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   3.  **Kategorie**. Der Werttyp. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
   
-   4.  **Lesbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool gelesen werden kann. Finden Sie unter [Lokalisierungsattribute und-Kommentare](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   4.  **Lesbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool gelesen werden kann. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
   
-   5.  **Änderbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool geändert werden kann. Finden Sie unter [Lokalisierungsattribute und-Kommentare](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   5.  **Änderbarkeit**. Gibt an, ob der Wert von einem Lokalisierungstool geändert werden kann. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
   
-   6.  **Kommentare**. Zusätzliche Beschreibung des Werts, um zu ermitteln, wie ein Wert lokalisiert wird. Finden Sie unter [Lokalisierungsattribute und-Kommentare](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
+   6.  **Kommentare**. Zusätzliche Beschreibung des Werts, um zu ermitteln, wie ein Wert lokalisiert wird. Finden Sie unter [Lokalisierungsattribute und-Kommentare](localization-attributes-and-comments.md).  
   
    7.  **Wert**. Der Textwert, der in die gewünschte Sprache übersetzt werden soll.  
   
@@ -192,9 +192,9 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
     -   Fügen Sie in Ihrer Anwendung den folgenden Code in "App.xaml.cs" hinzu:  
   
-   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
-   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
-   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
+   [!code-xaml[LocBamlChangeCultureSnippets#LocBamlChangeCultureMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml#locbamlchangeculturemarkup)]
+   [!code-csharp[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/CSharp/App.xaml.cs#locbamlchangeculturecodebehind)]
+   [!code-vb[LocBamlChangeCultureSnippets#LocBamlChangeCultureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LocBamlChangeCultureSnippets/VisualBasic/Application.xaml.vb#locbamlchangeculturecodebehind)]  
   
 <a name="Some_Tips_for_Using_LocBaml"></a>   
 ## <a name="some-tips-for-using-locbaml"></a>Einige Tipps zum Verwenden von LocBaml  
@@ -210,5 +210,5 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
  Sie wissen nun in Grundzügen, wie das LocBaml-Tool verwendet werden kann.  Sie sollten in der Lage sein, eine Datei zu erstellen, die UIDs enthält. Mit dem LocBaml-Tool sollten Sie in der Lage sein, eine Datei zu analysieren, um den lokalisierbaren Inhalt zu extrahieren, und nach der Übersetzung des Inhalts sollten Sie eine .resources.dll-Datei generieren können, die den übersetzten Inhalt zusammenführt. Dieses Thema beinhaltet nicht jedes mögliche Detail, aber Sie verfügen nun über das notwendige Wissen, um LocBaml zur Lokalisierung Ihrer Anwendungen zu verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Globalisierung für WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [Übersicht über die Verwendung eines automatischen Layouts](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+- [Globalisierung für WPF](globalization-for-wpf.md)
+- [Übersicht über die Verwendung eines automatischen Layouts](use-automatic-layout-overview.md)

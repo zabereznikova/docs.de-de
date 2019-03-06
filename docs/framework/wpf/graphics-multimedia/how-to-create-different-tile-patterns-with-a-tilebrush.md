@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tile patterns [WPF], creating
 - creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
-ms.openlocfilehash: d6b6d4a20d43478131d3adb7c7d091214b3c5871
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2efd070ac9ad502f2539d100fa450f95bcdddced
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721974"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367777"
 ---
 # <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>Vorgehensweise: Erstellen von unterschiedlichen Kachelmustern mit einem TileBrush
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.TileBrush.TileMode%2A> Eigenschaft eine <xref:System.Windows.Media.TileBrush> um ein Muster zu erstellen.  
@@ -26,13 +26,13 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.TileBrush.Tile
   
  In der folgenden Abbildung ist die von diesem Beispiel erstellte Ausgabe dargestellt.  
   
- ![TileBrush-Beispielausgabe tiling](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-drawingbrushtilemodeexample.png "Graphicsmm_DrawingBrushTileModeExample")  
+ ![TileBrush-Beispielausgabe tiling](./media/graphicsmm-drawingbrushtilemodeexample.png "Graphicsmm_DrawingBrushTileModeExample")  
 Kachelmuster mit der TileMode-Eigenschaft erstellt  
   
- [!code-csharp[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/TileModeExample.cs#graphicsmmdrawingbrushtilemodeexample)]
- [!code-vb[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/tilemodeexample.vb#graphicsmmdrawingbrushtilemodeexample)]
- [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
+ [!code-csharp[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/TileModeExample.cs#graphicsmmdrawingbrushtilemodeexample)]
+ [!code-vb[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/tilemodeexample.vb#graphicsmmdrawingbrushtilemodeexample)]
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Festlegen der Kachelgröße für ein TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)
-- [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Festlegen der Kachelgröße für ein TileBrush](how-to-set-the-tile-size-for-a-tilebrush.md)
+- [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)

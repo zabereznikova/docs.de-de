@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 9df6adbf9208ee58044b0ba6ef606d693c9dca7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 326cf683c05eae342646efca962cfe9b87ccab79
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705822"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364683"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Erweitern von Glasframe in eine WPF-Anwendung
 In diesem Thema veranschaulicht das Erweitern der [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] -Glasframe in den Clientbereich einer Windows Presentation Foundation (WPF)-Anwendung.  
@@ -28,7 +28,7 @@ In diesem Thema veranschaulicht das Erweitern der [!INCLUDE[TLA#tla_winvista](..
   
  **Internet Explorer mit erweitertem Glasframe hinter der Adressleiste.**  
   
- ![IE7 mit sich hinter die Adressleiste ausdehnendem Glasframe](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")  
+ ![IE7 mit sich hinter die Adressleiste ausdehnendem Glasframe](./media/ie7glasstopbar.PNG "IE7glasstopbar")  
   
  Um ein Glasframe auf einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung zu erweitern, benötige Sie Zugriff auf nicht verwaltete [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Das folgende Codebeispiel führt einen Plattformaufruf (Pinvoke) für die beiden [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] durch, der erforderlich ist, um den Frame in den Clientbereich zu erweitern. Jede dieser [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] werden in einer Klasse namens **NonClientRegionAPI** deklariert.  
   
@@ -147,7 +147,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
   
  **In eine** [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**-Anwendung erweiterter Glasframe.**  
   
- ![In eine WPF-Anwendung erweiterter Glasframe.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
+ ![In eine WPF-Anwendung erweiterter Glasframe.](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>Siehe auch
 - [Übersicht über Desktop Window Manager](/windows/desktop/dwm/dwm-overview)

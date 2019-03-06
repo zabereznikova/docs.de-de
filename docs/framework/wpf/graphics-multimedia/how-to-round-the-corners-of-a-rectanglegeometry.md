@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], rounding corners of RectangleGeometry objects [WPF]
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
-ms.openlocfilehash: 1a3ea08e4f54af117474cee23e6ac1041a1ed72b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f00d7a7cd6117318efb17645bbb9df279c97adff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648374"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378534"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Vorgehensweise: Abrunden der Ecken einer RectangleGeometry
 Zum Abrunden der Ecken des eine <xref:System.Windows.Media.RectangleGeometry>legen die <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> und <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> Eigenschaften, die einen Wert größer als 0 (null). Je größer die Werte, desto runder die Ecken des Rechtecks.  
@@ -20,12 +20,12 @@ Zum Abrunden der Ecken des eine <xref:System.Windows.Media.RectangleGeometry>leg
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt mehrere <xref:System.Windows.Media.RectangleGeometry> Objekte mit unterschiedlichen <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> und <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> Einstellungen. Die <xref:System.Windows.Media.RectangleGeometry> Objekte angezeigt werden, mithilfe von <xref:System.Windows.Shapes.Path> Elemente.  
   
- [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMRoundedRectangleGeometryExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/RectangleGeometryRoundedCornerExample.xaml#graphicsmmroundedrectanglegeometryexamplewholepage)]  
+ [!code-xaml[GeometryOverviewSamples_snip#GraphicsMMRoundedRectangleGeometryExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometryOverviewSamples_snip/CS/RectangleGeometryRoundedCornerExample.xaml#graphicsmmroundedrectanglegeometryexamplewholepage)]  
   
- ![Rechtecke mit verschiedenen RadiusX&#47;RadiusY-Einstellungen](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-rounded.png "Graphicsmm_rounded")  
+ ![Rechtecke mit verschiedenen RadiusX&#47;RadiusY-Einstellungen](./media/graphicsmm-rounded.png "Graphicsmm_rounded")  
 Rechtecke mit abgerundeten Ecken  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Geometrien](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
-- [Erstellen einer zusammengesetzten Form](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)
-- [Erstellen einer Form mithilfe von PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)
+- [Übersicht über Geometrien](geometry-overview.md)
+- [Erstellen einer zusammengesetzten Form](how-to-create-a-composite-shape.md)
+- [Erstellen einer Form mithilfe von PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 20bf15040d22d334800d6a163937c22928499f3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ab553f6ac22813533710e8b2ed7a3be31f6914d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527639"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358521"
 ---
 # <a name="custom-animations-overview"></a>Übersicht über benutzerdefinierte Animationen
 In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animationssystem durch Erstellen benutzerdefinierter Keyframes oder Animationsklassen erweitert oder durch Pro-Frame-Rückrufe umgangen wird.  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
- Um dieses Thema zu verstehen, sollten Sie mit den verschiedenen Arten von Animationen vertraut sein, die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bereitgestellt werden. Weitere Informationen finden Sie unter Übersicht über die From/To/By-Animationen, [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) und [Übersicht über Pfadanimationen](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).  
+ Um dieses Thema zu verstehen, sollten Sie mit den verschiedenen Arten von Animationen vertraut sein, die von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bereitgestellt werden. Weitere Informationen finden Sie unter Übersicht über die From/To/By-Animationen, [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md) und [Übersicht über Pfadanimationen](path-animations-overview.md).  
   
- Da die Animationsklassen erben die <xref:System.Windows.Freezable> -Klasse, Sie sollten mit vertraut sein <xref:System.Windows.Freezable> Objekte "und" Gewusst wie: erben von <xref:System.Windows.Freezable>. Weitere Informationen finden Sie unter der [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Da die Animationsklassen erben die <xref:System.Windows.Freezable> -Klasse, Sie sollten mit vertraut sein <xref:System.Windows.Freezable> Objekte "und" Gewusst wie: erben von <xref:System.Windows.Freezable>. Weitere Informationen finden Sie unter der [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md).  
   
 <a name="extendingtheanimationsystem"></a>   
 ## <a name="extending-the-animation-system"></a>Erweitern des Animationssystems  
@@ -45,7 +45,7 @@ In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient]
   
 <a name="createacustomkeyframe"></a>   
 ## <a name="create-a-custom-key-frame"></a>Erstellen eines benutzerdefinierten Keyframes  
- Die einfachste Möglichkeit zum Erweitern des Animationssystems ist das Erstellen einer benutzerdefinierten Keyframe-Klasse. Verwenden Sie diesen Ansatz, wenn Sie eine andere Interpolationsmethode für eine Keyframe-Animation möchten.  Wie in [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) beschrieben ist, verwendet eine Keyframe-Animation Keyframe-Objekte, um die Ausgabewerte zu generieren. Jedes Keyframe-Objekt hat drei Funktionen:  
+ Die einfachste Möglichkeit zum Erweitern des Animationssystems ist das Erstellen einer benutzerdefinierten Keyframe-Klasse. Verwenden Sie diesen Ansatz, wenn Sie eine andere Interpolationsmethode für eine Keyframe-Animation möchten.  Wie in [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md) beschrieben ist, verwendet eine Keyframe-Animation Keyframe-Objekte, um die Ausgabewerte zu generieren. Jedes Keyframe-Objekt hat drei Funktionen:  
   
 -   Gibt an, ein Ziel mithilfe der <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> Eigenschaft.  
   
@@ -57,7 +57,7 @@ In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient]
   
  Leiten Sie von der abstrakten *\<Typ>* KeyFrame-Klasse ab, und implementieren Sie die InterpolateValueCore-Methode. Die InterpolateValueCore-Methode gibt den aktuellen Wert des Keyframes zurück. Es werden zwei Parameter übernommen: der Wert des vorherigen Keyframes und ein Fortschrittswert, der zwischen 0 und 1 liegt. Ein Fortschrittswert von 0 gibt an, der Keyframe gerade gestartet wurde, und der Wert 1 gibt an, dass der Keyframe gerade abgeschlossen wurde, und sollte den Wert von zurückgeben seiner <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> Eigenschaft.  
   
- Da die  *\<Typ >* KeyFrame-Klassen erben von der <xref:System.Windows.Freezable> -Klasse, müssen Sie auch überschreiben <xref:System.Windows.Freezable.CreateInstanceCore%2A> Core, um eine neue Instanz der Klasse zurückzugeben. Wenn die Klasse keine Abhängigkeitseigenschaften zum Speichern von Daten nutzt oder nach der Erstellung eine zusätzliche Initialisierung erfordert, müssen Sie möglicherweise zusätzliche Methoden überschreiben. Weitere Informationen finden Sie unter [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Da die  *\<Typ >* KeyFrame-Klassen erben von der <xref:System.Windows.Freezable> -Klasse, müssen Sie auch überschreiben <xref:System.Windows.Freezable.CreateInstanceCore%2A> Core, um eine neue Instanz der Klasse zurückzugeben. Wenn die Klasse keine Abhängigkeitseigenschaften zum Speichern von Daten nutzt oder nach der Erstellung eine zusätzliche Initialisierung erfordert, müssen Sie möglicherweise zusätzliche Methoden überschreiben. Weitere Informationen finden Sie unter [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md).  
   
  Nach der Erstellung von benutzerdefinierten *\<Typ>* KeyFrame-Animationen können Sie sie mit den *\<Typ>* AnimationUsingKeyFrames für diesen Typ verwenden.  
   
@@ -72,7 +72,7 @@ In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient]
   
  Leiten Sie von einer *\<Typ>* Animation-Klasse ab und implementieren Sie die GetCurrentValueCore-Methode. Die GetCurrentValueCore-Methode gibt den aktuellen Wert der Animation zurück. Es werden drei Parameter übernommen: Ein vorgeschlagener Anfangswert, ein vorgeschlagener Endwert und eine <xref:System.Windows.Media.Animation.AnimationClock>, die Sie verwenden, um den Fortschritt der Animation zu bestimmen.  
   
- Da die  *\<Typ >* AnimationBase-Klassen erben von der <xref:System.Windows.Freezable> -Klasse, müssen Sie auch überschreiben <xref:System.Windows.Freezable.CreateInstanceCore%2A> Core, um eine neue Instanz der Klasse zurückzugeben. Wenn die Klasse keine Abhängigkeitseigenschaften zum Speichern von Daten nutzt oder nach der Erstellung eine zusätzliche Initialisierung erfordert, müssen Sie möglicherweise zusätzliche Methoden überschreiben. Weitere Informationen finden Sie unter [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Da die  *\<Typ >* AnimationBase-Klassen erben von der <xref:System.Windows.Freezable> -Klasse, müssen Sie auch überschreiben <xref:System.Windows.Freezable.CreateInstanceCore%2A> Core, um eine neue Instanz der Klasse zurückzugeben. Wenn die Klasse keine Abhängigkeitseigenschaften zum Speichern von Daten nutzt oder nach der Erstellung eine zusätzliche Initialisierung erfordert, müssen Sie möglicherweise zusätzliche Methoden überschreiben. Weitere Informationen finden Sie unter [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md).  
   
  Weitere Informationen finden Sie in der Dokumentation zur GetCurrentValueCore-Methode für die *\<Typ>* AnimationBase-Klasse für den Typ, die Sie animieren möchten. Ein Beispiel hierfür finden Sie unter [Beispiel für benutzerdefinierte Animation](https://go.microsoft.com/fwlink/?LinkID=159981)  
   
@@ -95,7 +95,7 @@ In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient]
   
 -   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Überschreiben Sie diese Eigenschaft an, dass die <xref:System.Type> der Ausgabe der Animation erzeugten.  
   
- Wenn die Klasse keine Abhängigkeitseigenschaften zum Speichern von Daten nutzt oder nach der Erstellung eine zusätzliche Initialisierung erfordert, müssen Sie möglicherweise zusätzliche Methoden überschreiben. Weitere Informationen finden Sie unter [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).  
+ Wenn die Klasse keine Abhängigkeitseigenschaften zum Speichern von Daten nutzt oder nach der Erstellung eine zusätzliche Initialisierung erfordert, müssen Sie möglicherweise zusätzliche Methoden überschreiben. Weitere Informationen finden Sie unter [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md).  
   
  Das empfohlene Paradigma (verwendet von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Animationen) besteht in der Verwendung von zwei Vererbungsebenen:  
   
@@ -126,10 +126,10 @@ In diesem Thema wird beschrieben, wie und wann das [!INCLUDE[TLA2#tla_winclient]
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
-- [Übersicht über die Verfahren zur Animation von Eigenschaften](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
-- [Übersicht über Freezable-Objekte](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [Übersicht über Keyframe-Animationen](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [Übersicht über Pfadanimationen](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)
-- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Übersicht über das Animations- und Zeitsteuerungssystem](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)
+- [Übersicht über die Verfahren zur Animation von Eigenschaften](property-animation-techniques-overview.md)
+- [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md)
+- [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
+- [Übersicht über Pfadanimationen](path-animations-overview.md)
+- [Übersicht über Animationen](animation-overview.md)
+- [Übersicht über das Animations- und Zeitsteuerungssystem](animation-and-timing-system-overview.md)
 - [Benutzerdefiniertes Animationsbeispiel](https://go.microsoft.com/fwlink/?LinkID=159981)

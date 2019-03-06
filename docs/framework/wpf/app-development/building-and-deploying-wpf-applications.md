@@ -8,33 +8,33 @@ helpviewer_keywords:
 - deploying applications [WPF]
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
-ms.openlocfilehash: 874a184939f95f155ddaee053c33fe66c4db15d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547140"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368050"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Erstellen und Bereitstellen von WPF-Anwendungen
-Die Build- und Bereitstellungsprozess-Modell bietet die Möglichkeit zum Erstellen und Bereitstellen von Anwendungen, lokal und Remote, u. a. folgende:  
+Das Modell erstellen und bereitstellen, bietet die Möglichkeit zum Erstellen und Bereitstellen von Anwendungen, lokal und Remote, einschließlich der folgenden:  
   
--   MSBuild: .NET Buildsystem im Microsoft.Build.Tasks.Windows-Namespace befindet.  
+-   MSBuild: .NET erstellen im Microsoft.Build.Tasks.Windows-Namespace befindet.  
   
 -   Ressourcen: Arbeiten mit UI-Ressourcen.  
   
 -   ClickOnce-Bereitstellung: der .NET Veröffentlichungs- und Bereitstellungssystem.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erstellen einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [Bereitstellen von WPF-Anwendungen](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)  
+ [Bereitstellen von WPF-Anwendungen](deploying-a-wpf-application-wpf.md)  
+ [Themen zu Vorgehensweisen](build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  MSBuild  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht über die Anwendungsverwaltung](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Fenster in WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [Übersicht über die Navigation](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Übersicht über WPF-XAML-Browseranwendungen](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
-  [Hosting](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)
+ [Übersicht über die Anwendungsverwaltung](application-management-overview.md)  
+  [Fenster in WPF](windows-in-wpf-applications.md)  
+  [Übersicht über die Navigation](navigation-overview.md)  
+  [Übersicht über WPF-XAML-Browseranwendungen](wpf-xaml-browser-applications-overview.md)  
+  [Hosting](hosting-wpf-applications.md)

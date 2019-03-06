@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: e88383126c1fb618b2a2a96bdf5998560864af50
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a0c6260eee10487034655b5e4abbfa1f1a7bce71
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746441"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355180"
 ---
 # <a name="annotations-overview"></a>Übersicht über Anmerkungen
 Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine verbreitete Aktivität, dass wir sie als selbstverständlich erachten. Diese Notizen oder Kommentare sind „Anmerkungen“, die wir einem Dokument hinzufügen, um Informationen zu kennzeichnen oder um interessante Elemente für einen späteren Zeitpunkt zu markieren. Obwohl das Schreiben von Notizen auf gedruckte Dokumente einfach und üblich ist, ist die Möglichkeit, persönliche Kommentare auf elektronischen Dokumenten hinzuzufügen, in der Regel nur sehr eingeschränkt, falls diese Möglichkeit überhaupt verfügbar ist.  
@@ -28,12 +28,12 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
   
  Die folgende Abbildung zeigt einige Beispiele von Hervorhebungen, Kurznotizen und Freihandnotizanmerkungen.  
   
- ![Textmarker-, Text- und Freihandnotizanmerkungen](../../../../docs/framework/wpf/advanced/media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![Textmarker-, Text- und Freihandnotizanmerkungen](./media/caf-stickynote.jpg "CAF_StickyNote")  
   
  Das folgende Beispiel zeigt die Methode, die Sie zum Aktivieren der Unterstützung von Kommentaren in der Anwendung verwenden können.  
   
- [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
- [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
+ [!code-csharp[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXml/CSharp/Window1.xaml.cs#docviewxmlstartannotations)]
+ [!code-vb[DocViewerAnnotationsXml#DocViewXmlStartAnnotations](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DocViewerAnnotationsXml/visualbasic/window1.xaml.vb#docviewxmlstartannotations)]  
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>Markierungen  
@@ -41,17 +41,17 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
   
  In der folgenden Abbildung ist ein Beispiel einer markierten Anmerkung dargestellt:  
   
- ![Anmerkung hervorheben](../../../../docs/framework/wpf/advanced/media/caf-callouts.png "CAF_Callouts")  
+ ![Anmerkung hervorheben](./media/caf-callouts.png "CAF_Callouts")  
   
  Benutzer erstellen Anmerkungen in der Regel von der ersten Auswahl von Text oder ein Element von Interesse sind, und klicken Sie dann mit der rechten Maustaste, um anzuzeigen einer <xref:System.Windows.Controls.ContextMenu> einer Anmerkungsoption.  Das folgende Beispiel zeigt die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] können Sie Sie deklarieren eine <xref:System.Windows.Controls.ContextMenu> mit weitergeleiteten Befehlen, die Benutzer zugreifen können, zum Erstellen und Verwalten von Anmerkungen.  
   
- [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
+ [!code-xaml[DocViewerAnnotationsXps#CreateDeleteAnnotations](~/samples/snippets/csharp/VS_Snippets_Wpf/DocViewerAnnotationsXps/CSharp/Window1.xaml#createdeleteannotations)]  
   
 <a name="caf1_framework_data_anchoring"></a>   
 ## <a name="data-anchoring"></a>Verankerung von Daten  
  Durch [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] werden Anmerkungen an Daten gebunden, die der Benutzer auswählt, und nicht nur an eine Position auf der dargestellten Anzeige. Deshalb bleibt die Anmerkung bei der Datenauswahl, an die sie gebunden ist, wenn der Benutzer das Anzeigefenster nach oben oder unten verschiebt oder die Größe ändert, wenn sich die Dokumentansicht ändert. Die folgende Abbildung zeigt z.B. eine Anmerkung, die der Benutzer für einen Textausschnitt erstellt hat. Wenn sich die Dokumentansicht ändert (durch Bildlauf, Größenänderung, Skalierung usw.), wird die hervorgehobene Anmerkung mit den ausgewählten Daten verschoben.  
   
- ![Anmerkungsdaten-Verankerung](../../../../docs/framework/wpf/advanced/media/caf-dataanchoring.png "CAF_DataAnchoring")  
+ ![Anmerkungsdaten-Verankerung](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
 <a name="matching_annotations_with_annotated_objects"></a>   
 ## <a name="matching-annotations-with-annotated-objects"></a>Abgleichen von Anmerkung mit Objekten mit Anmerkungen  
@@ -59,8 +59,8 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
   
  Im folgenden Beispiel wird veranschaulicht, wie der Ereignishandler eines solchen Listenfelds, das als Kommentarbereich dient, implementiert wird.  
   
- [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
- [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
+ [!code-csharp[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
+ [!code-vb[FlowDocumentAnnotatedViewer#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
  Ein weiteres Beispielszenario umfasst Anwendungen, die den Austausch von Anmerkungen und Kurznotizen zwischen Lesern von Dokument per e-Mail ermöglichen. Diese Funktion ermöglicht diesen Programmen, den Leser zu der Seite zu navigieren, die die Anmerkung enthält, die gerade ausgetauscht wird.  
   
@@ -71,8 +71,8 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Annotations.IAnchorInfo>
-- [Annotations-Schema](../../../../docs/framework/wpf/advanced/annotations-schema.md)
-- [Übersicht über ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
-- [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Annotations-Schema](annotations-schema.md)
+- [Übersicht über ContextMenu](../controls/contextmenu-overview.md)
+- [Befehlsübersicht](commanding-overview.md)
+- [Übersicht über Flussdokumente](flow-document-overview.md)
 - [Vorgehensweise: Hinzufügen eines Befehls zu einem MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

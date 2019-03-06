@@ -7,19 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
-ms.openlocfilehash: a488432dadcfb700c62fd7f847cb31c8ed95aba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370331"
 ---
 # <a name="listview-overviews"></a>Übersicht über ListView
-Die Themen in diesem Abschnitt veranschaulichen das Verwenden einer <xref:System.Windows.Controls.ListView> Steuerelement.  
+Die Themen in diesem Abschnitt beschrieben, wie mit einem <xref:System.Windows.Controls.ListView> Steuerelement.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Übersicht über GridView-Spaltenheaderstile und -Spaltenheadervorlagen](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+ [Übersicht über ListView](listview-overview.md)  
+ [Übersicht über GridView](gridview-overview.md)  
+ [Übersicht über GridView-Spaltenheaderstile und -Spaltenheadervorlagen](gridview-column-header-styles-and-templates-overview.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.ListView>  
@@ -27,4 +28,4 @@ Die Themen in diesem Abschnitt veranschaulichen das Verwenden einer <xref:System
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [Themen zu Vorgehensweisen](listview-how-to-topics.md)

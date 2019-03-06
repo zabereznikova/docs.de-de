@@ -7,39 +7,39 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0d04b656492dd934199164920e35bdaaa0663032
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710766"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362902"
 ---
 # <a name="xaml-in-wpf"></a>XAML in WPF
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Dies ist eine Markupsprache für die deklarative Anwendung programmieren. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aXAML-prozessorimplementierung implementiert und bietet Unterstützung für XAML-Sprache. Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Typen werden implementiert, sodass sie den erforderlichen Typ für eine XAML-Darstellung sichern bereitstellen können. Sie können im Allgemeinen erstellen Sie den Großteil Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Benutzeroberfläche der Anwendung im XAML-Markup.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Ausführliche Erläuterung der XAML-Syntax](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [Code-Behind und XAML in WPF](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [XAML- und benutzerdefinierte Klassen für WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [XAML-Namespaces und Namespacezuordnung für WPF-XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [WPF-XAML-Namescopes](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
- [Inlinestile und -vorlagen](../../../../docs/framework/wpf/advanced/inline-styles-and-templates.md)  
- [White-Space-Verarbeitung in XAML](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
- [TypeConverter und XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [XML-Zeichenentitäten und XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [Sprachfunktionen des XAML-Namespace (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF-XAML-Erweiterungen](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [Markupkompatibilität (mc:) – Sprachfeatures](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)  
+ [Übersicht über XAML (WPF)](xaml-overview-wpf.md)  
+ [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md)  
+ [Code-Behind und XAML in WPF](code-behind-and-xaml-in-wpf.md)  
+ [XAML- und benutzerdefinierte Klassen für WPF](xaml-and-custom-classes-for-wpf.md)  
+ [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md)  
+ [XAML-Namespaces und Namespacezuordnung für WPF-XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+ [WPF-XAML-Namescopes](wpf-xaml-namescopes.md)  
+ [Inlinestile und -vorlagen](inline-styles-and-templates.md)  
+ [White-Space-Verarbeitung in XAML](../../xaml-services/whitespace-processing-in-xaml.md)  
+ [TypeConverter und XAML](typeconverters-and-xaml.md)  
+ [XML-Zeichenentitäten und XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
+ [XAML-Namespace (x:)) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md)  
+ [WPF-XAML-Erweiterungen](wpf-xaml-extensions.md)  
+ [Markupkompatibilität (Mc:) Sprachfunktionen](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [WPF-Architektur](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [Basiselemente](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Elementstruktur und Serialisierung](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Eigenschaften](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Ereignisse](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [Eingabe](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Ressourcen](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Threadmodell](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF-Architektur](wpf-architecture.md)  
+  [Basiselemente](base-elements.md)  
+  [Elementstruktur und Serialisierung](element-tree-and-serialization.md)  
+  [Eigenschaften](properties-wpf.md)  
+  [Ereignisse](events-wpf.md)  
+  [Eingabe](input-wpf.md)  
+  [Ressourcen](resources-wpf.md)  
+  [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)  
+  [Threadmodell](threading-model.md)

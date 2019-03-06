@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550952"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359392"
 ---
 # <a name="canvas-how-to-topics"></a>Gewusst-wie-Themen zu Canvas
-Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.Windows.Controls.Canvas> Element untergeordnete Elemente absolut positionieren.  
+Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.Canvas> Element untergeordnete Elemente absolut zu positionieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Umschließen des Inhalts von Canvas mit einem Rahmen](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [Abrufen oder Festlegen von Canvas-Positionierungseigenschaften](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [Erstellen und Verwenden eines Canvas](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [Positionieren von untergeordneten Elementen mithilfe der angefügten Eigenschaften von Canvas](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [Ändern der Canvas-Größe mithilfe eines Ziehpunkts](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+ [Umschließen des Inhalts von Canvas mit einem Rahmen](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [Abrufen oder Festlegen von Canvas-Positionierungseigenschaften](how-to-get-or-set-canvas-positioning-properties.md)  
+ [Erstellen und Verwenden eines Canvas](how-to-create-and-use-a-canvas.md)  
+ [Positionieren von untergeordneten Elementen mithilfe der angefügten Eigenschaften von Canvas](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [Ändern der Canvas-Größe mithilfe eines Ziehpunkts](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +40,8 @@ Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.W
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Übersicht über ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Übersicht über ScrollViewer](scrollviewer-overview.md)

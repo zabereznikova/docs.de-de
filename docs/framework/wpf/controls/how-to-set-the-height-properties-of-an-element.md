@@ -8,12 +8,12 @@ helpviewer_keywords:
 - height properties [WPF]
 - Panel control [WPF], height properties of elements
 ms.assetid: 5ab9e781-dbb8-469a-a3c8-cf38ce312647
-ms.openlocfilehash: be3235d4bf7b5e108420b5ed030157067cacdb8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 608f74afd95ce03b3ecf71819c2181a9728b25af
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637048"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356289"
 ---
 # <a name="how-to-set-the-height-properties-of-an-element"></a>Vorgehensweise: Festlegen der Höheneigenschaften eines Elements
 ## <a name="example"></a>Beispiel  
@@ -23,13 +23,13 @@ ms.locfileid: "54637048"
   
  Die folgenden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] -Beispielen wird eine <xref:System.Windows.Shapes.Rectangle> Element (`rect1`) als untergeordnetes Element des <xref:System.Windows.Controls.Canvas>. Sie können die Höheneigenschaften ändern eine <xref:System.Windows.Shapes.Rectangle> mithilfe einer Reihe von <xref:System.Windows.Controls.ListBox> Elemente, die die Eigenschaftswerte darstellen <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.MaxHeight%2A>, und <xref:System.Windows.FrameworkElement.Height%2A>. Auf diese Weise wird die Rangfolge jeder Eigenschaft visuell angezeigt.  
   
- [!code-xaml[HeightMinHeightMaxHeight#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#1)]  
-[!code-xaml[HeightMinHeightMaxHeight#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#2)]  
+ [!code-xaml[HeightMinHeightMaxHeight#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#1)]  
+[!code-xaml[HeightMinHeightMaxHeight#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml#2)]  
   
  Die Ereignisse behandeln, in den folgenden Code-Behind-Beispielen, die die <xref:System.Windows.Controls.Primitives.Selector.SelectionChanged> Ereignis auslöst. Jeder Handler die Eingabe aus der <xref:System.Windows.Controls.ListBox>, analysiert den Wert als eine <xref:System.Double>, und der Wert der angegebenen Höhe bezogene-Eigenschaft angewendet. Die Height-Werte sind auch in eine Zeichenfolge konvertiert und in verschiedenen geschrieben <xref:System.Windows.Controls.TextBlock> Elemente (die Definition dieser Elemente wird in der ausgewählten XAML nicht angezeigt).  
   
- [!code-csharp[HeightMinHeightMaxHeight#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml.cs#3)]
- [!code-vb[HeightMinHeightMaxHeight#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HeightMinHeightMaxHeight/VisualBasic/Window1.xaml.vb#3)]  
+ [!code-csharp[HeightMinHeightMaxHeight#3](~/samples/snippets/csharp/VS_Snippets_Wpf/HeightMinHeightMaxHeight/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[HeightMinHeightMaxHeight#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HeightMinHeightMaxHeight/VisualBasic/Window1.xaml.vb#3)]  
   
  Das vollständige Beispiel finden Sie unter [Height-Eigenschaften-Beispiel](https://go.microsoft.com/fwlink/?LinkID=159993).  
   
@@ -40,6 +40,6 @@ ms.locfileid: "54637048"
 - <xref:System.Windows.FrameworkElement.MaxHeight%2A>
 - <xref:System.Windows.FrameworkElement.MinHeight%2A>
 - <xref:System.Windows.FrameworkElement.Height%2A>
-- [Festlegen der Breiteneigenschaften eines Elements](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)
-- [Übersicht über Panel-Elemente](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [Festlegen der Breiteneigenschaften eines Elements](how-to-set-the-width-properties-of-an-element.md)
+- [Übersicht über Panel-Elemente](panels-overview.md)
 - [Beispiel der Height-Eigenschaften](https://go.microsoft.com/fwlink/?LinkID=159993)

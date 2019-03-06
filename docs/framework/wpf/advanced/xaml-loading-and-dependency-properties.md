@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dependency properties [WPF], XAML loading and
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-ms.openlocfilehash: 3cce6e09cd2dbb02a07487ade781b03406fcad96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed608a658b5077a20ed56419c4ac731641610e3d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580277"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373074"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Laden von XAML und Abhängigkeitseigenschaften
 Die aktuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessors ist mit Abhängigkeitseigenschaften kompatibel. Der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessor verwendet Methoden des Eigenschaftensystems zum Laden von binären [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und zum Verarbeiten von Attributen, die Abhängigkeitseigenschaften sind. Dadurch werden Eigenschaftenwrapper praktisch umgangen. Wenn Sie benutzerdefinierte Abhängigkeitseigenschaften implementieren, Sie müssen dieses Verhalten berücksichtigen und vermeiden jeder andere Code in Ihrem Eigenschaftenwrapper außer den Methoden des Eigenschaftensystems <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A>.  
@@ -22,7 +22,7 @@ Die aktuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-win
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
- In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften sowohl aus Sicht eines Anwenders als auch der eines Autors verstehen, und dass Sie [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) und [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) gelesen haben. Sie sollten auch [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) und [Ausführliche Erläuterung der XAML-Syntax](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md) gelesen haben.  
+ In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften sowohl aus Sicht eines Anwenders als auch der eines Autors verstehen, und dass Sie [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) und [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md) gelesen haben. Sie sollten auch [Übersicht über XAML (WPF)](xaml-overview-wpf.md) und [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md) gelesen haben.  
   
 <a name="implementation"></a>   
 ## <a name="the-wpf-xaml-loader-implementation-and-performance"></a>Implementierung und Leistung des WPF-XAML-Ladeprogramms  
@@ -38,13 +38,13 @@ Die aktuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-win
   
  Das folgende Beispiel ist eine empfohlene Definition von Abhängigkeitseigenschaften mit Wrappern, wobei der Eigenschaftenbezeichner als `public` `static` `readonly`-Feld gespeichert wird und die `get`- und `set`-Definitionen keinen Code außer den erforderlichen Systemmethoden enthalten, die die Unterstützung der Abhängigkeitseigenschaft definieren.  
   
- [!code-csharp[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agwithwrapper)]
- [!code-vb[WPFAquariumSln#AGWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
+ [!code-csharp[WPFAquariumSln#AGWithWrapper](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#agwithwrapper)]
+ [!code-vb[WPFAquariumSln#AGWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
-- [Abhängigkeitseigenschaften vom Auflistungstyp](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)
-- [Sicherheit von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-security.md)
-- [Sichere Konstruktormuster für DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+- [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
+- [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
+- [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md)
+- [Abhängigkeitseigenschaften vom Auflistungstyp](collection-type-dependency-properties.md)
+- [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md)
+- [Sichere Konstruktormuster für DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)

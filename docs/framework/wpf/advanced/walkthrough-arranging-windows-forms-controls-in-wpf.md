@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 5947168fabfe8ec22203029d9ec89b9719728413
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfb0aba2798179c31674377104bbff633b6f48fc
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697620"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367188"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF
 In dieser exemplarischen Vorgehensweise erfahren Sie, wie Sie mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutfunktionen anordnen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente in einer hybridanwendung.  
@@ -80,7 +80,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
 5.  In der <xref:System.Windows.Controls.Grid> Elementsatz der <xref:System.Windows.Controls.Grid.ShowGridLines%2A> Eigenschaft `true` und fünf Zeilen und drei Spalten definieren.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#2](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]  
   
 ## <a name="using-default-layout-settings"></a>Verwenden der Standardlayouteinstellungen  
  In der Standardeinstellung die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element behandelt das Layout für das gehostete [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement.  
@@ -89,7 +89,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
 2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> Steuerelement angezeigt wird, der <xref:System.Windows.Controls.Canvas>. Das gehostete Steuerelement wird basierend auf den Inhalt, Größe und die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element wird angepasst, sodass das gehostete Steuerelement angepasst.  
   
@@ -100,7 +100,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]  
   
 2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die zwei neuen Schaltflächen-Steuerelemente sind die Größe der längeren Textzeichenfolge und einer größeren Schriftgrad ordnungsgemäß angezeigt werden und die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Elemente werden geändert, um die gehosteten Steuerelemente angepasst.  
   
@@ -111,7 +111,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]  
   
 2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element wird 20 Pixel vom oberen Rand der Rasterzelle und 20 Pixel vom linken Rand platziert.  
   
@@ -122,7 +122,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]  
   
 2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> auf eine Größe von 50 Pixel breit und 70 Pixel hoch, Element festgelegt ist, ist damit kleiner als die standardlayouteinstellungen. Den Inhalt der [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement wird entsprechend neu angeordnet.  
   
@@ -135,14 +135,14 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.  
   
-     [!code-xaml[WpfLayoutHostingWfWithXaml#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
+     [!code-xaml[WpfLayoutHostingWfWithXaml#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#7)]  
   
 2.  Doppelklicken Sie in Projektmappen-Explorer „MainWindow.xaml. vb“ oder „MainWindow.Xaml.cs“, um die Datei im Code-Editor zu öffnen.  
   
 3.  Kopieren Sie den folgenden Code der `MainWindow` Definition der Klasse.  
   
-     [!code-csharp[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#101)]
-     [!code-vb[WpfLayoutHostingWfWithXaml#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#101)]
+     [!code-csharp[WpfLayoutHostingWfWithXaml#101](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#101)]
+     [!code-vb[WpfLayoutHostingWfWithXaml#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#101)]
 
 4.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.
 
@@ -153,7 +153,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]
 
 2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element über das Label-Element gezeichnet wird.
 
@@ -165,7 +165,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#9](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]
 
 2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element rechts angedockt ist die <xref:System.Windows.Controls.DockPanel> Element.
 
@@ -176,12 +176,12 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#10](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#10)]
 
 2.  Kopieren Sie in „MainWindow.xaml.vb“ oder „MainWindow.xaml.cs“ den folgenden Code in die Klassendefinition.
 
-     [!code-csharp[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#102)]
-     [!code-vb[WpfLayoutHostingWfWithXaml#102](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#102)]
+     [!code-csharp[WpfLayoutHostingWfWithXaml#102](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#102)]
+     [!code-vb[WpfLayoutHostingWfWithXaml#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#102)]
 
 3.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen.
 
@@ -196,7 +196,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]
 
 2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element wird in der Rasterzeile zentriert, aber es ist nicht gestreckt, um den verfügbaren Platz auszufüllen. Wenn das Fenster groß genug ist, wird möglicherweise angezeigt mindestens zwei Monate angezeigt, indem das gehostete <xref:System.Windows.Forms.MonthCalendar> -Steuerelement, aber diese sind in der Zeile zentriert. Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layout-Engine zentriert Elemente, deren Größe geändert werden können nicht um den verfügbaren Platz auszufüllen.
 
@@ -207,7 +207,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]
 
 2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Das gehostete Steuerelement und die umgebenden Elemente werden um den Faktor 0,5 skaliert. Allerdings wird die Schriftart des gehosteten Steuerelements nicht skaliert.
 
@@ -220,7 +220,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]
 
 2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Das gehostete Steuerelement wird nicht gedreht, die umgebenden Elemente werden jedoch um einen Winkel von 180 Grad gedreht. Sie müssen möglicherweise die Fenstergröße anpassen, um die Elemente zu sehen.
 
@@ -232,8 +232,8 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
-    [!code-xaml[WpfLayoutHostingWfWithXaml#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
+    [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
 
 2.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die Einstellungen für Ränder und Abstände werden angewendet, an das gehostete [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente auf die gleiche Weise, die sie in angewendet werden sollen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
@@ -244,17 +244,17 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 1.  Kopieren Sie den folgenden XAML in die <xref:System.Windows.Controls.Grid> Element.
 
-     [!code-xaml[WpfLayoutHostingWfWithXaml#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]
+     [!code-xaml[WpfLayoutHostingWfWithXaml#16](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#16)]
 
 2.  Kopieren Sie in „MainWindow.xaml.vb“ oder „MainWindow.xaml.cs“ den folgenden Code in die Klassedefinition.
 
-     [!code-csharp[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
-     [!code-vb[WpfLayoutHostingWfWithXaml#103](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]
+     [!code-csharp[WpfLayoutHostingWfWithXaml#103](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#103)]
+     [!code-vb[WpfLayoutHostingWfWithXaml#103](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#103)]
 
 3.  Fügen Sie einen Aufruf der `InitializeFlowLayoutPanel` -Methode im Konstruktor hinzu.
 
-     [!code-csharp[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
-     [!code-vb[WpfLayoutHostingWfWithXaml#104](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
+     [!code-csharp[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
+     [!code-vb[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]  
   
 4.  Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element füllt die <xref:System.Windows.Controls.DockPanel>, und <xref:System.Windows.Forms.FlowLayoutPanel> ordnet seine untergeordneten Steuerelemente in der standardmäßigen <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  
   
@@ -262,7 +262,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Überlegungen zum Layout für das WindowsFormsHost-Element](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
+- [Überlegungen zum Layout für das WindowsFormsHost-Element](layout-considerations-for-the-windowsformshost-element.md)
 - [Anordnen von Windows Forms-Steuerelementen in WPF-Beispiel](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

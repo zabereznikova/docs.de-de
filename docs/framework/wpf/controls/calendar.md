@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: d8e2306a2a63e567b156449caa9741e1028f017f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2332f5d11e60a45e4da5d62ef7beed7aa14dfa7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545224"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57359405"
 ---
 # <a name="calendar"></a>Kalender
 Ein Kalender kann einen Benutzer unter Verwendung einer visuellen Kalenderansicht ein Datum auswählen.  
@@ -19,7 +19,7 @@ Ein Kalender kann einen Benutzer unter Verwendung einer visuellen Kalenderansich
   
  Die folgende Abbildung zeigt zwei <xref:System.Windows.Controls.Calendar> Steuerelemente, eine Auswahl mit gesperrten Tage und eine ohne.  
   
- ![Monatskalender-Steuerelementen](../../../../docs/framework/wpf/controls/media/ndp-calendarcontrols.png "NDP_CalendarControls")  
+ ![Monatskalender-Steuerelementen](./media/ndp-calendarcontrols.png "NDP_CalendarControls")  
 Calendar-Steuerelemente  
   
  Die folgende Tabelle enthält Informationen zu Aufgaben, die in der Regel zugeordnet sind. die <xref:System.Windows.Controls.Calendar>.  
@@ -52,5 +52,5 @@ Calendar-Steuerelemente
 |LEERTASTE oder EINGABETASTE|<xref:System.Windows.Controls.CalendarMode.Year> oder <xref:System.Windows.Controls.CalendarMode.Decade>|Switches <xref:System.Windows.Controls.Calendar.DisplayMode%2A> auf die <xref:System.Windows.Controls.CalendarMode.Month> oder <xref:System.Windows.Controls.CalendarMode.Year> durch das fokussierte Element dargestellt.|  
   
 ## <a name="see-also"></a>Siehe auch
-- [Steuerelemente](../../../../docs/framework/wpf/controls/index.md)
-- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Steuerelemente](index.md)
+- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)

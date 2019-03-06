@@ -28,25 +28,25 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 5cc7c54b78e291c25f1eda62942545acbb893091
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733453"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373096"
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige Anwendungen über Windows. Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen stellen ihre eigenen Windows über das <xref:System.Windows.Window> Klasse. In diesem Thema werden <xref:System.Windows.Window> , bevor Sie die Grundlagen der Erstellung und Verwaltung von Fenstern in eigenständigen Anwendungen behandelt.  
   
 > [!NOTE]
->  Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, einschließlich [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und loose [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seiten, stellen keine eigenen Fenster. Stattdessen werden sie in von bereitgestellten Windows gehostet [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Finden Sie unter [Übersicht über WPF-XAML-Browseranwendungen](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).  
+>  Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, einschließlich [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und loose [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seiten, stellen keine eigenen Fenster. Stattdessen werden sie in von bereitgestellten Windows gehostet [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Finden Sie unter [Übersicht über WPF-XAML-Browseranwendungen](wpf-xaml-browser-applications-overview.md).  
   
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Die Fensterklasse  
  In der folgenden Abbildung werden die Bestandteile eines Fensters dargestellt.  
   
- ![Fensterelemente](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Fensterelemente](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
   
  Ein Fenster wird in zwei Bereiche geteilt: der Nicht-Clientbereich und der Clientbereich.  
   
@@ -82,16 +82,16 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Im Allgemeinen jedoch die Darstellung eines Fensters wird mithilfe von implementiert [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup und dessen Verhalten implementiert mit Code-Behind, wie im folgenden Beispiel gezeigt.  
   
- [!code-xaml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#MarkupAndCodeBehindWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
- [!code-vb[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
  So aktivieren Sie eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup-Datei und Code-Behind-Datei zusammenarbeiten können, gelten die folgenden Voraussetzungen:  
   
 -   Im Markup der `Window` -Element muss enthalten der `x:Class` Attribut. Wenn die Anwendung erstellt wird, wird das Vorhandensein des `x:Class` im Markup führt [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] zum Erstellen einer `partial` abgeleitete Klasse <xref:System.Windows.Window> und hat den Namen, die angegeben wird die `x:Class` Attribut. Dies erfordert das Hinzufügen einer [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Namespace-Deklaration für die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Schema ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ). Die generierte `partial` -Klasse implementiert die `InitializeComponent` -Methode, die aufgerufen wird, um die Ereignisse zu registrieren, und legen die Eigenschaften, die im Markup implementiert werden.  
   
--   Im Code-Behind muss die Klasse muss eine `partial` Klasse mit dem gleichen Namen, die angegeben wird die `x:Class` Attribut im Markup, und es muss abgeleitet <xref:System.Windows.Window>. Dadurch wird der Code-Behind-Datei zugeordnet werden die `partial` -Klasse, die für die Markupdatei generiert wird, wenn die Anwendung erstellt wird (finden Sie unter [Erstellen einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)).  
+-   Im Code-Behind muss die Klasse muss eine `partial` Klasse mit dem gleichen Namen, die angegeben wird die `x:Class` Attribut im Markup, und es muss abgeleitet <xref:System.Windows.Window>. Dadurch wird der Code-Behind-Datei zugeordnet werden die `partial` -Klasse, die für die Markupdatei generiert wird, wenn die Anwendung erstellt wird (finden Sie unter [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)).  
   
 -   Im Code-Behind muss die <xref:System.Windows.Window> Klasse implementieren muss einen Konstruktor, der Aufrufe der `InitializeComponent` Methode. `InitializeComponent` wird implementiert, indem Sie das Markup generierte `partial` Klasse zum Registrieren von Ereignissen und Festlegen von Eigenschaften, die im Markup definierte.  
   
@@ -100,10 +100,10 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Mit dieser Konfiguration können Sie sich auf definieren die Darstellung des Fensters in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup und dessen Verhalten im Code-Behind implementiert. Das folgende Beispiel zeigt ein Fenster mit einer Schaltfläche in implementiert [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup und einen Ereignishandler für der Schaltfläche " <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis im Code-Behind implementiert.  
   
- [!code-xaml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
+ [!code-xaml[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml#markupandcodebehindwindowmarkup)]  
   
- [!code-csharp[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
- [!code-vb[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
+ [!code-csharp[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/CSharp/MarkupAndCodeBehindWindow.xaml.cs#markupandcodebehindwindowcodebehind)]
+ [!code-vb[WindowsOverviewWindowWithButtonSnippets#MarkupAndCodeBehindWindowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewWindowWithButtonSnippets/VisualBasic/MarkupAndCodeBehindWindow.xaml.vb#markupandcodebehindwindowcodebehind)]  
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurieren einer Fensterdefinition für MSBuild  
@@ -125,7 +125,7 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
 </Project>  
 ```  
   
- Informationen zum Erstellen von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -Anwendungen finden Sie unter [Erstellen einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+ Informationen zum Erstellen von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -Anwendungen finden Sie unter [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Fensterlebensdauer  
@@ -136,9 +136,9 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
 ### <a name="opening-a-window"></a>Öffnen eines Fensters  
  Wenn Sie ein Fenster öffnen möchten, müssen Sie zuerst eine Instanz davon erstellen. Dies wird im folgenden Beispiel veranschaulicht.  
   
- [!code-xaml[WindowsOverviewStartupEventSnippets#AppMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml#appmarkup)]  
+ [!code-xaml[WindowsOverviewStartupEventSnippets#AppMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml#appmarkup)]  
   
- [!code-csharp[WindowsOverviewStartupEventSnippets#AppCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml.cs#appcodebehind)]  
+ [!code-csharp[WindowsOverviewStartupEventSnippets#AppCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewStartupEventSnippets/CSharp/App.xaml.cs#appcodebehind)]  
   
  In diesem Beispiel die `MarkupAndCodeBehindWindow` wird instanziiert, wenn die Anwendung gestartet wird, dies geschieht, wenn die <xref:System.Windows.Application.Startup> Ereignis wird ausgelöst.  
   
@@ -146,18 +146,18 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Schließlich Öffnen des Fensters durch den Aufruf der <xref:System.Windows.Window.Show%2A> Methode das Ergebnis wird in der folgenden Abbildung dargestellt.  
   
- ![Ein durch Aufrufen von Show geöffnetes Fenster](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Ein durch Aufrufen von Show geöffnetes Fenster](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
   
  Ein Fenster, das durch Aufrufen von <xref:System.Windows.Window.Show%2A> wird ein nicht modales Fenster, das bedeutet, dass die Anwendung in einem Modus ausgeführt, die Benutzern ermöglicht wird, andere Fenster in derselben Anwendung zu aktivieren.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A> wird aufgerufen, um Windows, z. B. Dialogfelder, modal aufzurufen. Finden Sie unter [Übersicht über Dialogfelder](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md) für Weitere Informationen.  
+>  <xref:System.Windows.Window.ShowDialog%2A> wird aufgerufen, um Windows, z. B. Dialogfelder, modal aufzurufen. Finden Sie unter [Übersicht über Dialogfelder](dialog-boxes-overview.md) für Weitere Informationen.  
   
  Wenn <xref:System.Windows.Window.Show%2A> ist führt Initialisierung aufgerufen wird, ein Fenster aus, bevor es angezeigt wird, zum Festlegen der Infrastruktur, die es Benutzereingaben empfangen kann. Wenn das Fenster initialisiert wird, die <xref:System.Windows.Window.SourceInitialized> Ereignis wird ausgelöst, und das Fenster wird angezeigt.  
   
  Als abgekürztes <xref:System.Windows.Application.StartupUri%2A> kann festgelegt werden, um das erste Fenster anzugeben, die automatisch geöffnet wird, wenn eine Anwendung startet.  
   
- [!code-xaml[WindowsOverviewSnippets#ApplicationStartupUriMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/App.xaml#applicationstartupurimarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#ApplicationStartupUriMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/App.xaml#applicationstartupurimarkup)]  
   
  Beim Starten der Anwendung, die durch den Wert des angegebenen Fensters <xref:System.Windows.Application.StartupUri%2A> geöffnet wird im nicht modalen Modus; intern Öffnen des Fensters durch den Aufruf der <xref:System.Windows.Window.Show%2A> Methode.  
   
@@ -171,8 +171,8 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Bei einigen Fenstern ist eine Beziehung zu dem Fenster erforderlich, durch das es geöffnet wird. Z. B. eine [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] Anwendung öffnen kann, Eigenschaftenfenster und Toolfenster, deren typisches Verhalten besteht darin, das Fenster zu überdecken, der sie erstellt. Darüber hinaus sollten solche Fenster stets mit den Fenstern geschlossen, minimiert, maximiert und wiederhergestellt werden, durch die sie erstellt wurden. Eine solche Beziehung hergestellt werden kann, durch dass ein Fenster *eigenen* eine andere, und wird erreicht, indem die <xref:System.Windows.Window.Owner%2A> Eigenschaft der *Besitzer gehöriges Fenster* mit einem Verweis auf die *Besitzer Fenster*. Dies wird im folgenden Beispiel gezeigt.  
   
- [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
- [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
+ [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
+ [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
   
  Nach Einrichten des Besitzes:  
   
@@ -213,10 +213,10 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Ein häufiger Grund für die Behandlung <xref:System.Windows.Window.Activated> und <xref:System.Windows.Window.Deactivated> ist das Aktivieren und Deaktivieren von Funktionen, die nur ausgeführt werden kann, wenn ein Fenster aktiv ist. In einigen Fenstern wird beispielsweise interaktiver Inhalt angezeigt, der andauernde Benutzereingaben oder Aufmerksamkeit erfordert, wie beispielsweise Spiele und Videoplayer. Das folgende Beispiel enthält einen vereinfachten Videoplayer, der zeigt, wie behandelt <xref:System.Windows.Window.Activated> und <xref:System.Windows.Window.Deactivated> auf dieses Verhalten zu implementieren.  
   
- [!code-xaml[WindowsOverviewSnippets#ActivationDeactivationMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml#activationdeactivationmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#ActivationDeactivationMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml#activationdeactivationmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml.cs#activationdeactivationcodebehind)]
- [!code-vb[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/CustomMediaPlayerWindow.xaml.vb#activationdeactivationcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/CustomMediaPlayerWindow.xaml.cs#activationdeactivationcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#ActivationDeactivationCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/CustomMediaPlayerWindow.xaml.vb#activationdeactivationcodebehind)]  
   
  Andere Anwendungstypen führen im Hintergrund möglicherweise weiterhin Code aus, nachdem ein Fenster deaktiviert wurde. Ein E-Mail-Client kann z. B. weiterhin den E-Mail-Server abrufen, während der Benutzer andere Anwendungen verwendet. Während das Hauptfenster deaktiviert ist, stellen derartige Anwendungen häufig zusätzliches oder anderes Verhalten zur Verfügung. Im Hinblick auf das E-Mail-Programm kann das sowohl das Hinzufügen des neuen E-Mail-Elements zum Posteingang als auch eines Benachrichtigungssymbol in die Taskleiste bedeuten. Ein Benachrichtigungssymbol muss nur angezeigt werden, wenn das e-Mail-Fenster nicht aktiv ist dies kann durch Überprüfen ermittelt werden die <xref:System.Windows.Window.IsActive%2A> Eigenschaft.  
   
@@ -247,17 +247,17 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Um ein Fenster mit einem der benutzerdefinierten Mechanismen zu schließen, müssen Sie zum Aufrufen der <xref:System.Windows.Window.Close%2A> Methode. Das folgende Beispiel implementiert die Möglichkeit, ein Fenster zu schließen, durch Auswählen der **beenden** auf die **Datei** Menü.  
   
- [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowWithFileExitMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml#windowwithfileexitmarkup)]  
   
- [!code-csharp[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml.cs#windowwithfileexitcodebehind)]
- [!code-vb[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/WindowWithFileExit.xaml.vb#windowwithfileexitcodebehind)]  
+ [!code-csharp[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowWithFileExit.xaml.cs#windowwithfileexitcodebehind)]
+ [!code-vb[WindowsOverviewSnippets#WindowWithFileExitCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowsOverviewSnippets/VisualBasic/WindowWithFileExit.xaml.vb#windowwithfileexitcodebehind)]  
   
  Wenn ein Fenster geschlossen wird, löst es zwei Ereignisse: <xref:System.Windows.Window.Closing> und <xref:System.Windows.Window.Closed>.  
   
  <xref:System.Windows.Window.Closing> wird ausgelöst, bevor das Fenster wird geschlossen, und bietet einen Mechanismus, durch welches, den Fenster verhindert werden kann. Der häufigste Grund, um das Schließen eines Fensters zu verhindern, liegt darin, dass Fensterinhalt geänderte Daten enthält. In diesem Fall die <xref:System.Windows.Window.Closing> -Ereignis behandelt werden, um zu bestimmen, ob Daten geändert wurden, und wenn Ja, auf der Benutzer gefragt werden, ob das Fenster schließen, ohne die Daten speichern fortfahren oder Schließen des Fensters abzubrechen. Das folgende Beispiel zeigt die wichtigsten Aspekte bei der Behandlung <xref:System.Windows.Window.Closing>.  
   
- [!code-csharp[WindowClosingSnippets](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
- [!code-vb[WindowClosingSnippets](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
+ [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
+ [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
  
   
  Die <xref:System.Windows.Window.Closing> -Ereignishandler übergeben wird eine <xref:System.ComponentModel.CancelEventArgs>, implementiert die `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> -Eigenschaft, die Sie, um festlegen `true` zum Schließen ein Fensters zu verhindern.  
@@ -284,11 +284,11 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
 ### <a name="window-lifetime-events"></a>Ereignisse in der Lebensdauer eines Fensters  
  In der folgenden Darstellung wird die Abfolge der wichtigsten Ereignisse in der Lebensdauer eines Fensters gezeigt.  
   
- ![Fensterlebensdauer](../../../../docs/framework/wpf/app-development/media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Fensterlebensdauer](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
   
  Die folgende Abbildung zeigt die Abfolge der wichtigsten Ereignisse in der Lebensdauer eines Fensters, das ohne Aktivierung angezeigt wird (<xref:System.Windows.Window.ShowActivated%2A> nastaven NA hodnotu `false` , bevor das Fenster angezeigt wird).  
   
- ![Fensterlebensdauer &#40;Window.ShowActivated &#61; False&#41;](../../../../docs/framework/wpf/app-development/media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Fensterlebensdauer &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Fensterposition  
@@ -296,7 +296,7 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Sie können auch angeben, die ursprüngliche Position des ein <xref:System.Windows.Window> bei seinem ersten Auftreten durch Festlegen der <xref:System.Windows.Window.WindowStartupLocation%2A> Eigenschaft mit einer der folgenden <xref:System.Windows.WindowStartupLocation> -Enumerationswerte fest:  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (Standardwert)  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner> (Standard)  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -308,7 +308,7 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
 ### <a name="topmost-windows-and-z-order"></a>Oberstes Fenster und Z-Reihenfolge  
  Neben der X- und Y-Position verfügt das Fenster auch über eine Position in der Z-Dimension, die dessen vertikale Position im Verhältnis zu anderen Fenstern bestimmt. Dies wird als Z-Reihenfolge des Fensters bezeichnet. Davon gibt es zwei Typen: die normale Z-Reihenfolge und die oberste Z-Reihenfolge. Die Position eines Fensters in der *normalen Z-Reihenfolge* richtet sich nach, ob er derzeit aktiv ist. Standardmäßig befindet sich ein Fenster in der normalen Z-Reihenfolge. Die Position eines Fensters in der *oberste Z-Reihenfolge* hängt ebenfalls davon, ob er derzeit aktiv ist. Darüber hinaus befinden sich Fenster in der obersten Z-Reihenfolge stets über den Fenstern in der normalen Z-Reihenfolge. Ein Fenster befindet sich in der obersten Z-Reihenfolge durch Festlegen seiner <xref:System.Windows.Window.Topmost%2A> Eigenschaft `true`.  
   
- [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
   
  Innerhalb jeder Z-Reihenfolge wird das aktuell aktive Fenster über allen anderen Fenstern derselben Z-Reihenfolge angezeigt.  
   
@@ -318,11 +318,11 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  <xref:System.Windows.FrameworkElement.MinWidth%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, und <xref:System.Windows.FrameworkElement.MaxWidth%2A> dienen zum Verwalten des Bereichs von Breiten verwendet, die ein Fenster während seiner Lebensdauer haben kann, und konfiguriert sind, wie im folgenden Beispiel gezeigt.  
   
- [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
   
  Die Fensterhöhe wird von verwaltet <xref:System.Windows.FrameworkElement.MinHeight%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, und <xref:System.Windows.FrameworkElement.MaxHeight%2A>, und konfiguriert sind, wie im folgenden Beispiel gezeigt.  
   
- [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
   
  Da die verschiedenen Werte für die Breite und für die Höhe jeweils einen Bereich angeben, kann die Breite und Höhe eines in der Größe veränderbaren Fensters irgendwo innerhalb des angegebenen Bereichs für die entsprechende Dimension liegen. Wenn um die aktuelle Breite und Höhe zu ermitteln, überprüfen Sie <xref:System.Windows.FrameworkElement.ActualWidth%2A> und <xref:System.Windows.FrameworkElement.ActualHeight%2A>bzw.  
   
@@ -338,12 +338,12 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Im folgenden Beispiel wird ein Fenster dass die Größe automatisch an seinen Inhalt vertikal und horizontal an, wenn es zuerst angezeigt wird.  
   
- [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
   
  Im folgende Beispiel veranschaulicht die legen Sie die <xref:System.Windows.Window.SizeToContent%2A> Eigenschaft im Code, um anzugeben, wie die Fenstergröße um seinen Inhalt anzupassen.
   
- [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]
- [!code-vb[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#setwindowsizetocontentpropertycode)]  
+ [!code-csharp[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#setwindowsizetocontentpropertycode)]
+ [!code-vb[HOWTOWindowManagementSnippets#SetWindowSizeToContentPropertyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#setwindowsizetocontentpropertycode)]  
   
 <a name="OrderOfPrecedence"></a>   
 ## <a name="order-of-precedence-for-sizing-properties"></a>Rangfolge der Größeneigenschaften  
@@ -384,7 +384,7 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Der Zustand eines Fensters kann konfiguriert werden, durch Festlegen der <xref:System.Windows.Window.WindowState%2A> -Eigenschaft, die einen der folgenden enthalten kann <xref:System.Windows.WindowState> Enumerationswerte:  
   
--   <xref:System.Windows.WindowState.Normal> (Standardwert)  
+-   <xref:System.Windows.WindowState.Normal> (Standard)  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -392,7 +392,7 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Im folgenden Beispiel wird veranschaulicht, wie Sie ein Fenster erstellen, das beim Öffnen als maximiert angezeigt wird.  
   
- [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
   
  Im Allgemeinen sollten Sie festlegen <xref:System.Windows.Window.WindowState%2A> so konfigurieren Sie den Ausgangszustand eines Fensters. Wenn ein in der Größe veränderbares Fenster angezeigt wird, können die Benutzer die Schaltflächen zum Minimieren, Maximieren oder Wiederherstellen auf der Titelleiste des Fensters aktivieren, um den Fensterzustand zu ändern.  
   
@@ -413,13 +413,13 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (Standardwert)  
+-   <xref:System.Windows.ResizeMode.CanResize> (Standard)  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
  Wie bei <xref:System.Windows.Window.WindowStyle%2A>, der Größenänderungsmodus eines Fensters ist es unwahrscheinlich, dass während seiner Lebensdauer ändern, was bedeutet, dass Sie es vom wahrscheinlich festlegen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup.  
   
- [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
   
  Beachten Sie, die Sie können erkennen, ob ein Fenster maximiert, minimiert oder wiederhergestellt, indem Sie überprüfen die <xref:System.Windows.Window.WindowState%2A> Eigenschaft.  
   
@@ -431,7 +431,7 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (Standardwert)  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow> (Standard)  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -439,22 +439,22 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Die Auswirkung dieser Fensterstile wird in der folgenden Abbildung veranschaulicht.  
   
- ![Fensterstile](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Fensterstile](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
   
  Sie können festlegen, <xref:System.Windows.Window.WindowStyle%2A> entweder [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup oder Code, da es unwahrscheinlich ist, um während der Lebensdauer eines Fensters zu ändern ist, in den meisten Fällen konfigurieren sie mithilfe von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup.  
   
- [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>Nicht rechteckiger Fensterstil  
  Es gibt auch Situationen, in dem der Rahmen, die formatiert <xref:System.Windows.Window.WindowStyle%2A> ermöglicht Ihnen, sind nicht ausreichend. Sie möchten z. B. eine Anwendung mit einem nicht rechteckigen Rahmen erstellen, wie [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] verwendet.  
   
  Betrachten Sie beispielsweise das Sprechblasenfenster in der folgenden Abbildung.  
   
- ![Nicht rechteckiges Fenster](../../../../docs/framework/wpf/app-development/media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Nicht rechteckiges Fenster](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
   
  Diese Art von Fenster erstellt werden kann, indem die <xref:System.Windows.Window.WindowStyle%2A> Eigenschaft <xref:System.Windows.WindowStyle.None>, und mithilfe von speziellen zu unterstützen, die <xref:System.Windows.Window> zur Transparenz bietet.  
   
- [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
   
  Durch diese Kombination von Werten wird das Fenster angewiesen, ein vollkommen transparentes Rendering zu übernehmen. In diesem Zustand können die Zusatzelemente des Nicht-Clientbereichs des Fensters (das Menü „Schließen“, die Schaltflächen „Minimieren“, „Maximieren“ und „Wiederherstellen“ usw.) nicht verwendet werden. Folglich müssen Sie Ihre eigenen bereitstellen.  
   
@@ -462,11 +462,11 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
 ### <a name="task-bar-presence"></a>Vorhandensein der Taskleiste  
  Die Standarddarstellung eines Fensters umfasst eine Taskleistenschaltfläche wie in der folgenden Abbildung.  
   
- ![Fenster mit einer Taskleistenschaltfläche](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+ ![Fenster mit einer Taskleistenschaltfläche](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
   
- Einige Arten von Windows keine Taskleistenschaltfläche, z. B. Meldungsfelder und Dialogfelder (siehe [Übersicht über Dialogfelder](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)). Sie können steuern, ob die Taskleistenschaltfläche für ein Fenster, durch Festlegen angezeigt wird der <xref:System.Windows.Window.ShowInTaskbar%2A> Eigenschaft (`true` standardmäßig).  
+ Einige Arten von Windows keine Taskleistenschaltfläche, z. B. Meldungsfelder und Dialogfelder (siehe [Übersicht über Dialogfelder](dialog-boxes-overview.md)). Sie können steuern, ob die Taskleistenschaltfläche für ein Fenster, durch Festlegen angezeigt wird der <xref:System.Windows.Window.ShowInTaskbar%2A> Eigenschaft (`true` standardmäßig).  
   
- [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
+ [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen  
@@ -474,18 +474,18 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Allerdings gilt dies nicht außerhalb des Satzes von Berechtigungen für Anwendungen, die aus dem Internet oder lokalen Intranet-Zone mit gestartet werden [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]. Infolgedessen erhalten Benutzer eine [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] sicherheitswarnung, und den Berechtigungssatz für die Anwendung auf volle Vertrauenswürdigkeit erhöhen müssen.  
   
- Darüber hinaus [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] kann nicht in der Standardeinstellung Fenster oder Dialogfelder angezeigt. Ausführliche Informationen zu sicherheitsüberlegungen für eigenständige Anwendung, finden Sie unter [WPF-Sicherheitsstrategie – Plattformsicherheit](../../../../docs/framework/wpf/wpf-security-strategy-platform-security.md).  
+ Darüber hinaus [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] kann nicht in der Standardeinstellung Fenster oder Dialogfelder angezeigt. Ausführliche Informationen zu sicherheitsüberlegungen für eigenständige Anwendung, finden Sie unter [WPF-Sicherheitsstrategie – Plattformsicherheit](../wpf-security-strategy-platform-security.md).  
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>Andere Fenstertypen  
- <xref:System.Windows.Navigation.NavigationWindow> ist ein Fenster, das zum Hosten von navigierbarem Inhalt konzipiert ist. Weitere Informationen finden Sie unter [Übersicht über die Navigation](../../../../docs/framework/wpf/app-development/navigation-overview.md)).  
+ <xref:System.Windows.Navigation.NavigationWindow> ist ein Fenster, das zum Hosten von navigierbarem Inhalt konzipiert ist. Weitere Informationen finden Sie unter [Übersicht über die Navigation](navigation-overview.md)).  
   
- Dialogfelder sind Fenster, die häufig zum Erfassen von Benutzerinformationen verwendet werden, um eine Funktion ausführen. Z. B. wenn ein Benutzer möchte eine Datei öffnen die **Datei öffnen** Dialogfeld wird in der Regel von einer Anwendung zum Abrufen des Dateinamens des Benutzers angezeigt. Weitere Informationen finden Sie unter [Übersicht über Dialogfelder](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md).  
+ Dialogfelder sind Fenster, die häufig zum Erfassen von Benutzerinformationen verwendet werden, um eine Funktion ausführen. Z. B. wenn ein Benutzer möchte eine Datei öffnen die **Datei öffnen** Dialogfeld wird in der Regel von einer Anwendung zum Abrufen des Dateinamens des Benutzers angezeigt. Weitere Informationen finden Sie unter [Übersicht über Dialogfelder](dialog-boxes-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
-- [Übersicht über Dialogfelder](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)
-- [Erstellen einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [Übersicht über Dialogfelder](dialog-boxes-overview.md)
+- [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md)

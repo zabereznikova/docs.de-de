@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: ae0c729444b3ccb154481e65a094d29d68541793
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645846"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375245"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementieren einer impliziten Transaktion mit Transaktionsbereich
 Mit der <xref:System.Transactions.TransactionScope>-Klasse lassen sich Codeblöcke einfach als an einer Transaktion beteiligte Codeblöcke markieren, ohne die Transaktion selbst bearbeiten zu müssen. Ein Transaktionsbereich kann die Ambient-Transaktion automatisch auswählen und verwalten. Wegen ihrer einfachen Verwendung und Effizienz wird empfohlen, die <xref:System.Transactions.TransactionScope>-Klasse zur Entwicklung von Transaktionsanwendungen zu verwenden.  
@@ -41,7 +41,7 @@ Mit der <xref:System.Transactions.TransactionScope>-Klasse lassen sich Codeblöc
 ## <a name="rolling-back-a-transaction"></a>Rollback einer Transaktion  
  Wenn ein Rollback für eine Transaktion ausgeführt werden soll, dürfen Sie die <xref:System.Transactions.TransactionScope.Complete%2A>-Methode nicht im Transaktionsbereich aufrufen. Zum Beispiel können Sie eine Ausnahme im Bereich auslösen. Der Rollback wird für die Transaktion ausgeführt, die im Bereich liegt.  
   
-##  <a name="ManageTxFlow"></a> Verwalten eines Transaktionsflusses mit TransactionScopeOption  
+## <a name="ManageTxFlow"></a> Verwalten eines Transaktionsflusses mit TransactionScopeOption  
  Transaktionsbereiche können geschachtelt werden, indem eine Methode aufgerufen wird, die ein <xref:System.Transactions.TransactionScope>-Objekt innerhalb einer Methode verwendet, die ihren eigenen Bereich verwendet. Die `RootMethod`-Methode im folgenden Beispiel veranschaulicht dies.  
   
 ```csharp  

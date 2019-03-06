@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: b1f3889803ba681542349443276041d312293bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5f53603ea22b2ae12a9846ba6bdce525790ce15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626874"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360942"
 ---
 # <a name="menu-overview"></a>Übersicht über Menu
 Die <xref:System.Windows.Controls.Menu> Klasse ermöglicht Ihnen, Elemente, die zu Befehlen und Ereignishandlern in einer hierarchischen Reihenfolge zu organisieren. Jede <xref:System.Windows.Controls.Menu> Element enthält eine Auflistung von <xref:System.Windows.Controls.MenuItem> Elemente.  
@@ -24,10 +24,10 @@ Die <xref:System.Windows.Controls.Menu> Klasse ermöglicht Ihnen, Elemente, die 
 ## <a name="creating-menus"></a>Erstellen von Menüs  
  Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.Menu> Bearbeiten von Text in einem <xref:System.Windows.Controls.TextBox>. Die <xref:System.Windows.Controls.Menu> enthält <xref:System.Windows.Controls.MenuItem> Objekten, die <xref:System.Windows.Controls.MenuItem.Command%2A>, <xref:System.Windows.Controls.MenuItem.IsCheckable%2A>, und <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> Eigenschaften und die <xref:System.Windows.Controls.MenuItem.Checked>, <xref:System.Windows.Controls.MenuItem.Unchecked>, und <xref:System.Windows.Controls.MenuItem.Click> Ereignisse.  
   
- [!code-xaml[MenuItemCommandsAndEvents#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#1)]  
+ [!code-xaml[MenuItemCommandsAndEvents#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#1)]  
   
- [!code-csharp[MenuItemCommandsAndEvents#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#2)]
- [!code-vb[MenuItemCommandsAndEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#2)]  
+ [!code-csharp[MenuItemCommandsAndEvents#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml.cs#2)]
+ [!code-vb[MenuItemCommandsAndEvents#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MenuItemCommandsAndEvents/VisualBasic/Window1.xaml.vb#2)]  
   
 <a name="menus_with_shortcutkeys"></a>   
 ## <a name="menuitems-with-keyboard-shortcuts"></a>MenuItems mit Tastenkombinationen  
@@ -37,15 +37,15 @@ Die <xref:System.Windows.Controls.Menu> Klasse ermöglicht Ihnen, Elemente, die 
 ### <a name="inputgesturetext"></a>InputGestureText  
  Das folgende Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.MenuItem.InputGestureText%2A> Eigenschaft zuweisen Tastenkombinationstext <xref:System.Windows.Controls.MenuItem> Steuerelemente. Dadurch wird nur die Tastenkombination im Menüelement platziert.  Es erfolgt keine Zuordnung zwischen den Befehl mit der <xref:System.Windows.Controls.MenuItem>. Die Anwendung muss die Eingabe des Benutzers bearbeiten, um die Aktion auszuführen.  
   
- [!code-xaml[MenuEvent#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#6)]  
+ [!code-xaml[MenuEvent#6](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#6)]  
   
 <a name="menus_commands"></a>   
 ### <a name="command"></a>Befehl  
  Das folgende Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.MenuItem.Command%2A> -Eigenschaft zum Zuordnen der **öffnen** und **speichern** bei Befehlen mit <xref:System.Windows.Controls.MenuItem> Steuerelemente. Nicht nur ist die Command-Eigenschaft ordnen Sie einen Befehl mit einem <xref:System.Windows.Controls.MenuItem>, sondern stellt auch die Eingabegeste-Text, der als Verknüpfung verwendet.  
   
- [!code-xaml[MenuEvent#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
+ [!code-xaml[MenuEvent#8](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
   
- Die <xref:System.Windows.Controls.MenuItem> -Klasse verfügt auch über eine <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> -Eigenschaft, die das Element gibt an, in dem der Befehl auftritt. Wenn <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> ist nicht festgelegt ist, wird der Befehl in das Element, das den Tastaturfokus verfügt. Weitere Informationen zu Befehlen finden Sie unter [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md).  
+ Die <xref:System.Windows.Controls.MenuItem> -Klasse verfügt auch über eine <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> -Eigenschaft, die das Element gibt an, in dem der Befehl auftritt. Wenn <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> ist nicht festgelegt ist, wird der Befehl in das Element, das den Tastaturfokus verfügt. Weitere Informationen zu Befehlen finden Sie unter [Befehlsübersicht](../advanced/commanding-overview.md).  
   
 <a name="menu_styling"></a>   
 ## <a name="menu-styling"></a>Menu-Format  
@@ -53,11 +53,11 @@ Die <xref:System.Windows.Controls.Menu> Klasse ermöglicht Ihnen, Elemente, die 
   
  Im erste Codebeispiel definiert eine <xref:System.Windows.Style> namens `Simple` , die zeigt, wie die aktuellen Systemeinstellungen in Ihrem Stil verwendet. Der Code weist die Farbe von `MenuHighlightBrush` als Hintergrundfarbe des Menüs und die Farbe von `MenuTextBrush` als Vordergrundfarbe des Menüs zu. Beachten Sie, dass Sie zum Zuweisen der Pinsel Ressourcenschlüssel verwenden.  
   
- [!code-xaml[MenuStylesSnippet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#1)]  
+ [!code-xaml[MenuStylesSnippet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#1)]  
   
  Das folgende Beispiel verwendet <xref:System.Windows.Trigger> Elemente, die Sie ändern die Darstellung der ermöglichen eine <xref:System.Windows.Controls.MenuItem> als Reaktion auf Ereignisse in der <xref:System.Windows.Controls.Menu>. Wenn Sie über die Maus bewegen der <xref:System.Windows.Controls.Menu>, der die Vordergrundfarbe und die Schriftart der Menüelemente ändern.  
   
- [!code-xaml[MenuStylesSnippet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
+ [!code-xaml[MenuStylesSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
 ## <a name="see-also"></a>Siehe auch
 - [Beispiel für WPF-Steuerelementsammlungen](https://go.microsoft.com/fwlink/?LinkID=160053)

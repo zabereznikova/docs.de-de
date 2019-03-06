@@ -2,12 +2,12 @@
 title: Allgemeine Attribute (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 0bc51a37fa0ccbcb3a74e1796686f0d6a6ec4d84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690903"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375401"
 ---
 # <a name="common-attributes-visual-basic"></a>Allgemeine Attribute (Visual Basic)
 Dieses Thema beschreibt die Attribute, die am häufigsten in Visual Basic-Programmen verwendet werden.  
@@ -22,7 +22,7 @@ Dieses Thema beschreibt die Attribute, die am häufigsten in Visual Basic-Progra
   
 -   [Visual Basic-Attribute](#VB)  
   
-##  <a name="Global"></a> Globale Attribute  
+## <a name="Global"></a> Globale Attribute  
  Die meisten Attribute werden auf spezifische Sprachelemente wie Klassen oder Methoden angewendet. Einige Attribute sind jedoch global – sie gelten für eine gesamte Assembly oder ein Modul. Zum Beispiel kann das <xref:System.Reflection.AssemblyVersionAttribute>-Attribut zum Einbetten von Versionsinformationen in eine Assembly verwendet werden. Diese sieht wie folgt aus:  
   
 ```vb  
@@ -74,7 +74,7 @@ Dieses Thema beschreibt die Attribute, die am häufigsten in Visual Basic-Progra
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|Definiert ein benutzerdefiniertes Attribut, das eine Assemblykonfiguration (z.B. Retail oder Debug) für ein Assemblymanifest angibt|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|Definiert einen benutzerfreundlichen Standardalias für ein Assemblymanifest|  
   
-##  <a name="Obsolete"></a> Obsolete-Attribut  
+## <a name="Obsolete"></a> Obsolete-Attribut  
  Das `Obsolete`-Attribut markiert eine Programmentität als eine, die nicht mehr zur Verwendung empfohlen wird. Jede Verwendung einer Entität, die als veraltet markiert ist, generiert anschließend eine Warnung oder einen Fehler, je nachdem, wie das Attribut konfiguriert ist. Zum Beispiel:  
   
 ```vb  
@@ -116,7 +116,7 @@ b.NewMethod()
   
  Das `Obsolete`-Attribut ist ein Attribut zur einmaligen Nutzung und kann auf jede Entität angewendet werden, die Attribute zulässt. `Obsolete` ist ein Alias für <xref:System.ObsoleteAttribute>.  
   
-##  <a name="Conditional"></a> Conditional-Attribut  
+## <a name="Conditional"></a> Conditional-Attribut  
  Das `Conditional`-Attribut macht die Ausführung einer Methode abhängig von einem Vorverarbeitungsbezeichner. Das `Conditional`-Attribut ist ein Alias für <xref:System.Diagnostics.ConditionalAttribute> und kann auf eine Methode oder Attributklasse angewendet werden.  
   
  In diesem Beispiel wird `Conditional` auf eine Methode angewendet, um die Anzeige programmspezifischer Diagnoseinformationen zu aktivieren oder zu deaktivieren.  
@@ -209,7 +209,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <a name="CallerInfo"></a> Aufufrerinfoattribute  
+## <a name="CallerInfo"></a> Aufufrerinfoattribute  
  Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufrufer einer Methode abrufen. Sie können den Dateipfad des Quellcodes, die Zeilennummer im Quellcode und den Membernamen des Aufrufers abrufen.  
   
  Um diese Memberaufruferinformationen zu erhalten, verwenden Sie die Attribute, die auf optionale Parameter angewendet werden. Jeder optionale Parameter gibt einen Standardwert an. In der folgenden Tabelle sind die Aufrufer-Informationsattribute angegeben, die im <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>-Namespace definiert sind:  
@@ -222,7 +222,7 @@ End Class
   
  Weitere Informationen zu den aufruferinformationsattributen finden Sie unter [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).  
   
-##  <a name="VB"></a> Visual Basic-Attribute  
+## <a name="VB"></a> Visual Basic-Attribute  
  Die folgende Tabelle enthält die Attribute, die in Visual Basic spezifisch sind.  
   
 |Attribut|Zweck|  

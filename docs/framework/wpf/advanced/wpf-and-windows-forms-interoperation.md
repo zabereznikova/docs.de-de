@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-ms.openlocfilehash: e6bbf6aea1a98b7e1497101ea6a6121525f1c87f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6fe459ab00622860cd10e4e119e943e588f06b2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732023"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352944"
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>Interaktion zwischen WPF und Windows Forms
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] bieten zwei verschiedene Architekturen zum Erstellen von Anwendungsschnittstellen. Die <xref:System.Windows.Forms.Integration?displayProperty=nameWithType> Namespace enthält Klassen, die üblichsten interoperations-Szenarios zu ermöglichen. Die zwei wichtigsten Klassen, die interoperations-Funktionalität zu implementieren sind <xref:System.Windows.Forms.Integration.WindowsFormsHost> und <xref:System.Windows.Forms.Integration.ElementHost>. In diesem Thema wird beschrieben, welche Interoperations-Szenarios unterstützt werden und welche nicht.  
@@ -60,7 +60,7 @@ ms.locfileid: "54732023"
 ### <a name="ambient-properties"></a>Umgebungseigenschaften  
  Einige Umgebungseigenschaften von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelementen haben [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Entsprechungen. Diese Umgebungseigenschaften werden weitergegeben, an das gehostete [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] steuert und als öffentliche Eigenschaften verfügbar gemacht, auf die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Steuerelement. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Steuerelement übersetzt jede [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ambient-Eigenschaft in der [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] entspricht.  
   
- Weitere Informationen finden Sie unter [Eigenschaftenzuordnung von Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Weitere Informationen finden Sie unter [Eigenschaftenzuordnung von Windows Forms und WPF](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="behavior"></a>Verhalten  
  In der folgenden Tabelle werden Interoperations-Verhalten beschrieben.  
@@ -103,7 +103,7 @@ ms.locfileid: "54732023"
 ### <a name="ambient-properties"></a>Umgebungseigenschaften  
  Einige Umgebungseigenschaften von [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelementen haben [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Entsprechungen. Diese Umgebungseigenschaften werden weitergegeben, an das gehostete [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] steuert und als öffentliche Eigenschaften verfügbar gemacht, auf die <xref:System.Windows.Forms.Integration.ElementHost> Steuerelement. Die <xref:System.Windows.Forms.Integration.ElementHost> -Steuerelement übersetzt jede [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ambient-Eigenschaft, um die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] entspricht.  
   
- Weitere Informationen finden Sie unter [Eigenschaftenzuordnung von Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Weitere Informationen finden Sie unter [Eigenschaftenzuordnung von Windows Forms und WPF](windows-forms-and-wpf-property-mapping.md).  
   
 ### <a name="behavior"></a>Verhalten  
  In der folgenden Tabelle werden Interoperations-Verhalten beschrieben.  
@@ -120,7 +120,7 @@ ms.locfileid: "54732023"
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Eigenschaftenzuordnung von Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
+- [Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Eigenschaftenzuordnung von Windows Forms und WPF](windows-forms-and-wpf-property-mapping.md)

@@ -16,37 +16,38 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0590c639e7cc6622c2283bfa609ccb31d7ce7e2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1a26db7785a8a378fa541308ecc6aee30fa87ec
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720573"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367120"
 ---
 # <a name="delete-function"></a>Delete-Funktion
+
 Löscht die angegebene Eigenschaft und aller seiner Qualifizierer aus der Definition einer CIM-Klasse an.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>Syntax  
-  
-```  
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 HRESULT Delete (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
-   [in] LPCWSTR           wszName 
-); 
-```  
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
+   [in] LPCWSTR           wszName
+);
+```
 
 ## <a name="parameters"></a>Parameter
 
-`vFunc`  
+`vFunc`\
 [in] Dieser Parameter wird nicht verwendet.
 
-`ptr`  
+`ptr`\
 [in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
-`wszName`  
+`wszName`\
 [in] Der Name des zu löschenden Eigenschaft. `wszName` muss ein Zeiger auf ein gültiges `LPCWSTR`.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -57,24 +58,26 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Ein Unbekannter Fehler aufgetreten. |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Die Eigenschaft kann nicht gelöscht werden. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszzName` ist ungültig. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` ist ungültig. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Die angegebene Eigenschaft ist nicht vorhanden. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Es ist nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs. |
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | Die Eigenschaft wird von einer Basisklasse geerbt. |
 | `WBEM_E_SYSTEM_PROPERTY` | | Die Eigenschaft ist eine Systemeigenschaft. |
 |`WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | Die Funktion gelöscht einen Standardwert außer Kraft setzen, für die aktuelle Klasse. Der Standardwert für diese Eigenschaft in der übergeordneten Klasse wurde Reactiviated. | 
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | Die Funktion gelöscht einen Standardwert außer Kraft setzen, für die aktuelle Klasse. Der Standardwert für diese Eigenschaft in der übergeordneten Klasse wurde reaktiviert. |
 
 ## <a name="remarks"></a>Hinweise
 
 Diese Funktion umschließt einen Aufruf der [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) Methode.
 
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Header:** WMINet_Utils.idl  
-  
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Anforderungen
+
+**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+
+**Header:** WMINet_Utils.idl
+
+**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

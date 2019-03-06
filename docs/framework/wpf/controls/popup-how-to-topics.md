@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Popup control [WPF], how-to topics
 - controls [WPF], Popup
 ms.assetid: 9488a245-0168-4650-b9ab-d075a108cc8f
-ms.openlocfilehash: 4b7bd1398e2630c7f2496c9cc78fe1d20c27c941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80f0d8bb3f78e80868d5294b5893ef409fdf478c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553714"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362525"
 ---
 # <a name="popup-how-to-topics"></a>Gewusst-wie-Themen zu Popups
-Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.Windows.Controls.Primitives.Popup> -Steuerelement zum Anzeigen von Inhalt in einem separaten Fenster, die über die aktuellen Anwendungsfenster gleitet.  
+Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.Primitives.Popup> Steuerelement Inhalt in einem separaten Fenster angezeigt, die über das aktuelle Anwendungsfenster gleitet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Animieren eines Popups](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [Angeben einer benutzerdefinierten Popup-Position](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+ [Animieren eines Popups](how-to-animate-a-popup.md)  
+ [Angeben einer benutzerdefinierten Popup-Position](how-to-specify-a-custom-popup-position.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht über Popups](../../../../docs/framework/wpf/controls/popup-overview.md)
+ [Übersicht über Popups](popup-overview.md)

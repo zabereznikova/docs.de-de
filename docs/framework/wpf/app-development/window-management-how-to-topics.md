@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
-ms.openlocfilehash: df22dcbc64bff95e2263ba11195146622b9d58cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550136"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351657"
 ---
 # <a name="window-management-how-to-topics"></a>Im Fenster Verwaltung: Themen zur Vorgehensweise
-In den folgenden Themen wird gezeigt, wie verwalten [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Windows.  
+In den folgenden Themen zeigen, wie zum Verwalten von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Windows.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Automatisches Anpassen der Größe eines Fensters an dessen Inhalt](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [Abrufen aller Fenster in einer Anwendung](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
-  [Abrufen und Festlegen des Hauptfensters der Anwendung](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
-  [Öffnen eines Dialogfelds](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
-  [Öffnen eines Meldungsfelds](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
-  [Öffnen eines Fensters](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
-  [Zurückgeben eines Dialogfeldergebnisses](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
+ [Automatisches Anpassen der Größe eines Fensters an dessen Inhalt](how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [Abrufen aller Fenster in einer Anwendung](how-to-get-all-windows-in-an-application.md)  
+  [Abrufen und Festlegen des Hauptfensters der Anwendung](how-to-get-and-set-the-main-application-window.md)  
+  [Öffnen eines Dialogfelds](how-to-open-a-dialog-box.md)  
+  [Öffnen eines Meldungsfelds](how-to-open-a-message-box.md)  
+  [Öffnen eines Fensters](how-to-open-a-window.md)  
+  [Zurückgeben eines Dialogfeldergebnisses](how-to-return-a-dialog-box-result.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht über die Anwendungsverwaltung](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [Übersicht über die Anwendungsverwaltung](application-management-overview.md)  
   
- [Übersicht über die Navigation](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [Übersicht über die Navigation](navigation-overview.md)  
   
- [Hosting](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+ [Hosting](hosting-wpf-applications.md)  
   
- [Erstellen und Bereitstellen](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [Erstellen und Bereitstellen](building-and-deploying-wpf-applications.md)

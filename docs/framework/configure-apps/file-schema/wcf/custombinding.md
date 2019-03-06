@@ -2,23 +2,24 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: d7203aa5695690bfc46c22e87b59f7dfcbd281fa
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0754991fe8a427dbaaa2b7fbafe4387e6bc6df2a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275807"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366672"
 ---
 # <a name="custombinding"></a>\<customBinding>
-Stellt Vollzugriff auf den Nachrichtenstapel für den Benutzer bereit.  
-  
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-  
-## <a name="syntax"></a>Syntax  
-  
-```xml  
+
+Stellt Vollzugriff auf den Nachrichtenstapel für den Benutzer bereit.
+
+\<system.serviceModel>\
+\<bindings>\
+\<customBinding>
+
+## <a name="syntax"></a>Syntax
+
+```xml
 <customBinding>
   <binding name="String"
            closeTimeout="TimeSpan"
@@ -150,7 +151,7 @@ Stellt Vollzugriff auf den Nachrichtenstapel für den Benutzer bereit.
                            timestampValidityDuration="TimeSpan" />
       <federationParameters trustVersion="WSTrustApr2004/WSTrustFeb2005" />
       <genericIssuedTokenParameters>
-        <localIssuerIssuedTokenParameters keyType=" SymmeticKey/PublicKey"
+        <localIssuerIssuedTokenParameters keyType="SymmetricKey/PublicKey"
                                           keySize="Integer"
                                           tokenType="String" />
         <issuedTokenParametersEndpointAddress address="URI"
@@ -169,128 +170,131 @@ Stellt Vollzugriff auf den Nachrichtenstapel für den Benutzer bereit.
     </security>
   </binding>
 </customBinding>
-```  
-  
-## <a name="attributes-and-elements"></a>Attribute und Elemente  
- In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.  
-  
-### <a name="attributes"></a>Attribute  
-  
-|Attribut|Beschreibung|  
-|---------------|-----------------|  
-|closeTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Schließvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|Name|Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält. Dieser Wert ist eine benutzerdefinierte Zeichenfolge, die als Identifikationszeichenfolge für die benutzerdefinierte Bindung fungiert. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|openTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|receiveTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|sendTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-  
-### <a name="child-elements"></a>Untergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|-----------------|  
-|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Legt bidirektionales Messaging für die benutzerdefinierte Bindung fest. Das Element wird mit Transporten verwendet, die keine systemseitige Duplexkommunikation ermöglichen, z.&#160;B. HTTP. Im Gegensatz dazu ermöglicht das TCP-Protokoll die systemseitige Duplexkommunikation, ohne dass das Bindungselement für den Dienst zum Senden von Nachrichten an den Client benötigt wird. <br /><br /> Der Client muss eine Adresse für den Dienst verfügbar machen, um den Kontakt herzustellen und eine Verbindung aufzubauen. Die Clientadresse wird vom `ClientBaseAddress`-Attribut bereitgestellt.<br /><br /> Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|  
-|[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Gibt einen PNRP (Peer Name Resolution-Protokoll)-Peernamenresolver an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|  
-|[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Legt die Einstellung für WS-Reliable Messaging fest. Wenn dieses Element einer benutzerdefinierten Bindung hinzugefügt wird, kann der resultierende Kanal ExactlyOnce-Zustellungszusicherungen unterstützen. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Gibt die Sicherheitsoptionen für die benutzerdefinierte Bindung an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.SecurityElement>.|  
-|[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Gibt die Sicherheitseinstellungen für eine SSL-Streambindung an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|  
-|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Legt fest, dass die Bindung Transaktionsfluss und das vom `transactionProtocol`-Attribut zu verwendende Protokoll unterstützt. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|  
-|[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Gibt die Optionen für die Streamingsicherheit der benutzerdefinierten Bindung an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|  
-  
-### <a name="parent-elements"></a>Übergeordnete Elemente  
-  
-|Element|Beschreibung|  
-|-------------|-----------------|  
-|Bindungen|Enthält alle Bindungen für Windows Communication Foundation-Anwendungen.|  
-  
-## <a name="remarks"></a>Hinweise  
- Benutzerdefinierte Bindungen stellen Vollzugriff auf den WCF-Messagingstapel bereit. Speziell angepasste Bindungen können durch Hinzufügen der Konfigurationselemente für bestimmte Entitäten erstellt werden. Der Benutzer kann beispielsweise den Abschnitt `httpsTransport`, `reliableSession` und `security` zum Erstellen einer zuverlässigen und sicheren HTTPS-basierten Bindung kombinieren.  
-  
- Eine individuelle Bindung definiert den Nachrichtenstapel durch Angeben der Konfigurationselemente für Stapelelemente in der Reihenfolge des Stapels. Jedes Element definiert und konfiguriert das eine Element des Stapels. Es muss genau ein Transportelement in jeder benutzerdefinierten Bindung geben. Ohne dieses Element ist der Messagingstapel unvollständig.  
-  
- Die Reihenfolge der Elemente im Stapel ist von Belang, da sie der Reihenfolge entspricht, in der Vorgänge auf die Meldung angewendet werden. Die empfohlene Reihenfolge von Stapelelementen ist folgende:  
-  
-1.  Transaktionen (optional)  
-  
-2.  Zuverlässiges Messaging (optional)  
-  
-3.  Sicherheit (Security, optional)  
-  
-4.  Transport  
-  
-5.  Encoder (optional)  
-  
- Verwenden Sie eine benutzerdefinierte Bindung, wenn eine der vom System bereitgestellten Bindungen die Anforderungen für Ihren Dienst nicht erfüllt. Eine benutzerdefinierte Bindung kann beispielsweise verwendet werden, um die Nutzung eines neuen Transports oder eines neuen Encoders an einem Dienstendpunkt zu aktivieren.  
-  
- Eine benutzerdefinierte Bindung wird durch Verwendung einer der <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> aus einer Sammlung an Bindungselementen erstellt, die in einer spezifischen Reihenfolge "gestapelt" sind:  
-  
--   Oben ist ein optionales <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, das einen Transaktionsfluss ermöglicht.  
-  
--   Darauf folgt ein optionales <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>, das eine Sitzung und einen Sortiermechanismus bereitstellt, wie es in der WS-ReliableMessaging-Spezifikation definiert ist. Dieses Konzept einer Sitzung kann SOAP und Transportvermittler überqueren.  
-  
--   Darauf folgt ein optionales Sicherheitsbindungselement, das Sicherheitsfunktionen wie Autorisierung, Authentifizierung, Schutz und Vertraulichkeit bereitstellt. Die folgenden Sicherheitsbindungselemente werden von Windows Communication Foundation (WCF) bereitgestellt werden:  
-  
-    -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
-  
--   Darauf folgen die optionalen Nachrichtenmuster, die von den Bindungselementen spezifiziert werden:  
-  
--   <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>  
-  
--   Darauf folgen die optionalen Transport-Upgrades/unterstützenden Bindungselemente:  
-  
-    -   <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
-  
--   Darauf wiederum folgt ein erforderliches, Nachrichten codierendes Bindungselement. Sie können einen eigenen Transport verwenden oder die folgenden Nachrichten codierenden Bindungen:  
-  
-    -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
-  
--   Am Ende befindet sich ein erforderliches Transportelement. Sie können einen eigenen Transport oder eines der transportbindungselemente von Windows Communication Foundation (WCF):  
-  
-    -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
-  
-    -   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
-  
-    -   <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
-  
- In der folgenden Tabelle werden die Optionen für jede Ebene zusammengefasst.  
-  
-|Ebene|Optionen|Erforderlich|  
-|-----------|-------------|--------------|  
-|Transaktionsfluss|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Nein|  
-|Zuverlässigkeit|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Nein|  
-|Sicherheit|Symmetrisch, asymmetrisch, auf Transportebene|Nein|  
-|Formänderung|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Nein|  
-|Transport-Upgrades|SSL-Stream, Windows-Stream, Peerresolver|Nein|  
-|Codierung|Text, Binärdatei, MTOM, benutzerdefiniert|Ja|  
-|Transport|TCP, Named Pipes, HTTP, HTTPS, Typen der MSMQ, benutzerdefiniert|Ja|  
-  
- Zusätzlich können Sie Ihre eigenen Bindungselemente definieren und diese zwischen den vorangehenden definierten Ebenen einsetzen.  
-  
- Eine Erläuterung zur Verwendung eine benutzerdefinierten Bindung für eine vom System bereitgestellte Bindung zu ändern, finden Sie unter [Vorgehensweise: Anpassen einer vom System bereitgestellten Bindung](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
-    
-  
+```
+
+## <a name="attributes-and-elements"></a>Attribute und Elemente
+
+In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie übergeordnete Elemente beschrieben.
+
+### <a name="attributes"></a>Attribute
+
+|Attribut|Beschreibung|
+|---------------|-----------------|
+|closeTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Schließvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|
+|Name|Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält. Dieser Wert ist eine benutzerdefinierte Zeichenfolge, die als Identifikationszeichenfolge für die benutzerdefinierte Bindung fungiert. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|
+|openTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|
+|receiveTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|
+|sendTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|
+
+### <a name="child-elements"></a>Untergeordnete Elemente
+
+|Element|Beschreibung|
+|-------------|-----------------|
+|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Legt bidirektionales Messaging für die benutzerdefinierte Bindung fest. Das Element wird mit Transporten verwendet, die keine systemseitige Duplexkommunikation ermöglichen, z.&#160;B. HTTP. Im Gegensatz dazu ermöglicht das TCP-Protokoll die systemseitige Duplexkommunikation, ohne dass das Bindungselement für den Dienst zum Senden von Nachrichten an den Client benötigt wird. <br /><br /> Der Client muss eine Adresse für den Dienst verfügbar machen, um den Kontakt herzustellen und eine Verbindung aufzubauen. Die Clientadresse wird vom `ClientBaseAddress`-Attribut bereitgestellt.<br /><br /> Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
+|[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Gibt einen PNRP (Peer Name Resolution-Protokoll)-Peernamenresolver an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
+|[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Legt die Einstellung für WS-Reliable Messaging fest. Wenn dieses Element einer benutzerdefinierten Bindung hinzugefügt wird, kann der resultierende Kanal ExactlyOnce-Zustellungszusicherungen unterstützen. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Gibt die Sicherheitsoptionen für die benutzerdefinierte Bindung an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.SecurityElement>.|
+|[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Gibt die Sicherheitseinstellungen für eine SSL-Streambindung an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
+|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Legt fest, dass die Bindung Transaktionsfluss und das vom `transactionProtocol`-Attribut zu verwendende Protokoll unterstützt. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
+|[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Gibt die Optionen für die Streamingsicherheit der benutzerdefinierten Bindung an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
+
+### <a name="parent-elements"></a>Übergeordnete Elemente
+
+|Element|Beschreibung|
+|-------------|-----------------|
+|Bindungen|Enthält alle Bindungen für Windows Communication Foundation-Anwendungen.|
+
+## <a name="remarks"></a>Hinweise
+
+Benutzerdefinierte Bindungen stellen Vollzugriff auf den WCF-Messagingstapel bereit. Speziell angepasste Bindungen können durch Hinzufügen der Konfigurationselemente für bestimmte Entitäten erstellt werden. Der Benutzer kann beispielsweise den Abschnitt `httpsTransport`, `reliableSession` und `security` zum Erstellen einer zuverlässigen und sicheren HTTPS-basierten Bindung kombinieren.
+
+Eine individuelle Bindung definiert den Nachrichtenstapel durch Angeben der Konfigurationselemente für Stapelelemente in der Reihenfolge des Stapels. Jedes Element definiert und konfiguriert das eine Element des Stapels. Es muss genau ein Transportelement in jeder benutzerdefinierten Bindung geben. Ohne dieses Element ist der Messagingstapel unvollständig.
+
+Die Reihenfolge der Elemente im Stapel ist von Belang, da sie der Reihenfolge entspricht, in der Vorgänge auf die Meldung angewendet werden. Die empfohlene Reihenfolge von Stapelelementen ist folgende:
+
+1. Transaktionen (optional)
+
+2. Zuverlässiges Messaging (optional)
+
+3. Sicherheit (Security, optional)
+
+4. Transport
+
+5. Encoder (optional)
+
+Verwenden Sie eine benutzerdefinierte Bindung, wenn eine der vom System bereitgestellten Bindungen die Anforderungen für Ihren Dienst nicht erfüllt. Eine benutzerdefinierte Bindung kann beispielsweise verwendet werden, um die Nutzung eines neuen Transports oder eines neuen Encoders an einem Dienstendpunkt zu aktivieren.
+
+Eine benutzerdefinierte Bindung wird durch Verwendung einer der <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> aus einer Sammlung an Bindungselementen erstellt, die in einer spezifischen Reihenfolge "gestapelt" sind:
+
+- Oben ist ein optionales <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, das einen Transaktionsfluss ermöglicht.
+
+- Darauf folgt ein optionales <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>, das eine Sitzung und einen Sortiermechanismus bereitstellt, wie es in der WS-ReliableMessaging-Spezifikation definiert ist. Dieses Konzept einer Sitzung kann SOAP und Transportvermittler überqueren.
+
+- Darauf folgt ein optionales Sicherheitsbindungselement, das Sicherheitsfunktionen wie Autorisierung, Authentifizierung, Schutz und Vertraulichkeit bereitstellt. Die folgenden Sicherheitsbindungselemente werden von Windows Communication Foundation (WCF) bereitgestellt werden:
+
+    - <xref:System.ServiceModel.Channels.SecurityBindingElement>
+
+    - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
+
+    - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+
+    - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
+
+- Darauf folgen die optionalen Nachrichtenmuster, die von den Bindungselementen spezifiziert werden:
+
+- <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
+
+- Darauf folgen die optionalen Transport-Upgrades/unterstützenden Bindungselemente:
+
+    - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+
+    - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+
+    - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+
+- Darauf wiederum folgt ein erforderliches, Nachrichten codierendes Bindungselement. Sie können einen eigenen Transport verwenden oder die folgenden Nachrichten codierenden Bindungen:
+
+    - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+
+    - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
+
+    - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+
+- Am Ende befindet sich ein erforderliches Transportelement. Sie können einen eigenen Transport oder eines der transportbindungselemente von Windows Communication Foundation (WCF):
+
+    - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+
+    - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+
+    - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+
+    - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+
+    - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+
+    - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+
+    - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
+
+In der folgenden Tabelle werden die Optionen für jede Ebene zusammengefasst.
+
+|Ebene|Optionen|Erforderlich|
+|-----------|-------------|--------------|
+|Transaktionsfluss|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Nein|
+|Zuverlässigkeit|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Nein|
+|Sicherheit|Symmetrisch, asymmetrisch, auf Transportebene|Nein|
+|Formänderung|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Nein|
+|Transport-Upgrades|SSL-Stream, Windows-Stream, Peerresolver|Nein|
+|Codierung|Text, Binärdatei, MTOM, benutzerdefiniert|Ja|
+|Transport|TCP, Named Pipes, HTTP, HTTPS, Typen der MSMQ, benutzerdefiniert|Ja|
+
+Zusätzlich können Sie Ihre eigenen Bindungselemente definieren und diese zwischen den vorangehenden definierten Ebenen einsetzen.
+
+Eine Erläuterung zur Verwendung eine benutzerdefinierten Bindung für eine vom System bereitgestellte Bindung zu ändern, finden Sie unter [Vorgehensweise: Anpassen einer vom System bereitgestellten Bindung](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).
+
+
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.Configuration.BindingsSection>

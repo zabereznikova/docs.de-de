@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f3e1ba5fe58802e42bfaf60a98767591ec13e7c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510806"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366386"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Vorgehensweise: Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist
 Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentation Foundation (WPF) ist der von der eine eigenständige WPF-Anwendung gehostet wird.  
@@ -27,7 +27,7 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
   
 -   Kenntnisse in Bezug auf die Add-In-Modell von .NET Framework, einschließlich der Pipeline, add-Ins und Hostentwicklung. Wenn Sie mit diesen Begriffen nicht vertraut sind, finden Sie unter [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Ein Lernprogramm, das die Implementierung einer Pipeline, ein Add-in und einer hostanwendung veranschaulicht, finden Sie unter [Exemplarische Vorgehensweise: Erstellen von erweiterbaren Anwendungen](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
--   Kenntnisse in Bezug auf die WPF-Erweiterungen für die Add-In-Modell von .NET Framework. Finden Sie unter [Übersicht über das WPF-Add-Ins](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+-   Kenntnisse in Bezug auf die WPF-Erweiterungen für die Add-In-Modell von .NET Framework. Finden Sie unter [Übersicht über das WPF-Add-Ins](wpf-add-ins-overview.md).  
   
 ## <a name="example"></a>Beispiel  
  Um ein Add-in zu erstellen, die eine WPF-UI ist spezieller Code für die einzelnen Pipelinesegmente, das Add-in und die hostanwendung erforderlich.  
@@ -37,13 +37,13 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implementieren des Vertragspipelinesegments  
  Wenn ein Add-in eine Benutzeroberfläche ist, muss der Vertrag für das Add-in implementieren <xref:System.AddIn.Contract.INativeHandleContract>. Im Beispiel `IWPFAddInContract` implementiert <xref:System.AddIn.Contract.INativeHandleContract>, wie im folgenden Code gezeigt.  
   
- [!code-csharp[SimpleAddInIsAUISample#ContractCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#ContractCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/Contracts/IWPFAddInContract.cs#contractcode)]  
   
 <a name="AddInViewPipeline"></a>   
 ## <a name="implementing-the-add-in-view-pipeline-segment"></a>Implementieren des Add-In-Ansichtspipelinesegments  
  Da das Add-in, als eine Unterklasse von implementiert wird der <xref:System.Windows.FrameworkElement> Typ, der Add-In-Ansicht muss auch als Unterklasse <xref:System.Windows.FrameworkElement>. Der folgende Code zeigt die Add-In-Ansicht des Vertrags, als implementiert die `WPFAddInView` Klasse.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInViewCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInViews/WPFAddInView.cs#addinviewcode)]  
   
  Hier wird die Add-In-Ansicht von abgeleitet <xref:System.Windows.Controls.UserControl>. Die Benutzeroberflächen-Add-in sollte daher auch leiten Sie von <xref:System.Windows.Controls.UserControl>.  
   
@@ -51,12 +51,12 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
 ## <a name="implementing-the-add-in-side-adapter-pipeline-segment"></a>Implementieren des Add-In-seitigen Adapterpipelinesegments  
  Während der Vertrag ist eine <xref:System.AddIn.Contract.INativeHandleContract>, ist das Add-in eine <xref:System.Windows.FrameworkElement> (wie durch die Add-In-Ansichtspipelinesegment angegeben). Aus diesem Grund die <xref:System.Windows.FrameworkElement> konvertiert werden muss, um eine <xref:System.AddIn.Contract.INativeHandleContract> vor dem Überschreiten der Isolationsgrenze. Dieser Vorgang wird ausgeführt, durch den Add-In-seitigen Adapter durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, wie im folgenden Code gezeigt.  
   
- [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
+ [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- In der Add-In-Modell gibt, in dem ein Add-in eine Benutzeroberfläche zurück (finden Sie unter [Erstellen einer Add-In, dass eine Benutzeroberfläche zurückgibt](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)), konvertiert der Add-in Adapter die <xref:System.Windows.FrameworkElement> auf ein <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> muss auch in diesem Modell aufgerufen werden, obwohl Sie implementieren eine Methode, von dem Sie den Code für den Aufruf schreiben müssen. Hierzu überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> und Implementieren des aufrufende Codes <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Wenn der Code, der aufgerufen wird <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> erwartet eine <xref:System.AddIn.Contract.INativeHandleContract>. In diesem Fall ist der Aufrufer der hostseitige Adapter, der in einem nachfolgenden Unterabschnitt behandelt wird.  
+ In der Add-In-Modell gibt, in dem ein Add-in eine Benutzeroberfläche zurück (finden Sie unter [Erstellen einer Add-In, dass eine Benutzeroberfläche zurückgibt](how-to-create-an-add-in-that-returns-a-ui.md)), konvertiert der Add-in Adapter die <xref:System.Windows.FrameworkElement> auf ein <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> muss auch in diesem Modell aufgerufen werden, obwohl Sie implementieren eine Methode, von dem Sie den Code für den Aufruf schreiben müssen. Hierzu überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> und Implementieren des aufrufende Codes <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> Wenn der Code, der aufgerufen wird <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> erwartet eine <xref:System.AddIn.Contract.INativeHandleContract>. In diesem Fall ist der Aufrufer der hostseitige Adapter, der in einem nachfolgenden Unterabschnitt behandelt wird.  
   
 > [!NOTE]
->  Sie müssen auch überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> in diesem Modell, aktivieren die TAB-Taste zwischen der Benutzeroberfläche der hostanwendung und Add-in-Benutzeroberfläche. Weitere Informationen finden Sie unter "WPF-Add-In-Einschränkungen" in [Übersicht über WPF-Add-Ins](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  
+>  Sie müssen auch überschreiben <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> in diesem Modell, aktivieren die TAB-Taste zwischen der Benutzeroberfläche der hostanwendung und Add-in-Benutzeroberfläche. Weitere Informationen finden Sie unter "WPF-Add-In-Einschränkungen" in [Übersicht über WPF-Add-Ins](wpf-add-ins-overview.md).  
   
  Da der Add-In-seitige Adapter eine Schnittstelle, die implementiert von abgeleitet <xref:System.AddIn.Contract.INativeHandleContract>, müssen Sie auch implementieren <xref:System.AddIn.Contract.INativeHandleContract.GetHandle%2A>, obwohl dies ignoriert beim <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> überschrieben wird.  
   
@@ -106,4 +106,4 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
   
 ## <a name="see-also"></a>Siehe auch
 - [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Übersicht über WPF-Add-Ins](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+- [Übersicht über WPF-Add-Ins](wpf-add-ins-overview.md)

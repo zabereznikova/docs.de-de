@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-ms.openlocfilehash: f595e75c90ebef480200e9210a57087eb4d20e87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd3c99f22a1d097c82494ba6eff344820162ed87
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608861"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356715"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Überlegungen zur Leistung für die Interoperabilität zwischen Direct3D9 und WPF
 Sie können die Direct3D9-Inhalt hosten, mit der <xref:System.Windows.Interop.D3DImage> Klasse. Hosten von Direct3D9-Inhalt, kann die Leistung Ihrer Anwendung beeinträchtigen. Dieses Thema beschreibt bewährte Methoden zum Optimieren der Leistung beim Hosten von Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwendung. Diese bewährten Methoden enthalten, wie Sie mit <xref:System.Windows.Interop.D3DImage> und best Practices, wenn Sie Windows Vista, Windows XP verwenden und mit mehreren Monitoren angezeigt.  
   
 > [!NOTE]
->  Codebeispiele, die diese bewährten Methoden zu veranschaulichen, finden Sie unter [zwischen WPF und Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+>  Codebeispiele, die diese bewährten Methoden zu veranschaulichen, finden Sie unter [zwischen WPF und Direct3D9](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="use-d3dimage-sparingly"></a>Verwenden Sie nur selten D3DImage  
  Direct3D9-Inhalt gehostet wird, einem <xref:System.Windows.Interop.D3DImage> Instanz wird nicht gerendert, so schnell wie in einer reinen Direct3D-Anwendung. Kopieren der Oberfläche und leeren des Befehlspuffers können kostspielige Vorgänge sein. Als die Anzahl der <xref:System.Windows.Interop.D3DImage> Instanzen erhöht, weitere leeren auftritt und die Leistung beeinträchtigt wird. Daher sollten Sie verwenden <xref:System.Windows.Interop.D3DImage> sparsam.  
@@ -47,7 +47,7 @@ Sie können die Direct3D9-Inhalt hosten, mit der <xref:System.Windows.Interop.D3
 ## <a name="best-practices-for-multi-monitor-displays"></a>Bewährte Methoden für mehrere Monitore anzeigen  
  Wenn Sie einen Computer, der über mehrere Monitore verfügt verwenden, sollten Sie die zuvor beschriebenen bewährten Methoden befolgen. Es gibt auch einige Leistungsaspekte für eine Konfiguration mit mehreren Monitoren.  
   
- Wenn Sie den Hintergrundpuffer erstellen, wird es auf einem bestimmten Gerät und der Adapter erstellt, aber WPF möglicherweise Frontpuffer für alle Adapter angezeigt. Adapter zum Aktualisieren des Frontpuffers Kopiervorgang kann sehr teuer sein. Unter Windows Vista, die konfiguriert ist, um die WDDM mit mehreren Videokarten und Verwenden einer `IDirect3DDevice9Ex` Gerät Frontpuffer auf einen anderen Adapter, aber dennoch die gleichen Grafikkarte vorhanden ist, keine Leistungseinbußen. Unter Windows XP und der XDDM mit mehreren Videokarten ist es jedoch beträchtliche Leistungseinbußen bei der Frontpuffer auf einen anderen Adapter als Hintergrundpuffer angezeigt wird. Weitere Informationen finden Sie unter [zwischen WPF und Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
+ Wenn Sie den Hintergrundpuffer erstellen, wird es auf einem bestimmten Gerät und der Adapter erstellt, aber WPF möglicherweise Frontpuffer für alle Adapter angezeigt. Adapter zum Aktualisieren des Frontpuffers Kopiervorgang kann sehr teuer sein. Unter Windows Vista, die konfiguriert ist, um die WDDM mit mehreren Videokarten und Verwenden einer `IDirect3DDevice9Ex` Gerät Frontpuffer auf einen anderen Adapter, aber dennoch die gleichen Grafikkarte vorhanden ist, keine Leistungseinbußen. Unter Windows XP und der XDDM mit mehreren Videokarten ist es jedoch beträchtliche Leistungseinbußen bei der Frontpuffer auf einen anderen Adapter als Hintergrundpuffer angezeigt wird. Weitere Informationen finden Sie unter [zwischen WPF und Direct3D9](wpf-and-direct3d9-interoperation.md).  
   
 ## <a name="performance-summary"></a>Zusammenfassung der cloudhostleistung von  
  Die folgende Tabelle zeigt die Leistung bei der Aktualisierung Frontpuffer als Funktion der Betriebssystem-Pixelformat und Surface Lockability. Die Frontpuffer und Hintergrundpuffer wird angenommen, dass auf dem Adapter. Je nach der Konfiguration des Adapters sind Hardwareupdates in der Regel viel schneller ist als Software-Updates.  
@@ -61,6 +61,6 @@ Sie können die Direct3D9-Inhalt hosten, mit der <xref:System.Windows.Interop.D3
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Interop.D3DImage>
-- [Interaktion zwischen WPF und Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)
-- [Exemplarische Vorgehensweise: Erstellen von Direct3D9-Inhalten zum Hosten in WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Exemplarische Vorgehensweise: Hosten von Direct3D9-Inhalt in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Interaktion zwischen WPF und Direct3D9](wpf-and-direct3d9-interoperation.md)
+- [Exemplarische Vorgehensweise: Erstellen von Direct3D9-Inhalten zum Hosten in WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Exemplarische Vorgehensweise: Hosten von Direct3D9-Inhalt in WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
-ms.openlocfilehash: 9e2cd55d0d5eb453ad5d29b707a14b9894d40089
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1274724e1cd93f5788840978b583e4bf05c06bb2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493702"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358560"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Eigenschaftenzuordnung von Windows Forms und WPF
 Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Technologien verfügen über zwei ähnliche, aber unterschiedliche Eigenschaft Modelle. *Eigenschaftenzuordnung* unterstützt die Interoperation zwischen beiden Architekturen und bietet die folgenden Funktionen:  
@@ -49,7 +49,7 @@ Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)
   
  Angefügte Eigenschaften auf Container-Elemente werden vollständig unterstützt, indem die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element.  
   
- Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem WindowsFormsHost-Element](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
+ Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem WindowsFormsHost-Element](walkthrough-mapping-properties-using-the-windowsformshost-element.md).  
   
 ## <a name="updates-to-parent-properties"></a>Updates für die Eigenschaften für übergeordnetes Element  
  Die meisten Eigenschaften der übergeordneten Änderungen bewirken, dass Benachrichtigungen an das gehostete untergeordnete Steuerelement. Die folgende Liste beschreibt die Eigenschaften, die keine Benachrichtigungen verursachen, wenn sich ihre Werte ändern.  
@@ -95,9 +95,9 @@ Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)
   
 -   Speicherort  
   
--   Margin  
+-   Rand  
   
--   Textabstand  
+-   Abstand  
   
 -   Übergeordnetes Element  
   
@@ -113,11 +113,11 @@ Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)
   
 -   Text  
   
--   Visible  
+-   Sichtbar  
   
  Die <xref:System.Windows.Forms.Integration.ElementHost> -Steuerelement übersetzt Standard [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Eigenschaften, die ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Entsprechungen mithilfe der folgenden Übersetzungstabelle.  
   
- Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem ElementHost-Steuerelement](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md).  
+ Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem ElementHost-Steuerelement](walkthrough-mapping-properties-using-the-elementhost-control.md).  
   
 |Hosten von Windows Forms|Windows Presentation Foundation|Interoperations-Verhalten|  
 |---------------------------|-------------------------------------|-----------------------------|  
@@ -127,8 +127,8 @@ Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)
 |<xref:System.Windows.Forms.Control.Cursor%2A><br /><br /> (<xref:System.Windows.Forms.Cursor?displayProperty=nameWithType>)|<xref:System.Windows.FrameworkElement.Cursor%2A><br /><br /> (<xref:System.Windows.Input.Cursor?displayProperty=nameWithType>)|Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] standard Cursor wird in der entsprechenden übersetzt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] standard Cursor. Wenn die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Standardcursor ist, ist die Standardpriorität zugewiesen ist.|  
 |<xref:System.Windows.Forms.Control.Enabled%2A>|<xref:System.Windows.UIElement.IsEnabled%2A>|Wenn <xref:System.Windows.Forms.Control.Enabled%2A> festgelegt ist, wird die <xref:System.Windows.Forms.Integration.ElementHost> -Steuerelement legt die <xref:System.Windows.UIElement.IsEnabled%2A> Eigenschaft für das gehostete Element.|  
 |<xref:System.Windows.Forms.Control.Font%2A><br /><br /> (<xref:System.Drawing.Font?displayProperty=nameWithType>)|<xref:System.Windows.Controls.Control.FontFamily%2A><br /><br /> <xref:System.Windows.Controls.Control.FontSize%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStretch%2A><br /><br /> <xref:System.Windows.Controls.Control.FontStyle%2A><br /><br /> <xref:System.Windows.Controls.Control.FontWeight%2A>|Die <xref:System.Windows.Forms.Control.Font%2A> Wert wird in einen entsprechenden Satz von übersetzt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Schriftarteigenschaften.|  
-|<xref:System.Drawing.Font.Bold%2A>|<xref:System.Windows.Controls.Control.FontWeight%2A> für das gehostete element|Wenn<xref:System.Drawing.Font.Bold%2A> `true` ist, wird <xref:System.Windows.Controls.Control.FontWeight%2A> auf <xref:System.Windows.FontWeights.Bold%2A> festgelegt.<br /><br /> Wenn<xref:System.Drawing.Font.Bold%2A> `false` ist, wird <xref:System.Windows.Controls.Control.FontWeight%2A> auf <xref:System.Windows.FontWeights.Normal%2A> festgelegt.|  
-|<xref:System.Drawing.Font.Italic%2A>|<xref:System.Windows.Controls.Control.FontStyle%2A> für das gehostete element|Wenn<xref:System.Drawing.Font.Italic%2A> `true` ist, wird <xref:System.Windows.Controls.Control.FontStyle%2A> auf <xref:System.Windows.FontStyles.Italic%2A> festgelegt.<br /><br /> Wenn<xref:System.Drawing.Font.Italic%2A> `false` ist, wird <xref:System.Windows.Controls.Control.FontStyle%2A> auf <xref:System.Windows.FontStyles.Normal%2A> festgelegt.|  
+|<xref:System.Drawing.Font.Bold%2A>|<xref:System.Windows.Controls.Control.FontWeight%2A> für das gehostete element|Wenn<xref:System.Drawing.Font.Bold%2A>`true` ist, wird <xref:System.Windows.Controls.Control.FontWeight%2A> auf <xref:System.Windows.FontWeights.Bold%2A> festgelegt.<br /><br /> Wenn<xref:System.Drawing.Font.Bold%2A>`false` ist, wird <xref:System.Windows.Controls.Control.FontWeight%2A> auf <xref:System.Windows.FontWeights.Normal%2A> festgelegt.|  
+|<xref:System.Drawing.Font.Italic%2A>|<xref:System.Windows.Controls.Control.FontStyle%2A> für das gehostete element|Wenn<xref:System.Drawing.Font.Italic%2A>`true` ist, wird <xref:System.Windows.Controls.Control.FontStyle%2A> auf <xref:System.Windows.FontStyles.Italic%2A> festgelegt.<br /><br /> Wenn<xref:System.Drawing.Font.Italic%2A>`false` ist, wird <xref:System.Windows.Controls.Control.FontStyle%2A> auf <xref:System.Windows.FontStyles.Normal%2A> festgelegt.|  
 |<xref:System.Drawing.Font.Strikeout%2A>|<xref:System.Windows.TextDecorations> für das gehostete element|Gilt nur beim Hosten einer <xref:System.Windows.Controls.TextBlock> Steuerelement.|  
 |<xref:System.Drawing.Font.Underline%2A>|<xref:System.Windows.TextDecorations> für das gehostete element|Gilt nur beim Hosten einer <xref:System.Windows.Controls.TextBlock> Steuerelement.|  
 |<xref:System.Windows.Forms.Control.RightToLeft%2A><br /><br /> (<xref:System.Windows.Forms.RightToLeft?displayProperty=nameWithType>)|<xref:System.Windows.FrameworkElement.FlowDirection%2A><br /><br /> (<xref:System.Windows.FlowDirection>)|<xref:System.Windows.Forms.RightToLeft.No> wird <xref:System.Windows.FlowDirection.LeftToRight> zugeordnet.<br /><br /> <xref:System.Windows.Forms.RightToLeft.Yes> wird <xref:System.Windows.FlowDirection.RightToLeft> zugeordnet.|  
@@ -137,7 +137,7 @@ Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
-- [Interaktion zwischen WPF und Windows Forms](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)
-- [Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem WindowsFormsHost-Element](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem ElementHost-Steuerelement](../../../../docs/framework/wpf/advanced/walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [Interaktion zwischen WPF und Win32](wpf-and-win32-interoperation.md)
+- [Interaktion zwischen WPF und Windows Forms](wpf-and-windows-forms-interoperation.md)
+- [Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem WindowsFormsHost-Element](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [Exemplarische Vorgehensweise: Zuordnen von Eigenschaften mit dem ElementHost-Steuerelement](walkthrough-mapping-properties-using-the-elementhost-control.md)

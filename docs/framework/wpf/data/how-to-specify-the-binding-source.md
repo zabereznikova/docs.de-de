@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: f2e3fa3352da85c7da394a582cfcd058fe3fadf4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577125"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356720"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Vorgehensweise: Angeben der Bindungsquelle
 Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem Sie Ihre Daten abrufen. In diesem Thema werden die verschiedenen Methoden zur Angabe der Bindungsquelle beschrieben.  
@@ -24,16 +24,16 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
   
  Im folgenden Beispiel wird der Datenkontext für das Stammelement der Anwendung eingerichtet. Dies ermöglicht es allen untergeordneten Elementen, diesen Datenkontext zu erben. Die Daten für die Bindung werden aus einer benutzerdefinierten Datenklasse abgerufen (`NetIncome`), auf die direkt über eine Zuordnung verwiesen wird und die den Ressourcenschlüssel `incomeDataSource` erhält.  
   
- [!code-xaml[DirectionalBinding#DataContext1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
-[!code-xaml[DirectionalBinding#DataContext2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
+ [!code-xaml[DirectionalBinding#DataContext1](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext1)]  
+[!code-xaml[DirectionalBinding#DataContext2](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/Page1.xaml#datacontext2)]  
   
  Im folgenden Beispiel wird die Definition der `NetIncome`-Klasse veranschaulicht.  
   
- [!code-csharp[DirectionalBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
- [!code-vb[DirectionalBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
+ [!code-csharp[DirectionalBinding#DataObject](~/samples/snippets/csharp/VS_Snippets_Wpf/DirectionalBinding/CSharp/billsdata.cs#dataobject)]
+ [!code-vb[DirectionalBinding#DataObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DirectionalBinding/VisualBasic/NetIncome.vb#dataobject)]  
   
 > [!NOTE]
->  Im vorherigen Beispiel wird das Objekt im Markup instanziiert und als Ressource verwendet. Wenn Sie eine Bindung zu einem Objekt erstellen möchten, das bereits im Code instanziiert wurde, müssen Sie die `DataContext`-Eigenschaft programmgesteuert festlegen. Ein Beispiel finden Sie unter [Bereitstellen von Daten, um diese in XAML zu binden](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md).  
+>  Im vorherigen Beispiel wird das Objekt im Markup instanziiert und als Ressource verwendet. Wenn Sie eine Bindung zu einem Objekt erstellen möchten, das bereits im Code instanziiert wurde, müssen Sie die `DataContext`-Eigenschaft programmgesteuert festlegen. Ein Beispiel finden Sie unter [Bereitstellen von Daten, um diese in XAML zu binden](how-to-make-data-available-for-binding-in-xaml.md).  
   
  Wenn Sie alternativ die Quelle einzelner Bindungen explizit festlegen möchten, stehen Ihnen die folgenden Optionen zur Verfügung. Diese haben Vorrang gegenüber dem geerbten Datenkontext.  
   
@@ -46,7 +46,7 @@ Bei der Datenbindung verweist das Bindungsquellenobjekt auf das Objekt, aus dem 
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
-- [Vererbung von Eigenschaftswerten](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)
-- [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Übersicht über Bindungsdeklarationen](../../../../docs/framework/wpf/data/binding-declarations-overview.md)
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [Vererbung von Eigenschaftswerten](../advanced/property-value-inheritance.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht über Bindungsdeklarationen](binding-declarations-overview.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

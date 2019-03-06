@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: afa7801709d733ed40389f240fa5d92a2557c7a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ccba42c3e16fdda73c087afde99e9864dc4ab0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732075"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351930"
 ---
 # <a name="how-to-bind-to-a-method"></a>Vorgehensweise: Binden an eine Methode
 Das folgende Beispiel zeigt, wie zum Binden an eine Methode mit <xref:System.Windows.Data.ObjectDataProvider>.  
@@ -19,18 +19,18 @@ Das folgende Beispiel zeigt, wie zum Binden an eine Methode mit <xref:System.Win
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel ist `TemperatureScale` eine Klasse, die über eine `ConvertTemp`-Methode verfügt. Auf Grundlage von zwei Parametern (einem des Typs `double` und einem des `enum`-Typs `TempType)`) konvertiert diese Methode den vorgegebenen Wert von einer Temperaturskala in eine andere. Im folgenden Beispiel eine <xref:System.Windows.Data.ObjectDataProvider> wird zum Instanziieren der `TemperatureScale` Objekt. Die `ConvertTemp`-Methode wird mit zwei angegebenen Parametern aufgerufen.  
   
- [!code-xaml[BindToMethod#WindowResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#windowresources)]  
+ [!code-xaml[BindToMethod#WindowResources](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#windowresources)]  
   
  Nun da die Methode als Ressource verfügbar ist, können Sie Bindungen an ihre Ergebnisse erstellen. Im folgenden Beispiel die <xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft der <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> von der <xref:System.Windows.Controls.ComboBox> an die beiden Parameter der Methode gebunden sind. Dies ermöglicht Benutzern, die zu konvertierende Temperatur sowie die Temperaturskala anzugeben, aus der konvertiert werden soll. Beachten Sie, dass <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A> nastaven NA hodnotu `true` , da wir eine Bindung der <xref:System.Windows.Data.ObjectDataProvider.MethodParameters%2A> Eigenschaft der <xref:System.Windows.Data.ObjectDataProvider> -Instanz und nicht die Eigenschaften des Objekts eingeschlossen werden, indem Sie die <xref:System.Windows.Data.ObjectDataProvider> (der `TemperatureScale` Objekt).  
   
  Die <xref:System.Windows.Controls.ContentControl.Content%2A> des letzten <xref:System.Windows.Controls.Label> aktualisiert, wenn der Benutzer den Inhalt des ändert die <xref:System.Windows.Controls.TextBox> oder die Auswahl für die <xref:System.Windows.Controls.ComboBox>.  
   
- [!code-xaml[BindToMethod#UI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#ui)]  
+ [!code-xaml[BindToMethod#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToMethod/CS/Window1.xaml#ui)]  
   
  Der Konverter `DoubleToString` nimmt einen Double-Wert und erstellt daraus in eine Zeichenfolge in die <xref:System.Windows.Data.IValueConverter.Convert%2A> Richtung (von der Bindungsquelle zum Bindungsziel, d.h. die <xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft) und konvertiert ein `string` auf eine `double` in die <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> Richtung.  
   
  Die `InvalidationCharacterRule` ist eine <xref:System.Windows.Controls.ValidationRule> , die nach ungültigen Zeichen sucht. Die Standardvorlage für die Fehler, die einen roten Rahmen ist rund um die <xref:System.Windows.Controls.TextBox>, angezeigt wird, um Benutzer zu benachrichtigen, wenn der Eingabewert nicht um einen double-Wert ist.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
-- [Binden an eine Enumeration](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Binden an eine Enumeration](how-to-bind-to-an-enumeration.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
 ms.openlocfilehash: b2023370ee248e999514090e57531eafb301c616
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759040"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377197"
 ---
 # <a name="wsdualhttpbinding"></a>\<wsDualHttpBinding>
 Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge oder für die Kommunikation über SOAP-Vermittler geeignet ist.  
@@ -95,7 +95,7 @@ Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge
   
  Diese Bindung kann zur zuverlässigen Kommunikation über einen oder mehrere SOAP-Vermittler verwendet werden.  
   
- Diese Bindung generiert standardmäßig einen Laufzeitstapel mit WS-ReliableMessaging für die Zuverlässigkeit, WS-Security für die Nachrichtensicherheit und -authentifizierung, HTTP für die Nachrichtenübertragung und Kodierung von Text-/XML-Nachrichten.  
+ Diese Bindung generiert standardmäßig einen Laufzeitstapel mit WS-ReliableMessaging für die Zuverlässigkeit, WS-Security für die Nachrichtensicherheit und –authentifizierung, HTTP für die Nachrichtenübertragung und Kodierung von Text-/XML-Nachrichten.  
   
 ## <a name="example"></a>Beispiel  
   

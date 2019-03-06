@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ListView controls [WPF], sorting GridView columns
 - GridView controls [WPF], ListView control
 ms.assetid: 4865d720-d147-40ed-83a7-af7587f8aad8
-ms.openlocfilehash: 2d0cca89d906a60a3f7072de27bc54b7a869a01e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b636842b1d41e17b09f02b7b9a6f7aa47eb4cdd1
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694086"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365411"
 ---
 # <a name="how-to-sort-a-gridview-column-when-a-header-is-clicked"></a>Vorgehensweise: Sortieren einer GridView-Spalte beim Klicken auf einen Header
 Dieses Beispiel zeigt, wie Sie erstellen eine <xref:System.Windows.Controls.ListView> -Steuerelement, implementiert eine <xref:System.Windows.Controls.GridView> anzeigen, Modus und Sortierungen, die die Daten zu Inhalt, wenn ein Benutzer einen Spaltenheader klickt.  
@@ -226,6 +226,6 @@ End Sub
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Übersicht über ListView](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [Übersicht über GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [Übersicht über ListView](listview-overview.md)
+- [Übersicht über GridView](gridview-overview.md)
+- [Themen zu Vorgehensweisen](listview-how-to-topics.md)

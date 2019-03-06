@@ -3,11 +3,11 @@ title: <security> von <wsHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8658b162-2ddf-4162-a869-aa517a42288a
 ms.openlocfilehash: 0de9ade585a2170aa1def9898581aedddc651bd7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258452"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366087"
 ---
 # <a name="security-of-wshttpbinding"></a>\<security> of \<wsHttpBinding>
 Gibt die Sicherheitsfunktionen von der [ \<WsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -42,7 +42,7 @@ Gibt die Sicherheitsfunktionen von der [ \<WsHttpBinding >](../../../../../docs/
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|mode|-   Optional. Gibt den angewendeten Sicherheitstyp an. Die Standardeinstellung ist `Message`.<br />– Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
+|Modus|-   Optional. Gibt den angewendeten Sicherheitstyp an. Die Standardeinstellung ist `Message`.<br />– Dieses Attribut ist vom Typ <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Mode-Attribut  
   

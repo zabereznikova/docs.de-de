@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-ms.openlocfilehash: e4c238955cd9ad2fd24a476b6b61165829a2473d
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 68003943041fe0ba405eff1236c43a8e7e9c2b71
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745819"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356831"
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Das Freihandobjektmodell: Windows Forms und COM im Vergleich zu WPF
 
@@ -32,8 +32,8 @@ Es gibt im Wesentlichen drei Plattformen, die Freihandeingaben zu unterstützen:
   
 |Zu diesem Zweck...|Auf der WPF-Plattform...|Auf den Windows Forms/COM-Plattformen...|  
 |-----------------|--------------------------|------------------------------------------|  
-|Hinzufügen eines Steuerelements Freihandeingaben zu einer Anwendung|Finden Sie unter [erste Schritte mit Freihandeingaben](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md).|Finden Sie unter [automatisch Ansprüche bilden, Beispiel](/windows/desktop/tablet/auto-claims-form-sample)|  
-|Aktivieren von Freihandeingaben auf einem benutzerdefinierten Steuerelement|Finden Sie unter [erstellen einen in Freihand gezeichneten Steuerelements Eingabe](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md).|Finden Sie unter [Ink-Beispiel für die Zwischenablage](/windows/desktop/tablet/ink-clipboard-sample).|  
+|Hinzufügen eines Steuerelements Freihandeingaben zu einer Anwendung|Finden Sie unter [erste Schritte mit Freihandeingaben](getting-started-with-ink.md).|Finden Sie unter [automatisch Ansprüche bilden, Beispiel](/windows/desktop/tablet/auto-claims-form-sample)|  
+|Aktivieren von Freihandeingaben auf einem benutzerdefinierten Steuerelement|Finden Sie unter [erstellen einen in Freihand gezeichneten Steuerelements Eingabe](creating-an-ink-input-control.md).|Finden Sie unter [Ink-Beispiel für die Zwischenablage](/windows/desktop/tablet/ink-clipboard-sample).|  
   
 ## <a name="ink-data"></a>Freihanddaten  
  Auf der Windows Forms und COM-Plattform [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)), [Microsoft.Ink.InkOverlay](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90)), [Microsoft.Ink.InkEdit](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552265(v=vs.90)), und [ Microsoft.Ink.InkPicture](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583740(v=vs.90)) jedes machen eine [Microsoft.Ink.Ink](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583670(v=vs.90)) Objekt. Die [Microsoft.Ink.Ink](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583670(v=vs.90)) Objekt enthält die Daten für eine oder mehrere [Microsoft.Ink.Stroke](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552692(v=vs.90)) Objekte und stellt allgemeine Methoden und Eigenschaften zum Verwalten und ändern die Striche.  Die [Microsoft.Ink.Ink](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583670(v=vs.90)) -Objekt verwaltet die Lebensdauer der Striche enthält, die [Microsoft.Ink.Ink](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583670(v=vs.90)) -Objekt erstellt und löscht die Striche, die dieser besitzt.  Jede [Microsoft.Ink.Stroke](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552692(v=vs.90)) verfügt über einen Bezeichner, der eindeutig innerhalb des übergeordneten [Microsoft.Ink.Ink](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583670(v=vs.90)) Objekt.  
@@ -42,11 +42,11 @@ Es gibt im Wesentlichen drei Plattformen, die Freihandeingaben zu unterstützen:
   
  Die folgenden zwei Abbildungen werden die Objektmodelle von Freihandeingaben Daten verglichen.  Auf der Windows Forms und COM-Plattform die [Microsoft.Ink.Ink](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583670(v=vs.90)) Objekt schränkt die Lebensdauer des der [Microsoft.Ink.Stroke](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552692(v=vs.90)) Objekte und die Stift-Pakete, die zu den einzelnen Strichen gehören.  Mindestens zwei Striche können verweisen, dasselbe [Microsoft.Ink.DrawingAttributes](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583636(v=vs.90)) Objekt, wie in der folgenden Abbildung gezeigt.  
   
- ![Diagramm des Freihandeingabe-Objektmodells für COM-&#47;Winforms. ](../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
+ ![Diagramm des Freihandeingabe-Objektmodells für COM-&#47;Winforms. ](./media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
   
  Auf der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], die jeweils <xref:System.Windows.Ink.Stroke?displayProperty=nameWithType> ist ein Objekt von common Language Runtime, die vorhanden ist, solange ein einen Verweis darauf verfügt.  Jede <xref:System.Windows.Ink.Stroke> Verweise ein <xref:System.Windows.Input.StylusPointCollection> und <xref:System.Windows.Ink.DrawingAttributes?displayProperty=nameWithType> -Objekt, das common Language Runtime-Objekte auch sind.  
   
- ![Diagramm des Freihandeingabe-Objektmodells für WPF. ](../../../../docs/framework/wpf/advanced/media/ink-wpfinkobjectmodel.png "Ink_WPFInkObjectModel")  
+ ![Diagramm des Freihandeingabe-Objektmodells für WPF. ](./media/ink-wpfinkobjectmodel.png "Ink_WPFInkObjectModel")  
   
  Die folgende Tabelle vergleicht, wie einige häufige Aufgaben für die [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -Plattform und die Plattformen Windows Forms und COM.  
   
@@ -62,44 +62,44 @@ Es gibt im Wesentlichen drei Plattformen, die Freihandeingaben zu unterstützen:
 ### <a name="sharing-ink-between-platforms"></a>Freigeben von Freihandeingaben auf verschiedenen Plattformen  
  Obwohl die Plattformen unterschiedliche Objektmodelle für die Freihandeingaben Daten verfügen, ist die Freigabe von Daten zwischen den Plattformen sehr einfach. In den folgenden Beispielen Freihandeingaben aus einer Windows Forms-Anwendung gespeichert und in einer Windows Presentation Foundation-Anwendung geladen.  
   
- [!code-csharp[WinFormWPFInk#UsingWinforms](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#usingwinforms)]
- [!code-vb[WinFormWPFInk#UsingWinforms](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#usingwinforms)]  
-[!code-csharp[WinFormWPFInk#SaveWinforms](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#savewinforms)]
-[!code-vb[WinFormWPFInk#SaveWinforms](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#savewinforms)]  
+ [!code-csharp[WinFormWPFInk#UsingWinforms](~/samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#usingwinforms)]
+ [!code-vb[WinFormWPFInk#UsingWinforms](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#usingwinforms)]  
+[!code-csharp[WinFormWPFInk#SaveWinforms](~/samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#savewinforms)]
+[!code-vb[WinFormWPFInk#SaveWinforms](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#savewinforms)]  
   
- [!code-csharp[WinFormWPFInk#UsingWPF](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#usingwpf)]
- [!code-vb[WinFormWPFInk#UsingWPF](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#usingwpf)]  
-[!code-csharp[WinFormWPFInk#LoadWPF](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#loadwpf)]
-[!code-vb[WinFormWPFInk#LoadWPF](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#loadwpf)]  
+ [!code-csharp[WinFormWPFInk#UsingWPF](~/samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#usingwpf)]
+ [!code-vb[WinFormWPFInk#UsingWPF](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#usingwpf)]  
+[!code-csharp[WinFormWPFInk#LoadWPF](~/samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#loadwpf)]
+[!code-vb[WinFormWPFInk#LoadWPF](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#loadwpf)]  
   
  In den folgenden Beispielen Freihandeingaben aus einem Windows Presentation Foundation-Anwendung gespeichert und in einer Windows Forms-Anwendung geladen.  
   
- [!code-csharp[WinFormWPFInk#UsingWPF](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#usingwpf)]
- [!code-vb[WinFormWPFInk#UsingWPF](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#usingwpf)]  
-[!code-csharp[WinFormWPFInk#SaveWPF](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#savewpf)]
-[!code-vb[WinFormWPFInk#SaveWPF](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#savewpf)]  
+ [!code-csharp[WinFormWPFInk#UsingWPF](~/samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#usingwpf)]
+ [!code-vb[WinFormWPFInk#UsingWPF](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#usingwpf)]  
+[!code-csharp[WinFormWPFInk#SaveWPF](~/samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#savewpf)]
+[!code-vb[WinFormWPFInk#SaveWPF](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#savewpf)]  
   
- [!code-csharp[WinFormWPFInk#UsingWinforms](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#usingwinforms)]
- [!code-vb[WinFormWPFInk#UsingWinforms](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#usingwinforms)]  
-[!code-csharp[WinFormWPFInk#LoadWinforms](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#loadwinforms)]
-[!code-vb[WinFormWPFInk#LoadWinforms](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#loadwinforms)]
+ [!code-csharp[WinFormWPFInk#UsingWinforms](~/samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#usingwinforms)]
+ [!code-vb[WinFormWPFInk#UsingWinforms](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#usingwinforms)]  
+[!code-csharp[WinFormWPFInk#LoadWinforms](~/samples/snippets/csharp/VS_Snippets_Wpf/WinformWPFInk/CSharp/Program.cs#loadwinforms)]
+[!code-vb[WinFormWPFInk#LoadWinforms](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#loadwinforms)]
 ## <a name="events-from-the-tablet-pen"></a>Ereignisse, die vom Tablettstift  
 
  Die [Microsoft.Ink.InkOverlay](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90)), [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)), und [Microsoft.Ink.InkPicture](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583740(v=vs.90)) empfangen von Ereignissen auf dem Windows Forms und COM-Plattformen bei der der Benutzer Eingaben pen-Daten. Die [Microsoft.Ink.InkOverlay](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90)) oder [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90)) für ein Fenster oder ein Steuerelement angefügt ist, und können die Ereignisse abonnieren, durch die Tabletteingabedaten ausgelöst. Der Thread, der auf dem diese Ereignisse auftreten, hängt davon ab, ob die Ereignisse, mit einem Stift, Maus ausgelöst werden, oder programmgesteuert. Weitere Informationen zu threading in Bezug auf diese Ereignisse finden Sie unter [Allgemeines Threading](/windows/desktop/tablet/general-threading-considerations) und [Threads auf das Auslösen eines Ereignisses kann](/windows/desktop/tablet/threads-on-which-an-event-can-fire).  
   
- Auf der Windows Presentation Foundation-Plattform die <xref:System.Windows.UIElement> -Klasse verfügt über Ereignisse für Stifteingaben. Dies bedeutet, dass jedes Steuerelement den vollständigen Satz von Stift-Ereignisse verfügbar macht.  Die Stiftereignisse besitzen tunneling/bubbling-Ereignis-Paare und immer auf dem Thread der Anwendung erfolgen.  Weitere Informationen finden Sie unter [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
+ Auf der Windows Presentation Foundation-Plattform die <xref:System.Windows.UIElement> -Klasse verfügt über Ereignisse für Stifteingaben. Dies bedeutet, dass jedes Steuerelement den vollständigen Satz von Stift-Ereignisse verfügbar macht.  Die Stiftereignisse besitzen tunneling/bubbling-Ereignis-Paare und immer auf dem Thread der Anwendung erfolgen.  Weitere Informationen finden Sie unter [Übersicht über Routingereignisse](routed-events-overview.md).  
   
  Das folgende Diagramm zeigt vergleicht die Objektmodelle für die Klassen, die Stiftereignisse auslösen. Das Windows Presentation Foundation-Objektmodell zeigt nur die bubbling-Ereignisse, nicht die Tunneling-Ereignis-Entsprechungen.  
   
- ![Diagramm der Stylus-Ereignisse in WPF im Vergleich zu Winforms. ](../../../../docs/framework/wpf/advanced/media/ink-stylusevents.png "Ink_StylusEvents")  
+ ![Diagramm der Stylus-Ereignisse in WPF im Vergleich zu Winforms. ](./media/ink-stylusevents.png "Ink_StylusEvents")  
   
 ## <a name="pen-data"></a>Stift-Daten  
  Alle drei Plattformen bieten Ihnen Methoden zum Abfangen und bearbeiten die Daten, die von einem Tablettstift eingeht.  Auf dem Windows Forms und COM-Plattform, dies erfolgt durch Erstellen einer [Microsoft.StylusInput.RealTimeStylus](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms585724(v=vs.90)), Anfügen eines Fensters oder Steuerelements, und erstellen Sie eine Klasse, implementiert die [ Microsoft.StylusInput.IStylusSyncPlugin](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms575201(v=vs.90)) oder [Microsoft.StylusInput.IStylusAsyncPlugin](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms575194(v=vs.90)) Schnittstelle. Das benutzerdefinierte plug-in wird dann hinzugefügt, auf die Plug-in-Auflistung von der [Microsoft.StylusInput.RealTimeStylus](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms585724(v=vs.90)). Weitere Informationen zu diesem Objektmodell, finden Sie unter [Architektur der StylusInput APIs](/windows/desktop/tablet/architecture-of-the-stylusinput-apis).  
   
- Auf der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -Plattform, die <xref:System.Windows.UIElement> Klasse stellt eine Auflistung von-Plug-ins, Entwurf, ähnelt die [Microsoft.StylusInput.RealTimeStylus](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms585724(v=vs.90)).  Zum Abfangen von Stift-Daten, erstellen Sie eine Klasse, die von erbt <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> und fügen Sie das Objekt, das die <xref:System.Windows.UIElement.StylusPlugIns%2A> Auflistung von der <xref:System.Windows.UIElement>. Weitere Informationen zu dieser Aktivität, finden Sie unter [Abfangen der Eingabe des Tablettstifts](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md).  
+ Auf der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] -Plattform, die <xref:System.Windows.UIElement> Klasse stellt eine Auflistung von-Plug-ins, Entwurf, ähnelt die [Microsoft.StylusInput.RealTimeStylus](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms585724(v=vs.90)).  Zum Abfangen von Stift-Daten, erstellen Sie eine Klasse, die von erbt <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> und fügen Sie das Objekt, das die <xref:System.Windows.UIElement.StylusPlugIns%2A> Auflistung von der <xref:System.Windows.UIElement>. Weitere Informationen zu dieser Aktivität, finden Sie unter [Abfangen der Eingabe des Tablettstifts](intercepting-input-from-the-stylus.md).  
   
- Auf allen Plattformen ein Threadpools die Freihanddaten über Stift-Ereignisse empfängt und sendet sie an den Anwendungsthread.  Weitere Informationen zu den für die Windows-Plattformen, COM-threading, finden Sie unter [Threading Überlegungen für die StylusInput APIs](/windows/desktop/tablet/threading-considerations-for-the-stylusinput-apis).  Weitere Informationen zu den in der Windows Presentation Software threading, finden Sie unter [das Threadmodell für Freihandeingaben](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md).  
+ Auf allen Plattformen ein Threadpools die Freihanddaten über Stift-Ereignisse empfängt und sendet sie an den Anwendungsthread.  Weitere Informationen zu den für die Windows-Plattformen, COM-threading, finden Sie unter [Threading Überlegungen für die StylusInput APIs](/windows/desktop/tablet/threading-considerations-for-the-stylusinput-apis).  Weitere Informationen zu den in der Windows Presentation Software threading, finden Sie unter [das Threadmodell für Freihandeingaben](the-ink-threading-model.md).  
   
  Die folgende Abbildung vergleicht die Objektmodelle für die Klassen, die Daten der Stift auf Stiftthreadpool empfangen.  
   
- ![Diagramm des StylusPlugIn-Modells WPF im Vergleich Winforms. ](../../../../docs/framework/wpf/advanced/media/ink-stylusplugins.png "Ink_StylusPlugins")
+ ![Diagramm des StylusPlugIn-Modells WPF im Vergleich Winforms. ](./media/ink-stylusplugins.png "Ink_StylusPlugins")

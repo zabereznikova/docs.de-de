@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e9b8b6325900214865e31492b129e381de5c1c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507368"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371371"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms hinzufügen Konfigurationselement
 
@@ -39,7 +39,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 ### <a name="key-attribute-names-and-associated-values"></a>`key` Attributnamen und zugehörigen Werte
 
-| `key`-Name | Werte | Beschreibung |
+| `key` Name | Werte | Beschreibung |
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Gibt an, ob der verankerten Steuerelemente in einem einzelnen Durchlauf skaliert werden. "true", um einzelne deaktivieren übergeben Skalierung; andernfalls "false". Finden Sie im Abschnitt "Einzelne pass Skalierung" in der ["Hinweise"](#Remarks) für Weitere Informationen. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Gibt an, ob eine Anwendung DPI kompatibel ist. Legen Sie den Schlüssel auf "PerMonitorV2" zur Unterstützung der Dpi-Unterstützung; Legen Sie sie andernfalls auf "False". DPI-Unterstützung ist ein optionales Feature. um Windows Forms-Unterstützung für hohe DPI-Werte nutzen zu können, sollten Sie seinen Wert in "PerMonitorV2" festlegen. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. |
@@ -63,9 +63,9 @@ Keine
 
 ## <a name="a-nameremarks--remarks"></a><a name="remarks" /> "Hinweise"
 
-Ab .NET Framework 4.7 ermöglicht das `<System.Windows.Forms.ApplicationConfigurationSection>`-Element die Konfiguration von Windows Forms-Anwendungen für die Nutzung von Funktionen, die in neueren Versionen von .NET Framework hinzugefügt werden. 
+Ab .NET Framework 4.7 ermöglicht das `<System.Windows.Forms.ApplicationConfigurationSection>`-Element die Konfiguration von Windows Forms-Anwendungen für die Nutzung von Funktionen, die in neueren Versionen von .NET Framework hinzugefügt werden.
 
-Die `<System.Windows.Forms.ApplicationConfigurationSection>` -Element können Sie einen oder mehrere untergeordnete hinzufügen `<add>` Elemente, von denen jede eine bestimmte Konfigurationseinstellung definiert.  
+Die `<System.Windows.Forms.ApplicationConfigurationSection>` -Element können Sie einen oder mehrere untergeordnete hinzufügen `<add>` Elemente, von denen jede eine bestimmte Konfigurationseinstellung definiert.
 
 Eine Übersicht über Windows Forms-High-DPI-Unterstützung, finden Sie unter [hohe DPI-Unterstützung in Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).
 
@@ -75,7 +75,7 @@ Windows Forms-apps, die unter Windows-Versionen ab Windows 10 Creators-Edition u
 
 - Unterstützung für dynamische DPI-Szenarien, in denen der Benutzer den Faktor für die DPI-Einstellung oder Skalierung geändert wird, nachdem eine Windows Forms-Anwendung gestartet wurde.
 
-- Verbesserungen bei der die Skalierung und das Layout einer Reihe von Windows Forms-Steuerelemente, z. B. die <xref:System.Windows.Forms.MonthCalendar> Steuerelement und die <xref:System.Windows.Forms.CheckedListBox> Steuerelement. 
+- Verbesserungen bei der die Skalierung und das Layout einer Reihe von Windows Forms-Steuerelemente, z. B. die <xref:System.Windows.Forms.MonthCalendar> Steuerelement und die <xref:System.Windows.Forms.CheckedListBox> Steuerelement.
 
 Hohe DPI-Unterstützung ist ein optionales Feature. Standardmäßig wird der Wert des `DpiAwareness` ist `false`. Sie können festlegen, Windows Forms-Unterstützung für die DPI-Unterstützung durch Festlegen des Werts dieses Schlüssels auf `PerMonitorV2` in der Konfigurationsdatei der Anwendung. Wenn DPI-Unterstützung aktiviert ist, werden auch alle einzelnen DPI-Features aktiviert. Dazu gehören:
 
@@ -83,11 +83,11 @@ Hohe DPI-Unterstützung ist ein optionales Feature. Standardmäßig wird der Wer
 
 - Dynamische DPI-Unterstützung, dazu die `EnableWindowsFormsHighDpiAutoResizing` Schlüssel.
 
-- Einzelne durchlaufende Steuerelement zu skalieren, die über gesteuert der `Form.DisableSinglePassControlScaling` für einzelne <xref:System.Windows.Forms.Form> gesteuert wird, indem die `AnchorLayout.DisableSinglePassControlScaling` Schlüssel für die verankerten Steuerelemente und durch die `MonthCalendar.DisableSinglePassControlScaling` Schlüssel für die <xref:System.Windows.Forms.MonthCalendar> Steuerelement 
+- Einzelne durchlaufende Steuerelement zu skalieren, die über gesteuert der `Form.DisableSinglePassControlScaling` für einzelne <xref:System.Windows.Forms.Form> gesteuert wird, indem die `AnchorLayout.DisableSinglePassControlScaling` Schlüssel für die verankerten Steuerelemente und durch die `MonthCalendar.DisableSinglePassControlScaling` Schlüssel für die <xref:System.Windows.Forms.MonthCalendar> Steuerelement
 
-- Hohe DPI-Wert skalieren und layouthinweise Verbesserungen, die von gesteuert wird die `CheckListBox.DisableHighDpiImprovements` Schlüssel für die <xref:System.Windows.Forms.CheckedListBox> zu steuern, indem die `DataGridView.DisableHighDpiImprovements` Schlüssel für die <xref:System.Windows.Forms.DataGridView> -Steuerelement, und durch die `Toolstrip.DisableHighDpiImprovements` Schlüssel für die <xref:System.Windows.Forms.ToolStrip> Steuerelement.  
+- Hohe DPI-Wert skalieren und layouthinweise Verbesserungen, die von gesteuert wird die `CheckListBox.DisableHighDpiImprovements` Schlüssel für die <xref:System.Windows.Forms.CheckedListBox> zu steuern, indem die `DataGridView.DisableHighDpiImprovements` Schlüssel für die <xref:System.Windows.Forms.DataGridView> -Steuerelement, und durch die `Toolstrip.DisableHighDpiImprovements` Schlüssel für die <xref:System.Windows.Forms.ToolStrip> Steuerelement.
 
-Die einzelnen teilnehmen Standardeinstellung durch Festlegen von bereitgestellten `DpiAwareness` zu `PerMonitorV2` ist für neue Windows Forms-Anwendungen in der Regel ausreichend. Jedoch können Sie dann einzelne hohe DPI-Verbesserungen ablehnen, indem der Anwendungskonfigurationsdatei den entsprechenden Schlüssel hinzugefügt. Um alle neuen DPI-Featuers außer dynamische DPI-Unterstützung nutzen zu können, würden Sie z. B. die folgenden in Ihrer Anwendungskonfigurationsdatei hinzufügen:
+Die einzelnen teilnehmen Standardeinstellung durch Festlegen von bereitgestellten `DpiAwareness` zu `PerMonitorV2` ist für neue Windows Forms-Anwendungen in der Regel ausreichend. Jedoch können Sie dann einzelne hohe DPI-Verbesserungen ablehnen, indem der Anwendungskonfigurationsdatei den entsprechenden Schlüssel hinzugefügt. Um alle neuen DPI-Features mit Ausnahme der Unterstützung für dynamische DPI-Werte nutzen zu können, würden Sie z. B. Folgendes in Ihrer Anwendungskonfigurationsdatei hinzufügen:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -99,14 +99,14 @@ Die einzelnen teilnehmen Standardeinstellung durch Festlegen von bereitgestellte
 In der Regel, deaktivieren Sie eine bestimmte Funktion, da Sie ausgewählt haben, um programmgesteuert zu verarbeiten.
 
 Weitere Informationen zu profitieren, hohe DPI-Unterstützung in Windows Forms-Anwendungen, finden Sie unter [hohe DPI-Unterstützung in Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).
- 
+
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 
-Ab .NET Framework 4.7, lösen Windows Forms-Steuerelemente eine Anzahl von Ereignissen im Zusammenhang mit Änderungen an der DPI-Skalierung. Dazu gehören die <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, und <xref:System.Windows.Forms.Form.DpiChanged> Ereignisse. Der Wert des der `DisableDpiChangedMessageHandling` Schlüssel bestimmt, ob diese Ereignisse in Windows Forms-Anwendungen ausgelöst werden. 
+Ab .NET Framework 4.7, lösen Windows Forms-Steuerelemente eine Anzahl von Ereignissen im Zusammenhang mit Änderungen an der DPI-Skalierung. Dazu gehören die <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, und <xref:System.Windows.Forms.Form.DpiChanged> Ereignisse. Der Wert des der `DisableDpiChangedMessageHandling` Schlüssel bestimmt, ob diese Ereignisse in Windows Forms-Anwendungen ausgelöst werden.
 
 ### <a name="single-pass-scaling"></a>Single-Pass-Skalierung
 
-Skalieren von einzelnen oder mehreren Pass beeinflusst die wahrgenommene Reaktionsfähigkeit der Benutzeroberfläche und die visuelle Darstellung der Elemente der Benutzeroberfläche, wie sie skaliert werden. Ab .NET Framework 4.7, verwendet Windows Forms die einzelnen Durchlauf zu skalieren. In früheren Versionen von .NET Framework Skalierung über mehrere Durchläufe, erfolgt die verursacht einige Steuerelemente skaliert werden, mehr als notwendig war. Skalierung der einzelnen Durchläufen sollte nur deaktiviert werden, wenn Ihre app das alte Verhalten abhängig ist.  
+Skalieren von einzelnen oder mehreren Pass beeinflusst die wahrgenommene Reaktionsfähigkeit der Benutzeroberfläche und die visuelle Darstellung der Elemente der Benutzeroberfläche, wie sie skaliert werden. Ab .NET Framework 4.7, verwendet Windows Forms die einzelnen Durchlauf zu skalieren. In früheren Versionen von .NET Framework Skalierung über mehrere Durchläufe, erfolgt die verursacht einige Steuerelemente skaliert werden, mehr als notwendig war. Skalierung der einzelnen Durchläufen sollte nur deaktiviert werden, wenn Ihre app das alte Verhalten abhängig ist.
 
 ## <a name="see-also"></a>Siehe auch
 

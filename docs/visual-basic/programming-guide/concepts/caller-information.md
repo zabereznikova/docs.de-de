@@ -2,12 +2,12 @@
 title: Aufruferinformationen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 7b0776425b41c8fef975355f3547a64c33fd96b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d7c999137b1e62de573470b8327bf070f2b1a9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619012"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375544"
 ---
 # <a name="caller-information-visual-basic"></a>Aufruferinformationen (Visual Basic)
 Mithilfe der Aufrufer-Informationsattribute können Sie Informationen zum Aufrufer einer Methode abrufen. Sie können den Dateipfad des Quellcodes, die Zeilennummer im Quellcode und den Membernamen des Aufrufers abrufen. Diese Informationen sind zum Verfolgen, Debuggen und Erstellen von Diagnosetools sehr nützlich.  
@@ -55,7 +55,7 @@ End Sub
   
  Sie können die optionalen Argumente explizit angeben, um die Aufruferinformationen zu steuern oder auszublenden.  
   
-###  <a name="MEMBERNAMES"></a> Membernamen  
+### <a name="MEMBERNAMES"></a> Membernamen  
  Sie können das `CallerMemberName`-Attribut verwenden, um den Membernamen nicht als `String`-Argument für die aufgerufene Methode angeben zu müssen. Auf diese Weise umgehen Sie das Problem, dass durch die **Umgestaltung mit Umbenennung** die `String`-Werte nicht geändert werden. Dieser Vorteil ist für die folgenden Aufgaben besonders hilfreich:  
   
 -   Verwenden der Ablaufverfolgung und der Diagnoseprogramme  

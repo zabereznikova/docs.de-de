@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 47e76a1d08f8c85eafa7758ec9fdd80d8ae8afcf
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746561"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365840"
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
 <a name="Introduction"></a> .NET Framework enthält eine Add-In-Modell, mit denen Entwickler Anwendungen erstellen, die Add-in-Erweiterbarkeit zu unterstützen. Dieses Add-In-Modell ermöglicht die Erstellung von Add-Ins, die in die Anwendungsfunktionalität integriert werden und diese erweitern. In einigen Szenarien müssen Anwendungen auch von Benutzeroberflächen anzeigen, die von Add-Ins bereitgestellt werden. In diesem Thema wird gezeigt, wie das .NET Framework-add-in-Modell zum Aktivieren dieser Szenarien, in der Architektur hinter, dessen Vorteile und Einschränkungen von WPF erweitert.  
@@ -56,7 +56,7 @@ ms.locfileid: "56746561"
   
 -   **Kommunikation**: Können Add-Ins und hostanwendungen über Isolationsgrenzen hinweg miteinander kommunizieren, durch Aufrufen von Methoden und übergeben von Daten.  
   
--   **Verwaltung der Lebensdauer**: Laden und Entladen von Anwendungsdomänen und Prozesse in eine klare, vorhersehbare Weise (finden Sie unter [Anwendungsdomänen](../../../../docs/framework/app-domains/application-domains.md)).  
+-   **Verwaltung der Lebensdauer**: Laden und Entladen von Anwendungsdomänen und Prozesse in eine klare, vorhersehbare Weise (finden Sie unter [Anwendungsdomänen](../../app-domains/application-domains.md)).  
   
 -   **Versioning**: Sicherstellen, dass hostanwendungen und Add-Ins trotzdem kommunizieren können, wenn neue Versionen erstellt werden.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "56746561"
   
 6.  Die hostanwendung zeigt das zurückgegebene <xref:System.Windows.FrameworkElement>.  
   
- Ein Beispiel, das veranschaulicht, wie ein Add-in zu implementieren, die eine Benutzeroberfläche zurückgibt, finden Sie unter [Erstellen einer Add-In, das eine Benutzeroberfläche zurückgibt](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md).  
+ Ein Beispiel, das veranschaulicht, wie ein Add-in zu implementieren, die eine Benutzeroberfläche zurückgibt, finden Sie unter [Erstellen einer Add-In, das eine Benutzeroberfläche zurückgibt](how-to-create-an-add-in-that-returns-a-ui.md).  
   
 <a name="AddInIsAUI"></a>   
 ## <a name="add-in-is-a-user-interface"></a>Add-In ist eine Benutzeroberfläche  
@@ -148,7 +148,7 @@ ms.locfileid: "56746561"
   
 6.  Die hostanwendung zeigt das zurückgegebene <xref:System.Windows.FrameworkElement>.  
   
- Ein Beispiel, das veranschaulicht, wie ein Add-in zu implementieren, die eine Benutzeroberfläche ist, finden Sie unter [erstellen Sie ein Add-in-d. h. eine Benutzeroberfläche](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md).  
+ Ein Beispiel, das veranschaulicht, wie ein Add-in zu implementieren, die eine Benutzeroberfläche ist, finden Sie unter [erstellen Sie ein Add-in-d. h. eine Benutzeroberfläche](how-to-create-an-add-in-that-is-a-ui.md).  
   
 <a name="ReturningMultipleUIsFromAnAddIn"></a>   
 ## <a name="returning-multiple-uis-from-an-add-in"></a>Zurückgeben mehrerer Benutzeroberflächen durch ein Add-In  
@@ -219,7 +219,7 @@ ms.locfileid: "56746561"
   
 -   Klicken Sie auf der Seite der hostanwendung, WPF neu gepackt der <xref:System.Windows.Interop.HwndSource> als eine interne abgeleitete Klasse WPF <xref:System.Windows.Interop.HwndHost> und nutzt <xref:System.AddIn.Contract.INativeHandleContract>. Eine Instanz dieser Klasse wird zurückgegeben, durch <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> an die hostanwendung.  
   
- <xref:System.Windows.Interop.HwndHost> ist vorhanden, um Benutzeroberflächen, identifiziert durch Fensterhandles von WPF-Benutzeroberflächen anzuzeigen. Weitere Informationen finden Sie unter [Interaktion zwischen WPF und Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md).  
+ <xref:System.Windows.Interop.HwndHost> ist vorhanden, um Benutzeroberflächen, identifiziert durch Fensterhandles von WPF-Benutzeroberflächen anzuzeigen. Weitere Informationen finden Sie unter [Interaktion zwischen WPF und Win32](../advanced/wpf-and-win32-interoperation.md).  
   
  Zusammenfassend <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>, und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> vorhanden sein, damit können das Fensterhandle für ein WPF-UI vom ein Add-in an eine hostanwendung übergeben werden, in dem sie durch gekapselt ist eine <xref:System.Windows.Interop.HwndHost> und der hostanwendung-Benutzeroberfläche angezeigt.  
   
@@ -252,11 +252,11 @@ ms.locfileid: "56746561"
   
 -   -Add-in Benutzeroberflächen angezeigt, die von einer hostanwendung berücksichtigt Ausschneideverhalten der hostanwendung nicht.  
   
--   Der Begriff *Airspace* in Interoperabilitätsszenarien gilt auch für Add-Ins (siehe [Übersicht über die Technologieregionen](../../../../docs/framework/wpf/advanced/technology-regions-overview.md)).  
+-   Der Begriff *Airspace* in Interoperabilitätsszenarien gilt auch für Add-Ins (siehe [Übersicht über die Technologieregionen](../advanced/technology-regions-overview.md)).  
   
 -   Eine hostanwendung UI-Dienste, wie Vererbung, Datenbindung und Befehle, nicht automatisch für die add-Ins verfügbar sind Benutzeroberflächen. Um diese Dienste für das Add-In bereitzustellen, müssen Sie die Pipeline aktualisieren.  
   
--   Ein Benutzeroberflächen-Add-in kann nicht werden gedreht, skaliert, verzerrt oder andernfalls durch eine Transformation geändert (finden Sie unter [Übersicht über Transformationen](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)).  
+-   Ein Benutzeroberflächen-Add-in kann nicht werden gedreht, skaliert, verzerrt oder andernfalls durch eine Transformation geändert (finden Sie unter [Übersicht über Transformationen](../graphics-multimedia/transforms-overview.md)).  
   
 -   Inhalte innerhalb von Add-in-Benutzeroberflächen, die gerendert wird, durch Zeichenvorgänge aus dem <xref:System.Drawing> Namespace kann Alphablending umfassen. Allerdings müssen sowohl eine Add-in-Benutzeroberfläche und der hostanwendung Benutzeroberfläche, die es enthält 100 % deckend sein; Das heißt, die `Opacity` sowohl Eigenschaft muss auf 1 festgelegt werden.  
   
@@ -280,12 +280,12 @@ ms.locfileid: "56746561"
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>Leistungsoptimierung  
- Standardmäßig Wenn mehrere Anwendungsdomänen verwendet werden, werden verschiedenen .NET Framework-Assemblys, die von jeder Anwendung benötigt werden alle in die Domäne dieser Anwendung geladen. Aufgrund der Zeit, die zum Erstellen neuer Anwendungsdomänen und für das Starten der darin enthaltenen Anwendungen erforderlich ist, kann die Leistung beeinträchtigt werden. .NET Framework bietet jedoch eine Möglichkeit, Startzeiten zu verkürzen von Anwendungen angewiesen, Assemblys in Anwendungsdomänen gemeinsam nutzen, wenn sie bereits geladen sind. Verwenden Sie hierzu die <xref:System.LoaderOptimizationAttribute> -Attribut, das auf die Einstiegspunktmethode angewendet werden muss (`Main`). In diesem Fall müssen Sie lediglich zum Implementieren Ihrer Anwendungsdefinition Code verwenden (siehe [Übersicht über die Anwendungsverwaltung](../../../../docs/framework/wpf/app-development/application-management-overview.md)).  
+ Standardmäßig Wenn mehrere Anwendungsdomänen verwendet werden, werden verschiedenen .NET Framework-Assemblys, die von jeder Anwendung benötigt werden alle in die Domäne dieser Anwendung geladen. Aufgrund der Zeit, die zum Erstellen neuer Anwendungsdomänen und für das Starten der darin enthaltenen Anwendungen erforderlich ist, kann die Leistung beeinträchtigt werden. .NET Framework bietet jedoch eine Möglichkeit, Startzeiten zu verkürzen von Anwendungen angewiesen, Assemblys in Anwendungsdomänen gemeinsam nutzen, wenn sie bereits geladen sind. Verwenden Sie hierzu die <xref:System.LoaderOptimizationAttribute> -Attribut, das auf die Einstiegspunktmethode angewendet werden muss (`Main`). In diesem Fall müssen Sie lediglich zum Implementieren Ihrer Anwendungsdefinition Code verwenden (siehe [Übersicht über die Anwendungsverwaltung](application-management-overview.md)).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.LoaderOptimizationAttribute>
 - [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Anwendungsdomänen](../../../../docs/framework/app-domains/application-domains.md)
+- [Anwendungsdomänen](../../app-domains/application-domains.md)
 - [Übersicht über .NET Framework-Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Erstellen Remotefähiger Objekte](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+- [Themen zu Vorgehensweisen](how-to-topics.md)
