@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa5ca8871ab284d2a46e6777b226f5a9b155e566
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bc4b1a58bba592cfff408f034fb19c0c27616c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502468"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480545"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a>ICorProfilerCallback::ModuleLoadStarted-Methode
 Benachrichtigt den Profiler, dass ein Modul geladen wird.  
@@ -34,7 +34,7 @@ HRESULT ModuleLoadStarted(
     [in] ModuleID moduleId);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `moduleId`  
  [in] Die ID des Moduls, das geladen wird.  
   

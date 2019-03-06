@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad1ea4da252fe9fac89faa79195b6a6de245ad9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49cef22e88613fe4c4dfb3fb35a92977977b1827
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414699"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473564"
 ---
 # <a name="icordebugilframecansetip-method"></a>ICorDebugILFrame::CanSetIP-Methode
-Ruft ein HRESULT, das angibt, ob den Anweisungszeiger am angegebenen Offset Speicherort in Microsoft Intermediate Language (MSIL)-Code festgelegt werden kann.  
+Ruft ein HRESULT, der angibt, ob den Anweisungszeiger auf der angegebenen Offsetposition im Microsoft Intermediate Language (MSIL)-Code festgelegt werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,17 +35,17 @@ HRESULT CanSetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `nOffset`  
  [in] Die gewünschte Einstellung für den Anweisungszeiger.  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden der `CanSetIP` Methode vor dem Aufruf der [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) Methode. Wenn `CanSetIP` gibt jeden HRESULT-Wert als S_OK, können Sie weiterhin aufrufen `ICorDebugILFrame::SetIP`, aber es gibt keine Garantie, dass der Debugger die ordnungsgemäße und sichere Ausführung des gedebuggten Codes fortgesetzt wird.  
+ Verwenden der `CanSetIP` Methode vor dem Aufruf der [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) Methode. Wenn `CanSetIP` gibt ein HRESULT S_OK, können Sie weiterhin aufrufen `ICorDebugILFrame::SetIP`, aber es gibt keine Garantie, dass der Debugger die ordnungsgemäße und sichere Ausführung des debuggten Codes weiterhin.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorDebug.idl CorDebug, h  
+ **Header:** CorDebug.idl, CorDebug,h  
   
  **Bibliothek:** CorGuids.lib  
   

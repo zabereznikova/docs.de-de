@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6f6f3018d5e9a1b49191d8e82f91ac8e5c21b77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7216e2aacf344a5e606e34451cde01eca4a1e175
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681949"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472186"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow-Methode
 Ruft die Zeile am angegebenen Zeilenindex, in der Tabelle auf den Index der angegebenen Tabelle.  
@@ -37,7 +37,7 @@ HRESULT GetRow (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ixTbl`  
  [in] Der Index des in der Tabelle, aus der die Zeile abgerufen werden.  
   

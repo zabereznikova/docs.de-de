@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3184b0b3bc03aa300832211b52e40f2f2f2988a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86eec8b80631b7504daea30ad50a5c5e29f00893
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678641"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476242"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionenter-method"></a>ICorProfilerCallback::ExceptionUnwindFunctionEnter-Methode
 Benachrichtigt den Profiler, dass die Entladephase der Ausnahmebehandlung begonnen hat, eine Funktion zu entladen.  
@@ -34,7 +34,7 @@ HRESULT ExceptionUnwindFunctionEnter(
     [in] FunctionID functionId);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `functionId`  
  [in] Die ID der Funktion, die entladen wird.  
   

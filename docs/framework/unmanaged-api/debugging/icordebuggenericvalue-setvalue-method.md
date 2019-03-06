@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83aebad108a743d25b8ea93c99060d10bf5c3980
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae64fcccb49123f34cca2622a972a89bf700904f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413207"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476684"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>ICorDebugGenericValue::SetValue-Methode
 Kopiert einen neuen Wert aus dem angegebenen Puffer.  
@@ -35,15 +35,15 @@ HRESULT SetValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pFrom`  
  [in] Ein Zeiger auf den Puffer, aus dem den Wert kopiert werden sollen.  
   
 ## <a name="remarks"></a>Hinweise  
- Für Verweistypen ist der Wert der Verweis, nicht auf den Inhalt an.  
+ Für Verweistypen ist der Wert für den Verweis, nicht den Inhalt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

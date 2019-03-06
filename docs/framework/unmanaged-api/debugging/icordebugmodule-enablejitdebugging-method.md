@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71722293bfb80a7e57393916560f922d970ea2ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 642c4fd600d10ef89a08aa32bef5c8e7455552c7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415641"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473815"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>ICorDebugModule::EnableJITDebugging-Methode
-Steuert, ob der Just-in-Time (JIT)-Compiler Debuginformationen für Methoden innerhalb dieses Moduls beibehält.  
+Steuert, ob der just-in-Time (JIT)-Compiler Debuginformationen für Methoden in diesem Modul werden beibehalten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,18 +36,18 @@ HRESULT EnableJITDebugging(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `bTrackJITInfo`  
  [in] Legen Sie diesen Wert auf `true` zum Aktivieren des JIT-Compilers, um Informationen über die Zuordnung zwischen der Microsoft intermediate Language (MSIL)-Version und der JIT-kompilierten Version der einzelnen Methoden in diesem Modul zu erhalten.  
   
  `bAllowJitOpts`  
- [in] Legen Sie diesen Wert auf `true` den JIT-Compiler generiert Code mit bestimmten JIT-spezifischen Optimierungen für das Debuggen zu aktivieren.  
+ [in] Legen Sie diesen Wert auf `true` den JIT-Compiler zum Generieren von Code mit bestimmten JIT-spezifischen Optimierungen für das Debuggen zu aktivieren.  
   
 ## <a name="remarks"></a>Hinweise  
- JIT-Debuggen ist standardmäßig für alle Module aktiviert, die geladen werden, wenn der Debugger aktiv ist. Programmgesteuertes aktivieren oder deaktivieren die Einstellungen überschreibt globale Einstellungen.  
+ JIT-Debuggen ist für alle Module in der Standardeinstellung aktiviert, die geladen werden, wenn der Debugger aktiv ist. Programmgesteuertes aktivieren oder deaktivieren die Einstellungen überschreibt globale Einstellungen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d18ccc18afa3bb3b7079139886c308882b2efc8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a93efc0701248f8e4ef930261b31b3ce948647a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616649"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484926"
 ---
 # <a name="ihosttaskmanagersetclrtaskmanager-method"></a>IHostTaskManager::SetCLRTaskManager-Methode
 Bietet einen Schnittstellenzeiger auf den Host ein [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md) -Instanz, von der common Language Runtime (CLR) implementiert.  
@@ -35,7 +35,7 @@ HRESULT SetCLRTaskManager (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pManager`  
  [in] Ein Zeiger auf ein `ICLRTaskManager` Instanz, die von der common Language Runtime implementiert.  
   

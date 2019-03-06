@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 838f2df06f8875037edbe39d2db0411f31abe01f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b18474aeaa79224de5371df3ff0cac5ed9bf4ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421362"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475735"
 ---
 # <a name="icordebugsteppersteprange-method"></a>ICorDebugStepper::StepRange-Methode
-Bewirkt, dass dieser ICorDebugStepper, Schritt für Schritt durch den enthaltenden Thread und zurückgibt, wenn er Code nach dem letzten von der angegebenen Bereiche erreicht hat.  
+Bewirkt, dass dieser ICorDebugStepper, Schritt für Schritt durch den enthaltenen Thread bis zum zurückgeben, wenn sie den Code nach dem letzten von der angegebenen Bereiche erreicht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,9 +37,9 @@ HRESULT StepRange (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `bStepIn`  
- [in] Legen Sie auf `true` Einzelschritt auf eine Funktion, die in dem Thread aufgerufen wird. Legen Sie auf `false` der Funktion zu überspringen.  
+ [in] Legen Sie auf `true` um einen Einzelschritt für eine Funktion, die den Thread aufgerufen wird. Legen Sie auf `false` der Funktion zu überspringen.  
   
  `ranges`  
  [in] Ein Array von COR_DEBUG_STEP_RANGE-Strukturen, von denen jedes einen Bereich angibt.  
@@ -48,14 +48,14 @@ HRESULT StepRange (
  [in] Die Größe des `ranges`-Arrays.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `StepRange` -Methode funktioniert wie die [ICorDebugStepper:: Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) -Methode, außer dass es nicht bis Code außerhalb des angegebenen Bereichs abgeschlossen wird erreicht ist.  
+ Die `StepRange` -Methode funktioniert wie die [ICorDebugStepper:: Step](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md) -Methode, mit dem Unterschied, dass sie nicht bis zum Code außerhalb des angegebenen Bereichs abgeschlossen wird erreicht ist.  
   
- Dies kann effizienter als die schrittweise Ausführung einer Anweisung zu einem Zeitpunkt sein. Bereiche werden als eine Liste von Endoffsetpaaren ab dem Anfang der zugeordnetem Frame angegeben.  
+ Dies kann effizienter als die schrittweise Ausführung einer Anweisung zu einem Zeitpunkt sein. Bereiche werden als eine Liste von Endoffsetpaaren ab dem Anfang der zugeordnetem des Frames angegeben.  
   
- Bereiche sind relativ zu der Microsoft intermediate Language (MSIL)-Code einer Methode. Rufen Sie [ICorDebugStepper:: SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) mit `false` auf die Bereiche relativ systemeigenem Code einer Methode zu machen.  
+ Bereiche sind relativ zu der Microsoft intermediate Language (MSIL)-Code einer Methode. Rufen Sie [ICorDebugStepper:: SetRangeIL](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md) mit `false` um die Bereiche relativ zu den systemeigenen Code einer Methode machen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

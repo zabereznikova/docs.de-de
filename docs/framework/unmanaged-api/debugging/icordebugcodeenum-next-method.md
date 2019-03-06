@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45caad20ef7d2dbe35e0381fb8cd697fc526398f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3aeae294d92a6dc9effc7f3baa51a35e4f2b544
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529803"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476632"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next-Methode
 Ruft die angegebene Anzahl von Instanzen von "ICorDebugCode" aus der Enumeration ab, an der aktuellen Position ab.  
@@ -38,7 +38,7 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `celt`  
  [in] Die Anzahl der `ICorDebugCode` Instanzen abgerufen werden sollen.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d107653d34689814ae97ca4012d0fd2e2c4190dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3a558ad6f87995d6c0a0d164cf96376fba12da4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727273"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485264"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot-Methode
 Durchläuft die verwalteten Frames im Stapel für den angegebenen Thread und sendet die Informationen an den Profiler in einem Rückruf.  
@@ -39,7 +39,7 @@ HRESULT DoStackSnapshot(
     [in] ULONG32 contextSize);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `thread`  
  [in] Die ID des Zielthreads.  
   

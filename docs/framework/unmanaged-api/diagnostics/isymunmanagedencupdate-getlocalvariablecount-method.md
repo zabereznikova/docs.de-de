@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f068b4cae3832802ab53404d35a5a30673cd967d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a8a56d9655a2754c110c08517229a39011d82c5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561854"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482456"
 ---
 # <a name="isymunmanagedencupdategetlocalvariablecount-method"></a>ISymUnmanagedENCUpdate::GetLocalVariableCount-Methode
 Ruft die Anzahl der lokalen Variablen ab.  
@@ -35,7 +35,7 @@ HRESULT GetLocalVariableCount(
     [out] ULONG        *pcLocals);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `mdMethodToken`  
  [in] Das Metadatentoken der Methoden.  
   

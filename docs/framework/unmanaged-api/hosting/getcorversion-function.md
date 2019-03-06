@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0741e5773b946186a452e191cc3ae987e6067c44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3d30603f16841a92013dd5cc2032799365e8c76
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606886"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471887"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion-Funktion
 Gibt die Versionsnummer der die common Language Runtime (CLR), die im aktuellen Prozess ausgeführt wird.  
@@ -39,7 +39,7 @@ HRESULT GetCORVersion (
 );   
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pbuffer`  
  Ein Zeiger auf einen Puffer, in dem die CLR zurückgegeben wird eine Zeichenfolge, die Angabe der Version der Laufzeit, die derzeit in den Prozess geladen wird. Die zurückgegebene Zeichenfolge hat dieselbe Form wie Zeichenfolgen, die an [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), z. B. "v1.0.1216". Wenn die Runtime noch nicht in den Prozess geladen wurde, gibt die Funktion die entsprechenden Verzeichnisinformationen für die neueste Version der Laufzeit auf dem Computer installiert.  
   

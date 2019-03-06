@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f049a7cadf1857495e49b9bdc2fecd1b49103af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68098895b2ad7f5c08d30f222777e52d4ee3f063
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415482"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476658"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next-Methode
-Ruft die angegebene Anzahl von ICorDebugFrame-Instanzen, beginnend mit der aktuellen Position ab.  
+Ruft die angegebene Anzahl von ICorDebugFrame-Instanzen, beginnend bei der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `celt`  
  [in] Die Anzahl der `ICorDebugFrame` Instanzen abgerufen werden sollen.  
   
  `frames`  
- [out] Ein Array von Zeigern, die jeweils auf ein `ICorDebugFrame` Objekt.  
+ [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugFrame` Objekt.  
   
  `pceltFetched`  
- [out] Ein Zeiger auf die Anzahl der `ICorDebugFrame` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist ein.  
+ [out] Ein Zeiger auf die Anzahl der `ICorDebugFrame` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

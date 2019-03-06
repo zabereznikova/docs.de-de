@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4326c6d8a3ee780cf63652badc8c527f55a075c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b374720bd7bdad48222da006b809702de6462a62
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420816"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472784"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint-Method
-Legt einen Haltepunkt auf nicht verwalteten Offset angegebene systemeigene Image fest.  
+Legt einen nicht verwaltete Haltepunkt am Offset angegebene systemeigene Image fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,9 +39,9 @@ HRESULT SetUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `address`  
- [in] Ein `CORDB_ADDRESS` Objekt, das die systemeigene Images Offset angibt.  
+ [in] Ein `CORDB_ADDRESS` Objekt, das den Offset des systemeigenen Images angibt.  
   
  `bufsize`  
  [in] Die Größe in Bytes, der die `buffer` Array.  
@@ -53,10 +53,10 @@ HRESULT SetUnmanagedBreakpoint (
  [out] Ein Zeiger auf die Anzahl der Bytes, die zurückgegeben werden, der `buffer` Array.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der systemeigene Images-Offset innerhalb der common Language Runtime (CLR) ist, wird der Breakpoint ignoriert werden. Dadurch wird der von der CLR zu vermeiden, einen Haltepunkt auf Out-of-Band-verteilen, wenn der Haltepunkt vom Debugger festgelegt ist.  
+ Wenn der Offset des systemeigenen Images in der common Language Runtime (CLR) ist, wird der Breakpoint ignoriert. Dadurch wird die CLR, um zu vermeiden, einen Out-of-Band-Haltepunkt, verteilen, wenn der Haltepunkt, durch den Debugger gesetzt ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

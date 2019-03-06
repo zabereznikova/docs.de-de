@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03b6f2fe0cc98b469b9b82bfdc4151adafb99c38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53bcc04c8d68a79217ebda5284efe7d8e18fdb91
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665551"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478777"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo-Methode
 Ruft die aktuelle Win32-Thread-Identität für den angegebenen Thread ab.  
@@ -35,7 +35,7 @@ HRESULT GetThreadInfo(
     [out] DWORD    *pdwWin32ThreadId);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `threadId`  
  [in] Die ID des Threads für die die aktuelle Win32-ID abzurufen  
   

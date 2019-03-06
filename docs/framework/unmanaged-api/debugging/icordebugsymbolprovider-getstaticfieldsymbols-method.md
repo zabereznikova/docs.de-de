@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a72e9911adf5b48638c2323adcbbb76e721618a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69ad0878daf57c379a5958dbeacddac8510c6eba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553749"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476151"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols-Methode
-Ruft die statischen Feldsymbole ab, die einer typespec-Signatur entsprechen.  
+Ruft die statischen Feldsymbole ab, die einer TypeSpec-Signatur entsprechen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -26,7 +26,7 @@ HRESULT GetStaticFieldSymbols(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `cbSignature`  
  [in] Die Anzahl der Bytes im `typeSig`-Array.  
   

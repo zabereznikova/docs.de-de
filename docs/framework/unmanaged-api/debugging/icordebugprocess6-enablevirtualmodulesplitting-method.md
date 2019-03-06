@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8674fc7f079bd67ea95ac9d2a9891267b315098e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6c2a9c806b70ab33f68e3213d82ed96aca47d62
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694732"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484198"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting-Methode
 Aktiviert oder deaktiviert die virtuelle Modulteilung.  
@@ -22,7 +22,7 @@ HRESULT EnableVirtualModuleSplitting(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `enableSplitting`  
  `true`, um die virtuelle Modulteilung zu aktivieren; `false`, um sie zu deaktivieren.  
   
@@ -101,7 +101,7 @@ HRESULT EnableVirtualModuleSplitting(
 |[ICorDebugClass::GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Gibt das untergeordnete Modul aus, in dem diese Klasse ursprünglich definiert wurde.|Gibt das Containermodul aus, mit dem diese Klasse zusammengeführt wurde.|  
 |ICorDebugModuleDebugEvent::GetModule|Gibt das Containermodul aus, das geladen wurde. Untergeordnete Module erhalten unabhängig von dieser Einstellung keine Ladeereignisse.|Gibt das Containermodul aus, das geladen wurde.|  
 |[ICorDebugAppDomain::EnumerateAssemblies](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|Gibt eine Liste aller untergeordneten und regulären Assemblys aus; Container-Assemblys sind nicht enthalten. **Hinweis**:  Damit die untergeordneten Assemblys aufgeführt werden, dürfen in keiner Container-Assembly Symbole fehlen. Wenn in einer regulären Baugruppe Symbole fehlen, kann die Auflistung u.U. erfolgen.|Gibt eine Liste der Container-Assemblys und regulären Assemblys aus; untergeordnete Assemblys sind nicht enthalten. **Hinweis**:  Wenn in einer regulären Baugruppe Symbole fehlen, kann die Auflistung u.U. erfolgen.|  
-|[ICorDebugCode:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) (wenn es sich um eine auf reinen IL-Code verwiesen wird)|Gibt die IL aus, die in einem Assemblybild vor dem Merge gültig wäre. Insbesondere werden Inline-Metadatentoken korrekt zu TypeRef-Token oder MemberRef-Token, wenn die Typen, auf die verwiesen wird, nicht im virtuellen Modul definiert werden, das den IL-Code enthält. Diese TypeRef oder MemberRef-Token können im nachgeschlagen werden die [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) -Objekt für das entsprechende virtuelle ICorDebugModule-Objekt.|Gibt die IL im Assemblybild nach dem Merge aus.|  
+|[ICorDebugCode:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) (wenn es sich um eine auf reinen IL-Code verwiesen wird)|Gibt die IL aus, die in einem Assemblybild vor dem Merge gültig wäre. Insbesondere werden Inline-Metadatentoken korrekt zu TypeRef-Token oder MemberRef-Token, wenn die Typen, auf die verwiesen wird, nicht im virtuellen Modul definiert werden, das den IL-Code enthält. Diese TypeRef oder MemberRef-Token können im nachgeschlagen werden die [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) -Objekt für das entsprechende virtuelle ICorDebugModule-Objekt.|Gibt die IL im Assemblybild nach der Zusammenführung aus.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
