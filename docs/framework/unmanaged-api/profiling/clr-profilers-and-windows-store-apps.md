@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188819"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358547"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR-Profiler und Windows Store-Apps
 
@@ -126,7 +126,7 @@ Zunächst sollten Sie Ihr Profiler Benutzer auffordern, welche Windows Store-app
 
 Sie können die <xref:Windows.Management.Deployment.PackageManager> Klasse, um diese Liste generieren. `PackageManager` ist eine Windows-Runtime-Klasse, die desktop-apps zur Verfügung steht, und es ist tatsächlich *nur* für desktop-apps verfügbar.
 
-Im folgenden Codebeispiel wird von einer hypothetischen geschrieben als desktop-app in c# Yses Profiler-Benutzeroberfläche die `PackageManager` zum Generieren einer Liste mit den Windows-apps:
+Im folgenden Codebeispiel wird von einer hypothetischen geschrieben als desktop-app in Profiler-Benutzeroberfläche C# verwendet die `PackageManager` zum Generieren einer Liste mit den Windows-apps:
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -143,7 +143,7 @@ Betrachten Sie den folgenden Codeausschnitt:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine, 
+pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
@@ -168,7 +168,7 @@ Es gibt einige Elemente, die Sie benötigen, um richtig zu machen:
         // Parse command line here
         // …
 
-        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, 
+        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME,
                                                                   FALSE /* bInheritHandle */, nThreadID);
         ResumeThread(hThread);
         CloseHandle(hThread);
@@ -235,7 +235,7 @@ Daher sollten Sie Folgendes:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */, 
+pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */,
                                                                  IntPtr.Zero /* environment */);
 ```
 

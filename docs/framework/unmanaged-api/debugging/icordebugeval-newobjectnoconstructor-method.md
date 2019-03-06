@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9db6853d3bd4bb7faae54b746a5a940c7dec8a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93fff7ec315edec8b20b4149650b27e7792fb2f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561790"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475046"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor-Methode
 Weist eine neue Objektinstanz des angegebenen Typs, ohne zu versuchen, eine Konstruktormethode aufrufen.  
@@ -37,7 +37,7 @@ HRESULT NewObjectNoConstructor (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pClass`  
  [in] Zeiger auf ein ICorDebugClass-Objekt, das den Typ des Objekts instanziiert werden.  
   

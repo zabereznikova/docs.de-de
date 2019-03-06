@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e2d99d85a6e6b09558e5941d08a7f522aaf66cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2016795e7b2c0588e2bd69e764fb96f7f90b24d0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421816"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480662"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval-Methode
-Erstellt ein ICorDebugEval-Objekt, das erfasst und die Funktionen dieses ICorDebugThread verfügbar macht.  
+Erstellt ein ICorDebugEval-Objekt, das erfasst und macht die Funktionalität dieses ICorDebugThread.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT CreateEval (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppEval`  
- [out] Ein Zeiger auf die Adresse des ein `ICorDebugEval` Objekt, das erfasst und die Funktionen dieses Threads verfügbar macht.  
+ [out] Ein Zeiger auf die Adresse einer `ICorDebugEval` -Objekt, das erfasst und macht die Funktionalität dieses Threads.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Auswertungsobjekt wird eine neue Kette für den Thread push, vor dem Ausführen von seiner Berechnung. Dies unterbricht die Berechnung, die derzeit ausgeführten für den Thread bis zum Abschluss der Auswertung.  
+ Das Auswertungsobjekt wird eine neue Kette für den Thread vor seiner Berechnung übertragen werden. Dies unterbricht die Berechnung, die aktuell ausgeführte für den Thread bis zum Abschluss der Auswertung.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

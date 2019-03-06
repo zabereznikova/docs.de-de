@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da16a22c71c1fac1932f74a9af18fbc30eb326f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5d1226f64df379b5c40304221e9e66eebcdb17b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410831"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479232"
 ---
 # <a name="icordebugenumclone-method"></a>ICorDebugEnum::Clone-Methode
 Erstellt eine Kopie dieses ICorDebugEnum-Objekts.  
@@ -35,12 +35,12 @@ HRESULT Clone (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppEnum`  
- [out] Ein Zeiger auf die Adresse des ein `ICorDebugEnum` Objekt, das eine Kopie dieser `ICorDebugEnum` Objekt.  
+ [out] Ein Zeiger auf die Adresse einer `ICorDebugEnum` Objekt, das eine Kopie dieses `ICorDebugEnum` Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   
