@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 96107c287003cc5fca2eb0eaa86f0f1f32b7d65e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2587a3b4e38aed507688cc86f0e179b3acbb1672
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523696"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358323"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>Benutzeroberflächenautomatisierung eines benutzerdefinierten WPF-Steuerelements
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] stellt eine einzelne allgemeine Schnittstelle bereit, die Automatisierungsclients zum Untersuchen oder Ausführen der Benutzerschnittstellen in unterschiedlichen Plattformen und Frameworks verwenden können. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht es jeweils Qualitätssicherungcode (Testcode) und Barrierefreiheitsanwendungen, z.B. die Sprachausgabe, Benutzerschnittstellenelemente zu untersuchen und Benutzerzugriff mit ihnen aus anderem Code zu simulieren. Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] für alle Plattformen finden Sie unter „Barrierefreiheit“.  
@@ -54,8 +54,8 @@ ms.locfileid: "54523696"
 ### <a name="override-getpattern"></a>GetPattern außer Kraft setzen  
  Automatisierungspeers vereinfachen zwar manche technischen Aspekte der Implementierung von serverseitigen [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]-Anbietern, aber Automatisierungspeers von benutzerdefinierten Steuerelementen müssen dennoch Musterschnittstellen behandeln. Wie nicht-WPF-Anbieter, Peers Unterstützung von Steuerelementmustern durch die Bereitstellung von Implementierungen der Schnittstellen in den <xref:System.Windows.Automation.Provider?displayProperty=nameWithType> -Namespace, z. B. <xref:System.Windows.Automation.Provider.IInvokeProvider>. Die Schnittstellen der Steuerelementmuster können entweder vom Peer selbst, oder von einem anderen Objekt implementiert werden. Die Peer Implementierung von <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> gibt das Objekt, das das angegebene Muster unterstützt. [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] Code ruft die <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> Methode und gibt eine <xref:System.Windows.Automation.Peers.PatternInterface> Enumerationswert. Ihre Überschreibung der <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> sollte das Objekt zurück, das das angegebene Muster implementiert. Wenn das Steuerelement nicht über eine benutzerdefinierte Implementierung eines Musters verfügt, können Sie die Implementierung des Basistyps aufrufen <xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A> um entweder dessen Implementierung oder Null abzurufen, wenn das Muster für diesen Steuerelementtyp nicht unterstützt wird. Z. B. ein benutzerdefiniertes NumericUpDown-Steuerelement kann auf einen Wert innerhalb eines Bereichs festgelegt werden damit die [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] Peer implementieren würde die <xref:System.Windows.Automation.Provider.IRangeValueProvider> Schnittstelle. Das folgende Beispiel zeigt wie der Peers <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> Methode wird überschrieben, zum Antworten auf eine <xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType> Wert.  
   
- [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
- [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
+ [!code-csharp[CustomControlNumericUpDown#GetPattern](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
+ [!code-vb[CustomControlNumericUpDown#GetPattern](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
   
  Ein <xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A> -Methode kann auch ein Unterelement als den Musteranbieter angeben. Der folgende code zeigt, wie <xref:System.Windows.Controls.ItemsControl> Übertragungen Scrollen Muster behandeln, die dem Peer, der internen <xref:System.Windows.Controls.ScrollViewer> Steuerelement.  
   
@@ -106,8 +106,8 @@ End Class
 ### <a name="override-core-methods"></a>„Kern“-Methode außer Kraft setzen  
  Der Automatisierungscode ruft Informationen über Ihr Steuerelement ab, indem er die öffentlichen Methoden der Peer-Klasse aufruft. Um Informationen über Ihr Steuerelement bereitzustellen, setzen Sie jede Methode außer Kraft, deren Name mit „Core“ endet, falls die Implementierung Ihrer Steuerelemente sich von der Implementierung unterscheidet, die von der Basis-Automatisierungspeerklasse bereitgestellt wird. Mindestens ein Steuerelement implementieren muss die <xref:System.Windows.Automation.Peers.AutomationPeer.GetClassNameCore%2A> und <xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A> Methoden, wie im folgenden Beispiel gezeigt.  
   
- [!code-csharp[CustomControlNumericUpDown#CoreOverrides](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#coreoverrides)]
- [!code-vb[CustomControlNumericUpDown#CoreOverrides](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#coreoverrides)]  
+ [!code-csharp[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#coreoverrides)]
+ [!code-vb[CustomControlNumericUpDown#CoreOverrides](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#coreoverrides)]  
   
  Die Implementierung von <xref:System.Windows.Automation.Peers.AutomationPeer.GetAutomationControlTypeCore%2A> beschreibt das Steuerelement durch die Rückgabe einer <xref:System.Windows.Automation.ControlType> Wert. Sie haben zwar zurückzugeben <xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType>, Sie sollten einen spezifischeren Steuerelementtyp zurückgeben, wenn sie Ihr Steuerelement genau beschreibt. Der Rückgabewert <xref:System.Windows.Automation.ControlType.Custom?displayProperty=nameWithType> erfordert zusätzliche Arbeit für den Anbieter implementiert [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)], und [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] Clientprodukte der Steuerelementstruktur, Tastaturinteraktion und mögliche Steuerelementmuster vorhersehen.  
   
@@ -151,10 +151,10 @@ End Class
 ### <a name="raise-events"></a>Auslösen von Ereignissen  
  Automatisierungsclients können Automatisierungsereignisse abonnieren. Benutzerdefinierte Steuerelemente müssen Änderungen durch den Aufruf Steuerelementzustände melden die <xref:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent%2A> Methode. Auf ähnliche Weise aufrufen, wenn sich ein Eigenschaftswert ändert, die <xref:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent%2A> Methode. Der folgende Code zeigt, wie Sie das Peerobjekt aus dem Steuerelementcode abrufen und eine Methode zum Auslösen eines Ereignisses aufrufen. Als Optimierung überprüft der Code, ob Listener für diesen Ereignistyp vorhanden sind. Ereignisse werden nur dann ausgelöst, wenn Listener vorhanden sind, sodass unnötiger Aufwand vermieden wird und das Steuerelement reaktionsfähig bleibt.  
   
- [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
- [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
+ [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
+ [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über die Benutzeroberflächenautomatisierung](../../../../docs/framework/ui-automation/ui-automation-overview.md)
+- [Übersicht über die Benutzeroberflächenautomatisierung](../../ui-automation/ui-automation-overview.md)
 - [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://go.microsoft.com/fwlink/?LinkID=160025)
-- [Server-Side UI Automation Provider Implementation](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)
+- [Server-Side UI Automation Provider Implementation](../../ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)
