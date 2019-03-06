@@ -2,15 +2,9 @@
 title: Entwickeln von Anwendungen mit Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Visual Basic, developing applications
-- applications [Visual Basic]
+  - 'Visual Basic, developing applications'
+  - 'applications [Visual Basic]'
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625619"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Entwickeln von Anwendungen mit Visual Basic
 Dieser Abschnitt enthält die Dokumentation für die Visual Basic-Sprache.  
@@ -27,9 +21,6 @@ Dieser Abschnitt enthält die Dokumentation für die Visual Basic-Sprache.
   
  [Erstellen und Verwenden von Komponenten in Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
  Definiert den Begriff *Komponente* und erläutert, wie und wann Komponenten erstellt werden müssen.  
-  
- [Drucken und Berichterstellung](../../visual-basic/developing-apps/printing/index.md)  
- Bietet Übersichten und Links zur relevanten Dokumentation mit Bezug auf Drucken und Berichterstellung  
   
  [Grundlagen der Windows Forms-Anwendungen](../../visual-basic/developing-apps/windows-forms/index.md)  
  Enthält Informationen zum Erstellen von Windows Forms-Anwendungen mithilfe von Visual Studio  
