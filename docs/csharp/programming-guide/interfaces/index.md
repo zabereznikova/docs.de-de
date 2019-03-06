@@ -62,7 +62,7 @@ Eine Schnittstelle verfügt über die folgenden Eigenschaften:
  [Vorgehensweise: Explizites Implementieren von Membern zweier Schnittstellen](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Enthält ein Beispiel über das explizite Implementieren von Schnittstellenmembern mit Vererbung.  
   
-##  <a name="BKMK_RelatedSections"></a> Verwandte Abschnitte
+## <a name="BKMK_RelatedSections"></a> Verwandte Abschnitte
 
 - [Schnittstelleneigenschaften](../classes-and-structs/interface-properties.md)  
 - [Indexer in Schnittstellen](../indexers/indexers-in-interfaces.md)  

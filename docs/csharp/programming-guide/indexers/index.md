@@ -48,7 +48,7 @@ Ab C# 7.0 können die Get- und die Set-Zugriffsmethode als Ausdruckskörpermembe
   
 -   Indexer können mehr als einen formalen Parameter aufweisen, beispielsweise beim Zugreifen auf ein 2D-Array.  
   
-##  <a name="BKMK_RelatedSections"></a> Verwandte Abschnitte  
+## <a name="BKMK_RelatedSections"></a> Verwandte Abschnitte  
   
 -   [Verwenden von Indexern](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

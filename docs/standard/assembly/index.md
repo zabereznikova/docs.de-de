@@ -50,8 +50,7 @@ Assemblys bilden die Grundlage für die Bereitstellung, die Versionskontrolle, d
 
  - [.NET-Assemblydateiformat](file-format.md)
  - [Assemblys in der Common Language Runtime (CLR)](../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- - [Friend-Assemblys (C#)](../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- - [Friend-Assemblys (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ - [Friend-Assemblys](friend-assemblies.md)  
  - [Vorgehensweise: Laden und Entladen von Assemblys (C#)](../../csharp/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Vorgehensweise: Laden und Entladen von Assemblys (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-load-and-unload-assemblies.md)  
  - [Vorgehensweise: Verwenden und Debuggen von Assemblyentladbarkeit in .NET Core](unloadability-howto.md)
