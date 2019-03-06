@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6323b7d94ca32646d3aa63af6d3efc4de95e67fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5aa6f01f161ce7c497cc103493e3bf4506fa3394
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534520"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475020"
 ---
-# <a name="isymunmanagedvariablegetname-method"></a><span data-ttu-id="67f36-102">ISymUnmanagedVariable::GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="67f36-102">ISymUnmanagedVariable::GetName Method</span></span>
-<span data-ttu-id="67f36-103">Ruft den Namen dieser Variablen.</span><span class="sxs-lookup"><span data-stu-id="67f36-103">Gets the name of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetname-method"></a><span data-ttu-id="88624-102">ISymUnmanagedVariable::GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="88624-102">ISymUnmanagedVariable::GetName Method</span></span>
+<span data-ttu-id="88624-103">Ruft den Namen dieser Variablen.</span><span class="sxs-lookup"><span data-stu-id="88624-103">Gets the name of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67f36-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="67f36-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="88624-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="88624-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName(  
@@ -37,21 +37,21 @@ HRESULT GetName(
         length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="67f36-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="67f36-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="88624-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="88624-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="67f36-106">[in] Die Länge des Puffers, der die `pcchName` -Parameter zeigt.</span><span class="sxs-lookup"><span data-stu-id="67f36-106">[in] The length of the buffer that the `pcchName` parameter points to.</span></span>  
+ <span data-ttu-id="88624-106">[in] Die Länge des Puffers, der die `pcchName` -Parameter zeigt.</span><span class="sxs-lookup"><span data-stu-id="88624-106">[in] The length of the buffer that the `pcchName` parameter points to.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="67f36-107">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe in Zeichen des Puffers erforderlich, um den Namen und die null-Terminierung enthalten.</span><span class="sxs-lookup"><span data-stu-id="67f36-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span></span>  
+ <span data-ttu-id="88624-107">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe in Zeichen des Puffers erforderlich, um den Namen und die null-Terminierung enthalten.</span><span class="sxs-lookup"><span data-stu-id="88624-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the name, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="67f36-108">[out] Der Puffer, der Namen speichert.</span><span class="sxs-lookup"><span data-stu-id="67f36-108">[out] The buffer that stores the name.</span></span>  
+ <span data-ttu-id="88624-108">[out] Der Puffer, der Namen speichert.</span><span class="sxs-lookup"><span data-stu-id="88624-108">[out] The buffer that stores the name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="67f36-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="67f36-109">Return Value</span></span>  
- <span data-ttu-id="67f36-110">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="67f36-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="88624-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="88624-109">Return Value</span></span>  
+ <span data-ttu-id="88624-110">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="88624-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="67f36-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="67f36-111">Requirements</span></span>  
- <span data-ttu-id="67f36-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="67f36-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="88624-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="88624-111">Requirements</span></span>  
+ <span data-ttu-id="88624-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="88624-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="67f36-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="67f36-113">See also</span></span>
-- [<span data-ttu-id="67f36-114">ISymUnmanagedVariable-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="67f36-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+## <a name="see-also"></a><span data-ttu-id="88624-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="88624-113">See also</span></span>
+- [<span data-ttu-id="88624-114">ISymUnmanagedVariable-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="88624-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9abe342a795f8f511fce0504c7839411079c1c75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6cf4396de4eedf719f1f3fea0b9303a4eaed2bb6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742539"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467069"
 ---
-# <a name="icorprofilerinfogetmoduleinfo-method"></a><span data-ttu-id="55e2a-102">ICorProfilerInfo::GetModuleInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="55e2a-102">ICorProfilerInfo::GetModuleInfo Method</span></span>
-<span data-ttu-id="55e2a-103">Gibt für die übergebene Modul-ID den Dateinamen des Moduls und die ID der übergeordneten Assembly des Moduls zurück.</span><span class="sxs-lookup"><span data-stu-id="55e2a-103">Given a module ID, returns the file name of the module and the ID of the module's parent assembly.</span></span>  
+# <a name="icorprofilerinfogetmoduleinfo-method"></a><span data-ttu-id="c9265-102">ICorProfilerInfo::GetModuleInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="c9265-102">ICorProfilerInfo::GetModuleInfo Method</span></span>
+<span data-ttu-id="c9265-103">Gibt für die übergebene Modul-ID den Dateinamen des Moduls und die ID der übergeordneten Assembly des Moduls zurück.</span><span class="sxs-lookup"><span data-stu-id="c9265-103">Given a module ID, returns the file name of the module and the ID of the module's parent assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55e2a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="55e2a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9265-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c9265-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModuleInfo(  
@@ -40,45 +40,45 @@ HRESULT GetModuleInfo(
     [out] AssemblyID *pAssemblyId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="55e2a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="55e2a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9265-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c9265-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="55e2a-106">[in] Die ID des Moduls, für das Informationen abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="55e2a-106">[in] The ID of the module for which information will be retrieved.</span></span>  
+ <span data-ttu-id="c9265-106">[in] Die ID des Moduls, für das Informationen abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="c9265-106">[in] The ID of the module for which information will be retrieved.</span></span>  
   
  `ppBaseLoadAddress`  
- <span data-ttu-id="55e2a-107">[out] Die Basisadresse, an der das Modul geladen wird.</span><span class="sxs-lookup"><span data-stu-id="55e2a-107">[out] The base address at which the module is loaded.</span></span>  
+ <span data-ttu-id="c9265-107">[out] Die Basisadresse, an der das Modul geladen wird.</span><span class="sxs-lookup"><span data-stu-id="c9265-107">[out] The base address at which the module is loaded.</span></span>  
   
  `cchName`  
- <span data-ttu-id="55e2a-108">[in] Die Länge des `szName`-Rückgabepuffers in Zeichen.</span><span class="sxs-lookup"><span data-stu-id="55e2a-108">[in] The length, in characters, of the `szName` return buffer.</span></span>  
+ <span data-ttu-id="c9265-108">[in] Die Länge des `szName`-Rückgabepuffers in Zeichen.</span><span class="sxs-lookup"><span data-stu-id="c9265-108">[in] The length, in characters, of the `szName` return buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="55e2a-109">[out] Ein Zeiger auf die gesamte Zeichenlänge des zurückgegebenen Dateinamens des Moduls.</span><span class="sxs-lookup"><span data-stu-id="55e2a-109">[out] A pointer to the total character length of the module's file name that is returned.</span></span>  
+ <span data-ttu-id="c9265-109">[out] Ein Zeiger auf die gesamte Zeichenlänge des zurückgegebenen Dateinamens des Moduls.</span><span class="sxs-lookup"><span data-stu-id="c9265-109">[out] A pointer to the total character length of the module's file name that is returned.</span></span>  
   
  `szName`  
- <span data-ttu-id="55e2a-110">[out] Ein vom Aufrufer bereitgestellter Breitzeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="55e2a-110">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="55e2a-111">Wenn die Methode abgeschlossen ist, enthält dieser Puffer den Dateinamen des Moduls.</span><span class="sxs-lookup"><span data-stu-id="55e2a-111">When the method returns, this buffer contains the file name of the module.</span></span>  
+ <span data-ttu-id="c9265-110">[out] Ein vom Aufrufer bereitgestellter Breitzeichenpuffer.</span><span class="sxs-lookup"><span data-stu-id="c9265-110">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="c9265-111">Wenn die Methode abgeschlossen ist, enthält dieser Puffer den Dateinamen des Moduls.</span><span class="sxs-lookup"><span data-stu-id="c9265-111">When the method returns, this buffer contains the file name of the module.</span></span>  
   
  `pAssemblyId`  
- <span data-ttu-id="55e2a-112">[out] Ein Zeiger auf die ID der übergeordneten Assembly des Moduls.</span><span class="sxs-lookup"><span data-stu-id="55e2a-112">[out] A pointer to the ID of the module's parent assembly.</span></span>  
+ <span data-ttu-id="c9265-112">[out] Ein Zeiger auf die ID der übergeordneten Assembly des Moduls.</span><span class="sxs-lookup"><span data-stu-id="c9265-112">[out] A pointer to the ID of the module's parent assembly.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="55e2a-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="55e2a-113">Remarks</span></span>  
- <span data-ttu-id="55e2a-114">Bei dynamischen Modulen ist der `szName` Parameter ist eine leere Zeichenfolge, und die Basisadresse ist 0 (null).</span><span class="sxs-lookup"><span data-stu-id="55e2a-114">For dynamic modules, the `szName` parameter is an empty string, and the base address is 0 (zero).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c9265-113">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c9265-113">Remarks</span></span>  
+ <span data-ttu-id="c9265-114">Bei dynamischen Modulen ist der `szName` Parameter ist eine leere Zeichenfolge, und die Basisadresse ist 0 (null).</span><span class="sxs-lookup"><span data-stu-id="c9265-114">For dynamic modules, the `szName` parameter is an empty string, and the base address is 0 (zero).</span></span>  
   
- <span data-ttu-id="55e2a-115">Obwohl die `GetModuleInfo` Methode aufgerufen werden kann, sobald die Modul ID vorhanden ist, die ID der übergeordneten Assembly wird nicht zur Verfügung, bis die empfängt der Profiler die [ICorProfilerCallback:: ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) Rückruf.</span><span class="sxs-lookup"><span data-stu-id="55e2a-115">Although the `GetModuleInfo` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.</span></span>  
+ <span data-ttu-id="c9265-115">Obwohl die `GetModuleInfo` Methode aufgerufen werden kann, sobald die Modul ID vorhanden ist, die ID der übergeordneten Assembly wird nicht zur Verfügung, bis die empfängt der Profiler die [ICorProfilerCallback:: ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) Rückruf.</span><span class="sxs-lookup"><span data-stu-id="c9265-115">Although the `GetModuleInfo` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.</span></span>  
   
- <span data-ttu-id="55e2a-116">Nachdem `GetModuleInfo` abgeschlossen ist, müssen Sie überprüfen, ob der `szName`-Puffer groß genug war, um den vollständigen Dateinamen des Moduls aufzunehmen.</span><span class="sxs-lookup"><span data-stu-id="55e2a-116">When `GetModuleInfo` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module.</span></span> <span data-ttu-id="55e2a-117">Vergleichen Sie hierzu den Wert, auf den `pcchName` verweist, mit dem Wert des `cchName`-Parameters.</span><span class="sxs-lookup"><span data-stu-id="55e2a-117">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="55e2a-118">Wenn `pcchName` auf einen Wert verweist, der größer als `cchName` ist, weisen Sie einen größeren `szName`-Puffer zu, aktualisieren Sie `cchName` mit der neuen Größe, und rufen Sie `GetModuleInfo` erneut auf.</span><span class="sxs-lookup"><span data-stu-id="55e2a-118">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo` again.</span></span>  
+ <span data-ttu-id="c9265-116">Nachdem `GetModuleInfo` abgeschlossen ist, müssen Sie überprüfen, ob der `szName`-Puffer groß genug war, um den vollständigen Dateinamen des Moduls aufzunehmen.</span><span class="sxs-lookup"><span data-stu-id="c9265-116">When `GetModuleInfo` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module.</span></span> <span data-ttu-id="c9265-117">Vergleichen Sie hierzu den Wert, auf den `pcchName` verweist, mit dem Wert des `cchName`-Parameters.</span><span class="sxs-lookup"><span data-stu-id="c9265-117">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="c9265-118">Wenn `pcchName` auf einen Wert verweist, der größer als `cchName` ist, weisen Sie einen größeren `szName`-Puffer zu, aktualisieren Sie `cchName` mit der neuen Größe, und rufen Sie `GetModuleInfo` erneut auf.</span><span class="sxs-lookup"><span data-stu-id="c9265-118">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo` again.</span></span>  
   
- <span data-ttu-id="55e2a-119">Alternativ können Sie zuerst `GetModuleInfo` mit einem `szName`-Puffer der Länge 0 (null) aufrufen, um die richtige Puffergröße zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="55e2a-119">Alternatively, you can first call `GetModuleInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="55e2a-120">Sie können die Puffergröße dann auf den Wert festlegen, der von `pcchName` zurückgegeben wurde, und `GetModuleInfo` erneut aufrufen.</span><span class="sxs-lookup"><span data-stu-id="55e2a-120">You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo` again.</span></span>  
+ <span data-ttu-id="c9265-119">Alternativ können Sie zuerst `GetModuleInfo` mit einem `szName`-Puffer der Länge 0 (null) aufrufen, um die richtige Puffergröße zu ermitteln.</span><span class="sxs-lookup"><span data-stu-id="c9265-119">Alternatively, you can first call `GetModuleInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="c9265-120">Sie können die Puffergröße dann auf den Wert festlegen, der von `pcchName` zurückgegeben wurde, und `GetModuleInfo` erneut aufrufen.</span><span class="sxs-lookup"><span data-stu-id="c9265-120">You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55e2a-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="55e2a-121">Requirements</span></span>  
- <span data-ttu-id="55e2a-122">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55e2a-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9265-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c9265-121">Requirements</span></span>  
+ <span data-ttu-id="c9265-122">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9265-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="55e2a-123">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="55e2a-123">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c9265-123">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c9265-123">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="55e2a-124">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="55e2a-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c9265-124">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9265-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="55e2a-125">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="55e2a-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c9265-125">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9265-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55e2a-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="55e2a-126">See also</span></span>
-- [<span data-ttu-id="55e2a-127">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="55e2a-127">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="55e2a-128">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="55e2a-128">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="55e2a-129">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="55e2a-129">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
-- [<span data-ttu-id="55e2a-130">GetModuleInfo2-Methode</span><span class="sxs-lookup"><span data-stu-id="55e2a-130">GetModuleInfo2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md)
+## <a name="see-also"></a><span data-ttu-id="c9265-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c9265-126">See also</span></span>
+- [<span data-ttu-id="c9265-127">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c9265-127">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="c9265-128">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="c9265-128">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="c9265-129">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="c9265-129">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="c9265-130">GetModuleInfo2-Methode</span><span class="sxs-lookup"><span data-stu-id="c9265-130">GetModuleInfo2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md)

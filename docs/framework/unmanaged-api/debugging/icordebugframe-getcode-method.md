@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15206fbd7724383b1ec6df123790d3171e58e9f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e7a4e8c6fa91ee43c33fe0f99d50bd4b1af4a0fd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411917"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481189"
 ---
-# <a name="icordebugframegetcode-method"></a><span data-ttu-id="cea56-102">ICorDebugFrame::GetCode-Methode</span><span class="sxs-lookup"><span data-stu-id="cea56-102">ICorDebugFrame::GetCode Method</span></span>
-<span data-ttu-id="cea56-103">Ruft einen Zeiger auf den Code, der dieses Stapelrahmens zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="cea56-103">Gets a pointer to the code associated with this stack frame.</span></span>  
+# <a name="icordebugframegetcode-method"></a><span data-ttu-id="9fdc2-102">ICorDebugFrame::GetCode-Methode</span><span class="sxs-lookup"><span data-stu-id="9fdc2-102">ICorDebugFrame::GetCode Method</span></span>
+<span data-ttu-id="9fdc2-103">Ruft einen Zeiger auf den Code für diesen Stapelrahmen.</span><span class="sxs-lookup"><span data-stu-id="9fdc2-103">Gets a pointer to the code associated with this stack frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cea56-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cea56-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9fdc2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9fdc2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCode (  
@@ -35,15 +35,15 @@ HRESULT GetCode (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="cea56-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="cea56-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9fdc2-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="9fdc2-105">Parameters</span></span>  
  `ppCode`  
- <span data-ttu-id="cea56-106">[out] Ein Zeiger auf die Adresse eines ICorDebugCode-Objekts, das den Code, der mit diesem Rahmen verbundenen darstellt.</span><span class="sxs-lookup"><span data-stu-id="cea56-106">[out] A pointer to the address of an ICorDebugCode object that represents the code associated with this frame.</span></span>  
+ <span data-ttu-id="9fdc2-106">[out] Ein Zeiger auf die Adresse eines ICorDebugCode-Objekts, das den Code für diesen Frame darstellt.</span><span class="sxs-lookup"><span data-stu-id="9fdc2-106">[out] A pointer to the address of an ICorDebugCode object that represents the code associated with this frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cea56-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cea56-107">Requirements</span></span>  
- <span data-ttu-id="cea56-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cea56-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9fdc2-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9fdc2-107">Requirements</span></span>  
+ <span data-ttu-id="9fdc2-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9fdc2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cea56-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cea56-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9fdc2-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9fdc2-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cea56-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cea56-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9fdc2-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9fdc2-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cea56-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cea56-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="9fdc2-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9fdc2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

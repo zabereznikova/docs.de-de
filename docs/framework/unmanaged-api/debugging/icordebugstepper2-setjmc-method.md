@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ad05d2f6226d570fc854fb48575851dd718e410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 129bf04a097b2019b080f813bf049d41b501f8fd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418196"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474214"
 ---
-# <a name="icordebugstepper2setjmc-method"></a><span data-ttu-id="5d8f9-102">ICorDebugStepper2::SetJMC-Methode</span><span class="sxs-lookup"><span data-stu-id="5d8f9-102">ICorDebugStepper2::SetJMC Method</span></span>
-<span data-ttu-id="5d8f9-103">Legt einen Wert, der angibt, ob dieser ICorDebugStepper nur Code verarbeitet, die von einem Anwendungsentwickler erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="5d8f9-103">Sets a value that specifies whether this ICorDebugStepper steps only through code that is authored by an application's developer.</span></span> <span data-ttu-id="5d8f9-104">Dieser Prozess wird auch bezeichnet als nur mein ("JMC") Codedebuggen.</span><span class="sxs-lookup"><span data-stu-id="5d8f9-104">This process is also known as just my code (JMC) debugging.</span></span>  
+# <a name="icordebugstepper2setjmc-method"></a><span data-ttu-id="c2ae4-102">ICorDebugStepper2::SetJMC-Methode</span><span class="sxs-lookup"><span data-stu-id="c2ae4-102">ICorDebugStepper2::SetJMC Method</span></span>
+<span data-ttu-id="c2ae4-103">Legt einen Wert, der angibt, ob diese ICorDebugStepper nur Code verarbeitet, die von einem Anwendungsentwickler erstellt wird.</span><span class="sxs-lookup"><span data-stu-id="c2ae4-103">Sets a value that specifies whether this ICorDebugStepper steps only through code that is authored by an application's developer.</span></span> <span data-ttu-id="c2ae4-104">Dieser Prozess wird auch bezeichnet als nur mein (JMC) Codedebuggen.</span><span class="sxs-lookup"><span data-stu-id="c2ae4-104">This process is also known as just my code (JMC) debugging.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5d8f9-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="5d8f9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c2ae4-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="c2ae4-105">Syntax</span></span>  
   
 ```  
 HRESULT SetJMC (  
@@ -35,15 +35,15 @@ HRESULT SetJMC (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5d8f9-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="5d8f9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c2ae4-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="c2ae4-106">Parameters</span></span>  
  `fIsJMCStepper`  
- <span data-ttu-id="5d8f9-107">[in] Legen Sie auf `true` , nur den Code schrittweise durchlaufen, die vom Entwickler eine Anwendung erstellt wird, legen Sie andernfalls auf `false`.</span><span class="sxs-lookup"><span data-stu-id="5d8f9-107">[in] Set to `true` to step only through code that is authored by an application's developer; otherwise, set to `false`.</span></span>  
+ <span data-ttu-id="c2ae4-107">[in] Legen Sie auf `true` zum schrittweisen Durchlaufen von Code, der von einem Anwendungsentwickler erstellt wurde; andernfalls auf festgelegt ist nur `false`.</span><span class="sxs-lookup"><span data-stu-id="c2ae4-107">[in] Set to `true` to step only through code that is authored by an application's developer; otherwise, set to `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5d8f9-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5d8f9-108">Requirements</span></span>  
- <span data-ttu-id="5d8f9-109">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d8f9-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c2ae4-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c2ae4-108">Requirements</span></span>  
+ <span data-ttu-id="c2ae4-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2ae4-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5d8f9-110">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5d8f9-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c2ae4-110">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c2ae4-110">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5d8f9-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5d8f9-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c2ae4-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c2ae4-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5d8f9-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5d8f9-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="c2ae4-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c2ae4-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
