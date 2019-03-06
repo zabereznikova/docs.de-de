@@ -505,15 +505,6 @@
 ### [Zugreifen auf Daten](visual-basic/developing-apps/accessing-data.md)
 ### [Erstellen und Verwenden von Komponenten](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [Drucken und Berichterstellung](visual-basic/developing-apps/printing/index.md)
-#### [PrintForm-Komponente](visual-basic/developing-apps/printing/printform-component.md)
-#### [Vorgehensweise: Drucken eines bildlauffähigen Formulars](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
-#### [Vorgehensweise: Drucken von Client- und Nicht-Client-Bereichen eines Formulars](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
-#### [Vorgehensweise: Drucken des Clientbereichs eines Formulars](visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)
-#### [Vorgehensweise: Drucken eines Formulars mithilfe der PrintForm-Komponente](visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)
-#### [Bereitstellen von Anwendungen, die auf die PrintForm-Komponente verweisen](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
-#### [Hinzufügen von druckbaren Berichten zu Visual Studio-Anwendung](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
-
 ### [Grundlagen der Windows Forms-Anwendungen](visual-basic/developing-apps/windows-forms/index.md)
 
 ### [Anpassen von Projekten und Erweitern von „My“ mit Visual Basic](visual-basic/developing-apps/customizing-extending-my/index.md)
