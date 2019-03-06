@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Popup control [WPF], how-to topics
 - controls [WPF], Popup
 ms.assetid: 9488a245-0168-4650-b9ab-d075a108cc8f
-ms.openlocfilehash: 4b7bd1398e2630c7f2496c9cc78fe1d20c27c941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80f0d8bb3f78e80868d5294b5893ef409fdf478c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553714"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362525"
 ---
-# <a name="popup-how-to-topics"></a><span data-ttu-id="61bfc-102">Gewusst-wie-Themen zu Popups</span><span class="sxs-lookup"><span data-stu-id="61bfc-102">Popup How-to Topics</span></span>
-<span data-ttu-id="61bfc-103">Die Themen in diesem Abschnitt wird beschrieben, wie mithilfe der <xref:System.Windows.Controls.Primitives.Popup> -Steuerelement zum Anzeigen von Inhalt in einem separaten Fenster, die über die aktuellen Anwendungsfenster gleitet.</span><span class="sxs-lookup"><span data-stu-id="61bfc-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
+# <a name="popup-how-to-topics"></a><span data-ttu-id="5049e-102">Gewusst-wie-Themen zu Popups</span><span class="sxs-lookup"><span data-stu-id="5049e-102">Popup How-to Topics</span></span>
+<span data-ttu-id="5049e-103">Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.Primitives.Popup> Steuerelement Inhalt in einem separaten Fenster angezeigt, die über das aktuelle Anwendungsfenster gleitet.</span><span class="sxs-lookup"><span data-stu-id="5049e-103">The topics in this section describe how to use the <xref:System.Windows.Controls.Primitives.Popup> control to display content in a separate window that floats over the current application window.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="61bfc-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="61bfc-104">In This Section</span></span>  
- [<span data-ttu-id="61bfc-105">Animieren eines Popups</span><span class="sxs-lookup"><span data-stu-id="61bfc-105">Animate a Popup</span></span>](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [<span data-ttu-id="61bfc-106">Angeben einer benutzerdefinierten Popup-Position</span><span class="sxs-lookup"><span data-stu-id="61bfc-106">Specify a Custom Popup Position</span></span>](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+## <a name="in-this-section"></a><span data-ttu-id="5049e-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="5049e-104">In This Section</span></span>  
+ [<span data-ttu-id="5049e-105">Animieren eines Popups</span><span class="sxs-lookup"><span data-stu-id="5049e-105">Animate a Popup</span></span>](how-to-animate-a-popup.md)  
+ [<span data-ttu-id="5049e-106">Angeben einer benutzerdefinierten Popup-Position</span><span class="sxs-lookup"><span data-stu-id="5049e-106">Specify a Custom Popup Position</span></span>](how-to-specify-a-custom-popup-position.md)  
   
-## <a name="reference"></a><span data-ttu-id="61bfc-107">Referenz</span><span class="sxs-lookup"><span data-stu-id="61bfc-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5049e-107">Referenz</span><span class="sxs-lookup"><span data-stu-id="5049e-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
-## <a name="related-sections"></a><span data-ttu-id="61bfc-108">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="61bfc-108">Related Sections</span></span>  
- [<span data-ttu-id="61bfc-109">Übersicht über Popups</span><span class="sxs-lookup"><span data-stu-id="61bfc-109">Popup Overview</span></span>](../../../../docs/framework/wpf/controls/popup-overview.md)
+## <a name="related-sections"></a><span data-ttu-id="5049e-108">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="5049e-108">Related Sections</span></span>  
+ [<span data-ttu-id="5049e-109">Übersicht über Popups</span><span class="sxs-lookup"><span data-stu-id="5049e-109">Popup Overview</span></span>](popup-overview.md)

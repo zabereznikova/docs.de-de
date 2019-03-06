@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WrapPanel control [WPF]
 - content [WPF], sequentially positioning
 ms.assetid: f0acb1b4-df71-4c5a-b4a4-98f189002537
-ms.openlocfilehash: a8072a90984e5b9b926ab28d7f0239a71b754b73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 530c41938ae4abb893fd91d64804c7aaa2d430b5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554027"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362148"
 ---
-# <a name="wrappanel"></a><span data-ttu-id="4e3cc-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="4e3cc-102">WrapPanel</span></span>
-<span data-ttu-id="4e3cc-103">Die <xref:System.Windows.Controls.WrapPanel> Element positioniert untergeordnete Elemente sequenziell von links nach rechts und wichtige Inhalt in die nächste Zeile am Rand des enthaltenden Felds.</span><span class="sxs-lookup"><span data-stu-id="4e3cc-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
+# <a name="wrappanel"></a><span data-ttu-id="7b72b-102">WrapPanel</span><span class="sxs-lookup"><span data-stu-id="7b72b-102">WrapPanel</span></span>
+<span data-ttu-id="7b72b-103">Die <xref:System.Windows.Controls.WrapPanel> Element positioniert untergeordnete Elemente nacheinander von links nach rechts und umbricht den Inhalt in die nächste Zeile am Rand des enthaltenden Felds.</span><span class="sxs-lookup"><span data-stu-id="7b72b-103">The <xref:System.Windows.Controls.WrapPanel> element positions child elements in sequential position from left to right, breaking content to the next line at the edge of its containing box.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="4e3cc-104">Referenz</span><span class="sxs-lookup"><span data-stu-id="4e3cc-104">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="7b72b-104">Referenz</span><span class="sxs-lookup"><span data-stu-id="7b72b-104">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -33,9 +33,9 @@ ms.locfileid: "33554027"
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="4e3cc-105">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="4e3cc-105">Related Sections</span></span>  
- [<span data-ttu-id="4e3cc-106">Layout</span><span class="sxs-lookup"><span data-stu-id="4e3cc-106">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="7b72b-105">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="7b72b-105">Related Sections</span></span>  
+ [<span data-ttu-id="7b72b-106">Layout</span><span class="sxs-lookup"><span data-stu-id="7b72b-106">Layout</span></span>](../advanced/layout.md)  
   
- [<span data-ttu-id="4e3cc-107">Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung</span><span class="sxs-lookup"><span data-stu-id="4e3cc-107">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="7b72b-107">Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)</span><span class="sxs-lookup"><span data-stu-id="7b72b-107">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="4e3cc-108">Übersicht über ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="4e3cc-108">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="7b72b-108">Übersicht über ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="7b72b-108">ScrollViewer Overview</span></span>](scrollviewer-overview.md)

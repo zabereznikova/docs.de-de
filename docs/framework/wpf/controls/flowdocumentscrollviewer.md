@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentScrollViewer
 - FlowDocumentScrollViewer control [WPF]
 ms.assetid: 727b0a0a-b845-4aa9-9fd4-98f42ed738b4
-ms.openlocfilehash: fa504c1269d6c57607204ea78919517c7d07f3eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 307c8e86ac6834631ba4086de5d7e27c0e32b87b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593991"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366704"
 ---
-# <a name="flowdocumentscrollviewer"></a><span data-ttu-id="1c587-102">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="1c587-102">FlowDocumentScrollViewer</span></span>
-<span data-ttu-id="1c587-103">Die <xref:System.Windows.Controls.FlowDocumentScrollViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FlowDocument> Inhalt in einem fortlaufenden Container.</span><span class="sxs-lookup"><span data-stu-id="1c587-103">The <xref:System.Windows.Controls.FlowDocumentScrollViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content in a scrolling container.</span></span> <span data-ttu-id="1c587-104">Im Gegensatz dazu <xref:System.Windows.Controls.FlowDocumentPageViewer>, die auf der Seite für Inhalt von Systemsichten.</span><span class="sxs-lookup"><span data-stu-id="1c587-104">Contrast with <xref:System.Windows.Controls.FlowDocumentPageViewer>, which views content on a per page basis.</span></span>  
+# <a name="flowdocumentscrollviewer"></a><span data-ttu-id="5237c-102">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="5237c-102">FlowDocumentScrollViewer</span></span>
+<span data-ttu-id="5237c-103">Die <xref:System.Windows.Controls.FlowDocumentScrollViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FlowDocument> Inhalt in einem fortlaufenden Container.</span><span class="sxs-lookup"><span data-stu-id="5237c-103">The <xref:System.Windows.Controls.FlowDocumentScrollViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content in a scrolling container.</span></span> <span data-ttu-id="5237c-104">Im Gegensatz dazu <xref:System.Windows.Controls.FlowDocumentPageViewer>, die auf der Seite für Inhalt von Systemsichten.</span><span class="sxs-lookup"><span data-stu-id="5237c-104">Contrast with <xref:System.Windows.Controls.FlowDocumentPageViewer>, which views content on a per page basis.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1c587-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1c587-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5237c-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5237c-105">See also</span></span>
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
 - <xref:System.Windows.Documents.FlowDocument>
-- [<span data-ttu-id="1c587-106">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="1c587-106">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [<span data-ttu-id="1c587-107">Übersicht über Flussdokumente</span><span class="sxs-lookup"><span data-stu-id="1c587-107">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [<span data-ttu-id="5237c-106">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="5237c-106">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="5237c-107">Übersicht über Flussdokumente</span><span class="sxs-lookup"><span data-stu-id="5237c-107">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
