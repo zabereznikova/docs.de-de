@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dfe888f74face85179306c982f7b5a888752987e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8553665ba64a1c8e1cb6398d94cd1f772a566ed
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742798"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466660"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField-Methode
 Erstellt eine Definition für ein Feld mit der angegebenen Metadaten-Signatur und ruft ein Token, Field-Definition ab.  
@@ -43,7 +43,7 @@ HRESULT DefineField (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `td`  
  [in] Die `mdTypeDef` token für die einschließende Klasse oder Schnittstelle.  
   

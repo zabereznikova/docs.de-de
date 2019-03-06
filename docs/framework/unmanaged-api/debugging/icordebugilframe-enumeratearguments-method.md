@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e4a727dcfbc80b131f526a08b00bd0ec91ca209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49d7fb1de0b2ea63c1a766023b23acc42e027af8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415021"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475657"
 ---
 # <a name="icordebugilframeenumeratearguments-method"></a>ICorDebugILFrame::EnumerateArguments-Methode
 Ruft einen Enumerator für die Argumente in diesem Frame ab.  
@@ -35,15 +35,15 @@ HRESULT EnumerateArguments (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppValueEnum`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugValueEnum-Objekts, das den Enumerator für die Argumente in diesem Frame darstellt.  
+ [out] Ein Zeiger auf die Adresse des ICorDebugValueEnum-Objekts, das den Enumerator für die Argumente in diesem Frame ist.  
   
 ## <a name="remarks"></a>Hinweise  
- `EnumerateArguments` Gibt einen Enumerator zurück, der die Argumente, die in den Aufrufframe verfügbar auflisten kann, die von diesem ICorDebugILFrame-Objekt dargestellt wird. Die Liste enthält die Argumente, die [Vararg](/cpp/windows/vararg) (d. h. eine Variable Anzahl von Argumenten) sowie die Argumente, die nicht `vararg`.  
+ `EnumerateArguments` Ruft einen Enumerator aus, der den Argumenten, die in den Aufrufframe auflisten kann, die von diesem ICorDebugILFrame-Objekt dargestellt wird. Die Liste enthält Argumente, die sind [Vararg](/cpp/windows/vararg) (d. h. eine Variable Anzahl von Argumenten) sowie Argumente, die nicht `vararg`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

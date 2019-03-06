@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e160eddf667b542929c8dd3790de666a8e8bb77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b8e7fcb4f44d6bdf6f18c93b1046b549331621a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413058"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470795"
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult-Methode
-Ruft den Ergebnissen dieser Auswertung ab.  
+Ruft die Ergebnisse dieser Auswertung ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,17 +35,17 @@ HRESULT GetResult (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppResult`  
- [out] Zeiger auf die Adresse eines ICorDebugValue-Objekts, das die Ergebnissen dieser Auswertung darstellt, wenn die Auswertung normal abgeschlossen wird.  
+ [out] Zeiger auf die Adresse eines ICorDebugValue-Objekts, das die Ergebnisse dieser Auswertung darstellt, wenn die Auswertung normal abgeschlossen wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetResult` Methode gilt nur, nachdem die Auswertung abgeschlossen ist.  
+ Die `GetResult` Methode gilt, wenn die Auswertung abgeschlossen ist.  
   
- Wenn in der Regel wird die Auswertung abgeschlossen `ppResult` gibt die Ergebnisse an. Wenn sie mit einer Ausnahme beendet wird, ist das Ergebnis die ausgelöste Ausnahme. Wenn die Auswertung für ein neues Objekt war, ist das Ergebnis der Verweis auf das neue Objekt.  
+ Wenn die Auswertung abgeschlossen, in der Regel wurde `ppResult` gibt die Ergebnisse. Wenn sie mit einer Ausnahme beendet wird, ist das Ergebnis die ausgelöste Ausnahme. Wenn die Auswertung für ein neues Objekt war, ist das Ergebnis der Verweis auf das neue Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

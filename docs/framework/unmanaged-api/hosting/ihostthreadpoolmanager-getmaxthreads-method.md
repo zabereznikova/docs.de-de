@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 887197af49a402df73005906e539791f6d7f7be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8758bd416b721a95f48b8c8edb933cf617e13455
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623858"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466492"
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads-Methode
 Ruft die maximale Anzahl von Threads, die der Host verwaltet, die gleichzeitig im Threadpool ab.  
@@ -35,7 +35,7 @@ HRESULT GetMaxThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pdwMaxWorkerThreads`  
  [out] Ein Zeiger auf die maximale Anzahl von Threads, die der Host im Threadpool der Warteschleife hinzu.  
   

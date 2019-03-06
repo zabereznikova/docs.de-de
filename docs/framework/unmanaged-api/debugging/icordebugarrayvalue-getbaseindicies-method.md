@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3fe9edf7a635e54aac881a242aca3bc32e21fe1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f24a1434f737e8281a0c68dd09d2e17b34371694
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408124"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471653"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies-Methode
-Ruft den Basis Index jeder Dimension im Array ab.  
+Ruft den Basisindex für jede Dimension im Array ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,15 +37,15 @@ HRESULT GetBaseIndicies (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `cdim`  
- [in] Die Anzahl der Dimensionen dieses `ICorDebugArrayValue` Objekt. Dieser Wert ist auch die Größe der `indicies` Arrays, da seine Größe gleich der Anzahl der Dimensionen des ist die `ICorDebugArrayValue` Objekt.  
+ [in] Die Anzahl der Dimensionen dieses `ICorDebugArrayValue` Objekt. Dieser Wert ist auch die Größe der `indicies` Arrays, da seine Größe gleich der Anzahl der Dimensionen ist die `ICorDebugArrayValue` Objekt.  
   
  `indicies`  
- [out] Ein Array von Ganzzahlen, von denen jede der Basisindex (d. h. den Startindex) einer Dimension dieses wird `ICorDebugArrayValue` Objekt.  
+ [out] Ein Array von Ganzzahlen, von denen jeder der Basisindex (d. h. den Startindex) einer Dimension dieses wird `ICorDebugArrayValue` Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

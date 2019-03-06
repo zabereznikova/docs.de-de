@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74b9ef2cdd48c403eb5a50d357a673eee3102106
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93721815d44d7c348860742ab2c8b237cb8f5f67
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548243"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469586"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription-Methode
 Ruft eine Zeichenfolge, enthält die Beschreibung des managed debugging Assistant (MDA) durch dargestellt [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
@@ -38,7 +38,7 @@ HRESULT GetDescription (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `cchName`  
  [in] Die Größe des Zeichenfolgenpuffers, die die Beschreibung gespeichert werden sollen.  
   

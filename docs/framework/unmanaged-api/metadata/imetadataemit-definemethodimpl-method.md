@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a60d3bfc734480733f621c71a0141bb58a0eb71e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3a6f98dca1c6665b312384721a8fb590f914175
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745302"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468896"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl-Methode
 Erstellt eine Definition für die Implementierung einer Methode, die von einer Schnittstelle geerbt, und ein Token an dieser Definition der Implementierung der Methode zurück.  
@@ -37,7 +37,7 @@ HRESULT DefineMethodImpl (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `td`  
  [in] Die `mdTypedef` token von der implementierenden Klasse.  
   

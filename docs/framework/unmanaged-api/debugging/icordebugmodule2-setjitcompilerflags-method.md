@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e605859a3049abc0c17d9d6792ade78f4ad2bd78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c71ccbc62ea026a55a7e84f6925a78850594a813
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417361"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473786"
 ---
 # <a name="icordebugmodule2setjitcompilerflags-method"></a>ICorDebugModule2::SetJITCompilerFlags-Methode
-Legt die Flags, die die Just-in-Time (JIT)-Kompilierung für diese ICorDebugModule2 steuern.  
+Legt die Flags, die just-in-Time (JIT)-Kompilierung für dieses ICorDebugModule2 steuern.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,19 +35,19 @@ HRESULT SetJITCompilerFlags (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `dwFlags`  
- [in] Eine bitweise Kombination der [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) Enumerationswerte.  
+ [in] Eine bitweise Kombination der [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) -Enumerationswerte fest.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn die `dwFlags` Wert ist ungültig, die `SetJITCompilerFlags` Methode fehl.  
   
- Die `SetJITCompilerFlags` Methode kann aufgerufen werden, nur von innerhalb der [ICorDebugManagedCallback:: LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) Rückruf für dieses Modul. Versucht, die sie nach dem Aufrufen der `ICorDebugManagedCallback::LoadModule` Rückruf übermittelt wurde, schlägt fehl.  
+ Die `SetJITCompilerFlags` Methode kann aufgerufen werden, nur von innerhalb der [ICorDebugManagedCallback:: LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) Rückruf für dieses Modul. Versucht, sie aufzurufen, nachdem die `ICorDebugManagedCallback::LoadModule` Rückruf übermittelt wurde, fehl.  
   
- Bearbeiten und Fortfahren wird auf 64-Bit- oder Win9x-Plattformen nicht unterstützt. Aus diesem Grund beim Aufrufen der `SetJITCompilerFlags` -Methode auf einer dieser beiden Plattformen mit dem CORDEBUG_JIT_ENABLE_ENC-Flag festgelegt `dwFlags`, die `SetJITCompilerFlags` -Methode und alle spezifischen Methoden zum Bearbeiten und fortfahren, z. B. [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), schlägt fehl.  
+ Bearbeiten und Fortfahren wird auf 64-Bit- oder Win9x-Plattformen nicht unterstützt. Aus diesem Grund Aufrufen der `SetJITCompilerFlags` Methode entweder mit dem CORDEBUG_JIT_ENABLE_ENC-Flag festlegen, die dieser beiden Plattformen `dwFlags`, `SetJITCompilerFlags` -Methode und alle spezifischen Methoden zu bearbeiten und fortfahren, wie z. B. [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), schlägt fehl.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

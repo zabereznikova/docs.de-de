@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3f0ca6d930b22f30fe9bbc5b5a04bf1e034f34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405824"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484237"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType-Methode
-Ruft ein Array des angegebenen Typs oder ein Zeiger oder Verweis auf den angegebenen Typ ab.  
+Ruft ein Array von den angegebenen Typ oder ein Zeiger oder Verweis auf den angegebenen Typ ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,32 +38,32 @@ HRESULT GetArrayOrPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `elementType`  
- [in] Der Wert der CorElementType-Enumeration, die angibt, die zugrunde liegenden systemeigenen Typ (ein Array, Zeiger oder Verweis) erstellt werden soll.  
+ [in] Ein Wert, der CorElementType-Enumeration, die angibt, den zugrunde liegenden systemeigenen Typ (ein Array, Zeiger oder Verweis) erstellt werden.  
   
  `nRank`  
- [in] Der Rang (d. h. die Anzahl der Dimensionen) des Arrays. Dieser Wert muss 0 sein, wenn `elementType` gibt einen Zeiger oder Verweis Typ an.  
+ [in] Der Rang (d. h. die Anzahl der Dimensionen) des Arrays. Dieser Wert muss 0 sein, wenn `elementType` gibt einen Zeiger oder Verweis-Typ.  
   
  `pTypeArg`  
  [in] Ein Zeiger auf ein ICorDebugType-Objekt, das den Typ des Arrays darstellt, Zeiger oder Verweis erstellt werden soll.  
   
  `ppType`  
- [out] Ein Zeiger auf die Adresse des ein `ICorDebugType` geben Objekt, das die konstruierte Array, Zeigertyp oder Verweis darstellt.  
+ [out] Ein Zeiger auf die Adresse einer `ICorDebugType` geben-Objekt, das erstellte Array, Zeigertyp oder Verweis darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert der *ElementType* muss eines der folgenden sein:  
+ Der Wert des *ElementType* muss eine der folgenden sein:  
   
 -   ELEMENT_TYPE_PTR  
   
 -   ELEMENT_TYPE_BYREF  
   
--   Einem oder ELEMENT_TYPE_SZARRAY  
+-   ELEMENT_TYPE_ARRAY oder ELEMENT_TYPE_SZARRAY  
   
- Wenn der Wert der *ElementType* ELEMENT_TYPE_PTR oder ELEMENT_TYPE_BYREF, *nRank* muss 0 (null) sein.  
+ Wenn der Wert des *ElementType* ELEMENT_TYPE_PTR oder ELEMENT_TYPE_BYREF, *nRank* muss NULL sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

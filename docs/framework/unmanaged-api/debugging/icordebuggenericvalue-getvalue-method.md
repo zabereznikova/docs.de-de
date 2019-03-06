@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d30a9f03d8717486be7cd89bb182d350a82df7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 53db4dcb13303c9e7bdd77a46b3c9526364bac06
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411635"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471224"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a>ICorDebugGenericValue::GetValue-Methode
 Kopiert den Wert dieses generischen in den angegebenen Puffer.  
@@ -35,12 +35,12 @@ HRESULT GetValue (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pTo`  
- [out] Ein Zeiger auf den Wert, der von diesem ICorDebugGenericValue-Objekt dargestellt wird. Der Wert kann ein einfacher Typ oder ein Verweistyp (d. h. ein Zeiger) sein.  
+ [out] Ein Zeiger auf den Wert, der von diesem ICorDebugGenericValue-Objekt dargestellt wird. Der Wert kann es sich um einen einfachen Typ oder einen Verweistyp handelt (d. h. einen Zeiger) sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

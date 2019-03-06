@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa99e7289e0e86032f7bb85bbe209932f5c50d16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1032227a539fb0f1a670a2c1a7a0f4f7df05a82b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627576"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466856"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>ICorDebugAssembly3::EnumerateContainedAssemblies-Methode
 Ruft einen Enumerator für die Assemblys ab, die in dieser Assembly enthalten sind.  
@@ -22,7 +22,7 @@ HRESULT EnumerateContainedAssemblies(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppAssemblies`  
  [out] Ein Zeiger auf die Adresse der Schnittstelle ICorDebugAssemblyEnum-Objekts, das den Enumerator darstellt.  
   

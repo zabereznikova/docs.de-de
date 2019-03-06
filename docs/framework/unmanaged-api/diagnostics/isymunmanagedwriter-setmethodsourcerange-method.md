@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40d05ee60d0183337e67b1f36722dff29ae9beaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46072718a7dafc0a00294757d5ccce6242a11e23
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663543"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468363"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange-Methode
 Gibt an, den tatsächlichen Anfang und Ende einer Methode innerhalb einer Quelldatei. Verwenden Sie diese Methode, um die Reichweite einer Methode unabhängig von der Sequenzpunkte anzugeben, die innerhalb der Methode vorhanden sind.  
@@ -39,7 +39,7 @@ HRESULT SetMethodSourceRange(
     [in] ULONG32                      endColumn);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `startDoc`  
  [in] Ein Zeiger auf das Dokument, das die Anfangsposition enthält.  
   

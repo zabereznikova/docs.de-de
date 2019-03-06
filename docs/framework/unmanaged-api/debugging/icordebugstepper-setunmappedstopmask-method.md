@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc4e51ec60c7526f36bbe4909bec91a527e0862c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: da799b0d4f4e5e4b281445baa35d95f992ba0b63
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419909"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474955"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a>ICorDebugStepper::SetUnmappedStopMask-Methode
-Legt einen Wert, der den Typ des nicht zugeordneten Codes angibt, in dem die Ausführung angehalten wird.  
+Legt einen Wert, der den Typ von nicht zugeordnetem Code gibt an, in dem die Ausführung angehalten wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,19 +35,19 @@ HRESULT SetUnmappedStopMask (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `mask`  
  [in] Der Wert der CorDebugUnmappedStop-Enumeration, die den Typ des nicht zugeordneten Codes angibt, in dem der Debugger die Ausführung angehalten wird.  
   
- Der Standardwert ist STOP_OTHER_UNMAPPED. Der Wert STOP_UNMANAGED ist nur gültig, wenn Interop-Debuggen.  
+ Der Standardwert ist STOP_OTHER_UNMAPPED. Der Wert STOP_UNMANAGED ist nur gültig mit der interop-Debuggen.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Debugger eine just-in-Time (JIT)-Kompilierung, die keine entsprechende Zuordnung in die Microsoft intermediate Language (MSIL) aufweist findet, hält der Ausführung an, wenn die Angabe dieses Typs von nicht zugeordnetem Code Flag festgelegt wurde; Andernfalls wird die transparente schrittweise Ausführung fortgesetzt.  
+ Wenn der Debugger eine just-in-Time-Kompilierung (JIT), die keine entsprechende Zuordnung Microsoft intermediate Language (MSIL) aufweist findet, hält er Ausführung, wenn das Flag, das diesen Typ von nicht zugeordnetem Code angeben festgelegt wurde; Andernfalls wird die transparente schrittweise Ausführung fortgesetzt.  
   
- Wenn der Debugger eine zugeordnetem eingeben eine Methode verwendet, wird nicht es unbedingt nicht zugeordnetem Code überspringen.  
+ Wenn der Debugger eine zugeordnetem nicht verwendet, eine Methode einzugeben, wird nicht es unbedingt nicht zugeordnetem Code überspringen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

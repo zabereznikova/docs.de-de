@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b87444165f0504964b6489beb562ca2e8bd4697e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdfa6f5cb5aae2124f04580ce49064ba857e2602
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524285"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473031"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout-Methode
 Ruft Informationen zum Layout eines Zeichenfolgenobjekts ab. Diese Methode ist veraltet, der [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], und wird durch die [ICorProfilerInfo3:: Getstringlayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) Methode.  
@@ -36,7 +36,7 @@ HRESULT GetStringLayout(
     [out] ULONG *pBufferOffset);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pBufferLengthOffset`  
  [out] Ein Zeiger auf den Offset der Position, relativ zu den `ObjectID` Zeiger, der die Länge der Zeichenfolge speichert. Die Dauer, gespeichert als eine `DWORD`.  
   

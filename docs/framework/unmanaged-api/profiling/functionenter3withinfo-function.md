@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35b77e282fd23ee01ea5e7d65bec64f8fb2ecc31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9e94c1904d8675af59e6ed5b49c2229e1214e8b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533100"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469221"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo-Funktion
 Benachrichtigt den Profiler, dass Steuerelement an eine Funktion übergeben wird, und stellt ein Handle übergeben werden kann, die die [ICorProfilerInfo3:: Getfunctionenter3info-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) zum Abrufen der Stapel und die Funktionsargumente.  
@@ -34,7 +34,7 @@ void __stdcall FunctionEnter3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `functionIDOrClientID`  
  [in] Der Bezeichner der Funktion an der Steuerelement übergeben wird.  
   

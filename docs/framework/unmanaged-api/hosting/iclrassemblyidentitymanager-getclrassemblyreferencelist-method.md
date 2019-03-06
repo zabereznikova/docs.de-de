@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bfb3e07504570f8cedceddb43410b48691c4695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65ec26384b88ba3048666f3b6e3affcb90d8f070
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595759"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479310"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList-Methode
 Ruft einen Schnittstellenzeiger auf ein [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) Instanz aus der angegebenen Liste von partiellen Assemblyidentitäten.  
@@ -37,9 +37,9 @@ HRESULT  GetCLRAssemblyReferenceList (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppwzAssemblyReferences`  
- [in] Ein Array von Null-terminierten Zeichenfolgen im Format "name-Eigenschaft = Wert..." angeben, dass eine Liste von partiellen Assemblyidentitäten.  
+ [in] Ein Array von Null-terminierten Zeichenfolgen im Format "name-Eigenschaft = Wert..." Geben Sie, die eine Liste von partiellen Assemblyidentitäten.  
   
  `dwNumOfReferences`  
  [in] Die Anzahl der Elemente in `ppwzAssemblyReferences`.  

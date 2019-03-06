@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bb93dbf35501d44bb21d3d689aebeba3acd19f79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d297f6915af59ad5a24dfdad9dca9397489edb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616803"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468168"
 ---
 # <a name="icorprofilercallbackruntimethreadsuspended-method"></a>ICorProfilerCallback::RuntimeThreadSuspended-Methode
 Benachrichtigt den Profiler an, der angegebene Thread wurde angehalten oder unterbrochen wird.  
@@ -34,7 +34,7 @@ HRESULT RuntimeThreadSuspended(
     [in] ThreadID threadId);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `threadId`  
  [in] Die ID des Threads, der angehalten wurde.  
   

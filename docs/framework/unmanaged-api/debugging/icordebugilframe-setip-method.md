@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed7de70c8ea26f46f44abb3e063c6e4c4b115666
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a25e52c6b858aaa602ffade0e407b1aaf6e5c67e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414489"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471390"
 ---
 # <a name="icordebugilframesetip-method"></a>ICorDebugILFrame::SetIP-Methode
-Legt den Anweisungszeiger auf die angegebene Offsetposition im Microsoft intermediate Language (MSIL)-Code fest.  
+Legt den Anweisungszeiger am angegebenen Offset Speicherort im Microsoft intermediate Language (MSIL)-Code fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,19 +35,19 @@ HRESULT SetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `nOffset`  
  Die Offsetposition im MSIL-Code.  
   
 ## <a name="remarks"></a>Hinweise  
- Aufrufe von `SetIP` sofort ungültig werden alle Frames und Ketten für den aktuellen Thread. Wenn der Debugger die Frame-Informationen nach einem Aufruf von benötigt `SetIP`, müssen sie eine neue stapelüberwachung ausführen.  
+ Aufrufe von `SetIP` direkt für ungültig erklären alle Rahmen und Ketten für den aktuellen Thread. Wenn der Debugger die Frame-Informationen nach einem Aufruf von benötigt `SetIP`, müssen sie eine neue stapelüberwachung ausführen.  
   
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) versucht, den Stapelrahmen in einem gültigen Zustand zu behalten. Allerdings auch, wenn der Frame in einem gültigen Zustand ist, weiterhin möglicherweise Probleme, z. B. nicht initialisierten lokalen Variablen. Der Aufrufer ist verantwortlich für die Kohärenz des ausgeführten Programms.  
+ [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) wird versucht, den Stapelrahmen in einem gültigen Zustand zu halten. Allerdings auch, wenn der Frame in einem gültigen Zustand ist, gibt es immer noch möglicherweise Probleme wie z. B. nicht initialisierten lokalen Variablen. Der Aufrufer ist verantwortlich für die Kohärenz des laufenden Programms.  
   
- Auf 64-Bit-Plattformen kann nicht aus der Anweisungszeiger verschoben werden eine `catch` oder `finally` Block. Wenn `SetIP` wird aufgerufen, um eine solche Verschiebung auf einer 64-Bit-Plattform zu gestalten, wird einen HRESULT-Fehler zurückgegeben.  
+ Auf 64-Bit-Plattformen kann nicht von der Anweisungszeiger verschoben werden eine `catch` oder `finally` Block. Wenn `SetIP` wird aufgerufen, um eine solche Verschiebung auf einer 64-Bit-Plattform zu machen, wird einen HRESULT-Fehler zurückgegeben.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

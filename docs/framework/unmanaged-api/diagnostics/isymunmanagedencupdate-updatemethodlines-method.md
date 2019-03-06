@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7905b3ee83378ed1a27501b082dbfca01d6436c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226d9aa75d0a9e4d6cef92e2d2edacb6e98cf34e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688063"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473056"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a>ISymUnmanagedENCUpdate::UpdateMethodLines-Methode
 Ermöglicht das Aktualisieren der Zeile für eine Methode, wurde nicht neu kompiliert, aber, deren Zeilen verschoben wurden. Es ist eine Delta für jede Anweisung zulässig.  
@@ -36,7 +36,7 @@ HRESULT UpdateMethodLines(
     [in]  ULONG        cDeltas);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `mdMethodToken`  
  [in] Die Metadaten des Methodentokens.  
   

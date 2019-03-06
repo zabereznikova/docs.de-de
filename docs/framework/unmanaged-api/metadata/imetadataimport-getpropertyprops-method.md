@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81680825daff2cd2358da7b3956782020edf4791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1b065ecb9a715601e617e288c1dfc0de8dd323d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672057"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466569"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps-Methode
 Ruft die Metadaten für die Eigenschaft, die durch das angegebene Token dargestellt wird.  
@@ -50,7 +50,7 @@ HRESULT GetPropertyProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `prop`  
  [in] Ein Token, die die Metadaten für die zurückzugebende Eigenschaft darstellt.  
   

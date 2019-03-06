@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38b00d903fdd7301415a8df7642e12366178fd10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1abe307e3b9fa607912f98e456a11176eb17c56
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413939"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471510"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray-Methode
 Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.  
   
- Diese Methode ist veraltet in .NET Framework, Version 2.0. Verwendung [ICorDebugEval2:: NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) stattdessen.  
+ Diese Methode ist in .NET Framework, Version 2.0, veraltet. Verwendung [ICorDebugEval2:: NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) stattdessen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,27 +41,27 @@ HRESULT NewArray (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `elementType`  
  [in] Der Wert der CorElementType-Enumeration, die den Elementtyp des Arrays angibt.  
   
  `pElementClass`  
- [in] Ein Zeiger auf eine ICorDebugClass-Objekt, das die Klasse des Elements angibt. Dieser Wert kann null sein, wenn der Elementtyp ein primitiver Typ ist.  
+ [in] Ein Zeiger auf eine ICorDebugClass-Objekt, das die Klasse des Elements angibt. Dieser Wert ist möglicherweise null, wenn der Elementtyp ein primitiver Typ ist.  
   
  `rank`  
- [in] Die Anzahl der Dimensionen des Arrays. In .NET Framework 2.0 muss dieser Wert 1 sein.  
+ [in] Die Anzahl der Dimensionen des Arrays. In .NET Framework 2.0 muss dieser Wert als 1 sein.  
   
  `dims`  
  [in] Die Größe der einzelnen Dimensionen des Arrays in Bytes.  
   
  `lowBounds`  
- [in] Optional. Die untere Grenze der einzelnen Dimensionen des Arrays. Wenn dieser Wert ausgelassen wird, wird eine Untergrenze von 0 (null) für jede Dimension angenommen.  
+ [in] Optional. Die untere Grenze der einzelnen Dimensionen des Arrays. Wenn dieser Wert ausgelassen wird, wird eine Untergrenze von 0 (null) für jede Dimension ausgegangen.  
   
 ## <a name="remarks"></a>Hinweise  
  Das Array wird immer in der Anwendungsdomäne erstellt, in dem der Thread gerade ausgeführt wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6287b7adf0ef6f6269a51f608657444f5fa7f74e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5512c503d8b4048c613ab88c2b4d9d19cdbb9dca
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580225"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479025"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption-Methode
 Ruft den Wert der angegebenen Option für den aktuellen Metadatenbereich. Die Option wird gesteuert, wie Aufrufe im aktuellen Metadatenbereich behandelt werden.  
@@ -36,7 +36,7 @@ HRESULT GetOption (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `optionId`  
  [in] Ein Zeiger auf eine GUID, der angibt, die Möglichkeit, die abgerufen werden. Finden Sie im Abschnitt "Hinweise" eine Liste der unterstützten GUIDs.  
   

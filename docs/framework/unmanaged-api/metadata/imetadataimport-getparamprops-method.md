@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ed9bae4fde96f0878e40ed73b81cc8776571ada5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745919"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468057"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps-Methode
 Ruft Metadatenwerte für den Parameter ab, auf den durch das angegebene ParamDef-Token verwiesen wird.  
@@ -44,7 +44,7 @@ HRESULT GetParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `tk`  
  [in] Ein ParamDef-Token, das die Parameter für die Metadaten zurückgegeben darstellt.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e33d69e319d7817a54dca76526b6c3ee9bb6384f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250e58e4153edbee5c327ad46ecde73e94b83584
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729969"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468714"
 ---
 # <a name="isymunmanagedwriterclosescope-method"></a>ISymUnmanagedWriter::CloseScope-Methode
 Schließt den aktuellen lexikalischen Gültigkeitsbereich.  
@@ -34,7 +34,7 @@ HRESULT CloseScope(
     [in] ULONG32 endOffset);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `endOffset`  
  [in] Der Offset vom Anfang der Methode des Punkts am Ende der letzten Anweisung im lexikalischen Gültigkeitsbereich, in Bytes.  
   

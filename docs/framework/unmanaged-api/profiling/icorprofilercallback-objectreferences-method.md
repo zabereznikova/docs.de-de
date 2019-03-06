@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fc10344757d4dd9f9df7d4931eb339b652303f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9659f37f0ae9297837dbc4b1602cb00b8eff2fd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683728"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471448"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences-Methode
 Benachrichtigt den Profiler zu Objekten im Arbeitsspeicher, die vom angegebenen Objekt verwiesen wird.  
@@ -37,7 +37,7 @@ HRESULT ObjectReferences(
     [in, size_is(cObjectRefs)] ObjectID objectRefIds[] );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `objectId`  
  [in] Die ID des Objekts, die auf Objekte verweisen.  
   

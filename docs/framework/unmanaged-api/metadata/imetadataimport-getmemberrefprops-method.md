@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ac0d77b1d8d35a7753d3a501f147bd5ac53750c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbc297ce129ba223d85b5e13da1f046b3010f4d3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583729"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466023"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps-Methode
 Ruft Metadaten ab, die dem Element zugeordnet sind, auf das durch das angegebene Token verwiesen wird.  
@@ -41,7 +41,7 @@ HRESULT GetMemberRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `mr`  
  [in] Das MemberRef-Token für die zugeordneten Metadaten zurückgegeben werden soll.  
   

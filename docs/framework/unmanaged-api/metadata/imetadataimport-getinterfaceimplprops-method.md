@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc16d01d45364d1a17f281f859b27c3e48342ff0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: cb38c61e8dbd29a0ff87165b5daf49e733b34047
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835719"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466543"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps-Methode
 Ruft einen Zeiger auf das Metadatentoken für die <xref:System.Type> , der die angegebene Methode implementiert und für die Schnittstelle, die diese Methode deklariert.
@@ -37,7 +37,7 @@ HRESULT GetInterfaceImplProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `iiImpl`  
  [in] Das Metadatentoken, das die Methode zum Zurückgeben von der Klassen- und Token für darstellt.  
   

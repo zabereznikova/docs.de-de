@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3662ed8a3fda5881b0e0929a830d19b0d805299f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3fe3cbc4bad83496bcc58aaea60e6724b1d1f06c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411030"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466387"
 ---
 # <a name="icordebugframecreatestepper-method"></a>ICorDebugFrame::CreateStepper-Methode
-Ruft eine zugeordnetem, die dem Debugger ermöglicht, die relativ zu diesem ICorDebugFrame schrittweisen Vorgänge ab.  
+Ruft ab eine zugeordnetem, die mit dem Debugger zum schrittweisen Operationen in Bezug auf diesem ICorDebugFrame ausführen kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT CreateStepper (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppStepper`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugStepper-Objekts, das dem Debugger ermöglicht, relativ zum aktuellen Rahmen schrittweisen Vorgänge.  
+ [out] Ein Zeiger auf die Adresse des ein ICorDebugStepper-Objekt, das mit dem Debugger zum schrittweisen Operationen in Bezug auf den aktuellen Frame ausführen kann.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn der Frame nicht aktiv ist, müssen das zugeordnetem-Objekt in der Regel auf den Frame zurück, bevor der Schritt abgeschlossen ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

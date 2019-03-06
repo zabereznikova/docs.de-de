@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3cfc222930359e1d7ab1a1720834e88c93c035e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737256"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469000"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler-Methode
 Fügt den angegebenen Profiler an den angegebenen Prozess an.  
@@ -39,7 +39,7 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `dwProfileeProcessID`  
  [in] Die Prozess-ID des Prozesses, an den der Profiler angefügt werden soll. Auf einem 64-Bit-Computer muss die Bitanzahl des profilierten Prozesses der Bitanzahl des Triggerprozesses entsprechen, von dem `AttachProfiler` aufgerufen wird. Wenn das Benutzerkonto, unter dem `AttachProfiler` aufgerufen wird, über Administratorrechte verfügt, kann der Zielprozess jeder Prozess im System sein. Andernfalls muss der Zielprozess im Besitz desselben Benutzerkontos sein.  
   

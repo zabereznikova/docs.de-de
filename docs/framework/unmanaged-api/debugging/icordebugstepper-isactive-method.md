@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcb276e6fba6a1b46b6be630804dc6f07c211b86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4166b63e0bb0ae276c48abb961e381809cc9792
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420507"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471419"
 ---
 # <a name="icordebugstepperisactive-method"></a>ICorDebugStepper::IsActive-Methode
-Ruft einen Wert, der angibt, ob dieser ICorDebugStepper gerade einen Schritt ausgeführt wird.  
+Ruft einen Wert, der angibt, ob dieser ICorDebugStepper derzeit einen Schritt ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pbActive`  
- [out] Gibt `true` , wenn die zugeordnetem gerade einen Schritt; ausgeführt wird, andernfalls `false`.  
+ [out] Gibt `true` , wenn die zugeordnetem aktuell einen Schritt ausgeführt wird, andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- Eine beliebige Aktion bleibt aktiv, bis der Debugger empfängt eine [ICorDebugManagedCallback:: StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) aufrufen, die die zugeordnetem automatisch deaktiviert. Eine zugeordnetem möglicherweise durch den Aufruf auch vorzeitig deaktiviert [ICorDebugStepper:: Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) vor dem Rückruf Bedingung erreicht ist.  
+ Eine Schrittaktion bleibt aktiv, bis der Debugger empfängt eine [ICorDebugManagedCallback:: StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) aufrufen, die die zugeordnetem automatisch deaktiviert. Eine zugeordnetem kann durch den Aufruf auch vorzeitig deaktiviert [ICorDebugStepper:: Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) vor dem Rückruf Bedingung erreicht wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

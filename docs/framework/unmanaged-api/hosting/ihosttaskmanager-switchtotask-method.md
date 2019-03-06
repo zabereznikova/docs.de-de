@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c7bf550985b5177348541aaa148c88c7c205258
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e2d5c299814202d0a3a8ff1da577fdfd17801e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490716"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472000"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask-Methode
 Benachrichtigt den Host, dass sie die aktuelle Aufgabe wechseln soll.  
@@ -35,7 +35,7 @@ HRESULT SwitchToTask (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `option`  
  [in] Eines der [WAIT_OPTION](../../../../docs/framework/unmanaged-api/hosting/wait-option-enumeration.md) -Enumerationswerte fest, dass die Aktion, die der Host ausführen soll, wenn der angeforderte Vorgang blockiert.  
   

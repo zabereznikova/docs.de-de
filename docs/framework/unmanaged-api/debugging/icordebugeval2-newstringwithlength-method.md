@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b3b77a0ffc7af3b3640d1b255bd3be522f45a7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b84a2fad53feda2996515781035c0eaad5828d54
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413549"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473434"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength-Methode
 Erstellt eine Zeichenfolge der angegebenen Länge und mit dem angegebenen Inhalt.  
@@ -36,7 +36,7 @@ HRESULT NewStringWithLength (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `string`  
  [in] Ein Zeiger auf den Zeichenfolgenwert.  
   
@@ -44,12 +44,12 @@ HRESULT NewStringWithLength (
  [in] Die Länge der Zeichenfolge.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn die Zeichenfolge nachfolgende des Null-Zeichen wird erwartet in die verwaltete Zeichenfolge, der Aufrufer die `NewStringWithLength` Methode muss sicherstellen, dass die Länge der Zeichenfolge das abschließende Null-Zeichen enthält.  
+ Wenn die Zeichenfolge nachfolgende des Null-Zeichen wird erwartet in der verwalteten Zeichenfolge, der Aufrufer die `NewStringWithLength` Methode muss sicherstellen, dass die Länge der Zeichenfolge das abschließende Null-Zeichen enthält.  
   
  Die Zeichenfolge wird immer in der Anwendungsdomäne erstellt, in dem der Thread gerade ausgeführt wird.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

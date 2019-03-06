@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baeac4ee3e4a22b023420caa7caffa238ff5a5c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1b6d23ab5d773f6f25becefd45895c365271e6a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696112"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476190"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>ICorDebugManagedCallback::ExitAppDomain-Methode
 Benachrichtigt den Debugger, dass eine Anwendungsdomäne beendet wurde.  
@@ -36,7 +36,7 @@ HRESULT ExitAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pProcess`  
  [in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, der zur angegebenen Anwendungsdomäne enthält.  
   

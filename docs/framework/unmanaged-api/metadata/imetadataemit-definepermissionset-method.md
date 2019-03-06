@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 56665997e529227ca82b34a2303f4a2a705c3b1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4188d1ef83f685bf39bdf951939e0ec6493b323d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522512"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466400"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>IMetaDataEmit::DefinePermissionSet-Methode
 Erstellt eine Definition für einen Berechtigungssatz, der mit der angegebenen Metadaten-Signatur und ruft ein Token für die Definition dieser Berechtigung Menge ab.  
@@ -39,7 +39,7 @@ HRESULT DefinePermissionSet (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `tk`  
  [in] Das Objekt, das Attribut versehen werden.  
   

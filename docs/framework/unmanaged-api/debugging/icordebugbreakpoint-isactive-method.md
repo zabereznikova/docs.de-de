@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61aece9dd506d6e4af8718e45cc772d120a7d579
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5df5bed730211676acc4770c91cc6551bde0179b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401660"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57464723"
 ---
 # <a name="icordebugbreakpointisactive-method"></a>ICorDebugBreakpoint::IsActive-Methode
 Ruft einen Wert, der angibt, ob dies `ICorDebugBreakpoint` aktiv ist.  
@@ -35,12 +35,12 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pbActive`  
  [out] `true` ist dieser Haltepunkt aktiv ist, andernfalls `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

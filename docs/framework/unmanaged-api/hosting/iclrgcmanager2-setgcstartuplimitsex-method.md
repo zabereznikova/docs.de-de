@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 276f83ff95d4f63f9a26807fe2601c68e3f6b063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 708dd1e13fd999f9a3a11ce36248e82c15000bfc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574910"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479050"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx-Methode
 Legt die Größe der eine Garbage Collection-Segment und die maximale Größe der Garbage Collection-Systems die Generation 0 fest.  
@@ -36,7 +36,7 @@ HRESULT SetGCStartupLimitsEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `SegmentSize`  
  [in] Die angegebene Größe der Garbage Collection-Segments.  
   

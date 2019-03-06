@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52962ea7d2cf3dd1822b1a36cc6cfcb56bc427f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8eef616d51febd1b919e0a1936406551f441b98c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417192"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468974"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID-Methode
-Ruft das aktuelle Betriebssystembezeichner des aktiven Teils des ICorDebugThread ab.  
+Ruft den Bezeichner des aktuellen Betriebssystems des aktiven Teils des ICorDebugThread ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pdwThreadId`  
  [out] Der Bezeichner des Threads.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Betriebssystem-ID während der Ausführung eines Prozesses ändern kann, und kann einen anderen Wert für die verschiedenen Teile des Threads.  
+ Der Bezeichner des Betriebssystems während der Ausführung eines Prozesses ändern kann, und kann einen anderen Wert für die verschiedenen Teile des Threads sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

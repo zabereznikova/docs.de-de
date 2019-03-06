@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b622d1bd82e53d5fa232e07b1f49e6fbba3ccba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a48396f8ef668cfe7755b2718180317b465793b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414834"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475281"
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction-Methode
-Ruft die Funktion mit dem Code zugeordneten dieses Stapelrahmens ab.  
+Ruft die Funktion, die den Code für diesen Stapelrahmen enthält.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT GetFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppFunction`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugFunction-Objekts, das die Funktion mit dem Code zugeordneten dieses Stapelrahmens darstellt.  
+ [out] Ein Zeiger auf die Adresse eines ICorDebugFunction-Objekts, das die Funktion, in den Code für diesen Stapelrahmen darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetFunction` -Methode schlägt möglicherweise fehl, wenn der Frame nicht mit einer bestimmten Funktion zugeordnet ist.  
+ Die `GetFunction` -Methode schlägt möglicherweise fehl, wenn der Frame keine bestimmte Funktion zugeordnet ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

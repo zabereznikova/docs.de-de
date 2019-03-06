@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bad6c052ec90c8cd3e47c4ec822fc2d5ae944af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf0aa035b78b582ede76f288443734c25e92a02c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612163"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466530"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim-Funktion
 Lädt die angegebene Version einer DLL, die in .NET Framework redistributable-Paket enthalten ist.  
@@ -40,7 +40,7 @@ HRESULT LoadLibraryShim (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `szDllName`  
  [in] Eine 0 (null) endende Zeichenfolge mit dem Namen der DLL aus dem .NET Framework-Klassenbibliothek geladen werden.  
   

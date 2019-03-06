@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4e6ad42c442d535e10432af099e51ca0d536729
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 404d60bf0dfb8de1d7effae01b22b15e8931757c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572798"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473941"
 ---
 # <a name="iclrdebugmanagerisdebuggerattached-method"></a>ICLRDebugManager::IsDebuggerAttached-Methode
 Ruft einen Wert ab, der angibt, ob ein Debugger an den Prozess angefügt ist.  
@@ -35,7 +35,7 @@ HRESULT IsDebuggerAttached (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pbAttached`  
  [out] `true` ist ein Debugger an den Prozess angefügt ist, andernfalls `false`.  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2515e21ec00bd656eafd21a092a27304f7b1769
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f014f9213a4b9a2d5119af9a6dceebb9a9d54b52
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419015"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473466"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>ICorDebugProcess::ClearCurrentException-Methode
-Löscht die aktuellen nicht verwalteten Ausnahme für den angegebenen Thread.  
+Löscht die aktuelle nicht verwaltete Ausnahme für den angegebenen Thread.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,17 +33,17 @@ Löscht die aktuellen nicht verwalteten Ausnahme für den angegebenen Thread.
 HRESULT ClearCurrentException([in] DWORD threadID);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `threadID`  
- [in] Die ID des Threads, die auf dem aktuelle nicht verwalteten Ausnahme gelöscht wird.  
+ [in] Die ID des Threads auf dem die aktuelle nicht verwaltete Ausnahme wird gelöscht.  
   
 ## <a name="remarks"></a>Hinweise  
- Rufen Sie diese Methode vor dem Aufruf [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) Wenn ein Thread eine nicht verwaltete Ausnahme, die von der zu debuggenden Komponente ignoriert werden sollen gemeldet wurde. Hiermit löschen Sie die ausstehenden in-Band-(IB) und die Out-of-Band (OOB) Ereignisse auf den angegebenen Thread. Alle OOB-Haltepunkte und einstufiger Ausnahmen werden automatisch gelöscht.  
+ Rufen Sie diese Methode vor dem Aufruf [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) ein Thread hat eine nicht verwaltete Ausnahme, die von der zu debuggenden Komponente ignoriert werden soll wenn gemeldet. Hierdurch wird die ausstehenden in-Band-(IB) und die Out-of-Band (OOB)-Ereignisse auf den angegebenen Thread gelöscht. Alle OOB-Haltepunkte und Schritt für Schritt Ausnahmen werden automatisch gelöscht.  
   
- Verwendung [ICorDebugThread2:: InterceptCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) verwaltet Sie zum Abfangen von des aktuellen Ausnahme in einem Thread.  
+ Verwendung [ICorDebugThread2:: InterceptCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) verwaltet sie abgefangen wird die aktuelle Ausnahme in einem Thread.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

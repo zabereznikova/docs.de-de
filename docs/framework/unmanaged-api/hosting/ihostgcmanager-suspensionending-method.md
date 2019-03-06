@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf915af48262a0f48e85623de95b76ad94d860b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1995321e8598d010188fee2437640b4489eaa294
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573295"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472030"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>IHostGCManager::SuspensionEnding-Methode
 Benachrichtigt den Host, dass die common Language Runtime (CLR) die Ausführung von Aufgaben in Threads fortgesetzt wird, die für eine Garbagecollection unterbrochen wurden.  
@@ -35,7 +35,7 @@ HRESULT SuspensionEnding (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `generation`  
  [in] Die Garbage Collection-Generation, die gerade beendet wird, wird aus dem der Thread wird fortgesetzt.  
   

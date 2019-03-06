@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83a1c03c209d68035b3615c83ec0ee13b94eb549
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6962b52925ab5b70a8b34c6d3720bb45c85b24c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719949"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473889"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits-Methode
 Legt die Größe des Segments und die maximale Größe für Generation 0 fest.  
@@ -39,7 +39,7 @@ HRESULT SetGCStartupLimits (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `SegmentSize`  
  [in] Die Größe des Segments, die von der Garbage Collection-System verwendet werden soll.  
   

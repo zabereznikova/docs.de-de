@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 183cbac7891c5359e1db7e848484536d5c34aa24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e66835ec1cdf1327a39223b6cdb187ec47cd7e3d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743308"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476307"
 ---
 # <a name="iclrstrongnamestrongnamegetpublickey-method"></a>ICLRStrongName::StrongNameGetPublicKey-Methode
 Ruft den öffentlichen Schlüssel aus einem öffentlichen/privaten Schlüsselpaar ab. Das Schlüsselpaar kann entweder als einen Schlüsselcontainernamen in einen Kryptografiedienstanbieter (CSP) oder als unformatierte Bytes Auflistung angegeben werden.  
@@ -39,7 +39,7 @@ HRESULT StrongNameGetPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `szKeyContainer`  
  [in] Der Name des Schlüsselcontainers, die das öffentlich/privat-Schlüsselpaar enthält. Wenn `pbKeyBlob` null ist, `szKeyContainer` müssen einen gültigen Container im CSP angeben. In diesem Fall die [ICLRStrongName:: StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md) Methode extrahiert den öffentlichen Schlüssel aus dem Schlüsselpaar im Container gespeichert.  
   

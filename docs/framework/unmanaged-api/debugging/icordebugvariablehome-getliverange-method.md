@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 894629b7cc1c48eb6c1820c65a0a2a41332a8080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06c8ae378c10eda986740dfb73f3bf60ea8647a6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549690"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468844"
 ---
 # <a name="icordebugvariablehomegetliverange-method"></a>IcorDebugVariableHome::GetLiveRange-Methode
 Ruft ab, der systemeigenen Bereich, in dem diese Variable ist.  
@@ -36,7 +36,7 @@ HRESULT GetLiveRange(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pStartOffset`  
  [out] Der logische Offset, an dem die Variable ersten live ist.  
   

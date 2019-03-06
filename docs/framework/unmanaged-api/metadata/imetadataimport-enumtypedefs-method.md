@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e6314a76433276561a8b4b87a852464dae69824
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a285543571c843a982b6615fdc4b5f1325ed066
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656257"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466959"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>IMetaDataImport::EnumTypeDefs-Methode
 Zählt TypeDef-Token auf, die alle Typen innerhalb des aktuellen Bereichs darstellen.  
@@ -38,7 +38,7 @@ HRESULT EnumTypeDefs (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `phEnum`  
  [out] Ein Zeiger auf den neuen Enumerator. Dies muss NULL sein, für den ersten Aufruf dieser Methode.  
   

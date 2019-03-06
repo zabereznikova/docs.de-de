@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ce6478f0331c590a2384a4e7e9b5621c050715d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a63a72eca636113ec5b339172a89441f3afdb092
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623637"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475748"
 ---
 # <a name="exporttype-method"></a>ExportType-Methode
 Gibt an, dass ein Typ exportiert werden kann.  
@@ -39,7 +39,7 @@ HRESULT ExportType(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `AssemblyID`  
  Die ID der Assembly zum Exportieren aus.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6a862f0861416ebc80c7b6107267bcbb5ec51f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccaaee614b1ec4d03271e70338fff82d629a7c28
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657362"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468461"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>ISymUnmanagedWriter::OpenScope-Methode
 Öffnet einen neuen lexikalischen Gültigkeitsbereich in der aktuellen Methode. Der Bereich wird der neue aktuelle Bereich und auf einen Stapel von Bereichen mithilfe von Push übertragen wird. Bereiche müssen eine Hierarchie zu bilden. Gleichgeordnete Elemente dürfen sich nicht überlappen.  
@@ -35,7 +35,7 @@ HRESULT OpenScope(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `startOffset`  
  [in] Der Offset der ersten Anweisung im lexikalischen Gültigkeitsbereich, in Bytes vom Anfang der Methode.  
   

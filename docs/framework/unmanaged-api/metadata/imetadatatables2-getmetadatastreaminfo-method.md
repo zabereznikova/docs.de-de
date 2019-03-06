@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0301506d591a3738ea403393236c2574d48a7cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57fa18df1baece984a745725dba614e8c4bb1450
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593965"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471453"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo-Methode
 Ruft ab, der Name, Größe und Inhalt des Metadatenstreams am angegebenen Index.  
@@ -38,7 +38,7 @@ HRESULT GetMetaDataStreamInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ix`  
  [in] Der Index des angeforderten Metadatenstreams.  
   

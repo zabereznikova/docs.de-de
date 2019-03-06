@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ba1f357c0d68b5a8b5104569a95433504cc84ee6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c88e52840c579173fd6202f1609dd0508d850cde
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675333"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470145"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>ICorProfilerFunctionEnum::Skip-Methode
 Verschiebt den Cursor des Enumerators so aus seiner aktuellen Position, dass die angegebene Anzahl von Elementen übersprungen wird.  
@@ -33,7 +33,7 @@ Verschiebt den Cursor des Enumerators so aus seiner aktuellen Position, dass die
 HRESULT Skip([in] ULONG celt);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `celt`  
  [in] Die Anzahl von Elementen übersprungen werden soll.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18b4ad9590b57b629587af8f421a3f5902e5527f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53001d6dfef2813df86dc4bb4f9647900143aae7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704029"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469065"
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>IHostMemoryManager::GetMemoryLoad-Methode
 Ruft die Menge des physischen Arbeitsspeichers, die derzeit verwendet wird und daher nicht verfügbar ist, durch den Host gemeldet wird.  
@@ -36,7 +36,7 @@ HRESULT GetMemoryLoad (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pMemoryLoad`  
  [out] Ein Zeiger auf den ungefähren Prozentsatz des beanspruchten physikalischen Speichers, der zurzeit verwendet wird.  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2057330f1a06cdd3e6ff5560f8ca7aeefe857
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2958fe31ff0065cfb028eaddf8bbb02f3618f9d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725726"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471731"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2-Methode
 Startet den Import von Typen. Rufen Sie diese Methode zum Importieren von Typen aus jedem Bereich über importiert [ImportFile-Methode](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
@@ -39,7 +39,7 @@ HRESULT ImportTypes2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `AssemblyID`  
  ID der Assembly in die importiert werden soll.  
   

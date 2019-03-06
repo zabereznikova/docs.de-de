@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 6c684a674e8d6e3bf218e0131e5fac2821855456
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d8fe70445b2a2500f99a0156604238665b7bbd1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966366"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473499"
 ---
 # <a name="permission-visual-basic"></a>\<Berechtigung > (Visual Basic)
 Gibt eine erforderliche Berechtigung für das Element an.  
@@ -21,7 +21,7 @@ Gibt eine erforderliche Berechtigung für das Element an.
 <permission cref="member">description</permission>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `member`  
  Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen. Schließen Sie `member` in Anführungszeichen ("").  
   

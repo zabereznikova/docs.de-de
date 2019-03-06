@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52a00496c3b4d5ccd96adaf569c25c64a5709a9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7032e55d52804d559d1faed810ca7cccd6a9e628
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717590"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475640"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal-Methode
 Ruft einen Wert ab, der angibt, ob für das durch das angegebene Metadatentoken dargestellte Feld, die Methode oder den Typ der globale Bereich gilt.  
@@ -36,7 +36,7 @@ HRESULT IsGlobal (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pd`  
  [in] Ein Metadatentoken, das einen Typ, ein Feld oder Methode darstellt.  
   

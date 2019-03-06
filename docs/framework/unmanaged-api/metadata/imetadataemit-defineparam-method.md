@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 33bff2b72f2381fea461bb043506ee78f757dea8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5384dd69578dbd912690b9490bd4bfa762ccd56d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504902"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475306"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam-Methode
 Erstellt eine Parameterdefinition mit der angegebenen Signatur für die Methode auf, die durch das angegebene Token verwiesen wird und ruft ein Token für diese Parameterdefinition ab.  
@@ -42,7 +42,7 @@ HRESULT DefineParam (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `md`  
  [in] Das Token für die Methode, deren Parameter definiert wird.  
   

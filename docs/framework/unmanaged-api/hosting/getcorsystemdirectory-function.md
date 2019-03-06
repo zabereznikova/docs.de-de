@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8608a5438b31cad64bb27d2866109f479dad441
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9afe4afcaefb9409edb93bd1da96a02db20dbd20
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739497"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466727"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory-Funktion
 Gibt das Installationsverzeichnis der die common Language Runtime (CLR), die in den Prozess geladen wird. Das Installationsverzeichnis ist voll gekennzeichnet sein, z. B. "c:\windows\microsoft.net\framework\v1.0.3705".  
@@ -39,7 +39,7 @@ HRESULT GetCORSystemDirectory (
 );   
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pbuffer`  
  [out] Ein Puffer, in dem die Laufzeit eine Zeichenfolge zurückgibt, die der vollqualifizierte Name des Installationsverzeichnisses für die Laufzeit enthält, die in den Prozess geladen wird. Wenn die Runtime noch nicht in den Prozess geladen wurde, gibt die Funktion die entsprechenden Verzeichnisinformationen für die neueste Version der Laufzeit auf dem Computer installiert.  
   
