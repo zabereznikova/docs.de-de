@@ -8,20 +8,20 @@ helpviewer_keywords:
 - InkCanvas control [WPF]
 - ink [WPF], advanced handling
 ms.assetid: abc8481a-f983-416f-b051-9168ac8b2ba3
-ms.openlocfilehash: eb347f5477974851e91c6a00b423bd4acf1f0b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 840ab08faebe760a38ef344fd1c41818a838250b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539027"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367871"
 ---
 # <a name="advanced-ink-handling"></a>Erweiterte Behandlung von Freihandeingaben
-Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] im Lieferumfang der <xref:System.Windows.Controls.InkCanvas>, und ist ein Element, das Sie in Ihrer Anwendung um sofort zu starten, sammeln und Anzeigen von Freihandeingaben einfügen können. Jedoch, wenn die <xref:System.Windows.Controls.InkCanvas> Steuerelement bietet eine ausreichende Maß an Kontrolle, behalten Sie Kontrolle auf einer höheren Ebene, durch Anpassen der eigenen Freihandeingaben und Freihand-Rendering-Klassen mit <xref:System.Windows.Input.StylusPlugIns>.  
+Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] im Lieferumfang der <xref:System.Windows.Controls.InkCanvas>, und ist ein Element, das Sie in Ihrer Anwendung, um sofort zu starten, sammeln und Anzeigen von Freihandeingaben einfügen können. Aber wenn die <xref:System.Windows.Controls.InkCanvas> Steuerelement bietet nicht genug hochgradige Kontrolle, die Sie selbst steuern auf einer höheren Ebene durch Anpassen der eigenen Freihandeingaben und Freihand-Rendering-Klassen mit <xref:System.Windows.Input.StylusPlugIns>.  
   
- Die <xref:System.Windows.Input.StylusPlugIns> Klassen bieten einen Mechanismus zum Implementieren von systemnahe Steuerung über <xref:System.Windows.Input.Stylus> Eingabe- und Freihandeingaben dynamisch rendern. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klasse bietet einen Mechanismus für benutzerdefinierte Verhalten implementieren, und wenden Sie es in den Stream der Daten stammen aus der Tablettstift für eine optimale Leistung. Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, ein spezieller <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, können Sie dynamisch Rendern Freihand-Daten in Echtzeit, d. h. die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Zeichnet Freihandeingaben sofort als <xref:System.Windows.Input.StylusPoint> Daten generiert werden, sodass er angezeigt wird, die vom Tablettstift "Datenfluss" das Gerät.  
+ Die <xref:System.Windows.Input.StylusPlugIns> Klassen bieten einen Mechanismus zum Implementieren der Steuerung auf niedriger Ebene über <xref:System.Windows.Input.Stylus> Eingabe- und dynamischen Rendern von Freihandeingaben. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> -Klasse bietet einen Mechanismus für die Sie benutzerdefiniertes Verhalten implementieren, und klicken Sie auf die vom Tablettstift für eine optimale Leistung eingehenden Datenstrom anzuwenden. Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, ein spezielles <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>, können Sie Sie dynamisch Rendering in Echtzeit Freihanddaten, d. h. die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Zeichnet Freihandeingaben sofort als <xref:System.Windows.Input.StylusPoint> Daten generiert werden, sodass er angezeigt wird, die vom Tablettstift "flow" das Gerät.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Benutzerdefiniertes Rendern von Freihandeingaben](../../../../docs/framework/wpf/advanced/custom-rendering-ink.md)  
-  [Abfangen von Tablettstifteingaben](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)  
-  [Erstellen eines Freihandeingabesteuerelements](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)  
-  [Das Threadmodell für Freihandeingaben](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)
+ [Benutzerdefiniertes Rendern von Freihandeingaben](custom-rendering-ink.md)  
+  [Abfangen von Tablettstifteingaben](intercepting-input-from-the-stylus.md)  
+  [Erstellen eines Freihandeingabesteuerelements](creating-an-ink-input-control.md)  
+  [Das Threadmodell für Freihandeingaben](the-ink-threading-model.md)

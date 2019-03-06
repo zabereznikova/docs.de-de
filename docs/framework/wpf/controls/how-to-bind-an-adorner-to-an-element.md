@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UIElements [WPF], binding adorners to
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-ms.openlocfilehash: 91dd047e65af8791f8e558a9a3b622ef05e2cb77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4943121aaf8ee6524be3fc9004eafee4fa92e527
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606321"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353919"
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>Vorgehensweise: Binden eines Adorners an ein Element
 Dieses Beispiel zeigt, wie Sie programmgesteuert einen Adorner an einem angegebenen binden <xref:System.Windows.UIElement>.  
@@ -27,11 +27,11 @@ Dieses Beispiel zeigt, wie Sie programmgesteuert einen Adorner an einem angegebe
   
  Im folgende Beispiel wird ein SimpleCircleAdorner, die (siehe oben), um eine <xref:System.Windows.Controls.TextBox> mit dem Namen *MyTextBox*.  
   
- [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
- [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
+ [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
+ [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
   
 > [!NOTE]
 >  Das Binden von Adornern an andere Elemente mit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] wird derzeit nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Adorner](../../../../docs/framework/wpf/controls/adorners-overview.md)
+- [Übersicht über Adorner](adorners-overview.md)

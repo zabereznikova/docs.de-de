@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd8992fc37c570b5ea20f8751bef729311bfb7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 402bbcb9ad5e462a55c5ec2716417f512f03ee19
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718194"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373217"
 ---
 # <a name="execquerywmi-function"></a>ExecQueryWmi-Funktion
-Führt eine Abfrage zum Abrufen von Objekten aus.  
+
+Führt eine Abfrage zum Abrufen von Objekten aus.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 HRESULT ExecQueryWmi (
    [in] BSTR                    strQueryLanguage,
    [in] BSTR                    strQuery,
@@ -43,53 +44,54 @@ HRESULT ExecQueryWmi (
    [in] BSTR                    strUser,
    [in] BSTR                    strPassword,
    [in] BSTR                    strAuthority
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>Parameter
 
-`strQueryLanguage`    
+`strQueryLanguage`\
 [in] Eine Zeichenfolge mit der gültigen Abfragesprache, die von der Windows-Verwaltung unterstützt. Es muss "WQL", das Akronym für WMI-Abfragesprache.
 
-`strQuery`  
+`strQuery`\
 [in] Der Text der Abfrage. Dieser Parameter darf nicht sein `null`.
 
-`lFlags`   
-[in] Eine Kombination von Flags, die das Verhalten dieser Funktion zu beeinflussen. Die folgenden Werte werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code: 
+`lFlags`\
+[in] Eine Kombination von Flags, die das Verhalten dieser Funktion zu beeinflussen. Die folgenden Werte werden definiert, der *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code:
 
 | Konstante | Wert  | Beschreibung  |
 |---------|---------|---------|
 | `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Wenn festgelegt ist, die Funktion ruft ab, die ergänzende Qualifizierer, die in der lokalisierten Namespace des Gebietsschemas für die aktuelle Verbindung gespeichert. <br/> Wenn dies nicht festgelegt ist, die Funktion ruft nur die Qualifizierer, die in der unmittelbaren Namespace gespeichert. |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Das Flag wird halbsynchron aufgerufen. |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Die Funktion gibt einen Enumerator vorwärts gerichtete. In der Regel vorwärts-Enumeratoren sind schneller, und verwenden Sie weniger Arbeitsspeicher als konventionelle Enumeratoren, aber sie ermöglichen keine Aufrufe von [Klon](clone.md). |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI behält Zeiger auf Objekte in der Enumration, bis sie freigegeben werden. | 
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI behält Zeiger auf Objekte in der Enumeration, bis sie freigegeben werden. |
 | `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | Stellt sicher, dass alle zurückgegebenen Objekte haben genug Informationen darin, Eigenschaften, wie z. B. **__PATH**, **__RELPATH**, und **__SERVER**, sind nicht `null`. |
 | `WBEM_FLAG_PROTOTYPE` | 2 | Dieses Flag wird zum Erstellen von Prototypen verwendet. Die Abfrage nicht ausgeführt, und es wird stattdessen ein Objekt, das aussieht wie ein typisches Ergebnis-Objekt zurückgegeben. |
 | `WBEM_FLAG_DIRECT_READ` | 0x200 | Bewirkt, dass direkter Zugriff auf den Anbieter für die Klasse, die unabhängig von der übergeordneten Klasse oder Unterklassen angegeben. |
 
 Die empfohlene Flags sind `WBEM_FLAG_RETURN_IMMEDIATELY` und `WBEM_FLAG_FORWARD_ONLY` für eine optimale Leistung.
 
-`pCtx`  
-[in] Dieser Wert in der Regel ist `null`. Andernfalls wird ein Zeiger auf ein [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) -Instanz, die vom Anbieter verwendet werden kann, die die angeforderten Klassen bereitstellt. 
+`pCtx`\
+[in] Dieser Wert in der Regel ist `null`. Andernfalls wird ein Zeiger auf ein [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) -Instanz, die vom Anbieter verwendet werden kann, die die angeforderten Klassen bereitstellt.
 
-`ppEnum`  
+`ppEnum`\
 [out] Wenn kein Fehler auftritt, empfängt den Zeiger auf der Enumerator, der dem Aufrufer zum Abrufen von Instanzen im Resultset der Abfrage ermöglicht. Die Abfrage kann es sich um ein Resultset mit NULL-Instanzen aufweisen. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen.
 
-`authLevel`  
+`authLevel`\
 [in] Die Autorisierungsebene.
 
-`impLevel` [in] Die Ebene des Identitätswechsels.
+`impLevel`\
+[in] Die Ebene des Identitätswechsels.
 
-`pCurrentNamespace`   
+`pCurrentNamespace`\
 [in] Ein Zeiger auf ein [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) -Objekt, das den aktuellen Namespace darstellt.
 
-`strUser`   
+`strUser`\
 [in] Der Benutzername. Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
 
-`strPassword`   
+`strPassword`\
 [in] Das Kennwort. Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
 
-`strAuthority`   
+`strAuthority`\
 [in] Der Domänenname des Benutzers. Finden Sie unter den [ConnectServerWmi](connectserverwmi.md) -Funktion für Weitere Informationen.
 
 ## <a name="return-value"></a>Rückgabewert
@@ -109,7 +111,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Der Remoteprozeduraufruf-Remoteprozeduraufruf (RPC)-Link zwischen dem aktuellen Prozess und die WMI-hat Fehler. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Die Abfrage gibt eine Klasse, die nicht vorhanden ist. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
-  
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Funktion umschließt einen Aufruf der [IWbemServices::ExecQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execquery) Methode.
@@ -120,12 +122,14 @@ Bestehen Einschränkungen in Bezug auf die Anzahl der `AND` und `OR` Schlüsselw
 
 Wenn der Funktionsaufruf fehlschlägt, können Sie zusätzliche Fehlerinformationen abrufen, durch den Aufruf der [GetErrorInfo](geterrorinfo.md) Funktion.
 
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Header:** WMINet_Utils.idl  
-  
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Anforderungen
+
+**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+
+**Header:** WMINet_Utils.idl
+
+**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

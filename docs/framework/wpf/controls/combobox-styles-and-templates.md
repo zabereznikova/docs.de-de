@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 5cca162137b603f36dffb044d5954c3947964cf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99869b929e70ab7ae5b68d8c0eb6d70358f4a48d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712849"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369304"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox-Stile und -Vorlagen
-In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.ComboBox> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.ComboBox> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="combobox-parts"></a>ComboBox-Teile  
  Die folgende Tabelle enthält die benannten Teile für den <xref:System.Windows.Controls.ComboBox> Steuerelement.  
@@ -69,18 +69,18 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 ## <a name="combobox-controltemplate-example"></a>ComboBox-ControlTemplate-Beispiel  
  Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.ComboBox> Steuerelement und die zugehörigen Typen.  
   
- [!code-xaml[ControlTemplateExamples#ComboBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
+ [!code-xaml[ControlTemplateExamples#ComboBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#combobox)]  
   
  Im vorhergehenden Beispiel wird mindestens eine der folgenden Ressourcen verwendet.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Steuerelementformate und -vorlagen](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Anpassung von Steuerelementen](../../../../docs/framework/wpf/controls/control-customization.md)
-- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
+- [Anpassung von Steuerelementen](control-customization.md)
+- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

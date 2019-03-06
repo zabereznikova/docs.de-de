@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 57d9ef87a078655a89a5869a48a1bd16f21b000f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 074167111b78edc517dda019465260d0acd54737
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500925"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376012"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 Anwendungen, in denen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Inhalte über PresentationHost.exe implementieren diese Schnittstelle zum Bereitstellen eine Integration zwischen dem Host und PresentationHost.exe.  
@@ -32,6 +32,6 @@ Anwendungen, in denen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|Ermöglicht es der Datei "PresentationHost.exe", Geräte für die Eingabe von Rohdaten (Eingabegeräte, Human Interface Devices) zu erkennen, die für die Hostanwendung interessant sind.|  
-|[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|Wird immer dann von "PresentationHost.exe" aufgerufen, wenn eine Meldung empfangen wurde, es sei denn, E_NOTIMPL wurde zurückgegeben.|  
-|[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)|Bietet standardmäßig PresentationHost.exe eigene Bereitstellungsstatus und die Fehler bei der Bereitstellung von Benutzeroberflächen, die angezeigt werden, wenn WPF-Inhalt bereitgestellt wird.|
+|[GetRawInputDevices](getrawinputdevices.md)|Ermöglicht es der Datei "PresentationHost.exe", Geräte für die Eingabe von Rohdaten (Eingabegeräte, Human Interface Devices) zu erkennen, die für die Hostanwendung interessant sind.|  
+|[FilterInputMessage](filterinputmessage.md)|Wird immer dann von "PresentationHost.exe" aufgerufen, wenn eine Meldung empfangen wurde, es sei denn, E_NOTIMPL wurde zurückgegeben.|  
+|[GetCustomUI](getcustomui.md)|Bietet standardmäßig PresentationHost.exe eigene Bereitstellungsstatus und die Fehler bei der Bereitstellung von Benutzeroberflächen, die angezeigt werden, wenn WPF-Inhalt bereitgestellt wird.|

@@ -15,19 +15,19 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 637cb6cfb343352561708a7d94e76e84e2ca7ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535815"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379210"
 ---
 # <a name="routed-events-overview"></a>Übersicht über Routingereignisse
 Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Das Thema definiert die Terminologie von Routingereignissen, beschreibt, wie Routingereignisse anhand einer Struktur von Elementen weitergeleitet werden und führt Sie in das Erstellen Ihrer eigenen, benutzerdefinierten Routingereignisse ein.
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
- In diesem Thema wird davon ausgegangen, dass Sie über grundlegende Kenntnisse zu [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] und objektorientiertem Programmieren sowie zur Konzeptualisierung der Beziehungen zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Elementen als Struktur verfügen. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] verstehen und wissen, wie sehr einfache [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen oder -Seiten geschrieben werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md) und [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ In diesem Thema wird davon ausgegangen, dass Sie über grundlegende Kenntnisse zu [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] und objektorientiertem Programmieren sowie zur Konzeptualisierung der Beziehungen zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Elementen als Struktur verfügen. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] verstehen und wissen, wie sehr einfache [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen oder -Seiten geschrieben werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md) und [XAML Overview (WPF)](xaml-overview-wpf.md).  
   
 <a name="routing"></a>   
 ## <a name="what-is-a-routed-event"></a>Was ist ein Routingereignis?  
@@ -41,11 +41,11 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
   
  Betrachten Sie die folgende einfache Elementstruktur:  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
  Diese Elementstruktur erzeugt in etwa Folgendes:  
   
- ![Die Schaltflächen „Ja“, „Nein“ und „Abbrechen“](../../../../docs/framework/wpf/advanced/media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
+ ![Die Schaltflächen „Ja“, „Nein“ und „Abbrechen“](./media/routedevent-ovw-1.gif "RoutedEvent_ovw_1")  
   
  In dieser vereinfachten Elementstruktur ist die Quelle des eine <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis ist eines von der <xref:System.Windows.Controls.Button> Elemente, und der <xref:System.Windows.Controls.Button> geklickt wurde ist das erste Element, das die Möglichkeit zum Behandeln des Ereignisses hat. Aber wenn keine Ereignishandler angefügt der <xref:System.Windows.Controls.Button> fungiert für das Ereignis, und klicken Sie dann nach oben an das Ereignis übergeben werden die <xref:System.Windows.Controls.Button> übergeordnete Element in der Elementstruktur, handelt es sich die <xref:System.Windows.Controls.StackPanel>. Potenziell das Ereignis wird weitergeleitet, <xref:System.Windows.Controls.Border>, und dann bis zum Seitenstamm der Elementstruktur (nicht dargestellt).  
   
@@ -60,8 +60,8 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
   
  **Einzelne Anfügepunkte für Handleranfügepunkte:** In [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], Sie müssten den gleichen Handler mehrmals zur Verarbeitung der Ereignisse anfügen, die aus mehreren Elementen ausgelöst werden können. Routingereignisse ermöglichen es Ihnen, diesen Handler nur einmal anzufügen, wie im vorherigen Beispiel gezeigt wurde, und verwenden Handlerlogik, um ggf. zu bestimmen, woher das Ereignis stammt. Dies kann z.B. der Handler für die zuvor gezeigte [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sein:  
   
- [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
- [!code-vb[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
+ [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
+ [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
   
  **Klassenbehandlung:** Routingereignisse lassen einen statischen Handler, die von der Klasse definiert ist. Dieser Klassenhandler hat die Möglichkeit, ein Ereignis vor angefügten Instanzhandlern zu behandeln.  
   
@@ -72,15 +72,15 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
   
  Das folgende Beispiel zeigt die Deklaration für eine benutzerdefinierte `Tap` Routingereignis, einschließlich der Registrierung und der Offenlegung von der <xref:System.Windows.RoutedEvent> Feld "ID" und die `add` und `remove` Implementierungen für die `Tap` [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Ereignis.  
   
- [!code-csharp[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
- [!code-vb[RoutedEventCustom#AddRemoveHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
+ [!code-csharp[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#addremovehandler)]
+ [!code-vb[RoutedEventCustom#AddRemoveHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#addremovehandler)]  
   
 ### <a name="routed-event-handlers-and-xaml"></a>Routingereignishandler und XAML  
  Um einen Handler für ein Ereignis mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] hinzuzufügen, deklarieren Sie den Ereignisnamen als Attribut auf dem Element, das ein Ereignislistener ist. Der Wert des Attributs ist der Name Ihrer implementierten Handlermethode, die in der partiellen Klasse der CodeBehind-Datei vorhanden sein muss.  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- Die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Syntax zum Hinzufügen von Standard-[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Ereignishandlern ist die gleiche wie für das Hinzufügen von Routingereignishandlern, da Sie genauso Handler in den [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Ereigniswrapper einfügen, dem eine Routingereignisimplementierung zu Grunde liegt . Weitere Informationen zum Hinzufügen von Ereignishandlern in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] finden Sie unter [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ Die [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Syntax zum Hinzufügen von Standard-[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Ereignishandlern ist die gleiche wie für das Hinzufügen von Routingereignishandlern, da Sie genauso Handler in den [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Ereigniswrapper einfügen, dem eine Routingereignisimplementierung zu Grunde liegt . Weitere Informationen zum Hinzufügen von Ereignishandlern in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] finden Sie unter [Übersicht über XAML (WPF)](xaml-overview-wpf.md).  
   
 <a name="routing_strategies"></a>   
 ## <a name="routing-strategies"></a>Routingstrategien  
@@ -114,30 +114,30 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
 ## <a name="adding-and-implementing-an-event-handler-for-a-routed-event"></a>Hinzufügen und implementieren eines Ereignishandlers für ein Routingereignis  
  Zum Hinzufügen eines Ereignishandlers in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] müssen Sie einfach nur den Ereignisnamen als Attribut in ein Element einfügen und den Attributwert auf den Namen des Ereignishandlers festlegen, der einen angemessenen Delegaten implementiert, wie in folgendem Beispiel veranschaulicht.  
   
- [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
+ [!code-xaml[EventOvwSupport#SimplestSyntax](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
  `b1SetColor` Der Name des implementierten Handlers, der Code enthält, die behandelt, die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis. `b1SetColor` müssen die gleiche Signatur wie der <xref:System.Windows.RoutedEventHandler> -Delegaten, der den Ereignishandlerdelegaten ist für die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis. Der erste Parameter aller Delegaten von Routingereignishandlern gibt das Element an, dem der Ereignishandler hinzugefügt wird, und der zweite Parameter gibt die Daten des Ereignisses an.  
   
-[!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
-[!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
+[!code-csharp[EventOvwSupport#SimpleHandlerA](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
+[!code-vb[EventOvwSupport#SimpleHandlerA](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
  <xref:System.Windows.RoutedEventHandler> ist die grundlegende Delegat für Routingereignishandler. Für Routingereignisse, die auf bestimmte Steuerelemente oder Szenarien ausgelegt sind, können die für die Routingereignishandler zu verwendenden Delegaten möglicherweise so spezialisiert werden, dass sie spezialisierte Ereignisdaten übertragen können. Z. B. in einem gängigen Eingabeszenario Sie möglicherweise behandeln eine <xref:System.Windows.UIElement.DragEnter> Routingereignis. Der Handler implementieren sollte die <xref:System.Windows.DragEventHandler> delegieren. Mithilfe des spezifischsten Delegaten können Sie verarbeiten die <xref:System.Windows.DragEventArgs> im Handler und lesen die <xref:System.Windows.DragEventArgs.Data%2A> Eigenschaft, die die zwischenablagenutzlast des Ziehvorgangs enthält.  
   
- Ein vollständiges Beispiel zum Hinzufügen eines Ereignishandlers in ein Element mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] finden Sie unter [Behandeln eines Routingereignisses](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
+ Ein vollständiges Beispiel zum Hinzufügen eines Ereignishandlers in ein Element mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] finden Sie unter [Behandeln eines Routingereignisses](how-to-handle-a-routed-event.md).  
   
  Das Hinzufügen eines Handlers für ein Routingereignis in einer Anwendung, die im Code erstellt wird, ist einfach. Routingereignishandler können immer hinzugefügt werden, über eine Hilfsmethode <xref:System.Windows.UIElement.AddHandler%2A> (Dies ist dieselbe Methode, die die vorhandene Unterstützung für ruft `add`.) Allerdings haben vorhandene [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Routingereignisse für gewöhnlich Unterstützungsimplementierungen mit `add`- und `remove`-Logik, die es ermöglichen, dass die Handler für die Routingereignisse von einer sprachspezifischen Ereignissyntax hinzugefügt werden können; diese Syntax ist viel intuitiver als die Hilfsmethode. Im Folgenden wird die Hilfsmethode in einem Beispiel verwendet:  
   
- [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
- [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
+ [!code-csharp[EventOvwSupport#AddHandlerCode](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
+ [!code-vb[EventOvwSupport#AddHandlerCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
  Das folgende Beispiel zeigt die C# -Operatorsyntax (Visual Basic hat geringfügig andere Operatorsyntax aufgrund seiner Behandlung von Dereferenzierung):  
   
- [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
- [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
+ [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
+ [!code-vb[EventOvwSupport#AddHandlerPlusEquals](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
- Ein Beispiel für das Hinzufügen eines Ereignishandlers in Code finden Sie unter [Hinzufügen eines Ereignishandlers mithilfe von Code](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md).  
+ Ein Beispiel für das Hinzufügen eines Ereignishandlers in Code finden Sie unter [Hinzufügen eines Ereignishandlers mithilfe von Code](how-to-add-an-event-handler-using-code.md).  
   
- Wenn Sie Visual Basic verwenden, können Sie auch die `Handles` Schlüsselwort, um Handler als Teil der Handlerdeklarationen hinzufügen. Weitere Informationen finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+ Wenn Sie Visual Basic verwenden, können Sie auch die `Handles` Schlüsselwort, um Handler als Teil der Handlerdeklarationen hinzufügen. Weitere Informationen finden Sie unter [Visual Basic- und WPF-Ereignisbehandlung](visual-basic-and-wpf-event-handling.md).  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>Das Handled-Konzept  
@@ -165,7 +165,7 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
   
  Dieser konzeptuelle Entwurf wird durch die oben genannten Routingverhalten bestätigt: Es ist schwieriger (aber immer noch in Code und Formaten möglich), um Handler für Routingereignisse anzufügen, die aufgerufen werden, auch wenn ein vorheriger Handler entlang der Route bereitseingerichtethat<xref:System.Windows.RoutedEventArgs.Handled%2A>zu `true`.  
   
- Weitere Informationen zu <xref:System.Windows.RoutedEventArgs.Handled%2A>Klassenbehandlung von Routingereignissen und Empfehlungen, wenn es sich um ein Routingereignis als markieren geeignete <xref:System.Windows.RoutedEventArgs.Handled%2A>, finden Sie unter [Markieren von Routingereignissen als behandelt und Klassenbehandlung](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Weitere Informationen zu <xref:System.Windows.RoutedEventArgs.Handled%2A>Klassenbehandlung von Routingereignissen und Empfehlungen, wenn es sich um ein Routingereignis als markieren geeignete <xref:System.Windows.RoutedEventArgs.Handled%2A>, finden Sie unter [Markieren von Routingereignissen als behandelt und Klassenbehandlung](marking-routed-events-as-handled-and-class-handling.md).  
   
  In Anwendungen ist es üblich, lediglich ein Bubblingroutingereignis auf dem Objekt zu behandeln, das es ausgelöst hat, ohne die Routingmerkmale des Ereignisses zu berücksichtigen. Allerdings empfiehlt es sich immer noch, das Routingereignis in den Ereignisdaten als „handled“ zu markieren, um unvorhergesehene Nebeneffekte zu verhindern, nur für den Fall, dass ein Element, das sich weiter oben in der Elementstruktur befindet, auch einen angefügten Handler für das gleiche Routingereignis aufweist.  
   
@@ -173,7 +173,7 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
 ## <a name="class-handlers"></a>Klassenhandler  
  Wenn Sie eine abgeleitete Klasse definieren, in irgendeiner Art von <xref:System.Windows.DependencyObject>, Sie können auch definieren, und fügen Sie einen Klassenhandler für ein Routingereignis, das ein deklarierter oder geerbter Ereignismember Ihrer Klasse ist. Klassenhandler werden vor Handler für Instanzlistener, die an eine Instanz dieser Klasse angefügt sind, aufgerufen, immer dann, wenn ein Routingevent eine Elementinstanz auf seiner Route erreicht.  
   
- Einige [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente verfügen über inhärente Klassenbehandlung für bestimmte Routingereignisse. Dies kann nach außen den Anschein erwecken, als dass das Routingereignis nicht einmal ausgelöst wird, aber in Wirklichkeit wird es von einer Klasse behandelt, und das Routingereignis kann immer noch von Ihren Instanzhandlern behandelt werden, wenn Sie bestimmte Techniken verwenden. Außerdem machen viele Basisklassen und Steuerelemente virtuelle Methoden verfügbar, die zum Außerkraftsetzen von Klassenbehandlungsverhalten verwendet werden können. Weitere Informationen sowohl zum Umgehen unerwünschter Klassenbehandlung als auch zum Definieren Ihres eigenen Klassenverhaltens in einer benutzerdefinierten Klasse finden Sie unter [Markieren von Routingereignissen als behandelt und Klassenbehandlung](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Einige [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelemente verfügen über inhärente Klassenbehandlung für bestimmte Routingereignisse. Dies kann nach außen den Anschein erwecken, als dass das Routingereignis nicht einmal ausgelöst wird, aber in Wirklichkeit wird es von einer Klasse behandelt, und das Routingereignis kann immer noch von Ihren Instanzhandlern behandelt werden, wenn Sie bestimmte Techniken verwenden. Außerdem machen viele Basisklassen und Steuerelemente virtuelle Methoden verfügbar, die zum Außerkraftsetzen von Klassenbehandlungsverhalten verwendet werden können. Weitere Informationen sowohl zum Umgehen unerwünschter Klassenbehandlung als auch zum Definieren Ihres eigenen Klassenverhaltens in einer benutzerdefinierten Klasse finden Sie unter [Markieren von Routingereignissen als behandelt und Klassenbehandlung](marking-routed-events-as-handled-and-class-handling.md).  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events-in-wpf"></a>Angefügte Ereignisse in WPF  
@@ -181,15 +181,15 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
   
  Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eingabesystem verwendet angefügte Ereignisse in großem Umfang. Fast alle dieser angefügten Ereignisse werden jedoch über Basiselemente weitergeleitet. Die Eingabeereignisse erscheinen dann als äquivalente nicht angefügte Routingereignisse, die Member der Basiselementklasse sind. Z. B. die zugrunde liegende angefügte Ereignis <xref:System.Windows.Input.Mouse.MouseDown?displayProperty=nameWithType> mehr problemlos verarbeitet werden können auf ein beliebiges <xref:System.Windows.UIElement> mit <xref:System.Windows.UIElement.MouseDown> , <xref:System.Windows.UIElement> statt Umgang mit Syntax für angefügte Ereignisse entweder in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] oder Code.  
   
- Weitere Informationen zu angefügten Ereignissen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] finden Sie unter [Übersicht über angefügte Ereignisse](../../../../docs/framework/wpf/advanced/attached-events-overview.md).  
+ Weitere Informationen zu angefügten Ereignissen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] finden Sie unter [Übersicht über angefügte Ereignisse](attached-events-overview.md).  
   
 <a name="Qualifying_Event_Names_in_XAML_for_Anticipated_Routing"></a>   
 ## <a name="qualified-event-names-in-xaml"></a>Qualifizierte Ereignisnamen in XAML  
  Wenn Sie Handler für Routingereignisse anfügen, die von untergeordneten Elementen ausgelöst werden, ist dies so ähnlich wie der Gebrauch einer *typename*.*eventname* angefügten Ereignissyntax, obwohl es sich dabei genau genommen nicht um den Gebrauch eines angefügten Ereignisses handelt. Fügen Sie die Handler an ein gemeinsames übergeordnetes Element an, um von Ereignisrouting zu profitieren, auch wenn das gemeinsame übergeordnete Element möglicherweise das relevante Routingereignis nicht als Member enthält. Schauen Sie sich dieses Beispiel erneut an:  
   
- [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
+ [!code-xaml[EventOvwSupport#GroupButton](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- Der Listener des übergeordneten Elements, in dem der Handler hinzugefügt wird, wird eine <xref:System.Windows.Controls.StackPanel>. Allerdings wird einen Handler für ein Routingereignis, der deklariert wurde und es wird ausgelöst durch Hinzufügen der <xref:System.Windows.Controls.Button> Klasse (<xref:System.Windows.Controls.Primitives.ButtonBase> tatsächlich jedoch zur <xref:System.Windows.Controls.Button> durch Vererbung). <xref:System.Windows.Controls.Button> "besitzt" das Ereignis, aber das System lässt Routingereignishandler für jedes beliebige Routingereignis an alle angefügt werden <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> Instanzlistener, der andernfalls Listener für Anhängen könnte eine [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Ereignis. Der Standard-xmlns-Namespace für diese qualifizierten Attributnamen ist in der Regel der Standard-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-xmlns-Namespace, aber Sie können auch Namespaces mit Präfix für benutzerdefinierte Routingereignisse angeben. Weitere Informationen zu xmlns finden Sie unter [XAML-Namespaces und Namespacezuordnung für WPF-XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Der Listener des übergeordneten Elements, in dem der Handler hinzugefügt wird, wird eine <xref:System.Windows.Controls.StackPanel>. Allerdings wird einen Handler für ein Routingereignis, der deklariert wurde und es wird ausgelöst durch Hinzufügen der <xref:System.Windows.Controls.Button> Klasse (<xref:System.Windows.Controls.Primitives.ButtonBase> tatsächlich jedoch zur <xref:System.Windows.Controls.Button> durch Vererbung). <xref:System.Windows.Controls.Button> "besitzt" das Ereignis, aber das System lässt Routingereignishandler für jedes beliebige Routingereignis an alle angefügt werden <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> Instanzlistener, der andernfalls Listener für Anhängen könnte eine [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Ereignis. Der Standard-xmlns-Namespace für diese qualifizierten Attributnamen ist in der Regel der Standard-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-xmlns-Namespace, aber Sie können auch Namespaces mit Präfix für benutzerdefinierte Routingereignisse angeben. Weitere Informationen zu xmlns finden Sie unter [XAML-Namespaces und Namespacezuordnung für WPF-XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>Eingabeereignisse in WPF  
@@ -199,7 +199,7 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
   
  Das folgende Beispiel für ein Eingabeereignis veranschaulicht das Verarbeiten von Eingabeereignissen. Im folgenden Baumdiagramm ist `leaf element #2` sowohl die Quelle eines `PreviewMouseDown`- als auch eines `MouseDown`-Ereignisses.  
   
- ![Diagramm zum Ereignisrouting](../../../../docs/framework/wpf/advanced/media/wcsdkcoreinputevents.png "WcsdkCoreInputEvents")  
+ ![Diagramm zum Ereignisrouting](./media/wcsdkcoreinputevents.png "WcsdkCoreInputEvents")  
 Bubbling und Tunneling eines Eingabeereignisses  
   
  Ein Ereignis wird in folgender Reihenfolge verarbeitet:  
@@ -222,35 +222,35 @@ Bubbling und Tunneling eines Eingabeereignisses
   
  In der Regel, sobald das Eingabeereignis gekennzeichnet ist <xref:System.Windows.RoutedEventArgs.Handled%2A>, weitere Handler nicht aufgerufen werden. In der Regel sollten Sie Eingabeereignisse als „handled“ markieren, sobald ein Handler aufgerufen wird, der Ihre anwendungsspezifische logische Behandlung der Bedeutung des Eingabeereignisses angeht.  
   
- Die Ausnahme von dieser allgemeinen Aussage zum <xref:System.Windows.RoutedEventArgs.Handled%2A> Zustand ist, dass die Ereignishandler, die registriert werden, dass ignorieren Eingabe <xref:System.Windows.RoutedEventArgs.Handled%2A> Zustand der Daten für das Ereignis wird weiterhin auf beiden Routen aufgerufen werden. Weitere Informationen finden Sie unter [Vorschauereignisse](../../../../docs/framework/wpf/advanced/preview-events.md) oder [Markieren von Routingereignissen als behandelt und Klassenbehandlung](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Die Ausnahme von dieser allgemeinen Aussage zum <xref:System.Windows.RoutedEventArgs.Handled%2A> Zustand ist, dass die Ereignishandler, die registriert werden, dass ignorieren Eingabe <xref:System.Windows.RoutedEventArgs.Handled%2A> Zustand der Daten für das Ereignis wird weiterhin auf beiden Routen aufgerufen werden. Weitere Informationen finden Sie unter [Vorschauereignisse](preview-events.md) oder [Markieren von Routingereignissen als behandelt und Klassenbehandlung](marking-routed-events-as-handled-and-class-handling.md).  
   
  Das freigegebene Ereignisdatenmodell von Tunneling- und Bubblingereignissen und das sequenzielle Auslösen zunächst der Tunneling-und dann der Bubblingereignisse ist kein allgemein gültiges Konzept für alle Routingereignisse. Dieses Verhalten wird insbesondere davon implementiert, wie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eingabegeräte Eingabeereignispaare auslösen und verbinden. Das Implementieren Ihres eigenen Eingabeereignisses ist ein erweitertes Szenario; möglicherweise entscheiden Sie sich aber dazu, dieses Modell auch für Ihre eigenen Eingabeereignisse zu nutzen.  
   
- Gewisse Klassen behandeln gewisse Eingabeereignisse in einer Klasse, meist mit dem Ziel, die Bedeutung eines bestimmten benutzergesteuerten Eingabeereignisses innerhalb dieses Steuerelements neu zu definieren und ein neues Ereignis auszulösen. Weitere Informationen finden Sie unter [Markieren von Routingereignissen als behandelt und Klassenbehandlung](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md).  
+ Gewisse Klassen behandeln gewisse Eingabeereignisse in einer Klasse, meist mit dem Ziel, die Bedeutung eines bestimmten benutzergesteuerten Eingabeereignisses innerhalb dieses Steuerelements neu zu definieren und ein neues Ereignis auszulösen. Weitere Informationen finden Sie unter [Markieren von Routingereignissen als behandelt und Klassenbehandlung](marking-routed-events-as-handled-and-class-handling.md).  
   
- Weitere Informationen zur Eingabe und zur Interaktion zwischen Eingabe und Ereignissen in normalen Anwendungsszenarien finden Sie unter [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md).  
+ Weitere Informationen zur Eingabe und zur Interaktion zwischen Eingabe und Ereignissen in normalen Anwendungsszenarien finden Sie unter [Übersicht über die Eingabe](input-overview.md).  
   
 <a name="events_styles"></a>   
 ## <a name="eventsetters-and-eventtriggers"></a>EventSetters und EventTriggers  
  In Stilen, Sie können vordeklarierte [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -Ereignisbehandlungssyntax in das Markup mit einem <xref:System.Windows.EventSetter>. Wenn das Format angewendet wird, wird der verwiesene Handler zur formatierten Instanz hinzugefügt. Sie können deklarieren, ein <xref:System.Windows.EventSetter> nur für ein Routingereignis. Nachfolgend finden Sie ein Beispiel: Beachten Sie, dass die `b1SetColor`-Methode, auf die hier verwiesen wird, sich in einer CodeBehind-Datei befindet.  
   
- [!code-xaml[EventOvwSupport#XAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
+ [!code-xaml[EventOvwSupport#XAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]  
   
  Der Vorteil hierbei ist, dass das Format wahrscheinlich viel andere Informationen enthält, die auf eine beliebige Schaltfläche in der Anwendung angewendet werden können und dass die <xref:System.Windows.EventSetter> Teil dieser Art fördert die Wiederverwendung von Code sogar auf Markupebene. Darüber hinaus eine <xref:System.Windows.EventSetter> Methodennamen für Handler, die einen Schritt weg von der allgemeinen Anwendung und dem Seitenmarkup abstrahiert.  
   
- Weitere spezialisierte Syntax, die die geroutete Ereignis und Animation von kombiniert [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist ein <xref:System.Windows.EventTrigger>. Wie bei <xref:System.Windows.EventSetter>, nur Routingereignisse verwendet werden können, für eine <xref:System.Windows.EventTrigger>. In der Regel ein <xref:System.Windows.EventTrigger> ist als Teil eines Stils, deklariert jedoch <xref:System.Windows.EventTrigger> können auch auf Seitenebene als Teil des deklariert werden die <xref:System.Windows.FrameworkElement.Triggers%2A> -Auflistung, oder in einer <xref:System.Windows.Controls.ControlTemplate>. Ein <xref:System.Windows.EventTrigger> ermöglicht Ihnen die Angabe einer <xref:System.Windows.Media.Animation.Storyboard> , ausgeführt wird, wenn ein Routingereignis ein Element in der Route erreicht deklariert eine <xref:System.Windows.EventTrigger> für dieses Ereignis. Der Vorteil des ein <xref:System.Windows.EventTrigger> über nur behandeln des Ereignisses und, startet ein vorhandenes Storyboard ist, eine <xref:System.Windows.EventTrigger> bietet bessere Kontrolle über das Storyboard und dessen Laufzeitverhalten. Weitere Informationen finden Sie unter [Verwenden von Ereignistriggern zum Steuern eines Storyboards nach dessen Start](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
+ Weitere spezialisierte Syntax, die die geroutete Ereignis und Animation von kombiniert [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist ein <xref:System.Windows.EventTrigger>. Wie bei <xref:System.Windows.EventSetter>, nur Routingereignisse verwendet werden können, für eine <xref:System.Windows.EventTrigger>. In der Regel ein <xref:System.Windows.EventTrigger> ist als Teil eines Stils, deklariert jedoch <xref:System.Windows.EventTrigger> können auch auf Seitenebene als Teil des deklariert werden die <xref:System.Windows.FrameworkElement.Triggers%2A> -Auflistung, oder in einer <xref:System.Windows.Controls.ControlTemplate>. Ein <xref:System.Windows.EventTrigger> ermöglicht Ihnen die Angabe einer <xref:System.Windows.Media.Animation.Storyboard> , ausgeführt wird, wenn ein Routingereignis ein Element in der Route erreicht deklariert eine <xref:System.Windows.EventTrigger> für dieses Ereignis. Der Vorteil des ein <xref:System.Windows.EventTrigger> über nur behandeln des Ereignisses und, startet ein vorhandenes Storyboard ist, eine <xref:System.Windows.EventTrigger> bietet bessere Kontrolle über das Storyboard und dessen Laufzeitverhalten. Weitere Informationen finden Sie unter [Verwenden von Ereignistriggern zum Steuern eines Storyboards nach dessen Start](../graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
   
 <a name="more_about"></a>   
 ## <a name="more-about-routed-events"></a>Weitere Informationen zu Routingereignissen  
- In diesem Thema werden hauptsächlich die grundlegenden Konzepte von Routingereignissen erläutert; zudem bietet er Ihnen eine Orientierung, wann Sie auf Routingereignisse reagieren sollten, die bereits in den verschieden Basiselementen und -steuerelementen vorhanden sind. Allerdings können Sie eigene Routingereignis für Ihre benutzerdefinierte Klasse mit den notwendigen Hilfsmitteln, wie z. B. spezialisierte Ereignisdatenklassen und Delegaten, erstellen. Eigentümer des Routingereignisses kann jede Klasse sein, aber die Routingereignisse müssen ausgelöst und behandelt, indem <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> abgeleiteten Klassen, damit Sie nützlich ist. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Erstellen eines benutzerdefinierten Routingereignisses](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md).  
+ In diesem Thema werden hauptsächlich die grundlegenden Konzepte von Routingereignissen erläutert; zudem bietet er Ihnen eine Orientierung, wann Sie auf Routingereignisse reagieren sollten, die bereits in den verschieden Basiselementen und -steuerelementen vorhanden sind. Allerdings können Sie eigene Routingereignis für Ihre benutzerdefinierte Klasse mit den notwendigen Hilfsmitteln, wie z. B. spezialisierte Ereignisdatenklassen und Delegaten, erstellen. Eigentümer des Routingereignisses kann jede Klasse sein, aber die Routingereignisse müssen ausgelöst und behandelt, indem <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> abgeleiteten Klassen, damit Sie nützlich ist. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Erstellen eines benutzerdefinierten Routingereignisses](how-to-create-a-custom-routed-event.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
-- [Markieren von Routingereignissen als behandelt und Klassenbehandlung](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)
-- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md)
-- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Strukturen in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [Schwache Ereignismuster](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)
+- [Markieren von Routingereignissen als behandelt und Klassenbehandlung](marking-routed-events-as-handled-and-class-handling.md)
+- [Übersicht über die Eingabe](input-overview.md)
+- [Befehlsübersicht](commanding-overview.md)
+- [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
+- [Strukturen in WPF](trees-in-wpf.md)
+- [Schwache Ereignismuster](weak-event-patterns.md)

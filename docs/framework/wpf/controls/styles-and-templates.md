@@ -7,19 +7,19 @@ helpviewer_keywords:
 - styles [WPF]
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
-ms.openlocfilehash: e310d9800f4ee2274221e8461838ed8ee3d66ac7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553367"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372073"
 ---
 # <a name="styles-and-templates"></a>Stile und Vorlagen
-Windows Presentation Foundation (WPF) Erstellen von Formaten und Vorlagen finden Sie in einer Sammlung von Funktionen (Stile, Vorlagen, Trigger und Storyboards), die eine Anwendung, ein Dokument oder eine Designer Benutzeroberfläche (UI) zum Erstellen von visuell überzeugende Anwendungen zu ermöglichen und Standardisierung auf ein bestimmtes Erscheinungsbild ihres Produkts.  
+Windows Presentation Foundation (WPF)-Stile und Vorlagen finden Sie eine Sammlung von Funktionen (Stile, Vorlagen, Trigger und Storyboards) an, die eine Anwendung, ein Dokument oder eine Benutzeroberflächendesigner (UI) zum Erstellen von visuell ansprechende Anwendungen zu ermöglichen und als Standard ein individuelles Erscheinungsbild ihres Produkts.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Gewusst wie: Suchen von Elementen, die mit einer ControlTemplate generiert wurden](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+ [Erstellen von Formaten und Vorlagen](styling-and-templating.md)  
+  [Vorgehensweise: Suchen von Elementen einer ControlTemplate generiert wurden](how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Style>  
@@ -27,6 +27,6 @@ Windows Presentation Foundation (WPF) Erstellen von Formaten und Vorlagen finden
   <xref:System.Windows.DataTemplate>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Erweitert](../../../../docs/framework/wpf/advanced/index.md)  
-  [Anpassung von Steuerelementen](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Erweitert](../advanced/index.md)  
+  [Anpassung von Steuerelementen](control-customization.md)  
+  [Grafiken und Multimedia](../graphics-multimedia/index.md)

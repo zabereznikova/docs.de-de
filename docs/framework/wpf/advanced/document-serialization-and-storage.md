@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 028f7e8f2be2aa0718eebc133ebd9d35717c824d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbdd04f40c1d4a29ff1807b8a2760802b0338cb3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630852"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379691"
 ---
 # <a name="document-serialization-and-storage"></a>Serialisierung und Speicherung von Dokumenten
 Microsoft .NET Framework stellt eine leistungsfähige Umgebung zum Erstellen und anzeigen qualitativ hochwertiger Dokumente.  Erweiterte Funktionen, die Unterstützung von sowohl fixierten Dokumenten als auch Flussdokumenten sowie erweiterte Anzeigesteuerelemente, kombiniert mit leistungsstarken 2D- und 3D-Grafikfunktionen führen .NET Framework-Anwendungen, um eine neue Ebene der Qualität und benutzerfreundlichkeit.  Eine speicherinterne Darstellung eines Dokuments flexibel zu verwalten, ist ein wichtiges Feature von .NET Framework und effizient zu speichern und Laden von Dokumenten aus einem Datenspeicher ist nahezu jede Anwendung erforderlich.  Der Prozess der Konvertierung eines Dokuments aus einer speicherinternen Darstellung in einen externen Datenspeicher wird als Serialisierung bezeichnet.  Der umgekehrte Vorgang des Lesens eines Datenspeichers und Neuerstellens der ursprünglichen Instanz im Speicher wird Deserialisierung genannt.  
@@ -41,7 +41,7 @@ Microsoft .NET Framework stellt eine leistungsfähige Umgebung zum Erstellen und
     -   Unterstützung von Benutzeroberflächen für benutzerdefinierte Laufzeiteinstellungen und -optionen  
   
 ### <a name="xps-print-path"></a>XPS-Druckpfad  
- Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] -Druckpfad bietet auch einen erweiterbaren Mechanismus zum Schreiben von Dokumenten durch die Druckausgabe.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dient gleichzeitig als Dokumentdateiformat und natives Druckerspoolerformat für [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dokumente können ohne Konvertierung in ein Zwischenformat direkt an [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-kompatible Drucker geschickt werden.  Weitere Informationen zu Optionen und Funktionen der Druckpfadausgabe finden Sie unter [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md).  
+ Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] -Druckpfad bietet auch einen erweiterbaren Mechanismus zum Schreiben von Dokumenten durch die Druckausgabe.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dient gleichzeitig als Dokumentdateiformat und natives Druckerspoolerformat für [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dokumente können ohne Konvertierung in ein Zwischenformat direkt an [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-kompatible Drucker geschickt werden.  Weitere Informationen zu Optionen und Funktionen der Druckpfadausgabe finden Sie unter [Übersicht über das Drucken](printing-overview.md).  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>Plug-In-Serialisierungsprogramme  
@@ -54,11 +54,11 @@ Microsoft .NET Framework stellt eine leistungsfähige Umgebung zum Erstellen und
   
  Das folgende Beispiel zeigt eine Anwendung, verwendet der <xref:System.Windows.Documents.Serialization.SerializerProvider> -Methode in der Eigenschaft "PlugInFileFilter".  PlugInFileFilter Listet die installierte Plug-Ins auf und erstellt eine Filterzeichenfolge mit den verfügbaren Dateioptionen für ein <xref:Microsoft.Win32.SaveFileDialog>.  
   
- [!code-csharp[DocumentSerialize#DocSerializeFileFilter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
+ [!code-csharp[DocumentSerialize#DocSerializeFileFilter](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializefilefilter)]  
   
  Nach der Name der Ausgabedatei vom Benutzer ausgewählt wurde, wird das folgende Beispiel veranschaulicht die Verwendung von der <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> Methode, um ein bestimmtes Dokument in einem angegebenen Format zu speichern.  
   
- [!code-csharp[DocumentSerialize#DocSerializePlugIn](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
+ [!code-csharp[DocumentSerialize#DocSerializePlugIn](~/samples/snippets/csharp/VS_Snippets_Wpf/DocumentSerialize/CSharp/ThumbViewer.cs#docserializeplugin)]  
   
 <a name="InstallingPluginSerializers"></a>   
 ### <a name="installing-plug-in-serializers"></a>Installieren von Plug-In-Serialisierungsprogrammen  
@@ -77,6 +77,6 @@ Microsoft .NET Framework stellt eine leistungsfähige Umgebung zum Erstellen und
 - <xref:System.Windows.Documents.Serialization>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
-- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Übersicht über das Drucken](../../../../docs/framework/wpf/advanced/printing-overview.md)
+- [Dokumente in WPF](documents-in-wpf.md)
+- [Übersicht über das Drucken](printing-overview.md)
 - [XML Paper Specification: Übersicht](https://go.microsoft.com/fwlink?LinkID=106246)

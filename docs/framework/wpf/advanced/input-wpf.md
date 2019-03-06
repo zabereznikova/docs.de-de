@@ -7,24 +7,24 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544231"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350747"
 ---
 # <a name="input-wpf"></a>Eingabe (WPF)
-Windows Presentation Foundation (WPF) umfasst Unterstützung für verschiedene Arten von Eingaben. Diese Eingabe enthält Text, Touch, Maus, Befehle, den Fokus, Fingereingabe, Drag & Drop und Freihandeingaben. Dieser Abschnitt enthält Themen im Zusammenhang mit in WPF eingegeben.  
+Windows Presentation Foundation (WPF) umfasst Unterstützung für verschiedene Arten von Eingaben. Diese Eingabe enthält Text, Fingereingabe, Maus, Befehle, den Fokus, Touch, Drag & Drop und Freihandeingaben. Dieser Abschnitt beschreibt die Themen in Bezug auf die in WPF eingeben.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Befehlsübersicht](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Fokus - Übersicht](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Fokusstile in Steuerelementen und FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [Freihandeingaben](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [Übersicht über die Eingabe](input-overview.md)  
+ [Befehlsübersicht](commanding-overview.md)  
+ [Fokus - Übersicht](focus-overview.md)  
+ [Fokusstile in Steuerelementen und FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung](walkthrough-creating-your-first-touch-application.md)  
+ [Themen zu Vorgehensweisen](input-and-commands-how-to-topics.md)  
+ [Freihandeingaben](digital-ink.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.UIElement>  
@@ -42,5 +42,5 @@ Windows Presentation Foundation (WPF) umfasst Unterstützung für verschiedene A
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Steuerelemente](../../../../docs/framework/wpf/controls/index.md)  
-  [Ereignisse](../../../../docs/framework/wpf/advanced/events-wpf.md)
+ [Steuerelemente](../controls/index.md)  
+  [Ereignisse](events-wpf.md)

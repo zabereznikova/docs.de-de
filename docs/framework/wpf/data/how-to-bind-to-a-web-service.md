@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 0a738d52cfb01fff1cb21d0e6ebb8f1b7b28d57f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2ef0cce293913fc7bd9d59baa91bd875823cbe2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695766"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353932"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Vorgehensweise: Bindung an einen Webdienst
 Dieses Beispiel zeigt, wie zum Binden an Objekte, die durch Aufrufe des Webdiensts-Methode zurückgegeben wird.  
@@ -34,18 +34,18 @@ Dieses Beispiel zeigt, wie zum Binden an Objekte, die durch Aufrufe des Webdiens
   
  Anschließend rufen Sie die Webdienstmethode und legen Sie die <xref:System.Windows.FrameworkElement.DataContext%2A> des entsprechenden Steuerelements oder des Fenster auf das zurückgegebene Objekt. Die **GetContent** -Methode des Diensts MTPS akzeptiert einen Verweis auf die **GetContentRequest** Objekt. Aus diesem Grund legt im folgenden Beispiel wird zuerst ein Anforderungsobjekt fest:  
   
- [!code-csharp[BindToWebService#Namespace](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
- [!code-vb[BindToWebService#Namespace](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
-[!code-csharp[BindToWebService#WebServiceCall](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
-[!code-vb[BindToWebService#WebServiceCall](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
+ [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
+ [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
+[!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
+[!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
  Nach der <xref:System.Windows.FrameworkElement.DataContext%2A> -Element festgelegt wurde, können Sie Bindungen für die Eigenschaften des Objekts erstellen, die die <xref:System.Windows.FrameworkElement.DataContext%2A> auf festgelegt wurde. In diesem Beispiel die <xref:System.Windows.FrameworkElement.DataContext%2A> nastaven NA hodnotu der **getContent** zurückgegebenes Objekt der **GetContent** Methode. Im folgenden Beispiel die <xref:System.Windows.Controls.ItemsControl> bindet an und zeigt die **Gebietsschema** Werte **AvailableVersionsAndLocales** von **getContent**.  
   
- [!code-xaml[BindToWebService#Binding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
+ [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
  Informationen zur Struktur von **getContent**, finden Sie unter [Dokumentation zu Content Service](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht zur Datenbindung](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [Übersicht über Bindungsquellen](../../../../docs/framework/wpf/data/binding-sources-overview.md)
-- [Bereitstellen von Daten für die Bindung in XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht über Bindungsquellen](binding-sources-overview.md)
+- [Bereitstellen von Daten für die Bindung in XAML](how-to-make-data-available-for-binding-in-xaml.md)

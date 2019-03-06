@@ -3,11 +3,11 @@ title: <findCriteria>
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
 ms.openlocfilehash: e82312cb17fbd3f76f781ea37f761e946319a0a0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284860"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351853"
 ---
 # <a name="findcriteria"></a>\<findCriteria>
 Ein Konfigurationselement, das einen Kriteriensatz bereitstellt, der von einer Clientanwendung zum Suchen nach einem Ermittlungsdienst verwendet wird. Kriterien können in Suchkriterien (nach welchen Diensten soll gesucht werden, für die) gruppiert werden und Beendigungskriterien (wie lange soll die Suche dauern).  

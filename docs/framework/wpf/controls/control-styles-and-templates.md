@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079726"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373197"
 ---
 # <a name="control-styles-and-templates"></a>Steuerelementformate und -vorlagen
 Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xref:System.Windows.Controls.ControlTemplate> , die die visuelle Struktur des Steuerelements enthält. Sie können die Struktur und Darstellung eines Steuerelements ändern, durch Ändern der <xref:System.Windows.Controls.ControlTemplate> des Steuerelements. Es gibt keine Möglichkeit, nur einen Teil der visuellen Struktur eines Steuerelements zu ersetzen; um die visuelle Struktur eines Steuerelements zu ändern, Sie festlegen müssen, die <xref:System.Windows.Controls.Control.Template%2A> Eigenschaft des Steuerelements auf dessen neues und vollständiges <xref:System.Windows.Controls.ControlTemplate>.  
@@ -34,38 +34,38 @@ Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xr
 |Aero.NormalColor.xaml|Standarddesign auf dem Betriebssystem Windows Vista.|  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Button-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
- [Calendar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
- [CheckBox-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
- [ComboBox-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
- [ContextMenu-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [DataGrid-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
- [DatePicker-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
- [DocumentViewer-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
- [Expander-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
- [Frame-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
- [GroupBox-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/groupbox-styles-and-templates.md)  
- [Label-Stile und -vorlagen](../../../../docs/framework/wpf/controls/label-styles-and-templates.md)  
- [ListBox-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/listbox-styles-and-templates.md)  
- [ListView-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
- [Menu-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
- [NavigationWindow-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox-Stile und-Vorlagen](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
- [ProgressBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
- [RadioButton-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton-Stile und-Vorlagen](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
- [ScrollBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [ScrollViewer-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
- [Slider-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
- [StatusBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
- [TabControl-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
- [TextBox-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Thumb-Stile und-Vorlagen](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton-Stile und-Vorlagen](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
- [ToolBar-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
- [ToolTip-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
- [TreeView-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
- [Window-Stile und -Vorlagen](../../../../docs/framework/wpf/controls/window-styles-and-templates.md)  
+ [Button-Stile und -Vorlagen](button-styles-and-templates.md)  
+ [Calendar-Stile und -Vorlagen](calendar-styles-and-templates.md)  
+ [CheckBox-Stile und -Vorlagen](checkbox-styles-and-templates.md)  
+ [ComboBox-Stile und -Vorlagen](combobox-styles-and-templates.md)  
+ [ContextMenu-Stile und -Vorlagen](contextmenu-styles-and-templates.md)  
+ [DataGrid-Stile und -Vorlagen](datagrid-styles-and-templates.md)  
+ [DatePicker-Stile und -Vorlagen](datepicker-styles-and-templates.md)  
+ [DocumentViewer-Stile und -Vorlagen](documentviewer-styles-and-templates.md)  
+ [Expander-Stile und -Vorlagen](expander-styles-and-templates.md)  
+ [Frame-Stile und -Vorlagen](frame-styles-and-templates.md)  
+ [GroupBox-Stile und -Vorlagen](groupbox-styles-and-templates.md)  
+ [Label-Stile und -vorlagen](label-styles-and-templates.md)  
+ [ListBox-Stile und -Vorlagen](listbox-styles-and-templates.md)  
+ [ListView-Stile und -Vorlagen](listview-styles-and-templates.md)  
+ [Menu-Stile und -Vorlagen](menu-styles-and-templates.md)  
+ [NavigationWindow-Stile und -Vorlagen](navigationwindow-styles-and-templates.md)  
+ [PasswordBox-Stile und-Vorlagen](passwordbox-syles-and-templates.md)  
+ [ProgressBar-Stile und -Vorlagen](progressbar-styles-and-templates.md)  
+ [RadioButton-Stile und -Vorlagen](radiobutton-styles-and-templates.md)  
+ [RepeatButton-Stile und-Vorlagen](repeatbutton-syles-and-templates.md)  
+ [ScrollBar-Stile und -Vorlagen](scrollbar-styles-and-templates.md)  
+ [ScrollViewer-Stile und -Vorlagen](scrollviewer-styles-and-templates.md)  
+ [Slider-Stile und -Vorlagen](slider-styles-and-templates.md)  
+ [StatusBar-Stile und -Vorlagen](statusbar-styles-and-templates.md)  
+ [TabControl-Stile und -Vorlagen](tabcontrol-styles-and-templates.md)  
+ [TextBox-Stile und -Vorlagen](textbox-styles-and-templates.md)  
+ [Thumb-Stile und-Vorlagen](thumb-syles-and-templates.md)  
+ [ToggleButton-Stile und-Vorlagen](togglebutton-syles-and-templates.md)  
+ [ToolBar-Stile und -Vorlagen](toolbar-styles-and-templates.md)  
+ [ToolTip-Stile und -Vorlagen](tooltip-styles-and-templates.md)  
+ [TreeView-Stile und -Vorlagen](treeview-styles-and-templates.md)  
+ [Window-Stile und -Vorlagen](window-styles-and-templates.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls>  
@@ -73,6 +73,6 @@ Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xr
  <xref:System.Windows.Controls.ControlTemplate>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [Übersicht über das Erstellen von Steuerelementen](control-authoring-overview.md)  
   
- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Erstellen von Formaten und Vorlagen](styling-and-templating.md)

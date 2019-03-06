@@ -8,21 +8,21 @@ helpviewer_keywords:
 - drag and drop [WPF]
 - drag-and-drop [WPF]
 ms.assetid: 77c48920-8c8b-41eb-8fe8-b411962c8623
-ms.openlocfilehash: 084354f2c567716c2ca083dddb4cd6628334d603
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a0e7cac9262908e4683aebeb653559c1513d4d9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542573"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367465"
 ---
 # <a name="drag-and-drop"></a>Drag & Drop
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine äußerst flexible Drag- and -Drop-Infrastruktur das Ziehen und Ablegen von Daten innerhalb des Kontextbereichs unterstützt [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen sowie andere [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Anwendungen.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine äußerst flexible Drag- and -Drop-Infrastruktur unterstützt, ziehen und Ablegen von Daten in beide [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen als auch andere [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Anwendungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über Drag & Drop](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
- [Daten und Datenobjekte](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
- [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+ [Übersicht über Drag & Drop](drag-and-drop-overview.md)  
+ [Daten und Datenobjekte](data-and-data-objects.md)  
+ [Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement](walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [Themen zu Vorgehensweisen](drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.DataFormat>  

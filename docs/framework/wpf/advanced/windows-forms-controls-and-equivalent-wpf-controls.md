@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: e98a850e6846c73c4df698e2a5414481611bb63d
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c3db56c9d1ff46e427f98433a3a29a671675c541
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748569"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363890"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Windows Forms-Steuerelemente und entsprechende WPF-Steuerelemente
 Viele [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente verfügen über entsprechende [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente, aber einige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente bestehen keine Äquivalente in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Dieses Thema vergleicht die Steuerelementtypen, die von den beiden Technologien bereitgestellt.  
@@ -88,6 +88,6 @@ Viele [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.m
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF-Designer für Windows Forms-Entwickler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cc165605(v=vs.100))
-- [Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Exemplarische Vorgehensweise: Hosten eines Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Migration und Interoperabilität](migration-and-interoperability.md)

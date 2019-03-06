@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentReader
 - FlowDocumentReader control [WPF]
 ms.assetid: ba7aaa70-f77b-4555-a79d-68a12c8e134b
-ms.openlocfilehash: 61d6b4f066d2bac03092e0418eded34cc604810e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0d7adc127c593176ec7b60bf55a8f903c8b6ab7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551981"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364085"
 ---
 # <a name="flowdocumentreader"></a>FlowDocumentReader
 Die <xref:System.Windows.Controls.FlowDocumentReader> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FlowDocument> Inhalt. Es unterstützt mehrere Anzeigemodi.  
@@ -21,5 +21,5 @@ Die <xref:System.Windows.Controls.FlowDocumentReader> Steuerelement dient zum An
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
-- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Übersicht über Flussdokumente](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+- [Dokumente in WPF](../advanced/documents-in-wpf.md)
+- [Übersicht über Flussdokumente](../advanced/flow-document-overview.md)

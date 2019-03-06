@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: ea3c5d2c8d98f75bad164ff16c098401e41e4c5e
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748582"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357520"
 ---
 # <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken
 Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf dem eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung ausgeführt wird.  
@@ -107,7 +107,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 |**Einstellung für das erforderliche Videotreiberdatum**|Gibt an, ob das System die Hardwarebeschleunigung für Treiber deaktiviert, die vor November 2004 veröffentlicht wurden|  
 |**Option zum Verwenden des Referenzrasters**|Gibt an, ob [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] das Referenzraster verwendet werden soll|  
   
- Diese Einstellungen stehen für alle externen Konfigurationshilfsprogramme zur Verfügung, die auf die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Registrierungseinstellungen verweisen können. Diese Einstellungen können auch erstellt oder geändert werden, indem Sie direkt über den [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Registrierungs-Editor auf die Werte zugreifen. Weitere Informationen finden Sie unter [Registrierungseinstellungen für das Rendern von Grafiken](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md).  
+ Diese Einstellungen stehen für alle externen Konfigurationshilfsprogramme zur Verfügung, die auf die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Registrierungseinstellungen verweisen können. Diese Einstellungen können auch erstellt oder geändert werden, indem Sie direkt über den [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Registrierungs-Editor auf die Werte zugreifen. Weitere Informationen finden Sie unter [Registrierungseinstellungen für das Rendern von Grafiken](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF-Leistungsprofilerstellungstools  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt eine Suite von Leistungsprofilerstellungstools bereit, mit deren Hilfe Sie das Laufzeitverhalten der Anwendung analysieren und die Typen der anwendbaren Leistungsoptimierungen bestimmen können. Die folgende Tabelle enthält die Leistungsprofilerstellungstools, die im [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]-Tool der WPF Performance Suite enthalten sind:  
@@ -126,13 +126,13 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
  Beim Ausführen des [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Diagnosetools enthält das Hauptfenster eine Reihe von Registerkarten, mit denen Sie [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-bezogene Informationen anzeigen und diagnostizieren können. Die **System**-Registerkarte enthält z.B. Systeminformationen über Ihren Computer und gibt die Version von [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] an, die auf Ihrem Computer installiert ist.  
   
- ![Screenhot: DirectX-Diagnosetool](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Screenhot: DirectX-Diagnosetool](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Hauptfenster des DirectX-Diagnosetools  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
-- [Optimieren der WPF-Anwendungsleistung](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+- [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
 - [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
-- [Registrierungseinstellungen für das Rendern von Grafiken](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)
-- [Tipps und Tricks zu Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)
+- [Registrierungseinstellungen für das Rendern von Grafiken](../graphics-multimedia/graphics-rendering-registry-settings.md)
+- [Tipps und Tricks zu Animationen](../graphics-multimedia/animation-tips-and-tricks.md)

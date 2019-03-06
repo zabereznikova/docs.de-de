@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Image control [WPF]
 - rendering images [WPF]
 ms.assetid: 5b92e74b-1b56-4756-ac64-d5e9e08d9854
-ms.openlocfilehash: d7aa2e0e9bd33dfcd68bd19b5084fa1666232a5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec3ca16915038ebbb68df24bfd071168c346663d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530800"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372463"
 ---
 # <a name="how-to-use-the-image-element"></a>Vorgehensweise: Verwenden des Image-Elements
 Dieses Beispiel zeigt, wie Sie Bilder in einer Anwendung einfügen, mit der <xref:System.Windows.Controls.Image> Element.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird veranschaulicht, wie ein Bild auf eine Breite von 200 Pixel gerendert wird. In diesem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]-Beispielwerden die Attributsyntax und die Syntax der Eigenschaftstags dazu verwendet, um das Bild zu definieren. Weitere Informationen über Attributsyntax und Eigenschaftensyntax finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Ein <xref:System.Windows.Media.Imaging.BitmapImage> wird zum Definieren der Quelldaten des Bilds verwendet und für die Eigenschaft Tag Syntaxbeispiel explizit definiert. Darüber hinaus die <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> von der <xref:System.Windows.Media.Imaging.BitmapImage> festgelegt ist, auf die gleiche Breite wie die <xref:System.Windows.FrameworkElement.Width%2A> von der <xref:System.Windows.Controls.Image>. Hiermit wird sichergestellt, dass die Mindestmenge an Arbeitsspeicher zum Rendern des Bilds verwendet wird.  
+ Im folgenden Beispiel wird veranschaulicht, wie ein Bild auf eine Breite von 200 Pixel gerendert wird. In diesem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]-Beispielwerden die Attributsyntax und die Syntax der Eigenschaftstags dazu verwendet, um das Bild zu definieren. Weitere Informationen über Attributsyntax und Eigenschaftensyntax finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../advanced/dependency-properties-overview.md). Ein <xref:System.Windows.Media.Imaging.BitmapImage> wird zum Definieren der Quelldaten des Bilds verwendet und für die Eigenschaft Tag Syntaxbeispiel explizit definiert. Darüber hinaus die <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> von der <xref:System.Windows.Media.Imaging.BitmapImage> festgelegt ist, auf die gleiche Breite wie die <xref:System.Windows.FrameworkElement.Width%2A> von der <xref:System.Windows.Controls.Image>. Hiermit wird sichergestellt, dass die Mindestmenge an Arbeitsspeicher zum Rendern des Bilds verwendet wird.  
   
 > [!NOTE]
 >  Im Allgemeinen, wenn Sie die Größe eines gerenderten Bilds angeben möchten, geben Sie nur die <xref:System.Windows.FrameworkElement.Width%2A> oder <xref:System.Windows.FrameworkElement.Height%2A> jedoch nicht beides. Wenn Sie nur eines angeben, wird das Seitenverhältnis des Bilds beibehalten. Andernfalls wird das Bild möglicherweise unerwartet gestreckt oder verzerrt. Steuern Sie das Image streckungsverhalten, verwenden Sie die <xref:System.Windows.Controls.Image.Stretch%2A> und <xref:System.Windows.Controls.Image.StretchDirection%2A> Eigenschaften.  
@@ -30,7 +30,7 @@ Dieses Beispiel zeigt, wie Sie Bilder in einer Anwendung einfügen, mit der <xre
   
  Die <xref:System.Windows.Controls.Image.Stretch%2A> Eigenschaft bestimmt, wie die Bildquelle gestreckt wird, um das Image-Element auszufüllen. Weitere Informationen finden Sie unter der <xref:System.Windows.Media.Stretch>-Enumeration.  
   
- [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
+ [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird veranschaulicht, wie ein Bild mithilfe von Code auf eine Breite von 200 Pixel gerendert wird.  
@@ -38,8 +38,8 @@ Dieses Beispiel zeigt, wie Sie Bilder in einer Anwendung einfügen, mit der <xre
 > [!NOTE]
 >  Festlegen von <xref:System.Windows.Media.Imaging.BitmapImage> Eigenschaften müssen ausgeführt werden, in einem <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> und <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> Block.  
   
- [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
- [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
+ [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
+ [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über die Bildverarbeitung](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [Übersicht über die Bildverarbeitung](../graphics-multimedia/imaging-overview.md)

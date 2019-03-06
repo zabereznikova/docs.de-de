@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 256790880e6fcf3bd2492d3f3f00b532f6a31eea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568131"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379003"
 ---
 # <a name="read-only-dependency-properties"></a>Schreibgeschützte Abhängigkeitseigenschaften
 Dieses Thema beschreibt die schreibgeschützten Abhängigkeitseigenschaften, einschließlich vorhandener schreibgeschützter Abhängigkeitseigenschaften und die Szenarien und Verfahren zum Erstellen einer benutzerdefinierten, schreibgeschützten Abhängigkeitseigenschaft.  
@@ -19,7 +19,7 @@ Dieses Thema beschreibt die schreibgeschützten Abhängigkeitseigenschaften, ein
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
- Bei diesem Thema wird davon ausgegangen, dass Sie die grundlegenden Szenarien zum Implementieren einer Abhängigkeitseigenschaft verstehen, und Metadaten für eine benutzerdefinierte Abhängigkeitseigenschaft anwenden. Mehr dazu finden Sie unter [benutzerdefinierten Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) und [Metadaten für Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md).  
+ Bei diesem Thema wird davon ausgegangen, dass Sie die grundlegenden Szenarien zum Implementieren einer Abhängigkeitseigenschaft verstehen, und Metadaten für eine benutzerdefinierte Abhängigkeitseigenschaft anwenden. Mehr dazu finden Sie unter [benutzerdefinierten Abhängigkeitseigenschaften](custom-dependency-properties.md) und [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md).  
   
 <a name="existing"></a>   
 ## <a name="existing-read-only-dependency-properties"></a>Bestehende schreibgeschützte Abhängigkeitseigenschaften  
@@ -31,7 +31,7 @@ Dieses Thema beschreibt die schreibgeschützten Abhängigkeitseigenschaften, ein
 ## <a name="creating-custom-read-only-dependency-properties"></a>Erstellen benutzerdefinierter, schreibgeschützter Abhängigkeitseigenschaften  
  Lesen Sie auf jeden Fall den Abschnitt oben zum Thema: Warum schreibgeschützte Abhängigkeitseigenschaften für viele normale Abhängigkeitseigenschaftsszenarien nicht funktioniert. Wenn Sie ein entsprechendes Szenario haben, können Sie jedoch eine eigene schreibgeschützte Abhängigkeitseigenschaft erstellen.  
   
- Einiges des Prozesses zum Erstellen einer schreibgeschützten Abhängigkeitseigenschaft entspricht weitgehend den in [benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) und [Implementieren einer Abhängigkeitseigenschaft](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md) beschriebenen Themen. Es gibt drei wichtige Unterschiede:  
+ Einiges des Prozesses zum Erstellen einer schreibgeschützten Abhängigkeitseigenschaft entspricht weitgehend den in [benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md) und [Implementieren einer Abhängigkeitseigenschaft](how-to-implement-a-dependency-property.md) beschriebenen Themen. Es gibt drei wichtige Unterschiede:  
   
 -   Wenn die Eigenschaft registrieren, rufen Sie die <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A> Methode anstelle der normalen <xref:System.Windows.DependencyProperty.Register%2A> -Methode für die Registrierung.  
   
@@ -41,9 +41,9 @@ Dieses Thema beschreibt die schreibgeschützten Abhängigkeitseigenschaften, ein
   
  Alle privaten Felder oder Werte, die Ihre schreibgeschützte Abhängigkeitseigenschaft unterstützen, können natürlich vollständig von Ihrer gewünschten Logik beschreibbar sein. Die einfachste Möglichkeit zum Festlegen der Eigenschaft, ob am Anfang oder als Teil der Laufzeitlogik, ist jedoch das Verwenden des Eigenschaftensystems [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], anstatt das Eigenschaftensystem zu umgehen und das private Unterstützungsfeld direkt festzulegen. Es ist eine Signatur der <xref:System.Windows.DependencyObject.SetValue%2A> nimmt einen Parameter vom Typ <xref:System.Windows.DependencyPropertyKey>. Wie und wo Sie diesen Wert programmgesteuert in der Anwendungslogik festlegen wirkt sich wie Sie möchten möglicherweise legen Sie den Zugriff auf die <xref:System.Windows.DependencyPropertyKey> erstellt, wenn Sie die Abhängigkeitseigenschaft zuerst registriert. Wenn Sie diese Logik innerhalb der Klasse bearbeiten, können Sie diese als privat einstellen, oder wenn Sie möchten, dass diese von anderen Teilen des Assembly festgelegt wird, müssen Sie dies intern festlegen. Ein Ansatz besteht darin, rufen Sie <xref:System.Windows.DependencyObject.SetValue%2A> innerhalb eines klassenereignishandlers eines relevanten Ereignisses, das eine Klasseninstanz darüber informiert, die der gespeicherte Eigenschaftswert geändert werden muss. Ein anderer Ansatz ist, um Abhängigkeitseigenschaften zu verbinden, mit der gekoppelt <xref:System.Windows.PropertyChangedCallback> und <xref:System.Windows.CoerceValueCallback> Rückrufen als Teil der Metadaten dieser Eigenschaften während der Registrierung.  
   
- Da die <xref:System.Windows.DependencyPropertyKey> privat ist und nicht weitergegeben wird vom Eigenschaftensystem außerhalb des Codes, eine schreibgeschützte Abhängigkeitseigenschaft besitzt eine bessere einstellungssicherheit, als eine Abhängigkeitseigenschaft mit Lese-/ Schreibzugriff. Für eine Abhängigkeitseigenschaft, die gelesen und bearbeitet werden kann, ist das identifizierende Feld explizit oder implizit öffentlich und daher kann die Eigenschaft umfassend festgelegt werden. Ausführlichere Informationen dazu finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-property-security.md).  
+ Da die <xref:System.Windows.DependencyPropertyKey> privat ist und nicht weitergegeben wird vom Eigenschaftensystem außerhalb des Codes, eine schreibgeschützte Abhängigkeitseigenschaft besitzt eine bessere einstellungssicherheit, als eine Abhängigkeitseigenschaft mit Lese-/ Schreibzugriff. Für eine Abhängigkeitseigenschaft, die gelesen und bearbeitet werden kann, ist das identifizierende Feld explizit oder implizit öffentlich und daher kann die Eigenschaft umfassend festgelegt werden. Ausführlichere Informationen dazu finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [Benutzerdefinierte Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
+- [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
+- [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)

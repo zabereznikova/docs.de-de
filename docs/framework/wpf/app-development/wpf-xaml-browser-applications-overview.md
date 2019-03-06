@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 04bfc2df15829b63e6f2541eb95a4dd14836744c
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6229e7fff4171f04d35bbc5be0596526f513191a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747018"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370188"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Übersicht über WPF-XAML-Browseranwendungen
 <a name="introduction"></a>
@@ -37,10 +37,10 @@ ms.locfileid: "56747018"
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Erstellen einer neuen XAML-Browseranwendung (XBAP)  
  Die einfachste Möglichkeit zum Erstellen eines neuen XBAP-Projekts ist mit Microsoft Visual Studio. Wenn Sie ein neues Projekt erstellen, wählen Sie **WPF-Browseranwendung** aus der Liste der Vorlagen aus. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen ein neues WPF-Browseranwendungsprojekts](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)).  
   
- Wenn Sie das XBAP-Projekt ausführen, wird es in einem Browserfenster geöffnet, nicht in einem eigenständigen Fenster. Wenn Sie die XBAP aus Visual Studio debuggen, wird die Anwendung mit Internetzonenberechtigung ausgeführt und löst daher Sicherheitsausnahmen aus, wenn diese Berechtigungen überschritten werden. Weitere Informationen finden Sie unter[ Sicherheit (WPF)](../../../../docs/framework/wpf/security-wpf.md) und [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
+ Wenn Sie das XBAP-Projekt ausführen, wird es in einem Browserfenster geöffnet, nicht in einem eigenständigen Fenster. Wenn Sie die XBAP aus Visual Studio debuggen, wird die Anwendung mit Internetzonenberechtigung ausgeführt und löst daher Sicherheitsausnahmen aus, wenn diese Berechtigungen überschritten werden. Weitere Informationen finden Sie unter[ Sicherheit (WPF)](../security-wpf.md) und [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../wpf-partial-trust-security.md).  
   
 > [!NOTE]
->  Wenn Sie nicht mit Visual Studio oder möchten Sie weitere Informationen zu den Projektdateien entwickeln, finden Sie unter [Erstellen einer WPF-Anwendung](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).  
+>  Wenn Sie nicht mit Visual Studio oder möchten Sie weitere Informationen zu den Projektdateien entwickeln, finden Sie unter [Erstellen einer WPF-Anwendung](building-a-wpf-application-wpf.md).  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>Bereitstellen einer XBAP  
@@ -52,7 +52,7 @@ ms.locfileid: "56747018"
 |Anwendungsmanifest (.manifest)|Dieses enthält die der Anwendung zugeordneten Metadaten und hat die Erweiterung MANIFEST.|  
 |Bereitstellungsmanifest (.xbap)|Diese Datei enthält die Information, dass ClickOnce zum Bereitstellen der Anwendung verwendet und die Erweiterung XBAP hat.|  
   
- Sie stellen XBAPs auf einem Webserver, z.B. [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] oder höheren Versionen, bereit. Sie müssen keine .NET Framework auf dem Webserver zu installieren, aber Sie müssen zum Registrieren der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] Typen und-Dateierweiterungen. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
+ Sie stellen XBAPs auf einem Webserver, z.B. [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] oder höheren Versionen, bereit. Sie müssen keine .NET Framework auf dem Webserver zu installieren, aber Sie müssen zum Registrieren der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] Typen und-Dateierweiterungen. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von IIS 5.0 und IIS 6.0, um WPF-Anwendungen bereitzustellen](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).  
   
  Zum Vorbereiten der XBAP für die Bereitstellung kopieren Sie die EXE-Datei und die zugeordneten Manifeste auf den Webserver. Erstellen Sie eine HTML-Seite, die einen Link enthält, um das Bereitstellungsmanifest zu öffnen. Dabei handelt es sich um die Datei mit der Erweiterung XBAP. Wenn der Benutzer auf den Link zur XBAP-Datei klickt, erledigt ClickOnce automatisch herunterladen und Starten der Anwendung. Im folgenden Beispielcode wird eine HTML-Seite dargestellt, die einen Link enthält, der auf eine XBAP zeigt.  
   
@@ -88,14 +88,14 @@ ms.locfileid: "56747018"
  Mage.exe -cc
  ```
   
- Dieser Befehl gewährleistet, dass die neueste Version der XBAP gestartet wird. Wenn Sie Ihre Anwendung in Visual Studio debuggen, sollten die neueste Version der XBAP gestartet werden. Es wird empfohlen, die Bereitstellungsversionsnummer mit jedem Build zu aktualisieren. Weitere Informationen über Mage finden Sie unter [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](../../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
+ Dieser Befehl gewährleistet, dass die neueste Version der XBAP gestartet wird. Wenn Sie Ihre Anwendung in Visual Studio debuggen, sollten die neueste Version der XBAP gestartet werden. Es wird empfohlen, die Bereitstellungsversionsnummer mit jedem Build zu aktualisieren. Weitere Informationen über Mage finden Sie unter [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](../../tools/mage-exe-manifest-generation-and-editing-tool.md).  
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>Kommunizieren mit der Hostwebseite  
  Wenn die Anwendung in einem HTML-Frame gehostet wird, können Sie mit der Webseite kommunizieren, die die XBAP enthält. Sie dazu die <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> Eigenschaft <xref:System.Windows.Interop.BrowserInteropHelper>. Diese Eigenschaft gibt ein Skriptobjekt zurück, das das HTML-Fenster darstellt. Sie können dann auf die Eigenschaften, Methoden und Ereignisse auf dem [Fensterobjekt](https://go.microsoft.com/fwlink/?LinkId=160274) mit regulärer Punktsyntax zugreifen. Sie können auch auf Skriptmethoden und globale Variablen zugreifen. Im folgenden Beispiel wird veranschaulicht, wie Sie das Skriptobjekt abrufen und den Browser schließen.  
   
- [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
- [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
+ [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
+ [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
   
 ### <a name="debugging-xbaps-that-use-hostscript"></a>Debuggen von XBAPs, die HostScript verwenden  
  Wenn die XBAP verwendet die <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> Objekt für die Kommunikation mit dem HTML-Fenster, es gibt zwei Einstellungen, die Sie angeben müssen, um die Anwendung in Visual Studio ausführen und Debuggen. Die Anwendung muss Zugriff auf ihre Ursprungssite haben, und Sie müssen die Anwendung mit der HTML-Seite starten, die die XBAP enthält. Die folgenden Schritte beschreiben, wie diese beiden Einstellungen überprüft werden:  
@@ -127,11 +127,11 @@ ms.locfileid: "56747018"
   
 <a name="xbap_security_considerations"></a>   
 ## <a name="xbap-security-considerations"></a>XBAP-Sicherheitsüberlegungen  
- XBAPs werden in der Regel in einem teilweise vertrauenswürdigen Sicherheitsbereich (Sandbox) ausgeführt, der auf den Berechtigungssatz für die Internetzone beschränkt ist. Daher muss Ihre Implementierung die Teilmenge von WPF-Elementen, die in der Internetzone unterstützt werden unterstützen, oder Sie müssen die Berechtigungen der Anwendung erhöhen. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../../../../docs/framework/wpf/security-wpf.md).  
+ XBAPs werden in der Regel in einem teilweise vertrauenswürdigen Sicherheitsbereich (Sandbox) ausgeführt, der auf den Berechtigungssatz für die Internetzone beschränkt ist. Daher muss Ihre Implementierung die Teilmenge von WPF-Elementen, die in der Internetzone unterstützt werden unterstützen, oder Sie müssen die Berechtigungen der Anwendung erhöhen. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../security-wpf.md).  
   
  Bei Verwendung einer <xref:System.Windows.Controls.WebBrowser> Steuerelement in der WPF-Anwendung instanziiert intern das native WebBrowser ActiveX-Steuerelement. Wenn die Anwendung eine teilweise vertrauenswürdige XBAP ist, die in Internet Explorer ausgeführt wird, wird das ActiveX-Steuerelement in einem dedizierten Thread des Internet Explorer-Prozesses ausgeführt. Daher gelten die folgenden Einschränkungen:  
   
--   Die <xref:System.Windows.Controls.WebBrowser> Steuerelement sollte an den Hostbrowser, einschließlich sicherheitseinschränkungen ein ähnliches Verhalten bereitstellen. Einige dieser Sicherheitseinschränkungen können durch die Internet Explorer-Sicherheitseinstellungen gesteuert werden. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../../../../docs/framework/wpf/security-wpf.md).  
+-   Die <xref:System.Windows.Controls.WebBrowser> Steuerelement sollte an den Hostbrowser, einschließlich sicherheitseinschränkungen ein ähnliches Verhalten bereitstellen. Einige dieser Sicherheitseinschränkungen können durch die Internet Explorer-Sicherheitseinstellungen gesteuert werden. Weitere Informationen finden Sie unter [Sicherheit (WPF)](../security-wpf.md).  
   
 -   Eine Ausnahme wird ausgelöst, wenn eine XBAP domänenübergreifend in eine HTML-Seite geladen wird.  
   
@@ -187,5 +187,5 @@ ms.locfileid: "56747018"
  Darüber hinaus wird die verbesserte Parallelität von der ClickOnce-Download-Sequenz Startzeit um bis zu zehn Prozent verbessert. Nachdem ClickOnce heruntergeladen und überprüft wird Manifeste, beginnt der Anwendungsdownload und die Statusanzeige aktualisiert.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Konfigurieren von Visual Studio 2005 zum Debuggen einer XAML-Browseranwendung, um einen Webdienst aufzurufen](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
-- [Bereitstellen von WPF-Anwendungen](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [Vorgehensweise: Konfigurieren von Visual Studio 2005 zum Debuggen einer XAML-Browseranwendung, um einen Webdienst aufzurufen](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
+- [Bereitstellen von WPF-Anwendungen](deploying-a-wpf-application-wpf.md)

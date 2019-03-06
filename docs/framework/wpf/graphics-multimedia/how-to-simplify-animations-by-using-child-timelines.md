@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], simplifying by child timelines
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-ms.openlocfilehash: b5af20ce791c442eada0774cd46f52205e5b93e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 933ba2dff86b99bddd8d8f75bafcd94833b2e066
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648192"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370357"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Vorgehensweise: Vereinfachen von Animationen durch untergeordnete Zeitachsen
 Dieses Beispiel zeigt, wie Sie Animationen durch untergeordnete vereinfachen <xref:System.Windows.Media.Animation.ParallelTimeline> Objekte. Ein <xref:System.Windows.Media.Animation.Storyboard> ist eine Art von <xref:System.Windows.Media.Animation.Timeline> , die Zielinformationen für die Zeitachsen, er enthält, bereitstellt. Verwenden einer <xref:System.Windows.Media.Animation.Storyboard> Zielinformationen, einschließlich Informationen zu Objekt und Eigenschaft bereitstellen.  
@@ -23,8 +23,8 @@ Dieses Beispiel zeigt, wie Sie Animationen durch untergeordnete vereinfachen <xr
  **Leistungshinweis:** Obwohl Sie schachteln können <xref:System.Windows.Media.Animation.Storyboard> ineinander, <xref:System.Windows.Media.Animation.ParallelTimeline>sind besser zum Verschachteln, da sie weniger Aufwand erfordern. (Die <xref:System.Windows.Media.Animation.Storyboard> Klasse erbt von der <xref:System.Windows.Media.Animation.ParallelTimeline> Klasse.)  
   
 ## <a name="example"></a>Beispiel  
- [!code-xaml[Timelines_snip#ParallelTimelineWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
+ [!code-xaml[Timelines_snip#ParallelTimelineWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [Angeben des Übergabeverhaltens zwischen Storyboard-Animationen](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)
+- [Übersicht über Animationen](animation-overview.md)
+- [Angeben des Übergabeverhaltens zwischen Storyboard-Animationen](how-to-specify-handoffbehavior-between-storyboard-animations.md)

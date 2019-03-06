@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: c8adab452fdb8c5de364fc80f13db780b7a067fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 685eb9478f1ff2da9047546648320a94305fff57
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591474"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365281"
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker-Stile und-Vorlagen
-In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.DatePicker> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
+In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.DatePicker> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="datepicker-parts"></a>DatePicker-Teile  
  Die folgende Tabelle enthält die benannten Teile für den <xref:System.Windows.Controls.DatePicker> Steuerelement.  
@@ -68,18 +68,18 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 ## <a name="datepicker-controltemplate-example"></a>DatePicker-ControlTemplate-Beispiel  
  Das folgende Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.ControlTemplate> für die <xref:System.Windows.Controls.DatePicker> Steuerelement.  
   
- [!code-xaml[ControlTemplateExamples#DatePicker](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datepicker.xaml#datepicker)]  
+ [!code-xaml[ControlTemplateExamples#DatePicker](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datepicker.xaml#datepicker)]  
   
  Im vorhergehenden Beispiel wird mindestens eine der folgenden Ressourcen verwendet.  
   
- [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
  Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Steuerelementformate und -vorlagen](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)
-- [Anpassung von Steuerelementen](../../../../docs/framework/wpf/controls/control-customization.md)
-- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+- [Steuerelementformate und -vorlagen](control-styles-and-templates.md)
+- [Anpassung von Steuerelementen](control-customization.md)
+- [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
+- [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

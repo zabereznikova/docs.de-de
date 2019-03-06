@@ -14,21 +14,21 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: c39be1bdcc9c91f4822b7e168f16cb51c51d6c60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c4f76ee753ed6caa30d15a51c341a2edb64011d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580823"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350708"
 ---
 # <a name="shapes"></a>Formen
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet Unterstützung für das Zeichnen von grundlegenden Formen mithilfe der <xref:System.Windows.Shapes.Shape> Klasse. Ableiten von Shape-Objekte <xref:System.Windows.FrameworkElement> und daher das Layoutsystem beteiligt und kann mithilfe der gezeichnet werden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
+ [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Themen zu Vorgehensweisen](shapes-how-to-topics.md)  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Shapes.Shape>
-- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Grafiken und Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [2D-Grafiken und Bildverarbeitung](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [Grafiken und Multimedia](index.md)

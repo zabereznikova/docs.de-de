@@ -8,19 +8,19 @@ helpviewer_keywords:
 - properties [WPF], how-to topics
 - dependency properties [WPF]
 ms.assetid: e16dd710-1530-4462-81a2-43719b973970
-ms.openlocfilehash: b2b9dffe1837df0e8daaf5526a59609db8efb7fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf1dbe9c9c95a3ae1afe2515adbd8bc65a7d44
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544484"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368492"
 ---
 # <a name="properties-how-to-topics"></a>Gewusst-wie-Themen zu Eigenschaften
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Implementieren einer Abhängigkeitseigenschaft](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
- [Hinzufügen eines Besitzertyps für eine Abhängigkeitseigenschaft](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
- [Registrieren einer angefügten Eigenschaft](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
- [Überschreiben von Metadaten für eine Abhängigkeitseigenschaft](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
+ [Implementieren einer Abhängigkeitseigenschaft](how-to-implement-a-dependency-property.md)  
+ [Hinzufügen eines Besitzertyps für eine Abhängigkeitseigenschaft](how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [Registrieren einer angefügten Eigenschaft](how-to-register-an-attached-property.md)  
+ [Überschreiben von Metadaten für eine Abhängigkeitseigenschaft](how-to-override-metadata-for-a-dependency-property.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.DependencyProperty>  
@@ -32,4 +32,4 @@ ms.locfileid: "33544484"
  <xref:System.Windows.DependencyObject>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Eigenschaften](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+ [Eigenschaften](properties-wpf.md)

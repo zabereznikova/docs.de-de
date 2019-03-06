@@ -10,23 +10,23 @@ helpviewer_keywords:
 - GlyphRunDrawing objects [WPF]
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
-ms.openlocfilehash: a629d74c7b76e5daf2460c63b040fbe37a3a36d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03c05d45fae22273429b9ec80e2dcbbb22e82d65
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499118"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353178"
 ---
 # <a name="glyphs"></a>Symbole
 Symbole sind eine Low-Level-Darstellung eines Zeichens, auf dem Bildschirm gezeichnet werden soll. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet direkten Zugriff auf die Symbole für Kunden, die abfangen und Text nach der Formatierung beibehalten werden soll.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Einführung in das GlyphRun-Objekt und das Glyphs-Element](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [Vorgehensweise: Zeichnen von Text mit Glyphs](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
+ [Einführung in das GlyphRun-Objekt und das Glyphs-Element](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
+  [Vorgehensweise: Zeichnen von Text mit Glyphs](draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Media.GlyphRun>
 - <xref:System.Windows.Media.DrawingContext.DrawText%2A>
 - <xref:System.Windows.Documents.Glyphs>
-- [Dokumente in WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [Typografie in WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+- [Dokumente in WPF](documents-in-wpf.md)
+- [Typografie in WPF](typography-in-wpf.md)

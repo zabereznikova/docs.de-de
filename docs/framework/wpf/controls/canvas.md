@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF]
 ms.assetid: fdb390e9-1bba-4b5f-87fe-c3bc246fa7e9
-ms.openlocfilehash: 41b1315f03c55c290959e8871df2630802882a75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3e1c942308aa90887b6370ed402a1a87364415
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553273"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351044"
 ---
 # <a name="canvas"></a>Canvas
-<xref:System.Windows.Controls.Canvas> ist ein Layoutsteuerelement, die absolute Positionierung von untergeordneten Elementen ermöglicht.  
+<xref:System.Windows.Controls.Canvas> ist ein Layoutsteuerelement, das absolute Positionierung der untergeordneten Elemente ermöglicht.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](canvas-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ ms.locfileid: "33553273"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Übersicht über ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Übersicht über ScrollViewer](scrollviewer-overview.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: fa23595359bc210edfd1d55486158a71420699c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45214b5f0e6827c36f87a4d45592ff0989c9a877
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615071"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379472"
 ---
 # <a name="imaging-overview"></a>Übersicht über die Bildverarbeitung
 Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] ermöglicht es Entwicklern, Bilder anzuzeigen, zu transformieren und zu formatieren.  
@@ -66,35 +66,35 @@ Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../..
   
  Im folgende Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Media.Imaging.BitmapFrame> aus erstellt eine <xref:System.Windows.Media.Imaging.BitmapSource> und anschließend hinzugefügt eine [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)] Image.  
   
- [!code-csharp[BitmapFrameExample#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#10)]
- [!code-vb[BitmapFrameExample#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
+ [!code-csharp[BitmapFrameExample#10](~/samples/snippets/csharp/VS_Snippets_Wpf/BitmapFrameExample/CSharp/BitmapFrame.cs#10)]
+ [!code-vb[BitmapFrameExample#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitmapFrameExample/VB/BitmapFrame.vb#10)]  
   
 ### <a name="image-format-decoding"></a>Decodieren von Bildformaten  
  Beim Decodieren von Bildern wird das Bildformat in Bilddaten übersetzt, die vom System verwendet werden können. Die Bilddaten können dann verwendet werden, um das Bild anzuzeigen und zu verarbeiten oder um es in ein anderes Format zu codieren. Die Decoderauswahl basiert auf dem Bildformat. Der Codec wird automatisch ausgewählt, wenn kein bestimmter Decoder angegeben wird. Die Beispiele im Abschnitt [Anzeigen von Bildern in WPF](#_displayingimages) veranschaulichen die automatische Decodierung. Decoder für benutzerdefinierte Formate, die mithilfe der nicht verwalteten [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]-Schnittstellen entwickelt und im System registriert sind, werden automatisch in die Decoderauswahl eingebunden. Dadurch können benutzerdefinierte Formate, automatisch in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen angezeigt werden.  
   
  Das folgende Beispiel veranschaulicht die Verwendung eines Bitmapdecoders, um ein Bild im [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)]-Format zu decodieren.  
   
- [!code-cpp[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#5)]
- [!code-csharp[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#5)]
- [!code-vb[BmpBitmapDecoderEncoder#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
+ [!code-cpp[BmpBitmapDecoderEncoder#5](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#5)]
+ [!code-csharp[BmpBitmapDecoderEncoder#5](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#5)]
+ [!code-vb[BmpBitmapDecoderEncoder#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#5)]  
   
 ### <a name="image-format-encoding"></a>Codieren von Bildformaten  
  Bei der Bildcodierung werden Bilddaten in ein bestimmten Bildformat übersetzt. Die codierten Bilddaten können dann zum Erstellen neuer Bilddateien verwendet werden. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] stellt Encoder für jedes der oben beschriebenen Bildformate bereit.  
   
  Das folgende Beispiel veranschaulicht die Verwendung eines Encoders, um ein neu erstelltes Bitmapbild zu speichern.  
   
- [!code-cpp[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#3)]
- [!code-csharp[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#3)]
- [!code-vb[BmpBitmapDecoderEncoder#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#3)]  
+ [!code-cpp[BmpBitmapDecoderEncoder#3](~/samples/snippets/cpp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CPP/anotherfile.cpp#3)]
+ [!code-csharp[BmpBitmapDecoderEncoder#3](~/samples/snippets/csharp/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/CSharp/BitmapFrame.cs#3)]
+ [!code-vb[BmpBitmapDecoderEncoder#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#3)]  
   
 <a name="_displayingimages"></a>   
 ## <a name="displaying-images-in-wpf"></a>Anzeigen von Bildern in WPF  
  Es gibt mehrere Möglichkeiten, ein Bild in einer Windows Presentation Foundation (WPF)-Anwendung anzuzeigen. Bilder können angezeigt werden, mithilfe von ein <xref:System.Windows.Controls.Image> Steuerelement gezeichnet, die in einer Visualisierung mit ein <xref:System.Windows.Media.ImageBrush>, oder mit einer <xref:System.Windows.Media.ImageDrawing>.  
   
 ### <a name="using-the-image-control"></a>Verwenden des Image-Steuerelements  
- <xref:System.Windows.Controls.Image> ist ein FrameworkElement und der einfachste Weg zum Anzeigen von Bildern in Anwendungen. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.Controls.Image> kann in zwei Arten Attributsyntax oder Eigenschaftensyntax verwendet werden. Im folgenden Beispiel wird veranschaulicht, wie ein Bild auf eine Breite von 200 Pixeln mit Attributsyntax und Eigenschaftensyntax gerendert wird. Weitere Informationen über Attributsyntax und Eigenschaftensyntax finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md).  
+ <xref:System.Windows.Controls.Image> ist ein FrameworkElement und der einfachste Weg zum Anzeigen von Bildern in Anwendungen. In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], <xref:System.Windows.Controls.Image> kann in zwei Arten Attributsyntax oder Eigenschaftensyntax verwendet werden. Im folgenden Beispiel wird veranschaulicht, wie ein Bild auf eine Breite von 200 Pixeln mit Attributsyntax und Eigenschaftensyntax gerendert wird. Weitere Informationen über Attributsyntax und Eigenschaftensyntax finden Sie unter [Übersicht über Abhängigkeitseigenschaften](../advanced/dependency-properties-overview.md).  
   
- [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
+ [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
  Viele der Beispiele verwenden eine <xref:System.Windows.Media.Imaging.BitmapImage> Objekt, das eine Bilddatei verweist. <xref:System.Windows.Media.Imaging.BitmapImage> ist ein spezielles <xref:System.Windows.Media.Imaging.BitmapSource> , ist optimiert für [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] laden und ist eine einfache Möglichkeit zum Anzeigen von Bildern als die <xref:System.Windows.Controls.Image.Source%2A> von einer <xref:System.Windows.Controls.Image> Steuerelement.  
   
@@ -103,32 +103,32 @@ Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../..
 > [!NOTE]
 >  <xref:System.Windows.Media.Imaging.BitmapImage> implementiert die <xref:System.ComponentModel.ISupportInitialize> Schnittstelle, um die Initialisierung für mehrere Eigenschaften zu optimieren. Eigenschaftenänderungen können nur während der Objektinitialisierung erfolgen. Rufen Sie <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> um zu signalisieren, dass die Initialisierung begonnen hat und <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> um zu signalisieren, dass die Initialisierung abgeschlossen wurde. Nach der Initialisierung werden Eigenschaftenänderungen Eigenschaften ignoriert.  
   
- [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
- [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
+ [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
+ [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>Drehen, Konvertieren und Zuschneiden von Bildern  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ermöglicht es Benutzern, Bilder zu transformieren, indem Sie mit den Eigenschaften des <xref:System.Windows.Media.Imaging.BitmapImage> oder durch die Verwendung zusätzlicher <xref:System.Windows.Media.Imaging.BitmapSource> Objekte, z. B. <xref:System.Windows.Media.Imaging.CroppedBitmap> oder <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. Diese Bildtransformationen können Bilder skalieren oder drehen, das Pixelformat eines Bilds ändern oder ein Bild zuschneiden.  
   
  Drehen von Bildern erfolgen über die <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> Eigenschaft <xref:System.Windows.Media.Imaging.BitmapImage>. Drehungen können nur in 90-Grad-Schritten erfolgen. Im folgenden Beispiel wird ein Bild um 90 Grad gedreht.  
   
- [!code-xaml[ImageElementExample#TransformedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
+ [!code-xaml[ImageElementExample#TransformedXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
   
- [!code-csharp[ImageElementExample#TransformedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]
- [!code-vb[ImageElementExample#TransformedCSharp1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/TransformedImageExample.xaml.vb#transformedcsharp1)]  
+ [!code-csharp[ImageElementExample#TransformedCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]
+ [!code-vb[ImageElementExample#TransformedCSharp1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/TransformedImageExample.xaml.vb#transformedcsharp1)]  
   
  Konvertieren von Bildern in ein anderes Pixelformat, wie z. B. Graustufe, erfolgt mit <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>. In den folgenden Beispielen wird ein Bild in konvertiert <xref:System.Windows.Media.PixelFormats.Gray4%2A>.  
   
- [!code-xaml[ImageElementExample_snip#ConvertedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml#convertedxaml2)]  
+ [!code-xaml[ImageElementExample_snip#ConvertedXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml#convertedxaml2)]  
   
- [!code-csharp[ImageElementExample_snip#ConvertedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml.cs#convertedcsharp1)]
- [!code-vb[ImageElementExample_snip#ConvertedCSharp1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/FormatConvertedExample.xaml.vb#convertedcsharp1)]  
+ [!code-csharp[ImageElementExample_snip#ConvertedCSharp1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/FormatConvertedExample.xaml.cs#convertedcsharp1)]
+ [!code-vb[ImageElementExample_snip#ConvertedCSharp1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/FormatConvertedExample.xaml.vb#convertedcsharp1)]  
   
  Ein Bild zuschneiden, entweder von der <xref:System.Windows.UIElement.Clip%2A> Eigenschaft <xref:System.Windows.Controls.Image> oder <xref:System.Windows.Media.Imaging.CroppedBitmap> kann verwendet werden. In der Regel, wenn Sie nur einen Teil eines Bilds anzeigen möchten <xref:System.Windows.UIElement.Clip%2A> verwendet werden soll. Wenn Sie codieren und speichern ein zugeschnittenes Bild enthält, müssen die <xref:System.Windows.Media.Imaging.CroppedBitmap> verwendet werden soll. Im folgenden Beispiel wird ein Bild zugeschnitten, mithilfe der Clip-Eigenschaft mit einem <xref:System.Windows.Media.EllipseGeometry>.  
   
- [!code-xaml[ImageElementExample_snip#CroppedXAMLUsingClip1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml#croppedxamlusingclip1)]  
+ [!code-xaml[ImageElementExample_snip#CroppedXAMLUsingClip1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml#croppedxamlusingclip1)]  
   
- [!code-csharp[ImageElementExample_snip#CroppedCSharpUsingClip1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml.cs#croppedcsharpusingclip1)]
- [!code-vb[ImageElementExample_snip#CroppedCSharpUsingClip1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/CroppedImageExample.xaml.vb#croppedcsharpusingclip1)]  
+ [!code-csharp[ImageElementExample_snip#CroppedCSharpUsingClip1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/CroppedImageExample.xaml.cs#croppedcsharpusingclip1)]
+ [!code-vb[ImageElementExample_snip#CroppedCSharpUsingClip1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/CroppedImageExample.xaml.vb#croppedcsharpusingclip1)]  
   
 #### <a name="stretching-images"></a>Dehnen von Bildern  
  Die <xref:System.Windows.Controls.Image.Stretch%2A> -Eigenschaft steuert, wie ein Bild auf den Füllbereich seines Containers ausgedehnt wird. Die <xref:System.Windows.Controls.Image.Stretch%2A> Eigenschaft akzeptiert die folgenden Werte, die von definiert die <xref:System.Windows.Media.Stretch> Enumeration:  
@@ -145,22 +145,22 @@ Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../..
   
  Die folgende Abbildung zeigt die Ausgabe des Beispiels und die Auswirkung der verschiedene <xref:System.Windows.Controls.Image.Stretch%2A> -Einstellungen zu einem Bild angewendet.  
   
- ![Unterschiedliche TileBrush-Dehneinstellungen](../../../../docs/framework/wpf/graphics-multimedia/media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
+ ![Unterschiedliche TileBrush-Dehneinstellungen](./media/img-mmgraphics-stretchenum.jpg "img_mmgraphics_stretchenum")  
 Unterschiedliche Dehneinstellungen  
   
- [!code-xaml[ImageElementExample_snip#ImageStretchExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageStretchExample.xaml#imagestretchexamplewholepage)]  
+ [!code-xaml[ImageElementExample_snip#ImageStretchExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageStretchExample.xaml#imagestretchexamplewholepage)]  
   
 ### <a name="painting-with-images"></a>Zeichnen mit Bildern  
  Bilder können auch in einer Anwendung angezeigt werden, indem man Sie mit einem <xref:System.Windows.Media.Brush>. Mithilfe von Pinseln können Sie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Objekte, angefangen von einfachen Objekten, über Objekte in Volltonfarbe bis hin zu Objekten mit komplexen von Mustern und Bildern, zeichnen. Um mit Images zu zeichnen, verwenden eine <xref:System.Windows.Media.ImageBrush>. Ein <xref:System.Windows.Media.ImageBrush> ist eine Art von <xref:System.Windows.Media.TileBrush> , dessen Inhalt als Bitmapbild definiert. Ein <xref:System.Windows.Media.ImageBrush> zeigt ein einzelnes Bild, das angegebenen seine <xref:System.Windows.Media.ImageBrush.ImageSource%2A> Eigenschaft. Sie können steuern, wie das Bild gedehnt, angeordnet und gekachelt wird. Auf diese Weise können Sie Zerrungen verhindern und Muster und andere Effekte herstellen. Die folgende Abbildung zeigt einige Effekte, die mit darstellbar ist ein <xref:System.Windows.Media.ImageBrush>.  
   
- !["ImageBrush" Ausgabe Beispiele](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "Wcpsdk_mmgraphics_imagebrushexamples")  
+ !["ImageBrush" Ausgabe Beispiele](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "Wcpsdk_mmgraphics_imagebrushexamples")  
 Bildpinsel können Formen, Steuerelemente, Text usw. füllen.  
   
  Im folgende Beispiel wird veranschaulicht, wie den Hintergrund einer Schaltfläche mit einem Bild gezeichnet ein <xref:System.Windows.Media.ImageBrush>.  
   
- [!code-xaml[UsingImageBrush#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush/CS/PaintingWithImages.xaml#4)]  
+ [!code-xaml[UsingImageBrush#4](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush/CS/PaintingWithImages.xaml#4)]  
   
- Weitere Informationen zu <xref:System.Windows.Media.ImageBrush> und Zeichnen von Bildern finden Sie unter [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Weitere Informationen zu <xref:System.Windows.Media.ImageBrush> und Zeichnen von Bildern finden Sie unter [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md).  
   
 <a name="_metadata"></a>   
 ## <a name="image-metadata"></a>Bildmetadaten  
@@ -170,15 +170,15 @@ Bildpinsel können Formen, Steuerelemente, Text usw. füllen.
   
  Um den Prozess des Lesens von Metadaten zu vereinfachen <xref:System.Windows.Media.Imaging.BitmapMetadata> bietet mehrere benannte Eigenschaften, die z. B. einfach zugegriffen werden können <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>, und <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Viele dieser benannten Eigenschaften können auch verwendet werden, um Metadaten zu schreiben. Zusätzliche Unterstützung für das Lesen von Metadaten wird vom Metadaten-Abfragereader bereitgestellt. Die <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> Methode wird verwendet, um eine Metadatenabfrage-Readers zu abrufen, indem eine Zeichenfolgenabfrage, z. B. *"/ app1/Exif /"*. Im folgenden Beispiel <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> dient zum Abrufen des Texts, der in gespeicherten der *"/ Text/Description"* Speicherort.  
   
- [!code-cpp[BitmapMetadata#GetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
- [!code-csharp[BitmapMetadata#GetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
- [!code-vb[BitmapMetadata#GetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
+ [!code-cpp[BitmapMetadata#GetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
+ [!code-csharp[BitmapMetadata#GetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
+ [!code-vb[BitmapMetadata#GetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
   
  Zum Schreiben von Metadaten wird ein Metadaten-Abfragewriter verwendet. <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> Ruft den Abfragewriter ab und legt den gewünschten Wert fest. Im folgenden Beispiel <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> wird verwendet, um das Schreiben von Text in gespeicherten der *"/ Text/Description"* Speicherort.  
   
- [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
- [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
- [!code-vb[BitmapMetadata#SetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
+ [!code-cpp[BitmapMetadata#SetQuery](~/samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
+ [!code-csharp[BitmapMetadata#SetQuery](~/samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
+ [!code-vb[BitmapMetadata#SetQuery](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#setquery)]  
   
 <a name="_extensibility"></a>   
 ## <a name="codec-extensibility"></a>Code-Erweiterbarkeit  
@@ -194,5 +194,5 @@ Bildpinsel können Formen, Steuerelemente, Text usw. füllen.
 - <xref:System.Windows.Media.Imaging.BitmapImage>
 - <xref:System.Windows.Controls.Image>
 - <xref:System.Windows.Media.Imaging.BitmapMetadata>
-- [2D-Grafiken und Bildverarbeitung](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2D-Grafiken und Bildverarbeitung](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Win32 Sample Codec](https://go.microsoft.com/fwlink/?LinkID=160052)

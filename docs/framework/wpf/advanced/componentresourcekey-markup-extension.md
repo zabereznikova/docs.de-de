@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 78fddd65099d5f6bfc4796d5fa353a92171bda5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89459223108c0190a485b25193e44d379a1e1c19
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531001"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379028"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey-Markuperweiterung
 Definiert und verweist auf die Schlüssel für Ressourcen, die aus externen Assemblys geladen werden. Dies ermöglicht eine Ressourcensuche einen Zieltyp in einer Assembly, anstatt explizit ein Ressourcenwörterbuch in eine Assembly oder auf eine Klasse angeben.  
@@ -47,7 +47,7 @@ Definiert und verweist auf die Schlüssel für Ressourcen, die aus externen Asse
 |||  
 |-|-|  
 |`targetTypeName`|Der Name der öffentlichen [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Typ, in der Resource-Assembly definiert ist.|  
-|`targetID`|Der Schlüssel für die Ressource. Wenn Ressourcen gesucht werden `targetID` werden analog zu den [X: Key Directive](../../../../docs/framework/xaml-services/x-key-directive.md) der Ressource.|  
+|`targetID`|Der Schlüssel für die Ressource. Wenn Ressourcen gesucht werden `targetID` werden analog zu den [X: Key Directive](../../xaml-services/x-key-directive.md) der Ressource.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wie in den oben genannten Verwendungen ein {`ComponentResourceKey`} Markuperweiterungsverwendung befindet sich an zwei Stellen:  
@@ -60,23 +60,23 @@ Definiert und verweist auf die Schlüssel für Ressourcen, die aus externen Asse
   
  Die <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identifiziert einen Typ, der in der Zielassembly vorhanden ist, in dem die Ressource ist definiert. Ein `ComponentResourceKey` definiert und unabhängig von genau zu wissen, verwendet werden können, in denen die <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> ist definiert, aber letztendlich muss den Typ von referenzierten Assemblys aufgelöst werden.  
   
- Eine häufige Verwendung für <xref:System.Windows.ComponentResourceKey> besteht darin, Schlüssel, die anschließend bereitgestellt werden als Member einer Klasse definieren. Für diese Verwendung ist, verwenden Sie die <xref:System.Windows.ComponentResourceKey> Klassenkonstruktor, nicht die Markuperweiterung. Weitere Informationen finden Sie unter <xref:System.Windows.ComponentResourceKey>, oder im Abschnitt "Definieren und Angeben von Schlüsseln für Designressourcen" des Themas [Übersicht über das Erstellen](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+ Eine häufige Verwendung für <xref:System.Windows.ComponentResourceKey> besteht darin, Schlüssel, die anschließend bereitgestellt werden als Member einer Klasse definieren. Für diese Verwendung ist, verwenden Sie die <xref:System.Windows.ComponentResourceKey> Klassenkonstruktor, nicht die Markuperweiterung. Weitere Informationen finden Sie unter <xref:System.Windows.ComponentResourceKey>, oder im Abschnitt "Definieren und Angeben von Schlüsseln für Designressourcen" des Themas [Übersicht über das Erstellen](../controls/control-authoring-overview.md).  
   
  Für sowohl beim Einrichten von Schlüsseln und verweisen auf Ressourcen mit Schlüsseln Attributsyntax häufig wird für die `ComponentResourceKey` Markuperweiterung.  
   
- Die kompakte Syntax basiert auf der <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> Konstruktorsignatur und Nutzung der Positionsparameter einer Markuperweiterung. Die Reihenfolge, in der `targetTypeName` und `targetID` erhalten ist wichtig. Die ausführliche Syntax basiert auf der <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> Standardkonstruktor und legt dann die <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> und <xref:System.Windows.ComponentResourceKey.ResourceId%2A> auf eine Weise, die analog zu einem "true" Attributsyntax für ein Objektelement ist. Ausführliche Syntax ist die Reihenfolge, in der die Eigenschaften festgelegt sind, nicht wichtig. Die Beziehung und die Mechanismen dieser Alternativen ("kompakt" und "ausführlich") wird ausführlich im Thema [Markuperweiterungen und WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ Die kompakte Syntax basiert auf der <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> Konstruktorsignatur und Nutzung der Positionsparameter einer Markuperweiterung. Die Reihenfolge, in der `targetTypeName` und `targetID` erhalten ist wichtig. Die ausführliche Syntax basiert auf der <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> Standardkonstruktor und legt dann die <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> und <xref:System.Windows.ComponentResourceKey.ResourceId%2A> auf eine Weise, die analog zu einem "true" Attributsyntax für ein Objektelement ist. Ausführliche Syntax ist die Reihenfolge, in der die Eigenschaften festgelegt sind, nicht wichtig. Die Beziehung und die Mechanismen dieser Alternativen ("kompakt" und "ausführlich") wird ausführlich im Thema [Markuperweiterungen und WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
- Technisch gesehen ist der Wert für `targetID` kann jedes Objekt sein, es muss nicht auf eine Zeichenfolge sein. Die häufigste Verwendung in WPF ist jedoch der Anpassung an die `targetID` Wert mit Formularen, die Zeichenfolgen sind, und, in denen diese Zeichenfolgen in gültig sind, die [XamlName-Grammatik](../../../../docs/framework/xaml-services/xamlname-grammar.md).  
+ Technisch gesehen ist der Wert für `targetID` kann jedes Objekt sein, es muss nicht auf eine Zeichenfolge sein. Die häufigste Verwendung in WPF ist jedoch der Anpassung an die `targetID` Wert mit Formularen, die Zeichenfolgen sind, und, in denen diese Zeichenfolgen in gültig sind, die [XamlName-Grammatik](../../xaml-services/xamlname-grammar.md).  
   
  `ComponentResourceKey` kann in Objektelementsyntax verwendet werden. In diesem Fall geben Sie den Wert sowohl die <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> und <xref:System.Windows.ComponentResourceKey.ResourceId%2A> Eigenschaften ist erforderlich, um die Erweiterung ordnungsgemäß initialisiert.  
   
  In der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] -readerimplementierung, wird die Handhabung dieser Markuperweiterung durch definiert die <xref:System.Windows.ComponentResourceKey> Klasse.  
   
- `ComponentResourceKey` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markuperweiterungen in XAML verwenden die Zeichen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in der Attributsyntax. Dies ist die Konvention, anhand der ein XAML-Prozessor erkennt, dass das Attribut von einer Markuperweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
+ `ComponentResourceKey` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markuperweiterungen in XAML verwenden die Zeichen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in der Attributsyntax. Dies ist die Konvention, anhand der ein XAML-Prozessor erkennt, dass das Attribut von einer Markuperweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.ComponentResourceKey>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Übersicht über das Erstellen von Steuerelementen](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
-- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Markuperweiterungen und WPF-XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md)
+- [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
+- [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md)

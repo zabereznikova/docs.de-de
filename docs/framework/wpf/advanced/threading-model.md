@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: c86ab6c7d5113f95b0fd93d194465c4af701f78a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2a4b1157ec1f114b9e33f220e09fc791cfb9fc3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513649"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353035"
 ---
 # <a name="threading-model"></a>Threading-Modell
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] soll Entwicklern bei Problemen mit Threading helfen. Als Ergebnis der meisten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Entwickler keine Schnittstelle schreiben, die mehr als einem Thread verwendet. Da Multithreadprogramme komplex und schwierig zu debuggen sind, sollten sie vermieden werden, wenn Singlethread-Lösungen vorhanden sind.  
@@ -62,7 +62,7 @@ ms.locfileid: "54513649"
   
  Betrachten Sie das folgende Beispiel:  
   
- ![Primzahlen-Screenshot](../../../../docs/framework/wpf/advanced/media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
+ ![Primzahlen-Screenshot](./media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
   
  Diese einfache Anwendung zählt ab drei aufwärts und sucht dabei nach Primzahlen. Klickt der Benutzer die **starten** Schaltfläche, um die Suche beginnt. Wenn das Programm eine Primzahl findet, wird die Benutzeroberfläche mit dieser Entdeckung aktualisiert. Der Benutzer kann die Suche zu jedem Zeitpunkt beenden.  
   
@@ -74,30 +74,30 @@ ms.locfileid: "54513649"
   
  Die beste Möglichkeit, Verarbeitungszeit auf Berechnung und Ereignisbehandlung aufzuteilen wird zum Verwalten der Berechnung von der die <xref:System.Windows.Threading.Dispatcher>. Mithilfe der <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> -Methode, wir können primzahlüberprüfungen in identisch, die in die Warteschlange [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] -Ereignisse stammen. In unserem Beispiel planen wir nur eine einzige Primzahlüberprüfung zu einem Zeitpunkt ein. Nach Abschluss der Primzahlüberprüfung planen wir sofort die nächste Überprüfung ein. Diese Überprüfung erfolgt erst, wenn ausstehende [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] behandelt wurden.  
   
- ![Darstellung der Dispatcher-Warteschlange](../../../../docs/framework/wpf/advanced/media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![Darstellung der Dispatcher-Warteschlange](./media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
   
  [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] führt die Rechtschreibprüfung mithilfe dieses Mechanismus durch. Rechtschreibprüfung erfolgt im Hintergrund die Leerlaufzeit an, der über die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread. Sehen wir uns den Code an.  
   
  Das folgende Beispiel zeigt die XAML, die die Benutzeroberfläche erstellt.  
   
- [!code-xaml[ThreadingPrimeNumbers#ThreadingPrimeNumberXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml#threadingprimenumberxaml)]  
+ [!code-xaml[ThreadingPrimeNumbers#ThreadingPrimeNumberXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml#threadingprimenumberxaml)]  
   
  Im folgenden Beispiel wird das CodeBehind gezeigt.  
   
- [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumbercodebehind)]
- [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumbercodebehind)]  
+ [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumbercodebehind)]
+ [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumbercodebehind)]  
   
  Das folgende Beispiel zeigt den Ereignishandler für die <xref:System.Windows.Controls.Button>.  
   
- [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberStartOrStop](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberstartorstop)]
- [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberStartOrStop](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberstartorstop)]  
+ [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberStartOrStop](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberstartorstop)]
+ [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberStartOrStop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberstartorstop)]  
   
  Neben dem Aktualisieren des Textes auf der <xref:System.Windows.Controls.Button>, dieser Handler ist verantwortlich für die Planung der ersten primzahlüberprüfung durch Hinzufügen eines Delegaten, der <xref:System.Windows.Threading.Dispatcher> Warteschlange. Manchmal, nachdem dieser Ereignishandler seine Arbeit abgeschlossen hat die <xref:System.Windows.Threading.Dispatcher> dieses Delegaten für die Ausführung auswählen.  
   
  Wie bereits erwähnt <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> ist die <xref:System.Windows.Threading.Dispatcher> Member verwendet, um einen Delegaten für die Ausführung planen. In diesem Fall wählen wir die <xref:System.Windows.Threading.DispatcherPriority.SystemIdle> Priorität. Die <xref:System.Windows.Threading.Dispatcher> führt diesen Delegaten nur, wenn keine wichtigen Ereignisse zu verarbeiten. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Reaktionsfähigkeit ist wichtiger als die Zahlenüberprüfung. Wir übergeben auch einen neuen Delegaten, der die Zahlenüberprüfungsroutine darstellt.  
   
- [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
- [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
+ [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
+ [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
  Diese Methode überprüft, ob die nächste ungerade Zahl eine Primzahl ist. Wenn sie eine Primzahl ist, aktualisiert die Methode direkt die `bigPrime` <xref:System.Windows.Controls.TextBlock> entsprechend. Dies ist möglich, da die Berechnung im selben Thread ausgeführt wird, der für die Erstellung der Komponente verwendet wurde. Hatten wir uns entschieden, einen separaten Thread für die Berechnung verwendet, müssten wir einen komplizierteren Synchronisierungsmechanismus verwenden, und führen Sie das Update in der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread. Wir werden diese Situation im Folgenden zeigen.  
   
@@ -109,24 +109,24 @@ ms.locfileid: "54513649"
   
  In diesem Beispiel simulieren wir einen Remoteprozeduraufruf, der eine Wettervorhersage abruft. Wir verwenden einen separaten Arbeitsthread aus, um die Ausführung dieses Aufrufs und planen wir eine Updatemethode in der <xref:System.Windows.Threading.Dispatcher> von der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Threads ein, wenn wir fertig sind.  
   
- ![Wetter-UI-Screenshot](../../../../docs/framework/wpf/advanced/media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
+ ![Wetter-UI-Screenshot](./media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
   
- [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
- [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
+ [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
+ [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
   
  Im Folgenden sind einige der Details aufgeführt, die beachtet werden sollten.  
   
 -   Erstellen des Schaltflächenhandlers  
   
-     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherbuttonhandler)]
-     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherbuttonhandler)]  
+     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherbuttonhandler)]
+     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherbuttonhandler)]  
   
  Wenn auf die Schaltfläche geklickt wird, wird die Uhr-Zeichnung angezeigt, und wir beginnen mit der Animation. Die Schaltfläche wird deaktiviert. Rufen wir die `FetchWeatherFromServer` -Methode in einen neuen Thread und anschließend zurück, sodass die <xref:System.Windows.Threading.Dispatcher> zum Verarbeiten von Ereignissen während wir auf die Wettervorhersage warten.  
   
 -   Abrufen der Wettervorhersage  
   
-     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherfetchweather)]
-     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherfetchweather)]  
+     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherfetchweather)]
+     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherfetchweather)]  
   
  Aus Gründen der Einfachheit verwenden wir in diesem Beispiel keinen Netzwerk-Code. Stattdessen simulieren wir die Verzögerung des Netzwerkzugriffs, indem wir den neuen Thread für vier Sekunden in den Ruhezustand versetzen. In dieser Zeit wird die ursprüngliche [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread noch ausgeführt wird und auf Ereignisse reagieren. Um dies zu zeigen, führen wir eine Animation weiterhin aus, und die Schaltflächen „Minimieren“ und „Maximieren“ funktionieren ebenfalls weiterhin.  
   
@@ -134,8 +134,8 @@ ms.locfileid: "54513649"
   
 -   Aktualisieren der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
   
-     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
-     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
+     [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
+     [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
   
  Wenn die <xref:System.Windows.Threading.Dispatcher> in die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread Zeit hat, führt er den eingeplanten Aufruf von `UpdateUserInterface`. Diese Methode hält die Uhr-Animation an und wählt ein Bild aus, um das Wetter zu beschreiben. Sie zeigt dieses Bild an und stellt die Schaltfläche „fetch forecast“ (Wettervorhersage abrufen) wieder her.  
   
@@ -151,20 +151,20 @@ ms.locfileid: "54513649"
   
  Im folgenden Beispiel wird der Code angezeigt.  
   
- [!code-xaml[ThreadingMultipleBrowsers#ThreadingMultiBrowserXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml#threadingmultibrowserxaml)]  
+ [!code-xaml[ThreadingMultipleBrowsers#ThreadingMultiBrowserXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml#threadingmultibrowserxaml)]  
   
- [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowsercodebehind)]
- [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowsercodebehind)]  
+ [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowsercodebehind)]
+ [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowsercodebehind)]  
   
  Die folgenden Threadingsegmente dieses Codes sind für uns in diesem Kontext am interessantesten:  
   
- [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserNewWindow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowsernewwindow)]
- [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserNewWindow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowsernewwindow)]  
+ [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserNewWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowsernewwindow)]
+ [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserNewWindow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowsernewwindow)]  
   
  Diese Methode wird aufgerufen, wenn die Schaltfläche „Neues Fenster“ angeklickt wird. Sie erstellt einen neuen Thread und startet diesen asynchron.  
   
- [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowserthreadstart)]
- [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowserthreadstart)]  
+ [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowserthreadstart)]
+ [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowserthreadstart)]  
   
  Diese Methode ist der Ausgangspunkt für den neuen Thread. Wir erstellen ein neues Fenster unter der Kontrolle dieses Threads. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erstellt automatisch eine neue <xref:System.Windows.Threading.Dispatcher> um den neuen Thread zu verwalten. Alles, was wir tun, um das Fenster funktionsfähig ist, starten Sie den <xref:System.Windows.Threading.Dispatcher>.  
   
@@ -172,10 +172,10 @@ ms.locfileid: "54513649"
 ## <a name="technical-details-and-stumbling-points"></a>Technische Details und Stolpersteine  
   
 ### <a name="writing-components-using-threading"></a>Schreiben von Komponenten mithilfe von Threading  
- Microsoft .NET Framework Developer's Guide Beschreibt ein Muster wie eine Komponente asynchrones Verhalten für die Clients verfügbar machen kann (siehe [Übersicht über ereignisbasierte asynchrone Muster](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Nehmen wir beispielsweise an, wir wollten zum Packen der `FetchWeatherFromServer` Methode in eine wiederverwendbare, nichtgrafische Komponente. Nach dem standardmäßigen Microsoft .NET Framework-Muster würde dies etwa wie folgt aussehen.  
+ Microsoft .NET Framework Developer's Guide Beschreibt ein Muster wie eine Komponente asynchrones Verhalten für die Clients verfügbar machen kann (siehe [Übersicht über ereignisbasierte asynchrone Muster](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)). Nehmen wir beispielsweise an, wir wollten zum Packen der `FetchWeatherFromServer` Methode in eine wiederverwendbare, nichtgrafische Komponente. Nach dem standardmäßigen Microsoft .NET Framework-Muster würde dies etwa wie folgt aussehen.  
   
- [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
- [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
+ [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
+ [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
   
  `GetWeatherAsync` würde eine der zuvor beschriebenen Techniken wie z.B. das Erstellen eines Hintergrundthreads verwenden, um die Arbeit asynchron auszuführen und den aufrufenden Thread nicht zu blockieren.  
   
@@ -183,13 +183,13 @@ ms.locfileid: "54513649"
   
  Der <xref:System.Windows.Threading.DispatcherSynchronizationContext> -Klasse erfüllt diese Anforderung — betrachten Sie sie als eine vereinfachte Version der <xref:System.Windows.Threading.Dispatcher> dieses Produkt funktioniert mit anderen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] auch Frameworks.  
   
- [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent2)]
- [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent2)]  
+ [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](~/samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent2)]
+ [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent2)]  
   
 ### <a name="nested-pumping"></a>Geschachtelte Verteilung  
  Manchmal ist es nicht möglich, völlig gesperrt ist, bis die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread. Betrachten wir die <xref:System.Windows.MessageBox.Show%2A> Methode der <xref:System.Windows.MessageBox> Klasse. <xref:System.Windows.MessageBox.Show%2A> Gibt nicht zurück, bis der Benutzer die Schaltfläche "OK" klickt. Es wird jedoch ein Fenster erstellt, das über eine Meldungsschleife verfügen muss, um interaktiv zu sein. Während wir warten, bis der Benutzer auf „OK“ klickt, reagiert das ursprüngliche Anwendungsfenster nicht auf Benutzereingaben. Es verarbeitet jedoch weiterhin Paint-Meldungen. Das ursprüngliche Fenster zeichnet sich selbst neu, wenn es verdeckt war und dann wieder angezeigt wird.  
   
- ![MessageBox mit einer „OK“-Schaltfläche](../../../../docs/framework/wpf/advanced/media/threadingnestedpumping.png "ThreadingNestedPumping")  
+ ![MessageBox mit einer „OK“-Schaltfläche](./media/threadingnestedpumping.png "ThreadingNestedPumping")  
   
  Ein Thread muss für das Meldungsfenster zuständig sein. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] könnte einen neuen Thread nur für das Meldungsfenster erstellen, aber dieser Thread wäre nicht in der Lage, die deaktivierten Elemente im ursprünglichen Fenster zu zeichnen (beachten Sie den bereits erwähnten gegenseitigen Ausschluss). Stattdessen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet ein geschachteltes meldungsverarbeitungssystem. Die <xref:System.Windows.Threading.Dispatcher> Klasse enthält eine spezielle Methode namens <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, dem aktuellen Ausführungspunkt in einer Anwendung speichert eine neue Meldungsschleife beginnt. Nach Abschluss die geschachtelten Meldungsschleife Ausführung fortgesetzt wird, nach dem ursprünglichen <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> aufrufen.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "54513649"
 ### <a name="stale-routed-events"></a>Veraltete Routingereignisse  
  Das Routingereignissystem in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] benachrichtigt ganze Strukturen, wenn Ereignisse ausgelöst werden.  
   
- [!code-xaml[InputOvw#ThreadingArticleStaticRoutedEvent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#threadingarticlestaticroutedevent)]  
+ [!code-xaml[InputOvw#ThreadingArticleStaticRoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/InputOvw/CSharp/Page1.xaml#threadingarticlestaticroutedevent)]  
   
  Wenn die linke Maustaste, über die Ellipse gedrückt wird, `handler2` ausgeführt wird. Nach dem `handler2` beendet ist ist, das Ereignis wird an übergeben, die <xref:System.Windows.Controls.Canvas> -Objekt, das verwendet `handler1` , sie zu verarbeiten. Dies geschieht nur, wenn `handler2` ist nicht explizit Mark stattdessen das Ereignis als behandelt.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "54513649"
   
  Die meisten Schnittstellen werden nicht mit der im Hinblick auf Threadsicherheit erstellt, da Entwickler bei Ihrer Arbeit, die eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nie durch mehrere Threads zugegriffen wird. In diesem Fall ist der Singlethread Umweltbelastung zu unerwarteten Zeiten ändern kann diese falsch verursacht, die Auswirkungen der <xref:System.Windows.Threading.DispatcherObject> soll gegenseitige Ausschlussmechanismus um zu lösen. Betrachten Sie den folgenden Pseudocode:  
   
- ![Diagramm des Threadingwiedereintritts](../../../../docs/framework/wpf/advanced/media/threadingreentrancy.png "ThreadingReentrancy")  
+ ![Diagramm des Threadingwiedereintritts](./media/threadingreentrancy.png "ThreadingReentrancy")  
   
  In den meisten Fällen das ist richtig, aber es gibt Situationen, in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , in denen solch ein unerwarteter Wiedereintritt kann wirklich zu Problemen führen. In diesem Fall zu bestimmten Zeiten, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aufrufe <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>, welche Änderungen die sperranweisung für diesen Thread so die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Sperre Wiedereintritt anstatt der üblichen [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Sperre.  
   

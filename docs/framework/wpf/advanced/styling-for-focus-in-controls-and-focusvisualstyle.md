@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562592"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377044"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Fokusstile in Steuerelementen und FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt zwei parallele Mechanismen zum Ändern der Darstellung eines Steuerelements bereit, wenn es den Tastaturfokus erhält. Der erste Mechanismus besteht im Eigenschaften-Settern für Eigenschaften verwenden, z. B. <xref:System.Windows.UIElement.IsKeyboardFocused%2A> innerhalb der Stil oder Vorlage, die auf das Steuerelement angewendet wird. Der zweite Mechanismus besteht in der Bereitstellung eines gesonderten Stils als Wert für die <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> Eigenschaft der "visuelle Fokusstil" erstellt Sie eine separate visuelle Struktur für einen Adorner, auf das Steuerelement, anstatt die visuelle Struktur des Steuerelements oder eine andere Benutzeroberfläche zu ändern Element, indem Sie ersetzt wird. In diesem Thema werden die Szenarios erläutert, für die sich die jeweiligen Mechanismen eignen.  
@@ -25,7 +25,7 @@ ms.locfileid: "54562592"
   
 <a name="Default"></a>   
 ## <a name="default-focus-visual-style-behavior"></a>Standardverhalten des visuellen Fokusstils  
- Visuelle Fokusstile werden nur dann wirksam, wenn die Fokusaktion über die Tastatur gestartet wurde. Eine Mausaktion oder eine programmatische Fokusänderung deaktivieren den Modus für visuelle Fokusstile. Weitere Informationen über die Unterschiede zwischen den Fokusmodi finden Sie unter [Fokus-Übersicht](../../../../docs/framework/wpf/advanced/focus-overview.md).  
+ Visuelle Fokusstile werden nur dann wirksam, wenn die Fokusaktion über die Tastatur gestartet wurde. Eine Mausaktion oder eine programmatische Fokusänderung deaktivieren den Modus für visuelle Fokusstile. Weitere Informationen über die Unterschiede zwischen den Fokusmodi finden Sie unter [Fokus-Übersicht](focus-overview.md).  
   
  Die Designs für Steuerelemente umfassen ein Standardverhalten für den visuellen Fokusstil, das zum visuellen Fokusstil für alle Steuerelemente in diesem Design wird. Dieser Designstil wird durch den Wert des statischen Schlüssels <xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>. Wenn Sie einen eigenen visuellen Fokusstil auf der Anwendungsebene deklarieren, ersetzen Sie das Standardverhalten des Stils in den Designs. Wenn Sie hingegen das gesamte Design definieren, sollten Sie diesen Schlüssel auch verwenden, um den Stil für das Standardverhalten des gesamten Designs zu definieren.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54562592"
 ## <a name="alternatives-to-using-a-focus-visual-style"></a>Alternativen zur Verwendung eines visuellen Fokusstils  
  In Situationen, in denen die Verwendung eine visuellen Fokusstils nicht angemessen ist, weil Sie beispielsweise einzelne Steuerelemente formatieren oder die Steuerelementvorlage noch weitreichender steuern möchten, stehen viele andere Eigenschaften und Techniken zur Verfügung, mit denen Sie ein visuelles Verhalten als Reaktion auf eine Fokusänderung erstellen können.  
   
- Trigger, Setter und Ereignissetter werden ausführlich unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md) erläutert. Die Routingereignisbehandlung wird unter [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md) erläutert.  
+ Trigger, Setter und Ereignissetter werden ausführlich unter [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md) erläutert. Die Routingereignisbehandlung wird unter [Übersicht über Routingereignisse](routed-events-overview.md) erläutert.  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
  Wenn Sie besonders am Tastaturfokus interessiert sind die <xref:System.Windows.UIElement.IsKeyboardFocused%2A> Abhängigkeitseigenschaft kann verwendet werden, für eine Eigenschaft <xref:System.Windows.Trigger>. Ein Eigenschaftentrigger in einem Stil oder einer Vorlage ist eine gut geeignete Technik, um ein Tastaturfokusverhalten zu definieren, das speziell für ein einziges Steuerelement gilt und das visuell nicht dem Tastaturfokusverhalten anderer Steuerelemente entspricht.  
@@ -78,6 +78,6 @@ ms.locfileid: "54562592"
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Fokus - Übersicht](../../../../docs/framework/wpf/advanced/focus-overview.md)
-- [Übersicht über die Eingabe](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)
+- [Fokus - Übersicht](focus-overview.md)
+- [Übersicht über die Eingabe](input-overview.md)

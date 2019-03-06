@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 020570c66401661f55b82a0c7111b4ac53f9c884
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556154"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375349"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Registrierungseinstellungen für das Rendern von Grafiken
 Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Registrierungseinstellungen für das Rendern von Grafiken, die sich auf [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen auswirken.  
@@ -50,7 +50,7 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
   
  Mit der **Option zum Deaktivieren der Hardwarebeschleunigung** können Sie die Hardwarebeschleunigung beim Debuggen und Testen deaktivieren. Wenn Renderingartefakte in einer Anwendung angezeigt werden, versuchen Sie die Hardwarebeschleunigung zu deaktivieren. Wenn das Artefakt verschwindet, kann es sich um ein Problem mit Ihrem Videotreiber handeln.  
   
- Die **Option zum Deaktivieren der Hardwarebeschleunigung** ist ein DWORD-Wert, der entweder 0 oder 1 ist. Der Wert 1 deaktiviert die Hardwarebeschleunigung. Mit dem Wert 0 wird die Hardwarebeschleunigung aktiviert, sofern das System die entsprechenden Anforderungen erfüllt. Weitere Informationen finden Sie unter [Renderingebenen für Grafiken](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md).  
+ Die **Option zum Deaktivieren der Hardwarebeschleunigung** ist ein DWORD-Wert, der entweder 0 oder 1 ist. Der Wert 1 deaktiviert die Hardwarebeschleunigung. Mit dem Wert 0 wird die Hardwarebeschleunigung aktiviert, sofern das System die entsprechenden Anforderungen erfüllt. Weitere Informationen finden Sie unter [Renderingebenen für Grafiken](../advanced/graphics-rendering-tiers.md).  
   
 <a name="maxmultisample"></a>   
 ## <a name="maximum-multisample-value"></a>Maximaler Wert für Multisampling  
@@ -98,5 +98,5 @@ Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../.
  Die **Option zum Verwenden des Referenzrasters** verwendet einen DWORD-Wert. Der Wert 0 gibt an, dass das Referenzraster nicht verwendet wird. Jeder Wert ungleich 0 (null) erzwingt, dass [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] das Referenzraster verwendet.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Renderingebenen für Grafiken](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)
-- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Renderingebenen für Grafiken](../advanced/graphics-rendering-tiers.md)
+- [Übersicht über das WPF-Grafikrendering](wpf-graphics-rendering-overview.md)

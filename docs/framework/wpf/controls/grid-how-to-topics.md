@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Grid control [WPF], how-to topics
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
-ms.openlocfilehash: ec9ee608b939c10db295c7b6c37442ef6085f194
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550364"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377676"
 ---
 # <a name="grid-how-to-topics"></a>Gewusst-wie-Themen zu Rastern
-Die Themen in diesem Abschnitt wird beschrieben, wie zum Positionieren von Elementen mithilfe der <xref:System.Windows.Controls.Grid> Element.  
+Die Themen in diesem Abschnitt wird beschrieben, wie Elemente mit positioniert die <xref:System.Windows.Controls.Grid> Element.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Erstellen eines Benutzeroberflächen-Standarddialogfelds unter Verwendung des Grid-Elements](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [Erstellen eines komplexen Rasters](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [Erstellen eines Grid-Elements](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [Erstellen und Verwenden eines GridLengthConverter-Objekts](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [Bearbeiten von Spalten und Zeilen mithilfe von ColumnDefinitionsCollections und RowDefinitionsCollections](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [Positionieren der untergeordneten Elemente eines Rasters](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [Freigeben von Größeneigenschaften zwischen Grids](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ [Erstellen eines Benutzeroberflächen-Standarddialogfelds unter Verwendung des Grid-Elements](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [Erstellen eines komplexen Rasters](how-to-create-a-complex-grid.md)  
+ [Erstellen eines Grid-Elements](how-to-create-a-grid-element.md)  
+ [Erstellen und Verwenden eines GridLengthConverter-Objekts](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [Bearbeiten von Spalten und Zeilen mithilfe von ColumnDefinitionsCollections und RowDefinitionsCollections](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [Positionieren der untergeordneten Elemente eines Rasters](how-to-position-the-child-elements-of-a-grid.md)  
+ [Freigeben von Größeneigenschaften zwischen Grids](how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Panel>  
@@ -42,8 +42,8 @@ Die Themen in diesem Abschnitt wird beschrieben, wie zum Positionieren von Eleme
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Layout](../../../../docs/framework/wpf/advanced/layout.md)  
+ [Layout](../advanced/layout.md)  
   
- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Übersicht über ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [Übersicht über ScrollViewer](scrollviewer-overview.md)

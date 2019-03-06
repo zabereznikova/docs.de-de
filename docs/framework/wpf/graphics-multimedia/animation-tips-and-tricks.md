@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 6d79d3330154fff33abe5a401a70c6b9a20aad72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8b2a6b5386ec33ad8aa5281d808bb7089149764
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660423"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362434"
 ---
 # <a name="animation-tips-and-tricks"></a>Tipps und Tricks zu Animationen
 Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], gibt es eine Reihe von Tipps und Tricks, die die Animationen vornehmen können, bieten eine bessere Leistung, und speichern Sie die Frustration.  
@@ -28,13 +28,13 @@ Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/t
 ## <a name="general-issues"></a>Allgemeine Probleme  
   
 ### <a name="animating-the-position-of-a-scroll-bar-or-slider-freezes-it"></a>Durch Animieren der Position einer Bildlaufleiste oder eines Schiebereglers wird das Element gesperrt  
- Wenn Sie animieren die Position einer Bildlaufleiste oder eines Schiebereglers mithilfe einer Animation, die eine <xref:System.Windows.Media.Animation.FillBehavior> von <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd> (der Standardwert), der Benutzer werden nicht mehr die Bildlaufleiste oder den Schieberegler verschieben können. Das liegt daran, dass, obwohl die Animation beendet wurde, nach wie vor der Basiswert der Zieleigenschaft überschrieben wird. Um die Animation vom aktuellen Wert der Eigenschaft überschreiben zu beenden, entfernen, oder geben Sie ihm eine <xref:System.Windows.Media.Animation.FillBehavior> von <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Weitere Informationen und ein Beispiel finden Sie unter [Festlegen einer Eigenschaft nach Animation mit einem Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
+ Wenn Sie animieren die Position einer Bildlaufleiste oder eines Schiebereglers mithilfe einer Animation, die eine <xref:System.Windows.Media.Animation.FillBehavior> von <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd> (der Standardwert), der Benutzer werden nicht mehr die Bildlaufleiste oder den Schieberegler verschieben können. Das liegt daran, dass, obwohl die Animation beendet wurde, nach wie vor der Basiswert der Zieleigenschaft überschrieben wird. Um die Animation vom aktuellen Wert der Eigenschaft überschreiben zu beenden, entfernen, oder geben Sie ihm eine <xref:System.Windows.Media.Animation.FillBehavior> von <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Weitere Informationen und ein Beispiel finden Sie unter [Festlegen einer Eigenschaft nach Animation mit einem Storyboard](how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
   
 ### <a name="animating-the-output-of-an-animation-has-no-effect"></a>Das Animieren der Ausgabe einer Animation hat keine Auswirkungen  
  Sie können kein Objekt animieren, das die Ausgabe einer anderen Animation ist. Angenommen, Sie verwenden eine <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> zum Animieren der <xref:System.Windows.Shapes.Shape.Fill%2A> von eine <xref:System.Windows.Shapes.Rectangle> aus eine <xref:System.Windows.Media.RadialGradientBrush> auf eine <xref:System.Windows.Media.SolidColorBrush>, Sie keine Eigenschaften animieren der <xref:System.Windows.Media.RadialGradientBrush> oder <xref:System.Windows.Media.SolidColorBrush>.  
   
 ### <a name="cant-change-the-value-of-a-property-after-animating-it"></a>Das Ändern des Werts einer Eigenschaft ist nach dem Animieren nicht möglich  
- Möglicherweise kommt es vor, dass Sie den Wert einer einmal animierten Eigenschaft, auch nachdem die Animation beendet wurde, nicht verändern können. Das liegt daran, dass, obwohl die Animation beendet wurde, immer noch der Basiswert der Eigenschaft überschrieben wird. Um die Animation vom aktuellen Wert der Eigenschaft überschreiben zu beenden, entfernen, oder geben Sie ihm eine <xref:System.Windows.Media.Animation.FillBehavior> von <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Weitere Informationen und ein Beispiel finden Sie unter [Festlegen einer Eigenschaft nach Animation mit einem Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
+ Möglicherweise kommt es vor, dass Sie den Wert einer einmal animierten Eigenschaft, auch nachdem die Animation beendet wurde, nicht verändern können. Das liegt daran, dass, obwohl die Animation beendet wurde, immer noch der Basiswert der Eigenschaft überschrieben wird. Um die Animation vom aktuellen Wert der Eigenschaft überschreiben zu beenden, entfernen, oder geben Sie ihm eine <xref:System.Windows.Media.Animation.FillBehavior> von <xref:System.Windows.Media.Animation.FillBehavior.Stop>. Weitere Informationen und ein Beispiel finden Sie unter [Festlegen einer Eigenschaft nach Animation mit einem Storyboard](how-to-set-a-property-after-animating-it-with-a-storyboard.md).  
   
 ### <a name="changing-a-timeline-has-no-effect"></a>Das Ändern einer Zeitachse hat keine Auswirkung  
  Obwohl die meisten <xref:System.Windows.Media.Animation.Timeline> -Eigenschaften animierbar sind und die Daten gebunden werden, ändern die Eigenschaftswerte einer aktiven <xref:System.Windows.Media.Animation.Timeline> scheint keine Auswirkung haben. Der Grund dafür ist, wenn eine <xref:System.Windows.Media.Animation.Timeline> ist begonnen, erstellt das Zeitsteuerungssystem eine Kopie der <xref:System.Windows.Media.Animation.Timeline> und verwendet sie zum Erstellen einer <xref:System.Windows.Media.Animation.Clock> Objekt. Eine Änderung des Original hat keine Auswirkung auf die Kopie des Systems.  
@@ -47,14 +47,14 @@ Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/t
   
 -   Wenn Sie direkt auf der Uhrebene arbeiten, erstellen Sie einen neuen Satz von Uhren, und verwenden sie diese, um den zuvor generierten Satz von Uhren zu ersetzen.  
   
- Weitere Informationen zu Zeitachsen und Uhren finden Sie unter [Animation und zeitliche Steuerung Systemübersicht](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+ Weitere Informationen zu Zeitachsen und Uhren finden Sie unter [Animation und zeitliche Steuerung Systemübersicht](animation-and-timing-system-overview.md).  
   
 ### <a name="fillbehaviorstop-doesnt-work-as-expected"></a>FillBehavior.Stop funktioniert nicht wie erwartet  
  Manchmal beim Festlegen der <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Eigenschaft <xref:System.Windows.Media.Animation.FillBehavior.Stop> scheint keine Auswirkung, z. B. wenn eine Animation "übergibt" in eine andere, da sie verfügt über eine <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A> Festlegen der <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace>.  
   
  Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.Canvas>, <xref:System.Windows.Shapes.Rectangle> und <xref:System.Windows.Media.TranslateTransform>. Die <xref:System.Windows.Media.TranslateTransform> animiert wird zum Verschieben der <xref:System.Windows.Shapes.Rectangle> rund um die <xref:System.Windows.Controls.Canvas>.  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipAnimatedObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipanimatedobject)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipAnimatedObject](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipanimatedobject)]  
   
  In die Beispielen in diesem Abschnitt verwenden Sie die vorhergehenden Objekte, die um mehrere Fälle zu veranschaulichen, in denen die <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> Eigenschaft verhält sich nicht, wie Sie es erwarten.  
   
@@ -63,11 +63,11 @@ Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/t
   
  Die erste <xref:System.Windows.Media.Animation.Storyboard>, `B1`, animiert die <xref:System.Windows.Media.TranslateTransform.X%2A> Eigenschaft der <xref:System.Windows.Media.TranslateTransform> von 0 auf 350, die das Rechteck um 350 Pixel nach rechts verschoben. Wenn die Animation das Ende ihrer Dauer erreicht und Wiedergabe beendet ist, die <xref:System.Windows.Media.TranslateTransform.X%2A> Eigenschaft wird auf den ursprünglichen Wert, der 0 zurückgesetzt. Das Rechteck wird daraufhin 350 Pixel nach rechts bewegt, und springt dann zurück an seine ursprüngliche Position.  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB1Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb1button)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB1Button](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb1button)]  
   
  Die zweite <xref:System.Windows.Media.Animation.Storyboard>, `B2`, animiert ebenfalls die <xref:System.Windows.Media.TranslateTransform.X%2A> Eigenschaft desselben <xref:System.Windows.Media.TranslateTransform>. Da nur die <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> -Eigenschaft der Animation in diesem <xref:System.Windows.Media.Animation.Storyboard> festgelegt ist, wird die Animation verwendet den aktuellen Wert der Eigenschaft, die sie animiert, als Startwert.  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB2Button](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb2button)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardB2Button](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardb2button)]  
   
  Wenn Sie die zweite Schaltfläche, während das erste auf <xref:System.Windows.Media.Animation.Storyboard> ist wiedergeben, können Sie Folgendes erwarten:  
   
@@ -80,16 +80,16 @@ Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/t
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior und das abgeschlossene Ereignis  
  Die nächsten Beispiele zeigen ein anderes Szenario, in dem die <xref:System.Windows.Media.Animation.FillBehavior.Stop> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> scheint keine Auswirkung haben. In diesem Fall im Beispiel wird mit einem Storyboard Animieren der <xref:System.Windows.Media.TranslateTransform.X%2A> Eigenschaft der <xref:System.Windows.Media.TranslateTransform> von 0 auf 350. Jedoch dieses Mal für das Beispiel registriert die <xref:System.Windows.Media.Animation.Timeline.Completed> Ereignis.  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
   
  Die <xref:System.Windows.Media.Animation.Timeline.Completed> Ereignishandler startet ein weiteres <xref:System.Windows.Media.Animation.Storyboard> , die die gleiche Eigenschaft vom aktuellen Wert auf 500 animiert.  
   
- [!code-csharp[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml.cs#fillbehaviortipstoryboardc1completedhandler)]
- [!code-vb[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/VisualBasic/FillBehaviorTip.xaml.vb#fillbehaviortipstoryboardc1completedhandler)]  
+ [!code-csharp[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml.cs#fillbehaviortipstoryboardc1completedhandler)]
+ [!code-vb[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardC1CompletedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/VisualBasic/FillBehaviorTip.xaml.vb#fillbehaviortipstoryboardc1completedhandler)]  
   
  Im folgenden finden Sie das Markup, das zweite definiert <xref:System.Windows.Media.Animation.Storyboard> als Ressource.  
   
- [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipresources)]  
+ [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipResources](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipresources)]  
   
  Beim Ausführen der <xref:System.Windows.Media.Animation.Storyboard>, Sie erwarten wahrscheinlich die <xref:System.Windows.Media.TranslateTransform.X%2A> Eigenschaft der <xref:System.Windows.Media.TranslateTransform> um von 0 auf 350 zu animieren, klicken Sie dann auf 0 zurückgesetzt, nachdem es abgeschlossen ist (da er besitzt eine <xref:System.Windows.Media.Animation.FillBehavior> Festlegen von <xref:System.Windows.Media.Animation.FillBehavior.Stop>), und dann von 0 auf 500 animiert. Stattdessen die <xref:System.Windows.Media.TranslateTransform> erstellt eine Animation von 0 auf 350 und dann auf 500.  
   
@@ -113,7 +113,7 @@ Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/t
   
 -   Um Animationen aus einer bestimmten Eigenschaft zu entfernen, verwenden die <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%28System.Windows.DependencyProperty%2CSystem.Windows.Media.Animation.AnimationTimeline%29> Methode. Geben Sie die zu animierende Eigenschaft als ersten Parameter und `null` als das zweite. Dies entfernt alle Animationsuhren aus der Eigenschaft.  
   
- Weitere Informationen zu den verschiedenen Methoden zum Animieren von Eigenschaften finden Sie unter [Eigenschaft Techniken-Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ Weitere Informationen zu den verschiedenen Methoden zum Animieren von Eigenschaften finden Sie unter [Eigenschaft Techniken-Übersicht über Animationen](property-animation-techniques-overview.md).  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>Das Verwenden von Compose HandoffBehavior belegt Systemressourcen  
  Beim Anwenden einer <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, oder <xref:System.Windows.Media.Animation.AnimationClock> auf eine Eigenschaft mit der <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>, <xref:System.Windows.Media.Animation.Clock> Objekte, die diese Eigenschaft zuvor zugeordnet waren weiterhin Systemressourcen beanspruchen, nicht der Fall ist des Zeitsteuerungssystems Diese Uhren automatisch entfernt.  
@@ -126,7 +126,7 @@ Bei der Arbeit mit Animationen in [!INCLUDE[TLA2#tla_wpf](../../../../includes/t
   
  Dies betrifft hauptsächlich Animationen für Objekte, die eine lange Lebensdauer haben.  Wenn ein Objekt an den Garbage Collector übergeben wird, werden auch die Uhren getrennt und an den Garbage Collector übergeben.  
   
- Weitere Informationen zu uhrobjekten finden Sie unter [Animation und zeitliche Steuerung Systemübersicht](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md).  
+ Weitere Informationen zu uhrobjekten finden Sie unter [Animation und zeitliche Steuerung Systemübersicht](animation-and-timing-system-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [Übersicht über Animationen](animation-overview.md)

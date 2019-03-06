@@ -7,27 +7,27 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: 8a95d759-c298-4291-aa7e-ecdeffaae6ab
-ms.openlocfilehash: a1216a4aa8c2872eef33eb29a74ec4c1913dc671
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5acb5d96a9c8a1ce2d2c0c842be0e57e62eb538f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555428"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361927"
 ---
 # <a name="toolbar"></a>ToolBar
-Die <xref:System.Windows.Controls.ToolBar> Steuerelement ist ein Container für eine Gruppe von Befehlen oder Steuerelementen, die in der Regel in ihrer Funktion beziehen.  
+Die <xref:System.Windows.Controls.ToolBar> Steuerelement ist ein Container für eine Gruppe von Befehlen oder Steuerelementen, die in der Regel in ihrer Funktion verknüpft sind.  
   
  Die folgenden Abbildungen zeigen die horizontalen und vertikalen <xref:System.Windows.Controls.ToolBar> Steuerelemente.  
   
- ![Horizontale Symbolleiste](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
+ ![Horizontale Symbolleiste](./media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")  
 Horizontale Symbolleiste  
   
- ![Vertikale Symbolleiste](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
+ ![Vertikale Symbolleiste](./media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")  
 Vertikale Symbolleiste  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über ToolBar](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [Formatieren von Steuerelementen in einer Symbolleiste](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+ [Übersicht über ToolBar](toolbar-overview.md)  
+  [Formatieren von Steuerelementen in einer Symbolleiste](how-to-style-controls-on-a-toolbar.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.ToolBar>  

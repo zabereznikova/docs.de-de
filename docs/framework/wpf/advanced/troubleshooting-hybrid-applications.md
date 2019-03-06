@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: 005cd017ae7702169aefb61a746c8adaba8118db
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748699"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370097"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Problembehandlung für Hybridanwendungen
 <a name="introduction"></a>In diesem Thema werden einige der häufigsten Probleme aufgeführt, die beim Erstellen von Hybridanwendungen, die sowohl die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]- als auch die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Technologie verwenden, auftreten können,.  
@@ -35,7 +35,7 @@ ms.locfileid: "56748699"
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>Skalieren  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] verfügen über unterschiedliche Skalierungsmodelle. Einige [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Skalierungstransformationen eignen sich für [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente, andere jedoch nicht. Zum Beispiel funktioniert das Skalieren eines [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelements auf 0. Wenn Sie aber versuchen, das gleiche Steuerelement danach auf einen Wert ungleich null zu skalieren, bleibt die Größe des Steuerelements 0. Weitere Informationen finden Sie unter [Überlegungen zum Layout für das WindowsFormsHost-Element](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] verfügen über unterschiedliche Skalierungsmodelle. Einige [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Skalierungstransformationen eignen sich für [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente, andere jedoch nicht. Zum Beispiel funktioniert das Skalieren eines [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelements auf 0. Wenn Sie aber versuchen, das gleiche Steuerelement danach auf einen Wert ungleich null zu skalieren, bleibt die Größe des Steuerelements 0. Weitere Informationen finden Sie unter [Überlegungen zum Layout für das WindowsFormsHost-Element](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>Adapter  
@@ -53,7 +53,7 @@ ms.locfileid: "56748699"
   
 <a name="property_mapping"></a>   
 ## <a name="property-mapping"></a>Eigenschaftszuordnung  
- Einige Eigenschaftszuordnungen benötigen eine umfangreiche Interpretation zur Überbrückung unterschiedlicher Implementierungen in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]- und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Technologien. Eigenschaftszuordnungen ermöglichen es dem Code, auf Änderungen der Schriftarten, Farben und anderer Eigenschaften zu reagieren. Im Allgemeinen funktionieren Eigenschaftszuordnungen, indem Sie entweder *Property*Changed-Ereignisse oder On*Property*Changed-Aufrufe überwachen oder entsprechende Eigenschaften entweder für das untergeordnete Steuerelement oder den Adapter festlegen. Weitere Informationen finden Sie unter [Eigenschaftenzuordnung von Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md).  
+ Einige Eigenschaftszuordnungen benötigen eine umfangreiche Interpretation zur Überbrückung unterschiedlicher Implementierungen in den [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]- und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Technologien. Eigenschaftszuordnungen ermöglichen es dem Code, auf Änderungen der Schriftarten, Farben und anderer Eigenschaften zu reagieren. Im Allgemeinen funktionieren Eigenschaftszuordnungen, indem Sie entweder *Property*Changed-Ereignisse oder On*Property*Changed-Aufrufe überwachen oder entsprechende Eigenschaften entweder für das untergeordnete Steuerelement oder den Adapter festlegen. Weitere Informationen finden Sie unter [Eigenschaftenzuordnung von Windows Forms und WPF](windows-forms-and-wpf-property-mapping.md).  
   
 <a name="layoutrelated_properties_on_hosted_content"></a>   
 ## <a name="layout-related-properties-on-hosted-content"></a>Layoutbezogene Eigenschaften in gehostetem Inhalt  
@@ -66,7 +66,7 @@ ms.locfileid: "56748699"
 |<xref:System.Windows.Forms.Integration.ElementHost>|<xref:System.Windows.FrameworkElement.Height%2A><br /><br /> <xref:System.Windows.FrameworkElement.Width%2A><br /><br /> <xref:System.Windows.FrameworkElement.Margin%2A><br /><br /> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A><br /><br /> <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>|  
 |<xref:System.Windows.Forms.Integration.WindowsFormsHost>|<xref:System.Windows.Forms.Control.Margin%2A><br /><br /> <xref:System.Windows.Forms.Control.Dock%2A><br /><br /> <xref:System.Windows.Forms.Control.AutoSize%2A><br /><br /> <xref:System.Windows.Forms.Control.Location%2A><br /><br /> <xref:System.Windows.Forms.Control.MaximumSize%2A>|  
   
- Legen Sie diese Eigenschaften nicht direkt im gehosteten Inhalt fest. Weitere Informationen finden Sie unter [Überlegungen zum Layout für das WindowsFormsHost-Element](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md).  
+ Legen Sie diese Eigenschaften nicht direkt im gehosteten Inhalt fest. Weitere Informationen finden Sie unter [Überlegungen zum Layout für das WindowsFormsHost-Element](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="navigation_applications"></a>   
 ## <a name="navigation-applications"></a>Navigationsanwendungen  
@@ -76,7 +76,7 @@ ms.locfileid: "56748699"
 ## <a name="message-loop-interoperation"></a>Interoperation für Nachrichtenschleifen  
  Bei der Arbeit mit [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Nachrichtenschleifen werden Nachrichten möglicherweise nicht wie erwartet verarbeitet. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A> Methode wird aufgerufen, indem die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Konstruktor. Diese Methode fügt der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Nachrichtenschleife einen Meldungsfilter hinzu. Dieser Filter Ruft die <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> Methode Wenn eine <xref:System.Windows.Forms.Control?displayProperty=nameWithType> war das Ziel der Nachricht und die Meldung wird übersetzt/weitergeleitet.  
   
- Wenn Sie anzeigen eine <xref:System.Windows.Window> in eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] -Nachrichtenschleife mit <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>, Sie können nicht alles eingeben, es sei denn, Sie rufen die <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> Methode. Die <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> -Methode übernimmt eine <xref:System.Windows.Window> und fügt eine <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>, die leitet für Schlüssel relevante Nachrichten an die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Nachrichtenschleife. Weitere Informationen finden Sie unter [Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md).  
+ Wenn Sie anzeigen eine <xref:System.Windows.Window> in eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] -Nachrichtenschleife mit <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>, Sie können nicht alles eingeben, es sei denn, Sie rufen die <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> Methode. Die <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A> -Methode übernimmt eine <xref:System.Windows.Window> und fügt eine <xref:System.Windows.Forms.IMessageFilter?displayProperty=nameWithType>, die leitet für Schlüssel relevante Nachrichten an die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Nachrichtenschleife. Weitere Informationen finden Sie unter [Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF](windows-forms-and-wpf-interoperability-input-architecture.md).  
   
 <a name="opacity_and_layering"></a>   
 ## <a name="opacity-and-layering"></a>Deckkraft und Überlagern  
@@ -88,7 +88,7 @@ ms.locfileid: "56748699"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Aktivieren von visuellen Stilen  
- Visuelle [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]-Stile für ein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement dürfen nicht aktiviert werden. Die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Methode wird aufgerufen, in der Vorlage für eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung. Obwohl diese Methode nicht standardmäßig aufgerufen wird, wenn Sie [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] zur Erstellung eines Projekts verwenden, erhalten Sie visuelle [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]-Stile für Steuerelemente, wenn Version 6.0 von Comctl32.dll verfügbar ist. Rufen Sie die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> -Methode auf, bevor die Handles für den Thread erstellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren von visuellen Stilen in einer Hybridanwendung](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ Visuelle [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]-Stile für ein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement dürfen nicht aktiviert werden. Die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Methode wird aufgerufen, in der Vorlage für eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung. Obwohl diese Methode nicht standardmäßig aufgerufen wird, wenn Sie [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] zur Erstellung eines Projekts verwenden, erhalten Sie visuelle [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]-Stile für Steuerelemente, wenn Version 6.0 von Comctl32.dll verfügbar ist. Rufen Sie die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> -Methode auf, bevor die Handles für den Thread erstellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren von visuellen Stilen in einer Hybridanwendung](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Lizenzierte Steuerelemente  
@@ -108,7 +108,7 @@ ms.locfileid: "56748699"
 ### <a name="design-time-error-list-appears-when-the-obj-folder-is-deleted"></a>Entwurfszeit-Fehlerliste wird angezeigt, wenn der Ordner obj gelöscht wird  
  Wenn der Ordner obj gelöscht wird, wird die Entwurfszeit-Fehlerliste angezeigt.  
   
- Beim Entwerfen mit <xref:System.Windows.Forms.Integration.ElementHost>, der Windows Forms-Designer verwendet die generierte Dateien im Ordner "Debug oder Release" im Ordner "Obj" Ihres Projekts. Wenn Sie diese Dateien löschen, wird die Entwurfszeit-Fehlerliste angezeigt. Um dieses Problem zu beheben, müssen Sie Ihr Projekt neu erstellen. Weitere Informationen finden Sie unter [Entwurfszeitfehler im Windows Forms-Designer](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md).  
+ Beim Entwerfen mit <xref:System.Windows.Forms.Integration.ElementHost>, der Windows Forms-Designer verwendet die generierte Dateien im Ordner "Debug oder Release" im Ordner "Obj" Ihres Projekts. Wenn Sie diese Dateien löschen, wird die Entwurfszeit-Fehlerliste angezeigt. Um dieses Problem zu beheben, müssen Sie Ihr Projekt neu erstellen. Weitere Informationen finden Sie unter [Entwurfszeitfehler im Windows Forms-Designer](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md).  
   
 <a name="elementhost_and_ime"></a>   
 ## <a name="elementhost-and-ime"></a>ElementHost und IME  
@@ -118,9 +118,9 @@ ms.locfileid: "56748699"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Interoperabilität im WPF-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
-- [Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-interoperability-input-architecture.md)
-- [Vorgehensweise: Aktivieren von visuellen Stilen in einer Hybridanwendung](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)
-- [Überlegungen zum Layout für das WindowsFormsHost-Element](../../../../docs/framework/wpf/advanced/layout-considerations-for-the-windowsformshost-element.md)
-- [Eigenschaftenzuordnung von Windows Forms und WPF](../../../../docs/framework/wpf/advanced/windows-forms-and-wpf-property-mapping.md)
-- [Entwurfszeitfehler im Windows Forms-Designer](../../../../docs/framework/winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
-- [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+- [Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF](windows-forms-and-wpf-interoperability-input-architecture.md)
+- [Vorgehensweise: Aktivieren von visuellen Stilen in einer Hybridanwendung](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Überlegungen zum Layout für das WindowsFormsHost-Element](layout-considerations-for-the-windowsformshost-element.md)
+- [Eigenschaftenzuordnung von Windows Forms und WPF](windows-forms-and-wpf-property-mapping.md)
+- [Entwurfszeitfehler im Windows Forms-Designer](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Migration und Interoperabilität](migration-and-interoperability.md)

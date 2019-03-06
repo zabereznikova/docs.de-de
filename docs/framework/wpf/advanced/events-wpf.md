@@ -8,26 +8,26 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542586"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361212"
 ---
 # <a name="events-wpf"></a>Ereignisse (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt Routingereignisse zum Aufrufen von Handlern ein, die auf verschiedenen Listenern in der Elementstruktur einer Anwendung vorhanden sind.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über Routingereignisse](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Übersicht über angefügte Ereignisse](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [Objektlebensdauer-Ereignisse](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [Markieren von Routingereignissen als behandelt und Klassenbehandlung](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Vorschauereignisse](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [Eigenschaftenänderungsereignisse](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Visual Basic- und WPF-Ereignisbehandlung](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [Schwache Ereignismuster](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [Themen zu Vorgehensweisen](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Übersicht über Routingereignisse](routed-events-overview.md)  
+ [Übersicht über angefügte Ereignisse](attached-events-overview.md)  
+ [Objektlebensdauer-Ereignisse](object-lifetime-events.md)  
+ [Markieren von Routingereignissen als behandelt und Klassenbehandlung](marking-routed-events-as-handled-and-class-handling.md)  
+ [Vorschauereignisse](preview-events.md)  
+ [Eigenschaftenänderungsereignisse](property-change-events.md)  
+ [Visual Basic- und WPF-Ereignisbehandlung](visual-basic-and-wpf-event-handling.md)  
+ [Schwache Ereignismuster](weak-event-patterns.md)  
+ [Themen zu Vorgehensweisen](events-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.RoutedEvent>  
@@ -37,13 +37,13 @@ ms.locfileid: "33542586"
  <xref:System.Windows.RoutingStrategy>  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [WPF-Architektur](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [XAML in WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Basiselemente](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Elementstruktur und Serialisierung](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [Eigenschaften](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [Eingabe](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [Ressourcen](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [WPF-Inhaltsmodell](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [Threadmodell](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF-Architektur](wpf-architecture.md)  
+  [XAML in WPF](xaml-in-wpf.md)  
+  [Basiselemente](base-elements.md)  
+  [Elementstruktur und Serialisierung](element-tree-and-serialization.md)  
+  [Eigenschaften](properties-wpf.md)  
+  [Eingabe](input-wpf.md)  
+  [Ressourcen](resources-wpf.md)  
+  [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)  
+  [WPF-Inhaltsmodell](../controls/wpf-content-model.md)  
+  [Threadmodell](threading-model.md)

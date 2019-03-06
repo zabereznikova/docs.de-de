@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5ad12c9227f089f579ff204dec1ab7026e3d2bcd
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007348"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375323"
 ---
 # <a name="windows-forms-overview"></a>Übersicht über Windows Forms
 
@@ -46,7 +46,7 @@ Ausführliche Informationen zur Verwendung dieser Features finden Sie in den fol
 |Beschreibung|Hilfethema|
 |-----------------|----------------|
 |Verwenden von Steuerelementen auf Formularen|[Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Verwenden des <xref:System.Windows.Forms.ToolStrip>-Steuerelements|[Vorgehensweise: Erstellen eines einfachen ToolStrip mit Standardelementen im Designer](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|Verwenden des <xref:System.Windows.Forms.ToolStrip>-Steuerelements|[Vorgehensweise: Erstellen eines einfachen ToolStrip mit Standardelementen mithilfe des Designers](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |Erstellen von Grafiken mithilfe von <xref:System.Drawing>|[Erste Schritte mit Grafikprogrammierung](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
 |Erstellen benutzerdefinierter Steuerelemente|[Vorgehensweise: Erben von der UserControl-Klasse](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
 
@@ -65,9 +65,9 @@ Ausführliche Informationen zur Verwendung dieser Features finden Sie in den fol
 
 |Beschreibung|Hilfethema|
 |-----------------|----------------|
-|Verwenden der <xref:System.Windows.Forms.BindingSource>-Komponente|[Vorgehensweise: Binden von Windows Forms-Steuerelementen an die BindingSource-Komponente mithilfe des Designers](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Arbeiten mit [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]-Datenquellen|[Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der BindingSource-Komponente in Windows Forms](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|Verwenden des Datenquellenfensters|[Exemplarische Vorgehensweise: Anzeigen von Daten in einem Windows Form](https://msdn.microsoft.com/library/f6e08c2c-c792-43de-adf3-3e52c0100225)|
+|Verwenden der <xref:System.Windows.Forms.BindingSource>-Komponente|[Vorgehensweise: Binden von Windows Forms-Steuerelementen mithilfe der BindingSource-Komponente, die mithilfe des Designers](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|Arbeiten mit [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]-Datenquellen|[Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der Windows Forms-BindingSource-Komponente](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Verwenden des Datenquellenfensters|[Binden von Windows Forms-Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |Verwenden von Anwendungseinstellungen|[Vorgehensweise: Erstellen von Anwendungseinstellungen](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>Bereitstellen von apps auf Client-Computern
@@ -84,9 +84,9 @@ Eine umfassende Einführung in [!INCLUDE[ndptecclick](../../../includes/ndpteccl
 
 |Beschreibung|Hilfethema|
 |-----------------|----------------|
-|Bereitstellung einer Anwendung mithilfe von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Gewusst wie: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|Aktualisieren einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Bereitstellung|[Gewusst wie: Verwalten von Aktualisierungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|Verwalten der Sicherheit mithilfe von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Gewusst wie: Aktivieren von ClickOnce-Sicherheitseinstellungen](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|Bereitstellung einer Anwendung mithilfe von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Vorgehensweise: Veröffentlichen einer ClickOnce-Anwendung mit dem Webpublishing-Assistenten](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|Aktualisieren einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Bereitstellung|[Vorgehensweise: Verwalten von Aktualisierungen für eine ClickOnce-Anwendung](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|Verwalten der Sicherheit mithilfe von [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Vorgehensweise: Aktivieren von ClickOnce-Sicherheitseinstellungen](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ### <a name="other-controls-and-features"></a>Andere Steuerelemente und features
 

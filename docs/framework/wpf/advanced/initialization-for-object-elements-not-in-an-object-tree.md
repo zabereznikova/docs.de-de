@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: ed1f7781453503682648d740b57dd7af0a1715c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524129"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57376369"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Initialisierung für Objektelemente außerhalb einer Objektstruktur
 Einige Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Initialisierung werden für Prozesse zurückgestellt, die sich in der Regel darauf verlassen, dass das Element entweder mit einer logischen Struktur oder einer visuellen Struktur verbunden wird. Dieses Thema beschreibt die Schritte, die möglicherweise erforderlich sind, um ein Element zu initialisieren, das nicht mit einer dieser Strukturen verbunden ist.  
@@ -39,10 +39,10 @@ Einige Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  Das Beispiel veranschaulicht nur die Hauptfunktion. Die Funktionen `Rasterize` und `Save` (nicht dargestellt) sind Hilfsfunktionen, die die Verarbeitung und E/A erledigen.  
   
- [!code-csharp[InitializeElements#Main](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
- [!code-vb[InitializeElements#Main](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
+ [!code-csharp[InitializeElements#Main](~/samples/snippets/csharp/VS_Snippets_Wpf/InitializeElements/CSharp/initializeelements.cs#main)]
+ [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Strukturen in WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
-- [Übersicht über das WPF-Grafikrendering](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Übersicht über XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Strukturen in WPF](trees-in-wpf.md)
+- [Übersicht über das WPF-Grafikrendering](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Übersicht über XAML (WPF)](xaml-overview-wpf.md)

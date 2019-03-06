@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: a455bbfb9defbcf83f7e490f60031917a3b41779
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5fb18a2d927746c3437ec01d2a19327be373cae3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079394"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373958"
 ---
 # <a name="how-to-animate-in-a-style"></a>Gewusst wie: Animieren in einem Stil
 
@@ -20,8 +20,8 @@ Im folgenden Beispiel sind mehrere Animationen in einem Stil definiert und angew
 
 ## <a name="example"></a>Beispiel
 
-[!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
+[!code-xaml[timingbehaviors_snip#21](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
 
 Beachten Sie, dass beim Animieren in einem Stil möglich, Zielobjekte, die nicht vorhanden. Nehmen wir beispielsweise an, der Stil verwendet eine <xref:System.Windows.Media.SolidColorBrush> auf eine Schaltfläche der Background-Eigenschaft festgelegt, aber zu einem bestimmten Zeitpunkt das Format überschrieben werden, und der Hintergrund der Schaltfläche festgelegt ist, mit einem <xref:System.Windows.Media.LinearGradientBrush>.  Animieren möchten die <xref:System.Windows.Media.SolidColorBrush> wird nicht löst eine Ausnahme, die Animation einfach im Hintergrund fehl.
 
-Weitere Informationen über Syntax zum finden Sie unter den [Übersicht über Storyboards](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md). Weitere Informationen zur Animation finden Sie unter den [Übersicht über Animationen](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Weitere Informationen zu Stilen finden Sie unter den [Stile und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).
+Weitere Informationen über Syntax zum finden Sie unter den [Übersicht über Storyboards](storyboards-overview.md). Weitere Informationen zur Animation finden Sie unter den [Übersicht über Animationen](animation-overview.md). Weitere Informationen zu Stilen finden Sie unter den [Stile und Vorlagen](../controls/styling-and-templating.md).

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - playback of media [WPF]
 - classes [WPF], MediaPlayer
 ms.assetid: 165d47ed-22ce-4ded-aa6a-aa9b7467de87
-ms.openlocfilehash: 81f8dfc46dad07f34e50aac39e6cfde16de608a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2397662c79af208f2528f6eedcd5995cfac9526c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644871"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363097"
 ---
 # <a name="how-to-play-media-using-a-videodrawing"></a>Vorgehensweise: Wiedergeben von Medien mit einer VideoDrawing
 Um eine Audio- oder Videodatei wiederzugeben, die Sie verwenden eine <xref:System.Windows.Media.VideoDrawing> und <xref:System.Windows.Media.MediaPlayer>. Es gibt zwei Methoden zum Laden und Wiedergeben von Medien. Die erste ist die Verwendung einer <xref:System.Windows.Media.MediaPlayer> und ein <xref:System.Windows.Media.VideoDrawing> von selbst, und die zweite besteht darin, Ihre eigenen erstellen <xref:System.Windows.Media.MediaTimeline> mit der <xref:System.Windows.Media.MediaPlayer> und <xref:System.Windows.Media.VideoDrawing>.  
@@ -21,17 +21,17 @@ Um eine Audio- oder Videodatei wiederzugeben, die Sie verwenden eine <xref:Syste
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.VideoDrawing> und <xref:System.Windows.Media.MediaPlayer> , eine Videodatei wiederzugeben.  
   
- [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
+ [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline)]  
   
  Um zeitlich steuern die Medien zu erhalten, verwenden Sie eine <xref:System.Windows.Media.MediaTimeline> mit der <xref:System.Windows.Media.MediaPlayer> und <xref:System.Windows.Media.VideoDrawing> Objekte. Die <xref:System.Windows.Media.MediaTimeline> können Sie angeben, ob das Video wiederholt werden soll.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.MediaTimeline> mit der <xref:System.Windows.Media.MediaPlayer> und <xref:System.Windows.Media.VideoDrawing> Objekte, die ein Video wiederholt abzuspielen.  
   
- [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline)]  
+ [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline)]  
   
  Beachten Sie, dass bei der Verwendung einer <xref:System.Windows.Media.MediaTimeline>, verwenden Sie die interaktive <xref:System.Windows.Media.Animation.ClockController> Merry der <xref:System.Windows.Media.Animation.Clock.Controller%2A> Eigenschaft der <xref:System.Windows.Media.MediaClock> zum Steuern der Medienwiedergabe anstelle der interaktiven Methoden der <xref:System.Windows.Media.MediaPlayer>.  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Media.VideoDrawing>
-- [Übersicht über Zeichnungsobjekte](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+- [Übersicht über Zeichnungsobjekte](drawing-objects-overview.md)
