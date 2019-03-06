@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef12634da477e72757e98e520b600ec1ee0f1b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1cefe84c482df3b20b5939e031ad76647f295d3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412164"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484620"
 ---
-# <a name="icordebugfunctiongetmodule-method"></a><span data-ttu-id="3ef0e-102">ICorDebugFunction::GetModule-Methode</span><span class="sxs-lookup"><span data-stu-id="3ef0e-102">ICorDebugFunction::GetModule Method</span></span>
-<span data-ttu-id="3ef0e-103">Ruft das Modul, in dem diese Funktion definiert ist.</span><span class="sxs-lookup"><span data-stu-id="3ef0e-103">Gets the module in which this function is defined.</span></span>  
+# <a name="icordebugfunctiongetmodule-method"></a><span data-ttu-id="048ff-102">ICorDebugFunction::GetModule-Methode</span><span class="sxs-lookup"><span data-stu-id="048ff-102">ICorDebugFunction::GetModule Method</span></span>
+<span data-ttu-id="048ff-103">Ruft das Modul, in dem diese Funktion definiert ist.</span><span class="sxs-lookup"><span data-stu-id="048ff-103">Gets the module in which this function is defined.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ef0e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3ef0e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="048ff-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="048ff-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModule (  
@@ -35,15 +35,15 @@ HRESULT GetModule (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3ef0e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="3ef0e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="048ff-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="048ff-105">Parameters</span></span>  
  `ppModule`  
- <span data-ttu-id="3ef0e-106">[out] Ein Zeiger auf die Adresse eines ICorDebugModule-Objekts, das das Modul darstellt, in dem diese Funktion definiert ist.</span><span class="sxs-lookup"><span data-stu-id="3ef0e-106">[out] A pointer to the address of an ICorDebugModule object that represents the module in which this function is defined.</span></span>  
+ <span data-ttu-id="048ff-106">[out] Ein Zeiger auf die Adresse eines ICorDebugModule-Objekts, das das Modul darstellt, in dem diese Funktion definiert ist.</span><span class="sxs-lookup"><span data-stu-id="048ff-106">[out] A pointer to the address of an ICorDebugModule object that represents the module in which this function is defined.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3ef0e-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3ef0e-107">Requirements</span></span>  
- <span data-ttu-id="3ef0e-108">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3ef0e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="048ff-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="048ff-107">Requirements</span></span>  
+ <span data-ttu-id="048ff-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="048ff-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3ef0e-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="3ef0e-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="048ff-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="048ff-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="3ef0e-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3ef0e-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="048ff-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="048ff-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3ef0e-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ef0e-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="048ff-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="048ff-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

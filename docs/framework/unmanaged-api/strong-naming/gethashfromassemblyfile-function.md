@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83e3ba8644af1f630b5c9ad5268ec44750badc88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09fb98c5524446041e0e7a9484322f835b9d9801
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682050"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474461"
 ---
-# <a name="gethashfromassemblyfile-function"></a><span data-ttu-id="9092c-102">GetHashFromAssemblyFile-Funktion</span><span class="sxs-lookup"><span data-stu-id="9092c-102">GetHashFromAssemblyFile Function</span></span>
-<span data-ttu-id="9092c-103">Ruft einen Hash der angegebenen Assemblydatei unter Verwendung des angegebenen Hashalgorithmus ab.</span><span class="sxs-lookup"><span data-stu-id="9092c-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
+# <a name="gethashfromassemblyfile-function"></a><span data-ttu-id="75842-102">GetHashFromAssemblyFile-Funktion</span><span class="sxs-lookup"><span data-stu-id="75842-102">GetHashFromAssemblyFile Function</span></span>
+<span data-ttu-id="75842-103">Ruft einen Hash der angegebenen Assemblydatei unter Verwendung des angegebenen Hashalgorithmus ab.</span><span class="sxs-lookup"><span data-stu-id="75842-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
   
- <span data-ttu-id="9092c-104">Diese Funktion wurde als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="9092c-104">This function has been deprecated.</span></span> <span data-ttu-id="9092c-105">Verwenden der [ICLRStrongName:: GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) Methode stattdessen.</span><span class="sxs-lookup"><span data-stu-id="9092c-105">Use the [ICLRStrongName::GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) method instead.</span></span>  
+ <span data-ttu-id="75842-104">Diese Funktion wurde als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="75842-104">This function has been deprecated.</span></span> <span data-ttu-id="75842-105">Verwenden der [ICLRStrongName:: GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) Methode stattdessen.</span><span class="sxs-lookup"><span data-stu-id="75842-105">Use the [ICLRStrongName::GetHashFromAssemblyFile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9092c-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="9092c-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="75842-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="75842-106">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromAssemblyFile (  
@@ -40,32 +40,32 @@ HRESULT GetHashFromAssemblyFile (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9092c-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="9092c-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="75842-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="75842-107">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="9092c-108">[in] Der Pfad zu der Datei, der Hashwert berechnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="9092c-108">[in] The path to the file to be hashed.</span></span>  
+ <span data-ttu-id="75842-108">[in] Der Pfad zu der Datei, der Hashwert berechnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="75842-108">[in] The path to the file to be hashed.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="9092c-109">[in, out] Eine Konstante, die den Hashalgorithmus angibt.</span><span class="sxs-lookup"><span data-stu-id="9092c-109">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="9092c-110">Verwenden Sie 0 (null), für den Standard-Hashalgorithmus.</span><span class="sxs-lookup"><span data-stu-id="9092c-110">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="75842-109">[in, out] Eine Konstante, die den Hashalgorithmus angibt.</span><span class="sxs-lookup"><span data-stu-id="75842-109">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="75842-110">Verwenden Sie 0 (null), für den Standard-Hashalgorithmus.</span><span class="sxs-lookup"><span data-stu-id="75842-110">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="9092c-111">[out] Der zurückgegebene Hashpuffer.</span><span class="sxs-lookup"><span data-stu-id="9092c-111">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="75842-111">[out] Der zurückgegebene Hashpuffer.</span><span class="sxs-lookup"><span data-stu-id="75842-111">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="9092c-112">[in] Die angeforderte maximale Größe des `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="9092c-112">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="75842-112">[in] Die angeforderte maximale Größe des `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="75842-112">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="9092c-113">[out] Die zurückgegebene Größe in Bytes, `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="9092c-113">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="75842-113">[out] Die zurückgegebene Größe in Bytes, `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="75842-113">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9092c-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9092c-114">Requirements</span></span>  
- <span data-ttu-id="9092c-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9092c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="75842-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="75842-114">Requirements</span></span>  
+ <span data-ttu-id="75842-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="75842-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9092c-116">**Header:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="9092c-116">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="75842-116">**Header:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="75842-116">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="9092c-117">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="9092c-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="75842-117">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="75842-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="9092c-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9092c-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="75842-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="75842-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9092c-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9092c-119">See also</span></span>
-- [<span data-ttu-id="9092c-120">GetHashFromAssemblyFile-Methode</span><span class="sxs-lookup"><span data-stu-id="9092c-120">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
-- [<span data-ttu-id="9092c-121">GetHashFromAssemblyFileW-Methode</span><span class="sxs-lookup"><span data-stu-id="9092c-121">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [<span data-ttu-id="9092c-122">ICLRStrongName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9092c-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="75842-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="75842-119">See also</span></span>
+- [<span data-ttu-id="75842-120">GetHashFromAssemblyFile-Methode</span><span class="sxs-lookup"><span data-stu-id="75842-120">GetHashFromAssemblyFile Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfile-method.md)
+- [<span data-ttu-id="75842-121">GetHashFromAssemblyFileW-Methode</span><span class="sxs-lookup"><span data-stu-id="75842-121">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [<span data-ttu-id="75842-122">ICLRStrongName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="75842-122">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
