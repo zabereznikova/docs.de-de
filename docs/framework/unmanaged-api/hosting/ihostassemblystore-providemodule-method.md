@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb0e3bcb563387c5ee7f95d2aa6f6b5ec771f3a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1d61e7495a3d95b5326e5051775e23e19cb1b45
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717531"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503085"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule-Methode
 Löst eine Modul innerhalb einer Assembly oder ein verknüpftes (aber nicht auf ein eingebettetes) Ressourcendatei an.  
@@ -38,7 +38,7 @@ HRESULT ProvideModule (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pBindInfo`  
  [in] Ein Zeiger auf eine [ModuleBindInfo](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md) Instanz, die des angeforderten Moduls beschreibt <xref:System.AppDomain>, Assembly und Modul mit Name.  
   

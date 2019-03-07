@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a523a58a137f8276df854da956b3ab0b75cbcec9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0088ed696b2018054dc34a0b363def97c5753fe0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571625"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494089"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity-Funktion
 Vergleicht zwei Assemblyidentitäten aus, um festzustellen, ob sie gleich sind.  
@@ -40,7 +40,7 @@ STDAPI CompareAssemblyIdentity (
  );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pwzAssemblyIdentity1`  
  [in] Die Text Identität der ersten Assembly im Vergleich.  
   

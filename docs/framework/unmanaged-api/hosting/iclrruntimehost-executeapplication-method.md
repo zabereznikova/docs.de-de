@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a68c210c8c87597e2f3e664ff67ff4ba3557323d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c2a56d153fcd7238f58c9650b8db08b3f39edaa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656361"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496273"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication-Methode
 In Szenarien für die ClickOnce-Manifest-basierten verwendet, an die Anwendung in einer neuen Domäne aktiviert werden. Weitere Informationen zu diesen Szenarien finden Sie unter [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment).  
@@ -40,7 +40,7 @@ HRESULT ExecuteApplication(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pwzAppFullName`  
  [in] Der vollständige Name der Anwendung entsprechend der Definition für <xref:System.ApplicationIdentity>.  
   

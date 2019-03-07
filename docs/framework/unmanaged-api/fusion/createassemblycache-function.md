@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5869bf22c74a232f20fc49fe81a6a35c9738f1db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6327c9d7dee548957a569b587faefe3d6d9cb1b9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735021"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497768"
 ---
 # <a name="createassemblycache-function"></a>CreateAssemblyCache-Funktion
 Ruft einen Zeiger auf ein neues [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) Instanz, die im globalen Assemblycache darstellt.  
@@ -37,7 +37,7 @@ HRESULT CreateAssemblyCache (
  );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppAsmCache`  
  [out] Das zurückgegebene `IAssemblyCache` Zeiger.  
   

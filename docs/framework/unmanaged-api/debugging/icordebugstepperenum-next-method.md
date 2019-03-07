@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bd62e4c5476aacf736f2ddfea008790861d931c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ac3165ab17eb1b4bc55a4bee4d2d2b467f8aefe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419616"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494596"
 ---
 # <a name="icordebugstepperenumnext-method"></a>ICorDebugStepperEnum::Next-Methode
-Ruft die angegebene Anzahl von ICorDebugStepper-Instanzen aus der Enumeration, beginnend mit der aktuellen Position ab.  
+Ruft die angegebene Anzahl von ICorDebugStepper-Instanzen aus der Enumeration ab, an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `celt`  
  [in] Die Anzahl der `ICorDebugStepper` Instanzen abgerufen werden sollen.  
   
  `steppers`  
- [out] Ein Array von Zeigern, die jeweils auf ein `ICorDebugStepper` Objekt.  
+ [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugStepper` Objekt.  
   
  `pceltFetched`  
- [out] Zeiger auf die Anzahl der `ICorDebugStepper` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist ein.  
+ [out] Zeiger auf die Anzahl der `ICorDebugStepper` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

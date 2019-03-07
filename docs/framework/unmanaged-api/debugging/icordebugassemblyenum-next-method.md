@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b94ae83f2fb5f71abb8cb3a5c96aac9e268fc5db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 25861b2635605042acc1bf81f3f7a4739e678522
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405287"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493111"
 ---
 # <a name="icordebugassemblyenumnext-method"></a>ICorDebugAssemblyEnum::Next-Methode
-Ruft die angegebene Anzahl von Assemblys aus der Auflistung, beginnend mit der aktuellen Cursorposition ab.  
+Ruft die angegebene Anzahl von Assemblys aus der Auflistung, beginnend ab der aktuellen Cursorposition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `celt`  
  [in] Die Anzahl der Assemblys abgerufen werden sollen.  
   
  `values`  
- [out] Ein Array von Zeigern, von denen jedes auf ein ICorDebugAssembly-Objekt verweist, die eine Assembly darstellt.  
+ [out] Ein Array von Zeigern, von denen jeder zu einem ICorDebugAssembly-Objekt verweist, die eine Assembly darstellt.  
   
  `pceltFetched`  
- [out] Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Assemblys. Dieser Wert kann null sein, wenn `celt` ist ein.  
+ [out] Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Assemblys. Dieser Wert kann null sein, wenn `celt` ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

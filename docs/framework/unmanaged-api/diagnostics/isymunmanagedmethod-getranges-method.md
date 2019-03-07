@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6afe0f0d8780a93a7d98f24a11bb67ef65ebf63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 308207e100a9770474dd896ea4cba42d7db5d241
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604274"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485550"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges-Methode
 Gibt bei Angabe einer Position in einem Dokument ein Array von Start- / Endoffsetpaaren, die entsprechen, die den Bereichen Microsoft intermediate Language (MSIL), die die Position innerhalb dieser Methode abgedeckt werden. Das Array ist ein Array von ganzen Zahlen und weist das Format ["Start", "End", "Start", "Ende"]. Die Anzahl der Bereichspaare ist die Länge des Arrays geteilt durch 2.  
@@ -40,7 +40,7 @@ HRESULT GetRanges(
         length_is(*pcRanges)] ULONG32 ranges[]);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `document`  
  [in] Das Dokument, für das der Offset angefordert wird.  
   

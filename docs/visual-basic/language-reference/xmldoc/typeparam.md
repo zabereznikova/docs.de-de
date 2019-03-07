@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: d7fb980545a532e39310ea3e9d663a2b5a81a006
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9e07a0c9d100669215f01a168da98902644a6f0b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968451"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496143"
 ---
 # <a name="typeparam-visual-basic"></a>\<Typeparam > (Visual Basic)
 Definiert einen Typparametername und Beschreibung.  
@@ -21,7 +21,7 @@ Definiert einen Typparametername und Beschreibung.
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `name`  
  Der Name des Typparameters. Setzen Sie den Namen in einfache oder doppelte Anführungszeichen (" ").  
   

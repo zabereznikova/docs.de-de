@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1c214918b4a41ac989a3804c9146c4a54c5909f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41b27c8d545cce7051ca1507a6bd98b87a32468b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738208"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499562"
 ---
 # <a name="isymunmanagedwriterdefinedocument-method"></a>ISymUnmanagedWriter::DefineDocument-Methode
 Definiert ein Quelldokument. GUIDs werden für bekannte Sprachen, Lieferanten und Dokumenttypen bereitgestellt.  
@@ -38,7 +38,7 @@ HRESULT DefineDocument(
     [out, retval] ISymUnmanagedDocumentWriter**  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `url`  
  [in] Ein Zeiger auf eine `WCHAR` , definiert den uniform Resource Locator (URL), die das Dokument kennzeichnet.  
   

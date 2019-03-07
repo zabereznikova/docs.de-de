@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41b472d96c4db088c7ab34d9abb0940f3461c844
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fa2df44d631b7e6c606ebb831f2915e9e649aab
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734554"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480168"
 ---
 # <a name="ihostsecuritymanagersetsecuritycontext-method"></a>IHostSecurityManager::SetSecurityContext-Methode
 Legt den Sicherheitskontext des gerade ausgeführten Threads fest.  
@@ -36,7 +36,7 @@ HRESULT SetSecurityContext (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `eContextType`  
  [in] Eines der [EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md) -Werte, der angibt, welche Art von Kontext die common Language Runtime (CLR) auf dem Host platziert wird.  
   

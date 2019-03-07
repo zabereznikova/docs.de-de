@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f80ac10507a0c1022652bddb8bc5b2828490427
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4c3487f39d4f4c667ec9eb4705e17ccf29d9a4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546624"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490384"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo-Funktion
 Benachrichtigt den Profiler, der aktuell ausgeführte Funktion einen Endeaufruf an eine andere Funktion auszuführen, und stellt ein Handle übergeben werden kann, die die [ICorProfilerInfo3:: Getfunctiontailcall3info-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md) zum Abrufen der Stapelrahmen.  
@@ -34,7 +34,7 @@ void __stdcall FunctionTailcall3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `functionIDOrClientID`  
  [in] Der Bezeichner der derzeit ausgeführten Funktion, die einen Endeaufruf durchzuführen.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a9d156d7c7ada8309e501ba44720dfa285ce50d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f2eec9fce1909f6a83190f5ba3e99162461bbc4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552358"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492152"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps-Methode
 Ruft Metadateninformationen für das Ereignis durch, einschließlich der deklarierende Typ, hinzufügen und Entfernungsmethoden für Delegaten, und alle Flags und sonstigen zugeordneten Daten das angegebene Ereignistoken dargestellt wird.  
@@ -47,7 +47,7 @@ HRESULT GetEventProps (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ev`  
  [in] Das Ereignis-Metadatentoken, das das Ereignis, das Abrufen von Metadaten für darstellt.  
   

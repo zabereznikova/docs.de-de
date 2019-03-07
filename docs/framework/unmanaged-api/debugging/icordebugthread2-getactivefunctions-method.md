@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7ed7787f0302826cab67664780177f05e551199
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ed13f78d5a1f6d54b12c86613715f4878a521bfa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421105"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489929"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions-Methode
-Ruft Informationen über die aktive Funktion in den einzelnen Frames dieses Threads ab.  
+Ruft Informationen über die aktiven Funktion in dieses Threads Frames ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,25 +38,25 @@ HRESULT GetActiveFunctions (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `cFunctions`  
  [in] Die Größe des `pFunctions`-Arrays.  
   
  `pcFunctions`  
- [out] Ein Zeiger auf die Anzahl der zurückgegebenen Objekte die `pFunctions` Array. Die Anzahl der zurückgegebenen Objekte wird die Anzahl der verwalteten Frames auf dem Stapel gleich sein.  
+ [out] Ein Zeiger auf die Anzahl der zurückgegebenen Objekte die `pFunctions` Array. Die Anzahl der zurückgegebenen Objekte werden gleich der Anzahl der verwalteten Frames im Stapel.  
   
  `pFunctions`  
- [in, out] Ein Array von COR_ACTIVE_FUNCTION-Objekten, von denen jede Informationen über die aktiven Funktionen im Rahmen dieses Threads enthält.  
+ [in, out] Ein Array von COR_ACTIVE_FUNCTION-Objekten, von denen jede Informationen über die aktiven Funktionen in dieses Threads Frames enthält.  
   
- Das erste Element wird für den Endframe und usw. bis zurück zum Stammverzeichnis des Stapels verwendet werden.  
+ Das erste Element wird für die Endframe und usw. bis zurück in das Stammverzeichnis des Stapels verwendet werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn `pFunctions` bei Eingabe NULL, `GetActiveFunctions` gibt nur die Anzahl der Funktionen, die im Stapel befinden. D. h. wenn `pFunctions` bei Eingabe NULL, `GetActiveFunctions` gibt einen Wert nur in `pcFunctions`.  
   
- Die `GetActiveFunctions` Methode dient nur zur Optimierung über die gleichen Informationen abrufen, von Frames in eine stapelüberwachung und enthält nur die Frames, die ein Objekt ICorDebugILFrame dafür in das vollständige stapelüberwachung müssten.  
+ Die `GetActiveFunctions` -Methode dient als eine Optimierung über die gleichen Informationen abrufen, aus der Bilder in eine stapelüberwachung und enthält nur die Frames, die ein ICorDebugILFrame-Objekt für diese in die vollständige stapelüberwachung, müssten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

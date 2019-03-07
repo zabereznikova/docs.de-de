@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9036746fcf0150875ab534fdb774ed3633cf96ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 526059e0895604d18025e8ad2fd037690243ff59
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698343"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503072"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted-Methode
 Benachrichtigt den Profiler, dass eine Suche für eine Funktion, die vorher mit dem Native Image Generator (NGen.exe) kompiliert wurde, gestartet wurde.  
@@ -35,7 +35,7 @@ HRESULT JITCachedFunctionSearchStarted(
     [out] BOOL *pbUseCachedFunction);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `functionId`  
  [in] Die ID der Funktion für die Suche ausgeführt wird.  
   

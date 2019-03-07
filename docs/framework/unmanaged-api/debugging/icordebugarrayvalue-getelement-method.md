@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 500e01955666c7a8e2bd1dcf9d34afe3aeb6b421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1be7eaeccb53e8b180aeb9492cd887f952bbaea5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403343"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485303"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement-Methode
-Ruft den Wert des angegebenen Arrayelements ab.  
+Ruft den Wert des angegebenen Array-Elements.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,14 +38,14 @@ HRESULT GetElement (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `cdim`  
  [in] Die Anzahl der Dimensionen dieses `ICorDebugArrayValue` Objekt.  
   
- Dieser Wert ist auch die Größe der `indices` Arrays, da seine Größe gleich der Anzahl der Dimensionen des ist die `ICorDebugArrayValue` Objekt.  
+ Dieser Wert ist auch die Größe der `indices` Arrays, da seine Größe gleich der Anzahl der Dimensionen ist die `ICorDebugArrayValue` Objekt.  
   
  `indices`  
- [in] Ein Array von Indexwerten, von denen jeder eine Position innerhalb einer Dimension gibt den `ICorDebugArrayValue` Objekt.  
+ [in] Ein Array der Indexwerte, von denen jeder eine Position innerhalb einer Dimension gibt den `ICorDebugArrayValue` Objekt.  
   
  Dieser Wert darf nicht null sein.  
   
@@ -53,7 +53,7 @@ HRESULT GetElement (
  [out] Ein Zeiger auf die Adresse eines ICorDebugValue-Objekts, das den Wert des angegebenen Elements darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

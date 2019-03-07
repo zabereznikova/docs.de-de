@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49dc456df684d6905370ee6ab8c8883449bea990
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710338"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498041"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType-Methode
 Gibt geschachtelte Typen als "Exportierbar" markieren. Die [ExportType-Methode](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) kann auch geschachtelte Typen exportieren, aber diese Methode ist schneller.  
@@ -41,7 +41,7 @@ HRESULT ExportNestedType(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `AssemblyID`  
  ID der Assembly zum Exportieren aus.  
   

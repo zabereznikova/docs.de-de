@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd5dbc27376f8cd391f9ecc006c04d9a3a1eea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419743"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493582"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next-Methode
-Ruft die angegebene Anzahl von Instanzen ICorDebugProcess aus der Enumeration, beginnend mit der aktuellen Position ab.  
+Ruft die angegebene Anzahl von ICorDebugProcess-Instanzen aus der Enumeration ab, an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `celt`  
  [in] Die Anzahl der `ICorDebugProcess` Instanzen abgerufen werden sollen.  
   
  `processess`  
- [out] Ein Array von Zeigern, die jeweils auf ein `ICorDebugProcess` Objekt, das einen Prozess darstellt.  
+ [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugProcess` -Objekt, das einen Prozess darstellt.  
   
  `pceltFetched`  
- [out] Zeiger auf die Anzahl der `ICorDebugProcess` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist ein.  
+ [out] Zeiger auf die Anzahl der `ICorDebugProcess` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

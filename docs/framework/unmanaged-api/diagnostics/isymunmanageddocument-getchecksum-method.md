@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 406fdfcfc0b6db988b317245aaaa4f4a643b2079
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80cda4c31ca78e0350639df809ec1e9f1dcbbaea
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561399"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498249"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum-Methode
 Ruft die Prüfsumme ab.  
@@ -36,7 +36,7 @@ HRESULT GetCheckSum(
     [out, size_is(cData), length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `cData`  
  [in] Die Länge des Puffers bereitgestellt. durch die `data` Parameter  
   

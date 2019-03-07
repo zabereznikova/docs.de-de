@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 324d8ce19f202cb6e9d0e4378ca61cf2a956d70e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8ccaa1b03ae1afc87eb7b0a66dd517bba8fcf8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648762"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497469"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer-Methode
 Ruft einen Puffer von geeigneter Größe für die Methode an der angegebenen relativen virtuellen Adresse an.  
@@ -38,7 +38,7 @@ HRESULT GetMethodBuffer (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `RVA`  
  [in] Die relative virtuelle Adresse der Methode für den Puffer zurückgegeben werden sollen.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b832ad489c051c3422dc881c5dff31e1726ce9a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45597f6bb5e050f4afc00bd8f2db8116b29b8d4b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531277"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482222"
 ---
 # <a name="ihosttaskgetpriority-method"></a>IHostTask::GetPriority-Methode
 Ruft die Prioritätsebene von der Aufgabe, die vom aktuellen [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) Instanz.  
@@ -35,7 +35,7 @@ HRESULT GetPriority (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pPriority`  
  [out] Ein Zeiger auf eine ganze Zahl, die die Prioritätsebene von der Aufgabe, die vom aktuellen angibt `IHostTask` Instanz.  
   

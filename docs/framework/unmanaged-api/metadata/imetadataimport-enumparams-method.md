@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dadfabf1d2507b2bd719b5b73238bb38c9ae7563
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab5200cbd3a37bba31d52f9934e11aecc88c59c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602428"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502409"
 ---
 # <a name="imetadataimportenumparams-method"></a>IMetaDataImport::EnumParams-Methode
 Zählt ParamDef-Token auf, die die Parameter der Methode darstellen, auf die vom angegebenen MethodDef-Token verwiesen wird.  
@@ -39,7 +39,7 @@ HRESULT EnumParams (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator. Dies muss NULL sein, für den ersten Aufruf dieser Methode.  
   

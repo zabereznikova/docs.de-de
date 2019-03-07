@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e9f5af0a79b36f879b75e331d614edfed7476eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf7480eaa0fa38651d139a2fa9d533b43dbdce1b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509973"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496468"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess-Methode
 Startet einen Prozess und seine primäre Thread unter der Kontrolle des Debuggers.  
@@ -46,7 +46,7 @@ HRESULT CreateProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `lpApplicationName`  
  [in] Zeiger auf eine auf Null endende Zeichenfolge, die angibt, das Modul der gestartete Prozess ausgeführt werden soll. Das Modul wird im Kontext des aufrufenden Prozesses ausgeführt.  
   

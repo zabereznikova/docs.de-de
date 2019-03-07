@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6248bb1e1cc3585a1135d76c31d167958e7b6bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8491f80c1b4340756c00b5540520bd76f0f583a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729797"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486995"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2-Funktion
 Benachrichtigt den Profiler an, die gerade ausgeführte Funktion ist einen Endeaufruf an eine andere Funktion ausführen und enthält Informationen zu den Stapelrahmen.  
@@ -36,7 +36,7 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `funcId`  
  [in] Der Bezeichner der derzeit ausgeführten Funktion, die einen Endeaufruf durchzuführen.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe587f6356eec861c39c9eb0aa0b6476e0b9a232
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3077e0494816a083d97839d66d06b18130e5dac8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407518"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487797"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName-Methode
 Ruft den Namen der Assembly ab, die dies `ICorDebugAssembly` -Instanz darstellt.  
@@ -37,7 +37,7 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `cchName`  
  [in] Die Größe des `szName`-Arrays.  
   
@@ -48,10 +48,10 @@ HRESULT GetName (
  [out] Ein Array, das den Namen speichert.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `GetName` -Methode gibt den vollständigen Pfad und Namen der Assembly zurück.  
+ Die `GetName` Methode gibt den vollständigen Pfad und Namen der Assembly zurück.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 351fa8d1ec144a1861ef152ba6b02d9bbfb78df0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1944b84863cea1cfdc464489640a6f78d476537d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501664"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482521"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted-Methode
 Benachrichtigt den Profiler, dass die Laufzeit gestartet wurde, um eine Funktion zu entladen.  
@@ -34,7 +34,7 @@ HRESULT FunctionUnloadStarted(
     [in] FunctionID functionId);   
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `functionId`  
  [in] Die ID der Funktion, die entladen wird.  
   

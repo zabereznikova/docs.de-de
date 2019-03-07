@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e43485caa0c1dbf989ae12de77ee4e160652942e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e60ce044fc0272fbc9c4a641224bd70ad9faeeae
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502675"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488122"
 ---
 # <a name="imetadatatablesgetnextblob-method"></a>IMetaDataTables::GetNextBlob-Methode
 Ruft den Index des nächsten binary large Object (BLOB) in der Tabelle ab.  
@@ -36,7 +36,7 @@ HRESULT GetNextBlob (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ixBlob`  
  [in] Der Index, wie aus einem BLOB-Spalte zurückgegeben.  
   

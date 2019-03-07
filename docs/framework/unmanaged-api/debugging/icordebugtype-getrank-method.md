@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f112e0d064041a877963939b78029da08bbbed1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 134fe55de71e3d6a9a68249febc4c70f11d4f36f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417653"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482547"
 ---
 # <a name="icordebugtypegetrank-method"></a>ICorDebugType::GetRank-Methode
-Ruft die Anzahl der Dimensionen in einen Arraytyp an.  
+Ruft die Anzahl der Dimensionen im Array-Typ ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ HRESULT GetRank (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pnRank`  
- [out] Ein Zeiger auf die Anzahl von Dimensionen.  
+ [out] Ein Zeiger auf die Anzahl der Dimensionen.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

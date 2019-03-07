@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43a895446e0070476bde3d15d332f010265176e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5848a14a20b63ffbf806bb56886b75360323b698
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515036"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496182"
 ---
 # <a name="imetadataassemblyimportenumfiles-method"></a>IMetaDataAssemblyImport::EnumFiles-Methode
 Listet die Dateien, die in der aktuellen Assemblymanifest verwiesen wird.  
@@ -38,7 +38,7 @@ HRESULT EnumFiles (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator. Dies muss für den ersten Aufruf dieser Methode einen null-Wert sein.  
   

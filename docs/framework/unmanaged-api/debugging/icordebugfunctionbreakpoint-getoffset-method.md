@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aca1d77ace512ca84cda3b6844d214e4c8d6cad7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6253191340c2f2d4f42f47d580b9d923ab3ff041
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412064"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498106"
 ---
 # <a name="icordebugfunctionbreakpointgetoffset-method"></a>ICorDebugFunctionBreakpoint::GetOffset-Methode
-Ruft den Offset des Haltepunkts innerhalb der Funktion ab.  
+Ruft den Offset des Haltepunkts in der Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ HRESULT GetOffset (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pnOffset`  
  [out] Ein Zeiger auf den Offset des Haltepunkts.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: caeb60c33580f7171a6959c3046cf7312868851b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420553"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482859"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains-Methode
 Ruft einen Schnittstellenzeiger auf einem ICorDebugChainEnum-Enumerator, der alle Stapelketten in diesem ICorDebugThread-Objekt enthält.  
@@ -35,25 +35,25 @@ HRESULT EnumerateChains (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppChains`  
- [out] Ein Zeiger auf die Adresse des ein `ICorDebugChainEnum` Objekt, das Enumeration aller ermöglicht, die in diesem Thread, beginnend mit der Kette aktiv (d. h. die aktuellste) verkettet ist.  
+ [out] Ein Zeiger auf die Adresse einer `ICorDebugChainEnum` -Objekt, das ermöglicht die Enumeration des alle-Stapels in diesem Thread, beginnend ab der Kette aktiv (d. h. die aktuellste) verkettet.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Stapelkette stellt die physische Aufrufliste für den Thread dar. Die folgenden Situationen erstellen Stapel Kette Grenze:  
+ Die Stapelkette stellt die physische Aufrufliste für den Thread dar. Die folgenden Situationen erstellen Sie eine Kette-Grenze von Stack:  
   
--   Ein Übergang verwaltet, nicht verwaltete oder nicht verwaltet zu verwaltet.  
+-   Ein Übergang verwalteten zum nicht verwalteten oder nicht verwaltet zu verwaltet.  
   
 -   Ein Wechsel des Ausführungskontexts.  
   
--   Ein debugger Übernahme eines Benutzerthreads.  
+-   Ein debugger-Hijacking eines Benutzerthreads.  
   
- Im einfachen Fall für einen Thread, der ausschließlich verwalteten Code in einem einzigen Kontext ausgeführt wird, wird eine 1: 1-Entsprechung zwischen Threads und Stapelketten vorhanden sein.  
+ Im einfachen Fall für einen Thread, der ausschließlich verwalteten Code in einem einzelnen Kontext ausgeführt wird, wird eine 1: 1-Entsprechung zwischen Threads und Stapelketten vorhanden.  
   
- Ein Debugger möchte die physischen Aufruflisten aller Threads in logischen Aufruflisten neu anzuordnen. Dies würde das Sortieren der Threads Ketten ihre Aufrufer-/Aufgerufener-Beziehungen und liefern ihnen.  
+ Ein Debugger sollten die physischen Aufruflisten aller Threads in logischen Aufruflisten neu anzuordnen. Dies würde betreffen, sortieren die Threads Ketten nach deren Aufrufer-/Aufgerufener-Beziehungen und liefern sie.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

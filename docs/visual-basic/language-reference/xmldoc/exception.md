@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: 157287ce5c85ec51f1711934cf9a5e4f568957ef
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 84cadad8f6e4dfcf276400cf8831520b89728cdc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977178"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498712"
 ---
 # <a name="exception-visual-basic"></a>\<Ausnahme > (Visual Basic)
 Gibt an, welche Ausnahmen ausgelöst werden können.  
@@ -21,7 +21,7 @@ Gibt an, welche Ausnahmen ausgelöst werden können.
 <exception cref="member">description</exception>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `member`  
  Ein Verweis auf eine Ausnahme, die von der aktuellen Kompilierungsumgebung verfügbar ist. Der Compiler prüft, ob die angegebene Ausnahme vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen. `member` muss in doppelte Anführungszeichen (" ") gesetzt werden.  
   

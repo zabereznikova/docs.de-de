@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78bfc91bdd0f9fa68252c6a07e1362807eb507b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ce1e42d74dc611032d941e833bb8f248a56488b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416022"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486251"
 ---
 # <a name="icordebugmodulegetassembly-method"></a>ICorDebugModule::GetAssembly-Methode
-Ruft die enthaltende Assembly für dieses Modul ab.  
+Ruft die übergeordnete Assembly für dieses Modul ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ HRESULT GetAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppAssembly`  
  [out] Ein Zeiger auf ein ICorDebugAssembly-Objekt, das die Assembly mit diesem Modul darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

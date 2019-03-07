@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89e6a6e1d2aa90d4f113364693fb5f1e0399c21d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5aef90fa14dac58a0b38316cd5f64b4ac8c9aa1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745453"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495649"
 ---
 # <a name="ihostsyncmanagercreaterwlockreaderevent-method"></a>IHostSyncManager::CreateRWLockReaderEvent-Methode
 Erstellt ein Ereignis für manuelles Zurücksetzen-Objekt, für die Implementierung der eine Sperre des Lesers.  
@@ -37,7 +37,7 @@ HRESULT CreateRWLockReaderEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `bInitialState`  
  [in] `true`, wenn `ppEvent` signalisiert ist, andernfalls sollte `false`.  
   

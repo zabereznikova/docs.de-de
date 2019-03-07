@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0063e33a6a7861815ebb9d9eb3dabec64dd4b9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 218279684304b766a9bf009f5891ac4910254a3c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419652"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492165"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory-Methode
 Liest einen angegebenen Bereich des Arbeitsspeichers für diesen Prozess.  
@@ -37,9 +37,9 @@ HRESULT ReadMemory(
     [out] SIZE_T *read);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `address`  
- [in] Ein `CORDB_ADDRESS` Wert, der die Basisadresse des Arbeitsspeichers zu lesende angibt.  
+ [in] Ein `CORDB_ADDRESS` Wert, der angibt, die Basisadresse des Arbeitsspeichers, die gelesen werden.  
   
  `size`  
  [in] Die Anzahl der Bytes, die aus dem Arbeitsspeicher gelesen werden.  
@@ -51,14 +51,14 @@ HRESULT ReadMemory(
  [out] Ein Zeiger auf die Anzahl der Bytes, die in den angegebenen Puffer übertragen werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `ReadMemory` -Methode ist hauptsächlich von Interop-Debuggen verwendet werden, um Speicherbereiche zu überprüfen, die durch den nicht verwalteten Teil der zu debuggenden Komponente verwendet werden. Diese Methode kann auch verwendet werden, um Microsoft intermediate Language (MSIL)-Code und den systemeigenen JIT-kompilierten Code lesen.  
+ Die `ReadMemory` Methode dient in erster Linie von interop-Debuggen verwendet werden, um Speicherbereiche zu überprüfen, die durch den nicht verwalteten Teil der zu debuggenden Komponente verwendet werden. Diese Methode kann auch verwendet werden, zum Lesen von Microsoft intermediate Language (MSIL)-Code und das native JIT-kompiliertem Code.  
   
- Alle verwalteten Haltepunkte aus den Daten, die in zurückgegeben werden, entfernt werden die `buffer` Parameter. Ohne Korrekturen durchgeführt werden, für die systemeigene Haltepunkte festlegen, indem Sie [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ Alle verwalteten Haltepunkte aus den Daten, die in zurückgegeben werden, entfernt werden die `buffer` Parameter. Werden keine Anpassungen vorgenommen werden, für native Haltepunkte, indem festlegen [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
- Keine der Prozessspeicher zwischengespeichert.  
+ Kein Zwischenspeichern der Prozessspeicher wird ausgeführt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

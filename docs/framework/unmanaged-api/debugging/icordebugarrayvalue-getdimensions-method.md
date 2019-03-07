@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c341ba3d0164e65cd752baa20f674fe3afc714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a52075f33d594787c516f84b65b3319991380907
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405433"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500370"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions-Methode
-Ruft die Anzahl der Elemente in jeder Dimension dieses Arrays ab.  
+Ruft die Anzahl der Elemente in jeder Dimension dieses Array ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,17 +37,17 @@ HRESULT GetDimensions (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `cdim`  
  [in] Die Anzahl der Dimensionen dieses ICorDebugArrayValue-Objekts.  
   
- Dieser Wert ist auch die Größe der `dims` Arrays, da seine Größe gleich der Anzahl der Dimensionen des ist die `ICorDebugArrayValue` Objekt.  
+ Dieser Wert ist auch die Größe der `dims` Arrays, da seine Größe gleich der Anzahl der Dimensionen ist die `ICorDebugArrayValue` Objekt.  
   
  `dims`  
- [out] Ein Array von Ganzzahlen, von denen jede die Anzahl der Elemente in einer Dimension in dieser gibt `ICorDebugArrayValue` Objekt.  
+ [out] Ein Array von Ganzzahlen, von denen jeder die Anzahl der Elemente in einer Dimension in diesem gibt `ICorDebugArrayValue` Objekt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

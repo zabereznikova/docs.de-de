@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68373e9277a9d87bba6941259588f25a92af90a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6cee275dab33b847bb3a6e9839164615bdaa4a14
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710546"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502578"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes-Methode
 Gibt die Typen, die hinzugefügt werden, auf die Assembly aus. Rufen Sie diese Methode aus, nachdem bekannt, dass die interne Typen hinzugefügt wurden.  
@@ -35,7 +35,7 @@ HRESULT EmitInternalExportedTypes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `AssemblyID`  
  ID der Assembly.  
   

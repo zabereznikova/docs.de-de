@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90c805a5f1f1da990564034fc292562d5f933d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15addd0b35c43945f643386f8983fc14c9312bae
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608088"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492334"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification-Methode
 Stellt die Benachrichtigung, dass die codeausführung einen managed debugging Assistant, Assistent (MDA) in der Anwendung aufgetreten ist, der debuggt wird.  
@@ -37,7 +37,7 @@ HRESULT MDANotification(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pController`  
  [in] Ein Zeiger auf eine ICorDebugController-Schnittstelle, die den Prozess verfügbar macht oder die Anwendungsdomäne, in der der MDA aufgetreten ist.  
   

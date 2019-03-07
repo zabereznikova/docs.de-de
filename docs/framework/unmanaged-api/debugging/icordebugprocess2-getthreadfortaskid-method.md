@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd04e6d8bed86039b6f43985a8fb712b4612f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa1f6852544dddcdf514b14710ade3949818c93e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418349"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487312"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>ICorDebugProcess2::GetThreadForTaskID-Methode
-Ruft den Thread, in dem die Aufgabe mit dem angegebenen Bezeichner ausgeführt wird.  
+Ruft den Thread, der auf dem die Aufgabe mit der angegebenen ID ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,18 +36,18 @@ HRESULT GetThreadForTaskID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `taskid`  
  [in] Der Bezeichner der Aufgabe.  
   
  `ppThread`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugThread2-Objekts, die der Thread darstellt, abgerufen werden soll.  
+ [out] Ein Zeiger auf die Adresse des ICorDebugThread2-Objekts, die der Thread darstellt, abgerufen werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Host kann der Task-ID festlegen, mit der [ICLRTask:: SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) Methode.  
+ Der Host kann die Task-ID festlegen, mit der [ICLRTask:: SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md) Methode.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

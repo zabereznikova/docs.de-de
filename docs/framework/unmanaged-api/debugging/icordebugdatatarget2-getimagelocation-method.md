@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b2d6db83f78cb76181c0b54a8e6f4157e51130b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e382dbadc3acf6ca4bc7cad2ca37d58125a82be2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648835"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488538"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>ICorDebugDataTarget2::GetImageLocation-Methode
 Gibt den Pfad eines Moduls aus der Basisadresse des Moduls zurück.  
@@ -24,7 +24,7 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `baseAddress`  
  [in] Ein [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) -Wert, der Basisadresse des Moduls darstellt.  
   

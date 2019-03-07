@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a6f2e428366d2fe96313879ef1256d7b86ddd29
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527600"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490410"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField-Methode
 Ruft einen Zeiger auf das FieldDef token für das Feld, das eingeschlossen wird durch das angegebene <xref:System.Type> und dem angegebenen Namen und Metadaten aufweist.  
@@ -39,7 +39,7 @@ HRESULT FindField (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `td`  
  [in] Die TypeDef-Token für die Klasse oder Schnittstelle, die zu suchenden Felds einschließt. Wenn dieser Wert ist `mdTokenNil`, wird die Suche für eine globale Variable durchgeführt.  
   

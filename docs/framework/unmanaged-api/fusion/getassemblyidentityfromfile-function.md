@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: feb8e5c56ee6ea766cd5f1d10af42699777db453
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20ea800b86a169eff984b6068db3e9887235a034
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654887"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496975"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile-Funktion
 Ruft einen Zeiger auf ein `IUnknown` Objekt mit dem angegebenen `IID` in der Assembly im angegebenen Dateipfad.  
@@ -38,7 +38,7 @@ HRESULT GetAssemblyIdentityFromFile (
  );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pwzFilePath`  
  [in] Ein gültiger Pfad auf die angeforderte Assembly.  
   

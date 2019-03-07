@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98fac8630403107f96f2fa86e5bcc9b0e60d0d08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bffa383734a96a32595b018fd6d9b3dc62d5526
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737162"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484757"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted-Methode
 Benachrichtigt den Profiler an, dass eine Anwendungsdomäne erstellt wird.  
@@ -34,7 +34,7 @@ HRESULT AppDomainCreationStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `appDomainId`  
  [in] Gibt die Domäne, die erstellt wird.  
   
