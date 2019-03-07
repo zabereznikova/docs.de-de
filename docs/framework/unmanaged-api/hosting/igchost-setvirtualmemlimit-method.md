@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d38b174a7e959647a9c1f5287b8acbbcdaf5ca7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b25e9c738c95a918b79d3fd324787e4aaf3aaa7f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564278"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502474"
 ---
-# <a name="igchostsetvirtualmemlimit-method"></a><span data-ttu-id="75644-102">IGCHost::SetVirtualMemLimit-Methode</span><span class="sxs-lookup"><span data-stu-id="75644-102">IGCHost::SetVirtualMemLimit Method</span></span>
-<span data-ttu-id="75644-103">Legt die maximale Größe des virtuellen Arbeitsspeichers von der Laufzeit fest.</span><span class="sxs-lookup"><span data-stu-id="75644-103">Sets the maximum size of the runtime's virtual memory.</span></span>  
+# <a name="igchostsetvirtualmemlimit-method"></a><span data-ttu-id="8209e-102">IGCHost::SetVirtualMemLimit-Methode</span><span class="sxs-lookup"><span data-stu-id="8209e-102">IGCHost::SetVirtualMemLimit Method</span></span>
+<span data-ttu-id="8209e-103">Legt die maximale Größe des virtuellen Arbeitsspeichers von der Laufzeit fest.</span><span class="sxs-lookup"><span data-stu-id="8209e-103">Sets the maximum size of the runtime's virtual memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="75644-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="75644-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8209e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8209e-104">Syntax</span></span>  
   
 ```  
 HRESULT SetVirtualMemLimit (  
@@ -35,21 +35,21 @@ HRESULT SetVirtualMemLimit (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="75644-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="75644-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8209e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="8209e-105">Parameters</span></span>  
  `sztMaxVirtualMemMB`  
- <span data-ttu-id="75644-106">[in] Die maximale Größe in Megabyte an virtuellem Arbeitsspeicher von der Runtime.</span><span class="sxs-lookup"><span data-stu-id="75644-106">[in] The maximum size, in megabytes, of the runtime's virtual memory.</span></span>  
+ <span data-ttu-id="8209e-106">[in] Die maximale Größe in Megabyte an virtuellem Arbeitsspeicher von der Runtime.</span><span class="sxs-lookup"><span data-stu-id="8209e-106">[in] The maximum size, in megabytes, of the runtime's virtual memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="75644-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="75644-107">Remarks</span></span>  
- <span data-ttu-id="75644-108">Die maximale Größe des virtuellen Arbeitsspeichers von der Runtime kann dynamisch geändert werden.</span><span class="sxs-lookup"><span data-stu-id="75644-108">The maximum size of the runtime's virtual memory can be changed dynamically.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8209e-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8209e-107">Remarks</span></span>  
+ <span data-ttu-id="8209e-108">Die maximale Größe des virtuellen Arbeitsspeichers von der Runtime kann dynamisch geändert werden.</span><span class="sxs-lookup"><span data-stu-id="8209e-108">The maximum size of the runtime's virtual memory can be changed dynamically.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="75644-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="75644-109">Requirements</span></span>  
- <span data-ttu-id="75644-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="75644-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8209e-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8209e-109">Requirements</span></span>  
+ <span data-ttu-id="8209e-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8209e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="75644-111">**Header:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="75644-111">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="8209e-111">**Header:** GCHost.idl, GCHost.h</span><span class="sxs-lookup"><span data-stu-id="8209e-111">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="75644-112">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="75644-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8209e-112">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="8209e-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="75644-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="75644-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8209e-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8209e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="75644-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="75644-114">See also</span></span>
-- [<span data-ttu-id="75644-115">IGCHost-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="75644-115">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8209e-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8209e-114">See also</span></span>
+- [<span data-ttu-id="8209e-115">IGCHost-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8209e-115">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

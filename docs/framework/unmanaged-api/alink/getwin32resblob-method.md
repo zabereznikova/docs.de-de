@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abc5f9350342af0439cb83f1df14979cfabcdb3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 295b150f6881a47b3816a93ac7a20382bc5c20c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601540"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500576"
 ---
-# <a name="getwin32resblob-method"></a><span data-ttu-id="de5d2-102">GetWin32ResBlob-Methode</span><span class="sxs-lookup"><span data-stu-id="de5d2-102">GetWin32ResBlob Method</span></span>
-<span data-ttu-id="de5d2-103">Ruft die Win32-Ressourcen-Blob ab.</span><span class="sxs-lookup"><span data-stu-id="de5d2-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="de5d2-104">Rufen Sie diese Methode nach dem Festlegen von Assemblyoptionen für die an.</span><span class="sxs-lookup"><span data-stu-id="de5d2-104">Call this method after setting assembly options.</span></span>  
+# <a name="getwin32resblob-method"></a><span data-ttu-id="9bd57-102">GetWin32ResBlob-Methode</span><span class="sxs-lookup"><span data-stu-id="9bd57-102">GetWin32ResBlob Method</span></span>
+<span data-ttu-id="9bd57-103">Ruft die Win32-Ressourcen-Blob ab.</span><span class="sxs-lookup"><span data-stu-id="9bd57-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="9bd57-104">Rufen Sie diese Methode nach dem Festlegen von Assemblyoptionen für die an.</span><span class="sxs-lookup"><span data-stu-id="9bd57-104">Call this method after setting assembly options.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de5d2-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="de5d2-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9bd57-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="9bd57-105">Syntax</span></span>  
   
 ```  
 HRESULT GetWin32ResBlob(  
@@ -39,32 +39,32 @@ HRESULT GetWin32ResBlob(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="de5d2-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="de5d2-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9bd57-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="9bd57-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="de5d2-107">Die ID der Assembly.</span><span class="sxs-lookup"><span data-stu-id="de5d2-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="9bd57-107">Die ID der Assembly.</span><span class="sxs-lookup"><span data-stu-id="9bd57-107">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="de5d2-108">Datei-Token verwendet, um den Namen der Datei, die beim Erstellen der Versionsressource der Win32-verwendet werden</span><span class="sxs-lookup"><span data-stu-id="de5d2-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span></span>  
+ <span data-ttu-id="9bd57-108">Datei-Token verwendet, um den Namen der Datei, die beim Erstellen der Versionsressource der Win32-verwendet werden</span><span class="sxs-lookup"><span data-stu-id="9bd57-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span></span>  
   
  `fDll`  
- <span data-ttu-id="de5d2-109">TRUE, wenn die Datei eine DLL, eine EXE-Datei "false" ist.</span><span class="sxs-lookup"><span data-stu-id="de5d2-109">TRUE if file is a DLL, false for an EXE.</span></span>  
+ <span data-ttu-id="9bd57-109">TRUE, wenn die Datei eine DLL, eine EXE-Datei "false" ist.</span><span class="sxs-lookup"><span data-stu-id="9bd57-109">TRUE if file is a DLL, false for an EXE.</span></span>  
   
  `pszIconFile`  
- <span data-ttu-id="de5d2-110">Symbol "optional" zum Einfügen in das Ressourcen-Blob.</span><span class="sxs-lookup"><span data-stu-id="de5d2-110">Optional icon to insert into the resource blob.</span></span>  
+ <span data-ttu-id="9bd57-110">Symbol "optional" zum Einfügen in das Ressourcen-Blob.</span><span class="sxs-lookup"><span data-stu-id="9bd57-110">Optional icon to insert into the resource blob.</span></span>  
   
  `ppResBlob`  
- <span data-ttu-id="de5d2-111">Empfängt die Ressourcen-Blob.</span><span class="sxs-lookup"><span data-stu-id="de5d2-111">Receives the resource blob.</span></span>  
+ <span data-ttu-id="9bd57-111">Empfängt die Ressourcen-Blob.</span><span class="sxs-lookup"><span data-stu-id="9bd57-111">Receives the resource blob.</span></span>  
   
  `pcbResBlob`  
- <span data-ttu-id="de5d2-112">Empfängt die Größe des BLOBs.</span><span class="sxs-lookup"><span data-stu-id="de5d2-112">Receives the size of the blob.</span></span>  
+ <span data-ttu-id="9bd57-112">Empfängt die Größe des BLOBs.</span><span class="sxs-lookup"><span data-stu-id="9bd57-112">Receives the size of the blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="de5d2-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="de5d2-113">Return Value</span></span>  
- <span data-ttu-id="de5d2-114">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="de5d2-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9bd57-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="9bd57-113">Return Value</span></span>  
+ <span data-ttu-id="9bd57-114">Gibt S_OK zurück, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="9bd57-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="de5d2-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="de5d2-115">Requirements</span></span>  
- <span data-ttu-id="de5d2-116">Erfordert alink.h</span><span class="sxs-lookup"><span data-stu-id="de5d2-116">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9bd57-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9bd57-115">Requirements</span></span>  
+ <span data-ttu-id="9bd57-116">Erfordert alink.h</span><span class="sxs-lookup"><span data-stu-id="9bd57-116">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de5d2-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="de5d2-117">See also</span></span>
-- [<span data-ttu-id="de5d2-118">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="de5d2-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="de5d2-119">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="de5d2-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="de5d2-120">Alink-API</span><span class="sxs-lookup"><span data-stu-id="de5d2-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="9bd57-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9bd57-117">See also</span></span>
+- [<span data-ttu-id="9bd57-118">IALink-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9bd57-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="9bd57-119">IALink2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9bd57-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="9bd57-120">Alink-API</span><span class="sxs-lookup"><span data-stu-id="9bd57-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

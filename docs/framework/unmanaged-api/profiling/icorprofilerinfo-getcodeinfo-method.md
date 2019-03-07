@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5004de587f715a2f3958c36999e432d7d6e9f2fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e96a84f9dc96b2eb508034d5277902ff3f328c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632659"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490085"
 ---
-# <a name="icorprofilerinfogetcodeinfo-method"></a><span data-ttu-id="05ed0-102">ICorProfilerInfo::GetCodeInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="05ed0-102">ICorProfilerInfo::GetCodeInfo Method</span></span>
-<span data-ttu-id="05ed0-103">Ruft den Wertebereich des nativen Codes ab, der der angegebenen Funktions-ID zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="05ed0-103">Gets the extent of native code associated with the specified function ID.</span></span>  
+# <a name="icorprofilerinfogetcodeinfo-method"></a><span data-ttu-id="16b9a-102">ICorProfilerInfo::GetCodeInfo-Methode</span><span class="sxs-lookup"><span data-stu-id="16b9a-102">ICorProfilerInfo::GetCodeInfo Method</span></span>
+<span data-ttu-id="16b9a-103">Ruft den Wertebereich des nativen Codes ab, der der angegebenen Funktions-ID zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="16b9a-103">Gets the extent of native code associated with the specified function ID.</span></span>  
   
- <span data-ttu-id="05ed0-104">Diese Methode ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="05ed0-104">This method is obsolete.</span></span> <span data-ttu-id="05ed0-105">Verwenden der [ICorProfilerInfo2:: Getcodeinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) Methode stattdessen.</span><span class="sxs-lookup"><span data-stu-id="05ed0-105">Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.</span></span>  
+ <span data-ttu-id="16b9a-104">Diese Methode ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="16b9a-104">This method is obsolete.</span></span> <span data-ttu-id="16b9a-105">Verwenden der [ICorProfilerInfo2:: Getcodeinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) Methode stattdessen.</span><span class="sxs-lookup"><span data-stu-id="16b9a-105">Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05ed0-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="05ed0-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="16b9a-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="16b9a-106">Syntax</span></span>  
   
 ```  
 HRESULT GetCodeInfo(  
@@ -38,31 +38,31 @@ HRESULT GetCodeInfo(
     [out] ULONG      *pcSize);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="05ed0-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="05ed0-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="16b9a-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="16b9a-107">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="05ed0-108">[in] Die ID der Funktion, der der native Code zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="05ed0-108">[in] The ID of the function with which the native code is associated.</span></span>  
+ <span data-ttu-id="16b9a-108">[in] Die ID der Funktion, der der systemeigene Code zugeordnet ist.</span><span class="sxs-lookup"><span data-stu-id="16b9a-108">[in] The ID of the function with which the native code is associated.</span></span>  
   
  `pStart`  
- <span data-ttu-id="05ed0-109">[out] Ein Zeiger auf ein Array von Bytes, aus denen sich der native Code der Funktion zusammensetzt.</span><span class="sxs-lookup"><span data-stu-id="05ed0-109">[out] A pointer to an array of bytes that compose the native code of the function.</span></span>  
+ <span data-ttu-id="16b9a-109">[out] Ein Zeiger auf ein Array von Bytes, aus denen sich der native Code der Funktion zusammensetzt.</span><span class="sxs-lookup"><span data-stu-id="16b9a-109">[out] A pointer to an array of bytes that compose the native code of the function.</span></span>  
   
  `pcSize`  
- <span data-ttu-id="05ed0-110">[out] Ein Zeiger auf eine ganze Zahl, die die Größe des nativen Codes in Bytes angibt.</span><span class="sxs-lookup"><span data-stu-id="05ed0-110">[out] A pointer to an integer that specifies the size, in bytes, of the native code.</span></span>  
+ <span data-ttu-id="16b9a-110">[out] Ein Zeiger auf eine ganze Zahl, die die Größe des nativen Codes in Bytes angibt.</span><span class="sxs-lookup"><span data-stu-id="16b9a-110">[out] A pointer to an integer that specifies the size, in bytes, of the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="05ed0-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="05ed0-111">Remarks</span></span>  
- <span data-ttu-id="05ed0-112">Zur Leistungsoptimierung teilt die Laufzeit in .NET Framework, Version 2.0, den vorkompilierten nativen Code einer Funktion in mehrere Bereiche auf.</span><span class="sxs-lookup"><span data-stu-id="05ed0-112">To optimize performance, the runtime in the .NET Framework version 2.0 splits the precompiled, native code of a function into multiple regions.</span></span> <span data-ttu-id="05ed0-113">Daher ist die `GetCodeInfo`-Methode in .NET Framework 2.0 veraltet, weil sie den Wertebereich des systemeigenen Codes einer Funktion nicht verarbeiten kann.</span><span class="sxs-lookup"><span data-stu-id="05ed0-113">Consequently, the `GetCodeInfo` method is obsolete in the .NET Framework 2.0 because it is unable to handle the extent of a function's native code.</span></span> <span data-ttu-id="05ed0-114">Profiler sollten stattdessen die allgemeinere `ICorProfilerInfo2::GetCodeInfo2`-Methode verwenden.</span><span class="sxs-lookup"><span data-stu-id="05ed0-114">Profilers should switch to using the more general `ICorProfilerInfo2::GetCodeInfo2` method instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="16b9a-111">Hinweise</span><span class="sxs-lookup"><span data-stu-id="16b9a-111">Remarks</span></span>  
+ <span data-ttu-id="16b9a-112">Zur Leistungsoptimierung teilt die Laufzeit in .NET Framework, Version 2.0, den vorkompilierten nativen Code einer Funktion in mehrere Bereiche auf.</span><span class="sxs-lookup"><span data-stu-id="16b9a-112">To optimize performance, the runtime in the .NET Framework version 2.0 splits the precompiled, native code of a function into multiple regions.</span></span> <span data-ttu-id="16b9a-113">Daher ist die `GetCodeInfo`-Methode in .NET Framework 2.0 veraltet, weil sie den Wertebereich des systemeigenen Codes einer Funktion nicht verarbeiten kann.</span><span class="sxs-lookup"><span data-stu-id="16b9a-113">Consequently, the `GetCodeInfo` method is obsolete in the .NET Framework 2.0 because it is unable to handle the extent of a function's native code.</span></span> <span data-ttu-id="16b9a-114">Profiler sollten stattdessen die allgemeinere `ICorProfilerInfo2::GetCodeInfo2`-Methode verwenden.</span><span class="sxs-lookup"><span data-stu-id="16b9a-114">Profilers should switch to using the more general `ICorProfilerInfo2::GetCodeInfo2` method instead.</span></span>  
   
- <span data-ttu-id="05ed0-115">Diese Funktion verwendet vom Aufrufer reservierte Puffer.</span><span class="sxs-lookup"><span data-stu-id="05ed0-115">This function uses caller-allocated buffers.</span></span>  
+ <span data-ttu-id="16b9a-115">Diese Funktion verwendet vom Aufrufer reservierte Puffer.</span><span class="sxs-lookup"><span data-stu-id="16b9a-115">This function uses caller-allocated buffers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05ed0-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="05ed0-116">Requirements</span></span>  
- <span data-ttu-id="05ed0-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05ed0-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="16b9a-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="16b9a-116">Requirements</span></span>  
+ <span data-ttu-id="16b9a-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="16b9a-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05ed0-118">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="05ed0-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="16b9a-118">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="16b9a-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="05ed0-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05ed0-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="16b9a-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="16b9a-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="05ed0-120">**.NET Framework-Versionen:** 1.0</span><span class="sxs-lookup"><span data-stu-id="05ed0-120">**.NET Framework Versions:** 1.0</span></span>  
+ <span data-ttu-id="16b9a-120">**.NET Framework-Versionen:** 1.0</span><span class="sxs-lookup"><span data-stu-id="16b9a-120">**.NET Framework Versions:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05ed0-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="05ed0-121">See also</span></span>
-- [<span data-ttu-id="05ed0-122">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="05ed0-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="05ed0-123">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="05ed0-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="05ed0-124">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="05ed0-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="16b9a-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="16b9a-121">See also</span></span>
+- [<span data-ttu-id="16b9a-122">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="16b9a-122">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="16b9a-123">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="16b9a-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="16b9a-124">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="16b9a-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
