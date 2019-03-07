@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e832bbb58a08c50d8c2bb37fa0c310ef3133d02c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c177a315a76009b7ac82055cba2d0b23821333b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583636"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494878"
 ---
 # <a name="imetadatatables2getmetadatastorage-method"></a>IMetaDataTables2::GetMetaDataStorage-Methode
 Ruft ab, die Größe und den Inhalt der Metadaten im angegebenen Abschnitt gespeichert.  
@@ -36,7 +36,7 @@ HRESULT GetMetaDataStorage (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppvMd`  
  [in, out] Ein Zeiger auf ein Metadatenabschnitt.  
   

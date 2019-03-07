@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1a29840efa173a6546ca00a9dc437e098d6f2aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 02e051d311e447475bea724b0bd7420ee8b590f6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423389"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495727"
 ---
 # <a name="icordebugprocessenumerateappdomains-method"></a>ICorDebugProcess::EnumerateAppDomains-Methode
-Listet alle Anwendungsdomänen in diesem Prozess auf.  
+Listet alle Anwendungsdomänen in diesem Prozess.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,15 +34,15 @@ HRESULT EnumerateAppDomains(
     [out] ICorDebugAppDomainEnum **ppAppDomains);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppAppDomains`  
- [out] Ein Zeiger auf die Adresse des ein [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) also einen Enumerator für die Anwendungsdomänen in diesem Prozess.  
+ [out] Ein Zeiger auf die Adresse einer [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) , einen Enumerator für die Anwendungsdomänen in diesem Prozess.  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Methode kann verwendet werden, bevor die [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) Rückruf.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

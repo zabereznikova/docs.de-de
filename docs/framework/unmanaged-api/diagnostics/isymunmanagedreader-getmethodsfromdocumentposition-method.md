@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f55c8986d2efc78b6fcd2840bad588af84228017
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f15e4c9b2421b9d2cafdbabf5f9ca12d1b8b9493
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492699"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodsFromDocumentPosition-Methode
 Gibt ein Array der Methoden, von denen jede den Haltepunkt an der angegebenen Position in einem Dokument enthält.  
@@ -40,7 +40,7 @@ HRESULT GetMethodsFromDocumentPosition (
         length_is (*pcMethod)] ISymUnmanagedMethod* pRetVal[]);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `document`  
  [in] Das angegebene Dokument.  
   

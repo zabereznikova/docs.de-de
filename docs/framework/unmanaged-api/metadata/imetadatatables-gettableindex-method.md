@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de857f251bd03b4b2d3fabf458275251440a2113
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5300174b071fee257f5db85aeb763e11668971a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741794"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497027"
 ---
 # <a name="imetadatatablesgettableindex-method"></a>IMetaDataTables::GetTableIndex-Methode
 Ruft den Index für die Tabelle, die durch das angegebene Token verwiesen wird.  
@@ -36,7 +36,7 @@ HRESULT GetTableIndex (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `token`  
  [in] Das Token, das die Tabelle verweist.  
   

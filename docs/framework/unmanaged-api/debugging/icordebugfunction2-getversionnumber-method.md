@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fdd2151c4886959647de4f9e27a20a93ffc07429
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cc9c2af62184c83857b82445941f6087a05c2c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420052"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497170"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a>ICorDebugFunction2::GetVersionNumber-Methode
-Ruft die Version dieser Funktion bearbeiten und fortfahren.  
+Ruft die bearbeiten und Fortfahren-Version dieser Funktion.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,21 +35,21 @@ HRESULT GetVersionNumber (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pnVersion`  
  [out] Ein Zeiger auf eine ganze Zahl, die Versionsnummer der Funktion, die von diesem ICorDebugFunction2-Objekt dargestellt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Common Language Runtime behält den Überblick über der Anzahl der Änderungen, die jedes Modul während einer Debugsitzung stattgefunden haben. Die Versionsnummer einer Funktion ist eine weitere als die Anzahl der Bearbeitung, die die Funktion eingeführt wurde. Ursprüngliche Version der Funktion ist die Version 1. Die Zahl ist für ein Modul jedes Mal inkrementiert [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md) für dieses Modul aufgerufen wird. Daher, wenn eine Funktion Text in der ersten und dritten Aufruf von ersetzt wurde `ICorDebugModule2::ApplyChanges`, `GetVersionNumber` gelegten Version 1, 2 oder 4 für diese Funktion, jedoch nicht Version 3. (Diese Funktion müssten keine Version 3.)  
+ Der Common Language Runtime behält den Überblick über die Anzahl der Änderungen, die jedes Modul während einer Debugsitzung stattgefunden haben. Die Versionsnummer einer Funktion ist eine mehr als die Anzahl der Bearbeitung, die die Funktion eingeführt. Ursprüngliche Version der Funktion ist die Version 1. Jedes Mal die Anzahl für ein Modul erhöht [ICorDebugModule2:: ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md) für das Modul aufgerufen wird. Daher, wenn in der ersten und dritten Aufruf einer Funktion Text ersetzt wurde `ICorDebugModule2::ApplyChanges`, `GetVersionNumber` möglicherweise Version 1, 2 oder 4 für diese Funktion, jedoch nicht Version 3 zurück. (Diese Funktion müssten keine Version 3.)  
   
- Die Versionsnummer wird für jedes Modul separat nachverfolgt. Also wenn vier Bearbeitungen für 1-Modul und keinen für Module2 ausgeführt wird, wird die nächste Bearbeitung auf Modul1 eine Versionsnummer von 6 die bearbeiteten Funktionen im Modul1 zuweisen. Wenn die gleiche Module2 Bearbeitungsvorgang, erhalten die Funktionen im Module2 eine Versionsnummer von 2.  
+ Die Versionsnummer wird für jedes Modul separat nachverfolgt. Also wenn Sie vier Änderungen auf die Modul1 und keine in Module2 ausführen, wird die nächste Bearbeitung Modul 1 eine Versionsnummer von 6 alle bearbeiteten Funktionen im Modul1 zuweisen. Wenn es sich bei dem Bearbeitungsvorgang Module2, erhalten die Funktionen im Module2 eine Versionsnummer von 2.  
   
- Die Versionsnummer zu erhalten, indem die `GetVersionNumber` Methode ist möglicherweise niedriger als die von [ICorDebugFunction:: GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md).  
+ Die Versionsnummer abgerufen, indem die `GetVersionNumber` Methode ist möglicherweise niedriger als die von [ICorDebugFunction:: GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md).  
   
- Die [ICorDebugCode:: GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) -Methode führt den gleichen Vorgang als `ICorDebugFunction2::GetVersionNumber`.  
+ Die [ICorDebugCode:: GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md) Methode führt den gleichen Vorgang wie `ICorDebugFunction2::GetVersionNumber`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

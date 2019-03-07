@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373197"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488837"
 ---
 # <a name="control-styles-and-templates"></a>Steuerelementformate und -vorlagen
 Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xref:System.Windows.Controls.ControlTemplate> , die die visuelle Struktur des Steuerelements enthält. Sie können die Struktur und Darstellung eines Steuerelements ändern, durch Ändern der <xref:System.Windows.Controls.ControlTemplate> des Steuerelements. Es gibt keine Möglichkeit, nur einen Teil der visuellen Struktur eines Steuerelements zu ersetzen; um die visuelle Struktur eines Steuerelements zu ändern, Sie festlegen müssen, die <xref:System.Windows.Controls.Control.Template%2A> Eigenschaft des Steuerelements auf dessen neues und vollständiges <xref:System.Windows.Controls.ControlTemplate>.  
@@ -50,18 +50,18 @@ Steuerelemente in Windows Presentation Foundation (WPF) verfügen über eine <xr
  [ListView-Stile und -Vorlagen](listview-styles-and-templates.md)  
  [Menu-Stile und -Vorlagen](menu-styles-and-templates.md)  
  [NavigationWindow-Stile und -Vorlagen](navigationwindow-styles-and-templates.md)  
- [PasswordBox-Stile und-Vorlagen](passwordbox-syles-and-templates.md)  
+ [PasswordBox-Stile und-Vorlagen](passwordbox-styles-and-templates.md)  
  [ProgressBar-Stile und -Vorlagen](progressbar-styles-and-templates.md)  
  [RadioButton-Stile und -Vorlagen](radiobutton-styles-and-templates.md)  
- [RepeatButton-Stile und-Vorlagen](repeatbutton-syles-and-templates.md)  
+ [RepeatButton-Stile und-Vorlagen](repeatbutton-styles-and-templates.md)  
  [ScrollBar-Stile und -Vorlagen](scrollbar-styles-and-templates.md)  
  [ScrollViewer-Stile und -Vorlagen](scrollviewer-styles-and-templates.md)  
  [Slider-Stile und -Vorlagen](slider-styles-and-templates.md)  
  [StatusBar-Stile und -Vorlagen](statusbar-styles-and-templates.md)  
  [TabControl-Stile und -Vorlagen](tabcontrol-styles-and-templates.md)  
  [TextBox-Stile und -Vorlagen](textbox-styles-and-templates.md)  
- [Thumb-Stile und-Vorlagen](thumb-syles-and-templates.md)  
- [ToggleButton-Stile und-Vorlagen](togglebutton-syles-and-templates.md)  
+ [Thumb-Stile und-Vorlagen](thumb-styles-and-templates.md)  
+ [ToggleButton-Stile und-Vorlagen](togglebutton-styles-and-templates.md)  
  [ToolBar-Stile und -Vorlagen](toolbar-styles-and-templates.md)  
  [ToolTip-Stile und -Vorlagen](tooltip-styles-and-templates.md)  
  [TreeView-Stile und -Vorlagen](treeview-styles-and-templates.md)  

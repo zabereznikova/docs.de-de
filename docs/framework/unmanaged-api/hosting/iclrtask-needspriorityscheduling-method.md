@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2a26e32040f705fd46f9d9d8909fd47e963baa8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5d061227e4094c96f14bd8f4f3e80e869b838a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510780"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487154"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling-Methode
 Ruft einen Wert, der angibt, ob die aktuelle Aufgabe, die ausgelagert werden wird, muss eine hohe Priorität für die durch das erneute Planen markiert sein.  
@@ -35,7 +35,7 @@ HRESULT NeedsPriorityScheduling (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pbNeedsPriorityRescheduling`  
  [out] `true`, wenn der Host erfolgen, die aktuelle Aufgabeninstanz erneut zu planen, so bald wie möglich ist, andernfalls soll `false`.  
   

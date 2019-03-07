@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: e3b4ee9a1bfcc2132d3e9e1239ff2c8f7158e513
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de80feecda1268f3899f73c52727372452a2d366
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966761"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502630"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType-Operator (Visual Basic)
 Gibt eine <xref:System.Type> Objekt für den angegebenen Typ. Die <xref:System.Type> Objekt enthält Informationen über die Art, wie z. B. die Eigenschaften, Methoden und Ereignisse.  
@@ -23,7 +23,7 @@ Gibt eine <xref:System.Type> Objekt für den angegebenen Typ. Die <xref:System.T
 GetType(typename)  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
   
 |Parameter|Beschreibung|  
 |---|---|  

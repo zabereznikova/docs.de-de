@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fe29b3e35d2fbd42fac2d9ec1d1c594abe1239c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0d992ea86b3221af222bb01f1985fe277cea5a2c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411157"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480051"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive-Methode
-Ruft einen Wert, der angibt, ob dieses Objekt ICorDebugEval gerade ausgeführt wird.  
+Ruft einen Wert, der angibt, ob dieses ICorDebugEval Objekt gerade ausgeführt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pbActive`  
  [out] Zeiger auf einen Wert, der angibt, ob diese Auswertung aktiv ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 668c7298a9543cce93cce324672334c9ec1e8cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6237951b7fab013a32a7e717215cacdbe1125b1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732816"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493705"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods-Methode
 Zählt MethodDef-Token auf, die Methoden des angegebenen Typs darstellen.  
@@ -39,7 +39,7 @@ HRESULT EnumMethods (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator. Dies muss NULL sein, für den ersten Aufruf dieser Methode.  
   

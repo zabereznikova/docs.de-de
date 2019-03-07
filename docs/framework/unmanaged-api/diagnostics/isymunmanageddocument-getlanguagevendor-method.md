@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b73c9d6fa802a90e59345eb477bccfe80cf2275e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25797822fc147c973ee06a52669aa9bf3c25422e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704929"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496247"
 ---
 # <a name="isymunmanageddocumentgetlanguagevendor-method"></a>ISymUnmanagedDocument::GetLanguageVendor-Methode
 Ruft den Compilerhersteller des in diesem Dokument ab.  
@@ -34,7 +34,7 @@ HRESULT GetLanguageVendor(
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pRetVal`  
  [out] Ein Zeiger auf eine Variable, die den Compilerhersteller empfängt.  
   

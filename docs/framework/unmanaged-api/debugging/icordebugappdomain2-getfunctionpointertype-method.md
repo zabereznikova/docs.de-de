@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d497fd8e659a24add25df63c4ce48e710dcb0c6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec1a9968dbec10783c6f1383fb523e95ff79561e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403792"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489747"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType-Methode
 Ruft einen Zeiger auf eine Funktion, die einer bestimmten Signatur ab.  
@@ -37,18 +37,18 @@ HRESULT GetFunctionPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `nTypeArgs`  
  [in] Die Anzahl der Argumente des Typs für die Funktion.  
   
  `ppTypeArgs`  
- [in] Ein Array von Zeigern, von denen jedes auf ein ICorDebugType verweist, die ein Type-Argument der Funktion darstellt. Das erste Element ist der Rückgabetyp; jedes andere Element ist ein Parameter.  
+ [in] Ein Array von Zeigern, von denen jeder zu einem ICorDebugType-Objekt verweist, die ein Argument vom Typ der Funktion darstellt. Das erste Element ist der Rückgabetyp ein; jedes andere Element ist ein Parameter.  
   
  `ppType`  
- [out] Ein Zeiger auf die Adresse des ein `ICorDebugType` -Objekt, das der Zeiger auf die Funktion darstellt.  
+ [out] Ein Zeiger auf die Adresse einer `ICorDebugType` -Objekt, das den Zeiger auf die Funktion darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

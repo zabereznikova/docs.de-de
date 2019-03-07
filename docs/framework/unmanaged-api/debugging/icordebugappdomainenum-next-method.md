@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84ca240f937e210846e6eb9a17abfe70a280b87d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fefc933cc84fede1f3dea16d4b13e09801a96e0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403555"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497352"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>ICorDebugAppDomainEnum::Next-Methode
-Ruft die angegebene Anzahl von Anwendungsdomänen aus der Auflistung, beginnend mit der aktuellen Cursorposition ab.  
+Ruft die angegebene Anzahl von Anwendungsdomänen aus der Auflistung, beginnend ab der aktuellen Cursorposition ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `celt`  
- [in] Die Anzahl der Anwendungsdomänen abgerufen werden sollen.  
+ [in] Die Anzahl von Anwendungsdomänen abgerufen werden sollen.  
   
  `values`  
- [out] Ein Array von Zeigern, von denen jedes auf ein ICorDebugAppDomain-Objekt verweist, der eine Anwendungsdomäne darstellt.  
+ [out] Ein Array von Zeigern, von denen jeder zu einem ICorDebugAppDomain-Objekt verweist, die eine Anwendungsdomäne darstellt.  
   
  `pceltFetched`  
- [out] Ein Zeiger auf die Anzahl der tatsächlich zurückgegebenen Anwendungsdomänen. Dieser Wert kann null sein, wenn `celt` ist ein.  
+ [out] Ein Zeiger auf die Anzahl von Anwendungsdomänen, die tatsächlich zurückgegeben werden soll. Dieser Wert kann null sein, wenn `celt` ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

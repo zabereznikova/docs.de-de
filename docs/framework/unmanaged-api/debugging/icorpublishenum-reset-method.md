@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae6ee287778fba00114a4a8cbdbbf475d0affa18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad3f65b559b30be0c619930ed35ddf1d6a251045
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740428"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482651"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset-Methode
 Verschiebt den Cursor auf den Anfang der Enumeration.  
@@ -33,7 +33,7 @@ Verschiebt den Cursor auf den Anfang der Enumeration.
 HRESULT Reset ();  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `Reset` nimmt keine Parameter.  
   
 ## <a name="requirements"></a>Anforderungen  

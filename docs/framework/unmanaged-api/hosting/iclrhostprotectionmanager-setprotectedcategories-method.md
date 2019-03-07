@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e34c14ce9f063653c9d0018733f93e398641355
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 642d807fe7cb0cadb4d6fc5d8c390bf83f65d165
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569848"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496299"
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a>ICLRHostProtectionManager::SetProtectedCategories-Methode
 Gibt an, welche Kategorien von verwalteten Typen und Membern ausführen in teilweise vertrauenswürdigen Code blockiert werden soll.  
@@ -35,7 +35,7 @@ HRESULT SetProtectedCategories (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `categories`  
  [in] Eine Kombination von [EApiCategories](../../../../docs/framework/unmanaged-api/hosting/eapicategories-enumeration.md) Werte, der angibt, welche Kategorien von verwalteten Typen und Membern ausführen in teilweise vertrauenswürdigen Code blockiert werden soll.  
   

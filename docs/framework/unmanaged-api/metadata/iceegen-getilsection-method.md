@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e75f46d73e068c6bdaac6ae01740ecf589c97d42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e9d71edc580591b698ad039f8ee73e49c4e1d6a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635909"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489045"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection-Methode
 Ruft ab, der Teil der Zwischensprache Codebasis auf das angegebene Handle verweist.  
@@ -37,7 +37,7 @@ HRESULT GetIlSection (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `section`  
  [in] Das Handle für den Abschnitt zu erhalten.  
   
