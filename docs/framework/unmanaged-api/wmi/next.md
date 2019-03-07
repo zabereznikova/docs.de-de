@@ -1,6 +1,6 @@
 ---
 title: Die Next-Funktion (Referenz zur nicht verwalteten API)
-description: Die nächste Funktion Retireves die nächste Eigenschaft in einer Enumeration.
+description: Die nächste Funktion ruft die nächste Eigenschaft in einer Enumeration ab.
 ms.date: 11/06/2017
 api_name:
 - Next
@@ -16,54 +16,54 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c6e39c1bc4c2860e400e2708e588416eb5769bd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 240544330fa352cbfdc01944e4be6bcad28dc96f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971883"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373196"
 ---
 # <a name="next-function"></a>Die Next-Funktion
-Ruft die nächste Eigenschaft in einer Enumeration, die mit einem Aufruf von beginnt [BeginEnumeration](beginenumeration.md).  
+Ruft die nächste Eigenschaft in einer Enumeration, die mit einem Aufruf von beginnt [BeginEnumeration](beginenumeration.md).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>Syntax  
-  
-```  
+
+## <a name="syntax"></a>Syntax
+
+```cpp
 HRESULT Next (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LONG              lFlags,
    [out] BSTR*            pstrName,
    [out] VARIANT*         pVal,
    [out] CIMTYPE*         pvtType,
-   [out] LONG*            plFlavor     
-); 
-```  
+   [out] LONG*            plFlavor
+);
+```
 
 ## <a name="parameters"></a>Parameter
 
-`vFunc`  
+`vFunc`\
 [in] Dieser Parameter wird nicht verwendet.
 
-`ptr`  
+`ptr`\
 [in] Ein Zeiger auf ein [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) Instanz.
 
-`lFlags`  
+`lFlags`\
 [in]: Reserviert Dieser Parameter muss 0 sein.
 
-`pstrName`  
+`pstrName`\
 [out] Ein neues `BSTR` , die den Eigenschaftsnamen enthält. Sie können diesen Parameter festlegen, um `null` Wenn der Name nicht erforderlich ist.
 
-`pVal`  
-[out] Ein `VARIANT` mit dem Wert der Eigenschaft gefüllt. Sie können diesen Parameter festlegen, um `null` Wenn der Wert nicht erforderlich ist. Wenn die Funktion einen Fehlercode zurückgibt. die `VARIANT` übergeben `pVal` wird links unverändert. 
+`pVal`\
+[out] Ein `VARIANT` mit dem Wert der Eigenschaft gefüllt. Sie können diesen Parameter festlegen, um `null` Wenn der Wert nicht erforderlich ist. Wenn die Funktion einen Fehlercode zurückgibt. die `VARIANT` übergeben `pVal` wird links unverändert.
 
-`pvtType`  
-[out] Ein Zeiger auf eine `CIMTYPE` Variable (eine `LONG` in dem der Typ der Eigenschaft befindet). Der Wert dieser Eigenschaft kann sein ein `VT_NULL_VARIANT`, in diesem Fall ist es erforderlich, um zu bestimmen, den tatsächlichen Typ der Eigenschaft. Dieser Parameter kann auch sein `null`. 
+`pvtType`\
+[out] Ein Zeiger auf eine `CIMTYPE` Variable (eine `LONG` in dem der Typ der Eigenschaft befindet). Der Wert dieser Eigenschaft kann sein ein `VT_NULL_VARIANT`, in diesem Fall ist es erforderlich, um zu bestimmen, den tatsächlichen Typ der Eigenschaft. Dieser Parameter kann auch sein `null`.
 
-`plFlavor`  
-[out] `null`, oder ein Wert, der Informationen auf den Ursprung der Eigenschaft empfängt. Finden Sie im Abschnitt "[" Hinweise "]" für die möglichen Werte. 
+`plFlavor`\
+[out] `null`, oder ein Wert, der Informationen auf den Ursprung der Eigenschaft empfängt. Finden Sie im Abschnitt "[" Hinweise "]" für die möglichen Werte.
 
 ## <a name="return-value"></a>Rückgabewert
 
@@ -78,7 +78,7 @@ Die folgenden Werte, die von dieser Funktion zurückgegebenen werden definiert, 
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Der Remoteprozeduraufruf zwischen dem aktuellen Prozess und die Windows-Verwaltung ist fehlgeschlagen. |
 | `WBEM_S_NO_ERROR` | 0 | Der Funktionsaufruf war erfolgreich.  |
 | `WBEM_S_NO_MORE_DATA` | 0x40005 | Es gibt keine weiteren Eigenschaften in der Enumeration. |
-  
+
 ## <a name="remarks"></a>Hinweise
 
 Diese Funktion umschließt einen Aufruf der [IWbemClassObject::Next](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-next) Methode.
@@ -95,12 +95,14 @@ Wenn `plFlavor` nicht `null`, `LONG` Wert empfängt Informationen über den Ursp
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Für eine Klasse: Die Eigenschaft wird von der übergeordneten Klasse geerbt. <br> Für eine Instanz: Die Eigenschaft wurde während der von der übergeordneten Klasse geerbt nicht von der Instanz geändert.  |
 | `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Für eine Klasse: Die Eigenschaft gehört der abgeleiteten Klasse. <br> Für eine Instanz: Die Eigenschaft wird von der Instanz geändert werden. d. h. ein Wert angegeben wurde, oder ein Qualifizierer hinzugefügt oder geändert wurde. |
 
-## <a name="requirements"></a>Anforderungen  
- **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-  
- **Header:** WMINet_Utils.idl  
-  
- **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>Anforderungen
+
+**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+
+**Header:** WMINet_Utils.idl
+
+**.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

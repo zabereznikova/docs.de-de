@@ -2,18 +2,13 @@
 title: Arrays in Visual Basic
 ms.date: 12/06/2017
 f1_keywords:
-- vb.Array
+  - vb.Array
 helpviewer_keywords:
-- arrays [Visual Basic]
-- Visual Basic, arrays
+  - 'arrays [Visual Basic]'
+  - 'Visual Basic, arrays'
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149899"
 ---
+
 # <a name="arrays-in-visual-basic"></a>Arrays in Visual Basic
 
 Ein Array ist ein Satz von Werten, die bezeichnet *Elemente*, die logisch miteinander verknüpft sind. Ein Array kann z. B. die Anzahl der Schüler/Studenten in jeder Jahrgangsstufe einer Grundschule bestehen; jedes Element des Arrays ist die Anzahl der Schüler/Studenten in eine einzelne Grade-Eigenschaft. Auf ähnliche Weise kann ein Array aus einem Noten für eine Klasse bestehen; jedes Element des Arrays ist eine einzelne Grade-Eigenschaft.
@@ -87,7 +82,7 @@ Sie können die Größe eines Arrays auf verschiedene Arten definieren:
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-Wenn Sie ein vorhandenes Array verfügen, können Sie seine Größe umdefinieren, mit der [ `Redim` ](../../../language-reference/statements/redim-statement.md) Anweisung. Sie können angeben, die `Redim` Anweisung behalten Sie die Werte, die im Array sind, oder Sie können angeben, dass es sich um ein leeres Array erstellt. Im folgenden Beispiel werden andere Möglichkeiten veranschaulicht, um mit der `Redim` -Anweisung die Größe eines vorhandenen Arrays zu ändern.
+Wenn Sie ein vorhandenes Array verfügen, können Sie seine Größe umdefinieren, mit der [ `ReDim` ](../../../language-reference/statements/redim-statement.md) Anweisung. Sie können angeben, die `ReDim` Anweisung behalten Sie die Werte, die im Array sind, oder Sie können angeben, dass es sich um ein leeres Array erstellt. Im folgenden Beispiel werden andere Möglichkeiten veranschaulicht, um mit der `ReDim` -Anweisung die Größe eines vorhandenen Arrays zu ändern.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
@@ -209,7 +204,7 @@ Im folgenden Beispiel wird ein Array von Monaten, von denen jedes Element ein Ar
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-Im vorherige Beispiel weist die Werte in das verzweigte Array auf Basis von Elementen mit einem `For...Next` Schleife. Sie können auch die Elemente eines verzweigten Arrays Werte zuweisen, mit geschachtelten Arrayliteralen. Der Versuch, verwenden jedoch geschachtelte array-Literale (z. B. ```Dim valuesjagged = {{1, 2}, {2, 3, 4}}```) generiert den Compilerfehler [BC30568](../../../,,/../misc/bc30568.md). Schließen Sie die inneren Arrayliterale in Klammern, um den Fehler zu beheben. Die Klammern Erzwingen der Array-literale-Ausdruck ausgewertet werden soll, und die resultierenden Werte werden mit dem äußeren Arrayliteral verwendet, wie im folgende Beispiel gezeigt.
+Im vorherige Beispiel weist die Werte in das verzweigte Array auf Basis von Elementen mit einem `For...Next` Schleife. Sie können auch die Elemente eines verzweigten Arrays Werte zuweisen, mit geschachtelten Arrayliteralen. Der Versuch, verwenden jedoch geschachtelte array-Literale (z. B. `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) generiert den Compilerfehler [BC30568](../../../,,/../misc/bc30568.md). Schließen Sie die inneren Arrayliterale in Klammern, um den Fehler zu beheben. Die Klammern Erzwingen der Array-literale-Ausdruck ausgewertet werden soll, und die resultierenden Werte werden mit dem äußeren Arrayliteral verwendet, wie im folgende Beispiel gezeigt.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
@@ -269,7 +264,7 @@ Sie können auch eine Reihe von Arrays in einem einzigen größeren Array kombin
 > [!NOTE]
 > Verknüpfen ein Array von Zeichenfolgen in einer einzelnen Zeichenfolge erörtert in diesem Abschnitt nicht. Informationen zum Verknüpfen mit einem Array von Zeichenfolgen finden Sie in der <xref:System.String.Join%2A?displayProperty=nameWithType> Methode.
 
-Bevor Sie die Elemente der einzelnen Arrays in das neue Array kopieren, müssen Sie zunächst sicherstellen, dass Sie das Array initialisiert haben, sodass sie groß genug, um Accompodate das neue Array ist. Dazu haben Sie zwei Möglichkeiten:
+Bevor Sie die Elemente der einzelnen Arrays in das neue Array kopieren, müssen Sie zunächst sicherstellen, dass Sie das Array initialisiert haben, sodass sie groß genug für das neue Array ist. Dazu haben Sie zwei Möglichkeiten:
 
 - Verwenden der [ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md) Anweisung, um das Array dynamisch zu erweitern, bevor Sie neue Elemente hinzugefügt wird. Dies ist das einfachste Verfahren, aber es kann in eine Verringerung der Leistung und eine zu hohe speicherauslastung führen, wenn Sie beim Kopieren großer Arrays.
 - Berechnen Sie die Gesamtanzahl der Elemente, die erforderlich sind, für das neue große Array zu, und fügen Sie die Elemente von jeder Quellarray hinzu.
@@ -299,9 +294,9 @@ Weitere Informationen über Auflistungen finden Sie unter [Auflistungen](../../c
 |Begriff|Definition|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|Erläutert Rang und Dimensionen in Arrays.|
-|[So wird es gemacht: Initialisieren einer Arrayvariablen in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Beschreibt das Auffüllen von Arrays mit Anfangswerten.|
-|[So wird es gemacht: Sortieren eines Arrays in Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Erläutert, wie die Elemente eines Arrays alphabetisch sortiert werden.|
-|[So wird es gemacht: Zuweisen eines Arrays zu einem anderen Array](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Beschreibt die Regeln und Schritte zum Zuweisen eines Arrays an eine andere Arrayvariable.|
+|[Vorgehensweise: Initialisieren einer Arrayvariablen in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Beschreibt das Auffüllen von Arrays mit Anfangswerten.|
+|[Vorgehensweise: Sortieren eines Arrays in Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Erläutert, wie die Elemente eines Arrays alphabetisch sortiert werden.|
+|[Vorgehensweise: Zuweisen eines Arrays zu einem anderen Array](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Beschreibt die Regeln und Schritte zum Zuweisen eines Arrays an eine andere Arrayvariable.|
 |[Problembehandlung bei Arrays](../../language-features/arrays/troubleshooting-arrays.md)|Erörtert einige allgemeine Probleme, die beim Arbeiten mit Arrays auftreten.|
 
 ## <a name="see-also"></a>Siehe auch
