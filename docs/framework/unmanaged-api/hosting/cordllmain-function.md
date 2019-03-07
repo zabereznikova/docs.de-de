@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f62ad2c9ec6e1c9672ac5c78e838e926b02359f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c529e77cad16f0bde12e34491829b58add17aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512371"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500379"
 ---
 # <a name="cordllmain-function"></a>_CorDllMain-Funktion
 Initialisiert die common Language Runtime (CLR), sucht den verwalteten Einstiegspunkt im CLR-Header der DLL-Assembly und startet die Ausführung.  
@@ -36,7 +36,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `hInst`  
  [in] Der Instanzhandle des geladenen Moduls.  
   
@@ -54,7 +54,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
  Vom Ladeprogramm des Betriebssystems ruft diese Methode unabhängig von der Einstiegspunkt in die DLL-Datei angegeben.  
   
- In Windows 98, Windows ME, Windows NT und Windows 2000 die `_CorDllMain` Funktion wird aufgerufen, indirekt über eine Fixupin vom Ladeprogramm des Betriebssystems. In allen anderen Versionen von Windows spricht man direkt vom Ladeprogramm Betriebssystems.  
+Die `_CorDllMain` Funktion direkt vom Ladeprogramm Betriebssystems aufgerufen wird.
   
  Weitere Informationen finden Sie im Abschnitt "Hinweise" in der [_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) Thema.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 885871f3e6b3f10bfb7d660e2d6889e243ef751b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e18c035060b8d5b38649011597d35d75fa2d8ef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734363"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497183"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery-Methode
 Dient als ein logischer Wrapper für die entsprechenden Win32-Funktion. Die Win32-Implementierung von `VirtualQuery` Ruft Informationen über einen Bereich von Seiten im virtuellen Adressraum des aufrufenden Prozesses ab.  
@@ -38,7 +38,7 @@ HRESULT VirtualQuery (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `lpAddress`  
  [in] Ein Zeiger auf die Adresse im virtuellen Speicher abgefragt werden.  
   

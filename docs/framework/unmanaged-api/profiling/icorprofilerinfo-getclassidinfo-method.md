@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97465b5d39b3f6adbb6bccfc7b478ddad97066fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30c57130c2ea504cc94cfed9cdf99077b9a897f0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563729"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492945"
 ---
 # <a name="icorprofilerinfogetclassidinfo-method"></a>ICorProfilerInfo::GetClassIDInfo-Methode
 Ruft das übergeordnete Modul und das Metadatentoken für die angegebene Klasse ab.  
@@ -36,7 +36,7 @@ HRESULT GetClassIDInfo(
     [out] mdTypeDef *pTypeDefToken);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `classId`  
  [in] Die ID der Klasse für den die Informationen abgerufen werden soll.  
   

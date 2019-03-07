@@ -16,14 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bae50f695de81856d4fddcb2af3d1188d896642
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496390"
 ---
 # <a name="guidmanagedname-attribute"></a>GUID_ManagedName-Attribut
-Definiert eine benutzerdefinierte Schnittstelle-Attribut, das Namen des verwalteten Namespaces für eine Komponente-Objektbibliothek Model (COM) angibt.  
+Definiert eine benutzerdefinierte Schnittstelle-Attribut, das Namen des verwalteten Namespaces für eine Komponente Objekt Model (COM)-Bibliothek angibt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,9 +34,9 @@ Definiert eine benutzerdefinierte Schnittstelle-Attribut, das Namen des verwalte
 ]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `value`  
- Der Name der verwalteten Namespace für die Bibliothek.  
+ Der verwaltete Namespace-Name für die Bibliothek.  
   
 ## <a name="definition"></a>Definition  
  `GUID_ManagedName` wird in Cor.h wie folgt definiert:  
@@ -46,11 +47,11 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
 ```  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Attribut für die benutzerdefinierte Schnittstelle definiert die Metadaten für ein Objekt in der Typbibliothek.  
+ Eine benutzerdefinierte Schnittstelle-Attribut definiert die Metadaten für ein Objekt in der Typbibliothek.  
   
- Verwendung <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> oder <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> zum Abrufen der verwaltete Name des Attributs.  
+ Verwendung <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> oder <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> der verwaltete Name des Attributs abrufen.  
   
- Weitere Informationen finden Sie unter [Schnittstellenattribute](/cpp/windows/interface-attributes) in der Visual C++-Referenzdokumentation.  
+ Weitere Informationen finden Sie unter [Schnittstellenattribute](/cpp/windows/interface-attributes) in Visual C++-Referenzdokumentation.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt eine Bibliothek mit den `GUID_ManagedName` Attribut.  

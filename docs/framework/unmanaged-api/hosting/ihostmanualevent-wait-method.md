@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 242c13a381445d5fe9551553cd1e3febc81cb2fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a70d5daf6626a26842d91ff6a35d0abf26d79ad1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638222"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492568"
 ---
 # <a name="ihostmanualeventwait-method"></a>IHostManualEvent::Wait-Methode
 Bewirkt, dass die aktuelle [IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) Instanz warten, bis sie gehört, oder einen bestimmten Zeitraum abgelaufen ist.  
@@ -36,7 +36,7 @@ HRESULT Wait (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `dwMilliseconds`  
  [in] Die Anzahl der Millisekunden vor dem zurückgeben, wenn die aktuelle `IHostManualEvent` Instanz hat keinen Besitzer.  
   

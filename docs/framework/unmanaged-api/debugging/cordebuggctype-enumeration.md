@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e08a486089a5697b9b3bb4b52c69fda3b661a6ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe8be6a7c18fff54825f981672f0f640bb60c35c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654745"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482209"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType-Enumeration
 Gibt an, ob die Garbage Collection auf einer Arbeitsstation oder einen Server ausgeführt wird.  
@@ -35,7 +35,7 @@ typedef enum CorDebugGCType {
 } CorDebugGCType;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
   
 ## <a name="members"></a>Member  
   

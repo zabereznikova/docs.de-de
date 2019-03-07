@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413279"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487687"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray-Methode
 Ordnet ein neues Array mit den angegebenen Elementtyp und Dimensionen an.  
@@ -38,24 +38,24 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pElementType`  
  [in] Ein Zeiger auf ein ICorDebugType-Objekt, das den Typ des im Array gespeicherten Elements darstellt.  
   
  `rank`  
- [in] Die Anzahl der Dimensionen des Arrays. In .NET Framework, Version 2.0 muss dieser Wert 1 sein.  
+ [in] Die Anzahl der Dimensionen des Arrays. In .NET Framework, Version 2.0 muss dieser Wert als 1 sein.  
   
  `dims`  
  [in] Die Größe der einzelnen Dimensionen des Arrays in Bytes.  
   
  `lowBounds`  
- [in] Optional. Die untere Grenze der einzelnen Dimensionen des Arrays. Wenn dieser Wert ausgelassen wird, wird eine Untergrenze von 0 (null) für jede Dimension angenommen.  
+ [in] Optional. Die untere Grenze der einzelnen Dimensionen des Arrays. Wenn dieser Wert ausgelassen wird, wird eine Untergrenze von 0 (null) für jede Dimension ausgegangen.  
   
 ## <a name="remarks"></a>Hinweise  
- Die Elemente des Arrays möglicherweise Instanzen eines generischen Typs. Das Array wird immer in der Anwendungsdomäne erstellt, in dem der Thread gerade ausgeführt wird. In .NET Framework 2.0, den Wert des `rank` muss 1 sein.  
+ Die Elemente des Arrays können es sich um Instanzen eines generischen Typs sein. Das Array wird immer in der Anwendungsdomäne erstellt, in dem der Thread gerade ausgeführt wird. In .NET Framework 2.0, den Wert der `rank` muss 1 sein.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

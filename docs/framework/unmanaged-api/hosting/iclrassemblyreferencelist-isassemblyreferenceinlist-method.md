@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d52f38412366880389e963b5ec6af63dcf5d768f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 557b15fe2bd04a3362532f190a88ee2ad52ed366
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555049"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499830"
 ---
 # <a name="iclrassemblyreferencelistisassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsAssemblyReferenceInList-Methode
 Ruft einen Wert, der angibt, ob der angegebene Zeiger auf eine Assembly in der Liste verweist.  
@@ -35,7 +35,7 @@ HRESULT IsAssemblyReferenceInList (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pName`  
  [in] Ein Schnittstellenzeiger auf die Assembly nach dem gesucht werden soll. Gültige Werte sind vom Typ `IAssemblyName` oder `IReferenceIdentity`.  
   

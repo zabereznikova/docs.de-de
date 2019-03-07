@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b6040f21bb530ce775fc79e33b97eb14870c04f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d2d7f9b459e5a46793d44728a9fea269ca47887
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578813"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492386"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName-Methode
 Ruft einen Zeiger auf die Metadaten der TypeDef-token für die <xref:System.Type> mit dem angegebenen Namen.  
@@ -37,7 +37,7 @@ HRESULT FindTypeDefByName
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `szTypeDef`  
  [in] Der Name des Typs für die die TypeDef-token abgerufen werden soll.  
   

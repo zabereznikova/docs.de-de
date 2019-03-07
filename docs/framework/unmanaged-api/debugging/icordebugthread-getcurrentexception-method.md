@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82686fdd14783257987ec5bf9a24db7d87049d42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c4baa4eb4da48b923ab0137ca25d9d819c94e33d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421745"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487342"
 ---
 # <a name="icordebugthreadgetcurrentexception-method"></a>ICorDebugThread::GetCurrentException-Methode
 Ruft einen Schnittstellenzeiger auf ein ICorDebugValue-Objekt, das eine Ausnahme darstellt, die derzeit von verwaltetem Code ausgelöst wird.  
@@ -35,19 +35,19 @@ HRESULT GetCurrentException (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppExceptionObject`  
- [out] Ein Zeiger auf die Adresse des ein `ICorDebugValue` Objekt, das die Ausnahme darstellt, die derzeit von ausgelöst wird, verwalteten Code.  
+ [out] Ein Zeiger auf die Adresse einer `ICorDebugValue` -Objekt, das die Ausnahme darstellt, die aktuell von ausgelöst wird, wird von verwaltetem Code.  
   
 ## <a name="remarks"></a>Hinweise  
- Das Ausnahmeobjekt ist vorhanden, ab dem Zeitpunkt, der die Ausnahme, bis zum Ende ausgelöst wird der `catch` Block. Eine funktionsauswertung, die von den ICorDebugEval-Methoden erfolgt, wird das Ausnahmeobjekt Setup löschen und bei Abschluss wiederherstellen.  
+ Die Exception-Objekt ist vorhanden, ab dem Zeitpunkt, der die Ausnahme, bis zum Ende ausgelöst wird der `catch` Block. Eine funktionsauswertung, die von den ICorDebugEval-Methoden ausgeführt wird, wird das Ausnahmeobjekt Setup lösche und stellen sie bei Abschluss.  
   
- Ausnahmen können geschachtelt sein (beispielsweise, wenn eine Ausnahme in einen Filter oder eine funktionsauswertung ausgelöst wird), sodass mehrere ausstehende Ausnahmen in einem einzelnen Thread. `GetCurrentException` Gibt die aktuelle Ausnahme zurück.  
+ Ausnahmen können geschachtelt sein (beispielsweise, wenn eine Ausnahme in einem Filter oder eine funktionsauswertung ausgelöst wird), sodass mehrere ausstehende Ausnahmen in einem einzelnen Thread möglicherweise. `GetCurrentException` Gibt die aktuelle Ausnahme zurück.  
   
- Die Lebensdauer der Ausnahme können die Exception-Objekt und den Typ ändern. Nachdem eine Ausnahme vom Typ X ausgelöst wird, kann die common Language Runtime (CLR) z. B. nicht über ausreichend Arbeitsspeicher und höher stufen sie auf eine Out-of-Memory-Ausnahme.  
+ Die Exception-Objekt und der Typ können über die gesamte Lebensdauer der Ausnahme ändern. Nachdem eine Ausnahme vom Typ X ausgelöst wird, kann die common Language Runtime (CLR) z. B. nicht über ausreichend Arbeitsspeicher und Stufen Sie ihn auf eine Out-of-Memory-Ausnahme.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ceed164631169b3a47809381b2cc4e630ae718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4b1c85499e5269027da2c2a01ab67aab2c5da626
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418616"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488174"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>ICorDebugProcess::ModifyLogSwitch-Methode
-Legt den Schweregrad der angegebenen Log-Schalter.  
+Legt den Schweregrad der angegebenen Log-Schalter fest.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,7 +35,7 @@ HRESULT ModifyLogSwitch(
     [in] LONG  lLevel);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pLogSwitchName`  
  [in] Ein Zeiger auf eine Zeichenfolge, die den Namen der Log-Schalter angibt.  
   
@@ -43,10 +43,10 @@ HRESULT ModifyLogSwitch(
  [in] Der Schweregrad für die angegebene Log-Schalter festgelegt werden.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Methode ist nur gültig, nachdem die [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) Rückruf aufgetreten.  
+ Diese Methode ist nur gültig, nachdem die [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) Rückruf ist aufgetreten.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

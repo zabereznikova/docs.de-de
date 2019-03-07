@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efc46a0128a4fb9a0edaa86ad20689fda0c2710b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b8c72a2dde70a93b589181b0cc1bd7824b3f52d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521776"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496520"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx-Methode
 Startet einen Prozess auf einem Remotecomputer unter dem Debugger.  
@@ -47,7 +47,7 @@ HRESULT CreateProcessEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pRemoteTarget`  
  [in] Zeiger auf eine [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Wird verwendet, um den Remotecomputer zu ermitteln, auf dem der Prozess gestartet wird.  
   

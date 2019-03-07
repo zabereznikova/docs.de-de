@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82dad6af545464baade2b82d65e7ad4dba19fe3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ac37df58762dac4e3a6161361cafd8ea87e2657
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402339"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491359"
 ---
 # <a name="icordebugbreakpointactivate-method"></a>ICorDebugBreakpoint::Activate-Methode
-Legt den Zustand "aktiven" dieses `ICorDebugBreakpoint`.  
+Legt den aktiven Zustand dieses `ICorDebugBreakpoint`.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ HRESULT Activate (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `bActive`  
- [in] Legen Sie diesen Wert auf `true` an den Zustand als aktiv ist; andernfalls legen Sie diesen Wert auf `false`.  
+ [in] Legen Sie diesen Wert auf `true` an den Status als aktiv ist; andernfalls legen Sie diesen Wert auf `false`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

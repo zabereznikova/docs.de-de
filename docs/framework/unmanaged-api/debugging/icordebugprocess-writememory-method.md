@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6da4c282c7f969a406a657d1e30dd6120a32b4e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2e9d640fb1c9dae5bb195baa504e560ba8e45821
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420907"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497092"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory-Methode
 Schreibt Daten in einem Bereich des Arbeitsspeichers in diesem Prozess.  
@@ -37,9 +37,9 @@ HRESULT WriteMemory(
     [out] SIZE_T *written);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `address`  
- [in] Ein `CORDB_ADDRESS` -Wert, der die Basisadresse des Speicherbereichs, welche Daten geschrieben. Bevor die Datenübertragung erfolgt, das System überprüft, ob der Speicherbereich, der angegebenen Größe, beginnend an der Basisadresse zum Schreiben zugegriffen werden kann. Wenn es nicht möglich ist, schlägt die Methode fehl.  
+ [in] Ein `CORDB_ADDRESS` -Wert, der die Basisadresse des Speicherbereichs, welche Daten geschrieben. Bevor die Datenübertragung erfolgt, das System überprüft, ob der Speicherbereich, der angegebenen Größe, beginnend an der Basisadresse, zum Schreiben zugegriffen werden kann. Ist dies nicht zugegriffen werden kann, schlägt die Methode fehl.  
   
  `size`  
  [in] Die Anzahl der Bytes in den Speicherbereich geschrieben werden sollen.  
@@ -48,15 +48,15 @@ HRESULT WriteMemory(
  [in] Ein Puffer, der zu schreibenden Daten enthält.  
   
  `written`  
- [out] Ein Zeiger auf eine Variable, die Anzahl der Bytes, die in den Speicherbereich in diesem Prozess geschrieben empfängt. Wenn `written` NULL ist, wird dieser Parameter ignoriert.  
+ [out] Ein Zeiger auf eine Variable, die Anzahl der Bytes, die in den Speicherbereich in diesem Prozess geschrieben empfängt. Wenn `written` NULL ist, dieser Parameter wird ignoriert.  
   
 ## <a name="remarks"></a>Hinweise  
- Daten werden automatisch hinter die Haltepunkte geschrieben. In .NET Framework, Version 2.0 verwenden nativen Debugger nicht diese Methode zum Einfügen von Haltepunkten in den Anweisungsstream. Verwendung [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) stattdessen.  
+ Daten werden automatisch hinter die Haltepunkte geschrieben. In .NET Framework, Version 2.0 verwenden systemeigenen Debugger nicht diese Methode, Haltepunkte in den Anweisungsstream einzufügen. Verwendung [ICorDebugProcess2:: SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) stattdessen.  
   
- Die `WriteMemory` Methode sollte nur außerhalb von verwaltetem Code verwendet werden. Diese Methode kann die Common Language Runtime beschädigt werden, wenn Sie nicht ordnungsgemäß verwendet.  
+ Die `WriteMemory` Methode sollte nur außerhalb von verwaltetem Code verwendet werden. Diese Methode kann die Laufzeit beschädigt werden, wenn nicht ordnungsgemäß verwendet.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d36ae3ef63c1324f77786ad55674bbdc257d984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24a2c3baec0d958302101c295966f945ae98fa78
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607133"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490709"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK-Funktionszeiger
 Verweist auf eine Funktion, die benachrichtigt den Host, die ein Wait-handle (<xref:System.Threading.WaitHandle>) hat signalisiert wurde oder das Timeout.  
@@ -37,7 +37,7 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `lpParameter`  
  [in] Ein Zeiger auf ein Objekt, das vom Host definierten Informationen enthält.  
   

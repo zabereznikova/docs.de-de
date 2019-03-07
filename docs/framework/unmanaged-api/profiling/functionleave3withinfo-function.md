@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc1eed1b129c9fc7efdce6703b3c396633b3436a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 714514d5b6a36d028da442bcc05accc0686417cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622415"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500615"
 ---
 # <a name="functionleave3withinfo-function"></a>FunctionLeave3WithInfo-Funktion
 Benachrichtigt den Profiler, dass Steuerelement aus einer Funktion zurückgegeben werden, und stellt ein Handle übergeben werden kann, die die [ICorProfilerInfo3:: Getfunctionleave3info-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) den Stapelrahmen und den Rückgabewert abrufen.  
@@ -34,7 +34,7 @@ void __stdcall FunctionLeave3WithInfo(
                [in] COR_PRF_ELT_INFO eltInfo);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `functionIDOrClientID`  
  [in] Der Bezeichner der Funktion, die von dem die Steuerung zurückgegeben hat.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1062b3a74a9f10a6186ef320a97c08e6fab09545
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 490d78cbc8724e12dff8ac24c81e499268e4ed6c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303984"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487760"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime-Funktion
 Lädt die Common Language Runtime (CLR) in einen Prozess, indem in einer XML-Datei gespeicherte Versionsinformationen verwendet werden. Das Format der XML-Datei ist der standard-Anwendungskonfigurationsdatei nachgebildet. Weitere Informationen zu Konfigurationsdateien finden Sie unter [Konfigurationsdateienschema](../../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -40,7 +40,7 @@ HRESULT CorBindToCurrentRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pwszFileName`  
  [in] Der Name der Konfigurationsdatei einer Anwendung, die angibt, die Version der CLR geladen. Wenn der Dateiname nicht vollqualifiziert ist, wird davon ausgegangen, im gleichen Verzeichnis wie die ausführbare Datei, die den Aufruf sein.  
   

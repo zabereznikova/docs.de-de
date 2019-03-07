@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54d0f4582805b140aafd5825e34c429992e9bbcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 909e18fe9086fa954ffc389ffe1c6fe49217d2f5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707738"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492451"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>ICLRProbingAssemblyEnum::Get-Methode
 Ruft die Identität der Assembly am angegebenen Index ab.  
@@ -37,7 +37,7 @@ HRESULT Get (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `dwIndex`  
  [in] Der nullbasierte Index, der die Identität der Assembly zurückgegeben werden soll.  
   

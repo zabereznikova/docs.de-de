@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa72f82d2fc78110fc2bee8edd265916996aa884
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d00c04f3719d6fb340541d3301d4dc4a3f95ca40
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403145"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495623"
 ---
 # <a name="icordebugarrayvaluegetcount-method"></a>ICorDebugArrayValue::GetCount-Methode
-Ruft die Gesamtanzahl der Elemente im Array ab.  
+Ruft die Gesamtzahl der Elemente im Array ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,12 +35,12 @@ HRESULT GetCount (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pnCount`  
- [out] Ein Zeiger auf die Gesamtzahl der Elemente im Array.  
+ [out] Ein Zeiger auf die Gesamtanzahl der Elemente im Array.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b48ff81fad397adcd5b2d0caae961484bfea5e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c5e1cc3b47c6752017db19f7981a3810d19aca4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706390"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492139"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum-Methode
 Ruft die Anzahl der Elemente in der Enumeration, die von den angegebenen Enumerator abgerufen wurde.  
@@ -36,7 +36,7 @@ HRESULT CountEnum (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `hEnum`  
  [in] Das Handle für den Enumerator.  
   

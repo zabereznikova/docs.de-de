@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 53d0f3bd991d502e4ddcad7df1e24d18af367e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8ecb529534f4ed1a1d12d9613ebd46f8b99fdb8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598393"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487501"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken-Methode
 Ruft die binäre Metadatensignatur der Typspezifikation ab, die durch das angegebene Token dargestellt wird.  
@@ -37,7 +37,7 @@ HRESULT GetTypeSpecFromToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `typespec`  
  [in] Das TypeSpec-Token, das die Signatur für die angeforderten Metadaten zugeordnet ist.  
   

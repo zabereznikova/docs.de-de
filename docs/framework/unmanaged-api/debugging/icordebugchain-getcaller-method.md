@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a0b5d702e9718ce6ac537beae67fc190b152b9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd65de77209f5a981c0a4c291f8573a61cf6335b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405142"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489552"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller-Methode
-Ruft die Kette, die diese Kette aufgerufen.  
+Ruft die Zertifikatskette, die dieser Kette aufgerufen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,17 +35,17 @@ HRESULT GetCaller (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ppChain`  
- [out] Ein Zeiger auf die Adresse eines ICorDebugChain-Objekts, das die aufrufende Kette darstellt.  
+ [out] Ein Zeiger auf die Adresse des ICorDebugChain-Objekts, das die Aufrufkette darstellt.  
   
- Wenn diese Kette spontan aufgerufen wurde (wie der Fall wäre, wenn diese Kette oder der Debugger die Aufrufliste initialisiert), `ppChain` wird null sein.  
+ Wenn diese Kette spontan aufgerufen wurde (wie der Fall wäre, wenn diese Kette oder der Debugger die Aufrufliste initialisiert), `ppChain` NULL.  
   
 ## <a name="remarks"></a>Hinweise  
- Die aufrufende Kette kann in einem anderen Thread sein, wenn der Aufruf threadübergreifend gemarshallt wurde.  
+ Der Aufrufkette möglicherweise in einem anderen Thread aus, wenn der Aufruf über Threads hinweg gemarshallt wurde.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

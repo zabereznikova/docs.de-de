@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6dc245a53c9ec7cbe56e20313abc4269e33f45c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7532c34dca070b07bd3124002eaf72a2f939238
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582317"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493062"
 ---
 # <a name="icordebugclassgettoken-method"></a>ICorDebugClass::GetToken-Methode
 Ruft die `TypeDef` Metadatentoken, das die Definition dieser Klasse verweist.  
@@ -35,7 +35,7 @@ HRESULT GetToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pTypeDef`  
  [out] Ein Zeiger auf ein `mdTypeDef` Token, das die Definition dieser Klasse verweist.  
   

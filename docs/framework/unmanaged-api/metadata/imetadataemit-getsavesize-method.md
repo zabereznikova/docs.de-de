@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 164cdc5c04a55e9c33dda51e10dfb37f38ec1b6d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16984fe108abd1cfc01c471bcfc091a805b28e83
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746543"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501502"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize-Methode
 Ruft die binäre geschätzte Größe der Assembly und die Metadaten im aktuellen Bereich ab.  
@@ -36,7 +36,7 @@ HRESULT GetSaveSize (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `fSave`  
  [in] Der Wert der [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) -Enumeration, der angibt, ob eine genaue oder ungefähre Größe erhalten soll. Nur drei Werte sind gültig: CssAccurate, CssQuick und CssDiscardTransientCAs:  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e06dc35998a2874ed1d2f76725078874817e94d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18084cb69d2c620fc892cc05e5a561e8fda3bc1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420094"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488187"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub-Methode
-Ruft einen Wert, der angibt, ob eine Adresse innerhalb eines Stubs befindet, das einen Übergang zu verwaltetem Code bewirkt.  
+Ruft einen Wert, der angibt, ob eine Adresse in einen Stub handelt, die einen Übergang in verwalteten Code bewirkt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,20 +35,20 @@ HRESULT IsTransitionStub(
     [out] BOOL *pbTransitionStub);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `address`  
  [in] Ein `CORDB_ADDRESS` Wert, der die fragliche Adresse angibt.  
   
  `pbTransitionStub`  
- [out] Ein Zeiger auf einen booleschen Wert, der `true` , wenn die angegebene Adresse innerhalb eines Stubs befindet, das bewirkt einen Übergang zu verwaltetem Code; andernfalls *`pbTransitionStub` ist `false`.  
+ [out] Ein Zeiger auf einen booleschen Wert, der `true` ist, die einen Übergang in verwalteten Code, führt die angegebene Adresse innerhalb eines Stubs andernfalls *`pbTransitionStub` ist `false`.  
   
 ## <a name="remarks"></a>Hinweise  
- Die `IsTransitionStub` Methode kann von nicht verwaltetem stepping-Code verwendet werden, um zu entscheiden, wann schrittweisen Steuerung an den verwalteten zugeordnetem zurückgegeben.  
+ Die `IsTransitionStub` Methode kann von nicht verwalteten stepping-Code verwendet werden, wann die schrittweisen Kontrolle an die verwalteten zugeordnetem zurückgeben.  
   
- Sie können auch die Identität Übergangsstubs durch einen Blick auf die Informationen in der portablen ausführbaren Datei (PE)-Datei.  
+ Sie können auch die Identity-Übergang-Stubs anhand der Informationen in der portierbaren ausführbaren Datei (PE)-Datei.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

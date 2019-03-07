@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7693111427f3181adcd2127ad5ecb2a317e30921
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36e26101a21471fd840a07deef9f5085a88f2730
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515614"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487030"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>ICorDebugManagedCallback::CreateProcess-Methode
 Benachrichtigt den Debugger an, wenn ein Prozess angefügt oder zum ersten Mal gestartet wurde.  
@@ -35,7 +35,7 @@ HRESULT CreateProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pProcess`  
  [in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt, der angefügt oder gestartet wurde.  
   
