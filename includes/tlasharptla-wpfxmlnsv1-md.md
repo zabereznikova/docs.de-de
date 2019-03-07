@@ -1,1 +1,0 @@
-<span data-ttu-id="3b0d8-101">http://schemas.microsoft.com/winfx/2006/xaml/presentation</span><span class="sxs-lookup"><span data-stu-id="3b0d8-101">http://schemas.microsoft.com/winfx/2006/xaml/presentation</span></span>
