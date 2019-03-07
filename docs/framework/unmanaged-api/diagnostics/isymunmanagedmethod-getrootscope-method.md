@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 458f6ab4a6848ce6921542ca62fe6d5c7cf4719f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b55b379f0b2e47acbec03eebf92e1e107a52f918
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704640"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502945"
 ---
-# <a name="isymunmanagedmethodgetrootscope-method"></a><span data-ttu-id="a5dce-102">ISymUnmanagedMethod::GetRootScope-Methode</span><span class="sxs-lookup"><span data-stu-id="a5dce-102">ISymUnmanagedMethod::GetRootScope Method</span></span>
-<span data-ttu-id="a5dce-103">Ruft den lexikalischen Stammgültigkeitsbereich innerhalb dieser Methode ab.</span><span class="sxs-lookup"><span data-stu-id="a5dce-103">Gets the root lexical scope within this method.</span></span> <span data-ttu-id="a5dce-104">Dieser Gültigkeitsbereich umfasst die gesamte Methode.</span><span class="sxs-lookup"><span data-stu-id="a5dce-104">This scope encloses the entire method.</span></span>  
+# <a name="isymunmanagedmethodgetrootscope-method"></a><span data-ttu-id="75dad-102">ISymUnmanagedMethod::GetRootScope-Methode</span><span class="sxs-lookup"><span data-stu-id="75dad-102">ISymUnmanagedMethod::GetRootScope Method</span></span>
+<span data-ttu-id="75dad-103">Ruft den lexikalischen Stammgültigkeitsbereich innerhalb dieser Methode ab.</span><span class="sxs-lookup"><span data-stu-id="75dad-103">Gets the root lexical scope within this method.</span></span> <span data-ttu-id="75dad-104">Dieser Gültigkeitsbereich umfasst die gesamte Methode.</span><span class="sxs-lookup"><span data-stu-id="75dad-104">This scope encloses the entire method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5dce-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="a5dce-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="75dad-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="75dad-105">Syntax</span></span>  
   
 ```  
 HRESULT GetRootScope(  
     [out, retval] ISymUnmanagedScope** pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a5dce-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="a5dce-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="75dad-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="75dad-106">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="a5dce-107">[out] Ein Zeiger, der festgelegt ist auf das zurückgegebene [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="a5dce-107">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
+ <span data-ttu-id="75dad-107">[out] Ein Zeiger, der festgelegt ist auf das zurückgegebene [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="75dad-107">[out] A pointer that is set to the returned [ISymUnmanagedScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a5dce-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="a5dce-108">Return Value</span></span>  
- <span data-ttu-id="a5dce-109">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="a5dce-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="75dad-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="75dad-108">Return Value</span></span>  
+ <span data-ttu-id="75dad-109">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="75dad-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5dce-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a5dce-110">Requirements</span></span>  
- <span data-ttu-id="a5dce-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a5dce-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="75dad-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="75dad-110">Requirements</span></span>  
+ <span data-ttu-id="75dad-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="75dad-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5dce-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a5dce-112">See also</span></span>
-- [<span data-ttu-id="a5dce-113">ISymUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a5dce-113">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="75dad-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="75dad-112">See also</span></span>
+- [<span data-ttu-id="75dad-113">ISymUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="75dad-113">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

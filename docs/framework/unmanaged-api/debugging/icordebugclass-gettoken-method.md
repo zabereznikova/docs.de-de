@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6dc245a53c9ec7cbe56e20313abc4269e33f45c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7532c34dca070b07bd3124002eaf72a2f939238
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582317"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493062"
 ---
-# <a name="icordebugclassgettoken-method"></a><span data-ttu-id="460be-102">ICorDebugClass::GetToken-Methode</span><span class="sxs-lookup"><span data-stu-id="460be-102">ICorDebugClass::GetToken Method</span></span>
-<span data-ttu-id="460be-103">Ruft die `TypeDef` Metadatentoken, das die Definition dieser Klasse verweist.</span><span class="sxs-lookup"><span data-stu-id="460be-103">Gets the `TypeDef` metadata token that references the definition of this class.</span></span>  
+# <a name="icordebugclassgettoken-method"></a><span data-ttu-id="7b1c5-102">ICorDebugClass::GetToken-Methode</span><span class="sxs-lookup"><span data-stu-id="7b1c5-102">ICorDebugClass::GetToken Method</span></span>
+<span data-ttu-id="7b1c5-103">Ruft die `TypeDef` Metadatentoken, das die Definition dieser Klasse verweist.</span><span class="sxs-lookup"><span data-stu-id="7b1c5-103">Gets the `TypeDef` metadata token that references the definition of this class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="460be-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="460be-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b1c5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7b1c5-104">Syntax</span></span>  
   
 ```  
 HRESULT GetToken (  
@@ -35,18 +35,18 @@ HRESULT GetToken (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="460be-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="460be-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7b1c5-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7b1c5-105">Parameters</span></span>  
  `pTypeDef`  
- <span data-ttu-id="460be-106">[out] Ein Zeiger auf ein `mdTypeDef` Token, das die Definition dieser Klasse verweist.</span><span class="sxs-lookup"><span data-stu-id="460be-106">[out] A pointer to an `mdTypeDef` token that references the definition of this class.</span></span>  
+ <span data-ttu-id="7b1c5-106">[out] Ein Zeiger auf ein `mdTypeDef` Token, das die Definition dieser Klasse verweist.</span><span class="sxs-lookup"><span data-stu-id="7b1c5-106">[out] A pointer to an `mdTypeDef` token that references the definition of this class.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="460be-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="460be-107">Requirements</span></span>  
- <span data-ttu-id="460be-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="460be-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7b1c5-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7b1c5-107">Requirements</span></span>  
+ <span data-ttu-id="7b1c5-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7b1c5-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="460be-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="460be-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7b1c5-109">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7b1c5-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="460be-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="460be-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7b1c5-110">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7b1c5-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="460be-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="460be-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7b1c5-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7b1c5-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="460be-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="460be-112">See also</span></span>
-- [<span data-ttu-id="460be-113">Metadatenschnittstellen</span><span class="sxs-lookup"><span data-stu-id="460be-113">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="7b1c5-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7b1c5-112">See also</span></span>
+- [<span data-ttu-id="7b1c5-113">Metadatenschnittstellen</span><span class="sxs-lookup"><span data-stu-id="7b1c5-113">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
