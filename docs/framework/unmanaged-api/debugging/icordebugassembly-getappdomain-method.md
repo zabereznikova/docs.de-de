@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e22d112d1414b13033f73723821e5e4b5764e1c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9ba09b80d7118b0ccd9b1647011a7fc7cd74e22
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401978"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485108"
 ---
-# <a name="icordebugassemblygetappdomain-method"></a><span data-ttu-id="0e91d-102">ICorDebugAssembly::GetAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="0e91d-102">ICorDebugAssembly::GetAppDomain Method</span></span>
-<span data-ttu-id="0e91d-103">Ruft einen Schnittstellenzeiger auf die Anwendungsdomäne, die dieses enthält `ICorDebugAssembly` Instanz.</span><span class="sxs-lookup"><span data-stu-id="0e91d-103">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>  
+# <a name="icordebugassemblygetappdomain-method"></a><span data-ttu-id="b2f14-102">ICorDebugAssembly::GetAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="b2f14-102">ICorDebugAssembly::GetAppDomain Method</span></span>
+<span data-ttu-id="b2f14-103">Ruft einen Schnittstellenzeiger auf die Anwendungsdomäne, der diesen `ICorDebugAssembly` Instanz.</span><span class="sxs-lookup"><span data-stu-id="b2f14-103">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e91d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0e91d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2f14-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b2f14-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAppDomain (  
@@ -35,18 +35,18 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0e91d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="0e91d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b2f14-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="b2f14-105">Parameters</span></span>  
  `ppAppDomain`  
- <span data-ttu-id="0e91d-106">[out] Ein Zeiger auf die Adresse einer ICorDebugAppDomain-Schnittstelle, die die Anwendungsdomäne darstellt.</span><span class="sxs-lookup"><span data-stu-id="0e91d-106">[out] A pointer to the address of an ICorDebugAppDomain interface that represents the application domain.</span></span>  
+ <span data-ttu-id="b2f14-106">[out] Ein Zeiger auf die Adresse einer ICorDebugAppDomain-Schnittstelle, die die Anwendungsdomäne darstellt.</span><span class="sxs-lookup"><span data-stu-id="b2f14-106">[out] A pointer to the address of an ICorDebugAppDomain interface that represents the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0e91d-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0e91d-107">Remarks</span></span>  
- <span data-ttu-id="0e91d-108">Wenn diese Assembly die Systemassembly `GetAppDomain` gibt null zurück.</span><span class="sxs-lookup"><span data-stu-id="0e91d-108">If this assembly is the system assembly, `GetAppDomain` returns null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2f14-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b2f14-107">Remarks</span></span>  
+ <span data-ttu-id="b2f14-108">Wenn diese Assembly die Systemassembly `GetAppDomain` gibt null zurück.</span><span class="sxs-lookup"><span data-stu-id="b2f14-108">If this assembly is the system assembly, `GetAppDomain` returns null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0e91d-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0e91d-109">Requirements</span></span>  
- <span data-ttu-id="0e91d-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0e91d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2f14-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b2f14-109">Requirements</span></span>  
+ <span data-ttu-id="b2f14-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2f14-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0e91d-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0e91d-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b2f14-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b2f14-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0e91d-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0e91d-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b2f14-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2f14-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0e91d-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0e91d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b2f14-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2f14-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

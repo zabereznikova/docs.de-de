@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d1c214918b4a41ac989a3804c9146c4a54c5909f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41b27c8d545cce7051ca1507a6bd98b87a32468b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738208"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499562"
 ---
-# <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="43414-102">ISymUnmanagedWriter::DefineDocument-Methode</span><span class="sxs-lookup"><span data-stu-id="43414-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
-<span data-ttu-id="43414-103">Definiert ein Quelldokument.</span><span class="sxs-lookup"><span data-stu-id="43414-103">Defines a source document.</span></span> <span data-ttu-id="43414-104">GUIDs werden für bekannte Sprachen, Lieferanten und Dokumenttypen bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="43414-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  
+# <a name="isymunmanagedwriterdefinedocument-method"></a><span data-ttu-id="981e7-102">ISymUnmanagedWriter::DefineDocument-Methode</span><span class="sxs-lookup"><span data-stu-id="981e7-102">ISymUnmanagedWriter::DefineDocument Method</span></span>
+<span data-ttu-id="981e7-103">Definiert ein Quelldokument.</span><span class="sxs-lookup"><span data-stu-id="981e7-103">Defines a source document.</span></span> <span data-ttu-id="981e7-104">GUIDs werden für bekannte Sprachen, Lieferanten und Dokumenttypen bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="981e7-104">GUIDs are provided for known languages, vendors, and document types.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="43414-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="43414-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="981e7-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="981e7-105">Syntax</span></span>  
   
 ```  
 HRESULT DefineDocument(  
@@ -38,27 +38,27 @@ HRESULT DefineDocument(
     [out, retval] ISymUnmanagedDocumentWriter**  pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="43414-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="43414-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="981e7-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="981e7-106">Parameters</span></span>  
  `url`  
- <span data-ttu-id="43414-107">[in] Ein Zeiger auf eine `WCHAR` , definiert den uniform Resource Locator (URL), die das Dokument kennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="43414-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span></span>  
+ <span data-ttu-id="981e7-107">[in] Ein Zeiger auf eine `WCHAR` , definiert den uniform Resource Locator (URL), die das Dokument kennzeichnet.</span><span class="sxs-lookup"><span data-stu-id="981e7-107">[in] A pointer to a `WCHAR` that defines the uniform resource locator (URL) that identifies the document.</span></span>  
   
  `language`  
- <span data-ttu-id="43414-108">[in] Ein Zeiger auf eine GUID, die Sprache des Dokuments definiert.</span><span class="sxs-lookup"><span data-stu-id="43414-108">[in] A pointer to a GUID that defines the document language.</span></span>  
+ <span data-ttu-id="981e7-108">[in] Ein Zeiger auf eine GUID, die Sprache des Dokuments definiert.</span><span class="sxs-lookup"><span data-stu-id="981e7-108">[in] A pointer to a GUID that defines the document language.</span></span>  
   
  `languageVendor`  
- <span data-ttu-id="43414-109">[in] Ein Zeiger auf eine GUID, die Identität des Herstellers für die Sprache des Dokuments definiert.</span><span class="sxs-lookup"><span data-stu-id="43414-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span></span>  
+ <span data-ttu-id="981e7-109">[in] Ein Zeiger auf eine GUID, die Identität des Herstellers für die Sprache des Dokuments definiert.</span><span class="sxs-lookup"><span data-stu-id="981e7-109">[in] A pointer to a GUID that defines the identity of the vendor for the document language.</span></span>  
   
  `documentType`  
- <span data-ttu-id="43414-110">[in] Ein Zeiger auf eine GUID, die den Typ des Dokuments definiert.</span><span class="sxs-lookup"><span data-stu-id="43414-110">[in] A pointer to a GUID that defines the type of the document.</span></span>  
+ <span data-ttu-id="981e7-110">[in] Ein Zeiger auf eine GUID, die den Typ des Dokuments definiert.</span><span class="sxs-lookup"><span data-stu-id="981e7-110">[in] A pointer to a GUID that defines the type of the document.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="43414-111">[out] Ein Zeiger auf das zurückgegebene [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="43414-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
+ <span data-ttu-id="981e7-111">[out] Ein Zeiger auf das zurückgegebene [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) Schnittstelle.</span><span class="sxs-lookup"><span data-stu-id="981e7-111">[out] A pointer to the returned [ISymUnmanagedWriter](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="43414-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="43414-112">Return Value</span></span>  
- <span data-ttu-id="43414-113">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="43414-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="981e7-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="981e7-112">Return Value</span></span>  
+ <span data-ttu-id="981e7-113">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="981e7-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="43414-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="43414-114">Requirements</span></span>  
- <span data-ttu-id="43414-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="43414-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="981e7-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="981e7-114">Requirements</span></span>  
+ <span data-ttu-id="981e7-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="981e7-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43414-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="43414-116">See also</span></span>
-- [<span data-ttu-id="43414-117">ISymUnmanagedWriter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="43414-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="981e7-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="981e7-116">See also</span></span>
+- [<span data-ttu-id="981e7-117">ISymUnmanagedWriter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="981e7-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

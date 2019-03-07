@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ae455aeba353cfa66a1253b580e15b280caec8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccb6331399ef3479e43bdb9dc4a72b5fd196672c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584099"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495337"
 ---
-# <a name="imetadatadispenserexfindassemblymodule-method"></a><span data-ttu-id="d4a28-102">IMetaDataDispenserEx::FindAssemblyModule-Methode</span><span class="sxs-lookup"><span data-stu-id="d4a28-102">IMetaDataDispenserEx::FindAssemblyModule Method</span></span>
-<span data-ttu-id="d4a28-103">Diese Methode ist nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="d4a28-103">This method is not implemented.</span></span> <span data-ttu-id="d4a28-104">Wird aufgerufen, gibt E_NOTIMPL zurück.</span><span class="sxs-lookup"><span data-stu-id="d4a28-104">If called, it returns E_NOTIMPL.</span></span>  
+# <a name="imetadatadispenserexfindassemblymodule-method"></a><span data-ttu-id="b5ee3-102">IMetaDataDispenserEx::FindAssemblyModule-Methode</span><span class="sxs-lookup"><span data-stu-id="b5ee3-102">IMetaDataDispenserEx::FindAssemblyModule Method</span></span>
+<span data-ttu-id="b5ee3-103">Diese Methode ist nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="b5ee3-103">This method is not implemented.</span></span> <span data-ttu-id="b5ee3-104">Wird aufgerufen, gibt E_NOTIMPL zurück.</span><span class="sxs-lookup"><span data-stu-id="b5ee3-104">If called, it returns E_NOTIMPL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d4a28-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="d4a28-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b5ee3-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="b5ee3-105">Syntax</span></span>  
   
 ```  
 HRESULT FindAssemblyModule(  
@@ -42,40 +42,40 @@ HRESULT FindAssemblyModule(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d4a28-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="d4a28-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b5ee3-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="b5ee3-106">Parameters</span></span>  
  `szAppBase`  
- <span data-ttu-id="d4a28-107">[in] Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="d4a28-107">[in] Not used.</span></span>  
+ <span data-ttu-id="b5ee3-107">[in] Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="b5ee3-107">[in] Not used.</span></span>  
   
  `szPrivateBin`  
- <span data-ttu-id="d4a28-108">[in] Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="d4a28-108">[in] Not used.</span></span>  
+ <span data-ttu-id="b5ee3-108">[in] Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="b5ee3-108">[in] Not used.</span></span>  
   
  `szGlobalBin`  
- <span data-ttu-id="d4a28-109">[in] Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="d4a28-109">[in] Not used.</span></span>  
+ <span data-ttu-id="b5ee3-109">[in] Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="b5ee3-109">[in] Not used.</span></span>  
   
  `szAssemblyName`  
- <span data-ttu-id="d4a28-110">[in] Der Name des Moduls.</span><span class="sxs-lookup"><span data-stu-id="d4a28-110">[in] The name of the module.</span></span>  
+ <span data-ttu-id="b5ee3-110">[in] Der Name des Moduls.</span><span class="sxs-lookup"><span data-stu-id="b5ee3-110">[in] The name of the module.</span></span>  
   
  `szModuleName`  
- <span data-ttu-id="d4a28-111">[in] Die Assembly gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="d4a28-111">[in] The assembly to be found.</span></span>  
+ <span data-ttu-id="b5ee3-111">[in] Die Assembly gefunden werden.</span><span class="sxs-lookup"><span data-stu-id="b5ee3-111">[in] The assembly to be found.</span></span>  
   
  `szName`  
- <span data-ttu-id="d4a28-112">[out] Der einfache Name der Assembly.</span><span class="sxs-lookup"><span data-stu-id="d4a28-112">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="b5ee3-112">[out] Der einfache Name der Assembly.</span><span class="sxs-lookup"><span data-stu-id="b5ee3-112">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="d4a28-113">[in] Die Größe in Bytes, des `szName`.</span><span class="sxs-lookup"><span data-stu-id="d4a28-113">[in] The size, in bytes, of `szName`.</span></span>  
+ <span data-ttu-id="b5ee3-113">[in] Die Größe in Bytes, des `szName`.</span><span class="sxs-lookup"><span data-stu-id="b5ee3-113">[in] The size, in bytes, of `szName`.</span></span>  
   
  `pcName`  
- <span data-ttu-id="d4a28-114">[out] Die Anzahl der Zeichen im tatsächlich zurückgegebenen `szName`.</span><span class="sxs-lookup"><span data-stu-id="d4a28-114">[out] The number of characters actually returned in `szName`.</span></span>  
+ <span data-ttu-id="b5ee3-114">[out] Die Anzahl der Zeichen im tatsächlich zurückgegebenen `szName`.</span><span class="sxs-lookup"><span data-stu-id="b5ee3-114">[out] The number of characters actually returned in `szName`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d4a28-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d4a28-115">Requirements</span></span>  
- <span data-ttu-id="d4a28-116">**Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4a28-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b5ee3-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b5ee3-115">Requirements</span></span>  
+ <span data-ttu-id="b5ee3-116">**Plattform:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5ee3-116">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d4a28-117">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d4a28-117">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b5ee3-117">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="b5ee3-117">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d4a28-118">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="d4a28-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b5ee3-118">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="b5ee3-118">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d4a28-119">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4a28-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="b5ee3-119">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5ee3-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d4a28-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d4a28-120">See also</span></span>
-- [<span data-ttu-id="d4a28-121">IMetaDataDispenserEx-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d4a28-121">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [<span data-ttu-id="d4a28-122">IMetaDataDispenser-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d4a28-122">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b5ee3-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b5ee3-120">See also</span></span>
+- [<span data-ttu-id="b5ee3-121">IMetaDataDispenserEx-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b5ee3-121">IMetaDataDispenserEx Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
+- [<span data-ttu-id="b5ee3-122">IMetaDataDispenser-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b5ee3-122">IMetaDataDispenser Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

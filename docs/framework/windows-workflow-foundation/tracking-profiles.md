@@ -2,385 +2,391 @@
 title: Überwachungsprofile
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 95f14cff9c60158f0ce188d031a94870c0b0ac5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559254"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482300"
 ---
-# <a name="tracking-profiles"></a><span data-ttu-id="67633-102">Überwachungsprofile</span><span class="sxs-lookup"><span data-stu-id="67633-102">Tracking Profiles</span></span>
-<span data-ttu-id="67633-103">Überwachungsprofile enthalten Nachverfolgungsabfragen, mit denen ein Überwachungsteilnehmer Workflowereignisse abonnieren kann. Diese werden ausgegeben, wenn sich der Zustand einer Workflowinstanz zur Laufzeit ändert.</span><span class="sxs-lookup"><span data-stu-id="67633-103">Tracking profiles contain tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span>  
-  
-## <a name="tracking-profiles"></a><span data-ttu-id="67633-104">Überwachungsprofile</span><span class="sxs-lookup"><span data-stu-id="67633-104">Tracking Profiles</span></span>  
- <span data-ttu-id="67633-105">Mithilfe von Nachverfolgungsprofilen wird angegeben, welche Nachverfolgungsinformationen für eine Workflowinstanz ausgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="67633-105">Tracking profiles are used to specify which tracking information is emitted for a workflow instance.</span></span> <span data-ttu-id="67633-106">Wenn kein Profil angegeben wird, dann werden alle Nachverfolgungsereignisse ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="67633-106">If no profile is specified, then all tracking events are emitted.</span></span> <span data-ttu-id="67633-107">Wenn ein Profil angegeben ist, werden die Nachverfolgungsereignisse, die im Profil angegeben sind, ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="67633-107">If a profile is specified, then the tracking events specified in the profile will be emitted.</span></span> <span data-ttu-id="67633-108">Je nach Überwachungsanforderungen können Sie ein Profil schreiben, das sehr allgemein gehalten ist und einen kleinen Satz von unspezifischen Zustandsänderungen eines Workflows abonniert.</span><span class="sxs-lookup"><span data-stu-id="67633-108">Depending on your monitoring requirements, you may write a profile that is very general, which subscribes to a small set of high-level state changes on a workflow.</span></span> <span data-ttu-id="67633-109">Umgekehrt ist es möglich, ein sehr ausführliches Profil zu erstellen, dessen resultierende Ereignisse umfangreich genug sind, um später einen detaillierten Ausführungsfluss zu rekonstruieren.</span><span class="sxs-lookup"><span data-stu-id="67633-109">Conversely, you may create a very detailed profile whose resulting events are rich enough to reconstruct a detailed execution flow later.</span></span>  
-  
- <span data-ttu-id="67633-110">Überwachungsprofile sind XML-Elemente, die innerhalb einer standardmäßigen [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Konfigurationsdatei oder in Code angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="67633-110">Tracking profiles manifest themselves as XML elements within a standard [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configuration file or specified in code.</span></span> <span data-ttu-id="67633-111">Das folgende Beispiel ist einem [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]-Überwachungsprofil in einer Konfigurationsdatei entnommen, die es einem Überwachungsteilnehmer ermöglicht, `Started`-Workflowereignisse und `Completed`-Workflowereignisse zu abonnieren.</span><span class="sxs-lookup"><span data-stu-id="67633-111">The following example is of a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tracking profile in a configuration file that allows a tracking participant to subscribe to the `Started` and `Completed` workflow events.</span></span>  
-  
-```xml  
-<system.serviceModel>  
-    ...  
-    <tracking>    
-      <trackingProfile name="Sample Tracking Profile">  
-        <workflow activityDefinitionId="*">  
-          <workflowInstanceQueries>  
-            <workflowInstanceQuery>  
-              <states>  
-                <state name="Started"/>  
-                <state name="Completed"/>  
-              </states>  
-            </workflowInstanceQuery>  
-          </workflowInstanceQueries>  
-        </workflow>  
-      </trackingProfile>          
-    </profiles>  
-  </tracking>  
-    ...  
-</system.serviceModel>  
-```  
-  
- <span data-ttu-id="67633-112">Im folgenden Beispiel wird das entsprechende Nachverfolgungsprofil dargestellt, das mithilfe von Code erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="67633-112">The following example shows the equivalent tracking profile created using code.</span></span>  
-  
-```csharp  
-TrackingProfile profile = new TrackingProfile()  
-{  
-    Name = "CustomTrackingProfile",  
-    Queries =   
-    {  
-        new WorkflowInstanceQuery()  
-        {  
-            // Limit workflow instance tracking records for started and  
-            // completed workflow states.  
-            States = { WorkflowInstanceStates.Started, WorkflowInstanceStates.Completed },  
-        }  
-    }  
-};  
-```  
-  
- <span data-ttu-id="67633-113">Überwachungsdatensätze werden innerhalb eines Überwachungsprofils mit dem <xref:System.Activities.Tracking.ImplementationVisibility>-Attribut über den Sichtbarkeitsmodus gefiltert.</span><span class="sxs-lookup"><span data-stu-id="67633-113">Tracking records are filtered through the visibility mode within a tracking profile by using the <xref:System.Activities.Tracking.ImplementationVisibility> attribute.</span></span> <span data-ttu-id="67633-114">Eine zusammengesetzte Aktivität ist eine allgemeine Aktivität mit weiteren Aktivitäten, die ihre Implementierung bilden.</span><span class="sxs-lookup"><span data-stu-id="67633-114">A composite activity is a top-level activity that contains other activities that form its implementation.</span></span> <span data-ttu-id="67633-115">Der Sichtbarkeitsmodus gibt die von zusammengesetzten Aktivitäten in einer Workflowaktivität ausgegebenen Überwachungsdatensätze an. Damit wird bestimmt, ob Aktivitäten, aus denen die Implementierung besteht, nachverfolgt werden.</span><span class="sxs-lookup"><span data-stu-id="67633-115">The visibility mode specifies the tracking records emitted from composite activities within a workflow activity, to specify if activities that form the implementation are being tracked.</span></span>  <span data-ttu-id="67633-116">Der Sichtbarkeitsmodus gilt für die Ebene des Überwachungsprofils.</span><span class="sxs-lookup"><span data-stu-id="67633-116">The visibility mode applies at the tracking profile level.</span></span> <span data-ttu-id="67633-117">Die Filterung von Überwachungsdatensätzen für einzelne Aktivitäten eines Workflows wird von den Abfragen im Überwachungsprofil gesteuert.</span><span class="sxs-lookup"><span data-stu-id="67633-117">The filtering of tracking records for individual activities within a workflow is controlled by the queries within the tracking profile.</span></span> <span data-ttu-id="67633-118">Weitere Informationen finden Sie unter den **Abfragetypen für Überwachungsprofile** Abschnitt in diesem Dokument.</span><span class="sxs-lookup"><span data-stu-id="67633-118">For more information, see the **Tracking Profile Query Types** section in this document.</span></span>  
-  
- <span data-ttu-id="67633-119">Die zwei Sichtbarkeitsmodi, die vom `implementationVisibility`-Attribut im Überwachungsprofil angegeben werden, sind `RootScope` und `All`.</span><span class="sxs-lookup"><span data-stu-id="67633-119">The two visibility modes specified by the `implementationVisibility` attribute in the tracking profile are `RootScope` and `All`.</span></span> <span data-ttu-id="67633-120">Durch Verwendung des `RootScope`-Modus werden Überwachungsdatensätze für Aktivitäten, die die Implementierung einer Aktivität bilden, unterdrückt, wenn der Stamm eines Workflows keine zusammengesetzte Aktivität ist.</span><span class="sxs-lookup"><span data-stu-id="67633-120">Using the `RootScope` mode suppresses the tracking records for activities that form the implementation of an activity in the case where a composite activity is not the root of a workflow.</span></span>  <span data-ttu-id="67633-121">Dies bedeutet, dass nur die allgemeine Aktivität innerhalb der zusammengesetzten Aktivität nachverfolgt wird, wenn einem Workflow eine Aktivität hinzugefügt wird, die mit anderen Aktivitäten implementiert wird, und `implementationVisibility` auf RootScope festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="67633-121">This implies that, when an activity that is implemented using other activities is added to a workflow, and the `implementationVisibility` set to RootScope, only the top-level activity within that composite activity is tracked.</span></span> <span data-ttu-id="67633-122">Wenn eine Aktivität der Stamm des Workflows ist, stellt die Implementierung der Aktivität den Workflow selbst dar, und Überwachungsdatensätze werden für Aktivitäten ausgegeben, die die Implementierung bilden.</span><span class="sxs-lookup"><span data-stu-id="67633-122">If an activity is the root of the workflow, then the implementation of the activity is the workflow itself and tracking records are emitted for activities that form the implementation.</span></span> <span data-ttu-id="67633-123">Bei Verwendung des All-Modus werden die Überwachungsdatensätze für die Stammaktivität und alle zugehörigen zusammengesetzten Aktivitäten ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="67633-123">Using the All mode permits all tracking records to be emitted for the root activity and all its composite activities.</span></span>  
-  
- <span data-ttu-id="67633-124">Nehmen wir beispielsweise an *MyActivity* ist eine zusammengesetzte Aktivität, deren Implementierung zwei Aktivitäten enthält *"Activity1"* und *"activity2"*.</span><span class="sxs-lookup"><span data-stu-id="67633-124">For example, suppose *MyActivity* is a composite activity whose implementation contains two activities, *Activity1* and *Activity2*.</span></span>  <span data-ttu-id="67633-125">Wenn diese Aktivität einem Workflow hinzugefügt wird und die nachverfolgung aktiviert ist, mit einem Überwachungsprofil mit `implementationVisibility` festgelegt `RootScope`, werden Überwachungsdatensätze nur für *MyActivity*.</span><span class="sxs-lookup"><span data-stu-id="67633-125">When this activity is added to a workflow and tracking is enabled with a tracking profile with `implementationVisibility` set to `RootScope`, tracking records are emitted only for *MyActivity*.</span></span>  <span data-ttu-id="67633-126">Allerdings werden keine Datensätze für Aktivitäten ausgegeben *"Activity1"* und *"activity2"*.</span><span class="sxs-lookup"><span data-stu-id="67633-126">However, no records are emitted for activities *Activity1* and *Activity2*.</span></span>  
-  
- <span data-ttu-id="67633-127">Jedoch wenn die `implementationVisisbility` Attribut für das Überwachungsprofil ist auf `All`, und klicken Sie dann die Überwachungsdatensätze ausgegeben werden, nicht nur für *MyActivity*, aber auch für die Aktivitäten *"Activity1"* und  *"Activity2"*.</span><span class="sxs-lookup"><span data-stu-id="67633-127">However, if the `implementationVisisbility` attribute for the tracking profile is  set to `All`, then tracking records are emitted not only for *MyActivity*, but also for activities *Activity1* and *Activity2*.</span></span>  
-  
- <span data-ttu-id="67633-128">Das `implementationVisibility`-Flag gilt für folgende Datensatztypen für die Nachverfolgung:</span><span class="sxs-lookup"><span data-stu-id="67633-128">The `implementationVisibility` flag applies to following tracking record types:</span></span>  
-  
--   <span data-ttu-id="67633-129">ActivityStateRecord</span><span class="sxs-lookup"><span data-stu-id="67633-129">ActivityStateRecord</span></span>  
-  
--   <span data-ttu-id="67633-130">FaultPropagationRecord</span><span class="sxs-lookup"><span data-stu-id="67633-130">FaultPropagationRecord</span></span>  
-  
--   <span data-ttu-id="67633-131">CancelRequestedRecord</span><span class="sxs-lookup"><span data-stu-id="67633-131">CancelRequestedRecord</span></span>  
-  
--   <span data-ttu-id="67633-132">ActivityScheduledRecord</span><span class="sxs-lookup"><span data-stu-id="67633-132">ActivityScheduledRecord</span></span>  
-  
+# <a name="tracking-profiles"></a><span data-ttu-id="3d526-102">Überwachungsprofile</span><span class="sxs-lookup"><span data-stu-id="3d526-102">Tracking Profiles</span></span>
+
+<span data-ttu-id="3d526-103">Überwachungsprofile enthalten Nachverfolgungsabfragen, mit denen ein Überwachungsteilnehmer Workflowereignisse abonnieren kann. Diese werden ausgegeben, wenn sich der Zustand einer Workflowinstanz zur Laufzeit ändert.</span><span class="sxs-lookup"><span data-stu-id="3d526-103">Tracking profiles contain tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span>
+
+## <a name="tracking-profiles"></a><span data-ttu-id="3d526-104">Überwachungsprofile</span><span class="sxs-lookup"><span data-stu-id="3d526-104">Tracking Profiles</span></span>
+
+<span data-ttu-id="3d526-105">Mithilfe von Nachverfolgungsprofilen wird angegeben, welche Nachverfolgungsinformationen für eine Workflowinstanz ausgegeben werden.</span><span class="sxs-lookup"><span data-stu-id="3d526-105">Tracking profiles are used to specify which tracking information is emitted for a workflow instance.</span></span> <span data-ttu-id="3d526-106">Wenn kein Profil angegeben wird, dann werden alle Nachverfolgungsereignisse ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="3d526-106">If no profile is specified, then all tracking events are emitted.</span></span> <span data-ttu-id="3d526-107">Wenn ein Profil angegeben ist, werden die Nachverfolgungsereignisse, die im Profil angegeben sind, ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="3d526-107">If a profile is specified, then the tracking events specified in the profile will be emitted.</span></span> <span data-ttu-id="3d526-108">Je nach Überwachungsanforderungen können Sie ein Profil schreiben, das sehr allgemein gehalten ist und einen kleinen Satz von unspezifischen Zustandsänderungen eines Workflows abonniert.</span><span class="sxs-lookup"><span data-stu-id="3d526-108">Depending on your monitoring requirements, you may write a profile that is very general, which subscribes to a small set of high-level state changes on a workflow.</span></span> <span data-ttu-id="3d526-109">Umgekehrt ist es möglich, ein sehr ausführliches Profil zu erstellen, dessen resultierende Ereignisse umfangreich genug sind, um später einen detaillierten Ausführungsfluss zu rekonstruieren.</span><span class="sxs-lookup"><span data-stu-id="3d526-109">Conversely, you may create a very detailed profile whose resulting events are rich enough to reconstruct a detailed execution flow later.</span></span>
+
+<span data-ttu-id="3d526-110">Überwachungsprofile sind XML-Elemente, die innerhalb einer standardmäßigen [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Konfigurationsdatei oder in Code angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="3d526-110">Tracking profiles manifest themselves as XML elements within a standard [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configuration file or specified in code.</span></span> <span data-ttu-id="3d526-111">Das folgende Beispiel ist einem [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]-Überwachungsprofil in einer Konfigurationsdatei entnommen, die es einem Überwachungsteilnehmer ermöglicht, `Started`-Workflowereignisse und `Completed`-Workflowereignisse zu abonnieren.</span><span class="sxs-lookup"><span data-stu-id="3d526-111">The following example is of a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tracking profile in a configuration file that allows a tracking participant to subscribe to the `Started` and `Completed` workflow events.</span></span>
+
+```xml
+<system.serviceModel>
+    ...
+    <tracking>
+      <trackingProfile name="Sample Tracking Profile">
+        <workflow activityDefinitionId="*">
+          <workflowInstanceQueries>
+            <workflowInstanceQuery>
+              <states>
+                <state name="Started"/>
+                <state name="Completed"/>
+              </states>
+            </workflowInstanceQuery>
+          </workflowInstanceQueries>
+        </workflow>
+      </trackingProfile>
+    </profiles>
+  </tracking>
+    ...
+</system.serviceModel>
+```
+
+<span data-ttu-id="3d526-112">Im folgenden Beispiel wird das entsprechende Nachverfolgungsprofil dargestellt, das mithilfe von Code erstellt wurde.</span><span class="sxs-lookup"><span data-stu-id="3d526-112">The following example shows the equivalent tracking profile created using code.</span></span>
+
+```csharp
+TrackingProfile profile = new TrackingProfile()
+{
+    Name = "CustomTrackingProfile",
+    Queries =
+    {
+        new WorkflowInstanceQuery()
+        {
+            // Limit workflow instance tracking records for started and
+            // completed workflow states.
+            States = { WorkflowInstanceStates.Started, WorkflowInstanceStates.Completed },
+        }
+    }
+};
+```
+
+<span data-ttu-id="3d526-113">Überwachungsdatensätze werden innerhalb eines Überwachungsprofils mit dem <xref:System.Activities.Tracking.ImplementationVisibility>-Attribut über den Sichtbarkeitsmodus gefiltert.</span><span class="sxs-lookup"><span data-stu-id="3d526-113">Tracking records are filtered through the visibility mode within a tracking profile by using the <xref:System.Activities.Tracking.ImplementationVisibility> attribute.</span></span> <span data-ttu-id="3d526-114">Eine zusammengesetzte Aktivität ist eine allgemeine Aktivität mit weiteren Aktivitäten, die ihre Implementierung bilden.</span><span class="sxs-lookup"><span data-stu-id="3d526-114">A composite activity is a top-level activity that contains other activities that form its implementation.</span></span> <span data-ttu-id="3d526-115">Der Sichtbarkeitsmodus gibt die von zusammengesetzten Aktivitäten in einer Workflowaktivität ausgegebenen Überwachungsdatensätze an. Damit wird bestimmt, ob Aktivitäten, aus denen die Implementierung besteht, nachverfolgt werden.</span><span class="sxs-lookup"><span data-stu-id="3d526-115">The visibility mode specifies the tracking records emitted from composite activities within a workflow activity, to specify if activities that form the implementation are being tracked.</span></span> <span data-ttu-id="3d526-116">Der Sichtbarkeitsmodus gilt für die Ebene des Überwachungsprofils.</span><span class="sxs-lookup"><span data-stu-id="3d526-116">The visibility mode applies at the tracking profile level.</span></span> <span data-ttu-id="3d526-117">Die Filterung von Überwachungsdatensätzen für einzelne Aktivitäten eines Workflows wird von den Abfragen im Überwachungsprofil gesteuert.</span><span class="sxs-lookup"><span data-stu-id="3d526-117">The filtering of tracking records for individual activities within a workflow is controlled by the queries within the tracking profile.</span></span> <span data-ttu-id="3d526-118">Weitere Informationen finden Sie unter den **Abfragetypen für Überwachungsprofile** Abschnitt in diesem Dokument.</span><span class="sxs-lookup"><span data-stu-id="3d526-118">For more information, see the **Tracking Profile Query Types** section in this document.</span></span>
+
+<span data-ttu-id="3d526-119">Die zwei Sichtbarkeitsmodi, die vom `implementationVisibility`-Attribut im Überwachungsprofil angegeben werden, sind `RootScope` und `All`.</span><span class="sxs-lookup"><span data-stu-id="3d526-119">The two visibility modes specified by the `implementationVisibility` attribute in the tracking profile are `RootScope` and `All`.</span></span> <span data-ttu-id="3d526-120">Durch Verwendung des `RootScope`-Modus werden Überwachungsdatensätze für Aktivitäten, die die Implementierung einer Aktivität bilden, unterdrückt, wenn der Stamm eines Workflows keine zusammengesetzte Aktivität ist.</span><span class="sxs-lookup"><span data-stu-id="3d526-120">Using the `RootScope` mode suppresses the tracking records for activities that form the implementation of an activity in the case where a composite activity is not the root of a workflow.</span></span> <span data-ttu-id="3d526-121">Dies bedeutet, dass nur die allgemeine Aktivität innerhalb der zusammengesetzten Aktivität nachverfolgt wird, wenn einem Workflow eine Aktivität hinzugefügt wird, die mit anderen Aktivitäten implementiert wird, und `implementationVisibility` auf RootScope festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="3d526-121">This implies that, when an activity that is implemented using other activities is added to a workflow, and the `implementationVisibility` set to RootScope, only the top-level activity within that composite activity is tracked.</span></span> <span data-ttu-id="3d526-122">Wenn eine Aktivität der Stamm des Workflows ist, stellt die Implementierung der Aktivität den Workflow selbst dar, und Überwachungsdatensätze werden für Aktivitäten ausgegeben, die die Implementierung bilden.</span><span class="sxs-lookup"><span data-stu-id="3d526-122">If an activity is the root of the workflow, then the implementation of the activity is the workflow itself and tracking records are emitted for activities that form the implementation.</span></span> <span data-ttu-id="3d526-123">Bei Verwendung des All-Modus werden die Überwachungsdatensätze für die Stammaktivität und alle zugehörigen zusammengesetzten Aktivitäten ausgegeben.</span><span class="sxs-lookup"><span data-stu-id="3d526-123">Using the All mode permits all tracking records to be emitted for the root activity and all its composite activities.</span></span>
+
+<span data-ttu-id="3d526-124">Nehmen wir beispielsweise an *MyActivity* ist eine zusammengesetzte Aktivität, deren Implementierung zwei Aktivitäten enthält *"Activity1"* und *"activity2"*.</span><span class="sxs-lookup"><span data-stu-id="3d526-124">For example, suppose *MyActivity* is a composite activity whose implementation contains two activities, *Activity1* and *Activity2*.</span></span> <span data-ttu-id="3d526-125">Wenn diese Aktivität einem Workflow hinzugefügt wird und die nachverfolgung aktiviert ist, mit einem Überwachungsprofil mit `implementationVisibility` festgelegt `RootScope`, werden Überwachungsdatensätze nur für *MyActivity*.</span><span class="sxs-lookup"><span data-stu-id="3d526-125">When this activity is added to a workflow and tracking is enabled with a tracking profile with `implementationVisibility` set to `RootScope`, tracking records are emitted only for *MyActivity*.</span></span> <span data-ttu-id="3d526-126">Allerdings werden keine Datensätze für Aktivitäten ausgegeben *"Activity1"* und *"activity2"*.</span><span class="sxs-lookup"><span data-stu-id="3d526-126">However, no records are emitted for activities *Activity1* and *Activity2*.</span></span>
+
+<span data-ttu-id="3d526-127">Jedoch wenn die `implementationVisibility` Attribut für das Überwachungsprofil ist auf `All`, und klicken Sie dann die Überwachungsdatensätze ausgegeben werden, nicht nur für *MyActivity*, aber auch für die Aktivitäten *"Activity1"* und  *"Activity2"*.</span><span class="sxs-lookup"><span data-stu-id="3d526-127">However, if the `implementationVisibility` attribute for the tracking profile is  set to `All`, then tracking records are emitted not only for *MyActivity*, but also for activities *Activity1* and *Activity2*.</span></span>
+
+<span data-ttu-id="3d526-128">Das `implementationVisibility`-Flag gilt für folgende Datensatztypen für die Nachverfolgung:</span><span class="sxs-lookup"><span data-stu-id="3d526-128">The `implementationVisibility` flag applies to following tracking record types:</span></span>
+
+- <span data-ttu-id="3d526-129">ActivityStateRecord</span><span class="sxs-lookup"><span data-stu-id="3d526-129">ActivityStateRecord</span></span>
+
+- <span data-ttu-id="3d526-130">FaultPropagationRecord</span><span class="sxs-lookup"><span data-stu-id="3d526-130">FaultPropagationRecord</span></span>
+
+- <span data-ttu-id="3d526-131">CancelRequestedRecord</span><span class="sxs-lookup"><span data-stu-id="3d526-131">CancelRequestedRecord</span></span>
+
+- <span data-ttu-id="3d526-132">ActivityScheduledRecord</span><span class="sxs-lookup"><span data-stu-id="3d526-132">ActivityScheduledRecord</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="67633-133">Von der Aktivitätsimplementierung ausgegebene CustomTrackingRecords werden von der implementationVisibility-Einstellung nicht herausgefiltert.</span><span class="sxs-lookup"><span data-stu-id="67633-133">CustomTrackingRecords emitted from activity implementation are not filtered out by the implementationVisibility setting.</span></span>  
-  
- <span data-ttu-id="67633-134">Die `implementationVisibility`-Funktionalität wird für das Überwachungsprofil auf folgende Weise als <xref:System.Activities.Tracking.ImplementationVisibility.RootScope> in Code angegeben:</span><span class="sxs-lookup"><span data-stu-id="67633-134">The `implementationVisibility` functionality is specified as <xref:System.Activities.Tracking.ImplementationVisibility.RootScope> on the tracking profile in code as follows:</span></span>  
-  
-```  
-TrackingProfile sampleTrackingProfile = new TrackingProfile()  
-{  
-    Name = "Sample Tracking Profile",  
-    ImplementationVisibility = ImplementationVisibility.RootScope  
-};  
-```  
-  
- <span data-ttu-id="67633-135">Die `implementationVisibility`-Funktionalität kann für das Überwachungsprofil auf folgende Weise als <xref:System.Activities.Tracking.ImplementationVisibility.All> in einer Konfigurationsdatei angegeben werden:</span><span class="sxs-lookup"><span data-stu-id="67633-135">The `implementationVisibility` functionality is specified as <xref:System.Activities.Tracking.ImplementationVisibility.All> on the tracking profile in a configuration file as follows:</span></span>  
-  
-```xml  
-<tracking>  
-      <profiles>  
-        <trackingProfile name="Shipping Monitoring" implementationVisibility="All">  
-          <workflow activityDefinitionId="*">  
-...  
-         </workflow>  
-        </trackingProfile>  
-      </profiles>  
-</tracking>  
-```  
-  
- <span data-ttu-id="67633-136">Die `ImplementationVisibility`-Einstellung ist für das Überwachungsprofil optional.</span><span class="sxs-lookup"><span data-stu-id="67633-136">The `ImplementationVisibility` setting on the tracking profile is optional.</span></span> <span data-ttu-id="67633-137">Standardmäßig ist der Wert auf `RootScope` festgelegt.</span><span class="sxs-lookup"><span data-stu-id="67633-137">By default, its value is set to `RootScope`.</span></span> <span data-ttu-id="67633-138">Bei den Werten für dieses Attribut muss die Groß-/Kleinschreibung beachtet werden.</span><span class="sxs-lookup"><span data-stu-id="67633-138">The values for this attribute are also case-sensitive.</span></span>  
-  
-### <a name="tracking-profile-query-types"></a><span data-ttu-id="67633-139">Abfragetypen für Überwachungsprofile</span><span class="sxs-lookup"><span data-stu-id="67633-139">Tracking Profile Query Types</span></span>  
- <span data-ttu-id="67633-140">Überwachungsprofile werden als deklarative Abonnements für Überwachungsdatensätze angeordnet, die es Ihnen ermöglichen, bestimmte Überwachungsdatensätze aus der Workflowlaufzeit abzufragen.</span><span class="sxs-lookup"><span data-stu-id="67633-140">Tracking profiles are structured as declarative subscriptions for tracking records that allow you to query the workflow runtime for specific tracking records.</span></span> <span data-ttu-id="67633-141">Es gibt mehrere Abfragetypen, mit denen Sie andere Klassen von <xref:System.Activities.Tracking.TrackingRecord>-Objekten abonnieren können.</span><span class="sxs-lookup"><span data-stu-id="67633-141">There are several query types that allow you subscribe to different classes of <xref:System.Activities.Tracking.TrackingRecord> objects.</span></span> <span data-ttu-id="67633-142">Überwachungsprofile können in der Konfiguration oder durch Code angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="67633-142">Tracking profiles can be specified in configuration or through code.</span></span> <span data-ttu-id="67633-143">Im Folgenden werden die häufigsten Abfragetypen aufgeführt:</span><span class="sxs-lookup"><span data-stu-id="67633-143">Here are the most common query types:</span></span>  
-  
--   <span data-ttu-id="67633-144"><xref:System.Activities.Tracking.WorkflowInstanceQuery> – Hiermit können Sie Änderungen am Workflowinstanz-Lebenszyklus nachverfolgen, z. B. die bereits erwähnten Optionen `Started` und `Completed`.</span><span class="sxs-lookup"><span data-stu-id="67633-144"><xref:System.Activities.Tracking.WorkflowInstanceQuery> - Use this to track workflow instance life cycle changes like the previously-demonstrated `Started` and `Completed`.</span></span> <span data-ttu-id="67633-145"><xref:System.Activities.Tracking.WorkflowInstanceQuery> – Wird für das Abonnieren der folgenden <xref:System.Activities.Tracking.TrackingRecord>-Objekte verwendet:</span><span class="sxs-lookup"><span data-stu-id="67633-145">The <xref:System.Activities.Tracking.WorkflowInstanceQuery> is used to subscribe to the following <xref:System.Activities.Tracking.TrackingRecord> objects:</span></span>  
-  
-    -   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
-  
-    -   <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>  
-  
-    -   <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>  
-  
-    -   <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>  
-  
-    -   <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
-  
-     <span data-ttu-id="67633-146">Jeder Zustand, der abonniert werden kann, ist in der <xref:System.Activities.Tracking.WorkflowInstanceStates>-Klasse angegeben.</span><span class="sxs-lookup"><span data-stu-id="67633-146">The states that can be subscribed to are specified in the <xref:System.Activities.Tracking.WorkflowInstanceStates> class.</span></span>  
-  
-     <span data-ttu-id="67633-147">Die Konfiguration bzw. der Code zum Abonnieren von Überwachungsdatensätzen auf Workflowinstanzebene für den `Started`-Instanzzustand mit dem <xref:System.Activities.Tracking.WorkflowInstanceQuery>-Objekt wird im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="67633-147">The configuration or code used to subscribe to workflow instance-level tracking records for the `Started` instance state using the <xref:System.Activities.Tracking.WorkflowInstanceQuery> is shown in the following example.</span></span>  
-  
-    ```xml  
-    <workflowInstanceQueries>  
-        <workflowInstanceQuery>  
-          <states>  
-            <state name="Started"/>  
-          </states>  
-        </workflowInstanceQuery>  
-    </workflowInstanceQueries>  
-    ```  
-  
-    ```  
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()  
-    {  
-        Name = "Sample Tracking Profile",  
-        Queries =   
-        {  
-            new WorkflowInstanceQuery()  
-            {  
-                States = { WorkflowInstanceStates.Started}                                                                     
-            }  
-        }  
-    };  
-    ```  
-  
--   <span data-ttu-id="67633-148"><xref:System.Activities.Tracking.ActivityStateQuery> – Hiermit können Sie die Lebenszyklusänderungen der Aktivitäten nachverfolgen, aus denen eine Workflowinstanz besteht.</span><span class="sxs-lookup"><span data-stu-id="67633-148"><xref:System.Activities.Tracking.ActivityStateQuery> - Use this to track life cycle changes of the activities that make up a workflow instance.</span></span> <span data-ttu-id="67633-149">Beispielsweise empfiehlt es sich zum Nachverfolgen jedes Mal, wenn die Aktivität "E-Mail senden" innerhalb einer Workflowinstanz abgeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="67633-149">For example, you may want to keep track of every time the "Send E-Mail" activity completes within a workflow instance.</span></span> <span data-ttu-id="67633-150">Diese Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.ActivityStateRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="67633-150">This query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.ActivityStateRecord> objects.</span></span> <span data-ttu-id="67633-151">Die verfügbaren Zustände, die abonniert werden können, werden im <xref:System.Activities.Tracking.ActivityStates>-Objekt angegeben.</span><span class="sxs-lookup"><span data-stu-id="67633-151">The available states to subscribe to are specified in <xref:System.Activities.Tracking.ActivityStates>.</span></span>  
-  
-     <span data-ttu-id="67633-152">Die Konfiguration und der Code zum Abonnieren von Überwachungsdatensätzen für den Aktivitätszustand, die das  <xref:System.Activities.Tracking.ActivityStateQuery>-Objekt für die `SendEmailActivity`-Aktivität verwenden, werden im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="67633-152">The configuration and code used to subscribe activity state tracking records that use the <xref:System.Activities.Tracking.ActivityStateQuery> for the `SendEmailActivity` activity is shown in the following example.</span></span>  
-  
-    ```xml  
-    <activityStateQueries>  
-      <activityStateQuery activityName="SendEmailActivity">  
-        <states>  
-          <state name="Closed"/>  
-        </states>  
-      </activityStateQuery>  
-    </activityStateQueries>  
-    ```  
-  
-    ```  
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()  
-    {  
-        Name = "Sample Tracking Profile",  
-        Queries =  
-        {  
-            new ActivityStateQuery()  
-            {                              
-                ActivityName = "SendEmailActivity",  
-                States = { ActivityStates.Closed }  
-            }  
-        }  
-    };  
-    ```  
-  
+> <span data-ttu-id="3d526-133">Von der Aktivitätsimplementierung ausgegebene CustomTrackingRecords werden von der implementationVisibility-Einstellung nicht herausgefiltert.</span><span class="sxs-lookup"><span data-stu-id="3d526-133">CustomTrackingRecords emitted from activity implementation are not filtered out by the implementationVisibility setting.</span></span>
+
+<span data-ttu-id="3d526-134">Die `implementationVisibility`-Funktionalität wird für das Überwachungsprofil auf folgende Weise als <xref:System.Activities.Tracking.ImplementationVisibility.RootScope> in Code angegeben:</span><span class="sxs-lookup"><span data-stu-id="3d526-134">The `implementationVisibility` functionality is specified as <xref:System.Activities.Tracking.ImplementationVisibility.RootScope> on the tracking profile in code as follows:</span></span>
+
+```csharp
+TrackingProfile sampleTrackingProfile = new TrackingProfile()
+{
+    Name = "Sample Tracking Profile",
+    ImplementationVisibility = ImplementationVisibility.RootScope
+};
+```
+
+<span data-ttu-id="3d526-135">Die `implementationVisibility`-Funktionalität kann für das Überwachungsprofil auf folgende Weise als <xref:System.Activities.Tracking.ImplementationVisibility.All> in einer Konfigurationsdatei angegeben werden:</span><span class="sxs-lookup"><span data-stu-id="3d526-135">The `implementationVisibility` functionality is specified as <xref:System.Activities.Tracking.ImplementationVisibility.All> on the tracking profile in a configuration file as follows:</span></span>
+
+```xml
+<tracking>
+      <profiles>
+        <trackingProfile name="Shipping Monitoring" implementationVisibility="All">
+          <workflow activityDefinitionId="*">
+...
+         </workflow>
+        </trackingProfile>
+      </profiles>
+</tracking>
+```
+
+<span data-ttu-id="3d526-136">Die `ImplementationVisibility`-Einstellung ist für das Überwachungsprofil optional.</span><span class="sxs-lookup"><span data-stu-id="3d526-136">The `ImplementationVisibility` setting on the tracking profile is optional.</span></span> <span data-ttu-id="3d526-137">Standardmäßig ist der Wert auf `RootScope` festgelegt.</span><span class="sxs-lookup"><span data-stu-id="3d526-137">By default, its value is set to `RootScope`.</span></span> <span data-ttu-id="3d526-138">Bei den Werten für dieses Attribut muss die Groß-/Kleinschreibung beachtet werden.</span><span class="sxs-lookup"><span data-stu-id="3d526-138">The values for this attribute are also case-sensitive.</span></span>
+
+### <a name="tracking-profile-query-types"></a><span data-ttu-id="3d526-139">Abfragetypen für Überwachungsprofile</span><span class="sxs-lookup"><span data-stu-id="3d526-139">Tracking Profile Query Types</span></span>
+
+<span data-ttu-id="3d526-140">Überwachungsprofile werden als deklarative Abonnements für Überwachungsdatensätze angeordnet, die es Ihnen ermöglichen, bestimmte Überwachungsdatensätze aus der Workflowlaufzeit abzufragen.</span><span class="sxs-lookup"><span data-stu-id="3d526-140">Tracking profiles are structured as declarative subscriptions for tracking records that allow you to query the workflow runtime for specific tracking records.</span></span> <span data-ttu-id="3d526-141">Es gibt mehrere Abfragetypen, mit denen Sie andere Klassen von <xref:System.Activities.Tracking.TrackingRecord>-Objekten abonnieren können.</span><span class="sxs-lookup"><span data-stu-id="3d526-141">There are several query types that allow you subscribe to different classes of <xref:System.Activities.Tracking.TrackingRecord> objects.</span></span> <span data-ttu-id="3d526-142">Überwachungsprofile können in der Konfiguration oder durch Code angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="3d526-142">Tracking profiles can be specified in configuration or through code.</span></span> <span data-ttu-id="3d526-143">Im Folgenden werden die häufigsten Abfragetypen aufgeführt:</span><span class="sxs-lookup"><span data-stu-id="3d526-143">Here are the most common query types:</span></span>
+
+- <span data-ttu-id="3d526-144"><xref:System.Activities.Tracking.WorkflowInstanceQuery> – Hiermit können Sie Änderungen am Workflowinstanz-Lebenszyklus nachverfolgen, z. B. die bereits erwähnten Optionen `Started` und `Completed`.</span><span class="sxs-lookup"><span data-stu-id="3d526-144"><xref:System.Activities.Tracking.WorkflowInstanceQuery> - Use this to track workflow instance life cycle changes like the previously-demonstrated `Started` and `Completed`.</span></span> <span data-ttu-id="3d526-145"><xref:System.Activities.Tracking.WorkflowInstanceQuery> – Wird für das Abonnieren der folgenden <xref:System.Activities.Tracking.TrackingRecord>-Objekte verwendet:</span><span class="sxs-lookup"><span data-stu-id="3d526-145">The <xref:System.Activities.Tracking.WorkflowInstanceQuery> is used to subscribe to the following <xref:System.Activities.Tracking.TrackingRecord> objects:</span></span>
+
+    - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
+
+    - <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>
+
+    - <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>
+
+    - <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>
+
+    - <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>
+
+    <span data-ttu-id="3d526-146">Jeder Zustand, der abonniert werden kann, ist in der <xref:System.Activities.Tracking.WorkflowInstanceStates>-Klasse angegeben.</span><span class="sxs-lookup"><span data-stu-id="3d526-146">The states that can be subscribed to are specified in the <xref:System.Activities.Tracking.WorkflowInstanceStates> class.</span></span>
+
+    <span data-ttu-id="3d526-147">Die Konfiguration bzw. der Code zum Abonnieren von Überwachungsdatensätzen auf Workflowinstanzebene für den `Started`-Instanzzustand mit dem <xref:System.Activities.Tracking.WorkflowInstanceQuery>-Objekt wird im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3d526-147">The configuration or code used to subscribe to workflow instance-level tracking records for the `Started` instance state using the <xref:System.Activities.Tracking.WorkflowInstanceQuery> is shown in the following example.</span></span>
+
+    ```xml
+    <workflowInstanceQueries>
+        <workflowInstanceQuery>
+          <states>
+            <state name="Started"/>
+          </states>
+        </workflowInstanceQuery>
+    </workflowInstanceQueries>
+    ```
+
+    ```csharp
+    TrackingProfile sampleTrackingProfile = new TrackingProfile()
+    {
+        Name = "Sample Tracking Profile",
+        Queries =
+        {
+            new WorkflowInstanceQuery()
+            {
+                States = { WorkflowInstanceStates.Started}
+            }
+        }
+    };
+    ```
+
+- <span data-ttu-id="3d526-148"><xref:System.Activities.Tracking.ActivityStateQuery> – Hiermit können Sie die Lebenszyklusänderungen der Aktivitäten nachverfolgen, aus denen eine Workflowinstanz besteht.</span><span class="sxs-lookup"><span data-stu-id="3d526-148"><xref:System.Activities.Tracking.ActivityStateQuery> - Use this to track life cycle changes of the activities that make up a workflow instance.</span></span> <span data-ttu-id="3d526-149">Beispielsweise empfiehlt es sich zum Nachverfolgen jedes Mal, wenn die Aktivität "E-Mail senden" innerhalb einer Workflowinstanz abgeschlossen wird.</span><span class="sxs-lookup"><span data-stu-id="3d526-149">For example, you may want to keep track of every time the "Send E-Mail" activity completes within a workflow instance.</span></span> <span data-ttu-id="3d526-150">Diese Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.ActivityStateRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="3d526-150">This query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.ActivityStateRecord> objects.</span></span> <span data-ttu-id="3d526-151">Die verfügbaren Zustände, die abonniert werden können, werden im <xref:System.Activities.Tracking.ActivityStates>-Objekt angegeben.</span><span class="sxs-lookup"><span data-stu-id="3d526-151">The available states to subscribe to are specified in <xref:System.Activities.Tracking.ActivityStates>.</span></span>
+
+    <span data-ttu-id="3d526-152">Die Konfiguration und der Code zum Abonnieren von Überwachungsdatensätzen für den Aktivitätszustand, die das  <xref:System.Activities.Tracking.ActivityStateQuery>-Objekt für die `SendEmailActivity`-Aktivität verwenden, werden im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3d526-152">The configuration and code used to subscribe activity state tracking records that use the <xref:System.Activities.Tracking.ActivityStateQuery> for the `SendEmailActivity` activity is shown in the following example.</span></span>
+
+    ```xml
+    <activityStateQueries>
+      <activityStateQuery activityName="SendEmailActivity">
+        <states>
+          <state name="Closed"/>
+        </states>
+      </activityStateQuery>
+    </activityStateQueries>
+    ```
+
+    ```csharp
+    TrackingProfile sampleTrackingProfile = new TrackingProfile()
+    {
+        Name = "Sample Tracking Profile",
+        Queries =
+        {
+            new ActivityStateQuery()
+            {
+                ActivityName = "SendEmailActivity",
+                States = { ActivityStates.Closed }
+            }
+        }
+    };
+    ```
+
     > [!NOTE]
-    >  <span data-ttu-id="67633-153">Wenn mehrere activityStateQuery-Elemente denselben Namen haben, werden nur die Zustände im letzten Element im Nachverfolgungsprofil verwendet.</span><span class="sxs-lookup"><span data-stu-id="67633-153">If multiple activityStateQuery elements have the same name, only the states in the last element are used in the tracking profile.</span></span>  
-  
--   <span data-ttu-id="67633-154"><xref:System.Activities.Tracking.ActivityScheduledQuery> – Mit dieser Abfrage können Sie eine Aktivität nachverfolgen, die von einer übergeordneten Aktivität ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="67633-154"><xref:System.Activities.Tracking.ActivityScheduledQuery> - This query allows you to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="67633-155">Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.ActivityScheduledRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="67633-155">The query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.ActivityScheduledRecord> objects.</span></span>  
-  
-     <span data-ttu-id="67633-156">Die Konfiguration und der Code zum Abonnieren von Datensätzen, die mit der untergeordneten `SendEmailActivity`-Aktivität verknüpft sind, deren Planung mit dem <xref:System.Activities.Tracking.ActivityScheduledQuery>-Objekt erfolgt, wird im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="67633-156">The configuration and code used to subscribe to records related to the `SendEmailActivity` child activity being scheduled using the <xref:System.Activities.Tracking.ActivityScheduledQuery> is shown in the following example.</span></span>  
-  
-    ```xml  
-    <activityScheduledQueries>  
-      <activityScheduledQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />  
-     </activityScheduledQueries>  
-    ```  
-  
-    ```  
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()  
-    {  
-        Name = "Sample Tracking Profile",  
-        Queries =   
-        {  
-            new ActivityScheduledQuery()  
-            {  
-                ActivityName = "ProcessNotificationsActivity",  
-                ChildActivityName = "SendEmailActivity"  
-            }  
-        }  
-    };  
-    ```  
-  
--   <span data-ttu-id="67633-157"><xref:System.Activities.Tracking.FaultPropagationQuery> – Hiermit können Sie die Behandlung von Fehlern nachverfolgen, die in einer Aktivität auftreten.</span><span class="sxs-lookup"><span data-stu-id="67633-157"><xref:System.Activities.Tracking.FaultPropagationQuery> - Use this to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="67633-158">Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.FaultPropagationRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="67633-158">The query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.FaultPropagationRecord> objects.</span></span>  
-  
-     <span data-ttu-id="67633-159">Die Konfiguration und der Code zum Abonnieren von mit der Fehlerweitergabe verknüpften Datensätzen mithilfe von <xref:System.Activities.Tracking.FaultPropagationQuery> werden im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="67633-159">The configuration and code used to subscribe to records related to fault propagation using <xref:System.Activities.Tracking.FaultPropagationQuery> is shown in the following example.</span></span>  
-  
-    ```xml  
-    <faultPropagationQueries>  
-      <faultPropagationQuery faultSourceActivityName="SendEmailActivity" faultHandlerActivityName="NotificationsFaultHandler" />  
-    </faultPropagationQueries>  
-    ```  
-  
-    ```  
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()  
-    {  
-        Name = "Sample Tracking Profile",  
-        Queries =  
-        {  
-            new FaultPropagationQuery()  
-            {  
-                FaultSourceActivityName = "SendEmailActivity",  
-                FaultHandlerActivityName = "NotificationsFaultHandler"  
-            }  
-        }  
-    };  
-    ```  
-  
--   <span data-ttu-id="67633-160"><xref:System.Activities.Tracking.CancelRequestedQuery> – Hiermit können Sie Anforderungen zum Abbrechen einer untergeordneten Aktivität durch die übergeordnete Aktivität nachverfolgen.</span><span class="sxs-lookup"><span data-stu-id="67633-160"><xref:System.Activities.Tracking.CancelRequestedQuery> - Use this to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="67633-161">Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.CancelRequestedRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="67633-161">The query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.CancelRequestedRecord> objects.</span></span>  
-  
-     <span data-ttu-id="67633-162">Die Konfiguration und der Code zum Abonnieren von Datensätzen im Zusammenhang mit der Aktivität den Abbruch mit <xref:System.Activities.Tracking.CancelRequestedQuery> wird im folgenden Beispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="67633-162">The configuration and code used to subscribe to records related to activity cancellation using <xref:System.Activities.Tracking.CancelRequestedQuery> is shown in the following example.</span></span>  
-  
-    ```xml  
-    <cancelRequestedQueries>  
-      <cancelRequestedQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />  
-    </cancelRequestedQueries>  
-    ```  
-  
-    ```  
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()  
-    {  
-        Name = "Sample Tracking Profile",  
-        Queries =   
-        {  
-            new CancelRequestedQuery()  
-            {  
-                ActivityName = "ProcessNotificationsActivity",  
-                ChildActivityName = "SendEmailActivity"  
-            }  
-        }  
-    };  
-    ```  
-  
--   <span data-ttu-id="67633-163"><xref:System.Activities.Tracking.CustomTrackingQuery> – Hiermit können Sie Ereignisse nachverfolgen, die Sie in den Codeaktivitäten definieren.</span><span class="sxs-lookup"><span data-stu-id="67633-163"><xref:System.Activities.Tracking.CustomTrackingQuery> - Use this to track events that you define in your code activities.</span></span> <span data-ttu-id="67633-164">Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="67633-164">The query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.CustomTrackingRecord> objects.</span></span>  
-  
-     <span data-ttu-id="67633-165">Die Konfiguration und der Code zum Abonnieren von mit der benutzerdefinierten Nachverfolgung verknüpften Datensätzen mit <xref:System.Activities.Tracking.CustomTrackingQuery> werden im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="67633-165">The configuration and code used to subscribe to records related to custom tracking records using <xref:System.Activities.Tracking.CustomTrackingQuery> is shown in the following example.</span></span>  
-  
-    ```xml  
-    <customTrackingQueries>  
-      <customTrackingQuery name="EmailAddress" activityName="SendEmailActivity" />  
-    </customTrackingQueries>  
-    ```  
-  
-    ```  
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()  
-    {  
-        Name = "Sample Tracking Profile",  
-        Queries =   
-        {  
-            new CustomTrackingQuery()   
-            {  
-                Name = "EmailAddress",  
-                ActivityName = "SendEmailActivity"  
-            }  
-        }  
-    };  
-    ```  
-  
--   <span data-ttu-id="67633-166"><xref:System.Activities.Tracking.BookmarkResumptionQuery> – Hiermit können Sie die Wiederaufnahme eines Lesezeichens in einer Workflowinstanz nachverfolgen.</span><span class="sxs-lookup"><span data-stu-id="67633-166"><xref:System.Activities.Tracking.BookmarkResumptionQuery> - Use this to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="67633-167">Diese Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.BookmarkResumptionRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="67633-167">This query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.BookmarkResumptionRecord> objects.</span></span>  
-  
-     <span data-ttu-id="67633-168">Die Konfiguration und der Code zum Abonnieren von mit der Wiederaufnahme von Lesezeichen verknüpften Datensätzen mithilfe von <xref:System.Activities.Tracking.BookmarkResumptionQuery> werden im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="67633-168">The configuration and code used to subscribe to records related to bookmark resumption using <xref:System.Activities.Tracking.BookmarkResumptionQuery> is shown in the following example.</span></span>  
-  
-    ```xml  
-    <bookmarkResumptionQueries>  
-      <bookmarkResumptionQuery name="SentEmailBookmark" />  
-    </bookmarkResumptionQueries>  
-    ```  
-  
-    ```  
-    TrackingProfile sampleTrackingProfile = new TrackingProfile()  
-    {  
-        Name = "Sample Tracking Profile",  
-        Queries =   
-        {  
-            new BookmarkResumptionQuery()  
-            {  
-                Name = "sentEmailBookmark"  
-            }  
-        }  
-    };  
-    ```  
-  
-### <a name="annotations"></a><span data-ttu-id="67633-169">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="67633-169">Annotations</span></span>  
- <span data-ttu-id="67633-170">Anmerkungen ermöglichen es Ihnen, Überwachungsdatensätze mit einem beliebigen Wert zu markieren, der nach der Erstellung konfiguriert werden kann.</span><span class="sxs-lookup"><span data-stu-id="67633-170">Annotations allow you to arbitrarily tag tracking records with a value that can be configured after build time.</span></span> <span data-ttu-id="67633-171">Sie können z. B. mehrere Überwachungsdatensätze in mehreren Workflows mit "Mailserver" gekennzeichnet werden == "Mail Server1 markieren".</span><span class="sxs-lookup"><span data-stu-id="67633-171">For example, you might want several tracking records across several workflows to be tagged with "Mail Server" == "Mail Server1".</span></span> <span data-ttu-id="67633-172">Auf diese Weise können alle Datensätze mit diesem Tag einfach gefunden werden, wenn zu einem späteren Zeitpunkt Überwachungsdatensätze abgefragt werden.</span><span class="sxs-lookup"><span data-stu-id="67633-172">This makes it easy to find all records with this tag when querying tracking records later.</span></span>  
-  
- <span data-ttu-id="67633-173">Damit dies funktioniert, wird einer Überwachungsabfrage eine Anmerkung hinzugefügt, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="67633-173">To accomplish this, an annotation is added to a tracking query as shown in the following example.</span></span>  
-  
-```xml  
-<activityStateQuery activityName="SendEmailActivity">  
-  <states>  
-    <state name="Closed"/>  
-  </states>  
-  <annotations>  
-    <annotation name="MailServer" value="Mail Server1"/>  
-  </annotations>  
-</activityStateQuery>  
-```  
-  
-### <a name="how-to-create-a-tracking-profile"></a><span data-ttu-id="67633-174">Vorgehensweise für das Erstellen eines Überwachungsprofils</span><span class="sxs-lookup"><span data-stu-id="67633-174">How to Create a Tracking Profile</span></span>  
- <span data-ttu-id="67633-175">Mit Überwachungsabfrageelementen wird ein Überwachungsprofil erstellt. Dazu wird entweder eine XML-Konfigurationsdatei oder [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]-Code verwendet.</span><span class="sxs-lookup"><span data-stu-id="67633-175">Tracking query elements are used to create a tracking profile using either an XML configuration file or [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]code.</span></span>  <span data-ttu-id="67633-176">Im Folgenden finden Sie ein Beispiel für ein mit einer Konfigurationsdatei erstelltes Überwachungsprofil.</span><span class="sxs-lookup"><span data-stu-id="67633-176">Here is an example of a tracking profile created using a configuration file.</span></span>  
-  
-```xml  
-<system.serviceModel>  
-  <tracking>  
-    <profiles>  
-      <trackingProfile name="Sample Tracking Profile ">  
-        <workflow activityDefinitionId="*">  
-          <!--Specify the tracking profile query elements to subscribe for tracking records-->  
-        </workflow>  
-      </trackingProfile>  
-    </profiles>  
-  </tracking>  
-</system.serviceModel>  
-```  
-  
+    > <span data-ttu-id="3d526-153">Wenn mehrere activityStateQuery-Elemente denselben Namen haben, werden nur die Zustände im letzten Element im Nachverfolgungsprofil verwendet.</span><span class="sxs-lookup"><span data-stu-id="3d526-153">If multiple activityStateQuery elements have the same name, only the states in the last element are used in the tracking profile.</span></span>
+
+- <span data-ttu-id="3d526-154"><xref:System.Activities.Tracking.ActivityScheduledQuery> – Mit dieser Abfrage können Sie eine Aktivität nachverfolgen, die von einer übergeordneten Aktivität ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="3d526-154"><xref:System.Activities.Tracking.ActivityScheduledQuery> - This query allows you to track an activity scheduled for execution by a parent activity.</span></span> <span data-ttu-id="3d526-155">Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.ActivityScheduledRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="3d526-155">The query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.ActivityScheduledRecord> objects.</span></span>
+
+    <span data-ttu-id="3d526-156">Die Konfiguration und der Code zum Abonnieren von Datensätzen, die mit der untergeordneten `SendEmailActivity`-Aktivität verknüpft sind, deren Planung mit dem <xref:System.Activities.Tracking.ActivityScheduledQuery>-Objekt erfolgt, wird im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3d526-156">The configuration and code used to subscribe to records related to the `SendEmailActivity` child activity being scheduled using the <xref:System.Activities.Tracking.ActivityScheduledQuery> is shown in the following example.</span></span>
+
+    ```xml
+    <activityScheduledQueries>
+      <activityScheduledQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
+     </activityScheduledQueries>
+    ```
+
+    ```csharp
+    TrackingProfile sampleTrackingProfile = new TrackingProfile()
+    {
+        Name = "Sample Tracking Profile",
+        Queries =
+        {
+            new ActivityScheduledQuery()
+            {
+                ActivityName = "ProcessNotificationsActivity",
+                ChildActivityName = "SendEmailActivity"
+            }
+        }
+    };
+    ```
+
+- <span data-ttu-id="3d526-157"><xref:System.Activities.Tracking.FaultPropagationQuery> – Hiermit können Sie die Behandlung von Fehlern nachverfolgen, die in einer Aktivität auftreten.</span><span class="sxs-lookup"><span data-stu-id="3d526-157"><xref:System.Activities.Tracking.FaultPropagationQuery> - Use this to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="3d526-158">Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.FaultPropagationRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="3d526-158">The query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.FaultPropagationRecord> objects.</span></span>
+
+    <span data-ttu-id="3d526-159">Die Konfiguration und der Code zum Abonnieren von mit der Fehlerweitergabe verknüpften Datensätzen mithilfe von <xref:System.Activities.Tracking.FaultPropagationQuery> werden im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3d526-159">The configuration and code used to subscribe to records related to fault propagation using <xref:System.Activities.Tracking.FaultPropagationQuery> is shown in the following example.</span></span>
+
+    ```xml
+    <faultPropagationQueries>
+      <faultPropagationQuery faultSourceActivityName="SendEmailActivity" faultHandlerActivityName="NotificationsFaultHandler" />
+    </faultPropagationQueries>
+    ```
+
+    ```csharp
+    TrackingProfile sampleTrackingProfile = new TrackingProfile()
+    {
+        Name = "Sample Tracking Profile",
+        Queries =
+        {
+            new FaultPropagationQuery()
+            {
+                FaultSourceActivityName = "SendEmailActivity",
+                FaultHandlerActivityName = "NotificationsFaultHandler"
+            }
+        }
+    };
+    ```
+
+- <span data-ttu-id="3d526-160"><xref:System.Activities.Tracking.CancelRequestedQuery> – Hiermit können Sie Anforderungen zum Abbrechen einer untergeordneten Aktivität durch die übergeordnete Aktivität nachverfolgen.</span><span class="sxs-lookup"><span data-stu-id="3d526-160"><xref:System.Activities.Tracking.CancelRequestedQuery> - Use this to track requests to cancel a child activity by the parent activity.</span></span> <span data-ttu-id="3d526-161">Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.CancelRequestedRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="3d526-161">The query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.CancelRequestedRecord> objects.</span></span>
+
+    <span data-ttu-id="3d526-162">Die Konfiguration und der Code zum Abonnieren von Datensätzen im Zusammenhang mit der Aktivität den Abbruch mit <xref:System.Activities.Tracking.CancelRequestedQuery> wird im folgenden Beispiel dargestellt.</span><span class="sxs-lookup"><span data-stu-id="3d526-162">The configuration and code used to subscribe to records related to activity cancellation using <xref:System.Activities.Tracking.CancelRequestedQuery> is shown in the following example.</span></span>
+
+    ```xml
+    <cancelRequestedQueries>
+      <cancelRequestedQuery activityName="ProcessNotificationsActivity" childActivityName="SendEmailActivity" />
+    </cancelRequestedQueries>
+    ```
+
+    ```csharp
+    TrackingProfile sampleTrackingProfile = new TrackingProfile()
+    {
+        Name = "Sample Tracking Profile",
+        Queries =
+        {
+            new CancelRequestedQuery()
+            {
+                ActivityName = "ProcessNotificationsActivity",
+                ChildActivityName = "SendEmailActivity"
+            }
+        }
+    };
+    ```
+
+- <span data-ttu-id="3d526-163"><xref:System.Activities.Tracking.CustomTrackingQuery> – Hiermit können Sie Ereignisse nachverfolgen, die Sie in den Codeaktivitäten definieren.</span><span class="sxs-lookup"><span data-stu-id="3d526-163"><xref:System.Activities.Tracking.CustomTrackingQuery> - Use this to track events that you define in your code activities.</span></span> <span data-ttu-id="3d526-164">Die Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="3d526-164">The query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.CustomTrackingRecord> objects.</span></span>
+
+    <span data-ttu-id="3d526-165">Die Konfiguration und der Code zum Abonnieren von mit der benutzerdefinierten Nachverfolgung verknüpften Datensätzen mit <xref:System.Activities.Tracking.CustomTrackingQuery> werden im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3d526-165">The configuration and code used to subscribe to records related to custom tracking records using <xref:System.Activities.Tracking.CustomTrackingQuery> is shown in the following example.</span></span>
+
+    ```xml
+    <customTrackingQueries>
+      <customTrackingQuery name="EmailAddress" activityName="SendEmailActivity" />
+    </customTrackingQueries>
+    ```
+
+    ```csharp
+    TrackingProfile sampleTrackingProfile = new TrackingProfile()
+    {
+        Name = "Sample Tracking Profile",
+        Queries =
+        {
+            new CustomTrackingQuery()
+            {
+                Name = "EmailAddress",
+                ActivityName = "SendEmailActivity"
+            }
+        }
+    };
+    ```
+
+- <span data-ttu-id="3d526-166"><xref:System.Activities.Tracking.BookmarkResumptionQuery> – Hiermit können Sie die Wiederaufnahme eines Lesezeichens in einer Workflowinstanz nachverfolgen.</span><span class="sxs-lookup"><span data-stu-id="3d526-166"><xref:System.Activities.Tracking.BookmarkResumptionQuery> - Use this to track resumption of a bookmark within a workflow instance.</span></span> <span data-ttu-id="3d526-167">Diese Abfrage ist notwendig, damit ein <xref:System.Activities.Tracking.TrackingParticipant>-Objekt <xref:System.Activities.Tracking.BookmarkResumptionRecord>-Objekte abonnieren kann.</span><span class="sxs-lookup"><span data-stu-id="3d526-167">This query is necessary for a <xref:System.Activities.Tracking.TrackingParticipant> to subscribe to <xref:System.Activities.Tracking.BookmarkResumptionRecord> objects.</span></span>
+
+    <span data-ttu-id="3d526-168">Die Konfiguration und der Code zum Abonnieren von mit der Wiederaufnahme von Lesezeichen verknüpften Datensätzen mithilfe von <xref:System.Activities.Tracking.BookmarkResumptionQuery> werden im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3d526-168">The configuration and code used to subscribe to records related to bookmark resumption using <xref:System.Activities.Tracking.BookmarkResumptionQuery> is shown in the following example.</span></span>
+
+    ```xml
+    <bookmarkResumptionQueries>
+      <bookmarkResumptionQuery name="SentEmailBookmark" />
+    </bookmarkResumptionQueries>
+    ```
+
+    ```csharp
+    TrackingProfile sampleTrackingProfile = new TrackingProfile()
+    {
+        Name = "Sample Tracking Profile",
+        Queries =
+        {
+            new BookmarkResumptionQuery()
+            {
+                Name = "sentEmailBookmark"
+            }
+        }
+    };
+    ```
+
+### <a name="annotations"></a><span data-ttu-id="3d526-169">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="3d526-169">Annotations</span></span>
+
+<span data-ttu-id="3d526-170">Anmerkungen ermöglichen es Ihnen, Überwachungsdatensätze mit einem beliebigen Wert zu markieren, der nach der Erstellung konfiguriert werden kann.</span><span class="sxs-lookup"><span data-stu-id="3d526-170">Annotations allow you to arbitrarily tag tracking records with a value that can be configured after build time.</span></span> <span data-ttu-id="3d526-171">Sie können z. B. mehrere Überwachungsdatensätze in mehreren Workflows mit "Mailserver" gekennzeichnet werden == "Mail Server1 markieren".</span><span class="sxs-lookup"><span data-stu-id="3d526-171">For example, you might want several tracking records across several workflows to be tagged with "Mail Server" == "Mail Server1".</span></span> <span data-ttu-id="3d526-172">Auf diese Weise können alle Datensätze mit diesem Tag einfach gefunden werden, wenn zu einem späteren Zeitpunkt Überwachungsdatensätze abgefragt werden.</span><span class="sxs-lookup"><span data-stu-id="3d526-172">This makes it easy to find all records with this tag when querying tracking records later.</span></span>
+
+<span data-ttu-id="3d526-173">Damit dies funktioniert, wird einer Überwachungsabfrage eine Anmerkung hinzugefügt, wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="3d526-173">To accomplish this, an annotation is added to a tracking query as shown in the following example.</span></span>
+
+```xml
+<activityStateQuery activityName="SendEmailActivity">
+  <states>
+    <state name="Closed"/>
+  </states>
+  <annotations>
+    <annotation name="MailServer" value="Mail Server1"/>
+  </annotations>
+</activityStateQuery>
+```
+
+### <a name="how-to-create-a-tracking-profile"></a><span data-ttu-id="3d526-174">Vorgehensweise für das Erstellen eines Überwachungsprofils</span><span class="sxs-lookup"><span data-stu-id="3d526-174">How to Create a Tracking Profile</span></span>
+
+<span data-ttu-id="3d526-175">Mit Überwachungsabfrageelementen wird ein Überwachungsprofil erstellt. Dazu wird entweder eine XML-Konfigurationsdatei oder [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]-Code verwendet.</span><span class="sxs-lookup"><span data-stu-id="3d526-175">Tracking query elements are used to create a tracking profile using either an XML configuration file or [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]code.</span></span> <span data-ttu-id="3d526-176">Im Folgenden finden Sie ein Beispiel für ein mit einer Konfigurationsdatei erstelltes Überwachungsprofil.</span><span class="sxs-lookup"><span data-stu-id="3d526-176">Here is an example of a tracking profile created using a configuration file.</span></span>
+
+```xml
+<system.serviceModel>
+  <tracking>
+    <profiles>
+      <trackingProfile name="Sample Tracking Profile ">
+        <workflow activityDefinitionId="*">
+          <!--Specify the tracking profile query elements to subscribe for tracking records-->
+        </workflow>
+      </trackingProfile>
+    </profiles>
+  </tracking>
+</system.serviceModel>
+```
+
 > [!WARNING]
->  <span data-ttu-id="67633-177">Bei WF mit dem Workflowdiensthost wird das Überwachungsprofil in der Regel mit einer Konfigurationsdatei erstellt.</span><span class="sxs-lookup"><span data-stu-id="67633-177">For a WF using the Workflow service host, the tracking profile is typically created using a configuration file.</span></span> <span data-ttu-id="67633-178">Es ist auch möglich, ein Überwachungsprofil mit Code zu erstellen. Dazu wird die API für Überwachungsprofile und Überwachungsabfragen verwendet.</span><span class="sxs-lookup"><span data-stu-id="67633-178">It is also possible to create a tracking profile with code using the tracking profile and tracking query API.</span></span>  
-  
- <span data-ttu-id="67633-179">Ein Profil, das als XML-Konfigurationsdatei konfiguriert ist, wird mit einer Verhaltenserweiterung auf einen Überwachungsteilnehmer angewendet.</span><span class="sxs-lookup"><span data-stu-id="67633-179">A profile configured as an XML configuration file is applied to a tracking participant using a behavior extension.</span></span> <span data-ttu-id="67633-180">Dies wird einem WorkflowServiceHost hinzugefügt, wie weiter unten beschrieben [Konfigurieren der nachverfolgung für einen Workflow](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="67633-180">This is added to a WorkflowServiceHost as described in the later section [Configuring Tracking for a Workflow](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>  
-  
- <span data-ttu-id="67633-181">Der Detailliertheitsgrad der Überwachungsdatensätze, die vom Host ausgegeben werden, wird von den Konfigurationseinstellungen im Überwachungsprofil bestimmt.</span><span class="sxs-lookup"><span data-stu-id="67633-181">The verbosity of the tracking records emitted by the host is determined by configuration settings within the tracking profile.</span></span> <span data-ttu-id="67633-182">Ein Überwachungsteilnehmer abonniert Überwachungsdatensätze, indem einem Überwachungsprofil Abfragen hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="67633-182">A tracking participant subscribes to tracking records by adding queries to a tracking profile.</span></span> <span data-ttu-id="67633-183">Um alle Nachverfolgungsdatensätze zu abonnieren, muss das Überwachungsprofil alle Überwachungsabfragen mit "\*" in den Namensfeldern "in den einzelnen Abfragen.</span><span class="sxs-lookup"><span data-stu-id="67633-183">To subscribe to all tracking records, the tracking profile needs to specify all tracking queries using "\*" in the name fields in each of the queries.</span></span>  
-  
- <span data-ttu-id="67633-184">Es folgen einige häufige Beispiele für Überwachungsprofile.</span><span class="sxs-lookup"><span data-stu-id="67633-184">Here are some of the common examples of tracking profiles.</span></span>  
-  
--   <span data-ttu-id="67633-185">Ein Überwachungsprofil zum Abfragen von Workflowinstanz-Datensätzen und -fehlern</span><span class="sxs-lookup"><span data-stu-id="67633-185">A tracking profile to obtain workflow instance records and faults.</span></span>  
-  
-```xml  
-<trackingProfile name="Instance and Fault Records">  
-  <workflow activityDefinitionId="*">  
-    <workflowInstanceQueries>  
-      <workflowInstanceQuery>  
-        <states>  
-          <state name="*" />  
-        </states>  
-      </workflowInstanceQuery>  
-    </workflowInstanceQueries>  
-    <activityStateQueries>  
-      <activityStateQuery activityName="*">  
-        <states>  
-          <state name="Faulted"/>  
-        </states>  
-      </activityStateQuery>  
-    </activityStateQueries>  
-  </workflow>  
-</trackingProfile>  
-```  
-  
-1.  <span data-ttu-id="67633-186">Ein Überwachungsprofil zum Abfragen aller benutzerdefinierten Überwachungsdatensätze</span><span class="sxs-lookup"><span data-stu-id="67633-186">A tracking profile to obtain all custom tracking records.</span></span>  
-  
-```xml  
-<trackingProfile name="Instance_And_Custom_Records">  
-  <workflow activityDefinitionId="*">  
-    <customTrackingQueries>  
-      <customTrackingQuery name="*" activityName="*" />  
-    </customTrackingQueries>  
-  </workflow>  
-</trackingProfile>  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="67633-187">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="67633-187">See also</span></span>
-- [<span data-ttu-id="67633-188">SQL-Nachverfolgung</span><span class="sxs-lookup"><span data-stu-id="67633-188">SQL Tracking</span></span>](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
-- [<span data-ttu-id="67633-189">Windows Server App Fabric-Überwachung</span><span class="sxs-lookup"><span data-stu-id="67633-189">Windows Server App Fabric Monitoring</span></span>](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [<span data-ttu-id="67633-190">Überwachen von Anwendungen mit AppFabric</span><span class="sxs-lookup"><span data-stu-id="67633-190">Monitoring Applications with App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkId=201275)
+> <span data-ttu-id="3d526-177">Bei WF mit dem Workflowdiensthost wird das Überwachungsprofil in der Regel mit einer Konfigurationsdatei erstellt.</span><span class="sxs-lookup"><span data-stu-id="3d526-177">For a WF using the Workflow service host, the tracking profile is typically created using a configuration file.</span></span> <span data-ttu-id="3d526-178">Es ist auch möglich, ein Überwachungsprofil mit Code zu erstellen. Dazu wird die API für Überwachungsprofile und Überwachungsabfragen verwendet.</span><span class="sxs-lookup"><span data-stu-id="3d526-178">It is also possible to create a tracking profile with code using the tracking profile and tracking query API.</span></span>
+
+<span data-ttu-id="3d526-179">Ein Profil, das als XML-Konfigurationsdatei konfiguriert ist, wird mit einer Verhaltenserweiterung auf einen Überwachungsteilnehmer angewendet.</span><span class="sxs-lookup"><span data-stu-id="3d526-179">A profile configured as an XML configuration file is applied to a tracking participant using a behavior extension.</span></span> <span data-ttu-id="3d526-180">Dies wird einem WorkflowServiceHost hinzugefügt, wie weiter unten beschrieben [Konfigurieren der nachverfolgung für einen Workflow](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="3d526-180">This is added to a WorkflowServiceHost as described in the later section [Configuring Tracking for a Workflow](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>
+
+<span data-ttu-id="3d526-181">Der Detailliertheitsgrad der Überwachungsdatensätze, die vom Host ausgegeben werden, wird von den Konfigurationseinstellungen im Überwachungsprofil bestimmt.</span><span class="sxs-lookup"><span data-stu-id="3d526-181">The verbosity of the tracking records emitted by the host is determined by configuration settings within the tracking profile.</span></span> <span data-ttu-id="3d526-182">Ein Überwachungsteilnehmer abonniert Überwachungsdatensätze, indem einem Überwachungsprofil Abfragen hinzugefügt werden.</span><span class="sxs-lookup"><span data-stu-id="3d526-182">A tracking participant subscribes to tracking records by adding queries to a tracking profile.</span></span> <span data-ttu-id="3d526-183">Um alle Nachverfolgungsdatensätze zu abonnieren, muss das Überwachungsprofil alle Überwachungsabfragen mit "\*" in den Namensfeldern "in den einzelnen Abfragen.</span><span class="sxs-lookup"><span data-stu-id="3d526-183">To subscribe to all tracking records, the tracking profile needs to specify all tracking queries using "\*" in the name fields in each of the queries.</span></span>
+
+<span data-ttu-id="3d526-184">Es folgen einige häufige Beispiele für Überwachungsprofile.</span><span class="sxs-lookup"><span data-stu-id="3d526-184">Here are some of the common examples of tracking profiles.</span></span>
+
+- <span data-ttu-id="3d526-185">Ein Überwachungsprofil zum Abfragen von Workflowinstanz-Datensätzen und -fehlern</span><span class="sxs-lookup"><span data-stu-id="3d526-185">A tracking profile to obtain workflow instance records and faults.</span></span>
+
+```xml
+<trackingProfile name="Instance and Fault Records">
+  <workflow activityDefinitionId="*">
+    <workflowInstanceQueries>
+      <workflowInstanceQuery>
+        <states>
+          <state name="*" />
+        </states>
+      </workflowInstanceQuery>
+    </workflowInstanceQueries>
+    <activityStateQueries>
+      <activityStateQuery activityName="*">
+        <states>
+          <state name="Faulted"/>
+        </states>
+      </activityStateQuery>
+    </activityStateQueries>
+  </workflow>
+</trackingProfile>
+```
+
+1. <span data-ttu-id="3d526-186">Ein Überwachungsprofil zum Abfragen aller benutzerdefinierten Überwachungsdatensätze</span><span class="sxs-lookup"><span data-stu-id="3d526-186">A tracking profile to obtain all custom tracking records.</span></span>
+
+```xml
+<trackingProfile name="Instance_And_Custom_Records">
+  <workflow activityDefinitionId="*">
+    <customTrackingQueries>
+      <customTrackingQuery name="*" activityName="*" />
+    </customTrackingQueries>
+  </workflow>
+</trackingProfile>
+```
+
+## <a name="see-also"></a><span data-ttu-id="3d526-187">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3d526-187">See also</span></span>
+
+- [<span data-ttu-id="3d526-188">SQL-Nachverfolgung</span><span class="sxs-lookup"><span data-stu-id="3d526-188">SQL Tracking</span></span>](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [<span data-ttu-id="3d526-189">Windows Server App Fabric-Überwachung</span><span class="sxs-lookup"><span data-stu-id="3d526-189">Windows Server App Fabric Monitoring</span></span>](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [<span data-ttu-id="3d526-190">Überwachen von Anwendungen mit AppFabric</span><span class="sxs-lookup"><span data-stu-id="3d526-190">Monitoring Applications with App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkId=201275)

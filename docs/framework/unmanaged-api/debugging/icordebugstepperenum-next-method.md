@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bd62e4c5476aacf736f2ddfea008790861d931c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6ac3165ab17eb1b4bc55a4bee4d2d2b467f8aefe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419616"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494596"
 ---
-# <a name="icordebugstepperenumnext-method"></a><span data-ttu-id="5c78f-102">ICorDebugStepperEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="5c78f-102">ICorDebugStepperEnum::Next Method</span></span>
-<span data-ttu-id="5c78f-103">Ruft die angegebene Anzahl von ICorDebugStepper-Instanzen aus der Enumeration, beginnend mit der aktuellen Position ab.</span><span class="sxs-lookup"><span data-stu-id="5c78f-103">Gets the specified number of ICorDebugStepper instances from the enumeration, starting at the current position.</span></span>  
+# <a name="icordebugstepperenumnext-method"></a><span data-ttu-id="c24ba-102">ICorDebugStepperEnum::Next-Methode</span><span class="sxs-lookup"><span data-stu-id="c24ba-102">ICorDebugStepperEnum::Next Method</span></span>
+<span data-ttu-id="c24ba-103">Ruft die angegebene Anzahl von ICorDebugStepper-Instanzen aus der Enumeration ab, an der aktuellen Position ab.</span><span class="sxs-lookup"><span data-stu-id="c24ba-103">Gets the specified number of ICorDebugStepper instances from the enumeration, starting at the current position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5c78f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5c78f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c24ba-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c24ba-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -38,21 +38,21 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5c78f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5c78f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c24ba-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c24ba-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="5c78f-106">[in] Die Anzahl der `ICorDebugStepper` Instanzen abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="5c78f-106">[in] The number of `ICorDebugStepper` instances to be retrieved.</span></span>  
+ <span data-ttu-id="c24ba-106">[in] Die Anzahl der `ICorDebugStepper` Instanzen abgerufen werden sollen.</span><span class="sxs-lookup"><span data-stu-id="c24ba-106">[in] The number of `ICorDebugStepper` instances to be retrieved.</span></span>  
   
  `steppers`  
- <span data-ttu-id="5c78f-107">[out] Ein Array von Zeigern, die jeweils auf ein `ICorDebugStepper` Objekt.</span><span class="sxs-lookup"><span data-stu-id="5c78f-107">[out] An array of pointers, each of which points to an `ICorDebugStepper` object.</span></span>  
+ <span data-ttu-id="c24ba-107">[out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugStepper` Objekt.</span><span class="sxs-lookup"><span data-stu-id="c24ba-107">[out] An array of pointers, each of which points to an `ICorDebugStepper` object.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="5c78f-108">[out] Zeiger auf die Anzahl der `ICorDebugStepper` Instanzen, die tatsächlich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="5c78f-108">[out] Pointer to the number of `ICorDebugStepper` instances actually returned.</span></span> <span data-ttu-id="5c78f-109">Dieser Wert kann null sein, wenn `celt` ist ein.</span><span class="sxs-lookup"><span data-stu-id="5c78f-109">This value may be null if `celt` is one.</span></span>  
+ <span data-ttu-id="c24ba-108">[out] Zeiger auf die Anzahl der `ICorDebugStepper` Instanzen, die tatsächlich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="c24ba-108">[out] Pointer to the number of `ICorDebugStepper` instances actually returned.</span></span> <span data-ttu-id="c24ba-109">Dieser Wert kann null sein, wenn `celt` ist.</span><span class="sxs-lookup"><span data-stu-id="c24ba-109">This value may be null if `celt` is one.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5c78f-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5c78f-110">Requirements</span></span>  
- <span data-ttu-id="5c78f-111">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5c78f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c24ba-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c24ba-110">Requirements</span></span>  
+ <span data-ttu-id="c24ba-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c24ba-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5c78f-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5c78f-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c24ba-112">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c24ba-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="5c78f-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5c78f-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c24ba-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c24ba-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="5c78f-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5c78f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="c24ba-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c24ba-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

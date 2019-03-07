@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bac7e46bd499a680906e67b41175e099f96ecc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c2e1dc374a5205c774e4470363b38c604fa0862
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604443"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500498"
 ---
-# <a name="iclrdatatargetgetthreadcontext-method"></a><span data-ttu-id="89c62-102">ICLRDataTarget::GetThreadContext-Methode</span><span class="sxs-lookup"><span data-stu-id="89c62-102">ICLRDataTarget::GetThreadContext Method</span></span>
-<span data-ttu-id="89c62-103">Ruft den aktuellen Ausführungskontext für den angegebenen Thread im Zielprozess.</span><span class="sxs-lookup"><span data-stu-id="89c62-103">Gets the current execution context for the given thread in the target process.</span></span> <span data-ttu-id="89c62-104">Diese Methode wird von den Datenzugriffsdiensten der common Language Runtime aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="89c62-104">This method is called by the common language runtime data access services.</span></span>  
+# <a name="iclrdatatargetgetthreadcontext-method"></a><span data-ttu-id="07edb-102">ICLRDataTarget::GetThreadContext-Methode</span><span class="sxs-lookup"><span data-stu-id="07edb-102">ICLRDataTarget::GetThreadContext Method</span></span>
+<span data-ttu-id="07edb-103">Ruft den aktuellen Ausführungskontext für den angegebenen Thread im Zielprozess.</span><span class="sxs-lookup"><span data-stu-id="07edb-103">Gets the current execution context for the given thread in the target process.</span></span> <span data-ttu-id="07edb-104">Diese Methode wird von den Datenzugriffsdiensten der common Language Runtime aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="07edb-104">This method is called by the common language runtime data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="89c62-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="89c62-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="07edb-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="07edb-105">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadContext (  
@@ -39,32 +39,32 @@ HRESULT GetThreadContext (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="89c62-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="89c62-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="07edb-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="07edb-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="89c62-107">[in] Der Betriebssystem-Bezeichner eines Threads im Zielprozess.</span><span class="sxs-lookup"><span data-stu-id="89c62-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="07edb-107">[in] Der Betriebssystem-Bezeichner eines Threads im Zielprozess.</span><span class="sxs-lookup"><span data-stu-id="07edb-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `contextFlags`  
- <span data-ttu-id="89c62-108">[in] Flags, die angeben, welche Teile des Kontexts zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="89c62-108">[in] Flags that specify which parts of the context to return.</span></span> <span data-ttu-id="89c62-109">Die Implementierung gibt immer mindestens diese Teile des Kontexts zurück.</span><span class="sxs-lookup"><span data-stu-id="89c62-109">The implementation will return at least these parts of the context.</span></span>  
+ <span data-ttu-id="07edb-108">[in] Flags, die angeben, welche Teile des Kontexts zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="07edb-108">[in] Flags that specify which parts of the context to return.</span></span> <span data-ttu-id="07edb-109">Die Implementierung gibt immer mindestens diese Teile des Kontexts zurück.</span><span class="sxs-lookup"><span data-stu-id="07edb-109">The implementation will return at least these parts of the context.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="89c62-110">[in] Die Größe des Kontexts.</span><span class="sxs-lookup"><span data-stu-id="89c62-110">[in] The size of the context.</span></span>  
+ <span data-ttu-id="07edb-110">[in] Die Größe des Kontexts.</span><span class="sxs-lookup"><span data-stu-id="07edb-110">[in] The size of the context.</span></span>  
   
  `context`  
- <span data-ttu-id="89c62-111">[out] Zeiger auf einen Puffer, in dem Kontext platziert werden soll.</span><span class="sxs-lookup"><span data-stu-id="89c62-111">[out] Pointer to a buffer in which to place the context.</span></span>  
+ <span data-ttu-id="07edb-111">[out] Zeiger auf einen Puffer, in dem Kontext platziert werden soll.</span><span class="sxs-lookup"><span data-stu-id="07edb-111">[out] Pointer to a buffer in which to place the context.</span></span>  
   
- <span data-ttu-id="89c62-112">Die Daten in die `context` Puffer muss im Format von Win32 `CONTEXT` Struktur.</span><span class="sxs-lookup"><span data-stu-id="89c62-112">The data in the `context` buffer must be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="89c62-113">Den Kontext angibt, macht prozessorspezifische Registerdaten, also die Definition von Win32 `CONTEXT` Struktur hängt von der Prozessorarchitektur.</span><span class="sxs-lookup"><span data-stu-id="89c62-113">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="89c62-114">Finden Sie in der Headerdatei "WinNT.h" für die Definition von Win32 `CONTEXT` Struktur.</span><span class="sxs-lookup"><span data-stu-id="89c62-114">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
+ <span data-ttu-id="07edb-112">Die Daten in die `context` Puffer muss im Format von Win32 `CONTEXT` Struktur.</span><span class="sxs-lookup"><span data-stu-id="07edb-112">The data in the `context` buffer must be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="07edb-113">Den Kontext angibt, macht prozessorspezifische Registerdaten, also die Definition von Win32 `CONTEXT` Struktur hängt von der Prozessorarchitektur.</span><span class="sxs-lookup"><span data-stu-id="07edb-113">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="07edb-114">Finden Sie in der Headerdatei "WinNT.h" für die Definition von Win32 `CONTEXT` Struktur.</span><span class="sxs-lookup"><span data-stu-id="07edb-114">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="89c62-115">Hinweise</span><span class="sxs-lookup"><span data-stu-id="89c62-115">Remarks</span></span>  
- <span data-ttu-id="89c62-116">Diese Methode wird vom Writer der Debuganwendung implementiert.</span><span class="sxs-lookup"><span data-stu-id="89c62-116">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="07edb-115">Hinweise</span><span class="sxs-lookup"><span data-stu-id="07edb-115">Remarks</span></span>  
+ <span data-ttu-id="07edb-116">Diese Methode wird vom Writer der Debuganwendung implementiert.</span><span class="sxs-lookup"><span data-stu-id="07edb-116">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="89c62-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="89c62-117">Requirements</span></span>  
- <span data-ttu-id="89c62-118">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="89c62-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="07edb-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="07edb-117">Requirements</span></span>  
+ <span data-ttu-id="07edb-118">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="07edb-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="89c62-119">**Header:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="89c62-119">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="07edb-119">**Header:** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="07edb-119">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="89c62-120">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="89c62-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="07edb-120">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="07edb-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="89c62-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="89c62-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="07edb-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07edb-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89c62-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="89c62-122">See also</span></span>
-- [<span data-ttu-id="89c62-123">ICLRDataTarget-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="89c62-123">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="07edb-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="07edb-122">See also</span></span>
+- [<span data-ttu-id="07edb-123">ICLRDataTarget-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="07edb-123">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

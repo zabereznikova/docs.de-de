@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e43485caa0c1dbf989ae12de77ee4e160652942e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e60ce044fc0272fbc9c4a641224bd70ad9faeeae
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502675"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488122"
 ---
-# <a name="imetadatatablesgetnextblob-method"></a><span data-ttu-id="67a3e-102">IMetaDataTables::GetNextBlob-Methode</span><span class="sxs-lookup"><span data-stu-id="67a3e-102">IMetaDataTables::GetNextBlob Method</span></span>
-<span data-ttu-id="67a3e-103">Ruft den Index des nächsten binary large Object (BLOB) in der Tabelle ab.</span><span class="sxs-lookup"><span data-stu-id="67a3e-103">Gets the index of the next binary large object (BLOB) in the table.</span></span>  
+# <a name="imetadatatablesgetnextblob-method"></a><span data-ttu-id="fa897-102">IMetaDataTables::GetNextBlob-Methode</span><span class="sxs-lookup"><span data-stu-id="fa897-102">IMetaDataTables::GetNextBlob Method</span></span>
+<span data-ttu-id="fa897-103">Ruft den Index des nächsten binary large Object (BLOB) in der Tabelle ab.</span><span class="sxs-lookup"><span data-stu-id="fa897-103">Gets the index of the next binary large object (BLOB) in the table.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="67a3e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="67a3e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fa897-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="fa897-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNextBlob (  
@@ -36,22 +36,22 @@ HRESULT GetNextBlob (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="67a3e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="67a3e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fa897-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="fa897-105">Parameters</span></span>  
  `ixBlob`  
- <span data-ttu-id="67a3e-106">[in] Der Index, wie aus einem BLOB-Spalte zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="67a3e-106">[in] The index, as returned from a column of BLOBs.</span></span>  
+ <span data-ttu-id="fa897-106">[in] Der Index, wie aus einem BLOB-Spalte zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="fa897-106">[in] The index, as returned from a column of BLOBs.</span></span>  
   
  `pNext`  
- <span data-ttu-id="67a3e-107">[out] Ein Zeiger auf den Index des nächsten BLOB.</span><span class="sxs-lookup"><span data-stu-id="67a3e-107">[out] A pointer to the index of the next BLOB.</span></span>  
+ <span data-ttu-id="fa897-107">[out] Ein Zeiger auf den Index des nächsten BLOB.</span><span class="sxs-lookup"><span data-stu-id="fa897-107">[out] A pointer to the index of the next BLOB.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="67a3e-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="67a3e-108">Requirements</span></span>  
- <span data-ttu-id="67a3e-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="67a3e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fa897-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fa897-108">Requirements</span></span>  
+ <span data-ttu-id="fa897-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fa897-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="67a3e-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="67a3e-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fa897-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fa897-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="67a3e-111">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="67a3e-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fa897-111">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="fa897-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="67a3e-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="67a3e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fa897-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fa897-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="67a3e-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="67a3e-113">See also</span></span>
-- [<span data-ttu-id="67a3e-114">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="67a3e-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="67a3e-115">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="67a3e-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fa897-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fa897-113">See also</span></span>
+- [<span data-ttu-id="fa897-114">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fa897-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="fa897-115">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fa897-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
