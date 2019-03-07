@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60825cb82097e6ec9c202efebe04a50b0f5a3771
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c63a586473128281843ec100905e63d381f1a3f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508611"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500933"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx-Funktion
 Generiert eine Signatur mit starkem Namen für die angegebene Assembly gemäß den angegebenen Flags.  
@@ -42,7 +42,7 @@ BOOLEAN StrongNameSignatureGenerationEx (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `wszFilePath`  
  [in] Der Pfad zur Datei, die das Manifest der Assembly enthält, für die Signatur mit starkem Namen generiert wird.  
   

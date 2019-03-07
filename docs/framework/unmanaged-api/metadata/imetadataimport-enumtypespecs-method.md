@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7a4273b36ce3e761348a091df3acb41212e1df05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4babdd6e0cea0d951b4cd8708d8007d431f97cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722314"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500290"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs-Methode
 Zählt TypeSpec-Token auf, die im aktuellen Metadatenbereich definiert sind.  
@@ -38,7 +38,7 @@ HRESULT EnumTypeSpecs (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `phEnum`  
  [in, out] Ein Zeiger auf den Enumerator. Dieser Wert muss NULL für den ersten Aufruf dieser Methode sein.  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 883f987eb168bf5996baba66f5081875e67f2000
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336fba6defc00eb87fcfa7e6b1aaafa0fcb15691
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698725"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494206"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW-Funktion
 Führt den angegebenen Befehl aus.  
@@ -39,7 +39,7 @@ HRESULT RunDll32ShimW (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `hwnd`  
  [in] Ein Handle für ein Fenster, in der Ausgabe des Befehls angezeigt werden sollen.  
   

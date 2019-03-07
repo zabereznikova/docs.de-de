@@ -5,12 +5,12 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: a1dea0bcc40de8dea986e93a25617f607383ec21
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8d1c2a958fa148238eaeedb9c2af3df2cb86d33d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969218"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502604"
 ---
 # <a name="example-visual-basic"></a>\<Beispiel > (Visual Basic)
 Gibt ein Beispiel für das Element an.  
@@ -21,7 +21,7 @@ Gibt ein Beispiel für das Element an.
 <example>description</example>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `description`  
  Eine Beschreibung des Codebeispiels.  
   

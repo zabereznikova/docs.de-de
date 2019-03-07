@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95d9696e29bc1b460c94d7f4d8afd3de82653333
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68df19120f2e0b45e73f9d5e137afc8a5e7ac513
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419629"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489890"
 ---
 # <a name="icordebugthreadgetdebugstate-method"></a>ICorDebugThread::GetDebugState-Methode
 Ruft den aktuellen Debugzustand dieses ICorDebugThread-Objekts ab.  
@@ -35,15 +35,15 @@ HRESULT GetDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pState`  
- [out] Ein Zeiger auf eine bitweise Kombination von Enumerationswerten CorDebugThreadState, die den aktuellen Debugzustand dieses Threads zu beschreiben.  
+ [out] Ein Zeiger auf eine bitweise Kombination der Werte der CorDebugThreadState-Enumeration, die den aktuellen Debugzustand dieses Threads beschreibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Prozess derzeit angehalten wird, `pState` den Debugzustand, die für diesen Thread vorhanden wäre, wäre der Prozess fortgesetzt werden, wird nicht den tatsächlichen aktuellen Status des Threads darstellt.  
+ Wenn der Prozess gerade beendet wird, `pState` den Debugzustand, der für diesen Thread vorhanden wäre, würde der Vorgang fortgesetzt werden, wird nicht den aktuellen Zustand dieses Threads darstellt.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 511105fef030dbc189b463864035f86d39327032
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ada84df2a08b992aa178c2fb63c713b05a8937a2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732530"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503215"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler-Methode
 Legt die Methode, die auf die verwiesen wird durch das angegebene `IUnknown` Zeiger als eines Rückrufs für token neuzuordnungen von Adressen.  
@@ -35,7 +35,7 @@ HRESULT SetHandler (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pUnk`  
  [in] Der Handler zu registrieren.  
   

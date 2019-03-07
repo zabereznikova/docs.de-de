@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 006360203518f74adb964634af52505a71d51473
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a85936eb12d0b6123469a63a14a3ae58cb1bb5b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587098"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484484"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile-Methode
 Weist den Namen der Assembly, die erstellt werden. Nicht für die Verwendung bei der Produktion ungebundener Modules.  
@@ -37,7 +37,7 @@ HRESULT SetAssemblyFile(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pszFilename`  
  Voll gekennzeichnete Name der Manifestdatei.  
   

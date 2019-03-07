@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02665d2a00a779ac73a19ec5513790f3862833b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1a81c816915eda6a90b5dac9cc6e044575076f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735014"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502981"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface-Methode
 Ruft die Schnittstelle, die durch das angegebene Token verwiesen wird.  
@@ -37,7 +37,7 @@ HRESULT GetIMapTokenIface (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pIMapToken`  
  [in, out] Das Metadatentoken für die Schnittstelle zurückgegeben werden.  
   

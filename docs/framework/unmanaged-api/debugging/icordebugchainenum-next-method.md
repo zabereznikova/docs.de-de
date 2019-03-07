@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd4f27b958aa4b25c2662d8a5e9da6bcdc73d5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 26df40297d080d1ccc9464f7b09e7731f135e270
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404455"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489825"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next-Methode
-Ruft die angegebene Anzahl von Instanzen ICorDebugChain aus der Enumeration, beginnend mit der aktuellen Position ab.  
+Ruft die angegebene Anzahl von ICorDebugChain-Instanzen aus der Enumeration ab, an der aktuellen Position ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,18 +38,18 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `celt`  
  [in] Die Anzahl der `ICorDebugChain` Instanzen abgerufen werden sollen.  
   
  `chains`  
- [out] Ein Array von Zeigern, die jeweils auf ein `ICorDebugChain` Objekt, das eine Kette darstellt.  
+ [out] Ein Array von Zeigern, die jeweils auf eine `ICorDebugChain` Objekt, das eine Kette darstellt.  
   
  `pceltFetched`  
- [out] Ein Zeiger auf die Anzahl der `ICorDebugChain` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist ein.  
+ [out] Ein Zeiger auf die Anzahl der `ICorDebugChain` Instanzen, die tatsächlich zurückgegeben. Dieser Wert kann null sein, wenn `celt` ist.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

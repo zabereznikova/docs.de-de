@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63d3df561a3b48a4b26426235455ef1a074512f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1bf62d8855b3f9de5629b9cfc6e0bcd0878a0d17
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417961"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489916"
 ---
 # <a name="icordebugstringvaluegetstring-method"></a>ICorDebugStringValue::GetString-Methode
 Ruft die Zeichenfolge, die durch ICorDebugStringValue verwiesen wird.  
@@ -38,18 +38,18 @@ HRESULT GetString (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `cchString`  
  [in] Die Größe des `szString`-Arrays.  
   
  `pcchString`  
- [out] Ein Zeiger auf die Anzahl der Zeichen zurückgegeben, die der `szString` Array.  
+ [out] Ein Zeiger auf die Anzahl der Zeichen zurückgegeben werden, der `szString` Array.  
   
  `szString`  
  [out] Ein Array, das die abgerufene Zeichenfolge speichert.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

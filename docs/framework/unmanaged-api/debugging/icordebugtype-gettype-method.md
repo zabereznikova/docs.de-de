@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d881a1fe3965b6e1d89e6172c887061434cd52ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f6b36c524921a4fecf8bc5ddcbace62af6450b6d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418717"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492425"
 ---
 # <a name="icordebugtypegettype-method"></a>ICorDebugType::GetType-Methode
-Ruft einen CorElementType-Wert, den systemeigenen Typ der common Language Runtime (CLR) beschreibt <xref:System.Type> ICorDebugType dargestellt.  
+Ruft einen CorElementType-Wert, der den systemeigenen Typ der common Language Runtime (CLR) beschreibt <xref:System.Type> ICorDebugType dargestellt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,15 +35,15 @@ HRESULT GetType (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `ty`  
- [out] Ein Zeiger auf einen Wert von der `CorElementType` -Enumeration, die die CLR gibt <xref:System.Type> , die von diesem `ICorDebugType` darstellt.  
+ [out] Ein Zeiger auf den Wert der `CorElementType` -Enumeration, die die CLR gibt <xref:System.Type> , das von diesem `ICorDebugType` darstellt.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn der Wert der `ty` ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE, ist die [ICorDebugType:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) Methode kann aufgerufen werden, um den nicht instanziierten Typ für einen generischen Typ abzurufen, rufen Sie Sie andernfalls nicht `ICorDebugType::GetClass`.  
+ Wenn der Wert des `ty` entweder ELEMENT_TYPE_CLASS oder ELEMENT_TYPE_VALUETYPE, die [ICorDebugType:: GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) Methode kann aufgerufen werden, um den nicht instanziierten Typ für einen generischen Typ zu erhalten, rufen Sie andernfalls nicht `ICorDebugType::GetClass`.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

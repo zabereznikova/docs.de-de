@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ebc86ad9c1f84156e7e228c1ddf3fe7b86b7e60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b59c7393d9d4e9cbdeaa1a2efd9965f969f985
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576264"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497794"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge-Methode
 Fügt im angegebenen importierten Bereich der Liste der Bereiche zusammengeführt werden sollen.  
@@ -37,7 +37,7 @@ HRESULT Merge (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pImport`  
  [in] Ein Zeiger auf ein [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) Objekt, das den importierten Bereich zusammengeführt werden identifiziert.  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9ed79eb799971dfcbc9fd787cd0290795f79d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e281022cd7bc9b2095fdbd3964061b811ef60e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417965"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496962"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext-Methode
 Legt den Kontext für den angegebenen Thread in diesem Prozess fest.  
@@ -37,9 +37,9 @@ HRESULT SetThreadContext(
     BYTE context[]);  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `threadID`  
- [in] Die ID des Threads für den Kontext festgelegt.  
+ [in] Die ID des Threads für den Kontext festgelegt werden soll.  
   
  `contextSize`  
  [in] Die Größe des `context`-Arrays.  
@@ -50,14 +50,14 @@ HRESULT SetThreadContext(
  Der Kontext gibt die Architektur des Prozessors auf dem der Thread ausgeführt wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Debugger sollte diese Methode anstelle der Win32-Aufrufen `SetThreadContext` funktionieren, da der Thread in einem Zustand "manipulierten" tatsächlich möglicherweise in dem Kontext vorübergehend geändert wurde. Diese Methode sollte verwendet werden, nur wenn ein Thread in systemeigenem Code. Verwendung [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) für Threads in verwaltetem Code. Es sollte nie den Kontext eines Threads zu ändern, während eines Out-of-Band (OOB) Debug-Ereignisses erforderlich.  
+ Der Debugger sollte diese Methode anstelle der Win32-Aufrufen `SetThreadContext` Funktion, da der Thread tatsächlich "gehackte" sind, möglicherweise in der der Kontext vorübergehend geändert wurde. Diese Methode sollte verwendet werden, nur wenn ein Thread in systemeigenem Code. Verwendung [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) für Threads in verwaltetem Code. Sie müssen nicht den Kontext eines Threads während eines Out-of-Band (OOB) Debug-Ereignisses zu ändern.  
   
  Die übergebenen Daten muss ein Context-Struktur für die aktuelle Plattform.  
   
- Diese Methode kann die Common Language Runtime beschädigt werden, wenn Sie nicht ordnungsgemäß verwendet.  
+ Diese Methode kann die Laufzeit beschädigt werden, wenn nicht ordnungsgemäß verwendet.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

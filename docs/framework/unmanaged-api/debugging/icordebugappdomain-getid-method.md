@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8122f1b5017faac3425d59d12d77f84180134d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401628"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501444"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId-Methode
 Ruft den eindeutigen Bezeichner der Anwendungsdomäne ab.  
@@ -35,15 +35,15 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pId`  
  [out] Der eindeutige Bezeichner der Anwendungsdomäne.  
   
 ## <a name="remarks"></a>Hinweise  
- Der Bezeichner für die Anwendungsdomäne ist eindeutig innerhalb des enthaltenden Prozesses.  
+ Der Bezeichner für die Anwendungsdomäne ist eindeutig innerhalb des Prozesses enthält.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

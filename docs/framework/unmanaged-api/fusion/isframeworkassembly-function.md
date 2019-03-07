@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e231c4fa51e6e66cba6227233cf73dd1cd4ebbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0fb4c98ff2c8b071f05b42aefed61485001e97f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733921"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480324"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly-Funktion
 Ruft einen Wert, der angibt, ob die angegebene Assembly verwaltet wird.  
@@ -37,7 +37,7 @@ HRESULT IsFrameworkAssembly (
  );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pwzAssemblyReference`  
  [in] Der Name des zu überprüfenden Assembly.  
   

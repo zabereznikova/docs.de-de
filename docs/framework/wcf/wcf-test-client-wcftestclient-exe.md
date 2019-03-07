@@ -2,12 +2,12 @@
 title: WCF-Testclient (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: edce9d2eb2d0bcd915beae0c75d3474d93d8fd51
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903998"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499289"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF-Testclient (WcfTestClient.exe)
 Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GUI-Tool, das kann Benutzer Testparameter eingeben, die Eingabe an den Dienst senden, und zeigen die Antwort, die der Dienst zurücksendet. Es bietet eine nahtlose diensttest mit WCF-Diensthost kombiniert.  
@@ -125,7 +125,7 @@ Windows Communication Foundation (WCF)-Testclient (WcfTestClient.exe) ist ein GU
  Menüelemente, die das Aktualisieren eines Diensts unterstützen, sind während der Proxygenerierung, Binärkompilierung sowie während Dienstaufrufen deaktiviert. Auch das Aufrufen von Diensten ist deaktiviert.  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>Speicherort der vom Testclient generierten Dateien  
- Standardmäßig generiert die WCF-Testclient Anwendungscode und Konfigurationsdateien von Client im Ordner "%appdata%\Local\temp\Test Client Projects". Dieser Ordner wird gelöscht, nach dem Beenden des WCF-Testclient. Wenn eine Konfigurationsdatei im WCF-Testclient geändert wird und die **immer neu generieren Konfiguration beim Starten von Diensten** Option ist deaktiviert, die geänderte Datei wird kopiert, zu dem Ordner "Cached Config" unter "Eigene Dateien\test Client Projects" mit einer Zuordnung (Metadaten-Adressen zu Datei-Namen) XML-Datei als Index.  
+ Standardmäßig generiert die WCF-Testclient Anwendungscode und Konfigurationsdateien von Client im Ordner "%appdata%\Local\temp\Test Client Projects". Dieser Ordner wird gelöscht, nach dem Beenden des WCF-Testclient. Wenn eine Konfigurationsdatei im WCF-Testclient geändert wird und die **immer neu generieren Konfiguration beim Starten von Diensten** Option ist deaktiviert, die geänderte Datei wird kopiert, zu dem Ordner "CachedConfig" unter "Eigene Dateien\test Client Projects" mit einer Zuordnung (Metadaten-Adressen zu Datei-Namen) XML-Datei als Index.  
   
  Sie können auch WCF-Testclient starten, in einer Befehlszeile, mithilfe der `/ProjectPath` wechseln, um einen neuen Pfad zum Speichern der generierten Dateien anzugeben, oder verwenden Sie die `/RestoreProjectPath` Wechsel zu den standardmäßigen Speicherort wiederherzustellen. Die Syntax lautet wie folgt:  
   

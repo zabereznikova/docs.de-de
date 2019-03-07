@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3534160e14c46bc3f8f5da81c4c14a3191a6238b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 186f4a939cb3e01a527cf6ef06029232e7f5c22a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553191"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489359"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome::GetSlotIndex-Methode
 Ruft den verwalteten slotindex einer lokalen Variablen ab.  
@@ -35,7 +35,7 @@ HRESULT GetSlotIndex(
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pSlotIndex`  
  [out] Ein Zeiger auf den slotindex einer lokalen Variablen.  
   
