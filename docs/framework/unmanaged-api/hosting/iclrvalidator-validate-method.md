@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccd6dbe63f02fa7e28c6aec1be815f1f1967a90a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ace11aa2cc3c24a6582b227f9a7ff8816ea0668
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718727"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492113"
 ---
-# <a name="iclrvalidatorvalidate-method"></a><span data-ttu-id="7a42d-102">ICLRValidator::Validate-Methode</span><span class="sxs-lookup"><span data-stu-id="7a42d-102">ICLRValidator::Validate Method</span></span>
-<span data-ttu-id="7a42d-103">Überprüft die Datei (portable Executable) oder Microsoft intermediate Language (MSIL) in der angegebenen Datei.</span><span class="sxs-lookup"><span data-stu-id="7a42d-103">Validates the portable executable (PE) or Microsoft intermediate language (MSIL) in the specified file.</span></span>  
+# <a name="iclrvalidatorvalidate-method"></a><span data-ttu-id="c9808-102">ICLRValidator::Validate-Methode</span><span class="sxs-lookup"><span data-stu-id="c9808-102">ICLRValidator::Validate Method</span></span>
+<span data-ttu-id="c9808-103">Überprüft die Datei (portable Executable) oder Microsoft intermediate Language (MSIL) in der angegebenen Datei.</span><span class="sxs-lookup"><span data-stu-id="c9808-103">Validates the portable executable (PE) or Microsoft intermediate language (MSIL) in the specified file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7a42d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7a42d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9808-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c9808-104">Syntax</span></span>  
   
 ```  
 HRESULT Validate (  
@@ -42,50 +42,50 @@ HRESULT Validate (
 );      
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7a42d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7a42d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c9808-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c9808-105">Parameters</span></span>  
  `veh`  
- <span data-ttu-id="7a42d-106">[in] Ein Zeiger auf ein `IVEHandler` -Instanz, die Validierungsfehler behandelt.</span><span class="sxs-lookup"><span data-stu-id="7a42d-106">[in] A pointer to an `IVEHandler` instance that handles validation errors.</span></span>  
+ <span data-ttu-id="c9808-106">[in] Ein Zeiger auf ein `IVEHandler` -Instanz, die Validierungsfehler behandelt.</span><span class="sxs-lookup"><span data-stu-id="c9808-106">[in] A pointer to an `IVEHandler` instance that handles validation errors.</span></span>  
   
  `ulAppDomainId`  
- <span data-ttu-id="7a42d-107">[in] Der Bezeichner für die aktuelle <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="7a42d-107">[in] The identifier for the current <xref:System.AppDomain>.</span></span>  
+ <span data-ttu-id="c9808-107">[in] Der Bezeichner für die aktuelle <xref:System.AppDomain>.</span><span class="sxs-lookup"><span data-stu-id="c9808-107">[in] The identifier for the current <xref:System.AppDomain>.</span></span>  
   
  `ulFlags`  
- <span data-ttu-id="7a42d-108">[in] Eine Kombination von [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) Werte, der die Art der Validierung ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="7a42d-108">[in] A combination of [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) values, indicating the kind of validation that should be performed.</span></span>  
+ <span data-ttu-id="c9808-108">[in] Eine Kombination von [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) Werte, der die Art der Validierung ausgeführt werden soll.</span><span class="sxs-lookup"><span data-stu-id="c9808-108">[in] A combination of [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) values, indicating the kind of validation that should be performed.</span></span>  
   
  `ulMaxError`  
- <span data-ttu-id="7a42d-109">[in] Die maximale Anzahl von Fehlern, die vor dem Beenden der Überprüfungsprozess zulassen.</span><span class="sxs-lookup"><span data-stu-id="7a42d-109">[in] The maximum number of errors to allow before exiting the validation.</span></span>  
+ <span data-ttu-id="c9808-109">[in] Die maximale Anzahl von Fehlern, die vor dem Beenden der Überprüfungsprozess zulassen.</span><span class="sxs-lookup"><span data-stu-id="c9808-109">[in] The maximum number of errors to allow before exiting the validation.</span></span>  
   
  `token`  
- <span data-ttu-id="7a42d-110">[in] Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="7a42d-110">[in] Unused.</span></span>  
+ <span data-ttu-id="c9808-110">[in] Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="c9808-110">[in] Unused.</span></span>  
   
  `fileName`  
- <span data-ttu-id="7a42d-111">[in] Der Name der Datei, die überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="7a42d-111">[in] The name of the file to be validated.</span></span>  
+ <span data-ttu-id="c9808-111">[in] Der Name der Datei, die überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="c9808-111">[in] The name of the file to be validated.</span></span>  
   
  `pe`  
- <span data-ttu-id="7a42d-112">[in] Ein Zeiger auf den Dateipuffer.</span><span class="sxs-lookup"><span data-stu-id="7a42d-112">[in] A pointer to the file buffer.</span></span>  
+ <span data-ttu-id="c9808-112">[in] Ein Zeiger auf den Dateipuffer.</span><span class="sxs-lookup"><span data-stu-id="c9808-112">[in] A pointer to the file buffer.</span></span>  
   
  `ulSize`  
- <span data-ttu-id="7a42d-113">[in] Die Größe in Bytes der Datei, die überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="7a42d-113">[in] The size, in bytes, of the file to be validated.</span></span>  
+ <span data-ttu-id="c9808-113">[in] Die Größe in Bytes der Datei, die überprüft werden.</span><span class="sxs-lookup"><span data-stu-id="c9808-113">[in] The size, in bytes, of the file to be validated.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7a42d-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7a42d-114">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c9808-114">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="c9808-114">Return Value</span></span>  
   
-|<span data-ttu-id="7a42d-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7a42d-115">HRESULT</span></span>|<span data-ttu-id="7a42d-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7a42d-116">Description</span></span>|  
+|<span data-ttu-id="c9808-115">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c9808-115">HRESULT</span></span>|<span data-ttu-id="c9808-116">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c9808-116">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="7a42d-117">S_OK</span><span class="sxs-lookup"><span data-stu-id="7a42d-117">S_OK</span></span>|<span data-ttu-id="7a42d-118">`Validate` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="7a42d-118">`Validate` returned successfully.</span></span>|  
-|<span data-ttu-id="7a42d-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="7a42d-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="7a42d-120">Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="7a42d-120">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="7a42d-121">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="7a42d-121">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="7a42d-122">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="7a42d-122">The call timed out.</span></span>|  
-|<span data-ttu-id="7a42d-123">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="7a42d-123">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="7a42d-124">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="7a42d-124">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="7a42d-125">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="7a42d-125">HOST_E_ABANDONED</span></span>|<span data-ttu-id="7a42d-126">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="7a42d-126">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="7a42d-127">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="7a42d-127">E_FAIL</span></span>|<span data-ttu-id="7a42d-128">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="7a42d-128">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="7a42d-129">Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7a42d-129">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="7a42d-130">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="7a42d-130">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="c9808-117">S_OK</span><span class="sxs-lookup"><span data-stu-id="c9808-117">S_OK</span></span>|<span data-ttu-id="c9808-118">`Validate` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="c9808-118">`Validate` returned successfully.</span></span>|  
+|<span data-ttu-id="c9808-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c9808-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c9808-120">Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="c9808-120">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="c9808-121">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c9808-121">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c9808-122">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="c9808-122">The call timed out.</span></span>|  
+|<span data-ttu-id="c9808-123">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c9808-123">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c9808-124">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="c9808-124">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="c9808-125">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c9808-125">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c9808-126">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="c9808-126">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="c9808-127">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c9808-127">E_FAIL</span></span>|<span data-ttu-id="c9808-128">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="c9808-128">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c9808-129">Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="c9808-129">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c9808-130">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="c9808-130">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7a42d-131">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7a42d-131">Requirements</span></span>  
- <span data-ttu-id="7a42d-132">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7a42d-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c9808-131">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c9808-131">Requirements</span></span>  
+ <span data-ttu-id="c9808-132">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9808-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7a42d-133">**Header:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="7a42d-133">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="c9808-133">**Header:** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="c9808-133">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="7a42d-134">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="7a42d-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c9808-134">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="c9808-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7a42d-135">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a42d-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c9808-135">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9808-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7a42d-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7a42d-136">See also</span></span>
-- [<span data-ttu-id="7a42d-137">ICLRValidator-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7a42d-137">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c9808-136">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c9808-136">See also</span></span>
+- [<span data-ttu-id="c9808-137">ICLRValidator-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c9808-137">ICLRValidator Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)

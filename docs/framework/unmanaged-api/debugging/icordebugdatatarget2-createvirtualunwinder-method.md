@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3782686f3caad6859aa81957f10e585265be340
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 387dc484b3ada63d62ddc27318e735dfc4ea93b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585483"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492269"
 ---
-# <a name="icordebugdatatarget2createvirtualunwinder-method"></a><span data-ttu-id="a86cd-102">ICorDebugDataTarget2::CreateVirtualUnwinder-Methode</span><span class="sxs-lookup"><span data-stu-id="a86cd-102">ICorDebugDataTarget2::CreateVirtualUnwinder Method</span></span>
-<span data-ttu-id="a86cd-103">Erstellt einen neuen Stapelentlader, der mit dem Entladen bei einem Anfangskontext beginnt (welcher nicht unbedingt das Blatt eines Threads ist).</span><span class="sxs-lookup"><span data-stu-id="a86cd-103">Creates a new stack unwinder that starts unwinding from an initial context (which isn't necessarily the leaf of a thread).</span></span>  
+# <a name="icordebugdatatarget2createvirtualunwinder-method"></a><span data-ttu-id="1767e-102">ICorDebugDataTarget2::CreateVirtualUnwinder-Methode</span><span class="sxs-lookup"><span data-stu-id="1767e-102">ICorDebugDataTarget2::CreateVirtualUnwinder Method</span></span>
+<span data-ttu-id="1767e-103">Erstellt einen neuen Stapelentlader, der mit dem Entladen bei einem Anfangskontext beginnt (welcher nicht unbedingt das Blatt eines Threads ist).</span><span class="sxs-lookup"><span data-stu-id="1767e-103">Creates a new stack unwinder that starts unwinding from an initial context (which isn't necessarily the leaf of a thread).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a86cd-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a86cd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1767e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1767e-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateVirtualUnwinder(  
@@ -26,39 +26,39 @@ HRESULT CreateVirtualUnwinder(
 };  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a86cd-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a86cd-105">Parameters</span></span>  
- <span data-ttu-id="a86cd-106">nativeThreadID</span><span class="sxs-lookup"><span data-stu-id="a86cd-106">nativeThreadID</span></span>  
- <span data-ttu-id="a86cd-107">[in] Die systemeigene Thread-ID für den Thread, dessen Stapel entladen wird.</span><span class="sxs-lookup"><span data-stu-id="a86cd-107">[in] The native thread ID of the thread whose stack is to be unwound.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1767e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="1767e-105">Parameters</span></span>  
+ <span data-ttu-id="1767e-106">nativeThreadID</span><span class="sxs-lookup"><span data-stu-id="1767e-106">nativeThreadID</span></span>  
+ <span data-ttu-id="1767e-107">[in] Die systemeigene Thread-ID für den Thread, dessen Stapel entladen wird.</span><span class="sxs-lookup"><span data-stu-id="1767e-107">[in] The native thread ID of the thread whose stack is to be unwound.</span></span>  
   
- <span data-ttu-id="a86cd-108">contextFlags</span><span class="sxs-lookup"><span data-stu-id="a86cd-108">contextFlags</span></span>  
- <span data-ttu-id="a86cd-109">[in] Flags, die angeben, welche Teile des Kontexts in `initialContext` definiert sind.</span><span class="sxs-lookup"><span data-stu-id="a86cd-109">[in] Flags that specify which parts of the context are defined in `initialContext`.</span></span>  
+ <span data-ttu-id="1767e-108">contextFlags</span><span class="sxs-lookup"><span data-stu-id="1767e-108">contextFlags</span></span>  
+ <span data-ttu-id="1767e-109">[in] Flags, die angeben, welche Teile des Kontexts in `initialContext` definiert sind.</span><span class="sxs-lookup"><span data-stu-id="1767e-109">[in] Flags that specify which parts of the context are defined in `initialContext`.</span></span>  
   
- <span data-ttu-id="a86cd-110">cbContext</span><span class="sxs-lookup"><span data-stu-id="a86cd-110">cbContext</span></span>  
- <span data-ttu-id="a86cd-111">[in] Die Größe des `initialContext`.</span><span class="sxs-lookup"><span data-stu-id="a86cd-111">[in] The size of `initialContext`.</span></span>  
+ <span data-ttu-id="1767e-110">cbContext</span><span class="sxs-lookup"><span data-stu-id="1767e-110">cbContext</span></span>  
+ <span data-ttu-id="1767e-111">[in] Die Größe des `initialContext`.</span><span class="sxs-lookup"><span data-stu-id="1767e-111">[in] The size of `initialContext`.</span></span>  
   
- <span data-ttu-id="a86cd-112">initialContext</span><span class="sxs-lookup"><span data-stu-id="a86cd-112">initialContext</span></span>  
- <span data-ttu-id="a86cd-113">[in] Die Daten im Kontext.</span><span class="sxs-lookup"><span data-stu-id="a86cd-113">[in] The data in the context.</span></span>  
+ <span data-ttu-id="1767e-112">initialContext</span><span class="sxs-lookup"><span data-stu-id="1767e-112">initialContext</span></span>  
+ <span data-ttu-id="1767e-113">[in] Die Daten im Kontext.</span><span class="sxs-lookup"><span data-stu-id="1767e-113">[in] The data in the context.</span></span>  
   
- <span data-ttu-id="a86cd-114">ppUnwinder</span><span class="sxs-lookup"><span data-stu-id="a86cd-114">ppUnwinder</span></span>  
- <span data-ttu-id="a86cd-115">[out] Ein Zeiger auf die Adresse eines ICorDebugVirtualUnwinder-Oberflächenobjekts.</span><span class="sxs-lookup"><span data-stu-id="a86cd-115">[out] A pointer to the address of an ICorDebugVirtualUnwinder interface object.</span></span>  
+ <span data-ttu-id="1767e-114">ppUnwinder</span><span class="sxs-lookup"><span data-stu-id="1767e-114">ppUnwinder</span></span>  
+ <span data-ttu-id="1767e-115">[out] Ein Zeiger auf die Adresse eines ICorDebugVirtualUnwinder-Oberflächenobjekts.</span><span class="sxs-lookup"><span data-stu-id="1767e-115">[out] A pointer to the address of an ICorDebugVirtualUnwinder interface object.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a86cd-116">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="a86cd-116">Return Value</span></span>  
- <span data-ttu-id="a86cd-117">Bei Erfolg `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="a86cd-117">`S_OK` if successful.</span></span> <span data-ttu-id="a86cd-118">Alle anderen `HRESULT` weisen auf Fehler hin.</span><span class="sxs-lookup"><span data-stu-id="a86cd-118">Any other `HRESULT` indicates failure.</span></span> <span data-ttu-id="a86cd-119">Alle fehlerhaften `HRESULT` von Mscordbi empfangenen als schwerwiegend und führt dazu, dass [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) Methoden zurückgeben `CORDBG_E_DATA_TARGET_ERROR`.</span><span class="sxs-lookup"><span data-stu-id="a86cd-119">Any failing `HRESULT` received by mscordbi is considered fatal and causes [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) methods to return `CORDBG_E_DATA_TARGET_ERROR`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1767e-116">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="1767e-116">Return Value</span></span>  
+ <span data-ttu-id="1767e-117">Bei Erfolg `S_OK`.</span><span class="sxs-lookup"><span data-stu-id="1767e-117">`S_OK` if successful.</span></span> <span data-ttu-id="1767e-118">Alle anderen `HRESULT` weisen auf Fehler hin.</span><span class="sxs-lookup"><span data-stu-id="1767e-118">Any other `HRESULT` indicates failure.</span></span> <span data-ttu-id="1767e-119">Alle fehlerhaften `HRESULT` von Mscordbi empfangenen als schwerwiegend und führt dazu, dass [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) Methoden zurückgeben `CORDBG_E_DATA_TARGET_ERROR`.</span><span class="sxs-lookup"><span data-stu-id="1767e-119">Any failing `HRESULT` received by mscordbi is considered fatal and causes [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) methods to return `CORDBG_E_DATA_TARGET_ERROR`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a86cd-120">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a86cd-120">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1767e-120">Hinweise</span><span class="sxs-lookup"><span data-stu-id="1767e-120">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a86cd-121">Diese Methode ist nur mit .NET Native verfügbar.</span><span class="sxs-lookup"><span data-stu-id="a86cd-121">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="1767e-121">Diese Methode ist nur mit .NET Native verfügbar.</span><span class="sxs-lookup"><span data-stu-id="1767e-121">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a86cd-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a86cd-122">Requirements</span></span>  
- <span data-ttu-id="a86cd-123">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a86cd-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1767e-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1767e-122">Requirements</span></span>  
+ <span data-ttu-id="1767e-123">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1767e-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a86cd-124">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a86cd-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1767e-124">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1767e-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a86cd-125">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a86cd-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1767e-125">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1767e-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a86cd-126">**.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a86cd-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="1767e-126">**.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1767e-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a86cd-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a86cd-127">See also</span></span>
-- [<span data-ttu-id="a86cd-128">ICorDebugDataTarget2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a86cd-128">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [<span data-ttu-id="a86cd-129">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="a86cd-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="1767e-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1767e-127">See also</span></span>
+- [<span data-ttu-id="1767e-128">ICorDebugDataTarget2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1767e-128">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
+- [<span data-ttu-id="1767e-129">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="1767e-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

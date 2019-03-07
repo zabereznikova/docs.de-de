@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 463838681ceaaeb2edab85a22dd979fb143b9248
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54b3f8e931507e53809a2419ab7f06e63eb70c10
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602883"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497638"
 ---
-# <a name="icordebugtype2gettypeid-method"></a><span data-ttu-id="14970-102">Icordebugtype2:: GetTypeId-Methode</span><span class="sxs-lookup"><span data-stu-id="14970-102">ICorDebugType2::GetTypeID Method</span></span>
-<span data-ttu-id="14970-103">Ruft eine [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) für diesen Typ.</span><span class="sxs-lookup"><span data-stu-id="14970-103">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>  
+# <a name="icordebugtype2gettypeid-method"></a><span data-ttu-id="83bdb-102">Icordebugtype2:: GetTypeId-Methode</span><span class="sxs-lookup"><span data-stu-id="83bdb-102">ICorDebugType2::GetTypeID Method</span></span>
+<span data-ttu-id="83bdb-103">Ruft eine [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) für diesen Typ.</span><span class="sxs-lookup"><span data-stu-id="83bdb-103">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="14970-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="14970-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="83bdb-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="83bdb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetTypeID(  
@@ -35,32 +35,32 @@ HRESULT GetTypeID(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="14970-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="14970-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="83bdb-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="83bdb-105">Parameters</span></span>  
  `id`  
- <span data-ttu-id="14970-106">[out] Ein Zeiger auf die [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) für ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="14970-106">[out] A pointer to the [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this ICorDebugType.</span></span>  
+ <span data-ttu-id="83bdb-106">[out] Ein Zeiger auf die [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) für ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="83bdb-106">[out] A pointer to the [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this ICorDebugType.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="14970-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="14970-107">Return Value</span></span>  
- <span data-ttu-id="14970-108">Der Rückgabewert ist `S_OK` bei Erfolg oder ein Fehler-`HRESULT`-Code bei einem Fehler.</span><span class="sxs-lookup"><span data-stu-id="14970-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="14970-109">Die `HRESULT` Codes umfassen Folgendes:</span><span class="sxs-lookup"><span data-stu-id="14970-109">The `HRESULT` codes include the following:</span></span>  
+## <a name="return-value"></a><span data-ttu-id="83bdb-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="83bdb-107">Return Value</span></span>  
+ <span data-ttu-id="83bdb-108">Der Rückgabewert ist `S_OK` bei Erfolg oder ein Fehler-`HRESULT`-Code bei einem Fehler.</span><span class="sxs-lookup"><span data-stu-id="83bdb-108">The return value is `S_OK` on success, or a failure `HRESULT` code on failure.</span></span> <span data-ttu-id="83bdb-109">Die `HRESULT` Codes umfassen Folgendes:</span><span class="sxs-lookup"><span data-stu-id="83bdb-109">The `HRESULT` codes include the following:</span></span>  
   
-|<span data-ttu-id="14970-110">Rückgabecode</span><span class="sxs-lookup"><span data-stu-id="14970-110">Return code</span></span>|<span data-ttu-id="14970-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="14970-111">Description</span></span>|  
+|<span data-ttu-id="83bdb-110">Rückgabecode</span><span class="sxs-lookup"><span data-stu-id="83bdb-110">Return code</span></span>|<span data-ttu-id="83bdb-111">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="83bdb-111">Description</span></span>|  
 |-----------------|-----------------|  
-|`S_OK`|<span data-ttu-id="14970-112">Methode war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="14970-112">Method succeeded.</span></span> <span data-ttu-id="14970-113">Die Methode verfügt über eine gültige abgerufen [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).</span><span class="sxs-lookup"><span data-stu-id="14970-113">The method has retrieved a valid [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).</span></span>|  
-|`CORDBG_E_CLASS_NOT_LOADED`|<span data-ttu-id="14970-114">Der Typ wurde nicht geladen.</span><span class="sxs-lookup"><span data-stu-id="14970-114">The type has not been loaded.</span></span>|  
-|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="14970-115">Der Typ wird nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="14970-115">The type is not supported.</span></span>|  
+|`S_OK`|<span data-ttu-id="83bdb-112">Methode war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="83bdb-112">Method succeeded.</span></span> <span data-ttu-id="83bdb-113">Die Methode verfügt über eine gültige abgerufen [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).</span><span class="sxs-lookup"><span data-stu-id="83bdb-113">The method has retrieved a valid [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md).</span></span>|  
+|`CORDBG_E_CLASS_NOT_LOADED`|<span data-ttu-id="83bdb-114">Der Typ wurde nicht geladen.</span><span class="sxs-lookup"><span data-stu-id="83bdb-114">The type has not been loaded.</span></span>|  
+|`CORDBG_E_UNSUPPORTED`|<span data-ttu-id="83bdb-115">Der Typ wird nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="83bdb-115">The type is not supported.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="14970-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="14970-116">Remarks</span></span>  
- <span data-ttu-id="14970-117">Diese Methode ermöglicht eine Zuordnung zwischen der ICorDebugType, die einen Typ darstellt, die möglicherweise nicht wurde geladen in die Laufzeit, zu einem [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), welche fungiert als ein nicht transparenter, verarbeiten identifiziert einen Typ, der in der Laufzeit geladen.</span><span class="sxs-lookup"><span data-stu-id="14970-117">This method provides a mapping from the ICorDebugType, which represents a type that may or may not have been loaded into the runtime, to a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), which serves as an opaque handle that identifies a type loaded into the runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="83bdb-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="83bdb-116">Remarks</span></span>  
+ <span data-ttu-id="83bdb-117">Diese Methode ermöglicht eine Zuordnung zwischen der ICorDebugType, die einen Typ darstellt, die möglicherweise nicht wurde geladen in die Laufzeit, zu einem [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), welche fungiert als ein nicht transparenter, verarbeiten identifiziert einen Typ, der in der Laufzeit geladen.</span><span class="sxs-lookup"><span data-stu-id="83bdb-117">This method provides a mapping from the ICorDebugType, which represents a type that may or may not have been loaded into the runtime, to a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md), which serves as an opaque handle that identifies a type loaded into the runtime.</span></span>  
   
- <span data-ttu-id="14970-118">Wenn der Typ, der ICorDebugType steht, noch nicht geladen wurde, gibt diese Methode zurück `CORDBG_E_CLASS_NOT_LOADED`.</span><span class="sxs-lookup"><span data-stu-id="14970-118">When the type that the ICorDebugType represents has not yet been loaded, this method returns `CORDBG_E_CLASS_NOT_LOADED`.</span></span>  <span data-ttu-id="14970-119">Wenn der Typ nicht unterstützt wird, gibt es `CORDBG_E_UNSUPPORTED`.</span><span class="sxs-lookup"><span data-stu-id="14970-119">If the type is not supported, it returns `CORDBG_E_UNSUPPORTED`.</span></span>  
+ <span data-ttu-id="83bdb-118">Wenn der Typ, der ICorDebugType steht, noch nicht geladen wurde, gibt diese Methode zurück `CORDBG_E_CLASS_NOT_LOADED`.</span><span class="sxs-lookup"><span data-stu-id="83bdb-118">When the type that the ICorDebugType represents has not yet been loaded, this method returns `CORDBG_E_CLASS_NOT_LOADED`.</span></span>  <span data-ttu-id="83bdb-119">Wenn der Typ nicht unterstützt wird, gibt es `CORDBG_E_UNSUPPORTED`.</span><span class="sxs-lookup"><span data-stu-id="83bdb-119">If the type is not supported, it returns `CORDBG_E_UNSUPPORTED`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="14970-120">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="14970-120">Requirements</span></span>  
- <span data-ttu-id="14970-121">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="14970-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="83bdb-120">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="83bdb-120">Requirements</span></span>  
+ <span data-ttu-id="83bdb-121">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83bdb-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="14970-122">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="14970-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="83bdb-122">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="83bdb-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="14970-123">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="14970-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="83bdb-123">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83bdb-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="14970-124">**.NET Framework-Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14970-124">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="83bdb-124">**.NET Framework-Versionen:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83bdb-124">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="14970-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="14970-125">See also</span></span>
-- [<span data-ttu-id="14970-126">ICorDebugType2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="14970-126">ICorDebugType2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="83bdb-125">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="83bdb-125">See also</span></span>
+- [<span data-ttu-id="83bdb-126">ICorDebugType2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="83bdb-126">ICorDebugType2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)

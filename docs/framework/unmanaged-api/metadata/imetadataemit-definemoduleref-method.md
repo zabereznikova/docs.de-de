@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f41eb1864ca2cc0640941abbbd8bc95801a0b31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a87d18b15f858b608d99a511ed9bdad73fd2b251
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539011"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493679"
 ---
-# <a name="imetadataemitdefinemoduleref-method"></a><span data-ttu-id="6a84b-102">IMetaDataEmit::DefineModuleRef-Methode</span><span class="sxs-lookup"><span data-stu-id="6a84b-102">IMetaDataEmit::DefineModuleRef Method</span></span>
-<span data-ttu-id="6a84b-103">Erstellt die Signatur der Metadaten für ein Modul mit dem angegebenen Namen.</span><span class="sxs-lookup"><span data-stu-id="6a84b-103">Creates the metadata signature for a module with the specified name.</span></span>  
+# <a name="imetadataemitdefinemoduleref-method"></a><span data-ttu-id="6985f-102">IMetaDataEmit::DefineModuleRef-Methode</span><span class="sxs-lookup"><span data-stu-id="6985f-102">IMetaDataEmit::DefineModuleRef Method</span></span>
+<span data-ttu-id="6985f-103">Erstellt die Signatur der Metadaten für ein Modul mit dem angegebenen Namen.</span><span class="sxs-lookup"><span data-stu-id="6985f-103">Creates the metadata signature for a module with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6a84b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6a84b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6985f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6985f-104">Syntax</span></span>  
   
 ```  
 HRESULT DefineModuleRef (     
@@ -36,22 +36,22 @@ HRESULT DefineModuleRef (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="6a84b-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="6a84b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6985f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="6985f-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="6a84b-106">[in] Der Name der anderen Metadaten-Datei, in der Regel eine DLL-Datei.</span><span class="sxs-lookup"><span data-stu-id="6a84b-106">[in] The name of the other metadata file, typically a DLL.</span></span> <span data-ttu-id="6a84b-107">Dies ist nur den Dateinamen an.</span><span class="sxs-lookup"><span data-stu-id="6a84b-107">This is the file name only.</span></span> <span data-ttu-id="6a84b-108">Verwenden Sie keinen vollständigen Pfadnamen.</span><span class="sxs-lookup"><span data-stu-id="6a84b-108">Do not use a full path name.</span></span>  
+ <span data-ttu-id="6985f-106">[in] Der Name der anderen Metadaten-Datei, in der Regel eine DLL-Datei.</span><span class="sxs-lookup"><span data-stu-id="6985f-106">[in] The name of the other metadata file, typically a DLL.</span></span> <span data-ttu-id="6985f-107">Dies ist nur den Dateinamen an.</span><span class="sxs-lookup"><span data-stu-id="6985f-107">This is the file name only.</span></span> <span data-ttu-id="6985f-108">Verwenden Sie keinen vollständigen Pfadnamen.</span><span class="sxs-lookup"><span data-stu-id="6985f-108">Do not use a full path name.</span></span>  
   
  `pmur`  
- <span data-ttu-id="6a84b-109">[out] Die zugewiesene `mdModuleRef` token.</span><span class="sxs-lookup"><span data-stu-id="6a84b-109">[out] The assigned `mdModuleRef` token.</span></span>  
+ <span data-ttu-id="6985f-109">[out] Die zugewiesene `mdModuleRef` token.</span><span class="sxs-lookup"><span data-stu-id="6985f-109">[out] The assigned `mdModuleRef` token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6a84b-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6a84b-110">Requirements</span></span>  
- <span data-ttu-id="6a84b-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a84b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6985f-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6985f-110">Requirements</span></span>  
+ <span data-ttu-id="6985f-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6985f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6a84b-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6a84b-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6985f-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6985f-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6a84b-113">**Bibliothek:** Als Ressource in MSCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="6a84b-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6985f-113">**Bibliothek:** Als Ressource in MSCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="6985f-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6a84b-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a84b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6985f-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6985f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6a84b-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6a84b-115">See also</span></span>
-- [<span data-ttu-id="6a84b-116">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6a84b-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="6a84b-117">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6a84b-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6985f-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6985f-115">See also</span></span>
+- [<span data-ttu-id="6985f-116">IMetaDataEmit-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6985f-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="6985f-117">IMetaDataEmit2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6985f-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

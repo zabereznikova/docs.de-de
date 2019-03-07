@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c36e9e38acf1d183bcc5af5284e194c994c16749
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abaa543299dec74d769b91ca3b21d76863624f13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706708"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484939"
 ---
-# <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a><span data-ttu-id="1cde7-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue-Methode</span><span class="sxs-lookup"><span data-stu-id="1cde7-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue Method</span></span>
-<span data-ttu-id="1cde7-103">Ruft den Wert eines Arguments oder lokale Variable, von denen das niedrige Word und das hohe Word in der angegebenen Register und den Speicherort, für diesen Frame native gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="1cde7-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the specified register and memory location, respectively, for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a><span data-ttu-id="cb083-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue-Methode</span><span class="sxs-lookup"><span data-stu-id="cb083-102">ICorDebugNativeFrame::GetLocalMemoryRegisterValue Method</span></span>
+<span data-ttu-id="cb083-103">Ruft den Wert eines Arguments oder lokale Variable, von denen das niedrige Word und das hohe Word in der angegebenen Register und den Speicherort, für diesen Frame native gespeichert werden.</span><span class="sxs-lookup"><span data-stu-id="cb083-103">Gets the value of an argument or local variable, of which the low word and high word are stored in the specified register and memory location, respectively, for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1cde7-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1cde7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb083-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="cb083-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalMemoryRegisterValue (  
@@ -39,30 +39,30 @@ HRESULT GetLocalMemoryRegisterValue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1cde7-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="1cde7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cb083-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="cb083-105">Parameters</span></span>  
  `highWordAddress`  
- <span data-ttu-id="1cde7-106">[in] Ein `CORDB_ADDRESS` -Wert, die Speicheradresse aus, das hohe Word des Werts angibt.</span><span class="sxs-lookup"><span data-stu-id="1cde7-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the high word of the value.</span></span>  
+ <span data-ttu-id="cb083-106">[in] Ein `CORDB_ADDRESS` -Wert, die Speicheradresse aus, das hohe Word des Werts angibt.</span><span class="sxs-lookup"><span data-stu-id="cb083-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the high word of the value.</span></span>  
   
  `lowWordRegister`  
- <span data-ttu-id="1cde7-107">[in] Der Wert der "CorDebugRegister"-Enumeration, die angibt, die Registrierung, die das niedrige Word des Werts enthält.</span><span class="sxs-lookup"><span data-stu-id="1cde7-107">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the low word of the value.</span></span>  
+ <span data-ttu-id="cb083-107">[in] Der Wert der "CorDebugRegister"-Enumeration, die angibt, die Registrierung, die das niedrige Word des Werts enthält.</span><span class="sxs-lookup"><span data-stu-id="cb083-107">[in] A value of the "CorDebugRegister" enumeration that specifies the register containing the low word of the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="1cde7-108">[in] Eine ganze Zahl, die die Größe der die binäre Metadatensignatur gibt an, welche die verweist die `pvSigBlob` Parameter.</span><span class="sxs-lookup"><span data-stu-id="1cde7-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="cb083-108">[in] Eine ganze Zahl, die die Größe der die binäre Metadatensignatur gibt an, welche die verweist die `pvSigBlob` Parameter.</span><span class="sxs-lookup"><span data-stu-id="cb083-108">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="1cde7-109">[in] Ein `PCCOR_SIGNATURE` Wert, der auf die binäre Metadatensignatur der der Typ des Werts verweist.</span><span class="sxs-lookup"><span data-stu-id="1cde7-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="cb083-109">[in] Ein `PCCOR_SIGNATURE` Wert, der auf die binäre Metadatensignatur der der Typ des Werts verweist.</span><span class="sxs-lookup"><span data-stu-id="cb083-109">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="1cde7-110">[out] Ein Zeiger auf die Adresse eines "ICorDebugValue"-Objekts, die den abgerufenen Wert, der in der angegebenen registrieren und den angegebenen Speicherort gespeichert wird.</span><span class="sxs-lookup"><span data-stu-id="1cde7-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register and memory location.</span></span>  
+ <span data-ttu-id="cb083-110">[out] Ein Zeiger auf die Adresse eines "ICorDebugValue"-Objekts, die den abgerufenen Wert, der in der angegebenen registrieren und den angegebenen Speicherort gespeichert wird.</span><span class="sxs-lookup"><span data-stu-id="cb083-110">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified register and memory location.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1cde7-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1cde7-111">Requirements</span></span>  
- <span data-ttu-id="1cde7-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1cde7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cb083-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="cb083-111">Requirements</span></span>  
+ <span data-ttu-id="cb083-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cb083-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1cde7-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1cde7-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cb083-113">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cb083-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1cde7-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1cde7-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cb083-114">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb083-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1cde7-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1cde7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="cb083-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb083-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1cde7-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1cde7-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cb083-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="cb083-116">See also</span></span>
 

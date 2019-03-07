@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acf0ba3938568524479e12b93ae8cebbcf52f909
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d23a0a489cfe13201b7798920feb3528db3b0709
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411728"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494609"
 ---
-# <a name="icordebugfunction2getjmcstatus-method"></a><span data-ttu-id="2d772-102">ICorDebugFunction2::GetJMCStatus-Methode</span><span class="sxs-lookup"><span data-stu-id="2d772-102">ICorDebugFunction2::GetJMCStatus Method</span></span>
-<span data-ttu-id="2d772-103">Ruft einen Wert, der angibt, ob die Funktion, die von diesem ICorDebugFunction2-Objekt dargestellt wird als Benutzercode markiert ist.</span><span class="sxs-lookup"><span data-stu-id="2d772-103">Gets a value that indicates whether the function that is represented by this ICorDebugFunction2 object is marked as user code.</span></span>  
+# <a name="icordebugfunction2getjmcstatus-method"></a><span data-ttu-id="6853e-102">ICorDebugFunction2::GetJMCStatus-Methode</span><span class="sxs-lookup"><span data-stu-id="6853e-102">ICorDebugFunction2::GetJMCStatus Method</span></span>
+<span data-ttu-id="6853e-103">Ruft einen Wert, der angibt, ob die Funktion, die von diesem ICorDebugFunction2-Objekt dargestellt wird als Benutzercode markiert ist.</span><span class="sxs-lookup"><span data-stu-id="6853e-103">Gets a value that indicates whether the function that is represented by this ICorDebugFunction2 object is marked as user code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2d772-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2d772-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6853e-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6853e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetJMCStatus (  
@@ -35,18 +35,18 @@ HRESULT GetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2d772-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="2d772-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6853e-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="6853e-105">Parameters</span></span>  
  `pbIsJustMyCode`  
- <span data-ttu-id="2d772-106">[out] Ein Zeiger auf einen booleschen Wert, der `true`, wenn diese Funktion als Benutzercode markiert ist; andernfalls wird der Wert `false`.</span><span class="sxs-lookup"><span data-stu-id="2d772-106">[out] A pointer to a Boolean value that is `true`, if this function is marked as user code; otherwise, the value is `false`.</span></span>  
+ <span data-ttu-id="6853e-106">[out] Ein Zeiger auf einen booleschen Wert, der `true`, wenn diese Funktion als Benutzercode markiert ist; andernfalls ist des Werts `false`.</span><span class="sxs-lookup"><span data-stu-id="6853e-106">[out] A pointer to a Boolean value that is `true`, if this function is marked as user code; otherwise, the value is `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2d772-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2d772-107">Remarks</span></span>  
- <span data-ttu-id="2d772-108">Wenn die Funktion von diesem dargestellt `ICorDebugFunction2` kann nicht debuggt werden, `pbIsJustMyCode` immer `false`.</span><span class="sxs-lookup"><span data-stu-id="2d772-108">If the function represented by this `ICorDebugFunction2` cannot be debugged, `pbIsJustMyCode` will always be `false`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6853e-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6853e-107">Remarks</span></span>  
+ <span data-ttu-id="6853e-108">Wenn die Funktion von diesem dargestellt `ICorDebugFunction2` kann nicht debuggt werden kann, `pbIsJustMyCode` immer `false`.</span><span class="sxs-lookup"><span data-stu-id="6853e-108">If the function represented by this `ICorDebugFunction2` cannot be debugged, `pbIsJustMyCode` will always be `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2d772-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2d772-109">Requirements</span></span>  
- <span data-ttu-id="2d772-110">**Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2d772-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6853e-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6853e-109">Requirements</span></span>  
+ <span data-ttu-id="6853e-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6853e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2d772-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2d772-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6853e-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6853e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2d772-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2d772-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6853e-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6853e-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2d772-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d772-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="6853e-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6853e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
