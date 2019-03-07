@@ -1,17 +1,12 @@
 ---
 title: Die auf Roslyn basierenden Analysetools – .NET
-description: Erfahren Sie mehr zu auf Roslyn basierenden Analysetools, die Probleme erkennen und Problembehebungen vorschlagen.
+description: 'Erfahren Sie mehr zu auf Roslyn basierenden Analysetools, die Probleme erkennen und Problembehebungen vorschlagen.'
 author: billwagner
 ms.author: billwagner
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 226482d1d385078811f2b1c5ee138e24287a785e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154332"
 ---
+
 # <a name="the-roslyn-based-analyzers"></a>Die auf Roslyn basierenden Analysetools
 
 Auf Roslyn basierende Analysetools verwenden das .NET Compiler SDK (Roslyn-APIs), um den Quellcode Ihres Projekts zu analysieren, um Probleme zu finden und Korrekturen vorzuschlagen. Unterschiedliche Analysetools suchen nach verschiedenen Klassen von Problemen, angefangen bei Methoden, die wahrscheinlich Fehler verursachen, bis hin zu Sicherheitsaspekten bei der API-Kompatibilität.
@@ -27,12 +22,12 @@ Die auf Roslyn basierenden Analysetools melden mögliche Probleme anhand des Sch
 Sie installieren auf Roslyn basierende Analysetools in Ihrem Projekt als NuGet-Pakete. Das konfigurierte Analysetool sowie Einstellungen für jedes Analysetool werden wiederhergestellt und auf einem beliebigen Computer eines Entwicklers für diese Projekt ausgeführt.
 
 > [!NOTE]
-> Die Benutzererfahrung für auf Roslyn basierenden Analysetools unterscheidet sich von den Codeanalysebibliotheken, wie etwa die älteren Versionen von FxCop und die Sicherheitsanalysetools.  Sie müssen nicht explizit die auf Roslyn basierenden Analysetools ausführen. Es ist nicht erforderlich, das Menüelemente„Codeanalyse ausführen“ in Visual Studio im Menü „Analysieren“ zu verwenden. Auf Roslyn basierende Analysetools werden asynchron ausgeführt, während Sie arbeiten. 
+> Die Benutzererfahrung für auf Roslyn basierenden Analysetools unterscheidet sich von den Codeanalysebibliotheken, wie etwa die älteren Versionen von FxCop und die Sicherheitsanalysetools.  Sie müssen nicht explizit die auf Roslyn basierenden Analysetools ausführen. Es ist nicht erforderlich, das Menüelemente„Codeanalyse ausführen“ in Visual Studio im Menü „Analysieren“ zu verwenden. Auf Roslyn basierende Analysetools werden asynchron ausgeführt, während Sie arbeiten.
 
 ## <a name="more-information-on-specific-analyzers"></a>Weitere Informationen zu bestimmten Analysetools
 
 In diesem Abschnitt werden die folgenden Analysetools behandelt:
 
-* [API Analyzer](api-analyzer.md): Dieses Analysetool untersucht Ihren Code auf potentielle Kompatibilitätsrisiken oder die Verwendung veralteter APIs.    
-* [Framework Analyzer](framework-analyzer.md): Dieses Analysetool untersucht Ihren Code, um sicherzustellen, dass dieser die Richtlinien für .NET Framework-Anwendungen befolgt. Diese Regeln umfassen mehrere sicherheitsbasierte Empfehlungen.
-* [.NET Portability Analyzer](portability-analyzer.md): Dieses Analysetool untersucht, wie hoch der Aufwand ist, um Ihre Anwendung mit anderen .NET-Implementierungen und -Profilen, wie z.B. .NET Core, .NET Standard, UWP und Xamarin für iOS, Android und Mac, kompatibel zu machen. 
+* [API-Analysetool:](api-analyzer.md) Dieses Analysetool untersucht Ihren Code auf potentielle Kompatibilitätsrisiken oder die Verwendung veralteter APIs.
+* [Framework Analyzer:](framework-analyzer.md) Dieses Analysetool untersucht Ihren Code, um sicherzustellen, dass dieser die Richtlinien für .NET Framework-Anwendungen befolgt. Diese Regeln umfassen mehrere sicherheitsbasierte Empfehlungen.
+* [.NET Portability Analyzer:](portability-analyzer.md) Dieses Analysetool untersucht, wie hoch der Aufwand ist, um Ihre Anwendung mit anderen .NET-Implementierungen und -Profilen, wie z.B. .NET Core, .NET Standard, UWP und Xamarin für iOS, Android und Mac, kompatibel zu machen.

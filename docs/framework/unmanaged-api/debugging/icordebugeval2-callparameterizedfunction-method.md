@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77d9ec0cf1cbca63382e7f29de85c2f9566dc2bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cba4eb2b76d7057a5ed66a35342a79615cb8539f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416165"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487722"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction-Methode
-Richtet einen Aufruf der angegebenen ICorDebugFunction, die innerhalb einer Klasse geschachtelt werden können, deren Konstruktor akzeptiert <xref:System.Type> akzeptieren Parameter oder kann selbst <xref:System.Type> Parameter.  
+Richtet einen Aufruf der angegebenen ICorDebugFunction, die innerhalb einer Klasse geschachtelt werden können, deren Konstruktor akzeptiert <xref:System.Type> dauern, Parameter und kann selbst <xref:System.Type> Parameter.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,7 +39,7 @@ HRESULT CallParameterizedFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `pFunction`  
  [in] Ein Zeiger auf ein `ICorDebugFunction` Objekt, das die aufzurufende Funktion darstellt.  
   
@@ -47,23 +47,23 @@ HRESULT CallParameterizedFunction (
  [in] Die Anzahl von Argumenten, die die Funktion akzeptiert.  
   
  `ppTypeArgs`  
- [in] Ein Array von Zeigern, von denen jedes auf ein ICorDebugType verweist, die ein Funktionsargument für die darstellt.  
+ [in] Ein Array von Zeigern, von denen jeder zu einem ICorDebugType-Objekt verweist, die ein Funktionsargument für die darstellt.  
   
  `nArgs`  
  [in] Die Anzahl der Werte in der Funktion übergeben.  
   
  `ppArgs`  
- [in] Ein Array von Zeigern, von denen jedes auf ein ICorDebugValue-Objekt verweist, die einen Wert darstellt, die an ein Funktion übergeben werden.  
+ [in] Ein Array von Zeigern, von denen jeder zu einem ICorDebugValue-Objekt verweist, die einen Wert darstellt, die an eine Funktion übergeben werden.  
   
 ## <a name="remarks"></a>Hinweise  
- `CallParameterizedFunction` entspricht dem [ICorDebugEval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) mit dem Unterschied, dass die Funktion innerhalb einer Klasse mit Typparametern sein kann, kann selbst dauern Typparameter oder beides. Die Typargumente müssen zuerst für die Klasse, und klicken Sie dann für die Funktion erteilt werden.  
+ `CallParameterizedFunction` entspricht dem [ICorDebugEval:: CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) außer die Funktion innerhalb einer Klasse mit den beiden Typparametern sein kann, selbst in Anspruch nehmen kann Typparameter oder beides. Die Typargumente sollte zuerst für die Klasse, und klicken Sie dann für die Funktion angegeben werden.  
   
- Wenn die Funktion in einer anderen Anwendungsdomäne ein Übergang erfolgen wird wird. Allerdings müssen alle Argumente von Typ und Wert in der Zielanwendungsdomäne sein.  
+ Wenn die Funktion in einer anderen Anwendungsdomäne ist, wird ein Übergang erfolgen. Allerdings müssen alle Argumente von Typ und Wert in der Zielanwendungsdomäne sein.  
   
- Funktionsauswertung kann nur in bestimmten Szenarien ausgeführt werden. Wenn `CallParameterizedFunction` oder `ICorDebugEval::CallFunction` ein Fehler auftritt, das zurückgegebene HRESULT werden die allgemeinste mögliche Ursache für Fehler angeben.  
+ Die funktionsauswertung kann nur in begrenzten Szenarios ausgeführt werden. Wenn `CallParameterizedFunction` oder `ICorDebugEval::CallFunction` ein Fehler auftritt, das zurückgegebene HRESULT werden angegeben, die meisten allgemeine mögliche Ursache für Fehler.  
   
 ## <a name="requirements"></a>Anforderungen  
- **Plattformen:** finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Header:** CorDebug.idl, CorDebug.h  
   

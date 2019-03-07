@@ -5,12 +5,13 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
 ---
+
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows-Verwaltungsinstrumentation (WMI) und Leistungsindikatoren (Referenz zur nicht verwalteten API)
 
 Die .NET Framework-WMI und Leistungsindikatoren für die nicht verwaltete API bestehen aus einer Sammlung von Funktionen, die Aufrufe der [nativen Windows-Verwaltungsinstrumentation-API](/windows/desktop/WmiSdk/com-api-for-wmi) in einen Wrapper einschließen. Sie ermöglichen die Entwicklung von Tools und Bibliotheken, die Remotecomputersysteme verwalten und überwachen.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
+
 Die API umfasst die folgenden Funktionen:
 
 | Funktion | Beschreibung |
@@ -27,27 +28,27 @@ Die API umfasst die folgenden Funktionen:
 | [CreateInstanceEnumWmi-Funktion](createinstanceenumwmi.md) | Gibt einen Enumerator zurück, der die Instanzen einer bestimmten Klasse zurückgibt, die angegebene Auswahlkriterien erfüllen. |
 | [Delete-Funktion](delete.md) | Löscht eine angegebene Eigenschaft aus einer Klassendefinition sowie alle ihre Qualifizierer. |
 | [DeleteMethod-Funktion](deletemethod.md) | Löscht eine angegebene Methode aus einer CIM-Klassendefinition. |
-| [EndEnumeration-Funktion](endenumeration.md) | Beendet eine Enumerationssequenz. | 
+| [EndEnumeration-Funktion](endenumeration.md) | Beendet eine Enumerationssequenz. |
 | [EndMethodEnumeration-Funktion](endmethodenumeration.md) | Beendet eine Enumerationssequenz, die durch den Aufruf der [BeginMethodEnumeration-Funktion](beginmethodenumeration.md) gestartet wurde. |
 | [ExecNotificationQueryWmi-Funktion](execnotificationquerywmi.md) | Führt eine Abfrage zum Empfangen von Ereignissen aus. |
 | [ExecQueryWmi-Funktion](execquerywmi.md) | Führt eine Abfrage zum Abrufen von Objekten aus. |
-| [FormatFromRawValue-Funktion](formatfromrawvalue.md) | Konvertiert einen Rohdatenleistungswert in das angegebene Format oder zwei Rohdatenleistungswerte, wenn die Formatkonvertierung zeitabhängig ist. | 
+| [FormatFromRawValue-Funktion](formatfromrawvalue.md) | Konvertiert einen Rohdatenleistungswert in das angegebene Format oder zwei Rohdatenleistungswerte, wenn die Formatkonvertierung zeitabhängig ist. |
 | [Get-Funktion](get.md) | Ruft einen angegebenen Eigenschaftswert ab, wenn dieser vorhanden ist. |
 | [GetCurrentApartmentType-Funktion](getcurrentapartmenttype.md) | Ruft den Typ des Apartments ab, in dem die aufrufende Funktion ausgeführt wird. |
 | [GetDemultiplexedStub-Funktion](getdemultiplexedstub.md) | Erstellt eine Objektweiterleitungssenke, um einen Client beim Empfang asynchroner Aufrufe von der Windows-Verwaltung zu unterstützen. |
-| [GetErrorInfo-Funktion](geterrorinfo.md) | Ruft Fehlerinformationen aus dem vorherigen Funktionsaufruf ab. | 
-| [GetMethod-Funktion](getmethod.md) | Ruft Informationen zur angegebenen Methode ab. | 
+| [GetErrorInfo-Funktion](geterrorinfo.md) | Ruft Fehlerinformationen aus dem vorherigen Funktionsaufruf ab. |
+| [GetMethod-Funktion](getmethod.md) | Ruft Informationen zur angegebenen Methode ab. |
 | [GetMethodOrigin-Funktion](getmethodorigin.md) | Bestimmt die Klasse, in der eine Methode deklariert wird. |
 | [GetMethodQualifierSet-Funktion](getmethodqualifierset.md) | Ruft den Qualifizierer ab, der für eine bestimmte Methode festgelegt ist. |
 | [GetNames-Funktion](getnames.md) | Ruft eine Teilmenge oder alle Namen der Eigenschaften eines Objekts ab. |
-| [GetObjectText-Funktion](getobjecttext.md) | Gibt ein Textrendering eines Objekts in der MOF-Syntax zurück. | 
+| [GetObjectText-Funktion](getobjecttext.md) | Gibt ein Textrendering eines Objekts in der MOF-Syntax zurück. |
 | [GetPropertyHandle-Funktion](getpropertyhandle.md) | Gibt ein eindeutiges Handle zurück, das eine Eigenschaft identifiziert. |
 | [GetPropertyOrigin-Funktion](getpropertyorigin.md) | Bestimmt die Klasse, in der eine Eigenschaft deklariert wird. |
 | [GetPropertyQualifierSet-Funktion](getpropertyqualifierset.md) | Ruft den Qualifizierer ab, der für eine bestimmte Eigenschaft festgelegt ist.  |
 | [GetQualifierSet-Funktion](getqualifierset.md) | Ruft den Qualifizierer ab, der für eine Klasseninstanz oder eine Klassendefinition festgelegt ist. |
 | [InheritsFrom-Funktion](inheritsfrom.md) | Bestimmt, ob die aktuelle Klasse oder Instanz aus einer angegebenen übergeordneten Klasse abgeleitet ist. |
 | [Initialize-Funktion](initialize.md) | Führt die WMI-Initialisierung aus. |
-| [Next-Funktion](next.md) | Ruft die nächste Eigenschaft in einer Enumeration ab. | 
+| [Next-Funktion](next.md) | Ruft die nächste Eigenschaft in einer Enumeration ab. |
 | [NextMethod-Funktion](nextmethod.md) | Ruft die nächste Methode in einer Enumeration ab. |
 | [Put-Funktion](put.md) | Legt eine benannte Eigenschaft auf einen neuen Wert fest. |
 | [PutClassWmi-Funktion](putclasswmi.md) | Erstellt eine neue Klasse oder aktualisiert eine vorhandene Klasse. |
@@ -62,11 +63,11 @@ Die API umfasst die folgenden Funktionen:
 | [QualifierSet_Put-Funktion](qualifierset-put.md) | Schreibt den benannten Qualifizierer und den Wert. |
 | [ResetSecurity-Funktion](resetsecurity.md) | Weist das angegebene Identitätswechseltoken dem aktuellen Thread zu. |
 | [SetSecurity-Funktion](setsecurity.md) | Ruft das Identitätswechseltoken ab, das dem aktuellen Thread zugeordnet ist. |
-| [SpawnDerivedClass-Funktion](spawnderivedclass.md) | Erstellt ein neu abgeleitetes Klassenobjekt aus einem angegebenen Objekt. | 
-| [SpawnInstance-Funktion](spawninstance.md) | Erstellt eine neue Instanz einer Klasse. |   
+| [SpawnDerivedClass-Funktion](spawnderivedclass.md) | Erstellt ein neu abgeleitetes Klassenobjekt aus einem angegebenen Objekt. |
+| [SpawnInstance-Funktion](spawninstance.md) | Erstellt eine neue Instanz einer Klasse. |
 | [VerifyClient-Funktion](verifyclientkey.md) | Stellt sicher, dass der Clientschlüssel die richtige Sicherheit aufweist. |
 | [WritePropertyValue-Funktion](writepropertyvalue.md) | Schreibt eine angegebene Anzahl von Bytes in eine Eigenschaft, die durch ein Eigenschaftenhandle identifiziert wird. |
 
 ## <a name="see-also"></a>Siehe auch
 
-[Referenz zur nicht verwalteten API](../index.md) 
+- [Referenz zur nicht verwalteten API](../index.md)

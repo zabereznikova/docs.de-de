@@ -1,12 +1,6 @@
 ---
-title: Serialisierung (C#)
+title: 'Serialisierung (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858316"
 ---
 # <a name="serialization-c"></a>Serialisierung (C#)
 
@@ -68,12 +62,12 @@ Wenn das Objekt auch benutzerdefiniert deserialisiert werden soll, müssen Sie e
 
 Die Designerserialisierung ist eine besondere Form der Serialisierung, die auch die Art der Objektpersistenz einbezieht, die mit Entwicklungstools verknüpft ist. Bei der Designerserialisierung handelt es sich um den Prozess der Konvertierung eines Objektdiagramms in eine Quelldatei, die später zum Wiederherstellen des Objektdiagramms verwendet werden kann. Eine Quelldatei kann Code-, Markup- oder sogar SQL-Tabelleninformationen enthalten.
 
-##  <a name="BKMK_RelatedTopics"></a> Verwandte Themen und Beispiele  
-[Walkthrough: Persisting an Object in Visual Studio (C#)](walkthrough-persisting-an-object-in-visual-studio.md) (Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio (C#))  
+## <a name="BKMK_RelatedTopics"></a> Verwandte Themen und Beispiele  
+[Exemplarische Vorgehensweise: Beibehalten eines Objekts in Visual Studio](walkthrough-persisting-an-object-in-visual-studio.md)  
 Veranschaulicht, wie die Serialisierung verwendet werden kann, um die Daten eines Objekts zwischen Instanzen beizubehalten. Dadurch können Sie Werte speichern und abrufen, wenn das Objekt das nächste Mal instanziiert wird.
 
-[How to: Read Object Data from an XML File (C#)](how-to-read-object-data-from-an-xml-file.md) (Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#))  
+[Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (C#)](how-to-read-object-data-from-an-xml-file.md)  
  Zeigt, wie Objektdaten gelesen werden, die zuvor mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wurden.
 
-[How to: Write Object Data to an XML File (C#)](how-to-write-object-data-to-an-xml-file.md) (Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#))  
+[Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (C#)](how-to-write-object-data-to-an-xml-file.md)  
 Zeigt, wie ein Objekt aus einer Klasse mithilfe der <xref:System.Xml.Serialization.XmlSerializer>-Klasse in eine XML-Datei geschrieben wird.
