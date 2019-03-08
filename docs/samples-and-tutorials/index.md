@@ -1,24 +1,14 @@
 ---
-title: Beispiele und Tutorials
-description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET Core und die Sprache C#, die Sie beim Erlernen von .NET unterstützen.
-keywords: .NET, .NET Core, ASP.NET, C#, sample, tutorial
+title: .NET-Beispiele und -Tutorials
+description: 'Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET Core und die Sprache C#, die Sie beim Erlernen von .NET unterstützen.'
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: f69aa704b05bffeaf932a093b991810f8678251c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30957645"
 ---
-# <a name="samples-and-tutorials"></a>Beispiele und Tutorials
 
-Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen von .NET. Dieses Thema beschreibt, wie Sie Beispiele und Tutorials zu .NET Core, ASP.NET Core und C# suchen, anzeigen und herunterladen. Ressourcen zum Erlernen der Programmiersprache F# finden Sie auf der [Website der F# Foundation](http://fsharp.org/learn.html). Wenn Sie daran interessiert sind, C# mit einem Online-Code-Editor zu erkunden, beginnen Sie mit [diesem interaktiven Tutorial](https://www.microsoft.com/net/learn/in-browser-tutorial/1), und fahren Sie dann mit den [interaktiven C#-Schnellstarts](../csharp/quick-starts/index.md) fort. Anweisungen zum Anzeigen und Herunterladen von Beispielcode finden Sie im Abschnitt [Anzeigen und Herunterladen von Beispielen](#viewing-and-downloading-samples).
+# <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
+
+Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen von .NET. Dieses Thema beschreibt, wie Sie Beispiele und Tutorials zu .NET Core, ASP.NET Core und C# suchen, anzeigen und herunterladen. Ressourcen zum Erlernen der Programmiersprache F# finden Sie auf der [Website der F# Foundation](https://fsharp.org/learn.html). Wenn Sie daran interessiert sind, C# mit einem Online-Code-Editor zu erkunden, beginnen Sie mit [diesem interaktiven Tutorial](https://www.microsoft.com/net/learn/in-browser-tutorial/1), und fahren Sie dann mit dem [interaktiven C#-Tutorial](../csharp/tutorials/intro-to-csharp/index.md) fort. Anweisungen zum Anzeigen und Herunterladen von Beispielcode finden Sie im Abschnitt [Anzeigen und Herunterladen von Beispielen](#viewing-and-downloading-samples).
 
 ## <a name="net-core"></a>.NET Core
 
@@ -30,7 +20,7 @@ Dieser Leitfaden zeigt, wie Sie eine ASP.NET Core-Webanwendung sowie die zugehö
 
 ### <a name="tutorials"></a>Tutorials
 
-**[Schreiben von .NET Core-Konsolen-Apps mithilfe der CLI-Tools: erweiterte Schritt-für-Schritt-Anleitung](../core/tutorials/using-with-xplat-cli.md)**
+**[Schreiben von .NET Core-Konsolen-Apps mithilfe der CLI-Tools: ausführlicher Leitfaden](../core/tutorials/using-with-xplat-cli.md)**
 
 In diesem Leitfaden erfahren Sie, wie Sie mit den Tools der .NET Core-Befehlszeilenschnittstelle plattformübergreifende Konsolen-Apps erstellen können. Dabei beginnen Sie mit einer einfachen Konsolen-App, die immer mehr erweitert wird und sich schließlich über mehrere Projekte mit zugehörigen Tests erstreckt. Sie fügen nach und nach Funktionen hinzu und erweitern so Ihre Kenntnisse. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/core/console-apps) finden Sie im dotnet/samples-Repository auf GitHub.
 
@@ -66,6 +56,10 @@ Dieses Beispiel veranschaulicht viele der Probleme, die mithilfe von Ausdrucksba
 
 Diese Beispielserie veranschaulicht viele der Funktionen von Language Integrated Query (sprachintegrierte Abfrage, LINQ). Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/core/linq/csharp) finden Sie im dotnet/samples-Repository auf GitHub.
 
+**Beispiel zu Microsoft Office-PIAs**
+
+Im [ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo)-Beispiel wird die Nutzung der [Microsoft Office-PIAs](/visualstudio/vsto/office-primary-interop-assemblies) in .NET Core veranschaulicht.
+
 ### <a name="tutorials"></a>Tutorials
 
 **[Konsolenanwendung](../csharp/tutorials/console-teleprompter.md)**
@@ -80,10 +74,6 @@ Dieses Tutorial veranschaulicht Webkommunikation, JSON-Serialisierung und objekt
 
 Dieses Tutorial veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) finden Sie im dotnet/samples-Repository auf GitHub.
 
-**[In Docker gehostete Microservices](../csharp/tutorials/microservices.md)**
-
-Dieses Tutorial veranschaulicht das Erstellen eines ASP.NET Core-Microservice und das Hosten des Microservice in Docker. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) finden Sie im dotnet/samples-Repository auf GitHub.
-
 **[Getting started with .NET Core on macOS using Visual Studio for Mac (Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac)](../core/tutorials/using-on-mac-vs.md)**
 
 Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von Visual Studio für Mac eine einfache .NET Core-Konsolen-App erstellen.
@@ -91,6 +81,10 @@ Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von Visual Studio für Mac eine ei
 **[Building a complete .NET Core solution on macOS using Visual Studio for Mac (Erstellen einer vollständigen .NET Core-Projektmappe unter macOS mit Visual Studio für Mac)](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
 In diesem Tutorial erfahren Sie, wie Sie eine vollständige .NET Core-Projektmappe erstellen, die eine wiederverwendbare Bibliothek und Komponententests enthält.
+
+**[Creating a .NET Core application that supports plugins (Erstellen einer .NET Core-Anwendung, die Plug-Ins unterstützt)](../core/tutorials/creating-app-with-plugin-support.md)**
+
+In diesem Tutorial erfahren Sie, wie Sie eine einfache .NET Core-Anwendung erstellen, die eine Plug-In-Architektur unterstützt. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) finden Sie im dotnet/samples-Repository auf GitHub.
 
 ## <a name="deploying-to-containers"></a>Bereitstellen in Containern
 
@@ -112,7 +106,7 @@ Viele Themen enthalten Quellcode und Beispiele, die zum Anzeigen oder Herunterla
    * Klonen Sie das Repository lokal. Wenn Sie ein Dokumentrepository direkt auf Ihrem lokalen System klonen, können Sie Änderungen nicht direkt im offiziellen Repository vornehmen und daher später auch keine Beiträge zur Dokumentation erstellen. Verwenden Sie das oben beschriebene Verfahren zum Verzweigen und Klonen, wenn Sie sich die Möglichkeit vorbehalten möchten, später zur Dokumentation beizutragen.
 1. Navigieren Sie in den Ordnern des Repositorys zum Speicherort des Beispiels. Der relative Pfad zum Speicherort des Beispiels wird in der Adressleiste Ihres Browsers angezeigt, wenn Sie dem Link zum Beispiel folgen.
 1. Zum Ausführen eines Beispiels stehen Ihnen verschiedene Optionen zur Verfügung:
-   * Verwenden der [dotnet-Befehlszeilentools](../core/tools/index.md): Navigieren Sie in einem Konsolenfenster zum Ordner des Beispiels, und verwenden Sie die dotnet-Befehlszeilentools.
-   * Verwenden von [Visual Studio](https://www.visualstudio.com/) oder [Visual Studio für Mac](https://www.visualstudio.com/vs/visual-studio-mac/): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Öffnen > Projekt/Projektmappe** auswählen, zum Ordner des Beispielprojekts navigieren und die Projektdatei auswählen (*.csproj* oder *.fsproj*).
-   * Verwenden von[Visual Studio Code](https://code.visualstudio.com/): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Ordner öffnen** auswählen und dann den Projektordner des Beispiels auswählen.
+   * Verwenden Sie die [dotnet-CLI-Tools](../core/tools/index.md): Navigieren Sie in einem Konsolenfenster zum Ordner des Beispiels, und verwenden Sie die dotnet-CLI-Tools.
+   * Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/) oder [Visual Studio für Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Öffnen > Projekt/Projektmappe** auswählen, zum Ordner des Beispielprojekts navigieren und die Projektdatei auswählen (*CSPROJ* oder *FSPROJ*).
+   * Verwenden Sie [Visual Studio Code](https://code.visualstudio.com/): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Ordner öffnen** auswählen und dann den Projektordner des Beispiels auswählen.
    * Verwenden Sie eine andere IDE, die .NET Core-Projekte unterstützt.
