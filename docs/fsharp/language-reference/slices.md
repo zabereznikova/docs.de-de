@@ -2,24 +2,24 @@
 title: Slices (F#)
 description: Erfahren Sie, wie Sie mit Slices für bestehende F# -Datentypen und wie Sie Ihre eigenen Slices für andere Datentypen zu definieren.
 ms.date: 01/22/2019
-ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970107"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675276"
 ---
-# <a name="slices"></a><span data-ttu-id="3327c-103">Slices</span><span class="sxs-lookup"><span data-stu-id="3327c-103">Slices</span></span>
+# <a name="slices"></a><span data-ttu-id="e2689-103">Slices</span><span class="sxs-lookup"><span data-stu-id="e2689-103">Slices</span></span>
 
-<span data-ttu-id="3327c-104">In F#, ein Slice ist eine Teilmenge von einem Datentyp.</span><span class="sxs-lookup"><span data-stu-id="3327c-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="3327c-105">Um einen Slice von einem Datentyp werden können, der Datentyp muss entweder definieren eine `GetSlice` Methode oder in eine ["Erweiterung"](type-extensions.md) , im Bereich.</span><span class="sxs-lookup"><span data-stu-id="3327c-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="3327c-106">In diesem Artikel wird erläutert, wie Slices aus vorhandenen F# Typen und wie Sie Ihre eigenen definieren.</span><span class="sxs-lookup"><span data-stu-id="3327c-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
+<span data-ttu-id="e2689-104">In F#, ein Slice ist eine Teilmenge von einem Datentyp.</span><span class="sxs-lookup"><span data-stu-id="e2689-104">In F#, a slice is a subset of a data type.</span></span> <span data-ttu-id="e2689-105">Um einen Slice von einem Datentyp werden können, der Datentyp muss entweder definieren eine `GetSlice` Methode oder in eine ["Erweiterung"](type-extensions.md) , im Bereich.</span><span class="sxs-lookup"><span data-stu-id="e2689-105">To be able to take a slice from a data type, the data type must either define a `GetSlice` method or in a [type extension](type-extensions.md) that is in scope.</span></span> <span data-ttu-id="e2689-106">In diesem Artikel wird erläutert, wie Slices aus vorhandenen F# Typen und wie Sie Ihre eigenen definieren.</span><span class="sxs-lookup"><span data-stu-id="e2689-106">This article explains how to take slices from existing F# types and how to define your own.</span></span>
 
-<span data-ttu-id="3327c-107">Slices ähneln [Indexer](members/indexed-properties.md), jedoch anstelle der Rückgabe eines einzelnen Werts aus der zugrunde liegende Datenstruktur, mehrere zu.</span><span class="sxs-lookup"><span data-stu-id="3327c-107">Slices are similar to [indexers](members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
+<span data-ttu-id="e2689-107">Slices ähneln [Indexer](members/indexed-properties.md), jedoch anstelle der Rückgabe eines einzelnen Werts aus der zugrunde liegende Datenstruktur, mehrere zu.</span><span class="sxs-lookup"><span data-stu-id="e2689-107">Slices are similar to [indexers](members/indexed-properties.md), but instead of yielding a single value from the underlying data structure, they yield multiple ones.</span></span>
 
-<span data-ttu-id="3327c-108">F#derzeit verfügt über systeminterne Unterstützung für das Aufteilen von Zeichenfolgen, Listen, Arrays und Direct2D-Arrays.</span><span class="sxs-lookup"><span data-stu-id="3327c-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
+<span data-ttu-id="e2689-108">F#derzeit verfügt über systeminterne Unterstützung für das Aufteilen von Zeichenfolgen, Listen, Arrays und Direct2D-Arrays.</span><span class="sxs-lookup"><span data-stu-id="e2689-108">F# currently has intrinsic support for slicing strings, lists, arrays, and 2D arrays.</span></span>
 
-## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="3327c-109">Grundlegende Aufteilen in Slices mit F# Listen und Arrays</span><span class="sxs-lookup"><span data-stu-id="3327c-109">Basic slicing with F# lists and arrays</span></span>
+## <a name="basic-slicing-with-f-lists-and-arrays"></a><span data-ttu-id="e2689-109">Grundlegende Aufteilen in Slices mit F# Listen und Arrays</span><span class="sxs-lookup"><span data-stu-id="e2689-109">Basic slicing with F# lists and arrays</span></span>
 
-<span data-ttu-id="3327c-110">Die am häufigsten verwendeten Datentypen, die in Slices aufgeteilt werden sind F# Listen und Arrays.</span><span class="sxs-lookup"><span data-stu-id="3327c-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="3327c-111">Im folgenden wird veranschaulicht, wie Sie dies mit Listen:</span><span class="sxs-lookup"><span data-stu-id="3327c-111">The following example demonstrates how to do this with lists:</span></span>
+<span data-ttu-id="e2689-110">Die am häufigsten verwendeten Datentypen, die in Slices aufgeteilt werden sind F# Listen und Arrays.</span><span class="sxs-lookup"><span data-stu-id="e2689-110">The most common data types that are sliced are F# lists and arrays.</span></span> <span data-ttu-id="e2689-111">Im folgenden wird veranschaulicht, wie Sie dies mit Listen:</span><span class="sxs-lookup"><span data-stu-id="e2689-111">The following example demonstrates how to do this with lists:</span></span>
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-<span data-ttu-id="3327c-112">Aufteilen in Slices Arrays ist, genau wie das Aufteilen in Slices aufgelistet:</span><span class="sxs-lookup"><span data-stu-id="3327c-112">Slicing arrays is just like slicing lists:</span></span>
+<span data-ttu-id="e2689-112">Aufteilen in Slices Arrays ist, genau wie das Aufteilen in Slices aufgelistet:</span><span class="sxs-lookup"><span data-stu-id="e2689-112">Slicing arrays is just like slicing lists:</span></span>
 
 ```fsharp
 // Generate an array of 100 integers
@@ -57,11 +57,11 @@ let unboundedEnd = fullArray.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="3327c-113">Segmentieren von mehrdimensionalen arrays</span><span class="sxs-lookup"><span data-stu-id="3327c-113">Slicing multidimensional arrays</span></span>
+## <a name="slicing-multidimensional-arrays"></a><span data-ttu-id="e2689-113">Segmentieren von mehrdimensionalen arrays</span><span class="sxs-lookup"><span data-stu-id="e2689-113">Slicing multidimensional arrays</span></span>
 
-<span data-ttu-id="3327c-114">F#mehrdimensionale Arrays in unterstützt die F# -Kernbibliothek.</span><span class="sxs-lookup"><span data-stu-id="3327c-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="3327c-115">Wie bei eindimensionalen Arrays können Segmente der mehrdimensionalen Arrays auch nützlich sein.</span><span class="sxs-lookup"><span data-stu-id="3327c-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="3327c-116">Allerdings erfordert die Einführung von zusätzliche Dimensionen eine etwas andere Syntax, damit Sie die Slices von bestimmten Zeilen und Spalten nutzen können.</span><span class="sxs-lookup"><span data-stu-id="3327c-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
+<span data-ttu-id="e2689-114">F#mehrdimensionale Arrays in unterstützt die F# -Kernbibliothek.</span><span class="sxs-lookup"><span data-stu-id="e2689-114">F# supports multidimensional arrays in the F# core library.</span></span> <span data-ttu-id="e2689-115">Wie bei eindimensionalen Arrays können Segmente der mehrdimensionalen Arrays auch nützlich sein.</span><span class="sxs-lookup"><span data-stu-id="e2689-115">As with one-dimensional arrays, slices of multidimensional arrays can also be useful.</span></span> <span data-ttu-id="e2689-116">Allerdings erfordert die Einführung von zusätzliche Dimensionen eine etwas andere Syntax, damit Sie die Slices von bestimmten Zeilen und Spalten nutzen können.</span><span class="sxs-lookup"><span data-stu-id="e2689-116">However, the introduction of additional dimensions mandates a slightly different syntax so that you can take slices of specific rows and columns.</span></span>
 
-<span data-ttu-id="3327c-117">Die folgenden Beispiele veranschaulichen, wie Sie einem 2D-Array unterteilen:</span><span class="sxs-lookup"><span data-stu-id="3327c-117">The following examples demonstrate how to slice a 2D array:</span></span>
+<span data-ttu-id="e2689-117">Die folgenden Beispiele veranschaulichen, wie Sie einem 2D-Array unterteilen:</span><span class="sxs-lookup"><span data-stu-id="e2689-117">The following examples demonstrate how to slice a 2D array:</span></span>
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -86,16 +86,16 @@ printfn "%A" subA'
 
 // Slice a 2x2 matrix out of the full 3x3 matrix
 let twoByTwo = A.[0..1,0..1]
-printfn "%A" twobyTwo
+printfn "%A" twoByTwo
 ```
 
-<span data-ttu-id="3327c-118">Die F# Core-Bibliothek definiert keine `GetSlice`für 3D Arrays.</span><span class="sxs-lookup"><span data-stu-id="3327c-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="3327c-119">Wenn Sie diese oder andere Arrays mit mehr Dimensionen in Slices aufteilen möchten, müssen Sie definieren die `GetSlice` Element selbst.</span><span class="sxs-lookup"><span data-stu-id="3327c-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
+<span data-ttu-id="e2689-118">Die F# Core-Bibliothek definiert keine `GetSlice`für 3D Arrays.</span><span class="sxs-lookup"><span data-stu-id="e2689-118">The F# core library does not define `GetSlice`for 3D arrays.</span></span> <span data-ttu-id="e2689-119">Wenn Sie diese oder andere Arrays mit mehr Dimensionen in Slices aufteilen möchten, müssen Sie definieren die `GetSlice` Element selbst.</span><span class="sxs-lookup"><span data-stu-id="e2689-119">If you wish to slice those or other arrays of more dimensions, you must define the `GetSlice` member yourself.</span></span>
 
-## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="3327c-120">Definieren von Slices für andere Datenstrukturen</span><span class="sxs-lookup"><span data-stu-id="3327c-120">Defining slices for other data structures</span></span>
+## <a name="defining-slices-for-other-data-structures"></a><span data-ttu-id="e2689-120">Definieren von Slices für andere Datenstrukturen</span><span class="sxs-lookup"><span data-stu-id="e2689-120">Defining slices for other data structures</span></span>
 
-<span data-ttu-id="3327c-121">Die F# Segmente für einen begrenzten Satz von Typen definiert.</span><span class="sxs-lookup"><span data-stu-id="3327c-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="3327c-122">Wenn Sie die Slices für mehr Datentypen definieren möchten, können Sie entweder in die Typdefinition selbst oder in einer typerweiterung dafür.</span><span class="sxs-lookup"><span data-stu-id="3327c-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
+<span data-ttu-id="e2689-121">Die F# Segmente für einen begrenzten Satz von Typen definiert.</span><span class="sxs-lookup"><span data-stu-id="e2689-121">The F# core library defines slices for a limited set of types.</span></span> <span data-ttu-id="e2689-122">Wenn Sie die Slices für mehr Datentypen definieren möchten, können Sie entweder in die Typdefinition selbst oder in einer typerweiterung dafür.</span><span class="sxs-lookup"><span data-stu-id="e2689-122">If you wish to define slices for more data types, you can do so either in the type definition itself or in a type extension.</span></span>
 
-<span data-ttu-id="3327c-123">Beispielsweise sieht wie Sie die Slices für definieren können die <xref:System.ArraySegment%601> Klasse, um die einfache datenbearbeitung zu ermöglichen:</span><span class="sxs-lookup"><span data-stu-id="3327c-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
+<span data-ttu-id="e2689-123">Beispielsweise sieht wie Sie die Slices für definieren können die <xref:System.ArraySegment%601> Klasse, um die einfache datenbearbeitung zu ermöglichen:</span><span class="sxs-lookup"><span data-stu-id="e2689-123">For example, here's how you might define slices for the <xref:System.ArraySegment%601> class to allow for convenient data manipulation:</span></span>
 
 ```fsharp
 open System
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="3327c-124">Um Boxing zu vermeiden, sollte es nötig inlining verwenden</span><span class="sxs-lookup"><span data-stu-id="3327c-124">Use inlining to avoid boxing if it is necessary</span></span>
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a><span data-ttu-id="e2689-124">Um Boxing zu vermeiden, sollte es nötig inlining verwenden</span><span class="sxs-lookup"><span data-stu-id="e2689-124">Use inlining to avoid boxing if it is necessary</span></span>
 
-<span data-ttu-id="3327c-125">Wenn Sie Segmente für einen Typ, die tatsächlich eine Struktur ist definieren, wird empfohlen, die Sie `inline` der `GetSlice` Member.</span><span class="sxs-lookup"><span data-stu-id="3327c-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="3327c-126">Die F# Compiler optimiert die optionalen Argumente, die jegliche Heapzuweisungen durch das Aufteilen in Slices zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="3327c-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="3327c-127">Dies ist sehr wichtig für das Segmentieren von Konstrukten wie z. B. <xref:System.Span%601> , die nicht auf dem Heap zugeordnet werden können.</span><span class="sxs-lookup"><span data-stu-id="3327c-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
+<span data-ttu-id="e2689-125">Wenn Sie Segmente für einen Typ, die tatsächlich eine Struktur ist definieren, wird empfohlen, die Sie `inline` der `GetSlice` Member.</span><span class="sxs-lookup"><span data-stu-id="e2689-125">If you are defining slices for a type that is actually a struct, we recommend that you `inline` the `GetSlice` member.</span></span> <span data-ttu-id="e2689-126">Die F# Compiler optimiert die optionalen Argumente, die jegliche Heapzuweisungen durch das Aufteilen in Slices zu vermeiden.</span><span class="sxs-lookup"><span data-stu-id="e2689-126">The F# compiler optimizes away the optional arguments, avoiding any heap allocations as a result of slicing.</span></span> <span data-ttu-id="e2689-127">Dies ist sehr wichtig für das Segmentieren von Konstrukten wie z. B. <xref:System.Span%601> , die nicht auf dem Heap zugeordnet werden können.</span><span class="sxs-lookup"><span data-stu-id="e2689-127">This is critically important for slicing constructs such as <xref:System.Span%601> that cannot be allocated on the heap.</span></span>
 
 ```fsharp
 open System
@@ -135,6 +135,6 @@ printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
 ```
 
-## <a name="see-also"></a><span data-ttu-id="3327c-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3327c-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2689-128">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e2689-128">See also</span></span>
 
-- [<span data-ttu-id="3327c-129">Indizierte Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="3327c-129">Indexed properties</span></span>](members/indexed-properties.md)
+- [<span data-ttu-id="e2689-129">Indizierte Eigenschaften</span><span class="sxs-lookup"><span data-stu-id="e2689-129">Indexed properties</span></span>](members/indexed-properties.md)
