@@ -4,12 +4,12 @@ description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b84eb50c0d425447e3f78f1473608c27254523a7
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 10f7761b7c0d2ddd8cb9247b1a02aa49cdc4e5d4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746415"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679280"
 ---
 # <a name="what-about-cloud-native-applications"></a>Was geschieht mit Cloudnativen Anwendungen?
 
@@ -21,13 +21,13 @@ Abbildung 4-3 positioniert Native Cloud-apps in der Anwendung Modernisierung Rei
 
 > **Abbildung 4: 3.** Positionieren Native Cloudanwendungen
 
-Die Native Cloud-modernisierungsreifegrad ist in der Regel neue Investitionen erforderlich. Verschieben auf die Native Cloud - Ebene in der Regel hängt von unternehmensanforderung zu modernisieren Sie Anwendungen so weit wie möglich ist, um deutlich zu verbessern, Skalierung in großen Anwendungen durch autonome Subsysteme (Microservices), die bereitgestellt werden können erstellen und skalieren unabhängig beanspruchen Sie aus anderen Bereichen der Anwendung während Sie zugleich senken in die lange Laufzeit und Erhöhung Weiterentwicklung-Agilität, diese autonomen app-Komponenten, die angeben erheblich Vorteile. 
+Die Native Cloud-modernisierungsreifegrad ist in der Regel neue Investitionen erforderlich. Verschieben auf die Native Cloud - Ebene in der Regel hängt von unternehmensanforderung zu modernisieren Sie Anwendungen so weit wie möglich ist, um deutlich zu verbessern, Skalierung in großen Anwendungen durch autonome Subsysteme (Microservices), die bereitgestellt werden können erstellen und skalieren unabhängig beanspruchen Sie aus anderen Bereichen der Anwendung während Sie zugleich senken in die lange Laufzeit und Erhöhung Weiterentwicklung-Agilität, diese autonomen app-Komponenten, die angeben erheblich Vorteile.
 
 Basiert die Hauptsäulen von cloudbasierten Anwendungen auf Ansätze für Microservices-Architektur, die mit Agilität weiterentwickeln und an Grenzen, die nur schwer zu erreichen in einer monolithischen Architektur, die entweder lokal oder Cloud bereitgestellt, skaliert werden kann Umgebung.
 
-Abbildung 4-4 zeigt die wesentlichen Merkmale von Native Cloud-Modell.  
+Abbildung 4-4 zeigt die wesentlichen Merkmale von Native Cloud-Modell.
 
-> ![Native Cloud-Eigenschaften sind Microservices, Containern, cloudrobust, orchestratoren und serverles](./media/image4.png)
+> ![Native Cloud-Eigenschaften sind cloudrobust, orchestratoren für Container, Microservices und serverlose Apps](./media/image4.png)
 >
 > **Abbildung 4-4.** Native Cloud-Eigenschaften
 
@@ -47,7 +47,7 @@ Für eine Beispieldefinition und Weitere Informationen zu den Eigenschaften von 
 
 Der wichtigste Faktor zu beachten, wenn Sie eine vollständige Anwendung für das Native Cloud-Modell migrieren ist, dass Sie auf eine auf Microservices basierende Architektur überarbeiten müssen. Dies erfordert natürlich eine erhebliche Investition in der Entwicklung aufgrund der großen umgestaltungsprozess Beteiligten. Diese Option wird für unternehmenskritische Anwendungen, die Skalierbarkeit und bessere langfristige Flexibilität benötigen, in der Regel ausgewählt. Aber Sie könnten dann starten, auf dem Weg cloudnative durch Hinzufügen von Microservices nur wenige neue Szenarien und schließlich die Anwendung vollständig als Microservices umzugestalten. Dies ist ein inkrementeller Ansatz, der die beste Option für einige Szenarien ist.
 
-## <a name="what-about-microservices"></a>Was ist mit Microservices? 
+## <a name="what-about-microservices"></a>Was ist mit Microservices?
 
 Es ist wichtig, zu verstehen, Microservices und wie sie funktionieren, wenn Sie cloudbasierte Anwendungen für Ihre Organisation in Betracht ziehen.
 
@@ -67,6 +67,6 @@ Ein letzter Hinweis, auch wenn bei diesem Vorgang werden über dieses Konzept si
 
 In jedem Fall konzentriert der Rest dieses Leitfadens vorhanden vor allem auf "keine Microservices basierende apps", da diese Anleitung vor allem die Modernisierung vorhandener Apps als Ziel verwendet, die normalerweise monolithische oder N-schichtige Architekturen.
 
->[!div class="step-by-step"]
->[Zurück](microsoft-technologies-in-cloud-optimized-applications.md)
->[Weiter](deploy-existing-net-apps-as-windows-containers.md)
+> [!div class="step-by-step"]
+> [Zurück](microsoft-technologies-in-cloud-optimized-applications.md)
+> [Weiter](deploy-existing-net-apps-as-windows-containers.md)

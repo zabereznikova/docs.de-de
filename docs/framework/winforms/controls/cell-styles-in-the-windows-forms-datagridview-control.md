@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: 7ff8f8b0c047601e092b8ccb347095d9d1d0a1d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cb46ec5b203451cb2f9fd1c87457ad52552359c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575160"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674678"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Zellstile im DataGridView-Steuerelement in Windows Forms
 Jede Zelle innerhalb der <xref:System.Windows.Forms.DataGridView> Steuerelement kann seinen eigenen Stil, wie z. B. Text-Format, Hintergrundfarbe, Vordergrundfarbe und Schriftart haben. In der Regel werden jedoch mehrere Zellen Stilmerkmale.  
@@ -87,7 +87,7 @@ Jede Zelle innerhalb der <xref:System.Windows.Forms.DataGridView> Steuerelement 
   
  Das folgende Diagramm veranschaulicht diesen Prozess.  
   
- ![Eigenschaften des DataGridViewCellStyle-Typs](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")  
+ ![Eigenschaften des DataGridViewCellStyle-Typs](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-inheritance-diagram.gif "DataGridViewCells-Diagramm für Vererbung")  
   
  Sie können auch die Stile, die von bestimmten Zeilen und Spalten geerbt zugreifen. Die Spalte <xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A> -Eigenschaft erbt seine Werte aus den folgenden Eigenschaften.  
   
@@ -122,7 +122,7 @@ Jede Zelle innerhalb der <xref:System.Windows.Forms.DataGridView> Steuerelement 
   
  Im folgende Diagramm wird veranschaulicht, wie verschiedene <xref:System.Windows.Forms.DataGridViewCellStyle> Eigenschaften ihre Werte aus unterschiedlichen Quellen erben können.  
   
- ![DataGridView-Eigenschaft&#45;Wert Vererbung](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![DataGridView-Eigenschaft&#45;Wert Vererbung](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-value-inheritance-diagram.gif "DataGridViewCells-Wert-Diagramm für Vererbung")  
   
  Durch nutzen die Vererbung von Stilen, können Sie die entsprechenden Stile für das gesamte Steuerelement bereitstellen, ohne die gleiche Informationen an mehreren Orten angeben zu müssen.  
   

@@ -4,12 +4,12 @@ description: Erfahren Sie, die verfügbare Option Status in containeranwendungen
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1e30a545ba0003acb8b85dee9896d54934f0d737
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 30dde3ce44aa61fff3fad1841ae4a8b941573877
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745997"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678080"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Zustand und Daten in Docker-Anwendungen
 
@@ -19,7 +19,7 @@ Die folgenden Lösungen werden verwendet, um persistente Daten in Docker-Anwendu
 
 Über den Docker-Host als [Docker-Volumes](https://docs.docker.com/engine/admin/volumes/):
 
-- **Volumes** befinden sich in einem Bereich des Dateisystem-Host, der von Docker verwaltet wird.
+- **Volumes** werden in einem Bereich des Hostdateisystems gespeichert, der von Docker verwaltet wird.
 
 - **Binden Sie Bereitstellungen** können zu einem beliebigen Ordner in das Dateisystem Host zuordnen, damit Zugriff kann nicht aus einem Docker-Prozess gesteuert werden und kann ein Sicherheitsrisiko darstellen, wie ein Container Zugriff auf vertrauliche OS-Ordner konnte.
 
@@ -47,7 +47,7 @@ Volumes können benannt oder anonym sein (letzteres ist die Standardeinstellung)
 
 **`tmpfs` bindet** sind virtuelle Ordner, die nur in den Arbeitsspeicher des Hosts live und nie in das Dateisystem geschrieben werden. Sie sind schnell und sicher, verbrauchen aber Arbeitsspeicher und sind nur für nicht persistente Daten vorgesehen.
 
-Wie in Abbildung 4-5 gezeigt, können reguläre Docker-Volumes außerhalb der Container selbst aber innerhalb der physischen Grenzen des Hostservers oder der VM gespeichert werden. Docker-Container können jedoch nicht von einem Hostserver oder einer VM auf ein Volume zugreifen. Anders gesagt kann mit diesen Volumes ist nicht zum Verwalten von Daten, die gemeinsam von Containern, die auf verschiedenen Docker-Hosts ausgeführt werden soll, auch wenn es mit einem Volumetreiber erreicht werden konnte, die remote-Hosts unterstützt.
+Wie in Abbildung 4-5 gezeigt, können reguläre Docker-Volumes außerhalb der Container selbst aber innerhalb der physischen Grenzen des Hostservers oder der VM gespeichert werden. Docker-Container können jedoch nicht von einem Hostserver oder einer VM auf ein Volume zugreifen. Anders gesagt: Bei diesen Volumes ist es nicht möglich, Daten zu verwalten, die von auf verschiedenen Docker-Hosts ausgeführten Containern gemeinsam verwendet werden. Dieses Szenario ließe sich allerdings mit einem Volumetreiber umsetzen, der Remotehosts unterstützt.
 
 ![Volumes können von Containern gemeinsam genutzt werden, allerdings nur auf demselben Host, es sei denn, Sie verwenden einen Remotetreiber, der Remotehosts unterstützt. ](./media/image5.png)
 

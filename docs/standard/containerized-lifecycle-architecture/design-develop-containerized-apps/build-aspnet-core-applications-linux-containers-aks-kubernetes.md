@@ -4,12 +4,12 @@ description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plat
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: cb84f4ebb0681792a820f8ed7bc32c5d1d8c08b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967164"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676654"
 ---
 # <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>Erstellen von ASP.NET Core 2.1-Anwendungen, die als Linux-Container bereitgestellt werden, in einem AKS/Kubernetes-orchestrator
 
@@ -27,7 +27,7 @@ Die folgenden Beispiele durchsuchen, die Erstellung einer ASP.NET Core 2.1-Anwen
 
 ## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>Erstellen das ASP.NET Core 2.1-Projekt mit Visual Studio 2017
 
-ASP.NET Core ist eine allgemeine Entwicklungsplattform von Microsoft und der .NET-Community auf GitHub verwaltet wird. Sie ist plattformübergreifend, d.h., sie unterstützt Windows, macOS und Linux und kann lokal, in der Cloud und in Einbettungs- und IoT-Szenarios verwendet werden.
+ASP.NET Core ist eine allgemeine Entwicklungsplattform von Microsoft und der .NET-Community auf GitHub verwaltet wird. Dabei handelt es sich plattformübergreifende Unterstützung von Windows, MacOS und Linux, kann in Geräte-, Cloud- und eingebetteten/IoT-Szenarien verwendet werden.
 
 Dieses Beispiel verwendet ein einfaches Projekt, das zusätzliche Kenntnisse zum Erstellen der Beispieldatenbank erforderlich, in einer Visual Studio Web-API-Vorlage basiert. Sie müssen nur zum Erstellen des Projekts mithilfe einer standard-Vorlage, die alle zum Ausführen von eines kleinen Projekts mit einer REST-API, die mit ASP.NET Core 2.1-Technologie-Elemente enthält.
 
@@ -39,7 +39,7 @@ Wählen Sie zum Erstellen des Beispielprojekts in Visual Studio **Datei** > **ne
 
 Visual Studio enthält Vorlagen für Webprojekte. Wählen Sie in unserem Beispiel **API** zum Erstellen einer ASP.NET Web-API-Anwendung.
 
-Stellen Sie sicher, dass Sie ASP.NET Core 2.1 als das Framework ausgewählt haben. .NET Core 2.1 wird ist in der letzten Version von Visual Studio 2017 enthalten und automatisch installiert und konfiguriert Sie bei der Installation von Visual Studio 2017.
+Stellen Sie sicher, dass Sie ASP.NET Core 2.1 als Framework ausgewählt haben. .NET Core 2.1 wird ist in der letzten Version von Visual Studio 2017 enthalten und automatisch installiert und konfiguriert Sie bei der Installation von Visual Studio 2017.
 
 ![Visual Studio-Dialogfeld zum Auswählen von einer ASP.NET Core-Webanwendung mit API-Option ausgewählt ist.](media/create-web-api-application.png)
 

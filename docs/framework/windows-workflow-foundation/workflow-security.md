@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 25cdd90250f256588d8ac72c0f98464eeae35938
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 62564823338ee071f09036929a3a11cd5f3bbbe1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441754"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676563"
 ---
 # <a name="workflow-security"></a>Workflowsicherheit
 Windows Workflow Foundation (WF) ist in eine Reihe verschiedener Technologien, wie z. B. Microsoft SQL Server und Windows Communication Foundation (WCF) integriert. Die Interaktion mit diesen Technologien kann zu Sicherheitsproblemen für den Workflow führen, falls diese nicht ordnungsgemäß durchgeführt wird.
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF) ist in eine Reihe verschiedener Technologien, w
 
 4.  Übertragen eines Clientsicherheitstokens an einen Back-End-Dienst (anspruchsbasierte Delegierung) mithilfe von WS-Trust ActAs
 
-Weitere Informationen und die WF-Sicherheitspaket CTP Herunterladen finden Sie unter: [WF-Sicherheitspaket CTP-Version](https://wf.codeplex.com/releases/view/48114)
+Weitere Informationen und die WF-Sicherheitspaket CTP Herunterladen finden Sie unter: [WF-Sicherheitspaket CTP-Version](https://archive.codeplex.com/?p=wf)

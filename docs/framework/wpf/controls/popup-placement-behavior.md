@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 0f02fcef5c905e81808d76b71b45e0d010084268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 449ec3ff30bb4650c32d3f6b9743b5d1a31ad0de
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360554"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679514"
 ---
 # <a name="popup-placement-behavior"></a>Verhalten beim Platzieren von Popups
 Ein <xref:System.Windows.Controls.Primitives.Popup> -Steuerelement zeigt Inhalt in einem separaten Fenster, die über einer Anwendung schwebt. Sie können angeben, der die Position des ein <xref:System.Windows.Controls.Primitives.Popup> relativ zu einem Steuerelement, die Maus oder den Bildschirm mit der <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, und <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> Eigenschaften.  Diese Eigenschaften arbeiten zusammen, um die Flexibilität bei der die Position der Angabe der <xref:System.Windows.Controls.Primitives.Popup>.  
@@ -30,8 +30,7 @@ Ein <xref:System.Windows.Controls.Primitives.Popup> -Steuerelement zeigt Inhalt 
   
  Die folgende Abbildung zeigt das Bild und die <xref:System.Windows.Controls.Primitives.Popup> Steuerelemente  
   
- ![Bild mit vier popupsteuerelementen](./media/popupplacementintro.png "PopupPlacementIntro")  
-Bild mit vier Popups  
+ ![Bild mit vier popupsteuerelementen](./media/popup-placement-behavior/popup-placement-intro.png "Bild mit vier Popups")    
   
  Dieses einfache Beispiel zeigt, wie Sie festlegen der <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> und <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Eigenschaften, jedoch mithilfe von der <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, und <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> Eigenschaften, Sie haben noch mehr Kontrolle über Where der <xref:System.Windows.Controls.Primitives.Popup> positioniert ist.  
   
@@ -58,8 +57,8 @@ Bild mit vier Popups
   
  Die folgende Abbildung zeigt, dass die <xref:System.Windows.Controls.Primitives.Popup> wird relativ dazu positioniert die <xref:System.Windows.Controls.Canvas>.  
   
- ![Popup-Steuerelement ohne PlacementTarget](./media/popupplacementnoplacementtarget.PNG "PopupPlacementNoPlacementTarget")  
-Popup ohne PlacementTarget  
+ ![Popup-Steuerelement ohne PlacementTarget](./media/popup-placement-behavior/popup-placement-no-placement-target.png "Popup ohne PlacementTarget.")  
+  
   
  Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.Primitives.Popup> , das untergeordnete Element des eine <xref:System.Windows.Controls.Canvas>, dieses Mal jedoch die <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> nastaven NA hodnotu `ellipse1`, sodass das Popupfenster unterhalb der <xref:System.Windows.Shapes.Ellipse>.  
   
@@ -67,8 +66,7 @@ Popup ohne PlacementTarget
   
  Die folgende Abbildung zeigt, dass die <xref:System.Windows.Controls.Primitives.Popup> wird relativ dazu positioniert die <xref:System.Windows.Shapes.Ellipse>.  
   
- ![Relativ zu einer Ellipse platziertes Popup](./media/popupplacementwithplacementtarget.PNG "PopupPlacementWithPlacementTarget")  
-Popup mit PlacementTarget  
+ ![Relativ zu einer Ellipse platziertes Popup](./media/popup-placement-behavior/popup-placement-with-placement-target.png "Popup mit PlacementTarget")    
   
 > [!NOTE]
 >  Für <xref:System.Windows.Controls.ToolTip>, der Standardwert von <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> ist <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>.  Für <xref:System.Windows.Controls.ContextMenu>, der Standardwert von <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> ist <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>. Diese Werte werden später in „Zusammenwirken der Eigenschaften“ erklärt.  
@@ -82,8 +80,8 @@ Popup mit PlacementTarget
   
  Die folgende Abbildung zeigt das Ergebnis des vorherigen Beispiels.  
   
- ![Popup mit und ohne PlacementRectangle](./media/popupplacementplacementrectangle.PNG "PopupPlacementPlacementRectangle")  
-Popup mit und ohne PlacementRectangle  
+ ![Popup mit und ohne PlacementRectangle](./media/popup-placement-behavior/popup-placement-placement-rectangle.png "Popup mit und ohne PlacementRectangle.")  
+  
   
 ### <a name="target-origin-and-popup-alignment-point"></a>Zielursprung und Popupausrichtungspunkt  
  Der *Zielursprung* und *Popupausrichtungspunkt* sind Bezugspunkte für die Positionierung im Zielbereich und im Popup. Sie können die <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> und <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> Eigenschaften für den offset des Popups aus dem Zielbereich.  Die <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> und <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> sind relativ zum Zielursprung und den popupausrichtungspunkt. Der Wert des der <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Eigenschaft bestimmt, wo sich der Zielursprung und den popupausrichtungspunkt befinden.  
@@ -94,8 +92,7 @@ Popup mit und ohne PlacementRectangle
   
  Die folgende Abbildung zeigt das Ergebnis des vorherigen Beispiels.  
   
- ![Popupplatzierung mit Zielursprung-Ausrichtungspunkt](./media/popupplacementtargetoriginalignmentpoint.PNG "PopupPlacementTargetOriginAlignmentPoint")  
-Popup mit HorizontalOffset und VerticalOffset  
+ ![Popupplatzierung mit Zielursprung-Ausrichtungspunkt](./media/popup-placement-behavior/popup-placement-target-origin-alignment-point.png "Popup mit HorizontalOffset und VerticalOffset.")    
   
 <a name="How"></a>   
 ## <a name="how-the-properties-work-together"></a>Zusammenwirken der Eigenschaften  
@@ -120,32 +117,23 @@ Popup mit HorizontalOffset und VerticalOffset
   
  Die folgenden Abbildungen zeigen die <xref:System.Windows.Controls.Primitives.Popup>, zeigen Sie den Zielbereich, Zielursprung und popupausrichtungspunkt für jeden <xref:System.Windows.Controls.Primitives.PlacementMode> Wert. In jeder Abbildung ist der Zielbereich Gelb ist, und die <xref:System.Windows.Controls.Primitives.Popup> ist Blau.  
   
- ![Popup mit absolute- oder AbsolutePoint-Platzierung](./media/popupplacementabsolute.png "PopupPlacementAbsolute")  
-Die Platzierung ist „Absolute“ oder „AbsolutePoint“  
+ ![Popup mit absolute- oder AbsolutePoint-Platzierung](./media/popup-placement-behavior/popup-placement-absolute.png "die Platzierung ist absolute- oder AbsolutePoint.")    
   
- ![Popup mit Bottom-Platzierung](./media/popupplacementbottom.png "PopupPlacementBottom")  
-Die Platzierung ist „Bottom“  
+ ![Popup mit Bottom-Platzierung](./media/popup-placement-behavior/popup-placement-bottom.png "die Platzierung ist unten.")   
   
- ![Popup mit Center-Platzierung](./media/popupplacementcenter.png "PopupPlacementCenter")  
-Die Platzierung ist „Center“  
+ ![Popup mit Center-Platzierung](./media/popup-placement-behavior/popup-placement-center.png "die Platzierung ist Center.")    
   
- ![Popup mit Left-Platzierung](./media/popupplacementleft.png "PopupPlacementLeft")  
-Die Platzierung ist „Left“  
+ ![Popup mit Left-Platzierung](./media/popup-placement-behavior/popup-placement-left.png "Platzierung ist \"Left\".")   
   
- ![Popup mit Mouse-Platzierung](./media/popupplacementmouse.png "PopupPlacementMouse")  
-Die Platzierung ist „Mouse“  
+ ![Popup mit Mouse-Platzierung](./media/popup-placement-behavior/popup-placement-mouse.png "Platzierung Maus ist.")  
   
- ![Popup mit MousePoint-Platzierung](./media/popupplacementmousepoint.png "PopupPlacementMousePoint")  
-Die Platzierung ist „MousePoint“  
+ ![Popup mit MousePoint-Platzierung](./media/popup-placement-behavior/popup-placement-mousepoint.png "Platzierung ist \"MousePoint\".")  
   
- ![Popup mit relative- oder RelativePoint-Platzierung](./media/popupplacementrelative.png "PopupPlacementRelative")  
-Die Platzierung ist „Relative“ oder „RelativePoint“  
+ ![Popup mit relative- oder RelativePoint-Platzierung](./media/popup-placement-behavior/popup-placement-relative.png "die Platzierung ist relative- oder RelativePoint.")    
   
- ![Popup mit Right-Platzierung](./media/popupplacementright.png "PopupPlacementRight")  
-Die Platzierung ist „Right“  
+ ![Popup mit Right-Platzierung](./media/popup-placement-behavior/popup-placement-right.png "Platzierung ist \"Right\".")    
   
- ![Popup mit Top-Platzierung](./media/popupplacementtop.png "PopupPlacementTop")  
-Die Platzierung ist „Top“  
+ ![Popup mit Top-Platzierung](./media/popup-placement-behavior/popup-placement-top.png "Platzierung ist \"Top\".")    
   
 <a name="When"></a>   
 ## <a name="when-the-popup-encounters-the-edge-of-the-screen"></a>Wenn das Popup auf einen Bildschirmrand trifft  
@@ -178,21 +166,19 @@ Die Platzierung ist „Top“
 ### <a name="aligning-to-the-screen-edge"></a>Ausrichten am Bildschirmrand  
  Ein <xref:System.Windows.Controls.Primitives.Popup> können Ausrichten am Rand des Bildschirms durch Neupositionieren also die gesamte <xref:System.Windows.Controls.Primitives.Popup> auf dem Bildschirm angezeigt wird.  In diesem Fall unterscheiden sich die Entfernung zwischen dem Zielursprung und den popupausrichtungspunkt von den Werten der <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A> und <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>. Wenn <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> ist <xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>, <xref:System.Windows.Controls.Primitives.PlacementMode.Center>, oder <xref:System.Windows.Controls.Primitives.PlacementMode.Relative>, <xref:System.Windows.Controls.Primitives.Popup> richtet sich selbst an jedem Bildschirmrand aus.  Nehmen wir beispielsweise an, die eine <xref:System.Windows.Controls.Primitives.Popup> hat <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> festgelegt <xref:System.Windows.Controls.Primitives.PlacementMode.Relative> und <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> auf 100 festgelegt.  Wenn dem unteren Rand des Bildschirms ganz oder teilweise verdeckt die <xref:System.Windows.Controls.Primitives.Popup>, <xref:System.Windows.Controls.Primitives.Popup> automatisch neu positioniert und am unteren Rand des Bildschirms und den vertikalen Abstand zwischen dem Zielursprung und dem Popup-Ausrichtungspunkt ist kleiner als 100. Dies wird in der folgenden Abbildung veranschaulicht.  
   
- ![Popupfenster, das Bildschirmrand ausgerichtet](./media/popupplacementrelativescreenedge.png "PopupPlacementRelativeScreenEdge")  
-Popup richtet sich am Bildschirmrand aus  
+ ![Popupfenster, das Bildschirmrand ausgerichtet](./media/popup-placement-behavior/popup-placement-relative-screen-edge.png "Popup richtet sich an den Rand des Bildschirms.")    
   
 ### <a name="changing-the-popup-alignment-point"></a>Ändern des Popupausrichtungspunkts  
  Wenn <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> ist <xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>, <xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>, oder <xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>, ändert sich der popupausrichtungspunkt, wenn das Popup stößt auf den unteren oder rechten Bildschirmrand.  
   
  Die folgende Abbildung zeigt, dass wenn der untere Bildschirmrand ganz oder teilweise verdeckt die <xref:System.Windows.Controls.Primitives.Popup>, der popupausrichtungspunkt wird der unteren linken Ecke des der <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Neuer Ausrichtungspunkt durch unteren Bildschirmrand](./media/popupplacementrelativepointscreenedge.png "PopupPlacementRelativePointScreenEdge")  
-Das Popup trifft auf den unteren Bildschirmrand und ändert den Popupausrichtungspunkt.  
+ ![Neuer Ausrichtungspunkt durch unteren Bildschirmrand](./media/popup-placement-behavior/popup-placement-relative-point-screen-edge.png "das Popup stößt auf unteren Rand des Bildschirms, und ändert den popupausrichtungspunkt.")  
+ 
   
  Die folgende Abbildung zeigt, dass wenn der <xref:System.Windows.Controls.Primitives.Popup> wird ausgeblendet, durch den rechten Bildschirmrand, der Ausrichtungspunkt auf der oberen rechten Ecke der ist die <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Neuer popupausrichtungspunkt durch Bildschirmrand](./media/popupplacementrelativepointrightscreenedge.png "PopupPlacementRelativePointRightScreenEdge")  
-Das Popup stößt auf den rechten Bildschirmrand und ändert den Popupausrichtungspunkt.  
+ ![Neuer popupausrichtungspunkt durch Bildschirmrand](./media/popup-placement-behavior/popup-placement-relative-point-right-screen-edge.png "das Popup stößt auf rechten Rand des Bildschirms, und ändert den popupausrichtungspunkt.")    
   
  Wenn die <xref:System.Windows.Controls.Primitives.Popup> erkennt den unteren oder rechten Bildschirmrand, der popupausrichtungspunkt wird der unteren rechten Ecke des der <xref:System.Windows.Controls.Primitives.Popup>.  
   
@@ -201,28 +187,24 @@ Das Popup stößt auf den rechten Bildschirmrand und ändert den Popupausrichtun
   
  Die folgende Abbildung zeigt, dass wenn <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> ist <xref:System.Windows.Controls.Primitives.PlacementMode.Bottom> und <xref:System.Windows.Controls.Primitives.Popup> auf den unteren Bildschirmrand trifft der Zielursprung die linke obere Ecke des Zielbereichs und der Ausrichtungspunkt auf der unteren linken Ecke des der <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Neuer Ausrichtungspunkt durch unteren Bildschirmrand](./media/popupplacementbottomscreenedge.png "PopupPlacementBottomScreenEdge")  
-Die Platzierung ist „Bottom“, und das Popup stößt auf den unteren Rand des Bildschirms  
+ ![Neuer Ausrichtungspunkt durch unteren Bildschirmrand](./media/popup-placement-behavior/popup-placement-bottom-screen-edge.png "Platzierung ist unten, und das Popup stößt auf den unteren Rand des Bildschirms.")    
   
  Die folgende Abbildung zeigt, dass wenn <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> ist <xref:System.Windows.Controls.Primitives.PlacementMode.Left> und <xref:System.Windows.Controls.Primitives.Popup> auf der linken Bildschirmrand stößt der Zielursprung ist der oberen rechten Ecke des Zielbereichs und der Ausrichtungspunkt auf der linken oberen Ecke des der <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Neuer Ausrichtungspunkt durch linken Bildschirmrand](./media/popupplacementleftscreenedge.png "PopupPlacementLeftScreenEdge")  
-Die Platzierung ist „Left“, und das Popup stößt auf den linken Bildschirmrand.  
+ ![Neuer Ausrichtungspunkt durch linken Bildschirmrand](./media/popup-placement-behavior/popup-placement-left-screen-edge.png "Platzierung ist \"Left\", und das Popup stößt auf den linken Rand des Bildschirms.")  
   
  Die folgende Abbildung zeigt, dass wenn <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> ist <xref:System.Windows.Controls.Primitives.PlacementMode.Right> und <xref:System.Windows.Controls.Primitives.Popup> auf den rechten Bildschirmrand stößt der Zielursprung die linke obere Ecke des Zielbereichs und der Ausrichtungspunkt auf der oberen rechten Ecke des der <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Neuer Ausrichtungspunkt durch rechten Bildschirmrand](./media/popupplacementrightscreenedge.png "PopupPlacementRightScreenEdge")  
-Die Platzierung ist „Right“, und das Popup stößt auf den rechten Bildschirmrand  
+ ![Neuer Ausrichtungspunkt durch rechten Bildschirmrand](./media/popup-placement-behavior/popup-placement-right-screen-edge.png "Platzierung ist \"Right\" und das Popup stößt auf den rechten Rand des Bildschirms.")  
+  
   
  Die folgende Abbildung zeigt, dass wenn <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> ist <xref:System.Windows.Controls.Primitives.PlacementMode.Top> und <xref:System.Windows.Controls.Primitives.Popup> auf den oberen Bildschirmrand stößt der Zielursprung die linke obere Ecke des Zielbereichs und der Ausrichtungspunkt auf der linken oberen Ecke des der <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Neuer Ausrichtungspunkt an oberer Bildschirmkante](./media/popupplacementtopscreenedge.png "PopupPlacementTopScreenEdge")  
-Die Platzierung ist „Top“, und das Popup stößt auf den oberen Bildschirmrand  
+ ![Neuer Ausrichtungspunkt an oberer Bildschirmkante](./media/popup-placement-behavior/popup-placement-top-screen-edge.png "Platzierung ist \"Top\", und das Popup stößt auf den oberen Rand des Bildschirms.")  
   
  Die folgende Abbildung zeigt, dass wenn <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> ist <xref:System.Windows.Controls.Primitives.PlacementMode.Mouse> und <xref:System.Windows.Controls.Primitives.Popup> auf den unteren Bildschirmrand trifft der Zielursprung wird von der linken oberen Ecke des Zielbereichs (die Grenzen des Mauszeigers) und der popupausrichtungspunkt die linke obere Ecke der ist die <xref:System.Windows.Controls.Primitives.Popup>.  
   
- ![Neuer Ausrichtungspunkt durch Maus in der Nähe des Bildschirmrands](./media/popupplacementmousescreenedge.png "PopupPlacementMouseScreenEdge")  
-Die Platzierung ist „Mouse“, und das Popup stößt auf den unteren Rand des Bildschirms.  
+ ![Neuer Ausrichtungspunkt durch Maus in der Nähe des Bildschirmrands](./media/popup-placement-behavior/popup-placement-mouse-screen-edge.png "Platzierung wird die Maus und das Popup stößt auf den unteren Rand des Bildschirms.")    
   
 ### <a name="customizing-popup-placement"></a>Anpassen der Popupplatzierung  
  Sie können die Ausrichtungspunkt für das Ziel Zielursprung und den popupausrichtungspunkt anpassen, indem Sie die Einstellung der <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> Eigenschaft <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>. Definieren Sie dann eine <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> Delegat, der einen Satz von möglichen Platzierungspunkten und Primärachsen (sortiert nach Präferenz) für zurückgibt der <xref:System.Windows.Controls.Primitives.Popup>. Der Punkt, der den größten Teil zeigt die <xref:System.Windows.Controls.Primitives.Popup> ausgewählt ist.  Die Position der <xref:System.Windows.Controls.Primitives.Popup> automatisch angepasst wird, wenn die <xref:System.Windows.Controls.Primitives.Popup> wird ausgeblendet, indem Sie den Rand des Bildschirms. Ein Beispiel finden Sie unter [Angeben einer benutzerdefinierten Popupposition](how-to-specify-a-custom-popup-position.md).  

@@ -2,12 +2,12 @@
 title: Erstellen eines Workflowdiensts mit langer Ausführungszeit
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: b3c5cd8a64f32a199932a40ed2d94b0a545b0dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fe1ad70db6c788a304d9099fb2f35a4d89db489
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585401"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679436"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Erstellen eines Workflowdiensts mit langer Ausführungszeit
 In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit erstellt wird. Workflowdienste mit langer Laufzeit können über einen sehr großen Zeitraum hinweg ausgeführt werden. Währenddessen kann der Workflow in den Leerlauf wechseln und auf weitere Informationen warten. In diesem Fall wird der Workflow in einer SQL-Datenbank beibehalten und aus dem Arbeitsspeicher entfernt. Wenn weitere Informationen für die Workflowinstanz verfügbar sind, wird diese wieder in den Arbeitsspeicher geladen, und die Ausführung wird fortgesetzt.  In diesem Szenario implementieren Sie ein stark vereinfachtes Bestellsystem.  Zunächst wird eine Nachricht vom Client an den Workflow gesendet, um die Bestellung zu beginnen. Die Bestell-ID wird an den Client zurückgegeben. Der Workflowdienst wartet nun auf eine weitere Nachricht vom Client, wechselt in den Leerlauf und wird in der SQL-Datenbank beibehalten.  Wenn die nächste Nachricht vom Client mit der Bestellung eines Artikels empfangen wird, wird der Workflowdienst wieder in den Arbeitsspeicher geladen, und die Bestellung wird abschließend bearbeitet. In diesem Codebeispiel wird eine Zeichenfolge zurückgegeben, die angibt, dass der Artikel der Bestellung hinzugefügt wurde. Das Codebeispiel ist nicht als reale Anwendung der Technologie gedacht. Es soll vielmehr auf einfache Weise einen Workflowdienst mit langer Laufzeit veranschaulichen. In diesem Thema wird davon ausgegangen, dass Sie wissen, wie Visual Studio 2012-Projekte und Projektmappen zu erstellen.
@@ -45,11 +45,11 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
 
     1.  Klicken Sie unter **Startaktion** wählen **bestimmte Seite** , und geben Sie `Service1.xamlx`.
 
-         ![Workflow-Webeigenschaften](../../../../docs/framework/wcf/feature-details/media/startaction.png "StartAction")
+         ![Workflow-Webeigenschaften](./media/creating-a-long-running-workflow-service/start-action-specific-page-option.png "im Web gehosteten Workflow-Dienst - Option für bestimmte Seite erstellen")
 
     2.  Klicken Sie unter **Server** wählen **lokalen IIS-Webserver verwenden**.
 
-         ![Lokale Webservereinstellungen](../../../../docs/framework/wcf/feature-details/media/uselocalwebserver.png "UseLocalWebServer")
+         ![Lokale Webservereinstellungen](./media/creating-a-long-running-workflow-service/use-local-web-server.png "erstellen Sie im Web gehosteten Workflow-Dienst - Option des lokalen IIS-Webserver verwenden")
 
         > [!WARNING]
         >  Sie müssen Visual Studio 2012 ausführen, im Administratormodus für diese Einstellung vorzunehmen.
@@ -63,55 +63,55 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
     > [!NOTE]
     >  Wenn CorrelationHandle nicht in der Dropdown-Liste der Variablentyp ist, wählen Sie **nach Typen suchen** aus der Dropdownliste aus. Geben Sie CorrelationHandle im der **Typnamen** Feld, wählen Sie CorrelationHandle aus dem Listenfeld aus, und klicken Sie auf **OK**.
 
-     ![Fügen Sie Variablen](../../../../docs/framework/wcf/feature-details/media/addvariables.gif "AddVariables")
+     ![Fügen Sie Variablen](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "Variablen an die Aktivität sequenzieller Dienst hinzufügen.")
 
 6.  Drag & drop eine **ReceiveAndSendReply** Aktivitätsvorlage in der **sequenzieller Dienst** Aktivität. Diese Gruppe von Aktivitäten empfängt eine Nachricht von einem Client und sendet eine Antwort.
 
     1.  Wählen Sie die **Receive** Aktivität, und legen die Eigenschaften, die in der folgenden Abbildung hervorgehoben.
 
-         ![Set Receive-Aktivitätseigenschaften](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")
+         ![Legen Sie Eigenschaften der Aktivität](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "die Receive-Aktivitätseigenschaften festgelegt.")
 
          Mit der DisplayName-Eigenschaft wird der angezeigte Name für die Receive-Aktivität im Designer festgelegt. Mit der ServiceContractName-Eigenschaft und der OperationName-Eigenschaft wird der Name des Dienstvertrags und des Vorgangs angegeben, die von der Receive-Aktivität implementiert werden. Weitere Informationen zur Verwendung von Verträgen in Workflowdiensten finden Sie unter [mithilfe von Verträgen im Workflow](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).
 
     2.  Klicken Sie auf die **definieren...**  -link in der **ReceiveStartOrder** Aktivität und Festlegen der Eigenschaften, die in der folgenden Abbildung dargestellt.  Beachten Sie, dass die **Parameter** Optionsfeld ausgewählt ist, einen Parameter namens `p_customerName` gebunden ist, um die `customerName` Variable. Konfiguriert die **Receive** Aktivität, um einige Daten empfangen und diese Daten auf lokale Variablen zu binden.
 
-         ![Festlegen der Daten, die von der Receive-Aktivität empfangenen](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")
+         ![Festlegen der Daten, die von der Receive-Aktivität empfangenen](./media/creating-a-long-running-workflow-service/set-properties-for-receive-content.png "legen die Eigenschaften für die von der Receive-Aktivität empfangenen Daten.")
 
     3.  Wählen Sie die **SendReplyToReceive** Aktivität, und legen die hervorgehobene Eigenschaft, die in der folgenden Abbildung dargestellt.
 
-         ![Festlegen der Eigenschaften der SendReply-Aktivität](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")
+         ![Festlegen der Eigenschaften der SendReply-Aktivität](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "SetReplyProperties")
 
     4.  Klicken Sie auf die **definieren...**  -link in der **SendReplyToStartOrder** Aktivität und Festlegen der Eigenschaften, die in der folgenden Abbildung dargestellt. Beachten Sie, dass die **Parameter** Optionsfeld ausgewählt ist und der Parameter `p_orderId` gebunden ist, um die `orderId` Variable. Mit dieser Einstellung wird festgelegt, dass von der SendReplyToStartOrder-Aktivität ein Wert vom Typ Zeichenfolge an den Aufrufer zurückgegeben wird.
 
-         ![Konfigurieren der SendReply-aktivitätsinhaltsdaten](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")
+         ![Konfigurieren der SendReply-aktivitätsinhaltsdaten](./media/creating-a-long-running-workflow-service/setreplycontent-for-sendreplytostartorder-activity.png "Konfigurieren der Einstellung für SetReplyToStartOrder-Aktivität.")
 
     5.  Drag & drop eine zuweisungsaktivität zwischen der **Receive** und **"SendReply"** Aktivitäten und die Eigenschaften festlegen, wie in der folgenden Abbildung gezeigt:
 
-         ![Hinzufügen einer zuweisungsaktivität](../../../../docs/framework/wcf/feature-details/media/addassign.png "AddAssign")
+         ![Hinzufügen einer zuweisungsaktivität](./media/creating-a-long-running-workflow-service/add-an-assign-activity.png "hinzufügen eine zuweisungsaktivität.")
 
          Dadurch wird eine neue Bestell-ID erstellt, und der Wert wird in der orderId-Variablen platziert.
 
     6.  Wählen Sie die **ReplyToStartOrder** Aktivität. Klicken Sie im Eigenschaftenfenster auf die Schaltfläche mit den Auslassungspunkten, für die **CorrelationInitializers**. Wählen Sie die **Initialisierer hinzufügen** verknüpfen, geben Sie `orderIdHandle` im initialisierertextfeld ein, wählen Sie abfragekorrelationsinitialisierer für den Korrelationstyp, und wählen Sie im Dropdownfeld XPATH-Abfragen "P_orderId". Diese Einstellungen sind in der folgenden Abbildung dargestellt. Klicken Sie auf **OK**.  Dadurch wird eine Korrelation zwischen dem Client und dieser Instanz des Workflowdiensts initialisiert. Wenn eine Nachricht mit dieser Bestell-ID empfangen wird, wird sie an diese Instanz des Workflowdiensts weitergeleitet.
 
-         ![Hinzufügen eines korrelationsinitialisierers](../../../../docs/framework/wcf/feature-details/media/addcorrelationinitializers.png "AddCorrelationInitializers")
+         ![Hinzufügen eines korrelationsinitialisierers](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "hinzufügen ein korrelationsinitialisierers.")
 
 7.  Drag & drop ein weiteres **ReceiveAndSendReply** Aktivität bis zum Ende des Workflows (außerhalb der **Sequenz** , enthält die erste **Receive** und  **"SendReply"** Aktivitäten). Dadurch wird die zweite Meldung empfangen, die vom Client gesendet wurde, und beantwortet.
 
     1.  Wählen Sie die **Sequenz** , enthält die neu hinzugefügte **Receive** und **"SendReply"** Aktivitäten, und klicken Sie auf die **Variablen** Schaltfläche. Fügen Sie die in der folgenden Abbildung hervorgehobene Variable hinzu:
 
-         ![Hinzufügen neuer Variablen](../../../../docs/framework/wcf/feature-details/media/addorderitemidvariable.png "AddOrderItemIdVariable")
+         ![Hinzufügen neuer Variablen](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "fügen Sie die Element-ID-Variable.")
 
     2.  Wählen Sie die **Receive** Aktivität und Festlegen der Eigenschaften, die in der folgenden Abbildung gezeigt:
 
-         ![Legen Sie die Receive-Aktivitätseigenschaften](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")
+         ![Legen Sie die Receive-Aktivitätseigenschaften](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "legen Sie die Eigenschaften der Receive-Aktivitäten.")
 
     3.  Klicken Sie auf die **definieren...**  -link in der **ReceiveAddItem** Aktivität und fügen Sie die Parameter in der folgenden Abbildung gezeigt: Dadurch wird die Receive-Aktivität akzeptiert zwei Parameter: die Bestell-ID und die ID des zu sortierenden Elements konfiguriert.
 
-         ![Angeben von Parametern für die zweite empfangen](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")
+         ![Angeben von Parametern für den zweiten Empfang](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "konfigurieren Sie die Receive-Aktivität, um zwei Parameter erhalten.")
 
     4.  Klicken Sie auf die **CorrelateOn** mit den Auslassungszeichen und geben Sie `orderIdHandle`. Klicken Sie unter **XPath-Abfragen**, klicken Sie auf den Dropdownpfeil, und wählen Sie `p_orderId`. Dadurch wird die Korrelation für die zweite Receive-Aktivität konfiguriert. Weitere Informationen zu Korrelationen finden Sie unter [Korrelation](../../../../docs/framework/wcf/feature-details/correlation.md).
 
-         ![Festlegen der Eigenschaft "CorrelatesOn"](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")
+         ![Festlegen der Eigenschaft "CorrelatesOn"](./media/creating-a-long-running-workflow-service/correlateson-setting.png "legen Sie die Eigenschaft \"CorrelatesOn\".")
 
     5.  Drag & drop eine **Wenn** Aktivität unmittelbar nach der **ReceiveAddItem** Aktivität. Diese Aktivität verhält sich analog zu einer Anweisung.
 
@@ -119,17 +119,17 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
 
         2.  Drag & drop eine **zuweisen** Aktivität in der **klicken Sie dann** und eine andere in der **Else** Abschnitt legen Sie die Eigenschaften von der **zuweisen** Aktivitäten, wie in der folgenden Abbildung dargestellt.
 
-             ![Erneute Zuordnen des Ergebnisses des Dienstaufrufs](../../../../docs/framework/wcf/feature-details/media/resultassign.png "ResultAssign")
+             ![Erneute Zuordnen des Ergebnisses des Dienstaufrufs](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "weisen Sie das Ergebnis des Dienstaufrufs.")
 
              Wenn die Bedingung `true` der **dann** Abschnitt ausgeführt wird. Wenn die Bedingung `false` der **Else** Abschnitt ausgeführt wird.
 
         3.  Wählen Sie die **SendReplyToReceive** Aktivität, und legen die **"DisplayName"** Eigenschaft, die in der folgenden Abbildung dargestellt.
 
-             ![Festlegen der SendReply-Aktivitätseigenschaften](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")
+             ![Festlegen der SendReply-Aktivitätseigenschaften](./media/creating-a-long-running-workflow-service/send-reply-activity-property.png "legen Sie die Eigenschaft der SendReply-Aktivität.")
 
         4.  Klicken Sie auf die **definieren...**  -link in der **SetReplyToAddItem** Aktivität und konfigurieren Sie es in der folgenden Abbildung dargestellt. Konfiguriert die **SendReplyToAddItem** Aktivität zum Zurückgeben des Werts in der `orderResult` Variable.
 
-             ![Einrichten der Datenbindung für die SendReply-Aktivität](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")
+             ![Einrichten der Datenbindung für die SendReply-Aktivität](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "-Eigenschaft für SendReplyToAddItem Aktivität festgelegt.")
 
 8.  Öffnen Sie die Datei "Web.config", und fügen Sie die folgenden Elemente in der \<Verhalten > Abschnitt aus, um die Workflowpersistenz zu aktivieren.
 

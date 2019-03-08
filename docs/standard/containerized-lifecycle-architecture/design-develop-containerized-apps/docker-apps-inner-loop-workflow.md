@@ -4,16 +4,16 @@ description: Erfahren Sie, die "innere Schleife"-Workflow für die Entwicklung v
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1134ff439235609db840c85a1e67bc9fe4ccec84
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835680"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676667"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Innere Schleife Entwicklungsworkflow für Docker-apps
 
-Vor dem Auslösen des äußeren Schleife Workflows umfasst den gesamten DevOps-Zyklus, es beginnt alles auf dem Computer jedes Entwicklers, die app selbst zu codieren, verwenden ihren bevorzugten Sprachen oder Plattformen und diese lokal testen (Abbildung 4-21). In jedem Fall, müssen aber einen wichtigen Punkt gemeinsam, unabhängig davon, welche Sprache, Framework oder Plattformen, die Sie auswählen. In diesem bestimmten Workflow immer entwickeln und Testen des Docker-Containern, aber lokal.
+Vor dem Auslösen des äußeren Schleife Workflows umfasst den gesamten DevOps-Zyklus, es beginnt alles auf dem Computer jedes Entwicklers, die app selbst zu codieren, verwenden ihren bevorzugten Sprachen oder Plattformen und diese lokal testen (Abbildung 4-21). In jedem Fall müssen Sie aber einen wichtigen Punkt gemeinsam, unabhängig davon, welche Sprache, Framework oder Plattformen, die Sie auswählen. In diesem bestimmten Workflow immer entwickeln und Testen des Docker-Containern, aber lokal.
 
 ![Schritt 1: Code, Ausführungs-und Debuggen](./media/image18.png)
 
@@ -43,7 +43,7 @@ Abbildung 4-22 zeigt die grundlegenden Schritte, die Sie in der Regel beim Erste
 
 ### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>Schritt 1: Beginnen mit dem Programmieren in Visual Studio Code, und erstellen Sie Ihrer ersten app/des Diensts
 
-Die Möglichkeit, die Sie bei der Entwicklung Ihrer Anwendung ist ähnlich wie Sie es ohne Docker. Der Unterschied ist, die beim Entwickeln, bereitstellen und Testen Ihre Anwendung oder Dienste, die in Docker-Containern platziert, die in Ihrer lokalen Umgebung (z.B. eine Linux-VM oder Windows) ausgeführt.
+Die Möglichkeit, die Sie bei der Entwicklung Ihrer Anwendung ist ähnlich wie Sie es ohne Docker. Der Unterschied besteht darin, dass beim Entwickeln, sind Sie bereitstellen und Testen Ihre Anwendung oder Dienste, die in Docker-Containern platziert, die in Ihrer lokalen Umgebung (z.B. eine Linux-VM oder Windows) ausgeführt.
 
 **Das Einrichten Ihrer lokalen Umgebung**
 
@@ -97,7 +97,7 @@ Die `DockerFile` wird häufig im Stammordner Ihrer app oder Ihres Diensts und en
 
 > [!TIP]
 >
-> Können Sie die Docker-Erweiterung Anleitung für die Verwendung der `Dockerfile` und `docker-compose.yml` Dateien im Zusammenhang mit der Docker-Container. Schließlich werden Sie wahrscheinlich diese Arten von Dateien ohne dieses Tool schreiben, aber mithilfe der Docker-Erweiterung ist ein guter Ausgangspunkt, der mit der Lernprozess beschleunigt wird.
+> Können Sie die Docker-Erweiterung Anleitung für die Verwendung der `Dockerfile` und `docker-compose.yml` Dateien im Zusammenhang mit der Docker-Container. Schließlich schreiben Sie wahrscheinlich diese Arten von Dateien ohne dieses Tool, aber mit der Docker-Erweiterung ist ein guter Ausgangspunkt, der mit der Lernprozess beschleunigt wird.
 
 In Abbildung 4-24, können Sie sehen, wie ein Docker-compose-Datei wird mithilfe der Docker-Erweiterung für Visual Studio Code hinzugefügt.
 
@@ -149,7 +149,7 @@ Abrufen der [Microsoft/Aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore
 
 ***Ihr Basisimage von Grund auf neu erstellen***
 
-Sie können Ihre eigenen Docker-Basisimage von Grund auf neu erstellen, wie dies unter [Artikel](https://docs.docker.com/engine/userguide/eng-image/baseimages/) von Docker. Dieses Szenario ist wahrscheinlich nicht für Sie am besten geeignet, wenn Sie gerade erst mit Docker beginnen, aber wenn Sie die bestimmten Bits Ihres eigenen Basisimages festlegen möchten, können Sie dies tun.
+Sie können Ihre eigenen Docker-Basisimage von Grund auf neu erstellen, wie dies unter [Artikel](https://docs.docker.com/engine/userguide/eng-image/baseimages/) von Docker. Dieses Szenario ist wahrscheinlich nicht für Sie am besten geeignet, wenn Sie gerade mit Docker beginnen, aber wenn Sie die bestimmten Bits Ihres eigenen Basisimages festlegen möchten, können Sie dies tun.
 
 ### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>Schritt 3: Erstellen Sie Ihre benutzerdefinierten Docker-Images, die Ihrem Dienst darin einbetten
 

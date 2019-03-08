@@ -4,12 +4,12 @@ description: Erfahren Sie, einige grundlegende Terminologie, die täglich verwen
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a7f0106eed81c28634a079ce61f48d7d56f6ffd2
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584199"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677173"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
@@ -23,7 +23,7 @@ In diesem Abschnitt werden die Begriffe und Definitionen aufgelistet, mit denen 
 
 **Container:** Eine Instanz eines Docker-Images. Ein Container stellt die Ausführung einer einzelnen Anwendung, eines Prozesses oder Diensts dar. Er besteht aus den Inhalten eines Docker-Images, einer Ausführungsumgebung und mehreren Standardanweisungen. Beim Skalieren eines Diensts erstellen Sie mehrere Instanzen eines Containers aus dem gleichen Image. Alternativ kann ein Batchauftrag mehrere Container aus dem gleichen Image erstellen und dabei verschiedene Parameter an jede Instanz übergeben.
 
-**Volumes:** Sie bieten ein Dateisystem mit Schreibzugriff, das vom Container verwendet werden kann. Da Images schreibgeschützt sind, die meisten Programme aber in das Dateisystem schreiben müssen, fügen Volumes eine beschreibbare Schicht oberhalb des Containerimages hinzu, so dass die Programme Zugriff auf ein beschreibbares Dateisystem haben. Das Programm hat keine Informationen darüber, dass es auf ein geschichtetes Dateisystem zugreift, es sieht nur das gewohnte Dateisystem. Volumes befinden sich auf dem Hostsystem und werden von Docker verwaltet.
+**Volumes:** Sie bieten ein Dateisystem mit Schreibzugriff, das vom Container verwendet werden kann. Da Images schreibgeschützt sind, die meisten Programme aber in das Dateisystem schreiben müssen, fügen Volumes eine beschreibbare Schicht oberhalb des Containerimages hinzu, so dass die Programme Zugriff auf ein beschreibbares Dateisystem haben. Das Programm weiß nicht, er greift auf ein überlappende Dateisystem, sondern nur das Dateisystem wie gewohnt. Volumes befinden sich auf dem Hostsystem und werden von Docker verwaltet.
 
 **Tag:** Eine Markierung oder eine Bezeichnung, die Sie auf Images anwenden können, damit verschiedene Images oder Versionen desselben Images (abhängig von der Versionsnummer oder der Zielumgebung) identifiziert werden können.
 
@@ -37,15 +37,15 @@ In diesem Abschnitt werden die Begriffe und Definitionen aufgelistet, mit denen 
 
 **Docker-Hub:** Eine öffentliche Registrierung zum Hochladen von und Arbeiten mit Images. Docker-Hub bietet Docker-Imagehosts, öffentliche oder private Registrierungen, Buildtrigger, Web-Hooks und Integration mit GitHub und Bitbucket.
 
-**Azure Container Registry:** Eine öffentliche Ressource zur Arbeit mit Docker-Images und deren Komponenten in Azure. Dies stellt eine Registrierung in der Nähe Ihrer Bereitstellungen in Azure zur Verfügung. Sie erhalten somit Kontrolle über den Zugriff und können Ihre Azure Active Directory-Gruppen und -Berechtigungen verwenden.
+**Azure Container Registry:** Eine öffentliche Ressource zur Arbeit mit Docker-Images und deren Komponenten in Azure. Dies stellt eine Registrierung ist in der Nähe Ihrer Bereitstellungen in Azure und die Ihnen die Kontrolle über den Zugriff, wodurch es möglich ist, verwenden Sie Ihre Azure Active Directory-Gruppen und Berechtigungen.
 
-**Docker Trusted Registry (DTR):** Ein Docker-Registrierungsdienst (von Docker), der lokal installiert werden kann, sodass er innerhalb des Datencenters und Netzwerks des Unternehmens aktiv ist. Er ist praktisch für private Images, die innerhalb des Unternehmens verwaltet werden sollen. Docker Trusted Registry ist als Bestandteil im Produkt Docker Datacenter enthalten. Weitere Informationen finden Sie unter [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
+**Docker Trusted Registry (DTR):** Ein Docker-Registrierungsdienst (von Docker), der lokal installiert werden kann, sodass er innerhalb des Datencenters und Netzwerks des Unternehmens aktiv ist. Es ist praktisch für private Images, die in Ihrem Unternehmen verwaltet werden sollen. Docker Trusted Registry ist als Bestandteil im Produkt Docker Datacenter enthalten. Weitere Informationen finden Sie unter [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
 
 **Docker Community Edition (CE):** Entwicklungstools für Windows und macOS zum lokalen Erstellen, Ausführen und Testen von Containern. Docker CE für Windows bietet Entwicklungsumgebungen für Linux- und Windows-Container. Der Linux-Docker-Host auf Windows basiert auf einer [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization)-VM. Der Host für die Windows-Container basiert direkt auf Windows. Docker CE für Mac basiert auf dem Apple Hypervisor-Framework und dem [Xhyve-Hypervisor](https://github.com/mist64/xhyve), der eine Linux-Docker-Host-VM auf Mac OS X bereitstellt. Docker CE für Windows und für Mac ersetzt Docker Toolbox, das auf Oracle VirtualBox basiert.
 
 **Docker Enterprise Edition (EE):** Eine Version der Docker-Tools für Unternehmen für die Linux- und Windows-Entwicklung.
 
-**Compose:** Ein Befehlszeilentool und YAML-Dateiformat mit Metadaten zum Definieren und Ausführen von Anwendungen mit mehreren Container. Sie definieren eine einzelne Anwendung basierend auf mehreren Images mit einer oder mehreren .yml-Dateien, die Werte abhängig von der Umgebung überschreiben können. Nachdem Sie die Definitionen erstellt haben, können Sie die gesamte Anwendung mit mehreren Containern mit einem einzigen Befehl (docker-compose up) bereitstellen, der einen Container pro Image auf dem Docker-Host erstellt.
+**Compose:** Ein Befehlszeilentool und YAML-Dateiformat mit Metadaten zum Definieren und Ausführen von Anwendungen mit mehreren Container. Sie definieren eine einzelne Anwendung basierend auf mehreren Images mit einer oder mehreren .yml-Dateien, die Werte abhängig von der Umgebung überschreiben können. Nachdem Sie die Definitionen erstellt haben, können Sie die Anwendung völlig mit mehreren Containern mit einem einzigen Befehl bereitstellen (Docker-compose-einrichten), einen Container pro Image auf Docker-Host erstellt.
 
 **Cluster:** Eine Sammlung von zur Verfügung gestellten Docker-Hosts, als handele es sich um einen einzelnen, virtuellen Docker-Host, sodass die Anwendung mehrere Instanzen der Dienste skalieren kann, die auf mehrere Hosts im Cluster verteilt sind. Docker-Cluster können mit Kubernetes, Azure Service Fabric, Docker Swarm und Mesosphere DC/OS erstellt werden.
 

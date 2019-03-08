@@ -4,12 +4,12 @@ description: Erfahren Sie, die wichtige Rolle der Container, DevOps zu optimiere
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 752a678be7735f7ae962005e1d373993d1496753
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 4b40837bf2b74d801b9794c88e79eb03bcd72e95
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583731"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679098"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Container als Grundlage für die DevOps-Zusammenarbeit
 
@@ -33,7 +33,7 @@ Die beiden Teams sind über eine grundlegende Plattform (Docker-Containern) zusa
 
 Es gibt viele Gründe, die die Anzahl von Anwendungen in Containern in den kommenden Jahren steigern, und eine der aus diesen Gründen ist das Erstellen von Anwendungen, die auf Microservices basierenden.
 
-In den letzten 15 Jahren die Verwendung von Webdiensten wurde die Basis des Tausende von Anwendungen, und wahrscheinlich schon, nach ein paar Jahren, finden wir die gleiche Situation mit Microservice basierende Anwendungen, die auf Docker-Container ausgeführt wird.
+In den letzten 15 Jahren die Verwendung von Webdiensten wurde die Basis des Tausende von Anwendungen, und wahrscheinlich schon, nach ein paar Jahren wir finden die gleiche Situation mit Microservice basierende Anwendungen, die auf Docker-Container ausgeführt wird.
 
 Es lohnt sich außerdem zu erwähnen, dass Sie auch Docker-Container für monolithische Anwendungen verwenden können und Sie weiterhin die meisten Vorteile von Docker erhalten. Container werden nicht nur Microservices erstellen.
 
@@ -53,7 +53,7 @@ Diese Herausforderungen erstellen neue Anforderungen auf, wenn DevOps-Tools zu v
 
 - Wie können wir die Open-Source-Tools/Plattformen für Container in Microsoft Azure verwenden?
 
-Wenn Sie all diese Fragen beantworten können, werden Sie besser vorbereitet, verschieben Sie Ihre Anwendungen (apps vorhandenen oder neuen) Docker-Containern sein. 
+Wenn Sie all diese Fragen beantworten können, werden Sie besser vorbereitet, Ihre Anwendungen (apps vorhandenen oder neuen) Docker-Container verschieben können. 
 
 ## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Einführung in eine generische End-to-End-Docker-anwendungsworkflows des Lebenszyklus
 
@@ -63,11 +63,11 @@ Abbildung 2-2: Stellt einen ausführlicheren Workflow für einen Docker-Anwendun
 
 **Abbildung 2-2.** Allgemeiner Workflow für den Lebenszyklus des Docker-containeranwendungen
 
-Alles beginnt mit dem Entwickler, mit dem Schreiben von Code in den Workflow für die innere Schleife beginnt. Die innere Schleife-Phase ist, in dem Entwickler alles definieren, die vor dem Pushvorgang von Code im Code-Repository (z. B. ein Quellcodeverwaltungssystem wie z. B. Git) erfolgt. Nachdem sie ein Commit ausgeführt wird, löst das Repository Continuous Integration (CI) und den Rest des Workflows.
+Alles beginnt mit dem Entwickler, mit dem Schreiben von Code in den Workflow für die innere Schleife beginnt. Die innere Schleife-Phase ist, in dem Entwickler alles definieren, die vor dem Pushvorgang von Code im Code-Repository (z. B. ein Quellcodeverwaltungssystem wie z. B. Git) erfolgt. Nachdem sie hat sich verpflichtet, die Repository-Trigger Continuous Integration (CI) und den Rest des Workflows.
 
 Die innere Schleife besteht im Grunde typische Schritte wie "Code", "ausführen", "test" und "Debug" sowie die zusätzlichen Schritte erforderlich, direkt vor dem Ausführen der app lokal aus. Dies ist der Entwickler-Prozess zum Ausführen und Testen Sie die app als Docker-Container. Der Workflow für die innere Schleife wird in den Abschnitten erläutert werden.
 
-Einen Schritt zum zurückgeleitet Betrachten der End-to-End-Workflow, der DevOps-Workflow ist mehr als eine Technologie oder einen Satz von Tools: Es ist eine Haltung, die kulturelle Weiterentwicklung ist erforderlich. Es ist die Mitarbeiter, Prozesse und den entsprechenden Tools der Anwendungslebensdauer, schnellere und besser vorhersagbare vornehmen. Unternehmen, die einen Workflow in Containern in der Regel übernehmen umstrukturieren ihrer Organisationen zur Darstellung von Menschen und Prozesse, die den Containern Workflow entsprechen.
+Einen Schritt zum zurückgeleitet Betrachten der End-to-End-Workflow, der DevOps-Workflow ist mehr als eine Technologie oder einen Satz von Tools: Es ist eine Haltung, die kulturelle Weiterentwicklung ist erforderlich. Es handelt sich um Personen, Prozesse und den entsprechenden Tools der Anwendungslebensdauer, schnellere und besser vorhersagbare vornehmen. Unternehmen, die einen Workflow in Containern in der Regel übernehmen umstrukturieren ihrer Organisationen zur Darstellung von Menschen und Prozesse, die den Containern Workflow entsprechen.
 
 Eignen, DevOps, können Teams schneller zusammen reagieren auf Wettbewerbsdruck durch Ersetzen von fehleranfällige manuelle Prozesse durch Automatisierung, die verbesserte rückverfolgbarkeit und wiederholbare Workflows ausgeführt werden. Organisationen können auch eine effizientere Verwaltung von Umgebungen und Erkennen von kosteneinsparungen mit einer Kombination aus lokalen und Cloudressourcen sowie eng integrierte Tools.
 

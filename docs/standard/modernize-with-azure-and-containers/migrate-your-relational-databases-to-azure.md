@@ -4,12 +4,12 @@ description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153760"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677551"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrieren von relationalen Datenbanken in azure
 
@@ -49,7 +49,7 @@ Verwaltete Instanz in Azure SQL-Datenbank weist folgende Merkmale auf:
 
   - Native Sicherung und Wiederherstellung und des Protokollversands
 
-Beim Migrieren von vorhandenen dienstanwendungs-Datenbanken zu Azure SQL-Datenbank, bietet das Modell für verwaltete Instanzen mit diesen Funktionen nahezu 100 % der Vorteile von Paas für SQL Server. Verwaltete Instanz ist eine SQL Server-Umgebung, in dem Sie auf Instanzebene Funktionen weiterhin ohne Entwurf der Anwendung ändern zu müssen.
+Beim Migrieren von vorhandenen dienstanwendungs-Datenbanken zu Azure SQL-Datenbank, bietet das Modell für verwaltete Instanzen mit diesen Funktionen nahezu 100 % der Vorteile von PaaS für SQL Server. Verwaltete Instanz ist eine SQL Server-Umgebung, in dem Sie auf Instanzebene Funktionen weiterhin ohne Entwurf der Anwendung ändern zu müssen.
 
 Verwaltete Instanz ist wahrscheinlich die beste Lösung für Unternehmen, die derzeit verwendeten SQL Server und die Flexibilität bei der die Netzwerksicherheit in der Cloud erfordern. Es ist ein virtuelles privates Netzwerk für Ihre SQL-Datenbanken.
 
@@ -114,7 +114,7 @@ Informationen zum Migrieren von Datenbanken mithilfe von Azure Database Migratio
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
-- **SQL Server-Datenbankmigration zu SQL-Datenbank in der cloud**
+- **Migrieren einer SQL Server-Datenbank zu Azure SQL-Datenbank in der Cloud**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
@@ -126,6 +126,6 @@ Informationen zum Migrieren von Datenbanken mithilfe von Azure Database Migratio
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
->[!div class="step-by-step"]
->[Zurück](lift-and-shift-existing-apps-azure-iaas.md)
->[Weiter](modernize-existing-apps-to-cloud-optimized/index.md)
+> [!div class="step-by-step"]
+> [Zurück](lift-and-shift-existing-apps-azure-iaas.md)
+> [Weiter](modernize-existing-apps-to-cloud-optimized/index.md)

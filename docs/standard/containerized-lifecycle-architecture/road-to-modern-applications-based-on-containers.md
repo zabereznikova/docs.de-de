@@ -4,22 +4,22 @@ description: Beachten Sie, dass Docker, Container und einer Microservices-Archit
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: be7799fe0ac3c22d0ffda5bc4b7e5e42f956a15e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442424"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674431"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>Weg zur modernen auf Containern basierenden Anwendungen
 
-Sie sind wahrscheinlich dieses Buch lesen, da Sie die Entwicklung neuer Anwendungen planen, und/oder Sie der Auswirkungen Bewerten der Verwendung von Docker, Container und neuen Ansätzen wie Microservices in Ihrem Unternehmen.
+Lesen Sie dieses Buch wahrscheinlich, da Sie die Entwicklung neuer Anwendungen planen oder haben Sie die Auswirkungen der Verwendung von Docker, Container und neuen Ansätzen wie Microservices in Ihrem Unternehmen bewerten.
 
 Die Übernahme der neuen Entwicklungsmustern muss mit Vorsicht ausgeführt werden vor dem Starten eines Projekts, um die Auswirkungen auf Ihre Entwicklungsteams, Ihr Budget und Ihre Infrastruktur zu bewerten.
 
 Microsoft arbeitet seit in einen umfassenden Leitfaden, Beispielanwendungen und eine Sammlung von e-Books, mit die Sie informierte Entscheidungen treffen und Ihr Team über eine erfolgreiche Entwicklung, Bereitstellung und Vorgänge Ihrer neuen Anwendungen führen können.
 
-Dieses Buch gehört zu einem Microsoft-Suite von Leitfäden, in denen umfassen viele der Anforderungen und Herausforderungen bei der Entwicklung neuer moderne Anwendungen, die auf Containern basierenden herausstellen.
+Dieses Buch gehört zu einem Microsoft-Suite von Leitfäden, in denen behandelt viele der Anforderungen und Herausforderungen, die Sie während der Prozess der Entwicklung neuer, moderner auf Containern basierenden Anwendungen zu tun haben.
 
 Sie können zusätzliche Microsoft-e-Books im Zusammenhang mit der Docker-Container in der folgenden Liste finden:
 

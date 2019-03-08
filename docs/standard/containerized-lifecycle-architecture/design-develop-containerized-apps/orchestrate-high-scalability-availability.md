@@ -4,16 +4,16 @@ description: Produktionsanwendungen müssen bereitgestellt und verwaltet mit orc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e1ff3282c1fdf952177a1faa957398c33045a01c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836161"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679046"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 
-Nutzung von orchestratoren für Anwendungen ist wichtig, wenn Ihre Anwendung auf Microservices beruht oder über mehrere Container verteilt ist. Wie bereits in einem vorherigen Artikel erwähnt, ist jeder Microservice Besitzer seines Modells und seiner Daten, damit er von der Entwicklung und Bereitstellung unabhängig ist. Selbst wenn Sie aber eine herkömmliche Anwendung besitzen, die aus mehreren Diensten besteht (z.B. im Fall einer SOA-Anwendung), sind für eine einzelne Geschäftsanwendung mehrere Container oder Dienste vorhanden, die als verteiltes System bereitgestellt werden müssen. Derartige Systeme lassen sich nur schwer horizontal hochskalieren und verwalten. Wenn Sie also eine skalierbare Anwendung mit mehreren Containern auf Produktionsniveau bereitstellen möchten, ist die Nutzung eines Orchestrators unumgänglich.
+Nutzung von orchestratoren für Anwendungen ist wichtig, wenn Ihre Anwendung auf Microservices beruht oder über mehrere Container verteilt ist. Wie bereits in einem vorherigen Artikel erwähnt, ist jeder Microservice Besitzer seines Modells und seiner Daten, damit er von der Entwicklung und Bereitstellung unabhängig ist. Auch wenn Sie eine herkömmliche Anwendung aus mehreren Diensten besitzen (z.B. eine SOA-Anwendung), besteht eine einzelne Geschäftsanwendung aus mehreren Containern oder Diensten, die als verteiltes System bereitgestellt werden müssen. Derartige Systeme lassen sich nur schwer horizontal hochskalieren und verwalten. Wenn Sie also eine skalierbare Anwendung mit mehreren Containern auf Produktionsniveau bereitstellen möchten, ist die Nutzung eines Orchestrators unumgänglich.
 
 Abbildung 4-6: veranschaulicht die Bereitstellung in einem Cluster eine Anwendung, bestehend aus mehreren Microservices (Container).
 
@@ -27,7 +27,7 @@ Die Docker-Befehlszeilenschnittstelle (CLI) erfüllt die Anforderungen der Verwa
 
 Um die Verwaltung von einzelnen Containern oder einfach zusammengesetzten Anwendungen und Verschiebung in Richtung größere unternehmensanwendungen mit Microservices hinausgehen zu können, müssen Sie auf die Orchestrierung und ein clustering von Plattformen aktivieren.
 
-Von Architektur und Entwicklung der Sicht einer Wenn Sie die Erstellung, Großunternehmen, Microservices basieren, sind unbedingt Anwendungen zu verstehen, die folgenden Plattformen und Produkten, die erweiterte Szenarien zu unterstützen:
+Von Architektur und Entwicklung der Sicht einer Wenn Sie die Schritte, Großunternehmen, Microservices basieren, sind unbedingt Anwendungen, um zu verstehen, die folgenden Plattformen und Produkten, die erweiterte Szenarien zu unterstützen:
 
 - **Cluster und Orchestratoren**. Wenn Sie Anwendungen über mehrere Docker-Hosts hinweg skalieren müssen, unbedingt wie z. B. mit einer großen Microservices basierende Anwendung, um alle diese Hosts abstrahiert die Komplexität der zugrunde liegenden Plattform als einzelnen Cluster verwalten zu können. Dafür sorgen die Containercluster und Orchestratoren. Azure Service Fabric und Kubernetes sind Beispiele für Orchestratoren. Kubernetes ist in Azure über den Azure Kubernetes Service verfügbar.
 
@@ -56,7 +56,7 @@ AKS vereinfacht die Erstellung, Konfiguration und Verwaltung eines Clusters mit 
 
 Azure Kubernetes Service optimiert die Azure-spezifische Konfiguration bekannter Open Source-Clusteringtools und -technologien von Docker. Dadurch erhalten Sie eine offene Lösung, die die Portabilität der Container und der Anwendungskonfiguration garantiert. Sie müssen nur die Größe, die Anzahl von Hosts und die Orchestratortools auswählen. Alles Weitere erledigt AKS.
 
-![Kubernetes-Clusterstruktur: Es gibt eine master-Knoten, der verarbeitet werden, DNS-"," Scheduler "," Proxy "" usw. und mehrere workerknoten, die die Container hostet.](media/image36.png)
+![Kubernetes-Clusterstruktur: Es gibt einen Masterknoten, der DNS, Planer, Proxy usw. verarbeitet, sowie mehrere Workerknoten zum Hosten der Container.](media/image36.png)
 
 **Abbildung 4-7**. Vereinfachte Struktur und Topologie von Kubernetes-Clustern
 
@@ -74,13 +74,13 @@ In der Entwicklungsumgebung, [Docker im Juli 2018 angekündigt](https://blog.doc
 
 Mithilfe von AKS zunächst stellen Sie einen AKS-Cluster im Azure-Portal oder mithilfe der Befehlszeilenschnittstelle bereit. Weitere Informationen zum Bereitstellen eines Azure Container Service-Clusters finden Sie unter [Bereitstellen eines Azure Kubernetes Service-Clusters (AKS)](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
-Für die durch AKS standardmäßig installierte Software fallen keine Gebühren an. Alle Standardoptionen werden mit Open Source-Software implementiert. AKS ist für viele virtuelle Computer in Azure verfügbar. Sie zahlen nur für die von Ihnen ausgewählten Compute-Instanzen und den Verbrauch von Speicher- und Netzwerkressourcen, die im Zusammenhang mit der zugrunde liegenden Infrastruktur stehen. Für AKS selbst fallen keine zusätzlichen Gebühren an.
+Für die durch AKS standardmäßig installierte Software fallen keine Gebühren an. Alle Standardoptionen werden mit Open Source-Software implementiert. AKS ist für viele virtuelle Computer in Azure verfügbar. Sie zahlen nur für die von Ihnen ausgewählten Compute-Instanzen und den Verbrauch von Ressourcen der zugrunde liegenden Infrastruktur, wie z.B. Netzwerkfunktionen und Speicher. Für AKS selbst fallen keine zusätzlichen Gebühren an.
 
 Für weitere Implementierung der Informationen über die Bereitstellung in Kubernetes basierend auf `kubectl` und ursprünglichen `.yaml` -Dateien finden Sie im Beitrag [eShopOnContainers in AKS (Azure Kubernetes Service) einrichten](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service)).
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>Mit Helm-Diagrammen in Kubernetes-Cluster bereitstellen
 
-Wenn Sie eine Anwendung in einem Kubernetes-Cluster bereitstellen möchten, können Sie die ursprüngliche `kubectl.exe` CLI-Tool, mit Dateien für die Bereitstellung basierend auf der das systemeigene Format (`.yaml` Dateien), wie bereits im vorherigen Abschnitt erwähnt. Beachten Sie jedoch bei komplexeren Kubernetes-Anwendungen wie z. B. Wenn Sie komplexe auf microservices basierenden Anwendungen bereitstellen, es wird empfohlen, verwenden Sie [Helm](https://helm.sh/).
+Wenn Sie eine Anwendung in einem Kubernetes-Cluster bereitstellen möchten, können Sie die ursprüngliche `kubectl.exe` CLI-Tool, mit Dateien für die Bereitstellung basierend auf der das systemeigene Format (`.yaml` Dateien), wie bereits im vorherigen Abschnitt erwähnt. Für komplexere Kubernetes-Anwendungen, z.B. die Bereitstellung komplexer microservicebasierter Anwendungen, empfiehlt sich die Verwendung von [Helm](https://helm.sh/).
 
 Helm-Diagrammen können Sie die Version, Installation, Freigabe, Upgrade oder ein Rollback der komplexesten Kubernetes-Anwendung definieren.
 
@@ -137,7 +137,7 @@ Service Fabric stellt zwei große Bereiche bereit, mit deren Hilfe Anwendungen a
 
 Service Fabric ist im Hinblick auf die Erstellung von Diensten unabhängig, sodass Sie jede beliebige Technologie nutzen können. Die Plattform stellt jedoch integrierte APIs für die Programmierung bereit, die die Erstellung von Microservices erleichtern.
 
-Wie in Abbildung 4-10 dargestellt, können Sie erstellen und Ausführen von Microservices in Service Fabric als einfache Prozesse oder als Docker-Container. Sie können auch containerbasierte Microservices mit prozessbasierten Microservices in einem Service Fabric-Cluster mischen.
+Wie in Abbildung 4-10 dargestellt, können Sie erstellen und Ausführen von Microservices in Service Fabric als einfache Prozesse oder als Docker-Container. Sie können auch containerbasierte Microservices mit prozessbasierten Microservices in einem Service Fabric-Cluster kombinieren.
 
 ![Vergleich von Azure Service Fabric-Cluster: Microservices als Prozesse, in dem ein Prozess für jeden Microservice auf jedem Knoten ausgeführt wird; Microservices als Container, die auf jedem Knoten, in denen mit mehreren Containern, Docker wird ein Container pro Microservice.](./media/azure-service-fabric-cluster-types.png)
 
@@ -149,7 +149,7 @@ Aktuelle Informationen zur Unterstützung von Containern in Azure Service Fabric
 
 Service Fabric ist ein gutes Beispiel für eine Plattform, in dem Sie eine andere logische Architektur (unternehmensmicroservices oder Kontextgrenzen) als die physische Implementierung definieren können. Wenn Sie implementieren, z. B. [zustandsbehaftete zuverlässige Dienste](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) in [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview), Einführung hierzu finden Sie im nächsten Abschnitt, "[Zustandslose und zustandsbehaftete Microservices](#stateless-versus-stateful-microservices), "Sie haben ein unternehmensmicroservicekonzept mit mehreren physischen Diensten.
 
-Wie in Abbildung 4-10 sowie bei Betrachtung aus der Perspektive eines logischen microservices bzw. unternehmensmicroservices bei der Implementierung einer Service Fabric Stateful Reliable Services dargestellt müssen Sie in der Regel zwei Ebenen der Dienste zu implementieren. Bei der ersten handelt es sich um den zustandsbehafteten zuverlässigen Back-End-Dienst für die Verarbeitung verschiedener Partitionen (jede Partition stellt einen zustandsbehafteten Dienst dar). Bei der zweiten handelt es sich um den Front-End- oder Gatewaydienst für das Routing und die Datenaggregation in verschiedenen Partitionen oder Instanzen von zustandsbehafteten Diensten. Dieser Gatewaydienst verarbeitet auch die clientseitige Kommunikation mit Wiederholungsschleifen, die auf den Back-End-Dienst zugreifen. Es wird einen Gatewaydienst aufgerufen, wenn Sie Ihr benutzerdefinierten Dienst implementieren oder Alternativ dazu Sie auch das Out-of-the-Box-Service-Fabric können [Reverseproxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy).
+Wie in Abbildung 4-10 sowie bei Betrachtung aus der Perspektive eines logischen microservices bzw. unternehmensmicroservices bei der Implementierung einer Service Fabric Stateful Reliable Services dargestellt müssen Sie in der Regel zwei Ebenen der Dienste zu implementieren. Bei der ersten handelt es sich um den zustandsbehafteten zuverlässigen Back-End-Dienst für die Verarbeitung verschiedener Partitionen (jede Partition stellt einen zustandsbehafteten Dienst dar). Bei der zweiten handelt es sich um den Front-End- oder Gatewaydienst für das Routing und die Datenaggregation in verschiedenen Partitionen oder Instanzen von zustandsbehafteten Diensten. Dieser Gatewaydienst verarbeitet auch die clientseitige Kommunikation mit Wiederholungsschleifen, die auf den Back-End-Dienst zugreifen. Es wird von einem Gatewaydienst gesprochen, wenn der benutzerdefinierte Dienst implementiert wird. Alternativ können Sie auch den standardmäßigen Service Fabric-[Reverseproxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) verwenden.
 
 ![Service Fabric verfügt über eines Rezepts führt, um mehrere zustandsbehaftete zuverlässige Dienste in Containern zu unterstützen.](./media/service-fabric-stateful-business-microservice.png)
 

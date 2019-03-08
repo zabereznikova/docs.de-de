@@ -4,12 +4,12 @@ description: Lernen Sie die Schritte für die "äußere"Schleife des DevOps-Work
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7043f34557651c3e8e79baf263bd0bcefd5a847a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836408"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676199"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Schritte in der äußeren Schleife DevOps-Workflow für eine Docker-Anwendung
 
@@ -114,7 +114,7 @@ Es folgen verschiedene Arten von Tests, die Sie für Docker-Container ausführen
 
 - Testen Sie in Produktion und "Canary Release"-Versionen
 
-Der wichtigste Punkt ist, dass bei der Integration und Funktionstests ausgeführt werden, diese Tests von außerhalb der Container ausgeführt werden muss. Tests sind nicht enthalten oder in den Containern, die Sie bereitstellen, die ausgeführt werden, da die Container für statische Bilder basieren, die genau wie sein sollte, die Sie für die Produktion bereitstellen müssen.
+Der wichtigste Punkt ist, dass bei der Integration und Funktionstests ausgeführt werden, diese Tests von außerhalb der Container ausgeführt werden muss. Tests sind nicht enthalten oder in den Containern, die Sie bereitstellen möchten, die ausgeführt werden, da die Container für statische Bilder basieren, die genau wie sein sollte, die Sie für die Produktion bereitstellen müssen.
 
 Eine praktische Option beim Testen von Szenarien, wie Sie mehrere Cluster (test-Cluster, staging-Cluster und Produktionscluster) einschließlich erweiterte werden die Bilder auf eine Registrierung, veröffentlichen, damit es in verschiedenen Clustern getestet werden kann.
 
@@ -202,7 +202,7 @@ Abbildung 5-11 zeigt, wie Sie bearbeite die Aufgabe mit Docker bereitstellen kö
 
 ## <a name="step-5-run-and-manage"></a>Schritt 5: Ausführen und verwalten
 
-Da ausführen und Verwalten von Anwendungen auf Enterprise für die Produktion ist ein Hauptthema in sich selbst und aufgrund der Art der Vorgänge und Personen, die auf dieser Ebene (IT-Betrieb) sowie den großen Bereich dieses Bereichs arbeiten, wir haben die aggregationsverarbeitung verwendet des gesamtes neben die Kapitel, erklärt es.
+Da ausführen und Verwalten von Anwendungen auf Enterprise für die Produktion ist ein Hauptthema in sich selbst und aufgrund der Art der Vorgänge und Personen, die auf dieser Ebene (IT-Betrieb) sowie den großen Bereich dieses Bereichs arbeiten, die gesamte im nächste Kapitel geht es um Erläutern es aus.
 
 ## <a name="step-6-monitor-and-diagnose"></a>Schritt 6: Überwachen und diagnostizieren
 

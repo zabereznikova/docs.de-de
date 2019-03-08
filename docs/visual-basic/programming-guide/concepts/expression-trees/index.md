@@ -79,7 +79,7 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-Weitere Informationen finden Sie unter [Generating Dynamic Methods with Expression Trees in Visual Studio 2010 (Generieren dynamischer Methoden mit Ausdrucksbaumstrukturen in Visual Studio 2010)](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010). Dieser Artikel gilt auch für höhere Versionen von Visual Studio.
+Weitere Informationen finden Sie unter [Generating Dynamic Methods with Expression Trees in Visual Studio 2010 (Generieren dynamischer Methoden mit Ausdrucksbaumstrukturen in Visual Studio 2010)](https://devblogs.microsoft.com/csharpfaq/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010/). Dieser Artikel gilt auch für höhere Versionen von Visual Studio.
   
 ## <a name="parsing-expression-trees"></a>Analysieren von Ausdrucksbaumstrukturen  
  Im folgenden Codebeispiel wird veranschaulicht, wie die Ausdrucksbaumstruktur, die den Lambdaausdruck `Function(num) num < 5` darstellt, in seine Bestandteile zerlegt werden kann.  
