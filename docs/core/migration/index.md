@@ -1,15 +1,8 @@
 ---
 title: .NET Core-Migration über „project.json“
-description: Erfahren Sie, wie Sie ein älteres .NET Core-Projekt mithilfe von „project.json“ migrieren.
-author: blackdwarf
+description: 'Erfahren Sie, wie Sie ein älteres .NET Core-Projekt mithilfe von „project.json“ migrieren.'
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170690"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migrieren von .NET Core-Projekten über „project.json“
 
@@ -89,7 +82,7 @@ Das .NET Core-csproj-Format ändert und entwickelt sich mit jeder neuen Vorabver
 
 Nach diesen Schritten sollte das Projekt mit dem RTM .NET Core-csproj-Format vollständig kompatibel sein.
 
-Beispiele für vor und nach der Migration vom alten csproj-Format zum neuen finden Sie im Artikel [Updating Visual Studio 2017 RC – .NET Core Tooling improvements (Aktualisieren von Visual Studio 2017 RC – Verbesserungen der .NET Core-Tools)](https://blogs.msdn.microsoft.com/dotnet/2016/12/12/updating-visual-studio-2017-rc-net-core-tooling-improvements/) im .NET-Blog.
+Beispiele für vor und nach der Migration vom alten csproj-Format zum neuen finden Sie im Artikel [Updating Visual Studio 2017 RC – .NET Core Tooling improvements (Aktualisieren von Visual Studio 2017 RC – Verbesserungen der .NET Core-Tools)](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) im .NET-Blog.
 
 ## <a name="see-also"></a>Siehe auch
 

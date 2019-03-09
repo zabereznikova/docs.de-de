@@ -2,12 +2,12 @@
 title: Nullwerte zulassende Verweistypen
 description: Dieser Artikel bietet eine Übersicht der Nullable-Verweistypen, die in C# 8 hinzugefügt wurden. Sie erfahren, wie das Feature bei neuen und vorhandenen Projekten vor Nullverweisausnahmen schützt.
 ms.date: 02/19/2019
-ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411545"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725024"
 ---
 # <a name="nullable-reference-types"></a>Nullwerte zulassende Verweistypen
 
@@ -41,7 +41,7 @@ Der Compiler verwendet die statische Analyse, um zu bestimmen, ob ein Nullable-V
 name!.Length;
 ```
 
-Weitere Informationen zu diesem Operator finden Sie im Spezifikationssvorschlag zu [Nullable-Verweistypen (Entwurf)](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) auf GitHub.
+Weitere Informationen zu diesem Operator finden Sie im Spezifikationssvorschlag zu [Nullable-Verweistypen (Entwurf)](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) auf GitHub.
 
 ## <a name="nullability-of-types"></a>NULL-Zulässigkeit von Typen
 
