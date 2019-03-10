@@ -9,24 +9,24 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: 797b98cb408c7f9fc1d55b774f7ceccef009bb22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9c1373a16f7d62c2933e01e513478fc6c9866d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674647"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721878"
 ---
-# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a><span data-ttu-id="90889-102">Vorgehensweise: Hinzufügen eines benutzerdefinierten Speicherorts zum Dateidialogfeld</span><span class="sxs-lookup"><span data-stu-id="90889-102">How To: Add a Custom Place to a File Dialog Box</span></span>
-<span data-ttu-id="90889-103">In [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] befindet sich in den Standarddialogfeldern zum Öffnen und Schließen auf der linken Seite ein Bereich mit der Bezeichnung **Linkfavoriten**.</span><span class="sxs-lookup"><span data-stu-id="90889-103">The default open and save dialog boxes on [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] have an area on the left side of the dialog box titled **Favorite Links**.</span></span> <span data-ttu-id="90889-104">Dieser Bereich wird als „Benutzerdefinierte Speicherorte“ bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="90889-104">This area is called custom places.</span></span> <span data-ttu-id="90889-105">Die <xref:System.Windows.Forms.OpenFileDialog> und <xref:System.Windows.Forms.SaveFileDialog> Klassen können Sie Ordner zum Hinzufügen der <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Auflistung.</span><span class="sxs-lookup"><span data-stu-id="90889-105">The <xref:System.Windows.Forms.OpenFileDialog> and <xref:System.Windows.Forms.SaveFileDialog> classes allow you to add folders to the <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection.</span></span>  
+# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a><span data-ttu-id="d3792-102">Vorgehensweise: Hinzufügen eines benutzerdefinierten Speicherorts zum Dateidialogfeld</span><span class="sxs-lookup"><span data-stu-id="d3792-102">How To: Add a Custom Place to a File Dialog Box</span></span>
+<span data-ttu-id="d3792-103">In [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] befindet sich in den Standarddialogfeldern zum Öffnen und Schließen auf der linken Seite ein Bereich mit der Bezeichnung **Linkfavoriten**.</span><span class="sxs-lookup"><span data-stu-id="d3792-103">The default open and save dialog boxes on [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] have an area on the left side of the dialog box titled **Favorite Links**.</span></span> <span data-ttu-id="d3792-104">Dieser Bereich wird als „Benutzerdefinierte Speicherorte“ bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="d3792-104">This area is called custom places.</span></span> <span data-ttu-id="d3792-105">Die <xref:System.Windows.Forms.OpenFileDialog> und <xref:System.Windows.Forms.SaveFileDialog> Klassen können Sie Ordner zum Hinzufügen der <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Auflistung.</span><span class="sxs-lookup"><span data-stu-id="d3792-105">The <xref:System.Windows.Forms.OpenFileDialog> and <xref:System.Windows.Forms.SaveFileDialog> classes allow you to add folders to the <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="90889-106">In der Reihenfolge für einen benutzerdefinierten Speicherort angezeigt werden die <xref:System.Windows.Forms.OpenFileDialog> oder <xref:System.Windows.Forms.SaveFileDialog>, <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> Eigenschaft muss festgelegt werden, um `true` (Standard).</span><span class="sxs-lookup"><span data-stu-id="90889-106">In order for a custom place to appear in the <xref:System.Windows.Forms.OpenFileDialog> or <xref:System.Windows.Forms.SaveFileDialog>, the <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> property must be set to `true` (the default).</span></span>  
+>  <span data-ttu-id="d3792-106">In der Reihenfolge für einen benutzerdefinierten Speicherort angezeigt werden die <xref:System.Windows.Forms.OpenFileDialog> oder <xref:System.Windows.Forms.SaveFileDialog>, <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> Eigenschaft muss festgelegt werden, um `true` (Standard).</span><span class="sxs-lookup"><span data-stu-id="d3792-106">In order for a custom place to appear in the <xref:System.Windows.Forms.OpenFileDialog> or <xref:System.Windows.Forms.SaveFileDialog>, the <xref:System.Windows.Forms.FileDialog.AutoUpgradeEnabled%2A> property must be set to `true` (the default).</span></span>  
   
-### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a><span data-ttu-id="90889-107">So fügen Sie dem Dialogfeld „Datei“ einen benutzerdefinierten Speicherort hinzu</span><span class="sxs-lookup"><span data-stu-id="90889-107">To add a custom place to a file dialog box</span></span>  
+### <a name="to-add-a-custom-place-to-a-file-dialog-box"></a><span data-ttu-id="d3792-107">So fügen Sie dem Dialogfeld „Datei“ einen benutzerdefinierten Speicherort hinzu</span><span class="sxs-lookup"><span data-stu-id="d3792-107">To add a custom place to a file dialog box</span></span>  
   
--   <span data-ttu-id="90889-108">Fügen Sie einen Pfad, eine GUID für bekannte Ordner oder ein <xref:System.Windows.Forms.FileDialogCustomPlace> -Objekt an die <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Sammlung im Dialogfeld.</span><span class="sxs-lookup"><span data-stu-id="90889-108">Add a path, a Known Folder GUID, or a <xref:System.Windows.Forms.FileDialogCustomPlace> object to the <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection of the dialog box.</span></span>  
+-   <span data-ttu-id="d3792-108">Fügen Sie einen Pfad, eine GUID für bekannte Ordner oder ein <xref:System.Windows.Forms.FileDialogCustomPlace> -Objekt an die <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Sammlung im Dialogfeld.</span><span class="sxs-lookup"><span data-stu-id="d3792-108">Add a path, a Known Folder GUID, or a <xref:System.Windows.Forms.FileDialogCustomPlace> object to the <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> collection of the dialog box.</span></span>  
   
-     <span data-ttu-id="90889-109">Im folgenden Codebeispiel wird veranschaulicht, wie Sie einen Pfad hinzufügen:</span><span class="sxs-lookup"><span data-stu-id="90889-109">The following code example shows how to add a path:</span></span>  
+     <span data-ttu-id="d3792-109">Im folgenden Codebeispiel wird veranschaulicht, wie Sie einen Pfad hinzufügen:</span><span class="sxs-lookup"><span data-stu-id="d3792-109">The following code example shows how to add a path:</span></span>  
   
     ```vb  
     OpenFileDialog1.CustomPlaces.Add("C:\MyCustomPlace")  
@@ -36,7 +36,7 @@ ms.locfileid: "54674647"
     openFileDialog1.CustomPlaces.Add("C:\\MyCustomPlace");  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="90889-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="90889-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d3792-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d3792-110">See also</span></span>
 - <xref:System.Windows.Forms.FileDialog>
 - <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="90889-111">GUIDs von bekannten Ordnern für benutzerdefinierte Speicherorte im Dateidialogfeld</span><span class="sxs-lookup"><span data-stu-id="90889-111">Known Folder GUIDs for File Dialog Custom Places</span></span>](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)
+- [<span data-ttu-id="d3792-111">GUIDs von bekannten Ordnern für benutzerdefinierte Speicherorte im Dateidialogfeld</span><span class="sxs-lookup"><span data-stu-id="d3792-111">Known Folder GUIDs for File Dialog Custom Places</span></span>](known-folder-guids-for-file-dialog-custom-places.md)
