@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation-Funktionsdetails
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b7fed8c40c998ff0ecc0080139690614d985fc42
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492590"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721852"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation-Funktionsdetails
 
@@ -43,9 +43,9 @@ Die <xref:System.ServiceModel.WorkflowServiceHost> ist die Out-of-Box-Workflowho
 
 - Beispiele für <xref:System.ServiceModel.WorkflowServiceHost> finden Sie in den folgenden Abschnitten:
 
-    - [Ausführung](samples/execution.md)
+    - [Ausführung](./samples/execution.md)
 
-    - Anwendung: [Angehaltene Instanzverwaltung](samples/suspended-instance-management.md)
+    - Anwendung: [Angehaltene Instanzverwaltung](./samples/suspended-instance-management.md)
 
 - [Übersicht über Workflowdienste gehostet](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -121,7 +121,7 @@ In .NET 3.5 gab es einige Einschränkungen beim Entwurf bekannter Typen:
 
 - Benutzer konnten nicht angeben, welche xsi:type-Informationen erscheinen sollten, um z. B. die Serialisierungsinstanz zu verkleinern.
 
-Die [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md) löst diese Probleme in .NET 4.5.
+Die [DataContractResolver](../wcf/samples/datacontractresolver.md) löst diese Probleme in .NET 4.5.
 
 ### <a name="getting-started"></a>Erste Schritte
 
@@ -131,9 +131,9 @@ Die [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresol
 
 - Beispiele:
 
-    - [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)
+    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>Datenvertragsresolver-Szenarien
 
@@ -163,9 +163,9 @@ Ein Flussdiagramm ist ein bekanntes Paradigma, um Domänenprobleme visuell darzu
 
 - Beispiele:
 
-    - [Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+    - [Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [Einstellungsprozess](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [Einstellungsprozess](./samples/hiring-process.md)
 
 - Designerdokumentation:
 
@@ -197,9 +197,9 @@ Verfahrensaktivitäten stellen einen Mechanismus bereit, um sequenzielle Ablaufs
 
 - Beispiele:
 
-    - [Einstellungsprozess](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [Einstellungsprozess](./samples/hiring-process.md)
 
-    - [Unternehmenseinkaufsprozess](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)
+    - [Unternehmenseinkaufsprozess](./samples/corporate-purchase-process.md)
 
 - Designerdokumentation:
 
@@ -237,7 +237,7 @@ Die <xref:System.Activities.Statements.TryCatch>-Aktivität stellt einen Mechani
 
 - Erstellen Sie in Visual Studio 2012 eine Konsolenanwendung für Workflows. Fügen Sie im Workflow-Designer eine <xref:System.Activities.Statements.TryCatch>-Aktivität hinzu.
 
-- Beispiel: [Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+- Beispiel: [Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
 - Designerdokumentation: [Fehlerbehandlungs-Aktivitätsdesigner](/visualstudio/workflow-designer/error-handling-activity-designers)
 
@@ -253,7 +253,7 @@ Die <xref:System.Activities.Statements.Pick>-Aktivität stellt eine ereignisbasi
 
 - Erstellen Sie in Visual Studio 2012 eine Konsolenanwendung für Workflows. Fügen Sie im Workflow-Designer eine <xref:System.Activities.Statements.Pick>-Aktivität hinzu.
 
-- Beispiel: [Verwenden der Pick-Aktivität](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)
+- Beispiel: [Verwenden der Pick-Aktivität](./samples/using-the-pick-activity.md)
 
 - Designerdokumentation: [Pick-Aktivitätsdesigner](/visualstudio/workflow-designer/pick-activity-designer)
 
@@ -283,9 +283,9 @@ Beim Entwurf des Routingdiensts in .NET 4 wurde dafür Sorge getragen, dass dies
 
 ### <a name="getting-started"></a>Erste Schritte
 
-1. Dokumentation: [Routing](../../../docs/framework/wcf/feature-details/routing.md)
+1. Dokumentation: [Routing](../wcf/feature-details/routing.md)
 
-2. Beispiele: [Routingdienste &#91;WCF-Beispiele&#93;](../../../docs/framework/wcf/samples/routing-services.md)
+2. Beispiele: [Routingdienste &#91;WCF-Beispiele&#93;](../wcf/samples/routing-services.md)
 
 3. Blog: [Routingregeln!](https://go.microsoft.com/fwlink/?LinkId=204956)
 
@@ -317,9 +317,9 @@ Darüber hinaus sind Ermittlungsnachrichten unabhängig vom Netzwerkprotokoll. S
 
 ### <a name="getting-started"></a>Erste Schritte
 
-- Dokumentation: [WCF-Suche](../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- Dokumentation: [WCF-Suche](../wcf/feature-details/wcf-discovery.md)
 
-- Beispiele: [Suche (Beispiele)](../../../docs/framework/wcf/samples/discovery-samples.md)
+- Beispiele: [Suche (Beispiele)](../wcf/samples/discovery-samples.md)
 
 ### <a name="discovery-scenarios"></a>Suchszenarien
 
@@ -343,9 +343,9 @@ Die workflownachverfolgung bietet einen Einblick in die Ausführung einer Workfl
 
     4. Beobachten Sie die Workflownachverfolgungsereignisse in der Ereignisanzeige.
 
-3. Beispiele: [Nachverfolgung](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)
+3. Beispiele: [Nachverfolgung](./samples/tracking.md)
 
-4. Dokumentation: [Nachverfolgung und Ablaufverfolgung für Workflows](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+4. Dokumentation: [Nachverfolgung und Ablaufverfolgung für Workflows](workflow-tracking-and-tracing.md)
 
 ## <a name="sql-workflow-instance-store"></a>SQL-Workflowinstanzspeicher
 
@@ -355,6 +355,6 @@ Beim <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> handelt
 
 1. In Visual Studio 2012, erstellen Sie einen Workflow, der eine implizite oder explizite enthält <xref:System.Activities.Statements.Persist> Aktivität. Fügen Sie dem Workflowdiensthost das <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Verhalten hinzu. Sie können die Aktivität dem Code oder der Anwendungskonfiguration hinzufügen.
 
-2. Beispiele: [Persistenz](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)
+2. Beispiele: [Persistenz](./samples/persistence.md)
 
-3. Dokumentation: [SQL-Workflow-Instanz Store](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).
+3. Dokumentation: [SQL-Workflow-Instanz Store](sql-workflow-instance-store.md).

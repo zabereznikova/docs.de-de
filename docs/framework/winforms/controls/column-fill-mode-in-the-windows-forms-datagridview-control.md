@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: 823d3c06648ed37003176eab9df538d95f1ced69
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: bd6c27203284b392742b766b22f664b08a7b3a40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304309"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722411"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms
 Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerelement seine Spalten automatisch so an, dass sie die Breite des verfügbaren Anzeigebereichs ausfüllen. Das Steuerelement zeigt die horizontale Bildlaufleiste nur an, wenn es erforderlich ist, dass die Breite jeder Spalte gleich oder größer als sein <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Eigenschaftenwert ist.  
@@ -39,8 +39,8 @@ Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerel
  Mithilfe des folgenden Beispielcodes können Sie mit verschieden Werten für die <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>-, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>- und <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Eigenschaften verschiedener Spalten experimentieren. In diesem Beispiel wird ein <xref:System.Windows.Forms.DataGridView>-Steuerelement an seine eigene <xref:System.Windows.Forms.DataGridView.Columns%2A>-Auflistung gebunden, und eine Spalte wird an jede der <xref:System.Windows.Forms.DataGridViewColumn.HeaderText%2A>-, <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>-, <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-, <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>- und <xref:System.Windows.Forms.DataGridViewColumn.Width%2A>-Eigenschaften gebunden. Jede der Spalten wird außerdem durch eine Zeile im Steuerelement dargestellt. Wenn Sie Werte in einer Zeile ändern, werden die Eigenschaften der entsprechenden Spalte aktualisiert, damit Sie sehen können, wie die Werte miteinander interagieren.  
   
 ### <a name="code"></a>Code  
- [!code-csharp[System.Windows.Forms.DataGridViewFillColumnsDemo#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/CS/fillcolumns.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewFillColumnsDemo#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/vb/fillcolumns.vb#00)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/CS/fillcolumns.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridViewFillColumnsDemo#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewFillColumnsDemo/vb/fillcolumns.vb#00)]  
   
 ### <a name="comments"></a>Kommentare  
  So verwenden Sie diese Beispielanwendung:  
@@ -76,4 +76,4 @@ Im Spaltenfüllmodus passt das <xref:System.Windows.Forms.DataGridView>-Steuerel
 - <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType>
-- [Größenanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Größenanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)

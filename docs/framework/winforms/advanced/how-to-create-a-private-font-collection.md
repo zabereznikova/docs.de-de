@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: e698e93f96e0b19d45fb40408249aedcb0edeec7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cfd2a1fd29b58019d49c8cd5df9adb5b0873302
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505834"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723776"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Vorgehensweise: Erstellen einer privaten Schriftartenauflistung
 Die <xref:System.Drawing.Text.PrivateFontCollection> Klasse erbt von der <xref:System.Drawing.Text.FontCollection> abstrakte Basisklasse. Sie können eine <xref:System.Drawing.Text.PrivateFontCollection> Objekt, das einen Satz von Schriftarten, die speziell für Ihre Anwendung zu verwalten. Installierte Systemschriftarten sowie Schriftarten, die nicht auf dem Computer installiert wurden, kann eine privaten schriftartenauflistung enthalten. Rufen Sie zum Hinzufügen einer Schriftartdatei zu einer privaten schriftartenauflistung der <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> Methode eine <xref:System.Drawing.Text.PrivateFontCollection> Objekt.  
@@ -39,18 +39,18 @@ Die <xref:System.Drawing.Text.PrivateFontCollection> Klasse erbt von der <xref:S
   
  Die Ausgabe des folgenden Codes ähnelt die Ausgabe in der folgenden Abbildung dargestellt.  
   
- ![Schriftartentext](../../../../docs/framework/winforms/advanced/media/csfontstext7.png "csfontstext7")  
+ ![Schriftartentext](./media/csfontstext7.png "csfontstext7")  
   
  Arial.tff (die im folgenden Codebeispiel wird der private Schriftart-Auflistung hinzugefügt wurde) ist die Schriftart für Arial Schriftschnitt. Beachten Sie jedoch, dass das Programm mehrere verfügbaren Formate als reguläre für die Familie der Schriftart Arial verwendet wird. Der Grund dafür ist [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] können die fett, kursiv und Fett Kursiv Stile vom Schriftschnitt simuliert werden. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] kann außerdem unterstrichen und durchgestrichen normal vom Schriftschnitt erstellen.  
   
  Auf ähnliche Weise [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] können fett kursive Formatierung aus der fettformatierung oder kursive simulieren. Die Programmausgabe zeigt, dass die fett formatierten kursive Formatierung für die Zeiten-Familie verfügbar ist, auch wenn TimesBd.tff (Times New Roman fett formatiert) die einzige ist Times-Datei in der Auflistung.  
   
- [!code-csharp[System.Drawing.FontsAndText#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
- [!code-vb[System.Drawing.FontsAndText#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
+ [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
+ [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs> `e`-Klasse, die ein Parameter von <xref:System.Windows.Forms.PaintEventHandler> ist.  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Drawing.Text.PrivateFontCollection>
-- [Verwenden von Schriftarten und Text](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)
+- [Verwenden von Schriftarten und Text](using-fonts-and-text.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 814c788285d974db5a8ef2bbaec1368a860c21d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a88fd7b912063af5961a2bb366b42b0f67411f5f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643961"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720292"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Ereignisreihenfolge in Windows Forms
-Die Reihenfolge, in der Ereignisse in Windows Forms-Anwendungen ausgelöst werden, ist für Entwickler von besonderem Interesse, die sich mit der sukzessiven Verarbeitung jedes dieser Ereignisse befassen müssen. Wenn eine Situation die sorgfältige Verarbeitung von Ereignissen erfordert, z. B. beim Neuzeichnen von Komponenten des Formulars, ist ein Bewusstsein für die genaue Reihenfolge, in der Ereignisse zur Laufzeit ausgelöst werden, geboten. Dieses Thema enthält Details zur Reihenfolge von Ereignissen im Verlauf einiger wichtiger Phasen der Lebensdauer von Anwendungen und Steuerelementen. Spezifische Informationen über die Reihenfolge von Mauseingabeereignissen finden Sie unter [Mausereignisse in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Eine Übersicht über Ereignisse in Windows Forms, finden Sie unter [Ereignisübersicht](../../../docs/framework/winforms/events-overview-windows-forms.md). Weitere Informationen über die Zusammensetzung von Ereignishandlern finden Sie unter [Übersicht über Ereignishandler](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+Die Reihenfolge, in der Ereignisse in Windows Forms-Anwendungen ausgelöst werden, ist für Entwickler von besonderem Interesse, die sich mit der sukzessiven Verarbeitung jedes dieser Ereignisse befassen müssen. Wenn eine Situation die sorgfältige Verarbeitung von Ereignissen erfordert, z. B. beim Neuzeichnen von Komponenten des Formulars, ist ein Bewusstsein für die genaue Reihenfolge, in der Ereignisse zur Laufzeit ausgelöst werden, geboten. Dieses Thema enthält Details zur Reihenfolge von Ereignissen im Verlauf einiger wichtiger Phasen der Lebensdauer von Anwendungen und Steuerelementen. Spezifische Informationen über die Reihenfolge von Mauseingabeereignissen finden Sie unter [Mausereignisse in Windows Forms](mouse-events-in-windows-forms.md). Eine Übersicht über Ereignisse in Windows Forms, finden Sie unter [Ereignisübersicht](events-overview-windows-forms.md). Weitere Informationen über die Zusammensetzung von Ereignishandlern finden Sie unter [Übersicht über Ereignishandler](event-handlers-overview-windows-forms.md).  
   
 ## <a name="application-startup-and-shutdown-events"></a>Ereignisse beim Starten und Herunterfahren von Anwendungen  
  Die Klassen <xref:System.Windows.Forms.Form> und <xref:System.Windows.Forms.Control> stellen einen Satz von Ereignissen bereit, die sich auf das Starten und Herunterfahren von Anwendungen beziehen. Beim Starten einer Windows Forms-Anwendung werden die Startereignisse des Hauptformulars in der folgenden Reihenfolge ausgelöst:  
@@ -81,4 +81,4 @@ Die Reihenfolge, in der Ereignisse in Windows Forms-Anwendungen ausgelöst werde
 -   <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erstellen von Ereignishandlern in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Erstellen von Ereignishandlern in Windows Forms](creating-event-handlers-in-windows-forms.md)

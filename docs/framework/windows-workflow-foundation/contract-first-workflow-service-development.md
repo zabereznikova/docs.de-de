@@ -2,48 +2,48 @@
 title: Entwickeln von Vertrag zuerst-Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373061"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721787"
 ---
 # <a name="contract-first-workflow-service-development"></a>Entwickeln von Vertrag zuerst-Workflowdiensten
-Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF)-Funktionen zur verbesserten Integration zwischen Webdiensten und Workflows in Form der Vertrag zuerst-Workflowentwicklung. Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es Ihnen, den Vertrag zuerst im Code zu entwerfen. Das Tool generiert dann automatisch eine Aktivitätsvorlage für die Vertragsvorgänge in der Toolbox. Dieses Thema enthält eine Übersicht darüber, wie die Aktivitäten und Eigenschaften in einer Workflowdienstzuordnung den Attributen eines Dienstvertrags zugeordnet werden. Ein ausführliches Beispiel zum Erstellen eines Vertrag zuerst-Workflowdiensts, finden Sie unter [Vorgehensweise: Erstellen eines Workflowdiensts, das Verarbeiten eines vorhandenen Dienstvertrags](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Workflow Foundation (WF)-Funktionen zur verbesserten Integration zwischen Webdiensten und Workflows in Form der Vertrag zuerst-Workflowentwicklung. Das Tool für die Vertrag zuerst-Workflowentwicklung ermöglicht es Ihnen, den Vertrag zuerst im Code zu entwerfen. Das Tool generiert dann automatisch eine Aktivitätsvorlage für die Vertragsvorgänge in der Toolbox. Dieses Thema enthält eine Übersicht darüber, wie die Aktivitäten und Eigenschaften in einer Workflowdienstzuordnung den Attributen eines Dienstvertrags zugeordnet werden. Ein ausführliches Beispiel zum Erstellen eines Vertrag zuerst-Workflowdiensts, finden Sie unter [Vorgehensweise: Erstellen eines Workflowdiensts, das Verarbeiten eines vorhandenen Dienstvertrags](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>In diesem Thema  
   
--   [Zuordnen von dienstvertragsattributen zu workflowattributen](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
+-   [Zuordnen von dienstvertragsattributen zu workflowattributen](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [Dienstvertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+    -   [Dienstvertragsattribute](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [Vorgangsvertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+    -   [Vorgangsvertragsattribute](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [Nachrichtenvertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+    -   [Nachrichtenvertragsattribute](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [Datenvertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+    -   [Datenvertragsattribute](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [Fehlervertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+    -   [Fehlervertragsattribute](contract-first-workflow-service-development.md#FaultContract)  
   
--   [Zusätzliche Support- und Implementierungsinformationen](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [Zusätzliche Support- und Implementierungsinformationen](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [Nicht unterstützte dienstvertragsfunktionen](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [Nicht unterstützte dienstvertragsfunktionen](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [Generierung konfigurierter messagingaktivitäten](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [Generierung konfigurierter messagingaktivitäten](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> Zuordnen von dienstvertragsattributen zu workflowattributen  
  Die Tabellen in den folgenden Abschnitten enthalten die verschiedenen WCF-Attribute und -Eigenschaften und veranschaulichen die Zuordnung zu Messagingaktivitäten und Eigenschaften in einem Vertrag zuerst-Workflow.  
   
--   [Dienstvertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+-   [Dienstvertragsattribute](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [Vorgangsvertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+-   [Vorgangsvertragsattribute](contract-first-workflow-service-development.md#OperationContract)  
   
--   [Nachrichtenvertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+-   [Nachrichtenvertragsattribute](contract-first-workflow-service-development.md#MessageContract)  
   
--   [Datenvertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+-   [Datenvertragsattribute](contract-first-workflow-service-development.md#DataContract)  
   
--   [Fehlervertragsattribute](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+-   [Fehlervertragsattribute](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> Dienstvertragsattribute  
   
@@ -109,9 +109,9 @@ Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Work
   
 ## <a name="AdditionalSupport"></a> Zusätzliche Support- und Implementierungsinformationen  
   
--   [Nicht unterstützte dienstvertragsfunktionen](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [Nicht unterstützte dienstvertragsfunktionen](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [Generierung konfigurierter messagingaktivitäten](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [Generierung konfigurierter messagingaktivitäten](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> Nicht unterstützte dienstvertragsfunktionen  
   

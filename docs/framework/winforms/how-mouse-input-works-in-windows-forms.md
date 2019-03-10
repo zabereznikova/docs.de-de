@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: ac6cdbdb690a1e5e6693f2e5d1c5d2236a643ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496006"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725324"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Funktionsweise von Mauseingaben in Windows Forms
-Empfang und Verarbeitung von Mauseingaben ist ein wichtiger Bestandteil jeder Windows-Anwendung. Sie können Mausereignisse, die zum Ausführen einer Aktion in Ihrer Anwendung behandeln oder Mauspositionsinformationen Treffertests ausführen oder andere Aktionen. Darüber hinaus können Sie die Art ändern, die Steuerelemente in Ihrer Anwendung Mauseingaben behandeln. Dieses Thema beschreibt diese Mausereignisse im Detail und das Abrufen und Ändern von Systemeinstellungen für die Maus. Weitere Informationen zu den Daten, die mit der Maus bereitgestellten Ereignisse und die Reihenfolge, in dem die Maus, klicken Sie auf Ereignisse, ausgelöst werden, finden Sie unter [Mausereignisse in Windows Forms](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  
+Empfang und Verarbeitung von Mauseingaben ist ein wichtiger Bestandteil jeder Windows-Anwendung. Sie können Mausereignisse, die zum Ausführen einer Aktion in Ihrer Anwendung behandeln oder Mauspositionsinformationen Treffertests ausführen oder andere Aktionen. Darüber hinaus können Sie die Art ändern, die Steuerelemente in Ihrer Anwendung Mauseingaben behandeln. Dieses Thema beschreibt diese Mausereignisse im Detail und das Abrufen und Ändern von Systemeinstellungen für die Maus. Weitere Informationen zu den Daten, die mit der Maus bereitgestellten Ereignisse und die Reihenfolge, in dem die Maus, klicken Sie auf Ereignisse, ausgelöst werden, finden Sie unter [Mausereignisse in Windows Forms](mouse-events-in-windows-forms.md).  
   
 ## <a name="mouse-location-and-hit-testing"></a>Position des Mauszeigers und Treffertests  
  Wenn der Benutzer die Maus bewegt, wird das Betriebssystem der Mauszeiger bewegt. Der Mauszeiger die Form enthält ein einzelnes Pixel bezeichnet den Hotspot, die das Betriebssystem verfolgt und als die Position des Zeigers erkannt. Wenn der Benutzer die Maus bewegt oder eine Maustaste drückt, die <xref:System.Windows.Forms.Control> , enthält die <xref:System.Windows.Forms.Cursor.HotSpot%2A> löst das entsprechende Mausereignis. Erhalten Sie mit die aktuellen Position der <xref:System.Windows.Forms.MouseEventArgs.Location%2A> Eigenschaft der <xref:System.Windows.Forms.MouseEventArgs> beim ein Mausereignis zu behandeln oder mithilfe der <xref:System.Windows.Forms.Cursor.Position%2A> Eigenschaft der <xref:System.Windows.Forms.Cursor> Klasse. Sie können anschließend Mauspositionsinformationen verwenden, zum Ausführen von Treffertests und führen Sie dann eine Aktion basierend auf der Position des Mauszeigers. Hit-testing-Funktion direkt in mehreren Steuerelementen in Windows Forms wie z. B. die <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.MonthCalendar> und <xref:System.Windows.Forms.DataGridView> Steuerelemente. Das entsprechende Mausereignis, Verwendung <xref:System.Windows.Forms.Control.MouseHover> beispielsweise Treffertests ist sehr nützlich, um zu bestimmen, wenn Ihre Anwendung für eine bestimmte Aktion auszuführen, sollten.  
@@ -53,6 +53,6 @@ Empfang und Verarbeitung von Mauseingaben ist ein wichtiger Bestandteil jeder Wi
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Ruft die Anzahl der Zeilen ab, die mit einem Bildlauf erfasst werden, wenn das Mausrad gedreht wird.|  
   
 ## <a name="see-also"></a>Siehe auch
-- [Mauseingabe in einer Windows Forms-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Mauserfassung in Windows Forms](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)
-- [Mauszeiger in Windows Forms](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)
+- [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)
+- [Mauserfassung in Windows Forms](mouse-capture-in-windows-forms.md)
+- [Mauszeiger in Windows Forms](mouse-pointers-in-windows-forms.md)

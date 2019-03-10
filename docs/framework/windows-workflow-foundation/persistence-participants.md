@@ -2,12 +2,12 @@
 title: Persistenzteilnehmer
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 66178adda593192678542ebf5ed8906e0dffc908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569504"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723763"
 ---
 # <a name="persistence-participants"></a>Persistenzteilnehmer
 Ein Persistenzteilnehmer kann an einem von einem Anwendungshost ausgelösten Persistenzvorgang (Speichern oder Laden) teilnehmen. Die [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] im Lieferumfang von zwei abstrakter Klassen **PersistenceParticipant** und **PersistenceIOParticipant**, die Sie verwenden können, um die Erstellung eines persistenzteilnehmers. Ein Persistenzteilnehmer leitet sich von einer dieser Klassen ab, implementiert die passenden Methoden und fügt dann der <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A>-Auflistung im <xref:System.ServiceModel.Activities.WorkflowServiceHost> eine Instanz der Klasse hinzu. Beim Beibehalten einer Workflowinstanz sucht der Anwendungshost möglicherweise nach Workflowerweiterungen dieser Art und ruft auf den Persistenzteilnehmern zur richtigen Zeit jeweils die entsprechenden Methoden auf.  
@@ -58,7 +58,7 @@ Ein Persistenzteilnehmer kann an einem von einem Anwendungshost ausgelösten Per
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Vorgehensweise: Erstellen eines benutzerdefinierten Persistenzteilnehmers](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
+-   [Vorgehensweise: Erstellen eines benutzerdefinierten Persistenzteilnehmers](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erweiterbarkeit des Speichers](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)
+- [Erweiterbarkeit des Speichers](store-extensibility.md)

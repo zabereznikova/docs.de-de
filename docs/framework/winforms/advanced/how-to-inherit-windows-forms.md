@@ -9,17 +9,17 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 29b32cd91cefe80f2f0a331f901fcabe55aa9c60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558981"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720864"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Vorgehensweise: Erben von Windows Forms
 Das Erstellen neuer Windows Forms durch Vererbung der Eigenschaften der Basisformulare ist eine praktische Möglichkeit zum Duplizieren Ihrer Bemühungen, ohne ein Formular jedes Mal von Grund auf neu erstellen zu müssen, wenn Sie es benötigen.  
   
- Weitere Informationen zum erben von Formularen zur Entwurfszeit mit der **Vererbungsauswahl** und das Dialogfeld zur visuellen Unterscheidung zwischen den Sicherheitsebenen der vererbten Steuerelemente, finden Sie unter [Vorgehensweise: Erben von Formularen mithilfe des Dialogfelds Auswahl](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
+ Weitere Informationen zum erben von Formularen zur Entwurfszeit mit der **Vererbungsauswahl** und das Dialogfeld zur visuellen Unterscheidung zwischen den Sicherheitsebenen der vererbten Steuerelemente, finden Sie unter [Vorgehensweise: Erben von Formularen mithilfe des Dialogfelds Auswahl](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
   
  **Hinweis** Damit die Formularvererbung vom Dialogfeld unterstützt wird, muss die Datei oder der Namespace mit dem jeweiligen Formular in eine ausführbare Datei oder DLL integriert werden. Wählen Sie zum Erstellen des Projekts aus dem Menü **Erstellen** die Option **Erstellen** aus. Darüber hinaus muss der Klasse, die das Formular erbt, auch ein Verweis auf den Namespace hinzugefügt werden. Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -44,5 +44,5 @@ Das Erstellen neuer Windows Forms durch Vererbung der Eigenschaften der Basisfor
 - [Inherits-Anweisung](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports-Anweisung (.NET-Namespace und -Typ)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [Auswirkungen beim Ändern der Darstellung von Basisformularen](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Visuelle Vererbung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [Auswirkungen beim Ändern der Darstellung von Basisformularen](effects-of-modifying-base-form-appearance.md)
+- [Visuelle Vererbung in Windows Forms](windows-forms-visual-inheritance.md)

@@ -2,12 +2,12 @@
 title: Überwachungsprofile
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482300"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721371"
 ---
 # <a name="tracking-profiles"></a>Überwachungsprofile
 
@@ -344,7 +344,7 @@ Mit Überwachungsabfrageelementen wird ein Überwachungsprofil erstellt. Dazu wi
 > [!WARNING]
 > Bei WF mit dem Workflowdiensthost wird das Überwachungsprofil in der Regel mit einer Konfigurationsdatei erstellt. Es ist auch möglich, ein Überwachungsprofil mit Code zu erstellen. Dazu wird die API für Überwachungsprofile und Überwachungsabfragen verwendet.
 
-Ein Profil, das als XML-Konfigurationsdatei konfiguriert ist, wird mit einer Verhaltenserweiterung auf einen Überwachungsteilnehmer angewendet. Dies wird einem WorkflowServiceHost hinzugefügt, wie weiter unten beschrieben [Konfigurieren der nachverfolgung für einen Workflow](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).
+Ein Profil, das als XML-Konfigurationsdatei konfiguriert ist, wird mit einer Verhaltenserweiterung auf einen Überwachungsteilnehmer angewendet. Dies wird einem WorkflowServiceHost hinzugefügt, wie weiter unten beschrieben [Konfigurieren der nachverfolgung für einen Workflow](configuring-tracking-for-a-workflow.md).
 
 Der Detailliertheitsgrad der Überwachungsdatensätze, die vom Host ausgegeben werden, wird von den Konfigurationseinstellungen im Überwachungsprofil bestimmt. Ein Überwachungsteilnehmer abonniert Überwachungsdatensätze, indem einem Überwachungsprofil Abfragen hinzugefügt werden. Um alle Nachverfolgungsdatensätze zu abonnieren, muss das Überwachungsprofil alle Überwachungsabfragen mit "\*" in den Namensfeldern "in den einzelnen Abfragen.
 
@@ -387,6 +387,6 @@ Es folgen einige häufige Beispiele für Überwachungsprofile.
 
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL-Nachverfolgung](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [SQL-Nachverfolgung](./samples/sql-tracking.md)
 - [Windows Server App Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Überwachen von Anwendungen mit AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)
