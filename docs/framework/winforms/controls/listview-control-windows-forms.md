@@ -11,51 +11,51 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 207b5fcd8bb1242be180898a22ffacf6e5ac9ab1
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: a1689af75eab6a327c657b5c4da3e649056d56ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664886"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717777"
 ---
 # <a name="listview-control-windows-forms"></a>ListView-Steuerelement (Windows Forms)
 Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen mit Symbolen angezeigt. Mit einer Listenansicht können Sie eine Benutzeroberfläche erstellen, deren Darstellung dem rechten Fensterbereich von Windows Explorer ähnelt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über das ListView-Steuerelement](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [Übersicht über das ListView-Steuerelement](listview-control-overview-windows-forms.md)  
  Beschreibt dieses Steuerelement und seine wichtigsten Funktionen und Eigenschaften.  
   
- [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
  Beschreibt, wie Elemente einer Listenansicht hinzugefügt oder daraus entfernt werden.  
   
- [Vorgehensweise: Hinzufügen von Spalten zu dem ListView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
+ [Vorgehensweise: Hinzufügen von Spalten zu dem ListView-Steuerelement in Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)  
  Beschreibt, wie Spalten erstellt werden, um Informationen zu jedem Listenelement anzuzeigen.  
   
- [Vorgehensweise: Anzeigen von Symbolen für das ListView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
+ [Vorgehensweise: Anzeigen von Symbolen für das ListView-Steuerelement in Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)  
  Beschreibt, wie eine Listenansicht mit einer entsprechenden Bildliste verknüpft wird, um große oder kleine Symbole anzuzeigen.  
   
- [Vorgehensweise: Anzeigen von Unterelementen in Spalten mit dem ListView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
+ [Vorgehensweise: Anzeigen von Unterelementen in Spalten mit dem ListView-Steuerelement in Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
  Beschreibt, wie Informationen zu jedem Listenelement in Spalten angezeigt werden.  
   
- [Vorgehensweise: Wählen Sie ein Element in dem ListView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)  
+ [Vorgehensweise: Wählen Sie ein Element in dem ListView-Steuerelement in Windows Forms](how-to-select-an-item-in-the-windows-forms-listview-control.md)  
  Beschreibt, wie ein Element programmgesteuert ausgewählt wird.  
   
- [Vorgehensweise: Gruppieren von Elementen in ein ListView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)  
+ [Vorgehensweise: Gruppieren von Elementen in ein ListView-Steuerelement in Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)  
  Beschreibt, wie Gruppen für die Anzeige nach Kategorien erstellt und jeder Gruppe Elemente zugewiesen werden.  
   
  Diese Funktion ist nur unter [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] verfügbar.  
   
- [Vorgehensweise: Aktivieren der Tile-Ansicht in ein ListView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
+ [Vorgehensweise: Aktivieren der Tile-Ansicht in ein ListView-Steuerelement in Windows Forms](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)  
  Beschreibt, wie Elemente als Kacheln dargestellt werden, die jeweils aus einem großen Symbol und mehreren Textzeilen bestehen.  
   
  Diese Funktion ist nur unter [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] verfügbar.  
   
- [Vorgehensweise: Anzeigen einer Einfügemarke in ein ListView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
+ [Vorgehensweise: Anzeigen einer Einfügemarke in ein ListView-Steuerelement in Windows Forms](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
  Beschreibt die Implementierung von Benutzerfeedback für Drag &amp; Drop-Vorgänge, bei denen eine Einfügemarke den Ablageort für jede Mauszeigerposition angibt.  
   
  Diese Funktion ist nur unter [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] verfügbar.  
   
- [Vorgehensweise: Hinzufügen von Suchfunktionen zu einem ListView-Steuerelement](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
+ [Vorgehensweise: Hinzufügen von Suchfunktionen zu einem ListView-Steuerelement](how-to-add-search-capabilities-to-a-listview-control.md)  
  Beschreibt, wie ein Element mithilfe der Textsuche oder anhand der Bildschirmkoordinaten programmgesteuert gesucht wird.  
   
 -   [Vorgehensweise: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement in Windows Forms mithilfe des Designers](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
@@ -73,14 +73,14 @@ Mit dem `ListView`-Steuerelement in Windows Forms wird eine Liste von Elementen 
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+ [Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
  Beschreibt das Erben von einem Element in einer Listenansicht oder von einem Knoten in einer Strukturansicht, um erforderliche Felder, Methoden oder Konstruktoren hinzuzufügen.  
   
- [ImageList-Komponente](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
+ [ImageList-Komponente](imagelist-component-windows-forms.md)  
  Erläutert die Verwendung einer Bildliste sowie ihre wichtigsten Funktionen und Eigenschaften.  
   
- [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Enthält Anweisungen zum Gestalten des Layouts eines Windows Forms mit mehreren Bereichen.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

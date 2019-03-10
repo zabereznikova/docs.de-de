@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: 91da6409eb3a02709332d8d1a5a2d7fe54d3f401
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdfb2d5a3ce45deb471aaa465c35b82e738a128b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543067"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717920"
 ---
 # <a name="windows-forms-controls-by-function"></a>Windows Forms-Steuerelemente nach Funktion
 Windows Forms bietet Steuerelemente und Komponenten, die eine Reihe von Funktionen ausführen. Die folgende Tabelle enthält die Windows Forms-Steuerelemente und Komponenten entsprechend allgemeine Funktion. Wenn mehrere Steuerelemente vorhanden, die die gleiche Funktion dienen sind, ist das empfohlene Steuerelement darüber hinaus mit einem Hinweis in Bezug auf das Steuerelement aufgeführt, die sie ersetzt. In einer separaten nachfolgenden Tabelle werden die ersetzten Steuerelemente mit ihren empfohlenen Ersetzungen aufgeführt.  
   
 > [!NOTE]
->  Die folgenden Tabellen sind nicht enthalten, jedes Steuerelement bzw. jede Komponente aus, die in Windows Forms verwendet werden können; eine umfassendere Liste, finden Sie unter [in Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+>  Die folgenden Tabellen sind nicht enthalten, jedes Steuerelement bzw. jede Komponente aus, die in Windows Forms verwendet werden können; eine umfassendere Liste, finden Sie unter [in Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
   
 ## <a name="recommended-controls-and-components-by-function"></a>Empfohlene Steuerelemente und Komponenten von-Funktion  
   
 |Funktion|Steuerelement|Beschreibung|  
 |--------------|-------------|-----------------|  
-|Datenanzeige|<xref:System.Windows.Forms.DataGridView>-Steuerelement|Die <xref:System.Windows.Forms.DataGridView> Steuerelement stellt eine anpassbare Tabelle zum Anzeigen von Daten. Die <xref:System.Windows.Forms.DataGridView> Klasse ermöglicht die Anpassung von Zellen, Zeilen, Spalten und Rahmen. **Hinweis**:  Die <xref:System.Windows.Forms.DataGridView> -Steuerelement stellt zahlreiche grundlegenden und erweiterten Features, die fehlen in der <xref:System.Windows.Forms.DataGrid> Steuerelement. Weitere Informationen finden Sie unter [Unterschiede zwischen dem Windows Forms DataGridView-Steuerelement und DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|Datenanzeige|<xref:System.Windows.Forms.DataGridView>-Steuerelement|Die <xref:System.Windows.Forms.DataGridView> Steuerelement stellt eine anpassbare Tabelle zum Anzeigen von Daten. Die <xref:System.Windows.Forms.DataGridView> Klasse ermöglicht die Anpassung von Zellen, Zeilen, Spalten und Rahmen. **Hinweis**:  Die <xref:System.Windows.Forms.DataGridView> -Steuerelement stellt zahlreiche grundlegenden und erweiterten Features, die fehlen in der <xref:System.Windows.Forms.DataGrid> Steuerelement. Weitere Informationen finden Sie unter [Unterschiede zwischen dem Windows Forms DataGridView-Steuerelement und DataGrid-Steuerelement](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |Die Datenbindung und navigation|<xref:System.Windows.Forms.BindingSource> Komponente|Vereinfacht Binden von Steuerelementen in einem Formular an Daten durch währungsverwaltung, änderungsbenachrichtigung und andere Dienste.|  
 ||<xref:System.Windows.Forms.BindingNavigator>-Steuerelement|Bietet eine Symbolleiste-Type-Schnittstelle, um zu navigieren und Bearbeiten von Daten in einem Formular.|  
 |Textbearbeitung|<xref:System.Windows.Forms.TextBox>-Steuerelement|Zeigt Text eingegeben haben, zur Entwurfszeit, die zur Laufzeit von den Benutzern bearbeitet oder programmgesteuert geändert werden kann.|  
@@ -85,5 +85,5 @@ Windows Forms bietet Steuerelemente und Komponenten, die eine Reihe von Funktion
 |Formularlayout|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
 ## <a name="see-also"></a>Siehe auch
-- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)

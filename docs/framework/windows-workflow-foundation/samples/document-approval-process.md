@@ -2,12 +2,12 @@
 title: Dokumentgenehmigungsprozess
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582709"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717708"
 ---
 # <a name="document-approval-process"></a>Dokumentgenehmigungsprozess
 Dieses Beispiel veranschaulicht die Verwendung von vielen Features von Windows Workflow Foundation (WF) und Windows Communication Foundation (WCF) miteinander aus. Zusammen implementieren sie ein Szenario für einen Dokumentgenehmigungsprozess. Eine Clientanwendung kann Dokumente zur Genehmigung senden und Dokumente genehmigen. Es ist eine Genehmigungs-Manager-Anwendung vorhanden, um die Kommunikation zwischen Clients zu unterstützen und die Regeln für den Genehmigungsprozess umzusetzen. Der Genehmigungsprozess ist ein Workflow, der mehrere Genehmigungsarten ausführen kann. Es sind Aktivitäten vorhanden, mit denen ein Einzelgenehmigungsprozess, ein Quorumgenehmigungsprozess (Prozentsatz aller Genehmiger) und ein komplexer Genehmigungsprozess, der aus einer Abfolge einer Quorumgenehmigung und einer Einzelgenehmigung besteht, abgerufen werden.
@@ -24,7 +24,7 @@ Dieses Beispiel veranschaulicht die Verwendung von vielen Features von Windows W
 ## <a name="sample-details"></a>Beispieldetails  
  Das folgende Diagramm veranschaulicht den Workflow des Dokumentgenehmigungsprozesses.  
   
- ![Die Prozess einen Dokumentgenehmigungsworkflow](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![Die Prozess einen Dokumentgenehmigungsworkflow](./media/approvalprocess.jpg "ApprovalProcess")  
   
  Aus Sicht des Clients funktioniert der Genehmigungsprozess wie folgt:  
   

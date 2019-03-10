@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 79459364fba51e8e10194a5e3681d6384beb16a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539895"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723919"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Vorgehensweise: Erstellen einer Suchtabelle mit der BindingSource-Komponente in Windows Forms
 Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datensätzen einer verknüpften Tabelle in einer Spalte dargestellt werden. In den folgenden Verfahren wird ein <xref:System.Windows.Forms.ComboBox>-Steuerelement für die Anzeige des Felds mit der Fremdschlüsselbeziehung von der übergeordneten zur untergeordneten Tabelle verwendet.  
@@ -35,7 +35,7 @@ Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datens�
   
  In diesem Szenario speichert eine Tabelle, nämlich KundenTabelle, die tatsächlichen Daten, die Sie anzeigen und speichern möchten. Um aber Platz zu sparen, lässt die Tabelle Daten weg, was für Klarheit sorgt. Die andere Tabelle, BestellungenTabelle, enthält nur erscheinungsbezogene Daten darüber, welche Kunden-ID-Nummer welchem Bestelldatum und welcher Bestell-ID entspricht. Die Kundennamen werden nicht erwähnt.  
   
- Es sind vier wichtige Eigenschaften im [ComboBox-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md) für das Erstellen der Nachschlagetabelle festgelegt.  
+ Es sind vier wichtige Eigenschaften im [ComboBox-Steuerelement](combobox-control-windows-forms.md) für das Erstellen der Nachschlagetabelle festgelegt.  
   
 -   Die Eigenschaft <xref:System.Windows.Forms.ComboBox.DataSource%2A> enthält den Namen der Tabelle.  
   
@@ -53,7 +53,7 @@ Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datens�
   
      Dieses Steuerelement zeigt die Spalte aus der übergeordneten Tabelle an.  
   
-2.  Ziehen Sie andere Steuerelemente zur Anzeige von Details aus der untergeordneten Tabelle. Das Format der Daten in der Tabelle bestimmt die Auswahl der Steuerelemente. Weitere Informationen finden Sie unter [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
+2.  Ziehen Sie andere Steuerelemente zur Anzeige von Details aus der untergeordneten Tabelle. Das Format der Daten in der Tabelle bestimmt die Auswahl der Steuerelemente. Weitere Informationen finden Sie unter [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md).  
   
 3.  Ziehen Sie ein <xref:System.Windows.Forms.BindingNavigator>-Steuerelement auf das Formular; damit können Sie die Daten in die untergeordnete Tabelle navigieren.  
   
@@ -93,6 +93,6 @@ Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datens�
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingSource-Komponente](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [ComboBox-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [BindingSource-Komponente](bindingsource-component.md)
+- [ComboBox-Steuerelement](combobox-control-windows-forms.md)
 - [Binden von Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

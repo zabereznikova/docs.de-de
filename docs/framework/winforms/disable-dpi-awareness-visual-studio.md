@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655997"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710536"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Deaktivieren Sie die DPI--Unterstützung in Visual Studio
 
@@ -21,11 +21,11 @@ Visual Studio ist eine Punkte pro Zoll (DPI) Anwendung, die erkennt automatisch 
 
 Die **Windows Forms-Designer** in Visual Studio verfügt nicht über Unterstützung für die Skalierung. Dies bewirkt, dass Probleme bei der Anzeige beim Öffnen von einige Forms in der **Windows Forms-Designer** auf hohe Punkte pro Zoll (HDPI) überwacht. Beispiele können Steuerelemente überlappen, wie in der folgenden Abbildung dargestellt angezeigt:
 
-![Windows Forms-Designer auf HDPI-monitor](media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
+![Windows Forms-Designer auf HDPI-monitor](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
 In Visual Studio 2017 Version 15,8 und höher, wenn Sie einem Formular im öffnen die **Windows Forms-Designer** einen Monitor HDPI Visual Studio ein gelber Balken nur zu Informationszwecken am oberen Rand der Designer zeigt:
 
-![Informationsleiste in Visual Studio neu starten, DPI-Wert ohne Modus](media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
+![Informationsleiste in Visual Studio neu starten, DPI-Wert ohne Modus](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Die Nachricht liest **Skalierung auf Ihre Hauptanzeige auf 200 % (192 dpi) festgelegt ist. Dies kann dazu führen, dass Renderingprobleme im Fenster Designers.**
 
@@ -75,7 +75,7 @@ Sie können auch nicht von DPI benachrichtigt werden Probleme für das Skalieren
 
 Um Benachrichtigungen zu deaktivieren, wählen Sie **Tools** > **Optionen** zum Öffnen der **Optionen** Dialogfeld. Wählen Sie dann **Windows Forms-Designer** > **allgemeine**, und legen Sie **DPI-Skalierung Benachrichtigungen** zu **"false"**.
 
-![DPI-Skalierung Benachrichtigungen-Option in Visual Studio](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+![DPI-Skalierung Benachrichtigungen-Option in Visual Studio](./media/disable-dpi-awareness-visual-studio/notifications-option.png)
 
 Wenn Sie Skalierung Benachrichtigungen später reaktivieren möchten, legen Sie die-Eigenschaft auf **"true"**.
 

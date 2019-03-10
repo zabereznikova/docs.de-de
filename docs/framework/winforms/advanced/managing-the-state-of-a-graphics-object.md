@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: 5e9e75876862a73be7ace08c09610923d007de4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540857"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717621"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Verwalten des Zustands eines Graphics-Objekts
 Die <xref:System.Drawing.Graphics> -Klasse ist das Herzstück von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Um alles zu zeichnen, Sie erhalten eine <xref:System.Drawing.Graphics> Objekt, dessen Eigenschaften festlegen und seine Methoden aufrufen <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, usw.).  
@@ -67,7 +67,7 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>Transformationen  
- Ein <xref:System.Drawing.Graphics> -Objekt verwaltet zwei Transformationen ("World" und "Seite"), die für alle Elemente, die vom, die angewendet werden <xref:System.Drawing.Graphics> Objekt. Eine affine Transformation kann in der globalen Transformation gespeichert werden. Affine Transformationen enthalten, skalieren, drehen, spiegeln, neigen und übersetzen. Die Seitentransformation kann für die Skalierung sowie zum Ändern von Einheiten (z. B. Pixel, Zoll) verwendet werden. Weitere Informationen finden Sie unter [Koordinatensysteme und Transformationen](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md).  
+ Ein <xref:System.Drawing.Graphics> -Objekt verwaltet zwei Transformationen ("World" und "Seite"), die für alle Elemente, die vom, die angewendet werden <xref:System.Drawing.Graphics> Objekt. Eine affine Transformation kann in der globalen Transformation gespeichert werden. Affine Transformationen enthalten, skalieren, drehen, spiegeln, neigen und übersetzen. Die Seitentransformation kann für die Skalierung sowie zum Ändern von Einheiten (z. B. Pixel, Zoll) verwendet werden. Weitere Informationen finden Sie unter [Koordinatensysteme und Transformationen](coordinate-systems-and-transformations.md).  
   
  Im folgenden Beispiel wird die Seite "und" World Transformationen von einem <xref:System.Drawing.Graphics> Objekt. Die globale Transformation wird auf eine 30-Grad-Drehung festgelegt. Die Seitentransformation wird festgelegt, sodass die Koordinaten für die zweite übergeben <xref:System.Drawing.Graphics.DrawEllipse%2A> als Millimeter anstelle von Pixel behandelt werden. Der Code führt zwei identische Aufrufe der <xref:System.Drawing.Graphics.DrawEllipse%2A> Methode. Die globale Transformation angewendet wird, mit dem ersten <xref:System.Drawing.Graphics.DrawEllipse%2A> Aufruf, und beide Transformationen ("World" und "Seite") gelten für die zweite <xref:System.Drawing.Graphics.DrawEllipse%2A> aufrufen.  
   
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  Die folgende Abbildung zeigt zwei Ellipsen. Beachten Sie, dass die 30-Grad-Drehung um den Ursprung des Koordinatensystems (linke obere Ecke des Clientbereichs), nicht jedoch zu den Mittelpunkten die Auslassungspunkte. Beachten Sie außerdem, dass mit der die Stiftbreite 1 1-Pixel für die erste Ellipse und 1 mm für die zweite Ellipse.  
   
- ![Ovale](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Ovale](./media/csgraphicsascon1.png "csgraphicsascon1")  
   
 ### <a name="clipping-region"></a>Ausschneidebereich  
  Ein <xref:System.Drawing.Graphics> -Objekt verwaltet einen Ausschneidebereich, der für alle Elemente, die von diesem gilt <xref:System.Drawing.Graphics> Objekt. Sie können den Ausschneidebereich festlegen, durch den Aufruf der <xref:System.Drawing.Graphics.SetClip%2A> Methode.  
@@ -148,8 +148,8 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
   
  Die folgende Abbildung zeigt die Zeilen abgeschnitten.  
   
- ![Clip-Bereich beschränkt](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
+ ![Clip-Bereich beschränkt](./media/graphicsascon2.png "graphicsascon2")  
   
 ## <a name="see-also"></a>Siehe auch
-- [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Verwenden geschachtelter Grafikcontainer](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+- [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Verwenden geschachtelter Grafikcontainer](using-nested-graphics-containers.md)

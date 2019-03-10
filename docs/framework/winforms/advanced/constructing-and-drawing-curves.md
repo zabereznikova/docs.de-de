@@ -6,22 +6,22 @@ helpviewer_keywords:
 - examples [Windows Forms], drawing curves
 - curves [Windows Forms], drawing
 ms.assetid: 76e92623-4130-4644-b867-faca58bdb3a2
-ms.openlocfilehash: d9a790060fdf0f0c2a739d99aba1b36cf0323f8b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92e7b1e8b4ce37db633b5dafe212a252b854d1af
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520616"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702710"
 ---
 # <a name="constructing-and-drawing-curves"></a>Erstellen und Zeichnen von Kurven
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] unterstützt mehrere Typen von Kurven: Ellipsen, Bögen, kardinale Splines und Bézier-Splines. Durch das umschließende Rechteck wird eine Ellipse definiert. ein Bogen ist ein Teil einer Ellipse, die durch einen Anfangswinkel und bei einem mittelpunktswinkel definiert. Eine cardinal-Splinekurve durch ein Array aus Punkten und Spannungsparameter definiert ist – die Kurve durchläuft reibungslos jedem Punkt im Array, und die Spannungsparameter beeinflusst die Möglichkeit, Steuerpunkte. Eine Béziersplinekurve wird durch zwei Endpunkte und die beiden Steuerpunkte, die die Kurve nicht über die Steuerpunkte übergibt definiert, aber die Steuerpunkte beeinflussen die Richtung und biegen wie die Kurve wird von einem Endpunkt zum anderen wechselt.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] unterstützt verschiedene Typen von Kurven: Ellipsen, Bögen, kardinale Splinekurven und Béziersplinekurven. Eine Ellipse wird durch deren umschließendes Rechteck definiert; ein Bogen ist ein Teil einer Ellipse, die von einem Startwinkel und bei einem mittelpunktswinkel definiert. Eine cardinal-Splinekurve durch ein Array von Punkten und Spannungsparameter definiert ist — die Kurve durchläuft reibungslos jeder Punkt im Array, und die Spannungsparameter wirkt sich auf die Möglichkeit, die Steuerpunkte. Eine Béziersplinekurve wird durch zwei Endpunkte und die beiden Steuerpunkte, die die Kurve nicht über die Control-Punkte erfüllt definiert, aber die Kontrollpunkte, beeinflussen die Richtung, und biegen Sie im Laufe der Kurve von einem Endpunkt mit dem anderen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Zeichnen von kardinalen Splines](../../../../docs/framework/winforms/advanced/how-to-draw-cardinal-splines.md)  
- Beschreibt kardinale Splines und wie sie gezeichnet werden soll.  
+ [Vorgehensweise: Zeichnen von kardinalen Splines](how-to-draw-cardinal-splines.md)  
+ Beschreibt kardinale Splinekurven und wie sie gezeichnet.  
   
- [Gewusst wie: Zeichnen eines einzelnen Bézier-Splines](../../../../docs/framework/winforms/advanced/how-to-draw-a-single-bezier-spline.md)  
- Beschreibt eine Béziersplinekurve und eine gezeichnet werden soll.  
+ [Vorgehensweise: Zeichnen Sie eine einzelne Béziersplinekurve](how-to-draw-a-single-bezier-spline.md)  
+ Beschreibt eine Béziersplinekurve und wie Sie gezeichnet.  
   
- [Gewusst wie: Zeichnen einer Folge von Bézier-Splines](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)  
- Erläutert, wie mehrere Bézier-Splines nacheinander gezeichnet werden soll.
+ [Vorgehensweise: Zeichnen Sie eine Sequenz von Béziersplinekurven](how-to-draw-a-sequence-of-bezier-splines.md)  
+ Erläutert, wie mehrere Béziersplinekurven nacheinander zu zeichnen.

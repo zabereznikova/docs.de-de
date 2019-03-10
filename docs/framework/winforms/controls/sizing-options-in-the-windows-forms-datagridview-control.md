@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: d3082da455df7497a4c54f963017910e54ac677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536307"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717907"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms
 <xref:System.Windows.Forms.DataGridView> Zeilen, Spalten und Header können aus vielen Gründen ihre Größe ändern. Die folgende Tabelle zeigt diese vorkommen.  
@@ -61,7 +61,7 @@ ms.locfileid: "54536307"
 ## <a name="automatic-sizing"></a>Automatische Größenänderung  
  Es gibt zwei Arten der automatischen größenanpassung in die <xref:System.Windows.Forms.DataGridView> Control: Spaltenfüllmodus und Content-basierte automatische größenanpassung.  
   
- Spaltenfüllmodus bewirkt, dass die sichtbaren Spalten im Steuerelement, um die Breite des Anzeigebereichs des Steuerelements zu füllen. Weitere Informationen zu diesen Modus, finden Sie unter [füllen Spalten-Modus im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md).  
+ Spaltenfüllmodus bewirkt, dass die sichtbaren Spalten im Steuerelement, um die Breite des Anzeigebereichs des Steuerelements zu füllen. Weitere Informationen zu diesen Modus, finden Sie unter [füllen Spalten-Modus im DataGridView-Steuerelement in Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md).  
   
  Sie können auch Zeilen, Spalten und Header automatisch anpasst, deren Größe an ihren Inhalt der Zelle konfigurieren. In diesem Fall wird die Änderung der Zelleninhalt Größe angepasst.  
   
@@ -154,6 +154,6 @@ ms.locfileid: "54536307"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Größenanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Größenanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelement von Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

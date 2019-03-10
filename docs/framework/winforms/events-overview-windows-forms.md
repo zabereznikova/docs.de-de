@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 6272da52103e0249112dc4ba717057951d67442f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543711"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710731"
 ---
 # <a name="events-overview-windows-forms"></a>Übersicht über Ereignisse (Windows Forms)
 Ein Ereignis ist eine Aktion, auf die Sie antworten oder im Code „behandeln“ können. Ereignisse können durch eine Benutzeraktion generiert werden, z. B. durch Klicken mit der Maus oder Drücken auf eine Taste; durch Programmcode; oder durch das System.  
@@ -26,12 +26,12 @@ Ein Ereignis ist eine Aktion, auf die Sie antworten oder im Code „behandeln“
 > [!NOTE]
 >  Viele Ereignisse treten im Zusammenhang mit anderen Ereignissen auf. Wenn beispielsweise ein <xref:System.Windows.Forms.Control.DoubleClick>-Ereignis auftritt, treten auch die <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseUp>- und <xref:System.Windows.Forms.Control.Click>-Ereignisse auf.  
   
- Weitere Informationen zum Auslösen und Nutzen eines Ereignisses, finden Sie unter [Ereignisse](../../../docs/standard/events/index.md).  
+ Weitere Informationen zum Auslösen und Nutzen eines Ereignisses, finden Sie unter [Ereignisse](../../standard/events/index.md).  
   
 ## <a name="delegates-and-their-role"></a>Delegaten und ihre Rolle  
  Delegaten sind Klassen, die häufig in den in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zu erstellenden ereignishandhabenden Mechanismen verwendet werden. Delegaten entsprechen in etwa Funktionszeigern, die häufig in [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] und anderen objektorientierten Sprachen verwendet werden. Im Gegensatz zu Funktionszeigern sind Delegaten objektorientiert, typsicher und sicher. Darüber hinaus bestehen Sie im Vergleich zu Funktionszeigern, die nur einen Verweis zu einer bestimmten Funktion enthalten, aus einem Verweis zu einem Objekt und Verweisen zu einem oder mehren Methoden in dem Objekt.  
   
- Das Ereignismodell verwendet *Delegaten* um Ereignisse an die Methoden zu binden, die verwendet werden, um sie zu behandeln. Mit dem Delegat können andere Klassen für eine Ereignisbenachrichtigung registriert werden, indem eine Handlermethode angegeben wird. Wenn das Ereignis auftritt, ruft der Delegat die gebundene Methode auf. Weitere Informationen zum Definieren von Delegaten finden Sie unter [Ereignisse](../../../docs/standard/events/index.md).  
+ Das Ereignismodell verwendet *Delegaten* um Ereignisse an die Methoden zu binden, die verwendet werden, um sie zu behandeln. Mit dem Delegat können andere Klassen für eine Ereignisbenachrichtigung registriert werden, indem eine Handlermethode angegeben wird. Wenn das Ereignis auftritt, ruft der Delegat die gebundene Methode auf. Weitere Informationen zum Definieren von Delegaten finden Sie unter [Ereignisse](../../standard/events/index.md).  
   
  Delegaten können an eine einzelne oder mehrere Methoden gebunden werden, das bezeichnet man als Multicasting. Beim Erstellen eines Delegaten für ein Ereignis erstellen Sie (oder der Windows-Forms-Designer) in der Regel ein Multicast-Ereignis. Eine seltene Ausnahme dazu ist möglicherweise ein Ereignis, das zu einer bestimmten Prozedur führt (z. B. das Anzeigen eines Dialogfelds), die logischerweise nicht mehrmals pro Ereignis auftritt. Weitere Informationen über das Erstellen von Multicastdelegaten finden Sie unter [Vorgehensweise: Kombinieren von Delegaten (Multicastdelegaten)](~/docs/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).  
   
@@ -44,5 +44,5 @@ Ein Ereignis ist eine Aktion, auf die Sie antworten oder im Code „behandeln“
  Der mit Delegaten verwendete Bindungsmechanismus ist dynamisch: ein Delegat kann zur Laufzeit an jede Methode gebunden werden, dessen Signatur mit der des Ereignishandlers übereinstimmt. Mit dieser Funktion können Sie die gebundene Methode abhängig von einer Bedingung einrichten oder ändern und einen Ereignishandler dynamisch an ein Steuerelement anfügen.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erstellen von Ereignishandlern in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Übersicht über Ereignishandler](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+- [Erstellen von Ereignishandlern in Windows Forms](creating-event-handlers-in-windows-forms.md)
+- [Übersicht über Ereignishandler](event-handlers-overview-windows-forms.md)

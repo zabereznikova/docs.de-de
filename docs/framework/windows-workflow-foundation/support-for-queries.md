@@ -2,23 +2,23 @@
 title: Unterstützung für Abfragen
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 5c46ed5ae2fc2cc2275bfa7251fe5f8fa346c1f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517990"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712005"
 ---
 # <a name="support-for-queries"></a>Unterstützung für Abfragen
 Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im Speicher auf. Benutzer können Instanzen auf Grundlage dieser Eigenschaften abfragen. Die folgende Liste enthält einige dieser bekannten Eigenschaften:  
   
--   **Name der Website.** Der Name der Website, die den Dienst enthält.  
+-   **Websitename.** Der Name der Website, die den Dienst enthält.  
   
--   **Relativen Pfad.** Der Pfad der Anwendung relativ zur Website.  
+-   **Relative Anwendungspfad.** Der Pfad der Anwendung relativ zur Website.  
   
--   **Relativen Pfad.** Der Pfad des Diensts relativ zur Anwendung.  
+-   **Relativer Pfad.** Der Pfad des Diensts relativ zur Anwendung.  
   
--   **Service Name.** Name des Diensts.  
+-   **Dienstname.** Name des Diensts.  
   
 -   **Dienst-Namespace.** Der Name des vom Dienst verwendeten Namespaces.  
   
@@ -29,12 +29,12 @@ Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im S
 > [!NOTE]
 >  Für selbst gehostete Szenarios mit dem Workflowdiensthost werden nur die letzten vier Eigenschaften aufgefüllt. Für Workflowanwendungsszenarios wird nur die letzte Eigenschaft aufgefüllt.  
   
- Die Workflowlaufzeit stellt Werte für die ersten drei Eigenschaften bereit. Der Workflowdiensthost gibt den Wert für die **Suspend Reason** Eigenschaft. Der SQL-Workflowinstanzspeicher selbst gibt Werte für die **Last Updated Machine** Eigenschaft.  
+ Die Workflowlaufzeit stellt Werte für die ersten drei Eigenschaften bereit. Der Workflowdiensthost gibt den Wert für die **Suspend Reason** Eigenschaft. Die SQL-Workflow-Instanz Store selbst gibt Werte für die **Last Updated Machine** Eigenschaft.  
   
- Der SQL-Workflowinstanzspeicher lässt Sie darüber hinaus die benutzerdefinierten Eigenschaften angeben, für die Sie die Werte in der Persistenzdatenbank speichern und die Sie in Abfragen verwenden möchten. Weitere Informationen zu benutzerdefinierten Werbeaktionen, finden Sie unter [Store Erweiterbarkeit](../../../docs/framework/windows-workflow-foundation/store-extensibility.md).  
+ Der SQL-Workflowinstanzspeicher lässt Sie darüber hinaus die benutzerdefinierten Eigenschaften angeben, für die Sie die Werte in der Persistenzdatenbank speichern und die Sie in Abfragen verwenden möchten. Weitere Informationen zu benutzerdefinierten heraufstufungen finden Sie unter [Store Erweiterbarkeit](store-extensibility.md).  
   
 ## <a name="views"></a>Ansichten  
- Der Instanzspeicher enthält die folgenden Ansichten. Finden Sie unter [Persistenzdatenbankschema](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md) Weitere Details.  
+ Der Instanzspeicher enthält die folgenden Ansichten. Finden Sie unter [Persistenzdatenbankschema](persistence-database-schema.md) Weitere Details.  
   
 ### <a name="the-instances-view"></a>Die Ansicht "Instances"  
  Die Ansicht "Instances" enthält die folgenden Felder:  
@@ -69,7 +69,7 @@ Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im S
   
 15. **EncodingOption**  
   
-16. **"Readwriteprimitivedataproperties"-Spalte**  
+16. **ReadWritePrimitiveDataProperties**  
   
 17. **WriteOnlyPrimitiveDataProperties**  
   
@@ -80,23 +80,23 @@ Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im S
 ### <a name="the-servicedeployments-view"></a>Die Ansicht "ServiceDeployments"  
  Die Ansicht "ServiceDeployments" enthält die folgenden Felder:  
   
-1.  **siteName**  
+1.  **SiteName**  
   
 2.  **RelativeServicePath**  
   
 3.  **RelativeApplicationPath**  
   
-4.  **Dienstname**  
+4.  **ServiceName**  
   
 5.  **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>Die Ansicht "InstancePromotedProperties"  
- Die Ansicht "InstancePromotedProperties" enthält die folgenden Felder. Ausführliche Informationen zum höher gestuften Eigenschaften finden Sie unter der [Store Erweiterbarkeit](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) Thema.  
+ Die Ansicht "InstancePromotedProperties" enthält die folgenden Felder. Weitere Informationen zu höher gestuften Eigenschaften finden Sie unter den [Store Erweiterbarkeit](store-extensibility.md) Thema.  
   
-1.  **Instanz-ID**  
+1.  **InstanceId**  
   
 2.  **EncodingOption**  
   
-3.  **Mit dem PromotionName**  
+3.  **PromotionName**  
   
-4.  **Value#** (ein Wertebereich von **Value1** auf **Value64**).
+4.  **Value#** (eine Reihe von Feldern aus **Value1** zu **Value64**).

@@ -22,156 +22,160 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 314c8b7268549380143a608bb423f849ad0bb64c
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 15fd79a1289bd54b81db551abbdfcd63deef3e24
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583269"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710302"
 ---
 # <a name="cryptographic-signatures"></a>Kryptografische Signaturen
-<a name="top"></a> Kryptografische digitale Signaturen verwenden Algorithmen für öffentliche Schlüssel, um die Datenintegrität sicherzustellen. Wenn Sie Daten mit einer digitalen Signatur signieren, kann eine andere Person die Signatur überprüfen und kann nachweisen, dass die Daten von Ihnen stammen und nicht geändert wurde, nachdem Sie sie signiert haben. Weitere Informationen zu digitalen Signaturen finden Sie unter [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).  
-  
- In diesem Thema wird erläutert, wie Sie zum Generieren und Überprüfen von digitalen Signaturen Klassen im <xref:System.Security.Cryptography?displayProperty=nameWithType> -Namespace verwenden.  
-  
--   [Generieren von Signaturen](#generate)  
-  
--   [Verifizieren von Signaturen](#verify)  
-  
-<a name="generate"></a>   
-## <a name="generating-signatures"></a>Generieren von Signaturen  
- Digitale Signaturen werden in der Regel auf Hashwerte angewendet, die größere Datenmengen darstellen. Das folgende Beispiel wendet eine digitale Signatur auf einen Hashwert an. Zuerst wird eine neue Instanz der <xref:System.Security.Cryptography.RSACryptoServiceProvider> -Klasse erstellt, um ein öffentliches/privates Schlüsselpaar zu generieren. Als Nächstes wird <xref:System.Security.Cryptography.RSACryptoServiceProvider> ein eine neue Instanz der <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> -Klasse übergeben. Dadurch wird der private Schlüssel an die <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>-Klasse übertragen, die letztlich die digitale Signatur vornimmt. Bevor Sie den Hashcode signieren können, müssen Sie einen zu verwendenden Hashalgorithmus angeben. Dieses Beispiel verwendet den SHA1-Algorithmus. Schließlich wird die <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> -Methode aufgerufen, um das Signieren vorzunehmen.  
-  
-```vb  
-Imports System  
-Imports System.Security.Cryptography  
-  
-Module Module1  
-    Sub Main()  
-        'The hash value to sign.  
-        Dim hashValue As Byte() = {59, 4, 248, 102, 77, 97, 142, 201, 210, 12, 224, 93, 25, 41, 100, 197, 213, 134, 130, 135}  
-  
-        'The value to hold the signed value.  
-        Dim signedHashValue() As Byte  
-  
-        'Generate a public/private key pair.  
-        Dim rsa As New RSACryptoServiceProvider()  
-  
-        'Create an RSAPKCS1SignatureFormatter object and pass it   
-        'the RSACryptoServiceProvider to transfer the private key.  
-        Dim rsaFormatter As New RSAPKCS1SignatureFormatter(rsa)  
-  
-        'Set the hash algorithm to SHA1.  
-        rsaFormatter.SetHashAlgorithm("SHA1")  
-  
-        'Create a signature for hashValue and assign it to   
-        'signedHashValue.  
-        signedHashValue = rsaFormatter.CreateSignature(hashValue)  
-    End Sub  
-End Module  
-  
-using System;  
-using System.Security.Cryptography;  
-```  
-  
-```csharp  
-class Class1  
-{  
-   static void Main()  
-   {  
-      //The hash value to sign.  
-      byte[] hashValue = {59,4,248,102,77,97,142,201,210,12,224,93,25,41,100,197,213,134,130,135};  
-  
-      //The value to hold the signed value.  
-      byte[] signedHashValue;  
-  
-      //Generate a public/private key pair.  
-      RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
-  
-      //Create an RSAPKCS1SignatureFormatter object and pass it the   
-      //RSACryptoServiceProvider to transfer the private key.  
-      RSAPKCS1SignatureFormatter rsaFormatter = new RSAPKCS1SignatureFormatter(rsa);  
-  
-      //Set the hash algorithm to SHA1.  
-      rsaFormatter.SetHashAlgorithm("SHA1");  
-  
-      //Create a signature for hashValue and assign it to   
-      //signedHashValue.  
-      signedHashValue = rsaFormatter.CreateSignature(hashValue);  
-   }  
-}  
-```  
-  
-### <a name="signing-xml-files"></a>Signieren von XML-Dateien  
- .NET Framework stellt den <xref:System.Security.Cryptography.Xml> -Namespace bereit, der es Ihnen ermöglicht, XML-Dateien zu signieren. Das Signieren von XML-Dateien ist wichtig, wenn Sie überprüfen möchten, ob der XML-Code aus einer bestimmten Quelle stammt. Wenn Sie z. B. einen Aktienkursdienst verwenden, der XML verwendet, können Sie die Quelle der XML-Datei überprüfen, wenn sie signiert ist.  
-  
- Die Klassen in diesem Namespace entsprechen den [XML Signature Syntax and Processing-Empfehlungen](https://www.w3.org/TR/xmldsig-core/) des World Wide Web Consortium.  
-  
- [Zurück nach oben](#top)  
-  
-<a name="verify"></a>   
-## <a name="verifying-signatures"></a>Verifizieren von Signaturen  
- Um sicherzustellen, dass Daten von einem bestimmten Anbieter signiert wurden, benötigen Sie die folgenden Informationen:  
-  
--   Der öffentliche Schlüssel des Anbieters, der die Daten signiert hat.  
-  
--   Die digitale XML-Signatur.  
-  
--   Die Daten, die signiert wurden.  
-  
--   Der vom Signaturgeber verwendete Hashalgorithmus.  
-  
- Zum Überprüfen einer Signatur, die von der <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> -Klasse signiert wurde, verwenden Sie die <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> -Klasse. Die <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> -Klasse muss dem öffentlichen Schlüssel des Signaturgebers bereitgestellt werden. Sie benötigen die Werte für den Modulo und den Exponenten, um den öffentlichen Schlüssel anzugeben. (Der Anbieter, der das öffentliche/private Schlüsselpaar generiert hat, sollte diese Werte bereitstellen.) Erstellen Sie zunächst ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, das den öffentlichen Schlüssel aufnimmt und die Signatur überprüft, und initialisieren Sie dann eine <xref:System.Security.Cryptography.RSAParameters>-Struktur mit den Modulo- und Exponentenwerten, die den öffentlichen Schlüssel angeben.  
-  
- Der folgende Code zeigt die Erstellung einer <xref:System.Security.Cryptography.RSAParameters> -Struktur. Die `Modulus` -Eigenschaft wird auf den Wert eines Bytearrays namens `modulusData` und die `Exponent` -Eigenschaft auf den Wert eines Bytearrays namens `exponentData`festgelegt.  
-  
-```vb  
-Dim rsaKeyInfo As RSAParameters  
-rsaKeyInfo.Modulus = modulusData  
-rsaKeyInfo.Exponent = exponentData  
-```  
-  
-```csharp  
-RSAParameters rsaKeyInfo;  
-rsaKeyInfo.Modulus = modulusData;  
-rsaKeyInfo.Exponent = exponentData;  
-```  
-  
- Nach der Erstellung des <xref:System.Security.Cryptography.RSAParameters> -Objekts können Sie eine neue Instanz der <xref:System.Security.Cryptography.RSACryptoServiceProvider> -Klasse mit den Wert initialisieren, die in <xref:System.Security.Cryptography.RSAParameters>angegeben sind. <xref:System.Security.Cryptography.RSACryptoServiceProvider> wird dann an den Konstruktor von <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> übergeben, um den Schlüssel zu übertragen.  
-  
- Dieser Prozess wird anhand des folgenden Beispiels veranschaulicht. In diesem Beispiel sind `hashValue` und `signedHashValue` Bytearrays, die von einem Remoteanbieter bereitgestellt werden. Der Remoteanbieter hat `hashValue` mithilfe des SHA1-Algorithmus signiert und so die digitale Signatur `signedHashValue`erzeugt. Die  
-  
- <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> -Methode überprüft, ob die digitale Signatur gültig ist und zum Signieren von `hashValue`verwendet wurde.  
-  
-```vb  
-Dim rsa As New RSACryptoServiceProvider()  
-rsa.ImportParameters(rsaKeyInfo)  
-Dim rsaDeformatter As New RSAPKCS1SignatureDeformatter(rsa)  
-rsaDeformatter.SetHashAlgorithm("SHA1")  
-If rsaDeformatter.VerifySignature(hashValue, signedHashValue) Then  
-   Console.WriteLine("The signature is valid.")  
-Else  
-   Console.WriteLine("The signture is not valid.")  
-End If  
-```  
-  
-```csharp  
-RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();  
-rsa.ImportParameters(rsaKeyInfo);  
-RSAPKCS1SignatureDeformatter rsaDeformatter = new RSAPKCS1SignatureDeformatter(rsa);  
-rsaDeformatter.SetHashAlgorithm("SHA1");  
-if(rsaDeformatter.VerifySignature(hashValue, signedHashValue))  
-{  
-   Console.WriteLine("The signature is valid.");  
-}  
-else  
-{  
-   Console.WriteLine("The signature is not valid.");  
-}  
-```  
-  
- Dieses Codefragment zeigt "`The signature is valid`" an, wenn die Signatur gültig ist, und "`The signature is not valid`", wenn sie ungültig ist.  
-  
+
+<a name="top"></a> Kryptografische digitale Signaturen verwenden Algorithmen für öffentliche Schlüssel, um die Datenintegrität sicherzustellen. Wenn Sie Daten mit einer digitalen Signatur signieren, kann eine andere Person die Signatur überprüfen und kann nachweisen, dass die Daten von Ihnen stammen und nicht geändert wurde, nachdem Sie sie signiert haben. Weitere Informationen zu digitalen Signaturen finden Sie unter [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).
+
+In diesem Thema wird erläutert, wie Sie zum Generieren und Überprüfen von digitalen Signaturen Klassen im <xref:System.Security.Cryptography?displayProperty=nameWithType> -Namespace verwenden.
+
+- [Generieren von Signaturen](#generate)
+
+- [Verifizieren von Signaturen](#verify)
+
+<a name="generate"></a>
+
+## <a name="generating-signatures"></a>Generieren von Signaturen
+
+Digitale Signaturen werden in der Regel auf Hashwerte angewendet, die größere Datenmengen darstellen. Das folgende Beispiel wendet eine digitale Signatur auf einen Hashwert an. Zuerst wird eine neue Instanz der <xref:System.Security.Cryptography.RSACryptoServiceProvider> -Klasse erstellt, um ein öffentliches/privates Schlüsselpaar zu generieren. Als Nächstes wird <xref:System.Security.Cryptography.RSACryptoServiceProvider> ein eine neue Instanz der <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> -Klasse übergeben. Dadurch wird der private Schlüssel an die <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter>-Klasse übertragen, die letztlich die digitale Signatur vornimmt. Bevor Sie den Hashcode signieren können, müssen Sie einen zu verwendenden Hashalgorithmus angeben. Dieses Beispiel verwendet den SHA1-Algorithmus. Schließlich wird die <xref:System.Security.Cryptography.AsymmetricSignatureFormatter.CreateSignature%2A> -Methode aufgerufen, um das Signieren vorzunehmen.
+
+```vb
+Imports System
+Imports System.Security.Cryptography
+
+Module Module1
+    Sub Main()
+        'The hash value to sign.
+        Dim hashValue As Byte() = {59, 4, 248, 102, 77, 97, 142, 201, 210, 12, 224, 93, 25, 41, 100, 197, 213, 134, 130, 135}
+
+        'The value to hold the signed value.
+        Dim signedHashValue() As Byte
+
+        'Generate a public/private key pair.
+        Dim rsa As New RSACryptoServiceProvider()
+
+        'Create an RSAPKCS1SignatureFormatter object and pass it
+        'the RSACryptoServiceProvider to transfer the private key.
+        Dim rsaFormatter As New RSAPKCS1SignatureFormatter(rsa)
+
+        'Set the hash algorithm to SHA1.
+        rsaFormatter.SetHashAlgorithm("SHA1")
+
+        'Create a signature for hashValue and assign it to
+        'signedHashValue.
+        signedHashValue = rsaFormatter.CreateSignature(hashValue)
+    End Sub
+End Module
+```
+
+```csharp
+using System;
+using System.Security.Cryptography;
+
+class Class1
+{
+   static void Main()
+   {
+      //The hash value to sign.
+      byte[] hashValue = {59,4,248,102,77,97,142,201,210,12,224,93,25,41,100,197,213,134,130,135};
+
+      //The value to hold the signed value.
+      byte[] signedHashValue;
+
+      //Generate a public/private key pair.
+      RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+
+      //Create an RSAPKCS1SignatureFormatter object and pass it the
+      //RSACryptoServiceProvider to transfer the private key.
+      RSAPKCS1SignatureFormatter rsaFormatter = new RSAPKCS1SignatureFormatter(rsa);
+
+      //Set the hash algorithm to SHA1.
+      rsaFormatter.SetHashAlgorithm("SHA1");
+
+      //Create a signature for hashValue and assign it to
+      //signedHashValue.
+      signedHashValue = rsaFormatter.CreateSignature(hashValue);
+   }
+}
+```
+
+### <a name="signing-xml-files"></a>Signieren von XML-Dateien
+
+.NET Framework stellt den <xref:System.Security.Cryptography.Xml> -Namespace bereit, der es Ihnen ermöglicht, XML-Dateien zu signieren. Das Signieren von XML-Dateien ist wichtig, wenn Sie überprüfen möchten, ob der XML-Code aus einer bestimmten Quelle stammt. Wenn Sie z. B. einen Aktienkursdienst verwenden, der XML verwendet, können Sie die Quelle der XML-Datei überprüfen, wenn sie signiert ist.
+
+Die Klassen in diesem Namespace entsprechen den [XML Signature Syntax and Processing-Empfehlungen](https://www.w3.org/TR/xmldsig-core/) des World Wide Web Consortium.
+
+[Zurück nach oben](#top)
+
+<a name="verify"></a>
+
+## <a name="verifying-signatures"></a>Verifizieren von Signaturen
+
+Um sicherzustellen, dass Daten von einem bestimmten Anbieter signiert wurden, benötigen Sie die folgenden Informationen:
+
+- Der öffentliche Schlüssel des Anbieters, der die Daten signiert hat.
+
+- Die digitale XML-Signatur.
+
+- Die Daten, die signiert wurden.
+
+- Der vom Signaturgeber verwendete Hashalgorithmus.
+
+Zum Überprüfen einer Signatur, die von der <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> -Klasse signiert wurde, verwenden Sie die <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> -Klasse. Die <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> -Klasse muss dem öffentlichen Schlüssel des Signaturgebers bereitgestellt werden. Sie benötigen die Werte für den Modulo und den Exponenten, um den öffentlichen Schlüssel anzugeben. (Der Anbieter, der das öffentliche/private Schlüsselpaar generiert hat, sollte diese Werte bereitstellen.) Erstellen Sie zunächst ein <xref:System.Security.Cryptography.RSACryptoServiceProvider>-Objekt, das den öffentlichen Schlüssel aufnimmt und die Signatur überprüft, und initialisieren Sie dann eine <xref:System.Security.Cryptography.RSAParameters>-Struktur mit den Modulo- und Exponentenwerten, die den öffentlichen Schlüssel angeben.
+
+Der folgende Code zeigt die Erstellung einer <xref:System.Security.Cryptography.RSAParameters> -Struktur. Die `Modulus` -Eigenschaft wird auf den Wert eines Bytearrays namens `modulusData` und die `Exponent` -Eigenschaft auf den Wert eines Bytearrays namens `exponentData`festgelegt.
+
+```vb
+Dim rsaKeyInfo As RSAParameters
+rsaKeyInfo.Modulus = modulusData
+rsaKeyInfo.Exponent = exponentData
+```
+
+```csharp
+RSAParameters rsaKeyInfo;
+rsaKeyInfo.Modulus = modulusData;
+rsaKeyInfo.Exponent = exponentData;
+```
+
+Nach der Erstellung des <xref:System.Security.Cryptography.RSAParameters> -Objekts können Sie eine neue Instanz der <xref:System.Security.Cryptography.RSACryptoServiceProvider> -Klasse mit den Wert initialisieren, die in <xref:System.Security.Cryptography.RSAParameters>angegeben sind. <xref:System.Security.Cryptography.RSACryptoServiceProvider> wird dann an den Konstruktor von <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> übergeben, um den Schlüssel zu übertragen.
+
+Dieser Prozess wird anhand des folgenden Beispiels veranschaulicht. In diesem Beispiel sind `hashValue` und `signedHashValue` Bytearrays, die von einem Remoteanbieter bereitgestellt werden. Der Remoteanbieter hat `hashValue` mithilfe des SHA1-Algorithmus signiert und so die digitale Signatur `signedHashValue`erzeugt. Die <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter.VerifySignature%2A?displayProperty=nameWithType> Methode überprüft, ob die digitale Signatur ist gültig und wurde zum Signieren verwendet die `hashValue`.
+
+```vb
+Dim rsa As New RSACryptoServiceProvider()
+rsa.ImportParameters(rsaKeyInfo)
+Dim rsaDeformatter As New RSAPKCS1SignatureDeformatter(rsa)
+rsaDeformatter.SetHashAlgorithm("SHA1")
+If rsaDeformatter.VerifySignature(hashValue, signedHashValue) Then
+   Console.WriteLine("The signature is valid.")
+Else
+   Console.WriteLine("The signature is not valid.")
+End If
+```
+
+```csharp
+RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+rsa.ImportParameters(rsaKeyInfo);
+RSAPKCS1SignatureDeformatter rsaDeformatter = new RSAPKCS1SignatureDeformatter(rsa);
+rsaDeformatter.SetHashAlgorithm("SHA1");
+if(rsaDeformatter.VerifySignature(hashValue, signedHashValue))
+{
+   Console.WriteLine("The signature is valid.");
+}
+else
+{
+   Console.WriteLine("The signature is not valid.");
+}
+```
+
+Dieses Codefragment zeigt "`The signature is valid`" an, wenn die Signatur gültig ist, und "`The signature is not valid`", wenn sie ungültig ist.
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

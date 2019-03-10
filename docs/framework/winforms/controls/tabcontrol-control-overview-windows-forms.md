@@ -9,12 +9,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], Windows Forms
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
-ms.openlocfilehash: 10faaeba9e4de46447809df545cad4b4170acac9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 266421ac7182b80a0628b92d1f357afd48ca5e7e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520697"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712759"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>Übersicht über das TabControl-Steuerelement (Windows Forms)
 Mit <xref:System.Windows.Forms.TabControl> in Windows Forms werden mehrere Registerkarten wie Karteireiter in einem Notizbuch oder Reiter in einem Satz von Ordnern in einem Aktenschrank angezeigt. Die Registerkarten können Bilder und weitere Steuerelemente enthalten. Sie können das Registerkarten-Steuerelement verwenden, um die Art des Dialogfelds auf mehreren Seiten zu erstellen, die vielen Stellen in der Windows-Betriebssystem, wie z. B. die Anzeigeeigenschaften für Control Panel angezeigt wird. Darüber hinaus die <xref:System.Windows.Forms.TabControl> können verwendet werden, um die Eigenschaftenseiten, zu erstellen, die verwendet werden, um eine Gruppe verwandter Eigenschaften festzulegen.  
@@ -24,9 +24,9 @@ Mit <xref:System.Windows.Forms.TabControl> in Windows Forms werden mehrere Regis
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.TabControl>
-- [TabControl-Steuerelement](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
-- [Vorgehensweise: Ändern der Darstellung der TabControl-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
-- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten zu TabControls in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Vorgehensweise: Deaktivieren von Registerkarten](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)
-- [Dialogfelder in Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)
+- [TabControl-Steuerelement](tabcontrol-control-windows-forms.md)
+- [Vorgehensweise: Ändern der Darstellung der TabControl-Steuerelement in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte](how-to-add-a-control-to-a-tab-page.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten zu TabControls in Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Vorgehensweise: Deaktivieren von Registerkarten](how-to-disable-tab-pages.md)
+- [Dialogfelder in Windows Forms](../dialog-boxes-in-windows-forms.md)

@@ -15,18 +15,18 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664743"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711300"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Von Windows Forms unterstützte Datenquellen
 In der Vergangenheit wurde die Datenbindung in Anwendungen verwendet, um Daten in Datenbanken nutzen. Mit Windows Forms-Datenbindung, können Sie Daten aus Datenbanken sowie Daten in andere Datenstrukturen, z. B. Arrays und Sammlungen, zugreifen, solange Sie bestimmte Mindestanforderungen erfüllt sind.  
   
 ## <a name="structures-to-bind-to"></a>Strukturen, um die Bindung an  
- In Windows Forms können Sie an eine Vielzahl von Strukturen binden, von einfachen Objekten (einfache Bindung), komplexe Liste z. B. ADO.NET Datentabellen (komplexe Bindung). Für einfache Bindung unterstützt Windows Forms die Bindung an die öffentlichen Eigenschaften für das einfache Objekt. Windows Forms listenbasierte Bindung in der Regel ist erforderlich, dass das Objekt unterstützt die <xref:System.Collections.IList> Schnittstelle oder die <xref:System.ComponentModel.IListSource> Schnittstelle. Darüber hinaus, wenn Sie über die Bindung sind eine <xref:System.Windows.Forms.BindingSource> -Komponente, die Sie binden können, auf ein Objekt, das unterstützt die <xref:System.Collections.IEnumerable> Schnittstelle. Weitere Informationen zu auf Datenbindung bezogene Schnittstellen, finden Sie unter [im Zusammenhang mit Schnittstellen mit Datenbindung](../../../docs/framework/winforms/interfaces-related-to-data-binding.md).  
+ In Windows Forms können Sie an eine Vielzahl von Strukturen binden, von einfachen Objekten (einfache Bindung), komplexe Liste z. B. ADO.NET Datentabellen (komplexe Bindung). Für einfache Bindung unterstützt Windows Forms die Bindung an die öffentlichen Eigenschaften für das einfache Objekt. Windows Forms listenbasierte Bindung in der Regel ist erforderlich, dass das Objekt unterstützt die <xref:System.Collections.IList> Schnittstelle oder die <xref:System.ComponentModel.IListSource> Schnittstelle. Darüber hinaus, wenn Sie über die Bindung sind eine <xref:System.Windows.Forms.BindingSource> -Komponente, die Sie binden können, auf ein Objekt, das unterstützt die <xref:System.Collections.IEnumerable> Schnittstelle. Weitere Informationen zu auf Datenbindung bezogene Schnittstellen, finden Sie unter [im Zusammenhang mit Schnittstellen mit Datenbindung](interfaces-related-to-data-binding.md).  
   
  Die folgende Liste enthält den Strukturen, dass Sie in Windows Forms zu binden können.  
   
@@ -58,6 +58,6 @@ In der Vergangenheit wurde die Datenbindung in Anwendungen verwendet, um Daten i
 -   <xref:System.Data.DataViewManager>. Ein <xref:System.Data.DataViewManager> ist eine angepasste Ansicht des gesamten <xref:System.Data.DataSet>, analog zu einem <xref:System.Data.DataView>, aber mit Beziehungen enthalten. Mit einem <xref:System.Data.DataViewManager.DataViewSettings%2A> , Sie können Sammlungssatz standardmäßige Filter- und Sortieroptionen für alle Ansichten, die die <xref:System.Data.DataViewManager> für eine bestimmte Tabelle hat.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Änderungsbenachrichtigung in der Windows Forms-Datenbindung](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Windows Forms-Datenbindung](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Änderungsbenachrichtigung in der Windows Forms-Datenbindung](change-notification-in-windows-forms-data-binding.md)
+- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)
+- [Windows Forms-Datenbindung](windows-forms-data-binding.md)
