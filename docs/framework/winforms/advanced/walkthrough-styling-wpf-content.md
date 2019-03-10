@@ -6,77 +6,77 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: ef81d9272acdddfc7d547de6f44725481e55dc3e
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303724"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712395"
 ---
-# <a name="walkthrough-styling-wpf-content"></a><span data-ttu-id="f6b43-102">Exemplarische Vorgehensweise: Formatieren von WPF-Inhalt</span><span class="sxs-lookup"><span data-stu-id="f6b43-102">Walkthrough: Styling WPF Content</span></span>
-<span data-ttu-id="f6b43-103">In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie eine Formatvorlage auf ein WPF-Steuerelement (Windows Presentation Foundation) angewendet wird, das in einem Windows Form-Objekt gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="f6b43-103">This walkthrough show you how to apply styling to a Windows Presentation Foundation (WPF) control hosted on a Windows Form.</span></span>
+# <a name="walkthrough-styling-wpf-content"></a><span data-ttu-id="e0695-102">Exemplarische Vorgehensweise: Formatieren von WPF-Inhalt</span><span class="sxs-lookup"><span data-stu-id="e0695-102">Walkthrough: Styling WPF Content</span></span>
+<span data-ttu-id="e0695-103">In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie eine Formatvorlage auf ein WPF-Steuerelement (Windows Presentation Foundation) angewendet wird, das in einem Windows Form-Objekt gehostet wird.</span><span class="sxs-lookup"><span data-stu-id="e0695-103">This walkthrough show you how to apply styling to a Windows Presentation Foundation (WPF) control hosted on a Windows Form.</span></span>
 
- <span data-ttu-id="f6b43-104">Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgaben aus:</span><span class="sxs-lookup"><span data-stu-id="f6b43-104">In this walkthrough, you perform the following tasks:</span></span>
+ <span data-ttu-id="e0695-104">Im Verlauf dieser exemplarischen Vorgehensweise führen Sie die folgenden Aufgaben aus:</span><span class="sxs-lookup"><span data-stu-id="e0695-104">In this walkthrough, you perform the following tasks:</span></span>
 
--   <span data-ttu-id="f6b43-105">Erstellen eines Projekts</span><span class="sxs-lookup"><span data-stu-id="f6b43-105">Create the project.</span></span>
+-   <span data-ttu-id="e0695-105">Erstellen eines Projekts</span><span class="sxs-lookup"><span data-stu-id="e0695-105">Create the project.</span></span>
 
--   <span data-ttu-id="f6b43-106">Erstellen des WPF-Steuerelementtyps</span><span class="sxs-lookup"><span data-stu-id="f6b43-106">Create the WPF control type.</span></span>
+-   <span data-ttu-id="e0695-106">Erstellen des WPF-Steuerelementtyps</span><span class="sxs-lookup"><span data-stu-id="e0695-106">Create the WPF control type.</span></span>
 
--   <span data-ttu-id="f6b43-107">Zuweisen einer Formatvorlage zum WPF-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f6b43-107">Apply a style to the WPF control.</span></span>
+-   <span data-ttu-id="e0695-107">Zuweisen einer Formatvorlage zum WPF-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="e0695-107">Apply a style to the WPF control.</span></span>
 
 > [!NOTE]
->  <span data-ttu-id="f6b43-108">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="f6b43-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="f6b43-109">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="f6b43-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="f6b43-110">Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="f6b43-110">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="e0695-108">Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen.</span><span class="sxs-lookup"><span data-stu-id="e0695-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="e0695-109">Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern.</span><span class="sxs-lookup"><span data-stu-id="e0695-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="e0695-110">Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="e0695-110">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-## <a name="prerequisites"></a><span data-ttu-id="f6b43-111">Vorraussetzungen</span><span class="sxs-lookup"><span data-stu-id="f6b43-111">Prerequisites</span></span>  
- <span data-ttu-id="f6b43-112">Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:</span><span class="sxs-lookup"><span data-stu-id="f6b43-112">You need the following components to complete this walkthrough:</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="e0695-111">Vorraussetzungen</span><span class="sxs-lookup"><span data-stu-id="e0695-111">Prerequisites</span></span>  
+ <span data-ttu-id="e0695-112">Zum Durchführen dieser exemplarischen Vorgehensweise benötigen Sie die folgenden Komponenten:</span><span class="sxs-lookup"><span data-stu-id="e0695-112">You need the following components to complete this walkthrough:</span></span>  
   
--   <span data-ttu-id="f6b43-113">Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="f6b43-113">Visual Studio 2012.</span></span>  
+-   <span data-ttu-id="e0695-113">Visual Studio 2012.</span><span class="sxs-lookup"><span data-stu-id="e0695-113">Visual Studio 2012.</span></span>  
   
-## <a name="creating-the-project"></a><span data-ttu-id="f6b43-114">Erstellen des Projekts</span><span class="sxs-lookup"><span data-stu-id="f6b43-114">Creating the Project</span></span>  
- <span data-ttu-id="f6b43-115">Zunächst muss das Windows Forms-Projekt erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="f6b43-115">The first step is to create the Windows Forms project.</span></span>  
+## <a name="creating-the-project"></a><span data-ttu-id="e0695-114">Erstellen des Projekts</span><span class="sxs-lookup"><span data-stu-id="e0695-114">Creating the Project</span></span>  
+ <span data-ttu-id="e0695-115">Zunächst muss das Windows Forms-Projekt erstellt werden.</span><span class="sxs-lookup"><span data-stu-id="e0695-115">The first step is to create the Windows Forms project.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f6b43-116">Beim Hosten von WPF-Inhalt werden nur C#- und Visual Basic-Projekte unterstützt.</span><span class="sxs-lookup"><span data-stu-id="f6b43-116">When hosting WPF content, only C# and Visual Basic projects are supported.</span></span>  
+>  <span data-ttu-id="e0695-116">Beim Hosten von WPF-Inhalt werden nur C#- und Visual Basic-Projekte unterstützt.</span><span class="sxs-lookup"><span data-stu-id="e0695-116">When hosting WPF content, only C# and Visual Basic projects are supported.</span></span>  
   
-#### <a name="to-create-the-project"></a><span data-ttu-id="f6b43-117">So erstellen Sie das Projekt</span><span class="sxs-lookup"><span data-stu-id="f6b43-117">To create the project</span></span>  
+#### <a name="to-create-the-project"></a><span data-ttu-id="e0695-117">So erstellen Sie das Projekt</span><span class="sxs-lookup"><span data-stu-id="e0695-117">To create the project</span></span>  
   
--   <span data-ttu-id="f6b43-118">Erstellen Sie ein neues Windows Forms-Anwendungsprojekt in Visual Basic oder Visual c# mit dem Namen `StylingWpfContent`.</span><span class="sxs-lookup"><span data-stu-id="f6b43-118">Create a new Windows Forms Application project in Visual Basic or Visual C# named `StylingWpfContent`.</span></span>  
+-   <span data-ttu-id="e0695-118">Erstellen Sie ein neues Windows Forms-Anwendungsprojekt in Visual Basic oder Visual c# mit dem Namen `StylingWpfContent`.</span><span class="sxs-lookup"><span data-stu-id="e0695-118">Create a new Windows Forms Application project in Visual Basic or Visual C# named `StylingWpfContent`.</span></span>  
   
-## <a name="creating-the-wpf-control-types"></a><span data-ttu-id="f6b43-119">Erstellen der WPF-Steuerelementtypen</span><span class="sxs-lookup"><span data-stu-id="f6b43-119">Creating the WPF Control Types</span></span>  
- <span data-ttu-id="f6b43-120">Nachdem Sie dem Projekt ein WPF-Steuerelement hinzugefügt haben, können Sie dieses in einem <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement hosten.</span><span class="sxs-lookup"><span data-stu-id="f6b43-120">After you add a WPF control type to the project, you can host it in an <xref:System.Windows.Forms.Integration.ElementHost> control.</span></span>  
+## <a name="creating-the-wpf-control-types"></a><span data-ttu-id="e0695-119">Erstellen der WPF-Steuerelementtypen</span><span class="sxs-lookup"><span data-stu-id="e0695-119">Creating the WPF Control Types</span></span>  
+ <span data-ttu-id="e0695-120">Nachdem Sie dem Projekt ein WPF-Steuerelement hinzugefügt haben, können Sie dieses in einem <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement hosten.</span><span class="sxs-lookup"><span data-stu-id="e0695-120">After you add a WPF control type to the project, you can host it in an <xref:System.Windows.Forms.Integration.ElementHost> control.</span></span>  
   
-#### <a name="to-create-wpf-control-types"></a><span data-ttu-id="f6b43-121">So erstellen Sie WPF-Steuerelementtypen</span><span class="sxs-lookup"><span data-stu-id="f6b43-121">To create WPF control types</span></span>  
+#### <a name="to-create-wpf-control-types"></a><span data-ttu-id="e0695-121">So erstellen Sie WPF-Steuerelementtypen</span><span class="sxs-lookup"><span data-stu-id="e0695-121">To create WPF control types</span></span>  
   
-1.  <span data-ttu-id="f6b43-122">Fügen Sie der Projektmappe ein neues WPF-<xref:System.Windows.Controls.UserControl>-Projekt hinzu.</span><span class="sxs-lookup"><span data-stu-id="f6b43-122">Add a new WPF <xref:System.Windows.Controls.UserControl> project to the solution.</span></span> <span data-ttu-id="f6b43-123">Verwenden Sie den Standardnamen, `UserControl1.xaml`, für den Steuerelementtyp.</span><span class="sxs-lookup"><span data-stu-id="f6b43-123">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="f6b43-124">Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen von neuen WPF-Inhalts in Windows Forms zur Entwurfszeit](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="f6b43-124">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
+1.  <span data-ttu-id="e0695-122">Fügen Sie der Projektmappe ein neues WPF-<xref:System.Windows.Controls.UserControl>-Projekt hinzu.</span><span class="sxs-lookup"><span data-stu-id="e0695-122">Add a new WPF <xref:System.Windows.Controls.UserControl> project to the solution.</span></span> <span data-ttu-id="e0695-123">Verwenden Sie den Standardnamen, `UserControl1.xaml`, für den Steuerelementtyp.</span><span class="sxs-lookup"><span data-stu-id="e0695-123">Use the default name for the control type, `UserControl1.xaml`.</span></span> <span data-ttu-id="e0695-124">Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen von neuen WPF-Inhalts in Windows Forms zur Entwurfszeit](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span><span class="sxs-lookup"><span data-stu-id="e0695-124">For more information, see [Walkthrough: Creating New WPF Content on Windows Forms at Design Time](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).</span></span>  
   
-2.  <span data-ttu-id="f6b43-125">Stellen Sie in der Entwurfsansicht sicher, dass `UserControl1` ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="f6b43-125">In Design view, make sure that `UserControl1` is selected.</span></span> <span data-ttu-id="f6b43-126">Weitere Informationen finden Sie unter [Vorgehensweise: Wählen Sie aus, und verschieben Sie Elemente auf der Entwurfsoberfläche](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="f6b43-126">For more information, see [How to: Select and Move Elements on the Design Surface](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).</span></span>  
+2.  <span data-ttu-id="e0695-125">Stellen Sie in der Entwurfsansicht sicher, dass `UserControl1` ausgewählt ist.</span><span class="sxs-lookup"><span data-stu-id="e0695-125">In Design view, make sure that `UserControl1` is selected.</span></span> <span data-ttu-id="e0695-126">Weitere Informationen finden Sie unter [Vorgehensweise: Wählen Sie aus, und verschieben Sie Elemente auf der Entwurfsoberfläche](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="e0695-126">For more information, see [How to: Select and Move Elements on the Design Surface](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).</span></span>  
   
-3.  <span data-ttu-id="f6b43-127">In der **Eigenschaften** legen den Wert des der <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften `200`.</span><span class="sxs-lookup"><span data-stu-id="f6b43-127">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties to `200`.</span></span>  
+3.  <span data-ttu-id="e0695-127">In der **Eigenschaften** legen den Wert des der <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften `200`.</span><span class="sxs-lookup"><span data-stu-id="e0695-127">In the **Properties** window, set the value of the <xref:System.Windows.FrameworkElement.Width%2A> and <xref:System.Windows.FrameworkElement.Height%2A> properties to `200`.</span></span>  
   
-4.  <span data-ttu-id="f6b43-128">Hinzufügen einer <xref:System.Windows.Controls.Button?displayProperty=nameWithType> die Steuerung an die <xref:System.Windows.Controls.UserControl> und legen Sie den Wert von der <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft **Abbrechen**.</span><span class="sxs-lookup"><span data-stu-id="f6b43-128">Add a <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **Cancel**.</span></span>  
+4.  <span data-ttu-id="e0695-128">Hinzufügen einer <xref:System.Windows.Controls.Button?displayProperty=nameWithType> die Steuerung an die <xref:System.Windows.Controls.UserControl> und legen Sie den Wert von der <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft **Abbrechen**.</span><span class="sxs-lookup"><span data-stu-id="e0695-128">Add a <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **Cancel**.</span></span>  
   
-5.  <span data-ttu-id="f6b43-129">Fügen Sie eine zweite <xref:System.Windows.Controls.Button?displayProperty=nameWithType> die Steuerung an die <xref:System.Windows.Controls.UserControl> und legen Sie den Wert von der <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft **OK**.</span><span class="sxs-lookup"><span data-stu-id="f6b43-129">Add a second <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **OK**.</span></span>  
+5.  <span data-ttu-id="e0695-129">Fügen Sie eine zweite <xref:System.Windows.Controls.Button?displayProperty=nameWithType> die Steuerung an die <xref:System.Windows.Controls.UserControl> und legen Sie den Wert von der <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft **OK**.</span><span class="sxs-lookup"><span data-stu-id="e0695-129">Add a second <xref:System.Windows.Controls.Button?displayProperty=nameWithType> control to the <xref:System.Windows.Controls.UserControl> and set the value of the <xref:System.Windows.Controls.ContentControl.Content%2A> property to **OK**.</span></span>  
   
-6.  <span data-ttu-id="f6b43-130">Erstellen Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="f6b43-130">Build the project.</span></span>  
+6.  <span data-ttu-id="e0695-130">Erstellen Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="e0695-130">Build the project.</span></span>  
   
-## <a name="applying-a-style-to-a-wpf-control"></a><span data-ttu-id="f6b43-131">Anwenden einer Formatvorlage auf ein WPF-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="f6b43-131">Applying a Style to a WPF Control</span></span>  
- <span data-ttu-id="f6b43-132">Sie können verschiedene Formatvorlagen auf ein WPF-Steuerelement anwenden, um seine Darstellung und das Verhalten zu ändern.</span><span class="sxs-lookup"><span data-stu-id="f6b43-132">You can apply different styling to a WPF control to change its appearance and behavior.</span></span>  
+## <a name="applying-a-style-to-a-wpf-control"></a><span data-ttu-id="e0695-131">Anwenden einer Formatvorlage auf ein WPF-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="e0695-131">Applying a Style to a WPF Control</span></span>  
+ <span data-ttu-id="e0695-132">Sie können verschiedene Formatvorlagen auf ein WPF-Steuerelement anwenden, um seine Darstellung und das Verhalten zu ändern.</span><span class="sxs-lookup"><span data-stu-id="e0695-132">You can apply different styling to a WPF control to change its appearance and behavior.</span></span>  
   
-#### <a name="to-apply-a-style-to-a-wpf-control"></a><span data-ttu-id="f6b43-133">So wenden Sie eine Formatvorlage auf ein WPF-Steuerelement an</span><span class="sxs-lookup"><span data-stu-id="f6b43-133">To apply a style to a WPF control</span></span>  
+#### <a name="to-apply-a-style-to-a-wpf-control"></a><span data-ttu-id="e0695-133">So wenden Sie eine Formatvorlage auf ein WPF-Steuerelement an</span><span class="sxs-lookup"><span data-stu-id="e0695-133">To apply a style to a WPF control</span></span>  
   
-1.  <span data-ttu-id="f6b43-134">Öffnen Sie `Form1` im Windows Forms-Designer.</span><span class="sxs-lookup"><span data-stu-id="f6b43-134">Open `Form1` in the Windows Forms Designer.</span></span>  
+1.  <span data-ttu-id="e0695-134">Öffnen Sie `Form1` im Windows Forms-Designer.</span><span class="sxs-lookup"><span data-stu-id="e0695-134">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-2.  <span data-ttu-id="f6b43-135">In der **Toolbox**, doppelklicken Sie auf `UserControl1` zum Erstellen einer Instanz von `UserControl1` auf dem Formular.</span><span class="sxs-lookup"><span data-stu-id="f6b43-135">In the **Toolbox**, double-click `UserControl1` to create an instance of `UserControl1` on the form.</span></span>  
+2.  <span data-ttu-id="e0695-135">In der **Toolbox**, doppelklicken Sie auf `UserControl1` zum Erstellen einer Instanz von `UserControl1` auf dem Formular.</span><span class="sxs-lookup"><span data-stu-id="e0695-135">In the **Toolbox**, double-click `UserControl1` to create an instance of `UserControl1` on the form.</span></span>  
   
-     <span data-ttu-id="f6b43-136">Eine Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement namens `elementHost1` gehostet.</span><span class="sxs-lookup"><span data-stu-id="f6b43-136">An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
+     <span data-ttu-id="e0695-136">Eine Instanz von `UserControl1` wird in einem neuen <xref:System.Windows.Forms.Integration.ElementHost>-Steuerelement namens `elementHost1` gehostet.</span><span class="sxs-lookup"><span data-stu-id="e0695-136">An instance of `UserControl1` is hosted in a new <xref:System.Windows.Forms.Integration.ElementHost> control named `elementHost1`.</span></span>  
   
-3.  <span data-ttu-id="f6b43-137">Der Smarttagbereich für `elementHost1`, klicken Sie auf **gehosteten Inhalt bearbeiten** aus der Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="f6b43-137">In the smart tag panel for `elementHost1`, click **Edit Hosted Content** from the drop-down list.</span></span>  
+3.  <span data-ttu-id="e0695-137">Der Smarttagbereich für `elementHost1`, klicken Sie auf **gehosteten Inhalt bearbeiten** aus der Dropdown-Liste.</span><span class="sxs-lookup"><span data-stu-id="e0695-137">In the smart tag panel for `elementHost1`, click **Edit Hosted Content** from the drop-down list.</span></span>  
   
-     <span data-ttu-id="f6b43-138">`UserControl1` wird im [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] geöffnet.</span><span class="sxs-lookup"><span data-stu-id="f6b43-138">`UserControl1` opens in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
+     <span data-ttu-id="e0695-138">`UserControl1` wird im [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] geöffnet.</span><span class="sxs-lookup"><span data-stu-id="e0695-138">`UserControl1` opens in the [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].</span></span>  
   
-4.  <span data-ttu-id="f6b43-139">Fügen Sie den folgenden XAML-Code in der XAML-Ansicht hinter dem `<UserControl>`-Starttag ein.</span><span class="sxs-lookup"><span data-stu-id="f6b43-139">In XAML view, insert the following XAML after the `<UserControl>` opening tag.</span></span>  
+4.  <span data-ttu-id="e0695-139">Fügen Sie den folgenden XAML-Code in der XAML-Ansicht hinter dem `<UserControl>`-Starttag ein.</span><span class="sxs-lookup"><span data-stu-id="e0695-139">In XAML view, insert the following XAML after the `<UserControl>` opening tag.</span></span>  
   
-     <span data-ttu-id="f6b43-140">Dieser XAML-Code erstellt einen Farbverlauf mit kontrastreichem Farbverlaufsrand.</span><span class="sxs-lookup"><span data-stu-id="f6b43-140">This XAML creates a gradient with a contrasting gradient border.</span></span> <span data-ttu-id="f6b43-141">Wenn das Steuerelement angeklickt wird, werden die Farbverläufe geändert, um den Eindruck einer gedrückten Schaltfläche zu generieren.</span><span class="sxs-lookup"><span data-stu-id="f6b43-141">When the control is clicked, the gradients are changed to generate a pressed button look.</span></span> <span data-ttu-id="f6b43-142">Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span><span class="sxs-lookup"><span data-stu-id="f6b43-142">For more information, see [Styling and Templating](../../../../docs/framework/wpf/controls/styling-and-templating.md).</span></span>  
+     <span data-ttu-id="e0695-140">Dieser XAML-Code erstellt einen Farbverlauf mit kontrastreichem Farbverlaufsrand.</span><span class="sxs-lookup"><span data-stu-id="e0695-140">This XAML creates a gradient with a contrasting gradient border.</span></span> <span data-ttu-id="e0695-141">Wenn das Steuerelement angeklickt wird, werden die Farbverläufe geändert, um den Eindruck einer gedrückten Schaltfläche zu generieren.</span><span class="sxs-lookup"><span data-stu-id="e0695-141">When the control is clicked, the gradients are changed to generate a pressed button look.</span></span> <span data-ttu-id="e0695-142">Weitere Informationen finden Sie unter [Erstellen von Formaten und Vorlagen](../../wpf/controls/styling-and-templating.md).</span><span class="sxs-lookup"><span data-stu-id="e0695-142">For more information, see [Styling and Templating](../../wpf/controls/styling-and-templating.md).</span></span>  
   
 ```xaml  
 <UserControl.Resources>  
@@ -126,34 +126,34 @@ ms.locfileid: "56303724"
 </UserControl.Resources>  
 ```  
   
-1.  <span data-ttu-id="f6b43-143">Wenden Sie die im vorherigen Schritt definierte `SimpleButton`-Formatvorlage auf die „Cancel“-Schaltfläche an, indem Sie den folgenden XAML-Code im `<Button>`-Tag der „Cancel“-Schaltfläche einfügen.</span><span class="sxs-lookup"><span data-stu-id="f6b43-143">Apply the `SimpleButton` style defined in the previous step to the Cancel button by inserting the following XAML in the `<Button>` tag of the Cancel button.</span></span>  
+1.  <span data-ttu-id="e0695-143">Wenden Sie die im vorherigen Schritt definierte `SimpleButton`-Formatvorlage auf die „Cancel“-Schaltfläche an, indem Sie den folgenden XAML-Code im `<Button>`-Tag der „Cancel“-Schaltfläche einfügen.</span><span class="sxs-lookup"><span data-stu-id="e0695-143">Apply the `SimpleButton` style defined in the previous step to the Cancel button by inserting the following XAML in the `<Button>` tag of the Cancel button.</span></span>  
   
     ```  
     Style="{StaticResource SimpleButton}  
     ```  
   
-     <span data-ttu-id="f6b43-144">Ihre Schaltflächendeklaration wird dem folgenden XAML-Code ähneln.</span><span class="sxs-lookup"><span data-stu-id="f6b43-144">Your button declaration will resemble the following XAML.</span></span>  
+     <span data-ttu-id="e0695-144">Ihre Schaltflächendeklaration wird dem folgenden XAML-Code ähneln.</span><span class="sxs-lookup"><span data-stu-id="e0695-144">Your button declaration will resemble the following XAML.</span></span>  
   
 ```xaml  
 <Button Height="23" Margin="41,52,98,0" Name="button1" VerticalAlignment="Top"  
                 Style="{StaticResource SimpleButton}">Cancel</Button>  
 ```  
   
-1.  <span data-ttu-id="f6b43-145">Erstellen Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="f6b43-145">Build the project.</span></span>  
+1.  <span data-ttu-id="e0695-145">Erstellen Sie das Projekt.</span><span class="sxs-lookup"><span data-stu-id="e0695-145">Build the project.</span></span>  
   
-2.  <span data-ttu-id="f6b43-146">Öffnen Sie `Form1` im Windows Forms-Designer.</span><span class="sxs-lookup"><span data-stu-id="f6b43-146">Open `Form1` in the Windows Forms Designer.</span></span>  
+2.  <span data-ttu-id="e0695-146">Öffnen Sie `Form1` im Windows Forms-Designer.</span><span class="sxs-lookup"><span data-stu-id="e0695-146">Open `Form1` in the Windows Forms Designer.</span></span>  
   
-3.  <span data-ttu-id="f6b43-147">Die neue Formatvorlage wird auf das Schaltflächensteuerelement angewendet.</span><span class="sxs-lookup"><span data-stu-id="f6b43-147">The new style is applied to the button control.</span></span>  
+3.  <span data-ttu-id="e0695-147">Die neue Formatvorlage wird auf das Schaltflächensteuerelement angewendet.</span><span class="sxs-lookup"><span data-stu-id="e0695-147">The new style is applied to the button control.</span></span>  
   
-4.  <span data-ttu-id="f6b43-148">Von der **Debuggen** , wählen Sie im Menü **Debuggen starten** zum Ausführen der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="f6b43-148">From the **Debug** menu, select **Start Debugging** to run the application.</span></span>  
+4.  <span data-ttu-id="e0695-148">Von der **Debuggen** , wählen Sie im Menü **Debuggen starten** zum Ausführen der Anwendung.</span><span class="sxs-lookup"><span data-stu-id="e0695-148">From the **Debug** menu, select **Start Debugging** to run the application.</span></span>  
   
-5.  <span data-ttu-id="f6b43-149">Klicken Sie auf die Schaltflächen "OK" und "Cancel", und beobachten Sie die Unterschiede.</span><span class="sxs-lookup"><span data-stu-id="f6b43-149">Click the OK and Cancel buttons and view the differences.</span></span>  
+5.  <span data-ttu-id="e0695-149">Klicken Sie auf die Schaltflächen "OK" und "Cancel", und beobachten Sie die Unterschiede.</span><span class="sxs-lookup"><span data-stu-id="e0695-149">Click the OK and Cancel buttons and view the differences.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6b43-150">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f6b43-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0695-150">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e0695-150">See also</span></span>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [<span data-ttu-id="f6b43-151">Migration und Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="f6b43-151">Migration and Interoperability</span></span>](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [<span data-ttu-id="f6b43-152">Verwenden von WPF-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="f6b43-152">Using WPF Controls</span></span>](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
-- [<span data-ttu-id="f6b43-153">Entwerfen von XAML-Code in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="f6b43-153">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [<span data-ttu-id="f6b43-154">Übersicht über XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="f6b43-154">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [<span data-ttu-id="f6b43-155">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="f6b43-155">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [<span data-ttu-id="e0695-151">Migration und Interoperabilität</span><span class="sxs-lookup"><span data-stu-id="e0695-151">Migration and Interoperability</span></span>](../../wpf/advanced/migration-and-interoperability.md)
+- [<span data-ttu-id="e0695-152">Verwenden von WPF-Steuerelementen</span><span class="sxs-lookup"><span data-stu-id="e0695-152">Using WPF Controls</span></span>](using-wpf-controls.md)
+- [<span data-ttu-id="e0695-153">Entwerfen von XAML-Code in Visual Studio</span><span class="sxs-lookup"><span data-stu-id="e0695-153">Design XAML in Visual Studio</span></span>](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [<span data-ttu-id="e0695-154">Übersicht über XAML (WPF)</span><span class="sxs-lookup"><span data-stu-id="e0695-154">XAML Overview (WPF)</span></span>](../../wpf/advanced/xaml-overview-wpf.md)
+- [<span data-ttu-id="e0695-155">Erstellen von Formaten und Vorlagen</span><span class="sxs-lookup"><span data-stu-id="e0695-155">Styling and Templating</span></span>](../../wpf/controls/styling-and-templating.md)
