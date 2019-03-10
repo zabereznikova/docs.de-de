@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über Windows Compatibility Pack und die Verwendu
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 09c5533dbc46d16585b7f3cbfd2a3a70819ceb75
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903750"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717894"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Verwenden des Windows Compatibility Pack zum Portieren auf .NET Core
 
@@ -53,7 +53,7 @@ Weitere Informationen finden Sie unter [Windows Compatibility Pack](https://gith
 
 3. Wenn Sie Windows beibehalten möchten, können Sie sofort beginnen.
 
-4. Wenn Sie die .NET Core-Anwendung oder die .NET Standard-Bibliothek unter Linux oder macOS ausführen möchten, verwenden Sie [API Analyzer](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/), um die Verwendungen der APIs zu ermitteln, die nicht plattformübergreifend funktionieren.
+4. Wenn Sie die .NET Core-Anwendung oder die .NET Standard-Bibliothek unter Linux oder macOS ausführen möchten, verwenden Sie [API Analyzer](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/), um die Verwendungen der APIs zu ermitteln, die nicht plattformübergreifend funktionieren.
 
 5. Entfernen Sie die Verwendungen dieser APIs, ersetzen Sie diese durch plattformübergreifende Alternativen, oder schützen Sie diese folgendermaßen mithilfe einer Plattformüberprüfung:
 

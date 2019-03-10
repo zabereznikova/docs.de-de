@@ -3,12 +3,12 @@ title: Benutzerdefinierte Vorlagen für dotnet new
 description: Erfahren Sie mehr zu benutzerdefinierten Vorlagen für alle Arten von .NET-Projekten und -Dateien.
 author: guardrex
 ms.date: 08/11/2017
-ms.openlocfilehash: 23dac9f4efd64ff93b00e41b1f4195e964871a3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503925"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679059"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Benutzerdefinierte Vorlagen für dotnet new
 
@@ -16,7 +16,7 @@ Das [.NET Core SDK](https://www.microsoft.com/net/download/core) enthält viele 
 
 Sie können benutzerdefinierte Vorlagen aus NuGet-Paketen in jedem NuGet-Feed installieren, indem Sie direkt auf eine *NUPKG*-NuGet-Datei verweisen, oder indem Sie ein Dateisystemverzeichnis angeben, das die Vorlage enthält. Die Vorlagen-Engine bietet Features, mit denen Sie Werte ersetzen, Dateien und Bereiche von Dateien ein- oder ausschließen und benutzerdefinierte Verarbeitungsvorgänge ausführen können, wenn Ihre Vorlage verwendet wird.
 
-Die Vorlagen-Engine ist Open Source, und das Onlinecoderepository befindet sich unter [dotnet/templating](https://github.com/dotnet/templating/) auf GitHub. Navigieren Sie zum Repository [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples), wo sie Beispielvorlagen finden. Weitere Vorlagen, einschließlich Drittanbietervorlagen, finden Sie auf GitHub unter [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new). Weitere Informationen zum Erstellen und Verwenden von benutzerdefinierten Vorlagen finden Sie unter [How to create your own templates for dotnet new (Erstellen Ihrer eigenen Vorlage für dotnet new)](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/) und im [GitHub-Repositorywiki dotnet/templating](https://github.com/dotnet/templating/wiki).
+Die Vorlagen-Engine ist Open Source, und das Onlinecoderepository befindet sich unter [dotnet/templating](https://github.com/dotnet/templating/) auf GitHub. Navigieren Sie zum Repository [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples), wo sie Beispielvorlagen finden. Weitere Vorlagen, einschließlich Drittanbietervorlagen, finden Sie auf GitHub unter [Verfügbare Vorlagen für dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new). Weitere Informationen zum Erstellen und Verwenden von benutzerdefinierten Vorlagen finden Sie unter [How to create your own templates for dotnet new (Erstellen Ihrer eigenen Vorlage für dotnet new)](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) und im [GitHub-Repositorywiki dotnet/templating](https://github.com/dotnet/templating/wiki).
 
 Eine exemplarische Vorgehensweise zum Erstellen einer Vorlage finden Sie im Tutorial [Create a custom template for dotnet new (in englischer Sprache)](~/docs/core/tutorials/create-custom-template.md).
 
@@ -45,11 +45,11 @@ Die Datei *template.json* wird in den Ordner *template.config* im Stammverzeichn
 | Member            | Typ          | Beschreibung |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Das JSON-Schema für die Datei *template.json*. Editor, die JSON-Schemas unterstützen, ermöglichen Features zum Bearbeiten von JSON-Dateien, wenn das Schema angegeben ist. [Visual Studio-Code](https://code.visualstudio.com/) erfordert z.B., dass dieser Member IntelliSense aktiviert. Verwenden Sie den Wert `http://json.schemastore.org/template`. |
-| `author`          | Zeichenfolge        | Der Autor der Vorlage. |
+| `author`          | string        | Der Autor der Vorlage. |
 | `classifications` | array(string) | Null (0) oder mehr Merkmale der Vorlage, die ein Benutzer verwenden kann, um die Vorlage zu finden. Die Klassifizierungen werden auch in der Spalte *Tags* angezeigt, wenn diese in einer Liste von Vorlagen angezeigt wird, die mit dem <code>dotnet new -l&#124;--list</code>-Befehl erzeugt wurden. |
-| `identity`        | Zeichenfolge        | Ein eindeutiger Namen für diese Vorlage |
-| `name`            | Zeichenfolge        | Der Name der Vorlage, der Benutzern angezeigt wird |
-| `shortName`       | Zeichenfolge        | Die Standardkurzform zum Auswählen der Vorlage, die für Umgebungen gilt, in denen der Vorlagenname vom Benutzer angegeben wird und nicht über eine GUI. Die Kurzform kann z.B. nützlich sein, wenn Sie Vorlagen aus einer Eingabeaufforderung mit CLI-Befehlen verwenden. |
+| `identity`        | string        | Ein eindeutiger Namen für diese Vorlage |
+| `name`            | string        | Der Name der Vorlage, der Benutzern angezeigt wird |
+| `shortName`       | string        | Die Standardkurzform zum Auswählen der Vorlage, die für Umgebungen gilt, in denen der Vorlagenname vom Benutzer angegeben wird und nicht über eine GUI. Die Kurzform kann z.B. nützlich sein, wenn Sie Vorlagen aus einer Eingabeaufforderung mit CLI-Befehlen verwenden. |
 
 #### <a name="example"></a>Beispiel:
 
@@ -82,11 +82,11 @@ Der Inhalt des Projektordners wird gemeinsam mit seiner Datei *.template.config/
 
 | Element            | Typ   | Beschreibung |
 | ------------------ | ------ | ----------- |
-| **\<authors>**     | Zeichenfolge | Eine durch Kommas getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Autoren werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete der gleichen Autoren zu geben. |
-| **\<description>** | Zeichenfolge | Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche. |
-| **\<id>**          | Zeichenfolge | Der Paketbezeichner, der die Groß- und Kleinschreibung nicht beachtet, der auf nuget.org oder im für das Paket verwendeten Katalog eindeutig sein muss. IDs dürfen keine Leerzeichen oder für eine URL unzulässige Zeichen enthalten. Sie müssen den Regeln für .NET Namespaces entsprechen. Informationen finden Sie im Abschnitt [Wählen eines eindeutigen Paketbezeichners und Festlegen der Versionsnummer](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
-| **\<packageType>** | Zeichenfolge | Fügen Sie dieses Element in ein **\<packageTypes>**-Element bei den **\<metadata>**-Elementen ein. Legen Sie das `name`-Attribut des **\<packageType>**-Elements auf `Template` fest. |
-| **\<version>**     | Zeichenfolge | Die Version des Pakets, die dem Format „hauptversion.nebenversion.patch“ folgt. Versionsnummern enthalten möglicherweise ein Suffix der Vorabversion, wie im Artikel zu [Vorabversionen](/nuget/create-packages/prerelease-packages#semantic-versioning) beschrieben. |
+| **\<authors>**     | string | Eine durch Kommas getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Autoren werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete der gleichen Autoren zu geben. |
+| **\<description>** | string | Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche. |
+| **\<id>**          | string | Der Paketbezeichner, der die Groß- und Kleinschreibung nicht beachtet, der auf nuget.org oder im für das Paket verwendeten Katalog eindeutig sein muss. IDs dürfen keine Leerzeichen oder für eine URL unzulässige Zeichen enthalten. Sie müssen den Regeln für .NET Namespaces entsprechen. Informationen finden Sie im Abschnitt [Wählen eines eindeutigen Paketbezeichners und Festlegen der Versionsnummer](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
+| **\<packageType>** | string | Fügen Sie dieses Element in ein **\<packageTypes>**-Element bei den **\<metadata>**-Elementen ein. Legen Sie das `name`-Attribut des **\<packageType>**-Elements auf `Template` fest. |
+| **\<version>**     | string | Die Version des Pakets, die dem Format „hauptversion.nebenversion.patch“ folgt. Versionsnummern enthalten möglicherweise ein Suffix der Vorabversion, wie im Artikel zu [Vorabversionen](/nuget/create-packages/prerelease-packages#semantic-versioning) beschrieben. |
 
 Das vollständige *NUSPEC*-Dateischema finden Sie in der [.nuspec-Referenz](/nuget/schema/nuspec). Eine *NUSPEC*-Beispieldatei für eine Vorlage wird im Tutorial [Create a custom template for dotnet new (Erstellen einer benutzerdefinierten Vorlage für dotnet new)](~/docs/core/tutorials/create-custom-template.md) verwendet.
 
@@ -155,5 +155,5 @@ dotnet new <TEMPLATE>
 - [Create a custom template for dotnet new (tutorial) (Erstellen einer benutzerdefinierten Vorlage für dotnet new (Tutorial))](../tutorials/create-custom-template.md)
 - [dotnet/templating GitHub repo Wiki (GitHub-Repositorywiki dotnet/templating)](https://github.com/dotnet/templating/wiki)
 - [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)
-- [How to create your own templates for dotnet new (So erstellen Sie Ihre eigenen Vorlagen für dotnet new)](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- [How to create your own templates for dotnet new (So erstellen Sie Ihre eigenen Vorlagen für dotnet new)](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
 - [*template.json*-Schema im JSON-Schemaspeicher](http://json.schemastore.org/template)

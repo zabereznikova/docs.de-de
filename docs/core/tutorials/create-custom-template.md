@@ -4,12 +4,12 @@ description: In diesem interessanten Tutorial erfahren Sie, wie Sie eine benutze
 author: guardrex
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 72cafab774187cf8c59b2a00d8adcc5028974c88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714057"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676446"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Erstellen eines benutzerdefinierten Vorlagen-Assistenten
 
@@ -70,11 +70,11 @@ Die Vorlage ist fertig. Jetzt haben Sie zwei Optionen zum Verteilen der Vorlage.
 
    | Element            | Typ   | Beschreibung |
    | ------------------ | ------ | ----------- |
-   | **\<authors>**     | Zeichenfolge | Eine durch Kommas getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Autoren werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete der gleichen Autoren zu geben. |
-   | **\<description>** | Zeichenfolge | Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche. |
-   | **\<id>**          | Zeichenfolge | Der Paketbezeichner, der die Groß- und Kleinschreibung nicht beachtet, der auf nuget.org oder im für das Paket verwendeten Katalog eindeutig sein muss. IDs dürfen keine Leerzeichen oder für eine URL unzulässige Zeichen enthalten. Sie müssen den Regeln für .NET Namespaces entsprechen. Informationen finden Sie im Abschnitt [Wählen eines eindeutigen Paketbezeichners und Festlegen der Versionsnummer](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
-   | **\<packageType>** | Zeichenfolge | Fügen Sie dieses Element in ein **\<packageTypes>**-Element bei den **\<metadata>**-Elementen ein. Legen Sie das `name`-Attribut des **\<packageType>**-Elements auf `Template` fest. |
-   | **\<version>**     | Zeichenfolge | Die Version des Pakets, die dem Format „hauptversion.nebenversion.patch“ folgt. Versionsnummern enthalten möglicherweise ein Suffix der Vorabversion, wie im Artikel zu [Vorabversionen](/nuget/create-packages/prerelease-packages#semantic-versioning) beschrieben. |
+   | **\<authors>**     | string | Eine durch Kommas getrennte Liste der Paketautoren, die mit Profilnamen unter nuget.org übereinstimmen. Autoren werden im NuGet-Katalog unter nuget.org angezeigt und werden verwendet, um Querverweise auf Pakete der gleichen Autoren zu geben. |
+   | **\<description>** | string | Eine ausführliche Beschreibung des Pakets für die Anzeige der Benutzeroberfläche. |
+   | **\<id>**          | string | Der Paketbezeichner, der die Groß- und Kleinschreibung nicht beachtet, der auf nuget.org oder im für das Paket verwendeten Katalog eindeutig sein muss. IDs dürfen keine Leerzeichen oder für eine URL unzulässige Zeichen enthalten. Sie müssen den Regeln für .NET Namespaces entsprechen. Informationen finden Sie im Abschnitt [Wählen eines eindeutigen Paketbezeichners und Festlegen der Versionsnummer](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
+   | **\<packageType>** | string | Fügen Sie dieses Element in ein **\<packageTypes>**-Element bei den **\<metadata>**-Elementen ein. Legen Sie das `name`-Attribut des **\<packageType>**-Elements auf `Template` fest. |
+   | **\<version>**     | string | Die Version des Pakets, die dem Format „hauptversion.nebenversion.patch“ folgt. Versionsnummern enthalten möglicherweise ein Suffix der Vorabversion, wie im Artikel zu [Vorabversionen](/nuget/create-packages/prerelease-packages#semantic-versioning) beschrieben. |
 
    Das vollständige *NUSPEC*-Dateischema finden Sie in der [.nuspec-Referenz](/nuget/schema/nuspec).
 
@@ -211,5 +211,5 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 
 - [dotnet/templating GitHub repo Wiki (GitHub-Repositorywiki dotnet/templating)](https://github.com/dotnet/templating/wiki)
 - [dotnet/dotnet-template-samples-GitHub-Repository](https://github.com/dotnet/dotnet-template-samples)
-- [How to create your own templates for dotnet new (So erstellen Sie Ihre eigenen Vorlagen für dotnet new)](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+- [How to create your own templates for dotnet new (So erstellen Sie Ihre eigenen Vorlagen für dotnet new)](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
 - [*template.json*-Schema im JSON-Schemaspeicher](http://json.schemastore.org/template)

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 47a5ae3e81b0320a094ecc79e6b08035de66e785
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443074"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679735"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>Neuerungen in .NET Core 3.0 (Vorschauversion 2)
 
@@ -24,16 +24,16 @@ In diesem Artikel werden Neuerungen in .NET Core 3.0 (Vorschauversion 2) beschri
 
 Weitere Informationen zu den Inhalten der einzelnen Versionen finden Sie in den folgenden Ankündigungen:
 
-- [.NET Core 3.0 Preview 1 announcement (Ankündigung von .NET Core 3.0 Preview 1)](https://blogs.msdn.microsoft.com/dotnet/2018/12/04/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [.NET Core 3.0 Preview 2 announcement (Ankündigung von .NET Core 3.0 Preview 2)](https://blogs.msdn.microsoft.com/dotnet/2019/01/29/announcing-net-core-3-preview-2/)
+- [.NET Core 3.0 Preview 1 announcement (Ankündigung von .NET Core 3.0 Preview 1)](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [.NET Core 3.0 Preview 2 announcement (Ankündigung von .NET Core 3.0 Preview 2)](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8.0
 
 .NET Core 3.0 unterstützt C# 8.0. Ab der Vorschauversion 2 von NET Core 3.0 werden neue Features unterstützt, die weiter unten aufgeführt sind. Weitere Informationen zu Features von C# 8.0 finden Sie in den folgenden Blogbeiträgen:
 
-- [Do more with patterns in C# 8.0 (Effektivere Verwendung von Mustern in C# 8.0)](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/)
-- [Take C# 8.0 for a spin (Neuerungen in C# 8.0)](https://blogs.msdn.microsoft.com/dotnet/2018/12/05/take-c-8-0-for-a-spin/)
-- [Building C# 8.0 (Neue Features in C# 8.0)](https://blogs.msdn.microsoft.com/dotnet/2018/11/12/building-c-8-0/)
+- [Do more with patterns in C# 8.0 (Effektivere Verwendung von Mustern in C# 8.0)](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
+- [Take C# 8.0 for a spin (Neuerungen in C# 8.0)](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
+- [Building C# 8.0 (Neue Features in C# 8.0)](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
 
 
 ### <a name="ranges-and-indices"></a>Bereiche und Indizes
@@ -108,7 +108,7 @@ Mit Mustern können Sie anstelle von prozeduralem Code, in dem Tests für eine A
 
 Es gibt dennoch Fälle, in denen *switch-Anweisungen* weiterhin besser geeignet sind als *switch-Ausdrücke*, und Muster können mit beiden Syntaxstilen verwendet werden.
 
-Weitere Informationen finden Sie unter [Do more with patterns in C# 8.0 (Effektivere Verwendung von Mustern in C# 8.0)](https://blogs.msdn.microsoft.com/dotnet/2019/01/24/do-more-with-patterns-in-c-8-0/).
+Weitere Informationen finden Sie unter [Do more with patterns in C# 8.0 (Effektivere Verwendung von Mustern in C# 8.0)](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/).
 
 ## <a name="ieee-floating-point-improvements"></a>Verbesserungen bei Gleitkommazahlen gemäß IEEE-Spezifikation
 
@@ -271,7 +271,7 @@ dotnet new winforms
 
 Neu in Vorschauversion 2 von Visual Studio 2019 sind Vorlagen für die Option **Neues Projekt** für Windows Forms und WPF in .NET Core 3.0. Designer werden nach wie vor noch nicht unterstützt. Sie können die Projekte in Visual Studio 2019 öffnen, starten und debuggen.
 
-Ab Visual Studio 2017 15.9 ist es möglich, [.NET Core-Vorschauversionen zu aktivieren](https://blogs.msdn.microsoft.com/dotnet/2018/11/13/net-core-tooling-update-for-visual-studio-2017-version-15-9/). Dieses Feature müssen Sie jedoch erst aktivieren, und es handelt sich dabei nicht um ein unterstütztes Szenario.
+Ab Visual Studio 2017 15.9 ist es möglich, [.NET Core-Vorschauversionen zu aktivieren](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/). Dieses Feature müssen Sie jedoch erst aktivieren, und es handelt sich dabei nicht um ein unterstütztes Szenario.
 
 Die neuen Projekte sind die gleichen wie die bestehenden.NET Core Projekte, mit ein paar Ergänzungen. Hier ist der Vergleich eines einfachen .NET Core-Konsolenprojekts mit einem einfachen Windows Forms- und WPF-Projekt.
 
@@ -730,9 +730,9 @@ NET Core 3 Vorschauversion 1 enthält außerdem die folgenden Verbesserungen:
 
 ## <a name="tiered-compilation"></a>Mehrstufig Kompilierung
 
-Die [mehrstufig Kompilierung](https://blogs.msdn.microsoft.com/dotnet/2018/08/02/tiered-compilation-preview-in-net-core-2-1/) ist bei .NET Core 3.0 standardmäßig aktiviert. Es ist ein Feature, das es der Runtime ermöglicht, den Just-In-Time (JIT)-Compiler adaptiver zu nutzen, um eine bessere Leistung zu erzielen, sowohl beim Start als auch zur Maximierung des Durchsatzes.
+Die [mehrstufig Kompilierung](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) ist bei .NET Core 3.0 standardmäßig aktiviert. Es ist ein Feature, das es der Runtime ermöglicht, den Just-In-Time (JIT)-Compiler adaptiver zu nutzen, um eine bessere Leistung zu erzielen, sowohl beim Start als auch zur Maximierung des Durchsatzes.
 
-Dieses Feature wurde als abonnierbares Feature für [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) hinzugefügt, und anschließend standardmäßig in der [.NET Core 2.2 Vorschauversion 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/) aktiviert. Anschließend wurde es wieder zurückgesetzt, und ist mit dem Release von .NET Core 2.2 wieder abonnierbar.
+Dieses Feature wurde als abonnierbares Feature für [.NET Core 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-1/) hinzugefügt, und anschließend standardmäßig in der [.NET Core 2.2 Vorschauversion 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/) aktiviert. Anschließend wurde es wieder zurückgesetzt, und ist mit dem Release von .NET Core 2.2 wieder abonnierbar.
 
 ## <a name="arm64-linux-support"></a>ARM64-Linux-Support
 

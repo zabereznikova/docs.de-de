@@ -4,12 +4,12 @@ description: Dieses Tutorial zeigt das Erstellen einer einfachen .NET Core-Anwen
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: addaabb41e57e03a5cf4ec5b2fa3b8b4f3089b32
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169585"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372918"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>Bereitstellen einer .NET Core-Anwendung im Container
 
@@ -159,7 +159,7 @@ Die [**COPY**](https://docs.docker.com/engine/reference/builder/#copy)-Anweisung
 COPY *.csproj ./
 ```
 
-Die [**RUN**](https://docs.docker.com/engine/reference/builder/#run)-Anweisung führt jeden Befehl in einer neuen Ebene über dem aktuellen Image aus und committet die Ergebnisse. Das resultierende committete Image wird im nächsten Schritt in der Dockerdatei verwendet. Führen Sie **dotnet restore** aus, um die erforderlichen Abhängigkeiten der C#-Projektdatei abzurufen. 
+Die [**RUN**](https://docs.docker.com/engine/reference/builder/#run)-Anweisung führt jeden Befehl in einer neuen Ebene über dem aktuellen Image aus und committet die Ergebnisse. Das resultierende committete Image wird im nächsten Schritt in der Dockerdatei verwendet. Führen Sie **dotnet restore** aus, um die erforderlichen Abhängigkeiten der C#-Projektdatei abzurufen.
 
 ```Dockerfile
 RUN dotnet restore
@@ -263,7 +263,7 @@ Im Folgenden finden Sie weiterführende Schritte:
 * [Docker for Azure Quickstarts (Docker für Azure-Schnellstarts)](https://docs.docker.com/docker-for-azure/#docker-community-edition-ce-for-azure)
 * [Deploy your app on Docker for Azure (Bereitstellen Ihrer App in Docker für Azure)](https://docs.docker.com/docker-for-azure/deploy/)
 
-> [!Note]
+> [!NOTE]
 > Wenn Sie kein Azure-Abonnement besitzen, [registrieren Sie sich noch heute für ein kostenloses 30-Tage-Konto](https://azure.microsoft.com/free/?b=16.48), und erhalten Sie ein Azure-Guthaben in Höhe von 200 US-Dollar, um eine beliebige Kombination von Azure-Diensten zu testen.
 
 ## <a name="docker-images-used-in-this-sample"></a>In diesem Beispiel verwendete Docker-Images
