@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], setting and returning dates
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-ms.openlocfilehash: 678fc5883096d82937c4a1677d2f7f345e955ae1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73c40a48a75955d1ba44decae6b50ca641a63f7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562205"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703213"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Vorgehensweise: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows Forms
 Die aktuell im <xref:System.Windows.Forms.DateTimePicker>-Steuerelement von Windows Forms ausgewählte Datumsangabe (Datum und Uhrzeit) ist durch die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft bestimmt. Sie können die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft festlegen, bevor das Steuerelement angezeigt wird (z. B. zur Entwurfszeit oder im <xref:System.Windows.Forms.Form.Load>-Ereignis des Formulars), um zu bestimmen, welches Datum zunächst im Steuerelement ausgewählt ist. Standardmäßig wird die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft des Steuerelements auf das aktuelle Datum festgelegt. Wenn Sie die <xref:System.Windows.Forms.DateTimePicker.Value%2A>-Eigenschaft des Steuerelements im Code ändern, wird das Steuerelement auf dem Formular automatisch entsprechend der neuen Einstellung aktualisiert.  
@@ -24,7 +24,7 @@ Die aktuell im <xref:System.Windows.Forms.DateTimePicker>-Steuerelement von Wind
   
 -   Für Datumswerte geben die Eigenschaften <xref:System.DateTime.Month%2A>, <xref:System.DateTime.Day%2A> und <xref:System.DateTime.Year%2A> Ganzzahlwerte für diese Zeiteinheiten des ausgewählten Datums zurück. Die <xref:System.DateTime.DayOfWeek%2A>-Eigenschaft gibt einen Wert zurück, der den ausgewählten Wochentag angibt (mögliche Werte sind in der <xref:System.DayOfWeek>-Enumeration aufgelistet).  
   
--   Für Zeitwerte geben die Eigenschaften <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A> und <xref:System.DateTime.Millisecond%2A> Ganzzahlwerte für diese Zeiteinheiten zurück. Um das Steuerelement zum Anzeigen von Zeiten konfigurieren zu können, finden Sie unter [Vorgehensweise: Anzeigen der Zeit mithilfe des DateTimePicker-Steuerelements](../../../../docs/framework/winforms/controls/how-to-display-time-with-the-datetimepicker-control.md).  
+-   Für Zeitwerte geben die Eigenschaften <xref:System.DateTime.Hour%2A>, <xref:System.DateTime.Minute%2A>, <xref:System.DateTime.Second%2A> und <xref:System.DateTime.Millisecond%2A> Ganzzahlwerte für diese Zeiteinheiten zurück. Um das Steuerelement zum Anzeigen von Zeiten konfigurieren zu können, finden Sie unter [Vorgehensweise: Anzeigen der Zeit mithilfe des DateTimePicker-Steuerelements](how-to-display-time-with-the-datetimepicker-control.md).  
   
 ### <a name="to-set-the-date-and-time-value-of-the-control"></a>So legen Sie das Datum und die Uhrzeit für das Steuerelement fest  
   
@@ -73,5 +73,5 @@ Die aktuell im <xref:System.Windows.Forms.DateTimePicker>-Steuerelement von Wind
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [DateTimePicker-Steuerelement](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)
-- [Vorgehensweise: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [DateTimePicker-Steuerelement](datetimepicker-control-windows-forms.md)
+- [Vorgehensweise: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

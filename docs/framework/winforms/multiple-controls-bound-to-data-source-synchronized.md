@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: c6930acb57aa3c311c76b1a2acd3bbca213d1f24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558890"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721384"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Vorgehensweise: Sicherstellen, dass mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, synchronisiert bleiben
 Wenn bei der Arbeit mit Datenbindung in Windows Forms sind mehrere Steuerelemente an die gleiche Datenquelle gebunden. In einigen Fällen kann es erforderlich sein einige zusätzliche Schritte durchführen, um sicherzustellen, dass die gebundenen Eigenschaften der Steuerelemente mit miteinander und mit der Datenquelle synchronisiert bleiben. Diese Schritte sind in zwei Situationen erforderlich:  
@@ -29,8 +29,8 @@ Wenn bei der Arbeit mit Datenbindung in Windows Forms sind mehrere Steuerelement
   
  Im Beispiel wird eine <xref:System.Windows.Forms.BindingSource> der Datenquelle und die Steuerelemente gebunden. Alternativ können Sie die Steuerelemente direkt an die Datenquelle zu binden und Abrufen der <xref:System.Windows.Forms.BindingManagerBase> für die Bindung von des Formulars <xref:System.Windows.Forms.Control.BindingContext%2A> und verarbeiten dann die <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> -Ereignis für die <xref:System.Windows.Forms.BindingManagerBase>. Ein Beispiel dazu, der Hilfeseite finden Sie Informationen zu den <xref:System.Windows.Forms.BindingManagerBase.BindingComplete> Ereignis <xref:System.Windows.Forms.BindingManagerBase>.  
   
- [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
@@ -41,7 +41,7 @@ Wenn bei der Arbeit mit Datenbindung in Windows Forms sind mehrere Steuerelement
 -   Ein Formular mit den <xref:System.Windows.Forms.Form.Load> Ereignis als behandelt und einem Aufruf an die `InitializeControlsAndDataSource` -Methode in der im Beispiel des Formulars <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Freigeben von gebundenen Daten in Formularen mithilfe der BindingSource-Komponente](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Änderungsbenachrichtigung in der Windows Forms-Datenbindung](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [Auf Datenbindung bezogene Schnittstellen](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)
-- [Windows Forms-Datenbindung](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Vorgehensweise: Freigeben von gebundenen Daten in Formularen mithilfe der BindingSource-Komponente](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Änderungsbenachrichtigung in der Windows Forms-Datenbindung](change-notification-in-windows-forms-data-binding.md)
+- [Auf Datenbindung bezogene Schnittstellen](interfaces-related-to-data-binding.md)
+- [Windows Forms-Datenbindung](windows-forms-data-binding.md)

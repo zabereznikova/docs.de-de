@@ -15,15 +15,15 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 263ad4ccbee29b31c0b10a87de82dd3ecf650919
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: d762c73862d99801c3c65ca12b4c97514834ac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664184"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712304"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Mausereignisse in Windows Forms
-Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Mauszeigers und den Zustand der Maustasten kennen. Dieses Thema enthält Details zum Abrufen dieser Informationen von Mausereignissen und erörtert die Reihenfolge, in der Mausklickereignisse in Windows Forms-Steuerelementen ausgelöst werden. Eine Liste und Beschreibung aller von den Mausereignissen, finden Sie unter [Maus Funktionsweise in Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Siehe auch [Übersicht über Ereignishandler (Windows Forms)](event-handlers-overview-windows-forms.md) und [Events Overview (Windows Forms)](events-overview-windows-forms.md).  
+Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Mauszeigers und den Zustand der Maustasten kennen. Dieses Thema enthält Details zum Abrufen dieser Informationen von Mausereignissen und erörtert die Reihenfolge, in der Mausklickereignisse in Windows Forms-Steuerelementen ausgelöst werden. Eine Liste und Beschreibung aller von den Mausereignissen, finden Sie unter [Maus Funktionsweise in Windows Forms](how-mouse-input-works-in-windows-forms.md).  Siehe auch [Übersicht über Ereignishandler (Windows Forms)](event-handlers-overview-windows-forms.md) und [Events Overview (Windows Forms)](events-overview-windows-forms.md).  
   
 ## <a name="mouse-information"></a>Mausinformationen  
  Ein <xref:System.Windows.Forms.MouseEventArgs> wird an Handler von Mausereignissen gesendet, die beim Drücken einer Maustaste und Verfolgen von Mausbewegungen ausgelöst werden. <xref:System.Windows.Forms.MouseEventArgs> enthält Informationen zum aktuellen Zustand der Maus, z. B. die Position des Mauszeigers in Clientkoordinaten, welche Maustasten gedrückt werden und ob das Mausrad bewegt wurde. Zahlreiche Mausereignisse, beispielsweise Ereignisse, die lediglich darüber informieren, dass der Mauszeiger die Grenzen eines Steuerelements überschritten hat, senden ein <xref:System.EventArgs> ohne weitere Informationen an den Ereignishandler.  
@@ -62,7 +62,7 @@ Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Maus
   
 8.  <xref:System.Windows.Forms.Control.MouseUp> -Ereignis.  
   
- Klicken Sie auf Ereignisse, ein Codebeispiel, das die Reihenfolge der Mausklickereignisse veranschaulicht, finden Sie unter [Vorgehensweise: Behandeln von Benutzereingabeereignissen in Windows Forms-Steuerelementen](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
+ Klicken Sie auf Ereignisse, ein Codebeispiel, das die Reihenfolge der Mausklickereignisse veranschaulicht, finden Sie unter [Vorgehensweise: Behandeln von Benutzereingabeereignissen in Windows Forms-Steuerelementen](how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
 ### <a name="individual-controls"></a>Einzelne Steuerelemente  
  Die folgenden Steuerelemente weisen nicht das Standardverhalten bei Mausklickereignissen auf:  
@@ -142,4 +142,4 @@ Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Maus
     >  Wenn der Benutzer den Mauszeiger bei gedrückter Maustaste aus dem umschaltbaren Steuerelement bewegt (z. B. wenn er die Maus bei gedrückter Maustaste vom <xref:System.Windows.Forms.Button>-Steuerelement weg bewegt), zeichnet das umschaltbare Steuerelement im erhöhten Zustand, und es tritt nur das <xref:System.Windows.Forms.Control.MouseUp>-Ereignis auf. Das <xref:System.Windows.Forms.Control.Click>-Ereignis oder das <xref:System.Windows.Forms.Control.MouseClick>-Ereignis tritt in dieser Situation nicht auf.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Mauseingabe in einer Windows Forms-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)

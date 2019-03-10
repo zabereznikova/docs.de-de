@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 87124438118f05d426d5a33c914634922e657c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498907"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711316"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validierung von Benutzereingaben in Windows Forms
 Wenn Benutzer Daten in Ihre Anwendung eingeben, empfiehlt es sich um sicherzustellen, dass die Daten gültig sind, bevor Sie Ihre Anwendung verwendet. Sie erfordern, dass bestimmte Textfelder nicht mit der Länge Null, ein Feld als eine Telefonnummer oder andere Art von wohlgeformte Daten formatiert werden, oder, dass eine Zeichenfolge keine unsicheren Zeichen enthalten, die zur Beeinträchtigung der Sicherheit einer Datenbank verwendet werden können. Windows Forms bietet mehrere Möglichkeiten zum Überprüfen der Eingabe in Ihrer Anwendung.  
@@ -22,14 +22,14 @@ Wenn Benutzer Daten in Ihre Anwendung eingeben, empfiehlt es sich um sicherzuste
   
  Die Maskierungssprache, mit dem <xref:System.Windows.Forms.MaskedTextBox> ist sehr flexibel. Sie können Sie erforderliche Zeichen, optionale Zeichen, einem Literalzeichen, z. B. Bindestriche und Klammern, Währungszeichen und Datumstrennzeichen angeben. Das Steuerelement funktioniert auch gut mit einer Datenquelle gebunden. Die <xref:System.Windows.Forms.Binding.Format> Ereignis für eine Datenbindung kann verwendet werden, um eingehende Daten zur Einhaltung der Maske neu zu formatieren und die <xref:System.Windows.Forms.Binding.Parse> -Ereignis kann verwendet werden, um ausgehende Daten zur Einhaltung der Spezifikationen des Datenfelds neu zu formatieren.  
   
- Weitere Informationen finden Sie unter [MaskedTextBox-Steuerelement](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md).  
+ Weitere Informationen finden Sie unter [MaskedTextBox-Steuerelement](./controls/maskedtextbox-control-windows-forms.md).  
   
 ## <a name="event-driven-validation"></a>Ereignisgesteuerte Überprüfung  
  Wenn Sie vollständige programmgesteuerte Kontrolle über die Validierung möchten oder komplexe validierungsüberprüfungen durchführen müssen, sollten Sie die Überprüfung-Ereignisse, die in den meisten Windows Forms-Steuerelemente integriert verwenden. Jedes Steuerelement, das freier Form Benutzereingaben akzeptiert hat eine <xref:System.Windows.Forms.Control.Validating> -Ereignis, das erfolgt, wenn das Steuerelement die datenvalidierung erfordert. In der <xref:System.Windows.Forms.Control.Validating> Ereignisbehandlungsmethode, Sie können überprüfen, eine Benutzereingabe auf verschiedene Weise. Wenn Sie ein Textfeld, die eine Postleitzahl enthalten muss verfügen, können Sie z. B. die Überprüfung auf folgende Weise ausführen:  
   
 -   Wenn die Postleitzahl für eine bestimmte Gruppe von Postleitzahlen gehören muss, können Sie einen Zeichenfolgenvergleich für die Eingabe zum Überprüfen der vom Benutzer eingegebenen Daten ausführen. Z. B. wenn die Postleitzahl in den Satz {10001, 10002 10003} sein muss, können klicken Sie dann einen Zeichenfolgenvergleich Sie um die Daten zu überprüfen.  
   
--   Wenn die Postleitzahl in einem bestimmten Formular sein muss können Sie reguläre Ausdrücke verwenden, zum Überprüfen der Daten, die vom Benutzer eingegeben werden. So überprüfen das Formular beispielsweise `#####` oder `#####-####`, können Sie den regulären Ausdruck `^(\d{5})(-\d{4})?$`. So überprüfen das Formular `A#A #A#`, können Sie den regulären Ausdruck `[A-Z]\d[A-Z] \d[A-Z]\d`. Weitere Informationen zu regulären Ausdrücken finden Sie unter [reguläre Ausdrücke von .NET Framework](../../../docs/standard/base-types/regular-expressions.md) und [Beispiele für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-examples.md).  
+-   Wenn die Postleitzahl in einem bestimmten Formular sein muss können Sie reguläre Ausdrücke verwenden, zum Überprüfen der Daten, die vom Benutzer eingegeben werden. So überprüfen das Formular beispielsweise `#####` oder `#####-####`, können Sie den regulären Ausdruck `^(\d{5})(-\d{4})?$`. So überprüfen das Formular `A#A #A#`, können Sie den regulären Ausdruck `[A-Z]\d[A-Z] \d[A-Z]\d`. Weitere Informationen zu regulären Ausdrücken finden Sie unter [reguläre Ausdrücke von .NET Framework](../../standard/base-types/regular-expressions.md) und [Beispiele für reguläre Ausdrücke](../../standard/base-types/regular-expression-examples.md).  
   
 -   Wenn die Postleitzahl in eine gültige Postleitzahl der Vereinigten Staaten sein muss, können Sie zum Überprüfen der Daten vom Benutzer eingegebene Postleitzahl Webdienst aufrufen.  
   
@@ -94,5 +94,5 @@ Wenn Benutzer Daten in Ihre Anwendung eingeben, empfiehlt es sich um sicherzuste
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
-- [MaskedTextBox-Steuerelement](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
-- [Beispiele für reguläre Ausdrücke](../../../docs/standard/base-types/regular-expression-examples.md)
+- [MaskedTextBox-Steuerelement](./controls/maskedtextbox-control-windows-forms.md)
+- [Beispiele für reguläre Ausdrücke](../../standard/base-types/regular-expression-examples.md)

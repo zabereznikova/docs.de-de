@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 18c1e2a5-9834-40d3-9b2e-2b545e4e769e
-ms.openlocfilehash: c44d338bbe026726abe77d41812363b9b10851f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce67a06a5fe43602258d52548e8d933b99548f44
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526063"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720470"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a>BindingNavigator-Steuerelement (Windows Forms)
 Das `BindingNavigator`-Steuerelement dient als Benutzeroberfläche zum Navigieren und Bearbeiten von Steuerelementen, die an Daten gebunden sind. Mithilfe des `BindingNavigator`-Steuerelements können Benutzer durch Daten in einem Windows Form navigieren und diese bearbeiten.  
@@ -19,16 +19,16 @@ Das `BindingNavigator`-Steuerelement dient als Benutzeroberfläche zum Navigiere
  Die Themen in diesem Abschnitt stellen eine Übersicht über das `BindingNavigator`-Steuerelement zur Verfügung und bieten schrittweise Anweisungen zum Verwenden des Steuerelements, Navigieren durch Daten und Navigieren durch <xref:System.Data.DataSet>.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über das BindingNavigator-Steuerelement](../../../../docs/framework/winforms/controls/bindingnavigator-control-overview-windows-forms.md)  
+ [Übersicht über das BindingNavigator-Steuerelement](bindingnavigator-control-overview-windows-forms.md)  
  Stellt die allgemeinen Konzepte des `BindingNavigator`-Steuerelements vor, das Benutzern die Navigation durch die Elemente einer Datenquelle ermöglicht.  
   
- [Vorgehensweise: Datennavigation mithilfe des BindingNavigator-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
+ [Vorgehensweise: Datennavigation mithilfe des BindingNavigator-Steuerelements in Windows Forms](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
  Enthält schrittweise Anleitungen zum Binden eines `BindingNavigator`-Steuerelements an eine Datenquelle.  
   
- [Vorgehensweise: Navigieren durch ein DataSet mithilfe des BindingNavigator-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/move-through-a-dataset-with-wf-bindingnavigator-control.md)  
+ [Vorgehensweise: Navigieren Sie durch ein DataSet mit dem BindingNavigator-Steuerelement in Windows Forms](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
  Veranschaulicht die Verwendung eines `BindingNavigator`-Steuerelements zum Navigieren durch Datensätze in einem <xref:System.Data.DataSet>.  
   
- Siehe auch [Vorgehensweise: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/load-save-and-cancel-bindingnavigator.md).  
+ Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Hinzufügen der laden, speichern und Abbrechen von Schaltflächen auf der Windows Forms BindingNavigator-Steuerelement](load-save-and-cancel-bindingnavigator.md).  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.BindingNavigator>  

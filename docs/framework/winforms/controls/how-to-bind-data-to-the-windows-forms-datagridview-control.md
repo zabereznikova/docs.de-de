@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f98f095f888a8ef3622fabbf4c4745af60e930e3
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: cbcc04625a14ebc23cacfb567951bf8f76f14985
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584056"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725102"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Vorgehensweise: Datenbindung in Windows Forms-DataGridView-Steuerelement
 
-Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt die standardmäßige Windows Forms-Datenbindungsmodell verwendet, damit es mit einer Vielzahl von Datenquellen gebunden werden kann. In der Regel Sie binden an eine <xref:System.Windows.Forms.BindingSource> , verwaltet die Interaktion mit der Datenquelle. Die <xref:System.Windows.Forms.BindingSource> kann jede beliebige Windows Forms-Datenquelle, die Ihnen viel Flexibilität bei der Auswahl oder Änderung des Daten Speicherorts bietet sein. Weitere Informationen zu den Datenquellen der <xref:System.Windows.Forms.DataGridView> Steuerelement unterstützt, finden Sie die [Übersicht über das DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt die standardmäßige Windows Forms-Datenbindungsmodell verwendet, damit es mit einer Vielzahl von Datenquellen gebunden werden kann. In der Regel Sie binden an eine <xref:System.Windows.Forms.BindingSource> , verwaltet die Interaktion mit der Datenquelle. Die <xref:System.Windows.Forms.BindingSource> kann jede beliebige Windows Forms-Datenquelle, die Ihnen viel Flexibilität bei der Auswahl oder Änderung des Daten Speicherorts bietet sein. Weitere Informationen zu den Datenquellen der <xref:System.Windows.Forms.DataGridView> Steuerelement unterstützt, finden Sie die [Übersicht über das DataGridView-Steuerelement](datagridview-control-overview-windows-forms.md).  
 
 Visual Studio bietet umfassende Unterstützung für die Datenbindung an das DataGridView-Steuerelement. Weitere Informationen finden Sie unter [Vorgehensweise: Binden von Daten an das Windows Forms-DataGridView-Steuerelement, das mithilfe des Designers](bind-data-to-the-datagrid-using-the-designer.md).  
 
@@ -44,8 +44,8 @@ Fügen Sie zum Erstellen und dieses Beispiel ausführen, die den Code in die *Fo
   
 Füllen Sie die `connectionString` Variable im Beispiel durch die Werte für Ihre Beispieldatenbank Northwind-SQL Server-Verbindung. Windows-Authentifizierung, integrierte Sicherheit, so genannte ist eine sicherere Methode für die Verbindung mit der Datenbank als ein Kennwort in der Verbindungszeichenfolge speichern. Weitere Informationen zur verbindungssicherheit finden Sie unter [Schützen von Verbindungsinformationen](../../data/adonet/protecting-connection-information.md).  
 
-[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
-[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
+[!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
+[!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.DataGridView>

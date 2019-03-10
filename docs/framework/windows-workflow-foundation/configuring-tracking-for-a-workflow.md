@@ -2,12 +2,12 @@
 title: Konfigurieren der Nachverfolgung für einen Workflow
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c9d38533d11497bd4404e4f8795d8a1ce9b17df9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491255"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719402"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurieren der Nachverfolgung für einen Workflow
 
@@ -67,7 +67,7 @@ Bei einem Workflowhost, der im <xref:System.ServiceModel.WorkflowServiceHost> ge
 Alternativ können Sie einem Workflowdienst, der im <xref:System.ServiceModel.WorkflowServiceHost> gehostet wird, die Erweiterung für das <xref:System.Activities.Tracking.EtwTrackingParticipant>-Verhalten über Code hinzufügen. Um einen benutzerdefinierten Überwachungsteilnehmer hinzuzufügen, erstellen Sie eine neue Verhaltenserweiterung, und fügen Sie diese dem <xref:System.ServiceModel.ServiceHost> hinzu, wie im folgenden Beispielcode gezeigt.
 
 > [!NOTE]
-> Wenn Sie Beispielcode, der zeigt, wie ein benutzerdefiniertes verhaltenselement erstellt wird, die einen benutzerdefinierten Überwachungsteilnehmer hinzufügt, anzeigen möchten, lesen Sie die [nachverfolgung](../../../docs/framework/windows-workflow-foundation/samples/tracking.md) Beispiele.
+> Wenn Sie Beispielcode, der zeigt, wie ein benutzerdefiniertes verhaltenselement erstellt wird, die einen benutzerdefinierten Überwachungsteilnehmer hinzufügt, anzeigen möchten, lesen Sie die [nachverfolgung](./samples/tracking.md) Beispiele.
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -141,7 +141,7 @@ if (null != workflowServiceHost)
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Konfigurieren der Nachverfolgung mit WorkflowInvoker
 
-Um die Nachverfolgung für einen mit <xref:System.Activities.WorkflowInvoker> ausgeführten Workflow zu konfigurieren, fügen Sie den Nachverfolgungsanbieter als Erweiterung einer <xref:System.Activities.WorkflowInvoker>-Instanz hinzu. Im folgenden Codebeispiel stammt aus dem [benutzerdefinierte nachverfolgung](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) Beispiel.
+Um die Nachverfolgung für einen mit <xref:System.Activities.WorkflowInvoker> ausgeführten Workflow zu konfigurieren, fügen Sie den Nachverfolgungsanbieter als Erweiterung einer <xref:System.Activities.WorkflowInvoker>-Instanz hinzu. Im folgenden Codebeispiel stammt aus dem [benutzerdefinierte nachverfolgung](./samples/custom-tracking.md) Beispiel.
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -185,7 +185,7 @@ Gehen Sie wie folgt vor, um Nachverfolgungsdatensätze anzuzeigen.
 
 Das folgende Bild zeigt Nachverfolgungsereignisse in der Ereignisanzeige an.
 
-![Ereignis-Viewer angezeigt, die Nachverfolgungsdatensätze](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")
+![Ereignis-Viewer angezeigt, die Nachverfolgungsdatensätze](./media/trackingeventviewer.PNG "TrackingEventViewer")
 
 ### <a name="registering-an-application-specific-provider-id"></a>Registrieren einer anwendungsspezifischen Anbieter-ID
 

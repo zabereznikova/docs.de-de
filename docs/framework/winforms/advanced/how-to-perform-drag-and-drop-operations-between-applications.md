@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: 89b1b89c01ba80393e0965858d7767d5c9029003
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e9556a69f3f5da4a47c5f5b1a6043a9a73dd8ff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718427"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713435"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Vorgehensweise: Operationen Sie Drag & Drop-zwischen Anwendungen
-Das Ausführen von Drag & Drop-Vorgängen zwischen Anwendungen unterscheidet sich nicht vom Aktivieren dieser Aktion innerhalb einer Anwendung, so lange sich die beiden betroffenen Anwendungen gemäß dem „Vertrag“ verhalten, der zwischen den Eigenschaften <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> und <xref:System.Windows.Forms.DragEventArgs.Effect%2A> eingerichtet wurde.  
+Das Ausführen von Drag &amp; Drop-Vorgängen zwischen Anwendungen unterscheidet sich nicht vom Aktivieren dieser Aktion innerhalb einer Anwendung, so lange sich die beiden betroffenen Anwendungen gemäß dem „Vertrag“ verhalten, der zwischen den Eigenschaften <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> und <xref:System.Windows.Forms.DragEventArgs.Effect%2A> eingerichtet wurde.  
   
  Im folgenden Verfahren verwenden Sie eine von Ihnen erstellte Windows-basierte Anwendung und das im Windows-Betriebssystem enthaltene Textverarbeitungsprogramm WordPad, um Drag & Drop-Vorgänge zwischen Anwendungen auszuführen. WordPad verfügt über einen bestimmten Satz an zulässigen Effekte für Drag & Drop-Text. Die Windows-basierte Anwendung, für die Sie Code schreiben, arbeitet mit diesen Effekten, damit die Drag & Drop-Vorgänge erfolgreich ausgeführt werden können.  
   
@@ -24,7 +24,7 @@ Das Ausführen von Drag & Drop-Vorgängen zwischen Anwendungen unterscheidet sic
   
 3.  Konfigurieren Sie das <xref:System.Windows.Forms.TextBox>-Steuerelement, um abgelegte Daten zu empfangen.  
   
-     Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Eine Drag & Drop-Vorgang in Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
+     Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Eine Drag & Drop-Vorgang in Windows Forms](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
 4.  Führen Sie die Windows-basierte Anwendung aus. Während die Anwendung aktiv ist, führen Sie WordPad aus.  
   
@@ -36,9 +36,9 @@ Das Ausführen von Drag & Drop-Vorgängen zwischen Anwendungen unterscheidet sic
   
      Wenn sich die Maus über dem <xref:System.Windows.Forms.TextBox>-Steuerelement befindet (und damit folglich das <xref:System.Windows.Forms.Control.DragEnter>-Ereignis ausgelöst wird), können Sie erkennen, dass sich der Cursor geändert hat. Sie können den markierten Text dann im <xref:System.Windows.Forms.TextBox>-Steuerelement ablegen.  
   
-     Darüber hinaus können Sie das <xref:System.Windows.Forms.TextBox>-Steuerelement konfigurieren, damit Textzeichenfolgen per Drag & Drop in WordPad abgelegt werden können. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Eine Drag & Drop-Vorgang in Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
+     Darüber hinaus können Sie das <xref:System.Windows.Forms.TextBox>-Steuerelement konfigurieren, damit Textzeichenfolgen per Drag &amp; Drop in WordPad eingefügt werden können. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Eine Drag & Drop-Vorgang in Windows Forms](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Hinzufügen von Daten in die Zwischenablage](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
-- [Vorgehensweise: Abrufen von Daten aus der Zwischenablage](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
-- [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+- [Vorgehensweise: Hinzufügen von Daten in die Zwischenablage](how-to-add-data-to-the-clipboard.md)
+- [Vorgehensweise: Abrufen von Daten aus der Zwischenablage](how-to-retrieve-data-from-the-clipboard.md)
+- [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)

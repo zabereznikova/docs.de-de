@@ -7,31 +7,31 @@ helpviewer_keywords:
 - Windows Forms, MDI applications
 - MDI
 ms.assetid: 599faf75-13cf-49cc-ad3c-255545e5cb97
-ms.openlocfilehash: 3fa6f2517b52ecaaf4ad9db4f0de55908eac4c96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ce7c66946d03d566b21473711cb6b3315885236
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523967"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717444"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>MDI-Anwendungen (Multiple Document Interface)
-Multiple Document Interface (MDI)-Anwendungen ermöglichen es Ihnen, mehrere Dokumente zur gleichen Zeit angezeigt, mit jedes Dokument in einem eigenen Fenster angezeigt. MDI-Anwendungen haben häufig ein Fenster Menüelement mit Untermenüs zum Wechseln zwischen Fenstern oder Dokumenten.  
+Multiple Document Interface (MDI)-Anwendungen können Sie mehrere Dokumente zur gleichen Zeit, mit jedes Dokument angezeigt, die in einem eigenen Fenster angezeigt werden soll. MDI-Anwendungen verfügen häufig über ein Fenster-Menüelement mit Untermenüs für das Wechseln zwischen Fenstern oder Dokumenten.  
   
 > [!NOTE]
->  Es gibt einige Unterschiede im Verhalten zwischen MDI-Formulare und Single Document Interface (SDI) Windows in Windows Forms. Die `Opacity` Eigenschaft wirkt sich nicht auf die Darstellung des untergeordneten MDI-Formulare. Darüber hinaus die <xref:System.Windows.Forms.Form.CenterToParent%2A> Methode wirkt sich nicht auf das Verhalten des untergeordneten MDI-Formulare.  
+>  Es gibt einige Unterschiede im Verhalten zwischen MDI-Formulare und Single Document Interface (SDI) Windows in Windows Forms. Die `Opacity` Eigenschaft wirkt sich nicht auf die Darstellung des untergeordneten MDI-Formularen. Darüber hinaus die <xref:System.Windows.Forms.Form.CenterToParent%2A> Methode wirkt sich nicht auf das Verhalten der untergeordneten MDI-Formularen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
- Gibt richtungshinweise für den Container für mehrere Dokumente in einer MDI-Anwendung erstellen.  
+ [Vorgehensweise: Erstellen von übergeordneten MDI-Formularen](how-to-create-mdi-parent-forms.md)  
+ Enthält Anweisungen zum Erstellen des Containers für die mehrere Dokumente in einer MDI-Anwendung.  
   
- [Gewusst wie: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
- Enthält Anweisungen zum Erstellen von einem oder mehreren Fenstern, die innerhalb eines übergeordneten MDI-Formulars ausgeführt werden.  
+ [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](how-to-create-mdi-child-forms.md)  
+ Enthält Anweisungen zum Erstellen von einem oder mehreren Fenstern, die in einem übergeordneten MDI-Formulars verwendet werden.  
   
- [Gewusst wie: Bestimmen des aktiven untergeordneten MDI-Elements](../../../../docs/framework/winforms/advanced/how-to-determine-the-active-mdi-child.md)  
- Enthält Anweisungen für das untergeordnete Fenster, das Fokus hat (und dessen Inhalt in die Zwischenablage senden).  
+ [Vorgehensweise: Bestimmen des aktiven untergeordneten MDI-Elements](how-to-determine-the-active-mdi-child.md)  
+ Hier erfahren Sie, für das untergeordnete Fenster, das Fokus hat (und dessen Inhalt in die Zwischenablage senden).  
   
- [Gewusst wie: Senden von Daten an das aktive untergeordnete MDI-Element](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)  
- Enthält Anweisungen für die Übermittlung von Informationen auf dem aktiven untergeordneten Fenster.  
+ [Vorgehensweise: Senden von Daten an das aktive untergeordnete MDI-Element](how-to-send-data-to-the-active-mdi-child.md)  
+ Enthält Anweisungen für die Übermittlung von Informationen in das aktive untergeordnete Fenster.  
   
- [Gewusst wie: Anordnen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)  
- Gibt richtungshinweise für Kacheln, cascading oder Anordnen von der untergeordneten Fenster einer MDI-Anwendung.
+ [Vorgehensweise: Anordnen von untergeordneten MDI-Formularen](how-to-arrange-mdi-child-forms.md)  
+ Enthält Anweisungen für Kacheln, cascading oder Anordnen von den untergeordneten Fenstern des MDI-Anwendung.

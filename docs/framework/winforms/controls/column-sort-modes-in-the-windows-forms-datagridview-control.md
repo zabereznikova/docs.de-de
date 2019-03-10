@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: b2b73d36230d12f4e1075dde201e941cbe9d228d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615048"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717855"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Spaltenssortiermodi im DataGridView-Steuerelement von Windows Forms
 <xref:System.Windows.Forms.DataGridView> Spalten weisen drei Sortierungsmodi. Der Sortiermodus für jede Spalte wird angegeben, über die <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> -Eigenschaft der Spalte, die auf eine der folgenden festgelegt werden, kann <xref:System.Windows.Forms.DataGridViewColumnSortMode> -Enumerationswerte fest.  
@@ -31,7 +31,7 @@ ms.locfileid: "54615048"
   
  Wenn eine <xref:System.Windows.Forms.DataGridView> ist sortiert, können Sie bestimmen sowohl die Sortierspalte und die Sortierreihenfolge Überprüfen der Werte von der <xref:System.Windows.Forms.DataGridView.SortedColumn%2A> und <xref:System.Windows.Forms.DataGridView.SortOrder%2A> Eigenschaften. Diese Werte sind nach einem benutzerdefinierten Sortiervorgang ohne Bedeutung. Weitere Informationen zum benutzerdefinierten Sortieren finden Sie im Abschnitt benutzerdefinierte Sortierung weiter unten in diesem Thema.  
   
- Wenn eine <xref:System.Windows.Forms.DataGridView> Steuerelement mit gebundene und ungebundene Spalten sortiert wird, nicht automatisch die Werte in den ungebundenen Spalten beibehalten werden. Um diese Werte zu erhalten, müssen Sie den virtuellen Modus implementieren, durch Festlegen der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft `true` und behandeln die <xref:System.Windows.Forms.DataGridView.CellValueNeeded> und <xref:System.Windows.Forms.DataGridView.CellValuePushed> Ereignisse. Weitere Informationen finden Sie unter [Vorgehensweise: Implementieren des virtuellen Modus in der Windows Forms-DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Sortieren nach ungebundenen Spalten im gebundenen Modus wird nicht unterstützt.  
+ Wenn eine <xref:System.Windows.Forms.DataGridView> Steuerelement mit gebundene und ungebundene Spalten sortiert wird, nicht automatisch die Werte in den ungebundenen Spalten beibehalten werden. Um diese Werte zu erhalten, müssen Sie den virtuellen Modus implementieren, durch Festlegen der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft `true` und behandeln die <xref:System.Windows.Forms.DataGridView.CellValueNeeded> und <xref:System.Windows.Forms.DataGridView.CellValuePushed> Ereignisse. Weitere Informationen finden Sie unter [Vorgehensweise: Implementieren des virtuellen Modus in der Windows Forms-DataGridView-Steuerelement](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md). Sortieren nach ungebundenen Spalten im gebundenen Modus wird nicht unterstützt.  
   
 ## <a name="programmatic-sorting"></a>Programmgesteuertes Sortieren  
  Sie sortieren können ein <xref:System.Windows.Forms.DataGridView> programmgesteuert durch Aufrufen der <xref:System.Windows.Forms.DataGridView.Sort%2A> Methode.  
@@ -65,6 +65,6 @@ ms.locfileid: "54615048"
 - <xref:System.Windows.Forms.DataGridView.SortOrder%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
-- [Sortieren von Daten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Festlegen der Sortierungsmodi für Spalten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Vorgehensweise: Anpassen der Sortierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Sortieren von Daten im DataGridView-Steuerelement in Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Festlegen der Sortierungsmodi für Spalten im DataGridView-Steuerelement in Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Vorgehensweise: Anpassen der Sortierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

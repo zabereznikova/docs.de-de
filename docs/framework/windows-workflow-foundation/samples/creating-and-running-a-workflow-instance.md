@@ -2,12 +2,12 @@
 title: Erstellen und Ausführen einer Workflowinstanz
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: a86835155417692bc332bf51eb5825ce0b017b04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0c59946b6419e7088e3426d7ddd08537cfab5a4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527262"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722008"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Erstellen und Ausführen einer Workflowinstanz
 In diesem Beispiel wird gezeigt, wie eine Workflowinstanz ausgeführt wird. Es wird gezeigt, wie sie synchron und asynchron ausgeführt wird.  
@@ -30,4 +30,4 @@ In diesem Beispiel wird gezeigt, wie eine Workflowinstanz ausgeführt wird. Es w
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verwenden von WorkflowInvoker und WorkflowApplication](../../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)
+- [Verwenden von WorkflowInvoker und WorkflowApplication](../using-workflowinvoker-and-workflowapplication.md)

@@ -9,33 +9,33 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-ms.openlocfilehash: 9813a1b969d0232ec842b91385d0ad893b71c0d6
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 6d0a693feeb241b5772f2e1049e7876ed1c0da20
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747326"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703139"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel-Steuerelement (Windows Forms)
 Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement ordnet seinen Inhalt in einem Raster an. Da das Layout sowohl zur Entwurfszeit als auch zur Laufzeit ausgeführt wird, kann es sich dynamisch ändern, wenn sich die Anwendungsumgebung ändert. Dadurch können sich die Steuerelemente im Bereich proportional in der Größe anpassen, sodass sie auf Änderungen wie die Größenanpassung des übergeordneten Steuerelements oder eine durch Lokalisierung veränderte Textlänge reagieren.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über das TableLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)  
+ [Übersicht über das TableLayoutPanel-Steuerelement](tablelayoutpanel-control-overview.md)  
  Stellt die allgemeinen Konzepte des <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements vor, mit dem Sie ein Layout mit Zeilen und Spalten erstellen können.  
   
- [Empfohlene Vorgehensweisen für das TableLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/best-practices-for-the-tablelayoutpanel-control.md)  
+ [Empfohlene Vorgehensweisen für das TableLayoutPanel-Steuerelement](best-practices-for-the-tablelayoutpanel-control.md)  
  Enthält Empfehlungen zur optimalen Nutzung der Layoutfunktionen des <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements.  
   
- [Das AutoSize-Verhalten im TableLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/autosize-behavior-in-the-tablelayoutpanel-control.md)  
+ [Das AutoSize-Verhalten im TableLayoutPanel-Steuerelement](autosize-behavior-in-the-tablelayoutpanel-control.md)  
  Erläutert die Möglichkeiten, in denen das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement das automatische Größenanpassungsverhalten unterstützt.  
   
- [Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
  Veranschaulicht das Verankern und Andocken von untergeordneten Steuerelementen in einem <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement.  
   
- [Vorgehensweise: Entwerfen eines Windows Forms-Layouts, das zur Lokalisierung gut geeignet ist](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [Vorgehensweise: Entwerfen eines Windows Forms-Layouts, das zur Lokalisierung gut geeignet ist](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
  Veranschaulicht die Verwendung eines <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements zum Erstellen eines Formulars, das zur Lokalisierung gut geeignet ist.  
   
- [Vorgehensweise: Erstellen Sie in der Größe veränderbaren Windows Forms für die Dateneingabe](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)  
+ [Vorgehensweise: Erstellen Sie in der Größe veränderbaren Windows Forms für die Dateneingabe](how-to-create-a-resizable-windows-form-for-data-entry.md)  
  Veranschaulicht die Verwendung eines <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements zum Erstellen eines Formulars, das ordnungsgemäß auf die Größenänderung reagiert.  
   
 1.  [Vorgehensweise: Ausrichten und Strecken eines Steuerelements in einem TableLayoutPanel-Steuerelement](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
@@ -57,7 +57,7 @@ Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement ordnet seinen Inh
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Lokalisierung](../../../../docs/standard/globalization-localization/localization.md)  
+ [Lokalisierung](../../../standard/globalization-localization/localization.md)  
  Bietet eine Übersicht über Themen zur Lokalisierung.  
   
  Siehe auch [Localizing Applications](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/z68135h5(v=vs.120)).

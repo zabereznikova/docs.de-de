@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: c7a65bcc65710324a4457c17dd728b4771550c06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694073"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711222"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Vorgehensweise: Festlegen von Bildern zur Laufzeit (Windows Forms)
 Sie können das Bild angezeigt, die von einer Windows Forms programmgesteuert festlegen <xref:System.Windows.Forms.PictureBox> Steuerelement.  
@@ -93,14 +93,14 @@ Sie können das Bild angezeigt, die von einer Windows Forms programmgesteuert fe
     ```  
   
     > [!NOTE]
-    >  Verwenden Sie für Weitere Informationen darüber, warum die <xref:System.Drawing.Image.Dispose%2A> -Methode in der auf diese Weise finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](../../../../docs/standard/garbage-collection/unmanaged.md).  
+    >  Verwenden Sie für Weitere Informationen darüber, warum die <xref:System.Drawing.Image.Dispose%2A> -Methode in der auf diese Weise finden Sie unter [Bereinigen von nicht verwalteten Ressourcen](../../../standard/garbage-collection/unmanaged.md).  
   
      Dieser Code wird das Image gelöscht, selbst wenn eine Grafik in das Steuerelement zur Entwurfszeit geladen wurde.  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [Übersicht über das PictureBox-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [Vorgehensweise: Laden eines Bilds mithilfe des Designers](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Vorgehensweise: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [PictureBox-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [Übersicht über das PictureBox-Steuerelement](picturebox-control-overview-windows-forms.md)
+- [Vorgehensweise: Laden eines Bilds mithilfe des Designers](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Vorgehensweise: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [PictureBox-Steuerelement](picturebox-control-windows-forms.md)

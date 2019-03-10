@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Aktivitätsdesigners'
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 755aea092d5906d7313234d7ddd1c99d87a7e54d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466881"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716828"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Aktivitätsdesigners
 
@@ -21,9 +21,9 @@ Der zweite Hauptaspekt bei der Implementierung eines benutzerdefinierten Aktivit
 
 In diesem Thema werden zwei Prozeduren beschrieben.
 
-1. Die erste Prozedur beschreibt, wie ein benutzerdefinierter Aktivitätsdesigner mit <xref:System.Activities.Presentation.WorkflowItemPresenter> erstellt wird, der die Ablagezone für andere Aktivitäten bereitstellt. Dieses Verfahren basiert auf der [benutzerdefinierte zusammengesetzte Designer - Workflow-Element-Presenter](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) Beispiel.
+1. Die erste Prozedur beschreibt, wie ein benutzerdefinierter Aktivitätsdesigner mit <xref:System.Activities.Presentation.WorkflowItemPresenter> erstellt wird, der die Ablagezone für andere Aktivitäten bereitstellt. Dieses Verfahren basiert auf der [benutzerdefinierte zusammengesetzte Designer - Workflow-Element-Presenter](./samples/custom-composite-designers-workflow-item-presenter.md) Beispiel.
 
-2. Die zweite Prozedur beschreibt, wie ein benutzerdefinierter Aktivitätsdesigner mit <xref:System.Activities.Presentation.WorkflowItemsPresenter> erstellt wird, der die zur Bearbeitung einer Auflistung von Elementen benötigten Funktionen bereitstellt. Dieses Verfahren basiert auf der [benutzerdefinierte zusammengesetzte Designer: Workflowelementpräsentation](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) Beispiel.
+2. Die zweite Prozedur beschreibt, wie ein benutzerdefinierter Aktivitätsdesigner mit <xref:System.Activities.Presentation.WorkflowItemsPresenter> erstellt wird, der die zur Bearbeitung einer Auflistung von Elementen benötigten Funktionen bereitstellt. Dieses Verfahren basiert auf der [benutzerdefinierte zusammengesetzte Designer: Workflowelementpräsentation](./samples/custom-composite-designers-workflow-items-presenter.md) Beispiel.
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>So erstellen Sie einen benutzerdefinierten Aktivitätsdesigner, der eine Ablagezone bereitstellt, mit WorkflowItemPresenter
 
@@ -350,4 +350,4 @@ In diesem Thema werden zwei Prozeduren beschrieben.
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - <xref:System.Activities.Presentation.WorkflowViewElement>
 - <xref:System.Activities.Presentation.Model.ModelItem>
-- [Anpassen des Workflowentwurfsvorgangs](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [Anpassen des Workflowentwurfsvorgangs](customizing-the-workflow-design-experience.md)

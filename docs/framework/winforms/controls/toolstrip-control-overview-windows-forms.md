@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: 49f544727ee82b1e36357fc4312bcd449ffc3c0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558747"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719377"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Übersicht über das ToolStrip-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.ToolStrip> -Steuerelement und die zugehörigen Klassen bieten Sie ein gemeinsames Framework zum Zusammenfassen von Elementen der Benutzeroberfläche in Symbolleisten, Statusleisten und Menüs. <xref:System.Windows.Forms.ToolStrip> Steuerelemente bieten eine komfortable während der Entwurfszeit, die direkte Aktivierung und bearbeiten, benutzerdefiniertes Layout und rafting, enthält dies ist die Möglichkeit von Symbolleisten, horizontalen oder vertikalen Speicherplatz freizugeben.  
@@ -49,7 +49,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.ToolStrip> -Steuerelement und d
 |name|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Ruft ab oder legt fest, welche Rand des übergeordneten Containers eine <xref:System.Windows.Forms.ToolStrip> angedockt ist.|  
-|<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob Drag & Drop und die Neuanordnung von Elementen von der <xref:System.Windows.Forms.ToolStrip>-Klasse privat behandelt werden.|  
+|<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob Drag &amp; Drop und die Neuanordnung von Elementen von der <xref:System.Windows.Forms.ToolStrip>-Klasse privat behandelt werden.|  
 |<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>|Ruft ab oder legt einen Wert, der angibt, wie die <xref:System.Windows.Forms.ToolStrip> enthaltenen Elemente angeordnet.|  
 |<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>|Ruft ab oder legt ihn fest, ob eine <xref:System.Windows.Forms.ToolStripItem> angefügt ist die <xref:System.Windows.Forms.ToolStrip> oder <xref:System.Windows.Forms.ToolStripOverflowButton> oder zwischen den beiden wechseln können.|  
 |<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|Ruft einen Wert, der angibt, ob eine <xref:System.Windows.Forms.ToolStripItem> andere Elemente in einer Dropdownliste anzeigt Liste, wenn die <xref:System.Windows.Forms.ToolStripItem> geklickt wird.|  
@@ -77,7 +77,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.ToolStrip> -Steuerelement und d
 |<xref:System.Windows.Forms.ToolStripControlHost>|Andere Steuerelemente, die nicht speziell hostet <xref:System.Windows.Forms.ToolStrip> Steuerelemente jedoch für die Sie möchten <xref:System.Windows.Forms.ToolStrip> Funktionalität.|  
 |<xref:System.Windows.Forms.ToolStripItemPlacement>|Gibt an, ob eine <xref:System.Windows.Forms.ToolStripItem> besteht darin, auf dem hauptblatt angeordnet werden <xref:System.Windows.Forms.ToolStrip>, auf dem Überlauf- <xref:System.Windows.Forms.ToolStrip>, oder keines von beiden.|  
   
- Weitere Informationen finden Sie unter [Zusammenfassung der ToolStrip-Technologie](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md) und [Architektur des ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md).  
+ Weitere Informationen finden Sie unter [Zusammenfassung der ToolStrip-Technologie](toolstrip-technology-summary.md) und [Architektur des ToolStrip-Steuerelements](toolstrip-control-architecture.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.ToolStrip>

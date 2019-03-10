@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: aae7be0b610ba90b5915267cd9bc257be9b56362
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 678e89eaa240cbe3a396c1ee3d6c18e7ceca17ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628112"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722287"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Vorgehensweise: Festlegen der JPEG-Komprimierungsebene
 Möglicherweise möchten Sie die Parameter eines Bilds ändern, wenn Sie das Bild auf einem Datenträger speichern, um dadurch die Dateigröße zu minimieren oder die Qualität zu verbessern. Sie können die Qualität eines JPEG-Bilds anpassen, indem Sie seine Komprimierungsebene ändern. Zum Angeben der Komprimierungsebene beim Speichern eines JPEG-Bilds müssen Sie erstellen eine <xref:System.Drawing.Imaging.EncoderParameters> -Objekt und übergeben Sie sie an der <xref:System.Drawing.Image.Save%2A> Methode der <xref:System.Drawing.Image> Klasse. Initialisieren der <xref:System.Drawing.Imaging.EncoderParameters> Objekt so, dass die It verfügt über ein Array, das eine besteht <xref:System.Drawing.Imaging.EncoderParameter>. Bei der Erstellung der <xref:System.Drawing.Imaging.EncoderParameter>, geben Sie die <xref:System.Drawing.Imaging.Encoder.Quality> Encoder und die gewünschte Komprimierungsebene.  
@@ -130,6 +130,6 @@ End Function
 -   Eine Bilddatei mit dem Namen `TestPhoto.jpg`, die unter **c:\\** gespeichert ist.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Ermitteln der von einem Encoder unterstützten Parameter](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)
-- [Typen von Bitmaps](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)
-- [Verwenden von Bildencodern und -decodern in Managed GDI+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+- [Vorgehensweise: Ermitteln der von einem Encoder unterstützten Parameter](how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [Typen von Bitmaps](types-of-bitmaps.md)
+- [Verwenden von Bildencodern und -decodern in Managed GDI+](using-image-encoders-and-decoders-in-managed-gdi.md)

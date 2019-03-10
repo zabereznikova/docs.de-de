@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b5ad28fbfd668819b0bcab30c33892679b4bd8c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674918"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711790"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Hohe DPI-Unterstützung in Windows Forms
 
@@ -49,7 +49,7 @@ Um Unterstützung für hohe DPI-Werte in der Windows Forms-Anwendung konfigurier
 
 - Aktivieren Sie monitorspezifische DPI-Unterstützung in den *"App.config"* Datei.
 
-  Windows Forms wird ein neuer [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md) Element zur Unterstützung der neuen Features und Anpassungen, die ab .NET Framework 4.7 hinzugefügt. Um die neuen Funktionen nutzen, die hohe DPI-Werte unterstützen, fügen Sie Folgendes der Konfigurationsdatei Ihrer Anwendung.   
+  Windows Forms wird ein neuer [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) Element zur Unterstützung der neuen Features und Anpassungen, die ab .NET Framework 4.7 hinzugefügt. Um die neuen Funktionen nutzen, die hohe DPI-Werte unterstützen, fügen Sie Folgendes der Konfigurationsdatei Ihrer Anwendung.   
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,7 +84,7 @@ Festlegen der `DpiAwareness` Wert `PerMonitorV2` hohe DPI-Awareness-Funktionen, 
 </System.Windows.Forms.ApplicationConfigurationSection>    
 ```
 
-Eine Liste der einzelnen Schlüssel und deren Werte, finden Sie unter [hinzufügen Konfigurationselement für Windows Forms](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
+Eine Liste der einzelnen Schlüssel und deren Werte, finden Sie unter [hinzufügen Konfigurationselement für Windows Forms](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
 
 ## <a name="new-dpi-change-events"></a>Änderungsereignisse für die neue DPI-Wert
 
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Windows Forms hinzufügen Konfigurationselement](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [Anpassen der Größe und Skalieren von Windows Forms](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows Forms hinzufügen Konfigurationselement](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Anpassen der Größe und Skalieren von Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

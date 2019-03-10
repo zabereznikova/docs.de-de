@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f6b758dd509ac2d318180c014ac3d262fe331f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b116944a45546604d1d60a5a44afcce8fee2f026
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623234"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721514"
 ---
 # <a name="working-with-calendars"></a>Arbeiten mit Kalendern
 
@@ -138,7 +138,7 @@ Es gibt jedoch eine wichtige Ausnahme. Der (nicht initialisierte) Standardwert e
 Kalender unterteilen Datumsangaben in der Regel in Zeiträume. Allerdings die <xref:System.Globalization.Calendar> Klassen in .NET unterstützen nicht alle Zeiträume, die durch einen Kalender, und die meisten definiert die <xref:System.Globalization.Calendar> Klassen unterstützen nur einen einzigen Zeitraum. Nur die Klassen <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar> unterstützen mehrere Zeiträume.
 
 > [!IMPORTANT]
->  Am 1. Mai 2019 beginnt ein neuer Zeitabschnitt im <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>. Diese Änderung betrifft alle Anwendungen, die diese Kalender verwenden. Unter [Handling a new era in the Japanese calendar in .NET (Umgang mit einem neuen Zeitabschnitt im japanischen Kalender in .NET)](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/) finden Sie weiter Informationen und wie Sie bestimmen können, ob Ihre Anwendungen ebenfalls betroffen sind. Finden Sie unter [Vorbereiten Ihrer Anwendung auf die japanischen Zeitraum Änderung](/windows/uwp/design/globalizing/japanese-era-change) Informationen zum Testen von Anwendungen auf Windows, um sicherzustellen, dass deren Bereitschaft für den Zeitraum ändern.
+>  Am 1. Mai 2019 beginnt ein neuer Zeitabschnitt im <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>. Diese Änderung betrifft alle Anwendungen, die diese Kalender verwenden. Unter [Handling a new era in the Japanese calendar in .NET (Umgang mit einem neuen Zeitabschnitt im japanischen Kalender in .NET)](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/) finden Sie weiter Informationen und wie Sie bestimmen können, ob Ihre Anwendungen ebenfalls betroffen sind. Finden Sie unter [Vorbereiten Ihrer Anwendung auf die japanischen Zeitraum Änderung](/windows/uwp/design/globalizing/japanese-era-change) Informationen zum Testen von Anwendungen auf Windows, um sicherzustellen, dass deren Bereitschaft für den Zeitraum ändern.
 
 ### <a name="eras-and-era-names"></a>Zeiträume und Namen
 

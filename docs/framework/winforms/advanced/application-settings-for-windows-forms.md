@@ -7,15 +7,15 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 6179837a072c9e4de8e0e8c71a2723942d010899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0cac4433ec9fe54721752c63d2b3b37f9d874c19
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636968"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719311"
 ---
 # <a name="application-settings-for-windows-forms"></a>Anwendungseinstellungen für Windows Forms
-Die Funktion Anwendungseinstellungen von Windows Forms erleichtert das Erstellen, Speichern und Verwalten von benutzerdefinierten Einstellungen für Anwendungen und Benutzer auf dem Client. Mit Anwendungseinstellungen können Sie nicht nur Anwendungsdaten wie Datenbankverbindungszeichenfolgen, sondern auch benutzerspezifische Daten, etwa Symbolleistenpositionen und zuletzt verwendete Listen, speichern.  
+Das Feature Anwendungseinstellungen von Windows Forms erleichtert das Erstellen, Speichern und Verwalten von benutzerdefinierten Einstellungen für Anwendungen und Benutzer auf dem Client. Mit Anwendungseinstellungen können Sie nicht nur Anwendungsdaten wie Datenbankverbindungszeichenfolgen, sondern auch benutzerspezifische Daten, etwa Symbolleistenpositionen und zuletzt verwendete Listen, speichern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Anwendungseinstellungen](~/docs/framework/winforms/advanced/application-settings-overview.md)  
@@ -38,7 +38,7 @@ Die Funktion Anwendungseinstellungen von Windows Forms erleichtert das Erstellen
   
 ## <a name="related-topics"></a>Verwandte Themen
 
-[Konfigurationsabschnitt für Windows Forms](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
+[Konfigurationsabschnitt für Windows Forms](../../configure-apps/file-schema/winforms/index.md)    
 Dokumente werden die Einstellungen zum Aktivieren der hohen dpi-WERTEN in Windows Forms-Anwendung, die ab .NET Framework 4.7 unterstützt.
 
 ## <a name="see-also"></a>Siehe auch

@@ -6,23 +6,23 @@ helpviewer_keywords:
 - graphics containers
 - examples [Windows Forms], graphics containers
 ms.assetid: 74632f91-cefa-4f51-ab7c-f9ac91942caf
-ms.openlocfilehash: 8755a95434d3fed06a55cfca0f71d86e5521cb39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfad7254057a31ea8268784cd4b6849850f3e2aa
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525020"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704468"
 ---
 # <a name="using-graphics-containers"></a>Verwenden von Grafikcontainern
-Ein <xref:System.Drawing.Graphics> -Objekt stellt Methoden bereit, z. B. <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, und <xref:System.Drawing.Graphics.DrawString%2A> zum Anzeigen von Vektorgrafiken, Rasterbilder und Text. Ein <xref:System.Drawing.Graphics> -Objekt verfügt außerdem über verschiedene Eigenschaften, die beeinflussen, die Qualität und die Ausrichtung der Elemente, die gezeichnet werden. So bestimmt beispielsweise die Glättungsmodus Mode-Eigenschaft, ob Antialiasing bei Linien und Kurven angewendet wird, und die World Transformationseigenschaft wirkt sich auf die Position und Drehung der Elemente, die gezeichnet werden.  
+Ein <xref:System.Drawing.Graphics> Objekt bietet Methoden, wie z. B. <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, und <xref:System.Drawing.Graphics.DrawString%2A> für die Anzeige von Vektorgrafiken, Rasterbilder und Text. Ein <xref:System.Drawing.Graphics> Objekt verfügt auch über mehrere Eigenschaften, die beeinflussen, die Qualität und die Ausrichtung der Elemente, die gezeichnet werden. Beispielsweise bestimmt die Glättung Mode-Eigenschaft an, ob Antialiasing auf Linien und Kurven angewendet wird, und die Welt Transformationseigenschaft wirkt sich auf die Position und Drehung der Elemente, die gezeichnet werden.  
   
- Ein <xref:System.Drawing.Graphics> Objekt jeweiligen Ausgabegeräts zugeordnet ist. Bei Verwendung einer <xref:System.Drawing.Graphics> Objekt, das in einem Fenster Zeichnen der <xref:System.Drawing.Graphics> Objekt wird auch mit dem jeweiligen Fenster zugeordnet ist.  
+ Ein <xref:System.Drawing.Graphics> Objekt jeweiligen Ausgabegeräts zugeordnet ist. Bei Verwendung einer <xref:System.Drawing.Graphics> Objekt, das in einem Fenster, zeichnen die <xref:System.Drawing.Graphics> -Objekt bezieht sich auch mit dem jeweiligen Fenster.  
   
- Ein <xref:System.Drawing.Graphics> Objekt kann betrachtet werden als Container, da es eine Reihe von Eigenschaften enthält, die Zeichnung auswirken und mit gerätespezifischen Informationen verknüpft ist. Sie können einen sekundären Container in einem vorhandenen erstellen <xref:System.Drawing.Graphics> Objekt durch Aufrufen der <xref:System.Drawing.Graphics.BeginContainer%2A> -Methode dieses <xref:System.Drawing.Graphics> Objekt.  
+ Ein <xref:System.Drawing.Graphics> Objekt kann betrachtet werden als Container, da sie einen Satz von Eigenschaften enthält, die Zeichnung zu beeinflussen, und klicken Sie mit gerätespezifischen Informationen verknüpft ist. Sie können einen sekundären Container in einem vorhandenen erstellen <xref:System.Drawing.Graphics> -Objekt durch Aufrufen der <xref:System.Drawing.Graphics.BeginContainer%2A> -Methode dieses <xref:System.Drawing.Graphics> Objekt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verwalten des Zustands eines Graphics-Objekts](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)  
- Beschreibt, wie die Qualität, Clippingbereichs und Transformationen von Verwalten einer <xref:System.Drawing.Graphics> Objekt.  
+ [Verwalten des Zustands eines Graphics-Objekts](managing-the-state-of-a-graphics-object.md)  
+ Beschreibt, wie verwalten Sie Einstellungen von Quality, Clippingbereichs und Transformationen von einem <xref:System.Drawing.Graphics> Objekt.  
   
- [Verwenden geschachtelter Grafikcontainer](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)  
- Zeigt, wie Container verwenden, um den Zustand steuern die <xref:System.Drawing.Graphics> Objekt.
+ [Verwenden geschachtelter Grafikcontainer](using-nested-graphics-containers.md)  
+ Zeigt, wie Sie Container verwenden, um die Steuerung des Status des der <xref:System.Drawing.Graphics> Objekt.

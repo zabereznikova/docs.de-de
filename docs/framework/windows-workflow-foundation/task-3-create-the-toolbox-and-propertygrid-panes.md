@@ -2,21 +2,21 @@
 title: 'Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558422"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721220"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche
 In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche und fügen sie dem neu gehosteten [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
   
- Referenz zu der Code, der in der Datei "MainWindow.Xaml.cs" werden sollen, nach Abschluss der drei Aufgaben, in der [erneutes Hosten von Workflow-Designer](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md) Reihe von Themen am Ende dieses Themas bereitgestellt wird.  
+ Referenz zu der Code, der in der Datei "MainWindow.Xaml.cs" werden sollen, nach Abschluss der drei Aufgaben, in der [erneutes Hosten von Workflow-Designer](rehosting-the-workflow-designer.md) Reihe von Themen am Ende dieses Themas bereitgestellt wird.  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>So erstellen Sie die Toolbox und fügen sie dem Raster hinzu.  
   
-1.  Öffnen Sie das HostingApplication-Projekt, das Sie erworben haben, gemäß das Verfahren in [Aufgabe 2: Hosten des Workflowdesigners](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md).  
+1.  Öffnen Sie das HostingApplication-Projekt, das Sie erworben haben, gemäß das Verfahren in [Aufgabe 2: Hosten des Workflowdesigners](task-2-host-the-workflow-designer.md).  
   
 2.  In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Ansichtscode**.  
   
@@ -213,6 +213,6 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erneutes Hosten des Workflow-Designers](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [Task 2: Hosten des Workflowdesigners](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [Erneutes Hosten des Workflow-Designers](rehosting-the-workflow-designer.md)
+- [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung](task-1-create-a-new-wpf-app.md)
+- [Task 2: Hosten des Workflowdesigners](task-2-host-the-workflow-designer.md)

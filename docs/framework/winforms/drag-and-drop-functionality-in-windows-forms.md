@@ -5,12 +5,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: ccc9fd615cda044c739793066901ebc512643970
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9c8580f61bcb311ca6b2e1cc2a11b4d4a4dbe79c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664766"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719415"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Drag &amp; Drop-Funktionen in Windows Forms
 Windows Forms umfasst eine Reihe von Methoden, Ereignissen und Klassen, die das Drag &amp; Drop-Verhalten implementieren. Dieses Thema enthält eine Übersicht über die Drag &amp; Drop-Unterstützung in Windows Forms.  Siehe auch [Drag & Drop-Operationen und Unterstützung der Zwischenablage](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
@@ -44,4 +44,4 @@ Windows Forms umfasst eine Reihe von Methoden, Ereignissen und Klassen, die das 
  Die <xref:System.Windows.Forms.QueryContinueDragEventArgs>-Klasse stellt Folgendes bereit: den aktuellen Zustand der Maus und der Zusatztasten der Tastatur, einen Wert, der angibt, ob die ESC-Taste gedrückt wurde, und einen <xref:System.Windows.Forms.DragAction>-Wert, der festgelegt werden kann, um anzugeben, ob der Drag &amp; Drop-Vorgang fortgesetzt werden soll.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Mauseingabe in einer Windows Forms-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)

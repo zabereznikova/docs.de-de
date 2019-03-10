@@ -2,12 +2,12 @@
 title: 'Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung'
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 39cd901c0129124bece8e8d3a573fd45209cfb00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533b4a1030ab5f47eb96ca62dc2805eae7933b9b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679408"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711885"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung
 In dieser Aufgabe, Sie erstellen eine leere Windows Presentation Foundation (WPF)-Anwendung mithilfe der WPF-Anwendungsvorlage von Visual Studio-Vorlage und fügen Sie Verweise auf die entsprechenden [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Workflowassemblys.  
@@ -40,8 +40,8 @@ In dieser Aufgabe, Sie erstellen eine leere Windows Presentation Foundation (WPF
   
 10. Klicken Sie auf **OK**.  
   
-11. Finden Sie unter [Aufgabe 2: Hosten des Workflow-Designers](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md) erfahren, wie die Workflow-Designer-Entwurfs-Canvas zu hosten.  
+11. Finden Sie unter [Aufgabe 2: Hosten des Workflow-Designers](task-2-host-the-workflow-designer.md) erfahren, wie die Workflow-Designer-Entwurfs-Canvas zu hosten.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erneutes Hosten des Workflow-Designers](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Task 2: Hosten des Workflowdesigners](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [Erneutes Hosten des Workflow-Designers](rehosting-the-workflow-designer.md)
+- [Task 2: Hosten des Workflowdesigners](task-2-host-the-workflow-designer.md)

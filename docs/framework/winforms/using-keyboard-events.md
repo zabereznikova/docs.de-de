@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 93bdcbc8b23813d3c8c80ca720c54928fca11aec
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 6afa68295c0119cd77b91185abcf2fb9cb407590
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665250"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719337"
 ---
 # <a name="using-keyboard-events"></a>Verwenden von Tastaturereignissen
 Die meisten Windows Forms-Programme verarbeiten Tastatureingaben, indem sie Tastaturereignisse behandeln. Dieses Thema enthält eine Übersicht über die Tastaturereignisse, einschließlich Details dazu, wann jedes Ereignis verwendet wird sowie zu den Daten, die für jedes Ereignis übergeben werden.  Siehe auch [Übersicht über Ereignishandler (Windows Forms)](event-handlers-overview-windows-forms.md) und [Events Overview (Windows Forms)](events-overview-windows-forms.md).  
@@ -28,7 +28,7 @@ Die meisten Windows Forms-Programme verarbeiten Tastatureingaben, indem sie Tast
   
 -   Das <xref:System.Windows.Forms.Control.KeyUp>-Ereignis tritt einmal auf, wenn der Benutzer eine Taste loslässt.  
   
- Wenn der Benutzer eine Taste drückt, ermittelt Windows Forms , welches Ereignis ausgelöst werden soll, und zwar basierend darauf, ob die Tastatureingabe eine Zeichentaste oder eine Steuer- bzw. Funktionstaste ist. Weitere Informationen zu Zeichen und Steuer-bzw. Funktionstasten finden Sie unter [Funktionsweise von Tastatureingaben](../../../docs/framework/winforms/how-keyboard-input-works.md).  
+ Wenn der Benutzer eine Taste drückt, ermittelt Windows Forms , welches Ereignis ausgelöst werden soll, und zwar basierend darauf, ob die Tastatureingabe eine Zeichentaste oder eine Steuer- bzw. Funktionstaste ist. Weitere Informationen zu Zeichen und Steuer-bzw. Funktionstasten finden Sie unter [Funktionsweise von Tastatureingaben](how-keyboard-input-works.md).  
   
  In der folgenden Tabelle werden diese drei Tastaturereignisse beschrieben.  
   
@@ -39,6 +39,6 @@ Die meisten Windows Forms-Programme verarbeiten Tastatureingaben, indem sie Tast
 |<xref:System.Windows.Forms.Control.KeyUp>|Dieses Ereignis wird ausgelöst, wenn der Benutzer eine Steuer- bzw. Funktionstaste loslässt.|Der Handler für <xref:System.Windows.Forms.Control.KeyUp> erhält Folgendes:<br /><br /> <ul><li>Einen <xref:System.Windows.Forms.KeyEventArgs>-Parameter.<br /><br /> <ul><li>Dieser stellt die <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A>-Eigenschaft bereit (womit eine Steuer- oder Funktionstaste angegeben wird).</li><li>Die <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A>-Eigenschaft (UMSCHALT, STRG oder ALT).</li><li>Die <xref:System.Globalization.SortKey.KeyData%2A>-Eigenschaft (wodurch der Tastencode und der Modifizierer kombiniert werden).</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>Siehe auch
-- [Tastatureingaben in einer Windows Forms-Anwendung](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)
-- [Funktionsweise von Tastatureingaben](../../../docs/framework/winforms/how-keyboard-input-works.md)
-- [Mauseingabe in einer Windows Forms-Anwendung](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+- [Tastatureingaben in einer Windows Forms-Anwendung](keyboard-input-in-a-windows-forms-application.md)
+- [Funktionsweise von Tastatureingaben](how-keyboard-input-works.md)
+- [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)

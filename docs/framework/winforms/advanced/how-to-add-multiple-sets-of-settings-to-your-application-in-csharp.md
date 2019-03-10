@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: 447d171cf9dbe2672ae138e9e902cbd72a206c94
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 43402d8a1b0b1ca26e656be1424a5fa341ac4728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969637"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719649"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>Vorgehensweise: Fügen Sie mehrerer Gruppen von Einstellungen zur Anwendung in C hinzu\#
 In einigen Fällen empfiehlt es sich um mehrere Gruppen von Einstellungen in einer Anwendung zu erhalten. Z. B. Wenn Sie eine Anwendung entwickeln, muss eine bestimmte Gruppe von Einstellungen häufig ändern, kann es sein es ratsam, alle in einer einzelnen Datei trennen, damit die Datei ersetzt werden kann, global, lassen andere Einstellungen sind nicht betroffen. Visual Studio können Sie mehrere Sätze von Einstellungen zu Ihrem Projekt hinzufügen. Weitere Gruppen von Einstellungen können über das Properties.Settings-Objekt zugegriffen werden.  
@@ -26,5 +26,5 @@ In einigen Fällen empfiehlt es sich um mehrere Gruppen von Einstellungen in ein
 4.  Fügen Sie hinzu und verwenden Sie Einstellungen in dieser Datei, wie jeder anderen Einstellungsdatei. Sie können diese Gruppe von Einstellungen über das Properties.Settings-Objekt zugreifen.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [Übersicht über Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](using-application-settings-and-user-settings.md)
+- [Übersicht über Anwendungseinstellungen](application-settings-overview.md)

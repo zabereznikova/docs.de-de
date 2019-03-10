@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 1c4eadaadf561e127ac2eaa87f62aea4e1dc7ea4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0cf7666e6d969b3d02d13e86eb45904307d3ce3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636078"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722684"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Vorgehensweise: Festlegen des Hintergrunds eines Windows Forms-Bereichs
 Ein Windows Forms <xref:System.Windows.Forms.Panel> Steuerelement kann sowohl eine Hintergrundfarbe und ein Bild als Hintergrund anzeigen. Die <xref:System.Windows.Forms.Control.BackColor%2A> Eigenschaft legt die Hintergrundfarbe für die Steuerelemente, z. B. Beschriftungen oder Optionsfelder fest. Wenn die <xref:System.Windows.Forms.Control.BackgroundImage%2A> Eigenschaft nicht festgelegt ist, die <xref:System.Windows.Forms.Control.BackColor%2A> Auswahl füllt den gesamten Bereich. Wenn die <xref:System.Windows.Forms.Control.BackgroundImage%2A> -Eigenschaft festgelegt ist, wird das Bild hinter den enthaltenen Steuerelementen angezeigt werden.  
@@ -70,5 +70,5 @@ Ein Windows Forms <xref:System.Windows.Forms.Panel> Steuerelement kann sowohl ei
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [Panel-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
-- [Übersicht über das Panel-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
+- [Panel-Steuerelement](panel-control-windows-forms.md)
+- [Übersicht über das Panel-Steuerelement](panel-control-overview-windows-forms.md)

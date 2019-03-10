@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 2c9c60a3bfd78b7111b9cdff6a791d70c8e53c82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685062"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719441"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Vorgehensweise: Ändern der Abstände und der Ausrichtung der ToolStrip-Elemente in Windows Forms
 Die <xref:System.Windows.Forms.ToolStrip> Steuerelement vollständig unterstützt Funktionen wie z. B. das Ändern der Größe, des Abstands des <xref:System.Windows.Forms.ToolStripItem> Steuerelemente relativ zueinander und die Anordnung von Steuerelementen auf der <xref:System.Windows.Forms.ToolStrip>, und der Abstand der Steuerelemente relativ zu den <xref:System.Windows.Forms.ToolStrip>.  
@@ -87,6 +87,6 @@ Die <xref:System.Windows.Forms.ToolStrip> Steuerelement vollständig unterstütz
 - <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
-- [Übersicht über das ToolStrip-Steuerelement](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [Architektur des ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [Zusammenfassung der ToolStrip-Technologie](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [Übersicht über das ToolStrip-Steuerelement](toolstrip-control-overview-windows-forms.md)
+- [Architektur des ToolStrip-Steuerelements](toolstrip-control-architecture.md)
+- [Zusammenfassung der ToolStrip-Technologie](toolstrip-technology-summary.md)

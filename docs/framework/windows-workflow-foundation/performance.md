@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 – Leistung
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 29fc675e0eee37bac7cd6a9e309fa68b29bf28c8
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 032c143e1b27c6e37872ac070b3a1430b3c948b4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442879"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724582"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 – Leistung
 Dustin Metzgar
@@ -56,7 +56,7 @@ Dustin Metzgar
 ### <a name="messaging"></a>Messaging
  Anfänglich hatte WF3 sehr beschränkte Messagingunterstützung über externe Ereignisse oder Webdienstaufrufe. In .net 3.5 Workflows als WCF-Clients implementiert oder als WCF-Dienste über verfügbar gemacht werden könnten <xref:System.Workflow.Activities.SendActivity> und <xref:System.Workflow.Activities.ReceiveActivity>. In WF4 wurde das Konzept workflowbasierter messaging Programmierung durch die enge Integration von WCF-messaginglogik in WF weiter verstärkt.
 
- Die einheitliche bereitgestellte meldungsverarbeitungspipeline in WCF in .net 4 kann WF4-Diensten zu bedeutend besserer Leistung und Skalierbarkeit als in WF3 haben. WF4 stellt außerdem eine umfangreichere Messagingprogrammierungsunterstützung bereit, die komplexe Nachrichtenaustauschmuster (MEPs) modellieren kann. Entwickler verwenden entweder typisierte Dienstverträge, um eine einfache Programmierung zu erreichen, oder nicht typisierte Dienstverträge, um bessere Leistung ohne Bezahlung von Serialisierungskosten zu erzielen. Die clientseitige Channelzwischenspeicherunterstützung über die <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Klasse in WF4 hilft Entwicklern beim Erstellen schneller Anwendungen mit minimalem Aufwand. Weitere Informationen finden Sie unter [Ändern der Cachefreigabeebenen für Send-Aktivitäten](../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
+ Die einheitliche bereitgestellte meldungsverarbeitungspipeline in WCF in .net 4 kann WF4-Diensten zu bedeutend besserer Leistung und Skalierbarkeit als in WF3 haben. WF4 stellt außerdem eine umfangreichere Messagingprogrammierungsunterstützung bereit, die komplexe Nachrichtenaustauschmuster (MEPs) modellieren kann. Entwickler verwenden entweder typisierte Dienstverträge, um eine einfache Programmierung zu erreichen, oder nicht typisierte Dienstverträge, um bessere Leistung ohne Bezahlung von Serialisierungskosten zu erzielen. Die clientseitige Channelzwischenspeicherunterstützung über die <xref:System.ServiceModel.Activities.SendMessageChannelCache>-Klasse in WF4 hilft Entwicklern beim Erstellen schneller Anwendungen mit minimalem Aufwand. Weitere Informationen finden Sie unter [Ändern der Cachefreigabeebenen für Send-Aktivitäten](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
 
 ### <a name="declarative-programming"></a>Deklarative Programmierung
  WF4 stellt ein reines und einfaches, deklaratives Programmierframework bereit, um Geschäftsprozesse und -dienste zu modellieren. Das Programmiermodell unterstützt die vollständig deklarative Komposition von Aktivitäten ohne Code-Beside, was die Workflowerstellung sehr vereinfacht. In [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] wurde das XAML-basierte deklarative Programmierframework in der einzelnen Assembly System.Xaml.dll vereinigt, um sowohl WPF als auch WF zu unterstützen.
@@ -70,7 +70,7 @@ Dustin Metzgar
  Dieser Abschnitt enthält Daten zu direkten Vergleichen zwischen einzelnen Aktivitäten in WF3-und WF4-Workflows.  Hauptbereiche wie Persistenz haben tiefgründigere Auswirkungen auf die Leistung als die einzelnen Aktivitätskomponenten.  Die Leistungsverbesserungen an einzelnen Komponenten in WF4 sind dennoch wichtig, da die Komponenten jetzt schnell genug sind, um mit der handcodierten Orchestrierungslogik verglichen zu werden.  Ein Beispiel dafür wird im nächsten Abschnitt behandelt: "Dienstkompositionsszenario".
 
 ### <a name="environment-setup"></a>Umgebungssetup
- ![Testumgebung für workflowleistung](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Testumgebung für workflowleistung](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
  Die oben erwähnte Abbildung zeigt die zur Leistungsmessung auf Komponentenebene verwendete Computerkonfiguration. Ein einzelner Server und fünf Clients sind über eine 1-GBit/s-Ethernet-Netzwerkschnittstelle verbunden. Zur einfacheren Messung ist der Server so konfiguriert, dass ein einzelner Kern eines Dual-Proc/Quad-Core-Servers verwendet wird, der unter Windows Server 2008 x86 ausgeführt wird. Die CPU-Auslastung des Systems wird bei annähernd 100&#160;% gehalten.
 
@@ -113,7 +113,7 @@ Dustin Metzgar
 
  Das folgende Diagramm zeigt die für diesen Test verwendeten Workflows. Der WF3-Workflow befindet sich links, der WF4-Workflow rechts.
 
- ![WF3-ReplicatorActivity und WF4-ParallelForEach](../../../docs/framework/windows-workflow-foundation/media/replicatorandparallelforeach.gif "ReplicatorAndParallelForEach")
+ ![WF3-ReplicatorActivity und WF4-ParallelForEach](./media/replicatorandparallelforeach.gif "ReplicatorAndParallelForEach")
 
 ### <a name="sequential-workflow-with-five-activities"></a>Sequenzieller Workflow mit fünf Aktivitäten
  Dieser Test ist dafür vorgesehen, den Effekt des Ausführens mehrerer Aktivitäten nacheinander zu zeigen.  Die Sequenz enthält fünf Aktivitäten.
@@ -166,14 +166,14 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
     }
 ```
 
- ![Einfache kompensierungsworkflows für WF3 und WF](../../../docs/framework/windows-workflow-foundation/media/basiccompensationworkflows.gif "BasicCompensationWorkflows")
+ ![Einfache kompensierungsworkflows für WF3 und WF](./media/basiccompensationworkflows.gif "BasicCompensationWorkflows")
 
  Abbildung 2 – grundlegende Kompensationsworkflows in WF3 (links) und WF4 (rechts)
 
 ### <a name="performance-test-results"></a>Ergebnisse des Leistungstests
- ![Ergebnisse der Leistungstests](../../../docs/framework/windows-workflow-foundation/media/performancedata.gif "PerformanceData")
+ ![Ergebnisse der Leistungstests](./media/performancedata.gif "PerformanceData")
 
- ![Datendiagramm des Leistungstests](../../../docs/framework/windows-workflow-foundation/media/performancetestchart.gif "PerformanceTestChart")
+ ![Datendiagramm des Leistungstests](./media/performancetestchart.gif "PerformanceTestChart")
 
  Alle Tests werden mit Ausnahme des Transaktionsbereichstests in Workflows pro Sekunde gemessen.  Wie oben angezeigt, wurde die Leistung der [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Laufzeit im gesamten System verbessert, insbesondere in Bereichen, die mehrere Ausführungen derselben Aktivität erfordern wie etwa die while-Schleife.
 
@@ -186,12 +186,12 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Die zwei Back-End-Dienste, Bestellungsvalidierungsdienst und Warehouse-Dienst, bleiben für beide Tests gleich.  Der Teil, der sich ändert, ist der Onlineshopdienst, von dem die Orchestrierung ausgeführt wird.  Im ersten Fall ist der Dienst die handcodierten als WCF-Dienst.  Im anderen Fall wird der Dienst als einen WCF-Workflowdienst in WF4 geschrieben. [!INCLUDE[wf1](../../../includes/wf1-md.md)]-spezifische Funktionen wie Nachverfolgen und Persistenz sind für diesen Test deaktiviert.
 
 ### <a name="environment"></a>Umgebung
- ![Testumgebung für workflowleistung](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Testumgebung für workflowleistung](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
  Clientanforderungen werden dem Onlineshopdienst über HTTP von mehreren Computern gestellt.  Ein einzelner Computer hostet alle drei Dienste.  Die Transportebene zwischen dem Onlineshopdienst und den Back-End-Diensten ist TCP oder HTTP.  Die Messung der Vorgänge pro Sekunde basiert auf der Anzahl der beim Onlineshopdienst eingegangenen `PurchaseOrder`-Aufrufe.  Channelpooling ist eine neue, in WF4 verfügbare Funktion.  In WCF ist Teil dieser Test channelpooling nicht sofort zur Verfügung, damit eine handcodierte Implementierung einer einfachen poolingtechnik im Online Store-Dienst verwendet wurde.
 
 ### <a name="performance"></a>Leistung
- ![Leistungsdiagramm für Onlineshopdienst Online Store](../../../docs/framework/windows-workflow-foundation/media/onlinestoreperfgraph.gif "OnlineStorePerfGraph")
+ ![Leistungsdiagramm für Onlineshopdienst Online Store](./media/onlinestoreperfgraph.gif "OnlineStorePerfGraph")
 
  Beim Herstellen einer Verbindung zu Back-End-TCP-Diensten ohne Channelpooling weist der [!INCLUDE[wf1](../../../includes/wf1-md.md)]-Dienst Auswirkungen von 17,2 % auf den Durchsatz auf.  Mit Channelpooling beträgt der Abzug etwa 23,8 %.  Für HTTP ist die Auswirkungen viel weniger werden: 4,3 % ohne pooling und 8,1 % mit pooling.  Zudem muss beachtet werden, dass bei Verwendung von HTTP das Channelpooling sehr wenig Vorteile bietet.
 
@@ -204,19 +204,19 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  In einer WCF Workflow Service-Anwendung ist die Latenzzeit für das Starten eines neuen Workflows oder zum Laden eines vorhandenen Workflows wichtig, da Sie den Vorgang blockieren kann.  Dieser Testfall misst einen WF3-XOML-Host in einem typischen Szenario im Vergleich zu einem WF4-XAMLX-Host.
 
 ##### <a name="environment-setup"></a>Umgebungssetup
- ![Einrichten der Umgebung für Tests von Latenz und Durchsatz](../../../docs/framework/windows-workflow-foundation/media/latencyandthroughputenvironment.gif "LatencyAndThroughputEnvironment")
+ ![Einrichten der Umgebung für Tests von Latenz und Durchsatz](./media/latencyandthroughputenvironment.gif "LatencyAndThroughputEnvironment")
 
 ##### <a name="test-setup"></a>Testsetup
  In diesem Szenario kontaktiert ein Clientcomputer einen kontextbasierte Korrelation mit WCF-Workflowdienst.  Kontextkorrelation erfordert eine besondere Kontextbindung und verwendet einen Kontextheader oder ein Cookie, um Meldungen mit der richtigen Workflowinstanz zu verknüpfen.  Ein Leistungsvorteil besteht darin, dass sich die Korrelations-ID im Nachrichtenheader befindet, damit der Nachrichtentext nicht analysiert werden muss.
 
  Der Dienst erstellt einen neuen Workflow mit der Anforderung und sendet eine sofortige Antwort, damit bei der Messung der Latenzzeit die Zeit für die Ausführung des Workflows nicht einbezogen wird.  Der WF3-Workflow basiert auf XOML mit Code-Behind, und der WF4-Workflow basiert vollständig auf XAML.  Der WF4-Workflow sieht folgendermaßen aus:
 
- ![WF 4 Correlation Scope](../../../docs/framework/windows-workflow-foundation/media/correlationscopeworkflow.gif "CorrelationScopeWorkflow")
+ ![WF 4 Correlation Scope](./media/correlationscopeworkflow.gif "CorrelationScopeWorkflow")
 
  Die <xref:System.ServiceModel.Activities.Receive>-Aktivität erstellt die Workflowinstanz.  Ein in der empfangenen Meldung übergebener Wert wird in der Antwortnachricht wiederholt.  Eine Sequenz, die der Antwort folgt, enthält den Rest des Workflows.  Im oben erwähnten Fall wird nur eine Kommentaraktivität angezeigt.  Die Anzahl der Kommentaraktivitäten wird geändert, um Workflowkomplexität zu simulieren.  Eine Kommentaraktivität entspricht einer WF3-<xref:System.Workflow.Activities.CodeActivity>, die keine Arbeit erledigt. Weitere Informationen zur kommentaraktivität finden Sie im Abschnitt "Leistungsvergleiche auf Komponentenebene" weiter oben in diesem Artikel.
 
 ##### <a name="test-results"></a>Testergebnisse
- ![Latenzergebnisse](../../../docs/framework/windows-workflow-foundation/media/latencyresultsgraph.gif "LatencyResultsGraph")
+ ![Latenzergebnisse](./media/latencyresultsgraph.gif "LatencyResultsGraph")
 
  Abbildung 3 – Kalte und warme Latenzzeit für WCF-Workflowdienste
 
@@ -228,22 +228,22 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Kontextbasierte Korrelation weist einen Leistungsvorteil auf, da sich der Korrelationsschlüssel im Nachrichtenheader befindet.  Der Schlüssel kann ohne Deserialisierung/Kopieren der Meldung von der Meldung gelesen werden.  Bei der inhaltsbasierten Korrelation wird der Korrelationsschlüssel im Nachrichtentext gespeichert.  Ein XPath-Ausdruck wird verwendet, um den Schlüssel zu suchen.  Die Kosten für diese zusätzliche Verarbeitung hängen von der Größe der Meldung, Tiefe des Schlüssels im Text und der Anzahl der Schlüssel ab.  Dieser Test vergleicht die kontext - und inhaltsbasierte Korrelation und zeigt zudem den Leistungsabfall beim Verwenden mehrerer Schlüssel.
 
 #### <a name="environment-setup"></a>Umgebungssetup
- ![Testumgebung für workflowleistung](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Testumgebung für workflowleistung](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
 #### <a name="test-setup"></a>Testsetup
- ![Korrelationsdurchsatz](../../../docs/framework/windows-workflow-foundation/media/correlationthroughputworkflow.gif "CorrelationThroughputWorkflow")
+ ![Korrelationsdurchsatz](./media/correlationthroughputworkflow.gif "CorrelationThroughputWorkflow")
 
  Der oben gezeigte Workflow entspricht dem im Abschnitt "Persistenz" verwendet.  Für die Korrelationstests ohne Persistenz ist kein Persistenzanbieter in der Laufzeit installiert.  Korrelation tritt an zwei Stellen: CreateOrder und CompleteOrder.
 
 #### <a name="test-results"></a>Testergebnisse
- ![Korrelationsdurchsatz](../../../docs/framework/windows-workflow-foundation/media/correlationthroughputgraph.gif "CorrelationThroughputGraph")
+ ![Korrelationsdurchsatz](./media/correlationthroughputgraph.gif "CorrelationThroughputGraph")
 
  Dieses Diagramm zeigt eine Leistungsabnahme als Anzahl der in inhaltsbasierten Korrelationszunahmen verwendeten Schlüssel an.  Die Ähnlichkeit der Kurven zwischen TCP und HTTP gibt den Aufwand an, der diesen Protokollen zugeordnet wurde.
 
 #### <a name="correlation-with-persistence"></a>Korrelation mit Persistenz
  Bei einem persistenten Workflow wird der CPU-Druck von der inhaltsbasierten Korrelation von der Workflowlaufzeit auf die SQL-Datenbank umgestellt.  Die gespeicherten Prozeduren im SQL-Persistenzanbieter passen die Schlüssel an, um den entsprechenden Workflow zu finden.
 
- ![Korrelations-und persistenzergebnisse](../../../docs/framework/windows-workflow-foundation/media/correlationandpersistencegraph.gif "CorrelationAndPersistenceGraph")
+ ![Korrelations-und persistenzergebnisse](./media/correlationandpersistencegraph.gif "CorrelationAndPersistenceGraph")
 
  Die kontextbasierte Korrelation ist immer noch schneller als die inhaltsbasierte Korrelation.  Der Unterschied ist jedoch weniger deutlich, da die Persistenz mehr Auswirkungen auf die Leistung als die Korrelation hat.
 
@@ -257,32 +257,32 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  Die Anzahl der Aktivitäten in einem bestimmten Test wird anhand der Tiefe und der Anzahl der Aktivitäten pro Sequenz bestimmt.  Die folgende Formel berechnet die Anzahl der Aktivitäten im WF4-Test:
 
- ![Formel zum Berechnen der Anzahl der Aktivitäten](../../../docs/framework/windows-workflow-foundation/media/numberofactivitiesequation.gif "NumberOfActivitiesEquation")
+ ![Formel zum Berechnen der Anzahl der Aktivitäten](./media/numberofactivitiesequation.gif "NumberOfActivitiesEquation")
 
  Die Anzahl der Aktivitäten im WF3-Test kann aufgrund einer zusätzlichen Sequenz mit einer etwas anderen Formel berechnet werden:
 
- ![Formel zum Berechnen der Anzahl der Aktivitäten](../../../docs/framework/windows-workflow-foundation/media/w3numberofactivitiesequation.gif "W3NumberOfActivitiesEquation")
+ ![Formel zum Berechnen der Anzahl der Aktivitäten](./media/w3numberofactivitiesequation.gif "W3NumberOfActivitiesEquation")
 
  d entspricht der Tiefe, a der Anzahl der Aktivitäten pro Sequenz.  Die Logik hinter diesen Formeln: Das Produkt aus der ersten Konstante und a entspricht der Anzahl der Sequenzen, die zweite Konstante entspricht der statischen Anzahl der Aktivitäten in der aktuellen Ebene.  In jedem Flussdiagramm sind drei untergeordnete Flussdiagrammaktivitäten vorhanden.  Auf der untersten Ebene sind diese Flussdiagramme leer, aber auf den anderen Ebenen sind sie Kopien des Hauptflussdiagramms.  Die Anzahl der Aktivitäten in der Workflowdefinition der jeweiligen Testvariation ist in der folgenden Tabelle angegeben:
 
- ![Vergleicht die Anzahl der Aktivitäten, die im jeweiligen Test verwendeten](../../../docs/framework/windows-workflow-foundation/media/comparechart.gif "CompareChart")
+ ![Vergleicht die Anzahl der Aktivitäten, die im jeweiligen Test verwendeten](./media/comparechart.gif "CompareChart")
 
  Die Anzahl der Aktivitäten in der Workflowdefinition nimmt scharf mit jeder Tiefenebene zu.  In einer angegebenen Workflowinstanz wird jedoch nur ein Pfad pro Entscheidungspunkt ausgeführt, sodass nur eine kleine Teilmenge der tatsächlichen Aktivitäten ausgeführt wird.
 
- ![Komplexer Workflow](../../../docs/framework/windows-workflow-foundation/media/complexworkflowthroughputworkflow.gif "ComplexWorkflowThroughputWorkflow")
+ ![Komplexer Workflow](./media/complexworkflowthroughputworkflow.gif "ComplexWorkflowThroughputWorkflow")
 
  Ein entsprechender Workflow wurde für WF3 erstellt. Der WF3-Designer zeigt den ganzen Workflow im Entwurfsbereich anstelle der Schachtelung an. Er ist daher für eine Anzeige in diesem Thema zu groß. Ein Ausschnitt des Workflows wird unten dargestellt.
 
- ![WF3 Workflow](../../../docs/framework/windows-workflow-foundation/media/wf3workflow.gif "WF3Workflow")
+ ![WF3 Workflow](./media/wf3workflow.gif "WF3Workflow")
 
  Ein anderer Workflow, der Teil dieses Tests ist, verwendet 100 geschachtelte Sequenzen, um die Schachtelung im Extremfall zu üben.  In der innersten Sequenz befindet sich ein einzelner `Comment` oder eine einzelne <xref:System.Workflow.Activities.CodeActivity>.
 
- ![Geschachtelte Sequenzen](../../../docs/framework/windows-workflow-foundation/media/nestedsequencewf.gif "NestedSequenceWF")
+ ![Geschachtelte Sequenzen](./media/nestedsequencewf.gif "NestedSequenceWF")
 
  Nachverfolgung und Persistenz werden nicht als Teil dieses Tests verwendet.
 
 ### <a name="test-results"></a>Testergebnisse
- ![Durchsatzdiagramm](../../../docs/framework/windows-workflow-foundation/media/testresults1.gif "TestResults1")
+ ![Durchsatzdiagramm](./media/testresults1.gif "TestResults1")
 
  Sogar mit komplexen Workflows mit viel Tiefe und einer hohen Anzahl Aktivitäten sind die Leistungsergebnisse mit anderen, weiter oben in diesem Artikel angezeigten Durchsatzzahlen konsistent.  Der Durchsatz von WF4 ist größer und muss auf einer logarithmischen Skala verglichen werden.
 
@@ -294,11 +294,11 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  Die zwei neuen grundlegenden Tests weisen Workflows auf, die wie die im Folgenden angezeigten aussehen:
 
- ![Komplexe Workflows](../../../docs/framework/windows-workflow-foundation/media/complexworkflowboth.gif "ComplexWorkflowBoth")
+ ![Komplexe Workflows](./media/complexworkflowboth.gif "ComplexWorkflowBoth")
 
  Im oben angezeigten WF3-Workflow werden leere <xref:System.Workflow.Activities.CodeActivity>-Aktivitäten verwendet.  Der WF4-Workflow oben verwendet `Comment`-Aktivitäten.  Die `Comment`-Aktivität wurde weiter oben in diesem Artikel im Abschnitt "Leistungsvergleiche auf Komponentenebene" beschrieben.
 
- ![Diagramm der Speicherauslastung](../../../docs/framework/windows-workflow-foundation/media/complexmemoryusage.gif "ComplexMemoryUsage")
+ ![Diagramm der Speicherauslastung](./media/complexmemoryusage.gif "ComplexMemoryUsage")
 
  Einer der klaren Trends in diesem Diagramm ist, dass die Schachtelung relativ geringe Auswirkungen auf die Speicherauslastung in WF3 und WF4 hat.  Die bedeutendsten Arbeitsspeicherauswirkungen in einem bestimmten Workflow resultieren aus der Anzahl der Aktivitäten.  Gegeben sind die Daten aus folgenden Variationen: Sequenz 1000, komplexe Tiefe 5 Sequenz 5 und komplexe Tiefe 7 Sequenz 1. Wenn die Anzahl der Aktivitäten 1000 überschreitet, ist es daher klar, dass die Zunahme der Speicherauslastung beträchtlicher wird.  Im Extremfall (Tiefe 7 Sequenz 1) mit ~ 29.000 Aktivitäten verwendet WF4 fast 79 % weniger Arbeitsspeicher als WF3.
 
@@ -311,7 +311,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  Die im Konsolentest verwendeten Workflowdefinitionen waren einfache sequenzielle Workflows mit einer einzelnen Aktivität.  Die einzelne Aktivität war eine leere <xref:System.Workflow.Activities.CodeActivity> für WF3 und eine `Comment`-Aktivität für WF4.  Im von IIS gehosteten Fall wurden Workflows verwendet, die mit dem Empfang einer Meldung beginnen und mit dem Senden einer Antwort enden:
 
- ![Workflowdienste in WF3 und WF4](../../../docs/framework/windows-workflow-foundation/media/receiveworkflowboth.gif "ReceiveWorkflowBoth")
+ ![Workflowdienste in WF3 und WF4](./media/receiveworkflowboth.gif "ReceiveWorkflowBoth")
 
  Abbildung 4 – WF3-Workflow mit ReceiveActivity und WF4-Workflow mit Anforderungs-/Antwortmuster
 
@@ -361,19 +361,19 @@ public class Workflow1 : Activity
  Im WF4-SQL-Persistenzanbieter wird versucht, einige dieser Probleme zu behandeln.  In den Persistenztabellen stehen bestimmte Informationen, wie z. B. die aktiven Lesezeichen und heraufstufbare Eigenschaften, zur Verfügung.  Die Ausführung der neuen, inhaltsbasierten Korrelationsfunktion in WF4 funktionierte nicht gut mit dem WF3-SQL-Persistenzansatz, was zu einer Änderung in der Organisation der persistenten Workflowinstanz führte.  Dadurch wird der Auftrag des Persistenzanbieters komplexer, was zu einer zusätzlichen Belastung der Datenbank führt.
 
 ### <a name="environment-setup"></a>Umgebungssetup
- ![Testumgebung für workflowleistung](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Testumgebung für workflowleistung](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
 ### <a name="test-setup"></a>Testsetup
  Trotz verbesserten Funktionsumfangs und besserer Parallelitätsbehandlung ist der SQL-Persistenzanbieter in WF4 schneller als der Anbieter in WF3.  Zur Veranschaulichung werden nachfolgend zwei Workflows verglichen, die prinzipiell dieselben Vorgänge in WF3 und WF4 ausführen.
 
- ![Persistenzworkflows](../../../docs/framework/windows-workflow-foundation/media/persistworkflow.gif "PersistWorkflow")
+ ![Persistenzworkflows](./media/persistworkflow.gif "PersistWorkflow")
 
  Abbildung 5 – Persistenzworkflow in WF3 (links) und WF4 (rechts)
 
  Die beiden Workflows wurden anhand einer empfangenen Meldung erstellt.  Der Workflow wird beibehalten, nachdem eine erste Antwort gesendet wurde.  In WF3 wird eine leere <xref:System.Workflow.ComponentModel.TransactionScopeActivity> verwendet, um die Persistenz zu initiieren.  Dasselbe kann in WF3 erreicht werden durch Markieren eine Aktivität als "beim Schließen beibehalten".  Eine zweite, korrelierte Meldung schließt den Workflow ab.  Die Workflows werden beibehalten, aber nicht entladen.
 
 ### <a name="test-results"></a>Testergebnisse
- ![Durchsatzpersistenz](../../../docs/framework/windows-workflow-foundation/media/throughputpersistence.gif "ThroughputPersistence")
+ ![Durchsatzpersistenz](./media/throughputpersistence.gif "ThroughputPersistence")
 
  Wenn der Transport zwischen Client und mittlerer Ebene über HTTP erfolgt, steigt die Persistenz in WF4 um das 2,6-Fache.  Beim TCP-Transport wird dieser Faktor um das 3-Fache erhöht.  In allen Fällen beträgt die CPU-Auslastung auf der mittleren Ebene mindestens 98 %.  Der Grund für den höheren WF4-Durchsatz ist die schnellere Workflowlaufzeit.  Die Größe der serialisierten Instanz ist in beiden Fällen gering und in dieser Situation nicht entscheidend.
 
@@ -424,15 +424,15 @@ public class Workflow1 : Activity
 
  WF4 verfügt über keinen SQL-Nachverfolgungsanbieter, AppFabric jedoch schon.  Der SQL-Nachverfolgungsansatz von AppFabric ist, ETW-Ereignisse mit einem Windows-Dienst zu abonnieren, der die Ereignisse stapelweise verarbeitet und sie in eine SQL-Tabelle schreibt, die für schnelle Einfügungen entworfen wurde.  Ein separater Auftrag entnimmt die Daten aus dieser Tabelle und ordnet sie in Berichtstabellen neu an, die auf dem AppFabric-Dashboard angezeigt werden können.  Dies bedeutet, dass ein Batch von Nachverfolgungsereignissen unabhängig vom Workflow behandelt wird, von dem er stammt, und daher vor dem Aufzeichnen nicht auf einen Persistenzpunkt warten muss.
 
- ETW-Ereignisse können mit Tools, wie z. B. logman oder xperf, aufgezeichnet werden.  Die kompakte ETL-Datei kann mit einem Tool wie xperfview angezeigt oder mit tracerpt in ein besser lesbares Format, wie z. B. XML, konvertiert werden.  In WF3 ist die einzige Option zum Abrufen von Nachverfolgungsereignissen ohne SQL-Datenbank das Erstellen eines benutzerdefinierten Überwachungsdiensts. Weitere Informationen zu ETW finden Sie unter [WCF-Dienste und Ereignisablaufverfolgung für Windows-Ereignis](../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) und [Ereignisablaufverfolgung - Windows-Anwendungen](/windows/desktop/etw/event-tracing-portal).
+ ETW-Ereignisse können mit Tools, wie z. B. logman oder xperf, aufgezeichnet werden.  Die kompakte ETL-Datei kann mit einem Tool wie xperfview angezeigt oder mit tracerpt in ein besser lesbares Format, wie z. B. XML, konvertiert werden.  In WF3 ist die einzige Option zum Abrufen von Nachverfolgungsereignissen ohne SQL-Datenbank das Erstellen eines benutzerdefinierten Überwachungsdiensts. Weitere Informationen zu ETW finden Sie unter [WCF-Dienste und Ereignisablaufverfolgung für Windows-Ereignis](../wcf/samples/wcf-services-and-event-tracing-for-windows.md) und [Ereignisablaufverfolgung - Windows-Anwendungen](/windows/desktop/etw/event-tracing-portal).
 
  Die Aktivierung der Workflownachverfolgung wirkt sich unterschiedlich auf die Leistung aus.  Der folgende Vergleichstest verwendet das logman-Tool, um die ETW-Nachverfolgungsereignisse zu verarbeiten und sie in einer ETL-Datei aufzuzeichnen.  Die Kosten für die SQL-Nachverfolgung in AppFabric liegen außerhalb des Rahmens dieses Artikels.  Das grundlegende Nachverfolgungsprofil, das auch in AppFabric verwendet wurde, wird in diesem Vergleichstest angezeigt.  Ebenfalls enthalten sind die Kosten für die Nachverfolgung von Systemüberwachungsereignissen.  Diese Ereignisse sind für das Beheben von Problemen und Bestimmen des durchschnittlichen Durchsatzes des Systems hilfreich.
 
 ### <a name="environment-setup"></a>Umgebungssetup
- ![Testumgebung für workflowleistung](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Testumgebung für workflowleistung](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
 ### <a name="test-results"></a>Testergebnisse
- ![Workflowüberwachungskosten](../../../docs/framework/windows-workflow-foundation/media/workflowtracingcost.gif "WorkflowTracingCost")
+ ![Workflowüberwachungskosten](./media/workflowtracingcost.gif "WorkflowTracingCost")
 
  Die Systemüberwachung wirkt sich in etwa zu 3 % auf den Durchsatz aus.  Die Kosten des grundlegenden Profils liegen bei etwa 8 %.
 
@@ -440,7 +440,7 @@ public class Workflow1 : Activity
  WF4 ist eine fast vollständig neue Version von [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Daher sind WF3-Workflows und Aktivitäten nicht direkt mit WF4 kompatibel.  Viele Kunden, die Windows Workflow Foundation früh übernommen haben interne oder Drittanbieter-workflowdefinitionen und benutzerdefinierte Aktivitäten für WF3.  Eine Möglichkeit, den Übergang zu WF4 zu vereinfachen, ist die Verwendung der Interop-Aktivität, mit der WF3-Aktivitäten in WF4-Workflows ausgeführt werden können.  Es wird empfohlen, die <xref:System.Activities.Statements.Interop>-Aktivität nur bei Bedarf zu verwenden. Weitere Informationen zum Migrieren zu WF4 finden Sie in der [WF4-Migrationsanleitung](https://go.microsoft.com/fwlink/?LinkID=153313).
 
 ### <a name="environment-setup"></a>Umgebungssetup
- ![Testumgebung für workflowleistung](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")
+ ![Testumgebung für workflowleistung](./media/wfperfenvironment.gif "WFPerfEnvironment")
 
 ### <a name="test-results"></a>Testergebnisse
  In der Tabelle unten werden die Ergebnisse der Ausführung eines Workflows dargestellt, der fünf Aktivitäten in einer Sequenz in verschiedenen Konfigurationen enthält.

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: 84057a2d9709963c7a7302110ab11931b86fcad9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497625"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720331"
 ---
 # <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Vorgehensweise: Überprüfen von Eingaben mit dem DataGrid-Steuerelement in Windows Forms
 
 > [!NOTE]
-> Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
+> Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
 Es stehen zwei Arten der Validierung von Benutzereingaben für die Windows-Formulare <xref:System.Windows.Forms.DataGrid> Steuerelement. Wenn der Benutzer versucht, einen Wert eingeben, der den unzulässigen Datentyp für die Zelle, z. B. eine Zeichenfolge in eine ganze Zahl, wird der neue Wert für die ungültige mit dem alten Wert ersetzt. Diese Art der Validierung von Benutzereingaben erfolgt automatisch und kann nicht angepasst werden.
 
@@ -89,4 +89,4 @@ Die andere Art von Validierung von Benutzereingaben kann verwendet werden, um al
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>
 - <xref:System.Data.DataRow.SetColumnError%2A>
-- [DataGrid-Steuerelement](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [DataGrid-Steuerelement](datagrid-control-windows-forms.md)

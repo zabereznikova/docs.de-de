@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: d4331d5f502165a73c7f322358b2d6ee88d92977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591585"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724569"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Spaltentypen im DataGridView-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet mehrere Spaltentypen, die Informationen anzeigen und Benutzern ermöglichen, ändern oder Hinzufügen von Informationen.  
@@ -30,7 +30,7 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet mehrere Spa
 |<xref:System.Windows.Forms.DataGridViewButtonColumn>|Verwendet in Zellen angezeigt werden sollen. Beim Binden nicht automatisch generiert. In der Regel verwendet als ungebundene Spalten.|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|Verwendet, um die Dropdownlisten in Zellen angezeigt werden. Beim Binden nicht automatisch generiert. In der Regel datengebundenen Sie von manuell.|  
 |<xref:System.Windows.Forms.DataGridViewLinkColumn>|Verwendet, um Links in Zellen angezeigt werden. Beim Binden nicht automatisch generiert. In der Regel datengebundenen Sie von manuell.|  
-|Ihr benutzerdefinierter Spaltentyp|Sie können eine eigene Spaltenklasse erstellen, durch Vererbung der <xref:System.Windows.Forms.DataGridViewColumn> Klasse oder eines seiner abgeleiteten Klassen, die benutzerdefinierte Darstellung, die Verhalten oder die gehosteten Steuerelemente bereitstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Zellen und Spalten im DataGridView-Steuerelement in Windows Forms durch Erweitern Aussehens und Verhaltens](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|Ihr benutzerdefinierter Spaltentyp|Sie können eine eigene Spaltenklasse erstellen, durch Vererbung der <xref:System.Windows.Forms.DataGridViewColumn> Klasse oder eines seiner abgeleiteten Klassen, die benutzerdefinierte Darstellung, die Verhalten oder die gehosteten Steuerelemente bereitstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Zellen und Spalten im DataGridView-Steuerelement in Windows Forms durch Erweitern Aussehens und Verhaltens](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
  Diese Spaltentypen werden in den folgenden Abschnitten ausführlicher beschrieben.  
   
@@ -65,7 +65,7 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet mehrere Spa
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
  Mit der <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, Sie können anzeigen, eine Spalte von Zellen, die Dropdown-Listenfelder enthalten. Dies ist nützlich für die Dateneingabe in Feldern, die nur bestimmte Werte, z. B. der Kategoriespalte der Products-Tabelle in der Northwind-Beispieldatenbank enthalten kann.  
   
- Sie können die Dropdown-Liste verwendet für alle Zellen die gleiche Weise, die Sie füllen würde Auffüllen eine <xref:System.Windows.Forms.ComboBox> Dropdown Liste entweder manuell über die zurückgegebene Auflistung der <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> -Eigenschaft, oder durch deren Bindung an eine Datenquelle über die <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, und <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> Eigenschaften. Weitere Informationen finden Sie unter [ComboBox-Steuerelement](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md).  
+ Sie können die Dropdown-Liste verwendet für alle Zellen die gleiche Weise, die Sie füllen würde Auffüllen eine <xref:System.Windows.Forms.ComboBox> Dropdown Liste entweder manuell über die zurückgegebene Auflistung der <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> -Eigenschaft, oder durch deren Bindung an eine Datenquelle über die <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>, und <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> Eigenschaften. Weitere Informationen finden Sie unter [ComboBox-Steuerelement](combobox-control-windows-forms.md).  
   
  Sie können die Werte des tatsächlichen Zellenwertes binden, mit der Datenquelle ein, die die <xref:System.Windows.Forms.DataGridView> Steuerelement durch Festlegen der <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> Eigenschaft der <xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>.  
   
@@ -89,7 +89,7 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement verwendet mehrere Spa
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
-- [DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Vorgehensweise: Anzeigen von Bildern in Zellen des DataGridView-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Arbeiten Sie mit Bildspalten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
-- [Anpassen des DataGridView-Steuerelements von Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+- [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
+- [Vorgehensweise: Anzeigen von Bildern in Zellen des DataGridView-Steuerelement von Windows Forms](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Arbeiten Sie mit Bildspalten im DataGridView-Steuerelement in Windows Forms](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [Anpassen des DataGridView-Steuerelements von Windows Forms](customizing-the-windows-forms-datagridview-control.md)

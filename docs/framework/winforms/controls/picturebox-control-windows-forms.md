@@ -6,33 +6,33 @@ helpviewer_keywords:
 - image controls [Windows Forms]
 - images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-ms.openlocfilehash: d186b9deb88753566713dbf053e475a024f0bfa2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06633583bf99d9888ec7f9180b503a46f2451691
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535209"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702749"
 ---
 # <a name="picturebox-control-windows-forms"></a>PictureBox-Steuerelement (Windows Forms)
-Windows Forms `PictureBox` Steuerelement wird verwendet, um die Anzeige von Grafiken in Bitmap, GIF, JPEG, Metadatei oder Symbol-Format.  
+Die Windows-Formulare `PictureBox` Steuerelement zur Anzeige von Grafiken im Format Bitmap, GIF, JPEG, Metadatei oder Symbol verwendet wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über das PictureBox-Steuerelement](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
+ [Übersicht über das PictureBox-Steuerelement](picturebox-control-overview-windows-forms.md)  
  Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
- [Gewusst wie: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- Erklärt den Zweck der <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Eigenschaft wird und wie sie festgelegt.  
+ [Vorgehensweise: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ Erläutert, welche die <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Eigenschaft wird und wie dieses eingerichtet.  
   
- [Gewusst wie: Festlegen von Bildern zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- Beschreibt das Anzeigen und Löschen eines Bildes zur Laufzeit.  
+ [Vorgehensweise: Festlegen von Bildern zur Laufzeit](how-to-set-pictures-at-run-time-windows-forms.md)  
+ Beschreibt das Anzeigen und löschen ein Bild zur Laufzeit.  
   
- [Gewusst wie: Laden eines Bilds mithilfe des Designers](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- Beschreibt das Laden und Anzeigen eines Bilds auf einem Formular zur Entwurfszeit.  
+ [Vorgehensweise: Laden eines Bilds mithilfe des Designers](how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ Beschreibt, wie zum Laden und Anzeigen eines Bilds in einem Formular zur Entwurfszeit.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.PictureBox>  
- Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

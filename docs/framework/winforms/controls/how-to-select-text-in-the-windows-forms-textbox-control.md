@@ -10,12 +10,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: df2aec3ff108c0106f29e453a93b06c60e67c6af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: acb5434911b569b0a663f47ec5de04db13b436d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649413"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722286"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms
 Sie können Text programmgesteuert in das Windows Forms auswählen <xref:System.Windows.Forms.TextBox> Steuerelement. Wenn Sie eine Funktion, die Text nach einer bestimmten Zeichenfolge sucht erstellen, können Sie beispielsweise den Text, den Reader, der die gefundene Zeichenfolge Position visuell Warnung auswählen.  
@@ -32,7 +32,7 @@ Sie können Text programmgesteuert in das Windows Forms auswählen <xref:System.
   
 3.  (Optional) Zugriff auf den markierten Text durch die <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> Eigenschaft.  
   
-     Der Code unten wählt den Inhalt mit einem Feld beim des Steuerelements <xref:System.Windows.Forms.Control.Enter> Ereignis auftritt. In diesem Beispiel wird überprüft, ob das Textfeld einen Wert für die <xref:System.Windows.Forms.TextBox.Text%2A> -Eigenschaft, die nicht `null` oder eine leere Zeichenfolge. Wenn das Textfeld den Fokus erhält, ist der aktuelle Text in das Textfeld ausgewählt. Die `TextBox1_Enter` Ereignishandler muss gebunden sein, auf das Steuerelement; Weitere Informationen, wie unter [Vorgehensweise: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+     Der Code unten wählt den Inhalt mit einem Feld beim des Steuerelements <xref:System.Windows.Forms.Control.Enter> Ereignis auftritt. In diesem Beispiel wird überprüft, ob das Textfeld einen Wert für die <xref:System.Windows.Forms.TextBox.Text%2A> -Eigenschaft, die nicht `null` oder eine leere Zeichenfolge. Wenn das Textfeld den Fokus erhält, ist der aktuelle Text in das Textfeld ausgewählt. Die `TextBox1_Enter` Ereignishandler muss gebunden sein, auf das Steuerelement; Weitere Informationen, wie unter [Vorgehensweise: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
      Zum Testen dieses Beispiels, drücken Sie die Tab-Taste, bis das Textfeld den Fokus besitzt. Wenn Sie in das Textfeld klicken, ist der Text nicht ausgewählt.  
   
@@ -69,10 +69,10 @@ Sie können Text programmgesteuert in das Windows Forms auswählen <xref:System.
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.TextBox>
-- [Übersicht über das TextBox-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)
+- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox-Steuerelement](textbox-control-windows-forms.md)

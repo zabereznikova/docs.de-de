@@ -2,12 +2,12 @@
 title: Bereichsauswahl und Sichtbarkeit der Aktivitätsdefinition
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: f3a8936c1bc3275468e1e4dbd23d0d001edad021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518501"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723841"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Bereichsauswahl und Sichtbarkeit der Aktivitätsdefinition
 Wie die Bereichsauswahl und Sichtbarkeit eines Objekts beschreibt die Bereichsauswahl und Sichtbarkeit der Aktivitätsdefinition die Fähigkeit anderer Objekte oder Aktivitäten, auf Member der Aktivität zuzugreifen. Die Aktivitätsdefinition erfolgt durch folgende Implementierungen:  
@@ -22,7 +22,7 @@ Wie die Bereichsauswahl und Sichtbarkeit eines Objekts beschreibt die Bereichsau
  Neben dem Datenbereich kann durch die Sichtbarkeit des Aktivitätsmodells auch der Zugriff auf weitere Aspekte der Aktivität eingeschränkt werden, z. B. Validierung, Debugging, Überwachung oder Nachverfolgung. Ausführungseigenschaften schränken über die Sichtbarkeit und Bereichsauswahl die Ausführungsmerkmale für einen bestimmten Definitionsbereich ein. Sekundäre Stämme schränken über die Sichtbarkeit und Bereichsauswahl den von einer <xref:System.Activities.Statements.CompensableActivity> erfassten Zustand auf den Definitionsbereich ein, in dem kompensierbare Aktivitäten verwendet werden.  
   
 ## <a name="definition-and-usage"></a>Definition und Verwendung  
- Ein Workflows wird geschrieben, indem Sie neue Aktivitäten erstellen, durch Vererbung von Klassen Activity-Basisklasse und mithilfe von Aktivitäten aus der [integrierte Aktivitätsbibliothek](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md). Damit eine Aktivität verwendet werden kann, muss die Sichtbarkeit der Komponenten ihrer Definition vom Autor der Aktivität konfiguriert werden.  
+ Ein Workflow wird durch Erstellen neuer Aktivitäten, durch Vererbung von basisaktivitätsklassen sowie durch die Verwendung von Aktivitäten aus geschrieben der [integrierte Aktivitätsbibliothek](net-framework-4-5-built-in-activity-library.md). Damit eine Aktivität verwendet werden kann, muss die Sichtbarkeit der Komponenten ihrer Definition vom Autor der Aktivität konfiguriert werden.  
   
 ### <a name="activity-members"></a>Aktivitätsmember  
  Das Aktivitätsmodell definiert die Argumente, Variablen, Delegaten und untergeordneten Aktivitäten, die von der Aktivität für Consumer verfügbar gemacht werden. Diese Member können jeweils als `public` oder `private` deklariert werden. Öffentliche Member werden vom Consumer der Aktivität konfiguriert, wohingegen `private`-Member eine Implementierung verwenden, die vom Autor der Aktivität festgelegt wurde. Die Sichtbarkeitsregeln für Datenbereiche lauten wie folgt:  
