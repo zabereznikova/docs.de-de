@@ -8,27 +8,27 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: 197f9dfcc14260017911b37dd6e6b7ce49e44ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fce756fc9c6a22372bd849c8bd60f0e416f3031e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521755"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714325"
 ---
 # <a name="graphics-overview-windows-forms"></a>Übersicht über Grafiken (Windows Forms)
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] wird einem Graphics Device Interface, die Programmierern geräteunabhängige Anwendungen schreiben können. Die Dienste der [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] werden über eine Reihe verwalteter Klassen verfügbar gemacht werden.  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ist einem Graphics Device Interface, die Programmierer geräteunabhängige Anwendungen schreiben können. Die Dienste des [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] werden durch eine Reihe von verwalteten Klassen verfügbar gemacht.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über Grafiken](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
+ [Übersicht über Grafiken](overview-of-graphics.md)  
  Stellt eine allgemeine Einführung in [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Drei Kategorien von Grafikdiensten](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
- Beschreibt die drei Kategorien, aus denen Programmierung mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ [Drei Kategorien von Grafikdiensten](three-categories-of-graphics-services.md)  
+ Beschreibt die drei Kategorien, die Programmierung mit bilden [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Struktur der grafischen Oberfläche](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
+ [Struktur der grafischen Oberfläche](structure-of-the-graphics-interface.md)  
  Beschreibt die Schnittstelle für verwaltete Klassen von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Drawing>  
  Ermöglicht den Zugriff auf die grundlegenden [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]-Grafikfunktionen.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33521755"
  Stellt erweiterte [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]-Typografiefunktionen bereit.  
   
  <xref:System.Drawing.Printing>  
- Stellt die Print-bezogene Dienste bereit.  
+ Stellt druckrelevante Dienste bereit.  
   
  <xref:System.Windows.Forms.TextRenderer>  
- Bietet [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Text zeichnen und Messen der Funktionalität.
+ Bietet [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Text zeichnen und Funktionalität zu messen.

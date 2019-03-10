@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: 11047b9308905b153662c5449abeeae8c23af26c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d80a0262455b9b5e0e8535d88eb6292ab60e3ea8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565630"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716009"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an
 Standardmäßig wird die Windows-Formulare <xref:System.Windows.Forms.TextBox> -Steuerelement zeigt eine einzelne Textzeile an und zeigt keine Bildlaufleisten. Wenn der Text länger als der verfügbare Speicherplatz ist, ist nur ein Teil des Texts angezeigt. Sie können dieses Standardverhalten ändern, durch Festlegen der <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, und <xref:System.Windows.Forms.TextBox.ScrollBars%2A> Eigenschaften auf die entsprechenden Werte.  
@@ -44,14 +44,14 @@ Standardmäßig wird die Windows-Formulare <xref:System.Windows.Forms.TextBox> -
     |Wert|Beschreibung|  
     |-----------|-----------------|  
     |`false`|Text im Steuerelement wird nicht automatisch umbrochen, damit sie nach rechts Scrollen wird, bis ein Zeilenumbruch eingefügt erreicht ist. Wenn Sie ausgewählt haben, verwenden Sie diesen Wert <xref:System.Windows.Forms.ScrollBars.Horizontal> Scrollleisten oder <xref:System.Windows.Forms.ScrollBars.Both>weiter oben.|  
-    |`true` (Standardwert)|Die horizontale Bildlaufleiste wird nicht angezeigt. Wenn Sie ausgewählt haben, verwenden Sie diesen Wert <xref:System.Windows.Forms.ScrollBars.Vertical> Scrollleisten oder <xref:System.Windows.Forms.ScrollBars.None>weiter oben, um einen oder mehrere Absätze anzuzeigen.|  
+    |`true` (Standard)|Die horizontale Bildlaufleiste wird nicht angezeigt. Wenn Sie ausgewählt haben, verwenden Sie diesen Wert <xref:System.Windows.Forms.ScrollBars.Vertical> Scrollleisten oder <xref:System.Windows.Forms.ScrollBars.None>weiter oben, um einen oder mehrere Absätze anzuzeigen.|  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.TextBox>
-- [Übersicht über das TextBox-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [TextBox-Steuerelement](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)
+- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [TextBox-Steuerelement](textbox-control-windows-forms.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 26685ff0ff67ac3b7f1b9837cc71cfc0e683b292
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 4d99f56710fa1d879aed5000edb5424a0727ae3c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442112"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703625"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Vorgehensweise: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms
 Ein nicht visuelles Steuerelement (oder Komponente) bietet Funktionen für Ihre Anwendung. Im Gegensatz zu anderen Steuerelementen Komponenten bieten eine Benutzeroberfläche für dem Benutzer nicht und müssen somit auch nicht auf der Windows Forms-Designer-Oberfläche angezeigt werden. Wenn eine Komponente zu einem Formular hinzugefügt wird, zeigt der Windows Forms-Designer ein veränderbarer am unteren Rand der Form, in dem alle Komponenten angezeigt werden. Nach einem Steuerelement der Komponentenleiste hinzugefügt wurde, können Sie wählen die Komponente aus und legen Sie seine Eigenschaften fest, wie jedes andere Steuerelement im Formular.  
@@ -80,11 +80,11 @@ Ein nicht visuelles Steuerelement (oder Komponente) bietet Funktionen für Ihre 
     >  Sie können Ihrem lokalen Computer über das Netzwerk ein Sicherheitsrisiko durch Verweisen auf eine böswillige UserControl verfügbar machen. Dies wäre nur ein Problem, wenn ein böswilliger Benutzer erstellt ein schädliches benutzerdefiniertes Steuerelement, indem Sie versehentlich zu Ihrem Projekt hinzufügen.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)
-- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
-- [Vorgehensweise: Hinzufügen von ActiveX-Steuerelemente zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
-- [Vorgehensweise: Kopieren von Steuerelementen zwischen Windows Forms](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)
-- [Einfügen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
-- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows Forms-Steuerelemente](index.md)
+- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Vorgehensweise: Hinzufügen von ActiveX-Steuerelemente zu Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
+- [Vorgehensweise: Kopieren von Steuerelementen zwischen Windows Forms](how-to-copy-controls-between-windows-forms.md)
+- [Einfügen von Steuerelementen in Windows Forms](putting-controls-on-windows-forms.md)
+- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)

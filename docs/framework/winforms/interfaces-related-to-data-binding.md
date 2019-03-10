@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 5a83198a665563c3d283cac042c9fec95c60f8e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547130"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703530"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Auf Datenbindung bezogene Schnittstellen
 Mit [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] können Sie viele verschiedene Datenstrukturen entsprechend den Bindungsanforderungen der Anwendung und der Daten erstellen, mit denen Sie arbeiten. Möglicherweise möchten Sie eigene Klassen erstellen, die Daten in Windows Forms bereitstellen oder verwenden. Diese Objekte können ein unterschiedliches Maß an Funktionalität und Komplexität bieten, von der Basisdatenbindung bis hin zur Bereitstellung der Unterstützung während der Entwurfszeit, Überprüfung von Fehlern, Benachrichtigung oder sogar Unterstützung für eine strukturierte Zurücksetzung der an den Daten selbst vorgenommenen Änderungen.  
@@ -150,6 +150,6 @@ Mit [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] können Sie viele ver
     >  Eine Klasse, die von erbt <xref:System.Windows.Forms.Control> verwaltet die Bindungen automatisch über die <xref:System.Windows.Forms.Control.BindingContext%2A> -Eigenschaft, also Fälle, in dem Sie implementieren müssen, die <xref:System.Windows.Forms.ICurrencyManagerProvider> sind ziemlich selten.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in Windows Forms](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Windows Forms-Datenbindung](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)
+- [Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in Windows Forms](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Windows Forms-Datenbindung](windows-forms-data-binding.md)

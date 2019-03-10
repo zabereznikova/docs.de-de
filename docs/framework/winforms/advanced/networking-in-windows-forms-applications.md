@@ -5,32 +5,32 @@ helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-ms.openlocfilehash: 23251116344af49509547055af824802c4878849
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2432fbd0a2c769efb126e4b9c1dc19e35fbe4c31
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523383"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712369"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Netzwerkfunktionen in Windows Forms-Anwendungen
-.NET Framework stellt Klassen für die Web Pages anzeigen, Herunterladen von Webinhalten, Interaktion mit File Transfer Protocol (FTP) Sites und Verwenden von Webdiensten, die Dies erleichtert die Netzwerk-Funktionalität in Ihrer Anwendung integrieren. Die folgenden Ressourcen zeigt Ihnen die networking-Technologien von .NET Framework und wie Sie sie in Windows Forms integrieren können.  
+.NET Framework stellt Klassen für die Anzeige von Webseiten, Web-Inhalte herunterlädt, Interaktion mit File Transfer Protocol (FTP) Sites und Nutzen von Webdiensten, zum Erstellen von Netzwerk-Funktionalität in Ihre Anwendung zu vereinfachen. Die folgenden Ressourcen zeigt Ihnen die networking-Technologien von .NET Framework und wie Sie sie in Windows Forms integrieren können.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Net>  
- Der Stammnamespace für Klassen in .NET Framework die Netzwerkkonnektivität Handle.  
+ Der Stammnamespace für Klassen in .NET Framework die Handle-Netzwerkkonnektivität.  
   
  <xref:System.Net.WebClient>  
- Eine einfache Klasse für Web- oder HTTP-basierten Inhalt programmgesteuert abrufen.  
+ Eine einfache Klasse zum Abrufen von Web- oder HTTP-basierten Inhalt programmgesteuert.  
   
  <xref:System.Net.FtpWebRequest>  
  Eine Klasse zum Abrufen und Senden von Dateien über FTP.  
   
  <xref:System.Windows.Forms.WebBrowser>  
- Eine verwaltete Wrapperklasse für die `WebBrowser` Steuerelement, das in Windows enthalten ist.  
+ Eine verwaltete Wrapperklasse für die `WebBrowser` -Steuerelement, das in Windows enthalten ist.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Netzwerkprogrammierung in .NET Framework](../../../../docs/framework/network-programming/index.md)  
- Einführung in Netzwerken, die in .NET Framework.  
+ [Netzwerkprogrammierung in .NET Framework](../../network-programming/index.md)  
+ Eine Einführung in Netzwerke im .NET-Framework.  
   
- [Windows Forms-Datenbindung](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- Beschreibt, wie anzuzeigende Datenbankinhalt in Ihrer Anwendung entweder von einem lokalen Datenspeicher oder einer Datenbank in einem Netzwerk befinden.
+ [Windows Forms-Datenbindung](../windows-forms-data-binding.md)  
+ Beschreibt die Vorgehensweise beim Anzeigen von Inhalt der Datenbank in Ihrer Anwendung, entweder über einen lokalen Datenspeicher oder eine Datenbank, die in einem Netzwerk platziert.

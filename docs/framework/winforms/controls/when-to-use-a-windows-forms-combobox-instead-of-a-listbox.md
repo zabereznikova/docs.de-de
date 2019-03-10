@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], accessing items
 - ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
-ms.openlocfilehash: e6cdc7f0d54d54448a7b9ed42603b07c93eba719
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5dc7778f43c01fd28a14489a7b4179dd851568b2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668339"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702996"
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>Wann ist ein Kombinationsfeld von Windows Forms dem Listenfeld vorzuziehen?
 Die <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Forms.ListBox> Steuerelemente weisen ähnliche Verhaltensweisen und in einigen Fällen austauschbar. Es gibt jedoch Situationen, wenn eine Aufgabe besser geeignet ist.  
@@ -28,6 +28,6 @@ Die <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Forms.ListBox>
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer Windows Forms, ComboBox-, ListBox- oder CheckedListBox-Steuerelement](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)
-- [Vorgehensweise: Sortieren des Inhalts einer Windows Forms-ComboBox-, ListBox- oder CheckedListBox-Steuerelement](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Windows Forms-Steuerelemente zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer Windows Forms, ComboBox-, ListBox- oder CheckedListBox-Steuerelement](add-and-remove-items-from-a-wf-combobox.md)
+- [Vorgehensweise: Sortieren des Inhalts einer Windows Forms-ComboBox-, ListBox- oder CheckedListBox-Steuerelement](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)

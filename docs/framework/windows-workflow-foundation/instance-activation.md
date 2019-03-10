@@ -2,12 +2,12 @@
 title: Instanzaktivierung
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 78f134ca2d78261a5f6ff9376bd9a98116315f0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366044"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703399"
 ---
 # <a name="instance-activation"></a>Instanzaktivierung
 Der SQL-Workflowinstanzspeicher führt eine interne Aufgabe aus, die in regelmäßigen Abständen aktiviert wird und ausführbare oder aktivierbare Workflowinstanzen in der Persistenzdatenbank ermittelt. Wenn eine ausführbare Workflowinstanz gefunden wird, erfolgt die Benachrichtigung des Workflowhosts, der die Instanz aktivieren kann. Wenn der Instanzspeicher eine aktivierbare Workflowinstanz findet, wird ein generischer Host benachrichtigt, der einen Workflowhost aktiviert, der wiederum die Workflowinstanz ausführt. In den folgenden Abschnitten dieses Themas wird der Instanzaktivierungsprozess detailliert erläutert.  
@@ -40,4 +40,4 @@ Der SQL-Workflowinstanzspeicher führt eine interne Aufgabe aus, die in regelmä
  Zur WAS-Aktivierung erfordert ein generischer Host einen Satz von Aktivierungsparametern, um die Endpunktadresse abzuleiten, an der neue Hosts aktiviert werden können. Die Aktivierungsparameter zu WAS-Aktivierung sind der Name der Site, der Anwendungspfad relativ zur Website und der Dienstpfad relativ zur Anwendung. Der SQL-Workflowinstanzspeicher speichert diese Aktivierungsparameter während der Ausführung des <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>-Objekts.  
   
 ## <a name="runnable-instances-detection-period"></a>Runnable Instances Detection Period  
- Die **Runnable Instances Detection Period** Eigenschaft von der SQL-Workflow-Instanz Store gibt den Zeitraum, nach dem die SQL-Workflow-Instanz Store, eine erkennungsaufgabe zum Erkennen von einem Workflow ausführbare oder aktivierbare ausführt, die Instanzen in der Persistenzdatenbank nach dem vorhergehenden ermittlungslauf. Finden Sie unter [Runnable Instances Detection Period](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md) für Weitere Informationen zu dieser Eigenschaft.
+ Die **Runnable Instances Detection Period** Eigenschaft von der SQL-Workflow-Instanz Store gibt den Zeitraum, nach dem die SQL-Workflow-Instanz Store, eine erkennungsaufgabe zum Erkennen von einem Workflow ausführbare oder aktivierbare ausführt, die Instanzen in der Persistenzdatenbank nach dem vorhergehenden ermittlungslauf. Finden Sie unter [Runnable Instances Detection Period](runnable-instances-detection-period.md) für Weitere Informationen zu dieser Eigenschaft.

@@ -6,34 +6,34 @@ helpviewer_keywords:
 - recoloring images
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
-ms.openlocfilehash: 6a85a0637e86657d68b5ea34d8c6eea74cb31af8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6ec90f5102b562a252218be84aa7b3141e05b83
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525953"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708820"
 ---
 # <a name="recoloring-images"></a>Neueinfärben von Bildern
-Neufärben von versteht man Bildfarben anpassen. Einige Beispiele für Neufärben von sind eine Farbe in eine andere, Farbintensität relativ zu einer anderen Farbe Anpassung, Anpassen der Helligkeit oder Kontrast aller Farben und Konvertieren von Farben in Graustufen ändern.  
+Neufärben von ist der Prozess Bildfarben angepasst. Einige Beispiele für über erneutes Einfärben sind eine Farbe in eine andere, Anpassen der Farbintensität relativ zu einer anderen Farbe, Anpassung der Helligkeit oder Kontrast aller Farben und Konvertieren von Farben in Graustufen ändern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Verwenden einer Farbmatrix zum Transformieren einer Farbe](../../../../docs/framework/winforms/advanced/how-to-use-a-color-matrix-to-transform-a-single-color.md)  
- Erläutert das Verwenden einer Farbmatrix zum Transformieren einer Farbe.  
+ [Vorgehensweise: Verwenden einer Farbmatrix zum Transformieren einer Farbe](how-to-use-a-color-matrix-to-transform-a-single-color.md)  
+ Erläutert die Verwendung einer Farbmatrix zum Transformieren einer Farbe.  
   
- [Gewusst wie: Verschieben von Bildfarben](../../../../docs/framework/winforms/advanced/how-to-translate-image-colors.md)  
- Veranschaulicht das Verwenden einer Farbmatrix Farben zu übersetzen.  
+ [Vorgehensweise: Verschieben von Bildfarben](how-to-translate-image-colors.md)  
+ Zeigt, wie Farben, die mithilfe einer Farbmatrix zu übersetzen.  
   
- [Skalieren von Farben mithilfe von Transformationen](../../../../docs/framework/winforms/advanced/using-transformations-to-scale-colors.md)  
- Skalieren von Farben mithilfe einer Farbmatrix erläutert.  
+ [Skalieren von Farben mithilfe von Transformationen](using-transformations-to-scale-colors.md)  
+ Erläutert, wie Farben, die mithilfe einer Farbmatrix zu skalieren.  
   
- [Gewusst wie: Drehen von Farben](../../../../docs/framework/winforms/advanced/how-to-rotate-colors.md)  
- Beschreibt, wie eine Farbe verwenden einer Farbmatrix drehen.  
+ [Vorgehensweise: Drehen von Farben](how-to-rotate-colors.md)  
+ Beschreibt, wie Sie eine Farbe, die mithilfe einer Farbmatrix drehen.  
   
- [Gewusst wie: Scheren von Farben](../../../../docs/framework/winforms/advanced/how-to-shear-colors.md)  
- Definiert die Scherung und Scheren von Farben mithilfe einer Farbmatrix erläutert.  
+ [Vorgehensweise: Scheren von Farben](how-to-shear-colors.md)  
+ Definiert die Scherung und Scheren von Farben, die mithilfe einer Farbmatrix erläutert.  
   
- [Gewusst wie: Verwenden einer Farbumwandlungstabelle](../../../../docs/framework/winforms/advanced/how-to-use-a-color-remap-table.md)  
- Definiert das Neuzuordnen und zeigt, wie eine Farbumwandlungstabelle.  
+ [Vorgehensweise: Verwenden einer Farbumwandlungstabelle](how-to-use-a-color-remap-table.md)  
+ Definiert das Neuzuordnen und zeigt, wie Sie mit einer Farbumwandlungstabelle.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Drawing.Imaging.ColorMatrix>  
@@ -43,11 +43,11 @@ Neufärben von versteht man Bildfarben anpassen. Einige Beispiele für Neufärbe
  Beschreibt diese Klasse und enthält Links zu allen Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- Enthält eine Liste von Themen über die verschiedenen Typen von Bildern.  
+ [Bilder, Bitmaps und Metadateien](images-bitmaps-and-metafiles.md)  
+ Enthält eine Liste der Themen in Bezug auf die verschiedenen Typen von Bildern.  
   
- [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
- Enthält eine Liste der Themen, die veranschaulichen, wie verschiedene Typen von Bildern verwenden.  
+ [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](working-with-images-bitmaps-icons-and-metafiles.md)  
+ Enthält eine Liste der Themen, die zeigen, wie Sie verschiedene Typen von Bildern verwenden.  
   
- [Verwenden von verwalteten Grafikklassen](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)  
- Enthält eine Liste der Themen zum Verwenden von verwalteten Grafikklassen an.
+ [Verwenden von verwalteten Grafikklassen](using-managed-graphics-classes.md)  
+ Enthält eine Liste der Themen zur Verwendung von verwalteten Grafikklassen Verwendung.

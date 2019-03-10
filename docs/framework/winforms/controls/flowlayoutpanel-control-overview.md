@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, dynamic layout
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-ms.openlocfilehash: 2b08566f4b13ed54bfc0bb83c39777410251dafa
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 02d111a630459344efbc5d1e45b53daffcde427f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441770"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702608"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>Übersicht über das FlowLayoutPanel-Steuerelement
 Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement ordnet seinen Inhalt in horizontaler oder vertikaler Flussrichtung an. Dieser Inhalt kann von einer Zeile zur nächsten oder von einer Spalte zur nächsten umgebrochen werden. Wahlweise können Sie den Inhalt auch abschneiden statt ihn umzubrechen.  
@@ -30,4 +30,4 @@ Das <xref:System.Windows.Forms.FlowLayoutPanel>-Steuerelement ordnet seinen Inha
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [FlowLayoutPanel-Steuerelement](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)
+- [FlowLayoutPanel-Steuerelement](flowlayoutpanel-control-windows-forms.md)

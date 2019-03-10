@@ -8,12 +8,12 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from shapes
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-ms.openlocfilehash: cb0b13b8c7b27d6c85cc969f10c126df26a14acf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1977f1c9efe2c379ef6039870aade300efca2bdd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707829"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709496"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Vorgehensweise: Erstellen von Figuren aus Linien, Kurven und Formen
 Erstellen Sie zum Erstellen einer Figur eine <xref:System.Drawing.Drawing2D.GraphicsPath>, und rufen Sie anschließend die Methoden, wie z. B. <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> und <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, um primitive Typen in den Pfad hinzuzufügen.  
@@ -25,16 +25,16 @@ Erstellen Sie zum Erstellen einer Figur eine <xref:System.Drawing.Drawing2D.Grap
   
 -   Im zweite Beispiel wird einen Pfad, der zwei Abbildungen wurde erstellt. Die erste Figur ist einen Bogen, gefolgt von einer Zeile. Die zweite Abbildung ist eine Zeile, gefolgt von einer Kurve, gefolgt von einer Zeile. Die erste Figur bleibt geöffnet, und die zweite Abbildung geschlossen ist.  
   
- [!code-csharp[System.Drawing.ConstructingDrawingPaths#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#21)]
- [!code-vb[System.Drawing.ConstructingDrawingPaths#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#21)]  
+ [!code-csharp[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#21)]  
   
- [!code-csharp[System.Drawing.ConstructingDrawingPaths#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#22)]
- [!code-vb[System.Drawing.ConstructingDrawingPaths#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#22)]  
+ [!code-csharp[System.Drawing.ConstructingDrawingPaths#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#22)]
+ [!code-vb[System.Drawing.ConstructingDrawingPaths#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#22)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  In den vorherigen Beispielen sind für die Verwendung mit Windows Forms konzipiert und erfordern <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
-- [Erstellen und Zeichnen von Pfaden](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
-- [Verwenden eines Stifts zum Zeichnen von Linien und Formen](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [Erstellen und Zeichnen von Pfaden](constructing-and-drawing-paths.md)
+- [Verwenden eines Stifts zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 1de8afcd7167406f10c4d541e95a0fa68be16611
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 844e03891cce41566300409ad1bec67c875718a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658951"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704504"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Zugreifen auf nicht verfügbar gemachte Member des verwalteten HTML-Dokumentobjektmodells
 Das verwaltete HTML (DOKUMENTOBJEKTMODELL) enthält eine Klasse namens <xref:System.Windows.Forms.HtmlElement> , verfügbar macht, die Eigenschaften, Methoden und Ereignisse, die alle HTML-Elemente gemeinsam haben. In einigen Fällen müssen Sie jedoch auf Member zuzugreifen, die die verwaltete Schnittstelle nicht direkt verfügbar gemacht wird. In diesem Thema werden zwei Methoden für den Zugriff auf nicht verfügbar gemachte Member, einschließlich untersucht [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] und VBScript-Funktionen, die innerhalb einer Webseite definiert.  
@@ -49,8 +49,8 @@ Das verwaltete HTML (DOKUMENTOBJEKTMODELL) enthält eine Klasse namens <xref:Sys
   
  Laden Sie diese Seite in der <xref:System.Windows.Forms.WebBrowser> -Steuerelement, können Sie die <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A> Methode zum Abrufen der `FORM` zur Laufzeit mit `form1` als Argument.  
   
- [!code-csharp[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
- [!code-vb[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
+ [!code-csharp[System.Windows.Forms.HtmlElement#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
+ [!code-vb[System.Windows.Forms.HtmlElement#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
 ## <a name="accessing-unmanaged-interfaces"></a>Zugreifen auf nicht verwalteten Schnittstellen  
  Sie können auch nicht verfügbar gemachte Member auf das verwaltete HTML-DOM zugreifen, mithilfe der nicht verwalteten Component Object Model (COM)-Schnittstellen, die von jeder DOM-Klasse verfügbar gemacht werden. Dies wird empfohlen, wenn Sie mehrere Aufrufe für nicht verfügbar gemachte Member erstellen müssen, oder die nicht verfügbar gemachte Member anderen nicht verwalteten Schnittstellen, die nicht von das verwaltete HTML-DOM. umschlossen zurückgibt  
@@ -72,4 +72,4 @@ Das verwaltete HTML (DOKUMENTOBJEKTMODELL) enthält eine Klasse namens <xref:Sys
  Sie können alle Skriptfunktionen, die Sie definieren in einer HTML-Seite mit Aufrufen der <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> Methode. Wenn die Skriptmethode ein HTML-Elements zurückgibt, können eine Umwandlung konvertieren Sie dieses Ergebnis eine <xref:System.Windows.Forms.HtmlElement>. Ausführliche Informationen und Beispielcode finden Sie unter <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verwenden des verwalteten HTML-Dokumentobjektmodells](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+- [Verwenden des verwalteten HTML-Dokumentobjektmodells](using-the-managed-html-document-object-model.md)

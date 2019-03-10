@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], adding to shapes
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-ms.openlocfilehash: 576042d9d8e7a7f77d5375b7dfafafdc63b3e824
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8bc782f9496a9c1562bad2df1ba196fb39572e68
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601960"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704433"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>Vorgehensweise: Ausfüllen einer Form mit einer Volltonfarbe
 Um eine Form mit einer Volltonfarbe zu füllen, erstellen Sie eine <xref:System.Drawing.SolidBrush> Objekt, und klicken Sie dann übergeben, die <xref:System.Drawing.SolidBrush> Objekt als Argument an eine der Füllmethoden der der <xref:System.Drawing.Graphics> Klasse. Das folgende Beispiel zeigt, wie Sie eine Ellipse mit der Farbe Rot zu füllen.  
@@ -23,11 +23,11 @@ Um eine Form mit einer Volltonfarbe zu füllen, erstellen Sie eine <xref:System.
   
  Die vier Zahlen (0, 0, 100, 60), die an die <xref:System.Drawing.Graphics.FillEllipse%2A> Methode angeben, die Position und Größe des umschließenden Rechtecks für die Ellipse. Das Rechteck verfügt über einen oberen linken Ecke der (0, 0), einer Breite von 100 und einer Höhe von 60.  
   
- [!code-csharp[System.Drawing.UsingABrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.UsingABrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
+ [!code-csharp[System.Drawing.UsingABrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.UsingABrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verwenden eines Pinsels zum Ausfüllen von Formen](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+- [Verwenden eines Pinsels zum Ausfüllen von Formen](using-a-brush-to-fill-shapes.md)

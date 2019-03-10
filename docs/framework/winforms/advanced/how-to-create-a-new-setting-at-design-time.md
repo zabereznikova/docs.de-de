@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: c936adb6d4d80032b862994c21178a505da6789b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 54f64de8cdd47b7fd451d266cca3b7577e9e1d78
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964246"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702775"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Vorgehensweise: Erstellen einer neuen Einstellung zur Entwurfszeit
 Sie können eine neue Einstellung zur Entwurfszeit erstellen, mit dem Einstellungs-Designer. Der Einstellungs-Designer ist ein Raster-Style-Schnittstelle, mit dem Sie neue Einstellungen erstellen, und geben Sie Eigenschaften für diese Einstellungen. Sie müssen die Namen, Wert, Typ und Bereich für die neuen Einstellungen angeben. Sobald eine Einstellung erstellt wurde, ist es im Code zugegriffen werden kann.  
@@ -32,6 +32,6 @@ Sie können eine neue Einstellung zur Entwurfszeit erstellen, mit dem Einstellun
 3.  Legen Sie im Einstellungs-Designer den Namen, Wert, Typ und Bereich für Ihre Einstellung. Jede Zeile stellt eine einzelne Einstellung dar.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [Übersicht über Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [How To: Ändern Sie den Wert einer vorhandenen Einstellung zur Entwurfszeit](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](using-application-settings-and-user-settings.md)
+- [Übersicht über Anwendungseinstellungen](application-settings-overview.md)
+- [How To: Ändern Sie den Wert einer vorhandenen Einstellung zur Entwurfszeit](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

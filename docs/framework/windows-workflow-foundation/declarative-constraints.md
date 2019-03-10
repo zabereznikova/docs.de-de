@@ -2,12 +2,12 @@
 title: Deklarative Einschränkungen
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842371"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708147"
 ---
 # <a name="declarative-constraints"></a>Deklarative Einschränkungen
 Deklarative Einschränkungen stellen eine leistungsstarke Validierungsmethode für eine Aktivität und ihre Beziehungen zu anderen Aktivitäten bereit. Einschränkungen werden während des Erstellungsprozesses für eine Aktivität konfiguriert. Der Workflowhost kann jedoch zusätzliche Einschränkungen angeben. Dieses Thema bietet eine Übersicht darüber, wie mit deklarativen Einschränkungen Aktivitätsvalidierung bereitgestellt werden kann.  
@@ -63,7 +63,7 @@ public sealed class SampleActivity : CodeActivity
 
 Es gibt mehrere Validierungsaktivitäten, die Informationen zu den anderen Aktivitäten im Workflow im Verhältnis zur validierten Aktivität bereitstellen. <xref:System.Activities.Validation.GetParentChain> gibt eine Auflistung von Aktivitäten zurück, die alle Aktivitäten zwischen der aktuellen Aktivität und der Stammaktivität enthält. <xref:System.Activities.Validation.GetChildSubtree> stellt eine Auflistung von Aktivitäten bereit, die die untergeordneten Aktivitäten in einem rekursiven Muster enthält, und <xref:System.Activities.Validation.GetWorkflowTree> ruft alle Aktivitäten im Workflow ab.  
   
-Im folgenden Beispiel wird eine `CreateState`-Aktivität definiert. Die `CreateState`-Aktivität muss in einer `CreateCountry`-Aktivität enthalten sein, und die `GetParent`-Methode gibt eine Einschränkung zurück, die diese Anforderung durchsetzt. `GetParent` verwendet die <xref:System.Activities.Validation.GetParentChain>-Aktivität in Verbindung mit einer <xref:System.Activities.Statements.ForEach%601>-Aktivität, um die übergeordneten Aktivitäten der `CreateState`-Aktivität zu überprüfen und zu ermitteln, ob die Anforderung erfüllt wurde.  
+Im folgenden Beispiel wird eine `CreateState` -Aktivität definiert. Die `CreateState`-Aktivität muss in einer `CreateCountry`-Aktivität enthalten sein, und die `GetParent`-Methode gibt eine Einschränkung zurück, die diese Anforderung durchsetzt. `GetParent` verwendet die <xref:System.Activities.Validation.GetParentChain>-Aktivität in Verbindung mit einer <xref:System.Activities.Statements.ForEach%601>-Aktivität, um die übergeordneten Aktivitäten der `CreateState`-Aktivität zu überprüfen und zu ermitteln, ob die Anforderung erfüllt wurde.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -176,4 +176,4 @@ else
 }  
 ```  
   
- Wenn die <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>-Eigenschaft des <xref:System.Activities.Validation.ValidationSettings>-Objekts `true` ist, werden nur die angegebenen zusätzlichen Einschränkungen ausgewertet, nachdem die Validierung über den Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> aufgerufen wird. Dies kann hilfreich sein, wenn überprüft wird, ob Workflows über bestimmte Validierungskonfigurationen verfügen. Beachten Sie jedoch, dass beim Aufrufen des Workflows die im Workflow konfigurierte Validierungslogik ausgewertet wird und weitergegeben werden muss, damit der Workflow erfolgreich gestartet werden kann. Weitere Informationen zum Aufrufen der Validierung finden Sie unter [Aufrufen der Aktivitätsvalidierung](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Wenn die <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>-Eigenschaft des <xref:System.Activities.Validation.ValidationSettings>-Objekts `true` ist, werden nur die angegebenen zusätzlichen Einschränkungen ausgewertet, nachdem die Validierung über den Aufruf von <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> aufgerufen wird. Dies kann hilfreich sein, wenn überprüft wird, ob Workflows über bestimmte Validierungskonfigurationen verfügen. Beachten Sie jedoch, dass beim Aufrufen des Workflows die im Workflow konfigurierte Validierungslogik ausgewertet wird und weitergegeben werden muss, damit der Workflow erfolgreich gestartet werden kann. Weitere Informationen zum Aufrufen der Validierung finden Sie unter [Aufrufen der Aktivitätsvalidierung](invoking-activity-validation.md).

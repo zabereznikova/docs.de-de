@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: e570375d-2a68-44ba-b4f7-c781af2d20e8
-ms.openlocfilehash: 6ff1ccc5e8f188bdec2e09048974fdc20a785920
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 203a01ef82554bf4104f3000c0821cceeafac9f7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572629"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710419"
 ---
 # <a name="how-to-copy-and-paste-an-elementhost-control-at-design-time"></a>Vorgehensweise: Kopieren und Einfügen eines ElementHost-Steuerelements zur Entwurfszeit
 Dieses Verfahren zeigt, wie Sie ein Windows Presentation Foundation (WPF)-Steuerelement in Windows Forms zu kopieren.  
@@ -22,7 +22,7 @@ Dieses Verfahren zeigt, wie Sie ein Windows Presentation Foundation (WPF)-Steuer
   
 ### <a name="to-copy-and-paste-an-elementhost-control-at-design-time"></a>Kopieren und Einfügen eines ElementHost-Steuerelements zur Entwurfszeit  
   
-1.  Fügen Sie eine neue WPF <xref:System.Windows.Controls.UserControl> zu Ihrer Windows Forms-Projekt. Verwenden Sie den Standardnamen (`UserControl1.xaml`) für den Steuerelementtyp. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen von neuen WPF-Inhalts in Windows Forms zur Entwurfszeit](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Fügen Sie eine neue WPF <xref:System.Windows.Controls.UserControl> zu Ihrer Windows Forms-Projekt. Verwenden Sie den Standardnamen, `UserControl1.xaml`, für den Steuerelementtyp. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen von neuen WPF-Inhalts in Windows Forms zur Entwurfszeit](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
 2.  In der **Eigenschaften** legen den Wert des der <xref:System.Windows.FrameworkElement.Width%2A> und <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaften `UserControl1` zu `200`.  
   
@@ -46,6 +46,6 @@ Dieses Verfahren zeigt, wie Sie ein Windows Presentation Foundation (WPF)-Steuer
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Migration und Interoperabilität](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [Verwenden von WPF-Steuerelementen](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [Migration und Interoperabilität](../../wpf/advanced/migration-and-interoperability.md)
+- [Verwenden von WPF-Steuerelementen](using-wpf-controls.md)
 - [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

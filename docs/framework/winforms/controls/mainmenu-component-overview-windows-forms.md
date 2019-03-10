@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MainMenu control [Windows Forms], about MainMenu control
 - menus
 ms.assetid: b41cc5a3-cc59-4996-aa3c-8dd9c17d3c90
-ms.openlocfilehash: 529b57ed443791b87331358a7e6c420dd63933a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c2c33c8c03751e87d71e65523b82d92b18f31c4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700623"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709870"
 ---
 # <a name="mainmenu-component-overview-windows-forms"></a>Übersicht über die MainMenu-Komponente (Windows Forms)
 > [!IMPORTANT]
@@ -21,7 +21,7 @@ ms.locfileid: "54700623"
   
  Die Windows-Formulare <xref:System.Windows.Forms.MainMenu> Komponente wird ein Menü zur Laufzeit angezeigt. Alle Untermenüs des Hauptmenüs und einzelne Elemente sind <xref:System.Windows.Forms.MenuItem> Objekte.  
   
-## <a name="key-properties"></a>Wichtige Eigenschaften  
+## <a name="key-properties"></a>Schlüsseleigenschaften  
  Ein Menüelement kann als das Standardelement gekennzeichnet werden, durch Festlegen der <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> Eigenschaft `true`. Das Standardelement in Fettdruck angezeigt wird, wenn Sie im Menü geklickt wird. Des Menüelements <xref:System.Windows.Forms.MenuItem.Checked%2A> Eigenschaft `true` oder `false`, und gibt an, ob das Menüelement ausgewählt ist. Des Menüelements <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> Eigenschaft passt die Anzeige des ausgewählten Elements: Wenn <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> nastaven NA hodnotu `true`, ein Optionsfeld wird neben dem Element; angezeigt, wenn <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> nastaven NA hodnotu `false`, ein Häkchen neben dem Element angezeigt wird.  
   
 ## <a name="see-also"></a>Siehe auch
@@ -30,4 +30,4 @@ ms.locfileid: "54700623"
 - <xref:System.Windows.Forms.MenuItem>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>
-- [Übersicht über das MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [Übersicht über das MenuStrip-Steuerelement](menustrip-control-overview-windows-forms.md)

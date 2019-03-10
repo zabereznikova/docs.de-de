@@ -7,15 +7,15 @@ helpviewer_keywords:
 - OpenFileDialog component [Windows Forms], about OpenFileDialog
 - Open File dialog box [Windows Forms], displaying in Windows Forms
 ms.assetid: cd717300-46b6-4f82-8207-b218fa7fa407
-ms.openlocfilehash: 1aea4466fd66d84e5c6ede74ecb46d6d659db8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad2fea74f0f3110ab2868064c588a7611d4261e3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564265"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702905"
 ---
 # <a name="openfiledialog-component-overview-windows-forms"></a>Übersicht über die OpenFileDialog-Komponente (Windows Forms)
-Die <xref:System.Windows.Forms.OpenFileDialog>-Komponente von Windows Forms ist ein vorkonfiguriertes Dialogfeld. Dies entspricht dem **geöffnete Datei** (Dialogfeld), die von der Windows-Betriebssystem verfügbar gemacht werden. Die Vererbung erfolgt von der <xref:System.Windows.Forms.CommonDialog>-Klasse.  
+Bei der Windows Forms-Komponente <xref:System.Windows.Forms.OpenFileDialog> handelt es sich um ein vorkonfiguriertes Dialogfeld. Dies entspricht dem **geöffnete Datei** (Dialogfeld), die von der Windows-Betriebssystem verfügbar gemacht werden. Sie erbt von der <xref:System.Windows.Forms.CommonDialog>-Klasse.  
   
 ## <a name="using-this-component"></a>Diese Komponente verwenden  
  Verwenden Sie diese Komponente in der Windows-basierte Anwendung als einfache Lösung für die Dateiauswahl, anstatt ein eigenes Dialogfeld zu konfigurieren. Durch die Verwendung von Windows-Standarddialogfeldern erstellen Sie Anwendungen, deren Basisfunktionen Benutzern sofort vertraut sind. Jedoch darüber im Klaren sein, die bei Verwendung der <xref:System.Windows.Forms.OpenFileDialog> -Komponente verwenden, müssen Sie Ihre eigene Logik zum Öffnen von Dateien schreiben.  
@@ -26,4 +26,4 @@ Die <xref:System.Windows.Forms.OpenFileDialog>-Komponente von Windows Forms ist 
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.OpenFileDialog>
-- [OpenFileDialog-Komponente](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+- [OpenFileDialog-Komponente](openfiledialog-component-windows-forms.md)

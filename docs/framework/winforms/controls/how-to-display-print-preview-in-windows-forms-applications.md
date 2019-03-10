@@ -10,17 +10,17 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: d348c89e3334543cf935e5faec29e546d848a984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526729"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715359"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Vorgehensweise: Anzeigen der Seitenansicht in Windows Forms-Anwendungen
 Sie können die <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement, damit Benutzer ein Dokument anzuzeigen, noch bevor es gedruckt werden.  
   
- Zu diesem Zweck müssen Sie eine Instanz von angeben der <xref:System.Drawing.Printing.PrintDocument> Klasse; Dies ist das Dokument gedruckt werden sollen. Weitere Informationen zur Verwendung der Seitenansicht, mit der <xref:System.Drawing.Printing.PrintDocument> Komponente finden Sie unter [Vorgehensweise: In Windows Forms unter Verwendung der Seitenansicht drucken](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md).  
+ Zu diesem Zweck müssen Sie eine Instanz von angeben der <xref:System.Drawing.Printing.PrintDocument> Klasse; Dies ist das Dokument gedruckt werden sollen. Weitere Informationen zur Verwendung der Seitenansicht, mit der <xref:System.Drawing.Printing.PrintDocument> Komponente finden Sie unter [Vorgehensweise: In Windows Forms unter Verwendung der Seitenansicht drucken](../advanced/how-to-print-in-windows-forms-using-print-preview.md).  
   
 > [!NOTE]
 >  Verwenden der <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement zur Laufzeit benötigen Benutzer einen Drucker auf dem Computer installiert werden, entweder lokal oder über ein Netzwerk, da es sich teilweise handelt wie die <xref:System.Windows.Forms.PrintPreviewDialog> Anwendungskomponente bestimmt, wie ein Dokument gedruckt aussehen wird.  
@@ -82,7 +82,7 @@ Sie können die <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement, da
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [PrintDocument-Komponente](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)
-- [PrintPreviewDialog-Steuerelement](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Druckunterstützung in Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [PrintDocument-Komponente](printdocument-component-windows-forms.md)
+- [PrintPreviewDialog-Steuerelement](printpreviewdialog-control-windows-forms.md)
+- [Druckunterstützung in Windows Forms](../advanced/windows-forms-print-support.md)
+- [Windows Forms](../index.md)

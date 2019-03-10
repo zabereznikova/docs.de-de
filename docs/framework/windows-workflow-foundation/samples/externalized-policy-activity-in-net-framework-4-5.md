@@ -2,24 +2,24 @@
 title: Externalisierte Richtlinienaktivität in .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850232"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706369"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Externalisierte Richtlinienaktivität in .NET Framework 4.5
 
-In diesem Beispiel wird veranschaulicht, wie die ExternalizedPolicy4-Aktivität ermöglicht die Ausführung vorhandener [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> Objekte im [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) direkt unter Verwendung der Regel-Engine wird in WF 3.5 versendet. Mit dieser Aktivität können Sie alle vorhandenen WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>-Elemente öffnen und ausführen. Weitere Informationen zu WF 3.5 Regelmodul als Bestandteil von Windows Workflow Foundation, finden Sie [Einführung in das Windows Workflow Foundation-Regelmodul](https://go.microsoft.com/fwlink/?LinkId=166079). Weitere Informationen zum Migrieren Regeln [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], lesen Sie den migrationsanleitungen unter [Migrationsanleitung](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+In diesem Beispiel wird veranschaulicht, wie die ExternalizedPolicy4-Aktivität ermöglicht die Ausführung vorhandener [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> Objekte im [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) direkt unter Verwendung der Regel-Engine wird in WF 3.5 versendet. Mit dieser Aktivität können Sie alle vorhandenen WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>-Elemente öffnen und ausführen. Weitere Informationen zu WF 3.5 Regelmodul als Bestandteil von Windows Workflow Foundation, finden Sie [Einführung in das Windows Workflow Foundation-Regelmodul](https://go.microsoft.com/fwlink/?LinkId=166079). Weitere Informationen zum Migrieren Regeln [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], lesen Sie den migrationsanleitungen unter [Migrationsanleitung](../migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Projekte in diesem Beispiel
 
 |Projektname|Beschreibung|Hauptdateien|
 |-|-|-|
-|ExternalizedPolicy4|Enthält die ExternalizedPolicy4-Aktivität und ihren WF 4.5-Designer.|**ExternalizedPolicy4.cs**: Aktivitätsdefinition.<br /><br /> **ExternalizedPolicy4Designer.xaml**: benutzerdefinierter Designer für die ExternalizedPolicy4-Aktivität. Er verwendet den Regeleditor (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) der WF 3.5-Regel-Engine.|
-|ImperativeCodeClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer ExternalizedPolicy4-Anwendung mit obligatorischem C#-Code konfiguriert und ausführt (kein Designer verwendet).|**ApplyDiscount.rules**: Datei mit [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Regeldefinitionen.<br /><br /> **Order.cs**: Typ, der einen kundenbestellung darstellt. Regeln werden auf Objekte dieses Typs angewendet.<br /><br /> **"Program.cs"**: konfiguriert und führt einen Workflow aus, die eine Policy4-Aktivität in ApplyDiscount.rules auf Instanzen von Order-Objekte definierte Regeln anwenden.<br /><br /> App.config: Die Konfigurationsdatei mit dem Pfad der Regeldatei.|
-|DesignerClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer ExternalPolicy4-Anwendung im [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Designer konfiguriert und ausführt.|**Sequence1.XAML**: sequenzieller Workflow, der eine Policy4-Aktivität verwendet, um regelauswertungen durchzuführen.<br /><br /> **"Program.cs"**: führt eine Instanz des in Sequence1.xaml definierten Workflows.|
+|ExternalizedPolicy4|Enthält die ExternalizedPolicy4-Aktivität und ihren WF 4.5-Designer.|**ExternalizedPolicy4.cs**: Aktivitätsdefinition.<br /><br /> **ExternalizedPolicy4Designer.xaml**: Benutzerdefinierte Designer für die ExternalizedPolicy4-Aktivität. Er verwendet den Regeleditor (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) der WF 3.5-Regel-Engine.|
+|ImperativeCodeClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer ExternalizedPolicy4-Anwendung mit obligatorischem C#-Code konfiguriert und ausführt (kein Designer verwendet).|**ApplyDiscount.rules**: Datei mit [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Regeldefinitionen.<br /><br /> **Order.cs**: Typ, der einen kundenbestellung darstellt. Regeln werden auf Objekte dieses Typs angewendet.<br /><br /> **Program.cs**: Konfiguriert und führt einen Workflow aus, die eine Policy4-Aktivität in ApplyDiscount.rules auf Instanzen von Order-Objekte definierte Regeln anwenden.<br /><br /> App.config: Die Konfigurationsdatei mit dem Pfad der Regeldatei.|
+|DesignerClientSample|Beispielclientanwendung, die einen Workflow mithilfe einer ExternalPolicy4-Anwendung im [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Designer konfiguriert und ausführt.|**Sequence1.xaml**: Sequenzieller Workflow, der eine Policy4-Aktivität verwendet, um regelauswertungen durchzuführen.<br /><br /> **Program.cs**: Führt eine Instanz des in "Sequence1.xaml" definierten Workflows aus.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>Die ExternalizedPolicy4-Aktivität
 
@@ -48,7 +48,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 |RuleSetName|Name des <xref:System.Workflow.Activities.Rules.RuleSet>, der in der RULES-Datei verwendet werden soll.|
 |TargetObject|Das Objekt, für das die <xref:System.Workflow.Activities.Rules.Rule>-Objekte im <xref:System.Workflow.Activities.Rules.RuleSet> ausgewertet werden.|
 |ResultObject|Das Objekt, das sich nach der Anwendung der Regeln ergibt. (Die Regeln werden zum Beispiel auf das Input-Argument angewendet, und das Ergebnis wird im Result-Argument gespeichert.)|
-|ValidationError|Die Liste der Validierungsfehler, die von der WF 3.5-Regel-Engine beim Überprüfen des <xref:System.Workflow.Activities.Rules.RuleSet> für das Zielobjekt vor der Ausführung zurückgegeben wurde.|
+|ValidationError|Die Liste der Validierungsfehler, die vom WF 3.5-Regelmodul beim Überprüfen des <xref:System.Workflow.Activities.Rules.RuleSet> für das Zielobjekt vor der Ausführung zurückgegeben wurde.|
 
 ## <a name="externalizedpolicy4-activity-designer"></a>ExternalizedPolicy4-Aktivitätsdesigner
 

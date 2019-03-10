@@ -5,39 +5,39 @@ helpviewer_keywords:
 - BackgroundWorker component
 - threading [Windows Forms], controls
 ms.assetid: c311d652-0f26-45fa-bdcc-b1615d73ce4e
-ms.openlocfilehash: 68822c62a1a195ce3128d51c765cfeba2056955d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc7f358a62c8057abb77e1f5a28544bb6c858d98
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536356"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703321"
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>Multithreading in Windows Forms-Steuerelementen
-In vielen Anwendungen können Sie Ihre Benutzeroberfläche (UI) anpassbar, indem zeitaufwändige Operationen in einem anderen Thread ausführen. Eine Reihe von Tools stehen für multithreading Windows Forms-Steuerelemente, einschließlich der <xref:System.Threading> Namespace, der <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> -Methode, und die `BackgroundWorker` Komponente.  
+In vielen Anwendungen können Sie Ihre Benutzeroberfläche (UI) Steigern der Reaktionsfähigkeit, indem zeitaufwändige Vorgänge in einem anderen Thread. Eine Reihe von Tools stehen für multithreading Ihrer Windows Forms-Steuerelemente, einschließlich der <xref:System.Threading> -Namespace, der <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> -Methode, und die `BackgroundWorker` Komponente.  
   
 > [!NOTE]
->  Die `BackgroundWorker` Komponente ersetzt und funktionell erweitert, um die <xref:System.Threading> Namespace und die <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> Methode; diese werden jedoch beibehalten für Abwärtskompatibilität und für zukünftige Verwendung, falls gewünscht. Weitere Informationen finden Sie unter [Übersicht über die BackgroundWorker-Komponente](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  
+>  Die `BackgroundWorker` Komponente ersetzt und funktionell erweitert die <xref:System.Threading> Namespace und die <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> Methode; diese werden jedoch beibehalten für die Abwärtskompatibilität und zur zukünftigen Verwendung, wenn Sie auswählen. Weitere Informationen finden Sie unter [Übersicht über die BackgroundWorker-Komponente](backgroundworker-component-overview.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Threadsicheres Aufrufen von Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
- Zeigt, wie Sie threadsichere Aufrufe an Windows Forms-Steuerelemente.  
+ [Vorgehensweise: Threadsichere Aufrufe von Windows Forms-Steuerelementen](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
+ Zeigt, wie für threadsichere Aufrufe von Windows Forms-Steuerelementen.  
   
- [Gewusst wie: Verwenden eines Hintergrundthreads zur Dateisuche](../../../../docs/framework/winforms/controls/how-to-use-a-background-thread-to-search-for-files.md)  
- Zeigt, wie die <xref:System.Threading> Namespace und die <xref:System.Windows.Forms.Control.BeginInvoke%2A> Methode zur Suche nach Dateien asynchron.  
+ [Vorgehensweise: Verwenden eines Hintergrundthreads zur Dateisuche](how-to-use-a-background-thread-to-search-for-files.md)  
+ Zeigt, wie die <xref:System.Threading> Namespace und die <xref:System.Windows.Forms.Control.BeginInvoke%2A> Methode, um nach Dateien suchen, asynchron.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.ComponentModel.BackgroundWorker>  
- Die Dokumentation der Komponente, die einen Arbeitsthread für asynchrone Vorgänge kapselt.  
+ Dokumentation der Komponente, die einen Arbeitsthread für asynchrone Vorgänge kapselt.  
   
  <xref:System.Media.SoundPlayer.LoadAsync%2A>  
  Dokumentiert, wie Sie einen Sound asynchron zu laden.  
   
  <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>  
- Dokumentiert, wie Sie ein Bild asynchron geladen werden.  
+ Dokumentation zum asynchronen Laden eines Bilds.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Gewusst wie: Ausführen eines Vorgangs im Hintergrund](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- Zeigt die Vorgehensweise führen Sie einen zeitaufwändigen Vorgang mit der <xref:System.ComponentModel.BackgroundWorker> Komponente.  
+ [Vorgehensweise: Ausführen eines Vorgangs im Hintergrund](how-to-run-an-operation-in-the-background.md)  
+ Zeigt, wie einen zeitaufwändigen Vorgang mit führen die <xref:System.ComponentModel.BackgroundWorker> Komponente.  
   
- [Übersicht über die BackgroundWorker-Komponente](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
- Enthält Themen, die beschreiben, wie Sie die <xref:System.ComponentModel.BackgroundWorker> -Komponente für asynchrone Vorgänge.
+ [Übersicht über die BackgroundWorker-Komponente](backgroundworker-component-overview.md)  
+ Enthält Themen, die beschreiben, wie Sie mit der <xref:System.ComponentModel.BackgroundWorker> -Komponente für asynchrone Vorgänge.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], adding items
 - context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
-ms.openlocfilehash: 88bf56ea21c4f120b9d745e7f8a31fed485fa192
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a12a201ac73c86bf391d39f47baa47c87bf96095
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506237"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716756"
 ---
 # <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>Vorgehensweise: Hinzufügen von Menüelementen zu einem ContextMenuStrip
 Sie können nur ein Menüelement oder mehrere Elemente gleichzeitig Hinzufügen einer <xref:System.Windows.Forms.ContextMenuStrip>.  
@@ -48,4 +48,4 @@ Sie können nur ein Menüelement oder mehrere Elemente gleichzeitig Hinzufügen 
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [ContextMenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
+- [ContextMenuStrip-Steuerelement](contextmenustrip-control.md)

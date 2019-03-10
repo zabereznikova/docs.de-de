@@ -2,12 +2,12 @@
 title: Verwenden eines benutzerdefinierten Ausdrucks-Editors
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 3959fdb5b75ae6e48c19130cf6e825455d8f7103
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3bbad843c5e4d409627c255be7341d364a3d36d6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526911"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716529"
 ---
 # <a name="using-a-custom-expression-editor"></a>Verwenden eines benutzerdefinierten Ausdrucks-Editors
 Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen. Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks-Editor nützlich ist:  
@@ -281,4 +281,4 @@ namespace WpfApplication1
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Activities.Presentation.View.IExpressionEditorService>
 - <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
-- [Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitätsdesigner](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitätsdesigner](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

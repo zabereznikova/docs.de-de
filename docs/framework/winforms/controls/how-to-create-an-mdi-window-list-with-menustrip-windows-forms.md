@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: 00f35fe872fc5702595108646e2605ed419823f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58f35304f70c82973ebbc9928bae5a7477e9c53
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585307"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716126"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Vorgehensweise: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip (Windows Forms)
 Verwenden Sie zum Erstellen von Anwendungen, die mehrere Dokumente öffnen, zur gleichen Zeit und kopieren und Einfügen von Inhalt aus einem Dokument in den anderen können die Multiple Document Interface (MDI).  
@@ -82,6 +82,6 @@ Verwenden Sie zum Erstellen von Anwendungen, die mehrere Dokumente öffnen, zur 
 -   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Erstellen von übergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
+- [Vorgehensweise: Erstellen von übergeordneten MDI-Formularen](../advanced/how-to-create-mdi-parent-forms.md)
+- [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](../advanced/how-to-create-mdi-child-forms.md)
+- [MenuStrip-Steuerelement](menustrip-control-windows-forms.md)

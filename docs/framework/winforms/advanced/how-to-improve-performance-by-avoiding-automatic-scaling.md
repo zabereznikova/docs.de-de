@@ -10,20 +10,20 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 50079e1666f2069ea7fe3c0183b9fc104a19eabd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568906"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705337"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Vorgehensweise: Verbessern der Leistung durch Vermeiden der automatischen Skalierung
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ein Bild kann automatisch skaliert werden, wie Sie es zeichnen, die Leistung verringern würden. Alternativ können Sie steuern die Skalierung des Bilds durch die Maße des Zielrechtecks zum Übergeben der <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  
   
  Beispielsweise der folgende Aufruf von der <xref:System.Drawing.Graphics.DrawImage%2A> Methode gibt eine linke obere Ecke des (50, 30), aber nicht über ein Zielrechteck angibt.  
   
- [!code-csharp[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
- [!code-vb[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
+ [!code-vb[System.Drawing.WorkingWithImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
   
  Obwohl dies die einfachste Version von ist das <xref:System.Drawing.Graphics.DrawImage%2A> Methode hinsichtlich der Anzahl der erforderlichen Argumente, es ist nicht unbedingt die effizienteste. Wenn die Auflösung von verwendet [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (in der Regel 96 dpi) unterscheidet sich von der Auflösung, die in gespeicherten der <xref:System.Drawing.Image> -Objekt, das <xref:System.Drawing.Graphics.DrawImage%2A> Methode wird das Bild skaliert. Nehmen wir beispielsweise an ein <xref:System.Drawing.Image> Objekt verfügt über eine Breite von 216 Pixel und den Wert gespeicherten horizontale Auflösung 72 Punkte pro Zoll. Da 216/72-3, ist <xref:System.Drawing.Graphics.DrawImage%2A> wird das Bild skaliert, sodass er eine Breite von 3 Zoll mit einer Auflösung von 96 DPI-Wert aufweist. D. h. <xref:System.Drawing.Graphics.DrawImage%2A> zeigt ein Image mit einer Breite von 96 × 3 = 288 Pixel.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "54568906"
 ## <a name="example"></a>Beispiel  
  Im folgende Beispiel wird das gleiche Image zweimal zeichnet. Im ersten Fall ist die Breite und Höhe des Zielrechtecks nicht angegeben, und das Bild wird automatisch skaliert. Im zweiten Fall sind die Breite und Höhe (gemessen in Pixel) des Zielrechtecks identisch sein, als die Breite und Höhe des Originalbilds angegeben. Die folgende Abbildung zeigt das Bild zweimal gerendert.  
   
- ![Skaliert die Textur](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")  
+ ![Skaliert die Textur](./media/csscaledtexture1.png "csscaledtexture1")  
   
- [!code-csharp[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
- [!code-vb[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
+ [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
+ [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Ersetzen Sie Texture.jpg mit einem Image-Name und Pfad, der auf Ihrem System gültig sind.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [Bilder, Bitmaps und Metadateien](images-bitmaps-and-metafiles.md)
+- [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](working-with-images-bitmaps-icons-and-metafiles.md)

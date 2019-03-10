@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 68a3e72f23e881bc68441e8aee9674f1a822882a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658912"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702359"
 ---
 # <a name="how-to-set-the-input-mask"></a>Vorgehensweise: Festlegen des Eingabeformats
 Das maskierte Textfeld-Steuerelement ist eine erweiterte Textfeld-Steuerelement, das eine deklarative Syntax unterstützt, zum Akzeptieren oder Ablehnen der Benutzereingabe. Wenn Sie die Mask-Eigenschaft festlegen, können Sie die zulässigen Benutzereingaben ohne schreiben eine benutzerdefinierte Validierungslogik in Ihrer Anwendung angeben. Weitere Informationen finden Sie im Abschnitt "Hinweise" der <xref:System.Windows.Forms.MaskedTextBox> Klasse.  
@@ -64,4 +64,4 @@ Das maskierte Textfeld-Steuerelement ist eine erweiterte Textfeld-Steuerelement,
      Die Maske wird eingegeben die **Maske** -Eigenschaft in der **Eigenschaften** Fenster.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Exemplarische Vorgehensweise: Arbeiten mit dem MaskedTextBox-Steuerelement](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+- [Exemplarische Vorgehensweise: Arbeiten mit dem MaskedTextBox-Steuerelement](walkthrough-working-with-the-maskedtextbox-control.md)

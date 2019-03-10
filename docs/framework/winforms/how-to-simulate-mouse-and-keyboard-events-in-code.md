@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 43641b89ae405caf9807b00b4b3c84f25c4e5e67
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: bb51cd5ac3c4961381ceff89054d79dc52531627
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332194"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713760"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Vorgehensweise: Simulieren von Maus- und Tastaturereignissen in Code
 Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Maus- und Tastatureingaben bereit. Dieses Thema enthält eine Übersicht über diese Optionen.  
@@ -31,7 +31,7 @@ Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Mau
   
 2.  Rufen Sie die <xref:System.Windows.Forms.Control.OnMouseClick%2A> -Methode mit dieser <xref:System.Windows.Forms.MouseEventArgs> -Instanz als Argument auf.  
   
- Weitere Informationen zu benutzerdefinierten Steuerelementen finden Sie unter [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md).  
+ Weitere Informationen zu benutzerdefinierten Steuerelementen finden Sie unter [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](./controls/developing-windows-forms-controls-at-design-time.md).  
   
  Es gibt weitere Möglichkeiten, Mauseingaben zu simulieren. Beispielsweise können Sie programmgesteuert eine Steuerelementeigenschaft festlegen, die einen Zustand darstellt, der normalerweise per Mauseingabe festgelegt wird (etwa die <xref:System.Windows.Forms.CheckBox.Checked%2A> -Eigenschaft des <xref:System.Windows.Forms.CheckBox> -Steuerelements). Sie können aber auch direkt den Delegaten aufrufen, der mit dem Ereignis verknüpft ist, das Sie simulieren möchten.  
   
@@ -60,9 +60,9 @@ Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Mau
   
 1.  Rufen Sie die <xref:System.Windows.Forms.SendKeys.Send%2A> - oder die <xref:System.Windows.Forms.SendKeys.SendWait%2A> -Methode der <xref:System.Windows.Forms.SendKeys> -Klasse auf. Die angegebenen Tastatureingaben werden vom aktiven Steuerelement der Anwendung empfangen. Im folgenden Codebeispiel wird <xref:System.Windows.Forms.SendKeys.Send%2A> verwendet, um ein Drücken der EINGABETASTE zu simulieren, wenn der Benutzer auf die Oberfläche des Formulars doppelklickt. Für dieses Beispiel wird ein <xref:System.Windows.Forms.Form> -Objekt mit einem einzelnen <xref:System.Windows.Forms.Button> -Steuerelement angenommen, dessen Aktivierreihenfolge (TabIndex) gleich 0 ist.  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>So senden Sie eine Tastatureingabe an eine andere Anwendung  
   
@@ -71,16 +71,16 @@ Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Mau
     > [!NOTE]
     >  Die richtigen Parameter des `FindWindow` -Aufrufs, der nach der Anwendung Rechner sucht, können je nach Windows-Version unterschiedlich sein.  Im folgenden Code wird die Anwendung Rechner unter [!INCLUDE[win7](../../../includes/win7-md.md)]gesucht. Ändern Sie unter [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]den ersten Parameter in "SciCalc". Sie können das zu Visual Studio gehörende Tool Spy++ verwenden, um die richtigen Parameter zu ermitteln.  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Codebeispiel ist die vollständige Anwendung für die vorherigen Codebeispiele.  
   
- [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
- [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
+ [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
@@ -90,4 +90,4 @@ Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Mau
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Benutzereingaben in Windows Forms](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+- [Benutzereingaben in Windows Forms](user-input-in-windows-forms.md)

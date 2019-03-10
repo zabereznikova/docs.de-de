@@ -8,37 +8,37 @@ helpviewer_keywords:
 - spin button control
 - up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
-ms.openlocfilehash: c23f374f1ec9cab6e43b12d32b97c40533ac36cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83d674e3fb7ff7e715b75c635b891cd4e9703a21
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527325"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704533"
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown-Steuerelement (Windows Forms)
-Windows Forms <xref:System.Windows.Forms.DomainUpDown> Steuerelement sieht wie eine Kombination aus einem Textfeld und ein Paar von Schaltflächen in einer Liste oben oder unten verschieben. Das Steuerelement zeigt an, und legt eine Zeichenfolge aus einer Liste von Optionen. Der Benutzer kann die Zeichenfolge auswählen, indem Sie auf nach oben oder unten Schaltflächen, um eine Liste durchlaufen, durch Drücken der nach-oben und nach unten-Taste oder durch Eingabe eine Zeichenfolge, die ein Element in der Liste entspricht. Eine Verwendungsmöglichkeit für dieses Steuerelement ist für das Auswählen von Elementen aus einer alphabetisch sortierte Liste der Namen. (Um die Liste zu sortieren, legen die <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> -Eigenschaft `true`.) Die Funktion dieses Steuerelements wird im Listenfeld oder Kombinationsfeld sehr ähnlich, aber es nur sehr wenig Speicherplatz beanspruchen.  
+Die Windows-Formulare <xref:System.Windows.Forms.DomainUpDown> Steuerelement sieht wie eine Kombination aus einem Textfeld und zwei Schaltflächen oben oder unten verschieben, Durchlaufen einer Liste. Das Steuerelement zeigt an, und legt eine Zeichenfolge aus einer Liste von Optionen. Der Benutzer kann die Zeichenfolge auswählen, indem Sie auf nach oben oder unten Schaltflächen zum Navigieren durch eine Liste, durch Drücken der nach-oben und nach-unten-Pfeiltasten oder durch Eingabe einer Zeichenfolge, die ein Element in der Liste entspricht. Eine Verwendungsmöglichkeit für dieses Steuerelement ist für das Auswählen von Elementen aus eine alphabetisch sortierte Liste von Namen. (Um die Liste zu sortieren, legen Sie die <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> Eigenschaft `true`.) Die Funktion dieses Steuerelements ist das Listenfeld oder Kombinationsfeld sehr ähnlich, aber es dauert bis sehr wenig Speicherplatz.  
   
- Die wichtigsten Eigenschaften des Steuerelements sind <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, und <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>. Die <xref:System.Windows.Forms.DomainUpDown.Items%2A> Eigenschaft enthält die Liste der Objekte, deren Text im Steuerelement angezeigt werden. Wenn <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> festgelegt ist, um `false`, das Steuerelement automatisch abgeschlossen wird, Text, dass der Benutzer eingibt, und es mit einem Wert in der Liste vergleicht. Wenn <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> festgelegt ist, um `true`, Durchführen eines Bildlaufs hinter dem letzten Element gelangen Sie auf das erste Element in der Liste und umgekehrt. Die wichtigsten Methoden des Steuerelements sind <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> und <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
+ Die wichtigsten Eigenschaften des Steuerelements sind <xref:System.Windows.Forms.DomainUpDown.Items%2A>, <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>, und <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>. Die <xref:System.Windows.Forms.DomainUpDown.Items%2A> Eigenschaft enthält die Liste der Objekte, deren Textwerte im Steuerelement angezeigt werden. Wenn <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> nastaven NA hodnotu `false`, vervollständigt das Steuerelement automatisch den Text an, dass der Benutzer eingibt, und ihn mit einem Wert in der Liste vergleicht. Wenn <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> nastaven NA hodnotu `true`, Durchführen eines Bildlaufs hinter das letzte Element gelangen Sie auf das erste Element in der Liste und umgekehrt. Die wichtigsten Methoden des Steuerelements sind <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> und <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>.  
   
- Dieses Steuerelement zeigt nur Textzeichenfolgen. Wenn Sie ein Steuerelement möchten, in dem numerische Werte angezeigt, verwenden die <xref:System.Windows.Forms.NumericUpDown> Steuerelement. Weitere Informationen finden Sie unter [NumericUpDown-Steuerelement](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md) .  
+ Dieses Steuerelement zeigt nur Textzeichenfolgen. Wenn Sie verwenden möchten, in dem numerische Werte angezeigt, verwenden Sie die <xref:System.Windows.Forms.NumericUpDown> Steuerelement. Weitere Informationen finden Sie unter [NumericUpDown-Steuerelement](numericupdown-control-windows-forms.md) .  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über das DomainUpDown-Steuerelement](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
- Stellt die allgemeinen Konzepte von der <xref:System.Windows.Forms.DomainUpDown> -Steuerelement, das ermöglicht Benutzern das Durchsuchen und auswählen aus einer Liste von Textzeichenfolgen.  
+ [Übersicht über das DomainUpDown-Steuerelement](domainupdown-control-overview-windows-forms.md)  
+ Stellt die allgemeinen Konzepte des der <xref:System.Windows.Forms.DomainUpDown> -Steuerelement, das ermöglicht das Durchsuchen und auswählen aus einer Liste von Textzeichenfolgen.  
   
- [Gewusst wie: Programmgesteuertes Hinzufügen von Elementen zu DomainUpDown-Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
- Beschreibt, wie die Textzeichenfolgen der <xref:System.Windows.Forms.DomainUpDown> Steuerelement sollte angezeigt werden.  
+ [Vorgehensweise: Programmgesteuertes Hinzufügen von Elementen zu DomainUpDown-Steuerelementen für Windows Forms](how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
+ Beschreibt, wie die Zeichenfolgen der <xref:System.Windows.Forms.DomainUpDown> Steuerelement sollte angezeigt werden.  
   
- [Gewusst wie: Entfernen von Elementen aus DomainUpDown-Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
+ [Vorgehensweise: Entfernen von Elementen aus DomainUpDown-Steuerelementen für Windows Forms](how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
  Beschreibt das Löschen von Elementen aus der <xref:System.Windows.Forms.DomainUpDown> Steuerelement im Code.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.DomainUpDown>  
- Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
  <xref:System.Windows.Forms.NumericUpDown>  
  Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern...  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Steuerelemente, die in Windows Forms verwendet werden können](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Steuerelemente, die in Windows Forms verwendet werden können](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

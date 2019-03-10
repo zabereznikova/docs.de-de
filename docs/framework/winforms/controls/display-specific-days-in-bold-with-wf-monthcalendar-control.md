@@ -11,12 +11,12 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: f310d5e30acffdd358bc5108f39102387289562e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c27037a166d147df51731c5d59fd42f73294c7ad
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547786"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718973"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Vorgehensweise: Anzeige bestimmte Tage im mit der Windows Bold Forms-MonthCalendar-Steuerelement
 Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement kann Tage in Fettschrift, anzeigen, entweder als einzelne Datumsangaben oder einer wiederholten Basis. Diese Option, um die Aufmerksamkeit auf spezielle Datumsangaben, z. B. Feiertage und für Wochenenden empfiehlt sich.  
@@ -128,7 +128,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement ka
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [MonthCalendar-Steuerelement](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
-- [Vorgehensweise: Auswählen eines Datumsbereichs in das Windows Forms-MonthCalendar-Steuerelement](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Vorgehensweise: Ändern Sie die Windows Forms MonthCalendar Darstellung des Steuerelements](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)
-- [Vorgehensweise: Anzeigen von mehr als einen Monat in der Windows Forms-MonthCalendar-Steuerelement](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+- [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)
+- [Vorgehensweise: Auswählen eines Datumsbereichs in das Windows Forms-MonthCalendar-Steuerelement](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Vorgehensweise: Ändern Sie die Windows Forms MonthCalendar Darstellung des Steuerelements](how-to-change-monthcalendar-control-appearance.md)
+- [Vorgehensweise: Anzeigen von mehr als einen Monat in der Windows Forms-MonthCalendar-Steuerelement](display-more-than-one-month-wf-monthcalendar-control.md)

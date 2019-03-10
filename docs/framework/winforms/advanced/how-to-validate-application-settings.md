@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496282"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705830"
 ---
 # <a name="how-to-validate-application-settings"></a>Vorgehensweise: Überprüfen von Anwendungseinstellungen
 In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft werden, bevor sie persistent gespeichert werden.  
@@ -40,9 +40,9 @@ In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft we
   
 -   Für Ereignisse, die ausgelöst wird, bevor der zugehörigen Aktionen, z. B. <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> und <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, verwendet der <xref:System.ComponentModel.CancelEventArgs> Argument, um den Vorgang abzubrechen.  
   
- Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Übersicht über Ereignishandler](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
+ Weitere Informationen zur Behandlung von Ereignissen finden Sie unter [Übersicht über Ereignishandler](../event-handlers-overview-windows-forms.md).  
   
- Die folgenden Verfahren zeigen, wie zum Prüfen auf ein gültiges Geburtsdatum, die entweder die <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> oder <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> Ereignis. Die Verfahren wurden unter der Annahme geschrieben, dass Sie Ihre Anwendungseinstellungen bereits erstellt haben. In diesem Beispiel wird für die Einstellung mit dem Namen `DateOfBirth` eine Überprüfung der Begrenzungen durchgeführt. Weitere Informationen zum Erstellen von Einstellungen finden Sie unter [Vorgehensweise: Erstellen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Die folgenden Verfahren zeigen, wie zum Prüfen auf ein gültiges Geburtsdatum, die entweder die <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> oder <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> Ereignis. Die Verfahren wurden unter der Annahme geschrieben, dass Sie Ihre Anwendungseinstellungen bereits erstellt haben. In diesem Beispiel wird für die Einstellung mit dem Namen `DateOfBirth` eine Überprüfung der Begrenzungen durchgeführt. Weitere Informationen zum Erstellen von Einstellungen finden Sie unter [Vorgehensweise: Erstellen von Anwendungseinstellungen](how-to-create-application-settings.md).  
   
 ### <a name="to-obtain-the-application-settings-object"></a>So rufen Sie das Anwendungseinstellungsobjekt ab  
   
@@ -161,5 +161,5 @@ In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft we
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erstellen von Ereignishandlern in Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [Vorgehensweise: Erstellen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+- [Erstellen von Ereignishandlern in Windows Forms](../creating-event-handlers-in-windows-forms.md)
+- [Vorgehensweise: Erstellen von Anwendungseinstellungen](how-to-create-application-settings.md)

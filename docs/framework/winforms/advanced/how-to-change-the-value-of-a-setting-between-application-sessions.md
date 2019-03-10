@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 - application settings [Windows Forms], between application sessions
 ms.assetid: 1a85911f-97b2-476c-930b-83379edd890c
-ms.openlocfilehash: 475e57e8bfdd5f3296c6af0fb20a472c729ea75c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1626cea581e5c180665d0ce805dea3e67f27a05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540714"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714358"
 ---
 # <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a>Vorgehensweise: Ändern Sie den Wert einer Einstellung zwischen Anwendungssitzungen
 In einigen Fällen empfiehlt es sich so ändern Sie den Wert einer Einstellung zwischen anwendungssitzungen, nachdem die Anwendung kompiliert und bereitgestellt wurde. Beispielsweise empfiehlt es sich um eine Verbindungszeichenfolge für die auf den richtigen Datenbankspeicherort zeigt zu ändern. Da Entwurfszeit-Tools nicht verfügbar sind, nachdem die Anwendung kompiliert und bereitgestellt wurde, müssen Sie den Einstellungswert manuell in der Datei ändern.  
@@ -30,5 +30,5 @@ In einigen Fällen empfiehlt es sich so ändern Sie den Wert einer Einstellung z
 3.  Geben Sie einen neuen Wert für die Einstellung aus, und speichern Sie die Datei.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [Übersicht über Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](using-application-settings-and-user-settings.md)
+- [Übersicht über Anwendungseinstellungen](application-settings-overview.md)

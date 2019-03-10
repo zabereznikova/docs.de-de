@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], setting sizing modes
 - DataGridView control [Windows Forms], sizing modes
 ms.assetid: e9ad15e6-b4bb-44aa-a767-3738e9db1651
-ms.openlocfilehash: ba6a290ca4fdba7c1e2f0eedaf02d11c4dd57e69
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 85322afcaae96b07d085d2b44d923542ecbf9bf6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261552"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708885"
 ---
 # <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelement von Windows Forms
 Die folgenden Prozeduren veranschaulichen einige allgemeinen Szenarien, die die Größenanpassungsoptionen für das <xref:System.Windows.Forms.DataGridView>-Steuerelement und für bestimmte Spalten in einem Steuerelement anpassen oder kombinieren.  
@@ -22,28 +22,28 @@ Die folgenden Prozeduren veranschaulichen einige allgemeinen Szenarien, die die 
   
 -   Legen Sie für die <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>Eigenschaft <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None>, für die <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A>-Eigenschaft <xref:System.Windows.Forms.DataGridViewTriState.False>, für die <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A>-Eigenschaft `true` und für die <xref:System.Windows.Forms.DataGridViewColumn.Width%2A>-Eigenschaft einen geeigneten Wert fest.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#10)]
-     [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#10)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#10)]
+     [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#10)]  
   
 ### <a name="to-create-a-column-that-adjusts-its-size-to-fit-its-content"></a>So erstellen Sie eine Spalte, die ihre Größe an ihren Inhalt angepasst  
   
 -   Legen Sie für die <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>-Eigenschaft einen inhaltsbasierten Größenanpassungsmodus fest.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#20)]
-     [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#20)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#20)]
+     [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#20)]  
   
 ### <a name="to-create-fill-mode-columns-for-values-of-varying-size-and-importance"></a>So erstellen Sie Füllmodusspalten für Werte unterschiedlicher Größe und Wichtigkeit  
   
 -   Legen Sie für die <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>-Eigenschaft den Wert <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill> fest, um den Größenänderungsmodus für alle Spalten festzulegen, die diesen Wert nicht außer Kraft setzen. Legen Sie für die <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>-Eigenschaften der Spalten Werte fest, die proportional zu ihren durchschnittlichen Inhaltsbreiten sind. Legen Sie die <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>-Eigenschaften wichtiger Spalten fest, um sicherzustellen, dass Inhalt teilweise angezeigt werden.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#30)]
-     [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#30)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#30)]
+     [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#30)]  
   
 ## <a name="example"></a>Beispiel  
  Mit dem folgenden vollständigen Codebeispiel steht Ihnen eine Beispielanwendung zur Verfügung, die Ihnen dabei helfen kann, sich mit den in diesem Thema beschriebenen Optionen vertraut zu machen.  
   
- [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#00)]
- [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#00)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#00)]
+ [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#00)]  
   
  So verwenden Sie diese Beispielanwendung  
   

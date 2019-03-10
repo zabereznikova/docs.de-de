@@ -13,12 +13,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: ad5dd1cc3839fbe29d39f6ab38b0e865e7b0a335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492422"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713028"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Festlegen von Einzügen, hängenden Einzügen und Absätzen mit Aufzählungszeichen mit dem RichTextBox-Steuerelement in Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement verfügt über zahlreiche Optionen zum Formatieren des Texts angezeigt. Sie können markierte Absätze als Aufzählungen formatieren, durch Festlegen der <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> Eigenschaft. Sie können auch die <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, und <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> Eigenschaften den Einzug der Absätze relativ zum linken und rechten Rand des Steuerelements und dem linken Rand anderer Textzeilen festlegen.  
@@ -70,5 +70,5 @@ Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement verf
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox-Steuerelement](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

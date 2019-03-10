@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecd167b46a3d600852b5b12a7f18d0013502523d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442970"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712281"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Bidirektionale Unterstützung für Windows Forms-Anwendungen
 Sie können Visual Studio verwenden, um die Windows-basierte Anwendungen zu erstellen, die bidirektionalen (rechts-nach-links) Sprachen wie Arabisch und Hebräisch unterstützen. Dies beinhaltet Standardformulare, Dialogfelder, MDI-Formulare und alle Steuerelemente, die Sie in diesen Formularen verwenden können, also alle Objekte im <xref:System.Windows.Forms.Control>-Namespace.  
@@ -79,7 +79,7 @@ Sie können Visual Studio verwenden, um die Windows-basierte Anwendungen zu erst
 |<xref:System.Windows.Forms.VScrollBar>|Wird statt auf der rechten auf der linken Seite von bildlauffähigen Steuerelementen angezeigt.|Keine Auswirkung|Nein|  
   
 ## <a name="encoding"></a>Codierung  
- Windows Forms unterstützen Unicode, sodass Sie beim Erstellen von bidirektionalen Anwendungen alle Zeichensätze verwenden können. Allerdings wird Unicode nicht auf allen Plattformen von allen Windows Forms-Steuerelementen unterstützt. Weitere Informationen finden Sie unter [Codierung und die Globalisierung von Windows Forms](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md).  
+ Windows Forms unterstützen Unicode, sodass Sie beim Erstellen von bidirektionalen Anwendungen alle Zeichensätze verwenden können. Allerdings wird Unicode nicht auf allen Plattformen von allen Windows Forms-Steuerelementen unterstützt. Weitere Informationen finden Sie unter [Codierung und die Globalisierung von Windows Forms](encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
  Mithilfe von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] können Sie Text mit Rechts-nach-Links-Lesefolge zeichnen. Die <xref:System.Drawing.Graphics.DrawString%2A>-Methode, die zum Zeichnen von Text verwendet wird, unterstützt einen `StringFormat`-Parameter, den Sie auf den <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft>-Member der <xref:System.Drawing.StringFormatFlags>-Enumeration festlegen können, um den Ausgangspunkt des Texts umzukehren.   

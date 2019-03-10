@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: 5206289eaab1195e5314e21b0d49e4b8a5455b72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50f180f2f3fe825f617ae441906a7414a6b8bced
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696307"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707353"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Steuerelemente mit integrierter Ownerdrawing-Unterstützung
 Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeichnet, ist ein Verfahren zum Ändern der Darstellung bestimmter Steuerelemente.  
@@ -86,7 +86,7 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Vorgehensweise: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [Vorgehensweise: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem-Komponente  
  Die <xref:System.Windows.Forms.MenuItem> -Komponente darstellt, ein einzelnes Menüelement in einem <xref:System.Windows.Forms.MainMenu> oder <xref:System.Windows.Forms.ContextMenu> Komponente.  
@@ -172,9 +172,9 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Vorgehensweise: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [Vorgehensweise: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip-Steuerelement  
  <xref:System.Windows.Forms.ToolStrip> und abgeleitete Steuerelemente ermöglichen Ihnen, alle Aspekte der steuerelementdarstellung anzupassen.  
@@ -185,9 +185,9 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
+-   [Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Siehe auch
-- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - Windows Forms controls, adding to form
 ms.assetid: 997508f2-87e5-4bec-a78e-9eec8f1fb15b
-ms.openlocfilehash: 065fb60903fef2b571cb247fec90f3b9e6a3a36d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9ffe797fef9e063470ef93ce73f881aed80e7f6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536217"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705310"
 ---
 # <a name="putting-controls-on-windows-forms"></a>Einfügen von Steuerelementen in Windows Forms
-Es gibt eine Vielzahl von Steuerelementen, die Sie in Windows Forms, je nach den Anforderungen Ihrer Anwendung aufnehmen können.  
+Es gibt eine Vielzahl von Kontrollen, die auf Windows Forms, je nach den Anforderungen Ihrer Anwendung verwendet werden können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- Gibt richtungshinweise zum Anfügen von Steuerelementen zum Formular an.  
+ [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)  
+ Enthält Anweisungen für das Anfügen von Steuerelementen zum Formular.  
   
- [Gewusst wie: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-without-a-user-interface-to-windows-forms.md)  
- Gibt richtungshinweise zum Anfügen von Steuerelementen ohne Benutzeroberfläche für Ihre Anwendung.  
+ [Vorgehensweise: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md)  
+ Enthält Anweisungen zum Anfügen von Steuerelementen ohne Benutzeroberfläche zu Ihrer Anwendung.  
   
- [Gewusst wie: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit](../../../../docs/framework/winforms/controls/how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
+ [Vorgehensweise: Hinzufügen oder Entfernen aus einer Auflistung von Steuerelementen zur Laufzeit](how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  
  Erläutert das Hinzufügen und Entfernen von Steuerelementen in einem Bereich zur Laufzeit.  
   
- [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- Veranschaulicht, wie eine benutzerdefinierte Komponente automatisch in angezeigt werden können die **Toolbox** nachdem die Komponente erstellt wird.  
+ [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ Wird verdeutlicht, wie Sie eine benutzerdefinierte Komponente, die angezeigt wird automatisch in die **Toolbox** nach die Komponente erstellt wird.  
   
- [Gewusst wie: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- Enthält Anweisungen zum Arbeiten mit älteren ActiveX-Steuerelemente.  
+ [Vorgehensweise: Hinzufügen von ActiveX-Steuerelemente zu Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
+ Enthält Anweisungen für die Arbeit mit ältere ActiveX-Steuerelemente.  
   
- [Aspekte beim Hosten eines ActiveX-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
- Beschreibt Dinge zu bedenken, bei der Planung von einer Anwendung, die ActiveX-Steuerelemente verwendet.  
+ [Aspekte beim Hosten eines ActiveX-Steuerelements in Windows Forms](considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
+ Beschreibt Aspekte zu bedenken, wenn eine Anwendung zu planen, die ActiveX-Steuerelemente verwendet.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)  
- Links zu einführenden Themen über Steuerelemente und was Sie damit tun können.  
+ [Windows Forms-Steuerelemente](index.md)  
+ Enthält Links zu einführenden Themen über Steuerelemente und was Sie tun können, mit ihnen.  
   
- [Validierung von Benutzereingaben in Windows Forms](../../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- Erläutert die Grundlagen und die Theorie überprüfen den Inhalt der Windows Forms-Steuerelemente.
+ [Validierung von Benutzereingaben in Windows Forms](../user-input-validation-in-windows-forms.md)  
+ Erläutert die Grundlagen von und die Theorie hinter den Inhalt von Windows Forms-Steuerelementen wird überprüft.

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 136a655064fc0c955cadd2f15e5900579e90187a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748033"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703594"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien
 Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anwendungen einen hohen Stellenwert. Der Windows Forms-Designer bietet Ihnen viele Layouttools, um dies zu erreichen. Einer der wichtigsten Faktoren ist die <xref:System.Windows.Forms.Design.Behavior.SnapLine> Feature.  
@@ -92,7 +92,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
 > [!NOTE]
 >  Wenn des Formulars <xref:System.Windows.Forms.Control.Padding%2A> -Eigenschaftensatz auf 0,0,0,0, der Windows Forms-Designer weist dem Formular ein Shadowing <xref:System.Windows.Forms.Control.Padding%2A> Wert 9,9,9,9 zu. Um dieses Verhalten außer Kraft setzen, weisen Sie einen anderen Wert als 0,0,0,0.  
   
-1.  Ändern Sie den Wert von der <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Margin%2A> Eigenschaft durch Erweitern der <xref:System.Windows.Forms.Control.Margin%2A> Eintrag in der **Eigenschaften** Fenster und der Einstellung der <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft auf 0. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).  
+1.  Ändern Sie den Wert von der <xref:System.Windows.Forms.Button> des Steuerelements <xref:System.Windows.Forms.Control.Margin%2A> Eigenschaft durch Erweitern der <xref:System.Windows.Forms.Control.Margin%2A> Eintrag in der **Eigenschaften** Fenster und der Einstellung der <xref:System.Windows.Forms.Padding.All%2A> Eigenschaft auf 0. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](windows-forms-controls-padding-autosize.md).  
   
 2.  Verschieben der <xref:System.Windows.Forms.Button> Steuerelement in der Nähe der rechten Rand des Formulars bis eine Ausrichtungslinie angezeigt wird. Dieser Abstand wird jetzt durch den Wert des Formulars bestimmt <xref:System.Windows.Forms.Control.Padding%2A> Eigenschaft.  
   
@@ -154,7 +154,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
   
 1.  Ziehen Sie ein <xref:System.Windows.Forms.Button> -Steuerelement aus der **Toolbox** auf das Formular.  
   
-2.  Ändern der Größe der <xref:System.Windows.Forms.Button> Steuerelement Eckziehpunkte auf einen der Ziehpunkte klicken und ziehen. Weitere Informationen finden Sie unter [Vorgehensweise: Größe von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md).  
+2.  Ändern der Größe der <xref:System.Windows.Forms.Button> Steuerelement Eckziehpunkte auf einen der Ziehpunkte klicken und ziehen. Weitere Informationen finden Sie unter [Vorgehensweise: Größe von Steuerelementen in Windows Forms](how-to-resize-controls-on-windows-forms.md).  
   
 3.  Ziehen Sie den Ziehpunkt, bis eines der <xref:System.Windows.Forms.Button> Rändern des Steuerelements mit einem anderen Steuerelement ausgerichtet wird. Beachten Sie, die eine Ausrichtungslinie angezeigt wird. Beachten Sie außerdem, dass die Position angegeben wird, von der Ausrichtungslinie der Ziehpunkt ausgerichtet wird.  
   
@@ -165,7 +165,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
   
 #### <a name="to-align-a-label-to-a-controls-text"></a>Eine Bezeichnung für den Text eines Steuerelements ausgerichtet.  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.TextBox> -Steuerelement aus der **Toolbox** auf das Formular. Beim Ablegen der <xref:System.Windows.Forms.TextBox> steuern, auf das Formular, klicken Sie auf das Smarttag-Symbol aus, und wählen Sie die **Festlegen von Text in textBox1** Option. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags auf Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md).  
+1.  Ziehen Sie ein <xref:System.Windows.Forms.TextBox> -Steuerelement aus der **Toolbox** auf das Formular. Beim Ablegen der <xref:System.Windows.Forms.TextBox> steuern, auf das Formular, klicken Sie auf das Smarttag-Symbol aus, und wählen Sie die **Festlegen von Text in textBox1** Option. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags auf Windows Forms-Steuerelementen](performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
 2.  Ziehen Sie ein <xref:System.Windows.Forms.Label> -Steuerelement aus der **Toolbox** auf das Formular.  
   
@@ -241,7 +241,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
-- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](windows-forms-controls-padding-autosize.md)
+- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)

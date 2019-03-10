@@ -11,12 +11,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: 1ed062b3991d7738269d30a6ff13cda3c80927c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 642115eeb61649eb369058947e5347d4389182a0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630319"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702411"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Vorgehensweise: Ändern der Darstellung der TabControl-Steuerelement in Windows Forms
 Sie können die Darstellung der Registerkarten in Windows Forms ändern, indem Sie mit den Eigenschaften des der <xref:System.Windows.Forms.TabControl> und <xref:System.Windows.Forms.TabPage> Objekte, die die einzelnen Registerkarten des Steuerelements bilden. Durch Festlegen dieser Eigenschaften an, können Sie Bilder auf Registerkarten anzeigen, Anzeigen von Registerkarten vertikal statt horizontal, Anzeigen mehrerer Zeilen mit Registerkarten, und aktivieren oder deaktivieren Registerkarten programmgesteuert.  
@@ -27,7 +27,7 @@ Sie können die Darstellung der Registerkarten in Windows Forms ändern, indem S
   
 2.  Hinzufügen von Bildern der Bildliste.  
   
-     Weitere Informationen zu Bildlisten, finden Sie unter [ImageList-Komponente](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) und [Vorgehensweise: Hinzufügen oder Entfernen von Bildern mit der Windows Forms ImageList-Komponente](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
+     Weitere Informationen zu Bildlisten, finden Sie unter [ImageList-Komponente](imagelist-component-windows-forms.md) und [Vorgehensweise: Hinzufügen oder Entfernen von Bildern mit der Windows Forms ImageList-Komponente](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
 3.  Legen Sie die <xref:System.Windows.Forms.TabControl.ImageList%2A> Eigenschaft der <xref:System.Windows.Forms.TabControl> auf der <xref:System.Windows.Forms.ImageList> Steuerelement.  
   
@@ -66,8 +66,8 @@ Sie können die Darstellung der Registerkarten in Windows Forms ändern, indem S
 -   Legen Sie die <xref:System.Windows.Forms.TabControl.Appearance%2A> Eigenschaft der <xref:System.Windows.Forms.TabControl> zu <xref:System.Windows.Forms.TabAppearance.Buttons> oder <xref:System.Windows.Forms.TabAppearance.FlatButtons>.  
   
 ## <a name="see-also"></a>Siehe auch
-- [TabControl-Steuerelement](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
-- [Übersicht über das TabControl-Steuerelement](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
-- [Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
-- [Vorgehensweise: Deaktivieren von Registerkarten](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)
-- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten zu TabControls in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [TabControl-Steuerelement](tabcontrol-control-windows-forms.md)
+- [Übersicht über das TabControl-Steuerelement](tabcontrol-control-overview-windows-forms.md)
+- [Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte](how-to-add-a-control-to-a-tab-page.md)
+- [Vorgehensweise: Deaktivieren von Registerkarten](how-to-disable-tab-pages.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten zu TabControls in Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

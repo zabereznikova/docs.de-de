@@ -6,52 +6,52 @@ helpviewer_keywords:
 - programming [WF]
 - WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
-ms.openlocfilehash: 2e60a98492947a5ce21652cff1ca7dda7993e8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b4e56c332567cdf1aea94a836ef7dcdcd8a94fe
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515687"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703646"
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation-Programmierung
-Dieser Abschnitt enthält eine Reihe von Einführungsthemen, die Sie kennen sollten, versiert Windows Workflow Foundation (WF)-Programmierer sind.  
+Dieser Abschnitt enthält eine Reihe von Einführungsthemen, die Sie kennen sollten, Programmierer gute Kenntnisse von Windows Workflow Foundation (WF) werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Entwerfen von Workflows](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
+ [Entwerfen von Workflows](designing-workflows.md)  
  Themen, in denen die Paradigmen zur Datenflusssteuerung erläutert werden, die bei der Workflowentwicklung verwendet werden.  
   
- [Verwenden und Erstellen von Aktivitäten](../../../docs/framework/windows-workflow-foundation/using-and-creating-activities.md)  
- Themen, die beschreibt, die vom System bereitgestellte Aktivitäten, die in Windows Workflow Foundation (WF) verfügbar.  
+ [Verwenden und Erstellen von Aktivitäten](using-and-creating-activities.md)  
+ Themen, die beschreibt, die vom System bereitgestellten Aktivitäten, die in Windows Workflow Foundation (WF) verfügbar.  
   
- [Windows Workflow Foundation-Datenmodell](../../../docs/framework/windows-workflow-foundation/data-model.md)  
+ [Windows Workflow Foundation-Datenmodell](data-model.md)  
  Themen, in denen Variablen, Argumente und Ausdrücke von [!INCLUDE[wf1](../../../includes/wf1-md.md)] beschrieben werden.  
   
- [Warten auf Eingabe in einem Workflow](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)  
+ [Warten auf Eingabe in einem Workflow](waiting-for-input-in-a-workflow.md)  
  Themen, in denen beschrieben wird, wie Sie Lesezeichen und Messagingaktivitäten verwenden.  
   
- [Ausnahmen, Transaktionen und Kompensation](../../../docs/framework/windows-workflow-foundation/exceptions-transactions-and-compensation.md)  
+ [Ausnahmen, Transaktionen und Kompensation](exceptions-transactions-and-compensation.md)  
  Themen, in denen beschrieben wird, wie Sie Ausnahmehandler, Transaktionen und die Kompensation zum Behandeln von Laufzeitfehlern verwenden.  
   
- [Hosten von Workflows](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)  
+ [Hosten von Workflows](hosting-workflows.md)  
  Themen, in denen die Details zum Schreiben von Workflowhostanwendungen beschrieben werden.  
   
- [Dynamisches Update](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)  
+ [Dynamisches Update](dynamic-update.md)  
  Beschreibt, wie die Workflowdefinition einer persistenten Workflowinstanz anhand dynamischer Updates aktualisiert wird.  
   
- [Workflowdienste](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [Workflowdienste](../wcf/feature-details/workflow-services.md)  
  Themen, in denen das Programmiermodell beschrieben wird, das über die Unterstützung zum deklarativen Schreiben von Diensten verfügt.  
   
- [Workflowpersistenz](../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
+ [Workflowpersistenz](workflow-persistence.md)  
  Themen, in denen die Optionen zum automatischen oder manuellen Beibehalten von Workflowdaten und zum Entladen von Workflows aus dem Arbeitsspeicher beschrieben werden.  
   
- [Migrationsanleitung](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)  
- Themen, in denen zum Migrieren von Workflows aus früheren Versionen von Windows Workflow Foundation (WF) beschrieben.  
+ [Migrationsanleitung](migration-guidance.md)  
+ Themen, die beschreiben, wie Sie Workflows aus früheren Versionen von Windows Workflow Foundation (WF) zu migrieren.  
   
- [Nachverfolgung und Ablaufverfolgung für Workflows](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [Nachverfolgung und Ablaufverfolgung für Workflows](workflow-tracking-and-tracing.md)  
  Themen, in denen die Nachverfolgung und Ablaufverfolgung für Workflows und die Verwendung dieser Funktionen zum Überwachen von Workflowanwendungen beschrieben wird.  
   
- [Workflowsicherheit](../../../docs/framework/windows-workflow-foundation/workflow-security.md)  
- Erläutert, wie die Sicherheit des Workflows sorgen bei Verwendung von SQL und Windows Communication Foundation (WCF).  
+ [Workflowsicherheit](workflow-security.md)  
+ Erläutert, wie Sie Ihren Workflow bei Verwendung von SQL und Windows Communication Foundation (WCF) geschützt werden.  
   
- [Windows Workflow Foundation 4 – Leistung](../../../docs/framework/windows-workflow-foundation/performance.md)  
- Windows Workflow Foundation 4 Leistung erläutert und vergleicht ihn mit der Vorgängerversion von WF.
+ [Windows Workflow Foundation 4 – Leistung](performance.md)  
+ Leistung von Windows Workflow Foundation 4 erläutert und vergleicht es mit der Vorgängerversion von WF.

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-ms.openlocfilehash: f2ab0cc789b026a139e1421b72e9215bf52c6147
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92b45f026470f312fe788ed30e4ff8d172735a98
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672018"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709483"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Virtueller Modus im DataGridView-Steuerelement in Windows Forms
 Mit virtuellen Modus befindet, können Sie verwalten, die Interaktion zwischen der <xref:System.Windows.Forms.DataGridView> Steuerelement und einer Zwischenspeicherung von benutzerdefinierten Daten. Legen Sie zum Implementieren des virtuellen Modus der <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft `true` und Behandeln eines oder mehrere der in diesem Thema beschriebenen Ereignisse. Behandeln Sie in der Regel mindestens die `CellValueNeeded` -Ereignis, das dem Steuerelement nach Werten in Datencache suchen ermöglicht.  
@@ -27,14 +27,14 @@ Mit virtuellen Modus befindet, können Sie verwalten, die Interaktion zwischen d
 ## <a name="replacing-bound-mode"></a>Ersetzen des gebundenen Modus  
  Wenn gebundene-Modus nicht Ihren leistungsanforderungen erfüllt, können Sie alle Ihre Daten in einem benutzerdefinierten Cache über Ereignishandler im virtuellen Modus verwalten. Beispielsweise können virtuellen Modus zum Implementieren eines Mechanismus, der nur ruft der just-in-Time Datenladevorgangs so viele Daten aus einer Datenbank im Netzwerk wie für eine optimale Leistung erforderlich ist. Dieses Szenario ist besonders nützlich, bei der Arbeit mit großen Mengen von Daten über eine langsame Netzwerkverbindung oder mit Clientcomputer, die eine begrenzte Menge an Arbeitsspeicher oder ein Speicherplatz aufweisen.  
   
- Weitere Informationen zur Verwendung des virtuellen Modus in einem just-in-Time-Szenario finden Sie unter [Implementieren des virtuellen Modus mit Just-in-Time-Laden von Daten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
+ Weitere Informationen zur Verwendung des virtuellen Modus in einem just-in-Time-Szenario finden Sie unter [Implementieren des virtuellen Modus mit Just-in-Time-Laden von Daten im DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
   
 ## <a name="virtual-mode-events"></a>Ereignisse des virtuellen Modus  
  Wenn Ihre Daten nur lesen, ist die `CellValueNeeded` Ereignis möglicherweise das einzige Ereignis, das Sie behandeln müssen. Zusätzliche im virtuellen Modus Ereignisse können Sie bestimmte Funktionen wie die benutzerbearbeitungen, Zeilen und löschen und auf Zeilenebene Transaktionen zu ermöglichen.  
   
  Einige Standard <xref:System.Windows.Forms.DataGridView> Ereignisse (z. B. Ereignisse, die auftreten, wenn Benutzer hinzufügen oder Löschen von Zeilen oder Werte Wenn Zelle bearbeitet, analysiert, überprüft oder formatiert sind) im virtuellen Modus auch hilfreich sind. Sie können auch Ereignisse behandeln, mit denen Sie in der Regel nicht in einer gebundenen Datenquelle, z. B. Zelle QuickInfo-Text, Zelle und Fehlertext für die Zeile, Zelle und Zeile Verknüpfung im Menü und Höhe Zeilendaten gespeicherten Werte beibehalten.  
   
- Weitere Informationen zum Implementieren des virtuellen Modus zum Verwalten von Lese-/Schreibdaten mit einem Bereich auf Zeilenebene Commit finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus in der Windows Forms-DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).  
+ Weitere Informationen zum Implementieren des virtuellen Modus zum Verwalten von Lese-/Schreibdaten mit einem Bereich auf Zeilenebene Commit finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus in der Windows Forms-DataGridView-Steuerelement](implementing-virtual-mode-wf-datagridview-control.md).  
   
  Ein Beispiel, mit einem auf Zellenebene Commit-Bereich des virtuellen Modus implementiert, finden Sie unter den <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Referenzthema-Eigenschaft.  
   
@@ -60,12 +60,12 @@ Mit virtuellen Modus befindet, können Sie verwalten, die Interaktion zwischen d
 |<xref:System.Windows.Forms.DataGridView.RowHeightInfoNeeded><br /><br /> <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed>|Vom Steuerelement verwendeten, zum Abrufen oder Speichern von Informationen über die Zeilenhöhe in Datencache. Rufen Sie die <xref:System.Windows.Forms.DataGridView.UpdateRowHeightInfo%2A> Methode, wenn die zwischengespeicherten Informationen über die Zeilenhöhe außerhalb von ändern eine <xref:System.Windows.Forms.DataGridView.RowHeightInfoPushed> -Ereignishandler, um sicherzustellen, dass der aktuelle Wert in der Anzeige des Steuerelements verwendet wird.|  
   
 ## <a name="best-practices-in-virtual-mode"></a>Bewährte Methoden im virtuellen Modus befindet  
- Wenn Sie für die Arbeit effizient mit großen Mengen von Daten des virtuellen Modus implementieren, Sie sollten auch sicherstellen, dass Sie effizient mit arbeiten die <xref:System.Windows.Forms.DataGridView> selbst zu steuern. Weitere Informationen zur effizienten Verwendung von Zellstile, Größenänderung, Auswahl und Freigeben von Zeilen finden Sie unter [Best Practices für das Skalieren des DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Wenn Sie für die Arbeit effizient mit großen Mengen von Daten des virtuellen Modus implementieren, Sie sollten auch sicherstellen, dass Sie effizient mit arbeiten die <xref:System.Windows.Forms.DataGridView> selbst zu steuern. Weitere Informationen zur effizienten Verwendung von Zellstile, Größenänderung, Auswahl und Freigeben von Zeilen finden Sie unter [Best Practices für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

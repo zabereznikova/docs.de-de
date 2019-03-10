@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cb552752c1693ce8008eb57e0703882b7281830
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366703"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705986"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Vorgehensweise: Hosten Sie mehrerer Workflowversionen zu einem Workflow Seite-an-Seite
 `WorkflowIdentity` bietet Entwicklern von Workflowanwendungen die Möglichkeit, einer Worfklowdefinition einen Namen und eine Version zuzuordnen und diese Informationen mit einer persistenten Workflowinstanz zu verknüpfen. Entwickler von Workflowanwendungen können diese Identitätsinformationen verwenden, um Szenarien wie die parallele Ausführung mehrerer Versionen einer Workflowdefinition umzusetzen. Darüber hinaus bilden sie die Grundlage für andere Funktionen wie dynamische Updates. In diesem Schritt des Lernprogramms wird veranschaulicht, wie mit `WorkflowIdentity` mehrere Versionen eines Workflows gleichzeitig gehostet werden.
@@ -21,22 +21,22 @@ ms.locfileid: "57366703"
 ## <a name="in-this-topic"></a>In diesem Thema  
  In diesem Schritt des Lernprogramms werden die `WriteLine`-Aktivitäten im Workflow geändert, um zusätzliche Informationen bereitzustellen. Außerdem wird eine neue `WriteLine`-Aktivität hinzugefügt. Eine Kopie der ursprünglichen Workflowassembly wird gespeichert, und die Hostanwendung wird aktualisiert, sodass der ursprüngliche und der aktualisierte Workflow gleichzeitig ausgeführt werden können.  
   
--   [Um eine Kopie des NumberGuessWorkflowActivities-Projekts erstellen](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+-   [Um eine Kopie des NumberGuessWorkflowActivities-Projekts erstellen](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [Aktualisieren von workflows](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [Aktualisieren von workflows](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [StateMachine-Workflow aktualisieren](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [StateMachine-Workflow aktualisieren](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [So aktualisieren Sie die Flussdiagramm-workflow](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [So aktualisieren Sie die Flussdiagramm-workflow](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [Aktualisieren Sie den sequenziellen workflow](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [Aktualisieren Sie den sequenziellen workflow](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [So aktualisieren Sie WorkflowVersionMap, um die vorherigen workflowversionen einzuschließen](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [So aktualisieren Sie WorkflowVersionMap, um die vorherigen workflowversionen einzuschließen](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [Zum Erstellen und Ausführen der Anwendungs](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [Zum Erstellen und Ausführen der Anwendungs](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  Bevor Sie die Schritte in diesem Thema ausführen, führen Sie die Anwendung aus, starten mehrere Workflows jedes Typs und geben einen oder zwei Schätzwerte für jeden Typ an. Diese persistenten Workflows werden in diesem Schritt und den folgenden Schritt aus, verwendet [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+>  Bevor Sie die Schritte in diesem Thema ausführen, führen Sie die Anwendung aus, starten mehrere Workflows jedes Typs und geben einen oder zwei Schätzwerte für jeden Typ an. Diese persistenten Workflows werden in diesem Schritt und den folgenden Schritt aus, verwendet [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 > [!NOTE]
 >  Jeder Schritt im Lernprogramm "Erste Schritte" hängt jeweils von den vorherigen Schritten ab. Wenn Sie nicht die vorherigen Schritte abgeschlossen haben, können Sie eine abgeschlossene Version des Lernprogramms von herunterladen [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -60,7 +60,7 @@ ms.locfileid: "57366703"
     > [!NOTE]
     >  Die Schritte in diesem Thema zeigen eine Möglichkeit zur Verwaltung der Assemblys, in denen mehrere Versionen der Workflows enthalten sind. Andere Methoden, wie starke Namen für die Assemblys und das Registrieren der Assemblys im globalen Assemblycache, können ebenfalls verwendet werden.
 
-8.  Erstellen Sie einen neuen Ordner namens **NumberGuessWorkflowActivities_du** im gleichen Ordner wie **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, und die neu hinzugefügt **PreviousVersions** Ordner und kopieren Sie alle Dateien und Unterordner aus dem **NumberGuessWorkflowActivities** Ordner in das neue  **NumberGuessWorkflowActivities_du** Ordner. Diese Sicherungskopie des Projekts für die erste Version der Aktivitäten werden in [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md).
+8.  Erstellen Sie einen neuen Ordner namens **NumberGuessWorkflowActivities_du** im gleichen Ordner wie **NumberGuessWorkflowHost**, **NumberGuessWorkflowActivities**, und die neu hinzugefügt **PreviousVersions** Ordner und kopieren Sie alle Dateien und Unterordner aus dem **NumberGuessWorkflowActivities** Ordner in das neue  **NumberGuessWorkflowActivities_du** Ordner. Diese Sicherungskopie des Projekts für die erste Version der Aktivitäten werden in [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
 9. Öffnen Sie erneut die **WF45GettingStartedTutorial** -Lösung in Visual Studio 2012.
 
@@ -580,4 +580,4 @@ ms.locfileid: "57366703"
 
 4.  Wechseln Sie zurück zur Anwendung zum Schätzen der Zahl, und wählen Sie einen der Workflows aus, die vor den Updates gestartet wurden. Sie können die Version des aktuell ausgewählten Workflows anhand der Versionsinformationen identifizieren, die unter dem Statusfenster angezeigt werden. Geben Sie mehrere Schätzwerte ein. Sie werden feststellen, dass die Statusupdates mit der Ausgabe der `WriteLine`-Aktivität aus der vorherigen Version übereinstimmen und keine Schätzwerte des Benutzers enthalten. Das liegt daran, dass diese Workflows die vorherige Workflowdefinition verwenden, die nicht über die `WriteLine`-Updates verfügt.
 
-     Im nächsten Schritt [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md), die laufende `v1` Workflowinstanzen werden aktualisiert, damit sie die neue Funktionen als enthalten die `v2` Instanzen.
+     Im nächsten Schritt [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](how-to-update-the-definition-of-a-running-workflow-instance.md), die laufende `v1` Workflowinstanzen werden aktualisiert, damit sie die neue Funktionen als enthalten die `v2` Instanzen.

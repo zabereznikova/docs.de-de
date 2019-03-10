@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: ef7836721df6c090a4d09c38c176641331c3e8a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362564"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714007"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Vorgehensweise: Threadsichere Aufrufe von Windows Forms-Steuerelementen
 
-Multithreading kann die Leistung von Windows Forms-Anwendungen verbessern, aber den Zugriff auf Windows Forms-Steuerelemente nicht grundsätzlich threadsicher ist. Multithreading kann Ihr Code sehr ernsthaften und komplexen Fehlern verfügbar machen. Zwei oder mehr Threads, die ein Steuerelement bearbeiten können erzwingen, dass das Steuerelement in einem inkonsistenten Zustand und dazu führen, dass Racebedingungen, Deadlocks und Einfrieren oder hängt. Wenn Sie implementieren multithreading in Ihrer app werden Sie sicher, dass threadübergreifenden-Steuerelemente auf threadsichere Weise aufrufen. Weitere Informationen finden Sie unter [Managed threading best Practices](../../../../docs/standard/threading/managed-threading-best-practices.md). 
+Multithreading kann die Leistung von Windows Forms-Anwendungen verbessern, aber den Zugriff auf Windows Forms-Steuerelemente nicht grundsätzlich threadsicher ist. Multithreading kann Ihr Code sehr ernsthaften und komplexen Fehlern verfügbar machen. Zwei oder mehr Threads, die ein Steuerelement bearbeiten können erzwingen, dass das Steuerelement in einem inkonsistenten Zustand und dazu führen, dass Racebedingungen, Deadlocks und Einfrieren oder hängt. Wenn Sie implementieren multithreading in Ihrer app werden Sie sicher, dass threadübergreifenden-Steuerelemente auf threadsichere Weise aufrufen. Weitere Informationen finden Sie unter [Managed threading best Practices](../../../standard/threading/managed-threading-best-practices.md). 
 
 Es gibt zwei Möglichkeiten, ein Windows Forms-Steuerelement sicher von einem anderen Thread aufrufen können, die das Steuerelement erstellt haben. Sie können die <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> Methode zum Aufrufen eines Delegaten erstellt im Hauptthread, das wiederum das Steuerelement aufruft. Oder Implementieren einer <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>, die ein ereignisgesteuertes Modell verwendet, um Arbeit, die von der berichterstellung für die Ergebnisse im Hintergrundthread zu trennen. 
 
@@ -75,8 +75,8 @@ Das folgende Beispiel zeigt ein Muster zum Sicherstellen der threadsichere Aufru
 
 Die `SafeCallDelegate` Einstellung ermöglicht die <xref:System.Windows.Forms.TextBox> des Steuerelements <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft. Die `WriteTextSafe` Methodenabfragen <xref:System.Windows.Forms.Control.InvokeRequired%2A>. Wenn <xref:System.Windows.Forms.Control.InvokeRequired%2A> gibt `true`, `WriteTextSafe` übergibt die `SafeCallDelegate` auf die <xref:System.Windows.Forms.Control.Invoke%2A> Methode, um den eigentlichen Aufruf des Steuerelements. Wenn <xref:System.Windows.Forms.Control.InvokeRequired%2A> gibt `false`, `WriteTextSafe` legt die <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> direkt. Die `Button1_Click` -Ereignishandler erstellt dann den neuen Thread und führt die `WriteTextSafe` Methode. 
 
- [!code-csharp[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
 ## <a name="example-use-a-backgroundworker-event-handler"></a>Beispiel: Verwenden Sie einen BackgroundWorker-Ereignishandler
 
@@ -86,12 +86,12 @@ Um einen threadsicheren Aufruf durch den Einsatz, <xref:System.ComponentModel.Ba
 
 Im Beispiel wird die <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> -Ereignishandler zum Festlegen der <xref:System.Windows.Forms.TextBox> des Steuerelements <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft. Ein Beispiel mit der <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> Ereignis finden Sie unter <xref:System.ComponentModel.BackgroundWorker>. 
 
- [!code-csharp[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Vorgehensweise: Ausführen eines Vorgangs im Hintergrund](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Entwickeln Sie benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [Vorgehensweise: Ausführen eines Vorgangs im Hintergrund](how-to-run-an-operation-in-the-background.md)
+- [Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Entwickeln Sie benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)

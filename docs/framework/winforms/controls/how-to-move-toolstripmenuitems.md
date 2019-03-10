@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 12554ee2225dbb186392b910ddfd7c2f69695e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50b5fd16780147ad7592035a901d993495dcb878
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660215"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708950"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>Vorgehensweise: Verschieben von ToolStripMenuItems
 Zur Entwurfszeit Sie ganze Menüs der obersten Ebene und ihre Menüelemente an eine andere Stelle auf Verschieben der <xref:System.Windows.Forms.MenuStrip>. Sie können auch einzelne Menüelemente zwischen Menüs der obersten Ebene verschieben oder Ändern der Position der Menüelemente in einem Menü.  
@@ -73,4 +73,4 @@ Zur Entwurfszeit Sie ganze Menüs der obersten Ebene und ihre Menüelemente an e
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [Übersicht über das MenuStrip-Steuerelement](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [Übersicht über das MenuStrip-Steuerelement](menustrip-control-overview-windows-forms.md)

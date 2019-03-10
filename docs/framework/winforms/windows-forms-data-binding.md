@@ -7,48 +7,48 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: b33ad9d78230588b9c1afd5d59fd0333e2cd18a6
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ed456807137e8cf7594bc50eb0eebb67b88e6b40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747060"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704608"
 ---
 # <a name="windows-forms-data-binding"></a>Datenbindung in Web Forms
 Mit der Datenbindung in Windows Forms erhalten Sie die Möglichkeit, Informationen aus einer Datenquelle in Steuerelementen im Formular anzuzeigen und zu ändern. Sie können sowohl herkömmliche Datenquellen als auch beinahe alle Strukturen binden, die Daten enthalten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Datenbindung und Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)  
  Bietet eine Übersicht über die Datenbindung in Windows Forms.  
   
- [Von Windows Forms unterstützte Datenquellen](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
+ [Von Windows Forms unterstützte Datenquellen](data-sources-supported-by-windows-forms.md)  
  Beschreibt die Datenquellen, die in Verbindung mit Windows Forms verwendet werden können.  
   
- [Auf Datenbindung bezogene Schnittstellen](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
+ [Auf Datenbindung bezogene Schnittstellen](interfaces-related-to-data-binding.md)  
  Beschreibt einige der Schnittstellen, die für die Windows Forms-Datenbindung verwendet werden.  
   
- [Vorgehensweise: Navigieren Sie durch Daten in Windows Forms](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)  
+ [Vorgehensweise: Navigieren Sie durch Daten in Windows Forms](how-to-navigate-data-in-windows-forms.md)  
  Zeigt, wie Sie in den Elementen einer Datenquelle navigieren können.  
   
- [Änderungsbenachrichtigung in der Windows Forms-Datenbindung](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [Änderungsbenachrichtigung in der Windows Forms-Datenbindung](change-notification-in-windows-forms-data-binding.md)  
  Beschreibt die unterschiedlichen Arten von Änderungsbenachrichtigungen für die Datenbindung in Windows Forms.  
   
- [Vorgehensweise: Implementieren der INotifyPropertyChanged-Schnittstelle](../../../docs/framework/winforms/how-to-implement-the-inotifypropertychanged-interface.md)  
+ [Vorgehensweise: Implementieren der INotifyPropertyChanged-Schnittstelle](how-to-implement-the-inotifypropertychanged-interface.md)  
  Zeigt, wie die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle implementiert wird. Die Schnittstelle übergibt die Eigenschaftenänderungen an einem Geschäftsobjekt an ein gebundenes Steuerelement.  
   
- [Vorgehensweise: Anwenden des PropertyNameChanged-Musters](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
+ [Vorgehensweise: Anwenden des PropertyNameChanged-Musters](how-to-apply-the-propertynamechanged-pattern.md)  
  Veranschaulicht das Anwenden der *PropertyName*-Muster auf die Eigenschaften eines Windows Forms-Benutzersteuerelements.  
   
- [Vorgehensweise: Implementieren der ITypedList-Schnittstelle](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
+ [Vorgehensweise: Implementieren der ITypedList-Schnittstelle](how-to-implement-the-itypedlist-interface.md)  
  Zeigt, wie die Ermittlung des Schemas für eine bindbare Liste durch Implementieren der <xref:System.ComponentModel.ITypedList>-Schnittstelle ermöglicht wird.  
   
- [Vorgehensweise: Implementieren der IListSource-Schnittstelle](../../../docs/framework/winforms/how-to-implement-the-ilistsource-interface.md)  
+ [Vorgehensweise: Implementieren der IListSource-Schnittstelle](how-to-implement-the-ilistsource-interface.md)  
  Zeigt, wie die <xref:System.ComponentModel.IListSource>-Schnittstelle implementiert wird, um eine bindbare Klasse zu erstellen, die nicht <xref:System.Collections.IList> implementiert, sondern eine Liste von einem anderen Speicherort bereitstellt.  
   
- [Vorgehensweise: Sicherstellen, dass mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, synchronisiert bleiben](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
+ [Vorgehensweise: Sicherstellen, dass mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, synchronisiert bleiben](multiple-controls-bound-to-data-source-synchronized.md)  
  Zeigt, wie das <xref:System.Windows.Forms.BindingSource.BindingComplete>-Ereignis behandelt wird, um sicherzustellen, dass alle an eine Datenquelle gebundenen Steuerelemente synchronisiert bleiben.  
   
- [Vorgehensweise: Stellen Sie sicher, dass die ausgewählte Zeile in einer untergeordneten Tabelle an der richtigen Position verbleibt](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
+ [Vorgehensweise: Stellen Sie sicher, dass die ausgewählte Zeile in einer untergeordneten Tabelle an der richtigen Position verbleibt](ensure-the-selected-row-in-a-child-table-correct.md)  
  Beschreibt, wie Sie sicherstellen können, dass die ausgewählte Zeile in einer untergeordneten Tabelle nicht geändert wird, wenn an einem Feld in der übergeordneten Tabelle eine Änderung vorgenommen wird.  
   
  Siehe auch [im Zusammenhang mit Schnittstellen mit Datenbindung](interfaces-related-to-data-binding.md), [Vorgehensweise: Navigieren durch Daten in Windows Forms](how-to-navigate-data-in-windows-forms.md), und [Vorgehensweise: Erstellen ein einfach gebundenen Steuerelements in einem Windows Form](how-to-create-a-simple-bound-control-on-a-windows-form.md).  
@@ -61,10 +61,10 @@ Mit der Datenbindung in Windows Forms erhalten Sie die Möglichkeit, Information
  Beschreibt die Klasse, die eine Datenquelle für die Bindung an Steuerelemente kapselt.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [BindingSource-Komponente](../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [BindingSource-Komponente](./controls/bindingsource-component.md)  
  Enthält eine Liste mit Themen, in denen gezeigt wird, wie die <xref:System.Windows.Forms.BindingSource>-Komponente verwendet wird.  
   
- [DataGridView-Steuerelement](../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [DataGridView-Steuerelement](./controls/datagridview-control-windows-forms.md)  
  Enthält eine Liste mit Themen, in denen gezeigt wird, wie ein bindbares DataGrid-Steuerelement verwendet wird.  
   
  Siehe auch [den Zugriff auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).

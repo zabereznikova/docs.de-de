@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: a289aee211d5115d80e7ad0d9152b05a0eaf5487
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2c626f46862e5fdc7c51b509a6419a3d67c4102
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567805"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702827"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Vorgehensweise: Darstellen von Bildern mit GDI +
 Sie können [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zum Rendern von Bildern verwenden, die als Dateien in den Anwendungen vorhanden sind. Hierzu erstellen ein neues Objekt des ein <xref:System.Drawing.Image> Klasse (z. B. <xref:System.Drawing.Bitmap>), wodurch eine <xref:System.Drawing.Graphics> -Objekts einen Verweis auf die Zeichenoberfläche, die Sie verwenden möchten, und dem Aufrufen der <xref:System.Drawing.Graphics.DrawImage%2A> -Methode der der <xref:System.Drawing.Graphics> Objekt. Das Bild wird auf die Zeichenoberfläche gezeichnet, die durch die Grafikklasse dargestellt wird. Sie können mithilfe der Bildbearbeitung Bilddateien zur Entwurfszeit erstellen und bearbeiten und diese mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zur Laufzeit rendern. Weitere Informationen finden Sie unter [Bildbearbeitung für Symbole](/cpp/windows/image-editor-for-icons).  
@@ -47,7 +47,7 @@ Sie können [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 
           (System::Environment::SpecialFolder::MyPictures));  
     ```  
   
-2.  Erstellen Sie eine <xref:System.Drawing.Graphics> Objekt, das die Zeichenoberfläche darstellt, Sie verwenden möchten. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
+2.  Erstellen Sie eine <xref:System.Drawing.Graphics> Objekt, das die Zeichenoberfläche darstellt, Sie verwenden möchten. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](how-to-create-graphics-objects-for-drawing.md).  
   
     ```vb  
     ' Creates a Graphics object that represents the drawing surface of   
@@ -82,10 +82,10 @@ Sie können [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erste Schritte mit Grafikprogrammierung](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Stifte, Linien und Rechtecke in GDI+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)
-- [Vorgehensweise: Zeichnen von Text in einem Windows Form](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)
-- [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](how-to-create-graphics-objects-for-drawing.md)
+- [Stifte, Linien und Rechtecke in GDI+](pens-lines-and-rectangles-in-gdi.md)
+- [Vorgehensweise: Zeichnen von Text in einem Windows Form](how-to-draw-text-on-a-windows-form.md)
+- [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Zeichnen von Linien oder geschlossenen Körpern](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
 - [Bildbearbeitung für Symbole](/cpp/windows/image-editor-for-icons)

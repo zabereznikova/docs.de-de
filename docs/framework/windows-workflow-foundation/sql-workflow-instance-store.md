@@ -2,15 +2,16 @@
 title: SQL-Workflowinstanzspeicher
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 6af42fa8ae119ba8fbc08e00cd5b3800521943a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 926b50ee00743f6a84f48c6ccae976daf49b3d9a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538296"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715671"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL-Workflowinstanzspeicher
-[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] enthält den SQL-Workflowinstanzspeicher, mit dem Workflows die Zustandsinformationen zu Workflowinstanzen in einer Datenbank von SQL Server 2005 oder SQL Server 2008 speichern können. Diese Funktion wird hauptsächlich in Form der <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Klasse implementiert, die von der abstrakten <xref:System.Runtime.DurableInstancing.InstanceStore>-Klasse des Persistenzframeworks abgeleitet wird. Die Funktion SQL-Workflowinstanzspeicher besteht aus einem SQL-Persistenzanbieter, der eine konkrete Implementierung der Persistenz-API darstellt, mit der ein Host Persistenzbefehle an den Speicher sendet.  
+
+  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] enthält den SQL-Workflowinstanzspeicher, mit dem Workflows die Zustandsinformationen zu Workflowinstanzen in einer Datenbank von SQL Server 2005 oder SQL Server 2008 speichern können. Diese Funktion wird hauptsächlich in Form der <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Klasse implementiert, die von der abstrakten <xref:System.Runtime.DurableInstancing.InstanceStore>-Klasse des Persistenzframeworks abgeleitet wird. Die Funktion SQL-Workflowinstanzspeicher besteht aus einem SQL-Persistenzanbieter, der eine konkrete Implementierung der Persistenz-API darstellt, mit der ein Host Persistenzbefehle an den Speicher sendet.  
   
  Der SQL-Workflowinstanzspeicher unterstützt selbst gehostete Workflows oder Workflowdienste, die die <xref:System.Activities.WorkflowApplication> verwenden, oder den <xref:System.ServiceModel.WorkflowServiceHost> sowie Dienste, die mit <xref:System.ServiceModel.WorkflowServiceHost> in WAS gehostet werden. Sie können die Funktion SQL-Workflowinstanzspeicher für selbst gehostete Dienste programmgesteuert konfigurieren. Verwenden Sie dazu das Objektmodell, das von der Funktion bereitgestellt wird. Sie können diese Funktion für Dienste konfigurieren, die vom <xref:System.ServiceModel.WorkflowServiceHost> programmgesteuert über das Objektmodell und mithilfe einer XML-Konfigurationsdatei gehostet werden.  
   
@@ -22,19 +23,19 @@ ms.locfileid: "54538296"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Eigenschaften des SQL-Workflowinstanzspeichers](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
+-   [Eigenschaften des SQL-Workflowinstanzspeichers](properties-of-sql-workflow-instance-store.md)  
   
--   [Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+-   [Vorgehensweise: Aktivieren der SQL-Persistenz für Workflows und Workflowdienste](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [Instanzaktivierung](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
+-   [Instanzaktivierung](instance-activation.md)  
   
--   [Unterstützung für Abfragen](../../../docs/framework/windows-workflow-foundation/support-for-queries.md)  
+-   [Unterstützung für Abfragen](support-for-queries.md)  
   
--   [Erweiterbarkeit des Speichers](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)  
+-   [Erweiterbarkeit des Speichers](store-extensibility.md)  
   
--   [Sicherheit](../../../docs/framework/windows-workflow-foundation/security.md)  
+-   [Sicherheit](security.md)  
   
--   [SQL Server-Persistenzdatenbank](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
+-   [SQL Server-Persistenzdatenbank](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Siehe auch
 - [Persistenzbeispiele](https://go.microsoft.com/fwlink/?LinkID=177735)

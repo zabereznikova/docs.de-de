@@ -8,17 +8,17 @@ helpviewer_keywords:
 - events [Windows Forms], defining within Windows Forms custom controls
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4235c8b3c513509023388112071e78cfd079ec6f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199574"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705377"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Definieren eines Ereignisses in Windows Forms-Steuerelementen
-Weitere Informationen zum Definieren benutzerdefinierter Ereignisse finden Sie unter [Ereignisse](../../../../docs/standard/events/index.md). Wenn Sie ein Ereignis definieren, das nicht über verknüpfte Daten verfügt, nutzen Sie den Basistyp für Ereignisdaten, <xref:System.EventArgs>, und <xref:System.EventHandler> als Ereignisdelegaten. Alle diese müssen nur noch besteht darin, einen Ereignismember sowie eine geschützte definieren `On` *EventName* -Methode, die das Ereignis auslöst.  
+Weitere Informationen zum Definieren benutzerdefinierter Ereignisse finden Sie unter [Ereignisse](../../../standard/events/index.md). Wenn Sie ein Ereignis definieren, das nicht über verknüpfte Daten verfügt, nutzen Sie den Basistyp für Ereignisdaten, <xref:System.EventArgs>, und <xref:System.EventHandler> als Ereignisdelegaten. Alle diese müssen nur noch besteht darin, einen Ereignismember sowie eine geschützte definieren `On` *EventName* -Methode, die das Ereignis auslöst.  
   
- Das folgende Codefragment zeigt, wie das benutzerdefinierte `FlashTrackBar`-Steuerelement ein benutzerdefiniertes Ereignis definiert, `ValueChanged`. Den vollständigen Code für die `FlashTrackBar` zugreifen können, finden Sie unter den [Vorgehensweise: Erstellen Sie eine Windows Forms-Steuerelement, das den Fortschritt anzeigt](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ Das folgende Codefragment zeigt, wie das benutzerdefinierte `FlashTrackBar`-Steuerelement ein benutzerdefiniertes Ereignis definiert, `ValueChanged`. Den vollständigen Code für die `FlashTrackBar` zugreifen können, finden Sie unter den [Vorgehensweise: Erstellen ein Windows Forms-Steuerelements, die Status anzeigt](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ```vb  
 Option Explicit  
@@ -78,5 +78,5 @@ public class FlashTrackBar : Control {
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Ereignisse in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
-- [Ereignisse](../../../../docs/standard/events/index.md)
+- [Ereignisse in Windows Forms-Steuerelementen](events-in-windows-forms-controls.md)
+- [Ereignisse](../../../standard/events/index.md)

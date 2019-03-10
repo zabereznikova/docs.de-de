@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: 1071b2ded2761d64e57484a9aea9bddb254a9a7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2a0f4084529b1dd2618c1cd6171ee45b8f569d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554412"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704998"
 ---
 # <a name="how-to-disable-tab-pages"></a>Vorgehensweise: Deaktivieren von Registerkarten
 In einigen Fällen möchten Sie den Zugriff auf Daten zu beschränken, die in der Windows Forms-Anwendung verfügbar ist. Ein Beispiel hierfür kann sein, wenn Sie auf den Registerkartenseiten des ein Registerkarten-Steuerelement angezeigte Daten verfügen; Administratoren können Informationen zu einer Registerkarte haben, die Sie aus dem Gast oder Low-Level-Benutzer zu beschränken möchten.  
@@ -102,7 +102,7 @@ In einigen Fällen möchten Sie den Zugriff auf Daten zu beschränken, die in de
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über das TabControl-Steuerelement](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
-- [Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
-- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten zu TabControls in Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Vorgehensweise: Ändern der Darstellung der TabControl-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Übersicht über das TabControl-Steuerelement](tabcontrol-control-overview-windows-forms.md)
+- [Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte](how-to-add-a-control-to-a-tab-page.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten zu TabControls in Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Vorgehensweise: Ändern der Darstellung der TabControl-Steuerelement in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

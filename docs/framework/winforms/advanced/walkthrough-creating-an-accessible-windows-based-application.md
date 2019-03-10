@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6c798d0f6a454c7ee819d5556970bca12f1812e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529622"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708274"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Exemplarische Vorgehensweise: Erstellen von behindertengerechten Windows-basierten Anwendungen
 Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter Bedeutung. Bei vielen staatlichen Stellen gibt es für den Kauf von Software Vorschriften hinsichtlich der Barrierefreiheit. Das Certified for Windows-Logo beinhaltet Anforderungen zur Barrierefreiheit. Allein in den USA gibt es etwa 30 Millionen Menschen, viele davon potenzielle Kunden, für die die Barrierefreiheit von Software maßgeblich ist.  
@@ -30,7 +30,7 @@ Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter 
   
  Weitere Informationen finden Sie unter [Ressourcen für das Entwerfen von Anwendungen mit Barrierefreiheit](/visualstudio/ide/reference/resources-for-designing-accessible-applications).  
   
- Informationen zur Unterstützung der verschiedenen Tastaturlayouts finden Sie unter [Empfehlungen für die Entwicklung weltweit einsatzfähiger Anwendungen](../../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).  
+ Informationen zur Unterstützung der verschiedenen Tastaturlayouts finden Sie unter [Empfehlungen für die Entwicklung weltweit einsatzfähiger Anwendungen](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).  
   
 ## <a name="creating-the-project"></a>Erstellen des Projekts  
  In dieser exemplarischen Vorgehensweise wird die Benutzeroberfläche für eine Anwendung erstellt, mit der Pizzabestellungen entgegengenommen werden. Sie besteht aus einem <xref:System.Windows.Forms.TextBox>-Steuerelement für den Namen des Kunden, aus einer <xref:System.Windows.Forms.RadioButton>-Gruppe, um die Pizzagröße auszuwählen, aus einem <xref:System.Windows.Forms.CheckedListBox>-Steuerelement für die Auswahl des Belags, aus zwei Button-Steuerelementen, die mit "Bestellen" bzw. "Abbrechen" beschriftet sind, sowie aus einem Menü mit dem Befehl "Beenden".  
@@ -41,12 +41,12 @@ Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter 
   
 #### <a name="to-begin-making-the-application"></a>So beginnen Sie mit der Erstellung der Anwendung  
   
--   Erstellen Sie eine neue Windows-Anwendung in Visual Basic oder Visual c#. Geben Sie dem Projekt den Namen **Pizzabestellung**. (Weitere Informationen finden Sie unter [Erstellen neuer Projektmappen und Projekte](/visualstudio/ide/creating-solutions-and-projects).)  
+-   Erstellen Sie eine neue Windows-Anwendung in Visual Basic oder Visual C#. Geben Sie dem Projekt den Namen **Pizzabestellung**. (Weitere Informationen finden Sie unter [Erstellen neuer Projektmappen und Projekte](/visualstudio/ide/creating-solutions-and-projects).)  
   
 ## <a name="adding-the-controls-to-the-form"></a>Hinzufügen der Steuerelemente zum Formular  
  Wenn Sie Steuerelemente zu einem Formular hinzufügen, sollten Sie die folgenden Richtlinien für eine barrierefreie Anwendung beachten:  
   
--   Legen Sie für die Eigenschaften <xref:System.Windows.Forms.Control.AccessibleDescription%2A> und <xref:System.Windows.Forms.Control.AccessibleName%2A> fest. In diesem Beispiel ist die Einstellung "Default" für <xref:System.Windows.Forms.Control.AccessibleRole%2A> ausreichend. Weitere Informationen zu den Eigenschaften von Barrierefreiheit finden Sie unter [Informationen über die Barrierefreiheit für Steuerelemente in Windows Forms](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
+-   Legen Sie für die Eigenschaften <xref:System.Windows.Forms.Control.AccessibleDescription%2A> und <xref:System.Windows.Forms.Control.AccessibleName%2A> fest. In diesem Beispiel ist die Einstellung "Default" für <xref:System.Windows.Forms.Control.AccessibleRole%2A> ausreichend. Weitere Informationen zu den Eigenschaften von Barrierefreiheit finden Sie unter [Informationen über die Barrierefreiheit für Steuerelemente in Windows Forms](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).  
   
 -   Legen Sie den Schriftgrad auf 10 Punkt oder größer fest.  
   
@@ -137,7 +137,7 @@ Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter 
     |MenuItem|Name|exitApp|  
     ||Text|&Beenden|  
   
-     ![Pizzabestellformular](../../../../docs/framework/winforms/advanced/media/vbpizzaorderform.gif "VbPizzaOrderForm")  
+     ![Pizzabestellformular](./media/vbpizzaorderform.gif "VbPizzaOrderForm")  
 Das Formular sieht in etwa wie folgt aus:  
   
 ## <a name="supporting-high-contrast-mode"></a>Unterstützen des Modus für hohe Kontraste  
@@ -153,7 +153,7 @@ Das Formular sieht in etwa wie folgt aus:
   
  Die Anwendung muss beim Start die Einstellung von <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> überprüfen und danach auf das Systemereignis <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> reagieren. Das <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>-Ereignis wird immer dann ausgelöst, wenn sich der Wert von <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> geändert hat.  
   
- In der vorliegenden Anwendung ist `lblCompanyName` das einzige Element, für das nicht die Systemeinstellungen für Farbe verwendet werden. Die <xref:System.Drawing.SystemColors> Klasse wird verwendet, um die farbeinstellungen der Bezeichnung, die vom Benutzer ausgewählten Systemfarben zu ändern.  
+ In der vorliegenden Anwendung ist `lblCompanyName` das einzige Element, für das nicht die Systemeinstellungen für Farbe verwendet werden. Die <xref:System.Drawing.SystemColors> Klasse wird verwendet, um die farbeinstellungen der Bezeichnung in die vom Benutzer ausgewählten Systemfarben zu ändern.  
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>So aktivieren Sie den Modus für hohe Kontraste auf effektive Weise  
   
@@ -287,7 +287,7 @@ Das Formular sieht in etwa wie folgt aus:
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>So stellen Sie Informationen auf andere Weise als über Tonfolgen bereit  
   
-1.  Lassen Sie die Titelleiste mithilfe der Windows-API-Funktion "FlashWindow" blinken. Ein Beispiel, wie Windows-API-Funktionen aufgerufen werden, finden Sie unter [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+1.  Lassen Sie die Titelleiste mithilfe der Windows-API-Funktion "FlashWindow" blinken. Ein Beispiel für das Aufrufen von Windows-API-Funktionen, finden Sie unter [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
     > [!NOTE]
     >  Möglicherweise hat der Benutzer den Windows-Dienst "Darstellungsoptionen" aktiviert, der ebenfalls bewirkt, dass das Fenster blinkt, wenn Systemsounds über die integrierten Lautsprecher des Computers wiedergegeben werden.  
@@ -296,7 +296,7 @@ Das Formular sieht in etwa wie folgt aus:
   
 3.  Zeigen Sie ein Meldungsfeld an, das den Tastaturfokus erhält. Vermeiden Sie diese Methode, wenn der Benutzer eine Eingabe vornimmt.  
   
-4.  Zeigen Sie eine Statusanzeige im Statusbereich der Taskleiste an. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen von Anwendungssymbolen zur Taskleiste mit der NotifyIcon-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+4.  Zeigen Sie eine Statusanzeige im Statusbereich der Taskleiste an. Weitere Informationen finden Sie unter [Gewusst wie: Hinzufügen von Anwendungssymbolen zur Taskleiste mit der NotifyIcon-Komponente in Windows Forms](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 ## <a name="testing-the-application"></a>Testen der Anwendung  
  Bevor Sie die Anwendung bereitstellen, sollten Sie die implementierten Barrierefreiheitsfeatures testen.  
